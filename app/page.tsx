@@ -5,19 +5,23 @@ import { figures } from "@/lib/parishes";
 const STATS = [
   {
     value: String(figures.usTotal),
-    label: "U.S. Lithuanian parishes documented across 18 years of the Draugas archive",
+    label: "Lithuanian parishes across America, documented over eighteen years",
+    tone: "ink",
   },
   {
     value: String(figures.endingMode.diocese_closed),
     label: "closed, merged away, suppressed, or demolished by diocesan decision",
+    tone: "red",
   },
   {
     value: `${figures.endingMode.diocese_closed} of ${figures.endingMode.diocese_closed}`,
     label: "of those closed parishes were diocese-owned. No exception.",
+    tone: "red",
   },
   {
     value: String(figures.communityOwned.closedByOutsideAuthority),
     label: "community-owned parishes were ever closed by an outside authority",
+    tone: "ink",
   },
 ];
 
@@ -32,8 +36,9 @@ export default function Home() {
           Who decides whether a Lithuanian parish survives?
         </h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg leading-relaxed text-muted">
-          Not faith. Not money. Not the fight. The color of every mark below
-          is <strong className="text-foreground">who decided its ending</strong>.
+          Not faith. Not money. Not the fight. Every mark below is a parish —
+          and its shape is{" "}
+          <strong className="text-foreground">who decided its ending</strong>.
         </p>
       </section>
 
@@ -44,7 +49,12 @@ export default function Home() {
       <section className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-rule border border-rule rounded-lg overflow-hidden">
         {STATS.map((s) => (
           <div key={s.label} className="bg-background p-6">
-            <div className="font-serif text-4xl font-semibold text-accent">
+            <div
+              className="font-serif text-4xl font-semibold"
+              style={{
+                color: s.tone === "red" ? "var(--mark-closed)" : "var(--foreground)",
+              }}
+            >
               {s.value}
             </div>
             <p className="mt-2 text-sm text-muted leading-snug">{s.label}</p>
@@ -94,9 +104,9 @@ export default function Home() {
         <p className="mt-4 leading-relaxed">
           The only parishes never closed by an outside authority are the ones
           the community itself controlled. That is not an argument — it is the
-          record, and every entry in it traces to a dated issue of{" "}
-          <em>Draugas</em>, the Lithuanian-American newspaper of record. Three
-          Canadian parishes are documented as comparators and appear in{" "}
+          record: every entry traces to a dated, published source, open for
+          anyone to verify. Three Canadian parishes are documented as
+          comparators and appear in{" "}
           <Link href="/parishes" className="underline hover:text-accent">
             the record
           </Link>

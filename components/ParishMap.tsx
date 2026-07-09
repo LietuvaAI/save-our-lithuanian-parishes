@@ -2,22 +2,15 @@
 
 import { useState } from "react";
 import mapData from "@/data/map.json";
+import { MarkShape, MarkIcon } from "@/components/marks";
 import {
   usParishes,
   type Parish,
-  type EndingMode,
+  ENDING_MODE_ORDER,
   ENDING_MODE_LABEL,
-  ENDING_MODE_COLOR,
   OWNERSHIP_LABEL,
   STATUS_LABEL,
 } from "@/lib/parishes";
-
-const MODE_ORDER: EndingMode[] = [
-  "diocese_closed",
-  "undecided",
-  "community_decided",
-  "standing",
-];
 
 const bySlug = new Map(usParishes.map((p) => [p.slug, p]));
 
@@ -29,7 +22,7 @@ export default function ParishMap() {
       <svg
         viewBox={mapData.viewBox}
         role="img"
-        aria-label="Map of the United States showing every documented Lithuanian parish, colored by who decided its ending"
+        aria-label="Map of the United States showing every documented Lithuanian parish, marked by who decided its ending"
         className="w-full h-auto"
       >
         <path
@@ -50,15 +43,12 @@ export default function ParishMap() {
           if (!parish) return null;
           const active = hovered?.slug === parish.slug;
           return (
-            <circle
+            <MarkShape
               key={pt.slug}
-              cx={pt.x}
-              cy={pt.y}
-              r={active ? 8 : 5.5}
-              fill={ENDING_MODE_COLOR[parish.endingMode]}
-              fillOpacity={0.9}
-              stroke="var(--background)"
-              strokeWidth={1}
+              mode={parish.endingMode}
+              x={pt.x}
+              y={pt.y}
+              r={active ? 8.5 : 6}
               tabIndex={0}
               role="button"
               aria-label={`${parish.nameLt}, ${parish.city} ${parish.state} — ${ENDING_MODE_LABEL[parish.endingMode]}`}
@@ -78,7 +68,9 @@ export default function ParishMap() {
       >
         {hovered ? (
           <div>
-            <span className="font-medium">{hovered.nameLt}</span>{" "}
+            <span className="font-serif font-semibold text-base">
+              {hovered.nameLt}
+            </span>{" "}
             <span className="text-muted">
               — {hovered.city}, {hovered.state}
             </span>
@@ -101,13 +93,9 @@ export default function ParishMap() {
       </div>
 
       <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
-        {MODE_ORDER.map((mode) => (
+        {ENDING_MODE_ORDER.map((mode) => (
           <span key={mode} className="inline-flex items-center gap-1.5">
-            <span
-              aria-hidden
-              className="inline-block size-3 rounded-full"
-              style={{ background: ENDING_MODE_COLOR[mode] }}
-            />
+            <MarkIcon mode={mode} />
             {ENDING_MODE_LABEL[mode]}
           </span>
         ))}

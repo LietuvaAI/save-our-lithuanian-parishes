@@ -73,10 +73,10 @@ export const STATUS_LABEL: Record<ParishStatus, string> = {
   undecided: "Unresolved",
 };
 
-/** CSS custom property per ending mode — defined in globals.css, light/dark aware. */
-export const ENDING_MODE_COLOR: Record<EndingMode, string> = {
-  diocese_closed: "var(--mode-closed)",
-  community_decided: "var(--mode-community)",
-  standing: "var(--mode-standing)",
-  undecided: "var(--mode-undecided)",
-};
+/** Canonical legend order: losses first, per the infographic. */
+export const ENDING_MODE_ORDER: EndingMode[] = [
+  "diocese_closed",
+  "undecided",
+  "community_decided",
+  "standing",
+];

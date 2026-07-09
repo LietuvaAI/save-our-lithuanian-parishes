@@ -1,12 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { MarkIcon } from "@/components/marks";
 import {
   type Parish,
   type EndingMode,
   type Ownership,
   ENDING_MODE_LABEL,
-  ENDING_MODE_COLOR,
   OWNERSHIP_SHORT,
   STATUS_LABEL,
 } from "@/lib/parishes";
@@ -123,11 +123,7 @@ export default function ParishTable({ parishes }: { parishes: Parish[] }) {
                 <td className="px-3 py-2">{OWNERSHIP_SHORT[p.ownership]}</td>
                 <td className="px-3 py-2">
                   <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
-                    <span
-                      aria-hidden
-                      className="inline-block size-2.5 rounded-full"
-                      style={{ background: ENDING_MODE_COLOR[p.endingMode] }}
-                    />
+                    <MarkIcon mode={p.endingMode} size={12} />
                     {ENDING_MODE_LABEL[p.endingMode]}
                   </span>
                   {p.endingMode === "diocese_closed" && p.status !== "closed" && (
