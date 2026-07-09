@@ -4,11 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "data": "node scripts/build-data.mjs",
+    "prebuild": "npm run data",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "csv-parse": "^7.0.1",
     "next": "16.2.10",
     "react": "19.2.4",
     "react-dom": "19.2.4"

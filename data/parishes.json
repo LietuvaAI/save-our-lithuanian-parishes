@@ -1,0 +1,2570 @@
+[
+  {
+    "slug": "sv-kazimiero-gary-in",
+    "nameLt": "Šv. Kazimiero",
+    "city": "Gary",
+    "state": "IN",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": 1998,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2010-12-04"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2012-05-26"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2012-06-05"
+      }
+    ],
+    "notes": "Founding year not stated. Rescue committee concluded saving the parish was impossible; bishop closed it unilaterally.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-onos-spring-valley-il",
+    "nameLt": "Šv. Onos",
+    "city": "Spring Valley",
+    "state": "IL",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1895,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2012-10-25"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2022-01-29"
+      }
+    ],
+    "notes": "Last Lithuanian priest died; building sold by diocese ~1987 to a Mexican Catholic congregation.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-jurgio-chicago-il",
+    "nameLt": "Šv. Jurgio",
+    "city": "Chicago",
+    "state": "IL",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "demolished",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1892,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2009-09-29"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2015-01-13"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2020-05-30"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2023-07-15"
+      }
+    ],
+    "notes": "Bridgeport. Founding-year conflict: 1892 parish, 1902 building, 1909 also cited. Demolition-year conflict: 1990 vs 1992. Letter campaign to cardinal and Pope failed.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-mykolo-north-chicago-il",
+    "nameLt": "Šv. Mykolo",
+    "city": "North Chicago",
+    "state": "IL",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "demolished",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2011-02-05"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2020-05-23"
+      }
+    ],
+    "notes": "One of the first Chicago Lithuanian churches to close; demolished without recorded resistance.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "ausros-vartu-chicago-il",
+    "nameLt": "Aušros Vartų",
+    "city": "Chicago",
+    "state": "IL",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2013-01-24"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2015-07-04"
+      }
+    ],
+    "notes": "Pilsen/Brighton Park area. Closed ~1985-1990 (1987 in Phase 1); merged with Šv. Pauliaus. Distinct from Manhattan NY Aušros Vartų.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kazimiero-chicago-il",
+    "nameLt": "Šv. Kazimiero",
+    "city": "Chicago",
+    "state": "IL",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2013-08-20"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2013-09-07"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2017-12-12"
+      }
+    ],
+    "notes": "Marquette Park/Brighton Park area (probable). Closed pre-2013; building fate not specified; 10 stained-glass windows repatriated to Lithuania.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-juozapo-south-chicago-il",
+    "nameLt": "Šv. Juozapo",
+    "city": "South Chicago",
+    "state": "IL",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1900,
+    "yearClosed": 1987,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2015-10-20"
+      }
+    ],
+    "notes": "East Side. Second-oldest Lithuanian church in Chicago; closed 1987 as parishioners became Spanish-speaking.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "dievo-apvaizdos-chicago-il",
+    "nameLt": "Dievo Apvaizdos",
+    "city": "Chicago",
+    "state": "IL",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1900,
+    "yearClosed": 2016,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2015-07-04"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2017-05-27"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2021-08-05"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2023-07-15"
+      }
+    ],
+    "notes": "18th Street/Pilsen. Founded ~1900; closed 2016 under Renew My Church. Distinct from Detroit/Southfield RC and Scranton LNCC Dievo Apvaizdos. 2023 source tension flagged.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kryziaus-chicago-il",
+    "nameLt": "Šv. Kryžiaus",
+    "city": "Chicago",
+    "state": "IL",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "merged",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1904,
+    "yearClosed": 2020,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2008-11-18"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2020-11-03"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2022-01-29"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2023-07-15"
+      }
+    ],
+    "notes": "Back of the Yards/Town of Lake. Extinguished as a parish by Cupich decree Dec 10 2020; building survives as a worship center under demolition threat. Probable single parish (D1/D4 duplicate flagged).",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-konstantino-oglesby-il",
+    "nameLt": "Šv. Konstantino",
+    "city": "Oglesby",
+    "state": "IL",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": 1953,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2022-01-29"
+      }
+    ],
+    "notes": "Historical reference only; building may remain but identity uncertain.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-pranciskaus-east-chicago-in",
+    "nameLt": "Šv. Pranciškaus",
+    "city": "East Chicago",
+    "state": "IN",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "demolished",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": 1989,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2019-01-05"
+      }
+    ],
+    "notes": "Closed 1989 and demolished; Lithuanica Avenue neighborhood.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kazimiero-sioux-city-ia",
+    "nameLt": "Šv. Kazimiero",
+    "city": "Sioux City",
+    "state": "IA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "demolished",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": 1998,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2014-04-26"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2022-01-13"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2022-01-22"
+      }
+    ],
+    "notes": "Closed 1998; demolition-year conflict 2001 vs 2007; on National Register, which gave no protection.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kazimiero-kansas-city-mo",
+    "nameLt": "Šv. Kazimiero",
+    "city": "Kansas City",
+    "state": "MO",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": 1947,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2022-01-13"
+      }
+    ],
+    "notes": "Closed 1947 by a bishop who disliked ethnic parishes; building status unknown.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kazimiero-brockton-ma",
+    "nameLt": "Šv. Kazimiero",
+    "city": "Brockton",
+    "state": "MA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1898,
+    "yearClosed": 2008,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2008-05-02"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2008-07-17"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2009-05-05"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2024-01-04"
+      }
+    ],
+    "notes": "Closed June 2008, merged into St. Michael Avon; favorable post-closure asset split negotiated but closure could not be prevented.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-petro-cambridge-ma",
+    "nameLt": "Šv. Petro",
+    "city": "Cambridge",
+    "state": "MA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2017-12-07"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2023-12-14"
+      }
+    ],
+    "notes": "Closed (date unknown); converted to apartments with Lithuanian facade inscriptions preserved as a landmark requirement.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-pranciskaus-lawrence-ma",
+    "nameLt": "Šv. Pranciškaus",
+    "city": "Lawrence",
+    "state": "MA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": 2002,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2015-05-14"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2023-12-16"
+      }
+    ],
+    "notes": "Closed July 1 2002; archdiocese appropriated all property including a lakeside summer estate. Contrast with the LNCC parish in the same city/year.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "lietuviu-baznycia-unnamed-haverhill-ma",
+    "nameLt": "Lietuvių bažnyčia (unnamed)",
+    "city": "Haverhill",
+    "state": "MA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "demolished",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2024-01-04"
+      }
+    ],
+    "notes": "Unnamed Lithuanian church; abandoned by 2017, razed by 2023; only a cornerstone survives.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-jurgio-norwood-ma",
+    "nameLt": "Šv. Jurgio",
+    "city": "Norwood",
+    "state": "MA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2014-11-13"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2023-12-14"
+      }
+    ],
+    "notes": "Closed; converted to an ordinary residential house; Lithuanian signs removed. Boston suburb, kept separate from Boston proper.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kazimiero-worcester-ma",
+    "nameLt": "Šv. Kazimiero",
+    "city": "Worcester",
+    "state": "MA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1898,
+    "yearClosed": 2008,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2008-06-05"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2008-06-26"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2009-05-05"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2023-12-16"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2010-03-09"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2010-03-24"
+      }
+    ],
+    "notes": "Closed July 1 2008, merged into Šv. Jono. Solvent, debt-free, with paid-off school; financial health did not save it. Rescue committee, canon lawyer, Vatican appeal all failed. A 2010-03-09 Draugas article (corrected 2010-03-24) records this parish's ~$1M pre-closure renovation and Vytautas Ignas stained glass; post-closure the community gathered 3x/year. The former \"Wooster OH\" row was this same parish, misspelled — removed 2026-05-23.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "ausros-vartu-worcester-ma",
+    "nameLt": "Aušros Vartų",
+    "city": "Worcester",
+    "state": "MA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2017-12-07"
+      }
+    ],
+    "notes": "Transitioned to non-Lithuanian Catholic use by 2017; interior heritage substantially preserved. Distinct from Worcester Šv. Kazimiero.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "ausros-vartu-manhattan-ny",
+    "nameLt": "Aušros Vartų",
+    "city": "Manhattan",
+    "state": "NY",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "demolished",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1910,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2008-02-13"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2011-12-17"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2013-02-26"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2014-07-10"
+      }
+    ],
+    "notes": "Our Lady of Vilnius, SoHo. The central ownership test case. Closed 2007 by Cardinal Egan; NY Court of Appeals ruled against parishioners 2011; building sold and demolished. Demolition-year conflict (2015 vs 2020) and sale-figure conflict flagged. No debt at closure.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-jurgio-rochester-ny",
+    "nameLt": "Šv. Jurgio",
+    "city": "Rochester",
+    "state": "NY",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "community_decided",
+    "yearFounded": 1908,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2008-08-15"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2008-10-28"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2017-10-19"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2020-01-25"
+      }
+    ],
+    "notes": "Diocese did NOT close the parish; the community sold its own buildings during decline and moved to rented space. Parish formally still exists with monthly Lithuanian Mass; demographic attrition, not diocesan action.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-jurgio-brooklyn-ny",
+    "nameLt": "Šv. Jurgio",
+    "city": "Brooklyn",
+    "state": "NY",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "demolished",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": 2008,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2017-11-16"
+      }
+    ],
+    "notes": "Demolished ~2008; even a photograph could not be found online.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-jurgio-niagara-falls-ny",
+    "nameLt": "Šv. Jurgio",
+    "city": "Niagara Falls",
+    "state": "NY",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2020-01-04"
+      }
+    ],
+    "notes": "Closed; building sold by the diocese to a non-Roman Anglican body used as a cathedral. Lithuanian heritage markers preserved.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kazimiero-amsterdam-ny",
+    "nameLt": "Šv. Kazimiero",
+    "city": "Amsterdam",
+    "state": "NY",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": 2009,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2009-04-08"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2019-01-12"
+      }
+    ],
+    "notes": "Closed ~May 2009 (Diocese of Albany); building intact as of 2019. Demographic collapse, no community to resist.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-mykolo-bayonne-nj",
+    "nameLt": "Šv. Mykolo",
+    "city": "Bayonne",
+    "state": "NJ",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2018-02-15"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2022-09-22"
+      }
+    ],
+    "notes": "Sold; became a Syrian/Assyrian Catholic cathedral. Interior retained Lithuanian details.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "lietuviu-baznycia-unnamed-newark-nj",
+    "nameLt": "Lietuvių bažnyčia (unnamed)",
+    "city": "Newark",
+    "state": "NJ",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "demolished",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": 1981,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2018-02-15"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2022-09-22"
+      }
+    ],
+    "notes": "Unnamed Lithuanian church; original building demolished after a 1981 fire; diocese refused repairs; congregation moved to the parish-hall basement; now Portuguese/Brazilian use.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kazimiero-paterson-nj",
+    "nameLt": "Šv. Kazimiero",
+    "city": "Paterson",
+    "state": "NJ",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1912,
+    "yearClosed": 2014,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2014-07-17"
+      }
+    ],
+    "notes": "Closed March 2 2014; church and rectory sold to Grace Gospel Church (Protestant). 102-year-old parish; first Lithuanian church 1912, current building 1961/62.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-andriejaus-new-britain-ct",
+    "nameLt": "Šv. Andriejaus",
+    "city": "New Britain",
+    "state": "CT",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": 2021,
+    "coalRegion": false,
+    "survivedReviewThenClosed": true,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2017-11-30"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2023-12-09"
+      }
+    ],
+    "notes": "Closed quietly ~end of 2021, sold to a Spanish-speaking Pentecostal church. Survived review then closed. The Vanagas commemorative plaque was removed and not returned.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kazimiero-new-haven-ct",
+    "nameLt": "Šv. Kazimiero",
+    "city": "New Haven",
+    "state": "CT",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2010-11-18"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2017-11-30"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2023-12-09"
+      }
+    ],
+    "notes": "Closed ~2001; building sold ~2007 and converted to condos. Still apartments in 2023.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "lietuviu-baznycia-unnamed-ansonia-ct",
+    "nameLt": "Lietuvių bažnyčia (unnamed)",
+    "city": "Ansonia",
+    "state": "CT",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2017-11-30"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2023-12-09"
+      }
+    ],
+    "notes": "Unnamed Lithuanian church; closed and sold ~2015 to non-Catholics; Gediminas-pillars monument remains in the churchyard.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-juozapo-waterbury-ct",
+    "nameLt": "Šv. Juozapo",
+    "city": "Waterbury",
+    "state": "CT",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1893,
+    "yearClosed": 2023,
+    "coalRegion": false,
+    "survivedReviewThenClosed": true,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2010-12-09"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2019-06-25"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2023-08-24"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2023-12-07"
+      }
+    ],
+    "notes": "Closed Sept 30 2023 under the Hartford 2017 plan. First Lithuanian RC parish in New England (founded 1893/94). Survived the 2002 St. Patrick merger; a genuine grassroots revival did not protect it.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kazimiero-nashua-nh",
+    "nameLt": "Šv. Kazimiero",
+    "city": "Nashua",
+    "state": "NH",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2023-12-16"
+      }
+    ],
+    "notes": "Closed; converted to apartments with commemorative plaques. Community noted Greek Orthodox parishes could not be closed because they are a separate religion.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-antano-detroit-mi",
+    "nameLt": "Šv. Antano",
+    "city": "Detroit",
+    "state": "MI",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1920,
+    "yearClosed": 2013,
+    "coalRegion": false,
+    "survivedReviewThenClosed": true,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2009-04-09"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2013-06-20"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2013-06-29"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2020-08-25"
+      }
+    ],
+    "notes": "Closed June 23 2013 under Together in Faith, merged into Dievo Apvaizdos Southfield. Survived a 1989 closure scare; resistance delayed but could not prevent closure. Only 34 registered parishioners at closure.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-petro-detroit-mi",
+    "nameLt": "Šv. Petro",
+    "city": "Detroit",
+    "state": "MI",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": 1995,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2010-02-06"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2015-09-29"
+      }
+    ],
+    "notes": "Closed 1995 when the pastor retired; contents shipped to Lithuania. Distinct from Detroit Šv. Antano and Detroit/Southfield Dievo Apvaizdos.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-antano-omaha-ne",
+    "nameLt": "Šv. Antano",
+    "city": "Omaha",
+    "state": "NE",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1907,
+    "yearClosed": 2014,
+    "coalRegion": false,
+    "survivedReviewThenClosed": true,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2008-09-04"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2012-04-07"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2014-06-19"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2022-01-20"
+      }
+    ],
+    "notes": "Closed/merged 2014 into Sts. Peter and Paul; sold to Spanish-speakers. Šv. Antano draugija founded 1900/01, church consecrated 1907. Survived an earlier ~2008 closure danger; ~$60K community savings deemed insufficient.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-jurgio-cleveland-oh",
+    "nameLt": "Šv. Jurgio",
+    "city": "Cleveland",
+    "state": "OH",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "merged",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1895,
+    "yearClosed": 2009,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2008-11-05"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2009-09-16"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2009-10-18"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2024-01-18"
+      }
+    ],
+    "notes": "Closed Oct 18 2009, merged into the new consolidated Šv. Kazimiero; old building sold by diocese, now derelict. Buyer-identity conflict flagged.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "dievo-motinos-nuolatines-pagalbos-cleveland-oh",
+    "nameLt": "Dievo Motinos Nuolatinės Pagalbos",
+    "city": "Cleveland",
+    "state": "OH",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "merged",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1929,
+    "yearClosed": 2009,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2008-11-05"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2009-03-15"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2009-10-18"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2010-01-02"
+      }
+    ],
+    "notes": "Closed Oct 18 2009, merged with Šv. Jurgio into the new Šv. Kazimiero, which worships in the former DMNP building. Distinct from Detroit DMNP.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-jurgio-shenandoah-pa",
+    "nameLt": "Šv. Jurgio",
+    "city": "Shenandoah",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "demolished",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1891,
+    "yearClosed": null,
+    "coalRegion": true,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2008-03-27"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2009-10-27"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2020-05-30"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2025-11-01"
+      }
+    ],
+    "notes": "Closed 2006, demolished 2009/2010. Founding-year MAJOR CONFLICT: 1872, 1874, 1886, 1891 all cited; 1891 is the breakaway Šv. Jurgio parish, building 1894. The strongest thesis case: ~$1M treasury, credible $360K repair estimate, landmark status and a treaty, yet still demolished. Diocese took the ~$1M savings. Coal region.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kazimiero-pittston-pa",
+    "nameLt": "Šv. Kazimiero",
+    "city": "Pittston",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "merged",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1890,
+    "yearClosed": 2008,
+    "coalRegion": true,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2008-04-16"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2017-12-28"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2019-01-12"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2024-01-20"
+      }
+    ],
+    "notes": "Closed April 6 2008, merged into a new parish at St. John the Evangelist; later sold to a private buyer. Coal region.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "svc-trejybes-wilkes-barre-pa",
+    "nameLt": "Švč. Trejybės",
+    "city": "Wilkes-Barre",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "demolished",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": 2015,
+    "coalRegion": true,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2017-12-28"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2024-01-20"
+      }
+    ],
+    "notes": "Demolished 2015; site now a flat field. One of the two largest, most beautiful churches in the region. Coal region.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-marijos-apreiskimo-kingston-pa",
+    "nameLt": "Šv. Marijos Apreiškimo",
+    "city": "Kingston",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "demolished",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": true,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2024-01-20"
+      }
+    ],
+    "notes": "Demolished; the other of the two largest regional churches. Coal region.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-vincento-pauliecio-esplen-pa",
+    "nameLt": "Šv. Vincento Pauliečio",
+    "city": "Esplen",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "demolished",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1903,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2018-01-11"
+      }
+    ],
+    "notes": "Pittsburgh area. Built 1903; demolished pre-2017 after repeated arson; only the cornerstone survives. Not anthracite coal region.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kazimiero-pittsburgh-pa",
+    "nameLt": "Šv. Kazimiero",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": 1992,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2018-01-11"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2021-04-24"
+      }
+    ],
+    "notes": "Southern Pittsburgh. Closed 1992; converted to 12 luxury condominiums; sold by the diocese to private developers. Not anthracite coal region.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-juozapo-scranton-pa",
+    "nameLt": "Šv. Juozapo",
+    "city": "Scranton",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": 2009,
+    "coalRegion": true,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2024-01-20"
+      }
+    ],
+    "notes": "RC. Closed ~2009 in the Allentown/Scranton sweep; building given to convert-priests. The original Lithuanian RC church Scranton Lithuanians built then lost to the bishop through the courts; precipitating event of the LNCC schism. Coal region.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-mykolo-scranton-pa",
+    "nameLt": "Šv. Mykolo",
+    "city": "Scranton",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": true,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2024-01-20"
+      }
+    ],
+    "notes": "RC. Closed as a Lithuanian parish; now a Latin Mass community (Priestly Fraternity of St. Peter); ethnically transferred, not formally dissolved. Coal region.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-jono-coaldale-pa",
+    "nameLt": "Šv. Jono",
+    "city": "Coaldale",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1914,
+    "yearClosed": 2009,
+    "coalRegion": true,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2022-10-01"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2023-09-02"
+      }
+    ],
+    "notes": "Built 1914; closed ~2009 in the Allentown wave; building sold by the diocese to a private individual (R. Demyanovich, ~$24,000) to prevent warehouse use. Not a community buyout. Coal region.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "nekaltojo-prasidejimo-ausros-vartu-archbald-pa",
+    "nameLt": "Nekaltojo Prasidėjimo-Aušros Vartų",
+    "city": "Archbald",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "demolished",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1901,
+    "yearClosed": null,
+    "coalRegion": true,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2024-03-23"
+      }
+    ],
+    "notes": "Founded 1901 (rebuilt 1915); closed ~2001-2002 for mold/moisture; demolished March 2024. A 1915 time capsule with a Lithuanian letter was found in the foundations. Coal region.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kryziaus-mount-carmel-pa",
+    "nameLt": "Šv. Kryžiaus",
+    "city": "Mount Carmel",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1892,
+    "yearClosed": 1992,
+    "coalRegion": true,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2025-09-27"
+      }
+    ],
+    "notes": "Founded 1892; closed 1992, became part of Divine Redeemer Parish 1995. Home of the founding of the Sisters of St. Casimir (1907). School building tax-sold 2022. Coal region.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "siluvos-dievo-motinos-maizeville-pa",
+    "nameLt": "Šiluvos Dievo Motinos",
+    "city": "Maizeville",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": 2008,
+    "coalRegion": true,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2025-09-27"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2025-12-11"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2026-05-07"
+      }
+    ],
+    "notes": "Closed 2008 under the Allentown plan; building sold; Jonynas stained glass rescued post-closure by the Šaknys project. Coal region.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-vincento-de-paul-girardville-pa",
+    "nameLt": "Šv. Vincento de Paul",
+    "city": "Girardville",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1907,
+    "yearClosed": 2026,
+    "coalRegion": true,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2020-11-03"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2025-12-11"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2026-01-08"
+      }
+    ],
+    "notes": "Lithuanian-immigrant-built 1907; closed as a parish 2015 (merged into St. Charles Borromeo); officially closed as a worship site, final Mass Jan 5 2026. Coal region.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-juozapo-nanticoke-pa",
+    "nameLt": "Šv. Juozapo",
+    "city": "Nanticoke",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": true,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2024-01-20"
+      }
+    ],
+    "notes": "Closed; converted to a private residence (Lithuanian-descent owner); interior fully intact. Coal region.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kazimiero-providence-ri",
+    "nameLt": "Šv. Kazimiero",
+    "city": "Providence",
+    "state": "RI",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": 2017,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2017-11-30"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2023-12-21"
+      }
+    ],
+    "notes": "Closed 2017 (the only Lithuanian church in Rhode Island); building sold to Seventh-day Adventists. Community declined a diocesan offer to bring in Latin American immigrants.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-andriejaus-philadelphia-pa",
+    "nameLt": "Šv. Andriejaus",
+    "city": "Philadelphia",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": 1924,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2008-02-23"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2022-04-09"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2025-01-30"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2026-01-08"
+      }
+    ],
+    "notes": "Survived inside the diocese, confirmed Jan 2026. The only PA Lithuanian parish with a Lithuanian-language Sunday Mass. The separately standing RECTORY was sold ~2023-24 for $1.2M to fund operations; church deed unchanged and still diocese-owned.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kazimiero-philadelphia-pa",
+    "nameLt": "Šv. Kazimiero",
+    "city": "Philadelphia",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "suppressed",
+    "endingMode": "diocese_closed",
+    "yearFounded": 1893,
+    "yearClosed": 2011,
+    "coalRegion": false,
+    "survivedReviewThenClosed": true,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2011-07-28"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2020-11-03"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2022-04-09"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2026-01-08"
+      }
+    ],
+    "notes": "Suppressed to worship-site status July 2011; survives as an open worship site of the merged Philadelphia parish. Survived earlier reviews then was suppressed. Lithuanian-Mass continuity after 2011 is conflicted in the sources.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-jurgio-philadelphia-pa",
+    "nameLt": "Šv. Jurgio",
+    "city": "Philadelphia",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "merged",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": 2016,
+    "coalRegion": false,
+    "survivedReviewThenClosed": true,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2019-01-12"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2026-01-08"
+      }
+    ],
+    "notes": "Merged into an American parish ~2015-2016, losing its Lithuanian identity. Survived multiple Philadelphia reviews then was merged out. Documented only in the Philadelphia Archdiocese plan table and Key Findings (e); no full case file in the document.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-petro-boston-ma",
+    "nameLt": "Šv. Petro",
+    "city": "Boston",
+    "state": "MA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": 1896,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2008-04-22"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2019-01-05"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2022-07-02"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2024-04-04"
+      }
+    ],
+    "notes": "Survived inside the diocese; ~20-year campaign; 2021-22 merger deferred. Community ceded the deed to the archdiocese in 1904 in exchange for a priest. The only Lithuanian church in New England. Refused merger consent Feb 2022.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kryziaus-dayton-oh",
+    "nameLt": "Šv. Kryžiaus",
+    "city": "Dayton",
+    "state": "OH",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": 1915,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2014-07-26"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2022-09-17"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2024-01-13"
+      }
+    ],
+    "notes": "Survived inside the diocese; debt-free; on the National Register of Historic Places (the only such Lithuanian church in the corpus). Parish dedicated 1915; survived via demonstrated vitality and congregational diversification.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kazimiero-cleveland-oh",
+    "nameLt": "Šv. Kazimiero",
+    "city": "Cleveland",
+    "state": "OH",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": 2009,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2009-05-19"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2009-10-18"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2014-07-10"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2024-01-18"
+      }
+    ],
+    "notes": "Consolidated parish constituted Oct 25 2009 from the merger of Šv. Jurgio Cleveland (1895) and DMNP Cleveland (1929). Survived inside the diocese; a 2014 financial crisis averted via a diocesan-approved school lease.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "svc-mergeles-marijos-gimimo-chicago-il",
+    "nameLt": "Švč. Mergelės Marijos Gimimo",
+    "city": "Chicago",
+    "state": "IL",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": 1927,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2008-09-06"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2011-04-23"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2020-11-03"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2024-01-11"
+      }
+    ],
+    "notes": "Marquette Park (Nativity BVM). Survived inside the diocese; by 2020 the sole surviving Lithuanian RC parish in Chicago. Chronic deficit covered by the archdiocese as a high-interest loan; building valued ~$20M and not parish-owned.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "svc-m-marijos-nekalto-prasidejimo-chicago-il",
+    "nameLt": "Švč. M. Marijos Nekalto Prasidėjimo",
+    "city": "Chicago",
+    "state": "IL",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "merged",
+    "endingMode": "standing",
+    "yearFounded": 1914,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2008-09-06"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2014-04-22"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2019-04-13"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2024-09-19"
+      }
+    ],
+    "notes": "Brighton Park (Immaculate Conception). Merged 2019 with Five Holy Martyrs into a multi-ethnic entity; a Lithuanian RC presence and a separate Lithuanian Mass continue; both buildings open. Filed as standing/surviving.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-antano-cicero-il",
+    "nameLt": "Šv. Antano",
+    "city": "Cicero",
+    "state": "IL",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": 1911,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2009-03-25"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2011-05-10"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2017-12-12"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2019-12-21"
+      }
+    ],
+    "notes": "Survived inside the diocese; small but active. Formal Lithuanian-parish status transferred to the Mexican community 2011, but Lithuanian Masses continued through at least Dec 2019.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "dievo-apvaizdos-southfield-mi",
+    "nameLt": "Dievo Apvaizdos",
+    "city": "Southfield",
+    "state": "MI",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": 1908,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2008-04-09"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2015-09-29"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2025-01-25"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2026-05-16"
+      }
+    ],
+    "notes": "RC. Detroit/Southfield. Survived inside the diocese; the sole surviving Lithuanian RC parish in metro Detroit; enrolled in Families of Parishes 2025. Founded 1908 as Šv. Jurgio. Distinct from Scranton LNCC and Chicago 18th-St. Dievo Apvaizdos.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "pal-jurgio-matulaicio-misija-lemont-il",
+    "nameLt": "Pal. Jurgio Matulaičio Misija",
+    "city": "Lemont",
+    "state": "IL",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": 1990,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2015-01-13"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2016-08-30"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2020-05-30"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2023-03-30"
+      }
+    ],
+    "notes": "RC ethnic mission established 1990; operates inside the community-owned Pasaulio Lietuvių Centras. Survived an RMC grouping. The venue is community-owned but the mission's canonical function remains diocesan.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "svc-m-marijos-apreiskimo-brooklyn-ny",
+    "nameLt": "Švč. M. Marijos Apreiškimo",
+    "city": "Brooklyn",
+    "state": "NY",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": 1914,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2019-03-30"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2021-07-24"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2025-09-27"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2026-05-07"
+      }
+    ],
+    "notes": "Williamsburg (Annunciation BVM). Diocese of Brooklyn. Survived inside the diocese; major renovation completed 2019; from Sept 2025 hosts the displaced Maspeth Lithuanian-language Masses.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "kristaus-atsimainymo-maspeth-ny",
+    "nameLt": "Kristaus Atsimainymo",
+    "city": "Maspeth",
+    "state": "NY",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "undecided",
+    "endingMode": "undecided",
+    "yearFounded": 1962,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": true,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2025-02-22"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2025-03-29"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2025-09-27"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2026-03-19"
+      }
+    ],
+    "notes": "Queens. Diocese of Brooklyn. NOT closed: a closure letter was issued Feb 16 2025 but reversed Sept 12 2025 to limited-basis opening. Survived review then targeted. Status genuinely unresolved as of March 2026; no community buyout.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-petro-ir-povilo-elizabeth-nj",
+    "nameLt": "Šv. Petro ir Povilo",
+    "city": "Elizabeth",
+    "state": "NJ",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "undecided",
+    "endingMode": "undecided",
+    "yearFounded": 1895,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2018-02-15"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2022-09-22"
+      }
+    ],
+    "notes": "Church built 1895. Under financial/maintenance stress by 2022 (rectory sold, electrical fire); status uncertain, unresolved. One of the last Lithuanian churches in New Jersey.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "lietuviu-baznycia-kearny-kearny-nj",
+    "nameLt": "Lietuvių bažnyčia (Kearny)",
+    "city": "Kearny",
+    "state": "NJ",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2022-09-22"
+      }
+    ],
+    "notes": "Officially Lithuanian (a Lithuanian Church sign hangs); daily Masses; by 2022 one of the strongest Lithuanian bastions in New Jersey. Survived.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-jurgio-bridgeport-ct",
+    "nameLt": "Šv. Jurgio",
+    "city": "Bridgeport",
+    "state": "CT",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2017-11-30"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2023-12-09"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2024-10-05"
+      }
+    ],
+    "notes": "Diocese of Bridgeport. Now majority Spanish-speaking but Lithuanian Masses still held; interior remains very Lithuanian. Survived/transitioned, active 2023-24.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "svc-trejybes-hartford-ct",
+    "nameLt": "Švč. Trejybės",
+    "city": "Hartford",
+    "state": "CT",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2017-11-30"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2023-12-09"
+      }
+    ],
+    "notes": "Diocese of Hartford. The surrounding Lithuanian neighborhood was demolished by urban renewal, but the church building stands and was active as of late 2023. 2017 hall-only access flagged as transient ambiguity.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-onos-luzerne-pa",
+    "nameLt": "Šv. Onos",
+    "city": "Luzerne",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": true,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2024-01-20"
+      }
+    ],
+    "notes": "The one Lithuanian church remaining under Catholic ownership in the entire 10-church northern PA cluster. Survived. Coal region.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-m-marijos-apsireiskimo-frackville-pa",
+    "nameLt": "Šv. M. Marijos Apsireiškimo",
+    "city": "Frackville",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": 1914,
+    "yearClosed": null,
+    "coalRegion": true,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2017-09-21"
+      }
+    ],
+    "notes": "Annunciation BVM. Lithuanian-community-built 1914; still open; hosted the 103rd Lietuvių Dienos festival 2017; adjacent Lithuanian museum since 1982. Survived. Coal region.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kazimiero-los-angeles-ca",
+    "nameLt": "Šv. Kazimiero",
+    "city": "Los Angeles",
+    "state": "CA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2017-10-19"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2019-04-13"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2020-01-04"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2020-06-02"
+      }
+    ],
+    "notes": "Third building 1951, community-funded but archdiocese-titled. Active cultural center; survived inside the Archdiocese of Los Angeles, confirmed 2020.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-petro-ir-povilo-grand-rapids-mi",
+    "nameLt": "Šv. Petro ir Povilo",
+    "city": "Grand Rapids",
+    "state": "MI",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": 1904,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2024-01-13"
+      }
+    ],
+    "notes": "Founded ~1904. Survived; by 2024 described as the best-preserved living first-wave Lithuanian neighborhood in America.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "nekaltojo-prasidejimo-east-st-louis-il",
+    "nameLt": "Nekaltojo Prasidėjimo",
+    "city": "East St. Louis",
+    "state": "IL",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": 1895,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2017-06-08"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2019-01-26"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2022-01-15"
+      }
+    ],
+    "notes": "Founded 1895. Diocese of Belleville. Survived against extreme odds (11 of 13 East St. Louis Catholic churches closed); landmark-designated; still officially Lithuanian after 126+ years.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kazimiero-waterbury-ct",
+    "nameLt": "Šv. Kazimiero",
+    "city": "Waterbury",
+    "state": "CT",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2022-10-01"
+      }
+    ],
+    "notes": "Distinct from the closed Šv. Juozapo Waterbury. Survived; still functioning 2022; temporarily storing the Frackville/Shenandoah-area Lithuanian Museum's artifacts.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "unnamed-lithuanian-parish-baltimore-md",
+    "nameLt": "Unnamed Lithuanian parish",
+    "city": "Baltimore",
+    "state": "MD",
+    "country": "US",
+    "comparator": false,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "diocese_closed",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2010-01-02"
+      }
+    ],
+    "notes": "Transitioned / de facto closed as a Lithuanian parish; building used by an American parish; one token Sunday Lithuanian Mass with no Lithuanian priest.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "dievo-apvaizdos-scranton-pa",
+    "nameLt": "Dievo Apvaizdos",
+    "city": "Scranton",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "national_catholic",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": 1913,
+    "yearClosed": null,
+    "coalRegion": true,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2017-12-28"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2020-06-13"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2022-10-01"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2024-01-20"
+      }
+    ],
+    "notes": "Providence of God. LITHUANIAN NATIONAL CATHOLIC, lay-governed, independent of Rome; community-owned. The last surviving officially Lithuanian parish in the entire NE PA coal region; survives precisely because no bishop can close or sell it. Building 1915. Coal region. Distinct from Detroit/Southfield RC and Chicago 18th-St. RC Dievo Apvaizdos.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "saldziausios-jezaus-sirdies-lawrence-ma",
+    "nameLt": "Saldžiausios Jėzaus Širdies",
+    "city": "Lawrence",
+    "state": "MA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "national_catholic",
+    "status": "closed",
+    "endingMode": "community_decided",
+    "yearFounded": 1916,
+    "yearClosed": 2002,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2015-05-14"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2020-06-13"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2023-12-16"
+      }
+    ],
+    "notes": "LITHUANIAN NATIONAL CATHOLIC, community-owned. Also called Šv. Marijos Tautinė Katalikų Parapija. Closed and sold 2002 BY THE COMMUNITY at parishioners' request; proceeds went to the community's own LNCC cemetery fund. Contrast with RC Šv. Pranciškaus Lawrence same year.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-marijos-tautine-kataliku-parapija-philadelphia-pa",
+    "nameLt": "Šv. Marijos Tautinė Katalikų Parapija",
+    "city": "Philadelphia",
+    "state": "PA",
+    "country": "US",
+    "comparator": false,
+    "ownership": "national_catholic",
+    "status": "demolished",
+    "endingMode": "community_decided",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2015-05-07"
+      }
+    ],
+    "notes": "LITHUANIAN NATIONAL CATHOLIC, community-governed, never diocesan. Broke from RC in the 1916 schism; building sold 1972 and demolished; ~30-40 parishioners at closure. Parish cemetery at Bensalem PA survives.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "lncc-congregation-westville-il",
+    "nameLt": "LNCC congregation",
+    "city": "Westville",
+    "state": "IL",
+    "country": "US",
+    "comparator": false,
+    "ownership": "national_catholic",
+    "status": "demolished",
+    "endingMode": "community_decided",
+    "yearFounded": null,
+    "yearClosed": 1969,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2019-02-02"
+      }
+    ],
+    "notes": "LITHUANIAN NATIONAL CATHOLIC, community-governed. Closed ~1969 and demolished; bell and cornerstone made into a 2004 memorial; cemetery maintained. Independence removed diocesan risk but not demographic risk.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "lietuviu-evangeliku-liuteronu-teviskes-parapija-darien-il",
+    "nameLt": "Lietuvių Evangelikų Liuteronų Tėviškės Parapija",
+    "city": "Darien",
+    "state": "IL",
+    "country": "US",
+    "comparator": false,
+    "ownership": "other_self_owned",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2010-07-23"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2015-10-22"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2019-12-21"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2022-10-20"
+      }
+    ],
+    "notes": "Lithuanian Evangelical Lutheran, congregationally governed, community-owned (bought its Marquette Park building in 1957). Voted to sell and relocate twice (Western Springs, then Darien Dec 2019); thriving and growing. Self-owned comparator.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "lithuanian-lutheran-church-collinsville-il",
+    "nameLt": "Lithuanian Lutheran Church",
+    "city": "Collinsville",
+    "state": "IL",
+    "country": "US",
+    "comparator": false,
+    "ownership": "other_self_owned",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2019-01-26"
+      }
+    ],
+    "notes": "Independent self-governing Lithuanian Lutheran congregation, founded by a knygnešys from Tauragė. Survived; small, aging, still active as of 2019. Independent of any diocese.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kazimiero-montreal-qc",
+    "nameLt": "Šv. Kazimiero",
+    "city": "Montreal",
+    "state": "QC",
+    "country": "CA",
+    "comparator": true,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2020-01-18"
+      }
+    ],
+    "notes": "CANADA - out-of-scope comparator, NOT counted in the U.S. total of 83. Quebec QC. Under Quebec civil law the parish (not the diocese) is the juridical owner; the diocese cannot act unilaterally. Survived; aging. Natural-experiment comparator.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "ausros-vartu-montreal-qc",
+    "nameLt": "Aušros Vartų",
+    "city": "Montreal",
+    "state": "QC",
+    "country": "CA",
+    "comparator": true,
+    "ownership": "diocese_rc",
+    "status": "standing",
+    "endingMode": "standing",
+    "yearFounded": null,
+    "yearClosed": null,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2020-01-18"
+      }
+    ],
+    "notes": "CANADA - out-of-scope comparator, NOT counted in the U.S. total of 83. Quebec QC. Quebec parish-ownership law; diocese cannot act unilaterally. Survived; aging. Natural-experiment comparator.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  },
+  {
+    "slug": "sv-kazimiero-delhi-on",
+    "nameLt": "Šv. Kazimiero",
+    "city": "Delhi",
+    "state": "ON",
+    "country": "CA",
+    "comparator": true,
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "endingMode": "community_decided",
+    "yearFounded": null,
+    "yearClosed": 2020,
+    "coalRegion": false,
+    "survivedReviewThenClosed": false,
+    "citations": [
+      {
+        "type": "draugas_issue",
+        "date": "2020-02-01"
+      },
+      {
+        "type": "draugas_issue",
+        "date": "2020-11-07"
+      }
+    ],
+    "notes": "CANADA - out-of-scope comparator, NOT counted in the U.S. total of 83. Ontario ON. Closed October 2020 after 61 years; the community explicitly framed the closure as self-determination, contrasting it with forced U.S. diocesan closures.",
+    "corpusScope": "draugas-2008-2026",
+    "recordKind": "archive_verified"
+  }
+]
