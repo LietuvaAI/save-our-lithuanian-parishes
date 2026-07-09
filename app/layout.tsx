@@ -28,6 +28,7 @@ export const metadata: Metadata = {
 };
 
 const NAV = [
+  { href: "/who-does-the-parish-belong-to", label: "The Article" },
   { href: "/parishes", label: "The Record" },
   { href: "/data", label: "The Data" },
   { href: "/report", label: "Report" },

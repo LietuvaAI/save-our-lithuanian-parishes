@@ -87,7 +87,15 @@ export default function Home() {
           record, and every entry in it traces to a dated issue of{" "}
           <em>Draugas</em>, the Lithuanian-American newspaper of record.
         </p>
-        <p className="mt-6">
+        <p className="mt-6 space-x-6">
+          <Link
+            href="/who-does-the-parish-belong-to"
+            className="underline hover:text-accent"
+          >
+            Read the article: Who does the parish belong to? →
+          </Link>
+        </p>
+        <p className="mt-3">
           <Link href="/network" className="underline hover:text-accent">
             Why we keep this record — and how you can help →
           </Link>
