@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ParishMap from "@/components/ParishMap";
 import { figures } from "@/lib/parishes";
 
 const STATS = [
@@ -23,42 +24,24 @@ const STATS = [
 export default function Home() {
   return (
     <div className="mx-auto max-w-5xl px-4">
-      <section className="py-16 sm:py-24">
-        <p className="text-sm uppercase tracking-widest text-muted mb-4">
+      <section className="pt-12 sm:pt-16 text-center">
+        <p className="text-sm uppercase tracking-widest text-muted mb-3">
           The record of America&rsquo;s Lithuanian parishes
         </p>
-        <h1 className="font-serif text-4xl sm:text-5xl font-semibold leading-tight max-w-3xl">
+        <h1 className="font-serif text-3xl sm:text-5xl font-semibold leading-tight max-w-3xl mx-auto">
           Who decides whether a Lithuanian parish survives?
         </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed">
-          Not faith. Not money. Not how many people fill the pews, and not how
-          hard the community fights. Eighteen years of the <em>Draugas</em>{" "}
-          archive show that one thing decides a parish&rsquo;s fate:{" "}
-          <strong>who holds the ownership of the parish</strong>.
+        <p className="mt-4 max-w-2xl mx-auto text-lg leading-relaxed text-muted">
+          Not faith. Not money. Not the fight. The color of every mark below
+          is <strong className="text-foreground">who decided its ending</strong>.
         </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Link
-            href="/data"
-            className="rounded-md bg-foreground text-background px-5 py-2.5 text-sm font-medium hover:opacity-85 transition-opacity"
-          >
-            See the data
-          </Link>
-          <Link
-            href="/parishes"
-            className="rounded-md border border-rule px-5 py-2.5 text-sm font-medium hover:border-foreground transition-colors"
-          >
-            Browse the record
-          </Link>
-          <Link
-            href="/report"
-            className="rounded-md border border-rule px-5 py-2.5 text-sm font-medium hover:border-foreground transition-colors"
-          >
-            Report from your parish
-          </Link>
-        </div>
       </section>
 
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-rule border border-rule rounded-lg overflow-hidden">
+      <section className="mt-8">
+        <ParishMap />
+      </section>
+
+      <section className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-rule border border-rule rounded-lg overflow-hidden">
         {STATS.map((s) => (
           <div key={s.label} className="bg-background p-6">
             <div className="font-serif text-4xl font-semibold text-accent">
@@ -69,7 +52,34 @@ export default function Home() {
         ))}
       </section>
 
-      <section className="py-16 max-w-2xl">
+      <section className="mt-8 flex flex-wrap gap-3 justify-center">
+        <Link
+          href="/who-does-the-parish-belong-to"
+          className="rounded-md bg-foreground text-background px-5 py-2.5 text-sm font-medium hover:opacity-85 transition-opacity"
+        >
+          Read the article
+        </Link>
+        <Link
+          href="/parishes"
+          className="rounded-md border border-rule px-5 py-2.5 text-sm font-medium hover:border-foreground transition-colors"
+        >
+          Browse the record
+        </Link>
+        <Link
+          href="/data"
+          className="rounded-md border border-rule px-5 py-2.5 text-sm font-medium hover:border-foreground transition-colors"
+        >
+          See the data
+        </Link>
+        <Link
+          href="/report"
+          className="rounded-md border border-rule px-5 py-2.5 text-sm font-medium hover:border-foreground transition-colors"
+        >
+          Report from your parish
+        </Link>
+      </section>
+
+      <section className="py-16 max-w-2xl mx-auto">
         <h2 className="font-serif text-2xl font-semibold">
           The communities built them
         </h2>
@@ -85,17 +95,14 @@ export default function Home() {
           The only parishes never closed by an outside authority are the ones
           the community itself controlled. That is not an argument — it is the
           record, and every entry in it traces to a dated issue of{" "}
-          <em>Draugas</em>, the Lithuanian-American newspaper of record.
-        </p>
-        <p className="mt-6 space-x-6">
-          <Link
-            href="/who-does-the-parish-belong-to"
-            className="underline hover:text-accent"
-          >
-            Read the article: Who does the parish belong to? →
+          <em>Draugas</em>, the Lithuanian-American newspaper of record. Three
+          Canadian parishes are documented as comparators and appear in{" "}
+          <Link href="/parishes" className="underline hover:text-accent">
+            the record
           </Link>
+          , not on the U.S. map.
         </p>
-        <p className="mt-3">
+        <p className="mt-6">
           <Link href="/network" className="underline hover:text-accent">
             Why we keep this record — and how you can help →
           </Link>
