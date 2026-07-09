@@ -31,7 +31,6 @@ const NAV = [
   { href: "/who-does-the-parish-belong-to", label: "The Article" },
   { href: "/parishes", label: "The Record" },
   { href: "/data", label: "The Data" },
-  { href: "/report", label: "Report" },
   { href: "/network", label: "The Network" },
 ];
 
@@ -51,7 +50,7 @@ export default function RootLayout({
             <Link href="/" className="font-serif text-lg font-semibold tracking-tight">
               Save Our Lithuanian Parishes
             </Link>
-            <nav className="flex gap-5 text-sm text-muted">
+            <nav className="flex items-center gap-5 text-sm text-muted">
               {NAV.map((item) => (
                 <Link
                   key={item.href}
@@ -61,6 +60,13 @@ export default function RootLayout({
                   {item.label}
                 </Link>
               ))}
+              <Link
+                href="/report"
+                className="rounded-md px-3.5 py-1.5 font-semibold text-white hover:opacity-90 transition-opacity"
+                style={{ background: "var(--mark-closed)" }}
+              >
+                Report
+              </Link>
             </nav>
           </div>
         </header>
