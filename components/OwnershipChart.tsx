@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { MarkShape, MarkIcon } from "@/components/marks";
 import {
   type Parish,
@@ -37,12 +39,14 @@ function UnitGrid({
   markR,
   cols,
   onHover,
+  onOpen,
   hovered,
 }: {
   parishes: Parish[];
   markR: number;
   cols: number;
   onHover: (p: Parish | null) => void;
+  onOpen: (p: Parish) => void;
   hovered: Parish | null;
 }) {
   const rows = Math.ceil(parishes.length / cols);
@@ -78,11 +82,15 @@ function UnitGrid({
               r={active ? markR * 1.25 : markR}
               tabIndex={0}
               role="button"
-              aria-label={`${p.nameLt}, ${p.city} ${p.state} — ${ENDING_MODE_LABEL[p.endingMode]}`}
+              aria-label={`${p.nameLt}, ${p.city} ${p.state} — ${ENDING_MODE_LABEL[p.endingMode]}. Open the parish record.`}
               onMouseEnter={() => onHover(p)}
               onMouseLeave={() => onHover(null)}
               onFocus={() => onHover(p)}
               onBlur={() => onHover(null)}
+              onClick={() => onOpen(p)}
+              onKeyDown={(e: React.KeyboardEvent) => {
+                if (e.key === "Enter") onOpen(p);
+              }}
               className="cursor-pointer focus:outline-none"
             />
           </g>
@@ -93,7 +101,9 @@ function UnitGrid({
 }
 
 export default function OwnershipChart({ parishes }: { parishes: Parish[] }) {
+  const router = useRouter();
   const [hovered, setHovered] = useState<Parish | null>(null);
+  const openParish = (p: Parish) => router.push(`/parishes/${p.slug}`);
 
   const diocese = parishes
     .filter((p) => p.ownership === "diocese_rc")
@@ -121,6 +131,7 @@ export default function OwnershipChart({ parishes }: { parishes: Parish[] }) {
               markR={10}
               cols={COLS}
               onHover={setHovered}
+              onOpen={openParish}
               hovered={hovered}
             />
           </div>
@@ -139,6 +150,7 @@ export default function OwnershipChart({ parishes }: { parishes: Parish[] }) {
               markR={14}
               cols={3}
               onHover={setHovered}
+              onOpen={openParish}
               hovered={hovered}
             />
           </div>
@@ -164,11 +176,19 @@ export default function OwnershipChart({ parishes }: { parishes: Parish[] }) {
                 hovered.status !== "closed" &&
                 ` (${STATUS_LABEL[hovered.status].toLowerCase()})`}
               {hovered.yearClosed ? ` · ${hovered.yearClosed}` : ""}
+              {" · "}
+              <Link
+                href={`/parishes/${hovered.slug}`}
+                className="underline hover:text-foreground"
+              >
+                full record →
+              </Link>
             </div>
           </div>
         ) : (
           <span className="text-muted">
-            Hover over a parish. Ringed marks: Šv. Jurgio (Shenandoah), Aušros
+            Hover over a parish; click to open its record and the original
+            Draugas coverage. Ringed marks: Šv. Jurgio (Shenandoah), Aušros
             Vartų (Manhattan), Šv. Petro (Boston) — money did not save them —
             and Dievo Apvaizdos (Scranton), the community-owned parish no
             bishop can close.

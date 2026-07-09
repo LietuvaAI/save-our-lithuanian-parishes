@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { MarkIcon } from "@/components/marks";
 import {
   type Parish,
@@ -117,7 +118,14 @@ export default function ParishTable({ parishes }: { parishes: Parish[] }) {
           <tbody>
             {filtered.map((p) => (
               <tr key={p.slug} className="border-b border-rule last:border-0 align-top">
-                <td className="px-3 py-2 font-medium whitespace-nowrap">{p.nameLt}</td>
+                <td className="px-3 py-2 font-medium whitespace-nowrap">
+                  <Link
+                    href={`/parishes/${p.slug}`}
+                    className="underline decoration-rule underline-offset-2 hover:decoration-inherit"
+                  >
+                    {p.nameLt}
+                  </Link>
+                </td>
                 <td className="px-3 py-2 whitespace-nowrap">{p.city}</td>
                 <td className="px-3 py-2">{p.state}</td>
                 <td className="px-3 py-2">{OWNERSHIP_SHORT[p.ownership]}</td>

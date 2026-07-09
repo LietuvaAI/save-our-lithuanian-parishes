@@ -1,6 +1,8 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import mapData from "@/data/map.json";
 import { MarkShape, MarkIcon } from "@/components/marks";
 import {
@@ -33,10 +35,11 @@ function clampView(v: View): View {
 }
 
 export default function ParishMap() {
+  const router = useRouter();
   const [hovered, setHovered] = useState<Parish | null>(null);
   const [view, setView] = useState<View>(FULL);
   const svgRef = useRef<SVGSVGElement>(null);
-  const drag = useRef<{ px: number; py: number } | null>(null);
+  const drag = useRef<{ px: number; py: number; moved: boolean } | null>(null);
 
   const zoom = FULL.w / view.w;
 
@@ -71,7 +74,7 @@ export default function ParishMap() {
   }
 
   function onPointerDown(e: React.PointerEvent<SVGSVGElement>) {
-    drag.current = { px: e.clientX, py: e.clientY };
+    drag.current = { px: e.clientX, py: e.clientY, moved: false };
     (e.target as Element).setPointerCapture?.(e.pointerId);
   }
 
@@ -81,8 +84,17 @@ export default function ParishMap() {
     const scale = view.w / rect.width;
     const dx = (e.clientX - drag.current.px) * scale;
     const dy = (e.clientY - drag.current.py) * scale;
-    drag.current = { px: e.clientX, py: e.clientY };
+    if (Math.abs(e.clientX - drag.current.px) + Math.abs(e.clientY - drag.current.py) > 3) {
+      drag.current.moved = true;
+    }
+    drag.current = { px: e.clientX, py: e.clientY, moved: drag.current.moved };
     setView((v) => clampView({ ...v, x: v.x - dx, y: v.y - dy }));
+  }
+
+  function openParish(p: Parish) {
+    // A drag that ends on a mark is a pan, not a click.
+    if (drag.current?.moved) return;
+    router.push(`/parishes/${p.slug}`);
   }
 
   function onPointerUp() {
@@ -137,11 +149,15 @@ export default function ParishMap() {
                 r={active ? markR * 1.4 : markR}
                 tabIndex={0}
                 role="button"
-                aria-label={`${parish.nameLt}, ${parish.city} ${parish.state} — ${ENDING_MODE_LABEL[parish.endingMode]}`}
+                aria-label={`${parish.nameLt}, ${parish.city} ${parish.state} — ${ENDING_MODE_LABEL[parish.endingMode]}. Open the parish record.`}
                 onMouseEnter={() => setHovered(parish)}
                 onMouseLeave={() => setHovered(null)}
                 onFocus={() => setHovered(parish)}
                 onBlur={() => setHovered(null)}
+                onClick={() => openParish(parish)}
+                onKeyDown={(e: React.KeyboardEvent) => {
+                  if (e.key === "Enter") router.push(`/parishes/${parish.slug}`);
+                }}
                 className="cursor-pointer focus:outline-none"
               />
             );
@@ -187,13 +203,21 @@ export default function ParishMap() {
                 hovered.status !== "closed" &&
                 ` (${STATUS_LABEL[hovered.status].toLowerCase()})`}
               {hovered.yearClosed ? ` · ${hovered.yearClosed}` : ""}
+              {" · "}
+              <Link
+                href={`/parishes/${hovered.slug}`}
+                className="underline hover:text-foreground"
+              >
+                full record →
+              </Link>
             </div>
           </div>
         ) : (
           <span className="text-muted">
             Each mark is one of the {usParishes.length} U.S. Lithuanian
-            parishes in the record. Hover or tap a parish; zoom into the
-            Northeast where the marks cluster. Drag to pan when zoomed.
+            parishes in the record. Click a parish to open its record and the
+            original Draugas coverage. Zoom into the Northeast; drag to pan
+            when zoomed.
           </span>
         )}
       </div>

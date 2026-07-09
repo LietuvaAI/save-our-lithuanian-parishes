@@ -73,6 +73,16 @@ export const STATUS_LABEL: Record<ParishStatus, string> = {
   undecided: "Unresolved",
 };
 
+/**
+ * Public Draugas archive page for the year of an issue date. Direct PDF
+ * filenames vary by year and recent issues sit behind a subscription, so
+ * citations link to the public per-year archive page; the dated label
+ * identifies the exact issue there.
+ */
+export function draugasArchiveUrl(isoDate: string): string {
+  return `https://www.draugas.org/archyvas-pdf-${isoDate.slice(0, 4)}/`;
+}
+
 /** Canonical legend order: losses first, per the infographic. */
 export const ENDING_MODE_ORDER: EndingMode[] = [
   "diocese_closed",
