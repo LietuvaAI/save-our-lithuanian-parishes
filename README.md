@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Save Our Lithuanian Parishes
 
-## Getting Started
+**SaveOurLithuanianParishes.org** — the record of America's Lithuanian parishes: who built them, who closed them, and what decides which ones survive.
 
-First, run the development server:
+Eighteen years of the *Draugas* archive (2008–2026, 2,768 issues searched) document 83 U.S. Lithuanian parishes. 55 were closed, merged away, suppressed, or demolished by diocesan decision — and all 55 were diocese-owned. Zero community-owned parishes were ever closed by an outside authority. This site publishes that record, openly and verifiably, and grows it: backward through the archives toward 1900, and forward through community reports.
+
+## The data
+
+- `data/parishes.csv` — snapshot of the canonical research dataset (see [data/PROVENANCE.md](data/PROVENANCE.md) for source, scope, and binding cautions).
+- `scripts/build-data.mjs` — derives `data/parishes.json` + `data/figures.json` and **validates every figure against the locked research figure set. The build fails if any figure drifts.** Runs automatically before `next build`.
+- Never hand-edit the CSV here; re-snapshot from the canonical source by PR.
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run data   # regenerate + validate data files
+npm run dev    # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Deployed on Vercel via Git integration: pushes to a branch get a preview URL; merges to `main` deploy production. All changes land through branch + PR.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Provenance
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Research: the *Draugas* parish-survival corpus (LietuvaAI / Lietuva.AI — Skaitmeniniai knygnešiai). Related published work: „Kam priklauso parapija?" (*Draugas*, 2026).
