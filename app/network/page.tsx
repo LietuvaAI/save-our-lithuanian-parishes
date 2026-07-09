@@ -40,10 +40,16 @@ export default function NetworkPage() {
           parishes appear here as historical witness, not as a recommendation.
         </p>
         <div className="rounded-lg border border-rule p-5">
-          <p className="font-medium">Dispatches are coming.</p>
+          <p className="font-medium">The dispatches are live.</p>
           <p className="mt-1 text-sm text-muted">
-            A companion publication — closure alerts, parish case files, and
-            updates from the record — is in preparation. Until then, the{" "}
+            Closure alerts, parish case files, and updates from the record —{" "}
+            <a
+              href="https://saveourlithuanianparishes.substack.com"
+              className="underline hover:text-foreground"
+            >
+              Save Our Lithuanian Parishes on Substack
+            </a>
+            . The{" "}
             <Link href="/parishes" className="underline hover:text-foreground">
               record
             </Link>{" "}
@@ -51,7 +57,16 @@ export default function NetworkPage() {
             <Link href="/data" className="underline hover:text-foreground">
               data
             </Link>{" "}
-            are open.
+            stay open here.
+          </p>
+          <p className="mt-3">
+            <a
+              href="https://saveourlithuanianparishes.substack.com/subscribe"
+              className="inline-block rounded-md px-4 py-2 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
+              style={{ background: "var(--mark-closed)" }}
+            >
+              Subscribe
+            </a>
           </p>
         </div>
       </div>

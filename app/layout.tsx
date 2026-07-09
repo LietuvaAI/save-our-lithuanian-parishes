@@ -31,6 +31,7 @@ const NAV = [
   { href: "/who-does-the-parish-belong-to", label: "The Article" },
   { href: "/parishes", label: "The Record" },
   { href: "/data", label: "The Data" },
+  { href: "https://saveourlithuanianparishes.substack.com", label: "Dispatches" },
   { href: "/network", label: "The Network" },
 ];
 
@@ -74,6 +75,10 @@ export default function RootLayout({
         <footer className="border-t border-rule mt-16">
           <div className="mx-auto max-w-5xl px-4 py-8 text-sm text-muted space-y-2">
             <p>
+              Working for one goal: Lithuanian parishes owned and governed by
+              the communities that built them.
+            </p>
+            <p>
               Every figure on this site is derived from the parish record and
               verified at build time. Source: the <em>Draugas</em> archive,
               2008–2026 — 2,768 issues searched.
@@ -85,6 +90,13 @@ export default function RootLayout({
                 className="underline hover:text-foreground"
               >
                 Check our numbers
+              </a>
+              . Follow the{" "}
+              <a
+                href="https://saveourlithuanianparishes.substack.com"
+                className="underline hover:text-foreground"
+              >
+                dispatches
               </a>
               .
             </p>

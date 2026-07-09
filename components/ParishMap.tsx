@@ -217,7 +217,11 @@ export default function ParishMap() {
             Each mark is one of the {usParishes.length} U.S. Lithuanian
             parishes in the record. Click a parish to open its record and the
             original Draugas coverage. Zoom into the Northeast; drag to pan
-            when zoomed.
+            when zoomed. See a parish missing?{" "}
+            <Link href="/report" className="underline hover:text-foreground">
+              Report it
+            </Link>
+            .
           </span>
         )}
       </div>

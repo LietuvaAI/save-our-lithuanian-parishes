@@ -60,9 +60,13 @@ export default function Home() {
           Who decides whether a Lithuanian parish survives?
         </h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg leading-relaxed text-muted">
-          Not faith. Not money. Not the fight —{" "}
-          <strong className="text-foreground">ownership</strong>. Know the
-          record. Watch your parish. Act while the community still decides.
+          Not faith. Not money. Not the fight — ownership decided every
+          ending. We stand for one goal:{" "}
+          <strong className="text-foreground">
+            Lithuanian parishes owned and governed by the communities that
+            built them
+          </strong>
+          .
         </p>
         <div className="mt-6 flex flex-wrap gap-3 justify-center">
           <Link
@@ -154,6 +158,25 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </section>
+
+      <section className="mt-12 rounded-lg border border-rule p-6 sm:p-8 text-center">
+        <h2 className="font-serif text-2xl font-semibold">
+          Follow the record as it grows
+        </h2>
+        <p className="mt-2 max-w-xl mx-auto text-sm text-muted leading-relaxed">
+          Dispatches from the record — closure alerts, parish case files, and
+          what communities are doing about it — arrive by email.
+        </p>
+        <p className="mt-4">
+          <a
+            href="https://saveourlithuanianparishes.substack.com/subscribe"
+            className="inline-block rounded-md px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
+            style={{ background: "var(--mark-closed)" }}
+          >
+            Subscribe to the dispatches
+          </a>
+        </p>
       </section>
 
       <section className="py-16 max-w-2xl mx-auto">
