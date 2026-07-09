@@ -16,7 +16,9 @@ const parishes = JSON.parse(readFileSync(new URL("../data/parishes.json", import
 const geo = JSON.parse(readFileSync(new URL("../data/geo.json", import.meta.url), "utf-8"));
 
 const path = geoPath(); // identity — the atlas is already projected
-const nationPath = path(feature(topo, topo.objects.nation));
+// Full state polygons (coastline included) so the map reads as a standard
+// filled US map; interior borders drawn separately as a lighter mesh.
+const statePaths = feature(topo, topo.objects.states).features.map((f) => path(f));
 const stateBorders = path(mesh(topo, topo.objects.states, (a, b) => a !== b));
 
 // The exact projection us-atlas pre-projected files were built with.
@@ -57,6 +59,6 @@ if (points.length !== mappable.length) {
 
 writeFileSync(
   new URL("../data/map.json", import.meta.url),
-  JSON.stringify({ viewBox: "0 0 975 610", nationPath, stateBorders, points }) + "\n"
+  JSON.stringify({ viewBox: "0 0 975 610", statePaths, stateBorders, points }) + "\n"
 );
 console.log(`OK: map.json with ${points.length} projected parish points (${byCity.size} cities).`);

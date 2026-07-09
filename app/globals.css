@@ -6,6 +6,7 @@
   --foreground: #1c1917;
   --muted: #78716c;
   --rule: #e7e5e4;
+  --band: #f3eee2;
   --accent: #7d1f1f;
 
   /* Mark encoding from the „Kam priklauso bažnyčia?" infographic:
@@ -32,6 +33,7 @@
     --foreground: #e7e5e4;
     --muted: #a8a29e;
     --rule: #292524;
+    --band: #1e1b19;
     --accent: #c96a6a;
 
     --mark-closed: #c96a6a;
