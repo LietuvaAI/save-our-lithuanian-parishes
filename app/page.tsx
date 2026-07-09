@@ -109,8 +109,9 @@ export default function Home() {
           Happening now
         </p>
         <p className="mt-2 leading-relaxed max-w-3xl">
-          Detroit&rsquo;s <strong>Divine Providence</strong> — the last
-          Lithuanian Catholic parish in the city — is inside the Archdiocese
+          Detroit&rsquo;s <strong>Divine Providence</strong>{" "}&mdash; the
+          last Lithuanian Catholic parish in the city &mdash; is inside the
+          Archdiocese
           of Detroit&rsquo;s restructuring. The record shows that the only
           window that ever mattered is <em>before</em> the closure letter
           arrives. That window is open now.{" "}
