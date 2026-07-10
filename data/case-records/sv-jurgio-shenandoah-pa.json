@@ -1,0 +1,44 @@
+{
+  "slug": "sv-jurgio-shenandoah-pa",
+  "asOf": "2026-07-09",
+  "buildingStatus": "demolished",
+  "currentUse": "Vacant lot with adjoining former rectory, listed for sale by the Diocese of Allentown in June 2024; a Gold Star Highway billboard memorializes the church",
+  "summary": "The church was razed in 2009 and its site on South Jardin Street remains a vacant lot. In June 2024 the Diocese of Allentown, through Divine Mercy Parish, listed the lot bundled with the former rectory for $139,900, with proceeds to the parish. A billboard along the Gold Star Highway reminds motorists of the lost landmark, and heritage advocates funded a commemorative plaque for Shenandoah's 'Little Lithuania' after the diocese reneged on a promised symbolic belfry. Salvaged stained glass from St. George's is now displayed at the Lithuanian Heritage Museum, which opened September 7, 2025 at 318 East Centre Street in a former family funeral home, open by appointment. The Lithuanian Days festival, America's oldest continuous ethnic festival, continues at Lakewood Park in Barnesville, with the 2026 edition set for August 15-16 and proceeds benefiting the museum.",
+  "developments": [
+    {
+      "date": "2026",
+      "headline": "Lithuanian Days 2026 scheduled, proceeds to benefit heritage museum",
+      "detail": "The festival is set for August 15-16, 2026 at Catalpa Grove, Lakewood Park, Barnesville, with proceeds to Lithuanian Charities and the Lithuanian Heritage Museum.",
+      "sources": [
+        { "title": "Lithuanian Days", "publisher": "FestivalsInPA", "date": "2026", "url": "https://www.festivalsinpa.com/festival/546/lithuanian-days" }
+      ]
+    },
+    {
+      "date": "2025-09-07",
+      "headline": "Lithuanian Heritage Museum opens, displaying St. George stained glass",
+      "detail": "Anne Chaikowsky La Voie Skirmantas opened the museum at 318 East Centre Street, Shenandoah, holding stained glass from St. George's and Our Lady of Siluva, plus artifacts from the 1980s Knights of Lithuania museum in Frackville; visits by appointment.",
+      "sources": [
+        { "title": "Shenandoah's Lithuanian heritage on display at new museum", "publisher": "The Shenandoah Sentinel", "date": "2025-09-08", "url": "https://shensentinel.com/news/shenandoahs-lithuanian-heritage-on-display-at-new-museum/" },
+        { "title": "A new museum in Pennsylvania preserves 150 years of Lithuanian-American history", "publisher": "LRT English", "date": "2025-10-25", "url": "https://www.lrt.lt/en/news-in-english/19/2721503/a-new-musuem-in-pennsylvania-preserves-150-years-of-lithuanian-american-history" }
+      ]
+    },
+    {
+      "date": "2024-06-19",
+      "headline": "Diocese lists church lot and rectory for sale at $139,900",
+      "detail": "The Diocese of Allentown, via Divine Mercy Parish, put the vacant church lot and the three-story brick rectory on the market to support parish finances.",
+      "sources": [
+        { "title": "St. George lot, rectory to be listed for sale", "publisher": "The Shenandoah Sentinel", "date": "2024-06-17", "url": "https://shensentinel.com/news/st-george-lot-rectory-to-be-listed-for-sale/" }
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "St. George lot, rectory to be listed for sale", "publisher": "The Shenandoah Sentinel", "date": "2024-06-17", "url": "https://shensentinel.com/news/st-george-lot-rectory-to-be-listed-for-sale/" },
+    { "title": "Shenandoah's Lithuanian heritage on display at new museum", "publisher": "The Shenandoah Sentinel", "date": "2025-09-08", "url": "https://shensentinel.com/news/shenandoahs-lithuanian-heritage-on-display-at-new-museum/" },
+    { "title": "A new museum in Pennsylvania preserves 150 years of Lithuanian-American history", "publisher": "LRT English", "date": "2025-10-25", "url": "https://www.lrt.lt/en/news-in-english/19/2721503/a-new-musuem-in-pennsylvania-preserves-150-years-of-lithuanian-american-history" },
+    { "title": "Shenandoah and southern Coal Region: Lithuanian heritage", "publisher": "Global True Lithuania", "date": "", "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/" },
+    { "title": "Lithuanian Days", "publisher": "FestivalsInPA", "date": "2026", "url": "https://www.festivalsinpa.com/festival/546/lithuanian-days" }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "LRT states the church was 'closed by the local diocese in 2010,' conflating closure (2006) with demolition (2009). Global True Lithuania corroborates the reneged belfry promise (stones stored at Our Lady of Calvary Cemetery) and notes heritage-listing funds went instead to a commemorative plaque — a memorial element not in the archive record.",
+  "gaps": "Could not confirm whether the lot/rectory sold after the June 2024 listing. No recent open-web coverage found on the current condition or maintenance of the St. George/oldest Lithuanian cemetery. The ~$1M savings transfer and the Dec 2016 bells-to-Houston transfer were not independently verified in non-Draugas sources opened for this search. Museum regular hours beyond by-appointment unknown."
+}

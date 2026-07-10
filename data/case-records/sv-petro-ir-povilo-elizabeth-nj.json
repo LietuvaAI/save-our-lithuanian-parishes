@@ -1,0 +1,39 @@
+{
+  "slug": "sv-petro-ir-povilo-elizabeth-nj",
+  "asOf": "2026-07-09",
+  "buildingStatus": "standing",
+  "currentUse": "Active Catholic worship site (one weekend Mass) of the merged St. Adalbert and Sts. Peter and Paul Parish, Archdiocese of Newark",
+  "summary": "Sts. Peter and Paul church on Ripley Place remains standing and in use for worship, but it is no longer an independent parish: it was canonically merged with the Polish St. Adalbert parish on July 1, 2009, forming St. Adalbert and Sts. Peter and Paul Parish. Per the archdiocese's October 2025 parish workbook, the merged parish has about 184 registered families and an October 2024 weekend Mass attendance of 234 across 5 Masses, of which only 1 Mass is held at the Sts. Peter and Paul church; parish attendance is down 74% since 1998. The parish is one of 22 in Planning Area K (Eastern Union) of the archdiocese-wide 'We Are His Witnesses' restructuring discernment launched June 8, 2025, with listening sessions and draft consolidation models under review; no closure or further merger decision has been announced. Mass-time aggregators still list an 11:00 am Lithuanian Sunday Mass, but this could not be independently verified for 2026.",
+  "developments": [
+    {
+      "date": "2025-10",
+      "headline": "Archdiocese publishes parish workbook showing steep decline; one Mass left at Lithuanian church",
+      "detail": "Workbook for St. Adalbert and Sts. Peter and Paul Parish: 184 registered families; 2024 attendance 234 (9% of capacity); Sts. Peter & Paul church holds 1 of the parish's 5 weekend Masses; baptisms fell 36 (2008) to 2 (2024); parish nonetheless posted net financial gains 2022-2024.",
+      "sources": [
+        { "title": "St. Adalbert and Sts. Peter and Paul, Elizabeth — Parish Workbook", "publisher": "Archdiocese of Newark", "date": "2025-10", "url": "https://rcan.org/wp-content/uploads/2025/10/St.-Adalbert-and-Sts.-Peter-and-Paul-Elizabeth.pdf" },
+        { "title": "Parish Workbooks", "publisher": "Archdiocese of Newark", "date": "2025", "url": "https://rcan.org/parish-workbooks/" }
+      ]
+    },
+    {
+      "date": "2025-06-08",
+      "headline": "Parish enters archdiocese-wide 'We Are His Witnesses' restructuring process",
+      "detail": "Cardinal Tobin launched a multi-year planning process citing attendance decline and priest shortage; the parish is listed in Planning Area K (Eastern Union, 22 parishes); listening sessions presented draft realignment models; archdiocese states no merger/closure decisions have been made (updates issued March and June 2026).",
+      "sources": [
+        { "title": "We Are His Witnesses", "publisher": "Archdiocese of Newark", "date": "2025-06-08", "url": "https://rcan.org/we-are-his-witnesses/" },
+        { "title": "Planning Area K — Eastern Union", "publisher": "Archdiocese of Newark", "date": "2025", "url": "https://rcan.org/planning-area-k-eastern-union/" },
+        { "title": "Planning Process", "publisher": "Archdiocese of Newark", "date": "2025", "url": "https://rcan.org/parish-planning-process/" }
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "St. Adalbert and Sts. Peter and Paul, Elizabeth — Parish Workbook", "publisher": "Archdiocese of Newark", "date": "2025-10", "url": "https://rcan.org/wp-content/uploads/2025/10/St.-Adalbert-and-Sts.-Peter-and-Paul-Elizabeth.pdf" },
+    { "title": "We Are His Witnesses", "publisher": "Archdiocese of Newark", "date": "2025-06-08", "url": "https://rcan.org/we-are-his-witnesses/" },
+    { "title": "Planning Area K — Eastern Union", "publisher": "Archdiocese of Newark", "date": "2025", "url": "https://rcan.org/planning-area-k-eastern-union/" },
+    { "title": "New Jersey St. Paul and St. Peter Lithuanian church", "publisher": "Global True Lithuania", "date": "", "url": "https://global.truelithuania.com/tag/new-jersey-st-paul-and-st-peter-lithuanian-church/" },
+    { "title": "Saints Peter and Paul [Lithuanian] Mass Times", "publisher": "CatholicMassTime.org", "date": "", "url": "https://catholicmasstime.org/church/saints-peter-and-paul-lithuanian/13357/" },
+    { "title": "Saints Peter and Paul [Lithuanian]", "publisher": "DiscoverMass", "date": "", "url": "https://discovermass.com/church/saints-peter-and-paul-lithuanian-elizabeth-nj/" }
+  ],
+  "confidence": "reported",
+  "conflictsWithArchiveRecord": "Archive says 'church built 1895' and '216 Ripley Pl'; sources give the present church as built 1910 at 211 Ripley Place. Archive 'UNRESOLVED' understates: the parish lost independent status via canonical merger into St. Adalbert and Sts. Peter and Paul Parish on July 1, 2009, though the church itself remains open.",
+  "gaps": "Parish website (stadalbert.us) blocks automated access, so current Mass schedule and the 11 am Lithuanian Mass are unverified for 2026 (aggregator data may be stale). No press coverage found confirming the 2022 rectory sale, electrical fire, or current building condition. Draft Planning Area K models' specific proposal for this church not obtained (workbook narrative only). No parish Facebook activity verified."
+}
