@@ -63,9 +63,15 @@ export default function Home() {
           Not faith. Not money. Not the fight — ownership decided every
           ending. We stand for one goal:{" "}
           <strong className="text-foreground">
-            Lithuanian parishes owned and governed by the communities that
-            built them
-          </strong>
+            that what Lithuanian communities built stays in their hands
+          </strong>{" "}
+          — as{" "}
+          <Link
+            href="/what-canon-law-says"
+            className="underline hover:text-accent"
+          >
+            even the Church&rsquo;s own law provides
+          </Link>
           .
         </p>
         <div className="mt-6 flex flex-wrap gap-3 justify-center">
