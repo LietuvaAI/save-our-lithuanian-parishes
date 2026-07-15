@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import { MarkIcon } from "@/components/marks";
 import {
   parishes,
-  draugasArchiveUrl,
+  draugasCitationUrl,
   ENDING_MODE_LABEL,
   OWNERSHIP_LABEL,
   STATUS_LABEL,
@@ -189,15 +189,16 @@ export default async function ParishPage({
         </h2>
         <p className="mt-2 text-sm text-muted leading-relaxed">
           Every fact above traces to dated issues of <em>Draugas</em>, the
-          Lithuanian-American newspaper of record. Each link opens the public
-          Draugas archive for that year — find the issue by its date. Recent
-          years may require a Draugas subscription.
+          Lithuanian-American newspaper of record. Where the issue PDF is
+          openly available, the link opens it directly; otherwise it opens the
+          public Draugas archive for that year — find the issue by its date.
+          Recent years may require a Draugas subscription.
         </p>
         <ul className="mt-4 flex flex-wrap gap-2">
           {parish.citations.map((c) => (
             <li key={c.date}>
               <a
-                href={draugasArchiveUrl(c.date)}
+                href={draugasCitationUrl(c.date)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block rounded-md border border-rule px-3 py-1.5 text-sm hover:border-foreground transition-colors"

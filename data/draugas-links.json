@@ -1,0 +1,551 @@
+{
+  "probedAt": "2026-07-09",
+  "results": {
+    "2008-02-13": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2008_reg/2008-02-13-DRAUGASo.pdf"
+    },
+    "2008-02-23": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2008_reg/2008-02-23-DRAUGASo.pdf"
+    },
+    "2008-03-27": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2008_reg/2008-03-27-DRAUGASo.pdf"
+    },
+    "2008-04-09": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2008_reg/2008-04-09-DRAUGASo.pdf"
+    },
+    "2008-04-16": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2008_reg/2008-04-16-DRAUGASo.pdf"
+    },
+    "2008-04-22": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2008_reg/2008-04-22-DRAUGASo.pdf"
+    },
+    "2008-05-02": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2008_reg/2008-05-02-DRAUGASo.pdf"
+    },
+    "2008-06-05": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2008_reg/2008-06-05-DRAUGASo.pdf"
+    },
+    "2008-06-26": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2008_reg/2008-06-26-DRAUGASo.pdf"
+    },
+    "2008-07-17": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2008_reg/2008-07-17-DRAUGASo.pdf"
+    },
+    "2008-08-15": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2008_reg/2008-08-15-DRAUGASo.pdf"
+    },
+    "2008-09-04": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2008_reg/2008-09-04-DRAUGASo.pdf"
+    },
+    "2008-09-06": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2008_reg/2008-09-06-DRAUGASo.pdf"
+    },
+    "2008-10-28": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2008_reg/2008-10-28-DRAUGASo.pdf"
+    },
+    "2008-11-05": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2008_reg/2008-11-05-DRAUGASo.pdf"
+    },
+    "2008-11-18": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2008_reg/2008-11-18-DRAUGASo.pdf"
+    },
+    "2009-03-15": {
+      "status": "unresolved"
+    },
+    "2009-03-25": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2009_reg/2009-03-25-DRAUGASo.pdf"
+    },
+    "2009-04-08": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2009_reg/2009-04-08-DRAUGASo.pdf"
+    },
+    "2009-04-09": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2009_reg/2009-04-09-DRAUGASo.pdf"
+    },
+    "2009-05-05": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2009_reg/2009-05-05-DRAUGASo.pdf"
+    },
+    "2009-05-19": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2009_reg/2009-05-19-DRAUGASo.pdf"
+    },
+    "2009-09-16": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2009_reg/2009-09-16-DRAUGASo.pdf"
+    },
+    "2009-09-29": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2009_reg/2009-09-29-DRAUGASo.pdf"
+    },
+    "2009-10-18": {
+      "status": "unresolved"
+    },
+    "2009-10-27": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2009_reg/2009-10-27-DRAUGASo.pdf"
+    },
+    "2010-01-02": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2010_reg/2010-01-02-DRAUGASo.pdf"
+    },
+    "2010-02-06": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2010_reg/2010-02-06-DRAUGASo.pdf"
+    },
+    "2010-03-09": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2010_reg/2010-03-09-DRAUGASo.pdf"
+    },
+    "2010-03-24": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2010_reg/2010-03-24-DRAUGASo.pdf"
+    },
+    "2010-07-23": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2010_reg/2010-07-23-DRAUGASo.pdf"
+    },
+    "2010-11-18": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2010_reg/2010-11-18-DRAUGASo.pdf"
+    },
+    "2010-12-04": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2010_reg/2010-12-04-DRAUGASo.pdf"
+    },
+    "2010-12-09": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2010_reg/2010-12-09-DRAUGASo.pdf"
+    },
+    "2011-02-05": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2011_reg/2011-02-05-DRAUGASo.pdf"
+    },
+    "2011-04-23": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2011_reg/2011-04-23-DRAUGASo.pdf"
+    },
+    "2011-05-10": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2011_reg/2011-05-10-DRAUGASo.pdf"
+    },
+    "2011-07-28": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2011_reg/2011-07-28-DRAUGASo.pdf"
+    },
+    "2011-12-17": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2011_reg/2011-12-17-DRAUGASo.pdf"
+    },
+    "2012-04-07": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2012_reg/2012-04-07-DRAUGASo.pdf"
+    },
+    "2012-05-26": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2012_reg/2012-05-26-DRAUGASo.pdf"
+    },
+    "2012-06-05": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2012_reg/2012-06-05-DRAUGASo.pdf"
+    },
+    "2012-10-25": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2012_reg/2012-10-25-DRAUGASo.pdf"
+    },
+    "2013-01-24": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2013_reg/2013-01-24-DRAUGAS.pdf"
+    },
+    "2013-02-26": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2013_reg/2013-02-26-DRAUGAS.pdf"
+    },
+    "2013-06-20": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2013_reg/2013-06-20-DRAUGAS.pdf"
+    },
+    "2013-06-29": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2013_reg/2013-06-29-DRAUGAS.pdf"
+    },
+    "2013-08-20": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2013_reg/2013-08-20-DRAUGAS.pdf"
+    },
+    "2013-09-07": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2013_reg/2013-09-07-DRAUGAS.pdf"
+    },
+    "2014-04-22": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2014_reg/2014-04-22-DRAUGAS.pdf"
+    },
+    "2014-04-26": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2014_reg/2014-04-26-DRAUGAS.pdf"
+    },
+    "2014-06-19": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2014_reg/2014-06-19-DRAUGAS.pdf"
+    },
+    "2014-07-10": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2014_reg/2014-07-10-DRAUGAS.pdf"
+    },
+    "2014-07-17": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2014_reg/2014-07-17-DRAUGAS.pdf"
+    },
+    "2014-07-26": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2014_reg/2014-07-26-DRAUGAS.pdf"
+    },
+    "2014-11-13": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2014_reg/2014-11-13-DRAUGAS.pdf"
+    },
+    "2015-01-13": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2015_reg/2015-01-13-DRAUGAS.pdf"
+    },
+    "2015-05-07": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2015_reg/2015-05-07-DRAUGAS.pdf"
+    },
+    "2015-05-14": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2015_reg/2015-05-14-DRAUGAS.pdf"
+    },
+    "2015-07-04": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2015_reg/2015-07-04-DRAUGAS.pdf"
+    },
+    "2015-09-29": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2015_reg/2015-09-29-DRAUGAS.pdf"
+    },
+    "2015-10-20": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2015_reg/2015-10-20-DRAUGAS.pdf"
+    },
+    "2015-10-22": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2015_reg/2015-10-22-DRAUGAS.pdf"
+    },
+    "2016-08-30": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2016_reg/2016-08-30-DRAUGAS.pdf"
+    },
+    "2017-05-27": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2017_reg/2017-05-27-DRAUGAS.pdf"
+    },
+    "2017-06-08": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2017_reg/2017-06-08-DRAUGAS.pdf"
+    },
+    "2017-09-21": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2017_reg/2017-09-21-DRAUGAS.pdf"
+    },
+    "2017-10-19": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2017_reg/2017-10-19-DRAUGAS.pdf"
+    },
+    "2017-11-16": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2017_reg/2017-11-16-DRAUGAS.pdf"
+    },
+    "2017-11-30": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2017_reg/2017-11-30-DRAUGAS.pdf"
+    },
+    "2017-12-07": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2017_reg/2017-12-07-DRAUGAS.pdf"
+    },
+    "2017-12-12": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2017_reg/2017-12-12-DRAUGAS.pdf"
+    },
+    "2017-12-28": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2017_reg/2017-12-28-DRAUGAS.pdf"
+    },
+    "2018-01-11": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2018_reg/2018-01-11-DRAUGAS.pdf"
+    },
+    "2018-02-15": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2018_reg/2018-02-15-DRAUGAS.pdf"
+    },
+    "2019-01-05": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2019_reg/2019-01-05-DRAUGAS.pdf"
+    },
+    "2019-01-12": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2019_reg/2019-01-12-DRAUGAS.pdf"
+    },
+    "2019-01-26": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2019_reg/2019-01-26-DRAUGAS.pdf"
+    },
+    "2019-02-02": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2019_reg/2019-02-02-DRAUGAS.pdf"
+    },
+    "2019-03-30": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2019_reg/2019-03-30-DRAUGAS.pdf"
+    },
+    "2019-04-13": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2019_reg/2019-04-13-DRAUGAS.pdf"
+    },
+    "2019-06-25": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2019_reg/2019-06-25-DRAUGAS.pdf"
+    },
+    "2019-12-21": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2019_reg/2019-12-21-DRAUGAS.pdf"
+    },
+    "2020-01-04": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2020_reg/2020-01-04-DRAUGAS.pdf"
+    },
+    "2020-01-18": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2020_reg/2020-01-18-DRAUGAS.pdf"
+    },
+    "2020-01-25": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2020_reg/2020-01-25-DRAUGAS.pdf"
+    },
+    "2020-02-01": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2020_reg/2020-02-01-DRAUGAS.pdf"
+    },
+    "2020-05-23": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2020_reg/2020-05-23-DRAUGAS.pdf"
+    },
+    "2020-05-30": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2020_reg/2020-05-30-DRAUGAS.pdf"
+    },
+    "2020-06-02": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2020_reg/2020-06-02-DRAUGAS.pdf"
+    },
+    "2020-06-13": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2020_reg/2020-06-13-DRAUGAS.pdf"
+    },
+    "2020-08-25": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2020_reg/2020-08-25-DRAUGAS.pdf"
+    },
+    "2020-11-03": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2020_reg/2020-11-03-DRAUGAS.pdf"
+    },
+    "2020-11-07": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2020_reg/2020-11-07-DRAUGAS.pdf"
+    },
+    "2021-04-24": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2021_reg/2021-04-24-DRAUGAS.pdf"
+    },
+    "2021-07-24": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2021_reg/2021-07-24-DRAUGAS.pdf"
+    },
+    "2021-08-05": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2021_reg/2021-08-05-DRAUGAS.pdf"
+    },
+    "2022-01-13": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2022_reg/2022-01-13-DRAUGASo.pdf"
+    },
+    "2022-01-15": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2022_reg/2022-01-15-DRAUGASo.pdf"
+    },
+    "2022-01-20": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2022_reg/2022-01-20-DRAUGASo.pdf"
+    },
+    "2022-01-22": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2022_reg/2022-01-22-DRAUGASo.pdf"
+    },
+    "2022-01-29": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2022_reg/2022-01-29-DRAUGASo.pdf"
+    },
+    "2022-04-09": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2022_reg/2022-04-09-DRAUGASo.pdf"
+    },
+    "2022-07-02": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2022_reg/2022-07-02-DRAUGASo.pdf"
+    },
+    "2022-09-17": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2022_reg/2022-09-17-DRAUGASo.pdf"
+    },
+    "2022-09-22": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2022_reg/2022-09-22-DRAUGASo.pdf"
+    },
+    "2022-10-01": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2022_reg/2022-10-01-DRAUGASo.pdf"
+    },
+    "2022-10-20": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2022_reg/2022-10-20-DRAUGASo.pdf"
+    },
+    "2023-03-30": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2023_reg/2023-03-30-DRAUGASo.pdf"
+    },
+    "2023-07-15": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2023_reg/2023-07-15-DRAUGASo.pdf"
+    },
+    "2023-08-24": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2023_reg/2023-08-24-DRAUGASo.pdf"
+    },
+    "2023-09-02": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2023_reg/2023-09-02-DRAUGASo.pdf"
+    },
+    "2023-12-07": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2023_reg/2023-12-07-DRAUGASo.pdf"
+    },
+    "2023-12-09": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2023_reg/2023-12-09-DRAUGASo.pdf"
+    },
+    "2023-12-14": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2023_reg/2023-12-14-DRAUGASo.pdf"
+    },
+    "2023-12-16": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2023_reg/2023-12-16-DRAUGASo.pdf"
+    },
+    "2023-12-21": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2023_reg/2023-12-21-DRAUGASo.pdf"
+    },
+    "2024-01-04": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2024_reg/2024-01-04-DRAUGASo.pdf"
+    },
+    "2024-01-11": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2024_reg/2024-01-11-DRAUGASo.pdf"
+    },
+    "2024-01-13": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2024_reg/2024-01-13-DRAUGASo.pdf"
+    },
+    "2024-01-18": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2024_reg/2024-01-18-DRAUGASo.pdf"
+    },
+    "2024-01-20": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2024_reg/2024-01-20-DRAUGASo.pdf"
+    },
+    "2024-03-23": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2024_reg/2024-03-23-DRAUGASo.pdf"
+    },
+    "2024-04-04": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2024_reg/2024-04-04-DRAUGASo.pdf"
+    },
+    "2024-09-19": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2024_reg/2024-09-19-DRAUGASo.pdf"
+    },
+    "2024-10-05": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2024_reg/2024-10-05-DRAUGASo.pdf"
+    },
+    "2025-01-25": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2025_reg/2025-01-25-DRAUGASo.pdf"
+    },
+    "2025-01-30": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2025_reg/2025-01-30-DRAUGASo.pdf"
+    },
+    "2025-02-22": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2025_reg/2025-02-22-DRAUGASo.pdf"
+    },
+    "2025-03-29": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2025_reg/2025-03-29-DRAUGASo.pdf"
+    },
+    "2025-09-27": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2025_reg/2025-09-27-DRAUGASo.pdf"
+    },
+    "2025-11-01": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2025_reg/2025-11-01-DRAUGASo.pdf"
+    },
+    "2025-12-11": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2025_reg/2025-12-11-DRAUGASo.pdf"
+    },
+    "2026-01-08": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2026_reg/2026-01-08-DRAUGASo.pdf"
+    },
+    "2026-03-19": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2026_reg/2026-03-19-DRAUGASo.pdf"
+    },
+    "2026-05-07": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2026_reg/2026-05-07-DRAUGASo.pdf"
+    },
+    "2026-05-16": {
+      "status": "gated",
+      "url": "https://draugas.org/key/2026_reg/2026-05-16-DRAUGASo.pdf"
+    }
+  }
+}

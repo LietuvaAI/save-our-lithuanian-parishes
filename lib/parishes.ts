@@ -1,5 +1,6 @@
 import parishesJson from "@/data/parishes.json";
 import figuresJson from "@/data/figures.json";
+import draugasLinksJson from "@/data/draugas-links.json";
 
 export type Ownership = "diocese_rc" | "national_catholic" | "other_self_owned";
 export type ParishStatus =
@@ -81,6 +82,26 @@ export const STATUS_LABEL: Record<ParishStatus, string> = {
  */
 export function draugasArchiveUrl(isoDate: string): string {
   return `https://www.draugas.org/archyvas-pdf-${isoDate.slice(0, 4)}/`;
+}
+
+interface DraugasLinkEntry {
+  status: "verified" | "gated" | "unresolved";
+  url?: string;
+}
+
+const draugasLinks = draugasLinksJson.results as Record<string, DraugasLinkEntry>;
+
+/**
+ * Best citation link for a Draugas issue: the direct PDF when
+ * scripts/verify-draugas-links.mjs confirmed one exists publicly, otherwise
+ * the per-year archive page. Gated (subscriber-only, 401) issues also fall
+ * back to the archive page so readers land somewhere navigable.
+ */
+export function draugasCitationUrl(isoDate: string): string {
+  const entry = draugasLinks[isoDate];
+  return entry?.status === "verified" && entry.url
+    ? entry.url
+    : draugasArchiveUrl(isoDate);
 }
 
 /** Canonical legend order: losses first, per the infographic. */
