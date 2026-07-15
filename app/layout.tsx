@@ -75,8 +75,15 @@ export default function RootLayout({
         <footer className="border-t border-rule mt-16">
           <div className="mx-auto max-w-5xl px-4 py-8 text-sm text-muted space-y-2">
             <p>
-              Working for one goal: Lithuanian parishes owned and governed by
-              the communities that built them.
+              Working for one goal: civil title to Lithuanian parishes aligned
+              with{" "}
+              <Link
+                href="/what-canon-law-says"
+                className="underline hover:text-foreground"
+              >
+                what the Church&rsquo;s own law already says
+              </Link>{" "}
+              — a parish&rsquo;s property belongs to the parish.
             </p>
             <p>
               Every figure on this site is derived from the parish record and

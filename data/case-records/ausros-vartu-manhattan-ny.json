@@ -1,0 +1,53 @@
+{
+  "slug": "ausros-vartu-manhattan-ny",
+  "asOf": "2026-07-09",
+  "buildingStatus": "demolished",
+  "currentUse": "570 Broome, a 25-story, 54-unit luxury condominium tower (completed 2019), occupies the church site.",
+  "summary": "Our Lady of Vilnius Church at 568-570 Broome Street was demolished in 2015 (May 2015 per Wikipedia; the parish community's own memorial site also states 2015), four years after the NY Court of Appeals ruled for the archdiocese. The archdiocese sold the property to Extell Development for $13 million; Extell flipped it to SoHo Broome Condos LLC for $18.4 million in early 2014, and a residential tower permit was filed that August. Today the site holds 570 Broome, a 25-story, 54-unit condominium designed by Tahir Demircioglu (Builtd) for Agime Group, completed in 2019; the building's marketing makes no mention of the church. The parish tabernacle went to the Church of the Blessed Kateri Tekakwitha and sacramental records to St. Anthony of Padua on Sullivan Street. The parishioner-run memorial blog remains active as of May 2026, now advocating for other endangered churches such as St. Mary's in Yonkers.",
+  "developments": [
+    {
+      "date": "2026-05-28",
+      "headline": "Parish memorial community still active, aiding other endangered churches",
+      "detail": "The Our Lady of Vilnius memorial blog continues posting as of May 2026, supporting canonical appeals and preservation efforts for St. Mary's Church, Yonkers, and maintaining an 'OLV Communion of Saints and Sinners' memorial roll.",
+      "sources": [
+        { "title": "Our Lady of Vilnius, NYC (memorial blog)", "publisher": "ausrosvartunyc.blogspot.com", "date": "2026-05-28", "url": "http://ausrosvartunyc.blogspot.com/" }
+      ]
+    },
+    {
+      "date": "2019",
+      "headline": "570 Broome condominium completed on church site",
+      "detail": "25-story, 54-unit condo by architect Tahir Demircioglu with SOM interiors, developed by Agime Group; marketing omits the site's history.",
+      "sources": [
+        { "title": "570 Broome Street: Condos for Sale", "publisher": "CityRealty", "date": "2019", "url": "https://www.cityrealty.com/nyc/soho/570-broome-street/74318" },
+        { "title": "570 Broome official site", "publisher": "570broomenyc.com", "date": "n.d.", "url": "https://www.570broomenyc.com/" }
+      ]
+    },
+    {
+      "date": "2015-05",
+      "headline": "Church demolished",
+      "detail": "Building razed; Wikipedia states May 2015, and the parishioners' memorial site states demolished 2015. Tabernacle had gone to Blessed Kateri Tekakwitha church, records to St. Anthony of Padua.",
+      "sources": [
+        { "title": "Our Lady of Vilnius Church", "publisher": "Wikipedia", "date": "n.d.", "url": "https://en.wikipedia.org/wiki/Our_Lady_of_Vilnius_Church" },
+        { "title": "Our Lady of Vilnius, NYC (memorial blog)", "publisher": "ausrosvartunyc.blogspot.com", "date": "n.d.", "url": "http://ausrosvartunyc.blogspot.com/" }
+      ]
+    },
+    {
+      "date": "2014-09-18",
+      "headline": "Tower permit filed; property flipped for $18.4M",
+      "detail": "Archdiocese sold to Extell for $13M; Extell flipped to SoHo Broome Condos LLC for $18.4M in early 2014; residential tower permit filed August 2014 while ex-parishioners still held prayer services on the church steps.",
+      "sources": [
+        { "title": "No last-minute miracle for O.L. Vilnius Church? Tower plan is filed", "publisher": "The Villager / amNewYork", "date": "2014-09-18", "url": "https://www.amny.com/news/no-last-minute-miracle-for-o-l-vilnius-church-tower-plan-is-filed/" }
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "Our Lady of Vilnius Church", "publisher": "Wikipedia", "date": "n.d.", "url": "https://en.wikipedia.org/wiki/Our_Lady_of_Vilnius_Church" },
+    { "title": "No last-minute miracle for O.L. Vilnius Church? Tower plan is filed", "publisher": "The Villager / amNewYork", "date": "2014-09-18", "url": "https://www.amny.com/news/no-last-minute-miracle-for-o-l-vilnius-church-tower-plan-is-filed/" },
+    { "title": "Our Lady of Vilnius, NYC (memorial blog)", "publisher": "ausrosvartunyc.blogspot.com", "date": "2026-05-28", "url": "http://ausrosvartunyc.blogspot.com/" },
+    { "title": "570 Broome Street: Condos for Sale", "publisher": "CityRealty", "date": "n.d.", "url": "https://www.cityrealty.com/nyc/soho/570-broome-street/74318" },
+    { "title": "570 Broome official site", "publisher": "570broomenyc.com", "date": "n.d.", "url": "https://www.570broomenyc.com/" }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "Archive's '2020' demolition option is contradicted: Wikipedia and the parish memorial community both state 2015, and a March 2017 New York YIMBY headline described the site as already cleared. Archive's 'sold for tens of millions' overstates the archdiocese's sale ($13M to Extell); the $18.4M flip was Extell's, not the church's.",
+  "gaps": "Exact demolition day unconfirmed (month 'May 2015' rests on Wikipedia only; no contemporaneous NYC-press demolition-day story opened). Fate of statues and Tadas Sviderskis icon beyond tabernacle/records unknown — archdiocese said items were stored for reuse. No documented parishioner reunions or on-site memorial found; Village Preservation and Tribeca Citizen retrospectives not located; City Lore page returned 403."
+}

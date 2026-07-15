@@ -1,0 +1,43 @@
+{
+  "slug": "dievo-apvaizdos-southfield-mi",
+  "asOf": "2026-07-09",
+  "buildingStatus": "standing",
+  "currentUse": "Active diocesan Lithuanian Catholic parish; Lithuanian-language Masses Sundays and Fridays, English Mass Saturdays",
+  "summary": "Divine Providence remains an open, functioning parish at 25335 W. Nine Mile Rd., Southfield, with Fr. Tomas Miliauskas as pastor and a regular Lithuanian/English Mass schedule. It belongs to a four-parish Family of Parishes (with Transfiguration, Our Lady of La Salette, and Our Mother of Perpetual Help) now called the 'Family Sent on Mission,' which received a newly assigned support priest in June 2026. In the Archdiocese of Detroit restructuring, Divine Providence is in Planning Area 9, and Detroit News reported on May 30, 2026 that it is among ten Area 9 parishes that would stop holding weekend Mass under at least one proposed pastorate model. No decision has been made: spring 2026 listening sessions have run their course, an online feedback survey stays open through July 31, 2026, and the published timeline calls for the archbishop's discernment in fall 2026, final plans in winter 2027, and implementation July 1, 2027.",
+  "developments": [
+    {
+      "date": "2026-06-22",
+      "headline": "New priest assigned to parish's Family of Parishes",
+      "detail": "Archdiocese of Detroit clergy announcements named Fr. Sama Muma full-time priest support to the 'Family Sent on Mission' Family of Parishes, which includes Divine Providence (Lithuanian), Southfield.",
+      "sources": [
+        { "title": "Archdiocese of Detroit clergy announcements: June 22, 2026", "publisher": "Detroit Catholic", "date": "2026-06-22", "url": "https://www.detroitcatholic.com/news/archdiocese-of-detroit-clergy-announcements-june-22-2026" }
+      ]
+    },
+    {
+      "date": "2026-05-30",
+      "headline": "Named among parishes that could lose weekend Mass",
+      "detail": "Detroit News reported Divine Providence, Southfield, is one of ten Planning Area 9 parishes that would stop holding weekend Mass in at least one proposed restructuring model; at least 58 parishes archdiocese-wide were similarly flagged.",
+      "sources": [
+        { "title": "Archdiocese of Detroit's list of parishes chosen for halted Masses grows (Detroit News via republication)", "publisher": "Bluewater Healthy Living / Detroit News (Anne Snabes)", "date": "2026-05-30", "url": "https://bluewaterhealthyliving.com/news/local-news/michigan/archdiocese-of-detroits-list-of-parishes-chosen-for-halted-masses-grows/" },
+        { "title": "Archdiocese of Detroit's list of parishes chosen for halted Masses grows", "publisher": "News Pub / Detroit News", "date": "2026-05-30", "url": "https://newspub.live/midwest/detroit-mi/archdiocese-of-detroits-list-of-parishes-chosen-for-halted-masses-grows/" }
+      ]
+    },
+    {
+      "date": "2026-05-11",
+      "headline": "Listening-session waves and July 31 feedback deadline",
+      "detail": "Detroit Catholic reported 156 sessions at 78 parishes completed, further waves beginning May 20 and June 17, and an online survey accepting feedback on the models through July 31, 2026.",
+      "sources": [
+        { "title": "Just over one-third of parish listening sessions completed amid restructuring process", "publisher": "Detroit Catholic", "date": "2026-05-11", "url": "https://www.detroitcatholic.com/news/just-over-one-third-of-parish-listening-sessions-completed-amid-restructuring-process" }
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "Divine Providence Church – Lithuanian Catholic Church (parish website)", "publisher": "Divine Providence Parish", "date": "2026", "url": "https://divineprovidencechurch.com/" },
+    { "title": "Families of Parishes", "publisher": "Church of the Transfiguration, Southfield", "date": "2025", "url": "https://www.transfigsfld.org/families-of-parishes" },
+    { "title": "Metro Detroit Catholics prepare as restructuring threatens to end weekend Mass at 58 churches", "publisher": "Michigan Public", "date": "2026-06-02", "url": "https://www.michiganpublic.org/community/2026-06-02/metro-detroit-catholics-prepare-as-restructuring-threatens-to-end-weekend-mass-at-58-churches" },
+    { "title": "Archdiocese of Detroit Pastoral Planning and Restructuring Initiative (timeline)", "publisher": "St. Mary of the Immaculate Conception, Monroe", "date": "2026", "url": "https://stmarymonroe.org/aod-restructuring" }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "No contradictions. One refinement: the Detroit News list places Divine Providence in Planning Area 9 (southeastern Oakland County); a separate report grouped some Southfield parishes in Planning Area 8, so area assignment reporting varies slightly.",
+  "gaps": "Could not independently confirm the parish's specific listening-session dates (2026-05-30 and 2026-06-06) or the March 2026 workbook — the official restructuring.aod.org site returned 403 and the parish site/bulletins do not mention restructuring. Unknown which specific model(s) would end weekend Mass at Divine Providence and whether the final plan (due winter 2027) will retain it. The original Detroit News article is paywalled; verified via two republications."
+}

@@ -1,0 +1,36 @@
+{
+  "slug": "svc-mergeles-marijos-gimimo-chicago-il",
+  "asOf": "2026-07-09",
+  "buildingStatus": "standing",
+  "currentUse": "Active Roman Catholic parish church with regular Lithuanian- and English-language Masses",
+  "summary": "Nativity of the Blessed Virgin Mary at 6812 S Washtenaw Ave remains an open, functioning parish of the Archdiocese of Chicago and is still described as the city's only Lithuanian Catholic parish. Mass-schedule directories current to July 2026 list Sunday Mass at 9:30 a.m. in English and 11:00 a.m. in Lithuanian, daily 8:30 a.m. Lithuanian Mass, and a Saturday 4:00 p.m. Lithuanian Mass, plus a monthly bilingual Our Lady of Šiluva novena and the September Šiluva octave celebration. Under Renew My Church the archdiocese proposed grouping the parish with the Blessed Jurgis Matulaitis Lithuanian Mission in Lemont; as of mid-2023 this was documented as an offered 'opportunity to group together,' and no final unification or closure decree could be located. No published centenary (2027/2028) plans or major 2024-2026 press coverage were found.",
+  "developments": [
+    {
+      "date": "2026-07",
+      "headline": "Parish operating with full Lithuanian/English Mass schedule",
+      "detail": "Directory listing with a July 2026 liturgical calendar shows the parish active at 6812 S Washtenaw Ave: Sunday 9:30 a.m. (English) and 11:00 a.m. (Lithuanian), daily 8:30 a.m., Saturday 4:00 p.m., confessions Saturdays 3:00-3:45 p.m.",
+      "sources": [
+        { "title": "Nativity BVM Church Mass Times - Chicago, Illinois", "publisher": "CatholicMassTime.org", "date": "2026-07", "url": "https://catholicmasstime.org/church/nativity-bvm-church/3001/" }
+      ]
+    },
+    {
+      "date": "2023-06-11",
+      "headline": "Renew My Church grouping with Lemont Matulaitis Mission documented at proposal stage",
+      "detail": "A community open letter records that the archdiocese offered Nativity BVM's pastor and the chaplain of Blessed Jurgis Matulaitis Mission (Lemont) an opportunity to group together under Renew My Church, reviewing ministries, budgets, and buildings; no decision or outcome is reported.",
+      "sources": [
+        { "title": "Renew My Church... An Open Letter to Algis Baniulis, S.J., Mission Chaplain", "publisher": "PHOTO...NOTES (myphotonotes.com)", "date": "2023-06-11", "url": "https://myphotonotes.com/2023/06/11/renew-my-church-an-open-letter-to-algis-baniulis-s-j-mission-chaplain/" }
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "Nativity BVM Church Mass Times - Chicago, Illinois", "publisher": "CatholicMassTime.org", "date": "2026-07", "url": "https://catholicmasstime.org/church/nativity-bvm-church/3001/" },
+    { "title": "Nativity of the Blessed Virgin Mary in Chicago", "publisher": "OurLadyOfSiluva.org", "date": "", "url": "https://ourladyofsiluva.org/our_lady/us_devotion/chicago.php" },
+    { "title": "Renew My Church... An Open Letter to Algis Baniulis, S.J., Mission Chaplain", "publisher": "PHOTO...NOTES", "date": "2023-06-11", "url": "https://myphotonotes.com/2023/06/11/renew-my-church-an-open-letter-to-algis-baniulis-s-j-mission-chaplain/" },
+    { "title": "PHOTO...NOTES blog index (parish coverage)", "publisher": "PHOTO...NOTES", "date": "", "url": "https://myphotonotes.com/" },
+    { "title": "Chicago, Illinois: Lithuanians and Lithuanian heritage", "publisher": "Global True Lithuania", "date": "", "url": "https://global.truelithuania.com/chicago-illinois-45/" },
+    { "title": "28 DEC 11 AM. Holy Mass Live, Nativity BVM (in Lithuanian)", "publisher": "Nativity BVM Parish Chicago LIVE (YouTube)", "date": "", "url": "https://www.youtube.com/watch?v=nWG4H8mdke0" }
+  ],
+  "confidence": "reported",
+  "conflictsWithArchiveRecord": "None found. Archive record matches: parish standing, sole Lithuanian RC parish in Chicago, RMC grouping with Lemont mission was proposed. No source found confirming the grouping was ever finalized, so 'proposed' remains the last documented stage.",
+  "gaps": "Parish website (chicagonativitybvm.org) and archchicago.org Renew My Church pages are Cloudflare-blocked and could not be opened directly; mass schedule verified via third-party directories instead. Final RMC decision/decree for the Nativity BVM-Matulaitis grouping unconfirmed. No published centenary (2027/2028) plans found. No 2024-2026 coverage in Block Club, Sun-Times, Tribune, or Chicago Catholic located. Current pastor's name and the year of the latest YouTube livestream could not be verified."
+}

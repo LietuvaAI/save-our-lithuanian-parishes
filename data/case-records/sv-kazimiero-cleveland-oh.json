@@ -1,0 +1,46 @@
+{
+  "slug": "sv-kazimiero-cleveland-oh",
+  "asOf": "2026-07-09",
+  "buildingStatus": "standing",
+  "currentUse": "Active diocesan Catholic parish church; Lithuanian Mass Sundays 11:00 am, English Masses Sat/Sun and weekdays",
+  "summary": "St. Casimir Parish at 18022 Neff Rd remains an active parish of the Diocese of Cleveland, listed in the diocesan directory with assigned clergy and no announced restructuring. Its bulletin is current (July 4-5, 2026 issue) and the parish is already booking 2027 Mass intentions; the 11:00 am Sunday Mass is in Lithuanian. Longtime pastor Fr. Joseph A. Bacevice retired April 30, 2025, and Fr. Andrew M. Morkunas was appointed administrator the same day, serving alongside his chaplaincy at University Hospitals; the bulletin indicates a one-priest schedule (no Thursday Mass). This is distinct from the Polish St. Casimir parish at 8223 Sowinski Ave (est. 1891), the parish famously reopened by Vatican order in 2012.",
+  "developments": [
+    {
+      "date": "2026-07-04",
+      "headline": "Parish active with current bulletin; accepting 2027 Mass intentions",
+      "detail": "Weekly bulletin (July 4-5, 2026) shows full Mass schedule, parish picnic July 29, and 2027 Mass book open — normal ongoing operations under Fr. Andrew Morkunas.",
+      "sources": [
+        { "title": "Bulletin, July 4-5, 2026", "publisher": "Saint Casimir Parish", "date": "2026-07-04", "url": "http://saintcasimirparish.org/main-en/bulletin-en.html" }
+      ]
+    },
+    {
+      "date": "2026",
+      "headline": "School-building tenant no longer listed by either charter network",
+      "detail": "Lakeshore Intergenerational School (18025 Marcella Rd, opened 2014 in Collinwood via a Breakthrough Schools partnership) matches the archive's 2014 lease; today neither Breakthrough's five-campus list nor Intergenerational Schools' two-campus list includes any Collinwood/44119 site, leaving the building's occupancy unconfirmed.",
+      "sources": [
+        { "title": "Our Schools", "publisher": "Breakthrough Public Schools", "date": "2026", "url": "https://breakthroughschools.org/schools/" },
+        { "title": "About Our Schools", "publisher": "Intergenerational Schools", "date": "2026", "url": "https://igschools.org/about" },
+        { "title": "New Lakeshore Intergenerational School to open in Collinwood!", "publisher": "Breakthrough Public Schools", "date": "2014-03-04", "url": "https://breakthroughschools.org/new-lakeshore-intergenerational-school-to-open-in-collinwood/" }
+      ]
+    },
+    {
+      "date": "2025-04-30",
+      "headline": "Pastor retires; part-time administrator appointed",
+      "detail": "Fr. Joseph A. Bacevice retired effective April 30, 2025; Fr. Andrew M. Morkunas appointed administrator of St. Casimir Parish (Neff Road) the same day, in addition to his University Hospitals chaplaincy.",
+      "sources": [
+        { "title": "Clergy assignment changes – November 2024", "publisher": "Diocese of Cleveland", "date": "2024-11-16", "url": "https://www.dioceseofcleveland.org/news/2024/11/16/clergy-assignment-changes-november-2024" },
+        { "title": "Clergy assignment changes – January 2025", "publisher": "Diocese of Cleveland", "date": "2025-01-23", "url": "https://www.dioceseofcleveland.org/news/2025/01/23/clergy-assignment-changes-january-2025" }
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "St. Casimir (parish directory, Neff Rd)", "publisher": "Diocese of Cleveland", "date": "2026", "url": "https://www.dioceseofcleveland.org/parishes/directory/st-casimir" },
+    { "title": "St. Casimir (Polish) (parish directory, Sowinski Ave)", "publisher": "Diocese of Cleveland", "date": "2026", "url": "https://www.dioceseofcleveland.org/parishes/directory/st-casimir-polish" },
+    { "title": "Saint Casimir Parish homepage", "publisher": "Saint Casimir Parish", "date": "2026", "url": "http://saintcasimirparish.org/main-en/index-en.html" },
+    { "title": "Lithuanian Mass listing", "publisher": "Lithuanians of Cleveland (ltcle.org)", "date": "2026-05-17", "url": "https://ltcle.org/event/lithuanian-mass-80/" },
+    { "title": "St. Casimir Mass times", "publisher": "DiscoverMass", "date": "2026", "url": "https://discovermass.com/church/st-casimir-cleveland-oh/" }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "Archive notes 'three Lithuanian priests' (2024); since April 30, 2025 the parish has a single part-time administrator, Fr. Andrew Morkunas. Archive attributes the 2014 school lease to Breakthrough Schools; the tenant that opened there in 2014 was Lakeshore Intergenerational School, a Breakthrough-partnered charter.",
+  "gaps": "Current occupancy of the school building (18025 Marcella Rd) after the 10-year lease term is unverified: Lakeshore Intergenerational School no longer appears on its network's site and no closure/renewal coverage was found. No 2024-2026 diocesan or press reporting of any restructuring threat to this parish was located (absence of evidence, not confirmation of safety)."
+}
