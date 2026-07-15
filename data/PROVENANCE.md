@@ -3,7 +3,7 @@
 ## parishes.csv
 
 - **Canonical source:** `LietuvaAI/culturenet-brain` → `docs/research/draugas/parishes.csv`
-- **Snapshot taken:** 2026-07-08, from `main` (last upstream change to the file: commit `b2804c2`, 2026-05-26)
+- **Snapshot taken:** 2026-07-15, from culturenet-brain PR #321 (citation-date fix, branch commit `f8a9649`; previous snapshot 2026-07-08 from `main` at `b2804c2`). The fix corrects two Sunday event-dates that had crept into citation lists: `2009-10-18` → `2009-10-27` (three Cleveland rows) and `2009-03-15` removed (DMNP Cleveland) — citations only, no figures touched.
 - **Locked figure set:** `docs/research/draugas/Draugas-Infographic-Locked-Figures.md` (locked 2026-05-23, scope 83), same folder. Every headline figure this site displays is re-derived from the CSV at build time and validated against that locked set by `scripts/build-data.mjs`. **The build fails if any figure drifts.**
 - **Corpus:** the *Draugas* born-digital archive, 2 January 2008 – 21 May 2026 — 2,768 issues searched (2 of 2,770 corrupt). Source line: „Šaltinis: „Draugo" archyvas, 2008–2026 m."
 - **Scope:** 86 rows = 83 distinct U.S. Lithuanian parishes + 3 Canadian comparators (states QC/ON; excluded from all U.S. figures).

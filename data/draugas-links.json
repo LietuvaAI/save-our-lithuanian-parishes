@@ -1,5 +1,5 @@
 {
-  "probedAt": "2026-07-09",
+  "probedAt": "2026-07-15",
   "results": {
     "2008-02-13": {
       "status": "verified",
@@ -65,9 +65,6 @@
       "status": "verified",
       "url": "https://draugas.org/key/2008_reg/2008-11-18-DRAUGASo.pdf"
     },
-    "2009-03-15": {
-      "status": "unresolved"
-    },
     "2009-03-25": {
       "status": "verified",
       "url": "https://draugas.org/key/2009_reg/2009-03-25-DRAUGASo.pdf"
@@ -95,9 +92,6 @@
     "2009-09-29": {
       "status": "verified",
       "url": "https://draugas.org/key/2009_reg/2009-09-29-DRAUGASo.pdf"
-    },
-    "2009-10-18": {
-      "status": "unresolved"
     },
     "2009-10-27": {
       "status": "verified",
