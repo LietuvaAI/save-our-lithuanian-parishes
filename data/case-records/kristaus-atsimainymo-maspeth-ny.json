@@ -1,0 +1,69 @@
+{
+  "slug": "kristaus-atsimainymo-maspeth-ny",
+  "asOf": "2026-07-09",
+  "buildingStatus": "standing",
+  "currentUse": "Active Catholic church open on a limited basis: Sunday Masses (9:30 am and 12:30 pm Latin) plus weddings/funerals on request, within Transfiguration–St. Stanislaus Kostka parish.",
+  "summary": "The Church of the Transfiguration in Maspeth is standing and holding Sunday Masses on a limited basis; the parish website shows an active 2026 schedule, including Pentecost celebrations in May 2026. On Sept. 12, 2025 the Diocese of Brooklyn announced the church would not be closed or sold, reversing closure options floated in early 2025, though weekday Masses moved to St. Stanislaus Kostka, the Lithuanian Mass moved to Annunciation in Williamsburg, and the diocese said it is exploring selling part of the property (not the church building). A coalition including the Knights of Lithuania, Historic Districts Council, Newtown Historical Society, DOCOMOMO US, the Lithuanian Consulate and Council Member Robert Holden is pursuing NYC individual landmark status. As of December 2025 advocates still warned the building could be sold and potentially demolished; no post-March-2026 diocesan decision or landmark designation has been reported.",
+  "developments": [
+    {
+      "date": "2026-05",
+      "headline": "Church remains active with limited weekend schedule",
+      "detail": "Parish website lists Sunday Masses at Transfiguration (9:30 am; 12:30 pm Latin) and reports 2026 parish activity including a May 24, 2026 Pentecost celebration; no closure or sale announcements posted.",
+      "sources": [
+        { "title": "Transfiguration – St. Stanislaus Kostka Parish website", "publisher": "Transfiguration-St. Stanislaus Kostka Parish", "date": "2026", "url": "https://transtans.org/" }
+      ]
+    },
+    {
+      "date": "2025-12-16",
+      "headline": "Lithuanian delegation honors Knights of Lithuania; sale fears persist",
+      "detail": "Deputy Foreign Minister Taurimas Valys presented state medallions to Knights of Lithuania president Paul-Michael Kazas at the church; Kazas warned it 'may be sold and potentially demolished'; landmark campaign ongoing.",
+      "sources": [
+        { "title": "Lithuanian officials visit historic church in Maspeth to honor the Knights of Lithuania", "publisher": "QNS", "date": "2025-12-16", "url": "https://qns.com/2025/12/lithuanian-officials-visit-historic-maspeth-church/" }
+      ]
+    },
+    {
+      "date": "2025-09-25",
+      "headline": "Lithuanian President Nausėda visits the church",
+      "detail": "Nausėda visited Sept. 25, 2025 and publicly thanked those working to preserve the church; no funding commitments reported.",
+      "sources": [
+        { "title": "Lithuanian President Gitanas Nausėda visits Maspeth's Transfiguration Church", "publisher": "QNS", "date": "2025-09-26", "url": "https://qns.com/2025/09/gitanas-nauseda-transfiguration-church/" }
+      ]
+    },
+    {
+      "date": "2025-09-12",
+      "headline": "Diocese announces church will not be closed or sold",
+      "detail": "Diocese of Brooklyn said Transfiguration will stay open on a limited basis (weekend Masses, weddings, funerals); weekday Masses moved to St. Stanislaus Kostka; Lithuanian Mass moved to Annunciation, Williamsburg; diocese exploring sale of part of the property excluding the church building.",
+      "sources": [
+        { "title": "Brooklyn Diocese says Maspeth's Transfiguration Church will not be closed or sold", "publisher": "QNS", "date": "2025-09-12", "url": "https://qns.com/2025/09/transfiguration-church-not-closing/" }
+      ]
+    },
+    {
+      "date": "2025-07-18",
+      "headline": "Petition reaches 740 signatures; landmark requests filed",
+      "detail": "Change.org petition led by Knights of Lithuania Council 110; two Requests for Evaluation filed with NYC Landmarks Preservation Commission (February and April 2025); Council Member Holden sent LPC support letter in March.",
+      "sources": [
+        { "title": "Over 700 people sign petition to prevent potential closure of Maspeth's Transfiguration Church", "publisher": "QNS", "date": "2025-07-18", "url": "https://qns.com/2025/07/lithuanian-catholic-church-transfiguration/" }
+      ]
+    },
+    {
+      "date": "2025-02-19",
+      "headline": "Possible closure reported amid financial strain",
+      "detail": "QNS reported the parish faced possible closure citing low attendance and repair costs (about $800,000 roof, $500,000 rectory); findings sent to the Vicar General for Bishop Brennan's review.",
+      "sources": [
+        { "title": "Transfiguration Church in Maspeth faces possible closure amid financial struggles and low attendance", "publisher": "QNS", "date": "2025-02-19", "url": "https://qns.com/2025/02/transfiguration-church-maspeth-possible-closure/" }
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "Transfiguration – St. Stanislaus Kostka Parish website", "publisher": "Transfiguration-St. Stanislaus Kostka Parish", "date": "2026", "url": "https://transtans.org/" },
+    { "title": "Lithuanian officials visit historic church in Maspeth", "publisher": "QNS", "date": "2025-12-16", "url": "https://qns.com/2025/12/lithuanian-officials-visit-historic-maspeth-church/" },
+    { "title": "Lithuanian President Gitanas Nausėda visits Maspeth's Transfiguration Church", "publisher": "QNS", "date": "2025-09-26", "url": "https://qns.com/2025/09/gitanas-nauseda-transfiguration-church/" },
+    { "title": "Brooklyn Diocese says Maspeth's Transfiguration Church will not be closed or sold", "publisher": "QNS", "date": "2025-09-12", "url": "https://qns.com/2025/09/transfiguration-church-not-closing/" },
+    { "title": "Over 700 people sign petition to prevent potential closure", "publisher": "QNS", "date": "2025-07-18", "url": "https://qns.com/2025/07/lithuanian-catholic-church-transfiguration/" },
+    { "title": "Historic Lithuanian Church of the Transfiguration Faces Closure and Demolition", "publisher": "New York Almanack", "date": "2025-04-16", "url": "https://www.newyorkalmanack.com/2025/04/church-of-the-transfiguration-2/" },
+    { "title": "Transfiguration Church in Maspeth faces possible closure", "publisher": "QNS", "date": "2025-02-19", "url": "https://qns.com/2025/02/transfiguration-church-maspeth-possible-closure/" }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "Archive's 'closure letter issued Feb 16, 2025' is not directly confirmed: QNS (Feb 19, 2025) describes closure as under review, not announced, and mentions no dated letter; the Sept 12, 2025 limited-basis reversal matches. Press gives the church's address as 64-25 Perry Ave (64-14 Clinton Ave appears to be the parish office). Note the diocese framed Sept 2025 as 'will not be closed or sold,' somewhat stronger than 'limited-basis opening,' though weekend Masses were described as continuing 'temporarily.'",
+  "gaps": "No post-March-2026 press coverage found; current status rests on the parish website's active 2026 schedule. Outcome of the LPC landmark Requests for Evaluation unknown; no designation reported. Status/outcome of the proposed partial property sale unknown. Exact text/date of any February 2025 diocesan letter not located."
+}

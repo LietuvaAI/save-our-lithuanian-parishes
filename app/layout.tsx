@@ -31,7 +31,7 @@ const NAV = [
   { href: "/who-does-the-parish-belong-to", label: "The Article" },
   { href: "/parishes", label: "The Record" },
   { href: "/data", label: "The Data" },
-  { href: "/report", label: "Report" },
+  { href: "https://saveourlithuanianparishes.substack.com", label: "Dispatches" },
   { href: "/network", label: "The Network" },
 ];
 
@@ -51,7 +51,7 @@ export default function RootLayout({
             <Link href="/" className="font-serif text-lg font-semibold tracking-tight">
               Save Our Lithuanian Parishes
             </Link>
-            <nav className="flex gap-5 text-sm text-muted">
+            <nav className="flex items-center gap-5 text-sm text-muted">
               {NAV.map((item) => (
                 <Link
                   key={item.href}
@@ -61,12 +61,30 @@ export default function RootLayout({
                   {item.label}
                 </Link>
               ))}
+              <Link
+                href="/report"
+                className="rounded-md px-3.5 py-1.5 font-semibold text-white hover:opacity-90 transition-opacity"
+                style={{ background: "var(--mark-closed)" }}
+              >
+                Report
+              </Link>
             </nav>
           </div>
         </header>
         <main className="flex-1">{children}</main>
         <footer className="border-t border-rule mt-16">
           <div className="mx-auto max-w-5xl px-4 py-8 text-sm text-muted space-y-2">
+            <p>
+              Working for one goal: civil title to Lithuanian parishes aligned
+              with{" "}
+              <Link
+                href="/what-canon-law-says"
+                className="underline hover:text-foreground"
+              >
+                what the Church&rsquo;s own law already says
+              </Link>{" "}
+              — a parish&rsquo;s property belongs to the parish.
+            </p>
             <p>
               Every figure on this site is derived from the parish record and
               verified at build time. Source: the <em>Draugas</em> archive,
@@ -79,6 +97,13 @@ export default function RootLayout({
                 className="underline hover:text-foreground"
               >
                 Check our numbers
+              </a>
+              . Follow the{" "}
+              <a
+                href="https://saveourlithuanianparishes.substack.com"
+                className="underline hover:text-foreground"
+              >
+                dispatches
               </a>
               .
             </p>

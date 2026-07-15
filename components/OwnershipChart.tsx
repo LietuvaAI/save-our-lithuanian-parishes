@@ -1,28 +1,23 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { MarkShape, MarkIcon } from "@/components/marks";
 import {
   type Parish,
-  type EndingMode,
+  ENDING_MODE_ORDER,
   ENDING_MODE_LABEL,
-  ENDING_MODE_COLOR,
   OWNERSHIP_LABEL,
   STATUS_LABEL,
 } from "@/lib/parishes";
 
 /**
  * Panel A of the „Kam priklauso bažnyčia?" infographic, interactive:
- * every U.S. parish as one mark, grouped by who holds the deed,
- * encoded by who decided its ending (ending_mode — three states, not
- * closed-vs-standing).
+ * every U.S. parish as one mark, grouped by who holds the deed, in the
+ * infographic's shape language. Community-owned marks are drawn larger,
+ * as in the original — six parishes carry the counter-case.
  */
-
-const MODE_ORDER: EndingMode[] = [
-  "diocese_closed",
-  "undecided",
-  "community_decided",
-  "standing",
-];
 
 // Direct-label the named cases, per the infographic brief.
 const LABELED = new Set([
@@ -33,36 +28,82 @@ const LABELED = new Set([
 ]);
 
 function sortKey(p: Parish) {
-  return [MODE_ORDER.indexOf(p.endingMode), p.state, p.city].join("|");
+  return [ENDING_MODE_ORDER.indexOf(p.endingMode), p.state, p.city].join("|");
 }
 
-function Dot({
-  parish,
+const CELL = 34;
+const COLS = 11;
+
+function UnitGrid({
+  parishes,
+  markR,
+  cols,
   onHover,
+  onOpen,
+  hovered,
 }: {
-  parish: Parish;
+  parishes: Parish[];
+  markR: number;
+  cols: number;
   onHover: (p: Parish | null) => void;
+  onOpen: (p: Parish) => void;
+  hovered: Parish | null;
 }) {
-  const labeled = LABELED.has(parish.slug);
+  const rows = Math.ceil(parishes.length / cols);
+  const cell = markR * 2.9;
   return (
-    <button
-      type="button"
-      aria-label={`${parish.nameLt}, ${parish.city} ${parish.state} — ${ENDING_MODE_LABEL[parish.endingMode]}`}
-      onMouseEnter={() => onHover(parish)}
-      onMouseLeave={() => onHover(null)}
-      onFocus={() => onHover(parish)}
-      onBlur={() => onHover(null)}
-      className="relative size-5 rounded-full transition-transform hover:scale-125 focus:scale-125 focus:outline-none"
-      style={{
-        background: ENDING_MODE_COLOR[parish.endingMode],
-        boxShadow: labeled ? "0 0 0 2px var(--background), 0 0 0 3.5px var(--foreground)" : undefined,
-      }}
-    />
+    <svg
+      viewBox={`0 0 ${cols * cell} ${rows * cell}`}
+      className="h-auto"
+      style={{ width: `${cols * CELL}px`, maxWidth: "100%" }}
+      role="group"
+    >
+      {parishes.map((p, i) => {
+        const x = (i % cols) * cell + cell / 2;
+        const y = Math.floor(i / cols) * cell + cell / 2;
+        const active = hovered?.slug === p.slug;
+        const labeled = LABELED.has(p.slug);
+        return (
+          <g key={p.slug}>
+            {labeled && (
+              <circle
+                cx={x}
+                cy={y}
+                r={markR * 1.4}
+                fill="none"
+                stroke="var(--foreground)"
+                strokeWidth={1.4}
+              />
+            )}
+            <MarkShape
+              mode={p.endingMode}
+              x={x}
+              y={y}
+              r={active ? markR * 1.25 : markR}
+              tabIndex={0}
+              role="button"
+              aria-label={`${p.nameLt}, ${p.city} ${p.state} — ${ENDING_MODE_LABEL[p.endingMode]}. Open the parish record.`}
+              onMouseEnter={() => onHover(p)}
+              onMouseLeave={() => onHover(null)}
+              onFocus={() => onHover(p)}
+              onBlur={() => onHover(null)}
+              onClick={() => onOpen(p)}
+              onKeyDown={(e: React.KeyboardEvent) => {
+                if (e.key === "Enter") onOpen(p);
+              }}
+              className="cursor-pointer focus:outline-none"
+            />
+          </g>
+        );
+      })}
+    </svg>
   );
 }
 
 export default function OwnershipChart({ parishes }: { parishes: Parish[] }) {
+  const router = useRouter();
   const [hovered, setHovered] = useState<Parish | null>(null);
+  const openParish = (p: Parish) => router.push(`/parishes/${p.slug}`);
 
   const diocese = parishes
     .filter((p) => p.ownership === "diocese_rc")
@@ -81,13 +122,18 @@ export default function OwnershipChart({ parishes }: { parishes: Parish[] }) {
           <h3 className="font-serif text-lg font-semibold">
             Diocese-owned <span className="text-muted font-normal">— {diocese.length} parishes</span>
           </h3>
-          <p className="text-sm text-accent mt-1">
+          <p className="text-sm mt-1" style={{ color: "var(--mark-closed)" }}>
             {dioceseClosed} closed by the diocese
           </p>
-          <div className="mt-3 flex flex-wrap gap-1.5 max-w-md">
-            {diocese.map((p) => (
-              <Dot key={p.slug} parish={p} onHover={setHovered} />
-            ))}
+          <div className="mt-3">
+            <UnitGrid
+              parishes={diocese}
+              markR={10}
+              cols={COLS}
+              onHover={setHovered}
+              onOpen={openParish}
+              hovered={hovered}
+            />
           </div>
         </section>
 
@@ -95,13 +141,18 @@ export default function OwnershipChart({ parishes }: { parishes: Parish[] }) {
           <h3 className="font-serif text-lg font-semibold">
             Community-owned <span className="text-muted font-normal">— {community.length}</span>
           </h3>
-          <p className="text-sm mt-1" style={{ color: "var(--mode-standing)" }}>
+          <p className="text-sm mt-1">
             {communityClosed} closed by any outside authority
           </p>
-          <div className="mt-3 flex flex-wrap gap-1.5 max-w-40">
-            {community.map((p) => (
-              <Dot key={p.slug} parish={p} onHover={setHovered} />
-            ))}
+          <div className="mt-3">
+            <UnitGrid
+              parishes={community}
+              markR={14}
+              cols={3}
+              onHover={setHovered}
+              onOpen={openParish}
+              hovered={hovered}
+            />
           </div>
         </section>
       </div>
@@ -112,7 +163,9 @@ export default function OwnershipChart({ parishes }: { parishes: Parish[] }) {
       >
         {hovered ? (
           <div>
-            <span className="font-medium">{hovered.nameLt}</span>{" "}
+            <span className="font-serif font-semibold text-base">
+              {hovered.nameLt}
+            </span>{" "}
             <span className="text-muted">
               — {hovered.city}, {hovered.state}
             </span>
@@ -123,11 +176,19 @@ export default function OwnershipChart({ parishes }: { parishes: Parish[] }) {
                 hovered.status !== "closed" &&
                 ` (${STATUS_LABEL[hovered.status].toLowerCase()})`}
               {hovered.yearClosed ? ` · ${hovered.yearClosed}` : ""}
+              {" · "}
+              <Link
+                href={`/parishes/${hovered.slug}`}
+                className="underline hover:text-foreground"
+              >
+                full record →
+              </Link>
             </div>
           </div>
         ) : (
           <span className="text-muted">
-            Hover over a parish. Ringed marks: Šv. Jurgio (Shenandoah), Aušros
+            Hover over a parish; click to open its record and the original
+            Draugas coverage. Ringed marks: Šv. Jurgio (Shenandoah), Aušros
             Vartų (Manhattan), Šv. Petro (Boston) — money did not save them —
             and Dievo Apvaizdos (Scranton), the community-owned parish no
             bishop can close.
@@ -136,13 +197,9 @@ export default function OwnershipChart({ parishes }: { parishes: Parish[] }) {
       </div>
 
       <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
-        {MODE_ORDER.map((mode) => (
+        {ENDING_MODE_ORDER.map((mode) => (
           <span key={mode} className="inline-flex items-center gap-1.5">
-            <span
-              aria-hidden
-              className="inline-block size-3 rounded-full"
-              style={{ background: ENDING_MODE_COLOR[mode] }}
-            />
+            <MarkIcon mode={mode} />
             {ENDING_MODE_LABEL[mode]}
           </span>
         ))}

@@ -6,13 +6,14 @@
   --foreground: #1c1917;
   --muted: #78716c;
   --rule: #e7e5e4;
-  --accent: #9f1239;
+  --band: #f3eee2;
+  --accent: #7d1f1f;
 
-  /* Ending-mode encoding — one accent for "lost", per the infographic discipline */
-  --mode-closed: #9f1239;
-  --mode-standing: #047857;
-  --mode-community: #b45309;
-  --mode-undecided: #a8a29e;
+  /* Mark encoding from the „Kam priklauso bažnyčia?" infographic:
+     shape + fill carry the meaning (grayscale-safe), one deep red for "lost". */
+  --mark-closed: #7d1f1f;
+  --mark-community: #d5c28b;
+  --mark-ink: #151515;
 }
 
 @theme inline {
@@ -32,12 +33,12 @@
     --foreground: #e7e5e4;
     --muted: #a8a29e;
     --rule: #292524;
-    --accent: #fb7185;
+    --band: #1e1b19;
+    --accent: #c96a6a;
 
-    --mode-closed: #fb7185;
-    --mode-standing: #34d399;
-    --mode-community: #fbbf24;
-    --mode-undecided: #57534e;
+    --mark-closed: #c96a6a;
+    --mark-community: #d5c28b;
+    --mark-ink: #e7e5e4;
   }
 }
 

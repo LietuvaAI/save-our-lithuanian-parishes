@@ -1,0 +1,35 @@
+{
+  "slug": "dievo-apvaizdos-scranton-pa",
+  "asOf": "2026-07-09",
+  "buildingStatus": "standing",
+  "currentUse": "Active parish church of the PNCC Central Diocese, listed under supply clergy (Rev. Thomas Basta) as of the diocese's June 2026 directory.",
+  "summary": "Providence of God remains an active parish, listed in the Polish National Catholic Church Central Diocese's parish directory (page last updated June 5, 2026) as 'Providence of God Parish (Lithuanian),' served by Rev. Thomas Basta as supply clergy rather than a resident pastor. It is the sole surviving parish of the Lithuanian National Catholic Church, which merged into the PNCC; it was once the cathedral of the Lithuanian branch of the National Catholic movement. The 1915-1930 church building stands with its Lithuanian cornerstone inscription, Lithuanian stained glass, and a Rūpintojėlis image, and holds Sunday morning Mass — now conducted in English rather than Lithuanian — funding itself in part through annual summer picnics. No 2023-2026 local news coverage of the parish was found.",
+  "developments": [
+    {
+      "date": "2026-06-05",
+      "headline": "Parish listed as active under supply clergy in PNCC Central Diocese directory",
+      "detail": "The Central Diocese 'Our Parishes' page (last modified 2026-06-05) lists 'Providence of God Parish (Lithuanian), Rev. Thomas Basta (Supply), 1734 South Sumner Avenue, Scranton, PA 18508' — indicating the parish is active but no longer has a resident pastor of its own.",
+      "sources": [
+        { "title": "Our Parishes – Central Diocese", "publisher": "Polish National Catholic Church Central Diocese", "date": "2026-06-05", "url": "https://www.centraldiocesepncc.org/about/our-parishes/" }
+      ]
+    },
+    {
+      "date": "2022-11-21",
+      "headline": "Parish advertises for an organist, confirming active weekly worship",
+      "detail": "The American Guild of Organists NEPA chapter posted a paid organist position for the parish, citing 9:00 a.m. Sunday Mass, Christmas Eve and Christmas Day Masses, a two-manual pipe organ, and a small choir.",
+      "sources": [
+        { "title": "Job Opportunity: Providence of God Lithuanian National Catholic Church, Scranton", "publisher": "American Guild of Organists, Pennsylvania Northeast Chapter", "date": "2022-11-21", "url": "https://agopane.org/2022/11/21/job-opportunity-providence-of-god-lithuanian-national-catholic-church-scranton/" }
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "Our Parishes – Central Diocese", "publisher": "Polish National Catholic Church Central Diocese", "date": "2026-06-05", "url": "https://www.centraldiocesepncc.org/about/our-parishes/" },
+    { "title": "About – Lietuvių Katalikų Tautinė Bažnyčia", "publisher": "lktb.org", "date": "2022", "url": "https://www.lktb.org/home/about" },
+    { "title": "Pennsylvania Northern Coal Region Lithuanian sites", "publisher": "Global True Lithuania", "date": "", "url": "https://global.truelithuania.com/northern-coal-region-scranton-1614/" },
+    { "title": "Lithuanian National Catholic Church", "publisher": "Wikipedia", "date": "", "url": "https://en.wikipedia.org/wiki/Lithuanian_National_Catholic_Church" },
+    { "title": "Job Opportunity: Providence of God Lithuanian National Catholic Church, Scranton", "publisher": "AGO Pennsylvania Northeast Chapter", "date": "2022-11-21", "url": "https://agopane.org/2022/11/21/job-opportunity-providence-of-god-lithuanian-national-catholic-church-scranton/" }
+  ],
+  "confidence": "reported",
+  "conflictsWithArchiveRecord": "The 'no bishop can close it' framing needs nuance: while lay-founded and independent of Rome, the parish today operates within the PNCC Central Diocese under its bishop (PNCC polity keeps parish property lay-owned) and is currently served by supply clergy, not its own pastor; worship is now in English. Otherwise the archive record (standing, last Lithuanian parish of the coal region) is consistent with current sources.",
+  "gaps": "Parish Facebook page and directory listings returned 403, so 2023-2026 event/service activity is unverified beyond the diocese directory listing. Official parish website (providenceofgod.tripod.com) unreachable. Date and reason Rev. Walter Placek's pastorate ended unknown. Address discrepancy unresolved: diocese directory says 1734 South Sumner Avenue; the parish Facebook handle and other sources place it at 1743 North Sumner Avenue. Current membership size and building condition as of 2026 unverified."
+}
