@@ -31,7 +31,7 @@ const NAV = [
   { href: "/who-does-the-parish-belong-to", label: "The Article" },
   { href: "/parishes", label: "The Record" },
   { href: "/data", label: "The Data" },
-  { href: "https://saveourlithuanianparishes.substack.com", label: "Dispatches" },
+  { href: "https://blog.saveourlithuanianparishes.org", label: "Dispatches" },
   { href: "/network", label: "The Network" },
 ];
 
@@ -100,7 +100,7 @@ export default function RootLayout({
               </a>
               . Follow the{" "}
               <a
-                href="https://saveourlithuanianparishes.substack.com"
+                href="https://blog.saveourlithuanianparishes.org"
                 className="underline hover:text-foreground"
               >
                 dispatches
