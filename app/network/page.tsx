@@ -44,7 +44,7 @@ export default function NetworkPage() {
           <p className="mt-1 text-sm text-muted">
             Closure alerts, parish case files, and updates from the record —{" "}
             <a
-              href="https://saveourlithuanianparishes.substack.com"
+              href="https://blog.saveourlithuanianparishes.org"
               className="underline hover:text-foreground"
             >
               Save Our Lithuanian Parishes on Substack
@@ -61,7 +61,7 @@ export default function NetworkPage() {
           </p>
           <p className="mt-3">
             <a
-              href="https://saveourlithuanianparishes.substack.com/subscribe"
+              href="https://blog.saveourlithuanianparishes.org/subscribe"
               className="inline-block rounded-md px-4 py-2 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
               style={{ background: "var(--mark-closed)" }}
             >

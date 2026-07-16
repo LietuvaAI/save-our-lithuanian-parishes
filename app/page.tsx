@@ -176,7 +176,7 @@ export default function Home() {
         </p>
         <p className="mt-4">
           <a
-            href="https://saveourlithuanianparishes.substack.com/subscribe"
+            href="https://blog.saveourlithuanianparishes.org/subscribe"
             className="inline-block rounded-md px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
             style={{ background: "var(--mark-closed)" }}
           >
