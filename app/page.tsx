@@ -36,7 +36,7 @@ const ACTIONS = [
   {
     title: "Know who holds the deed",
     body: "Find your parish among the documented parishes. See its ownership, its outcome, and how its story compares to the rest of the record.",
-    cta: "Search the record",
+    cta: "Find your parish",
     href: "/parishes",
     primary: false,
   },
@@ -180,7 +180,7 @@ export default function Home() {
             className="inline-block rounded-md px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
             style={{ background: "var(--mark-closed)" }}
           >
-            Subscribe to the dispatches
+            Subscribe to the blog
           </a>
         </p>
       </section>
@@ -205,7 +205,7 @@ export default function Home() {
           people like you.
         </p>
         <p className="mt-6">
-          <Link href="/network" className="underline hover:text-accent">
+          <Link href="/about" className="underline hover:text-accent">
             Why we keep this record — and how you can help →
           </Link>
         </p>

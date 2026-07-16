@@ -15,6 +15,7 @@ import {
 } from "@/lib/parishes";
 
 const bySlug = new Map(usParishes.map((p) => [p.slug, p]));
+const pointBySlug = new Map(mapData.points.map((pt) => [pt.slug, pt]));
 
 const FULL = { x: 0, y: 0, w: 975, h: 610 };
 const MAX_ZOOM = 10;
@@ -273,6 +274,47 @@ export default function ParishMap() {
           )}
         </div>
 
+        {hovered &&
+          (() => {
+            const pt = pointBySlug.get(hovered.slug);
+            if (!pt) return null;
+            const lx = ((pt.x - view.x) / view.w) * 100;
+            const ly = ((pt.y - view.y) / view.h) * 100;
+            if (lx < -2 || lx > 102 || ly < -2 || ly > 102) return null;
+            const below = ly < 32;
+            return (
+              <div
+                className="pointer-events-none absolute z-10 w-64 rounded-lg border border-rule bg-background/95 px-3.5 py-2.5 text-sm shadow-lg"
+                style={{
+                  left: `${Math.min(Math.max(lx, 15), 85)}%`,
+                  top: `${ly}%`,
+                  transform: below
+                    ? "translate(-50%, 16px)"
+                    : "translate(-50%, calc(-100% - 16px))",
+                }}
+                aria-live="polite"
+              >
+                <div className="font-serif font-semibold">{hovered.nameLt}</div>
+                <div className="text-muted">
+                  {hovered.city}, {hovered.state}
+                </div>
+                <div className="text-muted mt-1">
+                  {OWNERSHIP_LABEL[hovered.ownership]}
+                  <br />
+                  {ENDING_MODE_LABEL[hovered.endingMode]}
+                  {hovered.endingMode === "diocese_closed" &&
+                    hovered.status !== "closed" &&
+                    ` (${STATUS_LABEL[hovered.status].toLowerCase()})`}
+                  {hovered.yearFounded ? ` · founded ${hovered.yearFounded}` : ""}
+                  {hovered.yearClosed ? `, lost ${hovered.yearClosed}` : ""}
+                </div>
+                <div className="mt-1.5 font-medium underline">
+                  Open the parish profile →
+                </div>
+              </div>
+            );
+          })()}
+
         {timelineMode && (
           <div className="absolute left-2 bottom-2 rounded-lg bg-background/90 border border-rule px-3 py-2">
             <div className="font-serif text-2xl font-semibold tabular-nums">{year}</div>
@@ -344,30 +386,8 @@ export default function ParishMap() {
         )}
       </div>
 
-      <div
-        className="mt-3 min-h-14 rounded-lg border border-rule px-4 py-2.5 text-sm"
-        aria-live="polite"
-      >
-        {hovered ? (
-          <div>
-            <span className="font-serif font-semibold text-base">{hovered.nameLt}</span>{" "}
-            <span className="text-muted">
-              — {hovered.city}, {hovered.state}
-            </span>
-            <div className="text-muted mt-0.5">
-              {OWNERSHIP_LABEL[hovered.ownership]} · {ENDING_MODE_LABEL[hovered.endingMode]}
-              {hovered.endingMode === "diocese_closed" &&
-                hovered.status !== "closed" &&
-                ` (${STATUS_LABEL[hovered.status].toLowerCase()})`}
-              {hovered.yearFounded ? ` · founded ${hovered.yearFounded}` : ""}
-              {hovered.yearClosed ? `, lost ${hovered.yearClosed}` : ""}
-              {" · "}
-              <Link href={`/parishes/${hovered.slug}`} className="underline hover:text-foreground">
-                full record →
-              </Link>
-            </div>
-          </div>
-        ) : timelineMode ? (
+      <div className="mt-3 min-h-14 rounded-lg border border-rule px-4 py-2.5 text-sm">
+        {timelineMode ? (
           <span className="text-muted">
             The timeline places the {dated.length} parishes with a documented
             founding year. {undatedCount} more are in the record without a firm
@@ -377,8 +397,8 @@ export default function ParishMap() {
         ) : (
           <span className="text-muted">
             Each mark is one of the {usParishes.length} U.S. Lithuanian parishes
-            in the record. Click a parish to open its record and the original
-            Draugas coverage. Zoom into the Northeast; drag to pan when zoomed.
+            in the record. Hover a mark to see the parish; click it to open the
+            full profile. Zoom into the Northeast; drag to pan when zoomed.
             See a parish missing?{" "}
             <Link href="/report" className="underline hover:text-foreground">
               Report it

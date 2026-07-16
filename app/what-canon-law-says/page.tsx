@@ -109,7 +109,7 @@ export default function CanonLawPage() {
             National Catholic Reporter
           </Src>
           ). Canonical appeal is real, and it has worked — though{" "}
-          <Link href="/parishes">our record</Link> shows it did not save the
+          <Link href="/record">our record</Link> shows it did not save the
           Lithuanian parishes that tried it, and reversals remain the
           exception, not the rule. Time bought inside the structure is still
           time on the diocese&rsquo;s clock.
@@ -123,7 +123,7 @@ export default function CanonLawPage() {
           the faithful who built and sustain it. That is a position argued{" "}
           <em>from</em> canon law, not against it. This site does not propose
           that any parish leave the Catholic Church; the independent parishes
-          in <Link href="/parishes">the record</Link> appear as historical
+          in <Link href="/record">the record</Link> appear as historical
           witness, not as a recommendation.
         </p>
         <p className="text-sm">

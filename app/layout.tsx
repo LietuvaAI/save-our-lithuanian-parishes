@@ -28,11 +28,10 @@ export const metadata: Metadata = {
 };
 
 const NAV = [
-  { href: "/who-does-the-parish-belong-to", label: "The Article" },
-  { href: "/parishes", label: "The Record" },
-  { href: "/data", label: "The Data" },
-  { href: "https://blog.saveourlithuanianparishes.org", label: "Dispatches" },
-  { href: "/network", label: "The Network" },
+  { href: "/record", label: "The Record" },
+  { href: "/parishes", label: "Parish Profiles" },
+  { href: "https://blog.saveourlithuanianparishes.org", label: "Blog" },
+  { href: "/about", label: "About" },
 ];
 
 export default function RootLayout({
@@ -98,12 +97,12 @@ export default function RootLayout({
               >
                 Check our numbers
               </a>
-              . Follow the{" "}
+              . Follow{" "}
               <a
                 href="https://blog.saveourlithuanianparishes.org"
                 className="underline hover:text-foreground"
               >
-                dispatches
+                the blog
               </a>
               .
             </p>
