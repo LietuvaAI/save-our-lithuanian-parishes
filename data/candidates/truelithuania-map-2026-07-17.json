@@ -1,0 +1,4183 @@
+{
+ "corpusScope": "truelithuania-map-2026-07",
+ "extractedAt": "2026-07-17",
+ "source": {
+  "name": "Destination Lithuanian America (map.truelithuania.com)",
+  "author": "Augustinas Žemaitis",
+  "note": "Sites visited in person; Lithuanian Government Chancellery centenary project. Notes are copyrighted prose — facts extracted, prose not committed; see sourceUrl per entry.",
+  "reliabilityCaveat": "Two truelithuania.com narratives were refuted-as-stated by 2026-07-16 adversarial verification (Aušros Vartų Manhattan; Minersville St. Francis). CANDIDATE scope: validate against the Draugas 1909-2007 registry before any fact reaches the record."
+ },
+ "counts": {
+  "total": 195,
+  "byType": {
+   "Bažnyčios": 104,
+   "Kapinės": 79,
+   "Klebonijos": 2,
+   "Vienuolynai": 10,
+   "Churches": 1
+  },
+  "canada": 12,
+  "nonLithuanianEthnicity": 3,
+  "nearCanonicalCity": 144
+ },
+ "sites": [
+  {
+   "tlId": 38935,
+   "titleLt": "Šv. Pranciškaus Asyžiečio lenkų bažnyčia Detroite",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 42.33421050446944,
+   "lon": -83.11742631095188,
+   "state": "MI",
+   "country": "US",
+   "nonLithuanianEthnicity": true,
+   "yearsMentioned": [
+    1903,
+    1905
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/detroit-michigan-10/",
+   "nearestCanonicalCity": {
+    "cityKey": "Detroit|MI",
+    "km": 5.8
+   }
+  },
+  {
+   "tlId": 38618,
+   "titleLt": "Šv. Juozapo lietuvių kapinės Nantikoke",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 41.221255,
+   "lon": -76.029629,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Nanticoke|PA",
+    "km": 2.7
+   }
+  },
+  {
+   "tlId": 38600,
+   "titleLt": "Naugatuko Šv. Pauliaus lietuvių liuteronų bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 41.494191242318806,
+   "lon": -73.06524426224492,
+   "state": "CT",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1907,
+    1955,
+    1957
+   ],
+   "statusFlags": [
+    "demolished"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/connecticut-789/",
+   "nearestCanonicalCity": {
+    "cityKey": "Waterbury|CT",
+    "km": 6.9
+   }
+  },
+  {
+   "tlId": 38585,
+   "titleLt": "Kembridžo lietuvių bažnyčios klebonija",
+   "types": [
+    "Klebonijos"
+   ],
+   "importance": 3,
+   "lat": 42.371474519465686,
+   "lon": -71.09356234608865,
+   "state": "MA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1972
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/boston-massachusetts-308/",
+   "nearestCanonicalCity": {
+    "cityKey": "Cambridge|MA",
+    "km": 1.1
+   }
+  },
+  {
+   "tlId": 38547,
+   "titleLt": "Merkinės (Meretz) žydų kapinės prie Bostono",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 42.4751122116211,
+   "lon": -71.1265900179012,
+   "state": "MA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    2000
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/boston-massachusetts-308/",
+   "nearestCanonicalCity": {
+    "cityKey": "Cambridge|MA",
+    "km": 12.3
+   }
+  },
+  {
+   "tlId": 38533,
+   "titleLt": "Vinipego Šv. Kazimiero lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 49.902018,
+   "lon": -97.146156,
+   "state": "MB",
+   "country": "CA",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1953,
+    1957,
+    1999
+   ],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/winnipeg-manitoba-7747/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 38347,
+   "titleLt": "Osceola Milso lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 40.863772,
+   "lon": -78.266751,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1929
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://map.truelithuania.com/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 38302,
+   "titleLt": "Nantikoko Šv. Juozapo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 41.1893296896359,
+   "lon": -75.98229590588636,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    2004
+   ],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Luzerne|PA",
+    "km": 1.9
+   }
+  },
+  {
+   "tlId": 38310,
+   "titleLt": "Vilks-Bario lietuvių tautinių katalikų Visų Šventųjų bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 41.23076818915232,
+   "lon": -75.896546442699,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1932
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Wilkes-Barre|PA",
+    "km": 2.1
+   }
+  },
+  {
+   "tlId": 38306,
+   "titleLt": "Senosios Šv. Marijos lietuvių kapinės Vanamyje",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 41.16918998186632,
+   "lon": -76.04190797865186,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Nanticoke|PA",
+    "km": 5.1
+   }
+  },
+  {
+   "tlId": 38304,
+   "titleLt": "Lietuvių nepriklausomos kapinės Nantikoke",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 41.1972847,
+   "lon": -75.9910153,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Nanticoke|PA",
+    "km": 1.5
+   }
+  },
+  {
+   "tlId": 38296,
+   "titleLt": "Senosios Šv. Juozapo lietuvių kapinės Mahanojuje",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 40.833303129658724,
+   "lon": -76.14735615006748,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1922
+   ],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Shenandoah|PA",
+    "km": 4.7
+   }
+  },
+  {
+   "tlId": 36639,
+   "titleLt": "Vilnerių vartai Valdheimo žydų kapinėse Čikagoje",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 41.85920565623563,
+   "lon": -87.81940267820616,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+   "nearestCanonicalCity": {
+    "cityKey": "Cicero|IL",
+    "km": 5.6
+   }
+  },
+  {
+   "tlId": 36601,
+   "titleLt": "Šv. Jono Kantiečio lenkų bažnyčia Čikagoje",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 41.89679113472134,
+   "lon": -87.65297222847218,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": true,
+   "yearsMentioned": [
+    1863
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+   "nearestCanonicalCity": {
+    "cityKey": "Chicago|IL",
+    "km": 3.3
+   }
+  },
+  {
+   "tlId": 36504,
+   "titleLt": "Lenkų-lietuvių kapinės Roslyne",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 47.219798673604956,
+   "lon": -120.99971987441685,
+   "state": "WA",
+   "country": "US",
+   "nonLithuanianEthnicity": true,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/vasingtonas-jav-valstija-1142/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 36458,
+   "titleLt": "Lietuvių kapinių zona Vest Palm Byče",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 26.760915,
+   "lon": -80.061668,
+   "state": "FL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1970
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/florida-1845/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 36430,
+   "titleLt": "Susivienijimo lietuvių Amerikoje kapinės Vilbartone",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 34.91270777192638,
+   "lon": -95.34386266520006,
+   "state": "OK",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/oklahoma-6600/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 36429,
+   "titleLt": "Lietuvių kapai Hartsorno Holy Rosary kapinėse",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 34.86192725312656,
+   "lon": -95.55367835119232,
+   "state": "OK",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1900
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/oklahoma-6600/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 36412,
+   "titleLt": "Joniškės lietuvių kapinės Jorktaune",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 28.923626618936293,
+   "lon": -97.48741691594364,
+   "state": "TX",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1860
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/texas-1108/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 36383,
+   "titleLt": "Lietuvių kapai Los Andželo Forest Lawn kapinėse",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 34.12778257918013,
+   "lon": -118.24243252048028,
+   "state": "CA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/los-angeles-california-99/",
+   "nearestCanonicalCity": {
+    "cityKey": "Los Angeles|CA",
+    "km": 8.2
+   }
+  },
+  {
+   "tlId": 36371,
+   "titleLt": "Los Andželo lietuvių parapijos klebonija",
+   "types": [
+    "Klebonijos"
+   ],
+   "importance": 3,
+   "lat": 34.1085008762828,
+   "lon": -118.27505382003035,
+   "state": "CA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/los-angeles-california-99/",
+   "nearestCanonicalCity": {
+    "cityKey": "Los Angeles|CA",
+    "km": 6.8
+   }
+  },
+  {
+   "tlId": 36203,
+   "titleLt": "Omahos Šv. Antano lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 41.203254,
+   "lon": -95.961396,
+   "state": "NE",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1936,
+    2014
+   ],
+   "statusFlags": [
+    "closed",
+    "sold",
+    "converted"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/omaha-nebraska-719/",
+   "nearestCanonicalCity": {
+    "cityKey": "Omaha|NE",
+    "km": 6.5
+   }
+  },
+  {
+   "tlId": 36183,
+   "titleLt": "Lietuvių kapinės Roslyne",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 47.219418176040776,
+   "lon": -120.99858065150804,
+   "state": "WA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1909,
+    2009
+   ],
+   "statusFlags": [
+    "converted"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/vasingtonas-jav-valstija-1142/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 36181,
+   "titleLt": "Sent Pit Byčo Šv. Kazimiero lietuvių misija",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 27.73726,
+   "lon": -82.749836,
+   "state": "FL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1975,
+    2017
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/florida-1845/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 36165,
+   "titleLt": "Los Andželo Šv. Kazimiero lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 34.108646992359986,
+   "lon": -118.2748510679774,
+   "state": "CA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1940,
+    1951
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/los-angeles-california-99/",
+   "nearestCanonicalCity": {
+    "cityKey": "Los Angeles|CA",
+    "km": 6.8
+   }
+  },
+  {
+   "tlId": 17721,
+   "titleLt": "Vasagos Palaimintojo Jurgio Matulaičio koplyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 44.540415,
+   "lon": -79.996459,
+   "state": "ON",
+   "country": "CA",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/wasaga-beach-ontario-5491/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 17610,
+   "titleLt": "Ročesterio Lurdo Mergelės bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 43.13214,
+   "lon": -77.564588,
+   "state": "NY",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [
+    "sold"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/upstate-new-york-831/",
+   "nearestCanonicalCity": {
+    "cityKey": "Rochester|NY",
+    "km": 5
+   }
+  },
+  {
+   "tlId": 17530,
+   "titleLt": "Lietuvos kankinių koplyčia Misisagoje",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 43.562561,
+   "lon": -79.613806,
+   "state": "ON",
+   "country": "CA",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1969
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/toronto-1513/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 17412,
+   "titleLt": "Vasagos Gerojo ganytojo lietuvių misija",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 44.472017,
+   "lon": -80.085097,
+   "state": "ON",
+   "country": "CA",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1955,
+    1993
+   ],
+   "statusFlags": [
+    "demolished"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/wasaga-beach-ontario-5491/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 17357,
+   "titleLt": "LPK Lietuvių nacionalinės nepriklausomos kapinės Meksike",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 44.5371741,
+   "lon": -70.5134153,
+   "state": "ME",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1920,
+    1923,
+    1950
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/maine-1668/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 17351,
+   "titleLt": "Monrealio Aušros Vartų Marijos lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 45.456041,
+   "lon": -73.58281,
+   "state": "QC",
+   "country": "CA",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1954
+   ],
+   "statusFlags": [
+    "demolished"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/montreal-quebec-1526/",
+   "nearestCanonicalCity": {
+    "cityKey": "Montreal|QC",
+    "km": 5.3
+   }
+  },
+  {
+   "tlId": 17347,
+   "titleLt": "Monrealio Šv. Kazimiero lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 45.532442,
+   "lon": -73.563297,
+   "state": "QC",
+   "country": "CA",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1955,
+    2007
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/montreal-quebec-1526/",
+   "nearestCanonicalCity": {
+    "cityKey": "Montreal|QC",
+    "km": 3.3
+   }
+  },
+  {
+   "tlId": 17323,
+   "titleLt": "Toronto Kristaus prisikėlimo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 43.643505,
+   "lon": -79.530646,
+   "state": "ON",
+   "country": "CA",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    2001
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/toronto-1513/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 17315,
+   "titleLt": "Toronto Šv. Jono Krikštytojo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 43.650538,
+   "lon": -79.413606,
+   "state": "ON",
+   "country": "CA",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1928,
+    1956,
+    1975
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/toronto-1513/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 17309,
+   "titleLt": "Sent Katerinso Marijos Angelų karalienės lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 43.177631,
+   "lon": -79.233101,
+   "state": "ON",
+   "country": "CA",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1964
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/st-catharines-ontario-5630/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 17304,
+   "titleLt": "Šv. Jono lietuvų kapinės Misisagoje",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 1,
+   "lat": 43.562968,
+   "lon": -79.614456,
+   "state": "ON",
+   "country": "CA",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [
+    "converted"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/toronto-1513/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 17300,
+   "titleLt": "Misisagos Lietuvos kankinių šventovė",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 43.562264,
+   "lon": -79.617058,
+   "state": "ON",
+   "country": "CA",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/toronto-1513/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 17288,
+   "titleLt": "Hamiltono Aušros Vartų Marijos lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 43.264132,
+   "lon": -79.886782,
+   "state": "ON",
+   "country": "CA",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1948,
+    1953
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/hamilton-ontario-5489/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 17274,
+   "titleLt": "Šv. Jurgio lietuvių kapinės Jutikoje",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 43.133839,
+   "lon": -75.311098,
+   "state": "NY",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/upstate-new-york-831/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 17267,
+   "titleLt": "Ročesterio Šv. Jurgio lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 43.174014,
+   "lon": -77.599809,
+   "state": "NY",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1935,
+    2008
+   ],
+   "statusFlags": [
+    "sold"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/upstate-new-york-831/",
+   "nearestCanonicalCity": {
+    "cityKey": "Rochester|NY",
+    "km": 2.2
+   }
+  },
+  {
+   "tlId": 17264,
+   "titleLt": "Niagara Folso Šv. Jurgio lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 43.087154,
+   "lon": -79.038671,
+   "state": "NY",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    2010
+   ],
+   "statusFlags": [
+    "closed",
+    "demolished"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/upstate-new-york-831/",
+   "nearestCanonicalCity": {
+    "cityKey": "Niagara Falls|NY",
+    "km": 2.6
+   }
+  },
+  {
+   "tlId": 17256,
+   "titleLt": "Lietuvos sūnų kapinės Sent Klere",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 40.716508,
+   "lon": -76.196747,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Frackville|PA",
+    "km": 8
+   }
+  },
+  {
+   "tlId": 16171,
+   "titleLt": "Istono Marijos Magdalenos lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 40.674359,
+   "lon": -75.20872,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1934
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/easton-pennsylvania-2688/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 16163,
+   "titleLt": "Mainersvilio lietuvių laisvės kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 40.678806,
+   "lon": -76.250858,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Frackville|PA",
+    "km": 11.8
+   }
+  },
+  {
+   "tlId": 7361,
+   "titleLt": "Kasterio Šv. Marijos bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 43.953408,
+   "lon": -86.2206,
+   "state": "MI",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1966
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/custer-ludington-michigan-3901/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 7154,
+   "titleLt": "Šamokino Šv. Mykolo lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 40.78389,
+   "lon": -76.533905,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1875
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Mount Carmel|PA",
+    "km": 10.3
+   }
+  },
+  {
+   "tlId": 7079,
+   "titleLt": "Čikagos lietuvių Jėzuitų vienuolynas ir koplyčia",
+   "types": [
+    "Vienuolynai"
+   ],
+   "importance": 2,
+   "lat": 41.791939,
+   "lon": -87.682901,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1958
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+   "nearestCanonicalCity": {
+    "cityKey": "Cicero|IL",
+    "km": 8.4
+   }
+  },
+  {
+   "tlId": 7077,
+   "titleLt": "Braiton Parko lietuvių vienuolynas Čikagoje",
+   "types": [
+    "Vienuolynai"
+   ],
+   "importance": 3,
+   "lat": 41.812928,
+   "lon": -87.693326,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1925
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+   "nearestCanonicalCity": {
+    "cityKey": "Cicero|IL",
+    "km": 6.2
+   }
+  },
+  {
+   "tlId": 6878,
+   "titleLt": "Vokigano Šv. Šeimos bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 42.352609,
+   "lon": -87.865371,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/waukegan-illinois-2276",
+   "nearestCanonicalCity": {
+    "cityKey": "North Chicago|IL",
+    "km": 3.5
+   }
+  },
+  {
+   "tlId": 6790,
+   "titleLt": "Miško koplyčia „Dainavoje“",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 42.141472,
+   "lon": -84.128255,
+   "state": "MI",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/manchester-michigan-3908/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 6772,
+   "titleLt": "Portedžo lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 40.37709,
+   "lon": -78.67262,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1935
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/pennsylvania-usa-108/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 6714,
+   "titleLt": "Ledfordo lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 37.704593,
+   "lon": -88.586417,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    2018,
+    2021
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/west-frankfort-3873/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 6618,
+   "titleLt": "Čikagos Šv. Kryžiaus lietuvių vienuolynas",
+   "types": [
+    "Vienuolynai"
+   ],
+   "importance": 3,
+   "lat": 41.810918,
+   "lon": -87.669612,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1955
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+   "nearestCanonicalCity": {
+    "cityKey": "Cicero|IL",
+    "km": 8
+   }
+  },
+  {
+   "tlId": 6597,
+   "titleLt": "Elbiono Riverside kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 42.231625,
+   "lon": -84.754556,
+   "state": "MI",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://map.truelithuania.com/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 6588,
+   "titleLt": "Vestvilio Šv. Petro ir Povilo lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 40.038064,
+   "lon": -87.625974,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [
+    "demolished"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/westville-illinois-2282/",
+   "nearestCanonicalCity": {
+    "cityKey": "Westville|IL",
+    "km": 1.2
+   }
+  },
+  {
+   "tlId": 6522,
+   "titleLt": "Gerio Šv. Kazimiero lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 41.588473,
+   "lon": -87.353632,
+   "state": "IN",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [
+    "converted"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/indiana-746/",
+   "nearestCanonicalCity": {
+    "cityKey": "Gary|IN",
+    "km": 2
+   }
+  },
+  {
+   "tlId": 6514,
+   "titleLt": "Beverli Šoro Šv. Onos bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 41.672396,
+   "lon": -86.982156,
+   "state": "IN",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/indiana-746/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 6512,
+   "titleLt": "Lietuvių kapinės Vestvilyje",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 40.02125,
+   "lon": -87.63411,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [
+    "demolished"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/westville-illinois-2282/",
+   "nearestCanonicalCity": {
+    "cityKey": "Westville|IL",
+    "km": 2.4
+   }
+  },
+  {
+   "tlId": 6510,
+   "titleLt": "Lietuvių-masonų Šeikrago kapinės Džonstaune",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 37.821413,
+   "lon": -88.908361,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/west-frankfort-3873/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 6508,
+   "titleLt": "Vest Frankforto lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 37.876486,
+   "lon": -88.922902,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    2018
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/west-frankfort-3873/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 6500,
+   "titleLt": "Spring Valio lietuvių laisvės kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 41.338958,
+   "lon": -89.18971,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/spring-valley-illinois-2284/",
+   "nearestCanonicalCity": {
+    "cityKey": "Spring Valley|IL",
+    "km": 1.5
+   }
+  },
+  {
+   "tlId": 6498,
+   "titleLt": "Spring Valio Šv. Onos lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 41.33642,
+   "lon": -89.19675,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/spring-valley-illinois-2284/",
+   "nearestCanonicalCity": {
+    "cityKey": "Spring Valley|IL",
+    "km": 1
+   }
+  },
+  {
+   "tlId": 6496,
+   "titleLt": "Spring Valio Šv. Onos lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 41.331822,
+   "lon": -89.199667,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1897
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/spring-valley-illinois-2284/",
+   "nearestCanonicalCity": {
+    "cityKey": "Spring Valley|IL",
+    "km": 0.5
+   }
+  },
+  {
+   "tlId": 6490,
+   "titleLt": "Rokfordo Šv. Petro ir Povilo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 42.256138,
+   "lon": -89.106363,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1911,
+    1972
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/rockford-illinois-2279",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 6479,
+   "titleLt": "Tėviškės lietuvių liuteronų bažnyčia Čikagoje",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 41.75615687675327,
+   "lon": -87.9745867848626,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+   "nearestCanonicalCity": {
+    "cityKey": "Darien|IL",
+    "km": 0.6
+   }
+  },
+  {
+   "tlId": 6477,
+   "titleLt": "Čikagos Šv. Petro ir Povilo lietuvių bažnyčia (Pulmane)",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 41.667317,
+   "lon": -87.641204,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1959,
+    2022
+   ],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+   "nearestCanonicalCity": {
+    "cityKey": "South Chicago|IL",
+    "km": 10.6
+   }
+  },
+  {
+   "tlId": 6474,
+   "titleLt": "Tėvų Marijonų lietuvių vienuolynas Čikagoje",
+   "types": [
+    "Vienuolynai"
+   ],
+   "importance": 3,
+   "lat": 41.777864,
+   "lon": -87.735265,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+   "nearestCanonicalCity": {
+    "cityKey": "Cicero|IL",
+    "km": 7.7
+   }
+  },
+  {
+   "tlId": 6464,
+   "titleLt": "Čikagos Visų Šventųjų lietuvių bažnyčia (Rouzlande)",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 41.697923,
+   "lon": -87.622919,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1960,
+    2000
+   ],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+   "nearestCanonicalCity": {
+    "cityKey": "South Chicago|IL",
+    "km": 7.2
+   }
+  },
+  {
+   "tlId": 6461,
+   "titleLt": "Čikagos Dievo apvaizdos lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 41.857384,
+   "lon": -87.645128,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1914,
+    1927
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+   "nearestCanonicalCity": {
+    "cityKey": "Chicago|IL",
+    "km": 2.7
+   }
+  },
+  {
+   "tlId": 6459,
+   "titleLt": "Čikagos Aušros Vartų Marijos lietuvių bažnyčia-mokykla",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 41.849144,
+   "lon": -87.683907,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1906
+   ],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+   "nearestCanonicalCity": {
+    "cityKey": "Chicago|IL",
+    "km": 5.7
+   }
+  },
+  {
+   "tlId": 6457,
+   "titleLt": "Čikagos Siono lietuvių liuteronų bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 41.728546,
+   "lon": -87.765817,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1910,
+    1973
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+   "nearestCanonicalCity": {
+    "cityKey": "Cicero|IL",
+    "km": 13
+   }
+  },
+  {
+   "tlId": 6455,
+   "titleLt": "Šv. Kazimiero lietuvių kapinės Čikagoje",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 1,
+   "lat": 41.689396,
+   "lon": -87.726094,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 6452,
+   "titleLt": "Šv. Kazimiero lietuvių vienuolynas Čikagoje",
+   "types": [
+    "Vienuolynai"
+   ],
+   "importance": 2,
+   "lat": 41.771439,
+   "lon": -87.689625,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+   "nearestCanonicalCity": {
+    "cityKey": "Cicero|IL",
+    "km": 9.8
+   }
+  },
+  {
+   "tlId": 6446,
+   "titleLt": "Čikagos Švč. Mergelės Marijos gimimo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 1,
+   "lat": 41.76855,
+   "lon": -87.691152,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1957
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+   "nearestCanonicalCity": {
+    "cityKey": "Cicero|IL",
+    "km": 10
+   }
+  },
+  {
+   "tlId": 6434,
+   "titleLt": "Lietuvių tautinės kapinės Čikagoje",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 1,
+   "lat": 41.741052,
+   "lon": -87.847617,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+   "nearestCanonicalCity": {
+    "cityKey": "Darien|IL",
+    "km": 10.5
+   }
+  },
+  {
+   "tlId": 6428,
+   "titleLt": "Čikagos Šv. Antano lietuvių bažnyčia (Sisere)",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 41.860054,
+   "lon": -87.749137,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1926
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/chicago-illinois-45/",
+   "nearestCanonicalCity": {
+    "cityKey": "Cicero|IL",
+    "km": 1.7
+   }
+  },
+  {
+   "tlId": 6426,
+   "titleLt": "Čikagos Šv. Kazimiero lietuvių bažnyčia (Chicago Heights)",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 41.506392,
+   "lon": -87.62415,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 6422,
+   "titleLt": "Čikagos Švč. Mergelės Marijos nekalto prasidėjimo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 41.813528,
+   "lon": -87.693902,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1964
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+   "nearestCanonicalCity": {
+    "cityKey": "Cicero|IL",
+    "km": 6.1
+   }
+  },
+  {
+   "tlId": 6409,
+   "titleLt": "Čikagos Šv. Kryžiaus lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 1,
+   "lat": 41.810742,
+   "lon": -87.669008,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1914,
+    1990
+   ],
+   "statusFlags": [
+    "converted"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+   "nearestCanonicalCity": {
+    "cityKey": "Cicero|IL",
+    "km": 8
+   }
+  },
+  {
+   "tlId": 6392,
+   "titleLt": "Deitono Šv. Kryžiaus lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 39.781598,
+   "lon": -84.167486,
+   "state": "OH",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1915
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/dayton-ohio-3879/",
+   "nearestCanonicalCity": {
+    "cityKey": "Dayton|OH",
+    "km": 3.3
+   }
+  },
+  {
+   "tlId": 6373,
+   "titleLt": "Lietuvių laisvės kapinės Grand Rapidse",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 42.995595,
+   "lon": -85.699163,
+   "state": "MI",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/grand-rapids-michigan-3897/",
+   "nearestCanonicalCity": {
+    "cityKey": "Grand Rapids|MI",
+    "km": 4.4
+   }
+  },
+  {
+   "tlId": 6374,
+   "titleLt": "Šv. Petro ir Povilo lietuvių kapinės Grand Rapidse",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 42.996237,
+   "lon": -85.702747,
+   "state": "MI",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1914
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/grand-rapids-michigan-3897/",
+   "nearestCanonicalCity": {
+    "cityKey": "Grand Rapids|MI",
+    "km": 4.6
+   }
+  },
+  {
+   "tlId": 6369,
+   "titleLt": "Grand Rapidso Šv. Petro ir Povilo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 42.988518,
+   "lon": -85.680956,
+   "state": "MI",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1960,
+    1980
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/grand-rapids-michigan-3897/",
+   "nearestCanonicalCity": {
+    "cityKey": "Grand Rapids|MI",
+    "km": 3
+   }
+  },
+  {
+   "tlId": 6367,
+   "titleLt": "Detroito Dievo apvaizdos lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 42.456443,
+   "lon": -83.294744,
+   "state": "MI",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/detroit-michigan-10/",
+   "nearestCanonicalCity": {
+    "cityKey": "Southfield|MI",
+    "km": 6.3
+   }
+  },
+  {
+   "tlId": 6358,
+   "titleLt": "Detroito Šv. Petro lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 42.305059,
+   "lon": -83.126171,
+   "state": "MI",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1921,
+    1995,
+    1997
+   ],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/detroit-michigan-10/",
+   "nearestCanonicalCity": {
+    "cityKey": "Detroit|MI",
+    "km": 7.2
+   }
+  },
+  {
+   "tlId": 6341,
+   "titleLt": "Klivlando Šv. Jurgio lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 41.519444,
+   "lon": -81.644612,
+   "state": "OH",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1895,
+    2009
+   ],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/cleveland-ohio-36/",
+   "nearestCanonicalCity": {
+    "cityKey": "Cleveland|OH",
+    "km": 4.6
+   }
+  },
+  {
+   "tlId": 6339,
+   "titleLt": "Klivlando Mergelės Marijos, Nuolatinės pagalbos lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 41.584184,
+   "lon": -81.553305,
+   "state": "OH",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1952
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/cleveland-ohio-36/",
+   "nearestCanonicalCity": {
+    "cityKey": "Cleveland|OH",
+    "km": 15
+   }
+  },
+  {
+   "tlId": 6333,
+   "titleLt": "Rytų Sent Lujiso Nekaltojo prasidėjimo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 1,
+   "lat": 38.627407,
+   "lon": -90.136867,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1955
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/st-louis-missouri-illinois-1719/",
+   "nearestCanonicalCity": {
+    "cityKey": "East St. Louis|IL",
+    "km": 2
+   }
+  },
+  {
+   "tlId": 6329,
+   "titleLt": "Kolinsvilio Jeruzalės liuteronų lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 38.664359,
+   "lon": -89.998808,
+   "state": "IL",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1903
+   ],
+   "statusFlags": [
+    "still_active"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/st-louis-missouri-illinois-1719/",
+   "nearestCanonicalCity": {
+    "cityKey": "Collinsville|IL",
+    "km": 1.4
+   }
+  },
+  {
+   "tlId": 6327,
+   "titleLt": "Šeboigano Nekaltojo prasidėjimo lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 43.701215,
+   "lon": -87.716067,
+   "state": "WI",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1929
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/wisconsin-1191/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 6314,
+   "titleLt": "Kenošos Šv. Petro lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 42.617504,
+   "lon": -87.846486,
+   "state": "WI",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1966,
+    2001
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/wisconsin-1191/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 6292,
+   "titleLt": "Senosios Šv. Trejybės lietuvių kapinės Vilks Baryje",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 41.231141,
+   "lon": -75.865818,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [
+    "closed",
+    "demolished"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Wilkes-Barre|PA",
+    "km": 2.2
+   }
+  },
+  {
+   "tlId": 5892,
+   "titleLt": "Broktono Šv. Kazimiero lietuvių vienuolynas",
+   "types": [
+    "Vienuolynai"
+   ],
+   "importance": 3,
+   "lat": 42.102026,
+   "lon": -71.011511,
+   "state": "MA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/brockton-massachusetts-312/",
+   "nearestCanonicalCity": {
+    "cityKey": "Brockton|MA",
+    "km": 2.1
+   }
+  },
+  {
+   "tlId": 5749,
+   "titleLt": "Sent Klero Šv. Kazimiero lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 40.700493,
+   "lon": -76.170924,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Frackville|PA",
+    "km": 10.5
+   }
+  },
+  {
+   "tlId": 5560,
+   "titleLt": "Senosios Šv. Kazimiero lietuvių kapinės Larksvilyje",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 41.252008,
+   "lon": -75.936415,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Kingston|PA",
+    "km": 3.5
+   }
+  },
+  {
+   "tlId": 2344,
+   "titleLt": "Aukščiausiosios lietuvių Amerikoje ložės Laisvės kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 40.830202,
+   "lon": -76.21059,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Shenandoah|PA",
+    "km": 1.3
+   }
+  },
+  {
+   "tlId": 2103,
+   "titleLt": "Elmhersto lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 41.375318,
+   "lon": -75.563886,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Scranton|PA",
+    "km": 9
+   }
+  },
+  {
+   "tlId": 1986,
+   "titleLt": "Šv. Luko kapinės Bentlivilyje",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 40.113927,
+   "lon": -80.013741,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/pittsburgh-pennsylvania-1133/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 1810,
+   "titleLt": "Baltimorės Šv. Jono Krikštytojo lietuvių bažnyčia (Loido gatvės sinagoga)",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 39.290408,
+   "lon": -76.601244,
+   "state": "MD",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1889,
+    1905
+   ],
+   "statusFlags": [
+    "sold"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/baltimore-maryland-497/",
+   "nearestCanonicalCity": {
+    "cityKey": "Baltimore|MD",
+    "km": 0.8
+   }
+  },
+  {
+   "tlId": 1703,
+   "titleLt": "Sent Klero Šv. Kazimiero lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 40.715152,
+   "lon": -76.183542,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Frackville|PA",
+    "km": 8.6
+   }
+  },
+  {
+   "tlId": 1701,
+   "titleLt": "Naujosios Filadelfijos Saldžiausios Jėzaus Širdies lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 40.71959,
+   "lon": -76.11923,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1984
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Frackville|PA",
+    "km": 11.8
+   }
+  },
+  {
+   "tlId": 1593,
+   "titleLt": "Mahanojaus Šv. Juozapo lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 40.806638,
+   "lon": -76.132895,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Shenandoah|PA",
+    "km": 5.9
+   }
+  },
+  {
+   "tlId": 1568,
+   "titleLt": "Šenandoriaus lietuvių kapinynas",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 1,
+   "lat": 40.827271,
+   "lon": -76.214299,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1869
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Shenandoah|PA",
+    "km": 1.3
+   }
+  },
+  {
+   "tlId": 1539,
+   "titleLt": "Šenandoriaus Fatimos Mergelės lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 40.828671,
+   "lon": -76.214751,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Shenandoah|PA",
+    "km": 1.5
+   }
+  },
+  {
+   "tlId": 1499,
+   "titleLt": "Skenektadžio Šv. Kryžiaus lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 42.783485,
+   "lon": -74.002045,
+   "state": "NY",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1930
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/upstate-new-york-831/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 1500,
+   "titleLt": "Bingamtono senoji lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 42.114812,
+   "lon": -75.940707,
+   "state": "NY",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/upstate-new-york-831/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 1485,
+   "titleLt": "Amsterdamo Šv. Onos lietuvių kapinių koplyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 42.931574,
+   "lon": -74.154843,
+   "state": "NY",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1971
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/upstate-new-york-831/",
+   "nearestCanonicalCity": {
+    "cityKey": "Amsterdam|NY",
+    "km": 3
+   }
+  },
+  {
+   "tlId": 1365,
+   "titleLt": "Broktono lietuvių vienuolyno kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 42.070707,
+   "lon": -70.994554,
+   "state": "MA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/brockton-massachusetts-312/",
+   "nearestCanonicalCity": {
+    "cityKey": "Brockton|MA",
+    "km": 2.4
+   }
+  },
+  {
+   "tlId": 1334,
+   "titleLt": "Nukryžiuotojo Jėzaus ir sielvartingosios motinos seserų lietuvių vienuolynas",
+   "types": [
+    "Vienuolynai"
+   ],
+   "importance": 2,
+   "lat": 42.073611,
+   "lon": -70.994309,
+   "state": "MA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/brockton-massachusetts-312/",
+   "nearestCanonicalCity": {
+    "cityKey": "Brockton|MA",
+    "km": 2.3
+   }
+  },
+  {
+   "tlId": 1322,
+   "titleLt": "Broktono Šv. Kazimiero lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 42.101446,
+   "lon": -71.012339,
+   "state": null,
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/brockton-massachusetts-312/",
+   "nearestCanonicalCity": {
+    "cityKey": "Brockton|MA",
+    "km": 2.1
+   }
+  },
+  {
+   "tlId": 1175,
+   "titleLt": "Putnamo Dangaus vartų lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 41.929511,
+   "lon": -71.870769,
+   "state": "CT",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/connecticut-789/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 1004,
+   "titleLt": "Neringos stovyklos koplyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 42.871809,
+   "lon": -72.697576,
+   "state": "VT",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1989
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/vermont-2574/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 997,
+   "titleLt": "Šv. Kazimiero lietuvių kapinės Hunloke",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 41.226491,
+   "lon": -76.124568,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1925
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Nanticoke|PA",
+    "km": 10.3
+   }
+  },
+  {
+   "tlId": 995,
+   "titleLt": "Švč. Mergelės Marijos Apsireiškimo lietuvių kapinės Kingstone",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 41.27773,
+   "lon": -75.908927,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    2016
+   ],
+   "statusFlags": [
+    "demolished"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Kingston|PA",
+    "km": 2
+   }
+  },
+  {
+   "tlId": 992,
+   "titleLt": "Švč. Trejybės lietuvių kapinės Vilks Baryje",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 41.204132,
+   "lon": -75.788612,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1935,
+    2015
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Wilkes-Barre|PA",
+    "km": 9.1
+   }
+  },
+  {
+   "tlId": 989,
+   "titleLt": "Šv. Pranciškaus lietuvių kapinės Vilks-Baryje",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 41.245276,
+   "lon": -75.83072,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Wilkes-Barre|PA",
+    "km": 4.3
+   }
+  },
+  {
+   "tlId": 987,
+   "titleLt": "Šv. Kazimiero lietuvių kapinės Pitstone",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 41.31365,
+   "lon": -75.789772,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Pittston|PA",
+    "km": 1.4
+   }
+  },
+  {
+   "tlId": 985,
+   "titleLt": "Šv. Petro ir Povilo lietuvių kapinės Šiugar Noče",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 41.194396,
+   "lon": -75.930279,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Luzerne|PA",
+    "km": 3.9
+   }
+  },
+  {
+   "tlId": 983,
+   "titleLt": "Šv. Marijos lietuvių kapinės Vanamyje",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 41.176871,
+   "lon": -76.040954,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Nanticoke|PA",
+    "km": 4.4
+   }
+  },
+  {
+   "tlId": 946,
+   "titleLt": "Maunt Karmelio Šv. Kryžiaus lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 40.792745,
+   "lon": -76.416699,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1892
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Mount Carmel|PA",
+    "km": 0.5
+   }
+  },
+  {
+   "tlId": 908,
+   "titleLt": "Hazletono Šv. Petro ir Povilo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 40.958523,
+   "lon": -75.985893,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1911
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 669,
+   "titleLt": "Šv. Juozapo lietuvių kapinės Skrantone",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 41.450023,
+   "lon": -75.621126,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Scranton|PA",
+    "km": 5.7
+   }
+  },
+  {
+   "tlId": 650,
+   "titleLt": "Amsterdamo Šv. Kazimiero lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 42.930847,
+   "lon": -74.155223,
+   "state": "NY",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/upstate-new-york-831/",
+   "nearestCanonicalCity": {
+    "cityKey": "Amsterdam|NY",
+    "km": 2.9
+   }
+  },
+  {
+   "tlId": 648,
+   "titleLt": "Ist Vandegrifto Šv. Kazimiero lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 40.598141,
+   "lon": -79.563148,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1985
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/pittsburgh-pennsylvania-1133/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 643,
+   "titleLt": "Einono Vilniaus mergelės kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 41.493748,
+   "lon": -75.570183,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [
+    "demolished"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Archbald|PA",
+    "km": 2.8
+   }
+  },
+  {
+   "tlId": 637,
+   "titleLt": "Liucernos Šv. Onos lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 41.284827,
+   "lon": -75.893931,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1924,
+    1959
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Kingston|PA",
+    "km": 2.6
+   }
+  },
+  {
+   "tlId": 604,
+   "titleLt": "Duboizo Šv. Juozapo lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 41.122762,
+   "lon": -78.782176,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/du-bois-pennsylvania-2543/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 600,
+   "titleLt": "Bensalemo Šv. Marijos lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 40.11379,
+   "lon": -74.93934,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/philadelphia-pennsylvania-1160/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 587,
+   "titleLt": "Šv. Antano lietuvių kapinės Forest Sityje",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 41.650151,
+   "lon": -75.477878,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1888
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 578,
+   "titleLt": "Kultūros židinys Saipres Hile",
+   "types": [
+    "Vienuolynai"
+   ],
+   "importance": 3,
+   "lat": 40.684281,
+   "lon": -73.890409,
+   "state": "NY",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1974
+   ],
+   "statusFlags": [
+    "sold"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/new-york-city-new-york-604/",
+   "nearestCanonicalCity": {
+    "cityKey": "Maspeth|NY",
+    "km": 4.7
+   }
+  },
+  {
+   "tlId": 580,
+   "titleLt": "Skrantono Šv. Mykolo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 41.415565,
+   "lon": -75.686991,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    2000,
+    2025
+   ],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Scranton|PA",
+    "km": 2.2
+   }
+  },
+  {
+   "tlId": 546,
+   "titleLt": "Šenandoriaus Šv. Jurgio lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 40.829333,
+   "lon": -76.212498,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1892
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Shenandoah|PA",
+    "km": 1.4
+   }
+  },
+  {
+   "tlId": 526,
+   "titleLt": "Šv. Kazimiero lietuvių kapinės Pitsburge",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 40.357812,
+   "lon": -80.013124,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1800,
+    1925
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/pittsburgh-pennsylvania-1133/",
+   "nearestCanonicalCity": {
+    "cityKey": "Pittsburgh|PA",
+    "km": 9.3
+   }
+  },
+  {
+   "tlId": 525,
+   "titleLt": "Lietuvių kapinių asociacija Pitsburge",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 40.51429,
+   "lon": -80.035328,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1919
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/pittsburgh-pennsylvania-1133/",
+   "nearestCanonicalCity": {
+    "cityKey": "Esplen|PA",
+    "km": 6
+   }
+  },
+  {
+   "tlId": 522,
+   "titleLt": "Pitsburgo Šv. Kazimiero lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 40.427326,
+   "lon": -79.974959,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1902,
+    1992,
+    2017
+   ],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/pittsburgh-pennsylvania-1133/",
+   "nearestCanonicalCity": {
+    "cityKey": "Pittsburgh|PA",
+    "km": 2.8
+   }
+  },
+  {
+   "tlId": 516,
+   "titleLt": "Duboizo Šv. Juozapo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 41.118676,
+   "lon": -78.770593,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1924,
+    2018
+   ],
+   "statusFlags": [
+    "closed",
+    "sold"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/du-bois-pennsylvania-2543/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 506,
+   "titleLt": "Tamakvos Šv. Petro ir Povilo lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 40.787762,
+   "lon": -75.956647,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Coaldale|PA",
+    "km": 5.8
+   }
+  },
+  {
+   "tlId": 505,
+   "titleLt": "Tamakvos Šv. Petro ir Povilo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 40.801187,
+   "lon": -75.968472,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1976,
+    2018
+   ],
+   "statusFlags": [
+    "converted"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Coaldale|PA",
+    "km": 5.7
+   }
+  },
+  {
+   "tlId": 504,
+   "titleLt": "Koldeilo Šv. Jono Krikštytojo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 40.823484,
+   "lon": -75.902783,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1921,
+    2008
+   ],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Coaldale|PA",
+    "km": 0.5
+   }
+  },
+  {
+   "tlId": 498,
+   "titleLt": "Hazletono Šv. Petro ir Povilo lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 40.947332,
+   "lon": -75.959041,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Coaldale|PA",
+    "km": 14.3
+   }
+  },
+  {
+   "tlId": 503,
+   "titleLt": "Šenandoriaus Aušros Vartų lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 40.830759,
+   "lon": -76.217822,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Shenandoah|PA",
+    "km": 1.8
+   }
+  },
+  {
+   "tlId": 495,
+   "titleLt": "Apreiškimo lietuvių kapinės Frakvilyje",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 40.783365,
+   "lon": -76.251734,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1945
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Frackville|PA",
+    "km": 1.8
+   }
+  },
+  {
+   "tlId": 483,
+   "titleLt": "Frakvilio Mergelės Marijos Apsireiškimo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 40.785186,
+   "lon": -76.227535,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1934
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Frackville|PA",
+    "km": 0.3
+   }
+  },
+  {
+   "tlId": 480,
+   "titleLt": "Šv. Kryžiaus lietuvių kapinės Maunt Karmelyje",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 40.781697,
+   "lon": -76.416353,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Mount Carmel|PA",
+    "km": 1.7
+   }
+  },
+  {
+   "tlId": 472,
+   "titleLt": "Naujosios Filadelfijos Saldžiausios Jėzaus Širdies lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 40.721986,
+   "lon": -76.122698,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Frackville|PA",
+    "km": 11.4
+   }
+  },
+  {
+   "tlId": 471,
+   "titleLt": "Mainersvilio Šv. Pranciškaus Asyžiečio lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 40.687409,
+   "lon": -76.267454,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Frackville|PA",
+    "km": 11.2
+   }
+  },
+  {
+   "tlId": 470,
+   "titleLt": "Mainersvilio Šv. Pranciškaus Asyžiečio lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 40.687788,
+   "lon": -76.262234,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1950,
+    2020
+   ],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Frackville|PA",
+    "km": 11
+   }
+  },
+  {
+   "tlId": 454,
+   "titleLt": "Maizevilio Šiluvos Mergelės lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 40.797436,
+   "lon": -76.225957,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1967
+   ],
+   "statusFlags": [
+    "closed",
+    "sold",
+    "burned"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Maizeville|PA",
+    "km": 0.3
+   }
+  },
+  {
+   "tlId": 452,
+   "titleLt": "Mahanojaus Šv. Juozapo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 40.809816,
+   "lon": -76.147572,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Shenandoah|PA",
+    "km": 4.7
+   }
+  },
+  {
+   "tlId": 460,
+   "titleLt": "Žirardvilio Šv. Vincento Pauliečio lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 40.794496,
+   "lon": -76.283497,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1925
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Girardville|PA",
+    "km": 0.3
+   }
+  },
+  {
+   "tlId": 449,
+   "titleLt": "Šenandoriaus Lurdo mergelės lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 40.824516,
+   "lon": -76.214672,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Shenandoah|PA",
+    "km": 1.2
+   }
+  },
+  {
+   "tlId": 450,
+   "titleLt": "Šenandoriaus Kalvarijos mergelės lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 40.831217,
+   "lon": -76.208316,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1911
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+   "nearestCanonicalCity": {
+    "cityKey": "Shenandoah|PA",
+    "km": 1.3
+   }
+  },
+  {
+   "tlId": 435,
+   "titleLt": "Filadelfijos Šv. Andriejaus lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 39.96637,
+   "lon": -75.169053,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/philadelphia-pennsylvania-1160/",
+   "nearestCanonicalCity": {
+    "cityKey": "Philadelphia|PA",
+    "km": 1.6
+   }
+  },
+  {
+   "tlId": 429,
+   "titleLt": "Filadelfijos Šv. Kazimiero lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 1,
+   "lat": 39.931665,
+   "lon": -75.150691,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1930
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/philadelphia-pennsylvania-1160/",
+   "nearestCanonicalCity": {
+    "cityKey": "Philadelphia|PA",
+    "km": 2.6
+   }
+  },
+  {
+   "tlId": 428,
+   "titleLt": "Filadelfijos Šv. Jurgio lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 39.988657,
+   "lon": -75.093093,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1920
+   ],
+   "statusFlags": [
+    "still_active"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/philadelphia-pennsylvania-1160/",
+   "nearestCanonicalCity": {
+    "cityKey": "Philadelphia|PA",
+    "km": 7.2
+   }
+  },
+  {
+   "tlId": 408,
+   "titleLt": "Skrantono Šv. Juozapo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 41.434743,
+   "lon": -75.66137,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1895
+   ],
+   "statusFlags": [
+    "still_active"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Scranton|PA",
+    "km": 2.9
+   }
+  },
+  {
+   "tlId": 385,
+   "titleLt": "Pitstono Šv. Kazimiero lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 41.324282,
+   "lon": -75.787627,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1909,
+    2008
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Pittston|PA",
+    "km": 0.2
+   }
+  },
+  {
+   "tlId": 383,
+   "titleLt": "Skrantono Dievo Apvaizdos lietuvių tautinė katalikų bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 41.438091,
+   "lon": -75.660911,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1914,
+    1915,
+    1930
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Scranton|PA",
+    "km": 3.3
+   }
+  },
+  {
+   "tlId": 382,
+   "titleLt": "Lietuvių nepriklausomos kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 41.30773,
+   "lon": -75.86417,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Kingston|PA",
+    "km": 5.8
+   }
+  },
+  {
+   "tlId": 381,
+   "titleLt": "Lietuvių tautinės kapinės Skrantone",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 41.49,
+   "lon": -75.691,
+   "state": "PA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
+   "nearestCanonicalCity": {
+    "cityKey": "Scranton|PA",
+    "km": 9.4
+   }
+  },
+  {
+   "tlId": 362,
+   "titleLt": "Amsterdamo Šv. Kazimiero lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 42.932203,
+   "lon": -74.181206,
+   "state": "NY",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    2009
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/upstate-new-york-831/",
+   "nearestCanonicalCity": {
+    "cityKey": "Amsterdam|NY",
+    "km": 0.9
+   }
+  },
+  {
+   "tlId": 360,
+   "titleLt": "Olbanio Šv. Jurgio lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 42.665683,
+   "lon": -73.76167,
+   "state": "NY",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1917,
+    1986
+   ],
+   "statusFlags": [
+    "closed",
+    "converted"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/upstate-new-york-831/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 349,
+   "titleLt": "Vusterio Vilniaus Aušros Vartų Mergelės Marijos bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 42.242581,
+   "lon": -71.800863,
+   "state": "MA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/worcester-massachusetts-314/",
+   "nearestCanonicalCity": {
+    "cityKey": "Worcester|MA",
+    "km": 2.2
+   }
+  },
+  {
+   "tlId": 344,
+   "titleLt": "Vusterio Šv. Kazimiero lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 42.256088,
+   "lon": -71.792715,
+   "state": "MA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1903,
+    1916,
+    2010
+   ],
+   "statusFlags": [
+    "closed",
+    "sold"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/worcester-massachusetts-314/",
+   "nearestCanonicalCity": {
+    "cityKey": "Worcester|MA",
+    "km": 1
+   }
+  },
+  {
+   "tlId": 328,
+   "titleLt": "Norvudo Šv. Jurgio lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 42.177984,
+   "lon": -71.204407,
+   "state": "MA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1915,
+    1919,
+    2004
+   ],
+   "statusFlags": [
+    "closed",
+    "converted"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/boston-massachusetts-308/",
+   "nearestCanonicalCity": {
+    "cityKey": "Norwood|MA",
+    "km": 1.9
+   }
+  },
+  {
+   "tlId": 334,
+   "titleLt": "Nacionalinė Dievo gailestingumo šventovė Stokbridže",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 42.288688,
+   "lon": -73.31128,
+   "state": "MA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://map.truelithuania.com/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 325,
+   "titleLt": "Atolo Šv. Pranciškaus lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 42.592998,
+   "lon": -72.237185,
+   "state": "MA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/athol-massachusetts-2634/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 318,
+   "titleLt": "Kembridžo Nekaltojo prasidėjimo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 42.371333,
+   "lon": -71.09356,
+   "state": "MA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1913
+   ],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/boston-massachusetts-308/",
+   "nearestCanonicalCity": {
+    "cityKey": "Cambridge|MA",
+    "km": 1.1
+   }
+  },
+  {
+   "tlId": 311,
+   "titleLt": "Pietų Bostono Šv. Petro lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 42.33874,
+   "lon": -71.054958,
+   "state": "MA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1901
+   ],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/boston-massachusetts-308/",
+   "nearestCanonicalCity": {
+    "cityKey": "Boston|MA",
+    "km": 2.2
+   }
+  },
+  {
+   "tlId": 301,
+   "titleLt": "Heiverhilo lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 42.758797,
+   "lon": -71.070075,
+   "state": "MA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1921
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/lawrence-and-lowell-massachusetts-1682/",
+   "nearestCanonicalCity": {
+    "cityKey": "Haverhill|MA",
+    "km": 2.2
+   }
+  },
+  {
+   "tlId": 297,
+   "titleLt": "Lietuvių tautinių katalikų kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 42.701243,
+   "lon": -71.229816,
+   "state": "MA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/lawrence-and-lowell-massachusetts-1682/",
+   "nearestCanonicalCity": {
+    "cityKey": "Lawrence|MA",
+    "km": 5.5
+   }
+  },
+  {
+   "tlId": 296,
+   "titleLt": "Lovelo Šv. Juozapo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 42.636409,
+   "lon": -71.299682,
+   "state": "MA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1911
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/lawrence-and-lowell-massachusetts-1682/",
+   "nearestCanonicalCity": {
+    "cityKey": "Lawrence|MA",
+    "km": 13.7
+   }
+  },
+  {
+   "tlId": 289,
+   "titleLt": "Lorenso Lietuvių tautinių katalikų bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 42.70895,
+   "lon": -71.155853,
+   "state": "MA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    2001
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/lawrence-and-lowell-massachusetts-1682/",
+   "nearestCanonicalCity": {
+    "cityKey": "Lawrence|MA",
+    "km": 0.6
+   }
+  },
+  {
+   "tlId": 287,
+   "titleLt": "Lorenso Šv. Pranciškaus lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 42.708044,
+   "lon": -71.169606,
+   "state": "MA",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1922
+   ],
+   "statusFlags": [
+    "converted"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/lawrence-and-lowell-massachusetts-1682/",
+   "nearestCanonicalCity": {
+    "cityKey": "Lawrence|MA",
+    "km": 0.5
+   }
+  },
+  {
+   "tlId": 274,
+   "titleLt": "Bajonės Šv. Mykolo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 40.6638,
+   "lon": -74.11734,
+   "state": "NJ",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1977
+   ],
+   "statusFlags": [
+    "closed",
+    "converted"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/new-jersey-613/",
+   "nearestCanonicalCity": {
+    "cityKey": "Bayonne|NJ",
+    "km": 0.6
+   }
+  },
+  {
+   "tlId": 272,
+   "titleLt": "Patersono Šv. Kazimiero lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 40.924993,
+   "lon": -74.160438,
+   "state": "NJ",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1961
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/new-jersey-613/",
+   "nearestCanonicalCity": {
+    "cityKey": "Paterson|NJ",
+    "km": 1.3
+   }
+  },
+  {
+   "tlId": 270,
+   "titleLt": "Niuarko Švč. Trejybės lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 40.725529,
+   "lon": -74.161232,
+   "state": "NJ",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1963,
+    1981
+   ],
+   "statusFlags": [
+    "demolished",
+    "converted"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/new-jersey-613/",
+   "nearestCanonicalCity": {
+    "cityKey": "Newark|NJ",
+    "km": 1.5
+   }
+  },
+  {
+   "tlId": 268,
+   "titleLt": "Kernio Marijos Sopulingosios lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 40.757237,
+   "lon": -74.147458,
+   "state": "NJ",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1954,
+    1962
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/new-jersey-613/",
+   "nearestCanonicalCity": {
+    "cityKey": "Kearny|NJ",
+    "km": 1.3
+   }
+  },
+  {
+   "tlId": 265,
+   "titleLt": "Elizabeto Šv. Petro ir Povilo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 40.655447,
+   "lon": -74.181345,
+   "state": "NJ",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1910
+   ],
+   "statusFlags": [
+    "demolished"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/new-jersey-613/",
+   "nearestCanonicalCity": {
+    "cityKey": "Elizabeth|NJ",
+    "km": 2.7
+   }
+  },
+  {
+   "tlId": 260,
+   "titleLt": "Šiluvos koplyčia Nacionalinėje Nekaltojo Prasidėjimo Šventovės bazilikoje",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 1,
+   "lat": 38.933052,
+   "lon": -77.000633,
+   "state": "DC",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1966
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/washington-dc-277/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 248,
+   "titleLt": "Baltimorės Šv. Alfonso lietuvių šventovė",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 39.293193,
+   "lon": -76.617926,
+   "state": "MD",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1842,
+    1917
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/baltimore-maryland-497/",
+   "nearestCanonicalCity": {
+    "cityKey": "Baltimore|MD",
+    "km": 0.7
+   }
+  },
+  {
+   "tlId": 241,
+   "titleLt": "Našua Šv. Kryžiaus lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 42.773974,
+   "lon": -71.438839,
+   "state": "NH",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/new-hampshire-1083/",
+   "nearestCanonicalCity": {
+    "cityKey": "Nashua|NH",
+    "km": 2.5
+   }
+  },
+  {
+   "tlId": 239,
+   "titleLt": "Našua lietuvių kooperacinės kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 3,
+   "lat": 42.775,
+   "lon": -71.5056,
+   "state": "NH",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1928,
+    2010
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/new-hampshire-1083/",
+   "nearestCanonicalCity": {
+    "cityKey": "Nashua|NH",
+    "km": 3.3
+   }
+  },
+  {
+   "tlId": 237,
+   "titleLt": "Našua Šv. Kazimiero lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 42.761729,
+   "lon": -71.456112,
+   "state": "NH",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1857,
+    2002
+   ],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/new-hampshire-1083/",
+   "nearestCanonicalCity": {
+    "cityKey": "Nashua|NH",
+    "km": 1
+   }
+  },
+  {
+   "tlId": 234,
+   "titleLt": "Kenebunkporto Šv. Antano lietuvių vienuolynas ir parkas",
+   "types": [
+    "Vienuolynai"
+   ],
+   "importance": 1,
+   "lat": 43.354545,
+   "lon": -70.477946,
+   "state": "ME",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/maine-1668/",
+   "nearestCanonicalCity": null
+  },
+  {
+   "tlId": 231,
+   "titleLt": "Voterberio lietuvių kapinės",
+   "types": [
+    "Kapinės"
+   ],
+   "importance": 2,
+   "lat": 41.541222,
+   "lon": -73.012089,
+   "state": "CT",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1902
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/connecticut-789/",
+   "nearestCanonicalCity": {
+    "cityKey": "Waterbury|CT",
+    "km": 3
+   }
+  },
+  {
+   "tlId": 225,
+   "titleLt": "Providenso Šv. Kazimiero lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 41.834037,
+   "lon": -71.423342,
+   "state": "RI",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1935,
+    2017
+   ],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/rhode-island-998/",
+   "nearestCanonicalCity": {
+    "cityKey": "Providence|RI",
+    "km": 1.4
+   }
+  },
+  {
+   "tlId": 131,
+   "titleLt": "Niujorko Apreiškimo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 40.714297,
+   "lon": -73.954772,
+   "state": "NY",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1863,
+    1914
+   ],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/new-york-city-new-york-604/",
+   "nearestCanonicalCity": {
+    "cityKey": "Maspeth|NY",
+    "km": 3.7
+   }
+  },
+  {
+   "tlId": 129,
+   "titleLt": "Niujorko Atsimainymo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 1,
+   "lat": 40.724307,
+   "lon": -73.901274,
+   "state": "NY",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/new-york-city-new-york-604/",
+   "nearestCanonicalCity": {
+    "cityKey": "Maspeth|NY",
+    "km": 1
+   }
+  },
+  {
+   "tlId": 106,
+   "titleLt": "Ansonia St. Anthony Church",
+   "types": [
+    "Churches"
+   ],
+   "importance": 3,
+   "lat": 41.35357,
+   "lon": -73.081514,
+   "state": "CT",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/connecticut-789/",
+   "nearestCanonicalCity": {
+    "cityKey": "Ansonia|CT",
+    "km": 3.3
+   }
+  },
+  {
+   "tlId": 74,
+   "titleLt": "Ansonijos Šv. Antano lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 3,
+   "lat": 41.35357,
+   "lon": -73.081514,
+   "state": "CT",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    2015
+   ],
+   "statusFlags": [
+    "closed"
+   ],
+   "sourceUrl": "http://global.truelithuania.com/lt/connecticut-789/",
+   "nearestCanonicalCity": {
+    "cityKey": "Ansonia|CT",
+    "km": 3.3
+   }
+  },
+  {
+   "tlId": 69,
+   "titleLt": "Hartfordo Švč. Trejybės lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 41.76103,
+   "lon": -72.676568,
+   "state": "CT",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1915,
+    1928
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/connecticut-789/",
+   "nearestCanonicalCity": {
+    "cityKey": "Hartford|CT",
+    "km": 1.2
+   }
+  },
+  {
+   "tlId": 63,
+   "titleLt": "Voterberio Šv. Juozapo lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 41.545229,
+   "lon": -73.046653,
+   "state": "CT",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [
+    1904
+   ],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/connecticut-789/",
+   "nearestCanonicalCity": {
+    "cityKey": "Waterbury|CT",
+    "km": 1
+   }
+  },
+  {
+   "tlId": 59,
+   "titleLt": "Bridžporto Šv. Jurgio lietuvių bažnyčia",
+   "types": [
+    "Bažnyčios"
+   ],
+   "importance": 2,
+   "lat": 41.168178,
+   "lon": -73.19412,
+   "state": "CT",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/connecticut-789/",
+   "nearestCanonicalCity": {
+    "cityKey": "Bridgeport|CT",
+    "km": 1.3
+   }
+  },
+  {
+   "tlId": 49,
+   "titleLt": "Putnamo vienuolynas",
+   "types": [
+    "Bažnyčios",
+    "Vienuolynai"
+   ],
+   "importance": 1,
+   "lat": 41.927948,
+   "lon": -71.868369,
+   "state": "CT",
+   "country": "US",
+   "nonLithuanianEthnicity": false,
+   "yearsMentioned": [],
+   "statusFlags": [],
+   "sourceUrl": "http://global.truelithuania.com/lt/connecticut-789/",
+   "nearestCanonicalCity": null
+  }
+ ]
+}
