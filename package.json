@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "data": "node scripts/build-data.mjs && node scripts/build-map.mjs",
+    "data": "node scripts/build-data.mjs && node scripts/build-map.mjs && node scripts/build-candidate-map.mjs",
     "prebuild": "npm run data",
     "build": "next build",
     "start": "next start",
