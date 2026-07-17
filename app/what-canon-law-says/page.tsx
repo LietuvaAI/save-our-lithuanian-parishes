@@ -114,6 +114,16 @@ export default function CanonLawPage() {
           exception, not the rule. Time bought inside the structure is still
           time on the diocese&rsquo;s clock.
         </p>
+        <p>
+          This page covers the <em>ownership</em> half of the argument. For
+          the <em>procedure</em> half — the reasons canon law does not accept
+          for closing a church, and the steps that make a closure decree
+          void — read our companion piece:{" "}
+          <Src href="https://blog.saveourlithuanianparishes.org/p/a-closure-done-wrong-is-not-a-closure">
+            Closed by the Diocese, Reopened by Rome
+          </Src>
+          .
+        </p>
 
         <h2>What we stand for</h2>
         <p>
