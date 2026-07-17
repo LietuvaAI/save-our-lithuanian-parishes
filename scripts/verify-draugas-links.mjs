@@ -3,9 +3,15 @@
 // generated data files). Parish profile pages prefer a verified direct PDF
 // link over the per-year archive page — see draugasCitationUrl in lib/parishes.ts.
 //
-// Filename conventions vary by year, so each date is probed against both:
-//   https://draugas.org/key/YYYY_reg/YYYY-MM-DD-DRAUGASo.pdf
-//   https://draugas.org/key/YYYY_reg/YYYY-MM-DD-DRAUGAS.pdf
+// Filename conventions vary by era and year, so each date is probed against:
+//   born-digital era (2008+):
+//     https://draugas.org/key/YYYY_reg/YYYY-MM-DD-DRAUGASo.pdf
+//     https://draugas.org/key/YYYY_reg/YYYY-MM-DD-DRAUGAS.pdf
+//   scanned era (pre-2008):
+//     https://www.draugas.org/archive/YYYY_reg/YYYY-MM-DD-DRAUGAS.pdf
+// Pre-2008 dates probe the /archive/ pattern first; 2008+ dates the /key/
+// patterns first. All patterns are probed on a miss either way, so an issue
+// that lives on the "wrong" side of the era boundary is still found.
 //
 // 200 with a PDF content type   => "verified" (link directly)
 // 401                           => "gated" (exists, subscriber-only)
@@ -20,10 +26,15 @@ const CACHE = new URL("../data/draugas-links.json", import.meta.url);
 const RATE_LIMIT_MS = 1000;
 const KEEP = new Set(["verified", "gated"]);
 
-const variantUrls = (date) => [
-  `https://draugas.org/key/${date.slice(0, 4)}_reg/${date}-DRAUGASo.pdf`,
-  `https://draugas.org/key/${date.slice(0, 4)}_reg/${date}-DRAUGAS.pdf`,
-];
+const variantUrls = (date) => {
+  const year = date.slice(0, 4);
+  const key = [
+    `https://draugas.org/key/${year}_reg/${date}-DRAUGASo.pdf`,
+    `https://draugas.org/key/${year}_reg/${date}-DRAUGAS.pdf`,
+  ];
+  const archive = [`https://www.draugas.org/archive/${year}_reg/${date}-DRAUGAS.pdf`];
+  return Number(year) < 2008 ? [...archive, ...key] : [...key, ...archive];
+};
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
