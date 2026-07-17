@@ -1,0 +1,132 @@
+{
+  "slug": "sv-kazimiero-nashua-nh",
+  "asOf": "2026-07-16",
+  "buildingStatus": "converted",
+  "currentUse": "Casimir Place, a 28-unit income-restricted affordable housing complex at 119 Temple Street, managed by Stewart Property Management; commemorative plaques and old photographs of the Lithuanian church remain inside",
+  "summary": "St. Casimir's Lithuanian church stands at 119 Temple Street in Nashua but no longer functions as a church: it was converted into Casimir Place, an affordable housing complex. The Diocese of Manchester directory confirms St. Casimir Parish was unified with St. Patrick Parish in 2002 and the church closed, with sacramental records transferred to St. Patrick. NeighborWorks Southern New Hampshire redeveloped the property in 2006 — the church itself became 6 two-bedroom townhomes, with 22 garden-style units added, for 28 total units serving households at 50-60% of area median income, at a total development cost of $5.58 million. The property is managed by Stewart Property Management as income-restricted family housing (2- and 3-bedroom units, heat and hot water included). Inside the converted building, commemorative plaques and old pictures document the Lithuanian church, and the original church vault survives in the unused attic, visible through ceiling glass from a corridor. The parish's Holy Cross Cemetery on Ledge Road in Hudson remains active, flying both the US and Lithuanian flags at its entrance. Nashua's Lithuanian community remains active in part through the Zylonis fund, established by a Nashua Lithuanian's will in the 1970s to support Lithuania-related cultural activities.",
+  "developments": [
+    {
+      "date": "2002",
+      "headline": "Parish unified with St. Patrick; St. Casimir Church closed",
+      "detail": "The Diocese of Manchester directory states St. Casimir Parish was unified with St. Patrick Parish in 2002 and St. Casimir Church was closed; sacramental records went to St. Patrick Parish. Per True Lithuania, the church served Lithuanian-language Mass to its final day, with flowers in Lithuanian flag colors around the altar. (A Hudson NH local-history source gives 2003 as the closure year.)",
+      "sources": [
+        {
+          "title": "St. Casimir Church - Directory",
+          "publisher": "Diocese of Manchester",
+          "date": "undated",
+          "url": "https://directory.catholicnh.org/churchsearch/view/185"
+        },
+        {
+          "title": "New Hampshire: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "undated",
+          "url": "https://global.truelithuania.com/new-hampshire-1083/"
+        },
+        {
+          "title": "Holy Cross Cemetery on Ledge Road",
+          "publisher": "Remember Hudson NH When",
+          "date": "2017-10-06",
+          "url": "https://rememberhudsonnhwhen.com/2017/10/06/holy-cross-cemetery-on-ledge-road/"
+        }
+      ]
+    },
+    {
+      "date": "2006",
+      "headline": "Church converted to Casimir Place affordable housing by NeighborWorks Southern NH",
+      "detail": "NeighborWorks Southern New Hampshire completed the Casimir Place project at 119 Temple Street in 2006: 28 units (21 two-bedroom, 7 three-bedroom) for residents at 50-60% of area median income, total development cost $5.58 million (~$199,200/unit). Architect: Burnell-Johnson Architects (Manchester); builder: TRB Development Group (Hooksett); financing from Apollo Housing Capital/RBC, Merrimack County Savings Bank, Federal Home Loan Bank of Boston, and the City of Nashua. The church building itself was renovated into 6 two-bedroom townhomes, with 22 garden-style units added.",
+      "sources": [
+        {
+          "title": "Casimir Place | Development Projects",
+          "publisher": "NeighborWorks Southern New Hampshire",
+          "date": "undated",
+          "url": "https://nwsnh.org/development-projects-casimir-place/"
+        },
+        {
+          "title": "Casimir Place, Nashua NH",
+          "publisher": "Stewart Property Management",
+          "date": "undated",
+          "url": "https://stewartproperty.net/property-item/casimir-place-nashua-nh/"
+        }
+      ]
+    },
+    {
+      "date": "undated (current)",
+      "headline": "Building operates as income-restricted family housing with Lithuanian commemorative plaques inside",
+      "detail": "Stewart Property Management operates Casimir Place as affordable family housing with income limits ($62,040 for one person to $95,700 for five), rents $1,255-$1,355/month, heat and hot water included. Per True Lithuania, commemorative plaques about the Lithuanian church and Lithuanians, plus many old photos, hang inside; the church vault survives in the unused attic, visible through ceiling glass from the corridor, though entering requires a resident to let visitors in.",
+      "sources": [
+        {
+          "title": "Casimir Place, Nashua NH",
+          "publisher": "Stewart Property Management",
+          "date": "undated",
+          "url": "https://stewartproperty.net/property-item/casimir-place-nashua-nh/"
+        },
+        {
+          "title": "New Hampshire: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "undated",
+          "url": "https://global.truelithuania.com/new-hampshire-1083/"
+        }
+      ]
+    },
+    {
+      "date": "undated (current)",
+      "headline": "Holy Cross Cemetery in Hudson remains an active Lithuanian legacy site",
+      "detail": "The parish's Holy Cross Cemetery on Ledge Road in Hudson, established by St. Casimir's, remains open (now to any member of the Christian community) and flies both the US and Lithuanian flags at its entrance. Nashua's Lithuanian community activity continues, supported by the Zylonis fund created by a Nashua Lithuanian's will in the 1970s.",
+      "sources": [
+        {
+          "title": "Holy Cross Cemetery on Ledge Road",
+          "publisher": "Remember Hudson NH When",
+          "date": "2017-10-06",
+          "url": "https://rememberhudsonnhwhen.com/2017/10/06/holy-cross-cemetery-on-ledge-road/"
+        },
+        {
+          "title": "New Hampshire: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "undated",
+          "url": "https://global.truelithuania.com/new-hampshire-1083/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "St. Casimir Church - Directory",
+      "publisher": "Diocese of Manchester (directory.catholicnh.org)",
+      "date": "undated",
+      "url": "https://directory.catholicnh.org/churchsearch/view/185"
+    },
+    {
+      "title": "New Hampshire: Lithuanians and Lithuanian heritage",
+      "publisher": "Global True Lithuania",
+      "date": "undated",
+      "url": "https://global.truelithuania.com/new-hampshire-1083/"
+    },
+    {
+      "title": "Casimir Place, Nashua NH",
+      "publisher": "Stewart Property Management",
+      "date": "undated",
+      "url": "https://stewartproperty.net/property-item/casimir-place-nashua-nh/"
+    },
+    {
+      "title": "Casimir Place | Development Projects",
+      "publisher": "NeighborWorks Southern New Hampshire",
+      "date": "undated",
+      "url": "https://nwsnh.org/development-projects-casimir-place/"
+    },
+    {
+      "title": "Holy Cross Cemetery on Ledge Road",
+      "publisher": "Remember Hudson NH When",
+      "date": "2017-10-06",
+      "url": "https://rememberhudsonnhwhen.com/2017/10/06/holy-cross-cemetery-on-ledge-road/"
+    },
+    {
+      "title": "Saint Casimir's Church, 119 Temple Street, Nashua, NH (photo archive)",
+      "publisher": "viewmemories.com",
+      "date": "undated",
+      "url": "https://viewmemories.com/GIPC/usnh0164-ch02.html"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "No contradictions. The archive record's core claims — closed by the diocese, converted to apartments with commemorative plaques — are confirmed by the Diocese of Manchester directory (parish unified with St. Patrick in 2002, church closed) and by Global True Lithuania (plaques and old photos inside the converted building). Refinements: the archive record left founding and closing dates unstated; sources establish the building dates to 1857 (built as Immaculate Conception, Irish), was transferred to the Lithuanian community and renamed St. Casimir around 1909, and the parish closed in 2002 (diocese) or 2003 (one local-history source). The conversion was a 2006 affordable-housing project by NeighborWorks Southern New Hampshire, not a market-rate condo conversion. The archive note about Greek Orthodox parishes being unclosable is a community sentiment, not verifiable against these sources.",
+  "gaps": "Closure year discrepancy unresolved: the Diocese of Manchester says the parish was unified with St. Patrick in 2002, while Remember Hudson NH When says the church closed in 2003; possibly canonical unification (2002) preceded the final closing of the building (2003). No published sale price or buyer for the diocese-to-developer property transfer was found — the NeighborWorks page gives total development cost ($5.58M) but not acquisition price or transaction year. Searched for recent (2024-2026) press, reunions, or plaque dedications specific to St. Casimir Nashua and found none; the heritageabroad.gov Lithuanian immovable-heritage list PDF surfaced in results but was not opened to confirm whether this site is on it. Founding year of the Lithuanian parish itself (vs. the 1857 building) was not pinned down beyond 'around 1909'."
+}

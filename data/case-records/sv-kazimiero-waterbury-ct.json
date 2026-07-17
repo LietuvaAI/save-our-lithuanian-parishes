@@ -1,0 +1,43 @@
+{
+  "slug": "sv-kazimiero-waterbury-ct",
+  "asOf": "2026-07-16",
+  "buildingStatus": "unknown",
+  "currentUse": "No St. Casimir church building could be identified in Waterbury, CT — the parish as recorded could not be located in any current or historical church listing consulted",
+  "summary": "Research could not confirm that a Šv. Kazimiero (St. Casimir) Lithuanian parish ever existed in Waterbury, Connecticut. The current CatholicMassTime directory of Waterbury Catholic churches lists no St. Casimir among its fourteen churches, and Global True Lithuania's survey of Connecticut Lithuanian heritage identifies only St. Joseph (Šv. Juozapo) as Waterbury's Lithuanian Catholic church. St. Joseph's — described by WFSB in August 2023 as \"a historic Lithuanian parish\" — was the Waterbury Lithuanian parish that closed in 2023, with parishioners filing a Vatican appeal before the end of September 2023. The nearest St. Casimir parishes are both non-matches: St. Casimir in Terryville, CT was a Polish parish (merged by decree into the Parish of Saint Maximilian Kolbe in 2017, building still standing at 17 Allen Street), and St. Casimir in New Haven, CT was Lithuanian but closed in 2005 and was converted into apartments with the facade preserved. The archive note about temporarily storing the Frackville/Shenandoah Lithuanian Museum's artifacts points to Pennsylvania's coal region, not Connecticut: the Frackville museum closed in 2022, its artifacts went into storage, and a new Lithuanian Heritage Museum opened at 318 East Centre Street in Shenandoah, PA with an open house in early September 2025. No sale, demolition, conversion, Mass schedule, or pastor could be researched because no matching Waterbury building was found.",
+  "developments": [],
+  "sources": [
+    {
+      "title": "Waterbury, Connecticut Catholic Churches",
+      "publisher": "CatholicMassTime.org",
+      "date": "accessed 2026-07-16",
+      "url": "https://catholicmasstime.org/church/city/connecticut/waterbury/"
+    },
+    {
+      "title": "Connecticut: Lithuanians and Lithuanian heritage",
+      "publisher": "Global True Lithuania",
+      "date": "undated, accessed 2026-07-16",
+      "url": "https://global.truelithuania.com/connecticut-789/"
+    },
+    {
+      "title": "Parishioners fight Waterbury church closure",
+      "publisher": "WFSB",
+      "date": "2023-08-28",
+      "url": "https://www.wfsb.com/2023/08/28/parishioners-fight-waterbury-church-closure/"
+    },
+    {
+      "title": "St. Casimir Parish, Terryville",
+      "publisher": "Wikipedia",
+      "date": "accessed 2026-07-16",
+      "url": "https://en.wikipedia.org/wiki/St._Casimir_Parish,_Terryville"
+    },
+    {
+      "title": "Shenandoah's Lithuanian heritage on display at new museum",
+      "publisher": "The Shenandoah Sentinel",
+      "date": "2025-09",
+      "url": "https://shensentinel.com/news/shenandoahs-lithuanian-heritage-on-display-at-new-museum/"
+    }
+  ],
+  "confidence": "thin",
+  "conflictsWithArchiveRecord": "Major conflict: the parish as recorded (\"Šv. Kazimiero, Waterbury, CT — standing, still functioning 2022, storing the Frackville/Shenandoah Lithuanian Museum's artifacts\") could not be verified to exist. No St. Casimir church appears in the CatholicMassTime Waterbury directory, and Global True Lithuania's Connecticut heritage survey lists only St. Joseph as Waterbury's Lithuanian church. The archive record correctly distinguishes this parish from the closed Šv. Juozapo Waterbury, yet no second Lithuanian parish in Waterbury could be found in any source. The Frackville museum detail is geographically inconsistent with Connecticut: the Frackville, PA museum closed in 2022 and its collection resurfaced at a new Lithuanian Heritage Museum in Shenandoah, PA (open house September 2025) — suggesting the archive record may conflate a Pennsylvania coal-region St. Casimir parish (e.g., St. Casimir in St. Clair, PA, ~5 miles from Frackville) with Waterbury, CT. Alternatively, \"Waterbury\" may be an error for New Haven, CT (Lithuanian St. Casimir, closed 2005, converted to apartments) — but that parish did not survive, contradicting the record's \"standing/functioning 2022\" status. The record's city, status, or both appear to be misattributed.",
+  "gaps": "Searched: English and Lithuanian name forms (\"St. Casimir\" / \"Šv. Kazimiero\" + Waterbury), current Waterbury Catholic church directories, Global True Lithuania's Connecticut and Pennsylvania heritage surveys, Draugas-related search queries, VLE encyclopedia (403 blocked), Frackville/Shenandoah museum coverage, and Connecticut closure/merger news 2023-2025. Not found: any evidence a St. Casimir Lithuanian parish existed in Waterbury, CT (only a \"St. Casimir Society\" fraternal organization within Waterbury's St. Joseph parish appears in search summaries of the lietuvai.lt encyclopedia, not independently opened). Unresolved: which actual parish the Draugas archive record describes — the Frackville-artifact clue was not traced to a named church (the Shenandoah Sentinel article does not say where artifacts were stored 2022-2025). The original Draugas article(s) behind the archive note should be re-examined to re-identify the parish's true city before this case record is published; recommend checking St. Casimir, St. Clair, PA as the likely referent. No Mass schedule, pastor, property transaction, or building status could be researched for a building that could not be located."
+}

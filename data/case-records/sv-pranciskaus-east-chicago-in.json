@@ -1,0 +1,58 @@
+{
+  "slug": "sv-pranciskaus-east-chicago-in",
+  "asOf": "2026-07-16",
+  "buildingStatus": "demolished",
+  "currentUse": "Unknown — the church at 3803 Fir Street was demolished decades ago and no source found documents the parcel's current use.",
+  "summary": "St. Francis (Šv. Pranciškaus) Lithuanian church in East Chicago, Indiana — erected 1913 — no longer exists; the Global True Lithuania heritage survey records the East Chicago Lithuanian church as demolished, and a reader correction on that page by researcher Joseph Gustaitis places it at 3803 Fir Street, closed in 1987 and demolished two years later (1989). The parish does not appear in GCatholic's current listing of Diocese of Gary churches in East Chicago, confirming there is no successor parish under the name today. No source was found documenting what occupies the former church parcel now, any sale of the property, or its buyer or price. The one surviving physical trace of the community that sources confirm is a street in East Chicago still named after the Lituanica, the Darius and Girėnas transatlantic airplane. No recent press, diocesan announcements, preservation efforts, or reunion activity concerning this parish were found.",
+  "developments": [
+    {
+      "date": "1989",
+      "headline": "Church closed (1987) and demolished (1989) per corrected heritage record",
+      "detail": "The Global True Lithuania survey of Indiana Lithuanian heritage originally described East Chicago's Lithuanian church (erected 1913) as 'since demolished, formerly 3903 Main Street.' A published correction in the page's comments by Joseph Gustaitis states the church was named St. Francis, stood at 3803 Fir Street (not Main Street), closed in 1987, and was demolished two years later. This refines the archive record's single 1989 date: 1989 appears to be the demolition year, with closure in 1987.",
+      "sources": [
+        {
+          "title": "Indiana: Lithuanians and Lithuanian heritage (article text and Joseph Gustaitis comment)",
+          "publisher": "Global True Lithuania",
+          "date": "undated (accessed 2026-07-16)",
+          "url": "https://global.truelithuania.com/indiana-746/"
+        }
+      ]
+    },
+    {
+      "date": "2026",
+      "headline": "No St. Francis parish exists in East Chicago in current Diocese of Gary listings",
+      "detail": "GCatholic's current directory of churches in the Diocese of Gary lists East Chicago parishes (Holy Trinity Croatian, Holy Trinity Hungarian, Our Lady of Guadalupe, Sacred Heart, St. Mary, St. Patrick, St. Stanislaus, plus St. Nicholas Romanian rite) with no St. Francis entry, confirming the parish has no active successor under that name.",
+      "sources": [
+        {
+          "title": "Churches in the Diocese of Gary",
+          "publisher": "GCatholic.org",
+          "date": "undated (accessed 2026-07-16)",
+          "url": "https://gcatholic.org/churches/local/gary0"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Indiana: Lithuanians and Lithuanian heritage",
+      "publisher": "Global True Lithuania",
+      "date": "undated (accessed 2026-07-16)",
+      "url": "https://global.truelithuania.com/indiana-746/"
+    },
+    {
+      "title": "Churches in the Diocese of Gary",
+      "publisher": "GCatholic.org",
+      "date": "undated (accessed 2026-07-16)",
+      "url": "https://gcatholic.org/churches/local/gary0"
+    },
+    {
+      "title": "East Chicago, Indiana Historic Religious Structures",
+      "publisher": "PreserveIndiana.com",
+      "date": "undated (accessed 2026-07-16)",
+      "url": "https://www.preserveindiana.com/pixpages/eastchicago/eastchicagochurch.htm"
+    }
+  ],
+  "confidence": "thin",
+  "conflictsWithArchiveRecord": "The archive record states \"Closed 1989 and demolished.\" The most detailed source found (Joseph Gustaitis's correction on Global True Lithuania) says the parish closed in 1987 and the building was demolished two years later, i.e. 1989 — so the archive's 1989 likely marks the demolition, not the closure. Refinements, not contradictions: the parish name (St. Francis), a founding/erection year of 1913 (archive has founding \"not stated\"), and a specific address of 3803 Fir Street (the Global True Lithuania article body gives a conflicting former address of 3903 Main Street, which the Gustaitis comment corrects). The demolished status and Lituanica-named street both corroborate the archive record.",
+  "gaps": "Present-day use of the 3803 Fir Street parcel is unverified — property-record aggregators for Fir Street (Xome) list nearby addresses (3807, 3809, 3810, 3813) but not 3803, and no source was found describing what stands there now. No published record of a property sale, buyer, or price after the 1987 closure was found. The Diocese of Gary website has no page on the closed parish; a 1998 NWI Times article \"East Chicago Catholic church closes\" is paywalled but its date (1998, Bishop Melczek era) indicates it concerns a different East Chicago parish, not St. Francis. No preservation efforts, reunions, anniversary coverage, or Draugas-searchable recent mentions were found. The two conflicting historical addresses (3803 Fir St vs. 3903 Main St) could not be resolved against a primary record; the Gustaitis correction is a blog comment, the only source giving the 1987 closure date, and the detailed closure/demolition chronology therefore rests on it. Searched: English and Lithuanian parish names, Diocese of Gary listings, GCatholic, PreserveIndiana, NWI Times, property records, and Lituanica Avenue heritage references."
+}

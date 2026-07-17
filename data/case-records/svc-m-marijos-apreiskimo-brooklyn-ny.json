@@ -1,0 +1,183 @@
+{
+  "slug": "svc-m-marijos-apreiskimo-brooklyn-ny",
+  "asOf": "2026-07-16",
+  "buildingStatus": "standing",
+  "currentUse": "Active Roman Catholic worship site (Church of the Annunciation of the BVM, 259 North 5th Street, Brooklyn) of the merged Parish of Our Lady of Mount Carmel–Annunciation, Diocese of Brooklyn; home of New York City's weekly Lithuanian-language Sunday Mass (10:00 AM), plus Spanish (11:30 AM) and English (6:00 PM) Sunday Masses and seasonal weekday Masses.",
+  "summary": "The Annunciation of the Blessed Virgin Mary church at 259 North 5th Street in Williamsburg is standing, renovated, and in active use as a worship site of the merged Parish of Our Lady of Mount Carmel–Annunciation in the Diocese of Brooklyn. A multi-million-dollar restoration — financed by leasing the former school building — culminated in a rededication Mass on March 24, 2019, attended by more than 600 people. The parish then passed through public turmoil: pastor Msgr. Jamie Gigantiello permitted Sabrina Carpenter to film a music video in the church before its October 31, 2023 release, and on November 18, 2024 the diocese relieved him of pastoral responsibilities after an independent investigation found he had moved about $1.9 million in parish funds (2019–2021) to entities tied to Frank Carone, former chief of staff to Mayor Eric Adams; Auxiliary Bishop Witold Mroziewski was appointed parish administrator. Effective September 1, 2025, the diocese permanently relocated the Lithuanian-language Mass from Transfiguration Church in Maspeth to Annunciation, citing financial stress and a priest shortage — making Annunciation the consolidated home of Lithuanian Catholic worship in New York City, with a 10:00 AM Lithuanian Sunday Mass on the current parish schedule. The Lithuanian community remains active there: Lithuania's Deputy Foreign Minister Taurimas Valys attended a Christmas Eve event at the church organized with the Maironis school and scouts in December 2025. A new deacon was assigned to the parish effective December 8, 2025, indicating normal diocesan staffing continues.",
+  "developments": [
+    {
+      "date": "2019-03-24",
+      "headline": "Church rededicated after multi-million-dollar renovation",
+      "detail": "More than 600 parishioners attended the rededication Mass following an extensive restoration (new ceiling, altar, restored statues and artwork, refurbished 1930 pipe organ, expanded vestibule), financed by leasing the former school building. Msgr. Jamie Gigantiello was installed as pastor of the merged Our Lady of Mount Carmel–Annunciation parish.",
+      "sources": [
+        {
+          "title": "Lithuanian Church in Williamsburg Is Rededicated",
+          "publisher": "The Tablet (Diocese of Brooklyn)",
+          "date": "2019-03-27",
+          "url": "https://thetablet.org/lithuanian-church-in-williamsburg-is-rededicated/"
+        }
+      ]
+    },
+    {
+      "date": "2023-10-31",
+      "headline": "Sabrina Carpenter music video filmed in the church sparks backlash",
+      "detail": "Msgr. Gigantiello permitted part of Sabrina Carpenter's 'Feather' music video to be filmed at the Church of the Annunciation before its October 31, 2023 release; the diocese said its filming-approval policy was not followed and the pastor apologized to parishioners.",
+      "sources": [
+        {
+          "title": "'Burg Priest Accused of Money Misdeeds Tied to Adams' Pal",
+          "publisher": "Brownstoner",
+          "date": "2024-11-19",
+          "url": "https://www.brownstoner.com/brooklyn-life/williamsburg-our-lady-mount-carmel-gigantiello-67-havemeyer-street/"
+        }
+      ]
+    },
+    {
+      "date": "2024-11-18",
+      "headline": "Pastor relieved of duties over $1.9M in parish fund transfers; bishop named administrator",
+      "detail": "After an independent investigation (Alvarez & Marsal / Sullivan & Cromwell) found Msgr. Gigantiello had transferred about $1.9 million in parish funds between 2019 and 2021 to entities affiliated with Frank Carone — former chief of staff to Mayor Eric Adams — without diocesan approval, the Diocese of Brooklyn relieved him of pastoral oversight of Our Lady of Mount Carmel–Annunciation. Auxiliary Bishop Witold Mroziewski was appointed administrator of the parish.",
+      "sources": [
+        {
+          "title": "'Burg Priest Accused of Money Misdeeds Tied to Adams' Pal",
+          "publisher": "Brownstoner",
+          "date": "2024-11-19",
+          "url": "https://www.brownstoner.com/brooklyn-life/williamsburg-our-lady-mount-carmel-gigantiello-67-havemeyer-street/"
+        },
+        {
+          "title": "Monsignor at Brooklyn church in federal subpoena replaced over $1.9M transfers, card use: Diocese",
+          "publisher": "NBC New York",
+          "date": "2024-11-18",
+          "url": "https://www.nbcnewyork.com/brooklyn/church-gigantiello-carone-sabrina-carpenter-our-lady-mount-carmel/5995683/"
+        }
+      ]
+    },
+    {
+      "date": "2025-09-01",
+      "headline": "Maspeth's Lithuanian Mass permanently relocated to Annunciation",
+      "detail": "Bishop Robert Brennan, in a letter read at Masses August 23–24, 2025, announced that the Lithuanian-language Mass at Transfiguration Church in Maspeth would move permanently to the Church of the Annunciation in Williamsburg effective September 1, 2025, citing diocesan financial stress and a priest shortage. Transfiguration itself stays open on a limited basis and will not be sold outright, though the diocese is exploring selling part of that property.",
+      "sources": [
+        {
+          "title": "Transfiguration Church to Limit Mass Schedule, Explore Partial Property Sale",
+          "publisher": "The Tablet (Diocese of Brooklyn)",
+          "date": "2025-09-04",
+          "url": "https://thetablet.org/transfiguration-church-to-limit-mass-schedule/"
+        },
+        {
+          "title": "Brooklyn Diocese says Maspeth's Transfiguration Church will not be closed or sold",
+          "publisher": "QNS",
+          "date": "2025-09-12",
+          "url": "https://qns.com/2025/09/transfiguration-church-not-closing/"
+        }
+      ]
+    },
+    {
+      "date": "2025-09-25",
+      "headline": "Lithuanian President Nausėda visits Maspeth church amid relocation of Lithuanian Mass",
+      "detail": "During the UN General Assembly, President Gitanas Nausėda visited Transfiguration Church in Maspeth and praised preservation efforts; the visit's context was the September 1, 2025 permanent transfer of the Lithuanian Mass to Annunciation in Williamsburg, with an 850+ signature community petition to save the Maspeth facility.",
+      "sources": [
+        {
+          "title": "Lithuanian President Gitanas Nausėda visits Maspeth's Transfiguration Church",
+          "publisher": "QNS",
+          "date": "2025-09-26",
+          "url": "https://qns.com/2025/09/gitanas-nauseda-transfiguration-church/"
+        }
+      ]
+    },
+    {
+      "date": "2025-12-16",
+      "headline": "Lithuanian deputy foreign minister attends community Christmas event at the church",
+      "detail": "Lithuania's Deputy Foreign Minister Taurimas Valys attended holiday services and a Christmas Eve (kūčios) event at the Annunciation church in Brooklyn organized by the Lithuanian community, the Maironis Lithuanian school, and scouts, noting that Lithuanian traditions in New York are being passed to the younger generation.",
+      "sources": [
+        {
+          "title": "Viceministras: lietuviškos tradicijos Niujorke ne tik puoselėjamos, bet ir perduodamos",
+          "publisher": "LRT",
+          "date": "2025-12-16",
+          "url": "https://www.lrt.lt/lituanica/aktualijos/751/2777071/viceministras-lietuviskos-tradicijos-niujorke-ne-tik-puoselejamos-bet-ir-perduodamos"
+        }
+      ]
+    },
+    {
+      "date": "2025-12-08",
+      "headline": "New deacon assigned to the parish",
+      "detail": "Deacon Philip A. Franco was assigned as deacon at Our Lady of Mt. Carmel–Annunciation of the Blessed Virgin Mary, Williamsburg, effective December 8, 2025 — a sign of continuing normal diocesan staffing of the parish.",
+      "sources": [
+        {
+          "title": "Diocesan Assignments – February 21, 2026",
+          "publisher": "The Tablet (Diocese of Brooklyn)",
+          "date": "2026-02-21",
+          "url": "https://thetablet.org/diocesan-assignments-february-21-2026/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lithuanian Church in Williamsburg Is Rededicated",
+      "publisher": "The Tablet (Diocese of Brooklyn)",
+      "date": "2019-03-27",
+      "url": "https://thetablet.org/lithuanian-church-in-williamsburg-is-rededicated/"
+    },
+    {
+      "title": "Transfiguration Church to Limit Mass Schedule, Explore Partial Property Sale",
+      "publisher": "The Tablet (Diocese of Brooklyn)",
+      "date": "2025-09-04",
+      "url": "https://thetablet.org/transfiguration-church-to-limit-mass-schedule/"
+    },
+    {
+      "title": "Brooklyn Diocese says Maspeth's Transfiguration Church will not be closed or sold",
+      "publisher": "QNS",
+      "date": "2025-09-12",
+      "url": "https://qns.com/2025/09/transfiguration-church-not-closing/"
+    },
+    {
+      "title": "Lithuanian President Gitanas Nausėda visits Maspeth's Transfiguration Church",
+      "publisher": "QNS",
+      "date": "2025-09-26",
+      "url": "https://qns.com/2025/09/gitanas-nauseda-transfiguration-church/"
+    },
+    {
+      "title": "'Burg Priest Accused of Money Misdeeds Tied to Adams' Pal",
+      "publisher": "Brownstoner",
+      "date": "2024-11-19",
+      "url": "https://www.brownstoner.com/brooklyn-life/williamsburg-our-lady-mount-carmel-gigantiello-67-havemeyer-street/"
+    },
+    {
+      "title": "Monsignor at Brooklyn church in federal subpoena replaced over $1.9M transfers, card use: Diocese",
+      "publisher": "NBC New York",
+      "date": "2024-11-18",
+      "url": "https://www.nbcnewyork.com/brooklyn/church-gigantiello-carone-sabrina-carpenter-our-lady-mount-carmel/5995683/"
+    },
+    {
+      "title": "Mass Times | Our Lady of Mount Carmel - Annunciation (accessed 2026-07-16)",
+      "publisher": "Parish of Our Lady of Mount Carmel - Annunciation",
+      "date": "2026-07-16",
+      "url": "https://mountcarmel-annunciation.com/mass-times"
+    },
+    {
+      "title": "Our Team | Our Lady of Mount Carmel - Annunciation (accessed 2026-07-16)",
+      "publisher": "Parish of Our Lady of Mount Carmel - Annunciation",
+      "date": "2026-07-16",
+      "url": "https://mountcarmel-annunciation.com/our-team"
+    },
+    {
+      "title": "Contact | Our Lady of Mount Carmel - Annunciation (accessed 2026-07-16)",
+      "publisher": "Parish of Our Lady of Mount Carmel - Annunciation",
+      "date": "2026-07-16",
+      "url": "https://mountcarmel-annunciation.com/about/contact"
+    },
+    {
+      "title": "Viceministras: lietuviškos tradicijos Niujorke ne tik puoselėjamos, bet ir perduodamos",
+      "publisher": "LRT",
+      "date": "2025-12-16",
+      "url": "https://www.lrt.lt/lituanica/aktualijos/751/2777071/viceministras-lietuviskos-tradicijos-niujorke-ne-tik-puoselejamos-bet-ir-perduodamos"
+    },
+    {
+      "title": "Diocesan Assignments – February 21, 2026",
+      "publisher": "The Tablet (Diocese of Brooklyn)",
+      "date": "2026-02-21",
+      "url": "https://thetablet.org/diocesan-assignments-february-21-2026/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "No contradictions with the archive record. Refinements: (1) the archive's \"survived inside the diocese\" is more precisely a 2019 canonical merger — Annunciation is now one of two worship sites of the merged Parish of Our Lady of Mount Carmel–Annunciation (The Tablet, 2019-03-27; parish website); (2) \"major renovation completed 2019\" confirmed — rededication Mass held March 24, 2019; (3) \"from Sept 2025 hosts the displaced Maspeth Lithuanian-language Masses\" confirmed and sharpened — the diocese made the relocation permanent effective September 1, 2025, not a temporary hosting arrangement (The Tablet, 2025-09-04; QNS, 2025-09-12). Ownership diocese_rc and standing status both confirmed.",
+  "gaps": "Current pastoral leadership is ambiguous: the parish website's Our Team page (accessed 2026-07-16) still lists Msgr. Jamie J. Gigantiello as Pastor, while the diocese announced on 2024-11-18 that he was relieved of pastoral oversight and Auxiliary Bishop Witold Mroziewski was appointed administrator; no source was found confirming either a reinstatement or a new permanent pastor as of July 2026, and searches for a 2025-2026 resolution of the Gigantiello matter (he reportedly called the investigation a \"witch hunt\" per National Catholic Reporter, which returned HTTP 403 and could not be opened) found nothing conclusive. The specific Lithuanian pastoral minister/celebrant of the 10:00 AM Lithuanian Mass was not identified in opened sources. No property-sale question applies since the parish never closed, but the terms of the former-school lease that financed the 2019 renovation (tenant, rent) were not found. Not searched exhaustively: Brooklyn Diocese pastoral-planning documents that might name Annunciation in future restructuring rounds."
+}

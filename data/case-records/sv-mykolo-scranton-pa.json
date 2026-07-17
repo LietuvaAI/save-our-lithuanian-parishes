@@ -1,0 +1,95 @@
+{
+  "slug": "sv-mykolo-scranton-pa",
+  "asOf": "2026-07-16",
+  "buildingStatus": "for-sale",
+  "currentUse": "Vacant former church and rectory at 1703 Jackson Street, actively listed for commercial sale; the St. Michael the Archangel parish community (FSSP Latin Mass) that occupied it now worships at St. Lucy's Church, 949 Scranton St.",
+  "summary": "The former Lithuanian church of St. Michael at 1703 Jackson Street, Scranton, is still standing but no longer in liturgical use: the St. Michael the Archangel parish community held its final Mass there on September 28, 2025, then processed with the Eucharist through West Scranton to its new home at the historic St. Lucy Church (949 Scranton St.), a relocation ordered by Bishop Bambera under the Diocese of Scranton's Vision 2030 pastoral planning process. The parish began as the personal parish for Scranton's Lithuanian community, dedicated by Bishop M.J. Hoban in 1917; as the Lithuanian community waned, Bishop James Timlin moved the diocese's Latin Mass community there in the late 1990s, and it later became a permanent apostolate of the Priestly Fraternity of St. Peter. That parish continues today under pastor Fr. Anthony Dorsa, FSSP, with a full Traditional Latin Mass schedule (Sundays 8:00 am Low and 10:30 am High) at St. Lucy's. The vacated Jackson Street property — a 4,468 sq ft brick church (built 1942) plus a 2,069 sq ft rectory on 0.43 acres — is an active commercial listing at $350,000 (MLS SC261850, shown by Lewith & Freeman), marketed to \"religious organizations, non-profits, businesses, or developers,\" and was still active as of July 16, 2026. A Lithuanian heritage survey notes that stained-glass windows with Lithuanian inscriptions survived inside the church, though nothing on the exterior identifies its Lithuanian origins.",
+  "developments": [
+    {
+      "date": "2025-09-28",
+      "headline": "Final Mass at the former Lithuanian St. Michael Church; parish relocates to St. Lucy's",
+      "detail": "After several years of growth and increasing space needs, the St. Michael the Archangel parish community (FSSP Latin Mass personal parish) celebrated its final Mass at 1703 Jackson Street on Sept. 28, 2025, then held a Eucharistic Procession through the streets of Scranton to its new home, the historic St. Lucy Church at 949 Scranton Street. Bishop Bambera made the move as part of the Diocese of Scranton's Vision 2030 Pastoral Planning Process; pastor Fr. Anthony Dorsa, FSSP, cited the lack of classroom and gathering space at the Jackson Street site. The Jackson Street church officially closed its doors.",
+      "sources": [
+        {
+          "title": "A New Beginning: Saint Michael Parish finds new home at historic Saint Lucy Church",
+          "publisher": "Diocese of Scranton",
+          "date": "2025-10",
+          "url": "https://www.dioceseofscranton.org/a-new-beginning-saint-michael-parish-finds-new-home-at-historic-saint-lucy-church/"
+        },
+        {
+          "title": "About Us – FSSP Scranton",
+          "publisher": "St. Michael the Archangel Parish (FSSP Scranton)",
+          "date": "2026-07-16 (accessed)",
+          "url": "https://fsspscranton.wordpress.com/about-us/"
+        }
+      ]
+    },
+    {
+      "date": "2026",
+      "headline": "Former church and rectory at 1703 Jackson Street listed for sale at $350,000",
+      "detail": "The vacated property is an active commercial listing (MLS SC261850): a 4,468 sq ft brick church described as having 'a stunning sanctuary' and built in 1942, a 2,069 sq ft rectory, and a private parking lot across the street, totaling 6,537 sq ft on 0.43 acres. It is marketed as an opportunity for religious organizations, non-profits, businesses, or developers. Listing shown by Lewith & Freeman; 78 days on site as of the July 16, 2026 update, implying a spring 2026 listing date.",
+      "sources": [
+        {
+          "title": "1703 Jackson Street, Scranton, PA 18504 — Commercial listing",
+          "publisher": "Lewith & Freeman Real Estate",
+          "date": "2026-07-16 (listing update)",
+          "url": "https://www.lewith-freeman.com/p/1703-Jackson-Street-Scranton-PA-18504/dmgid_186324175"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-16",
+      "headline": "Parish continues as FSSP Latin Mass personal parish at St. Lucy's Church",
+      "detail": "St. Michael the Archangel Parish operates at St. Lucy's Church, 949 Scranton St., Scranton, PA 18504, with all Masses in the Traditional Latin Mass (1962 books): Sunday 8:00 am Low Mass and 10:30 am High Mass, weekday Masses Mon-Thu 7:30 am, Fri 6:00 pm, Sat 9:00 am, plus regular confessions and devotions. Pastor is Fr. Anthony Dorsa, FSSP. The parish name and community survive, but no longer in the Lithuanian-built church.",
+      "sources": [
+        {
+          "title": "Mass & Devotions – FSSP Scranton",
+          "publisher": "St. Michael the Archangel Parish (FSSP Scranton)",
+          "date": "2026-07-16 (accessed)",
+          "url": "https://fsspscranton.wordpress.com/mass-devotions/"
+        },
+        {
+          "title": "FSSP Scranton – St Michael the Archangel RC Parish at St. Lucy's Church",
+          "publisher": "St. Michael the Archangel Parish (FSSP Scranton)",
+          "date": "2026-07-16 (accessed)",
+          "url": "https://fsspscranton.wordpress.com/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "A New Beginning: Saint Michael Parish finds new home at historic Saint Lucy Church",
+      "publisher": "Diocese of Scranton",
+      "date": "2025-10",
+      "url": "https://www.dioceseofscranton.org/a-new-beginning-saint-michael-parish-finds-new-home-at-historic-saint-lucy-church/"
+    },
+    {
+      "title": "About Us – FSSP Scranton",
+      "publisher": "St. Michael the Archangel Parish (FSSP Scranton)",
+      "date": "2026-07-16 (accessed)",
+      "url": "https://fsspscranton.wordpress.com/about-us/"
+    },
+    {
+      "title": "Mass & Devotions – FSSP Scranton",
+      "publisher": "St. Michael the Archangel Parish (FSSP Scranton)",
+      "date": "2026-07-16 (accessed)",
+      "url": "https://fsspscranton.wordpress.com/mass-devotions/"
+    },
+    {
+      "title": "1703 Jackson Street, Scranton, PA 18504 — Commercial listing (MLS SC261850)",
+      "publisher": "Lewith & Freeman Real Estate",
+      "date": "2026-07-16 (listing update)",
+      "url": "https://www.lewith-freeman.com/p/1703-Jackson-Street-Scranton-PA-18504/dmgid_186324175"
+    },
+    {
+      "title": "Pennsylvania Northern Coal Region Lithuanian sites",
+      "publisher": "Global True Lithuania",
+      "date": "2026-07-16 (accessed)",
+      "url": "https://global.truelithuania.com/northern-coal-region-scranton-1614/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The archive record (\"closed as a Lithuanian parish; now a Latin Mass community (FSSP); ethnically transferred, not formally dissolved\") is confirmed but is now materially outdated in one respect: as of September 28, 2025, the FSSP Latin Mass community no longer occupies the Lithuanian-built church at 1703 Jackson Street. Bishop Bambera relocated the parish to St. Lucy's Church (949 Scranton St.), the Jackson Street church closed, and the property is now for sale. So the parish entity (St. Michael the Archangel, FSSP personal parish) survives — consistent with \"not formally dissolved\" — but the physical Lithuanian church building has now exited Catholic use entirely, a step beyond the archive's snapshot. Refinements: the parish was dedicated by Bishop M.J. Hoban in 1917 as the personal parish for Scranton's Lithuanian community (per the FSSP parish site), and the transfer to the Latin Mass community occurred under Bishop James Timlin in the late 1990s as the Lithuanian community waned. Note the current church structure is described as built in 1942 by both the real estate listing and Global True Lithuania, vs. the 1917 parish dedication — likely an earlier building was replaced, but no source opened explains this.",
+  "gaps": "No sale has closed yet, so there is no buyer or sale price — only the active $350,000 asking price; a search snippet indicated an original list price of $470,000 with a May 2026 listing-contract date on realtynetwork.net, but that page returned HTTP 410 and could not be verified, so it is excluded from the record. The 1917 dedication vs. 1942 construction discrepancy is unresolved (probably a replacement building; no opened source explains it). Exact founding year of the Lithuanian parish and the precise year it ceased functioning as a Lithuanian parish / was transferred to the Latin Mass community (sources say only \"late 1990s\"–\"~2000s\") were not pinned down. No local press coverage (Times-Tribune, WNEP) of the 2025 closure was found in searches, and no organized Lithuanian-community preservation effort or reunion was found — only a National Lithuanian American Hall of Fame Facebook post noting the closure, which was not opened. The fate of the Lithuanian-inscribed stained-glass windows in the pending sale is unknown."
+}

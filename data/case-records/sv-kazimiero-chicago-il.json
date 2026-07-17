@@ -1,0 +1,114 @@
+{
+  "slug": "sv-kazimiero-chicago-il",
+  "asOf": "2026-07-16",
+  "buildingStatus": "converted",
+  "currentUse": "Probable identification: the former St. Casimir Lithuanian church building at 283 E 14th Street, Chicago Heights, IL is standing and used by a non-Catholic congregation; International Pentecostal Assemblies Ecumenical lists that address as its office (site copyright 2020), and Global True Lithuania reports a non-Catholic church operating inside a building surrounded by empty lots, with the Lithuanian name still carved in the cornerstone.",
+  "summary": "Research indicates the only Lithuanian parish dedicated to St. Casimir (Šv. Kazimiero) in the Chicago area was in Chicago Heights, a south suburb — not in Marquette Park or Brighton Park as the archive record guessed; genealogical registers of Chicago-area Lithuanian parishes list St. Casimir only at Chicago Heights (genmetrika.eu), with the church/school building at 283 E 14th Street. Global True Lithuania reports the Lithuanian parish closed in 1987, that the two-story building (which housed both church and school and never gained a purpose-built second church) still stands surrounded by empty lots, that a non-Catholic church now operates inside, and that the Lithuanian name remains carved in the cornerstone. International Pentecostal Assemblies Ecumenical gives 283 E 14th Street, Chicago Heights as its address (site copyright 2020), consistent with the non-Catholic reuse. The stained-glass repatriation in the archive record is corroborated by a Bernardinai.lt article of 2013-08-14: ten roughly 90-year-old windows from a closed Chicago Lithuanian church bearing the name of Lithuania's patron saint, each originally donated by a Lithuanian family, arrived at the Vilnius Archdiocese restoration and construction trust around 2008, were cleaned, soldered and reinforced, were tentatively (but without signature or documentation) attributed to Adolfas Valeška by the Church Heritage Museum director, and as of 2013 were still awaiting a permanent home, with plans to adapt them to a newly built church. No later source documenting their final installation was found, and no sale price, buyer, diocesan closure decree, preservation campaign, or reunion activity for the parish property was found.",
+  "developments": [
+    {
+      "date": "1987",
+      "headline": "Lithuanian parish reported closed",
+      "detail": "Global True Lithuania states St. Casimir Lithuanian church of Chicago Heights (283 E 14th Street) closed in 1987, having 'withered and died with Lithuanians moving elsewhere'; the two-story building housed both school and church and the parish never built a separate church building.",
+      "sources": [
+        {
+          "title": "Chicago, Illinois: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "n.d.",
+          "url": "https://global.truelithuania.com/chicago-illinois-45/"
+        }
+      ]
+    },
+    {
+      "date": "c. 2008",
+      "headline": "Ten stained-glass windows arrive in Vilnius",
+      "detail": "Per a 2013 Bernardinai.lt report, ten stained-glass windows from a closed Chicago Lithuanian church bearing the title of Lithuania's patron saint (St. Casimir) arrived at the Vilnius Archdiocese restoration and construction trust about five years before the article — roughly 2008. The windows were described as about 90 years old, each with a Lithuanian family as donor.",
+      "sources": [
+        {
+          "title": "Ieškoma vietos iš Čikagos lietuvių bažnyčios atkeliavusiems vitražams",
+          "publisher": "Bernardinai.lt",
+          "date": "2013-08-14",
+          "url": "https://www.bernardinai.lt/2013-08-14-ieskoma-vietos-is-cikagos-lietuviu-baznycios-atkeliavusiems-vitrazams/"
+        }
+      ]
+    },
+    {
+      "date": "2013-08-14",
+      "headline": "Restored windows still seeking a permanent home",
+      "detail": "Bernardinai.lt reported the ten windows had been cleaned, soldered and strengthened; the Church Heritage Museum director suggested attribution to painter/stained-glass artist Adolfas Valeška (who founded a Chicago stained-glass studio in 1950-51), but the windows are unsigned and undocumented, and their ~90-year age sits awkwardly with that attribution. The plan discussed was to adapt them into a newly constructed church rather than an existing one. No later source confirming final placement was found.",
+      "sources": [
+        {
+          "title": "Ieškoma vietos iš Čikagos lietuvių bažnyčios atkeliavusiems vitražams",
+          "publisher": "Bernardinai.lt",
+          "date": "2013-08-14",
+          "url": "https://www.bernardinai.lt/2013-08-14-ieskoma-vietos-is-cikagos-lietuviu-baznycios-atkeliavusiems-vitrazams/"
+        }
+      ]
+    },
+    {
+      "date": "c. 2020",
+      "headline": "Building in use by a Pentecostal organization",
+      "detail": "International Pentecostal Assemblies Ecumenical lists 283 E 14th Street, Chicago Heights, IL 60411 as its address (website copyright 2020), consistent with Global True Lithuania's report that a non-Catholic church operates inside the former St. Casimir building, which stands surrounded by empty lots with the Lithuanian name still carved in the cornerstone.",
+      "sources": [
+        {
+          "title": "Southern Region — IPAE Faith and Community Action Network",
+          "publisher": "IPAE Network",
+          "date": "c. 2020",
+          "url": "https://ipaenetwork.net/southern-region"
+        },
+        {
+          "title": "Čikagos lietuviai ir jų paveldas",
+          "publisher": "Global True Lithuania",
+          "date": "n.d.",
+          "url": "https://global.truelithuania.com/lt/chicago-illinois-45/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Chicago, Illinois: Lithuanians and Lithuanian heritage",
+      "publisher": "Global True Lithuania",
+      "date": "n.d.",
+      "url": "https://global.truelithuania.com/chicago-illinois-45/"
+    },
+    {
+      "title": "Čikagos lietuviai ir jų paveldas (Lithuanian version)",
+      "publisher": "Global True Lithuania",
+      "date": "n.d.",
+      "url": "https://global.truelithuania.com/lt/chicago-illinois-45/"
+    },
+    {
+      "title": "Ieškoma vietos iš Čikagos lietuvių bažnyčios atkeliavusiems vitražams",
+      "publisher": "Bernardinai.lt",
+      "date": "2013-08-14",
+      "url": "https://www.bernardinai.lt/2013-08-14-ieskoma-vietos-is-cikagos-lietuviu-baznycios-atkeliavusiems-vitrazams/"
+    },
+    {
+      "title": "Čikagos bažnyčios — lietuvių krikšto, santuokos ir mirties registracija",
+      "publisher": "genmetrika.eu",
+      "date": "n.d.",
+      "url": "https://www.genmetrika.eu/cikagos_baznycios.html"
+    },
+    {
+      "title": "St. Casimir (Lith.) RC Parish Registers Online (1911-1915), Chicago Heights",
+      "publisher": "Lithuanian Catholic Ancestor Search",
+      "date": "n.d.",
+      "url": "https://www.lithuaniancatholicancestorsearch.com/st-casimir--lith--parish--chicago-heights-.html"
+    },
+    {
+      "title": "Southern Region — IPAE Faith and Community Action Network",
+      "publisher": "IPAE Network",
+      "date": "c. 2020",
+      "url": "https://ipaenetwork.net/southern-region"
+    },
+    {
+      "title": "Lietuviško kultūrinio paveldo gidas (Raimundas Marius Lapas)",
+      "publisher": "Draugas",
+      "date": "2015-07-02",
+      "url": "https://www.draugas.org/lietuvisko-kulturinio-paveldo-gidas/"
+    }
+  ],
+  "confidence": "probable",
+  "conflictsWithArchiveRecord": "The archive's location note 'Marquette Park/Brighton Park area (probable)' appears to be wrong: genealogical registers of Chicago-area Lithuanian parishes (genmetrika.eu, lithuaniancatholicancestorsearch.com) show the only Lithuanian St. Casimir parish in the area was in Chicago Heights, a south suburb; Marquette Park's Lithuanian parish was Nativity BVM and Brighton Park's was Immaculate Conception. The Marquette Park association likely stems from the Sisters of St. Casimir motherhouse at 2601 W Marquette Road (mentioned in Draugas's 2015 heritage guide), a convent, not a parish. Archive's 'closed pre-2013' is consistent but refined: Global True Lithuania dates the closure to 1987. The '10 stained-glass windows repatriated' claim is corroborated by Bernardinai.lt (2013), with refinements: they arrived in Vilnius around 2008, are ~90 years old, tentatively but unverifiably attributed to Adolfas Valeška, and were still unplaced as of August 2013. One unresolved tension: Bernardinai describes the source church as closed 'a few years' before 2013 with a Mexican congregation worshipping there, which fits the 1987 Chicago Heights closure poorly — a Polish St. Casimir parish in Chicago's Little Village (merged into Our Lady of Tepeyac around 1990, Mexican congregation) also exists, so the windows' source church is not conclusively the Lithuanian Chicago Heights parish.",
+  "gaps": "The full Bernardinai.lt article is behind a Cloudflare block (HTTP 403; no Wayback snapshot exists), so its details come from search-engine excerpts of the article rather than the opened page — the most important verification gap in this record. The identity of the church the ten windows came from is not conclusively established (Lithuanian Chicago Heights vs. the Polish St. Casimir in Chicago's Little Village). No source was found for: the property's sale (price, buyer, year) after the parish ended; any Archdiocese of Chicago closure decree or official record (the archdiocesan closed-parishes PDF returned 403); the founding year of the parish; the final placement of the ten windows after 2013 (searched Lithuanian press for installation in a new church, including Vilnius Pilaitė St. Joseph — nothing found); any preservation campaign, recent press, or reunion activity. Searched in English and Lithuanian under 'St. Casimir', 'Šv. Kazimiero', 'Chicago', 'Chicago Heights', 'vitražai', and the 283 E 14th Street address."
+}

@@ -1,0 +1,94 @@
+{
+  "slug": "sv-jurgio-chicago-il",
+  "asOf": "2026-07-16",
+  "buildingStatus": "demolished",
+  "currentUse": "Church site (NW corner of W 33rd St & S Lituanica Ave, address cited as 3230 S Lituanica) redeveloped: the Lithuanian-language Draugas heritage guide says the lot now holds new housing, while the older English True Lithuania page describes an empty lot. The surviving 1908 parish school building operates as the Philip Armour public school, still bearing a \"MOKYKLA ŠV. JURGIO K.\" plaque; it has no remaining Lithuanian connection.",
+  "summary": "St. George (Šv. Jurgio), the oldest Lithuanian parish in Chicago and the Midwest, no longer exists physically: the 1902 Gothic Revival church at 33rd Street and Lituanica Avenue in Bridgeport was closed and demolished in 1990 by decision of the archdiocese. Before demolition the parish's works of art and furnishings were donated to other parishes, including to newly independent Lithuania — a symbolic repatriation noted in heritage guides. The heritage-guide record of the site diverges slightly: the English True Lithuania page describes an empty lot where the church stood, while the newer Lithuanian Draugas cultural-heritage guide says the site was replaced with new housing. The three-story parish school (1908), once called the best Lithuanian school in America by a 1916 almanac, still stands and is used as the Philip Armour school. The neighborhood's remaining Lithuanian trace is Lituanica Avenue, renamed from Auburn Avenue on 1 January 1934 in honor of pilots Darius and Girenas, who departed from St. George church for their 1933 transatlantic flight. No published sale price or buyer for the property, no preservation campaign, and no recent commemorative activity specific to this parish were found; Preservation Chicago's 2021 survey of endangered Catholic churches (roughly 110 closed and 57 demolished citywide since 1980) does not mention this long-gone church.",
+  "developments": [
+    {
+      "date": "1990",
+      "headline": "Church closed and demolished by archdiocese decision; artworks sent to Lithuania",
+      "detail": "By the bishop's decision the 1902 Gothic Revival church was demolished in 1990. Before demolition the parish donated its works of art and furnishings to other parishes, including to a parish in newly independent Lithuania. Wikipedia independently confirms the 1990 closure; a 1990 Chicago Tribune article ('New Life Awaits Parish Treasures') is cited there regarding redistribution of parish possessions but could not be opened.",
+      "sources": [
+        {
+          "title": "Chicago, Illinois: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "n.d.",
+          "url": "https://global.truelithuania.com/chicago-illinois-45/"
+        },
+        {
+          "title": "St. George's Catholic Church (Chicago)",
+          "publisher": "Wikipedia",
+          "date": "n.d.",
+          "url": "https://en.wikipedia.org/wiki/St._George%27s_Catholic_Church_(Chicago)"
+        },
+        {
+          "title": "Lietuviško kultūrinio paveldo gidas",
+          "publisher": "Draugas",
+          "date": "n.d.",
+          "url": "https://www.draugas.org/lietuvisko-kulturinio-paveldo-gidas/"
+        }
+      ]
+    },
+    {
+      "date": "undated (post-1990)",
+      "headline": "Site redeveloped; parish school survives as Philip Armour school",
+      "detail": "The Draugas Lithuanian cultural-heritage guide states the church site was replaced with new housing, while the older English True Lithuania page describes an empty lot — indicating the lot was likely built over sometime after demolition. The adjacent three-story parish school (1908) still stands, repurposed as the Philip Armour school, with the plaque 'MOKYKLA ŠV. JURGIO K.' still visible.",
+      "sources": [
+        {
+          "title": "Lietuviško kultūrinio paveldo gidas",
+          "publisher": "Draugas",
+          "date": "n.d.",
+          "url": "https://www.draugas.org/lietuvisko-kulturinio-paveldo-gidas/"
+        },
+        {
+          "title": "Chicago, Illinois: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "n.d.",
+          "url": "https://global.truelithuania.com/chicago-illinois-45/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Chicago, Illinois: Lithuanians and Lithuanian heritage",
+      "publisher": "Global True Lithuania (Augustinas Žemaitis)",
+      "date": "n.d.",
+      "url": "https://global.truelithuania.com/chicago-illinois-45/"
+    },
+    {
+      "title": "Lietuviško kultūrinio paveldo gidas",
+      "publisher": "Draugas",
+      "date": "n.d.",
+      "url": "https://www.draugas.org/lietuvisko-kulturinio-paveldo-gidas/"
+    },
+    {
+      "title": "St. George's Catholic Church (Chicago)",
+      "publisher": "Wikipedia",
+      "date": "n.d.",
+      "url": "https://en.wikipedia.org/wiki/St._George%27s_Catholic_Church_(Chicago)"
+    },
+    {
+      "title": "How Chicago became Lithuania's second capital",
+      "publisher": "VilNews",
+      "date": "2012",
+      "url": "https://vilnews.com/2012-05-13618"
+    },
+    {
+      "title": "Lithuanians in the Chicago area",
+      "publisher": "Wikipedia",
+      "date": "n.d.",
+      "url": "https://en.wikipedia.org/wiki/Lithuanians_in_the_Chicago_area"
+    },
+    {
+      "title": "Roman Catholic Churches – 2021 Most Endangered",
+      "publisher": "Preservation Chicago",
+      "date": "2021",
+      "url": "https://www.preservationchicago.org/roman-catholic-churches/"
+    }
+  ],
+  "confidence": "probable",
+  "conflictsWithArchiveRecord": "Demolition-year conflict (1990 vs 1992): every source opened says 1990; no support for 1992 was found — the record can likely be firmed to 1990 for both closure and demolition (Wikipedia: closed 1990; True Lithuania and Draugas guide: demolished 1990). Closure year (archive: not stated): sources say 1990. Founding-year conflict confirmed as real in the sources: 1892 for the parish and first wooden church (VilNews, True Lithuania, Wikipedia), brick church dated 1896–97 by Wikipedia and the Clio entry title ('1897–1990') but 1902 by True Lithuania, VilNews, and the Draugas guide; the Draugas heritage guide alone gives 1909 as the parish date, matching the archive's '1909 also cited'. 1892 parish / 1902 dedicated building is the best-supported reading. The letter campaign to the cardinal and Pope could not be corroborated in any web source opened — neither confirmed nor contradicted.",
+  "gaps": "Could not verify what physically occupies the church parcel in 2026: the Draugas guide says new housing, the older English True Lithuania page says empty lot, and parcel-level checks failed (Redfin/Clio/ChicagoAncestors/archdiocese closed-parishes PDF all returned 403 or empty pages). No sale price, buyer, or land-transfer record was found in any opened source. The 1990 Chicago Tribune article 'New Life Awaits Parish Treasures' (cited by Wikipedia) was not accessible. No recent press, diocesan announcements, preservation efforts, reunions, or commemorations specific to this parish were found in searches covering 2023–2025; the Preservation Chicago 2021 endangered-churches report does not mention it. The exact 1892-vs-1897-vs-1902 building chronology and the school construction year (1908 per True Lithuania; the Draugas guide summary suggested 1916, possibly conflating the 1916 almanac citation) remain unresolved. Note also that True Lithuania and the Draugas heritage guide share an author/origin, so the site-status claims are not fully independent."
+}

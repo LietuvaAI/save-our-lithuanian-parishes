@@ -1,0 +1,77 @@
+{
+  "slug": "lncc-congregation-westville-il",
+  "asOf": "2026-07-16",
+  "buildingStatus": "demolished",
+  "currentUse": "A private residential home now occupies the former church lot on Main Street in Westville; the only trace on-site is the stone path that once led to the church. The parish's memory is carried by the Westville Lithuanian (National) Cemetery in south Westville, where a 2004 memorial incorporates the church's recovered bell and cornerstone.",
+  "summary": "The congregation is Holy Cross Lithuanian National Catholic Church, founded in 1914 when dissident parishioners of Sts. Peter and Paul Lithuanian parish bought a former Presbyterian church building on Main Street and brought in Old Catholic clergy who rejected papal authority. The church closed around 1960-61 — shortly after the death of Bishop Zigmantis Vipartas, who had led it for 28 years — and the building was later demolished; a residential home now stands on the site, with only the old stone walkway remaining. In 2004, caretakers of the associated Westville Lithuanian Cemetery (established 1909 by the same breakaway community) built a memorial there using the church bell they recovered and the building's cornerstone. The cemetery remains active and volunteer-maintained, with roughly 1,000 total burials and about five new burials per year. In 2018 the Lithuanian-government-supported \"Destination Lithuanian America\" project recognized eight Westville locations, including the Lithuanian National Cemetery, as first-order Lithuanian-American heritage sites — possibly the highest per-capita concentration of such sites in the US. In 2014, Peoria diocesan priest Fr. John Flattery published \"A Short History of a Big Lithuanian Row in Westville, Illinois,\" a 43-page booklet on the schism whose first printing of 250 copies sold out. The rival Roman Catholic parish, Sts. Peter and Paul, was itself closed circa 1989-90 and demolished, leaving an empty lot.",
+  "developments": [
+    {
+      "date": "2004",
+      "headline": "Memorial built from recovered church bell and cornerstone",
+      "detail": "Caretakers of the Westville Lithuanian Cemetery constructed a memorial to the demolished Holy Cross Lithuanian National Catholic Church, incorporating the church bell they had discovered and the building's cornerstone.",
+      "sources": [
+        {
+          "title": "Westville, Illinois: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "n.d. (accessed 2026-07-16)",
+          "url": "https://global.truelithuania.com/westville-illinois-2282/"
+        }
+      ]
+    },
+    {
+      "date": "2014-12",
+      "headline": "Diocesan priest publishes history of the Westville Lithuanian parish schism",
+      "detail": "Fr. John Flattery of the Diocese of Peoria published 'A Short History of a Big Lithuanian Row in Westville, Illinois,' a 43-page booklet covering the 1914 founding of the breakaway Holy Cross parish, its 28-year leadership under Bishop Zigmantis Vipartas, and its closure shortly after Vipartas' death in 1961. The first printing of 250 copies sold out; proceeds benefited St. Mary Parish in Westville.",
+      "sources": [
+        {
+          "title": "Westville's Lithuanian Catholic history focus of new book",
+          "publisher": "The Catholic Post (Diocese of Peoria)",
+          "date": "2014-12-17",
+          "url": "https://thecatholicpost.com/2014/12/17/westvilles-lithuanian-catholic-history-focus-of-new-book/"
+        }
+      ]
+    },
+    {
+      "date": "2018-12",
+      "headline": "Westville sites recognized as first-order Lithuanian-American heritage sites",
+      "detail": "The 'Destination Lithuanian America' mapping project by Augustinas and Aiste Žemaitis, partly funded by the Lithuanian government, recognized eight Westville locations — including the Lithuanian National Cemetery — as first-order Lithuanian-American heritage sites after an August 31 - September 1 research visit, noting Westville may have the most Lithuanian heritage sites per capita in the entire United States.",
+      "sources": [
+        {
+          "title": "Mapper: Westville a leader in Lithuanian heritage",
+          "publisher": "Commercial-News (Danville, IL)",
+          "date": "2018-12-22",
+          "url": "https://www.commercial-news.com/news/local_news/mapper-westville-a-leader-in-lithuanian-heritage/article_390b80df-13ff-59d6-8f5b-05b63fd90a89.html"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Westville, Illinois: Lithuanians and Lithuanian heritage",
+      "publisher": "Global True Lithuania",
+      "date": "n.d. (accessed 2026-07-16)",
+      "url": "https://global.truelithuania.com/westville-illinois-2282/"
+    },
+    {
+      "title": "Westville's Lithuanian Catholic history focus of new book",
+      "publisher": "The Catholic Post (Diocese of Peoria)",
+      "date": "2014-12-17",
+      "url": "https://thecatholicpost.com/2014/12/17/westvilles-lithuanian-catholic-history-focus-of-new-book/"
+    },
+    {
+      "title": "Mapper: Westville a leader in Lithuanian heritage",
+      "publisher": "Commercial-News (Danville, IL)",
+      "date": "2018-12-22",
+      "url": "https://www.commercial-news.com/news/local_news/mapper-westville-a-leader-in-lithuanian-heritage/article_390b80df-13ff-59d6-8f5b-05b63fd90a89.html"
+    },
+    {
+      "title": "Westville Lithuanian Cemetery - Vermilion County, Illinois",
+      "publisher": "Graveyards.com",
+      "date": "n.d. (accessed 2026-07-16)",
+      "url": "https://graveyards.com/Illinois/Vermilion/Westville-Lithuanian-Cemetery"
+    }
+  ],
+  "confidence": "probable",
+  "conflictsWithArchiveRecord": "Closure date conflict: the archive record states the parish closed ~1969, but both independent sources found place the closure a decade earlier — Global True Lithuania says the Holy Cross church \"has been closed in 1960,\" and The Catholic Post (reporting on Fr. Flattery's researched 2014 history) says it closed \"shortly after Bishop Vipartas' death in 1961.\" The ~1969 date in the archive is likely wrong or refers to a later event (e.g., final demolition or property disposition). Refinement, not conflict: the parish's proper name is Holy Cross (Šv. Kryžiaus) Lithuanian National Catholic Church, founded 1914 in a purchased former Presbyterian building on Main Street. Everything else in the archive record is confirmed: independent/community-governed (Old Catholic clergy, no papal authority), building demolished, bell and cornerstone made into a 2004 memorial at the cemetery, and the cemetery (est. 1909) remains maintained and active.",
+  "gaps": "No published sale price, buyer, or transaction year for the church property could be found; the demolition date itself is not stated in any source opened (only that a residential home now occupies the lot). The exact street address of the former church site is not published — sources say only that it stood on Main Street \"just down\" from Sts. Peter and Paul. The identity of the current cemetery caretaker organization (whether an incorporated association or informal volunteers) was not found. The Commercial-News article (2018) could not be opened in full (HTTP 429/paywall); its date and content are drawn from substantive search-index excerpts of the article. Find a Grave's cemetery page returned HTTP 403 and was not used. No press, preservation activity, or reunion coverage after December 2018 was found in searches of news and heritage sources."
+}

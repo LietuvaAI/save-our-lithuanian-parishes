@@ -1,0 +1,170 @@
+{
+  "slug": "sv-jurgio-brooklyn-ny",
+  "asOf": "2026-07-16",
+  "buildingStatus": "demolished",
+  "currentUse": "Site is occupied by 109 Gold Street, a 7-story, 33-unit market-rate rental apartment building (units actively listed for rent on StreetEasy, Apartments.com, and Brown Harris Stevens)",
+  "summary": "St. George's (Šv. Jurgio) Lithuanian church at 203 York Street in Vinegar Hill, Brooklyn, no longer exists in any form. The Diocese of Brooklyn's official parish list records the parish (founded 1909, National-Lithuanian) as merged with St. Ann in 1986, operating as St. Ann-St. George until the merged parish closed in 2003. The diocese sold the 10,000-square-foot church and adjacent 5,000-square-foot parish hall to the Tocci family, longtime local landowners, on October 24, 2007 for $3,200,000, and demolition began within weeks. By February 2008 the church was leveled; the contractor, MRC Contracting, received six Department of Buildings violations for performing unpermitted mechanical demolition next to a public school, and a stop-work order came only after the building was essentially gone. A 33-unit condominium was built on the lot, came to market in 2011 with weak sales blamed on the Farragut Houses across the street, and was converted to rental apartments; NYC property records show the lot (BBL 3000560002) today holds 109 Gold Street, a 7-story, 33-unit elevator building owned by 109 Gold Street Owner LLC. The only recorded community voice is Aldona Vaiciunas of the Vinegar Hill Neighborhood Association, who told Bklynr in 2014 that it was her church, it was never landmarked, and it broke her heart to see it torn down and replaced with a condo. No preservation effort, parish reunion, or recent press about the parish was found.",
+  "developments": [
+    {
+      "date": "2003",
+      "headline": "Parish suppressed by Diocese of Brooklyn after 1986 merger",
+      "detail": "The Diocese of Brooklyn's official chronological parish list records St. George (founded 1909, National-Lithuanian, never had a parochial school) as merged with St. Ann in 1986, known as St. Ann-St. George from 1986 to 2003, with the parish ending in 2003. Sacramental records are held at the Diocesan Archives.",
+      "sources": [
+        {
+          "title": "Chronological List of Brooklyn Parishes and Schools, 1822-2019",
+          "publisher": "Diocese of Brooklyn",
+          "date": "2019",
+          "url": "https://dioceseofbrooklyn.org/wp-content/uploads/2025/05/Chronological-List-of-Brooklyn-Parishes-and-Schools-2019.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2007-10-24",
+      "headline": "Diocese sells church and parish hall to Tocci family for $3.2 million",
+      "detail": "The 10,000-square-foot church at 203 York Street and its adjacent 5,000-square-foot parish hall were purchased from the Roman Catholic Diocese by the Tocci family — who had previously demolished nearby St. Ann's at 251 Front Street in 1992 for a truck parking lot. Workmen on site confirmed the entire structure was being demolished by mid-November 2007.",
+      "sources": [
+        {
+          "title": "In Vinegar Hill, Another Church Biting the Dust",
+          "publisher": "Brownstoner",
+          "date": "2007-11-13",
+          "url": "https://www.brownstoner.com/development/another-church-1/"
+        }
+      ]
+    },
+    {
+      "date": "2008-02",
+      "headline": "Church leveled; contractor cited for illegal mechanical demolition",
+      "detail": "After three months of manual demolition, general contractor MRC Contracting brought in mechanical equipment — prohibited because of the church's proximity to a neighboring public school — and razed the remaining two stories in roughly two days. The Department of Buildings issued a stop-work order and six violations for mechanical demolition without a permit, but by then only a small portion of a brick wall remained.",
+      "sources": [
+        {
+          "title": "St. George's Demo Halted, But the Damage Is Done",
+          "publisher": "Brownstoner",
+          "date": "2008-02-22",
+          "url": "https://www.brownstoner.com/development/final-death-blo/"
+        }
+      ]
+    },
+    {
+      "date": "2011",
+      "headline": "33-unit condominium on the site hits the market, then converts to rentals",
+      "detail": "Per Built Brooklyn's 2015 survey of the neighborhood's lost churches, the developer built a 33-unit condominium complex on the church site; when units came to market in 2011 sales were weak — blamed on the Farragut Houses across the street — and the building was eventually sold and converted to rental apartments. A 2011 Lost City post on Vinegar Hill's new condos noted the adjacent development at 99 Gold Street stood 'right next to the site of the historic St. George's Church, which was callously torn down in 2008.'",
+      "sources": [
+        {
+          "title": "Any Given Sunday",
+          "publisher": "Built Brooklyn",
+          "date": "2015-12-20",
+          "url": "https://www.builtbrooklyn.org/2015/12/20/any-given-sunday/"
+        },
+        {
+          "title": "The Ugly Condo Complexes of Vinegar Hill",
+          "publisher": "Lost City (blog)",
+          "date": "2011-09",
+          "url": "http://lostnewyorkcity.blogspot.com/2011/09/ugly-condo-complexes-of-vinegar-hill.html"
+        }
+      ]
+    },
+    {
+      "date": "2014-12-11",
+      "headline": "Last recorded community voice: 'It was my church and it broke my heart'",
+      "detail": "Aldona Vaiciunas of the Vinegar Hill Neighborhood Association, a Lithuanian-American parishioner, told Bklynr: 'Unfortunately, there was a Lithuanian church on York Street that was knocked down. It was not landmarked. It was my church and it broke my heart to see it go down... They just destroyed it, and replaced it with a condo.'",
+      "sources": [
+        {
+          "title": "Q&A: Aldona Vaiciunas of the Vinegar Hill Neighborhood Association",
+          "publisher": "Bklynr",
+          "date": "2014-12-11",
+          "url": "https://www.bklynr.com/qa-aldona-vaiciunas-of-the-vinegar-hill-neighborhood-association/"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-16",
+      "headline": "Site today: 109 Gold Street, a 33-unit rental building",
+      "detail": "NYC's GeoSearch geocoder resolves 203 York Street to BBL 3000560002, and the city's MapPLUTO record for that lot shows 109 Gold Street: building class D9 (elevator apartments), 7 floors, 33 residential units, owned by 109 Gold Street Owner LLC. Units are actively marketed for rent (studios through penthouses, e.g. $3,650-$4,015/month on Brown Harris Stevens listings), with a fitness center, roof deck, and virtual doorman — no trace or commemoration of the church.",
+      "sources": [
+        {
+          "title": "GeoSearch result for 203 York Street, Brooklyn (BBL 3000560002)",
+          "publisher": "NYC Planning Labs GeoSearch",
+          "date": "2026-07-16",
+          "url": "https://geosearch.planninglabs.nyc/v2/search?text=203%20York%20Street,%20Brooklyn"
+        },
+        {
+          "title": "MapPLUTO record, BBL 3000560002 (109 Gold Street)",
+          "publisher": "NYC Open Data",
+          "date": "2026-07-16",
+          "url": "https://data.cityofnewyork.us/resource/64uk-42ks.json?bbl=3000560002"
+        },
+        {
+          "title": "109 Gold St, Brooklyn, NY 11201 - Apartments for Rent",
+          "publisher": "Apartments.com",
+          "date": "2026",
+          "url": "https://www.apartments.com/109-gold-st-brooklyn-ny/9v58057/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Chronological List of Brooklyn Parishes and Schools, 1822-2019",
+      "publisher": "Diocese of Brooklyn",
+      "date": "2019",
+      "url": "https://dioceseofbrooklyn.org/wp-content/uploads/2025/05/Chronological-List-of-Brooklyn-Parishes-and-Schools-2019.pdf"
+    },
+    {
+      "title": "In Vinegar Hill, Another Church Biting the Dust",
+      "publisher": "Brownstoner",
+      "date": "2007-11-13",
+      "url": "https://www.brownstoner.com/development/another-church-1/"
+    },
+    {
+      "title": "St. George's Demo Halted, But the Damage Is Done",
+      "publisher": "Brownstoner",
+      "date": "2008-02-22",
+      "url": "https://www.brownstoner.com/development/final-death-blo/"
+    },
+    {
+      "title": "Q&A: Aldona Vaiciunas of the Vinegar Hill Neighborhood Association",
+      "publisher": "Bklynr",
+      "date": "2014-12-11",
+      "url": "https://www.bklynr.com/qa-aldona-vaiciunas-of-the-vinegar-hill-neighborhood-association/"
+    },
+    {
+      "title": "Any Given Sunday",
+      "publisher": "Built Brooklyn",
+      "date": "2015-12-20",
+      "url": "https://www.builtbrooklyn.org/2015/12/20/any-given-sunday/"
+    },
+    {
+      "title": "The Ugly Condo Complexes of Vinegar Hill",
+      "publisher": "Lost City (blog)",
+      "date": "2011-09",
+      "url": "http://lostnewyorkcity.blogspot.com/2011/09/ugly-condo-complexes-of-vinegar-hill.html"
+    },
+    {
+      "title": "MapPLUTO record, BBL 3000560002 (109 Gold Street)",
+      "publisher": "NYC Open Data",
+      "date": "2026-07-16",
+      "url": "https://data.cityofnewyork.us/resource/64uk-42ks.json?bbl=3000560002"
+    },
+    {
+      "title": "GeoSearch result for 203 York Street, Brooklyn",
+      "publisher": "NYC Planning Labs GeoSearch",
+      "date": "2026-07-16",
+      "url": "https://geosearch.planninglabs.nyc/v2/search?text=203%20York%20Street,%20Brooklyn"
+    },
+    {
+      "title": "109 Gold St, Brooklyn, NY 11201 - Apartments for Rent",
+      "publisher": "Apartments.com",
+      "date": "2026",
+      "url": "https://www.apartments.com/109-gold-st-brooklyn-ny/9v58057/"
+    },
+    {
+      "title": "Vinegar Hill, Brooklyn",
+      "publisher": "Wikipedia",
+      "date": "2026",
+      "url": "https://en.wikipedia.org/wiki/Vinegar_Hill,_Brooklyn"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "Two refinements to the archive record. (1) Closure date: the archive says \"Closed: 2008,\" but the Diocese of Brooklyn's official parish list shows St. George merged with St. Ann in 1986 (operating as St. Ann-St. George) and the merged parish closed in 2003; 2007-2008 is when the vacant building was sold (Oct 24, 2007, $3.2M to the Tocci family) and demolished. (2) Demolition timing: \"demolished ~2008\" is essentially correct but can be sharpened — demolition began November 2007 and the building was leveled by late February 2008, punctuated by DOB violations for illegal mechanical demolition. The archive note that no photograph could be found online is at least partly outdated: Built Brooklyn's 2015 article describes (and per search excerpts, depicts) the church's \"idiosyncratic stepped façade,\" though I could not load the page directly to confirm images. No contradiction on ownership (diocese_rc) or ending type (diocese closure followed by sale).",
+  "gaps": "Built Brooklyn (builtbrooklyn.org) was unreachable directly (DNS failure); its facts here — the 33-unit condo, weak 2011 sales, rental conversion — come from search-result excerpts of the article, independently corroborated by NYC PLUTO (33 units at 109 Gold Street) and current rental listings. The $3.2M sale price is from Brownstoner's 2007 report, not a deed record. The fate of the church's interior furnishings, statues, and any Lithuanian artifacts is unknown. No preservation campaign, parish reunion, commemoration, or 2020-2026 press coverage was found in searches (English and Lithuanian). One ambiguity flagged: globaltruelithuania.com's New York City page describes a \"St. George's\" Brooklyn church at S. 4th and Roebling Streets closed in 1981 — that location matches Williamsburg (likely a different Lithuanian parish, possibly Our Lady Queen of Angels/Angelų Karalienės, or an error on that page), so it was not used; the York Street identification rests on the diocesan list, Brownstoner, Bklynr, and Wikipedia, all of which confirm the Lithuanian parish at 203 York Street in Vinegar Hill. PLUTO lists \"year built 2008\" for the replacement building while press says units marketed in 2011; city year-built fields are often approximate, so both were reported as sourced."
+}

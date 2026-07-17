@@ -1,0 +1,95 @@
+{
+  "slug": "sv-juozapo-south-chicago-il",
+  "asOf": "2026-07-16",
+  "buildingStatus": "converted",
+  "currentUse": "Parish complex repurposed: the address 8801 S Saginaw Ave is today Casa Esperanza, a transitional housing shelter for homeless women and children run since 1994 by the Society of Helpers; per the Global True Lithuania heritage survey, the small church building itself was absorbed into the McKinley public school complex (originally built in 1953 as the parish school), which that survey describes as itself now closed. The former priest's house reportedly still stands adjacent.",
+  "summary": "St. Joseph's (Šv. Juozapo) Lithuanian parish in South Chicago left a modest physical footprint that survives in altered form. The Global True Lithuania heritage survey describes the small single-floored church at 8801 S Saginaw as closed (it says in 1986) and absorbed into the McKinley public school complex — a school originally built in 1953 as the parish school — which the survey states is itself now closed; it also notes the former priest's house still stands next door, once home to pastor Antanas Petraitis, who kept what was described as Illinois's second-largest telescope and a small animal sanctuary there. The parish address today is occupied by Casa Esperanza, a transitional housing program for homeless women and children founded in 1994 by the Society of Helpers, a Roman Catholic congregation of women religious, in direct response to poverty, homelessness, and domestic violence in South Chicago. Genealogical infrastructure survives: the parish's baptism, marriage, and death registers from 1900-1925 are digitized and freely viewable on FamilySearch.org, per the Lithuanian Catholic Ancestor Search guide, which records the parish as established in 1900 by Lithuanian immigrants with Rev. Michael Peza as first pastor, a rectory built around 1906 at 8801 S Saginaw, the church proper at 8812 S Marquette Ave, and a new church built in 1949. No recent press, diocesan announcements, preservation campaigns, or reunion activity for this parish was found.",
+  "developments": [
+    {
+      "date": "1986",
+      "headline": "Church closed; building absorbed into McKinley public school complex",
+      "detail": "The Global True Lithuania survey of Lithuanian heritage sites states the small single-floored St. Joseph Lithuanian church at 8801 S Saginaw 'has been closed in 1986, became part of McKinley public school (itself built in 1953 as parish school) that is now closed.' It adds that the former priest's house stands next to it, where pastor Antanas Petraitis kept Illinois's second-largest telescope and a small animal sanctuary. Note: the closure year conflicts with the archive record's 1987.",
+      "sources": [
+        {
+          "title": "Chicago, Illinois: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania (Augustinas Žemaitis)",
+          "date": "undated (accessed 2026-07-16)",
+          "url": "https://global.truelithuania.com/chicago-illinois-45/"
+        }
+      ]
+    },
+    {
+      "date": "1994",
+      "headline": "Casa Esperanza transitional shelter established at the parish address",
+      "detail": "The Society of Helpers, a Roman Catholic congregation of women religious, established Casa Esperanza, a transitional housing program for homeless women and children, at 8801 S Saginaw Ave — the address the historical record associates with the parish rectory (built c. 1906). The Society's site says Casa Esperanza 'has been helping women achieve self-sufficient lifestyles since 1994,' and Casa Esperanza's own site confirms it was 'Established by the Society of Helpers' and lists its address as 8801 S Saginaw Avenue, Chicago, IL 60617-2427. Which specific parish building it occupies is not stated on either site.",
+      "sources": [
+        {
+          "title": "Sponsored Ministries",
+          "publisher": "Society of Helpers (helpers.org)",
+          "date": "undated (accessed 2026-07-16)",
+          "url": "https://helpers.org/sponsored-ministries/"
+        },
+        {
+          "title": "Casa Esperanza — A Time, A Place, A Program For Homeless Women and Children",
+          "publisher": "Casa Esperanza",
+          "date": "undated (accessed 2026-07-16)",
+          "url": "https://casaesperanzachicago.org/"
+        },
+        {
+          "title": "Contact — Casa Esperanza",
+          "publisher": "Casa Esperanza",
+          "date": "undated (accessed 2026-07-16)",
+          "url": "https://casaesperanzachicago.org/contact/"
+        }
+      ]
+    },
+    {
+      "date": "undated",
+      "headline": "Parish sacramental registers 1900-1925 digitized and freely available online",
+      "detail": "The Lithuanian Catholic Ancestor Search research guide documents the parish (established 1900 by Lithuanian immigrants, first pastor Rev. Michael Peza; Rev. Anthony Petraitis pastor 1905-1931; church at 8812 S Marquette Ave, rectory c. 1906 at 8801 S Saginaw Ave; new church built 1949) and notes its baptism, marriage, and death registers from 1900-1925 are viewable free on FamilySearch.org.",
+      "sources": [
+        {
+          "title": "St. Joseph (Lith.) RC Parish Registers Online (1900-1925)",
+          "publisher": "Lithuanian Catholic Ancestor Search",
+          "date": "undated (accessed 2026-07-16)",
+          "url": "https://www.lithuaniancatholicancestorsearch.com/st.-joseph--lith--parish.html"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Chicago, Illinois: Lithuanians and Lithuanian heritage",
+      "publisher": "Global True Lithuania (Augustinas Žemaitis)",
+      "date": "undated (accessed 2026-07-16)",
+      "url": "https://global.truelithuania.com/chicago-illinois-45/"
+    },
+    {
+      "title": "St. Joseph (Lith.) RC Parish Registers Online (1900-1925)",
+      "publisher": "Lithuanian Catholic Ancestor Search",
+      "date": "undated (accessed 2026-07-16)",
+      "url": "https://www.lithuaniancatholicancestorsearch.com/st.-joseph--lith--parish.html"
+    },
+    {
+      "title": "Casa Esperanza — A Time, A Place, A Program For Homeless Women and Children",
+      "publisher": "Casa Esperanza",
+      "date": "undated (accessed 2026-07-16)",
+      "url": "https://casaesperanzachicago.org/"
+    },
+    {
+      "title": "Contact — Casa Esperanza",
+      "publisher": "Casa Esperanza",
+      "date": "undated (accessed 2026-07-16)",
+      "url": "https://casaesperanzachicago.org/contact/"
+    },
+    {
+      "title": "Sponsored Ministries",
+      "publisher": "Society of Helpers (helpers.org)",
+      "date": "undated (accessed 2026-07-16)",
+      "url": "https://helpers.org/sponsored-ministries/"
+    }
+  ],
+  "confidence": "probable",
+  "conflictsWithArchiveRecord": "Two conflicts/refinements. (1) Closure year: the archive record says 1987; Global True Lithuania says the church \"has been closed in 1986.\" I could not reach an authoritative diocesan source to adjudicate — the Archdiocese of Chicago archives' Closed Parishes PDF is behind a Cloudflare block. (2) Neighborhood: the archive note says \"East Side,\" but the parish complex (8801 S Saginaw Ave / 8812 S Marquette Ave, ZIP 60617, west of the Calumet River) sits in the South Chicago community area, and Global True Lithuania lists it under South Chicago; \"East Side\" appears to be an imprecision in the archive note. The founding year 1900 is corroborated (Lithuanian Catholic Ancestor Search: established 1900, first pastor Rev. Michael Peza). The archive's \"second-oldest Lithuanian church in Chicago\" claim was neither confirmed nor contradicted by any source I opened. The archive's ethnic-succession framing (parishioners became Spanish-speaking) is consistent with the site's later use — Casa Esperanza serves the now largely Hispanic South Chicago community — but no opened source states the succession explicitly.",
+  "gaps": "Address ambiguity unresolved: Global True Lithuania places the church itself at 8801 S Saginaw, while the Lithuanian Catholic Ancestor Search guide puts the church at 8812 S Marquette Ave and the rectory at 8801 S Saginaw — so it is unclear whether Casa Esperanza occupies the former rectory, convent, or another parish building, and whether the church building proper survives inside the former school complex; neither Casa Esperanza's nor the Society of Helpers' site mentions the building's parish origins. The current physical condition of the church building and the reportedly closed McKinley school complex could not be verified with any dated recent source (the Global True Lithuania survey is undated, likely a 2010s site visit). No sale price, buyer, or transaction year for the property was found in any opened source. The Archdiocese of Chicago archives PDF listing closed parishes returned HTTP 403/Cloudflare and could not be read; the Southeast Chicago Archive & Storytelling Project churches PDF downloaded but is a scanned image file with no extractable text. Searches of ChicagoAncestors.org (JavaScript-only site), Chicago Tribune-oriented queries, Lithuanian-language queries (\"Šv. Juozapo parapija South Chicago\"), and CPS school-closure queries for a McKinley school near 88th/Saginaw all returned nothing usable. No recent press, diocesan announcements, preservation efforts, or parish reunions were found for this parish."
+}
