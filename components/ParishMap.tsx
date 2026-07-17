@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import mapData from "@/data/map.json";
+import candData from "@/data/candidates/map.json";
 import { MarkShape, MarkIcon } from "@/components/marks";
 import {
   usParishes,
@@ -25,6 +26,7 @@ const NE_STATES = new Set(["ME", "NH", "VT", "MA", "RI", "CT", "NY", "NJ", "PA",
 
 type View = { x: number; y: number; w: number; h: number };
 type Phase = "future" | "active" | "lost";
+type Candidate = (typeof candData.points)[number];
 
 function clampView(v: View): View {
   const w = Math.min(Math.max(v.w, FULL.w / MAX_ZOOM), FULL.w);
@@ -46,9 +48,17 @@ function phaseAt(p: Parish, year: number): Phase {
   return "active";
 }
 
+function candPhaseAt(c: Candidate, year: number): Phase {
+  if (!c.foundedYear || c.foundedYear > year) return "future";
+  if (c.closedYear && c.closedYear <= year) return "lost";
+  return "active";
+}
+
 export default function ParishMap() {
   const router = useRouter();
   const [hovered, setHovered] = useState<Parish | null>(null);
+  const [hoveredCand, setHoveredCand] = useState<Candidate | null>(null);
+  const [showCand, setShowCand] = useState(false);
   const [view, setView] = useState<View>(FULL);
   const [year, setYear] = useState<number | null>(null); // null = show all
   const [playing, setPlaying] = useState(false);
@@ -195,6 +205,33 @@ export default function ParishMap() {
             strokeOpacity={0.15}
             strokeWidth={0.7 / zoom}
           />
+          {showCand &&
+            candData.points.map((c) => {
+              if (timelineMode && year !== null) {
+                if (candPhaseAt(c, year) === "future") return null;
+              }
+              const active = hoveredCand?.id === c.id;
+              return (
+                <circle
+                  key={c.id}
+                  cx={c.x}
+                  cy={c.y}
+                  r={active ? markR * 1.15 : markR * 0.8}
+                  fill="none"
+                  stroke="var(--foreground)"
+                  strokeOpacity={active ? 0.8 : 0.45}
+                  strokeWidth={markR * 0.24}
+                  strokeDasharray={`${markR * 0.5} ${markR * 0.38}`}
+                  tabIndex={0}
+                  aria-label={`${c.nameEn}, ${c.city} ${c.state} — unverified historical candidate.`}
+                  onMouseEnter={() => setHoveredCand(c)}
+                  onMouseLeave={() => setHoveredCand(null)}
+                  onFocus={() => setHoveredCand(c)}
+                  onBlur={() => setHoveredCand(null)}
+                  className="focus:outline-none"
+                />
+              );
+            })}
           {mapData.points.map((pt) => {
             const parish = bySlug.get(pt.slug);
             if (!parish) return null;
@@ -315,6 +352,43 @@ export default function ParishMap() {
             );
           })()}
 
+        {hoveredCand &&
+          !hovered &&
+          (() => {
+            const lx = ((hoveredCand.x - view.x) / view.w) * 100;
+            const ly = ((hoveredCand.y - view.y) / view.h) * 100;
+            if (lx < -2 || lx > 102 || ly < -2 || ly > 102) return null;
+            const below = ly < 32;
+            return (
+              <div
+                className="pointer-events-none absolute z-10 w-64 rounded-lg border border-dashed border-rule bg-background/95 px-3.5 py-2.5 text-sm shadow-lg"
+                style={{
+                  left: `${Math.min(Math.max(lx, 15), 85)}%`,
+                  top: `${ly}%`,
+                  transform: below
+                    ? "translate(-50%, 16px)"
+                    : "translate(-50%, calc(-100% - 16px))",
+                }}
+                aria-live="polite"
+              >
+                <div className="font-serif font-semibold">
+                  {hoveredCand.nameEn}
+                </div>
+                <div className="text-muted">
+                  {hoveredCand.city}, {hoveredCand.state}
+                  {hoveredCand.foundedYear
+                    ? ` · founded ${hoveredCand.foundedYear}`
+                    : ""}
+                  {hoveredCand.closedYear ? `, ${hoveredCand.closedYear}` : ""}
+                </div>
+                <div className="text-muted mt-1 italic">
+                  Unverified historical candidate — being researched for the
+                  record.
+                </div>
+              </div>
+            );
+          })()}
+
         {timelineMode && (
           <div className="absolute left-2 bottom-2 rounded-lg bg-background/90 border border-rule px-3 py-2">
             <div className="font-serif text-2xl font-semibold tabular-nums">{year}</div>
@@ -408,7 +482,31 @@ export default function ParishMap() {
         )}
       </div>
 
-      <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+      <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+        <label className="inline-flex items-center gap-1.5 cursor-pointer text-muted hover:text-foreground transition-colors">
+          <input
+            type="checkbox"
+            checked={showCand}
+            onChange={(e) => {
+              setShowCand(e.target.checked);
+              if (!e.target.checked) setHoveredCand(null);
+            }}
+            className="accent-[var(--mark-closed)]"
+          />
+          <svg width={14} height={14} viewBox="0 0 14 14" aria-hidden>
+            <circle
+              cx={7}
+              cy={7}
+              r={5}
+              fill="none"
+              stroke="var(--foreground)"
+              strokeOpacity={0.5}
+              strokeWidth={1.4}
+              strokeDasharray="2.4 1.8"
+            />
+          </svg>
+          Historical candidates ({candData.points.length}) — unverified
+        </label>
         {timelineMode ? (
           <>
             <span className="inline-flex items-center gap-1.5">

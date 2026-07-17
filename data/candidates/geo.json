@@ -1,0 +1,308 @@
+{
+  "Akron|OH": {
+    "lat": 41.083064,
+    "lon": -81.518485,
+    "source": "nominatim",
+    "place": "Akron, Summit County, Ohio, United States"
+  },
+  "Albany|NY": {
+    "lat": 42.6511674,
+    "lon": -73.754968,
+    "source": "nominatim",
+    "place": "City of Albany, Albany County, New York, United States"
+  },
+  "Athol|MA": {
+    "lat": 42.594001,
+    "lon": -72.2268141,
+    "source": "nominatim",
+    "place": "Athol, Worcester County, Massachusetts, 01331, United States"
+  },
+  "Baltimore|MD": {
+    "lat": 39.2908816,
+    "lon": -76.610759,
+    "source": "geo.json",
+    "place": "Baltimore, Maryland, United States"
+  },
+  "Bentleyville|PA": {
+    "lat": 40.1167387,
+    "lon": -80.0083855,
+    "source": "nominatim",
+    "place": "Bentleyville, Washington County, Pennsylvania, United States"
+  },
+  "Binghamton|NY": {
+    "lat": 42.098698,
+    "lon": -75.9125187,
+    "source": "nominatim",
+    "place": "City of Binghamton, Broome County, New York, 13905, United States"
+  },
+  "Braddock|PA": {
+    "lat": 40.4034024,
+    "lon": -79.8683824,
+    "source": "nominatim",
+    "place": "Braddock, Allegheny County, Pennsylvania, United States"
+  },
+  "Bridgeville|PA": {
+    "lat": 40.3561805,
+    "lon": -80.1100556,
+    "source": "nominatim",
+    "place": "Bridgeville, Allegheny County, Pennsylvania, United States"
+  },
+  "Chester|PA": {
+    "lat": 39.8496,
+    "lon": -75.3557,
+    "source": "manual",
+    "place": "Chester, Delaware County, Pennsylvania (Nominatim returned Chester County; corrected by hand)"
+  },
+  "Chicago (Roseland)|IL": {
+    "lat": 41.7170047,
+    "lon": -87.6095326,
+    "source": "nominatim",
+    "place": "Chicago State University, 9501, South Doctor Martin Luther King Junior Drive, Roseland Heights, Roseland, Chicago, Hyde Park Township, Cook County, Illinois, 60628, United States"
+  },
+  "Chicago (West Pullman)|IL": {
+    "lat": 41.676336,
+    "lon": -87.6230113,
+    "source": "nominatim",
+    "place": "Chicago Fire Department Engine Company 75, 11958, South State Street, Cookes Subdivision, West Pullman, Chicago, Lake Township, Cook County, Illinois, 60628, United States"
+  },
+  "Chicago Heights|IL": {
+    "lat": 41.5062834,
+    "lon": -87.6357079,
+    "source": "nominatim",
+    "place": "Chicago Heights, Bloom Township, Cook County, Illinois, 60411, United States"
+  },
+  "Detroit|MI": {
+    "lat": 42.3315509,
+    "lon": -83.0466403,
+    "source": "geo.json",
+    "place": "Detroit, Wayne County, Michigan, United States"
+  },
+  "Donora|PA": {
+    "lat": 40.178582,
+    "lon": -79.8561687,
+    "source": "nominatim",
+    "place": "Donora, Washington County, Pennsylvania, 15033, United States"
+  },
+  "Duryea|PA": {
+    "lat": 41.347817,
+    "lon": -75.7564267,
+    "source": "nominatim",
+    "place": "Duryea, Luzerne County, Pennsylvania, 18642, United States"
+  },
+  "East Vandergrift|PA": {
+    "lat": 40.5981212,
+    "lon": -79.5611555,
+    "source": "nominatim",
+    "place": "East Vandergrift, Westmoreland County, Pennsylvania, 15629, United States"
+  },
+  "Eynon|PA": {
+    "lat": 41.4956364,
+    "lon": -75.5743534,
+    "source": "nominatim",
+    "place": "Eynon, Archbald, Lackawanna County, Pennsylvania, 18403, United States"
+  },
+  "Forest City|PA": {
+    "lat": 41.6514722,
+    "lon": -75.4665719,
+    "source": "nominatim",
+    "place": "Forest City, Susquehanna County, Pennsylvania, 18421, United States"
+  },
+  "Harrison|NJ": {
+    "lat": 40.7464901,
+    "lon": -74.1562551,
+    "source": "nominatim",
+    "place": "Harrison, Hudson County, New Jersey, 07029, United States"
+  },
+  "Hazleton|PA": {
+    "lat": 40.9548956,
+    "lon": -75.9769572,
+    "source": "nominatim",
+    "place": "Hazleton, Luzerne County, Pennsylvania, 18201, United States"
+  },
+  "Homestead|PA": {
+    "lat": 40.4059025,
+    "lon": -79.9119948,
+    "source": "nominatim",
+    "place": "Homestead, Allegheny County, Pennsylvania, United States"
+  },
+  "Jersey City|NJ": {
+    "lat": 40.7215682,
+    "lon": -74.047455,
+    "source": "nominatim",
+    "place": "Jersey City, Hudson County, New Jersey, United States"
+  },
+  "Kenosha|WI": {
+    "lat": 42.5846773,
+    "lon": -87.8212263,
+    "source": "nominatim",
+    "place": "Kenosha, Kenosha County, Wisconsin, United States"
+  },
+  "Kewanee|IL": {
+    "lat": 41.2455927,
+    "lon": -89.9248303,
+    "source": "nominatim",
+    "place": "Kewanee, Henry County, Illinois, 61443, United States"
+  },
+  "Lowell|MA": {
+    "lat": 42.6414437,
+    "lon": -71.3085329,
+    "source": "nominatim",
+    "place": "Lowell, Middlesex County, Massachusetts, United States"
+  },
+  "Mahanoy City|PA": {
+    "lat": 40.8125881,
+    "lon": -76.1416034,
+    "source": "nominatim",
+    "place": "Mahanoy City, Schuylkill County, Pennsylvania, 17948, United States"
+  },
+  "McAdoo|PA": {
+    "lat": 40.9021528,
+    "lon": -75.993707,
+    "source": "nominatim",
+    "place": "McAdoo, Schuylkill County, Pennsylvania, 18237, United States"
+  },
+  "Middleport|PA": {
+    "lat": 40.7295342,
+    "lon": -76.0854908,
+    "source": "nominatim",
+    "place": "Middleport, Schuylkill County, Pennsylvania, 17953, United States"
+  },
+  "Milwaukee|WI": {
+    "lat": 43.0386475,
+    "lon": -87.9090751,
+    "source": "nominatim",
+    "place": "Milwaukee, Milwaukee County, Wisconsin, United States"
+  },
+  "Minersville|PA": {
+    "lat": 40.6906451,
+    "lon": -76.2621697,
+    "source": "nominatim",
+    "place": "Minersville, Schuylkill County, Pennsylvania, 17954, United States"
+  },
+  "Naugatuck|CT": {
+    "lat": 41.4907561,
+    "lon": -73.0556562,
+    "source": "nominatim",
+    "place": "Naugatuck, Naugatuck Valley Planning Region, Connecticut, 06770, United States"
+  },
+  "New Philadelphia|PA": {
+    "lat": 40.7195342,
+    "lon": -76.1157708,
+    "source": "nominatim",
+    "place": "New Philadelphia, Schuylkill County, Pennsylvania, 17959, United States"
+  },
+  "Oak Lawn|IL": {
+    "lat": 41.7108662,
+    "lon": -87.7581081,
+    "source": "nominatim",
+    "place": "Oak Lawn, Worth Township, Cook County, Illinois, 60453, United States"
+  },
+  "Port Washington|WI": {
+    "lat": 43.3885538,
+    "lon": -87.8692845,
+    "source": "nominatim",
+    "place": "Port Washington, Ozaukee County, Wisconsin, 53074, United States"
+  },
+  "Racine|WI": {
+    "lat": 42.7313756,
+    "lon": -87.7834769,
+    "source": "nominatim",
+    "place": "Racine, Racine County, Wisconsin, United States"
+  },
+  "Rockford|IL": {
+    "lat": 42.2713945,
+    "lon": -89.093966,
+    "source": "nominatim",
+    "place": "Rockford, Rockford Township, Winnebago County, Illinois, United States"
+  },
+  "Saginaw|MI": {
+    "lat": 43.4200387,
+    "lon": -83.9490365,
+    "source": "nominatim",
+    "place": "Saginaw, Carrollton Township, Saginaw County, Michigan, United States"
+  },
+  "Schenectady|NY": {
+    "lat": 42.8142432,
+    "lon": -73.9395687,
+    "source": "nominatim",
+    "place": "City of Schenectady, Schenectady County, New York, United States"
+  },
+  "Shamokin|PA": {
+    "lat": 40.7887609,
+    "lon": -76.5585175,
+    "source": "nominatim",
+    "place": "Shamokin, Northumberland County, Pennsylvania, 17872, United States"
+  },
+  "Sheboygan|WI": {
+    "lat": 43.7128967,
+    "lon": -87.9370433,
+    "source": "nominatim",
+    "place": "Sheboygan County, Wisconsin, United States"
+  },
+  "Springfield|IL": {
+    "lat": 39.7990175,
+    "lon": -89.6439575,
+    "source": "nominatim",
+    "place": "Springfield, Sangamon County, Illinois, United States"
+  },
+  "St. Clair|PA": {
+    "lat": 40.7207964,
+    "lon": -76.1911314,
+    "source": "nominatim",
+    "place": "St. Clair, Schuylkill County, Pennsylvania, 17970, United States"
+  },
+  "St. Louis|MO": {
+    "lat": 38.6254063,
+    "lon": -90.190009,
+    "source": "nominatim",
+    "place": "Saint Louis, Missouri, United States"
+  },
+  "St. Pete Beach|FL": {
+    "lat": 27.7253065,
+    "lon": -82.741212,
+    "source": "nominatim",
+    "place": "Saint Pete Beach, Pinellas County, Florida, 33706, United States"
+  },
+  "Sugar Notch|PA": {
+    "lat": 41.1970266,
+    "lon": -75.9282538,
+    "source": "nominatim",
+    "place": "Sugar Notch Borough, Luzerne County, Pennsylvania, United States"
+  },
+  "Tamaqua|PA": {
+    "lat": 40.7974296,
+    "lon": -75.9696186,
+    "source": "nominatim",
+    "place": "Tamaqua, Schuylkill County, Pennsylvania, 18252, United States"
+  },
+  "Utica|NY": {
+    "lat": 43.1009031,
+    "lon": -75.2326641,
+    "source": "nominatim",
+    "place": "City of Utica, Oneida County, New York, United States"
+  },
+  "Wanamie|PA": {
+    "lat": 41.1734158,
+    "lon": -76.0354803,
+    "source": "nominatim",
+    "place": "Wanamie, Newport Township, Luzerne County, Pennsylvania, 18617, United States"
+  },
+  "Waterbury|CT": {
+    "lat": 41.5539066,
+    "lon": -73.0438067,
+    "source": "geo.json",
+    "place": "Waterbury, Naugatuck Valley Planning Region, Connecticut, United States"
+  },
+  "Westfield|MA": {
+    "lat": 42.1205411,
+    "lon": -72.7489158,
+    "source": "nominatim",
+    "place": "Westfield, Hampden County, Massachusetts, United States"
+  },
+  "Youngstown|OH": {
+    "lat": 41.1035786,
+    "lon": -80.6520161,
+    "source": "nominatim",
+    "place": "Youngstown, Mahoning County, Ohio, United States"
+  }
+}
