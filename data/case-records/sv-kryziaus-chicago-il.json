@@ -1,0 +1,126 @@
+{
+  "slug": "sv-kryziaus-chicago-il",
+  "asOf": "2026-07-16",
+  "buildingStatus": "standing",
+  "currentUse": "Active Catholic worship site (\"Holy Cross Church,\" 1740 W. 46th St.) of St. Oscar Romero Parish, Archdiocese of Chicago, with one Sunday Spanish-language Mass at 10:30 a.m.; the surrounding congregation is now predominantly Latino/Mexican-American.",
+  "summary": "Holy Cross Church still stands at 46th and Wood/Hermitage in Back of the Yards and remains in weekly religious use. Following the November 9, 2020 Renew My Church announcement, the Holy Cross/Immaculate Heart of Mary parish was united with St. Joseph and St. Michael the Archangel effective July 1, 2021, with St. Joseph designated the parish church; the combined parish now operates as St. Oscar Romero Parish (office at 4821 S. Hermitage Ave.), led by pastor Rev. Jose Del Carmen Mendez. Holy Cross is one of the parish's four worship sites, hosting a single Sunday Spanish Mass at 10:30 a.m. The building was never sold or demolished — Preservation Chicago flagged it in its 2021 \"Most Endangered\" listing of Chicago's Roman Catholic churches, warning that the reduction to a \"Sunday worship center\" left it with \"an uncertain future,\" but no demolition plan has surfaced in the record found. Lithuanian heritage survives in the fabric (Columns of Gediminas on the pediment, the \"Lietuvių Rymo katalikų bažnyčia\" inscription, Hill of Crosses and Gates of Dawn imagery inside), though Lithuanian Masses ended in the early 2000s per Global True Lithuania. As of December 2025–April 2026 reporting, the St. Oscar Romero parish community was actively organizing to support parishioners affected by federal immigration enforcement, confirming the parish and its worship sites remain a living community anchor.",
+  "developments": [
+    {
+      "date": "2020-11-09",
+      "headline": "Archdiocese announces Back of the Yards consolidation",
+      "detail": "The Archdiocese of Chicago announced that Holy Cross/Immaculate Heart of Mary (4541 S. Wood St.), St. Joseph (1723 W. 48th St.) and St. Michael the Archangel (4825 S. Damen Ave.) would unite as one new parish effective July 1 (2021) under Renew My Church, with St. Joseph as the designated parish church; Immaculate Heart of Mary would stop regular services. Cardinal Blase Cupich made the decision after commission review.",
+      "sources": [
+        {
+          "title": "3 Back Of The Yards Churches Will Become 1 Parish As Archdiocese Announces Closures",
+          "publisher": "Block Club Chicago",
+          "date": "2020-11-10",
+          "url": "https://blockclubchicago.org/2020/11/10/3-back-of-the-yards-churches-will-become-1-parish-as-archdiocese-announces-closures/"
+        }
+      ]
+    },
+    {
+      "date": "2021",
+      "headline": "Preservation Chicago lists Holy Cross among endangered Catholic churches",
+      "detail": "Preservation Chicago's 2021 Most Endangered listing for Chicago's Roman Catholic churches noted that after consolidation Holy Cross would be a 'Sunday worship center' with 'an uncertain future,' and argued the 1913-15 Joseph Molitor baroque church with twin copper-clad cupolas should continue serving the community.",
+      "sources": [
+        {
+          "title": "Roman Catholic Churches – 2021 Most Endangered",
+          "publisher": "Preservation Chicago",
+          "date": "2021",
+          "url": "https://www.preservationchicago.org/roman-catholic-churches/"
+        }
+      ]
+    },
+    {
+      "date": "2021-07-01",
+      "headline": "Merged parish becomes St. Oscar Romero Parish; Holy Cross retained as worship site",
+      "detail": "The 2021 union (initially 'Holy Cross and SS. Mary, Joseph, and Michael Parish' per Wikipedia) now operates as St. Oscar Romero Parish — 'One Community, four worship sites': St. Joseph, Holy Cross, Immaculate Heart of Mary, and St. Michael. Holy Cross (1740 W. 46th St.) hosts Sunday Spanish Mass at 10:30 a.m.",
+      "sources": [
+        {
+          "title": "Holy Cross Church (Chicago)",
+          "publisher": "Wikipedia",
+          "date": "accessed 2026-07-16",
+          "url": "https://en.wikipedia.org/wiki/Holy_Cross_Church_(Chicago)"
+        },
+        {
+          "title": "St. Oscar Romero Parish — Home",
+          "publisher": "St. Oscar Romero Parish (stoscarromerochicago.org)",
+          "date": "accessed 2026-07-16",
+          "url": "https://www.stoscarromerochicago.org/"
+        },
+        {
+          "title": "Mass Schedule",
+          "publisher": "St. Oscar Romero Parish (stoscarromerochicago.org)",
+          "date": "accessed 2026-07-16",
+          "url": "https://www.stoscarromerochicago.org/mass-schedule.html"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-05",
+      "headline": "Parish community documented as active amid immigration enforcement crisis",
+      "detail": "Block Club Chicago/City Bureau reporting (December 2025 reporting, published April 5, 2026) on St. Oscar Romero Parish describes the Back of the Yards faith community — including the Holy Cross-Immaculate Heart of Mary and St. Michael worship sites merged into the parish in 2021 — organizing support for parishioners detained in federal immigration operations, confirming the parish remains an active neighborhood institution.",
+      "sources": [
+        {
+          "title": "1 Church, 2 Realities: How Back Of The Yards Parishioners Found Faith In The Face Of ICE",
+          "publisher": "Block Club Chicago / City Bureau",
+          "date": "2026-04-05",
+          "url": "https://blockclubchicago.org/2026/04/05/1-church-2-realities-how-back-of-the-yards-parishioners-found-faith-in-the-face-of-ice/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Holy Cross Church (Chicago)",
+      "publisher": "Wikipedia",
+      "date": "accessed 2026-07-16",
+      "url": "https://en.wikipedia.org/wiki/Holy_Cross_Church_(Chicago)"
+    },
+    {
+      "title": "3 Back Of The Yards Churches Will Become 1 Parish As Archdiocese Announces Closures",
+      "publisher": "Block Club Chicago",
+      "date": "2020-11-10",
+      "url": "https://blockclubchicago.org/2020/11/10/3-back-of-the-yards-churches-will-become-1-parish-as-archdiocese-announces-closures/"
+    },
+    {
+      "title": "Roman Catholic Churches – 2021 Most Endangered",
+      "publisher": "Preservation Chicago",
+      "date": "2021",
+      "url": "https://www.preservationchicago.org/roman-catholic-churches/"
+    },
+    {
+      "title": "St. Oscar Romero Parish — Home (One Community, four worship sites)",
+      "publisher": "St. Oscar Romero Parish",
+      "date": "accessed 2026-07-16",
+      "url": "https://www.stoscarromerochicago.org/"
+    },
+    {
+      "title": "St. Oscar Romero Parish — Mass Schedule",
+      "publisher": "St. Oscar Romero Parish",
+      "date": "accessed 2026-07-16",
+      "url": "https://www.stoscarromerochicago.org/mass-schedule.html"
+    },
+    {
+      "title": "St. Oscar Romero Parish — Staff Directory",
+      "publisher": "St. Oscar Romero Parish",
+      "date": "accessed 2026-07-16",
+      "url": "https://www.stoscarromerochicago.org/staff-directory1.html"
+    },
+    {
+      "title": "1 Church, 2 Realities: How Back Of The Yards Parishioners Found Faith In The Face Of ICE",
+      "publisher": "Block Club Chicago / City Bureau",
+      "date": "2026-04-05",
+      "url": "https://blockclubchicago.org/2026/04/05/1-church-2-realities-how-back-of-the-yards-parishioners-found-faith-in-the-face-of-ice/"
+    },
+    {
+      "title": "Chicago, Illinois: Lithuanians and Lithuanian heritage",
+      "publisher": "Global True Lithuania",
+      "date": "accessed 2026-07-16",
+      "url": "https://global.truelithuania.com/chicago-illinois-45/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "Mostly consistent, with two refinements. (1) \"Under demolition threat\": no source found showing an actual demolition plan, permit, or archdiocesan proposal to raze the building. The documented threat is Preservation Chicago's 2021 Most Endangered designation, which warned the downgrade to a \"Sunday worship center\" left the building with \"an uncertain future.\" The building is standing and in weekly liturgical use as of the parish's current published schedule, so \"demolition threat\" should be softened to \"endangered/uncertain future.\" (2) Closure dating: the public consolidation announcement was Nov 9-10, 2020, with the parish union effective July 1, 2021; I could not directly verify the Dec 10, 2020 Cupich decree (archchicago.org blocked automated access), but the timeline is consistent with a canonical decree following the November announcement. Identity check: this is confirmed as the Lithuanian Holy Cross at 46th/Wood-Hermitage in Back of the Yards (founded 1904, Joseph Molitor building) — supporting the \"probable single parish\" resolution of the D1/D4 duplicate flag. Caution: an unrelated Episcopal \"Church of the Holy Cross\" in the Diocese of Chicago also closed recently (final service Nov 2024 per search results) — do not conflate. Note also Global True Lithuania states the Lithuanian character effectively ended earlier (Lithuanian Mass ceased ~2002-2005; parish merged with Immaculate Heart of Mary in the 1980s), which refines but does not contradict the 2020 canonical extinguishment.",
+  "gaps": "Could not access the Archdiocese of Chicago decrees page (HTTP 403) to verify the exact Dec 10, 2020 decree text or any subsequent church-relegation decree affecting the Holy Cross building. No sale of the property was found and none appears to have occurred — title seemingly remains with the parish/archdiocese — so no buyer or price applies, but I could not independently confirm current property ownership via county records. No recent (post-2021) engineering/condition reports, repair-cost figures, or formal preservation campaigns specific to Holy Cross were found; Global True Lithuania describes the building as \"quite neglected\" but the page is undated. No evidence found of Lithuanian community reunions, commemorations, or Lithuanian-language events at Holy Cross since the early-2000s end of Lithuanian Masses. Searched in English and Lithuanian (Šv. Kryžiaus / Holy Cross, Back of the Yards / Town of Lake, demolition/sale/preservation, 2023-2026)."
+}

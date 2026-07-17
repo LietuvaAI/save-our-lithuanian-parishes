@@ -1,0 +1,101 @@
+{
+  "slug": "sv-andriejaus-philadelphia-pa",
+  "asOf": "2026-07-16",
+  "buildingStatus": "standing",
+  "currentUse": "Active Roman Catholic parish church of the Archdiocese of Philadelphia; Sunday Mass in Lithuanian and English at 11:00 AM, with the Vincas Krėvė Lithuanian Sunday school operating on parish premises and a second worship site (former St. Casimir Lithuanian Church, 4th & Wharton Sts.) offering a 9:00 AM English Mass.",
+  "summary": "St. Andrew Lithuanian Parish remains an open, active personal parish of the Archdiocese of Philadelphia, worshipping at its neo-Romanesque church at 19th & Wallace Streets (Fairmount), with Sunday Mass at 11:00 AM in Lithuanian and English and a 9:00 AM English Mass at its worship site, the former St. Casimir Lithuanian Church at 4th & Wharton Streets (merged into St. Andrew in 2011). Rev. Gerald Dennis Gill, rector of the nearby Cathedral Basilica, serves as Parochial Administrator, with parish correspondence routed through the Cathedral Parish Office at 1723 Race Street. The parish celebrated its centennial on April 21, 2024. Its separately standing rectory at 1913-15 Wallace Street was sold for $1.2 million and converted by developer Baker Street Partners into 12 rental apartments, with proceeds invested to sustain parish operations under new Finance and Pastoral committees established by Fr. Gill. A January 2026 Draugas report describes a lively parish: roughly 40 children in the Vincas Krėvė Lithuanian Sunday school, monthly youth Masses celebrated by Fr. Jonas Puodžiūnas from Washington, and a new 700-pound metal cross funded by the community. The same report states the archdiocese under Archbishop Nelson Perez has expressed no desire to close any Philadelphia parish, citing that roughly 40% of parishioners disappear when a parish closes.",
+  "developments": [
+    {
+      "date": "2024-04-21",
+      "headline": "Parish celebrates its centennial",
+      "detail": "The official parish website lists 'Parish Centennial • April 21, 2024' and links a Diamond/centennial anniversary booklet (PDF dated October 2025 on the site), marking 100 years since the parish's 1924 founding.",
+      "sources": [
+        {
+          "title": "Saint Andrew Lithuanian Parish (official parish website)",
+          "publisher": "Saint Andrew Lithuanian Parish",
+          "date": "2026-07-16 (accessed)",
+          "url": "https://saintandrewlithuanianparish.org/"
+        }
+      ]
+    },
+    {
+      "date": "2022-2024 (approx.)",
+      "headline": "Rectory sold for $1.2M and converted to 12 apartments",
+      "detail": "The former rectory at 1913-15 Wallace Street was sold — Draugas (Jan 2026) reports $1.2 million 'two years ago,' while Global True Lithuania dates the sale to ~2022. It was renovated by Baker Street Partners into 12 residential units (studios, 1BR, 2BR) renting around $2,000/month; Draugas reports proceeds were invested to sustain parish operations. The church building itself was not sold. The parish website confirms the former St. Andrew and St. Casimir rectory phone lines are out of service, with mail routed via the Cathedral Parish Office.",
+      "sources": [
+        {
+          "title": "Švento Andriejaus parapijoje Philadelphijoje verda gyvenimas",
+          "publisher": "Draugas",
+          "date": "2026-01-09",
+          "url": "https://www.draugas.org/svento-andriejaus-parapijoje-philadelphijoje-verda-gyvenimas/"
+        },
+        {
+          "title": "1913-15 Wallace Street",
+          "publisher": "OCF Realty",
+          "date": "2026-07-16 (accessed)",
+          "url": "https://www.ocfrealty.com/buildings/1913-15-wallace-street/"
+        },
+        {
+          "title": "Philadelphia: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "2026-07-16 (accessed)",
+          "url": "https://global.truelithuania.com/philadelphia-pennsylvania-1160/"
+        }
+      ]
+    },
+    {
+      "date": "2026-01-09",
+      "headline": "Draugas reports parish thriving under Cathedral rector's administration, no closure threat",
+      "detail": "Fr. Dennis Gill, rector of the Cathedral Basilica, serves as administrator and established Finance and Pastoral committees. About 40 children attend the Vincas Krėvė Lithuanian Sunday school (pre-K through 8th grade); monthly youth Masses are led by Fr. Jonas Puodžiūnas from Washington; a 700-pound metal cross replaced the original wooden wayside cross through community fundraising. The article reports the archdiocese under Archbishop Nelson Perez has 'no desire to close any parish,' noting 40% of parishioners disappear when a parish closes.",
+      "sources": [
+        {
+          "title": "Švento Andriejaus parapijoje Philadelphijoje verda gyvenimas",
+          "publisher": "Draugas",
+          "date": "2026-01-09",
+          "url": "https://www.draugas.org/svento-andriejaus-parapijoje-philadelphijoje-verda-gyvenimas/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Saint Andrew Lithuanian Parish (official website: Mass schedule, administrator, worship sites, centennial)",
+      "publisher": "Saint Andrew Lithuanian Parish",
+      "date": "2026-07-16 (accessed)",
+      "url": "https://saintandrewlithuanianparish.org/"
+    },
+    {
+      "title": "Andrew (Lithuanian) – parish listing",
+      "publisher": "Archdiocese of Philadelphia",
+      "date": "2026-07-16 (accessed)",
+      "url": "https://archphila.org/parish/st-andrew-philadelphia/"
+    },
+    {
+      "title": "Švento Andriejaus parapijoje Philadelphijoje verda gyvenimas",
+      "publisher": "Draugas",
+      "date": "2026-01-09",
+      "url": "https://www.draugas.org/svento-andriejaus-parapijoje-philadelphijoje-verda-gyvenimas/"
+    },
+    {
+      "title": "Philadelphia: Lithuanians and Lithuanian heritage",
+      "publisher": "Global True Lithuania",
+      "date": "2026-07-16 (accessed)",
+      "url": "https://global.truelithuania.com/philadelphia-pennsylvania-1160/"
+    },
+    {
+      "title": "1913-15 Wallace Street (former rectory, now 12 apartments)",
+      "publisher": "OCF Realty",
+      "date": "2026-07-16 (accessed)",
+      "url": "https://www.ocfrealty.com/buildings/1913-15-wallace-street/"
+    },
+    {
+      "title": "St. Andrew [Lithuanian] | Discover Mass",
+      "publisher": "DiscoverMass.com",
+      "date": "2026-07-16 (accessed)",
+      "url": "https://discovermass.com/church/st-andrew-lithuanian-philadelphia-pa/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "No contradictions; several refinements. (1) Rectory sale: archive says ~2023-24 for $1.2M — Draugas (Jan 2026) confirms $1.2M 'two years ago' (~2023-24), but Global True Lithuania dates the sale to ~2022; the exact deed year is unresolved within a 2022-2024 window. New detail: it was converted by Baker Street Partners into 12 rental apartments (~$2,000/month). (2) The archive record omits that St. Andrew has operated a second worship site since 2011 — the former St. Casimir Lithuanian Parish (founded 1893, merged into St. Andrew 2011), 4th & Wharton Sts., which still holds a 9:00 AM English Sunday Mass; the archdiocese lists 'Casimir (Lithuanian) (1893-2011)' as merged. (3) 'Standing/survived inside diocese' fully confirmed: active parish page on archphila.org, live official website, and Jan 2026 Draugas coverage. (4) Refinement on governance: the parish has no resident pastor — Rev. Gerald Dennis Gill, Cathedral Basilica rector, is Parochial Administrator, and correspondence runs through the Cathedral Parish Office, a structural fragility the archive note does not capture. (5) The Lithuanian-language Sunday Mass claim is consistent: the 11:00 AM Sunday Mass at St. Andrew is in Lithuanian and English per the parish site and archdiocese listing.",
+  "gaps": "Could not verify the exact rectory sale date or deed buyer through Philadelphia property records (searched real-estate listings and news; OCF Realty names Baker Street Partners as the renovator but the deed grantee is unconfirmed). The parish's centennial/anniversary booklet PDF returned HTTP 403 and could not be opened. A search snippet attributed August 2025 confirmations by Bishop Efren Esmilla to a Draugas article, but this could not be confirmed on a page actually opened, so it is excluded. No formal archdiocesan restructuring/pastoral-planning documents naming St. Andrew were found or reviewed — restructuring exposure is inferred only from the Jan 2026 Draugas interview quote and the absence of a resident pastor. Long-term disposition plans for the St. Casimir worship-site building (4th & Wharton) were not found."
+}

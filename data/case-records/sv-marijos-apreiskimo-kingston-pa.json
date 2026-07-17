@@ -1,0 +1,89 @@
+{
+  "slug": "sv-marijos-apreiskimo-kingston-pa",
+  "asOf": "2026-07-16",
+  "buildingStatus": "demolished",
+  "currentUse": "Vacant lot at the former church site on Zerbey (Zerby) Avenue, Kingston; the parish's St. Mary's Annunciation cemetery in nearby Pringle survives and still bears the name \"Lithuanian\" at its entrance.",
+  "summary": "St. Mary of the Annunciation, the Lithuanian parish of Kingston, PA, founded in 1902 with its church on Zerby Avenue (basement church blessed 1903, upper church blessed by Bishop Hoban in 1908), was closed by the Diocese of Scranton on November 22, 2009 and consolidated with St. Hedwig's and St. Ignatius into the new St. Ignatius Loyola Parish, Kingston, during the diocese's \"Called to Holiness and Mission\" restructuring. According to the Global True Lithuania heritage survey, the diocese was unable to sell the closed church and demolished it in 2016; an empty lot now marks the site, which stood at 258 Zerbey Ave. The only surviving physical remnant of the parish is its cemetery in Pringle (established 1906), which retains the word \"Lithuanian\" at the entrance and many Lithuanian graves. No sale, redevelopment, preservation effort, or parishioner reunion activity was found in searches of local and diocesan sources. St. Ignatius Loyola Parish in Kingston remains the canonical successor and holds the parish's records.",
+  "developments": [
+    {
+      "date": "2009-11-22",
+      "headline": "Church closed and parish consolidated into St. Ignatius Loyola Parish, Kingston",
+      "detail": "The Diocese of Scranton's consolidated-parishes register lists \"St. Mary's Annunciation (Lithuanian) Church (closed 11/22/2009)\" with records held by St. Ignatius of Loyola Parish, Kingston. The successor parish's own history says the 2007-2009 restructuring under \"Called to Holiness and Mission\" blended St. Hedwig, St. Mary of the Annunciation, and St. Ignatius into one parish when St. Mary's pastor Father Yenkevich retired in 2009.",
+      "sources": [
+        {
+          "title": "Church Buildings of Consolidated Parishes",
+          "publisher": "Diocese of Scranton",
+          "date": "2021-03-24",
+          "url": "https://www.dioceseofscranton.org/wp-content/uploads/2021/03/Consolidated-Parishes-3-24-21.pdf"
+        },
+        {
+          "title": "History & Mission",
+          "publisher": "St. Ignatius Loyola Parish, Kingston PA",
+          "date": "n.d.",
+          "url": "https://www.stignatiuspa.com/about-us"
+        }
+      ]
+    },
+    {
+      "date": "2016",
+      "headline": "Church demolished after diocese unable to sell it",
+      "detail": "The Global True Lithuania heritage survey of the Northern Coal Region states: \"After closing this grand Lithuanian church, the diocese was unable to sell it. Therefore, they have demolished it in 2016.\" The page shows the empty lot where the church stood. No local-press coverage of the demolition (Times Leader, Citizens' Voice, WNEP) could be located to corroborate the exact year.",
+      "sources": [
+        {
+          "title": "Pennsylvania Northern Coal Region Lithuanian sites",
+          "publisher": "Global True Lithuania",
+          "date": "n.d.",
+          "url": "https://global.truelithuania.com/northern-coal-region-scranton-1614/"
+        }
+      ]
+    },
+    {
+      "date": "n.d.",
+      "headline": "Parish cemetery in Pringle survives as the last physical remnant",
+      "detail": "St. Mary's Annunciation cemetery in Pringle (established by the parish in 1906) remains: \"The name 'Lithuanian' still remains at the entrance and there are many Lithuanian graves... this is all that remains of that parish.\"",
+      "sources": [
+        {
+          "title": "Pennsylvania Northern Coal Region Lithuanian sites",
+          "publisher": "Global True Lithuania",
+          "date": "n.d.",
+          "url": "https://global.truelithuania.com/northern-coal-region-scranton-1614/"
+        },
+        {
+          "title": "History & Mission",
+          "publisher": "St. Ignatius Loyola Parish, Kingston PA",
+          "date": "n.d.",
+          "url": "https://www.stignatiuspa.com/about-us"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Pennsylvania Northern Coal Region Lithuanian sites",
+      "publisher": "Global True Lithuania",
+      "date": "n.d.",
+      "url": "https://global.truelithuania.com/northern-coal-region-scranton-1614/"
+    },
+    {
+      "title": "Church Buildings of Consolidated Parishes",
+      "publisher": "Diocese of Scranton",
+      "date": "2021-03-24",
+      "url": "https://www.dioceseofscranton.org/wp-content/uploads/2021/03/Consolidated-Parishes-3-24-21.pdf"
+    },
+    {
+      "title": "History & Mission",
+      "publisher": "St. Ignatius Loyola Parish, Kingston PA",
+      "date": "n.d.",
+      "url": "https://www.stignatiuspa.com/about-us"
+    },
+    {
+      "title": "St. Mary's Annunciation Mass Times, Kingston PA (closed listing, address record)",
+      "publisher": "CatholicMassTime.org",
+      "date": "n.d.",
+      "url": "https://catholicmasstime.org/church/st-marys-annunciation-close-7-2010/17211/"
+    }
+  ],
+  "confidence": "probable",
+  "conflictsWithArchiveRecord": "No contradictions. The archive record's \"demolished\" status and \"diocese_closed\" ending are confirmed. Refinements: founded 1902 (archive says not stated); closed 11/22/2009 per the Diocese of Scranton register (archive says not stated); demolished in 2016 per Global True Lithuania; canonical successor is St. Ignatius Loyola Parish, Kingston. The archive note calling it \"the other of the two largest regional churches\" is consistent with Global True Lithuania describing it as a \"grand\"/\"magnificent\" church but was not independently verified as a size ranking. One minor source conflict: CatholicMassTime.org labels the closure \"7-2010\" while the diocese's own register says 11/22/2009; the diocesan date is treated as authoritative.",
+  "gaps": "No local newspaper coverage (Times Leader, Citizens' Voice, WNEP) of the 2016 demolition could be found via web search, so the demolition year rests on a single heritage-survey source (Global True Lithuania); the building's demolished status itself is corroborated by the archive record. No sale price, buyer, or demolition contractor was published in any source found — Global True Lithuania states the diocese could not sell the building, implying it was still diocesan-owned at demolition, but current ownership of the vacant lot at 258 Zerbey Ave was not verified against Luzerne County property records. The address (258 Zerbey Ave, Kingston PA 18704) comes from a low-quality directory listing and a Yelp rectory listing seen only in search results. No preservation efforts, reunions, or recent community activity connected to the former parish were found for 2020-2026. Searches used both Lithuanian and anglicized names plus street and town variants; the Lithuanian identity of the Kingston parish is unambiguous (the diocese register itself marks it \"(Lithuanian)\")."
+}

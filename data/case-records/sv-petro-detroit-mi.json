@@ -1,0 +1,95 @@
+{
+  "slug": "sv-petro-detroit-mi",
+  "asOf": "2026-07-16",
+  "buildingStatus": "converted",
+  "currentUse": "Community center — the All Saints Neighborhood Center, home base of the nonprofit Urban Neighborhood Initiatives (UNI) at 8300 Longworth St. in Detroit's Springwells neighborhood",
+  "summary": "The modest wooden church of Šv. Petro (St. Peter) Lithuanian parish still stands in southwest Detroit and has been converted to secular community use. The Archdiocese of Detroit's official closed-parishes list records the parish as active 1921–1995. After the 1995 closure, the church's statues, furniture, and the large Lithuanian wayside cross that stood in front of the building were donated to Lithuania; the brick cladding added in the parish's late Lithuanian era was removed and the original wooden exterior restored (Global True Lithuania). Beginning in 1997, All Saints Catholic Parish and the nonprofit now called Urban Neighborhood Initiatives (founded 1997 as Neighborhood Centers Incorporated) restored the empty church building into the All Saints Neighborhood Center, a hub for youth and adult programs in the Springwells neighborhood. The center holds some historical plaques about the building's Lithuanian past in the first room beyond the entrance, but the building otherwise retains no Lithuanian details. UNI remains active at 8300 Longworth St., Detroit, MI 48209 as of 2026, with annual reports published through 2025. No preservation campaign, Lithuanian community activity, or recent press about the building was found.",
+  "developments": [
+    {
+      "date": "1995",
+      "headline": "Parish closed; contents sent to Lithuania",
+      "detail": "The Archdiocese of Detroit's closed-parishes list records St. Peter Lithuanian Parish (Detroit) as 1921–1995, with no note on where sacramental records went. Per Global True Lithuania, the church's statues and furniture were donated to Lithuania, as was the large Lithuanian-style wayside cross that stood in front of the church.",
+      "sources": [
+        {
+          "title": "Closed Parishes",
+          "publisher": "Archdiocese of Detroit",
+          "date": "undated (accessed 2026-07-16)",
+          "url": "https://www.aod.org/closed-parishes"
+        },
+        {
+          "title": "Detroit, Michigan: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "circa 2012 (accessed 2026-07-16)",
+          "url": "https://global.truelithuania.com/detroit-michigan-10/"
+        }
+      ]
+    },
+    {
+      "date": "1997",
+      "headline": "Empty church restored as All Saints Neighborhood Center",
+      "detail": "Urban Neighborhood Initiatives (founded 1997 as Neighborhood Centers Incorporated by All Saints Catholic Parish parishioners) began with the restoration of the empty church building into the All Saints Neighborhood Center, a community hub in the Springwells neighborhood of southwest Detroit. Global True Lithuania confirms the community center has operated in the former St. Peter building since 1997, put up historical plaques in the entrance room, and that the wooden facade (brick-covered in the late Lithuanian era) was restored to its original appearance.",
+      "sources": [
+        {
+          "title": "Urban Neighborhood Initiatives (history, via mission & history page and company profile)",
+          "publisher": "Urban Neighborhood Initiatives / LinkedIn",
+          "date": "undated (accessed 2026-07-16)",
+          "url": "https://www.unidetroit.org/our-mission--history.html"
+        },
+        {
+          "title": "Detroit, Michigan: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "circa 2012 (accessed 2026-07-16)",
+          "url": "https://global.truelithuania.com/detroit-michigan-10/"
+        }
+      ]
+    },
+    {
+      "date": "2026",
+      "headline": "Building in active use as UNI's headquarters",
+      "detail": "Urban Neighborhood Initiatives remains active at 8300 Longworth St., Detroit, MI 48209, serving the Springwells neighborhood (~18,735 residents, 2020 census), with annual reports published through 2025 and a 2026 site copyright — the converted church building continues in community-center use.",
+      "sources": [
+        {
+          "title": "Urban Neighborhood Initiatives (homepage)",
+          "publisher": "Urban Neighborhood Initiatives",
+          "date": "2026 (accessed 2026-07-16)",
+          "url": "https://www.unidetroit.org/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Detroit, Michigan: Lithuanians and Lithuanian heritage",
+      "publisher": "Global True Lithuania",
+      "date": "circa 2012 (accessed 2026-07-16)",
+      "url": "https://global.truelithuania.com/detroit-michigan-10/"
+    },
+    {
+      "title": "Closed Parishes",
+      "publisher": "Archdiocese of Detroit",
+      "date": "undated (accessed 2026-07-16)",
+      "url": "https://www.aod.org/closed-parishes"
+    },
+    {
+      "title": "Urban Neighborhood Initiatives (homepage)",
+      "publisher": "Urban Neighborhood Initiatives",
+      "date": "2026 (accessed 2026-07-16)",
+      "url": "https://www.unidetroit.org/"
+    },
+    {
+      "title": "Our Mission & History",
+      "publisher": "Urban Neighborhood Initiatives",
+      "date": "undated (via search excerpts, 2026-07-16)",
+      "url": "https://www.unidetroit.org/our-mission--history.html"
+    },
+    {
+      "title": "St. Peter Lithuanian Roman Catholic Church",
+      "publisher": "Detroit1701.org",
+      "date": "undated (via search excerpts only; page blocked by Cloudflare)",
+      "url": "https://detroit1701.org/St.%20Peter%20Lithuanian.html"
+    }
+  ],
+  "confidence": "probable",
+  "conflictsWithArchiveRecord": "No contradictions. The archive record is corroborated on every point: diocesan closure in 1995 (AOD lists the parish as 1921–1995), closure tied to the retirement of the last pastor (search excerpts of Detroit1701.org name him as Fr. Casimir Burkus — plausible refinement of the archive's unnamed 'pastor retired'), and contents shipped to Lithuania (Global True Lithuania specifies statues, furniture, and the front-yard wayside cross were donated to Lithuania). Refinements: founding can now be dated — parish founded 1920, church built/opened 1921 (AOD gives 1921–1995 as parish dates; Detroit1701 excerpts say founded 1920 with the building raised by 1921). The parish is confirmed distinct from Detroit Šv. Antano (AOD lists St. Anthony Lithuanian separately, 1920–2013) and Southfield Dievo Apvaizdos (Divine Providence, still listed as records repository).",
+  "gaps": "The Detroit1701.org page — the most detailed single source on this church — is behind a Cloudflare challenge and could not be opened directly; its facts (founder, Fr. Burkus, takeover by All Saints parish) are cited here only via search-result excerpts. The identification of the former church with the address 8300 Longworth St. is an inference chain, not stated in one source: Global True Lithuania says the All Saints Neighborhood Center occupies the former St. Peter building since 1997, and UNI's own site places the All Saints Neighborhood Center/its offices at 8300 Longworth — no source opened states 'St. Peter Lithuanian church = 8300 Longworth' verbatim. No property-transaction record, sale price, or current deed holder was found (searched AOD, UNI, and general web) — whether the archdiocese, All Saints Parish, or UNI owns the building today is unverified. No recent press, preservation campaigns, Lithuanian community reunions, or Draugas coverage of the building was found in searches (English and Lithuanian). The exact street address the parish used historically (Vernor Hwy vs. Longworth) was not confirmed from an opened source."
+}

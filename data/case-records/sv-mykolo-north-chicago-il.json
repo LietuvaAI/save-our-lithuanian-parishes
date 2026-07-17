@@ -1,0 +1,82 @@
+{
+  "slug": "sv-mykolo-north-chicago-il",
+  "asOf": "2026-07-16",
+  "buildingStatus": "demolished",
+  "currentUse": "Site redeveloped as private residential housing in Chicago's Bucktown/West Town neighborhood; the parcel at the parish's recorded address (1644 W. Wabansia Ave.) now holds a 1991-built single-family home",
+  "summary": "St. Michael the Archangel (Šv. Mykolo) Lithuanian parish stood at 1644 W. Wabansia Avenue on Chicago's near-northwest \"North Side,\" the city's oldest Lithuanian colony, centered at Paulina and Wabansia. The parish was organized in 1903, its church was built in 1904 to serve 2,000-2,500 Lithuanians each Sunday, and its sacramental registers (1903-1925) survive on FamilySearch. In 1970 the parish was merged into neighboring Annunciation parish and the church was torn down; Annunciation itself was closed and razed in 1978, erasing the entire Catholic complex at that corner. No trace of the church remains today: the block sits in the heavily gentrified Bucktown section of West Town, and the parcel at the parish's recorded address is occupied by a single-family house built in 1991 that sold for $950,000 in June 2021. No preservation effort, commemoration, marker, reunion activity, or recent press about the parish was found.",
+  "developments": [
+    {
+      "date": "1970",
+      "headline": "Parish merged into Annunciation and church torn down",
+      "detail": "St. Michael's (Lithuanian), built on Wabansia between Paulina and Marshfield in 1904, was merged with the neighboring Annunciation parish in 1970 and the church building was demolished. Annunciation itself was closed and razed in 1978, so nothing of the Catholic complex at Paulina and Wabansia survives.",
+      "sources": [
+        {
+          "title": "Polish Immigrants to Chicago",
+          "publisher": "St. Mary of the Angels Parish (sma.family)",
+          "date": "n.d.",
+          "url": "https://www.sma.family/polish-immigrants-to-chicago/"
+        }
+      ]
+    },
+    {
+      "date": "2021-06-08",
+      "headline": "Former parish address changes hands as a $950,000 Bucktown home",
+      "detail": "The parcel at 1644 W. Wabansia Ave. — the parish's recorded address — now holds a 2,382 sq ft single-family house built in 1991, which sold for $950,000 on June 8, 2021, illustrating the complete residential redevelopment of the church site in gentrified Bucktown.",
+      "sources": [
+        {
+          "title": "1644 W Wabansia Avenue, Chicago, IL 60622 (closed listing)",
+          "publisher": "Compass",
+          "date": "2021",
+          "url": "https://www.compass.com/listing/1644-west-wabansia-avenue-chicago-il-60622/739878238146203345/"
+        },
+        {
+          "title": "1644 W Wabansia Avenue, Chicago, IL 60622, MLS# 11024047",
+          "publisher": "@properties",
+          "date": "2021",
+          "url": "https://www.atproperties.com/11024047/1644-w-wabansia-avenue-chicago-illinois-60622-nei"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Polish Immigrants to Chicago",
+      "publisher": "St. Mary of the Angels Parish (sma.family)",
+      "date": "n.d.",
+      "url": "https://www.sma.family/polish-immigrants-to-chicago/"
+    },
+    {
+      "title": "St. Michael Lithuanian RC Parish in Chicago",
+      "publisher": "Lithuanian Catholic Ancestor Search",
+      "date": "n.d.",
+      "url": "https://www.lithuaniancatholicancestorsearch.com/st.-michael--lith--parish.html"
+    },
+    {
+      "title": "First Chicago Lithuanians Settled on North Side (Lietuva, July 23, 1909)",
+      "publisher": "Newberry Library, Foreign Language Press Survey",
+      "date": "1909-07-23",
+      "url": "https://flps.newberry.org/id/5423970_3_0592"
+    },
+    {
+      "title": "1644 W Wabansia Avenue, Chicago, IL 60622 (closed listing)",
+      "publisher": "Compass",
+      "date": "2021",
+      "url": "https://www.compass.com/listing/1644-west-wabansia-avenue-chicago-il-60622/739878238146203345/"
+    },
+    {
+      "title": "1644 W Wabansia Avenue, Chicago, IL 60622, MLS# 11024047",
+      "publisher": "@properties",
+      "date": "2021",
+      "url": "https://www.atproperties.com/11024047/1644-w-wabansia-avenue-chicago-illinois-60622-nei"
+    },
+    {
+      "title": "Chicago, Illinois: Lithuanians and Lithuanian heritage",
+      "publisher": "Global True Lithuania",
+      "date": "n.d.",
+      "url": "https://global.truelithuania.com/chicago-illinois-45/"
+    }
+  ],
+  "confidence": "probable",
+  "conflictsWithArchiveRecord": "Location refinement: the archive lists \"North Chicago, IL,\" but no Lithuanian St. Michael parish is attested in the city of North Chicago (Lake County) — that area's Lithuanian parish was St. Bartholomew in Waukegan. The Lithuanian Šv. Mykolo parish matching the archive note (\"one of the first Chicago Lithuanian churches to close; demolished\") was on Chicago's near-northwest \"North Side\" (Wabansia Ave. between Paulina and Marshfield, today's West Town/Bucktown), the city's oldest Lithuanian colony — Lithuanian sources describing it as the North Side colony likely produced the \"North Chicago\" label. Refinements to the record: founded/organized 1903 (church built 1904); closed via merger into Annunciation parish in 1970, when the church was torn down — consistent with, and more precise than, the archive's \"demolished / diocese_closed\" with no dates. No contradiction of the demolition or diocesan-closure facts was found; the 1970 merger-and-demolition with no reported protest is consistent with \"demolished without recorded resistance.\"",
+  "gaps": "The identification of the archive's \"North Chicago, IL\" entry with the Wabansia Avenue parish is an inference (strong, but the archive's own Draugas articles were not accessible to confirm). Exact demolition year of the church is unverified — sources say only that it was \"merged with Annunciation in 1970 and torn down.\" No record found of the property's post-closure sale price, buyer, or year of land transfer from the Archdiocese of Chicago; Cook County deed records were not searched. Whether 1644 W. Wabansia was the church proper or the rectory is uncertain (one genealogy source flags the address as tentative), though the whole block is now residential either way. Searched English and Lithuanian names, Draugas heritage guide, preservation and news sources: no press coverage, diocesan announcements, markers, preservation efforts, or parish reunion activity found at all — expected for a parish demolished over 50 years ago."
+}

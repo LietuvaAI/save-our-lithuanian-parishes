@@ -1,0 +1,108 @@
+{
+  "slug": "sv-kazimiero-kansas-city-mo",
+  "asOf": "2026-07-16",
+  "buildingStatus": "demolished",
+  "currentUse": "Vacant lot at the former church site (Broadview and Ridge Ave.); the parish bell is preserved and displayed at the Wyandotte County Museum in Bonner Springs, Kansas",
+  "summary": "St. Casimir Lithuanian church — opened after Lithuanians acquired a small Baptist church building in 1912, with a parish school added in the early 1920s — served a stockyards-era Lithuanian colony that all located sources place in Kansas City, Kansas (Armourdale area, Wyandotte County), not Missouri. After a bishop who disapproved of ethnic parishes merged the Lithuanian and Slovak congregations in 1947, the church was closed and subsequently demolished; per Global True Lithuania, only an empty lot remains at Broadview and Ridge Ave. The parish bell, donated by Lithuanian parishioners, was shipped to Christ the King Catholic Church at the 1947 closing and was later removed, restored, and placed on display at the Wyandotte County Museum in Bonner Springs — the Kansas City Lithuanian Community, including former St. Casimir parishioners, contributed more than $10,000 for the removal and restoration, and donor names are cast on the bell itself. The dispersal of the congregation and loss of its building meant the community was not replenished by post-WWII refugees, but descendants reestablished a Lithuanian club in 1980, and the Kansas City Lithuanian Community remains active today as a chapter of the Lithuanian American Community, with annual events, membership dues, and the Aidas folk dance group.",
+  "developments": [
+    {
+      "date": "1947",
+      "headline": "Parish closed in forced merger; bell shipped to Christ the King",
+      "detail": "A bishop who disapproved of ethnic parishes merged the Lithuanian and Slovak churches in 1947 while the 150-member Lithuanian parish was fundraising for a larger church. At the closing, the bell donated by Lithuanian parishioners was shipped to Christ the King Catholic Church. The church building was demolished, leaving an empty lot, and many Lithuanians dispersed from the district.",
+      "sources": [
+        {
+          "title": "Kansas: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "n.d.",
+          "url": "https://global.truelithuania.com/kansas-6612/"
+        },
+        {
+          "title": "History Reverberates For Ethnic Community",
+          "publisher": "KC History / Missouri Valley Special Collections, Kansas City Public Library",
+          "date": "n.d.",
+          "url": "https://kchistory.org/islandora/object/kchistory:68840"
+        }
+      ]
+    },
+    {
+      "date": "1980",
+      "headline": "Lithuanian community club reestablished",
+      "detail": "Lithuanians and their descendants reestablished a community club (without a building), concentrating on activities such as the Aidas Lithuanian folk dance group.",
+      "sources": [
+        {
+          "title": "Kansas: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "n.d.",
+          "url": "https://global.truelithuania.com/kansas-6612/"
+        }
+      ]
+    },
+    {
+      "date": "undated",
+      "headline": "Parish bell restored and displayed at Wyandotte County Museum",
+      "detail": "The St. Casimir bell was relocated from Christ the King Catholic Church to the Wyandotte County Museum in Bonner Springs, Kansas, where it is displayed prominently beyond the entrance with descriptions of the church; donor names are cast on the bell. The Kansas City Lithuanian Community, including former St. Casimir parishioners, contributed more than $10,000 for the removal and restoration. The year of the relocation was not stated in accessible sources.",
+      "sources": [
+        {
+          "title": "History Reverberates For Ethnic Community",
+          "publisher": "KC History / Missouri Valley Special Collections, Kansas City Public Library",
+          "date": "n.d.",
+          "url": "https://kchistory.org/islandora/object/kchistory:68840"
+        },
+        {
+          "title": "Kansas: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "n.d.",
+          "url": "https://global.truelithuania.com/kansas-6612/"
+        }
+      ]
+    },
+    {
+      "date": "2026",
+      "headline": "Kansas City Lithuanian Community remains active",
+      "detail": "The Kansas City Lithuanian Community operates today as a chapter of the Lithuanian American Community (JAV Lietuviu Bendruomene), promoting Lithuanian culture through education, folk dancing (Aidas), and language, with annual dues ($15 single / $20 family) and several free annual events including a Christmas party and Independence Day celebration.",
+      "sources": [
+        {
+          "title": "Kansas City Lithuanian Community (homepage)",
+          "publisher": "kclith.org",
+          "date": "accessed 2026-07-16",
+          "url": "https://kclith.org/"
+        },
+        {
+          "title": "Membership – Kansas City Lithuanian Community",
+          "publisher": "kclith.org",
+          "date": "accessed 2026-07-16",
+          "url": "https://kclith.org/membership/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Kansas: Lithuanians and Lithuanian heritage",
+      "publisher": "Global True Lithuania",
+      "date": "n.d. (accessed 2026-07-16)",
+      "url": "https://global.truelithuania.com/kansas-6612/"
+    },
+    {
+      "title": "History Reverberates For Ethnic Community",
+      "publisher": "KC History / Missouri Valley Special Collections, Kansas City Public Library",
+      "date": "n.d. (accessed via search snippets 2026-07-16)",
+      "url": "https://kchistory.org/islandora/object/kchistory:68840"
+    },
+    {
+      "title": "Kansas City Lithuanian Community (homepage)",
+      "publisher": "kclith.org",
+      "date": "accessed 2026-07-16",
+      "url": "https://kclith.org/"
+    },
+    {
+      "title": "Membership – Kansas City Lithuanian Community",
+      "publisher": "kclith.org",
+      "date": "accessed 2026-07-16",
+      "url": "https://kclith.org/membership/"
+    }
+  ],
+  "confidence": "probable",
+  "conflictsWithArchiveRecord": "Major refinement on location: the archive record places the parish in Kansas City, MO, but every source found places St. Casimir Lithuanian parish in Kansas City, KANSAS — the Armourdale district of Wyandotte County (church at Broadview and Ridge Ave.; bell preserved at the Wyandotte County Museum, the historical museum of Wyandotte County, KS; the 1947 KC History account explicitly says 'Kansas City, Kansas'). No evidence of a separate Lithuanian St. Casimir parish on the Missouri side was found; the archive's 'MO' is likely a state error, which also changes the responsible diocese (Kansas City in Kansas, not Kansas City-St. Joseph MO). The archive's closure year (1947) and the 'bishop who disliked ethnic parishes' narrative are both independently confirmed. The archive's 'building status unknown' is resolved: the building was demolished and the site is an empty lot.",
+  "gaps": "The full KC History article ('History Reverberates For Ethnic Community') could not be opened — the kchistory.org item page is JavaScript-rendered and returned only the site shell; its content (bell shipped to Christ the King in 1947, $10,000+ raised by the community for removal/restoration, display at the museum in Bonner Springs) was verified only through search-engine snippets of that page, and the article's original publication and date are unknown. Not found: the year the church building was demolished; the year the bell moved from Christ the King to the Wyandotte County Museum; any sale price, buyer, or current owner of the vacant lot at Broadview and Ridge Ave. (no property records or diocesan disposition documents located); any recent press, preservation effort, or reunion specific to the parish site beyond the ongoing Kansas City Lithuanian Community. Searched under both 'Šv. Kazimiero' and 'St. Casimir' with Kansas City MO and KS qualifiers; the possibility of a distinct Missouri-side Lithuanian parish could not be fully excluded but no trace of one was found."
+}

@@ -1,0 +1,108 @@
+{
+  "slug": "sv-onos-spring-valley-il",
+  "asOf": "2026-07-16",
+  "buildingStatus": "converted",
+  "currentUse": "Active Protestant church — Templo Cristiano Asambleas de Dios, a Spanish-language Assemblies of God congregation, worships in the former St. Anne building at 100 E 4th St, Spring Valley, IL 61362",
+  "summary": "The 1897 St. Anne (Šv. Onos) Lithuanian church building at 100 E 4th St, Spring Valley, IL is still standing and remains in active religious use, but no longer as a Catholic church: it is now home to Templo Cristiano Asambleas de Dios, a Spanish-language Assemblies of God (Pentecostal) congregation founded March 21, 1982 and pastored since then by Eliezar (Eli) and Alicia Esquivel, with Sunday services 10:00-11:30. The heritage survey site Global True Lithuania reports the Lithuanian parish was closed in the early 1990s \"to the dismay of local Lithuanians,\" some of whom stopped attending Catholic churches altogether, and that stained-glass windows bearing Lithuanian sponsors' names remained inside, along with a cornerstone carrying a pre-standardized Lithuanian inscription dating the church to June 26, 1897. Lithuanian memory persists at the separate St. Anne Lithuanian Catholic cemetery (established 1912, still well-maintained), where a 1992 memorial incorporates a sculpture salvaged from the church, an image of the building, and the names of its seven Lithuanian priests. The Diocese of Peoria's successor parish in town, Nativity of Our Lord (formed July 1, 2013 by merging Immaculate Conception, Sts. Peter and Paul, and St. Anthony), documents St. Anne's founding-era history but records nothing about its closure — St. Anne was not part of that merger, consistent with the parish having ended decades earlier. No sale price, buyer identity at time of sale, or diocesan closure announcement was found in any opened source.",
+  "developments": [
+    {
+      "date": "early 1990s",
+      "headline": "Lithuanian parish closed; building passes out of Lithuanian Catholic hands",
+      "detail": "Global True Lithuania, the heritage survey of Lithuanian sites abroad, states the St. Anne Lithuanian church 'was closed in the early 1990s to the dismay of local Lithuanians,' some of whom abandoned Catholic worship afterward, and that the building is now used by a Hispanic congregation. The site notes the 1897 cornerstone inscription ('Lietuwiszka bazrimoka Szw! Onos... 26 liep 1897') and Lithuanian-sponsor stained glass remaining inside.",
+      "sources": [
+        {
+          "title": "Spring Valley, Illinois",
+          "publisher": "Global True Lithuania",
+          "date": "n.d.",
+          "url": "https://global.truelithuania.com/spring-valley-illinois-2284/"
+        }
+      ]
+    },
+    {
+      "date": "1992",
+      "headline": "Memorial incorporating sculpture from the closed church erected at St. Anne Lithuanian cemetery",
+      "detail": "A memorial erected in 1992 at the St. Anne Catholic Lithuanian cemetery (established 1912, described as well-maintained) incorporates a sculpture taken from the closed St. Anne church, with an image of the church beneath it and the names of the parish's seven Lithuanian priests; Find a Grave lists the cemetery with over 1,000 memorial records.",
+      "sources": [
+        {
+          "title": "Spring Valley, Illinois",
+          "publisher": "Global True Lithuania",
+          "date": "n.d.",
+          "url": "https://global.truelithuania.com/spring-valley-illinois-2284/"
+        },
+        {
+          "title": "Saint Annes Cemetery in Spring Valley, Illinois",
+          "publisher": "Find a Grave",
+          "date": "n.d.",
+          "url": "https://www.findagrave.com/cemetery/107830/saint-annes-cemetery"
+        }
+      ]
+    },
+    {
+      "date": "present",
+      "headline": "Building in active use by Templo Cristiano Asambleas de Dios",
+      "detail": "The former St. Anne building at 100 E 4th St is occupied by Templo Cristiano AG, a Spanish-language Assemblies of God congregation that opened March 21, 1982 and has been pastored since by Eliezar (Eli) and Alicia Esquivel; Sunday services run 10:00-11:30. The congregation's own site does not say when it acquired the building. Local church directories confirm Templo Cristiano at the 100 E 4th St address.",
+      "sources": [
+        {
+          "title": "About | Templo Cristiano AG",
+          "publisher": "Templo Cristiano AG (tcspringvalley.org)",
+          "date": "n.d.",
+          "url": "https://www.tcspringvalley.org/about"
+        },
+        {
+          "title": "Church Directory for Spring Valley, Illinois",
+          "publisher": "ChurchAdvise",
+          "date": "n.d.",
+          "url": "https://www.churchadvise.com/directory/IL/Spring-Valley"
+        }
+      ]
+    },
+    {
+      "date": "2013-07-01",
+      "headline": "Remaining Spring Valley Catholic parishes merged into Nativity of Our Lord — St. Anne not among them",
+      "detail": "Nativity of Our Lord Parish was formed July 1, 2013 by merging Immaculate Conception, Sts. Peter and Paul, and St. Anthony parishes. St. Anne is absent from the merger, consistent with its having closed decades earlier; the successor parish's history page recounts St. Anne's 1890s founding by Lithuanian miners at Spalding and Fourth Street but says nothing about its ending.",
+      "sources": [
+        {
+          "title": "History",
+          "publisher": "Nativity of Our Lord Parish, Spring Valley",
+          "date": "n.d.",
+          "url": "https://www.nativitysv.org/history"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Spring Valley, Illinois",
+      "publisher": "Global True Lithuania",
+      "date": "n.d.",
+      "url": "https://global.truelithuania.com/spring-valley-illinois-2284/"
+    },
+    {
+      "title": "About | Templo Cristiano AG",
+      "publisher": "Templo Cristiano AG (tcspringvalley.org)",
+      "date": "n.d.",
+      "url": "https://www.tcspringvalley.org/about"
+    },
+    {
+      "title": "History",
+      "publisher": "Nativity of Our Lord Parish, Spring Valley",
+      "date": "n.d.",
+      "url": "https://www.nativitysv.org/history"
+    },
+    {
+      "title": "Church Directory for Spring Valley, Illinois",
+      "publisher": "ChurchAdvise",
+      "date": "n.d.",
+      "url": "https://www.churchadvise.com/directory/IL/Spring-Valley"
+    },
+    {
+      "title": "Saint Annes Cemetery in Spring Valley, Illinois",
+      "publisher": "Find a Grave",
+      "date": "n.d.",
+      "url": "https://www.findagrave.com/cemetery/107830/saint-annes-cemetery"
+    }
+  ],
+  "confidence": "probable",
+  "conflictsWithArchiveRecord": "Two refinements/conflicts. (1) Sale date: the archive says the diocese sold the building ~1987, but Global True Lithuania — the only source found that dates the ending — says the church \"was closed in the early 1990s.\" The true sequence may involve both dates (e.g., closure then later sale) but no opened source resolves it. (2) Buyer identity: the archive says the building went to a \"Mexican Catholic congregation,\" but the building's current occupant, Templo Cristiano Asambleas de Dios, is a Spanish-language Assemblies of God (Pentecostal Protestant) congregation, not Catholic. Either the archive's \"Catholic\" is imprecise, or the building changed hands again after an initial Catholic-buyer sale — neither could be verified. Also a refinement: the congregation is Hispanic/Spanish-language generally (pastors named Esquivel); no source found confirms specifically \"Mexican.\" The founding date (1895 in the archive vs. the 1897 church construction/opening in sources) is compatible — parish organized before the building was completed. No source contradicts diocese_rc ownership at closure or the \"last Lithuanian priest died\" claim, though the latter was not independently found.",
+  "gaps": "No sale price, deed record, or exact year of the diocese's sale of the building was found; searched Diocese of Peoria pages, local news (Shaw Local/NewsTribune results), and general web. The Diocese of Peoria publishes no closed-parish page mentioning St. Anne, and the parish is absent from cdop.org materials found. Could not verify when Templo Cristiano AG (founded 1982) moved into the 100 E 4th St building — its own site is silent on the acquisition. No recent press, preservation campaigns, reunions, or anniversary coverage of the Lithuanian parish was found in searches including demolition/reunion/anniversary terms. The claim that Lithuanian-sponsor stained glass remains inside rests on the undated Global True Lithuania survey and may be stale. Exterior/interior condition today not independently verified (no street-level imagery opened). Lithuanian-parish identity match is secure: True Lithuania documents the Lithuanian cornerstone at the exact address, and Spring Valley's Polish (Sts. Peter and Paul) and Irish/territorial (Immaculate Conception) parishes are separately accounted for in the Nativity history."
+}

@@ -1,0 +1,101 @@
+{
+  "slug": "sv-konstantino-oglesby-il",
+  "asOf": "2026-07-16",
+  "buildingStatus": "converted",
+  "currentUse": "Knights of Columbus hall (307 E. Florence Street, at the Spring/Florence corner where the church was built), per Global True Lithuania's local-testimony report corroborated by directory listings placing the Oglesby Knights of Columbus at that address",
+  "summary": "St. Constantine Lithuanian church, built in 1919 at the corner of Florence and Spring Streets in Oglesby to serve a congregation that once numbered about 200, no longer exists as a parish but its building appears to survive. According to Global True Lithuania, the parish merged with a Slovenian parish in 1944, and in 1953 the combined Lithuanian-Slovenian parish was merged with Sacred Heart to form Holy Family Parish, Oglesby's single consolidated Catholic parish; the City of Oglesby's own history page confirms the 1953 consolidation of both ethnic parishes into Holy Family. Global True Lithuania reports, based on testimonies of locals, that the St. Constantine building still stands at the Spring/Florence corner and now houses the Knights of Columbus, though reconstruction has changed its appearance from historical photos. Independent directory listings (the City of Oglesby business directory and WhereOrg) place the Oglesby Knights of Columbus at 307 E. Florence Street, consistent with that identification. The successor parish, Holy Family (established 1953, Diocese of Peoria), remains active at 311 N. Woodland Avenue under pastor Fr. Paul Carlson, linked with St. Mary in Utica. No sale records, sale price, diocesan announcements, preservation efforts, or Lithuanian community reunions connected to the former St. Constantine building were found in any source opened.",
+  "developments": [
+    {
+      "date": "1944",
+      "headline": "Merged with Slovenian parish",
+      "detail": "Per Global True Lithuania, the Lithuanian St. Constantine parish merged with Oglesby's Slovenian parish in 1944; the combined Lithuanian-Slovenian parish continued using the St. Constantine building.",
+      "sources": [
+        {
+          "title": "Oglesby, Illinois",
+          "publisher": "Global True Lithuania",
+          "date": "n.d.",
+          "url": "https://global.truelithuania.com/oglesby-illinois-6784/"
+        }
+      ]
+    },
+    {
+      "date": "1953",
+      "headline": "Consolidated into Holy Family Parish",
+      "detail": "The Lithuanian-Slovenian parish and Sacred Heart were combined into Holy Family Parish in 1953, ending St. Constantine's separate existence. The City of Oglesby's history page confirms both parishes were combined into Holy Family in 1953; the Diocese of Peoria lists Holy Family's establishment year as 1953.",
+      "sources": [
+        {
+          "title": "Churches",
+          "publisher": "City of Oglesby, IL",
+          "date": "n.d.",
+          "url": "https://oglesbyil.gov/churches/"
+        },
+        {
+          "title": "Holy Family - Oglesby",
+          "publisher": "Catholic Diocese of Peoria",
+          "date": "n.d.",
+          "url": "https://www.cdop.org/parishes/holy-family-oglesby"
+        }
+      ]
+    },
+    {
+      "date": "n.d. (reported in recent years)",
+      "headline": "Building reportedly survives as Knights of Columbus hall",
+      "detail": "Global True Lithuania, citing testimonies of locals, reports the St. Constantine building still stands at the corner of Spring Ave and Florence St and now houses the Knights of Columbus, though reconstruction has altered its appearance. Directory listings place the Oglesby Knights of Columbus at 307 E. Florence Street, consistent with the reported location.",
+      "sources": [
+        {
+          "title": "Oglesby, Illinois",
+          "publisher": "Global True Lithuania",
+          "date": "n.d.",
+          "url": "https://global.truelithuania.com/oglesby-illinois-6784/"
+        },
+        {
+          "title": "Knights of Columbus",
+          "publisher": "City of Oglesby, IL business directory",
+          "date": "n.d.",
+          "url": "https://oglesby.il.us/business-directory/knights-of-columbus/"
+        },
+        {
+          "title": "Knights Of Columbus, Oglesby, IL - 307 E Florence St.",
+          "publisher": "WhereOrg",
+          "date": "n.d.",
+          "url": "https://www.whereorg.com/knights-of-columbus-5899018"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Oglesby, Illinois",
+      "publisher": "Global True Lithuania",
+      "date": "n.d.",
+      "url": "https://global.truelithuania.com/oglesby-illinois-6784/"
+    },
+    {
+      "title": "Churches",
+      "publisher": "City of Oglesby, IL",
+      "date": "n.d.",
+      "url": "https://oglesbyil.gov/churches/"
+    },
+    {
+      "title": "Holy Family - Oglesby",
+      "publisher": "Catholic Diocese of Peoria",
+      "date": "n.d.",
+      "url": "https://www.cdop.org/parishes/holy-family-oglesby"
+    },
+    {
+      "title": "Knights of Columbus",
+      "publisher": "City of Oglesby, IL business directory",
+      "date": "n.d.",
+      "url": "https://oglesby.il.us/business-directory/knights-of-columbus/"
+    },
+    {
+      "title": "Knights Of Columbus, Oglesby, IL - 307 E Florence St.",
+      "publisher": "WhereOrg",
+      "date": "n.d.",
+      "url": "https://www.whereorg.com/knights-of-columbus-5899018"
+    }
+  ],
+  "confidence": "probable",
+  "conflictsWithArchiveRecord": "No contradictions; two refinements. (1) The archive's 1953 closing date is confirmed by the City of Oglesby and the Diocese of Peoria (Holy Family established 1953), but the ending is better described as a merger/consolidation into Holy Family Parish than a simple closure, with an intermediate 1944 merger with a Slovenian parish per Global True Lithuania. (2) The archive note 'building may remain but identity uncertain' can be upgraded: Global True Lithuania reports the building stands at the Spring/Florence corner as the Knights of Columbus hall, and directory listings corroborate a KofC at 307 E. Florence St — though the church-to-KofC identification itself traces to local testimony, not an official record. Founding: the archive has no founding date; Global True Lithuania gives 1919 as the construction year of the church.",
+  "gaps": "The building identification (former St. Constantine = current KofC hall at 307 E. Florence St) rests on Global True Lithuania's 'testimonies of the locals' plus address corroboration — no county property record, diocesan document, or news article confirming the transfer was found, and no date, price, or buyer for the property's passage from the diocese to the Knights of Columbus was published anywhere searched. No local press (LaSalle-Peru NewsTribune or otherwise), preservation efforts, or Lithuanian community reunions concerning the building were found. The parish's founding year (as opposed to the 1919 church construction) is unverified. The truelithuania.com page is undated, so 'still stands' could not be pinned to a specific recent year. Searches used both 'Šv. Konstantino' and 'St. Constantine' forms; the Oglesby match is unambiguous (only one St. Constantine parish in the town, explicitly identified as Lithuanian by both the city and Lithuanian-heritage sources)."
+}

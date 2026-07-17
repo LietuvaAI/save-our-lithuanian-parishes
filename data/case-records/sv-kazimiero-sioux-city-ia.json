@@ -1,0 +1,96 @@
+{
+  "slug": "sv-kazimiero-sioux-city-ia",
+  "asOf": "2026-07-16",
+  "buildingStatus": "demolished",
+  "currentUse": "Church demolished July 2007; per Global True Lithuania, the church footprint at 2524 Leech Ave. was replaced by a modern single-family home and only the old priest's residence remains from the parish complex (Wikipedia describes the immediate church site as an empty field). The salvaged bell-cast dome sits in storage at the State Steel yard in Sioux City.",
+  "summary": "St. Casimir Lithuanian Roman Catholic Church (built 1915, designed by Prairie School architect William L. Steele) no longer stands: after the Diocese of Sioux City barred new members in the 1990s and dissolved the parish in 1998 — appropriating its holdings despite the parish reportedly remaining solvent — the building sat vacant and unmaintained until the diocese announced in May 2007 that it would be razed for safety reasons, and demolition was completed on July 17, 2007. The site at 2524 Leech Ave. is now residential; Global True Lithuania reports only the former priest's residence survives, with a modern single-family home replacing the church. Private interests arranged for the church's distinctive bell-cast dome to be salvaged, and it is stored at the State Steel yard in Sioux City, visible from Virginia Street. Key interior artwork by Lithuanian artist Adolfas Valeška — the Our Lady of Fatima and Good Shepherd paintings and a European bisque statue of St. Casimir, bought back from an antiques dealer after being salvaged — is displayed at the St. Joseph Center at Trinity Heights Marian shrine in Sioux City, with other artifacts placed in the Cathedral of the Epiphany and Mater Dei grade school; stained-glass windows are stored at Nativity Parish and the church's nameplate stones sit on a private Lithuanian-owned farm. The aging local Lithuanian community reportedly hopes to consolidate the surviving elements at Trinity Heights as a commemorative installation, but no formal preservation project or recent (2020s) press coverage was found.",
+  "developments": [
+    {
+      "date": "1998",
+      "headline": "Diocese of Sioux City dissolves the parish",
+      "detail": "After forbidding St. Casimir from enrolling new members during the 1990s (circa 1990 per Global True Lithuania), the diocese dissolved the parish in 1998, appropriated all holdings, and instructed parishioners to join other parishes; the final service was held in 1998 despite the parish reportedly remaining solvent. The building then sat vacant and unmaintained from 1998 to 2007.",
+      "sources": [
+        {
+          "title": "St. Casimir Lithuanian Roman Catholic Church",
+          "publisher": "Wikipedia",
+          "date": "accessed 2026-07-16",
+          "url": "https://en.wikipedia.org/wiki/St._Casimir_Lithuanian_Roman_Catholic_Church"
+        },
+        {
+          "title": "Iowa — Global True Lithuania",
+          "publisher": "Global True Lithuania (truelithuania.com)",
+          "date": "accessed 2026-07-16",
+          "url": "https://global.truelithuania.com/category/usa/iowa/"
+        }
+      ]
+    },
+    {
+      "date": "2007-05",
+      "headline": "Diocese announces plan to raze the vacant church",
+      "detail": "In May 2007 the Diocese of Sioux City made public a plan to demolish the structure, citing safety concerns after nine years of vacancy without maintenance.",
+      "sources": [
+        {
+          "title": "St. Casimir Lithuanian Roman Catholic Church",
+          "publisher": "Wikipedia",
+          "date": "accessed 2026-07-16",
+          "url": "https://en.wikipedia.org/wiki/St._Casimir_Lithuanian_Roman_Catholic_Church"
+        }
+      ]
+    },
+    {
+      "date": "2007-07-17",
+      "headline": "Church demolished; bell-cast dome salvaged by private interests",
+      "detail": "Demolition was completed on July 17, 2007. Private interests arranged for the distinctive bell-cast dome to be salvaged; it is stored at the State Steel yard in Sioux City, visible from Virginia Street, with its future use undetermined.",
+      "sources": [
+        {
+          "title": "St. Casimir Lithuanian Roman Catholic Church",
+          "publisher": "Wikipedia",
+          "date": "accessed 2026-07-16",
+          "url": "https://en.wikipedia.org/wiki/St._Casimir_Lithuanian_Roman_Catholic_Church"
+        },
+        {
+          "title": "Iowa — Global True Lithuania",
+          "publisher": "Global True Lithuania (truelithuania.com)",
+          "date": "accessed 2026-07-16",
+          "url": "https://global.truelithuania.com/category/usa/iowa/"
+        }
+      ]
+    },
+    {
+      "date": "post-2007 (undated)",
+      "headline": "Valeška artwork and artifacts preserved at Trinity Heights and other Sioux City Catholic sites",
+      "detail": "The Adolfas Valeška paintings Our Lady of Fatima and the Good Shepherd, plus a European bisque statue of St. Casimir, were purchased back from an antiques dealer and now reside at the St. Joseph Center at Trinity Heights Marian shrine; selected artifacts were placed in the Cathedral of the Epiphany and Mater Dei grade school; stained-glass windows are stored at Nativity Parish; the church's nameplate stones are on a private Lithuanian-owned farm. The local community reportedly hopes to consolidate remaining elements at Trinity Heights as a commemorative installation.",
+      "sources": [
+        {
+          "title": "St. Casimir Lithuanian Roman Catholic Church",
+          "publisher": "Wikipedia",
+          "date": "accessed 2026-07-16",
+          "url": "https://en.wikipedia.org/wiki/St._Casimir_Lithuanian_Roman_Catholic_Church"
+        },
+        {
+          "title": "Iowa — Global True Lithuania",
+          "publisher": "Global True Lithuania (truelithuania.com)",
+          "date": "accessed 2026-07-16",
+          "url": "https://global.truelithuania.com/category/usa/iowa/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "St. Casimir Lithuanian Roman Catholic Church",
+      "publisher": "Wikipedia",
+      "date": "accessed 2026-07-16",
+      "url": "https://en.wikipedia.org/wiki/St._Casimir_Lithuanian_Roman_Catholic_Church"
+    },
+    {
+      "title": "Iowa — Global True Lithuania",
+      "publisher": "Global True Lithuania (truelithuania.com)",
+      "date": "accessed 2026-07-16",
+      "url": "https://global.truelithuania.com/category/usa/iowa/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "Two comparisons. (1) Demolition-year conflict (archive: 2001 vs 2007) is RESOLVED in favor of 2007: Wikipedia states demolition was announced in May 2007 and completed July 17, 2007; Global True Lithuania independently says 2007. No source supports 2001. (2) National Register claim needs REFINEMENT: the archive says the church was \"on National Register\"; Wikipedia says the building was only \"deemed eligible\" for the NRHP, not that it was formally listed, while Global True Lithuania says it was \"inscribed in 1998\" — the two opened sources conflict with each other, and search-result snippets indicate a 1998 eligibility determination that the owner (the diocese) declined to convert into a formal nomination. Either way, the archive's point that the designation gave no protection holds. Closure year 1998 and diocesan ownership/closure are confirmed with no conflict.",
+  "gaps": "No sale price, buyer, or property-transfer records found — the diocese appropriated parish holdings in 1998, but who owns the 2524 Leech Ave. lot today and whether/when the diocese sold it could not be verified. Present-day site condition is single-source and possibly stale: Global True Lithuania (page undated) says a modern single-family home replaced the church and the old rectory survives, while Wikipedia says an empty field remains; a county assessor or street-view check would settle it. The definitive NRHP status (formally listed vs. determined-eligible-only) could not be confirmed from an authoritative NPS source. Detailed demolition/dome-salvage names circulating in search snippets (a volunteer effort involving Leon Skuodas, Klinger Construction, and businessman Dave Bernstein) trace to Grokipedia, which returned HTTP 403 and could not be opened, so they are excluded from the record. No recent press, diocesan announcements, reunions, or active preservation campaign found in 2015-2026 searches; Sioux City Journal archive coverage from 2007 was not directly retrievable."
+}
