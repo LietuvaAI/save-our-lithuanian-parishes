@@ -120,6 +120,50 @@ export default function NowPage() {
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
+          Active campaigns — where communities are organizing
+        </h2>
+        <p className="mt-1 text-sm text-muted">
+          Not every alert has a campaign behind it. These do — documented
+          organizing, stated in its own words and cited.
+        </p>
+        <div className="mt-4 space-y-4">
+          {(alerts as any).campaigns?.map((c: any) => (
+            <div key={c.id} className="rounded-lg border border-rule px-4 py-3.5">
+              <div className="flex flex-wrap items-baseline gap-x-2">
+                <Link href={c.parishLink} className="font-semibold hover:underline">
+                  {c.entity}
+                </Link>
+                <span className="text-muted">— {c.place}</span>
+                <span className="ml-auto text-xs text-muted">since {c.since}</span>
+              </div>
+              <p className="mt-2 text-sm leading-relaxed">
+                <span className="font-medium">Who:</span> {c.who}.{" "}
+                <span className="font-medium">What form:</span> {c.form}.
+              </p>
+              <p className="mt-1.5 text-sm leading-relaxed text-muted">{c.state}</p>
+              <p className="mt-2 text-xs text-muted">
+                Sources:{" "}
+                {c.sources.map((s: any, i: number) => (
+                  <span key={s.url}>
+                    {i > 0 && " · "}
+                    <a
+                      href={s.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:text-foreground"
+                    >
+                      {s.publisher}
+                    </a>
+                  </span>
+                ))}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="font-serif text-2xl font-semibold">
           {LEVEL_LABEL.red.title}
         </h2>
         <p className="mt-1 text-sm text-muted">{LEVEL_LABEL.red.blurb}</p>
