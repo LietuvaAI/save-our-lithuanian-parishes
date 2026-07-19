@@ -60,8 +60,8 @@ export default function Home() {
           Who decides whether a Lithuanian parish survives?
         </h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg leading-relaxed text-muted">
-          Not faith. Not money. Not the fight — ownership decided every
-          ending. We stand for one goal:{" "}
+          Not faith. Not money. Not the fight that comes too late —
+          ownership decided every ending. We stand for one goal:{" "}
           <strong className="text-foreground">
             that what Lithuanian communities built stays in their hands
           </strong>{" "}
