@@ -411,8 +411,8 @@ export default function ParishMap() {
                   {hoveredReg.hasConflicts ? " · source variants recorded" : ""}
                 </div>
                 <div className="text-muted mt-1 italic text-xs">
-                  Part of the growing research record — profile pages arrive as
-                  each record deepens.
+                  Part of the record — a profile page arrives as this
+                  parish&rsquo;s documentation deepens.
                 </div>
               </div>
             );
@@ -499,16 +499,19 @@ export default function ParishMap() {
           </span>
         ) : (
           <span className="text-muted">
-            Shape-coded marks are the {usParishes.length} U.S. Lithuanian
-            parishes of the documented record — hover to see a parish, click to
-            open its full profile. Solid dots are the wider research record:{" "}
-            {regData.counts.parishes} more parishes documented across five
-            research sources (plus {regData.counts.congregations} non-Catholic
-            congregations, squares) — a separate, growing layer that never
-            alters the record&rsquo;s figures. {regData.counts.skippedCanada}{" "}
-            Canadian parishes and {regData.counts.skippedNoGeo} not-yet-mapped
-            places are in the research record but not on this U.S. map. See a
-            parish missing?{" "}
+            One record — drawn from the full run of <em>Draugas</em> since
+            1909, published parish histories, and contemporary sources.
+            Shape-coded marks are the {usParishes.length} most deeply
+            documented parishes, with full case files — hover to see a parish,
+            click to open its profile. Solid dots are{" "}
+            {regData.counts.parishes} more documented parishes (squares:{" "}
+            {regData.counts.congregations} non-Catholic congregations, shown
+            as historical witness), each labeled by how deeply it is
+            documented so far; this layer never alters the locked figures,
+            which derive from the {usParishes.length}.{" "}
+            {regData.counts.skippedCanada} Canadian parishes and{" "}
+            {regData.counts.skippedNoGeo} not-yet-mapped places are documented
+            but not on this U.S. map. See a parish missing?{" "}
             <Link href="/report" className="underline hover:text-foreground">
               Report it
             </Link>

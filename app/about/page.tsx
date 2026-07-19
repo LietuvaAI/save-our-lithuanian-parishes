@@ -54,9 +54,10 @@ export default function AboutPage() {
 
         <h2 className="font-serif text-2xl font-semibold pt-4">The data</h2>
         <p>
-          The core dataset documents every U.S. Lithuanian parish that appears
-          in the <em>Draugas</em> archive between January 2008 and May 2026 —
-          2,768 issues searched. Every fact in{" "}
+          The record draws on the full run of the <em>Draugas</em> archive
+          since 1909, published parish histories, and contemporary sources.
+          Its core — the corpus behind every locked figure on this site — is
+          the 2008–2026 archive: 2,768 issues, searched in full. Every fact in{" "}
           <Link href="/record" className="underline hover:text-accent">
             the record
           </Link>{" "}

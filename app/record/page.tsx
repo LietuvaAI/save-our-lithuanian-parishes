@@ -29,7 +29,9 @@ export default function RecordPage() {
         locked research figure set at every build.
       </p>
       <p className="mt-3 max-w-2xl text-sm text-muted leading-relaxed">
-        This ledger is the core corpus. The wider research registry documents
+        This ledger is the core corpus of a canon that reaches back to{" "}
+        <em>Draugas</em>&rsquo;s first issues in 1909. The wider research
+        registry documents
         105 more parishes across the U.S. and Canada (75 already on the{" "}
         <Link href="/" className="underline hover:text-foreground">
           home-page map

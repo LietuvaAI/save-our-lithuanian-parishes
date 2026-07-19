@@ -88,9 +88,10 @@ export default function RootLayout({
             </p>
             <p>
               Every figure on this site is derived from the parish record and
-              verified at build time. Primary source: the <em>Draugas</em>{" "}
-              archive, 2008–2026 — 2,768 issues searched — extended by the
-              1909–2007 archive, published parish histories, and the national
+              verified at build time. The canon: the full run of the{" "}
+              <em>Draugas</em> archive since 1909 — the 2008–2026 issues, all
+              2,768, read straight through; the 1909–2007 run mined issue by
+              issue — with published parish histories and the national
               reversal research.
             </p>
             <p>
