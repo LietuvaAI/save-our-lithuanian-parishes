@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ParishTable from "@/components/ParishTable";
 import {
   usParishes,
@@ -26,6 +27,20 @@ export default function RecordPage() {
         per-parish case files; the rest are tracked at ledger level. This is
         the data behind every figure on the site — validated against the
         locked research figure set at every build.
+      </p>
+      <p className="mt-3 max-w-2xl text-sm text-muted leading-relaxed">
+        This ledger is the core corpus. The wider research registry documents
+        105 more parishes across the U.S. and Canada (75 already on the{" "}
+        <Link href="/" className="underline hover:text-foreground">
+          home-page map
+        </Link>
+        ), each being verified toward this ledger&rsquo;s standard. For the
+        national precedent record — closures reversed on the Church&rsquo;s
+        own procedures — see{" "}
+        <Link href="/reversals" className="underline hover:text-foreground">
+          Reversals
+        </Link>
+        .
       </p>
 
       <div className="mt-8">

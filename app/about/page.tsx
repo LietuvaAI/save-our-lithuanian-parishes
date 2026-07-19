@@ -73,14 +73,42 @@ export default function AboutPage() {
           .
         </p>
         <p>
-          The record is now growing backward toward the first parishes of the
-          1880s–1900s, drawing on parish histories and period sources — and
-          each{" "}
+          The record is growing backward toward the first parishes of the
+          1880s–1900s — and that growth has begun to land. A unified research
+          registry now joins the <em>Draugas</em> core with four further
+          source axes: the 1909–2007 <em>Draugas</em> archive, being read
+          issue by issue; William Wolkovich-Valkavičius&rsquo;s three-volume{" "}
+          <em>Lithuanian Religious Life in America</em>; contemporary
+          status sources; and the national closure-reversal research. Beyond
+          the core 83, it documents{" "}
+          <strong>105 more parishes</strong> across the U.S. and Canada — 75
+          of them already on the home-page map, each marked by how deeply it
+          is documented so far. And each{" "}
           <Link href="/parishes" className="underline hover:text-accent">
             parish profile
           </Link>{" "}
           is growing a researched present-day case record of where the
           building, the community, and the property stand now.
+        </p>
+
+        <h2 className="font-serif text-2xl font-semibold pt-4">
+          The record — and the armory
+        </h2>
+        <p>
+          This site does two things. It keeps the record: what happened to
+          the parishes, and who decided it. And it arms the communities still
+          deciding:{" "}
+          <Link href="/start-here" className="underline hover:text-accent">
+            Start Here
+          </Link>{" "}
+          assembles the deadlines, the seven reasons that don&rsquo;t count
+          under canon law, and the procedural rights that have{" "}
+          <Link href="/reversals" className="underline hover:text-accent">
+            reversed twenty-six closures
+          </Link>{" "}
+          in other dioceses. The record is Lithuanian. The law is universal —
+          those pages are written for any parish, of any heritage, facing
+          the same process.
         </p>
 
         <h2 className="font-serif text-2xl font-semibold pt-4">

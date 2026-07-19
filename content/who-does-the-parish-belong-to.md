@@ -96,4 +96,8 @@ The community must hear the question "Who does the parish belong to?" as address
 
 ---
 
+*Postscript, July 2026. Since this article was written, the research behind it has widened to the national record. Across the United States, twenty-six parish closures have been reversed — Allentown in 2011, Cleveland in 2012, Buffalo in 2025 — never by leaving the Church, but by the Church's own procedures, applied within deadlines measured in days from the decree. No parish among the 83 in this record was saved by an appeal filed after the decree, so the article's lesson stands: ownership decides endings. The national record adds its companion: for a parish that does not hold its deed, procedure, in time, is the only fight that has ever won. Both are now documented on this site — [the reversal record](/reversals) and [what to do inside the window](/start-here).*
+
+---
+
 *This article is the first of several. It raised the question of what decides a parish's fate: who holds the deed. The articles that follow will ask what the parish means to its community and how to keep it alive.*

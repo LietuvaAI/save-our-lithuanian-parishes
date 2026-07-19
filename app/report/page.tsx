@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Report from your parish",
@@ -26,6 +27,18 @@ export default function ReportPage() {
           Community reports are reviewed before anything is published, and are
           always marked as community-reported — distinct from the
           archive-verified record.
+        </p>
+        <p>
+          And if a closure process is already moving at your parish — of any
+          heritage —{" "}
+          <Link
+            href="/start-here"
+            className="font-medium underline hover:text-accent"
+          >
+            start here
+          </Link>{" "}
+          first: the canonical deadlines run in days, and the documents you
+          save now are the case you can make later.
         </p>
         <div className="rounded-lg border border-rule p-5">
           <p className="font-medium">The submission form is coming soon.</p>

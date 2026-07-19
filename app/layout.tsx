@@ -30,6 +30,7 @@ export const metadata: Metadata = {
 const NAV = [
   { href: "/record", label: "The Record" },
   { href: "/reversals", label: "Reversals" },
+  { href: "/start-here", label: "Start Here" },
   { href: "/parishes", label: "Parish Profiles" },
   { href: "https://blog.saveourlithuanianparishes.org", label: "Blog" },
   { href: "/about", label: "About" },
@@ -87,8 +88,10 @@ export default function RootLayout({
             </p>
             <p>
               Every figure on this site is derived from the parish record and
-              verified at build time. Source: the <em>Draugas</em> archive,
-              2008–2026 — 2,768 issues searched.
+              verified at build time. Primary source: the <em>Draugas</em>{" "}
+              archive, 2008–2026 — 2,768 issues searched — extended by the
+              1909–2007 archive, published parish histories, and the national
+              reversal research.
             </p>
             <p>
               The dataset is open.{" "}

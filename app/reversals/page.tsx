@@ -180,7 +180,8 @@ export default function ReversalsPage() {
         <strong className="text-foreground">
           {db.stats.reversals} documented cases
         </strong>{" "}
-        in three diocesan waves, from Allentown in 2011 to Buffalo weeks ago.
+        in three diocesan waves, from Allentown in 2011 to Buffalo in
+        late 2025.
         Not by protest alone, and never by leaving the Church — by the
         Church&rsquo;s own law, applied in time. This page is the evidence.
       </p>
