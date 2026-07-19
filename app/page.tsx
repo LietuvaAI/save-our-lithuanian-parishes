@@ -42,9 +42,9 @@ const ACTIONS = [
   },
   {
     title: "Arm your community with the facts",
-    body: "The full argument, traced claim by claim to published sources. Read it, print it, and put it in front of your parish council.",
-    cta: "Read the article",
-    href: "/who-does-the-parish-belong-to",
+    body: "The deadlines, the seven reasons that don't count, the procedural rights that have reversed closures, and 26 precedents — assembled for your parish council.",
+    cta: "Start here",
+    href: "/start-here",
     primary: false,
   },
 ];
@@ -60,8 +60,8 @@ export default function Home() {
           Who decides whether a Lithuanian parish survives?
         </h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg leading-relaxed text-muted">
-          Not faith. Not money. Not the fight — ownership decided every
-          ending. We stand for one goal:{" "}
+          Not faith. Not money. Not the fight that comes too late —
+          ownership decided every ending. We stand for one goal:{" "}
           <strong className="text-foreground">
             that what Lithuanian communities built stays in their hands
           </strong>{" "}
@@ -126,10 +126,16 @@ export default function Home() {
           window that ever mattered is <em>before</em> the closure letter
           arrives. That window is open now.{" "}
           <Link
+            href="/start-here"
+            className="font-semibold underline hover:text-accent whitespace-nowrap"
+          >
+            Start here →
+          </Link>{" "}
+          <Link
             href="/who-does-the-parish-belong-to"
             className="underline hover:text-accent whitespace-nowrap"
           >
-            Why this moment matters →
+            · Why this moment matters →
           </Link>
         </p>
       </section>
@@ -193,10 +199,20 @@ export default function Home() {
           Lithuanian immigrants raised these churches with their own hands and
           their own wages — and, since 1884, the deed to nearly every Roman
           Catholic parish has rested not with the community that built it, but
-          with the diocese. The record shows that neither solvency, nor
-          petitions, nor lawsuits, nor appeals to the Vatican has ever
-          reversed a closure decision. The only parishes never closed by an
-          outside authority are the ones the community itself controlled.
+          with the diocese. Within these 83 parishes, the record shows that
+          neither solvency, nor petitions, nor lawsuits, nor appeals filed
+          after the decree ever reversed a closure — the only parishes never
+          closed by an outside authority are the ones the community itself
+          controlled.
+        </p>
+        <p className="mt-4 leading-relaxed">
+          Nationally, Rome <em>has</em> reversed closures —{" "}
+          <Link href="/reversals" className="underline hover:text-accent">
+            twenty-six documented times
+          </Link>
+          , when parishioners moved on procedure before and during the window,
+          not after. Both lessons are this site&rsquo;s work: ownership decides
+          endings, and procedure, in time, is the only fight that has ever won.
         </p>
         <p className="mt-4 leading-relaxed">
           That is not an argument — it is the record: every entry traces to a

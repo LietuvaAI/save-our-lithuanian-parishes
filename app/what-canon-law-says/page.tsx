@@ -96,11 +96,11 @@ export default function CanonLawPage() {
 
         <h2>Communities have won inside the system</h2>
         <p>
-          In 2012, the Vatican&rsquo;s Congregation for the Clergy reversed
-          the closing of thirteen parishes in the Diocese of Cleveland — the
-          first time Rome ordered closed parishes fully reopened — after
-          parishioners appealed on the Church&rsquo;s own procedures. The
-          bishop complied (
+          In 2012, the Vatican&rsquo;s Congregation for the Clergy overturned
+          the Diocese of Cleveland&rsquo;s closure decrees: of fourteen
+          parishes that appealed, twelve were ordered reopened — the first
+          time Rome reversed closures at that scale — and the bishop complied
+          (
           <Src href="https://www.npr.org/2012/03/07/148170076/vatican-orders-cleveland-parishes-reopened">
             NPR
           </Src>
@@ -108,17 +108,32 @@ export default function CanonLawPage() {
           <Src href="https://www.ncronline.org/news/parish/bishop-reopen-12-closed-cleveland-parishes">
             National Catholic Reporter
           </Src>
-          ). Canonical appeal is real, and it has worked — though{" "}
-          <Link href="/record">our record</Link> shows it did not save the
-          Lithuanian parishes that tried it, and reversals remain the
-          exception, not the rule. Time bought inside the structure is still
-          time on the diocese&rsquo;s clock.
+          ). And Cleveland is not alone. Our research now documents{" "}
+          <Link href="/reversals">twenty-six reversed closures</Link>
+          {" "}in three diocesan waves — Allentown in 2011, Cleveland in
+          2012, Buffalo in 2025 — every one won not by protest alone, and
+          never by
+          leaving the Church, but by the Church&rsquo;s own procedures,
+          applied in time.
         </p>
         <p>
-          This page covers the <em>ownership</em> half of the argument. For
-          the <em>procedure</em> half — the reasons canon law does not accept
-          for closing a church, and the steps that make a closure decree
-          void — read our companion piece:{" "}
+          The timing is the hard lesson. In{" "}
+          <Link href="/record">our own record of the 83</Link>, no appeal
+          filed after the decree ever reversed a closure — the national
+          reversals were won by communities that moved before the decree or
+          within the appeal window after it, a window measured in{" "}
+          <em>days</em>, not months. Time inside the structure is real, but
+          it runs on the Church&rsquo;s clock.
+        </p>
+        <p>
+          This page covers the <em>ownership</em> half of the argument. The{" "}
+          <em>procedure</em> half — the deadlines, the seven reasons canon
+          law does not accept for closing a church, and the questions that
+          have made closure decrees void — is on{" "}
+          <Link href="/start-here">Start Here</Link>, with every precedent
+          documented on{" "}
+          <Link href="/reversals">Where Rome said no</Link> and the fuller
+          argument in our essay{" "}
           <Src href="https://blog.saveourlithuanianparishes.org/p/a-closure-done-wrong-is-not-a-closure">
             Closed by the Diocese, Reopened by Rome
           </Src>
