@@ -162,18 +162,28 @@ export default function LegalPage() {
       <section className="mt-8">
         <h2 className="font-serif text-2xl font-semibold">Using our data</h2>
         <p className="mt-2 leading-relaxed">
-          Our dataset and the site&rsquo;s original text are open:
-          journalists, researchers, parish committees, and anyone else may
-          reuse them <strong>with attribution</strong> to
-          SaveOurLithuanianParishes.org (and, for facts, to the underlying
-          source we cite). The dataset lives on{" "}
+          Our dataset and the site&rsquo;s original text are formally
+          licensed under{" "}
           <a
-            href="https://github.com/LietuvaAI/save-our-lithuanian-parishes"
+            href="https://creativecommons.org/licenses/by/4.0/"
             className="underline hover:text-accent"
           >
-            GitHub
+            Creative Commons Attribution 4.0 (CC BY 4.0)
           </a>
-          . Suggested citation:
+          : journalists, researchers, parish committees, and anyone else may
+          reuse them <strong>with attribution</strong> to
+          SaveOurLithuanianParishes.org (and, for facts, to the underlying
+          source we cite). The site&rsquo;s code is MIT-licensed. Two
+          carve-outs: bylined essays remain © their authors, and facts
+          extracted from in-copyright works never carry our license — see
+          the{" "}
+          <a
+            href="https://github.com/LietuvaAI/save-our-lithuanian-parishes/blob/main/LICENSE.md"
+            className="underline hover:text-accent"
+          >
+            full license
+          </a>{" "}
+          on GitHub, where the dataset lives. Suggested citation:
         </p>
         <p className="mt-3 rounded-md border border-rule px-4 py-3 text-sm leading-relaxed">
           Save Our Lithuanian Parishes, <em>The Record of America&rsquo;s
