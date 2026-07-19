@@ -29,6 +29,7 @@ export const metadata: Metadata = {
 
 const NAV = [
   { href: "/record", label: "The Record" },
+  { href: "/reversals", label: "Reversals" },
   { href: "/parishes", label: "Parish Profiles" },
   { href: "https://blog.saveourlithuanianparishes.org", label: "Blog" },
   { href: "/about", label: "About" },
