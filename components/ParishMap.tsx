@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import mapData from "@/data/map.json";
-import candData from "@/data/candidates/map.json";
+import regData from "@/data/registry-map.json";
 import { MarkShape, MarkIcon } from "@/components/marks";
 import {
   usParishes,
@@ -26,7 +26,7 @@ const NE_STATES = new Set(["ME", "NH", "VT", "MA", "RI", "CT", "NY", "NJ", "PA",
 
 type View = { x: number; y: number; w: number; h: number };
 type Phase = "future" | "active" | "lost";
-type Candidate = (typeof candData.points)[number];
+type RegPoint = (typeof regData.points)[number];
 
 function clampView(v: View): View {
   const w = Math.min(Math.max(v.w, FULL.w / MAX_ZOOM), FULL.w);
@@ -48,7 +48,7 @@ function phaseAt(p: Parish, year: number): Phase {
   return "active";
 }
 
-function candPhaseAt(c: Candidate, year: number): Phase {
+function regPhaseAt(c: RegPoint, year: number): Phase {
   if (!c.foundedYear || c.foundedYear > year) return "future";
   if (c.closedYear && c.closedYear <= year) return "lost";
   return "active";
@@ -57,8 +57,8 @@ function candPhaseAt(c: Candidate, year: number): Phase {
 export default function ParishMap() {
   const router = useRouter();
   const [hovered, setHovered] = useState<Parish | null>(null);
-  const [hoveredCand, setHoveredCand] = useState<Candidate | null>(null);
-  const [showCand, setShowCand] = useState(false);
+  const [hoveredReg, setHoveredReg] = useState<RegPoint | null>(null);
+  const [showRecord, setShowRecord] = useState(true);
   const [view, setView] = useState<View>(FULL);
   const [year, setYear] = useState<number | null>(null); // null = show all
   const [playing, setPlaying] = useState(false);
@@ -205,30 +205,50 @@ export default function ParishMap() {
             strokeOpacity={0.15}
             strokeWidth={0.7 / zoom}
           />
-          {showCand &&
-            candData.points.map((c) => {
+          {showRecord &&
+            regData.points.map((c) => {
               if (timelineMode && year !== null) {
-                if (candPhaseAt(c, year) === "future") return null;
+                if (regPhaseAt(c, year) === "future") return null;
               }
-              const active = hoveredCand?.id === c.id;
+              const active = hoveredReg?.slug === c.slug;
+              const deep = c.depth === "multi-source";
+              const rr = active ? markR * 1.1 : markR * 0.72;
+              const common = {
+                tabIndex: 0,
+                "aria-label": `${c.name}, ${c.city} ${c.state} — in the research record (${c.depth}).`,
+                onMouseEnter: () => setHoveredReg(c),
+                onMouseLeave: () => setHoveredReg(null),
+                onFocus: () => setHoveredReg(c),
+                onBlur: () => setHoveredReg(null),
+                className: "focus:outline-none",
+              };
+              if (c.kind === "congregation") {
+                const s = rr * 1.5;
+                return (
+                  <rect
+                    key={c.slug}
+                    x={c.x - s / 2}
+                    y={c.y - s / 2}
+                    width={s}
+                    height={s}
+                    fill="none"
+                    stroke="var(--foreground)"
+                    strokeOpacity={active ? 0.85 : 0.55}
+                    strokeWidth={markR * 0.24}
+                    {...common}
+                  />
+                );
+              }
               return (
                 <circle
-                  key={c.id}
+                  key={c.slug}
                   cx={c.x}
                   cy={c.y}
-                  r={active ? markR * 1.15 : markR * 0.8}
-                  fill="none"
-                  stroke="var(--foreground)"
-                  strokeOpacity={active ? 0.8 : 0.45}
-                  strokeWidth={markR * 0.24}
-                  strokeDasharray={`${markR * 0.5} ${markR * 0.38}`}
-                  tabIndex={0}
-                  aria-label={`${c.nameEn}, ${c.city} ${c.state} — unverified historical candidate.`}
-                  onMouseEnter={() => setHoveredCand(c)}
-                  onMouseLeave={() => setHoveredCand(null)}
-                  onFocus={() => setHoveredCand(c)}
-                  onBlur={() => setHoveredCand(null)}
-                  className="focus:outline-none"
+                  r={rr}
+                  fill="var(--foreground)"
+                  fillOpacity={active ? 0.9 : deep ? 0.62 : 0.32}
+                  stroke="none"
+                  {...common}
                 />
               );
             })}
@@ -352,16 +372,16 @@ export default function ParishMap() {
             );
           })()}
 
-        {hoveredCand &&
+        {hoveredReg &&
           !hovered &&
           (() => {
-            const lx = ((hoveredCand.x - view.x) / view.w) * 100;
-            const ly = ((hoveredCand.y - view.y) / view.h) * 100;
+            const lx = ((hoveredReg.x - view.x) / view.w) * 100;
+            const ly = ((hoveredReg.y - view.y) / view.h) * 100;
             if (lx < -2 || lx > 102 || ly < -2 || ly > 102) return null;
             const below = ly < 32;
             return (
               <div
-                className="pointer-events-none absolute z-10 w-64 rounded-lg border border-dashed border-rule bg-background/95 px-3.5 py-2.5 text-sm shadow-lg"
+                className="pointer-events-none absolute z-10 w-72 rounded-lg border border-rule bg-background/95 px-3.5 py-2.5 text-sm shadow-lg"
                 style={{
                   left: `${Math.min(Math.max(lx, 15), 85)}%`,
                   top: `${ly}%`,
@@ -371,19 +391,28 @@ export default function ParishMap() {
                 }}
                 aria-live="polite"
               >
-                <div className="font-serif font-semibold">
-                  {hoveredCand.nameEn}
-                </div>
+                <div className="font-serif font-semibold">{hoveredReg.name}</div>
                 <div className="text-muted">
-                  {hoveredCand.city}, {hoveredCand.state}
-                  {hoveredCand.foundedYear
-                    ? ` · founded ${hoveredCand.foundedYear}`
+                  {hoveredReg.city}, {hoveredReg.state}
+                  {hoveredReg.foundedYear
+                    ? ` · founded ${hoveredReg.foundedYear}`
                     : ""}
-                  {hoveredCand.closedYear ? `, ${hoveredCand.closedYear}` : ""}
+                  {hoveredReg.closedYear ? `, closed ${hoveredReg.closedYear}` : ""}
                 </div>
-                <div className="text-muted mt-1 italic">
-                  Unverified historical candidate — being researched for the
-                  record.
+                <div className="text-muted mt-1">
+                  {hoveredReg.kind === "congregation"
+                    ? "Non-Catholic Lithuanian congregation — historical witness."
+                    : hoveredReg.depth === "multi-source"
+                      ? "Documented in multiple sources."
+                      : "Documented in a single source so far — research continues."}
+                </div>
+                <div className="text-muted mt-1 text-xs">
+                  Documented in: {hoveredReg.documentedIn.join(" · ")}
+                  {hoveredReg.hasConflicts ? " · source variants recorded" : ""}
+                </div>
+                <div className="text-muted mt-1 italic text-xs">
+                  Part of the growing research record — profile pages arrive as
+                  each record deepens.
                 </div>
               </div>
             );
@@ -470,10 +499,16 @@ export default function ParishMap() {
           </span>
         ) : (
           <span className="text-muted">
-            Each mark is one of the {usParishes.length} U.S. Lithuanian parishes
-            in the record. Hover a mark to see the parish; click it to open the
-            full profile. Zoom into the Northeast; drag to pan when zoomed.
-            See a parish missing?{" "}
+            Shape-coded marks are the {usParishes.length} U.S. Lithuanian
+            parishes of the documented record — hover to see a parish, click to
+            open its full profile. Solid dots are the wider research record:{" "}
+            {regData.counts.parishes} more parishes documented across five
+            research sources (plus {regData.counts.congregations} non-Catholic
+            congregations, squares) — a separate, growing layer that never
+            alters the record&rsquo;s figures. {regData.counts.skippedCanada}{" "}
+            Canadian parishes and {regData.counts.skippedNoGeo} not-yet-mapped
+            places are in the research record but not on this U.S. map. See a
+            parish missing?{" "}
             <Link href="/report" className="underline hover:text-foreground">
               Report it
             </Link>
@@ -486,27 +521,36 @@ export default function ParishMap() {
         <label className="inline-flex items-center gap-1.5 cursor-pointer text-muted hover:text-foreground transition-colors">
           <input
             type="checkbox"
-            checked={showCand}
+            checked={showRecord}
             onChange={(e) => {
-              setShowCand(e.target.checked);
-              if (!e.target.checked) setHoveredCand(null);
+              setShowRecord(e.target.checked);
+              if (!e.target.checked) setHoveredReg(null);
             }}
             className="accent-[var(--mark-closed)]"
           />
           <svg width={14} height={14} viewBox="0 0 14 14" aria-hidden>
-            <circle
-              cx={7}
-              cy={7}
-              r={5}
-              fill="none"
-              stroke="var(--foreground)"
-              strokeOpacity={0.5}
-              strokeWidth={1.4}
-              strokeDasharray="2.4 1.8"
-            />
+            <circle cx={7} cy={7} r={4.2} fill="var(--foreground)" fillOpacity={0.5} />
           </svg>
-          Historical candidates ({candData.points.length}) — unverified
+          Research record ({regData.counts.parishes} more parishes) — beyond the
+          83
         </label>
+        {showRecord && !timelineMode && (
+          <span className="inline-flex items-center gap-1.5 text-muted">
+            <svg width={14} height={14} viewBox="0 0 14 14" aria-hidden>
+              <rect
+                x={3.2}
+                y={3.2}
+                width={7.6}
+                height={7.6}
+                fill="none"
+                stroke="var(--foreground)"
+                strokeOpacity={0.6}
+                strokeWidth={1.4}
+              />
+            </svg>
+            Non-Catholic congregation ({regData.counts.congregations})
+          </span>
+        )}
         {timelineMode ? (
           <>
             <span className="inline-flex items-center gap-1.5">
