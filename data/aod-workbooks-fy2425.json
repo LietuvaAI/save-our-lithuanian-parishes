@@ -1,0 +1,235 @@
+{
+ "corpusScope": "aod-workbooks-fy2425",
+ "captured": "2026-07-19",
+ "sources": {
+  "workbook_index": "https://restructuring.aod.org/parish-workbooks",
+  "planning_areas": "https://restructuring.aod.org/planning-areas",
+  "planning_process": "https://restructuring.aod.org/planning-process",
+  "note": "Parish workbooks published by the Archdiocese of Detroit beginning 2026-03-04, one per parish, 209 parishes across 15 Planning Areas; per-parish PDFs hosted at aod.filecamp.com (links below captured from the index page 2026-07-19)."
+ },
+ "provenance": "Figures transcribed from the AOD's published FY24/25 parish workbooks via The Hearth's July 2026 analysis posts; every row links its parish's own workbook PDF so any reader can verify. Net income and cash rounded to nearest $1,000 as published in the posts' table. null = not reported in workbook.",
+ "ethnic_parishes_13": [
+  {
+   "parish": "SS. Cyril & Methodius",
+   "community": "Slovak",
+   "city": "Sterling Heights",
+   "planning_area": 13,
+   "weekly_mass": 842,
+   "net_income_fy2425": -177000,
+   "unrestricted_cash": 2230000,
+   "workbook": "https://aod.filecamp.com/s/i/PE1dR6RlhYtB3FUt"
+  },
+  {
+   "parish": "St. Andrew Kim",
+   "community": "Korean",
+   "city": "Northville",
+   "planning_area": 8,
+   "weekly_mass": 526,
+   "net_income_fy2425": 232000,
+   "unrestricted_cash": 714000,
+   "workbook": "https://aod.filecamp.com/s/i/s2v69JcXIuQkqd3n"
+  },
+  {
+   "parish": "Our Lady of Albanians",
+   "community": "Albanian",
+   "city": "Southfield",
+   "planning_area": 8,
+   "weekly_mass": 507,
+   "net_income_fy2425": 16000,
+   "unrestricted_cash": 656000,
+   "workbook": "https://aod.filecamp.com/s/i/r98H3u9pgN0FzYd4"
+  },
+  {
+   "parish": "St. Barbara",
+   "community": "Polish",
+   "city": "Dearborn",
+   "planning_area": 6,
+   "weekly_mass": 461,
+   "net_income_fy2425": 220000,
+   "unrestricted_cash": 844000,
+   "workbook": "https://aod.filecamp.com/s/i/ngpq23tD1QWdkXUl"
+  },
+  {
+   "parish": "Our Lady of Grace",
+   "community": "Vietnamese",
+   "city": "Warren",
+   "planning_area": 12,
+   "weekly_mass": 450,
+   "net_income_fy2425": 0,
+   "unrestricted_cash": null,
+   "workbook": "https://aod.filecamp.com/s/i/OcEbwOYB50lNSJHZ"
+  },
+  {
+   "parish": "San Francesco",
+   "community": "Italian",
+   "city": "Clinton Township",
+   "planning_area": 12,
+   "weekly_mass": 386,
+   "net_income_fy2425": -8000,
+   "unrestricted_cash": 2420000,
+   "workbook": "https://aod.filecamp.com/s/i/L6YBT6rBaYhwaHVF"
+  },
+  {
+   "parish": "Holy Cross",
+   "community": "Hungarian",
+   "city": "Detroit",
+   "planning_area": 2,
+   "weekly_mass": 283,
+   "net_income_fy2425": 77000,
+   "unrestricted_cash": 778000,
+   "workbook": "https://aod.filecamp.com/s/i/oUaTCXap7dUJ6ptb"
+  },
+  {
+   "parish": "SS. Peter & Paul (Westside)",
+   "community": "Polish",
+   "city": "Detroit",
+   "planning_area": 1,
+   "weekly_mass": 223,
+   "net_income_fy2425": 15000,
+   "unrestricted_cash": 334000,
+   "workbook": "https://aod.filecamp.com/s/i/OavRRrki0uFsiL0c"
+  },
+  {
+   "parish": "Holy Family",
+   "community": "Italian",
+   "city": "Detroit",
+   "planning_area": 3,
+   "weekly_mass": 175,
+   "net_income_fy2425": -16000,
+   "unrestricted_cash": 251000,
+   "workbook": "https://aod.filecamp.com/s/i/2XJCUECAfKCINTHP"
+  },
+  {
+   "parish": "Divine Providence",
+   "community": "Lithuanian",
+   "city": "Southfield",
+   "planning_area": 8,
+   "weekly_mass": 144,
+   "net_income_fy2425": -52000,
+   "unrestricted_cash": 1010000,
+   "workbook": "https://aod.filecamp.com/s/i/Cz1cVR5GPmBIEMgf"
+  },
+  {
+   "parish": "St. Lucy",
+   "community": "Croatian",
+   "city": "Troy",
+   "planning_area": 9,
+   "weekly_mass": 97,
+   "net_income_fy2425": 9000,
+   "unrestricted_cash": 410000,
+   "workbook": "https://aod.filecamp.com/s/i/AU1Oj2y0658DXGXQ"
+  },
+  {
+   "parish": "St. Paul",
+   "community": "Albanian",
+   "city": "Rochester Hills",
+   "planning_area": 8,
+   "weekly_mass": null,
+   "net_income_fy2425": 796000,
+   "unrestricted_cash": 4450000,
+   "workbook": "https://aod.filecamp.com/s/i/xG4tjXBVIq9asUEC"
+  },
+  {
+   "parish": "Our Lady of Czestochowa",
+   "community": "Polish",
+   "city": "Sterling Heights",
+   "planning_area": 13,
+   "weekly_mass": null,
+   "net_income_fy2425": -123000,
+   "unrestricted_cash": 148000,
+   "workbook": "https://aod.filecamp.com/s/i/xufaO8GA91Oz1trP"
+  }
+ ],
+ "divine_providence_detail": {
+  "workbook": "https://aod.filecamp.com/s/i/Cz1cVR5GPmBIEMgf",
+  "planning_area": 8,
+  "planning_area_note": "Workbook/table says Planning Area 8; a May 30 2026 Detroit News report was read as Area 9 in an earlier site case record \u2014 the workbook is primary. RECONCILE in case record.",
+  "weekly_mass_attendance": {
+   "value": 144,
+   "rank": "191 of 204 reporting",
+   "percentile": "bottom 7%"
+  },
+  "baptisms_2024": {
+   "value": 3,
+   "rank": "184 of 209"
+  },
+  "total_revenue": {
+   "value": 260000,
+   "note": "smallest parish operation in its Planning Area"
+  },
+  "savings_per_weekly_attendee": {
+   "value": 6985,
+   "rank": "9 of 200",
+   "percentile": "top 5%",
+   "aod_median": 1705
+  },
+  "payable_loans_rank": "3 of 207 \u2014 effectively zero debt",
+  "unrestricted_cash": 1010000,
+  "net_equity": "above $1M",
+  "runway_years": 19,
+  "capacity_utilization": {
+   "value": 0.48,
+   "planning_area_median": 0.37,
+   "note": "highest in its Planning Area; ethnic-cohort highest; AOD-wide context ~29-30%"
+  },
+  "deficit_fy2425": -52000,
+  "current_fy_net_first7mo": 8700,
+  "current_fy_pace": 15000,
+  "current_fy_source": "Divine Providence parish bulletin, Feb 2026",
+  "workbook_undercounts": {
+   "confirmations_2024_workbook": 6,
+   "confirmations_2024_register": 18,
+   "confirmations_2025": 7,
+   "baptisms_2026_ytd": 5,
+   "weddings_2026": 1,
+   "weddings_2024_workbook": 1
+  },
+  "personal_parish_share_outside_boundary": 0.65
+ },
+ "cohort_aggregates": {
+  "ethnic_median_weekly": 386,
+  "rest_median_weekly": 538,
+  "ethnic_debt_free_share": 1.0,
+  "rest_debt_free_share": 0.88,
+  "ethnic_median_reserves_per_attendee": 2240,
+  "rest_median_reserves_per_attendee": 1680,
+  "ethnic_capacity_used_median": 0.21,
+  "rest_capacity_used_median": 0.3,
+  "ethnic_total_unrestricted_reserves": 14200000,
+  "ethnic_combined_net_income": "~+$1M, 7 of 13 in the black",
+  "sacraments_2024": {
+   "total_newlife": 1141,
+   "baptisms": 355,
+   "first_communions": 335,
+   "confirmations": 277,
+   "marriages": 122,
+   "funerals": 188,
+   "newlife_per_funeral_ethnic": 6,
+   "newlife_per_funeral_rest": 3
+  },
+  "planning_areas_with_ethnic_parishes": 8,
+  "planning_areas_total": 15,
+  "method": "attendance-based ratios use the 11 of 13 parishes reporting weekly Mass; totals use all 13; 'rest' = the other 196 parishes"
+ },
+ "aod_wide": {
+  "parishes": 209,
+  "planning_areas": 15,
+  "mass_attendance_change_since_2011": -0.4,
+  "priests_now": 224,
+  "priests_projected_2034": 130,
+  "repair_shortfall_usd": 94000000,
+  "annual_operating_gap_usd": 18000000,
+  "national_parishes_1933": {
+   "parishes_total": 98,
+   "national": 32,
+   "languages_preached": 22
+  },
+  "timeline": {
+   "workbooks_published": "2026-03-04",
+   "survey_closes": "2026-07-31",
+   "discernment": "fall 2026",
+   "final_plans": "winter 2027",
+   "implementation": "2027-07-01"
+  }
+ }
+}

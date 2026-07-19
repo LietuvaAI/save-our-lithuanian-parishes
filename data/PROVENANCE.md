@@ -44,3 +44,10 @@ Never hand-edit `data/parishes.csv` in this repo. If the upstream canonical CSV 
 - The Pennsylvania **"31 parishes / 29 Roman Catholic, all closed"** figure is a statistic *stated in Draugas* (2017-12-28; 2024-01-20), not enumerated dataset rows — cite as attributed, never draw 31 marks.
 - **No invented numbers.** Blank CSV fields are blank because the research does not support a figure.
 - **83 documented / 58 case-filed in depth** — copy must not call all 83 full case histories.
+
+## aod-workbooks-fy2425.json + aod-workbook-links.csv
+
+- **Canonical source:** the Archdiocese of Detroit's own published FY24/25 parish workbooks — index at https://restructuring.aod.org/parish-workbooks (published from 2026-03-04; one PDF per parish, 209 parishes, 15 Planning Areas; PDFs at aod.filecamp.com). Link index captured 2026-07-19 in-browser.
+- `aod-workbook-links.csv`: all 209 parish→workbook-PDF links, so no figure ever needs re-extraction without its source at hand.
+- `aod-workbooks-fy2425.json`: the verified extract behind The Hearth's July 2026 analysis posts — the 13 ethnic parishes (each row linking its own workbook), Divine Providence's full metric block (incl. the parish-bulletin current-year figures, clearly source-labeled), cohort aggregates, and AOD-wide statistics. Every consumer of these figures should cite the specific workbook link.
+- ⚠️ Reconciliation lead: the workbook records Divine Providence in **Planning Area 8**; an earlier site case record said Area 9 via a Detroit News read — the workbook is primary.
