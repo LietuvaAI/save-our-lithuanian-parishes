@@ -181,7 +181,12 @@ export default function AboutTheDataPage() {
       </section>
 
       <p className="mt-10 text-sm text-muted border-t border-rule pt-4">
-        See also:{" "}
+        Formal citations for every source, copyright practice, and how to
+        reuse our data:{" "}
+        <Link href="/legal" className="underline hover:text-foreground">
+          Legal, attribution &amp; data use
+        </Link>
+        . See also:{" "}
         <Link href="/record" className="underline hover:text-foreground">
           the record
         </Link>{" "}

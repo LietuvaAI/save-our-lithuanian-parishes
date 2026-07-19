@@ -111,6 +111,24 @@ export default function RootLayout({
               </a>
               .
             </p>
+            <p className="pt-3 mt-1 border-t border-rule">
+              © 2026 Save Our Lithuanian Parishes · an initiative powered by
+              Lietuva.AI · a documented record, not legal or canonical advice
+              ·{" "}
+              <Link
+                href="/legal"
+                className="underline hover:text-foreground"
+              >
+                Legal, attribution &amp; data use
+              </Link>{" "}
+              ·{" "}
+              <a
+                href="mailto:info@saveourlithuanianparishes.org"
+                className="underline hover:text-foreground"
+              >
+                Contact
+              </a>
+            </p>
           </div>
         </footer>
       </body>
