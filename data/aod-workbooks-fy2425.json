@@ -143,7 +143,7 @@
  "divine_providence_detail": {
   "workbook": "https://aod.filecamp.com/s/i/Cz1cVR5GPmBIEMgf",
   "planning_area": 8,
-  "planning_area_note": "Workbook/table says Planning Area 8; a May 30 2026 Detroit News report was read as Area 9 in an earlier site case record \u2014 the workbook is primary. RECONCILE in case record.",
+  "planning_area_note": "Workbook/table says Planning Area 8; a May 30 2026 Detroit News report was read as Area 9 in an earlier site case record — the workbook is primary. RECONCILE in case record.",
   "weekly_mass_attendance": {
    "value": 144,
    "rank": "191 of 204 reporting",
@@ -163,7 +163,7 @@
    "percentile": "top 5%",
    "aod_median": 1705
   },
-  "payable_loans_rank": "3 of 207 \u2014 effectively zero debt",
+  "payable_loans_rank": "3 of 207 — effectively zero debt",
   "unrestricted_cash": 1010000,
   "net_equity": "above $1M",
   "runway_years": 19,
@@ -198,14 +198,15 @@
   "ethnic_total_unrestricted_reserves": 14200000,
   "ethnic_combined_net_income": "~+$1M, 7 of 13 in the black",
   "sacraments_2024": {
-   "total_newlife": 1141,
+   "total_newlife": 1089,
    "baptisms": 355,
    "first_communions": 335,
    "confirmations": 277,
    "marriages": 122,
    "funerals": 188,
    "newlife_per_funeral_ethnic": 6,
-   "newlife_per_funeral_rest": 3
+   "newlife_per_funeral_rest": 3,
+   "total_newlife_note": "Corrected 2026-07-19: an earlier total of 1,141 did not match the enumerated components (355+335+277+122 = 1,089); the component sum is authoritative. Ratio basis: 1,089/188 = 5.79 — 'very nearly six' per funeral; the live post was corrected the same day."
   },
   "planning_areas_with_ethnic_parishes": 8,
   "planning_areas_total": 15,
@@ -218,11 +219,11 @@
   "priests_now": 224,
   "priests_projected_2034": 130,
   "repair_shortfall_usd": 94000000,
-  "annual_operating_gap_usd": 18000000,
   "national_parishes_1933": {
    "parishes_total": 98,
    "national": 32,
-   "languages_preached": 22
+   "languages_preached": 22,
+   "anchor_status": "UNANCHORED as of 2026-07-19: not in the workbook context pages, not on aod.org/history-of-the-archdiocese, no open-web anchor for the 98/32/22 triple; the live post attributes it to pages that do not carry it. Needs Vilija's original source or softening — do not reuse in new writing until pinned."
   },
   "timeline": {
    "workbooks_published": "2026-03-04",
@@ -230,6 +231,8 @@
    "discernment": "fall 2026",
    "final_plans": "winter 2027",
    "implementation": "2027-07-01"
-  }
+  },
+  "parish_debt_usd": 18000000,
+  "parish_debt_note": "Corrected 2026-07-19: workbook p.19 states 'More than $18 million in parish debt and $94 million in unfunded maintenance' — earlier capture mislabeled the $18M as an annual operating gap (a framing some press used loosely). Both figures are archdiocese-wide, per the workbooks' shared context section."
  }
 }
