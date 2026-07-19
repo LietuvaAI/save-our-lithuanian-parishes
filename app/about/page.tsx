@@ -88,7 +88,16 @@ export default function AboutPage() {
             parish profile
           </Link>{" "}
           is growing a researched present-day case record of where the
-          building, the community, and the property stand now.
+          building, the community, and the property stand now. The full
+          story of how all of this was collected — sources, methods,
+          copyright handling, and what is deliberately held back — is on{" "}
+          <Link
+            href="/about-the-data"
+            className="underline hover:text-accent"
+          >
+            About the data
+          </Link>
+          .
         </p>
 
         <h2 className="font-serif text-2xl font-semibold pt-4">

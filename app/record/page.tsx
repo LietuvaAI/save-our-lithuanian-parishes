@@ -72,7 +72,14 @@ export default function RecordPage() {
       <p className="mt-16 text-sm text-muted">
         Šaltinis: „Draugo&ldquo; archyvas, 2008–2026 m. The dataset is open —
         every figure re-derives from the parish record at build time, and the
-        build fails if anything drifts.
+        build fails if anything drifts. How the whole record was collected:{" "}
+        <Link
+          href="/about-the-data"
+          className="underline hover:text-foreground"
+        >
+          About the data
+        </Link>
+        .
       </p>
     </div>
   );
