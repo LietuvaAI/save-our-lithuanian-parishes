@@ -18,15 +18,15 @@
 ## registry-unified.json
 
 - **Canonical source:** `LietuvaAI/culturenet-brain` → `docs/research/parish-registry-unified/registry-unified.json` (corpusScope `parish-registry-unified`)
-- **Snapshot taken:** 2026-07-18 from `main` (PR #369 + rounds through commit `519bb29`); byte-verified against origin/main at snapshot time.
+- **Snapshot taken:** 2026-07-19 (**refresh-1**) from `main` (PR #380: Draugas 1909-2007 FINAL #378 + Michelsonas axis #376 joined); byte-verified against origin/main at snapshot time. 220 parishes (83 case-filed locked / 65 multi-source / 72 single-source); six source axes. Refresh also fixed a pre-existing wrong-merge (Queen of Angels Brooklyn) — see culturenet-brain findings.md refresh-1 log. Previous snapshot 2026-07-18 (188 parishes, PR #369).
 - **What it is:** 188 parishes consolidated across five research axes (canonical 83 · Draugas 1909–2007 registry · Wolkovich Vol 3 · web-historical · truelithuania field survey), one record per parish with per-source provenance, carried conflicts, `record_depth` (case-filed / multi-source / single-source), and `congregation_class` (roman_catholic / national_catholic_pncc / independent_catholic). The 83 case-filed records carry the locked fields verbatim in a `locked` block.
 - **Figures discipline:** this file is **presentation-layer only** — no headline figure derives from it. The `draugas-2008-2026` figures continue to derive exclusively from `parishes.csv`. The map's parish count is its own clearly-labeled statistic and is never conflated with the locked figures.
 - **Held upstream (NOT snapshotted, per Vilija 2026-07-18):** `sites.json` (cemeteries, institutions, Jewish congregations/orgs, monasteries, chapels, shrines) and `leads.json`.
 
 ## non-catholic-congregations.json
 
-- **Canonical source:** same culturenet-brain directory; snapshot 2026-07-18, byte-verified.
-- 11 non-Catholic Lithuanian Christian congregations (Lutheran/Reformed/Baptist/independent), deduped across axes with city-migration history. **Display rule (Vilija 2026-07-18): rendered with a DISTINCT icon and historical-witness framing** — never advocacy (guardrail 1).
+- **Canonical source:** same culturenet-brain directory; snapshot 2026-07-19 (refresh-1), byte-verified.
+- 14 non-Catholic Lithuanian Christian congregations (Lutheran/Reformed/Baptist/independent), deduped across axes with city-migration history. **Display rule (Vilija 2026-07-18): rendered with a DISTINCT icon and historical-witness framing** — never advocacy (guardrail 1).
 
 ## reversal-database.json
 

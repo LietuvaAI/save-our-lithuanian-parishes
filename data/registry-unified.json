@@ -1,23 +1,36 @@
 {
- "generated": "2026-07-18",
+ "generated": "2026-07-19",
  "corpusScope": "parish-registry-unified",
  "inputs": [
-  "0ebf487",
-  "e4617ac",
-  "76def1b"
+  "e00f018bcdd68ef656a8fba77e932a47f82737ba3ab59a01db3397064e6ef310",
+  "c83.csv",
+  "694b8c975e88945bddf028f58461e0a895618facec1e0ff97864f1da1236c36d",
+  "mine-registry.csv",
+  "67b6ca3c7c16c8343cb85f6fb4c7108c45c6c1ff9e579cf9b568d3e20bc98d8b",
+  "mine-jubilee-implied-foundings.csv",
+  "564b5ccad9ffef2fae7411c91a01aff44442deaff1ac0a39a6fdb1ba138527e2",
+  "mine-events-curated.csv",
+  "8b67e578f593f9845ed6145e6e9a5347ed540b1f9ccaea6a30b73d9a0ba78ffe",
+  "wolk-parishes.csv",
+  "a854f5958fa05e3972ba548b34d5e895df0e119ce7fa46a45f603aaf08381b14",
+  "mich-parishes.csv",
+  "e9220a6e06efe30147e6e82d1d3d4ac410c914768832c303051993c47146e7c8",
+  "web137.json",
+  "4ce827735257813f75ad3cdeaaf85f37077e3d8d46abea61cc420dbf472c4638",
+  "tl195.json"
  ],
  "principles": "conflicts are data; locked figures untouched; no invented values; every fact cites its source",
  "counts": {
-  "parishes": 188,
+  "parishes": 220,
   "case_filed": 83,
-  "multi_source": 59,
-  "single_source": 46,
+  "multi_source": 65,
+  "single_source": 72,
   "with_exact_geo": 87,
-  "with_city_geo": 49,
-  "needs_geocode": 52,
-  "standalone_sites": 155,
-  "non_catholic_congregations": 11,
-  "excluded": 3,
+  "with_city_geo": 65,
+  "needs_geocode": 68,
+  "standalone_sites": 167,
+  "non_catholic_congregations": 14,
+  "excluded": 4,
   "ambiguous": 1
  },
  "parishes": [
@@ -175,7 +188,8 @@
     "lt": "Šv. Onos",
     "en": "St. Anne",
     "variants": [
-     "ST. ANNE, SPRING VALLEY"
+     "ST. ANNE, SPRING VALLEY",
+     "lietuvių parapija, Spring Valley, Ill. (kun. Ambrozaitis)"
     ]
    },
    "city": "Spring Valley",
@@ -234,6 +248,17 @@
      "diocese": "Diocese of Peoria"
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "128",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Roman Catholic",
+     "diocese": "None"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 6496,
@@ -255,6 +280,11 @@
       "value": "1897",
       "source": "draugas-jubilee-implied",
       "cite": "1947-10-11 p2 (50 metų)"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "128"
      }
     ],
     "closed": [
@@ -266,6 +296,11 @@
       "value": "1990",
       "source": "wolkovich",
       "cite": "Vol.3 p.106, p.107"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "128"
      }
     ]
    },
@@ -281,6 +316,11 @@
        "value": "1897",
        "source": "draugas-jubilee-implied",
        "cite": "1947-10-11 p2 (50 metų)"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "128"
       }
      ]
     },
@@ -295,6 +335,11 @@
        "value": "1990",
        "source": "wolkovich",
        "cite": "Vol.3 p.106, p.107"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "128"
       }
      ]
     }
@@ -313,7 +358,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed"
   },
   {
@@ -322,7 +367,8 @@
     "lt": "Šv. Jurgio",
     "en": "St. George",
     "variants": [
-     "ST. GEORGE: CHICAGO MOTHER CHURCH"
+     "ST. GEORGE: CHICAGO MOTHER CHURCH",
+     "šv. Jurgio parapija"
     ]
    },
    "city": "Chicago",
@@ -379,6 +425,17 @@
      "convent": "",
      "cemetery": "St. Casimir Cemetery, 111th & Pulaski Road, established by Kriaučiūnas",
      "diocese": "Archdiocese of Chicago"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.297-305",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
     }
    ],
    "years": {
@@ -412,6 +469,11 @@
       "value": "1990-06-30",
       "source": "wolkovich",
       "cite": "Vol.3 p.124, p.125, p.126, p.127, p.128, p.129, p.130, p.131"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.297-305"
      }
     ]
    },
@@ -451,6 +513,11 @@
        "value": "1990-06-30",
        "source": "wolkovich",
        "cite": "Vol.3 p.124, p.125, p.126, p.127, p.128, p.129, p.130, p.131"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "p.297-305"
       }
      ]
     }
@@ -469,7 +536,7 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "case-filed"
   },
   {
@@ -1832,6 +1899,10 @@
    "years": {
     "founded": [
      {
+      "value": "1909",
+      "source": "draugas-registry-1909-2007"
+     },
+     {
       "value": "1913",
       "source": "draugas-registry-1909-2007"
      },
@@ -1867,6 +1938,10 @@
     {
      "field": "founded",
      "variants": [
+      {
+       "value": "1909",
+       "source": "draugas-registry-1909-2007"
+      },
       {
        "value": "1913",
        "source": "draugas-registry-1909-2007"
@@ -2197,7 +2272,9 @@
    "names": {
     "lt": "Šv. Kazimiero",
     "en": "St. Casimir",
-    "variants": []
+    "variants": [
+     "šv. Kazimiero parapija"
+    ]
    },
    "city": "Worcester",
    "state": "MA",
@@ -2241,6 +2318,17 @@
      "ownership": "diocese_rc"
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.344-347",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 344,
@@ -2271,6 +2359,11 @@
      {
       "value": "1903",
       "source": "web-historical"
+     },
+     {
+      "value": "fundraising begun 1895",
+      "source": "michelsonas-1961",
+      "cite": "p.344-347"
      }
     ],
     "closed": [
@@ -2281,6 +2374,11 @@
      {
       "value": "2009",
       "source": "web-historical"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.344-347"
      }
     ]
    },
@@ -2300,6 +2398,11 @@
       {
        "value": "1903",
        "source": "web-historical"
+      },
+      {
+       "value": "fundraising begun 1895",
+       "source": "michelsonas-1961",
+       "cite": "p.344-347"
       }
      ]
     },
@@ -2313,6 +2416,11 @@
       {
        "value": "2009",
        "source": "web-historical"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "p.344-347"
       }
      ]
     }
@@ -2331,7 +2439,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "case-filed"
   },
   {
@@ -2424,7 +2532,9 @@
    "names": {
     "lt": "Aušros Vartų",
     "en": "Our Lady of Vilnius",
-    "variants": []
+    "variants": [
+     "Aušros Vartu parapija"
+    ]
    },
    "city": "Manhattan",
    "state": "NY",
@@ -2466,6 +2576,28 @@
      "confidence": "high",
      "currentStatus": "demolished",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.334",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.347",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
     }
    ],
    "years": {
@@ -2477,12 +2609,27 @@
      {
       "value": "1909",
       "source": "web-historical"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.334"
+     },
+     {
+      "value": "1925",
+      "source": "michelsonas-1961",
+      "cite": "p.347"
      }
     ],
     "closed": [
      {
       "value": "2007",
       "source": "web-historical"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.334"
      }
     ]
    },
@@ -2497,6 +2644,30 @@
       {
        "value": "1909",
        "source": "web-historical"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "p.334"
+      },
+      {
+       "value": "1925",
+       "source": "michelsonas-1961",
+       "cite": "p.347"
+      }
+     ]
+    },
+    {
+     "field": "closed",
+     "variants": [
+      {
+       "value": "2007",
+       "source": "web-historical"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "p.334"
       }
      ]
     }
@@ -2515,7 +2686,7 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 2,
+   "axes_count": 3,
    "record_depth": "case-filed"
   },
   {
@@ -2909,6 +3080,10 @@
    "years": {
     "founded": [
      {
+      "value": "1904",
+      "source": "draugas-registry-1909-2007"
+     },
+     {
       "value": "1894",
       "source": "draugas-jubilee-implied",
       "cite": "1994-05-19 p6 (100 metų)"
@@ -2921,7 +3096,22 @@
      }
     ]
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "founded",
+     "variants": [
+      {
+       "value": "1904",
+       "source": "draugas-registry-1909-2007"
+      },
+      {
+       "value": "1894",
+       "source": "draugas-jubilee-implied",
+       "cite": "1994-05-19 p6 (100 metų)"
+      }
+     ]
+    }
+   ],
    "related_sites": [],
    "events_refs": [
     {
@@ -3209,7 +3399,9 @@
    "names": {
     "lt": "Šv. Andriejaus",
     "en": "St. Andrew",
-    "variants": []
+    "variants": [
+     "parapija (unnamed), New Britain"
+    ]
    },
    "city": "New Britain",
    "state": "CT",
@@ -3251,6 +3443,17 @@
      "confidence": "medium",
      "currentStatus": "closed",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "31",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian",
+     "diocese": "unspecified"
     }
    ],
    "years": {
@@ -3260,9 +3463,14 @@
       "source": "draugas-registry-1909-2007"
      },
      {
-      "value": "1914",
+      "value": "1894",
       "source": "draugas-jubilee-implied",
-      "cite": "1994-05-19 p6 (80 metų)"
+      "cite": "1994-05-19 p6 (100 metų centennial; celebrated 1994-10-02)"
+     },
+     {
+      "value": "not stated",
+      "source": "michelsonas-1961",
+      "cite": "31"
      }
     ],
     "closed": [
@@ -3273,6 +3481,11 @@
      {
       "value": "2017",
       "source": "web-historical"
+     },
+     {
+      "value": "n/a",
+      "source": "michelsonas-1961",
+      "cite": "31"
      }
     ]
    },
@@ -3285,9 +3498,14 @@
        "source": "draugas-registry-1909-2007"
       },
       {
-       "value": "1914",
+       "value": "1894",
        "source": "draugas-jubilee-implied",
-       "cite": "1994-05-19 p6 (80 metų)"
+       "cite": "1994-05-19 p6 (100 metų centennial; celebrated 1994-10-02)"
+      },
+      {
+       "value": "not stated",
+       "source": "michelsonas-1961",
+       "cite": "31"
       }
      ]
     },
@@ -3301,6 +3519,11 @@
       {
        "value": "2017",
        "source": "web-historical"
+      },
+      {
+       "value": "n/a",
+       "source": "michelsonas-1961",
+       "cite": "31"
       }
      ]
     }
@@ -3319,7 +3542,7 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 2,
+   "axes_count": 3,
    "record_depth": "case-filed"
   },
   {
@@ -3372,7 +3595,12 @@
     }
    ],
    "years": {
-    "founded": [],
+    "founded": [
+     {
+      "value": "1909",
+      "source": "draugas-registry-1909-2007"
+     }
+    ],
     "closed": [
      {
       "value": "2005",
@@ -3466,7 +3694,10 @@
    "names": {
     "lt": "Šv. Juozapo",
     "en": "St. Joseph",
-    "variants": []
+    "variants": [
+     "šv. Juozapo parapija",
+     "Šv. Juozapo parapija, Waterbury"
+    ]
    },
    "city": "Waterbury",
    "state": "CT",
@@ -3510,6 +3741,28 @@
      "ownership": "diocese_rc"
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.348-350",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "Diocese of Hartford"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "129, 128",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Roman Catholic",
+     "diocese": "Diocese of Hartford"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 63,
@@ -3535,12 +3788,27 @@
      {
       "value": "1894",
       "source": "web-historical"
+     },
+     {
+      "value": "~1892",
+      "source": "michelsonas-1961",
+      "cite": "p.348-350"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "129, 128"
      }
     ],
     "closed": [
      {
       "value": "2023",
       "source": "draugas-2008-2026"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.348-350"
      }
     ]
    },
@@ -3560,6 +3828,30 @@
       {
        "value": "1894",
        "source": "web-historical"
+      },
+      {
+       "value": "~1892",
+       "source": "michelsonas-1961",
+       "cite": "p.348-350"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "129, 128"
+      }
+     ]
+    },
+    {
+     "field": "closed",
+     "variants": [
+      {
+       "value": "2023",
+       "source": "draugas-2008-2026"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "p.348-350"
       }
      ]
     }
@@ -3578,7 +3870,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "case-filed"
   },
   {
@@ -3682,7 +3974,8 @@
     "lt": "Šv. Antano",
     "en": "St. Anthony",
     "variants": [
-     "ST. ANTHONY, DETROIT"
+     "ST. ANTHONY, DETROIT",
+     "šv. Antano bažnycia ir mokykla"
     ]
    },
    "city": "Detroit",
@@ -3739,6 +4032,17 @@
      "convent": "purchased 1959",
      "cemetery": "",
      "diocese": "Archdiocese of Detroit"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.313-314",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
     }
    ],
    "years": {
@@ -3756,12 +4060,22 @@
       "value": "1920 (first pastor appointed Dec 24, 1920)",
       "source": "wolkovich",
       "cite": "Vol.3 p.92, p.93, p.94, p.95"
+     },
+     {
+      "value": "1923-24",
+      "source": "michelsonas-1961",
+      "cite": "p.313-314"
      }
     ],
     "closed": [
      {
       "value": "2013",
       "source": "draugas-2008-2026"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.313-314"
      }
     ]
    },
@@ -3782,6 +4096,25 @@
        "value": "1920 (first pastor appointed Dec 24, 1920)",
        "source": "wolkovich",
        "cite": "Vol.3 p.92, p.93, p.94, p.95"
+      },
+      {
+       "value": "1923-24",
+       "source": "michelsonas-1961",
+       "cite": "p.313-314"
+      }
+     ]
+    },
+    {
+     "field": "closed",
+     "variants": [
+      {
+       "value": "2013",
+       "source": "draugas-2008-2026"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "p.313-314"
       }
      ]
     }
@@ -3800,7 +4133,7 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "case-filed"
   },
   {
@@ -3809,7 +4142,8 @@
     "lt": "Šv. Petro",
     "en": "St. Peter",
     "variants": [
-     "ST. PETER, DETROIT"
+     "ST. PETER, DETROIT",
+     "šv. Petro parapija"
     ]
    },
    "city": "Detroit",
@@ -3868,6 +4202,17 @@
      "diocese": "Archdiocese of Detroit"
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.314",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 6358,
@@ -3893,6 +4238,11 @@
       "value": "1920",
       "source": "wolkovich",
       "cite": "Vol.3 p.90, p.91, p.92"
+     },
+     {
+      "value": "1920 (organized by kun. J. Jonaitis)",
+      "source": "michelsonas-1961",
+      "cite": "p.314"
      }
     ],
     "closed": [
@@ -3904,6 +4254,11 @@
       "value": "1995-05-21",
       "source": "wolkovich",
       "cite": "Vol.3 p.90, p.91, p.92"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.314"
      }
     ]
    },
@@ -3919,6 +4274,11 @@
        "value": "1920",
        "source": "wolkovich",
        "cite": "Vol.3 p.90, p.91, p.92"
+      },
+      {
+       "value": "1920 (organized by kun. J. Jonaitis)",
+       "source": "michelsonas-1961",
+       "cite": "p.314"
       }
      ]
     },
@@ -3933,6 +4293,11 @@
        "value": "1995-05-21",
        "source": "wolkovich",
        "cite": "Vol.3 p.90, p.91, p.92"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "p.314"
       }
      ]
     }
@@ -3951,7 +4316,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed"
   },
   {
@@ -4103,7 +4468,8 @@
     "lt": "Šv. Jurgio",
     "en": "St. George",
     "variants": [
-     "ST. GEORGE, CLEVELAND"
+     "ST. GEORGE, CLEVELAND",
+     "šv. Jurgio parapija"
     ]
    },
    "city": "Cleveland",
@@ -4168,6 +4534,17 @@
      ]
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.310",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 6341,
@@ -4192,6 +4569,11 @@
       "value": "1953",
       "source": "draugas-jubilee-implied",
       "cite": "2003-01-30 p2 (50 metų)"
+     },
+     {
+      "value": "existed by 1920 (society of same name founded 1887 by F. Freimonas)",
+      "source": "michelsonas-1961",
+      "cite": "p.310"
      }
     ],
     "closed": [
@@ -4203,6 +4585,11 @@
       "value": "school closed 1970",
       "source": "wolkovich",
       "cite": "Vol.3 p.51, p.52, p.53, p.54, p.55, p.56, p.57, p.58, p.59, p.60, p.61, p.62, p.63, p.64, p.65"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.310"
      }
     ]
    },
@@ -4218,6 +4605,11 @@
        "value": "1953",
        "source": "draugas-jubilee-implied",
        "cite": "2003-01-30 p2 (50 metų)"
+      },
+      {
+       "value": "existed by 1920 (society of same name founded 1887 by F. Freimonas)",
+       "source": "michelsonas-1961",
+       "cite": "p.310"
       }
      ]
     },
@@ -4232,6 +4624,11 @@
        "value": "school closed 1970",
        "source": "wolkovich",
        "cite": "Vol.3 p.51, p.52, p.53, p.54, p.55, p.56, p.57, p.58, p.59, p.60, p.61, p.62, p.63, p.64, p.65"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "p.310"
       }
      ]
     }
@@ -4250,7 +4647,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed"
   },
   {
@@ -4413,7 +4810,10 @@
    "names": {
     "lt": "Šv. Jurgio",
     "en": "St. George",
-    "variants": []
+    "variants": [
+     "lenkų-lietuvių parapija, Shenandoah'ry",
+     "lietuvių parapija, Shenandoah (nenurodytas titulas)"
+    ]
    },
    "city": "Shenandoah",
    "state": "PA",
@@ -4455,6 +4855,28 @@
      "confidence": "verified",
      "currentStatus": "demolished",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.181",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "",
+     "diocese": ""
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "128",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Roman Catholic",
+     "diocese": "None"
     }
    ],
    "years": {
@@ -4467,12 +4889,22 @@
       "value": "1907",
       "source": "draugas-jubilee-implied",
       "cite": "2007-10-25 p5 (100 metų)"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.181"
      }
     ],
     "closed": [
      {
       "value": "2010",
       "source": "web-historical"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "128"
      }
     ]
    },
@@ -4488,6 +4920,25 @@
        "value": "1907",
        "source": "draugas-jubilee-implied",
        "cite": "2007-10-25 p5 (100 metų)"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "p.181"
+      }
+     ]
+    },
+    {
+     "field": "closed",
+     "variants": [
+      {
+       "value": "2010",
+       "source": "web-historical"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "128"
       }
      ]
     }
@@ -4506,7 +4957,7 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 2,
+   "axes_count": 3,
    "record_depth": "case-filed"
   },
   {
@@ -4514,7 +4965,9 @@
    "names": {
     "lt": "Šv. Kazimiero",
     "en": "St. Casimir",
-    "variants": []
+    "variants": [
+     "lietuvių parapija, Pittstonas (kun. Kaupas)"
+    ]
    },
    "city": "Pittston",
    "state": "PA",
@@ -4558,6 +5011,17 @@
      "ownership": "diocese_rc"
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "128",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Roman Catholic",
+     "diocese": "None"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 385,
@@ -4579,12 +5043,22 @@
      {
       "value": "1909",
       "source": "web-historical"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "128"
      }
     ],
     "closed": [
      {
       "value": "2008",
       "source": "draugas-2008-2026"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "128"
      }
     ]
    },
@@ -4599,6 +5073,25 @@
       {
        "value": "1909",
        "source": "web-historical"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "128"
+      }
+     ]
+    },
+    {
+     "field": "closed",
+     "variants": [
+      {
+       "value": "2008",
+       "source": "draugas-2008-2026"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "128"
       }
      ]
     }
@@ -4617,7 +5110,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "case-filed"
   },
   {
@@ -4673,8 +5166,7 @@
     "founded": [
      {
       "value": "1893",
-      "source": "draugas-jubilee-implied",
-      "cite": "1943-12-10 p4 (50 metų)"
+      "source": "draugas-registry-1909-2007"
      }
     ],
     "closed": [
@@ -4752,7 +5244,12 @@
     }
    ],
    "years": {
-    "founded": [],
+    "founded": [
+     {
+      "value": "1902",
+      "source": "draugas-registry-1909-2007"
+     }
+    ],
     "closed": []
    },
    "conflicts": [],
@@ -4877,7 +5374,9 @@
    "names": {
     "lt": "Šv. Kazimiero",
     "en": "St. Casimir",
-    "variants": []
+    "variants": [
+     "šv. Kazimiero parapija"
+    ]
    },
    "city": "Pittsburgh",
    "state": "PA",
@@ -4921,6 +5420,17 @@
      "ownership": "diocese_rc"
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.341-342",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 522,
@@ -4946,12 +5456,22 @@
       "value": "1912",
       "source": "draugas-jubilee-implied",
       "cite": "1932-08-06 p2 (20 metų)"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.341-342"
      }
     ],
     "closed": [
      {
       "value": "1992",
       "source": "draugas-2008-2026"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.341-342"
      }
     ]
    },
@@ -4967,6 +5487,25 @@
        "value": "1912",
        "source": "draugas-jubilee-implied",
        "cite": "1932-08-06 p2 (20 metų)"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "p.341-342"
+      }
+     ]
+    },
+    {
+     "field": "closed",
+     "variants": [
+      {
+       "value": "1992",
+       "source": "draugas-2008-2026"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "p.341-342"
       }
      ]
     }
@@ -4985,7 +5524,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "case-filed"
   },
   {
@@ -4993,7 +5532,9 @@
    "names": {
     "lt": "Šv. Juozapo",
     "en": "St. Joseph",
-    "variants": []
+    "variants": [
+     "lietuvių šv. Juozapo parapija (Scrantonas)"
+    ]
    },
    "city": "Scranton",
    "state": "PA",
@@ -5037,6 +5578,18 @@
      "ownership": "diocese_rc"
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "131-133",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Roman Catholic (originally); became the flashpoint for the parish's eventual split into a National Catholic congregation",
+     "diocese": "Diocese of Scranton (Bishop O'Hara)",
+     "ownership": "national_catholic"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 408,
@@ -5060,12 +5613,22 @@
       "value": "1894",
       "source": "draugas-jubilee-implied",
       "cite": "1944-12-22 p4 (50 metų)"
+     },
+     {
+      "value": "1893",
+      "source": "michelsonas-1961",
+      "cite": "131-133"
      }
     ],
     "closed": [
      {
       "value": "2009",
       "source": "draugas-2008-2026"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "131-133"
      }
     ]
    },
@@ -5081,6 +5644,25 @@
        "value": "1894",
        "source": "draugas-jubilee-implied",
        "cite": "1944-12-22 p4 (50 metų)"
+      },
+      {
+       "value": "1893",
+       "source": "michelsonas-1961",
+       "cite": "131-133"
+      }
+     ]
+    },
+    {
+     "field": "closed",
+     "variants": [
+      {
+       "value": "2009",
+       "source": "draugas-2008-2026"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "131-133"
       }
      ]
     }
@@ -5099,7 +5681,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "case-filed"
   },
   {
@@ -5386,7 +5968,8 @@
     "lt": "Šv. Kryžiaus",
     "en": "Holy Cross",
     "variants": [
-     "Holy Cross Parish (and first Casimirite convent/school)"
+     "Holy Cross Parish (and first Casimirite convent/school)",
+     "šv. Kryžiaus parapija (Mt. Carmel)"
     ]
    },
    "city": "Mount Carmel",
@@ -5445,6 +6028,17 @@
      "diocese": "Diocese of Harrisburg"
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "30",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian (with foreign -Irish and Slovak- pastors imposed at times)",
+     "diocese": "unspecified"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 946,
@@ -5466,12 +6060,22 @@
       "value": "1886",
       "source": "draugas-jubilee-implied",
       "cite": "1936-10-20 p5 (50 metų)"
+     },
+     {
+      "value": "not stated",
+      "source": "michelsonas-1961",
+      "cite": "30"
      }
     ],
     "closed": [
      {
       "value": "1992",
       "source": "draugas-2008-2026"
+     },
+     {
+      "value": "not applicable",
+      "source": "michelsonas-1961",
+      "cite": "30"
      }
     ]
    },
@@ -5487,6 +6091,25 @@
        "value": "1886",
        "source": "draugas-jubilee-implied",
        "cite": "1936-10-20 p5 (50 metų)"
+      },
+      {
+       "value": "not stated",
+       "source": "michelsonas-1961",
+       "cite": "30"
+      }
+     ]
+    },
+    {
+     "field": "closed",
+     "variants": [
+      {
+       "value": "1992",
+       "source": "draugas-2008-2026"
+      },
+      {
+       "value": "not applicable",
+       "source": "michelsonas-1961",
+       "cite": "30"
       }
      ]
     }
@@ -5505,7 +6128,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed"
   },
   {
@@ -5713,7 +6336,9 @@
    "names": {
     "lt": "Šv. Juozapo",
     "en": "St. Joseph",
-    "variants": []
+    "variants": [
+     "mixed parish (unnamed), Nanticoke"
+    ]
    },
    "city": "Nanticoke",
    "state": "PA",
@@ -5757,6 +6382,17 @@
      "ownership": "diocese_rc"
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "34",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "mixed Lithuanian-Polish",
+     "diocese": "unspecified"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 38302,
@@ -5771,15 +6407,59 @@
     }
    ],
    "years": {
-    "founded": [],
+    "founded": [
+     {
+      "value": "1908",
+      "source": "draugas-registry-1909-2007"
+     },
+     {
+      "value": "organized by kun. J. Juškevičius after fleeing Shamokin (undated, within his '8 year' span of founding 3 mixed parishes)",
+      "source": "michelsonas-1961",
+      "cite": "34"
+     }
+    ],
     "closed": [
      {
       "value": "2004",
       "source": "web-historical"
+     },
+     {
+      "value": "not stated",
+      "source": "michelsonas-1961",
+      "cite": "34"
      }
     ]
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "founded",
+     "variants": [
+      {
+       "value": "1908",
+       "source": "draugas-registry-1909-2007"
+      },
+      {
+       "value": "organized by kun. J. Juškevičius after fleeing Shamokin (undated, within his '8 year' span of founding 3 mixed parishes)",
+       "source": "michelsonas-1961",
+       "cite": "34"
+      }
+     ]
+    },
+    {
+     "field": "closed",
+     "variants": [
+      {
+       "value": "2004",
+       "source": "web-historical"
+      },
+      {
+       "value": "not stated",
+       "source": "michelsonas-1961",
+       "cite": "34"
+      }
+     ]
+    }
+   ],
    "related_sites": [],
    "events_refs": [
     {
@@ -5794,7 +6474,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "case-filed"
   },
   {
@@ -6020,7 +6700,9 @@
    "names": {
     "lt": "Šv. Kazimiero",
     "en": "St. Casimir",
-    "variants": []
+    "variants": [
+     "šv. Kazimiero parapija"
+    ]
    },
    "city": "Philadelphia",
    "state": "PA",
@@ -6064,6 +6746,17 @@
      "ownership": "diocese_rc"
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.339",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 429,
@@ -6085,12 +6778,22 @@
       "value": "1992",
       "source": "draugas-jubilee-implied",
       "cite": "2007-04-17 p4 (15 metų)"
+     },
+     {
+      "value": "formed after sv. Antano parish's collapse (~1902)",
+      "source": "michelsonas-1961",
+      "cite": "p.339"
      }
     ],
     "closed": [
      {
       "value": "2011",
       "source": "draugas-2008-2026"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.339"
      }
     ]
    },
@@ -6106,6 +6809,25 @@
        "value": "1992",
        "source": "draugas-jubilee-implied",
        "cite": "2007-04-17 p4 (15 metų)"
+      },
+      {
+       "value": "formed after sv. Antano parish's collapse (~1902)",
+       "source": "michelsonas-1961",
+       "cite": "p.339"
+      }
+     ]
+    },
+    {
+     "field": "closed",
+     "variants": [
+      {
+       "value": "2011",
+       "source": "draugas-2008-2026"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "p.339"
       }
      ]
     }
@@ -6124,7 +6846,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "case-filed"
   },
   {
@@ -6226,7 +6948,9 @@
    "names": {
     "lt": "Šv. Petro",
     "en": "St. Peter",
-    "variants": []
+    "variants": [
+     "šv. Petro parapija"
+    ]
    },
    "city": "Boston",
    "state": "MA",
@@ -6294,6 +7018,17 @@
      "ownership": "diocese_rc"
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.285-286, p.293-294",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "Archdiocese of Boston"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 311,
@@ -6322,12 +7057,22 @@
       "value": "1904",
       "source": "draugas-jubilee-implied",
       "cite": "2004-09-23 p3 (100 metų)"
+     },
+     {
+      "value": "organized ~1903, land bought at 5th street",
+      "source": "michelsonas-1961",
+      "cite": "p.285-286, p.293-294"
      }
     ],
     "closed": [
      {
       "value": "1921",
       "source": "draugas-registry-1909-2007"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.285-286, p.293-294"
      }
     ]
    },
@@ -6348,6 +7093,25 @@
        "value": "1904",
        "source": "draugas-jubilee-implied",
        "cite": "2004-09-23 p3 (100 metų)"
+      },
+      {
+       "value": "organized ~1903, land bought at 5th street",
+       "source": "michelsonas-1961",
+       "cite": "p.285-286, p.293-294"
+      }
+     ]
+    },
+    {
+     "field": "closed",
+     "variants": [
+      {
+       "value": "1921",
+       "source": "draugas-registry-1909-2007"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "p.285-286, p.293-294"
       }
      ]
     }
@@ -6374,7 +7138,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "case-filed"
   },
   {
@@ -6619,7 +7383,6 @@
     "en": "Nativity of the BVM",
     "variants": [
      "NATIVITY (BLESSED VIRGIN MARY) [of Šiluva], Marquette Park",
-     "St. Mary Parish (later Our Lady of Šiluva, later St. Mary again), Bridgeport",
      "Nativity of Mary Parish"
     ]
    },
@@ -6683,20 +7446,6 @@
      "kind": "scholar-compendium",
      "tier": 2,
      "work": "Wolkovich, Lithuanian Religious Life in America, Vol. 3 (1998)",
-     "pages": "p.223; p.224; p.226",
-     "lccn": "91-76766",
-     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
-     "ethnic_status": "Lithuanian separatist Catholic congregation",
-     "school": "",
-     "convent": "",
-     "cemetery": "",
-     "diocese": "independent/separatist"
-    },
-    {
-     "axis": "wolkovich",
-     "kind": "scholar-compendium",
-     "tier": 2,
-     "work": "Wolkovich, Lithuanian Religious Life in America, Vol. 3 (1998)",
      "pages": "p.182",
      "lccn": "91-76766",
      "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
@@ -6733,11 +7482,6 @@
       "value": "1927-05-15",
       "source": "wolkovich",
       "cite": "Vol.3 p.151, p.152, p.153"
-     },
-     {
-      "value": "1916 (incorporated May 17, 1916, by Stasys Mickevičius)",
-      "source": "wolkovich",
-      "cite": "Vol.3 p.223; p.224; p.226"
      }
     ],
     "closed": []
@@ -6759,11 +7503,6 @@
        "value": "1927-05-15",
        "source": "wolkovich",
        "cite": "Vol.3 p.151, p.152, p.153"
-      },
-      {
-       "value": "1916 (incorporated May 17, 1916, by Stasys Mickevičius)",
-       "source": "wolkovich",
-       "cite": "Vol.3 p.223; p.224; p.226"
       }
      ]
     }
@@ -7056,7 +7795,9 @@
    "names": {
     "lt": "Dievo Apvaizdos",
     "en": "Divine Providence",
-    "variants": []
+    "variants": [
+     "Dievo Apveizdos parapija"
+    ]
    },
    "city": "Southfield",
    "state": "MI",
@@ -7100,6 +7841,17 @@
      "ownership": "diocese_rc"
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.314",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 6367,
@@ -7125,7 +7877,13 @@
       "source": "web-historical"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.314"
+     }
+    ]
    },
    "conflicts": [
     {
@@ -7161,7 +7919,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "case-filed"
   },
   {
@@ -7273,7 +8031,10 @@
    "names": {
     "lt": "Švč. M. Marijos Apreiškimo",
     "en": "Annunciation of the BVM",
-    "variants": []
+    "variants": [
+     "Apreiškimo parapija, Brooklynas",
+     "Apreiškimo parapija"
+    ]
    },
    "city": "Brooklyn",
    "state": "NY",
@@ -7309,14 +8070,6 @@
      "total_mentions": 291
     },
     {
-     "axis": "draugas-registry-1909-2007",
-     "kind": "newspaper-record",
-     "parish_key": "st-mary-of-the-angels-brooklyn-ny",
-     "first_mention": "1929-01-05",
-     "last_mention": "2007-01-31",
-     "total_mentions": 68
-    },
-    {
      "axis": "web-historical",
      "kind": "web-candidate",
      "idx": 70,
@@ -7325,12 +8078,26 @@
      "ownership": "diocese_rc"
     },
     {
-     "axis": "web-historical",
-     "kind": "web-candidate",
-     "idx": 72,
-     "confidence": "low",
-     "currentStatus": "closed",
-     "ownership": "diocese_rc"
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.264",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "",
+     "diocese": ""
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.333-334",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
     }
    ],
    "years": {
@@ -7338,25 +8105,42 @@
      {
       "value": "1914",
       "source": "draugas-2008-2026"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.264"
      }
     ],
     "closed": [
      {
-      "value": "1981",
-      "source": "draugas-registry-1909-2007"
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.333-334"
      }
     ]
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "founded",
+     "variants": [
+      {
+       "value": "1914",
+       "source": "draugas-2008-2026"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "p.264"
+      }
+     ]
+    }
+   ],
    "related_sites": [],
    "events_refs": [
     {
      "set": "draugas-registry-1909-2007/events-curated",
      "parish_key": "annunciation-brooklyn-ny"
-    },
-    {
-     "set": "draugas-registry-1909-2007/events-curated",
-     "parish_key": "st-mary-of-the-angels-brooklyn-ny"
     }
    ],
    "geo": {
@@ -7366,7 +8150,7 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 2,
+   "axes_count": 3,
    "record_depth": "case-filed"
   },
   {
@@ -7374,7 +8158,9 @@
    "names": {
     "lt": "Kristaus Atsimainymo",
     "en": "Transfiguration",
-    "variants": []
+    "variants": [
+     "Atsimainymo parapija, Maspethe"
+    ]
    },
    "city": "Maspeth",
    "state": "NY",
@@ -7418,6 +8204,17 @@
      "ownership": "diocese_rc"
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.333-334",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 129,
@@ -7441,9 +8238,20 @@
      {
       "value": "1908",
       "source": "web-historical"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.333-334"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.333-334"
+     }
+    ]
    },
    "conflicts": [
     {
@@ -7461,6 +8269,11 @@
       {
        "value": "1908",
        "source": "web-historical"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "p.333-334"
       }
      ]
     }
@@ -7479,7 +8292,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "case-filed"
   },
   {
@@ -7744,7 +8557,9 @@
    "names": {
     "lt": "Švč. Trejybės",
     "en": "Holy Trinity",
-    "variants": []
+    "variants": [
+     "Šv. Trejybės mokykla, Hartford, Conn."
+    ]
    },
    "city": "Hartford",
    "state": "CT",
@@ -7788,6 +8603,17 @@
      "ownership": "diocese_rc"
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "139",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Roman Catholic",
+     "diocese": "None"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 69,
@@ -7810,9 +8636,20 @@
       "value": "1902",
       "source": "draugas-jubilee-implied",
       "cite": "1992-12-17 p6 (90 metų)"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "139"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "139"
+     }
+    ]
    },
    "conflicts": [
     {
@@ -7826,6 +8663,11 @@
        "value": "1902",
        "source": "draugas-jubilee-implied",
        "cite": "1992-12-17 p6 (90 metų)"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "139"
       }
      ]
     }
@@ -7844,7 +8686,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "case-filed"
   },
   {
@@ -8068,7 +8910,8 @@
     "lt": "Šv. Kazimiero",
     "en": "St. Casimir",
     "variants": [
-     "St. Casimir"
+     "St. Casimir",
+     "šv. Kazimiero parapija"
     ]
    },
    "city": "Los Angeles",
@@ -8127,6 +8970,17 @@
      "diocese": "Archdiocese of Los Angeles"
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.326",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 36165,
@@ -8149,9 +9003,20 @@
       "value": "1946",
       "source": "draugas-jubilee-implied",
       "cite": "2006-01-06 p12 (60 metų)"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.326"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.326"
+     }
+    ]
    },
    "conflicts": [
     {
@@ -8165,6 +9030,11 @@
        "value": "1946",
        "source": "draugas-jubilee-implied",
        "cite": "2006-01-06 p12 (60 metų)"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "p.326"
       }
      ]
     }
@@ -8183,7 +9053,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed"
   },
   {
@@ -8192,7 +9062,8 @@
     "lt": "Šv. Petro ir Povilo",
     "en": "Ss. Peter and Paul",
     "variants": [
-     "STS. PETER & PAUL, GRAND RAPIDS"
+     "STS. PETER & PAUL, GRAND RAPIDS",
+     "Šv. Petro ir Povilo parapija, Grand Rapids, Mich. (kun. V. Matulaitis)"
     ]
    },
    "city": "Grand Rapids",
@@ -8251,6 +9122,17 @@
      "diocese": "Diocese of Grand Rapids"
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "128, 139",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Roman Catholic",
+     "diocese": "None"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 6369,
@@ -8283,9 +9165,20 @@
       "value": "1903 (excavation began)",
       "source": "wolkovich",
       "cite": "Vol.3 p.98, p.99, p.100, p.101, p.102, p.103, p.104"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "128, 139"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "128, 139"
+     }
+    ]
    },
    "conflicts": [
     {
@@ -8309,6 +9202,11 @@
        "value": "1903 (excavation began)",
        "source": "wolkovich",
        "cite": "Vol.3 p.98, p.99, p.100, p.101, p.102, p.103, p.104"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "128, 139"
       }
      ]
     }
@@ -8327,7 +9225,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed"
   },
   {
@@ -8570,23 +9468,10 @@
      "first_mention": "",
      "last_mention": "",
      "total_mentions": 0
-    },
-    {
-     "axis": "draugas-registry-1909-2007",
-     "kind": "newspaper-record",
-     "parish_key": "st-alphonsus-baltimore-md",
-     "first_mention": "1933-03-16",
-     "last_mention": "2005-04-07",
-     "total_mentions": 106
     }
    ],
    "years": {
-    "founded": [
-     {
-      "value": "1917",
-      "source": "draugas-registry-1909-2007"
-     }
-    ],
+    "founded": [],
     "closed": []
    },
    "conflicts": [],
@@ -8595,10 +9480,6 @@
     {
      "set": "draugas-registry-1909-2007/events-curated",
      "parish_key": "lithuanian-church-baltimore-md"
-    },
-    {
-     "set": "draugas-registry-1909-2007/events-curated",
-     "parish_key": "st-alphonsus-baltimore-md"
     }
    ],
    "geo": {
@@ -8617,7 +9498,8 @@
     "lt": "Dievo Apvaizdos",
     "en": "Providence of God (National Catholic)",
     "variants": [
-     "Divine Providence Parish, Scranton"
+     "Divine Providence Parish, Scranton",
+     "tautinė (Romai nepriklausoma) parapija, Scrantonas"
     ]
    },
    "city": "Scranton",
@@ -8676,6 +9558,18 @@
      "diocese": "Polish National Catholic Church"
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "132-134",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian National Catholic",
+     "diocese": "None",
+     "ownership": "national_catholic"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 383,
@@ -8700,7 +9594,13 @@
       "source": "web-historical"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "132-134"
+     }
+    ]
    },
    "conflicts": [
     {
@@ -8731,7 +9631,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "national_catholic_pncc",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed"
   },
   {
@@ -8740,7 +9640,8 @@
     "lt": "Saldžiausios Jėzaus Širdies",
     "en": "Sacred Heart Lithuanian National Catholic",
     "variants": [
-     "Sacred Heart Parish, Lawrence"
+     "Sacred Heart Parish, Lawrence",
+     "tautine (nepriklausoma) parapija, Lawrence"
     ]
    },
    "city": "Lawrence",
@@ -8797,6 +9698,17 @@
      "convent": "",
      "cemetery": "",
      "diocese": "independent/separatist; briefly drawn toward Geniotis network (1947 attempt)"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.324",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "independent/schismatic Lithuanian national parish",
+     "diocese": "None"
     }
    ],
    "years": {
@@ -8818,6 +9730,11 @@
       "value": "1919 (per 1931 brochure, 'Sacred Heart, Lawrence, Massachusetts since 1919')",
       "source": "wolkovich",
       "cite": "Vol.3 p.223; p.226; p.224"
+     },
+     {
+      "value": "founded by kun. S. Mickevicius amid the sv. Lauryno parish dispute",
+      "source": "michelsonas-1961",
+      "cite": "p.324"
      }
     ],
     "closed": [
@@ -8828,6 +9745,11 @@
      {
       "value": "2001",
       "source": "web-historical"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.324"
      }
     ]
    },
@@ -8852,6 +9774,11 @@
        "value": "1919 (per 1931 brochure, 'Sacred Heart, Lawrence, Massachusetts since 1919')",
        "source": "wolkovich",
        "cite": "Vol.3 p.223; p.226; p.224"
+      },
+      {
+       "value": "founded by kun. S. Mickevicius amid the sv. Lauryno parish dispute",
+       "source": "michelsonas-1961",
+       "cite": "p.324"
       }
      ]
     },
@@ -8865,6 +9792,11 @@
       {
        "value": "2001",
        "source": "web-historical"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "p.324"
       }
      ]
     }
@@ -8883,7 +9815,7 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "national_catholic_pncc",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "case-filed"
   },
   {
@@ -9229,8 +10161,7 @@
     "founded": [
      {
       "value": "1907",
-      "source": "draugas-jubilee-implied",
-      "cite": "1982-10-29 p3 (75 metų)"
+      "source": "draugas-registry-1909-2007"
      }
     ],
     "closed": []
@@ -9258,7 +10189,9 @@
    "names": {
     "lt": "Aušros Vartų",
     "en": null,
-    "variants": []
+    "variants": [
+     "Aušros Vartų parapija"
+    ]
    },
    "city": "Montreal",
    "state": "QC",
@@ -9294,6 +10227,17 @@
      "total_mentions": 217
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.423",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 17351,
@@ -9311,11 +10255,16 @@
     "founded": [
      {
       "value": "1950",
-      "source": "draugas-jubilee-implied",
-      "cite": "1975-12-27 p7 (25 metų)"
+      "source": "draugas-registry-1909-2007"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.423"
+     }
+    ]
    },
    "conflicts": [],
    "related_sites": [],
@@ -9332,7 +10281,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 2,
+   "axes_count": 3,
    "record_depth": "multi-source"
   },
   {
@@ -9883,7 +10832,9 @@
    "names": {
     "lt": "Šv. Petro ir Povilo",
     "en": "Ss. Peter & Paul",
-    "variants": []
+    "variants": [
+     "mixed Lithuanian-Polish parish, 'Lithuanian Polish Church'"
+    ]
    },
    "city": "Hazleton",
    "state": "PA",
@@ -9909,6 +10860,17 @@
      "ownership": "diocese_rc"
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "21,32,33",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "mixed, later split - Poles fully separated",
+     "diocese": "unspecified (Irish bishop)"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 908,
@@ -9925,16 +10887,55 @@
      {
       "value": "1896",
       "source": "draugas-registry-1909-2007"
+     },
+     {
+      "value": "organized by kun. Abromaitis, year not stated (before Nov 1892)",
+      "source": "michelsonas-1961",
+      "cite": "21,32,33"
      }
     ],
     "closed": [
      {
       "value": "2010",
       "source": "draugas-registry-1909-2007"
+     },
+     {
+      "value": "n/a (Lithuanian side presumably continued after Polish faction split off, exact year of split not given)",
+      "source": "michelsonas-1961",
+      "cite": "21,32,33"
      }
     ]
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "founded",
+     "variants": [
+      {
+       "value": "1896",
+       "source": "draugas-registry-1909-2007"
+      },
+      {
+       "value": "organized by kun. Abromaitis, year not stated (before Nov 1892)",
+       "source": "michelsonas-1961",
+       "cite": "21,32,33"
+      }
+     ]
+    },
+    {
+     "field": "closed",
+     "variants": [
+      {
+       "value": "2010",
+       "source": "draugas-registry-1909-2007"
+      },
+      {
+       "value": "n/a (Lithuanian side presumably continued after Polish faction split off, exact year of split not given)",
+       "source": "michelsonas-1961",
+       "cite": "21,32,33"
+      }
+     ]
+    }
+   ],
    "related_sites": [],
    "events_refs": [
     {
@@ -9949,7 +10950,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "multi-source"
   },
   {
@@ -11056,7 +12057,9 @@
    "names": {
     "lt": "Šv. Pranciškaus",
     "en": "St. Francis",
-    "variants": []
+    "variants": [
+     "nepriklausoma (tautinė) parapija, Athol, Mass."
+    ]
    },
    "city": "Athol",
    "state": "MA",
@@ -11082,6 +12085,18 @@
      "ownership": "diocese_rc"
     },
     {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "130",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian National Catholic (attempted, failed)",
+     "diocese": "None",
+     "ownership": "national_catholic"
+    },
+    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 325,
@@ -11101,9 +12116,20 @@
       "value": "1914",
       "source": "draugas-jubilee-implied",
       "cite": "1964-04-02 p4 (50 metų)"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "130"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "130"
+     }
+    ]
    },
    "conflicts": [
     {
@@ -11117,6 +12143,11 @@
        "value": "1914",
        "source": "draugas-jubilee-implied",
        "cite": "1964-04-02 p4 (50 metų)"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "130"
       }
      ]
     }
@@ -11135,7 +12166,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "multi-source"
   },
   {
@@ -11331,6 +12362,103 @@
     "lon": -73.081514,
     "precision": "exact",
     "source": "truelithuania"
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 3,
+   "record_depth": "multi-source"
+  },
+  {
+   "slug": "st-mary-of-the-angels-brooklyn-ny",
+   "names": {
+    "lt": "Šv. Marijos Angelų Karalienės",
+    "en": "St. Mary of the Angels",
+    "variants": [
+     "Angelu Karalienes parapija"
+    ]
+   },
+   "city": "Brooklyn",
+   "state": "NY",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-record",
+     "parish_key": "st-mary-of-the-angels-brooklyn-ny",
+     "first_mention": "1929-01-05",
+     "last_mention": "2007-01-31",
+     "total_mentions": 68
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-candidate",
+     "idx": 72,
+     "confidence": "low",
+     "currentStatus": "closed",
+     "ownership": "diocese_rc"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.333-334",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.333-334"
+     }
+    ],
+    "closed": [
+     {
+      "value": "1981",
+      "source": "draugas-registry-1909-2007"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.333-334"
+     }
+    ]
+   },
+   "conflicts": [
+    {
+     "field": "closed",
+     "variants": [
+      {
+       "value": "1981",
+       "source": "draugas-registry-1909-2007"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "p.333-334"
+      }
+     ]
+    }
+   ],
+   "related_sites": [],
+   "events_refs": [
+    {
+     "set": "draugas-registry-1909-2007/events-curated",
+     "parish_key": "st-mary-of-the-angels-brooklyn-ny"
+    }
+   ],
+   "geo": {
+    "lat": 40.6526006,
+    "lon": -73.9497211,
+    "precision": "city-centroid",
+    "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
@@ -11945,14 +13073,13 @@
    "years": {
     "founded": [
      {
+      "value": "1906",
+      "source": "draugas-registry-1909-2007"
+     },
+     {
       "value": "1907",
       "source": "draugas-jubilee-implied",
       "cite": "1932-11-17 p8 (25 metų)"
-     },
-     {
-      "value": "1906",
-      "source": "wolkovich",
-      "cite": "Vol.3 p.144, p.145"
      }
     ],
     "closed": [
@@ -11972,14 +13099,13 @@
      "field": "founded",
      "variants": [
       {
+       "value": "1906",
+       "source": "draugas-registry-1909-2007"
+      },
+      {
        "value": "1907",
        "source": "draugas-jubilee-implied",
        "cite": "1932-11-17 p8 (25 metų)"
-      },
-      {
-       "value": "1906",
-       "source": "wolkovich",
-       "cite": "Vol.3 p.144, p.145"
       }
      ]
     },
@@ -12061,8 +13187,7 @@
     "founded": [
      {
       "value": "1911",
-      "source": "draugas-jubilee-implied",
-      "cite": "1936-08-14 p3 (25 metų)"
+      "source": "draugas-registry-1909-2007"
      }
     ],
     "closed": [
@@ -12173,14 +13298,14 @@
       "source": "draugas-registry-1909-2007"
      },
      {
+      "value": "1914",
+      "source": "draugas-jubilee-implied",
+      "cite": "1914-07-30 p1 (W. Pullman SS P&P cornerstone blessed by Bp P. Rhode; corrects recorded 1959)"
+     },
+     {
       "value": "1913",
       "source": "wolkovich",
       "cite": "Vol.3 p.147, p.148"
-     },
-     {
-      "value": "1914",
-      "source": "wolkovich",
-      "cite": "Vol.3 p.223"
      }
     ],
     "closed": [
@@ -12209,14 +13334,14 @@
        "source": "draugas-registry-1909-2007"
       },
       {
+       "value": "1914",
+       "source": "draugas-jubilee-implied",
+       "cite": "1914-07-30 p1 (W. Pullman SS P&P cornerstone blessed by Bp P. Rhode; corrects recorded 1959)"
+      },
+      {
        "value": "1913",
        "source": "wolkovich",
        "cite": "Vol.3 p.147, p.148"
-      },
-      {
-       "value": "1914",
-       "source": "wolkovich",
-       "cite": "Vol.3 p.223"
       }
      ]
     },
@@ -13054,7 +14179,10 @@
    "names": {
     "lt": "Šv. Jurgio",
     "en": "St. George (root of Divine Providence)",
-    "variants": []
+    "variants": [
+     "šv. Jurgio parapija",
+     "Šv. Jurgio bažnyčia, Detroitas"
+    ]
    },
    "city": "Detroit",
    "state": "MI",
@@ -13078,6 +14206,28 @@
      "confidence": "high",
      "currentStatus": "demolished",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.313",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "127",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Roman Catholic",
+     "diocese": "None"
     }
    ],
    "years": {
@@ -13090,9 +14240,25 @@
       "value": "1910",
       "source": "draugas-jubilee-implied",
       "cite": "1935-05-22 p3 (25 metų)"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "127"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "~1949 (post-WWII, transferred to Black congregation by bishop's order)",
+      "source": "michelsonas-1961",
+      "cite": "p.313"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "127"
+     }
+    ]
    },
    "conflicts": [
     {
@@ -13106,6 +14272,26 @@
        "value": "1910",
        "source": "draugas-jubilee-implied",
        "cite": "1935-05-22 p3 (25 metų)"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "127"
+      }
+     ]
+    },
+    {
+     "field": "closed",
+     "variants": [
+      {
+       "value": "~1949 (post-WWII, transferred to Black congregation by bishop's order)",
+       "source": "michelsonas-1961",
+       "cite": "p.313"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "127"
       }
      ]
     }
@@ -13124,7 +14310,7 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 2,
+   "axes_count": 3,
    "record_depth": "multi-source"
   },
   {
@@ -13505,6 +14691,10 @@
    "years": {
     "founded": [
      {
+      "value": "1907",
+      "source": "draugas-registry-1909-2007"
+     },
+     {
       "value": "1903",
       "source": "draugas-jubilee-implied",
       "cite": "1978-06-24 p6 (75 metų)"
@@ -13512,7 +14702,22 @@
     ],
     "closed": []
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "founded",
+     "variants": [
+      {
+       "value": "1907",
+       "source": "draugas-registry-1909-2007"
+      },
+      {
+       "value": "1903",
+       "source": "draugas-jubilee-implied",
+       "cite": "1978-06-24 p6 (75 metų)"
+      }
+     ]
+    }
+   ],
    "related_sites": [],
    "events_refs": [
     {
@@ -13911,6 +15116,103 @@
    "record_depth": "multi-source"
   },
   {
+   "slug": "st-alphonsus-baltimore-md",
+   "names": {
+    "lt": "Šv. Alfonso",
+    "en": "St. Alphonsus (Lithuanian since 1917)",
+    "variants": [
+     "šv. Alfonso parapija"
+    ]
+   },
+   "city": "Baltimore",
+   "state": "MD",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-record",
+     "parish_key": "st-alphonsus-baltimore-md",
+     "first_mention": "1933-03-16",
+     "last_mention": "2005-04-07",
+     "total_mentions": 106
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-candidate",
+     "idx": 134,
+     "confidence": "high",
+     "currentStatus": "standing",
+     "ownership": "diocese_rc"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.~279, p.281",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "1917",
+      "source": "draugas-registry-1909-2007"
+     },
+     {
+      "value": "community/parish present by 1892 (kun. Pautienius); named šv. Alfonso by time of writing",
+      "source": "michelsonas-1961",
+      "cite": "p.~279, p.281"
+     }
+    ],
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.~279, p.281"
+     }
+    ]
+   },
+   "conflicts": [
+    {
+     "field": "founded",
+     "variants": [
+      {
+       "value": "1917",
+       "source": "draugas-registry-1909-2007"
+      },
+      {
+       "value": "community/parish present by 1892 (kun. Pautienius); named šv. Alfonso by time of writing",
+       "source": "michelsonas-1961",
+       "cite": "p.~279, p.281"
+      }
+     ]
+    }
+   ],
+   "related_sites": [],
+   "events_refs": [
+    {
+     "set": "draugas-registry-1909-2007/events-curated",
+     "parish_key": "st-alphonsus-baltimore-md"
+    }
+   ],
+   "geo": {
+    "lat": 39.2908816,
+    "lon": -76.610759,
+    "precision": "city-centroid",
+    "source": "site-geo-cache"
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 3,
+   "record_depth": "multi-source"
+  },
+  {
    "slug": "st-john-the-baptist-baltimore-md",
    "names": {
     "lt": "Šv. Jono",
@@ -14061,6 +15363,504 @@
    "congregation_class": "roman_catholic",
    "axes_count": 3,
    "record_depth": "multi-source"
+  },
+  {
+   "slug": "st-casimir-plymouth-pa",
+   "names": {
+    "lt": "Šv. Kazimiero",
+    "en": null,
+    "variants": []
+   },
+   "city": "Plymouth",
+   "state": "PA",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-record",
+     "parish_key": "st-casimir-plymouth-pa",
+     "first_mention": "",
+     "last_mention": "",
+     "total_mentions": 0
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "1888",
+      "source": "draugas-registry-1909-2007"
+     }
+    ],
+    "closed": []
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [
+    {
+     "set": "draugas-registry-1909-2007/events-curated",
+     "parish_key": "st-casimir-plymouth-pa"
+    }
+   ],
+   "geo": {
+    "lat": null,
+    "lon": null,
+    "precision": null,
+    "needs_geocode": true
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "st-joseph-du-bois-pa",
+   "names": {
+    "lt": "Šv. Juozapo",
+    "en": null,
+    "variants": []
+   },
+   "city": "Du Bois",
+   "state": "PA",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-record",
+     "parish_key": "st-joseph-du-bois-pa",
+     "first_mention": "",
+     "last_mention": "",
+     "total_mentions": 0
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "1913",
+      "source": "draugas-registry-1909-2007"
+     }
+    ],
+    "closed": []
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [
+    {
+     "set": "draugas-registry-1909-2007/events-curated",
+     "parish_key": "st-joseph-du-bois-pa"
+    }
+   ],
+   "geo": {
+    "lat": null,
+    "lon": null,
+    "precision": null,
+    "needs_geocode": true
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "lithuanian-easton-pa",
+   "names": {
+    "lt": "",
+    "en": null,
+    "variants": []
+   },
+   "city": "Easton",
+   "state": "PA",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-record",
+     "parish_key": "lithuanian-easton-pa",
+     "first_mention": "",
+     "last_mention": "",
+     "total_mentions": 0
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "1922",
+      "source": "draugas-registry-1909-2007"
+     }
+    ],
+    "closed": []
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [
+    {
+     "set": "draugas-registry-1909-2007/events-curated",
+     "parish_key": "lithuanian-easton-pa"
+    }
+   ],
+   "geo": {
+    "lat": null,
+    "lon": null,
+    "precision": null,
+    "needs_geocode": true
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "st-ann-beverly-shores-in",
+   "names": {
+    "lt": "Šv. Onos",
+    "en": null,
+    "variants": []
+   },
+   "city": "Beverly Shores",
+   "state": "IN",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-record",
+     "parish_key": "st-ann-beverly-shores-in",
+     "first_mention": "",
+     "last_mention": "",
+     "total_mentions": 0
+    },
+    {
+     "axis": "truelithuania",
+     "kind": "field-survey",
+     "tlId": 6514,
+     "sourceUrl": "http://global.truelithuania.com/lt/indiana-746/",
+     "statusFlags": [],
+     "yearsMentioned": [],
+     "importance": 3
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "1951",
+      "source": "draugas-registry-1909-2007"
+     }
+    ],
+    "closed": []
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [
+    {
+     "set": "draugas-registry-1909-2007/events-curated",
+     "parish_key": "st-ann-beverly-shores-in"
+    }
+   ],
+   "geo": {
+    "lat": 41.672396,
+    "lon": -86.982156,
+    "precision": "exact",
+    "source": "truelithuania"
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 2,
+   "record_depth": "multi-source"
+  },
+  {
+   "slug": "lithuanian-union-pier-mi",
+   "names": {
+    "lt": "",
+    "en": null,
+    "variants": []
+   },
+   "city": "Union Pier",
+   "state": "MI",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-record",
+     "parish_key": "lithuanian-union-pier-mi",
+     "first_mention": "",
+     "last_mention": "",
+     "total_mentions": 0
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "1962",
+      "source": "draugas-registry-1909-2007"
+     }
+    ],
+    "closed": []
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [
+    {
+     "set": "draugas-registry-1909-2007/events-curated",
+     "parish_key": "lithuanian-union-pier-mi"
+    }
+   ],
+   "geo": {
+    "lat": null,
+    "lon": null,
+    "precision": null,
+    "needs_geocode": true
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "lithuanian-toronto-on",
+   "names": {
+    "lt": "",
+    "en": null,
+    "variants": [
+     "Prisikėlimo parapija"
+    ]
+   },
+   "city": "Toronto",
+   "state": "ON",
+   "country": "CA",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-record",
+     "parish_key": "lithuanian-toronto-on",
+     "first_mention": "",
+     "last_mention": "",
+     "total_mentions": 0
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.427",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "1929",
+      "source": "draugas-registry-1909-2007"
+     },
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.427"
+     }
+    ],
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.427"
+     }
+    ]
+   },
+   "conflicts": [
+    {
+     "field": "founded",
+     "variants": [
+      {
+       "value": "1929",
+       "source": "draugas-registry-1909-2007"
+      },
+      {
+       "value": "None",
+       "source": "michelsonas-1961",
+       "cite": "p.427"
+      }
+     ]
+    }
+   ],
+   "related_sites": [],
+   "events_refs": [
+    {
+     "set": "draugas-registry-1909-2007/events-curated",
+     "parish_key": "lithuanian-toronto-on"
+    }
+   ],
+   "geo": {
+    "lat": null,
+    "lon": null,
+    "precision": null,
+    "needs_geocode": true
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 2,
+   "record_depth": "multi-source"
+  },
+  {
+   "slug": "christ-the-king-sudbury-on",
+   "names": {
+    "lt": "Kristaus Karaliaus",
+    "en": null,
+    "variants": []
+   },
+   "city": "Sudbury",
+   "state": "ON",
+   "country": "CA",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-record",
+     "parish_key": "christ-the-king-sudbury-on",
+     "first_mention": "",
+     "last_mention": "",
+     "total_mentions": 0
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "1950",
+      "source": "draugas-registry-1909-2007"
+     }
+    ],
+    "closed": []
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [
+    {
+     "set": "draugas-registry-1909-2007/events-curated",
+     "parish_key": "christ-the-king-sudbury-on"
+    }
+   ],
+   "geo": {
+    "lat": null,
+    "lon": null,
+    "precision": null,
+    "needs_geocode": true
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "st-catherine-st-catharines-on",
+   "names": {
+    "lt": "Šv. Kotrynos Aleksandrietės",
+    "en": null,
+    "variants": []
+   },
+   "city": "St. Catharines",
+   "state": "ON",
+   "country": "CA",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-record",
+     "parish_key": "st-catherine-st-catharines-on",
+     "first_mention": "",
+     "last_mention": "",
+     "total_mentions": 0
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "1949",
+      "source": "draugas-registry-1909-2007"
+     }
+    ],
+    "closed": []
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [
+    {
+     "set": "draugas-registry-1909-2007/events-curated",
+     "parish_key": "st-catherine-st-catharines-on"
+    }
+   ],
+   "geo": {
+    "lat": null,
+    "lon": null,
+    "precision": null,
+    "needs_geocode": true
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "lithuanian-bronx-ny",
+   "names": {
+    "lt": "",
+    "en": null,
+    "variants": []
+   },
+   "city": "Bronx",
+   "state": "NY",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-record",
+     "parish_key": "lithuanian-bronx-ny",
+     "first_mention": "",
+     "last_mention": "",
+     "total_mentions": 0
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "1930",
+      "source": "draugas-registry-1909-2007"
+     }
+    ],
+    "closed": []
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [
+    {
+     "set": "draugas-registry-1909-2007/events-curated",
+     "parish_key": "lithuanian-bronx-ny"
+    }
+   ],
+   "geo": {
+    "lat": null,
+    "lon": null,
+    "precision": null,
+    "needs_geocode": true
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
   },
   {
    "slug": "louis-maizeville-pa",
@@ -14388,51 +16188,6 @@
    "record_depth": "single-source"
   },
   {
-   "slug": "st-alphonsus-lithuanian-since-1917-baltimore-md",
-   "names": {
-    "lt": null,
-    "en": "St. Alphonsus (Lithuanian since 1917)",
-    "variants": []
-   },
-   "city": "Baltimore",
-   "state": "MD",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "web-historical",
-     "kind": "web-candidate",
-     "idx": 134,
-     "confidence": "high",
-     "currentStatus": "standing",
-     "ownership": "diocese_rc"
-    }
-   ],
-   "years": {
-    "founded": [
-     {
-      "value": "1917",
-      "source": "web-historical"
-     }
-    ],
-    "closed": []
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [],
-   "geo": {
-    "lat": 39.2908816,
-    "lon": -76.610759,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source"
-  },
-  {
    "slug": "francis-indian-harbor-in",
    "names": {
     "lt": null,
@@ -14605,7 +16360,8 @@
     "lt": null,
     "en": "St. Bernard Parish",
     "variants": [
-     "St. Bernard"
+     "St. Bernard",
+     "medinis Dievo namelis / bažnyčia (Irons)"
     ]
    },
    "city": "Irons",
@@ -14628,6 +16384,17 @@
      "convent": "",
      "cemetery": "",
      "diocese": "unspecified"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "57,58",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian (farm colony)",
+     "diocese": "Grand Rapids"
     }
    ],
    "years": {
@@ -14636,11 +16403,38 @@
       "value": "1920",
       "source": "wolkovich",
       "cite": "Vol.3 p.83"
+     },
+     {
+      "value": "fundraising began after farm colony formed (c. 1910s-20s); small wooden church ('like a two-car garage') built after the fake-priest 'Kelmelis' episode",
+      "source": "michelsonas-1961",
+      "cite": "57,58"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "n/a - active at writing",
+      "source": "michelsonas-1961",
+      "cite": "57,58"
+     }
+    ]
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "founded",
+     "variants": [
+      {
+       "value": "1920",
+       "source": "wolkovich",
+       "cite": "Vol.3 p.83"
+      },
+      {
+       "value": "fundraising began after farm colony formed (c. 1910s-20s); small wooden church ('like a two-car garage') built after the fake-priest 'Kelmelis' episode",
+       "source": "michelsonas-1961",
+       "cite": "57,58"
+      }
+     ]
+    }
+   ],
    "related_sites": [],
    "events_refs": [],
    "geo": {
@@ -14650,8 +16444,8 @@
     "needs_geocode": true
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source"
+   "axes_count": 2,
+   "record_depth": "multi-source"
   },
   {
    "slug": "parish-scottville-mi",
@@ -14873,6 +16667,60 @@
     "lon": -80.0025666,
     "precision": "city-centroid",
     "source": "site-geo-cache"
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "mary-chicago-il",
+   "names": {
+    "lt": null,
+    "en": "St. Mary / Our Lady of Šiluva",
+    "variants": [
+     "St. Mary Parish (later Our Lady of Šiluva, later St. Mary again), Bridgeport"
+    ]
+   },
+   "city": "Chicago (Bridgeport; 35th & Union / 3501-3509 So. Union Ave.)",
+   "state": "IL",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "wolkovich",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Wolkovich, Lithuanian Religious Life in America, Vol. 3 (1998)",
+     "pages": "p.223; p.224; p.226",
+     "lccn": "91-76766",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "ethnic_status": "Lithuanian separatist Catholic congregation",
+     "school": "",
+     "convent": "",
+     "cemetery": "",
+     "diocese": "independent/separatist"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "1916 (incorporated May 17, 1916, by Stasys Mickevičius)",
+      "source": "wolkovich",
+      "cite": "Vol.3 p.223; p.224; p.226"
+     }
+    ],
+    "closed": []
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": null,
+    "lon": null,
+    "precision": null,
+    "needs_geocode": true
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
@@ -15743,6 +17591,1392 @@
    "record_depth": "single-source"
   },
   {
+   "slug": "parish-freeland-pa",
+   "names": {
+    "lt": null,
+    "en": "Freeland parish",
+    "variants": [
+     "mixed Lithuanian-Polish-Slovak-Rusyn parish (unnamed) / 'Polish-Lithuanian Church'"
+    ]
+   },
+   "city": "Freeland",
+   "state": "PA",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "21,32,33",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "mixed Lithuanian-Polish-Slovak-Rusyn",
+     "diocese": "unspecified (Irish bishop)"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "Lithuanians settled 1880; parish organized by kun. Varnagiris (year not given, before 1894)",
+      "source": "michelsonas-1961",
+      "cite": "21,32,33"
+     }
+    ],
+    "closed": [
+     {
+      "value": "not stated",
+      "source": "michelsonas-1961",
+      "cite": "21,32,33"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": null,
+    "lon": null,
+    "precision": null,
+    "needs_geocode": true
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "george-mahanoy-city-pa",
+   "names": {
+    "lt": null,
+    "en": "St. George Parish, Mahanoy City",
+    "variants": [
+     "šv. Jurgio parapija (Mahanoy City)"
+    ]
+   },
+   "city": "Mahanoy City",
+   "state": "PA",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "21,22",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian",
+     "diocese": "unspecified (Irish bishop)"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "1874 (Lithuanians began settling and raising funds for a Lithuanian church)",
+      "source": "michelsonas-1961",
+      "cite": "21,22"
+     }
+    ],
+    "closed": [
+     {
+      "value": "still active at time of writing (parish had $8,000 annual income, 300 baptisms, 85 weddings in 1911 per kun. Milukas)",
+      "source": "michelsonas-1961",
+      "cite": "21,22"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": null,
+    "lon": null,
+    "precision": null,
+    "needs_geocode": true
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "parish-mt-pleasant-pa",
+   "names": {
+    "lt": null,
+    "en": "Mt. Pleasant parish",
+    "variants": [
+     "Polish parish, Mt. Pleasant"
+    ]
+   },
+   "city": "Mt. Pleasant",
+   "state": "PA",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "34",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Polish parish where a Lithuanian priest served",
+     "diocese": "unspecified"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "not stated",
+      "source": "michelsonas-1961",
+      "cite": "34"
+     }
+    ],
+    "closed": [
+     {
+      "value": "not applicable",
+      "source": "michelsonas-1961",
+      "cite": "34"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": null,
+    "lon": null,
+    "precision": null,
+    "needs_geocode": true
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "anthony-philadelphia-pa",
+   "names": {
+    "lt": null,
+    "en": "St. Anthony's Church, Philadelphia",
+    "variants": [
+     "šv. Antano bažnyčia (Philadelphia)",
+     "Šv. Antano parapija"
+    ]
+   },
+   "city": "Philadelphia",
+   "state": "PA",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "34",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian (opposed by Irish Catholics as 'foreigners')",
+     "diocese": "unspecified (Irish bishop); Papal delegate in Washington intervened"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "128",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Roman Catholic",
+     "diocese": "Archdiocese of Philadelphia"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "not precisely dated (after Irish opposition resolved via appeal to Papal delegate)",
+      "source": "michelsonas-1961",
+      "cite": "34"
+     },
+     {
+      "value": "1894",
+      "source": "michelsonas-1961",
+      "cite": "128"
+     }
+    ],
+    "closed": [
+     {
+      "value": "closed after deed dispute (undated), later sold, then restarted; by 1961, three Lithuanian churches exist in Philadelphia",
+      "source": "michelsonas-1961",
+      "cite": "34"
+     },
+     {
+      "value": "~1901 (after a 7-year lawsuit)",
+      "source": "michelsonas-1961",
+      "cite": "128"
+     }
+    ]
+   },
+   "conflicts": [
+    {
+     "field": "founded",
+     "variants": [
+      {
+       "value": "not precisely dated (after Irish opposition resolved via appeal to Papal delegate)",
+       "source": "michelsonas-1961",
+       "cite": "34"
+      },
+      {
+       "value": "1894",
+       "source": "michelsonas-1961",
+       "cite": "128"
+      }
+     ]
+    },
+    {
+     "field": "closed",
+     "variants": [
+      {
+       "value": "closed after deed dispute (undated), later sold, then restarted; by 1961, three Lithuanian churches exist in Philadelphia",
+       "source": "michelsonas-1961",
+       "cite": "34"
+      },
+      {
+       "value": "~1901 (after a 7-year lawsuit)",
+       "source": "michelsonas-1961",
+       "cite": "128"
+      }
+     ]
+    }
+   ],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": 39.9527237,
+    "lon": -75.1635262,
+    "precision": "city-centroid",
+    "source": "site-geo-cache"
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "holyname-scranton-pa",
+   "names": {
+    "lt": null,
+    "en": "Scranton Lithuanian parish (unnamed)",
+    "variants": [
+     "Lithuanian church on Theodore St., Scranton"
+    ]
+   },
+   "city": "Scranton",
+   "state": "PA",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "34,35,36",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian",
+     "diocese": "unspecified (Irish bishop)"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "not stated (existed under kun. Kuras until his death in 1937)",
+      "source": "michelsonas-1961",
+      "cite": "34,35,36"
+     }
+    ],
+    "closed": [
+     {
+      "value": "n/a - ongoing in 1937 conflict",
+      "source": "michelsonas-1961",
+      "cite": "34,35,36"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": 41.4086874,
+    "lon": -75.6621294,
+    "precision": "city-centroid",
+    "source": "site-geo-cache"
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "joseph-custer-mi",
+   "names": {
+    "lt": null,
+    "en": "St. Joseph Church, Custer",
+    "variants": [
+     "šv. Juozapo bažnyčia (Custer)"
+    ]
+   },
+   "city": "Custer",
+   "state": "MI",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "58,59",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian (farm colony)",
+     "diocese": "Grand Rapids"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "land donated by Kazimieras Žvirgždas (1 acre)",
+      "source": "michelsonas-1961",
+      "cite": "58,59"
+     }
+    ],
+    "closed": [
+     {
+      "value": "n/a - active at writing, school with 160 pupils taught by Sisters of St. Casimir from Chicago",
+      "source": "michelsonas-1961",
+      "cite": "58,59"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": null,
+    "lon": null,
+    "precision": null,
+    "needs_geocode": true
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "casimir-boston-ma",
+   "names": {
+    "lt": null,
+    "en": "St. Joseph / St. Casimir Parish (first Boston parish)",
+    "variants": [
+     "šv. Juozapo / šv. Kazimiero parapija (pirmoji Bostono parapija)"
+    ]
+   },
+   "city": "Boston (South Boston)",
+   "state": "MA",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.283-284",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "Archdiocese of Boston (Archbishop Williams)"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "land bought and parish organized by Petras Caplikas, priest kun. J. Gricius assigned by archbishop",
+      "source": "michelsonas-1961",
+      "cite": "p.283-284"
+     }
+    ],
+    "closed": [
+     {
+      "value": "~1903-04 (abandoned by parishioners)",
+      "source": "michelsonas-1961",
+      "cite": "p.283-284"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": null,
+    "lon": null,
+    "precision": null,
+    "needs_geocode": true
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "holycross-brooklyn-ny",
+   "names": {
+    "lt": null,
+    "en": "Holy Cross Parish",
+    "variants": [
+     "Šv. Kryžiaus parapija"
+    ]
+   },
+   "city": "Brooklyn",
+   "state": "NY",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.334",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.334"
+     }
+    ],
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.334"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": 40.6526006,
+    "lon": -73.9497211,
+    "precision": "city-centroid",
+    "source": "site-geo-cache"
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "holyname-philadelphia-pa",
+   "names": {
+    "lt": null,
+    "en": "Unnamed independent/schismatic parish",
+    "variants": [
+     "(nepavadinta parapija, 'nuo Romos atsimetusi')"
+    ]
+   },
+   "city": "Philadelphia",
+   "state": "PA",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.340",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "independent/schismatic from Rome",
+     "diocese": "None"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.340"
+     }
+    ],
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.340"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": 39.9527237,
+    "lon": -75.1635262,
+    "precision": "city-centroid",
+    "source": "site-geo-cache"
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "parish-pittsburgh-pa",
+   "names": {
+    "lt": null,
+    "en": "Ascension Parish",
+    "variants": [
+     "Dangun Isengimo parapija"
+    ]
+   },
+   "city": "Pittsburgh",
+   "state": "PA",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.341-342",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.341-342"
+     }
+    ],
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.341-342"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": 40.4406968,
+    "lon": -80.0025666,
+    "precision": "city-centroid",
+    "source": "site-geo-cache"
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "vincent-pittsburgh-pa",
+   "names": {
+    "lt": null,
+    "en": "St. Vincent Parish",
+    "variants": [
+     "šv. Vincento parapija"
+    ]
+   },
+   "city": "Pittsburgh",
+   "state": "PA",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.341-342",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.341-342"
+     }
+    ],
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "p.341-342"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": 40.4406968,
+    "lon": -80.0025666,
+    "precision": "city-centroid",
+    "source": "site-geo-cache"
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "allsaints-worcester-ma",
+   "names": {
+    "lt": null,
+    "en": "All Saints Church (independent/national)",
+    "variants": [
+     "Visu Sventuju bažnycia (nepriklausoma/tautine)"
+    ]
+   },
+   "city": "Worcester",
+   "state": "MA",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.344-345",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "independent/schismatic Lithuanian national parish",
+     "diocese": "None"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "~1908 (split from sv. Kazimiero)",
+      "source": "michelsonas-1961",
+      "cite": "p.344-345"
+     }
+    ],
+    "closed": [
+     {
+      "value": "1913",
+      "source": "michelsonas-1961",
+      "cite": "p.344-345"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": 42.2625621,
+    "lon": -71.8018877,
+    "precision": "city-centroid",
+    "source": "site-geo-cache"
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "trinity-new-york-ny",
+   "names": {
+    "lt": null,
+    "en": "Holy Trinity",
+    "variants": [
+     "šv. Trejybės parapija"
+    ]
+   },
+   "city": "New York",
+   "state": "NY",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "120, 162",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Roman Catholic",
+     "diocese": "Archdiocese of New York"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "1884",
+      "source": "michelsonas-1961",
+      "cite": "120, 162"
+     }
+    ],
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "120, 162"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": null,
+    "lon": null,
+    "precision": null,
+    "needs_geocode": true
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "lawrence-lawrence-ma",
+   "names": {
+    "lt": null,
+    "en": "Lithuanian National Catholic parish, Lawrence",
+    "variants": [
+     "tautinė parapija, Lawrence, Mass."
+    ]
+   },
+   "city": "Lawrence",
+   "state": "MA",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "132",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian National Catholic",
+     "diocese": "None",
+     "ownership": "national_catholic"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "~1916 (per 1941 25th-anniversary observance)",
+      "source": "michelsonas-1961",
+      "cite": "132"
+     }
+    ],
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "132"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": 42.7070354,
+    "lon": -71.1631137,
+    "precision": "city-centroid",
+    "source": "site-geo-cache"
+   },
+   "congregation_class": "national_catholic_pncc",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "parish-wilkes-barre-pa",
+   "names": {
+    "lt": null,
+    "en": "Lithuanian National Catholic parish, Wilkes-Barre",
+    "variants": [
+     "tautinė parapija, Wilkes-Barrė, Pa."
+    ]
+   },
+   "city": "Wilkes-Barre",
+   "state": "PA",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "132",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian National Catholic",
+     "diocese": "None",
+     "ownership": "national_catholic"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "1932",
+      "source": "michelsonas-1961",
+      "cite": "132"
+     }
+    ],
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "132"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": 41.2464824,
+    "lon": -75.8817316,
+    "precision": "city-centroid",
+    "source": "site-geo-cache"
+   },
+   "congregation_class": "national_catholic_pncc",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "parish-baltimore-md",
+   "names": {
+    "lt": null,
+    "en": "Independent (National) parish attempt, Baltimore",
+    "variants": [
+     "Delianio/Rusikio nepriklausoma parapija, Baltimorė"
+    ]
+   },
+   "city": "Baltimore",
+   "state": "MD",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "129",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian National Catholic (self-styled independent)",
+     "diocese": "None",
+     "ownership": "national_catholic"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "~late 1880s ('devintos metų dešimties pabaigoje')",
+      "source": "michelsonas-1961",
+      "cite": "129"
+     }
+    ],
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "129"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": 39.2908816,
+    "lon": -76.610759,
+    "precision": "city-centroid",
+    "source": "site-geo-cache"
+   },
+   "congregation_class": "national_catholic_pncc",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "joseph-dubois-pa",
+   "names": {
+    "lt": null,
+    "en": "St. Joseph parish, DuBois (RC), and rival National Church attempt",
+    "variants": [
+     "Šv. Juozapo parapija, DuBois, Pa. (RC) / nepriklausoma parapija (tautinė)"
+    ]
+   },
+   "city": "DuBois",
+   "state": "PA",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "129-130, 139",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Roman Catholic (existing parish) with a National Catholic breakaway attempt 1903-1910",
+     "diocese": "None",
+     "ownership": "national_catholic"
+    },
+    {
+     "axis": "truelithuania",
+     "kind": "field-survey",
+     "tlId": 516,
+     "sourceUrl": "http://global.truelithuania.com/lt/du-bois-pennsylvania-2543/",
+     "statusFlags": [
+      "closed",
+      "sold"
+     ],
+     "yearsMentioned": [
+      1924,
+      2018
+     ],
+     "importance": 3
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "1903",
+      "source": "michelsonas-1961",
+      "cite": "129-130, 139"
+     }
+    ],
+    "closed": [
+     {
+      "value": "~1910",
+      "source": "michelsonas-1961",
+      "cite": "129-130, 139"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": 41.118676,
+    "lon": -78.770593,
+    "precision": "exact",
+    "source": "truelithuania"
+   },
+   "congregation_class": "national_catholic_pncc",
+   "axes_count": 2,
+   "record_depth": "multi-source"
+  },
+  {
+   "slug": "parish-chicago-il-2",
+   "names": {
+    "lt": null,
+    "en": "Independent (National) parish, Town of Lake, Chicago",
+    "variants": [
+     "nepriklausoma parapija, Town of Lake (Chicago priemiestis)"
+    ]
+   },
+   "city": "Chicago (Town of Lake)",
+   "state": "IL",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "130",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian National Catholic",
+     "diocese": "None",
+     "ownership": "national_catholic"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "1913",
+      "source": "michelsonas-1961",
+      "cite": "130"
+     }
+    ],
+    "closed": [
+     {
+      "value": "~1915",
+      "source": "michelsonas-1961",
+      "cite": "130"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": null,
+    "lon": null,
+    "precision": null,
+    "needs_geocode": true
+   },
+   "congregation_class": "national_catholic_pncc",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "providence-providence-ri",
+   "names": {
+    "lt": null,
+    "en": "Lithuanian National Catholic parish, Providence",
+    "variants": [
+     "nepriklausoma (tautinė) parapija, Providence, R.I."
+    ]
+   },
+   "city": "Providence",
+   "state": "RI",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "130",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian National Catholic, later reverted to Roman Catholic",
+     "diocese": "None",
+     "ownership": "national_catholic"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "~1906-1907 (after Mickevičius's failed 1906 Scranton attempt)",
+      "source": "michelsonas-1961",
+      "cite": "130"
+     }
+    ],
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "130"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": 41.8239891,
+    "lon": -71.4128343,
+    "precision": "city-centroid",
+    "source": "site-geo-cache"
+   },
+   "congregation_class": "national_catholic_pncc",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "parish-worcester-ma",
+   "names": {
+    "lt": null,
+    "en": "National Catholic parish attempt, Worcester",
+    "variants": [
+     "nepriklausoma (tautinė) parapija, Worcester, Mass."
+    ]
+   },
+   "city": "Worcester",
+   "state": "MA",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "130",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian National Catholic",
+     "diocese": "None",
+     "ownership": "national_catholic"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "130"
+     }
+    ],
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "130"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": 42.2625621,
+    "lon": -71.8018877,
+    "precision": "city-centroid",
+    "source": "site-geo-cache"
+   },
+   "congregation_class": "national_catholic_pncc",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "parish-westville-il-2",
+   "names": {
+    "lt": null,
+    "en": "RC parish, Westville (Fr. Skripka)",
+    "variants": [
+     "lietuvių parapija, Westville, Ill. (kun. Skripka)"
+    ]
+   },
+   "city": "Westville",
+   "state": "IL",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "128",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Roman Catholic",
+     "diocese": "None"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "128"
+     }
+    ],
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "128"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": 40.0422589,
+    "lon": -87.6386322,
+    "precision": "city-centroid",
+    "source": "site-geo-cache"
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "parish-chicago-il-3",
+   "names": {
+    "lt": null,
+    "en": "RC parish, Chicago (Fr. Steponavičius)",
+    "variants": [
+     "lietuvių parapija, Chicago (kun. Steponavičius)"
+    ]
+   },
+   "city": "Chicago",
+   "state": "IL",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "128",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Roman Catholic",
+     "diocese": "None"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "128"
+     }
+    ],
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "128"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": 41.8755616,
+    "lon": -87.6244212,
+    "precision": "city-centroid",
+    "source": "site-geo-cache"
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
+   "slug": "parish-worcester-ma-2",
+   "names": {
+    "lt": null,
+    "en": "RC parish, Worcester (Fr. Bukaveckas)",
+    "variants": [
+     "lietuvių parapija, Worcester, Mass. (kun. Bukaveckas)"
+    ]
+   },
+   "city": "Worcester",
+   "state": "MA",
+   "country": "US",
+   "record_type": "parish",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "128",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Roman Catholic",
+     "diocese": "None"
+    }
+   ],
+   "years": {
+    "founded": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "128"
+     }
+    ],
+    "closed": [
+     {
+      "value": "None",
+      "source": "michelsonas-1961",
+      "cite": "128"
+     }
+    ]
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": 42.2625621,
+    "lon": -71.8018877,
+    "precision": "city-centroid",
+    "source": "site-geo-cache"
+   },
+   "congregation_class": "roman_catholic",
+   "axes_count": 1,
+   "record_depth": "single-source"
+  },
+  {
    "slug": "casimir-winnipeg-mb",
    "names": {
     "lt": "Vinipego Šv. Kazimiero lietuvių bažnyčia",
@@ -15996,94 +19230,6 @@
    "geo": {
     "lat": 43.264132,
     "lon": -79.886782,
-    "precision": "exact",
-    "source": "truelithuania"
-   },
-   "years": {
-    "founded": [],
-    "closed": []
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [],
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source"
-  },
-  {
-   "slug": "ann-beverly-shores-in",
-   "names": {
-    "lt": "Beverli Šoro Šv. Onos bažnyčia",
-    "en": null,
-    "variants": []
-   },
-   "city": "Beverly Shores",
-   "state": "IN",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "truelithuania",
-     "kind": "field-survey",
-     "tlId": 6514,
-     "sourceUrl": "http://global.truelithuania.com/lt/indiana-746/",
-     "statusFlags": [],
-     "yearsMentioned": [],
-     "importance": 3
-    }
-   ],
-   "geo": {
-    "lat": 41.672396,
-    "lon": -86.982156,
-    "precision": "exact",
-    "source": "truelithuania"
-   },
-   "years": {
-    "founded": [],
-    "closed": []
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [],
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source"
-  },
-  {
-   "slug": "joseph-dubois-pa",
-   "names": {
-    "lt": "Duboizo Šv. Juozapo lietuvių bažnyčia",
-    "en": null,
-    "variants": []
-   },
-   "city": "DuBois",
-   "state": "PA",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "truelithuania",
-     "kind": "field-survey",
-     "tlId": 516,
-     "sourceUrl": "http://global.truelithuania.com/lt/du-bois-pennsylvania-2543/",
-     "statusFlags": [
-      "closed",
-      "sold"
-     ],
-     "yearsMentioned": [
-      1924,
-      2018
-     ],
-     "importance": 3
-    }
-   ],
-   "geo": {
-    "lat": 41.118676,
-    "lon": -78.770593,
     "precision": "exact",
     "source": "truelithuania"
    },

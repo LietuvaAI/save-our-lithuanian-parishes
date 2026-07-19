@@ -53,13 +53,15 @@ export default function AboutTheDataPage() {
         </h2>
         <p className="mt-2 leading-relaxed">
           The record does not stop at 2008. The full historical run of{" "}
-          <em>Draugas</em> — from 1909 through 2007 — is being read in a
-          systematic archive sweep: parish registries, founding notices,
-          jubilee articles that imply founding years, closure coverage, and a
-          gazetteer of the places Lithuanians built. This work recovers the
-          parishes that closed before living memory and the events the
-          modern record only inherits secondhand. It lands in refreshes; the
-          registry below already carries its first waves.
+          <em>Draugas</em> — from its first issues in 1909 through 2007 —
+          has been read in a systematic archive sweep: parish registries,
+          founding notices, jubilee articles that imply founding years,
+          closure coverage, and a gazetteer of the places Lithuanians built.
+          The sweep&rsquo;s completion brief states its own limits honestly
+          — detection is comprehensive, not exhaustive transcription — and
+          its full results are joined into the registry below. This work
+          recovers the parishes that closed before living memory and the
+          events the modern record only inherits secondhand.
         </p>
       </section>
 
@@ -77,7 +79,8 @@ export default function AboutTheDataPage() {
           secular counterpoint — the longtime editor of a freethinker
           newspaper documenting the same communities, including the
           &ldquo;church fights&rdquo; over property from the 1880s onward;
-          its extraction is in progress. Where a Catholic historian and a
+          its extraction is complete and joined into the registry. Where a
+          Catholic historian and a
           socialist editor agree on a fact, that agreement is the strongest
           corroboration this record can offer. Where they diverge, we keep
           both readings.
@@ -116,7 +119,7 @@ export default function AboutTheDataPage() {
         </h2>
         <p className="mt-2 leading-relaxed">
           The sources join into a single research registry —{" "}
-          <strong>188 parishes</strong> across the U.S. and Canada — matched
+          <strong>220 parishes</strong> across the U.S. and Canada — matched
           by city and patron saint across Lithuanian and English spellings.
           Every parish carries a record-depth label rather than a
           verified/unverified caste: <em>case-filed</em> (the 83 with full

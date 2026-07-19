@@ -316,11 +316,13 @@
    "slug": "raymond-baptist-chicago",
    "name": "Raymond Baptist Church",
    "name_variants": [
-    "Raymond Baptist Church"
+    "Raymond Baptist Church",
+    "St. John's Parish (St. John the Baptist, per abbreviation 'Kr.')"
    ],
    "city": "Chicago",
    "city_history": [
-    "Chicago"
+    "Chicago",
+    "Toronto"
    ],
    "state": "IL",
    "congregation_class": "non_catholic_christian",
@@ -333,6 +335,94 @@
      "pages": "p.237",
      "lccn": "91-76766",
      "note": "documented by Wolkovich; outside Catholic-parish registry scope"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.425, p.427",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "note": "documented by Michelsonas"
+    }
+   ]
+  },
+  {
+   "slug": "cong-lithuanian-evangelical-union-c",
+   "name": "Lithuanian Evangelical Union congregation/parish",
+   "name_variants": [
+    "Lithuanian Evangelical Union congregation/parish"
+   ],
+   "city": "Toronto",
+   "city_history": [
+    "Toronto"
+   ],
+   "state": "ON",
+   "congregation_class": "non_catholic_christian",
+   "geo": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.427",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "note": "documented by Michelsonas"
+    }
+   ]
+  },
+  {
+   "slug": "cong-lithuanian-evangelical-luthera",
+   "name": "Lithuanian Evangelical Lutheran Parish",
+   "name_variants": [
+    "Lithuanian Evangelical Lutheran Parish"
+   ],
+   "city": "Boston",
+   "city_history": [
+    "Boston"
+   ],
+   "state": "MA",
+   "congregation_class": "non_catholic_christian",
+   "geo": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.294",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "note": "documented by Michelsonas"
+    }
+   ]
+  },
+  {
+   "slug": "cong-lithuanian-evangelical-parish",
+   "name": "Lithuanian Evangelical Parish",
+   "name_variants": [
+    "Lithuanian Evangelical Parish"
+   ],
+   "city": "Los Angeles",
+   "city_history": [
+    "Los Angeles"
+   ],
+   "state": "CA",
+   "congregation_class": "non_catholic_christian",
+   "geo": null,
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.327",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "note": "documented by Michelsonas"
     }
    ]
   }
