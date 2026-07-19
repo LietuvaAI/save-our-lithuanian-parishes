@@ -44,3 +44,12 @@ Never hand-edit `data/parishes.csv` in this repo. If the upstream canonical CSV 
 - The Pennsylvania **"31 parishes / 29 Roman Catholic, all closed"** figure is a statistic *stated in Draugas* (2017-12-28; 2024-01-20), not enumerated dataset rows — cite as attributed, never draw 31 marks.
 - **No invented numbers.** Blank CSV fields are blank because the research does not support a figure.
 - **83 documented / 58 case-filed in depth** — copy must not call all 83 full case histories.
+
+## aod-workbooks-fy2425.json + aod-workbook-links.csv
+
+- **Canonical source:** the Archdiocese of Detroit's own published FY24/25 parish workbooks — index at https://restructuring.aod.org/parish-workbooks (published from 2026-03-04; one PDF per parish, 209 parishes, 15 Planning Areas; PDFs at aod.filecamp.com). Link index captured 2026-07-19 in-browser.
+- `aod-workbook-links.csv`: all 209 parish→workbook-PDF links, so no figure ever needs re-extraction without its source at hand.
+- `aod-workbooks-fy2425.json`: the verified extract behind The Hearth's July 2026 analysis posts — the 13 ethnic parishes (each row linking its own workbook), Divine Providence's full metric block (incl. the parish-bulletin current-year figures, clearly source-labeled), cohort aggregates, and AOD-wide statistics. Every consumer of these figures should cite the specific workbook link.
+- ⚠️ Reconciliation lead: the workbook records Divine Providence in **Planning Area 8**; an earlier site case record said Area 9 via a Detroit News read — the workbook is primary.
+
+**2026-07-19 corrections (verification pass for the press article):** `total_newlife` corrected 1,141 → 1,089 (component sum; live post corrected same day). `annual_operating_gap_usd` renamed `parish_debt_usd` per the workbooks' own p.19 framing ("More than $18 million in parish debt"). The 1933 "98 parishes / 32 national / 22 languages" statistic is flagged UNANCHORED — its cited pages do not carry it; do not reuse until a source is pinned. Divine Providence workbook PDF verified to carry: attendance/capacity table p.27 ("Divine Providence (Lithuanian) Parish 1 144 1 300 48%"), boundary shares p.28 (79 within / 149 outside = 65%), planning-area description p.22 ("9 territorial parishes and 4 personal parishes"), archdiocese-wide finances p.19; cover states "Published March 2026," filename carries "PA8."

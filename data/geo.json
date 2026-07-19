@@ -1,4 +1,10 @@
 {
+  "Akron|OH": {
+    "lat": 41.083064,
+    "lon": -81.518485,
+    "source": "nominatim",
+    "place": "Akron, Summit County, Ohio, United States"
+  },
   "Amsterdam|NY": {
     "lat": 42.9362232,
     "lon": -74.1905821,
@@ -29,11 +35,29 @@
     "source": "nominatim",
     "place": "Bayonne, Hudson County, New Jersey, 07002, United States"
   },
+  "Bentleyville|PA": {
+    "lat": 40.1167387,
+    "lon": -80.0083855,
+    "source": "nominatim",
+    "place": "Bentleyville, Washington County, Pennsylvania, United States"
+  },
+  "Boston (South Boston)|MA": {
+    "lat": 42.3588336,
+    "lon": -71.0578303,
+    "source": "nominatim",
+    "place": "Boston, Suffolk County, Massachusetts, United States"
+  },
   "Boston|MA": {
     "lat": 42.3588336,
     "lon": -71.0578303,
     "source": "nominatim",
     "place": "Boston, Suffolk County, Massachusetts, United States"
+  },
+  "Braddock|PA": {
+    "lat": 40.4034024,
+    "lon": -79.8683824,
+    "source": "nominatim",
+    "place": "Braddock, Allegheny County, Pennsylvania, United States"
   },
   "Bridgeport|CT": {
     "lat": 41.1792695,
@@ -41,11 +65,23 @@
     "source": "nominatim",
     "place": "Bridgeport, Greater Bridgeport Planning Region, Connecticut, United States"
   },
+  "Bridgeville|PA": {
+    "lat": 40.3561805,
+    "lon": -80.1100556,
+    "source": "nominatim",
+    "place": "Bridgeville, Allegheny County, Pennsylvania, United States"
+  },
   "Brockton|MA": {
     "lat": 42.0834335,
     "lon": -71.0183787,
     "source": "nominatim",
     "place": "Brockton, Plymouth County, Massachusetts, United States"
+  },
+  "Bronx|NY": {
+    "lat": 40.8466508,
+    "lon": -73.8785937,
+    "source": "nominatim",
+    "place": "The Bronx, Bronx County, New York, United States"
   },
   "Brooklyn|NY": {
     "lat": 40.6526006,
@@ -58,6 +94,30 @@
     "lon": -71.1040018,
     "source": "nominatim",
     "place": "Cambridge, Middlesex County, Massachusetts, United States"
+  },
+  "Chester|PA": {
+    "lat": 39.849557,
+    "lon": -75.3557458,
+    "source": "nominatim",
+    "place": "Chester, Delaware County, Pennsylvania, 19013, United States"
+  },
+  "Chicago (Bridgeport; 35th & Union / 3501-3509 So. Union Ave.)|IL": {
+    "lat": 41.8755616,
+    "lon": -87.6244212,
+    "source": "nominatim",
+    "place": "Chicago, South Chicago Township, Cook County, Illinois, United States"
+  },
+  "Chicago (proposed site: corner of Union & Twelfth Streets)|IL": {
+    "lat": 41.8755616,
+    "lon": -87.6244212,
+    "source": "nominatim",
+    "place": "Chicago, South Chicago Township, Cook County, Illinois, United States"
+  },
+  "Chicago (Town of Lake)|IL": {
+    "lat": 41.8755616,
+    "lon": -87.6244212,
+    "source": "nominatim",
+    "place": "Chicago, South Chicago Township, Cook County, Illinois, United States"
   },
   "Chicago|IL": {
     "lat": 41.8755616,
@@ -89,6 +149,12 @@
     "source": "nominatim",
     "place": "Collinsville, Madison County, Illinois, 62234, United States"
   },
+  "Custer|MI": {
+    "lat": 43.951951,
+    "lon": -86.219521,
+    "source": "nominatim",
+    "place": "Custer, Mason County, Michigan, United States"
+  },
   "Darien|IL": {
     "lat": 41.7508713,
     "lon": -87.9739593,
@@ -107,11 +173,35 @@
     "source": "nominatim",
     "place": "Delhi, Norfolk County, Southwestern Ontario, Ontario, N4B 2K6, Canada"
   },
+  "Denver / Globeville|CO": {
+    "lat": 39.7392364,
+    "lon": -104.984862,
+    "source": "nominatim",
+    "place": "Denver, Colorado, United States"
+  },
   "Detroit|MI": {
     "lat": 42.3315509,
     "lon": -83.0466403,
     "source": "nominatim",
     "place": "Detroit, Wayne County, Michigan, United States"
+  },
+  "Donora|PA": {
+    "lat": 40.178582,
+    "lon": -79.8561687,
+    "source": "nominatim",
+    "place": "Donora, Washington County, Pennsylvania, 15033, United States"
+  },
+  "Du Bois|PA": {
+    "lat": 41.118651,
+    "lon": -78.7622342,
+    "source": "nominatim",
+    "place": "DuBois, Clearfield County, Pennsylvania, 15801, United States"
+  },
+  "Duryea|PA": {
+    "lat": 41.347817,
+    "lon": -75.7564267,
+    "source": "nominatim",
+    "place": "Duryea, Luzerne County, Pennsylvania, 18642, United States"
   },
   "East Chicago|IN": {
     "lat": 41.6397857,
@@ -125,6 +215,12 @@
     "source": "nominatim",
     "place": "East Saint Louis, Saint Clair County, Illinois, United States"
   },
+  "Easton|PA": {
+    "lat": 40.6916081,
+    "lon": -75.2099866,
+    "source": "nominatim",
+    "place": "Easton, Northampton County, Pennsylvania, United States"
+  },
   "Elizabeth|NJ": {
     "lat": 40.6639916,
     "lon": -74.2107006,
@@ -137,11 +233,29 @@
     "source": "nominatim",
     "place": "Esplen, Pittsburgh, Allegheny County, Pennsylvania, United States"
   },
+  "Eynon|PA": {
+    "lat": 41.4956364,
+    "lon": -75.5743534,
+    "source": "nominatim",
+    "place": "Eynon, Archbald, Lackawanna County, Pennsylvania, 18452, United States"
+  },
+  "Forest City|PA": {
+    "lat": 41.6514722,
+    "lon": -75.4665719,
+    "source": "nominatim",
+    "place": "Forest City, Susquehanna County, Pennsylvania, 18421, United States"
+  },
   "Frackville|PA": {
     "lat": 40.7838222,
     "lon": -76.2303862,
     "source": "nominatim",
     "place": "Frackville, Schuylkill County, Pennsylvania, 17931, United States"
+  },
+  "Freeland|PA": {
+    "lat": 41.0167508,
+    "lon": -75.8971431,
+    "source": "nominatim",
+    "place": "Freeland, Luzerne County, Pennsylvania, 18224, United States"
   },
   "Gary|IN": {
     "lat": 41.6020962,
@@ -155,11 +269,29 @@
     "source": "nominatim",
     "place": "Girardville, Schuylkill County, Pennsylvania, 17935, United States"
   },
+  "Grand Prairie|AR": {
+    "lat": 35.3635126,
+    "lon": -93.9773298,
+    "source": "nominatim",
+    "place": "North Grand Prairie Road, Franklin County, Arkansas, 72933, United States"
+  },
   "Grand Rapids|MI": {
     "lat": 42.9632425,
     "lon": -85.6678639,
     "source": "nominatim",
     "place": "Grand Rapids, Kent County, Michigan, United States"
+  },
+  "Harrisburg|IL": {
+    "lat": 37.7385,
+    "lon": -88.5405213,
+    "source": "nominatim",
+    "place": "Harrisburg, Saline County, Illinois, 62946, United States"
+  },
+  "Harrison|NJ": {
+    "lat": 40.7464901,
+    "lon": -74.1562551,
+    "source": "nominatim",
+    "place": "Harrison, Hudson County, New Jersey, 07029, United States"
   },
   "Hartford|CT": {
     "lat": 41.764582,
@@ -173,6 +305,36 @@
     "source": "nominatim",
     "place": "Haverhill, Essex County, Massachusetts, United States"
   },
+  "Homestead|PA": {
+    "lat": 40.4059025,
+    "lon": -79.9119948,
+    "source": "nominatim",
+    "place": "Homestead, Allegheny County, Pennsylvania, United States"
+  },
+  "Indian Harbor (East Chicago)|IN": {
+    "lat": 41.6397857,
+    "lon": -87.4548466,
+    "source": "nominatim",
+    "place": "East Chicago, North Township, Lake County, Indiana, 46312, United States"
+  },
+  "Irons|MI": {
+    "lat": 44.1400073,
+    "lon": -85.9159037,
+    "source": "nominatim",
+    "place": "Irons, Eden Township, Lake County, Michigan, 49644, United States"
+  },
+  "Jersey City|NJ": {
+    "lat": 40.7215682,
+    "lon": -74.047455,
+    "source": "nominatim",
+    "place": "Jersey City, Hudson County, New Jersey, United States"
+  },
+  "Kansas City|KS": {
+    "lat": 39.1134562,
+    "lon": -94.626497,
+    "source": "nominatim",
+    "place": "Kansas City, Wyandotte County, Kansas, United States"
+  },
   "Kansas City|MO": {
     "lat": 39.100105,
     "lon": -94.5781416,
@@ -184,6 +346,12 @@
     "lon": -74.1454214,
     "source": "nominatim",
     "place": "Kearny, Hudson County, New Jersey, 07032, United States"
+  },
+  "Kewanee|IL": {
+    "lat": 41.2455927,
+    "lon": -89.9248303,
+    "source": "nominatim",
+    "place": "Kewanee, Henry County, Illinois, 61443, United States"
   },
   "Kingston|PA": {
     "lat": 41.2620137,
@@ -209,11 +377,23 @@
     "source": "nominatim",
     "place": "Los Angeles, Los Angeles County, California, United States"
   },
+  "Luther|MI": {
+    "lat": 44.040289,
+    "lon": -85.682559,
+    "source": "nominatim",
+    "place": "Luther, Lake County, Michigan, United States"
+  },
   "Luzerne|PA": {
     "lat": 41.1749635,
     "lon": -75.9695233,
     "source": "nominatim",
     "place": "Luzerne County, Pennsylvania, United States"
+  },
+  "Mahanoy City|PA": {
+    "lat": 40.8125881,
+    "lon": -76.1416034,
+    "source": "nominatim",
+    "place": "Mahanoy City, Schuylkill County, Pennsylvania, 17948, United States"
   },
   "Maizeville|PA": {
     "lat": 40.7981439,
@@ -233,6 +413,30 @@
     "source": "nominatim",
     "place": "Maspeth, Queens, Queens County, New York, 11378, United States"
   },
+  "McAdoo|PA": {
+    "lat": 40.9021528,
+    "lon": -75.993707,
+    "source": "nominatim",
+    "place": "McAdoo, Schuylkill County, Pennsylvania, 18237, United States"
+  },
+  "Melrose Park|IL": {
+    "lat": 41.900299,
+    "lon": -87.8569745,
+    "source": "nominatim",
+    "place": "Melrose Park, Proviso Township, Cook County, Illinois, United States"
+  },
+  "Middleport|PA": {
+    "lat": 40.7295342,
+    "lon": -76.0854908,
+    "source": "nominatim",
+    "place": "Middleport, Schuylkill County, Pennsylvania, 17953, United States"
+  },
+  "Milwaukee|WI": {
+    "lat": 43.0386475,
+    "lon": -87.9090751,
+    "source": "nominatim",
+    "place": "Milwaukee, Milwaukee County, Wisconsin, United States"
+  },
   "Montreal|QC": {
     "lat": 45.5031824,
     "lon": -73.5698065,
@@ -244,6 +448,12 @@
     "lon": -76.4131097,
     "source": "nominatim",
     "place": "Mount Carmel, Northumberland County, Pennsylvania, 17851, United States"
+  },
+  "Mt. Pleasant|PA": {
+    "lat": 40.1487475,
+    "lon": -79.5421368,
+    "source": "nominatim",
+    "place": "Mount Pleasant, Westmoreland County, Pennsylvania, United States"
   },
   "Nanticoke|PA": {
     "lat": 41.2052654,
@@ -257,6 +467,12 @@
     "source": "nominatim",
     "place": "Nashua, Hillsborough County, New Hampshire, United States"
   },
+  "Naugatuck|CT": {
+    "lat": 41.4907561,
+    "lon": -73.0556562,
+    "source": "nominatim",
+    "place": "Naugatuck, Naugatuck Valley Planning Region, Connecticut, 06770, United States"
+  },
   "New Britain|CT": {
     "lat": 41.6612104,
     "lon": -72.7795419,
@@ -268,6 +484,12 @@
     "lon": -72.9250518,
     "source": "nominatim",
     "place": "New Haven, South Central Connecticut Planning Region, Connecticut, United States"
+  },
+  "New York|NY": {
+    "lat": 40.7127281,
+    "lon": -74.0060152,
+    "source": "nominatim",
+    "place": "New York, United States"
   },
   "Newark|NJ": {
     "lat": 40.735657,
@@ -292,6 +514,12 @@
     "lon": -71.1994976,
     "source": "nominatim",
     "place": "Norwood, Norfolk County, Massachusetts, 02062, United States"
+  },
+  "Oak Lawn|IL": {
+    "lat": 41.7108662,
+    "lon": -87.7581081,
+    "source": "nominatim",
+    "place": "Oak Lawn, Worth Township, Cook County, Illinois, 60453, United States"
   },
   "Oglesby|IL": {
     "lat": 41.2953127,
@@ -329,11 +557,35 @@
     "source": "nominatim",
     "place": "Pittston, Luzerne County, Pennsylvania, United States"
   },
+  "Plymouth|PA": {
+    "lat": 41.2403596,
+    "lon": -75.9446428,
+    "source": "nominatim",
+    "place": "Plymouth, Luzerne County, Pennsylvania, 18651, United States"
+  },
+  "Port Washington|WI": {
+    "lat": 43.3885538,
+    "lon": -87.8692845,
+    "source": "nominatim",
+    "place": "Port Washington, Ozaukee County, Wisconsin, 53074, United States"
+  },
+  "Portland|OR": {
+    "lat": 45.5202471,
+    "lon": -122.674194,
+    "source": "nominatim",
+    "place": "Portland, Multnomah County, Oregon, United States"
+  },
   "Providence|RI": {
     "lat": 41.8239891,
     "lon": -71.4128343,
     "source": "nominatim",
     "place": "Providence, Providence County, Rhode Island, United States"
+  },
+  "Racine|WI": {
+    "lat": 42.7313756,
+    "lon": -87.7834769,
+    "source": "nominatim",
+    "place": "Racine, Racine County, Wisconsin, United States"
   },
   "Rochester|NY": {
     "lat": 43.157285,
@@ -341,11 +593,47 @@
     "source": "nominatim",
     "place": "City of Rochester, Monroe County, New York, United States"
   },
+  "Saginaw|MI": {
+    "lat": 43.4200387,
+    "lon": -83.9490365,
+    "source": "nominatim",
+    "place": "Saginaw, Carrollton Township, Saginaw County, Michigan, United States"
+  },
+  "Schenectady|NY": {
+    "lat": 42.8142432,
+    "lon": -73.9395687,
+    "source": "nominatim",
+    "place": "City of Schenectady, Schenectady County, New York, United States"
+  },
+  "Scottville|MI": {
+    "lat": 43.954728,
+    "lon": -86.280079,
+    "source": "nominatim",
+    "place": "Scottville, Mason County, Michigan, 49454, United States"
+  },
+  "Scranton (founding location)|PA": {
+    "lat": 41.4086874,
+    "lon": -75.6621294,
+    "source": "nominatim",
+    "place": "Scranton, Lackawanna County, Pennsylvania, United States"
+  },
   "Scranton|PA": {
     "lat": 41.4086874,
     "lon": -75.6621294,
     "source": "nominatim",
     "place": "Scranton, Lackawanna County, Pennsylvania, United States"
+  },
+  "Shamokin|PA": {
+    "lat": 40.7887609,
+    "lon": -76.5585175,
+    "source": "nominatim",
+    "place": "Shamokin, Northumberland County, Pennsylvania, 17872, United States"
+  },
+  "Sheboygan|WI": {
+    "lat": 43.7508284,
+    "lon": -87.71453,
+    "source": "nominatim",
+    "place": "Sheboygan, Sheboygan County, Wisconsin, 53081, United States"
   },
   "Shenandoah|PA": {
     "lat": 40.8204404,
@@ -377,11 +665,83 @@
     "source": "nominatim",
     "place": "Spring Valley, Bureau County, Illinois, 61362, United States"
   },
+  "Springfield|IL": {
+    "lat": 39.7990175,
+    "lon": -89.6439575,
+    "source": "nominatim",
+    "place": "Springfield, Sangamon County, Illinois, United States"
+  },
+  "St. Catharines|ON": {
+    "lat": 43.1579812,
+    "lon": -79.2441003,
+    "source": "nominatim",
+    "place": "St. Catharines, Niagara Region, Golden Horseshoe, Ontario, Canada"
+  },
+  "St. Louis|MO": {
+    "lat": 38.6254063,
+    "lon": -90.190009,
+    "source": "nominatim",
+    "place": "Saint Louis, Missouri, United States"
+  },
+  "Sudbury|ON": {
+    "lat": 46.49272,
+    "lon": -80.991211,
+    "source": "nominatim",
+    "place": "Greater Sudbury, Sudbury District, Northeastern Ontario, Ontario, Canada"
+  },
+  "Sugar Notch|PA": {
+    "lat": 41.1970266,
+    "lon": -75.9282538,
+    "source": "nominatim",
+    "place": "Sugar Notch Borough, Luzerne County, Pennsylvania, United States"
+  },
+  "Thompson (Marianapolis College)|CT": {
+    "lat": 41.9587089,
+    "lon": -71.8625715,
+    "source": "nominatim",
+    "place": "Thompson, Northeastern Connecticut Planning Region, Connecticut, United States"
+  },
+  "Toronto|ON": {
+    "lat": 44.3188413,
+    "lon": -80.6480903,
+    "source": "nominatim",
+    "place": "TD, 5, Toronto Street North, Markdale, Grey Highlands, Grey County, Southwestern Ontario, Ontario, N0C 1H0, Canada"
+  },
+  "Union Pier|MI": {
+    "lat": 41.8280974,
+    "lon": -86.6925251,
+    "source": "nominatim",
+    "place": "Union Pier, New Buffalo Township, Berrien County, Michigan, 49129, United States"
+  },
+  "Utica|NY": {
+    "lat": 43.1009031,
+    "lon": -75.2326641,
+    "source": "nominatim",
+    "place": "City of Utica, Oneida County, New York, United States"
+  },
+  "Wanamie|PA": {
+    "lat": 41.1734158,
+    "lon": -76.0354803,
+    "source": "nominatim",
+    "place": "Wanamie, Newport Township, Luzerne County, Pennsylvania, 18611, United States"
+  },
   "Waterbury|CT": {
     "lat": 41.5539066,
     "lon": -73.0438067,
     "source": "nominatim",
     "place": "Waterbury, Naugatuck Valley Planning Region, Connecticut, United States"
+  },
+  "Waukegan|IL": {
+    "lat": 42.3602273,
+    "lon": -87.8318164,
+    "source": "nominatim",
+    "place": "Waukegan, Lake County, Illinois, United States"
+  },
+  "Westfield|MA": {
+    "lat": 42.1205411,
+    "lon": -72.7489158,
+    "source": "nominatim",
+    "place": "Westfield, Hampden County, Massachusetts, United States"
   },
   "Westville|IL": {
     "lat": 40.0422589,
@@ -400,5 +760,11 @@
     "lon": -71.8018877,
     "source": "nominatim",
     "place": "Worcester, Worcester County, Massachusetts, United States"
+  },
+  "Youngstown|OH": {
+    "lat": 41.1035786,
+    "lon": -80.6520161,
+    "source": "nominatim",
+    "place": "Youngstown, Mahoning County, Ohio, United States"
   }
 }
