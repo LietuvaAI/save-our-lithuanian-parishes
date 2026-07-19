@@ -280,11 +280,6 @@
       "value": "1897",
       "source": "draugas-jubilee-implied",
       "cite": "1947-10-11 p2 (50 metų)"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "128"
      }
     ],
     "closed": [
@@ -296,11 +291,6 @@
       "value": "1990",
       "source": "wolkovich",
       "cite": "Vol.3 p.106, p.107"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "128"
      }
     ]
    },
@@ -316,11 +306,6 @@
        "value": "1897",
        "source": "draugas-jubilee-implied",
        "cite": "1947-10-11 p2 (50 metų)"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "128"
       }
      ]
     },
@@ -335,11 +320,6 @@
        "value": "1990",
        "source": "wolkovich",
        "cite": "Vol.3 p.106, p.107"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "128"
       }
      ]
     }
@@ -469,11 +449,6 @@
       "value": "1990-06-30",
       "source": "wolkovich",
       "cite": "Vol.3 p.124, p.125, p.126, p.127, p.128, p.129, p.130, p.131"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.297-305"
      }
     ]
    },
@@ -513,11 +488,6 @@
        "value": "1990-06-30",
        "source": "wolkovich",
        "cite": "Vol.3 p.124, p.125, p.126, p.127, p.128, p.129, p.130, p.131"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "p.297-305"
       }
      ]
     }
@@ -2374,11 +2344,6 @@
      {
       "value": "2009",
       "source": "web-historical"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.344-347"
      }
     ]
    },
@@ -2416,11 +2381,6 @@
       {
        "value": "2009",
        "source": "web-historical"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "p.344-347"
       }
      ]
     }
@@ -2611,11 +2571,6 @@
       "source": "web-historical"
      },
      {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.334"
-     },
-     {
       "value": "1925",
       "source": "michelsonas-1961",
       "cite": "p.347"
@@ -2625,11 +2580,6 @@
      {
       "value": "2007",
       "source": "web-historical"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.334"
      }
     ]
    },
@@ -2646,28 +2596,9 @@
        "source": "web-historical"
       },
       {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "p.334"
-      },
-      {
        "value": "1925",
        "source": "michelsonas-1961",
        "cite": "p.347"
-      }
-     ]
-    },
-    {
-     "field": "closed",
-     "variants": [
-      {
-       "value": "2007",
-       "source": "web-historical"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "p.334"
       }
      ]
     }
@@ -3481,11 +3412,6 @@
      {
       "value": "2017",
       "source": "web-historical"
-     },
-     {
-      "value": "n/a",
-      "source": "michelsonas-1961",
-      "cite": "31"
      }
     ]
    },
@@ -3519,11 +3445,6 @@
       {
        "value": "2017",
        "source": "web-historical"
-      },
-      {
-       "value": "n/a",
-       "source": "michelsonas-1961",
-       "cite": "31"
       }
      ]
     }
@@ -3793,22 +3714,12 @@
       "value": "~1892",
       "source": "michelsonas-1961",
       "cite": "p.348-350"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "129, 128"
      }
     ],
     "closed": [
      {
       "value": "2023",
       "source": "draugas-2008-2026"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.348-350"
      }
     ]
    },
@@ -3831,25 +3742,6 @@
       },
       {
        "value": "~1892",
-       "source": "michelsonas-1961",
-       "cite": "p.348-350"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "129, 128"
-      }
-     ]
-    },
-    {
-     "field": "closed",
-     "variants": [
-      {
-       "value": "2023",
-       "source": "draugas-2008-2026"
-      },
-      {
-       "value": "None",
        "source": "michelsonas-1961",
        "cite": "p.348-350"
       }
@@ -4071,11 +3963,6 @@
      {
       "value": "2013",
       "source": "draugas-2008-2026"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.313-314"
      }
     ]
    },
@@ -4099,20 +3986,6 @@
       },
       {
        "value": "1923-24",
-       "source": "michelsonas-1961",
-       "cite": "p.313-314"
-      }
-     ]
-    },
-    {
-     "field": "closed",
-     "variants": [
-      {
-       "value": "2013",
-       "source": "draugas-2008-2026"
-      },
-      {
-       "value": "None",
        "source": "michelsonas-1961",
        "cite": "p.313-314"
       }
@@ -4254,11 +4127,6 @@
       "value": "1995-05-21",
       "source": "wolkovich",
       "cite": "Vol.3 p.90, p.91, p.92"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.314"
      }
     ]
    },
@@ -4293,11 +4161,6 @@
        "value": "1995-05-21",
        "source": "wolkovich",
        "cite": "Vol.3 p.90, p.91, p.92"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "p.314"
       }
      ]
     }
@@ -4585,11 +4448,6 @@
       "value": "school closed 1970",
       "source": "wolkovich",
       "cite": "Vol.3 p.51, p.52, p.53, p.54, p.55, p.56, p.57, p.58, p.59, p.60, p.61, p.62, p.63, p.64, p.65"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.310"
      }
     ]
    },
@@ -4624,11 +4482,6 @@
        "value": "school closed 1970",
        "source": "wolkovich",
        "cite": "Vol.3 p.51, p.52, p.53, p.54, p.55, p.56, p.57, p.58, p.59, p.60, p.61, p.62, p.63, p.64, p.65"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "p.310"
       }
      ]
     }
@@ -4889,22 +4742,12 @@
       "value": "1907",
       "source": "draugas-jubilee-implied",
       "cite": "2007-10-25 p5 (100 metų)"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.181"
      }
     ],
     "closed": [
      {
       "value": "2010",
       "source": "web-historical"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "128"
      }
     ]
    },
@@ -4920,25 +4763,6 @@
        "value": "1907",
        "source": "draugas-jubilee-implied",
        "cite": "2007-10-25 p5 (100 metų)"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "p.181"
-      }
-     ]
-    },
-    {
-     "field": "closed",
-     "variants": [
-      {
-       "value": "2010",
-       "source": "web-historical"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "128"
       }
      ]
     }
@@ -5043,22 +4867,12 @@
      {
       "value": "1909",
       "source": "web-historical"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "128"
      }
     ],
     "closed": [
      {
       "value": "2008",
       "source": "draugas-2008-2026"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "128"
      }
     ]
    },
@@ -5073,25 +4887,6 @@
       {
        "value": "1909",
        "source": "web-historical"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "128"
-      }
-     ]
-    },
-    {
-     "field": "closed",
-     "variants": [
-      {
-       "value": "2008",
-       "source": "draugas-2008-2026"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "128"
       }
      ]
     }
@@ -5456,22 +5251,12 @@
       "value": "1912",
       "source": "draugas-jubilee-implied",
       "cite": "1932-08-06 p2 (20 metų)"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.341-342"
      }
     ],
     "closed": [
      {
       "value": "1992",
       "source": "draugas-2008-2026"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.341-342"
      }
     ]
    },
@@ -5487,25 +5272,6 @@
        "value": "1912",
        "source": "draugas-jubilee-implied",
        "cite": "1932-08-06 p2 (20 metų)"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "p.341-342"
-      }
-     ]
-    },
-    {
-     "field": "closed",
-     "variants": [
-      {
-       "value": "1992",
-       "source": "draugas-2008-2026"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "p.341-342"
       }
      ]
     }
@@ -5624,11 +5390,6 @@
      {
       "value": "2009",
       "source": "draugas-2008-2026"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "131-133"
      }
     ]
    },
@@ -5647,20 +5408,6 @@
       },
       {
        "value": "1893",
-       "source": "michelsonas-1961",
-       "cite": "131-133"
-      }
-     ]
-    },
-    {
-     "field": "closed",
-     "variants": [
-      {
-       "value": "2009",
-       "source": "draugas-2008-2026"
-      },
-      {
-       "value": "None",
        "source": "michelsonas-1961",
        "cite": "131-133"
       }
@@ -6789,11 +6536,6 @@
      {
       "value": "2011",
       "source": "draugas-2008-2026"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.339"
      }
     ]
    },
@@ -6812,20 +6554,6 @@
       },
       {
        "value": "formed after sv. Antano parish's collapse (~1902)",
-       "source": "michelsonas-1961",
-       "cite": "p.339"
-      }
-     ]
-    },
-    {
-     "field": "closed",
-     "variants": [
-      {
-       "value": "2011",
-       "source": "draugas-2008-2026"
-      },
-      {
-       "value": "None",
        "source": "michelsonas-1961",
        "cite": "p.339"
       }
@@ -7068,11 +6796,6 @@
      {
       "value": "1921",
       "source": "draugas-registry-1909-2007"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.285-286, p.293-294"
      }
     ]
    },
@@ -7096,20 +6819,6 @@
       },
       {
        "value": "organized ~1903, land bought at 5th street",
-       "source": "michelsonas-1961",
-       "cite": "p.285-286, p.293-294"
-      }
-     ]
-    },
-    {
-     "field": "closed",
-     "variants": [
-      {
-       "value": "1921",
-       "source": "draugas-registry-1909-2007"
-      },
-      {
-       "value": "None",
        "source": "michelsonas-1961",
        "cite": "p.285-286, p.293-294"
       }
@@ -7877,13 +7586,7 @@
       "source": "web-historical"
      }
     ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.314"
-     }
-    ]
+    "closed": []
    },
    "conflicts": [
     {
@@ -8105,37 +7808,11 @@
      {
       "value": "1914",
       "source": "draugas-2008-2026"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.264"
      }
     ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.333-334"
-     }
-    ]
+    "closed": []
    },
-   "conflicts": [
-    {
-     "field": "founded",
-     "variants": [
-      {
-       "value": "1914",
-       "source": "draugas-2008-2026"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "p.264"
-      }
-     ]
-    }
-   ],
+   "conflicts": [],
    "related_sites": [],
    "events_refs": [
     {
@@ -8238,20 +7915,9 @@
      {
       "value": "1908",
       "source": "web-historical"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.333-334"
      }
     ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.333-334"
-     }
-    ]
+    "closed": []
    },
    "conflicts": [
     {
@@ -8269,11 +7935,6 @@
       {
        "value": "1908",
        "source": "web-historical"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "p.333-334"
       }
      ]
     }
@@ -8636,20 +8297,9 @@
       "value": "1902",
       "source": "draugas-jubilee-implied",
       "cite": "1992-12-17 p6 (90 metų)"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "139"
      }
     ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "139"
-     }
-    ]
+    "closed": []
    },
    "conflicts": [
     {
@@ -8663,11 +8313,6 @@
        "value": "1902",
        "source": "draugas-jubilee-implied",
        "cite": "1992-12-17 p6 (90 metų)"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "139"
       }
      ]
     }
@@ -9003,20 +8648,9 @@
       "value": "1946",
       "source": "draugas-jubilee-implied",
       "cite": "2006-01-06 p12 (60 metų)"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.326"
      }
     ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.326"
-     }
-    ]
+    "closed": []
    },
    "conflicts": [
     {
@@ -9030,11 +8664,6 @@
        "value": "1946",
        "source": "draugas-jubilee-implied",
        "cite": "2006-01-06 p12 (60 metų)"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "p.326"
       }
      ]
     }
@@ -9165,20 +8794,9 @@
       "value": "1903 (excavation began)",
       "source": "wolkovich",
       "cite": "Vol.3 p.98, p.99, p.100, p.101, p.102, p.103, p.104"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "128, 139"
      }
     ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "128, 139"
-     }
-    ]
+    "closed": []
    },
    "conflicts": [
     {
@@ -9202,11 +8820,6 @@
        "value": "1903 (excavation began)",
        "source": "wolkovich",
        "cite": "Vol.3 p.98, p.99, p.100, p.101, p.102, p.103, p.104"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "128, 139"
       }
      ]
     }
@@ -9594,13 +9207,7 @@
       "source": "web-historical"
      }
     ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "132-134"
-     }
-    ]
+    "closed": []
    },
    "conflicts": [
     {
@@ -9745,11 +9352,6 @@
      {
       "value": "2001",
       "source": "web-historical"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.324"
      }
     ]
    },
@@ -9792,11 +9394,6 @@
       {
        "value": "2001",
        "source": "web-historical"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "p.324"
       }
      ]
     }
@@ -10258,13 +9855,7 @@
       "source": "draugas-registry-1909-2007"
      }
     ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.423"
-     }
-    ]
+    "closed": []
    },
    "conflicts": [],
    "related_sites": [],
@@ -12116,20 +11707,9 @@
       "value": "1914",
       "source": "draugas-jubilee-implied",
       "cite": "1964-04-02 p4 (50 metų)"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "130"
      }
     ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "130"
-     }
-    ]
+    "closed": []
    },
    "conflicts": [
     {
@@ -12143,11 +11723,6 @@
        "value": "1914",
        "source": "draugas-jubilee-implied",
        "cite": "1964-04-02 p4 (50 metų)"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "130"
       }
      ]
     }
@@ -12412,41 +11987,15 @@
     }
    ],
    "years": {
-    "founded": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.333-334"
-     }
-    ],
+    "founded": [],
     "closed": [
      {
       "value": "1981",
       "source": "draugas-registry-1909-2007"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.333-334"
      }
     ]
    },
-   "conflicts": [
-    {
-     "field": "closed",
-     "variants": [
-      {
-       "value": "1981",
-       "source": "draugas-registry-1909-2007"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "p.333-334"
-      }
-     ]
-    }
-   ],
+   "conflicts": [],
    "related_sites": [],
    "events_refs": [
     {
@@ -14240,11 +13789,6 @@
       "value": "1910",
       "source": "draugas-jubilee-implied",
       "cite": "1935-05-22 p3 (25 metų)"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "127"
      }
     ],
     "closed": [
@@ -14252,11 +13796,6 @@
       "value": "~1949 (post-WWII, transferred to Black congregation by bishop's order)",
       "source": "michelsonas-1961",
       "cite": "p.313"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "127"
      }
     ]
    },
@@ -14272,26 +13811,6 @@
        "value": "1910",
        "source": "draugas-jubilee-implied",
        "cite": "1935-05-22 p3 (25 metų)"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "127"
-      }
-     ]
-    },
-    {
-     "field": "closed",
-     "variants": [
-      {
-       "value": "~1949 (post-WWII, transferred to Black congregation by bishop's order)",
-       "source": "michelsonas-1961",
-       "cite": "p.313"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "127"
       }
      ]
     }
@@ -15171,13 +14690,7 @@
       "cite": "p.~279, p.281"
      }
     ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.~279, p.281"
-     }
-    ]
+    "closed": []
    },
    "conflicts": [
     {
@@ -15664,37 +15177,11 @@
      {
       "value": "1929",
       "source": "draugas-registry-1909-2007"
-     },
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.427"
      }
     ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.427"
-     }
-    ]
+    "closed": []
    },
-   "conflicts": [
-    {
-     "field": "founded",
-     "variants": [
-      {
-       "value": "1929",
-       "source": "draugas-registry-1909-2007"
-      },
-      {
-       "value": "None",
-       "source": "michelsonas-1961",
-       "cite": "p.427"
-      }
-     ]
-    }
-   ],
+   "conflicts": [],
    "related_sites": [],
    "events_refs": [
     {
@@ -18071,20 +17558,8 @@
     }
    ],
    "years": {
-    "founded": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.334"
-     }
-    ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.334"
-     }
-    ]
+    "founded": [],
+    "closed": []
    },
    "conflicts": [],
    "related_sites": [],
@@ -18128,20 +17603,8 @@
     }
    ],
    "years": {
-    "founded": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.340"
-     }
-    ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.340"
-     }
-    ]
+    "founded": [],
+    "closed": []
    },
    "conflicts": [],
    "related_sites": [],
@@ -18185,20 +17648,8 @@
     }
    ],
    "years": {
-    "founded": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.341-342"
-     }
-    ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.341-342"
-     }
-    ]
+    "founded": [],
+    "closed": []
    },
    "conflicts": [],
    "related_sites": [],
@@ -18242,20 +17693,8 @@
     }
    ],
    "years": {
-    "founded": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.341-342"
-     }
-    ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "p.341-342"
-     }
-    ]
+    "founded": [],
+    "closed": []
    },
    "conflicts": [],
    "related_sites": [],
@@ -18363,13 +17802,7 @@
       "cite": "120, 162"
      }
     ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "120, 162"
-     }
-    ]
+    "closed": []
    },
    "conflicts": [],
    "related_sites": [],
@@ -18421,13 +17854,7 @@
       "cite": "132"
      }
     ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "132"
-     }
-    ]
+    "closed": []
    },
    "conflicts": [],
    "related_sites": [],
@@ -18479,13 +17906,7 @@
       "cite": "132"
      }
     ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "132"
-     }
-    ]
+    "closed": []
    },
    "conflicts": [],
    "related_sites": [],
@@ -18537,13 +17958,7 @@
       "cite": "129"
      }
     ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "129"
-     }
-    ]
+    "closed": []
    },
    "conflicts": [],
    "related_sites": [],
@@ -18726,13 +18141,7 @@
       "cite": "130"
      }
     ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "130"
-     }
-    ]
+    "closed": []
    },
    "conflicts": [],
    "related_sites": [],
@@ -18777,20 +18186,8 @@
     }
    ],
    "years": {
-    "founded": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "130"
-     }
-    ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "130"
-     }
-    ]
+    "founded": [],
+    "closed": []
    },
    "conflicts": [],
    "related_sites": [],
@@ -18834,20 +18231,8 @@
     }
    ],
    "years": {
-    "founded": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "128"
-     }
-    ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "128"
-     }
-    ]
+    "founded": [],
+    "closed": []
    },
    "conflicts": [],
    "related_sites": [],
@@ -18891,20 +18276,8 @@
     }
    ],
    "years": {
-    "founded": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "128"
-     }
-    ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "128"
-     }
-    ]
+    "founded": [],
+    "closed": []
    },
    "conflicts": [],
    "related_sites": [],
@@ -18948,20 +18321,8 @@
     }
    ],
    "years": {
-    "founded": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "128"
-     }
-    ],
-    "closed": [
-     {
-      "value": "None",
-      "source": "michelsonas-1961",
-      "cite": "128"
-     }
-    ]
+    "founded": [],
+    "closed": []
    },
    "conflicts": [],
    "related_sites": [],

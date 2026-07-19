@@ -215,12 +215,20 @@ export default function ParishMap() {
               const rr = active ? markR * 1.1 : markR * 0.72;
               const common = {
                 tabIndex: 0,
-                "aria-label": `${c.name}, ${c.city} ${c.state} — in the research record (${c.depth}).`,
+                "aria-label": `${c.name}, ${c.city} ${c.state} — in the research record (${c.depth}).${c.kind === "parish" ? " Open its research profile." : ""}`,
                 onMouseEnter: () => setHoveredReg(c),
                 onMouseLeave: () => setHoveredReg(null),
                 onFocus: () => setHoveredReg(c),
                 onBlur: () => setHoveredReg(null),
-                className: "focus:outline-none",
+                ...(c.kind === "parish"
+                  ? {
+                      onClick: () => router.push(`/registry/${c.slug}`),
+                      onKeyDown: (e: React.KeyboardEvent) => {
+                        if (e.key === "Enter") router.push(`/registry/${c.slug}`);
+                      },
+                      className: "focus:outline-none cursor-pointer",
+                    }
+                  : { className: "focus:outline-none" }),
               };
               if (c.kind === "congregation") {
                 const s = rr * 1.5;
@@ -411,8 +419,9 @@ export default function ParishMap() {
                   {hoveredReg.hasConflicts ? " · source variants recorded" : ""}
                 </div>
                 <div className="text-muted mt-1 italic text-xs">
-                  Part of the record — a profile page arrives as this
-                  parish&rsquo;s documentation deepens.
+                  {hoveredReg.kind === "parish"
+                    ? "Click to open its research profile."
+                    : "Part of the record — shown as historical witness."}
                 </div>
               </div>
             );
