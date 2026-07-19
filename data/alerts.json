@@ -1,0 +1,124 @@
+{
+ "corpusScope": "parish-watch-alerts",
+ "snapshot": "2026-07-19",
+ "provenance": "Snapshot of culturenet-brain docs/research/parish-watch/alerts.jsonl (Parish Watch baseline sweep, PR #388). Refreshed by PR on the sweep cadence: red weekly, amber biweekly, full sweep monthly. Wording here is the site's own, written under the editorial guardrails; every item cites its sources.",
+ "alerts": [
+  {
+   "id": "girardville-2026-01",
+   "level": "red",
+   "entity": "St. Vincent de Paul",
+   "place": "Girardville, Pennsylvania",
+   "diocese": "Diocese of Allentown",
+   "dateObserved": "2026-07-19",
+   "eventDate": "2026-01-05",
+   "whatChanged": "Closed January 5, 2026 — the final Mass was celebrated, the bells tolled, and the lights went out after more than a century. The diocese cited roughly $250,000 in needed exterior repairs and about $20,000 in annual operating costs; regular Masses had already ended in 2021 after the 2015 merger into St. Charles Borromeo Parish (Ashland).",
+   "parishLink": "/parishes/sv-vincento-de-paul-girardville-pa",
+   "sources": [
+    {"title": "Lights go out on longtime Girardville church", "publisher": "The Shenandoah Sentinel", "url": "https://shensentinel.com/news/lights-go-out-on-longtime-girardville-church/"},
+    {"title": "Saint Vincent de Paul Church in Girardville set to close", "publisher": "SkookNews", "url": "https://www.skooknews.com/2025/12/saint-vincent-de-paul-church-in.html"}
+   ]
+  },
+  {
+   "id": "maspeth-2025-09",
+   "level": "red",
+   "entity": "Transfiguration (Kristaus Atsimainymo)",
+   "place": "Maspeth, Queens, New York",
+   "diocese": "Diocese of Brooklyn",
+   "dateObserved": "2026-07-19",
+   "eventDate": "2025-09-12",
+   "whatChanged": "Open on a reduced schedule while its long-term future remains undecided. In September 2025 the Diocese of Brooklyn confirmed the church is not closing: weekday Masses moved to St. Stanislaus Kostka, weekend Masses continue at Transfiguration. A petition of more than 700 signatures, a Knights of Lithuania landmark-designation push, and an October 2025 visit from Lithuanian President Gitanas Nausėda have kept the case in the spotlight. Its fate is canonically unresolved.",
+   "parishLink": "/parishes/kristaus-atsimainymo-maspeth-ny",
+   "sources": [
+    {"title": "Transfiguration Church not closing, diocese says", "publisher": "QNS", "url": "https://qns.com/2025/09/transfiguration-church-not-closing/"},
+    {"title": "Lithuanian Catholic community rallies for Transfiguration", "publisher": "QNS", "url": "https://qns.com/2025/07/lithuanian-catholic-church-transfiguration/"},
+    {"title": "President Nausėda visits Transfiguration", "publisher": "QNS", "url": "https://qns.com/2025/09/gitanas-nauseda-transfiguration-church/"}
+   ]
+  },
+  {
+   "id": "freeland-2026-07",
+   "level": "red",
+   "entity": "Our Lady of the Immaculate Conception",
+   "place": "Freeland, Pennsylvania",
+   "diocese": "Diocese of Scranton",
+   "dateObserved": "2026-07-19",
+   "eventDate": "2026-07-01",
+   "whatChanged": "Consolidated into St. Patrick Parish (White Haven) effective July 1, 2026, under the Diocese of Scranton's Vision 2030 pastoral plan.",
+   "parishLink": "/registry/parish-freeland-pa",
+   "caveat": "The research record holds a single-source entry for an early mixed Lithuanian–Polish–Slovak–Rusyn parish in Freeland. Whether Our Lady of the Immaculate Conception is that parish's continuation is not yet confirmed — the identity check is an open research task.",
+   "sources": [
+    {"title": "Three new parish consolidations to take effect July 1", "publisher": "Diocese of Scranton", "url": "https://www.dioceseofscranton.org/three-new-parish-consolidations-to-take-effect-july-1/"}
+   ]
+  },
+  {
+   "id": "bayonne-2025-08",
+   "level": "amber",
+   "entity": "St. Michael (Šv. Mykolo)",
+   "place": "Bayonne, New Jersey",
+   "diocese": "Archdiocese of Newark",
+   "dateObserved": "2026-07-19",
+   "eventDate": "2025-08-12",
+   "whatChanged": "The vacant former Lithuanian church at 15–21 East 23rd Street went before Bayonne's Planning Board in August 2025 with a proposal to demolish it for a six-story, 114-unit residential building; the city's historical committee raised no objection.",
+   "parishLink": "/parishes/sv-mykolo-bayonne-nj",
+   "sources": [
+    {"title": "Development plans for 15–21 East 23rd Street", "publisher": "Jersey Digs", "url": "https://jerseydigs.com/15-21-east-23rd-street-bayonne-development/"}
+   ]
+  },
+  {
+   "id": "scranton-st-michael-2026-05",
+   "level": "amber",
+   "entity": "St. Michael (Šv. Mykolo)",
+   "place": "Scranton, Pennsylvania",
+   "diocese": "Diocese of Scranton",
+   "dateObserved": "2026-07-19",
+   "eventDate": "2026-05",
+   "whatChanged": "The parish relocated to St. Lucy Church in September 2025 and continues there; its original 1942 building at 1703 Jackson Street has been on the commercial market since spring 2026, listed at $350,000.",
+   "parishLink": "/parishes/sv-mykolo-scranton-pa",
+   "sources": [
+    {"title": "Saint Michael Parish finds new home at historic Saint Lucy Church", "publisher": "Diocese of Scranton", "url": "https://www.dioceseofscranton.org/a-new-beginning-saint-michael-parish-finds-new-home-at-historic-saint-lucy-church/"},
+    {"title": "1703 Jackson Street commercial listing", "publisher": "Lewith & Freeman Real Estate", "url": "https://www.lewith-freeman.com/p/1703-Jackson-Street-Scranton-PA-18504/dmgid_186324175"}
+   ]
+  },
+  {
+   "id": "elizabeth-2026-07",
+   "level": "amber",
+   "entity": "Sts. Peter and Paul (Šv. Petro ir Povilo)",
+   "place": "Elizabeth, New Jersey",
+   "diocese": "Archdiocese of Newark",
+   "dateObserved": "2026-07-19",
+   "eventDate": null,
+   "whatChanged": "Current archdiocesan planning documents (Planning Area K) list it within the combined \"St. Adalbert and Sts. Peter and Paul\" parish, with one Mass remaining at the Lithuanian church. No decree on its future has surfaced; its fate is canonically unresolved.",
+   "parishLink": "/parishes/sv-petro-ir-povilo-elizabeth-nj",
+   "sources": [
+    {"title": "Planning Area K — Eastern Union", "publisher": "Archdiocese of Newark", "url": "https://rcan.org/planning-area-k-eastern-union/"}
+   ]
+  },
+  {
+   "id": "hartford-2026-04",
+   "level": "amber",
+   "entity": "Holy Trinity (Švč. Trejybės)",
+   "place": "Hartford, Connecticut",
+   "diocese": "Archdiocese of Hartford",
+   "dateObserved": "2026-07-19",
+   "eventDate": "2026-04",
+   "whatChanged": "Parishioners were formally notified of a proposed partial closure — part of an archdiocese-wide restructuring of 212 parishes toward 127 — with parishioners pushing for a Lithuanian cultural center in the building.",
+   "parishLink": "/parishes/svc-trejybes-hartford-ct",
+   "sources": [
+    {"title": "Hartford parishioners met with notice of partial closure for Holy Trinity", "publisher": "WTNH", "url": "https://www.wtnh.com/news/connecticut/hartford/hartford-parishioners-met-with-notice-of-partial-closure-for-holy-trinity-catholic-church/"}
+   ]
+  },
+  {
+   "id": "beverly-shores-2026-03",
+   "level": "amber",
+   "entity": "St. Ann of the Dunes (Šv. Onos)",
+   "place": "Beverly Shores, Indiana",
+   "diocese": "Diocese of Gary",
+   "dateObserved": "2026-07-19",
+   "eventDate": "2026-03",
+   "whatChanged": "Named in the Diocese of Gary's Porter Planning Area, which is consolidating five parishes down to two worship sites under the diocese's March 2026 pastoral-planning announcement.",
+   "parishLink": "/registry/st-ann-beverly-shores-in",
+   "sources": [
+    {"title": "Pastoral planning", "publisher": "Diocese of Gary", "url": "https://dcgary.org/planning"}
+   ]
+  }
+ ]
+}

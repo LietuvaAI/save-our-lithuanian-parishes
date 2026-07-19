@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ParishMap from "@/components/ParishMap";
 import { figures } from "@/lib/parishes";
+import alertsData from "@/data/alerts.json";
 
 const STATS = [
   {
@@ -138,6 +139,29 @@ export default function Home() {
             · Why this moment matters →
           </Link>
         </p>
+        <ul className="mt-4 space-y-1.5 border-t border-rule pt-3 text-sm leading-relaxed max-w-3xl">
+          {(alertsData.alerts as { id: string; level: string; entity: string; place: string; parishLink: string; whatChanged: string }[])
+            .filter((a) => a.level === "red")
+            .map((a) => (
+              <li key={a.id}>
+                <span
+                  className="mr-1.5 inline-block h-2 w-2 rounded-full bg-accent"
+                  aria-hidden
+                />
+                <Link href={a.parishLink} className="font-medium hover:underline">
+                  {a.entity}
+                </Link>
+                <span className="text-muted">
+                  {" "}&mdash; {a.place}: {a.whatChanged.split(". ")[0].replace(/\.$/, "")}.
+                </span>
+              </li>
+            ))}
+          <li className="pt-1">
+            <Link href="/now" className="underline hover:text-accent text-sm">
+              All current alerts →
+            </Link>
+          </li>
+        </ul>
       </section>
 
       <section className="mt-12">
