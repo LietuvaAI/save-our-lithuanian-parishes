@@ -162,21 +162,30 @@ export default function LegalPage() {
       <section className="mt-8">
         <h2 className="font-serif text-2xl font-semibold">Using our data</h2>
         <p className="mt-2 leading-relaxed">
-          Our dataset and the site&rsquo;s original text are formally
+          Verification is always free — anyone may read, check, and cite
+          this record. Our dataset and the site&rsquo;s original text are
           licensed under{" "}
           <a
-            href="https://creativecommons.org/licenses/by/4.0/"
+            href="https://creativecommons.org/licenses/by-nc/4.0/"
             className="underline hover:text-accent"
           >
-            Creative Commons Attribution 4.0 (CC BY 4.0)
+            Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0)
           </a>
-          : journalists, researchers, parish committees, and anyone else may
-          reuse them <strong>with attribution</strong> to
-          SaveOurLithuanianParishes.org (and, for facts, to the underlying
-          source we cite). The site&rsquo;s code is MIT-licensed. Two
-          carve-outs: bylined essays remain © their authors, and facts
-          extracted from in-copyright works never carry our license — see
-          the{" "}
+          : journalists, researchers, parish committees, educators, and
+          community groups may reuse them <strong>with attribution</strong>{" "}
+          to SaveOurLithuanianParishes.org (and, for facts, to the
+          underlying source we cite). <strong>Commercial reuse requires
+          written permission</strong> —{" "}
+          <a
+            href="mailto:info@saveourlithuanianparishes.org"
+            className="underline hover:text-accent"
+          >
+            write to us
+          </a>
+          . AI-model training on this record is not authorized. The
+          site&rsquo;s code is MIT-licensed. Two carve-outs: bylined essays
+          remain © their authors, and facts extracted from in-copyright
+          works never carry our license — see the{" "}
           <a
             href="https://github.com/LietuvaAI/save-our-lithuanian-parishes/blob/main/LICENSE.md"
             className="underline hover:text-accent"
