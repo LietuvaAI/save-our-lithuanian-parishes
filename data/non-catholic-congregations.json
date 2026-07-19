@@ -1,0 +1,340 @@
+{
+ "note": "Non-Catholic Lithuanian Christian congregations — DISPLAYABLE on the site per Vilija 2026-07-18, with a DISTINCT icon and historical-witness framing (never advocacy). Jewish congregations/orgs and all other site types remain research-lane-held.",
+ "congregations": [
+  {
+   "slug": "teviske-lutheran",
+   "name": "Lietuvių Evangelikų Liuteronų Tėviškės Parapija",
+   "name_variants": [
+    "Lietuvių Evangelikų Liuteronų Tėviškės Parapija",
+    "Tėviškė Parish, Chicago",
+    "Tėviškės lietuvių liuteronų bažnyčia Čikagoje"
+   ],
+   "city": "Darien",
+   "city_history": [
+    "Darien",
+    "Chicago (later Oak Lawn from 1974)"
+   ],
+   "state": "IL",
+   "congregation_class": "non_catholic_christian",
+   "geo": {
+    "lat": 41.75615687675327,
+    "lon": -87.9745867848626,
+    "precision": "exact",
+    "source": "truelithuania"
+   },
+   "sources": [
+    {
+     "axis": "draugas-registry-1909-2007",
+     "parish_key": "teviske-lithuanian-lutheran-darien-il",
+     "note": "Draugas-attested"
+    },
+    {
+     "axis": "wolkovich",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "pages": "p.232; p.233; p.234",
+     "lccn": "91-76766",
+     "note": "documented by Wolkovich; outside Catholic-parish registry scope"
+    },
+    {
+     "axis": "truelithuania",
+     "tlId": 6479,
+     "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+     "note": "field-survey"
+    }
+   ]
+  },
+  {
+   "slug": "jerusalem-lutheran-collinsville",
+   "name": "Lithuanian Lutheran Church",
+   "name_variants": [
+    "Lithuanian Lutheran Church",
+    "Jeruzalės liuteronų",
+    "Jaruzlė Lithuanian Lutheran Parish, Collinsville",
+    "Kolinsvilio Jeruzalės liuteronų lietuvių bažnyčia"
+   ],
+   "city": "Collinsville",
+   "city_history": [
+    "Collinsville"
+   ],
+   "state": "IL",
+   "congregation_class": "non_catholic_christian",
+   "geo": {
+    "lat": 38.664359,
+    "lon": -89.998808,
+    "precision": "exact",
+    "source": "truelithuania"
+   },
+   "sources": [
+    {
+     "axis": "draugas-registry-1909-2007",
+     "parish_key": "lithuanian-church-collinsville-il",
+     "note": "Draugas-attested"
+    },
+    {
+     "axis": "draugas-registry-1909-2007",
+     "parish_key": "jerusalem-lutheran-collinsville-il",
+     "note": "Draugas-attested"
+    },
+    {
+     "axis": "wolkovich",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "pages": "p.230; p.236",
+     "lccn": "91-76766",
+     "note": "documented by Wolkovich; outside Catholic-parish registry scope"
+    },
+    {
+     "axis": "truelithuania",
+     "tlId": 6329,
+     "sourceUrl": "http://global.truelithuania.com/lt/st-louis-missouri-illinois-1719/",
+     "note": "field-survey"
+    }
+   ]
+  },
+  {
+   "slug": "stpaul-lutheran-naugatuck",
+   "name": "Šv. Pauliaus liuteronų",
+   "name_variants": [
+    "Šv. Pauliaus liuteronų",
+    "Naugatuko Šv. Pauliaus lietuvių liuteronų bažnyčia"
+   ],
+   "city": "Naugatuck",
+   "city_history": [
+    "Naugatuck"
+   ],
+   "state": "CT",
+   "congregation_class": "non_catholic_christian",
+   "geo": {
+    "lat": 41.494191242318806,
+    "lon": -73.06524426224492,
+    "precision": "exact",
+    "source": "truelithuania"
+   },
+   "sources": [
+    {
+     "axis": "draugas-registry-1909-2007",
+     "parish_key": "st-paul-lithuanian-lutheran-naugatuck-ct",
+     "note": "Draugas-attested"
+    },
+    {
+     "axis": "truelithuania",
+     "tlId": 38600,
+     "sourceUrl": "http://global.truelithuania.com/lt/connecticut-789/",
+     "note": "field-survey"
+    }
+   ]
+  },
+  {
+   "slug": "zion-lutheran-chicago",
+   "name": "Ziono liuteronų",
+   "name_variants": [
+    "Ziono liuteronų",
+    "Zion Lutheran Church, Chicago",
+    "Čikagos Siono lietuvių liuteronų bažnyčia"
+   ],
+   "city": "Oak Lawn",
+   "city_history": [
+    "Oak Lawn",
+    "Chicago (Bridgeport, later Oak Lawn from 1974)"
+   ],
+   "state": "IL",
+   "congregation_class": "non_catholic_christian",
+   "geo": {
+    "lat": 41.728546,
+    "lon": -87.765817,
+    "precision": "exact",
+    "source": "truelithuania"
+   },
+   "sources": [
+    {
+     "axis": "draugas-registry-1909-2007",
+     "parish_key": "zion-lithuanian-lutheran-oak-lawn-il",
+     "note": "Draugas-attested"
+    },
+    {
+     "axis": "wolkovich",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "pages": "p.231; p.232; p.233; p.237",
+     "lccn": "91-76766",
+     "note": "documented by Wolkovich; outside Catholic-parish registry scope"
+    },
+    {
+     "axis": "truelithuania",
+     "tlId": 6457,
+     "sourceUrl": "http://global.truelithuania.com/lt/chicago-illinois-45/",
+     "note": "field-survey"
+    }
+   ]
+  },
+  {
+   "slug": "bukauskas-independent-chicago",
+   "name": "Bukauskas independent church",
+   "name_variants": [
+    "Bukauskas independent church"
+   ],
+   "city": "Chicago (2301 West 22nd Place)",
+   "city_history": [
+    "Chicago (2301 West 22nd Place)"
+   ],
+   "state": "IL",
+   "congregation_class": "non_catholic_christian",
+   "geo": null,
+   "sources": [
+    {
+     "axis": "wolkovich",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "pages": "p.224; p.225",
+     "lccn": "91-76766",
+     "note": "documented by Wolkovich; outside Catholic-parish registry scope"
+    }
+   ]
+  },
+  {
+   "slug": "jonistai-chicago",
+   "name": "St. John Missionary Fathers (Jonistai)",
+   "name_variants": [
+    "St. John Missionary Fathers (Jonistai)"
+   ],
+   "city": "Chicago (seminary at 3125 S. Parnell Ave.)",
+   "city_history": [
+    "Chicago (seminary at 3125 S. Parnell Ave.)"
+   ],
+   "state": "IL",
+   "congregation_class": "non_catholic_christian",
+   "geo": null,
+   "sources": [
+    {
+     "axis": "wolkovich",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "pages": "p.224; p.225; p.235",
+     "lccn": "91-76766",
+     "note": "documented by Wolkovich; outside Catholic-parish registry scope"
+    }
+   ]
+  },
+  {
+   "slug": "springfield-independent",
+   "name": "Springfield independent church",
+   "name_variants": [
+    "Springfield independent church"
+   ],
+   "city": "Springfield",
+   "city_history": [
+    "Springfield"
+   ],
+   "state": "IL",
+   "congregation_class": "non_catholic_christian",
+   "geo": null,
+   "sources": [
+    {
+     "axis": "wolkovich",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "pages": "p.225",
+     "lccn": "91-76766",
+     "note": "documented by Wolkovich; outside Catholic-parish registry scope"
+    }
+   ]
+  },
+  {
+   "slug": "protestant-parish-nyc",
+   "name": "Lithuanian Protestant Parish, New York City",
+   "name_variants": [
+    "Lithuanian Protestant Parish, New York City"
+   ],
+   "city": "New York City",
+   "city_history": [
+    "New York City"
+   ],
+   "state": "NY",
+   "congregation_class": "non_catholic_christian",
+   "geo": null,
+   "sources": [
+    {
+     "axis": "wolkovich",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "pages": "p.231",
+     "lccn": "91-76766",
+     "note": "documented by Wolkovich; outside Catholic-parish registry scope"
+    }
+   ]
+  },
+  {
+   "slug": "first-lutheran-boston",
+   "name": "First Lutheran Church, Boston (Lithuanian congregation)",
+   "name_variants": [
+    "First Lutheran Church, Boston (Lithuanian congregation)"
+   ],
+   "city": "Boston",
+   "city_history": [
+    "Boston"
+   ],
+   "state": "MA",
+   "congregation_class": "non_catholic_christian",
+   "geo": null,
+   "sources": [
+    {
+     "axis": "wolkovich",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "pages": "p.231",
+     "lccn": "91-76766",
+     "note": "documented by Wolkovich; outside Catholic-parish registry scope"
+    }
+   ]
+  },
+  {
+   "slug": "evangelical-reformed-chicago",
+   "name": "Chicago Evangelical Reformed Church",
+   "name_variants": [
+    "Chicago Evangelical Reformed Church"
+   ],
+   "city": "Chicago",
+   "city_history": [
+    "Chicago"
+   ],
+   "state": "IL",
+   "congregation_class": "non_catholic_christian",
+   "geo": null,
+   "sources": [
+    {
+     "axis": "wolkovich",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "pages": "p.233; p.235; p.237",
+     "lccn": "91-76766",
+     "note": "documented by Wolkovich; outside Catholic-parish registry scope"
+    }
+   ]
+  },
+  {
+   "slug": "raymond-baptist-chicago",
+   "name": "Raymond Baptist Church",
+   "name_variants": [
+    "Raymond Baptist Church"
+   ],
+   "city": "Chicago",
+   "city_history": [
+    "Chicago"
+   ],
+   "state": "IL",
+   "congregation_class": "non_catholic_christian",
+   "geo": null,
+   "sources": [
+    {
+     "axis": "wolkovich",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "pages": "p.237",
+     "lccn": "91-76766",
+     "note": "documented by Wolkovich; outside Catholic-parish registry scope"
+    }
+   ]
+  }
+ ]
+}

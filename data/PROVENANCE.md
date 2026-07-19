@@ -15,6 +15,24 @@
 - Committed like the other generated data files; re-run the script to refresh. Verified/gated entries are kept on re-runs, unresolved dates are re-probed.
 - Parish profile pages link citations to the verified direct PDF when one exists, otherwise to the public per-year archive page (`draugasCitationUrl` in `lib/parishes.ts`). This file affects **links only** — no figures are derived from it.
 
+## registry-unified.json
+
+- **Canonical source:** `LietuvaAI/culturenet-brain` → `docs/research/parish-registry-unified/registry-unified.json` (corpusScope `parish-registry-unified`)
+- **Snapshot taken:** 2026-07-18 from `main` (PR #369 + rounds through commit `519bb29`); byte-verified against origin/main at snapshot time.
+- **What it is:** 188 parishes consolidated across five research axes (canonical 83 · Draugas 1909–2007 registry · Wolkovich Vol 3 · web-historical · truelithuania field survey), one record per parish with per-source provenance, carried conflicts, `record_depth` (case-filed / multi-source / single-source), and `congregation_class` (roman_catholic / national_catholic_pncc / independent_catholic). The 83 case-filed records carry the locked fields verbatim in a `locked` block.
+- **Figures discipline:** this file is **presentation-layer only** — no headline figure derives from it. The `draugas-2008-2026` figures continue to derive exclusively from `parishes.csv`. The map's parish count is its own clearly-labeled statistic and is never conflated with the locked figures.
+- **Held upstream (NOT snapshotted, per Vilija 2026-07-18):** `sites.json` (cemeteries, institutions, Jewish congregations/orgs, monasteries, chapels, shrines) and `leads.json`.
+
+## non-catholic-congregations.json
+
+- **Canonical source:** same culturenet-brain directory; snapshot 2026-07-18, byte-verified.
+- 11 non-Catholic Lithuanian Christian congregations (Lutheran/Reformed/Baptist/independent), deduped across axes with city-migration history. **Display rule (Vilija 2026-07-18): rendered with a DISTINCT icon and historical-witness framing** — never advocacy (guardrail 1).
+
+## reversal-database.json
+
+- **Canonical source:** `culturenet-brain` → `docs/research/parish-preservation-deep-research/phase-2-reversal-database.json` (PR #353); snapshot 2026-07-18, byte-verified.
+- 26 verified US parish-closure reversals across three diocesan waves + 2 excluded non-reversals + 38 uninvestigated leads. **Render its honesty labels verbatim** — `verified_unanimous` vs `case_filed_pending` are load-bearing; Minersville carries a reconciliation flag; Cleveland St. Casimir is Polish. Powers `/reversals` only; no figures derive from it.
+
 ## Update protocol
 
 Never hand-edit `data/parishes.csv` in this repo. If the upstream canonical CSV changes (e.g., Maspeth resolves), re-snapshot it here in a PR, update this file's snapshot line, and update the expected figures in `scripts/build-data.mjs` **only** to match a new upstream locked-figures revision.
