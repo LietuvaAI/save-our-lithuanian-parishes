@@ -36,9 +36,10 @@ export default function RecordPage() {
         <Link href="/" className="underline hover:text-foreground">
           home-page map
         </Link>
-        ), each being verified toward this ledger&rsquo;s standard. For the
-        national precedent record — closures reversed on the Church&rsquo;s
-        own procedures — see{" "}
+        ), each being verified toward this ledger&rsquo;s standard — the
+        aim is a deep-researched case file behind every parish in the
+        record. For the national precedent record — closures reversed on
+        the Church&rsquo;s own procedures — see{" "}
         <Link href="/reversals" className="underline hover:text-foreground">
           Reversals
         </Link>

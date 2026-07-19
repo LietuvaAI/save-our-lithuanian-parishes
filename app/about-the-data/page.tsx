@@ -137,6 +137,13 @@ export default function AboutTheDataPage() {
           dots the wider research record, squares the non-Catholic
           congregations shown as historical witness.
         </p>
+        <p className="mt-2 leading-relaxed">
+          The depth labels are a ladder, not a caste. The commitment is
+          this: <strong>every parish in this record will, in time, carry
+          its own researched case file</strong> — the deep dives proceed
+          parish by parish, and each one moves its parish up the ladder
+          until the whole record stands at the standard of the 83.
+        </p>
       </section>
 
       <section className="mt-10">

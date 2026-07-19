@@ -102,15 +102,41 @@ export default function RootLayout({
               >
                 Check our numbers
               </a>
-              . Follow{" "}
+              . Dispatches, alerts, and campaigns:{" "}
               <a
                 href="https://blog.saveourlithuanianparishes.org"
                 className="underline hover:text-foreground"
               >
-                the blog
+                The Hearth (Židinys)
               </a>
               .
             </p>
+            <nav className="flex flex-wrap gap-x-4 gap-y-1 pt-1">
+              <Link href="/record" className="hover:text-foreground">
+                The Record
+              </Link>
+              <Link href="/reversals" className="hover:text-foreground">
+                Reversals
+              </Link>
+              <Link href="/start-here" className="hover:text-foreground">
+                Start Here
+              </Link>
+              <Link href="/parishes" className="hover:text-foreground">
+                Parish Profiles
+              </Link>
+              <Link href="/about-the-data" className="hover:text-foreground">
+                About the data
+              </Link>
+              <Link href="/about" className="hover:text-foreground">
+                About
+              </Link>
+              <Link
+                href="/report"
+                className="font-medium hover:text-foreground"
+              >
+                Report from your parish
+              </Link>
+            </nav>
             <p className="pt-3 mt-1 border-t border-rule">
               © 2026 Save Our Lithuanian Parishes · an initiative powered by
               Lietuva.AI · a documented record, not legal or canonical advice
