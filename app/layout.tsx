@@ -107,7 +107,7 @@ export default function RootLayout({
                 href="https://blog.saveourlithuanianparishes.org"
                 className="underline hover:text-foreground"
               >
-                The Hearth (Židinys)
+                Židinys (The Hearth)
               </a>
               .
             </p>
