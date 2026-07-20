@@ -1,0 +1,213 @@
+# SCOPE: full 209-parish extraction from the AOD FY24/25 parish workbooks (aod.filecamp.com per data/aod-workbook-links.csv); mined 2026-07-20 via filecamp api/shares -> api/serve (FC-Share header); own-row parse of the Mass Count & Capacity page and the Assets/Liabilities page of each workbook.
+# METHOD: savings_per_attendee = unrestricted ÷ attendance (October weekly); 200 of 209 report both; rank over those 200. Cross-check: Divine Providence #9 of 200, median $1,706 — matches the Where-We-Stand memo (May 2026) independently.
+# COVERAGE: attendance parsed for 200, balance-sheet for 204 of 209; unparsed rows carry empty cells — see issue #23.
+name,city,pa,attendance,masses,seats,pct,unrestricted,restricted,bills,loans,net_equity,savings_per_attendee,savings_per_attendee_rank,token
+Gesu Parish-Detroit-348_2026-PA1,,,,,,,,,,,,,,jZwDUTLDVrdntWe7
+Blessed Sacrament Cathedral,Detroit,1,243,1,850,29,443378,149393,567606,0,1827023,1825,90,ZRwM4yqotyDQ7n67
+Christ the King Parish,Detroit,1,,,,,276146,0,7142,0,317248,,,xVN6RjxFn1GZnHdT
+Corpus Christi Parish,Detroit,1,309,3,500,21,887757,0,6941,0,1540930,2873,48,kesnH60zCMLJaT2a
+Presentation_Our Lady of Victory Parish,Detroit,1,,,,,,,,,,,,tKNLR86gHPHQzUx3
+SS. Peter and Paul (Jesuit) Parish,Detroit,1,163,1,700,23,972614,0,8876,0,963075,5967,14,KzT645j5tFrIQJoM
+SS. Peter and Paul (Westside-Polish) Parish,Detroit,1,,,,,,,,,,,,OavRRrki0uFsiL0c
+St. Charles Lwanga Church,Detroit,1,,,,,,,,,,,,z1W0aQ2lsB6KN0xZ
+St. Mary of Redford Parish,Detroit,1,130,1,850,15,40437,0,94028,0,170186,311,188,xPdvE7vSuinQqAPg
+St. Moses the Black Parish,Detroit,1,154,1,300,51,838089,0,81096,2453919,-1690341,5442,18,FqijEfWPbKeskWUV
+St. Peter Claver Parish,Detroit,1,,,,,57345,0,-770,0,58114,,,vKPEWM5TzRCRv27I
+St. Scholastica Parish,Detroit,1,65,1,1400,5,505494,0,3624,0,597384,7777,8,TOH2wqdDAcxN40lm
+St. Suzanne - Our Lady Gate of Heaven Parish,Detroit,1,44,1,500,9,237987,0,7037,0,248075,5409,19,tob9u1490C4LYgWj
+Holy Cross (Hungarian) Parish,Detroit,2,283,3,450,21,777752,0,1302,0,771450,2748,53,oUaTCXap7dUJ6ptb
+Holy Redeemer Parish,Detroit,2,2128,4,1400,38,3899516,0,98373,576835,5753632,1832,88,SaSccznE72CMLjhb
+Most Holy Trinity Parish,Detroit,2,249,2,700,18,1248709,0,-32,0,1223777,5015,23,gV1u1VXdgJasBIkK
+Our Lady of Guadalupe Parish,Detroit,2,2043,4,1500,34,1155977,53636,11551,0,1147979,566,175,MRVsHMvCrQokFLMY
+St. Cunegunda Parish,Detroit,2,216,2,575,19,60307,0,26590,0,69102,279,189,lCXgqPWWilUCyWJ0
+St. Francis D'Assisi - St. Hedwig Parish,Detroit,2,1160,3,2800,14,2167906,81592,15824,0,2232478,1869,85,hooBSI4L800SOlBU
+St. Gabriel Parish,Detroit,2,1249,3,700,59,1038779,0,20233,0,2302964,832,160,qVVVw5b3EZOXW4Rp
+St. Juan Diego,Detroit,2,427,4,1100,10,190610,0,54166,81505,451867,446,179,EKW31JDlAhgJUzOn
+Ste. Anne Parish,Detroit,2,738,2,1100,34,666393,14096,2660,0,1167757,903,150,X1Lin63J1iwjlSun
+Assumption Grotto Parish,Detroit,3,556,3,1200,15,895615,0,10296,0,710015,1611,105,fxdUlkf9Unn0pUYp
+Holy Family (Italian) Parish,Detroit,3,175,2,300,29,251266,0,10352,0,240914,1436,114,2XJCUECAfKCINTHP
+Mother of Divine Mercy Parish,Detroit,3,481,2,1800,13,670886,1459816,260516,0,1825950,1395,120,RN069YSgqs9MwPIO
+Nativity of Our Lord Parish,Detroit,3,124,1,596,21,637697,0,-2877,0,3159916,5143,21,mjpKeH0avxIzQ78B
+Our Lady Queen of Apostles Parish,Hamtramck,3,149,3,820,6,923019,109597,-3652,0,1038351,6195,12,BxiSykUoDyUfYYYU
+Our Lady Queen of Heaven , Good Shepherd Church,3,,,,,,,,,,,,VGmhspHAgy98P6Ls
+Sacred Heart Parish,Detroit,3,337,3,800,14,287642,0,2642,0,200597,854,156,JI9K9LQFC3hEKnCp
+St. Aloysius Parish,Detroit,3,208,2,1300,8,2198147,0,-2293,0,2911089,10568,3,nCqEYL6QaxmfTUK6
+St. Augustine and St. Monica Parish,Detroit,3,115,1,500,23,729581,0,25631,0,660354,6344,10,V8TMPXUjCwJkTzYb
+St. Charles Borromeo Parish,Detroit,3,131,1,400,33,604517,0,6795,0,566312,4615,26,JyAMAN4u2mHsc7BS
+St. Elizabeth Parish,Detroit,3,141,1,400,35,101539,0,198286,0,-95496,720,164,Mofhirbtq2dfWO9v
+St. Florian Parish,Hamtramck,3,344,4,1500,6,568170,0,23038,221645,347254,1652,103,h05JfSbyYLRr0aLr
+St. Hyacinth Parish,Detroit,3,28,2,500,3,101745,0,15503,0,85201,3634,36,W9UoMVSVnCF3edjT
+St. John Paul II Parish,Detroit,3,88,1,1350,7,286707,0,4103,0,282604,3258,40,df9uTUb7iccgAYiZ
+St. Joseph Shrine & Parish,Detroit,3,664,3,900,25,228698,1800757,198451,0,1833470,344,185,1H18AuqAGANNYNiG
+St. Mary (Greektown) Parish,Detroit,3,307,3,1000,10,2698179,37074,4590,0,2725671,8789,5,DB8GVSZ9TDcGiWYY
+St. Raymond - Our Lady of Good Counsel Parish,Detroit,3,103,2,1000,5,179379,24819,14833,289632,-112207,1742,97,0as7YHJV4rDCp3eK
+Christ the Good Shepherd Parish,Lincoln Park,4,557,3,780,24,93218,0,74813,0,2137212,167,196,88LcYUX0pvzVyMYu
+Our Lady of the Angels Parish,Taylor,4,422,3,450,31,1417023,0,0,0,1417023,3358,38,V8qx1mQUTNtidn2p
+Our Lady of the Scapular Parish,Wyandotte,4,355,3,832,14,504948,0,466325,41927,-3304,1422,116,71NzmwPzkkfLnLEq
+Our Lady of the Woods Parish,Woodhaven,4,940,3,865,36,798430,0,3878,0,794853,849,157,QuH46iagJTT8WSP2
+Sacred Heart Parish,Grosse Ile,4,359,2,650,28,796096,454962,0,0,1253316,2218,68,5Bjw3ZtHMunHyqdU
+St. Alfred Parish,Taylor,4,565,2,600,47,2110787,8197,30337,0,2160301,3736,34,uECoCjLDhiKCdcdP
+St. André Bessette Parish,Ecorse,4,719,3,650,37,1227486,0,580,0,1223341,1707,100,mY7b2GjeWUxsymvT
+St. Constance Parish,Taylor,4,205,1,400,51,299098,0,13069,0,284567,1459,113,HSoUhxhu9IC92eFo
+St. Cyprian Parish,Riverview,4,422,2,700,30,544980,40053,7311,0,593549,1291,127,FVy1oUzjJ4fJaGvU
+St. Frances Cabrini Parish,Allen Park,4,1144,4,1200,24,1183304,0,1342517,19342,452424,1034,142,27kHtJi0sy2x2Mgg
+St. Joseph Parish,Trenton,4,634,3,500,42,1137160,0,3419,640447,-328894,1794,92,xJS4qwPKPtXre0lf
+St. Mary Magdalen Parish,Melvindale,4,224,1,800,28,1876159,54874,2888,0,2031745,8376,6,Pse3ZDnOsJZ4LGPh
+"St. Mary, Our Lady of the Annunciation Parish",Rockwood,4,631,3,350,60,1807076,0,242,0,1751948,2864,49,OyYnNt6bMQMTSWdI
+St. Pius X Parish,Southgate,4,471,3,620,25,2002550,1148481,31632,0,4029152,4252,29,fopqh0zoIatJSrbA
+St. Roch Parish,Flat Rock,4,313,2,450,35,317276,104894,6885,0,415766,1014,143,fekijbIsE0xPZH8y
+St. Vincent Pallotti Parish,Wyandotte,4,843,4,860,25,267974,0,0,0,2083219,318,186,AFMQDiVQ7w35WliH
+Divine Grace Parish,Carleton,5,503,3,500,34,1689947,199289,10101,0,1736741,3360,37,7ekrl7F5SabYhO9Q
+Our Lady of Mount Carmel Parish,Temperance,5,598,3,675,30,1251437,0,5362,0,1170586,2093,76,J3EDt6a0CIhSc852
+St. Anne Parish,Monroe,5,183,1,150,122,432604,0,2535,0,429666,2364,62,WYEkFv2jzWhZr7Lj
+St. Anthony Parish,Temperance,5,286,3,240,40,63878,0,200,0,48849,223,193,s83WwTKpavN7yrfH
+St. Charles Borromeo Parish,Newport,5,517,3,400,43,2280836,204730,24819,280352,2579918,4412,27,6ZzaY8c6Gg8in5gp
+St. Gabriel Parish,Ida,5,415,3,324,43,506236,0,3397,0,627869,1220,135,5Ozbeb3E8SVtYdUo
+St. John the Baptist Parish,Monroe,5,406,3,371,36,238501,62769,3165,0,297659,587,173,zfD3LV4cjwut4t9m
+St. Joseph Parish,Erie,5,260,4,320,20,658089,0,10087,0,461407,2531,58,iqzA3N6awGGcmPG4
+St. Mary Parish,Monroe,5,546,4,650,21,812954,46469,17468,0,2098082,1489,110,X6NBtbBwtlZhopAh
+St. Michael the Archangel Parish,Monroe,5,539,3,601,30,1097635,0,14320,0,1081525,2036,78,c3uZtRcsp0S6vhCH
+Divine Child Parish,Dearborn,6,1284,4,1500,21,14540742,696208,-235,0,12090573,11325,2,EFCjTp3MUt37Pg4F
+Sacred Heart Parish,Dearborn,6,588,3,650,30,5447219,0,507,0,5906599,9264,4,mbywxYznGSm6buUA
+St. Aloysius Parish,Romulus,6,160,2,300,27,168526,0,-1223,0,169748,1053,141,y48RwCfLVeQrNa4Y
+St. Alphonsus - St. Clement Parish,Dearborn,6,243,2,800,15,715664,0,0,0,1346601,2945,44,XLkOZYJi2weYhnyi
+St. Anselm Parish,Dearborn Heights,6,409,3,325,42,963286,0,34871,0,1453509,2355,63,UCerc0eBmvTH9mDt
+St. Anthony Parish,Belleville,6,322,3,650,17,184131,0,-2000,0,186131,572,174,xD7uUWThhnBKA0ch
+St. Barbara (Polish) Parish,Dearborn,6,461,3,750,20,843807,0,13846,0,870014,1830,89,ngpq23tD1QWdkXUl
+St. Kateri Tekakwitha Parish,Dearborn,6,425,3,450,31,177203,0,0,0,177014,417,182,IEDsVm610UTGNQO7
+St. Linus Parish,Dearborn Heights,6,350,3,600,19,815190,0,-6439,-486,630638,2329,65,edvtbAslV5ruD5SK
+St. Maria Goretti Parish,Dearborn Heights,6,534,4,400,33,783809,0,51248,0,732560,1468,112,MaQMD4CnSupkC9Tu
+St. Mary Parish,Wayne,6,575,4,725,20,159259,0,10074,1003629,-860193,277,190,q2M1oDD1t4HrqTxv
+"St. Mary, Cause of Our Joy Parish",Westland,6,464,3,800,19,118298,0,44031,85042,157013,255,192,u7HJBmItIFv2dXrD
+St. Richard Parish,Westland,6,146,1,500,29,245254,0,3702,0,240710,1680,102,8VtR5LLqsaDKwYQl
+St. Sabina Parish,Dearborn Heights,6,388,3,420,31,2177669,0,-4418,0,2212679,5613,15,zm4UYedtB2MyT8Yu
+St. Stephen Parish,New Boston,6,614,4,240,64,1781847,0,20679,0,1728946,2902,45,5RfiHdtS1GFLxptS
+St. Thomas the Apostle Parish,Garden City,6,662,3,550,40,835360,0,10160,238692,701145,1262,131,5f3K0iBcxIxTdqx3
+Our Lady of Good Counsel Parish,Plymouth,7,2598,5,1500,35,5100995,309398,166860,836832,4151235,1963,81,rQfHWBlwgpXx1t1j
+Our Lady of Loretto Parish,Redford,7,329,2,445,37,932292,0,5733,0,986888,2834,50,Hf8ablkQDEJ6pgGO
+Our Lady of Victory Parish,Northville,7,2643,4,770,86,7375638,0,69504,0,5849563,2791,51,gmp4YcNCSSPV6GYO
+Resurrection Parish,Canton,7,401,3,350,38,479926,5,2901,0,780677,1197,137,xB5yrIz0vXt07mKA
+St. Aidan Parish,Livonia,7,793,4,650,31,478291,5888,0,0,1222889,603,172,u434zhr8uKzh2ZrI
+St. Colette Parish,Livonia,7,968,4,900,27,2258251,0,0,0,2261355,2333,64,ZfjclGRJWnmVMt62
+St. Edith Parish,Livonia,7,1035,4,1100,24,1327726,0,-258,0,1124207,1283,129,qbduLF1PiUColLWY
+St. Genevieve - St. Maurice Parish,Livonia,7,486,3,1170,14,576221,0,0,0,870794,1186,138,juktfPdJHsVcWN61
+St. John Neumann Parish,Canton,7,1433,5,620,46,317267,0,15243,0,269934,221,194,ZZvCogv0Zoa2jHUW
+St. John XXIII Parish,Redford Charter Twp,7,218,3,296,25,722285,0,16675,0,771812,3313,39,0V3PK6tD1WdiXBw4
+St. Kenneth Parish,Plymouth,7,1749,4,775,56,2495205,0,58092,0,2508747,1427,115,MhfAQHauvZgfXCHU
+St. Michael Parish,Livonia,7,1243,4,1200,26,1703897,0,73010,0,219404,1371,122,9ebQeitTHGsiOIJO
+St. Priscilla Parish,Livonia,7,463,4,550,21,594560,0,0,0,594335,1284,128,S4Chybz5J7C0Fh5f
+St. Thomas a'Becket Parish,Canton,7,1875,4,900,52,2648185,0,22794,0,2585036,1412,118,iBVZUHJyvavLClZh
+St. Valentine Parish,Redford,7,563,3,450,42,697823,0,106102,0,667030,1239,132,WE6LJNFAcxAElxsI
+Divine Providence (Lithuanian) Parish,Southfield,8,144,1,300,48,1005844,15237,1527,0,1019014,6985,9,Cz1cVR5GPmBIEMgf
+Holy Family Parish,Novi,8,1289,5,861,30,1073384,0,0,0,1296741,833,159,luORTUzW20Lfvr1l
+Our Lady of Albanians Parish,Southfield,8,507,4,600,21,656294,0,17959,0,592996,1294,126,r98H3u9pgN0FzYd4
+Our Lady of Sorrows Parish,Farmington,8,1660,5,833,40,3682285,0,-51,0,2795825,2218,69,bcgv8mN9jEP034vz
+Prince of Peace Parish,West Bloomfield,8,902,3,700,43,1565522,0,0,0,1928708,1736,98,h43mPttJs0AhX8YA
+St. Andrew Kim (Korean) Parish,Northville,8,526,3,450,39,713597,2249,8394,0,705926,1357,123,s2v69JcXIuQkqd3n
+St. Fabian Parish,Farmington Hills,8,1245,5,650,38,3398306,0,0,11995,2275972,2730,55,WxRdxzwrtVnHkWyP
+St. Gerald Parish,Farmington,8,541,4,590,23,1170752,0,23239,0,1147513,2164,74,LwYgsjxazdGos3Rk
+St. James Parish,Novi,8,1332,4,800,42,489996,0,0,0,489890,368,184,Seir0SnhlzgvsT3h
+St. Joseph Parish,South Lyon,8,1258,4,900,35,2307752,0,-241,0,2113290,1834,87,14KOpUKEzaU8DusO
+St. Paul (Albanian) Parish,Rochester Hills,8,,,,,4452351,0,0,0,4452351,,,xG4tjXBVIq9asUEC
+St. William Parish,Walled Lake,8,809,3,1235,22,699840,301636,3324,0,920846,865,153,G4hewAaAtXZ0AHbh
+Transfiguration Parish,Southfield,8,337,3,300,37,2748339,0,259,0,3920153,8155,7,aqmP27dimQ4nvRU0
+Christ Our Light Parish,Troy,9,1403,4,420,84,1980231,0,9580,0,1969540,1411,119,ehLQAWTCdppIjXUD
+Guardian Angels Parish,Clawson,9,1074,3,600,60,1356997,0,0,0,1696281,1263,130,JtdwzItkkf63dNUo
+Holy Name Parish,Birmingham,9,1190,4,750,40,3293659,222421,334328,0,2138313,2768,52,lQKwLgJYgiboj7u0
+Our Lady Queen of Martyrs Parish,Beverly Hills,9,729,4,800,23,1592261,695606,125270,0,1412578,2184,72,VjYU5YVRdO9OBCVN
+Our Lady of La Salette Parish,Berkley,9,220,2,950,12,821561,10597,1744,0,831685,3734,35,wRgICw98YX0Kx8jF
+Our Mother of Perpetual Help Parish,Oak Park,9,279,2,400,35,610334,0,9603,0,2122216,2188,71,h8zX80oTgiFT5fHs
+Shrine of the Little Flower Parish,Royal Oak,9,2034,6,2000,17,5127698,1649821,20019,0,3401655,2521,59,D8H7A0uj8pxcERhy
+St. Elizabeth Ann Seton Parish,Troy,9,698,3,817,28,1308159,0,0,0,1273011,1874,84,15lXQyVnTOKQqN04
+St. Justin - St. Mary Magdalen Parish,Hazel Park,9,236,2,400,30,198080,33456,600,0,200663,839,158,Mo3KDVOuvXLCoIBE
+St. Lucy (Croatian) Parish,Troy,9,97,2,350,14,409532,0,573,0,409361,4222,30,AU1Oj2y0658DXGXQ
+St. Mary Parish,Royal Oak,9,977,3,600,54,1532500,0,1145,0,1287812,1569,107,uCKBQioEPkYUJkSU
+St. Owen Parish,Bloomfield Hills,9,630,3,900,23,1088181,0,261,0,1079103,1727,99,xlQcC2Cn8G9ywycj
+St. Regis Parish,Bloomfield Hills,9,835,4,1000,21,3331949,0,62661,0,2609117,3990,31,TdJVso748z2NQWyQ
+St. Thomas More Parish,Troy,9,441,3,750,20,2214242,39481,76,0,1887829,5021,22,KHZs0kiWiBZvWLy7
+St. Vincent Ferrer Parish,Madison Heights,9,233,2,500,23,4433347,0,0,0,4433354,19027,1,rjuVTh51RJE70ub7
+Christ the Redeemer Parish,Lake Orion,10,1068,3,1000,36,1437655,0,807,0,1428498,1346,124,xv8XZ09c5a2qOLBO
+Church of the Holy Spirit Parish,Highland,10,455,3,358,42,393842,109583,4710,0,496629,866,152,BSAsz3qFQuP1lq18
+Our Lady of Refuge Parish,Orchard Lake,10,650,3,600,36,3433291,0,5989,0,2883408,5282,20,JpQ2aAb8XvmZXvaZ
+Our Lady of the Lakes Parish,Waterford,10,2206,5,800,55,3761649,-3053,97116,0,2764661,1705,101,h818FOZ3us6Fon5c
+Sacred Heart Parish,Auburn Hills,10,678,3,670,34,581133,0,0,0,579933,857,155,LCi42DkDa21McBsE
+St. Andrew Parish,Rochester,10,2062,5,1250,33,1277792,0,0,171818,1039705,620,171,L4nklfwEUX9myJfx
+St. Anne Parish,Ortonville,10,351,3,435,27,518672,0,-922,0,504146,1478,111,5x5V8uTFT4PP5zCN
+St. Benedict Parish,Waterford,10,386,3,350,37,155498,0,28762,0,134400,403,183,Yr40sCX1v0l8KGe1
+St. Damien of Molokai Parish,Pontiac,10,1735,5,1150,30,49867,0,11119,0,132795,29,199,tfHskbBk0rlXVfVO
+St. Daniel Parish,Clarkston,10,1379,4,700,49,1347933,0,-1125,0,4764252,977,146,ksbDavxww9cQYEVV
+St. Hugo of the Hills Parish,Bloomfield Hills,10,1515,5,1600,19,5913112,929415,287054,0,16430216,3903,32,z7rERlKRM3NbFI7K
+St. Irenaeus Parish,Rochester Hills,10,970,3,800,40,1820681,0,2688,0,2316203,1877,83,hTEgOX2FlyNpFoMh
+St. John Fisher Chapel University Parish,Auburn Hills,10,613,2,700,44,437647,145054,78772,0,510437,714,166,82xUTdVZwpfFSmFz
+St. Joseph Parish,Lake Orion,10,2147,5,750,57,1914583,333673,173515,0,1728019,892,151,sTqfvRL40pjKyOX0
+St. Mary of the Hills Parish,Rochester Hills,10,992,3,900,37,1537750,11128,0,0,1463594,1550,108,0Sfv4yKMb1uuI2U5
+"St. Mary, Our Lady of the Snows Parish",Milford,10,1014,4,840,30,1235566,60431,2712,0,1291531,1219,136,1EklU5n3lBPj1VrB
+St. Patrick Parish,White Lake,10,1213,4,1100,28,6014675,0,74400,0,4647400,4959,24,iL34EC7HTqqVBGvO
+St. Perpetua Parish,Waterford,10,556,3,525,35,514121,0,0,0,514121,925,149,KHtDL3ZGMz2Lczgx
+St. Rita Parish,Holly,10,845,4,300,70,363752,0,12396,0,333167,430,181,NRFkJlEyFIlzzVra
+Holy Innocents - St. Barnabas Parish,Roseville,11,322,3,425,25,455812,0,165,0,482068,1416,117,CnNeiaHHRB6tGv2P
+Our Lady Star of the Sea Parish,Grosse Pointe Woods,11,832,4,550,38,2650728,0,29892,0,3192502,3186,41,UV6KQhipu6szhyHb
+Our Lady of Hope Parish,St. Clair Shores,11,369,2,450,41,115959,0,254077,10170,-159030,314,187,bprRa5tBKjMJSdGs
+St. Ambrose Parish,Grosse Pointe Park,11,412,3,800,17,726204,0,50,0,726154,1763,95,osPMmWFGbFB74e4p
+St. Basil the Great Parish,Eastpointe,11,301,3,550,18,216765,8229,277,0,197124,720,165,26o6eYeijmwe6G1U
+St. Clare of Montefalco Parish,Grosse Pointe Park,11,537,3,870,21,1547575,0,-289,0,2264719,2882,47,TumvBnsj1O9bc53A
+St. Isaac Jogues Parish,St. Clair Shores,11,618,3,950,22,106522,172893,494229,31350,-276346,172,195,lzJRbYWginFThQZl
+St. Joan of Arc Parish,St. Clair Shores,11,1806,5,1400,26,1556402,1231385,1047,-3933,3236269,862,154,w2NaOlNGmaxtJ8f8
+St. Lucy Parish,St. Clair Shores,11,219,2,425,26,601904,0,14052,0,753735,2748,54,zxRccXk2Ma5O6pyl
+St. Margaret of Scotland Parish,St. Clair Shores,11,340,3,800,14,248655,0,5479,0,238548,731,163,wcRoZrPZqo0DyjTK
+St. Matthew Parish,Detroit,11,161,2,1100,7,985366,0,1885,0,974220,6120,13,X21P56UCjUhwBOSu
+St. Paul on the Lake Parish,Grosse Pointe Farms,11,1301,5,434,60,3752173,727261,4013,0,4857813,2884,46,CV9isvzcrwri3V6a
+St. Pio of Pietrelcina Parish,Roseville,11,392,3,650,20,795836,0,0,0,1641596,2030,79,CmqyZlzGr1XGbfIj
+St. Veronica Parish,Eastpointe,11,429,3,500,29,1306417,0,-276,0,1654129,3045,43,sjLbtqnWlTpqLEZr
+Our Lady of Grace (Vietnamese) Parish,Warren,12,450,3,400,38,0,0,0,0,0,0,200,OcEbwOYB50lNSJHZ
+San Francesco (Italian) Parish,Clinton Township,12,386,4,350,28,2420617,0,95,0,2418042,6271,11,L6YBT6rBaYhwaHVF
+St. Anne Parish,Warren,12,506,3,1200,14,2230161,0,267,0,1946464,4407,28,0B93LUNIKWFVmpRv
+St. Blase Parish,Sterling Heights,12,626,3,900,23,2358351,0,23923,0,2331955,3767,33,acI5PT682xWv7ANT
+St. Faustina Parish,Warren,12,458,3,1200,13,1134957,0,4001,0,1072610,2478,60,COuXx0lhWQCst6u6
+St. Hubert Parish,Harrison Township,12,685,3,550,42,439260,0,4494,0,434806,641,168,U456INAeLkl8HeVV
+St. Louis Parish,Clinton Township,12,388,3,500,26,1220590,0,393,0,1232298,3146,42,65JTKK8XIehsrTej
+St. Louise de Marillac Parish,Warren,12,241,2,736,16,117453,0,1174,0,115927,487,177,7iEtp5kphkAQaWsJ
+St. Malachy Parish,Sterling Heights,12,1565,4,800,49,240658,0,0,0,246534,154,197,dClZ5mLkNGmue50v
+St. Mark Parish,Warren,12,338,3,450,25,543981,3347,681,0,948365,1609,106,Z07tyBvHKrVb7RJE
+St. Martin de Porres Parish,Warren,12,423,3,900,16,112063,0,0,0,108694,265,191,l01fthRAzxncNoQP
+"St. Mary, Our Lady Queen of Families Parish",Center Line,12,493,3,1400,12,869623,0,22003,0,800111,1764,94,kzguoM3p8Y9GUXGi
+St. Paul of Tarsus Parish,Clinton Township,12,1426,3,1000,48,1320362,41759,0,0,1360476,926,148,JYPtamc72aYoQG8J
+St. Peter Parish,Mount Clemens,12,1592,4,1000,40,3786066,507831,18831,0,2918798,2378,61,9zdPULEwrJ4zFv1s
+St. Ronald Parish,Clinton Township,12,358,3,550,22,338408,0,25614,0,306909,945,147,Uu2GU04BuvQPQ4wj
+St. Thecla Parish,Clinton Township,12,668,4,800,21,1701448,581973,-660,0,1562240,2547,57,EenWNnWcn7juN4AP
+Our Lady of Czestochowa (Polish) Parish,Sterling Heights,13,,,,,147680,0,0,0,116472,,,xufaO8GA91Oz1trP
+SS. Cyril and Methodius (Slovak) Parish,Sterling Heights,13,842,5,809,21,2232451,167734,42869,0,2319153,2651,56,PE1dR6RlhYtB3FUt
+SS. John and Paul Parish,Washington Township,13,521,4,450,29,844558,-24365,7131,65864,733554,1621,104,0KHYVQL1ezWoM9Io
+St. Anastasia Parish,Troy,13,1935,6,780,41,933355,0,35145,0,861923,482,178,N944yZkkkgIji5kc
+St. Ephrem Parish,Sterling Heights,13,484,3,350,46,261319,0,0,0,296433,540,176,of35IQ82DlErgXhS
+St. Isidore Parish,Macomb Township,13,1968,5,1300,30,2332752,0,951,0,2320194,1185,139,g5lVIRMWbxXoYNA1
+St. Jane Frances de Chantal Parish,Sterling Heights,13,909,3,800,38,1223652,207595,0,0,1431248,1346,125,HClXgaxHAoiXYBDe
+St. John Vianney Parish,Shelby Township,13,1408,4,1200,29,1387551,399596,3820,0,1605749,985,144,TXPGNSx1PrV3PbNr
+St. Kieran Parish,Shelby Township,13,2012,4,800,63,4135391,1882436,19490,0,6210309,2055,77,H7qqTH3WotldPxH3
+St. Lawrence Parish,Utica,13,1280,4,1200,27,2789283,179888,234207,0,2743268,2179,73,d1mqoQmMaih6rfIP
+St. Matthias Parish,Sterling Heights,13,267,4,650,10,261205,0,0,0,261155,978,145,yz00215myb1T9owl
+St. Michael Parish,Sterling Heights,13,1054,4,800,33,718323,0,7976,3701,809305,682,167,UhXSNtv6qrdfpYNq
+St. Rene Goupil Parish,Sterling Heights,13,985,4,1100,22,1524356,0,-1229,0,1824150,1548,109,qGqrbwY8BqQzbUcF
+St. Therese of Lisieux Parish,Shelby Township,13,1530,4,975,39,1867597,224041,485,0,3295958,1221,134,shlLBBhYSuXifn1u
+Holy Family Parish,Memphis,14,566,3,497,38,778306,118276,24439,0,607981,1375,121,mk1eA7DVNUvHWz7H
+Holy Trinity Parish,Port Huron,14,681,3,600,38,1216280,50123,9061,0,982053,1786,93,hl3GB8jaVxAysHHP
+Immaculate Conception Parish,Ira Township,14,787,4,365,54,1558692,122262,116089,0,1561198,1981,80,2vt290jttw1cwlcD
+Our Lady of Mount Carmel Parish,Emmett,14,457,2,525,44,1049001,0,695,0,1257494,2295,67,HUyPWEHQuJUiqMQm
+Our Lady on the River Parish,Marine City,14,692,5,750,18,1481181,153563,-543,0,1413956,2140,75,jnuPpuJxoaw6x73t
+Sacred Heart Parish,Yale,14,185,1,280,66,863808,0,71499,0,899891,4669,25,UGm9BSb7yw7iEscz
+St. Augustine Parish,Richmond,14,535,3,400,45,987981,12210,29858,0,962340,1847,86,aBLIAeQfkJ3ZdmY5
+St. Christopher Parish,Marysville,14,585,3,453,43,368471,0,951,0,361131,630,169,JXaKmm9IO7UivYnp
+St. Edward on the Lake Parish,Lakeport,14,619,3,400,52,273986,0,3885,0,746944,443,180,M0edaNTO2L4Zs9hg
+St. Mary Parish (PH),Port Huron,14,513,3,750,23,633960,78365,191,0,741150,1236,133,mCxfP8SDLMqznnGD
+St. Mary Parish (SC),St. Clair,14,415,3,750,18,2288143,82883,20200,0,2472304,5514,16,mwMRgmoBdehYM6OQ
+St. Mary Queen of Creation Parish,New Baltimore,14,653,3,800,27,1227269,0,42946,0,769911,1879,82,5Wu5OoAg1xThnvoD
+Immaculate Conception Parish,Lapeer,15,736,4,425,43,1324172,0,16793,0,1538227,1799,91,QbpIlPxklOXJPene
+SS. Peter and Paul Parish,North Branch,15,327,2,400,41,355220,0,379,0,305726,1086,140,SGZ1SrkuaGRsKhJK
+Sacred Heart Mission,Brown City,15,129,1,250,52,705864,0,0,0,688517,5472,17,kWrU6OphY0ZeMehY
+Sacred Heart Parish,Imlay City,15,559,2,300,93,349395,14745,0,0,136581,625,170,yqu2FQj1BlT0ITUC
+St. Clement of Rome Parish,Romeo,15,1218,4,1100,28,135318,58989,0,0,4274254,111,198,HzuDqcLpVJPvggZ0
+St. Cornelius Parish,Dryden,15,251,2,420,30,440029,0,417,0,436225,1753,96,vVLDmjuaIZCNoS2E
+St. Francis of Assisi - St. Maximilian Kolbe Parish,Ray Township,15,537,4,300,45,408073,0,43,0,407658,760,162,eJ7jDYmeuZxEQRN1
+St. John the Evangelist Parish,Allenton,15,355,3,420,28,284678,15618,0,198778,101518,802,161,ofaZCKJFeOAzLOWv
+St. Mary Burnside Parish,North Branch,15,170,1,250,68,394215,0,0,0,385961,2319,66,whH2OLCOgXyJupJN
+St. Mary Mystical Rose Parish,Armada,15,193,1,250,77,426550,0,9391,0,414590,2210,70,heN2uFDD4YQcDJ7b
