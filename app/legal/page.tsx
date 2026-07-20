@@ -217,7 +217,7 @@ export default function LegalPage() {
             href="https://blog.saveourlithuanianparishes.org"
             className="underline hover:text-accent"
           >
-            The Hearth (Židinys)
+            Židinys (The Hearth)
           </a>
           , is hosted on Substack under Substack&rsquo;s own terms and
           privacy policy.
