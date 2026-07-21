@@ -40,6 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# session tooling
-.claude/
+# session tooling — ignore local state, but VERSION agent definitions
+# (shareable project config; e.g. the Haiku-pinned `ops` routing agent)
+.claude/*
+!.claude/agents/
+.claude/agents/*.local.md
 .aod-tmp/
