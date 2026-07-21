@@ -45,3 +45,4 @@ next-env.d.ts
 .claude/*
 !.claude/agents/
 .claude/agents/*.local.md
+.aod-tmp/
