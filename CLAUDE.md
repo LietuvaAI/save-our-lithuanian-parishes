@@ -27,7 +27,7 @@ Public advocacy site for SaveOurLithuanianParishes.org. This is a **product repo
 4. The PA **"31/29"** figure is an attributed Draugas statistic — never drawn as dataset marks.
 5. **No invented numbers.** Blank fields stay blank.
 6. **83 documented / 58 case-filed in depth** — copy must respect the distinction.
-7. Visuals encode `ending_mode` (who decided), not closed-vs-standing.
+7. **Site framing (Vilija 2026-07-21): the site's mission is the RECORD, not the deed thesis.** The site documents every parish — what happened to it, where it stands now, and what communities can learn from each other: from those that were lost AND from those that fought and won. "Ownership decided endings" and "procedure in time wins" are two *lessons inside* the record, not the site's identity. Accordingly: site visuals (the homepage map) encode *present status* (open / under threat / lost / fate unestablished); the who-decided (`ending_mode`) encoding remains for the Draugas-article graphics, charts, profile marks, and popups, where it originated. Unresolved cases (Maspeth) render as *under threat*, never as closed. Scope: the U.S., with Canada as the comparator exception — non-North-American records (e.g. the mis-coded Argentina entries) stay out of site counts and maps.
 
 ## Deploy
 

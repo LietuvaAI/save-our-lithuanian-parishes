@@ -1,32 +1,129 @@
 "use client";
 
+// The homepage map: ONE mark system across the whole record (Vilija
+// 2026-07-21). Every point is a circle, one size; color = present status:
+//   red filled   = lost (closed / demolished / merged / suppressed)
+//   ink filled   = open today
+//   gold filled  = documented under threat now (alerts + unresolved cases)
+//   grey hollow  = in the record; fate not yet established by the research
+// Who-decided (ending mode) and ownership stay in each parish's popup and
+// profile — the map itself reads at a glance. Views: All · Open today ·
+// Under threat · Across time (the timeline).
 import { useEffect, useMemo, useRef, useState } from "react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import mapData from "@/data/map.json";
 import regData from "@/data/registry-map.json";
-import { MarkShape, MarkIcon } from "@/components/marks";
+import alertsData from "@/data/alerts.json";
 import {
   usParishes,
-  type Parish,
-  ENDING_MODE_ORDER,
   ENDING_MODE_LABEL,
   OWNERSHIP_LABEL,
-  STATUS_LABEL,
 } from "@/lib/parishes";
 
-const bySlug = new Map(usParishes.map((p) => [p.slug, p]));
-const pointBySlug = new Map(mapData.points.map((pt) => [pt.slug, pt]));
-
-const FULL = { x: 0, y: 0, w: 975, h: 610 };
+const FULL = (regData as { frame?: { x: number; y: number; w: number; h: number } })
+  .frame ?? { x: 0, y: 0, w: 975, h: 610 };
 const MAX_ZOOM = 10;
 const END_YEAR = 2026;
-
 const NE_STATES = new Set(["ME", "NH", "VT", "MA", "RI", "CT", "NY", "NJ", "PA", "MD"]);
 
 type View = { x: number; y: number; w: number; h: number };
-type Phase = "future" | "active" | "lost";
-type RegPoint = (typeof regData.points)[number];
+type Status = "lost" | "open" | "threat" | "unknown";
+type Mode = "all" | "open" | "threat";
+
+interface Point {
+  id: string;
+  name: string;
+  city: string;
+  state: string;
+  x: number;
+  y: number;
+  status: Status;
+  founded: number | null;
+  closed: number | null;
+  profile: string | null;
+  deep: boolean; // in-depth (case-filed) vs attested
+  detail: string | null; // ownership · ending line (canonical only)
+  kindLabel: string | null; // e.g. non-Catholic congregation
+}
+
+const STATUS_LABEL: Record<Status, string> = {
+  lost: "Lost",
+  open: "Open today",
+  threat: "Under threat",
+  unknown: "Fate not yet established",
+};
+
+const FILL: Record<Status, string> = {
+  lost: "var(--mark-closed)",
+  open: "var(--mark-ink)",
+  threat: "var(--mark-community)",
+  unknown: "none",
+};
+
+// Alert-flagged parishes (red + amber) — the documented-under-threat set.
+const threatIds = new Set(
+  (alertsData.alerts as { parishLink: string }[]).map((a) =>
+    a.parishLink.replace(/^\/(parishes|registry)\//, "")
+  )
+);
+
+function buildPoints(): Point[] {
+  const bySlug = new Map(usParishes.map((p) => [p.slug, p]));
+  const pts: Point[] = [];
+  for (const pt of mapData.points) {
+    const p = bySlug.get(pt.slug);
+    if (!p) continue;
+    const status: Status = threatIds.has(p.slug)
+      ? "threat"
+      : p.status === "standing"
+        ? "open"
+        : p.status === "undecided"
+          ? "threat" // unresolved cases render as watched, never as closed
+          : "lost";
+    pts.push({
+      id: p.slug,
+      name: p.nameLt,
+      city: p.city,
+      state: p.state,
+      x: pt.x,
+      y: pt.y,
+      status,
+      founded: p.yearFounded,
+      closed: p.yearClosed,
+      profile: `/parishes/${p.slug}`,
+      deep: true,
+      detail: `${OWNERSHIP_LABEL[p.ownership]} · ${ENDING_MODE_LABEL[p.endingMode]}`,
+      kindLabel: null,
+    });
+  }
+  for (const c of regData.points) {
+    pts.push({
+      id: c.slug,
+      name: c.name,
+      city: c.city,
+      state: c.state,
+      x: c.x,
+      y: c.y,
+      status: threatIds.has(c.slug)
+        ? "threat"
+        : c.closedYear
+          ? "lost"
+          : (c as { lockedStanding?: boolean }).lockedStanding
+            ? "open"
+            : "unknown",
+      founded: c.foundedYear ?? null,
+      closed: c.closedYear ?? null,
+      profile: c.kind === "parish" ? `/registry/${c.slug}` : null,
+      deep: false,
+      detail: null,
+      kindLabel:
+        c.kind === "congregation" ? "Non-Catholic Lithuanian congregation" : null,
+    });
+  }
+  return pts;
+}
+
+const POINTS = buildPoints();
 
 function clampView(v: View): View {
   const w = Math.min(Math.max(v.w, FULL.w / MAX_ZOOM), FULL.w);
@@ -39,28 +136,20 @@ function clampView(v: View): View {
   };
 }
 
-/** A parish's state in a given year, for the timeline. Undated foundings are
- * treated as "future" (never placed) and counted separately; closures with an
- * unknown year keep the parish "active" (we do not invent a closing date). */
-function phaseAt(p: Parish, year: number): Phase {
-  if (!p.yearFounded || p.yearFounded > year) return "future";
-  if (p.yearClosed && p.yearClosed <= year) return "lost";
-  return "active";
-}
-
-function regPhaseAt(c: RegPoint, year: number): Phase {
-  if (!c.foundedYear || c.foundedYear > year) return "future";
-  if (c.closedYear && c.closedYear <= year) return "lost";
-  return "active";
+/** Timeline phase. Undated foundings never appear; unknown closings stay
+ * alive — we do not invent dates in either direction. */
+function phaseAt(p: Point, year: number): "future" | "alive" | "lost" {
+  if (!p.founded || p.founded > year) return "future";
+  if (p.closed && p.closed <= year) return "lost";
+  return "alive";
 }
 
 export default function ParishMap() {
   const router = useRouter();
-  const [hovered, setHovered] = useState<Parish | null>(null);
-  const [hoveredReg, setHoveredReg] = useState<RegPoint | null>(null);
-  const [showRecord, setShowRecord] = useState(true);
+  const [hovered, setHovered] = useState<Point | null>(null);
+  const [mode, setMode] = useState<Mode>("all");
   const [view, setView] = useState<View>(FULL);
-  const [year, setYear] = useState<number | null>(null); // null = show all
+  const [year, setYear] = useState<number | null>(null);
   const [playing, setPlaying] = useState(false);
   const svgRef = useRef<SVGSVGElement>(null);
   const drag = useRef<{ px: number; py: number; moved: boolean } | null>(null);
@@ -68,29 +157,33 @@ export default function ParishMap() {
   const zoom = FULL.w / view.w;
   const timelineMode = year !== null;
 
-  const { dated, undatedCount, minYear } = useMemo(() => {
-    const d = usParishes.filter((p) => p.yearFounded);
-    const years = d.map((p) => p.yearFounded as number);
+  const statusCounts = useMemo(() => {
+    const c = { all: POINTS.length, open: 0, threat: 0, lost: 0, unknown: 0 };
+    for (const p of POINTS) c[p.status]++;
+    return c;
+  }, []);
+
+  const { datedCount, undatedCount, minYear } = useMemo(() => {
+    const d = POINTS.filter((p) => p.founded);
     return {
-      dated: d,
-      undatedCount: usParishes.length - d.length,
-      minYear: Math.min(...years),
+      datedCount: d.length,
+      undatedCount: POINTS.length - d.length,
+      minYear: Math.min(...d.map((p) => p.founded as number)),
     };
   }, []);
 
   const counts = useMemo(() => {
-    if (year === null) return { active: 0, lost: 0 };
-    let active = 0;
-    let lost = 0;
-    for (const p of dated) {
+    if (year === null) return { alive: 0, lost: 0 };
+    let alive = 0,
+      lost = 0;
+    for (const p of POINTS) {
       const ph = phaseAt(p, year);
-      if (ph === "active") active++;
+      if (ph === "alive") alive++;
       else if (ph === "lost") lost++;
     }
-    return { active, lost };
-  }, [year, dated]);
+    return { alive, lost };
+  }, [year]);
 
-  // Animation: step one year at a time until the end, then stop.
   useEffect(() => {
     if (!playing || year === null) return;
     const id = setInterval(() => {
@@ -106,10 +199,7 @@ export default function ParishMap() {
   }, [playing, year === null]);
 
   const neView = useMemo(() => {
-    const pts = mapData.points.filter((pt) => {
-      const p = bySlug.get(pt.slug);
-      return p && NE_STATES.has(p.state);
-    });
+    const pts = POINTS.filter((p) => NE_STATES.has(p.state));
     const xs = pts.map((p) => p.x);
     const ys = pts.map((p) => p.y);
     const pad = 28;
@@ -137,7 +227,6 @@ export default function ParishMap() {
     drag.current = { px: e.clientX, py: e.clientY, moved: false };
     (e.target as Element).setPointerCapture?.(e.pointerId);
   }
-
   function onPointerMove(e: React.PointerEvent<SVGSVGElement>) {
     if (!drag.current || !svgRef.current) return;
     const rect = svgRef.current.getBoundingClientRect();
@@ -150,21 +239,20 @@ export default function ParishMap() {
     drag.current = { px: e.clientX, py: e.clientY, moved: drag.current.moved };
     setView((v) => clampView({ ...v, x: v.x - dx, y: v.y - dy }));
   }
-
   function onPointerUp() {
     drag.current = null;
   }
 
-  function openParish(p: Parish) {
-    if (drag.current?.moved) return;
-    router.push(`/parishes/${p.slug}`);
+  function openPoint(p: Point) {
+    if (drag.current?.moved || !p.profile) return;
+    router.push(p.profile);
   }
 
   function startTimeline() {
+    setMode("all");
     setYear(minYear);
     setPlaying(true);
   }
-
   function exitTimeline() {
     setPlaying(false);
     setYear(null);
@@ -173,9 +261,41 @@ export default function ParishMap() {
   const markR = 6 / Math.sqrt(zoom);
   const btn =
     "rounded-md border border-rule bg-background px-2.5 py-1 text-sm font-medium hover:border-foreground transition-colors";
+  const seg = (active: boolean) =>
+    `rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
+      active
+        ? "bg-foreground text-background"
+        : "border border-rule hover:border-foreground"
+    }`;
+
+  const visible = timelineMode
+    ? POINTS
+    : mode === "all"
+      ? POINTS
+      : POINTS.filter((p) => p.status === mode);
 
   return (
     <div>
+      {/* Views */}
+      <div className="mb-3 flex flex-wrap items-center gap-2">
+        <button type="button" className={seg(!timelineMode && mode === "all")} onClick={() => { exitTimeline(); setMode("all"); }}>
+          All ({statusCounts.all})
+        </button>
+        <button type="button" className={seg(!timelineMode && mode === "open")} onClick={() => { exitTimeline(); setMode("open"); }}>
+          Open today ({statusCounts.open})
+        </button>
+        <button type="button" className={seg(!timelineMode && mode === "threat")} onClick={() => { exitTimeline(); setMode("threat"); }}>
+          Under threat ({statusCounts.threat})
+        </button>
+        <button
+          type="button"
+          className={seg(timelineMode)}
+          onClick={() => (timelineMode ? exitTimeline() : startTimeline())}
+        >
+          ▶ Across time ({minYear}–{END_YEAR})
+        </button>
+      </div>
+
       <div className="relative">
         <svg
           ref={svgRef}
@@ -188,146 +308,82 @@ export default function ParishMap() {
           onPointerUp={onPointerUp}
           onPointerLeave={onPointerUp}
         >
-          {mapData.statePaths.map((d, i) => (
+          {(regData as { canadaPath?: string }).canadaPath && (
             <path
-              key={i}
-              d={d}
+              d={(regData as { canadaPath?: string }).canadaPath}
               fill="var(--band)"
+              fillOpacity={0.55}
               stroke="var(--foreground)"
-              strokeOpacity={0.25}
+              strokeOpacity={0.15}
               strokeWidth={0.7 / zoom}
             />
+          )}
+          {mapData.statePaths.map((d, i) => (
+            <path key={i} d={d} fill="var(--band)" stroke="var(--foreground)" strokeOpacity={0.25} strokeWidth={0.7 / zoom} />
           ))}
-          <path
-            d={mapData.stateBorders}
-            fill="none"
-            stroke="var(--foreground)"
-            strokeOpacity={0.15}
-            strokeWidth={0.7 / zoom}
-          />
-          {showRecord &&
-            regData.points.map((c) => {
-              if (timelineMode && year !== null) {
-                if (regPhaseAt(c, year) === "future") return null;
-              }
-              const active = hoveredReg?.slug === c.slug;
-              const deep = c.depth === "multi-source";
-              const rr = active ? markR * 1.1 : markR * 0.72;
-              const common = {
-                tabIndex: 0,
-                "aria-label": `${c.name}, ${c.city} ${c.state} — in the research record (${c.depth}).${c.kind === "parish" ? " Open its research profile." : ""}`,
-                onMouseEnter: () => setHoveredReg(c),
-                onMouseLeave: () => setHoveredReg(null),
-                onFocus: () => setHoveredReg(c),
-                onBlur: () => setHoveredReg(null),
-                ...(c.kind === "parish"
-                  ? {
-                      onClick: () => router.push(`/registry/${c.slug}`),
-                      onKeyDown: (e: React.KeyboardEvent) => {
-                        if (e.key === "Enter") router.push(`/registry/${c.slug}`);
-                      },
-                      className: "focus:outline-none cursor-pointer",
-                    }
-                  : { className: "focus:outline-none" }),
-              };
-              if (c.kind === "congregation") {
-                const s = rr * 1.5;
-                return (
-                  <rect
-                    key={c.slug}
-                    x={c.x - s / 2}
-                    y={c.y - s / 2}
-                    width={s}
-                    height={s}
-                    fill="none"
-                    stroke="var(--foreground)"
-                    strokeOpacity={active ? 0.85 : 0.55}
-                    strokeWidth={markR * 0.24}
-                    {...common}
-                  />
-                );
-              }
-              return (
-                <circle
-                  key={c.slug}
-                  cx={c.x}
-                  cy={c.y}
-                  r={rr}
-                  fill="var(--foreground)"
-                  fillOpacity={active ? 0.9 : deep ? 0.62 : 0.32}
-                  stroke="none"
-                  {...common}
-                />
-              );
-            })}
-          {mapData.points.map((pt) => {
-            const parish = bySlug.get(pt.slug);
-            if (!parish) return null;
-            const active = hovered?.slug === parish.slug;
+          <path d={mapData.stateBorders} fill="none" stroke="var(--foreground)" strokeOpacity={0.15} strokeWidth={0.7 / zoom} />
 
-            if (timelineMode) {
-              const ph = phaseAt(parish, year);
+          {visible.map((p) => {
+            const active = hovered?.id === p.id;
+            if (timelineMode && year !== null) {
+              const ph = phaseAt(p, year);
               if (ph === "future") return null;
-              const isActive = ph === "active";
+              const alive = ph === "alive";
               return (
                 <circle
-                  key={pt.slug}
-                  cx={pt.x}
-                  cy={pt.y}
-                  r={active ? markR * 1.4 : isActive ? markR : markR * 0.9}
-                  fill={isActive ? "var(--foreground)" : "none"}
-                  fillOpacity={isActive ? 0.92 : 0}
-                  stroke={isActive ? "var(--background)" : "var(--mark-closed)"}
-                  strokeOpacity={isActive ? 1 : 0.5}
-                  strokeWidth={isActive ? markR * 0.22 : markR * 0.34}
+                  key={p.id}
+                  cx={p.x}
+                  cy={p.y}
+                  r={active ? markR * 1.4 : alive ? markR : markR * 0.85}
+                  fill={alive ? "var(--mark-ink)" : "var(--mark-closed)"}
+                  fillOpacity={alive ? 0.92 : 0.75}
+                  stroke="var(--background)"
+                  strokeWidth={markR * 0.18}
                   tabIndex={0}
-                  role="button"
-                  aria-label={`${parish.nameLt}, ${parish.city} ${parish.state} — ${isActive ? "active" : "lost"} in ${year}. Open the parish record.`}
-                  onMouseEnter={() => setHovered(parish)}
+                  role={p.profile ? "button" : undefined}
+                  aria-label={`${p.name}, ${p.city} ${p.state} — ${alive ? "alive" : "lost"} in ${year}.`}
+                  onMouseEnter={() => setHovered(p)}
                   onMouseLeave={() => setHovered(null)}
-                  onFocus={() => setHovered(parish)}
+                  onFocus={() => setHovered(p)}
                   onBlur={() => setHovered(null)}
-                  onClick={() => openParish(parish)}
-                  onKeyDown={(e: React.KeyboardEvent) => {
-                    if (e.key === "Enter") router.push(`/parishes/${parish.slug}`);
-                  }}
-                  className="cursor-pointer focus:outline-none"
+                  onClick={() => openPoint(p)}
+                  onKeyDown={(e) => { if (e.key === "Enter") openPoint(p); }}
+                  className={p.profile ? "cursor-pointer focus:outline-none" : "focus:outline-none"}
                 />
               );
             }
-
+            const r = active ? markR * 1.35 : p.status === "threat" ? markR * 1.15 : markR;
             return (
-              <MarkShape
-                key={pt.slug}
-                mode={parish.endingMode}
-                x={pt.x}
-                y={pt.y}
-                r={active ? markR * 1.4 : markR}
-                tabIndex={0}
-                role="button"
-                aria-label={`${parish.nameLt}, ${parish.city} ${parish.state} — ${ENDING_MODE_LABEL[parish.endingMode]}. Open the parish record.`}
-                onMouseEnter={() => setHovered(parish)}
-                onMouseLeave={() => setHovered(null)}
-                onFocus={() => setHovered(parish)}
-                onBlur={() => setHovered(null)}
-                onClick={() => openParish(parish)}
-                onKeyDown={(e: React.KeyboardEvent) => {
-                  if (e.key === "Enter") router.push(`/parishes/${parish.slug}`);
-                }}
-                className="cursor-pointer focus:outline-none"
-              />
+              <g key={p.id}>
+                {p.status === "threat" && (
+                  <circle cx={p.x} cy={p.y} r={r * 1.7} fill="none" stroke="var(--mark-community)" strokeOpacity={0.55} strokeWidth={markR * 0.3} />
+                )}
+                <circle
+                  cx={p.x}
+                  cy={p.y}
+                  r={r}
+                  fill={FILL[p.status]}
+                  fillOpacity={p.status === "unknown" ? 0 : 0.92}
+                  stroke={p.status === "unknown" ? "var(--foreground)" : "var(--background)"}
+                  strokeOpacity={p.status === "unknown" ? 0.45 : 1}
+                  strokeWidth={p.status === "unknown" ? markR * 0.28 : markR * 0.18}
+                  tabIndex={0}
+                  role={p.profile ? "button" : undefined}
+                  aria-label={`${p.name}, ${p.city} ${p.state} — ${STATUS_LABEL[p.status]}.${p.profile ? " Open its record." : ""}`}
+                  onMouseEnter={() => setHovered(p)}
+                  onMouseLeave={() => setHovered(null)}
+                  onFocus={() => setHovered(p)}
+                  onBlur={() => setHovered(null)}
+                  onClick={() => openPoint(p)}
+                  onKeyDown={(e) => { if (e.key === "Enter") openPoint(p); }}
+                  className={p.profile ? "cursor-pointer focus:outline-none" : "focus:outline-none"}
+                />
+              </g>
             );
           })}
         </svg>
 
-        <div className="absolute right-2 top-2 flex flex-col gap-1.5">
-          <button type="button" className={btn} aria-label="Zoom in" onClick={() => zoomBy(1.6)}>
-            +
-          </button>
-          <button type="button" className={btn} aria-label="Zoom out" onClick={() => zoomBy(1 / 1.6)}>
-            −
-          </button>
-        </div>
+        {/* Region shortcuts — top-left; zoom — bottom-right (map convention) */}
         <div className="absolute left-2 top-2 flex gap-1.5">
           <button type="button" className={btn} onClick={() => setView(neView)}>
             Northeast
@@ -338,13 +394,20 @@ export default function ParishMap() {
             </button>
           )}
         </div>
+        <div className="absolute right-2 bottom-2 flex flex-col gap-1.5">
+          <button type="button" className={btn} aria-label="Zoom in" onClick={() => zoomBy(1.6)}>
+            +
+          </button>
+          <button type="button" className={btn} aria-label="Zoom out" onClick={() => zoomBy(1 / 1.6)}>
+            −
+          </button>
+        </div>
 
+        {/* Hover card at the dot */}
         {hovered &&
           (() => {
-            const pt = pointBySlug.get(hovered.slug);
-            if (!pt) return null;
-            const lx = ((pt.x - view.x) / view.w) * 100;
-            const ly = ((pt.y - view.y) / view.h) * 100;
+            const lx = ((hovered.x - view.x) / view.w) * 100;
+            const ly = ((hovered.y - view.y) / view.h) * 100;
             if (lx < -2 || lx > 102 || ly < -2 || ly > 102) return null;
             const below = ly < 32;
             return (
@@ -353,76 +416,33 @@ export default function ParishMap() {
                 style={{
                   left: `${Math.min(Math.max(lx, 15), 85)}%`,
                   top: `${ly}%`,
-                  transform: below
-                    ? "translate(-50%, 16px)"
-                    : "translate(-50%, calc(-100% - 16px))",
+                  transform: below ? "translate(-50%, 16px)" : "translate(-50%, calc(-100% - 16px))",
                 }}
                 aria-live="polite"
               >
-                <div className="font-serif font-semibold">{hovered.nameLt}</div>
+                <div className="font-serif font-semibold">{hovered.name}</div>
                 <div className="text-muted">
                   {hovered.city}, {hovered.state}
                 </div>
-                <div className="text-muted mt-1">
-                  {OWNERSHIP_LABEL[hovered.ownership]}
-                  <br />
-                  {ENDING_MODE_LABEL[hovered.endingMode]}
-                  {hovered.endingMode === "diocese_closed" &&
-                    hovered.status !== "closed" &&
-                    ` (${STATUS_LABEL[hovered.status].toLowerCase()})`}
-                  {hovered.yearFounded ? ` · founded ${hovered.yearFounded}` : ""}
-                  {hovered.yearClosed ? `, lost ${hovered.yearClosed}` : ""}
+                <div className="mt-1">
+                  <span className="font-medium">{STATUS_LABEL[hovered.status]}</span>
+                  <span className="text-muted">
+                    {hovered.founded ? ` · founded ${hovered.founded}` : ""}
+                    {hovered.closed ? `, lost ${hovered.closed}` : ""}
+                  </span>
                 </div>
-                <div className="mt-1.5 font-medium underline">
-                  Open the parish profile →
+                {hovered.detail && (
+                  <div className="text-muted text-xs mt-0.5">{hovered.detail}</div>
+                )}
+                {hovered.kindLabel && (
+                  <div className="text-muted text-xs mt-0.5">{hovered.kindLabel}</div>
+                )}
+                <div className="text-muted text-xs mt-0.5">
+                  {hovered.deep ? "Documented in depth — full case file" : "Attested by the research record"}
                 </div>
-              </div>
-            );
-          })()}
-
-        {hoveredReg &&
-          !hovered &&
-          (() => {
-            const lx = ((hoveredReg.x - view.x) / view.w) * 100;
-            const ly = ((hoveredReg.y - view.y) / view.h) * 100;
-            if (lx < -2 || lx > 102 || ly < -2 || ly > 102) return null;
-            const below = ly < 32;
-            return (
-              <div
-                className="pointer-events-none absolute z-10 w-72 rounded-lg border border-rule bg-background/95 px-3.5 py-2.5 text-sm shadow-lg"
-                style={{
-                  left: `${Math.min(Math.max(lx, 15), 85)}%`,
-                  top: `${ly}%`,
-                  transform: below
-                    ? "translate(-50%, 16px)"
-                    : "translate(-50%, calc(-100% - 16px))",
-                }}
-                aria-live="polite"
-              >
-                <div className="font-serif font-semibold">{hoveredReg.name}</div>
-                <div className="text-muted">
-                  {hoveredReg.city}, {hoveredReg.state}
-                  {hoveredReg.foundedYear
-                    ? ` · founded ${hoveredReg.foundedYear}`
-                    : ""}
-                  {hoveredReg.closedYear ? `, closed ${hoveredReg.closedYear}` : ""}
-                </div>
-                <div className="text-muted mt-1">
-                  {hoveredReg.kind === "congregation"
-                    ? "Non-Catholic Lithuanian congregation — historical witness."
-                    : hoveredReg.depth === "multi-source"
-                      ? "Documented in multiple sources."
-                      : "Documented in a single source so far — research continues."}
-                </div>
-                <div className="text-muted mt-1 text-xs">
-                  Documented in: {hoveredReg.documentedIn.join(" · ")}
-                  {hoveredReg.hasConflicts ? " · source variants recorded" : ""}
-                </div>
-                <div className="text-muted mt-1 italic text-xs">
-                  {hoveredReg.kind === "parish"
-                    ? "Click to open its research profile."
-                    : "Part of the record — shown as historical witness."}
-                </div>
+                {hovered.profile && (
+                  <div className="mt-1.5 font-medium underline">Open the parish record →</div>
+                )}
               </div>
             );
           })()}
@@ -431,13 +451,11 @@ export default function ParishMap() {
           <div className="absolute left-2 bottom-2 rounded-lg bg-background/90 border border-rule px-3 py-2">
             <div className="font-serif text-2xl font-semibold tabular-nums">{year}</div>
             <div className="text-sm">
-              <span className="font-medium">{counts.active}</span> standing
+              <span className="font-medium">{counts.alive}</span> alive
               {counts.lost > 0 && (
                 <>
                   {" · "}
-                  <span style={{ color: "var(--mark-closed)" }}>
-                    {counts.lost} lost
-                  </span>
+                  <span style={{ color: "var(--mark-closed)" }}>{counts.lost} lost</span>
                 </>
               )}
             </div>
@@ -445,148 +463,108 @@ export default function ParishMap() {
         )}
       </div>
 
-      {/* Timeline control */}
-      <div className="mt-3 rounded-lg border border-rule px-4 py-3">
-        {!timelineMode ? (
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <p className="text-sm text-muted">
-              Watch the parishes rise and fall — {minYear} to {END_YEAR}.
-            </p>
-            <button
-              type="button"
-              onClick={startTimeline}
-              className="rounded-md px-4 py-1.5 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
-              style={{ background: "var(--mark-closed)" }}
-            >
-              ▶ Play the timeline
+      {/* Timeline scrubber */}
+      {timelineMode && (
+        <div className="mt-3 rounded-lg border border-rule px-4 py-3">
+          <div className="flex items-center gap-3">
+            <button type="button" onClick={() => setPlaying((p) => !p)} className={btn} aria-label={playing ? "Pause" : "Play"}>
+              {playing ? "❚❚" : "▶"}
             </button>
+            <input
+              type="range"
+              min={minYear}
+              max={END_YEAR}
+              value={year ?? minYear}
+              onChange={(e) => {
+                setPlaying(false);
+                setYear(Number(e.target.value));
+              }}
+              aria-label="Year"
+              className="flex-1 accent-[var(--mark-closed)]"
+            />
           </div>
-        ) : (
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-3">
-              <button
-                type="button"
-                onClick={() => setPlaying((p) => !p)}
-                className={btn}
-                aria-label={playing ? "Pause" : "Play"}
-              >
-                {playing ? "❚❚" : "▶"}
-              </button>
-              <input
-                type="range"
-                min={minYear}
-                max={END_YEAR}
-                value={year}
-                onChange={(e) => {
-                  setPlaying(false);
-                  setYear(Number(e.target.value));
-                }}
-                aria-label="Year"
-                className="flex-1 accent-[var(--mark-closed)]"
-              />
-              <button type="button" onClick={exitTimeline} className={btn}>
-                Show all
-              </button>
-            </div>
-            <div className="flex justify-between text-xs text-muted tabular-nums px-9">
-              <span>{minYear}</span>
-              <span>1950</span>
-              <span>1980</span>
-              <span>{END_YEAR}</span>
-            </div>
+          <div className="flex justify-between text-xs text-muted tabular-nums px-9 mt-1">
+            <span>{minYear}</span>
+            <span>1950</span>
+            <span>1980</span>
+            <span>{END_YEAR}</span>
           </div>
-        )}
-      </div>
+        </div>
+      )}
 
+      {/* Caption */}
       <div className="mt-3 min-h-14 rounded-lg border border-rule px-4 py-2.5 text-sm">
         {timelineMode ? (
           <span className="text-muted">
-            The timeline places the {dated.length} parishes with a documented
-            founding year. {undatedCount} more are in the record without a firm
-            founding date and are being dated from parish histories — the true
-            arc is larger than what shows here. Click any mark for its record.
+            The timeline places the {datedCount} parishes on this map with a
+            documented founding year. {undatedCount} more are in the record
+            without a firm date yet — the true arc is larger than what shows
+            here. Click any mark for its record.
           </span>
         ) : (
           <span className="text-muted">
-            One record — drawn from the full run of <em>Draugas</em> since
-            1909, published parish histories, and contemporary sources.
-            Shape-coded marks are the {usParishes.length} most deeply
-            documented parishes, with full case files — hover to see a parish,
-            click to open its profile. Solid dots are{" "}
-            {regData.counts.parishes} more documented parishes (squares:{" "}
-            {regData.counts.congregations} non-Catholic congregations, shown
-            as historical witness), each labeled by how deeply it is
-            documented so far; this layer never alters the locked figures,
-            which derive from the {usParishes.length}.{" "}
-            {regData.counts.skippedCanada} Canadian parishes and{" "}
-            {regData.counts.skippedNoGeo} not-yet-mapped places are documented
-            but not on this U.S. map. See a parish missing?{" "}
-            <Link href="/report" className="underline hover:text-foreground">
+            One record — every documented parish on one map, drawn from the
+            full run of <em>Draugas</em> since 1909, published parish
+            histories, and contemporary sources. Hover any mark; click to open
+            its record — the United States and Canada together. A handful of
+            not-yet-mapped places are in the record but not yet placed. See a
+            parish missing?{" "}
+            <a href="/report" className="underline hover:text-foreground">
               Report it
-            </Link>
+            </a>
             .
           </span>
         )}
       </div>
 
-      <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
-        <label className="inline-flex items-center gap-1.5 cursor-pointer text-muted hover:text-foreground transition-colors">
-          <input
-            type="checkbox"
-            checked={showRecord}
-            onChange={(e) => {
-              setShowRecord(e.target.checked);
-              if (!e.target.checked) setHoveredReg(null);
-            }}
-            className="accent-[var(--mark-closed)]"
-          />
-          <svg width={14} height={14} viewBox="0 0 14 14" aria-hidden>
-            <circle cx={7} cy={7} r={4.2} fill="var(--foreground)" fillOpacity={0.5} />
-          </svg>
-          Research record ({regData.counts.parishes} more parishes) — beyond the
-          83
-        </label>
-        {showRecord && !timelineMode && (
-          <span className="inline-flex items-center gap-1.5 text-muted">
-            <svg width={14} height={14} viewBox="0 0 14 14" aria-hidden>
-              <rect
-                x={3.2}
-                y={3.2}
-                width={7.6}
-                height={7.6}
-                fill="none"
-                stroke="var(--foreground)"
-                strokeOpacity={0.6}
-                strokeWidth={1.4}
-              />
-            </svg>
-            Non-Catholic congregation ({regData.counts.congregations})
-          </span>
-        )}
+      {/* Legend */}
+      <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted">
         {timelineMode ? (
           <>
-            <span className="inline-flex items-center gap-1.5">
-              <svg width={14} height={14} viewBox="0 0 14 14" aria-hidden>
-                <circle cx={7} cy={7} r={5} fill="var(--foreground)" />
-              </svg>
-              Standing that year
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <svg width={14} height={14} viewBox="0 0 14 14" aria-hidden>
-                <circle cx={7} cy={7} r={5} fill="none" stroke="var(--mark-closed)" strokeWidth={1.6} />
-              </svg>
-              Lost by then
-            </span>
+            <Swatch fill="var(--mark-ink)" label="Alive that year" />
+            <Swatch fill="var(--mark-closed)" label="Lost by then" />
           </>
         ) : (
-          ENDING_MODE_ORDER.map((mode) => (
-            <span key={mode} className="inline-flex items-center gap-1.5">
-              <MarkIcon mode={mode} />
-              {ENDING_MODE_LABEL[mode]}
-            </span>
-          ))
+          <>
+            <Swatch fill="var(--mark-ink)" label={`Open today (${statusCounts.open})`} />
+            <Swatch fill="var(--mark-community)" ring label={`Under threat (${statusCounts.threat})`} />
+            <Swatch fill="var(--mark-closed)" label={`Lost (${statusCounts.lost})`} />
+            <Swatch hollow label={`Fate not yet established (${statusCounts.unknown})`} />
+          </>
         )}
       </div>
     </div>
+  );
+}
+
+function Swatch({
+  fill,
+  label,
+  hollow,
+  ring,
+}: {
+  fill?: string;
+  label: string;
+  hollow?: boolean;
+  ring?: boolean;
+}) {
+  return (
+    <span className="inline-flex items-center gap-1.5">
+      <svg width={16} height={16} viewBox="0 0 16 16" aria-hidden>
+        {ring && (
+          <circle cx={8} cy={8} r={7} fill="none" stroke="var(--mark-community)" strokeOpacity={0.55} strokeWidth={1.3} />
+        )}
+        <circle
+          cx={8}
+          cy={8}
+          r={4.6}
+          fill={hollow ? "none" : fill}
+          stroke={hollow ? "var(--foreground)" : "var(--background)"}
+          strokeOpacity={hollow ? 0.45 : 1}
+          strokeWidth={hollow ? 1.4 : 0.8}
+        />
+      </svg>
+      {label}
+    </span>
   );
 }

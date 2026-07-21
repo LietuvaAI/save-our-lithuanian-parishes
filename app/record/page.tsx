@@ -28,11 +28,20 @@ interface RegParish {
     founded?: { value: string }[];
     closed?: { value: string }[];
   };
+  sources?: { ethnic_status?: string }[];
   record_depth: RegistryRow["depth"];
 }
 
 function buildRows(): RegistryRow[] {
-  const regs = (registry as { parishes: RegParish[] }).parishes;
+  const regs = (registry as { parishes: RegParish[] }).parishes
+    // Settlements/memorial associations whose own sources say "no parish"
+    // are documented history, but this is the parish record — parishes only.
+    .filter(
+      (p) =>
+        !(p.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? "")) &&
+        // Scope: US + Canada; mis-coded Argentina entries excluded (upstream fix filed).
+        !/buenos aires|argentin|rosario/i.test(p.city ?? "")
+    );
   return regs.map((p) => {
     // c83_row is the 1-based row in the canonical CSV = lib parishes order;
     // sanity-check by city so a misalignment can never link the wrong profile.

@@ -2,27 +2,53 @@ import Link from "next/link";
 import ParishMap from "@/components/ParishMap";
 import { figures } from "@/lib/parishes";
 import alertsData from "@/data/alerts.json";
+import registry from "@/data/registry-unified.json";
+
+// Record-level figures derive from the unified registry (never hand-typed).
+const regParishes = (
+  registry as {
+    parishes: {
+      locked?: { year_founded?: string };
+      years?: { founded?: { value: string }[] };
+      sources?: { ethnic_status?: string }[];
+    }[];
+  }
+).parishes;
+// A few registry entries are settlements/memorial associations whose own
+// source notes say "no parish" (e.g. the 1852 Texas enclave). This record
+// counts parishes and congregations — not settlements.
+const isRealParish = (p: (typeof regParishes)[number]) =>
+  !(p.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? ""));
+// Scope: US + Canada. Mis-coded Argentina entries stay out (flagged upstream).
+const isNorthAmerica = (p: { city?: string }) =>
+  !/buenos aires|argentin|rosario/i.test(p.city ?? "");
+const REG_TOTAL = regParishes.filter(
+  (p) => isRealParish(p) && isNorthAmerica(p as { city?: string })
+).length;
 
 const STATS = [
   {
+    value: String(REG_TOTAL),
+    label:
+      "Lithuanian parishes and congregations documented across the U.S. and Canada — from the first foundings to today",
+    tone: "ink",
+  },
+  {
     value: String(figures.usTotal),
-    label: "Lithuanian parishes across America, documented over eighteen years",
+    label:
+      "verified in depth in the Draugas 2008–2026 core — every fact traced to a dated, published issue",
     tone: "ink",
   },
   {
     value: String(figures.endingMode.diocese_closed),
-    label: "closed, merged away, suppressed, or demolished by diocesan decision",
+    label:
+      "closed, merged away, suppressed, or demolished by diocesan decision since 2008",
     tone: "red",
   },
   {
     value: `${figures.endingMode.diocese_closed} of ${figures.endingMode.diocese_closed}`,
     label: "of those closed parishes were diocese-owned. No exception.",
     tone: "red",
-  },
-  {
-    value: String(figures.communityOwned.closedByOutsideAuthority),
-    label: "community-owned parishes were ever closed by an outside authority",
-    tone: "ink",
   },
 ];
 
@@ -55,14 +81,18 @@ export default function Home() {
     <div className="mx-auto max-w-5xl px-4">
       <section className="pt-12 sm:pt-16 text-center">
         <p className="text-sm uppercase tracking-widest text-muted mb-3">
-          The record of America&rsquo;s Lithuanian parishes
+          Every parish, from the very beginning
         </p>
         <h1 className="font-serif text-3xl sm:text-5xl font-semibold leading-tight max-w-3xl mx-auto">
-          Who decides whether a Lithuanian parish survives?
+          The public record of America&rsquo;s Lithuanian parishes
         </h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg leading-relaxed text-muted">
-          Not faith. Not money. Not the fight that comes too late —
-          ownership decided every ending. We stand for one goal:{" "}
+          Lithuanian immigrants built more than two hundred parishes across
+          America — churches and schools, choirs and cemeteries: our
+          historical, cultural, and spiritual inheritance. No one kept their
+          record. Now it is kept here — every parish we can document, from
+          the very first foundings to the communities deciding their future
+          today. And we stand for one goal:{" "}
           <strong className="text-foreground">
             that what Lithuanian communities built stays in their hands
           </strong>{" "}
@@ -226,23 +256,27 @@ export default function Home() {
           The communities built them
         </h2>
         <p className="mt-4 leading-relaxed">
-          Lithuanian immigrants raised these churches with their own hands and
-          their own wages — and, since 1884, the deed to nearly every Roman
-          Catholic parish has rested not with the community that built it, but
-          with the diocese. Within these 83 parishes, the record shows that
-          neither solvency, nor petitions, nor lawsuits, nor appeals filed
-          after the decree ever reversed a closure — the only parishes never
-          closed by an outside authority are the ones the community itself
-          controlled.
+          Lithuanian immigrants raised these churches with their own hands
+          and their own wages — and around each one grew a world: a school, a
+          choir, a cemetery, a language kept alive an ocean from home. This
+          record documents all of them. The parishes that closed — and what
+          became of their communities and their buildings afterward. The
+          parishes still standing — and what has kept them alive. The ones
+          fighting for their future right now. What happened to each, where
+          each stands today, and what every community can learn from the
+          others.
         </p>
         <p className="mt-4 leading-relaxed">
-          Nationally, Rome <em>has</em> reversed closures —{" "}
+          The record teaches in both directions. From the parishes that were
+          lost: ownership shaped endings — the deed rested with the diocese,
+          and no solvency, petition, or late appeal ever reversed a closure.
+          From the parishes that fought and won: procedure, in time, works —
+          Rome has reversed closures{" "}
           <Link href="/reversals" className="underline hover:text-accent">
             twenty-six documented times
           </Link>
-          , when parishioners moved on procedure before and during the window,
-          not after. Both lessons are this site&rsquo;s work: ownership decides
-          endings, and procedure, in time, is the only fight that has ever won.
+          , when parishioners moved before and during the canonical window.
+          We keep both lessons so no community has to learn them alone.
         </p>
         <p className="mt-4 leading-relaxed">
           That is not an argument — it is the record: every entry traces to a

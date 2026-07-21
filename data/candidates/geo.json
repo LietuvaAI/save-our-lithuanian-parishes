@@ -304,5 +304,17 @@
     "lon": -80.6520161,
     "source": "nominatim",
     "place": "Youngstown, Mahoning County, Ohio, United States"
+  },
+  "Hartshorne|IN": {
+    "lat": 34.8451,
+    "lon": -95.5572,
+    "source": "manual",
+    "place": "Hartshorne, Pittsburg County, OKLAHOMA (registry state typo IN; flagged brain #420)"
+  },
+  "Kansas City|KA": {
+    "lat": 39.1141,
+    "lon": -94.6275,
+    "source": "manual",
+    "place": "Kansas City KS (registry state typo KA; flagged brain #420)"
   }
 }

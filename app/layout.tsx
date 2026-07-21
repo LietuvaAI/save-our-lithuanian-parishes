@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s — Save Our Lithuanian Parishes",
   },
   description:
-    "The record of America's Lithuanian parishes — who built them, who closed them, and what decides which ones survive.",
+    "The public record of America's Lithuanian parishes — every parish we can document, what happened to it, where it stands today, and what communities can learn from each other.",
 };
 
 const NAV = [
@@ -76,15 +76,17 @@ export default function RootLayout({
         <footer className="border-t border-rule mt-16">
           <div className="mx-auto max-w-5xl px-4 py-8 text-sm text-muted space-y-2">
             <p>
-              Working for one goal: civil title to Lithuanian parishes aligned
-              with{" "}
+              The public record of America&rsquo;s Lithuanian parishes — what
+              happened to each, where each stands now, and what communities
+              can learn from one another. And one commitment: that what
+              Lithuanian communities built stays in their hands, as{" "}
               <Link
                 href="/what-canon-law-says"
                 className="underline hover:text-foreground"
               >
-                what the Church&rsquo;s own law already says
-              </Link>{" "}
-              — a parish&rsquo;s property belongs to the parish.
+                even the Church&rsquo;s own law provides
+              </Link>
+              .
             </p>
             <p>
               Every figure on this site is recalculated automatically from
