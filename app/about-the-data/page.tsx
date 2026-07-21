@@ -36,9 +36,10 @@ export default function AboutTheDataPage() {
           depth in per-parish case files. The headline figures — 83
           documented, 55 closed by diocesan decision, 55 of 55 diocese-owned,
           0 community-owned parishes closed by an outside authority — are{" "}
-          <em>locked</em>: they are re-derived from the parish record at every
-          build, and if a derived figure ever disagrees with the verified
-          research, the build fails and the site does not publish.
+          <em>locked</em>: they are recalculated automatically from the
+          parish record every time the site is updated, and if a recalculated
+          figure ever disagrees with the verified research, the update is
+          blocked until the discrepancy is resolved.
         </p>
         <p className="mt-2 leading-relaxed">
           Citations link to the dated issue wherever the digitized archive

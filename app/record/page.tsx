@@ -159,9 +159,11 @@ export default function RecordPage() {
           Church&rsquo;s own procedures — the precedent record.
         </p>
         <p className="text-sm text-muted">
-          Every figure on this site re-derives from this record at build
-          time, and the site refuses to publish if a number drifts from the
-          verified research. The dataset is open —{" "}
+          None of the numbers on this site are typed in by hand. They are
+          recalculated automatically from this record every time the site is
+          updated — and if a number ever disagrees with the verified
+          research, the update is blocked until the discrepancy is resolved.
+          The dataset is open —{" "}
           <a
             href="https://github.com/LietuvaAI/save-our-lithuanian-parishes"
             className="underline hover:text-foreground"
