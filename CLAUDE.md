@@ -1,6 +1,6 @@
 # CLAUDE.md — save-our-lithuanian-parishes
 
-> **Model-tier routing (always-on).** Which model each sub-task runs on: mechanical grind (git/files/scripts/bulk lookups/OCR/inventory) → Haiku (per-call model override, or the `ops` agent in culturenet-brain); standard edits/drafting → Sonnet; judgment/synthesis/review → premium. Narrate the tier when you route; never fan out `general-purpose` subagents. Canon: `culturenet-brain/docs/systems/model-tier-routing-2026-07.md`.
+> **Model-tier routing (always-on).** Which model each sub-task runs on: mechanical grind (git/files/scripts/bulk lookups/OCR/inventory/**bulk extraction fan-outs**) → Haiku via the **`ops` agent** (`.claude/agents/ops.md`, pinned to Haiku — use it here, not just in culturenet-brain); standard edits/drafting → Sonnet; judgment/synthesis/review → premium. In a Workflow, bulk fan-outs use `agentType: 'ops'` (or `model: 'haiku'` at minimum) — **never fan out `general-purpose`**. Narrate the tier when you route. Canon: `culturenet-brain/docs/systems/model-tier-routing-2026-07.md`.
 
 Public advocacy site for SaveOurLithuanianParishes.org. This is a **product repo** in the LietuvaAI system — the master control stack lives in `culturenet-brain` (`DECISIONS.md`, `docs/systems/switchboard.md`, `docs/systems/agent-guardrails.md`, `docs/systems/agent-git-operating-model.md`). Read those for routing, tiers, and git lifecycle; this file holds only repo-local rules.
 
