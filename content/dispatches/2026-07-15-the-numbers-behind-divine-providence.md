@@ -3,7 +3,7 @@ title: "The Numbers Behind Divine Providence"
 subtitle: "Across all 209 Archdiocese of Detroit parishes, one small Lithuanian parish inverts every assumption — bottom on scale, top 5% on resource depth, already back in the black."
 date: 2026-07-15
 substackUrl: https://blog.saveourlithuanianparishes.org/p/the-numbers-behind-divine-providence
-archivedAt: 2026-07-17
+archivedAt: 2026-07-21
 ---
 As part of its current restructuring, the Archdiocese of Detroit produced a workbook for each of its parishes. Read Divine Providence’s workbook alone, and the story is grim: a small, aging Lithuanian parish running a deficit. But the Archdiocese produced these workbooks for all 209 of its parishes, across 15 Planning Areas. Read together, they tell a very different story about the same parish.
 
@@ -87,3 +87,5 @@ None of this relitigates the attendance number. Divine Providence is small, and 
 *This benchmark reads Divine Providence against 29 Archdiocese of Detroit parish workbooks published in March 2026, covering all 209 parishes across 15 Planning Areas, with the financial trajectory updated from the parish’s own February 2026 bulletin.*
 
 *A note on method: every figure here comes from the Archdiocese of Detroit’s own FY24/25 parish workbook for all 209 parishes. “Per weekly attendee” and “years of runway” are computed from reported Mass attendance and net income, and each ranking is among the parishes that report that particular field. Nothing here is estimated or adjusted — it is the Archdiocese’s data, read a different way.*
+
+*Verify every figure yourself: Divine Providence’s own workbook is published by the Archdiocese at https://aod.filecamp.com/s/i/Cz1cVR5GPmBIEMgf — and all 209 parish workbooks are at https://restructuring.aod.org/parish-workbooks. The current-year figures come from the parish’s February 2026 bulletin, as labeled above. Check any number in this piece against the source.*

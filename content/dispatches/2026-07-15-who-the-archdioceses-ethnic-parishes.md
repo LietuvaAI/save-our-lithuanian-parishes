@@ -1,15 +1,15 @@
 ---
-title: "By the Numbers: The Archdiocese's 13 Ethnic Parishes"
+title: "By the Numbers: The Archdiocese of Detroit 13 Ethnic Parishes"
 subtitle: "The 13 parishes in the Archdiocese of Detroit defined by heritage rather than neighborhood — who they are, what their books look like, and where Divine Providence sits among them."
 date: 2026-07-15
 substackUrl: https://blog.saveourlithuanianparishes.org/p/who-the-archdioceses-ethnic-parishes
-archivedAt: 2026-07-17
+archivedAt: 2026-07-21
 ---
 Long before Divine Providence, ethnic parishes were the Archdiocese of Detroit. The whole story begins with one — Ste. Anne de Détroit, founded by French colonists on July 26, 1701, the second-oldest continuously operating Catholic parish in the United States, and the cathedral of the diocese when Rome erected it in 1833.
 
-As wave after wave arrived — Irish, then Germans, then Poles in the 1850s, and later Belgians, Italians, Hungarians, Lithuanians, and more — each community built its own church, in its own language, with its own hands and money. These were “national” parishes: gathered around a people and a rite, not a neighborhood. When Polish immigrants were pushed to the back pews of a German parish, they organized St. Albertus in 1871 — the first Polish parish in Detroit and the mother church of its Polonia. By 1933 the Gospel was preached in Detroit in twenty-two languages, and of the Archdiocese’s ninety-eight parishes, roughly a third — thirty-two — were national ones.
+As wave after wave arrived — Irish, then Germans, then Poles in the 1850s, and later Belgians, Italians, Hungarians, Lithuanians, and more — each community built its own church, in its own language, with its own hands and money. These were “national” parishes: gathered around a people and a rite, not a neighborhood. When Polish immigrants were pushed to the back pews of a German parish, they organized St. Albertus in 1871 — the first Polish parish in Detroit and the mother church of its Polonia. The Gospel was preached in Detroit in the languages of all these communities — the Archdiocese’s own register of closed parishes still reads like a roll call of them: Our Lady of Guadalupe, the Mexican parish, 1920–1957; St. Paul, the Maltese parish, 1920–1961.
 
-This was no sideshow. As the auto plants turned Detroit into a boomtown — Ford, Dodge, and Packard drawing Poles, Italians, and Hungarians by the tens of thousands — the immigrant church rose at the same furious pace: in the 1920s alone, forty-six new churches were founded in the city. Their people built the largest churches in the state. Sweetest Heart of Mary, raised by Detroit’s Poles and dedicated in 1893, drew more than 10,000 to its opening and is still the largest church in the city; St. Florian, built for the Poles who came to work at Dodge, was the second-largest parish in Detroit by the 1920s. The schools, charities, and institutions that became the Archdiocese were, in large part, immigrant-built.
+As the auto plants turned Detroit into a boomtown — Ford, Dodge, and Packard drawing Poles, Italians, and Hungarians by the tens of thousands — the immigrant church rose at the same pace: in the 1920s alone, forty-six new churches were founded in the city. Their people built the largest churches in the state. Sweetest Heart of Mary, raised by Detroit’s Poles and dedicated in 1893, drew more than 10,000 to its opening and is still the largest Catholic church in Michigan; St. Florian, built for the Poles who came to work at Dodge, was the second-largest parish in Detroit by the 1920s. The schools, charities, and institutions that became the Archdiocese were, in large part, immigrant-built.
 
 The ethnic parishes didn’t appear alongside the Archdiocese of Detroit. They built it. The thirteen that remain are what’s left of that backbone.
 
@@ -25,19 +25,19 @@ By raw size, Divine Providence sits near the bottom. By what it holds per parish
 ![](https://substackcdn.com/image/fetch/$s_!gs4e!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbcfc4947-f170-4fe9-a848-96dff5bf39cb_1700x1071.png)
 ### The ethnic parishes as a set
 
-Step back and look at the thirteen as a category, and a pattern emerges. As a group, the ethnic parishes are smaller than the rest of the Archdiocese — a median of 386 weekly, against 538 elsewhere. But they are markedly leaner and better-capitalized. Every single one is debt-free, against 88% of the rest of the Archdiocese, and their median reserves per parishioner run higher ($2,240 versus $1,680). These are small, self-reliant communities that have quietly been funding themselves. Divine Providence is the most extreme example of that pattern — but it is a pattern, not an exception.
+As a group, the ethnic parishes are smaller than the rest of the Archdiocese — a median of 386 weekly, against 538 elsewhere — and markedly leaner. Every one of the thirteen is debt-free, against 88% of the rest, and their median reserves per parishioner run higher: $2,240 versus $1,680. These are small, self-reliant communities that have been funding themselves. Divine Providence is the most extreme example of that pattern — but it is a pattern, not an exception.
 ![](https://substackcdn.com/image/fetch/$s_!7b4S!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F07d341bd-a016-43ad-9135-539eaa9cb0d2_1870x918.png)
 ### A backbone that still holds
 
-Look at the thirteen together and the founders’ pattern is still visible. As a group they hold roughly $14.2 million in unrestricted reserves and, in the most recent year, ran a combined surplus of nearly $1 million — seven of the thirteen in the black. These are not wards of the Archdiocese; they are among its most self-reliant units.
+Taken together, the thirteen still show the founders’ pattern. As a group they hold roughly $14.2 million in unrestricted reserves and, in the most recent year, ran a combined surplus of nearly $1 million — seven of the thirteen in the black. These are not wards of the Archdiocese; they are among its most self-reliant units.
 
-Nor are they spent. In 2024 the thirteen produced 1,141 life-giving sacraments — 355 baptisms, 335 first communions, 277 confirmations, and 122 marriages — against 188 funerals. That is six new-life sacraments for every funeral.
+Nor are they spent. In 2024 the thirteen produced 1,089 life-giving sacraments — 355 baptisms, 335 first communions, 277 confirmations, and 122 marriages — against 188 funerals. That is very nearly six new-life sacraments for every funeral.
 ![](https://substackcdn.com/image/fetch/$s_!bMxq!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd1eb0ea1-14f1-4786-bbad-853ca48e967e_1700x951.png)
 What has thinned is the crowd inside the walls, not the mission. Most of these are the large historic churches the immigrants built for congregations several times today’s size, so as a set they fill only about a fifth of their seats — a median 21% capacity utilization. Divine Providence is the striking exception: at 48%, it is the fullest ethnic parish in the Archdiocese.
 
 ### Ethnic parishes vs. the rest of the Archdiocese
 
-Set the thirteen beside the other 196 parishes in the Archdiocese and the pattern is stark: ethnic parishes lose on the metrics built for a neighborhood, and win on the ones that measure a living church.
+Set the thirteen beside the other 196 parishes and the split is plain: ethnic parishes lose on the metrics built for a neighborhood, and win on the ones that measure a living church.
 
 Start with the yardstick the Archdiocese leans on. By capacity used — bodies against building size — the ethnic parishes fill a median 21% of their pews, against 30% for everyone else. But these are the grand churches immigrants built for crowds several times today’s size, filled by members who drive in from across the region rather than the block. It measures the building, not the faith.
 ![](https://substackcdn.com/image/fetch/$s_!I7-z!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcb807862-6b53-4b58-967b-9d2e73fdab45_1119x703.png)
@@ -67,15 +67,20 @@ Parish financial and sacramental figures are drawn from the Archdiocese of Detro
 Ste. Anne de Détroit (founded 1701), second-oldest continuously operating Catholic parish in the U.S. — [Basilica of Ste. Anne de Détroit](https://ste-anne.org/about-us/parish-history/); [Wikipedia](https://en.wikipedia.org/wiki/Basilica_of_Sainte_Anne_de_D%C3%A9troit).
 
 - 
-National parishes, twenty-two languages, and St. Albertus (1871), Detroit’s first Polish parish — [Historic Detroit](https://historicdetroit.org/buildings/st-albertus-roman-catholic-church); [Archdiocese of Detroit, “History of the Archdiocese”](https://www.aod.org/history-of-the-archdiocese).
+National parishes and St. Albertus (1871), Detroit’s first Polish parish — [Historic Detroit](https://historicdetroit.org/buildings/st-albertus-roman-catholic-church); [Archdiocese of Detroit, “History of the Archdiocese”](https://www.aod.org/history-of-the-archdiocese).
+
+- 
+Our Lady of Guadalupe, Mexican (1920–1957), and St. Paul, Maltese (1920–1961) — Archdiocese of Detroit, closed-parishes register.
 
 - 
 The 1920s church-building boom under Bishop Michael Gallagher — [Archdiocese of Detroit](https://www.aod.org/history-of-the-archdiocese); [Community in Mission (blog.adw.org)](https://blog.adw.org/2017/07/a-magnificent-description-of-the-immigrant-church-of-1900-1950/).
 
 - 
-Sweetest Heart of Mary, largest church in the city — [Wikipedia](https://en.wikipedia.org/wiki/Sweetest_Heart_of_Mary_Roman_Catholic_Church); [National Catholic Register](https://www.ncregister.com/features/reflecting-mary-s-heart-sweetest-heart-of-mary-church-is-hallmark-of-motor-city-s-history).
+Sweetest Heart of Mary, largest Catholic church in Michigan — Wikipedia; Historic Detroit.
 
 - 
 St. Florian, Hamtramck, and the Polish auto-industry migration — [Wikipedia](https://en.wikipedia.org/wiki/St._Florian_Church_(Hamtramck,_Michigan)).
 
-*A note on method: figures are drawn from the Archdiocese of Detroit’s own FY24/25 parish workbook covering all 209 parishes. Two of the thirteen ethnic parishes (St. Paul, Albanian, and Our Lady of Częstochowa, Polish) report sacraments but no weekly Mass attendance; any figure expressed “per worshipper” therefore uses the eleven parishes that report both, while cohort totals and per-funeral ratios use all thirteen. “Rest of the Archdiocese” means the other 196 parishes, excluding the ethnic thirteen.*
+*A note on method: figures are drawn from the Archdiocese of Detroit’s own FY24/25 parish workbooks covering all 209 parishes. Two of the thirteen ethnic parishes (St. Paul, Albanian, and Our Lady of Częstochowa, Polish) report sacraments but no weekly Mass attendance; any figure expressed “per worshipper” therefore uses the eleven parishes that report both, while cohort totals and per-funeral ratios use all thirteen. “Rest of the Archdiocese” means the other 196 parishes, excluding the ethnic thirteen.*
+
+*Verify every figure yourself: the Archdiocese publishes each parish’s workbook at https://restructuring.aod.org/parish-workbooks — and the thirteen directly: SS. Cyril & Methodius https://aod.filecamp.com/s/i/PE1dR6RlhYtB3FUt · St. Andrew Kim https://aod.filecamp.com/s/i/s2v69JcXIuQkqd3n · Our Lady of Albanians https://aod.filecamp.com/s/i/r98H3u9pgN0FzYd4 · St. Barbara https://aod.filecamp.com/s/i/ngpq23tD1QWdkXUl · Our Lady of Grace https://aod.filecamp.com/s/i/OcEbwOYB50lNSJHZ · San Francesco https://aod.filecamp.com/s/i/L6YBT6rBaYhwaHVF · Holy Cross https://aod.filecamp.com/s/i/oUaTCXap7dUJ6ptb · SS. Peter & Paul https://aod.filecamp.com/s/i/OavRRrki0uFsiL0c · Holy Family https://aod.filecamp.com/s/i/2XJCUECAfKCINTHP · Divine Providence https://aod.filecamp.com/s/i/Cz1cVR5GPmBIEMgf · St. Lucy https://aod.filecamp.com/s/i/AU1Oj2y0658DXGXQ · St. Paul https://aod.filecamp.com/s/i/xG4tjXBVIq9asUEC · Our Lady of Częstochowa https://aod.filecamp.com/s/i/xufaO8GA91Oz1trP. Check any number in this piece against the parish’s own book.*

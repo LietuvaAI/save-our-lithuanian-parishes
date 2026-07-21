@@ -1,14 +1,15 @@
 ---
-title: "How You Can Help Save Our Lithuanian Parishes"
+title: "How You Can Help Save Detroit's Divine Providence Lithuanian Parish"
 subtitle: "Five things you can do right now to protect Divine Providence — starting with the Archdiocese survey, open until July 31."
 date: 2026-07-15
 substackUrl: https://blog.saveourlithuanianparishes.org/p/how-you-can-help-save-our-lithuanian
-archivedAt: 2026-07-17
+archivedAt: 2026-07-21
 ---
+**Update:** This post remains as the Divine Providence-specific guide. For the latest urgent requests across parishes, start with [Active Campaigns](https://blog.saveourlithuanianparishes.org/p/active-campaigns). For general ways to support the work, see [How You Can Help](https://blog.saveourlithuanianparishes.org/p/how-you-can-help-save-americas-lithuanian).
 ![](https://substackcdn.com/image/fetch/$s_!jWuA!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F728151e6-afd1-4e8f-9287-91eb579384af_1600x1200.jpeg)
 **A parish is people.**
 
-It is hundreds of baptisms, weddings, and funerals. It is Sunday Mass, the choir's hymns, the rosary prayed aloud, the Stations of the Cross, children's laughter in the school hallways, scout meetings, folk-dance rehearsals, and the shared work that has carried on for decades.
+It is hundreds of baptisms, weddings, and funerals. It is Sunday Mass, the choir’s hymns, the rosary prayed aloud, the Stations of the Cross, children’s laughter in the school hallways, scout meetings, folk-dance rehearsals, and the shared work that has carried on for decades.
 
 It is generations of people who gave their time, their labor, their money, and their hearts so that this place could live.
 
@@ -45,9 +46,9 @@ The case for Divine Providence is strong — and now it is documented. Share the
 [The Numbers Behind Divine Providence](https://saveourlithuanianparishes.substack.com/p/the-numbers-behind-divine-providence) — bottom on scale, top 5% on resources, already back in the black.
 
 - 
-[By the Numbers: The Archdiocese's 13 Ethnic Parishes](https://saveourlithuanianparishes.substack.com/p/who-the-archdioceses-ethnic-parishes) — the communities that built the Archdiocese.
+[By the Numbers: The Archdiocese’s 13 Ethnic Parishes](https://saveourlithuanianparishes.substack.com/p/who-the-archdioceses-ethnic-parishes) — the communities that built the Archdiocese.
 
-### 3. Speak up — with warmth
+### 3. Speak up
 
 If you attend a listening session, keep it prayerful and cooperative. We are discerning our future together with our shepherds, not fighting them. Lead with faith; let culture, school, and scouts follow as its fruit. One true, personal story is worth more than ten arguments.
 
@@ -59,6 +60,4 @@ Send this publication to anyone connected to Divine Providence — especially th
 
 Questions, stories, or want to help organize? Email us at [info@saveourlithuanianparishes.org](mailto:info@saveourlithuanianparishes.org), and subscribe below for updates as the restructuring unfolds.
 
----
-
-*Faith first. Culture as its vessel. The mission — for the next generation.*
+Thanks for reading Save Our Lithuanian Parishes! Subscribe for free to receive new posts and support our work.

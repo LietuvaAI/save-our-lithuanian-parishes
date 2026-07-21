@@ -3,7 +3,7 @@ title: "Closed by the Diocese, Reopened by Rome"
 subtitle: "The Vatican has its own rulebook for shutting a church — the reasons that don’t count, the steps that make a decree void, and the ethnic parish Rome ordered reopened."
 date: 2026-07-16
 substackUrl: https://blog.saveourlithuanianparishes.org/p/a-closure-done-wrong-is-not-a-closure
-archivedAt: 2026-07-17
+archivedAt: 2026-07-21
 ---
 ![](https://substackcdn.com/image/fetch/$s_!ty0P!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa29ba6b3-2e3c-44b8-a09d-79ab5b17bd51_1280x1640.jpeg)
 *St. Casimir Church on Sowinski Avenue, Cleveland — an ethnic parish built by the city’s Polish Catholics, closed by the diocese in 2009 and reopened by order of the Vatican in 2012. Photo: Tim Evanson, CC BY-SA 2.0.*
@@ -81,15 +81,15 @@ On 1 March 2012, the Congregation issued its decree (Prot. N. 20120457, signed b
 
 ### Two St. Casimirs, two very different stories
 
-Cleveland is also a lesson in the two paths an ethnic community can take. In the same downsizing, the city’s Lithuanian Catholics saw their two historic parishes — **St. George,** founded by Lithuanian immigrants in 1895, and **Our Lady of Perpetual Help,** from 1929 — suppressed and merged into a single new Lithuanian national parish, confusingly also named St. Casimir, on Neff Road. That new parish kept its national-parish status, and the consecrated church kept its dedication. Two parishes named St. Casimir, two very different outcomes: one Polish community whose church was reopened by Rome after a fought appeal, and one Lithuanian community consolidated into a new home. The point is not which path is right for every parish — it is that **the mechanism that reopened the first is available to any national parish, including ours.**
+Cleveland is also a lesson in the two paths an ethnic community can take. In the same downsizing, the city’s Lithuanian Catholics saw their two historic parishes — **St. George,** founded by Lithuanian immigrants in 1895, and **Our Lady of Perpetual Help,** from 1929 — suppressed and merged into a single new Lithuanian national parish, confusingly also named St. Casimir, on Neff Road. That new parish kept its national-parish status, and the consecrated church kept its dedication. Two parishes named St. Casimir, two very different outcomes: one Polish community whose church was reopened by Rome after a fought appeal, and one Lithuanian community consolidated into a new home. The point is not which path is right for every parish — it is that **the mechanism that reopened the first is available to any national parish — including the Lithuanian ones.**
 
 ### And one Lithuanian parish that never closed at all
 
 Closer to the pattern we hope for: **St. Peter Lithuanian parish in South Boston,** founded 1896. When the Archdiocese of Boston’s 2004 reconfiguration put it under threat, parishioners organized the Friends of St. Peter Lithuanian Parish and raised a “Boston Hill of Crosses,” modeled on Šiauliai’s, as public prayer. The closure never came. In October 2024 the parish marked the 120th anniversary of its church (consecrated 1904), and as of this summer it still gathers for Sunday Mass in Lithuanian — sharing a pastor with neighboring parishes since 2015, which is an operational arrangement, not a closure. Organized, visible, faithful communities are simply harder to close.
 
-### What this means for our parishes
+### What this means for Lithuanian parishes
 
-Honesty requires saying it plainly: appeals are the exception, not the rule, and many were lost — including by Lithuanian communities in our own record. The clock is also merciless: the window for challenging a decree is measured in **days from its publication, not months,** so a community that waits for certainty has usually already lost its standing. (Exact deadlines depend on the decree — this is the moment to engage a canon lawyer, not after.)
+Honesty requires saying it plainly: appeals are the exception, not the rule, and many were lost — including by Lithuanian communities in this record. The clock is also merciless: the window for challenging a decree is measured in **days from its publication, not months,** so a community that waits for certainty has usually already lost its standing. (Exact deadlines depend on the decree — this is the moment to engage a canon lawyer, not after.)
 
 But the verified record supports a clear playbook, and every step of it is loyal to the Church:
 
@@ -132,4 +132,4 @@ Cleveland Lithuanian parishes (St. George and Our Lady of Perpetual Help merged 
 - 
 St. Peter, South Boston: The Boston Pilot (1 November 2019); parish bulletins (2026); South Boston Online (8 November 2024)
 
-*This article summarizes public documents and reporting and is not canonical or legal advice. Every claim above was checked against the cited sources; where reports disagree, we say so. We are seeking review by a canon lawyer — corrections are welcome.*
+*This article summarizes public documents and reporting and is not canonical or legal advice. *

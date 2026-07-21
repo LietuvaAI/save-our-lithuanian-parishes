@@ -3,8 +3,9 @@ title: "A Personal Parish, Not a Place"
 subtitle: "The Church’s own law recognizes parishes defined by a people, not a neighborhood — which is exactly why territorial metrics are the wrong test for an ethnic parish like Divine Providence."
 date: 2026-07-16
 substackUrl: https://blog.saveourlithuanianparishes.org/p/a-personal-parish-not-a-place
-archivedAt: 2026-07-17
+archivedAt: 2026-07-21
 ---
+![](https://substackcdn.com/image/fetch/$s_!b9Yg!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7b129202-70cd-4783-95db-47fdfefda0d0_5712x4284.jpeg)
 When the Archdiocese of Detroit measures Divine Providence by the size of its neighborhood — how many Catholics live nearby, whether another church sits close by — it is applying the wrong law. The Church’s own Code of Canon Law recognizes two kinds of parish, and Divine Providence is the second kind.
 
 ### Two kinds of parish

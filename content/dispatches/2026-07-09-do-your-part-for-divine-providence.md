@@ -3,7 +3,7 @@ title: "Do Your Part for Divine Providence"
 subtitle: "The Archdiocese of Detroit's Listening Session Feedback Survey is open until July 31. Your voice — faith first — still shapes what happens next."
 date: 2026-07-09
 substackUrl: https://blog.saveourlithuanianparishes.org/p/do-your-part-for-divine-providence
-archivedAt: 2026-07-17
+archivedAt: 2026-07-21
 ---
 ![](https://substackcdn.com/image/fetch/$s_!WAyO!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffa962f38-9197-45a6-9763-a9495f5b7b4f_1080x1350.jpeg)
 
