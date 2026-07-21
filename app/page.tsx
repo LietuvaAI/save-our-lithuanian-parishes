@@ -10,6 +10,7 @@ const regParishes = (
     parishes: {
       locked?: { year_founded?: string };
       years?: { founded?: { value: string }[] };
+      sources?: { ethnic_status?: string }[];
     }[];
   }
 ).parishes;
@@ -17,7 +18,13 @@ const asYear = (v?: string | null) => {
   const m = v?.match(/\b(1[89]\d{2}|20[0-2]\d)\b/);
   return m ? Number(m[1]) : null;
 };
+// A few registry entries are settlements/memorial associations whose own
+// source notes say "no parish" (e.g. the 1852 Texas enclave). Their dates
+// are settlement dates, not parish foundings — exclude them from EARLIEST.
+const isRealParish = (p: (typeof regParishes)[number]) =>
+  !(p.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? ""));
 const foundedYears = regParishes
+  .filter(isRealParish)
   .flatMap((p) => [
     asYear(p.locked?.year_founded),
     ...(p.years?.founded ?? []).map((f) => asYear(f.value)),
@@ -29,7 +36,7 @@ const EARLIEST = Math.min(...foundedYears);
 const STATS = [
   {
     value: String(REG_TOTAL),
-    label: `Lithuanian parishes and congregations documented across the U.S. and Canada — the record reaches back to ${EARLIEST}`,
+    label: `Lithuanian parishes, congregations, and communities documented across the U.S. and Canada — the first parish founded in ${EARLIEST}`,
     tone: "ink",
   },
   {
