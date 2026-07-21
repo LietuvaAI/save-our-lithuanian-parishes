@@ -58,7 +58,6 @@ export default function ParishMap() {
   const router = useRouter();
   const [hovered, setHovered] = useState<Parish | null>(null);
   const [hoveredReg, setHoveredReg] = useState<RegPoint | null>(null);
-  const [showRecord, setShowRecord] = useState(true);
   const [view, setView] = useState<View>(FULL);
   const [year, setYear] = useState<number | null>(null); // null = show all
   const [playing, setPlaying] = useState(false);
@@ -68,12 +67,21 @@ export default function ParishMap() {
   const zoom = FULL.w / view.w;
   const timelineMode = year !== null;
 
-  const { dated, undatedCount, minYear } = useMemo(() => {
+  // The timeline spans the WHOLE mapped record: the canonical 83 plus the
+  // research-record layer, every point with a documented founding year.
+  const { dated, regDated, datedTotal, undatedCount, minYear } = useMemo(() => {
     const d = usParishes.filter((p) => p.yearFounded);
-    const years = d.map((p) => p.yearFounded as number);
+    const rd = regData.points.filter((c) => c.foundedYear);
+    const years = [
+      ...d.map((p) => p.yearFounded as number),
+      ...rd.map((c) => c.foundedYear as number),
+    ];
     return {
       dated: d,
-      undatedCount: usParishes.length - d.length,
+      regDated: rd,
+      datedTotal: d.length + rd.length,
+      undatedCount:
+        usParishes.length + regData.points.length - d.length - rd.length,
       minYear: Math.min(...years),
     };
   }, []);
@@ -87,8 +95,13 @@ export default function ParishMap() {
       if (ph === "active") active++;
       else if (ph === "lost") lost++;
     }
+    for (const c of regDated) {
+      const ph = regPhaseAt(c, year);
+      if (ph === "active") active++;
+      else if (ph === "lost") lost++;
+    }
     return { active, lost };
-  }, [year, dated]);
+  }, [year, dated, regDated]);
 
   // Animation: step one year at a time until the end, then stop.
   useEffect(() => {
@@ -205,8 +218,7 @@ export default function ParishMap() {
             strokeOpacity={0.15}
             strokeWidth={0.7 / zoom}
           />
-          {showRecord &&
-            regData.points.map((c) => {
+          {regData.points.map((c) => {
               if (timelineMode && year !== null) {
                 if (regPhaseAt(c, year) === "future") return null;
               }
@@ -501,10 +513,12 @@ export default function ParishMap() {
       <div className="mt-3 min-h-14 rounded-lg border border-rule px-4 py-2.5 text-sm">
         {timelineMode ? (
           <span className="text-muted">
-            The timeline places the {dated.length} parishes with a documented
-            founding year. {undatedCount} more are in the record without a firm
-            founding date and are being dated from parish histories — the true
-            arc is larger than what shows here. Click any mark for its record.
+            The timeline places the {datedTotal} parishes on this map with a
+            documented founding year — the whole mapped record, not only the
+            most deeply documented. {undatedCount} more are in the record
+            without a firm founding date and are being dated from parish
+            histories — the true arc is larger than what shows here. Click any
+            mark for its record.
           </span>
         ) : (
           <span className="text-muted">
@@ -530,38 +544,36 @@ export default function ParishMap() {
       </div>
 
       <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
-        <label className="inline-flex items-center gap-1.5 cursor-pointer text-muted hover:text-foreground transition-colors">
-          <input
-            type="checkbox"
-            checked={showRecord}
-            onChange={(e) => {
-              setShowRecord(e.target.checked);
-              if (!e.target.checked) setHoveredReg(null);
-            }}
-            className="accent-[var(--mark-closed)]"
-          />
-          <svg width={14} height={14} viewBox="0 0 14 14" aria-hidden>
-            <circle cx={7} cy={7} r={4.2} fill="var(--foreground)" fillOpacity={0.5} />
-          </svg>
-          Research record ({regData.counts.parishes} more parishes) — beyond the
-          83
-        </label>
-        {showRecord && !timelineMode && (
-          <span className="inline-flex items-center gap-1.5 text-muted">
-            <svg width={14} height={14} viewBox="0 0 14 14" aria-hidden>
-              <rect
-                x={3.2}
-                y={3.2}
-                width={7.6}
-                height={7.6}
-                fill="none"
-                stroke="var(--foreground)"
-                strokeOpacity={0.6}
-                strokeWidth={1.4}
-              />
-            </svg>
-            Non-Catholic congregation ({regData.counts.congregations})
-          </span>
+        {!timelineMode && (
+          <>
+            <span className="inline-flex items-center gap-1.5 text-muted">
+              <svg width={14} height={14} viewBox="0 0 14 14" aria-hidden>
+                <circle
+                  cx={7}
+                  cy={7}
+                  r={4.2}
+                  fill="var(--foreground)"
+                  fillOpacity={0.5}
+                />
+              </svg>
+              Documented parish ({regData.counts.parishes})
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-muted">
+              <svg width={14} height={14} viewBox="0 0 14 14" aria-hidden>
+                <rect
+                  x={3.2}
+                  y={3.2}
+                  width={7.6}
+                  height={7.6}
+                  fill="none"
+                  stroke="var(--foreground)"
+                  strokeOpacity={0.6}
+                  strokeWidth={1.4}
+                />
+              </svg>
+              Non-Catholic congregation ({regData.counts.congregations})
+            </span>
+          </>
         )}
         {timelineMode ? (
           <>

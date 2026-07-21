@@ -2,27 +2,52 @@ import Link from "next/link";
 import ParishMap from "@/components/ParishMap";
 import { figures } from "@/lib/parishes";
 import alertsData from "@/data/alerts.json";
+import registry from "@/data/registry-unified.json";
+
+// Record-level figures derive from the unified registry (never hand-typed).
+const regParishes = (
+  registry as {
+    parishes: {
+      locked?: { year_founded?: string };
+      years?: { founded?: { value: string }[] };
+    }[];
+  }
+).parishes;
+const asYear = (v?: string | null) => {
+  const m = v?.match(/\b(1[89]\d{2}|20[0-2]\d)\b/);
+  return m ? Number(m[1]) : null;
+};
+const foundedYears = regParishes
+  .flatMap((p) => [
+    asYear(p.locked?.year_founded),
+    ...(p.years?.founded ?? []).map((f) => asYear(f.value)),
+  ])
+  .filter((y): y is number => y != null);
+const REG_TOTAL = regParishes.length;
+const EARLIEST = Math.min(...foundedYears);
 
 const STATS = [
   {
+    value: String(REG_TOTAL),
+    label: `Lithuanian parishes and congregations documented across the U.S. and Canada — the record reaches back to ${EARLIEST}`,
+    tone: "ink",
+  },
+  {
     value: String(figures.usTotal),
-    label: "Lithuanian parishes across America, documented over eighteen years",
+    label:
+      "verified in depth in the Draugas 2008–2026 core — every fact traced to a dated, published issue",
     tone: "ink",
   },
   {
     value: String(figures.endingMode.diocese_closed),
-    label: "closed, merged away, suppressed, or demolished by diocesan decision",
+    label:
+      "closed, merged away, suppressed, or demolished by diocesan decision since 2008",
     tone: "red",
   },
   {
     value: `${figures.endingMode.diocese_closed} of ${figures.endingMode.diocese_closed}`,
     label: "of those closed parishes were diocese-owned. No exception.",
     tone: "red",
-  },
-  {
-    value: String(figures.communityOwned.closedByOutsideAuthority),
-    label: "community-owned parishes were ever closed by an outside authority",
-    tone: "ink",
   },
 ];
 
@@ -55,14 +80,18 @@ export default function Home() {
     <div className="mx-auto max-w-5xl px-4">
       <section className="pt-12 sm:pt-16 text-center">
         <p className="text-sm uppercase tracking-widest text-muted mb-3">
-          The record of America&rsquo;s Lithuanian parishes
+          Every parish, from the very beginning
         </p>
         <h1 className="font-serif text-3xl sm:text-5xl font-semibold leading-tight max-w-3xl mx-auto">
-          Who decides whether a Lithuanian parish survives?
+          The public record of America&rsquo;s Lithuanian parishes
         </h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg leading-relaxed text-muted">
-          Not faith. Not money. Not the fight that comes too late —
-          ownership decided every ending. We stand for one goal:{" "}
+          Lithuanian immigrants built more than two hundred parishes across
+          America — churches and schools, choirs and cemeteries: our
+          historical, cultural, and spiritual inheritance. No one kept their
+          record. Now it is kept here — every parish we can document, from
+          the very first foundings to the communities deciding their future
+          today. And we stand for one goal:{" "}
           <strong className="text-foreground">
             that what Lithuanian communities built stays in their hands
           </strong>{" "}
