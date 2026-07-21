@@ -77,44 +77,108 @@ export default function RecordPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
       <h1 className="font-serif text-3xl font-semibold">The Record</h1>
-      <p className="mt-3 max-w-2xl text-muted leading-relaxed">
-        Every Lithuanian parish in the research record — {total} across the
-        U.S. and Canada. {caseFiled} are documented in full depth
-        (case-filed): verified in the locked <em>Draugas</em> 2008–2026 core
-        — 2,768 issues read straight through — each with a researched
-        present-day case file. The rest are attested by the wider registry
-        (the 1909–2007 <em>Draugas</em>{" "}
-        run, published parish histories, and
-        contemporary sources) and are being verified toward that same
-        standard. The documentation column marks each parish&rsquo;s depth.
-      </p>
-      <p className="mt-3 max-w-2xl text-sm text-muted leading-relaxed">
-        The locked core is the data behind every figure on the site —
-        validated against the research figure set at every build. For the
-        national precedent record — closures reversed on the Church&rsquo;s
-        own procedures — see{" "}
-        <Link href="/reversals" className="underline hover:text-foreground">
-          Reversals
-        </Link>
-        .
-      </p>
+      <div className="mt-3 max-w-2xl space-y-4 leading-relaxed">
+        <p>
+          This is the record of America&rsquo;s Lithuanian parishes —{" "}
+          {total} of them, across the United States and Canada. Until now, no
+          such record existed. The story of these parishes is scattered
+          across a century of Lithuanian-language newspapers, out-of-print
+          books, diocesan archives, and the memories of the people who built
+          and lost them. No diocese keeps it. No archive holds all of it.
+          When a community faces a closure decision today, it cannot see the
+          pattern — because the pattern has never been assembled in one
+          place. That is what this table is.
+        </p>
+        <p className="text-muted">
+          {caseFiled} of the {total} are documented in full depth —
+          case-filed: every fact verified against dated published sources,
+          with a researched present-day record of where the building, the
+          community, and the property stand now. The rest are attested by
+          the wider research and are being verified toward that same
+          standard, parish by parish. The <strong>Depth</strong> column
+          marks how far each one has come. The record grows in both
+          directions: backward through the archives toward the first
+          parishes of the 1880s, and forward through{" "}
+          <Link href="/report" className="underline hover:text-accent">
+            reports from parish communities
+          </Link>{" "}
+          today — because closure decisions are being made right now, and a
+          record that stops updating stops protecting anyone.
+        </p>
+      </div>
 
       <div className="mt-8">
         <RegistryTable rows={rows} />
       </div>
 
-      <p className="mt-16 text-sm text-muted">
-        Šaltinis: „Draugo&ldquo; archyvas nuo 1909 m. The dataset is open —
-        every figure re-derives from the parish record at build time, and the
-        build fails if anything drifts. How the whole record was collected:{" "}
-        <Link
-          href="/about-the-data"
-          className="underline hover:text-foreground"
-        >
-          About the data
-        </Link>
-        .
-      </p>
+      <section className="mt-14 max-w-2xl space-y-4 leading-relaxed">
+        <h2 className="font-serif text-2xl font-semibold">The sources</h2>
+        <p>
+          <strong>
+            <a
+              href="https://www.draugas.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-accent"
+            >
+              Draugas
+            </a>
+          </strong>{" "}
+          (&ldquo;The Friend&rdquo;) is the Lithuanian-American newspaper of
+          record — a Catholic daily founded in 1909, published in Chicago
+          continuously ever since, and for over a century the paper that
+          reported every parish founding, jubilee, and closing in the
+          Lithuanian diaspora. It is the backbone of this record. The
+          2008–2026 run — all 2,768 issues — has been read straight through,
+          and every parish it mentions entered the record with dated
+          citations; that verified core is the source of every locked figure
+          on this site. The 1909–2007 run is now being read the same way,
+          issue by issue.
+        </p>
+        <p>
+          <strong>The parish histories.</strong> Father William
+          Wolkovich-Valkavičius&rsquo;s three-volume{" "}
+          <em>Lithuanian Religious Life in America</em> — the Eastern United
+          States, Pennsylvania, and the Midwest — documented roughly 150
+          parishes in the 1990s, in small print runs that are long out of
+          print. Its parish-by-parish facts are being read into the record
+          with page citations, alongside other published histories of the
+          communities. Catalog listings for these books will be linked here
+          as they enter the archive.
+        </p>
+        <p>
+          <strong>Contemporary sources.</strong> For every case-filed
+          parish, a present-day record: diocesan announcements, local press,
+          property records, and parish websites — what the building is
+          today, who holds it, and what has happened since the archives fall
+          silent. And the{" "}
+          <Link href="/reversals" className="underline hover:text-accent">
+            national reversal research
+          </Link>
+          : every U.S. parish closure we can verify that was reversed on the
+          Church&rsquo;s own procedures — the precedent record.
+        </p>
+        <p className="text-sm text-muted">
+          Every figure on this site re-derives from this record at build
+          time, and the site refuses to publish if a number drifts from the
+          verified research. The dataset is open —{" "}
+          <a
+            href="https://github.com/LietuvaAI/save-our-lithuanian-parishes"
+            className="underline hover:text-foreground"
+          >
+            check our numbers
+          </a>
+          . Full methods, copyright handling, and what is deliberately held
+          back:{" "}
+          <Link
+            href="/about-the-data"
+            className="underline hover:text-foreground"
+          >
+            About the data
+          </Link>
+          .
+        </p>
+      </section>
     </div>
   );
 }
