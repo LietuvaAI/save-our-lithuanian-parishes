@@ -3,7 +3,7 @@ title: "In Writing: The 1968 Letter That Made Divine Providence a National Paris
 subtitle: "In 1968 the Archdiocese of Detroit formally established Divine Providence as a national parish under canon law — only Lithuanians could join, and Lithuanians would fund it. Here is the letter, and the story behind it."
 date: 2026-07-16
 substackUrl: https://blog.saveourlithuanianparishes.org/p/in-writing-the-1968-letter-that-made
-archivedAt: 2026-07-17
+archivedAt: 2026-07-21
 ---
 Whenever anyone asks whether Divine Providence is “really” a Lithuanian parish or just a church that happens to have Lithuanians in it, there is a document that settles the question. On December 31, 1968, the Archdiocese of Detroit put it in writing.
 
