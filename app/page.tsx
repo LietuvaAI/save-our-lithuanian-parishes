@@ -19,7 +19,12 @@ const regParishes = (
 // counts parishes and congregations — not settlements.
 const isRealParish = (p: (typeof regParishes)[number]) =>
   !(p.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? ""));
-const REG_TOTAL = regParishes.filter(isRealParish).length;
+// Scope: US + Canada. Mis-coded Argentina entries stay out (flagged upstream).
+const isNorthAmerica = (p: { city?: string }) =>
+  !/buenos aires|argentin|rosario/i.test(p.city ?? "");
+const REG_TOTAL = regParishes.filter(
+  (p) => isRealParish(p) && isNorthAmerica(p as { city?: string })
+).length;
 
 const STATS = [
   {
@@ -251,23 +256,27 @@ export default function Home() {
           The communities built them
         </h2>
         <p className="mt-4 leading-relaxed">
-          Lithuanian immigrants raised these churches with their own hands and
-          their own wages — and, since 1884, the deed to nearly every Roman
-          Catholic parish has rested not with the community that built it, but
-          with the diocese. Within these 83 parishes, the record shows that
-          neither solvency, nor petitions, nor lawsuits, nor appeals filed
-          after the decree ever reversed a closure — the only parishes never
-          closed by an outside authority are the ones the community itself
-          controlled.
+          Lithuanian immigrants raised these churches with their own hands
+          and their own wages — and around each one grew a world: a school, a
+          choir, a cemetery, a language kept alive an ocean from home. This
+          record documents all of them. The parishes that closed — and what
+          became of their communities and their buildings afterward. The
+          parishes still standing — and what has kept them alive. The ones
+          fighting for their future right now. What happened to each, where
+          each stands today, and what every community can learn from the
+          others.
         </p>
         <p className="mt-4 leading-relaxed">
-          Nationally, Rome <em>has</em> reversed closures —{" "}
+          The record teaches in both directions. From the parishes that were
+          lost: ownership shaped endings — the deed rested with the diocese,
+          and no solvency, petition, or late appeal ever reversed a closure.
+          From the parishes that fought and won: procedure, in time, works —
+          Rome has reversed closures{" "}
           <Link href="/reversals" className="underline hover:text-accent">
             twenty-six documented times
           </Link>
-          , when parishioners moved on procedure before and during the window,
-          not after. Both lessons are this site&rsquo;s work: ownership decides
-          endings, and procedure, in time, is the only fight that has ever won.
+          , when parishioners moved before and during the canonical window.
+          We keep both lessons so no community has to learn them alone.
         </p>
         <p className="mt-4 leading-relaxed">
           That is not an argument — it is the record: every entry traces to a

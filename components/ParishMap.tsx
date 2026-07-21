@@ -20,7 +20,8 @@ import {
   OWNERSHIP_LABEL,
 } from "@/lib/parishes";
 
-const FULL = { x: 0, y: 0, w: 975, h: 610 };
+const FULL = (regData as { frame?: { x: number; y: number; w: number; h: number } })
+  .frame ?? { x: 0, y: 0, w: 975, h: 610 };
 const MAX_ZOOM = 10;
 const END_YEAR = 2026;
 const NE_STATES = new Set(["ME", "NH", "VT", "MA", "RI", "CT", "NY", "NJ", "PA", "MD"]);
@@ -107,7 +108,9 @@ function buildPoints(): Point[] {
         ? "threat"
         : c.closedYear
           ? "lost"
-          : "unknown",
+          : (c as { lockedStanding?: boolean }).lockedStanding
+            ? "open"
+            : "unknown",
       founded: c.foundedYear ?? null,
       closed: c.closedYear ?? null,
       profile: c.kind === "parish" ? `/registry/${c.slug}` : null,
@@ -305,6 +308,16 @@ export default function ParishMap() {
           onPointerUp={onPointerUp}
           onPointerLeave={onPointerUp}
         >
+          {(regData as { canadaPath?: string }).canadaPath && (
+            <path
+              d={(regData as { canadaPath?: string }).canadaPath}
+              fill="var(--band)"
+              fillOpacity={0.55}
+              stroke="var(--foreground)"
+              strokeOpacity={0.15}
+              strokeWidth={0.7 / zoom}
+            />
+          )}
           {mapData.statePaths.map((d, i) => (
             <path key={i} d={d} fill="var(--band)" stroke="var(--foreground)" strokeOpacity={0.25} strokeWidth={0.7 / zoom} />
           ))}
@@ -493,9 +506,9 @@ export default function ParishMap() {
             One record — every documented parish on one map, drawn from the
             full run of <em>Draugas</em> since 1909, published parish
             histories, and contemporary sources. Hover any mark; click to open
-            its record. {regData.counts.skippedCanada} Canadian parishes and a
-            handful of not-yet-mapped places are in the record but not on this
-            U.S. map. See a parish missing?{" "}
+            its record — the United States and Canada together. A handful of
+            not-yet-mapped places are in the record but not yet placed. See a
+            parish missing?{" "}
             <a href="/report" className="underline hover:text-foreground">
               Report it
             </a>

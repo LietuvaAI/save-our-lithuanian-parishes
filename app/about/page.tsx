@@ -13,9 +13,13 @@ export default function AboutPage() {
       <h1 className="font-serif text-3xl font-semibold">About</h1>
       <div className="mt-4 max-w-2xl space-y-4 leading-relaxed">
         <p>
-          Save Our Lithuanian Parishes keeps the public record of America&rsquo;s
-          Lithuanian parishes: who built them, who owned them, and who decided
-          which ones survived. We stand for one goal —{" "}
+          Save Our Lithuanian Parishes keeps the public record of
+          America&rsquo;s Lithuanian parishes — our historical, cultural, and
+          spiritual inheritance. Every parish we can document: what happened
+          to it, where it stands now, what became of the communities that
+          built it, and what the ones still deciding their future can learn
+          from those that were lost — and from those that fought and won. We
+          also stand for one commitment:{" "}
           <strong>
             that what Lithuanian communities built stays in their hands
           </strong>

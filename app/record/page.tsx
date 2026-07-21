@@ -38,7 +38,9 @@ function buildRows(): RegistryRow[] {
     // are documented history, but this is the parish record — parishes only.
     .filter(
       (p) =>
-        !(p.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? ""))
+        !(p.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? "")) &&
+        // Scope: US + Canada; mis-coded Argentina entries excluded (upstream fix filed).
+        !/buenos aires|argentin|rosario/i.test(p.city ?? "")
     );
   return regs.map((p) => {
     // c83_row is the 1-based row in the canonical CSV = lib parishes order;
