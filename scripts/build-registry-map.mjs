@@ -34,13 +34,24 @@ const AXIS_LABEL = {
   "web-historical": "web research",
 };
 
-function yearOf(variants) {
+function yearOf(variants, { closing = false } = {}) {
   // First numeric year among carried variants; null when the record has none.
+  // Registry year values can be narrative ("still active at time of writing
+  // (…1911…)") — a year inside a still-active note is NOT a closing year.
   for (const v of variants ?? []) {
-    const m = String(v.value ?? "").match(/\b(1[89]\d\d|20\d\d)\b/);
+    const text = String(v.value ?? "");
+    if (closing && /still active|active at time|remains active/i.test(text)) continue;
+    const m = text.match(/\b(1[89]\d\d|20\d\d)\b/);
     if (m) return Number(m[1]);
   }
   return null;
+}
+
+// Registry entries whose own sources say "no parish" are settlements or
+// civic/memorial associations — documented, but not parishes; keep them
+// off the parish map and out of parish counts.
+function isRealParish(rec) {
+  return !(rec.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? ""));
 }
 
 function lonLatOf(rec) {
@@ -55,7 +66,9 @@ const points = [];
 let skippedCanada = 0;
 let skippedNoGeo = 0;
 
-const nonCanonical = registry.parishes.filter((r) => !r.in_locked_scope && !r.comparator);
+const nonCanonical = registry.parishes.filter(
+  (r) => !r.in_locked_scope && !r.comparator && isRealParish(r)
+);
 for (const r of nonCanonical) {
   if (r.country === "CA") {
     skippedCanada++;
@@ -74,7 +87,7 @@ for (const r of nonCanonical) {
     city: r.city,
     state: r.state,
     foundedYear: yearOf(r.years?.founded),
-    closedYear: yearOf(r.years?.closed),
+    closedYear: yearOf(r.years?.closed, { closing: true }),
     depth: r.record_depth, // "multi-source" | "single-source"
     congregationClass: r.congregation_class,
     documentedIn: [...new Set(r.sources.map((s) => AXIS_LABEL[s.axis] ?? s.axis))],
