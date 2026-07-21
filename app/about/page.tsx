@@ -61,10 +61,11 @@ export default function AboutPage() {
           <Link href="/record" className="underline hover:text-accent">
             the record
           </Link>{" "}
-          traces to a dated, published issue, and every figure on this site is
-          re-derived from the parish record at build time — if a number ever
-          drifts from the verified research, the site refuses to publish. The
-          dataset is open:{" "}
+          traces to a dated, published issue. And none of the numbers on this
+          site are typed in by hand — they are recalculated automatically
+          from the parish record every time the site is updated, and if a
+          number ever disagrees with the verified research, the update is
+          blocked until the discrepancy is resolved. The dataset is open:{" "}
           <a
             href="https://github.com/LietuvaAI/save-our-lithuanian-parishes"
             className="underline hover:text-accent"
