@@ -27,7 +27,7 @@ Public advocacy site for SaveOurLithuanianParishes.org. This is a **product repo
 4. The PA **"31/29"** figure is an attributed Draugas statistic — never drawn as dataset marks.
 5. **No invented numbers.** Blank fields stay blank.
 6. **83 documented / 58 case-filed in depth** — copy must respect the distinction.
-7. Visuals encode `ending_mode` (who decided), not closed-vs-standing.
+7. Analytical visuals (charts, profile marks) encode `ending_mode` (who decided). **Exception, Vilija 2026-07-21:** the homepage map encodes *present status* (open / under threat / lost / fate unestablished) for at-a-glance reading; who-decided stays in each mark's popup, the profiles, and the charts. Unresolved cases (Maspeth) render as *under threat*, never as closed.
 
 ## Deploy
 
