@@ -159,7 +159,13 @@ export default function Home() {
           <li className="pt-1">
             <Link href="/now" className="underline hover:text-accent text-sm">
               All current alerts →
-            </Link>
+            </Link>{" "}
+            <a
+              href="https://blog.saveourlithuanianparishes.org/p/active-campaigns"
+              className="underline hover:text-accent text-sm font-medium"
+            >
+              · Active campaigns — how to help each parish →
+            </a>
           </li>
         </ul>
       </section>
