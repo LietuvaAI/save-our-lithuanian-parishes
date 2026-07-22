@@ -8,46 +8,51 @@ import registry from "@/data/registry-unified.json";
 const regParishes = (
   registry as {
     parishes: {
+      country?: string;
+      city?: string;
+      congregation_class?: string;
       locked?: { year_founded?: string };
       years?: { founded?: { value: string }[] };
       sources?: { ethnic_status?: string }[];
     }[];
   }
 ).parishes;
-// A few registry entries are settlements/memorial associations whose own
-// source notes say "no parish" (e.g. the 1852 Texas enclave). This record
-// counts parishes and congregations — not settlements.
+// Exclude settlements/associations whose own sources say "no parish".
 const isRealParish = (p: (typeof regParishes)[number]) =>
   !(p.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? ""));
-// Scope: US + Canada. Mis-coded Argentina entries stay out (flagged upstream).
-const isNorthAmerica = (p: { city?: string }) =>
+// Scope: U.S. only. Mis-coded Argentina entries stay out (flagged upstream).
+// Canada is documented as a comparator but excluded from U.S. headline counts.
+const isUS = (p: (typeof regParishes)[number]) =>
+  p.country !== "CA" &&
   !/buenos aires|argentin|rosario/i.test(p.city ?? "");
-const REG_TOTAL = regParishes.filter(
-  (p) => isRealParish(p) && isNorthAmerica(p as { city?: string })
-).length;
+
+const usParishesAll = regParishes.filter((p) => isRealParish(p) && isUS(p));
+const REG_TOTAL = usParishesAll.length;
+const REG_ETHNIC  = usParishesAll.filter((p) => p.congregation_class === "roman_catholic").length;
+const REG_NATCATH = usParishesAll.filter((p) => p.congregation_class === "national_catholic_pncc").length;
+const REG_INDEP   = usParishesAll.filter((p) => p.congregation_class === "independent_catholic").length;
 
 const STATS = [
   {
-    value: String(REG_TOTAL),
-    label:
-      "Lithuanian parishes and congregations documented across the U.S. and Canada — from the first foundings to today",
+    value: String(REG_ETHNIC),
+    label: "Lithuanian ethnic (national) parishes documented across the U.S.",
+    tone: "ink",
+  },
+  {
+    value: String(REG_NATCATH),
+    label: "Lithuanian National Catholic parishes — communities that separated from Rome, mostly in Pennsylvania and the northeast. Documented as historical witness.",
     tone: "ink",
   },
   {
     value: String(figures.usTotal),
     label:
-      "verified in depth in the Draugas 2008–2026 core — every fact traced to a dated, published issue",
+      "verified in full depth in the Draugas 2008–2026 core — every fact traced to a dated, published issue",
     tone: "ink",
   },
   {
     value: String(figures.endingMode.diocese_closed),
     label:
       "closed, merged away, suppressed, or demolished by diocesan decision since 2008",
-    tone: "red",
-  },
-  {
-    value: `${figures.endingMode.diocese_closed} of ${figures.endingMode.diocese_closed}`,
-    label: "of those closed parishes were diocese-owned. No exception.",
     tone: "red",
   },
 ];

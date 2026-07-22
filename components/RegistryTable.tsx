@@ -13,6 +13,8 @@ const ENDING_SHORT: Record<EndingMode, string> = {
   undecided: "Unresolved",
 };
 
+export type ParishStatus = "open" | "threat" | "closed" | "unverified";
+
 /** One serializable row of the full research registry (built server-side). */
 export interface RegistryRow {
   slug: string;
@@ -21,13 +23,14 @@ export interface RegistryRow {
   state: string;
   country: "US" | "CA";
   comparator: boolean;
+  status: ParishStatus;
   /** Verified ending from the locked core; null for registry-tier rows. */
   endingMode: EndingMode | null;
   founded: string | null;
   closed: string | null;
   depth: "case-filed" | "multi-source" | "single-source";
-  /** Only case-filed (core) parishes have profile pages. */
-  hasProfile: boolean;
+  /** URL to the parish profile page, or null if no profile page exists. */
+  profileHref: string | null;
 }
 
 const ALL = "all";
@@ -37,6 +40,28 @@ const DEPTH_LABEL: Record<RegistryRow["depth"], string> = {
   "multi-source": "Multi-source",
   "single-source": "Single-source",
 };
+
+const STATUS_DOT_COLOR: Record<ParishStatus, string> = {
+  open: "var(--foreground)",
+  threat: "var(--mark-community)",
+  closed: "var(--mark-closed)",
+  unverified: "var(--muted)",
+};
+
+function StatusDot({ status }: { status: ParishStatus }) {
+  return (
+    <span
+      style={{
+        display: "inline-block",
+        width: 8,
+        height: 8,
+        borderRadius: "50%",
+        background: STATUS_DOT_COLOR[status],
+        flexShrink: 0,
+      }}
+    />
+  );
+}
 
 function DepthBadge({ depth }: { depth: RegistryRow["depth"] }) {
   const core = depth === "case-filed";
@@ -63,6 +88,7 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
   const [query, setQuery] = useState("");
   const [depth, setDepth] = useState<RegistryRow["depth"] | typeof ALL>(ALL);
   const [state, setState] = useState<string>(ALL);
+  const [status, setStatus] = useState<ParishStatus | typeof ALL>(ALL);
 
   const states = useMemo(
     () => [...new Set(rows.map((r) => r.state))].sort(),
@@ -75,11 +101,12 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
       (r) =>
         (depth === ALL || r.depth === depth) &&
         (state === ALL || r.state === state) &&
+        (status === ALL || r.status === status) &&
         (!q ||
           r.name.toLowerCase().includes(q) ||
           r.city.toLowerCase().includes(q))
     );
-  }, [rows, query, depth, state]);
+  }, [rows, query, depth, state, status]);
 
   const selectClass =
     "rounded-md border border-rule bg-background px-2 py-1.5 text-sm";
@@ -127,6 +154,22 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
             ))}
           </select>
         </label>
+        <label className="flex flex-col gap-1 text-xs text-muted">
+          Status
+          <select
+            value={status}
+            onChange={(e) =>
+              setStatus(e.target.value as ParishStatus | typeof ALL)
+            }
+            className={selectClass}
+          >
+            <option value={ALL}>All statuses</option>
+            <option value="open">Open · standing</option>
+            <option value="threat">Under threat</option>
+            <option value="closed">Closed</option>
+            <option value="unverified">Being verified</option>
+          </select>
+        </label>
         <span className="text-sm text-muted pb-1.5">
           {filtered.length} of {rows.length} parishes
         </span>
@@ -152,9 +195,9 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
                 className="border-b border-rule last:border-0 align-top"
               >
                 <td className="px-2 py-2 font-medium">
-                  {r.hasProfile ? (
+                  {r.profileHref !== null ? (
                     <Link
-                      href={`/parishes/${r.slug}`}
+                      href={r.profileHref}
                       className="underline decoration-rule underline-offset-2 hover:decoration-inherit"
                     >
                       {r.name}
@@ -176,11 +219,15 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
                       className="inline-flex items-center gap-1.5 whitespace-nowrap"
                       title={ENDING_MODE_LABEL[r.endingMode]}
                     >
+                      <StatusDot status={r.status} />
                       <MarkIcon mode={r.endingMode} size={12} />
                       {ENDING_SHORT[r.endingMode]}
                     </span>
                   ) : (
-                    <span className="text-muted">being verified</span>
+                    <span className="inline-flex items-center gap-1.5 text-muted">
+                      <StatusDot status={r.status} />
+                      being verified
+                    </span>
                   )}
                 </td>
                 <td className="px-2 py-2">{r.founded ?? "—"}</td>

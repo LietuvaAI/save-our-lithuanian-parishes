@@ -337,7 +337,7 @@ export default function ParishMap() {
       {/* Views */}
       <div className="mb-3 flex flex-wrap items-center gap-2">
         <button type="button" className={seg(!timelineMode && mode === "all")} onClick={() => { exitTimeline(); setMode("all"); }}>
-          All ({statusCounts.all})
+          All US parishes
         </button>
         <button type="button" className={seg(!timelineMode && mode === "open")} onClick={() => { exitTimeline(); setMode("open"); }}>
           Open today ({statusCounts.open})

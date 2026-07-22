@@ -304,7 +304,14 @@ export default async function RegistryParishPage({
                         </>
                       ) : (
                         <>
-                          Michelsonas, <em>Lietuvių Išeivija Amerikoje</em> (1868–1961), Keleivis, 1961
+                          <a
+                            href="https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline hover:text-accent"
+                          >
+                            Michelsonas, <em>Lietuvių Išeivija Amerikoje</em> (1868–1961), Keleivis, 1961
+                          </a>
                           {s.pages ? `, ${s.pages}` : ""}
                         </>
                       )}

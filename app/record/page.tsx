@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import RegistryTable, { type RegistryRow } from "@/components/RegistryTable";
+import RegistryTable, { type RegistryRow, type ParishStatus } from "@/components/RegistryTable";
 import registry from "@/data/registry-unified.json";
 import { parishes as libParishes, type EndingMode } from "@/lib/parishes";
 
 export const metadata: Metadata = {
   title: "The Record",
   description:
-    "Every Lithuanian parish in the research record — the verified Draugas 2008–2026 core plus the wider registry across the U.S. and Canada.",
+    "Every Lithuanian parish in the U.S. research record — the verified Draugas 2008–2026 core plus the wider registry.",
 };
 
 interface RegParish {
@@ -32,6 +32,13 @@ interface RegParish {
   record_depth: RegistryRow["depth"];
 }
 
+function endingModeToStatus(mode: EndingMode | null): ParishStatus {
+  if (!mode) return "unverified";
+  if (mode === "standing") return "open";
+  if (mode === "undecided") return "threat";
+  return "closed";
+}
+
 function buildRows(): RegistryRow[] {
   const regs = (registry as { parishes: RegParish[] }).parishes
     // Settlements/memorial associations whose own sources say "no parish"
@@ -39,7 +46,9 @@ function buildRows(): RegistryRow[] {
     .filter(
       (p) =>
         !(p.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? "")) &&
-        // Scope: US + Canada; mis-coded Argentina entries excluded (upstream fix filed).
+        // Scope: U.S. only. Canada is documented as comparator but excluded
+        // from the main U.S. record. Argentina entries also excluded (upstream fix filed).
+        p.country !== "CA" &&
         !/buenos aires|argentin|rosario/i.test(p.city ?? "")
     );
   return regs.map((p) => {
@@ -57,6 +66,10 @@ function buildRows(): RegistryRow[] {
       lockedVal: string | undefined,
       arr: { value: string }[] | undefined
     ) => asYear(lockedVal) ?? asYear(arr?.[0]?.value);
+    const endingMode =
+      p.locked?.ending_mode && (p.in_locked_scope || p.comparator)
+        ? (p.locked.ending_mode as EndingMode)
+        : null;
     return {
       slug: libOk ? lib.slug : p.slug,
       name: p.names.lt || p.names.en || p.slug,
@@ -66,14 +79,16 @@ function buildRows(): RegistryRow[] {
       state: p.state,
       country: p.country,
       comparator: p.comparator,
-      endingMode:
-        p.locked?.ending_mode && (p.in_locked_scope || p.comparator)
-          ? (p.locked.ending_mode as EndingMode)
-          : null,
+      endingMode,
+      status: endingModeToStatus(endingMode),
       founded: yearOf(p.locked?.year_founded, p.years?.founded),
       closed: yearOf(p.locked?.year_closed, p.years?.closed),
       depth: p.record_depth,
-      hasProfile: Boolean(libOk),
+      profileHref: libOk
+        ? `/parishes/${lib.slug}`
+        : p.c83_row == null
+          ? `/registry/${p.slug}`
+          : null,
     };
   });
 }
@@ -89,7 +104,7 @@ export default function RecordPage() {
       <div className="mt-3 max-w-2xl space-y-4 leading-relaxed">
         <p>
           This is the record of America&rsquo;s Lithuanian parishes —{" "}
-          {total} of them, across the United States and Canada. Until now, no
+          {total} of them across the United States. Until now, no
           such record existed. The story of these parishes is scattered
           across a century of Lithuanian-language newspapers, out-of-print
           books, diocesan archives, and the memories of the people who built
@@ -146,14 +161,28 @@ export default function RecordPage() {
         </p>
         <p>
           <strong>The parish histories.</strong> Father William
-          Wolkovich-Valkavičius&rsquo;s three-volume{" "}
-          <em>Lithuanian Religious Life in America</em> — the Eastern United
-          States, Pennsylvania, and the Midwest — documented roughly 150
-          parishes in the 1990s, in small print runs that are long out of
-          print. Its parish-by-parish facts are being read into the record
-          with page citations, alongside other published histories of the
-          communities. Catalog listings for these books will be linked here
-          as they enter the archive.
+          Wolkovich-Valkavičius&rsquo;s{" "}
+          <a
+            href="https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-accent"
+          >
+            <em>Lithuanian Religious Life in America</em>, Vol. 3
+          </a>{" "}
+          — the Midwest and beyond — documents roughly 150 parishes,
+          in a small print run long out of print. Stasys Michelsonas&rsquo;s{" "}
+          <a
+            href="https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-accent"
+          >
+            <em>Lietuvių Išeivija Amerikoje</em> (1961)
+          </a>{" "}
+          provides an independent secular counterpoint. Both are now in the
+          Žiburio archive; parish-by-parish facts are read into the record
+          with page citations.
         </p>
         <p>
           <strong>Contemporary sources.</strong> For every case-filed
