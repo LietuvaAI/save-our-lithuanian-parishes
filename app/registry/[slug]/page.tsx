@@ -186,11 +186,19 @@ export default async function RegistryParishPage({
             This entry documents a Lithuanian community that worshipped together
             — attending Mass, holding devotions, or maintaining a chapel — but
             was not organized as a distinct Lithuanian national parish of its
-            own. Wolkovich-Valkavičius recorded communities like this alongside
-            canonical parishes because they represent the full lived geography
-            of Lithuanian religious life in America: settlements, farm colonies,
-            territorial parishes with Lithuanian attendees, and civic chapters
-            with a sacramental dimension.
+            own.{" "}
+            <a
+              href="https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-foreground"
+            >
+              Wolkovich-Valkavičius
+            </a>{" "}
+            recorded communities like this alongside canonical parishes because
+            they represent the full lived geography of Lithuanian religious life
+            in America: settlements, farm colonies, territorial parishes with
+            Lithuanian attendees, and civic chapters with a sacramental dimension.
           </p>
           <p className="mt-2 text-muted">
             The map shows it as an unestablished-fate cross (
@@ -232,7 +240,7 @@ export default async function RegistryParishPage({
                       {s.axis === "wolkovich" ? (
                         <>
                           <a
-                            href="https://lccn.loc.gov/91-76766"
+                            href="https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="underline hover:text-accent"
