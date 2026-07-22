@@ -73,27 +73,50 @@ function communityKind(sources: any[]): CommunityKind {
   return "parish";
 }
 
+function isYearValue(v: string) {
+  return /^\d{4}(-\d{2}(-\d{2})?)?$/.test(String(v).trim());
+}
+
+function sourceShortName(axis: string) {
+  return AXIS_LABEL[axis]?.split(",")[0] ?? axis;
+}
+
 function YearList({ label, items }: { label: string; items: any[] }) {
   if (!items?.length) return null;
-  const differ = new Set(items.map((v) => v.value)).size > 1;
+  const yearItems = items.filter((v) => isYearValue(v.value));
+  const noteItems = items.filter((v) => !isYearValue(v.value));
+  const differ = new Set(yearItems.map((v) => v.value)).size > 1;
   return (
-    <div>
-      <span className="font-medium">{label}:</span>{" "}
-      {items.map((v, i) => (
-        <span key={i}>
-          {i > 0 && " · "}
-          {v.value}{" "}
-          <span className="text-muted text-sm">
-            ({AXIS_LABEL[v.source] ? AXIS_LABEL[v.source].split(",")[0] : v.source}
-            {v.cite ? `, ${v.cite}` : ""})
-          </span>
-        </span>
-      ))}
-      {differ && (
-        <span className="ml-2 rounded border border-rule px-1.5 py-px text-xs text-muted">
-          sources differ — all readings kept
-        </span>
+    <div className="space-y-1.5">
+      {yearItems.length > 0 && (
+        <div>
+          <span className="font-medium">{label}:</span>{" "}
+          {yearItems.map((v, i) => (
+            <span key={i}>
+              {i > 0 && " · "}
+              {v.value}{" "}
+              <span className="text-muted text-sm">
+                ({sourceShortName(v.source)}
+                {v.cite ? `, ${v.cite}` : ""})
+              </span>
+            </span>
+          ))}
+          {differ && (
+            <span className="ml-2 rounded border border-rule px-1.5 py-px text-xs text-muted">
+              sources differ — all readings kept
+            </span>
+          )}
+        </div>
       )}
+      {noteItems.map((v, i) => (
+        <p key={`note-${i}`} className="text-sm leading-relaxed text-muted">
+          {v.value}{" "}
+          <span className="text-xs">
+            — {sourceShortName(v.source)}
+            {v.cite ? `, ${v.cite}` : ""}
+          </span>
+        </p>
+      ))}
     </div>
   );
 }
@@ -235,14 +258,36 @@ export default async function RegistryParishPage({
                   </>
                 )}
                 {(s.axis === "wolkovich" || s.axis === "michelsonas-1961") && (
-                  <span className="block space-y-1">
+                  <span className="block space-y-2">
                     {s.ethnic_status && !/^(none|unknown|unspecified)$/i.test(s.ethnic_status) && (
-                      <span className="block italic">
+                      <span className="block italic leading-relaxed">
                         &ldquo;{s.ethnic_status}&rdquo;
                       </span>
                     )}
+                    {/* Narrative founding notes from this source */}
+                    {(p.years?.founded || [])
+                      .filter((f: any) => f.source === s.axis && !isYearValue(f.value))
+                      .map((f: any, fi: number) => (
+                        <span key={fi} className="block leading-relaxed">
+                          {f.value}
+                        </span>
+                      ))}
                     {s.diocese && !/^(none|unknown|unspecified)$/i.test(s.diocese) && (
-                      <span className="block">Diocese: {s.diocese}.</span>
+                      <span className="block text-xs">Diocese: {s.diocese}.</span>
+                    )}
+                    {s.school && (
+                      <span className="block text-xs">School: {s.school}.</span>
+                    )}
+                    {s.convent && (
+                      <span className="block text-xs">Convent: {s.convent}.</span>
+                    )}
+                    {s.cemetery && (
+                      <span className="block text-xs">Cemetery: {s.cemetery}.</span>
+                    )}
+                    {s.axis === "michelsonas-1961" && s.lens && (
+                      <span className="block text-xs text-muted italic">
+                        Note: {s.lens}
+                      </span>
                     )}
                     <span className="block text-xs">
                       {s.axis === "wolkovich" ? (
