@@ -45,6 +45,40 @@ export default function RegistryIndexPage() {
         .
       </p>
 
+      <section className="mt-8 grid gap-4 sm:grid-cols-3">
+        <div className="rounded-lg border border-rule px-4 py-4 text-sm leading-relaxed">
+          <p className="font-semibold">Lithuanian ethnic parish</p>
+          <p className="mt-1 text-muted">
+            A Roman Catholic parish organized specifically to serve a Lithuanian
+            immigrant community — with its own building, priest, and canonical
+            standing. The dominant form: 202 of the 220 registry entries.
+            Called a &ldquo;national parish&rdquo; in canon law because it is
+            constituted by ethnicity, not territory.
+          </p>
+        </div>
+        <div className="rounded-lg border border-rule px-4 py-4 text-sm leading-relaxed">
+          <p className="font-semibold">Lithuanian National Catholic</p>
+          <p className="mt-1 text-muted">
+            Communities that separated from Rome in the early 1900s, mostly in
+            Pennsylvania and the northeast, joining the Polish National Catholic
+            Church (PNCC). They built and ran their own parishes outside
+            diocesan authority. Documented here as historical witness — 14
+            entries — not as a recommendation.
+          </p>
+        </div>
+        <div className="rounded-lg border border-rule px-4 py-4 text-sm leading-relaxed">
+          <p className="font-semibold">Lithuanian community</p>
+          <p className="mt-1 text-muted">
+            A Lithuanian population that worshipped together — attending Mass,
+            maintaining a chapel, or holding devotions — but within a
+            territorial or mixed-ethnic parish, without forming a distinct
+            Lithuanian national parish of its own. Recorded by
+            Wolkovich-Valkavičius alongside canonical parishes to capture the
+            full geography of Lithuanian religious life.
+          </p>
+        </div>
+      </section>
+
       <div className="mt-10 space-y-10">
         {states.map((st) => {
           const list = [...byState.get(st)!].sort((a, b) =>
