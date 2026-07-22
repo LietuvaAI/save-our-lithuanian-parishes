@@ -1,11 +1,55 @@
 {
  "corpusScope": "parish-watch-alerts",
- "snapshot": "2026-07-19",
+ "snapshot": "2026-07-22",
  "provenance": "Snapshot of culturenet-brain docs/research/parish-watch/alerts.jsonl (Parish Watch baseline sweep, PR #388). Refreshed by PR on the sweep cadence: red weekly, amber biweekly, full sweep monthly. Wording here is the site's own, written under the editorial guardrails; every item cites its sources.",
  "alerts": [
   {
+   "id": "divine-providence-2026-07",
+   "level": "red",
+   "kind": "active",
+   "entity": "Divine Providence (Dievo Apvaizdos)",
+   "place": "Southfield, Michigan",
+   "diocese": "Archdiocese of Detroit",
+   "dateObserved": "2026-07-22",
+   "eventDate": "2026",
+   "whatChanged": "The last Lithuanian Catholic parish in metro Detroit is under evaluation in the Archdiocese of Detroit's Families of Parishes restructuring. No closure decree has been issued. The Archdiocese's Listening Session Feedback Survey — the public window to shape the outcome — closes July 31, 2026.",
+   "parishLink": "/parishes/dievo-apvaizdos-southfield-mi",
+   "sources": [
+    {
+     "title": "Southfield's Divine Providence Lithuanian church seeks to remain a standalone ethnic parish",
+     "publisher": "Michigan Catholic Tribune",
+     "url": "https://micatholictribune.com/stories/541494701-southfield-s-divine-providence-lithuanian-church-seeks-to-remain-a-standalone-ethnic-parish"
+    }
+   ]
+  },
+  {
+   "id": "waterbury-2023-09",
+   "level": "red",
+   "kind": "active",
+   "entity": "St. Joseph's (Šv. Juozapo)",
+   "place": "Waterbury, Connecticut",
+   "diocese": "Archdiocese of Hartford",
+   "dateObserved": "2026-07-22",
+   "eventDate": "2023-09-30",
+   "whatChanged": "Closed September 30, 2023 under the Archdiocese of Hartford's restructuring plan. Parishioners retained a canon lawyer and continue to contest the closure; the community has so far prevented a complete ending and the canonical fight remains active.",
+   "parishLink": "/parishes/sv-juozapo-waterbury-ct",
+   "sources": [
+    {
+     "title": "Parishioners fight Waterbury church closure",
+     "publisher": "WFSB",
+     "url": "https://www.wfsb.com/2023/08/28/parishioners-fight-waterbury-church-closure/"
+    },
+    {
+     "title": "Save St. Joseph's Lithuanian Catholic Church",
+     "publisher": "GoFundMe",
+     "url": "https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church"
+    }
+   ]
+  },
+  {
    "id": "girardville-2026-01",
    "level": "red",
+   "kind": "watch",
    "entity": "St. Vincent de Paul",
    "place": "Girardville, Pennsylvania",
    "diocese": "Diocese of Allentown",
@@ -29,6 +73,7 @@
   {
    "id": "maspeth-2025-09",
    "level": "red",
+   "kind": "active",
    "entity": "Transfiguration (Kristaus Atsimainymo)",
    "place": "Maspeth, Queens, New York",
    "diocese": "Diocese of Brooklyn",
@@ -57,6 +102,7 @@
   {
    "id": "freeland-2026-07",
    "level": "red",
+   "kind": "watch",
    "entity": "Our Lady of the Immaculate Conception",
    "place": "Freeland, Pennsylvania",
    "diocese": "Diocese of Scranton",
@@ -76,6 +122,7 @@
   {
    "id": "bayonne-2025-08",
    "level": "amber",
+   "kind": "building",
    "entity": "St. Michael (Šv. Mykolo)",
    "place": "Bayonne, New Jersey",
    "diocese": "Archdiocese of Newark",
@@ -94,6 +141,7 @@
   {
    "id": "scranton-st-michael-2026-05",
    "level": "amber",
+   "kind": "building",
    "entity": "St. Michael (Šv. Mykolo)",
    "place": "Scranton, Pennsylvania",
    "diocese": "Diocese of Scranton",
@@ -117,6 +165,7 @@
   {
    "id": "elizabeth-2026-07",
    "level": "amber",
+   "kind": "watch",
    "entity": "Sts. Peter and Paul (Šv. Petro ir Povilo)",
    "place": "Elizabeth, New Jersey",
    "diocese": "Archdiocese of Newark",
@@ -135,6 +184,7 @@
   {
    "id": "hartford-2026-04",
    "level": "amber",
+   "kind": "active",
    "entity": "Holy Trinity (Švč. Trejybės)",
    "place": "Hartford, Connecticut",
    "diocese": "Archdiocese of Hartford",
@@ -153,6 +203,7 @@
   {
    "id": "beverly-shores-2026-03",
    "level": "amber",
+   "kind": "watch",
    "entity": "St. Ann of the Dunes (Šv. Onos)",
    "place": "Beverly Shores, Indiana",
    "diocese": "Diocese of Gary",
@@ -170,6 +221,67 @@
   }
  ],
  "campaigns": [
+  {
+   "id": "divine-providence-campaign",
+   "entity": "Divine Providence (Dievo Apvaizdos)",
+   "place": "Southfield, Michigan",
+   "parishLink": "/parishes/dievo-apvaizdos-southfield-mi",
+   "since": "2026",
+   "who": "The parish community, with this project's public analysis",
+   "form": "The parish's case made in the Archdiocese's own published numbers — The Hearth's workbook analysis and the armory on this site — while the restructuring survey window is open",
+   "state": "Press coverage describes the parish as seeking to remain a standalone ethnic parish inside the Archdiocese of Detroit's 2025–2027 restructuring. No proposal naming the parish has surfaced; the survey closes July 31, 2026.",
+   "sources": [
+    {
+     "title": "Southfield's Divine Providence Lithuanian church seeks to remain a standalone ethnic parish",
+     "publisher": "Michigan Catholic Tribune",
+     "url": "https://micatholictribune.com/stories/541494701-southfield-s-divine-providence-lithuanian-church-seeks-to-remain-a-standalone-ethnic-parish"
+    }
+   ]
+  },
+  {
+   "id": "hartford-campaign",
+   "entity": "Holy Trinity (Švč. Trejybės)",
+   "place": "Hartford, Connecticut",
+   "parishLink": "/parishes/svc-trejybes-hartford-ct",
+   "since": "2026",
+   "who": "Parishioners of Holy Trinity, Hartford, and the broader Lithuanian Catholic community",
+   "form": "GoFundMe to retain a canon-law attorney; community advocacy and documentation; push to preserve the building as a Lithuanian cultural center",
+   "state": "Parishioners were formally notified of a proposed partial closure as part of the Archdiocese of Hartford's restructuring of 212 parishes. The canonical fund is active and the case is being contested.",
+   "sources": [
+    {
+     "title": "Hartford parishioners met with notice of partial closure for Holy Trinity",
+     "publisher": "WTNH",
+     "url": "https://www.wtnh.com/news/connecticut/hartford/hartford-parishioners-met-with-notice-of-partial-closure-for-holy-trinity-catholic-church/"
+    },
+    {
+     "title": "Protect Holy Trinity Church",
+     "publisher": "GoFundMe",
+     "url": "https://www.gofundme.com/f/protect-holy-trinity-church"
+    }
+   ]
+  },
+  {
+   "id": "waterbury-campaign",
+   "entity": "St. Joseph's (Šv. Juozapo)",
+   "place": "Waterbury, Connecticut",
+   "parishLink": "/parishes/sv-juozapo-waterbury-ct",
+   "since": "2023",
+   "who": "Parishioners of St. Joseph's Lithuanian Catholic Church, Waterbury",
+   "form": "Retained a canon lawyer in 2023 to contest the archdiocese's closure decision; GoFundMe to cover legal expenses",
+   "state": "Closed September 30, 2023 by decree under the Archdiocese of Hartford's restructuring plan. The canonical appeal is ongoing and the community has so far prevented a complete ending.",
+   "sources": [
+    {
+     "title": "Parishioners fight Waterbury church closure",
+     "publisher": "WFSB",
+     "url": "https://www.wfsb.com/2023/08/28/parishioners-fight-waterbury-church-closure/"
+    },
+    {
+     "title": "Save St. Joseph's Lithuanian Catholic Church",
+     "publisher": "GoFundMe",
+     "url": "https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church"
+    }
+   ]
+  },
   {
    "id": "maspeth-campaign",
    "entity": "Transfiguration (Kristaus Atsimainymo)",
@@ -206,23 +318,6 @@
      "title": "St. Peter Lithuanian parish in Boston: new challenges",
      "publisher": "Draugas",
      "url": "https://www.draugas.org/news/st-peter-lithuanian-parish-in-boston-new-challenges/"
-    }
-   ]
-  },
-  {
-   "id": "divine-providence-campaign",
-   "entity": "Divine Providence (Dievo Apvaizdos)",
-   "place": "Southfield, Michigan",
-   "parishLink": "/start-here",
-   "since": "2026",
-   "who": "The parish community, with this project's public analysis",
-   "form": "The parish's case made in the Archdiocese's own published numbers — The Hearth's workbook analysis and the armory on this site — while the restructuring survey window is open",
-   "state": "Press coverage describes the parish as seeking to remain a standalone ethnic parish inside the Archdiocese of Detroit's 2025–2027 restructuring. No proposal naming the parish has surfaced; the survey closes July 31, 2026.",
-   "sources": [
-    {
-     "title": "Southfield's Divine Providence Lithuanian church seeks to remain a standalone ethnic parish",
-     "publisher": "Michigan Catholic Tribune",
-     "url": "https://micatholictribune.com/stories/541494701-southfield-s-divine-providence-lithuanian-church-seeks-to-remain-a-standalone-ethnic-parish"
     }
    ]
   }
