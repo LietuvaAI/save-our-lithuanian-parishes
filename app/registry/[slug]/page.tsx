@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import registry from "@/data/registry-unified.json";
+import { draugasCitationUrl, draugasArchiveUrl } from "@/lib/parishes";
 
 /* Research-record profile pages: every non-canonical parish in the unified
    registry gets a page built purely from cited source facts. No status
@@ -180,6 +181,13 @@ export default async function RegistryParishPage({
         </span>
       </div>
 
+      {p.caveat && (
+        <div className="mt-4 rounded-lg border border-amber-200 dark:border-amber-900 bg-amber-50 dark:bg-amber-950/30 px-4 py-3 text-sm text-muted leading-relaxed">
+          <span className="font-medium text-foreground">Data note: </span>
+          {p.caveat}
+        </div>
+      )}
+
       <div className="mt-6 space-y-2 leading-relaxed">
         <YearList label="Founded" items={p.years?.founded} />
         <YearList label="Closed" items={p.years?.closed} />
@@ -250,12 +258,48 @@ export default async function RegistryParishPage({
               <p className="font-medium">{AXIS_LABEL[s.axis] ?? s.axis}</p>
               <p className="mt-1 text-muted leading-relaxed">
                 {s.axis === "draugas-registry-1909-2007" && (
-                  <>
-                    Attested {s.first_mention?.slice(0, 10)}
-                    {s.last_mention ? ` through ${s.last_mention.slice(0, 10)}` : ""}
-                    {s.total_mentions ? ` · ${s.total_mentions} corpus pages` : ""}
-                    {s.parish_key ? ` · registry key ${s.parish_key}` : ""}
-                  </>
+                  <span className="block space-y-1">
+                    <span className="block">
+                      First mentioned:{" "}
+                      {s.first_mention ? (
+                        <a
+                          href={draugasCitationUrl(s.first_mention)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline hover:text-accent"
+                        >
+                          {s.first_mention.slice(0, 10)}
+                        </a>
+                      ) : "not recorded"}
+                      {s.last_mention && s.last_mention !== s.first_mention && (
+                        <>
+                          {" · "}Last mentioned:{" "}
+                          <a
+                            href={draugasCitationUrl(s.last_mention)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline hover:text-accent"
+                          >
+                            {s.last_mention.slice(0, 10)}
+                          </a>
+                        </>
+                      )}
+                      {s.total_mentions ? ` · ${s.total_mentions} issues` : ""}
+                    </span>
+                    <span className="block text-xs italic">
+                      Links open the <em>Draugas</em> issue PDF (2008–2021) or the{" "}
+                      <a
+                        href={s.first_mention ? draugasArchiveUrl(s.first_mention) : "https://www.draugas.org"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-accent"
+                      >
+                        year archive
+                      </a>{" "}
+                      (pre-2008 and post-2021). Last mention is not a closure date —
+                      it marks when <em>Draugas</em> last reported on this parish.
+                    </span>
+                  </span>
                 )}
                 {(s.axis === "wolkovich" || s.axis === "michelsonas-1961") && (
                   <span className="block space-y-2">
@@ -319,27 +363,54 @@ export default async function RegistryParishPage({
                   </span>
                 )}
                 {s.axis === "web-historical" && (
-                  <>
-                    {s.confidence ? `Survey confidence: ${s.confidence}. ` : ""}
-                    {s.currentStatus ? `Surveyed status: ${s.currentStatus}. ` : ""}
-                    {s.ownership ? `Surveyed ownership: ${s.ownership}.` : ""}
-                  </>
+                  <span className="block space-y-1">
+                    <span className="block">
+                      {s.currentStatus && !/^(none|unknown|unspecified)$/i.test(s.currentStatus) && (
+                        <>Status as surveyed: <strong>{s.currentStatus}</strong>. </>
+                      )}
+                      {s.ownership && !/^(none|unknown|unspecified)$/i.test(s.ownership) && (
+                        <>Ownership: {s.ownership === "diocese_rc" ? "Roman Catholic diocese" : s.ownership}.</>
+                      )}
+                    </span>
+                    {s.sourceUrl ? (
+                      <span className="block text-xs">
+                        <a href={s.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-accent">
+                          Source →
+                        </a>
+                      </span>
+                    ) : null}
+                    <span className="block text-xs italic text-muted">
+                      Automated web survey of diocesan directories and parish websites (2026).
+                      Confidence: {s.confidence ?? "unspecified"}.
+                      This source is lower-priority than <em>Draugas</em>, Wolkovich, or Michelsonas —
+                      treat with caution and verify against primary sources.
+                    </span>
+                  </span>
                 )}
                 {s.axis === "truelithuania" && (
-                  <>
-                    {s.statusFlags ? `Survey flags: ${JSON.stringify(s.statusFlags)}. ` : ""}
-                    {s.yearsMentioned ? `Years mentioned: ${s.yearsMentioned}. ` : ""}
-                    {s.sourceUrl && (
-                      <a
-                        href={s.sourceUrl}
-                        className="underline hover:text-accent"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        field-survey source
-                      </a>
+                  <span className="block space-y-1">
+                    {s.yearsMentioned?.length > 0 && (
+                      <span className="block">
+                        Years mentioned: {(s.yearsMentioned as number[]).join(", ")}.
+                      </span>
                     )}
-                  </>
+                    {s.sourceUrl && (
+                      <span className="block text-xs">
+                        <a
+                          href={s.sourceUrl}
+                          className="underline hover:text-accent"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          Global True Lithuania field survey →
+                        </a>
+                      </span>
+                    )}
+                    <span className="block text-xs italic text-muted">
+                      Field survey data. Years mentioned are years the site appeared in the survey corpus —
+                      not founding or closure dates. Use Draugas and print sources for verified dates.
+                    </span>
+                  </span>
                 )}
               </p>
             </div>
