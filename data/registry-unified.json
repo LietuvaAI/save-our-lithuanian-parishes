@@ -14804,6 +14804,7 @@
   },
   {
    "slug": "st-casimir-st-pete-beach-fl",
+   "caveat": "Marked as closed by web survey and a mis-attributed 2017 year derived from TrueLithuania yearsMentioned; contradicted by firsthand observation (open, spring 2026). Closed year removed pending verification.",
    "names": {
     "lt": "Šv. Kazimiero",
     "en": "St. Casimir Mission",
@@ -14829,7 +14830,7 @@
      "kind": "web-candidate",
      "idx": 136,
      "confidence": "medium",
-     "currentStatus": "closed",
+     "currentStatus": "open — active as of spring 2026 (firsthand observation)",
      "ownership": "diocese_rc"
     },
     {
@@ -14852,12 +14853,7 @@
       "source": "draugas-registry-1909-2007"
      }
     ],
-    "closed": [
-     {
-      "value": "2017",
-      "source": "draugas-registry-1909-2007"
-     }
-    ]
+    "closed": []
    },
    "conflicts": [],
    "related_sites": [],
