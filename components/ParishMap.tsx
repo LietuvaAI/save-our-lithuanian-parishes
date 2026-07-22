@@ -25,7 +25,7 @@ import {
 
 const FULL = (regData as { frame?: { x: number; y: number; w: number; h: number } })
   .frame ?? { x: 0, y: 0, w: 975, h: 610 };
-const MAX_ZOOM = 10;
+const MAX_ZOOM = 20;
 const END_YEAR = 2026;
 const NE_STATES = new Set(["ME", "NH", "VT", "MA", "RI", "CT", "NY", "NJ", "PA", "MD"]);
 
@@ -193,6 +193,7 @@ export default function ParishMap() {
   const [view, setView] = useState<View>(FULL);
   const [year, setYear] = useState<number | null>(null);
   const [playing, setPlaying] = useState(false);
+  const [showArchived, setShowArchived] = useState(false);
   const svgRef = useRef<SVGSVGElement>(null);
   const drag = useRef<{ px: number; py: number; moved: boolean } | null>(null);
 
@@ -245,24 +246,47 @@ export default function ParishMap() {
     return () => clearInterval(id);
   }, [playing, year === null]);
 
-  const neView = useMemo(() => {
-    const pts = POINTS.filter((p) => NE_STATES.has(p.state));
+  const MW_STATES = new Set(["IL", "IN", "OH", "MI", "WI", "MN", "IA", "MO"]);
+
+  function regionView(states: Set<string>) {
+    const pts = POINTS.filter((p) => states.has(p.state));
+    if (!pts.length) return FULL;
     const xs = pts.map((p) => p.x);
     const ys = pts.map((p) => p.y);
-    const pad = 28;
+    const pad = 32;
     const x = Math.min(...xs) - pad;
     const y = Math.min(...ys) - pad;
     const w = Math.max(...xs) + pad - x;
     const h = Math.max(...ys) + pad - y;
     const fw = Math.max(w, (h * FULL.w) / FULL.h);
     return clampView({ x: x - (fw - w) / 2, y, w: fw, h: (fw / FULL.w) * FULL.h });
-  }, []);
+  }
+
+  const neView = useMemo(() => regionView(NE_STATES), []);
+  const mwView = useMemo(() => regionView(MW_STATES), []);
 
   function zoomBy(factor: number) {
     setView((v) => {
       const w = v.w / factor;
       return clampView({ x: v.x + (v.w - w) / 2, y: v.y + (v.h - (w / FULL.w) * FULL.h) / 2, w, h: (w / FULL.w) * FULL.h });
     });
+  }
+
+  function onWheel(e: React.WheelEvent<SVGSVGElement>) {
+    e.preventDefault();
+    if (!svgRef.current) return;
+    const rect = svgRef.current.getBoundingClientRect();
+    const mx = view.x + ((e.clientX - rect.left) / rect.width) * view.w;
+    const my = view.y + ((e.clientY - rect.top) / rect.height) * view.h;
+    const factor = e.deltaY < 0 ? 1.3 : 1 / 1.3;
+    const newW = Math.min(Math.max(view.w / factor, FULL.w / MAX_ZOOM), FULL.w);
+    const newH = (newW / FULL.w) * FULL.h;
+    setView(clampView({
+      x: mx - (mx - view.x) * (newW / view.w),
+      y: my - (my - view.y) * (newH / view.h),
+      w: newW,
+      h: newH,
+    }));
   }
 
   function onPointerDown(e: React.PointerEvent<SVGSVGElement>) {
@@ -297,13 +321,16 @@ export default function ParishMap() {
       active ? "bg-foreground text-background" : "border border-rule hover:border-foreground"
     }`;
 
+  const knownPoints = POINTS.filter((p) => p.status !== "unknown");
+  const archivePoints = POINTS.filter((p) => p.status === "unknown");
+
   const visible = timelineMode
-    ? POINTS
+    ? knownPoints
     : mode === "all"
-      ? POINTS
+      ? knownPoints
       : mode === "open"
-        ? POINTS.filter((p) => p.status === "open")
-        : POINTS.filter((p) => p.inAlerts || p.status === "threat" || p.status === "building");
+        ? knownPoints.filter((p) => p.status === "open")
+        : knownPoints.filter((p) => p.inAlerts || p.status === "threat" || p.status === "building");
 
   return (
     <div>
@@ -325,6 +352,18 @@ export default function ParishMap() {
         >
           ▶ Across time ({minYear}–{END_YEAR})
         </button>
+        <button
+          type="button"
+          className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors border ${
+            showArchived
+              ? "border-muted bg-muted/10 text-foreground"
+              : "border-rule text-muted hover:border-foreground"
+          }`}
+          onClick={() => setShowArchived((v) => !v)}
+          title="Parishes attested in the research record but with unestablished fate — from sources including the Wolkovich book"
+        >
+          + Unestablished fate ({archivePoints.length})
+        </button>
       </div>
 
       <div className="relative">
@@ -338,21 +377,35 @@ export default function ParishMap() {
           onPointerMove={onPointerMove}
           onPointerUp={onPointerUp}
           onPointerLeave={onPointerUp}
+          onWheel={onWheel}
         >
-          {(regData as { canadaPath?: string }).canadaPath && (
-            <path
-              d={(regData as { canadaPath?: string }).canadaPath}
-              fill="var(--band)"
-              fillOpacity={0.55}
-              stroke="var(--foreground)"
-              strokeOpacity={0.15}
-              strokeWidth={0.7 / zoom}
-            />
-          )}
           {mapData.statePaths.map((d, i) => (
             <path key={i} d={d} fill="var(--band)" stroke="var(--foreground)" strokeOpacity={0.25} strokeWidth={0.7 / zoom} />
           ))}
           <path d={mapData.stateBorders} fill="none" stroke="var(--foreground)" strokeOpacity={0.15} strokeWidth={0.7 / zoom} />
+
+          {/* Archive crosses — parishes with unestablished fate, shown when toggled */}
+          {!timelineMode && showArchived && archivePoints.map((p) => {
+            const isHov = hovered?.id === p.id;
+            const r = isHov ? markR * 1.2 : markR * 0.9;
+            return (
+              <g key={p.id}
+                onMouseEnter={() => setHovered(p)} onMouseLeave={() => setHovered(null)}
+                onFocus={() => setHovered(p)} onBlur={() => setHovered(null)}
+                onClick={() => openPoint(p)}
+                onKeyDown={(e) => { if (e.key === "Enter") openPoint(p); }}
+                tabIndex={p.profile ? 0 : 0}
+                role="img"
+                aria-label={`${p.name}, ${p.city} ${p.state} — fate not yet established`}
+                className="cursor-default focus:outline-none"
+              >
+                <line x1={p.x - r} y1={p.y} x2={p.x + r} y2={p.y}
+                  stroke="var(--muted)" strokeOpacity={0.7} strokeWidth={markR * 0.35} strokeLinecap="round" />
+                <line x1={p.x} y1={p.y - r} x2={p.x} y2={p.y + r}
+                  stroke="var(--muted)" strokeOpacity={0.7} strokeWidth={markR * 0.35} strokeLinecap="round" />
+              </g>
+            );
+          })}
 
           {visible.map((p) => {
             const active = hovered?.id === p.id;
@@ -417,8 +470,9 @@ export default function ParishMap() {
         </svg>
 
         {/* Region shortcuts */}
-        <div className="absolute left-2 top-2 flex gap-1.5">
+        <div className="absolute left-2 top-2 flex flex-wrap gap-1.5">
           <button type="button" className={btn} onClick={() => setView(neView)}>Northeast</button>
+          <button type="button" className={btn} onClick={() => setView(mwView)}>Midwest</button>
           {zoom > 1.01 && (
             <button type="button" className={btn} onClick={() => setView(FULL)}>Reset</button>
           )}
@@ -565,12 +619,24 @@ export default function ParishMap() {
             <Swatch fill="var(--mark-community)" ring label="Status unresolved" />
             <Swatch fill="var(--mark-closed)" label={`Lost (${statusCounts.lost})`} />
             <Swatch fill="var(--mark-building)" label="Building at risk" />
-            <Swatch hollow label={`Fate not yet established (${statusCounts.unknown})`} />
+            {showArchived && <SwatchCross label={`Fate not yet established (${archivePoints.length})`} />}
           </>
         )}
         </div>
       </div>
     </div>
+  );
+}
+
+function SwatchCross({ label }: { label: string }) {
+  return (
+    <span className="inline-flex items-center gap-1.5">
+      <svg width={16} height={16} viewBox="0 0 16 16" aria-hidden>
+        <line x1={4} y1={8} x2={12} y2={8} stroke="var(--muted)" strokeOpacity={0.7} strokeWidth={1.4} strokeLinecap="round" />
+        <line x1={8} y1={4} x2={8} y2={12} stroke="var(--muted)" strokeOpacity={0.7} strokeWidth={1.4} strokeLinecap="round" />
+      </svg>
+      {label}
+    </span>
   );
 }
 
