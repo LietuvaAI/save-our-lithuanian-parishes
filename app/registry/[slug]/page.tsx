@@ -137,9 +137,17 @@ export default async function RegistryParishPage({
           <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
             Lithuanian community — not a distinct national parish
           </span>
+        ) : p.congregation_class === "national_catholic_pncc" ? (
+          <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
+            separated from Rome — documented as historical witness
+          </span>
+        ) : p.congregation_class === "independent_catholic" ? (
+          <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
+            independent / schismatic — documented as historical witness
+          </span>
         ) : (
           <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
-            Lithuanian national parish
+            Lithuanian ethnic parish
           </span>
         )}
         <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
