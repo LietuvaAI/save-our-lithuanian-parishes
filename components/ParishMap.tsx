@@ -123,6 +123,10 @@ function buildPoints(): Point[] {
   }
 
   for (const c of regData.points) {
+    // Canada is the comparator exception in the research record but is not
+    // shown on the US-focused map — it would appear near the US border and
+    // confuse readers. Canadian parishes stay in all data counts.
+    if ((c as { country?: string }).country === "CA") continue;
     const alert = alertBySlug.get(c.slug);
     const inAlerts = !!alert;
     const alerted = !!alert && alert.kind === "active";
@@ -538,7 +542,9 @@ export default function ParishMap() {
       </div>
 
       {/* Legend */}
-      <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted">
+      <div className="mt-3 rounded-lg border border-rule px-4 py-3">
+        <p className="text-xs uppercase tracking-widest text-muted mb-2">Key</p>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted">
         {timelineMode ? (
           <>
             <Swatch fill="var(--mark-ink)" label="Alive that year" />
@@ -562,6 +568,7 @@ export default function ParishMap() {
             <Swatch hollow label={`Fate not yet established (${statusCounts.unknown})`} />
           </>
         )}
+        </div>
       </div>
     </div>
   );
