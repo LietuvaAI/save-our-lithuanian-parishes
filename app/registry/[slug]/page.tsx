@@ -51,6 +51,28 @@ export async function generateMetadata({
   };
 }
 
+// Patterns that indicate a community attended a non-Lithuanian parish, rather
+// than being an independent Lithuanian national parish.
+const SETTLEMENT_PATTERNS = [
+  /not a distinct Lithuanian parish/i,
+  /\bno parish\b/i,
+  /\bsecular\b/i,
+  /territorial parish attended by/i,
+  /memorial chapel/i,
+  /no distinct parish/i,
+];
+
+type CommunityKind = "settlement" | "parish";
+
+function communityKind(sources: any[]): CommunityKind {
+  for (const s of sources) {
+    if (s.ethnic_status && SETTLEMENT_PATTERNS.some((p) => p.test(s.ethnic_status))) {
+      return "settlement";
+    }
+  }
+  return "parish";
+}
+
 function YearList({ label, items }: { label: string; items: any[] }) {
   if (!items?.length) return null;
   const differ = new Set(items.map((v) => v.value)).size > 1;
@@ -90,6 +112,7 @@ export default async function RegistryParishPage({
     (v: string) => v && v !== name && v !== altName
   );
   const axes = [...new Set(p.sources.map((s: any) => s.axis))] as string[];
+  const kind = communityKind(p.sources);
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-12">
@@ -110,6 +133,15 @@ export default async function RegistryParishPage({
         <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium">
           {CLASS_LABEL[p.congregation_class] ?? p.congregation_class}
         </span>
+        {kind === "settlement" ? (
+          <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
+            Lithuanian community — not a distinct national parish
+          </span>
+        ) : (
+          <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
+            Lithuanian national parish
+          </span>
+        )}
         <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
           {p.record_depth === "multi-source"
             ? `multi-source — documented independently in ${axes.length} sources`
@@ -147,6 +179,28 @@ export default async function RegistryParishPage({
         </section>
       )}
 
+      {kind === "settlement" && (
+        <section className="mt-8 rounded-lg border border-rule px-4 py-4 text-sm leading-relaxed">
+          <p className="font-medium text-foreground">Why this community is in the record</p>
+          <p className="mt-2 text-muted">
+            This entry documents a Lithuanian community that worshipped together
+            — attending Mass, holding devotions, or maintaining a chapel — but
+            was not organized as a distinct Lithuanian national parish of its
+            own. Wolkovich-Valkavičius recorded communities like this alongside
+            canonical parishes because they represent the full lived geography
+            of Lithuanian religious life in America: settlements, farm colonies,
+            territorial parishes with Lithuanian attendees, and civic chapters
+            with a sacramental dimension.
+          </p>
+          <p className="mt-2 text-muted">
+            The map shows it as an unestablished-fate cross (
+            <span className="font-mono">+</span>) rather than a filled dot.
+            The research record preserves the source&#8217;s own characterization
+            verbatim — quoted below.
+          </p>
+        </section>
+      )}
+
       <section className="mt-8">
         <h2 className="font-serif text-2xl font-semibold">
           Documented in {axes.length} {axes.length === 1 ? "source" : "sources"}
@@ -165,17 +219,36 @@ export default async function RegistryParishPage({
                   </>
                 )}
                 {(s.axis === "wolkovich" || s.axis === "michelsonas-1961") && (
-                  <>
-                    {s.pages ? `Cited at ${s.pages}. ` : ""}
-                    {s.ethnic_status && !/^(none|unknown|unspecified)$/i.test(s.ethnic_status)
-                      ? `Recorded status: ${s.ethnic_status}. `
-                      : ""}
-                    {s.diocese && !/^(none|unknown|unspecified)$/i.test(s.diocese)
-                      ? `Diocese: ${s.diocese}. `
-                      : ""}
-                    In-copyright work — facts cited by page, text never
-                    republished; find it through a library catalog.
-                  </>
+                  <span className="block space-y-1">
+                    {s.ethnic_status && !/^(none|unknown|unspecified)$/i.test(s.ethnic_status) && (
+                      <span className="block italic">
+                        &ldquo;{s.ethnic_status}&rdquo;
+                      </span>
+                    )}
+                    {s.diocese && !/^(none|unknown|unspecified)$/i.test(s.diocese) && (
+                      <span className="block">Diocese: {s.diocese}.</span>
+                    )}
+                    <span className="block text-xs">
+                      {s.axis === "wolkovich" ? (
+                        <>
+                          <a
+                            href="https://lccn.loc.gov/91-76766"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline hover:text-accent"
+                          >
+                            Wolkovich-Valkavičius, <em>Lithuanian Religious Life in America</em>, Vol. 3 (1998)
+                          </a>
+                          {s.pages ? `, ${s.pages}` : ""}
+                        </>
+                      ) : (
+                        <>
+                          Michelsonas, <em>Lietuvių Išeivija Amerikoje</em> (1868–1961), Keleivis, 1961
+                          {s.pages ? `, ${s.pages}` : ""}
+                        </>
+                      )}
+                    </span>
+                  </span>
                 )}
                 {s.axis === "web-historical" && (
                   <>
