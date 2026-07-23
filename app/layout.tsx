@@ -28,12 +28,12 @@ export const metadata: Metadata = {
 };
 
 const NAV = [
-  { href: "/under-threat", label: "Under Threat" },
-  { href: "/sustainability-watch", label: "Sustainability Watch" },
   { href: "/record", label: "The Record" },
+  { href: "/under-threat", label: "Under Threat" },
+  { href: "/sustainability-watch", label: "The Vigil" },
   { href: "/parishes", label: "Parish Profiles" },
-  { href: "/about", label: "About" },
   { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys (The Hearth)" },
+  { href: "/about", label: "About" },
 ];
 
 export default function RootLayout({
@@ -122,7 +122,7 @@ export default function RootLayout({
                 Under threat
               </Link>
               <Link href="/sustainability-watch" className="hover:text-foreground">
-                Sustainability watch
+                The Vigil
               </Link>
               <Link href="/record" className="hover:text-foreground">
                 The Record
