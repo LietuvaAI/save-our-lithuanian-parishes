@@ -90,7 +90,7 @@ export default function AboutPage() {
           <strong>137 more parishes</strong> across the U.S. and Canada — 119
           of them already on the home-page map, each marked by how deeply it
           is documented so far. And each{" "}
-          <Link href="/parishes" className="underline hover:text-accent">
+          <Link href="/record" className="underline hover:text-accent">
             parish profile
           </Link>{" "}
           is growing a researched present-day case record of where the

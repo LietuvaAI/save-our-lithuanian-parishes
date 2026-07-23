@@ -292,7 +292,7 @@ export default function UnderThreatPage() {
           <span className="font-medium text-foreground">How this list is built.</span>{" "}
           The watch layer systematically monitors 155 parishes and sites drawn
           from the wider research record — a broader net than the{" "}
-          <Link href="/parishes" className="underline hover:text-foreground">
+          <Link href="/record" className="underline hover:text-foreground">
             case-filed parishes
           </Link>{" "}
           with researched case files, which remain the core record. A parish

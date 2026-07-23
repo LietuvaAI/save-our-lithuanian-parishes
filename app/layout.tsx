@@ -28,10 +28,10 @@ export const metadata: Metadata = {
 };
 
 const NAV = [
+  { href: "/start-here", label: "Facing a Closure" },
   { href: "/record", label: "The Record" },
   { href: "/under-threat", label: "Under Threat" },
   { href: "/sustainability-watch", label: "The Vigil" },
-  { href: "/parishes", label: "Parish Profiles" },
   { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys (The Hearth)" },
   { href: "/about", label: "About" },
 ];
@@ -76,19 +76,6 @@ export default function RootLayout({
         <footer className="border-t border-rule mt-16">
           <div className="mx-auto max-w-5xl px-4 py-8 text-sm text-muted space-y-2">
             <p>
-              The public record of America&rsquo;s Lithuanian parishes — what
-              happened to each, where each stands now, and what communities
-              can learn from one another. And one commitment: that what
-              Lithuanian communities built stays in their hands, as{" "}
-              <Link
-                href="/what-canon-law-says"
-                className="underline hover:text-foreground"
-              >
-                even the Church&rsquo;s own law provides
-              </Link>
-              .
-            </p>
-            <p>
               Every figure on this site is recalculated automatically from
               the parish record — never typed in by hand. The canon: the
               full run of the{" "}
@@ -115,26 +102,23 @@ export default function RootLayout({
               .
             </p>
             <nav className="flex flex-wrap gap-x-4 gap-y-1 pt-1">
-              <Link href="/full-picture" className="hover:text-foreground">
-                The Full Picture
-              </Link>
-              <Link href="/under-threat" className="hover:text-foreground">
-                Under threat
-              </Link>
-              <Link href="/sustainability-watch" className="hover:text-foreground">
-                The Vigil
-              </Link>
-              <Link href="/record" className="hover:text-foreground">
-                The Record
+              <Link href="/start-here" className="hover:text-foreground">
+                Facing a Closure
               </Link>
               <Link href="/reversals" className="hover:text-foreground">
                 Reversals
               </Link>
-              <Link href="/start-here" className="hover:text-foreground">
-                Start Here
+              <Link href="/record" className="hover:text-foreground">
+                The Record
               </Link>
-              <Link href="/parishes" className="hover:text-foreground">
-                Parish Profiles
+              <Link href="/under-threat" className="hover:text-foreground">
+                Under Threat
+              </Link>
+              <Link href="/sustainability-watch" className="hover:text-foreground">
+                The Vigil
+              </Link>
+              <Link href="/full-picture" className="hover:text-foreground">
+                The Full Picture
               </Link>
               <Link href="/about-the-data" className="hover:text-foreground">
                 About the data

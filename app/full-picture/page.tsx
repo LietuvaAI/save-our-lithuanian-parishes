@@ -573,23 +573,15 @@ export default function FullPicturePage() {
       {/* ----------------------------------------------------------------- */}
       <section className="mt-14">
         <SectionAnchor id="record">Explore the record</SectionAnchor>
-        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="mt-4">
           <Link
             href="/record"
-            className="rounded-lg border border-rule p-5 hover:border-foreground/40 transition-colors"
+            className="rounded-lg border border-rule p-5 hover:border-foreground/40 transition-colors inline-block w-full sm:w-auto"
           >
             <p className="font-medium">The Record</p>
             <p className="mt-1 text-sm text-muted">
-              Every parish in the research — the full searchable table
-            </p>
-          </Link>
-          <Link
-            href="/parishes"
-            className="rounded-lg border border-rule p-5 hover:border-foreground/40 transition-colors"
-          >
-            <p className="font-medium">Parish Profiles</p>
-            <p className="mt-1 text-sm text-muted">
-              Individual profiles — history, sources, present-day record
+              Every parish in the research — searchable table with individual
+              profiles for each case-filed parish
             </p>
           </Link>
         </div>

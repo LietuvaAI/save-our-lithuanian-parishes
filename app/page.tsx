@@ -69,7 +69,7 @@ const ACTIONS = [
     title: "Know who holds the deed",
     body: "Find your parish among the documented parishes. See its ownership, its outcome, and how its story compares to the rest of the record.",
     cta: "Find your parish",
-    href: "/parishes",
+    href: "/record",
     primary: false,
   },
   {
@@ -94,12 +94,14 @@ export default function Home() {
         <p className="mt-4 max-w-2xl mx-auto text-lg leading-relaxed text-muted">
           The past is a torch to the present. America&rsquo;s Lithuanian
           parishes have long been the <em>židiniai</em> of our
-          communities&mdash;the hearths where the flame of faith, language,
-          memory, and identity was passed from one generation to the next. This
-          project traces that living inheritance across every Lithuanian parish
-          we can document, so that the experiences of one parish may help
-          illuminate the path of another. No parish facing difficult decisions
-          should begin in darkness.
+          communities&mdash;the hearths where faith was lived, language was
+          spoken, memory was preserved, and identity was formed. Together, they
+          form an unbroken current connecting the Lithuanian past to the present
+          and lighting the road ahead. This project traces the complete history
+          of America&rsquo;s Lithuanian parishes&mdash;from their earliest
+          foundations to the communities discerning their future today. The
+          experience of one parish may help illuminate the path of another,
+          because no parish should have to find its way in darkness.
         </p>
         <div className="mt-6 flex flex-wrap gap-3 justify-center">
           <Link
@@ -110,7 +112,7 @@ export default function Home() {
             Report from your parish
           </Link>
           <Link
-            href="/parishes"
+            href="/record"
             className="rounded-md border border-rule px-5 py-2.5 text-sm font-medium hover:border-foreground transition-colors"
           >
             Find your parish in the record

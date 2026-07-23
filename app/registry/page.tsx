@@ -30,7 +30,7 @@ export default function RegistryIndexPage() {
       </h1>
       <p className="mt-3 max-w-2xl text-muted leading-relaxed">
         Beyond the{" "}
-        <Link href="/parishes" className="underline hover:text-foreground">
+        <Link href="/record" className="underline hover:text-foreground">
           case-filed core
         </Link>{" "}
         (and the three Canadian comparator parishes, which carry their own
