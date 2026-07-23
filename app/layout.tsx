@@ -32,6 +32,7 @@ const NAV = [
   { href: "/sustainability-watch", label: "Sustainability Watch" },
   { href: "/record", label: "The Record" },
   { href: "/parishes", label: "Parish Profiles" },
+  { href: "/about", label: "About" },
   { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys (The Hearth)" },
 ];
 
