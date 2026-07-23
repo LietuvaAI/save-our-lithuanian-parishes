@@ -1,6 +1,6 @@
 {
  "corpusScope": "parish-watch-alerts",
- "snapshot": "2026-07-22",
+ "snapshot": "2026-07-23",
  "provenance": "Snapshot of culturenet-brain docs/research/parish-watch/alerts.jsonl (Parish Watch baseline sweep, PR #388). Refreshed by PR on the sweep cadence: red weekly, amber biweekly, full sweep monthly. Wording here is the site's own, written under the editorial guardrails; every item cites its sources.",
  "alerts": [
   {
@@ -347,6 +347,174 @@
      "title": "Saint Peter parish directory listing",
      "publisher": "The Boston Pilot",
      "url": "https://thebostonpilot.com/bcd/web_parish.asp?ektronid=4390"
+    }
+   ]
+  },
+  {
+   "id": "chicago-nativity-bvm-watch",
+   "entity": "Nativity BVM Parish (Švč. M. Marijos Gimimo)",
+   "place": "Chicago, Illinois",
+   "diocese": "Archdiocese of Chicago",
+   "parishLink": "/parishes/svc-mergeles-marijos-gimimo-chicago-il",
+   "hearthUrl": null,
+   "dateObserved": "2026-07-23",
+   "clergy": {
+    "arrangement": "lithuanian_klebonas",
+    "detail": "Sielovada lists Kun. Jaunius Kelpšas as klebonas of Nativity BVM. Sielovada article coverage also places him in active Chicago Lithuanian liturgical life, including the parish anniversary Mass and 2026 diaspora liturgy in Chicago."
+   },
+   "liturgy": {
+    "lithuanianMass": true,
+    "frequency": "weekly",
+    "detail": "The parish website lists Lithuanian Mass at 8:30 a.m. daily, 4:00 p.m. Saturday, and 11:00 a.m. Sunday; 9:30 a.m. Sunday Mass is English. The second Sunday 11:00 a.m. Mass is identified as the children's Lithuanian Mass."
+   },
+   "governance": "standalone",
+   "governanceDetail": "Current public parish and Sielovada pages present Nativity BVM as a distinct Lithuanian parish/rektoriatas with its own pastor. Prior scout data notes an Archdiocese of Chicago Renew My Church grouping proposal with Blessed Jurgis Matulaitis Mission, but no final merger or closure decree was found in the Tier 1 pass.",
+   "survivedThreats": "Survived Chicago-area Lithuanian parish consolidation; local case data records it as the sole surviving Lithuanian Roman Catholic parish in Chicago by 2020.",
+   "financial": "Prior scout data flags chronic deficit support through an archdiocesan high-interest loan and notes that the church building is not parish-owned. This Tier 1 web pass did not find a fresh public confirmation of the current loan balance, rate, or building-ownership terms.",
+   "situation": "Nativity BVM is a high-vitality but financially exposed survivor: Sielovada and the parish website confirm a Lithuanian klebonas and frequent Lithuanian liturgy, while local scout data keeps the key sustainability question on finances and diocesan/building control open. Sielovada articles show active parish anniversaries, confirmations, and Chicago Lithuanian community participation rather than liturgical dormancy.",
+   "photo": {
+    "url": "/images/parishes/chicago-nativity-bvm.jpg",
+    "alt": "Exterior of Nativity of the Blessed Virgin Mary Lithuanian church in Chicago.",
+    "attribution": "CIEE article, image captioned as Lithuanian Church of the Nativity of the Blessed Virgin Mary in Chicago; article credits related architectural archive material to the Mulokas family personal archive.",
+    "license": "External source; reuse permission not confirmed."
+   },
+   "sources": [
+    {
+     "title": "North America Lithuanian pastoral care directory",
+     "publisher": "Sielovada.org",
+     "url": "https://sielovada.org/siaures-amerika/"
+    },
+    {
+     "title": "Masses",
+     "publisher": "Chicago Nativity Blessed Virgin Mary Parish",
+     "url": "https://chicagonativitybvm.org/misios/?lang=en"
+    },
+    {
+     "title": "Bažnyčia ir bendruomenė neatsiejamos: atšventė Švč. Mergelės Marijos Gimimo bažnyčios 96-ąjį gimtadienį",
+     "publisher": "Sielovada.org / Draugas",
+     "url": "https://sielovada.org/baznycia-ir-bendruomene-neatsiejamos-atsvente-svc-mergeles-marijos-gimimo-baznycios-96-aji-gimtadieni/"
+    },
+    {
+     "title": "Arkivysk. Liongino Virbalo SJ apsilankymas Čikagoje ir Lemonte",
+     "publisher": "Sielovada.org",
+     "url": "https://sielovada.org/arkivysk-liongino-virbalo-sj-apsilankymas-cikagoje-ir-lemonte/"
+    },
+    {
+     "title": "Bridging Cultures: Vaidas Petrulis's Journey Through 20th Century Lithuanian Architecture in the U.S.",
+     "publisher": "CIEE",
+     "url": "https://www.ciee.org/about/blog/bridging-cultures-vaidas-petruliss-journey-through-20th-century-lithuanian-architecture-us"
+    }
+   ]
+  },
+  {
+   "id": "cleveland-st-casimir-watch",
+   "entity": "St. Casimir Parish (Šv. Kazimiero)",
+   "place": "Cleveland, Ohio",
+   "diocese": "Diocese of Cleveland",
+   "parishLink": "/parishes/sv-kazimiero-cleveland-oh",
+   "hearthUrl": null,
+   "dateObserved": "2026-07-23",
+   "clergy": {
+    "arrangement": "lithuanian_klebonas",
+    "detail": "Sielovada lists Rev. Andrius Morkūnas as pastor of St. Casimir. Local case data and Diocese of Cleveland assignment notices identify Andrew M. Morkunas as administrator effective April 30, 2025, also serving as a University Hospitals chaplain; title usage therefore differs by source but the Lithuanian priest match is strong."
+   },
+   "liturgy": {
+    "lithuanianMass": true,
+    "frequency": "weekly",
+    "detail": "Sielovada confirms Lithuanian and English Masses. Local case data from current parish bulletins records Sunday 11:00 a.m. Lithuanian Mass, English Masses Saturday/Sunday, and weekday Masses."
+   },
+   "governance": "merged",
+   "governanceDetail": "Current St. Casimir is the surviving consolidated Lithuanian parish formed October 25, 2009 from St. George and Our Lady of Perpetual Help; it remains an active Diocese of Cleveland parish on Neff Road.",
+   "survivedThreats": "Survived the 2009 Cleveland Lithuanian parish consolidation and a 2014 financial crisis that scout data ties to a diocesan-approved school-building lease.",
+   "financial": "The 2014 school-lease rescue remains the key financial signal, but current occupancy/renewal of that lease was not confirmed in this Tier 1 web pass. Current bulletins in local case data show normal operations and 2027 Mass intentions, not an active closure action.",
+   "situation": "St. Casimir Cleveland remains one of the stronger sustainability-watch cases: Sielovada names a Lithuanian priest, scout/current case data shows weekly Lithuanian Mass and active parish operations, and the main uncertainty is not present liturgical life but whether the post-2014 school-building financial support remains stable.",
+   "photo": {
+    "url": "/images/parishes/cleveland-st-casimir.jpg",
+    "alt": "Exterior of St. Casimir Parish church in Cleveland.",
+    "attribution": "Saint Casimir Parish website image, baznycia-m.jpg.",
+    "license": "Parish website source; reuse permission not confirmed."
+   },
+   "sources": [
+    {
+     "title": "North America Lithuanian pastoral care directory",
+     "publisher": "Sielovada.org",
+     "url": "https://sielovada.org/siaures-amerika/"
+    },
+    {
+     "title": "Saint Casimir Parish homepage",
+     "publisher": "Saint Casimir Parish",
+     "url": "http://www.saintcasimirparish.org/"
+    },
+    {
+     "title": "Bulletin, July 4-5, 2026",
+     "publisher": "Saint Casimir Parish",
+     "url": "http://saintcasimirparish.org/main-en/bulletin-en.html"
+    },
+    {
+     "title": "Clergy assignment changes - January 2025",
+     "publisher": "Diocese of Cleveland",
+     "url": "https://www.dioceseofcleveland.org/news/2025/01/23/clergy-assignment-changes-january-2025"
+    },
+    {
+     "title": "St. Casimir parish directory, Neff Road",
+     "publisher": "Diocese of Cleveland",
+     "url": "https://www.dioceseofcleveland.org/parishes/directory/st-casimir"
+    }
+   ]
+  },
+  {
+   "id": "philadelphia-st-andrew-watch",
+   "entity": "St. Andrew Lithuanian Parish (Šv. Andriejaus)",
+   "place": "Philadelphia, Pennsylvania",
+   "diocese": "Archdiocese of Philadelphia",
+   "parishLink": "/parishes/sv-andriejaus-philadelphia-pa",
+   "hearthUrl": null,
+   "dateObserved": "2026-07-23",
+   "clergy": {
+    "arrangement": "collaborative_pastor",
+    "detail": "The Archdiocese of Philadelphia and parish website list Rev. Gerald Dennis Gill, Cathedral Basilica rector, as parochial administrator. Sielovada lists St. Andrew as a Lithuanian parish with Lithuanian Mass but does not name a priest for Philadelphia; local scout data identifies Gill as not Lithuanian-speaking, with Lithuanian ministry sustained through parish/community structures and visiting clergy for some youth liturgies."
+   },
+   "liturgy": {
+    "lithuanianMass": true,
+    "frequency": "weekly",
+    "detail": "The parish website and Archdiocese of Philadelphia list Sunday 11:00 a.m. Mass at St. Andrew in Lithuanian and English. Sielovada says Lithuanian Mass is twice monthly, so frequency should be rechecked with a human/parish contact; current direct parish and diocesan listings support weekly."
+   },
+   "governance": "standalone",
+   "governanceDetail": "Archdiocese lists St. Andrew (Lithuanian) as an active parish founded in 1924, with the former St. Casimir Lithuanian church as a worship site. Parish administration and correspondence run through the Cathedral Parish Office under Rev. Gerald Dennis Gill.",
+   "survivedThreats": "Survived inside the archdiocese after absorbing/holding the former St. Casimir Lithuanian worship site; it remains the only Pennsylvania Lithuanian parish with a listed Lithuanian-language Sunday Mass.",
+   "financial": "Scout/local case data reports the former rectory was sold for $1.2 million around 2022-2024 and the proceeds invested for parish operations; the parish website corroborates that former rectory phone lines are no longer in service, but the exact deed date remains unresolved.",
+   "situation": "St. Andrew Philadelphia is active but structurally fragile: the parish and archdiocesan listings show weekly Lithuanian/English Sunday Mass and a living Lithuanian school/parish network, while Sielovada does not list a resident Lithuanian priest and governance depends on the Cathedral rector as parochial administrator. The rectory-sale proceeds appear to support operations, but the exact sale timing and long-term sustainability effect remain open.",
+   "photo": {
+    "url": "/images/parishes/philadelphia-st-andrew.jpg",
+    "alt": "Exterior parish-grounds photo showing work on the Lithuanian wayside cross at St. Andrew Lithuanian Parish.",
+    "attribution": "Saint Andrew Lithuanian Parish website photo from the Lithuanian Wayside Cross gallery.",
+    "license": "Parish website source; reuse permission not confirmed. Not a full facade image; use as interim exterior artifact photo until a clear church exterior is sourced."
+   },
+   "sources": [
+    {
+     "title": "North America Lithuanian pastoral care directory",
+     "publisher": "Sielovada.org",
+     "url": "https://sielovada.org/siaures-amerika/"
+    },
+    {
+     "title": "Saint Andrew Lithuanian Parish official website",
+     "publisher": "Saint Andrew Lithuanian Parish",
+     "url": "https://saintandrewlithuanianparish.org/"
+    },
+    {
+     "title": "Andrew (Lithuanian) parish listing",
+     "publisher": "Archdiocese of Philadelphia",
+     "url": "https://archphila.org/parish/st-andrew-philadelphia/"
+    },
+    {
+     "title": "Filadelfijos Šv. Andriejaus parapijos šimtmetis",
+     "publisher": "Sielovada.org",
+     "url": "https://sielovada.org/filadelfijos-sv-andriejaus-parapijos-simtmetis/"
+    },
+    {
+     "title": "Švento Andriejaus parapijoje Philadelphijoje verda gyvenimas",
+     "publisher": "Draugas",
+     "url": "https://www.draugas.org/svento-andriejaus-parapijoje-philadelphijoje-verda-gyvenimas/"
     }
    ]
   }
