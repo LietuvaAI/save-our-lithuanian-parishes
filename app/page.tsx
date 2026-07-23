@@ -92,23 +92,15 @@ export default function Home() {
           The public record of America&rsquo;s Lithuanian parishes
         </h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg leading-relaxed text-muted">
-          Lithuanian immigrants built more than two hundred parishes across
-          America — churches and schools, choirs and cemeteries: our
-          historical, cultural, and spiritual inheritance. No one kept their
-          record. Now it is kept here — every parish we can document, from
-          the very first foundings to the communities deciding their future
-          today. And we stand for one goal:{" "}
-          <strong className="text-foreground">
-            that what Lithuanian communities built stays in their hands
-          </strong>{" "}
-          — as{" "}
-          <Link
-            href="/what-canon-law-says"
-            className="underline hover:text-accent"
-          >
-            even the Church&rsquo;s own law provides
-          </Link>
-          .
+          The past is a torch to the present. America&rsquo;s Lithuanian
+          parishes have long been the <em>židiniai</em> of our
+          communities&mdash;the hearths where the flame of faith, language,
+          memory, and identity was passed from one generation to the next. This
+          project traces that living inheritance across every Lithuanian parish
+          we can document, from the earliest foundations to the communities
+          discerning their future today. Here, the experience of one parish
+          becomes the wisdom of all&mdash;so that no community facing difficult
+          decisions must begin in darkness.
         </p>
         <div className="mt-6 flex flex-wrap gap-3 justify-center">
           <Link
@@ -130,6 +122,65 @@ export default function Home() {
       <section className="mt-8">
         <ParishMap />
       </section>
+
+      {/* Status navigation — mirrors map legend, each links to its page */}
+      <nav
+        className="mt-4 flex flex-wrap gap-2 text-sm"
+        aria-label="Parish status categories"
+      >
+        <Link
+          href="/parishes"
+          className="inline-flex items-center gap-2 rounded-md border border-rule px-3 py-2 hover:border-foreground transition-colors"
+        >
+          <span
+            className="inline-block h-2.5 w-2.5 rounded-full flex-shrink-0"
+            style={{ background: "var(--mark-ink)" }}
+            aria-hidden
+          />
+          Open today
+        </Link>
+        <Link
+          href="/under-threat"
+          className="inline-flex items-center gap-2 rounded-md border border-rule px-3 py-2 hover:border-foreground transition-colors"
+        >
+          <span
+            className="inline-block h-2.5 w-2.5 rounded-full flex-shrink-0"
+            style={{ background: "var(--mark-community)" }}
+            aria-hidden
+          />
+          Under threat{" "}
+          <span className="text-muted">
+            ({(alertsData.alerts as any[]).length})
+          </span>
+        </Link>
+        <Link
+          href="/sustainability-watch"
+          className="inline-flex items-center gap-2 rounded-md border border-rule px-3 py-2 hover:border-foreground transition-colors"
+        >
+          <span
+            className="inline-block h-2.5 w-2.5 rounded-full flex-shrink-0 bg-amber-500"
+            aria-hidden
+          />
+          The Vigil{" "}
+          <span className="text-muted">
+            ({(alertsData as any).sustainabilityWatch.length})
+          </span>
+        </Link>
+        <span className="inline-flex items-center gap-2 px-3 py-2 text-muted">
+          <span
+            className="inline-block h-2.5 w-2.5 rounded-full flex-shrink-0"
+            style={{ background: "var(--mark-closed)" }}
+            aria-hidden
+          />
+          Lost
+        </span>
+        <Link
+          href="/parishes"
+          className="inline-flex items-center gap-2 rounded-md border border-rule px-3 py-2 hover:border-foreground transition-colors text-muted hover:text-foreground"
+        >
+          All parishes →
+        </Link>
+      </nav>
 
       <section className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-rule border border-rule rounded-lg overflow-hidden">
         {STATS.map((s) => (
