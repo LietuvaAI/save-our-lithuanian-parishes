@@ -222,23 +222,23 @@ export function getSituationByRegistrySlug(registrySlug: string): ParishSituatio
 }
 
 // ---------------------------------------------------------------------------
-// Full Picture link targets — each classifier value → anchor on /full-picture
+// About page link targets — each classifier value → anchor on /about
 // ---------------------------------------------------------------------------
 
 export const BUILDING_FATE_LINK: Record<BuildingFate, string> = {
-  demolished: "/full-picture#demolished",
-  standing: "/full-picture#buildings",
-  repurposed_religious: "/full-picture#buildings",
-  repurposed_secular: "/full-picture#buildings",
-  derelict: "/full-picture#buildings",
-  unknown: "/full-picture#buildings",
+  demolished: "/about#demolished",
+  standing: "/about#buildings",
+  repurposed_religious: "/about#buildings",
+  repurposed_secular: "/about#buildings",
+  derelict: "/about#buildings",
+  unknown: "/about#buildings",
 };
 
 export const LITHUANIAN_IDENTITY_LINK: Record<LithuanianIdentity, string> = {
-  active_parish: "/full-picture#standing",
-  mass_continues: "/full-picture#mass-continues",
-  ethnically_transferred: "/full-picture#transferred",
-  lost: "/full-picture#identity",
+  active_parish: "/about#standing",
+  mass_continues: "/about#mass-continues",
+  ethnically_transferred: "/about#transferred",
+  lost: "/about#identity",
 };
 
-export const OWNERSHIP_LINK = "/full-picture#ownership";
+export const OWNERSHIP_LINK = "/about#ownership";

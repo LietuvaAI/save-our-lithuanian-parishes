@@ -147,8 +147,8 @@ export default async function ParishPage({
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
       <p className="text-sm text-muted">
-        <Link href="/parishes" className="underline hover:text-foreground">
-          Parish Profiles
+        <Link href="/record" className="underline hover:text-foreground">
+          The Record
         </Link>{" "}
         / {parish.city}, {parish.state}
       </p>

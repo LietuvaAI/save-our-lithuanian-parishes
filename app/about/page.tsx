@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { MarkIcon } from "@/components/marks";
+import registry from "@/data/registry-unified.json";
 import {
   parishes,
   figures,
@@ -12,6 +13,35 @@ import {
   type Parish,
   type ParishSituation,
 } from "@/lib/parishes";
+
+// ---------------------------------------------------------------------------
+// Registry-level totals (full documented universe, not just the 83 case-filed)
+// ---------------------------------------------------------------------------
+const regParishes = (
+  registry as {
+    parishes: {
+      country?: string;
+      city?: string;
+      congregation_class?: string;
+      sources?: { ethnic_status?: string }[];
+    }[];
+  }
+).parishes;
+
+const isRealParish = (p: (typeof regParishes)[number]) =>
+  !(p.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? ""));
+const isUS = (p: (typeof regParishes)[number]) =>
+  p.country !== "CA" &&
+  !/buenos aires|argentin|rosario/i.test(p.city ?? "");
+
+const usParishesAll = regParishes.filter((p) => isRealParish(p) && isUS(p));
+const REG_TOTAL = usParishesAll.length;
+const REG_ETHNIC = usParishesAll.filter(
+  (p) => p.congregation_class === "roman_catholic"
+).length;
+const REG_NATCATH = usParishesAll.filter(
+  (p) => p.congregation_class === "national_catholic_pncc"
+).length;
 
 export const metadata: Metadata = {
   title: "About",
@@ -161,16 +191,20 @@ export default function AboutPage() {
       {/* ── By the numbers ── */}
       <section className="mt-12">
         <SectionAnchor id="numbers">By the numbers</SectionAnchor>
-        <p className="mt-2 text-sm text-muted">
-          {us.length} U.S. parishes case-filed so far, plus {ca.length} Canadian
-          comparators. Figures computed automatically from the parish record —
-          none are typed in by hand.
+        <p className="mt-2 text-sm text-muted leading-relaxed">
+          The full research record documents <strong>{REG_TOTAL} U.S. Lithuanian
+          parishes</strong> — {REG_ETHNIC} Roman Catholic ethnic (national) parishes
+          and {REG_NATCATH} Lithuanian National Catholic parishes. Of these,{" "}
+          {figures.usTotal} are case-filed in full depth: every fact verified
+          against dated published sources, with a researched present-day record
+          of where the building, the community, and the property stand now.
+          The numbers below are from that verified core.
         </p>
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-6">
-          <Stat n={figures.endingMode.diocese_closed} label="Closed by the diocese" />
-          <Stat n={figures.endingMode.standing} label="Still standing" />
-          <Stat n={figures.endingMode.community_decided} label="Ended on community terms" />
-          <Stat n={figures.endingMode.undecided} label="Unresolved" />
+          <Stat n={REG_TOTAL} label="U.S. Lithuanian parishes documented across the research record" />
+          <Stat n={figures.usTotal} label="Case-filed in full depth — every fact traced to a dated source" />
+          <Stat n={figures.endingMode.diocese_closed} label="Closed by the diocese since 2008 (verified core)" />
+          <Stat n={figures.endingMode.standing} label="Still standing (verified core)" />
         </div>
       </section>
 
@@ -178,8 +212,10 @@ export default function AboutPage() {
       <section className="mt-14">
         <SectionAnchor id="buildings">What happened to the buildings</SectionAnchor>
         <p className="mt-2 text-sm text-muted">
-          A parish closure is an administrative act. What happens to the building
-          afterwards is a separate, often worse, story.
+          Among the {figures.usTotal} case-filed parishes — where every building
+          fate has been researched and sourced. A closure is an administrative
+          act. What happens to the building afterward is a separate, often
+          worse, story.
         </p>
         <dl className="mt-6 space-y-3">
           {fateOrder.map((fate) => {
@@ -220,8 +256,9 @@ export default function AboutPage() {
       <section className="mt-14">
         <SectionAnchor id="identity">Lithuanian identity today</SectionAnchor>
         <p className="mt-2 text-sm text-muted">
-          Closure is not the only way to lose a Lithuanian parish. Some buildings
-          survive — but the Lithuanian community inside them does not.
+          Among the {figures.usTotal} case-filed parishes. Closure is not the
+          only way to lose a Lithuanian parish — some buildings survive, but
+          the Lithuanian community inside them does not.
         </p>
         <dl className="mt-6 space-y-3">
           {identityOrder.map((id) => {

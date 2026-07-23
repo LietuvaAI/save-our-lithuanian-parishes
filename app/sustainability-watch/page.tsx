@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import alertsData from "@/data/alerts.json";
 import { parishes } from "@/lib/parishes";
@@ -213,125 +214,153 @@ export default function SustainabilityWatchPage() {
         page.
       </p>
 
-      <div className="mt-8 space-y-6">
-        {entries.map((e) => (
-          <article
-            key={e.id}
-            className="rounded-lg border border-rule overflow-hidden"
-          >
-            <div className="px-5 pt-4 pb-3">
-              <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-                <div>
-                  <Link
-                    href={e.parishLink}
-                    className="font-serif text-lg font-semibold hover:underline"
-                  >
-                    {e.entity}
-                  </Link>
-                  <span className="ml-2 text-muted text-sm">{e.place}</span>
+      <AllParishesTable />
+
+      <div className="mt-10 space-y-6">
+        {entries.map((e) => {
+          const photo = (e as any).photo as
+            | { url: string; alt: string; attribution: string; license?: string }
+            | undefined;
+          return (
+            <article
+              key={e.id}
+              className="rounded-lg border border-rule overflow-hidden"
+            >
+              {/* Photo + header row */}
+              <div className="flex gap-0">
+                {photo?.url && (
+                  <div className="w-28 sm:w-36 shrink-0 self-stretch overflow-hidden">
+                    <Image
+                      src={photo.url}
+                      alt={photo.alt}
+                      width={144}
+                      height={220}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                )}
+                <div className="flex-1 px-5 pt-4 pb-3">
+                  <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                    <div>
+                      <Link
+                        href={e.parishLink}
+                        className="font-serif text-lg font-semibold hover:underline"
+                      >
+                        {e.entity}
+                      </Link>
+                      <span className="ml-2 text-muted text-sm">{e.place}</span>
+                    </div>
+                    <span className="text-xs text-muted">{e.diocese}</span>
+                  </div>
+
+                  <p className="mt-2 leading-relaxed">{e.situation}</p>
+
+                  {/* Clergy, liturgy, governance grid */}
+                  <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                    <div>
+                      <p className="text-xs uppercase tracking-wide text-muted mb-1">
+                        Clergy
+                      </p>
+                      <ClergyBadge arrangement={e.clergy.arrangement} />
+                      <p className="mt-1.5 text-muted leading-relaxed text-xs">
+                        {e.clergy.detail}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-xs uppercase tracking-wide text-muted mb-1">
+                        Lithuanian Mass
+                      </p>
+                      <p className="font-medium">
+                        {FREQUENCY_LABEL[e.liturgy.frequency] ?? e.liturgy.frequency}
+                      </p>
+                      <p className="mt-0.5 text-muted text-xs">{e.liturgy.detail}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs uppercase tracking-wide text-muted mb-1">
+                        Governance
+                      </p>
+                      <p className="font-medium">
+                        {GOVERNANCE_LABEL[e.governance] ?? e.governance}
+                      </p>
+                      <p className="mt-0.5 text-muted text-xs">
+                        {e.governanceDetail}
+                      </p>
+                    </div>
+                  </div>
+
+                  {e.survivedThreats && (
+                    <div className="mt-3 text-sm">
+                      <p className="text-xs uppercase tracking-wide text-muted mb-0.5">
+                        Survived
+                      </p>
+                      <p className="text-muted leading-relaxed">
+                        {e.survivedThreats}
+                      </p>
+                    </div>
+                  )}
+
+                  {e.financial && (
+                    <div className="mt-3 text-sm">
+                      <p className="text-xs uppercase tracking-wide text-muted mb-0.5">
+                        Financial signal
+                      </p>
+                      <p className="text-muted leading-relaxed">{e.financial}</p>
+                    </div>
+                  )}
                 </div>
-                <span className="text-xs text-muted">{e.diocese}</span>
               </div>
 
-              <p className="mt-2 leading-relaxed">{e.situation}</p>
-
-              {/* Clergy, liturgy, governance grid */}
-              <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-                <div>
-                  <p className="text-xs uppercase tracking-wide text-muted mb-1">
-                    Clergy
-                  </p>
-                  <ClergyBadge arrangement={e.clergy.arrangement} />
-                  <p className="mt-1.5 text-muted leading-relaxed text-xs">
-                    {e.clergy.detail}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-wide text-muted mb-1">
-                    Lithuanian Mass
-                  </p>
-                  <p className="font-medium">
-                    {FREQUENCY_LABEL[e.liturgy.frequency] ?? e.liturgy.frequency}
-                  </p>
-                  <p className="mt-0.5 text-muted text-xs">{e.liturgy.detail}</p>
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-wide text-muted mb-1">
-                    Governance
-                  </p>
-                  <p className="font-medium">
-                    {GOVERNANCE_LABEL[e.governance] ?? e.governance}
-                  </p>
-                  <p className="mt-0.5 text-muted text-xs">
-                    {e.governanceDetail}
-                  </p>
-                </div>
-              </div>
-
-              {e.survivedThreats && (
-                <div className="mt-3 text-sm">
-                  <p className="text-xs uppercase tracking-wide text-muted mb-0.5">
-                    Survived
-                  </p>
-                  <p className="text-muted leading-relaxed">
-                    {e.survivedThreats}
-                  </p>
-                </div>
+              {photo?.attribution && (
+                <p className="px-5 pb-1 text-xs text-muted/70 italic border-t border-rule pt-1">
+                  {photo.attribution}
+                  {photo.license && photo.license !== "External source; reuse permission not confirmed."
+                    ? ` · ${photo.license}`
+                    : ""}
+                </p>
               )}
 
-              {e.financial && (
-                <div className="mt-3 text-sm">
-                  <p className="text-xs uppercase tracking-wide text-muted mb-0.5">
-                    Financial signal
-                  </p>
-                  <p className="text-muted leading-relaxed">{e.financial}</p>
-                </div>
-              )}
-            </div>
-
-            <div className="border-t border-rule bg-background px-5 py-3 flex flex-wrap items-center justify-between gap-2">
-              <p className="text-xs text-muted">
-                Sources:{" "}
-                {e.sources.map((s, i) => (
-                  <span key={s.url}>
-                    {i > 0 && " \u00b7 "}
+              <div className="border-t border-rule bg-background px-5 py-3 flex flex-wrap items-center justify-between gap-2">
+                <p className="text-xs text-muted">
+                  Sources:{" "}
+                  {e.sources.map((s, i) => (
+                    <span key={s.url}>
+                      {i > 0 && " \u00b7 "}
+                      <a
+                        href={s.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-foreground"
+                      >
+                        {s.publisher}
+                      </a>
+                    </span>
+                  ))}
+                  {" \u00b7 "}
+                  <span>checked {e.dateObserved}</span>
+                </p>
+                <div className="flex gap-2">
+                  {e.hearthUrl && (
                     <a
-                      href={s.url}
+                      href={e.hearthUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline hover:text-foreground"
+                      className="rounded-md border border-rule px-3 py-1 text-xs font-medium hover:border-foreground transition-colors"
                     >
-                      {s.publisher}
+                      Read the dispatch &rarr;
                     </a>
-                  </span>
-                ))}
-                {" \u00b7 "}
-                <span>checked {e.dateObserved}</span>
-              </p>
-              <div className="flex gap-2">
-                {e.hearthUrl && (
-                  <a
-                    href={e.hearthUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  )}
+                  <Link
+                    href={e.parishLink}
                     className="rounded-md border border-rule px-3 py-1 text-xs font-medium hover:border-foreground transition-colors"
                   >
-                    Read the dispatch &rarr;
-                  </a>
-                )}
-                <Link
-                  href={e.parishLink}
-                  className="rounded-md border border-rule px-3 py-1 text-xs font-medium hover:border-foreground transition-colors"
-                >
-                  Full record &rarr;
-                </Link>
+                    Full record &rarr;
+                  </Link>
+                </div>
               </div>
-            </div>
-          </article>
-        ))}
+            </article>
+          );
+        })}
       </div>
-
-      <AllParishesTable />
 
       <section className="mt-10 rounded-lg border border-rule px-4 py-3.5 text-sm text-muted leading-relaxed">
         <p>
