@@ -4,12 +4,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MarkIcon } from "@/components/marks";
+import { ClassifierGrid } from "@/components/ClassifierGrid";
+import registry from "@/data/registry-unified.json";
 import {
   parishes,
   draugasCitationUrl,
+  getParishSituation,
   ENDING_MODE_LABEL,
   OWNERSHIP_LABEL,
   STATUS_LABEL,
+  INSTITUTION_TYPE_LABEL,
 } from "@/lib/parishes";
 
 interface CaseSource {
@@ -41,6 +45,21 @@ function loadCaseRecord(slug: string): CaseRecord | null {
   return existsSync(p) ? (JSON.parse(readFileSync(p, "utf-8")) as CaseRecord) : null;
 }
 
+// Build a registrySlug → registry-entry index for scholarly-source lookups.
+const registryBySlug = new Map(
+  (registry.parishes as any[]).map((p) => [p.slug, p])
+);
+
+/** Extract Wolkovich and/or Michelsonas sources for a canonical parish. */
+function getScholarlySources(registrySlug: string | null): any[] {
+  if (!registrySlug) return [];
+  const entry = registryBySlug.get(registrySlug);
+  if (!entry) return [];
+  return entry.sources.filter(
+    (s: any) => s.axis === "wolkovich" || s.axis === "michelsonas-1961"
+  );
+}
+
 export function generateStaticParams() {
   return parishes.map((p) => ({ slug: p.slug }));
 }
@@ -68,16 +87,14 @@ export default async function ParishPage({
   const parish = parishes.find((p) => p.slug === slug);
   if (!parish) notFound();
   const caseRecord = loadCaseRecord(slug);
+  const situation = getParishSituation(slug);
+  const scholarlySources = getScholarlySources(parish.registrySlug);
 
   const facts: [string, string][] = [
-    ["Ownership", OWNERSHIP_LABEL[parish.ownership]],
     ["Status", STATUS_LABEL[parish.status]],
     ["Founded", parish.yearFounded ? String(parish.yearFounded) : "Not established by the research"],
     ["Closed", parish.yearClosed ? String(parish.yearClosed) : parish.status === "standing" ? "—" : "Not established by the research"],
   ];
-  if (parish.coalRegion) {
-    facts.push(["Region", "Pennsylvania coal region"]);
-  }
   if (parish.comparator) {
     facts.push(["Scope", "Canadian comparator — documented for contrast, outside the U.S. figures"]);
   }
@@ -98,12 +115,31 @@ export default async function ParishPage({
         {parish.city}, {parish.state}
       </p>
 
-      <p className="mt-5 inline-flex items-center gap-2 rounded-lg border border-rule px-4 py-2.5">
-        <MarkIcon mode={parish.endingMode} size={16} />
-        <span className="font-medium">{ENDING_MODE_LABEL[parish.endingMode]}</span>
-      </p>
+      <div className="mt-4 flex flex-wrap items-center gap-2">
+        <span className="inline-flex items-center gap-1.5 rounded-full border border-rule px-3 py-1 text-sm font-medium">
+          <MarkIcon mode={parish.endingMode} size={12} />
+          {ENDING_MODE_LABEL[parish.endingMode]}
+        </span>
+        <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
+          {INSTITUTION_TYPE_LABEL[parish.institutionType]}
+        </span>
+      </div>
 
-      <dl className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+      {situation && (
+        <p className="mt-5 text-lg leading-relaxed">{situation.situation}</p>
+      )}
+
+      {situation && (
+        <div className="mt-6">
+          <ClassifierGrid
+            situation={situation}
+            ownership={parish.ownership}
+            coalRegion={parish.coalRegion}
+          />
+        </div>
+      )}
+
+      <dl className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-x-8 gap-y-3 text-sm">
         {facts.map(([label, value]) => (
           <div key={label}>
             <dt className="text-xs uppercase tracking-wide text-muted">{label}</dt>
@@ -128,6 +164,94 @@ export default async function ParishPage({
         <section className="mt-8">
           <h2 className="font-serif text-xl font-semibold">From the record</h2>
           <p className="mt-2 leading-relaxed">{parish.notes}</p>
+        </section>
+      )}
+
+      {scholarlySources.length > 0 && (
+        <section className="mt-8">
+          <h2 className="font-serif text-xl font-semibold">Scholarly sources</h2>
+          <p className="mt-2 text-sm text-muted leading-relaxed">
+            Cross-referenced from published monographs that independently
+            documented this parish. Quoted descriptions are the author&#8217;s own
+            characterization.
+          </p>
+          <div className="mt-3 space-y-3">
+            {scholarlySources.map((s: any, i: number) => {
+              const isWolkovich = s.axis === "wolkovich";
+              const hasDetail =
+                s.school || s.convent || s.cemetery ||
+                (s.diocese && !/^(none|unknown|unspecified)$/i.test(s.diocese));
+              return (
+                <div
+                  key={i}
+                  className="rounded-lg border border-rule px-4 py-3 text-sm"
+                >
+                  <p className="font-medium">
+                    {isWolkovich ? (
+                      <a
+                        href="https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-accent"
+                      >
+                        Wolkovich-Valkavičius,{" "}
+                        <em>Lithuanian Religious Life in America</em>, Vol.&nbsp;3
+                        (1998)
+                      </a>
+                    ) : (
+                      <a
+                        href="https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-accent"
+                      >
+                        Michelsonas,{" "}
+                        <em>Lietuvių Išeivija Amerikoje</em> (1868–1961),
+                        Keleivis, 1961
+                      </a>
+                    )}
+                    {s.pages && (
+                      <span className="text-muted font-normal">
+                        , {s.pages}
+                      </span>
+                    )}
+                  </p>
+                  {s.ethnic_status &&
+                    !/^(none|unknown|unspecified)$/i.test(s.ethnic_status) && (
+                      <p className="mt-2 italic leading-relaxed text-muted">
+                        &ldquo;{s.ethnic_status}&rdquo;
+                      </p>
+                    )}
+                  {hasDetail && (
+                    <div className="mt-2 space-y-0.5 text-muted">
+                      {s.diocese &&
+                        !/^(none|unknown|unspecified)$/i.test(s.diocese) && (
+                          <p>Diocese: {s.diocese}</p>
+                        )}
+                      {s.school && <p>School: {s.school}</p>}
+                      {s.convent && <p>Convent: {s.convent}</p>}
+                      {s.cemetery && <p>Cemetery: {s.cemetery}</p>}
+                    </div>
+                  )}
+                  {s.lens && (
+                    <p className="mt-2 text-xs italic text-muted">
+                      Note: {s.lens}
+                    </p>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+          {parish.registrySlug && (
+            <p className="mt-3 text-sm text-muted">
+              <Link
+                href={`/registry/${parish.registrySlug}`}
+                className="underline hover:text-foreground"
+              >
+                See the full research record →
+              </Link>
+            </p>
+          )}
         </section>
       )}
 
