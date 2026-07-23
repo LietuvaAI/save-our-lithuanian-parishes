@@ -29,6 +29,22 @@ Public advocacy site for SaveOurLithuanianParishes.org. This is a **product repo
 6. **83 case-filed so far / 58 in depth** — 83 is the first dataset (Draugas 2008–2026), not a ceiling. Copy must never frame it as the total universe; use "case-filed so far" or dynamic counts.
 7. **Site framing (Vilija 2026-07-21): the site's mission is the RECORD, not the deed thesis.** The site documents every parish — what happened to it, where it stands now, and what communities can learn from each other: from those that were lost AND from those that fought and won. "Ownership decided endings" and "procedure in time wins" are two *lessons inside* the record, not the site's identity. Accordingly: site visuals (the homepage map) encode *present status* (open / under threat / lost / fate unestablished); the who-decided (`ending_mode`) encoding remains for the Draugas-article graphics, charts, profile marks, and popups, where it originated. Unresolved cases (Maspeth) render as *under threat*, never as closed. Scope: the U.S., with Canada as the comparator exception — non-North-American records (e.g. the mis-coded Argentina entries) stay out of site counts and maps.
 
+## Hearth dispatch queue (Substack alignment)
+
+`data/alerts.json` campaigns carry a `hearthUrl` field — the site renders "How to help" CTAs from it on `/under-threat` and on parish profiles. When a new dispatch is published on The Hearth, add its URL to the matching campaign entry.
+
+**Has a dispatch:**
+- Divine Providence, Southfield MI — 7 dedicated posts + campaign anchor (hearthUrl set)
+- South Boston MA — "The Boston Hill of Crosses" (hearthUrl set)
+
+**Writing queue (priority — active campaigns with zero dedicated coverage):**
+1. **Maspeth, Queens NY** — presidential visit, 700 signatures, landmark push. Strongest untold story.
+2. **Hartford CT** — partial closure notice, GoFundMe for canon lawyer, cultural-center push.
+3. **Waterbury CT** — closed 2023, canonical appeal ongoing since, GoFundMe active.
+
+**No campaign yet (future, as events develop):**
+- Girardville PA, Freeland PA, Bayonne NJ, Scranton PA (St. Michael), Elizabeth NJ, Beverly Shores IN.
+
 ## Deploy
 
 Vercel Git integration (LietuvaAI team): branch push → preview URL; merge to `main` → production. Same model as ziburio-archive.
