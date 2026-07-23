@@ -72,7 +72,12 @@ export default function UnderThreatPage() {
         consolidation, a property motion, an open process — found by the
         systematic Parish Watch sweep and stated with its sources. Snapshot
         of {alertsData.snapshot}; red items are re-checked weekly, amber
-        biweekly.
+        biweekly. Parishes that survived but face slow-burn sustainability
+        challenges are on the{" "}
+        <Link href="/sustainability-watch" className="underline hover:text-foreground">
+          sustainability watch
+        </Link>
+        .
       </p>
 
       {/* ── Open window callout ── */}

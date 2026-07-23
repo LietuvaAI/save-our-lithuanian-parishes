@@ -31,19 +31,34 @@ Public advocacy site for SaveOurLithuanianParishes.org. This is a **product repo
 
 ## Hearth dispatch queue (Substack alignment)
 
-`data/alerts.json` campaigns carry a `hearthUrl` field — the site renders "How to help" CTAs from it on `/under-threat` and on parish profiles. When a new dispatch is published on The Hearth, add its URL to the matching campaign entry.
+`data/alerts.json` campaigns carry a `hearthUrl` field — the site renders "How to help" CTAs from it on `/under-threat` and on parish profiles. The `sustainabilityWatch` array carries `hearthUrl` for dispatches on the `/sustainability-watch` page. When a new dispatch is published on The Hearth, add its URL to the matching entry.
 
 **Has a dispatch:**
 - Divine Providence, Southfield MI — 7 dedicated posts + campaign anchor (hearthUrl set)
-- South Boston MA — "The Boston Hill of Crosses" (hearthUrl set)
+- South Boston MA — "The Boston Hill of Crosses" (hearthUrl set, sustainability watch)
 
-**Writing queue (priority — active campaigns with zero dedicated coverage):**
+**Writing queue — under-threat campaigns (zero dedicated coverage):**
 1. **Maspeth, Queens NY** — presidential visit, 700 signatures, landmark push. Strongest untold story.
 2. **Hartford CT** — partial closure notice, GoFundMe for canon lawyer, cultural-center push.
 3. **Waterbury CT** — closed 2023, canonical appeal ongoing since, GoFundMe active.
 
 **No campaign yet (future, as events develop):**
 - Girardville PA, Freeland PA, Bayonne NJ, Scranton PA (St. Michael), Elizabeth NJ, Beverly Shores IN.
+
+## Sustainability watch (editorial concept, 2026-07-23)
+
+Two tiers of living parishes: `/under-threat` (active diocesan action, clock ticking) and `/sustainability-watch` (survived or never threatened, but wounded — slow-burn erosion).
+
+**Data model** (`alerts.json → sustainabilityWatch[]`): each entry documents clergy (arrangement + detail), liturgy (lithuanianMass, frequency, detail), governance (standalone/collaborative/merged/mission), survivedThreats, financial signal, situation summary, sources. Clergy arrangement enum: `lithuanian_klebonas`, `collaborative_pastor`, `visiting_priest`, `no_lithuanian_clergy`, `unknown`.
+
+**Research queue — parishes to add (need sourced clergy/liturgy/governance data):**
+1. **St. Andrew (Šv. Andriejaus), Philadelphia PA** — only Lithuanian-language Sunday Mass in Pennsylvania; rectory sold ~2023-24 for $1.2M to fund operations.
+2. **Nativity BVM (Švč. M. Marijos Gimimo), Chicago IL** — sole surviving Lithuanian parish in Chicago; chronic deficit covered by archdiocese as high-interest loan; building valued ~$20M, diocese-owned.
+3. **Immaculate Conception, East St. Louis IL** — 11 of 13 Catholic churches in the city closed; this one survived; landmark-designated.
+4. **St. Casimir (Šv. Kazimiero), Cleveland OH** — formed 2009 from merger; survived 2014 financial crisis via school lease.
+5. **Holy Cross (Šv. Kryžiaus), Dayton OH** — debt-free, National Register of Historic Places, demonstrated vitality.
+
+**Research method for new entries:** check parish website for current bulletin/Mass schedule; check diocesan directory for pastor name and parish status; check sielovada.lt (Lithuanian Conference of Bishops) for priest assignments in North America; direct outreach to Lithuanian Apostolate contacts where possible.
 
 ## Deploy
 
