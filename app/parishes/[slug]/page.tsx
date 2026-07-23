@@ -250,6 +250,27 @@ export default async function ParishPage({
               </span>
             ))}
           </p>
+          {parishCampaign?.dispatches?.length > 0 && (
+            <div className="mt-3 border-t border-rule pt-3">
+              <p className="text-xs uppercase tracking-wide text-muted mb-1.5">
+                From Židinys (The Hearth)
+              </p>
+              <ul className="space-y-1">
+                {parishCampaign.dispatches.map((d: any) => (
+                  <li key={d.url}>
+                    <a
+                      href={d.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm underline hover:text-foreground"
+                    >
+                      {d.title} &rarr;
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </section>
       )}
 
@@ -324,6 +345,27 @@ export default async function ParishPage({
               </Link>
             </div>
           </div>
+          {watchEntry.dispatches?.length > 0 && (
+            <div className="border-t border-rule px-4 py-3">
+              <p className="text-xs uppercase tracking-wide text-muted mb-1.5">
+                From Židinys (The Hearth)
+              </p>
+              <ul className="space-y-1">
+                {(watchEntry.dispatches as any[]).map((d: any) => (
+                  <li key={d.url}>
+                    <a
+                      href={d.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm underline hover:text-foreground"
+                    >
+                      {d.title} &rarr;
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </section>
       )}
 

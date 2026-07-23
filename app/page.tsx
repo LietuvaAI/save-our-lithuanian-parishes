@@ -205,6 +205,25 @@ export default function Home() {
         </ul>
       </section>
 
+      <section className="mt-8">
+        <div className="flex items-baseline gap-3">
+          <h2 className="font-serif text-xl font-semibold">Sustainability watch</h2>
+          <span className="text-sm text-muted">
+            {(alertsData as any).sustainabilityWatch.length} parishes
+          </span>
+        </div>
+        <p className="mt-1 text-sm text-muted leading-relaxed">
+          Parishes that survived — or were never directly threatened — but face slow-burn erosion:
+          clergy shortages, financial strain, post-merger fragility. Clergy situation, Lithuanian Mass
+          schedule, and governance sourced for each.
+        </p>
+        <p className="mt-2 text-sm">
+          <Link href="/sustainability-watch" className="underline hover:text-accent font-medium">
+            All sustainability watch parishes &rarr;
+          </Link>
+        </p>
+      </section>
+
       <section className="mt-12">
         <h2 className="font-serif text-2xl font-semibold text-center">
           What you can do
@@ -251,7 +270,7 @@ export default function Home() {
             className="inline-block rounded-md px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
             style={{ background: "var(--mark-closed)" }}
           >
-            Subscribe to the blog
+            Subscribe to our blog: Židinys (The Hearth)
           </a>
         </p>
       </section>

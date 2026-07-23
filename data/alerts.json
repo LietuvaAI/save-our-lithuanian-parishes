@@ -231,6 +231,36 @@
    "who": "The parish community, with this project's public analysis",
    "form": "The parish's case made in the Archdiocese's own published numbers — The Hearth's workbook analysis and the armory on this site — while the restructuring survey window is open",
    "state": "Press coverage describes the parish as seeking to remain a standalone ethnic parish inside the Archdiocese of Detroit's 2025–2027 restructuring. No proposal naming the parish has surfaced; the survey closes July 31, 2026.",
+   "dispatches": [
+    {
+     "title": "In Writing: The 1968 Letter That Made Divine Providence a National Parish",
+     "url": "https://blog.saveourlithuanianparishes.org/p/in-writing-the-1968-letter-that-made"
+    },
+    {
+     "title": "A Personal Parish, Not a Place",
+     "url": "https://blog.saveourlithuanianparishes.org/p/a-personal-parish-not-a-place"
+    },
+    {
+     "title": "The Parish Brings Christ",
+     "url": "https://blog.saveourlithuanianparishes.org/p/the-parish-brings-christ"
+    },
+    {
+     "title": "How You Can Help Save Detroit's Divine Providence Lithuanian Parish",
+     "url": "https://blog.saveourlithuanianparishes.org/p/how-you-can-help-save-our-lithuanian"
+    },
+    {
+     "title": "By the Numbers: The Archdiocese of Detroit's 13 Ethnic Parishes",
+     "url": "https://blog.saveourlithuanianparishes.org/p/who-the-archdioceses-ethnic-parishes"
+    },
+    {
+     "title": "The Numbers Behind Divine Providence",
+     "url": "https://blog.saveourlithuanianparishes.org/p/the-numbers-behind-divine-providence"
+    },
+    {
+     "title": "Do Your Part for Divine Providence",
+     "url": "https://blog.saveourlithuanianparishes.org/p/do-your-part-for-divine-providence"
+    }
+   ],
    "sources": [
     {
      "title": "Southfield's Divine Providence Lithuanian church seeks to remain a standalone ethnic parish",
@@ -317,6 +347,12 @@
    "diocese": "Archdiocese of Boston",
    "parishLink": "/parishes/sv-petro-boston-ma",
    "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/the-boston-hill-of-crosses-how-south",
+   "dispatches": [
+    {
+     "title": "The Boston Hill of Crosses: How South Boston Saved Its Lithuanian Parish",
+     "url": "https://blog.saveourlithuanianparishes.org/p/the-boston-hill-of-crosses-how-south"
+    }
+   ],
    "dateObserved": "2026-07-16",
    "clergy": {
     "arrangement": "collaborative_pastor",
@@ -423,6 +459,12 @@
    "diocese": "Diocese of Cleveland",
    "parishLink": "/parishes/sv-kazimiero-cleveland-oh",
    "hearthUrl": null,
+   "dispatches": [
+    {
+     "title": "Closed by the Diocese, Reopened by Rome",
+     "url": "https://blog.saveourlithuanianparishes.org/p/a-closure-done-wrong-is-not-a-closure"
+    }
+   ],
    "dateObserved": "2026-07-23",
    "clergy": {
     "arrangement": "lithuanian_klebonas",

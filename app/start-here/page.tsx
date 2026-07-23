@@ -179,7 +179,7 @@ export default function StartHerePage() {
             href="https://blog.saveourlithuanianparishes.org"
             className="underline hover:text-foreground"
           >
-            the blog
+            Židinys (The Hearth)
           </a>
           .
         </p>
