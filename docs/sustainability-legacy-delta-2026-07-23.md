@@ -4,6 +4,8 @@ Prepared 2026-07-23 for PR #42.
 
 This note treats Litua.com's "Lietuviskos baznycios JAV / Lithuanian Churches in USA" page as a legacy baseline directory, not as current-state authority. The page appears to preserve early/mid-2000s parish facts; several entries include an explicit "2006.X." attendance/member snapshot. Current facts come from `data/alerts.json` sources in the sustainability-watch entries.
 
+Source provenance: Litua is linked as "Lithuanian Catholic Parishes" from the USCCB Pastoral Care of Migrants, Refugees, & Travelers Catholic Organizations page: https://www.usccb.org/committees/pastoral-care-migrants-refugees-travelers/catholic-organizations. Treat that USCCB page as a source-intelligence index for ethnic Catholic organizations, not as parish-level current-state proof.
+
 ## Delta Summary
 
 | Watch entry | Litua legacy baseline | Current watch state | Delta | Sources |

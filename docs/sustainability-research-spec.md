@@ -177,6 +177,25 @@ of the church building, community activity indicators.
 - **Katalikai.lt**: Lithuanian Catholic portal — may have news about
   Lithuanian parishes in America
 
+### 6. USCCB ethnic Catholic organization directory
+
+- **Catholic Organizations**:
+  https://www.usccb.org/committees/pastoral-care-migrants-refugees-travelers/catholic-organizations
+- Use as a source-intelligence map, not as parish-level current data by
+  itself. The USCCB Pastoral Care of Migrants, Refugees, & Travelers page
+  lists national and ethnic Catholic organizations by community, including
+  "Lithuanian Catholic Parishes" under European Catholics.
+- For Lithuanian work, this is a provenance breadcrumb for Litua's
+  Lithuanian church directory:
+  https://www.litua.com/lt/zinynas/baznycios
+- For later comparative or allied-community research, check the same USCCB
+  page for Hungarian, Croatian, Francophone, Irish, Italian, Polish,
+  Slovenian, Ukrainian, African, Caribbean, Brazilian, and other Catholic
+  organization links.
+- Do not assume each linked organization is current or complete. Treat this
+  as a discovery index, then verify with current parish, diocesan,
+  chaplaincy, organization, and bulletin sources.
+
 ## Priority parishes (research order)
 
 ### Tier 1 — immediate (active scouts returned data, ready to populate)
