@@ -6,9 +6,9 @@
   "comparators": 3,
   "endingMode": {
     "diocese_closed": 55,
-    "community_decided": 4,
-    "standing": 22,
-    "undecided": 2
+    "standing": 23,
+    "undecided": 2,
+    "community_decided": 3
   },
   "dioceseClosedByStatus": {
     "closed": 36,
@@ -23,8 +23,7 @@
   },
   "dioceseOwned": {
     "diocese_closed": 55,
-    "community_decided": 1,
-    "standing": 19,
+    "standing": 20,
     "undecided": 2
   },
   "communityOwned": {

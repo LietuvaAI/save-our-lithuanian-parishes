@@ -1,0 +1,1986 @@
+{
+  "generated": "2026-07-22",
+  "note": "Structured classifiers for all 220 canonical parishes from the unified registry. Every field traces to documented facts in the Draugas archive, Wolkovich, Michelsonas, or field sources. The first 86 entries (c83-filed case-core) are hand-edited. The remaining 134 entries are algorithmically generated from registry data using status inference rules.",
+  "parishes": {
+    "sv-kazimiero-gary-in": {
+      "registry_slug": "casimir-gary-in",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the parish unilaterally; rescue committee concluded saving it was impossible. Building fate unrecorded."
+    },
+    "sv-onos-spring-valley-il": {
+      "registry_slug": "ann-spring-valley-il",
+      "canonical_status": "closed",
+      "building_fate": "repurposed_religious",
+      "current_use": "Mexican Catholic congregation",
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "Last Lithuanian priest died; diocese sold the building to a Mexican Catholic congregation around 1987. Lithuanian identity erased."
+    },
+    "sv-jurgio-chicago-il": {
+      "registry_slug": "george-chicago-il",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Bridgeport. Letter campaign to the cardinal and Pope failed. Diocese demolished the church (1990 or 1992, sources conflict)."
+    },
+    "sv-mykolo-north-chicago-il": {
+      "registry_slug": "michael-north-chicago-il",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "One of the first Chicago Lithuanian churches to close; demolished without recorded resistance."
+    },
+    "ausros-vartu-chicago-il": {
+      "registry_slug": "gateofdawn-chicago-il",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Pilsen/Brighton Park area. Closed ~1987 and merged with Sv. Pauliaus. Building fate not recorded."
+    },
+    "sv-kazimiero-chicago-il": {
+      "registry_slug": "casimir-chicago-il",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown; 10 stained-glass windows repatriated to Lithuania",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Marquette Park/Brighton Park area. Diocese closed the parish pre-2013; building fate not specified. Ten stained-glass windows were repatriated to Lithuania."
+    },
+    "sv-juozapo-south-chicago-il": {
+      "registry_slug": "joseph-south-chicago-il",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "East Side. Second-oldest Lithuanian church in Chicago; diocese closed it in 1987 as parishioners became Spanish-speaking."
+    },
+    "dievo-apvaizdos-chicago-il": {
+      "registry_slug": "providence-chicago-il",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "18th Street/Pilsen. Diocese closed the parish in 2016 under Renew My Church. Founded ~1900."
+    },
+    "sv-kryziaus-chicago-il": {
+      "registry_slug": "holycross-chicago-il",
+      "canonical_status": "merged",
+      "building_fate": "standing",
+      "current_use": "Worship center under demolition threat; parish extinguished by Cupich decree",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Back of the Yards. Archbishop Cupich extinguished the parish by decree Dec 10 2020; the building survives as a worship center but faces demolition threat."
+    },
+    "sv-konstantino-oglesby-il": {
+      "registry_slug": "parish-oglesby-il",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown; identity uncertain",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Historical reference only; closed 1953. Building may remain but identity uncertain."
+    },
+    "sv-pranciskaus-east-chicago-in": {
+      "registry_slug": "francis-east-chicago-in",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the parish in 1989 and demolished it. Lithuanica Avenue neighborhood."
+    },
+    "sv-kazimiero-sioux-city-ia": {
+      "registry_slug": "casimir-sioux-city-ia",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Closed 1998; demolished (year conflicted: 2001 vs 2007). Listed on the National Register of Historic Places, which gave no protection against demolition."
+    },
+    "sv-kazimiero-kansas-city-mo": {
+      "registry_slug": "casimir-kansas-city-mo",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Bishop closed the parish in 1947 because he disliked ethnic parishes. Building status unknown."
+    },
+    "sv-kazimiero-brockton-ma": {
+      "registry_slug": "casimir-brockton-ma",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the parish June 2008, merged into St. Michael Avon. A favorable post-closure asset split was negotiated but closure could not be prevented."
+    },
+    "sv-petro-cambridge-ma": {
+      "registry_slug": "peter-cambridge-ma",
+      "canonical_status": "closed",
+      "building_fate": "repurposed_secular",
+      "current_use": "Apartments; Lithuanian facade inscriptions preserved as a landmark requirement",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the parish; building converted to apartments. Lithuanian facade inscriptions were preserved only because of a landmark requirement."
+    },
+    "sv-pranciskaus-lawrence-ma": {
+      "registry_slug": "francis-lawrence-ma",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Archdiocese closed the parish July 1 2002 and appropriated all property including a lakeside summer estate. Contrast with the LNCC parish in the same city that closed the same year and kept its own proceeds."
+    },
+    "lietuviu-baznycia-unnamed-haverhill-ma": {
+      "registry_slug": "holyname-haverhill-ma",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished; only a cornerstone survives",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Unnamed Lithuanian church; abandoned by 2017, razed by 2023. Only a cornerstone survives."
+    },
+    "sv-jurgio-norwood-ma": {
+      "registry_slug": "george-norwood-ma",
+      "canonical_status": "closed",
+      "building_fate": "repurposed_secular",
+      "current_use": "Private residence; Lithuanian signs removed",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the parish; building converted to an ordinary residential house. Lithuanian signs were removed."
+    },
+    "sv-kazimiero-worcester-ma": {
+      "registry_slug": "casimir-worcester-ma",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown; post-closure community gathered 3x/year",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the parish July 1 2008 despite it being solvent, debt-free, with a paid-off school and ~$1M pre-closure renovation. Rescue committee, canon lawyer, and Vatican appeal all failed. Post-closure the community gathered 3x/year."
+    },
+    "ausros-vartu-worcester-ma": {
+      "registry_slug": "gateofdawn-worcester-ma",
+      "canonical_status": "closed",
+      "building_fate": "repurposed_religious",
+      "current_use": "Non-Lithuanian Catholic use; interior heritage substantially preserved",
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "Transitioned to non-Lithuanian Catholic use by 2017. Interior heritage substantially preserved but Lithuanian identity lost."
+    },
+    "ausros-vartu-manhattan-ny": {
+      "registry_slug": "gateofdawn-manhattan-ny",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "The strongest case in the record: Our Lady of Vilnius, SoHo. Cardinal Egan closed it in 2007 with no debt. NY Court of Appeals ruled against parishioners in 2011. Diocese sold the building, which was demolished. The central ownership test case."
+    },
+    "sv-jurgio-rochester-ny": {
+      "registry_slug": "george-rochester-ny",
+      "canonical_status": "standing",
+      "building_fate": "unknown",
+      "current_use": "Parish formally exists with monthly Lithuanian Mass in rented space; community sold its own buildings",
+      "lithuanian_identity": "mass_continues",
+      "pastoral_status": "visiting_priest",
+      "situation": "The diocese did not close this parish. The community itself sold its own buildings during decline and moved to rented space. Parish formally still exists with monthly Lithuanian Mass; demographic attrition, not diocesan action."
+    },
+    "sv-jurgio-brooklyn-ny": {
+      "registry_slug": "george-brooklyn-ny",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished; even a photograph could not be found online",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Demolished ~2008. So thoroughly erased that even a photograph could not be found online."
+    },
+    "sv-jurgio-niagara-falls-ny": {
+      "registry_slug": "george-niagara-falls-ny",
+      "canonical_status": "closed",
+      "building_fate": "repurposed_religious",
+      "current_use": "Non-Roman Anglican cathedral; Lithuanian heritage markers preserved",
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the parish and sold the building to a non-Roman Anglican body, which uses it as a cathedral. Lithuanian heritage markers preserved."
+    },
+    "sv-kazimiero-amsterdam-ny": {
+      "registry_slug": "casimir-amsterdam-ny",
+      "canonical_status": "closed",
+      "building_fate": "standing",
+      "current_use": "Building intact as of 2019; unused",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese of Albany closed the parish ~May 2009. Building intact as of 2019. Demographic collapse left no community to resist."
+    },
+    "sv-mykolo-bayonne-nj": {
+      "registry_slug": "michael-bayonne-nj",
+      "canonical_status": "closed",
+      "building_fate": "repurposed_religious",
+      "current_use": "Syrian/Assyrian Catholic cathedral; interior retained Lithuanian details",
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the parish and sold the building; it became a Syrian/Assyrian Catholic cathedral. Interior retained Lithuanian details."
+    },
+    "lietuviu-baznycia-unnamed-newark-nj": {
+      "registry_slug": "holyname-newark-nj",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Parish-hall basement now in Portuguese/Brazilian use; original church demolished after 1981 fire",
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "Original building demolished after a 1981 fire; diocese refused repairs. Congregation moved to the parish-hall basement, which is now in Portuguese/Brazilian use."
+    },
+    "sv-kazimiero-paterson-nj": {
+      "registry_slug": "casimir-paterson-nj",
+      "canonical_status": "closed",
+      "building_fate": "repurposed_religious",
+      "current_use": "Grace Gospel Church (Protestant)",
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the 102-year-old parish March 2 2014; church and rectory sold to Grace Gospel Church (Protestant)."
+    },
+    "sv-andriejaus-new-britain-ct": {
+      "registry_slug": "andrew-new-britain-ct",
+      "canonical_status": "closed",
+      "building_fate": "repurposed_religious",
+      "current_use": "Spanish-speaking Pentecostal church",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Survived a review then was closed quietly ~end of 2021. Diocese sold the building to a Spanish-speaking Pentecostal church. The Vanagas commemorative plaque was removed and not returned."
+    },
+    "sv-kazimiero-new-haven-ct": {
+      "registry_slug": "casimir-new-haven-ct",
+      "canonical_status": "closed",
+      "building_fate": "repurposed_secular",
+      "current_use": "Condominiums (apartments as of 2023)",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the parish ~2001; building sold ~2007 and converted to condos. Still apartments in 2023."
+    },
+    "lietuviu-baznycia-unnamed-ansonia-ct": {
+      "registry_slug": "holyname-ansonia-ct",
+      "canonical_status": "closed",
+      "building_fate": "repurposed_religious",
+      "current_use": "Sold to non-Catholics; Gediminas-pillars monument remains in churchyard",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the parish and sold it ~2015 to non-Catholics. The Gediminas-pillars monument remains in the churchyard."
+    },
+    "sv-juozapo-waterbury-ct": {
+      "registry_slug": "joseph-waterbury-ct",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "First Lithuanian RC parish in New England (founded 1893/94). Survived the 2002 St. Patrick merger; a genuine grassroots revival did not save it. Diocese closed it Sept 30 2023 under the Hartford 2017 plan."
+    },
+    "sv-kazimiero-nashua-nh": {
+      "registry_slug": "casimir-nashua-nh",
+      "canonical_status": "closed",
+      "building_fate": "repurposed_secular",
+      "current_use": "Apartments; commemorative plaques installed",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the parish; building converted to apartments with commemorative plaques. Community noted that Greek Orthodox parishes could not be closed because they are a separate religion."
+    },
+    "sv-antano-detroit-mi": {
+      "registry_slug": "anthony-detroit-mi",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the parish June 23 2013 under Together in Faith, merged into Dievo Apvaizdos Southfield. Survived a 1989 closure scare but resistance only delayed the outcome. Only 34 registered parishioners at closure."
+    },
+    "sv-petro-detroit-mi": {
+      "registry_slug": "peter-detroit-mi",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown; contents shipped to Lithuania",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Closed 1995 when the pastor retired; contents shipped to Lithuania. No recorded resistance."
+    },
+    "sv-antano-omaha-ne": {
+      "registry_slug": "anthony-omaha-ne",
+      "canonical_status": "closed",
+      "building_fate": "repurposed_religious",
+      "current_use": "Spanish-speaking Catholic congregation",
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "Survived an earlier ~2008 closure danger; ~$60K community savings deemed insufficient. Diocese closed/merged the parish in 2014 into Sts. Peter and Paul; building sold to Spanish-speakers."
+    },
+    "sv-jurgio-cleveland-oh": {
+      "registry_slug": "george-cleveland-oh",
+      "canonical_status": "merged",
+      "building_fate": "derelict",
+      "current_use": "Derelict; sold by diocese to private buyer",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the parish Oct 18 2009 and merged it into the new consolidated Sv. Kazimiero. Old building sold by the diocese and now derelict."
+    },
+    "dievo-motinos-nuolatines-pagalbos-cleveland-oh": {
+      "registry_slug": "motherofgod-cleveland-oh",
+      "canonical_status": "merged",
+      "building_fate": "repurposed_religious",
+      "current_use": "Worship site of the consolidated Sv. Kazimiero Lithuanian parish",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "Closed Oct 18 2009 and merged with Sv. Jurgio into the new Sv. Kazimiero parish. The former DMNP building became the worship site of the consolidated parish."
+    },
+    "sv-jurgio-shenandoah-pa": {
+      "registry_slug": "george-shenandoah-pa",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "The strongest thesis case: solvent parish with ~$1M treasury, a credible $360K repair estimate, landmark status, and a treaty — the diocese demolished it anyway in 2009/2010 and took the ~$1M savings. Coal region."
+    },
+    "sv-kazimiero-pittston-pa": {
+      "registry_slug": "casimir-pittston-pa",
+      "canonical_status": "merged",
+      "building_fate": "unknown",
+      "current_use": "Sold to a private buyer",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the parish April 6 2008, merged into a new parish at St. John the Evangelist; later sold to a private buyer. Coal region."
+    },
+    "svc-trejybes-wilkes-barre-pa": {
+      "registry_slug": "trinity-wilkes-barre-pa",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished; site now a flat field",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese demolished one of the two largest, most beautiful Lithuanian churches in the region in 2015. Site is now a flat field. Coal region."
+    },
+    "sv-marijos-apreiskimo-kingston-pa": {
+      "registry_slug": "annunciation-kingston-pa",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese demolished the other of the two largest regional Lithuanian churches. Coal region."
+    },
+    "sv-vincento-pauliecio-esplen-pa": {
+      "registry_slug": "paul-esplen-pa",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished; only the cornerstone survives",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Pittsburgh area. Built 1903; demolished pre-2017 after repeated arson. Only the cornerstone survives."
+    },
+    "sv-kazimiero-pittsburgh-pa": {
+      "registry_slug": "casimir-pittsburgh-pa",
+      "canonical_status": "closed",
+      "building_fate": "repurposed_secular",
+      "current_use": "12 luxury condominiums",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the parish in 1992 and sold the building to private developers who converted it into 12 luxury condominiums."
+    },
+    "sv-juozapo-scranton-pa": {
+      "registry_slug": "joseph-scranton-pa",
+      "canonical_status": "closed",
+      "building_fate": "repurposed_religious",
+      "current_use": "Given to convert-priests",
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "The original Lithuanian RC church that Scranton Lithuanians built, then lost to the bishop through the courts — the precipitating event of the LNCC schism. Closed ~2009 in the Allentown/Scranton sweep; building given to convert-priests. Coal region."
+    },
+    "sv-mykolo-scranton-pa": {
+      "registry_slug": "michael-scranton-pa",
+      "canonical_status": "closed",
+      "building_fate": "repurposed_religious",
+      "current_use": "Latin Mass community (FSSP — Priestly Fraternity of St. Peter)",
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the parish as a Lithuanian institution; now a Latin Mass community (FSSP). Ethnically transferred, not formally dissolved. Coal region."
+    },
+    "sv-jono-coaldale-pa": {
+      "registry_slug": "john-coaldale-pa",
+      "canonical_status": "closed",
+      "building_fate": "repurposed_secular",
+      "current_use": "Sold to a private individual; not a community buyout",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the parish ~2009 in the Allentown wave; building sold to a private individual (R. Demyanovich, ~$24,000) to prevent warehouse use. Not a community buyout. Coal region."
+    },
+    "nekaltojo-prasidejimo-ausros-vartu-archbald-pa": {
+      "registry_slug": "gateofdawn-archbald-pa",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished March 2024; a 1915 time capsule with a Lithuanian letter found in foundations",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Founded 1901, rebuilt 1915; diocese closed it ~2001-2002 for mold/moisture. Demolished March 2024. A 1915 time capsule with a Lithuanian letter was discovered in the foundations. Coal region."
+    },
+    "sv-kryziaus-mount-carmel-pa": {
+      "registry_slug": "holycross-mount-carmel-pa",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Part of Divine Redeemer Parish since 1995; school building tax-sold 2022",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Founded 1892; diocese closed it 1992; became part of Divine Redeemer Parish 1995. Home of the founding of the Sisters of St. Casimir (1907). School building tax-sold 2022. Coal region."
+    },
+    "siluvos-dievo-motinos-maizeville-pa": {
+      "registry_slug": "motherofgod-maizeville-pa",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Building sold; Jonynas stained glass rescued post-closure by the Saknys project",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the parish in 2008 under the Allentown plan; building sold. Jonynas stained glass was rescued post-closure by the Saknys project. Coal region."
+    },
+    "sv-vincento-de-paul-girardville-pa": {
+      "registry_slug": "paul-girardville-pa",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown; final Mass held Jan 5 2026",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Lithuanian-immigrant-built 1907. Diocese closed the parish in 2015 (merged into St. Charles Borromeo); officially closed as a worship site with final Mass Jan 5 2026. Coal region."
+    },
+    "sv-juozapo-nanticoke-pa": {
+      "registry_slug": "joseph-nanticoke-pa",
+      "canonical_status": "closed",
+      "building_fate": "repurposed_secular",
+      "current_use": "Private residence (Lithuanian-descent owner); interior fully intact",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Diocese closed the parish; building converted to a private residence by a Lithuanian-descent owner. Interior fully intact. Coal region."
+    },
+    "sv-kazimiero-providence-ri": {
+      "registry_slug": "casimir-providence-ri",
+      "canonical_status": "closed",
+      "building_fate": "repurposed_religious",
+      "current_use": "Seventh-day Adventist church",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "The only Lithuanian church in Rhode Island. Diocese closed it in 2017; building sold to Seventh-day Adventists. Community declined a diocesan offer to bring in Latin American immigrants."
+    },
+    "sv-andriejaus-philadelphia-pa": {
+      "registry_slug": "andrew-philadelphia-pa",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian parish with Lithuanian-language Sunday Mass; the only one in Pennsylvania",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "Survived inside the diocese, confirmed Jan 2026. The only PA Lithuanian parish with a Lithuanian-language Sunday Mass. Sold the rectory ~2023-24 for $1.2M to fund operations; church deed unchanged and still diocese-owned."
+    },
+    "sv-kazimiero-philadelphia-pa": {
+      "registry_slug": "casimir-philadelphia-pa",
+      "canonical_status": "suppressed",
+      "building_fate": "standing",
+      "current_use": "Open worship site of the merged Philadelphia parish; Lithuanian-Mass continuity conflicted in sources",
+      "lithuanian_identity": "mass_continues",
+      "pastoral_status": "unknown",
+      "situation": "Survived earlier reviews then was suppressed to worship-site status July 2011. Survives as an open worship site of the merged Philadelphia parish. Lithuanian-Mass continuity after 2011 is conflicted in the sources."
+    },
+    "sv-jurgio-philadelphia-pa": {
+      "registry_slug": "george-philadelphia-pa",
+      "canonical_status": "merged",
+      "building_fate": "unknown",
+      "current_use": "Unknown; merged into an American parish",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Survived multiple Philadelphia reviews then was merged into an American parish ~2015-2016, losing its Lithuanian identity."
+    },
+    "sv-petro-boston-ma": {
+      "registry_slug": "peter-boston-ma",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian parish; the only Lithuanian church in New England",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "Survived inside the diocese after a ~20-year campaign; 2021-22 merger deferred. Refused merger consent Feb 2022. The community ceded the deed to the archdiocese in 1904 in exchange for a priest — the only Lithuanian church in New England."
+    },
+    "sv-kryziaus-dayton-oh": {
+      "registry_slug": "holycross-dayton-oh",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian parish; on the National Register of Historic Places",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "Survived inside the diocese; debt-free; on the National Register of Historic Places — the only such Lithuanian church in the corpus. Survived via demonstrated vitality and congregational diversification."
+    },
+    "sv-kazimiero-cleveland-oh": {
+      "registry_slug": "casimir-cleveland-oh",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian parish (consolidated from Sv. Jurgio and DMNP)",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "Consolidated parish formed Oct 25 2009 from the merger of Sv. Jurgio (1895) and DMNP (1929). Survived inside the diocese; a 2014 financial crisis was averted via a diocesan-approved school lease."
+    },
+    "svc-mergeles-marijos-gimimo-chicago-il": {
+      "registry_slug": "nativity-chicago-il",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian parish (Nativity BVM); sole surviving Lithuanian RC parish in Chicago",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "Marquette Park. Survived inside the diocese; by 2020 the sole surviving Lithuanian RC parish in Chicago. Chronic deficit covered by the archdiocese as a high-interest loan; building valued ~$20M and not parish-owned."
+    },
+    "svc-m-marijos-nekalto-prasidejimo-chicago-il": {
+      "registry_slug": "immaculate-chicago-il",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active multi-ethnic parish; Lithuanian RC presence and separate Lithuanian Mass continue",
+      "lithuanian_identity": "mass_continues",
+      "pastoral_status": "unknown",
+      "situation": "Brighton Park (Immaculate Conception). Merged 2019 with Five Holy Martyrs into a multi-ethnic entity, but a Lithuanian RC presence and a separate Lithuanian Mass continue. Both buildings open."
+    },
+    "sv-antano-cicero-il": {
+      "registry_slug": "anthony-cicero-il",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active parish; formal Lithuanian-parish status transferred to Mexican community 2011, but Lithuanian Masses continued",
+      "lithuanian_identity": "mass_continues",
+      "pastoral_status": "unknown",
+      "situation": "Survived inside the diocese; small but active. Formal Lithuanian-parish status transferred to the Mexican community in 2011, but Lithuanian Masses continued through at least Dec 2019."
+    },
+    "dievo-apvaizdos-southfield-mi": {
+      "registry_slug": "providence-southfield-mi",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian parish; sole surviving Lithuanian RC parish in metro Detroit",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "shared_priest",
+      "situation": "Survived inside the diocese; the sole surviving Lithuanian RC parish in metro Detroit. Enrolled in Families of Parishes 2025."
+    },
+    "pal-jurgio-matulaicio-misija-lemont-il": {
+      "registry_slug": "george-lemont-il",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Lithuanian mission inside Pasaulio Lietuviu Centras (community-owned venue)",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "RC ethnic mission established 1990; operates inside the community-owned Pasaulio Lietuviu Centras. Survived an RMC grouping. The venue is community-owned but the mission's canonical function remains diocesan."
+    },
+    "svc-m-marijos-apreiskimo-brooklyn-ny": {
+      "registry_slug": "annunciation-brooklyn-ny",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian parish; major renovation completed 2019; hosts displaced Maspeth Lithuanian-language Masses since Sept 2025",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "Williamsburg (Annunciation BVM). Survived inside the Diocese of Brooklyn; major renovation completed 2019. Since Sept 2025, hosts the displaced Maspeth Lithuanian-language Masses."
+    },
+    "kristaus-atsimainymo-maspeth-ny": {
+      "registry_slug": "transfiguration-maspeth-ny",
+      "canonical_status": "undecided",
+      "building_fate": "standing",
+      "current_use": "Limited-basis opening; closure reversed Sept 12 2025; status unresolved",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "Queens. Diocese of Brooklyn issued a closure letter Feb 16 2025 but reversed it Sept 12 2025 to limited-basis opening. Status genuinely unresolved as of March 2026. Not closed, no community buyout."
+    },
+    "sv-petro-ir-povilo-elizabeth-nj": {
+      "registry_slug": "paul-elizabeth-nj",
+      "canonical_status": "undecided",
+      "building_fate": "standing",
+      "current_use": "Under financial/maintenance stress; rectory sold, electrical fire; status uncertain",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "Church built 1895. Under financial/maintenance stress by 2022 — rectory sold, electrical fire. Status uncertain and unresolved. One of the last Lithuanian churches in New Jersey."
+    },
+    "lietuviu-baznycia-kearny-kearny-nj": {
+      "registry_slug": "parish-kearny-nj",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian parish; daily Masses; one of the strongest Lithuanian bastions in New Jersey",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "own_priest",
+      "situation": "Officially Lithuanian with a Lithuanian Church sign; daily Masses. By 2022 one of the strongest Lithuanian bastions in New Jersey. Survived."
+    },
+    "sv-jurgio-bridgeport-ct": {
+      "registry_slug": "george-bridgeport-ct",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active parish; now majority Spanish-speaking but Lithuanian Masses still held; interior remains very Lithuanian",
+      "lithuanian_identity": "mass_continues",
+      "pastoral_status": "unknown",
+      "situation": "Survived/transitioned inside the Diocese of Bridgeport. Now majority Spanish-speaking but Lithuanian Masses still held. Interior remains very Lithuanian. Active 2023-24."
+    },
+    "svc-trejybes-hartford-ct": {
+      "registry_slug": "trinity-hartford-ct",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian parish; surrounding Lithuanian neighborhood demolished by urban renewal, but church stands",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "Survived inside the Diocese of Hartford. The surrounding Lithuanian neighborhood was demolished by urban renewal, but the church building stands and was active as of late 2023."
+    },
+    "sv-onos-luzerne-pa": {
+      "registry_slug": "ann-luzerne-pa",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian parish; the one Lithuanian church remaining under Catholic ownership in the 10-church northern PA cluster",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "The one Lithuanian church remaining under Catholic ownership in the entire 10-church northern PA cluster. Survived. Coal region."
+    },
+    "sv-m-marijos-apsireiskimo-frackville-pa": {
+      "registry_slug": "mary-frackville-pa",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian parish (Annunciation BVM); adjacent Lithuanian museum since 1982",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "Lithuanian-community-built 1914; survived. Hosted the 103rd Lietuviu Dienos festival 2017; adjacent Lithuanian museum since 1982. Coal region."
+    },
+    "sv-kazimiero-los-angeles-ca": {
+      "registry_slug": "casimir-los-angeles-ca",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian parish with cultural center",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "Third building 1951, community-funded but archdiocese-titled. Active cultural center; survived inside the Archdiocese of Los Angeles, confirmed 2020."
+    },
+    "sv-petro-ir-povilo-grand-rapids-mi": {
+      "registry_slug": "paul-grand-rapids-mi",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian parish; best-preserved living first-wave Lithuanian neighborhood in America",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "Founded ~1904. Survived; by 2024 described as the best-preserved living first-wave Lithuanian neighborhood in America."
+    },
+    "nekaltojo-prasidejimo-east-st-louis-il": {
+      "registry_slug": "immaculate-east-st-louis-il",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian parish; landmark-designated; still officially Lithuanian after 126+ years",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "Founded 1895. Survived against extreme odds in the Diocese of Belleville — 11 of 13 East St. Louis Catholic churches closed. Landmark-designated; still officially Lithuanian after 126+ years."
+    },
+    "sv-kazimiero-waterbury-ct": {
+      "registry_slug": "casimir-waterbury-ct",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian parish; temporarily storing Frackville/Shenandoah-area Lithuanian Museum artifacts",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "Distinct from the closed Sv. Juozapo Waterbury. Survived; still functioning 2022. Temporarily storing the Frackville/Shenandoah-area Lithuanian Museum's artifacts."
+    },
+    "unnamed-lithuanian-parish-baltimore-md": {
+      "registry_slug": "holyname-baltimore-md",
+      "canonical_status": "closed",
+      "building_fate": "repurposed_religious",
+      "current_use": "Building used by an American parish; one token Sunday Lithuanian Mass with no Lithuanian priest",
+      "lithuanian_identity": "mass_continues",
+      "pastoral_status": "visiting_priest",
+      "situation": "Transitioned / de facto closed as a Lithuanian parish. Building used by an American parish with one token Sunday Lithuanian Mass and no Lithuanian priest."
+    },
+    "dievo-apvaizdos-scranton-pa": {
+      "registry_slug": "providence-scranton-pa",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian National Catholic parish; community-owned, independent of Rome",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "own_priest",
+      "situation": "LNCC, community-owned, independent of Rome. The last surviving officially Lithuanian parish in the entire NE PA coal region — survives precisely because no bishop can close or sell it. Building 1915. Coal region."
+    },
+    "saldziausios-jezaus-sirdies-lawrence-ma": {
+      "registry_slug": "jesus-lawrence-ma",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Sold by the community; proceeds went to the LNCC cemetery fund",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "LNCC, community-owned. Closed and sold in 2002 by the community itself at parishioners' request; proceeds went to the community's own LNCC cemetery fund. Contrast with the RC parish in the same city closed the same year, where the archdiocese appropriated all property."
+    },
+    "sv-marijos-tautine-kataliku-parapija-philadelphia-pa": {
+      "registry_slug": "mary-philadelphia-pa",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished; parish cemetery at Bensalem PA survives",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "LNCC, community-governed, never diocesan. Broke from RC in the 1916 schism; community sold the building in 1972 with ~30-40 parishioners at closure; building later demolished. Parish cemetery at Bensalem PA survives."
+    },
+    "lncc-congregation-westville-il": {
+      "registry_slug": "parish-westville-il",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished; bell and cornerstone made into a 2004 memorial; cemetery maintained",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "LNCC, community-governed. Closed ~1969 and demolished by community decision. Bell and cornerstone made into a 2004 memorial; cemetery maintained. Independence removed diocesan risk but not demographic risk."
+    },
+    "lietuviu-evangeliku-liuteronu-teviskes-parapija-darien-il": {
+      "registry_slug": "angels-darien-il",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian Evangelical Lutheran parish; congregationally governed, community-owned; thriving and growing",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "own_priest",
+      "situation": "Lithuanian Evangelical Lutheran, congregationally governed, self-owned (bought its Marquette Park building in 1957). Voted to sell and relocate twice (Western Springs, then Darien Dec 2019); thriving and growing. No bishop can close or sell it."
+    },
+    "lithuanian-lutheran-church-collinsville-il": {
+      "registry_slug": "parish-collinsville-il",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian Lutheran congregation; independent, self-governing, founded by a knygnesis from Taurage",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "Independent self-governing Lithuanian Lutheran congregation, founded by a knygnesis from Taurage. Survived; small, aging, still active as of 2019. Independent of any diocese — no bishop has authority to close it."
+    },
+    "sv-kazimiero-montreal-qc": {
+      "registry_slug": "casimir-montreal-qc",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian parish under Quebec civil law parish-ownership",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "Canadian comparator. Under Quebec civil law the parish (not the diocese) is the juridical owner; the diocese cannot act unilaterally. Survived; aging. The ownership-law contrast with U.S. diocese-owned parishes is the point."
+    },
+    "ausros-vartu-montreal-qc": {
+      "registry_slug": "gateofdawn-montreal-qc",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Lithuanian parish under Quebec civil law parish-ownership",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "Canadian comparator. Quebec parish-ownership law means the diocese cannot act unilaterally. Survived; aging. Natural-experiment comparator against U.S. diocese-owned parishes."
+    },
+    "sv-kazimiero-delhi-on": {
+      "registry_slug": "casimir-delhi-on",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Canadian comparator. Closed October 2020 after 61 years; the community explicitly framed the closure as self-determination, contrasting it with forced U.S. diocesan closures."
+    },
+    "st-joseph-mahanoy-city-pa": {
+      "registry_slug": "st-joseph-mahanoy-city-pa",
+      "canonical_status": "merged",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas registry (77 mentions 1910-2005); merged status reported by web-historical sources. Present status not yet researched."
+    },
+    "ss-peter-and-paul-tamaqua-pa": {
+      "registry_slug": "ss-peter-and-paul-tamaqua-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in Draugas registry (13 mentions 1910-1959) with current status marked 'standing' by web sources; converted status noted in TrueLithuania (1976, 2018). Present status not yet researched."
+    },
+    "sacred-heart-new-philadelphia-pa": {
+      "registry_slug": "sacred-heart-new-philadelphia-pa",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas registry (20 mentions 1939-2007); closed 2008 per web-historical sources. Coal region."
+    },
+    "lithuanian-church-middleport-pa": {
+      "registry_slug": "lithuanian-church-middleport-pa",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Minimal documentation: only 1 mention in Draugas (1970). Web sources mark as closed. Needs verification."
+    },
+    "st-francis-minersville-pa": {
+      "registry_slug": "st-francis-minersville-pa",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas registry (110 mentions 1909-2007); closed status reported by web sources. Coal region."
+    },
+    "st-casimir-st-clair-pa": {
+      "registry_slug": "st-casimir-st-clair-pa",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas registry (44 mentions 1916-2002); closed 2010. Coal region."
+    },
+    "st-michael-shamokin-pa": {
+      "registry_slug": "st-michael-shamokin-pa",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas registry (26 mentions 1910-2007); closed 1995 per registry. Web sources mark as demolished. Coal region."
+    },
+    "ss-peter-and-paul-hazleton-pa": {
+      "registry_slug": "ss-peter-and-paul-hazleton-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Mixed Lithuanian-Polish parish documented in Draugas and archival sources; closed status reported by web (2010). Needs verification."
+    },
+    "st-casimir-mcadoo-pa": {
+      "registry_slug": "st-casimir-mcadoo-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Brief documentation in Draugas (9 mentions 1915-1940); web sources mark as repurposed. Needs verification."
+    },
+    "st-anthony-forest-city-pa": {
+      "registry_slug": "st-anthony-forest-city-pa",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas registry (20 mentions 1910-1996); web sources mark as demolished. Coal region."
+    },
+    "our-lady-of-vilna-eynon-pa": {
+      "registry_slug": "our-lady-of-vilna-eynon-pa",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (4 mentions 1913-1957); closed 2001 per registry. Web and TrueLithuania sources confirm demolished. Coal region."
+    },
+    "st-joseph-duryea-pa": {
+      "registry_slug": "st-joseph-duryea-pa",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (11 mentions 1910-1974); web sources mark as demolished. Coal region."
+    },
+    "st-francis-wilkes-barre-pa": {
+      "registry_slug": "st-francis-wilkes-barre-pa",
+      "canonical_status": "repurposed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (9 mentions 1930-2005); closed 2008 per registry. Web sources mark as repurposed. Coal region."
+    },
+    "all-saints-wilkes-barre-pa": {
+      "registry_slug": "all-saints-wilkes-barre-pa",
+      "canonical_status": "closed",
+      "building_fate": "standing",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "PNCC (Polish National Catholic Church), not Roman Catholic. Founded 1932 per Draugas. Documented in TrueLithuania but not in RC archival sources."
+    },
+    "st-casimir-wilkes-barre-pa": {
+      "registry_slug": "st-casimir-wilkes-barre-pa",
+      "canonical_status": "unknown",
+      "building_fate": "standing",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in Draugas (22 mentions 1910-2005); web sources mark as standing. Status not yet verified. Coal region."
+    },
+    "ss-peter-and-paul-sugar-notch-pa": {
+      "registry_slug": "ss-peter-and-paul-sugar-notch-pa",
+      "canonical_status": "unknown",
+      "building_fate": "standing",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in Draugas (8 mentions 1917-1999); web sources mark as standing. Status not yet verified. Coal region."
+    },
+    "st-mary-wanamie-pa": {
+      "registry_slug": "st-mary-wanamie-pa",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (11 mentions 1911-1967); closed status reported by web sources. Coal region."
+    },
+    "lithuanian-church-chester-pa": {
+      "registry_slug": "lithuanian-church-chester-pa",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Unnamed Lithuanian church documented in Draugas registry; closed 1972 per registry. Web sources mark as demolished."
+    },
+    "ascension-pittsburgh-pa": {
+      "registry_slug": "ascension-pittsburgh-pa",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (7 mentions 1935-1964); founded 1906, closed 1962. Single source only."
+    },
+    "st-isidore-braddock-pa": {
+      "registry_slug": "st-isidore-braddock-pa",
+      "canonical_status": "repurposed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (64 mentions 1914-1993); closed 1985 per registry. Web sources mark as repurposed."
+    },
+    "ss-peter-and-paul-homestead-pa": {
+      "registry_slug": "ss-peter-and-paul-homestead-pa",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (138 mentions 1910-1997); closed 1992 per registry. Substantial historical documentation."
+    },
+    "st-anthony-bridgeville-pa": {
+      "registry_slug": "st-anthony-bridgeville-pa",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (60 mentions 1932-1965); closed 2007 per registry. Web sources confirm demolished."
+    },
+    "st-joseph-donora-pa": {
+      "registry_slug": "st-joseph-donora-pa",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (26 mentions 1912-1997); closed 1963 per registry. Web sources mark as demolished."
+    },
+    "st-luke-bentleyville-pa": {
+      "registry_slug": "st-luke-bentleyville-pa",
+      "canonical_status": "merged",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (11 mentions 1914-1936); closed 1994 per registry. Web sources mark as merged."
+    },
+    "st-casimir-east-vandergrift-pa": {
+      "registry_slug": "st-casimir-east-vandergrift-pa",
+      "canonical_status": "unknown",
+      "building_fate": "standing",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Minimal documentation: only 2 mentions in Draugas (1940-1944); web sources and TrueLithuania mark as standing. Needs verification."
+    },
+    "st-joseph-lowell-ma": {
+      "registry_slug": "st-joseph-lowell-ma",
+      "canonical_status": "repurposed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (55 mentions 1910-2002); closed 2003 per registry. Web sources mark as repurposed."
+    },
+    "st-francis-athol-ma": {
+      "registry_slug": "st-francis-athol-ma",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in Draugas (178 mentions 1911-2007); web and Michelsonas sources note attempted LNCC status but remained RC. Multi-source documentation; present status requires verification."
+    },
+    "st-casimir-westfield-ma": {
+      "registry_slug": "st-casimir-westfield-ma",
+      "canonical_status": "repurposed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (34 mentions 1910-1990); closed 2003 per registry. Web sources mark as repurposed."
+    },
+    "lithuanian-church-waterbury-ct": {
+      "registry_slug": "lithuanian-church-waterbury-ct",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Unnamed Lithuanian church documented in Draugas (founded 1902). Single source; status not yet verified."
+    },
+    "st-anthony-ansonia-ct": {
+      "registry_slug": "st-anthony-ansonia-ct",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (14 mentions 1933-2002); closed 2015 per registry. TrueLithuania sources confirm closed status."
+    },
+    "st-mary-of-the-angels-brooklyn-ny": {
+      "registry_slug": "st-mary-of-the-angels-brooklyn-ny",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (68 mentions 1929-2007) and Michelsonas; closed 1981 per registry. Multi-source documentation."
+    },
+    "st-george-albany-ny": {
+      "registry_slug": "st-george-albany-ny",
+      "canonical_status": "repurposed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (141 mentions 1912-2007); closed 1986 per TrueLithuania sources. Web sources mark as repurposed."
+    },
+    "holy-cross-schenectady-ny": {
+      "registry_slug": "holy-cross-schenectady-ny",
+      "canonical_status": "repurposed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (20 mentions 1920-1991); founded 1920. Web sources mark as repurposed. Status not yet verified."
+    },
+    "st-george-utica-ny": {
+      "registry_slug": "st-george-utica-ny",
+      "canonical_status": "closed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (31 mentions 1910-1960); closed 2007 per registry. Web sources mark as closed."
+    },
+    "st-joseph-binghamton-ny": {
+      "registry_slug": "st-joseph-binghamton-ny",
+      "canonical_status": "repurposed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (29 mentions 1915-1992); closed 2008 per registry. Web sources mark as repurposed."
+    },
+    "holy-trinity-newark-nj": {
+      "registry_slug": "holy-trinity-newark-nj",
+      "canonical_status": "repurposed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (60 mentions 1927-2007); founded 1901. Web sources mark status as repurposed with demolished/converted flags in TrueLithuania."
+    },
+    "our-lady-of-sorrows-kearny-nj": {
+      "registry_slug": "our-lady-of-sorrows-kearny-nj",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Single source documentation (Draugas 26 mentions 1954-1993); founded 1915. Status not yet verified."
+    },
+    "st-ann-jersey-city-nj": {
+      "registry_slug": "st-ann-jersey-city-nj",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (21 mentions 1909-1985); founded 1913. Web sources mark as demolished."
+    },
+    "lithuanian-church-harrison-nj": {
+      "registry_slug": "lithuanian-church-harrison-nj",
+      "canonical_status": "repurposed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (87 mentions 1913-2005); founded 1915. Web sources mark as repurposed."
+    },
+    "all-saints-chicago-il": {
+      "registry_slug": "all-saints-chicago-il",
+      "canonical_status": "closed",
+      "building_fate": "repurposed",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (160 mentions 1910-2002) and Wolkovich (Vol. 3); founded 1906, closed 1989. Multi-source, substantial documentation."
+    },
+    "st-casimir-chicago-heights-il": {
+      "registry_slug": "st-casimir-chicago-heights-il",
+      "canonical_status": "repurposed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (87 mentions 1927-2004); founded 1911, closed 1987. Web and TrueLithuania sources mark as repurposed."
+    },
+    "ss-peter-and-paul-chicago-il": {
+      "registry_slug": "ss-peter-and-paul-chicago-il",
+      "canonical_status": "closed",
+      "building_fate": "repurposed",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in extensive Draugas record (276 mentions 1917-2006) and Wolkovich (Vol. 3). West Pullman parish; multiple closure dates in sources (1919-2022). Coal region."
+    },
+    "st-bartholomew-waukegan-il": {
+      "registry_slug": "st-bartholomew-waukegan-il",
+      "canonical_status": "repurposed",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (405 mentions 1910-2006) and Wolkovich (Vol. 3); founded 1896, closed 2008. Extensive documentation; multi-source."
+    },
+    "ss-peter-and-paul-rockford-il": {
+      "registry_slug": "ss-peter-and-paul-rockford-il",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in Draugas (271 mentions 1913-2006) and Wolkovich (Vol. 3); founded 1911. Multi-source, substantial documentation; present status requires verification."
+    },
+    "st-vincent-de-paul-springfield-il": {
+      "registry_slug": "st-vincent-de-paul-springfield-il",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "Demolished",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Documented in Draugas (177 mentions 1910-2004); founded 1909. Web sources mark as demolished."
+    },
+    "st-anthony-kewanee-il": {
+      "registry_slug": "st-anthony-kewanee-il",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "ss-peter-and-paul-westville-il": {
+      "registry_slug": "ss-peter-and-paul-westville-il",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "holy-cross-westville-il": {
+      "registry_slug": "holy-cross-westville-il",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "st-francis-youngstown-oh": {
+      "registry_slug": "st-francis-youngstown-oh",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "st-peter-akron-oh": {
+      "registry_slug": "st-peter-akron-oh",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "st-george-detroit-mi": {
+      "registry_slug": "st-george-detroit-mi",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "st-george-saginaw-mi": {
+      "registry_slug": "st-george-saginaw-mi",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "st-gabriel-milwaukee-wi": {
+      "registry_slug": "st-gabriel-milwaukee-wi",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "st-casimir-racine-wi": {
+      "registry_slug": "st-casimir-racine-wi",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "st-peter-kenosha-wi": {
+      "registry_slug": "st-peter-kenosha-wi",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "immaculate-conception-sheboygan-wi": {
+      "registry_slug": "immaculate-conception-sheboygan-wi",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "st-ambrose-port-washington-wi": {
+      "registry_slug": "st-ambrose-port-washington-wi",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "st-casimir-kansas-city-ks": {
+      "registry_slug": "st-casimir-kansas-city-ks",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "st-joseph-st-louis-mo": {
+      "registry_slug": "st-joseph-st-louis-mo",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "st-alphonsus-baltimore-md": {
+      "registry_slug": "st-alphonsus-baltimore-md",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "st-john-the-baptist-baltimore-md": {
+      "registry_slug": "st-john-the-baptist-baltimore-md",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "st-casimir-st-pete-beach-fl": {
+      "registry_slug": "st-casimir-st-pete-beach-fl",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "st-casimir-plymouth-pa": {
+      "registry_slug": "st-casimir-plymouth-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Coal region."
+    },
+    "st-joseph-du-bois-pa": {
+      "registry_slug": "st-joseph-du-bois-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Coal region."
+    },
+    "lithuanian-easton-pa": {
+      "registry_slug": "lithuanian-easton-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Coal region."
+    },
+    "st-ann-beverly-shores-in": {
+      "registry_slug": "st-ann-beverly-shores-in",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "lithuanian-union-pier-mi": {
+      "registry_slug": "lithuanian-union-pier-mi",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "lithuanian-toronto-on": {
+      "registry_slug": "lithuanian-toronto-on",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Canadian location. Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "christ-the-king-sudbury-on": {
+      "registry_slug": "christ-the-king-sudbury-on",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Canadian location. Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "st-catherine-st-catharines-on": {
+      "registry_slug": "st-catherine-st-catharines-on",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Canadian location. Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "lithuanian-bronx-ny": {
+      "registry_slug": "lithuanian-bronx-ny",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "louis-maizeville-pa": {
+      "registry_slug": "louis-maizeville-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Coal region."
+    },
+    "ascension-pittsburgh-pa-2": {
+      "registry_slug": "ascension-pittsburgh-pa-2",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Duplicate/variant entry in registry. Needs clarification and consolidation."
+    },
+    "lithuanian-national-catholic-parish-waterbury-ct": {
+      "registry_slug": "lithuanian-national-catholic-parish-waterbury-ct",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "unknown",
+      "situation": "LNCC (Lithuanian National Catholic Church), independent of Rome. Documented in registry but needs further research."
+    },
+    "paul-naugatuck-ct": {
+      "registry_slug": "paul-naugatuck-ct",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "sorrows-kearny-nj": {
+      "registry_slug": "sorrows-kearny-nj",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "zion-lithuanian-lutheran-oak-lawn-il": {
+      "registry_slug": "zion-lithuanian-lutheran-oak-lawn-il",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Lithuanian Lutheran congregation, not Roman Catholic. Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "casimir-kansas-city-ks": {
+      "registry_slug": "casimir-kansas-city-ks",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "francis-indian-harbor-in": {
+      "registry_slug": "francis-indian-harbor-in",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "mary-custer-mi": {
+      "registry_slug": "mary-custer-mi",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "bernard-irons-mi": {
+      "registry_slug": "bernard-irons-mi",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "parish-scottville-mi": {
+      "registry_slug": "parish-scottville-mi",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "ignatius-luther-mi": {
+      "registry_slug": "ignatius-luther-mi",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "mary-harrisburg-il": {
+      "registry_slug": "mary-harrisburg-il",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "george-pittsburgh-pa": {
+      "registry_slug": "george-pittsburgh-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "mary-chicago-il": {
+      "registry_slug": "mary-chicago-il",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "joseph-cambridge-ma": {
+      "registry_slug": "joseph-cambridge-ma",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "holycross-cleveland-oh": {
+      "registry_slug": "holycross-cleveland-oh",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "parish-scranton-pa": {
+      "registry_slug": "parish-scranton-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Coal region."
+    },
+    "parish-chicago-il": {
+      "registry_slug": "parish-chicago-il",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Unnamed parish entry in registry. Needs clarification."
+    },
+    "parish-melrose-park-il": {
+      "registry_slug": "parish-melrose-park-il",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "parish-avellaneda-ar": {
+      "registry_slug": "parish-avellaneda-ar",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "not_applicable",
+      "situation": "Argentina location — OUT OF SCOPE per CLAUDE.md guardrails. Non-North-American record excluded from site counts and maps."
+    },
+    "casimir-rosario-ar": {
+      "registry_slug": "casimir-rosario-ar",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "not_applicable",
+      "situation": "Argentina location — OUT OF SCOPE per CLAUDE.md guardrails. Non-North-American record excluded from site counts and maps."
+    },
+    "parish-grand-prairie-ar": {
+      "registry_slug": "parish-grand-prairie-ar",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "not_applicable",
+      "situation": "Argentina location — OUT OF SCOPE per CLAUDE.md guardrails. Non-North-American record excluded from site counts and maps."
+    },
+    "rosary-hartshorne-in": {
+      "registry_slug": "rosary-hartshorne-in",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "casimir-kansas-city-ka": {
+      "registry_slug": "casimir-kansas-city-ka",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "parish-minneapolis-mi": {
+      "registry_slug": "parish-minneapolis-mi",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "parish-denver-globeville-co": {
+      "registry_slug": "parish-denver-globeville-co",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "parish-portland-or": {
+      "registry_slug": "parish-portland-or",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "parish-yorktown-houston-galveston-te": {
+      "registry_slug": "parish-yorktown-houston-galveston-te",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "parish-thompson-ct": {
+      "registry_slug": "parish-thompson-ct",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "parish-freeland-pa": {
+      "registry_slug": "parish-freeland-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Coal region."
+    },
+    "george-mahanoy-city-pa": {
+      "registry_slug": "george-mahanoy-city-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Coal region."
+    },
+    "parish-mt-pleasant-pa": {
+      "registry_slug": "parish-mt-pleasant-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Coal region."
+    },
+    "anthony-philadelphia-pa": {
+      "registry_slug": "anthony-philadelphia-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "holyname-scranton-pa": {
+      "registry_slug": "holyname-scranton-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Coal region."
+    },
+    "joseph-custer-mi": {
+      "registry_slug": "joseph-custer-mi",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "casimir-boston-ma": {
+      "registry_slug": "casimir-boston-ma",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "holycross-brooklyn-ny": {
+      "registry_slug": "holycross-brooklyn-ny",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "holyname-philadelphia-pa": {
+      "registry_slug": "holyname-philadelphia-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "parish-pittsburgh-pa": {
+      "registry_slug": "parish-pittsburgh-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "vincent-pittsburgh-pa": {
+      "registry_slug": "vincent-pittsburgh-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "allsaints-worcester-ma": {
+      "registry_slug": "allsaints-worcester-ma",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "trinity-new-york-ny": {
+      "registry_slug": "trinity-new-york-ny",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "lawrence-lawrence-ma": {
+      "registry_slug": "lawrence-lawrence-ma",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "parish-wilkes-barre-pa": {
+      "registry_slug": "parish-wilkes-barre-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Coal region."
+    },
+    "parish-baltimore-md": {
+      "registry_slug": "parish-baltimore-md",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "joseph-dubois-pa": {
+      "registry_slug": "joseph-dubois-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Coal region."
+    },
+    "parish-chicago-il-2": {
+      "registry_slug": "parish-chicago-il-2",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Unnamed/duplicate parish entry in registry. Needs clarification."
+    },
+    "providence-providence-ri": {
+      "registry_slug": "providence-providence-ri",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "parish-worcester-ma": {
+      "registry_slug": "parish-worcester-ma",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "parish-westville-il-2": {
+      "registry_slug": "parish-westville-il-2",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Duplicate/variant entry in registry. Needs clarification."
+    },
+    "parish-chicago-il-3": {
+      "registry_slug": "parish-chicago-il-3",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Unnamed/duplicate parish entry in registry. Needs clarification."
+    },
+    "parish-worcester-ma-2": {
+      "registry_slug": "parish-worcester-ma-2",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Duplicate/variant entry in registry. Needs clarification."
+    },
+    "casimir-winnipeg-mb": {
+      "registry_slug": "casimir-winnipeg-mb",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Canadian location. Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "parish-wasaga-beach-on": {
+      "registry_slug": "parish-wasaga-beach-on",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Canadian location. Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "christ-toronto-on": {
+      "registry_slug": "christ-toronto-on",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Canadian location. Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "john-toronto-on": {
+      "registry_slug": "john-toronto-on",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Canadian location. Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "angels-st-catharines-on": {
+      "registry_slug": "angels-st-catharines-on",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Canadian location. Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "gateofdawn-hamilton-on": {
+      "registry_slug": "gateofdawn-hamilton-on",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Canadian location. Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "parish-maizeville-pa": {
+      "registry_slug": "parish-maizeville-pa",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Coal region."
+    },
+    "parish-lawrence-ma": {
+      "registry_slug": "parish-lawrence-ma",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "mary-kearny-nj": {
+      "registry_slug": "mary-kearny-nj",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "annunciation-maspeth-ny": {
+      "registry_slug": "annunciation-maspeth-ny",
+      "canonical_status": "unknown",
+      "building_fate": "unknown",
+      "current_use": "Unknown",
+      "lithuanian_identity": "unknown",
+      "pastoral_status": "unknown",
+      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    }
+  }
+}

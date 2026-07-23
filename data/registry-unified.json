@@ -7635,7 +7635,7 @@
       "city": "Lemont",
       "state": "IL",
       "country": "US",
-      "record_type": "parish",
+      "record_type": "misija",
       "comparator": false,
       "in_locked_scope": true,
       "c83_row": 64,
@@ -14367,7 +14367,7 @@
       "city": "Port Washington",
       "state": "WI",
       "country": "US",
-      "record_type": "parish",
+      "record_type": "misija",
       "in_locked_scope": false,
       "c83_row": null,
       "sources": [
@@ -14808,7 +14808,7 @@
       "city": "St. Pete Beach",
       "state": "FL",
       "country": "US",
-      "record_type": "parish",
+      "record_type": "misija",
       "in_locked_scope": false,
       "c83_row": null,
       "sources": [
@@ -18385,7 +18385,7 @@
       "city": "Wasaga Beach",
       "state": "ON",
       "country": "CA",
-      "record_type": "parish",
+      "record_type": "misija",
       "in_locked_scope": false,
       "c83_row": null,
       "sources": [

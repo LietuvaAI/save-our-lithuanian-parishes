@@ -4,9 +4,9 @@
 
 - **Canonical source:** `LietuvaAI/culturenet-brain` → `docs/research/draugas/parishes.csv`
 - **Snapshot taken:** 2026-07-15, from culturenet-brain PR #321 (citation-date fix, branch commit `f8a9649`; previous snapshot 2026-07-08 from `main` at `b2804c2`). The fix corrects two Sunday event-dates that had crept into citation lists: `2009-10-18` → `2009-10-27` (three Cleveland rows) and `2009-03-15` removed (DMNP Cleveland) — citations only, no figures touched.
-- **Locked figure set:** `docs/research/draugas/Draugas-Infographic-Locked-Figures.md` (locked 2026-05-23, scope 83), same folder. Every headline figure this site displays is re-derived from the CSV at build time and validated against that locked set by `scripts/build-data.mjs`. **The build fails if any figure drifts.**
+- **Locked figure set:** `docs/research/draugas/Draugas-Infographic-Locked-Figures.md` (locked 2026-05-23, scope: 83 case-filed so far from the Draugas 2008–2026 corpus — the first dataset, not a ceiling), same folder. Every headline figure this site displays is re-derived from the CSV at build time and validated against that locked set by `scripts/build-data.mjs`. **The build fails if any figure drifts.**
 - **Corpus:** the *Draugas* born-digital archive, 2 January 2008 – 21 May 2026 — 2,768 issues searched (2 of 2,770 corrupt). Source line: „Šaltinis: „Draugo" archyvas, 2008–2026 m."
-- **Scope:** 86 rows = 83 distinct U.S. Lithuanian parishes + 3 Canadian comparators (states QC/ON; excluded from all U.S. figures).
+- **Scope:** 86 rows = 83 U.S. Lithuanian parishes case-filed so far + 3 Canadian comparators (states QC/ON; excluded from all U.S. figures). 83 is the Draugas 2008–2026 yield; the number will grow as the full archive and other sources are case-filed.
 - **Corpus scope tag:** `draugas-2008-2026`. Future dataset expansions (historical parishes pre-2008, community-reported records) enter under their own scope tags and never alter the figures of this scope.
 
 ## draugas-links.json
@@ -18,8 +18,8 @@
 ## registry-unified.json
 
 - **Canonical source:** `LietuvaAI/culturenet-brain` → `docs/research/parish-registry-unified/registry-unified.json` (corpusScope `parish-registry-unified`)
-- **Snapshot taken:** 2026-07-19 (**refresh-1**) from `main` (PR #380: Draugas 1909-2007 FINAL #378 + Michelsonas axis #376 joined); byte-verified against origin/main at snapshot time. 220 parishes (83 case-filed locked / 65 multi-source / 72 single-source); six source axes. Refresh also fixed a pre-existing wrong-merge (Queen of Angels Brooklyn) — see culturenet-brain findings.md refresh-1 log. Previous snapshot 2026-07-18 (188 parishes, PR #369).
-- **What it is:** 188 parishes consolidated across five research axes (canonical 83 · Draugas 1909–2007 registry · Wolkovich Vol 3 · web-historical · truelithuania field survey), one record per parish with per-source provenance, carried conflicts, `record_depth` (case-filed / multi-source / single-source), and `congregation_class` (roman_catholic / national_catholic_pncc / independent_catholic). The 83 case-filed records carry the locked fields verbatim in a `locked` block.
+- **Snapshot taken:** 2026-07-19 (**refresh-1**) from `main` (PR #380: Draugas 1909-2007 FINAL #378 + Michelsonas axis #376 joined); byte-verified against origin/main at snapshot time. 220 parishes (83 case-filed so far / 65 multi-source / 72 single-source); six source axes. Refresh also fixed a pre-existing wrong-merge (Queen of Angels Brooklyn) — see culturenet-brain findings.md refresh-1 log. Previous snapshot 2026-07-18 (188 parishes, PR #369).
+- **What it is:** 188 parishes consolidated across five research axes (case-filed core · Draugas 1909–2007 registry · Wolkovich Vol 3 · web-historical · truelithuania field survey), one record per parish with per-source provenance, carried conflicts, `record_depth` (case-filed / multi-source / single-source), and `congregation_class` (roman_catholic / national_catholic_pncc / independent_catholic). The case-filed records carry the locked fields verbatim in a `locked` block.
 - **Figures discipline:** this file is **presentation-layer only** — no headline figure derives from it. The `draugas-2008-2026` figures continue to derive exclusively from `parishes.csv`. The map's parish count is its own clearly-labeled statistic and is never conflated with the locked figures.
 - **Held upstream (NOT snapshotted, per Vilija 2026-07-18):** `sites.json` (cemeteries, institutions, Jewish congregations/orgs, monasteries, chapels, shrines) and `leads.json`.
 
@@ -43,7 +43,7 @@ Never hand-edit `data/parishes.csv` in this repo. If the upstream canonical CSV 
 - **Manhattan Aušros Vartų** sale price is a soft composite — "tens of millions", never a hard number. Demolition year unresolved (2015 vs 2020).
 - The Pennsylvania **"31 parishes / 29 Roman Catholic, all closed"** figure is a statistic *stated in Draugas* (2017-12-28; 2024-01-20), not enumerated dataset rows — cite as attributed, never draw 31 marks.
 - **No invented numbers.** Blank CSV fields are blank because the research does not support a figure.
-- **83 documented / 58 case-filed in depth** — copy must not call all 83 full case histories.
+- **83 case-filed so far / 58 in depth** — 83 is the first dataset, not a ceiling; copy must use "case-filed so far" or dynamic counts, never frame 83 as the total universe. Not all 83 have full case histories.
 
 ## aod-workbooks-fy2425.json + aod-workbook-links.csv
 
@@ -58,8 +58,8 @@ Never hand-edit `data/parishes.csv` in this repo. If the upstream canonical CSV 
 
 The first Parish Watch sweep (culturenet-brain PR #388, `docs/research/parish-watch/`, 155 watched entities, 8 red/amber alerts) was cross-checked against all 83 case-records. **Outcome: zero case-record edits warranted.** On every overlapping alert — Girardville, Maspeth, Bayonne, Scranton St. Michael, Elizabeth, Hartford — the existing case-record (2026-07-09/16/17 baseline) already contains the sweep's finding at equal or greater depth (e.g., the Scranton listing is recorded here with MLS number, price, and days-on-market; the sweep adds only "since May 2026"). The watch layer's value going forward is the forward clock (weekly red / biweekly amber / monthly full cadence), not backfill.
 
-Two alerts concern registry-layer parishes with no case-record, correctly so (case-records = the canonical 83; the 155-entity watch list is a separate, broader layer):
+Two alerts concern registry-layer parishes with no case-record, correctly so (case-records = the case-filed core; the 155-entity watch list is a separate, broader layer):
 - **Freeland, PA** — "Our Lady of the Immaculate Conception" consolidated into St. Patrick (White Haven) effective 2026-07-01 (Diocese of Scranton, Vision 2030). Registry has `parish-freeland-pa`, a single-source row for an *unnamed mixed Lithuanian-Polish-Slovak-Rusyn parish* — whether OLIC is that parish's continuation is **unconfirmed**; identity check is an upstream culturenet-brain lead before the event attaches to the registry record.
 - **St. Ann of the Dunes, Beverly Shores, IN** (`st-ann-beverly-shores-in`, multi-source) — named in the Diocese of Gary's Porter Planning Area consolidation (five parishes → two worship sites, March 2026 plan).
 
-Both events' public surface is the proposed alerts snapshot (see `docs/alerts-surface-proposal.md`), pending Vilija's design choice. Known upstream blind spots left alone per handoff: `casimir-montreal-qc`, `gateofdawn-montreal-qc`, `casimir-winnipeg-mb` (WebSearch budget exhaustion — next brain sweep's first priority). Guardrails re-affirmed in any future surface copy: Maspeth never rendered closed; Elizabeth NJ canonically unresolved; the "83 documented" figure never conflated with the 155-entity watch layer.
+Both events' public surface is the proposed alerts snapshot (see `docs/alerts-surface-proposal.md`), pending Vilija's design choice. Known upstream blind spots left alone per handoff: `casimir-montreal-qc`, `gateofdawn-montreal-qc`, `casimir-winnipeg-mb` (WebSearch budget exhaustion — next brain sweep's first priority). Guardrails re-affirmed in any future surface copy: Maspeth never rendered closed; Elizabeth NJ canonically unresolved; the case-filed figure never conflated with the 155-entity watch layer.

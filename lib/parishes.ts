@@ -15,6 +15,36 @@ export type EndingMode =
   | "community_decided"
   | "standing"
   | "undecided";
+export type InstitutionType = "parapija" | "misija";
+
+export type BuildingFate =
+  | "demolished"
+  | "standing"
+  | "repurposed_religious"
+  | "repurposed_secular"
+  | "derelict"
+  | "unknown";
+export type LithuanianIdentity =
+  | "active_parish"
+  | "mass_continues"
+  | "ethnically_transferred"
+  | "lost";
+export type PastoralStatus =
+  | "own_priest"
+  | "shared_priest"
+  | "visiting_priest"
+  | "not_applicable"
+  | "unknown";
+
+export interface ParishSituation {
+  registry_slug: string;
+  canonical_status: string;
+  building_fate: BuildingFate;
+  current_use: string;
+  lithuanian_identity: LithuanianIdentity;
+  pastoral_status: PastoralStatus;
+  situation: string;
+}
 
 export interface Citation {
   type: "draugas_issue";
@@ -31,6 +61,14 @@ export interface Parish {
   ownership: Ownership;
   status: ParishStatus;
   endingMode: EndingMode;
+  institutionType: InstitutionType;
+  // Classifier fields — merged from parish-situation.json at build time.
+  lithuanianIdentity: LithuanianIdentity | null;
+  buildingFate: BuildingFate | null;
+  currentUse: string | null;
+  pastoralStatus: PastoralStatus | null;
+  situation: string | null;
+  registrySlug: string | null;
   yearFounded: number | null;
   yearClosed: number | null;
   coalRegion: boolean;
@@ -104,6 +142,11 @@ export function draugasCitationUrl(isoDate: string): string {
     : draugasArchiveUrl(isoDate);
 }
 
+export const INSTITUTION_TYPE_LABEL: Record<InstitutionType, string> = {
+  parapija: "Lithuanian parish (parapija)",
+  misija: "Lithuanian mission (misija)",
+};
+
 /** Canonical legend order: losses first, per the infographic. */
 export const ENDING_MODE_ORDER: EndingMode[] = [
   "diocese_closed",
@@ -111,3 +154,91 @@ export const ENDING_MODE_ORDER: EndingMode[] = [
   "community_decided",
   "standing",
 ];
+
+// ---------------------------------------------------------------------------
+// Situation classifiers — merged into parishes.json at build time from
+// parish-situation.json. The overlay is the source of truth; the build
+// script merges it; the app reads only parishes.json.
+// ---------------------------------------------------------------------------
+
+/** Build a ParishSituation view from a Parish's merged classifier fields. */
+export function getParishSituation(slug: string): ParishSituation | null {
+  const p = parishes.find((x) => x.slug === slug);
+  if (!p || !p.buildingFate) return null;
+  return {
+    registry_slug: p.registrySlug ?? "",
+    canonical_status: p.status,
+    building_fate: p.buildingFate,
+    current_use: p.currentUse ?? "Unknown",
+    lithuanian_identity: p.lithuanianIdentity ?? "lost",
+    pastoral_status: p.pastoralStatus ?? "unknown",
+    situation: p.situation ?? "",
+  };
+}
+
+export const BUILDING_FATE_LABEL: Record<BuildingFate, string> = {
+  demolished: "Demolished",
+  standing: "Building standing",
+  repurposed_religious: "Repurposed (religious use)",
+  repurposed_secular: "Repurposed (secular use)",
+  derelict: "Derelict",
+  unknown: "Building fate unknown",
+};
+
+export const LITHUANIAN_IDENTITY_LABEL: Record<LithuanianIdentity, string> = {
+  active_parish: "Lithuanian identity active",
+  mass_continues: "Lithuanian Mass continues",
+  ethnically_transferred: "Ethnically transferred",
+  lost: "Lithuanian identity lost",
+};
+
+export const PASTORAL_STATUS_LABEL: Record<PastoralStatus, string> = {
+  own_priest: "Own Lithuanian priest",
+  shared_priest: "Shared priest",
+  visiting_priest: "Visiting priest",
+  not_applicable: "—",
+  unknown: "Pastoral status unknown",
+};
+
+// Reverse index: registry slug → situation (for registry profile pages)
+const registrySlugIndex = new Map<string, Parish>();
+for (const p of parishes) {
+  if (p.registrySlug) registrySlugIndex.set(p.registrySlug, p);
+}
+
+/** Look up the situation overlay by registry slug (for registry profile pages). */
+export function getSituationByRegistrySlug(registrySlug: string): ParishSituation | null {
+  const p = registrySlugIndex.get(registrySlug);
+  if (!p || !p.buildingFate) return null;
+  return {
+    registry_slug: p.registrySlug ?? "",
+    canonical_status: p.status,
+    building_fate: p.buildingFate,
+    current_use: p.currentUse ?? "Unknown",
+    lithuanian_identity: p.lithuanianIdentity ?? "lost",
+    pastoral_status: p.pastoralStatus ?? "unknown",
+    situation: p.situation ?? "",
+  };
+}
+
+// ---------------------------------------------------------------------------
+// Full Picture link targets — each classifier value → anchor on /full-picture
+// ---------------------------------------------------------------------------
+
+export const BUILDING_FATE_LINK: Record<BuildingFate, string> = {
+  demolished: "/full-picture#demolished",
+  standing: "/full-picture#buildings",
+  repurposed_religious: "/full-picture#buildings",
+  repurposed_secular: "/full-picture#buildings",
+  derelict: "/full-picture#buildings",
+  unknown: "/full-picture#buildings",
+};
+
+export const LITHUANIAN_IDENTITY_LINK: Record<LithuanianIdentity, string> = {
+  active_parish: "/full-picture#standing",
+  mass_continues: "/full-picture#mass-continues",
+  ethnically_transferred: "/full-picture#transferred",
+  lost: "/full-picture#identity",
+};
+
+export const OWNERSHIP_LINK = "/full-picture#ownership";
