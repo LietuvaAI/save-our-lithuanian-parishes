@@ -5,7 +5,7 @@ import alertsData from "@/data/alerts.json";
 export const metadata: Metadata = {
   title: "Parishes under threat — SaveOurLithuanianParishes.org",
   description:
-    "All ten watched Lithuanian parishes: four with active community campaigns and six under institutional or building-level risk. Situations, actions, and Substack campaign links.",
+    "All ten watched Lithuanian parishes: closures, consolidations, property motions, open windows, and active community campaigns — every item sourced.",
 };
 
 type Alert = {
@@ -26,6 +26,7 @@ type Campaign = {
   entity: string;
   place: string;
   parishLink: string;
+  hearthUrl?: string;
   since: string;
   who: string;
   form: string;
@@ -52,16 +53,8 @@ const activeAlerts = alerts.filter((a) => a.kind === "active");
 const watchAlerts = alerts.filter((a) => a.kind === "watch");
 const buildingAlerts = alerts.filter((a) => a.kind === "building");
 
-// Substack base for campaign links
+// Substack base for fallback links
 const SUBSTACK = "https://blog.saveourlithuanianparishes.org";
-
-// Map parishLink slug → Substack campaign anchor (from the active-campaigns post)
-const SUBSTACK_CAMPAIGN_ANCHORS: Record<string, string> = {
-  "dievo-apvaizdos-southfield-mi": `${SUBSTACK}/i/207579337/divine-providence-lithuanian-catholic-church-southfield-michigan`,
-  "svc-trejybes-hartford-ct": `${SUBSTACK}/i/207579337/holy-trinity-church-hartford-connecticut`,
-  "sv-juozapo-waterbury-ct": `${SUBSTACK}/i/207579337/st-josephs-church-waterbury-connecticut`,
-  "kristaus-atsimainymo-maspeth-ny": `${SUBSTACK}/i/207579337/church-of-the-transfiguration-maspeth-queens-new-york`,
-};
 
 function slugFromLink(link: string) {
   return link.replace(/^\/(parishes|registry)\//, "");
@@ -75,12 +68,38 @@ export default function UnderThreatPage() {
         Parishes under threat
       </h1>
       <p className="mt-3 text-muted leading-relaxed">
-        Ten Lithuanian parishes and buildings are currently being watched. Four
-        have active community campaigns — parishioners organizing, funds raised,
-        canon lawyers retained. The others are named in diocesan plans, face
-        building-level risks, or were recently closed with situations still
-        developing.
+        Each item below is a current event at a watched parish — a closure, a
+        consolidation, a property motion, an open process — found by the
+        systematic Parish Watch sweep and stated with its sources. Snapshot
+        of {alertsData.snapshot}; red items are re-checked weekly, amber
+        biweekly.
       </p>
+
+      {/* ── Open window callout ── */}
+      <section className="mt-8 rounded-lg border-2 border-accent/60 px-4 py-3.5">
+        <p className="text-xs uppercase tracking-widest text-muted">
+          The open window
+        </p>
+        <p className="mt-1 leading-relaxed">
+          <strong>Divine Providence, Southfield, Michigan</strong> — the
+          Archdiocese of Detroit&rsquo;s one Lithuanian parish — is inside the
+          archdiocese&rsquo;s restructuring. The parish survey closes{" "}
+          <strong>July 31, 2026</strong>; discernment follows this fall, with
+          decisions announced in early 2027. The record shows the window that
+          matters is <em>before</em> a decision arrives — and it is open now.{" "}
+          <Link href="/start-here" className="font-semibold underline hover:text-accent">
+            Start here &rarr;
+          </Link>{" "}
+          <a
+            href={`${SUBSTACK}/p/who-the-archdioceses-ethnic-parishes`}
+            className="underline hover:text-accent"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            &middot; The full analysis &rarr;
+          </a>
+        </p>
+      </section>
 
       {/* ── Active campaigns ── */}
       <section className="mt-10">
@@ -98,7 +117,7 @@ export default function UnderThreatPage() {
         <div className="mt-5 space-y-5">
           {activeCampaigns.map((c) => {
             const slug = slugFromLink(c.parishLink);
-            const substackUrl = SUBSTACK_CAMPAIGN_ANCHORS[slug] ?? `${SUBSTACK}/p/active-campaigns`;
+            const substackUrl = c.hearthUrl ?? `${SUBSTACK}/p/active-campaigns`;
             const alert = activeAlerts.find(
               (a) => slugFromLink(a.parishLink) === slug
             );
@@ -141,13 +160,13 @@ export default function UnderThreatPage() {
                     className="inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
                     style={{ background: "var(--mark-community)", color: "#1c1917" }}
                   >
-                    How to help →
+                    How to help &rarr;
                   </a>
                   <Link
                     href={c.parishLink}
                     className="inline-flex items-center gap-1 rounded-md border border-rule px-3 py-1.5 text-sm font-medium hover:border-foreground transition-colors"
                   >
-                    Parish record →
+                    Parish record &rarr;
                   </Link>
                 </div>
 
@@ -155,7 +174,7 @@ export default function UnderThreatPage() {
                   Sources:{" "}
                   {c.sources.map((s, i) => (
                     <span key={s.url}>
-                      {i > 0 && " · "}
+                      {i > 0 && " \u00b7 "}
                       <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
                         {s.publisher}
                       </a>
@@ -201,15 +220,15 @@ export default function UnderThreatPage() {
                 Sources:{" "}
                 {a.sources.map((s, i) => (
                   <span key={s.url}>
-                    {i > 0 && " · "}
+                    {i > 0 && " \u00b7 "}
                     <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
                       {s.publisher}
                     </a>
                   </span>
                 ))}
-                {" · "}
+                {" \u00b7 "}
                 <Link href={a.parishLink} className="underline hover:text-foreground">
-                  full record →
+                  full record &rarr;
                 </Link>
               </p>
             </div>
@@ -247,15 +266,15 @@ export default function UnderThreatPage() {
                 Sources:{" "}
                 {a.sources.map((s, i) => (
                   <span key={s.url}>
-                    {i > 0 && " · "}
+                    {i > 0 && " \u00b7 "}
                     <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
                       {s.publisher}
                     </a>
                   </span>
                 ))}
-                {" · "}
+                {" \u00b7 "}
                 <Link href={a.parishLink} className="underline hover:text-foreground">
-                  full record →
+                  full record &rarr;
                 </Link>
               </p>
             </div>
@@ -265,13 +284,16 @@ export default function UnderThreatPage() {
 
       <section className="mt-10 rounded-lg border border-rule px-4 py-3.5 text-sm text-muted leading-relaxed">
         <p>
-          <span className="font-medium text-foreground">Know something we don&rsquo;t?</span>{" "}
-          A listening session, a letter, a listing, a campaign that should be
-          here —{" "}
-          <Link href="/report" className="underline hover:text-foreground">
-            tell us
-          </Link>
-          . All active campaigns are also published on{" "}
+          <span className="font-medium text-foreground">How this list is built.</span>{" "}
+          The watch layer systematically monitors 155 parishes and sites drawn
+          from the wider research record — a broader net than the{" "}
+          <Link href="/parishes" className="underline hover:text-foreground">
+            case-filed parishes
+          </Link>{" "}
+          with researched case files, which remain the core record. A parish
+          appearing here is not a verdict: unresolved cases stay unresolved
+          until the record says otherwise. All active campaigns are also
+          published on{" "}
           <a
             href={`${SUBSTACK}/p/active-campaigns`}
             target="_blank"
@@ -280,9 +302,13 @@ export default function UnderThreatPage() {
           >
             The Hearth
           </a>
-          . Full alert methodology:{" "}
+          . Method and sources:{" "}
           <Link href="/about-the-data" className="underline hover:text-foreground">
             About the data
+          </Link>
+          . Know something we don&rsquo;t?{" "}
+          <Link href="/report" className="underline hover:text-foreground">
+            Tell us
           </Link>
           .
         </p>
