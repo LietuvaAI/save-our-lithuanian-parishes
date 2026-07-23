@@ -46,10 +46,10 @@ export default function ParishProfilesPage() {
     <div className="mx-auto max-w-5xl px-4 py-12">
       <h1 className="font-serif text-3xl font-semibold">Parish Profiles</h1>
       <p className="mt-3 max-w-2xl text-muted leading-relaxed">
-        A profile for each of the {usParishes.length} documented U.S.
-        Lithuanian parishes: who built it, who owned it, what happened to it —
-        with every fact traced to its published source. Profiles grow as the
-        research does; if you know one of these parishes,{" "}
+        {usParishes.length} U.S. Lithuanian parishes documented so far: who
+        built each one, who owned it, what happened to it, and where it stands
+        today. Every fact traces to a dated, published source. The record grows
+        backward through the archives and forward through reports —{" "}
         <Link href="/report" className="underline hover:text-foreground">
           add what you know
         </Link>
