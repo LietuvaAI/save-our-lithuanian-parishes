@@ -97,10 +97,9 @@ export default function Home() {
           communities&mdash;the hearths where the flame of faith, language,
           memory, and identity was passed from one generation to the next. This
           project traces that living inheritance across every Lithuanian parish
-          we can document, from the earliest foundations to the communities
-          discerning their future today. Here, the experience of one parish
-          becomes the wisdom of all&mdash;so that no community facing difficult
-          decisions must begin in darkness.
+          we can document, so that the experiences of one parish may help
+          illuminate the path of another. No parish facing difficult decisions
+          should begin in darkness.
         </p>
         <div className="mt-6 flex flex-wrap gap-3 justify-center">
           <Link
