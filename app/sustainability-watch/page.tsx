@@ -4,9 +4,9 @@ import alertsData from "@/data/alerts.json";
 import { parishes } from "@/lib/parishes";
 
 export const metadata: Metadata = {
-  title: "Sustainability watch — SaveOurLithuanianParishes.org",
+  title: "The Vigil — SaveOurLithuanianParishes.org",
   description:
-    "Lithuanian parishes that survived but face slow-burn sustainability challenges: clergy shortages, financial strain, ethnic transition, post-merger fragility. Every fact sourced.",
+    "Lithuanian parishes that survived but face slow-burn erosion: clergy shortages, financial strain, ethnic transition, post-merger fragility. The threat is not a letter from the bishop. It is erosion.",
 };
 
 type SustainabilityEntry = {
@@ -192,11 +192,8 @@ function AllParishesTable() {
 export default function SustainabilityWatchPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
-      <p className="text-xs uppercase tracking-widest text-muted">
-        The long watch
-      </p>
       <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold">
-        Sustainability watch
+        The Vigil
       </h1>
       <p className="mt-3 text-muted leading-relaxed">
         Not every parish under pressure faces a closure decree. These parishes

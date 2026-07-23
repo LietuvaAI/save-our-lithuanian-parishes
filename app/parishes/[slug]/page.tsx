@@ -278,7 +278,7 @@ export default async function ParishPage({
         <section className="mt-8 rounded-lg border border-rule overflow-hidden">
           <div className="px-4 pt-3.5 pb-3">
             <p className="text-xs uppercase tracking-widest text-muted">
-              Sustainability watch
+              The Vigil
             </p>
             <p className="mt-1.5 leading-relaxed">{watchEntry.situation}</p>
 
@@ -341,7 +341,7 @@ export default async function ParishPage({
                 href="/sustainability-watch"
                 className="rounded-md border border-rule px-3 py-1 text-xs font-medium hover:border-foreground transition-colors"
               >
-                All sustainability watch &rarr;
+                The Vigil &rarr;
               </Link>
             </div>
           </div>
