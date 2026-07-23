@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { figures } from "@/lib/parishes";
 
 export const metadata: Metadata = {
   title: "Facing a parish closure? Start here",
@@ -9,10 +10,10 @@ export const metadata: Metadata = {
 
 const SEVEN_REASONS = [
   "A general diocesan plan to reduce the number of churches",
-  "That the church is “no longer needed”",
+  "That the church is "no longer needed"",
   "That the parish has been suppressed",
   "That the number of parishioners has decreased",
-  "That closure “will not harm the good of souls”",
+  "That closure "will not harm the good of souls"",
   "A desire to promote parish unity",
   "A potential future cause that has not yet happened",
 ];
@@ -34,6 +35,60 @@ export default function StartHerePage() {
         verified. It is not legal or canonical advice; it is the map that gets
         you to the right help in time.
       </p>
+
+      {/* ── Why we publish this — LEAD ── */}
+      <section
+        className="mt-8 rounded-lg border-2 px-5 py-5"
+        style={{ borderColor: "var(--mark-closed)" }}
+      >
+        <h2 className="font-serif text-xl font-semibold">
+          Why we publish this
+        </h2>
+        <div className="mt-3 space-y-3 leading-relaxed">
+          <p>
+            Twenty-six U.S. parish closures have been reversed by the
+            Church&rsquo;s own process. Every one of them was a{" "}
+            <strong>non-Lithuanian parish</strong>.
+          </p>
+          <p>
+            Among the{" "}
+            <strong>
+              {figures.endingMode.diocese_closed} Lithuanian parishes
+            </strong>{" "}
+            closed by their diocese in the eighteen years covered by our
+            record — not one has been reversed. Not one appeal filed{" "}
+            <em>after</em> the decree arrived changed the outcome.
+          </p>
+          <p>
+            That gap is not a coincidence. It is the record teaching:{" "}
+            <strong>
+              the window that works is the one before the letter arrives.
+            </strong>{" "}
+            The 26 cases documented here are a public record for every
+            community to learn from — Lithuanian or not. We keep them because
+            the experience of one parish is the knowledge of another. Standing
+            up for a parish inside the Church&rsquo;s own law is not standing
+            against the Church. It is asking the Church to follow it.
+          </p>
+          <p className="text-sm text-muted">
+            See{" "}
+            <Link
+              href="/what-canon-law-says"
+              className="underline hover:text-foreground"
+            >
+              what canon law actually says
+            </Link>{" "}
+            about who a parish belongs to, and the fuller argument on{" "}
+            <a
+              href="https://blog.saveourlithuanianparishes.org"
+              className="underline hover:text-foreground"
+            >
+              Židinys (The Hearth)
+            </a>
+            .
+          </p>
+        </div>
+      </section>
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
@@ -119,17 +174,32 @@ export default function StartHerePage() {
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          4. It has worked — 26 times
+          4. It has worked — 26 times, in other parishes
         </h2>
         <p className="mt-2 leading-relaxed">
           Rome has reversed U.S. parish closures in three diocesan waves —
           Allentown 2011, Cleveland 2012 (12 of 14 appealing parishes
-          reopened), Buffalo 2025 — and in individual cases besides. The
-          pattern in the wins: <strong>presence and procedure together</strong>
-          . Cleveland&rsquo;s parishioners prayed outside their locked church
-          for 139 consecutive Sundays <em>and</em> filed a precise canonical
-          appeal in time. Neither alone reopened that church; together they
-          did.
+          reopened), Buffalo 2025 — and in individual cases besides. None of
+          these were Lithuanian parishes. They are documented here as a public
+          record for every community to learn from.
+        </p>
+        <p className="mt-3 leading-relaxed">
+          The pattern in every reversal:{" "}
+          <strong>presence and procedure together</strong>. Cleveland&rsquo;s
+          parishioners prayed outside their locked church for 139 consecutive
+          Sundays <em>and</em> filed a precise canonical appeal in time.
+          Neither alone reopened that church; together they did.
+        </p>
+        <p className="mt-3 leading-relaxed text-muted">
+          Among Lithuanian parishes in our record:{" "}
+          <strong className="text-foreground">
+            {figures.endingMode.diocese_closed} closures by the diocese.
+            Zero reversed.
+          </strong>{" "}
+          In eighteen years, no appeal filed after the decree arrived ever
+          changed a Lithuanian closure. The 26 precedents are what this record
+          says is possible — but only when the community moves before the
+          decree lands.
         </p>
         <p className="mt-3">
           <Link
@@ -155,33 +225,6 @@ export default function StartHerePage() {
             report it to us
           </Link>{" "}
           while it is happening — we review before anything is published.
-        </p>
-      </section>
-
-      <section className="mt-10 rounded-lg border border-rule px-4 py-3.5 text-sm text-muted">
-        <p>
-          <span className="font-medium text-foreground">
-            Why we publish this.
-          </span>{" "}
-          Our own record shows the harder lesson: among the Lithuanian
-          parishes case-filed so far, no appeal filed <em>after</em> the decree ever
-          reversed a closure — and ownership decided every ending. Standing up
-          for a parish inside the Church&rsquo;s own law is not standing
-          against the Church. It is asking the Church to follow it. See{" "}
-          <Link
-            href="/what-canon-law-says"
-            className="underline hover:text-foreground"
-          >
-            what canon law actually says
-          </Link>{" "}
-          about who a parish belongs to, and the fuller argument on{" "}
-          <a
-            href="https://blog.saveourlithuanianparishes.org"
-            className="underline hover:text-foreground"
-          >
-            Židinys (The Hearth)
-          </a>
-          .
         </p>
       </section>
     </article>
