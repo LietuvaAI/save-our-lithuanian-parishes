@@ -95,7 +95,9 @@ Each researched parish produces a `sustainabilityWatch` entry in
 
 ### 1. Sielovada.org — Lithuanian Foreign Pastoral Care Centre
 
-**Primary source for clergy assignments.**
+**Primary source for clergy assignments and current Lithuanian parish
+life in America. This site must be crawled comprehensively, not just
+the directory page.**
 
 - **North America directory**: https://sielovada.org/siaures-amerika/
   - Lists Lithuanian chaplains and parish priests serving in the US and
@@ -103,13 +105,25 @@ Each researched parish produces a `sustainabilityWatch` entry in
   - Extract: priest name, parish assignment, contact info
   - Cross-reference every name against our parish list
 
-- **Articles about specific parishes** (examples found):
+- **Full site crawl**: Spider sielovada.org for all articles, news
+  items, and dispatches mentioning US Lithuanian parishes. The site
+  publishes detailed reporting on Lithuanian liturgical life in America
+  — clergy changes, Mass schedule updates, merger impacts, parish
+  visits, community events. This content is in Lithuanian; extract and
+  translate key facts.
+  - Start from the homepage and archive/category pages
+  - Search for each parish name (Lithuanian and English) across the site
+  - Search for each US city with a standing Lithuanian parish
+  - Extract: which priest serves where, Mass schedules, governance
+    changes, community activity, photos with attribution
+
+- **Example of what sielovada articles contain** (already found):
   - Beverly Shores: https://sielovada.org/pokalbis-apie-lietuvisku-pamaldu-ateiti-kopu-sv-onos-baznycioje/
     - Contains: Fr. Gediminas Keršys (Chicago) serving monthly Lithuanian
       Mass; July 2026 merger with St. Patrick's (Chesterton); Archbishop
-      Virbalas commentary
-  - Search for articles about each target parish — sielovada publishes
-    dispatches about Lithuanian liturgical life in America
+      Virbalas commentary; photos of the church
+  - This level of detail exists for other parishes on the site — it
+    needs to be found and extracted systematically
 
 - **Contact**: virbalas@sielovada.org (Archbishop Lionginas Virbalas,
   delegate for Lithuanian pastoral care abroad, succeeding the late
