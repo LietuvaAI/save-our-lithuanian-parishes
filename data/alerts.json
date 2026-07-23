@@ -307,22 +307,46 @@
      "url": "https://qns.com/2025/09/gitanas-nauseda-transfiguration-church/"
     }
    ]
-  },
+  }
+ ],
+ "sustainabilityWatch": [
   {
-   "id": "south-boston-campaign",
+   "id": "south-boston-watch",
    "entity": "St. Peter Lithuanian Parish (Šv. Petro)",
    "place": "South Boston, Massachusetts",
+   "diocese": "Archdiocese of Boston",
    "parishLink": "/parishes/sv-petro-boston-ma",
    "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/the-boston-hill-of-crosses-how-south",
-   "since": "2022",
-   "who": "Parishioners of the 1901-founded parish, through its own leadership",
-   "form": "Requests to the Franciscan Fathers in Lithuania for a second Lithuanian-speaking priest, to sustain Lithuanian-language liturgy and draw younger immigrant leadership",
-   "state": "The parish remains active within the South Boston Seaport Catholic Collaborative, with Sunday Lithuanian Mass continuing; no indication yet that the request has been filled.",
+   "dateObserved": "2026-07-16",
+   "clergy": {
+    "arrangement": "collaborative_pastor",
+    "detail": "Pastor Rev. William M. Kennedy (shared collaborative pastor, not Lithuanian-speaking). Lithuanian ministry organized by the Lithuanian Apostolate of the Archdiocese of Boston under directors Aldona Lingertat and Gloria Adomkaitis, with administrator Daiva Navickas. Community requesting a second Lithuanian-speaking priest from the Franciscan Fathers in Lithuania — no indication the request has been filled."
+   },
+   "liturgy": {
+    "lithuanianMass": true,
+    "frequency": "weekly",
+    "detail": "Sunday 10:30 a.m. Lithuanian Mass; 9:00 a.m. English Mass; Thursday 9:00 a.m. weekday Mass"
+   },
+   "governance": "collaborative",
+   "governanceDetail": "Within the South Boston Seaport Catholic Collaborative (with St. Monica), formed under Disciples in Mission effective June 2, 2015. Archdiocesan directory continues to list St. Peter as a distinct parish.",
+   "survivedThreats": "2004 closure attempt (Hill of Crosses protest at church entrance); 2021-22 merger proposal (not consummated; community refused merger consent February 2022)",
+   "financial": null,
+   "situation": "The only Lithuanian church in New England. The parish remains active with weekly Lithuanian Mass and a lay-led Lithuanian Apostolate, but has no Lithuanian-speaking pastor of its own. Its Lithuanian liturgical future depends on securing additional Lithuanian-speaking clergy — the community has formally requested a priest from the Franciscan Fathers in Lithuania, with no indication the request has been filled.",
    "sources": [
     {
-     "title": "St. Peter Lithuanian parish in Boston: new challenges",
-     "publisher": "Draugas",
+     "title": "St. Peter Lithuanian Parish in Boston – New Challenges",
+     "publisher": "Draugas News",
      "url": "https://www.draugas.org/news/st-peter-lithuanian-parish-in-boston-new-challenges/"
+    },
+    {
+     "title": "Lithuanian Apostolate bulletin, July 2026",
+     "publisher": "St. Peter Lithuanian Parish",
+     "url": "http://www.stpeterlithuanianparish.org/pdf_files/liepa_2026.pdf"
+    },
+    {
+     "title": "Saint Peter parish directory listing",
+     "publisher": "The Boston Pilot",
+     "url": "https://thebostonpilot.com/bcd/web_parish.asp?ektronid=4390"
     }
    ]
   }
