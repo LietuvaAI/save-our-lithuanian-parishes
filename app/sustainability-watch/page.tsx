@@ -334,15 +334,6 @@ export default function SustainabilityWatchPage() {
         ))}
       </div>
 
-      {entries.length === 1 && (
-        <p className="mt-6 text-sm text-muted leading-relaxed italic">
-          This page is new. More parishes will be added as their clergy,
-          liturgy, and governance situations are researched and sourced —
-          including Philadelphia, Chicago, Cleveland, and the coal-region
-          parishes of Pennsylvania.
-        </p>
-      )}
-
       <AllParishesTable />
 
       <section className="mt-10 rounded-lg border border-rule px-4 py-3.5 text-sm text-muted leading-relaxed">
