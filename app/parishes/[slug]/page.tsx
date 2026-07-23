@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { MarkIcon } from "@/components/marks";
 import { ClassifierGrid } from "@/components/ClassifierGrid";
 import registry from "@/data/registry-unified.json";
+import alertsData from "@/data/alerts.json";
 import {
   parishes,
   draugasCitationUrl,
@@ -60,6 +61,14 @@ function getScholarlySources(registrySlug: string | null): any[] {
   );
 }
 
+/** Find the alert and/or campaign for a parish by its canonical slug. */
+function getParishAlert(slug: string) {
+  const matchLink = `/parishes/${slug}`;
+  const alert = (alertsData.alerts as any[]).find((a) => a.parishLink === matchLink);
+  const campaign = (alertsData.campaigns as any[]).find((c) => c.parishLink === matchLink);
+  return { alert, campaign };
+}
+
 export function generateStaticParams() {
   return parishes.map((p) => ({ slug: p.slug }));
 }
@@ -89,6 +98,7 @@ export default async function ParishPage({
   const caseRecord = loadCaseRecord(slug);
   const situation = getParishSituation(slug);
   const scholarlySources = getScholarlySources(parish.registrySlug);
+  const { alert: parishAlert, campaign: parishCampaign } = getParishAlert(slug);
 
   const facts: [string, string][] = [
     ["Status", STATUS_LABEL[parish.status]],
@@ -147,6 +157,48 @@ export default async function ParishPage({
           </div>
         ))}
       </dl>
+
+      {parishAlert && (
+        <section
+          className="mt-8 rounded-lg border-2 px-4 py-3.5"
+          style={{ borderColor: parishAlert.level === "red" ? "var(--mark-closed)" : "var(--color-amber-600)" }}
+        >
+          <p className="text-xs uppercase tracking-widest text-muted">
+            {parishCampaign ? "Active campaign" : "Under threat"}
+          </p>
+          <p className="mt-1 text-sm leading-relaxed">{parishAlert.whatChanged}</p>
+          <div className="mt-3 flex flex-wrap gap-2 text-sm">
+            {parishCampaign?.hearthUrl && (
+              <a
+                href={parishCampaign.hearthUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-sm font-semibold hover:opacity-90 transition-opacity"
+                style={{ background: "var(--mark-community)", color: "#1c1917" }}
+              >
+                How to help &rarr;
+              </a>
+            )}
+            <Link
+              href="/under-threat"
+              className="inline-flex items-center gap-1 rounded-md border border-rule px-3 py-1.5 text-sm font-medium hover:border-foreground transition-colors"
+            >
+              All parishes under threat &rarr;
+            </Link>
+          </div>
+          <p className="mt-2 text-xs text-muted">
+            Sources:{" "}
+            {parishAlert.sources.map((s: any, i: number) => (
+              <span key={s.url}>
+                {i > 0 && " \u00b7 "}
+                <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
+                  {s.publisher}
+                </a>
+              </span>
+            ))}
+          </p>
+        </section>
+      )}
 
       {parish.survivedReviewThenClosed && (
         <p

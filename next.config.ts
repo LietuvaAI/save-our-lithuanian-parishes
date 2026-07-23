@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
       // the Network page became About.
       { source: "/data", destination: "/record", permanent: true },
       { source: "/network", destination: "/about", permanent: true },
+      { source: "/now", destination: "/under-threat", permanent: true },
     ];
   },
 };

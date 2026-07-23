@@ -192,8 +192,8 @@ export default function Home() {
               </li>
             ))}
           <li className="pt-1">
-            <Link href="/now" className="underline hover:text-accent text-sm">
-              All current alerts →
+            <Link href="/under-threat" className="underline hover:text-accent text-sm">
+              All current alerts &rarr;
             </Link>{" "}
             <a
               href="https://blog.saveourlithuanianparishes.org/p/active-campaigns"
