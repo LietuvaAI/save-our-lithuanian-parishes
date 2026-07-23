@@ -122,66 +122,8 @@ export default function Home() {
         <ParishMap />
       </section>
 
-      {/* Status navigation — mirrors map legend, each links to its page */}
-      <nav
-        className="mt-4 flex flex-wrap gap-2 text-sm"
-        aria-label="Parish status categories"
-      >
-        <Link
-          href="/parishes"
-          className="inline-flex items-center gap-2 rounded-md border border-rule px-3 py-2 hover:border-foreground transition-colors"
-        >
-          <span
-            className="inline-block h-2.5 w-2.5 rounded-full flex-shrink-0"
-            style={{ background: "var(--mark-ink)" }}
-            aria-hidden
-          />
-          Open today
-        </Link>
-        <Link
-          href="/under-threat"
-          className="inline-flex items-center gap-2 rounded-md border border-rule px-3 py-2 hover:border-foreground transition-colors"
-        >
-          <span
-            className="inline-block h-2.5 w-2.5 rounded-full flex-shrink-0"
-            style={{ background: "var(--mark-community)" }}
-            aria-hidden
-          />
-          Under threat{" "}
-          <span className="text-muted">
-            ({(alertsData.alerts as any[]).length})
-          </span>
-        </Link>
-        <Link
-          href="/sustainability-watch"
-          className="inline-flex items-center gap-2 rounded-md border border-rule px-3 py-2 hover:border-foreground transition-colors"
-        >
-          <span
-            className="inline-block h-2.5 w-2.5 rounded-full flex-shrink-0 bg-amber-500"
-            aria-hidden
-          />
-          The Vigil{" "}
-          <span className="text-muted">
-            ({(alertsData as any).sustainabilityWatch.length})
-          </span>
-        </Link>
-        <span className="inline-flex items-center gap-2 px-3 py-2 text-muted">
-          <span
-            className="inline-block h-2.5 w-2.5 rounded-full flex-shrink-0"
-            style={{ background: "var(--mark-closed)" }}
-            aria-hidden
-          />
-          Lost
-        </span>
-        <Link
-          href="/parishes"
-          className="inline-flex items-center gap-2 rounded-md border border-rule px-3 py-2 hover:border-foreground transition-colors text-muted hover:text-foreground"
-        >
-          All parishes →
-        </Link>
-      </nav>
 
-      <section className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-rule border border-rule rounded-lg overflow-hidden">
+<section className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-rule border border-rule rounded-lg overflow-hidden">
         {STATS.map((s) => (
           <div key={s.label} className="bg-background p-6">
             <div
