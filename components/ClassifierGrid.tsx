@@ -14,7 +14,7 @@ import {
 
 /**
  * Prominent, clickable classifier grid for parish profile pages.
- * Each cell links to the matching section on /full-picture so users
+ * Each cell links to the matching section on /about so users
  * can explore all parishes with the same classification.
  */
 export function ClassifierGrid({
@@ -66,7 +66,7 @@ export function ClassifierGrid({
     cells.push({
       label: "Region",
       value: "Pennsylvania coal region",
-      href: "/full-picture#coal-region",
+      href: "/about#coal-region",
     });
   }
 

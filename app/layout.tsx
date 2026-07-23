@@ -28,12 +28,12 @@ export const metadata: Metadata = {
 };
 
 const NAV = [
-  { href: "/start-here", label: "Facing a Closure" },
   { href: "/record", label: "The Record" },
   { href: "/under-threat", label: "Under Threat" },
   { href: "/sustainability-watch", label: "The Vigil" },
-  { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys (The Hearth)" },
+  { href: "/start-here", label: "Facing a Closure" },
   { href: "/about", label: "About" },
+  { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys (The Hearth)" },
 ];
 
 export default function RootLayout({
@@ -125,6 +125,9 @@ export default function RootLayout({
               </Link>
               <Link href="/about" className="hover:text-foreground">
                 About
+              </Link>
+              <Link href="/full-picture" className="hover:text-foreground">
+                The Full Picture
               </Link>
               <Link
                 href="/report"
