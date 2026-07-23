@@ -28,11 +28,11 @@ export const metadata: Metadata = {
 };
 
 const NAV = [
-  { href: "/full-picture", label: "The Full Picture" },
+  { href: "/under-threat", label: "Under Threat" },
+  { href: "/sustainability-watch", label: "Sustainability Watch" },
   { href: "/record", label: "The Record" },
-  { href: "/start-here", label: "Start Here" },
   { href: "/parishes", label: "Parish Profiles" },
-  { href: "https://blog.saveourlithuanianparishes.org", label: "Blog" },
+  { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys (The Hearth)" },
 ];
 
 export default function RootLayout({

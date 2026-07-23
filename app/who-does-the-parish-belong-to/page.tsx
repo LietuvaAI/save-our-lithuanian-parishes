@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { marked } from "marked";
 
 export const metadata: Metadata = {
@@ -34,6 +35,20 @@ export default function ArticlePage() {
         className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-serif prose-h1:text-4xl prose-h1:leading-tight"
         dangerouslySetInnerHTML={{ __html: html }}
       />
+      <div className="mt-10 rounded-lg border border-rule px-4 py-3.5 text-sm">
+        <p className="text-xs uppercase tracking-wide text-muted mb-1">From Židinys (The Hearth)</p>
+        <a
+          href="https://blog.saveourlithuanianparishes.org/p/who-does-the-parish-belong-to"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium underline hover:text-foreground"
+        >
+          Who Owns an Ethnic Parish? &rarr;
+        </a>
+        <p className="mt-1 text-muted">
+          The full Hearth dispatch on ownership, canon law, and what the historical record shows.
+        </p>
+      </div>
     </article>
   );
 }
