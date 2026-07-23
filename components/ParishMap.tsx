@@ -366,6 +366,36 @@ export default function ParishMap() {
         </button>
       </div>
 
+      {/* Key — above the map so readers know what they're looking at */}
+      <div className="mb-3 rounded-lg border border-rule px-4 py-3">
+        <p className="text-xs uppercase tracking-widest text-muted mb-2">Key</p>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted">
+        {timelineMode ? (
+          <>
+            <Swatch fill="var(--mark-ink)" label="Alive that year" />
+            <Swatch fill="var(--mark-closed)" label="Lost by then" />
+          </>
+        ) : mode === "threat" ? (
+          <>
+            <Swatch fill="var(--mark-ink)" ring label="Open, active fight" />
+            <Swatch fill="var(--mark-closed)" ring label="Closed, fight ongoing" />
+            <Swatch fill="var(--mark-community)" label="Status unresolved" />
+            <Swatch fill="var(--mark-building)" label="Building at risk" />
+            <Swatch fill="var(--mark-closed)" label={`Recently closed (${statusCounts.lost})`} />
+          </>
+        ) : (
+          <>
+            <Swatch fill="var(--mark-ink)" label={`Open today (${statusCounts.open})`} />
+            <Swatch fill="var(--mark-ink)" ring label="Open, under active threat" />
+            <Swatch fill="var(--mark-community)" ring label="Status unresolved" />
+            <Swatch fill="var(--mark-closed)" label={`Lost (${statusCounts.lost})`} />
+            <Swatch fill="var(--mark-building)" label="Building at risk" />
+            {showArchived && <SwatchCross label={`Fate not yet established (${archivePoints.length})`} />}
+          </>
+        )}
+        </div>
+      </div>
+
       <div className="relative">
         <svg
           ref={svgRef}
@@ -595,35 +625,6 @@ export default function ParishMap() {
         )}
       </div>
 
-      {/* Legend */}
-      <div className="mt-3 rounded-lg border border-rule px-4 py-3">
-        <p className="text-xs uppercase tracking-widest text-muted mb-2">Key</p>
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted">
-        {timelineMode ? (
-          <>
-            <Swatch fill="var(--mark-ink)" label="Alive that year" />
-            <Swatch fill="var(--mark-closed)" label="Lost by then" />
-          </>
-        ) : mode === "threat" ? (
-          <>
-            <Swatch fill="var(--mark-ink)" ring label="Open, active fight" />
-            <Swatch fill="var(--mark-closed)" ring label="Closed, fight ongoing" />
-            <Swatch fill="var(--mark-community)" label="Status unresolved" />
-            <Swatch fill="var(--mark-building)" label="Building at risk" />
-            <Swatch fill="var(--mark-closed)" label={`Recently closed (${statusCounts.lost})`} />
-          </>
-        ) : (
-          <>
-            <Swatch fill="var(--mark-ink)" label={`Open today (${statusCounts.open})`} />
-            <Swatch fill="var(--mark-ink)" ring label="Open, under active threat" />
-            <Swatch fill="var(--mark-community)" ring label="Status unresolved" />
-            <Swatch fill="var(--mark-closed)" label={`Lost (${statusCounts.lost})`} />
-            <Swatch fill="var(--mark-building)" label="Building at risk" />
-            {showArchived && <SwatchCross label={`Fate not yet established (${archivePoints.length})`} />}
-          </>
-        )}
-        </div>
-      </div>
     </div>
   );
 }

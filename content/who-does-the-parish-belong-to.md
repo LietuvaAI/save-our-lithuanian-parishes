@@ -18,7 +18,7 @@ This is not an accident and not a local mistake. It is a long-established decisi
 
 What that means in everyday life was explained to *Draugas* in 2022 by a member of Boston's St. Peter Parish. The community wanted to secure heritage protection for its church — and could not even do that. "We can't even do that," she said, "because the owners of this church are not us, but the archdiocese."
 
-That is why the separate closings form a single record. Of the 83 parishes gathered, 55 were closed by diocesan decision — some demolished, some merged with others. And all 55, without exception, were diocese-owned Roman Catholic parishes. This happened in various states and various dioceses — in Pennsylvania, in New England, in the Midwest. The cities differed, the decades differed, the bishops differed. The result was the same everywhere. Across eighteen years and all those closings — not a single exception.
+That is why the separate closings form a single record. Of the parishes case-filed so far, 55 were closed by diocesan decision — some demolished, some merged with others. And all 55, without exception, were diocese-owned Roman Catholic parishes. This happened in various states and various dioceses — in Pennsylvania, in New England, in the Midwest. The cities differed, the decades differed, the bishops differed. The result was the same everywhere. Across eighteen years and all those closings — not a single exception.
 
 The community built it. The community maintained it. But the diocese held the deed. And when the diocese holds the deed, the one who decides is not the one who built.
 
@@ -96,7 +96,7 @@ The community must hear the question "Who does the parish belong to?" as address
 
 ---
 
-*Postscript, July 2026. Since this article was written, the research behind it has widened to the national record. Across the United States, twenty-six parish closures have been reversed — Allentown in 2011, Cleveland in 2012, Buffalo in 2025 — never by leaving the Church, but by the Church's own procedures, applied within deadlines measured in days from the decree. No parish among the 83 in this record was saved by an appeal filed after the decree, so the article's lesson stands: ownership decides endings. The national record adds its companion: for a parish that does not hold its deed, procedure, in time, is the only fight that has ever won. Both are now documented on this site — [the reversal record](/reversals) and [what to do inside the window](/start-here).*
+*Postscript, July 2026. Since this article was written, the research behind it has widened to the national record. Across the United States, twenty-six parish closures have been reversed — Allentown in 2011, Cleveland in 2012, Buffalo in 2025 — never by leaving the Church, but by the Church's own procedures, applied within deadlines measured in days from the decree. No parish in the case-filed record was saved by an appeal filed after the decree, so the article's lesson stands: ownership decides endings. The national record adds its companion: for a parish that does not hold its deed, procedure, in time, is the only fight that has ever won. Both are now documented on this site — [the reversal record](/reversals) and [what to do inside the window](/start-here).*
 
 ---
 

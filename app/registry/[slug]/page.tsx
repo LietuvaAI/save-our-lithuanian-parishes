@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import registry from "@/data/registry-unified.json";
-import { draugasCitationUrl, draugasArchiveUrl } from "@/lib/parishes";
+import {
+  draugasCitationUrl,
+  draugasArchiveUrl,
+  getSituationByRegistrySlug,
+  type Ownership,
+} from "@/lib/parishes";
+import { ClassifierGrid } from "@/components/ClassifierGrid";
 
 /* Research-record profile pages: every non-canonical parish in the unified
    registry gets a page built purely from cited source facts. No status
@@ -20,6 +26,11 @@ const CLASS_LABEL: Record<string, string> = {
     "Lithuanian National Catholic parish — documented as historical witness",
   independent_catholic:
     "Independent Catholic parish — documented as historical witness",
+};
+
+const RECORD_TYPE_LABEL: Record<string, string> = {
+  parish: "Lithuanian parish (parapija)",
+  misija: "Lithuanian mission (misija)",
 };
 
 const AXIS_LABEL: Record<string, string> = {
@@ -135,8 +146,30 @@ export default async function RegistryParishPage({
   const variants = (p.names.variants || []).filter(
     (v: string) => v && v !== name && v !== altName
   );
-  const axes = [...new Set(p.sources.map((s: any) => s.axis))] as string[];
+  // Primary print sources first, then newspaper archive, then secondary/web.
+  const SOURCE_ORDER: Record<string, number> = {
+    "wolkovich": 0,
+    "michelsonas-1961": 1,
+    "draugas-registry-1909-2007": 2,
+    "draugas-2008-2026": 3,
+    "draugas-jubilee-implied": 4,
+    "web-historical": 5,
+    "truelithuania": 6,
+  };
+  const sortedSources = [...p.sources].sort(
+    (a: any, b: any) => (SOURCE_ORDER[a.axis] ?? 99) - (SOURCE_ORDER[b.axis] ?? 99)
+  );
+  const axes = [...new Set(sortedSources.map((s: any) => s.axis))] as string[];
   const kind = communityKind(p.sources);
+  const situation = getSituationByRegistrySlug(slug);
+  // Infer ownership from web-historical source if available
+  const webSource = p.sources.find((s: any) => s.axis === "web-historical") as any;
+  const ownership: Ownership | null =
+    webSource?.ownership === "diocese_rc"
+      ? "diocese_rc"
+      : p.congregation_class === "national_catholic_pncc"
+        ? "national_catholic"
+        : null;
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-12">
@@ -155,8 +188,13 @@ export default async function RegistryParishPage({
 
       <div className="mt-4 flex flex-wrap gap-1.5">
         <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium">
-          {CLASS_LABEL[p.congregation_class] ?? p.congregation_class}
+          {RECORD_TYPE_LABEL[p.record_type] ?? CLASS_LABEL[p.congregation_class] ?? p.congregation_class}
         </span>
+        {p.record_type === "misija" && (
+          <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
+            canonical mission — dependent on a mother parish or diocese
+          </span>
+        )}
         {kind === "settlement" ? (
           <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
             Lithuanian community — not a distinct national parish
@@ -169,17 +207,30 @@ export default async function RegistryParishPage({
           <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
             independent / schismatic — documented as historical witness
           </span>
-        ) : (
+        ) : p.record_type !== "misija" ? (
           <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
             Lithuanian ethnic parish
           </span>
-        )}
+        ) : null}
         <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
           {p.record_depth === "multi-source"
             ? `multi-source — documented independently in ${axes.length} sources`
             : "single-source — documented in one source so far"}
         </span>
       </div>
+
+      {situation && (
+        <>
+          <p className="mt-5 text-lg leading-relaxed">{situation.situation}</p>
+          <div className="mt-5">
+            <ClassifierGrid
+              situation={situation}
+              ownership={ownership ?? "diocese_rc"}
+              coalRegion={false}
+            />
+          </div>
+        </>
+      )}
 
       {p.caveat && (
         <div className="mt-4 rounded-lg border border-amber-200 dark:border-amber-900 bg-amber-50 dark:bg-amber-950/30 px-4 py-3 text-sm text-muted leading-relaxed">
@@ -253,7 +304,7 @@ export default async function RegistryParishPage({
           Documented in {axes.length} {axes.length === 1 ? "source" : "sources"}
         </h2>
         <div className="mt-3 space-y-3">
-          {p.sources.map((s: any, i: number) => (
+          {sortedSources.map((s: any, i: number) => (
             <div key={i} className="rounded-lg border border-rule px-4 py-3 text-sm">
               <p className="font-medium">{AXIS_LABEL[s.axis] ?? s.axis}</p>
               <p className="mt-1 text-muted leading-relaxed">

@@ -163,8 +163,8 @@ export default function StartHerePage() {
           <span className="font-medium text-foreground">
             Why we publish this.
           </span>{" "}
-          Our own record shows the harder lesson: among the 83 Lithuanian
-          parishes we document, no appeal filed <em>after</em> the decree ever
+          Our own record shows the harder lesson: among the Lithuanian
+          parishes case-filed so far, no appeal filed <em>after</em> the decree ever
           reversed a closure — and ownership decided every ending. Standing up
           for a parish inside the Church&rsquo;s own law is not standing
           against the Church. It is asking the Church to follow it. See{" "}

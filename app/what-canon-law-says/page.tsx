@@ -118,7 +118,7 @@ export default function CanonLawPage() {
         </p>
         <p>
           The timing is the hard lesson. In{" "}
-          <Link href="/record">our own record of the 83</Link>, no appeal
+          <Link href="/record">our own case-filed record</Link>, no appeal
           filed after the decree ever reversed a closure — the national
           reversals were won by communities that moved before the decree or
           within the appeal window after it, a window measured in{" "}

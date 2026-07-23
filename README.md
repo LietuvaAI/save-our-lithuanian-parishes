@@ -2,7 +2,7 @@
 
 **SaveOurLithuanianParishes.org** — the record of America's Lithuanian parishes: who built them, who closed them, and what decides which ones survive.
 
-Eighteen years of the *Draugas* archive (2008–2026, 2,768 issues searched) document 83 U.S. Lithuanian parishes. 55 were closed, merged away, suppressed, or demolished by diocesan decision — and all 55 were diocese-owned. Zero community-owned parishes were ever closed by an outside authority. This site publishes that record, openly and verifiably, and grows it: backward through the archives toward 1900, and forward through community reports.
+Eighteen years of the *Draugas* archive (2008–2026, 2,768 issues searched) case-filed 83 U.S. Lithuanian parishes so far — the first dataset, not a ceiling. 55 were closed, merged away, suppressed, or demolished by diocesan decision — and all 55 were diocese-owned. Zero community-owned parishes were ever closed by an outside authority. This site publishes that record, openly and verifiably, and grows it: backward through the archives toward 1900, and forward through community reports.
 
 ## The data
 

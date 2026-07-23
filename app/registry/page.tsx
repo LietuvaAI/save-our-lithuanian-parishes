@@ -5,7 +5,7 @@ import registry from "@/data/registry-unified.json";
 export const metadata: Metadata = {
   title: "The research record — all registry parishes",
   description:
-    "Every parish in the wider research record — beyond the 83 core case files — with its documentation depth and sources, from the unified registry.",
+    "Every parish in the wider research record — beyond the case-filed core — with its documentation depth and sources, from the unified registry.",
 };
 
 type Rec = (typeof registry.parishes)[number] & Record<string, any>;
@@ -31,7 +31,7 @@ export default function RegistryIndexPage() {
       <p className="mt-3 max-w-2xl text-muted leading-relaxed">
         Beyond the{" "}
         <Link href="/parishes" className="underline hover:text-foreground">
-          83 core case files
+          case-filed core
         </Link>{" "}
         (and the three Canadian comparator parishes, which carry their own
         profiles), the unified registry documents these parishes across the

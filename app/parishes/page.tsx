@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { readdirSync } from "fs";
 import { join } from "path";
-import { MarkIcon } from "@/components/marks";
-import { usParishes, ENDING_MODE_LABEL } from "@/lib/parishes";
+import ParishFilters, { type FilterableParish } from "@/components/ParishFilters";
+import { usParishes, type LithuanianIdentity } from "@/lib/parishes";
 
 export const metadata: Metadata = {
   title: "Parish Profiles",
@@ -24,35 +24,23 @@ function caseRecordSlugs(): Set<string> {
   }
 }
 
-const STATE_NAME: Record<string, string> = {
-  CA: "California",
-  CT: "Connecticut",
-  IA: "Iowa",
-  IL: "Illinois",
-  IN: "Indiana",
-  MA: "Massachusetts",
-  MD: "Maryland",
-  MI: "Michigan",
-  MO: "Missouri",
-  NE: "Nebraska",
-  NH: "New Hampshire",
-  NJ: "New Jersey",
-  NY: "New York",
-  OH: "Ohio",
-  PA: "Pennsylvania",
-  RI: "Rhode Island",
-};
-
 export default function ParishProfilesPage() {
   const withRecord = caseRecordSlugs();
 
-  const byState = new Map<string, typeof usParishes>();
-  for (const p of usParishes) {
-    const list = byState.get(p.state) ?? [];
-    list.push(p);
-    byState.set(p.state, list);
-  }
-  const states = [...byState.keys()].sort();
+  const filterData: FilterableParish[] = usParishes.map((p) => ({
+    slug: p.slug,
+    nameLt: p.nameLt,
+    city: p.city,
+    state: p.state,
+    endingMode: p.endingMode,
+    ownership: p.ownership,
+    lithuanianIdentity: p.lithuanianIdentity as LithuanianIdentity | null,
+    institutionType: p.institutionType,
+    yearFounded: p.yearFounded,
+    yearClosed: p.yearClosed,
+    coalRegion: p.coalRegion,
+    hasRecord: withRecord.has(p.slug),
+  }));
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
@@ -68,59 +56,8 @@ export default function ParishProfilesPage() {
         .
       </p>
 
-      <div className="mt-10 space-y-10">
-        {states.map((st) => {
-          const list = [...byState.get(st)!].sort((a, b) =>
-            a.city.localeCompare(b.city)
-          );
-          return (
-            <section key={st}>
-              <h2 className="font-serif text-xl font-semibold border-b border-rule pb-2">
-                {STATE_NAME[st] ?? st}{" "}
-                <span className="text-muted text-sm font-normal">
-                  · {list.length} {list.length === 1 ? "parish" : "parishes"}
-                </span>
-              </h2>
-              <ul className="mt-3 grid gap-x-8 gap-y-2 sm:grid-cols-2">
-                {list.map((p) => (
-                  <li key={p.slug}>
-                    <Link
-                      href={`/parishes/${p.slug}`}
-                      className="group flex items-baseline gap-2 py-1"
-                    >
-                      <span className="shrink-0 translate-y-px">
-                        <MarkIcon mode={p.endingMode} />
-                      </span>
-                      <span>
-                        <span className="font-medium group-hover:underline">
-                          {p.nameLt}
-                        </span>{" "}
-                        <span className="text-sm text-muted">
-                          — {p.city} · {ENDING_MODE_LABEL[p.endingMode]}
-                          {p.yearFounded && p.yearClosed
-                            ? ` · ${p.yearFounded}–${p.yearClosed}`
-                            : p.yearFounded
-                              ? ` · founded ${p.yearFounded}`
-                              : p.yearClosed
-                                ? ` · lost ${p.yearClosed}`
-                                : ""}
-                        </span>
-                        {withRecord.has(p.slug) && (
-                          <span
-                            className="ml-2 rounded border border-rule px-1.5 py-px text-xs text-muted"
-                            title="Has a researched present-day case record"
-                          >
-                            present record
-                          </span>
-                        )}
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          );
-        })}
+      <div className="mt-8">
+        <ParishFilters parishes={filterData} />
       </div>
     </div>
   );
