@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import alertsData from "@/data/alerts.json";
+import { parishes } from "@/lib/parishes";
 
 export const metadata: Metadata = {
   title: "Sustainability watch — SaveOurLithuanianParishes.org",
@@ -86,6 +87,105 @@ function ClergyBadge({ arrangement }: { arrangement: string }) {
       />
       {CLERGY_LABEL[arrangement] ?? arrangement}
     </span>
+  );
+}
+
+const FREQ_SHORT: Record<string, string> = {
+  weekly: "Weekly",
+  monthly: "Monthly",
+  occasional: "Occasional",
+  none: "None",
+  unknown: "—",
+};
+
+/** Build the at-a-glance row data for all standing RC diocese parishes. */
+function buildDashboardRows() {
+  const watchIndex = new Map(
+    ((alertsData as any).sustainabilityWatch as any[]).map((e: any) => [e.parishLink, e])
+  );
+  const alertIndex = new Map(
+    (alertsData.alerts as any[]).map((a: any) => [a.parishLink, a])
+  );
+
+  return parishes
+    .filter((p) => p.status === "standing" && !p.comparator && p.ownership === "diocese_rc")
+    .map((p) => {
+      const link = `/parishes/${p.slug}`;
+      const watch = watchIndex.get(link) ?? null;
+      const alert = alertIndex.get(link) ?? null;
+      return { parish: p, watch, alert };
+    })
+    .sort((a, b) => {
+      // Sort: watch entries first, then by state+city
+      if (a.watch && !b.watch) return -1;
+      if (!a.watch && b.watch) return 1;
+      const loc = `${a.parish.state}${a.parish.city}`.localeCompare(`${b.parish.state}${b.parish.city}`);
+      return loc;
+    });
+}
+
+function AllParishesTable() {
+  const rows = buildDashboardRows();
+  return (
+    <section className="mt-10">
+      <h2 className="font-serif text-xl font-semibold">All standing parishes at a glance</h2>
+      <p className="mt-1 text-sm text-muted">
+        Every Roman Catholic Lithuanian parish still open in the United States — clergy situation, Lithuanian
+        Mass frequency, and watch status. Parishes under active diocesan pressure appear on the{" "}
+        <Link href="/under-threat" className="underline hover:text-foreground">
+          under-threat page
+        </Link>
+        .
+      </p>
+      <div className="mt-4 overflow-x-auto rounded-lg border border-rule">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-rule bg-background text-xs uppercase tracking-wide text-muted">
+              <th className="px-3 py-2 text-left font-medium">Parish</th>
+              <th className="px-3 py-2 text-left font-medium">Location</th>
+              <th className="px-3 py-2 text-left font-medium">Clergy</th>
+              <th className="px-3 py-2 text-left font-medium">Lithuanian Mass</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map(({ parish: p, watch, alert }) => (
+              <tr key={p.slug} className="border-b border-rule last:border-0 hover:bg-background/50">
+                <td className="px-3 py-2.5">
+                  <Link href={`/parishes/${p.slug}`} className="font-medium hover:underline">
+                    {p.nameLt}
+                  </Link>
+                </td>
+                <td className="px-3 py-2.5 text-muted whitespace-nowrap">
+                  {p.city}, {p.state}
+                </td>
+                <td className="px-3 py-2.5">
+                  {alert ? (
+                    <span className="text-xs text-muted italic">
+                      <Link href="/under-threat" className="underline hover:text-foreground">
+                        Under threat
+                      </Link>
+                    </span>
+                  ) : watch ? (
+                    <ClergyBadge arrangement={watch.clergy.arrangement} />
+                  ) : (
+                    <span className="text-xs text-muted italic">Researching…</span>
+                  )}
+                </td>
+                <td className="px-3 py-2.5 text-muted">
+                  {alert ? (
+                    <span className="text-xs italic">—</span>
+                  ) : watch ? (
+                    FREQ_SHORT[watch.liturgy.frequency] ?? watch.liturgy.frequency
+                  ) : (
+                    <span className="text-xs italic">Researching…</span>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
   );
 }
 
@@ -242,6 +342,8 @@ export default function SustainabilityWatchPage() {
           parishes of Pennsylvania.
         </p>
       )}
+
+      <AllParishesTable />
 
       <section className="mt-10 rounded-lg border border-rule px-4 py-3.5 text-sm text-muted leading-relaxed">
         <p>

@@ -1,6 +1,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MarkIcon } from "@/components/marks";
@@ -69,6 +70,39 @@ function getParishAlert(slug: string) {
   return { alert, campaign };
 }
 
+/** Find the sustainability-watch entry for a parish by its canonical slug. */
+function getSustainabilityWatch(slug: string) {
+  const matchLink = `/parishes/${slug}`;
+  return ((alertsData as any).sustainabilityWatch as any[]).find(
+    (e) => e.parishLink === matchLink
+  ) ?? null;
+}
+
+const CLERGY_LABEL: Record<string, string> = {
+  lithuanian_klebonas: "Lithuanian-speaking klebonas",
+  collaborative_pastor: "Shared pastor (not Lithuanian-speaking)",
+  visiting_priest: "Visiting priest only",
+  no_lithuanian_clergy: "No Lithuanian-speaking clergy",
+  unknown: "Not yet established",
+};
+
+const FREQ_LABEL: Record<string, string> = {
+  weekly: "Weekly",
+  monthly: "Monthly",
+  occasional: "Occasional",
+  none: "None",
+  unknown: "Not yet established",
+};
+
+const GOV_LABEL: Record<string, string> = {
+  standalone: "Standalone parish",
+  collaborative: "In a diocesan collaborative",
+  merged: "Post-merger entity",
+  chapel: "Chapel",
+  mission: "Mission",
+  unknown: "Not yet established",
+};
+
 export function generateStaticParams() {
   return parishes.map((p) => ({ slug: p.slug }));
 }
@@ -99,6 +133,7 @@ export default async function ParishPage({
   const situation = getParishSituation(slug);
   const scholarlySources = getScholarlySources(parish.registrySlug);
   const { alert: parishAlert, campaign: parishCampaign } = getParishAlert(slug);
+  const watchEntry = getSustainabilityWatch(slug);
 
   const facts: [string, string][] = [
     ["Status", STATUS_LABEL[parish.status]],
@@ -134,6 +169,24 @@ export default async function ParishPage({
           {INSTITUTION_TYPE_LABEL[parish.institutionType]}
         </span>
       </div>
+
+      {watchEntry?.photo?.url && (
+        <div className="mt-6 overflow-hidden rounded-lg border border-rule">
+          <Image
+            src={watchEntry.photo.url}
+            alt={watchEntry.photo.alt}
+            width={800}
+            height={500}
+            className="w-full object-cover"
+          />
+          <p className="px-3 py-1.5 text-xs text-muted">
+            {watchEntry.photo.attribution}
+            {watchEntry.photo.license && (
+              <span> · {watchEntry.photo.license}</span>
+            )}
+          </p>
+        </div>
+      )}
 
       {situation && (
         <p className="mt-5 text-lg leading-relaxed">{situation.situation}</p>
@@ -197,6 +250,80 @@ export default async function ParishPage({
               </span>
             ))}
           </p>
+        </section>
+      )}
+
+      {watchEntry && (
+        <section className="mt-8 rounded-lg border border-rule overflow-hidden">
+          <div className="px-4 pt-3.5 pb-3">
+            <p className="text-xs uppercase tracking-widest text-muted">
+              Sustainability watch
+            </p>
+            <p className="mt-1.5 leading-relaxed">{watchEntry.situation}</p>
+
+            <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+              <div>
+                <p className="text-xs uppercase tracking-wide text-muted mb-1">Clergy</p>
+                <p className="font-medium">{CLERGY_LABEL[watchEntry.clergy.arrangement] ?? watchEntry.clergy.arrangement}</p>
+                <p className="mt-1 text-xs text-muted leading-relaxed">{watchEntry.clergy.detail}</p>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-wide text-muted mb-1">Lithuanian Mass</p>
+                <p className="font-medium">{FREQ_LABEL[watchEntry.liturgy.frequency] ?? watchEntry.liturgy.frequency}</p>
+                <p className="mt-1 text-xs text-muted">{watchEntry.liturgy.detail}</p>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-wide text-muted mb-1">Governance</p>
+                <p className="font-medium">{GOV_LABEL[watchEntry.governance] ?? watchEntry.governance}</p>
+                <p className="mt-1 text-xs text-muted">{watchEntry.governanceDetail}</p>
+              </div>
+            </div>
+
+            {watchEntry.survivedThreats && (
+              <div className="mt-3 text-sm">
+                <p className="text-xs uppercase tracking-wide text-muted mb-0.5">Survived</p>
+                <p className="text-muted leading-relaxed">{watchEntry.survivedThreats}</p>
+              </div>
+            )}
+            {watchEntry.financial && (
+              <div className="mt-3 text-sm">
+                <p className="text-xs uppercase tracking-wide text-muted mb-0.5">Financial signal</p>
+                <p className="text-muted leading-relaxed">{watchEntry.financial}</p>
+              </div>
+            )}
+          </div>
+          <div className="border-t border-rule bg-background px-4 py-2.5 flex flex-wrap items-center justify-between gap-2">
+            <p className="text-xs text-muted">
+              Sources:{" "}
+              {(watchEntry.sources as any[]).map((s: any, i: number) => (
+                <span key={s.url}>
+                  {i > 0 && " · "}
+                  <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
+                    {s.publisher}
+                  </a>
+                </span>
+              ))}
+              {" · "}checked {watchEntry.dateObserved}
+            </p>
+            <div className="flex gap-2">
+              {watchEntry.hearthUrl && (
+                <a
+                  href={watchEntry.hearthUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-md border border-rule px-3 py-1 text-xs font-medium hover:border-foreground transition-colors"
+                >
+                  Read the dispatch &rarr;
+                </a>
+              )}
+              <Link
+                href="/sustainability-watch"
+                className="rounded-md border border-rule px-3 py-1 text-xs font-medium hover:border-foreground transition-colors"
+              >
+                All sustainability watch &rarr;
+              </Link>
+            </div>
+          </div>
         </section>
       )}
 
