@@ -86,7 +86,7 @@ export default function AboutPage() {
           issue by issue; William Wolkovich-Valkavičius&rsquo;s three-volume{" "}
           <em>Lithuanian Religious Life in America</em>; contemporary
           status sources; and the national closure-reversal research. Beyond
-          the core 83, it documents{" "}
+          the case-filed core, it documents{" "}
           <strong>137 more parishes</strong> across the U.S. and Canada — 119
           of them already on the home-page map, each marked by how deeply it
           is documented so far. And each{" "}

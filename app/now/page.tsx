@@ -192,7 +192,7 @@ export default function NowPage() {
           The watch layer systematically monitors 155 parishes and sites drawn
           from the wider research record — a broader net than the{" "}
           <Link href="/parishes" className="underline hover:text-foreground">
-            83 documented parishes
+            case-filed parishes
           </Link>{" "}
           with researched case files, which remain the core record. A parish
           appearing here is not a verdict: unresolved cases stay unresolved

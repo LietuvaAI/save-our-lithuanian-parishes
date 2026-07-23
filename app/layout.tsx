@@ -28,12 +28,11 @@ export const metadata: Metadata = {
 };
 
 const NAV = [
+  { href: "/full-picture", label: "The Full Picture" },
   { href: "/record", label: "The Record" },
-  { href: "/reversals", label: "Reversals" },
   { href: "/start-here", label: "Start Here" },
   { href: "/parishes", label: "Parish Profiles" },
   { href: "https://blog.saveourlithuanianparishes.org", label: "Blog" },
-  { href: "/about", label: "About" },
 ];
 
 export default function RootLayout({
@@ -115,6 +114,9 @@ export default function RootLayout({
               .
             </p>
             <nav className="flex flex-wrap gap-x-4 gap-y-1 pt-1">
+              <Link href="/full-picture" className="hover:text-foreground">
+                The Full Picture
+              </Link>
               <Link href="/now" className="hover:text-foreground">
                 Happening now
               </Link>

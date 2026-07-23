@@ -32,9 +32,9 @@ export default function AboutTheDataPage() {
           Lithuanian-American newspaper. Every issue from January 2008 through
           May 2026 — <strong>2,768 issues</strong> — was read and searched,
           and every U.S. Lithuanian parish mentioned in them entered one
-          dataset: <strong>83 parishes</strong>, 58 of them documented in
-          depth in per-parish case files. The headline figures — 83
-          documented, 55 closed by diocesan decision, 55 of 55 diocese-owned,
+          dataset: <strong>83 parishes so far</strong>, 58 of them documented
+          in depth in per-parish case files. The headline figures — 83
+          case-filed, 55 closed by diocesan decision, 55 of 55 diocese-owned,
           0 community-owned parishes closed by an outside authority — are{" "}
           <em>locked</em>: they are recalculated automatically from the
           parish record every time the site is updated, and if a recalculated
@@ -123,7 +123,7 @@ export default function AboutTheDataPage() {
           <strong>220 parishes</strong> across the U.S. and Canada — matched
           by city and patron saint across Lithuanian and English spellings.
           Every parish carries a record-depth label rather than a
-          verified/unverified caste: <em>case-filed</em> (the 83 with full
+          verified/unverified caste: <em>case-filed</em> (those with full
           case files), <em>multi-source</em> (documented independently in
           more than one source), or <em>single-source</em> (documented in
           one, awaiting corroboration). Where sources conflict — a founding
@@ -137,7 +137,7 @@ export default function AboutTheDataPage() {
           <Link href="/" className="underline hover:text-accent">
             map
           </Link>{" "}
-          separates the layers honestly: shape-coded marks are the 83, solid
+          separates the layers honestly: shape-coded marks are the case-filed core, solid
           dots the wider research record, squares the non-Catholic
           congregations shown as historical witness.
         </p>
@@ -146,7 +146,7 @@ export default function AboutTheDataPage() {
           this: <strong>every parish in this record will, in time, carry
           its own researched case file</strong> — the deep dives proceed
           parish by parish, and each one moves its parish up the ladder
-          until the whole record stands at the standard of the 83.
+          until the whole record stands at the case-filed standard.
         </p>
       </section>
 

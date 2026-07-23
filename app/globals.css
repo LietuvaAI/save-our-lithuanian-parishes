@@ -14,6 +14,7 @@
   --mark-closed: #7d1f1f;
   --mark-community: #d5c28b;
   --mark-ink: #151515;
+  --mark-building: #7C3AED;
 }
 
 @theme inline {
@@ -39,6 +40,7 @@
     --mark-closed: #c96a6a;
     --mark-community: #d5c28b;
     --mark-ink: #e7e5e4;
+    --mark-building: #A78BFA;
   }
 }
 

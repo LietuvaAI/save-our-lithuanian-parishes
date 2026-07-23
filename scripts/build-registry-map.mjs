@@ -1,6 +1,6 @@
 // Builds data/registry-map.json: pre-projected points for the RESEARCH-RECORD
 // layer — every parish in the unified registry (corpusScope
-// parish-registry-unified) that is NOT one of the canonical 83, plus the 11
+// parish-registry-unified) that is NOT one of the case-filed core, plus the 11
 // non-Catholic Lithuanian Christian congregations (distinct mark per Vilija
 // 2026-07-18). Same geoAlbersUsa 975x610 frame as scripts/build-map.mjs.
 //
@@ -88,7 +88,7 @@ function lonLatOf(rec) {
 const points = [];
 let skippedNoGeo = 0;
 
-// Everything beyond the canonical 83: registry parishes (US and Canada,
+// Everything beyond the case-filed core: registry parishes (US and Canada,
 // including the Canadian comparators — Canada belongs on the map).
 const nonCanonical = registry.parishes.filter(
   (r) => !r.in_locked_scope && isRealParish(r) && isNorthAmerica(r)
@@ -191,7 +191,7 @@ writeFileSync(
   OUT_PATH,
   JSON.stringify({
     corpusScope: "parish-registry-unified",
-    note: "Research-record layer: registry parishes beyond the canonical 83 (US + Canada) + non-Catholic congregations. Presentation-layer only; no figures derive from this file.",
+    note: "Research-record layer: registry parishes beyond the case-filed core (US + Canada) + non-Catholic congregations. Presentation-layer only; no figures derive from this file.",
     counts: {
       plotted: out.length,
       parishes: out.filter((p) => p.kind === "parish").length,

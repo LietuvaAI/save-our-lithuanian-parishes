@@ -5,7 +5,7 @@ import registry from "@/data/registry-unified.json";
 export const metadata: Metadata = {
   title: "The research record — all registry parishes",
   description:
-    "Every parish in the wider research record — beyond the 83 core case files — with its documentation depth and sources, from the unified registry.",
+    "Every parish in the wider research record — beyond the case-filed core — with its documentation depth and sources, from the unified registry.",
 };
 
 type Rec = (typeof registry.parishes)[number] & Record<string, any>;
@@ -31,7 +31,7 @@ export default function RegistryIndexPage() {
       <p className="mt-3 max-w-2xl text-muted leading-relaxed">
         Beyond the{" "}
         <Link href="/parishes" className="underline hover:text-foreground">
-          83 core case files
+          case-filed core
         </Link>{" "}
         (and the three Canadian comparator parishes, which carry their own
         profiles), the unified registry documents these parishes across the
@@ -44,6 +44,50 @@ export default function RegistryIndexPage() {
         </Link>
         .
       </p>
+
+      <section className="mt-8 grid gap-4 sm:grid-cols-2">
+        <div className="rounded-lg border border-rule px-4 py-4 text-sm leading-relaxed">
+          <p className="font-semibold">Lithuanian ethnic parish</p>
+          <p className="mt-1 text-muted">
+            A Roman Catholic parish organized specifically to serve a Lithuanian
+            immigrant community — with its own building, priest, and canonical
+            standing. Called a &ldquo;national parish&rdquo; in canon law
+            because it is constituted by ethnicity, not territory. The dominant
+            form: 202 of the 220 registry entries.
+          </p>
+        </div>
+        <div className="rounded-lg border border-rule px-4 py-4 text-sm leading-relaxed">
+          <p className="font-semibold">Lithuanian National Catholic</p>
+          <p className="mt-1 text-muted">
+            Communities that separated from Rome in the early 1900s, mostly in
+            Pennsylvania and the northeast, joining the Polish National Catholic
+            Church (PNCC). They built and ran their own parishes outside
+            diocesan authority. 14 entries — documented as historical witness,
+            not as a recommendation.
+          </p>
+        </div>
+        <div className="rounded-lg border border-rule px-4 py-4 text-sm leading-relaxed">
+          <p className="font-semibold">Independent / schismatic Catholic</p>
+          <p className="mt-1 text-muted">
+            Communities that broke from both Rome and the PNCC — typically
+            short-lived schismatic congregations that arose from local disputes
+            in the early immigrant era. 4 entries — documented as historical
+            witness only.
+          </p>
+        </div>
+        <div className="rounded-lg border border-rule px-4 py-4 text-sm leading-relaxed">
+          <p className="font-semibold">Lithuanian settlement or community</p>
+          <p className="mt-1 text-muted">
+            A Lithuanian population that worshipped together — attending Mass,
+            maintaining a seasonal chapel, or holding devotions — but within a
+            territorial or mixed-ethnic parish, without forming a distinct
+            Lithuanian national parish. Farm colonies, dunes summer communities,
+            and mixed-nationality congregations fall here. Recorded by
+            Wolkovich-Valkavičius to capture the full geography of Lithuanian
+            religious life.
+          </p>
+        </div>
+      </section>
 
       <div className="mt-10 space-y-10">
         {states.map((st) => {
