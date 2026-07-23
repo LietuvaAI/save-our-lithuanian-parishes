@@ -117,8 +117,8 @@ export default function RootLayout({
               <Link href="/sustainability-watch" className="hover:text-foreground">
                 The Vigil
               </Link>
-              <Link href="/full-picture" className="hover:text-foreground">
-                The Full Picture
+              <Link href="/what-canon-law-says" className="hover:text-foreground">
+                What Canon Law Says
               </Link>
               <Link href="/about-the-data" className="hover:text-foreground">
                 About the data
@@ -134,9 +134,26 @@ export default function RootLayout({
               </Link>
             </nav>
             <p className="pt-3 mt-1 border-t border-rule">
-              © 2026 Save Our Lithuanian Parishes · an initiative powered by
-              Lietuva.AI · a documented record, not legal or canonical advice
-              ·{" "}
+              © 2026 Save Our Lithuanian Parishes · powered by{" "}
+              <a
+                href="https://lietuva.ai"
+                className="underline hover:text-foreground"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Lietuva.AI
+              </a>{" "}
+              · supported by the Žiburio Foundation · data made possible by{" "}
+              <a
+                href="https://archyvas.ziburioltmokykla.org"
+                className="underline hover:text-foreground"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Skaitmeniniai Knygnešiai
+              </a>
+              , student interns from Detroit · a documented record, not legal
+              or canonical advice ·{" "}
               <Link
                 href="/legal"
                 className="underline hover:text-foreground"
