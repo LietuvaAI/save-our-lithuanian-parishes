@@ -28,6 +28,7 @@ export const metadata: Metadata = {
 };
 
 const NAV = [
+  { href: "/about", label: "About" },
   { href: "/record", label: "The Record" },
   { href: "/under-threat", label: "Under Threat" },
   { href: "/sustainability-watch", label: "Sustainability Watch" },
@@ -64,13 +65,6 @@ export default function RootLayout({
                   {item.label}
                 </Link>
               ))}
-              <Link
-                href="/report"
-                className="rounded-md px-3.5 py-1.5 font-semibold text-white hover:opacity-90 transition-opacity"
-                style={{ background: "var(--mark-closed)" }}
-              >
-                Report
-              </Link>
             </nav>
           </div>
         </header>
