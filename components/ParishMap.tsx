@@ -202,6 +202,20 @@ function phaseAt(p: Point, year: number): "future" | "alive" | "lost" {
 export default function ParishMap() {
   const router = useRouter();
   const [hovered, setHovered] = useState<Point | null>(null);
+  const leaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  function dotEnter(p: Point) {
+    if (leaveTimer.current) clearTimeout(leaveTimer.current);
+    setHovered(p);
+  }
+  function dotLeave() {
+    leaveTimer.current = setTimeout(() => setHovered(null), 90);
+  }
+  function cardEnter() {
+    if (leaveTimer.current) clearTimeout(leaveTimer.current);
+  }
+  function cardLeave() {
+    setHovered(null);
+  }
   const [mode, setMode] = useState<Mode>("all");
   const [classFilter, setClassFilter] = useState<ClassFilter>("all");
   const [view, setView] = useState<View>(FULL);
@@ -473,8 +487,8 @@ export default function ParishMap() {
             const r = isHov ? markR * 1.2 : markR * 0.9;
             return (
               <g key={p.id}
-                onMouseEnter={() => setHovered(p)} onMouseLeave={() => setHovered(null)}
-                onFocus={() => setHovered(p)} onBlur={() => setHovered(null)}
+                onMouseEnter={() => dotEnter(p)} onMouseLeave={dotLeave}
+                onFocus={() => dotEnter(p)} onBlur={dotLeave}
                 onClick={() => openPoint(p)}
                 onKeyDown={(e) => { if (e.key === "Enter") openPoint(p); }}
                 tabIndex={p.profile ? 0 : 0}
@@ -522,8 +536,8 @@ export default function ParishMap() {
 
             return (
               <g key={p.id}
-                onMouseEnter={() => setHovered(p)} onMouseLeave={() => setHovered(null)}
-                onFocus={() => setHovered(p)} onBlur={() => setHovered(null)}
+                onMouseEnter={() => dotEnter(p)} onMouseLeave={dotLeave}
+                onFocus={() => dotEnter(p)} onBlur={dotLeave}
                 onClick={() => openPoint(p)}
                 onKeyDown={(e) => { if (e.key === "Enter") openPoint(p); }}
                 tabIndex={p.profile ? 0 : -1}
@@ -587,7 +601,9 @@ export default function ParishMap() {
             const below = ly < 32;
             return (
               <div
-                className="pointer-events-none absolute z-10 w-72 rounded-lg border border-rule bg-background/95 px-3.5 py-2.5 text-sm shadow-lg"
+                onMouseEnter={cardEnter}
+                onMouseLeave={cardLeave}
+                className="absolute z-10 w-72 rounded-lg border border-rule bg-background/95 px-3.5 py-2.5 text-sm shadow-lg"
                 style={{
                   left: `${Math.min(Math.max(lx, 15), 85)}%`,
                   top: `${ly}%`,
@@ -628,7 +644,12 @@ export default function ParishMap() {
                   {hovered.deep ? "Documented in depth — full case file" : "Attested by the research record"}
                 </div>
                 {hovered.profile && (
-                  <div className="mt-1.5 font-medium underline">Open the parish record →</div>
+                  <a
+                    href={hovered.profile}
+                    className="mt-1.5 block font-medium underline hover:opacity-75"
+                  >
+                    Open the parish record →
+                  </a>
                 )}
               </div>
             );
