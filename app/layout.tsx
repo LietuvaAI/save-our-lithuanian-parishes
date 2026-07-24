@@ -32,9 +32,9 @@ const NAV = [
   { href: "/under-threat", label: "Under Threat" },
   { href: "/sustainability-watch", label: "The Vigil" },
   { href: "/start-here", label: "Facing a Closure" },
+  { href: "/about", label: "About" },
   { href: "/national-catholic", label: "National Catholic" },
   { href: "/protestant", label: "Protestant" },
-  { href: "/about", label: "About" },
   { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys (The Hearth)" },
 ];
 
