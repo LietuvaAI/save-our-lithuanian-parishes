@@ -32,7 +32,7 @@ const NE_STATES = new Set(["ME", "NH", "VT", "MA", "RI", "CT", "NY", "NJ", "PA",
 type View = { x: number; y: number; w: number; h: number };
 // Status drives fill color. alerted (gold ring) is a separate boolean.
 type Status = "lost" | "open" | "threat" | "building" | "unknown";
-type Mode = "all" | "open" | "threat";
+type Mode = "all" | "open" | "threat" | "lost";
 
 interface Point {
   id: string;
@@ -330,70 +330,83 @@ export default function ParishMap() {
       ? knownPoints
       : mode === "open"
         ? knownPoints.filter((p) => p.status === "open")
-        : knownPoints.filter((p) => p.inAlerts || p.status === "threat" || p.status === "building");
+        : mode === "lost"
+          ? knownPoints.filter((p) => p.status === "lost" || p.status === "building")
+          : knownPoints.filter((p) => p.inAlerts || p.status === "threat" || p.status === "building");
 
   return (
     <div>
-      {/* Views */}
+      {/* Single combined filter + key bar */}
       <div className="mb-3 flex flex-wrap items-center gap-2">
-        <button type="button" className={seg(!timelineMode && mode === "all")} onClick={() => { exitTimeline(); setMode("all"); }}>
-          All US parishes
-        </button>
-        <button type="button" className={seg(!timelineMode && mode === "open")} onClick={() => { exitTimeline(); setMode("open"); }}>
-          Open today ({statusCounts.open})
-        </button>
-        <button type="button" className={seg(!timelineMode && mode === "threat")} onClick={() => { exitTimeline(); setMode("threat"); }}>
-          Under threat ({statusCounts.threat})
-        </button>
-        <button
-          type="button"
-          className={seg(timelineMode)}
-          onClick={() => (timelineMode ? exitTimeline() : startTimeline())}
-        >
-          ▶ Across time ({minYear}–{END_YEAR})
-        </button>
-        <button
-          type="button"
-          className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors border ${
-            showArchived
-              ? "border-muted bg-muted/10 text-foreground"
-              : "border-rule text-muted hover:border-foreground"
-          }`}
-          onClick={() => setShowArchived((v) => !v)}
-          title="Parishes attested in the research record but with unestablished fate — from sources including the Wolkovich book"
-        >
-          + Unestablished fate ({archivePoints.length})
-        </button>
-      </div>
-
-      {/* Key — above the map so readers know what they're looking at */}
-      <div className="mb-3 rounded-lg border border-rule px-4 py-3">
-        <p className="text-xs uppercase tracking-widest text-muted mb-2">Key</p>
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted">
         {timelineMode ? (
           <>
-            <Swatch fill="var(--mark-ink)" label="Alive that year" />
-            <Swatch fill="var(--mark-closed)" label="Lost by then" />
-          </>
-        ) : mode === "threat" ? (
-          <>
-            <Swatch fill="var(--mark-ink)" ring label="Open, active fight" />
-            <Swatch fill="var(--mark-closed)" ring label="Closed, fight ongoing" />
-            <Swatch fill="var(--mark-community)" label="Status unresolved" />
-            <Swatch fill="var(--mark-building)" label="Building at risk" />
-            <Swatch fill="var(--mark-closed)" label={`Recently closed (${statusCounts.lost})`} />
+            <SwatchBtn
+              fill="var(--mark-ink)"
+              label={`Alive · ${counts.alive}`}
+              active={false}
+              onClick={() => {}}
+              disabled
+            />
+            <SwatchBtn
+              fill="var(--mark-closed)"
+              label={`Lost · ${counts.lost}`}
+              active={false}
+              onClick={() => {}}
+              disabled
+            />
+            <button type="button" className={seg(true)} onClick={exitTimeline}>
+              ✕ Exit timeline
+            </button>
           </>
         ) : (
           <>
-            <Swatch fill="var(--mark-ink)" label={`Open today (${statusCounts.open})`} />
-            <Swatch fill="var(--mark-ink)" ring label="Open, under active threat" />
-            <Swatch fill="var(--mark-community)" ring label="Status unresolved" />
-            <Swatch fill="var(--mark-closed)" label={`Lost (${statusCounts.lost})`} />
-            <Swatch fill="var(--mark-building)" label="Building at risk" />
-            {showArchived && <SwatchCross label={`Fate not yet established (${archivePoints.length})`} />}
+            <button
+              type="button"
+              className={seg(!timelineMode && mode === "all")}
+              onClick={() => { exitTimeline(); setMode("all"); }}
+            >
+              All · {statusCounts.all}
+            </button>
+            <SwatchBtn
+              fill="var(--mark-ink)"
+              label={`Open · ${statusCounts.open}`}
+              active={mode === "open"}
+              onClick={() => { exitTimeline(); setMode("open"); }}
+            />
+            <SwatchBtn
+              fill="var(--mark-community)"
+              ring
+              label={`Under threat · ${statusCounts.threat}`}
+              active={mode === "threat"}
+              onClick={() => { exitTimeline(); setMode("threat"); }}
+            />
+            <SwatchBtn
+              fill="var(--mark-closed)"
+              label={`Lost · ${statusCounts.lost}`}
+              active={mode === "lost"}
+              onClick={() => { exitTimeline(); setMode("lost"); }}
+            />
+            <button
+              type="button"
+              className={seg(timelineMode)}
+              onClick={() => (timelineMode ? exitTimeline() : startTimeline())}
+            >
+              ▶ Across time ({minYear}–{END_YEAR})
+            </button>
+            <button
+              type="button"
+              className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors border ${
+                showArchived
+                  ? "border-muted bg-muted/10 text-foreground"
+                  : "border-rule text-muted hover:border-foreground"
+              }`}
+              onClick={() => setShowArchived((v) => !v)}
+              title="Parishes attested in the research record but with coordinates; full status being verified"
+            >
+              + Being verified ({archivePoints.length})
+            </button>
           </>
         )}
-        </div>
       </div>
 
       <div className="relative">
@@ -616,10 +629,17 @@ export default function ParishMap() {
               Full situation for each →
             </a>
           </span>
+        ) : mode === "lost" ? (
+          <span className="text-muted">
+            {statusCounts.lost} parishes lost — closed, merged, demolished, or suppressed. Hover any mark; click to open its record.{" "}
+            <a href="/record" className="underline hover:text-foreground font-medium">
+              Full list in The Record →
+            </a>
+          </span>
         ) : (
           <span className="text-muted">
             One record — every documented parish on one map. Hover any mark; click to open
-            its record — the United States and Canada together. See a parish missing?{" "}
+            its record. See a parish missing?{" "}
             <a href="/report" className="underline hover:text-foreground">Report it</a>.
           </span>
         )}
@@ -629,35 +649,47 @@ export default function ParishMap() {
   );
 }
 
-function SwatchCross({ label }: { label: string }) {
-  return (
-    <span className="inline-flex items-center gap-1.5">
-      <svg width={16} height={16} viewBox="0 0 16 16" aria-hidden>
-        <line x1={4} y1={8} x2={12} y2={8} stroke="var(--muted)" strokeOpacity={0.7} strokeWidth={1.4} strokeLinecap="round" />
-        <line x1={8} y1={4} x2={8} y2={12} stroke="var(--muted)" strokeOpacity={0.7} strokeWidth={1.4} strokeLinecap="round" />
-      </svg>
-      {label}
-    </span>
-  );
-}
 
-function Swatch({ fill, label, hollow, ring }: { fill?: string; label: string; hollow?: boolean; ring?: boolean }) {
+function SwatchBtn({
+  fill,
+  label,
+  active,
+  ring,
+  onClick,
+  disabled,
+}: {
+  fill: string;
+  label: string;
+  active: boolean;
+  ring?: boolean;
+  onClick: () => void;
+  disabled?: boolean;
+}) {
   return (
-    <span className="inline-flex items-center gap-1.5">
-      <svg width={16} height={16} viewBox="0 0 16 16" aria-hidden>
+    <button
+      type="button"
+      disabled={disabled}
+      onClick={onClick}
+      className={`inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
+        active
+          ? "bg-foreground text-background"
+          : "border border-rule hover:border-foreground"
+      }`}
+    >
+      <svg width={12} height={12} viewBox="0 0 12 12" aria-hidden>
         {ring && (
-          <circle cx={8} cy={8} r={7} fill="none"
-            stroke="var(--mark-community)" strokeOpacity={0.8} strokeWidth={1.5} />
+          <circle cx={6} cy={6} r={5.5} fill="none"
+            stroke={active ? "currentColor" : "var(--mark-community)"}
+            strokeOpacity={0.8} strokeWidth={1.2} />
         )}
         <circle
-          cx={8} cy={8} r={4.6}
-          fill={hollow ? "none" : fill}
-          stroke={hollow ? "var(--foreground)" : "var(--background)"}
-          strokeOpacity={hollow ? 0.45 : 1}
-          strokeWidth={hollow ? 1.4 : 0.8}
+          cx={6} cy={6} r={3.5}
+          fill={active ? "currentColor" : fill}
+          strokeWidth={0}
         />
       </svg>
       {label}
-    </span>
+    </button>
   );
 }
+

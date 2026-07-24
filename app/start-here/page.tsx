@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 
 const SEVEN_REASONS = [
   "A general diocesan plan to reduce the number of churches",
-  "That the church is "no longer needed"",
+  'That the church is \u201cno longer needed\u201d',
   "That the parish has been suppressed",
   "That the number of parishioners has decreased",
-  "That closure "will not harm the good of souls"",
+  'That closure \u201cwill not harm the good of souls\u201d',
   "A desire to promote parish unity",
   "A potential future cause that has not yet happened",
 ];
