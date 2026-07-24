@@ -72,7 +72,7 @@ const FILL: Record<Status, string> = {
   open: "var(--mark-ink)",
   threat: "var(--mark-community)",
   building: "var(--mark-building)",
-  unknown: "none",
+  unknown: "var(--muted)",
 };
 
 // Build alert lookup: slug → {kind, whatChanged}
@@ -213,7 +213,7 @@ export default function ParishMap() {
   const [mode, setMode] = useState<Mode>("all");
   const [classFilter, setClassFilter] = useState<ClassFilter>("all");
   const [view, setView] = useState<View>(FULL);
-  const [showArchived, setShowArchived] = useState(false);
+  const [showArchived, setShowArchived] = useState(true);
   const svgRef = useRef<SVGSVGElement>(null);
   const drag = useRef<{ px: number; py: number; moved: boolean } | null>(null);
 
@@ -469,10 +469,10 @@ export default function ParishMap() {
                   <circle
                     cx={p.x} cy={p.y} r={r}
                     fill={FILL[p.status]}
-                    fillOpacity={p.status === "unknown" ? 0 : 0.92}
-                    stroke={p.status === "unknown" ? "var(--foreground)" : "var(--background)"}
-                    strokeOpacity={p.status === "unknown" ? 0.45 : 1}
-                    strokeWidth={p.status === "unknown" ? markR * 0.28 : markR * 0.18}
+                    fillOpacity={p.status === "unknown" ? 0.45 : 0.92}
+                    stroke={"var(--background)"}
+                    strokeOpacity={1}
+                    strokeWidth={markR * 0.18}
                   />
                 )}
               </g>
