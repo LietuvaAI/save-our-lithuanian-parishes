@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 const NAV = [
   { href: "/record", label: "The Record" },
   { href: "/under-threat", label: "Under Threat" },
-  { href: "/sustainability-watch", label: "The Vigil" },
+  { href: "/sustainability-watch", label: "Sustainability Watch" },
   { href: "/start-here", label: "Facing a Closure" },
   { href: "/about", label: "About" },
   { href: "/national-catholic", label: "National Catholic" },
@@ -117,7 +117,7 @@ export default function RootLayout({
                 Under Threat
               </Link>
               <Link href="/sustainability-watch" className="hover:text-foreground">
-                The Vigil
+                Sustainability Watch
               </Link>
               <Link href="/what-canon-law-says" className="hover:text-foreground">
                 What Canon Law Says
