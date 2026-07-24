@@ -75,7 +75,7 @@ export default function UnderThreatPage() {
         biweekly. Parishes that survived but face slow-burn sustainability
         challenges are on the{" "}
         <Link href="/sustainability-watch" className="underline hover:text-foreground">
-          The Vigil
+          Sustainability Watch
         </Link>
         .
       </p>

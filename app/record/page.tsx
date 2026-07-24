@@ -101,7 +101,6 @@ function buildRows(): RegistryRow[] {
 export default function RecordPage() {
   const rows = buildRows();
   const total = rows.length;
-  const caseFiled = rows.filter((r) => r.depth === "case-filed").length;
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
@@ -115,14 +114,10 @@ export default function RecordPage() {
           parish histories, diocesan archives, and community memory.
         </p>
         <p className="text-muted">
-          {caseFiled} of the {total} are documented in full depth —
-          case-filed: every fact verified against dated published sources,
-          with a current record of where the building, the community, and
-          the property stand today. The rest are being verified to that
-          same standard, parish by parish. The{" "}
-          <strong>Depth</strong> column shows where each one stands.
-          The record extends backward through the archives toward the
-          first parishes of the 1880s and forward through{" "}
+          Each column header is a filter — click to narrow by status,
+          ownership, Lithuanian identity, or building fate. The record
+          extends backward through the archives toward the first parishes
+          of the 1880s and forward through{" "}
           <Link href="/report" className="underline hover:text-accent">
             reports from parish communities
           </Link>{" "}

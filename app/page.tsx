@@ -92,11 +92,17 @@ export default function Home() {
           The public record of America&rsquo;s Lithuanian parishes
         </h1>
         <p className="mt-3 max-w-2xl mx-auto text-sm leading-relaxed text-muted">
-          Every Lithuanian parish in the United States — what happened to
-          it, where it stands today, and what communities facing the same
-          decisions can learn from each other. From the earliest
-          foundations of the 1880s through the closures and campaigns of
-          2026, documented from dated sources.
+          The past is a torch to the present. America&rsquo;s Lithuanian
+          parishes have long been the <em>židiniai</em> of our
+          communities&mdash;the hearths where faith was lived, language was
+          spoken, memory was preserved, and identity was formed. Together, they
+          form an unbroken current connecting the Lithuanian past to the present
+          and lighting the road ahead. This project traces the complete history
+          of America&rsquo;s Lithuanian parishes&mdash;from their earliest
+          foundations to the communities discerning their future today. Seen
+          together, the experience of America&rsquo;s Lithuanian parishes helps
+          illuminate the path ahead, because no individual parish should have
+          to find its way in darkness.
         </p>
       </section>
 
@@ -181,7 +187,7 @@ export default function Home() {
 
       <section className="mt-8">
         <div className="flex items-baseline gap-3">
-          <h2 className="font-serif text-xl font-semibold">The Vigil</h2>
+          <h2 className="font-serif text-xl font-semibold">Sustainability Watch</h2>
           <span className="text-sm text-muted">
             {(alertsData as any).sustainabilityWatch.length} parishes
           </span>
@@ -193,7 +199,7 @@ export default function Home() {
         </p>
         <p className="mt-2 text-sm">
           <Link href="/sustainability-watch" className="underline hover:text-accent font-medium">
-            All parishes on The Vigil &rarr;
+            All parishes on Sustainability Watch &rarr;
           </Link>
         </p>
       </section>
