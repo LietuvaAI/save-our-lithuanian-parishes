@@ -90,12 +90,14 @@ let skippedNoGeo = 0;
 
 // Include:
 //   - All non-locked registry entries (the research record beyond the case-filed core)
-//   - non_catholic_christian entries regardless of locked status — they are never
-//     in parishes.json/map.json, so this is their only map rendering path.
+//   - non_catholic_christian AND national_catholic_pncc entries regardless of locked
+//     status — neither class ever appears in parishes.json/map.json, so this is their
+//     only map rendering path.
 // Exclude: Argentina mis-codes, "no parish" civic associations.
+const NON_ROMAN = new Set(["non_catholic_christian", "national_catholic_pncc"]);
 const toPlot = registry.parishes.filter(
   (r) =>
-    (!r.in_locked_scope || r.congregation_class === "non_catholic_christian") &&
+    (!r.in_locked_scope || NON_ROMAN.has(r.congregation_class)) &&
     isRealParish(r) &&
     isNorthAmerica(r)
 );

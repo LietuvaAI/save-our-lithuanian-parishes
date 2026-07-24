@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import RegistryTable, { type RegistryRow, type ParishStatus } from "@/components/RegistryTable";
 import registry from "@/data/registry-unified.json";
-import { parishes as libParishes, type EndingMode } from "@/lib/parishes";
+import { parishes as libParishes, type EndingMode, type Ownership, type LithuanianIdentity, type BuildingFate } from "@/lib/parishes";
 
 export const metadata: Metadata = {
   title: "The Record",
@@ -86,6 +86,9 @@ function buildRows(): RegistryRow[] {
       closed: yearOf(p.locked?.year_closed, p.years?.closed),
       depth: p.record_depth,
       congregationClass: (p.congregation_class as RegistryRow["congregationClass"]) ?? null,
+      ownership: libOk ? (lib.ownership as Ownership) : null,
+      lithuanianIdentity: libOk ? (lib.lithuanianIdentity as LithuanianIdentity | null) : null,
+      buildingFate: libOk ? (lib.buildingFate as BuildingFate | null) : null,
       profileHref: libOk
         ? `/parishes/${lib.slug}`
         : p.c83_row == null
