@@ -110,11 +110,18 @@ for (const r of nonCanonical) {
     foundedYear: yearOf(r.years?.founded),
     closedYear: yearOf(r.years?.closed, { closing: true }),
     // Comparator parishes carry a locked outcome — Montreal's survivors
-    // should read as open, not unknown.
+    // should read as open, not unknown. Web-historical sources with a
+    // "standing" or "open" currentStatus also confirm a parish is alive.
     lockedStanding:
-      r.comparator === true &&
-      ["standing", "community_decided"].includes(r.locked?.ending_mode ?? "") &&
-      !yearOf(r.years?.closed, { closing: true }),
+      !yearOf(r.years?.closed, { closing: true }) && (
+        (r.comparator === true &&
+          ["standing", "community_decided"].includes(r.locked?.ending_mode ?? "")) ||
+        (r.sources ?? []).some(
+          (s) =>
+            s.axis === "web-historical" &&
+            /^(standing|open)/i.test(s.currentStatus ?? "")
+        )
+      ),
     depth: r.record_depth, // "multi-source" | "single-source"
     congregationClass: r.congregation_class,
     documentedIn: [...new Set(r.sources.map((s) => AXIS_LABEL[s.axis] ?? s.axis))],
