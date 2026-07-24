@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import congregationsData from "@/data/non-catholic-congregations.json";
+import registry from "@/data/registry-unified.json";
 
 export const metadata: Metadata = {
   title: "Lithuanian Protestant and independent congregations",
@@ -8,10 +8,13 @@ export const metadata: Metadata = {
     "The Lithuanian Protestant and independent congregations documented in the research record — Lutheran, Reformed, Baptist, and independent communities that were part of the full geography of Lithuanian religious life in America. Historical witness.",
 };
 
-type Cong = (typeof congregationsData.congregations)[number] & Record<string, any>;
-const CONGS = congregationsData.congregations as Cong[];
+type Rec = (typeof registry.parishes)[number] & Record<string, any>;
 
-// Congregations with TrueLithuania field survey geo have confirmed present-day addresses
+const CONGS = (registry.parishes as Rec[]).filter(
+  (p) => p.congregation_class === "non_catholic_christian"
+);
+
+// Congregations with TrueLithuania field survey source have confirmed present-day addresses
 const confirmed = CONGS.filter((c) =>
   c.sources.some((s: any) => s.axis === "truelithuania")
 );
@@ -29,19 +32,23 @@ function sourceLabel(axis: string): string {
   return LABELS[axis] ?? axis;
 }
 
-function CongCard({ c }: { c: Cong }) {
+function CongCard({ c }: { c: Rec }) {
   const axes = [...new Set(c.sources.map((s: any) => s.axis))] as string[];
   const hasField = axes.includes("truelithuania");
+  const name = c.names?.lt || c.names?.en || c.name_variants?.[0] || c.slug;
   const city = c.city_history?.[0] ?? c.city ?? "";
   const locationNote =
     c.city_history && c.city_history.length > 1
       ? `Now ${c.city} (formerly ${c.city_history.slice(1).join(", ")})`
       : null;
   const tl = c.sources.find((s: any) => s.axis === "truelithuania") as any;
+  const nameVariants = (c.name_variants ?? c.names?.variants ?? []).filter(
+    (v: string) => v !== name
+  );
   return (
     <div className="rounded-lg border border-rule px-4 py-3.5">
       <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-        <span className="font-serif text-base font-semibold">{c.name}</span>
+        <span className="font-serif text-base font-semibold">{name}</span>
         <div className="flex items-center gap-2">
           {hasField && (
             <span className="inline-flex rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300">
@@ -54,9 +61,9 @@ function CongCard({ c }: { c: Cong }) {
         </div>
       </div>
 
-      {c.name_variants?.filter((v: string) => v !== c.name).length > 0 && (
+      {nameVariants.length > 0 && (
         <p className="mt-1 text-xs text-muted">
-          Also: {c.name_variants.filter((v: string) => v !== c.name).join(" · ")}
+          Also: {nameVariants.join(" · ")}
         </p>
       )}
 
@@ -182,8 +189,8 @@ export default function ProtestantPage() {
           Michelsonas, <em>Lietuvių Išeivija Amerikoje</em> (1961); the
           systematic sweep of the <em>Draugas</em> archive since 1909; and
           the Global True Lithuania field survey. All {CONGS.length} congregations
-          appear on the homepage map as distinct marks — hover any mark for
-          its record. See a congregation missing?{" "}
+          appear on the homepage map — hover any mark for its record. See a
+          congregation missing?{" "}
           <Link href="/report" className="underline hover:text-foreground">
             Report it
           </Link>
