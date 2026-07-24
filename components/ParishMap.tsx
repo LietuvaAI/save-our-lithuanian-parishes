@@ -13,8 +13,8 @@
 //   grey hollow         = in the record; fate not yet established
 // Who-decided (ending mode) and ownership stay in each parish's popup and
 // profile — the map itself reads at a glance. Views: All · Open today ·
-// Under threat · Across time (the timeline).
-import { useEffect, useMemo, useRef, useState } from "react";
+// Under threat · Lost.
+import { useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import mapData from "@/data/map.json";
 import regData from "@/data/registry-map.json";
@@ -28,7 +28,6 @@ import {
 const FULL = (regData as { frame?: { x: number; y: number; w: number; h: number } })
   .frame ?? { x: 0, y: 0, w: 975, h: 610 };
 const MAX_ZOOM = 20;
-const END_YEAR = 2026;
 const NE_STATES = new Set(["ME", "NH", "VT", "MA", "RI", "CT", "NY", "NJ", "PA", "MD"]);
 
 type View = { x: number; y: number; w: number; h: number };
@@ -193,11 +192,6 @@ function clampView(v: View): View {
   };
 }
 
-function phaseAt(p: Point, year: number): "future" | "alive" | "lost" {
-  if (!p.founded || p.founded > year) return "future";
-  if (p.closed && p.closed <= year) return "lost";
-  return "alive";
-}
 
 export default function ParishMap() {
   const router = useRouter();
@@ -219,14 +213,11 @@ export default function ParishMap() {
   const [mode, setMode] = useState<Mode>("all");
   const [classFilter, setClassFilter] = useState<ClassFilter>("all");
   const [view, setView] = useState<View>(FULL);
-  const [year, setYear] = useState<number | null>(null);
-  const [playing, setPlaying] = useState(false);
   const [showArchived, setShowArchived] = useState(false);
   const svgRef = useRef<SVGSVGElement>(null);
   const drag = useRef<{ px: number; py: number; moved: boolean } | null>(null);
 
   const zoom = FULL.w / view.w;
-  const timelineMode = year !== null;
 
   const statusCounts = useMemo(() => {
     const c = { all: POINTS.length, open: 0, threat: 0, lost: 0, unknown: 0, building: 0 };
@@ -242,37 +233,6 @@ export default function ParishMap() {
     ).length;
     return c;
   }, []);
-
-  const { datedCount, undatedCount, minYear } = useMemo(() => {
-    const d = POINTS.filter((p) => p.founded);
-    return {
-      datedCount: d.length,
-      undatedCount: POINTS.length - d.length,
-      minYear: Math.min(...d.map((p) => p.founded as number)),
-    };
-  }, []);
-
-  const counts = useMemo(() => {
-    if (year === null) return { alive: 0, lost: 0 };
-    let alive = 0, lost = 0;
-    for (const p of POINTS) {
-      const ph = phaseAt(p, year);
-      if (ph === "alive") alive++;
-      else if (ph === "lost") lost++;
-    }
-    return { alive, lost };
-  }, [year]);
-
-  useEffect(() => {
-    if (!playing || year === null) return;
-    const id = setInterval(() => {
-      setYear((y) => {
-        if (y === null || y >= END_YEAR) { setPlaying(false); return y; }
-        return y + 1;
-      });
-    }, 170);
-    return () => clearInterval(id);
-  }, [playing, year === null]);
 
   const MW_STATES = new Set(["IL", "IN", "OH", "MI", "WI", "MN", "IA", "MO"]);
 
@@ -339,9 +299,6 @@ export default function ParishMap() {
     router.push(p.profile);
   }
 
-  function startTimeline() { setMode("all"); setYear(minYear); setPlaying(true); }
-  function exitTimeline() { setPlaying(false); setYear(null); }
-
   const markR = 6 / Math.sqrt(zoom);
   const btn = "rounded-md border border-rule bg-background px-2.5 py-1 text-sm font-medium hover:border-foreground transition-colors";
   const seg = (active: boolean) =>
@@ -352,9 +309,8 @@ export default function ParishMap() {
   const knownPoints = POINTS.filter((p) => p.status !== "unknown");
   const archivePoints = POINTS.filter((p) => p.status === "unknown");
 
-  const statusFiltered = timelineMode
-    ? knownPoints
-    : mode === "all"
+  const statusFiltered =
+    mode === "all"
       ? knownPoints
       : mode === "open"
         ? knownPoints.filter((p) => p.status === "open")
@@ -369,98 +325,65 @@ export default function ParishMap() {
   return (
     <div>
       {/* Congregation class filter */}
-      {!timelineMode && (
-        <div className="mb-2 flex flex-wrap items-center gap-2">
-          {(
-            [
-              { key: "all", label: "All" },
-              { key: "roman_catholic", label: "Catholic" },
-              { key: "national_catholic_pncc", label: "National Catholic" },
-              { key: "non_catholic_christian", label: "Protestant" },
-            ] as { key: ClassFilter; label: string }[]
-          ).map(({ key, label }) => (
-            <button
-              key={key}
-              type="button"
-              className={seg(classFilter === key)}
-              onClick={() => setClassFilter(key)}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-      )}
+      <div className="mb-2 flex flex-wrap items-center gap-2">
+        {(
+          [
+            { key: "all", label: "All" },
+            { key: "roman_catholic", label: "Catholic" },
+            { key: "national_catholic_pncc", label: "National Catholic" },
+            { key: "non_catholic_christian", label: "Protestant" },
+          ] as { key: ClassFilter; label: string }[]
+        ).map(({ key, label }) => (
+          <button
+            key={key}
+            type="button"
+            className={seg(classFilter === key)}
+            onClick={() => setClassFilter(key)}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
       {/* Status filter + key bar */}
       <div className="mb-3 flex flex-wrap items-center gap-2">
-        {timelineMode ? (
-          <>
-            <SwatchBtn
-              fill="var(--mark-ink)"
-              label={`Alive · ${counts.alive}`}
-              active={false}
-              onClick={() => {}}
-              disabled
-            />
-            <SwatchBtn
-              fill="var(--mark-closed)"
-              label={`Lost · ${counts.lost}`}
-              active={false}
-              onClick={() => {}}
-              disabled
-            />
-            <button type="button" className={seg(true)} onClick={exitTimeline}>
-              ✕ Exit timeline
-            </button>
-          </>
-        ) : (
-          <>
-            <button
-              type="button"
-              className={seg(!timelineMode && mode === "all")}
-              onClick={() => { exitTimeline(); setMode("all"); }}
-            >
-              All · {statusCounts.all}
-            </button>
-            <SwatchBtn
-              fill="var(--mark-ink)"
-              label={`Open · ${statusCounts.open}`}
-              active={mode === "open"}
-              onClick={() => { exitTimeline(); setMode("open"); }}
-            />
-            <SwatchBtn
-              fill="var(--mark-community)"
-              ring
-              label={`Under threat · ${statusCounts.threat}`}
-              active={mode === "threat"}
-              onClick={() => { exitTimeline(); setMode("threat"); }}
-            />
-            <SwatchBtn
-              fill="var(--mark-closed)"
-              label={`Lost · ${statusCounts.lost}`}
-              active={mode === "lost"}
-              onClick={() => { exitTimeline(); setMode("lost"); }}
-            />
-            <button
-              type="button"
-              className={seg(timelineMode)}
-              onClick={() => (timelineMode ? exitTimeline() : startTimeline())}
-            >
-              ▶ Across time ({minYear}–{END_YEAR})
-            </button>
-            <button
-              type="button"
-              className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors border ${
-                showArchived
-                  ? "border-muted bg-muted/10 text-foreground"
-                  : "border-rule text-muted hover:border-foreground"
-              }`}
-              onClick={() => setShowArchived((v) => !v)}
-              title="Parishes attested in the research record but with coordinates; full status being verified"
-            >
-              + Being verified ({archivePoints.length})
-            </button>
-          </>
-        )}
+        <button
+          type="button"
+          className={seg(mode === "all")}
+          onClick={() => setMode("all")}
+        >
+          All · {statusCounts.all}
+        </button>
+        <SwatchBtn
+          fill="var(--mark-ink)"
+          label={`Open · ${statusCounts.open}`}
+          active={mode === "open"}
+          onClick={() => setMode("open")}
+        />
+        <SwatchBtn
+          fill="var(--mark-community)"
+          ring
+          label={`Under threat · ${statusCounts.threat}`}
+          active={mode === "threat"}
+          onClick={() => setMode("threat")}
+        />
+        <SwatchBtn
+          fill="var(--mark-closed)"
+          label={`Lost · ${statusCounts.lost}`}
+          active={mode === "lost"}
+          onClick={() => setMode("lost")}
+        />
+        <button
+          type="button"
+          className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors border ${
+            showArchived
+              ? "border-muted bg-muted/10 text-foreground"
+              : "border-rule text-muted hover:border-foreground"
+          }`}
+          onClick={() => setShowArchived((v) => !v)}
+          title="Parishes attested in the research record but with coordinates; full status being verified"
+        >
+          + Being verified ({archivePoints.length})
+        </button>
       </div>
 
       <div className="relative">
@@ -482,7 +405,7 @@ export default function ParishMap() {
           <path d={mapData.stateBorders} fill="none" stroke="var(--foreground)" strokeOpacity={0.15} strokeWidth={0.7 / zoom} />
 
           {/* Archive crosses — parishes with unestablished fate, shown when toggled */}
-          {!timelineMode && showArchived && archivePoints.map((p) => {
+          {showArchived && archivePoints.map((p) => {
             const isHov = hovered?.id === p.id;
             const r = isHov ? markR * 1.2 : markR * 0.9;
             return (
@@ -506,28 +429,6 @@ export default function ParishMap() {
 
           {visible.map((p) => {
             const active = hovered?.id === p.id;
-            if (timelineMode && year !== null) {
-              const ph = phaseAt(p, year);
-              if (ph === "future") return null;
-              const alive = ph === "alive";
-              return (
-                <circle
-                  key={p.id}
-                  cx={p.x} cy={p.y}
-                  r={active ? markR * 1.4 : alive ? markR : markR * 0.85}
-                  fill={alive ? "var(--mark-ink)" : "var(--mark-closed)"}
-                  fillOpacity={alive ? 0.92 : 0.75}
-                  stroke="var(--background)" strokeWidth={markR * 0.18}
-                  tabIndex={0} role={p.profile ? "button" : undefined}
-                  aria-label={`${p.name}, ${p.city} ${p.state} — ${alive ? "alive" : "lost"} in ${year}.`}
-                  onMouseEnter={() => setHovered(p)} onMouseLeave={() => setHovered(null)}
-                  onFocus={() => setHovered(p)} onBlur={() => setHovered(null)}
-                  onClick={() => openPoint(p)}
-                  onKeyDown={(e) => { if (e.key === "Enter") openPoint(p); }}
-                  className={p.profile ? "cursor-pointer focus:outline-none" : "focus:outline-none"}
-                />
-              );
-            }
 
             // Base radius: threat-alerted dots slightly larger
             const r = active ? markR * 1.35 : (p.alerted || p.status === "threat" || p.status === "building") ? markR * 1.15 : markR;
@@ -654,49 +555,11 @@ export default function ParishMap() {
               </div>
             );
           })()}
-
-        {timelineMode && (
-          <div className="absolute left-2 bottom-2 rounded-lg bg-background/90 border border-rule px-3 py-2">
-            <div className="font-serif text-2xl font-semibold tabular-nums">{year}</div>
-            <div className="text-sm">
-              <span className="font-medium">{counts.alive}</span> alive
-              {counts.lost > 0 && (
-                <> {" · "}<span style={{ color: "var(--mark-closed)" }}>{counts.lost} lost</span></>
-              )}
-            </div>
-          </div>
-        )}
       </div>
-
-      {/* Timeline scrubber */}
-      {timelineMode && (
-        <div className="mt-3 rounded-lg border border-rule px-4 py-3">
-          <div className="flex items-center gap-3">
-            <button type="button" onClick={() => setPlaying((p) => !p)} className={btn} aria-label={playing ? "Pause" : "Play"}>
-              {playing ? "❚❚" : "▶"}
-            </button>
-            <input
-              type="range" min={minYear} max={END_YEAR} value={year ?? minYear}
-              onChange={(e) => { setPlaying(false); setYear(Number(e.target.value)); }}
-              aria-label="Year" className="flex-1 accent-[var(--mark-closed)]"
-            />
-          </div>
-          <div className="flex justify-between text-xs text-muted tabular-nums px-9 mt-1">
-            <span>{minYear}</span><span>1950</span><span>1980</span><span>{END_YEAR}</span>
-          </div>
-        </div>
-      )}
 
       {/* Caption */}
       <div className="mt-3 min-h-14 rounded-lg border border-rule px-4 py-2.5 text-sm">
-        {timelineMode ? (
-          <span className="text-muted">
-            The timeline places the {datedCount} parishes on this map with a
-            documented founding year. {undatedCount} more are in the record
-            without a firm date yet — the true arc is larger than what shows
-            here. Click any mark for its record.
-          </span>
-        ) : mode === "threat" ? (
+        {mode === "threat" ? (
           <span className="text-muted">
             {statusCounts.threat} parishes and buildings currently watched.{" "}
             <a href="/under-threat" className="underline hover:text-foreground font-medium">
@@ -766,4 +629,3 @@ function SwatchBtn({
     </button>
   );
 }
-

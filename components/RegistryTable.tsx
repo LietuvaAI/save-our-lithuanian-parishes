@@ -29,6 +29,7 @@ export interface RegistryRow {
   founded: string | null;
   closed: string | null;
   depth: "case-filed" | "multi-source" | "single-source";
+  congregationClass: "roman_catholic" | "national_catholic_pncc" | "non_catholic_christian" | null;
   /** URL to the parish profile page, or null if no profile page exists. */
   profileHref: string | null;
 }
@@ -84,11 +85,20 @@ function DepthBadge({ depth }: { depth: RegistryRow["depth"] }) {
   );
 }
 
+type CongClass = RegistryRow["congregationClass"] | typeof ALL;
+
+const CONG_LABEL: Record<string, string> = {
+  roman_catholic: "Catholic (Roman)",
+  national_catholic_pncc: "National Catholic",
+  non_catholic_christian: "Protestant",
+};
+
 export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
   const [query, setQuery] = useState("");
   const [depth, setDepth] = useState<RegistryRow["depth"] | typeof ALL>(ALL);
   const [state, setState] = useState<string>(ALL);
   const [status, setStatus] = useState<ParishStatus | typeof ALL>(ALL);
+  const [congClass, setCongClass] = useState<CongClass>(ALL);
 
   const states = useMemo(
     () => [...new Set(rows.map((r) => r.state))].sort(),
@@ -102,11 +112,13 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
         (depth === ALL || r.depth === depth) &&
         (state === ALL || r.state === state) &&
         (status === ALL || r.status === status) &&
+        (congClass === ALL || (r.congregationClass ?? "roman_catholic") === congClass) &&
         (!q ||
           r.name.toLowerCase().includes(q) ||
-          r.city.toLowerCase().includes(q))
+          r.city.toLowerCase().includes(q) ||
+          r.state.toLowerCase().includes(q))
     );
-  }, [rows, query, depth, state, status]);
+  }, [rows, query, depth, state, status, congClass]);
 
   const selectClass =
     "rounded-md border border-rule bg-background px-2 py-1.5 text-sm";
@@ -168,6 +180,19 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
             <option value="threat">Under threat</option>
             <option value="closed">Closed</option>
             <option value="unverified">Being verified</option>
+          </select>
+        </label>
+        <label className="flex flex-col gap-1 text-xs text-muted">
+          Congregation
+          <select
+            value={congClass ?? ALL}
+            onChange={(e) => setCongClass(e.target.value as CongClass)}
+            className={selectClass}
+          >
+            <option value={ALL}>All types</option>
+            <option value="roman_catholic">Catholic (Roman)</option>
+            <option value="national_catholic_pncc">National Catholic</option>
+            <option value="non_catholic_christian">Protestant</option>
           </select>
         </label>
         <span className="text-sm text-muted pb-1.5">

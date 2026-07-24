@@ -58,8 +58,8 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${serifDisplay.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <header className="border-b border-rule">
-          <div className="mx-auto max-w-5xl px-4 py-4 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+        <header>
+          <div className="mx-auto max-w-5xl px-4 py-3 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
             <Link href="/" className="font-serif text-lg font-semibold tracking-tight">
               Save Our Lithuanian Parishes
             </Link>
@@ -97,6 +97,12 @@ export default function RootLayout({
                 )
               )}
             </nav>
+          </div>
+          {/* Lithuanian flag stripe */}
+          <div className="flex h-[3px]" aria-hidden>
+            <div className="flex-1" style={{ background: "#FDB913" }} />
+            <div className="flex-1" style={{ background: "#006A44" }} />
+            <div className="flex-1" style={{ background: "#C1272D" }} />
           </div>
         </header>
         <main className="flex-1">{children}</main>

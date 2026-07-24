@@ -29,6 +29,7 @@ interface RegParish {
     closed?: { value: string }[];
   };
   sources?: { ethnic_status?: string }[];
+  congregation_class?: string;
   record_depth: RegistryRow["depth"];
 }
 
@@ -84,6 +85,7 @@ function buildRows(): RegistryRow[] {
       founded: yearOf(p.locked?.year_founded, p.years?.founded),
       closed: yearOf(p.locked?.year_closed, p.years?.closed),
       depth: p.record_depth,
+      congregationClass: (p.congregation_class as RegistryRow["congregationClass"]) ?? null,
       profileHref: libOk
         ? `/parishes/${lib.slug}`
         : p.c83_row == null
@@ -101,7 +103,7 @@ export default function RecordPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
       <h1 className="font-serif text-3xl font-semibold">The Record</h1>
-      <div className="mt-3 max-w-2xl space-y-4 leading-relaxed">
+      <div className="mt-3 space-y-4 leading-relaxed max-w-3xl">
         <p>
           This is the record of America&rsquo;s Lithuanian parishes —{" "}
           {total} of them across the United States. Until now, no
