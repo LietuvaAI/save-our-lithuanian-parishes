@@ -127,6 +127,9 @@ export default function RootLayout({
               <Link href="/national-catholic" className="hover:text-foreground">
                 National Catholic
               </Link>
+              <Link href="/protestant" className="hover:text-foreground">
+                Protestant
+              </Link>
               <Link href="/about" className="hover:text-foreground">
                 About
               </Link>
