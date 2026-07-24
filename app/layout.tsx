@@ -28,11 +28,11 @@ export const metadata: Metadata = {
 };
 
 const NAV = [
+  { href: "/about", label: "About" },
   { href: "/record", label: "The Record" },
   { href: "/under-threat", label: "Under Threat" },
   { href: "/sustainability-watch", label: "Sustainability Watch" },
   { href: "/start-here", label: "Facing a Closure" },
-  { href: "/about", label: "About" },
   { href: "/national-catholic", label: "National Catholic" },
   { href: "/protestant", label: "Protestant" },
   { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys (The Hearth)" },
@@ -64,13 +64,6 @@ export default function RootLayout({
                   {item.label}
                 </Link>
               ))}
-              <Link
-                href="/report"
-                className="rounded-md px-3.5 py-1.5 font-semibold text-white hover:opacity-90 transition-opacity"
-                style={{ background: "var(--mark-closed)" }}
-              >
-                Report
-              </Link>
             </nav>
           </div>
         </header>
