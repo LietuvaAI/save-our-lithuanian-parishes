@@ -5,7 +5,7 @@ import alertsData from "@/data/alerts.json";
 import { parishes } from "@/lib/parishes";
 
 export const metadata: Metadata = {
-  title: "The Vigil — SaveOurLithuanianParishes.org",
+  title: "Sustainability Watch — SaveOurLithuanianParishes.org",
   description:
     "Lithuanian parishes that survived but face slow-burn erosion: clergy shortages, financial strain, ethnic transition, post-merger fragility. The threat is not a letter from the bishop. It is erosion.",
 };
@@ -194,7 +194,7 @@ export default function SustainabilityWatchPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
       <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold">
-        The Vigil
+        Sustainability Watch
       </h1>
       <p className="mt-3 text-muted leading-relaxed">
         Not every parish under pressure faces a closure decree. These parishes
@@ -229,13 +229,13 @@ export default function SustainabilityWatchPage() {
               {/* Photo + header row */}
               <div className="flex gap-0">
                 {photo?.url && (
-                  <div className="w-28 sm:w-36 shrink-0 self-stretch overflow-hidden">
+                  <div className="w-20 sm:w-24 shrink-0 overflow-hidden rounded-br-md mt-4 ml-4">
                     <Image
                       src={photo.url}
                       alt={photo.alt}
-                      width={144}
-                      height={220}
-                      className="h-full w-full object-cover"
+                      width={96}
+                      height={128}
+                      className="w-full h-auto object-cover rounded-md"
                     />
                   </div>
                 )}

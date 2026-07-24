@@ -171,13 +171,13 @@ export default async function ParishPage({
       </div>
 
       {watchEntry?.photo?.url && (
-        <div className="mt-6 overflow-hidden rounded-lg border border-rule">
+        <div className="mt-6 max-w-sm overflow-hidden rounded-lg border border-rule">
           <Image
             src={watchEntry.photo.url}
             alt={watchEntry.photo.alt}
-            width={800}
-            height={500}
-            className="w-full object-cover"
+            width={384}
+            height={256}
+            className="w-full h-auto object-cover"
           />
           <p className="px-3 py-1.5 text-xs text-muted">
             {watchEntry.photo.attribution}
@@ -278,7 +278,7 @@ export default async function ParishPage({
         <section className="mt-8 rounded-lg border border-rule overflow-hidden">
           <div className="px-4 pt-3.5 pb-3">
             <p className="text-xs uppercase tracking-widest text-muted">
-              The Vigil
+              Sustainability Watch
             </p>
             <p className="mt-1.5 leading-relaxed">{watchEntry.situation}</p>
 
@@ -341,7 +341,7 @@ export default async function ParishPage({
                 href="/sustainability-watch"
                 className="rounded-md border border-rule px-3 py-1 text-xs font-medium hover:border-foreground transition-colors"
               >
-                The Vigil &rarr;
+                Sustainability Watch &rarr;
               </Link>
             </div>
           </div>
@@ -492,7 +492,7 @@ export default async function ParishPage({
           <p className="mt-3 leading-relaxed">{caseRecord.summary}</p>
           {caseRecord.developments.length > 0 && (
             <ol className="mt-5 space-y-4 border-l-2 border-rule pl-4">
-              {caseRecord.developments.map((d) => (
+              {[...caseRecord.developments].sort((a, b) => b.date.localeCompare(a.date)).map((d) => (
                 <li key={`${d.date}-${d.headline}`}>
                   <p className="text-xs uppercase tracking-wide text-muted">
                     {d.date}
