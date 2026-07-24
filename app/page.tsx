@@ -99,9 +99,10 @@ export default function Home() {
           form an unbroken current connecting the Lithuanian past to the present
           and lighting the road ahead. This project traces the complete history
           of America&rsquo;s Lithuanian parishes&mdash;from their earliest
-          foundations to the communities discerning their future today. The
-          experience of one parish may help illuminate the path of another,
-          because no parish should have to find its way in darkness.
+          foundations to the communities discerning their future today. Seen
+          together, the experience of America&rsquo;s Lithuanian parishes helps
+          illuminate the path ahead, because no individual parish should have
+          to find its way in darkness.
         </p>
         <div className="mt-6 flex flex-wrap gap-3 justify-center">
           <Link
