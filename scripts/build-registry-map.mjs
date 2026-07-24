@@ -90,8 +90,15 @@ let skippedNoGeo = 0;
 
 // Everything beyond the case-filed core: registry parishes (US and Canada,
 // including the Canadian comparators — Canada belongs on the map).
+// non_catholic_christian registry entries are excluded here because the
+// non-catholic-congregations.json layer covers them; rendering both would
+// produce duplicate marks.
 const nonCanonical = registry.parishes.filter(
-  (r) => !r.in_locked_scope && isRealParish(r) && isNorthAmerica(r)
+  (r) =>
+    !r.in_locked_scope &&
+    isRealParish(r) &&
+    isNorthAmerica(r) &&
+    r.congregation_class !== "non_catholic_christian"
 );
 for (const r of nonCanonical) {
   const ll = lonLatOf(r);

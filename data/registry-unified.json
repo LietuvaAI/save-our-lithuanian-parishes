@@ -9634,7 +9634,7 @@
         "precision": "city-centroid",
         "source": "site-geo-cache"
       },
-      "congregation_class": "independent_catholic",
+      "congregation_class": "non_catholic_christian",
       "axes_count": 2,
       "record_depth": "case-filed"
     },
@@ -9697,7 +9697,7 @@
         "precision": "city-centroid",
         "source": "site-geo-cache"
       },
-      "congregation_class": "independent_catholic",
+      "congregation_class": "non_catholic_christian",
       "axes_count": 2,
       "record_depth": "case-filed"
     },
@@ -15521,7 +15521,7 @@
         "precision": null,
         "needs_geocode": true
       },
-      "congregation_class": "independent_catholic",
+      "congregation_class": "non_catholic_christian",
       "axes_count": 1,
       "record_depth": "single-source"
     },
@@ -15611,7 +15611,7 @@
         "precision": null,
         "needs_geocode": true
       },
-      "congregation_class": "independent_catholic",
+      "congregation_class": "non_catholic_christian",
       "axes_count": 1,
       "record_depth": "single-source"
     },
