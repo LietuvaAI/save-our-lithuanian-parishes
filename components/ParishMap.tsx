@@ -573,7 +573,7 @@ export default function ParishMap() {
             <button type="button" className={btn} onClick={() => setView(FULL)}>Reset</button>
           )}
         </div>
-        <div className="absolute right-2 bottom-2 flex flex-col gap-1.5">
+        <div className="absolute right-2 top-2 flex flex-col gap-1.5">
           <button type="button" className={btn} aria-label="Zoom in" onClick={() => zoomBy(1.6)}>+</button>
           <button type="button" className={btn} aria-label="Zoom out" onClick={() => zoomBy(1 / 1.6)}>−</button>
         </div>
