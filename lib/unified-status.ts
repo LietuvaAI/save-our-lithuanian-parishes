@@ -1,0 +1,168 @@
+// ============================================================================
+// Unified Status System
+// ============================================================================
+//
+// THREE dimensions describe every parish. Each has its own type, labels, and
+// colors drawn from the site's CSS variable palette. This file is the SINGLE
+// source of truth — every page, table, map, and profile imports from here.
+//
+//   1. Lithuanian Identity — "Is it still ours?"
+//   2. Alert Status        — "Is something happening right now?"
+//   3. Building Fate       — "What happened to the physical structure?"
+//
+// Colors use the five --mark-* CSS variables defined in globals.css.
+// No raw hex values, no per-page color overrides.
+// ============================================================================
+
+import type { LithuanianIdentity, BuildingFate } from "@/lib/parishes";
+
+// ── Dimension 1: Lithuanian Identity ─────────────────────────────────────────
+// The cultural inheritance question. Reuses LithuanianIdentity from
+// lib/parishes.ts, plus "unknown" for parishes not yet verified.
+
+export type IdentityStatus = LithuanianIdentity | "unknown";
+
+export const IDENTITY_LABEL: Record<IdentityStatus, string> = {
+  active_parish: "Identity active",
+  mass_continues: "Mass continues",
+  ethnically_transferred: "Transferred",
+  lost: "Identity lost",
+  unknown: "Unverified",
+};
+
+export const IDENTITY_COLOR: Record<IdentityStatus, string> = {
+  active_parish: "var(--mark-standing)",
+  mass_continues: "var(--mark-ink)",
+  ethnically_transferred: "var(--mark-community)",
+  lost: "var(--mark-closed)",
+  unknown: "var(--muted)",
+};
+
+export const IDENTITY_TEXT: Record<IdentityStatus, string> = {
+  active_parish: "#fff",
+  mass_continues: "var(--background)",
+  ethnically_transferred: "#1c1917",
+  lost: "#fff",
+  unknown: "var(--foreground)",
+};
+
+export const IDENTITY_ORDER: IdentityStatus[] = [
+  "active_parish",
+  "mass_continues",
+  "ethnically_transferred",
+  "lost",
+  "unknown",
+];
+
+// ── Dimension 2: Alert Status ────────────────────────────────────────────────
+// What is happening right now. Derived from alerts.json (kind field) and the
+// sustainabilityWatch array.
+
+export type AlertStatus =
+  | "active_campaign"
+  | "watched"
+  | "building_at_risk"
+  | "sustainability"
+  | "none";
+
+export const ALERT_LABEL: Record<AlertStatus, string> = {
+  active_campaign: "Active campaign",
+  watched: "Being watched",
+  building_at_risk: "Building at risk",
+  sustainability: "Sustainability watch",
+  none: "",
+};
+
+export const ALERT_COLOR: Record<AlertStatus, string> = {
+  active_campaign: "var(--mark-closed)",
+  watched: "var(--mark-community)",
+  building_at_risk: "var(--mark-building)",
+  sustainability: "var(--mark-ink)",
+  none: "transparent",
+};
+
+export const ALERT_TEXT: Record<AlertStatus, string> = {
+  active_campaign: "#fff",
+  watched: "#1c1917",
+  building_at_risk: "#fff",
+  sustainability: "var(--background)",
+  none: "",
+};
+
+/** Display order for filter dropdowns (excludes "none"). */
+export const ALERT_ORDER: AlertStatus[] = [
+  "active_campaign",
+  "watched",
+  "building_at_risk",
+  "sustainability",
+];
+
+// ── Dimension 3: Building Fate ───────────────────────────────────────────────
+// What happened to the physical structure. Reuses BuildingFate from
+// lib/parishes.ts (already includes "unknown").
+
+export type FateStatus = BuildingFate;
+
+export const FATE_LABEL: Record<FateStatus, string> = {
+  standing: "Building standing",
+  demolished: "Demolished",
+  repurposed_religious: "Repurposed (religious)",
+  repurposed_secular: "Repurposed (secular)",
+  derelict: "Derelict",
+  unknown: "Fate unknown",
+};
+
+export const FATE_COLOR: Record<FateStatus, string> = {
+  standing: "var(--mark-standing)",
+  demolished: "var(--mark-closed)",
+  repurposed_religious: "var(--mark-ink)",
+  repurposed_secular: "var(--mark-community)",
+  derelict: "var(--mark-community)",
+  unknown: "var(--muted)",
+};
+
+export const FATE_TEXT: Record<FateStatus, string> = {
+  standing: "#fff",
+  demolished: "#fff",
+  repurposed_religious: "var(--background)",
+  repurposed_secular: "#1c1917",
+  derelict: "#1c1917",
+  unknown: "var(--foreground)",
+};
+
+export const FATE_ORDER: FateStatus[] = [
+  "standing",
+  "demolished",
+  "repurposed_religious",
+  "repurposed_secular",
+  "derelict",
+  "unknown",
+];
+
+// ── Resolution helpers ───────────────────────────────────────────────────────
+
+/** Map an alert kind from alerts.json + sustainability watch membership to AlertStatus. */
+export function resolveAlertStatus(
+  alertKind: "active" | "watch" | "building" | null,
+  onSustainabilityWatch: boolean,
+): AlertStatus {
+  if (alertKind === "active") return "active_campaign";
+  if (alertKind === "watch") return "watched";
+  if (alertKind === "building") return "building_at_risk";
+  if (onSustainabilityWatch) return "sustainability";
+  return "none";
+}
+
+/** Map a nullable LithuanianIdentity to IdentityStatus. */
+export function resolveIdentity(
+  value: LithuanianIdentity | null | undefined,
+): IdentityStatus {
+  return value ?? "unknown";
+}
+
+/** Map a nullable BuildingFate to FateStatus. */
+export function resolveFate(
+  value: BuildingFate | null | undefined,
+): FateStatus {
+  return value ?? "unknown";
+}

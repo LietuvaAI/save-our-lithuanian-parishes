@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import RegistryTable, { type RegistryRow, type ParishStatus } from "@/components/RegistryTable";
+import RegistryTable, { type RegistryRow } from "@/components/RegistryTable";
 import registry from "@/data/registry-unified.json";
+import alertsData from "@/data/alerts.json";
 import { parishes as libParishes, type EndingMode, type Ownership, type LithuanianIdentity, type BuildingFate } from "@/lib/parishes";
+import { resolveAlertStatus, resolveIdentity, resolveFate } from "@/lib/unified-status";
 
 export const metadata: Metadata = {
   title: "The Record",
@@ -33,32 +35,31 @@ interface RegParish {
   record_depth: RegistryRow["depth"];
 }
 
-function endingModeToStatus(mode: EndingMode | null): ParishStatus {
-  if (!mode) return "unverified";
-  if (mode === "standing") return "open";
-  if (mode === "undecided") return "threat";
-  return "closed";
+// Build alert lookup: parish slug → alert kind
+const alertBySlug = new Map<string, "active" | "watch" | "building">();
+for (const a of (alertsData.alerts as { parishLink: string; kind: string }[])) {
+  const slug = a.parishLink.replace(/^\/(parishes|registry)\//, "");
+  alertBySlug.set(slug, a.kind as "active" | "watch" | "building");
+}
+
+// Build sustainability watch lookup: parish slug → true
+const sustainBySlug = new Set<string>();
+for (const sw of ((alertsData as Record<string, unknown>).sustainabilityWatch as { parishLink: string }[] ?? [])) {
+  sustainBySlug.add(sw.parishLink.replace(/^\/(parishes|registry)\//, ""));
 }
 
 function buildRows(): RegistryRow[] {
   const regs = (registry as { parishes: RegParish[] }).parishes
-    // Settlements/memorial associations whose own sources say "no parish"
-    // are documented history, but this is the parish record — parishes only.
     .filter(
       (p) =>
         !(p.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? "")) &&
-        // Scope: U.S. only. Canada is documented as comparator but excluded
-        // from the main U.S. record. Argentina entries also excluded (upstream fix filed).
         p.country !== "CA" &&
         !/buenos aires|argentin|rosario/i.test(p.city ?? "")
     );
   return regs.map((p) => {
-    // c83_row is the 1-based row in the canonical CSV = lib parishes order;
-    // sanity-check by city so a misalignment can never link the wrong profile.
     const lib =
       p.c83_row != null ? libParishes[p.c83_row - 1] : undefined;
     const libOk = lib && lib.city === p.city;
-    // Registry year entries can hold narrative text; display only a real year.
     const asYear = (v: string | undefined | null) => {
       const m = v?.match(/\b(1[89]\d{2}|20[0-2]\d)\b/);
       return m ? m[1] : null;
@@ -67,28 +68,28 @@ function buildRows(): RegistryRow[] {
       lockedVal: string | undefined,
       arr: { value: string }[] | undefined
     ) => asYear(lockedVal) ?? asYear(arr?.[0]?.value);
-    const endingMode =
-      p.locked?.ending_mode && (p.in_locked_scope || p.comparator)
-        ? (p.locked.ending_mode as EndingMode)
-        : null;
+
+    const slug = libOk ? lib.slug : p.slug;
+    const alertKind = alertBySlug.get(slug) ?? null;
+    const onSustWatch = sustainBySlug.has(slug);
+
     return {
-      slug: libOk ? lib.slug : p.slug,
+      slug,
       name: p.names.lt || p.names.en || p.slug,
-      // Registry city fields can carry long parenthetical neighborhood or
-      // street detail — keep the city proper; detail stays in the registry.
       city: p.city.replace(/\s*[(;].*$/, ""),
       state: p.state,
       country: p.country,
       comparator: p.comparator,
-      endingMode,
-      status: endingModeToStatus(endingMode),
+      // Three unified dimensions
+      identity: resolveIdentity(libOk ? (lib.lithuanianIdentity as LithuanianIdentity | null) : null),
+      alert: resolveAlertStatus(alertKind, onSustWatch),
+      fate: resolveFate(libOk ? (lib.buildingFate as BuildingFate | null) : null),
+      // Additional
       founded: yearOf(p.locked?.year_founded, p.years?.founded),
       closed: yearOf(p.locked?.year_closed, p.years?.closed),
       depth: p.record_depth,
       congregationClass: (p.congregation_class as RegistryRow["congregationClass"]) ?? null,
       ownership: libOk ? (lib.ownership as Ownership) : null,
-      lithuanianIdentity: libOk ? (lib.lithuanianIdentity as LithuanianIdentity | null) : null,
-      buildingFate: libOk ? (lib.buildingFate as BuildingFate | null) : null,
       profileHref: libOk
         ? `/parishes/${lib.slug}`
         : p.c83_row == null
@@ -114,8 +115,8 @@ export default function RecordPage() {
           parish histories, diocesan archives, and community memory.
         </p>
         <p className="text-muted">
-          Each column header is a filter — click to narrow by status,
-          ownership, Lithuanian identity, or building fate. The record
+          Each column header is a filter — click to narrow by Lithuanian
+          identity, alert status, building fate, or ownership. The record
           extends backward through the archives toward the first parishes
           of the 1880s and forward through{" "}
           <Link href="/report" className="underline hover:text-accent">

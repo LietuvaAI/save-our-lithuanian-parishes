@@ -44,12 +44,6 @@ const STATS = [
     tone: "ink",
   },
   {
-    value: String(figures.usTotal),
-    label:
-      "verified in full depth in the Draugas 2008–2026 core — every fact traced to a dated, published issue",
-    tone: "ink",
-  },
-  {
     value: String(figures.endingMode.diocese_closed),
     label:
       "closed, merged away, suppressed, or demolished by diocesan decision since 2008",
@@ -111,7 +105,7 @@ export default function Home() {
       </section>
 
 
-<section className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-rule border border-rule rounded-lg overflow-hidden">
+<section className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-px bg-rule border border-rule rounded-lg overflow-hidden">
         {STATS.map((s) => (
           <div key={s.label} className="bg-background p-6">
             <div
