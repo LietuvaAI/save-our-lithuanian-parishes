@@ -119,6 +119,18 @@
     "source": "nominatim",
     "place": "Chicago, South Chicago Township, Cook County, Illinois, United States"
   },
+  "Chicago (2301 West 22nd Place)|IL": {
+    "lat": 41.8755616,
+    "lon": -87.6244212,
+    "source": "nominatim",
+    "place": "Chicago, Cook County, Illinois, United States"
+  },
+  "Chicago (seminary at 3125 S. Parnell Ave.)|IL": {
+    "lat": 41.8755616,
+    "lon": -87.6244212,
+    "source": "nominatim",
+    "place": "Chicago, Cook County, Illinois, United States"
+  },
   "Chicago|IL": {
     "lat": 41.8755616,
     "lon": -87.6244212,
@@ -484,6 +496,12 @@
     "lon": -72.9250518,
     "source": "nominatim",
     "place": "New Haven, South Central Connecticut Planning Region, Connecticut, United States"
+  },
+  "New York City|NY": {
+    "lat": 40.7127281,
+    "lon": -74.0060152,
+    "source": "nominatim",
+    "place": "New York, United States"
   },
   "New York|NY": {
     "lat": 40.7127281,
