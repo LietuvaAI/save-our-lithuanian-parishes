@@ -74,16 +74,18 @@ export default function RootLayout({
                       {item.label}
                       <span className="text-[10px] opacity-60">▾</span>
                     </button>
-                    <div className="absolute top-full left-0 mt-2 hidden group-hover:flex flex-col bg-background border border-rule rounded-md shadow-md py-1 min-w-max z-50">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="px-4 py-2 hover:bg-foreground/5 hover:text-foreground transition-colors whitespace-nowrap"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
+                    <div className="absolute top-full left-0 hidden group-hover:flex flex-col pt-2 min-w-max z-50">
+                      <div className="flex flex-col bg-background border border-rule rounded-md shadow-md py-1">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className="px-4 py-2 hover:bg-foreground/5 hover:text-foreground transition-colors whitespace-nowrap"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 ) : (

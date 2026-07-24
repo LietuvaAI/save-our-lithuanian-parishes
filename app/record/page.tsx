@@ -108,31 +108,25 @@ export default function RecordPage() {
       <h1 className="font-serif text-3xl font-semibold">The Record</h1>
       <div className="mt-3 space-y-4 leading-relaxed max-w-3xl">
         <p>
-          This is the record of America&rsquo;s Lithuanian parishes —{" "}
-          {total} of them across the United States. Until now, no
-          such record existed. The story of these parishes is scattered
-          across a century of Lithuanian-language newspapers, out-of-print
-          books, diocesan archives, and the memories of the people who built
-          and lost them. No diocese keeps it. No archive holds all of it.
-          When a community faces a closure decision today, it cannot see the
-          pattern — because the pattern has never been assembled in one
-          place. That is what this table is.
+          {total} Lithuanian parishes across the United States — Roman
+          Catholic ethnic parishes, National Catholic congregations, and
+          Protestant communities. The information comes from
+          Lithuanian-language newspapers going back to 1909, out-of-print
+          parish histories, diocesan archives, and community memory.
         </p>
         <p className="text-muted">
           {caseFiled} of the {total} are documented in full depth —
           case-filed: every fact verified against dated published sources,
-          with a researched present-day record of where the building, the
-          community, and the property stand now. The rest are attested by
-          the wider research and are being verified toward that same
-          standard, parish by parish. The <strong>Depth</strong> column
-          marks how far each one has come. The record grows in both
-          directions: backward through the archives toward the first
-          parishes of the 1880s, and forward through{" "}
+          with a current record of where the building, the community, and
+          the property stand today. The rest are being verified to that
+          same standard, parish by parish. The{" "}
+          <strong>Depth</strong> column shows where each one stands.
+          The record extends backward through the archives toward the
+          first parishes of the 1880s and forward through{" "}
           <Link href="/report" className="underline hover:text-accent">
             reports from parish communities
           </Link>{" "}
-          today — because closure decisions are being made right now, and a
-          record that stops updating stops protecting anyone.
+          today.
         </p>
       </div>
 
