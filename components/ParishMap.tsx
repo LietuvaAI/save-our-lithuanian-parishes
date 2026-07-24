@@ -1,7 +1,9 @@
 "use client";
 
 // The homepage map: ONE mark system across the whole record (Vilija
-// 2026-07-21). Every point is a circle, one size; color = present status:
+// 2026-07-21). Color = present status; shape = congregation class:
+//   circle              = Roman Catholic parish (default)
+//   diamond             = National Catholic / Independent Catholic parish
 //   red filled          = lost (closed / demolished / merged / suppressed)
 //   red + gold ring     = lost but community is actively fighting (kind=active)
 //   ink filled          = open today, no alert
@@ -53,6 +55,8 @@ interface Point {
   deep: boolean;
   detail: string | null;
   kindLabel: string | null;
+  // congregation_class from registry — drives shape (diamond for PNCC / independent)
+  congregationClass: string | null;
 }
 
 const STATUS_LABEL: Record<Status, string> = {
@@ -119,6 +123,7 @@ function buildPoints(): Point[] {
       deep: true,
       detail: `${OWNERSHIP_LABEL[p.ownership]} · ${ENDING_MODE_LABEL[p.endingMode]}`,
       kindLabel: null,
+      congregationClass: null,
     });
   }
 
@@ -160,8 +165,15 @@ function buildPoints(): Point[] {
       profile: c.kind === "parish" ? `/registry/${c.slug}` : null,
       deep: false,
       detail: null,
+      congregationClass: (c as { congregationClass?: string }).congregationClass ?? null,
       kindLabel:
-        c.kind === "congregation" ? "Non-Catholic Lithuanian congregation" : null,
+        c.kind === "congregation"
+          ? "Non-Catholic Lithuanian congregation"
+          : (c as { congregationClass?: string }).congregationClass === "national_catholic_pncc"
+            ? "National Catholic (independent from Rome)"
+            : (c as { congregationClass?: string }).congregationClass === "independent_catholic"
+              ? "Independent Catholic"
+              : null,
     });
   }
   return pts;
@@ -477,6 +489,8 @@ export default function ParishMap() {
 
             // Base radius: threat-alerted dots slightly larger
             const r = active ? markR * 1.35 : (p.alerted || p.status === "threat" || p.status === "building") ? markR * 1.15 : markR;
+            const isNatCath = p.congregationClass === "national_catholic_pncc" || p.congregationClass === "independent_catholic";
+            const dr = r * 1.2; // diamond half-span
 
             return (
               <g key={p.id}
@@ -499,14 +513,25 @@ export default function ParishMap() {
                   <circle cx={p.x} cy={p.y} r={r * 1.85} fill="none"
                     stroke="var(--mark-community)" strokeOpacity={0.8} strokeWidth={markR * 0.45} />
                 )}
-                <circle
-                  cx={p.x} cy={p.y} r={r}
-                  fill={FILL[p.status]}
-                  fillOpacity={p.status === "unknown" ? 0 : 0.92}
-                  stroke={p.status === "unknown" ? "var(--foreground)" : "var(--background)"}
-                  strokeOpacity={p.status === "unknown" ? 0.45 : 1}
-                  strokeWidth={p.status === "unknown" ? markR * 0.28 : markR * 0.18}
-                />
+                {isNatCath ? (
+                  /* Diamond shape for National Catholic / Independent Catholic parishes */
+                  <polygon
+                    points={`${p.x},${p.y - dr} ${p.x + dr},${p.y} ${p.x},${p.y + dr} ${p.x - dr},${p.y}`}
+                    fill={FILL[p.status]}
+                    fillOpacity={0.9}
+                    stroke="var(--background)"
+                    strokeWidth={markR * 0.18}
+                  />
+                ) : (
+                  <circle
+                    cx={p.x} cy={p.y} r={r}
+                    fill={FILL[p.status]}
+                    fillOpacity={p.status === "unknown" ? 0 : 0.92}
+                    stroke={p.status === "unknown" ? "var(--foreground)" : "var(--background)"}
+                    strokeOpacity={p.status === "unknown" ? 0.45 : 1}
+                    strokeWidth={p.status === "unknown" ? markR * 0.28 : markR * 0.18}
+                  />
+                )}
               </g>
             );
           })}
