@@ -35,6 +35,7 @@ type View = { x: number; y: number; w: number; h: number };
 // Status drives fill color. alerted (gold ring) is a separate boolean.
 type Status = "lost" | "open" | "threat" | "building" | "unknown";
 type Mode = "all" | "open" | "threat" | "lost";
+type ClassFilter = "all" | "roman_catholic" | "national_catholic_pncc" | "non_catholic_christian";
 
 interface Point {
   id: string;
@@ -202,6 +203,7 @@ export default function ParishMap() {
   const router = useRouter();
   const [hovered, setHovered] = useState<Point | null>(null);
   const [mode, setMode] = useState<Mode>("all");
+  const [classFilter, setClassFilter] = useState<ClassFilter>("all");
   const [view, setView] = useState<View>(FULL);
   const [year, setYear] = useState<number | null>(null);
   const [playing, setPlaying] = useState(false);
@@ -336,7 +338,7 @@ export default function ParishMap() {
   const knownPoints = POINTS.filter((p) => p.status !== "unknown");
   const archivePoints = POINTS.filter((p) => p.status === "unknown");
 
-  const visible = timelineMode
+  const statusFiltered = timelineMode
     ? knownPoints
     : mode === "all"
       ? knownPoints
@@ -346,9 +348,35 @@ export default function ParishMap() {
           ? knownPoints.filter((p) => p.status === "lost" || p.status === "building")
           : knownPoints.filter((p) => p.inAlerts || p.status === "threat" || p.status === "building");
 
+  const visible = classFilter === "all"
+    ? statusFiltered
+    : statusFiltered.filter((p) => (p.congregationClass ?? "roman_catholic") === classFilter);
+
   return (
     <div>
-      {/* Single combined filter + key bar */}
+      {/* Congregation class filter */}
+      {!timelineMode && (
+        <div className="mb-2 flex flex-wrap items-center gap-2">
+          {(
+            [
+              { key: "all", label: "All" },
+              { key: "roman_catholic", label: "Catholic" },
+              { key: "national_catholic_pncc", label: "National Catholic" },
+              { key: "non_catholic_christian", label: "Protestant" },
+            ] as { key: ClassFilter; label: string }[]
+          ).map(({ key, label }) => (
+            <button
+              key={key}
+              type="button"
+              className={seg(classFilter === key)}
+              onClick={() => setClassFilter(key)}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      )}
+      {/* Status filter + key bar */}
       <div className="mb-3 flex flex-wrap items-center gap-2">
         {timelineMode ? (
           <>

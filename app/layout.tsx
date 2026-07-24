@@ -27,15 +27,23 @@ export const metadata: Metadata = {
     "The public record of America's Lithuanian parishes — every parish we can document, what happened to it, where it stands today, and what communities can learn from each other.",
 };
 
-const NAV = [
+type NavItem =
+  | { href: string; label: string }
+  | { label: string; children: { href: string; label: string }[] };
+
+const NAV: NavItem[] = [
   { href: "/about", label: "About" },
   { href: "/record", label: "The Record" },
   { href: "/under-threat", label: "Under Threat" },
   { href: "/sustainability-watch", label: "Sustainability Watch" },
   { href: "/start-here", label: "Facing a Closure" },
-  { href: "/about", label: "About" },
-  { href: "/national-catholic", label: "National Catholic" },
-  { href: "/protestant", label: "Protestant" },
+  {
+    label: "Other Congregations",
+    children: [
+      { href: "/national-catholic", label: "National Catholic" },
+      { href: "/protestant", label: "Protestant" },
+    ],
+  },
   { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys (The Hearth)" },
 ];
 
@@ -56,15 +64,38 @@ export default function RootLayout({
               Save Our Lithuanian Parishes
             </Link>
             <nav className="flex items-center gap-5 text-sm text-muted">
-              {NAV.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="hover:text-foreground transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {NAV.map((item) =>
+                "children" in item ? (
+                  <div key={item.label} className="relative group">
+                    <button
+                      type="button"
+                      className="flex items-center gap-1 hover:text-foreground transition-colors"
+                    >
+                      {item.label}
+                      <span className="text-[10px] opacity-60">▾</span>
+                    </button>
+                    <div className="absolute top-full left-0 mt-2 hidden group-hover:flex flex-col bg-background border border-rule rounded-md shadow-md py-1 min-w-max z-50">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          className="px-4 py-2 hover:bg-foreground/5 hover:text-foreground transition-colors whitespace-nowrap"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="hover:text-foreground transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                )
+              )}
             </nav>
           </div>
         </header>
@@ -112,6 +143,12 @@ export default function RootLayout({
               </Link>
               <Link href="/sustainability-watch" className="hover:text-foreground">
                 Sustainability Watch
+              </Link>
+              <Link href="/national-catholic" className="hover:text-foreground">
+                National Catholic
+              </Link>
+              <Link href="/protestant" className="hover:text-foreground">
+                Protestant
               </Link>
               <Link href="/what-canon-law-says" className="hover:text-foreground">
                 What Canon Law Says
