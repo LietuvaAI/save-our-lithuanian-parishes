@@ -84,41 +84,18 @@ const ACTIONS = [
 export default function Home() {
   return (
     <div className="mx-auto max-w-5xl px-4">
-      <section className="pt-12 sm:pt-16 text-center">
-        <p className="text-sm uppercase tracking-widest text-muted mb-3">
+      <section className="pt-6 sm:pt-8 text-center">
+        <p className="text-xs uppercase tracking-widest text-muted mb-2">
           Every parish, from the very beginning
         </p>
-        <h1 className="font-serif text-3xl sm:text-5xl font-semibold leading-tight max-w-3xl mx-auto">
+        <h1 className="font-serif text-2xl sm:text-3xl font-semibold leading-tight max-w-2xl mx-auto">
           The public record of America&rsquo;s Lithuanian parishes
         </h1>
-        <p className="mt-4 max-w-2xl mx-auto text-lg leading-relaxed text-muted">
-          The past is a torch to the present. America&rsquo;s Lithuanian
-          parishes have long been the <em>židiniai</em> of our
-          communities&mdash;the hearths where faith was lived, language was
-          spoken, memory was preserved, and identity was formed. Together, they
-          form an unbroken current connecting the Lithuanian past to the present
-          and lighting the road ahead. This project traces the complete history
-          of America&rsquo;s Lithuanian parishes&mdash;from their earliest
-          foundations to the communities discerning their future today. Seen
-          together, the experience of America&rsquo;s Lithuanian parishes helps
-          illuminate the path ahead, because no individual parish should have
-          to find its way in darkness.
+        <p className="mt-2 max-w-xl mx-auto text-sm leading-relaxed text-muted">
+          This project traces every documented Lithuanian parish in America —
+          from the earliest foundations to the communities discerning their
+          future today. Hover any mark; click to open its record.
         </p>
-        <div className="mt-6 flex flex-wrap gap-3 justify-center">
-          <Link
-            href="/report"
-            className="rounded-md px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
-            style={{ background: "var(--mark-closed)" }}
-          >
-            Report from your parish
-          </Link>
-          <Link
-            href="/record"
-            className="rounded-md border border-rule px-5 py-2.5 text-sm font-medium hover:border-foreground transition-colors"
-          >
-            Find your parish in the record
-          </Link>
-        </div>
       </section>
 
       <section className="mt-8">
