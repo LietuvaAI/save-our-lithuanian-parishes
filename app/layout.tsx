@@ -33,6 +33,7 @@ const NAV = [
   { href: "/sustainability-watch", label: "The Vigil" },
   { href: "/start-here", label: "Facing a Closure" },
   { href: "/national-catholic", label: "National Catholic" },
+  { href: "/protestant", label: "Protestant" },
   { href: "/about", label: "About" },
   { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys (The Hearth)" },
 ];
@@ -123,12 +124,6 @@ export default function RootLayout({
               </Link>
               <Link href="/about-the-data" className="hover:text-foreground">
                 About the data
-              </Link>
-              <Link href="/national-catholic" className="hover:text-foreground">
-                National Catholic
-              </Link>
-              <Link href="/protestant" className="hover:text-foreground">
-                Protestant
               </Link>
               <Link href="/about" className="hover:text-foreground">
                 About
