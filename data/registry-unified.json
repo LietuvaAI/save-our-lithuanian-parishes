@@ -180,7 +180,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Gary"
   },
   {
    "slug": "ann-spring-valley-il",
@@ -339,7 +340,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 5,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Peoria"
   },
   {
    "slug": "george-chicago-il",
@@ -507,7 +509,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "michael-north-chicago-il",
@@ -581,7 +584,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "gateofdawn-chicago-il",
@@ -765,7 +769,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "casimir-chicago-il",
@@ -834,7 +839,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "joseph-south-chicago-il",
@@ -969,7 +975,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "providence-chicago-il",
@@ -1137,7 +1144,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "holycross-chicago-il",
@@ -1307,7 +1315,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "parish-oglesby-il",
@@ -1388,7 +1397,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Peoria"
   },
   {
    "slug": "francis-east-chicago-in",
@@ -1506,7 +1516,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Gary"
   },
   {
    "slug": "casimir-sioux-city-ia",
@@ -1633,7 +1644,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Sioux City"
   },
   {
    "slug": "casimir-kansas-city-mo",
@@ -1701,7 +1713,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Kansas City-St. Joseph"
   },
   {
    "slug": "casimir-brockton-ma",
@@ -1791,7 +1804,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Boston"
   },
   {
    "slug": "peter-cambridge-ma",
@@ -1943,7 +1957,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Boston"
   },
   {
    "slug": "francis-lawrence-ma",
@@ -2037,7 +2052,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Boston"
   },
   {
    "slug": "holyname-haverhill-ma",
@@ -2118,7 +2134,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Boston"
   },
   {
    "slug": "george-norwood-ma",
@@ -2235,7 +2252,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Boston"
   },
   {
    "slug": "casimir-worcester-ma",
@@ -2400,7 +2418,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Worcester"
   },
   {
    "slug": "gateofdawn-worcester-ma",
@@ -2485,7 +2504,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Worcester"
   },
   {
    "slug": "gateofdawn-manhattan-ny",
@@ -2618,7 +2638,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of New York"
   },
   {
    "slug": "george-rochester-ny",
@@ -2737,7 +2758,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Rochester"
   },
   {
    "slug": "george-brooklyn-ny",
@@ -2836,7 +2858,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Brooklyn"
   },
   {
    "slug": "george-niagara-falls-ny",
@@ -2946,7 +2969,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Buffalo"
   },
   {
    "slug": "casimir-amsterdam-ny",
@@ -3058,7 +3082,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Albany"
   },
   {
    "slug": "michael-bayonne-nj",
@@ -3143,7 +3168,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Newark"
   },
   {
    "slug": "holyname-newark-nj",
@@ -3211,7 +3237,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Newark"
   },
   {
    "slug": "casimir-paterson-nj",
@@ -3323,7 +3350,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Paterson"
   },
   {
    "slug": "andrew-new-britain-ct",
@@ -3464,7 +3492,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Hartford"
   },
   {
    "slug": "casimir-new-haven-ct",
@@ -3545,7 +3574,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Hartford"
   },
   {
    "slug": "holyname-ansonia-ct",
@@ -3608,7 +3638,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Hartford"
   },
   {
    "slug": "joseph-waterbury-ct",
@@ -3763,7 +3794,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Hartford"
   },
   {
    "slug": "casimir-nashua-nh",
@@ -3858,7 +3890,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Manchester"
   },
   {
    "slug": "anthony-detroit-mi",
@@ -4007,7 +4040,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Detroit"
   },
   {
    "slug": "peter-detroit-mi",
@@ -4180,7 +4214,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 5,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Detroit"
   },
   {
    "slug": "anthony-omaha-ne",
@@ -4323,7 +4358,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Omaha"
   },
   {
    "slug": "george-cleveland-oh",
@@ -4501,7 +4537,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 5,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Cleveland"
   },
   {
    "slug": "motherofgod-cleveland-oh",
@@ -4656,7 +4693,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Cleveland"
   },
   {
    "slug": "george-shenandoah-pa",
@@ -4782,7 +4820,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Allentown"
   },
   {
    "slug": "casimir-pittston-pa",
@@ -4906,7 +4945,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "trinity-wilkes-barre-pa",
@@ -4987,7 +5027,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "annunciation-kingston-pa",
@@ -5063,7 +5104,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "paul-esplen-pa",
@@ -5162,7 +5204,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Pittsburgh"
   },
   {
    "slug": "casimir-pittsburgh-pa",
@@ -5291,7 +5334,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Pittsburgh"
   },
   {
    "slug": "joseph-scranton-pa",
@@ -5429,7 +5473,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Scranton (Bishop O'Hara)"
   },
   {
    "slug": "michael-scranton-pa",
@@ -5544,7 +5589,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "john-coaldale-pa",
@@ -5639,7 +5685,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Allentown"
   },
   {
    "slug": "gateofdawn-archbald-pa",
@@ -5707,7 +5754,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "holycross-mount-carmel-pa",
@@ -5876,7 +5924,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 5,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Harrisburg"
   },
   {
    "slug": "motherofgod-maizeville-pa",
@@ -5949,7 +5998,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Allentown"
   },
   {
    "slug": "paul-girardville-pa",
@@ -6076,7 +6126,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Allentown"
   },
   {
    "slug": "joseph-nanticoke-pa",
@@ -6222,7 +6273,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "casimir-providence-ri",
@@ -6337,7 +6389,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Providence"
   },
   {
    "slug": "andrew-philadelphia-pa",
@@ -6440,7 +6493,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Philadelphia"
   },
   {
    "slug": "casimir-philadelphia-pa",
@@ -6575,7 +6629,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Philadelphia"
   },
   {
    "slug": "george-philadelphia-pa",
@@ -6669,7 +6724,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Philadelphia"
   },
   {
    "slug": "peter-boston-ma",
@@ -6848,7 +6904,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Boston"
   },
   {
    "slug": "holycross-dayton-oh",
@@ -6981,7 +7038,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Cleveland"
   },
   {
    "slug": "casimir-cleveland-oh",
@@ -7083,7 +7141,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Cleveland"
   },
   {
    "slug": "nativity-chicago-il",
@@ -7231,7 +7290,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "immaculate-chicago-il",
@@ -7364,7 +7424,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "anthony-cicero-il",
@@ -7497,7 +7558,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "providence-southfield-mi",
@@ -7623,7 +7685,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Detroit"
   },
   {
    "slug": "george-lemont-il",
@@ -7727,7 +7790,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "annunciation-brooklyn-ny",
@@ -7828,7 +7892,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Brooklyn"
   },
   {
    "slug": "transfiguration-maspeth-ny",
@@ -7954,7 +8019,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Brooklyn"
   },
   {
    "slug": "paul-elizabeth-nj",
@@ -8043,7 +8109,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Newark"
   },
   {
    "slug": "parish-kearny-nj",
@@ -8106,7 +8173,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Newark"
   },
   {
    "slug": "george-bridgeport-ct",
@@ -8211,7 +8279,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Bridgeport"
   },
   {
    "slug": "trinity-hartford-ct",
@@ -8332,7 +8401,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Hartford"
   },
   {
    "slug": "ann-luzerne-pa",
@@ -8440,7 +8510,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "mary-frackville-pa",
@@ -8547,7 +8618,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Allentown"
   },
   {
    "slug": "casimir-los-angeles-ca",
@@ -8683,7 +8755,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 5,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Los Angeles"
   },
   {
    "slug": "paul-grand-rapids-mi",
@@ -8839,7 +8912,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 5,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Grand Rapids"
   },
   {
    "slug": "immaculate-east-st-louis-il",
@@ -8962,7 +9036,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Bellevue (Belleville)"
   },
   {
    "slug": "casimir-waterbury-ct",
@@ -9040,7 +9115,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Hartford"
   },
   {
    "slug": "holyname-baltimore-md",
@@ -9103,7 +9179,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Baltimore"
   },
   {
    "slug": "providence-scranton-pa",
@@ -9239,7 +9316,8 @@
    },
    "congregation_class": "national_catholic_pncc",
    "axes_count": 5,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "jesus-lawrence-ma",
@@ -9413,7 +9491,8 @@
    },
    "congregation_class": "national_catholic_pncc",
    "axes_count": 4,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Boston"
   },
   {
    "slug": "mary-philadelphia-pa",
@@ -9510,7 +9589,8 @@
    },
    "congregation_class": "national_catholic_pncc",
    "axes_count": 3,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Archdiocese of Philadelphia"
   },
   {
    "slug": "parish-westville-il",
@@ -9578,7 +9658,8 @@
    },
    "congregation_class": "national_catholic_pncc",
    "axes_count": 1,
-   "record_depth": "case-filed"
+   "record_depth": "case-filed",
+   "diocese": "Diocese of Peoria"
   },
   {
    "slug": "angels-darien-il",
@@ -9645,7 +9726,8 @@
    "city_history": [
     "Darien",
     "Chicago (later Oak Lawn from 1974)"
-   ]
+   ],
+   "diocese": "Diocese of Joliet"
   },
   {
    "slug": "parish-collinsville-il",
@@ -9717,7 +9799,8 @@
    ],
    "city_history": [
     "Collinsville"
-   ]
+   ],
+   "diocese": "Diocese of Belleville"
   },
   {
    "slug": "casimir-montreal-qc",
@@ -9797,7 +9880,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": null
   },
   {
    "slug": "gateofdawn-montreal-qc",
@@ -9891,7 +9975,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": null
   },
   {
    "slug": "casimir-delhi-on",
@@ -9959,7 +10044,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": null
   },
   {
    "slug": "st-joseph-mahanoy-city-pa",
@@ -10026,7 +10112,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Allentown"
   },
   {
    "slug": "ss-peter-and-paul-tamaqua-pa",
@@ -10098,7 +10185,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Allentown"
   },
   {
    "slug": "sacred-heart-new-philadelphia-pa",
@@ -10167,7 +10255,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Allentown"
   },
   {
    "slug": "lithuanian-church-middleport-pa",
@@ -10225,7 +10314,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Allentown"
   },
   {
    "slug": "st-francis-minersville-pa",
@@ -10298,7 +10388,8 @@
    "congregation_class": "roman_catholic",
    "axes_count": 3,
    "record_depth": "multi-source",
-   "caveat": "Closed year 2020 removed — derived from TrueLithuania yearsMentioned, not a documented closure date. Draugas last mention is 2007. Pending verification."
+   "caveat": "Closed year 2020 removed — derived from TrueLithuania yearsMentioned, not a documented closure date. Draugas last mention is 2007. Pending verification.",
+   "diocese": "Diocese of Allentown"
   },
   {
    "slug": "st-casimir-st-clair-pa",
@@ -10372,7 +10463,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Allentown"
   },
   {
    "slug": "st-michael-shamokin-pa",
@@ -10430,7 +10522,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Harrisburg"
   },
   {
    "slug": "ss-peter-and-paul-hazleton-pa",
@@ -10556,7 +10649,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "unspecified (Irish bishop)"
   },
   {
    "slug": "st-casimir-mcadoo-pa",
@@ -10614,7 +10708,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Allentown"
   },
   {
    "slug": "st-anthony-forest-city-pa",
@@ -10667,7 +10762,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "our-lady-of-vilna-eynon-pa",
@@ -10730,7 +10826,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "st-joseph-duryea-pa",
@@ -10783,7 +10880,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "st-francis-wilkes-barre-pa",
@@ -10846,7 +10944,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "all-saints-wilkes-barre-pa",
@@ -10915,7 +11014,8 @@
    },
    "congregation_class": "national_catholic_pncc",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "st-casimir-wilkes-barre-pa",
@@ -10973,7 +11073,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "ss-peter-and-paul-sugar-notch-pa",
@@ -11031,7 +11132,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "st-mary-wanamie-pa",
@@ -11089,7 +11191,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "lithuanian-church-chester-pa",
@@ -11147,7 +11250,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Archdiocese of Philadelphia"
   },
   {
    "slug": "ascension-pittsburgh-pa",
@@ -11202,7 +11306,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Pittsburgh"
   },
   {
    "slug": "st-isidore-braddock-pa",
@@ -11265,7 +11370,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Pittsburgh"
   },
   {
    "slug": "ss-peter-and-paul-homestead-pa",
@@ -11328,7 +11434,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Pittsburgh"
   },
   {
    "slug": "st-anthony-bridgeville-pa",
@@ -11391,7 +11498,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Pittsburgh"
   },
   {
    "slug": "st-joseph-donora-pa",
@@ -11454,7 +11562,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Pittsburgh"
   },
   {
    "slug": "st-luke-bentleyville-pa",
@@ -11512,7 +11621,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Pittsburgh"
   },
   {
    "slug": "st-casimir-east-vandergrift-pa",
@@ -11581,7 +11691,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Greensburg"
   },
   {
    "slug": "st-joseph-lowell-ma",
@@ -11655,7 +11766,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Archdiocese of Boston"
   },
   {
    "slug": "st-francis-athol-ma",
@@ -11756,7 +11868,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Worcester"
   },
   {
    "slug": "st-casimir-westfield-ma",
@@ -11819,7 +11932,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Springfield in Massachusetts"
   },
   {
    "slug": "lithuanian-church-waterbury-ct",
@@ -11869,7 +11983,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Hartford"
   },
   {
    "slug": "st-anthony-ansonia-ct",
@@ -11954,7 +12069,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Archdiocese of Hartford"
   },
   {
    "slug": "st-mary-of-the-angels-brooklyn-ny",
@@ -12025,7 +12141,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Brooklyn"
   },
   {
    "slug": "st-george-albany-ny",
@@ -12105,7 +12222,8 @@
    "congregation_class": "roman_catholic",
    "axes_count": 3,
    "record_depth": "multi-source",
-   "caveat": "Closed year 1986 source corrected to truelithuania; original mis-attributed to Draugas."
+   "caveat": "Closed year 1986 source corrected to truelithuania; original mis-attributed to Draugas.",
+   "diocese": "Diocese of Albany"
   },
   {
    "slug": "holy-cross-schenectady-ny",
@@ -12163,7 +12281,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Albany"
   },
   {
    "slug": "st-george-utica-ny",
@@ -12221,7 +12340,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Syracuse"
   },
   {
    "slug": "st-joseph-binghamton-ny",
@@ -12293,7 +12413,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Syracuse"
   },
   {
    "slug": "holy-trinity-newark-nj",
@@ -12366,7 +12487,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Archdiocese of Newark"
   },
   {
    "slug": "our-lady-of-sorrows-kearny-nj",
@@ -12436,7 +12558,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Newark"
   },
   {
    "slug": "st-ann-jersey-city-nj",
@@ -12494,7 +12617,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Archdiocese of Newark"
   },
   {
    "slug": "lithuanian-church-harrison-nj",
@@ -12572,7 +12696,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Archdiocese of Newark"
   },
   {
    "slug": "all-saints-chicago-il",
@@ -12704,7 +12829,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "st-casimir-chicago-heights-il",
@@ -12778,7 +12904,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "ss-peter-and-paul-chicago-il",
@@ -12942,7 +13069,8 @@
    "congregation_class": "roman_catholic",
    "axes_count": 4,
    "record_depth": "multi-source",
-   "caveat": "Closed year 2022 removed — derived from TrueLithuania yearsMentioned, not documented. Other closure entries retained."
+   "caveat": "Closed year 2022 removed — derived from TrueLithuania yearsMentioned, not documented. Other closure entries retained.",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "st-bartholomew-waukegan-il",
@@ -13070,7 +13198,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "ss-peter-and-paul-rockford-il",
@@ -13176,7 +13305,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 4,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Rockford"
   },
   {
    "slug": "st-vincent-de-paul-springfield-il",
@@ -13239,7 +13369,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Springfield in Illinois"
   },
   {
    "slug": "st-anthony-kewanee-il",
@@ -13302,7 +13433,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Peoria"
   },
   {
    "slug": "ss-peter-and-paul-westville-il",
@@ -13420,7 +13552,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Archdiocese of Chicago (per Cis correspondence, AAChic cited) / possibly Peoria diocese (Skrypka transferred to Chicago's Holy Cross from here)"
   },
   {
    "slug": "holy-cross-westville-il",
@@ -13573,7 +13706,8 @@
    },
    "congregation_class": "national_catholic_pncc",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Peoria"
   },
   {
    "slug": "st-francis-youngstown-oh",
@@ -13653,7 +13787,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Cleveland"
   },
   {
    "slug": "st-peter-akron-oh",
@@ -13734,7 +13869,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Cleveland"
   },
   {
    "slug": "st-george-detroit-mi",
@@ -13843,7 +13979,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Archdiocese of Detroit"
   },
   {
    "slug": "st-george-saginaw-mi",
@@ -13961,7 +14098,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Saginaw"
   },
   {
    "slug": "st-gabriel-milwaukee-wi",
@@ -14056,7 +14194,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Archdiocese of Milwaukee"
   },
   {
    "slug": "st-casimir-racine-wi",
@@ -14175,7 +14314,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Archdiocese of Milwaukee"
   },
   {
    "slug": "st-peter-kenosha-wi",
@@ -14265,7 +14405,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Archdiocese of Milwaukee"
   },
   {
    "slug": "immaculate-conception-sheboygan-wi",
@@ -14371,7 +14512,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Archdiocese of Milwaukee"
   },
   {
    "slug": "st-ambrose-port-washington-wi",
@@ -14471,7 +14613,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Archdiocese of Milwaukee"
   },
   {
    "slug": "st-casimir-kansas-city-ks",
@@ -14526,7 +14669,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Kansas City in Kansas"
   },
   {
    "slug": "st-joseph-st-louis-mo",
@@ -14645,7 +14789,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Archdiocese of St. Louis"
   },
   {
    "slug": "st-alphonsus-baltimore-md",
@@ -14736,7 +14881,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Archdiocese of Baltimore"
   },
   {
    "slug": "st-john-the-baptist-baltimore-md",
@@ -14813,7 +14959,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Archdiocese of Baltimore"
   },
   {
    "slug": "st-casimir-st-pete-beach-fl",
@@ -14884,7 +15031,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of St. Petersburg"
   },
   {
    "slug": "st-casimir-plymouth-pa",
@@ -14934,7 +15082,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "st-joseph-du-bois-pa",
@@ -14984,7 +15133,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Altoona-Johnstown"
   },
   {
    "slug": "lithuanian-easton-pa",
@@ -15034,7 +15184,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Allentown"
   },
   {
    "slug": "st-ann-beverly-shores-in",
@@ -15093,7 +15244,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Gary"
   },
   {
    "slug": "lithuanian-union-pier-mi",
@@ -15143,7 +15295,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Kalamazoo"
   },
   {
    "slug": "lithuanian-toronto-on",
@@ -15206,7 +15359,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": null
   },
   {
    "slug": "christ-the-king-sudbury-on",
@@ -15256,7 +15410,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": null
   },
   {
    "slug": "st-catherine-st-catharines-on",
@@ -15306,7 +15461,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": null
   },
   {
    "slug": "lithuanian-bronx-ny",
@@ -15356,7 +15512,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of New York"
   },
   {
    "slug": "louis-maizeville-pa",
@@ -15401,7 +15558,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Allentown"
   },
   {
    "slug": "ascension-pittsburgh-pa-2",
@@ -15451,7 +15609,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Pittsburgh"
   },
   {
    "slug": "lithuanian-national-catholic-parish-waterbury-ct",
@@ -15496,7 +15655,8 @@
    },
    "congregation_class": "national_catholic_pncc",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Hartford"
   },
   {
    "slug": "paul-naugatuck-ct",
@@ -15548,7 +15708,8 @@
    ],
    "city_history": [
     "Naugatuck"
-   ]
+   ],
+   "diocese": "Archdiocese of Hartford"
   },
   {
    "slug": "sorrows-kearny-nj",
@@ -15593,7 +15754,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Newark"
   },
   {
    "slug": "zion-lithuanian-lutheran-oak-lawn-il",
@@ -15647,7 +15809,8 @@
    "city_history": [
     "Oak Lawn",
     "Chicago (Bridgeport, later Oak Lawn from 1974)"
-   ]
+   ],
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "casimir-kansas-city-ks",
@@ -15697,7 +15860,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Kansas City in Kansas"
   },
   {
    "slug": "francis-indian-harbor-in",
@@ -15778,7 +15942,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Gary"
   },
   {
    "slug": "mary-custer-mi",
@@ -15864,7 +16029,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Grand Rapids (unspecified in text)"
   },
   {
    "slug": "bernard-irons-mi",
@@ -15957,7 +16123,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Grand Rapids"
   },
   {
    "slug": "parish-scottville-mi",
@@ -16005,7 +16172,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Grand Rapids"
   },
   {
    "slug": "ignatius-luther-mi",
@@ -16053,7 +16221,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Grand Rapids"
   },
   {
    "slug": "mary-harrisburg-il",
@@ -16101,7 +16270,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Belleville"
   },
   {
    "slug": "george-pittsburgh-pa",
@@ -16182,7 +16352,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Pittsburgh"
   },
   {
    "slug": "mary-chicago-il",
@@ -16236,7 +16407,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "joseph-cambridge-ma",
@@ -16296,7 +16468,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Boston"
   },
   {
    "slug": "holycross-cleveland-oh",
@@ -16356,7 +16529,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Cleveland"
   },
   {
    "slug": "parish-scranton-pa",
@@ -16410,7 +16584,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "parish-chicago-il",
@@ -16464,7 +16639,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "parish-melrose-park-il",
@@ -16512,7 +16688,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "parish-avellaneda-ar",
@@ -16566,7 +16743,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": null
   },
   {
    "slug": "casimir-rosario-ar",
@@ -16614,7 +16792,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": null
   },
   {
    "slug": "parish-grand-prairie-ar",
@@ -16695,7 +16874,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Little Rock"
   },
   {
    "slug": "rosary-hartshorne-in",
@@ -16743,7 +16923,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Gary"
   },
   {
    "slug": "casimir-kansas-city-ka",
@@ -16803,7 +16984,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Kansas City in Kansas"
   },
   {
    "slug": "parish-minneapolis-mi",
@@ -16857,7 +17039,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Saint Paul and Minneapolis"
   },
   {
    "slug": "parish-denver-globeville-co",
@@ -16932,7 +17115,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Denver"
   },
   {
    "slug": "parish-portland-or",
@@ -16986,7 +17170,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Portland in Oregon"
   },
   {
    "slug": "parish-yorktown-houston-galveston-te",
@@ -17040,7 +17225,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Victoria"
   },
   {
    "slug": "parish-thompson-ct",
@@ -17100,7 +17286,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Norwich"
   },
   {
    "slug": "parish-freeland-pa",
@@ -17157,7 +17344,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "george-mahanoy-city-pa",
@@ -17214,7 +17402,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "unspecified (Irish bishop)"
   },
   {
    "slug": "parish-mt-pleasant-pa",
@@ -17271,7 +17460,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Greensburg"
   },
   {
    "slug": "anthony-philadelphia-pa",
@@ -17381,7 +17571,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "unspecified (Irish bishop); Papal delegate in Washington intervened"
   },
   {
    "slug": "holyname-scranton-pa",
@@ -17438,7 +17629,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "unspecified (Irish bishop)"
   },
   {
    "slug": "joseph-custer-mi",
@@ -17495,7 +17687,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Grand Rapids"
   },
   {
    "slug": "casimir-boston-ma",
@@ -17552,7 +17745,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Boston (Archbishop Williams)"
   },
   {
    "slug": "holycross-brooklyn-ny",
@@ -17597,7 +17791,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Brooklyn"
   },
   {
    "slug": "holyname-philadelphia-pa",
@@ -17642,7 +17837,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Philadelphia"
   },
   {
    "slug": "parish-pittsburgh-pa",
@@ -17687,7 +17883,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Pittsburgh"
   },
   {
    "slug": "vincent-pittsburgh-pa",
@@ -17732,7 +17929,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Pittsburgh"
   },
   {
    "slug": "allsaints-worcester-ma",
@@ -17789,7 +17987,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Worcester"
   },
   {
    "slug": "trinity-new-york-ny",
@@ -17840,7 +18039,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of New York"
   },
   {
    "slug": "lawrence-lawrence-ma",
@@ -17892,7 +18092,8 @@
    },
    "congregation_class": "national_catholic_pncc",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Boston"
   },
   {
    "slug": "parish-wilkes-barre-pa",
@@ -17944,7 +18145,8 @@
    },
    "congregation_class": "national_catholic_pncc",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Scranton"
   },
   {
    "slug": "parish-baltimore-md",
@@ -17996,7 +18198,8 @@
    },
    "congregation_class": "national_catholic_pncc",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Baltimore"
   },
   {
    "slug": "joseph-dubois-pa",
@@ -18069,7 +18272,8 @@
    },
    "congregation_class": "national_catholic_pncc",
    "axes_count": 2,
-   "record_depth": "multi-source"
+   "record_depth": "multi-source",
+   "diocese": "Diocese of Altoona-Johnstown"
   },
   {
    "slug": "parish-chicago-il-2",
@@ -18127,7 +18331,8 @@
    },
    "congregation_class": "national_catholic_pncc",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "providence-providence-ri",
@@ -18179,7 +18384,8 @@
    },
    "congregation_class": "national_catholic_pncc",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Providence"
   },
   {
    "slug": "parish-worcester-ma",
@@ -18225,7 +18431,8 @@
    },
    "congregation_class": "national_catholic_pncc",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Worcester"
   },
   {
    "slug": "parish-westville-il-2",
@@ -18270,7 +18477,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Peoria"
   },
   {
    "slug": "parish-chicago-il-3",
@@ -18315,7 +18523,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "parish-worcester-ma-2",
@@ -18360,7 +18569,8 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Worcester"
   },
   {
    "slug": "casimir-winnipeg-mb",
@@ -18407,7 +18617,8 @@
    "events_refs": [],
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": null
   },
   {
    "slug": "parish-wasaga-beach-on",
@@ -18453,7 +18664,8 @@
    "events_refs": [],
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": null
   },
   {
    "slug": "christ-toronto-on",
@@ -18496,7 +18708,8 @@
    "events_refs": [],
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": null
   },
   {
    "slug": "john-toronto-on",
@@ -18541,7 +18754,8 @@
    "events_refs": [],
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": null
   },
   {
    "slug": "angels-st-catharines-on",
@@ -18584,7 +18798,8 @@
    "events_refs": [],
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": null
   },
   {
    "slug": "gateofdawn-hamilton-on",
@@ -18628,7 +18843,8 @@
    "events_refs": [],
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": null
   },
   {
    "slug": "parish-maizeville-pa",
@@ -18675,7 +18891,8 @@
    "events_refs": [],
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Allentown"
   },
   {
    "slug": "parish-lawrence-ma",
@@ -18718,7 +18935,8 @@
    "events_refs": [],
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Boston"
   },
   {
    "slug": "mary-kearny-nj",
@@ -18762,7 +18980,8 @@
    "events_refs": [],
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Archdiocese of Newark"
   },
   {
    "slug": "annunciation-maspeth-ny",
@@ -18823,7 +19042,8 @@
    "events_refs": [],
    "congregation_class": "roman_catholic",
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "diocese": "Diocese of Brooklyn"
   },
   {
    "slug": "bukauskas-independent-chicago",
@@ -18862,7 +19082,8 @@
    ],
    "city_history": [
     "Chicago (2301 West 22nd Place)"
-   ]
+   ],
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "jonistai-chicago",
@@ -18901,7 +19122,8 @@
    ],
    "city_history": [
     "Chicago (seminary at 3125 S. Parnell Ave.)"
-   ]
+   ],
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "springfield-independent",
@@ -18940,7 +19162,8 @@
    ],
    "city_history": [
     "Springfield"
-   ]
+   ],
+   "diocese": "Diocese of Springfield in Illinois"
   },
   {
    "slug": "protestant-parish-nyc",
@@ -18979,7 +19202,8 @@
    ],
    "city_history": [
     "New York City"
-   ]
+   ],
+   "diocese": "Archdiocese of New York"
   },
   {
    "slug": "first-lutheran-boston",
@@ -19018,7 +19242,8 @@
    ],
    "city_history": [
     "Boston"
-   ]
+   ],
+   "diocese": "Archdiocese of Boston"
   },
   {
    "slug": "evangelical-reformed-chicago",
@@ -19057,7 +19282,8 @@
    ],
    "city_history": [
     "Chicago"
-   ]
+   ],
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "raymond-baptist-chicago",
@@ -19110,7 +19336,8 @@
    "city_history": [
     "Chicago",
     "Toronto"
-   ]
+   ],
+   "diocese": "Archdiocese of Chicago"
   },
   {
    "slug": "cong-lithuanian-evangelical-union-c",
@@ -19151,7 +19378,8 @@
    ],
    "city_history": [
     "Toronto"
-   ]
+   ],
+   "diocese": null
   },
   {
    "slug": "cong-lithuanian-evangelical-luthera",
@@ -19192,7 +19420,8 @@
    ],
    "city_history": [
     "Boston"
-   ]
+   ],
+   "diocese": "Archdiocese of Boston"
   },
   {
    "slug": "cong-lithuanian-evangelical-parish",
@@ -19233,7 +19462,8 @@
    ],
    "city_history": [
     "Los Angeles"
-   ]
+   ],
+   "diocese": "Archdiocese of Los Angeles"
   }
  ]
 }

@@ -226,7 +226,7 @@ export function getSituationByRegistrySlug(registrySlug: string): ParishSituatio
 // ---------------------------------------------------------------------------
 
 export const BUILDING_FATE_LINK: Record<BuildingFate, string> = {
-  demolished: "/about#demolished",
+  demolished: "/about#buildings",
   standing: "/about#buildings",
   repurposed_religious: "/about#buildings",
   repurposed_secular: "/about#buildings",
@@ -235,9 +235,9 @@ export const BUILDING_FATE_LINK: Record<BuildingFate, string> = {
 };
 
 export const LITHUANIAN_IDENTITY_LINK: Record<LithuanianIdentity, string> = {
-  active_parish: "/about#standing",
-  mass_continues: "/about#mass-continues",
-  ethnically_transferred: "/about#transferred",
+  active_parish: "/about#identity",
+  mass_continues: "/about#identity",
+  ethnically_transferred: "/about#identity",
   lost: "/about#identity",
 };
 

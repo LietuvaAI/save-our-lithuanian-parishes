@@ -32,6 +32,7 @@ interface RegParish {
   };
   sources?: { ethnic_status?: string }[];
   congregation_class?: string;
+  diocese?: string | null;
   record_depth: RegistryRow["depth"];
 }
 
@@ -90,6 +91,7 @@ function buildRows(): RegistryRow[] {
       depth: p.record_depth,
       congregationClass: (p.congregation_class as RegistryRow["congregationClass"]) ?? null,
       ownership: libOk ? (lib.ownership as Ownership) : null,
+      diocese: (p.diocese as string) ?? null,
       profileHref: libOk
         ? `/parishes/${lib.slug}`
         : p.c83_row == null
