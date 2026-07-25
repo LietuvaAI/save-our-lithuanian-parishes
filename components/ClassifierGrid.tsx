@@ -11,6 +11,7 @@ import {
   OWNERSHIP_SHORT,
   OWNERSHIP_LINK,
 } from "@/lib/parishes";
+import { IDENTITY_COLOR, FATE_COLOR } from "@/lib/unified-status";
 
 /**
  * Prominent, clickable classifier grid for parish profile pages.
@@ -119,26 +120,10 @@ export function ClassifierGrid({
   );
 }
 
-function accentForFate(fate: BuildingFate): string | undefined {
-  switch (fate) {
-    case "demolished":
-      return "var(--mark-closed)";
-    case "standing":
-      return "var(--mark-standing)";
-    case "derelict":
-      return "var(--mark-closed)";
-    default:
-      return undefined;
-  }
+function accentForFate(fate: BuildingFate): string {
+  return FATE_COLOR[fate];
 }
 
-function accentForIdentity(id: LithuanianIdentity): string | undefined {
-  switch (id) {
-    case "active_parish":
-      return "var(--mark-standing)";
-    case "lost":
-      return "var(--mark-closed)";
-    default:
-      return undefined;
-  }
+function accentForIdentity(id: LithuanianIdentity): string {
+  return IDENTITY_COLOR[id];
 }

@@ -45,12 +45,11 @@ function StatusBadge({ status }: { status: string | null }) {
   const isOpen = key === "standing";
   return (
     <span
-      className={
-        "inline-flex rounded-full px-2 py-0.5 text-xs font-medium " +
-        (isOpen
-          ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300"
-          : "bg-stone-100 text-stone-600 dark:bg-stone-800 dark:text-stone-400")
-      }
+      className="inline-flex rounded-full px-2 py-0.5 text-xs font-medium"
+      style={{
+        background: isOpen ? "var(--mark-standing)" : "var(--muted)",
+        color: isOpen ? "#fff" : "var(--foreground)",
+      }}
     >
       {label}
     </span>
