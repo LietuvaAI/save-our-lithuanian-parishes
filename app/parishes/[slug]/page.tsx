@@ -17,6 +17,8 @@ import {
   STATUS_LABEL,
   INSTITUTION_TYPE_LABEL,
 } from "@/lib/parishes";
+import { resolveAlertStatus, resolveIdentity, resolveFate } from "@/lib/unified-status";
+import { StatusPills } from "@/components/StatusPills";
 
 interface CaseSource {
   title: string;
@@ -161,6 +163,16 @@ export default async function ParishPage({
       </p>
 
       <div className="mt-4 flex flex-wrap items-center gap-2">
+        <StatusPills
+          identity={resolveIdentity(parish.lithuanianIdentity)}
+          alert={resolveAlertStatus(
+            (parishAlert?.kind as "active" | "watch" | "building") ?? null,
+            !!watchEntry
+          )}
+          fate={resolveFate(parish.buildingFate)}
+        />
+      </div>
+      <div className="mt-2 flex flex-wrap items-center gap-2">
         <span className="inline-flex items-center gap-1.5 rounded-full border border-rule px-3 py-1 text-sm font-medium">
           <MarkIcon mode={parish.endingMode} size={12} />
           {ENDING_MODE_LABEL[parish.endingMode]}

@@ -64,26 +64,18 @@ const GOVERNANCE_LABEL: Record<string, string> = {
 function ClergyBadge({ arrangement }: { arrangement: string }) {
   const isHealthy = arrangement === "lithuanian_klebonas";
   const isWarning = arrangement === "collaborative_pastor" || arrangement === "visiting_priest";
+  const dotColor = isHealthy
+    ? "var(--mark-standing)"
+    : isWarning
+      ? "var(--mark-community)"
+      : "var(--muted)";
   return (
     <span
-      className={
-        "inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-medium " +
-        (isHealthy
-          ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300"
-          : isWarning
-            ? "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300"
-            : "bg-stone-100 text-stone-600 dark:bg-stone-800 dark:text-stone-400")
-      }
+      className="inline-flex items-center gap-1.5 rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium"
     >
       <span
-        className={
-          "inline-block h-1.5 w-1.5 rounded-full " +
-          (isHealthy
-            ? "bg-emerald-500"
-            : isWarning
-              ? "bg-amber-500"
-              : "bg-stone-400")
-        }
+        className="inline-block h-1.5 w-1.5 rounded-full"
+        style={{ background: dotColor }}
         aria-hidden
       />
       {CLERGY_LABEL[arrangement] ?? arrangement}

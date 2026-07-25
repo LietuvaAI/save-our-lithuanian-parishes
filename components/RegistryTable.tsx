@@ -2,17 +2,19 @@
 
 import { useMemo, useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { type Ownership, OWNERSHIP_SHORT } from "@/lib/parishes";
 import {
-  type EndingMode,
-  type Ownership,
-  type LithuanianIdentity,
-  type BuildingFate,
-  OWNERSHIP_SHORT,
-  LITHUANIAN_IDENTITY_LABEL,
-  BUILDING_FATE_LABEL,
-} from "@/lib/parishes";
-
-export type ParishStatus = "open" | "threat" | "closed" | "unverified";
+  type IdentityStatus,
+  type AlertStatus,
+  type FateStatus,
+  IDENTITY_LABEL,
+  IDENTITY_ORDER,
+  ALERT_LABEL,
+  ALERT_ORDER,
+  FATE_LABEL,
+  FATE_ORDER,
+} from "@/lib/unified-status";
+import { IdentityPill, AlertPill, FatePill } from "@/components/StatusPills";
 
 /** One serializable row of the full research registry (built server-side). */
 export interface RegistryRow {
@@ -22,8 +24,13 @@ export interface RegistryRow {
   state: string;
   country: "US" | "CA";
   comparator: boolean;
-  status: ParishStatus;
-  endingMode: EndingMode | null;
+  // Three unified dimensions
+  identity: IdentityStatus;
+  alert: AlertStatus;
+  fate: FateStatus;
+  // Additional fields
+  ownership: Ownership | null;
+  diocese: string | null;
   founded: string | null;
   closed: string | null;
   depth: "case-filed" | "multi-source" | "single-source";
@@ -32,49 +39,16 @@ export interface RegistryRow {
     | "national_catholic_pncc"
     | "non_catholic_christian"
     | null;
-  ownership: Ownership | null;
-  lithuanianIdentity: LithuanianIdentity | null;
-  buildingFate: BuildingFate | null;
   profileHref: string | null;
 }
 
 const ALL = "all";
 
-// Compact labels for table cells
+// Compact ownership labels for table cells
 const OWNERSHIP_CELL: Record<Ownership, string> = {
   diocese_rc: "Diocese",
   national_catholic: "Nat. Catholic",
   other_self_owned: "Lutheran",
-};
-
-const IDENTITY_CELL: Record<LithuanianIdentity, string> = {
-  active_parish: "Active",
-  mass_continues: "Mass continues",
-  ethnically_transferred: "Transferred",
-  lost: "Lost",
-};
-
-const FATE_CELL: Record<BuildingFate, string> = {
-  demolished: "Demolished",
-  standing: "Standing",
-  repurposed_religious: "Repurposed (rel.)",
-  repurposed_secular: "Repurposed (sec.)",
-  derelict: "Derelict",
-  unknown: "Unknown",
-};
-
-const STATUS_CELL: Record<ParishStatus, string> = {
-  open: "Open",
-  threat: "Under threat",
-  closed: "Closed",
-  unverified: "Unverified",
-};
-
-const STATUS_DOT_COLOR: Record<ParishStatus, string> = {
-  open: "var(--mark-standing, var(--foreground))",
-  threat: "var(--mark-community)",
-  closed: "var(--mark-closed)",
-  unverified: "var(--muted)",
 };
 
 // ── Dropdown filter in column header ──
@@ -156,15 +130,11 @@ function HeaderFilter<T extends string>({
 
 export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
   const [query, setQuery] = useState("");
-  const [status, setStatus] = useState<ParishStatus | typeof ALL>(ALL);
-  const [congClass, setCongClass] = useState<
-    RegistryRow["congregationClass"] | typeof ALL
-  >(ALL);
+  const [identity, setIdentity] = useState<IdentityStatus | typeof ALL>(ALL);
+  const [alert, setAlert] = useState<AlertStatus | typeof ALL>(ALL);
+  const [fate, setFate] = useState<FateStatus | typeof ALL>(ALL);
   const [ownership, setOwnership] = useState<Ownership | typeof ALL>(ALL);
-  const [litId, setLitId] = useState<LithuanianIdentity | typeof ALL>(ALL);
-  const [buildingFate, setBuildingFate] = useState<BuildingFate | typeof ALL>(
-    ALL
-  );
+  const [diocese, setDiocese] = useState<string>(ALL);
   const [state, setState] = useState<string>(ALL);
 
   const states = useMemo(
@@ -172,33 +142,75 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
     [rows]
   );
 
+  const dioceseOptions = useMemo(() => {
+    const present = [...new Set(rows.map((r) => r.diocese).filter(Boolean) as string[])].sort();
+    return present.map((d) => ({ value: d, label: d.replace(/^(Arch)?diocese of /i, "") }));
+  }, [rows]);
+
+  // Only show filter options that exist in the data
+  const identityOptions = useMemo(() => {
+    const present = new Set(rows.map((r) => r.identity));
+    return IDENTITY_ORDER.filter((v) => present.has(v)).map((v) => ({
+      value: v,
+      label: IDENTITY_LABEL[v],
+    }));
+  }, [rows]);
+
+  const alertOptions = useMemo(() => {
+    const present = new Set(rows.map((r) => r.alert));
+    return ALERT_ORDER.filter((v) => present.has(v)).map((v) => ({
+      value: v,
+      label: ALERT_LABEL[v],
+    }));
+  }, [rows]);
+
+  const fateOptions = useMemo(() => {
+    const present = new Set(rows.map((r) => r.fate));
+    return FATE_ORDER.filter((v) => present.has(v)).map((v) => ({
+      value: v,
+      label: FATE_LABEL[v],
+    }));
+  }, [rows]);
+
+  const ownershipOptions = useMemo(() => {
+    const present = new Set(rows.map((r) => r.ownership).filter(Boolean));
+    const order: Ownership[] = [
+      "diocese_rc",
+      "national_catholic",
+      "other_self_owned",
+    ];
+    return order
+      .filter((o) => present.has(o))
+      .map((o) => ({ value: o, label: OWNERSHIP_SHORT[o] }));
+  }, [rows]);
+
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return rows.filter(
       (r) =>
-        (status === ALL || r.status === status) &&
-        (congClass === ALL ||
-          (r.congregationClass ?? "roman_catholic") === congClass) &&
+        (identity === ALL || r.identity === identity) &&
+        (alert === ALL || r.alert === alert) &&
+        (fate === ALL || r.fate === fate) &&
         (ownership === ALL || r.ownership === ownership) &&
-        (litId === ALL || r.lithuanianIdentity === litId) &&
-        (buildingFate === ALL || r.buildingFate === buildingFate) &&
+        (diocese === ALL || r.diocese === diocese) &&
         (state === ALL || r.state === state) &&
         (!q ||
           r.name.toLowerCase().includes(q) ||
           r.city.toLowerCase().includes(q) ||
-          r.state.toLowerCase().includes(q))
+          r.state.toLowerCase().includes(q) ||
+          (r.diocese?.toLowerCase().includes(q) ?? false))
     );
-  }, [rows, query, status, congClass, ownership, litId, buildingFate, state]);
+  }, [rows, query, identity, alert, fate, ownership, diocese, state]);
 
   const sc =
     "rounded-md border border-rule bg-background px-2 py-1.5 text-sm";
 
   const activeFilters = [
-    status !== ALL,
-    congClass !== ALL,
+    identity !== ALL,
+    alert !== ALL,
+    fate !== ALL,
     ownership !== ALL,
-    litId !== ALL,
-    buildingFate !== ALL,
+    diocese !== ALL,
     state !== ALL,
     query.trim() !== "",
   ].filter(Boolean).length;
@@ -221,11 +233,11 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
               type="button"
               onClick={() => {
                 setQuery("");
-                setStatus(ALL);
-                setCongClass(ALL);
+                setIdentity(ALL);
+                setAlert(ALL);
+                setFate(ALL);
                 setOwnership(ALL);
-                setLitId(ALL);
-                setBuildingFate(ALL);
+                setDiocese(ALL);
                 setState(ALL);
               }}
               className="ml-2 underline text-accent cursor-pointer"
@@ -237,7 +249,17 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
       </div>
 
       <div className="overflow-x-auto border border-rule rounded-lg">
-        <table className="w-full text-sm">
+        <table className="w-full text-sm table-fixed">
+          <colgroup>
+            <col className="w-[20%]" />
+            <col className="w-[14%]" />
+            <col className="w-[5%]" />
+            <col className="w-[5%]" />
+            <col className="w-[13%]" />
+            <col className="w-[14%]" />
+            <col className="w-[15%]" />
+            <col className="w-[14%]" />
+          </colgroup>
           <thead>
             <tr className="text-left border-b border-rule">
               <th className="px-2 py-2 font-medium text-xs uppercase tracking-wide text-muted">
@@ -245,33 +267,42 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
               </th>
               <th className="px-2 py-2">
                 <HeaderFilter
-                  label="St."
-                  value={state}
-                  onChange={(v) => setState(v)}
-                  options={states.map((s) => ({ value: s, label: s }))}
-                  allLabel="All states"
+                  label="Diocese"
+                  value={diocese}
+                  onChange={(v) => setDiocese(v)}
+                  options={dioceseOptions}
+                  allLabel="All dioceses"
                 />
               </th>
               <th className="px-2 py-2 font-medium text-xs uppercase tracking-wide text-muted">
                 Est.
               </th>
               <th className="px-2 py-2 font-medium text-xs uppercase tracking-wide text-muted">
-                Closed
+                Cl.
               </th>
               <th className="px-2 py-2">
                 <HeaderFilter
-                  label="Status"
-                  value={status}
-                  onChange={(v) => setStatus(v)}
-                  options={[
-                    { value: "open" as ParishStatus, label: "Open" },
-                    { value: "threat" as ParishStatus, label: "Under threat" },
-                    { value: "closed" as ParishStatus, label: "Closed" },
-                    {
-                      value: "unverified" as ParishStatus,
-                      label: "Being verified",
-                    },
-                  ]}
+                  label="Identity"
+                  value={identity}
+                  onChange={(v) => setIdentity(v)}
+                  options={identityOptions}
+                />
+              </th>
+              <th className="px-2 py-2">
+                <HeaderFilter
+                  label="Alert"
+                  value={alert}
+                  onChange={(v) => setAlert(v)}
+                  options={alertOptions}
+                  allLabel="All (no filter)"
+                />
+              </th>
+              <th className="px-2 py-2">
+                <HeaderFilter
+                  label="Building"
+                  value={fate}
+                  onChange={(v) => setFate(v)}
+                  options={fateOptions}
                 />
               </th>
               <th className="px-2 py-2">
@@ -279,78 +310,7 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
                   label="Ownership"
                   value={ownership}
                   onChange={(v) => setOwnership(v)}
-                  options={[
-                    {
-                      value: "diocese_rc" as Ownership,
-                      label: OWNERSHIP_SHORT.diocese_rc,
-                    },
-                    {
-                      value: "national_catholic" as Ownership,
-                      label: OWNERSHIP_SHORT.national_catholic,
-                    },
-                    {
-                      value: "other_self_owned" as Ownership,
-                      label: OWNERSHIP_SHORT.other_self_owned,
-                    },
-                  ]}
-                />
-              </th>
-              <th className="px-2 py-2">
-                <HeaderFilter
-                  label="Identity"
-                  value={litId}
-                  onChange={(v) => setLitId(v)}
-                  options={[
-                    {
-                      value: "active_parish" as LithuanianIdentity,
-                      label: LITHUANIAN_IDENTITY_LABEL.active_parish,
-                    },
-                    {
-                      value: "mass_continues" as LithuanianIdentity,
-                      label: LITHUANIAN_IDENTITY_LABEL.mass_continues,
-                    },
-                    {
-                      value: "ethnically_transferred" as LithuanianIdentity,
-                      label: LITHUANIAN_IDENTITY_LABEL.ethnically_transferred,
-                    },
-                    {
-                      value: "lost" as LithuanianIdentity,
-                      label: LITHUANIAN_IDENTITY_LABEL.lost,
-                    },
-                  ]}
-                />
-              </th>
-              <th className="px-2 py-2">
-                <HeaderFilter
-                  label="Building"
-                  value={buildingFate}
-                  onChange={(v) => setBuildingFate(v)}
-                  options={[
-                    {
-                      value: "standing" as BuildingFate,
-                      label: BUILDING_FATE_LABEL.standing,
-                    },
-                    {
-                      value: "demolished" as BuildingFate,
-                      label: BUILDING_FATE_LABEL.demolished,
-                    },
-                    {
-                      value: "repurposed_religious" as BuildingFate,
-                      label: BUILDING_FATE_LABEL.repurposed_religious,
-                    },
-                    {
-                      value: "repurposed_secular" as BuildingFate,
-                      label: BUILDING_FATE_LABEL.repurposed_secular,
-                    },
-                    {
-                      value: "derelict" as BuildingFate,
-                      label: BUILDING_FATE_LABEL.derelict,
-                    },
-                    {
-                      value: "unknown" as BuildingFate,
-                      label: BUILDING_FATE_LABEL.unknown,
-                    },
-                  ]}
+                  options={ownershipOptions}
                 />
               </th>
             </tr>
@@ -362,8 +322,8 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
                 className="border-b border-rule last:border-0 align-top"
               >
                 {/* Parish + City */}
-                <td className="px-2 py-2">
-                  <div className="font-medium">
+                <td className="px-2 py-2 overflow-hidden">
+                  <div className="font-medium truncate">
                     {r.profileHref !== null ? (
                       <Link
                         href={r.profileHref}
@@ -375,78 +335,40 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
                       r.name
                     )}
                   </div>
-                  <span className="text-xs text-muted">{r.city}</span>
+                  <span className="text-xs text-muted truncate block">
+                    {r.city}, {r.state}
+                  </span>
                   {r.comparator && (
                     <span className="ml-1 text-xs text-muted">(CA)</span>
                   )}
                 </td>
-                {/* State */}
-                <td className="px-2 py-2">{r.state}</td>
+                {/* Diocese */}
+                <td className="px-2 py-2 text-xs text-muted truncate">
+                  {r.diocese?.replace(/^(Arch)?diocese of /i, "") ?? "—"}
+                </td>
                 {/* Founded */}
-                <td className="px-2 py-2 text-muted">
+                <td className="px-2 py-2 text-xs text-muted">
                   {r.founded ?? "—"}
                 </td>
                 {/* Closed */}
-                <td className="px-2 py-2 text-muted">
+                <td className="px-2 py-2 text-xs text-muted">
                   {r.closed ?? "—"}
                 </td>
-                {/* Status */}
-                <td className="px-2 py-2">
-                  <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
-                    <span
-                      style={{
-                        display: "inline-block",
-                        width: 8,
-                        height: 8,
-                        borderRadius: "50%",
-                        background: STATUS_DOT_COLOR[r.status],
-                        flexShrink: 0,
-                      }}
-                    />
-                    <span className="text-xs">{STATUS_CELL[r.status]}</span>
-                  </span>
-                </td>
-                {/* Ownership */}
-                <td className="px-2 py-2 text-xs text-muted whitespace-nowrap">
-                  {r.ownership ? OWNERSHIP_CELL[r.ownership] : "—"}
-                </td>
                 {/* Lithuanian Identity */}
-                <td className="px-2 py-2 text-xs whitespace-nowrap">
-                  {r.lithuanianIdentity ? (
-                    <span
-                      style={{
-                        color:
-                          r.lithuanianIdentity === "active_parish"
-                            ? "var(--mark-standing, var(--foreground))"
-                            : r.lithuanianIdentity === "lost"
-                              ? "var(--mark-closed)"
-                              : "var(--muted)",
-                      }}
-                    >
-                      {IDENTITY_CELL[r.lithuanianIdentity]}
-                    </span>
-                  ) : (
-                    <span className="text-muted">—</span>
-                  )}
+                <td className="px-2 py-2">
+                  <IdentityPill value={r.identity} />
+                </td>
+                {/* Alert Status */}
+                <td className="px-2 py-2">
+                  <AlertPill value={r.alert} />
                 </td>
                 {/* Building Fate */}
-                <td className="px-2 py-2 text-xs whitespace-nowrap">
-                  {r.buildingFate ? (
-                    <span
-                      style={{
-                        color:
-                          r.buildingFate === "demolished"
-                            ? "var(--mark-closed)"
-                            : r.buildingFate === "standing"
-                              ? "var(--mark-standing, var(--foreground))"
-                              : "var(--muted)",
-                      }}
-                    >
-                      {FATE_CELL[r.buildingFate]}
-                    </span>
-                  ) : (
-                    <span className="text-muted">—</span>
-                  )}
+                <td className="px-2 py-2">
+                  <FatePill value={r.fate} />
+                </td>
+                {/* Ownership */}
+                <td className="px-2 py-2 text-xs text-muted truncate">
+                  {r.ownership ? OWNERSHIP_CELL[r.ownership] : "—"}
                 </td>
               </tr>
             ))}

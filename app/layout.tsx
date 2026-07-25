@@ -32,18 +32,26 @@ type NavItem =
   | { label: string; children: { href: string; label: string }[] };
 
 const NAV: NavItem[] = [
-  { href: "/about", label: "About" },
   { href: "/record", label: "The Record" },
-  { href: "/under-threat", label: "Under Threat" },
-  { href: "/sustainability-watch", label: "Sustainability Watch" },
-  { href: "/start-here", label: "Facing a Closure" },
   {
-    label: "Other Congregations",
+    label: "Views",
     children: [
+      { href: "/by-diocese", label: "By Diocese" },
+      { href: "/under-threat", label: "Under Threat" },
+      { href: "/sustainability-watch", label: "Sustainability Watch" },
       { href: "/national-catholic", label: "National Catholic" },
       { href: "/protestant", label: "Protestant" },
     ],
   },
+  {
+    label: "Guidance",
+    children: [
+      { href: "/start-here", label: "Facing a Closure" },
+      { href: "/reversals", label: "Reversals" },
+      { href: "/what-canon-law-says", label: "What Canon Law Says" },
+    ],
+  },
+  { href: "/about", label: "About" },
   { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys (The Hearth)" },
 ];
 
@@ -146,6 +154,9 @@ export default function RootLayout({
               <Link href="/record" className="hover:text-foreground">
                 The Record
               </Link>
+              <Link href="/by-diocese" className="hover:text-foreground">
+                By Diocese
+              </Link>
               <Link href="/under-threat" className="hover:text-foreground">
                 Under Threat
               </Link>
@@ -166,9 +177,6 @@ export default function RootLayout({
               </Link>
               <Link href="/about" className="hover:text-foreground">
                 About
-              </Link>
-              <Link href="/full-picture" className="hover:text-foreground">
-                The Full Picture
               </Link>
               <Link
                 href="/report"

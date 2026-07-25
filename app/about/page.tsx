@@ -3,18 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import registry from "@/data/registry-unified.json";
 import alertsData from "@/data/alerts.json";
-import ExpandableBarChart, {
-  type BarItem,
-  type BarParish,
-} from "@/components/ExpandableBarChart";
 import {
   parishes,
   figures,
   getParishSituation,
-  BUILDING_FATE_LABEL,
-  LITHUANIAN_IDENTITY_LABEL,
-  type BuildingFate,
-  type LithuanianIdentity,
   type Parish,
   type ParishSituation,
 } from "@/lib/parishes";
@@ -80,41 +72,6 @@ function loadAll(): ParishWithSituation[] {
     .filter((x) => x.situation != null);
 }
 
-function countBy<K extends string>(
-  list: ParishWithSituation[],
-  key: (x: ParishWithSituation) => K
-): Record<K, number> {
-  const out = {} as Record<K, number>;
-  for (const x of list) {
-    const k = key(x);
-    out[k] = (out[k] || 0) + 1;
-  }
-  return out;
-}
-
-function toBarParish(pw: ParishWithSituation): BarParish {
-  const photo = photoBySlug.get(pw.parish.slug);
-  return {
-    slug: pw.parish.slug,
-    name: pw.parish.nameLt,
-    city: pw.parish.city,
-    state: pw.parish.state,
-    situation: pw.situation.situation,
-    currentUse: pw.situation.current_use,
-    photoUrl: photo?.url ?? null,
-    photoAlt: photo?.alt ?? null,
-  };
-}
-
-function Stat({ n, label }: { n: number; label: string }) {
-  return (
-    <div className="text-center">
-      <p className="font-serif text-4xl font-semibold">{n}</p>
-      <p className="mt-1 text-sm text-muted">{label}</p>
-    </div>
-  );
-}
-
 function ParishLine({ pw }: { pw: ParishWithSituation }) {
   const { parish: p, situation: s } = pw;
   const photo = photoBySlug.get(p.slug);
@@ -175,66 +132,6 @@ export default function AboutPage() {
   const us = all.filter((x) => !x.parish.comparator);
   const ca = all.filter((x) => x.parish.comparator);
 
-  // ── Building fate chart data ──
-  const byFate = countBy(us, (x) => x.situation.building_fate);
-  const fateOrder: BuildingFate[] = [
-    "demolished",
-    "repurposed_religious",
-    "repurposed_secular",
-    "derelict",
-    "standing",
-    "unknown",
-  ];
-  const FATE_COLORS: Record<BuildingFate, { color: string; opacity: number }> = {
-    demolished: { color: "var(--mark-closed)", opacity: 1 },
-    repurposed_religious: { color: "var(--foreground)", opacity: 0.4 },
-    repurposed_secular: { color: "var(--foreground)", opacity: 0.4 },
-    derelict: { color: "var(--foreground)", opacity: 0.4 },
-    standing: { color: "var(--mark-standing)", opacity: 1 },
-    unknown: { color: "var(--foreground)", opacity: 0.4 },
-  };
-  const fateItems: BarItem[] = fateOrder
-    .filter((f) => (byFate[f] || 0) > 0)
-    .map((f) => ({
-      key: f,
-      label: BUILDING_FATE_LABEL[f],
-      count: byFate[f] || 0,
-      color: FATE_COLORS[f].color,
-      opacity: FATE_COLORS[f].opacity,
-      parishes: us
-        .filter((x) => x.situation.building_fate === f)
-        .sort((a, b) => a.parish.city.localeCompare(b.parish.city))
-        .map(toBarParish),
-    }));
-
-  // ── Lithuanian identity chart data ──
-  const byIdentity = countBy(us, (x) => x.situation.lithuanian_identity);
-  const identityOrder: LithuanianIdentity[] = [
-    "active_parish",
-    "mass_continues",
-    "ethnically_transferred",
-    "lost",
-  ];
-  const IDENTITY_COLORS: Record<LithuanianIdentity, { color: string; opacity: number }> = {
-    active_parish: { color: "var(--mark-standing)", opacity: 1 },
-    mass_continues: { color: "var(--foreground)", opacity: 0.4 },
-    ethnically_transferred: { color: "var(--foreground)", opacity: 0.4 },
-    lost: { color: "var(--mark-closed)", opacity: 1 },
-  };
-  const identityItems: BarItem[] = identityOrder
-    .filter((id) => (byIdentity[id] || 0) > 0)
-    .map((id) => ({
-      key: id,
-      label: LITHUANIAN_IDENTITY_LABEL[id],
-      count: byIdentity[id] || 0,
-      color: IDENTITY_COLORS[id].color,
-      opacity: IDENTITY_COLORS[id].opacity,
-      parishes: us
-        .filter((x) => x.situation.lithuanian_identity === id)
-        .sort((a, b) => a.parish.city.localeCompare(b.parish.city))
-        .map(toBarParish),
-    }));
-
   // ── Ownership data ──
   const dioceseOwned = us.filter((x) => x.parish.ownership === "diocese_rc");
   const communityOwned = us.filter((x) => x.parish.ownership !== "diocese_rc");
@@ -254,8 +151,7 @@ export default function AboutPage() {
       <p className="mt-4 text-lg text-muted leading-relaxed">
         Lithuanian immigrants built over two hundred parishes across the
         United States — schools, choirs, cemeteries, and communities around
-        each one. This page shows what remains of that cultural inheritance
-        and where it stands today.
+        each one. This is why we keep the record of what happened to them.
       </p>
 
       {/* ── The data ── */}
@@ -317,43 +213,23 @@ export default function AboutPage() {
         </p>
       </section>
 
-      {/* ── By the numbers ── */}
+      {/* ── The data at a glance ── */}
       <section className="mt-12">
-        <SectionAnchor id="numbers">By the numbers</SectionAnchor>
+        <SectionAnchor id="numbers">The data at a glance</SectionAnchor>
         <p className="mt-2 text-sm text-muted leading-relaxed">
           {REG_TOTAL} U.S. Lithuanian parishes documented — {REG_ETHNIC} Roman
           Catholic ethnic (national) parishes and {REG_NATCATH} Lithuanian
-          National Catholic parishes.
+          National Catholic parishes. The full dataset — every parish, its
+          Lithuanian identity, building fate, and alert status — is in{" "}
+          <Link href="/record" className="underline hover:text-foreground">
+            the record
+          </Link>
+          , filterable by every dimension. The{" "}
+          <Link href="/by-diocese" className="underline hover:text-foreground">
+            diocesan view
+          </Link>{" "}
+          groups parishes by the Catholic diocese responsible for each one.
         </p>
-        <div className="mt-6 grid grid-cols-3 gap-6">
-          <Stat n={REG_TOTAL} label="U.S. Lithuanian parishes documented" />
-          <Stat n={figures.endingMode.diocese_closed} label="Closed by diocesan decision" />
-          <Stat n={figures.endingMode.standing} label="Still standing" />
-        </div>
-      </section>
-
-      {/* ── Buildings ── */}
-      <section className="mt-14">
-        <SectionAnchor id="buildings">What happened to the buildings</SectionAnchor>
-        <p className="mt-2 text-sm text-muted">
-          Among the {us.length} parishes with researched building records.
-          Click a category to see the parishes.
-        </p>
-        <div className="mt-6">
-          <ExpandableBarChart items={fateItems} total={us.length} />
-        </div>
-      </section>
-
-      {/* ── Lithuanian identity ── */}
-      <section className="mt-14">
-        <SectionAnchor id="identity">Lithuanian identity today</SectionAnchor>
-        <p className="mt-2 text-sm text-muted">
-          Among the {us.length} parishes with researched records. Some buildings
-          survive, but the Lithuanian community inside them does not.
-        </p>
-        <div className="mt-6">
-          <ExpandableBarChart items={identityItems} total={us.length} />
-        </div>
       </section>
 
       {/* ── Ownership and survival ── */}

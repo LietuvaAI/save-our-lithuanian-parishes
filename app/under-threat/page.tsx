@@ -208,7 +208,8 @@ export default function UnderThreatPage() {
             <div key={a.id} className="px-4 py-3.5">
               <div className="flex flex-wrap items-baseline gap-x-2">
                 <span
-                  className={"inline-block h-2 w-2 rounded-full flex-shrink-0 " + (a.level === "red" ? "bg-accent" : "bg-amber-600")}
+                  className="inline-block h-2 w-2 rounded-full flex-shrink-0"
+                  style={{ background: "var(--mark-community)" }}
                   aria-hidden
                 />
                 <Link href={a.parishLink} className="font-semibold hover:underline">
