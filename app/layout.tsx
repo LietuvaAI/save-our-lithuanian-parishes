@@ -34,6 +34,7 @@ type NavItem =
 const NAV: NavItem[] = [
   { href: "/about", label: "About" },
   { href: "/record", label: "The Record" },
+  { href: "/by-diocese", label: "By Diocese" },
   { href: "/under-threat", label: "Under Threat" },
   { href: "/sustainability-watch", label: "Sustainability Watch" },
   { href: "/start-here", label: "Facing a Closure" },
@@ -146,6 +147,9 @@ export default function RootLayout({
               <Link href="/record" className="hover:text-foreground">
                 The Record
               </Link>
+              <Link href="/by-diocese" className="hover:text-foreground">
+                By Diocese
+              </Link>
               <Link href="/under-threat" className="hover:text-foreground">
                 Under Threat
               </Link>
@@ -166,9 +170,6 @@ export default function RootLayout({
               </Link>
               <Link href="/about" className="hover:text-foreground">
                 About
-              </Link>
-              <Link href="/full-picture" className="hover:text-foreground">
-                The Full Picture
               </Link>
               <Link
                 href="/report"
