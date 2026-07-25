@@ -32,19 +32,26 @@ type NavItem =
   | { label: string; children: { href: string; label: string }[] };
 
 const NAV: NavItem[] = [
-  { href: "/about", label: "About" },
   { href: "/record", label: "The Record" },
-  { href: "/by-diocese", label: "By Diocese" },
-  { href: "/under-threat", label: "Under Threat" },
-  { href: "/sustainability-watch", label: "Sustainability Watch" },
-  { href: "/start-here", label: "Facing a Closure" },
   {
-    label: "Other Congregations",
+    label: "Views",
     children: [
+      { href: "/by-diocese", label: "By Diocese" },
+      { href: "/under-threat", label: "Under Threat" },
+      { href: "/sustainability-watch", label: "Sustainability Watch" },
       { href: "/national-catholic", label: "National Catholic" },
       { href: "/protestant", label: "Protestant" },
     ],
   },
+  {
+    label: "Guidance",
+    children: [
+      { href: "/start-here", label: "Facing a Closure" },
+      { href: "/reversals", label: "Reversals" },
+      { href: "/what-canon-law-says", label: "What Canon Law Says" },
+    ],
+  },
+  { href: "/about", label: "About" },
   { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys (The Hearth)" },
 ];
 
