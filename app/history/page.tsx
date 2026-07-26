@@ -4,10 +4,10 @@ import TimelineChart, {
   type TimelineRow,
   type UndatedRow,
 } from "@/components/TimelineChart";
-import EndStateFlow, {
-  type FlowCounts,
-  type FlowMember,
-} from "@/components/EndStateFlow";
+import ParishThreads, {
+  type ThreadParish,
+  type FateKey,
+} from "@/components/ParishThreads";
 import { scopedParishes } from "@/lib/registry-scope";
 import {
   GROUP_ORDER,
@@ -35,7 +35,7 @@ function buildData() {
   const undated: UndatedRow[] = [];
   const counts = {} as Record<EndStateGroup, number>;
   for (const g of GROUP_ORDER) counts[g] = 0;
-  const closedFates: FlowCounts["closedFates"] = {
+  const closedFates: Record<FateKey, number> = {
     demolished: 0,
     religious: 0,
     secular: 0,
@@ -43,56 +43,39 @@ function buildData() {
     standing: 0,
     unrecorded: 0,
   };
+  const threads: ThreadParish[] = [];
 
   const fateBySlug = new Map(
     libParishes.map((p) => [p.slug, p.buildingFate as BuildingFate | null]),
   );
 
-  const members: Record<string, FlowMember[]> = {};
-  const addMember = (key: string, p: (typeof all)[number]) => {
-    (members[key] ??= []).push({
+  for (const p of all) {
+    counts[toGroup(p.endState)]++;
+
+    // The closed family's building fates — each parish's thread terminal.
+    let fateKey: FateKey | null = null;
+    if (p.endState === "demolished") fateKey = "demolished";
+    else if (p.endState === "repurposed")
+      fateKey =
+        p.buildingFate === "repurposed_secular" ? "secular" : "religious";
+    else if (p.endState === "closed") {
+      if (p.buildingFate === "standing") fateKey = "standing";
+      else if (p.buildingFate === "derelict") fateKey = "derelict";
+      else fateKey = "unrecorded";
+    }
+    if (fateKey) closedFates[fateKey]++;
+
+    threads.push({
+      slug: p.slug,
       name: p.name,
       city: p.city,
       state: p.state,
       founded: p.founded,
       closed: p.closed,
+      endState: p.endState,
+      fateKey,
       href: p.profileHref,
     });
-  };
-
-  for (const p of all) {
-    counts[toGroup(p.endState)]++;
-
-    // The closed family's building fates — the flow chart's third stage —
-    // and the member lists behind each clickable flow.
-    if (p.endState === "demolished") {
-      closedFates.demolished++;
-      addMember("fate:demolished", p);
-      addMember("g:closed", p);
-    } else if (p.endState === "repurposed") {
-      if (p.buildingFate === "repurposed_secular") {
-        closedFates.secular++;
-        addMember("fate:secular", p);
-      } else {
-        closedFates.religious++;
-        addMember("fate:religious", p);
-      }
-      addMember("g:closed", p);
-    } else if (p.endState === "closed") {
-      if (p.buildingFate === "standing") {
-        closedFates.standing++;
-        addMember("fate:standing", p);
-      } else if (p.buildingFate === "derelict") {
-        closedFates.derelict++;
-        addMember("fate:derelict", p);
-      } else {
-        closedFates.unrecorded++;
-        addMember("fate:unrecorded", p);
-      }
-      addMember("g:closed", p);
-    } else {
-      addMember(`g:${toGroup(p.endState)}`, p);
-    }
 
     const fate = fateBySlug.get(p.slug);
     const detail =
@@ -128,19 +111,12 @@ function buildData() {
   const standing = all.filter((p) => isAlive(p.endState) && !p.closed).length;
   const lost = all.filter((p) => isLoss(p.endState)).length;
 
-  // Member lists sorted for the click-through panels
-  for (const key of Object.keys(members)) {
-    members[key].sort(
-      (a, b) => a.name.localeCompare(b.name) || a.city.localeCompare(b.city),
-    );
-  }
-
   return {
     dated,
     undated,
     counts,
     closedFates,
-    members,
+    threads,
     standing,
     lost,
     total: all.length,
@@ -157,7 +133,7 @@ export default function HistoryPage() {
     undated,
     counts,
     closedFates,
-    members,
+    threads,
     standing,
     lost,
     total,
@@ -173,10 +149,11 @@ export default function HistoryPage() {
       </h1>
       <div className="mt-3 space-y-4 leading-relaxed max-w-3xl">
         <p>
-          Between the 1870s and 1960, Lithuanian immigrants founded the
-          {` ${total} `}Catholic parishes documented so far in this record
-          &mdash; in coal towns, factory cities, and urban neighborhoods from
-          Shenandoah to Chicago. Of them, at least {lost} have been closed.
+          Lithuanian immigrants founded the{` ${total} `}Catholic parishes
+          documented so far in this record &mdash; most between the 1870s and
+          1960, in coal towns, factory cities, and urban neighborhoods from
+          Shenandoah to Chicago, with the latest as recent as the 1990s. Of
+          them, at least {lost} have been closed.
         </p>
         <p
           className="font-serif text-lg"
@@ -192,11 +169,12 @@ export default function HistoryPage() {
           Where every parish ended up
         </h2>
         <p className="mt-1 text-muted leading-relaxed max-w-3xl mb-6">
-          All {total} documented parishes flow to where they stand today
-          &mdash; and the closed flow on to what became of their buildings.
-          Click any flow to see the parishes inside it.
+          Each thread is one parish, from its founding decade to where it
+          stands today &mdash; and, for the closed, on to what became of the
+          building. Hover a thread to trace one parish; click it to open the
+          record; click a band to list its parishes.
         </p>
-        <EndStateFlow counts={{ groups: counts, closedFates, members }} />
+        <ParishThreads parishes={threads} />
         <p className="mt-5 text-sm leading-relaxed max-w-3xl">
           Of the {total} parishes documented so far, {lost} are closed.{" "}
           {closedFates.demolished} of their churches have been demolished;{" "}
