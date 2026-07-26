@@ -9369,7 +9369,7 @@
    "axes_count": 3,
    "record_depth": "case-filed",
    "diocese": "Archdiocese of Baltimore",
-   "caveat": "Identity unresolved: built on a single 2010 Draugas mention of a de facto closed Lithuanian congregation sharing a building with an American parish. 2026 research could not establish it as distinct from St. Alphonsus (Lithuanian from 1917) or St. John the Baptist (1905–1916); it may be the St. Alphonsus community at a low point."
+   "caveat": "Identified: the 2010 Draugas description of an unnamed, de facto closed Lithuanian congregation is St. Alphonsus (Šv. Alfonso) — corroborated from within the Draugas 2008–2012 run (the same columnist names Šv. Alfonso in 2008, 2009, and 2011; the address appears in 2012) and by St. Mary's Seminary's national-parishes register, which lists exactly two Lithuanian national parishes for Baltimore. The records remain separate pending the registry refresh, which should merge this entry into st-alphonsus-baltimore-md."
   },
   {
    "slug": "providence-scranton-pa",
@@ -9849,7 +9849,7 @@
    "axes_count": 1,
    "record_depth": "case-filed",
    "diocese": "Diocese of Peoria",
-   "caveat": "May describe the same congregation as the Holy Cross (Šv. Kryžiaus) Westville record — sources conflict on closure year (~1969 vs 1960–61). Reconciliation pending."
+   "caveat": "Adjudicated same-entity with holy-cross-westville-il (culturenet-brain PR #437): this row rests on a single source — Draugas 2019-02-02 p. 8, which names the demolished church as Šventas Kryžius outright. Its '~1969' closure was arithmetic from 'dar prieš 50 metų', not a dated event. Merges into the Holy Cross record at the next registry refresh."
   },
   {
    "slug": "angels-darien-il",
@@ -14128,11 +14128,11 @@
     "precision": "city-centroid",
     "source": "site-geo-cache"
    },
-   "congregation_class": "national_catholic_pncc",
+   "congregation_class": "independent_catholic",
    "axes_count": 3,
    "record_depth": "multi-source",
    "diocese": "Diocese of Peoria",
-   "caveat": "Independent sources describe Holy Cross itself as Westville's schismatic ('Old Catholic') congregation — the same kind of entity as the LNCC congregation documented separately, with conflicting closure years (1960–61 here; ~1969 there). The two records may describe one entity; reconciliation pending."
+   "caveat": "Adjudicated same-entity (culturenet-brain PR #437, 2026-07-25): this congregation and the record formerly carried as the 'LNCC congregation, Westville' are one — the '~1969' closure was arithmetic from Draugas 2019-02-02 p. 8 ('užsidarė dar prieš 50 metų', 2019−50), not evidence, and fits the sourced 1956–61 window. Jurisdiction corrected: the attested affiliation is the North American Old Roman Catholic Church (Bishop Z. K. Vipartas, succession 1958–1961), not the Polish National Catholic Church — the Peoria diocesan paper called it 'the schismatic Lithuanian parish at Westville' in 1934. Records merge at the next registry refresh."
   },
   {
    "slug": "st-francis-youngstown-oh",
@@ -15288,7 +15288,7 @@
      "kind": "web-survey",
      "tier": 4,
      "currentStatus": "standing",
-     "confidence": "reported",
+     "confidence": "verified",
      "sourceUrl": "https://catholicreview.org/st-alphonsus-shrine-entrusted-priestly-fraternity-st-peter/",
      "ownership": "diocese_rc",
      "surveyed": "2026-07-25"
@@ -15342,7 +15342,7 @@
    "record_depth": "multi-source",
    "diocese": "Archdiocese of Baltimore",
    "description": "Former German parish transferred to Lithuanian community in 1917, documented with architectural history.",
-   "caveat": "The dedicated Lithuanian Mass is reported canceled in 2017 (Global True Lithuania; corroborated by absence from the current published schedule). Recent independent confirmation of any occasional Lithuanian Mass was not found."
+   "caveat": "The dedicated Lithuanian Mass survived the August 2017 FSSP handover by one season and ended between December 17, 2017 (last published schedule) and January 30, 2018 (schedule rebuilt without it) — verified from the parish's own archived schedules on both sides. No Lithuanian liturgy is attested anywhere in Maryland; the nearest is a monthly Lithuanian Mass at Epiphany, Georgetown, DC."
   },
   {
    "slug": "st-john-the-baptist-baltimore-md",

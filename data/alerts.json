@@ -1,1103 +1,1103 @@
 {
- "corpusScope": "parish-watch-alerts",
- "snapshot": "2026-07-23",
- "provenance": "Snapshot of culturenet-brain docs/research/parish-watch/alerts.jsonl (Parish Watch baseline sweep, PR #388). Refreshed by PR on the sweep cadence: red weekly, amber biweekly, full sweep monthly. Wording here is the site's own, written under the editorial guardrails; every item cites its sources.",
- "alerts": [
-  {
-   "id": "divine-providence-2026-07",
-   "level": "red",
-   "kind": "active",
-   "entity": "Divine Providence (Dievo Apvaizdos)",
-   "place": "Southfield, Michigan",
-   "diocese": "Archdiocese of Detroit",
-   "dateObserved": "2026-07-22",
-   "eventDate": "2026",
-   "whatChanged": "The last Lithuanian Catholic parish in metro Detroit is under evaluation in the Archdiocese of Detroit's Families of Parishes restructuring. No closure decree has been issued. The Archdiocese's Listening Session Feedback Survey — the public window to shape the outcome — closes July 31, 2026.",
-   "parishLink": "/parishes/dievo-apvaizdos-southfield-mi",
-   "sources": [
+  "corpusScope": "parish-watch-alerts",
+  "snapshot": "2026-07-23",
+  "provenance": "Snapshot of culturenet-brain docs/research/parish-watch/alerts.jsonl (Parish Watch baseline sweep, PR #388). Refreshed by PR on the sweep cadence: red weekly, amber biweekly, full sweep monthly. Wording here is the site's own, written under the editorial guardrails; every item cites its sources.",
+  "alerts": [
     {
-     "title": "Southfield's Divine Providence Lithuanian church seeks to remain a standalone ethnic parish",
-     "publisher": "Michigan Catholic Tribune",
-     "url": "https://micatholictribune.com/stories/541494701-southfield-s-divine-providence-lithuanian-church-seeks-to-remain-a-standalone-ethnic-parish"
+      "id": "divine-providence-2026-07",
+      "level": "red",
+      "kind": "active",
+      "entity": "Divine Providence (Dievo Apvaizdos)",
+      "place": "Southfield, Michigan",
+      "diocese": "Archdiocese of Detroit",
+      "dateObserved": "2026-07-22",
+      "eventDate": "2026",
+      "whatChanged": "The last Lithuanian Catholic parish in metro Detroit is under evaluation in the Archdiocese of Detroit's Families of Parishes restructuring. No closure decree has been issued. The Archdiocese's Listening Session Feedback Survey — the public window to shape the outcome — closes July 31, 2026.",
+      "parishLink": "/parishes/dievo-apvaizdos-southfield-mi",
+      "sources": [
+        {
+          "title": "Southfield's Divine Providence Lithuanian church seeks to remain a standalone ethnic parish",
+          "publisher": "Michigan Catholic Tribune",
+          "url": "https://micatholictribune.com/stories/541494701-southfield-s-divine-providence-lithuanian-church-seeks-to-remain-a-standalone-ethnic-parish"
+        }
+      ]
+    },
+    {
+      "id": "waterbury-2023-09",
+      "level": "red",
+      "kind": "active",
+      "entity": "St. Joseph's (Šv. Juozapo)",
+      "place": "Waterbury, Connecticut",
+      "diocese": "Archdiocese of Hartford",
+      "dateObserved": "2026-07-22",
+      "eventDate": "2023-09-30",
+      "whatChanged": "Closed September 30, 2023 under the Archdiocese of Hartford's restructuring plan. Parishioners retained a canon lawyer and continue to contest the closure; the community has so far prevented a complete ending and the canonical fight remains active.",
+      "parishLink": "/parishes/sv-juozapo-waterbury-ct",
+      "sources": [
+        {
+          "title": "Parishioners fight Waterbury church closure",
+          "publisher": "WFSB",
+          "url": "https://www.wfsb.com/2023/08/28/parishioners-fight-waterbury-church-closure/"
+        },
+        {
+          "title": "Save St. Joseph's Lithuanian Catholic Church",
+          "publisher": "GoFundMe",
+          "url": "https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church"
+        }
+      ]
+    },
+    {
+      "id": "girardville-2026-01",
+      "level": "red",
+      "kind": "watch",
+      "entity": "St. Vincent de Paul",
+      "place": "Girardville, Pennsylvania",
+      "diocese": "Diocese of Allentown",
+      "dateObserved": "2026-07-19",
+      "eventDate": "2026-01-05",
+      "whatChanged": "Closed January 5, 2026 — the final Mass was celebrated, the bells tolled, and the lights went out after more than a century. The diocese cited roughly $250,000 in needed exterior repairs and about $20,000 in annual operating costs; regular Masses had already ended in 2021 after the 2015 merger into St. Charles Borromeo Parish (Ashland).",
+      "parishLink": "/parishes/sv-vincento-de-paul-girardville-pa",
+      "sources": [
+        {
+          "title": "Lights go out on longtime Girardville church",
+          "publisher": "The Shenandoah Sentinel",
+          "url": "https://shensentinel.com/news/lights-go-out-on-longtime-girardville-church/"
+        },
+        {
+          "title": "Saint Vincent de Paul Church in Girardville set to close",
+          "publisher": "SkookNews",
+          "url": "https://www.skooknews.com/2025/12/saint-vincent-de-paul-church-in.html"
+        }
+      ]
+    },
+    {
+      "id": "maspeth-2025-09",
+      "level": "red",
+      "kind": "active",
+      "entity": "Transfiguration (Kristaus Atsimainymo)",
+      "place": "Maspeth, Queens, New York",
+      "diocese": "Diocese of Brooklyn",
+      "dateObserved": "2026-07-19",
+      "eventDate": "2025-09-12",
+      "whatChanged": "Open on a reduced schedule while its long-term future remains undecided. In September 2025 the Diocese of Brooklyn confirmed the church is not closing: weekday Masses moved to St. Stanislaus Kostka, weekend Masses continue at Transfiguration. A petition of more than 700 signatures, a Knights of Lithuania landmark-designation push, and an October 2025 visit from Lithuanian President Gitanas Nausėda have kept the case in the spotlight. Its fate is canonically unresolved.",
+      "parishLink": "/parishes/kristaus-atsimainymo-maspeth-ny",
+      "sources": [
+        {
+          "title": "Transfiguration Church not closing, diocese says",
+          "publisher": "QNS",
+          "url": "https://qns.com/2025/09/transfiguration-church-not-closing/"
+        },
+        {
+          "title": "Lithuanian Catholic community rallies for Transfiguration",
+          "publisher": "QNS",
+          "url": "https://qns.com/2025/07/lithuanian-catholic-church-transfiguration/"
+        },
+        {
+          "title": "President Nausėda visits Transfiguration",
+          "publisher": "QNS",
+          "url": "https://qns.com/2025/09/gitanas-nauseda-transfiguration-church/"
+        }
+      ]
+    },
+    {
+      "id": "freeland-2026-07",
+      "level": "red",
+      "kind": "watch",
+      "entity": "Our Lady of the Immaculate Conception",
+      "place": "Freeland, Pennsylvania",
+      "diocese": "Diocese of Scranton",
+      "dateObserved": "2026-07-19",
+      "eventDate": "2026-07-01",
+      "whatChanged": "Consolidated into St. Patrick Parish (White Haven) effective July 1, 2026, under the Diocese of Scranton's Vision 2030 pastoral plan.",
+      "parishLink": "/registry/parish-freeland-pa",
+      "caveat": "The research record holds a single-source entry for an early mixed Lithuanian–Polish–Slovak–Rusyn parish in Freeland. Whether Our Lady of the Immaculate Conception is that parish's continuation is not yet confirmed — the identity check is an open research task.",
+      "sources": [
+        {
+          "title": "Three new parish consolidations to take effect July 1",
+          "publisher": "Diocese of Scranton",
+          "url": "https://www.dioceseofscranton.org/three-new-parish-consolidations-to-take-effect-july-1/"
+        }
+      ]
+    },
+    {
+      "id": "bayonne-2025-08",
+      "level": "amber",
+      "kind": "building",
+      "entity": "St. Michael (Šv. Mykolo)",
+      "place": "Bayonne, New Jersey",
+      "diocese": "Archdiocese of Newark",
+      "dateObserved": "2026-07-19",
+      "eventDate": "2025-08-12",
+      "whatChanged": "The vacant former Lithuanian church at 15–21 East 23rd Street went before Bayonne's Planning Board in August 2025 with a proposal to demolish it for a six-story, 114-unit residential building; the city's historical committee raised no objection.",
+      "parishLink": "/parishes/sv-mykolo-bayonne-nj",
+      "sources": [
+        {
+          "title": "Development plans for 15–21 East 23rd Street",
+          "publisher": "Jersey Digs",
+          "url": "https://jerseydigs.com/15-21-east-23rd-street-bayonne-development/"
+        }
+      ]
+    },
+    {
+      "id": "scranton-st-michael-2026-05",
+      "level": "amber",
+      "kind": "building",
+      "entity": "St. Michael (Šv. Mykolo)",
+      "place": "Scranton, Pennsylvania",
+      "diocese": "Diocese of Scranton",
+      "dateObserved": "2026-07-19",
+      "eventDate": "2026-05",
+      "whatChanged": "The parish relocated to St. Lucy Church in September 2025 and continues there; its original 1942 building at 1703 Jackson Street has been on the commercial market since spring 2026, listed at $350,000.",
+      "parishLink": "/parishes/sv-mykolo-scranton-pa",
+      "sources": [
+        {
+          "title": "Saint Michael Parish finds new home at historic Saint Lucy Church",
+          "publisher": "Diocese of Scranton",
+          "url": "https://www.dioceseofscranton.org/a-new-beginning-saint-michael-parish-finds-new-home-at-historic-saint-lucy-church/"
+        },
+        {
+          "title": "1703 Jackson Street commercial listing",
+          "publisher": "Lewith & Freeman Real Estate",
+          "url": "https://www.lewith-freeman.com/p/1703-Jackson-Street-Scranton-PA-18504/dmgid_186324175"
+        }
+      ]
+    },
+    {
+      "id": "elizabeth-2026-07",
+      "level": "amber",
+      "kind": "watch",
+      "entity": "Sts. Peter and Paul (Šv. Petro ir Povilo)",
+      "place": "Elizabeth, New Jersey",
+      "diocese": "Archdiocese of Newark",
+      "dateObserved": "2026-07-19",
+      "eventDate": null,
+      "whatChanged": "Current archdiocesan planning documents (Planning Area K) list it within the combined \"St. Adalbert and Sts. Peter and Paul\" parish, with one Mass remaining at the Lithuanian church. No decree on its future has surfaced; its fate is canonically unresolved.",
+      "parishLink": "/parishes/sv-petro-ir-povilo-elizabeth-nj",
+      "sources": [
+        {
+          "title": "Planning Area K — Eastern Union",
+          "publisher": "Archdiocese of Newark",
+          "url": "https://rcan.org/planning-area-k-eastern-union/"
+        }
+      ]
+    },
+    {
+      "id": "hartford-2026-04",
+      "level": "amber",
+      "kind": "active",
+      "entity": "Holy Trinity (Švč. Trejybės)",
+      "place": "Hartford, Connecticut",
+      "diocese": "Archdiocese of Hartford",
+      "dateObserved": "2026-07-19",
+      "eventDate": "2026-04",
+      "whatChanged": "Regular Masses — including the Sunday Lithuanian/English Mass — ended May 30, 2026, amid a financial crisis and the aftermath of a priest-theft investigation; only funerals and baptisms continue. Parishioners are campaigning to preserve the church as a Lithuanian cultural center.",
+      "parishLink": "/parishes/svc-trejybes-hartford-ct",
+      "sources": [
+        {
+          "title": "Hartford parishioners met with notice of partial closure for Holy Trinity",
+          "publisher": "WTNH",
+          "url": "https://www.wtnh.com/news/connecticut/hartford/hartford-parishioners-met-with-notice-of-partial-closure-for-holy-trinity-catholic-church/"
+        }
+      ]
+    },
+    {
+      "id": "beverly-shores-2026-03",
+      "level": "amber",
+      "kind": "watch",
+      "entity": "St. Ann of the Dunes (Šv. Onos)",
+      "place": "Beverly Shores, Indiana",
+      "diocese": "Diocese of Gary",
+      "dateObserved": "2026-07-19",
+      "eventDate": "2026-03",
+      "whatChanged": "Named in the Diocese of Gary's Porter Planning Area, which is consolidating five parishes down to two worship sites under the diocese's March 2026 pastoral-planning announcement.",
+      "parishLink": "/registry/st-ann-beverly-shores-in",
+      "sources": [
+        {
+          "title": "Pastoral planning",
+          "publisher": "Diocese of Gary",
+          "url": "https://dcgary.org/planning"
+        }
+      ]
     }
-   ]
-  },
-  {
-   "id": "waterbury-2023-09",
-   "level": "red",
-   "kind": "active",
-   "entity": "St. Joseph's (Šv. Juozapo)",
-   "place": "Waterbury, Connecticut",
-   "diocese": "Archdiocese of Hartford",
-   "dateObserved": "2026-07-22",
-   "eventDate": "2023-09-30",
-   "whatChanged": "Closed September 30, 2023 under the Archdiocese of Hartford's restructuring plan. Parishioners retained a canon lawyer and continue to contest the closure; the community has so far prevented a complete ending and the canonical fight remains active.",
-   "parishLink": "/parishes/sv-juozapo-waterbury-ct",
-   "sources": [
+  ],
+  "campaigns": [
     {
-     "title": "Parishioners fight Waterbury church closure",
-     "publisher": "WFSB",
-     "url": "https://www.wfsb.com/2023/08/28/parishioners-fight-waterbury-church-closure/"
+      "id": "divine-providence-campaign",
+      "entity": "Divine Providence (Dievo Apvaizdos)",
+      "place": "Southfield, Michigan",
+      "parishLink": "/parishes/dievo-apvaizdos-southfield-mi",
+      "hearthUrl": "https://blog.saveourlithuanianparishes.org/i/207579337/divine-providence-lithuanian-catholic-church-southfield-michigan",
+      "since": "2026",
+      "who": "The parish community, with this project's public analysis",
+      "form": "The parish's case made in the Archdiocese's own published numbers — The Hearth's workbook analysis and the armory on this site — while the restructuring survey window is open",
+      "state": "Press coverage describes the parish as seeking to remain a standalone ethnic parish inside the Archdiocese of Detroit's 2025–2027 restructuring. No proposal naming the parish has surfaced; the survey closes July 31, 2026.",
+      "dispatches": [
+        {
+          "title": "In Writing: The 1968 Letter That Made Divine Providence a National Parish",
+          "url": "https://blog.saveourlithuanianparishes.org/p/in-writing-the-1968-letter-that-made"
+        },
+        {
+          "title": "A Personal Parish, Not a Place",
+          "url": "https://blog.saveourlithuanianparishes.org/p/a-personal-parish-not-a-place"
+        },
+        {
+          "title": "The Parish Brings Christ",
+          "url": "https://blog.saveourlithuanianparishes.org/p/the-parish-brings-christ"
+        },
+        {
+          "title": "How You Can Help Save Detroit's Divine Providence Lithuanian Parish",
+          "url": "https://blog.saveourlithuanianparishes.org/p/how-you-can-help-save-our-lithuanian"
+        },
+        {
+          "title": "By the Numbers: The Archdiocese of Detroit's 13 Ethnic Parishes",
+          "url": "https://blog.saveourlithuanianparishes.org/p/who-the-archdioceses-ethnic-parishes"
+        },
+        {
+          "title": "The Numbers Behind Divine Providence",
+          "url": "https://blog.saveourlithuanianparishes.org/p/the-numbers-behind-divine-providence"
+        },
+        {
+          "title": "Do Your Part for Divine Providence",
+          "url": "https://blog.saveourlithuanianparishes.org/p/do-your-part-for-divine-providence"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Southfield's Divine Providence Lithuanian church seeks to remain a standalone ethnic parish",
+          "publisher": "Michigan Catholic Tribune",
+          "url": "https://micatholictribune.com/stories/541494701-southfield-s-divine-providence-lithuanian-church-seeks-to-remain-a-standalone-ethnic-parish"
+        }
+      ]
     },
     {
-     "title": "Save St. Joseph's Lithuanian Catholic Church",
-     "publisher": "GoFundMe",
-     "url": "https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church"
+      "id": "hartford-campaign",
+      "entity": "Holy Trinity (Švč. Trejybės)",
+      "place": "Hartford, Connecticut",
+      "parishLink": "/parishes/svc-trejybes-hartford-ct",
+      "hearthUrl": "https://blog.saveourlithuanianparishes.org/i/207579337/holy-trinity-church-hartford-connecticut",
+      "since": "2026",
+      "who": "Parishioners of Holy Trinity, Hartford, and the broader Lithuanian Catholic community",
+      "form": "GoFundMe to retain a canon-law attorney; community advocacy and documentation; push to preserve the building as a Lithuanian cultural center",
+      "state": "Parishioners were formally notified of a proposed partial closure as part of the Archdiocese of Hartford's restructuring of 212 parishes. The canonical fund is active and the case is being contested.",
+      "sources": [
+        {
+          "title": "Hartford parishioners met with notice of partial closure for Holy Trinity",
+          "publisher": "WTNH",
+          "url": "https://www.wtnh.com/news/connecticut/hartford/hartford-parishioners-met-with-notice-of-partial-closure-for-holy-trinity-catholic-church/"
+        },
+        {
+          "title": "Protect Holy Trinity Church",
+          "publisher": "GoFundMe",
+          "url": "https://www.gofundme.com/f/protect-holy-trinity-church"
+        }
+      ]
+    },
+    {
+      "id": "waterbury-campaign",
+      "entity": "St. Joseph's (Šv. Juozapo)",
+      "place": "Waterbury, Connecticut",
+      "parishLink": "/parishes/sv-juozapo-waterbury-ct",
+      "hearthUrl": "https://blog.saveourlithuanianparishes.org/i/207579337/st-josephs-church-waterbury-connecticut",
+      "since": "2023",
+      "who": "Parishioners of St. Joseph's Lithuanian Catholic Church, Waterbury",
+      "form": "Retained a canon lawyer in 2023 to contest the archdiocese's closure decision; GoFundMe to cover legal expenses",
+      "state": "Closed September 30, 2023 by decree under the Archdiocese of Hartford's restructuring plan. The canonical appeal is ongoing and the community has so far prevented a complete ending.",
+      "sources": [
+        {
+          "title": "Parishioners fight Waterbury church closure",
+          "publisher": "WFSB",
+          "url": "https://www.wfsb.com/2023/08/28/parishioners-fight-waterbury-church-closure/"
+        },
+        {
+          "title": "Save St. Joseph's Lithuanian Catholic Church",
+          "publisher": "GoFundMe",
+          "url": "https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church"
+        }
+      ]
+    },
+    {
+      "id": "maspeth-campaign",
+      "entity": "Transfiguration (Kristaus Atsimainymo)",
+      "place": "Maspeth, Queens, New York",
+      "parishLink": "/parishes/kristaus-atsimainymo-maspeth-ny",
+      "hearthUrl": "https://blog.saveourlithuanianparishes.org/i/207579337/church-of-the-transfiguration-maspeth-queens-new-york",
+      "since": "2025",
+      "who": "Parishioners and preservation supporters, backed by the Knights of Lithuania",
+      "form": "A petition of more than 700 signatures, a landmark-designation effort for the church building, and an October 2025 visit from Lithuanian President Gitanas Nausėda",
+      "state": "The Diocese of Brooklyn confirmed in September 2025 that the church stays open on a limited basis — weekend Masses continue at Transfiguration — and states the church building itself is not for sale. The parish's long-term future remains canonically unresolved.",
+      "sources": [
+        {
+          "title": "Transfiguration church not closing",
+          "publisher": "QNS",
+          "url": "https://qns.com/2025/09/transfiguration-church-not-closing/"
+        },
+        {
+          "title": "Nausėda visit",
+          "publisher": "QNS",
+          "url": "https://qns.com/2025/09/gitanas-nauseda-transfiguration-church/"
+        }
+      ]
     }
-   ]
-  },
-  {
-   "id": "girardville-2026-01",
-   "level": "red",
-   "kind": "watch",
-   "entity": "St. Vincent de Paul",
-   "place": "Girardville, Pennsylvania",
-   "diocese": "Diocese of Allentown",
-   "dateObserved": "2026-07-19",
-   "eventDate": "2026-01-05",
-   "whatChanged": "Closed January 5, 2026 — the final Mass was celebrated, the bells tolled, and the lights went out after more than a century. The diocese cited roughly $250,000 in needed exterior repairs and about $20,000 in annual operating costs; regular Masses had already ended in 2021 after the 2015 merger into St. Charles Borromeo Parish (Ashland).",
-   "parishLink": "/parishes/sv-vincento-de-paul-girardville-pa",
-   "sources": [
+  ],
+  "sustainabilityWatch": [
     {
-     "title": "Lights go out on longtime Girardville church",
-     "publisher": "The Shenandoah Sentinel",
-     "url": "https://shensentinel.com/news/lights-go-out-on-longtime-girardville-church/"
+      "id": "south-boston-watch",
+      "entity": "St. Peter Lithuanian Parish (Šv. Petro)",
+      "place": "South Boston, Massachusetts",
+      "diocese": "Archdiocese of Boston",
+      "parishLink": "/parishes/sv-petro-boston-ma",
+      "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/the-boston-hill-of-crosses-how-south",
+      "dispatches": [
+        {
+          "title": "The Boston Hill of Crosses: How South Boston Saved Its Lithuanian Parish",
+          "url": "https://blog.saveourlithuanianparishes.org/p/the-boston-hill-of-crosses-how-south"
+        }
+      ],
+      "dateObserved": "2026-07-16",
+      "clergy": {
+        "arrangement": "collaborative_pastor",
+        "detail": "Pastor Rev. William M. Kennedy (shared collaborative pastor, not Lithuanian-speaking). Lithuanian ministry organized by the Lithuanian Apostolate of the Archdiocese of Boston under directors Aldona Lingertat and Gloria Adomkaitis, with administrator Daiva Navickas. Community requesting a second Lithuanian-speaking priest from the Franciscan Fathers in Lithuania — no indication the request has been filled."
+      },
+      "liturgy": {
+        "lithuanianMass": true,
+        "frequency": "weekly",
+        "detail": "Sunday 10:30 a.m. Lithuanian Mass; 9:00 a.m. English Mass; Thursday 9:00 a.m. weekday Mass"
+      },
+      "governance": "collaborative",
+      "governanceDetail": "Within the South Boston Seaport Catholic Collaborative (with St. Monica), formed under Disciples in Mission effective June 2, 2015. Archdiocesan directory continues to list St. Peter as a distinct parish.",
+      "survivedThreats": "2004 closure attempt (Hill of Crosses protest at church entrance); 2021-22 merger proposal (not consummated; community refused merger consent February 2022)",
+      "financial": null,
+      "situation": "The only Lithuanian church in New England. The parish remains active with weekly Lithuanian Mass and a lay-led Lithuanian Apostolate, but has no Lithuanian-speaking pastor of its own. Its Lithuanian liturgical future depends on securing additional Lithuanian-speaking clergy — the community has formally requested a priest from the Franciscan Fathers in Lithuania, with no indication the request has been filled.",
+      "sources": [
+        {
+          "title": "St. Peter Lithuanian Parish in Boston – New Challenges",
+          "publisher": "Draugas News",
+          "url": "https://www.draugas.org/news/st-peter-lithuanian-parish-in-boston-new-challenges/"
+        },
+        {
+          "title": "Lithuanian Apostolate bulletin, July 2026",
+          "publisher": "St. Peter Lithuanian Parish",
+          "url": "http://www.stpeterlithuanianparish.org/pdf_files/liepa_2026.pdf"
+        },
+        {
+          "title": "Saint Peter parish directory listing",
+          "publisher": "The Boston Pilot",
+          "url": "https://thebostonpilot.com/bcd/web_parish.asp?ektronid=4390"
+        },
+        {
+          "title": "South Boston St. Peter legacy directory entry",
+          "publisher": "Litua.com Lithuanian Churches in USA",
+          "url": "https://www.litua.com/lt/zinynas/baznycios"
+        }
+      ]
     },
     {
-     "title": "Saint Vincent de Paul Church in Girardville set to close",
-     "publisher": "SkookNews",
-     "url": "https://www.skooknews.com/2025/12/saint-vincent-de-paul-church-in.html"
+      "id": "chicago-nativity-bvm-watch",
+      "entity": "Nativity BVM Parish (Švč. M. Marijos Gimimo)",
+      "place": "Chicago, Illinois",
+      "diocese": "Archdiocese of Chicago",
+      "parishLink": "/parishes/svc-mergeles-marijos-gimimo-chicago-il",
+      "hearthUrl": null,
+      "dateObserved": "2026-07-23",
+      "clergy": {
+        "arrangement": "lithuanian_klebonas",
+        "detail": "Sielovada lists Kun. Jaunius Kelpšas as klebonas of Nativity BVM. Sielovada article coverage also places him in active Chicago Lithuanian liturgical life, including the parish anniversary Mass and 2026 diaspora liturgy in Chicago."
+      },
+      "liturgy": {
+        "lithuanianMass": true,
+        "frequency": "weekly",
+        "detail": "The parish website lists Lithuanian Mass at 8:30 a.m. daily, 4:00 p.m. Saturday, and 11:00 a.m. Sunday; 9:30 a.m. Sunday Mass is English. The second Sunday 11:00 a.m. Mass is identified as the children's Lithuanian Mass."
+      },
+      "governance": "standalone",
+      "governanceDetail": "Current public parish and Sielovada pages present Nativity BVM as a distinct Lithuanian parish/rektoriatas with its own pastor. Prior scout data notes an Archdiocese of Chicago Renew My Church grouping proposal with Blessed Jurgis Matulaitis Mission, but no final merger or closure decree was found in the Tier 1 pass.",
+      "survivedThreats": "Survived Chicago-area Lithuanian parish consolidation; local case data records it as the sole surviving Lithuanian Roman Catholic parish in Chicago by 2020.",
+      "financial": "Prior scout data flags chronic deficit support through an archdiocesan high-interest loan and notes that the church building is not parish-owned. This Tier 1 web pass did not find a fresh public confirmation of the current loan balance, rate, or building-ownership terms.",
+      "situation": "Nativity BVM is a high-vitality but financially exposed survivor: Sielovada and the parish website confirm a Lithuanian klebonas and frequent Lithuanian liturgy, while local scout data keeps the key sustainability question on finances and diocesan/building control open. Sielovada articles show active parish anniversaries, confirmations, and Chicago Lithuanian community participation rather than liturgical dormancy.",
+      "photo": {
+        "url": "/images/parishes/chicago-nativity-bvm.jpg",
+        "alt": "Exterior of Nativity of the Blessed Virgin Mary Lithuanian church in Chicago.",
+        "attribution": "CIEE article, image captioned as Lithuanian Church of the Nativity of the Blessed Virgin Mary in Chicago; article credits related architectural archive material to the Mulokas family personal archive.",
+        "license": "External source; reuse permission not confirmed."
+      },
+      "sources": [
+        {
+          "title": "North America Lithuanian pastoral care directory",
+          "publisher": "Sielovada.org",
+          "url": "https://sielovada.org/siaures-amerika/"
+        },
+        {
+          "title": "Masses",
+          "publisher": "Chicago Nativity Blessed Virgin Mary Parish",
+          "url": "https://chicagonativitybvm.org/misios/?lang=en"
+        },
+        {
+          "title": "Bažnyčia ir bendruomenė neatsiejamos: atšventė Švč. Mergelės Marijos Gimimo bažnyčios 96-ąjį gimtadienį",
+          "publisher": "Sielovada.org / Draugas",
+          "url": "https://sielovada.org/baznycia-ir-bendruomene-neatsiejamos-atsvente-svc-mergeles-marijos-gimimo-baznycios-96-aji-gimtadieni/"
+        },
+        {
+          "title": "Arkivysk. Liongino Virbalo SJ apsilankymas Čikagoje ir Lemonte",
+          "publisher": "Sielovada.org",
+          "url": "https://sielovada.org/arkivysk-liongino-virbalo-sj-apsilankymas-cikagoje-ir-lemonte/"
+        },
+        {
+          "title": "Bridging Cultures: Vaidas Petrulis's Journey Through 20th Century Lithuanian Architecture in the U.S.",
+          "publisher": "CIEE",
+          "url": "https://www.ciee.org/about/blog/bridging-cultures-vaidas-petruliss-journey-through-20th-century-lithuanian-architecture-us"
+        },
+        {
+          "title": "Chicago Nativity BVM legacy directory entry",
+          "publisher": "Litua.com Lithuanian Churches in USA",
+          "url": "https://www.litua.com/lt/zinynas/baznycios"
+        }
+      ]
+    },
+    {
+      "id": "cleveland-st-casimir-watch",
+      "entity": "St. Casimir Parish (Šv. Kazimiero)",
+      "place": "Cleveland, Ohio",
+      "diocese": "Diocese of Cleveland",
+      "parishLink": "/parishes/sv-kazimiero-cleveland-oh",
+      "hearthUrl": null,
+      "dispatches": [
+        {
+          "title": "Closed by the Diocese, Reopened by Rome",
+          "url": "https://blog.saveourlithuanianparishes.org/p/a-closure-done-wrong-is-not-a-closure"
+        }
+      ],
+      "dateObserved": "2026-07-23",
+      "clergy": {
+        "arrangement": "lithuanian_klebonas",
+        "detail": "Sielovada lists Rev. Andrius Morkūnas as pastor of St. Casimir. Local case data and Diocese of Cleveland assignment notices identify Andrew M. Morkunas as administrator effective April 30, 2025, also serving as a University Hospitals chaplain; title usage therefore differs by source but the Lithuanian priest match is strong."
+      },
+      "liturgy": {
+        "lithuanianMass": true,
+        "frequency": "weekly",
+        "detail": "Sielovada confirms Lithuanian and English Masses. Local case data from current parish bulletins records Sunday 11:00 a.m. Lithuanian Mass, English Masses Saturday/Sunday, and weekday Masses."
+      },
+      "governance": "merged",
+      "governanceDetail": "Current St. Casimir is the surviving consolidated Lithuanian parish formed October 25, 2009 from St. George and Our Lady of Perpetual Help; it remains an active Diocese of Cleveland parish on Neff Road.",
+      "survivedThreats": "Survived the 2009 Cleveland Lithuanian parish consolidation and a 2014 financial crisis that scout data ties to a diocesan-approved school-building lease.",
+      "financial": "The 2014 school-lease rescue remains the key financial signal, but current occupancy/renewal of that lease was not confirmed in this Tier 1 web pass. Current bulletins in local case data show normal operations and 2027 Mass intentions, not an active closure action.",
+      "situation": "St. Casimir Cleveland remains one of the stronger sustainability-watch cases: Sielovada names a Lithuanian priest, scout/current case data shows weekly Lithuanian Mass and active parish operations, and the main uncertainty is not present liturgical life but whether the post-2014 school-building financial support remains stable.",
+      "photo": {
+        "url": "/images/parishes/cleveland-st-casimir.jpg",
+        "alt": "Exterior of St. Casimir Parish church in Cleveland.",
+        "attribution": "Saint Casimir Parish website image, baznycia-m.jpg.",
+        "license": "Parish website source; reuse permission not confirmed."
+      },
+      "sources": [
+        {
+          "title": "North America Lithuanian pastoral care directory",
+          "publisher": "Sielovada.org",
+          "url": "https://sielovada.org/siaures-amerika/"
+        },
+        {
+          "title": "Saint Casimir Parish homepage",
+          "publisher": "Saint Casimir Parish",
+          "url": "http://www.saintcasimirparish.org/"
+        },
+        {
+          "title": "Bulletin, July 4-5, 2026",
+          "publisher": "Saint Casimir Parish",
+          "url": "http://saintcasimirparish.org/main-en/bulletin-en.html"
+        },
+        {
+          "title": "Clergy assignment changes - January 2025",
+          "publisher": "Diocese of Cleveland",
+          "url": "https://www.dioceseofcleveland.org/news/2025/01/23/clergy-assignment-changes-january-2025"
+        },
+        {
+          "title": "St. Casimir parish directory, Neff Road",
+          "publisher": "Diocese of Cleveland",
+          "url": "https://www.dioceseofcleveland.org/parishes/directory/st-casimir"
+        },
+        {
+          "title": "Cleveland Lithuanian church legacy directory entries",
+          "publisher": "Litua.com Lithuanian Churches in USA",
+          "url": "https://www.litua.com/lt/zinynas/baznycios"
+        }
+      ]
+    },
+    {
+      "id": "philadelphia-st-andrew-watch",
+      "entity": "St. Andrew Lithuanian Parish (Šv. Andriejaus)",
+      "place": "Philadelphia, Pennsylvania",
+      "diocese": "Archdiocese of Philadelphia",
+      "parishLink": "/parishes/sv-andriejaus-philadelphia-pa",
+      "hearthUrl": null,
+      "dateObserved": "2026-07-23",
+      "clergy": {
+        "arrangement": "collaborative_pastor",
+        "detail": "The Archdiocese of Philadelphia and parish website list Rev. Gerald Dennis Gill, Cathedral Basilica rector, as parochial administrator. Sielovada lists St. Andrew as a Lithuanian parish with Lithuanian Mass but does not name a priest for Philadelphia; local scout data identifies Gill as not Lithuanian-speaking, with Lithuanian ministry sustained through parish/community structures and visiting clergy for some youth liturgies."
+      },
+      "liturgy": {
+        "lithuanianMass": true,
+        "frequency": "weekly",
+        "detail": "The parish website and Archdiocese of Philadelphia list Sunday 11:00 a.m. Mass at St. Andrew in Lithuanian and English. Sielovada says Lithuanian Mass is twice monthly, so frequency should be rechecked with a human/parish contact; current direct parish and diocesan listings support weekly."
+      },
+      "governance": "standalone",
+      "governanceDetail": "Archdiocese lists St. Andrew (Lithuanian) as an active parish founded in 1924, with the former St. Casimir Lithuanian church as a worship site. Parish administration and correspondence run through the Cathedral Parish Office under Rev. Gerald Dennis Gill.",
+      "survivedThreats": "Survived inside the archdiocese after absorbing/holding the former St. Casimir Lithuanian worship site; it remains the only Pennsylvania Lithuanian parish with a listed Lithuanian-language Sunday Mass.",
+      "financial": "Scout/local case data reports the former rectory was sold for $1.2 million around 2022-2024 and the proceeds invested for parish operations; the parish website corroborates that former rectory phone lines are no longer in service, but the exact deed date remains unresolved.",
+      "situation": "St. Andrew Philadelphia is active but structurally fragile: the parish and archdiocesan listings show weekly Lithuanian/English Sunday Mass and a living Lithuanian school/parish network, while Sielovada does not list a resident Lithuanian priest and governance depends on the Cathedral rector as parochial administrator. The rectory-sale proceeds appear to support operations, but the exact sale timing and long-term sustainability effect remain open.",
+      "photo": {
+        "url": "/images/parishes/philadelphia-st-andrew.jpg",
+        "alt": "Exterior parish-grounds photo showing work on the Lithuanian wayside cross at St. Andrew Lithuanian Parish.",
+        "attribution": "Saint Andrew Lithuanian Parish website photo from the Lithuanian Wayside Cross gallery.",
+        "license": "Parish website source; reuse permission not confirmed."
+      },
+      "sources": [
+        {
+          "title": "North America Lithuanian pastoral care directory",
+          "publisher": "Sielovada.org",
+          "url": "https://sielovada.org/siaures-amerika/"
+        },
+        {
+          "title": "Saint Andrew Lithuanian Parish official website",
+          "publisher": "Saint Andrew Lithuanian Parish",
+          "url": "https://saintandrewlithuanianparish.org/"
+        },
+        {
+          "title": "Andrew (Lithuanian) parish listing",
+          "publisher": "Archdiocese of Philadelphia",
+          "url": "https://archphila.org/parish/st-andrew-philadelphia/"
+        },
+        {
+          "title": "Filadelfijos Šv. Andriejaus parapijos šimtmetis",
+          "publisher": "Sielovada.org",
+          "url": "https://sielovada.org/filadelfijos-sv-andriejaus-parapijos-simtmetis/"
+        },
+        {
+          "title": "Švento Andriejaus parapijoje Philadelphijoje verda gyvenimas",
+          "publisher": "Draugas",
+          "url": "https://www.draugas.org/svento-andriejaus-parapijoje-philadelphijoje-verda-gyvenimas/"
+        },
+        {
+          "title": "Philadelphia St. Andrew legacy directory entry",
+          "publisher": "Litua.com Lithuanian Churches in USA",
+          "url": "https://www.litua.com/lt/zinynas/baznycios"
+        }
+      ]
+    },
+    {
+      "id": "dayton-holy-cross-watch",
+      "entity": "Holy Cross Church (Šv. Kryžiaus)",
+      "place": "Dayton, Ohio",
+      "diocese": "Archdiocese of Cincinnati",
+      "parishLink": "/parishes/sv-kryziaus-dayton-oh",
+      "hearthUrl": null,
+      "dateObserved": "2026-07-23",
+      "clergy": {
+        "arrangement": "collaborative_pastor",
+        "detail": "Current Archdiocese of Cincinnati Beacons of Light listing places Holy Cross in the St. Gabriel the Archangel Family of Parishes under pastor Father Kyle E. Schnippel, with parochial vicars Father Chibueze Asiegbulem and Father Andrew J. Smith. No Dayton Holy Cross priest appears in the Sielovada North America directory, and no Lithuanian-speaking celebrant was confirmed in this pass."
+      },
+      "liturgy": {
+        "lithuanianMass": true,
+        "frequency": "unknown",
+        "detail": "The current St. Gabriel schedule lists a single Sunday 10:30 a.m. Mass at Holy Cross but does not label it Lithuanian. A 2021 Catholic Telegraph profile says two readings were still proclaimed in Lithuanian at every Mass; whether that continues in 2026, and who celebrates it, remains unresolved."
+      },
+      "governance": "collaborative",
+      "governanceDetail": "Part of the five-church St. Gabriel the Archangel Family of Parishes implemented July 1, 2022: St. Peter, Our Lady of the Rosary, Holy Cross, St. Christopher, and St. John the Baptist.",
+      "survivedThreats": "Never closed or sold. Listed on the National Register of Historic Places since November 5, 1991, recognizing its Lithuanian modern sacred architecture and Soviet-occupation memory program.",
+      "financial": "The National Register listing gives preservation weight to the building, but the current St. Gabriel financial reports would need review to verify the older scout claim that Holy Cross is debt-free.",
+      "situation": "Holy Cross remains active and architecturally protected, but the live sustainability question is liturgical: the official family schedule shows one Sunday Mass at the Dayton site without a Lithuanian-language label, while older Catholic Telegraph/current scout data preserve evidence of Lithuanian readings or Mass identity. The parish is safer as a building than as a clearly documented Lithuanian liturgical community unless a current celebrant and language practice are confirmed.",
+      "photo": {
+        "url": "/images/parishes/dayton-holy-cross.jpg",
+        "alt": "Exterior of Holy Cross Lithuanian church in Dayton.",
+        "attribution": "Global True Lithuania / Augustinas Žemaitis, Dayton Holy Cross Lithuanian church photo.",
+        "license": "External source; reuse permission not confirmed."
+      },
+      "sources": [
+        {
+          "title": "Holy Cross parish page",
+          "publisher": "St. Gabriel the Archangel Family of Parishes",
+          "url": "https://www.sgfp.org/holy-cross"
+        },
+        {
+          "title": "Mass Schedule",
+          "publisher": "St. Gabriel the Archangel Family of Parishes",
+          "url": "https://www.sgfp.org/mass-schedule"
+        },
+        {
+          "title": "St. Gabriel The Archangel Family of Parishes",
+          "publisher": "Archdiocese of Cincinnati",
+          "url": "https://catholicaoc.org/beacons-of-light/parish-families/northeast-deanery-family-10-updated"
+        },
+        {
+          "title": "Did you know? Holy Cross Dayton",
+          "publisher": "The Catholic Telegraph",
+          "url": "https://www.thecatholictelegraph.com/did-you-know-holy-cross-dayton/77781"
+        },
+        {
+          "title": "Dayton Lithuanian heritage sites",
+          "publisher": "Global True Lithuania",
+          "url": "https://global.truelithuania.com/dayton-ohio-3879/"
+        }
+      ]
+    },
+    {
+      "id": "east-st-louis-immaculate-conception-watch",
+      "entity": "Immaculate Conception Chapel (Nekaltojo Prasidėjimo)",
+      "place": "East St. Louis, Illinois",
+      "diocese": "Diocese of Belleville",
+      "parishLink": "/parishes/nekaltojo-prasidejimo-east-st-louis-il",
+      "hearthUrl": null,
+      "dateObserved": "2026-07-23",
+      "clergy": {
+        "arrangement": "no_lithuanian_clergy",
+        "detail": "The independent Lithuanian parish ended in 2014 and the building is now a chapel of St. Augustine of Hippo. Local case data identifies Rev. Carroll Mizicko, OFM as the shared pastor for St. Augustine/Immaculate Conception; no Sielovada listing or current Lithuanian-speaking clergy was found for East St. Louis."
+      },
+      "liturgy": {
+        "lithuanianMass": false,
+        "frequency": "none",
+        "detail": "Current/live sources support a Sunday 11:00 a.m. chapel Mass, but no current Lithuanian-language Mass or Lithuanian liturgical element was found in this pass."
+      },
+      "governance": "chapel",
+      "governanceDetail": "Diocese of Belleville closed-parish archive records Immaculate Conception, East St. Louis (1895-2014) as Designated Chapel; it now operates under St. Augustine of Hippo Parish.",
+      "survivedThreats": "Survived as a Catholic chapel while most East St. Louis Catholic churches closed; the building was not sold and remains in diocesan use.",
+      "financial": "No sale or buyer to report. The scout claim of landmark designation could not be verified as a formal active designation; preservation value rests on the Jonas Mulokas architecture and Vytautas Kazimieras Jonynas stained glass.",
+      "situation": "East St. Louis Immaculate Conception is a heritage-significant survivor rather than an active Lithuanian pastoral center. Weekly Catholic worship continues in the building, but the independent Lithuanian parish ended in 2014, no Lithuanian clergy are listed, and no current Lithuanian Mass was found. Its watch status is about preserving a rare Lithuanian-American sacred-art site inside a fragile chapel governance structure.",
+      "photo": {
+        "url": "/images/parishes/east-st-louis-immaculate-conception.jpg",
+        "alt": "Exterior of Immaculate Conception Chapel in East St. Louis.",
+        "attribution": "Diocese of Belleville parish directory image.",
+        "license": "Diocesan website source; reuse permission not confirmed."
+      },
+      "sources": [
+        {
+          "title": "Immaculate Conception Chapel directory page",
+          "publisher": "Diocese of Belleville",
+          "url": "https://www.diobelle.org/directory/parishes/immaculate-conception-chapel-east-st-louis"
+        },
+        {
+          "title": "List of Closed Parishes",
+          "publisher": "Diocese of Belleville",
+          "url": "https://www.diobelle.org/canonical-affairs/archives/list-of-closed-parishes"
+        },
+        {
+          "title": "East St. Louis Lithuanian church",
+          "publisher": "Global True Lithuania",
+          "url": "https://global.truelithuania.com/st-louis-missouri-illinois-1719/"
+        },
+        {
+          "title": "Churches of East St. Louis, Part 8: Immaculate Conception Roman Catholic Church",
+          "publisher": "St. Louis Patina",
+          "url": "https://stlouispatina.com/churches-of-east-st-louis-part-8/"
+        },
+        {
+          "title": "Immaculate Conception - East Saint Louis, IL",
+          "publisher": "DiscoverMass",
+          "url": "https://discovermass.com/church/immaculate-conception-east-saint-louis-il/"
+        }
+      ]
+    },
+    {
+      "id": "cicero-st-anthony-watch",
+      "entity": "St. Anthony Parish (Šv. Antano)",
+      "place": "Cicero, Illinois",
+      "diocese": "Archdiocese of Chicago",
+      "parishLink": "/parishes/sv-antano-cicero-il",
+      "hearthUrl": null,
+      "dateObserved": "2026-07-23",
+      "clergy": {
+        "arrangement": "visiting_priest",
+        "detail": "Sielovada lists Kun. Gediminas Keršys as Lithuanian chaplain for Cicero St. Anthony. Current parish public identity is St. Anthony / San Antonio de Padua, with Rev. Ismael Sandoval listed in local case data as pastor from Archdiocese of Chicago directory excerpts."
+      },
+      "liturgy": {
+        "lithuanianMass": true,
+        "frequency": "weekly",
+        "detail": "Sielovada confirms a Lithuanian chaplain assignment. DiscoverMass/MassTimes list Sunday 8:45 a.m. Lithuanian Mass, but the official parish website is Spanish-language and did not expose a current text schedule to confirm the time directly."
+      },
+      "governance": "standalone",
+      "governanceDetail": "St. Anthony remained structurally independent after the Archdiocese of Chicago Renew My Church North Berwyn-Cicero grouping, while nearby Cicero parishes were merged.",
+      "survivedThreats": "Survived the 2011 ethnic transfer to a predominantly Mexican/Spanish-speaking parish and the 2021-2022 Renew My Church restructuring without closure or sale.",
+      "financial": null,
+      "situation": "Cicero St. Anthony is a living but ethnically transferred parish: Sielovada still assigns a Lithuanian chaplain and public Mass-time directories still list a weekly Lithuanian Mass, yet the parish-facing web presence is Spanish-first and no dated primary schedule confirming the Lithuanian Mass time was found. The building and Lithuanian fabric survive inside an active multiethnic parish.",
+      "photo": {
+        "url": "/images/parishes/cicero-st-anthony.jpg",
+        "alt": "Exterior of St. Anthony Lithuanian church in Cicero.",
+        "attribution": "Global True Lithuania / Augustinas Žemaitis, Cicero St. Anthony Lithuanian church photo.",
+        "license": "External source; reuse permission not confirmed."
+      },
+      "sources": [
+        {
+          "title": "North America Lithuanian pastoral care directory",
+          "publisher": "Sielovada.org",
+          "url": "https://sielovada.org/siaures-amerika/"
+        },
+        {
+          "title": "San Antonio de Padua Church official website",
+          "publisher": "St. Anthony / San Antonio de Padua Parish",
+          "url": "https://www.sanantoniocicero.net/"
+        },
+        {
+          "title": "St. Anthony, Cicero",
+          "publisher": "DiscoverMass",
+          "url": "https://discovermass.com/church/st-anthony-cicero-il/"
+        },
+        {
+          "title": "Chicago Lithuanian heritage: Cicero St. Anthony section",
+          "publisher": "Global True Lithuania",
+          "url": "https://global.truelithuania.com/chicago-illinois-45/"
+        },
+        {
+          "title": "History of Mary Queen of Heaven / Our Lady, the Mystical Rose Parish",
+          "publisher": "Our Lady, the Mystical Rose Parish",
+          "url": "https://www.olmrparish.org/history"
+        }
+      ]
+    },
+    {
+      "id": "bridgeport-st-george-watch",
+      "entity": "St. George Church (Šv. Jurgio)",
+      "place": "Bridgeport, Connecticut",
+      "diocese": "Diocese of Bridgeport",
+      "parishLink": "/parishes/sv-jurgio-bridgeport-ct",
+      "hearthUrl": null,
+      "dateObserved": "2026-07-23",
+      "clergy": {
+        "arrangement": "no_lithuanian_clergy",
+        "detail": "Current St. Charles & St. George staff page lists Rev. Abelardo Vasquez as pastor with several parochial vicars and a weekend priest; no Lithuanian ministry or Lithuanian-speaking clergy are listed, and St. George does not appear in Sielovada North America."
+      },
+      "liturgy": {
+        "lithuanianMass": false,
+        "frequency": "none",
+        "detail": "The current official St. George schedule lists weekday evening Masses plus Saturday 6:30 p.m. Spanish, Sunday 8:30 a.m. English, and Sunday 10:30 a.m. Spanish. No Lithuanian Mass appears on the official schedule; one older/blocked aggregator claim remains unconfirmed."
+      },
+      "governance": "merged",
+      "governanceDetail": "St. George now operates publicly with St. Charles Borromeo as Saint Charles & Saint George, a multi-site parish structure serving Spanish, English, Portuguese, and Haitian communities.",
+      "survivedThreats": "The building survived and remains an active Catholic worship site, but the Lithuanian parish identity has effectively been absorbed into a broader immigrant parish.",
+      "financial": null,
+      "situation": "Bridgeport St. George is a building-and-memory sustainability case. The church is active and the Lithuanian interior remains significant, but current official parish sources show no Lithuanian Mass and no Lithuanian clergy. Its watch status is the risk of Lithuanian identity becoming purely architectural inside a merged, non-Lithuanian parish structure.",
+      "photo": {
+        "url": "/images/parishes/bridgeport-st-george.jpg",
+        "alt": "Exterior of St. George Lithuanian church in Bridgeport, Connecticut.",
+        "attribution": "Global True Lithuania / Augustinas Žemaitis, Bridgeport St. George Lithuanian church photo.",
+        "license": "External source; reuse permission not confirmed."
+      },
+      "sources": [
+        {
+          "title": "Mass Schedule",
+          "publisher": "Saint Charles & Saint George",
+          "url": "https://www.stcharlesbridgeport.org/mass-schedule"
+        },
+        {
+          "title": "Clergy and Staff Directory",
+          "publisher": "Saint Charles & Saint George",
+          "url": "https://www.stcharlesbridgeport.org/clergy-and-staff-directory"
+        },
+        {
+          "title": "Parish Information",
+          "publisher": "Saint Charles & Saint George",
+          "url": "https://www.stcharlesbridgeport.org/parish-information"
+        },
+        {
+          "title": "Connecticut Lithuanian heritage: Bridgeport St. George section",
+          "publisher": "Global True Lithuania",
+          "url": "https://global.truelithuania.com/connecticut-789/"
+        },
+        {
+          "title": "St. George, Bridgeport",
+          "publisher": "DiscoverMass",
+          "url": "https://discovermass.com/church/st-george-bridgeport-ct/"
+        }
+      ]
+    },
+    {
+      "id": "brighton-park-immaculate-conception-watch",
+      "entity": "Immaculate Conception Parish (Švč. M. Marijos Nekalto Prasidėjimo)",
+      "place": "Chicago, Illinois",
+      "diocese": "Archdiocese of Chicago",
+      "parishLink": "/parishes/svc-m-marijos-nekalto-prasidejimo-chicago-il",
+      "hearthUrl": null,
+      "dateObserved": "2026-07-23",
+      "clergy": {
+        "arrangement": "visiting_priest",
+        "detail": "Sielovada lists Kun. Gediminas Keršys as Lithuanian chaplain for the Chicago Immaculate Conception parish. The merged parish history page lists Rev. Miguel Venegas as pastor from 2020-present."
+      },
+      "liturgy": {
+        "lithuanianMass": true,
+        "frequency": "weekly",
+        "detail": "The current parish homepage lists Sunday Mass at Immaculate Conception: 7:00 a.m. Spanish, 10:00 a.m. Lithuanian, and 12:00 p.m. Spanish."
+      },
+      "governance": "merged",
+      "governanceDetail": "Immaculate Conception joined Five Holy Martyrs in 2019 as Immaculate Conception-Five Holy Martyrs Parish under Renew My Church; both worship sites remain open.",
+      "survivedThreats": "Survived the 2019 Renew My Church merger with Lithuanian liturgy still explicitly scheduled at the Immaculate Conception site.",
+      "financial": null,
+      "situation": "Brighton Park Immaculate Conception is a comparatively strong mass-continues case inside a merged, multiethnic parish. The community is predominantly Hispanic, but the official parish schedule still names a weekly Lithuanian Mass and Sielovada still assigns a Lithuanian chaplain, while the church retains a distinct Lithuanian architectural and devotional fabric.",
+      "photo": {
+        "url": "/images/parishes/brighton-park-immaculate-conception.jpg",
+        "alt": "Exterior of the Brighton Park Immaculate Conception Lithuanian church in Chicago.",
+        "attribution": "Global True Lithuania / Augustinas Žemaitis, Brighton Park Immaculate Conception photo.",
+        "license": "External source; reuse permission not confirmed."
+      },
+      "sources": [
+        {
+          "title": "North America Lithuanian pastoral care directory",
+          "publisher": "Sielovada.org",
+          "url": "https://sielovada.org/siaures-amerika/"
+        },
+        {
+          "title": "Immaculate Conception & Five Holy Martyrs homepage",
+          "publisher": "Immaculate Conception-Five Holy Martyrs Parish",
+          "url": "https://www.ic5hm.org/"
+        },
+        {
+          "title": "About Us",
+          "publisher": "Immaculate Conception-Five Holy Martyrs Parish",
+          "url": "https://www.immaculateconception-fiveholymartyrs.com/about-us"
+        },
+        {
+          "title": "Chicago Lithuanian heritage: Brighton Park section",
+          "publisher": "Global True Lithuania",
+          "url": "https://global.truelithuania.com/chicago-illinois-45/"
+        },
+        {
+          "title": "Arkivysk. Liongino Virbalo SJ apsilankymas Čikagoje ir Lemonte",
+          "publisher": "Sielovada.org",
+          "url": "https://sielovada.org/arkivysk-liongino-virbalo-sj-apsilankymas-cikagoje-ir-lemonte/"
+        },
+        {
+          "title": "Chicago Brighton Park Immaculate Conception legacy directory entry",
+          "publisher": "Litua.com Lithuanian Churches in USA",
+          "url": "https://www.litua.com/lt/zinynas/baznycios"
+        }
+      ]
+    },
+    {
+      "id": "luzerne-st-ann-watch",
+      "entity": "Holy Family Parish / former St. Ann (Šv. Onos)",
+      "place": "Luzerne, Pennsylvania",
+      "diocese": "Diocese of Scranton",
+      "parishLink": "/parishes/sv-onos-luzerne-pa",
+      "hearthUrl": null,
+      "dateObserved": "2026-07-23",
+      "clergy": {
+        "arrangement": "no_lithuanian_clergy",
+        "detail": "Diocese of Scranton lists Monsignor David L. Tressler as pastor, Rev. Michael J. Boris as assistant pastor, and Deacon Gerard P. Pernot. No Lithuanian clergy or Lithuanian ministry appears in current sources."
+      },
+      "liturgy": {
+        "lithuanianMass": false,
+        "frequency": "none",
+        "detail": "Diocesan listing for Holy Family Church at 574 Bennett Street gives Saturday 5:15 p.m., Sunday 9:00 a.m., and weekday 12:10 p.m. Masses. No Lithuanian Mass is listed."
+      },
+      "governance": "merged",
+      "governanceDetail": "Former St. Ann Lithuanian parish was consolidated into Holy Family Parish in 1999 and survives as Holy Family Church, the single active worship site at 574 Bennett Street.",
+      "survivedThreats": "Survived the Luzerne consolidation that left the former St. Ann building as the sole worship site while sister ethnic churches were demolished or sold.",
+      "financial": null,
+      "situation": "Luzerne is an active-building, lost-liturgy watch entry. The former St. Ann Lithuanian church remains Catholic-owned and active as Holy Family Parish, making it the surviving Lithuanian-built Catholic site in its local cluster, but no current Lithuanian Mass, Lithuanian clergy, or Lithuanian programming was found. Its sustainability value is institutional survival, not present Lithuanian pastoral life.",
+      "photo": {
+        "url": "/images/parishes/luzerne-st-ann-holy-family.jpg",
+        "alt": "Official Holy Family Church image representing the former St. Ann Lithuanian parish building in Luzerne.",
+        "attribution": "Diocese of Scranton Holy Family Luzerne directory image.",
+        "license": "Diocesan website source; reuse permission not confirmed. Image appears to be an official rendering rather than a direct exterior photograph."
+      },
+      "sources": [
+        {
+          "title": "Holy Family Parish Luzerne",
+          "publisher": "Diocese of Scranton",
+          "url": "https://www.dioceseofscranton.org/find-a-parish/holy-family-parish-luzerne-luzerne/"
+        },
+        {
+          "title": "Parish History",
+          "publisher": "Holy Family Parish Luzerne",
+          "url": "https://www.holyfamilyluzerne.org/Parish-History"
+        },
+        {
+          "title": "Catholic Community of Luzerne",
+          "publisher": "Holy Family Parish Luzerne",
+          "url": "https://www.holyfamilyluzerne.org/catholic-community-of-luzerne"
+        },
+        {
+          "title": "Mass Schedule",
+          "publisher": "Holy Family Parish Luzerne",
+          "url": "https://www.holyfamilyluzerne.org/mass-schedule"
+        },
+        {
+          "title": "Parishioners turn gratitude into action during '40 Days of Service' to honor pastor",
+          "publisher": "Diocese of Scranton",
+          "url": "https://www.dioceseofscranton.org/parishioners-turn-gratitude-into-action-during-40-days-of-service-to-honor-pastor/"
+        }
+      ]
+    },
+    {
+      "id": "frackville-annunciation-bvm-watch",
+      "entity": "Annunciation BVM Church (Šv. M. Marijos Apsireiškimo)",
+      "place": "Frackville, Pennsylvania",
+      "diocese": "Diocese of Allentown",
+      "parishLink": "/parishes/sv-m-marijos-apsireiskimo-frackville-pa",
+      "hearthUrl": null,
+      "dateObserved": "2026-07-23",
+      "clergy": {
+        "arrangement": "no_lithuanian_clergy",
+        "detail": "Current St. Joseph the Worker Parish sources identify the consolidated parish serving St. Ann, Annunciation BVM, and St. Joseph. No Lithuanian clergy or Lithuanian ministry was found for Annunciation BVM, and the site does not appear in Sielovada North America."
+      },
+      "liturgy": {
+        "lithuanianMass": false,
+        "frequency": "none",
+        "detail": "Current St. Joseph the Worker public Mass schedule centers regular Masses at the St. Ann site; Global True Lithuania describes Annunciation itself as irregularly used. No current Lithuanian Mass was found."
+      },
+      "governance": "merged",
+      "governanceDetail": "Annunciation BVM is one of the churches of consolidated St. Joseph the Worker Parish, with the parish office at 7 South Broad Mountain Avenue.",
+      "survivedThreats": "The church building remains in diocesan Catholic ownership after consolidation, but its adjacent Lithuanian Museum closed in 2022 and the collection moved to Shenandoah, where a new Lithuanian Heritage Museum opened in 2025.",
+      "financial": "No sale, demolition, or diocesan closure announcement was found for the Annunciation church; museum relocation suggests heritage stewardship shifted away from the parish campus.",
+      "situation": "Frackville Annunciation is a heritage-hold rather than a live Lithuanian-liturgy site. The church still stands in the St. Joseph the Worker parish structure and retains Lithuanian architectural markers, but regular worship appears to be elsewhere, the old museum has moved, and no current Lithuanian Mass or clergy were found.",
+      "photo": {
+        "url": "/images/parishes/frackville-annunciation-bvm.jpg",
+        "alt": "Exterior of the Frackville Annunciation BVM Lithuanian church.",
+        "attribution": "Global True Lithuania / Augustinas Žemaitis, Frackville Lithuanian church photo.",
+        "license": "External source; reuse permission not confirmed."
+      },
+      "sources": [
+        {
+          "title": "St. Joseph the Worker Parish homepage",
+          "publisher": "St. Joseph the Worker Parish, Frackville",
+          "url": "https://www.stjoesfrackville.com/"
+        },
+        {
+          "title": "Church of the Annunciation of the Blessed Virgin Mary, Frackville",
+          "publisher": "GCatholic.org",
+          "url": "https://gcatholic.org/churches/usa-03/23603"
+        },
+        {
+          "title": "Shenandoah and southern Coal Region Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/"
+        },
+        {
+          "title": "Shenandoah's Lithuanian heritage on display at new museum",
+          "publisher": "The Shenandoah Sentinel",
+          "url": "https://shensentinel.com/news/shenandoahs-lithuanian-heritage-on-display-at-new-museum/"
+        },
+        {
+          "title": "Pamirštoji lietuvių žemė: bažnyčių likimai ir atminties ženklai (III)",
+          "publisher": "Sielovada.org",
+          "url": "https://sielovada.org/pamirstoji-lietuviu-zeme-baznyciu-likimai-ir-atminties-zenklai-iii/"
+        }
+      ]
+    },
+    {
+      "id": "rochester-st-george-watch",
+      "entity": "St. George Lithuanian Mission Community (Šv. Jurgio)",
+      "place": "Rochester, New York",
+      "diocese": "Diocese of Rochester",
+      "parishLink": "/parishes/sv-jurgio-rochester-ny",
+      "hearthUrl": null,
+      "dateObserved": "2026-07-23",
+      "clergy": {
+        "arrangement": "unknown",
+        "detail": "Diocese of Rochester directory lists the St. George Lithuanian community inside the Our Lady of Lourdes & Saint Anne cluster, with Rev. Gary Tyman as pastor and other assisting clergy. Sielovada lists the mission community and Mass location but does not name a Lithuanian priest or celebrant."
+      },
+      "liturgy": {
+        "lithuanianMass": true,
+        "frequency": "unknown",
+        "detail": "Sielovada says Mass is celebrated at Our Lady of Lourdes Church. The Diocese of Rochester listing includes Lithuanian Mass at Our Lady of Lourdes, Sunday 12:30, but marks the schedule as TBD; frequency and celebrant need human confirmation."
+      },
+      "governance": "mission",
+      "governanceDetail": "The Lithuanian community sold its Hudson Avenue campus and now worships as St. George Lithuanian within the Our Lady of Lourdes & Saint Anne cluster at 150 Varinna Drive.",
+      "survivedThreats": "Survived by relocating after the final Hudson Avenue Mass on June 20, 2010; the historic building was sold to another congregation while the Lithuanian Catholic community continued in hosted space.",
+      "financial": "The community no longer carries its old church campus; sale details for the Hudson Avenue property were not found in this pass.",
+      "situation": "Rochester St. George remains a formal Lithuanian mission-community, but it is fragile: the parish sold its Hudson Avenue building in 2010 and the community now holds Mass in hosted space at Our Lady of Lourdes. Both Sielovada and the Diocese of Rochester still list a Lithuanian Mass there, but the diocesan schedule shows the time as TBD and no Lithuanian celebrant is named — the current Mass schedule and clergy situation require direct confirmation.",
+      "photo": {
+        "url": "/images/parishes/rochester-st-george-our-lady-of-lourdes.jpg",
+        "alt": "Our Lady of Lourdes Church in Rochester, current Mass location for the St. George Lithuanian community.",
+        "attribution": "Diocese of Rochester Pastoral Services directory image for Our Lady of Lourdes.",
+        "license": "Diocesan website source; reuse permission not confirmed."
+      },
+      "sources": [
+        {
+          "title": "North America Lithuanian pastoral care directory",
+          "publisher": "Sielovada.org",
+          "url": "https://sielovada.org/siaures-amerika/"
+        },
+        {
+          "title": "St. George (Lithuanian)",
+          "publisher": "Diocese of Rochester Pastoral Services Directory",
+          "url": "https://ps.dor.org/directory/st-george-lithuanian/"
+        },
+        {
+          "title": "St. George Lithuanian celebrates final Mass on Hudson Avenue",
+          "publisher": "Catholic Courier",
+          "url": "https://catholiccourier.com/articles/st-george-lithuanian-celebrates-final-mass-on-hudson-avenue/"
+        },
+        {
+          "title": "Upstate New York Lithuanian heritage: Rochester section",
+          "publisher": "Global True Lithuania",
+          "url": "https://global.truelithuania.com/upstate-new-york-831/"
+        },
+        {
+          "title": "Court approves $246 million diocese bankruptcy settlement",
+          "publisher": "Rochester Beacon",
+          "url": "https://rochesterbeacon.com/2025/09/08/court-approves-246-million-diocese-bankruptcy-settlement/"
+        },
+        {
+          "title": "Rochester St. George legacy directory entry",
+          "publisher": "Litua.com Lithuanian Churches in USA",
+          "url": "https://www.litua.com/lt/zinynas/baznycios"
+        }
+      ]
+    },
+    {
+      "id": "lemont-matulaitis-mission-watch",
+      "entity": "Blessed Jurgis Matulaitis Lithuanian Mission (Pal. Jurgio Matulaičio)",
+      "place": "Lemont, Illinois",
+      "diocese": "Archdiocese of Chicago",
+      "parishLink": "/parishes/pal-jurgio-matulaicio-misija-lemont-il",
+      "hearthUrl": null,
+      "dateObserved": "2026-07-23",
+      "clergy": {
+        "arrangement": "lithuanian_klebonas",
+        "detail": "Sielovada lists Kun. Artūras Sederevičius, SJ as chaplain. The mission site and Lithuanian World Center page identify Rev. Artūras Sederevičius as the mission priest/director."
+      },
+      "liturgy": {
+        "lithuanianMass": true,
+        "frequency": "weekly",
+        "detail": "Mission website lists Mass Tuesday-Saturday at 8:00 a.m.; Sundays at 9:00 a.m., 11:00 a.m., and 6:00 p.m.; and says all Masses are in Lithuanian, with a bilingual Mass at 4:30 p.m. on the last Saturday of the month."
+      },
+      "governance": "mission",
+      "governanceDetail": "Active Lithuanian Catholic mission of the Archdiocese of Chicago operating inside the community-owned Lithuanian World Center at 14911 127th Street, Lemont.",
+      "survivedThreats": "Survived an Archdiocese of Chicago Renew My Church grouping discussion with Nativity BVM; both communities remain active in 2026.",
+      "financial": "Real-estate exposure differs from diocesan parish churches because the venue is the community-owned Lithuanian World Center rather than a diocesan church property.",
+      "situation": "Lemont is one of the strongest sustainability-watch entries: dedicated Lithuanian Jesuit clergy, multiple weekly Lithuanian Masses, children and sacramental programming, current bulletins, and a community-owned institutional home. The main watch issue is canonical/organizational dependence on mission status and Archdiocese of Chicago grouping decisions, not present activity.",
+      "photo": {
+        "url": "/images/parishes/lemont-matulaitis-mission.jpg",
+        "alt": "Blessed Jurgis Matulaitis Mission chapel interior at the Lithuanian World Center.",
+        "attribution": "Lithuanian World Center organization page image for Blessed Jurgis Matulaitis Mission.",
+        "license": "Lithuanian World Center website source; reuse permission not confirmed."
+      },
+      "sources": [
+        {
+          "title": "North America Lithuanian pastoral care directory",
+          "publisher": "Sielovada.org",
+          "url": "https://sielovada.org/siaures-amerika/"
+        },
+        {
+          "title": "Palaimintojo Jurgio Matulaičio Misija official site",
+          "publisher": "Blessed Jurgis Matulaitis Lithuanian Catholic Mission",
+          "url": "https://www.matulaitismission.com/"
+        },
+        {
+          "title": "Blessed Jurgis Matulaitis Mission",
+          "publisher": "Lithuanian World Center",
+          "url": "https://www.lcenter.org/organizations/blessed-j-matulaitis-mission/"
+        },
+        {
+          "title": "Arkivysk. Liongino Virbalo SJ apsilankymas Čikagoje ir Lemonte",
+          "publisher": "Sielovada.org",
+          "url": "https://sielovada.org/arkivysk-liongino-virbalo-sj-apsilankymas-cikagoje-ir-lemonte/"
+        },
+        {
+          "title": "Pal. J. Matulaičio misijos Lemonte kunigas A. Sederevičius SJ",
+          "publisher": "Sielovada.org / Bernardinai.lt",
+          "url": "https://sielovada.org/pal-j-matulaicio-misijos-lemonte-kunigas-a-sederevicius-sj-maldoje-visi-esame-cia-pat-malda-mus-vienija/"
+        },
+        {
+          "title": "Lemont Blessed Jurgis Matulaitis legacy directory entry",
+          "publisher": "Litua.com Lithuanian Churches in USA",
+          "url": "https://www.litua.com/lt/zinynas/baznycios"
+        }
+      ]
     }
-   ]
-  },
-  {
-   "id": "maspeth-2025-09",
-   "level": "red",
-   "kind": "active",
-   "entity": "Transfiguration (Kristaus Atsimainymo)",
-   "place": "Maspeth, Queens, New York",
-   "diocese": "Diocese of Brooklyn",
-   "dateObserved": "2026-07-19",
-   "eventDate": "2025-09-12",
-   "whatChanged": "Open on a reduced schedule while its long-term future remains undecided. In September 2025 the Diocese of Brooklyn confirmed the church is not closing: weekday Masses moved to St. Stanislaus Kostka, weekend Masses continue at Transfiguration. A petition of more than 700 signatures, a Knights of Lithuania landmark-designation push, and an October 2025 visit from Lithuanian President Gitanas Nausėda have kept the case in the spotlight. Its fate is canonically unresolved.",
-   "parishLink": "/parishes/kristaus-atsimainymo-maspeth-ny",
-   "sources": [
-    {
-     "title": "Transfiguration Church not closing, diocese says",
-     "publisher": "QNS",
-     "url": "https://qns.com/2025/09/transfiguration-church-not-closing/"
-    },
-    {
-     "title": "Lithuanian Catholic community rallies for Transfiguration",
-     "publisher": "QNS",
-     "url": "https://qns.com/2025/07/lithuanian-catholic-church-transfiguration/"
-    },
-    {
-     "title": "President Nausėda visits Transfiguration",
-     "publisher": "QNS",
-     "url": "https://qns.com/2025/09/gitanas-nauseda-transfiguration-church/"
-    }
-   ]
-  },
-  {
-   "id": "freeland-2026-07",
-   "level": "red",
-   "kind": "watch",
-   "entity": "Our Lady of the Immaculate Conception",
-   "place": "Freeland, Pennsylvania",
-   "diocese": "Diocese of Scranton",
-   "dateObserved": "2026-07-19",
-   "eventDate": "2026-07-01",
-   "whatChanged": "Consolidated into St. Patrick Parish (White Haven) effective July 1, 2026, under the Diocese of Scranton's Vision 2030 pastoral plan.",
-   "parishLink": "/registry/parish-freeland-pa",
-   "caveat": "The research record holds a single-source entry for an early mixed Lithuanian–Polish–Slovak–Rusyn parish in Freeland. Whether Our Lady of the Immaculate Conception is that parish's continuation is not yet confirmed — the identity check is an open research task.",
-   "sources": [
-    {
-     "title": "Three new parish consolidations to take effect July 1",
-     "publisher": "Diocese of Scranton",
-     "url": "https://www.dioceseofscranton.org/three-new-parish-consolidations-to-take-effect-july-1/"
-    }
-   ]
-  },
-  {
-   "id": "bayonne-2025-08",
-   "level": "amber",
-   "kind": "building",
-   "entity": "St. Michael (Šv. Mykolo)",
-   "place": "Bayonne, New Jersey",
-   "diocese": "Archdiocese of Newark",
-   "dateObserved": "2026-07-19",
-   "eventDate": "2025-08-12",
-   "whatChanged": "The vacant former Lithuanian church at 15–21 East 23rd Street went before Bayonne's Planning Board in August 2025 with a proposal to demolish it for a six-story, 114-unit residential building; the city's historical committee raised no objection.",
-   "parishLink": "/parishes/sv-mykolo-bayonne-nj",
-   "sources": [
-    {
-     "title": "Development plans for 15–21 East 23rd Street",
-     "publisher": "Jersey Digs",
-     "url": "https://jerseydigs.com/15-21-east-23rd-street-bayonne-development/"
-    }
-   ]
-  },
-  {
-   "id": "scranton-st-michael-2026-05",
-   "level": "amber",
-   "kind": "building",
-   "entity": "St. Michael (Šv. Mykolo)",
-   "place": "Scranton, Pennsylvania",
-   "diocese": "Diocese of Scranton",
-   "dateObserved": "2026-07-19",
-   "eventDate": "2026-05",
-   "whatChanged": "The parish relocated to St. Lucy Church in September 2025 and continues there; its original 1942 building at 1703 Jackson Street has been on the commercial market since spring 2026, listed at $350,000.",
-   "parishLink": "/parishes/sv-mykolo-scranton-pa",
-   "sources": [
-    {
-     "title": "Saint Michael Parish finds new home at historic Saint Lucy Church",
-     "publisher": "Diocese of Scranton",
-     "url": "https://www.dioceseofscranton.org/a-new-beginning-saint-michael-parish-finds-new-home-at-historic-saint-lucy-church/"
-    },
-    {
-     "title": "1703 Jackson Street commercial listing",
-     "publisher": "Lewith & Freeman Real Estate",
-     "url": "https://www.lewith-freeman.com/p/1703-Jackson-Street-Scranton-PA-18504/dmgid_186324175"
-    }
-   ]
-  },
-  {
-   "id": "elizabeth-2026-07",
-   "level": "amber",
-   "kind": "watch",
-   "entity": "Sts. Peter and Paul (Šv. Petro ir Povilo)",
-   "place": "Elizabeth, New Jersey",
-   "diocese": "Archdiocese of Newark",
-   "dateObserved": "2026-07-19",
-   "eventDate": null,
-   "whatChanged": "Current archdiocesan planning documents (Planning Area K) list it within the combined \"St. Adalbert and Sts. Peter and Paul\" parish, with one Mass remaining at the Lithuanian church. No decree on its future has surfaced; its fate is canonically unresolved.",
-   "parishLink": "/parishes/sv-petro-ir-povilo-elizabeth-nj",
-   "sources": [
-    {
-     "title": "Planning Area K — Eastern Union",
-     "publisher": "Archdiocese of Newark",
-     "url": "https://rcan.org/planning-area-k-eastern-union/"
-    }
-   ]
-  },
-  {
-   "id": "hartford-2026-04",
-   "level": "amber",
-   "kind": "active",
-   "entity": "Holy Trinity (Švč. Trejybės)",
-   "place": "Hartford, Connecticut",
-   "diocese": "Archdiocese of Hartford",
-   "dateObserved": "2026-07-19",
-   "eventDate": "2026-04",
-   "whatChanged": "Parishioners were formally notified of a proposed partial closure — part of an archdiocese-wide restructuring of 212 parishes toward 127 — with parishioners pushing for a Lithuanian cultural center in the building.",
-   "parishLink": "/parishes/svc-trejybes-hartford-ct",
-   "sources": [
-    {
-     "title": "Hartford parishioners met with notice of partial closure for Holy Trinity",
-     "publisher": "WTNH",
-     "url": "https://www.wtnh.com/news/connecticut/hartford/hartford-parishioners-met-with-notice-of-partial-closure-for-holy-trinity-catholic-church/"
-    }
-   ]
-  },
-  {
-   "id": "beverly-shores-2026-03",
-   "level": "amber",
-   "kind": "watch",
-   "entity": "St. Ann of the Dunes (Šv. Onos)",
-   "place": "Beverly Shores, Indiana",
-   "diocese": "Diocese of Gary",
-   "dateObserved": "2026-07-19",
-   "eventDate": "2026-03",
-   "whatChanged": "Named in the Diocese of Gary's Porter Planning Area, which is consolidating five parishes down to two worship sites under the diocese's March 2026 pastoral-planning announcement.",
-   "parishLink": "/registry/st-ann-beverly-shores-in",
-   "sources": [
-    {
-     "title": "Pastoral planning",
-     "publisher": "Diocese of Gary",
-     "url": "https://dcgary.org/planning"
-    }
-   ]
-  }
- ],
- "campaigns": [
-  {
-   "id": "divine-providence-campaign",
-   "entity": "Divine Providence (Dievo Apvaizdos)",
-   "place": "Southfield, Michigan",
-   "parishLink": "/parishes/dievo-apvaizdos-southfield-mi",
-   "hearthUrl": "https://blog.saveourlithuanianparishes.org/i/207579337/divine-providence-lithuanian-catholic-church-southfield-michigan",
-   "since": "2026",
-   "who": "The parish community, with this project's public analysis",
-   "form": "The parish's case made in the Archdiocese's own published numbers — The Hearth's workbook analysis and the armory on this site — while the restructuring survey window is open",
-   "state": "Press coverage describes the parish as seeking to remain a standalone ethnic parish inside the Archdiocese of Detroit's 2025–2027 restructuring. No proposal naming the parish has surfaced; the survey closes July 31, 2026.",
-   "dispatches": [
-    {
-     "title": "In Writing: The 1968 Letter That Made Divine Providence a National Parish",
-     "url": "https://blog.saveourlithuanianparishes.org/p/in-writing-the-1968-letter-that-made"
-    },
-    {
-     "title": "A Personal Parish, Not a Place",
-     "url": "https://blog.saveourlithuanianparishes.org/p/a-personal-parish-not-a-place"
-    },
-    {
-     "title": "The Parish Brings Christ",
-     "url": "https://blog.saveourlithuanianparishes.org/p/the-parish-brings-christ"
-    },
-    {
-     "title": "How You Can Help Save Detroit's Divine Providence Lithuanian Parish",
-     "url": "https://blog.saveourlithuanianparishes.org/p/how-you-can-help-save-our-lithuanian"
-    },
-    {
-     "title": "By the Numbers: The Archdiocese of Detroit's 13 Ethnic Parishes",
-     "url": "https://blog.saveourlithuanianparishes.org/p/who-the-archdioceses-ethnic-parishes"
-    },
-    {
-     "title": "The Numbers Behind Divine Providence",
-     "url": "https://blog.saveourlithuanianparishes.org/p/the-numbers-behind-divine-providence"
-    },
-    {
-     "title": "Do Your Part for Divine Providence",
-     "url": "https://blog.saveourlithuanianparishes.org/p/do-your-part-for-divine-providence"
-    }
-   ],
-   "sources": [
-    {
-     "title": "Southfield's Divine Providence Lithuanian church seeks to remain a standalone ethnic parish",
-     "publisher": "Michigan Catholic Tribune",
-     "url": "https://micatholictribune.com/stories/541494701-southfield-s-divine-providence-lithuanian-church-seeks-to-remain-a-standalone-ethnic-parish"
-    }
-   ]
-  },
-  {
-   "id": "hartford-campaign",
-   "entity": "Holy Trinity (Švč. Trejybės)",
-   "place": "Hartford, Connecticut",
-   "parishLink": "/parishes/svc-trejybes-hartford-ct",
-   "hearthUrl": "https://blog.saveourlithuanianparishes.org/i/207579337/holy-trinity-church-hartford-connecticut",
-   "since": "2026",
-   "who": "Parishioners of Holy Trinity, Hartford, and the broader Lithuanian Catholic community",
-   "form": "GoFundMe to retain a canon-law attorney; community advocacy and documentation; push to preserve the building as a Lithuanian cultural center",
-   "state": "Parishioners were formally notified of a proposed partial closure as part of the Archdiocese of Hartford's restructuring of 212 parishes. The canonical fund is active and the case is being contested.",
-   "sources": [
-    {
-     "title": "Hartford parishioners met with notice of partial closure for Holy Trinity",
-     "publisher": "WTNH",
-     "url": "https://www.wtnh.com/news/connecticut/hartford/hartford-parishioners-met-with-notice-of-partial-closure-for-holy-trinity-catholic-church/"
-    },
-    {
-     "title": "Protect Holy Trinity Church",
-     "publisher": "GoFundMe",
-     "url": "https://www.gofundme.com/f/protect-holy-trinity-church"
-    }
-   ]
-  },
-  {
-   "id": "waterbury-campaign",
-   "entity": "St. Joseph's (Šv. Juozapo)",
-   "place": "Waterbury, Connecticut",
-   "parishLink": "/parishes/sv-juozapo-waterbury-ct",
-   "hearthUrl": "https://blog.saveourlithuanianparishes.org/i/207579337/st-josephs-church-waterbury-connecticut",
-   "since": "2023",
-   "who": "Parishioners of St. Joseph's Lithuanian Catholic Church, Waterbury",
-   "form": "Retained a canon lawyer in 2023 to contest the archdiocese's closure decision; GoFundMe to cover legal expenses",
-   "state": "Closed September 30, 2023 by decree under the Archdiocese of Hartford's restructuring plan. The canonical appeal is ongoing and the community has so far prevented a complete ending.",
-   "sources": [
-    {
-     "title": "Parishioners fight Waterbury church closure",
-     "publisher": "WFSB",
-     "url": "https://www.wfsb.com/2023/08/28/parishioners-fight-waterbury-church-closure/"
-    },
-    {
-     "title": "Save St. Joseph's Lithuanian Catholic Church",
-     "publisher": "GoFundMe",
-     "url": "https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church"
-    }
-   ]
-  },
-  {
-   "id": "maspeth-campaign",
-   "entity": "Transfiguration (Kristaus Atsimainymo)",
-   "place": "Maspeth, Queens, New York",
-   "parishLink": "/parishes/kristaus-atsimainymo-maspeth-ny",
-   "hearthUrl": "https://blog.saveourlithuanianparishes.org/i/207579337/church-of-the-transfiguration-maspeth-queens-new-york",
-   "since": "2025",
-   "who": "Parishioners and preservation supporters, backed by the Knights of Lithuania",
-   "form": "A petition of more than 700 signatures, a landmark-designation effort for the church building, and an October 2025 visit from Lithuanian President Gitanas Nausėda",
-   "state": "The Diocese of Brooklyn confirmed in September 2025 that the church stays open on a limited basis — weekend Masses continue at Transfiguration — and states the church building itself is not for sale. The parish's long-term future remains canonically unresolved.",
-   "sources": [
-    {
-     "title": "Transfiguration church not closing",
-     "publisher": "QNS",
-     "url": "https://qns.com/2025/09/transfiguration-church-not-closing/"
-    },
-    {
-     "title": "Nausėda visit",
-     "publisher": "QNS",
-     "url": "https://qns.com/2025/09/gitanas-nauseda-transfiguration-church/"
-    }
-   ]
-  }
- ],
- "sustainabilityWatch": [
-  {
-   "id": "south-boston-watch",
-   "entity": "St. Peter Lithuanian Parish (Šv. Petro)",
-   "place": "South Boston, Massachusetts",
-   "diocese": "Archdiocese of Boston",
-   "parishLink": "/parishes/sv-petro-boston-ma",
-   "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/the-boston-hill-of-crosses-how-south",
-   "dispatches": [
-    {
-     "title": "The Boston Hill of Crosses: How South Boston Saved Its Lithuanian Parish",
-     "url": "https://blog.saveourlithuanianparishes.org/p/the-boston-hill-of-crosses-how-south"
-    }
-   ],
-   "dateObserved": "2026-07-16",
-   "clergy": {
-    "arrangement": "collaborative_pastor",
-    "detail": "Pastor Rev. William M. Kennedy (shared collaborative pastor, not Lithuanian-speaking). Lithuanian ministry organized by the Lithuanian Apostolate of the Archdiocese of Boston under directors Aldona Lingertat and Gloria Adomkaitis, with administrator Daiva Navickas. Community requesting a second Lithuanian-speaking priest from the Franciscan Fathers in Lithuania — no indication the request has been filled."
-   },
-   "liturgy": {
-    "lithuanianMass": true,
-    "frequency": "weekly",
-    "detail": "Sunday 10:30 a.m. Lithuanian Mass; 9:00 a.m. English Mass; Thursday 9:00 a.m. weekday Mass"
-   },
-   "governance": "collaborative",
-   "governanceDetail": "Within the South Boston Seaport Catholic Collaborative (with St. Monica), formed under Disciples in Mission effective June 2, 2015. Archdiocesan directory continues to list St. Peter as a distinct parish.",
-   "survivedThreats": "2004 closure attempt (Hill of Crosses protest at church entrance); 2021-22 merger proposal (not consummated; community refused merger consent February 2022)",
-   "financial": null,
-   "situation": "The only Lithuanian church in New England. The parish remains active with weekly Lithuanian Mass and a lay-led Lithuanian Apostolate, but has no Lithuanian-speaking pastor of its own. Its Lithuanian liturgical future depends on securing additional Lithuanian-speaking clergy — the community has formally requested a priest from the Franciscan Fathers in Lithuania, with no indication the request has been filled.",
-   "sources": [
-    {
-     "title": "St. Peter Lithuanian Parish in Boston – New Challenges",
-     "publisher": "Draugas News",
-     "url": "https://www.draugas.org/news/st-peter-lithuanian-parish-in-boston-new-challenges/"
-    },
-    {
-     "title": "Lithuanian Apostolate bulletin, July 2026",
-     "publisher": "St. Peter Lithuanian Parish",
-     "url": "http://www.stpeterlithuanianparish.org/pdf_files/liepa_2026.pdf"
-    },
-    {
-     "title": "Saint Peter parish directory listing",
-     "publisher": "The Boston Pilot",
-     "url": "https://thebostonpilot.com/bcd/web_parish.asp?ektronid=4390"
-    },
-    {
-     "title": "South Boston St. Peter legacy directory entry",
-     "publisher": "Litua.com Lithuanian Churches in USA",
-     "url": "https://www.litua.com/lt/zinynas/baznycios"
-    }
-   ]
-  },
-  {
-   "id": "chicago-nativity-bvm-watch",
-   "entity": "Nativity BVM Parish (Švč. M. Marijos Gimimo)",
-   "place": "Chicago, Illinois",
-   "diocese": "Archdiocese of Chicago",
-   "parishLink": "/parishes/svc-mergeles-marijos-gimimo-chicago-il",
-   "hearthUrl": null,
-   "dateObserved": "2026-07-23",
-   "clergy": {
-    "arrangement": "lithuanian_klebonas",
-    "detail": "Sielovada lists Kun. Jaunius Kelpšas as klebonas of Nativity BVM. Sielovada article coverage also places him in active Chicago Lithuanian liturgical life, including the parish anniversary Mass and 2026 diaspora liturgy in Chicago."
-   },
-   "liturgy": {
-    "lithuanianMass": true,
-    "frequency": "weekly",
-    "detail": "The parish website lists Lithuanian Mass at 8:30 a.m. daily, 4:00 p.m. Saturday, and 11:00 a.m. Sunday; 9:30 a.m. Sunday Mass is English. The second Sunday 11:00 a.m. Mass is identified as the children's Lithuanian Mass."
-   },
-   "governance": "standalone",
-   "governanceDetail": "Current public parish and Sielovada pages present Nativity BVM as a distinct Lithuanian parish/rektoriatas with its own pastor. Prior scout data notes an Archdiocese of Chicago Renew My Church grouping proposal with Blessed Jurgis Matulaitis Mission, but no final merger or closure decree was found in the Tier 1 pass.",
-   "survivedThreats": "Survived Chicago-area Lithuanian parish consolidation; local case data records it as the sole surviving Lithuanian Roman Catholic parish in Chicago by 2020.",
-   "financial": "Prior scout data flags chronic deficit support through an archdiocesan high-interest loan and notes that the church building is not parish-owned. This Tier 1 web pass did not find a fresh public confirmation of the current loan balance, rate, or building-ownership terms.",
-   "situation": "Nativity BVM is a high-vitality but financially exposed survivor: Sielovada and the parish website confirm a Lithuanian klebonas and frequent Lithuanian liturgy, while local scout data keeps the key sustainability question on finances and diocesan/building control open. Sielovada articles show active parish anniversaries, confirmations, and Chicago Lithuanian community participation rather than liturgical dormancy.",
-   "photo": {
-    "url": "/images/parishes/chicago-nativity-bvm.jpg",
-    "alt": "Exterior of Nativity of the Blessed Virgin Mary Lithuanian church in Chicago.",
-    "attribution": "CIEE article, image captioned as Lithuanian Church of the Nativity of the Blessed Virgin Mary in Chicago; article credits related architectural archive material to the Mulokas family personal archive.",
-    "license": "External source; reuse permission not confirmed."
-   },
-   "sources": [
-    {
-     "title": "North America Lithuanian pastoral care directory",
-     "publisher": "Sielovada.org",
-     "url": "https://sielovada.org/siaures-amerika/"
-    },
-    {
-     "title": "Masses",
-     "publisher": "Chicago Nativity Blessed Virgin Mary Parish",
-     "url": "https://chicagonativitybvm.org/misios/?lang=en"
-    },
-    {
-     "title": "Bažnyčia ir bendruomenė neatsiejamos: atšventė Švč. Mergelės Marijos Gimimo bažnyčios 96-ąjį gimtadienį",
-     "publisher": "Sielovada.org / Draugas",
-     "url": "https://sielovada.org/baznycia-ir-bendruomene-neatsiejamos-atsvente-svc-mergeles-marijos-gimimo-baznycios-96-aji-gimtadieni/"
-    },
-    {
-     "title": "Arkivysk. Liongino Virbalo SJ apsilankymas Čikagoje ir Lemonte",
-     "publisher": "Sielovada.org",
-     "url": "https://sielovada.org/arkivysk-liongino-virbalo-sj-apsilankymas-cikagoje-ir-lemonte/"
-    },
-    {
-     "title": "Bridging Cultures: Vaidas Petrulis's Journey Through 20th Century Lithuanian Architecture in the U.S.",
-     "publisher": "CIEE",
-     "url": "https://www.ciee.org/about/blog/bridging-cultures-vaidas-petruliss-journey-through-20th-century-lithuanian-architecture-us"
-    },
-    {
-     "title": "Chicago Nativity BVM legacy directory entry",
-     "publisher": "Litua.com Lithuanian Churches in USA",
-     "url": "https://www.litua.com/lt/zinynas/baznycios"
-    }
-   ]
-  },
-  {
-   "id": "cleveland-st-casimir-watch",
-   "entity": "St. Casimir Parish (Šv. Kazimiero)",
-   "place": "Cleveland, Ohio",
-   "diocese": "Diocese of Cleveland",
-   "parishLink": "/parishes/sv-kazimiero-cleveland-oh",
-   "hearthUrl": null,
-   "dispatches": [
-    {
-     "title": "Closed by the Diocese, Reopened by Rome",
-     "url": "https://blog.saveourlithuanianparishes.org/p/a-closure-done-wrong-is-not-a-closure"
-    }
-   ],
-   "dateObserved": "2026-07-23",
-   "clergy": {
-    "arrangement": "lithuanian_klebonas",
-    "detail": "Sielovada lists Rev. Andrius Morkūnas as pastor of St. Casimir. Local case data and Diocese of Cleveland assignment notices identify Andrew M. Morkunas as administrator effective April 30, 2025, also serving as a University Hospitals chaplain; title usage therefore differs by source but the Lithuanian priest match is strong."
-   },
-   "liturgy": {
-    "lithuanianMass": true,
-    "frequency": "weekly",
-    "detail": "Sielovada confirms Lithuanian and English Masses. Local case data from current parish bulletins records Sunday 11:00 a.m. Lithuanian Mass, English Masses Saturday/Sunday, and weekday Masses."
-   },
-   "governance": "merged",
-   "governanceDetail": "Current St. Casimir is the surviving consolidated Lithuanian parish formed October 25, 2009 from St. George and Our Lady of Perpetual Help; it remains an active Diocese of Cleveland parish on Neff Road.",
-   "survivedThreats": "Survived the 2009 Cleveland Lithuanian parish consolidation and a 2014 financial crisis that scout data ties to a diocesan-approved school-building lease.",
-   "financial": "The 2014 school-lease rescue remains the key financial signal, but current occupancy/renewal of that lease was not confirmed in this Tier 1 web pass. Current bulletins in local case data show normal operations and 2027 Mass intentions, not an active closure action.",
-   "situation": "St. Casimir Cleveland remains one of the stronger sustainability-watch cases: Sielovada names a Lithuanian priest, scout/current case data shows weekly Lithuanian Mass and active parish operations, and the main uncertainty is not present liturgical life but whether the post-2014 school-building financial support remains stable.",
-   "photo": {
-    "url": "/images/parishes/cleveland-st-casimir.jpg",
-    "alt": "Exterior of St. Casimir Parish church in Cleveland.",
-    "attribution": "Saint Casimir Parish website image, baznycia-m.jpg.",
-    "license": "Parish website source; reuse permission not confirmed."
-   },
-   "sources": [
-    {
-     "title": "North America Lithuanian pastoral care directory",
-     "publisher": "Sielovada.org",
-     "url": "https://sielovada.org/siaures-amerika/"
-    },
-    {
-     "title": "Saint Casimir Parish homepage",
-     "publisher": "Saint Casimir Parish",
-     "url": "http://www.saintcasimirparish.org/"
-    },
-    {
-     "title": "Bulletin, July 4-5, 2026",
-     "publisher": "Saint Casimir Parish",
-     "url": "http://saintcasimirparish.org/main-en/bulletin-en.html"
-    },
-    {
-     "title": "Clergy assignment changes - January 2025",
-     "publisher": "Diocese of Cleveland",
-     "url": "https://www.dioceseofcleveland.org/news/2025/01/23/clergy-assignment-changes-january-2025"
-    },
-    {
-     "title": "St. Casimir parish directory, Neff Road",
-     "publisher": "Diocese of Cleveland",
-     "url": "https://www.dioceseofcleveland.org/parishes/directory/st-casimir"
-    },
-    {
-     "title": "Cleveland Lithuanian church legacy directory entries",
-     "publisher": "Litua.com Lithuanian Churches in USA",
-     "url": "https://www.litua.com/lt/zinynas/baznycios"
-    }
-   ]
-  },
-  {
-   "id": "philadelphia-st-andrew-watch",
-   "entity": "St. Andrew Lithuanian Parish (Šv. Andriejaus)",
-   "place": "Philadelphia, Pennsylvania",
-   "diocese": "Archdiocese of Philadelphia",
-   "parishLink": "/parishes/sv-andriejaus-philadelphia-pa",
-   "hearthUrl": null,
-   "dateObserved": "2026-07-23",
-   "clergy": {
-    "arrangement": "collaborative_pastor",
-    "detail": "The Archdiocese of Philadelphia and parish website list Rev. Gerald Dennis Gill, Cathedral Basilica rector, as parochial administrator. Sielovada lists St. Andrew as a Lithuanian parish with Lithuanian Mass but does not name a priest for Philadelphia; local scout data identifies Gill as not Lithuanian-speaking, with Lithuanian ministry sustained through parish/community structures and visiting clergy for some youth liturgies."
-   },
-   "liturgy": {
-    "lithuanianMass": true,
-    "frequency": "weekly",
-    "detail": "The parish website and Archdiocese of Philadelphia list Sunday 11:00 a.m. Mass at St. Andrew in Lithuanian and English. Sielovada says Lithuanian Mass is twice monthly, so frequency should be rechecked with a human/parish contact; current direct parish and diocesan listings support weekly."
-   },
-   "governance": "standalone",
-   "governanceDetail": "Archdiocese lists St. Andrew (Lithuanian) as an active parish founded in 1924, with the former St. Casimir Lithuanian church as a worship site. Parish administration and correspondence run through the Cathedral Parish Office under Rev. Gerald Dennis Gill.",
-   "survivedThreats": "Survived inside the archdiocese after absorbing/holding the former St. Casimir Lithuanian worship site; it remains the only Pennsylvania Lithuanian parish with a listed Lithuanian-language Sunday Mass.",
-   "financial": "Scout/local case data reports the former rectory was sold for $1.2 million around 2022-2024 and the proceeds invested for parish operations; the parish website corroborates that former rectory phone lines are no longer in service, but the exact deed date remains unresolved.",
-   "situation": "St. Andrew Philadelphia is active but structurally fragile: the parish and archdiocesan listings show weekly Lithuanian/English Sunday Mass and a living Lithuanian school/parish network, while Sielovada does not list a resident Lithuanian priest and governance depends on the Cathedral rector as parochial administrator. The rectory-sale proceeds appear to support operations, but the exact sale timing and long-term sustainability effect remain open.",
-   "photo": {
-    "url": "/images/parishes/philadelphia-st-andrew.jpg",
-    "alt": "Exterior parish-grounds photo showing work on the Lithuanian wayside cross at St. Andrew Lithuanian Parish.",
-    "attribution": "Saint Andrew Lithuanian Parish website photo from the Lithuanian Wayside Cross gallery.",
-    "license": "Parish website source; reuse permission not confirmed."
-   },
-   "sources": [
-    {
-     "title": "North America Lithuanian pastoral care directory",
-     "publisher": "Sielovada.org",
-     "url": "https://sielovada.org/siaures-amerika/"
-    },
-    {
-     "title": "Saint Andrew Lithuanian Parish official website",
-     "publisher": "Saint Andrew Lithuanian Parish",
-     "url": "https://saintandrewlithuanianparish.org/"
-    },
-    {
-     "title": "Andrew (Lithuanian) parish listing",
-     "publisher": "Archdiocese of Philadelphia",
-     "url": "https://archphila.org/parish/st-andrew-philadelphia/"
-    },
-    {
-     "title": "Filadelfijos Šv. Andriejaus parapijos šimtmetis",
-     "publisher": "Sielovada.org",
-     "url": "https://sielovada.org/filadelfijos-sv-andriejaus-parapijos-simtmetis/"
-    },
-    {
-     "title": "Švento Andriejaus parapijoje Philadelphijoje verda gyvenimas",
-     "publisher": "Draugas",
-     "url": "https://www.draugas.org/svento-andriejaus-parapijoje-philadelphijoje-verda-gyvenimas/"
-    },
-    {
-     "title": "Philadelphia St. Andrew legacy directory entry",
-     "publisher": "Litua.com Lithuanian Churches in USA",
-     "url": "https://www.litua.com/lt/zinynas/baznycios"
-    }
-   ]
-  },
-  {
-   "id": "dayton-holy-cross-watch",
-   "entity": "Holy Cross Church (Šv. Kryžiaus)",
-   "place": "Dayton, Ohio",
-   "diocese": "Archdiocese of Cincinnati",
-   "parishLink": "/parishes/sv-kryziaus-dayton-oh",
-   "hearthUrl": null,
-   "dateObserved": "2026-07-23",
-   "clergy": {
-    "arrangement": "collaborative_pastor",
-    "detail": "Current Archdiocese of Cincinnati Beacons of Light listing places Holy Cross in the St. Gabriel the Archangel Family of Parishes under pastor Father Kyle E. Schnippel, with parochial vicars Father Chibueze Asiegbulem and Father Andrew J. Smith. No Dayton Holy Cross priest appears in the Sielovada North America directory, and no Lithuanian-speaking celebrant was confirmed in this pass."
-   },
-   "liturgy": {
-    "lithuanianMass": true,
-    "frequency": "unknown",
-    "detail": "The current St. Gabriel schedule lists a single Sunday 10:30 a.m. Mass at Holy Cross but does not label it Lithuanian. A 2021 Catholic Telegraph profile says two readings were still proclaimed in Lithuanian at every Mass; whether that continues in 2026, and who celebrates it, remains unresolved."
-   },
-   "governance": "collaborative",
-   "governanceDetail": "Part of the five-church St. Gabriel the Archangel Family of Parishes implemented July 1, 2022: St. Peter, Our Lady of the Rosary, Holy Cross, St. Christopher, and St. John the Baptist.",
-   "survivedThreats": "Never closed or sold. Listed on the National Register of Historic Places since November 5, 1991, recognizing its Lithuanian modern sacred architecture and Soviet-occupation memory program.",
-   "financial": "The National Register listing gives preservation weight to the building, but the current St. Gabriel financial reports would need review to verify the older scout claim that Holy Cross is debt-free.",
-   "situation": "Holy Cross remains active and architecturally protected, but the live sustainability question is liturgical: the official family schedule shows one Sunday Mass at the Dayton site without a Lithuanian-language label, while older Catholic Telegraph/current scout data preserve evidence of Lithuanian readings or Mass identity. The parish is safer as a building than as a clearly documented Lithuanian liturgical community unless a current celebrant and language practice are confirmed.",
-   "photo": {
-    "url": "/images/parishes/dayton-holy-cross.jpg",
-    "alt": "Exterior of Holy Cross Lithuanian church in Dayton.",
-    "attribution": "Global True Lithuania / Augustinas Žemaitis, Dayton Holy Cross Lithuanian church photo.",
-    "license": "External source; reuse permission not confirmed."
-   },
-   "sources": [
-    {
-     "title": "Holy Cross parish page",
-     "publisher": "St. Gabriel the Archangel Family of Parishes",
-     "url": "https://www.sgfp.org/holy-cross"
-    },
-    {
-     "title": "Mass Schedule",
-     "publisher": "St. Gabriel the Archangel Family of Parishes",
-     "url": "https://www.sgfp.org/mass-schedule"
-    },
-    {
-     "title": "St. Gabriel The Archangel Family of Parishes",
-     "publisher": "Archdiocese of Cincinnati",
-     "url": "https://catholicaoc.org/beacons-of-light/parish-families/northeast-deanery-family-10-updated"
-    },
-    {
-     "title": "Did you know? Holy Cross Dayton",
-     "publisher": "The Catholic Telegraph",
-     "url": "https://www.thecatholictelegraph.com/did-you-know-holy-cross-dayton/77781"
-    },
-    {
-     "title": "Dayton Lithuanian heritage sites",
-     "publisher": "Global True Lithuania",
-     "url": "https://global.truelithuania.com/dayton-ohio-3879/"
-    }
-   ]
-  },
-  {
-   "id": "east-st-louis-immaculate-conception-watch",
-   "entity": "Immaculate Conception Chapel (Nekaltojo Prasidėjimo)",
-   "place": "East St. Louis, Illinois",
-   "diocese": "Diocese of Belleville",
-   "parishLink": "/parishes/nekaltojo-prasidejimo-east-st-louis-il",
-   "hearthUrl": null,
-   "dateObserved": "2026-07-23",
-   "clergy": {
-    "arrangement": "no_lithuanian_clergy",
-    "detail": "The independent Lithuanian parish ended in 2014 and the building is now a chapel of St. Augustine of Hippo. Local case data identifies Rev. Carroll Mizicko, OFM as the shared pastor for St. Augustine/Immaculate Conception; no Sielovada listing or current Lithuanian-speaking clergy was found for East St. Louis."
-   },
-   "liturgy": {
-    "lithuanianMass": false,
-    "frequency": "none",
-    "detail": "Current/live sources support a Sunday 11:00 a.m. chapel Mass, but no current Lithuanian-language Mass or Lithuanian liturgical element was found in this pass."
-   },
-   "governance": "chapel",
-   "governanceDetail": "Diocese of Belleville closed-parish archive records Immaculate Conception, East St. Louis (1895-2014) as Designated Chapel; it now operates under St. Augustine of Hippo Parish.",
-   "survivedThreats": "Survived as a Catholic chapel while most East St. Louis Catholic churches closed; the building was not sold and remains in diocesan use.",
-   "financial": "No sale or buyer to report. The scout claim of landmark designation could not be verified as a formal active designation; preservation value rests on the Jonas Mulokas architecture and Vytautas Kazimieras Jonynas stained glass.",
-   "situation": "East St. Louis Immaculate Conception is a heritage-significant survivor rather than an active Lithuanian pastoral center. Weekly Catholic worship continues in the building, but the independent Lithuanian parish ended in 2014, no Lithuanian clergy are listed, and no current Lithuanian Mass was found. Its watch status is about preserving a rare Lithuanian-American sacred-art site inside a fragile chapel governance structure.",
-   "photo": {
-    "url": "/images/parishes/east-st-louis-immaculate-conception.jpg",
-    "alt": "Exterior of Immaculate Conception Chapel in East St. Louis.",
-    "attribution": "Diocese of Belleville parish directory image.",
-    "license": "Diocesan website source; reuse permission not confirmed."
-   },
-   "sources": [
-    {
-     "title": "Immaculate Conception Chapel directory page",
-     "publisher": "Diocese of Belleville",
-     "url": "https://www.diobelle.org/directory/parishes/immaculate-conception-chapel-east-st-louis"
-    },
-    {
-     "title": "List of Closed Parishes",
-     "publisher": "Diocese of Belleville",
-     "url": "https://www.diobelle.org/canonical-affairs/archives/list-of-closed-parishes"
-    },
-    {
-     "title": "East St. Louis Lithuanian church",
-     "publisher": "Global True Lithuania",
-     "url": "https://global.truelithuania.com/st-louis-missouri-illinois-1719/"
-    },
-    {
-     "title": "Churches of East St. Louis, Part 8: Immaculate Conception Roman Catholic Church",
-     "publisher": "St. Louis Patina",
-     "url": "https://stlouispatina.com/churches-of-east-st-louis-part-8/"
-    },
-    {
-     "title": "Immaculate Conception - East Saint Louis, IL",
-     "publisher": "DiscoverMass",
-     "url": "https://discovermass.com/church/immaculate-conception-east-saint-louis-il/"
-    }
-   ]
-  },
-  {
-   "id": "cicero-st-anthony-watch",
-   "entity": "St. Anthony Parish (Šv. Antano)",
-   "place": "Cicero, Illinois",
-   "diocese": "Archdiocese of Chicago",
-   "parishLink": "/parishes/sv-antano-cicero-il",
-   "hearthUrl": null,
-   "dateObserved": "2026-07-23",
-   "clergy": {
-    "arrangement": "visiting_priest",
-    "detail": "Sielovada lists Kun. Gediminas Keršys as Lithuanian chaplain for Cicero St. Anthony. Current parish public identity is St. Anthony / San Antonio de Padua, with Rev. Ismael Sandoval listed in local case data as pastor from Archdiocese of Chicago directory excerpts."
-   },
-   "liturgy": {
-    "lithuanianMass": true,
-    "frequency": "weekly",
-    "detail": "Sielovada confirms a Lithuanian chaplain assignment. DiscoverMass/MassTimes list Sunday 8:45 a.m. Lithuanian Mass, but the official parish website is Spanish-language and did not expose a current text schedule to confirm the time directly."
-   },
-   "governance": "standalone",
-   "governanceDetail": "St. Anthony remained structurally independent after the Archdiocese of Chicago Renew My Church North Berwyn-Cicero grouping, while nearby Cicero parishes were merged.",
-   "survivedThreats": "Survived the 2011 ethnic transfer to a predominantly Mexican/Spanish-speaking parish and the 2021-2022 Renew My Church restructuring without closure or sale.",
-   "financial": null,
-   "situation": "Cicero St. Anthony is a living but ethnically transferred parish: Sielovada still assigns a Lithuanian chaplain and public Mass-time directories still list a weekly Lithuanian Mass, yet the parish-facing web presence is Spanish-first and no dated primary schedule confirming the Lithuanian Mass time was found. The building and Lithuanian fabric survive inside an active multiethnic parish.",
-   "photo": {
-    "url": "/images/parishes/cicero-st-anthony.jpg",
-    "alt": "Exterior of St. Anthony Lithuanian church in Cicero.",
-    "attribution": "Global True Lithuania / Augustinas Žemaitis, Cicero St. Anthony Lithuanian church photo.",
-    "license": "External source; reuse permission not confirmed."
-   },
-   "sources": [
-    {
-     "title": "North America Lithuanian pastoral care directory",
-     "publisher": "Sielovada.org",
-     "url": "https://sielovada.org/siaures-amerika/"
-    },
-    {
-     "title": "San Antonio de Padua Church official website",
-     "publisher": "St. Anthony / San Antonio de Padua Parish",
-     "url": "https://www.sanantoniocicero.net/"
-    },
-    {
-     "title": "St. Anthony, Cicero",
-     "publisher": "DiscoverMass",
-     "url": "https://discovermass.com/church/st-anthony-cicero-il/"
-    },
-    {
-     "title": "Chicago Lithuanian heritage: Cicero St. Anthony section",
-     "publisher": "Global True Lithuania",
-     "url": "https://global.truelithuania.com/chicago-illinois-45/"
-    },
-    {
-     "title": "History of Mary Queen of Heaven / Our Lady, the Mystical Rose Parish",
-     "publisher": "Our Lady, the Mystical Rose Parish",
-     "url": "https://www.olmrparish.org/history"
-    }
-   ]
-  },
-  {
-   "id": "bridgeport-st-george-watch",
-   "entity": "St. George Church (Šv. Jurgio)",
-   "place": "Bridgeport, Connecticut",
-   "diocese": "Diocese of Bridgeport",
-   "parishLink": "/parishes/sv-jurgio-bridgeport-ct",
-   "hearthUrl": null,
-   "dateObserved": "2026-07-23",
-   "clergy": {
-    "arrangement": "no_lithuanian_clergy",
-    "detail": "Current St. Charles & St. George staff page lists Rev. Abelardo Vasquez as pastor with several parochial vicars and a weekend priest; no Lithuanian ministry or Lithuanian-speaking clergy are listed, and St. George does not appear in Sielovada North America."
-   },
-   "liturgy": {
-    "lithuanianMass": false,
-    "frequency": "none",
-    "detail": "The current official St. George schedule lists weekday evening Masses plus Saturday 6:30 p.m. Spanish, Sunday 8:30 a.m. English, and Sunday 10:30 a.m. Spanish. No Lithuanian Mass appears on the official schedule; one older/blocked aggregator claim remains unconfirmed."
-   },
-   "governance": "merged",
-   "governanceDetail": "St. George now operates publicly with St. Charles Borromeo as Saint Charles & Saint George, a multi-site parish structure serving Spanish, English, Portuguese, and Haitian communities.",
-   "survivedThreats": "The building survived and remains an active Catholic worship site, but the Lithuanian parish identity has effectively been absorbed into a broader immigrant parish.",
-   "financial": null,
-   "situation": "Bridgeport St. George is a building-and-memory sustainability case. The church is active and the Lithuanian interior remains significant, but current official parish sources show no Lithuanian Mass and no Lithuanian clergy. Its watch status is the risk of Lithuanian identity becoming purely architectural inside a merged, non-Lithuanian parish structure.",
-   "photo": {
-    "url": "/images/parishes/bridgeport-st-george.jpg",
-    "alt": "Exterior of St. George Lithuanian church in Bridgeport, Connecticut.",
-    "attribution": "Global True Lithuania / Augustinas Žemaitis, Bridgeport St. George Lithuanian church photo.",
-    "license": "External source; reuse permission not confirmed."
-   },
-   "sources": [
-    {
-     "title": "Mass Schedule",
-     "publisher": "Saint Charles & Saint George",
-     "url": "https://www.stcharlesbridgeport.org/mass-schedule"
-    },
-    {
-     "title": "Clergy and Staff Directory",
-     "publisher": "Saint Charles & Saint George",
-     "url": "https://www.stcharlesbridgeport.org/clergy-and-staff-directory"
-    },
-    {
-     "title": "Parish Information",
-     "publisher": "Saint Charles & Saint George",
-     "url": "https://www.stcharlesbridgeport.org/parish-information"
-    },
-    {
-     "title": "Connecticut Lithuanian heritage: Bridgeport St. George section",
-     "publisher": "Global True Lithuania",
-     "url": "https://global.truelithuania.com/connecticut-789/"
-    },
-    {
-     "title": "St. George, Bridgeport",
-     "publisher": "DiscoverMass",
-     "url": "https://discovermass.com/church/st-george-bridgeport-ct/"
-    }
-   ]
-  },
-  {
-   "id": "brighton-park-immaculate-conception-watch",
-   "entity": "Immaculate Conception Parish (Švč. M. Marijos Nekalto Prasidėjimo)",
-   "place": "Chicago, Illinois",
-   "diocese": "Archdiocese of Chicago",
-   "parishLink": "/parishes/svc-m-marijos-nekalto-prasidejimo-chicago-il",
-   "hearthUrl": null,
-   "dateObserved": "2026-07-23",
-   "clergy": {
-    "arrangement": "visiting_priest",
-    "detail": "Sielovada lists Kun. Gediminas Keršys as Lithuanian chaplain for the Chicago Immaculate Conception parish. The merged parish history page lists Rev. Miguel Venegas as pastor from 2020-present."
-   },
-   "liturgy": {
-    "lithuanianMass": true,
-    "frequency": "weekly",
-    "detail": "The current parish homepage lists Sunday Mass at Immaculate Conception: 7:00 a.m. Spanish, 10:00 a.m. Lithuanian, and 12:00 p.m. Spanish."
-   },
-   "governance": "merged",
-   "governanceDetail": "Immaculate Conception joined Five Holy Martyrs in 2019 as Immaculate Conception-Five Holy Martyrs Parish under Renew My Church; both worship sites remain open.",
-   "survivedThreats": "Survived the 2019 Renew My Church merger with Lithuanian liturgy still explicitly scheduled at the Immaculate Conception site.",
-   "financial": null,
-   "situation": "Brighton Park Immaculate Conception is a comparatively strong mass-continues case inside a merged, multiethnic parish. The community is predominantly Hispanic, but the official parish schedule still names a weekly Lithuanian Mass and Sielovada still assigns a Lithuanian chaplain, while the church retains a distinct Lithuanian architectural and devotional fabric.",
-   "photo": {
-    "url": "/images/parishes/brighton-park-immaculate-conception.jpg",
-    "alt": "Exterior of the Brighton Park Immaculate Conception Lithuanian church in Chicago.",
-    "attribution": "Global True Lithuania / Augustinas Žemaitis, Brighton Park Immaculate Conception photo.",
-    "license": "External source; reuse permission not confirmed."
-   },
-   "sources": [
-    {
-     "title": "North America Lithuanian pastoral care directory",
-     "publisher": "Sielovada.org",
-     "url": "https://sielovada.org/siaures-amerika/"
-    },
-    {
-     "title": "Immaculate Conception & Five Holy Martyrs homepage",
-     "publisher": "Immaculate Conception-Five Holy Martyrs Parish",
-     "url": "https://www.ic5hm.org/"
-    },
-    {
-     "title": "About Us",
-     "publisher": "Immaculate Conception-Five Holy Martyrs Parish",
-     "url": "https://www.immaculateconception-fiveholymartyrs.com/about-us"
-    },
-    {
-     "title": "Chicago Lithuanian heritage: Brighton Park section",
-     "publisher": "Global True Lithuania",
-     "url": "https://global.truelithuania.com/chicago-illinois-45/"
-    },
-    {
-     "title": "Arkivysk. Liongino Virbalo SJ apsilankymas Čikagoje ir Lemonte",
-     "publisher": "Sielovada.org",
-     "url": "https://sielovada.org/arkivysk-liongino-virbalo-sj-apsilankymas-cikagoje-ir-lemonte/"
-    },
-    {
-     "title": "Chicago Brighton Park Immaculate Conception legacy directory entry",
-     "publisher": "Litua.com Lithuanian Churches in USA",
-     "url": "https://www.litua.com/lt/zinynas/baznycios"
-    }
-   ]
-  },
-  {
-   "id": "luzerne-st-ann-watch",
-   "entity": "Holy Family Parish / former St. Ann (Šv. Onos)",
-   "place": "Luzerne, Pennsylvania",
-   "diocese": "Diocese of Scranton",
-   "parishLink": "/parishes/sv-onos-luzerne-pa",
-   "hearthUrl": null,
-   "dateObserved": "2026-07-23",
-   "clergy": {
-    "arrangement": "no_lithuanian_clergy",
-    "detail": "Diocese of Scranton lists Monsignor David L. Tressler as pastor, Rev. Michael J. Boris as assistant pastor, and Deacon Gerard P. Pernot. No Lithuanian clergy or Lithuanian ministry appears in current sources."
-   },
-   "liturgy": {
-    "lithuanianMass": false,
-    "frequency": "none",
-    "detail": "Diocesan listing for Holy Family Church at 574 Bennett Street gives Saturday 5:15 p.m., Sunday 9:00 a.m., and weekday 12:10 p.m. Masses. No Lithuanian Mass is listed."
-   },
-   "governance": "merged",
-   "governanceDetail": "Former St. Ann Lithuanian parish was consolidated into Holy Family Parish in 1999 and survives as Holy Family Church, the single active worship site at 574 Bennett Street.",
-   "survivedThreats": "Survived the Luzerne consolidation that left the former St. Ann building as the sole worship site while sister ethnic churches were demolished or sold.",
-   "financial": null,
-   "situation": "Luzerne is an active-building, lost-liturgy watch entry. The former St. Ann Lithuanian church remains Catholic-owned and active as Holy Family Parish, making it the surviving Lithuanian-built Catholic site in its local cluster, but no current Lithuanian Mass, Lithuanian clergy, or Lithuanian programming was found. Its sustainability value is institutional survival, not present Lithuanian pastoral life.",
-   "photo": {
-    "url": "/images/parishes/luzerne-st-ann-holy-family.jpg",
-    "alt": "Official Holy Family Church image representing the former St. Ann Lithuanian parish building in Luzerne.",
-    "attribution": "Diocese of Scranton Holy Family Luzerne directory image.",
-    "license": "Diocesan website source; reuse permission not confirmed. Image appears to be an official rendering rather than a direct exterior photograph."
-   },
-   "sources": [
-    {
-     "title": "Holy Family Parish Luzerne",
-     "publisher": "Diocese of Scranton",
-     "url": "https://www.dioceseofscranton.org/find-a-parish/holy-family-parish-luzerne-luzerne/"
-    },
-    {
-     "title": "Parish History",
-     "publisher": "Holy Family Parish Luzerne",
-     "url": "https://www.holyfamilyluzerne.org/Parish-History"
-    },
-    {
-     "title": "Catholic Community of Luzerne",
-     "publisher": "Holy Family Parish Luzerne",
-     "url": "https://www.holyfamilyluzerne.org/catholic-community-of-luzerne"
-    },
-    {
-     "title": "Mass Schedule",
-     "publisher": "Holy Family Parish Luzerne",
-     "url": "https://www.holyfamilyluzerne.org/mass-schedule"
-    },
-    {
-     "title": "Parishioners turn gratitude into action during '40 Days of Service' to honor pastor",
-     "publisher": "Diocese of Scranton",
-     "url": "https://www.dioceseofscranton.org/parishioners-turn-gratitude-into-action-during-40-days-of-service-to-honor-pastor/"
-    }
-   ]
-  },
-  {
-   "id": "frackville-annunciation-bvm-watch",
-   "entity": "Annunciation BVM Church (Šv. M. Marijos Apsireiškimo)",
-   "place": "Frackville, Pennsylvania",
-   "diocese": "Diocese of Allentown",
-   "parishLink": "/parishes/sv-m-marijos-apsireiskimo-frackville-pa",
-   "hearthUrl": null,
-   "dateObserved": "2026-07-23",
-   "clergy": {
-    "arrangement": "no_lithuanian_clergy",
-    "detail": "Current St. Joseph the Worker Parish sources identify the consolidated parish serving St. Ann, Annunciation BVM, and St. Joseph. No Lithuanian clergy or Lithuanian ministry was found for Annunciation BVM, and the site does not appear in Sielovada North America."
-   },
-   "liturgy": {
-    "lithuanianMass": false,
-    "frequency": "none",
-    "detail": "Current St. Joseph the Worker public Mass schedule centers regular Masses at the St. Ann site; Global True Lithuania describes Annunciation itself as irregularly used. No current Lithuanian Mass was found."
-   },
-   "governance": "merged",
-   "governanceDetail": "Annunciation BVM is one of the churches of consolidated St. Joseph the Worker Parish, with the parish office at 7 South Broad Mountain Avenue.",
-   "survivedThreats": "The church building remains in diocesan Catholic ownership after consolidation, but its adjacent Lithuanian Museum closed in 2022 and the collection moved to Shenandoah, where a new Lithuanian Heritage Museum opened in 2025.",
-   "financial": "No sale, demolition, or diocesan closure announcement was found for the Annunciation church; museum relocation suggests heritage stewardship shifted away from the parish campus.",
-   "situation": "Frackville Annunciation is a heritage-hold rather than a live Lithuanian-liturgy site. The church still stands in the St. Joseph the Worker parish structure and retains Lithuanian architectural markers, but regular worship appears to be elsewhere, the old museum has moved, and no current Lithuanian Mass or clergy were found.",
-   "photo": {
-    "url": "/images/parishes/frackville-annunciation-bvm.jpg",
-    "alt": "Exterior of the Frackville Annunciation BVM Lithuanian church.",
-    "attribution": "Global True Lithuania / Augustinas Žemaitis, Frackville Lithuanian church photo.",
-    "license": "External source; reuse permission not confirmed."
-   },
-   "sources": [
-    {
-     "title": "St. Joseph the Worker Parish homepage",
-     "publisher": "St. Joseph the Worker Parish, Frackville",
-     "url": "https://www.stjoesfrackville.com/"
-    },
-    {
-     "title": "Church of the Annunciation of the Blessed Virgin Mary, Frackville",
-     "publisher": "GCatholic.org",
-     "url": "https://gcatholic.org/churches/usa-03/23603"
-    },
-    {
-     "title": "Shenandoah and southern Coal Region Lithuanian heritage",
-     "publisher": "Global True Lithuania",
-     "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/"
-    },
-    {
-     "title": "Shenandoah's Lithuanian heritage on display at new museum",
-     "publisher": "The Shenandoah Sentinel",
-     "url": "https://shensentinel.com/news/shenandoahs-lithuanian-heritage-on-display-at-new-museum/"
-    },
-    {
-     "title": "Pamirštoji lietuvių žemė: bažnyčių likimai ir atminties ženklai (III)",
-     "publisher": "Sielovada.org",
-     "url": "https://sielovada.org/pamirstoji-lietuviu-zeme-baznyciu-likimai-ir-atminties-zenklai-iii/"
-    }
-   ]
-  },
-  {
-   "id": "rochester-st-george-watch",
-   "entity": "St. George Lithuanian Mission Community (Šv. Jurgio)",
-   "place": "Rochester, New York",
-   "diocese": "Diocese of Rochester",
-   "parishLink": "/parishes/sv-jurgio-rochester-ny",
-   "hearthUrl": null,
-   "dateObserved": "2026-07-23",
-   "clergy": {
-    "arrangement": "unknown",
-    "detail": "Diocese of Rochester directory lists the St. George Lithuanian community inside the Our Lady of Lourdes & Saint Anne cluster, with Rev. Gary Tyman as pastor and other assisting clergy. Sielovada lists the mission community and Mass location but does not name a Lithuanian priest or celebrant."
-   },
-   "liturgy": {
-    "lithuanianMass": true,
-    "frequency": "unknown",
-    "detail": "Sielovada says Mass is celebrated at Our Lady of Lourdes Church. The Diocese of Rochester listing includes Lithuanian Mass at Our Lady of Lourdes, Sunday 12:30, but marks the schedule as TBD; frequency and celebrant need human confirmation."
-   },
-   "governance": "mission",
-   "governanceDetail": "The Lithuanian community sold its Hudson Avenue campus and now worships as St. George Lithuanian within the Our Lady of Lourdes & Saint Anne cluster at 150 Varinna Drive.",
-   "survivedThreats": "Survived by relocating after the final Hudson Avenue Mass on June 20, 2010; the historic building was sold to another congregation while the Lithuanian Catholic community continued in hosted space.",
-   "financial": "The community no longer carries its old church campus; sale details for the Hudson Avenue property were not found in this pass.",
-   "situation": "Rochester St. George remains a formal Lithuanian mission-community, but it is fragile: the parish sold its Hudson Avenue building in 2010 and the community now holds Mass in hosted space at Our Lady of Lourdes. Both Sielovada and the Diocese of Rochester still list a Lithuanian Mass there, but the diocesan schedule shows the time as TBD and no Lithuanian celebrant is named — the current Mass schedule and clergy situation require direct confirmation.",
-   "photo": {
-    "url": "/images/parishes/rochester-st-george-our-lady-of-lourdes.jpg",
-    "alt": "Our Lady of Lourdes Church in Rochester, current Mass location for the St. George Lithuanian community.",
-    "attribution": "Diocese of Rochester Pastoral Services directory image for Our Lady of Lourdes.",
-    "license": "Diocesan website source; reuse permission not confirmed."
-   },
-   "sources": [
-    {
-     "title": "North America Lithuanian pastoral care directory",
-     "publisher": "Sielovada.org",
-     "url": "https://sielovada.org/siaures-amerika/"
-    },
-    {
-     "title": "St. George (Lithuanian)",
-     "publisher": "Diocese of Rochester Pastoral Services Directory",
-     "url": "https://ps.dor.org/directory/st-george-lithuanian/"
-    },
-    {
-     "title": "St. George Lithuanian celebrates final Mass on Hudson Avenue",
-     "publisher": "Catholic Courier",
-     "url": "https://catholiccourier.com/articles/st-george-lithuanian-celebrates-final-mass-on-hudson-avenue/"
-    },
-    {
-     "title": "Upstate New York Lithuanian heritage: Rochester section",
-     "publisher": "Global True Lithuania",
-     "url": "https://global.truelithuania.com/upstate-new-york-831/"
-    },
-    {
-     "title": "Court approves $246 million diocese bankruptcy settlement",
-     "publisher": "Rochester Beacon",
-     "url": "https://rochesterbeacon.com/2025/09/08/court-approves-246-million-diocese-bankruptcy-settlement/"
-    },
-    {
-     "title": "Rochester St. George legacy directory entry",
-     "publisher": "Litua.com Lithuanian Churches in USA",
-     "url": "https://www.litua.com/lt/zinynas/baznycios"
-    }
-   ]
-  },
-  {
-   "id": "lemont-matulaitis-mission-watch",
-   "entity": "Blessed Jurgis Matulaitis Lithuanian Mission (Pal. Jurgio Matulaičio)",
-   "place": "Lemont, Illinois",
-   "diocese": "Archdiocese of Chicago",
-   "parishLink": "/parishes/pal-jurgio-matulaicio-misija-lemont-il",
-   "hearthUrl": null,
-   "dateObserved": "2026-07-23",
-   "clergy": {
-    "arrangement": "lithuanian_klebonas",
-    "detail": "Sielovada lists Kun. Artūras Sederevičius, SJ as chaplain. The mission site and Lithuanian World Center page identify Rev. Artūras Sederevičius as the mission priest/director."
-   },
-   "liturgy": {
-    "lithuanianMass": true,
-    "frequency": "weekly",
-    "detail": "Mission website lists Mass Tuesday-Saturday at 8:00 a.m.; Sundays at 9:00 a.m., 11:00 a.m., and 6:00 p.m.; and says all Masses are in Lithuanian, with a bilingual Mass at 4:30 p.m. on the last Saturday of the month."
-   },
-   "governance": "mission",
-   "governanceDetail": "Active Lithuanian Catholic mission of the Archdiocese of Chicago operating inside the community-owned Lithuanian World Center at 14911 127th Street, Lemont.",
-   "survivedThreats": "Survived an Archdiocese of Chicago Renew My Church grouping discussion with Nativity BVM; both communities remain active in 2026.",
-   "financial": "Real-estate exposure differs from diocesan parish churches because the venue is the community-owned Lithuanian World Center rather than a diocesan church property.",
-   "situation": "Lemont is one of the strongest sustainability-watch entries: dedicated Lithuanian Jesuit clergy, multiple weekly Lithuanian Masses, children and sacramental programming, current bulletins, and a community-owned institutional home. The main watch issue is canonical/organizational dependence on mission status and Archdiocese of Chicago grouping decisions, not present activity.",
-   "photo": {
-    "url": "/images/parishes/lemont-matulaitis-mission.jpg",
-    "alt": "Blessed Jurgis Matulaitis Mission chapel interior at the Lithuanian World Center.",
-    "attribution": "Lithuanian World Center organization page image for Blessed Jurgis Matulaitis Mission.",
-    "license": "Lithuanian World Center website source; reuse permission not confirmed."
-   },
-   "sources": [
-    {
-     "title": "North America Lithuanian pastoral care directory",
-     "publisher": "Sielovada.org",
-     "url": "https://sielovada.org/siaures-amerika/"
-    },
-    {
-     "title": "Palaimintojo Jurgio Matulaičio Misija official site",
-     "publisher": "Blessed Jurgis Matulaitis Lithuanian Catholic Mission",
-     "url": "https://www.matulaitismission.com/"
-    },
-    {
-     "title": "Blessed Jurgis Matulaitis Mission",
-     "publisher": "Lithuanian World Center",
-     "url": "https://www.lcenter.org/organizations/blessed-j-matulaitis-mission/"
-    },
-    {
-     "title": "Arkivysk. Liongino Virbalo SJ apsilankymas Čikagoje ir Lemonte",
-     "publisher": "Sielovada.org",
-     "url": "https://sielovada.org/arkivysk-liongino-virbalo-sj-apsilankymas-cikagoje-ir-lemonte/"
-    },
-    {
-     "title": "Pal. J. Matulaičio misijos Lemonte kunigas A. Sederevičius SJ",
-     "publisher": "Sielovada.org / Bernardinai.lt",
-     "url": "https://sielovada.org/pal-j-matulaicio-misijos-lemonte-kunigas-a-sederevicius-sj-maldoje-visi-esame-cia-pat-malda-mus-vienija/"
-    },
-    {
-     "title": "Lemont Blessed Jurgis Matulaitis legacy directory entry",
-     "publisher": "Litua.com Lithuanian Churches in USA",
-     "url": "https://www.litua.com/lt/zinynas/baznycios"
-    }
-   ]
-  }
- ]
+  ]
 }
