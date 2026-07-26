@@ -63,3 +63,11 @@ Two alerts concern registry-layer parishes with no case-record, correctly so (ca
 - **St. Ann of the Dunes, Beverly Shores, IN** (`st-ann-beverly-shores-in`, multi-source) — named in the Diocese of Gary's Porter Planning Area consolidation (five parishes → two worship sites, March 2026 plan).
 
 Both events' public surface is the proposed alerts snapshot (see `docs/alerts-surface-proposal.md`), pending Vilija's design choice. Known upstream blind spots left alone per handoff: `casimir-montreal-qc`, `gateofdawn-montreal-qc`, `casimir-winnipeg-mb` (WebSearch budget exhaustion — next brain sweep's first priority). Guardrails re-affirmed in any future surface copy: Maspeth never rendered closed; Elizabeth NJ canonically unresolved; the case-filed figure never conflated with the 155-entity watch layer.
+
+## 2026-07-25 — Ten-parish status research applied; Divine Providence clergy update
+
+Current-status research for the ten longest-outstanding registry parishes (Rockford IL, Westville IL ×2, Beverly Shores IN, Kenosha WI, Athol MA, Worcester MA, Custer MI, Luther MI, Baltimore MD ×2) was applied to `data/parish-situation.json` (classifier overlay) and `data/registry-unified.json` (web-survey source entries with URLs, year readings, caveats) by `scripts/apply-research-2026-07-25.mjs`. Raw findings with full source lists: `data/candidates/research-2026-07-25-{midwest,east}.json`. Conservative rules: single-source building fates stay `unknown` with the reported detail in situation text; every claim carries a fetched URL; "not established" recorded as such.
+
+Notable: St. Ann of the Dunes (Beverly Shores) verified alive — monthly Lithuanian Mass on the parish's current schedule. St. Alphonsus Baltimore's dedicated Lithuanian Mass reported canceled 2017 (identity downgraded on `reported` confidence — caveat on the record). Open reconciliation: Holy Cross Westville vs. the LNCC Westville record may be one congregation (closure years conflict 1960–61 vs ~1969); both records carry caveats until resolved upstream. Divine Providence case record: Fr. Tomas Miliauskas departed May 2026, no successor named as of 2026-07-23 (laikmetis.lt); official directories noted as stale.
+
+Locked figures unaffected; build validation passed before and after application.
