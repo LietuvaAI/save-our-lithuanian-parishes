@@ -1,38 +1,35 @@
 // Renders the diocese-level zoom map for a Hearth dispatch — the parish in
 // its diocese, with every recorded Lithuanian parish around it, in the site's
-// one status language. Approved direction (Vilija, 2026-07-25): every parish
-// dispatch carries this map so readers have a reference point.
+// one status language. Approved direction (Vilija, 2026-07-25/26): every
+// parish dispatch carries this map; the site renders the same map
+// interactively on every profile (ParishContextMap).
 //
-// Usage: node scripts/render-dispatch-map.mjs <canonical-slug> [out.svg] [--pad=0.35]
+// Usage: node scripts/render-dispatch-map.mjs <canonical-slug> [out.svg]
+//        [--pad=0.35] [--kicker="…"] [--title="…"] [--deck="…"]
 //
-// Data: data/diocese-overlay.json (geoAlbersUsa 975x610 pre-projected diocese
-// paths + interior-border mesh), data/map.json (canonical parish points, same
-// frame), data/registry-map.json (registry-layer points, same frame),
-// data/parishes.json (classifier fields), data/parish-situation.json
-// (canonical -> registry slug), data/registry-unified.json (diocese names).
+// DATA: one shared layer, two renderers, zero drift — points come verbatim
+// from data/context-points.json (built in `npm run data`, PR #80): true
+// un-fanned projected coords in the geoAlbersUsa 975×610 frame, end-state
+// `group` with the unresolved guardrail baked in (undecided renders ink,
+// never closed-red), normalized short diocese names, hrefs that encode the
+// record tier (/parishes/ = canonical case file, /registry/ = registry
+// layer). Diocese shapes + per-diocese bboxes: data/diocese-overlay.json.
+// Coordinate correctness is guaranteed upstream by scripts/verify-geo.mjs
+// (blocking in `npm run data`) — every point in frame is drawn.
 //
-// Status colors are read from app/globals.css (--es-* light-mode values) so
-// the graphic can never drift from the site. The end-state mapping below
-// mirrors lib/end-state.ts resolveEndState — keep the two in sync. The
-// binding guardrail holds here as everywhere: endingMode "undecided"
-// (Maspeth, Elizabeth NJ) renders as unresolved ink, never closed red.
+// RENDERER-SIDE (stays here): CSS-var color parsing from app/globals.css,
+// same-city ring-fanning at zoom (0.6-unit cells), the label hierarchy,
+// collision-avoiding placement, and the NYT panel anatomy for standalone use
+// (kicker/title/deck/rule + footer legend/source; the site's interactive
+// component omits the panel — its page provides framing).
 //
-// Chart discipline (docs/design + dispatch practice): no internal titles —
-// the dispatch's caption carries the framing; direct labels only. Label
-// policy: the subject is always named; canonical parishes are named when a
-// collision-free spot exists; registry-layer points are named only inside
-// the subject diocese (elsewhere they stay context dots). Coordinate
-// correctness is guaranteed upstream: scripts/verify-geo.mjs runs as a
-// blocking guard in `npm run data` (every point tested against its own
-// state polygon) — so every point that falls in the frame is drawn. A wide
-// diocese zoom legitimately reaches neighboring metros (a Brooklyn frame
-// touches Philadelphia); those neighbors belong in the picture.
+// Chart discipline: labels are the site's canonical end-state labels
+// (lib/end-state.ts GROUP_LABEL) — no invented wording, no counts.
 import { readFileSync, writeFileSync } from "node:fs";
-import { geoAlbersUsa } from "d3-geo";
 
 const args = process.argv.slice(2).filter((a) => !a.startsWith("--"));
 const flags = Object.fromEntries(
-  process.argv.slice(2).filter((a) => a.startsWith("--")).map((a) => a.replace(/^--/, "").split("=")),
+  process.argv.slice(2).filter((a) => a.startsWith("--")).map((a) => a.replace(/^--/, "").split(/=(.*)/s).slice(0, 2)),
 );
 const SLUG = args[0];
 const OUT = args[1] ?? `dispatch-map-${SLUG}.svg`;
@@ -41,23 +38,14 @@ const KICKER = flags.kicker ?? "";
 const TITLE = flags.title ?? "";
 const DECK = flags.deck ?? "";
 if (!SLUG) {
-  console.error("usage: node scripts/render-dispatch-map.mjs <canonical-slug> [out.svg] [--pad=0.35]");
+  console.error("usage: node scripts/render-dispatch-map.mjs <canonical-slug> [out.svg] [--pad=0.35] [--kicker=…] [--title=…] [--deck=…]");
   process.exit(1);
 }
 
 const read = (p) => JSON.parse(readFileSync(new URL(`../data/${p}`, import.meta.url), "utf8"));
-// Same projection as build-map.mjs / build-diocese-overlay.mjs (975x610 frame).
-const PROJ = geoAlbersUsa().scale(1300).translate([487.5, 305]);
 const overlay = read("diocese-overlay.json");
-const mapData = read("map.json");
-const registryMap = read("registry-map.json");
-const parishes = read("parishes.json");
-const situation = read("parish-situation.json");
-const registry = read("registry-unified.json");
-
-// Records the unified registry itself flags as guardrail-binding duplicates —
-// never drawn (see the record's conflicts block).
-const EXCLUDE = new Set(["annunciation-maspeth-ny"]);
+const context = read("context-points.json");
+const registry = read("registry-unified.json"); // metadata only: the subject diocese's full display name
 
 // --- status colors from the site's own CSS (light mode), with fallbacks ---
 const css = readFileSync(new URL("../app/globals.css", import.meta.url), "utf8");
@@ -81,45 +69,23 @@ const SITE_LABEL = {
 const GROUP_ORDER = ["active_parish", "mass_continues", "transferred", "unresolved", "closed", "unverified"];
 const STATE_WORD = Object.fromEntries(Object.entries(SITE_LABEL).map(([k, v]) => [k, k === "mass_continues" ? v : v.charAt(0).toLowerCase() + v.slice(1)]));
 
-// Mirrors lib/end-state.ts resolveEndState (loss sub-fates collapsed to closed).
-function endState({ identity, buildingFate, hasClosed, isStanding, endingMode }) {
-  if (endingMode === "undecided") return "unresolved";
-  if (isStanding && identity === "mass_continues") return "mass_continues";
-  if (isStanding && identity === "ethnically_transferred") return "transferred";
-  if (isStanding) return "active_parish";
-  if (identity === "ethnically_transferred") return "transferred";
-  if (buildingFate === "demolished") return "closed";
-  if (buildingFate === "repurposed_secular" || buildingFate === "repurposed_religious") return "closed";
-  if (identity === "lost") return "closed";
-  if (hasClosed) return "closed";
-  return "unverified";
-}
-const canonicalState = (c) =>
-  endState({
-    identity: c.lithuanianIdentity, buildingFate: c.buildingFate,
-    hasClosed: !!c.yearClosed || ["closed", "demolished"].includes(c.status),
-    isStanding: c.status === "standing", endingMode: c.endingMode,
-  });
-
-// --- subject parish, its diocese ---
-const canonical = (Array.isArray(parishes) ? parishes : parishes.parishes).filter((p) => p.slug);
-const subject = canonical.find((p) => p.slug === SLUG);
-if (!subject) { console.error(`no canonical parish '${SLUG}'`); process.exit(1); }
-const registrySlug = situation.parishes?.[SLUG]?.registry_slug ?? subject.registrySlug;
-const regRow = registry.parishes.find((r) => r.slug === registrySlug || r.slug === SLUG);
-const dioceseFull = regRow?.diocese;
-if (!dioceseFull) { console.error(`no diocese on registry record for '${SLUG}'`); process.exit(1); }
-const dioShort = dioceseFull.replace(/^(Arch)?[Dd]iocese of /, "");
+// --- subject + diocese (all from the shared layer) ---
+const roman = context.points.filter((p) => p.congregationClass === "roman_catholic");
+const subject = roman.find((p) => p.slug === SLUG);
+if (!subject) { console.error(`no roman_catholic context point for '${SLUG}'`); process.exit(1); }
+const dioShort = subject.diocese;
 const dio = overlay.dioceses.find((d) => d.name === dioShort);
 if (!dio) { console.error(`diocese '${dioShort}' not in overlay`); process.exit(1); }
+const regRow = registry.parishes.find((r) => r.diocese && r.diocese.endsWith(dioShort) && (r.slug === SLUG || `/parishes/${SLUG}` === subject.href));
+const dioceseFull = regRow?.diocese ?? `Diocese of ${dioShort}`;
 
-// --- viewBox: diocese bbox padded; small dioceses get a floor so neighbors show ---
-const nums = dio.path.match(/-?\d+(\.\d+)?/g).map(Number);
-let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
-for (let i = 0; i < nums.length; i += 2) {
-  minX = Math.min(minX, nums[i]); maxX = Math.max(maxX, nums[i]);
-  minY = Math.min(minY, nums[i + 1]); maxY = Math.max(maxY, nums[i + 1]);
-}
+// --- viewBox: per-diocese bbox from the overlay; padded; small dioceses get a floor ---
+let [minX, minY, maxX, maxY] = dio.bbox ?? (() => {
+  const nums = dio.path.match(/-?\d+(\.\d+)?/g).map(Number);
+  let a = Infinity, b = Infinity, c = -Infinity, e = -Infinity;
+  for (let i = 0; i < nums.length; i += 2) { a = Math.min(a, nums[i]); c = Math.max(c, nums[i]); b = Math.min(b, nums[i + 1]); e = Math.max(e, nums[i + 1]); }
+  return [a, b, c, e];
+})();
 const bw = maxX - minX, bh = maxY - minY;
 const pad = Math.max(PAD * Math.max(bw, bh), 8);
 let vx = minX - pad, vy = minY - pad, vw = bw + 2 * pad, vh = bh + 2 * pad;
@@ -129,53 +95,12 @@ else { const h = vw / RATIO; vy -= (h - vh) / 2; vh = h; }
 const inView = (x, y, m = 0) => x > vx - m && x < vx + vw + m && y > vy - m && y < vy + vh + m;
 const inSubjectBox = (x, y) => x >= minX - 0.5 && x <= maxX + 0.5 && y >= minY - 0.5 && y <= maxY + 0.5;
 
-// --- points ---
-// map.json coords are the national-view DISPLAY coords (same-city fanning
-// applied at build); at diocese zoom we want geography, so re-derive each
-// point from the truest coordinates available: registry-record geo, then the
-// city gazetteer, then the display coord as a last resort.
-const geoGaz = read("geo.json");
-const regSlugOf = {};
-for (const [slug, v] of Object.entries(situation.parishes ?? {}))
-  if (v.registry_slug) regSlugOf[slug] = v.registry_slug;
-function truePoint(slug, city, st, fallback) {
-  const row = registry.parishes.find((r) => r.slug === (regSlugOf[slug] ?? slug) || r.slug === slug);
-  if (row?.geo?.lat != null && row?.geo?.lon != null) {
-    const pr = PROJ([row.geo.lon, row.geo.lat]);
-    if (pr) return { x: pr[0], y: pr[1] };
-  }
-  const g = geoGaz[`${city}|${st}`];
-  if (g?.lat != null) {
-    const pr = PROJ([g.lon, g.lat]);
-    if (pr) return { x: pr[0], y: pr[1] };
-  }
-  return fallback;
-}
-const canonicalPts = mapData.points
-  .filter((p) => !EXCLUDE.has(p.slug))
-  .map((p) => {
-    const c = canonical.find((q) => q.slug === p.slug) ?? {};
-    const t = truePoint(p.slug, c.city, c.state, p);
-    return { ...p, ...t, name: c.nameLt ?? p.slug, city: c.city ?? "", st: c.state, state: canonicalState(c), tier: "canonical" };
-  })
+// --- points: shared layer verbatim; tier from the href ---
+const all = roman
+  .map((p) => ({ ...p, state: p.group, tier: p.href?.startsWith("/parishes/") ? "canonical" : "registry" }))
   .filter((p) => inView(p.x, p.y));
-const registryPts = registryMap.points
-  .filter((p) => (p.kind ?? "parish") === "parish" && !EXCLUDE.has(p.slug))
-  .map((p) => ({
-    ...p,
-    ...truePoint(p.slug, p.city, p.state, p),
-    st: p.state,
-    name: p.name === p.slug ? "Lithuanian parish (record)" : p.name,
-    state: endState({
-      identity: p.identity, buildingFate: null,
-      hasClosed: !!p.closedYear, isStanding: !!p.lockedStanding, endingMode: null,
-    }),
-    tier: "registry",
-  }))
-  .filter((p) => inView(p.x, p.y));
-const all = [...canonicalPts, ...registryPts];
-// same-coordinate groups (city-centroid records) fan in a small ring, the
-// subject staying put; disclosed in the dispatch caption.
+// same-coordinate-cell groups (city-centroid records ~a mile apart pile at
+// zoom) fan in a small ring, the subject staying put.
 {
   const groups = new Map();
   for (const p of all) {
@@ -198,7 +123,7 @@ const all = [...canonicalPts, ...registryPts];
 // --- greedy collision-free label placement ---
 const S = vw / 45;
 const FS = { subject: 1.55 * S, subjectSub: 1.12 * S, small: 1.18 * S, minor: 0.95 * S };
-const boxes = []; // occupied label/dot rectangles
+const boxes = [];
 const collides = (b) => boxes.some((o) => b.x < o.x + o.w && b.x + b.w > o.x && b.y < o.y + o.h && b.y + b.h > o.y);
 const dotBox = (p, r) => ({ x: p.x - r, y: p.y - r, w: 2 * r, h: 2 * r });
 const textW = (t, fs) => t.length * fs * 0.56;
@@ -231,11 +156,7 @@ function place(p, text, fs, priority) {
   return null;
 }
 
-// --- svg ---
-const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
-const HALO = (fs) => `paint-order="stroke" stroke="#ffffff" stroke-width="${(0.22 * fs).toFixed(2)}" stroke-linejoin="round"`;
-// NYT panel anatomy (kam-priklauso standard): kicker / title / deck / hard
-// rule above the figure; legend + source line in a footer band below it.
+// --- panel geometry: header band + footer measured before the viewBox ---
 const deckLines = [];
 {
   const words = DECK.split(/\s+/).filter(Boolean);
@@ -247,12 +168,10 @@ const deckLines = [];
   if (line) deckLines.push(line.trim());
 }
 const BAND = (KICKER || TITLE || DECK) ? (1.6 + 2.4 + deckLines.length * 1.55 + 1.5) * S : 0;
-// legend layout is measured first so the footer can wrap to as many rows as needed
 const LEGEND_FS = 1.0 * S;
 const legendMeasure = (label) => 0.8 * S + label.length * 0.62 * S + 1.9 * S;
-const FOOT_BASE = 3.4 * S; // top pad + two source lines
-// measure legend rows NOW so the viewBox below accounts for wrapping
-const legendPresent = new Set(all.map((p) => p.state === "demolished" || p.state === "repurposed" ? "closed" : p.state));
+const FOOT_BASE = 3.4 * S;
+const legendPresent = new Set(all.map((p) => p.state));
 const LEGEND_ITEMS = GROUP_ORDER.filter((g) => legendPresent.has(g)).map((g) => [
   SITE_LABEL[g], COLOR[g], g === "active_parish" || g === "mass_continues" ? "open" : "solid",
 ]);
@@ -268,14 +187,18 @@ const LEGEND_ROWS = [[]];
 }
 const LEGEND_ROW_H = 1.7 * S;
 const FOOT = FOOT_BASE + LEGEND_ROWS.length * LEGEND_ROW_H;
+
+// --- svg ---
+const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
+const HALO = (fs) => `paint-order="stroke" stroke="#ffffff" stroke-width="${(0.22 * fs).toFixed(2)}" stroke-linejoin="round"`;
 const headerParts = [];
 if (BAND > 0) {
   let ty = vy - BAND + 1.5 * S;
-  if (KICKER) headerParts.push(`<text x="${vx + 0.9 * S}" y="${ty}" fill="#666666" font-size="${0.95 * S}" letter-spacing="${0.14 * S}">${KICKER.toUpperCase()}</text>`);
+  if (KICKER) headerParts.push(`<text x="${vx + 0.9 * S}" y="${ty}" fill="#666666" font-size="${0.95 * S}" letter-spacing="${0.14 * S}">${esc(KICKER.toUpperCase())}</text>`);
   ty += 2.3 * S;
-  if (TITLE) headerParts.push(`<text x="${vx + 0.9 * S}" y="${ty}" fill="#151515" font-size="${1.9 * S}" font-weight="bold">${TITLE}</text>`);
+  if (TITLE) headerParts.push(`<text x="${vx + 0.9 * S}" y="${ty}" fill="#151515" font-size="${1.9 * S}" font-weight="bold">${esc(TITLE)}</text>`);
   ty += 1.9 * S;
-  for (const dl of deckLines) { headerParts.push(`<text x="${vx + 0.9 * S}" y="${ty}" fill="#222222" font-size="${1.12 * S}">${dl}</text>`); ty += 1.55 * S; }
+  for (const dl of deckLines) { headerParts.push(`<text x="${vx + 0.9 * S}" y="${ty}" fill="#222222" font-size="${1.12 * S}">${esc(dl)}</text>`); ty += 1.55 * S; }
   headerParts.push(`<rect x="${vx + 0.9 * S}" y="${(vy - 0.55 * S).toFixed(2)}" width="${vw - 1.8 * S}" height="${0.09 * S}" fill="#222222"/>`);
 }
 const head = [];
@@ -290,7 +213,6 @@ for (const d of overlay.dioceses)
   head.push(`<path d="${d.path}" fill="${d.name === dioShort ? "#f0ece2" : "#f9f8f5"}"/>`);
 head.push(`<path d="${overlay.borders}" fill="none" stroke="#c9c3b8" stroke-width="${0.12 * S}"/>`);
 head.push(`<path d="${dio.path}" fill="none" stroke="${INK}" stroke-width="${0.3 * S}"/>`);
-// neighbor diocese names (subject diocese labeled below its shape)
 for (const d of overlay.dioceses)
   if (d.name !== dioShort && inView(d.cx, d.cy, -2)) {
     const w = d.name.length * 0.8 * S + d.name.length * 0.12 * S;
@@ -300,17 +222,17 @@ for (const d of overlay.dioceses)
 head.push(`<text x="${dio.cx}" y="${Math.min(maxY + 1.6 * S, vy + vh - S)}" text-anchor="middle" fill="${DIO}" font-size="${1.0 * S}" letter-spacing="${0.14 * S}">${esc(dioceseFull.toUpperCase())}</text>`);
 
 const dots = [], labels = [];
-// subject first: dot, halo ring, label — labels reserve space before neighbors
+// subject first: dot, halo ring, label — reserves space before neighbors
 const sp = all.find((q) => q.slug === SLUG);
-if (!sp) { console.error(`subject '${SLUG}' has no point in map.json`); process.exit(1); }
-const sCol = COLOR[canonicalState(subject)];
+if (!sp) { console.error(`subject '${SLUG}' fell outside its own frame — check data`); process.exit(1); }
+const sCol = COLOR[subject.group];
 boxes.push(dotBox(sp, 2.2 * S));
 dots.push(
   `<circle cx="${sp.x}" cy="${sp.y}" r="${1.25 * S}" fill="${sCol}" stroke="#fff" stroke-width="${0.22 * S}"/>`,
   `<circle cx="${sp.x}" cy="${sp.y}" r="${2.0 * S}" fill="none" stroke="${sCol}" stroke-width="${0.18 * S}" stroke-dasharray="${0.5 * S} ${0.35 * S}"/>`,
 );
 {
-  const line1 = subject.nameLt, line2 = `${subject.city} · ${STATE_WORD[canonicalState(subject)]}`;
+  const line1 = subject.name, line2 = `${subject.city} · ${STATE_WORD[subject.group]}`;
   const pos = place({ x: sp.x + 1.9 * S, y: sp.y }, line1, FS.subject, true);
   labels.push(
     `<text x="${pos.tx}" y="${pos.ty - 0.1 * S}" text-anchor="${pos.anchor}" fill="${INK}" font-size="${FS.subject}" font-weight="bold" ${HALO(FS.subject)}>${esc(line1)}</text>`,
@@ -384,6 +306,5 @@ const footerParts = [];
   footerParts.push(`<text x="${vx + 0.9 * S}" y="${(ly + 1.4 * S).toFixed(2)}" fill="#777" font-size="${0.85 * S}">Some points sit at city center · the full interactive map: saveourlithuanianparishes.org</text>`);
 }
 
-
 writeFileSync(OUT, [...head, ...dots, ...labels, "</g>", ...headerParts, ...footerParts, "</svg>"].join("\n"));
-console.log(`OK: ${OUT} (${dioceseFull}; viewBox ${vw.toFixed(0)}x${vh.toFixed(0)} units; ${all.length} parish points)`);
+console.log(`OK: ${OUT} (${dioceseFull}; viewBox ${vw.toFixed(0)}x${vh.toFixed(0)} units; ${all.length} points from context-points.json)`);
