@@ -171,7 +171,69 @@ export default function AboutTheDataPage() {
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          7. Corrections
+          7. The geographic data — basemap, boundaries, coordinates
+        </h2>
+        <p className="mt-2 leading-relaxed">
+          The maps are built entirely from openly licensed geography. The
+          basemap — state and county outlines — is US Census TIGER geometry
+          (public domain, via the us-atlas distribution). The{" "}
+          <Link href="/by-diocese" className="underline hover:text-accent">
+            diocese boundaries
+          </Link>{" "}
+          are those same public-domain counties merged diocese by diocese
+          using a county-to-diocese crosswalk released into the public domain
+          by its author (the <em>us_diocese_mapper</em> project); US Catholic
+          dioceses are defined as unions of counties, so diocese lines follow
+          county lines, and the few counties split between two dioceses
+          follow the crosswalk&rsquo;s primary assignment. Parish coordinates
+          come from exact building locations where the field survey recorded
+          them, and otherwise from geocoding city locations
+          (&copy;&nbsp;OpenStreetMap contributors, via Nominatim) with a
+          gazetteer check so a parish never lands in the wrong county. A
+          record without usable coordinates is skipped and counted — never
+          placed by guess.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="font-serif text-2xl font-semibold">
+          8. Every source at a glance
+        </h2>
+        <p className="mt-2 leading-relaxed text-muted">
+          Everything the site draws from, in one list — what each source
+          contributes and on what terms.
+        </p>
+        <ul className="mt-4 space-y-3 text-sm leading-relaxed">
+          {[
+            ["Draugas, 2008–2026 (2,768 issues, read in full)", "the locked core: 83 case-filed parishes, every headline figure; dated issue citations", "publisher's digital archive; facts cited by issue date"],
+            ["Draugas, 1909–2007 (systematic archive sweep)", "foundings, jubilees, closures, and the parish registry before living memory", "publisher's digital archive, scanned era"],
+            ["Wolkovich-Valkavičius, Lithuanian Religious Life in America, Vol. 3 (1998)", "the Catholic-institutional compendium of ~150 parishes", "in copyright — page-cited facts only, quotes under 25 words"],
+            ["Michelsonas, Lietuvių Išeivija Amerikoje (Keleivis, 1961)", "the secular counterpoint, including the early 'church fights'", "in copyright — page-cited facts only"],
+            ["Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)", "architectural descriptions and photographs of the built heritage", "in copyright — page-cited facts; volume held in the Žiburio archive"],
+            ["Global True Lithuania field survey", "exact building coordinates, Canadian parishes, post-2008 status flags", "constrained axis: locations and flags only; narratives that failed verification are excluded and say so"],
+            ["Contemporary web survey (2026)", "present-day status from diocesan directories and parish websites", "every claim carries its URL and a confidence label; lower priority than print sources"],
+            ["Per-parish research passes", "the present record on profile pages — building fates, current use, clergy", "every claim from a fetched, cited source; 'not established' recorded as such"],
+            ["Parish Watch sweep (155 watched entities)", "the under-threat alerts and their sources", "red items re-checked weekly, amber biweekly"],
+            ["The reversal database", "26 documented closure reversals in three diocesan waves", "researched from contemporary press, adversarially verified; pending cases labeled"],
+            ["Archdiocese of Detroit parish workbooks", "the verifiability layer for the Detroit restructuring figures", "the archdiocese's published documents; every figure links to its workbook page"],
+            ["US Census TIGER geometry (via us-atlas)", "state, county, and diocese boundary geometry", "public domain"],
+            ["us_diocese_mapper county–diocese crosswalk", "which counties form each Catholic diocese", "released into the public domain by its author"],
+            ["OpenStreetMap / Nominatim", "geocoded city coordinates where no exact building location exists", "© OpenStreetMap contributors"],
+            ["Parish photographs", "profile and watch-page images", "individually attributed under each image, license stated where confirmed"],
+            ["Community reports", "corrections and news from people who know the parishes", "reviewed before publication; always marked community-reported"],
+          ].map(([src, gives, terms]) => (
+            <li key={src as string} className="rounded-lg border border-rule px-4 py-3">
+              <span className="font-medium">{src}</span>
+              <span className="block text-muted mt-0.5">{gives}.</span>
+              <span className="block text-xs text-muted mt-0.5">{terms}.</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="font-serif text-2xl font-semibold">
+          9. Corrections
         </h2>
         <p className="mt-2 leading-relaxed">
           The dataset is open —{" "}
