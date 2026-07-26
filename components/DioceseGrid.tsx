@@ -91,7 +91,7 @@ export default function DioceseGrid({
                 {d.parishes.length}{" "}
                 {d.parishes.length === 1 ? "parish" : "parishes"}
                 {d.closedCount > 0 && ` · ${d.closedCount} closed`}
-                {d.aliveCount === 0 && " · none remain"}
+                {d.aliveCount === 0 && " · none remain active"}
               </span>
             </div>
             <DioceseBar counts={d.counts} total={d.parishes.length} />

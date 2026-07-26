@@ -108,7 +108,12 @@ function buildData() {
     }
   }
 
-  const standing = all.filter((p) => isAlive(p.endState) && !p.closed).length;
+  const standing = all.filter(
+    (p) => toGroup(p.endState) === "active_parish" && !p.closed,
+  ).length;
+  const hostedMass = all.filter(
+    (p) => toGroup(p.endState) === "mass_continues" && !p.closed,
+  ).length;
   const lost = all.filter((p) => isLoss(p.endState)).length;
 
   // ── Narrative figures for the timeline section (all record-derived) ──
@@ -154,6 +159,7 @@ function buildData() {
     closedFates,
     threads,
     standing,
+    hostedMass,
     lost,
     total: all.length,
     narrative: {
@@ -181,6 +187,7 @@ export default function HistoryPage() {
     closedFates,
     threads,
     standing,
+    hostedMass,
     lost,
     total,
     narrative,
@@ -212,7 +219,11 @@ export default function HistoryPage() {
           className="font-serif text-lg"
           style={{ color: "var(--es-active)" }}
         >
-          {standing} still stand as Lithuanian parishes today.
+          {standing} still stand as Lithuanian parishes today
+          <span className="text-muted font-sans text-base">
+            {" "}&mdash; and at {hostedMass} more churches, a Lithuanian Mass
+            continues within a parish that is no longer Lithuanian.
+          </span>
         </p>
       </div>
 

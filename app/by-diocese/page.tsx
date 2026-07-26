@@ -7,7 +7,6 @@ import { scopedParishes, type ScopedParish } from "@/lib/registry-scope";
 import {
   GROUP_ORDER,
   toGroup,
-  isAlive,
   isLoss,
   type EndStateGroup,
 } from "@/lib/end-state";
@@ -50,7 +49,7 @@ function buildDioceses(): DioceseSummary[] {
       ),
       counts,
       closedCount: parishes.filter((p) => isLoss(p.endState)).length,
-      aliveCount: parishes.filter((p) => isAlive(p.endState)).length,
+      aliveCount: parishes.filter((p) => toGroup(p.endState) === "active_parish").length,
     });
   }
   summaries.sort(
