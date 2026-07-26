@@ -1,8 +1,8 @@
 {
   "slug": "unnamed-lithuanian-parish-baltimore-md",
-  "asOf": "2026-07-16",
+  "asOf": "2026-07-26",
   "buildingStatus": "standing",
-  "currentUse": "Active Catholic church — the National Shrine of St. Alphonsus Liguori, a personal parish of the Archdiocese of Baltimore administered by the Priestly Fraternity of St. Peter (FSSP) as the archdiocese's sole Traditional Latin Mass site; no Lithuanian-language Mass is offered.",
+  "currentUse": "Active Catholic church — the National Shrine of St. Alphonsus Liguori, a personal parish of the Archdiocese of Baltimore administered by the Priestly Fraternity of St. Peter (FSSP) as the archdiocese's sole Traditional Latin Mass site; no Lithuanian-language Mass is offered — all three Sunday Masses Traditional Latin (verified July 2026).",
   "summary": "Baltimore's Lithuanian parish was St. Alphonsus at 114 W. Saratoga Street, a Gothic Revival church built 1842-1845 for the German community and taken over by Lithuanians in 1917; the surrounding neighborhood became known as \"Little Lithuania.\" The building stands and was never sold: it remains an archdiocesan church, listed on the National Register of Historic Places since 1973 and designated a shrine in the 1990s. Its life as a Lithuanian parish effectively ended in 2017, when longtime pastor Msgr. Arthur Bastress retired and Archbishop William Lori entrusted the shrine to the Priestly Fraternity of St. Peter (administrator installed August 1, 2017); at that point the remaining 8:30 a.m. Sunday Mass for the Lithuanian community was celebrated by a non-Lithuanian archdiocesan priest, and the Lithuanian heritage site Global True Lithuania records the Lithuanian Mass as ended in 2017. In the archdiocese's 2024 \"Seek the City to Come\" restructuring — which cut Baltimore's city parishes by roughly two-thirds — St. Alphonsus survived and was strengthened: effective August 1, 2024 it was designated a personal parish without territorial boundaries and became the only site in the Archdiocese of Baltimore where the 1962 Missal Latin Mass is celebrated, under the FSSP. As of mid-2026 the parish website lists Fr. Ian Bozant, FSSP as pastor with three Sunday Latin Masses (7:30, 9:30, 11:30 a.m.) and daily Mass, but no Lithuanian liturgy. Lithuanian traces remain inside the church, including a \"Siberian rosary\" made by Lithuanian deportees, a Lithuanian stained-glass window, the tricolor flag, and a WWII memorial to Baltimore Lithuanian servicemen.",
   "developments": [
     {
@@ -19,15 +19,33 @@
       ]
     },
     {
-      "date": "2017",
-      "headline": "Lithuanian-language Mass discontinued",
-      "detail": "The Lithuanian heritage documentation project Global True Lithuania records that the Lithuanian Mass at St. Alphonsus was canceled in 2017, leaving only English and Latin (Tridentine) liturgies. Lithuanian artifacts remain in the church: a Siberian rosary made by deportees, a Lithuanian stained-glass window, the Lithuanian tricolor, and a WWII memorial listing Baltimore Lithuanians who served.",
+      "date": "2017-12",
+      "headline": "Lithuanian Mass survives the FSSP handover, then ends",
+      "detail": "The Lithuanian Mass did not end with the August 2017 transfer to the Priestly Fraternity of St. Peter: it appears on the Fraternity's own new parish website in the October 15 and December 17, 2017 captures, under Fr. Joel Kiefer, FSSP. By the January 30, 2018 capture the Sunday schedule had been rebuilt (8:00 Latin / 9:30 English / 11:00 Latin) with no Lithuanian liturgy, and it never returns in any capture through April 2026. The defensible terminus is December 17, 2017 – January 30, 2018.",
       "sources": [
         {
-          "title": "Baltimore, Maryland: Lithuanians and Lithuanian heritage",
-          "publisher": "Global True Lithuania",
-          "date": "undated (accessed 2026-07-16)",
-          "url": "https://global.truelithuania.com/baltimore-maryland-497/"
+          "title": "St. Alphonsus parish site, Oct 15 2017 capture (Lithuanian Mass listed)",
+          "publisher": "Wayback Machine",
+          "date": "2017-10-15",
+          "url": "https://web.archive.org/web/20171015045211/http://stalphonsusbalt.org/"
+        },
+        {
+          "title": "St. Alphonsus parish site, Dec 17 2017 capture (last listing)",
+          "publisher": "Wayback Machine",
+          "date": "2017-12-17",
+          "url": "https://web.archive.org/web/20171217070559/http://stalphonsusbalt.org/"
+        },
+        {
+          "title": "St. Alphonsus parish site, Jan 30 2018 capture (schedule rebuilt, no Lithuanian Mass)",
+          "publisher": "Wayback Machine",
+          "date": "2018-01-30",
+          "url": "https://web.archive.org/web/20180130123906/http://stalphonsusbalt.org/"
+        },
+        {
+          "title": "Lithuanian pastoral-care directory — no Maryland entry; nearest Lithuanian Mass: Epiphany, Georgetown, DC (monthly)",
+          "publisher": "sielovada.org",
+          "date": "2026-07-26",
+          "url": "https://sielovada.org/"
         }
       ]
     },
@@ -104,5 +122,5 @@
   ],
   "confidence": "verified",
   "conflictsWithArchiveRecord": "The archive record's status \"closed / diocese_closed\" needs refinement: the parish was never canonically suppressed and the building was never sold or closed. What ended was its Lithuanian identity — the archive's note of a \"token Sunday Lithuanian Mass with no Lithuanian priest\" matches the situation documented in September 2017, when archdiocesan (non-Lithuanian) priest Fr. William Spacek celebrated an 8:30 a.m. Mass for the Lithuanian community. That Mass has since been discontinued (Global True Lithuania dates the cancellation to 2017). The archive's \"building used by an American parish\" is confirmed and sharpened: since August 2017 the church has been administered by the FSSP as a Traditional Latin Mass apostolate, and since August 1, 2024 it is the archdiocese's designated Latin Mass personal parish. So the trajectory is transition/absorption within the diocese, not closure or sale — ownership remains diocese_rc throughout, consistent with the archive.",
-  "gaps": "The archive record is \"unnamed\"; identification as St. Alphonsus (114 W. Saratoga St.) rests on the match between the archive notes (token Lithuanian Mass, no Lithuanian priest, building used by an American/non-Lithuanian congregation) and independently documented facts — the fit is strong and St. Alphonsus was Baltimore's only remaining Lithuanian parish, but the identification is inferred, not stated in the archive. Not found: an exact date or diocesan announcement for the final Lithuanian Mass (only Global True Lithuania's \"2017\"); any published record of where the Lithuanian congregation's artifacts or records would go if disposition ever occurs; any recent (2024-2026) press on Lithuanian community reunions or activity at the shrine specifically (Baltimore Lithuanian community life continues at the separate, non-parish Lithuanian Hall, not researched here). A search-result snippet claimed the earlier St. John the Baptist Lithuanian church closed in 1989, but this could not be verified on an opened page and conflicts with Global True Lithuania (which says Lithuanians used it only 1905-1916), so it is excluded from findings."
+  "gaps": "The archive record is \"unnamed\"; identification as St. Alphonsus (114 W. Saratoga St.) rests on the match between the archive notes (token Lithuanian Mass, no Lithuanian priest, building used by an American/non-Lithuanian congregation) and independently documented facts — the fit is strong and St. Alphonsus was Baltimore's only remaining Lithuanian parish, but the identification is inferred, not stated in the archive. A search-result snippet claimed the earlier St. John the Baptist Lithuanian church closed in 1989, but this could not be verified on an opened page and conflicts with Global True Lithuania (which says Lithuanians used it only 1905-1916), so it is excluded from findings. The end of the Lithuanian Mass is now dated: last published December 17, 2017; gone from the rebuilt schedule by January 30, 2018 (Wayback captures on both sides)."
 }

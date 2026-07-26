@@ -15288,7 +15288,7 @@
      "kind": "web-survey",
      "tier": 4,
      "currentStatus": "standing",
-     "confidence": "reported",
+     "confidence": "verified",
      "sourceUrl": "https://catholicreview.org/st-alphonsus-shrine-entrusted-priestly-fraternity-st-peter/",
      "ownership": "diocese_rc",
      "surveyed": "2026-07-25"
@@ -15342,7 +15342,7 @@
    "record_depth": "multi-source",
    "diocese": "Archdiocese of Baltimore",
    "description": "Former German parish transferred to Lithuanian community in 1917, documented with architectural history.",
-   "caveat": "The dedicated Lithuanian Mass is reported canceled in 2017 (Global True Lithuania; corroborated by absence from the current published schedule). Recent independent confirmation of any occasional Lithuanian Mass was not found."
+   "caveat": "The dedicated Lithuanian Mass survived the August 2017 FSSP handover by one season and ended between December 17, 2017 (last published schedule) and January 30, 2018 (schedule rebuilt without it) — verified from the parish's own archived schedules on both sides. No Lithuanian liturgy is attested anywhere in Maryland; the nearest is a monthly Lithuanian Mass at Epiphany, Georgetown, DC."
   },
   {
    "slug": "st-john-the-baptist-baltimore-md",
