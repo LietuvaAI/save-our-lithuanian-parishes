@@ -167,11 +167,11 @@
     "sv-kazimiero-worcester-ma": {
       "registry_slug": "casimir-worcester-ma",
       "canonical_status": "closed",
-      "building_fate": "unknown",
-      "current_use": "Unknown; post-closure community gathered 3x/year",
+      "building_fate": "repurposed_religious",
+      "current_use": "Church of the Pentecost USA — sold by the Diocese of Worcester on Sept. 15, 2011 for $650,000, with the rectory and three house lots.",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "Diocese closed the parish July 1 2008 despite it being solvent, debt-free, with a paid-off school and ~$1M pre-closure renovation. Rescue committee, canon lawyer, and Vatican appeal all failed. Post-closure the community gathered 3x/year."
+      "situation": "Established 1894 for Worcester's Lithuanian and Polish Catholics; one of five Worcester parishes closed by the diocese in 2008 over parishioner objections that it was financially viable, despite a canon-law challenge and planned Vatican appeal. Merged into St. John Parish effective July 1, 2008, with the last Mass in June 2009. The church was sold in 2011 to The Church of the Pentecost; the building stands, in religious use, no longer Catholic or Lithuanian."
     },
     "ausros-vartu-worcester-ma": {
       "registry_slug": "gateofdawn-worcester-ma",
@@ -691,9 +691,9 @@
       "canonical_status": "closed",
       "building_fate": "repurposed_religious",
       "current_use": "Building used by an American parish; one token Sunday Lithuanian Mass with no Lithuanian priest",
-      "lithuanian_identity": "mass_continues",
+      "lithuanian_identity": "lost",
       "pastoral_status": "visiting_priest",
-      "situation": "Transitioned / de facto closed as a Lithuanian parish. Building used by an American parish with one token Sunday Lithuanian Mass and no Lithuanian priest."
+      "situation": "A single Draugas mention of January 2, 2010 describes a Baltimore Lithuanian congregation as de facto closed — sharing a building with an American parish, reduced to one token Sunday Lithuanian Mass, with no Lithuanian priest. Research in 2026 could not establish this as a parish distinct from the documented Baltimore Lithuanian sites (St. John the Baptist, 1905–1916, and St. Alphonsus, Lithuanian from 1917); it may be the St. Alphonsus community at a low point. The dedicated Lithuanian Mass at St. Alphonsus is reported to have ended in 2017."
     },
     "dievo-apvaizdos-scranton-pa": {
       "registry_slug": "providence-scranton-pa",
@@ -1014,10 +1014,10 @@
       "registry_slug": "st-francis-athol-ma",
       "canonical_status": "standing",
       "building_fate": "standing",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in Draugas (178 mentions 1911-2007); web and Michelsonas sources note attempted LNCC status but remained RC. Multi-source documentation; present status requires verification."
+      "current_use": "Active Catholic worship site at 101 Main St., Athol — part of the North Quabbin Catholic Community (Diocese of Worcester).",
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "Founded in 1913 for Athol's Lithuanian immigrants, with the church dedicated in 1921. Still a functioning parish, clustered with Our Lady Immaculate and St. Peter (Petersham) as the North Quabbin Catholic Community. No Lithuanian Mass or Lithuanian clergy remain; centennial coverage in 2021 described a small, English-language, increasingly Hispanic congregation, with the Lithuanian founding preserved in period stained glass and remembered history."
     },
     "st-casimir-westfield-ma": {
       "registry_slug": "st-casimir-westfield-ma",
@@ -1165,12 +1165,12 @@
     },
     "ss-peter-and-paul-rockford-il": {
       "registry_slug": "ss-peter-and-paul-rockford-il",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in Draugas (271 mentions 1913-2006) and Wolkovich (Vol. 3); founded 1911. Multi-source, substantial documentation; present status requires verification."
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Roman Catholic parish church at 617 Lincoln Ave., Rockford — Masses in English and Spanish.",
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "Founded 1911 as the national parish of Rockford's Lithuanians; the 1929 church, built under Fr. V. Kulikauskas, was the 1951 wedding site of Alma and Valdas Adamkus, later President of Lithuania. The parish never closed — the Diocese of Rockford transferred its mission, making it home of the diocesan Office of Black Catholic Ministry in 1985 and the home parish for Spanish-speaking Catholics in 1992. No Lithuanian Mass or organized Lithuanian life remains; a 1949 commemorative plaque with Lithuanian donor names survives in the entrance hall."
     },
     "st-vincent-de-paul-springfield-il": {
       "registry_slug": "st-vincent-de-paul-springfield-il",
@@ -1192,21 +1192,21 @@
     },
     "ss-peter-and-paul-westville-il": {
       "registry_slug": "ss-peter-and-paul-westville-il",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+      "canonical_status": "closed",
+      "building_fate": "demolished",
+      "current_use": "Vacant lot at 502 W. Main St.; the cornerstone was relocated to SS. Peter and Paul Cemetery.",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Founded 1897, among the oldest Lithuanian parishes in America, serving Westville's coal-mining community for nearly a century. The parish closed and its members were received into St. Mary Parish, Westville in 1990 (church-affiliated sources give 1990; an earlier reading gives 1989). The church was demolished, leaving an empty lot; the cornerstone now stands in SS. Peter and Paul Cemetery near the grave of longtime pastor Fr. John Paukstis."
     },
     "holy-cross-westville-il": {
       "registry_slug": "holy-cross-westville-il",
-      "canonical_status": "unknown",
+      "canonical_status": "closed",
       "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+      "current_use": "Reportedly a private residence occupies the church site (single source, uncorroborated). A 2004 memorial built from the rescued bell and cornerstone stands in the separately run Westville Lithuanian Cemetery.",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "An independent congregation formed in 1914 by a faction that broke from SS. Peter and Paul over fees, burial rules, and temperance — sources describe it as schismatic ('Old Catholic'), not a Roman Catholic diocesan parish. Led for decades by Zigmantas K. Vipartas, consecrated a bishop in the North American Old Roman Catholic Church in 1944; the congregation dissolved around 1960–61 after his death. The original building, a former Presbyterian church bought in 1914, is reported demolished."
     },
     "st-francis-youngstown-oh": {
       "registry_slug": "st-francis-youngstown-oh",
@@ -1264,12 +1264,12 @@
     },
     "st-peter-kenosha-wi": {
       "registry_slug": "st-peter-kenosha-wi",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active parish church of the Archdiocese of Milwaukee at 2224 30th Ave., with a full Mass schedule.",
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "Founded July 30, 1903 by Lithuanian immigrants, out of a joint Lithuanian-Polish St. Casimir benevolent society formed in 1898. Never merged or suppressed — it remains an independent parish of the Archdiocese of Milwaukee, staffed by the Marian Fathers, an order with historic Lithuanian roots. The Lithuanian identity survives culturally, not liturgically: the annual parish festival still advertises homemade kugelis and Lithuanian sausage, but no Lithuanian-language Mass was found. The present church is reported to date from 1966."
     },
     "immaculate-conception-sheboygan-wi": {
       "registry_slug": "immaculate-conception-sheboygan-wi",
@@ -1309,12 +1309,12 @@
     },
     "st-alphonsus-baltimore-md": {
       "registry_slug": "st-alphonsus-baltimore-md",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active parish and National Shrine of St. Alphonsus Liguori, 114 W. Saratoga St., administered by the Priestly Fraternity of St. Peter — Traditional Latin and English Masses.",
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "Baltimore's Lithuanian national parish from 1917, described in a 2018 Draugas feature as the most impressive Lithuanian church on the U.S. East Coast. A dedicated 8:30 a.m. Lithuanian Mass was still offered as late as September 2017, when the archdiocese entrusted the shrine to the Priestly Fraternity of St. Peter for the Latin Mass apostolate. The field survey reports the Lithuanian Mass canceled in 2017, and none appears on the current published schedule — the parish is alive and the building stands, but the dedicated Lithuanian liturgical identity appears to have lapsed."
     },
     "st-john-the-baptist-baltimore-md": {
       "registry_slug": "st-john-the-baptist-baltimore-md",
@@ -1363,12 +1363,12 @@
     },
     "st-ann-beverly-shores-in": {
       "registry_slug": "st-ann-beverly-shores-in",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Catholic worship site of St. Patrick Catholic Community, Chesterton (Diocese of Gary), at 433 E. Golfwood Rd.",
+      "lithuanian_identity": "mass_continues",
+      "pastoral_status": "visiting_priest",
+      "situation": "Begun in 1950 as a mission for the Lithuanian vacation colony of Beverly Shores — 'the Lithuanian Riviera' — and a full parish from 1956. It later lost independent canonical status and is now a worship site of St. Patrick Catholic Community in Chesterton, but it never closed: the 1954 church, remodeled in 1970 by architect E. Masiulis, holds Mass every weekend. A dedicated Lithuanian ministry led by Rev. Gediminas Kersys continues — Lithuanian Mass on the third Sunday of every month, with Lithuanian confession in Lent and Advent, confirmed on the parish and diocesan sites."
     },
     "lithuanian-union-pier-mi": {
       "registry_slug": "lithuanian-union-pier-mi",
@@ -1489,12 +1489,12 @@
     },
     "mary-custer-mi": {
       "registry_slug": "mary-custer-mi",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Catholic worship site at 85 S. Madison St., Custer — Saint Mary–Saint Jerome Parish, Diocese of Grand Rapids.",
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "The Lithuanian farm colony around Custer took shape from about 1912, with a parish established in 1933 under Lithuanian priests — though the Lithuanian cultural-heritage record notes it was always a territorial parish, never nationally erected. The 1966 A-frame church was designed by Lithuanian-American architect Jonas Mulokas and keeps Lithuanian artistic elements: an altar with Lithuanian textile motifs, an Our Lady of Vilnius relief over the entrance, an Our Lady of Šiluva statue. Today it is an English-language territorial parish, merged with the former St. Jerome, Scottville in 2012."
     },
     "bernard-irons-mi": {
       "registry_slug": "bernard-irons-mi",
@@ -1516,12 +1516,12 @@
     },
     "ignatius-luther-mi": {
       "registry_slug": "ignatius-luther-mi",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active mission chapel of Saint Ann–Saint Ignatius Parish, Baldwin (Diocese of Grand Rapids), at 701 State St., Luther — regular Sunday Mass.",
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "Recorded by Wolkovich as identified 'Lithuanian' in a 1970 diocesan ethnic-makeup report, with no founding date or building history given. The church still stands and holds Sunday Mass, but it lost independent-parish status in 2011 when it was folded into Saint Ann Parish, Baldwin, as Saint Ann–Saint Ignatius Parish. No surviving Lithuanian Mass, identity, or heritage programming was found in diocesan or parish sources."
     },
     "mary-harrisburg-il": {
       "registry_slug": "mary-harrisburg-il",

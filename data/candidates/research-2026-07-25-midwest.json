@@ -1,0 +1,279 @@
+{
+  "researched": "2026-07-25",
+  "parishes": [
+    {
+      "registry_slug": "ss-peter-and-paul-rockford-il",
+      "name": "SS. Peter and Paul (Šv. Petro ir Povilo)",
+      "city": "Rockford, IL",
+      "current_status": "active_independent, but no longer a Lithuanian national parish: it remains a canonically distinct, operating Roman Catholic parish of the Diocese of Rockford (never merged into another parish's name, never suppressed) but was formally redesignated to serve other communities: home of the Diocese's Office of Black Catholic Ministry from August 1985, then designated the home parish for Spanish-speaking Catholics of the Rockford area in May 1992.",
+      "closed_year": null,
+      "building_fate": "standing",
+      "current_use": "Still an active Roman Catholic parish church at 617 Lincoln Ave., Rockford, IL, holding regular Sunday and weekday Masses in English and Spanish (no Lithuanian-language Mass); reported to serve roughly 500 registered families as of the parish's own history page.",
+      "lithuanian_identity": "ethnically_transferred",
+      "summary": "Ss. Peter and Paul was founded in 1911 as a national parish for Rockford's Lithuanian Catholics, with the current church and school building constructed in 1929 under Fr. V. Kulikauskas; it is also historically notable as the 1951 wedding site of Alma and Valdas Adamkus, later President of Lithuania. The parish and its 1929 building are still standing and active, but the Diocese of Rockford formally transferred the parish's ethnic mission away from the Lithuanian community: it became home to the diocese's Office of Black Catholic Ministry in 1985 and was redesignated the home parish for Spanish-speaking Catholics in 1992. No organized Lithuanian identity remains today beyond a 1949 commemorative plaque with Lithuanian donor names in the entrance hall; there is no continuing Lithuanian Mass, festival, or ethnic feast-day observance at the parish.",
+      "confidence": "reported",
+      "sources": [
+        {
+          "title": "Rockford, Illinois: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "url": "https://global.truelithuania.com/rockford-illinois-2279/",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "Church of Sts. Peter and Paul, Rockford, Illinois, USA",
+          "publisher": "GCatholic.org",
+          "url": "https://gcatholic.org/churches/usa-07/30807.htm",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "SS. Peter & Paul Parish (home page)",
+          "publisher": "SS. Peter & Paul Parish, Rockford, IL (parish website)",
+          "url": "https://sspeterandpaul-rockford.org/",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "SS. Peter & Paul History / Historia de San Pedro y San Pablo",
+          "publisher": "SS. Peter & Paul Parish, Rockford, IL (parish website, official history page)",
+          "url": "https://sspeterandpaul-rockford.org/about/ss-historia-de-pedro-y-pablo",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "SS Peter and Paul - Mass schedule listing",
+          "publisher": "DiscoverMass.com",
+          "url": "https://discovermass.com/church/ss-peter-and-paul-rockford-il/",
+          "date_accessed": "2026-07-25"
+        }
+      ]
+    },
+    {
+      "registry_slug": "ss-peter-and-paul-westville-il",
+      "name": "SS. Peter and Paul",
+      "city": "Westville, IL",
+      "current_status": "merged_into_other_parish - closed as an independent parish and its members were received into St. Mary Parish, Westville (Diocese of Peoria)",
+      "closed_year": 1990,
+      "building_fate": "demolished",
+      "current_use": "Vacant/empty lot at the former site, 502 W. Main St., Westville, IL; the church cornerstone was relocated to Sts. Peter and Paul Cemetery southeast of Westville",
+      "lithuanian_identity": "lost",
+      "summary": "SS. Peter and Paul, founded in 1897 as one of the oldest Lithuanian Catholic parishes in the US, served Westville's Lithuanian coal-mining community for nearly a century. The parish closed and its members were formally received into St. Mary Parish in Westville in 1990 (an internal lead citing 1989 could not be independently confirmed; two independent church-affiliated sources both give 1990). The church building at 502 W. Main St. was subsequently demolished, leaving an empty lot; the cornerstone was moved to the parish's Sts. Peter and Paul Cemetery, where it now stands near the grave of longtime pastor Fr. John Paukstis. No Lithuanian Mass, festival, or active ethnic-parish identity survives at the site today; the cemetery itself is described as retaining little visible Lithuanian character.",
+      "confidence": "reported",
+      "sources": [
+        {
+          "title": "Westville, Illinois: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "url": "https://global.truelithuania.com/westville-illinois-2282/",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "Westville's Lithuanian Catholic history focus of new book",
+          "publisher": "The Catholic Post (Diocese of Peoria)",
+          "url": "https://thecatholicpost.com/2014/12/17/westvilles-lithuanian-catholic-history-focus-of-new-book/",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "St. Mary's Parish History",
+          "publisher": "St. Mary's Catholic Church, Westville, IL",
+          "url": "https://www.catholic-church.org/~westvillestmarys/parishhistory.htm",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "St. Mary - Westville",
+          "publisher": "Catholic Diocese of Peoria",
+          "url": "https://www.cdop.org/parishes/st-mary-westville",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "Ss. Peter & Paul (the back of the church, 502 W. Main St., Westville, Illinois)",
+          "publisher": "Flickr (Vermilion County SavingGraves)",
+          "url": "https://www.flickr.com/photos/119124838@N03/12996524285/",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "Ss. Peter & Paul Church cornerstone, 502 W Main, Westville, Illinois",
+          "publisher": "Flickr (Vermilion County SavingGraves)",
+          "url": "https://www.flickr.com/photos/119124838@N03/12996924604/",
+          "date_accessed": "2026-07-25"
+        }
+      ]
+    },
+    {
+      "registry_slug": "holy-cross-westville-il",
+      "name": "Holy Cross (Šv. Kryžiaus)",
+      "city": "Westville, IL",
+      "current_status": "closed_suppressed - dissolved as an independent schismatic congregation; it was never a Roman Catholic Diocese of Peoria parish and there is no evidence it was ever formally merged into another Catholic parish",
+      "closed_year": 1961,
+      "building_fate": "demolished",
+      "current_use": "According to Global True Lithuania, the original church building (a former Presbyterian church on Main Street purchased in 1914) is gone, and a private residential home now occupies the site, with only a former pathway/stone path reportedly remaining as a trace. This is a single-source claim that could not be independently corroborated. Separately, a 2004 memorial incorporating the church's recovered bell and its cornerstone was erected by caretakers of the (distinct, independently-run) Westville Lithuanian Cemetery - not at the original church site.",
+      "lithuanian_identity": "lost",
+      "summary": "Holy Cross was not a Roman Catholic Diocese of Peoria parish: it was an independent, schismatic 'Old Catholic' congregation formed in 1914 by a dissident faction that broke away from Westville's actual Roman Catholic Lithuanian parish, Sts. Peter and Paul (est. 1897), over disputes about fees, cemetery burial rules, and temperance. It was led for decades by self-styled Bishop Zigmantas K. Vipartas (consecrated 1944 in the North American Old Roman Catholic Church), and the congregation dissolved around 1960-1961, in the wake of his 1961 death. No Mass or organized parish activity has continued since, and the original building was later demolished (a house reportedly stands on the site today), but a 2004 memorial built from the church's rescued bell and cornerstone stands in the separately-run, still-active Westville Lithuanian Cemetery. IMPORTANT CAVEAT: independent sources (a Diocese of Peoria newspaper report and a Lithuanian-heritage history site) both describe 'Holy Cross' itself as the schismatic/Lithuanian-National-Catholic-type congregation - the same kind of entity the source project record treats as a separate 'LNCC congregation' (closed ~1969, demolished, 2004 bell/cornerstone memorial). No source found in this research supports a separate, additional Roman Catholic 'Holy Cross' parish under the Diocese of Peoria. The closure year found here (1960-1961) also differs from the ~1969 figure attributed elsewhere to the 'LNCC congregation' - these may be the same entity described with different dates, or there may be a real distinction this research could not resolve. This discrepancy should be reconciled with whoever documented the LNCC congregation before publishing both records.",
+      "confidence": "reported",
+      "sources": [
+        {
+          "title": "Westville, Illinois: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "url": "https://global.truelithuania.com/westville-illinois-2282/",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "Westville's Lithuanian Catholic history focus of new book",
+          "publisher": "The Catholic Post (Diocese of Peoria)",
+          "url": "https://thecatholicpost.com/2014/12/17/westvilles-lithuanian-catholic-history-focus-of-new-book/",
+          "date_accessed": "2026-07-25"
+        }
+      ]
+    },
+    {
+      "registry_slug": "st-ann-beverly-shores-in",
+      "name": "St. Ann of the Dunes (Šv. Onos)",
+      "city": "Beverly Shores, IN",
+      "current_status": "merged_into_other_parish - The Diocese of Gary's official parish page now lists it as 'St. Ann of the Dunes (St. Patrick Parish)' and states plainly: 'St. Ann of the Dunes is a worship site of St. Patrick Catholic Community in Chesterton.' It is no longer an independently canonical parish, is administered by the same priest as St. Patrick's (Rev. Jon Plavcan, Administrator), but it is NOT closed - it holds regular weekend Masses and its own dedicated Lithuanian ministry.",
+      "closed_year": null,
+      "building_fate": "standing",
+      "current_use": "Active Catholic worship site. The original 1954 cement-block church, expanded with north/south wings and a glass wall behind the altar in a 1970 remodel (architect E. Masiulis), is still standing at 433 E Golfwood Rd, Beverly Shores, IN and in continuous religious use. The parish's own website documents ongoing maintenance/renovation into the 2000s-2010s (facade/roof 2009, kitchen/restroom 2010) and recent activity (a 2022 episcopal visit from Bishop Robert McClory, live-streamed Masses through 2026), indicating the building remains a functioning church rather than a museum or repurposed secular space.",
+      "lithuanian_identity": "mass_continues",
+      "summary": "St. Ann of the Dunes began in 1950 as a mission serving Lithuanian-American Catholic vacationers and summer-home residents in Beverly Shores, Indiana ('the Lithuanian Riviera'), and was raised to full parish status in 1956. It has since lost independent canonical parish status and is now administered as a worship site of St. Patrick Catholic Community in Chesterton within the Diocese of Gary, but it has never closed: the same building still stands and holds Mass every weekend. Its Lithuanian identity is not merely historical reputation - the parish maintains a dedicated Lithuanian ministry led by Rev. Gediminas Kersys, with a Lithuanian-language Mass on the third Sunday of every month plus Lithuanian confession during Lent and Advent, confirmed on both the parish's own current website and the Diocese of Gary's official parish page. A specific annual Lithuanian heritage festival or pilgrimage tied to the parish itself could not be verified from available sources, though the town of Beverly Shores retains a broader active Lithuanian community presence (an American-Lithuanian Club still listed on the town's official website, roughly 12.5% Lithuanian population per a Lithuanian heritage site).",
+      "confidence": "verified",
+      "sources": [
+        {
+          "title": "St. Ann of the Dunes (St. Patrick Parish)",
+          "publisher": "Diocese of Gary (dcgary.org)",
+          "url": "https://dcgary.org/parish/st-ann-dunes-beverly-shores",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "Home - St. Ann of the Dunes",
+          "publisher": "St. Ann of the Dunes parish website",
+          "url": "https://www.st-ann-of-the-dunes.org/",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "Parish History",
+          "publisher": "St. Ann of the Dunes parish website",
+          "url": "https://www.st-ann-of-the-dunes.org/parish-history/",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "Lithuanian (ministry page)",
+          "publisher": "St. Ann of the Dunes parish website",
+          "url": "https://www.st-ann-of-the-dunes.org/lithuanian/",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "Mass Schedule",
+          "publisher": "St. Ann of the Dunes parish website",
+          "url": "https://www.st-ann-of-the-dunes.org/mass-schedule/",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "Church of St. Ann of the Dunes, Beverly Shores, Indiana, USA",
+          "publisher": "GCatholic.org",
+          "url": "https://gcatholic.org/churches/usa-07/28925.htm",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "Mission of saint still found within Chesterton parish",
+          "publisher": "Diocese of Gary (dcgary.org / Northwest Indiana Catholic)",
+          "url": "https://dcgary.org/news/mission-saint-still-found-within-chesterton-parish",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "Indiana: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "url": "https://global.truelithuania.com/indiana-746/",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "St. Ann of the Dunes Church (virtual exhibit)",
+          "publisher": "Beverly Shores Depot & Gallery (bsdepot.org)",
+          "url": "https://bsdepot.org/virtual-exhibits/nggallery/album/st-ann-of-the-dunes-church",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "Beverly Shores: Clubs & Organizations",
+          "publisher": "Town of Beverly Shores, Indiana (official town website, in.gov)",
+          "url": "https://www.in.gov/towns/beverlyshores/clubs-and-organizations/",
+          "date_accessed": "2026-07-25"
+        }
+      ]
+    },
+    {
+      "registry_slug": "st-peter-kenosha-wi",
+      "name": "St. Peter (Šv. Petro)",
+      "city": "Kenosha, WI",
+      "current_status": "active_independent - Still operating today as its own distinct parish of the Archdiocese of Milwaukee. It does not appear on the Archdiocese's own 'Closed and Merged Parishes' list, and the Archdiocese's Parish Finder lists it as a standalone parish with no formal grouping/cluster shared with the other Kenosha parishes (St. James, St. Anthony of Padua, St. Elizabeth, St. Mark, St. Mary, Our Lady of Mount Carmel, Our Lady of the Holy Rosary, St. Therese of Lisieux).",
+      "closed_year": null,
+      "building_fate": "standing",
+      "current_use": "Still in active use as a functioning Roman Catholic parish church at 2224 30th Avenue, Kenosha, WI 53144, with a full current Mass schedule (Sat vigil 5pm; Sun 8am, 10:30am, 7pm; daily 8am Mon-Sat) and hosting its annual summer parish festival on site (next dated instance July 31-Aug 2, 2026, per the parish's own website). A 2011 parish-visit blog post states the present church building was constructed in 1966, replacing an earlier structure; this specific construction date rests on that single secondary source and was not independently corroborated in a primary/historical-registry source (the parish's own 'History' page has since been removed from its website - it 404s - and Wisconsin Historical Society's Architecture and History Inventory could not be located for this address in this session).",
+      "lithuanian_identity": "active_parish",
+      "summary": "St. Peter Parish was founded July 30, 1903 by Lithuanian immigrants in Kenosha (emerging out of a joint Lithuanian-Polish St. Casimir benevolent society formed in 1898) and remains, as of 2026, an active, independent parish of the Archdiocese of Milwaukee - it was never merged or suppressed. The original 1903-era church has since been replaced (a 1966 building is reported, though only via a secondary source); the current building still stands and is in daily use for Mass at 2224 30th Avenue. Lithuanian identity survives in cultural form rather than liturgy: the parish's annual summer festival still explicitly advertises 'homemade Lithuanian specialties' (kugelis, Lithuanian sausage) as of the currently posted 2026 festival announcement, and the parish is staffed by priests of the Marian Fathers of the Immaculate Conception (M.I.C.), a religious order with historic Lithuanian Catholic roots - but no evidence was found of an ongoing Lithuanian-language Mass.",
+      "confidence": "reported",
+      "sources": [
+        {
+          "title": "St. Peter, Kenosha - Parish Campaigns",
+          "publisher": "loveoneanothermke.org (Archdiocese of Milwaukee capital campaign site)",
+          "url": "https://www.loveoneanothermke.org/Campaign/Parish-Campaigns/Parish-Campaigns-2022-08-12T152056160/St.Peter.htm",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "Closed and Merged Parishes",
+          "publisher": "Archdiocese of Milwaukee (archmil.org)",
+          "url": "https://www.archmil.org/closed-and-merged-parishes",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "Parish Finder",
+          "publisher": "Archdiocese of Milwaukee (archmil.org)",
+          "url": "https://www.archmil.org/maps/parishes",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "St. Peter's Parish (homepage)",
+          "publisher": "stpeterskenosha.com",
+          "url": "https://www.stpeterskenosha.com/",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "Mass Times",
+          "publisher": "stpeterskenosha.com",
+          "url": "https://www.stpeterskenosha.com/mass-times/",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "Contact Us",
+          "publisher": "stpeterskenosha.com",
+          "url": "https://www.stpeterskenosha.com/contact-us/",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "Parish Staff",
+          "publisher": "stpeterskenosha.com",
+          "url": "https://www.stpeterskenosha.com/parish-staff/",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "Festival",
+          "publisher": "stpeterskenosha.com",
+          "url": "https://www.stpeterskenosha.com/festiva/",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "St. Peter Parish - Church - Catholic Directory",
+          "publisher": "catholicdirectory.com",
+          "url": "https://www.catholicdirectory.com/kenosha/church/st-peter-parish",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "St. Peter | Discover Mass",
+          "publisher": "discovermass.com",
+          "url": "https://discovermass.com/church/st-peter-kenosha-wi/",
+          "date_accessed": "2026-07-25"
+        },
+        {
+          "title": "The Desperate Pastor Blog: Church of the Week: St. Peter's, Kenosha WI",
+          "publisher": "desperatepastor.blogspot.com (personal blog)",
+          "url": "http://desperatepastor.blogspot.com/2011/09/church-of-week-st-peters-kenosha-wi.html",
+          "date_accessed": "2026-07-25"
+        }
+      ]
+    }
+  ]
+}
