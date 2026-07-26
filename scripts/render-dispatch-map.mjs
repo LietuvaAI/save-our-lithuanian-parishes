@@ -21,9 +21,12 @@
 // the dispatch's caption carries the framing; direct labels only. Label
 // policy: the subject is always named; canonical parishes are named when a
 // collision-free spot exists; registry-layer points are named only inside
-// the subject diocese (elsewhere they stay context dots). Registry points
-// whose state cannot belong in the view are dropped with a warning — each
-// warning is an upstream geocoding lead.
+// the subject diocese (elsewhere they stay context dots). Coordinate
+// correctness is guaranteed upstream: scripts/verify-geo.mjs runs as a
+// blocking guard in `npm run data` (every point tested against its own
+// state polygon) — so every point that falls in the frame is drawn. A wide
+// diocese zoom legitimately reaches neighboring metros (a Brooklyn frame
+// touches Philadelphia); those neighbors belong in the picture.
 import { readFileSync, writeFileSync } from "node:fs";
 import { geoAlbersUsa } from "d3-geo";
 
@@ -149,7 +152,6 @@ const canonicalPts = mapData.points
     return { ...p, ...t, name: c.nameLt ?? p.slug, city: c.city ?? "", st: c.state, state: canonicalState(c), tier: "canonical" };
   })
   .filter((p) => inView(p.x, p.y));
-const allowedStates = new Set([subject.state, ...canonicalPts.map((p) => p.st)]);
 const registryPts = registryMap.points
   .filter((p) => (p.kind ?? "parish") === "parish" && !EXCLUDE.has(p.slug))
   .map((p) => ({
@@ -163,14 +165,7 @@ const registryPts = registryMap.points
     }),
     tier: "registry",
   }))
-  .filter((p) => inView(p.x, p.y))
-  .filter((p) => {
-    if (p.st && !allowedStates.has(p.st)) {
-      console.warn(`warn: dropped ${p.slug} (${p.city}, ${p.st}) — in view but state does not belong here; upstream geocoding lead`);
-      return false;
-    }
-    return true;
-  });
+  .filter((p) => inView(p.x, p.y));
 const all = [...canonicalPts, ...registryPts];
 // same-coordinate groups (city-centroid records) fan in a small ring, the
 // subject staying put; disclosed in the dispatch caption.
