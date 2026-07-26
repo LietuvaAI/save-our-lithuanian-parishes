@@ -1053,6 +1053,13 @@
       1927
      ],
      "importance": 2
+    },
+    {
+     "axis": "lukas-2009",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
+     "rights": "in-copyright; cite + fair-use reproduction with attribution"
     }
    ],
    "years": {
@@ -1145,7 +1152,9 @@
    "congregation_class": "roman_catholic",
    "axes_count": 4,
    "record_depth": "case-filed",
-   "diocese": "Archdiocese of Chicago"
+   "diocese": "Archdiocese of Chicago",
+   "description": "Documented with extensive architectural photographs.",
+   "architect": "Jonas Mulokas"
   },
   {
    "slug": "holycross-chicago-il",
@@ -1224,6 +1233,13 @@
       1990
      ],
      "importance": 1
+    },
+    {
+     "axis": "lukas-2009",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
+     "rights": "in-copyright; cite + fair-use reproduction with attribution"
     }
    ],
    "years": {
@@ -1316,7 +1332,9 @@
    "congregation_class": "roman_catholic",
    "axes_count": 4,
    "record_depth": "case-filed",
-   "diocese": "Archdiocese of Chicago"
+   "diocese": "Archdiocese of Chicago",
+   "description": "Back of the Yards parish, described as the most architecturally impressive Lithuanian church in Chicago.",
+   "architect": "Joseph Molitor"
   },
   {
    "slug": "parish-oglesby-il",
@@ -2713,6 +2731,13 @@
       2008
      ],
      "importance": 3
+    },
+    {
+     "axis": "lukas-2009",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
+     "rights": "in-copyright; cite + fair-use reproduction with attribution"
     }
    ],
    "years": {
@@ -2759,7 +2784,8 @@
    "congregation_class": "roman_catholic",
    "axes_count": 3,
    "record_depth": "case-filed",
-   "diocese": "Diocese of Rochester"
+   "diocese": "Diocese of Rochester",
+   "description": "Featured with exterior photographs."
   },
   {
    "slug": "george-brooklyn-ny",
@@ -3724,6 +3750,15 @@
       1904
      ],
      "importance": 2
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "closed",
+     "confidence": "verified",
+     "sourceUrl": "https://www.fox61.com/article/news/local/new-haven-county/waterbury/dwindling-number-of-parishioners-losure-of-waterbury-church/520-4afd4347-5bac-4c0b-978b-c7b70f685651",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -4768,6 +4803,13 @@
      "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
      "ethnic_status": "Roman Catholic",
      "diocese": "None"
+    },
+    {
+     "axis": "lukas-2009",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
+     "rights": "in-copyright; cite + fair-use reproduction with attribution"
     }
    ],
    "years": {
@@ -4821,7 +4863,8 @@
    "congregation_class": "roman_catholic",
    "axes_count": 3,
    "record_depth": "case-filed",
-   "diocese": "Diocese of Allentown"
+   "diocese": "Diocese of Allentown",
+   "description": "Identified as the first Lithuanian parish in America, with founding date contested (1872, 1874, 1886, 1891)."
   },
   {
    "slug": "casimir-pittston-pa",
@@ -5154,6 +5197,15 @@
      "confidence": "verified",
      "currentStatus": "demolished",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "closed",
+     "confidence": "verified",
+     "sourceUrl": "https://diopitt.org/saint-vincent-de-paul-esplen",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -5282,6 +5334,13 @@
       2017
      ],
      "importance": 3
+    },
+    {
+     "axis": "lukas-2009",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
+     "rights": "in-copyright; cite + fair-use reproduction with attribution"
     }
    ],
    "years": {
@@ -5335,7 +5394,8 @@
    "congregation_class": "roman_catholic",
    "axes_count": 4,
    "record_depth": "case-filed",
-   "diocese": "Diocese of Pittsburgh"
+   "diocese": "Diocese of Pittsburgh",
+   "description": "Featured with architectural details and interior photographs."
   },
   {
    "slug": "joseph-scranton-pa",
@@ -5966,6 +6026,15 @@
      "first_mention": "1919-12-13",
      "last_mention": "1991-08-15",
      "total_mentions": 21
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "closed",
+     "confidence": "verified",
+     "sourceUrl": "https://6abc.com/archive/6275844/",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -6448,6 +6517,13 @@
      "statusFlags": [],
      "yearsMentioned": [],
      "importance": 2
+    },
+    {
+     "axis": "lukas-2009",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
+     "rights": "in-copyright; cite + fair-use reproduction with attribution"
     }
    ],
    "years": {
@@ -6494,7 +6570,8 @@
    "congregation_class": "roman_catholic",
    "axes_count": 3,
    "record_depth": "case-filed",
-   "diocese": "Archdiocese of Philadelphia"
+   "diocese": "Archdiocese of Philadelphia",
+   "description": "Documented with photographs of the Lithuanian wayside cross and parish grounds."
   },
   {
    "slug": "casimir-philadelphia-pa",
@@ -6981,6 +7058,13 @@
       1915
      ],
      "importance": 2
+    },
+    {
+     "axis": "lukas-2009",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
+     "rights": "in-copyright; cite + fair-use reproduction with attribution"
     }
    ],
    "years": {
@@ -7039,7 +7123,8 @@
    "congregation_class": "roman_catholic",
    "axes_count": 4,
    "record_depth": "case-filed",
-   "diocese": "Diocese of Cleveland"
+   "diocese": "Diocese of Cleveland",
+   "description": "National Register of Historic Places parish documented with photographs."
   },
   {
    "slug": "casimir-cleveland-oh",
@@ -7080,6 +7165,13 @@
      "first_mention": "1911-12-21",
      "last_mention": "2005-02-16",
      "total_mentions": 114
+    },
+    {
+     "axis": "lukas-2009",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
+     "rights": "in-copyright; cite + fair-use reproduction with attribution"
     }
    ],
    "years": {
@@ -7142,7 +7234,8 @@
    "congregation_class": "roman_catholic",
    "axes_count": 1,
    "record_depth": "case-filed",
-   "diocese": "Diocese of Cleveland"
+   "diocese": "Diocese of Cleveland",
+   "description": "Documented with architectural details and photographs."
   },
   {
    "slug": "nativity-chicago-il",
@@ -7233,6 +7326,13 @@
       1957
      ],
      "importance": 1
+    },
+    {
+     "axis": "lukas-2009",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
+     "rights": "in-copyright; cite + fair-use reproduction with attribution"
     }
    ],
    "years": {
@@ -7291,7 +7391,9 @@
    "congregation_class": "roman_catholic",
    "axes_count": 4,
    "record_depth": "case-filed",
-   "diocese": "Archdiocese of Chicago"
+   "diocese": "Archdiocese of Chicago",
+   "description": "Marquette Park parish, documented with photographs of the Mulokas-designed interior.",
+   "architect": "Jonas Mulokas"
   },
   {
    "slug": "immaculate-chicago-il",
@@ -7367,6 +7469,13 @@
       1964
      ],
      "importance": 2
+    },
+    {
+     "axis": "lukas-2009",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
+     "rights": "in-copyright; cite + fair-use reproduction with attribution"
     }
    ],
    "years": {
@@ -7425,7 +7534,8 @@
    "congregation_class": "roman_catholic",
    "axes_count": 4,
    "record_depth": "case-filed",
-   "diocese": "Archdiocese of Chicago"
+   "diocese": "Archdiocese of Chicago",
+   "description": "Brighton Park parish documented with interior and exterior photographs."
   },
   {
    "slug": "anthony-cicero-il",
@@ -7501,6 +7611,13 @@
       1926
      ],
      "importance": 2
+    },
+    {
+     "axis": "lukas-2009",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
+     "rights": "in-copyright; cite + fair-use reproduction with attribution"
     }
    ],
    "years": {
@@ -7559,7 +7676,8 @@
    "congregation_class": "roman_catholic",
    "axes_count": 4,
    "record_depth": "case-filed",
-   "diocese": "Archdiocese of Chicago"
+   "diocese": "Archdiocese of Chicago",
+   "description": "Documented with exterior photographs and architectural details."
   },
   {
    "slug": "providence-southfield-mi",
@@ -7630,6 +7748,13 @@
      "statusFlags": [],
      "yearsMentioned": [],
      "importance": 2
+    },
+    {
+     "axis": "lukas-2009",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
+     "rights": "in-copyright; cite + fair-use reproduction with attribution"
     }
    ],
    "years": {
@@ -7686,7 +7811,9 @@
    "congregation_class": "roman_catholic",
    "axes_count": 4,
    "record_depth": "case-filed",
-   "diocese": "Archdiocese of Detroit"
+   "diocese": "Archdiocese of Detroit",
+   "description": "Documented with architectural details.",
+   "architect": "Alfonsas Kulpa-Kulpavičius"
   },
   {
    "slug": "george-lemont-il",
@@ -7735,6 +7862,13 @@
      "confidence": "high",
      "currentStatus": "standing",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "lukas-2009",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
+     "rights": "in-copyright; cite + fair-use reproduction with attribution"
     }
    ],
    "years": {
@@ -7791,7 +7925,8 @@
    "congregation_class": "roman_catholic",
    "axes_count": 2,
    "record_depth": "case-filed",
-   "diocese": "Archdiocese of Chicago"
+   "diocese": "Archdiocese of Chicago",
+   "description": "Lithuanian World Center mission documented with interior photographs."
   },
   {
    "slug": "annunciation-brooklyn-ny",
@@ -7865,6 +8000,13 @@
      "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
      "ethnic_status": "Lithuanian national parish",
      "diocese": "None"
+    },
+    {
+     "axis": "lukas-2009",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
+     "rights": "in-copyright; cite + fair-use reproduction with attribution"
     }
    ],
    "years": {
@@ -7893,7 +8035,8 @@
    "congregation_class": "roman_catholic",
    "axes_count": 3,
    "record_depth": "case-filed",
-   "diocese": "Diocese of Brooklyn"
+   "diocese": "Diocese of Brooklyn",
+   "description": "Documented with facade photographs and architectural details."
   },
   {
    "slug": "transfiguration-maspeth-ny",
@@ -7964,6 +8107,13 @@
      "statusFlags": [],
      "yearsMentioned": [],
      "importance": 1
+    },
+    {
+     "axis": "lukas-2009",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
+     "rights": "in-copyright; cite + fair-use reproduction with attribution"
     }
    ],
    "years": {
@@ -8020,7 +8170,9 @@
    "congregation_class": "roman_catholic",
    "axes_count": 4,
    "record_depth": "case-filed",
-   "diocese": "Diocese of Brooklyn"
+   "diocese": "Diocese of Brooklyn",
+   "description": "Documented with extensive architectural analysis of the modernist design.",
+   "architect": "Jonas Mulokas"
   },
   {
    "slug": "paul-elizabeth-nj",
@@ -8232,6 +8384,13 @@
      "statusFlags": [],
      "yearsMentioned": [],
      "importance": 2
+    },
+    {
+     "axis": "lukas-2009",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
+     "rights": "in-copyright; cite + fair-use reproduction with attribution"
     }
    ],
    "years": {
@@ -8280,7 +8439,8 @@
    "congregation_class": "roman_catholic",
    "axes_count": 3,
    "record_depth": "case-filed",
-   "diocese": "Diocese of Bridgeport"
+   "diocese": "Diocese of Bridgeport",
+   "description": "Documented with exterior photographs."
   },
   {
    "slug": "trinity-hartford-ct",
@@ -8989,6 +9149,13 @@
       1955
      ],
      "importance": 1
+    },
+    {
+     "axis": "lukas-2009",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
+     "rights": "in-copyright; cite + fair-use reproduction with attribution"
     }
    ],
    "years": {
@@ -9037,7 +9204,8 @@
    "congregation_class": "roman_catholic",
    "axes_count": 4,
    "record_depth": "case-filed",
-   "diocese": "Diocese of Bellevue (Belleville)"
+   "diocese": "Diocese of Bellevue (Belleville)",
+   "description": "Documented as one of 11 of 13 Catholic churches in the city that survived closures."
   },
   {
    "slug": "casimir-waterbury-ct",
@@ -10085,6 +10253,15 @@
      "statusFlags": [],
      "yearsMentioned": [],
      "importance": 3
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "open_renamed",
+     "confidence": "verified",
+     "sourceUrl": "https://catholicmasstime.org/church/blessed-teresa-of-calcutta/6792/",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -10158,6 +10335,15 @@
       2018
      ],
      "importance": 2
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "open_renamed",
+     "confidence": "verified",
+     "sourceUrl": "https://www.sj23tamaqua.org/parish-history",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -10287,6 +10473,15 @@
      "confidence": "thin",
      "currentStatus": "closed",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "closed",
+     "confidence": "thin",
+     "sourceUrl": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -10360,6 +10555,15 @@
       2020
      ],
      "importance": 3
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "closed",
+     "confidence": "verified",
+     "sourceUrl": "https://www.skooknews.com/2020/06/diocese-announces-closure-of-former.html",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -10369,7 +10573,12 @@
       "source": "draugas-registry-1909-2007"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "2020",
+      "source": "web-historical"
+     }
+    ]
    },
    "conflicts": [],
    "related_sites": [],
@@ -10681,6 +10890,15 @@
      "confidence": "reported",
      "currentStatus": "repurposed",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "closed",
+     "confidence": "reported",
+     "sourceUrl": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -10740,11 +10958,25 @@
      "confidence": "thin",
      "currentStatus": "demolished",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "closed",
+     "confidence": "reported",
+     "sourceUrl": "https://global.truelithuania.com/northern-coal-region-scranton-1614/",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
     "founded": [],
-    "closed": []
+    "closed": [
+     {
+      "value": "2001",
+      "source": "web-historical"
+     }
+    ]
    },
    "conflicts": [],
    "related_sites": [],
@@ -10858,11 +11090,25 @@
      "confidence": "reported",
      "currentStatus": "demolished",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "closed",
+     "confidence": "verified",
+     "sourceUrl": "https://www.wnep.com/article/news/local/bradford-county/former-lithuanian-catholic-church-demolished/523-d5a94f9e-4ab9-403d-b6d7-76955722fe5b",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
     "founded": [],
-    "closed": []
+    "closed": [
+     {
+      "value": "2010",
+      "source": "web-historical"
+     }
+    ]
    },
    "conflicts": [],
    "related_sites": [],
@@ -11105,6 +11351,15 @@
      "confidence": "reported",
      "currentStatus": "standing",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "closed",
+     "confidence": "verified",
+     "sourceUrl": "https://www.dioceseofscranton.org/wp-content/uploads/2021/03/Consolidated-Parishes-3-24-21.pdf",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -11114,7 +11369,12 @@
       "source": "draugas-registry-1909-2007"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "2009",
+      "source": "web-historical"
+     }
+    ]
    },
    "conflicts": [],
    "related_sites": [],
@@ -11164,6 +11424,15 @@
      "confidence": "reported",
      "currentStatus": "closed",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "closed",
+     "confidence": "verified",
+     "sourceUrl": "https://www.dioceseofscranton.org/wp-content/uploads/2024/07/Consolidated-Parishes-updated-7-3-24.pdf",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -11173,7 +11442,12 @@
       "source": "draugas-registry-1909-2007"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "2010",
+      "source": "web-historical"
+     }
+    ]
    },
    "conflicts": [],
    "related_sites": [],
@@ -11274,6 +11548,15 @@
      "first_mention": "1935-08-22",
      "last_mention": "1964-01-14",
      "total_mentions": 7
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "closed",
+     "confidence": "verified",
+     "sourceUrl": "https://diopitt.org/ascension-north-side",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -11285,8 +11568,8 @@
     ],
     "closed": [
      {
-      "value": "1962",
-      "source": "draugas-registry-1909-2007"
+      "value": "1963",
+      "source": "web-historical"
      }
     ]
    },
@@ -11664,6 +11947,15 @@
       1985
      ],
      "importance": 3
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "open_renamed",
+     "confidence": "verified",
+     "sourceUrl": "https://www.dioceseofgreensburg.org/mc-locations/our-lady-queen-of-peace-parish-east-vandergrift/",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -12254,6 +12546,15 @@
      "confidence": "medium",
      "currentStatus": "repurposed",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "closed",
+     "confidence": "reported",
+     "sourceUrl": "https://global.truelithuania.com/upstate-new-york-831/",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -12263,7 +12564,12 @@
       "source": "draugas-registry-1909-2007"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "unknown",
+      "source": "web-historical"
+     }
+    ]
    },
    "conflicts": [],
    "related_sites": [],
@@ -12460,6 +12766,15 @@
       1981
      ],
      "importance": 3
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "open_transferred",
+     "confidence": "verified",
+     "sourceUrl": "http://newarkreligion.com/rcatholic/holytrinityrc.php",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -12590,6 +12905,15 @@
      "confidence": "medium",
      "currentStatus": "demolished",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "closed",
+     "confidence": "reported",
+     "sourceUrl": "https://global.truelithuania.com/new-jersey-613/",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -12599,7 +12923,12 @@
       "source": "draugas-registry-1909-2007"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "1980s",
+      "source": "web-historical"
+     }
+    ]
    },
    "conflicts": [],
    "related_sites": [],
@@ -12649,6 +12978,15 @@
      "confidence": "low",
      "currentStatus": "repurposed",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "closed",
+     "confidence": "reported",
+     "sourceUrl": "https://global.truelithuania.com/new-jersey-613/",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -12663,7 +13001,12 @@
       "cite": "1954-03-05 p4 (40 metų)"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "consolidated",
+      "source": "web-historical"
+     }
+    ]
    },
    "conflicts": [
     {
@@ -12758,6 +13101,13 @@
       2000
      ],
      "importance": 2
+    },
+    {
+     "axis": "lukas-2009",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
+     "rights": "in-copyright; cite + fair-use reproduction with attribution"
     }
    ],
    "years": {
@@ -12830,7 +13180,9 @@
    "congregation_class": "roman_catholic",
    "axes_count": 4,
    "record_depth": "multi-source",
-   "diocese": "Archdiocese of Chicago"
+   "diocese": "Archdiocese of Chicago",
+   "description": "Roseland parish documented with architectural details.",
+   "architect": "Jonas Mulokas"
   },
   {
    "slug": "st-casimir-chicago-heights-il",
@@ -14161,7 +14513,13 @@
       "cite": "Vol.3 p.37, p.38, p.39, p.40"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "1997",
+      "source": "web-historical",
+      "detail": "Closed as Lithuanian parish by late 1990s; building occupied by Congregation of the Great Spirit (Native American Catholic parish) since 1997"
+     }
+    ]
    },
    "conflicts": [
     {
@@ -14834,6 +15192,13 @@
      "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
      "ethnic_status": "Lithuanian national parish",
      "diocese": "None"
+    },
+    {
+     "axis": "lukas-2009",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
+     "rights": "in-copyright; cite + fair-use reproduction with attribution"
     }
    ],
    "years": {
@@ -14882,7 +15247,8 @@
    "congregation_class": "roman_catholic",
    "axes_count": 3,
    "record_depth": "multi-source",
-   "diocese": "Archdiocese of Baltimore"
+   "diocese": "Archdiocese of Baltimore",
+   "description": "Former German parish transferred to Lithuanian community in 1917, documented with architectural history."
   },
   {
    "slug": "st-john-the-baptist-baltimore-md",
@@ -14964,7 +15330,7 @@
   },
   {
    "slug": "st-casimir-st-pete-beach-fl",
-   "caveat": "Marked as closed by web survey and a mis-attributed 2017 year derived from TrueLithuania yearsMentioned; contradicted by firsthand observation (open, spring 2026). Closed year removed pending verification.",
+   "caveat": "Closed June 2018 when Rev. Bernardas Talaišis returned to Lithuania. Diocese of St. Petersburg clergy changes page (2018-05-21) confirms cessation of regular liturgies.",
    "names": {
     "lt": "Šv. Kazimiero",
     "en": "St. Casimir Mission",
@@ -14990,8 +15356,10 @@
      "kind": "web-candidate",
      "idx": 136,
      "confidence": "medium",
-     "currentStatus": "open — active as of spring 2026 (firsthand observation)",
-     "ownership": "diocese_rc"
+     "currentStatus": "closed June 2018; Rev. Bernardas Talaišis returned to Lithuania; regular liturgies ceased",
+     "closureYear": 2018,
+     "ownership": "diocese_rc",
+     "sourceUrl": "https://www.dosp.org/clergy-changes-may-21-2018/"
     },
     {
      "axis": "truelithuania",
@@ -15013,7 +15381,14 @@
       "source": "draugas-registry-1909-2007"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "2018",
+      "source": "diocese-of-st-petersburg",
+      "sourceUrl": "https://www.dosp.org/clergy-changes-may-21-2018/",
+      "detail": "Regular liturgies ceased June 2018 when Rev. Bernardas Talaišis returned to Lithuania after 14 years of ministry"
+     }
+    ]
    },
    "conflicts": [],
    "related_sites": [],
@@ -15055,6 +15430,15 @@
      "first_mention": "",
      "last_mention": "",
      "total_mentions": 0
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "closed",
+     "confidence": "reported",
+     "sourceUrl": "http://www.lithuanian.net/memory/casimir/casimir.htm",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -15106,6 +15490,15 @@
      "first_mention": "",
      "last_mention": "",
      "total_mentions": 0
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "closed",
+     "confidence": "verified",
+     "sourceUrl": "https://global.truelithuania.com/du-bois-pennsylvania-2543/",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -15115,7 +15508,12 @@
       "source": "draugas-registry-1909-2007"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "2018",
+      "source": "web-historical"
+     }
+    ]
    },
    "conflicts": [],
    "related_sites": [],
@@ -15157,6 +15555,15 @@
      "first_mention": "",
      "last_mention": "",
      "total_mentions": 0
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "closed",
+     "confidence": "verified",
+     "sourceUrl": "https://global.truelithuania.com/easton-pennsylvania-2688/",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -15166,7 +15573,12 @@
       "source": "draugas-registry-1909-2007"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "2008",
+      "source": "web-historical"
+     }
+    ]
    },
    "conflicts": [],
    "related_sites": [],
@@ -15732,6 +16144,15 @@
      "confidence": "high",
      "currentStatus": "standing",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "open",
+     "confidence": "verified",
+     "sourceUrl": "http://olskearny.org/",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
@@ -16159,7 +16580,13 @@
    ],
    "years": {
     "founded": [],
-    "closed": []
+    "closed": [
+     {
+      "value": "2012",
+      "source": "web-historical",
+      "detail": "Merged with St. Mary, Custer in 2012 to form Saint Mary – Saint Jerome Parish"
+     }
+    ]
    },
    "conflicts": [],
    "related_sites": [],

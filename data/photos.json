@@ -1,0 +1,77 @@
+{
+  "_comment": "Parish facade/exterior photos. Any parish slug can have an entry here. Photos display on /parishes/[slug] profile pages. Attribution is mandatory.",
+  "parishes": {
+    "svc-mergeles-marijos-gimimo-chicago-il": {
+      "src": "/images/parishes/chicago-nativity-bvm.jpg",
+      "alt": "Exterior of Nativity of the Blessed Virgin Mary Lithuanian church in Chicago.",
+      "attribution": "CIEE article; architectural archive material credited to the Mulokas family personal archive.",
+      "license": "External source; reuse permission not confirmed."
+    },
+    "sv-kazimiero-cleveland-oh": {
+      "src": "/images/parishes/cleveland-st-casimir.jpg",
+      "alt": "Exterior of St. Casimir Parish church in Cleveland.",
+      "attribution": "Saint Casimir Parish website.",
+      "license": "Parish website source; reuse permission not confirmed."
+    },
+    "sv-andriejaus-philadelphia-pa": {
+      "src": "/images/parishes/philadelphia-st-andrew.jpg",
+      "alt": "Exterior parish-grounds photo showing work on the Lithuanian wayside cross at St. Andrew Lithuanian Parish.",
+      "attribution": "Saint Andrew Lithuanian Parish website, Lithuanian Wayside Cross gallery.",
+      "license": "Parish website source; reuse permission not confirmed."
+    },
+    "sv-kryziaus-dayton-oh": {
+      "src": "/images/parishes/dayton-holy-cross.jpg",
+      "alt": "Exterior of Holy Cross Lithuanian church in Dayton.",
+      "attribution": "Global True Lithuania / Augustinas Žemaitis.",
+      "license": "External source; reuse permission not confirmed."
+    },
+    "nekaltojo-prasidejimo-east-st-louis-il": {
+      "src": "/images/parishes/east-st-louis-immaculate-conception.jpg",
+      "alt": "Exterior of Immaculate Conception Chapel in East St. Louis.",
+      "attribution": "Diocese of Belleville parish directory.",
+      "license": "Diocesan website source; reuse permission not confirmed."
+    },
+    "sv-antano-cicero-il": {
+      "src": "/images/parishes/cicero-st-anthony.jpg",
+      "alt": "Exterior of St. Anthony Lithuanian church in Cicero.",
+      "attribution": "Global True Lithuania / Augustinas Žemaitis.",
+      "license": "External source; reuse permission not confirmed."
+    },
+    "sv-jurgio-bridgeport-ct": {
+      "src": "/images/parishes/bridgeport-st-george.jpg",
+      "alt": "Exterior of St. George Lithuanian church in Bridgeport, Connecticut.",
+      "attribution": "Global True Lithuania / Augustinas Žemaitis.",
+      "license": "External source; reuse permission not confirmed."
+    },
+    "svc-m-marijos-nekalto-prasidejimo-chicago-il": {
+      "src": "/images/parishes/brighton-park-immaculate-conception.jpg",
+      "alt": "Exterior of the Brighton Park Immaculate Conception Lithuanian church in Chicago.",
+      "attribution": "Global True Lithuania / Augustinas Žemaitis.",
+      "license": "External source; reuse permission not confirmed."
+    },
+    "sv-onos-luzerne-pa": {
+      "src": "/images/parishes/luzerne-st-ann-holy-family.jpg",
+      "alt": "Official Holy Family Church image representing the former St. Ann Lithuanian parish building in Luzerne.",
+      "attribution": "Diocese of Scranton Holy Family Luzerne directory.",
+      "license": "Diocesan website source; reuse permission not confirmed."
+    },
+    "sv-m-marijos-apsireiskimo-frackville-pa": {
+      "src": "/images/parishes/frackville-annunciation-bvm.jpg",
+      "alt": "Exterior of the Frackville Annunciation BVM Lithuanian church.",
+      "attribution": "Global True Lithuania / Augustinas Žemaitis.",
+      "license": "External source; reuse permission not confirmed."
+    },
+    "sv-jurgio-rochester-ny": {
+      "src": "/images/parishes/rochester-st-george-our-lady-of-lourdes.jpg",
+      "alt": "Our Lady of Lourdes Church in Rochester, current Mass location for the St. George Lithuanian community.",
+      "attribution": "Diocese of Rochester Pastoral Services directory.",
+      "license": "Diocesan website source; reuse permission not confirmed."
+    },
+    "pal-jurgio-matulaicio-misija-lemont-il": {
+      "src": "/images/parishes/lemont-matulaitis-mission.jpg",
+      "alt": "Blessed Jurgis Matulaitis Mission chapel interior at the Lithuanian World Center.",
+      "attribution": "Lithuanian World Center organization page.",
+      "license": "Lithuanian World Center website source; reuse permission not confirmed."
+    }
+  }
+}

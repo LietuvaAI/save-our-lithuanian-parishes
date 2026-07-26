@@ -36,6 +36,7 @@ const NAV: NavItem[] = [
   {
     label: "Views",
     children: [
+      { href: "/history", label: "The History" },
       { href: "/by-diocese", label: "By Diocese" },
       { href: "/under-threat", label: "Under Threat" },
       { href: "/sustainability-watch", label: "Sustainability Watch" },
@@ -153,6 +154,9 @@ export default function RootLayout({
               </Link>
               <Link href="/record" className="hover:text-foreground">
                 The Record
+              </Link>
+              <Link href="/history" className="hover:text-foreground">
+                The History
               </Link>
               <Link href="/by-diocese" className="hover:text-foreground">
                 By Diocese
