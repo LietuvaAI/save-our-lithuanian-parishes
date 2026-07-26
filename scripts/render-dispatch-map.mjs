@@ -72,11 +72,14 @@ const COLOR = {
   unresolved: "#151515", // --mark-ink; the guardrail color
 };
 const INK = "#151515", SEC = "#555", DIO = "#a49a87";
-const STATE_WORD = {
-  active_parish: "active Lithuanian parish", mass_continues: "Lithuanian Mass continues",
-  transferred: "ethnically transferred", unresolved: "unresolved",
-  closed: "closed", unverified: "record",
+// Labels are the site's own — lib/end-state.ts GROUP_LABEL, verbatim.
+const SITE_LABEL = {
+  active_parish: "Active Lithuanian parish", mass_continues: "Lithuanian Mass continues",
+  transferred: "Ethnically transferred", unresolved: "Unresolved",
+  closed: "Closed", unverified: "Not yet verified",
 };
+const GROUP_ORDER = ["active_parish", "mass_continues", "transferred", "unresolved", "closed", "unverified"];
+const STATE_WORD = Object.fromEntries(Object.entries(SITE_LABEL).map(([k, v]) => [k, k === "mass_continues" ? v : v.charAt(0).toLowerCase() + v.slice(1)]));
 
 // Mirrors lib/end-state.ts resolveEndState (loss sub-fates collapsed to closed).
 function endState({ identity, buildingFate, hasClosed, isStanding, endingMode }) {
@@ -347,13 +350,12 @@ const footerParts = [];
 {
   const ly = vy + vh + 1.9 * S;
   let lx = vx + 0.9 * S;
-  const items = [
-    ["unresolved", COLOR.unresolved, "solid"],
-    ["still standing", COLOR.active_parish, "open"],
-    ["closed", COLOR.closed, "solid"],
-    ["transferred", COLOR.transferred, "solid"],
-    ["registry record", COLOR.unverified, "solid"],
-  ];
+  const present = new Set(all.map((p) => p.state === "demolished" || p.state === "repurposed" ? "closed" : p.state));
+  const items = GROUP_ORDER.filter((g) => present.has(g)).map((g) => [
+    SITE_LABEL[g],
+    COLOR[g],
+    g === "active_parish" || g === "mass_continues" ? "open" : "solid",
+  ]);
   for (const [label, col, kind] of items) {
     footerParts.push(kind === "open"
       ? `<circle cx="${lx}" cy="${ly - 0.34 * S}" r="${0.44 * S}" fill="#fff" stroke="${col}" stroke-width="${0.2 * S}"/>`
