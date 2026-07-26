@@ -211,7 +211,7 @@ for (const p of parishes) {
 // entries also flow into parishes.json at build time; the rest are reachable
 // only through this index.
 const situationOverlay = (
-  situationJson as {
+  situationJson as unknown as {
     parishes: Record<string, ParishSituation & { registry_slug: string }>;
   }
 ).parishes;

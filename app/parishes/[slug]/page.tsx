@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import registry from "@/data/registry-unified.json";
 import alertsData from "@/data/alerts.json";
 import photosData from "@/data/photos.json";
+import contextPoints from "@/data/context-points.json";
 import {
   parishes,
   draugasCitationUrl,
@@ -20,6 +21,7 @@ import {
 } from "@/lib/parishes";
 import { resolveEndState, isLoss } from "@/lib/end-state";
 import { EndStatePill } from "@/components/EndStatePill";
+import ParishContextMap from "@/components/ParishContextMap";
 import {
   CLERGY_LABEL,
   FREQUENCY_LABEL,
@@ -115,6 +117,42 @@ export async function generateMetadata({
   };
 }
 
+
+/** The one-sentence story a profile opens with: curated situation text when
+ *  it exists, otherwise an honest sentence composed from the record. */
+function storyDek(
+  parish: (typeof parishes)[number],
+  situationText: string | null,
+  endState: ReturnType<typeof resolveEndState>,
+): { dek: string; rest: string | null } {
+  if (situationText) {
+    const i = situationText.indexOf(". ");
+    if (i > 40 && i < situationText.length - 2)
+      return { dek: situationText.slice(0, i + 1), rest: situationText.slice(i + 2) };
+    return { dek: situationText, rest: null };
+  }
+  const f = parish.yearFounded ? `Founded ${parish.yearFounded}. ` : "";
+  const c = parish.yearClosed ? ` in ${parish.yearClosed}` : "";
+  switch (endState) {
+    case "unresolved":
+      return { dek: `${f}The church stands and the parish's fate is canonically unresolved — the decision is not final.`, rest: null };
+    case "active_parish":
+      return { dek: `${f}It still stands as an active Lithuanian parish today.`, rest: null };
+    case "mass_continues":
+      return { dek: `${f}A Lithuanian Mass continues here, within a parish that is no longer Lithuanian-led.`, rest: null };
+    case "transferred":
+      return { dek: `${f}The church lives on, serving another community; its life as a Lithuanian parish has ended.`, rest: null };
+    case "demolished":
+      return { dek: `${f}The parish was closed${c}, and the church was demolished.`, rest: null };
+    case "repurposed":
+      return { dek: `${f}The parish was closed${c}, and the building was sold on.`, rest: null };
+    case "closed":
+      return { dek: `${f}The parish was closed${c}.`, rest: null };
+    default:
+      return { dek: `${f}Attested in the record; its fate has not yet been established.`, rest: null };
+  }
+}
+
 export default async function ParishPage({
   params,
 }: {
@@ -147,6 +185,8 @@ export default async function ParishPage({
     parish.endingMode,
   );
 
+  const { dek, rest } = storyDek(parish, situation?.situation ?? null, endState);
+
   const showWhatHappened =
     !isStanding ||
     parish.survivedReviewThenClosed ||
@@ -168,6 +208,13 @@ export default async function ParishPage({
         {parish.city}, {parish.state}
       </p>
 
+      <p className="mt-4 font-serif text-xl sm:text-2xl leading-snug max-w-2xl">
+        {dek}
+      </p>
+      {rest && (
+        <p className="mt-3 leading-relaxed max-w-2xl text-muted">{rest}</p>
+      )}
+
       <div className="mt-4 flex flex-wrap items-center gap-3">
         <EndStatePill value={endState} size="lg" />
         {(parishAlert || watchEntry) && (
@@ -187,217 +234,51 @@ export default async function ParishPage({
         )}
       </div>
 
-      {photo && (
-        <div className="mt-6 max-w-sm overflow-hidden rounded-lg border border-rule">
-          <Image
-            src={photo.src}
-            alt={photo.alt}
-            width={384}
-            height={256}
-            className="w-full h-auto object-cover"
-          />
-          <p className="px-3 py-1.5 text-xs text-muted">
-            {photo.attribution}
-            {photo.license && (
-              <span> · {photo.license}</span>
-            )}
-          </p>
-        </div>
-      )}
-
-      {situation && (
-        <p className="mt-6 text-lg leading-relaxed">{situation.situation}</p>
-      )}
-
-      {/* ══ What it was ══ */}
-      <section className="mt-10">
-        <h2 className="font-serif text-xl font-semibold">What it was</h2>
-        <dl className="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-4 text-sm">
-          <div>
-            <dt className="text-xs uppercase tracking-wide text-muted">Founded</dt>
-            <dd className="mt-0.5">{parish.yearFounded ?? "Not established"}</dd>
-          </div>
-          <div>
-            <dt className="text-xs uppercase tracking-wide text-muted">Type</dt>
-            <dd className="mt-0.5">{INSTITUTION_TYPE_LABEL[parish.institutionType]}</dd>
-          </div>
-          <div>
-            <dt className="text-xs uppercase tracking-wide text-muted">Ownership</dt>
-            <dd className="mt-0.5">{OWNERSHIP_LABEL[parish.ownership]}</dd>
-          </div>
-          {parish.comparator && (
-            <div className="col-span-full">
-              <dt className="text-xs uppercase tracking-wide text-muted">Scope</dt>
-              <dd className="mt-0.5">Canadian comparator — documented for contrast, outside the U.S. figures</dd>
-            </div>
-          )}
-        </dl>
-
-        {scholarlySources.length > 0 && (
-          <div className="mt-5">
-            <p className="text-sm text-muted leading-relaxed">
-              As the published record describes it — quoted descriptions are
-              the author&#8217;s own characterization.
-            </p>
-            <div className="mt-3 space-y-3">
-              {scholarlySources.map((s: any, i: number) => {
-                const isWolkovich = s.axis === "wolkovich";
-                const isLukas = s.axis === "lukas-2009";
-                const hasDetail =
-                  s.school || s.convent || s.cemetery ||
-                  (s.diocese && !/^(none|unknown|unspecified)$/i.test(s.diocese));
-                return (
-                  <div
-                    key={i}
-                    className="rounded-lg border border-rule px-4 py-3 text-sm"
-                  >
-                    <p className="font-medium">
-                      {isLukas ? (
-                        <a
-                          href="https://archyvas.ziburioltmokykla.org"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="underline hover:text-accent"
-                        >
-                          Lukas,{" "}
-                          <em>Lietuvių Kultūrinis Paveldas Amerikoje</em> (2009)
-                        </a>
-                      ) : isWolkovich ? (
-                        <a
-                          href="https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="underline hover:text-accent"
-                        >
-                          Wolkovich-Valkavičius,{" "}
-                          <em>Lithuanian Religious Life in America</em>, Vol.&nbsp;3
-                          (1998)
-                        </a>
-                      ) : (
-                        <a
-                          href="https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="underline hover:text-accent"
-                        >
-                          Michelsonas,{" "}
-                          <em>Lietuvių Išeivija Amerikoje</em> (1868–1961),
-                          Keleivis, 1961
-                        </a>
-                      )}
-                      {s.pages && (
-                        <span className="text-muted font-normal">
-                          , {s.pages}
-                        </span>
-                      )}
-                    </p>
-                    {isLukas && s.description && (
-                      <p className="mt-2 leading-relaxed text-muted">
-                        {s.description}
-                      </p>
-                    )}
-                    {isLukas && s.architect && (
-                      <p className="mt-1 text-muted">Architect: {s.architect}</p>
-                    )}
-                    {s.ethnic_status &&
-                      !/^(none|unknown|unspecified)$/i.test(s.ethnic_status) && (
-                        <p className="mt-2 italic leading-relaxed text-muted">
-                          &ldquo;{s.ethnic_status}&rdquo;
-                        </p>
-                      )}
-                    {hasDetail && (
-                      <div className="mt-2 space-y-0.5 text-muted">
-                        {s.diocese &&
-                          !/^(none|unknown|unspecified)$/i.test(s.diocese) && (
-                            <p>Diocese: {s.diocese}</p>
-                          )}
-                        {s.school && <p>School: {s.school}</p>}
-                        {s.convent && <p>Convent: {s.convent}</p>}
-                        {s.cemetery && <p>Cemetery: {s.cemetery}</p>}
-                      </div>
-                    )}
-                    {s.lens && (
-                      <p className="mt-2 text-xs italic text-muted">
-                        Note: {s.lens}
-                      </p>
-                    )}
-                    {isLukas && (
-                      <p className="mt-2 text-xs text-muted">
-                        <a
-                          href="https://archyvas.ziburioltmokykla.org"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="underline hover:text-accent"
-                        >
-                          Available in the Žiburio archive →
-                        </a>
-                      </p>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-            {parish.registrySlug && (
-              <p className="mt-3 text-sm text-muted">
-                <Link
-                  href={`/registry/${parish.registrySlug}`}
-                  className="underline hover:text-foreground"
-                >
-                  See the full research record →
-                </Link>
-              </p>
-            )}
-          </div>
-        )}
-      </section>
-
-      {/* ══ What happened ══ */}
-      {showWhatHappened && (
-        <section className="mt-10">
-          <h2 className="font-serif text-xl font-semibold">What happened</h2>
-          <dl className="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-4 text-sm">
-            {isLoss(endState) && (
-              <div>
-                <dt className="text-xs uppercase tracking-wide text-muted">Closed</dt>
-                <dd className="mt-0.5">{parish.yearClosed ?? "Not established"}</dd>
+      {/* ══ The church and its place — photo beside the diocese zoom ══ */}
+      {(() => {
+        const hasMap = (
+          contextPoints.points as {
+            slug: string;
+            diocese: string | null;
+            congregationClass: string | null;
+          }[]
+        ).some(
+          (p) =>
+            p.slug === parish.slug &&
+            p.diocese &&
+            p.congregationClass === "roman_catholic",
+        );
+        if (!photo && !hasMap) return null;
+        return (
+          <div
+            className={`mt-6 grid gap-5 items-start ${photo && hasMap ? "sm:grid-cols-2" : ""}`}
+          >
+            {photo && (
+              <div className="overflow-hidden rounded-lg border border-rule">
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  width={640}
+                  height={427}
+                  className="w-full h-auto object-cover"
+                />
+                <p className="px-3 py-1.5 text-xs text-muted">
+                  {photo.attribution}
+                  {photo.license && <span> · {photo.license}</span>}
+                </p>
               </div>
             )}
-            {parish.endingMode !== "standing" && (
-              <div>
-                <dt className="text-xs uppercase tracking-wide text-muted">Decision</dt>
-                <dd className="mt-0.5">{ENDING_MODE_LABEL[parish.endingMode]}</dd>
+            {hasMap && (
+              <div className={photo ? "" : "max-w-xl"}>
+                <p className="mb-1.5 text-xs uppercase tracking-wide text-muted">
+                  Among its neighbors — no parish stands alone
+                </p>
+                <ParishContextMap slug={parish.slug} />
               </div>
             )}
-            {parish.buildingFate && parish.buildingFate !== "unknown" && parish.buildingFate !== "standing" && (
-              <div>
-                <dt className="text-xs uppercase tracking-wide text-muted">Building</dt>
-                <dd className="mt-0.5">{BUILDING_FATE_LABEL[parish.buildingFate as BuildingFate]}</dd>
-              </div>
-            )}
-          </dl>
-
-          {parish.survivedReviewThenClosed && (
-            <p
-              className="mt-5 rounded-lg border border-rule p-4 leading-relaxed"
-              style={{ borderLeft: "4px solid var(--es-closed)" }}
-            >
-              This parish <strong>survived an earlier diocesan review</strong> —
-              and a later one still reached it. It is one of the seven parishes in
-              the record showing that surviving one restructuring buys time, not
-              safety.
-            </p>
-          )}
-
-          {parish.notes && (
-            <div className="mt-5">
-              <p className="text-xs uppercase tracking-wide text-muted">
-                From the record
-              </p>
-              <p className="mt-1 leading-relaxed">{parish.notes}</p>
-            </div>
-          )}
-        </section>
-      )}
+          </div>
+        );
+      })()}
 
       {/* ══ Where it stands today ══ */}
       <section className="mt-10">
@@ -628,6 +509,196 @@ export default async function ParishPage({
           </div>
         )}
       </section>
+
+      {/* ══ What it was ══ */}
+      <section className="mt-10">
+        <h2 className="font-serif text-xl font-semibold">What it was</h2>
+        <dl className="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-4 text-sm">
+          <div>
+            <dt className="text-xs uppercase tracking-wide text-muted">Founded</dt>
+            <dd className="mt-0.5">{parish.yearFounded ?? "Not established"}</dd>
+          </div>
+          <div>
+            <dt className="text-xs uppercase tracking-wide text-muted">Type</dt>
+            <dd className="mt-0.5">{INSTITUTION_TYPE_LABEL[parish.institutionType]}</dd>
+          </div>
+          <div>
+            <dt className="text-xs uppercase tracking-wide text-muted">Ownership</dt>
+            <dd className="mt-0.5">{OWNERSHIP_LABEL[parish.ownership]}</dd>
+          </div>
+          {parish.comparator && (
+            <div className="col-span-full">
+              <dt className="text-xs uppercase tracking-wide text-muted">Scope</dt>
+              <dd className="mt-0.5">Canadian comparator — documented for contrast, outside the U.S. figures</dd>
+            </div>
+          )}
+        </dl>
+
+        {scholarlySources.length > 0 && (
+          <div className="mt-5">
+            <p className="text-sm text-muted leading-relaxed">
+              As the published record describes it — quoted descriptions are
+              the author&#8217;s own characterization.
+            </p>
+            <div className="mt-3 space-y-3">
+              {scholarlySources.map((s: any, i: number) => {
+                const isWolkovich = s.axis === "wolkovich";
+                const isLukas = s.axis === "lukas-2009";
+                const hasDetail =
+                  s.school || s.convent || s.cemetery ||
+                  (s.diocese && !/^(none|unknown|unspecified)$/i.test(s.diocese));
+                return (
+                  <div
+                    key={i}
+                    className="rounded-lg border border-rule px-4 py-3 text-sm"
+                  >
+                    <p className="font-medium">
+                      {isLukas ? (
+                        <a
+                          href="https://archyvas.ziburioltmokykla.org"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline hover:text-accent"
+                        >
+                          Lukas,{" "}
+                          <em>Lietuvių Kultūrinis Paveldas Amerikoje</em> (2009)
+                        </a>
+                      ) : isWolkovich ? (
+                        <a
+                          href="https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline hover:text-accent"
+                        >
+                          Wolkovich-Valkavičius,{" "}
+                          <em>Lithuanian Religious Life in America</em>, Vol.&nbsp;3
+                          (1998)
+                        </a>
+                      ) : (
+                        <a
+                          href="https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline hover:text-accent"
+                        >
+                          Michelsonas,{" "}
+                          <em>Lietuvių Išeivija Amerikoje</em> (1868–1961),
+                          Keleivis, 1961
+                        </a>
+                      )}
+                      {s.pages && (
+                        <span className="text-muted font-normal">
+                          , {s.pages}
+                        </span>
+                      )}
+                    </p>
+                    {isLukas && s.description && (
+                      <p className="mt-2 leading-relaxed text-muted">
+                        {s.description}
+                      </p>
+                    )}
+                    {isLukas && s.architect && (
+                      <p className="mt-1 text-muted">Architect: {s.architect}</p>
+                    )}
+                    {s.ethnic_status &&
+                      !/^(none|unknown|unspecified)$/i.test(s.ethnic_status) && (
+                        <p className="mt-2 italic leading-relaxed text-muted">
+                          &ldquo;{s.ethnic_status}&rdquo;
+                        </p>
+                      )}
+                    {hasDetail && (
+                      <div className="mt-2 space-y-0.5 text-muted">
+                        {s.diocese &&
+                          !/^(none|unknown|unspecified)$/i.test(s.diocese) && (
+                            <p>Diocese: {s.diocese}</p>
+                          )}
+                        {s.school && <p>School: {s.school}</p>}
+                        {s.convent && <p>Convent: {s.convent}</p>}
+                        {s.cemetery && <p>Cemetery: {s.cemetery}</p>}
+                      </div>
+                    )}
+                    {s.lens && (
+                      <p className="mt-2 text-xs italic text-muted">
+                        Note: {s.lens}
+                      </p>
+                    )}
+                    {isLukas && (
+                      <p className="mt-2 text-xs text-muted">
+                        <a
+                          href="https://archyvas.ziburioltmokykla.org"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline hover:text-accent"
+                        >
+                          Available in the Žiburio archive →
+                        </a>
+                      </p>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+            {parish.registrySlug && (
+              <p className="mt-3 text-sm text-muted">
+                <Link
+                  href={`/registry/${parish.registrySlug}`}
+                  className="underline hover:text-foreground"
+                >
+                  See the full research record →
+                </Link>
+              </p>
+            )}
+          </div>
+        )}
+      </section>
+
+      {/* ══ What happened ══ */}
+      {showWhatHappened && (
+        <section className="mt-10">
+          <h2 className="font-serif text-xl font-semibold">What happened</h2>
+          <dl className="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-4 text-sm">
+            {isLoss(endState) && (
+              <div>
+                <dt className="text-xs uppercase tracking-wide text-muted">Closed</dt>
+                <dd className="mt-0.5">{parish.yearClosed ?? "Not established"}</dd>
+              </div>
+            )}
+            {parish.endingMode !== "standing" && (
+              <div>
+                <dt className="text-xs uppercase tracking-wide text-muted">Decision</dt>
+                <dd className="mt-0.5">{ENDING_MODE_LABEL[parish.endingMode]}</dd>
+              </div>
+            )}
+            {parish.buildingFate && parish.buildingFate !== "unknown" && parish.buildingFate !== "standing" && (
+              <div>
+                <dt className="text-xs uppercase tracking-wide text-muted">Building</dt>
+                <dd className="mt-0.5">{BUILDING_FATE_LABEL[parish.buildingFate as BuildingFate]}</dd>
+              </div>
+            )}
+          </dl>
+
+          {parish.survivedReviewThenClosed && (
+            <p
+              className="mt-5 rounded-lg border border-rule p-4 leading-relaxed"
+              style={{ borderLeft: "4px solid var(--es-closed)" }}
+            >
+              This parish <strong>survived an earlier diocesan review</strong> —
+              and a later one still reached it. It is one of the seven parishes in
+              the record showing that surviving one restructuring buys time, not
+              safety.
+            </p>
+          )}
+
+          {parish.notes && (
+            <div className="mt-5">
+              <p className="text-xs uppercase tracking-wide text-muted">
+                From the record
+              </p>
+              <p className="mt-1 leading-relaxed">{parish.notes}</p>
+            </div>
+          )}
+        </section>
+      )}
 
       <section className="mt-10">
         <h2 className="font-serif text-xl font-semibold">

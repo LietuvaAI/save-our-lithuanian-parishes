@@ -12,6 +12,10 @@ Public advocacy site for SaveOurLithuanianParishes.org. This is a **product repo
 - Named files in `git add` — never `git add .`.
 - No `.env*` files. The site is fully static; if a backend (submissions) is added later, that decision lands in a PR + culturenet-brain `DECISIONS.md` first.
 
+## Launch legitimacy doctrine (Vilija, 2026-07-26)
+
+**Solid first, stories forever.** Before any press moment: every record verified/adjudicated or explicitly labeled "still being researched" — nothing in between. Completion meter: `scripts/audit-classification.mjs` (CONTRADICTION and UNVERIFIED must be 0). Classification canon: `docs/CLASSIFICATION.md` — surfaces that disagree with it are wrong. A hosted Lithuanian Mass never counts as a standing Lithuanian parish in headline figures. Full doctrine + the adjudication campaign: `culturenet-brain/docs/strategy/solp-launch-legitimacy-2026-07-26.md`.
+
 ## Data discipline (the credibility of the whole project)
 
 - `data/parishes.csv` is a **snapshot** of the canonical dataset in `culturenet-brain/docs/research/draugas/parishes.csv`. Never hand-edit it here — re-snapshot by PR and update `data/PROVENANCE.md`.

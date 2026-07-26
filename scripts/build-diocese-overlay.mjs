@@ -52,11 +52,13 @@ for (const [name, geoms] of [...byDiocese.entries()].sort((a, b) =>
 )) {
   const merged = merge(topo, geoms);
   const [cx, cy] = path.centroid(merged);
+  const [[bx0, by0], [bx1, by1]] = path.bounds(merged);
   dioceses.push({
     name,
     path: path(merged),
     cx: +cx.toFixed(1),
     cy: +cy.toFixed(1),
+    bbox: [+bx0.toFixed(1), +by0.toFixed(1), +bx1.toFixed(1), +by1.toFixed(1)],
     counties: geoms.length,
   });
 }

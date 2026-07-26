@@ -143,6 +143,14 @@ export function resolveEndState(
   if (endingMode === "undecided") return "unresolved";
   if (isStanding && identity === "mass_continues") return "mass_continues";
   if (isStanding && identity === "ethnically_transferred") return "transferred";
+  // A parish whose lifecycle layer is frozen "standing" by the locked
+  // snapshot but whose identity research has established the end shows the
+  // truth (Hartford Holy Trinity: Masses ended 2026-05-30, after the lock).
+  if (isStanding && identity === "lost") return "closed";
+  // "Standing" alone is a lifecycle fact, not evidence of Lithuanian life:
+  // without a verified identity the honest state is unverified, never
+  // "Active Lithuanian parish" (2026-07-26 audit rule).
+  if (isStanding && !identity) return "unverified";
   if (isStanding) return "active_parish";
   if (identity === "ethnically_transferred") return "transferred";
   if (buildingFate === "demolished") return "demolished";
