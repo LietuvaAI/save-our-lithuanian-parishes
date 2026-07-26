@@ -78,7 +78,8 @@ export default function DioceseGrid({
       {dioceses.map((d) => (
         <section
           key={d.name}
-          className="rounded-lg border border-rule overflow-hidden"
+          id={`diocese-${d.shortName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+          className="rounded-lg border border-rule overflow-hidden scroll-mt-4"
         >
           {/* Header */}
           <div className="px-4 py-3 border-b border-rule bg-foreground/[0.02]">

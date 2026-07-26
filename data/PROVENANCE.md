@@ -71,3 +71,7 @@ Current-status research for the ten longest-outstanding registry parishes (Rockf
 Notable: St. Ann of the Dunes (Beverly Shores) verified alive — monthly Lithuanian Mass on the parish's current schedule. St. Alphonsus Baltimore's dedicated Lithuanian Mass reported canceled 2017 (identity downgraded on `reported` confidence — caveat on the record). Open reconciliation: Holy Cross Westville vs. the LNCC Westville record may be one congregation (closure years conflict 1960–61 vs ~1969); both records carry caveats until resolved upstream. Divine Providence case record: Fr. Tomas Miliauskas departed May 2026, no successor named as of 2026-07-23 (laikmetis.lt); official directories noted as stale.
 
 Locked figures unaffected; build validation passed before and after application.
+
+## 2026-07-25 — Diocese boundary layer
+
+`data/diocese-counties.csv` is a slimmed snapshot (GEOID, county, diocese, province columns only) of `counties_by_diocese.csv` from github.com/kburchfiel/us_diocese_mapper, released into the public domain per that repo's license.md (captured 2026-07-25; counties split between dioceses carry the source's primary assignment). `scripts/build-diocese-overlay.mjs` merges US Census county geometry (us-atlas, public domain, pre-projected geoAlbersUsa 975×610) per diocese into `data/diocese-overlay.json` — one boundary path per diocese plus an interior-borders mesh. Presentation-layer only; no figures derive from it. All 44 registry dioceses matched the crosswalk by name with zero aliases.
