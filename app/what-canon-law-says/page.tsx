@@ -98,8 +98,9 @@ export default function CanonLawPage() {
         <p>
           In 2012, the Vatican&rsquo;s Congregation for the Clergy overturned
           the Diocese of Cleveland&rsquo;s closure decrees: of fourteen
-          parishes that appealed, twelve were ordered reopened — the first
-          time Rome reversed closures at that scale — and the bishop complied
+          parishes that appealed, twelve were ordered reopened — described at
+          the time as the Congregation&rsquo;s first such mass reversal in
+          about two decades — and the bishop complied
           (
           <Src href="https://www.npr.org/2012/03/07/148170076/vatican-orders-cleveland-parishes-reopened">
             NPR

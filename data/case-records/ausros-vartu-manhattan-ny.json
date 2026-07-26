@@ -1,9 +1,9 @@
 {
   "slug": "ausros-vartu-manhattan-ny",
-  "asOf": "2026-07-09",
+  "asOf": "2026-07-25",
   "buildingStatus": "demolished",
   "currentUse": "570 Broome, a 25-story, 54-unit luxury condominium tower (completed 2019), occupies the church site.",
-  "summary": "Our Lady of Vilnius Church at 568-570 Broome Street was demolished in 2015 (May 2015 per Wikipedia; the parish community's own memorial site also states 2015), four years after the NY Court of Appeals ruled for the archdiocese. The archdiocese sold the property to Extell Development for $13 million; Extell flipped it to SoHo Broome Condos LLC for $18.4 million in early 2014, and a residential tower permit was filed that August. Today the site holds 570 Broome, a 25-story, 54-unit condominium designed by Tahir Demircioglu (Builtd) for Agime Group, completed in 2019; the building's marketing makes no mention of the church. The parish tabernacle went to the Church of the Blessed Kateri Tekakwitha and sacramental records to St. Anthony of Padua on Sullivan Street. The parishioner-run memorial blog remains active as of May 2026, now advocating for other endangered churches such as St. Mary's in Yonkers.",
+  "summary": "Our Lady of Vilnius Church at 568-570 Broome Street was demolished in April 2015 — Draugas reported the demolition under way with a farewell gathering on April 26, 2015 (105 candles for the building's 105 years), and stated in 2016 that the building was 'galutinai nugriautas 2015 m. balandį' — four years after the NY Court of Appeals ruled for the archdiocese. The archdiocese sold the property to Extell Development for $13 million; Extell flipped it to SoHo Broome Condos LLC for $18.4 million in early 2014, and a residential tower permit was filed that August. Today the site holds 570 Broome, a 25-story, 54-unit condominium designed by Tahir Demircioglu (Builtd) for Agime Group, completed in 2019; the building's marketing makes no mention of the church. The parish tabernacle went to the Church of the Blessed Kateri Tekakwitha and sacramental records to St. Anthony of Padua on Sullivan Street. The parishioner-run memorial blog remains active as of May 2026, now advocating for other endangered churches such as St. Mary's in Yonkers.",
   "developments": [
     {
       "date": "2026-05-28",
@@ -23,12 +23,12 @@
       ]
     },
     {
-      "date": "2015-05",
-      "headline": "Church demolished",
-      "detail": "Building razed; Wikipedia states May 2015, and the parishioners' memorial site states demolished 2015. Tabernacle had gone to Blessed Kateri Tekakwitha church, records to St. Anthony of Padua.",
+      "date": "2015-04",
+      "headline": "Church demolished — April 2015, resolved by the Draugas record",
+      "detail": "Draugas of April 30, 2015 (pp. 1, 4, Gitana Merkelienė, 'Griaunama Aušros Vartų bažnyčia') reported the demolition under way — crosses already gone from the towers, the building 'jau beveik sulygintas su žeme' — with a farewell gathering on April 26, 2015: 105 candles for the building's 105 years. A Draugas follow-up of August 25, 2016 (p. 5) states the building was 'galutinai nugriautas 2015 m. balandį.' A June 2020 Draugas item describing demolition 'in progress' is a recycled near-verbatim reprint of the April 2015 farewell report and is not evidence of a 2020 demolition. Tabernacle had gone to Blessed Kateri Tekakwitha church, records to St. Anthony of Padua.",
       "sources": [
-        { "title": "Our Lady of Vilnius Church", "publisher": "Wikipedia", "date": "n.d.", "url": "https://en.wikipedia.org/wiki/Our_Lady_of_Vilnius_Church" },
-        { "title": "Our Lady of Vilnius, NYC (memorial blog)", "publisher": "ausrosvartunyc.blogspot.com", "date": "n.d.", "url": "http://ausrosvartunyc.blogspot.com/" }
+        { "title": "Griaunama Aušros Vartų bažnyčia — Draugas, 2015-04-30, pp. 1, 4", "publisher": "Draugas", "date": "2015-04-30", "url": "https://www.draugas.org/archyvas-pdf-2015/" },
+        { "title": "Follow-up: 'pastatas galutinai nugriautas 2015 m. balandį' — Draugas, 2016-08-25, p. 5", "publisher": "Draugas", "date": "2016-08-25", "url": "https://www.draugas.org/archyvas-pdf-2016/" }
       ]
     },
     {
@@ -48,6 +48,6 @@
     { "title": "570 Broome official site", "publisher": "570broomenyc.com", "date": "n.d.", "url": "https://www.570broomenyc.com/" }
   ],
   "confidence": "verified",
-  "conflictsWithArchiveRecord": "Archive's '2020' demolition option is contradicted: Wikipedia and the parish memorial community both state 2015, and a March 2017 New York YIMBY headline described the site as already cleared. Archive's 'sold for tens of millions' overstates the archdiocese's sale ($13M to Extell); the $18.4M flip was Extell's, not the church's.",
-  "gaps": "Exact demolition day unconfirmed (month 'May 2015' rests on Wikipedia only; no contemporaneous NYC-press demolition-day story opened). Fate of statues and Tadas Sviderskis icon beyond tabernacle/records unknown — archdiocese said items were stored for reuse. No documented parishioner reunions or on-site memorial found; Village Preservation and Tribeca Citizen retrospectives not located; City Lore page returned 403."
+  "conflictsWithArchiveRecord": "The 2015-vs-2020 demolition conflict is RESOLVED: the June 2020 Draugas 'demolition in progress' item is a recycled near-verbatim reprint of the April 2015 farewell report (same 105 candles, same 'praėjusį sekmadienį' framing). Demolition = April 2015, per Draugas 2015-04-30 pp. 1, 4 and 2016-08-25 p. 5. Archive's 'sold for tens of millions' overstates the archdiocese's sale ($13M to Extell); the $18.4M flip was Extell's, not the church's.",
+  "gaps": "Exact demolition day within April 2015 not pinned (demolition was under way by the April 26 farewell). Fate of statues and Tadas Sviderskis icon beyond tabernacle/records unknown — archdiocese said items were stored for reuse. Village Preservation and Tribeca Citizen retrospectives not located; City Lore page returned 403."
 }

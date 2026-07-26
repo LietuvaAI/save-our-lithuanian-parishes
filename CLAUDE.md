@@ -23,7 +23,7 @@ Public advocacy site for SaveOurLithuanianParishes.org. This is a **product repo
 
 1. **Never advocate leaving Rome.** The National Catholic parishes are historical witness, not a recommendation.
 2. **Maspeth is unresolved** — never render or phrase as a completed closure.
-3. **Aušros Vartų sale price** stays soft ("tens of millions"), no hard number; demolition year unresolved.
+3. **Aušros Vartų sale price** stays soft ("tens of millions" overstates the archdiocese's $13M sale — say "sold to a developer"; the $18.4M flip was Extell's), no hard number in advocacy copy. Demolition year is RESOLVED: **April 2015** (Draugas 2015-04-30 pp. 1, 4; 2016-08-25 p. 5 — the June 2020 "demolition" item is a recycled 2015 reprint).
 4. The PA **"31/29"** figure is an attributed Draugas statistic — never drawn as dataset marks.
 5. **No invented numbers.** Blank fields stay blank.
 6. **83 case-filed so far / 58 in depth** — 83 is the first dataset (Draugas 2008–2026), not a ceiling. Copy must never frame it as the total universe; use "case-filed so far" or dynamic counts.
