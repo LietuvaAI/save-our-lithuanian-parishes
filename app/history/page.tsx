@@ -4,7 +4,10 @@ import TimelineChart, {
   type TimelineRow,
   type UndatedRow,
 } from "@/components/TimelineChart";
-import EndStateFlow, { type FlowCounts } from "@/components/EndStateFlow";
+import EndStateFlow, {
+  type FlowCounts,
+  type FlowMember,
+} from "@/components/EndStateFlow";
 import { scopedParishes } from "@/lib/registry-scope";
 import {
   GROUP_ORDER,
@@ -45,19 +48,50 @@ function buildData() {
     libParishes.map((p) => [p.slug, p.buildingFate as BuildingFate | null]),
   );
 
+  const members: Record<string, FlowMember[]> = {};
+  const addMember = (key: string, p: (typeof all)[number]) => {
+    (members[key] ??= []).push({
+      name: p.name,
+      city: p.city,
+      state: p.state,
+      founded: p.founded,
+      closed: p.closed,
+      href: p.profileHref,
+    });
+  };
+
   for (const p of all) {
     counts[toGroup(p.endState)]++;
 
-    // The closed family's building fates — the flow chart's third stage.
-    if (p.endState === "demolished") closedFates.demolished++;
-    else if (p.endState === "repurposed")
-      p.buildingFate === "repurposed_secular"
-        ? closedFates.secular++
-        : closedFates.religious++;
-    else if (p.endState === "closed") {
-      if (p.buildingFate === "standing") closedFates.standing++;
-      else if (p.buildingFate === "derelict") closedFates.derelict++;
-      else closedFates.unrecorded++;
+    // The closed family's building fates — the flow chart's third stage —
+    // and the member lists behind each clickable flow.
+    if (p.endState === "demolished") {
+      closedFates.demolished++;
+      addMember("fate:demolished", p);
+      addMember("g:closed", p);
+    } else if (p.endState === "repurposed") {
+      if (p.buildingFate === "repurposed_secular") {
+        closedFates.secular++;
+        addMember("fate:secular", p);
+      } else {
+        closedFates.religious++;
+        addMember("fate:religious", p);
+      }
+      addMember("g:closed", p);
+    } else if (p.endState === "closed") {
+      if (p.buildingFate === "standing") {
+        closedFates.standing++;
+        addMember("fate:standing", p);
+      } else if (p.buildingFate === "derelict") {
+        closedFates.derelict++;
+        addMember("fate:derelict", p);
+      } else {
+        closedFates.unrecorded++;
+        addMember("fate:unrecorded", p);
+      }
+      addMember("g:closed", p);
+    } else {
+      addMember(`g:${toGroup(p.endState)}`, p);
     }
 
     const fate = fateBySlug.get(p.slug);
@@ -94,11 +128,19 @@ function buildData() {
   const standing = all.filter((p) => isAlive(p.endState) && !p.closed).length;
   const lost = all.filter((p) => isLoss(p.endState)).length;
 
+  // Member lists sorted for the click-through panels
+  for (const key of Object.keys(members)) {
+    members[key].sort(
+      (a, b) => a.name.localeCompare(b.name) || a.city.localeCompare(b.city),
+    );
+  }
+
   return {
     dated,
     undated,
     counts,
     closedFates,
+    members,
     standing,
     lost,
     total: all.length,
@@ -110,8 +152,16 @@ function buildData() {
 // ---------------------------------------------------------------------------
 
 export default function HistoryPage() {
-  const { dated, undated, counts, closedFates, standing, lost, total } =
-    buildData();
+  const {
+    dated,
+    undated,
+    counts,
+    closedFates,
+    members,
+    standing,
+    lost,
+    total,
+  } = buildData();
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
@@ -136,9 +186,30 @@ export default function HistoryPage() {
         </p>
       </div>
 
+      {/* ── The flow: the whole record at a glance, every category ── */}
+      <section className="mt-10">
+        <h2 className="font-serif text-2xl font-semibold">
+          Where every parish ended up
+        </h2>
+        <p className="mt-1 text-muted leading-relaxed max-w-3xl mb-6">
+          All {total} documented parishes flow to where they stand today
+          &mdash; and the closed flow on to what became of their buildings.
+          Click any flow to see the parishes inside it.
+        </p>
+        <EndStateFlow counts={{ groups: counts, closedFates, members }} />
+        <p className="mt-5 text-sm leading-relaxed max-w-3xl">
+          Of the {total} parishes documented so far, {lost} are closed.{" "}
+          {closedFates.demolished} of their churches have been demolished;{" "}
+          {closedFates.religious + closedFates.secular} were sold on &mdash;{" "}
+          {closedFates.religious} to other congregations,{" "}
+          {closedFates.secular} to secular use. {standing} parishes still
+          stand as Lithuanian parishes today.
+        </p>
+      </section>
+
       {/* ── The First Parish ── */}
       <aside
-        className="mt-8 max-w-3xl border-l-4 pl-5 py-3 space-y-2 text-sm leading-relaxed"
+        className="mt-12 max-w-3xl border-l-4 pl-5 py-3 space-y-2 text-sm leading-relaxed"
         style={{ borderColor: "var(--mark-ink)" }}
       >
         <p className="font-serif text-base font-semibold">
@@ -186,26 +257,8 @@ export default function HistoryPage() {
         </p>
       </section>
 
-      {/* ── The flow: every parish to its end state, the closed to their
-             buildings' fates ── */}
-      <section className="mt-16">
-        <h2 className="font-serif text-2xl font-semibold">
-          Where every parish ended up
-        </h2>
-        <p className="mt-1 text-muted leading-relaxed max-w-3xl mb-6">
-          All {total} documented parishes flow to where they stand today
-          &mdash; and the closed flow on to what became of their buildings.
-        </p>
-        <EndStateFlow counts={{ groups: counts, closedFates }} />
-        <p className="mt-5 text-sm leading-relaxed max-w-3xl">
-          Of the {total} parishes documented so far, {lost} are closed.{" "}
-          {closedFates.demolished} of their churches have been demolished;{" "}
-          {closedFates.religious + closedFates.secular} were sold on &mdash;{" "}
-          {closedFates.religious} to other congregations,{" "}
-          {closedFates.secular} to secular use. {standing} parishes still
-          stand as Lithuanian parishes today.
-        </p>
-        <p className="mt-3 text-sm text-muted leading-relaxed max-w-3xl">
+      <section className="mt-12 max-w-3xl space-y-3 text-sm text-muted leading-relaxed">
+        <p>
           The diocese-by-diocese picture &mdash; every parish, every diocese,
           and the map of the dioceses &mdash; is on{" "}
           <Link href="/by-diocese" className="underline hover:text-foreground">
@@ -213,9 +266,6 @@ export default function HistoryPage() {
           </Link>
           . Every parish links to its full record.
         </p>
-      </section>
-
-      <section className="mt-12 max-w-3xl space-y-3 text-sm text-muted leading-relaxed">
         <p>
           {dated.length} parishes with known founding dates are shown in the
           timeline; {undated.length} more without a known founding date are
