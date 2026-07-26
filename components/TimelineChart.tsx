@@ -47,20 +47,20 @@ export interface UndatedRow {
 
 const YEAR_MIN = 1870;
 const YEAR_MAX = 2026;
-const NAME_W = 210;
+const NAME_W = 238;
 const CHART_W = 700;
 const M = { top: 26, right: 10, bottom: 8 };
 const TOTAL_W = NAME_W + CHART_W + M.right;
 
-const BAR_H = 10;
-const BAR_GAP = 2;
+const BAR_H = 11;
+const BAR_GAP = 2.5;
 const STEP = BAR_H + BAR_GAP;
 
 function xScale(year: number) {
   return NAME_W + ((year - YEAR_MIN) / (YEAR_MAX - YEAR_MIN)) * CHART_W;
 }
 
-function truncName(name: string, max = 26): string {
+function truncName(name: string, max = 32): string {
   return name.length > max ? name.slice(0, max - 1) + "…" : name;
 }
 
@@ -393,7 +393,7 @@ export default function TimelineChart({
                     y={yOff + h / 2}
                     textAnchor="end"
                     dominantBaseline="central"
-                    fontSize={7}
+                    fontSize={8.5}
                     fill={isHov ? "var(--foreground)" : "var(--muted)"}
                     fontWeight={isHov ? 600 : 400}
                   >
@@ -412,6 +412,18 @@ export default function TimelineChart({
                     opacity={isHov ? 1 : alive ? 0.95 : 0.85}
                     rx={1.5}
                   />
+                  {/* Demolished buildings end in an ×: the parish closed AND
+                      the building was erased */}
+                  {row.endState === "demolished" && (
+                    <g
+                      stroke="var(--foreground)"
+                      strokeWidth={1.1}
+                      opacity={isHov ? 1 : 0.75}
+                    >
+                      <line x1={xEnd - 1} y1={yOff + 1.5} x2={xEnd + 4} y2={yOff + h - 1.5} />
+                      <line x1={xEnd - 1} y1={yOff + h - 1.5} x2={xEnd + 4} y2={yOff + 1.5} />
+                    </g>
+                  )}
                   {/* Survivors carry their city at the right edge — who is
                       left reads straight off the chart */}
                   {alive && !row.closed && (
@@ -420,7 +432,7 @@ export default function TimelineChart({
                       y={yOff + h / 2}
                       textAnchor="end"
                       dominantBaseline="central"
-                      fontSize={6.5}
+                      fontSize={7.5}
                       fontWeight={600}
                       fill={END_STATE_TEXT[group]}
                     >
@@ -452,6 +464,16 @@ export default function TimelineChart({
             {g === "unverified" ? "Record goes quiet — not yet verified" : GROUP_LABEL[g]}
           </span>
         ))}
+        <span className="inline-flex items-center gap-1.5">
+          <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden>
+            <rect x="0" y="2" width="9" height="10" rx="1.5" fill="var(--es-closed)" opacity="0.85" />
+            <g stroke="var(--foreground)" strokeWidth="1.3" opacity="0.8">
+              <line x1="7" y1="3" x2="13" y2="11" />
+              <line x1="7" y1="11" x2="13" y2="3" />
+            </g>
+          </svg>
+          Building demolished
+        </span>
       </div>
 
       {/* ── Undated parishes ── */}

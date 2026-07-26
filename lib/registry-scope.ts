@@ -55,6 +55,7 @@ export interface ScopedParish {
   closed: number | null;
   endState: EndState;
   endingMode: EndingMode | null;
+  buildingFate: BuildingFate | null;
   hasAlert: boolean;
   onWatch: boolean;
   profileHref: string | null;
@@ -160,6 +161,7 @@ export function toScopedParish(p: RegParish): ScopedParish {
       endingMode,
     ),
     endingMode,
+    buildingFate,
     hasAlert: alertBySlug.has(slug),
     onWatch: sustainBySlug.has(slug),
     profileHref: libOk

@@ -4,7 +4,7 @@ import TimelineChart, {
   type TimelineRow,
   type UndatedRow,
 } from "@/components/TimelineChart";
-import CompositionBar from "@/components/CompositionBar";
+import EndStateFlow, { type FlowCounts } from "@/components/EndStateFlow";
 import { scopedParishes } from "@/lib/registry-scope";
 import {
   GROUP_ORDER,
@@ -32,6 +32,14 @@ function buildData() {
   const undated: UndatedRow[] = [];
   const counts = {} as Record<EndStateGroup, number>;
   for (const g of GROUP_ORDER) counts[g] = 0;
+  const closedFates: FlowCounts["closedFates"] = {
+    demolished: 0,
+    religious: 0,
+    secular: 0,
+    derelict: 0,
+    standing: 0,
+    unrecorded: 0,
+  };
 
   const fateBySlug = new Map(
     libParishes.map((p) => [p.slug, p.buildingFate as BuildingFate | null]),
@@ -39,6 +47,18 @@ function buildData() {
 
   for (const p of all) {
     counts[toGroup(p.endState)]++;
+
+    // The closed family's building fates — the flow chart's third stage.
+    if (p.endState === "demolished") closedFates.demolished++;
+    else if (p.endState === "repurposed")
+      p.buildingFate === "repurposed_secular"
+        ? closedFates.secular++
+        : closedFates.religious++;
+    else if (p.endState === "closed") {
+      if (p.buildingFate === "standing") closedFates.standing++;
+      else if (p.buildingFate === "derelict") closedFates.derelict++;
+      else closedFates.unrecorded++;
+    }
 
     const fate = fateBySlug.get(p.slug);
     const detail =
@@ -74,7 +94,15 @@ function buildData() {
   const standing = all.filter((p) => isAlive(p.endState) && !p.closed).length;
   const lost = all.filter((p) => isLoss(p.endState)).length;
 
-  return { dated, undated, counts, standing, lost, total: all.length };
+  return {
+    dated,
+    undated,
+    counts,
+    closedFates,
+    standing,
+    lost,
+    total: all.length,
+  };
 }
 
 // ---------------------------------------------------------------------------
@@ -82,7 +110,8 @@ function buildData() {
 // ---------------------------------------------------------------------------
 
 export default function HistoryPage() {
-  const { dated, undated, counts, standing, lost, total } = buildData();
+  const { dated, undated, counts, closedFates, standing, lost, total } =
+    buildData();
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
@@ -157,19 +186,28 @@ export default function HistoryPage() {
         </p>
       </section>
 
-      {/* ── Where they stand now: the composition ── */}
+      {/* ── The flow: every parish to its end state, the closed to their
+             buildings' fates ── */}
       <section className="mt-16">
         <h2 className="font-serif text-2xl font-semibold">
-          What remains, in one bar
+          Where every parish ended up
         </h2>
         <p className="mt-1 text-muted leading-relaxed max-w-3xl mb-6">
-          All {total} documented parishes by where they stand today.
+          All {total} documented parishes flow to where they stand today
+          &mdash; and the closed flow on to what became of their buildings.
         </p>
-        <CompositionBar counts={counts} />
-        <p className="mt-4 text-sm text-muted leading-relaxed max-w-3xl">
-          The full diocese-by-diocese picture &mdash; every parish, every
-          diocese, and how each diocese&rsquo;s Lithuanian parishes ended
-          &mdash; is on{" "}
+        <EndStateFlow counts={{ groups: counts, closedFates }} />
+        <p className="mt-5 text-sm leading-relaxed max-w-3xl">
+          Of the {total} parishes documented so far, {lost} are closed.{" "}
+          {closedFates.demolished} of their churches have been demolished;{" "}
+          {closedFates.religious + closedFates.secular} were sold on &mdash;{" "}
+          {closedFates.religious} to other congregations,{" "}
+          {closedFates.secular} to secular use. {standing} parishes still
+          stand as Lithuanian parishes today.
+        </p>
+        <p className="mt-3 text-sm text-muted leading-relaxed max-w-3xl">
+          The diocese-by-diocese picture &mdash; every parish, every diocese,
+          and the map of the dioceses &mdash; is on{" "}
           <Link href="/by-diocese" className="underline hover:text-foreground">
             By Diocese
           </Link>
