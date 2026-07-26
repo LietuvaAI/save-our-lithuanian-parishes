@@ -1,6 +1,7 @@
 import parishesJson from "@/data/parishes.json";
 import figuresJson from "@/data/figures.json";
 import draugasLinksJson from "@/data/draugas-links.json";
+import situationJson from "@/data/parish-situation.json";
 
 export type Ownership = "diocese_rc" | "national_catholic" | "other_self_owned";
 export type ParishStatus =
@@ -206,19 +207,36 @@ for (const p of parishes) {
   if (p.registrySlug) registrySlugIndex.set(p.registrySlug, p);
 }
 
-/** Look up the situation overlay by registry slug (for registry profile pages). */
+// The full classifier overlay (all 220 canonical parishes) — the 86 case-filed
+// entries also flow into parishes.json at build time; the rest are reachable
+// only through this index.
+const situationOverlay = (
+  situationJson as {
+    parishes: Record<string, ParishSituation & { registry_slug: string }>;
+  }
+).parishes;
+const overlayByRegistrySlug = new Map<string, ParishSituation>();
+for (const entry of Object.values(situationOverlay)) {
+  if (entry.registry_slug)
+    overlayByRegistrySlug.set(entry.registry_slug, entry);
+}
+
+/** Look up the situation overlay by registry slug — canonical parishes first,
+ * then the registry-wide overlay (researched non-canonical entries). */
 export function getSituationByRegistrySlug(registrySlug: string): ParishSituation | null {
   const p = registrySlugIndex.get(registrySlug);
-  if (!p || !p.buildingFate) return null;
-  return {
-    registry_slug: p.registrySlug ?? "",
-    canonical_status: p.status,
-    building_fate: p.buildingFate,
-    current_use: p.currentUse ?? "Unknown",
-    lithuanian_identity: p.lithuanianIdentity ?? "lost",
-    pastoral_status: p.pastoralStatus ?? "unknown",
-    situation: p.situation ?? "",
-  };
+  if (p && p.buildingFate) {
+    return {
+      registry_slug: p.registrySlug ?? "",
+      canonical_status: p.status,
+      building_fate: p.buildingFate,
+      current_use: p.currentUse ?? "Unknown",
+      lithuanian_identity: p.lithuanianIdentity ?? "lost",
+      pastoral_status: p.pastoralStatus ?? "unknown",
+      situation: p.situation ?? "",
+    };
+  }
+  return overlayByRegistrySlug.get(registrySlug) ?? null;
 }
 
 // ---------------------------------------------------------------------------
