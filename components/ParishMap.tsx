@@ -223,7 +223,17 @@ export default function ParishMap() {
   const [classFilter, setClassFilter] = useState<ClassFilter>("all");
   const [view, setView] = useState<View>(FULL);
   const [showArchived, setShowArchived] = useState(true);
+  const [showDioceses, setShowDioceses] = useState(false);
+  const [dioceseBorders, setDioceseBorders] = useState<string | null>(null);
   const svgRef = useRef<SVGSVGElement>(null);
+
+  async function toggleDioceses() {
+    if (!dioceseBorders) {
+      const mod = await import("@/data/diocese-overlay.json");
+      setDioceseBorders((mod.default ?? mod).borders as string);
+    }
+    setShowDioceses((v) => !v);
+  }
   const drag = useRef<{ px: number; py: number; moved: boolean } | null>(null);
 
   const zoom = FULL.w / view.w;
@@ -402,6 +412,18 @@ export default function ParishMap() {
         >
           + Being verified ({archivePoints.length})
         </button>
+        <button
+          type="button"
+          className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors border ${
+            showDioceses
+              ? "border-muted bg-muted/10 text-foreground"
+              : "border-rule text-muted hover:border-foreground"
+          }`}
+          onClick={toggleDioceses}
+          title="Catholic diocese boundaries (US Census counties merged per diocese; public-domain crosswalk)"
+        >
+          Diocese lines
+        </button>
       </div>
 
       <div className="relative">
@@ -421,6 +443,18 @@ export default function ParishMap() {
             <path key={i} d={d} fill="var(--band)" stroke="var(--foreground)" strokeOpacity={0.25} strokeWidth={0.7 / zoom} />
           ))}
           <path d={mapData.stateBorders} fill="none" stroke="var(--foreground)" strokeOpacity={0.15} strokeWidth={0.7 / zoom} />
+
+          {/* Diocese boundaries — lazy-loaded, drawn under the parish marks */}
+          {showDioceses && dioceseBorders && (
+            <path
+              d={dioceseBorders}
+              fill="none"
+              stroke="var(--accent)"
+              strokeOpacity={0.4}
+              strokeWidth={0.8 / zoom}
+              pointerEvents="none"
+            />
+          )}
 
           {/* Archive crosses — parishes with unestablished fate, shown when toggled */}
           {showArchived && archivePoints.map((p) => {

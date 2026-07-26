@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CompositionBar from "@/components/CompositionBar";
 import DioceseGrid from "@/components/DioceseGrid";
+import DioceseMap, { type DioceseMapCounts } from "@/components/DioceseMap";
 import { scopedParishes, type ScopedParish } from "@/lib/registry-scope";
 import {
   GROUP_ORDER,
@@ -118,6 +119,36 @@ export default function ByDiocesePage() {
       {/* The whole record in one bar */}
       <section className="mt-10 max-w-3xl">
         <CompositionBar counts={totals} height={36} />
+      </section>
+
+      {/* The geography of the loss */}
+      <section className="mt-12">
+        <h2 className="font-serif text-2xl font-semibold">
+          The map of the dioceses
+        </h2>
+        <p className="mt-1 text-muted leading-relaxed max-w-3xl mb-5">
+          Every Catholic diocese in the United States, shaded by the share of
+          its documented Lithuanian parishes now closed.
+        </p>
+        <DioceseMap
+          counts={Object.fromEntries(
+            named.map((d) => [
+              d.shortName,
+              {
+                total: d.parishes.length,
+                closed: d.closedCount,
+                alive: d.aliveCount,
+              },
+            ]),
+          ) as DioceseMapCounts}
+        />
+        <p className="mt-3 text-xs text-muted border-t border-rule pt-3 max-w-3xl">
+          Boundaries: US Census county geometry (public domain) merged per
+          diocese via the public-domain county&ndash;diocese crosswalk
+          (kburchfiel/us_diocese_mapper). Diocese lines follow county lines;
+          the few counties split between dioceses follow the crosswalk&rsquo;s
+          primary assignment.
+        </p>
       </section>
 
       {/* Diocese cards */}
