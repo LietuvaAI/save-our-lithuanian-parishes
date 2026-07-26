@@ -111,6 +111,42 @@ function buildData() {
   const standing = all.filter((p) => isAlive(p.endState) && !p.closed).length;
   const lost = all.filter((p) => isLoss(p.endState)).length;
 
+  // ── Narrative figures for the timeline section (all record-derived) ──
+  const foundedByDecade = new Map<number, number>();
+  const closedByDecade = new Map<number, number>();
+  for (const p of all) {
+    if (p.founded)
+      foundedByDecade.set(
+        Math.floor(p.founded / 10) * 10,
+        (foundedByDecade.get(Math.floor(p.founded / 10) * 10) ?? 0) + 1,
+      );
+    if (p.closed)
+      closedByDecade.set(
+        Math.floor(p.closed / 10) * 10,
+        (closedByDecade.get(Math.floor(p.closed / 10) * 10) ?? 0) + 1,
+      );
+  }
+  const peak = (m: Map<number, number>) =>
+    [...m.entries()].sort((a, b) => b[1] - a[1])[0] ?? [0, 0];
+  const [peakFoundDecade, peakFoundN] = peak(foundedByDecade);
+  const [peakClosedDecade, peakClosedN] = peak(closedByDecade);
+  const closedSince1990 = all.filter(
+    (p) => p.closed && p.closed >= 1990,
+  ).length;
+  const closedSince2020 = all.filter(
+    (p) => p.closed && p.closed >= 2020,
+  ).length;
+  const lifespans = all
+    .filter((p) => isLoss(p.endState) && p.founded && p.closed)
+    .map((p) => p.closed! - p.founded!)
+    .sort((a, b) => a - b);
+  const medianLifespan = lifespans.length
+    ? lifespans[Math.floor(lifespans.length / 2)]
+    : null;
+  const oldestAlive = all
+    .filter((p) => isAlive(p.endState) && !p.closed && p.founded)
+    .sort((a, b) => a.founded! - b.founded!)[0] ?? null;
+
   return {
     dated,
     undated,
@@ -120,6 +156,16 @@ function buildData() {
     standing,
     lost,
     total: all.length,
+    narrative: {
+      peakFoundDecade,
+      peakFoundN,
+      peakClosedDecade,
+      peakClosedN,
+      closedSince1990,
+      closedSince2020,
+      medianLifespan,
+      oldestAlive,
+    },
   };
 }
 
@@ -137,6 +183,7 @@ export default function HistoryPage() {
     standing,
     lost,
     total,
+    narrative,
   } = buildData();
 
   return (
@@ -214,13 +261,76 @@ export default function HistoryPage() {
         <h2 className="font-serif text-2xl font-semibold">
           A half-century of building; a half-century of closing
         </h2>
-        <p className="mt-1 text-muted leading-relaxed max-w-3xl mb-6">
-          Above the line, parishes founded each decade; below it, in red,
-          parishes closed. Then every parish as one bar, from its founding
-          to its closure &mdash; or to today. Bars that fade out mark
-          parishes whose fate the record has not yet established.
+        <div className="mt-3 space-y-4 leading-relaxed max-w-3xl">
+          <p>
+            The founding wave crested in the {narrative.peakFoundDecade}s,
+            when the immigrant generation raised {narrative.peakFoundN}{" "}
+            parishes in a single decade &mdash; churches built from
+            miners&rsquo; and factory workers&rsquo; wages, with a smaller
+            wave after the Second World War as the Displaced Persons
+            generation arrived. Then the direction reversed. Since 1990 the
+            record logs {narrative.closedSince1990} closures,{" "}
+            {narrative.peakClosedN} of them in the{" "}
+            {narrative.peakClosedDecade}s alone &mdash; the heaviest decade
+            of loss &mdash; and {narrative.closedSince2020} more since 2020.
+            The pattern is not history; it is still moving.
+          </p>
+        </div>
+        <p className="mt-4 text-sm text-muted leading-relaxed max-w-3xl mb-6">
+          How to read it: above the line, parishes founded each decade;
+          below it, in red, parishes closed. Then every parish as one bar,
+          from its founding to its closure &mdash; or to today. Bars that
+          fade out mark parishes whose fate the record has not yet
+          established; an &times; marks a church that no longer exists.
         </p>
         <TimelineChart rows={dated} undated={undated} />
+
+        {/* Selective takeaways, computed from the record */}
+        <ul className="mt-6 max-w-3xl space-y-2 text-sm leading-relaxed">
+          {narrative.medianLifespan != null && (
+            <li className="flex gap-2">
+              <span aria-hidden style={{ color: "var(--es-closed)" }}>■</span>
+              <span>
+                The median closed parish stood for{" "}
+                <strong>{narrative.medianLifespan} years</strong> &mdash;
+                institutions built to outlive their founders, dismantled in a
+                generation&rsquo;s time.
+              </span>
+            </li>
+          )}
+          {narrative.oldestAlive && (
+            <li className="flex gap-2">
+              <span aria-hidden style={{ color: "var(--es-active)" }}>■</span>
+              <span>
+                The longest-standing parish still active is{" "}
+                <strong>
+                  {narrative.oldestAlive.profileHref ? (
+                    <Link
+                      href={narrative.oldestAlive.profileHref}
+                      className="underline hover:text-accent"
+                    >
+                      {narrative.oldestAlive.name}
+                    </Link>
+                  ) : (
+                    narrative.oldestAlive.name
+                  )}
+                </strong>{" "}
+                in {narrative.oldestAlive.city},{" "}
+                {narrative.oldestAlive.state} &mdash; since{" "}
+                {narrative.oldestAlive.founded}.
+              </span>
+            </li>
+          )}
+          <li className="flex gap-2">
+            <span aria-hidden style={{ color: "var(--mark-ink)" }}>■</span>
+            <span>
+              {undated.length} parishes appear as squares below the timeline
+              &mdash; attested in the record, founding dates still being
+              researched.
+            </span>
+          </li>
+        </ul>
+
         <p className="mt-4 text-xs text-muted border-t border-rule pt-3">
           Source: the unified parish registry &mdash; Draugas 1909&ndash;2026,
           Wolkovich-Valkavičius (1998), Michelsonas (1961), Lukas (2009), and

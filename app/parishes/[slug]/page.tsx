@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import registry from "@/data/registry-unified.json";
 import alertsData from "@/data/alerts.json";
 import photosData from "@/data/photos.json";
+import contextPoints from "@/data/context-points.json";
 import {
   parishes,
   draugasCitationUrl,
@@ -20,6 +21,7 @@ import {
 } from "@/lib/parishes";
 import { resolveEndState, isLoss } from "@/lib/end-state";
 import { EndStatePill } from "@/components/EndStatePill";
+import ParishContextMap from "@/components/ParishContextMap";
 import {
   CLERGY_LABEL,
   FREQUENCY_LABEL,
@@ -207,6 +209,25 @@ export default async function ParishPage({
 
       {situation && (
         <p className="mt-6 text-lg leading-relaxed">{situation.situation}</p>
+      )}
+
+      {/* ══ The parish among its neighbors ══ */}
+      {(contextPoints.points as { slug: string; diocese: string | null; congregationClass: string | null }[]).some(
+        (p) =>
+          p.slug === parish.slug &&
+          p.diocese &&
+          p.congregationClass === "roman_catholic",
+      ) && (
+        <section className="mt-8">
+          <h2 className="font-serif text-xl font-semibold">
+            Among its neighbors
+          </h2>
+          <p className="mt-1 mb-3 text-sm text-muted leading-relaxed">
+            No parish stands alone. The diocese it belongs to, and what
+            happened to every recorded Lithuanian parish around it.
+          </p>
+          <ParishContextMap slug={parish.slug} />
+        </section>
       )}
 
       {/* ══ What it was ══ */}

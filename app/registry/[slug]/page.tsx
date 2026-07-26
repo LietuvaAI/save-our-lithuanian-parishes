@@ -10,6 +10,8 @@ import {
   getSituationByRegistrySlug,
   type Ownership,
 } from "@/lib/parishes";
+import ParishContextMap from "@/components/ParishContextMap";
+import contextPoints from "@/data/context-points.json";
 
 /* Research-record profile pages: every non-canonical parish in the unified
    registry gets a page built purely from cited source facts. No status
@@ -245,6 +247,22 @@ export default async function RegistryParishPage({
 
       {situation && (
         <p className="mt-5 text-lg leading-relaxed">{situation.situation}</p>
+      )}
+
+      {(contextPoints.points as { slug: string; diocese: string | null; congregationClass: string | null }[]).some(
+        (q) =>
+          q.slug === slug && q.diocese && q.congregationClass === "roman_catholic",
+      ) && (
+        <section className="mt-8">
+          <h2 className="font-serif text-xl font-semibold">
+            Among its neighbors
+          </h2>
+          <p className="mt-1 mb-3 text-sm text-muted leading-relaxed">
+            No parish stands alone. The diocese it belongs to, and what
+            happened to every recorded Lithuanian parish around it.
+          </p>
+          <ParishContextMap slug={slug} />
+        </section>
       )}
 
       {p.caveat && (

@@ -14,7 +14,6 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import {
   GROUP_ORDER,
   GROUP_LABEL,
@@ -65,11 +64,11 @@ const FATE_ORDER: FateKey[] = [
 
 const GROUP_SUBLABEL: Record<EndStateGroup, string> = {
   active_parish: "a functioning Lithuanian parish",
-  mass_continues: "Lithuanian Mass survives inside a merged or host parish",
-  transferred: "the church lives on — serving another community now",
+  mass_continues: "Mass survives in a merged or host parish",
+  transferred: "the church now serves another community",
   unresolved: "canonically undecided — under threat",
   closed: "the parish is gone; the buildings' fates →",
-  unverified: "the record has not yet established the fate",
+  unverified: "fate not yet established",
 };
 
 const FATE_OPACITY: Record<FateKey, number> = {
@@ -81,13 +80,13 @@ const FATE_OPACITY: Record<FateKey, number> = {
   unrecorded: 0.18,
 };
 
-// Geometry — a compact field, sized near one viewport height.
-const W = 985;
+// Geometry — a compact field that leaves room for the side panel.
+const W = 872;
 const TOP = 30;
-const X_DEC = 176; // right edge of the decade bands
+const X_DEC = 148; // right edge of the decade bands
 const DEC_W = 10;
-const X_MID = 470;
-const X_END = 730;
+const X_MID = 404;
+const X_END = 622;
 const NODE_W = 12;
 const GAP_DEC = 9;
 const GAP_MID = 26;
@@ -107,9 +106,9 @@ export default function ParishThreads({
 }: {
   parishes: ThreadParish[];
 }) {
-  const router = useRouter();
   const [hot, setHot] = useState<string | null>(null); // slug | band key
   const [open, setOpen] = useState<string | null>(null); // band key
+  const [focusSlug, setFocusSlug] = useState<string | null>(null);
   const [query, setQuery] = useState("");
 
   const model = useMemo(() => {
@@ -352,7 +351,7 @@ export default function ParishThreads({
                 {toGroup(hovered.endState) === "closed" && hovered.fateKey
                   ? `Closed — ${FATE_LABEL[hovered.fateKey].toLowerCase()}`
                   : GROUP_LABEL[toGroup(hovered.endState)]}
-                {hovered.href ? " · click to open its record" : ""}
+                {" · click to see its group's list"}
               </span>
             </span>
           ) : (
@@ -458,16 +457,22 @@ export default function ParishThreads({
                   strokeWidth={spotlight ? 2.4 : 0.7}
                   opacity={active ? (spotlight ? 1 : anyFocus ? 0.75 : 0.55) : 0.04}
                 />
-                {/* Invisible hover corridor + click target */}
+                {/* Invisible hover corridor. A click opens the thread's
+                    whole group in the panel (with this parish highlighted)
+                    rather than navigating away — the record link lives in
+                    the list, where the click is deliberate. */}
                 <path
                   d={threadPath(p)}
                   fill="none"
                   stroke="transparent"
                   strokeWidth={7}
-                  className={p.href ? "cursor-pointer" : undefined}
+                  className="cursor-pointer"
                   onMouseEnter={() => setHot(p.slug)}
                   onMouseLeave={() => setHot(null)}
-                  onClick={() => p.href && router.push(p.href)}
+                  onClick={() => {
+                    setOpen(bandKeyOf(p));
+                    setFocusSlug(p.slug);
+                  }}
                 />
               </g>
             );
@@ -591,24 +596,40 @@ export default function ParishThreads({
         {open ? (
           <div className="rounded-lg border border-rule overflow-hidden">
             <div className="flex items-center justify-between gap-3 px-4 py-2.5 border-b border-rule bg-foreground/[0.02]">
-              <p className="font-serif font-semibold text-sm leading-snug">
+              <p className="font-serif font-semibold text-base leading-snug">
                 {openLabel}
-                <span className="ml-2 font-sans font-normal text-muted">
-                  · {openMembers.length}
+                <span className="ml-2 font-sans text-sm font-normal text-muted">
+                  {openMembers.length}{" "}
+                  {openMembers.length === 1 ? "parish" : "parishes"}
                 </span>
               </p>
               <button
                 type="button"
-                onClick={() => setOpen(null)}
+                onClick={() => {
+                  setOpen(null);
+                  setFocusSlug(null);
+                }}
                 className="text-sm text-muted hover:text-foreground"
                 aria-label="Close list"
               >
                 ✕
               </button>
             </div>
-            <ul className="px-4 py-2 text-sm max-h-[26rem] overflow-y-auto divide-y divide-rule/60">
+            <ul className="panel-scroll px-4 py-2 text-sm max-h-[30rem] overflow-y-auto divide-y divide-rule/60">
               {openMembers.map((m) => (
-                <li key={m.slug} className="py-1.5">
+                <li
+                  key={m.slug}
+                  ref={
+                    m.slug === focusSlug
+                      ? (el) => el?.scrollIntoView({ block: "nearest" })
+                      : undefined
+                  }
+                  className={`py-1.5 ${
+                    m.slug === focusSlug
+                      ? "bg-foreground/[0.05] -mx-2 px-2 rounded border-l-2 border-accent"
+                      : ""
+                  }`}
+                >
                   {m.href ? (
                     <Link
                       href={m.href}
