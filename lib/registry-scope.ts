@@ -117,8 +117,17 @@ export function toScopedParish(p: RegParish): ScopedParish {
   const lib = p.c83_row != null ? libParishes[p.c83_row - 1] : undefined;
   const libOk = !!(lib && lib.city === p.city);
 
-  const founded = yearOf(p.locked?.year_founded, p.years?.founded);
-  const closed = yearOf(p.locked?.year_closed, p.years?.closed);
+  // Canonical parishes: the locked-core years are authoritative on every
+  // surface; registry readings that differ stay visible as conflicts on the
+  // research pages, never as silently divergent display values
+  // (2026-07-26 audit: Shenandoah showed closure 2010 — its demolition
+  // year — on the timeline while the profile said 2006).
+  const founded = libOk
+    ? (lib!.yearFounded ?? yearOf(p.locked?.year_founded, p.years?.founded))
+    : yearOf(p.locked?.year_founded, p.years?.founded);
+  const closed = libOk
+    ? lib!.yearClosed
+    : yearOf(p.locked?.year_closed, p.years?.closed);
 
   const slug = libOk ? lib!.slug : p.slug;
   const endingMode = libOk ? (lib!.endingMode as EndingMode) : null;

@@ -520,9 +520,9 @@
       "canonical_status": "standing",
       "building_fate": "standing",
       "current_use": "Active Lithuanian parish; on the National Register of Historic Places",
-      "lithuanian_identity": "active_parish",
-      "pastoral_status": "unknown",
-      "situation": "Survived inside the diocese; debt-free; on the National Register of Historic Places — the only such Lithuanian church in the corpus. Survived via demonstrated vitality and congregational diversification."
+      "lithuanian_identity": "mass_continues",
+      "pastoral_status": "shared_priest",
+      "situation": "Holy Cross continues within a five-church family under a shared pastor, with a single Sunday Mass. The Lithuanian heritage identity survives in parish life and fundraising; the 2021 practice of Lithuanian readings at Mass could not be confirmed for 2026."
     },
     "sv-kazimiero-cleveland-oh": {
       "registry_slug": "casimir-cleveland-oh",
@@ -584,8 +584,8 @@
       "building_fate": "standing",
       "current_use": "Active Lithuanian parish; major renovation completed 2019; hosts displaced Maspeth Lithuanian-language Masses since Sept 2025",
       "lithuanian_identity": "active_parish",
-      "pastoral_status": "unknown",
-      "situation": "Williamsburg (Annunciation BVM). Survived inside the Diocese of Brooklyn; major renovation completed 2019. Since Sept 2025, hosts the displaced Maspeth Lithuanian-language Masses."
+      "pastoral_status": "shared_priest",
+      "situation": "Annunciation in Williamsburg carries Brooklyn's Lithuanian liturgical life: a weekly 10:00 a.m. Lithuanian Mass — strengthened when Maspeth's Lithuanian Mass moved here in September 2025 — with Lithuanian chaplain Fr. Valdemaras Lisovski confirmed on the Lithuanian Bishops' Conference roster."
     },
     "kristaus-atsimainymo-maspeth-ny": {
       "registry_slug": "transfiguration-maspeth-ny",
@@ -610,9 +610,9 @@
       "canonical_status": "standing",
       "building_fate": "standing",
       "current_use": "Active Lithuanian parish; daily Masses; one of the strongest Lithuanian bastions in New Jersey",
-      "lithuanian_identity": "active_parish",
-      "pastoral_status": "own_priest",
-      "situation": "Officially Lithuanian with a Lithuanian Church sign; daily Masses. By 2022 one of the strongest Lithuanian bastions in New Jersey. Survived."
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "Our Lady of Sorrows in Kearny continues with a single English Sunday Mass; no Lithuanian Mass was found on any current schedule and the parish is absent from the Lithuanian Bishops' Conference roster."
     },
     "sv-jurgio-bridgeport-ct": {
       "registry_slug": "george-bridgeport-ct",
@@ -628,9 +628,9 @@
       "canonical_status": "standing",
       "building_fate": "standing",
       "current_use": "Active Lithuanian parish; surrounding Lithuanian neighborhood demolished by urban renewal, but church stands",
-      "lithuanian_identity": "active_parish",
-      "pastoral_status": "unknown",
-      "situation": "Survived inside the Diocese of Hartford. The surrounding Lithuanian neighborhood was demolished by urban renewal, but the church building stands and was active as of late 2023."
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Holy Trinity's regular Masses — including the Sunday 9:00 a.m. Lithuanian/English Mass — ended May 30, 2026, amid a financial crisis and the aftermath of a priest-theft investigation. Only funerals and baptisms continue in the building; parishioners campaign to preserve the church as a Lithuanian cultural center."
     },
     "sv-onos-luzerne-pa": {
       "registry_slug": "ann-luzerne-pa",
@@ -664,9 +664,9 @@
       "canonical_status": "standing",
       "building_fate": "standing",
       "current_use": "Active Lithuanian parish; best-preserved living first-wave Lithuanian neighborhood in America",
-      "lithuanian_identity": "active_parish",
-      "pastoral_status": "unknown",
-      "situation": "Founded ~1904. Survived; by 2024 described as the best-preserved living first-wave Lithuanian neighborhood in America."
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "Founded ~1904; by 2024 described as the best-preserved living first-wave Lithuanian neighborhood in America. The parish remains open, but no Lithuanian Mass appears on any current schedule or bulletin, the parish is not on the Lithuanian Bishops' Conference roster for North America, and the Diocese of Grand Rapids has slated it for merger upon the pastor's retirement."
     },
     "nekaltojo-prasidejimo-east-st-louis-il": {
       "registry_slug": "immaculate-east-st-louis-il",
@@ -682,9 +682,9 @@
       "canonical_status": "standing",
       "building_fate": "standing",
       "current_use": "Active Lithuanian parish; temporarily storing Frackville/Shenandoah-area Lithuanian Museum artifacts",
-      "lithuanian_identity": "active_parish",
+      "lithuanian_identity": null,
       "pastoral_status": "unknown",
-      "situation": "Distinct from the closed Sv. Juozapo Waterbury. Survived; still functioning 2022. Temporarily storing the Frackville/Shenandoah-area Lithuanian Museum's artifacts."
+      "situation": "Verification in 2026 could not establish this as a parish distinct from St. Joseph, Waterbury (closed 2023, canonical appeal ongoing): it is absent from current Archdiocese of Hartford directories, and a reported 2017 closure could not be confirmed. The record holds the entry open pending reconciliation."
     },
     "unnamed-lithuanian-parish-baltimore-md": {
       "registry_slug": "holyname-baltimore-md",
@@ -700,9 +700,9 @@
       "canonical_status": "standing",
       "building_fate": "standing",
       "current_use": "Active Lithuanian National Catholic parish; community-owned, independent of Rome",
-      "lithuanian_identity": "active_parish",
-      "pastoral_status": "own_priest",
-      "situation": "LNCC, community-owned, independent of Rome. The last surviving officially Lithuanian parish in the entire NE PA coal region — survives precisely because no bishop can close or sell it. Building 1915. Coal region."
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "visiting_priest",
+      "situation": "A parish of the Polish National Catholic Church family (the historic Lithuanian National Catholic line, founded from the 1914 split), it continues with English-language Mass under supply clergy; no Lithuanian-language liturgy remains."
     },
     "saldziausios-jezaus-sirdies-lawrence-ma": {
       "registry_slug": "jesus-lawrence-ma",
@@ -745,9 +745,9 @@
       "canonical_status": "standing",
       "building_fate": "standing",
       "current_use": "Active Lithuanian Lutheran congregation; independent, self-governing, founded by a knygnesis from Taurage",
-      "lithuanian_identity": "active_parish",
-      "pastoral_status": "unknown",
-      "situation": "Independent self-governing Lithuanian Lutheran congregation, founded by a knygnesis from Taurage. Survived; small, aging, still active as of 2019. Independent of any diocese — no bishop has authority to close it."
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "Jerusalem Lutheran Church (LCMS) still holds a weekly service in English; no Lithuanian-language liturgy remains."
     },
     "sv-kazimiero-montreal-qc": {
       "registry_slug": "casimir-montreal-qc",
@@ -755,8 +755,8 @@
       "building_fate": "standing",
       "current_use": "Active Lithuanian parish under Quebec civil law parish-ownership",
       "lithuanian_identity": "active_parish",
-      "pastoral_status": "unknown",
-      "situation": "Canadian comparator. Under Quebec civil law the parish (not the diocese) is the juridical owner; the diocese cannot act unilaterally. Survived; aging. The ownership-law contrast with U.S. diocese-owned parishes is the point."
+      "pastoral_status": "shared_priest",
+      "situation": "A weekly noon Lithuanian Mass continues, per the Diocese of Montréal's own listings, with a chaplain shared with Aušros Vartų — one of the strongest surviving Lithuanian parish schedules in North America. Documented as a Canadian comparator, outside the U.S. figures."
     },
     "ausros-vartu-montreal-qc": {
       "registry_slug": "gateofdawn-montreal-qc",
@@ -764,8 +764,8 @@
       "building_fate": "standing",
       "current_use": "Active Lithuanian parish under Quebec civil law parish-ownership",
       "lithuanian_identity": "active_parish",
-      "pastoral_status": "unknown",
-      "situation": "Canadian comparator. Quebec parish-ownership law means the diocese cannot act unilaterally. Survived; aging. Natural-experiment comparator against U.S. diocese-owned parishes."
+      "pastoral_status": "shared_priest",
+      "situation": "Two Sunday Lithuanian Masses (9:00 and 10:30 a.m.) continue per the Diocese of Montréal's listings, with a chaplain shared with St. Casimir — the best-documented Lithuanian Mass schedule in the 2026 verification sweep. Documented as a Canadian comparator, outside the U.S. figures."
     },
     "sv-kazimiero-delhi-on": {
       "registry_slug": "casimir-delhi-on",

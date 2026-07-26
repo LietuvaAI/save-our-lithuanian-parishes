@@ -1,0 +1,179 @@
+{
+  "researched": "2026-07-26",
+  "rubric": "active=weekly-ish LT liturgy; mass_continues=monthly/occasional or hosted; transferred=none",
+  "parishes": [
+    {
+      "canonical_slug": "sv-petro-ir-povilo-grand-rapids-mi",
+      "name": "SS. Peter and Paul (Šv. Petro ir Povilo)",
+      "city": "Grand Rapids, MI",
+      "verdict": "ethnically_transferred",
+      "lt_mass_frequency": "none",
+      "pastoral_status": "not_applicable",
+      "summary": "SS. Peter and Paul remains an open, active Roman Catholic parish of the Diocese of Grand Rapids with weekly bulletins and a full Mass schedule (Sunday 9:30am plus daily/Saturday Masses) under canonical administrator Fr. Mark Bauer, but no Lithuanian-language Mass appears on its published schedule, bulletins, or website, and the parish is absent from sielovada.org's North America roster of Lithuanian chaplaincies. The diocese's 2025 'Rooted in Christ' plan also slates the parish for merger into the Basilica of St. Adalbert once the pastor retires. No evidence of even a monthly Lithuanian Mass, resident, or visiting Lithuanian-speaking priest was found anywhere, confirming the project owner's suspicion that 'active Lithuanian parish' is overstated; the surviving Lithuanian clubs and cemeteries nearby are independent of the parish itself.",
+      "confidence": "reported",
+      "sources": [
+        {"title": "Mass Schedule", "publisher": "SS. Peter and Paul Parish (ssppgr.com)", "url": "http://ssppgr.com/calendars-and-schedules/mass-hours", "date_accessed": "2026-07-26"},
+        {"title": "Bulletins", "publisher": "SS. Peter and Paul Parish (ssppgr.com)", "url": "http://ssppgr.com/bulletins", "date_accessed": "2026-07-26"},
+        {"title": "Saints Peter and Paul Parish, Grand Rapids", "publisher": "Diocese of Grand Rapids", "url": "https://grdiocese.org/parishes-location/saints-peter-and-paul-parish-grand-rapids/", "date_accessed": "2026-07-26"},
+        {"title": "Šiaurės Amerika (North America chaplaincy roster — no Grand Rapids entry)", "publisher": "sielovada.org (Užsienio lietuvių sielovada)", "url": "https://sielovada.org/siaures-amerika/", "date_accessed": "2026-07-26"},
+        {"title": "Grand Rapids (MI) Lithuanian heritage sites", "publisher": "Global True Lithuania", "url": "https://global.truelithuania.com/grand-rapids-michigan-3897/", "date_accessed": "2026-07-26"}
+      ]
+    },
+    {
+      "canonical_slug": "sv-kryziaus-dayton-oh",
+      "name": "Holy Cross (Šv. Kryžiaus)",
+      "city": "Dayton, OH",
+      "verdict": "mass_continues",
+      "lt_mass_frequency": "unknown",
+      "pastoral_status": "shared_priest",
+      "summary": "Holy Cross is open and active as one of the churches in the Archdiocese of Cincinnati's St. Gabriel the Archangel Family of Parishes, sharing a clergy team (Fr. Kyle Schnippel plus parochial vicars) with no indication any is Lithuanian-speaking, and it does not appear on sielovada.org's North America roster. The family's own Holy Cross page and Mass-schedule page list a single Sunday 10:30am Mass with no Lithuanian-language listing — a change from a 2021 archdiocesan profile describing Lithuanian scripture readings proclaimed at every Mass, which could not be reconfirmed for 2026. Lithuanian identity now survives chiefly as heritage (the 1965 Mulokas redesign, NRHP listing) and an annual kugelis/turtle-soup fundraiser rather than as led Lithuanian liturgy, so what remains is Lithuanian community/liturgical life inside a merged host family, not an independently led Lithuanian parish.",
+      "confidence": "reported",
+      "sources": [
+        {"title": "Holy Cross (parish page, Sunday 10:30am Mass, no Lithuanian listing)", "publisher": "St. Gabriel the Archangel Family of Parishes (sgfp.org)", "url": "https://www.sgfp.org/holy-cross", "date_accessed": "2026-07-26"},
+        {"title": "Mass Schedule", "publisher": "St. Gabriel the Archangel Family of Parishes (sgfp.org)", "url": "https://www.sgfp.org/mass-schedule", "date_accessed": "2026-07-26"},
+        {"title": "Did you know? Holy Cross Dayton", "publisher": "The Catholic Telegraph (Archdiocese of Cincinnati)", "url": "https://www.thecatholictelegraph.com/did-you-know-holy-cross-dayton/77781", "date_accessed": "2026-07-26"},
+        {"title": "Šiaurės Amerika (North America chaplaincy roster — no Dayton entry)", "publisher": "sielovada.org", "url": "https://sielovada.org/siaures-amerika/", "date_accessed": "2026-07-26"}
+      ]
+    },
+    {
+      "canonical_slug": "sv-jurgio-rochester-ny",
+      "name": "St. George (Šv. Jurgio)",
+      "city": "Rochester, NY",
+      "verdict": "mass_continues",
+      "lt_mass_frequency": "weekly",
+      "pastoral_status": "unknown",
+      "summary": "St. George Lithuanian parish/mission left its own Hudson Avenue building in 2010 (since sold; now a Hispanic congregation) and has since worshiped as a hosted community inside the Our Lady of Lourdes & Saint Anne Cluster in Brighton, NY — still listed by both the Diocese of Rochester's own directory and by sielovada.org as the 'St. George Lithuanian Mission Community.' A Sunday 12:30pm Lithuanian Mass remains on the cluster's published schedule, though the diocesan directory marks the exact time 'TBD' and names no Lithuanian-speaking celebrant; the longtime Lithuanian pastor, Fr. Dominic Mockevicius (ordained 1948), could not be confirmed as still serving. This is Lithuanian liturgical life persisting inside a merged host cluster rather than an independently led Lithuanian parish.",
+      "confidence": "reported",
+      "sources": [
+        {"title": "St. George (Lithuanian)", "publisher": "Pastoral Services Directory, Diocese of Rochester (ps.dor.org)", "url": "https://ps.dor.org/directory/st-george-lithuanian/", "date_accessed": "2026-07-26"},
+        {"title": "Šiaurės Amerika (lists 'St. George Lithuanian Mission Community', Rochester)", "publisher": "sielovada.org", "url": "https://sielovada.org/siaures-amerika/", "date_accessed": "2026-07-26"},
+        {"title": "St. George Lithuanian celebrates final Mass on Hudson Avenue", "publisher": "Catholic Courier", "url": "https://catholiccourier.com/articles/st-george-lithuanian-celebrates-final-mass-on-hudson-avenue/", "date_accessed": "2026-07-26"},
+        {"title": "St. George RC Lithuanian Mass Times", "publisher": "CatholicMassTime.org", "url": "https://catholicmasstime.org/church/st-george-rc-lithuanian/15648/", "date_accessed": "2026-07-26"}
+      ]
+    },
+    {
+      "canonical_slug": "svc-m-marijos-apreiskimo-brooklyn-ny",
+      "name": "Annunciation (Švč. M. Marijos Apreiškimo)",
+      "city": "Brooklyn (Williamsburg), NY",
+      "verdict": "active_parish",
+      "lt_mass_frequency": "weekly",
+      "pastoral_status": "shared_priest",
+      "summary": "Effective September 1, 2025 the Diocese of Brooklyn permanently relocated Maspeth's Lithuanian Mass to the Church of the Annunciation in Williamsburg, which now holds a weekly 10:00am Sunday Lithuanian Mass alongside Spanish and English Masses; sielovada.org lists Rev. Valdemaras Lisovski as the Lithuanian chaplain serving this community (katalikai.nyc). The host parish (merged Our Lady of Mount Carmel–Annunciation) is currently run by an auxiliary-bishop administrator after its pastor was removed in a 2024 financial scandal, but the Lithuanian Mass and community programming — Maironis Lithuanian school, scouts, a December 2025 event attended by Lithuania's deputy foreign minister — remain active and weekly. Of the eleven parishes in this sweep, this is the strongest, best-verified 'active' case.",
+      "confidence": "verified",
+      "sources": [
+        {"title": "Mass Times", "publisher": "Parish of Our Lady of Mount Carmel - Annunciation", "url": "https://mountcarmel-annunciation.com/mass-times", "date_accessed": "2026-07-26"},
+        {"title": "Šiaurės Amerika (lists Rev. Valdemaras Lisovski, Annunciation of the B.V.M., Brooklyn)", "publisher": "sielovada.org", "url": "https://sielovada.org/siaures-amerika/", "date_accessed": "2026-07-26"},
+        {"title": "Transfiguration Church to Limit Mass Schedule, Explore Partial Property Sale", "publisher": "The Tablet (Diocese of Brooklyn)", "url": "https://thetablet.org/transfiguration-church-to-limit-mass-schedule/", "date_accessed": "2026-07-25"},
+        {"title": "Viceministras: lietuviškos tradicijos Niujorke ne tik puoselėjamos, bet ir perduodamos", "publisher": "LRT", "url": "https://www.lrt.lt/lituanica/aktualijos/751/2777071/viceministras-lietuviskos-tradicijos-niujorke-ne-tik-puoselejamos-bet-ir-perduodamos", "date_accessed": "2026-07-25"}
+      ]
+    },
+    {
+      "canonical_slug": "lietuviu-baznycia-kearny-kearny-nj",
+      "name": "Our Lady of Sorrows (Sopulingosios Dievo Motinos)",
+      "city": "Kearny, NJ",
+      "verdict": "ethnically_transferred",
+      "lt_mass_frequency": "none",
+      "pastoral_status": "not_applicable",
+      "summary": "Our Lady of Sorrows in Kearny (Archdiocese of Newark) is open with a single weekend Mass schedule (Saturday 5pm vigil, Sunday 9am, weekday 7am), and no Lithuanian-language Mass appears on any current listing — the parish's own site, DiscoverMass, or CatholicMassTime. It is also absent from sielovada.org's North America roster, indicating no Lithuanian chaplain is currently assigned. Heritage markers remain (a commemorative plaque, a 1962 Lithuanian sun-cross at the entrance), but no evidence of active Lithuanian liturgy, clergy, or organized Lithuanian community life was found for the 2020s.",
+      "confidence": "reported",
+      "sources": [
+        {"title": "About Our Lady of Sorrows", "publisher": "Our Lady of Sorrows Kearny (olskearny.org)", "url": "http://olskearny.org/olsweb/?page_id=110", "date_accessed": "2026-07-26"},
+        {"title": "Our Lady of Sorrows", "publisher": "DiscoverMass.com", "url": "https://discovermass.com/church/our-lady-of-sorrows-kearny-nj/", "date_accessed": "2026-07-26"},
+        {"title": "New Jersey — Lithuanian sites and heritage", "publisher": "Global True Lithuania", "url": "https://global.truelithuania.com/new-jersey-613/", "date_accessed": "2026-07-26"},
+        {"title": "Kearny – Our Lady of Sorrows – Churches of the Archdiocese of Newark", "publisher": "Seton Hall University (blogs.shu.edu/newarkchurches)", "url": "https://blogs.shu.edu/newarkchurches/archives/1811", "date_accessed": "2026-07-26"},
+        {"title": "Šiaurės Amerika (North America chaplaincy roster — no Kearny entry)", "publisher": "sielovada.org", "url": "https://sielovada.org/siaures-amerika/", "date_accessed": "2026-07-26"}
+      ]
+    },
+    {
+      "canonical_slug": "svc-trejybes-hartford-ct",
+      "name": "Holy Trinity (Švč. Trejybės)",
+      "city": "Hartford, CT",
+      "verdict": "closed",
+      "lt_mass_frequency": "none",
+      "pastoral_status": "not_applicable",
+      "summary": "Holy Trinity's regular Masses — including the Sunday 9:00am Lithuanian/English Mass still running as of the February 2025 bulletin — ended permanently on May 30, 2026, per an April 2026 parishioner notice citing a loss of over $74,000 since March 2025 and a lack of clergy; only funerals and baptisms continue at the building. This followed the January 2025 removal of longtime pastor Fr. Charles Jacobs amid a financial investigation (Hartford police closed the case in August 2025 without charges, but the archdiocese kept him on leave pending a canonical process). Parishioners are now campaigning to convert the standing 1928 church into a Lithuanian cultural center rather than continue it as a parish; no post-May-2026 update on that effort, or any resumption of Mass, was found as of this research.",
+      "confidence": "verified",
+      "sources": [
+        {"title": "Hartford parishioners met with notice of partial closure for Holy Trinity Catholic Church", "publisher": "WTNH", "url": "https://www.wtnh.com/news/connecticut/hartford/hartford-parishioners-met-with-notice-of-partial-closure-for-holy-trinity-catholic-church/", "date_accessed": "2026-07-26"},
+        {"title": "Holy Trinity Roman Catholic Church bulletin, 5th Sunday in Ordinary Time", "publisher": "Holy Trinity Parish / ParishesOnline", "url": "https://container.parishesonline.com/bulletins/03/0549/20250209B.pdf", "date_accessed": "2026-07-25"},
+        {"title": "Hartford police end investigation into priest accused of stealing money", "publisher": "WFSB", "url": "https://www.wfsb.com/2025/08/14/case-closed-hartford-police-end-investigation-into-priest-accused-stealing-money/", "date_accessed": "2026-07-25"},
+        {"title": "Šiaurės Amerika (lists Holy Trinity Church, Hartford; no priest or schedule given)", "publisher": "sielovada.org", "url": "https://sielovada.org/siaures-amerika/", "date_accessed": "2026-07-26"}
+      ]
+    },
+    {
+      "canonical_slug": "sv-kazimiero-waterbury-ct",
+      "name": "St. Casimir (Šv. Kazimiero)",
+      "city": "Waterbury, CT",
+      "verdict": "not_established",
+      "lt_mass_frequency": "unknown",
+      "pastoral_status": "unknown",
+      "summary": "No St. Casimir Lithuanian parish could be confirmed to exist in Waterbury, CT as a distinct entity: it is absent from CatholicMassTime's current Waterbury church directory, Global True Lithuania's Connecticut heritage survey names only St. Joseph as Waterbury's Lithuanian parish, and Wikipedia's list of Archdiocese of Hartford parishes (active and closed) has no Waterbury St. Casimir entry at all. A search-engine synthesis surfaced an unverifiable claim (established 1912, closed 2017) attributed to an Archdiocese of Hartford archive location-guide PDF, but that PDF returned HTTP 404 on direct fetch and no independent source corroborates the claim, so it is not carried forward as fact. The likeliest explanation, consistent with prior research on this repo, is conflation with St. Joseph Waterbury (the actual historic Lithuanian parish there, closed 2023, canonical appeal ongoing) or with a Pennsylvania coal-region St. Casimir; this entry should not be published on the site as 'active' or 'own_priest.'",
+      "confidence": "thin",
+      "sources": [
+        {"title": "Waterbury, Connecticut Catholic Churches", "publisher": "CatholicMassTime.org", "url": "https://catholicmasstime.org/church/city/connecticut/waterbury/", "date_accessed": "2026-07-25"},
+        {"title": "Connecticut: Lithuanians and Lithuanian heritage", "publisher": "Global True Lithuania", "url": "https://global.truelithuania.com/connecticut-789/", "date_accessed": "2026-07-25"},
+        {"title": "List of parishes in the Archdiocese of Hartford", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/List_of_parishes_in_the_Archdiocese_of_Hartford", "date_accessed": "2026-07-26"},
+        {"title": "Parishioners fight Waterbury church closure", "publisher": "WFSB", "url": "https://www.wfsb.com/2023/08/28/parishioners-fight-waterbury-church-closure/", "date_accessed": "2026-07-25"},
+        {"title": "OFFICE OF THE AOH ARCHIVES Location Guide (attempted; returned HTTP 404, unconfirmed)", "publisher": "Archdiocese of Hartford", "url": "https://archdioceseofhartford.org/wp-content/uploads/2022/10/DOC.02.pdf", "date_accessed": "2026-07-26"}
+      ]
+    },
+    {
+      "canonical_slug": "dievo-apvaizdos-scranton-pa",
+      "name": "Divine Providence / Providence of God (Dievo Apvaizdos)",
+      "city": "Scranton, PA",
+      "verdict": "ethnically_transferred",
+      "lt_mass_frequency": "none",
+      "pastoral_status": "visiting_priest",
+      "summary": "Providence of God — the former Lithuanian National Catholic Church cathedral parish, now part of the Polish National Catholic Church's Central Diocese — remains open and holds Sunday Mass, but the diocese's own June 2026 parish directory shows it served by supply clergy (Rev. Thomas Basta) rather than a resident pastor, and worship is conducted in English, not Lithuanian. As a PNCC (not Roman Catholic) parish it falls entirely outside sielovada.lt's Roman Catholic apostolate; no Lithuanian-language liturgy or dedicated Lithuanian-speaking clergy was found in any 2022-2026 source. The building's Lithuanian cornerstone, stained glass, and annual summer picnic remain as heritage rather than living Lithuanian liturgical practice.",
+      "confidence": "reported",
+      "sources": [
+        {"title": "Our Parishes – Central Diocese", "publisher": "Polish National Catholic Church Central Diocese", "url": "https://www.centraldiocesepncc.org/about/our-parishes/", "date_accessed": "2026-07-25"},
+        {"title": "About – Lietuvių Katalikų Tautinė Bažnyčia", "publisher": "lktb.org", "url": "https://www.lktb.org/home/about", "date_accessed": "2026-07-25"},
+        {"title": "Job Opportunity: Providence of God Lithuanian National Catholic Church, Scranton", "publisher": "American Guild of Organists, PA Northeast Chapter", "url": "https://agopane.org/2022/11/21/job-opportunity-providence-of-god-lithuanian-national-catholic-church-scranton/", "date_accessed": "2026-07-25"}
+      ]
+    },
+    {
+      "canonical_slug": "lithuanian-lutheran-church-collinsville-il",
+      "name": "Lithuanian Lutheran Church (Jerusalem Lutheran Church)",
+      "city": "Collinsville, IL",
+      "verdict": "ethnically_transferred",
+      "lt_mass_frequency": "none",
+      "pastoral_status": "not_applicable",
+      "summary": "The 1903 Lithuanian Lutheran congregation survives as Jerusalem Lutheran Church (Lutheran Church–Missouri Synod), holding weekly Sunday worship at 10:00am with a resident pastor (Rev. Dr. Douglas Nicely) and average attendance of about 21 per the 2025 LCMS locator; the building has never left the congregation's hands and services continue uninterrupted. Services are conducted in English, not Lithuanian — no Lithuanian-language liturgy is advertised, and by the 2000s only a third to half of the small, aging congregation was of Lithuanian descent per Global True Lithuania. This is a genuinely surviving church, but its Lithuanian identity today is historical and architectural (founders' names in the stained glass) rather than an operating Lithuanian-language service — note this is Lutheran, so sielovada.lt (Roman Catholic) does not apply.",
+      "confidence": "verified",
+      "sources": [
+        {"title": "Jerusalem Lutheran Church — LCMS Locator", "publisher": "The Lutheran Church—Missouri Synod", "url": "https://locator.lcms.org/church/C/191549", "date_accessed": "2026-07-25"},
+        {"title": "A Musical Blessing at Jerusalem Lutheran Church with a New Classic Series 559 Organ!", "publisher": "Rodgers Instruments", "url": "https://www.rodgersinstruments.com/news/musical-blessings-at-jerusalem-lutheran-church-with-a-new-classic-series-559-organ", "date_accessed": "2026-07-25"},
+        {"title": "Illinois — Lithuanian heritage sites", "publisher": "Global True Lithuania", "url": "https://global.truelithuania.com/category/usa/illinois/", "date_accessed": "2026-07-25"}
+      ]
+    },
+    {
+      "canonical_slug": "sv-kazimiero-montreal-qc",
+      "name": "St. Casimir (Šv. Kazimiero)",
+      "city": "Montréal, QC",
+      "verdict": "active_parish",
+      "lt_mass_frequency": "weekly",
+      "pastoral_status": "shared_priest",
+      "summary": "Saint-Casimir (Lituaniens), Canada's oldest Lithuanian parish (established 1907), is listed as an active ethnic-community parish on the Archdiocese of Montreal's own website with a weekly Sunday Lithuanian Mass at 12:00pm and weekday Masses rotating between French, English, and Lithuanian. It shares its contact email (ausrosvartai.montreal@gmail.com) with Montreal's other Lithuanian parish, Notre-Dame-Porte-de-l'Aurore, indicating the two are served by an overlapping or shared Lithuanian priest rather than each having a fully independent resident pastor. Of all eleven parishes in this sweep, Montreal's two Lithuanian parishes show the clearest, best-documented ongoing weekly Lithuanian liturgy.",
+      "confidence": "reported",
+      "sources": [
+        {"title": "Saint-Casimir (Lituaniens)", "publisher": "Diocese of Montreal", "url": "https://www.diocesemontreal.org/en/lets-connect/churches-parishes/saint-casimir-lituaniens", "date_accessed": "2026-07-26"},
+        {"title": "Montreal, Quebec: Lithuanians and Lithuanian heritage", "publisher": "Global True Lithuania", "url": "https://global.truelithuania.com/montreal-quebec-1526/", "date_accessed": "2026-07-26"}
+      ]
+    },
+    {
+      "canonical_slug": "ausros-vartu-montreal-qc",
+      "name": "Aušros Vartų (Our Lady Gate of Dawn / Notre-Dame-Porte-de-l'Aurore)",
+      "city": "Montréal, QC",
+      "verdict": "active_parish",
+      "lt_mass_frequency": "weekly",
+      "pastoral_status": "shared_priest",
+      "summary": "Notre-Dame-Porte-de-l'Aurore (Lituaniens) — built by post-WWII Lithuanian refugees in 1953-55 at 1465 de Sève St. — is listed as an active ethnic-community parish on the Archdiocese of Montreal's own website with two Sunday Lithuanian Masses (9:00am and 10:30am), an even fuller published schedule than sister parish St. Casimir. It shares the same contact email (ausrosvartai.montreal@gmail.com) as Saint-Casimir, again pointing to a shared or rotating Lithuanian priest serving both congregations. The former rectory's Lithuanian school and a LITAS credit union that closed in the 2020s point to some institutional contraction around the parish, but the liturgy itself remains weekly and Lithuanian-language per the diocese's current listing.",
+      "confidence": "reported",
+      "sources": [
+        {"title": "Notre-Dame-Porte-de-l'Aurore (Lituaniens)", "publisher": "Diocese of Montreal", "url": "https://www.diocesemontreal.org/en/lets-connect/churches-parishes/notre-dame-porte-de-laurore-lituaniens", "date_accessed": "2026-07-26"},
+        {"title": "Montreal, Quebec: Lithuanians and Lithuanian heritage", "publisher": "Global True Lithuania", "url": "https://global.truelithuania.com/montreal-quebec-1526/", "date_accessed": "2026-07-26"}
+      ]
+    }
+  ]
+}

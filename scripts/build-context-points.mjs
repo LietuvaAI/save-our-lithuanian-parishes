@@ -47,6 +47,8 @@ const normalizeDiocese = (raw) => {
 // Mirrors lib/end-state.ts resolveEndState, loss sub-fates collapsed.
 function groupOf({ identity, buildingFate, hasClosed, isStanding, endingMode }) {
   if (endingMode === "undecided") return "unresolved";
+  if (isStanding && identity === "lost") return "closed";
+  if (isStanding && !identity) return "unverified";
   if (isStanding) return identity === "mass_continues" ? "mass_continues"
     : identity === "ethnically_transferred" ? "transferred" : "active_parish";
   if (identity === "ethnically_transferred") return "transferred";
@@ -70,7 +72,10 @@ for (const r of registry.parishes) {
   const libOk = !!(lib && lib.city === r.city);
   const overlay = libOk ? null : situationByRegistrySlug.get(r.slug);
 
-  const closed = yearOf(r.locked?.year_closed, r.years?.closed);
+  // Canonical parishes: locked-core year wins on every surface.
+  const closed = libOk
+    ? (lib.yearClosed ?? null)
+    : yearOf(r.locked?.year_closed, r.years?.closed);
   const endingMode = libOk ? lib.endingMode : null;
   const identity = libOk ? lib.lithuanianIdentity : clean(overlay?.lithuanian_identity);
   const buildingFate = libOk ? lib.buildingFate : clean(overlay?.building_fate);
