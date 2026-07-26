@@ -37,6 +37,9 @@ const flags = Object.fromEntries(
 const SLUG = args[0];
 const OUT = args[1] ?? `dispatch-map-${SLUG}.svg`;
 const PAD = Number(flags.pad ?? 0.35);
+const KICKER = flags.kicker ?? "";
+const TITLE = flags.title ?? "";
+const DECK = flags.deck ?? "";
 if (!SLUG) {
   console.error("usage: node scripts/render-dispatch-map.mjs <canonical-slug> [out.svg] [--pad=0.35]");
   process.exit(1);
@@ -117,8 +120,9 @@ for (let i = 0; i < nums.length; i += 2) {
 const bw = maxX - minX, bh = maxY - minY;
 const pad = Math.max(PAD * Math.max(bw, bh), 8);
 let vx = minX - pad, vy = minY - pad, vw = bw + 2 * pad, vh = bh + 2 * pad;
-if (vw / vh < 4 / 3) { const w = vh * (4 / 3); vx -= (w - vw) / 2; vw = w; }
-else { const h = vw * (3 / 4); vy -= (h - vh) / 2; vh = h; }
+const RATIO = 1.5; // panel map area: wider than 4:3 so coastal frames waste less water
+if (vw / vh < RATIO) { const w = vh * RATIO; vx -= (w - vw) / 2; vw = w; }
+else { const h = vw / RATIO; vy -= (h - vh) / 2; vh = h; }
 const inView = (x, y, m = 0) => x > vx - m && x < vx + vw + m && y > vy - m && y < vy + vh + m;
 const inSubjectBox = (x, y) => x >= minX - 0.5 && x <= maxX + 0.5 && y >= minY - 0.5 && y <= maxY + 0.5;
 
@@ -172,7 +176,7 @@ const all = [...canonicalPts, ...registryPts];
 {
   const groups = new Map();
   for (const p of all) {
-    const k = `${p.x.toFixed(1)}|${p.y.toFixed(1)}`;
+    const k = `${Math.round(p.x / 0.6)}|${Math.round(p.y / 0.6)}`;
     (groups.get(k) ?? groups.set(k, []).get(k)).push(p);
   }
   const RING = (vw / 45) * 1.35;
@@ -190,7 +194,7 @@ const all = [...canonicalPts, ...registryPts];
 
 // --- greedy collision-free label placement ---
 const S = vw / 45;
-const FS = { subject: 1.5 * S, subjectSub: 1.05 * S, small: 0.95 * S };
+const FS = { subject: 1.55 * S, subjectSub: 1.12 * S, small: 1.18 * S, minor: 0.95 * S };
 const boxes = []; // occupied label/dot rectangles
 const collides = (b) => boxes.some((o) => b.x < o.x + o.w && b.x + b.w > o.x && b.y < o.y + o.h && b.y + b.h > o.y);
 const dotBox = (p, r) => ({ x: p.x - r, y: p.y - r, w: 2 * r, h: 2 * r });
@@ -204,6 +208,9 @@ function place(p, text, fs, priority) {
     [p.x - g - w, p.y - g - h, "end"], [p.x - g - w, p.y + g, "end"],
     [p.x + 2.6 * g, p.y - h / 2, "start"], [p.x - 2.6 * g - w, p.y - h / 2, "end"],
     [p.x - w / 2, p.y - 2.6 * g - h, "middle"], [p.x - w / 2, p.y + 2.6 * g, "middle"],
+    [p.x + 4.5 * g, p.y - h / 2, "start"], [p.x - 4.5 * g - w, p.y - h / 2, "end"],
+    [p.x + 3 * g, p.y + 2.2 * g, "start"], [p.x - 3 * g - w, p.y + 2.2 * g, "end"],
+    [p.x + 3 * g, p.y - 2.2 * g - h, "start"], [p.x - 3 * g - w, p.y - 2.2 * g - h, "end"],
   ];
   for (const [bx, by, anchor] of cand) {
     const b = { x: bx, y: by, w, h };
@@ -213,17 +220,48 @@ function place(p, text, fs, priority) {
     const tx = anchor === "start" ? bx : anchor === "end" ? bx + w : bx + w / 2;
     return { tx, ty: by + h * 0.78, anchor, box: b };
   }
-  return priority ? { tx: p.x + g, ty: p.y - 0.5 * S, anchor: "start", forced: true } : null;
+  if (priority) {
+    const b = { x: p.x + g, y: p.y - 0.5 * S - h * 0.78, w, h };
+    boxes.push(b);
+    return { tx: p.x + g, ty: p.y - 0.5 * S, anchor: "start", forced: true, box: b };
+  }
+  return null;
 }
 
 // --- svg ---
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
 const HALO = (fs) => `paint-order="stroke" stroke="#ffffff" stroke-width="${(0.22 * fs).toFixed(2)}" stroke-linejoin="round"`;
+// NYT panel anatomy (kam-priklauso standard): kicker / title / deck / hard
+// rule above the figure; legend + source line in a footer band below it.
+const deckLines = [];
+{
+  const words = DECK.split(/\s+/).filter(Boolean);
+  let line = "";
+  for (const w of words) {
+    if ((line + " " + w).trim().length > 78) { deckLines.push(line.trim()); line = w; }
+    else line = (line + " " + w).trim();
+  }
+  if (line) deckLines.push(line.trim());
+}
+const BAND = (KICKER || TITLE || DECK) ? (1.6 + 2.4 + deckLines.length * 1.55 + 1.5) * S : 0;
+const FOOT = 5.7 * S;
+const headerParts = [];
+if (BAND > 0) {
+  let ty = vy - BAND + 1.5 * S;
+  if (KICKER) headerParts.push(`<text x="${vx + 0.9 * S}" y="${ty}" fill="#666666" font-size="${0.95 * S}" letter-spacing="${0.14 * S}">${KICKER.toUpperCase()}</text>`);
+  ty += 2.3 * S;
+  if (TITLE) headerParts.push(`<text x="${vx + 0.9 * S}" y="${ty}" fill="#151515" font-size="${1.9 * S}" font-weight="bold">${TITLE}</text>`);
+  ty += 1.9 * S;
+  for (const dl of deckLines) { headerParts.push(`<text x="${vx + 0.9 * S}" y="${ty}" fill="#222222" font-size="${1.12 * S}">${dl}</text>`); ty += 1.55 * S; }
+  headerParts.push(`<rect x="${vx + 0.9 * S}" y="${(vy - 0.55 * S).toFixed(2)}" width="${vw - 1.8 * S}" height="${0.09 * S}" fill="#222222"/>`);
+}
 const head = [];
 head.push(
   `<?xml version="1.0" encoding="UTF-8"?>`,
-  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vx.toFixed(1)} ${vy.toFixed(1)} ${vw.toFixed(1)} ${vh.toFixed(1)}" font-family="Georgia, serif">`,
-  `<rect x="${vx}" y="${vy}" width="${vw}" height="${vh}" fill="#ffffff"/>`,
+  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vx.toFixed(1)} ${(vy - BAND).toFixed(1)} ${vw.toFixed(1)} ${(vh + BAND + FOOT).toFixed(1)}" font-family="Georgia, serif">`,
+  `<rect x="${vx}" y="${(vy - BAND).toFixed(1)}" width="${vw}" height="${(vh + BAND + FOOT).toFixed(1)}" fill="#ffffff"/>`,
+  `<clipPath id="maparea"><rect x="${vx}" y="${vy}" width="${vw}" height="${vh}"/></clipPath>`,
+  `<g clip-path="url(#maparea)">`,
 );
 for (const d of overlay.dioceses)
   head.push(`<path d="${d.path}" fill="${d.name === dioShort ? "#f0ece2" : "#f9f8f5"}"/>`);
@@ -231,8 +269,11 @@ head.push(`<path d="${overlay.borders}" fill="none" stroke="#c9c3b8" stroke-widt
 head.push(`<path d="${dio.path}" fill="none" stroke="${INK}" stroke-width="${0.3 * S}"/>`);
 // neighbor diocese names (subject diocese labeled below its shape)
 for (const d of overlay.dioceses)
-  if (d.name !== dioShort && inView(d.cx, d.cy, -2))
+  if (d.name !== dioShort && inView(d.cx, d.cy, -2)) {
+    const w = d.name.length * 0.8 * S + d.name.length * 0.12 * S;
+    if (d.cx - w / 2 < vx + 0.4 * S || d.cx + w / 2 > vx + vw - 0.4 * S) continue; // never clip a diocese name at the frame edge
     head.push(`<text x="${d.cx}" y="${d.cy}" text-anchor="middle" fill="${DIO}" font-size="${1.0 * S}" letter-spacing="${0.12 * S}">${esc(d.name.toUpperCase())}</text>`);
+  }
 head.push(`<text x="${dio.cx}" y="${Math.min(maxY + 1.6 * S, vy + vh - S)}" text-anchor="middle" fill="${DIO}" font-size="${1.0 * S}" letter-spacing="${0.14 * S}">${esc(dioceseFull.toUpperCase())}</text>`);
 
 const dots = [], labels = [];
@@ -254,8 +295,14 @@ dots.push(
   );
   boxes.push({ x: pos.anchor === "end" ? pos.tx - textW(line2, FS.subjectSub) : pos.tx, y: pos.ty + 0.3 * S, w: textW(line2, FS.subjectSub), h: FS.subjectSub * 1.3 });
 }
-// neighbors: dots always; labels per policy, collision-free
-for (const p of all) {
+// neighbors: dots always; labels per policy, collision-free.
+// Placement order decides who wins scarce space: canonical unresolved first
+// (a second ink dot must never go unexplained), then canonical, then registry.
+const labelOrder = [...all].sort((a, b) => {
+  const rank = (p) => (p.slug === SLUG ? 0 : p.tier === "canonical" && p.state === "unresolved" ? 1 : p.tier === "canonical" ? 2 : 3);
+  return rank(a) - rank(b);
+});
+for (const p of labelOrder) {
   if (p.slug === SLUG) continue;
   const col = COLOR[p.state];
   const r = 0.62 * S;
@@ -266,11 +313,23 @@ for (const p of all) {
       ? `<circle cx="${p.x}" cy="${p.y}" r="${r}" fill="#fff" stroke="${col}" stroke-width="${0.28 * S}"/>`
       : `<circle cx="${p.x}" cy="${p.y}" r="${r}" fill="${col}" stroke="#fff" stroke-width="${0.12 * S}"/>`,
   );
-  const wantLabel = p.tier === "canonical" || inSubjectBox(p.x, p.y);
-  if (!wantLabel) continue;
+  const inside = inSubjectBox(p.x, p.y);
+  const unresolvedPt = p.state === "unresolved";
+  // Label hierarchy (readability over completeness — the interactive site map
+  // carries every name): inside the subject diocese, everything is named;
+  // outside it, only canonical parishes (small, quiet) and unresolved cases
+  // (bold, never dropped). Out-of-diocese registry points stay context dots.
+  if (!inside && p.tier !== "canonical" && !unresolvedPt) continue;
   const cleanName = p.name.replace(new RegExp(`\\s*\\(${p.city}\\)$`), "");
+  if (/\(unnamed\)|\(record\)/i.test(cleanName)) continue; // a nameless record orients nobody — dot only
   const text = `${cleanName}${p.city && !cleanName.includes(p.city) ? ` · ${p.city}` : ""}`;
-  const pos = place(p, text, FS.small, false);
+  const major = inside || unresolvedPt;
+  let fs = major ? FS.small : FS.minor;
+  let pos = place(p, text, fs, false);
+  if (!pos && unresolvedPt) {
+    fs = 0.85 * fs;
+    pos = place(p, text, fs, false) ?? place(p, text, fs, true);
+  }
   if (pos) {
     if (pos.box) {
       const lx = Math.max(pos.box.x, Math.min(p.x, pos.box.x + pos.box.w));
@@ -279,9 +338,31 @@ for (const p of all) {
       if (d > 1.7 * S)
         labels.push(`<line x1="${p.x}" y1="${p.y}" x2="${lx}" y2="${ly}" stroke="${SEC}" stroke-width="${0.07 * S}" opacity="0.55"/>`);
     }
-    labels.push(`<text x="${pos.tx}" y="${pos.ty}" text-anchor="${pos.anchor}" fill="${p.tier === "canonical" ? INK : SEC}" font-size="${FS.small}" ${HALO(FS.small)}>${esc(text)}</text>`);
+    labels.push(`<text x="${pos.tx}" y="${pos.ty}" text-anchor="${pos.anchor}" fill="${major ? INK : "#4a4844"}" font-size="${fs}"${major ? ' font-weight="bold"' : ''} ${HALO(fs)}>${esc(text)}</text>`);
   }
 }
 
-writeFileSync(OUT, [...head, ...dots, ...labels, "</svg>"].join("\n"));
+// footer: legend row + source line, below the map
+const footerParts = [];
+{
+  const ly = vy + vh + 1.9 * S;
+  let lx = vx + 0.9 * S;
+  const items = [
+    ["unresolved", COLOR.unresolved, "solid"],
+    ["still standing", COLOR.active_parish, "open"],
+    ["closed", COLOR.closed, "solid"],
+    ["transferred", COLOR.transferred, "solid"],
+    ["registry record", COLOR.unverified, "solid"],
+  ];
+  for (const [label, col, kind] of items) {
+    footerParts.push(kind === "open"
+      ? `<circle cx="${lx}" cy="${ly - 0.34 * S}" r="${0.44 * S}" fill="#fff" stroke="${col}" stroke-width="${0.2 * S}"/>`
+      : `<circle cx="${lx}" cy="${ly - 0.34 * S}" r="${0.44 * S}" fill="${col}"/>`);
+    footerParts.push(`<text x="${lx + 0.8 * S}" y="${ly}" fill="#151515" font-size="${1.0 * S}">${label}</text>`);
+    lx += 0.8 * S + label.length * 0.62 * S + 1.9 * S;
+  }
+  footerParts.push(`<text x="${vx + 0.9 * S}" y="${(vy + vh + 3.5 * S).toFixed(2)}" fill="#777" font-size="${0.85 * S}">SaveOurLithuanianParishes.org unified registry · diocese boundaries from US Census county geometry</text>`);
+  footerParts.push(`<text x="${vx + 0.9 * S}" y="${(vy + vh + 4.7 * S).toFixed(2)}" fill="#777" font-size="${0.85 * S}">Some points sit at city center · the full interactive map: saveourlithuanianparishes.org</text>`);
+}
+writeFileSync(OUT, [...head, ...dots, ...labels, "</g>", ...headerParts, ...footerParts, "</svg>"].join("\n"));
 console.log(`OK: ${OUT} (${dioceseFull}; viewBox ${vw.toFixed(0)}x${vh.toFixed(0)} units; ${all.length} parish points)`);
