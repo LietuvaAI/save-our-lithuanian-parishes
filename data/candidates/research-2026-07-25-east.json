@@ -1,0 +1,121 @@
+{
+  "researched": "2026-07-25",
+  "parishes": [
+    {
+      "registry_slug": "st-francis-athol-ma",
+      "name": "St. Francis of Assisi (Šv. Pranciškaus)",
+      "city": "Athol, MA",
+      "current_status": "Still an active Catholic parish of the Diocese of Worcester. It is not independent: it is grouped with Our Lady Immaculate and St. Peter (Petersham) in the diocesan cluster now called the 'North Quabbin Catholic Community,' sharing clergy. As of the Diocese of Worcester's own parish finder, Sunday Mass (English) is held at St. Francis at 9:30 a.m.",
+      "closed_year": null,
+      "building_fate": "standing",
+      "current_use": "Active Catholic worship site, 101 Main St., Athol, MA; part of the North Quabbin Catholic Community grouping.",
+      "lithuanian_identity": "lost",
+      "summary": "Founded in 1913 for Lithuanian immigrants (church dedicated 1921), St. Francis is still a functioning Catholic parish today, but it is no longer an ethnic Lithuanian parish in any liturgical sense — no Lithuanian Mass or dedicated Lithuanian clergy remain. Its 2021 centennial coverage describes a small (112-member), English-language, increasingly Hispanic congregation; the Lithuanian founding is preserved only as remembered history (a sacristan showed visiting Lithuanian-government historians around in 2020) and in period stained glass/artwork, not in active practice.",
+      "confidence": "verified",
+      "sources": [
+        {"title": "Athol church reaches 100", "publisher": "The Catholic Free Press (Diocese of Worcester)", "url": "http://web.archive.org/web/20251218032119/https://catholicfreepress.org/news/athol-church-reaches-100", "date_accessed": "2026-07-25"},
+        {"title": "Parish Finder", "publisher": "Diocese of Worcester", "url": "https://www.worcesterdiocese.org/parishfinder", "date_accessed": "2026-07-25"},
+        {"title": "St. Francis of Assisi in Athol, MA", "publisher": "DiscoverMass", "url": "https://discovermass.com/church/st-francis-of-assisi-athol-ma/", "date_accessed": "2026-07-25"}
+      ]
+    },
+    {
+      "registry_slug": "casimir-worcester-ma",
+      "name": "St. Casimir (Šv. Kazimiero)",
+      "city": "Worcester, MA",
+      "current_status": "Closed as a Catholic parish. Merged into St. John Parish, Worcester, effective July 1, 2008 (last Mass said June 2009), despite parishioner appeals, a canon-law challenge, and a planned Vatican appeal. Distinct from Our Lady of Vilna (Aušros Vartų) parish, also in Worcester, which is a separate entity.",
+      "closed_year": "2008",
+      "building_fate": "repurposed_religious",
+      "current_use": "Sold by the Diocese of Worcester on Sept. 15, 2011 to The Church of the Pentecost USA, Inc. (a Christian charismatic denomination) for $650,000, along with the attached rectory and three house lots; the diocese removed Catholic sacred items before the sale. Net proceeds went to St. John Parish. The building still stands and is in active religious use by that congregation.",
+      "lithuanian_identity": "lost",
+      "summary": "St. Casimir, established 1894 to serve Worcester's Lithuanian (and Polish) Catholics, was one of five Worcester parishes closed by the Diocese of Worcester in 2008 citing priest shortages, suburban flight, and finances — over parishioner objections that it was financially viable. The church and rectory were sold in 2011 to The Church of the Pentecost, a Christian charismatic group, for $650,000; the building is standing and in religious use, but no longer Catholic or Lithuanian.",
+      "confidence": "verified",
+      "sources": [
+        {"title": "Final Chimes: St. Casimir Closes Despite Protests / Worcester Parishes Closing: an Emotional Toll (Telegram & Gazette, June 29, 2008, by Bronislaus B. Kush)", "publisher": "bishop-accountability.org (reproducing Telegram & Gazette)", "url": "https://www.bishop-accountability.org/news2008/05_06/2008_06_29_Kush_FinalChimes.htm", "date_accessed": "2026-07-25"},
+        {"title": "St. Casimir's Church sold", "publisher": "The Catholic Free Press (Diocese of Worcester)", "url": "http://web.archive.org/web/20250619025726/https://catholicfreepress.org/news/st-casimirs-church-sold", "date_accessed": "2026-07-25"},
+        {"title": "St. Casimir Church is Sold", "publisher": "Diocese of Worcester (official announcement)", "url": "http://web.archive.org/web/20240413073323/https://worcesterdiocese.org/news/st-casimir-church-is-sold", "date_accessed": "2026-07-25"}
+      ]
+    },
+    {
+      "registry_slug": "mary-custer-mi",
+      "name": "St. Mary (Švč. M. Marijos)",
+      "city": "Custer, MI",
+      "current_status": "Diocese confirmed as Diocese of Grand Rapids (not Gaylord). Still an active Catholic parish, now 'Saint Mary – Saint Jerome Parish, Custer' after Saint Jerome Parish (Scottville) was merged into it in 2012 following St. Jerome's closure. Current Mass times (per diocese): Sat 4 p.m., Sun 10 a.m., plus weekday Masses; canonical administrator listed as Rev. Jacob M. Zemaitis as of the diocese's parish-profile page.",
+      "closed_year": null,
+      "building_fate": "standing",
+      "current_use": "Active Catholic worship site at 85 S. Madison St., Custer, MI (the 1966 A-frame church).",
+      "lithuanian_identity": "lost",
+      "summary": "Lithuanian farm-colony settlement in Custer began around 1912; a parish was established in 1933 with Lithuanian priests, but per the Lithuanian government's own cultural-heritage record it 'never officially established its own ethnic parish' — it was always a territorial (not nationally-erected) parish. The 1966 A-frame church was designed by Lithuanian-American architect Jonas Mulokas and retains Lithuanian artistic elements (an altar with Lithuanian textile motifs, an Our Lady of Vilnius relief over the entrance, an Our Lady of Šiluva statue), but no Lithuanian Mass or organized Lithuanian community activity was found in any current source; the parish today is an ordinary English-language territorial parish merged with the former St. Jerome, Scottville.",
+      "confidence": "verified",
+      "sources": [
+        {"title": "Švč. Mergelės Marijos bažnyčia Kasteryje (St. Mary Church, Custer)", "publisher": "Lietuvos nacionalinis kultūros paveldo (Lithuanian National Commission for Cultural Heritage)", "url": "https://vkpk.lt/u-zemelapis/svc-mergeles-marijos-baznycia-kasteryje/", "date_accessed": "2026-07-25"},
+        {"title": "Saint Mary – Saint Jerome Parish, Custer", "publisher": "Diocese of Grand Rapids", "url": "http://web.archive.org/web/20250913105831/https://grdiocese.org/parishes-location/saint-mary-saint-james-parish-custer/", "date_accessed": "2026-07-25"},
+        {"title": "Custer/Ludington (MI) Lithuanian heritage sites", "publisher": "Global True Lithuania", "url": "https://global.truelithuania.com/custer-ludington-michigan-3901/", "date_accessed": "2026-07-25"}
+      ]
+    },
+    {
+      "registry_slug": "ignatius-luther-mi",
+      "name": "St. Ignatius (Šv. Ignaco)",
+      "city": "Luther, MI",
+      "current_status": "A church building exists and is in active liturgical use, but it is no longer an independent parish. Diocese of Grand Rapids records show it as the 'St. Ignatius Chapel,' a mission worship site of 'Saint Ann – Saint Ignatius Parish, Baldwin' (parish 'Established 1916 | Reestablished 2011'). Sunday Mass is listed at the chapel at 9:30 a.m. in the diocese's own parish profile.",
+      "closed_year": null,
+      "building_fate": "standing",
+      "current_use": "Active mission chapel of Saint Ann–Saint Ignatius Parish (Baldwin, MI), 701 State St., Luther, MI; used for regular Sunday Mass.",
+      "lithuanian_identity": "lost",
+      "summary": "Wolkovich (1998) records St. Ignatius, Luther, as identified 'Lithuanian' in a 1970 diocesan report answering an ethnic-makeup query, but gives no parish founding date or building history. The church still stands and holds regular Sunday Mass, but it lost independent-parish status when it was folded into Saint Ann Parish, Baldwin, in 2011 (the combined 'Saint Ann – Saint Ignatius Parish'); no evidence of any surviving Lithuanian Mass, identity, or heritage programming was found in diocesan or parish sources.",
+      "confidence": "verified",
+      "sources": [
+        {"title": "Chapel of St. Ignatius, Luther, Michigan, USA", "publisher": "GCatholic.org", "url": "https://gcatholic.org/churches/usa-06/26460", "date_accessed": "2026-07-25"},
+        {"title": "Saint Ann – Saint Ignatius Parish, Baldwin", "publisher": "Diocese of Grand Rapids", "url": "http://web.archive.org/web/20250911200630/https://grdiocese.org/parishes-location/saint-ann-saint-ignatius-parish-baldwin/", "date_accessed": "2026-07-25"}
+      ]
+    },
+    {
+      "registry_slug": "st-alphonsus-baltimore-md",
+      "name": "St. Alphonsus (Šv. Alfonso) / National Shrine of St. Alphonsus Liguori",
+      "city": "Baltimore, MD",
+      "current_status": "Still an active parish of the Archdiocese of Baltimore, now titled the 'National Shrine of St. Alphonsus Liguori.' It has been administered by the Priestly Fraternity of St. Peter (FSSP) since 2017 (Fr. Joel Kiefer, then; currently Fr. Ian Bozant, FSSP, pastor, per the parish's own site), offering the Traditional Latin Mass and an English Mass, while remaining canonically part of the archdiocese.",
+      "closed_year": null,
+      "building_fate": "standing",
+      "current_use": "Active Catholic parish/national shrine, 114 W. Saratoga St., Baltimore, MD.",
+      "lithuanian_identity": "lost",
+      "summary": "St. Alphonsus became Baltimore's Lithuanian national parish in 1917 after the German congregation dispersed, and for decades was, per a 2018 Draugas feature, 'the most impressive Lithuanian church on the U.S. East Coast.' A dedicated 8:30 a.m. Lithuanian Mass (celebrated by archdiocesan priest Fr. William Spacek) was still being offered as late as September 2017, when the archdiocese entrusted the shrine to the FSSP for the Latin Mass apostolate. However, Global True Lithuania's field survey states the Lithuanian Mass was 'canceled in 2017,' and no Lithuanian-language Mass appears on the parish's current published schedule (only Traditional Latin and English Masses) as of this research. This means the widely-assumed 'still active with Lithuanian Mass' status could NOT be confirmed for 2026 — the parish is alive and the building stands, but its dedicated Lithuanian liturgical identity appears to have lapsed since 2017; independent recent (2023-2026) confirmation of any occasional or informal Lithuanian Mass was not found.",
+      "confidence": "reported",
+      "sources": [
+        {"title": "St. Alphonsus Shrine entrusted to Priestly Fraternity of St. Peter", "publisher": "Catholic Review (Archdiocese of Baltimore)", "url": "https://catholicreview.org/st-alphonsus-shrine-entrusted-priestly-fraternity-st-peter/", "date_accessed": "2026-07-25"},
+        {"title": "Lietuviškas paveldas Baltimorėje – negausus, bet svarbus", "publisher": "Draugas", "url": "https://www.draugas.org/lietuviskas-paveldas-baltimoreje-negausus-bet-svarbus/", "date_accessed": "2026-07-25"},
+        {"title": "Baltimore, Maryland: Lithuanians and Lithuanian heritage", "publisher": "Global True Lithuania", "url": "https://global.truelithuania.com/baltimore-maryland-497/", "date_accessed": "2026-07-25"},
+        {"title": "National Shrine of Saint Alphonsus Liguori (parish website, Mass schedule)", "publisher": "stalphonsusbalt.org / FSSP", "url": "https://stalphonsusbalt.org/", "date_accessed": "2026-07-25"},
+        {"title": "St. Alphonsus Mass Times", "publisher": "CatholicMassTime.org", "url": "https://catholicmasstime.org/church/st-alphonsus/7295/", "date_accessed": "2026-07-25"}
+      ]
+    },
+    {
+      "registry_slug": "holyname-baltimore-md",
+      "name": "Unnamed Lithuanian parish, Baltimore (registry placeholder; no confirmed dedication name)",
+      "city": "Baltimore, MD",
+      "current_status": "not established — the existing registry entry is built on a single Jan. 2, 2010 Draugas mention describing a Lithuanian congregation as de facto closed, sharing a building with an 'American' parish, and reduced to one token Sunday Lithuanian Mass with no Lithuanian priest. Independent research could not identify a distinct Baltimore parish actually named or dedicated 'Holy Name' with a Lithuanian history. The only two independently documented Lithuanian-linked Catholic sites in Baltimore are: (1) St. John the Baptist parish (308 N. Paca St., Lithuanians' first dedicated parish, 1905-1916, then became an Italian parish, and the site is now St. Jude Shrine), and (2) St. Alphonsus/National Shrine of St. Alphonsus Liguori (Lithuanian parish since 1917, see separate entry above). The 2010 Draugas description of a token, priest-less Lithuanian Mass inside a building otherwise used by an 'American' parish does not clearly match either of those two documented histories, so this entry's specific identity remains unresolved from open sources.",
+      "closed_year": null,
+      "building_fate": "unknown",
+      "current_use": "not established",
+      "lithuanian_identity": "lost",
+      "summary": "This registry slug appears to be a placeholder for an unidentified Baltimore Lithuanian congregation, sourced only to a single 2010 Draugas mention already in the internal registry (not independently re-derived here — the archived PDF of that issue could not be full-text-searched with tools available). No secondary source (Wikipedia's Baltimore-Lithuanians summary, Global True Lithuania's Baltimore field survey, or the 2018 Draugas heritage feature) names a Baltimore parish called 'Holy Name' with Lithuanian ties. Given the strong overlap in described symptoms (token/no-priest Lithuanian Mass, building shared with an 'American' congregation), this may in fact be the same underlying community as St. Alphonsus at a particular low point, or it may be a distinct, smaller, undocumented mission — this could not be resolved and should be treated as an open research question rather than a confirmed separate parish.",
+      "confidence": "thin",
+      "sources": [
+        {"title": "History of Lithuanians in Baltimore (pointer only, followed to its own sources; not cited as authority)", "publisher": "Wikipedia / Kiddle summary", "url": "https://kids.kiddle.co/History_of_Lithuanians_in_Baltimore", "date_accessed": "2026-07-25"},
+        {"title": "Baltimore, Maryland: Lithuanians and Lithuanian heritage", "publisher": "Global True Lithuania", "url": "https://global.truelithuania.com/baltimore-maryland-497/", "date_accessed": "2026-07-25"},
+        {"title": "Lietuviškas paveldas Baltimorėje – negausus, bet svarbus", "publisher": "Draugas", "url": "https://www.draugas.org/lietuviskas-paveldas-baltimoreje-negausus-bet-svarbus/", "date_accessed": "2026-07-25"}
+      ]
+    }
+  ],
+  "divine_providence_clergy": {
+    "current_pastor": "Not formally named as of the most recent reporting (July 23, 2026). Fr. Tomas Miliauskas, MIC, who had led the parish since Dec. 6, 2021, left in May 2026. As of Archbishop Lionginas Virbalas SJ's pastoral visit on July 18-19, 2026, the Archdiocese of Detroit had 'not yet decided whether it would be appropriate to accept another priest from Lithuania.' The parish remains nominally part of the multi-parish 'Family Sent on Mission' In Solidum team (Fr. Jeffrey Scheeler, OFM, listed as Priest In Solidum and Moderator, per the Archdiocese of Detroit's own parish finder), but no dedicated Lithuanian-speaking pastor/administrator has been publicly announced. Note: the parish's own website (divineprovidencechurch.com) and the Archdiocese of Detroit's AOD Finder parish directory still listed Fr. Miliauskas as pastor/Priest In Solidum at time of this research — these appear to be stale/un-updated listings, contradicted by the more recent and specific Lithuanian-press reporting.",
+    "since": "Miliauskas's departure: May 2026. Status confirmed as of July 23, 2026 (laikmetis.lt) and via Archbishop Virbalas's July 18-19, 2026 visit to meet the parish council about its future amid the Archdiocese of Detroit's broader restructuring (the parish was named among at least 58 archdiocesan parishes that may lose weekend Mass under proposed restructuring models).",
+    "fr_tomas_whereabouts": "Not established. The July 23, 2026 laikmetis.lt report states only that he served at Divine Providence 'until May of this year' and does not say where he went. No Archdiocese of Detroit or Marian Fathers (Congregation of Marians of the Immaculate Conception) announcement of his reassignment was found.",
+    "confidence": "reported",
+    "sources": [
+      {"title": "Dar vienai lietuvių parapijai JAV gresia uždarymas", "publisher": "Laikmetis.lt", "url": "https://laikmetis.lt/dar-vienai-lietuviu-parapijai-jav-gresia-uzdarymas/", "date_accessed": "2026-07-25"},
+      {"title": "Divine Providence Parish, Southfield (parish profile / staff listing)", "publisher": "Archdiocese of Detroit (AOD Finder)", "url": "https://www.aodfinder.org/parishes/78", "date_accessed": "2026-07-25"},
+      {"title": "Archdiocese of Detroit clergy announcements: March 9, 2026", "publisher": "Detroit Catholic", "url": "https://www.detroitcatholic.com/news/archdiocese-of-detroit-clergy-announcements-march-9-2026", "date_accessed": "2026-07-25"},
+      {"title": "Reverend Tomas Miliauskas, MIC (original In Solidum appointment, effective Dec. 6, 2021)", "publisher": "Archdiocese of Detroit", "url": "https://www.aod.org/announcements-newsroom/official-announcements/2022/january/reverend-tomas-miliauskas-mic/", "date_accessed": "2026-07-25"},
+      {"title": "Divine Providence Church – Lithuanian Catholic Church (parish website, appears stale)", "publisher": "divineprovidencechurch.com", "url": "https://divineprovidencechurch.com/", "date_accessed": "2026-07-25"}
+    ]
+  }
+}

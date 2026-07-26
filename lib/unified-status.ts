@@ -31,16 +31,16 @@ export const IDENTITY_LABEL: Record<IdentityStatus, string> = {
 };
 
 export const IDENTITY_COLOR: Record<IdentityStatus, string> = {
-  active_parish: "var(--mark-standing)",
-  mass_continues: "var(--mark-ink)",
-  ethnically_transferred: "var(--mark-community)",
-  lost: "var(--mark-closed)",
+  active_parish: "var(--es-active)",
+  mass_continues: "var(--es-mass)",
+  ethnically_transferred: "var(--es-transferred)",
+  lost: "var(--es-closed)",
   unknown: "var(--muted)",
 };
 
 export const IDENTITY_TEXT: Record<IdentityStatus, string> = {
   active_parish: "#fff",
-  mass_continues: "var(--background)",
+  mass_continues: "#10261b",
   ethnically_transferred: "#1c1917",
   lost: "#fff",
   unknown: "var(--foreground)",
@@ -74,8 +74,8 @@ export const ALERT_LABEL: Record<AlertStatus, string> = {
 };
 
 export const ALERT_COLOR: Record<AlertStatus, string> = {
-  active_campaign: "var(--mark-closed)",
-  watched: "var(--mark-community)",
+  active_campaign: "var(--es-closed)",
+  watched: "var(--es-transferred)",
   building_at_risk: "var(--mark-building)",
   sustainability: "var(--mark-ink)",
   none: "transparent",
@@ -113,19 +113,19 @@ export const FATE_LABEL: Record<FateStatus, string> = {
 };
 
 export const FATE_COLOR: Record<FateStatus, string> = {
-  standing: "var(--mark-standing)",
-  demolished: "var(--mark-closed)",
-  repurposed_religious: "var(--mark-ink)",
-  repurposed_secular: "var(--mark-community)",
-  derelict: "var(--mark-community)",
+  standing: "var(--es-active)",
+  demolished: "var(--es-closed)",
+  repurposed_religious: "var(--es-closed)",
+  repurposed_secular: "var(--es-closed)",
+  derelict: "var(--es-unverified)",
   unknown: "var(--muted)",
 };
 
 export const FATE_TEXT: Record<FateStatus, string> = {
   standing: "#fff",
   demolished: "#fff",
-  repurposed_religious: "var(--background)",
-  repurposed_secular: "#1c1917",
+  repurposed_religious: "#fff",
+  repurposed_secular: "#fff",
   derelict: "#1c1917",
   unknown: "var(--foreground)",
 };

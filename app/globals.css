@@ -16,6 +16,16 @@
   --mark-ink: #151515;
   --mark-standing: #2d6a4f;
   --mark-building: #7C3AED;
+
+  /* End-state palette — the single status color system for every surface.
+     Five visual slots; the three loss sub-fates (closed / demolished /
+     repurposed) share --es-closed and are distinguished by label text.
+     CVD-validated against this surface (dataviz validator, 2026-07-25). */
+  --es-active: #2d6a4f;
+  --es-mass: #74a892;
+  --es-transferred: #d5c28b;
+  --es-closed: #7d1f1f;
+  --es-unverified: #b3aca2;
 }
 
 @theme inline {
@@ -43,6 +53,12 @@
     --mark-ink: #e7e5e4;
     --mark-standing: #52b788;
     --mark-building: #A78BFA;
+
+    --es-active: #52b788;
+    --es-mass: #2e7d5b;
+    --es-transferred: #d5c28b;
+    --es-closed: #c96a6a;
+    --es-unverified: #57534e;
   }
 }
 

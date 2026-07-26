@@ -1,270 +1,80 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import TimelineChart, {
   type TimelineRow,
-  type TimelineOutcome,
   type UndatedRow,
 } from "@/components/TimelineChart";
-import HistoryGrid, {
-  type HistoryParish,
-  type EndState,
-} from "@/components/HistoryGrid";
-import registry from "@/data/registry-unified.json";
+import CompositionBar from "@/components/CompositionBar";
+import { scopedParishes } from "@/lib/registry-scope";
 import {
-  parishes as libParishes,
-  type EndingMode,
-  BUILDING_FATE_LABEL,
-  type BuildingFate,
-  type LithuanianIdentity,
-} from "@/lib/parishes";
+  GROUP_ORDER,
+  toGroup,
+  isAlive,
+  isLoss,
+  type EndStateGroup,
+} from "@/lib/end-state";
+import { BUILDING_FATE_LABEL, type BuildingFate, parishes as libParishes } from "@/lib/parishes";
 
 export const metadata: Metadata = {
   title: "The History",
   description:
-    "A timeline of every Lithuanian parish in the United States — from the first founding in 1874 to the present day.",
+    "A timeline of every documented Lithuanian parish in the United States — from the first founding in the 1870s to the present day.",
 };
 
 // ---------------------------------------------------------------------------
-// Data types from registry-unified.json
+// Data builder (server-side; every figure derives from the shared scope)
 // ---------------------------------------------------------------------------
 
-interface RegParish {
-  slug: string;
-  names: { lt: string | null; en: string | null };
-  city: string;
-  state: string;
-  country: "US" | "CA";
-  comparator: boolean;
-  in_locked_scope: boolean;
-  c83_row: number | null;
-  locked?: {
-    ending_mode?: string;
-    year_founded?: string;
-    year_closed?: string;
-  };
-  years?: {
-    founded?: { value: string }[];
-    closed?: { value: string }[];
-  };
-  sources?: { ethnic_status?: string }[];
-  congregation_class?: string;
-  diocese?: string | null;
-}
-
-// ---------------------------------------------------------------------------
-// Helpers
-// ---------------------------------------------------------------------------
-
-function normalizeDiocese(raw: string | null | undefined): string | null {
-  if (!raw) return null;
-  // Strip parenthetical annotations
-  let d = raw.replace(/\s*\(.*\)$/, "").replace(/\s*\/.*$/, "").trim();
-  // Fix known variants
-  if (/bellevue/i.test(d)) d = "Diocese of Belleville";
-  if (/unspecified/i.test(raw)) return null;
-  return d || null;
-}
-
-function asYear(v: string | undefined | null): number | null {
-  const m = (v ?? "").match(/\b(1[89]\d{2}|20[0-2]\d)\b/);
-  return m ? parseInt(m[1]) : null;
-}
-
-function yearOf(
-  lockedVal: string | undefined,
-  arr: { value: string }[] | undefined,
-): number | null {
-  return asYear(lockedVal) ?? asYear(arr?.[0]?.value) ?? null;
-}
-
-function resolveOutcome(
-  endingMode: EndingMode | null,
-  hasClosed: boolean,
-  isStanding: boolean,
-): TimelineOutcome {
-  if (isStanding) return "standing";
-  if (endingMode === "diocese_closed") return "lost";
-  if (endingMode === "community_decided") return "community";
-  if (endingMode === "undecided") return "undecided";
-  if (hasClosed) return "lost";
-  return "unknown";
-}
-
-function fateDetail(buildingFate: string | undefined): string {
-  if (
-    buildingFate &&
-    buildingFate !== "unknown" &&
-    buildingFate !== "standing"
-  ) {
-    const label = BUILDING_FATE_LABEL[buildingFate as BuildingFate];
-    return label ? `Building ${label.toLowerCase()}` : "";
-  }
-  return "";
-}
-
-function resolveEndState(
-  identity: LithuanianIdentity | null,
-  buildingFate: BuildingFate | null,
-  hasClosed: boolean,
-  isStanding: boolean,
-): EndState {
-  // Active parishes
-  if (isStanding && identity === "active_parish") return "active_parish";
-  if (isStanding && identity === "mass_continues") return "mass_continues";
-  if (isStanding) return "active_parish"; // standing without identity detail
-
-  // Ethnically transferred (identity lost but community/building continues)
-  if (identity === "ethnically_transferred") return "transferred";
-
-  // Demolished building
-  if (buildingFate === "demolished") return "demolished";
-
-  // Repurposed (secular or religious)
-  if (
-    buildingFate === "repurposed_secular" ||
-    buildingFate === "repurposed_religious"
-  )
-    return "repurposed";
-
-  // Closed with known identity loss
-  if (identity === "lost") return "lost";
-
-  // Closed but no detailed classification yet
-  if (hasClosed) return "lost";
-
-  // No data
-  return "unverified";
-}
-
-// ---------------------------------------------------------------------------
-// Data builder (runs server-side at build/render time)
-// ---------------------------------------------------------------------------
-
-function buildData(): {
-  dated: TimelineRow[];
-  undated: UndatedRow[];
-  grid: HistoryParish[];
-  standing: number;
-  lost: number;
-  total: number;
-} {
-  const regs = (
-    registry as { parishes: RegParish[] }
-  ).parishes.filter(
-    (p) =>
-      p.country !== "CA" &&
-      p.congregation_class === "roman_catholic" &&
-      !/buenos aires|argentin|rosario/i.test(p.city ?? ""),
-  );
+function buildData() {
+  const all = scopedParishes();
 
   const dated: TimelineRow[] = [];
   const undated: UndatedRow[] = [];
-  const grid: HistoryParish[] = [];
+  const counts = {} as Record<EndStateGroup, number>;
+  for (const g of GROUP_ORDER) counts[g] = 0;
 
-  for (const p of regs) {
-    const lib =
-      p.c83_row != null ? libParishes[p.c83_row - 1] : undefined;
-    const libOk = lib && lib.city === p.city;
+  const fateBySlug = new Map(
+    libParishes.map((p) => [p.slug, p.buildingFate as BuildingFate | null]),
+  );
 
-    const founded = yearOf(p.locked?.year_founded, p.years?.founded);
-    const closed = yearOf(p.locked?.year_closed, p.years?.closed);
+  for (const p of all) {
+    counts[toGroup(p.endState)]++;
 
-    const slug = libOk ? lib.slug : p.slug;
-    const endingMode = libOk ? (lib.endingMode as EndingMode) : null;
+    const fate = fateBySlug.get(p.slug);
+    const detail =
+      fate && fate !== "unknown" && fate !== "standing"
+        ? `Building ${BUILDING_FATE_LABEL[fate].toLowerCase()}`
+        : "";
 
-    const isStanding = !!(
-      (endingMode === "standing" && !closed) ||
-      (!closed &&
-        libOk &&
-        (lib.lithuanianIdentity === "active_parish" ||
-          lib.lithuanianIdentity === "mass_continues"))
-    );
-
-    const outcome = resolveOutcome(endingMode, !!closed, isStanding);
-
-    const detail = libOk
-      ? fateDetail(lib.buildingFate ?? undefined)
-      : "";
-
-    const profileHref = libOk
-      ? `/parishes/${lib.slug}`
-      : p.c83_row == null
-        ? `/registry/${p.slug}`
-        : null;
-
-    const name = p.names.lt || p.names.en || p.slug;
-    const city = p.city.replace(/\s*[(;].*$/, "");
-
-    const identity = libOk
-      ? (lib.lithuanianIdentity as LithuanianIdentity | null)
-      : null;
-    const buildingFate = libOk
-      ? (lib.buildingFate as BuildingFate | null)
-      : null;
-
-    const endState = resolveEndState(
-      identity,
-      buildingFate,
-      !!closed,
-      isStanding,
-    );
-
-    // HistoryGrid data
-    grid.push({
-      slug,
-      name,
-      city,
-      state: p.state,
-      diocese: normalizeDiocese(p.diocese),
-      founded,
-      closed,
-      endState,
-      profileHref,
-    });
-
-    if (founded) {
+    if (p.founded) {
       dated.push({
-        slug,
-        name,
-        city,
+        slug: p.slug,
+        name: p.name,
+        city: p.city,
         state: p.state,
-        founded,
-        closed,
-        outcome,
+        founded: p.founded,
+        closed: p.closed,
+        endState: p.endState,
         detail,
-        profileHref,
+        profileHref: p.profileHref,
       });
     } else {
       undated.push({
-        slug,
-        name,
-        city,
+        slug: p.slug,
+        name: p.name,
+        city: p.city,
         state: p.state,
-        closed,
-        outcome,
-        profileHref,
+        closed: p.closed,
+        endState: p.endState,
+        profileHref: p.profileHref,
       });
     }
   }
 
-  const standing =
-    dated.filter((r) => r.outcome === "standing").length +
-    undated.filter((r) => r.outcome === "standing").length;
-  const lost =
-    dated.filter(
-      (r) => r.outcome === "lost" || r.outcome === "community",
-    ).length +
-    undated.filter(
-      (r) => r.outcome === "lost" || r.outcome === "community",
-    ).length;
+  const standing = all.filter((p) => isAlive(p.endState) && !p.closed).length;
+  const lost = all.filter((p) => isLoss(p.endState)).length;
 
-  return {
-    dated,
-    undated,
-    grid,
-    standing,
-    lost,
-    total: dated.length + undated.length,
-  };
+  return { dated, undated, counts, standing, lost, total: all.length };
 }
 
 // ---------------------------------------------------------------------------
@@ -272,30 +82,36 @@ function buildData(): {
 // ---------------------------------------------------------------------------
 
 export default function HistoryPage() {
-  const { dated, undated, grid, standing, lost, total } = buildData();
+  const { dated, undated, counts, standing, lost, total } = buildData();
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
-      <h1 className="font-serif text-3xl font-semibold">The History</h1>
+      <p className="text-xs uppercase tracking-widest text-muted">
+        The record · 1870s to today
+      </p>
+      <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
+        The History
+      </h1>
       <div className="mt-3 space-y-4 leading-relaxed max-w-3xl">
         <p>
-          Between the 1870s and 1960, Lithuanian immigrants founded over{" "}
-          {total}{" "}Catholic parishes across the United States &mdash; in
-          coal towns, factory cities, and urban neighborhoods from
-          Shenandoah to Chicago. Each line below is one parish. Where it
-          ends, it was closed. Where it reaches the right edge, it
-          survives.
+          Between the 1870s and 1960, Lithuanian immigrants founded the
+          {` ${total} `}Catholic parishes documented so far in this record
+          &mdash; in coal towns, factory cities, and urban neighborhoods from
+          Shenandoah to Chicago. Of them, at least {lost} have been closed.
         </p>
         <p
           className="font-serif text-lg"
-          style={{ color: "var(--mark-standing)" }}
+          style={{ color: "var(--es-active)" }}
         >
           {standing} still stand as Lithuanian parishes today.
         </p>
       </div>
 
       {/* ── The First Parish ── */}
-      <aside className="mt-8 max-w-3xl border-l-4 pl-5 py-3 space-y-2 text-sm leading-relaxed" style={{ borderColor: "var(--mark-ink)" }}>
+      <aside
+        className="mt-8 max-w-3xl border-l-4 pl-5 py-3 space-y-2 text-sm leading-relaxed"
+        style={{ borderColor: "var(--mark-ink)" }}
+      >
         <p className="font-serif text-base font-semibold">
           The first Lithuanian parish in America
         </p>
@@ -317,38 +133,60 @@ export default function HistoryPage() {
         </p>
       </aside>
 
-      <div className="mt-10">
-        <TimelineChart rows={dated} undated={undated} />
-      </div>
-
-      <section className="mt-12 max-w-3xl space-y-3 text-sm text-muted leading-relaxed">
-        <p>
-          {dated.length} parishes with known founding dates are shown in
-          the timeline; {undated.length} more without a known founding date
-          are shown as individual marks below it. Of the total {total}, at
-          least {lost} have been confirmed closed and {standing} survive as
-          Lithuanian parishes today.
+      {/* ── The exhibit: decade pulse + timeline (one title system) ── */}
+      <section className="mt-14">
+        <h2 className="font-serif text-2xl font-semibold">
+          A half-century of building; a half-century of closing
+        </h2>
+        <p className="mt-1 text-muted leading-relaxed max-w-3xl mb-6">
+          Above the line, parishes founded each decade; below it, in red,
+          parishes closed. Then every parish as one bar, from its founding
+          to its closure &mdash; or to today. Bars that fade out mark
+          parishes whose fate the record has not yet established.
         </p>
-        <p>
-          The peak decade of founding was the 1910s, when 58 Lithuanian
-          parishes were established across America. The peak decade of
-          closing was the 2000s, when 27 were closed. The pattern is not
-          slowing &mdash; it is the ongoing elimination of an ethnic
-          community&rsquo;s institutional infrastructure, one parish at a
-          time.
+        <TimelineChart rows={dated} undated={undated} />
+        <p className="mt-4 text-xs text-muted border-t border-rule pt-3">
+          Source: the unified parish registry &mdash; Draugas 1909&ndash;2026,
+          Wolkovich-Valkavičius (1998), Michelsonas (1961), Lukas (2009), and
+          the contemporary web survey. Dates resolve from locked figures
+          first, then earliest sourced reading.{" "}
+          <Link href="/about-the-data" className="underline hover:text-foreground">
+            About the data
+          </Link>
+          .
         </p>
       </section>
 
-      {/* ── By Diocese: End-State Grid ── */}
+      {/* ── Where they stand now: the composition ── */}
       <section className="mt-16">
-        <h2 className="font-serif text-2xl font-semibold mb-2">
-          Where Every Parish Ended Up
+        <h2 className="font-serif text-2xl font-semibold">
+          What remains, in one bar
         </h2>
-        <p className="text-muted leading-relaxed max-w-3xl mb-8">
-          The same {total} parishes, grouped by diocese and colored by what
-          happened to them. Click any parish to see its full record.
+        <p className="mt-1 text-muted leading-relaxed max-w-3xl mb-6">
+          All {total} documented parishes by where they stand today.
         </p>
-        <HistoryGrid parishes={grid} />
+        <CompositionBar counts={counts} />
+        <p className="mt-4 text-sm text-muted leading-relaxed max-w-3xl">
+          The full diocese-by-diocese picture &mdash; every parish, every
+          diocese, and how each diocese&rsquo;s Lithuanian parishes ended
+          &mdash; is on{" "}
+          <Link href="/by-diocese" className="underline hover:text-foreground">
+            By Diocese
+          </Link>
+          . Every parish links to its full record.
+        </p>
+      </section>
+
+      <section className="mt-12 max-w-3xl space-y-3 text-sm text-muted leading-relaxed">
+        <p>
+          {dated.length} parishes with known founding dates are shown in the
+          timeline; {undated.length} more without a known founding date are
+          shown as individual marks below it. The peak decades are computed
+          from the record and labeled directly on the chart. The pattern is
+          not slowing &mdash; it is the ongoing elimination of an ethnic
+          community&rsquo;s institutional infrastructure, one parish at a
+          time.
+        </p>
       </section>
     </div>
   );
