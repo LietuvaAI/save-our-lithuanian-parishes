@@ -2349,6 +2349,16 @@
       2010
      ],
      "importance": 2
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "repurposed",
+     "confidence": "verified",
+     "sourceUrl": "https://www.bishop-accountability.org/news2008/05_06/2008_06_29_Kush_FinalChimes.htm",
+     "ownership": "diocese_rc",
+     "surveyed": "2026-07-25"
     }
    ],
    "years": {
@@ -2435,7 +2445,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed",
    "diocese": "Diocese of Worcester"
   },
@@ -9325,6 +9335,16 @@
      "first_mention": "",
      "last_mention": "",
      "total_mentions": 0
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "unknown",
+     "confidence": "thin",
+     "sourceUrl": "https://kids.kiddle.co/History_of_Lithuanians_in_Baltimore",
+     "ownership": "diocese_rc",
+     "surveyed": "2026-07-25"
     }
    ],
    "years": {
@@ -9346,9 +9366,10 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 1,
+   "axes_count": 3,
    "record_depth": "case-filed",
-   "diocese": "Archdiocese of Baltimore"
+   "diocese": "Archdiocese of Baltimore",
+   "caveat": "Identity unresolved: built on a single 2010 Draugas mention of a de facto closed Lithuanian congregation sharing a building with an American parish. 2026 research could not establish it as distinct from St. Alphonsus (Lithuanian from 1917) or St. John the Baptist (1905–1916); it may be the St. Alphonsus community at a low point."
   },
   {
    "slug": "providence-scranton-pa",
@@ -9827,7 +9848,8 @@
    "congregation_class": "national_catholic_pncc",
    "axes_count": 1,
    "record_depth": "case-filed",
-   "diocese": "Diocese of Peoria"
+   "diocese": "Diocese of Peoria",
+   "caveat": "May describe the same congregation as the Holy Cross (Šv. Kryžiaus) Westville record — sources conflict on closure year (~1969 vs 1960–61). Reconciliation pending."
   },
   {
    "slug": "angels-darien-il",
@@ -12113,6 +12135,16 @@
      "statusFlags": [],
      "yearsMentioned": [],
      "importance": 2
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "standing",
+     "confidence": "verified",
+     "sourceUrl": "http://web.archive.org/web/20251218032119/https://catholicfreepress.org/news/athol-church-reaches-100",
+     "ownership": "diocese_rc",
+     "surveyed": "2026-07-25"
     }
    ],
    "years": {
@@ -13610,6 +13642,16 @@
       1972
      ],
      "importance": 3
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "standing",
+     "confidence": "reported",
+     "sourceUrl": "https://global.truelithuania.com/rockford-illinois-2279/",
+     "ownership": "diocese_rc",
+     "surveyed": "2026-07-25"
     }
    ],
    "years": {
@@ -13833,6 +13875,16 @@
      "convent": "",
      "cemetery": "",
      "diocese": "Archdiocese of Chicago (per Cis correspondence, AAChic cited) / possibly Peoria diocese (Skrypka transferred to Chicago's Holy Cross from here)"
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "closed",
+     "confidence": "reported",
+     "sourceUrl": "https://global.truelithuania.com/westville-illinois-2282/",
+     "ownership": "diocese_rc",
+     "surveyed": "2026-07-25"
     }
    ],
    "years": {
@@ -13856,6 +13908,11 @@
       "value": "1989-10-23",
       "source": "wolkovich",
       "cite": "Vol.3 p.108, p.109, p.110"
+     },
+     {
+      "value": "1990",
+      "source": "web-historical",
+      "cite": "The Catholic Post (Diocese of Peoria), 2014; St. Mary's Westville parish history"
      }
     ]
    },
@@ -13967,6 +14024,16 @@
      "convent": "",
      "cemetery": "",
      "diocese": "independent/separatist"
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "closed",
+     "confidence": "reported",
+     "sourceUrl": "https://global.truelithuania.com/westville-illinois-2282/",
+     "ownership": "diocese_rc",
+     "surveyed": "2026-07-25"
     }
    ],
    "years": {
@@ -14000,6 +14067,11 @@
       "value": "1956 (effectively, at death of last pastor Vipartas)",
       "source": "wolkovich",
       "cite": "Vol.3 p.110"
+     },
+     {
+      "value": "1961",
+      "source": "web-historical",
+      "cite": "dissolved c. 1960–61 after the death of Bishop Z. K. Vipartas"
      }
     ]
    },
@@ -14059,7 +14131,8 @@
    "congregation_class": "national_catholic_pncc",
    "axes_count": 3,
    "record_depth": "multi-source",
-   "diocese": "Diocese of Peoria"
+   "diocese": "Diocese of Peoria",
+   "caveat": "Independent sources describe Holy Cross itself as Westville's schismatic ('Old Catholic') congregation — the same kind of entity as the LNCC congregation documented separately, with conflicting closure years (1960–61 here; ~1969 there). The two records may describe one entity; reconciliation pending."
   },
   {
    "slug": "st-francis-youngstown-oh",
@@ -14716,6 +14789,16 @@
       2001
      ],
      "importance": 3
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "standing",
+     "confidence": "reported",
+     "sourceUrl": "https://www.loveoneanothermke.org/Campaign/Parish-Campaigns/Parish-Campaigns-2022-08-12T152056160/St.Peter.htm",
+     "ownership": "diocese_rc",
+     "surveyed": "2026-07-25"
     }
    ],
    "years": {
@@ -15199,6 +15282,16 @@
      "tier": 2,
      "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
      "rights": "in-copyright; cite + fair-use reproduction with attribution"
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "standing",
+     "confidence": "reported",
+     "sourceUrl": "https://catholicreview.org/st-alphonsus-shrine-entrusted-priestly-fraternity-st-peter/",
+     "ownership": "diocese_rc",
+     "surveyed": "2026-07-25"
     }
    ],
    "years": {
@@ -15245,10 +15338,11 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "multi-source",
    "diocese": "Archdiocese of Baltimore",
-   "description": "Former German parish transferred to Lithuanian community in 1917, documented with architectural history."
+   "description": "Former German parish transferred to Lithuanian community in 1917, documented with architectural history.",
+   "caveat": "The dedicated Lithuanian Mass is reported canceled in 2017 (Global True Lithuania; corroborated by absence from the current published schedule). Recent independent confirmation of any occasional Lithuanian Mass was not found."
   },
   {
    "slug": "st-john-the-baptist-baltimore-md",
@@ -15629,6 +15723,16 @@
      "statusFlags": [],
      "yearsMentioned": [],
      "importance": 3
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "standing",
+     "confidence": "verified",
+     "sourceUrl": "https://dcgary.org/parish/st-ann-dunes-beverly-shores",
+     "ownership": "diocese_rc",
+     "surveyed": "2026-07-25"
     }
    ],
    "years": {
@@ -15655,7 +15759,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 2,
+   "axes_count": 3,
    "record_depth": "multi-source",
    "diocese": "Diocese of Gary"
   },
@@ -16406,6 +16510,16 @@
       1966
      ],
      "importance": 3
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "standing",
+     "confidence": "verified",
+     "sourceUrl": "https://vkpk.lt/u-zemelapis/svc-mergeles-marijos-baznycia-kasteryje/",
+     "ownership": "diocese_rc",
+     "surveyed": "2026-07-25"
     }
    ],
    "years": {
@@ -16449,7 +16563,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 2,
+   "axes_count": 3,
    "record_depth": "multi-source",
    "diocese": "Diocese of Grand Rapids (unspecified in text)"
   },
@@ -16631,6 +16745,16 @@
      "convent": "",
      "cemetery": "",
      "diocese": "unspecified"
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-survey",
+     "tier": 4,
+     "currentStatus": "standing",
+     "confidence": "verified",
+     "sourceUrl": "https://gcatholic.org/churches/usa-06/26460",
+     "ownership": "diocese_rc",
+     "surveyed": "2026-07-25"
     }
    ],
    "years": {
@@ -16647,7 +16771,7 @@
     "needs_geocode": true
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 1,
+   "axes_count": 2,
    "record_depth": "single-source",
    "diocese": "Diocese of Grand Rapids"
   },
