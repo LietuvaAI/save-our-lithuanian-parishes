@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import registry from "@/data/registry-unified.json";
+import photosData from "@/data/photos.json";
 import {
   draugasCitationUrl,
   draugasArchiveUrl,
   getSituationByRegistrySlug,
   type Ownership,
 } from "@/lib/parishes";
-import { ClassifierGrid } from "@/components/ClassifierGrid";
 
 /* Research-record profile pages: every non-canonical parish in the unified
    registry gets a page built purely from cited source facts. No status
@@ -40,6 +41,8 @@ const AXIS_LABEL: Record<string, string> = {
     "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
   wolkovich:
     "Wolkovich-Valkavičius, Lithuanian Religious Life in America, Vol. 3 (1998)",
+  "lukas-2009":
+    "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
   "web-historical": "Contemporary web survey (2026)",
   truelithuania: "Global True Lithuania field survey",
 };
@@ -150,11 +153,12 @@ export default async function RegistryParishPage({
   const SOURCE_ORDER: Record<string, number> = {
     "wolkovich": 0,
     "michelsonas-1961": 1,
-    "draugas-registry-1909-2007": 2,
-    "draugas-2008-2026": 3,
-    "draugas-jubilee-implied": 4,
-    "web-historical": 5,
-    "truelithuania": 6,
+    "lukas-2009": 2,
+    "draugas-registry-1909-2007": 3,
+    "draugas-2008-2026": 4,
+    "draugas-jubilee-implied": 5,
+    "web-historical": 6,
+    "truelithuania": 7,
   };
   const sortedSources = [...p.sources].sort(
     (a: any, b: any) => (SOURCE_ORDER[a.axis] ?? 99) - (SOURCE_ORDER[b.axis] ?? 99)
@@ -219,17 +223,28 @@ export default async function RegistryParishPage({
         </span>
       </div>
 
-      {situation && (
-        <>
-          <p className="mt-5 text-lg leading-relaxed">{situation.situation}</p>
-          <div className="mt-5">
-            <ClassifierGrid
-              situation={situation}
-              ownership={ownership ?? "diocese_rc"}
-              coalRegion={false}
+      {(() => {
+        const photo = (photosData.parishes as Record<string, any>)[slug];
+        if (!photo) return null;
+        return (
+          <div className="mt-6 max-w-sm overflow-hidden rounded-lg border border-rule">
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              width={384}
+              height={256}
+              className="w-full h-auto object-cover"
             />
+            <p className="px-3 py-1.5 text-xs text-muted">
+              {photo.attribution}
+              {photo.license && <span> · {photo.license}</span>}
+            </p>
           </div>
-        </>
+        );
+      })()}
+
+      {situation && (
+        <p className="mt-5 text-lg leading-relaxed">{situation.situation}</p>
       )}
 
       {p.caveat && (
@@ -410,6 +425,41 @@ export default async function RegistryParishPage({
                           {s.pages ? `, ${s.pages}` : ""}
                         </>
                       )}
+                    </span>
+                  </span>
+                )}
+                {s.axis === "lukas-2009" && (
+                  <span className="block space-y-2">
+                    {s.description && (
+                      <span className="block leading-relaxed">
+                        {s.description}
+                      </span>
+                    )}
+                    {s.architect && (
+                      <span className="block text-xs">Architect: {s.architect}.</span>
+                    )}
+                    {s.address && (
+                      <span className="block text-xs">Address: {s.address}.</span>
+                    )}
+                    <span className="block text-xs">
+                      <a
+                        href="https://archyvas.ziburioltmokykla.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-accent"
+                      >
+                        Lukas, <em>Lietuvių Kultūrinis Paveldas Amerikoje</em> (2009)
+                      </a>
+                      {s.pages ? `, ${s.pages}` : ""}
+                      {" · "}
+                      <a
+                        href="https://archyvas.ziburioltmokykla.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-accent"
+                      >
+                        Žiburio archive →
+                      </a>
                     </span>
                   </span>
                 )}

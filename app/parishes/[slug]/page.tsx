@@ -4,21 +4,19 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { MarkIcon } from "@/components/marks";
-import { ClassifierGrid } from "@/components/ClassifierGrid";
 import registry from "@/data/registry-unified.json";
 import alertsData from "@/data/alerts.json";
+import photosData from "@/data/photos.json";
 import {
   parishes,
   draugasCitationUrl,
   getParishSituation,
   ENDING_MODE_LABEL,
   OWNERSHIP_LABEL,
-  STATUS_LABEL,
   INSTITUTION_TYPE_LABEL,
+  BUILDING_FATE_LABEL,
+  type BuildingFate,
 } from "@/lib/parishes";
-import { resolveAlertStatus, resolveIdentity, resolveFate } from "@/lib/unified-status";
-import { StatusPills } from "@/components/StatusPills";
 
 interface CaseSource {
   title: string;
@@ -60,7 +58,7 @@ function getScholarlySources(registrySlug: string | null): any[] {
   const entry = registryBySlug.get(registrySlug);
   if (!entry) return [];
   return entry.sources.filter(
-    (s: any) => s.axis === "wolkovich" || s.axis === "michelsonas-1961"
+    (s: any) => s.axis === "wolkovich" || s.axis === "michelsonas-1961" || s.axis === "lukas-2009"
   );
 }
 
@@ -78,6 +76,17 @@ function getSustainabilityWatch(slug: string) {
   return ((alertsData as any).sustainabilityWatch as any[]).find(
     (e) => e.parishLink === matchLink
   ) ?? null;
+}
+
+/** Look up a parish photo from data/photos.json by canonical slug. */
+function getParishPhoto(slug: string): {
+  src: string;
+  alt: string;
+  attribution: string;
+  license?: string;
+} | null {
+  const entry = (photosData.parishes as Record<string, any>)[slug];
+  return entry ?? null;
 }
 
 const CLERGY_LABEL: Record<string, string> = {
@@ -137,14 +146,31 @@ export default async function ParishPage({
   const { alert: parishAlert, campaign: parishCampaign } = getParishAlert(slug);
   const watchEntry = getSustainabilityWatch(slug);
 
-  const facts: [string, string][] = [
-    ["Status", STATUS_LABEL[parish.status]],
-    ["Founded", parish.yearFounded ? String(parish.yearFounded) : "Not established by the research"],
-    ["Closed", parish.yearClosed ? String(parish.yearClosed) : parish.status === "standing" ? "—" : "Not established by the research"],
-  ];
-  if (parish.comparator) {
-    facts.push(["Scope", "Canadian comparator — documented for contrast, outside the U.S. figures"]);
-  }
+  // Photo: prefer photos.json, fall back to sustainability-watch entry
+  const photosEntry = getParishPhoto(slug);
+  const photo = photosEntry
+    ? photosEntry
+    : watchEntry?.photo?.url
+      ? { src: watchEntry.photo.url, alt: watchEntry.photo.alt, attribution: watchEntry.photo.attribution, license: watchEntry.photo.license }
+      : null;
+
+  // Single status display — replaces the multi-badge soup
+  const statusDisplay = (() => {
+    if (parish.status === "standing") {
+      if (parish.lithuanianIdentity === "active_parish")
+        return { label: "Active Lithuanian parish", bg: "var(--mark-standing)", fg: "#fff" };
+      if (parish.lithuanianIdentity === "mass_continues")
+        return { label: "Lithuanian Mass continues", bg: "var(--mark-standing)", fg: "#fff" };
+      if (parish.lithuanianIdentity === "ethnically_transferred")
+        return { label: "Ethnically transferred", bg: "var(--mark-community)", fg: "#1c1917" };
+      return { label: "Active", bg: "var(--mark-standing)", fg: "#fff" };
+    }
+    if (parish.buildingFate === "demolished")
+      return { label: "Closed — demolished", bg: "var(--mark-building)", fg: "#fff" };
+    if (parish.buildingFate === "repurposed_secular" || parish.buildingFate === "repurposed_religious")
+      return { label: "Closed — repurposed", bg: "var(--mark-closed)", fg: "#fff" };
+    return { label: "Closed", bg: "var(--mark-closed)", fg: "#fff" };
+  })();
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
@@ -162,70 +188,92 @@ export default async function ParishPage({
         {parish.city}, {parish.state}
       </p>
 
-      <div className="mt-4 flex flex-wrap items-center gap-2">
-        <StatusPills
-          identity={resolveIdentity(parish.lithuanianIdentity)}
-          alert={resolveAlertStatus(
-            (parishAlert?.kind as "active" | "watch" | "building") ?? null,
-            !!watchEntry
-          )}
-          fate={resolveFate(parish.buildingFate)}
-        />
-      </div>
-      <div className="mt-2 flex flex-wrap items-center gap-2">
-        <span className="inline-flex items-center gap-1.5 rounded-full border border-rule px-3 py-1 text-sm font-medium">
-          <MarkIcon mode={parish.endingMode} size={12} />
-          {ENDING_MODE_LABEL[parish.endingMode]}
+      <div className="mt-4 flex flex-wrap items-center gap-3">
+        <span
+          className="rounded-full px-3.5 py-1 text-sm font-semibold"
+          style={{ background: statusDisplay.bg, color: statusDisplay.fg }}
+        >
+          {statusDisplay.label}
         </span>
-        <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
-          {INSTITUTION_TYPE_LABEL[parish.institutionType]}
-        </span>
+        {(parishAlert || watchEntry) && (
+          <span
+            className="rounded-full border-2 px-3 py-0.5 text-xs font-semibold"
+            style={{
+              borderColor: parishAlert ? "var(--mark-closed)" : "var(--mark-ink)",
+              color: parishAlert ? "var(--mark-closed)" : "var(--mark-ink)",
+            }}
+          >
+            {parishAlert
+              ? parishCampaign
+                ? "Active campaign"
+                : "Under threat"
+              : "Sustainability watch"}
+          </span>
+        )}
       </div>
 
-      {watchEntry?.photo?.url && (
+      {photo && (
         <div className="mt-6 max-w-sm overflow-hidden rounded-lg border border-rule">
           <Image
-            src={watchEntry.photo.url}
-            alt={watchEntry.photo.alt}
+            src={photo.src}
+            alt={photo.alt}
             width={384}
             height={256}
             className="w-full h-auto object-cover"
           />
           <p className="px-3 py-1.5 text-xs text-muted">
-            {watchEntry.photo.attribution}
-            {watchEntry.photo.license && (
-              <span> · {watchEntry.photo.license}</span>
+            {photo.attribution}
+            {photo.license && (
+              <span> · {photo.license}</span>
             )}
           </p>
         </div>
       )}
 
       {situation && (
-        <p className="mt-5 text-lg leading-relaxed">{situation.situation}</p>
+        <p className="mt-6 text-lg leading-relaxed">{situation.situation}</p>
       )}
 
-      {situation && (
-        <div className="mt-6">
-          <ClassifierGrid
-            situation={situation}
-            ownership={parish.ownership}
-            coalRegion={parish.coalRegion}
-          />
+      <dl className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-4 text-sm">
+        <div>
+          <dt className="text-xs uppercase tracking-wide text-muted">Founded</dt>
+          <dd className="mt-0.5">{parish.yearFounded ?? "Not established"}</dd>
         </div>
-      )}
-
-      <dl className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-x-8 gap-y-3 text-sm">
-        {facts.map(([label, value]) => (
-          <div key={label}>
-            <dt className="text-xs uppercase tracking-wide text-muted">{label}</dt>
-            <dd className="mt-0.5">{value}</dd>
+        {parish.status !== "standing" && (
+          <div>
+            <dt className="text-xs uppercase tracking-wide text-muted">Closed</dt>
+            <dd className="mt-0.5">{parish.yearClosed ?? "Not established"}</dd>
           </div>
-        ))}
+        )}
+        <div>
+          <dt className="text-xs uppercase tracking-wide text-muted">Decision</dt>
+          <dd className="mt-0.5">{ENDING_MODE_LABEL[parish.endingMode]}</dd>
+        </div>
+        {parish.buildingFate && parish.buildingFate !== "unknown" && parish.buildingFate !== "standing" && (
+          <div>
+            <dt className="text-xs uppercase tracking-wide text-muted">Building</dt>
+            <dd className="mt-0.5">{BUILDING_FATE_LABEL[parish.buildingFate as BuildingFate]}</dd>
+          </div>
+        )}
+        <div>
+          <dt className="text-xs uppercase tracking-wide text-muted">Ownership</dt>
+          <dd className="mt-0.5">{OWNERSHIP_LABEL[parish.ownership]}</dd>
+        </div>
+        <div>
+          <dt className="text-xs uppercase tracking-wide text-muted">Type</dt>
+          <dd className="mt-0.5">{INSTITUTION_TYPE_LABEL[parish.institutionType]}</dd>
+        </div>
+        {parish.comparator && (
+          <div className="col-span-full">
+            <dt className="text-xs uppercase tracking-wide text-muted">Scope</dt>
+            <dd className="mt-0.5">Canadian comparator — documented for contrast, outside the U.S. figures</dd>
+          </div>
+        )}
       </dl>
 
       {parishAlert && (
         <section
-          className="mt-8 rounded-lg border-2 px-4 py-3.5"
+          className="mt-10 rounded-lg border-2 px-4 py-3.5"
           style={{ borderColor: parishAlert.level === "red" ? "var(--mark-closed)" : "var(--color-amber-600)" }}
         >
           <p className="text-xs uppercase tracking-widest text-muted">
@@ -287,7 +335,7 @@ export default async function ParishPage({
       )}
 
       {watchEntry && (
-        <section className="mt-8 rounded-lg border border-rule overflow-hidden">
+        <section className="mt-10 rounded-lg border border-rule overflow-hidden">
           <div className="px-4 pt-3.5 pb-3">
             <p className="text-xs uppercase tracking-widest text-muted">
               Sustainability Watch
@@ -383,7 +431,7 @@ export default async function ParishPage({
 
       {parish.survivedReviewThenClosed && (
         <p
-          className="mt-8 rounded-lg border border-rule p-4 leading-relaxed"
+          className="mt-10 rounded-lg border border-rule p-4 leading-relaxed"
           style={{ borderLeft: "4px solid var(--mark-closed)" }}
         >
           This parish <strong>survived an earlier diocesan review</strong> —
@@ -394,14 +442,14 @@ export default async function ParishPage({
       )}
 
       {parish.notes && (
-        <section className="mt-8">
+        <section className="mt-10">
           <h2 className="font-serif text-xl font-semibold">From the record</h2>
           <p className="mt-2 leading-relaxed">{parish.notes}</p>
         </section>
       )}
 
       {scholarlySources.length > 0 && (
-        <section className="mt-8">
+        <section className="mt-10">
           <h2 className="font-serif text-xl font-semibold">Scholarly sources</h2>
           <p className="mt-2 text-sm text-muted leading-relaxed">
             Cross-referenced from published monographs that independently
@@ -411,6 +459,7 @@ export default async function ParishPage({
           <div className="mt-3 space-y-3">
             {scholarlySources.map((s: any, i: number) => {
               const isWolkovich = s.axis === "wolkovich";
+              const isLukas = s.axis === "lukas-2009";
               const hasDetail =
                 s.school || s.convent || s.cemetery ||
                 (s.diocese && !/^(none|unknown|unspecified)$/i.test(s.diocese));
@@ -420,7 +469,17 @@ export default async function ParishPage({
                   className="rounded-lg border border-rule px-4 py-3 text-sm"
                 >
                   <p className="font-medium">
-                    {isWolkovich ? (
+                    {isLukas ? (
+                      <a
+                        href="https://archyvas.ziburioltmokykla.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-accent"
+                      >
+                        Lukas,{" "}
+                        <em>Lietuvių Kultūrinis Paveldas Amerikoje</em> (2009)
+                      </a>
+                    ) : isWolkovich ? (
                       <a
                         href="https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
                         target="_blank"
@@ -449,6 +508,14 @@ export default async function ParishPage({
                       </span>
                     )}
                   </p>
+                  {isLukas && s.description && (
+                    <p className="mt-2 leading-relaxed text-muted">
+                      {s.description}
+                    </p>
+                  )}
+                  {isLukas && s.architect && (
+                    <p className="mt-1 text-muted">Architect: {s.architect}</p>
+                  )}
                   {s.ethnic_status &&
                     !/^(none|unknown|unspecified)$/i.test(s.ethnic_status) && (
                       <p className="mt-2 italic leading-relaxed text-muted">
@@ -471,6 +538,18 @@ export default async function ParishPage({
                       Note: {s.lens}
                     </p>
                   )}
+                  {isLukas && (
+                    <p className="mt-2 text-xs text-muted">
+                      <a
+                        href="https://archyvas.ziburioltmokykla.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-accent"
+                      >
+                        Available in the Žiburio archive →
+                      </a>
+                    </p>
+                  )}
                 </div>
               );
             })}
@@ -489,7 +568,7 @@ export default async function ParishPage({
       )}
 
       {caseRecord && (
-        <section className="mt-8">
+        <section className="mt-10">
           <h2 className="font-serif text-xl font-semibold">
             The present record
           </h2>
@@ -540,7 +619,7 @@ export default async function ParishPage({
         </section>
       )}
 
-      <section className="mt-8">
+      <section className="mt-10">
         <h2 className="font-serif text-xl font-semibold">
           Original Draugas coverage
         </h2>
