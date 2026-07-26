@@ -94,6 +94,11 @@ function isYearValue(v: string) {
   return /^\d{4}(-\d{2}(-\d{2})?)?$/.test(String(v).trim());
 }
 
+function asYearNum(v: string | undefined): number | null {
+  const m = (v ?? "").match(/\b(1[89]\d{2}|20[0-2]\d)\b/);
+  return m ? parseInt(m[1]) : null;
+}
+
 function sourceShortName(axis: string) {
   return AXIS_LABEL[axis]?.split(",")[0] ?? axis;
 }
@@ -168,6 +173,39 @@ export default async function RegistryParishPage({
   const axes = [...new Set(sortedSources.map((s: any) => s.axis))] as string[];
   const kind = communityKind(p.sources);
   const situation = getSituationByRegistrySlug(slug);
+
+  // The one-sentence story the page opens with: researched situation text
+  // where it exists, otherwise an honest sentence from the sourced facts.
+  const founded = asYearNum(p.years?.founded?.[0]?.value);
+  const closed = asYearNum(p.years?.closed?.[0]?.value);
+  const { dek, rest } = (() => {
+    // Algorithmic overlay entries carry filler ("minimal research details
+    // available") — a composed sentence from sourced facts beats it.
+    const raw = situation?.situation;
+    const t =
+      raw && !/minimal research details available/i.test(raw) ? raw : null;
+    if (t) {
+      const i = t.indexOf(". ");
+      if (i > 40 && i < t.length - 2)
+        return { dek: t.slice(0, i + 1), rest: t.slice(i + 2) };
+      return { dek: t, rest: null };
+    }
+    const f = founded ? `Founded ${founded}. ` : "";
+    if (kind === "settlement")
+      return {
+        dek: `${f}A Lithuanian community that worshipped together — documented in the record, though never a distinct national parish.`,
+        rest: null,
+      };
+    if (closed)
+      return {
+        dek: `${f}The record shows the parish closed in ${closed}; its fuller story is still being researched.`,
+        rest: null,
+      };
+    return {
+      dek: `${f}Attested in ${axes.length} ${axes.length === 1 ? "source" : "sources"}; its fate has not yet been established.`,
+      rest: null,
+    };
+  })();
   // Infer ownership from web-historical source if available
   const webSource = p.sources.find((s: any) => s.axis === "web-historical") as any;
   const ownership: Ownership | null =
@@ -191,6 +229,13 @@ export default async function RegistryParishPage({
         {p.state ? `, ${p.state}` : ""}
         {p.country === "CA" ? " (Canada)" : ""}
       </p>
+
+      <p className="mt-4 font-serif text-xl sm:text-2xl leading-snug max-w-2xl">
+        {dek}
+      </p>
+      {rest && (
+        <p className="mt-3 leading-relaxed max-w-2xl text-muted">{rest}</p>
+      )}
 
       <div className="mt-4 flex flex-wrap gap-1.5">
         <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium">
@@ -245,9 +290,6 @@ export default async function RegistryParishPage({
         );
       })()}
 
-      {situation && (
-        <p className="mt-5 text-lg leading-relaxed">{situation.situation}</p>
-      )}
 
       {(contextPoints.points as { slug: string; diocese: string | null; congregationClass: string | null }[]).some(
         (q) =>
