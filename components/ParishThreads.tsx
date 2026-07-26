@@ -383,8 +383,8 @@ export default function ParishThreads({
         </ul>
       )}
 
-      <div className="lg:flex lg:gap-5 lg:items-start">
-      <div className="overflow-x-auto lg:flex-1 lg:min-w-0">
+      <div className="xl:flex xl:gap-8 xl:items-start">
+      <div className="overflow-x-auto xl:flex-1 xl:min-w-0">
         <svg
           viewBox={`0 0 ${W} ${model.H}`}
           className="w-full h-auto"
@@ -592,7 +592,7 @@ export default function ParishThreads({
       </div>
 
       {/* ── Side panel: the parishes inside the clicked band ── */}
-      <aside className="mt-4 lg:mt-0 lg:w-80 lg:shrink-0 lg:sticky lg:top-4">
+      <aside className="mt-4 xl:mt-0 xl:w-72 xl:shrink-0 xl:sticky xl:top-4">
         {open ? (
           <div className="rounded-lg border border-rule overflow-hidden">
             <div className="flex items-center justify-between gap-3 px-4 py-2.5 border-b border-rule bg-foreground/[0.02]">
