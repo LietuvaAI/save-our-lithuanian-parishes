@@ -152,8 +152,14 @@ export default function HistoryPage() {
           Lithuanian immigrants founded the{` ${total} `}Catholic parishes
           documented so far in this record &mdash; most between the 1870s and
           1960, in coal towns, factory cities, and urban neighborhoods from
-          Shenandoah to Chicago, with the latest as recent as the 1990s. Of
-          them, at least {lost} have been closed.
+          Shenandoah to Chicago, with the latest as recent as the 1990s.
+        </p>
+        <p>
+          Of the {total}, {lost} are closed. {closedFates.demolished} of
+          their churches have been demolished;{" "}
+          {closedFates.religious + closedFates.secular} were sold on &mdash;{" "}
+          {closedFates.religious} to other congregations, {closedFates.secular}{" "}
+          to secular use.
         </p>
         <p
           className="font-serif text-lg"
@@ -175,14 +181,6 @@ export default function HistoryPage() {
           record; click a band to list its parishes.
         </p>
         <ParishThreads parishes={threads} />
-        <p className="mt-5 text-sm leading-relaxed max-w-3xl">
-          Of the {total} parishes documented so far, {lost} are closed.{" "}
-          {closedFates.demolished} of their churches have been demolished;{" "}
-          {closedFates.religious + closedFates.secular} were sold on &mdash;{" "}
-          {closedFates.religious} to other congregations,{" "}
-          {closedFates.secular} to secular use. {standing} parishes still
-          stand as Lithuanian parishes today.
-        </p>
       </section>
 
       {/* ── The First Parish ── */}

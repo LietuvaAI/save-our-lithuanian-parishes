@@ -249,6 +249,7 @@ export default function ParishThreads({
 
     const bandMembers = new Map<string, ThreadParish[]>(termMembers);
     for (const g of groups) bandMembers.set(`g:${g}`, byGroup.get(g)!);
+    for (const k of decadeKeys) bandMembers.set(`dec:${k}`, decades.get(k)!);
 
     return {
       decadeLayout,
@@ -316,9 +317,13 @@ export default function ParishThreads({
 
   const openLabel = open?.startsWith("fate:")
     ? FATE_LABEL[open.slice(5) as FateKey]
-    : open
-      ? GROUP_LABEL[open.slice(2) as EndStateGroup]
-      : null;
+    : open?.startsWith("dec:")
+      ? open.slice(4) === "Undated"
+        ? "Founding year not established"
+        : `Founded in the ${open.slice(4)}`
+      : open
+        ? GROUP_LABEL[open.slice(2) as EndStateGroup]
+        : null;
   const openMembers = open ? (model.bandMembers.get(open) ?? []) : [];
 
   return (
@@ -379,11 +384,12 @@ export default function ParishThreads({
         </ul>
       )}
 
-      <div className="overflow-x-auto">
+      <div className="lg:flex lg:gap-5 lg:items-start">
+      <div className="overflow-x-auto lg:flex-1 lg:min-w-0">
         <svg
           viewBox={`0 0 ${W} ${model.H}`}
           className="w-full h-auto"
-          style={{ minWidth: 820 }}
+          style={{ minWidth: 780 }}
           role="img"
           aria-label={`Each of the ${model.total} documented parishes as one thread, from its founding decade to its present end state; closed parishes thread on to their building's fate.`}
         >
@@ -403,8 +409,11 @@ export default function ParishThreads({
                 className="cursor-pointer"
                 onMouseEnter={() => setHot(`dec:${d.key}`)}
                 onMouseLeave={() => setHot(null)}
+                onClick={() =>
+                  setOpen((o) => (o === `dec:${d.key}` ? null : `dec:${d.key}`))
+                }
               >
-                <title>{`${d.key === "Undated" ? "Founding year not established" : `Founded in the ${d.key}`}: ${d.count}`}</title>
+                <title>{`${d.key === "Undated" ? "Founding year not established" : `Founded in the ${d.key}`}: ${d.count} — click to list`}</title>
               </rect>
               <text
                 x={X_DEC - 8}
@@ -577,53 +586,64 @@ export default function ParishThreads({
         </svg>
       </div>
 
-      {/* ── The parishes inside the clicked band ── */}
-      {open && (
-        <div className="mt-4 rounded-lg border border-rule overflow-hidden">
-          <div className="flex items-center justify-between gap-3 px-4 py-2.5 border-b border-rule bg-foreground/[0.02]">
-            <p className="font-serif font-semibold">
-              {openLabel}
-              <span className="ml-2 text-sm font-sans font-normal text-muted">
-                {openMembers.length}{" "}
-                {openMembers.length === 1 ? "parish" : "parishes"}
-              </span>
-            </p>
-            <button
-              type="button"
-              onClick={() => setOpen(null)}
-              className="text-sm text-muted hover:text-foreground"
-              aria-label="Close list"
-            >
-              ✕
-            </button>
-          </div>
-          <ul className="grid sm:grid-cols-2 gap-x-6 divide-y divide-rule sm:divide-y-0 px-4 py-2 text-sm">
-            {openMembers.map((m) => (
-              <li
-                key={m.slug}
-                className="py-1.5 flex items-baseline gap-2"
-              >
-                {m.href ? (
-                  <Link
-                    href={m.href}
-                    className="font-medium underline decoration-rule underline-offset-2 hover:decoration-inherit min-w-0 truncate"
-                  >
-                    {m.name}
-                  </Link>
-                ) : (
-                  <span className="font-medium min-w-0 truncate">{m.name}</span>
-                )}
-                <span className="text-xs text-muted whitespace-nowrap">
-                  {m.city}, {m.state}
-                  {m.founded || m.closed
-                    ? ` · ${m.founded ?? "?"}–${m.closed ?? (toGroup(m.endState) === "closed" ? "?" : "present")}`
-                    : ""}
+      {/* ── Side panel: the parishes inside the clicked band ── */}
+      <aside className="mt-4 lg:mt-0 lg:w-80 lg:shrink-0 lg:sticky lg:top-4">
+        {open ? (
+          <div className="rounded-lg border border-rule overflow-hidden">
+            <div className="flex items-center justify-between gap-3 px-4 py-2.5 border-b border-rule bg-foreground/[0.02]">
+              <p className="font-serif font-semibold text-sm leading-snug">
+                {openLabel}
+                <span className="ml-2 font-sans font-normal text-muted">
+                  · {openMembers.length}
                 </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+              </p>
+              <button
+                type="button"
+                onClick={() => setOpen(null)}
+                className="text-sm text-muted hover:text-foreground"
+                aria-label="Close list"
+              >
+                ✕
+              </button>
+            </div>
+            <ul className="px-4 py-2 text-sm max-h-[26rem] overflow-y-auto divide-y divide-rule/60">
+              {openMembers.map((m) => (
+                <li key={m.slug} className="py-1.5">
+                  {m.href ? (
+                    <Link
+                      href={m.href}
+                      className="font-medium underline decoration-rule underline-offset-2 hover:decoration-inherit"
+                    >
+                      {m.name}
+                    </Link>
+                  ) : (
+                    <span className="font-medium">{m.name}</span>
+                  )}
+                  <span className="block text-xs text-muted">
+                    {m.city}, {m.state}
+                    {m.founded || m.closed
+                      ? ` · ${m.founded ?? "?"}–${m.closed ?? (toGroup(m.endState) === "closed" ? "?" : "present")}`
+                      : ""}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : (
+          <div className="rounded-lg border border-dashed border-rule px-4 py-4 text-sm text-muted leading-relaxed">
+            <p className="font-medium text-foreground">
+              The parishes behind each flow
+            </p>
+            <p className="mt-1">
+              Click any colored band &mdash; an end state on the right, the
+              Closed node, or a founding decade&rsquo;s threads &mdash; and
+              the parishes inside it appear here, each linking to its full
+              record.
+            </p>
+          </div>
+        )}
+      </aside>
+      </div>
 
       {/* Accessible data table (visually hidden) */}
       <table className="sr-only">

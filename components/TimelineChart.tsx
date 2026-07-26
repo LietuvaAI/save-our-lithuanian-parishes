@@ -72,9 +72,11 @@ function truncName(name: string, max = 32): string {
 function DecadePulse({
   rows,
   undated,
+  onNote,
 }: {
   rows: TimelineRow[];
   undated: UndatedRow[];
+  onNote?: (note: string | null) => void;
 }) {
   const decades = useMemo(() => {
     const map = new Map<number, { founded: number; closed: number }>();
@@ -151,8 +153,24 @@ function DecadePulse({
         const cx = (xScale(decade) + xScale(decade + 10)) / 2;
         const x0 = cx - colW / 2;
         return (
-          <g key={decade}>
+          <g
+            key={decade}
+            onMouseEnter={() =>
+              onNote?.(
+                `${decade}s — ${founded} ${founded === 1 ? "parish" : "parishes"} founded · ${closed} closed`,
+              )
+            }
+            onMouseLeave={() => onNote?.(null)}
+          >
             <title>{`${decade}s — ${founded} founded · ${closed} closed`}</title>
+            {/* Invisible hover strip so the whole decade column responds */}
+            <rect
+              x={x0 - 2}
+              y={0}
+              width={colW + 4}
+              height={H}
+              fill="transparent"
+            />
             {founded > 0 && (
               <rect
                 x={x0}
@@ -222,6 +240,15 @@ export default function TimelineChart({
   const [hovered, setHovered] = useState<(TimelineRow | UndatedRow) | null>(
     null,
   );
+  const [note, setNote] = useState<string | null>(null);
+  const [legendHot, setLegendHot] = useState<string | null>(null);
+
+  const rowDimmed = (row: TimelineRow | UndatedRow) => {
+    if (!legendHot) return false;
+    if (legendHot === "demolished-glyph")
+      return row.endState !== "demolished";
+    return toGroup(row.endState) !== legendHot;
+  };
 
   const sorted = useMemo(
     () =>
@@ -275,10 +302,12 @@ export default function TimelineChart({
               </span>
             )}
           </span>
+        ) : note ? (
+          <span className="font-medium">{note}</span>
         ) : (
           <span className="text-muted">
             Hover over a parish to see its story. Click to open its full
-            record.
+            record. Hover the legend to pick out one end state.
           </span>
         )}
       </div>
@@ -286,7 +315,7 @@ export default function TimelineChart({
       <div className="overflow-x-auto mt-3">
         <div style={{ minWidth: 700 }}>
           {/* ── Decade pulse ── */}
-          <DecadePulse rows={rows} undated={undated} />
+          <DecadePulse rows={rows} undated={undated} onNote={setNote} />
 
           {/* ── Timeline ── */}
           <svg
@@ -409,7 +438,15 @@ export default function TimelineChart({
                         ? "url(#fadeOut)"
                         : END_STATE_COLOR[group]
                     }
-                    opacity={isHov ? 1 : alive ? 0.95 : 0.85}
+                    opacity={
+                      rowDimmed(row)
+                        ? 0.06
+                        : isHov
+                          ? 1
+                          : alive
+                            ? 0.95
+                            : 0.85
+                    }
                     rx={1.5}
                   />
                   {/* Demolished buildings end in an ×: the parish closed AND
@@ -418,7 +455,7 @@ export default function TimelineChart({
                     <g
                       stroke="var(--foreground)"
                       strokeWidth={1.1}
-                      opacity={isHov ? 1 : 0.75}
+                      opacity={rowDimmed(row) ? 0.06 : isHov ? 1 : 0.75}
                     >
                       <line x1={xEnd - 1} y1={yOff + 1.5} x2={xEnd + 4} y2={yOff + h - 1.5} />
                       <line x1={xEnd - 1} y1={yOff + h - 1.5} x2={xEnd + 4} y2={yOff + 1.5} />
@@ -435,6 +472,7 @@ export default function TimelineChart({
                       fontSize={7.5}
                       fontWeight={600}
                       fill={END_STATE_TEXT[group]}
+                      opacity={rowDimmed(row) ? 0.06 : 1}
                     >
                       {`${row.city}, ${row.state}`}
                     </text>
@@ -446,10 +484,17 @@ export default function TimelineChart({
         </div>
       </div>
 
-      {/* ── Legend ── */}
+      {/* ── Legend — hover an entry to pick out that end state ── */}
       <div className="mt-5 flex flex-wrap gap-x-4 gap-y-1.5 text-sm">
         {GROUP_ORDER.map((g) => (
-          <span key={g} className="inline-flex items-center gap-1.5">
+          <span
+            key={g}
+            className={`inline-flex items-center gap-1.5 cursor-default rounded px-1 -mx-1 transition-opacity ${
+              legendHot && legendHot !== g ? "opacity-40" : ""
+            }`}
+            onMouseEnter={() => setLegendHot(g)}
+            onMouseLeave={() => setLegendHot(null)}
+          >
             <span
               className="inline-block w-3.5 h-3.5 rounded-sm"
               style={
@@ -464,7 +509,13 @@ export default function TimelineChart({
             {g === "unverified" ? "Record goes quiet — not yet verified" : GROUP_LABEL[g]}
           </span>
         ))}
-        <span className="inline-flex items-center gap-1.5">
+        <span
+          className={`inline-flex items-center gap-1.5 cursor-default rounded px-1 -mx-1 transition-opacity ${
+            legendHot && legendHot !== "demolished-glyph" ? "opacity-40" : ""
+          }`}
+          onMouseEnter={() => setLegendHot("demolished-glyph")}
+          onMouseLeave={() => setLegendHot(null)}
+        >
           <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden>
             <rect x="0" y="2" width="9" height="10" rx="1.5" fill="var(--es-closed)" opacity="0.85" />
             <g stroke="var(--foreground)" strokeWidth="1.3" opacity="0.8">
@@ -488,7 +539,10 @@ export default function TimelineChart({
               <span
                 key={u.slug}
                 className="inline-block w-3.5 h-3.5 rounded-sm cursor-pointer border border-rule/30"
-                style={{ background: END_STATE_COLOR[toGroup(u.endState)] }}
+                style={{
+                  background: END_STATE_COLOR[toGroup(u.endState)],
+                  opacity: rowDimmed(u) ? 0.1 : 1,
+                }}
                 title={`${u.name} — ${u.city}, ${u.state} · ${END_STATE_LABEL[u.endState]}${u.closed ? ` (closed ${u.closed})` : ""}`}
                 onMouseEnter={() => setHovered(u)}
                 onMouseLeave={() => setHovered(null)}
