@@ -3,17 +3,20 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import {
+  type EndState,
+  END_STATE_COLOR,
+  END_STATE_LABEL,
+  END_STATE_TEXT,
+  GROUP_ORDER,
+  GROUP_LABEL,
+  toGroup,
+  isAlive,
+} from "@/lib/end-state";
 
 // ---------------------------------------------------------------------------
 // Types
 // ---------------------------------------------------------------------------
-
-export type TimelineOutcome =
-  | "lost"
-  | "community"
-  | "standing"
-  | "undecided"
-  | "unknown";
 
 export interface TimelineRow {
   slug: string;
@@ -22,7 +25,7 @@ export interface TimelineRow {
   state: string;
   founded: number;
   closed: number | null;
-  outcome: TimelineOutcome;
+  endState: EndState;
   detail: string;
   profileHref: string | null;
 }
@@ -33,41 +36,175 @@ export interface UndatedRow {
   city: string;
   state: string;
   closed: number | null;
-  outcome: TimelineOutcome;
+  endState: EndState;
   profileHref: string | null;
 }
 
 // ---------------------------------------------------------------------------
-// Layout constants
+// Shared year scale — the decade pulse and the timeline read as one exhibit
+// because they share the same x axis.
 // ---------------------------------------------------------------------------
 
 const YEAR_MIN = 1870;
 const YEAR_MAX = 2026;
+const NAME_W = 210;
+const CHART_W = 700;
+const M = { top: 26, right: 10, bottom: 8 };
+const TOTAL_W = NAME_W + CHART_W + M.right;
+
 const BAR_H = 10;
 const BAR_GAP = 2;
 const STEP = BAR_H + BAR_GAP;
-const NAME_W = 180;
-const CHART_W = 720;
-const M = { top: 24, right: 8, bottom: 8 };
 
-const OUTCOME_COLOR: Record<TimelineOutcome, string> = {
-  lost: "var(--mark-closed)",
-  community: "var(--mark-community)",
-  standing: "var(--mark-standing)",
-  undecided: "var(--muted)",
-  unknown: "var(--muted)",
-};
+function xScale(year: number) {
+  return NAME_W + ((year - YEAR_MIN) / (YEAR_MAX - YEAR_MIN)) * CHART_W;
+}
 
-const OUTCOME_LABEL: Record<TimelineOutcome, string> = {
-  lost: "Closed",
-  community: "Community-decided ending",
-  standing: "Still standing",
-  undecided: "Unresolved",
-  unknown: "Outcome unknown",
-};
+function truncName(name: string, max = 26): string {
+  return name.length > max ? name.slice(0, max - 1) + "…" : name;
+}
 
-function truncName(name: string, max = 28): string {
-  return name.length > max ? name.slice(0, max - 1) + "\u2026" : name;
+// ---------------------------------------------------------------------------
+// Decade pulse — founded per decade rise above the line; closures sink below.
+// The two waves of the story in one glance, on the same axis as the timeline.
+// ---------------------------------------------------------------------------
+
+function DecadePulse({
+  rows,
+  undated,
+}: {
+  rows: TimelineRow[];
+  undated: UndatedRow[];
+}) {
+  const decades = useMemo(() => {
+    const map = new Map<number, { founded: number; closed: number }>();
+    for (let d = 1870; d <= 2020; d += 10) map.set(d, { founded: 0, closed: 0 });
+    for (const r of rows) {
+      const fd = Math.floor(r.founded / 10) * 10;
+      if (map.has(fd)) map.get(fd)!.founded++;
+      if (r.closed) {
+        const cd = Math.floor(r.closed / 10) * 10;
+        if (map.has(cd)) map.get(cd)!.closed++;
+      }
+    }
+    for (const u of undated) {
+      if (u.closed) {
+        const cd = Math.floor(u.closed / 10) * 10;
+        if (map.has(cd)) map.get(cd)!.closed++;
+      }
+    }
+    return [...map.entries()].map(([decade, c]) => ({ decade, ...c }));
+  }, [rows, undated]);
+
+  const maxV = Math.max(
+    ...decades.map((d) => Math.max(d.founded, d.closed)),
+    1,
+  );
+  const peakF = decades.reduce((a, b) => (b.founded > a.founded ? b : a));
+  const peakC = decades.reduce((a, b) => (b.closed > a.closed ? b : a));
+
+  const H_HALF = 72;
+  const H = H_HALF * 2 + 34;
+  const zero = 17 + H_HALF;
+  const vh = (n: number) => (n / maxV) * (H_HALF - 14);
+  const colW = (CHART_W / ((YEAR_MAX - YEAR_MIN) / 10)) - 4;
+
+  return (
+    <svg
+      viewBox={`0 0 ${TOTAL_W} ${H}`}
+      className="w-full h-auto"
+      style={{ minWidth: "700px" }}
+      role="img"
+      aria-label="Parishes founded and closed per decade"
+    >
+      {/* Direction captions in the left gutter */}
+      <text
+        x={NAME_W - 10}
+        y={zero - 26}
+        textAnchor="end"
+        fontSize={9.5}
+        fill="var(--muted)"
+      >
+        founded ↑
+      </text>
+      <text
+        x={NAME_W - 10}
+        y={zero + 32}
+        textAnchor="end"
+        fontSize={9.5}
+        fill="var(--muted)"
+      >
+        closed ↓
+      </text>
+
+      {/* Zero line */}
+      <line
+        x1={NAME_W}
+        y1={zero}
+        x2={NAME_W + CHART_W}
+        y2={zero}
+        stroke="var(--rule)"
+        strokeWidth={1}
+      />
+
+      {decades.map(({ decade, founded, closed }) => {
+        const cx = (xScale(decade) + xScale(decade + 10)) / 2;
+        const x0 = cx - colW / 2;
+        return (
+          <g key={decade}>
+            <title>{`${decade}s — ${founded} founded · ${closed} closed`}</title>
+            {founded > 0 && (
+              <rect
+                x={x0}
+                y={zero - 1 - vh(founded)}
+                width={colW}
+                height={vh(founded)}
+                rx={2}
+                fill="var(--es-unverified)"
+                opacity={0.75}
+              />
+            )}
+            {closed > 0 && (
+              <rect
+                x={x0}
+                y={zero + 1}
+                width={colW}
+                height={vh(closed)}
+                rx={2}
+                fill="var(--es-closed)"
+                opacity={0.92}
+              />
+            )}
+            {/* Peak annotations — the two waves, directly labeled */}
+            {decade === peakF.decade && founded > 0 && (
+              <text
+                x={cx}
+                y={zero - vh(founded) - 6}
+                textAnchor="middle"
+                fontSize={10}
+                fontWeight={600}
+                fill="var(--foreground)"
+              >
+                {`${founded} founded in the ${decade}s`}
+              </text>
+            )}
+            {decade === peakC.decade && closed > 0 && (
+              <text
+                x={cx}
+                y={zero + vh(closed) + 13}
+                textAnchor="middle"
+                fontSize={10}
+                fontWeight={600}
+                fill="var(--es-closed)"
+              >
+                {`${closed} closed in the ${decade}s`}
+              </text>
+            )}
+          </g>
+        );
+      })}
+    </svg>
+  );
 }
 
 // ---------------------------------------------------------------------------
@@ -82,9 +219,9 @@ export default function TimelineChart({
   undated: UndatedRow[];
 }) {
   const router = useRouter();
-  const [hovered, setHovered] = useState<
-    (TimelineRow | UndatedRow) | null
-  >(null);
+  const [hovered, setHovered] = useState<(TimelineRow | UndatedRow) | null>(
+    null,
+  );
 
   const sorted = useMemo(
     () =>
@@ -98,39 +235,33 @@ export default function TimelineChart({
   );
 
   const chartH = sorted.length * STEP;
-  const totalW = NAME_W + CHART_W + M.right;
   const totalH = chartH + M.top + M.bottom;
-
-  const x = (year: number) =>
-    NAME_W + ((year - YEAR_MIN) / (YEAR_MAX - YEAR_MIN)) * CHART_W;
 
   const decades: number[] = [];
   for (let yr = 1880; yr <= 2010; yr += 10) decades.push(yr);
 
+  const hoverText = (h: TimelineRow | UndatedRow) => {
+    const bits: string[] = [];
+    if ("founded" in h) bits.push(`Est. ${h.founded}`);
+    if (h.closed) bits.push(`Closed ${h.closed}`);
+    bits.push(END_STATE_LABEL[h.endState]);
+    if ("detail" in h && h.detail) bits.push(h.detail);
+    return bits.join(" · ");
+  };
+
   return (
     <div>
-      {/* ── Sticky detail panel (hover info at the top) ── */}
+      {/* ── Sticky detail panel ── */}
       <div
         className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm border-b border-rule min-h-10 px-3 py-2 text-sm"
         aria-live="polite"
       >
         {hovered ? (
           <span>
-            <span className="font-serif font-semibold">
-              {hovered.name}
-            </span>
+            <span className="font-serif font-semibold">{hovered.name}</span>
             <span className="text-muted">
-              {" "}&mdash; {hovered.city}, {hovered.state}
-              {"founded" in hovered && ` · Est. ${hovered.founded}`}
-              {hovered.closed && ` · Closed ${hovered.closed}`}
-              {!hovered.closed &&
-                hovered.outcome === "standing" &&
-                " · Still standing"}
-              {hovered.outcome === "community" &&
-                " · Community-decided"}
-              {"detail" in hovered &&
-                hovered.detail !== "" &&
-                ` · ${hovered.detail}`}
+              {" "}
+              &mdash; {hovered.city}, {hovered.state} · {hoverText(hovered)}
             </span>
             {hovered.profileHref && (
               <span className="text-muted">
@@ -146,186 +277,205 @@ export default function TimelineChart({
           </span>
         ) : (
           <span className="text-muted">
-            Hover over a parish to see its story. Click to open its
-            full record.
+            Hover over a parish to see its story. Click to open its full
+            record.
           </span>
         )}
       </div>
 
-      {/* ── Timeline SVG ── */}
-      <div className="overflow-x-auto mt-1">
-        <svg
-          viewBox={`0 0 ${totalW} ${totalH}`}
-          className="w-full h-auto"
-          style={{ minWidth: "700px" }}
-          role="img"
-          aria-label={`Timeline of ${sorted.length} Lithuanian parishes, 1870\u20132026`}
-        >
-          {/* ── Decade gridlines ── */}
-          {decades.map((yr) => (
-            <g key={yr}>
-              <line
-                x1={x(yr)}
-                y1={M.top - 2}
-                x2={x(yr)}
-                y2={M.top + chartH}
-                stroke="var(--rule)"
-                strokeWidth={0.5}
-                opacity={0.4}
-              />
-              <text
-                x={x(yr)}
-                y={M.top - 7}
-                textAnchor="middle"
-                fontSize={7.5}
-                fill="var(--muted)"
-              >
-                {yr}
-              </text>
-            </g>
-          ))}
+      <div className="overflow-x-auto mt-3">
+        <div style={{ minWidth: 700 }}>
+          {/* ── Decade pulse ── */}
+          <DecadePulse rows={rows} undated={undated} />
 
-          {/* ── "Today" marker ── */}
-          <line
-            x1={x(YEAR_MAX)}
-            y1={M.top - 2}
-            x2={x(YEAR_MAX)}
-            y2={M.top + chartH}
-            stroke="var(--foreground)"
-            strokeWidth={0.75}
-            opacity={0.2}
-          />
-          <text
-            x={x(YEAR_MAX) - 2}
-            y={M.top - 7}
-            textAnchor="end"
-            fontSize={7.5}
-            fill="var(--foreground)"
-            opacity={0.5}
+          {/* ── Timeline ── */}
+          <svg
+            viewBox={`0 0 ${TOTAL_W} ${totalH}`}
+            className="w-full h-auto"
+            role="img"
+            aria-label={`Timeline of ${sorted.length} Lithuanian parishes, ${YEAR_MIN}–${YEAR_MAX}`}
           >
-            Today
-          </text>
-
-          {/* ── Parish rows ── */}
-          {sorted.map((row, i) => {
-            const ry = M.top + i * STEP;
-            const x1 = x(row.founded);
-            const xEnd = row.closed
-              ? x(row.closed)
-              : x(YEAR_MAX);
-            const isHov = hovered?.slug === row.slug;
-            const h = isHov ? BAR_H + 3 : BAR_H;
-            const yOff = isHov ? ry - 1.5 : ry;
-
-            const muted =
-              row.outcome === "unknown" ||
-              row.outcome === "undecided";
-
-            return (
-              <g
-                key={row.slug}
-                onMouseEnter={() => setHovered(row)}
-                onMouseLeave={() => setHovered(null)}
-                onClick={() =>
-                  row.profileHref && router.push(row.profileHref)
-                }
-                className={
-                  row.profileHref ? "cursor-pointer" : ""
-                }
-              >
-                {/* Name label */}
-                <text
-                  x={NAME_W - 4}
-                  y={yOff + h / 2}
-                  textAnchor="end"
-                  dominantBaseline="central"
-                  fontSize={7}
-                  fill={
-                    isHov
-                      ? "var(--foreground)"
-                      : "var(--muted)"
-                  }
-                  fontWeight={isHov ? 600 : 400}
-                >
-                  {truncName(row.name)}
-                </text>
-                {/* Colored bar */}
-                <rect
-                  x={x1}
-                  y={yOff}
-                  width={Math.max(3, xEnd - x1)}
-                  height={h}
-                  fill={OUTCOME_COLOR[row.outcome]}
-                  opacity={muted ? (isHov ? 0.5 : 0.3) : (isHov ? 1 : 0.8)}
-                  rx={1}
+            <defs>
+              {/* The record goes quiet: unverified bars fade out */}
+              <linearGradient id="fadeOut" x1="0" y1="0" x2="1" y2="0">
+                <stop
+                  offset="0%"
+                  stopColor="var(--es-unverified)"
+                  stopOpacity="0.9"
                 />
+                <stop
+                  offset="100%"
+                  stopColor="var(--es-unverified)"
+                  stopOpacity="0"
+                />
+              </linearGradient>
+            </defs>
+
+            {/* Decade gridlines */}
+            {decades.map((yr) => (
+              <g key={yr}>
+                <line
+                  x1={xScale(yr)}
+                  y1={M.top - 2}
+                  x2={xScale(yr)}
+                  y2={M.top + chartH}
+                  stroke="var(--rule)"
+                  strokeWidth={0.5}
+                  opacity={0.4}
+                />
+                <text
+                  x={xScale(yr)}
+                  y={M.top - 8}
+                  textAnchor="middle"
+                  fontSize={8}
+                  fill="var(--muted)"
+                >
+                  {yr}
+                </text>
               </g>
-            );
-          })}
-        </svg>
+            ))}
+
+            {/* Today marker */}
+            <line
+              x1={xScale(YEAR_MAX)}
+              y1={M.top - 2}
+              x2={xScale(YEAR_MAX)}
+              y2={M.top + chartH}
+              stroke="var(--foreground)"
+              strokeWidth={0.75}
+              opacity={0.25}
+            />
+            <text
+              x={xScale(YEAR_MAX) - 3}
+              y={M.top - 8}
+              textAnchor="end"
+              fontSize={8}
+              fill="var(--foreground)"
+              opacity={0.6}
+            >
+              Today
+            </text>
+
+            {/* Parish rows */}
+            {sorted.map((row, i) => {
+              const ry = M.top + i * STEP;
+              const x1 = xScale(row.founded);
+              const group = toGroup(row.endState);
+              const alive = isAlive(row.endState);
+              const unverified = row.endState === "unverified";
+
+              // Honest geometry: a bar only reaches Today if the parish is
+              // verified alive (or transferred-but-standing). An unverified
+              // parish with no closure date fades out — the record goes
+              // quiet, it does not survive by default.
+              const xEnd = row.closed
+                ? xScale(row.closed)
+                : unverified
+                  ? Math.min(x1 + 42, xScale(YEAR_MAX))
+                  : xScale(YEAR_MAX);
+
+              const isHov = hovered?.slug === row.slug;
+              const h = isHov ? BAR_H + 3 : BAR_H;
+              const yOff = isHov ? ry - 1.5 : ry;
+
+              return (
+                <g
+                  key={row.slug}
+                  onMouseEnter={() => setHovered(row)}
+                  onMouseLeave={() => setHovered(null)}
+                  onClick={() =>
+                    row.profileHref && router.push(row.profileHref)
+                  }
+                  className={row.profileHref ? "cursor-pointer" : ""}
+                >
+                  <text
+                    x={NAME_W - 6}
+                    y={yOff + h / 2}
+                    textAnchor="end"
+                    dominantBaseline="central"
+                    fontSize={7}
+                    fill={isHov ? "var(--foreground)" : "var(--muted)"}
+                    fontWeight={isHov ? 600 : 400}
+                  >
+                    {truncName(`${row.name} · ${row.city}`)}
+                  </text>
+                  <rect
+                    x={x1}
+                    y={yOff}
+                    width={Math.max(3, xEnd - x1)}
+                    height={h}
+                    fill={
+                      unverified && !row.closed
+                        ? "url(#fadeOut)"
+                        : END_STATE_COLOR[group]
+                    }
+                    opacity={isHov ? 1 : alive ? 0.95 : 0.85}
+                    rx={1.5}
+                  />
+                  {/* Survivors carry their city at the right edge — who is
+                      left reads straight off the chart */}
+                  {alive && !row.closed && (
+                    <text
+                      x={xScale(YEAR_MAX) - 5}
+                      y={yOff + h / 2}
+                      textAnchor="end"
+                      dominantBaseline="central"
+                      fontSize={6.5}
+                      fontWeight={600}
+                      fill={END_STATE_TEXT[group]}
+                    >
+                      {`${row.city}, ${row.state}`}
+                    </text>
+                  )}
+                </g>
+              );
+            })}
+          </svg>
+        </div>
+      </div>
+
+      {/* ── Legend ── */}
+      <div className="mt-5 flex flex-wrap gap-x-4 gap-y-1.5 text-sm">
+        {GROUP_ORDER.map((g) => (
+          <span key={g} className="inline-flex items-center gap-1.5">
+            <span
+              className="inline-block w-3.5 h-3.5 rounded-sm"
+              style={
+                g === "unverified"
+                  ? {
+                      background:
+                        "linear-gradient(90deg, var(--es-unverified), transparent)",
+                    }
+                  : { background: END_STATE_COLOR[g] }
+              }
+            />
+            {g === "unverified" ? "Record goes quiet — not yet verified" : GROUP_LABEL[g]}
+          </span>
+        ))}
       </div>
 
       {/* ── Undated parishes ── */}
       {undated.length > 0 && (
         <div className="mt-6">
           <p className="text-sm text-muted mb-2">
-            {undated.length}{" "}parishes without a known founding
-            date &mdash; each square is one parish, colored by
-            outcome:
+            {undated.length} parishes without a known founding date &mdash;
+            each square is one parish:
           </p>
           <div className="flex flex-wrap gap-1.5">
             {undated.map((u) => (
               <span
                 key={u.slug}
                 className="inline-block w-3.5 h-3.5 rounded-sm cursor-pointer border border-rule/30"
-                style={{
-                  background: u.closed
-                    ? OUTCOME_COLOR[u.outcome]
-                    : "var(--mark-ink)",
-                }}
-                title={`${u.name} — ${u.city}, ${u.state}${u.closed ? ` (closed ${u.closed})` : ""}`}
+                style={{ background: END_STATE_COLOR[toGroup(u.endState)] }}
+                title={`${u.name} — ${u.city}, ${u.state} · ${END_STATE_LABEL[u.endState]}${u.closed ? ` (closed ${u.closed})` : ""}`}
                 onMouseEnter={() => setHovered(u)}
                 onMouseLeave={() => setHovered(null)}
-                onClick={() =>
-                  u.profileHref && router.push(u.profileHref)
-                }
+                onClick={() => u.profileHref && router.push(u.profileHref)}
               />
             ))}
           </div>
         </div>
       )}
-
-      {/* ── Legend ── */}
-      <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm">
-        <span className="inline-flex items-center gap-1.5">
-          <span
-            className="inline-block w-5 h-3 rounded-sm"
-            style={{ background: "var(--mark-closed)" }}
-          />
-          Closed
-        </span>
-        <span className="inline-flex items-center gap-1.5">
-          <span
-            className="inline-block w-5 h-3 rounded-sm"
-            style={{ background: "var(--mark-standing)" }}
-          />
-          Still standing
-        </span>
-        <span className="inline-flex items-center gap-1.5">
-          <span
-            className="inline-block w-5 h-3 rounded-sm"
-            style={{ background: "var(--mark-community)" }}
-          />
-          Community-decided
-        </span>
-        <span className="inline-flex items-center gap-1.5">
-          <span
-            className="inline-block w-5 h-3 rounded-sm border border-rule"
-            style={{ background: "var(--muted)" }}
-          />
-          Outcome unknown
-        </span>
-      </div>
     </div>
   );
 }
