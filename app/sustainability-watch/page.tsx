@@ -3,9 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import alertsData from "@/data/alerts.json";
 import { parishes } from "@/lib/parishes";
+import {
+  CLERGY_LABEL,
+  FREQUENCY_LABEL,
+  FREQUENCY_SHORT,
+  GOVERNANCE_LABEL,
+} from "@/lib/watch-labels";
 
 export const metadata: Metadata = {
-  title: "Sustainability Watch — SaveOurLithuanianParishes.org",
+  title: "Sustainability Watch",
   description:
     "Lithuanian parishes that survived but face slow-burn erosion: clergy shortages, financial strain, ethnic transition, post-merger fragility. The threat is not a letter from the bishop. It is erosion.",
 };
@@ -37,37 +43,13 @@ type SustainabilityEntry = {
 
 const entries = (alertsData as any).sustainabilityWatch as SustainabilityEntry[];
 
-const CLERGY_LABEL: Record<string, string> = {
-  lithuanian_klebonas: "Lithuanian-speaking klebonas",
-  collaborative_pastor: "Shared pastor (not Lithuanian-speaking)",
-  visiting_priest: "Visiting priest only",
-  no_lithuanian_clergy: "No Lithuanian-speaking clergy",
-  unknown: "Not yet established",
-};
-
-const FREQUENCY_LABEL: Record<string, string> = {
-  weekly: "Weekly Lithuanian Mass",
-  monthly: "Monthly Lithuanian Mass",
-  occasional: "Occasional Lithuanian Mass",
-  none: "No Lithuanian Mass",
-  unknown: "Not yet established",
-};
-
-const GOVERNANCE_LABEL: Record<string, string> = {
-  standalone: "Standalone parish",
-  collaborative: "In a diocesan collaborative",
-  merged: "Post-merger entity",
-  mission: "Mission status",
-  unknown: "Not yet established",
-};
-
 function ClergyBadge({ arrangement }: { arrangement: string }) {
   const isHealthy = arrangement === "lithuanian_klebonas";
   const isWarning = arrangement === "collaborative_pastor" || arrangement === "visiting_priest";
   const dotColor = isHealthy
-    ? "var(--mark-standing)"
+    ? "var(--es-active)"
     : isWarning
-      ? "var(--mark-community)"
+      ? "var(--es-transferred)"
       : "var(--muted)";
   return (
     <span
@@ -82,14 +64,6 @@ function ClergyBadge({ arrangement }: { arrangement: string }) {
     </span>
   );
 }
-
-const FREQ_SHORT: Record<string, string> = {
-  weekly: "Weekly",
-  monthly: "Monthly",
-  occasional: "Occasional",
-  none: "None",
-  unknown: "—",
-};
 
 /** Build the at-a-glance row data for all standing RC diocese parishes. */
 function buildDashboardRows() {
@@ -168,7 +142,7 @@ function AllParishesTable() {
                   {alert ? (
                     <span className="text-xs italic">—</span>
                   ) : watch ? (
-                    FREQ_SHORT[watch.liturgy.frequency] ?? watch.liturgy.frequency
+                    FREQUENCY_SHORT[watch.liturgy.frequency] ?? watch.liturgy.frequency
                   ) : (
                     <span className="text-xs italic">Researching…</span>
                   )}
@@ -185,7 +159,10 @@ function AllParishesTable() {
 export default function SustainabilityWatchPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
-      <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold">
+      <p className="text-xs uppercase tracking-widest text-muted">
+        Standing today
+      </p>
+      <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
         Sustainability Watch
       </h1>
       <p className="mt-3 text-muted leading-relaxed">

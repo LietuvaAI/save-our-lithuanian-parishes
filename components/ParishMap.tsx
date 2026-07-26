@@ -32,8 +32,8 @@ const NE_STATES = new Set(["ME", "NH", "VT", "MA", "RI", "CT", "NY", "NJ", "PA",
 
 type View = { x: number; y: number; w: number; h: number };
 // Status drives fill color. alerted (gold ring) is a separate boolean.
-type Status = "lost" | "open" | "threat" | "building" | "unknown";
-type Mode = "all" | "open" | "threat" | "lost";
+type Status = "lost" | "open" | "threat" | "building" | "unknown" | "transferred";
+type Mode = "all" | "open" | "threat" | "lost" | "transferred";
 type ClassFilter = "all" | "roman_catholic" | "national_catholic_pncc" | "non_catholic_christian";
 
 interface Point {
@@ -60,19 +60,21 @@ interface Point {
 }
 
 const STATUS_LABEL: Record<Status, string> = {
-  lost: "Lost",
-  open: "Open today",
-  threat: "Status unresolved",
+  lost: "Closed",
+  open: "Active today",
+  threat: "Unresolved — under threat",
   building: "Building at risk",
   unknown: "Fate not yet established",
+  transferred: "Ethnically transferred",
 };
 
 const FILL: Record<Status, string> = {
-  lost: "var(--mark-closed)",
-  open: "var(--mark-ink)",
-  threat: "var(--mark-community)",
+  lost: "var(--es-closed)",
+  open: "var(--es-active)",
+  threat: "var(--es-transferred)",
   building: "var(--mark-building)",
   unknown: "var(--muted)",
+  transferred: "var(--es-transferred)",
 };
 
 // Build alert lookup: slug → {kind, whatChanged}
@@ -99,7 +101,10 @@ function buildPoints(): Point[] {
     if (alert?.kind === "building") {
       status = "building";
     } else if (p.status === "standing") {
-      status = "open";
+      status =
+        p.lithuanianIdentity === "ethnically_transferred"
+          ? "transferred"
+          : "open";
     } else if (p.status === "undecided") {
       status = "threat";
     } else {
@@ -144,7 +149,11 @@ function buildPoints(): Point[] {
     } else if (c.closedYear) {
       status = "lost";
     } else if ((c as { lockedStanding?: boolean }).lockedStanding) {
-      status = "open";
+      status =
+        (c as { identity?: string | null }).identity ===
+        "ethnically_transferred"
+          ? "transferred"
+          : "open";
     } else {
       status = "unknown";
     }
@@ -220,12 +229,13 @@ export default function ParishMap() {
   const zoom = FULL.w / view.w;
 
   const statusCounts = useMemo(() => {
-    const c = { all: POINTS.length, open: 0, threat: 0, lost: 0, unknown: 0, building: 0 };
+    const c = { all: POINTS.length, open: 0, threat: 0, lost: 0, unknown: 0, building: 0, transferred: 0 };
     for (const p of POINTS) {
       if (p.status === "open") c.open++;
       else if (p.status === "lost") c.lost++;
       else if (p.status === "building") c.building++;
       else if (p.status === "unknown") c.unknown++;
+      else if (p.status === "transferred") c.transferred++;
     }
     // "threat" filter = all that are alerted, genuinely unresolved, or building at risk
     c.threat = POINTS.filter(
@@ -316,7 +326,9 @@ export default function ParishMap() {
         ? knownPoints.filter((p) => p.status === "open")
         : mode === "lost"
           ? knownPoints.filter((p) => p.status === "lost" || p.status === "building")
-          : knownPoints.filter((p) => p.inAlerts || p.status === "threat" || p.status === "building");
+          : mode === "transferred"
+            ? knownPoints.filter((p) => p.status === "transferred")
+            : knownPoints.filter((p) => p.inAlerts || p.status === "threat" || p.status === "building");
 
   const visible = classFilter === "all"
     ? statusFiltered
@@ -354,21 +366,27 @@ export default function ParishMap() {
           All · {statusCounts.all}
         </button>
         <SwatchBtn
-          fill="var(--mark-ink)"
-          label={`Open · ${statusCounts.open}`}
+          fill="var(--es-active)"
+          label={`Active · ${statusCounts.open}`}
           active={mode === "open"}
           onClick={() => setMode("open")}
         />
         <SwatchBtn
-          fill="var(--mark-community)"
+          fill="var(--es-transferred)"
           ring
           label={`Under threat · ${statusCounts.threat}`}
           active={mode === "threat"}
           onClick={() => setMode("threat")}
         />
         <SwatchBtn
-          fill="var(--mark-closed)"
-          label={`Lost · ${statusCounts.lost}`}
+          fill="var(--es-transferred)"
+          label={`Transferred · ${statusCounts.transferred}`}
+          active={mode === "transferred"}
+          onClick={() => setMode("transferred")}
+        />
+        <SwatchBtn
+          fill="var(--es-closed)"
+          label={`Closed · ${statusCounts.lost}`}
           active={mode === "lost"}
           onClick={() => setMode("lost")}
         />

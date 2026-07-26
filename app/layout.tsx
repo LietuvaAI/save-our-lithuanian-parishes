@@ -33,10 +33,10 @@ type NavItem =
 
 const NAV: NavItem[] = [
   { href: "/record", label: "The Record" },
+  { href: "/history", label: "The History" },
   {
     label: "Views",
     children: [
-      { href: "/history", label: "The History" },
       { href: "/by-diocese", label: "By Diocese" },
       { href: "/under-threat", label: "Under Threat" },
       { href: "/sustainability-watch", label: "Sustainability Watch" },
