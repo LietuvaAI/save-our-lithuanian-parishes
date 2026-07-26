@@ -247,7 +247,27 @@ const deckLines = [];
   if (line) deckLines.push(line.trim());
 }
 const BAND = (KICKER || TITLE || DECK) ? (1.6 + 2.4 + deckLines.length * 1.55 + 1.5) * S : 0;
-const FOOT = 5.7 * S;
+// legend layout is measured first so the footer can wrap to as many rows as needed
+const LEGEND_FS = 1.0 * S;
+const legendMeasure = (label) => 0.8 * S + label.length * 0.62 * S + 1.9 * S;
+const FOOT_BASE = 3.4 * S; // top pad + two source lines
+// measure legend rows NOW so the viewBox below accounts for wrapping
+const legendPresent = new Set(all.map((p) => p.state === "demolished" || p.state === "repurposed" ? "closed" : p.state));
+const LEGEND_ITEMS = GROUP_ORDER.filter((g) => legendPresent.has(g)).map((g) => [
+  SITE_LABEL[g], COLOR[g], g === "active_parish" || g === "mass_continues" ? "open" : "solid",
+]);
+const LEGEND_ROWS = [[]];
+{
+  let lx = vx + 0.9 * S;
+  for (const it of LEGEND_ITEMS) {
+    const w = legendMeasure(it[0]);
+    if (lx + w > vx + vw - 0.9 * S && LEGEND_ROWS[LEGEND_ROWS.length - 1].length) { LEGEND_ROWS.push([]); lx = vx + 0.9 * S; }
+    LEGEND_ROWS[LEGEND_ROWS.length - 1].push(it);
+    lx += w;
+  }
+}
+const LEGEND_ROW_H = 1.7 * S;
+const FOOT = FOOT_BASE + LEGEND_ROWS.length * LEGEND_ROW_H;
 const headerParts = [];
 if (BAND > 0) {
   let ty = vy - BAND + 1.5 * S;
@@ -345,26 +365,25 @@ for (const p of labelOrder) {
   }
 }
 
-// footer: legend row + source line, below the map
+// footer: legend (precomputed wrapping rows) + source lines, below the map
 const footerParts = [];
 {
-  const ly = vy + vh + 1.9 * S;
-  let lx = vx + 0.9 * S;
-  const present = new Set(all.map((p) => p.state === "demolished" || p.state === "repurposed" ? "closed" : p.state));
-  const items = GROUP_ORDER.filter((g) => present.has(g)).map((g) => [
-    SITE_LABEL[g],
-    COLOR[g],
-    g === "active_parish" || g === "mass_continues" ? "open" : "solid",
-  ]);
-  for (const [label, col, kind] of items) {
-    footerParts.push(kind === "open"
-      ? `<circle cx="${lx}" cy="${ly - 0.34 * S}" r="${0.44 * S}" fill="#fff" stroke="${col}" stroke-width="${0.2 * S}"/>`
-      : `<circle cx="${lx}" cy="${ly - 0.34 * S}" r="${0.44 * S}" fill="${col}"/>`);
-    footerParts.push(`<text x="${lx + 0.8 * S}" y="${ly}" fill="#151515" font-size="${1.0 * S}">${label}</text>`);
-    lx += 0.8 * S + label.length * 0.62 * S + 1.9 * S;
+  let ly = vy + vh + 1.9 * S;
+  for (const row of LEGEND_ROWS) {
+    let x = vx + 0.9 * S;
+    for (const [label, col, kind] of row) {
+      footerParts.push(kind === "open"
+        ? `<circle cx="${x}" cy="${ly - 0.34 * S}" r="${0.44 * S}" fill="#fff" stroke="${col}" stroke-width="${0.2 * S}"/>`
+        : `<circle cx="${x}" cy="${ly - 0.34 * S}" r="${0.44 * S}" fill="${col}"/>`);
+      footerParts.push(`<text x="${x + 0.8 * S}" y="${ly}" fill="#151515" font-size="${LEGEND_FS}">${label}</text>`);
+      x += legendMeasure(label);
+    }
+    ly += LEGEND_ROW_H;
   }
-  footerParts.push(`<text x="${vx + 0.9 * S}" y="${(vy + vh + 3.5 * S).toFixed(2)}" fill="#777" font-size="${0.85 * S}">SaveOurLithuanianParishes.org unified registry · diocese boundaries from US Census county geometry</text>`);
-  footerParts.push(`<text x="${vx + 0.9 * S}" y="${(vy + vh + 4.7 * S).toFixed(2)}" fill="#777" font-size="${0.85 * S}">Some points sit at city center · the full interactive map: saveourlithuanianparishes.org</text>`);
+  footerParts.push(`<text x="${vx + 0.9 * S}" y="${(ly + 0.2 * S).toFixed(2)}" fill="#777" font-size="${0.85 * S}">SaveOurLithuanianParishes.org unified registry · diocese boundaries from US Census county geometry</text>`);
+  footerParts.push(`<text x="${vx + 0.9 * S}" y="${(ly + 1.4 * S).toFixed(2)}" fill="#777" font-size="${0.85 * S}">Some points sit at city center · the full interactive map: saveourlithuanianparishes.org</text>`);
 }
+
+
 writeFileSync(OUT, [...head, ...dots, ...labels, "</g>", ...headerParts, ...footerParts, "</svg>"].join("\n"));
 console.log(`OK: ${OUT} (${dioceseFull}; viewBox ${vw.toFixed(0)}x${vh.toFixed(0)} units; ${all.length} parish points)`);
