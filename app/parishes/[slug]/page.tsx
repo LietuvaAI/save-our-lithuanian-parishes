@@ -117,6 +117,42 @@ export async function generateMetadata({
   };
 }
 
+
+/** The one-sentence story a profile opens with: curated situation text when
+ *  it exists, otherwise an honest sentence composed from the record. */
+function storyDek(
+  parish: (typeof parishes)[number],
+  situationText: string | null,
+  endState: ReturnType<typeof resolveEndState>,
+): { dek: string; rest: string | null } {
+  if (situationText) {
+    const i = situationText.indexOf(". ");
+    if (i > 40 && i < situationText.length - 2)
+      return { dek: situationText.slice(0, i + 1), rest: situationText.slice(i + 2) };
+    return { dek: situationText, rest: null };
+  }
+  const f = parish.yearFounded ? `Founded ${parish.yearFounded}. ` : "";
+  const c = parish.yearClosed ? ` in ${parish.yearClosed}` : "";
+  switch (endState) {
+    case "unresolved":
+      return { dek: `${f}The church stands and the parish's fate is canonically unresolved — the decision is not final.`, rest: null };
+    case "active_parish":
+      return { dek: `${f}It still stands as an active Lithuanian parish today.`, rest: null };
+    case "mass_continues":
+      return { dek: `${f}A Lithuanian Mass continues here, within a parish that is no longer Lithuanian-led.`, rest: null };
+    case "transferred":
+      return { dek: `${f}The church lives on, serving another community; its life as a Lithuanian parish has ended.`, rest: null };
+    case "demolished":
+      return { dek: `${f}The parish was closed${c}, and the church was demolished.`, rest: null };
+    case "repurposed":
+      return { dek: `${f}The parish was closed${c}, and the building was sold on.`, rest: null };
+    case "closed":
+      return { dek: `${f}The parish was closed${c}.`, rest: null };
+    default:
+      return { dek: `${f}Attested in the record; its fate has not yet been established.`, rest: null };
+  }
+}
+
 export default async function ParishPage({
   params,
 }: {
@@ -149,6 +185,8 @@ export default async function ParishPage({
     parish.endingMode,
   );
 
+  const { dek, rest } = storyDek(parish, situation?.situation ?? null, endState);
+
   const showWhatHappened =
     !isStanding ||
     parish.survivedReviewThenClosed ||
@@ -170,6 +208,13 @@ export default async function ParishPage({
         {parish.city}, {parish.state}
       </p>
 
+      <p className="mt-4 font-serif text-xl sm:text-2xl leading-snug max-w-2xl">
+        {dek}
+      </p>
+      {rest && (
+        <p className="mt-3 leading-relaxed max-w-2xl text-muted">{rest}</p>
+      )}
+
       <div className="mt-4 flex flex-wrap items-center gap-3">
         <EndStatePill value={endState} size="lg" />
         {(parishAlert || watchEntry) && (
@@ -188,10 +233,6 @@ export default async function ParishPage({
           </span>
         )}
       </div>
-
-      {situation && (
-        <p className="mt-6 text-lg leading-relaxed">{situation.situation}</p>
-      )}
 
       {/* ══ The church and its place — photo beside the diocese zoom ══ */}
       {(() => {
