@@ -16,7 +16,15 @@ import {
   INSTITUTION_TYPE_LABEL,
   BUILDING_FATE_LABEL,
   type BuildingFate,
+  type LithuanianIdentity,
 } from "@/lib/parishes";
+import { resolveEndState, isLoss } from "@/lib/end-state";
+import { EndStatePill } from "@/components/EndStatePill";
+import {
+  CLERGY_LABEL,
+  FREQUENCY_LABEL,
+  GOVERNANCE_LABEL,
+} from "@/lib/watch-labels";
 
 interface CaseSource {
   title: string;
@@ -89,31 +97,6 @@ function getParishPhoto(slug: string): {
   return entry ?? null;
 }
 
-const CLERGY_LABEL: Record<string, string> = {
-  lithuanian_klebonas: "Lithuanian-speaking klebonas",
-  collaborative_pastor: "Shared pastor (not Lithuanian-speaking)",
-  visiting_priest: "Visiting priest only",
-  no_lithuanian_clergy: "No Lithuanian-speaking clergy",
-  unknown: "Not yet established",
-};
-
-const FREQ_LABEL: Record<string, string> = {
-  weekly: "Weekly",
-  monthly: "Monthly",
-  occasional: "Occasional",
-  none: "None",
-  unknown: "Not yet established",
-};
-
-const GOV_LABEL: Record<string, string> = {
-  standalone: "Standalone parish",
-  collaborative: "In a diocesan collaborative",
-  merged: "Post-merger entity",
-  chapel: "Chapel",
-  mission: "Mission",
-  unknown: "Not yet established",
-};
-
 export function generateStaticParams() {
   return parishes.map((p) => ({ slug: p.slug }));
 }
@@ -154,34 +137,31 @@ export default async function ParishPage({
       ? { src: watchEntry.photo.url, alt: watchEntry.photo.alt, attribution: watchEntry.photo.attribution, license: watchEntry.photo.license }
       : null;
 
-  // Single status display — replaces the multi-badge soup
-  const statusDisplay = (() => {
-    if (parish.status === "standing") {
-      if (parish.lithuanianIdentity === "active_parish")
-        return { label: "Active Lithuanian parish", bg: "var(--mark-standing)", fg: "#fff" };
-      if (parish.lithuanianIdentity === "mass_continues")
-        return { label: "Lithuanian Mass continues", bg: "var(--mark-standing)", fg: "#fff" };
-      if (parish.lithuanianIdentity === "ethnically_transferred")
-        return { label: "Ethnically transferred", bg: "var(--mark-community)", fg: "#1c1917" };
-      return { label: "Active", bg: "var(--mark-standing)", fg: "#fff" };
-    }
-    if (parish.buildingFate === "demolished")
-      return { label: "Closed — demolished", bg: "var(--mark-building)", fg: "#fff" };
-    if (parish.buildingFate === "repurposed_secular" || parish.buildingFate === "repurposed_religious")
-      return { label: "Closed — repurposed", bg: "var(--mark-closed)", fg: "#fff" };
-    return { label: "Closed", bg: "var(--mark-closed)", fg: "#fff" };
-  })();
+  // The one status verdict, from the shared resolver.
+  const isStanding = parish.status === "standing";
+  const endState = resolveEndState(
+    (parish.lithuanianIdentity as LithuanianIdentity | null) ?? null,
+    (parish.buildingFate as BuildingFate | null) ?? null,
+    parish.yearClosed != null || !isStanding,
+    isStanding,
+    parish.endingMode,
+  );
+
+  const showWhatHappened =
+    !isStanding ||
+    parish.survivedReviewThenClosed ||
+    !!parish.notes;
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
-      <p className="text-sm text-muted">
+      <p className="text-xs uppercase tracking-widest text-muted">
         <Link href="/record" className="underline hover:text-foreground">
           The Record
         </Link>{" "}
         / {parish.city}, {parish.state}
       </p>
 
-      <h1 className="mt-3 font-serif text-3xl sm:text-4xl font-semibold">
+      <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
         {parish.nameLt}
       </h1>
       <p className="mt-1 text-lg text-muted">
@@ -189,18 +169,13 @@ export default async function ParishPage({
       </p>
 
       <div className="mt-4 flex flex-wrap items-center gap-3">
-        <span
-          className="rounded-full px-3.5 py-1 text-sm font-semibold"
-          style={{ background: statusDisplay.bg, color: statusDisplay.fg }}
-        >
-          {statusDisplay.label}
-        </span>
+        <EndStatePill value={endState} size="lg" />
         {(parishAlert || watchEntry) && (
           <span
             className="rounded-full border-2 px-3 py-0.5 text-xs font-semibold"
             style={{
-              borderColor: parishAlert ? "var(--mark-closed)" : "var(--mark-ink)",
-              color: parishAlert ? "var(--mark-closed)" : "var(--mark-ink)",
+              borderColor: parishAlert ? "var(--es-closed)" : "var(--mark-ink)",
+              color: parishAlert ? "var(--es-closed)" : "var(--mark-ink)",
             }}
           >
             {parishAlert
@@ -234,149 +209,249 @@ export default async function ParishPage({
         <p className="mt-6 text-lg leading-relaxed">{situation.situation}</p>
       )}
 
-      <dl className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-4 text-sm">
-        <div>
-          <dt className="text-xs uppercase tracking-wide text-muted">Founded</dt>
-          <dd className="mt-0.5">{parish.yearFounded ?? "Not established"}</dd>
-        </div>
-        {parish.status !== "standing" && (
+      {/* ══ What it was ══ */}
+      <section className="mt-10">
+        <h2 className="font-serif text-xl font-semibold">What it was</h2>
+        <dl className="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-4 text-sm">
           <div>
-            <dt className="text-xs uppercase tracking-wide text-muted">Closed</dt>
-            <dd className="mt-0.5">{parish.yearClosed ?? "Not established"}</dd>
+            <dt className="text-xs uppercase tracking-wide text-muted">Founded</dt>
+            <dd className="mt-0.5">{parish.yearFounded ?? "Not established"}</dd>
           </div>
-        )}
-        <div>
-          <dt className="text-xs uppercase tracking-wide text-muted">Decision</dt>
-          <dd className="mt-0.5">{ENDING_MODE_LABEL[parish.endingMode]}</dd>
-        </div>
-        {parish.buildingFate && parish.buildingFate !== "unknown" && parish.buildingFate !== "standing" && (
           <div>
-            <dt className="text-xs uppercase tracking-wide text-muted">Building</dt>
-            <dd className="mt-0.5">{BUILDING_FATE_LABEL[parish.buildingFate as BuildingFate]}</dd>
+            <dt className="text-xs uppercase tracking-wide text-muted">Type</dt>
+            <dd className="mt-0.5">{INSTITUTION_TYPE_LABEL[parish.institutionType]}</dd>
           </div>
-        )}
-        <div>
-          <dt className="text-xs uppercase tracking-wide text-muted">Ownership</dt>
-          <dd className="mt-0.5">{OWNERSHIP_LABEL[parish.ownership]}</dd>
-        </div>
-        <div>
-          <dt className="text-xs uppercase tracking-wide text-muted">Type</dt>
-          <dd className="mt-0.5">{INSTITUTION_TYPE_LABEL[parish.institutionType]}</dd>
-        </div>
-        {parish.comparator && (
-          <div className="col-span-full">
-            <dt className="text-xs uppercase tracking-wide text-muted">Scope</dt>
-            <dd className="mt-0.5">Canadian comparator — documented for contrast, outside the U.S. figures</dd>
+          <div>
+            <dt className="text-xs uppercase tracking-wide text-muted">Ownership</dt>
+            <dd className="mt-0.5">{OWNERSHIP_LABEL[parish.ownership]}</dd>
           </div>
-        )}
-      </dl>
+          {parish.comparator && (
+            <div className="col-span-full">
+              <dt className="text-xs uppercase tracking-wide text-muted">Scope</dt>
+              <dd className="mt-0.5">Canadian comparator — documented for contrast, outside the U.S. figures</dd>
+            </div>
+          )}
+        </dl>
 
-      {parishAlert && (
-        <section
-          className="mt-10 rounded-lg border-2 px-4 py-3.5"
-          style={{ borderColor: parishAlert.level === "red" ? "var(--mark-closed)" : "var(--color-amber-600)" }}
-        >
-          <p className="text-xs uppercase tracking-widest text-muted">
-            {parishCampaign ? "Active campaign" : "Under threat"}
-          </p>
-          <p className="mt-1 text-sm leading-relaxed">{parishAlert.whatChanged}</p>
-          <div className="mt-3 flex flex-wrap gap-2 text-sm">
-            {parishCampaign?.hearthUrl && (
-              <a
-                href={parishCampaign.hearthUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-sm font-semibold hover:opacity-90 transition-opacity"
-                style={{ background: "var(--mark-community)", color: "#1c1917" }}
-              >
-                How to help &rarr;
-              </a>
-            )}
-            <Link
-              href="/under-threat"
-              className="inline-flex items-center gap-1 rounded-md border border-rule px-3 py-1.5 text-sm font-medium hover:border-foreground transition-colors"
-            >
-              All parishes under threat &rarr;
-            </Link>
-          </div>
-          <p className="mt-2 text-xs text-muted">
-            Sources:{" "}
-            {parishAlert.sources.map((s: any, i: number) => (
-              <span key={s.url}>
-                {i > 0 && " \u00b7 "}
-                <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
-                  {s.publisher}
-                </a>
-              </span>
-            ))}
-          </p>
-          {parishCampaign?.dispatches?.length > 0 && (
-            <div className="mt-3 border-t border-rule pt-3">
-              <p className="text-xs uppercase tracking-wide text-muted mb-1.5">
-                From Židinys (The Hearth)
+        {scholarlySources.length > 0 && (
+          <div className="mt-5">
+            <p className="text-sm text-muted leading-relaxed">
+              As the published record describes it — quoted descriptions are
+              the author&#8217;s own characterization.
+            </p>
+            <div className="mt-3 space-y-3">
+              {scholarlySources.map((s: any, i: number) => {
+                const isWolkovich = s.axis === "wolkovich";
+                const isLukas = s.axis === "lukas-2009";
+                const hasDetail =
+                  s.school || s.convent || s.cemetery ||
+                  (s.diocese && !/^(none|unknown|unspecified)$/i.test(s.diocese));
+                return (
+                  <div
+                    key={i}
+                    className="rounded-lg border border-rule px-4 py-3 text-sm"
+                  >
+                    <p className="font-medium">
+                      {isLukas ? (
+                        <a
+                          href="https://archyvas.ziburioltmokykla.org"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline hover:text-accent"
+                        >
+                          Lukas,{" "}
+                          <em>Lietuvių Kultūrinis Paveldas Amerikoje</em> (2009)
+                        </a>
+                      ) : isWolkovich ? (
+                        <a
+                          href="https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline hover:text-accent"
+                        >
+                          Wolkovich-Valkavičius,{" "}
+                          <em>Lithuanian Religious Life in America</em>, Vol.&nbsp;3
+                          (1998)
+                        </a>
+                      ) : (
+                        <a
+                          href="https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline hover:text-accent"
+                        >
+                          Michelsonas,{" "}
+                          <em>Lietuvių Išeivija Amerikoje</em> (1868–1961),
+                          Keleivis, 1961
+                        </a>
+                      )}
+                      {s.pages && (
+                        <span className="text-muted font-normal">
+                          , {s.pages}
+                        </span>
+                      )}
+                    </p>
+                    {isLukas && s.description && (
+                      <p className="mt-2 leading-relaxed text-muted">
+                        {s.description}
+                      </p>
+                    )}
+                    {isLukas && s.architect && (
+                      <p className="mt-1 text-muted">Architect: {s.architect}</p>
+                    )}
+                    {s.ethnic_status &&
+                      !/^(none|unknown|unspecified)$/i.test(s.ethnic_status) && (
+                        <p className="mt-2 italic leading-relaxed text-muted">
+                          &ldquo;{s.ethnic_status}&rdquo;
+                        </p>
+                      )}
+                    {hasDetail && (
+                      <div className="mt-2 space-y-0.5 text-muted">
+                        {s.diocese &&
+                          !/^(none|unknown|unspecified)$/i.test(s.diocese) && (
+                            <p>Diocese: {s.diocese}</p>
+                          )}
+                        {s.school && <p>School: {s.school}</p>}
+                        {s.convent && <p>Convent: {s.convent}</p>}
+                        {s.cemetery && <p>Cemetery: {s.cemetery}</p>}
+                      </div>
+                    )}
+                    {s.lens && (
+                      <p className="mt-2 text-xs italic text-muted">
+                        Note: {s.lens}
+                      </p>
+                    )}
+                    {isLukas && (
+                      <p className="mt-2 text-xs text-muted">
+                        <a
+                          href="https://archyvas.ziburioltmokykla.org"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline hover:text-accent"
+                        >
+                          Available in the Žiburio archive →
+                        </a>
+                      </p>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+            {parish.registrySlug && (
+              <p className="mt-3 text-sm text-muted">
+                <Link
+                  href={`/registry/${parish.registrySlug}`}
+                  className="underline hover:text-foreground"
+                >
+                  See the full research record →
+                </Link>
               </p>
-              <ul className="space-y-1">
-                {parishCampaign.dispatches.map((d: any) => (
-                  <li key={d.url}>
-                    <a
-                      href={d.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm underline hover:text-foreground"
-                    >
-                      {d.title} &rarr;
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            )}
+          </div>
+        )}
+      </section>
+
+      {/* ══ What happened ══ */}
+      {showWhatHappened && (
+        <section className="mt-10">
+          <h2 className="font-serif text-xl font-semibold">What happened</h2>
+          <dl className="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-4 text-sm">
+            {isLoss(endState) && (
+              <div>
+                <dt className="text-xs uppercase tracking-wide text-muted">Closed</dt>
+                <dd className="mt-0.5">{parish.yearClosed ?? "Not established"}</dd>
+              </div>
+            )}
+            {parish.endingMode !== "standing" && (
+              <div>
+                <dt className="text-xs uppercase tracking-wide text-muted">Decision</dt>
+                <dd className="mt-0.5">{ENDING_MODE_LABEL[parish.endingMode]}</dd>
+              </div>
+            )}
+            {parish.buildingFate && parish.buildingFate !== "unknown" && parish.buildingFate !== "standing" && (
+              <div>
+                <dt className="text-xs uppercase tracking-wide text-muted">Building</dt>
+                <dd className="mt-0.5">{BUILDING_FATE_LABEL[parish.buildingFate as BuildingFate]}</dd>
+              </div>
+            )}
+          </dl>
+
+          {parish.survivedReviewThenClosed && (
+            <p
+              className="mt-5 rounded-lg border border-rule p-4 leading-relaxed"
+              style={{ borderLeft: "4px solid var(--es-closed)" }}
+            >
+              This parish <strong>survived an earlier diocesan review</strong> —
+              and a later one still reached it. It is one of the seven parishes in
+              the record showing that surviving one restructuring buys time, not
+              safety.
+            </p>
+          )}
+
+          {parish.notes && (
+            <div className="mt-5">
+              <p className="text-xs uppercase tracking-wide text-muted">
+                From the record
+              </p>
+              <p className="mt-1 leading-relaxed">{parish.notes}</p>
             </div>
           )}
         </section>
       )}
 
-      {watchEntry && (
-        <section className="mt-10 rounded-lg border border-rule overflow-hidden">
-          <div className="px-4 pt-3.5 pb-3">
+      {/* ══ Where it stands today ══ */}
+      <section className="mt-10">
+        <h2 className="font-serif text-xl font-semibold">
+          Where it stands today
+        </h2>
+
+        {!parishAlert && !watchEntry && !caseRecord && situation?.current_use && situation.current_use !== "Unknown" && (
+          <p className="mt-2 leading-relaxed">
+            Current use: {situation.current_use}.
+          </p>
+        )}
+        {!parishAlert && !watchEntry && !caseRecord && (!situation?.current_use || situation.current_use === "Unknown") && (
+          <p className="mt-2 leading-relaxed text-muted">
+            The present-day record for this parish is still being researched.
+            If you know its current state,{" "}
+            <Link href="/report" className="underline hover:text-foreground">
+              tell us
+            </Link>
+            .
+          </p>
+        )}
+
+        {parishAlert && (
+          <div
+            className="mt-4 rounded-lg border-2 px-4 py-3.5"
+            style={{ borderColor: parishAlert.level === "red" ? "var(--es-closed)" : "var(--color-amber-600)" }}
+          >
             <p className="text-xs uppercase tracking-widest text-muted">
-              Sustainability Watch
+              {parishCampaign ? "Active campaign" : "Under threat"}
             </p>
-            <p className="mt-1.5 leading-relaxed">{watchEntry.situation}</p>
-
-            <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-              <div>
-                <p className="text-xs uppercase tracking-wide text-muted mb-1">Clergy</p>
-                <p className="font-medium">{CLERGY_LABEL[watchEntry.clergy.arrangement] ?? watchEntry.clergy.arrangement}</p>
-                <p className="mt-1 text-xs text-muted leading-relaxed">{watchEntry.clergy.detail}</p>
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-wide text-muted mb-1">Lithuanian Mass</p>
-                <p className="font-medium">{FREQ_LABEL[watchEntry.liturgy.frequency] ?? watchEntry.liturgy.frequency}</p>
-                <p className="mt-1 text-xs text-muted">{watchEntry.liturgy.detail}</p>
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-wide text-muted mb-1">Governance</p>
-                <p className="font-medium">{GOV_LABEL[watchEntry.governance] ?? watchEntry.governance}</p>
-                <p className="mt-1 text-xs text-muted">{watchEntry.governanceDetail}</p>
-              </div>
+            <p className="mt-1 text-sm leading-relaxed">{parishAlert.whatChanged}</p>
+            <div className="mt-3 flex flex-wrap gap-2 text-sm">
+              {parishCampaign?.hearthUrl && (
+                <a
+                  href={parishCampaign.hearthUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-sm font-semibold hover:opacity-90 transition-opacity"
+                  style={{ background: "var(--es-transferred)", color: "#1c1917" }}
+                >
+                  How to help &rarr;
+                </a>
+              )}
+              <Link
+                href="/under-threat"
+                className="inline-flex items-center gap-1 rounded-md border border-rule px-3 py-1.5 text-sm font-medium hover:border-foreground transition-colors"
+              >
+                All parishes under threat &rarr;
+              </Link>
             </div>
-
-            {watchEntry.survivedThreats && (
-              <div className="mt-3 text-sm">
-                <p className="text-xs uppercase tracking-wide text-muted mb-0.5">Survived</p>
-                <p className="text-muted leading-relaxed">{watchEntry.survivedThreats}</p>
-              </div>
-            )}
-            {watchEntry.financial && (
-              <div className="mt-3 text-sm">
-                <p className="text-xs uppercase tracking-wide text-muted mb-0.5">Financial signal</p>
-                <p className="text-muted leading-relaxed">{watchEntry.financial}</p>
-              </div>
-            )}
-          </div>
-          <div className="border-t border-rule bg-background px-4 py-2.5 flex flex-wrap items-center justify-between gap-2">
-            <p className="text-xs text-muted">
+            <p className="mt-2 text-xs text-muted">
               Sources:{" "}
-              {(watchEntry.sources as any[]).map((s: any, i: number) => (
+              {parishAlert.sources.map((s: any, i: number) => (
                 <span key={s.url}>
                   {i > 0 && " · "}
                   <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
@@ -384,240 +459,175 @@ export default async function ParishPage({
                   </a>
                 </span>
               ))}
-              {" · "}checked {watchEntry.dateObserved}
             </p>
-            <div className="flex gap-2">
-              {watchEntry.hearthUrl && (
-                <a
-                  href={watchEntry.hearthUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+            {parishCampaign?.dispatches?.length > 0 && (
+              <div className="mt-3 border-t border-rule pt-3">
+                <p className="text-xs uppercase tracking-wide text-muted mb-1.5">
+                  From Židinys (The Hearth)
+                </p>
+                <ul className="space-y-1">
+                  {parishCampaign.dispatches.map((d: any) => (
+                    <li key={d.url}>
+                      <a
+                        href={d.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm underline hover:text-foreground"
+                      >
+                        {d.title} &rarr;
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
+
+        {watchEntry && (
+          <div className="mt-4 rounded-lg border border-rule overflow-hidden">
+            <div className="px-4 pt-3.5 pb-3">
+              <p className="text-xs uppercase tracking-widest text-muted">
+                Sustainability Watch
+              </p>
+              <p className="mt-1.5 leading-relaxed">{watchEntry.situation}</p>
+
+              <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                <div>
+                  <p className="text-xs uppercase tracking-wide text-muted mb-1">Clergy</p>
+                  <p className="font-medium">{CLERGY_LABEL[watchEntry.clergy.arrangement] ?? watchEntry.clergy.arrangement}</p>
+                  <p className="mt-1 text-xs text-muted leading-relaxed">{watchEntry.clergy.detail}</p>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wide text-muted mb-1">Lithuanian Mass</p>
+                  <p className="font-medium">{FREQUENCY_LABEL[watchEntry.liturgy.frequency] ?? watchEntry.liturgy.frequency}</p>
+                  <p className="mt-1 text-xs text-muted">{watchEntry.liturgy.detail}</p>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wide text-muted mb-1">Governance</p>
+                  <p className="font-medium">{GOVERNANCE_LABEL[watchEntry.governance] ?? watchEntry.governance}</p>
+                  <p className="mt-1 text-xs text-muted">{watchEntry.governanceDetail}</p>
+                </div>
+              </div>
+
+              {watchEntry.survivedThreats && (
+                <div className="mt-3 text-sm">
+                  <p className="text-xs uppercase tracking-wide text-muted mb-0.5">Survived</p>
+                  <p className="text-muted leading-relaxed">{watchEntry.survivedThreats}</p>
+                </div>
+              )}
+              {watchEntry.financial && (
+                <div className="mt-3 text-sm">
+                  <p className="text-xs uppercase tracking-wide text-muted mb-0.5">Financial signal</p>
+                  <p className="text-muted leading-relaxed">{watchEntry.financial}</p>
+                </div>
+              )}
+            </div>
+            <div className="border-t border-rule bg-background px-4 py-2.5 flex flex-wrap items-center justify-between gap-2">
+              <p className="text-xs text-muted">
+                Sources:{" "}
+                {(watchEntry.sources as any[]).map((s: any, i: number) => (
+                  <span key={s.url}>
+                    {i > 0 && " · "}
+                    <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
+                      {s.publisher}
+                    </a>
+                  </span>
+                ))}
+                {" · "}checked {watchEntry.dateObserved}
+              </p>
+              <div className="flex gap-2">
+                {watchEntry.hearthUrl && (
+                  <a
+                    href={watchEntry.hearthUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-md border border-rule px-3 py-1 text-xs font-medium hover:border-foreground transition-colors"
+                  >
+                    Read the dispatch &rarr;
+                  </a>
+                )}
+                <Link
+                  href="/sustainability-watch"
                   className="rounded-md border border-rule px-3 py-1 text-xs font-medium hover:border-foreground transition-colors"
                 >
-                  Read the dispatch &rarr;
-                </a>
-              )}
-              <Link
-                href="/sustainability-watch"
-                className="rounded-md border border-rule px-3 py-1 text-xs font-medium hover:border-foreground transition-colors"
-              >
-                Sustainability Watch &rarr;
-              </Link>
+                  Sustainability Watch &rarr;
+                </Link>
+              </div>
             </div>
+            {watchEntry.dispatches?.length > 0 && (
+              <div className="border-t border-rule px-4 py-3">
+                <p className="text-xs uppercase tracking-wide text-muted mb-1.5">
+                  From Židinys (The Hearth)
+                </p>
+                <ul className="space-y-1">
+                  {(watchEntry.dispatches as any[]).map((d: any) => (
+                    <li key={d.url}>
+                      <a
+                        href={d.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm underline hover:text-foreground"
+                      >
+                        {d.title} &rarr;
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
-          {watchEntry.dispatches?.length > 0 && (
-            <div className="border-t border-rule px-4 py-3">
-              <p className="text-xs uppercase tracking-wide text-muted mb-1.5">
-                From Židinys (The Hearth)
-              </p>
-              <ul className="space-y-1">
-                {(watchEntry.dispatches as any[]).map((d: any) => (
-                  <li key={d.url}>
-                    <a
-                      href={d.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm underline hover:text-foreground"
-                    >
-                      {d.title} &rarr;
-                    </a>
+        )}
+
+        {caseRecord && (
+          <div className="mt-5">
+            <p className="text-xs uppercase tracking-wide text-muted">
+              The present record · as of {caseRecord.asOf} ·{" "}
+              {caseRecord.confidence === "verified"
+                ? "verified against published sources"
+                : caseRecord.confidence === "reported"
+                  ? "reported — corroboration limited"
+                  : "thin — treat with caution"}
+            </p>
+            <p className="mt-3 leading-relaxed">{caseRecord.summary}</p>
+            {caseRecord.developments.length > 0 && (
+              <ol className="mt-5 space-y-4 border-l-2 border-rule pl-4">
+                {[...caseRecord.developments].sort((a, b) => b.date.localeCompare(a.date)).map((d) => (
+                  <li key={`${d.date}-${d.headline}`}>
+                    <p className="text-xs uppercase tracking-wide text-muted">
+                      {d.date}
+                    </p>
+                    <p className="font-medium">{d.headline}</p>
+                    <p className="text-sm text-muted leading-relaxed">
+                      {d.detail}{" "}
+                      {d.sources.map((s, i) => (
+                        <a
+                          key={s.url}
+                          href={s.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline hover:text-foreground whitespace-nowrap"
+                        >
+                          {s.publisher || s.title}
+                          {i < d.sources.length - 1 ? ", " : ""}
+                        </a>
+                      ))}
+                    </p>
                   </li>
                 ))}
-              </ul>
-            </div>
-          )}
-        </section>
-      )}
-
-      {parish.survivedReviewThenClosed && (
-        <p
-          className="mt-10 rounded-lg border border-rule p-4 leading-relaxed"
-          style={{ borderLeft: "4px solid var(--mark-closed)" }}
-        >
-          This parish <strong>survived an earlier diocesan review</strong> —
-          and a later one still reached it. It is one of the seven parishes in
-          the record showing that surviving one restructuring buys time, not
-          safety.
-        </p>
-      )}
-
-      {parish.notes && (
-        <section className="mt-10">
-          <h2 className="font-serif text-xl font-semibold">From the record</h2>
-          <p className="mt-2 leading-relaxed">{parish.notes}</p>
-        </section>
-      )}
-
-      {scholarlySources.length > 0 && (
-        <section className="mt-10">
-          <h2 className="font-serif text-xl font-semibold">Scholarly sources</h2>
-          <p className="mt-2 text-sm text-muted leading-relaxed">
-            Cross-referenced from published monographs that independently
-            documented this parish. Quoted descriptions are the author&#8217;s own
-            characterization.
-          </p>
-          <div className="mt-3 space-y-3">
-            {scholarlySources.map((s: any, i: number) => {
-              const isWolkovich = s.axis === "wolkovich";
-              const isLukas = s.axis === "lukas-2009";
-              const hasDetail =
-                s.school || s.convent || s.cemetery ||
-                (s.diocese && !/^(none|unknown|unspecified)$/i.test(s.diocese));
-              return (
-                <div
-                  key={i}
-                  className="rounded-lg border border-rule px-4 py-3 text-sm"
-                >
-                  <p className="font-medium">
-                    {isLukas ? (
-                      <a
-                        href="https://archyvas.ziburioltmokykla.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:text-accent"
-                      >
-                        Lukas,{" "}
-                        <em>Lietuvių Kultūrinis Paveldas Amerikoje</em> (2009)
-                      </a>
-                    ) : isWolkovich ? (
-                      <a
-                        href="https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:text-accent"
-                      >
-                        Wolkovich-Valkavičius,{" "}
-                        <em>Lithuanian Religious Life in America</em>, Vol.&nbsp;3
-                        (1998)
-                      </a>
-                    ) : (
-                      <a
-                        href="https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:text-accent"
-                      >
-                        Michelsonas,{" "}
-                        <em>Lietuvių Išeivija Amerikoje</em> (1868–1961),
-                        Keleivis, 1961
-                      </a>
-                    )}
-                    {s.pages && (
-                      <span className="text-muted font-normal">
-                        , {s.pages}
-                      </span>
-                    )}
-                  </p>
-                  {isLukas && s.description && (
-                    <p className="mt-2 leading-relaxed text-muted">
-                      {s.description}
-                    </p>
-                  )}
-                  {isLukas && s.architect && (
-                    <p className="mt-1 text-muted">Architect: {s.architect}</p>
-                  )}
-                  {s.ethnic_status &&
-                    !/^(none|unknown|unspecified)$/i.test(s.ethnic_status) && (
-                      <p className="mt-2 italic leading-relaxed text-muted">
-                        &ldquo;{s.ethnic_status}&rdquo;
-                      </p>
-                    )}
-                  {hasDetail && (
-                    <div className="mt-2 space-y-0.5 text-muted">
-                      {s.diocese &&
-                        !/^(none|unknown|unspecified)$/i.test(s.diocese) && (
-                          <p>Diocese: {s.diocese}</p>
-                        )}
-                      {s.school && <p>School: {s.school}</p>}
-                      {s.convent && <p>Convent: {s.convent}</p>}
-                      {s.cemetery && <p>Cemetery: {s.cemetery}</p>}
-                    </div>
-                  )}
-                  {s.lens && (
-                    <p className="mt-2 text-xs italic text-muted">
-                      Note: {s.lens}
-                    </p>
-                  )}
-                  {isLukas && (
-                    <p className="mt-2 text-xs text-muted">
-                      <a
-                        href="https://archyvas.ziburioltmokykla.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:text-accent"
-                      >
-                        Available in the Žiburio archive →
-                      </a>
-                    </p>
-                  )}
-                </div>
-              );
-            })}
+              </ol>
+            )}
+            {caseRecord.gaps && (
+              <p className="mt-4 text-sm text-muted leading-relaxed">
+                <span className="font-medium text-foreground">
+                  What we could not yet establish:
+                </span>{" "}
+                {caseRecord.gaps}
+              </p>
+            )}
           </div>
-          {parish.registrySlug && (
-            <p className="mt-3 text-sm text-muted">
-              <Link
-                href={`/registry/${parish.registrySlug}`}
-                className="underline hover:text-foreground"
-              >
-                See the full research record →
-              </Link>
-            </p>
-          )}
-        </section>
-      )}
-
-      {caseRecord && (
-        <section className="mt-10">
-          <h2 className="font-serif text-xl font-semibold">
-            The present record
-          </h2>
-          <p className="mt-1 text-xs uppercase tracking-wide text-muted">
-            As of {caseRecord.asOf} ·{" "}
-            {caseRecord.confidence === "verified"
-              ? "verified against published sources"
-              : caseRecord.confidence === "reported"
-                ? "reported — corroboration limited"
-                : "thin — treat with caution"}
-          </p>
-          <p className="mt-3 leading-relaxed">{caseRecord.summary}</p>
-          {caseRecord.developments.length > 0 && (
-            <ol className="mt-5 space-y-4 border-l-2 border-rule pl-4">
-              {[...caseRecord.developments].sort((a, b) => b.date.localeCompare(a.date)).map((d) => (
-                <li key={`${d.date}-${d.headline}`}>
-                  <p className="text-xs uppercase tracking-wide text-muted">
-                    {d.date}
-                  </p>
-                  <p className="font-medium">{d.headline}</p>
-                  <p className="text-sm text-muted leading-relaxed">
-                    {d.detail}{" "}
-                    {d.sources.map((s, i) => (
-                      <a
-                        key={s.url}
-                        href={s.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:text-foreground whitespace-nowrap"
-                      >
-                        {s.publisher || s.title}
-                        {i < d.sources.length - 1 ? ", " : ""}
-                      </a>
-                    ))}
-                  </p>
-                </li>
-              ))}
-            </ol>
-          )}
-          {caseRecord.gaps && (
-            <p className="mt-4 text-sm text-muted leading-relaxed">
-              <span className="font-medium text-foreground">
-                What we could not yet establish:
-              </span>{" "}
-              {caseRecord.gaps}
-            </p>
-          )}
-        </section>
-      )}
+        )}
+      </section>
 
       <section className="mt-10">
         <h2 className="font-serif text-xl font-semibold">
@@ -660,7 +670,7 @@ export default async function ParishPage({
           <Link
             href="/report"
             className="inline-block rounded-md px-4 py-2 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
-            style={{ background: "var(--mark-closed)" }}
+            style={{ background: "var(--es-closed)" }}
           >
             Report it
           </Link>

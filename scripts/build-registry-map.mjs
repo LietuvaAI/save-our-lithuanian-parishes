@@ -29,6 +29,16 @@ const geoCache = {
   ...JSON.parse(readFileSync(GEO_MAIN, "utf-8")),
 };
 
+// Classifier overlay — carries researched lithuanian_identity for registry
+// entries beyond the case-filed core, so the map can distinguish a standing
+// Lithuanian parish from a standing church whose ethnic mission moved on.
+const SIT_PATH = new URL("../data/parish-situation.json", import.meta.url);
+const situationByRegistrySlug = new Map(
+  Object.values(JSON.parse(readFileSync(SIT_PATH, "utf-8")).parishes).map(
+    (e) => [e.registry_slug, e],
+  ),
+);
+
 // The exact lower-48 component of geoAlbersUsa — identical to the canonical
 // map's projection for the mainland US, but (unlike the composite) it also
 // projects southern Canada, so Canadian parishes join the same frame
@@ -133,6 +143,10 @@ for (const r of toPlot) {
         )
       ),
     depth: r.record_depth,
+    identity: (() => {
+      const v = situationByRegistrySlug.get(r.slug)?.lithuanian_identity;
+      return v && v !== "unknown" ? v : null;
+    })(),
     congregationClass: r.congregation_class,
     documentedIn: [...new Set(r.sources.map((s) => AXIS_LABEL[s.axis] ?? s.axis))],
     hasConflicts: (r.conflicts?.length ?? 0) > 0,

@@ -3,9 +3,9 @@ import Link from "next/link";
 import alertsData from "@/data/alerts.json";
 
 export const metadata: Metadata = {
-  title: "Parishes under threat — SaveOurLithuanianParishes.org",
+  title: "Under Threat",
   description:
-    "All ten watched Lithuanian parishes: closures, consolidations, property motions, open windows, and active community campaigns — every item sourced.",
+    "The watched Lithuanian parishes: closures, consolidations, property motions, open windows, and active community campaigns — every item sourced.",
 };
 
 type Alert = {
