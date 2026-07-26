@@ -2,7 +2,7 @@
 
 // ============================================================================
 // StatusPills — the shared pill components for the unified status system.
-// Used by: RegistryTable, parish profiles, ClassifierGrid, map popups.
+// Used by: RegistryTable (the record) and map popups.
 // ============================================================================
 
 import {
