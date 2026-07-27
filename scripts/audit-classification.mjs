@@ -65,8 +65,13 @@ for (const p of lib) {
   if (!standing && p.status !== "undecided" && !p.yearClosed)
     add("DATA-GAP", slug, `status "${p.status}" with no closure year recorded`);
 
-  // 2. Favorable identity vs research layers
-  if ((id === "active_parish" || id === "mass_continues") && standing) {
+  // 2. Favorable identity vs research layers. No lifecycle gate: a favorable
+  // claim needs evidence whatever the status. The old `&& standing` guard
+  // exempted merged/suppressed/undecided records — and `undecided` is
+  // permanent for Maspeth and Elizabeth NJ (binding guardrail), so the two
+  // most sensitive records in the corpus were the two this block could
+  // never audit (found 2026-07-27; latent — zero findings changed).
+  if (id === "active_parish" || id === "mass_continues") {
     if (watch) {
       if (watch.liturgy?.lithuanianMass === false)
         add("CONTRADICTION", slug, `identity "${id}" but watch research: no Lithuanian Mass`);
