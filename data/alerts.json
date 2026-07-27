@@ -29,7 +29,7 @@
       "entity": "St. Joseph's (Šv. Juozapo)",
       "place": "Waterbury, Connecticut",
       "diocese": "Archdiocese of Hartford",
-      "dateObserved": "2026-07-22",
+      "dateObserved": "2026-07-27",
       "eventDate": "2023-09-30",
       "whatChanged": "Closed September 30, 2023 under the Archdiocese of Hartford's restructuring plan. Parishioners retained a canon lawyer and continue to contest the closure; the community has so far prevented a complete ending and the canonical fight remains active.",
       "parishLink": "/parishes/sv-juozapo-waterbury-ct",
@@ -303,7 +303,7 @@
       "entity": "St. Joseph's (Šv. Juozapo)",
       "place": "Waterbury, Connecticut",
       "parishLink": "/parishes/sv-juozapo-waterbury-ct",
-      "hearthUrl": "https://blog.saveourlithuanianparishes.org/i/207579337/st-josephs-church-waterbury-connecticut",
+      "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/closed-not-ended-the-vatican-appeal",
       "since": "2023",
       "who": "Parishioners of St. Joseph's Lithuanian Catholic Church, Waterbury",
       "form": "Retained a canon lawyer in 2023 to contest the archdiocese's closure decision; GoFundMe to cover legal expenses",
@@ -318,6 +318,12 @@
           "title": "Save St. Joseph's Lithuanian Catholic Church",
           "publisher": "GoFundMe",
           "url": "https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church"
+        }
+      ],
+      "dispatches": [
+        {
+          "title": "Closed, Not Ended: The Vatican Appeal for Šv. Juozapo (St. Joseph's) in Waterbury",
+          "url": "https://blog.saveourlithuanianparishes.org/p/closed-not-ended-the-vatican-appeal"
         }
       ]
     },
