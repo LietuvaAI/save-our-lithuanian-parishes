@@ -1,0 +1,2339 @@
+{
+  "generated": "2026-07-27",
+  "before": {
+    "records": 223,
+    "parishes": 209
+  },
+  "upstream": {
+    "records": 204,
+    "caseFiles": 83,
+    "caseFiledEntities": 82
+  },
+  "after": {
+    "parishes": 200,
+    "case_filed": 83,
+    "case_filed_records": 82,
+    "multi_source": 61,
+    "single_source": 61,
+    "with_exact_geo": 87,
+    "with_city_geo": 114,
+    "needs_geocode": 3,
+    "standalone_sites": 167,
+    "non_catholic_congregations": 14,
+    "excluded": 11,
+    "ambiguous": 1,
+    "records": 214,
+    "missions": 4,
+    "congregations": 10
+  },
+  "siteOwnedRecordsPreserved": [
+    "bukauskas-independent-chicago",
+    "jonistai-chicago",
+    "springfield-independent",
+    "protestant-parish-nyc",
+    "first-lutheran-boston",
+    "evangelical-reformed-chicago",
+    "raymond-baptist-chicago",
+    "cong-lithuanian-evangelical-union-c",
+    "cong-lithuanian-evangelical-luthera",
+    "cong-lithuanian-evangelical-parish"
+  ],
+  "removedSiteRecords": [
+    "parish-westville-il",
+    "parish-westville-il-2"
+  ],
+  "decisions": [
+    {
+      "slug": "casimir-gary-in",
+      "matchedSiteSlugs": [
+        "casimir-gary-in"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "ann-spring-valley-il",
+      "matchedSiteSlugs": [
+        "ann-spring-valley-il"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "george-chicago-il",
+      "matchedSiteSlugs": [
+        "george-chicago-il"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "michael-chicago-north-side-il",
+      "matchedSiteSlugs": [
+        "michael-chicago-north-side-il",
+        "michael-north-chicago-il"
+      ],
+      "preserved": [
+        "diocese",
+        "geo"
+      ]
+    },
+    {
+      "slug": "gateofdawn-chicago-il",
+      "matchedSiteSlugs": [
+        "gateofdawn-chicago-il"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "casimir-chicago-il",
+      "matchedSiteSlugs": [
+        "casimir-chicago-il",
+        "st-casimir-chicago-heights-il"
+      ],
+      "preserved": [
+        "diocese",
+        "geo"
+      ]
+    },
+    {
+      "slug": "joseph-south-chicago-il",
+      "matchedSiteSlugs": [
+        "joseph-south-chicago-il"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "providence-chicago-il",
+      "matchedSiteSlugs": [
+        "providence-chicago-il"
+      ],
+      "preserved": [
+        "diocese",
+        "description",
+        "architect",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "holycross-chicago-il",
+      "matchedSiteSlugs": [
+        "holycross-chicago-il"
+      ],
+      "preserved": [
+        "diocese",
+        "description",
+        "architect",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "parish-oglesby-il",
+      "matchedSiteSlugs": [
+        "parish-oglesby-il"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "francis-east-chicago-in",
+      "matchedSiteSlugs": [
+        "francis-east-chicago-in"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "casimir-sioux-city-ia",
+      "matchedSiteSlugs": [
+        "casimir-sioux-city-ia"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "casimir-kansas-city-mo",
+      "matchedSiteSlugs": [
+        "casimir-kansas-city-mo"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "casimir-brockton-ma",
+      "matchedSiteSlugs": [
+        "casimir-brockton-ma"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "peter-cambridge-ma",
+      "matchedSiteSlugs": [
+        "peter-cambridge-ma"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "francis-lawrence-ma",
+      "matchedSiteSlugs": [
+        "francis-lawrence-ma"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "george-haverhill-ma",
+      "matchedSiteSlugs": [
+        "george-haverhill-ma",
+        "holyname-haverhill-ma"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "george-norwood-ma",
+      "matchedSiteSlugs": [
+        "george-norwood-ma"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "casimir-worcester-ma",
+      "matchedSiteSlugs": [
+        "casimir-worcester-ma"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "gateofdawn-worcester-ma",
+      "matchedSiteSlugs": [
+        "gateofdawn-worcester-ma"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "gateofdawn-manhattan-ny",
+      "matchedSiteSlugs": [
+        "gateofdawn-manhattan-ny"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "george-rochester-ny",
+      "matchedSiteSlugs": [
+        "george-rochester-ny"
+      ],
+      "preserved": [
+        "diocese",
+        "description",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "george-brooklyn-ny",
+      "matchedSiteSlugs": [
+        "george-brooklyn-ny"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "george-niagara-falls-ny",
+      "matchedSiteSlugs": [
+        "george-niagara-falls-ny"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "casimir-amsterdam-ny",
+      "matchedSiteSlugs": [
+        "casimir-amsterdam-ny"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "michael-bayonne-nj",
+      "matchedSiteSlugs": [
+        "michael-bayonne-nj"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "holyname-newark-nj",
+      "matchedSiteSlugs": [
+        "holyname-newark-nj"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "casimir-paterson-nj",
+      "matchedSiteSlugs": [
+        "casimir-paterson-nj"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "andrew-new-britain-ct",
+      "matchedSiteSlugs": [
+        "andrew-new-britain-ct"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "casimir-new-haven-ct",
+      "matchedSiteSlugs": [
+        "casimir-new-haven-ct"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "holyname-ansonia-ct",
+      "matchedSiteSlugs": [
+        "holyname-ansonia-ct"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "joseph-waterbury-ct",
+      "matchedSiteSlugs": [
+        "joseph-waterbury-ct",
+        "casimir-waterbury-ct"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "casimir-nashua-nh",
+      "matchedSiteSlugs": [
+        "casimir-nashua-nh"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "anthony-detroit-mi",
+      "matchedSiteSlugs": [
+        "anthony-detroit-mi"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "peter-detroit-mi",
+      "matchedSiteSlugs": [
+        "peter-detroit-mi"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "anthony-omaha-ne",
+      "matchedSiteSlugs": [
+        "anthony-omaha-ne"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "george-cleveland-oh",
+      "matchedSiteSlugs": [
+        "george-cleveland-oh"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "motherofgod-cleveland-oh",
+      "matchedSiteSlugs": [
+        "motherofgod-cleveland-oh"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "george-shenandoah-pa",
+      "matchedSiteSlugs": [
+        "george-shenandoah-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "description",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "casimir-pittston-pa",
+      "matchedSiteSlugs": [
+        "casimir-pittston-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "trinity-wilkes-barre-pa",
+      "matchedSiteSlugs": [
+        "trinity-wilkes-barre-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "annunciation-kingston-pa",
+      "matchedSiteSlugs": [
+        "annunciation-kingston-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "paul-esplen-pa",
+      "matchedSiteSlugs": [
+        "paul-esplen-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "casimir-pittsburgh-pa",
+      "matchedSiteSlugs": [
+        "casimir-pittsburgh-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "description",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "joseph-scranton-pa",
+      "matchedSiteSlugs": [
+        "joseph-scranton-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "michael-scranton-pa",
+      "matchedSiteSlugs": [
+        "michael-scranton-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "john-coaldale-pa",
+      "matchedSiteSlugs": [
+        "john-coaldale-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "gateofdawn-archbald-pa",
+      "matchedSiteSlugs": [
+        "gateofdawn-archbald-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "holycross-mount-carmel-pa",
+      "matchedSiteSlugs": [
+        "holycross-mount-carmel-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "motherofgod-maizeville-pa",
+      "matchedSiteSlugs": [
+        "motherofgod-maizeville-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "paul-girardville-pa",
+      "matchedSiteSlugs": [
+        "paul-girardville-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "joseph-nanticoke-pa",
+      "matchedSiteSlugs": [
+        "joseph-nanticoke-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "casimir-providence-ri",
+      "matchedSiteSlugs": [
+        "casimir-providence-ri"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "andrew-philadelphia-pa",
+      "matchedSiteSlugs": [
+        "andrew-philadelphia-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "description",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "casimir-philadelphia-pa",
+      "matchedSiteSlugs": [
+        "casimir-philadelphia-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "george-philadelphia-pa",
+      "matchedSiteSlugs": [
+        "george-philadelphia-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "peter-boston-ma",
+      "matchedSiteSlugs": [
+        "peter-boston-ma"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "holycross-dayton-oh",
+      "matchedSiteSlugs": [
+        "holycross-dayton-oh"
+      ],
+      "preserved": [
+        "diocese",
+        "description",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "casimir-cleveland-oh",
+      "matchedSiteSlugs": [
+        "casimir-cleveland-oh"
+      ],
+      "preserved": [
+        "diocese",
+        "description",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "nativity-chicago-il",
+      "matchedSiteSlugs": [
+        "nativity-chicago-il"
+      ],
+      "preserved": [
+        "diocese",
+        "description",
+        "architect",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "immaculate-chicago-il",
+      "matchedSiteSlugs": [
+        "immaculate-chicago-il"
+      ],
+      "preserved": [
+        "diocese",
+        "description",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "anthony-cicero-il",
+      "matchedSiteSlugs": [
+        "anthony-cicero-il"
+      ],
+      "preserved": [
+        "diocese",
+        "description",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "providence-southfield-mi",
+      "matchedSiteSlugs": [
+        "providence-southfield-mi"
+      ],
+      "preserved": [
+        "diocese",
+        "description",
+        "architect",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "george-lemont-il",
+      "matchedSiteSlugs": [
+        "george-lemont-il"
+      ],
+      "preserved": [
+        "diocese",
+        "description",
+        "city_history",
+        "geo",
+        "record_type"
+      ]
+    },
+    {
+      "slug": "annunciation-brooklyn-ny",
+      "matchedSiteSlugs": [
+        "annunciation-brooklyn-ny"
+      ],
+      "preserved": [
+        "diocese",
+        "description",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "transfiguration-maspeth-ny",
+      "matchedSiteSlugs": [
+        "transfiguration-maspeth-ny"
+      ],
+      "preserved": [
+        "diocese",
+        "description",
+        "architect",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "paul-elizabeth-nj",
+      "matchedSiteSlugs": [
+        "paul-elizabeth-nj"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "parish-kearny-nj",
+      "matchedSiteSlugs": [
+        "parish-kearny-nj",
+        "our-lady-of-sorrows-kearny-nj",
+        "sorrows-kearny-nj",
+        "mary-kearny-nj",
+        "lithuanian-church-harrison-nj"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "george-bridgeport-ct",
+      "matchedSiteSlugs": [
+        "george-bridgeport-ct"
+      ],
+      "preserved": [
+        "diocese",
+        "description",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "trinity-hartford-ct",
+      "matchedSiteSlugs": [
+        "trinity-hartford-ct"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "ann-luzerne-pa",
+      "matchedSiteSlugs": [
+        "ann-luzerne-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "mary-frackville-pa",
+      "matchedSiteSlugs": [
+        "mary-frackville-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "casimir-los-angeles-ca",
+      "matchedSiteSlugs": [
+        "casimir-los-angeles-ca"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "paul-grand-rapids-mi",
+      "matchedSiteSlugs": [
+        "paul-grand-rapids-mi"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "immaculate-east-st-louis-il",
+      "matchedSiteSlugs": [
+        "immaculate-east-st-louis-il"
+      ],
+      "preserved": [
+        "diocese",
+        "description",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "providence-scranton-pa",
+      "matchedSiteSlugs": [
+        "providence-scranton-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "jesus-lawrence-ma",
+      "matchedSiteSlugs": [
+        "jesus-lawrence-ma"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "mary-philadelphia-pa",
+      "matchedSiteSlugs": [
+        "mary-philadelphia-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "holy-cross-westville-il",
+      "matchedSiteSlugs": [
+        "holy-cross-westville-il"
+      ],
+      "preserved": [
+        "diocese",
+        "caveat",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "angels-darien-il",
+      "matchedSiteSlugs": [
+        "angels-darien-il"
+      ],
+      "preserved": [
+        "name_variants",
+        "city_history",
+        "diocese",
+        "geo",
+        "congregation_class"
+      ]
+    },
+    {
+      "slug": "parish-collinsville-il",
+      "matchedSiteSlugs": [
+        "parish-collinsville-il"
+      ],
+      "preserved": [
+        "name_variants",
+        "city_history",
+        "diocese",
+        "geo",
+        "congregation_class"
+      ]
+    },
+    {
+      "slug": "casimir-montreal-qc",
+      "matchedSiteSlugs": [
+        "casimir-montreal-qc"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "gateofdawn-montreal-qc",
+      "matchedSiteSlugs": [
+        "gateofdawn-montreal-qc"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "casimir-delhi-on",
+      "matchedSiteSlugs": [
+        "casimir-delhi-on"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-joseph-mahanoy-city-pa",
+      "matchedSiteSlugs": [
+        "st-joseph-mahanoy-city-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "ss-peter-and-paul-tamaqua-pa",
+      "matchedSiteSlugs": [
+        "ss-peter-and-paul-tamaqua-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "sacred-heart-new-philadelphia-pa",
+      "matchedSiteSlugs": [
+        "sacred-heart-new-philadelphia-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "lithuanian-church-middleport-pa",
+      "matchedSiteSlugs": [
+        "lithuanian-church-middleport-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-francis-minersville-pa",
+      "matchedSiteSlugs": [
+        "st-francis-minersville-pa"
+      ],
+      "preserved": [
+        "caveat",
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-casimir-st-clair-pa",
+      "matchedSiteSlugs": [
+        "st-casimir-st-clair-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-michael-shamokin-pa",
+      "matchedSiteSlugs": [
+        "st-michael-shamokin-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "ss-peter-and-paul-hazleton-pa",
+      "matchedSiteSlugs": [
+        "ss-peter-and-paul-hazleton-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-casimir-mcadoo-pa",
+      "matchedSiteSlugs": [
+        "st-casimir-mcadoo-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-anthony-forest-city-pa",
+      "matchedSiteSlugs": [
+        "st-anthony-forest-city-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "our-lady-of-vilna-eynon-pa",
+      "matchedSiteSlugs": [
+        "our-lady-of-vilna-eynon-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-joseph-duryea-pa",
+      "matchedSiteSlugs": [
+        "st-joseph-duryea-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-francis-wilkes-barre-pa",
+      "matchedSiteSlugs": [
+        "st-francis-wilkes-barre-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "all-saints-wilkes-barre-pa",
+      "matchedSiteSlugs": [
+        "all-saints-wilkes-barre-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-casimir-wilkes-barre-pa",
+      "matchedSiteSlugs": [
+        "st-casimir-wilkes-barre-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "ss-peter-and-paul-sugar-notch-pa",
+      "matchedSiteSlugs": [
+        "ss-peter-and-paul-sugar-notch-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-mary-wanamie-pa",
+      "matchedSiteSlugs": [
+        "st-mary-wanamie-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "lithuanian-church-chester-pa",
+      "matchedSiteSlugs": [
+        "lithuanian-church-chester-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "ascension-pittsburgh-pa",
+      "matchedSiteSlugs": [
+        "ascension-pittsburgh-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-isidore-braddock-pa",
+      "matchedSiteSlugs": [
+        "st-isidore-braddock-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "ss-peter-and-paul-homestead-pa",
+      "matchedSiteSlugs": [
+        "ss-peter-and-paul-homestead-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-anthony-bridgeville-pa",
+      "matchedSiteSlugs": [
+        "st-anthony-bridgeville-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-joseph-donora-pa",
+      "matchedSiteSlugs": [
+        "st-joseph-donora-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-luke-bentleyville-pa",
+      "matchedSiteSlugs": [
+        "st-luke-bentleyville-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-casimir-east-vandergrift-pa",
+      "matchedSiteSlugs": [
+        "st-casimir-east-vandergrift-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-joseph-lowell-ma",
+      "matchedSiteSlugs": [
+        "st-joseph-lowell-ma"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-francis-athol-ma",
+      "matchedSiteSlugs": [
+        "st-francis-athol-ma"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-casimir-westfield-ma",
+      "matchedSiteSlugs": [
+        "st-casimir-westfield-ma"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "lithuanian-church-waterbury-ct",
+      "matchedSiteSlugs": [
+        "lithuanian-church-waterbury-ct"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-anthony-ansonia-ct",
+      "matchedSiteSlugs": [
+        "st-anthony-ansonia-ct"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-mary-of-the-angels-brooklyn-ny",
+      "matchedSiteSlugs": [
+        "st-mary-of-the-angels-brooklyn-ny"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-george-albany-ny",
+      "matchedSiteSlugs": [
+        "st-george-albany-ny"
+      ],
+      "preserved": [
+        "caveat",
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "holy-cross-schenectady-ny",
+      "matchedSiteSlugs": [
+        "holy-cross-schenectady-ny"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-george-utica-ny",
+      "matchedSiteSlugs": [
+        "st-george-utica-ny"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-joseph-binghamton-ny",
+      "matchedSiteSlugs": [
+        "st-joseph-binghamton-ny"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "holy-trinity-newark-nj",
+      "matchedSiteSlugs": [
+        "holy-trinity-newark-nj"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-ann-jersey-city-nj",
+      "matchedSiteSlugs": [
+        "st-ann-jersey-city-nj"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "all-saints-chicago-il",
+      "matchedSiteSlugs": [
+        "all-saints-chicago-il"
+      ],
+      "preserved": [
+        "diocese",
+        "description",
+        "architect",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "ss-peter-and-paul-chicago-il",
+      "matchedSiteSlugs": [
+        "ss-peter-and-paul-chicago-il"
+      ],
+      "preserved": [
+        "caveat",
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-bartholomew-waukegan-il",
+      "matchedSiteSlugs": [
+        "st-bartholomew-waukegan-il"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "ss-peter-and-paul-rockford-il",
+      "matchedSiteSlugs": [
+        "ss-peter-and-paul-rockford-il"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-vincent-de-paul-springfield-il",
+      "matchedSiteSlugs": [
+        "st-vincent-de-paul-springfield-il"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-anthony-kewanee-il",
+      "matchedSiteSlugs": [
+        "st-anthony-kewanee-il"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "ss-peter-and-paul-westville-il",
+      "matchedSiteSlugs": [
+        "ss-peter-and-paul-westville-il"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-francis-youngstown-oh",
+      "matchedSiteSlugs": [
+        "st-francis-youngstown-oh"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-peter-akron-oh",
+      "matchedSiteSlugs": [
+        "st-peter-akron-oh"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-george-detroit-mi",
+      "matchedSiteSlugs": [
+        "st-george-detroit-mi"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-george-saginaw-mi",
+      "matchedSiteSlugs": [
+        "st-george-saginaw-mi"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-gabriel-milwaukee-wi",
+      "matchedSiteSlugs": [
+        "st-gabriel-milwaukee-wi"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-casimir-racine-wi",
+      "matchedSiteSlugs": [
+        "st-casimir-racine-wi"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-peter-kenosha-wi",
+      "matchedSiteSlugs": [
+        "st-peter-kenosha-wi"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "immaculate-conception-sheboygan-wi",
+      "matchedSiteSlugs": [
+        "immaculate-conception-sheboygan-wi"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-ambrose-port-washington-wi",
+      "matchedSiteSlugs": [
+        "st-ambrose-port-washington-wi"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo",
+        "record_type"
+      ]
+    },
+    {
+      "slug": "st-casimir-kansas-city-ks",
+      "matchedSiteSlugs": [
+        "st-casimir-kansas-city-ks"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-joseph-st-louis-mo",
+      "matchedSiteSlugs": [
+        "st-joseph-st-louis-mo"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-alphonsus-baltimore-md",
+      "matchedSiteSlugs": [
+        "st-alphonsus-baltimore-md",
+        "holyname-baltimore-md"
+      ],
+      "preserved": [
+        "diocese",
+        "description",
+        "caveat",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-john-the-baptist-baltimore-md",
+      "matchedSiteSlugs": [
+        "st-john-the-baptist-baltimore-md"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-casimir-st-pete-beach-fl",
+      "matchedSiteSlugs": [
+        "st-casimir-st-pete-beach-fl"
+      ],
+      "preserved": [
+        "caveat",
+        "diocese",
+        "city_history",
+        "geo",
+        "record_type"
+      ]
+    },
+    {
+      "slug": "st-casimir-plymouth-pa",
+      "matchedSiteSlugs": [
+        "st-casimir-plymouth-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-joseph-du-bois-pa",
+      "matchedSiteSlugs": [
+        "st-joseph-du-bois-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "lithuanian-easton-pa",
+      "matchedSiteSlugs": [
+        "lithuanian-easton-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-ann-beverly-shores-in",
+      "matchedSiteSlugs": [
+        "st-ann-beverly-shores-in"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "lithuanian-union-pier-mi",
+      "matchedSiteSlugs": [
+        "lithuanian-union-pier-mi"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "lithuanian-toronto-on",
+      "matchedSiteSlugs": [
+        "lithuanian-toronto-on"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "christ-the-king-sudbury-on",
+      "matchedSiteSlugs": [
+        "christ-the-king-sudbury-on"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "st-catherine-st-catharines-on",
+      "matchedSiteSlugs": [
+        "st-catherine-st-catharines-on"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "lithuanian-bronx-ny",
+      "matchedSiteSlugs": [
+        "lithuanian-bronx-ny"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "louis-maizeville-pa",
+      "matchedSiteSlugs": [
+        "louis-maizeville-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "ascension-pittsburgh-pa-2",
+      "matchedSiteSlugs": [
+        "ascension-pittsburgh-pa-2"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "lithuanian-national-catholic-parish-waterbury-ct",
+      "matchedSiteSlugs": [
+        "lithuanian-national-catholic-parish-waterbury-ct"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "paul-naugatuck-ct",
+      "matchedSiteSlugs": [
+        "paul-naugatuck-ct"
+      ],
+      "preserved": [
+        "name_variants",
+        "city_history",
+        "diocese",
+        "geo",
+        "congregation_class"
+      ]
+    },
+    {
+      "slug": "zion-lithuanian-lutheran-oak-lawn-il",
+      "matchedSiteSlugs": [
+        "zion-lithuanian-lutheran-oak-lawn-il"
+      ],
+      "preserved": [
+        "name_variants",
+        "city_history",
+        "diocese",
+        "geo",
+        "congregation_class"
+      ]
+    },
+    {
+      "slug": "casimir-kansas-city-ks",
+      "matchedSiteSlugs": [
+        "casimir-kansas-city-ks"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "francis-indian-harbor-in",
+      "matchedSiteSlugs": [
+        "francis-indian-harbor-in"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "mary-custer-mi",
+      "matchedSiteSlugs": [
+        "mary-custer-mi"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "bernard-irons-mi",
+      "matchedSiteSlugs": [
+        "bernard-irons-mi"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "parish-scottville-mi",
+      "matchedSiteSlugs": [
+        "parish-scottville-mi"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "ignatius-luther-mi",
+      "matchedSiteSlugs": [
+        "ignatius-luther-mi"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "george-pittsburgh-pa",
+      "matchedSiteSlugs": [
+        "george-pittsburgh-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "mary-chicago-il",
+      "matchedSiteSlugs": [
+        "mary-chicago-il"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "joseph-cambridge-ma",
+      "matchedSiteSlugs": [
+        "joseph-cambridge-ma"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "holycross-cleveland-oh",
+      "matchedSiteSlugs": [
+        "holycross-cleveland-oh"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "parish-scranton-pa",
+      "matchedSiteSlugs": [
+        "parish-scranton-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "parish-chicago-il",
+      "matchedSiteSlugs": [
+        "parish-chicago-il"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "parish-melrose-park-il",
+      "matchedSiteSlugs": [
+        "parish-melrose-park-il"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "parish-avellaneda-ar",
+      "matchedSiteSlugs": [
+        "parish-avellaneda-ar"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history"
+      ]
+    },
+    {
+      "slug": "casimir-rosario-ar",
+      "matchedSiteSlugs": [
+        "casimir-rosario-ar"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history"
+      ]
+    },
+    {
+      "slug": "parish-grand-prairie-ar",
+      "matchedSiteSlugs": [
+        "parish-grand-prairie-ar"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "casimir-kansas-city-ka",
+      "matchedSiteSlugs": [
+        "casimir-kansas-city-ka"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history"
+      ]
+    },
+    {
+      "slug": "casimir-freeland-pa",
+      "matchedSiteSlugs": [
+        "casimir-freeland-pa",
+        "parish-freeland-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "george-mahanoy-city-pa",
+      "matchedSiteSlugs": [
+        "george-mahanoy-city-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "parish-mt-pleasant-pa",
+      "matchedSiteSlugs": [
+        "parish-mt-pleasant-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "anthony-philadelphia-pa",
+      "matchedSiteSlugs": [
+        "anthony-philadelphia-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "holyname-scranton-pa",
+      "matchedSiteSlugs": [
+        "holyname-scranton-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "joseph-custer-mi",
+      "matchedSiteSlugs": [
+        "joseph-custer-mi"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "casimir-boston-ma",
+      "matchedSiteSlugs": [
+        "casimir-boston-ma"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "holycross-brooklyn-ny",
+      "matchedSiteSlugs": [
+        "holycross-brooklyn-ny"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "holyname-philadelphia-pa",
+      "matchedSiteSlugs": [
+        "holyname-philadelphia-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "parish-pittsburgh-pa",
+      "matchedSiteSlugs": [
+        "parish-pittsburgh-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "vincent-pittsburgh-pa",
+      "matchedSiteSlugs": [
+        "vincent-pittsburgh-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "allsaints-worcester-ma",
+      "matchedSiteSlugs": [
+        "allsaints-worcester-ma"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "trinity-new-york-ny",
+      "matchedSiteSlugs": [
+        "trinity-new-york-ny"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "lawrence-lawrence-ma",
+      "matchedSiteSlugs": [
+        "lawrence-lawrence-ma"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "parish-wilkes-barre-pa",
+      "matchedSiteSlugs": [
+        "parish-wilkes-barre-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "parish-baltimore-md",
+      "matchedSiteSlugs": [
+        "parish-baltimore-md"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "joseph-dubois-pa",
+      "matchedSiteSlugs": [
+        "joseph-dubois-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "parish-chicago-il-2",
+      "matchedSiteSlugs": [
+        "parish-chicago-il-2"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "providence-providence-ri",
+      "matchedSiteSlugs": [
+        "providence-providence-ri"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "parish-worcester-ma",
+      "matchedSiteSlugs": [
+        "parish-worcester-ma"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "parish-chicago-il-3",
+      "matchedSiteSlugs": [
+        "parish-chicago-il-3"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "parish-worcester-ma-2",
+      "matchedSiteSlugs": [
+        "parish-worcester-ma-2"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "casimir-winnipeg-mb",
+      "matchedSiteSlugs": [
+        "casimir-winnipeg-mb"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "parish-wasaga-beach-on",
+      "matchedSiteSlugs": [
+        "parish-wasaga-beach-on"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo",
+        "record_type"
+      ]
+    },
+    {
+      "slug": "christ-toronto-on",
+      "matchedSiteSlugs": [
+        "christ-toronto-on"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "john-toronto-on",
+      "matchedSiteSlugs": [
+        "john-toronto-on"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "angels-st-catharines-on",
+      "matchedSiteSlugs": [
+        "angels-st-catharines-on"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "gateofdawn-hamilton-on",
+      "matchedSiteSlugs": [
+        "gateofdawn-hamilton-on"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "parish-maizeville-pa",
+      "matchedSiteSlugs": [
+        "parish-maizeville-pa"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "parish-lawrence-ma",
+      "matchedSiteSlugs": [
+        "parish-lawrence-ma"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    },
+    {
+      "slug": "annunciation-maspeth-ny",
+      "matchedSiteSlugs": [
+        "annunciation-maspeth-ny"
+      ],
+      "preserved": [
+        "diocese",
+        "city_history",
+        "geo"
+      ]
+    }
+  ]
+}

@@ -3,7 +3,7 @@ import Link from "next/link";
 import RegistryTable, { type RegistryRow } from "@/components/RegistryTable";
 import registry from "@/data/registry-unified.json";
 import alertsData from "@/data/alerts.json";
-import { parishes as libParishes, type EndingMode, type Ownership, type LithuanianIdentity, type BuildingFate } from "@/lib/parishes";
+import { getParishByC83Row, type Ownership, type LithuanianIdentity, type BuildingFate } from "@/lib/parishes";
 import { resolveAlertStatus, resolveIdentity, resolveFate } from "@/lib/unified-status";
 
 export const metadata: Metadata = {
@@ -59,7 +59,7 @@ function buildRows(): RegistryRow[] {
     );
   return regs.map((p) => {
     const lib =
-      p.c83_row != null ? libParishes[p.c83_row - 1] : undefined;
+      p.c83_row != null ? getParishByC83Row(p.c83_row) : undefined;
     const libOk = lib && lib.city === p.city;
     const asYear = (v: string | undefined | null) => {
       const m = v?.match(/\b(1[89]\d{2}|20[0-2]\d)\b/);

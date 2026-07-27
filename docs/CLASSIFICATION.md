@@ -68,14 +68,11 @@ research pages.
 
 ## Standing corrections queue
 
-- Upstream `parishes.csv` (brain lane, next snapshot): stale notes lines
-  contradicting reconciled identities (East St. Louis "still officially
-  Lithuanian"); Waterbury St. Casimir existence question; Hartford lifecycle
-  once the locked figures are re-locked (issue #17).
-- **From the 2026-07-27 record-identity adjudication (issue #89)** — three
-  upstream `parishes.csv` corrections, all adjudicated with quoted evidence
-  (see the case records and registry conflict notes; no locked figure moves,
-  since status/ending/ownership are unchanged on all three):
+- **Registry Revision 1 applied 2026-07-27:** the living registry now carries
+  the following three identity corrections with quoted evidence. The frozen
+  `parishes.csv` source rows remain Revision 2 provenance; public generated
+  records take the selected Registry Revision 1 reading after locked-figure
+  validation:
   1. Row 15 titular: **Šv. Petro → Nekalto Prasidėjimo**, Cambridge MA — the
      parish was real and distinct (founded 1909, closed 2004) but named
      Immaculate Conception from its 1910 founding article; "Šv. Petro" is a
@@ -87,17 +84,15 @@ research pages.
   3. Row 68 name: "Lietuvių bažnyčia (Kearny)" can take its proper name,
      **Sopulingosios Dievo Motinos / Our Lady of Sorrows** (founded 1914-15
      as the Kearny-Harrison parish; city "Kearny" stays correct).
-- **Registry-unified reconciliation (brain lane, `parish-registry-unified`)**,
-  same adjudication: merge `st-casimir-chicago-heights-il` into
-  `casimir-chicago-il` (same parish — currently renders a duplicate point on
-  the Chicago diocese context map), and merge `our-lady-of-sorrows-kearny-nj`,
+- **Registry-unified reconciliation completed in Revision 1:** merged
+  `st-casimir-chicago-heights-il` into `casimir-chicago-il`, and merged
+  `our-lady-of-sorrows-kearny-nj`,
   `sorrows-kearny-nj`, `mary-kearny-nj`, plus the pre-1954 seat
-  `lithuanian-church-harrison-nj`, into `parish-kearny-nj` (one parish — the
-  Newark diocese context map currently renders it as four points). Cross-ref
-  conflict notes are already on every affected record in this repo's
-  snapshot.
-- Closure years missing for ~16 pre-2008 closures (research queue; pages
-  show "Not established" honestly).
+  `lithuanian-church-harrison-nj`, into `parish-kearny-nj`. Redirects preserve
+  the retired registry URLs.
+- The 16 missing closure-year and 6 year-variance records were adjudicated in
+  brain #449 and folded into Registry Revision 1. Spring Valley remains
+  unresolved and Nanticoke remains pending diocesan confirmation by design.
 - Upstream `gazetteer.csv` (Draugas lane, config-as-truth): the unnamed 1902
   Waterbury church (`lithuanian-church-waterbury-ct`) carries `status=closed`
   with an empty closure year — the likeliest origin of the ending this repo's

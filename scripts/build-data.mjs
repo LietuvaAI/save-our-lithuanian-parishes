@@ -36,9 +36,18 @@ const rows = parse(readFileSync(new URL("../data/parishes.csv", import.meta.url)
   skip_empty_lines: true,
   trim: true,
 });
+const registry = JSON.parse(
+  readFileSync(new URL("../data/registry-unified.json", import.meta.url), "utf8"),
+);
+const registryByC83Row = new Map();
+for (const record of registry.parishes) {
+  for (const row of record.c83_rows ?? (record.c83_row ? [record.c83_row] : [])) {
+    registryByC83Row.set(row, record);
+  }
+}
 
 const seen = new Set();
-const parishes = rows.map((r) => {
+const parishes = rows.map((r, index) => {
   const comparator = COMPARATOR_STATES.has(r.state);
   const slug = slugify(r.parish, r.city, r.state);
   if (seen.has(slug)) throw new Error(`Duplicate slug: ${slug}`);
@@ -53,6 +62,7 @@ const parishes = rows.map((r) => {
     });
   // Detect missions: Lithuanian name contains "Misija" or English-style "Mission"
   const isMisija = /\bMisija\b/i.test(r.parish) || /\bMission\b/i.test(r.parish);
+  const registryRecord = registryByC83Row.get(index + 1);
   return {
     slug,
     nameLt: r.parish,
@@ -72,6 +82,8 @@ const parishes = rows.map((r) => {
     pastoralStatus: null,
     situation: null,
     registrySlug: null,
+    c83Rows: registryRecord?.c83_rows ?? [index + 1],
+    mergedInto: null,
     yearFounded: r.year_founded ? Number(r.year_founded) : null,
     yearClosed: r.year_closed ? Number(r.year_closed) : null,
     coalRegion: r.coal_region === "true",
@@ -82,6 +94,15 @@ const parishes = rows.map((r) => {
     recordKind: "archive_verified",
   };
 });
+
+for (let index = 0; index < parishes.length; index++) {
+  const registryRecord = registryByC83Row.get(index + 1);
+  if (!registryRecord) continue;
+  parishes[index].registrySlug = registryRecord.slug;
+  if (registryRecord.c83_row !== index + 1) {
+    parishes[index].mergedInto = parishes[registryRecord.c83_row - 1].slug;
+  }
+}
 
 // Enrich with ALL situation-overlay fields from parish-situation.json.
 // This is the single merge point: the overlay is the source of truth for
@@ -146,12 +167,38 @@ function compare(expected, actual, path) {
     else if (a !== v) errors.push(`${path}${k}: locked=${v} derived=${a ?? 0}`);
   }
 }
+
 compare(LOCKED, derived, "");
 if (errors.length) {
   console.error("LOCKED-FIGURE VALIDATION FAILED — data/parishes.csv disagrees with the locked figure set:");
   for (const e of errors) console.error(`  ${e}`);
   console.error("See data/PROVENANCE.md for the update protocol. Refusing to build.");
   process.exit(1);
+}
+
+// The locked figures above describe the frozen 83-row source set. Registry
+// Revision 1 describes the living, unique-entity public record. Apply that
+// interpreted layer only after the locked arithmetic has passed.
+for (let index = 0; index < parishes.length; index++) {
+  const p = parishes[index];
+  const record = registryByC83Row.get(index + 1);
+  if (!record) continue;
+  p.registrySlug = record.slug;
+  p.nameLt = record.names?.lt || p.nameLt;
+  p.city = record.city || p.city;
+  const lifecycle = record.lifecycle;
+  if (!lifecycle) continue;
+  const statusMap = {
+    standing: "standing",
+    closed: "closed",
+    merged: "merged",
+    unresolved: "undecided",
+  };
+  p.status = statusMap[lifecycle.canonical_status] ?? p.status;
+  if (lifecycle.canonical_status === "standing") p.endingMode = "standing";
+  if (lifecycle.canonical_status === "unresolved") p.endingMode = "undecided";
+  p.yearClosed = lifecycle.selected_closed_year ?? null;
+  if (lifecycle.identity) p.lithuanianIdentity = lifecycle.identity;
 }
 
 const figures = {

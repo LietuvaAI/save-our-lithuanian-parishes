@@ -12,7 +12,7 @@
 import registry from "@/data/registry-unified.json";
 import alertsData from "@/data/alerts.json";
 import {
-  parishes as libParishes,
+  getParishByC83Row,
   getSituationByRegistrySlug,
   type EndingMode,
   type LithuanianIdentity,
@@ -114,7 +114,7 @@ for (const sw of ((alertsData as Record<string, unknown>)
 
 /** Build the shared row for one registry entry. */
 export function toScopedParish(p: RegParish): ScopedParish {
-  const lib = p.c83_row != null ? libParishes[p.c83_row - 1] : undefined;
+  const lib = p.c83_row != null ? getParishByC83Row(p.c83_row) : undefined;
   const libOk = !!(lib && lib.city === p.city);
 
   // Canonical parishes: the locked-core years are authoritative on every

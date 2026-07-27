@@ -14,6 +14,12 @@ const topo = require("us-atlas/states-albers-10m.json");
 
 const parishes = JSON.parse(readFileSync(new URL("../data/parishes.json", import.meta.url), "utf-8"));
 const geo = JSON.parse(readFileSync(new URL("../data/geo.json", import.meta.url), "utf-8"));
+const registry = JSON.parse(
+  readFileSync(new URL("../data/registry-unified.json", import.meta.url), "utf-8"),
+);
+const registryBySlug = new Map(
+  registry.parishes.map((record) => [record.slug, record]),
+);
 
 const path = geoPath(); // identity — the atlas is already projected
 // Full state polygons (coastline included) so the map reads as a standard
@@ -24,7 +30,7 @@ const stateBorders = path(mesh(topo, topo.objects.states, (a, b) => a !== b));
 // The exact projection us-atlas pre-projected files were built with.
 const projection = geoAlbersUsa().scale(1300).translate([487.5, 305]);
 
-const mappable = parishes.filter((p) => !p.comparator);
+const mappable = parishes.filter((p) => !p.comparator && !p.mergedInto);
 const byCity = new Map();
 for (const p of mappable) {
   const key = `${p.city}|${p.state}`;
@@ -34,7 +40,10 @@ for (const p of mappable) {
 
 const points = [];
 for (const [key, group] of byCity) {
-  const g = geo[key];
+  const exact = group
+    .map((parish) => registryBySlug.get(parish.registrySlug)?.geo)
+    .find((candidate) => candidate?.lat != null && candidate?.lon != null);
+  const g = exact ?? geo[key];
   if (!g) throw new Error(`No geocode entry for ${key} — run scripts/geocode.mjs`);
   const projected = projection([g.lon, g.lat]);
   if (!projected) throw new Error(`Projection failed for ${key}`);
