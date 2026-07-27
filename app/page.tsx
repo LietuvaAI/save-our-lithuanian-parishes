@@ -46,7 +46,7 @@ const STATS = [
   {
     value: String(figures.endingMode.diocese_closed),
     label:
-      "closed, merged away, suppressed, or demolished by diocesan decision since 2008",
+      "closed, merged away, suppressed, or demolished by diocesan decision — documented in the Draugas record, 2008–2026",
     tone: "red",
   },
 ];

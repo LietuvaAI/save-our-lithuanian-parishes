@@ -19,9 +19,9 @@ Corpus: 86 canonical + 220 overlay entries; 13 watch entries; 83 case records.
 
 - none
 
-## STALE-TEXT (1)
+## STALE-TEXT (0)
 
-- **nekaltojo-prasidejimo-east-st-louis-il** — identity "ethnically_transferred" but canonical notes claim: "still officially Lithuanian…" (upstream CSV fix)
+- none
 
 ## DATA-GAP (16)
 

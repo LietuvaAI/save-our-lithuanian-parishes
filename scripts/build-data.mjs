@@ -1,6 +1,6 @@
 // Builds data/parishes.json and data/figures.json from data/parishes.csv,
 // then validates every derived figure against the locked figure set
-// (culturenet-brain: Draugas-Infographic-Locked-Figures.md, locked 2026-05-23).
+// (culturenet-brain: Draugas-Infographic-Locked-Figures.md, Revision 2, locked 2026-07-27).
 // The build FAILS if any figure drifts — see data/PROVENANCE.md.
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { parse } from "csv-parse/sync";
@@ -156,7 +156,7 @@ if (errors.length) {
 
 const figures = {
   corpusScope: CORPUS_SCOPE,
-  lockedAt: "2026-05-23",
+  lockedAt: "2026-07-27",
   sourceLine: "Šaltinis: „Draugo“ archyvas, 2008–2026 m.",
   ...derived,
 };
