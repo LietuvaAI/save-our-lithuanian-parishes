@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "data": "node scripts/build-data.mjs && node scripts/build-map.mjs && node scripts/build-registry-map.mjs && node scripts/build-diocese-overlay.mjs && node scripts/build-context-points.mjs && node scripts/verify-geo.mjs && node scripts/verify-classifier-watch.mjs && node scripts/verify-photo-rights.mjs",
+    "data": "node scripts/build-data.mjs && node scripts/build-map.mjs && node scripts/build-registry-map.mjs && node scripts/build-diocese-overlay.mjs && node scripts/build-context-points.mjs && node scripts/verify-geo.mjs && node scripts/verify-classifier-watch.mjs && node scripts/verify-photo-rights.mjs && node scripts/verify-surface-consistency.mjs",
     "prebuild": "npm run data",
     "build": "next build",
     "start": "next start",
