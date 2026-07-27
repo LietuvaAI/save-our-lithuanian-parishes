@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import registry from "@/data/registry-unified.json";
 import { getClearedPhoto } from "@/lib/photos";
+import { splitStory } from "@/lib/dek";
 import {
   draugasCitationUrl,
   draugasArchiveUrl,
@@ -185,9 +186,8 @@ export default async function RegistryParishPage({
     const t =
       raw && !/minimal research details available/i.test(raw) ? raw : null;
     if (t) {
-      const i = t.indexOf(". ");
-      if (i > 40 && i < t.length - 2)
-        return { dek: t.slice(0, i + 1), rest: t.slice(i + 2) };
+      const s = splitStory(t);
+      if (s.rest !== null) return s;
       return { dek: t, rest: null };
     }
     const f = founded ? `Founded ${founded}. ` : "";
