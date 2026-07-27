@@ -81,4 +81,82 @@ research pages.
   only geocoding here; fix it at the source on the next gazetteer revision.
 - Waterbury needs a name-level reconciliation: three Roman Catholic records
   sit on the same city centroid (Šv. Juozapo, Šv. Kazimiero, and this unnamed
-  1902 entry) and only the first is established as distinct.
+  1902 entry) and only the first is established as distinct. New input from the
+  2026-07-26 national-catholic verification: the Lithuanian National Catholic
+  congregation in Waterbury was founded in **1902**, the same year as the
+  unnamed Draugas entry, so the two records may be one congregation seen from
+  either side of the schism. Draugas coded its entry `roman_catholic`, which
+  argues against the identity but does not settle it. Resolve name-level before
+  either record is counted anywhere.
+
+## Both directions of claim are guarded (2026-07-26)
+
+A record must earn a **favorable** identity and an **ending** alike, and the
+lifecycle field is not a licence for either. `audit-classification.mjs` first
+checked favorable claims only when `canonical_status` was `standing`, and
+terminal claims not at all; #82 closed the terminal gap, and the favorable
+gate fell with `lithuanian-national-catholic-parish-waterbury-ct`, which held
+`active_parish` under `canonical_status: unknown` on one medium-confidence
+source that itself read `closed`. Two rules now apply to overlay-only records
+regardless of lifecycle value: a favorable identity needs a watch entry or a
+*verified* web survey, and a favorable identity may not contradict its own
+source's `currentStatus` unless a watch entry or case record supersedes it
+(layer precedence — the Boston and Rochester records carry stale web readings
+their per-parish research has since corrected).
+
+The **canonical** loop carried the same `standing` gate and it fell the same
+day. Gating there was worse than redundant: `undecided` is a lifecycle value
+the guardrails *require* for Maspeth and Elizabeth NJ, so the two records under
+the most editorial protection were the two the block could never reach. Four
+canonical records had been escaping it (Cleveland merged, Šv. Kazimiero
+Philadelphia suppressed, Maspeth and Elizabeth undecided). Removing the gate
+surfaced two live defects, both favorable overcounts invisible on every map
+because other resolver rules already took priority:
+
+- **Elizabeth NJ** read `active_parish` while its own case record said the
+  parish was canonically merged into Polish St. Adalbert on 2009-07-01. The
+  rubric's `active_parish` needs a *formally Lithuanian* parish; once absorbed
+  into a non-Lithuanian host, surviving liturgy is `mass_continues`, which is
+  never counted as a standing Lithuanian parish. Now `mass_continues` — and
+  the 11:00 am Lithuanian Mass is aggregator-listed but unverified for 2026,
+  which the situation text states. Still renders **Unresolved**: `undecided`
+  is the resolver's first rule, so identity cannot make it read Closed.
+- **Cleveland DMNP** read `active_parish` while its own situation text said
+  "Closed Oct 18 2009 and merged with Sv. Jurgio." Šv. Jurgio, suppressed in
+  that same merger, reads `lost`. The Lithuanian life in the building belongs
+  to the successor record `sv-kazimiero-cleveland-oh`, which already claims
+  `active_parish` — so one community was counted as two living parishes. Now
+  `lost`; `building_fate` stays `repurposed_religious`, because the building
+  genuinely is the successor's worship site. Building fate and identity answer
+  different questions and a reused building is not a surviving parish.
+
+Two further rules encode those findings. A record whose lifecycle status is in
+`ENDED` may not claim `active_parish` (`mass_continues` is deliberately
+permitted — it is the correct landing place for a suppressed parish whose
+liturgy survives, as at Šv. Kazimiero, Philadelphia; and `undecided` is not an
+ending, so the guardrail records stay exempt). And `active_parish` may not
+stand against a case record reporting lost canonical independence. That second
+rule encodes a convention the corpus already followed: of nine case records
+reporting a loss of independence, eight were already downgraded to
+`ethnically_transferred` or `lost` — Elizabeth was the lone outlier.
+
+## Where fixed data does and does not propagate
+
+Every chart, count, and map on the site is **computed at build time** from the
+JSON in `data/`, so correcting a record is enough — nothing needs a separate
+render pass. `/history` (`TimelineChart`, `ParishThreads`) takes `libParishes`
+and `scopedParishes` as props and aggregates in `useMemo`; `lib/parishes.ts`
+imports `parishes.json`, `figures.json`, and `parish-situation.json` directly.
+`prebuild` runs `npm run data` ahead of every `next build`, and Vercel builds
+on push, so a merged data fix ships correct figures with no extra step. There
+are no pre-baked chart images in `public/`.
+
+The one exception is `scripts/render-dispatch-map.mjs`, which writes a **static
+map asset** for a Hearth dispatch. That file is a committed artifact, not a
+build-time computation, so it does *not* follow a data fix — re-run it whenever
+a record it depicts changes.
+
+National Catholic records are historical witness only: `usRomanCatholic()`
+and `ParishContextMap` both filter to `congregation_class === "roman_catholic"`,
+so these congregations never enter Roman Catholic headline or diocese figures,
+whatever their status. See binding guardrail 1 in `CLAUDE.md`.

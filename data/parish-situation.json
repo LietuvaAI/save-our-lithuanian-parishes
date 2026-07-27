@@ -340,9 +340,9 @@
       "canonical_status": "merged",
       "building_fate": "repurposed_religious",
       "current_use": "Worship site of the consolidated Sv. Kazimiero Lithuanian parish",
-      "lithuanian_identity": "active_parish",
-      "pastoral_status": "unknown",
-      "situation": "Closed Oct 18 2009 and merged with Sv. Jurgio into the new Sv. Kazimiero parish. The former DMNP building became the worship site of the consolidated parish."
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "Closed Oct 18 2009 and merged with Sv. Jurgio into the new Sv. Kazimiero parish. The former DMNP building became the worship site of the consolidated parish, which is why the building fate is repurposed rather than lost. This parish ended in that merger, exactly as Sv. Jurgio did, and the Lithuanian life that continues in the building belongs to the successor record sv-kazimiero-cleveland-oh — counting it here as well would count one community as two living parishes."
     },
     "sv-jurgio-shenandoah-pa": {
       "registry_slug": "george-shenandoah-pa",
@@ -600,10 +600,10 @@
       "registry_slug": "paul-elizabeth-nj",
       "canonical_status": "undecided",
       "building_fate": "standing",
-      "current_use": "Under financial/maintenance stress; rectory sold, electrical fire; status uncertain",
-      "lithuanian_identity": "active_parish",
+      "current_use": "Active Catholic worship site (one weekend Mass) of the merged St. Adalbert and Sts. Peter and Paul Parish, Archdiocese of Newark",
+      "lithuanian_identity": "mass_continues",
       "pastoral_status": "unknown",
-      "situation": "Church built 1895. Under financial/maintenance stress by 2022 — rectory sold, electrical fire. Status uncertain and unresolved. One of the last Lithuanian churches in New Jersey."
+      "situation": "Merged canonically into the Polish parish of Saint Adalbert on July 1, 2009, the church remains standing and still holds one weekend Mass, but it is no longer an independent Lithuanian parish. Mass-time aggregators still list an 11:00 am Lithuanian Sunday Mass, and that could not be independently verified for 2026 — so Lithuanian liturgical life here is recorded as continuing inside a host parish that is no longer Lithuanian-led, never as a standing Lithuanian parish. The parish sits in the Archdiocese of Newark's 'We Are His Witnesses' restructuring discernment; no closure or further merger has been decided, so the ending stays unresolved. Church built 1895, under financial and maintenance stress by 2022 with the rectory sold after an electrical fire, and one of the last Lithuanian churches in New Jersey."
     },
     "lietuviu-baznycia-kearny-kearny-nj": {
       "registry_slug": "parish-kearny-nj",
@@ -1435,12 +1435,12 @@
     },
     "lithuanian-national-catholic-parish-waterbury-ct": {
       "registry_slug": "lithuanian-national-catholic-parish-waterbury-ct",
-      "canonical_status": "unknown",
+      "canonical_status": "closed",
       "building_fate": "unknown",
       "current_use": "Unknown",
-      "lithuanian_identity": "active_parish",
-      "pastoral_status": "unknown",
-      "situation": "LNCC (Lithuanian National Catholic Church), independent of Rome. Documented in registry but needs further research."
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "The first parish of the Lithuanian National Catholic Church, founded in Waterbury in 1902 — an independent (neprigulminga) congregation that rejected papal authority. Its founder was the priest Vincas Dilionis, and like most parishes of that movement it was short-lived; no national-catholic congregation exists in Waterbury today. The PNCC Eastern Diocese, which covers Connecticut, lists no Waterbury parish and none identified as Lithuanian, and the movement's one surviving parish is Providence of God in Scranton, Pennsylvania. No parish website, bulletin, or local press record of a living congregation was found, and the Connecticut Lithuanian heritage survey records no independent church in the city. No closure year is established, so none is asserted. Recorded as historical witness to a documented schism, never as a recommendation; not counted in the site's Roman Catholic figures. Open for the Waterbury name-level reconciliation: the unnamed 1902 Lithuanian church recorded from Draugas carries the same founding year and may be this same congregation seen from the Roman Catholic side."
     },
     "paul-naugatuck-ct": {
       "registry_slug": "paul-naugatuck-ct",
