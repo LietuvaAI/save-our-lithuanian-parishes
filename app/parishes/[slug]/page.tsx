@@ -20,6 +20,7 @@ import {
   type LithuanianIdentity,
 } from "@/lib/parishes";
 import { resolveEndState, isLoss } from "@/lib/end-state";
+import { splitStory } from "@/lib/dek";
 import { EndStatePill } from "@/components/EndStatePill";
 import ParishContextMap from "@/components/ParishContextMap";
 import {
@@ -118,12 +119,7 @@ function storyDek(
   situationText: string | null,
   endState: ReturnType<typeof resolveEndState>,
 ): { dek: string; rest: string | null } {
-  if (situationText) {
-    const i = situationText.indexOf(". ");
-    if (i > 40 && i < situationText.length - 2)
-      return { dek: situationText.slice(0, i + 1), rest: situationText.slice(i + 2) };
-    return { dek: situationText, rest: null };
-  }
+  if (situationText) return splitStory(situationText);
   const f = parish.yearFounded ? `Founded ${parish.yearFounded}. ` : "";
   const c = parish.yearClosed ? ` in ${parish.yearClosed}` : "";
   switch (endState) {
