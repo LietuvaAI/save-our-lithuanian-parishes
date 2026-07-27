@@ -74,3 +74,11 @@ research pages.
   once the locked figures are re-locked (issue #17).
 - Closure years missing for ~16 pre-2008 closures (research queue; pages
   show "Not established" honestly).
+- Upstream `gazetteer.csv` (Draugas lane, config-as-truth): the unnamed 1902
+  Waterbury church (`lithuanian-church-waterbury-ct`) carries `status=closed`
+  with an empty closure year — the likeliest origin of the ending this repo's
+  overlay inferred and then counted, corrected 2026-07-26. The column feeds
+  only geocoding here; fix it at the source on the next gazetteer revision.
+- Waterbury needs a name-level reconciliation: three Roman Catholic records
+  sit on the same city centroid (Šv. Juozapo, Šv. Kazimiero, and this unnamed
+  1902 entry) and only the first is established as distinct.
