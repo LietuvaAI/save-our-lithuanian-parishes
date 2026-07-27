@@ -1,0 +1,2530 @@
+[
+ {
+  "wiki": {
+   "state": "NH",
+   "stateName": "New Hampshire",
+   "city": "Nashua",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": null,
+   "pageEn": "Nashua St. Casimir Church",
+   "established": [
+    "1910"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m. ir pertvarkyta į 28 butų gyvenamą namą.",
+   "diocese": "Diocese of Manchester, NH",
+   "address": "119 Temple St., Nashua, NH 03060"
+  },
+  "slug": "casimir-nashua-nh",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "MA",
+   "stateName": "Massachusetts",
+   "city": "Boston",
+   "nameLt": "Šv. Petro bažnyčia",
+   "status": "active",
+   "pageEn": "Boston St. Peter Church",
+   "established": [
+    "1895",
+    "1904"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Boston, MA",
+   "address": "75 Flaherty Way, South Boston, MA 02127"
+  },
+  "slug": "peter-boston-ma",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "MA",
+   "stateName": "Massachusetts",
+   "city": "Athol",
+   "nameLt": "Šv. Pranciškaus bažnyčia",
+   "status": "closed",
+   "pageEn": "Athol St. Francis of Assisi Church",
+   "established": [
+    "1913"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Worcester, MA",
+   "address": "105 Main St., Athol, MA 01331"
+  },
+  "slug": "st-francis-athol-ma",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "MA",
+   "stateName": "Massachusetts",
+   "city": "Brockton",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": "closed",
+   "pageEn": "Brocton St. Casimir Church",
+   "established": [
+    "1898"
+   ],
+   "closed": "2008",
+   "closedNote": "Uždaryta /Closed - 2008 m. birželio 29 d., 2009 m. gruodžio mėn. parduota Hyde Park bažnyčiai.",
+   "diocese": "Archdiocese of Boston, MA",
+   "address": "21 Sawtell Ave., Brocton MA 02402"
+  },
+  "slug": "casimir-brockton-ma",
+  "score": 4
+ },
+ {
+  "wiki": {
+   "state": "MA",
+   "stateName": "Massachusetts",
+   "city": "Cambridge",
+   "nameLt": "Švč. Panos Marijos Nekalto Prasidėjimo bažnyčia",
+   "status": "closed",
+   "pageEn": "Cambridge Immaculate Conception Church",
+   "established": [
+    "1910"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed -... m., ... m. parduota ir pertvarkyta į daugiabutį gyvenamą namą.",
+   "diocese": "Archdiocese of Boston, MA",
+   "address": "432 Windsor St., Cambridge, MA 02141"
+  },
+  "slug": "peter-cambridge-ma",
+  "score": 3
+ },
+ {
+  "wiki": {
+   "state": "MA",
+   "stateName": "Massachusetts",
+   "city": "Haverhill",
+   "nameLt": "Šv. Jurgio bažnyčia",
+   "status": "closed",
+   "pageEn": "Haverhill Saint George Church",
+   "established": [
+    "1917"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Archdiocese of Boston, MA",
+   "address": "440 Washington St., Haverhill, MA 01830"
+  },
+  "slug": "holyname-haverhill-ma",
+  "score": 3
+ },
+ {
+  "wiki": {
+   "state": "MA",
+   "stateName": "Massachusetts",
+   "city": "Lawrence",
+   "nameLt": "Šv. Pranciškaus bažnyčia",
+   "status": "closed",
+   "pageEn": "Lawrence St. Francis Church",
+   "established": [
+    "1903"
+   ],
+   "closed": "2002",
+   "closedNote": "Uždaryta /Closed - 2002 m. liepos 7 d., įrengiant joje katalikišką mokyklą",
+   "diocese": "Archdiocese of Boston, MA",
+   "address": "94 Bradford St., Lawrence, MA 01840"
+  },
+  "slug": "francis-lawrence-ma",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "MA",
+   "stateName": "Massachusetts",
+   "city": "Lowell",
+   "nameLt": "Šv. Juozapo bažnyčia",
+   "status": "closed",
+   "pageEn": "Lowell St. Joseph Church",
+   "established": [
+    "1908"
+   ],
+   "closed": "2003",
+   "closedNote": "Uždaryta /Closed - 2003 m.",
+   "diocese": "Archdiocese of Boston, MA",
+   "address": "151 Rogers St., Lowell, MA 01852"
+  },
+  "slug": "st-joseph-lowell-ma",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "MA",
+   "stateName": "Massachusetts",
+   "city": "Norwood",
+   "nameLt": "Šv. Jurgio bažnyčia",
+   "status": "closed",
+   "pageEn": "Norwood St. George Church",
+   "established": [
+    "1912"
+   ],
+   "closed": "2004",
+   "closedNote": "Uždaryta /Closed - 2004 m. rugpjūčio mėn.",
+   "diocese": "Archdiocese of Boston, MA",
+   "address": "36 St. George Ave., Norwood, MA 02062"
+  },
+  "slug": "george-norwood-ma",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "MA",
+   "stateName": "Massachusetts",
+   "city": "Westfield",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": "closed",
+   "pageEn": "Westfield Saint Casimir Church",
+   "established": [
+    "1915"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed -... m. ir ... m. parduota",
+   "diocese": "Diocese of Springfield, MA",
+   "address": "12 Casimir St., Westfield, MA 01085"
+  },
+  "slug": "st-casimir-westfield-ma",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "MA",
+   "stateName": "Massachusetts",
+   "city": "Worcester",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": "closed",
+   "pageEn": "Worcester St. Casimir Church",
+   "established": [
+    "1894"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Worcester, MA",
+   "address": "41 Providence St, Worcester, MA 01604"
+  },
+  "slug": "casimir-worcester-ma",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "MA",
+   "stateName": "Massachusetts",
+   "city": "Worcester",
+   "nameLt": "Aušros Vartų bažnyčia",
+   "status": "closed",
+   "pageEn": "Worcester Our Lady of Vilna Church",
+   "established": [
+    "1925"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m., perduodant Vietnamiečių katalikų bendruomenei",
+   "diocese": "Diocese of Worcester, MA",
+   "address": "153 Sterling St., Worcester, MA 01610"
+  },
+  "slug": "gateofdawn-worcester-ma",
+  "score": 8
+ },
+ {
+  "wiki": {
+   "state": "RI",
+   "stateName": "Rhode Island",
+   "city": "Providence",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": null,
+   "pageEn": "Providence Saint Casimir Church",
+   "established": [
+    "1919"
+   ],
+   "closed": "2017",
+   "closedNote": "Uždaryta /Closed - 2017 m.",
+   "diocese": "Diocese of Providence, RI",
+   "address": "350 Smith St., Providence, RI 02908"
+  },
+  "slug": "casimir-providence-ri",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "CT",
+   "stateName": "Connecticut",
+   "city": "Hartford",
+   "nameLt": "Šventos Trejybės bažnyčia",
+   "status": "active",
+   "pageEn": "Hartford Holy Trinity Church",
+   "established": [
+    "1900"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Hartford, CT",
+   "address": "'''53 Capitol Ave., Hartford, CT 06106'''"
+  },
+  "slug": "trinity-hartford-ct",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "CT",
+   "stateName": "Connecticut",
+   "city": "Bridgeport",
+   "nameLt": "Šv. Jurgio bažnyčia",
+   "status": "active",
+   "pageEn": "Bridgeport St. George Church",
+   "established": [
+    "1907"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Diocese of Bridgeport, CT",
+   "address": "443 Park Ave., Bridgeport, CT 06604"
+  },
+  "slug": "george-bridgeport-ct",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "CT",
+   "stateName": "Connecticut",
+   "city": "Waterbury",
+   "nameLt": "Šv. Juozapo bažnyčia",
+   "status": "closed",
+   "pageEn": "Waterbury St. Joseph Church",
+   "established": [
+    "1894"
+   ],
+   "closed": "2023",
+   "closedNote": "Uždaryta /Closed - 2023 m. rugsėjo 24 d.",
+   "diocese": "Archdiocese of Hartford, CT",
+   "address": "46 Congress Ave., Waterbury, CT 06708"
+  },
+  "slug": "joseph-waterbury-ct",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "CT",
+   "stateName": "Connecticut",
+   "city": "New Britain",
+   "nameLt": "Šv. Andriejaus bažnyčia",
+   "status": "closed",
+   "pageEn": "New Britain St. Andrew Church",
+   "established": [
+    "1895"
+   ],
+   "closed": "2021",
+   "closedNote": "Uždaryta /Closed - 2021 m. gruodžio 31 d.",
+   "diocese": "Archdiocese of Hartford, CT",
+   "address": "396 Church St., New Britain, CT 06050"
+  },
+  "slug": "andrew-new-britain-ct",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "CT",
+   "stateName": "Connecticut",
+   "city": "Ansonia",
+   "nameLt": "Šv. Antano bažnyčia",
+   "status": "closed",
+   "pageEn": "Ansonia St. Anthony Church",
+   "established": [
+    "1915"
+   ],
+   "closed": "2015",
+   "closedNote": "Uždaryta /Closed - 2015 m.",
+   "diocese": "Archdiocese of Hartford, CT",
+   "address": "199 North Main St., Ansonia, CT 06401"
+  },
+  "slug": "st-anthony-ansonia-ct",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "CT",
+   "stateName": "Connecticut",
+   "city": "New Haven",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": "closed",
+   "pageEn": "New Haven St. Casimir Church",
+   "established": [
+    "1908"
+   ],
+   "closed": "2005",
+   "closedNote": "Uždaryta /Closed - 2005 m.",
+   "diocese": "Archdiocese of Hartford, CT",
+   "address": "339 Greene St., New Haven, CT 06511"
+  },
+  "slug": "casimir-new-haven-ct",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "NY",
+   "stateName": "New York",
+   "city": "Brooklyn",
+   "nameLt": "Švč. Mergelės Apreiškimo bažnyčia",
+   "status": "active",
+   "pageEn": "New York Annunciation of the Blessed Virgin Mary Church",
+   "established": [
+    "1914"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Diocese of Brooklyn, NY",
+   "address": "259 N. 5th St., Brooklyn, NY 11211"
+  },
+  "slug": "annunciation-brooklyn-ny",
+  "score": 4
+ },
+ {
+  "wiki": {
+   "state": "NY",
+   "stateName": "New York",
+   "city": "New",
+   "nameLt": "Viešpaties Jėzaus Atsimainymo bažnyčia",
+   "status": "active",
+   "pageEn": "New York Church of the Transfiguration",
+   "established": [
+    "1908"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Diocese of Brooklyn, NY",
+   "address": "64-14 Clinton Ave., Maspeth, Queens, New York 11378"
+  },
+  "slug": "trinity-new-york-ny",
+  "score": 4
+ },
+ {
+  "wiki": {
+   "state": "NY",
+   "stateName": "New York",
+   "city": "New York City",
+   "nameLt": "Šv. Marijos Angelų Karalienės bažnyčia",
+   "status": "closed",
+   "pageEn": "New York St. Mary Queen of Angels Church",
+   "established": [
+    "1894",
+    "1888"
+   ],
+   "closed": "1981",
+   "closedNote": "Uždaryta /Closed - 1981 m.",
+   "diocese": "Diocese of Brooklyn, NY",
+   "address": "S. 4th St. & Roebling St., Brooklyn, NY 11211"
+  },
+  "slug": "st-mary-of-the-angels-brooklyn-ny",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "NY",
+   "stateName": "New York",
+   "city": "New York City",
+   "nameLt": "Aušros Vartų bažnyčia",
+   "status": "closed",
+   "pageEn": "New York Our Lady of Vilnius Church",
+   "established": [
+    "1906"
+   ],
+   "closed": "2007",
+   "closedNote": "Uždaryta /Closed - 2007 m. vasario 27 d., 2015 m. gegužės mėn. nugriauta",
+   "diocese": "Archdiocese of New York, NY",
+   "address": "570 Broome St., Manhattan, NY 10013"
+  },
+  "slug": "gateofdawn-manhattan-ny",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "NY",
+   "stateName": "New York",
+   "city": "New York City",
+   "nameLt": "Šv. Jurgio bažnyčia",
+   "status": "closed",
+   "pageEn": "New York St. George  Church",
+   "established": [
+    "1909"
+   ],
+   "closed": "2003",
+   "closedNote": "Uždaryta /Closed - 2003 m., nugriauta 2007 m.",
+   "diocese": "Diocese of Brooklyn, NY",
+   "address": "203 York St., Brooklyn, NY 11201"
+  },
+  "slug": "trinity-new-york-ny",
+  "score": 4
+ },
+ {
+  "wiki": {
+   "state": "NY",
+   "stateName": "New York",
+   "city": "Albany",
+   "nameLt": "Šv. Jurgio bažnyčia",
+   "status": "closed",
+   "pageEn": "Albany St. George Church",
+   "established": [
+    "1917"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m.",
+   "diocese": "Diocese of Albany, NY",
+   "address": null
+  },
+  "slug": "st-george-albany-ny",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "NY",
+   "stateName": "New York",
+   "city": "Amsterdam",
+   "nameLt": "Šv. Kazimiero bažnyčia :",
+   "status": "closed",
+   "pageEn": "Amsterdam St. Casimir Church",
+   "established": [
+    "1904"
+   ],
+   "closed": "2010",
+   "closedNote": "Uždaryta /Closed - 2010 m.",
+   "diocese": "Diocese of Albany, NY",
+   "address": "260 E. Main St., Amsterdam, NY 12010"
+  },
+  "slug": "casimir-amsterdam-ny",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "NY",
+   "stateName": "New York",
+   "city": "Binghampton",
+   "nameLt": "Šv. Juozapo bažnyčia",
+   "status": "closed",
+   "pageEn": "Binghampton St. Joseph Church",
+   "established": [
+    "1914"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Syracuse, NY",
+   "address": "1 Judson St., Binghampton, NY 13905"
+  },
+  "slug": "st-joseph-binghamton-ny",
+  "score": 2
+ },
+ {
+  "wiki": {
+   "state": "NY",
+   "stateName": "New York",
+   "city": "Niagara Falls",
+   "nameLt": "Šv. Jurgio bažnyčia",
+   "status": "closed",
+   "pageEn": "Niagara Falls St. George Church",
+   "established": [
+    "1914"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Buffalo, NY",
+   "address": null
+  },
+  "slug": "george-niagara-falls-ny",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "NY",
+   "stateName": "New York",
+   "city": "Rochester",
+   "nameLt": "Šv. Jurgio bažnyčia",
+   "status": "closed",
+   "pageEn": "Rochester St. George Church",
+   "established": [
+    "1916"
+   ],
+   "closed": "2010",
+   "closedNote": "Uždaryta /Closed - 2010 m.",
+   "diocese": "Diocese of Rochester, NY",
+   "address": "545 Hudson Ave, Rochester, NY 14605"
+  },
+  "slug": "george-rochester-ny",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "NY",
+   "stateName": "New York",
+   "city": "Schenectady",
+   "nameLt": "Šv. Kryžiaus bažnyčia",
+   "status": "closed",
+   "pageEn": "Schenectady Holy Cross Church",
+   "established": [
+    "1921"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Albany, NY",
+   "address": "16 North College St., Schenectady, NY 12305"
+  },
+  "slug": "holy-cross-schenectady-ny",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "NY",
+   "stateName": "New York",
+   "city": "Utica",
+   "nameLt": "Šv. Jurgio bažnyčia",
+   "status": "closed",
+   "pageEn": "Utica St. George Church",
+   "established": [
+    "1911"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Syracuse, NY",
+   "address": "425 Laafayette St., Utica, NY 13502"
+  },
+  "slug": "st-george-utica-ny",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "NJ",
+   "stateName": "New Jersey",
+   "city": "Bayonne",
+   "nameLt": "Šv. Mykolo bažnyčia",
+   "status": "active",
+   "pageEn": "Bayonne St. Michael Church",
+   "established": [
+    "1907"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Newark, NJ",
+   "address": "15 E. Twenty Third St., Bayonne, NJ 07002"
+  },
+  "slug": "michael-bayonne-nj",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "NJ",
+   "stateName": "New Jersey",
+   "city": "Elizabeth",
+   "nameLt": "Šv. Petro ir Povilo bažnyčia",
+   "status": "active",
+   "pageEn": "Elizabeth St. Peter and Paul Church",
+   "established": [
+    "1895"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Newark, NJ",
+   "address": "211 Riplay Pl., Elizabeth, NJ 07206"
+  },
+  "slug": "paul-elizabeth-nj",
+  "score": 8
+ },
+ {
+  "wiki": {
+   "state": "NJ",
+   "stateName": "New Jersey",
+   "city": "Jersey City",
+   "nameLt": "Šv. Onos bažnyčia",
+   "status": "active",
+   "pageEn": "Jersey City St. Ann Church",
+   "established": [
+    "1913"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m.",
+   "diocese": null,
+   "address": null
+  },
+  "slug": "st-ann-jersey-city-nj",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "NJ",
+   "stateName": "New Jersey",
+   "city": "Kearny",
+   "nameLt": "Sopulingos Dievo Motinos bažnyčia",
+   "status": "active",
+   "pageEn": "Kearny Our Lady of Sorrow Church",
+   "established": [
+    "1914"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Newark, NJ",
+   "address": "136 Davis Ave., Kearny, NJ 07032"
+  },
+  "slug": "our-lady-of-sorrows-kearny-nj",
+  "score": 7
+ },
+ {
+  "wiki": {
+   "state": "NJ",
+   "stateName": "New Jersey",
+   "city": "Newark",
+   "nameLt": "Šv. Trejybės bažnyčia",
+   "status": "closed",
+   "pageEn": "Newark Holy Trinity Church",
+   "established": [
+    "1894",
+    "1901"
+   ],
+   "closed": "2014",
+   "closedNote": "Uždaryta /Closed - 2014 m.",
+   "diocese": "Archdiocese of Newark, NJ",
+   "address": "207 Adams St., Newark, NJ 07105"
+  },
+  "slug": "holy-trinity-newark-nj",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "NJ",
+   "stateName": "New Jersey",
+   "city": "Paterson",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": "closed",
+   "pageEn": "Paterson St. Casimir Church",
+   "established": [
+    "1911"
+   ],
+   "closed": "2014",
+   "closedNote": "Uždaryta /Closed - 2014 m., sold to non-denominational Christians.",
+   "diocese": "Diocese of Paterson, NJ",
+   "address": "147 Montgomery Place, Paterson, NJ 07501"
+  },
+  "slug": "casimir-paterson-nj",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Philadelphia",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": null,
+   "pageEn": "Philadelphia St. Casimir Church",
+   "established": [
+    "1893"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Philadelphia, PA",
+   "address": "324 Wharton St., Philadelphia, PA 19147"
+  },
+  "slug": "casimir-philadelphia-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Philadelphia",
+   "nameLt": "Šv. Jurgio bažnyčia",
+   "status": null,
+   "pageEn": "Philadelphia St. George Church",
+   "established": [
+    "1902"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Philadelphia, PA",
+   "address": "3580 Salmon St., Philadelphia, PA 19134"
+  },
+  "slug": "george-philadelphia-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Philadelphia",
+   "nameLt": "Šv. Andriejaus bažnyčia",
+   "status": null,
+   "pageEn": "Philadelphia St. Andrew Church",
+   "established": [
+    "1924"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Philadelphia, PA",
+   "address": "1913 Wallace St. & 19th St., Philadelphia, PA 19130"
+  },
+  "slug": "andrew-philadelphia-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Bentleyville-Ellsworth",
+   "nameLt": "Šv. Luko bažnyčia",
+   "status": null,
+   "pageEn": "Bentleyville St. Luke Church",
+   "established": [
+    "1903"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m.",
+   "diocese": null,
+   "address": null
+  },
+  "slug": "st-luke-bentleyville-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Braddock",
+   "nameLt": "Šv. Izidoriaus bažnyčia",
+   "status": null,
+   "pageEn": "Braddock St. Isidore Church",
+   "established": [
+    "1916"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Pittsburgh, PA",
+   "address": "1321 Mifflin St., Braddock /Homestead, PA 15120"
+  },
+  "slug": "st-isidore-braddock-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Bridgeville",
+   "nameLt": "Šv. Antano bažnyčia",
+   "status": null,
+   "pageEn": "Bridgeville St. Antony Church",
+   "established": [
+    "1915"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Pittsburgh, PA",
+   "address": "179 Millers Run Rd., Bridgeville, PA 15017"
+  },
+  "slug": "st-anthony-bridgeville-pa",
+  "score": 4
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Chester",
+   "nameLt": "Aušros Vartų bažnyčia",
+   "status": null,
+   "pageEn": "Chester Our Lady of Vilna Church",
+   "established": [
+    "1924"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": null,
+   "address": "405 Madison St., Chester, PA 19013"
+  },
+  "slug": "our-lady-of-vilna-eynon-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Coaldale",
+   "nameLt": "Šv. Jono bažnyčia",
+   "status": null,
+   "pageEn": "Coaldale St. John Baptist Church",
+   "established": [
+    "1911"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Allentown, PA",
+   "address": "225 W. Philip St., Coaldale, PA 18219"
+  },
+  "slug": "john-coaldale-pa",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Donora",
+   "nameLt": "Šv. Juozapo bažnyčia",
+   "status": null,
+   "pageEn": "Donora St. Joseph Church",
+   "established": [
+    "1906"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": null,
+   "address": "6th & Melden St., Donora, PA 15033"
+  },
+  "slug": "st-joseph-donora-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Du Bois",
+   "nameLt": "Šv. Juozapo bažnyčia",
+   "status": null,
+   "pageEn": "Du Bois St. Joseph Church",
+   "established": [
+    "1894"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Diocese of Erie, PA",
+   "address": "15 South Ave., Du Bois, PA 15801"
+  },
+  "slug": "st-joseph-du-bois-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Duryea",
+   "nameLt": "Šv. Juozapo bažnyčia",
+   "status": null,
+   "pageEn": "Duryea St. Joseph Church",
+   "established": [
+    "1909"
+   ],
+   "closed": "2010",
+   "closedNote": "Uždaryta /Closed - 2010-03-21",
+   "diocese": "Diocese of Scranton, PA",
+   "address": "117 Lackawanna Ave., Duryea, PA 18642"
+  },
+  "slug": "st-joseph-duryea-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Easton",
+   "nameLt": "Šv. Mykolo bažnyčia",
+   "status": null,
+   "pageEn": "Easton St. Michael Church",
+   "established": [
+    "1907"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Allentown, PA",
+   "address": "219 Spring Garden St., Easton, PA 18042"
+  },
+  "slug": "lithuanian-easton-pa",
+  "score": 3
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Eynon",
+   "nameLt": "Nekalto Prasidejimo-Ausros Vartų bažnyčia",
+   "status": null,
+   "pageEn": "Eynon St. Mary Church",
+   "established": [
+    "1900"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Scranton, PA",
+   "address": "420 Third St., Eynon, PA 18403"
+  },
+  "slug": "our-lady-of-vilna-eynon-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Export",
+   "nameLt": "Švč. Mergelės Marijos Apsilankymo bažnyčia",
+   "status": null,
+   "pageEn": "Export Holy Mary Visitation Church",
+   "established": [
+    "1903"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m.",
+   "diocese": null,
+   "address": null
+  },
+  "slug": "annunciation-kingston-pa",
+  "score": 2
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Forest City",
+   "nameLt": "Šv. Antano bažnyčia",
+   "status": null,
+   "pageEn": "Forest City St. Antony of Padua Church",
+   "established": [
+    "1894"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Diocese of Scranton, PA",
+   "address": "517 Lackawanna St., Forest City, PA 18424"
+  },
+  "slug": "st-anthony-forest-city-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Frackville",
+   "nameLt": "Švč. M. Apreiškimo bažnyčia",
+   "status": null,
+   "pageEn": "Frackville St. Annunciation of the Blessed Virgin Mary Church",
+   "established": [
+    "1917"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m.",
+   "diocese": "Diocese of Allentown, PA",
+   "address": "7 South Broad Mountain Ane., Frackville, PA 17931"
+  },
+  "slug": "mary-frackville-pa",
+  "score": 4
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Freeland",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": null,
+   "pageEn": "Freeland St. Casimir Church",
+   "established": [
+    "1887"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m.",
+   "diocese": null,
+   "address": null
+  },
+  "slug": "parish-freeland-pa",
+  "score": 3
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Girardville",
+   "nameLt": "Šv. Vincento bažnyčia",
+   "status": null,
+   "pageEn": "Girardville St. Vincent de Paul Church",
+   "established": [
+    "1907"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m.",
+   "diocese": "Diocese of Allentown, PA",
+   "address": "260 North Second St., Girardville, PA 17935"
+  },
+  "slug": "paul-girardville-pa",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Hazleton",
+   "nameLt": "Šv. Petro ir Povilo bažnyčia",
+   "status": null,
+   "pageEn": "Hazleton St. Peter and Paul Church",
+   "established": [
+    "1887"
+   ],
+   "closed": "2009",
+   "closedNote": "Uždaryta /Closed - 2009-07-15",
+   "diocese": "Diocese of Scranton, PA",
+   "address": "837 West Diamond Ave., Hazleton, PA 18201"
+  },
+  "slug": "ss-peter-and-paul-hazleton-pa",
+  "score": 8
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Homestead",
+   "nameLt": "Šv. Petro ir Povilo bažnyčia",
+   "status": null,
+   "pageEn": "Homestead St. Peter and Paul Church",
+   "established": [
+    "1900"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m.",
+   "diocese": "Diocese of Pittsburgh, PA",
+   "address": "1321 Mifflin St., Homestead, PA 15120"
+  },
+  "slug": "ss-peter-and-paul-homestead-pa",
+  "score": 8
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Kingston",
+   "nameLt": "Švč. Marijos bažnyčia",
+   "status": null,
+   "pageEn": "Kingston Saint Mary’s Annunciation Church",
+   "established": [
+    "1902"
+   ],
+   "closed": "2009",
+   "closedNote": "Uždaryta /Closed - 2009-11-22",
+   "diocese": "Diocese of Scranton, PA",
+   "address": "258 Zerbey Ave., Kingston, PA 18704"
+  },
+  "slug": "annunciation-kingston-pa",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Luzerne",
+   "nameLt": "Šv. Onos bažnyčia",
+   "status": null,
+   "pageEn": "Luzerne St. Ann Church",
+   "established": [
+    "1924"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Scranton, PA",
+   "address": "134 Tener St., Luzerne, PA 18709"
+  },
+  "slug": "ann-luzerne-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Lynnwood",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": null,
+   "pageEn": "Lynnwood St. Casimir Church",
+   "established": [
+    "1956"
+   ],
+   "closed": "2010",
+   "closedNote": "Uždaryta /Closed - 8/29/2010 m.",
+   "diocese": "Diocese of Scranton, PA",
+   "address": "301 Delaney St., Wilkes-Barre, PA 18706"
+  },
+  "slug": "casimir-pittston-pa",
+  "score": 2
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Mahanoy City",
+   "nameLt": "Šv. Juozapo bažnyčia",
+   "status": null,
+   "pageEn": "Mahanoy City St. Joseph Church",
+   "established": [
+    "1888"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Allentown, PA",
+   "address": "614 West Mahanoy Ave., Mahanoy City, PA 17948"
+  },
+  "slug": "st-joseph-mahanoy-city-pa",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Maizeville",
+   "nameLt": "Šv. Liudviko /Šiluvos bažnyčia",
+   "status": null,
+   "pageEn": "Maizeville Our Lady of Šiluva Church",
+   "established": [
+    "1927"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Allentown, PA",
+   "address": "364 Main St., Maizeville, PA 17934"
+  },
+  "slug": "louis-maizeville-pa",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Marion Heights",
+   "nameLt": "Nepaliaujamos Pagalbos bažnyčia",
+   "status": null,
+   "pageEn": "Marion Heights Our Lady of Perpetual Help Church",
+   "established": [
+    "1903"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m.",
+   "diocese": null,
+   "address": null
+  },
+  "slug": "our-lady-of-vilna-eynon-pa",
+  "score": 2
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Middleport",
+   "nameLt": "Švč. Širdies koplyčia",
+   "status": null,
+   "pageEn": "Middleport Immaculate Heart of Mary Chapel",
+   "established": [
+    "1948"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": null,
+   "address": "101 Valley St., New Philadelphia, PA 17959?"
+  },
+  "slug": "lithuanian-church-middleport-pa",
+  "score": 3
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Miners Mills",
+   "nameLt": "Šv. Pranciškaus bažnyčia",
+   "status": null,
+   "pageEn": "Miners Mills St. Francis of Assisi Church",
+   "established": [
+    "1913"
+   ],
+   "closed": "2011",
+   "closedNote": "Uždaryta /Closed - 2011-6-26",
+   "diocese": "Diocese of Scranton, PA",
+   "address": "13 Chandler St., Wilkes-Barre, PA 18705"
+  },
+  "slug": "st-francis-minersville-pa",
+  "score": 3
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Minersville",
+   "nameLt": "Šv. Pranciškaus bažnyčia",
+   "status": null,
+   "pageEn": "Minersville St. Francis of Assisi Church",
+   "established": [
+    "1895"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Allentown, PA",
+   "address": "320 Spruce St., Minersville, PA 17954"
+  },
+  "slug": "st-francis-minersville-pa",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Mount Carmel",
+   "nameLt": "Šv. Kryžiaus bažnyčia",
+   "status": null,
+   "pageEn": "Mount Carmel Holy Cross Church",
+   "established": [
+    "1892"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m.",
+   "diocese": "Diocese of Harrisburg, PA",
+   "address": "312 South Poplar St., Mount Carmel, PA 17851"
+  },
+  "slug": "holycross-mount-carmel-pa",
+  "score": 7
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Nanticoke",
+   "nameLt": "Šv. Juozapo bažnyčia",
+   "status": null,
+   "pageEn": "Nanticoke St. Joseph Church",
+   "established": [
+    "1893"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": null,
+   "address": "Corner Pine, 3 Jones St., Nanticoke, PA 17331"
+  },
+  "slug": "joseph-nanticoke-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "New Philadelphia",
+   "nameLt": "Saldžiausios Jėzaus Širdies bažnyčia",
+   "status": null,
+   "pageEn": "New Philadelphia Sacred Heart Church",
+   "established": [
+    "1895"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Diocese of Allentown, PA",
+   "address": "99 N Valley St, New Philadelphia, PA 17959 (41 Clay St., New Philadelphia, PA 17959)"
+  },
+  "slug": "sacred-heart-new-philadelphia-pa",
+  "score": 8
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Pittsburgh",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": null,
+   "pageEn": "Pittsburgh St. Casimir Church",
+   "established": [
+    "1893"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Diocese of Pittsburgh, PA",
+   "address": "2114 Sarah St., Pittsburgh, PA 15203"
+  },
+  "slug": "casimir-pittsburgh-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Pittsburgh",
+   "nameLt": "Šv. Vincento bažnyčia",
+   "status": null,
+   "pageEn": "Pittsburgh St. Vincent Church",
+   "established": [
+    "1903"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Pittsburgh, PA",
+   "address": "200 Tabor St., Pittsburgh, PA 15204"
+  },
+  "slug": "vincent-pittsburgh-pa",
+  "score": 4
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Pittsburgh",
+   "nameLt": "Dangun įžengimo bažnyčia",
+   "status": null,
+   "pageEn": "Pittsburgh Ascension Church",
+   "established": [
+    "1906"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": null,
+   "address": "1529 Metropolitan St., Pittsburgh, PA 15233"
+  },
+  "slug": "ascension-pittsburgh-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Pittston",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": null,
+   "pageEn": "Pittston St. Casimir Church",
+   "established": [
+    "1885",
+    "1890"
+   ],
+   "closed": "2008",
+   "closedNote": "Uždaryta /Closed - 2008 m.",
+   "diocese": "Diocese of Scranton, PA",
+   "address": "65 Church St., Pittston, PA 18640"
+  },
+  "slug": "casimir-pittston-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Plymouth",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": null,
+   "pageEn": "Plymouth St. Casimir Church",
+   "established": [
+    "1890"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Diocese of Scranton, PA",
+   "address": null
+  },
+  "slug": "st-casimir-plymouth-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Reading",
+   "nameLt": "Šv. Antano bažnyčia",
+   "status": null,
+   "pageEn": "Reading St. Anthony Church",
+   "established": [
+    "1913"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - .. m.",
+   "diocese": "Diocese of Allentown, PA",
+   "address": "243 South 8th St., Reading, PA 19602"
+  },
+  "slug": "st-anthony-forest-city-pa",
+  "score": 2
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Scranton",
+   "nameLt": "Šv. Juozapo bažnyčia",
+   "status": null,
+   "pageEn": "Scranton St. Joseph Church",
+   "established": [
+    "1892"
+   ],
+   "closed": "2011",
+   "closedNote": "Uždaryta /Closed - 2011-6-5",
+   "diocese": "Diocese of Scranton, PA",
+   "address": "116 Theodore St., Scranton, PA 18503"
+  },
+  "slug": "joseph-scranton-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Scranton",
+   "nameLt": "Šv. Mykolo bažnyčia",
+   "status": null,
+   "pageEn": "Scranton St. Michael Church",
+   "established": [
+    "1914"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Scranton, PA",
+   "address": "1703 Jackson St., Scranton, PA 18504"
+  },
+  "slug": "michael-scranton-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Shamokin",
+   "nameLt": "Šv. Mykolo bažnyčia",
+   "status": null,
+   "pageEn": "Shamokin St. Michael Archangel Church",
+   "established": [
+    "1892"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m.",
+   "diocese": "Diocese of Harrisburg, PA",
+   "address": "28 South Cherry St., Shamokin, PA 17872"
+  },
+  "slug": "st-michael-shamokin-pa",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Shenandoah",
+   "nameLt": "Šv. Jurgio bažnyčia",
+   "status": null,
+   "pageEn": "Shenandoah St. George Church",
+   "established": [
+    "1891"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Allentown, PA",
+   "address": "129 South Jardin St., Shenandoah, PA 17976"
+  },
+  "slug": "george-shenandoah-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Sugar Notch",
+   "nameLt": "Šv. Petro ir Povilo bažnyčia",
+   "status": null,
+   "pageEn": "Sugar Notch St. Peter and Paul Church",
+   "established": [
+    "1913"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Scranton, PA",
+   "address": "630 Main St., Sugar Notch, PA 18706"
+  },
+  "slug": "ss-peter-and-paul-sugar-notch-pa",
+  "score": 9
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "St. Clair",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": null,
+   "pageEn": "St. Clair St. Casimir Church",
+   "established": [
+    "1917"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Allentown, PA",
+   "address": "441 South Nichols St. Clair, PA 17970"
+  },
+  "slug": "st-casimir-st-clair-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Tamaqua",
+   "nameLt": "Šv. Petro ir Povilo bažnyčia",
+   "status": null,
+   "pageEn": "Tamaqua St. Peter and Paul Church",
+   "established": [
+    "1911"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed -  m.",
+   "diocese": "Diocese of Allentown, PA",
+   "address": "307 Pine St., Tamaqua, PA 18252"
+  },
+  "slug": "ss-peter-and-paul-tamaqua-pa",
+  "score": 8
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Vandergrift",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": null,
+   "pageEn": "Vandergrift St. Casimir Church",
+   "established": [
+    "1922"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Greensburg, PA",
+   "address": "411 McKinley Ave., East Vandergrift, PA 15629"
+  },
+  "slug": "st-casimir-east-vandergrift-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Wanamie",
+   "nameLt": "Švč. Marijos bažnyčia",
+   "status": null,
+   "pageEn": "Wanamie St. Mary Church",
+   "established": [
+    "1902"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Diocese of Scranton, PA",
+   "address": "203 Bellas Rd., Wanamie, PA 18634"
+  },
+  "slug": "st-mary-wanamie-pa",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "PA",
+   "stateName": "Pennsylvania",
+   "city": "Wilkes-Barre",
+   "nameLt": "Švč. Trejybės bažnyčia",
+   "status": null,
+   "pageEn": "Wilkes-Barre Holy Trinity Church",
+   "established": [
+    "1893"
+   ],
+   "closed": "2010",
+   "closedNote": "Uždaryta /Closed - 2010-5-30",
+   "diocese": "Diocese of Scranton, PA",
+   "address": "416 East South St., Wilkes-Barre, PA 18702"
+  },
+  "slug": "trinity-wilkes-barre-pa",
+  "score": 7
+ },
+ {
+  "wiki": {
+   "state": "MD",
+   "stateName": "Maryland",
+   "city": "Baltimore",
+   "nameLt": "Šv. Alfonso bažnyčia",
+   "status": null,
+   "pageEn": "St. Alphonsus Church /Saint John Neumann Shrine",
+   "established": [
+    "1887",
+    "1903"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Baltimore, MD",
+   "address": "114 W. Saratoga St., Baltimore, MD 21201"
+  },
+  "slug": "st-alphonsus-baltimore-md",
+  "score": 4
+ },
+ {
+  "wiki": {
+   "state": "OH",
+   "stateName": "Ohio",
+   "city": "Cleveland",
+   "nameLt": "Dievo Motinos Nuolatinės Pagalbos bažnyčia",
+   "status": null,
+   "pageEn": "Cleveland Our Lady of Perpetual Help Church",
+   "established": [
+    "1929"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Diocese of Cleveland, OH",
+   "address": "18022 Neff Rd, Cleveland, OH 44119"
+  },
+  "slug": "motherofgod-cleveland-oh",
+  "score": 11
+ },
+ {
+  "wiki": {
+   "state": "OH",
+   "stateName": "Ohio",
+   "city": "Cleveland",
+   "nameLt": "Cleveland Šv. Jurgio bažnyčia",
+   "status": null,
+   "pageEn": "Cleveland St. George Church",
+   "established": [
+    "1895"
+   ],
+   "closed": "2009",
+   "closedNote": "Uždaryta /Closed - 2009 m.",
+   "diocese": "Diocese of Cleveland, OH",
+   "address": "6527 Superior Ave., Cleveland, OH 44103"
+  },
+  "slug": "george-cleveland-oh",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "OH",
+   "stateName": "Ohio",
+   "city": "Akron",
+   "nameLt": "Šv. Petro bažnyčia",
+   "status": null,
+   "pageEn": "Akron St. Peter Church",
+   "established": [
+    "1917"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Cleveland, OH",
+   "address": "1414 East Ave., Akron, OH 44307"
+  },
+  "slug": "st-peter-akron-oh",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "OH",
+   "stateName": "Ohio",
+   "city": "Dayton",
+   "nameLt": "Šv. Kryžiaus bažnyčia",
+   "status": null,
+   "pageEn": "Dayton Holy Cross Church",
+   "established": [
+    "1914"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Cincinatti, OH",
+   "address": "1924 Leo St., Dayton, OH 45404"
+  },
+  "slug": "holycross-dayton-oh",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "OH",
+   "stateName": "Ohio",
+   "city": "Youngstown",
+   "nameLt": "Šv. Pranciškaus bažnyčia",
+   "status": null,
+   "pageEn": "Youngstown St. Francis of Assisi Catholic Church ",
+   "established": [
+    "1909"
+   ],
+   "closed": "1979",
+   "closedNote": "Uždaryta /Closed - 1979 m.",
+   "diocese": "Diocese of Youngstown, OH",
+   "address": "917 Shehy St., Youngstown, OH 44506"
+  },
+  "slug": "st-francis-youngstown-oh",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "IN",
+   "stateName": "Indiana",
+   "city": "East Chicago",
+   "nameLt": "Šv. Pranciškaus bažnyčia",
+   "status": null,
+   "pageEn": "East Chicago St. Francis Church",
+   "established": [
+    "1912"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Diocese of Gary, IN",
+   "address": "3905 Fir St., East Chicago, IN 46312"
+  },
+  "slug": "francis-east-chicago-in",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "IN",
+   "stateName": "Indiana",
+   "city": "Gary",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": null,
+   "pageEn": "Gary St. Casimir Church",
+   "established": [
+    "1916"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Diocese of Gary, IN",
+   "address": "1390 West 15th Ave., Gary, IN 46407"
+  },
+  "slug": "casimir-gary-in",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "MI",
+   "stateName": "Michigan",
+   "city": "Southfield",
+   "nameLt": "Dievo Apvaizdos bažnyčia",
+   "status": null,
+   "pageEn": "Southfield Divine Providence Church",
+   "established": [
+    "1949"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Detroit, MI",
+   "address": "25335 W. Nine Mile Rd., Southfield, MI 48033"
+  },
+  "slug": "providence-southfield-mi",
+  "score": 7
+ },
+ {
+  "wiki": {
+   "state": "MI",
+   "stateName": "Michigan",
+   "city": "Detroit",
+   "nameLt": "Šv. Jurgio bažnyčia",
+   "status": null,
+   "pageEn": "Detroit St. George Church",
+   "established": [
+    "1908"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Archdiocese of Detroit, MI",
+   "address": null
+  },
+  "slug": "st-george-detroit-mi",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "MI",
+   "stateName": "Michigan",
+   "city": "Detroit",
+   "nameLt": "Šv. Petro bažnyčia",
+   "status": null,
+   "pageEn": "Detroit St. Peter Church",
+   "established": [
+    "1920"
+   ],
+   "closed": "1995",
+   "closedNote": "Uždaryta /Closed - 1995 m.",
+   "diocese": "Archdiocese of Detroit, MI",
+   "address": "8300 Longworth St., Detroit, MI 48209"
+  },
+  "slug": "peter-detroit-mi",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "MI",
+   "stateName": "Michigan",
+   "city": "Detroit",
+   "nameLt": "Šv. Antano bažnyčia",
+   "status": null,
+   "pageEn": "Detroit St. Anthony Church",
+   "established": [
+    "1921"
+   ],
+   "closed": "2013",
+   "closedNote": "Uždaryta /Closed - 2013 m.",
+   "diocese": "Archdiocese of Detroit, MI",
+   "address": "1750 25th St., Detroit, MI 48216"
+  },
+  "slug": "anthony-detroit-mi",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "MI",
+   "stateName": "Michigan",
+   "city": "Grand Rapids",
+   "nameLt": "Šv. Petro ir Povilo bažnyčia",
+   "status": null,
+   "pageEn": "Grand Rapids St. Peter and Paul Church",
+   "established": [
+    "1886"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m.",
+   "diocese": "Archdiocese of Grand Rapids, MI",
+   "address": "520 Myrtle Ave. NW, Grand Rapids, MI 49504"
+  },
+  "slug": "paul-grand-rapids-mi",
+  "score": 9
+ },
+ {
+  "wiki": {
+   "state": "MI",
+   "stateName": "Michigan",
+   "city": "Grand Rapids",
+   "nameLt": "Dievo Apvaizdos bažnyčia ???",
+   "status": null,
+   "pageEn": "Grand Rapids Divine Providence Church",
+   "established": [
+    "1904"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Close - <> m.",
+   "diocese": "Archdiocese of Grand Rapids, MI",
+   "address": null
+  },
+  "slug": "providence-southfield-mi",
+  "score": 4
+ },
+ {
+  "wiki": {
+   "state": "MI",
+   "stateName": "Michigan",
+   "city": "Saginaw",
+   "nameLt": "Šv. Jurgio bažnyčia",
+   "status": null,
+   "pageEn": "Saginaw St. George Church",
+   "established": [
+    "1910"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - .. m.",
+   "diocese": "Archdiocese of <>, MI",
+   "address": null
+  },
+  "slug": "st-george-saginaw-mi",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "MI",
+   "stateName": "Michigan",
+   "city": "Custer",
+   "nameLt": "Švč. Marijos bažnyčia",
+   "status": null,
+   "pageEn": "Custer St. Mary Church",
+   "established": [
+    "1933"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Grand Rapids, MI",
+   "address": "85 South Madison Ave., Custer, MI 49405"
+  },
+  "slug": "mary-custer-mi",
+  "score": 4
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Lemont",
+   "nameLt": "Palaimintojo Jurgio Matulaičio Misija",
+   "status": "active",
+   "pageEn": "Lemont Blessed Jurgis Matulaitis Lithuanian Mission",
+   "established": [
+    "1990"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Chicago, IL",
+   "address": "14911 127th St., Lithuanian World Center, Lemont, IL 60439"
+  },
+  "slug": "george-lemont-il",
+  "score": 8
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Chicago",
+   "nameLt": "Švč. Mergelės Marijos Gimimo bažnyčia",
+   "status": "active",
+   "pageEn": " Chicago Nativity of the Blessed Virgin Mary Church",
+   "established": [
+    "1927"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Chicago, IL",
+   "address": "6812 South Washtenaw Ave., Marquette Park, Chicago, IL 60629"
+  },
+  "slug": "nativity-chicago-il",
+  "score": 7
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Chicago",
+   "nameLt": "Švč. Mergelės Marijos Nekaltojo Prasidėjimo bažnyčia",
+   "status": "active",
+   "pageEn": "Chicago Immaculate Conception Church",
+   "established": [
+    "1914"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Chicago, IL",
+   "address": "2745 W. 44th St., Brighton Park, Chicago, IL 60632"
+  },
+  "slug": "immaculate-chicago-il",
+  "score": 7
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Chicago",
+   "nameLt": "Šv. Antano bažnyčia",
+   "status": "active",
+   "pageEn": "Cicero St. Anthony Church",
+   "established": [
+    "1911"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Chicago, IL",
+   "address": "1510 S. 49th Court, Cicero, IL 60804"
+  },
+  "slug": "anthony-cicero-il",
+  "score": 3
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Chicago",
+   "nameLt": "Šv. Jurgio bažnyčia",
+   "status": "closed",
+   "pageEn": "Chicago St. George Church",
+   "established": [
+    "1892"
+   ],
+   "closed": "1990",
+   "closedNote": "Uždaryta /Closed - 1990 m. birželio mėn. ir 1993 m. nugriauta.",
+   "diocese": "Archdiocese of Chicago, IL",
+   "address": "Contemporary Address: 33rd St. and Lituanica Ave., Chicago, IL 60608"
+  },
+  "slug": "george-chicago-il",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Chicago",
+   "nameLt": "Dievo Apvaizdos bažnyčia",
+   "status": "closed",
+   "pageEn": "Chicago Providence of God Church",
+   "established": [
+    "1900"
+   ],
+   "closed": "2017",
+   "closedNote": "Uždaryta /Closed - 2017 m. birželio 18 d.",
+   "diocese": "Archdiocese of Chicago, IL",
+   "address": "W. 18th St. and S. Union Ave., Chicago, IL 60616"
+  },
+  "slug": "providence-chicago-il",
+  "score": 7
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Chicago",
+   "nameLt": "Šv. Juozapo bažnyčia",
+   "status": "closed",
+   "pageEn": "Chicago St. Joseph Church",
+   "established": [
+    "1901"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Chicago, IL",
+   "address": "2650 E. 88th St., Chicago, IL 60617"
+  },
+  "slug": "joseph-south-chicago-il",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Chicago",
+   "nameLt": "Šv. Mykolo Arkangelo? bažnyčia",
+   "status": "closed",
+   "pageEn": "Chicago St. ... Church",
+   "established": [
+    "1904"
+   ],
+   "closed": "1970",
+   "closedNote": "Uždaryta /Closed - 1970 m. ir ... m. nugriauta",
+   "diocese": "Archdiocese of Chicago, IL",
+   "address": null
+  },
+  "slug": "michael-north-chicago-il",
+  "score": 4
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Chicago",
+   "nameLt": "Šv. Kryžiaus bažnyčia",
+   "status": "closed",
+   "pageEn": "Chicago Holy Cross Church",
+   "established": [
+    "1904"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Chicago, IL",
+   "address": "1750 W. 46 th St., Chicago, IL 60609 & 4541 S. Wood St, Chicago, IL 60609"
+  },
+  "slug": "holycross-chicago-il",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Chicago",
+   "nameLt": "Aušros Vartų bažnyčia",
+   "status": "closed",
+   "pageEn": "Chicago Our Lady of Vilna Church",
+   "established": [
+    "1905"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m. Bažnyčios ir mokyklos pastatai tebestovi.",
+   "diocese": "Archdiocese of Chicago, IL",
+   "address": "2327 W. 23rd Place, Chicago, IL 60608"
+  },
+  "slug": "gateofdawn-chicago-il",
+  "score": 8
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Chicago",
+   "nameLt": "Visų Šventųjų bažnyčia",
+   "status": "closed",
+   "pageEn": "Chicago All Saints Church",
+   "established": [
+    "1906"
+   ],
+   "closed": "1989",
+   "closedNote": "Uždaryta /Closed - 1989 m. birželio mėn., ... m. nupirko baptistai: www.universalcommunitymbchurch.com",
+   "diocese": "Archdiocese of Chicago, IL",
+   "address": null
+  },
+  "slug": "all-saints-chicago-il",
+  "score": 7
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Chicago",
+   "nameLt": "Šv. Petro ir Povilo bažnyčia",
+   "status": "closed",
+   "pageEn": "Chicago St. Pater and Paul Church",
+   "established": [
+    "1912"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m. ir ... m. nugriauta",
+   "diocese": "Archdiocese of Chicago, IL",
+   "address": null
+  },
+  "slug": "ss-peter-and-paul-chicago-il",
+  "score": 7
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Chicago",
+   "nameLt": "Marijos-Kelrodės Mergelės koplyčia",
+   "status": "closed",
+   "pageEn": "Chicago Maria Della Strada Lithuanian Chapel",
+   "established": [
+    "1957"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Chicago, IL",
+   "address": "2345 West 56th St., Jaunimo Centras, Gage Park, Chicago, IL 60636"
+  },
+  "slug": "nativity-chicago-il",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Chicago",
+   "nameLt": "Kunigų Marijonų Kongregacijos koplyčia",
+   "status": "closed",
+   "pageEn": "Chicago Congregation of Marian Fathers of the Immaculate Conception Chapel",
+   "established": null,
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Chicago, IL",
+   "address": "6336 South Kilbourn Ave., Marquette Park, Chicago, IL 60629"
+  },
+  "slug": "immaculate-chicago-il",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Chicago Heights",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": "closed",
+   "pageEn": "Chicago Heights St. Casimir Church",
+   "established": [
+    "1911"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m.",
+   "diocese": "Archdiocese of Chicago, IL",
+   "address": null
+  },
+  "slug": "st-casimir-chicago-heights-il",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "East St. Louis",
+   "nameLt": "Nekalto Prasidėjimo bažnyčia",
+   "status": "closed",
+   "pageEn": "East St. Louis Centennial Immaculate Conception Church",
+   "established": [
+    "1896"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m.",
+   "diocese": "Diocese of Belleville, IL",
+   "address": "1509 Bough Ave., East St. Louis, IL 62205"
+  },
+  "slug": "immaculate-east-st-louis-il",
+  "score": 7
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Kewanee",
+   "nameLt": "Šv. Antano bažnyčia",
+   "status": "closed",
+   "pageEn": "Kewanee St. Anthony Church",
+   "established": [
+    "1906"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m.",
+   "diocese": "Diocese of Peoria, IL",
+   "address": null
+  },
+  "slug": "st-anthony-kewanee-il",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Rockford",
+   "nameLt": "Šv. Petro ir Povilo bažnyčia",
+   "status": "closed",
+   "pageEn": "Rockford St. Peter and Paul Church",
+   "established": [
+    "1911"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - .. m.",
+   "diocese": "Diocese of Rockford, IL",
+   "address": "1540 South West St., Rockford, IL 61102"
+  },
+  "slug": "ss-peter-and-paul-rockford-il",
+  "score": 8
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Spring Valley",
+   "nameLt": "Šv. Onos bažnyčia",
+   "status": "closed",
+   "pageEn": "Spring Valley St. Anne Church",
+   "established": [
+    "1895"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - .. m. ir .. m. nugriauta",
+   "diocese": "Diocese of Peoria, IL",
+   "address": "110 East 4th St., Spring Valley, IL 61362"
+  },
+  "slug": "ann-spring-valley-il",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Springfield",
+   "nameLt": "Šv. Vincento bažnyčia",
+   "status": "closed",
+   "pageEn": "Springfield St. Vincent de Paul Church",
+   "established": [
+    "1902"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m.",
+   "diocese": "Diocese of <>, IL",
+   "address": null
+  },
+  "slug": "st-vincent-de-paul-springfield-il",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Waukegan",
+   "nameLt": "Šv. Baltramiejaus bažnyčia",
+   "status": "closed",
+   "pageEn": "Waukegan St. Bartholomew Church",
+   "established": [
+    "1892"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m. ir <> m. nugriauta",
+   "diocese": "Archdiocese of Chicago, IL",
+   "address": "730 Linkoln Ave., Waukeegan, IL 60085"
+  },
+  "slug": "st-bartholomew-waukegan-il",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "IL",
+   "stateName": "Illinois",
+   "city": "Westville",
+   "nameLt": "Šv. Petro ir Povilo bažnyčia",
+   "status": "closed",
+   "pageEn": "Westville St. Peter and Paul Church",
+   "established": [
+    "1897"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Archdiocese of Chicago, IL",
+   "address": "231 North State St., Westville, IL 61883"
+  },
+  "slug": "ss-peter-and-paul-westville-il",
+  "score": 8
+ },
+ {
+  "wiki": {
+   "state": "WI",
+   "stateName": "Wisconsin",
+   "city": "Kenosha",
+   "nameLt": "Šv. Petro bažnyčia",
+   "status": null,
+   "pageEn": "Kenosha St. Peter Church",
+   "established": [
+    "1903"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Archdiocese of Milwaukee",
+   "address": "3100 23th St., Kenosha, WI 53142"
+  },
+  "slug": "st-peter-kenosha-wi",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "WI",
+   "stateName": "Wisconsin",
+   "city": "Milwaukee",
+   "nameLt": "Šv. Gabrieliaus bažnyčia",
+   "status": null,
+   "pageEn": "Milwaukee St. Gabriel Church",
+   "established": [
+    "1914"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m. ir .. m. nugriauta",
+   "diocese": "Archdiocese of Milwaukee",
+   "address": "1575 A. South 10th St., Milwaukee, WI 53204"
+  },
+  "slug": "st-gabriel-milwaukee-wi",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "WI",
+   "stateName": "Wisconsin",
+   "city": "Port Washington",
+   "nameLt": "Šv. Ambraziejaus filija /bažnyčia",
+   "status": null,
+   "pageEn": "Port Washington St. ... Church",
+   "established": null,
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Archdiocese of <>",
+   "address": null
+  },
+  "slug": "st-ambrose-port-washington-wi",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "WI",
+   "stateName": "Wisconsin",
+   "city": "Racine",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": null,
+   "pageEn": "Racine St. Casimir Church",
+   "established": [
+    "1913"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m. ir ... m. nugriauta",
+   "diocese": "Archdiocese of Milwaukee",
+   "address": "815 Park Ave., Racine, WI 53403"
+  },
+  "slug": "st-casimir-racine-wi",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "WI",
+   "stateName": "Wisconsin",
+   "city": "Sheboygan",
+   "nameLt": "Nekalto Prasidėjimo bažnyčia",
+   "status": null,
+   "pageEn": "Sheboygan Immaculate Conception Church",
+   "established": [
+    "1903"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m. ir ... m. nugriauta",
+   "diocese": "Archdiocese of Milwaukee",
+   "address": "2705 South 14th St., Sheboygan, WI 53081"
+  },
+  "slug": "immaculate-conception-sheboygan-wi",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "MO",
+   "stateName": "Missouri",
+   "city": "St. Louis",
+   "nameLt": "Šv. Juozapo bažnyčia",
+   "status": null,
+   "pageEn": "St. Louis St. Joseph Church",
+   "established": [
+    "1915"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Close - <> m.",
+   "diocese": "Archdiocese of <>",
+   "address": null
+  },
+  "slug": "st-joseph-st-louis-mo",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "IA",
+   "stateName": "Iowa",
+   "city": "Sioux City",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": null,
+   "pageEn": "Sioux City St. Casimir Church",
+   "established": [
+    "1913"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m.",
+   "diocese": "Diocese of Sioux City",
+   "address": "2514 Leech Ave., Sioux City, IA 51107"
+  },
+  "slug": "casimir-sioux-city-ia",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "KS",
+   "stateName": "Kansas",
+   "city": "Kansas City",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": null,
+   "pageEn": "Kansas City St. Casimir Church",
+   "established": [
+    "1918"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - <> m.",
+   "diocese": "Archdiocese of <>",
+   "address": null
+  },
+  "slug": "st-casimir-kansas-city-ks",
+  "score": 6
+ },
+ {
+  "wiki": {
+   "state": "NE",
+   "stateName": "Nebraska",
+   "city": "Omaha",
+   "nameLt": "Šv. Antano bažnyčia",
+   "status": null,
+   "pageEn": "Omaha St. Anthony Church",
+   "established": [
+    "1907"
+   ],
+   "closed": null,
+   "closedNote": "Uždaryta /Closed - ... m.",
+   "diocese": "Archdiocese of Omaha",
+   "address": "5408 South 32rd St., Omaha, NE 68107"
+  },
+  "slug": "anthony-omaha-ne",
+  "score": 5
+ },
+ {
+  "wiki": {
+   "state": "CA",
+   "stateName": "California",
+   "city": "Los Angeles",
+   "nameLt": "Šv. Kazimiero bažnyčia",
+   "status": null,
+   "pageEn": "Los Angeles St. Casimir Church",
+   "established": [
+    "1941"
+   ],
+   "closed": null,
+   "closedNote": null,
+   "diocese": "Archdiocese of Los Angeles, CA",
+   "address": "2718 George St., Los Angeles, CA 90027"
+  },
+  "slug": "casimir-los-angeles-ca",
+  "score": 6
+ }
+]

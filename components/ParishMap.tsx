@@ -1,7 +1,10 @@
 "use client";
 
 // The homepage map: ONE mark system across the whole record (Vilija
-// 2026-07-21). Color = present status; shape = congregation class:
+// 2026-07-21), colored by the SHARED end-state resolver (lib/end-state.ts)
+// so the map always agrees with the profiles and The History (Vilija
+// 2026-07-27: the map must match the history flow). Shape = congregation
+// class:
 //   circle              = Roman Catholic parish (default)
 //   diamond             = National Catholic / Independent Catholic parish
 //   red filled          = lost (closed / demolished / merged / suppressed)
@@ -24,6 +27,8 @@ import {
   ENDING_MODE_LABEL,
   OWNERSHIP_LABEL,
 } from "@/lib/parishes";
+import { resolveEndState, toGroup } from "@/lib/end-state";
+import contextPoints from "@/data/context-points.json";
 
 const FULL = (regData as { frame?: { x: number; y: number; w: number; h: number } })
   .frame ?? { x: 0, y: 0, w: 975, h: 610 };
@@ -32,8 +37,8 @@ const NE_STATES = new Set(["ME", "NH", "VT", "MA", "RI", "CT", "NY", "NJ", "PA",
 
 type View = { x: number; y: number; w: number; h: number };
 // Status drives fill color. alerted (gold ring) is a separate boolean.
-type Status = "lost" | "open" | "threat" | "building" | "unknown" | "transferred";
-type Mode = "all" | "open" | "threat" | "lost" | "transferred";
+type Status = "lost" | "open" | "mass" | "threat" | "building" | "unknown" | "transferred";
+type Mode = "all" | "open" | "mass" | "threat" | "lost" | "transferred";
 type ClassFilter = "all" | "roman_catholic" | "national_catholic_pncc" | "non_catholic_christian";
 
 interface Point {
@@ -61,21 +66,42 @@ interface Point {
 
 const STATUS_LABEL: Record<Status, string> = {
   lost: "Closed",
-  open: "Active today",
+  open: "Active Lithuanian parish",
+  mass: "Lithuanian Mass continues",
   threat: "Unresolved — under threat",
   building: "Building at risk",
   unknown: "Fate not yet established",
-  transferred: "Ethnically transferred",
+  transferred: "Lives on, another community",
 };
 
 const FILL: Record<Status, string> = {
   lost: "var(--es-closed)",
   open: "var(--es-active)",
-  threat: "var(--es-transferred)",
+  mass: "var(--es-mass)",
+  threat: "var(--mark-ink)",
   building: "var(--mark-building)",
   unknown: "var(--muted)",
   transferred: "var(--es-transferred)",
 };
+
+// End-state group -> map status. THE one mapping; both point sources use it.
+const GROUP_STATUS: Record<string, Status> = {
+  active_parish: "open",
+  mass_continues: "mass",
+  transferred: "transferred",
+  unresolved: "threat",
+  closed: "lost",
+  unverified: "unknown",
+};
+const contextGroupBySlug = new Map(
+  (contextPoints.points as { slug: string; group: string }[]).map((c) => [c.slug, c.group]),
+);
+const contextClassBySlug = new Map(
+  (contextPoints.points as { slug: string; congregationClass: string | null }[]).map((c) => [
+    c.slug,
+    c.congregationClass,
+  ]),
+);
 
 // Build alert lookup: slug → {kind, whatChanged}
 type AlertKind = "active" | "building" | "watch";
@@ -97,19 +123,16 @@ function buildPoints(): Point[] {
     const inAlerts = !!alert;
     const alerted = !!alert && alert.kind === "active";
 
-    let status: Status;
-    if (alert?.kind === "building") {
-      status = "building";
-    } else if (p.status === "standing") {
-      status =
-        p.lithuanianIdentity === "ethnically_transferred"
-          ? "transferred"
-          : "open";
-    } else if (p.status === "undecided") {
-      status = "threat";
-    } else {
-      status = "lost";
-    }
+    const isStanding = p.status === "standing";
+    const endState = resolveEndState(
+      (p.lithuanianIdentity as never) ?? null,
+      (p.buildingFate as never) ?? null,
+      p.yearClosed != null || !isStanding,
+      isStanding,
+      p.endingMode,
+    );
+    const status: Status =
+      alert?.kind === "building" ? "building" : GROUP_STATUS[toGroup(endState)];
 
     pts.push({
       id: p.slug,
@@ -128,7 +151,7 @@ function buildPoints(): Point[] {
       deep: true,
       detail: `${OWNERSHIP_LABEL[p.ownership]} · ${ENDING_MODE_LABEL[p.endingMode]}`,
       kindLabel: null,
-      congregationClass: null,
+      congregationClass: contextClassBySlug.get(p.slug) ?? null,
     });
   }
 
@@ -141,22 +164,14 @@ function buildPoints(): Point[] {
     const inAlerts = !!alert;
     const alerted = !!alert && alert.kind === "active";
 
-    let status: Status;
-    if (alert?.kind === "building") {
-      status = "building";
-    } else if (inAlerts) {
-      status = c.closedYear ? "lost" : "threat";
-    } else if (c.closedYear) {
-      status = "lost";
-    } else if ((c as { lockedStanding?: boolean }).lockedStanding) {
-      status =
-        (c as { identity?: string | null }).identity ===
-        "ethnically_transferred"
-          ? "transferred"
-          : "open";
-    } else {
-      status = "unknown";
-    }
+    // Same layer the profile context maps and dispatch renderer use —
+    // zero drift with the shared resolver.
+    const group = contextGroupBySlug.get(c.slug);
+    const status: Status =
+      alert?.kind === "building"
+        ? "building"
+        : (group && GROUP_STATUS[group]) ||
+          (c.closedYear ? "lost" : "unknown");
 
     pts.push({
       id: c.slug,
@@ -220,7 +235,10 @@ export default function ParishMap() {
     setHovered(null);
   }
   const [mode, setMode] = useState<Mode>("all");
-  const [classFilter, setClassFilter] = useState<ClassFilter>("all");
+  // Default to the Catholic record — the scope The History narrates — so the
+  // legend numbers match that page on load; All/National Catholic/Protestant
+  // are one click away and the counts follow the selection.
+  const [classFilter, setClassFilter] = useState<ClassFilter>("roman_catholic");
   const [view, setView] = useState<View>(FULL);
   const [showArchived, setShowArchived] = useState(true);
   const [showDioceses, setShowDioceses] = useState(false);
@@ -238,21 +256,30 @@ export default function ParishMap() {
 
   const zoom = FULL.w / view.w;
 
+  const classPoints = useMemo(
+    () =>
+      classFilter === "all"
+        ? POINTS
+        : POINTS.filter((p) => (p.congregationClass ?? "roman_catholic") === classFilter),
+    [classFilter],
+  );
+
   const statusCounts = useMemo(() => {
-    const c = { all: POINTS.length, open: 0, threat: 0, lost: 0, unknown: 0, building: 0, transferred: 0 };
-    for (const p of POINTS) {
+    const c = { all: classPoints.length, open: 0, mass: 0, threat: 0, lost: 0, unknown: 0, building: 0, transferred: 0 };
+    for (const p of classPoints) {
       if (p.status === "open") c.open++;
+      else if (p.status === "mass") c.mass++;
       else if (p.status === "lost") c.lost++;
       else if (p.status === "building") c.building++;
       else if (p.status === "unknown") c.unknown++;
       else if (p.status === "transferred") c.transferred++;
     }
     // "threat" filter = all that are alerted, genuinely unresolved, or building at risk
-    c.threat = POINTS.filter(
+    c.threat = classPoints.filter(
       (p) => p.inAlerts || p.status === "threat" || p.status === "building"
     ).length;
     return c;
-  }, []);
+  }, [classPoints]);
 
   const MW_STATES = new Set(["IL", "IN", "OH", "MI", "WI", "MN", "IA", "MO"]);
 
@@ -326,23 +353,23 @@ export default function ParishMap() {
       active ? "bg-foreground text-background" : "border border-rule hover:border-foreground"
     }`;
 
-  const knownPoints = POINTS.filter((p) => p.status !== "unknown");
-  const archivePoints = POINTS.filter((p) => p.status === "unknown");
+  const knownPoints = classPoints.filter((p) => p.status !== "unknown");
+  const archivePoints = classPoints.filter((p) => p.status === "unknown");
 
   const statusFiltered =
     mode === "all"
       ? knownPoints
       : mode === "open"
         ? knownPoints.filter((p) => p.status === "open")
+        : mode === "mass"
+          ? knownPoints.filter((p) => p.status === "mass")
         : mode === "lost"
           ? knownPoints.filter((p) => p.status === "lost" || p.status === "building")
           : mode === "transferred"
             ? knownPoints.filter((p) => p.status === "transferred")
             : knownPoints.filter((p) => p.inAlerts || p.status === "threat" || p.status === "building");
 
-  const visible = classFilter === "all"
-    ? statusFiltered
-    : statusFiltered.filter((p) => (p.congregationClass ?? "roman_catholic") === classFilter);
+  const visible = statusFiltered;
 
   return (
     <div>
@@ -377,9 +404,15 @@ export default function ParishMap() {
         </button>
         <SwatchBtn
           fill="var(--es-active)"
-          label={`Active · ${statusCounts.open}`}
+          label={`Active parish · ${statusCounts.open}`}
           active={mode === "open"}
           onClick={() => setMode("open")}
+        />
+        <SwatchBtn
+          fill="var(--es-mass)"
+          label={`Mass continues · ${statusCounts.mass}`}
+          active={mode === "mass"}
+          onClick={() => setMode("mass")}
         />
         <SwatchBtn
           fill="var(--es-transferred)"
@@ -607,6 +640,48 @@ export default function ParishMap() {
               </div>
             );
           })()}
+      </div>
+
+      {/* What this map tracks — the one category system, explained. Counts
+          come from the same statusCounts as the legend, so this block can
+          never disagree with the map above it. */}
+      <div className="mt-4 rounded-lg border border-rule px-4 py-3.5">
+        <p className="text-xs uppercase tracking-widest text-muted">
+          What this map tracks
+        </p>
+        <dl className="mt-2.5 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-sm">
+          {(
+            [
+              ["var(--es-active)", `Active Lithuanian parish · ${statusCounts.open}`, "A Lithuanian parish with regular Lithuanian worship."],
+              ["var(--es-mass)", `Lithuanian Mass continues · ${statusCounts.mass}`, "A Lithuanian Mass is still celebrated inside a parish that is no longer Lithuanian-led — never counted as an active Lithuanian parish."],
+              ["var(--mark-ink)", `Unresolved · ${knownPoints.filter((p) => p.status === "threat").length}`, "The church stands and the parish's fate is contested or canonically undecided — the decision is not final."],
+              ["var(--es-transferred)", `Lives on, another community · ${statusCounts.transferred}`, "The church serves another community today; its life as a Lithuanian parish has ended."],
+              ["var(--es-closed)", `Closed · ${statusCounts.lost}`, "The parish was closed — buildings demolished, sold on, or repurposed."],
+              ["var(--muted)", `Being verified · ${statusCounts.unknown}`, "Attested in the research record; present status still being researched."],
+            ] as [string, string, string][]
+          ).map(([fill, label, text]) => (
+            <div key={label} className="flex gap-2">
+              <span
+                className="mt-1 inline-block h-2.5 w-2.5 flex-shrink-0 rounded-full"
+                style={{ background: fill }}
+                aria-hidden
+              />
+              <div>
+                <dt className="inline font-medium">{label}</dt>{" "}
+                <dd className="inline text-muted">{text}</dd>
+              </div>
+            </div>
+          ))}
+        </dl>
+        <p className="mt-3 border-t border-rule pt-2.5 text-xs leading-relaxed text-muted">
+          Counted: Lithuanian parishes and their churches — Roman Catholic by
+          default; National Catholic and Protestant congregations through the
+          filters above. Deliberately not counted: religious-house chapels
+          (vienuolynai — Putnam, Marianapolis, Kennebunkport), cemetery and
+          shrine chapels, and club or school buildings. They are part of the
+          heritage, but no parish was ever erected there — a future layer of
+          the record, never part of the parish figures.
+        </p>
       </div>
 
       {/* Caption */}

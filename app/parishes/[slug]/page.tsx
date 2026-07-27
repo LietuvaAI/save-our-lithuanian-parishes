@@ -199,14 +199,9 @@ export default async function ParishPage({
         {parish.city}, {parish.state}
       </p>
 
-      <p className="mt-4 font-serif text-xl sm:text-2xl leading-snug max-w-2xl">
-        {dek}
-      </p>
-      {rest && (
-        <p className="mt-3 leading-relaxed max-w-2xl text-muted">{rest}</p>
-      )}
-
-      <div className="mt-4 flex flex-wrap items-center gap-3">
+      {/* The verdict comes first — before the story (Vilija 2026-07-27:
+          the status must be the first thing a reader sees). */}
+      <div className="mt-3 flex flex-wrap items-center gap-3">
         <EndStatePill value={endState} size="lg" />
         {(parishAlert || watchEntry) && (
           <span
@@ -224,6 +219,13 @@ export default async function ParishPage({
           </span>
         )}
       </div>
+
+      <p className="mt-4 font-serif text-xl sm:text-2xl leading-snug max-w-2xl">
+        {dek}
+      </p>
+      {rest && (
+        <p className="mt-3 leading-relaxed max-w-2xl text-muted">{rest}</p>
+      )}
 
       {/* ══ The church and its place — photo beside the diocese zoom ══ */}
       {(() => {
