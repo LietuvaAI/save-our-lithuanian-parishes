@@ -1,0 +1,154 @@
+{
+  "modality": "photo-rights-verification-3",
+  "sweptAt": "2026-07-27",
+  "methodologyNote": "Verification pass on 10 previously-flagged candidates. For each: opened the source page (via WebFetch and/or direct curl with a browser user-agent, since loc.gov and explore.chicagocollections.org both 403 automated fetches without one; loc.gov JSON API endpoints (?fo=json) worked where the HTML did not) and read the rights statement verbatim; cross-checked the depicted building's city/address against the parish's case record in data/case-records/; and resolved a direct highest-resolution image URL using each host's own IIIF/API/image service (LOC tile.loc.gov IIIF service identifiers; Digital Commonwealth's ark.digitalcommonwealth.org manifest -> iiif.digitalcommonwealth.org service, NOT the blob URLs an earlier automated summary hallucinated, which 404; Historic Pittsburgh's per-leaf IIIF manifest via its IslandoraLegacy 'manifest-single' route; Wikimedia Commons Special:FilePath). For the two book items (Cicero LOC book, Pittsburgh jubilee book, Philadelphia jubilee booklet) the specific plate was located by downloading the full scan (LOC book PDF; Omeka original PDF) and rendering a contact-sheet grid with PyMuPDF to find the captioned page, then confirming the page-to-file-sequence offset against the IIIF identifier pattern.",
+  "verified": [
+    {
+      "slug": "svc-m-marijos-nekalto-prasidejimo-chicago-il",
+      "file": "afc1981004_b50892_05 -- frame 5 of 38, \"Sakadolskis-Pakstas wedding at Immaculate Conception Church (Roman Catholic), 2745 W. 44th St., Brighton Park, Chicago, Illinois\" (Jonas Dovydenas, 1977)",
+      "filePageUrl": "https://www.loc.gov/item/afc1981004.b50892/",
+      "downloadUrl": "https://tile.loc.gov/storage-services/master/afc/afc1981004/b50892/afc1981004_b50892_05.tif",
+      "downloadUrlJpeg": "https://tile.loc.gov/image-services/iiif/service:afc:afc1981004:b50892:afc1981004_b50892_05/full/full/0/default.jpg",
+      "author": "Jonas Dovydenas (photographer); Elena Bradunas (collector/fieldworker) -- Chicago Ethnic Arts Project collection (AFC 1981/004), American Folklife Center",
+      "license": "No known restrictions on use or reproduction",
+      "licenseVerbatim": "Rights Advisory: \"No known restrictions on use or reproduction.\" Full rights note: \"The Library of Congress believes that some of the materials in this collection are in the public domain or have no known copyright restrictions, and are therefore free to use or reuse. For example, the fieldwork in this collection is in the public domain in the United States... Credit line: Chicago Ethnic Arts Project collection (AFC 1981/004), American Folklife Center, Library of Congress.\"",
+      "identityEvidence": "LOC item title states verbatim: 'Sakadolskis-Pakstas wedding at Immaculate Conception Church (Roman Catholic), 2745 W. 44th St., Brighton Park, Chicago, Illinois' -- exact address match to the parish's own case record (2745 W. 44th Street, Brighton Park). Item is a 38-frame 35mm contact sequence from a June 25, 1977 wedding; LOC's own frame-by-frame notes describe frames 5-8 as 'bride prays at the Blessed Mother's side altar after ceremony,' which is the interior scene downloaded here (verified visually: bride and bridesmaid at a fieldstone side-altar with a statue of the Blessed Mother and votive racks).",
+      "exteriorOrInterior": "interior (Lady chapel / side altar)",
+      "alternates": [
+        "frame 06 (afc1981004_b50892_06) -- near-identical composition, same side altar",
+        "frame 07 (afc1981004_b50892_07) -- bride alone at the altar rail, same scene"
+      ],
+      "verdict": "cleared"
+    },
+    {
+      "slug": "sv-antano-cicero-il",
+      "file": "LOC digitized book gdc.00211847244, printed page 45: \"Naujai dekoruota baznycia. -- The newly decorated Church\" (interior, nave toward main altar) -- RECOMMENDED",
+      "filePageUrl": "https://www.loc.gov/item/99197730/",
+      "downloadUrl": "https://tile.loc.gov/image-services/iiif/public:gdc:00211847244:0047/full/full/0/default.jpg",
+      "author": "Not individually credited (parish jubilee committee publication); Lithuanian text and editing by Aloyzas Baronas; English translation by Rev. St. Gaucas; printed by Draugo spaustuve, Chicago, 1961",
+      "license": "No known copyright / Public domain",
+      "licenseVerbatim": "Rights Advisory: \"No known copyright https://rightsstatements.org/vocab/NKC/1.0/\". Full rights note: \"The books in this collection are in the public domain and are free to use and reuse. Credit Line: Library of Congress.\"",
+      "identityEvidence": "Book title: 'Auksinis jubileus : Sv. Antano parapija, Cicero, Ill., 1911-1961' (golden jubilee of St. Anthony parish, Cicero IL) -- exact parish/city match to sv-antano-cicero-il. Confirmed by rendering the actual scanned page: caption reads 'The newly decorated Church' beneath a clean interior nave/altar photograph.",
+      "exteriorOrInterior": "interior",
+      "alternates": [
+        "printed page 43, \"Procession -- St. Anthony Parish Silver Jubilee, June 13, 1936. Bishop O'Brien is seen entering the Church\" -- exterior partially visible (church facade at left edge of frame, crowd/procession fills most of the frame). downloadUrl: https://tile.loc.gov/image-services/iiif/public:gdc:00211847244:0045/full/full/0/default.jpg"
+      ],
+      "verdict": "cleared -- recommend page 45 (interior) as primary; page 43 as alternate per task brief"
+    },
+    {
+      "slug": "sv-pranciskaus-lawrence-ma",
+      "file": "Digital Commonwealth commonwealth:gq67rf33j, \"On Bradford St.\" (1958)",
+      "filePageUrl": "https://www.digitalcommonwealth.org/search/commonwealth:gq67rf33j",
+      "downloadUrl": "https://iiif.digitalcommonwealth.org/iiif/2/commonwealth:gq67rf34t/full/full/0/default.jpg",
+      "author": "Anthony's Studio, 283 Broadway, Lawrence, Mass. (individual photographer not credited)",
+      "license": "No known copyright restrictions",
+      "licenseVerbatim": "rights_ss: \"No known copyright restrictions.\" license_ss: \"No known restrictions on use.\" reuse_allowed: \"no restrictions\".",
+      "identityEvidence": "Digital Commonwealth subject heading: 'St. Francis of Assisi Church (Lawrence, Mass.)'; abstract/description: 'St. Francis Church.' Matches parish case record address, 94 Bradford Street, Lawrence -- the photo's own title places it 'On Bradford St.' Verified visually: a Gothic-style brick bell tower with cross and tracery windows is visible over the rooftops in the photo's background, consistent with the standing church.",
+      "exteriorOrInterior": "exterior (partial -- streetscape photo; church tower/roofline visible in background, not full facade)",
+      "alternates": [],
+      "verdict": "cleared"
+    },
+    {
+      "slug": "saldziausios-jezaus-sirdies-lawrence-ma",
+      "file": "Digital Commonwealth commonwealth:66830b09d, \"Garden Street Methodist Episcopal Church\" stereograph (ca. 1870-1900)",
+      "filePageUrl": "https://www.digitalcommonwealth.org/search/commonwealth:66830b09d",
+      "downloadUrl": "https://iiif.digitalcommonwealth.org/iiif/2/commonwealth:66830b105/full/full/0/default.jpg",
+      "author": "Not credited (Stereo Slide Collection, Lawrence Public Library Special Collections)",
+      "license": "No known copyright restrictions",
+      "licenseVerbatim": "rights_ss: \"No known copyright restrictions.\" license_ss: \"No known restrictions on use.\" reuse_allowed: \"no restrictions\".",
+      "identityEvidence": "Digital Commonwealth's own metadata gives only a city-level geocode and no street address, so building continuity to our parish record was confirmed via an independent secondary source rather than the DC catalog alone: Global True Lithuania states verbatim, 'The second Lithuanian church of Lawrence, constructed in 1855 (Garden Street 150), used to be owned by an independent Lithuanian National Catholic Church of Sacred Heart which had acquired the building in 1917' -- matching our case record exactly (1855 construction, 150 Garden St., acquired 1917). The Digital Commonwealth subject heading 'Garden Street Methodist Episcopal Church (Lawrence, Mass.)' is a unique, exact name match (Lawrence had only one Methodist congregation of that name). A 2019 Queen City Massachusetts local-history post corroborates loosely ('the Lawrence [Lithuanian National Catholic] church occupied the site of the original Garden Street Methodist Episcopal Church') but is not itself precise about same-building vs. same-site.",
+      "exteriorOrInterior": "exterior",
+      "alternates": [],
+      "verdict": "cleared -- building continuity confirmed via Global True Lithuania (independent of the image host's own metadata); flagging that this is a secondary-source confirmation, not a primary-record one, in case a stronger citation surfaces later"
+    },
+    {
+      "slug": "sv-kazimiero-pittsburgh-pa",
+      "file": "Historic Pittsburgh pitt:31735051652091, leaf 32: \"Sv. Kazimiero Baznycios Vidus -- Didysis Altorius / Church Interior -- Main Altar\" (jubilee book, 1942/43)",
+      "filePageUrl": "https://historicpittsburgh.org/islandora/object/pitt%3A31735051652091-0032",
+      "downloadUrl": "https://historicpittsburgh.org/cantaloupe/iiif/2/https%3A%2F%2Fhistoricpittsburgh.org%2Fsystem%2Ffiles%2F2025-05%2F682427-Service%2520File.jpg/full/full/0/default.jpg",
+      "author": "Not individually credited (parish jubilee committee publication, St. Casimir Church, Pittsburgh, 1942/1943)",
+      "license": "No Copyright - United States",
+      "licenseVerbatim": "Rights Statement: \"No Copyright - United States\" (on both the parent item page and this leaf's IIIF manifest metadata).",
+      "identityEvidence": "Parent item title: 'Sv. Kazimiero R.K. Lietuviu parapijos' (alt. title 'St. Casimir Church, 1893-1943'); Subject (Name): 'St. Casimir Church (Pittsburgh, Pa.)'. Matches sv-kazimiero-pittsburgh-pa (founded 1893, South Side Flats). Confirmed by rendering leaf 32 directly: captioned 'MAIN ALTAR OF ST. CASIMIR'S CHURCH' / 'Sv. Kazimiero Baznycios Vidus -- Didysis Altorius.'",
+      "exteriorOrInterior": "interior (main altar)",
+      "alternates": [],
+      "verdict": "cleared -- ALTERNATE to the existing Commons CC0 exterior, per task brief"
+    },
+    {
+      "slug": "sv-kazimiero-philadelphia-pa",
+      "file": "CHRC Omeka item 7448, \"Commemoration of the 25th Anniversary of St. Casimir Parish... 1893-1918\" -- plate captioned \"MAIN ALTAR OF ST. CASIMIR'S CHURCH\", PDF page 15 of 29 (0-indexed page 14)",
+      "filePageUrl": "https://omeka.chrc-phila.org/items/show/7448",
+      "downloadUrl": "https://omeka.chrc-phila.org/files/original/39202851b7b4bb73b1846e4955157d35.pdf",
+      "downloadNote": "No separate per-plate image file exists at the source -- CHRC's Omeka record hosts the entire 29-page jubilee booklet as a single PDF (the item's only standalone JPGs are square/fullsize thumbnails of the front cover, not this plate). The 'Main Altar' photo is PDF page 15 of 29 within that file. Extracted a print-resolution PNG of just that page during verification if a standalone image is needed for site use.",
+      "author": "Not individually credited. Text (English and Lithuanian) for the 25th-anniversary/Fr. J.J. Kaulakis-ordination booklet, 1918.",
+      "license": "Public Domain",
+      "licenseVerbatim": "Rights: http://rightsstatements.org/vocab/NoC-US/1.0/. Access Rights: \"Public Domain: We believe this material to be in the public domain and free of known restrictions under copyright law, including all related and neighboring rights. While CHRC claims no rights or authority over this material, we do ask that any publication or use of this material cite CHRC as the source of the images and the repository where the original documents can be found.\"",
+      "identityEvidence": "Item title: 'Commemoration of the 25th Anniversary of St. Casimir Parish and of the 25th Anniversary of Rev. J.J. Kaulakis' Ordination to the Priesthood, 1893-1918'; Subject: 'St. Casimir Parish (Philadelphia, Pa.)'. Matches sv-kazimiero-philadelphia-pa (4th & Wharton Sts, Pennsport). The plate itself is captioned 'MAIN ALTAR OF ST. CASIMIR'S CHURCH.'",
+      "exteriorOrInterior": "interior (main altar)",
+      "alternates": [],
+      "verdict": "cleared -- ALTERNATE to an existing Commons exterior, per task brief"
+    },
+    {
+      "slug": "ausros-vartu-manhattan-ny",
+      "file": "File:Our Lady of Vilnius 568-570 Broome Street.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Vilnius_568-570_Broome_Street.jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Our_Lady_of_Vilnius_568-570_Broome_Street.jpg",
+      "author": "James Russiello",
+      "license": "Public domain (author's own dedication)",
+      "licenseVerbatim": "\"This work has been released into the public domain by its author, James Russiello at English Wikipedia. This applies worldwide. James Russiello grants anyone the right to use this work for any purpose, without any conditions, unless such conditions are required by law.\" (UsageTerms: Public domain; AttributionRequired: false)",
+      "identityEvidence": "Commons description states verbatim: 'Our Lady of Vilnius Church is a closed Roman Catholic parish church... located at 568-570 Broome Street in the Hudson Square neighborhood of Manhattan... built for $25,000 in 1910... designed by theatre architect Harry G. Wiseman.' Exact address match to case record. The photo itself (taken 2011-02-02) shows a lit sign reading 'OUR LADY OF VILNIUS ROMAN CATHOLIC CHURCH' over the entrance. Commons categories include 'Destroyed in New York City in 2015,' matching the parish's April 2015 demolition.",
+      "exteriorOrInterior": "exterior",
+      "alternates": [],
+      "verdict": "cleared"
+    },
+    {
+      "slug": "dievo-apvaizdos-scranton-pa",
+      "file": "File:Lithuania National Catholic Church, Scranton, PA - front 20200621.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Lithuania_National_Catholic_Church,_Scranton,_PA_-_front_20200621.jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Lithuania_National_Catholic_Church,_Scranton,_PA_-_front_20200621.jpg",
+      "author": "Renata3 (Wikimedia Commons username)",
+      "license": "CC BY-SA 4.0",
+      "licenseVerbatim": "LicenseShortName: \"CC BY-SA 4.0\"; UsageTerms: \"Creative Commons Attribution-Share Alike 4.0\"; Credit: \"Own work.\"",
+      "identityEvidence": "Commons category: 'Providence of God National Catholic Church'; taken 2020-06-21. A companion photo in the same 12-image set by the same photographer ('...- sign 20200621.jpg') shows the parish sign reading 'LITHUANIAN NATIONAL CATHOLIC CHURCH... SUNDAY MASS 9:00AM... SERVICES ARE IN ENGLISH... REV. WALTER PLACEK, PASTOR' with an '1927' cornerstone visible on the tower base -- matches our case record's parish (Providence of God / PNCC Central Diocese, Scranton; Rev. Walter Placek named in the record's gaps section as a prior pastor).",
+      "exteriorOrInterior": "exterior",
+      "alternates": [
+        "File:Lithuania National Catholic Church, Scranton, PA - side view 20200621 1.jpg (and 2, 3)",
+        "File:Lithuania National Catholic Church, Scranton, PA - sign 20200621.jpg -- shows parish signage confirming identity",
+        "File:Lithuania National Catholic Church, Scranton, PA - 1927 sign 20200621.jpg -- cornerstone detail",
+        "File:Lithuania National Catholic Church, Scranton, PA -Lithuanian sign 20200621.jpg",
+        "File:Lithuania National Catholic Church, Scranton, PA - church and rectory 20200621.jpg",
+        "File:Lithuania National Catholic Church, Scranton, PA - rectory 20200621.jpg (and (2), (3))",
+        "File:Lithuania National Catholic Church, Scranton, PA - side door 20200621.jpg",
+        "all same photographer/date/license (CC BY-SA 4.0, Renata3, 2020-06-21)"
+      ],
+      "verdict": "cleared"
+    },
+    {
+      "slug": "sv-petro-ir-povilo-grand-rapids-mi",
+      "file": "File:Ss. Peter and Paul.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Ss._Peter_and_Paul.jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ss._Peter_and_Paul.jpg",
+      "author": "rossograph (Wikimedia Commons username Wingerham52)",
+      "license": "CC BY-SA 4.0",
+      "licenseVerbatim": "LicenseShortName: \"CC BY-SA 4.0\"; UsageTerms: \"Creative Commons Attribution-Share Alike 4.0\"; Credit: \"Own work.\"",
+      "identityEvidence": "Commons categories: 'Roman Catholic churches in Grand Rapids, Michigan' + 'Saints Peter and Paul churches in Michigan' + 'Romanesque Revival churches in Michigan'; taken 2020-08-15. There is only one Ss. Peter and Paul Catholic parish in Grand Rapids (ours, 520 Myrtle Street NW; the only other same-name file found on Commons, 'Ss. Peter and Paul-Ionia.jpg', is a different city/building). Photographed building is a Romanesque Revival brick church with twin bell towers, consistent with the case record's '1920s-built church.'",
+      "exteriorOrInterior": "exterior",
+      "alternates": [],
+      "verdict": "cleared -- sole Commons candidate found in this category, matching the task's note of a single reported 2020 upload"
+    }
+  ],
+  "rejected": [
+    {
+      "slug": "dievo-apvaizdos-chicago-il",
+      "file": "Chicago Collections / Chicago History Museum, DN-0050207, \"[Church of the Providence of God]\" (1906 Chicago Daily News glass negative)",
+      "filePageUrl": "https://explore.chicagocollections.org/image/chicagohistory/71/r20s54c/",
+      "reasons": [
+        "Building mismatch: the photographed structure is a modest three-story brick combined church-and-school with a small cross-topped gable front -- not the current standing 1927 Romanesque Revival twin-steeple church at 717 W. 18th St. (designed by Leo Strelka). Research shows the parish's building was erected in 1901 (combined church/school), rebuilt/expanded in 1914, and rebuilt again as the present church in 1927 -- so this 1906 photo predates and does not depict the standing structure the site documents.",
+        "Address discrepancy, unresolved: the Chicago Collections catalog record gives this building's address as '668 West 18th Street (formerly 166 West 18th Street)', not the parish's documented current address of 717 W. 18th Street (confirmed independently via Flickr, Yelp, ChicagoAncestors.org, and our own case record). Given finding #1 above, this is most plausibly a genuinely different (since-replaced) building rather than a renumbering artifact, but it could not be resolved with confidence either way.",
+        "No public-domain/reuse rights statement exists on the source page itself -- only a physical-handling note ('Original negatives are fragile and not available to researchers. Please consult the on-line image instead'), which is not a copyright disposition.",
+        "Copyright basis genuinely unresolved as of the verification date (2026-07-27): publication status of this specific negative is unknown. If unpublished, the 120-year corporate-work term under 17 U.S.C. Sec. 302(c) for an item created in 1906 runs through December 31, 2026 and would not enter the public domain until January 1, 2027 -- i.e., not yet, even on the most favorable unpublished-work theory. If it was published (printed in the Chicago Daily News) before 1930 it would already be public domain, but no evidence of publication was found. No Commons or DPLA mirror of this specific negative exists to supply a clearer rights determination.",
+        "Net: reject pending either (a) confirmation that 668 W. 18th St. and 717 W. 18th St. are the same lot under some renumbering this research did not surface, and (b) a firmer copyright basis (evidence of pre-1930 publication, or simply waiting until Jan 1, 2027 for the unpublished-work term to lapse)."
+      ]
+    }
+  ]
+}
