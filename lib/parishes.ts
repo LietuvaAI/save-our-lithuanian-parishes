@@ -70,6 +70,8 @@ export interface Parish {
   pastoralStatus: PastoralStatus | null;
   situation: string | null;
   registrySlug: string | null;
+  c83Rows: number[];
+  mergedInto: string | null;
   yearFounded: number | null;
   yearClosed: number | null;
   coalRegion: boolean;
@@ -80,7 +82,11 @@ export interface Parish {
   recordKind: string;
 }
 
-export const parishes = parishesJson as Parish[];
+export const allParishes = parishesJson as Parish[];
+export const parishes = allParishes.filter((p) => !p.mergedInto);
+export function getParishByC83Row(row: number): Parish | undefined {
+  return parishes.find((p) => p.c83Rows?.includes(row));
+}
 export const usParishes = parishes.filter((p) => !p.comparator);
 export const comparatorParishes = parishes.filter((p) => p.comparator);
 export const figures = figuresJson;

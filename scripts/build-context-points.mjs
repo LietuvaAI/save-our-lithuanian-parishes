@@ -19,6 +19,11 @@ const read = (p) =>
 const PROJ = geoAlbersUsa().scale(1300).translate([487.5, 305]);
 const registry = read("registry-unified.json");
 const libParishes = read("parishes.json");
+const libByC83Row = new Map(
+  libParishes.filter((parish) => !parish.mergedInto).flatMap((parish) =>
+    (parish.c83Rows ?? []).map((row) => [row, parish]),
+  ),
+);
 const situation = read("parish-situation.json").parishes;
 const geoCache = {
   ...read("candidates/geo.json"),
@@ -68,7 +73,7 @@ for (const r of registry.parishes) {
   if (/buenos aires|argentin|rosario/i.test(r.city ?? "")) continue;
   if ((r.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? ""))) continue;
 
-  const lib = r.c83_row != null ? libParishes[r.c83_row - 1] : undefined;
+  const lib = r.c83_row != null ? libByC83Row.get(r.c83_row) : undefined;
   const libOk = !!(lib && lib.city === r.city);
   const overlay = libOk ? null : situationByRegistrySlug.get(r.slug);
 

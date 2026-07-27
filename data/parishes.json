@@ -16,6 +16,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese closed the parish unilaterally; rescue committee concluded saving it was impossible. Building fate unrecorded.",
     "registrySlug": "casimir-gary-in",
+    "c83Rows": [
+      1
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 1998,
     "coalRegion": false,
@@ -46,8 +50,8 @@
     "country": "US",
     "comparator": false,
     "ownership": "diocese_rc",
-    "status": "closed",
-    "endingMode": "diocese_closed",
+    "status": "undecided",
+    "endingMode": "undecided",
     "institutionType": "parapija",
     "lithuanianIdentity": "ethnically_transferred",
     "buildingFate": "repurposed_religious",
@@ -55,8 +59,12 @@
     "pastoralStatus": "not_applicable",
     "situation": "Last Lithuanian priest died; diocese sold the building to a Mexican Catholic congregation around 1987. Lithuanian identity erased.",
     "registrySlug": "ann-spring-valley-il",
+    "c83Rows": [
+      2
+    ],
+    "mergedInto": null,
     "yearFounded": 1895,
-    "yearClosed": 1987,
+    "yearClosed": null,
     "coalRegion": false,
     "survivedReviewThenClosed": false,
     "citations": [
@@ -81,7 +89,7 @@
     "country": "US",
     "comparator": false,
     "ownership": "diocese_rc",
-    "status": "demolished",
+    "status": "closed",
     "endingMode": "diocese_closed",
     "institutionType": "parapija",
     "lithuanianIdentity": "lost",
@@ -90,8 +98,12 @@
     "pastoralStatus": "not_applicable",
     "situation": "Bridgeport. Letter campaign to the cardinal and Pope failed. Diocese demolished the church (1990 or 1992, sources conflict).",
     "registrySlug": "george-chicago-il",
+    "c83Rows": [
+      3
+    ],
+    "mergedInto": null,
     "yearFounded": 1892,
-    "yearClosed": null,
+    "yearClosed": 1990,
     "coalRegion": false,
     "survivedReviewThenClosed": false,
     "citations": [
@@ -119,12 +131,12 @@
   {
     "slug": "sv-mykolo-north-chicago-il",
     "nameLt": "Šv. Mykolo",
-    "city": "North Chicago",
+    "city": "Chicago",
     "state": "IL",
     "country": "US",
     "comparator": false,
     "ownership": "diocese_rc",
-    "status": "demolished",
+    "status": "merged",
     "endingMode": "diocese_closed",
     "institutionType": "parapija",
     "lithuanianIdentity": "lost",
@@ -132,9 +144,13 @@
     "currentUse": "Demolished",
     "pastoralStatus": "not_applicable",
     "situation": "One of the first Chicago Lithuanian churches to close; demolished without recorded resistance.",
-    "registrySlug": "michael-north-chicago-il",
+    "registrySlug": "michael-chicago-north-side-il",
+    "c83Rows": [
+      4
+    ],
+    "mergedInto": null,
     "yearFounded": null,
-    "yearClosed": null,
+    "yearClosed": 1970,
     "coalRegion": false,
     "survivedReviewThenClosed": false,
     "citations": [
@@ -168,6 +184,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Pilsen/Brighton Park area. Closed ~1987 and merged with Sv. Pauliaus. Building fate not recorded.",
     "registrySlug": "gateofdawn-chicago-il",
+    "c83Rows": [
+      5
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 1987,
     "coalRegion": false,
@@ -189,7 +209,7 @@
   {
     "slug": "sv-kazimiero-chicago-il",
     "nameLt": "Šv. Kazimiero",
-    "city": "Chicago",
+    "city": "Chicago Heights",
     "state": "IL",
     "country": "US",
     "comparator": false,
@@ -201,10 +221,14 @@
     "buildingFate": "repurposed_religious",
     "currentUse": "Former church-school building at 283 E 14th Street, Chicago Heights stands, used by a Pentecostal congregation; the Lithuanian name remains carved in the cornerstone; 10 stained-glass windows repatriated to Lithuania",
     "pastoralStatus": "not_applicable",
-    "situation": "No Lithuanian Šv. Kazimiero parish ever stood inside Chicago itself — the record resolves to Chicago Heights, a separate municipality south of the city. The parish there was founded 1911 (first Mass Easter 1912) and closed in the late 1980s — 1987 per Global True Lithuania, 1989 per Wolkovich Vol 3 p. 147; variance carried, not resolved (adjudicated 2026-07-27). The earlier 'Marquette Park/Brighton Park' note was a compiler's guess, likely from the Sisters of St. Casimir motherhouse there. The Draugas source articles never name a neighborhood; the ten stained-glass windows, each donated by a Lithuanian family, reached the Vilnius Archdiocese restoration trust around 2008, their maker undetermined (the Adolfas Valeška attribution is disputed in Draugas 2013-09-07). City correction queued upstream; the canonical row reads 'Chicago' until the next snapshot.",
+    "situation": "No Lithuanian Šv. Kazimiero parish ever stood inside Chicago itself — the record resolves to Chicago Heights, a separate municipality south of the city. The parish there was founded 1911 (first Mass Easter 1912) and closed in the late 1980s — 1987 per Global True Lithuania, 1989 per Wolkovich Vol 3 p. 147; variance carried, not resolved (adjudicated 2026-07-27). The earlier 'Marquette Park/Brighton Park' note was a compiler's guess, likely from the Sisters of St. Casimir motherhouse there. The Draugas source articles never name a neighborhood; the ten stained-glass windows, each donated by a Lithuanian family, reached the Vilnius Archdiocese restoration trust around 2008, their maker undetermined (the Adolfas Valeška attribution is disputed in Draugas 2013-09-07). Registry Revision 1 resolves the canonical city to Chicago Heights.",
     "registrySlug": "casimir-chicago-il",
+    "c83Rows": [
+      6
+    ],
+    "mergedInto": null,
     "yearFounded": null,
-    "yearClosed": null,
+    "yearClosed": 1987,
     "coalRegion": false,
     "survivedReviewThenClosed": false,
     "citations": [
@@ -242,6 +266,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "East Side. Second-oldest Lithuanian church in Chicago; diocese closed it in 1987 as parishioners became Spanish-speaking.",
     "registrySlug": "joseph-south-chicago-il",
+    "c83Rows": [
+      7
+    ],
+    "mergedInto": null,
     "yearFounded": 1900,
     "yearClosed": 1987,
     "coalRegion": false,
@@ -273,6 +301,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "18th Street/Pilsen. Diocese closed the parish in 2016 under Renew My Church. Founded ~1900.",
     "registrySlug": "providence-chicago-il",
+    "c83Rows": [
+      8
+    ],
+    "mergedInto": null,
     "yearFounded": 1900,
     "yearClosed": 2016,
     "coalRegion": false,
@@ -316,6 +348,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Back of the Yards. Archbishop Cupich extinguished the parish by decree Dec 10 2020; the building survives as a worship center but faces demolition threat.",
     "registrySlug": "holycross-chicago-il",
+    "c83Rows": [
+      9
+    ],
+    "mergedInto": null,
     "yearFounded": 1904,
     "yearClosed": 2020,
     "coalRegion": false,
@@ -359,6 +395,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Historical reference only; closed 1953. Building may remain but identity uncertain.",
     "registrySlug": "parish-oglesby-il",
+    "c83Rows": [
+      10
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 1953,
     "coalRegion": false,
@@ -390,6 +430,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese closed the parish in 1989 and demolished it. Lithuanica Avenue neighborhood.",
     "registrySlug": "francis-east-chicago-in",
+    "c83Rows": [
+      11
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 1989,
     "coalRegion": false,
@@ -421,6 +465,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Closed 1998; demolished (year conflicted: 2001 vs 2007). Listed on the National Register of Historic Places, which gave no protection against demolition.",
     "registrySlug": "casimir-sioux-city-ia",
+    "c83Rows": [
+      12
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 1998,
     "coalRegion": false,
@@ -460,6 +508,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Bishop closed the parish in 1947 because he disliked ethnic parishes. Building status unknown.",
     "registrySlug": "casimir-kansas-city-mo",
+    "c83Rows": [
+      13
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 1947,
     "coalRegion": false,
@@ -491,6 +543,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese closed the parish June 2008, merged into St. Michael Avon. A favorable post-closure asset split was negotiated but closure could not be prevented.",
     "registrySlug": "casimir-brockton-ma",
+    "c83Rows": [
+      14
+    ],
+    "mergedInto": null,
     "yearFounded": 1898,
     "yearClosed": 2008,
     "coalRegion": false,
@@ -519,7 +575,7 @@
   },
   {
     "slug": "sv-petro-cambridge-ma",
-    "nameLt": "Šv. Petro",
+    "nameLt": "Nekalto Prasidėjimo",
     "city": "Cambridge",
     "state": "MA",
     "country": "US",
@@ -534,8 +590,12 @@
     "pastoralStatus": "not_applicable",
     "situation": "Cambridge's Lithuanian parish was real — but its name was Nekalto Prasidėjimo (Immaculate Conception), at 430-432 Windsor Street, not the 'Šv. Petro' the record long carried. That name is a conflation with the South Boston mother parish the Cambridge Lithuanians split from (adjudicated 2026-07-27; Draugas 1910-04-21: 'Naujoji parapija vadinsis Nekalto Prasidėjimo'; name correction queued upstream). The archdiocese closed the parish in 2004 and sold the property in 2007; the city-landmarked church and rectory were converted to 14 affordable ownership condominiums in 2012, with the Lithuanian facade inscription preserved as a landmark requirement.",
     "registrySlug": "peter-cambridge-ma",
+    "c83Rows": [
+      15
+    ],
+    "mergedInto": null,
     "yearFounded": null,
-    "yearClosed": null,
+    "yearClosed": 2004,
     "coalRegion": false,
     "survivedReviewThenClosed": false,
     "citations": [
@@ -569,6 +629,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Archdiocese closed the parish July 1 2002 and appropriated all property including a lakeside summer estate. Contrast with the LNCC parish in the same city that closed the same year and kept its own proceeds.",
     "registrySlug": "francis-lawrence-ma",
+    "c83Rows": [
+      16
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 2002,
     "coalRegion": false,
@@ -589,13 +653,13 @@
   },
   {
     "slug": "lietuviu-baznycia-unnamed-haverhill-ma",
-    "nameLt": "Lietuvių bažnyčia (unnamed)",
+    "nameLt": "Šv. Jurgio",
     "city": "Haverhill",
     "state": "MA",
     "country": "US",
     "comparator": false,
     "ownership": "diocese_rc",
-    "status": "demolished",
+    "status": "merged",
     "endingMode": "diocese_closed",
     "institutionType": "parapija",
     "lithuanianIdentity": "lost",
@@ -603,9 +667,13 @@
     "currentUse": "Demolished; only a cornerstone survives",
     "pastoralStatus": "not_applicable",
     "situation": "Unnamed Lithuanian church; abandoned by 2017, razed by 2023. Only a cornerstone survives.",
-    "registrySlug": "holyname-haverhill-ma",
+    "registrySlug": "george-haverhill-ma",
+    "c83Rows": [
+      17
+    ],
+    "mergedInto": null,
     "yearFounded": null,
-    "yearClosed": null,
+    "yearClosed": 1998,
     "coalRegion": false,
     "survivedReviewThenClosed": false,
     "citations": [
@@ -635,8 +703,12 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese closed the parish; building converted to an ordinary residential house. Lithuanian signs were removed.",
     "registrySlug": "george-norwood-ma",
+    "c83Rows": [
+      18
+    ],
+    "mergedInto": null,
     "yearFounded": null,
-    "yearClosed": null,
+    "yearClosed": 2004,
     "coalRegion": false,
     "survivedReviewThenClosed": false,
     "citations": [
@@ -670,6 +742,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Established 1894 for Worcester's Lithuanian and Polish Catholics; one of five Worcester parishes closed by the diocese in 2008 over parishioner objections that it was financially viable, despite a canon-law challenge and planned Vatican appeal. Merged into St. John Parish effective July 1, 2008, with the last Mass in June 2009. The church was sold in 2011 to The Church of the Pentecost; the building stands, in religious use, no longer Catholic or Lithuanian.",
     "registrySlug": "casimir-worcester-ma",
+    "c83Rows": [
+      19
+    ],
+    "mergedInto": null,
     "yearFounded": 1898,
     "yearClosed": 2008,
     "coalRegion": false,
@@ -712,8 +788,8 @@
     "country": "US",
     "comparator": false,
     "ownership": "diocese_rc",
-    "status": "closed",
-    "endingMode": "diocese_closed",
+    "status": "standing",
+    "endingMode": "standing",
     "institutionType": "parapija",
     "lithuanianIdentity": "ethnically_transferred",
     "buildingFate": "repurposed_religious",
@@ -721,6 +797,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Transitioned to non-Lithuanian Catholic use by 2017. Interior heritage substantially preserved but Lithuanian identity lost.",
     "registrySlug": "gateofdawn-worcester-ma",
+    "c83Rows": [
+      20
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": null,
     "coalRegion": false,
@@ -752,6 +832,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "The strongest case in the record: Our Lady of Vilnius, SoHo. Cardinal Egan closed it in 2007 with no debt. NY Court of Appeals ruled against parishioners in 2011. Diocese sold the building, which was demolished. The central ownership test case.",
     "registrySlug": "gateofdawn-manhattan-ny",
+    "c83Rows": [
+      21
+    ],
+    "mergedInto": null,
     "yearFounded": 1910,
     "yearClosed": 2007,
     "coalRegion": false,
@@ -795,6 +879,10 @@
     "pastoralStatus": "visiting_priest",
     "situation": "The diocese did not close this parish. The community itself sold its own buildings during decline and moved to rented space. Parish formally still exists with monthly Lithuanian Mass; demographic attrition, not diocesan action.",
     "registrySlug": "george-rochester-ny",
+    "c83Rows": [
+      22
+    ],
+    "mergedInto": null,
     "yearFounded": 1908,
     "yearClosed": null,
     "coalRegion": false,
@@ -838,6 +926,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Demolished ~2008. So thoroughly erased that even a photograph could not be found online.",
     "registrySlug": "george-brooklyn-ny",
+    "c83Rows": [
+      23
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 2008,
     "coalRegion": false,
@@ -869,8 +961,12 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese closed the parish and sold the building to a non-Roman Anglican body, which uses it as a cathedral. Lithuanian heritage markers preserved.",
     "registrySlug": "george-niagara-falls-ny",
+    "c83Rows": [
+      24
+    ],
+    "mergedInto": null,
     "yearFounded": null,
-    "yearClosed": null,
+    "yearClosed": 2008,
     "coalRegion": false,
     "survivedReviewThenClosed": false,
     "citations": [
@@ -900,6 +996,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese of Albany closed the parish ~May 2009. Building intact as of 2019. Demographic collapse left no community to resist.",
     "registrySlug": "casimir-amsterdam-ny",
+    "c83Rows": [
+      25
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 2009,
     "coalRegion": false,
@@ -926,7 +1026,7 @@
     "country": "US",
     "comparator": false,
     "ownership": "diocese_rc",
-    "status": "closed",
+    "status": "merged",
     "endingMode": "diocese_closed",
     "institutionType": "parapija",
     "lithuanianIdentity": "ethnically_transferred",
@@ -935,8 +1035,12 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese closed the parish and sold the building; it became a Syrian/Assyrian Catholic cathedral. Interior retained Lithuanian details.",
     "registrySlug": "michael-bayonne-nj",
+    "c83Rows": [
+      26
+    ],
+    "mergedInto": null,
     "yearFounded": null,
-    "yearClosed": null,
+    "yearClosed": 2016,
     "coalRegion": false,
     "survivedReviewThenClosed": false,
     "citations": [
@@ -970,6 +1074,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Original building demolished after a 1981 fire; diocese refused repairs. Congregation moved to the parish-hall basement, which is now in Portuguese/Brazilian use.",
     "registrySlug": "holyname-newark-nj",
+    "c83Rows": [
+      27
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 1981,
     "coalRegion": false,
@@ -1005,6 +1113,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese closed the 102-year-old parish March 2 2014; church and rectory sold to Grace Gospel Church (Protestant).",
     "registrySlug": "casimir-paterson-nj",
+    "c83Rows": [
+      28
+    ],
+    "mergedInto": null,
     "yearFounded": 1912,
     "yearClosed": 2014,
     "coalRegion": false,
@@ -1036,6 +1148,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Survived a review then was closed quietly ~end of 2021. Diocese sold the building to a Spanish-speaking Pentecostal church. The Vanagas commemorative plaque was removed and not returned.",
     "registrySlug": "andrew-new-britain-ct",
+    "c83Rows": [
+      29
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 2021,
     "coalRegion": false,
@@ -1071,8 +1187,12 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese closed the parish ~2001; building sold ~2007 and converted to condos. Still apartments in 2023.",
     "registrySlug": "casimir-new-haven-ct",
+    "c83Rows": [
+      30
+    ],
+    "mergedInto": null,
     "yearFounded": null,
-    "yearClosed": 2001,
+    "yearClosed": 2003,
     "coalRegion": false,
     "survivedReviewThenClosed": false,
     "citations": [
@@ -1110,6 +1230,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese closed the parish and sold it ~2015 to non-Catholics. The Gediminas-pillars monument remains in the churchyard.",
     "registrySlug": "holyname-ansonia-ct",
+    "c83Rows": [
+      31
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 2015,
     "coalRegion": false,
@@ -1145,6 +1269,11 @@
     "pastoralStatus": "not_applicable",
     "situation": "First Lithuanian RC parish in New England (founded 1893/94). Survived the 2002 St. Patrick merger; a genuine grassroots revival did not save it. Diocese closed it Sept 30 2023 under the Hartford 2017 plan.",
     "registrySlug": "joseph-waterbury-ct",
+    "c83Rows": [
+      32,
+      76
+    ],
+    "mergedInto": null,
     "yearFounded": 1893,
     "yearClosed": 2023,
     "coalRegion": false,
@@ -1179,7 +1308,7 @@
     "country": "US",
     "comparator": false,
     "ownership": "diocese_rc",
-    "status": "closed",
+    "status": "merged",
     "endingMode": "diocese_closed",
     "institutionType": "parapija",
     "lithuanianIdentity": "lost",
@@ -1188,8 +1317,12 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese closed the parish; building converted to apartments with commemorative plaques. Community noted that Greek Orthodox parishes could not be closed because they are a separate religion.",
     "registrySlug": "casimir-nashua-nh",
+    "c83Rows": [
+      33
+    ],
+    "mergedInto": null,
     "yearFounded": null,
-    "yearClosed": null,
+    "yearClosed": 2002,
     "coalRegion": false,
     "survivedReviewThenClosed": false,
     "citations": [
@@ -1219,6 +1352,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese closed the parish June 23 2013 under Together in Faith, merged into Dievo Apvaizdos Southfield. Survived a 1989 closure scare but resistance only delayed the outcome. Only 34 registered parishioners at closure.",
     "registrySlug": "anthony-detroit-mi",
+    "c83Rows": [
+      34
+    ],
+    "mergedInto": null,
     "yearFounded": 1920,
     "yearClosed": 2013,
     "coalRegion": false,
@@ -1262,6 +1399,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Closed 1995 when the pastor retired; contents shipped to Lithuania. No recorded resistance.",
     "registrySlug": "peter-detroit-mi",
+    "c83Rows": [
+      35
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 1995,
     "coalRegion": false,
@@ -1297,6 +1438,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Survived an earlier ~2008 closure danger; ~$60K community savings deemed insufficient. Diocese closed/merged the parish in 2014 into Sts. Peter and Paul; building sold to Spanish-speakers.",
     "registrySlug": "anthony-omaha-ne",
+    "c83Rows": [
+      36
+    ],
+    "mergedInto": null,
     "yearFounded": 1907,
     "yearClosed": 2014,
     "coalRegion": false,
@@ -1340,6 +1485,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese closed the parish Oct 18 2009 and merged it into the new consolidated Sv. Kazimiero. Old building sold by the diocese and now derelict.",
     "registrySlug": "george-cleveland-oh",
+    "c83Rows": [
+      37
+    ],
+    "mergedInto": null,
     "yearFounded": 1895,
     "yearClosed": 2009,
     "coalRegion": false,
@@ -1383,6 +1532,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Closed Oct 18 2009 and merged with Sv. Jurgio into the new Sv. Kazimiero parish. The former DMNP building became the worship site of the consolidated parish, which is why the building fate is repurposed rather than lost. This parish ended in that merger, exactly as Sv. Jurgio did, and the Lithuanian life that continues in the building belongs to the successor record sv-kazimiero-cleveland-oh — counting it here as well would count one community as two living parishes.",
     "registrySlug": "motherofgod-cleveland-oh",
+    "c83Rows": [
+      38
+    ],
+    "mergedInto": null,
     "yearFounded": 1929,
     "yearClosed": 2009,
     "coalRegion": false,
@@ -1413,7 +1566,7 @@
     "country": "US",
     "comparator": false,
     "ownership": "diocese_rc",
-    "status": "demolished",
+    "status": "closed",
     "endingMode": "diocese_closed",
     "institutionType": "parapija",
     "lithuanianIdentity": "lost",
@@ -1422,6 +1575,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "The strongest thesis case: solvent parish with ~$1M treasury, a credible $360K repair estimate, landmark status, and a treaty — the diocese demolished it anyway in 2009/2010 and took the ~$1M savings. Coal region.",
     "registrySlug": "george-shenandoah-pa",
+    "c83Rows": [
+      39
+    ],
+    "mergedInto": null,
     "yearFounded": 1891,
     "yearClosed": 2006,
     "coalRegion": true,
@@ -1465,6 +1622,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese closed the parish April 6 2008, merged into a new parish at St. John the Evangelist; later sold to a private buyer. Coal region.",
     "registrySlug": "casimir-pittston-pa",
+    "c83Rows": [
+      40
+    ],
+    "mergedInto": null,
     "yearFounded": 1890,
     "yearClosed": 2008,
     "coalRegion": true,
@@ -1508,6 +1669,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese demolished one of the two largest, most beautiful Lithuanian churches in the region in 2015. Site is now a flat field. Coal region.",
     "registrySlug": "trinity-wilkes-barre-pa",
+    "c83Rows": [
+      41
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 2015,
     "coalRegion": true,
@@ -1534,7 +1699,7 @@
     "country": "US",
     "comparator": false,
     "ownership": "diocese_rc",
-    "status": "demolished",
+    "status": "closed",
     "endingMode": "diocese_closed",
     "institutionType": "parapija",
     "lithuanianIdentity": "lost",
@@ -1543,8 +1708,12 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese demolished the other of the two largest regional Lithuanian churches. Coal region.",
     "registrySlug": "annunciation-kingston-pa",
+    "c83Rows": [
+      42
+    ],
+    "mergedInto": null,
     "yearFounded": null,
-    "yearClosed": null,
+    "yearClosed": 2009,
     "coalRegion": true,
     "survivedReviewThenClosed": false,
     "citations": [
@@ -1565,7 +1734,7 @@
     "country": "US",
     "comparator": false,
     "ownership": "diocese_rc",
-    "status": "demolished",
+    "status": "merged",
     "endingMode": "diocese_closed",
     "institutionType": "parapija",
     "lithuanianIdentity": "lost",
@@ -1574,8 +1743,12 @@
     "pastoralStatus": "not_applicable",
     "situation": "Pittsburgh area. Built 1903; demolished pre-2017 after repeated arson. Only the cornerstone survives.",
     "registrySlug": "paul-esplen-pa",
+    "c83Rows": [
+      43
+    ],
+    "mergedInto": null,
     "yearFounded": 1903,
-    "yearClosed": null,
+    "yearClosed": 1993,
     "coalRegion": false,
     "survivedReviewThenClosed": false,
     "citations": [
@@ -1605,6 +1778,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese closed the parish in 1992 and sold the building to private developers who converted it into 12 luxury condominiums.",
     "registrySlug": "casimir-pittsburgh-pa",
+    "c83Rows": [
+      44
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 1992,
     "coalRegion": false,
@@ -1640,6 +1817,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "The original Lithuanian RC church that Scranton Lithuanians built, then lost to the bishop through the courts — the precipitating event of the LNCC schism. Closed ~2009 in the Allentown/Scranton sweep; building given to convert-priests. Coal region.",
     "registrySlug": "joseph-scranton-pa",
+    "c83Rows": [
+      45
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 2009,
     "coalRegion": true,
@@ -1662,8 +1843,8 @@
     "country": "US",
     "comparator": false,
     "ownership": "diocese_rc",
-    "status": "closed",
-    "endingMode": "diocese_closed",
+    "status": "standing",
+    "endingMode": "standing",
     "institutionType": "parapija",
     "lithuanianIdentity": "ethnically_transferred",
     "buildingFate": "repurposed_religious",
@@ -1671,6 +1852,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese closed the parish as a Lithuanian institution; now a Latin Mass community (FSSP). Ethnically transferred, not formally dissolved. Coal region.",
     "registrySlug": "michael-scranton-pa",
+    "c83Rows": [
+      46
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": null,
     "coalRegion": true,
@@ -1702,6 +1887,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese closed the parish ~2009 in the Allentown wave; building sold to a private individual (R. Demyanovich, ~$24,000) to prevent warehouse use. Not a community buyout. Coal region.",
     "registrySlug": "john-coaldale-pa",
+    "c83Rows": [
+      47
+    ],
+    "mergedInto": null,
     "yearFounded": 1914,
     "yearClosed": 2009,
     "coalRegion": true,
@@ -1728,7 +1917,7 @@
     "country": "US",
     "comparator": false,
     "ownership": "diocese_rc",
-    "status": "demolished",
+    "status": "closed",
     "endingMode": "diocese_closed",
     "institutionType": "parapija",
     "lithuanianIdentity": "lost",
@@ -1737,8 +1926,12 @@
     "pastoralStatus": "not_applicable",
     "situation": "Founded 1901, rebuilt 1915; diocese closed it ~2001-2002 for mold/moisture. Demolished March 2024. A 1915 time capsule with a Lithuanian letter was discovered in the foundations. Coal region.",
     "registrySlug": "gateofdawn-archbald-pa",
+    "c83Rows": [
+      48
+    ],
+    "mergedInto": null,
     "yearFounded": 1901,
-    "yearClosed": null,
+    "yearClosed": 2002,
     "coalRegion": true,
     "survivedReviewThenClosed": false,
     "citations": [
@@ -1768,6 +1961,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Founded 1892; diocese closed it 1992; became part of Divine Redeemer Parish 1995. Home of the founding of the Sisters of St. Casimir (1907). School building tax-sold 2022. Coal region.",
     "registrySlug": "holycross-mount-carmel-pa",
+    "c83Rows": [
+      49
+    ],
+    "mergedInto": null,
     "yearFounded": 1892,
     "yearClosed": 1992,
     "coalRegion": true,
@@ -1799,6 +1996,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese closed the parish in 2008 under the Allentown plan; building sold. Jonynas stained glass was rescued post-closure by the Saknys project. Coal region.",
     "registrySlug": "motherofgod-maizeville-pa",
+    "c83Rows": [
+      50
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 2008,
     "coalRegion": true,
@@ -1838,6 +2039,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Lithuanian-immigrant-built 1907. Diocese closed the parish in 2015 (merged into St. Charles Borromeo); officially closed as a worship site with final Mass Jan 5 2026. Coal region.",
     "registrySlug": "paul-girardville-pa",
+    "c83Rows": [
+      51
+    ],
+    "mergedInto": null,
     "yearFounded": 1907,
     "yearClosed": 2026,
     "coalRegion": true,
@@ -1868,8 +2073,8 @@
     "country": "US",
     "comparator": false,
     "ownership": "diocese_rc",
-    "status": "closed",
-    "endingMode": "diocese_closed",
+    "status": "undecided",
+    "endingMode": "undecided",
     "institutionType": "parapija",
     "lithuanianIdentity": "lost",
     "buildingFate": "repurposed_secular",
@@ -1877,6 +2082,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Diocese closed the parish; building converted to a private residence by a Lithuanian-descent owner. Interior fully intact. Coal region.",
     "registrySlug": "joseph-nanticoke-pa",
+    "c83Rows": [
+      52
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": null,
     "coalRegion": true,
@@ -1908,6 +2117,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "The only Lithuanian church in Rhode Island. Diocese closed it in 2017; building sold to Seventh-day Adventists. Community declined a diocesan offer to bring in Latin American immigrants.",
     "registrySlug": "casimir-providence-ri",
+    "c83Rows": [
+      53
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 2017,
     "coalRegion": false,
@@ -1943,6 +2156,10 @@
     "pastoralStatus": "shared_priest",
     "situation": "Survived inside the diocese, confirmed Jan 2026. The only PA Lithuanian parish with a Lithuanian-language Sunday Mass. Sold the rectory ~2023-24 for $1.2M to fund operations; church deed unchanged and still diocese-owned.",
     "registrySlug": "andrew-philadelphia-pa",
+    "c83Rows": [
+      54
+    ],
+    "mergedInto": null,
     "yearFounded": 1924,
     "yearClosed": null,
     "coalRegion": false,
@@ -1986,6 +2203,10 @@
     "pastoralStatus": "unknown",
     "situation": "Survived earlier reviews then was suppressed to worship-site status July 2011. Survives as an open worship site of the merged Philadelphia parish. Lithuanian-Mass continuity after 2011 is conflicted in the sources.",
     "registrySlug": "casimir-philadelphia-pa",
+    "c83Rows": [
+      55
+    ],
+    "mergedInto": null,
     "yearFounded": 1893,
     "yearClosed": 2011,
     "coalRegion": false,
@@ -2029,6 +2250,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Survived multiple Philadelphia reviews then was merged into an American parish ~2015-2016, losing its Lithuanian identity.",
     "registrySlug": "george-philadelphia-pa",
+    "c83Rows": [
+      56
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 2016,
     "coalRegion": false,
@@ -2064,6 +2289,10 @@
     "pastoralStatus": "shared_priest",
     "situation": "Survived inside the diocese after a ~20-year campaign; 2021-22 merger deferred. Refused merger consent Feb 2022. The community ceded the deed to the archdiocese in 1904 in exchange for a priest — the only Lithuanian church in New England.",
     "registrySlug": "peter-boston-ma",
+    "c83Rows": [
+      57
+    ],
+    "mergedInto": null,
     "yearFounded": 1896,
     "yearClosed": null,
     "coalRegion": false,
@@ -2107,6 +2336,10 @@
     "pastoralStatus": "shared_priest",
     "situation": "Holy Cross continues within a five-church family under a shared pastor, with a single Sunday Mass. The Lithuanian heritage identity survives in parish life and fundraising; the 2021 practice of Lithuanian readings at Mass could not be confirmed for 2026.",
     "registrySlug": "holycross-dayton-oh",
+    "c83Rows": [
+      58
+    ],
+    "mergedInto": null,
     "yearFounded": 1915,
     "yearClosed": null,
     "coalRegion": false,
@@ -2146,6 +2379,10 @@
     "pastoralStatus": "own_priest",
     "situation": "Consolidated parish formed Oct 25 2009 from the merger of Sv. Jurgio (1895) and DMNP (1929). Survived inside the diocese; a 2014 financial crisis was averted via a diocesan-approved school lease.",
     "registrySlug": "casimir-cleveland-oh",
+    "c83Rows": [
+      59
+    ],
+    "mergedInto": null,
     "yearFounded": 2009,
     "yearClosed": null,
     "coalRegion": false,
@@ -2189,6 +2426,10 @@
     "pastoralStatus": "own_priest",
     "situation": "Marquette Park. Survived inside the diocese; by 2020 the sole surviving Lithuanian RC parish in Chicago. Chronic deficit covered by the archdiocese as a high-interest loan; building valued ~$20M and not parish-owned.",
     "registrySlug": "nativity-chicago-il",
+    "c83Rows": [
+      60
+    ],
+    "mergedInto": null,
     "yearFounded": 1927,
     "yearClosed": null,
     "coalRegion": false,
@@ -2232,6 +2473,10 @@
     "pastoralStatus": "visiting_priest",
     "situation": "Brighton Park (Immaculate Conception). Merged 2019 with Five Holy Martyrs into a multi-ethnic entity, but a Lithuanian RC presence and a separate Lithuanian Mass continue. Both buildings open.",
     "registrySlug": "immaculate-chicago-il",
+    "c83Rows": [
+      61
+    ],
+    "mergedInto": null,
     "yearFounded": 1914,
     "yearClosed": null,
     "coalRegion": false,
@@ -2275,6 +2520,10 @@
     "pastoralStatus": "visiting_priest",
     "situation": "Survived inside the diocese; small but active. Formal Lithuanian-parish status transferred to the Mexican community in 2011, but Lithuanian Masses continued through at least Dec 2019.",
     "registrySlug": "anthony-cicero-il",
+    "c83Rows": [
+      62
+    ],
+    "mergedInto": null,
     "yearFounded": 1911,
     "yearClosed": null,
     "coalRegion": false,
@@ -2318,6 +2567,10 @@
     "pastoralStatus": "shared_priest",
     "situation": "Survived inside the diocese; the sole surviving Lithuanian RC parish in metro Detroit. Enrolled in Families of Parishes 2025.",
     "registrySlug": "providence-southfield-mi",
+    "c83Rows": [
+      63
+    ],
+    "mergedInto": null,
     "yearFounded": 1908,
     "yearClosed": null,
     "coalRegion": false,
@@ -2361,6 +2614,10 @@
     "pastoralStatus": "own_priest",
     "situation": "RC ethnic mission established 1990; operates inside the community-owned Pasaulio Lietuviu Centras. Survived an RMC grouping. The venue is community-owned but the mission's canonical function remains diocesan.",
     "registrySlug": "george-lemont-il",
+    "c83Rows": [
+      64
+    ],
+    "mergedInto": null,
     "yearFounded": 1990,
     "yearClosed": null,
     "coalRegion": false,
@@ -2404,6 +2661,10 @@
     "pastoralStatus": "shared_priest",
     "situation": "Annunciation in Williamsburg carries Brooklyn's Lithuanian liturgical life: a weekly 10:00 a.m. Lithuanian Mass — strengthened when Maspeth's Lithuanian Mass moved here in September 2025 — with Lithuanian chaplain Fr. Valdemaras Lisovski confirmed on the Lithuanian Bishops' Conference roster.",
     "registrySlug": "annunciation-brooklyn-ny",
+    "c83Rows": [
+      65
+    ],
+    "mergedInto": null,
     "yearFounded": 1914,
     "yearClosed": null,
     "coalRegion": false,
@@ -2447,6 +2708,10 @@
     "pastoralStatus": "unknown",
     "situation": "Queens. Diocese of Brooklyn issued a closure letter Feb 16 2025 but reversed it Sept 12 2025 to limited-basis opening. Status genuinely unresolved as of March 2026. Not closed, no community buyout.",
     "registrySlug": "transfiguration-maspeth-ny",
+    "c83Rows": [
+      66
+    ],
+    "mergedInto": null,
     "yearFounded": 1962,
     "yearClosed": null,
     "coalRegion": false,
@@ -2490,6 +2755,10 @@
     "pastoralStatus": "unknown",
     "situation": "Merged canonically into the Polish parish of Saint Adalbert on July 1, 2009, the church remains standing and still holds one weekend Mass, but it is no longer an independent Lithuanian parish. Mass-time aggregators still list an 11:00 am Lithuanian Sunday Mass, and that could not be independently verified for 2026 — so Lithuanian liturgical life here is recorded as continuing inside a host parish that is no longer Lithuanian-led, never as a standing Lithuanian parish. The parish sits in the Archdiocese of Newark's 'We Are His Witnesses' restructuring discernment; no closure or further merger has been decided, so the ending stays unresolved. Church built 1895, under financial and maintenance stress by 2022 with the rectory sold after an electrical fire, and one of the last Lithuanian churches in New Jersey.",
     "registrySlug": "paul-elizabeth-nj",
+    "c83Rows": [
+      67
+    ],
+    "mergedInto": null,
     "yearFounded": 1895,
     "yearClosed": null,
     "coalRegion": false,
@@ -2510,7 +2779,7 @@
   },
   {
     "slug": "lietuviu-baznycia-kearny-kearny-nj",
-    "nameLt": "Lietuvių bažnyčia (Kearny)",
+    "nameLt": "Sopulingosios Dievo Motinos",
     "city": "Kearny",
     "state": "NJ",
     "country": "US",
@@ -2525,6 +2794,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Our Lady of Sorrows in Kearny continues with a single English Sunday Mass; no Lithuanian Mass was found on any current schedule and the parish is absent from the Lithuanian Bishops' Conference roster. Succession (adjudicated 2026-07-27): one parish throughout — founded 1914-15 as the Kearny-Harrison Sopulingosios Dievo Motinos (Our Lady of Sorrows) Lithuanian parish, it first worshipped in St. Cecilia's parish hall in Kearny, then in a modest half-basement church in neighboring Harrison, until the present 136 Davis Ave church was built in Kearny (ground blessed August 30, 1953; completed for the 40th anniversary, 1955); the Harrison building was sold to non-Catholics.",
     "registrySlug": "parish-kearny-nj",
+    "c83Rows": [
+      68
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": null,
     "coalRegion": false,
@@ -2556,6 +2829,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "St. George in Bridgeport continues as a worship site with regular Masses, but no Lithuanian-language Mass and no Lithuanian-speaking clergy were found on the current schedule — the Lithuanian liturgical life has lapsed.",
     "registrySlug": "george-bridgeport-ct",
+    "c83Rows": [
+      69
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": null,
     "coalRegion": false,
@@ -2595,6 +2872,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Holy Trinity's regular Masses — including the Sunday 9:00 a.m. Lithuanian/English Mass — ended May 30, 2026, amid a financial crisis and the aftermath of a priest-theft investigation. Only funerals and baptisms continue in the building; parishioners campaign to preserve the church as a Lithuanian cultural center.",
     "registrySlug": "trinity-hartford-ct",
+    "c83Rows": [
+      70
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": null,
     "coalRegion": false,
@@ -2630,6 +2911,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "The church at 574 Bennett Street serves today as Holy Family Church with a regular Mass schedule; no Lithuanian Mass or Lithuanian-speaking clergy remains.",
     "registrySlug": "ann-luzerne-pa",
+    "c83Rows": [
+      71
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": null,
     "coalRegion": true,
@@ -2661,6 +2946,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "The parish continues within St. Joseph the Worker; the current public Mass schedule carries no Lithuanian-language Mass and no Lithuanian-speaking clergy was found.",
     "registrySlug": "mary-frackville-pa",
+    "c83Rows": [
+      72
+    ],
+    "mergedInto": null,
     "yearFounded": 1914,
     "yearClosed": null,
     "coalRegion": true,
@@ -2692,6 +2981,10 @@
     "pastoralStatus": "unknown",
     "situation": "Third building 1951, community-funded but archdiocese-titled. Active cultural center; survived inside the Archdiocese of Los Angeles, confirmed 2020.",
     "registrySlug": "casimir-los-angeles-ca",
+    "c83Rows": [
+      73
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": null,
     "coalRegion": false,
@@ -2735,6 +3028,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Founded ~1904; by 2024 described as the best-preserved living first-wave Lithuanian neighborhood in America. The parish remains open, but no Lithuanian Mass appears on any current schedule or bulletin, the parish is not on the Lithuanian Bishops' Conference roster for North America, and the Diocese of Grand Rapids has slated it for merger upon the pastor's retirement.",
     "registrySlug": "paul-grand-rapids-mi",
+    "c83Rows": [
+      74
+    ],
+    "mergedInto": null,
     "yearFounded": 1904,
     "yearClosed": null,
     "coalRegion": false,
@@ -2766,6 +3063,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Founded 1895. The independent Lithuanian parish ended in 2014, when the Diocese of Belleville recorded it as a Designated Chapel under St. Augustine of Hippo Parish. Weekly Catholic worship continues in the building — a rare surviving Lithuanian-American sacred-art interior, landmark-designated — but no Lithuanian clergy or Lithuanian Mass remains.",
     "registrySlug": "immaculate-east-st-louis-il",
+    "c83Rows": [
+      75
+    ],
+    "mergedInto": null,
     "yearFounded": 1895,
     "yearClosed": null,
     "coalRegion": false,
@@ -2790,23 +3091,28 @@
   },
   {
     "slug": "sv-kazimiero-waterbury-ct",
-    "nameLt": "Šv. Kazimiero",
+    "nameLt": "Šv. Juozapo",
     "city": "Waterbury",
     "state": "CT",
     "country": "US",
     "comparator": false,
     "ownership": "diocese_rc",
-    "status": "standing",
+    "status": "closed",
     "endingMode": "standing",
     "institutionType": "parapija",
     "lithuanianIdentity": null,
     "buildingFate": "standing",
     "currentUse": "Active Lithuanian parish; temporarily storing Frackville/Shenandoah-area Lithuanian Museum artifacts",
     "pastoralStatus": "unknown",
-    "situation": "Verification in 2026 could not establish this as a parish distinct from St. Joseph, Waterbury (closed 2023, canonical appeal ongoing): it is absent from current Archdiocese of Hartford directories, and a reported 2017 closure could not be confirmed. The record holds the entry open pending reconciliation.",
-    "registrySlug": "casimir-waterbury-ct",
+    "situation": "Verification in 2026 could not establish this as a parish distinct from St. Joseph, Waterbury (closed 2023, canonical appeal ongoing): it is absent from current Archdiocese of Hartford directories, and a reported 2017 closure could not be confirmed. Registry Revision 1 retires this false duplicate and carries its source into St. Joseph.",
+    "registrySlug": "joseph-waterbury-ct",
+    "c83Rows": [
+      32,
+      76
+    ],
+    "mergedInto": "sv-juozapo-waterbury-ct",
     "yearFounded": null,
-    "yearClosed": null,
+    "yearClosed": 2023,
     "coalRegion": false,
     "survivedReviewThenClosed": false,
     "citations": [
@@ -2821,21 +3127,25 @@
   },
   {
     "slug": "unnamed-lithuanian-parish-baltimore-md",
-    "nameLt": "Unnamed Lithuanian parish",
+    "nameLt": "Šv. Alfonso",
     "city": "Baltimore",
     "state": "MD",
     "country": "US",
     "comparator": false,
     "ownership": "diocese_rc",
-    "status": "closed",
-    "endingMode": "diocese_closed",
+    "status": "standing",
+    "endingMode": "standing",
     "institutionType": "parapija",
-    "lithuanianIdentity": "lost",
+    "lithuanianIdentity": "ethnically_transferred",
     "buildingFate": "repurposed_religious",
     "currentUse": "Building used by an American parish; one token Sunday Lithuanian Mass with no Lithuanian priest",
     "pastoralStatus": "visiting_priest",
-    "situation": "The Draugas mention of January 2, 2010 — a Baltimore Lithuanian congregation de facto closed, sharing a building with an American parish, reduced to one token Sunday Lithuanian Mass with no Lithuanian priest — is now identified as St. Alphonsus (Šv. Alfonso): the same columnist names Šv. Alfonso in 2008, 2009, and 2011, and the address appears in 2012. That token Mass ran until December 2017, when it ended under the new Latin Mass apostolate. The registry entry awaits merging into the St. Alphonsus record at the next refresh.",
-    "registrySlug": "holyname-baltimore-md",
+    "situation": "The Draugas mention of January 2, 2010 — a Baltimore Lithuanian congregation de facto closed, sharing a building with an American parish, reduced to one token Sunday Lithuanian Mass with no Lithuanian priest — is now identified as St. Alphonsus (Šv. Alfonso): the same columnist names Šv. Alfonso in 2008, 2009, and 2011, and the address appears in 2012. That token Mass ran until December 2017, when it ended under the new Latin Mass apostolate. Registry Revision 1 merges this source row into St. Alphonsus.",
+    "registrySlug": "st-alphonsus-baltimore-md",
+    "c83Rows": [
+      77
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": null,
     "coalRegion": false,
@@ -2867,6 +3177,10 @@
     "pastoralStatus": "visiting_priest",
     "situation": "A parish of the Polish National Catholic Church family (the historic Lithuanian National Catholic line, founded from the 1914 split), it continues with English-language Mass under supply clergy; no Lithuanian-language liturgy remains.",
     "registrySlug": "providence-scranton-pa",
+    "c83Rows": [
+      78
+    ],
+    "mergedInto": null,
     "yearFounded": 1913,
     "yearClosed": null,
     "coalRegion": true,
@@ -2910,6 +3224,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "LNCC, community-owned. Closed and sold in 2002 by the community itself at parishioners' request; proceeds went to the community's own LNCC cemetery fund. Contrast with the RC parish in the same city closed the same year, where the archdiocese appropriated all property.",
     "registrySlug": "jesus-lawrence-ma",
+    "c83Rows": [
+      79
+    ],
+    "mergedInto": null,
     "yearFounded": 1916,
     "yearClosed": 2002,
     "coalRegion": false,
@@ -2940,7 +3258,7 @@
     "country": "US",
     "comparator": false,
     "ownership": "national_catholic",
-    "status": "demolished",
+    "status": "closed",
     "endingMode": "community_decided",
     "institutionType": "parapija",
     "lithuanianIdentity": "lost",
@@ -2949,8 +3267,12 @@
     "pastoralStatus": "not_applicable",
     "situation": "LNCC, community-governed, never diocesan. Broke from RC in the 1916 schism; community sold the building in 1972 with ~30-40 parishioners at closure; building later demolished. Parish cemetery at Bensalem PA survives.",
     "registrySlug": "mary-philadelphia-pa",
+    "c83Rows": [
+      80
+    ],
+    "mergedInto": null,
     "yearFounded": null,
-    "yearClosed": 1972,
+    "yearClosed": 1957,
     "coalRegion": false,
     "survivedReviewThenClosed": false,
     "citations": [
@@ -2965,7 +3287,7 @@
   },
   {
     "slug": "lncc-congregation-westville-il",
-    "nameLt": "LNCC congregation",
+    "nameLt": "Šv. Kryžiaus",
     "city": "Westville",
     "state": "IL",
     "country": "US",
@@ -2979,7 +3301,11 @@
     "currentUse": "Demolished; bell and cornerstone made into a 2004 memorial; cemetery maintained",
     "pastoralStatus": "not_applicable",
     "situation": "LNCC, community-governed. Closed ~1969 and demolished by community decision. Bell and cornerstone made into a 2004 memorial; cemetery maintained. Independence removed diocesan risk but not demographic risk.",
-    "registrySlug": "parish-westville-il",
+    "registrySlug": "holy-cross-westville-il",
+    "c83Rows": [
+      81
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 1969,
     "coalRegion": false,
@@ -3011,6 +3337,10 @@
     "pastoralStatus": "own_priest",
     "situation": "Lithuanian Evangelical Lutheran, congregationally governed, self-owned (bought its Marquette Park building in 1957). Voted to sell and relocate twice (Western Springs, then Darien Dec 2019); thriving and growing. No bishop can close or sell it.",
     "registrySlug": "angels-darien-il",
+    "c83Rows": [
+      82
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": null,
     "coalRegion": false,
@@ -3054,6 +3384,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Jerusalem Lutheran Church (LCMS) still holds a weekly service in English; no Lithuanian-language liturgy remains.",
     "registrySlug": "parish-collinsville-il",
+    "c83Rows": [
+      83
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": null,
     "coalRegion": false,
@@ -3085,6 +3419,10 @@
     "pastoralStatus": "shared_priest",
     "situation": "A weekly noon Lithuanian Mass continues, per the Diocese of Montréal's own listings, with a chaplain shared with Aušros Vartų — one of the strongest surviving Lithuanian parish schedules in North America. Documented as a Canadian comparator, outside the U.S. figures.",
     "registrySlug": "casimir-montreal-qc",
+    "c83Rows": [
+      84
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": null,
     "coalRegion": false,
@@ -3116,6 +3454,10 @@
     "pastoralStatus": "shared_priest",
     "situation": "Two Sunday Lithuanian Masses (9:00 and 10:30 a.m.) continue per the Diocese of Montréal's listings, with a chaplain shared with St. Casimir — the best-documented Lithuanian Mass schedule in the 2026 verification sweep. Documented as a Canadian comparator, outside the U.S. figures.",
     "registrySlug": "gateofdawn-montreal-qc",
+    "c83Rows": [
+      85
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": null,
     "coalRegion": false,
@@ -3147,6 +3489,10 @@
     "pastoralStatus": "not_applicable",
     "situation": "Canadian comparator. Closed October 2020 after 61 years; the community explicitly framed the closure as self-determination, contrasting it with forced U.S. diocesan closures.",
     "registrySlug": "casimir-delhi-on",
+    "c83Rows": [
+      86
+    ],
+    "mergedInto": null,
     "yearFounded": null,
     "yearClosed": 2020,
     "coalRegion": false,

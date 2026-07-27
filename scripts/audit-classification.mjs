@@ -16,7 +16,7 @@
 //   STALE-TEXT      — prose contradicting the classifier (incl. upstream
 //                     CSV notes that need the canonical re-snapshot)
 //   DATA-GAP        — missing fields research could fill
-import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 
 const read = (p) =>
   JSON.parse(readFileSync(new URL(`../data/${p}`, import.meta.url), "utf8"));
@@ -28,10 +28,6 @@ const alerts = read("alerts.json");
 const watchBySlug = new Map(
   (alerts.sustainabilityWatch ?? []).map((e) => [e.parishLink.split("/").pop(), e]),
 );
-const alertBySlug = new Map(
-  (alerts.alerts ?? []).map((a) => [a.parishLink.split("/").pop(), a]),
-);
-
 const caseDir = new URL("../data/case-records/", import.meta.url);
 const caseRecords = new Map();
 for (const f of readdirSync(caseDir)) {
@@ -62,6 +58,7 @@ const asYear = (v) => {
 };
 
 for (const p of lib) {
+  if (p.mergedInto) continue;
   const slug = p.slug;
   const watch = watchBySlug.get(slug);
   const cr = caseRecords.get(slug);
@@ -140,11 +137,16 @@ for (const p of lib) {
     add("CONTRADICTION", slug, `identity "${id}" but situation text: no Lithuanian Mass`);
 
   // 5. Registry closure year vs lib
-  const reg = registry.find((r) => r.c83_row != null && lib[r.c83_row - 1]?.slug === slug);
+  const reg = registry.find(
+    (r) =>
+      r.c83_row != null &&
+      lib.find((candidate) => candidate.c83Rows?.includes(r.c83_row))?.slug ===
+        slug,
+  );
   if (reg) {
     const regClosed = asYear(reg.locked?.year_closed) ?? asYear(reg.years?.closed?.[0]?.value);
     if (regClosed && p.yearClosed && regClosed !== p.yearClosed)
-      add("YEAR-VARIANCE", slug, `registry reading ${regClosed} vs locked-core ${p.yearClosed} — surfaces show the locked core; variance stays as a conflict on the research page`);
+      add("YEAR-VARIANCE", slug, `source-block reading ${regClosed} vs selected public reading ${p.yearClosed} — surfaces show the Registry Revision 1 selection; variance stays as a conflict on the research page`);
     if (regClosed && standing && p.status !== "undecided")
       add("YEAR-VARIANCE", slug, `standing parish carries a registry closure reading (${regClosed}) — likely a predecessor/building event; surfaces ignore it`);
   }
