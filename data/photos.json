@@ -28,10 +28,31 @@
     "sv-kryziaus-dayton-oh": {
       "src": "/images/parishes/dayton-holy-cross.jpg",
       "alt": "Exterior of Holy Cross Lithuanian church in Dayton.",
-      "attribution": "Global True Lithuania / Augustinas Žemaitis.",
-      "license": "External source; reuse permission not confirmed.",
-      "rights": "pending_permission",
-      "rightsNote": "© Augustinas Žemaitis (Global True Lithuania). Permission request pending; image held until granted."
+      "attribution": "Photo: Wdzinc, Wikimedia Commons, CC BY-SA 3.0.",
+      "license": "CC BY-SA 3.0",
+      "rights": "open_license",
+      "rightsNote": "This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license. — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:Holy_Cross_Lithuanian_Roman_Catholic_Church.jpg. Identity: Own-work description \"Holy Cross Lithuanian Roman Catholic Church\"; geotagged 39°46'53\"N 84°10'04\"W; NRHP reference number 91001582 -- matches Holy Cross, Dayton OH (parishes.json slug sv-kryziaus-dayton-oh).",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Holy_Cross_Lithuanian_Roman_Catholic_Church.jpg",
+      "alternates": [
+        {
+          "file": "File:Holy Cross Roman Catholic Church (Dayton, Ohio) - exterior.JPG",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Holy_Cross_Roman_Catholic_Church_(Dayton,_Ohio)_-_exterior.JPG",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Holy_Cross_Roman_Catholic_Church_(Dayton,_Ohio)_-_exterior.JPG",
+          "author": "Nheyob",
+          "license": "CC BY-SA 4.0",
+          "exteriorOrInterior": "exterior",
+          "note": "2016 photo, shows US + Lithuania flags, but a car and trees obscure most of the building"
+        }
+      ],
+      "heldAlternate": {
+        "src": "/images/parishes/dayton-holy-cross-held.jpg",
+        "alt": "Exterior of Holy Cross Lithuanian church in Dayton.",
+        "attribution": "Global True Lithuania / Augustinas Žemaitis.",
+        "license": "External source; reuse permission not confirmed.",
+        "rights": "pending_permission",
+        "rightsNote": "© Augustinas Žemaitis (Global True Lithuania). Permission request pending; image held until granted.",
+        "note": "Held pending permission; staged outside the repo. Original staging filename: dayton-holy-cross.jpg"
+      }
     },
     "nekaltojo-prasidejimo-east-st-louis-il": {
       "src": "/images/parishes/east-st-louis-immaculate-conception.jpg",
@@ -42,12 +63,25 @@
       "rightsNote": "Diocesan directory image; permission request pending; image held until granted."
     },
     "sv-antano-cicero-il": {
-      "src": "/images/parishes/cicero-st-anthony.jpg",
-      "alt": "Exterior of St. Anthony Lithuanian church in Cicero.",
-      "attribution": "Global True Lithuania / Augustinas Žemaitis.",
-      "license": "External source; reuse permission not confirmed.",
-      "rights": "pending_permission",
-      "rightsNote": "© Augustinas Žemaitis (Global True Lithuania). Permission request pending; image held until granted."
+      "src": "/images/parishes/cicero-st-anthony-1961.jpg",
+      "alt": "The newly decorated interior of St. Anthony church, Cicero, from the parish's 1961 jubilee book.",
+      "attribution": "Library of Congress — No known copyright / Public domain.",
+      "license": "No known copyright / Public domain",
+      "rights": "public_domain",
+      "rightsNote": "Rights Advisory: \"No known copyright https://rightsstatements.org/vocab/NKC/1.0/\". Full rights note: \"The books in this collection are in the public domain and are free to use and reuse. Credit Line: Library of Congress.\" — verified 2026-07-27 against https://www.loc.gov/item/99197730/. Identity: Book title: 'Auksinis jubileus : Sv. Antano parapija, Cicero, Ill., 1911-1961' (golden jubilee of St. Anthony parish, Cicero IL) -- exact parish/city match to sv-antano-cicero-il. Confirmed by rendering the actual scanned page: caption reads 'The newly decorated Church' beneath a clean interior nave/a",
+      "evidenceUrl": "https://www.loc.gov/item/99197730/",
+      "alternates": [
+        "printed page 43, \"Procession -- St. Anthony Parish Silver Jubilee, June 13, 1936. Bishop O'Brien is seen entering the Church\" -- exterior partially visible (church facade at left edge of frame, crowd/procession fills most of the frame). downloadUrl: https://tile.loc.gov/image-services/iiif/public:gdc:00211847244:0045/full/full/0/default.jpg"
+      ],
+      "heldAlternate": {
+        "src": "/images/parishes/cicero-st-anthony-held.jpg",
+        "alt": "Exterior of St. Anthony Lithuanian church in Cicero.",
+        "attribution": "Global True Lithuania / Augustinas Žemaitis.",
+        "license": "External source; reuse permission not confirmed.",
+        "rights": "pending_permission",
+        "rightsNote": "© Augustinas Žemaitis (Global True Lithuania). Permission request pending; image held until granted.",
+        "note": "Held pending permission; staged outside the repo. Original staging filename: cicero-st-anthony.jpg"
+      }
     },
     "sv-jurgio-bridgeport-ct": {
       "src": "/images/parishes/bridgeport-st-george.jpg",
@@ -58,12 +92,26 @@
       "rightsNote": "© Augustinas Žemaitis (Global True Lithuania). Permission request pending; image held until granted."
     },
     "svc-m-marijos-nekalto-prasidejimo-chicago-il": {
-      "src": "/images/parishes/brighton-park-immaculate-conception.jpg",
-      "alt": "Exterior of the Brighton Park Immaculate Conception Lithuanian church in Chicago.",
-      "attribution": "Global True Lithuania / Augustinas Žemaitis.",
-      "license": "External source; reuse permission not confirmed.",
-      "rights": "pending_permission",
-      "rightsNote": "© Augustinas Žemaitis (Global True Lithuania). Permission request pending; image held until granted."
+      "src": "/images/parishes/brighton-park-immaculate-conception-1977.jpg",
+      "alt": "A 1977 Lithuanian wedding inside Immaculate Conception church, Brighton Park, Chicago.",
+      "attribution": "Library of Congress — No known restrictions on use or reproduction.",
+      "license": "No known restrictions on use or reproduction",
+      "rights": "public_domain",
+      "rightsNote": "Rights Advisory: \"No known restrictions on use or reproduction.\" Full rights note: \"The Library of Congress believes that some of the materials in this collection are in the public domain or have no known copyright restrictions, and are therefore free to use or reuse. For example, the fieldwork in this collection is in the public domain in the United States... Credit line: Chicago Ethnic Arts Project collection (AFC 1981/004), American Folklife Center, Library of Congress.\" — verified 2026-07-27 against https://www.loc.gov/item/afc1981004.b50892/. Identity: LOC item title states verbatim: 'Sak",
+      "evidenceUrl": "https://www.loc.gov/item/afc1981004.b50892/",
+      "alternates": [
+        "frame 06 (afc1981004_b50892_06) -- near-identical composition, same side altar",
+        "frame 07 (afc1981004_b50892_07) -- bride alone at the altar rail, same scene"
+      ],
+      "heldAlternate": {
+        "src": "/images/parishes/brighton-park-immaculate-conception-held.jpg",
+        "alt": "Exterior of the Brighton Park Immaculate Conception Lithuanian church in Chicago.",
+        "attribution": "Global True Lithuania / Augustinas Žemaitis.",
+        "license": "External source; reuse permission not confirmed.",
+        "rights": "pending_permission",
+        "rightsNote": "© Augustinas Žemaitis (Global True Lithuania). Permission request pending; image held until granted.",
+        "note": "Held pending permission; staged outside the repo. Original staging filename: brighton-park-immaculate-conception.jpg"
+      }
     },
     "sv-onos-luzerne-pa": {
       "src": "/images/parishes/luzerne-st-ann-holy-family.jpg",
@@ -82,12 +130,22 @@
       "rightsNote": "© Augustinas Žemaitis (Global True Lithuania). Permission request pending; image held until granted."
     },
     "sv-jurgio-rochester-ny": {
-      "src": "/images/parishes/rochester-st-george-our-lady-of-lourdes.jpg",
-      "alt": "Our Lady of Lourdes Church in Rochester, current Mass location for the St. George Lithuanian community.",
-      "attribution": "Diocese of Rochester Pastoral Services directory.",
-      "license": "Diocesan website source; reuse permission not confirmed.",
-      "rights": "pending_permission",
-      "rightsNote": "Diocesan directory image; permission request pending; image held until granted."
+      "src": "/images/parishes/rochester-st-george-interior.jpg",
+      "alt": "Interior of St. George Lithuanian parish church in Rochester.",
+      "attribution": "Photo: Zmuidzinas, Wikimedia Commons, CC BY-SA 3.0.",
+      "license": "CC BY-SA 3.0",
+      "rights": "open_license",
+      "rightsNote": "This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license (dual-licensed, also GNU Free Documentation License 1.2 or later). — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:SventoJurgioParapija01.JPG. Identity: Description: \"Saint George Roman Catholic Lithuanian Church, Rochester, NY, USA\" / \"Svento Jurgio Parapija.\" Commons categories explicitly list \"Churches in the Roman Catholic Diocese of Rochester,\" \"Saint George churches in New York (state),\" and \"Lithuanian diaspora in New York (state).\" Confirms this is our parish, not a same-",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:SventoJurgioParapija01.JPG",
+      "heldAlternate": {
+        "src": "/images/parishes/rochester-st-george-our-lady-of-lourdes-held.jpg",
+        "alt": "Our Lady of Lourdes Church in Rochester, current Mass location for the St. George Lithuanian community.",
+        "attribution": "Diocese of Rochester Pastoral Services directory.",
+        "license": "Diocesan website source; reuse permission not confirmed.",
+        "rights": "pending_permission",
+        "rightsNote": "Diocesan directory image; permission request pending; image held until granted.",
+        "note": "Held pending permission; staged outside the repo. Original staging filename: rochester-st-george-our-lady-of-lourdes.jpg"
+      }
     },
     "pal-jurgio-matulaicio-misija-lemont-il": {
       "src": "/images/parishes/lemont-matulaitis-mission.jpg",
@@ -117,12 +175,22 @@
     },
     "svc-m-marijos-apreiskimo-brooklyn-ny": {
       "src": "/images/parishes/brooklyn-annunciation-bvm.jpg",
-      "alt": "Red-brick exterior of Annunciation of the Blessed Virgin Mary church in Brooklyn.",
-      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 93 — photographed from the Žiburio archive copy.",
-      "license": "In-copyright; displayed only with the rights holder’s permission.",
-      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
-      "rights": "pending_permission",
-      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+      "alt": "Annunciation of the Blessed Virgin Mary church in Williamsburg, Brooklyn.",
+      "attribution": "Photo: Andre Carrotflower, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:Annunciation_of_the_Blessed_Virgin_Mary_RC_Church,_Williamsburg,_Brooklyn,_New_York_-_20221127.jpg. Identity: Detailed architectural description gives the address \"259 North 5th Street at Havemeyer Street, Williamsburg, Brooklyn, New York\" (matches the North 5th St address specified in the task) and states the church has \"since 1914 been the home church of the Lithuanian-American community in the Brooklyn Diocese,\" still holdi",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Annunciation_of_the_Blessed_Virgin_Mary_RC_Church,_Williamsburg,_Brooklyn,_New_York_-_20221127.jpg",
+      "heldAlternate": {
+        "src": "/images/parishes/brooklyn-annunciation-bvm-held.jpg",
+        "alt": "Red-brick exterior of Annunciation of the Blessed Virgin Mary church in Brooklyn.",
+        "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 93 — photographed from the Žiburio archive copy.",
+        "license": "In-copyright; displayed only with the rights holder’s permission.",
+        "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+        "rights": "pending_permission",
+        "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted.",
+        "note": "Held pending permission; staged outside the repo. Original staging filename: brooklyn-annunciation-bvm.jpg"
+      }
     },
     "st-joseph-mahanoy-city-pa": {
       "src": "/images/parishes/mahanoy-city-st-joseph.jpg",
@@ -134,22 +202,62 @@
       "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
     },
     "sv-jurgio-shenandoah-pa": {
-      "src": "/images/parishes/shenandoah-st-george.jpg",
-      "alt": "Stone tower of St. George church in Shenandoah, the oldest Lithuanian parish in America.",
-      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 95 — photographed from the Žiburio archive copy.",
-      "license": "In-copyright; displayed only with the rights holder’s permission.",
-      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
-      "rights": "pending_permission",
-      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+      "src": "/images/parishes/shenandoah-st-george-1899.jpg",
+      "alt": "St. George Lithuanian church in Shenandoah, from Lietuviai Amerikoj (1899).",
+      "attribution": "Lietuviai Amerikoj (Jonas Žilius, 1899) — public domain, via Wikimedia Commons.",
+      "license": "Public domain",
+      "rights": "public_domain",
+      "rightsNote": "Commons LicenseShortName: \"Public domain\"; UsageTerms: \"Public domain\"; permission template {{PD-old-70-1923}}. British Library Mechanical Curator collection credit line. — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:17_SHENENDOHA%27RIO_LIETUVISZKA_BA%C5%BDNYCZIA.jpg. Identity: Caption \"SHENENDOHA'RIO LIETUVISZKA BAŽNYCZIA\" (\"Shenandoah's Lithuanian church\"); Commons notes: \"The Catholic Church of lithuanian emigrants in Shenandoah, Pennsylvania.\" Shenandoah's only Lithuanian parish was St. George, demolished 2009 (case-records/sv-jurgio-shenandoah-pa.json). Image shows",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:17_SHENENDOHA%27RIO_LIETUVISZKA_BA%C5%BDNYCZIA.jpg",
+      "heldAlternate": {
+        "src": "/images/parishes/shenandoah-st-george-held.jpg",
+        "alt": "Stone tower of St. George church in Shenandoah, the oldest Lithuanian parish in America.",
+        "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 95 — photographed from the Žiburio archive copy.",
+        "license": "In-copyright; displayed only with the rights holder’s permission.",
+        "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+        "rights": "pending_permission",
+        "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted.",
+        "note": "Held pending permission; staged outside the repo. Original staging filename: shenandoah-st-george.jpg"
+      }
     },
     "sv-juozapo-waterbury-ct": {
       "src": "/images/parishes/waterbury-st-joseph.jpg",
-      "alt": "Exterior of St. Joseph Lithuanian church and rectory in Waterbury.",
-      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 96 — photographed from the Žiburio archive copy.",
-      "license": "In-copyright; displayed only with the rights holder’s permission.",
-      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
-      "rights": "pending_permission",
-      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+      "alt": "Exterior of St. Joseph Lithuanian church in Waterbury.",
+      "attribution": "Photo: Farragutful, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:St._Joseph%27s_Church_-_Waterbury,_Connecticut_01.jpg. Identity: Own-work description explicitly reads \"St. Joseph's Lithuanian Catholic Church in Waterbury, Connecticut\"; matches parishes.json slug sv-juozapo-waterbury-ct (Waterbury CT, status closed).",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St._Joseph%27s_Church_-_Waterbury,_Connecticut_01.jpg",
+      "alternates": [
+        {
+          "file": "File:St. Joseph's Church - Waterbury, Connecticut 02.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:St._Joseph%27s_Church_-_Waterbury,_Connecticut_02.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Joseph's_Church_-_Waterbury,_Connecticut_02.jpg",
+          "author": "Farragutful",
+          "license": "CC BY-SA 4.0",
+          "exteriorOrInterior": "exterior (detail)",
+          "note": "Cornerstone detail, not a full-building shot"
+        },
+        {
+          "file": "File:St. Joseph's Church - Waterbury, Connecticut 03.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:St._Joseph%27s_Church_-_Waterbury,_Connecticut_03.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Joseph's_Church_-_Waterbury,_Connecticut_03.jpg",
+          "author": "Farragutful",
+          "license": "CC BY-SA 4.0",
+          "exteriorOrInterior": "interior",
+          "note": "A \"chapel-post\" interior architectural element"
+        }
+      ],
+      "heldAlternate": {
+        "src": "/images/parishes/waterbury-st-joseph-held.jpg",
+        "alt": "Exterior of St. Joseph Lithuanian church and rectory in Waterbury.",
+        "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 96 — photographed from the Žiburio archive copy.",
+        "license": "In-copyright; displayed only with the rights holder’s permission.",
+        "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+        "rights": "pending_permission",
+        "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted.",
+        "note": "Held pending permission; staged outside the repo. Original staging filename: waterbury-st-joseph.jpg"
+      }
     },
     "sv-juozapo-scranton-pa": {
       "src": "/images/parishes/scranton-st-joseph.jpg",
@@ -179,22 +287,54 @@
       "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
     },
     "sv-kryziaus-chicago-il": {
-      "src": "/images/parishes/chicago-holy-cross.jpg",
-      "alt": "Twin baroque towers of Holy Cross church in Chicago, the largest Lithuanian-built church in the city.",
-      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 100 — photographed from the Žiburio archive copy.",
-      "license": "In-copyright; displayed only with the rights holder’s permission.",
-      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
-      "rights": "pending_permission",
-      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+      "src": "/images/parishes/chicago-holy-cross-1914.jpg",
+      "alt": "Holy Cross Lithuanian church in Chicago, photographed in 1914.",
+      "attribution": "Photo: Percy H. Sloan (Newberry Library / CARLI Digital Collections, NBY Chicago Neighborhoods collection), Wikimedia Commons, Public Domain.",
+      "license": "Public Domain",
+      "rights": "public_domain",
+      "rightsNote": "This work is in the public domain in the United States because it was published (or registered with the U.S. Copyright Office) before January 1, 1931. (Also carries the Creative Commons Public Domain Mark 1.0. Newberry Library additionally states: \"The Newberry makes its collections available for any lawful purpose, commercial or non-commercial, without licensing or permission fees.\") — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:Holy_Cross_Church,_Chicago,_1914_(NBY_723).jpg. Identity: Photograph verso captioned \"Holy Cross - (Lithuanian) Hermitage Avenue and 46th\" -- ",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Holy_Cross_Church,_Chicago,_1914_(NBY_723).jpg",
+      "alternates": [
+        {
+          "file": "File:Holy Cross Lithuanian R. C.Church (NBY 417680).jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Holy_Cross_Lithuanian_R._C.Church_(NBY_417680).jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Holy_Cross_Lithuanian_R._C.Church_(NBY_417680).jpg",
+          "author": "Unknown author (Curt Teich Postcard Archives, Newberry Library, production no. 2587-29)",
+          "license": "Public Domain",
+          "licenseVerbatim": "This work is in the public domain because it was published in the United States between 1931 and 1963, and although there may or may not have been a copyright notice, the copyright was not renewed.",
+          "exteriorOrInterior": "exterior",
+          "note": "1929 hand-colored postcard, same building, low resolution (524x824)"
+        }
+      ],
+      "heldAlternate": {
+        "src": "/images/parishes/chicago-holy-cross-held.jpg",
+        "alt": "Twin baroque towers of Holy Cross church in Chicago, the largest Lithuanian-built church in the city.",
+        "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 100 — photographed from the Žiburio archive copy.",
+        "license": "In-copyright; displayed only with the rights holder’s permission.",
+        "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+        "rights": "pending_permission",
+        "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted.",
+        "note": "Held pending permission; staged outside the repo. Original staging filename: chicago-holy-cross.jpg"
+      }
     },
     "sv-petro-boston-ma": {
       "src": "/images/parishes/boston-st-peter.jpg",
-      "alt": "Twin-towered red-brick exterior of St. Peter Lithuanian church in South Boston.",
-      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 102 — photographed from the Žiburio archive copy.",
-      "license": "In-copyright; displayed only with the rights holder’s permission.",
-      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
-      "rights": "pending_permission",
-      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+      "alt": "St. Peter Lithuanian church on Flaherty Way, South Boston.",
+      "attribution": "Photo: Lukascb, Wikimedia Commons, CC BY-SA 3.0.",
+      "license": "CC BY-SA 3.0",
+      "rights": "open_license",
+      "rightsNote": "This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license (also GNU Free Documentation License 1.2 or later). — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:StPeterSouthBostonMA_PWFord.jpg. Identity: The file page itself only says \"St. Peter Church, South Boston, MA designed by Patrick W. Ford\" without an address, but it sits in the dedicated Commons category \"St. Peter Church (South Boston)\" (which contains only this one file) tagged with \"Lithuanian diaspora in Massachusetts,\" and is geotagged 42°20'19.74\"N, 71°03'17.47\"W in South Bo",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:StPeterSouthBostonMA_PWFord.jpg",
+      "heldAlternate": {
+        "src": "/images/parishes/boston-st-peter-held.jpg",
+        "alt": "Twin-towered red-brick exterior of St. Peter Lithuanian church in South Boston.",
+        "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 102 — photographed from the Žiburio archive copy.",
+        "license": "In-copyright; displayed only with the rights holder’s permission.",
+        "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+        "rights": "pending_permission",
+        "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted.",
+        "note": "Held pending permission; staged outside the repo. Original staging filename: boston-st-peter.jpg"
+      }
     },
     "sv-petro-ir-povilo-elizabeth-nj": {
       "src": "/images/parishes/elizabeth-sts-peter-paul.jpg",
@@ -207,30 +347,72 @@
     },
     "sv-petro-ir-povilo-grand-rapids-mi": {
       "src": "/images/parishes/grand-rapids-sts-peter-paul.jpg",
-      "alt": "Exterior of Sts. Peter and Paul church in Grand Rapids, with its bell tower.",
-      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 104 — photographed from the Žiburio archive copy.",
-      "license": "In-copyright; displayed only with the rights holder’s permission.",
-      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
-      "rights": "pending_permission",
-      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+      "alt": "Sts. Peter and Paul Lithuanian church in Grand Rapids.",
+      "attribution": "Photo: rossograph (Wikimedia Commons username Wingerham52), Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "LicenseShortName: \"CC BY-SA 4.0\"; UsageTerms: \"Creative Commons Attribution-Share Alike 4.0\"; Credit: \"Own work.\" — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:Ss._Peter_and_Paul.jpg. Identity: Commons categories: 'Roman Catholic churches in Grand Rapids, Michigan' + 'Saints Peter and Paul churches in Michigan' + 'Romanesque Revival churches in Michigan'; taken 2020-08-15. There is only one Ss. Peter and Paul Catholic parish in Grand Rapids (ours, 520 Myrtle Street NW; the only other same-name file found on Commons, 'Ss. Peter and Paul-Ionia.jpg', is a different city/bu",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Ss._Peter_and_Paul.jpg",
+      "heldAlternate": {
+        "src": "/images/parishes/grand-rapids-sts-peter-paul-held.jpg",
+        "alt": "Exterior of Sts. Peter and Paul church in Grand Rapids, with its bell tower.",
+        "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 104 — photographed from the Žiburio archive copy.",
+        "license": "In-copyright; displayed only with the rights holder’s permission.",
+        "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+        "rights": "pending_permission",
+        "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted.",
+        "note": "Held pending permission; staged outside the repo. Original staging filename: grand-rapids-sts-peter-paul.jpg"
+      }
     },
     "svc-trejybes-hartford-ct": {
-      "src": "/images/parishes/hartford-holy-trinity.jpg",
-      "alt": "Red-brick twin-towered exterior of Holy Trinity Lithuanian church in Hartford.",
-      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 105 — photographed from the Žiburio archive copy.",
-      "license": "In-copyright; displayed only with the rights holder’s permission.",
-      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
-      "rights": "pending_permission",
-      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+      "src": "/images/parishes/hartford-holy-trinity-2000.jpg",
+      "alt": "Holy Trinity Lithuanian church on Capitol Avenue, Hartford, in 2000.",
+      "attribution": "Photo: Litnet, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Dual-licensed: GNU Free Documentation License 1.2 or later, and Creative Commons Attribution-ShareAlike 4.0 International. Previously published on lietuvai.lt/wiki/Hartford_Holy_Trinity_Church. — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:Hartford_Holy_Trinity_Roman_Catholic_Church,_2000.jpg. Identity: Twin-towered brick facade with rose window and Latin inscription \"ECCLESIA SANCTISSIMA TRINITATIS\" (Church of the Most Holy Trinity) visually verified; matches parishes.json slug svc-trejybes-hartford-ct (Holy Trinity RC, 53 Capitol Ave, Hartford CT, buildingFate standin",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Hartford_Holy_Trinity_Roman_Catholic_Church,_2000.jpg",
+      "alternates": [
+        {
+          "file": "File:Hartford Holy Trinity Church First Stage Building 1915.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Hartford_Holy_Trinity_Church_First_Stage_Building_1915.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Hartford_Holy_Trinity_Church_First_Stage_Building_1915.jpg",
+          "author": "Unknown (source: Centennial Jubilee of Holy Trinity Roman Catholic Lithuanian Parish 1900-2000 souvenir book)",
+          "license": "Public Domain",
+          "licenseVerbatim": "This work is in the public domain in the United States because it was published (or registered with the U.S. Copyright Office) before January 1, 1931.",
+          "exteriorOrInterior": "exterior",
+          "note": "Historic 1915 photo of the parish's first (temporary) building -- a different, earlier structure than the current standing church, kept as a historical-value alternate only."
+        }
+      ],
+      "heldAlternate": {
+        "src": "/images/parishes/hartford-holy-trinity-held.jpg",
+        "alt": "Red-brick twin-towered exterior of Holy Trinity Lithuanian church in Hartford.",
+        "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 105 — photographed from the Žiburio archive copy.",
+        "license": "In-copyright; displayed only with the rights holder’s permission.",
+        "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+        "rights": "pending_permission",
+        "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted.",
+        "note": "Held pending permission; staged outside the repo. Original staging filename: hartford-holy-trinity.jpg"
+      }
     },
     "svc-trejybes-wilkes-barre-pa": {
-      "src": "/images/parishes/wilkes-barre-holy-trinity.jpg",
-      "alt": "Twin Gothic spires of Holy Trinity church in Wilkes-Barre, one of the largest Lithuanian-built churches in America.",
-      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 106 — photographed from the Žiburio archive copy.",
-      "license": "In-copyright; displayed only with the rights holder’s permission.",
-      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
-      "rights": "pending_permission",
-      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+      "src": "/images/parishes/wilkes-barre-holy-trinity-1899.jpg",
+      "alt": "The first Holy Trinity Lithuanian church in Wilkes-Barre, from Lietuviai Amerikoj (1899).",
+      "attribution": "Lietuviai Amerikoj (Jonas Žilius, 1899) — public domain, via Wikimedia Commons.",
+      "license": "Public domain",
+      "rights": "public_domain",
+      "rightsNote": "Commons LicenseShortName: \"Public domain\"; UsageTerms: \"Public domain\"; permission template {{PD-old-70-1923}}. Credit line: \"This file is from the Mechanical Curator collection... released to Flickr Commons by the British Library.\" — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:08_WILKES-BARRE_LIETUVISZKA_BA%C5%BDNYCZIA.jpg. Identity: File caption reads \"WILKES-BARRE LIETUVISZKA BAŽNYCZIA\" (\"Wilkes-Barre's Lithuanian church\"); Commons notes field: \"The Catholic Church of lithuanian emigrants in Wilkes-Barre, Pennsylvania.\" Wilkes-Barre had exactly one Lithuanian parish,",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:08_WILKES-BARRE_LIETUVISZKA_BA%C5%BDNYCZIA.jpg",
+      "heldAlternate": {
+        "src": "/images/parishes/wilkes-barre-holy-trinity-held.jpg",
+        "alt": "Twin Gothic spires of Holy Trinity church in Wilkes-Barre, one of the largest Lithuanian-built churches in America.",
+        "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 106 — photographed from the Žiburio archive copy.",
+        "license": "In-copyright; displayed only with the rights holder’s permission.",
+        "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+        "rights": "pending_permission",
+        "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted.",
+        "note": "Held pending permission; staged outside the repo. Original staging filename: wilkes-barre-holy-trinity.jpg"
+      }
     },
     "sv-kazimiero-los-angeles-ca": {
       "src": "/images/parishes/los-angeles-st-casimir.jpg",
@@ -252,30 +434,361 @@
     },
     "kristaus-atsimainymo-maspeth-ny": {
       "src": "/images/parishes/maspeth-transfiguration.jpg",
-      "alt": "Exterior of the Church of the Transfiguration in Maspeth, built 1962 by architect Jonas Mulokas.",
-      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 120 — photographed from the Žiburio archive copy.",
-      "license": "In-copyright; displayed only with the rights holder’s permission.",
-      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
-      "rights": "pending_permission",
-      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+      "alt": "The Church of the Transfiguration in Maspeth, Queens.",
+      "attribution": "Photo: Renata3, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share; to remix. Under the conditions of attribution and share-alike. — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:Transfiguration_Roman_Catholic_Church_20201114_154344.jpg. Identity: Description \"Main façade of the Transfiguration Roman Catholic Church (Maspeth)\"; matches parishes.json slug kristaus-atsimainymo-maspeth-ny. Companion files in the same category show the Lithuanian inscription \"Mano Namai Maldos Namai\" (\"My house is a house of prayer\") ove",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Transfiguration_Roman_Catholic_Church_20201114_154344.jpg",
+      "alternates": [
+        {
+          "file": "File:Transfiguration Roman Catholic Church flags of US and Lithuania 20201114 154358.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Transfiguration_Roman_Catholic_Church_flags_of_US_and_Lithuania_20201114_154358.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Transfiguration_Roman_Catholic_Church_flags_of_US_and_Lithuania_20201114_154358.jpg",
+          "author": "Renata3",
+          "license": "CC BY-SA 4.0",
+          "exteriorOrInterior": "exterior (detail)",
+          "note": "Same session, US+Lithuania flags at entrance"
+        },
+        {
+          "file": "File:Front doorways of church with religious phrase in Lithuanian.JPG",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Front_doorways_of_church_with_religious_phrase_in_Lithuanian.JPG",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Front_doorways_of_church_with_religious_phrase_in_Lithuanian.JPG",
+          "author": "Maspetheer",
+          "license": "CC BY-SA 4.0",
+          "exteriorOrInterior": "exterior (detail)",
+          "note": "Entrance doors with Lithuanian inscription \"Mano Namai Maldos Namai\""
+        },
+        {
+          "file": "File:Front view of Church of the Transfiguration Maspeth NY.JPG",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Front_view_of_Church_of_the_Transfiguration_Maspeth_NY.JPG",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Front_view_of_Church_of_the_Transfiguration_Maspeth_NY.JPG",
+          "author": "Maspetheer",
+          "license": "CC BY-SA 4.0",
+          "exteriorOrInterior": "exterior",
+          "note": "2016 daytime front view, but crowded with parishioners/Girl Scouts banner"
+        }
+      ],
+      "heldAlternate": {
+        "src": "/images/parishes/maspeth-transfiguration-held.jpg",
+        "alt": "Exterior of the Church of the Transfiguration in Maspeth, built 1962 by architect Jonas Mulokas.",
+        "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 120 — photographed from the Žiburio archive copy.",
+        "license": "In-copyright; displayed only with the rights holder’s permission.",
+        "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+        "rights": "pending_permission",
+        "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted.",
+        "note": "Held pending permission; staged outside the repo. Original staging filename: maspeth-transfiguration.jpg"
+      }
     },
     "siluvos-dievo-motinos-maizeville-pa": {
       "src": "/images/parishes/maizeville-our-lady-siluva.jpg",
-      "alt": "Front facade of Our Lady of Šiluva church in Maizeville, built 1966.",
-      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 127 — photographed from the Žiburio archive copy.",
-      "license": "In-copyright; displayed only with the rights holder’s permission.",
-      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
-      "rights": "pending_permission",
-      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+      "alt": "Front of Our Lady of Šiluva church in Maizeville.",
+      "attribution": "Photo: Shuvaev, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:Our_Lady_of_Siluva_RC_Church,_Maizeville_PA_01.JPG. Identity: Description: \"Our Lady of Siluva Roman Catholic Church (Lithuanian, est. 1907. Formerly St. Louis) on Main St., village of Maizeville, Gilberton borough, Schuylkill County, Pennsylvania. Front view.\" Matches parishes.json slug siluvos-dievo-motinos-maizeville-pa exactly (city Maizeville, PA).",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Siluva_RC_Church,_Maizeville_PA_01.JPG",
+      "alternates": [
+        {
+          "file": "File:Our Lady of Siluva RC Church, Maizeville PA 02.JPG",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Siluva_RC_Church,_Maizeville_PA_02.JPG",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Our_Lady_of_Siluva_RC_Church,_Maizeville_PA_02.JPG",
+          "author": "Shuvaev",
+          "license": "CC BY-SA 4.0",
+          "exteriorOrInterior": "exterior",
+          "note": "Back view of same building, same photographer/session"
+        }
+      ],
+      "heldAlternate": {
+        "src": "/images/parishes/maizeville-our-lady-siluva-held.jpg",
+        "alt": "Front facade of Our Lady of Šiluva church in Maizeville, built 1966.",
+        "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 127 — photographed from the Žiburio archive copy.",
+        "license": "In-copyright; displayed only with the rights holder’s permission.",
+        "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+        "rights": "pending_permission",
+        "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted.",
+        "note": "Held pending permission; staged outside the repo. Original staging filename: maizeville-our-lady-siluva.jpg"
+      }
     },
     "dievo-apvaizdos-southfield-mi": {
-      "src": "/images/parishes/southfield-providence-of-god.jpg",
-      "alt": "Exterior of Providence of God church in Southfield, built 1972 by architect Alfonsas Kulpa-Kulpavičius.",
-      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 128 — photographed from the Žiburio archive copy.",
-      "license": "In-copyright; displayed only with the rights holder’s permission.",
-      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
-      "rights": "pending_permission",
-      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+      "src": "/images/parishes/southfield-divine-providence-sign.jpg",
+      "alt": "The Divine Providence Lithuanian Catholic Church sign and church on Nine Mile Road, Southfield.",
+      "attribution": "Photo: Vilija Jurgutis.",
+      "license": "Own work",
+      "rights": "own_work",
+      "rightsNote": "Vilija's own photograph; confirmed own work 2026-07-27 (Hearth session). Higher-resolution original available from the author.",
+      "heldAlternate": {
+        "src": "/images/parishes/southfield-providence-of-god-held.jpg",
+        "alt": "Exterior of Providence of God church in Southfield, built 1972 by architect Alfonsas Kulpa-Kulpavičius.",
+        "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 128 — photographed from the Žiburio archive copy.",
+        "license": "In-copyright; displayed only with the rights holder’s permission.",
+        "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+        "rights": "pending_permission",
+        "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted.",
+        "note": "Held pending permission; staged outside the repo."
+      }
+    },
+    "sv-kazimiero-pittston-pa": {
+      "src": "/images/parishes/pittston-st-casimir.jpg",
+      "alt": "The 1909 St. Casimir church building in Pittston.",
+      "attribution": "Photo: Doug Kerr, Wikimedia Commons, CC BY-SA 2.0.",
+      "license": "CC BY-SA 2.0",
+      "rights": "open_license",
+      "rightsNote": "Commons LicenseShortName: \"CC BY-SA 2.0\"; UsageTerms: \"Creative Commons Attribution-Share Alike 2.0\"; AttributionRequired: true. Source: Flickr (https://www.flickr.com/photos/7327243@N05/4112069948), uploaded via Flickr upload bot 2011-05-16, reviewed by 'Pauk'. {{cc-by-sa-2.0}} on file page. — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:St._Casimir_Church_(Pittston,_Pennsylvania)_(01).jpg. Identity: Taken 2009-11-16 (~19 months after the parish's April 6, 2008 closure), geotagged 41.3240282,-75.7874673, which reverse-geocodes to Church Street, Pittston, PA — the Church",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St._Casimir_Church_(Pittston,_Pennsylvania)_(01).jpg",
+      "alternates": [
+        {
+          "file": "File:13 PITTSTONO LIETUVISZKA BAŽNYCZIA.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:13_PITTSTONO_LIETUVISZKA_BA%C5%BDNYCZIA.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/13_PITTSTONO_LIETUVISZKA_BA%C5%BDNYCZIA.jpg",
+          "author": "Jonas Žilius (pseudonym \"Jonas, Jr.\")",
+          "license": "Public domain",
+          "licenseVerbatim": "Commons LicenseShortName: \"Public domain\"; {{PD-old-70-1923}}.",
+          "note": "1899 image captioned 'PITTSTONO LIETUVISZKA BAŽNYCZIA,' extracted from page 103 of 'Lietuviai Amerikoj' (1899). Shows a modest single-steeple brick chapel — this is almost certainly St. Casimir's FIRST building (parish founded 1885-1890, cornerstone blessed June 30, 1889), which was superseded by the grander 1909 Baroque church shown in the hero image. Same parish, earlier/different building — genuine PD historic image but not the structure that survived to 2008 and stands today as a residence."
+        }
+      ]
+    },
+    "sv-kryziaus-mount-carmel-pa": {
+      "src": "/images/parishes/mount-carmel-holy-cross-1899.jpg",
+      "alt": "Holy Cross Lithuanian church in Mount Carmel, from Lietuviai Amerikoj (1899).",
+      "attribution": "Lietuviai Amerikoj (Jonas Žilius, 1899) — public domain, via Wikimedia Commons.",
+      "license": "Public domain",
+      "rights": "public_domain",
+      "rightsNote": "Commons LicenseShortName: \"Public domain\"; UsageTerms: \"Public domain\"; {{PD-old-70-1923}}. — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:10_MT-CARMIU_LIETUVISZKA_BA%C5%BDNYCZIA.jpg. Identity: Caption \"MT-CARMIU LIETUVISZKA BAŽNYCZIA\" (\"Mount Carmel's Lithuanian church\"); Commons notes: \"The Catholic Church of lithuanian emigrants in Mount Carmel, Pennsylvania.\" Commons categorizes the file under \"Churches in Pennsylvania built in 1892\" and \"Holy Cross churches in Pennsylvania\" — matching case-records/sv-kryziaus-mount-carmel-pa.json, which states Holy Cross (Šv. Kryžia",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:10_MT-CARMIU_LIETUVISZKA_BA%C5%BDNYCZIA.jpg"
+    },
+    "sv-kazimiero-pittsburgh-pa": {
+      "src": "/images/parishes/pittsburgh-st-casimir.jpg",
+      "alt": "St. Casimir church on the South Side of Pittsburgh.",
+      "attribution": "Photo: Cbaile19, Wikimedia Commons, CC0.",
+      "license": "CC0",
+      "rights": "public_domain",
+      "rightsNote": "Commons LicenseShortName: \"CC0\"; UsageTerms: \"Creative Commons Zero, Public Domain Dedication\"; {{self|cc-zero}} on file page. Own work. — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:St._Casimir%E2%80%99s_Church,_South_Side,_Pittsburgh,_2021-07-24.jpg. Identity: Description: \"St. Casimir's, South Side, Pittsburgh. The former church is now condominium apartments.\" Filed under Commons category \"St. Casimir Church (Pittsburgh, Pennsylvania).\" Matches case-records/sv-kazimiero-pittsburgh-pa.json in every particular: South Side Flats, converted 2017-2018 into \"22nd Street Co",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St._Casimir%E2%80%99s_Church,_South_Side,_Pittsburgh,_2021-07-24.jpg",
+      "alternates": [
+        {
+          "file": "File:St. Casimir Church, South Side, 2015-06-15, 01.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:St._Casimir_Church,_South_Side,_2015-06-15,_01.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Casimir_Church,_South_Side,_2015-06-15,_01.jpg",
+          "author": "Cbaile19",
+          "license": "CC0",
+          "licenseVerbatim": "{{self|cc-zero}}. \"Creative Commons Zero, Public Domain Dedication.\"",
+          "note": "2015-06-15 photo, same building. Author's own file-page note: \"This extreme-wide-angle picture of the façade distorts the towers, but otherwise preserves the proportions\" — usable but the 2021 photo has no such distortion, hence chosen as hero. 4911x5491px, very high resolution."
+        },
+        {
+          "file": "File:11 PITTSBURGH'O LIETUVISZKA BAŽNYCZIA.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:11_PITTSBURGH%27O_LIETUVISZKA_BA%C5%BDNYCZIA.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/11_PITTSBURGH%27O_LIETUVISZKA_BA%C5%BDNYCZIA.jpg",
+          "author": "Jonas Žilius (pseudonym \"Jonas, Jr.\")",
+          "license": "Public domain",
+          "licenseVerbatim": "Commons LicenseShortName: \"Public domain\"; {{PD-old-70-1923}}.",
+          "note": "1899 image ('Lietuviai Amerikoj' page 169), single-steeple Gothic design — likely depicts the church at or just before its 1902 dedication (3-year gap, plausibly the same building nearing completion, unlike the Wilkes-Barre/Pittston cases where a full later rebuild is documented). NOTE: Commons miscategorizes this file under 'Demolished churches in Pittsburgh,' which contradicts strong, recent (2025) sourcing in our own case record confirming the building still stands as condominiums — treat the Commons 'demolished' category as a stale/incorrect tag, not a red flag on the photo's identity."
+        },
+        {
+          "file": "Historic Pittsburgh pitt:31735051652091, leaf 32: \"Sv. Kazimiero Baznycios Vidus -- Didysis Altorius / Church Interior -- Main Altar\" (jubilee book, 1942/43)",
+          "filePageUrl": "https://historicpittsburgh.org/islandora/object/pitt%3A31735051652091-0032",
+          "license": "No Copyright - United States"
+        }
+      ]
+    },
+    "sv-kazimiero-philadelphia-pa": {
+      "src": "/images/parishes/philadelphia-st-casimir.jpg",
+      "alt": "St. Casimir Lithuanian church at 324 Wharton Street, Philadelphia.",
+      "attribution": "Photo: Nick-philly, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Commons LicenseShortName: \"CC BY-SA 4.0\"; UsageTerms: \"Creative Commons Attribution-Share Alike 4.0\"; AttributionRequired: true. Own work, 2018-10-28. — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:St_Casimir%27s_Lithuanian_Catholic_Church_-_324_Wharton_St,_Philadelphia,_PA_19147.jpg. Identity: Visually confirmed: the companion 'Front Detail' photo shows a legible sign on the church facade reading \"ST. CASIMIR'S LITHUANIAN CATHOLIC CHURCH AND SCHOOL.\" File title and description both give the address as 324 Wharton St, Philadelphia, PA 19147 — matching case-records/sv-kaz",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St_Casimir%27s_Lithuanian_Catholic_Church_-_324_Wharton_St,_Philadelphia,_PA_19147.jpg",
+      "alternates": [
+        {
+          "file": "File:St Casimir's Lithuanian Catholic Church - 324 Wharton St, Philadelphia, PA 19147 (Front Detail).jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:St_Casimir%27s_Lithuanian_Catholic_Church_-_324_Wharton_St,_Philadelphia,_PA_19147_(Front_Detail).jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Casimir%27s_Lithuanian_Catholic_Church_-_324_Wharton_St,_Philadelphia,_PA_19147_(Front_Detail).jpg",
+          "author": "Nick-philly",
+          "license": "CC BY-SA 4.0",
+          "licenseVerbatim": "Commons LicenseShortName: \"CC BY-SA 4.0\"; same author/own-work, 2018-10-28.",
+          "note": "Tight upward-angle crop of the facade/tower showing the \"ST. CASIMIR'S LITHUANIAN CATHOLIC CHURCH AND SCHOOL\" sign clearly — best single piece of identity evidence but a partial/detail shot, not a full-building hero."
+        },
+        {
+          "file": "CHRC Omeka item 7448, \"Commemoration of the 25th Anniversary of St. Casimir Parish... 1893-1918\" -- plate captioned \"MAIN ALTAR OF ST. CASIMIR'S CHURCH\", PDF page 15 of 29 (0-indexed page 14)",
+          "filePageUrl": "https://omeka.chrc-phila.org/items/show/7448",
+          "license": "Public Domain"
+        }
+      ]
+    },
+    "sv-jurgio-chicago-il": {
+      "src": "/images/parishes/chicago-st-george-1913.jpg",
+      "alt": "St. George Lithuanian church in Bridgeport, Chicago, photographed in 1913; demolished 1990.",
+      "attribution": "Photo: Percy H. Sloan, Wikimedia Commons, Public domain.",
+      "license": "Public domain",
+      "rights": "public_domain",
+      "rightsNote": "Commons LicenseShortName: \"Public domain\"; {{PD-old-70-expired}}; CC-PD-Mark. Credit: CARLI Digital Collections, NBY Chicago Neighborhoods collection (https://collections.carli.illinois.edu/cdm/singleitem/collection/nby_chicago/id/843). — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:Saint_George_Lithuanian_Church,_Chicago,_1913_(NBY_843).jpg. Identity: Verso caption: \"St George Lithuanian, 31st and Auburn.\" Case-records/sv-jurgio-chicago-il.json confirms St. George, Chicago's oldest Lithuanian parish, stood at 33rd/Lituanica Ave in Bridgeport and was demolished 1990; Lit",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Saint_George_Lithuanian_Church,_Chicago,_1913_(NBY_843).jpg",
+      "alternates": [
+        {
+          "file": "File:Saint George Lithuanian Church, Chicago, 1913 (NBY 805).jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Saint_George_Lithuanian_Church,_Chicago,_1913_(NBY_805).jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_George_Lithuanian_Church,_Chicago,_1913_(NBY_805).jpg",
+          "author": "Percy H. Sloan",
+          "license": "Public domain",
+          "licenseVerbatim": "{{PD-old-70-expired}}; CC-PD-Mark.",
+          "note": "Verso: \"St. George of the Lithuanians, Bridgeport, 31st and Auburn; windtaken, retake from different point.\" Full street-view exterior with rowhouses in foreground, slightly more distant than the hero shot."
+        },
+        {
+          "file": "File:Saint George Lithuanian Church, Chicago, 1913 (NBY 766).jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Saint_George_Lithuanian_Church,_Chicago,_1913_(NBY_766).jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_George_Lithuanian_Church,_Chicago,_1913_(NBY_766).jpg",
+          "author": "Percy H. Sloan",
+          "license": "Public domain",
+          "licenseVerbatim": "{{PD-old-70-expired}}; CC-PD-Mark.",
+          "note": "Verso: \"Gothic; St George of Lithuanian; tympanum above entrance; Auburn Ave. and 31st.\" Close detail of the entrance tympanum/portal only, not a full exterior — kept as a detail alternate."
+        },
+        {
+          "file": "File:St. Georges Lithuanian R.C. Church (NBY 417274).jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:St._Georges_Lithuanian_R.C._Church_(NBY_417274).jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Georges_Lithuanian_R.C._Church_(NBY_417274).jpg",
+          "author": "Unknown (Curt Teich & Co. postcard)",
+          "license": "Public domain",
+          "licenseVerbatim": "{{PD-old-70-expired}}; CC-PD-Mark. Credit: Curt Teich Postcard Archives (CARLI, NBY Teich collection).",
+          "note": "c.1919 colorized postcard titled \"ST. GEORGE'S LITHUANIAN R. C. CHURCH, CHICAGO, ILL.\" with inset views of the rectory and \"St. George's Lithuanian School.\" Lower resolution (523x834) and a composite/postcard format rather than a clean photographic exterior, but valuable corroborating evidence naming the parish explicitly."
+        }
+      ]
+    },
+    "sv-kazimiero-amsterdam-ny": {
+      "src": "/images/parishes/amsterdam-st-casimir.jpg",
+      "alt": "The former St. Casimir church in Amsterdam, New York.",
+      "attribution": "Photo: Beyond My Ken, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Commons LicenseShortName: \"CC BY-SA 4.0\"; UsageTerms: \"Creative Commons Attribution-Share Alike 4.0\"; AttributionRequired: true. Own work, 2020-09-23. (Also tagged with legacy GFDL/CC-BY-SA-4.0,3.0,2.5,2.0,1.0 license-migration templates.) — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:Former_St._Casimir_Church,_Amsterdam.jpg. Identity: File description explicitly states: \"The Five World's Buddahs Temple, located at 262 Main Street in Amsterdam, New York, was formerly St. Casimir Church, a Lithuanian Catholic parish... still carries a Lithuanian inscription ('BAŽN.ŠV.KAZ",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Former_St._Casimir_Church,_Amsterdam.jpg",
+      "alternates": [
+        {
+          "file": "File:Former St. Casimir Church, Amsterdam inscription and statue.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Former_St._Casimir_Church,_Amsterdam_inscription_and_statue.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Former_St._Casimir_Church,_Amsterdam_inscription_and_statue.jpg",
+          "author": "Beyond My Ken",
+          "license": "CC BY-SA 4.0",
+          "licenseVerbatim": "Same as hero: CC BY-SA 4.0, own work, 2020-09-23.",
+          "note": "Close-up of the surviving Lithuanian inscription (\"BAŽN.ŠV.KAZAMIERO\") and Casimir statue on the belltower — strong identity/heritage evidence, detail shot not a full exterior."
+        },
+        {
+          "file": "File:Former St. Casimir Church rectory, Amsterdam.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Former_St._Casimir_Church_rectory,_Amsterdam.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Former_St._Casimir_Church_rectory,_Amsterdam.jpg",
+          "author": "Beyond My Ken",
+          "license": "CC BY-SA 4.0",
+          "licenseVerbatim": "Same as hero: CC BY-SA 4.0, own work, 2020-09-23.",
+          "note": "Shows the detached two-story former rectory west of the church, not the church itself."
+        }
+      ]
+    },
+    "sv-kazimiero-gary-in": {
+      "src": "/images/parishes/gary-st-casimir.jpg",
+      "alt": "The historical St. Casimir Lithuanian church in Gary, Indiana.",
+      "attribution": "Photo: Lotzman Katzman, Wikimedia Commons, CC BY-SA 3.0.",
+      "license": "CC BY-SA 3.0",
+      "rights": "open_license",
+      "rightsNote": "Commons LicenseShortName: \"CC BY-SA 3.0\"; UsageTerms: \"Creative Commons Attribution-Share Alike 3.0\"; AttributionRequired: true. {{cc-by-sa-3.0|Lotzman Katzman}}; Panoramio upload, reviewed 2017-02-07. — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:St._Casimiri%27s_Lithuanian_Church_(historical)_Gary,_Indiana_-_panoramio.jpg. Identity: Description: \"St. Casimiri's Lithuanian Church (historical) Gary, Indiana.\" Geotagged 41.58813,-87.353389 (source: Panoramio). Independently cross-checked against OpenStreetMap, which has a POI explicitly named \"Saint Casimir's Roman Catho",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St._Casimiri%27s_Lithuanian_Church_(historical)_Gary,_Indiana_-_panoramio.jpg"
+    },
+    "ausros-vartu-worcester-ma": {
+      "src": "/images/parishes/worcester-our-lady-of-vilna.jpg",
+      "alt": "Our Lady of Vilna church on Sterling Street, Worcester.",
+      "attribution": "Photo: Farragutful, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Commons LicenseShortName: \"CC BY-SA 4.0\"; UsageTerms: \"Creative Commons Attribution-Share Alike 4.0\"; AttributionRequired: true. Own work, taken 21 June 2025. — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:Our_Lady_of_Vilna_-_Worcester_01.jpg. Identity: Description: \"Our Lady of Vilna Church in Worcester, Massachusetts.\" Filed under Commons category \"Our Lady of Vilna Church (Worcester, Massachusetts).\" Matches case-records/ausros-vartu-worcester-ma.json: Aušros Vartų/Our Lady of Vilna Parish at 151/153 Sterling Street, Worcester — the only parish of this dedication in t",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Vilna_-_Worcester_01.jpg",
+      "alternates": [
+        {
+          "file": "File:Our Lady of Vilna - Worcester 02.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Vilna_-_Worcester_02.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Our_Lady_of_Vilna_-_Worcester_02.jpg",
+          "author": "Farragutful",
+          "license": "CC BY-SA 4.0",
+          "licenseVerbatim": "Same as hero: CC BY-SA 4.0, own work, taken 21 June 2025.",
+          "note": "Straight-on frontal shot of the same church, same day/shoot. Equally usable; hero chosen for showing more of the building's massing/depth."
+        }
+      ]
+    },
+    "sv-vincento-de-paul-girardville-pa": {
+      "src": "/images/parishes/girardville-st-vincent-de-paul.jpg",
+      "alt": "St. Vincent de Paul church in Girardville.",
+      "attribution": "Photo: Shuvaev, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Commons LicenseShortName: \"CC BY-SA 4.0\"; UsageTerms: \"Creative Commons Attribution-Share Alike 4.0\"; AttributionRequired: true. Own work, 2015-08-15. — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:St._Vincent_de_Paul_RC_Church,_Girardville_PA_02.JPG. Identity: Description: \"St. Vincent de Paul Roman Catholic Church, 260 N 2nd St., Girardville, Schuylkill County, Pennsylvania.\" Address independently corroborates case-records/sv-vincento-de-paul-girardville-pa.json, which cites the church at \"2nd and C Streets\" and separately notes a mass-times aggregator giving \"260 Nort",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St._Vincent_de_Paul_RC_Church,_Girardville_PA_02.JPG",
+      "alternates": [
+        {
+          "file": "File:St. Vincent de Paul RC Church, Girardville PA 01.JPG",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:St._Vincent_de_Paul_RC_Church,_Girardville_PA_01.JPG",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Vincent_de_Paul_RC_Church,_Girardville_PA_01.JPG",
+          "author": "Shuvaev",
+          "license": "CC BY-SA 4.0",
+          "licenseVerbatim": "Same as hero: CC BY-SA 4.0, own work, 2015-08-15.",
+          "note": "Angled 3/4 view from the street corner, same shoot. Hero (02) chosen for a cleaner straight-on symmetrical facade view."
+        }
+      ]
+    },
+    "sv-kazimiero-delhi-on": {
+      "src": "/images/parishes/delhi-st-casimir.jpg",
+      "alt": "St. Casimir church in Delhi, Ontario.",
+      "attribution": "Photo: Jfvoll, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Commons LicenseShortName: \"CC BY-SA 4.0\"; UsageTerms: \"Creative Commons Attribution-Share Alike 4.0\"; AttributionRequired: true. {{self|cc-by-sa-4.0}}. Own work, 2017-08-27. — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:St._Casmir_Church_-_Delhi,_ON.jpg. Identity: Description: \"St. Casmir Lithuanian Roman Catholic Church in Delhi, ON.\" Filed under Commons categories \"Saint Casimir churches in Canada|Delhi,\" \"Former churches in the Roman Catholic Diocese of London, Ontario,\" and \"Lithuanian churches in Canada.\" Matches registry-unified.json slug casimir-delhi-on (Canadia",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St._Casmir_Church_-_Delhi,_ON.jpg"
+    },
+    "sv-pranciskaus-lawrence-ma": {
+      "src": "/images/parishes/lawrence-st-francis-1958.jpg",
+      "alt": "Bradford Street, Lawrence, in 1958, with St. Francis Lithuanian church in view.",
+      "attribution": "Digital Commonwealth (Boston Public Library) — No known copyright restrictions.",
+      "license": "No known copyright restrictions",
+      "rights": "public_domain",
+      "rightsNote": "rights_ss: \"No known copyright restrictions.\" license_ss: \"No known restrictions on use.\" reuse_allowed: \"no restrictions\". — verified 2026-07-27 against https://www.digitalcommonwealth.org/search/commonwealth:gq67rf33j. Identity: Digital Commonwealth subject heading: 'St. Francis of Assisi Church (Lawrence, Mass.)'; abstract/description: 'St. Francis Church.' Matches parish case record address, 94 Bradford Street, Lawrence -- the photo's own title places it 'On Bradford St.' Verified visually: a Gothic-style brick bell tower with cross and tracery windows is visible over the rooftops in the p",
+      "evidenceUrl": "https://www.digitalcommonwealth.org/search/commonwealth:gq67rf33j"
+    },
+    "saldziausios-jezaus-sirdies-lawrence-ma": {
+      "src": "/images/parishes/lawrence-sacred-heart-stereograph.jpg",
+      "alt": "The Garden Street church building later acquired by Sacred Heart Lithuanian National Catholic parish, Lawrence.",
+      "attribution": "Digital Commonwealth (Boston Public Library) — No known copyright restrictions.",
+      "license": "No known copyright restrictions",
+      "rights": "public_domain",
+      "rightsNote": "rights_ss: \"No known copyright restrictions.\" license_ss: \"No known restrictions on use.\" reuse_allowed: \"no restrictions\". — verified 2026-07-27 against https://www.digitalcommonwealth.org/search/commonwealth:66830b09d. Identity: Digital Commonwealth's own metadata gives only a city-level geocode and no street address, so building continuity to our parish record was confirmed via an independent secondary source rather than the DC catalog alone: Global True Lithuania states verbatim, 'The second Lithuanian church of Lawrence, constructed in 1855 (Garden Street 150), used to be owned by an inde",
+      "evidenceUrl": "https://www.digitalcommonwealth.org/search/commonwealth:66830b09d"
+    },
+    "ausros-vartu-manhattan-ny": {
+      "src": "/images/parishes/manhattan-our-lady-of-vilnius-2011.jpg",
+      "alt": "Our Lady of Vilnius church on Broome Street, Manhattan, in 2011; demolished 2015.",
+      "attribution": "Photo: James Russiello, Wikimedia Commons, Public domain (author's own dedication).",
+      "license": "Public domain (author's own dedication)",
+      "rights": "public_domain",
+      "rightsNote": "\"This work has been released into the public domain by its author, James Russiello at English Wikipedia. This applies worldwide. James Russiello grants anyone the right to use this work for any purpose, without any conditions, unless such conditions are required by law.\" (UsageTerms: Public domain; AttributionRequired: false) — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:Our_Lady_of_Vilnius_568-570_Broome_Street.jpg. Identity: Commons description states verbatim: 'Our Lady of Vilnius Church is a closed Roman Catholic parish church... located at 568-570 Broome Street in ",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Vilnius_568-570_Broome_Street.jpg"
+    },
+    "dievo-apvaizdos-scranton-pa": {
+      "src": "/images/parishes/scranton-divine-providence.jpg",
+      "alt": "Divine Providence Lithuanian church in Scranton.",
+      "attribution": "Photo: Renata3 (Wikimedia Commons username), Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "LicenseShortName: \"CC BY-SA 4.0\"; UsageTerms: \"Creative Commons Attribution-Share Alike 4.0\"; Credit: \"Own work.\" — verified 2026-07-27 against https://commons.wikimedia.org/wiki/File:Lithuania_National_Catholic_Church,_Scranton,_PA_-_front_20200621.jpg. Identity: Commons category: 'Providence of God National Catholic Church'; taken 2020-06-21. A companion photo in the same 12-image set by the same photographer ('...- sign 20200621.jpg') shows the parish sign reading 'LITHUANIAN NATIONAL CATHOLIC CHURCH... SUNDAY MASS 9:00AM... SERVICES ARE IN ENGLISH... REV. WALTER PLACEK, PASTOR' with an '19",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Lithuania_National_Catholic_Church,_Scranton,_PA_-_front_20200621.jpg",
+      "alternates": [
+        "File:Lithuania National Catholic Church, Scranton, PA - side view 20200621 1.jpg (and 2, 3)",
+        "File:Lithuania National Catholic Church, Scranton, PA - sign 20200621.jpg -- shows parish signage confirming identity",
+        "File:Lithuania National Catholic Church, Scranton, PA - 1927 sign 20200621.jpg -- cornerstone detail",
+        "File:Lithuania National Catholic Church, Scranton, PA -Lithuanian sign 20200621.jpg",
+        "File:Lithuania National Catholic Church, Scranton, PA - church and rectory 20200621.jpg",
+        "File:Lithuania National Catholic Church, Scranton, PA - rectory 20200621.jpg (and (2), (3))",
+        "File:Lithuania National Catholic Church, Scranton, PA - side door 20200621.jpg",
+        "all same photographer/date/license (CC BY-SA 4.0, Renata3, 2020-06-21)"
+      ]
     }
+  },
+  "_registryNotes": {
+    "cleveland-st-casimir-identity": "Cleveland has TWO St. Casimirs. The twin-towered church at 8223 Sowinski Ave (Commons photos by Tim Evanson et al.) is the POLISH parish (closed 2009, reopened 2012 by Rome). Our Lithuanian record sv-kazimiero-cleveland-oh is the parish formed by the 2009 St. George + Our Lady of Perpetual Help merger, worshiping in the Neff Road church. Sowinski Ave images must never attach to sv-kazimiero-cleveland-oh, sv-jurgio-cleveland-oh, or dievo-motinos-nuolatines-pagalbos-cleveland-oh. Adjudicated with the Hearth session 2026-07-26."
   }
 }

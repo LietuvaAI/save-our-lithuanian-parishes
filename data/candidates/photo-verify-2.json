@@ -1,0 +1,282 @@
+{
+  "pass": "photo-rights-verification-2",
+  "verifiedAt": "2026-07-27",
+  "method": "Wikimedia Commons API (action=query, prop=imageinfo, iiprop=extmetadata) for verbatim license/author metadata; all 23 download URLs (12 heroes + 11 alternates) live-checked via HEAD request, all HTTP 200; identity cross-checked against data/case-records/*.json and registry-unified.json; reverse-geocoded author-supplied GPS coordinates via OpenStreetMap Nominatim where available (Pittston, Gary, Delhi); visually inspected full-resolution images for exterior/interior and hero selection; targeted web searches (Greater Pittston Historical Society, WNEP) to resolve two building-identity questions (Pittston, Wilkes-Barre) where the 1899 album photo appears to predate a later building replacement/rebuild documented for the parish.",
+  "verified": [
+    {
+      "slug": "svc-trejybes-wilkes-barre-pa",
+      "file": "File:08 WILKES-BARRE LIETUVISZKA BAŽNYCZIA.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:08_WILKES-BARRE_LIETUVISZKA_BA%C5%BDNYCZIA.jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/08_WILKES-BARRE_LIETUVISZKA_BA%C5%BDNYCZIA.jpg",
+      "author": "Jonas Žilius (writing under pseudonym \"Jonas, Jr.\")",
+      "license": "Public domain",
+      "licenseVerbatim": "Commons LicenseShortName: \"Public domain\"; UsageTerms: \"Public domain\"; permission template {{PD-old-70-1923}}. Credit line: \"This file is from the Mechanical Curator collection... released to Flickr Commons by the British Library.\"",
+      "identityEvidence": "File caption reads \"WILKES-BARRE LIETUVISZKA BAŽNYCZIA\" (\"Wilkes-Barre's Lithuanian church\"); Commons notes field: \"The Catholic Church of lithuanian emigrants in Wilkes-Barre, Pennsylvania.\" Wilkes-Barre had exactly one Lithuanian parish, Holy Trinity (Švč. Trejybės), at 416 E. South Street, matching case-record data/case-records/svc-trejybes-wilkes-barre-pa.json. Image extracted from page 91 of 'Lietuviai Amerikoj' (1899) by Jonas Žilius, British Library HMNTS 10412.ee.38, digitized via British Library/Flickr Commons Mechanical Curator project.",
+      "exteriorOrInterior": "exterior",
+      "imageWidthHeight": "1359x1217",
+      "alternates": [],
+      "verdict": "accept - hero (only known image; historic PD scan). CORRECTION: task brief cited this as from an 1898 'Lietuviszkas albumas' — the Commons record instead documents it as page 91 of 'Lietuviai Amerikoj' (Lithuanians in America), published 1899 by Jonas Žilius under the pseudonym 'Jonas, Jr.' (a real, separate 1898 book titled 'Lietuviszkas albumas' also exists on Commons under different file names/IDs, e.g. 'Lietuviszkas albumas - Lithuanian album 1898 (191...).jpg', but it is NOT the source of this specific file). Use 'Lietuviai Amerikoj (1899), by Jonas Žilius' in any caption/credit, not 'Lietuviszkas albumas (1898)'. CAVEAT: 2015 press (WNEP) describes the demolished building as having 'two lofty steeples' dominating the skyline; this 1899 image shows one main tower plus one small secondary cupola on the transept — likely depicts the parish's earlier building phase (pre-dating or predating a possible tower addition/rebuild) rather than the exact final silhouette described in 2015 demolition coverage. Still the same parish/site and the only available image; flagged for editorial awareness, not a rejection."
+    },
+    {
+      "slug": "sv-jurgio-shenandoah-pa",
+      "file": "File:17 SHENENDOHA'RIO LIETUVISZKA BAŽNYCZIA.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:17_SHENENDOHA%27RIO_LIETUVISZKA_BA%C5%BDNYCZIA.jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/17_SHENENDOHA%27RIO_LIETUVISZKA_BA%C5%BDNYCZIA.jpg",
+      "author": "Jonas Žilius (pseudonym \"Jonas, Jr.\")",
+      "license": "Public domain",
+      "licenseVerbatim": "Commons LicenseShortName: \"Public domain\"; UsageTerms: \"Public domain\"; permission template {{PD-old-70-1923}}. British Library Mechanical Curator collection credit line.",
+      "identityEvidence": "Caption \"SHENENDOHA'RIO LIETUVISZKA BAŽNYCZIA\" (\"Shenandoah's Lithuanian church\"); Commons notes: \"The Catholic Church of lithuanian emigrants in Shenandoah, Pennsylvania.\" Shenandoah's only Lithuanian parish was St. George, demolished 2009 (case-records/sv-jurgio-shenandoah-pa.json). Image shows a large twin-spire Gothic-revival brick church consistent with a major landmark church, matching the scale described in heritage sources. Extracted from page 55 of 'Lietuviai Amerikoj' (1899) by Jonas Žilius.",
+      "exteriorOrInterior": "exterior",
+      "imageWidthHeight": "1291x1629",
+      "alternates": [],
+      "verdict": "accept - hero (only known image of the demolished church; clean full-exterior PD historic scan; twin-spire architecture consistent with a major landmark building). Same source-title correction as item 1 applies: 'Lietuviai Amerikoj (1899) by Jonas Žilius,' not 'Lietuviszkas albumas (1898).'"
+    },
+    {
+      "slug": "sv-kazimiero-pittston-pa",
+      "file": "File:St. Casimir Church (Pittston, Pennsylvania) (01).jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:St._Casimir_Church_(Pittston,_Pennsylvania)_(01).jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Casimir_Church_(Pittston,_Pennsylvania)_(01).jpg",
+      "author": "Doug Kerr",
+      "license": "CC BY-SA 2.0",
+      "licenseVerbatim": "Commons LicenseShortName: \"CC BY-SA 2.0\"; UsageTerms: \"Creative Commons Attribution-Share Alike 2.0\"; AttributionRequired: true. Source: Flickr (https://www.flickr.com/photos/7327243@N05/4112069948), uploaded via Flickr upload bot 2011-05-16, reviewed by 'Pauk'. {{cc-by-sa-2.0}} on file page.",
+      "identityEvidence": "Taken 2009-11-16 (~19 months after the parish's April 6, 2008 closure), geotagged 41.3240282,-75.7874673, which reverse-geocodes to Church Street, Pittston, PA — the Church & Butler Streets corner independently documented by the Greater Pittston Historical Society (greaterpittstonhistory.org) as St. Casimir's exact address. Web research (Greater Pittston Historical Society + general search corroboration) confirms St. Casimir's FINAL building was a 1909 Baroque-style church designed by Louis Giele of New York, built of brick with Indiana limestone trimmings, dedicated Easter Monday March 28, 1910, and used until the 2008 closure — this exactly matches the grand twin-tower, limestone-trimmed, pedimented facade visible in Doug Kerr's photo. The 'Available'/Atlas Realty signage on the building is consistent with the church having just closed and gone up for lease/sale (case-records/sv-kazimiero-pittston-pa.json confirms a 2011 sale to Gina Malsky followed this period). Categorized on Commons under 'Saint Casimir churches in the United States' and 'Churches in Pittston, Pennsylvania.'",
+      "exteriorOrInterior": "exterior",
+      "imageWidthHeight": "1200x1600",
+      "alternates": [
+        {
+          "file": "File:13 PITTSTONO LIETUVISZKA BAŽNYCZIA.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:13_PITTSTONO_LIETUVISZKA_BA%C5%BDNYCZIA.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/13_PITTSTONO_LIETUVISZKA_BA%C5%BDNYCZIA.jpg",
+          "author": "Jonas Žilius (pseudonym \"Jonas, Jr.\")",
+          "license": "Public domain",
+          "licenseVerbatim": "Commons LicenseShortName: \"Public domain\"; {{PD-old-70-1923}}.",
+          "note": "1899 image captioned 'PITTSTONO LIETUVISZKA BAŽNYCZIA,' extracted from page 103 of 'Lietuviai Amerikoj' (1899). Shows a modest single-steeple brick chapel — this is almost certainly St. Casimir's FIRST building (parish founded 1885-1890, cornerstone blessed June 30, 1889), which was superseded by the grander 1909 Baroque church shown in the hero image. Same parish, earlier/different building — genuine PD historic image but not the structure that survived to 2008 and stands today as a residence."
+        }
+      ],
+      "verdict": "accept - hero is the MODERN Doug Kerr 2009 photo (deviating from the task brief's tentative preference for the 1898/1899 image), because research shows the 1899 scan and the Doug Kerr photo depict two different buildings from two different eras of the same parish, and the Doug Kerr photo depicts the actual 1909-2008 building that survives today as a residential conversion (matching the site's case record). The 1899 image is kept as a historical alternate depicting the parish's earlier chapel, not the surviving building."
+    },
+    {
+      "slug": "sv-kryziaus-mount-carmel-pa",
+      "file": "File:10 MT-CARMIU LIETUVISZKA BAŽNYCZIA.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:10_MT-CARMIU_LIETUVISZKA_BA%C5%BDNYCZIA.jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/10_MT-CARMIU_LIETUVISZKA_BA%C5%BDNYCZIA.jpg",
+      "author": "Jonas Žilius (pseudonym \"Jonas, Jr.\")",
+      "license": "Public domain",
+      "licenseVerbatim": "Commons LicenseShortName: \"Public domain\"; UsageTerms: \"Public domain\"; {{PD-old-70-1923}}.",
+      "identityEvidence": "Caption \"MT-CARMIU LIETUVISZKA BAŽNYCZIA\" (\"Mount Carmel's Lithuanian church\"); Commons notes: \"The Catholic Church of lithuanian emigrants in Mount Carmel, Pennsylvania.\" Commons categorizes the file under \"Churches in Pennsylvania built in 1892\" and \"Holy Cross churches in Pennsylvania\" — matching case-records/sv-kryziaus-mount-carmel-pa.json, which states Holy Cross (Šv. Kryžiaus) at Sixth & Poplar Streets has an 1892 Lithuanian cornerstone still in place, and was Mount Carmel's only Lithuanian parish. The wood-frame single-steeple chapel shown is consistent with an 1892-built structure photographed just 7 years later (1899).",
+      "exteriorOrInterior": "exterior",
+      "imageWidthHeight": "1299x1623",
+      "alternates": [],
+      "verdict": "accept - hero (only image provided; building still stands per case record, now used as a warehouse — no modern photo available in this pass, but the 1892 date and single building lineage line up cleanly, unlike Wilkes-Barre/Pittston)."
+    },
+    {
+      "slug": "sv-kazimiero-pittsburgh-pa",
+      "file": "File:St. Casimir’s Church, South Side, Pittsburgh, 2021-07-24.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:St._Casimir%E2%80%99s_Church,_South_Side,_Pittsburgh,_2021-07-24.jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Casimir%E2%80%99s_Church,_South_Side,_Pittsburgh,_2021-07-24.jpg",
+      "author": "Cbaile19",
+      "license": "CC0",
+      "licenseVerbatim": "Commons LicenseShortName: \"CC0\"; UsageTerms: \"Creative Commons Zero, Public Domain Dedication\"; {{self|cc-zero}} on file page. Own work.",
+      "identityEvidence": "Description: \"St. Casimir's, South Side, Pittsburgh. The former church is now condominium apartments.\" Filed under Commons category \"St. Casimir Church (Pittsburgh, Pennsylvania).\" Matches case-records/sv-kazimiero-pittsburgh-pa.json in every particular: South Side Flats, converted 2017-2018 into \"22nd Street Condos\" at 2132 Sarah Street (case record's cited address; the task brief's '2114 Sarah Street' appears to be a minor transcription variant — both agree on Sarah Street, South Side, the 22nd Street Condos building). Only Lithuanian parish in Pittsburgh (founded 1893, church dedicated 1902). Twin-tower brick Baroque-revival architecture with domed cupolas visible in photo is consistent with the 1902 building.",
+      "exteriorOrInterior": "exterior",
+      "imageWidthHeight": "3321x2906",
+      "alternates": [
+        {
+          "file": "File:St. Casimir Church, South Side, 2015-06-15, 01.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:St._Casimir_Church,_South_Side,_2015-06-15,_01.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Casimir_Church,_South_Side,_2015-06-15,_01.jpg",
+          "author": "Cbaile19",
+          "license": "CC0",
+          "licenseVerbatim": "{{self|cc-zero}}. \"Creative Commons Zero, Public Domain Dedication.\"",
+          "note": "2015-06-15 photo, same building. Author's own file-page note: \"This extreme-wide-angle picture of the façade distorts the towers, but otherwise preserves the proportions\" — usable but the 2021 photo has no such distortion, hence chosen as hero. 4911x5491px, very high resolution."
+        },
+        {
+          "file": "File:11 PITTSBURGH'O LIETUVISZKA BAŽNYCZIA.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:11_PITTSBURGH%27O_LIETUVISZKA_BA%C5%BDNYCZIA.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/11_PITTSBURGH%27O_LIETUVISZKA_BA%C5%BDNYCZIA.jpg",
+          "author": "Jonas Žilius (pseudonym \"Jonas, Jr.\")",
+          "license": "Public domain",
+          "licenseVerbatim": "Commons LicenseShortName: \"Public domain\"; {{PD-old-70-1923}}.",
+          "note": "1899 image ('Lietuviai Amerikoj' page 169), single-steeple Gothic design — likely depicts the church at or just before its 1902 dedication (3-year gap, plausibly the same building nearing completion, unlike the Wilkes-Barre/Pittston cases where a full later rebuild is documented). NOTE: Commons miscategorizes this file under 'Demolished churches in Pittsburgh,' which contradicts strong, recent (2025) sourcing in our own case record confirming the building still stands as condominiums — treat the Commons 'demolished' category as a stale/incorrect tag, not a red flag on the photo's identity."
+        }
+      ],
+      "verdict": "accept - hero is the 2021 CC0 modern photo (clean, undistorted, current-state caption). Both CC0 modern alternates and the 1899 historic image are usable; site should NOT reuse Commons' 'Demolished churches in Pittsburgh' category as it is factually wrong per this project's own verified case record."
+    },
+    {
+      "slug": "sv-kazimiero-philadelphia-pa",
+      "file": "File:St Casimir's Lithuanian Catholic Church - 324 Wharton St, Philadelphia, PA 19147.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:St_Casimir%27s_Lithuanian_Catholic_Church_-_324_Wharton_St,_Philadelphia,_PA_19147.jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Casimir%27s_Lithuanian_Catholic_Church_-_324_Wharton_St,_Philadelphia,_PA_19147.jpg",
+      "author": "Nick-philly",
+      "license": "CC BY-SA 4.0",
+      "licenseVerbatim": "Commons LicenseShortName: \"CC BY-SA 4.0\"; UsageTerms: \"Creative Commons Attribution-Share Alike 4.0\"; AttributionRequired: true. Own work, 2018-10-28.",
+      "identityEvidence": "Visually confirmed: the companion 'Front Detail' photo shows a legible sign on the church facade reading \"ST. CASIMIR'S LITHUANIAN CATHOLIC CHURCH AND SCHOOL.\" File title and description both give the address as 324 Wharton St, Philadelphia, PA 19147 — matching case-records/sv-kazimiero-philadelphia-pa.json (church at 4th & Wharton Streets / rectory at 324 Wharton St, Pennsport). This is the strongest possible identity confirmation (on-building signage naming the exact parish).",
+      "exteriorOrInterior": "exterior",
+      "imageWidthHeight": "2136x3216",
+      "alternates": [
+        {
+          "file": "File:St Casimir's Lithuanian Catholic Church - 324 Wharton St, Philadelphia, PA 19147 (Front Detail).jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:St_Casimir%27s_Lithuanian_Catholic_Church_-_324_Wharton_St,_Philadelphia,_PA_19147_(Front_Detail).jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Casimir%27s_Lithuanian_Catholic_Church_-_324_Wharton_St,_Philadelphia,_PA_19147_(Front_Detail).jpg",
+          "author": "Nick-philly",
+          "license": "CC BY-SA 4.0",
+          "licenseVerbatim": "Commons LicenseShortName: \"CC BY-SA 4.0\"; same author/own-work, 2018-10-28.",
+          "note": "Tight upward-angle crop of the facade/tower showing the \"ST. CASIMIR'S LITHUANIAN CATHOLIC CHURCH AND SCHOOL\" sign clearly — best single piece of identity evidence but a partial/detail shot, not a full-building hero."
+        }
+      ],
+      "verdict": "accept - hero (full exterior, high resolution, CC BY-SA 4.0, unambiguous on-building signage confirms identity). Church is still an active Catholic worship site per case record, not closed."
+    },
+    {
+      "slug": "sv-jurgio-chicago-il",
+      "file": "File:Saint George Lithuanian Church, Chicago, 1913 (NBY 843).jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Saint_George_Lithuanian_Church,_Chicago,_1913_(NBY_843).jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_George_Lithuanian_Church,_Chicago,_1913_(NBY_843).jpg",
+      "author": "Percy H. (Percy Haydn) Sloan, 1867-",
+      "license": "Public domain",
+      "licenseVerbatim": "Commons LicenseShortName: \"Public domain\"; {{PD-old-70-expired}}; CC-PD-Mark. Credit: CARLI Digital Collections, NBY Chicago Neighborhoods collection (https://collections.carli.illinois.edu/cdm/singleitem/collection/nby_chicago/id/843).",
+      "identityEvidence": "Verso caption: \"St George Lithuanian, 31st and Auburn.\" Case-records/sv-jurgio-chicago-il.json confirms St. George, Chicago's oldest Lithuanian parish, stood at 33rd/Lituanica Ave in Bridgeport and was demolished 1990; Lituanica Avenue was renamed from Auburn Avenue on January 1, 1934 specifically to honor Lithuanian pilots who departed from this church in 1933 — so \"Auburn\" in the 1913 caption is simply the pre-1934 name of the same street the parish stood on. Visually a dramatic full Gothic exterior, clearly the largest/most striking of the three NBY exterior views.",
+      "exteriorOrInterior": "exterior",
+      "imageWidthHeight": "2420x3600",
+      "alternates": [
+        {
+          "file": "File:Saint George Lithuanian Church, Chicago, 1913 (NBY 805).jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Saint_George_Lithuanian_Church,_Chicago,_1913_(NBY_805).jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_George_Lithuanian_Church,_Chicago,_1913_(NBY_805).jpg",
+          "author": "Percy H. Sloan",
+          "license": "Public domain",
+          "licenseVerbatim": "{{PD-old-70-expired}}; CC-PD-Mark.",
+          "note": "Verso: \"St. George of the Lithuanians, Bridgeport, 31st and Auburn; windtaken, retake from different point.\" Full street-view exterior with rowhouses in foreground, slightly more distant than the hero shot."
+        },
+        {
+          "file": "File:Saint George Lithuanian Church, Chicago, 1913 (NBY 766).jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Saint_George_Lithuanian_Church,_Chicago,_1913_(NBY_766).jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_George_Lithuanian_Church,_Chicago,_1913_(NBY_766).jpg",
+          "author": "Percy H. Sloan",
+          "license": "Public domain",
+          "licenseVerbatim": "{{PD-old-70-expired}}; CC-PD-Mark.",
+          "note": "Verso: \"Gothic; St George of Lithuanian; tympanum above entrance; Auburn Ave. and 31st.\" Close detail of the entrance tympanum/portal only, not a full exterior — kept as a detail alternate."
+        },
+        {
+          "file": "File:St. Georges Lithuanian R.C. Church (NBY 417274).jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:St._Georges_Lithuanian_R.C._Church_(NBY_417274).jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Georges_Lithuanian_R.C._Church_(NBY_417274).jpg",
+          "author": "Unknown (Curt Teich & Co. postcard)",
+          "license": "Public domain",
+          "licenseVerbatim": "{{PD-old-70-expired}}; CC-PD-Mark. Credit: Curt Teich Postcard Archives (CARLI, NBY Teich collection).",
+          "note": "c.1919 colorized postcard titled \"ST. GEORGE'S LITHUANIAN R. C. CHURCH, CHICAGO, ILL.\" with inset views of the rectory and \"St. George's Lithuanian School.\" Lower resolution (523x834) and a composite/postcard format rather than a clean photographic exterior, but valuable corroborating evidence naming the parish explicitly."
+        }
+      ],
+      "verdict": "accept - hero is NBY 843 (best full dramatic exterior, 1913, high resolution). All four files confirmed as the same demolished Bridgeport parish."
+    },
+    {
+      "slug": "sv-kazimiero-amsterdam-ny",
+      "file": "File:Former St. Casimir Church, Amsterdam.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Former_St._Casimir_Church,_Amsterdam.jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Former_St._Casimir_Church,_Amsterdam.jpg",
+      "author": "Beyond My Ken",
+      "license": "CC BY-SA 4.0",
+      "licenseVerbatim": "Commons LicenseShortName: \"CC BY-SA 4.0\"; UsageTerms: \"Creative Commons Attribution-Share Alike 4.0\"; AttributionRequired: true. Own work, 2020-09-23. (Also tagged with legacy GFDL/CC-BY-SA-4.0,3.0,2.5,2.0,1.0 license-migration templates.)",
+      "identityEvidence": "File description explicitly states: \"The Five World's Buddahs Temple, located at 262 Main Street in Amsterdam, New York, was formerly St. Casimir Church, a Lithuanian Catholic parish... still carries a Lithuanian inscription ('BAŽN.ŠV.KAZAMIERO'...) and a statue of Casimir on its belltower. The parish closed in 2009.\" Exact address (262 E. Main St.) and closure year (2009) match case-records/sv-kazimiero-amsterdam-ny.json precisely.",
+      "exteriorOrInterior": "exterior",
+      "imageWidthHeight": "2934x4519",
+      "alternates": [
+        {
+          "file": "File:Former St. Casimir Church, Amsterdam inscription and statue.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Former_St._Casimir_Church,_Amsterdam_inscription_and_statue.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Former_St._Casimir_Church,_Amsterdam_inscription_and_statue.jpg",
+          "author": "Beyond My Ken",
+          "license": "CC BY-SA 4.0",
+          "licenseVerbatim": "Same as hero: CC BY-SA 4.0, own work, 2020-09-23.",
+          "note": "Close-up of the surviving Lithuanian inscription (\"BAŽN.ŠV.KAZAMIERO\") and Casimir statue on the belltower — strong identity/heritage evidence, detail shot not a full exterior."
+        },
+        {
+          "file": "File:Former St. Casimir Church rectory, Amsterdam.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Former_St._Casimir_Church_rectory,_Amsterdam.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Former_St._Casimir_Church_rectory,_Amsterdam.jpg",
+          "author": "Beyond My Ken",
+          "license": "CC BY-SA 4.0",
+          "licenseVerbatim": "Same as hero: CC BY-SA 4.0, own work, 2020-09-23.",
+          "note": "Shows the detached two-story former rectory west of the church, not the church itself."
+        }
+      ],
+      "verdict": "accept - hero (full exterior, high resolution, address and closure year confirmed verbatim in the file's own description)."
+    },
+    {
+      "slug": "sv-kazimiero-gary-in",
+      "file": "File:St. Casimiri's Lithuanian Church (historical) Gary, Indiana - panoramio.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:St._Casimiri%27s_Lithuanian_Church_(historical)_Gary,_Indiana_-_panoramio.jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Casimiri%27s_Lithuanian_Church_(historical)_Gary,_Indiana_-_panoramio.jpg",
+      "author": "Lotzman Katzman",
+      "license": "CC BY-SA 3.0",
+      "licenseVerbatim": "Commons LicenseShortName: \"CC BY-SA 3.0\"; UsageTerms: \"Creative Commons Attribution-Share Alike 3.0\"; AttributionRequired: true. {{cc-by-sa-3.0|Lotzman Katzman}}; Panoramio upload, reviewed 2017-02-07.",
+      "identityEvidence": "Description: \"St. Casimiri's Lithuanian Church (historical) Gary, Indiana.\" Geotagged 41.58813,-87.353389 (source: Panoramio). Independently cross-checked against OpenStreetMap, which has a POI explicitly named \"Saint Casimir's Roman Catholic Church\" at 41.5884864,-87.3535791 (~15m away) on Lincoln Street, Gary, IN 46407 — matching case-records/sv-kazimiero-gary-in.json's identification of the building at 1368 West 15th Avenue / near 1351 Lincoln St, now used by the Power & Light Church of Gary.",
+      "exteriorOrInterior": "exterior",
+      "imageWidthHeight": "3872x2592",
+      "alternates": [],
+      "verdict": "accept - hero (only image provided; independently geo-confirmed via OSM POI; matches converted-building description in case record — boarded windows and repurposed-but-standing brick structure visible in photo)."
+    },
+    {
+      "slug": "ausros-vartu-worcester-ma",
+      "file": "File:Our Lady of Vilna - Worcester 01.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Vilna_-_Worcester_01.jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Our_Lady_of_Vilna_-_Worcester_01.jpg",
+      "author": "Farragutful",
+      "license": "CC BY-SA 4.0",
+      "licenseVerbatim": "Commons LicenseShortName: \"CC BY-SA 4.0\"; UsageTerms: \"Creative Commons Attribution-Share Alike 4.0\"; AttributionRequired: true. Own work, taken 21 June 2025.",
+      "identityEvidence": "Description: \"Our Lady of Vilna Church in Worcester, Massachusetts.\" Filed under Commons category \"Our Lady of Vilna Church (Worcester, Massachusetts).\" Matches case-records/ausros-vartu-worcester-ma.json: Aušros Vartų/Our Lady of Vilna Parish at 151/153 Sterling Street, Worcester — the only parish of this dedication in the USA, still an active Catholic church (now serving a Vietnamese congregation).",
+      "exteriorOrInterior": "exterior",
+      "imageWidthHeight": "3629x3287",
+      "alternates": [
+        {
+          "file": "File:Our Lady of Vilna - Worcester 02.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Vilna_-_Worcester_02.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Our_Lady_of_Vilna_-_Worcester_02.jpg",
+          "author": "Farragutful",
+          "license": "CC BY-SA 4.0",
+          "licenseVerbatim": "Same as hero: CC BY-SA 4.0, own work, taken 21 June 2025.",
+          "note": "Straight-on frontal shot of the same church, same day/shoot. Equally usable; hero chosen for showing more of the building's massing/depth."
+        }
+      ],
+      "verdict": "accept - hero (full exterior, current, high resolution, active parish confirmed)."
+    },
+    {
+      "slug": "sv-vincento-de-paul-girardville-pa",
+      "file": "File:St. Vincent de Paul RC Church, Girardville PA 02.JPG",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:St._Vincent_de_Paul_RC_Church,_Girardville_PA_02.JPG",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Vincent_de_Paul_RC_Church,_Girardville_PA_02.JPG",
+      "author": "Shuvaev",
+      "license": "CC BY-SA 4.0",
+      "licenseVerbatim": "Commons LicenseShortName: \"CC BY-SA 4.0\"; UsageTerms: \"Creative Commons Attribution-Share Alike 4.0\"; AttributionRequired: true. Own work, 2015-08-15.",
+      "identityEvidence": "Description: \"St. Vincent de Paul Roman Catholic Church, 260 N 2nd St., Girardville, Schuylkill County, Pennsylvania.\" Address independently corroborates case-records/sv-vincento-de-paul-girardville-pa.json, which cites the church at \"2nd and C Streets\" and separately notes a mass-times aggregator giving \"260 North 2nd Street\" — this Commons file confirms that exact address on its own authority.",
+      "exteriorOrInterior": "exterior",
+      "imageWidthHeight": "3456x4608",
+      "alternates": [
+        {
+          "file": "File:St. Vincent de Paul RC Church, Girardville PA 01.JPG",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:St._Vincent_de_Paul_RC_Church,_Girardville_PA_01.JPG",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Vincent_de_Paul_RC_Church,_Girardville_PA_01.JPG",
+          "author": "Shuvaev",
+          "license": "CC BY-SA 4.0",
+          "licenseVerbatim": "Same as hero: CC BY-SA 4.0, own work, 2015-08-15.",
+          "note": "Angled 3/4 view from the street corner, same shoot. Hero (02) chosen for a cleaner straight-on symmetrical facade view."
+        }
+      ],
+      "verdict": "accept - hero (full exterior, high resolution, address self-confirms against case record). Church closed as a worship site January 5, 2026, per case record; building still stands."
+    },
+    {
+      "slug": "sv-kazimiero-delhi-on",
+      "file": "File:St. Casmir Church - Delhi, ON.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:St._Casmir_Church_-_Delhi,_ON.jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Casmir_Church_-_Delhi,_ON.jpg",
+      "author": "Jfvoll",
+      "license": "CC BY-SA 4.0",
+      "licenseVerbatim": "Commons LicenseShortName: \"CC BY-SA 4.0\"; UsageTerms: \"Creative Commons Attribution-Share Alike 4.0\"; AttributionRequired: true. {{self|cc-by-sa-4.0}}. Own work, 2017-08-27.",
+      "identityEvidence": "Description: \"St. Casmir Lithuanian Roman Catholic Church in Delhi, ON.\" Filed under Commons categories \"Saint Casimir churches in Canada|Delhi,\" \"Former churches in the Roman Catholic Diocese of London, Ontario,\" and \"Lithuanian churches in Canada.\" Matches registry-unified.json slug casimir-delhi-on (Canadian comparator, closed October 2020 after 61 years). Geotagged 42.856265,-80.495744 in Delhi, Norfolk County, ON (reverse-geocoded to Talbot Road, Delhi — a plausible through-street location for a small-town parish).",
+      "exteriorOrInterior": "exterior",
+      "imageWidthHeight": "4912x2760",
+      "alternates": [],
+      "verdict": "accept - hero (only image provided; small modest brick chapel consistent with a small-town parish; identity strongly corroborated by explicit author description and Commons categorization)."
+    }
+  ],
+  "rejected": []
+}

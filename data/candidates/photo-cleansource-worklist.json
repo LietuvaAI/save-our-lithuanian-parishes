@@ -1,0 +1,693 @@
+{
+ "note": "Work list for the clean-source photo sweep 2026-07-26. Find ONLY images with explicit public-domain status or open license.",
+ "parishes": [
+  {
+   "slug": "sv-kazimiero-gary-in",
+   "nameLt": "Šv. Kazimiero",
+   "nameEn": null,
+   "city": "Gary",
+   "state": "IN",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-onos-spring-valley-il",
+   "nameLt": "Šv. Onos",
+   "nameEn": null,
+   "city": "Spring Valley",
+   "state": "IL",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-jurgio-chicago-il",
+   "nameLt": "Šv. Jurgio",
+   "nameEn": null,
+   "city": "Chicago",
+   "state": "IL",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-mykolo-north-chicago-il",
+   "nameLt": "Šv. Mykolo",
+   "nameEn": null,
+   "city": "North Chicago",
+   "state": "IL",
+   "priority": "normal"
+  },
+  {
+   "slug": "ausros-vartu-chicago-il",
+   "nameLt": "Aušros Vartų",
+   "nameEn": null,
+   "city": "Chicago",
+   "state": "IL",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-kazimiero-chicago-il",
+   "nameLt": "Šv. Kazimiero",
+   "nameEn": null,
+   "city": "Chicago",
+   "state": "IL",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-juozapo-south-chicago-il",
+   "nameLt": "Šv. Juozapo",
+   "nameEn": null,
+   "city": "South Chicago",
+   "state": "IL",
+   "priority": "normal"
+  },
+  {
+   "slug": "dievo-apvaizdos-chicago-il",
+   "nameLt": "Dievo Apvaizdos",
+   "nameEn": null,
+   "city": "Chicago",
+   "state": "IL",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-kryziaus-chicago-il",
+   "nameLt": "Šv. Kryžiaus",
+   "nameEn": null,
+   "city": "Chicago",
+   "state": "IL",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-konstantino-oglesby-il",
+   "nameLt": "Šv. Konstantino",
+   "nameEn": null,
+   "city": "Oglesby",
+   "state": "IL",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-pranciskaus-east-chicago-in",
+   "nameLt": "Šv. Pranciškaus",
+   "nameEn": null,
+   "city": "East Chicago",
+   "state": "IN",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-kazimiero-sioux-city-ia",
+   "nameLt": "Šv. Kazimiero",
+   "nameEn": null,
+   "city": "Sioux City",
+   "state": "IA",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-kazimiero-kansas-city-mo",
+   "nameLt": "Šv. Kazimiero",
+   "nameEn": null,
+   "city": "Kansas City",
+   "state": "MO",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-kazimiero-brockton-ma",
+   "nameLt": "Šv. Kazimiero",
+   "nameEn": null,
+   "city": "Brockton",
+   "state": "MA",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-petro-cambridge-ma",
+   "nameLt": "Šv. Petro",
+   "nameEn": null,
+   "city": "Cambridge",
+   "state": "MA",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-pranciskaus-lawrence-ma",
+   "nameLt": "Šv. Pranciškaus",
+   "nameEn": null,
+   "city": "Lawrence",
+   "state": "MA",
+   "priority": "normal"
+  },
+  {
+   "slug": "lietuviu-baznycia-unnamed-haverhill-ma",
+   "nameLt": "Lietuvių bažnyčia (unnamed)",
+   "nameEn": null,
+   "city": "Haverhill",
+   "state": "MA",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-jurgio-norwood-ma",
+   "nameLt": "Šv. Jurgio",
+   "nameEn": null,
+   "city": "Norwood",
+   "state": "MA",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-kazimiero-worcester-ma",
+   "nameLt": "Šv. Kazimiero",
+   "nameEn": null,
+   "city": "Worcester",
+   "state": "MA",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "ausros-vartu-worcester-ma",
+   "nameLt": "Aušros Vartų",
+   "nameEn": null,
+   "city": "Worcester",
+   "state": "MA",
+   "priority": "normal"
+  },
+  {
+   "slug": "ausros-vartu-manhattan-ny",
+   "nameLt": "Aušros Vartų",
+   "nameEn": null,
+   "city": "Manhattan",
+   "state": "NY",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-jurgio-rochester-ny",
+   "nameLt": "Šv. Jurgio",
+   "nameEn": null,
+   "city": "Rochester",
+   "state": "NY",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-jurgio-brooklyn-ny",
+   "nameLt": "Šv. Jurgio",
+   "nameEn": null,
+   "city": "Brooklyn",
+   "state": "NY",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-jurgio-niagara-falls-ny",
+   "nameLt": "Šv. Jurgio",
+   "nameEn": null,
+   "city": "Niagara Falls",
+   "state": "NY",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-kazimiero-amsterdam-ny",
+   "nameLt": "Šv. Kazimiero",
+   "nameEn": null,
+   "city": "Amsterdam",
+   "state": "NY",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-mykolo-bayonne-nj",
+   "nameLt": "Šv. Mykolo",
+   "nameEn": null,
+   "city": "Bayonne",
+   "state": "NJ",
+   "priority": "normal"
+  },
+  {
+   "slug": "lietuviu-baznycia-unnamed-newark-nj",
+   "nameLt": "Lietuvių bažnyčia (unnamed)",
+   "nameEn": null,
+   "city": "Newark",
+   "state": "NJ",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-kazimiero-paterson-nj",
+   "nameLt": "Šv. Kazimiero",
+   "nameEn": null,
+   "city": "Paterson",
+   "state": "NJ",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-andriejaus-new-britain-ct",
+   "nameLt": "Šv. Andriejaus",
+   "nameEn": null,
+   "city": "New Britain",
+   "state": "CT",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-kazimiero-new-haven-ct",
+   "nameLt": "Šv. Kazimiero",
+   "nameEn": null,
+   "city": "New Haven",
+   "state": "CT",
+   "priority": "normal"
+  },
+  {
+   "slug": "lietuviu-baznycia-unnamed-ansonia-ct",
+   "nameLt": "Lietuvių bažnyčia (unnamed)",
+   "nameEn": null,
+   "city": "Ansonia",
+   "state": "CT",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-juozapo-waterbury-ct",
+   "nameLt": "Šv. Juozapo",
+   "nameEn": null,
+   "city": "Waterbury",
+   "state": "CT",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-kazimiero-nashua-nh",
+   "nameLt": "Šv. Kazimiero",
+   "nameEn": null,
+   "city": "Nashua",
+   "state": "NH",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-antano-detroit-mi",
+   "nameLt": "Šv. Antano",
+   "nameEn": null,
+   "city": "Detroit",
+   "state": "MI",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-petro-detroit-mi",
+   "nameLt": "Šv. Petro",
+   "nameEn": null,
+   "city": "Detroit",
+   "state": "MI",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-antano-omaha-ne",
+   "nameLt": "Šv. Antano",
+   "nameEn": null,
+   "city": "Omaha",
+   "state": "NE",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-jurgio-cleveland-oh",
+   "nameLt": "Šv. Jurgio",
+   "nameEn": null,
+   "city": "Cleveland",
+   "state": "OH",
+   "priority": "normal"
+  },
+  {
+   "slug": "dievo-motinos-nuolatines-pagalbos-cleveland-oh",
+   "nameLt": "Dievo Motinos Nuolatinės Pagalbos",
+   "nameEn": null,
+   "city": "Cleveland",
+   "state": "OH",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-jurgio-shenandoah-pa",
+   "nameLt": "Šv. Jurgio",
+   "nameEn": null,
+   "city": "Shenandoah",
+   "state": "PA",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-kazimiero-pittston-pa",
+   "nameLt": "Šv. Kazimiero",
+   "nameEn": null,
+   "city": "Pittston",
+   "state": "PA",
+   "priority": "normal"
+  },
+  {
+   "slug": "svc-trejybes-wilkes-barre-pa",
+   "nameLt": "Švč. Trejybės",
+   "nameEn": null,
+   "city": "Wilkes-Barre",
+   "state": "PA",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-marijos-apreiskimo-kingston-pa",
+   "nameLt": "Šv. Marijos Apreiškimo",
+   "nameEn": null,
+   "city": "Kingston",
+   "state": "PA",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-vincento-pauliecio-esplen-pa",
+   "nameLt": "Šv. Vincento Pauliečio",
+   "nameEn": null,
+   "city": "Esplen",
+   "state": "PA",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-kazimiero-pittsburgh-pa",
+   "nameLt": "Šv. Kazimiero",
+   "nameEn": null,
+   "city": "Pittsburgh",
+   "state": "PA",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-juozapo-scranton-pa",
+   "nameLt": "Šv. Juozapo",
+   "nameEn": null,
+   "city": "Scranton",
+   "state": "PA",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-mykolo-scranton-pa",
+   "nameLt": "Šv. Mykolo",
+   "nameEn": null,
+   "city": "Scranton",
+   "state": "PA",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-jono-coaldale-pa",
+   "nameLt": "Šv. Jono",
+   "nameEn": null,
+   "city": "Coaldale",
+   "state": "PA",
+   "priority": "normal"
+  },
+  {
+   "slug": "nekaltojo-prasidejimo-ausros-vartu-archbald-pa",
+   "nameLt": "Nekaltojo Prasidėjimo-Aušros Vartų",
+   "nameEn": null,
+   "city": "Archbald",
+   "state": "PA",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-kryziaus-mount-carmel-pa",
+   "nameLt": "Šv. Kryžiaus",
+   "nameEn": null,
+   "city": "Mount Carmel",
+   "state": "PA",
+   "priority": "normal"
+  },
+  {
+   "slug": "siluvos-dievo-motinos-maizeville-pa",
+   "nameLt": "Šiluvos Dievo Motinos",
+   "nameEn": null,
+   "city": "Maizeville",
+   "state": "PA",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-vincento-de-paul-girardville-pa",
+   "nameLt": "Šv. Vincento de Paul",
+   "nameEn": null,
+   "city": "Girardville",
+   "state": "PA",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-juozapo-nanticoke-pa",
+   "nameLt": "Šv. Juozapo",
+   "nameEn": null,
+   "city": "Nanticoke",
+   "state": "PA",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-kazimiero-providence-ri",
+   "nameLt": "Šv. Kazimiero",
+   "nameEn": null,
+   "city": "Providence",
+   "state": "RI",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-andriejaus-philadelphia-pa",
+   "nameLt": "Šv. Andriejaus",
+   "nameEn": null,
+   "city": "Philadelphia",
+   "state": "PA",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-kazimiero-philadelphia-pa",
+   "nameLt": "Šv. Kazimiero",
+   "nameEn": null,
+   "city": "Philadelphia",
+   "state": "PA",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-jurgio-philadelphia-pa",
+   "nameLt": "Šv. Jurgio",
+   "nameEn": null,
+   "city": "Philadelphia",
+   "state": "PA",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-petro-boston-ma",
+   "nameLt": "Šv. Petro",
+   "nameEn": null,
+   "city": "Boston",
+   "state": "MA",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-kryziaus-dayton-oh",
+   "nameLt": "Šv. Kryžiaus",
+   "nameEn": null,
+   "city": "Dayton",
+   "state": "OH",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-kazimiero-cleveland-oh",
+   "nameLt": "Šv. Kazimiero",
+   "nameEn": null,
+   "city": "Cleveland",
+   "state": "OH",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "svc-mergeles-marijos-gimimo-chicago-il",
+   "nameLt": "Švč. Mergelės Marijos Gimimo",
+   "nameEn": null,
+   "city": "Chicago",
+   "state": "IL",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "svc-m-marijos-nekalto-prasidejimo-chicago-il",
+   "nameLt": "Švč. M. Marijos Nekalto Prasidėjimo",
+   "nameEn": null,
+   "city": "Chicago",
+   "state": "IL",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-antano-cicero-il",
+   "nameLt": "Šv. Antano",
+   "nameEn": null,
+   "city": "Cicero",
+   "state": "IL",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "dievo-apvaizdos-southfield-mi",
+   "nameLt": "Dievo Apvaizdos",
+   "nameEn": null,
+   "city": "Southfield",
+   "state": "MI",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "pal-jurgio-matulaicio-misija-lemont-il",
+   "nameLt": "Pal. Jurgio Matulaičio Misija",
+   "nameEn": null,
+   "city": "Lemont",
+   "state": "IL",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "svc-m-marijos-apreiskimo-brooklyn-ny",
+   "nameLt": "Švč. M. Marijos Apreiškimo",
+   "nameEn": null,
+   "city": "Brooklyn",
+   "state": "NY",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "kristaus-atsimainymo-maspeth-ny",
+   "nameLt": "Kristaus Atsimainymo",
+   "nameEn": null,
+   "city": "Maspeth",
+   "state": "NY",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-petro-ir-povilo-elizabeth-nj",
+   "nameLt": "Šv. Petro ir Povilo",
+   "nameEn": null,
+   "city": "Elizabeth",
+   "state": "NJ",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "lietuviu-baznycia-kearny-kearny-nj",
+   "nameLt": "Lietuvių bažnyčia (Kearny)",
+   "nameEn": null,
+   "city": "Kearny",
+   "state": "NJ",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-jurgio-bridgeport-ct",
+   "nameLt": "Šv. Jurgio",
+   "nameEn": null,
+   "city": "Bridgeport",
+   "state": "CT",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "svc-trejybes-hartford-ct",
+   "nameLt": "Švč. Trejybės",
+   "nameEn": null,
+   "city": "Hartford",
+   "state": "CT",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-onos-luzerne-pa",
+   "nameLt": "Šv. Onos",
+   "nameEn": null,
+   "city": "Luzerne",
+   "state": "PA",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-m-marijos-apsireiskimo-frackville-pa",
+   "nameLt": "Šv. M. Marijos Apsireiškimo",
+   "nameEn": null,
+   "city": "Frackville",
+   "state": "PA",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-kazimiero-los-angeles-ca",
+   "nameLt": "Šv. Kazimiero",
+   "nameEn": null,
+   "city": "Los Angeles",
+   "state": "CA",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-petro-ir-povilo-grand-rapids-mi",
+   "nameLt": "Šv. Petro ir Povilo",
+   "nameEn": null,
+   "city": "Grand Rapids",
+   "state": "MI",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "nekaltojo-prasidejimo-east-st-louis-il",
+   "nameLt": "Nekaltojo Prasidėjimo",
+   "nameEn": null,
+   "city": "East St. Louis",
+   "state": "IL",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "sv-kazimiero-waterbury-ct",
+   "nameLt": "Šv. Kazimiero",
+   "nameEn": null,
+   "city": "Waterbury",
+   "state": "CT",
+   "priority": "normal"
+  },
+  {
+   "slug": "unnamed-lithuanian-parish-baltimore-md",
+   "nameLt": "Unnamed Lithuanian parish",
+   "nameEn": null,
+   "city": "Baltimore",
+   "state": "MD",
+   "priority": "high-had-photo-or-lukas"
+  },
+  {
+   "slug": "dievo-apvaizdos-scranton-pa",
+   "nameLt": "Dievo Apvaizdos",
+   "nameEn": null,
+   "city": "Scranton",
+   "state": "PA",
+   "priority": "normal"
+  },
+  {
+   "slug": "saldziausios-jezaus-sirdies-lawrence-ma",
+   "nameLt": "Saldžiausios Jėzaus Širdies",
+   "nameEn": null,
+   "city": "Lawrence",
+   "state": "MA",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-marijos-tautine-kataliku-parapija-philadelphia-pa",
+   "nameLt": "Šv. Marijos Tautinė Katalikų Parapija",
+   "nameEn": null,
+   "city": "Philadelphia",
+   "state": "PA",
+   "priority": "normal"
+  },
+  {
+   "slug": "lncc-congregation-westville-il",
+   "nameLt": "LNCC congregation",
+   "nameEn": null,
+   "city": "Westville",
+   "state": "IL",
+   "priority": "normal"
+  },
+  {
+   "slug": "lietuviu-evangeliku-liuteronu-teviskes-parapija-darien-il",
+   "nameLt": "Lietuvių Evangelikų Liuteronų Tėviškės Parapija",
+   "nameEn": null,
+   "city": "Darien",
+   "state": "IL",
+   "priority": "normal"
+  },
+  {
+   "slug": "lithuanian-lutheran-church-collinsville-il",
+   "nameLt": "Lithuanian Lutheran Church",
+   "nameEn": null,
+   "city": "Collinsville",
+   "state": "IL",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-kazimiero-montreal-qc",
+   "nameLt": "Šv. Kazimiero",
+   "nameEn": null,
+   "city": "Montreal",
+   "state": "QC",
+   "priority": "normal"
+  },
+  {
+   "slug": "ausros-vartu-montreal-qc",
+   "nameLt": "Aušros Vartų",
+   "nameEn": null,
+   "city": "Montreal",
+   "state": "QC",
+   "priority": "normal"
+  },
+  {
+   "slug": "sv-kazimiero-delhi-on",
+   "nameLt": "Šv. Kazimiero",
+   "nameEn": null,
+   "city": "Delhi",
+   "state": "ON",
+   "priority": "normal"
+  }
+ ]
+}

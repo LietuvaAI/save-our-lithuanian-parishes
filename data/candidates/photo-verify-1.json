@@ -1,0 +1,233 @@
+{
+  "verifiedAt": "2026-07-27",
+  "method": "Each Commons file page (and the LOC item page for #8's Highsmith candidate) was fetched live and read directly; images were downloaded and visually inspected to judge hero-image quality and to confirm building identity where the text description was ambiguous.",
+  "verified": [
+    {
+      "slug": "sv-kryziaus-chicago-il",
+      "file": "File:Holy Cross Church, Chicago, 1914 (NBY 723).jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Holy_Cross_Church,_Chicago,_1914_(NBY_723).jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Holy_Cross_Church,_Chicago,_1914_(NBY_723).jpg",
+      "author": "Percy H. (Percy Haydn) Sloan, 1867- (Newberry Library / CARLI Digital Collections, NBY Chicago Neighborhoods collection)",
+      "license": "Public Domain",
+      "licenseVerbatim": "This work is in the public domain in the United States because it was published (or registered with the U.S. Copyright Office) before January 1, 1931. (Also carries the Creative Commons Public Domain Mark 1.0. Newberry Library additionally states: \"The Newberry makes its collections available for any lawful purpose, commercial or non-commercial, without licensing or permission fees.\")",
+      "identityEvidence": "Photograph verso captioned \"Holy Cross - (Lithuanian) Hermitage Avenue and 46th\" -- matches Holy Cross Lithuanian R.C. Church, Chicago (parishes.json slug sv-kryziaus-chicago-il, Back of the Yards/Town of Lake). The alternate 1929 postcard (below) is printed with the caption \"Sv. Kryziaus Liet. R.K. Baznycia\" / \"Holy Cross Lithuanian R.C. Church, 46th St. and Hermitage Ave., Chicago, Ill.\" and visually matches the same twin-towered building, confirming both depict the correct church.",
+      "exteriorOrInterior": "exterior",
+      "qualityNote": "Chosen as hero over the 1929 postcard: high-resolution (2961x3600) sharp architectural photograph, full unobstructed facade, vs. the postcard's low native resolution (524x824) and artificial hand-tint coloring. Building survives (buildingFate: standing, currently a worship center under demolition threat) but no modern Commons photo exists, so the higher-quality historic image is the correct hero pick.",
+      "alternates": [
+        {
+          "file": "File:Holy Cross Lithuanian R. C.Church (NBY 417680).jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Holy_Cross_Lithuanian_R._C.Church_(NBY_417680).jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Holy_Cross_Lithuanian_R._C.Church_(NBY_417680).jpg",
+          "author": "Unknown author (Curt Teich Postcard Archives, Newberry Library, production no. 2587-29)",
+          "license": "Public Domain",
+          "licenseVerbatim": "This work is in the public domain because it was published in the United States between 1931 and 1963, and although there may or may not have been a copyright notice, the copyright was not renewed.",
+          "exteriorOrInterior": "exterior",
+          "note": "1929 hand-colored postcard, same building, low resolution (524x824)"
+        }
+      ],
+      "verdict": "cleared"
+    },
+    {
+      "slug": "sv-juozapo-waterbury-ct",
+      "file": "File:St. Joseph's Church - Waterbury, Connecticut 01.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:St._Joseph%27s_Church_-_Waterbury,_Connecticut_01.jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Joseph's_Church_-_Waterbury,_Connecticut_01.jpg",
+      "author": "Farragutful",
+      "license": "CC BY-SA 4.0",
+      "licenseVerbatim": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license.",
+      "identityEvidence": "Own-work description explicitly reads \"St. Joseph's Lithuanian Catholic Church in Waterbury, Connecticut\"; matches parishes.json slug sv-juozapo-waterbury-ct (Waterbury CT, status closed).",
+      "exteriorOrInterior": "exterior",
+      "qualityNote": "Only full-building exterior in the 3-file Farragutful set; clear modern color photo, full facade.",
+      "alternates": [
+        {
+          "file": "File:St. Joseph's Church - Waterbury, Connecticut 02.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:St._Joseph%27s_Church_-_Waterbury,_Connecticut_02.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Joseph's_Church_-_Waterbury,_Connecticut_02.jpg",
+          "author": "Farragutful",
+          "license": "CC BY-SA 4.0",
+          "exteriorOrInterior": "exterior (detail)",
+          "note": "Cornerstone detail, not a full-building shot"
+        },
+        {
+          "file": "File:St. Joseph's Church - Waterbury, Connecticut 03.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:St._Joseph%27s_Church_-_Waterbury,_Connecticut_03.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Joseph's_Church_-_Waterbury,_Connecticut_03.jpg",
+          "author": "Farragutful",
+          "license": "CC BY-SA 4.0",
+          "exteriorOrInterior": "interior",
+          "note": "A \"chapel-post\" interior architectural element"
+        }
+      ],
+      "verdict": "cleared"
+    },
+    {
+      "slug": "sv-jurgio-rochester-ny",
+      "file": "File:SventoJurgioParapija01.JPG",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:SventoJurgioParapija01.JPG",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/SventoJurgioParapija01.JPG",
+      "author": "Zmuidzinas",
+      "license": "CC BY-SA 3.0",
+      "licenseVerbatim": "This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license (dual-licensed, also GNU Free Documentation License 1.2 or later).",
+      "identityEvidence": "Description: \"Saint George Roman Catholic Lithuanian Church, Rochester, NY, USA\" / \"Svento Jurgio Parapija.\" Commons categories explicitly list \"Churches in the Roman Catholic Diocese of Rochester,\" \"Saint George churches in New York (state),\" and \"Lithuanian diaspora in New York (state).\" Confirms this is our parish, not a same-named church elsewhere.",
+      "exteriorOrInterior": "interior",
+      "qualityNote": "No exterior photo of this church exists on Commons -- searched the file's categories and Commons broadly; the only other 'Saint George' hit (File:Stgeorgenow.jpg) is a distinct, unrelated St. George's Episcopal Church in Hempstead, NY. This interior (altar + Christmas tree, Dec 2007) is the best -- and only -- available candidate.",
+      "alternates": [],
+      "verdict": "cleared"
+    },
+    {
+      "slug": "siluvos-dievo-motinos-maizeville-pa",
+      "file": "File:Our Lady of Siluva RC Church, Maizeville PA 01.JPG",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Siluva_RC_Church,_Maizeville_PA_01.JPG",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Our_Lady_of_Siluva_RC_Church,_Maizeville_PA_01.JPG",
+      "author": "Shuvaev",
+      "license": "CC BY-SA 4.0",
+      "licenseVerbatim": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license.",
+      "identityEvidence": "Description: \"Our Lady of Siluva Roman Catholic Church (Lithuanian, est. 1907. Formerly St. Louis) on Main St., village of Maizeville, Gilberton borough, Schuylkill County, Pennsylvania. Front view.\" Matches parishes.json slug siluvos-dievo-motinos-maizeville-pa exactly (city Maizeville, PA).",
+      "exteriorOrInterior": "exterior",
+      "qualityNote": "Front view chosen as hero over the back-view companion file -- full front facade, clear, well-lit.",
+      "alternates": [
+        {
+          "file": "File:Our Lady of Siluva RC Church, Maizeville PA 02.JPG",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Siluva_RC_Church,_Maizeville_PA_02.JPG",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Our_Lady_of_Siluva_RC_Church,_Maizeville_PA_02.JPG",
+          "author": "Shuvaev",
+          "license": "CC BY-SA 4.0",
+          "exteriorOrInterior": "exterior",
+          "note": "Back view of same building, same photographer/session"
+        }
+      ],
+      "verdict": "cleared"
+    },
+    {
+      "slug": "sv-kryziaus-dayton-oh",
+      "file": "File:Holy Cross Lithuanian Roman Catholic Church.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Holy_Cross_Lithuanian_Roman_Catholic_Church.jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Holy_Cross_Lithuanian_Roman_Catholic_Church.jpg",
+      "author": "Wdzinc",
+      "license": "CC BY-SA 3.0",
+      "licenseVerbatim": "This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license.",
+      "identityEvidence": "Own-work description \"Holy Cross Lithuanian Roman Catholic Church\"; geotagged 39°46'53\"N 84°10'04\"W; NRHP reference number 91001582 -- matches Holy Cross, Dayton OH (parishes.json slug sv-kryziaus-dayton-oh).",
+      "exteriorOrInterior": "exterior",
+      "qualityNote": "Chosen as hero over the Nheyob 2016 alternate after visual comparison: this shot is a clean, sharp, mostly-unobstructed front facade with the legible cornerstone plaque; the alternate has a large tree and a car dominating the foreground, obscuring most of the building.",
+      "alternates": [
+        {
+          "file": "File:Holy Cross Roman Catholic Church (Dayton, Ohio) - exterior.JPG",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Holy_Cross_Roman_Catholic_Church_(Dayton,_Ohio)_-_exterior.JPG",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Holy_Cross_Roman_Catholic_Church_(Dayton,_Ohio)_-_exterior.JPG",
+          "author": "Nheyob",
+          "license": "CC BY-SA 4.0",
+          "exteriorOrInterior": "exterior",
+          "note": "2016 photo, shows US + Lithuania flags, but a car and trees obscure most of the building"
+        }
+      ],
+      "verdict": "cleared"
+    },
+    {
+      "slug": "svc-m-marijos-apreiskimo-brooklyn-ny",
+      "file": "File:Annunciation of the Blessed Virgin Mary RC Church, Williamsburg, Brooklyn, New York - 20221127.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Annunciation_of_the_Blessed_Virgin_Mary_RC_Church,_Williamsburg,_Brooklyn,_New_York_-_20221127.jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annunciation_of_the_Blessed_Virgin_Mary_RC_Church,_Williamsburg,_Brooklyn,_New_York_-_20221127.jpg",
+      "author": "Andre Carrotflower",
+      "license": "CC BY-SA 4.0",
+      "licenseVerbatim": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license.",
+      "identityEvidence": "Detailed architectural description gives the address \"259 North 5th Street at Havemeyer Street, Williamsburg, Brooklyn, New York\" (matches the North 5th St address specified in the task) and states the church has \"since 1914 been the home church of the Lithuanian-American community in the Brooklyn Diocese,\" still holding a weekly Lithuanian Mass. Matches parishes.json slug svc-m-marijos-apreiskimo-brooklyn-ny.",
+      "exteriorOrInterior": "exterior",
+      "qualityNote": "Full facade, high resolution, high-quality modern photo.",
+      "alternates": [],
+      "verdict": "cleared"
+    },
+    {
+      "slug": "kristaus-atsimainymo-maspeth-ny",
+      "file": "File:Transfiguration Roman Catholic Church 20201114 154344.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Transfiguration_Roman_Catholic_Church_20201114_154344.jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Transfiguration_Roman_Catholic_Church_20201114_154344.jpg",
+      "author": "Renata3",
+      "license": "CC BY-SA 4.0",
+      "licenseVerbatim": "This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share; to remix. Under the conditions of attribution and share-alike.",
+      "identityEvidence": "Description \"Main façade of the Transfiguration Roman Catholic Church (Maspeth)\"; matches parishes.json slug kristaus-atsimainymo-maspeth-ny. Companion files in the same category show the Lithuanian inscription \"Mano Namai Maldos Namai\" (\"My house is a house of prayer\") over the doors, and US+Lithuania flags, confirming the Lithuanian identity of this specific building.",
+      "exteriorOrInterior": "exterior",
+      "qualityNote": "Reviewed the full category (which also contains a Maspetheer front-view file). Picked this one as hero after visual comparison: evening golden-hour light, sharp, symmetric front-on framing, unobstructed by people. The competing Maspetheer 2016 file is flatter daytime light with several people, a priest, and a \"Girl Scouts\" banner cluttering the entrance.",
+      "alternates": [
+        {
+          "file": "File:Transfiguration Roman Catholic Church flags of US and Lithuania 20201114 154358.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Transfiguration_Roman_Catholic_Church_flags_of_US_and_Lithuania_20201114_154358.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Transfiguration_Roman_Catholic_Church_flags_of_US_and_Lithuania_20201114_154358.jpg",
+          "author": "Renata3",
+          "license": "CC BY-SA 4.0",
+          "exteriorOrInterior": "exterior (detail)",
+          "note": "Same session, US+Lithuania flags at entrance"
+        },
+        {
+          "file": "File:Front doorways of church with religious phrase in Lithuanian.JPG",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Front_doorways_of_church_with_religious_phrase_in_Lithuanian.JPG",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Front_doorways_of_church_with_religious_phrase_in_Lithuanian.JPG",
+          "author": "Maspetheer",
+          "license": "CC BY-SA 4.0",
+          "exteriorOrInterior": "exterior (detail)",
+          "note": "Entrance doors with Lithuanian inscription \"Mano Namai Maldos Namai\""
+        },
+        {
+          "file": "File:Front view of Church of the Transfiguration Maspeth NY.JPG",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Front_view_of_Church_of_the_Transfiguration_Maspeth_NY.JPG",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Front_view_of_Church_of_the_Transfiguration_Maspeth_NY.JPG",
+          "author": "Maspetheer",
+          "license": "CC BY-SA 4.0",
+          "exteriorOrInterior": "exterior",
+          "note": "2016 daytime front view, but crowded with parishioners/Girl Scouts banner"
+        }
+      ],
+      "verdict": "cleared"
+    },
+    {
+      "slug": "svc-trejybes-hartford-ct",
+      "file": "File:Hartford Holy Trinity Roman Catholic Church, 2000.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:Hartford_Holy_Trinity_Roman_Catholic_Church,_2000.jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Hartford_Holy_Trinity_Roman_Catholic_Church,_2000.jpg",
+      "author": "Litnet",
+      "license": "CC BY-SA 4.0",
+      "licenseVerbatim": "Dual-licensed: GNU Free Documentation License 1.2 or later, and Creative Commons Attribution-ShareAlike 4.0 International. Previously published on lietuvai.lt/wiki/Hartford_Holy_Trinity_Church.",
+      "identityEvidence": "Twin-towered brick facade with rose window and Latin inscription \"ECCLESIA SANCTISSIMA TRINITATIS\" (Church of the Most Holy Trinity) visually verified; matches parishes.json slug svc-trejybes-hartford-ct (Holy Trinity RC, 53 Capitol Ave, Hartford CT, buildingFate standing).",
+      "exteriorOrInterior": "exterior",
+      "qualityNote": "Chosen as hero because it depicts the parish's actual standing church building (still used for funerals/baptisms per current record), even though native resolution is modest (734x750; this is the only version on Commons). Photo dated 2000.",
+      "alternates": [
+        {
+          "file": "File:Hartford Holy Trinity Church First Stage Building 1915.jpg",
+          "filePageUrl": "https://commons.wikimedia.org/wiki/File:Hartford_Holy_Trinity_Church_First_Stage_Building_1915.jpg",
+          "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Hartford_Holy_Trinity_Church_First_Stage_Building_1915.jpg",
+          "author": "Unknown (source: Centennial Jubilee of Holy Trinity Roman Catholic Lithuanian Parish 1900-2000 souvenir book)",
+          "license": "Public Domain",
+          "licenseVerbatim": "This work is in the public domain in the United States because it was published (or registered with the U.S. Copyright Office) before January 1, 1931.",
+          "exteriorOrInterior": "exterior",
+          "note": "Historic 1915 photo of the parish's first (temporary) building -- a different, earlier structure than the current standing church, kept as a historical-value alternate only."
+        }
+      ],
+      "verdict": "cleared"
+    },
+    {
+      "slug": "sv-petro-boston-ma",
+      "file": "File:StPeterSouthBostonMA PWFord.jpg",
+      "filePageUrl": "https://commons.wikimedia.org/wiki/File:StPeterSouthBostonMA_PWFord.jpg",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/StPeterSouthBostonMA_PWFord.jpg",
+      "author": "Lukascb",
+      "license": "CC BY-SA 3.0",
+      "licenseVerbatim": "This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license (also GNU Free Documentation License 1.2 or later).",
+      "identityEvidence": "The file page itself only says \"St. Peter Church, South Boston, MA designed by Patrick W. Ford\" without an address, but it sits in the dedicated Commons category \"St. Peter Church (South Boston)\" (which contains only this one file) tagged with \"Lithuanian diaspora in Massachusetts,\" and is geotagged 42°20'19.74\"N, 71°03'17.47\"W in South Boston. Cross-checked externally: St. Peter Lithuanian Parish is documented (Pluralism Project, Yelp, gcatholic.org) at 75 Flaherty Way, South Boston, MA 02127 -- there is only one St. Peter's church in South Boston, so the coordinates/category match our parish (parishes.json slug sv-petro-boston-ma, \"the only Lithuanian church in New England\").",
+      "exteriorOrInterior": "exterior",
+      "qualityNote": "Clear full exterior, only Commons photo of this building.",
+      "alternates": [],
+      "verdict": "cleared"
+    }
+  ],
+  "rejected": [
+    {
+      "slug": "sv-kazimiero-cleveland-oh",
+      "file": "File:St Casimir Church Cleveland, Ohio. Interior.jpg and File:Detail High Altar St. Casimir Church Cleveland, Ohio.jpg (both by Owen M. Dabek)",
+      "reason": "Both images depict the HISTORIC POLISH St. Casimir Church at 8223 Sowinski Ave, Cleveland -- not our record's Lithuanian-heritage St. Casimir parish. Evidence: (1) both are captioned \"...following Mass Mob\" dated March 13, 2016; the documented \"Cleveland Mass Mob XX Saint Casimir\" event was held 11:30am Sunday March 13, 2016 specifically at 8223 Sowinski Avenue (the Polish national parish, 2nd-oldest Polish parish in Cleveland, founded 1891/92, monumental church completed 1918, closed 2009 and reopened by the Vatican in 2012 as a personal parish for Catholics of Polish descent). (2) The Commons category for these files is \"Saint Casimir Church (Cleveland)\", which is the English Wikipedia article specifically about that Polish parish building, and the images are used on Wikipedia in articles about \"Polish Cathedral style\" architecture. Our record's St. Casimir (parishes.json slug sv-kazimiero-cleveland-oh) is a distinct parish: formed Oct 25 2009 from the merger of the Lithuanian Sv. Jurgio (St. George) and DMNP (Our Lady of Perpetual Help) parishes, and it occupies the former Our Lady of Perpetual Help building on Neff Road in Cleveland's Collinwood neighborhood -- a different building at a different address entirely, coincidentally renamed after the same saint. No Wikimedia Commons photos of the Neff Road building were found in this pass."
+    },
+    {
+      "slug": "svc-trejybes-hartford-ct",
+      "file": "Carol M. Highsmith photo, LOC LCCN 2012631258 / LC-DIG-highsm-19850, catalogued as \"Holy Trinity Church, Hartford, Connecticut\"",
+      "reason": "The LOC catalog title matches, but the photograph itself is of a completely different, unrelated building: visually the image shows a single-tower Gothic Revival red sandstone church, and a zoomed inspection of the entrance signage reads \"TRINITY [Episcopal Church shield] CHURCH -- Sunday Services 8:00 a.m. & 10:00 a.m.\" This is Trinity Episcopal Church at 120 Sigourney Street, Hartford -- a different denomination, building, and address from Holy Trinity Roman Catholic (Lithuanian) Church at 53 Capitol Avenue (confirmed against the correct building in the Litnet 2000 Commons photo, which shows a twin-towered brick facade with the Latin inscription ECCLESIA SANCTISSIMA TRINITATIS -- architecturally nothing like the Highsmith photo). This appears to be a Library of Congress / Highsmith cataloging mismatch. Rejected as not our parish's building; the two Commons file candidates for this slug are cleared instead (see verified list)."
+    }
+  ]
+}
