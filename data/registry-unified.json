@@ -823,7 +823,24 @@
     ],
     "closed": []
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "city",
+     "variants": [
+      {
+       "value": "Chicago",
+       "source": "draugas-2008-2026 (canonical row)",
+       "cite": "2013-08-20 (Alkas.lt reprint: 'Prieš kelerius metus Čikagoje buvo uždaryta lietuvių Šv. Kazimiero bažnyčia' — no neighborhood ever named)"
+      },
+      {
+       "value": "Chicago Heights",
+       "source": "adjudication 2026-07-27",
+       "cite": "Wolkovich Vol 3 pp. 146-147 (only Lithuanian St. Casimir parish in the archdiocese; founded 1911, first Mass Easter 1912, ethnic succession from 1948 incl. Mexican parishioners); genmetrika.eu; lithuaniancatholicancestorsearch.com (Chicago Heights registers 1911-1915); Draugas 1936-08-15 silver-jubilee parish history"
+      }
+     ],
+     "note": "ADJUDICATED 2026-07-27 (site issue #89): no Lithuanian St. Casimir parish existed within Chicago city limits — this record and st-casimir-chicago-heights-il describe the SAME parish; merge queued upstream. The canonical row's 'Marquette Park/Brighton Park (probable)' note was a compiler guess (the case-file itself flags 'precise neighborhood unstated'), likely from the Sisters of St. Casimir motherhouse at Marquette Park. This fingerprint's 1,537 mentions / 17,721 ambiguous city hits are contaminated by the Sisters of St. Casimir, St. Casimir Academy, and St. Casimir Lithuanian Cemetery, all in Chicago proper — the 1956 jubilee-implied founding reading is part of that contamination. Closure-year variance carried, not resolved: 1987 (Global True Lithuania, registry) vs 1989 (Wolkovich p. 147). City correction queued upstream; locked row unchanged here."
+    }
+   ],
    "related_sites": [],
    "events_refs": [
     {
@@ -832,10 +849,10 @@
     }
    ],
    "geo": {
-    "lat": 41.8755616,
-    "lon": -87.6244212,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
+    "lat": 41.506392,
+    "lon": -87.62415,
+    "precision": "exact",
+    "source": "truelithuania (adjudication 2026-07-27: actual church site, 283 E 14th St, Chicago Heights)"
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
@@ -1935,7 +1952,7 @@
        "cite": "1910-04-21 founding article; 301 corpus pages"
       }
      ],
-     "note": "Identity conflict per registry-mine join-conflicts.md — canonical titular likely conflated with Boston Šv. Petro. Carried, not resolved."
+     "note": "Identity conflict ADJUDICATED 2026-07-27 (site issue #89): the Cambridge Lithuanian parish was real and distinct, but its titular was Nekalto Prasidėjimo (Immaculate Conception), 430-432 Windsor St. Settled by the contemporary founding article (Draugas 1910-04-21: 'Naujoji parapija vadinsis Nekalto Prasidėjimo šv. M. P.', Fr. J. Krasnickas sent by the Boston archbishop — the cornerstone of the Windsor St building names Krasnickas), the 85th-anniversary notice (Draugas 1994-05-19: founded 1909), and corpus-wide counts (301 pages attest Nekalto Prasidėjimo + Cambridge; zero attest a Šv. Petro parish there). The canonical titular is a conflation with Boston Šv. Petro, the parish Cambridge split from. NOT a duplicate of the South Boston record. Canonical-name correction queued upstream (locked CSV row 15 unchanged here)."
     },
     {
      "field": "founded",
@@ -8279,7 +8296,10 @@
    "names": {
     "lt": "Lietuvių bažnyčia (Kearny)",
     "en": null,
-    "variants": []
+    "variants": [
+     "Sopulingosios Dievo Motinos",
+     "Our Lady of Sorrows"
+    ]
    },
    "city": "Kearny",
    "state": "NJ",
@@ -8319,7 +8339,13 @@
     "founded": [],
     "closed": []
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "identity",
+     "variants": [],
+     "note": "ADJUDICATED 2026-07-27 (site issue #89): the Kearny Lithuanian church is Our Lady of Sorrows (Sopulingosios Dievo Motinos), 136 Davis Ave — one parish throughout: founded 1914-15 as the Kearny-Harrison Lithuanian parish (Draugas 1954-03-05 p4: '1914 m. pradėjusi kurtis, 40 metų sukaktį mini'; Draugas 1954-12-04 p7: 'Kearny-Harrison Sopulingosios Dievo Motinos Lietuvių Parapija savo 40 metų gyvavimo sukaktį (1915-1955)'), first worship in St. Cecilia's parish hall, Kearny (parish's own history), then a modest half-basement church in Harrison ('esamasis yra pusrūsyje', Draugas 1954-12-04) until the Davis Ave church was completed ~1955; the Harrison building was sold to non-Catholics (Global True Lithuania). The photo-sweep claim that the 1915 building was 'St. Michael the Archangel' in Harrison is UNSUPPORTED in every source checked — likely confusion with Bayonne's Šv. Mykolo. Registry reconciliation queued upstream: our-lady-of-sorrows-kearny-nj, sorrows-kearny-nj, mary-kearny-nj (and the pre-1954 seat lithuanian-church-harrison-nj) describe this same parish."
+    }
+   ],
    "related_sites": [],
    "events_refs": [
     {
@@ -8328,10 +8354,10 @@
     }
    ],
    "geo": {
-    "lat": 40.7684342,
-    "lon": -74.1454214,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
+    "lat": 40.757237,
+    "lon": -74.147458,
+    "precision": "exact",
+    "source": "truelithuania (adjudication 2026-07-27: actual church site, 136 Davis Ave, Kearny)"
    },
    "congregation_class": "roman_catholic",
    "axes_count": 1,
@@ -12888,6 +12914,11 @@
        "cite": "1954-11-06 p5 (40 metų) ; 1954-11-20 p4 (40 metų) ; 1954-12-04 p7 (40 metų) ; 1954-12-18 p3 (40 metų)"
       }
      ]
+    },
+    {
+     "field": "identity",
+     "variants": [],
+     "note": "ADJUDICATED 2026-07-27 (site issue #89): same parish as the canonical case-filed record parish-kearny-nj (lietuviu-baznycia-kearny-kearny-nj) — Our Lady of Sorrows (Sopulingosios Dievo Motinos), Kearny-Harrison Lithuanian parish, founded 1914-15, seated in Harrison until the 136 Davis Ave, Kearny church (~1955). Merge queued upstream."
     }
    ],
    "related_sites": [],
@@ -13054,6 +13085,11 @@
        "cite": "1954-03-05 p4 (40 metų)"
       }
      ]
+    },
+    {
+     "field": "identity",
+     "variants": [],
+     "note": "ADJUDICATED 2026-07-27 (site issue #89): this unnamed Harrison record is the pre-1954 seat of the Kearny-Harrison Our Lady of Sorrows Lithuanian parish (canonical parish-kearny-nj) — same 1954 40-metų jubilee (Draugas 1954-03-05 p4) as the our-lady-of-sorrows-kearny-nj fingerprint; the modest half-basement Harrison church was sold to non-Catholics after the parish completed its Kearny church ~1955 (Global True Lithuania). Not a separate parish. Reconciliation queued upstream."
     }
    ],
    "related_sites": [],
@@ -13272,7 +13308,13 @@
      }
     ]
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "identity",
+     "variants": [],
+     "note": "ADJUDICATED 2026-07-27 (site issue #89): same parish as the canonical case-filed record casimir-chicago-il (sv-kazimiero-chicago-il), whose 'Chicago' city is a loose wire-item locative — no Lithuanian St. Casimir parish existed within Chicago city limits. Merge queued upstream; this record renders a duplicate point on the Chicago diocese context map until then."
+    }
+   ],
    "related_sites": [],
    "events_refs": [
     {
@@ -16268,7 +16310,13 @@
     ],
     "closed": []
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "identity",
+     "variants": [],
+     "note": "ADJUDICATED 2026-07-27 (site issue #89): same parish as the canonical case-filed record parish-kearny-nj (lietuviu-baznycia-kearny-kearny-nj) — Our Lady of Sorrows (Sopulingosios Dievo Motinos), Kearny-Harrison Lithuanian parish, founded 1914-15, seated in Harrison until the 136 Davis Ave, Kearny church (~1955). Merge queued upstream."
+    }
+   ],
    "related_sites": [],
    "events_refs": [],
    "geo": {
@@ -19126,7 +19174,13 @@
     "founded": [],
     "closed": []
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "identity",
+     "variants": [],
+     "note": "ADJUDICATED 2026-07-27 (site issue #89): same parish as the canonical case-filed record parish-kearny-nj (lietuviu-baznycia-kearny-kearny-nj) — Our Lady of Sorrows (Sopulingosios Dievo Motinos), Kearny-Harrison Lithuanian parish, founded 1914-15, seated in Harrison until the 136 Davis Ave, Kearny church (~1955). Merge queued upstream."
+    }
+   ],
    "related_sites": [],
    "events_refs": [],
    "congregation_class": "roman_catholic",
