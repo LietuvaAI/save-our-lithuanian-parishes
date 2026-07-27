@@ -188,7 +188,7 @@
       "entity": "Holy Trinity (Švč. Trejybės)",
       "place": "Hartford, Connecticut",
       "diocese": "Archdiocese of Hartford",
-      "dateObserved": "2026-07-19",
+      "dateObserved": "2026-07-26",
       "eventDate": "2026-04",
       "whatChanged": "Regular Masses — including the Sunday Lithuanian/English Mass — ended May 30, 2026, amid a financial crisis and the aftermath of a priest-theft investigation; only funerals and baptisms continue. Parishioners are campaigning to preserve the church as a Lithuanian cultural center.",
       "parishLink": "/parishes/svc-trejybes-hartford-ct",
@@ -274,11 +274,11 @@
       "entity": "Holy Trinity (Švč. Trejybės)",
       "place": "Hartford, Connecticut",
       "parishLink": "/parishes/svc-trejybes-hartford-ct",
-      "hearthUrl": "https://blog.saveourlithuanianparishes.org/i/207579337/holy-trinity-church-hartford-connecticut",
+      "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/fifteen-months-the-closing-of-svc",
       "since": "2026",
       "who": "Parishioners of Holy Trinity, Hartford, and the broader Lithuanian Catholic community",
       "form": "GoFundMe to retain a canon-law attorney; community advocacy and documentation; push to preserve the building as a Lithuanian cultural center",
-      "state": "Parishioners were formally notified of a proposed partial closure as part of the Archdiocese of Hartford's restructuring of 212 parishes. The canonical fund is active and the case is being contested.",
+      "state": "Regular Masses ended May 30, 2026, and the record now renders the parish Closed. The community is raising the retainer for a canon-law attorney — the same path Waterbury's community took — and pushing to preserve the building as a Lithuanian cultural center.",
       "sources": [
         {
           "title": "Hartford parishioners met with notice of partial closure for Holy Trinity",
@@ -289,6 +289,12 @@
           "title": "Protect Holy Trinity Church",
           "publisher": "GoFundMe",
           "url": "https://www.gofundme.com/f/protect-holy-trinity-church"
+        }
+      ],
+      "dispatches": [
+        {
+          "title": "Fifteen Months: The Closing of Švč. Trejybės (Holy Trinity) in Hartford",
+          "url": "https://blog.saveourlithuanianparishes.org/p/fifteen-months-the-closing-of-svc"
         }
       ]
     },
