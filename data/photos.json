@@ -1,77 +1,281 @@
 {
-  "_comment": "Parish facade/exterior photos. Any parish slug can have an entry here. Photos display on /parishes/[slug] profile pages. Attribution is mandatory.",
+  "_comment": "Parish photo provenance registry. Every entry MUST carry rights (permission_granted | public_domain | open_license | own_work | pending_permission) and a rightsNote tracing the holder and evidence. Only cleared rights render (lib/photos.ts); pending entries are the paper trail of what returns when permission lands. Guard: scripts/verify-photo-rights.mjs.",
   "parishes": {
     "svc-mergeles-marijos-gimimo-chicago-il": {
       "src": "/images/parishes/chicago-nativity-bvm.jpg",
       "alt": "Exterior of Nativity of the Blessed Virgin Mary Lithuanian church in Chicago.",
       "attribution": "CIEE article; architectural archive material credited to the Mulokas family personal archive.",
-      "license": "External source; reuse permission not confirmed."
+      "license": "External source; reuse permission not confirmed.",
+      "rights": "pending_permission",
+      "rightsNote": "CIEE article image (architectural material credited to the Mulokas family archive); permission request pending; image held until granted."
     },
     "sv-kazimiero-cleveland-oh": {
       "src": "/images/parishes/cleveland-st-casimir.jpg",
       "alt": "Exterior of St. Casimir Parish church in Cleveland.",
       "attribution": "Saint Casimir Parish website.",
-      "license": "Parish website source; reuse permission not confirmed."
+      "license": "Parish website source; reuse permission not confirmed.",
+      "rights": "pending_permission",
+      "rightsNote": "Parish website image; permission request pending; image held until granted."
     },
     "sv-andriejaus-philadelphia-pa": {
       "src": "/images/parishes/philadelphia-st-andrew.jpg",
       "alt": "Exterior parish-grounds photo showing work on the Lithuanian wayside cross at St. Andrew Lithuanian Parish.",
       "attribution": "Saint Andrew Lithuanian Parish website, Lithuanian Wayside Cross gallery.",
-      "license": "Parish website source; reuse permission not confirmed."
+      "license": "Parish website source; reuse permission not confirmed.",
+      "rights": "pending_permission",
+      "rightsNote": "Parish website image; permission request pending; image held until granted."
     },
     "sv-kryziaus-dayton-oh": {
       "src": "/images/parishes/dayton-holy-cross.jpg",
       "alt": "Exterior of Holy Cross Lithuanian church in Dayton.",
       "attribution": "Global True Lithuania / Augustinas Žemaitis.",
-      "license": "External source; reuse permission not confirmed."
+      "license": "External source; reuse permission not confirmed.",
+      "rights": "pending_permission",
+      "rightsNote": "© Augustinas Žemaitis (Global True Lithuania). Permission request pending; image held until granted."
     },
     "nekaltojo-prasidejimo-east-st-louis-il": {
       "src": "/images/parishes/east-st-louis-immaculate-conception.jpg",
       "alt": "Exterior of Immaculate Conception Chapel in East St. Louis.",
       "attribution": "Diocese of Belleville parish directory.",
-      "license": "Diocesan website source; reuse permission not confirmed."
+      "license": "Diocesan website source; reuse permission not confirmed.",
+      "rights": "pending_permission",
+      "rightsNote": "Diocesan directory image; permission request pending; image held until granted."
     },
     "sv-antano-cicero-il": {
       "src": "/images/parishes/cicero-st-anthony.jpg",
       "alt": "Exterior of St. Anthony Lithuanian church in Cicero.",
       "attribution": "Global True Lithuania / Augustinas Žemaitis.",
-      "license": "External source; reuse permission not confirmed."
+      "license": "External source; reuse permission not confirmed.",
+      "rights": "pending_permission",
+      "rightsNote": "© Augustinas Žemaitis (Global True Lithuania). Permission request pending; image held until granted."
     },
     "sv-jurgio-bridgeport-ct": {
       "src": "/images/parishes/bridgeport-st-george.jpg",
       "alt": "Exterior of St. George Lithuanian church in Bridgeport, Connecticut.",
       "attribution": "Global True Lithuania / Augustinas Žemaitis.",
-      "license": "External source; reuse permission not confirmed."
+      "license": "External source; reuse permission not confirmed.",
+      "rights": "pending_permission",
+      "rightsNote": "© Augustinas Žemaitis (Global True Lithuania). Permission request pending; image held until granted."
     },
     "svc-m-marijos-nekalto-prasidejimo-chicago-il": {
       "src": "/images/parishes/brighton-park-immaculate-conception.jpg",
       "alt": "Exterior of the Brighton Park Immaculate Conception Lithuanian church in Chicago.",
       "attribution": "Global True Lithuania / Augustinas Žemaitis.",
-      "license": "External source; reuse permission not confirmed."
+      "license": "External source; reuse permission not confirmed.",
+      "rights": "pending_permission",
+      "rightsNote": "© Augustinas Žemaitis (Global True Lithuania). Permission request pending; image held until granted."
     },
     "sv-onos-luzerne-pa": {
       "src": "/images/parishes/luzerne-st-ann-holy-family.jpg",
       "alt": "Official Holy Family Church image representing the former St. Ann Lithuanian parish building in Luzerne.",
       "attribution": "Diocese of Scranton Holy Family Luzerne directory.",
-      "license": "Diocesan website source; reuse permission not confirmed."
+      "license": "Diocesan website source; reuse permission not confirmed.",
+      "rights": "pending_permission",
+      "rightsNote": "Diocesan directory image; permission request pending; image held until granted."
     },
     "sv-m-marijos-apsireiskimo-frackville-pa": {
       "src": "/images/parishes/frackville-annunciation-bvm.jpg",
       "alt": "Exterior of the Frackville Annunciation BVM Lithuanian church.",
       "attribution": "Global True Lithuania / Augustinas Žemaitis.",
-      "license": "External source; reuse permission not confirmed."
+      "license": "External source; reuse permission not confirmed.",
+      "rights": "pending_permission",
+      "rightsNote": "© Augustinas Žemaitis (Global True Lithuania). Permission request pending; image held until granted."
     },
     "sv-jurgio-rochester-ny": {
       "src": "/images/parishes/rochester-st-george-our-lady-of-lourdes.jpg",
       "alt": "Our Lady of Lourdes Church in Rochester, current Mass location for the St. George Lithuanian community.",
       "attribution": "Diocese of Rochester Pastoral Services directory.",
-      "license": "Diocesan website source; reuse permission not confirmed."
+      "license": "Diocesan website source; reuse permission not confirmed.",
+      "rights": "pending_permission",
+      "rightsNote": "Diocesan directory image; permission request pending; image held until granted."
     },
     "pal-jurgio-matulaicio-misija-lemont-il": {
       "src": "/images/parishes/lemont-matulaitis-mission.jpg",
       "alt": "Blessed Jurgis Matulaitis Mission chapel interior at the Lithuanian World Center.",
       "attribution": "Lithuanian World Center organization page.",
-      "license": "Lithuanian World Center website source; reuse permission not confirmed."
+      "license": "Lithuanian World Center website source; reuse permission not confirmed.",
+      "rights": "pending_permission",
+      "rightsNote": "Lithuanian World Center website image; permission request pending; image held until granted."
+    },
+    "unnamed-lithuanian-parish-baltimore-md": {
+      "src": "/images/parishes/baltimore-st-alphonsus.jpg",
+      "alt": "Gothic tower and spire of St. Alphonsus church in Baltimore.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 88 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+    },
+    "sv-andriejaus-new-britain-ct": {
+      "src": "/images/parishes/new-britain-st-andrew.jpg",
+      "alt": "Exterior of St. Andrew Lithuanian church in New Britain.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 90 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+    },
+    "svc-m-marijos-apreiskimo-brooklyn-ny": {
+      "src": "/images/parishes/brooklyn-annunciation-bvm.jpg",
+      "alt": "Red-brick exterior of Annunciation of the Blessed Virgin Mary church in Brooklyn.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 93 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+    },
+    "st-joseph-mahanoy-city-pa": {
+      "src": "/images/parishes/mahanoy-city-st-joseph.jpg",
+      "alt": "Brick tower of St. Joseph's Lithuanian church in Mahanoy City.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 94 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+    },
+    "sv-jurgio-shenandoah-pa": {
+      "src": "/images/parishes/shenandoah-st-george.jpg",
+      "alt": "Stone tower of St. George church in Shenandoah, the oldest Lithuanian parish in America.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 95 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+    },
+    "sv-juozapo-waterbury-ct": {
+      "src": "/images/parishes/waterbury-st-joseph.jpg",
+      "alt": "Exterior of St. Joseph Lithuanian church and rectory in Waterbury.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 96 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+    },
+    "sv-juozapo-scranton-pa": {
+      "src": "/images/parishes/scranton-st-joseph.jpg",
+      "alt": "Brick tower of St. Joseph Lithuanian church in Scranton.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 97 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+    },
+    "sv-kazimiero-providence-ri": {
+      "src": "/images/parishes/providence-st-casimir.jpg",
+      "alt": "Exterior of St. Casimir church in Providence, with the memorial cross in front.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 98 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+    },
+    "sv-kazimiero-worcester-ma": {
+      "src": "/images/parishes/worcester-st-casimir.jpg",
+      "alt": "Twin-towered exterior of St. Casimir church in Worcester.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 99 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+    },
+    "sv-kryziaus-chicago-il": {
+      "src": "/images/parishes/chicago-holy-cross.jpg",
+      "alt": "Twin baroque towers of Holy Cross church in Chicago, the largest Lithuanian-built church in the city.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 100 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+    },
+    "sv-petro-boston-ma": {
+      "src": "/images/parishes/boston-st-peter.jpg",
+      "alt": "Twin-towered red-brick exterior of St. Peter Lithuanian church in South Boston.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 102 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+    },
+    "sv-petro-ir-povilo-elizabeth-nj": {
+      "src": "/images/parishes/elizabeth-sts-peter-paul.jpg",
+      "alt": "Brick twin-towered exterior of Sts. Peter and Paul Lithuanian church in Elizabeth.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 103 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+    },
+    "sv-petro-ir-povilo-grand-rapids-mi": {
+      "src": "/images/parishes/grand-rapids-sts-peter-paul.jpg",
+      "alt": "Exterior of Sts. Peter and Paul church in Grand Rapids, with its bell tower.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 104 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+    },
+    "svc-trejybes-hartford-ct": {
+      "src": "/images/parishes/hartford-holy-trinity.jpg",
+      "alt": "Red-brick twin-towered exterior of Holy Trinity Lithuanian church in Hartford.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 105 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+    },
+    "svc-trejybes-wilkes-barre-pa": {
+      "src": "/images/parishes/wilkes-barre-holy-trinity.jpg",
+      "alt": "Twin Gothic spires of Holy Trinity church in Wilkes-Barre, one of the largest Lithuanian-built churches in America.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 106 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+    },
+    "sv-kazimiero-los-angeles-ca": {
+      "src": "/images/parishes/los-angeles-st-casimir.jpg",
+      "alt": "Exterior of St. Casimir Lithuanian church in Los Angeles, built 1951.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 114 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+    },
+    "dievo-motinos-nuolatines-pagalbos-cleveland-oh": {
+      "src": "/images/parishes/cleveland-our-lady-perpetual-help.jpg",
+      "alt": "Exterior of Our Lady of Perpetual Help church on Neff Road, Cleveland, built 1952.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 116 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+    },
+    "kristaus-atsimainymo-maspeth-ny": {
+      "src": "/images/parishes/maspeth-transfiguration.jpg",
+      "alt": "Exterior of the Church of the Transfiguration in Maspeth, built 1962 by architect Jonas Mulokas.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 120 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+    },
+    "siluvos-dievo-motinos-maizeville-pa": {
+      "src": "/images/parishes/maizeville-our-lady-siluva.jpg",
+      "alt": "Front facade of Our Lady of Šiluva church in Maizeville, built 1966.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 127 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
+    },
+    "dievo-apvaizdos-southfield-mi": {
+      "src": "/images/parishes/southfield-providence-of-god.jpg",
+      "alt": "Exterior of Providence of God church in Southfield, built 1972 by architect Alfonsas Kulpa-Kulpavičius.",
+      "attribution": "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 128 — photographed from the Žiburio archive copy.",
+      "license": "In-copyright; displayed only with the rights holder’s permission.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "© Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9). Permission request to the LAC Cultural Affairs Council pending; image held off the site and out of the repository until granted."
     }
   }
 }

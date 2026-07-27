@@ -6,7 +6,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import registry from "@/data/registry-unified.json";
 import alertsData from "@/data/alerts.json";
-import photosData from "@/data/photos.json";
+import { getClearedPhoto, clearedOrNull } from "@/lib/photos";
 import contextPoints from "@/data/context-points.json";
 import {
   parishes,
@@ -88,16 +88,9 @@ function getSustainabilityWatch(slug: string) {
   ) ?? null;
 }
 
-/** Look up a parish photo from data/photos.json by canonical slug. */
-function getParishPhoto(slug: string): {
-  src: string;
-  alt: string;
-  attribution: string;
-  license?: string;
-} | null {
-  const entry = (photosData.parishes as Record<string, any>)[slug];
-  return entry ?? null;
-}
+// Photo lookup lives in lib/photos.ts — the rights gate: only images with
+// cleared rights (permission_granted / public_domain / open_license /
+// own_work) ever render.
 
 export function generateStaticParams() {
   return parishes.map((p) => ({ slug: p.slug }));
@@ -167,12 +160,14 @@ export default async function ParishPage({
   const { alert: parishAlert, campaign: parishCampaign } = getParishAlert(slug);
   const watchEntry = getSustainabilityWatch(slug);
 
-  // Photo: prefer photos.json, fall back to sustainability-watch entry
-  const photosEntry = getParishPhoto(slug);
+  // Photo: prefer photos.json, fall back to sustainability-watch entry.
+  // Both paths pass through the rights gate — uncleared images never render.
+  const photosEntry = getClearedPhoto(slug);
+  const watchPhoto = clearedOrNull(watchEntry?.photo);
   const photo = photosEntry
     ? photosEntry
-    : watchEntry?.photo?.url
-      ? { src: watchEntry.photo.url, alt: watchEntry.photo.alt, attribution: watchEntry.photo.attribution, license: watchEntry.photo.license }
+    : watchPhoto?.url
+      ? { src: watchPhoto.url, alt: watchPhoto.alt, attribution: watchPhoto.attribution, license: watchPhoto.license, archiveUrl: undefined as string | undefined }
       : null;
 
   // The one status verdict, from the shared resolver.
@@ -265,6 +260,19 @@ export default async function ParishPage({
                 <p className="px-3 py-1.5 text-xs text-muted">
                   {photo.attribution}
                   {photo.license && <span> · {photo.license}</span>}
+                  {photo.archiveUrl && (
+                    <span>
+                      {" · "}
+                      <a
+                        href={photo.archiveUrl}
+                        className="underline hover:text-foreground"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Žiburio archive record
+                      </a>
+                    </span>
+                  )}
                 </p>
               </div>
             )}
