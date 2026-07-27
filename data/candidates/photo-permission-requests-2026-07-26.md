@@ -42,23 +42,47 @@ parish profile pages — low resolution, full per-photo citation, link to the
 ---
 
 ## 2. Augustinas Žemaitis — Global True Lithuania (truelithuania.com)
-**Re: 5 church photographs (Dayton, Cicero, Bridgeport, Brighton Park, Frackville)**
+**Personalized 2026-07-27 — Vilija met him at Divine Providence the week prior
+and bought his book; Dayton/Cicero/Brighton Park since covered by cleared
+sources, so the ask centers on Bridgeport + Frackville plus a standing
+arrangement. SENT VERSION below.**
 
-Gerb. Augustinai,
+Tema: Lietuviškų parapijų metraštis — ir prašymas dėl Jūsų nuotraukų
 
-esu SaveOurLithuanianParishes.org — projekto, dokumentuojančio visų JAV lietuvių
-parapijų likimus — steigėja. Jūsų „Global True Lithuania" darbas mums buvo vienas
-vertingiausių šaltinių.
+Sveiki, Augustinai,
 
-Prašau leidimo svetainės parapijų profilio puslapiuose skelbti penkias Jūsų
-bažnyčių nuotraukas: Dayton Holy Cross, Cicero St. Anthony, Bridgeport St. George,
-Chicago Brighton Park Immaculate Conception ir Frackville Annunciation. Prie
-kiekvienos — aiški autorystė („Augustinas Žemaitis / Global True Lithuania") ir
-nuoroda į Jūsų puslapį. Naudojimas nekomercinis, advokacinis. Jei pageidaujate
-kitokios formuluotės ar turite geresnės raiškos failus — mielai prisitaikysime.
+buvo labai malonu susipažinti praėjusią savaitę Dievo Apvaizdos parapijoje —
+Jūsų knyga jau guli ant mano stalo, skaitau su dideliu malonumu.
 
-Su pagarba,
+Žadėjau daugiau papasakoti apie projektą, tad prisistatau: kuriu
+SaveOurLithuanianParishes.org — viešą visų JAV lietuvių parapijų metraštį.
+Kiekvienai parapijai dokumentuojame, kas buvo pastatyta, kas su ja įvyko ir
+kokia jos padėtis šiandien — nuo Draugo archyvo (1909–2026) iki šių dienų
+vyskupijų sprendimų. Greta leidžiu „Židinį" (The Hearth) — pasakojimus apie
+parapijų likimus ir bendruomenių kovas: Maspeth, South Boston, Divine
+Providence.
+
+Jūsų „Global True Lithuania" darbas mums nuo pat pradžių buvo vienas
+vertingiausių šaltinių — daug kur Jūsų aprašymas yra išsamiausias, o kartais ir
+vienintelis tikslus liudijimas apie parapijos dabartį.
+
+Norėčiau paprašyti leidimo parapijų profiliuose skelbti Jūsų nuotraukas —
+pirmiausia Bridgeport Šv. Jurgio ir Frackville Apsireiškimo bažnyčių, o
+ilgainiui ir kitur, kur Jūsų kadras yra geriausias ar vienintelis pastato
+liudijimas. Prie kiekvienos nuotraukos — aiški autorystė („Augustinas Žemaitis
+/ Global True Lithuania") ir nuoroda į Jūsų puslapį; jei pageidausite kitokios
+formuluotės, mielai prisitaikysime. Projektas nekomercinis.
+
+Ir plačiau — man atrodo, kad mūsų darbai natūraliai papildo vienas kitą: Jūs
+fiksuojate paveldą vietoje, mes — dokumentinį pėdsaką archyvuose. Mielai
+pasidalinsiu mūsų registro duomenimis, jei jie praverstų Jūsų žemėlapiams, ir
+visur nurodysime Jūsų svetainę bei knygą kaip šaltinį.
+
+Ačiū už tai, ką darote — ir iki susitikimo!
+
 Vilija
+vilija@lietuva.ai
+SaveOurLithuanianParishes.org
 
 ---
 
