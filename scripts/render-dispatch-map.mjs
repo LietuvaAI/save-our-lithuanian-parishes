@@ -196,7 +196,11 @@ if (BAND > 0) {
   let ty = vy - BAND + 1.5 * S;
   if (KICKER) headerParts.push(`<text x="${vx + 0.9 * S}" y="${ty}" fill="#666666" font-size="${0.95 * S}" letter-spacing="${0.14 * S}">${esc(KICKER.toUpperCase())}</text>`);
   ty += 2.3 * S;
-  if (TITLE) headerParts.push(`<text x="${vx + 0.9 * S}" y="${ty}" fill="#151515" font-size="${1.9 * S}" font-weight="bold">${esc(TITLE)}</text>`);
+  if (TITLE) {
+    // auto-fit: the Georgia bold title must never clip at the frame edge
+    const tfs = Math.min(1.9 * S, (vw - 1.8 * S) / Math.max(1, TITLE.length * 0.56));
+    headerParts.push(`<text x="${vx + 0.9 * S}" y="${ty}" fill="#151515" font-size="${tfs}" font-weight="bold">${esc(TITLE)}</text>`);
+  }
   ty += 1.9 * S;
   for (const dl of deckLines) { headerParts.push(`<text x="${vx + 0.9 * S}" y="${ty}" fill="#222222" font-size="${1.12 * S}">${esc(dl)}</text>`); ty += 1.55 * S; }
   headerParts.push(`<rect x="${vx + 0.9 * S}" y="${(vy - 0.55 * S).toFixed(2)}" width="${vw - 1.8 * S}" height="${0.09 * S}" fill="#222222"/>`);
@@ -218,8 +222,14 @@ for (const d of overlay.dioceses)
     const w = d.name.length * 0.8 * S + d.name.length * 0.12 * S;
     if (d.cx - w / 2 < vx + 0.4 * S || d.cx + w / 2 > vx + vw - 0.4 * S) continue; // never clip a diocese name at the frame edge
     head.push(`<text x="${d.cx}" y="${d.cy}" text-anchor="middle" fill="${DIO}" font-size="${1.0 * S}" letter-spacing="${0.12 * S}">${esc(d.name.toUpperCase())}</text>`);
+    boxes.push({ x: d.cx - w / 2, y: d.cy - 1.1 * S, w, h: 1.4 * S }); // parish labels route around diocese names
   }
-head.push(`<text x="${dio.cx}" y="${Math.min(maxY + 1.6 * S, vy + vh - S)}" text-anchor="middle" fill="${DIO}" font-size="${1.0 * S}" letter-spacing="${0.14 * S}">${esc(dioceseFull.toUpperCase())}</text>`);
+{
+  const fy = Math.min(maxY + 1.6 * S, vy + vh - S);
+  const fw = dioceseFull.length * 0.92 * S;
+  head.push(`<text x="${dio.cx}" y="${fy}" text-anchor="middle" fill="${DIO}" font-size="${1.0 * S}" letter-spacing="${0.14 * S}">${esc(dioceseFull.toUpperCase())}</text>`);
+  boxes.push({ x: dio.cx - fw / 2, y: fy - 1.1 * S, w: fw, h: 1.4 * S });
+}
 
 const dots = [], labels = [];
 // subject first: dot, halo ring, label — reserves space before neighbors
@@ -243,6 +253,9 @@ dots.push(
 // neighbors: dots always; labels per policy, collision-free.
 // Placement order decides who wins scarce space: canonical unresolved first
 // (a second ink dot must never go unexplained), then canonical, then registry.
+// every dot is an obstacle BEFORE any label is placed — otherwise an early
+// label can sit on top of a later point's dot
+for (const p of all) if (p.slug !== SLUG) boxes.push(dotBox(p, 0.77 * S));
 const labelOrder = [...all].sort((a, b) => {
   const rank = (p) => (p.slug === SLUG ? 0 : p.tier === "canonical" && p.state === "unresolved" ? 1 : p.tier === "canonical" ? 2 : 3);
   return rank(a) - rank(b);
@@ -252,12 +265,14 @@ for (const p of labelOrder) {
   const col = COLOR[p.state];
   const r = 0.62 * S;
   const open = p.state === "active_parish" || p.state === "mass_continues";
-  boxes.push(dotBox(p, r + 0.15 * S));
   dots.push(
     open
       ? `<circle cx="${p.x}" cy="${p.y}" r="${r}" fill="#fff" stroke="${col}" stroke-width="${0.28 * S}"/>`
       : `<circle cx="${p.x}" cy="${p.y}" r="${r}" fill="${col}" stroke="#fff" stroke-width="${0.12 * S}"/>`,
   );
+  // a fanned dot can land at (or beyond) the clip edge — never label what
+  // the reader can't see; the sliver stays as context
+  if (!inView(p.x, p.y, -0.8 * S)) continue;
   const inside = inSubjectBox(p.x, p.y);
   const unresolvedPt = p.state === "unresolved";
   // Label hierarchy (readability over completeness — the interactive site map
