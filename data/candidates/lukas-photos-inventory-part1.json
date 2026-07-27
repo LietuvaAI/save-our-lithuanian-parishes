@@ -1,0 +1,212 @@
+{
+  "part": 1,
+  "images": [
+    {
+      "file": "IMG_1657.jpeg",
+      "content_type": "cover",
+      "place": null,
+      "page_number": null,
+      "has_church_photo": true,
+      "photo_description": "book cover collage of 9 photos; includes a church exterior (tan twin-tower building) and a church interior (rose window, lit altar) among unrelated cultural/portrait photos",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1658.jpeg",
+      "content_type": "text_page",
+      "place": null,
+      "page_number": 86,
+      "has_church_photo": false,
+      "photo_description": null,
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1659.jpeg",
+      "content_type": "text_page",
+      "place": null,
+      "page_number": 87,
+      "has_church_photo": false,
+      "photo_description": null,
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1665.jpeg",
+      "content_type": "parish_page",
+      "place": "Šv. Alfonso bažnyčia (St. Alphonsus Church), Baltimore, Maryland",
+      "page_number": 88,
+      "has_church_photo": true,
+      "photo_description": "exterior, Gothic red-brick tower with spire, street view with rectory and parish school visible",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1666.jpeg",
+      "content_type": "parish_page",
+      "place": "Šv. Alfonso bažnyčia (St. Alphonsus Church), Baltimore, Maryland",
+      "page_number": 89,
+      "has_church_photo": true,
+      "photo_description": "interior, ornate gilded altar with rose stained-glass window above",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1667.jpeg",
+      "content_type": "parish_page",
+      "place": "Šv. Andriejaus bažnyčia (St. Andrew Church), New Britain, Connecticut",
+      "page_number": 90,
+      "has_church_photo": true,
+      "photo_description": "exterior full view and close-up of front door, plus interior with painted rosette ceiling and altar; also a stained-glass window of a saint",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1668.jpeg",
+      "content_type": "parish_page",
+      "place": "Šv. Andriejaus bažnyčia (St. Andrew Church), Philadelphia, Pennsylvania",
+      "page_number": 91,
+      "has_church_photo": true,
+      "photo_description": "exterior full Gothic stone church with tower, close-up of wrought-iron Lithuanian cross in the churchyard, and interior painted apse/dome",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1669.jpeg",
+      "content_type": "parish_page",
+      "place": "Šv. Antano bažnyčia (St. Anthony of Padua RC Church), Cicero, Illinois",
+      "page_number": 92,
+      "has_church_photo": true,
+      "photo_description": "close-up of facade entrance, exterior full red-brick twin-tower church, stained glass window, and interior nave with painted apse",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1670.jpeg",
+      "content_type": "parish_page",
+      "place": "Švč. Mergelės Marijos Apreiškimo bažnyčia (Annunciation of the Blessed Virgin Mary Church), Brooklyn, New York",
+      "page_number": 93,
+      "has_church_photo": true,
+      "photo_description": "interior with ornate painted altar/apse fresco, exterior full red-brick church with clock tower, interior organ pipes, and cross finial close-up",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1671.jpeg",
+      "content_type": "parish_page",
+      "place": "Šv. Juozapo bažnyčia (St. Joseph's Church), Mahanoy City, Pennsylvania",
+      "page_number": 94,
+      "has_church_photo": true,
+      "photo_description": "interior long nave view toward altar, stained glass window, close-up of carved stone entrance reading \"Saint Joseph's Roman Catholic Church\", and exterior brick tower",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1672.jpeg",
+      "content_type": "parish_page",
+      "place": "Šv. Jurgio bažnyčia (St. George's Church), Shenandoah, Pennsylvania",
+      "page_number": 95,
+      "has_church_photo": true,
+      "photo_description": "exterior full stone tower (older/faded-looking photo), interior gilded organ pipes, bas-relief of St. George above entrance, and interior view with congregation during Mass",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1673.jpeg",
+      "content_type": "parish_page",
+      "place": "Šv. Juozapo bažnyčia (St. Joseph Church), Waterbury, Connecticut",
+      "page_number": 96,
+      "has_church_photo": true,
+      "photo_description": "exterior full building with rectory, close-up of front facade with wayside shrine, and stained glass windows installed 1931",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1674.jpeg",
+      "content_type": "parish_page",
+      "place": "Šv. Juozapo bažnyčia (St. Joseph Church), Scranton, Pennsylvania",
+      "page_number": 97,
+      "has_church_photo": true,
+      "photo_description": "exterior full white-topped brick tower, close-up of rooftop cross ornament, and interior nave with pews and altar",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1675.jpeg",
+      "content_type": "parish_page",
+      "place": "Šv. Kazimiero bažnyčia (St. Casimir Church), Providence, Rhode Island",
+      "page_number": 98,
+      "has_church_photo": true,
+      "photo_description": "interior altar with round stained glass, exterior full brick church with memorial cross out front, wood-carved side altar close-up, and stained glass window",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1676.jpeg",
+      "content_type": "parish_page",
+      "place": "Šv. Kazimiero bažnyčia (St. Casimir Church), Worcester, Massachusetts",
+      "page_number": 99,
+      "has_church_photo": true,
+      "photo_description": "side-altar mural of St. Casimir by artist Vytautas K. Jonynas, exterior twin-tower brick church, and interior nave with rose window and organ",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1677.jpeg",
+      "content_type": "parish_page",
+      "place": "Šv. Kryžiaus bažnyčia (Holy Cross Church), Chicago, Illinois",
+      "page_number": 100,
+      "has_church_photo": true,
+      "photo_description": "exterior, twin baroque towers with green copper domes; captioned as the largest Lithuanian-built church in Chicago (1,500 seats)",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1678.jpeg",
+      "content_type": "parish_page",
+      "place": "Šv. Kryžiaus bažnyčia (Holy Cross Church), Chicago, Illinois",
+      "page_number": 101,
+      "has_church_photo": true,
+      "photo_description": "interior view of nave and apse with murals and congregation, plus stained-glass windows depicting saint portraits",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1679.jpeg",
+      "content_type": "parish_page",
+      "place": "Šv. Petro bažnyčia (St. Peter Church), South Boston, Massachusetts",
+      "page_number": 102,
+      "has_church_photo": true,
+      "photo_description": "interior altar with stained glass, exterior twin-tower red-brick church, round stained-glass window above door inscribed \"Jėzus Kristus - Mūsų Karalius\", and a nativity-scene stained-glass window",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1680.jpeg",
+      "content_type": "parish_page",
+      "place": "Šv. Petro ir Povilo bažnyčia (Sts. Peter and Paul Church), Elizabeth, New Jersey",
+      "page_number": 103,
+      "has_church_photo": true,
+      "photo_description": "interior with high altar, exterior full brick twin-tower church, and five stained-glass windows depicting saints",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1681.jpeg",
+      "content_type": "parish_page",
+      "place": "Šv. Petro ir Povilo bažnyčia (Sts. Peter and Paul Church), Grand Rapids, Michigan",
+      "page_number": 104,
+      "has_church_photo": true,
+      "photo_description": "interior with main altar, exterior brick church with bell tower, interior with three stained-glass windows, and crucifix statue close-up",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1682.jpeg",
+      "content_type": "parish_page",
+      "place": "Švenčiausios Trejybės bažnyčia (Holy Trinity Church), Hartford, Connecticut",
+      "page_number": 105,
+      "has_church_photo": true,
+      "photo_description": "exterior full red-brick twin-tower church, stained glass window of St. Casimir and Jesus, and interior nave view",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1683.jpeg",
+      "content_type": "parish_page",
+      "place": "Švč. Trejybės bažnyčia (Holy Trinity Church), Wilkes-Barre, Pennsylvania",
+      "page_number": 106,
+      "has_church_photo": true,
+      "photo_description": "exterior, full view of twin red-brick Gothic spires; captioned as one of the largest Lithuanian-built churches in America",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1684.jpeg",
+      "content_type": "parish_page",
+      "place": "Švč. Trejybės bažnyčia (Holy Trinity Church), Wilkes-Barre, Pennsylvania",
+      "page_number": 107,
+      "has_church_photo": true,
+      "photo_description": "interior view during Mass with ornate painted vaulted ceiling, plus three stained-glass windows",
+      "quality": "good"
+    }
+  ]
+}
