@@ -77,9 +77,9 @@
       "entity": "Transfiguration (Kristaus Atsimainymo)",
       "place": "Maspeth, Queens, New York",
       "diocese": "Diocese of Brooklyn",
-      "dateObserved": "2026-07-19",
+      "dateObserved": "2026-07-25",
       "eventDate": "2025-09-12",
-      "whatChanged": "Open on a reduced schedule while its long-term future remains undecided. In September 2025 the Diocese of Brooklyn confirmed the church is not closing: weekday Masses moved to St. Stanislaus Kostka, weekend Masses continue at Transfiguration. A petition of more than 700 signatures, a Knights of Lithuania landmark-designation push, and an October 2025 visit from Lithuanian President Gitanas Nausėda have kept the case in the spotlight. Its fate is canonically unresolved.",
+      "whatChanged": "Open on a reduced schedule while its long-term future remains undecided. In September 2025 the Diocese of Brooklyn confirmed the church is not closing: weekday Masses moved to St. Stanislaus Kostka, weekend Masses continue at Transfiguration. A petition of more than 850 signatures, a Knights of Lithuania landmark-designation push, and a September 2025 visit from Lithuanian President Gitanas Nausėda have kept the case in the spotlight. Its fate is canonically unresolved.",
       "parishLink": "/parishes/kristaus-atsimainymo-maspeth-ny",
       "sources": [
         {
@@ -320,10 +320,10 @@
       "entity": "Transfiguration (Kristaus Atsimainymo)",
       "place": "Maspeth, Queens, New York",
       "parishLink": "/parishes/kristaus-atsimainymo-maspeth-ny",
-      "hearthUrl": "https://blog.saveourlithuanianparishes.org/i/207579337/church-of-the-transfiguration-maspeth-queens-new-york",
+      "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/still-open-still-undecided-the-fight",
       "since": "2025",
       "who": "Parishioners and preservation supporters, backed by the Knights of Lithuania",
-      "form": "A petition of more than 700 signatures, a landmark-designation effort for the church building, and an October 2025 visit from Lithuanian President Gitanas Nausėda",
+      "form": "A petition of more than 850 signatures, a landmark-designation effort for the church building, and a September 2025 visit from Lithuanian President Gitanas Nausėda",
       "state": "The Diocese of Brooklyn confirmed in September 2025 that the church stays open on a limited basis — weekend Masses continue at Transfiguration — and states the church building itself is not for sale. The parish's long-term future remains canonically unresolved.",
       "sources": [
         {
@@ -335,6 +335,12 @@
           "title": "Nausėda visit",
           "publisher": "QNS",
           "url": "https://qns.com/2025/09/gitanas-nauseda-transfiguration-church/"
+        }
+      ],
+      "dispatches": [
+        {
+          "title": "Still Open, Still Undecided: The Fight for Kristaus Atsimainymo (Transfiguration) in Maspeth",
+          "url": "https://blog.saveourlithuanianparishes.org/p/still-open-still-undecided-the-fight"
         }
       ]
     }
