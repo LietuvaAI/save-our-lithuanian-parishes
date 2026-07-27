@@ -45,6 +45,7 @@ const add = (sev, slug, msg) => findings[sev].push(`- **${slug}** — ${msg}`);
 const NEG_MASS = /no (current )?lithuanian(-language)? mass|no lithuanian liturg/i;
 const NEG_CLERGY = /no lithuanian(-speaking)? clergy/i;
 const ALIVE_CLAIMS = /still officially lithuanian|active lithuanian parish|lithuanian mass continues/i;
+const ENDED = new Set(["closed", "demolished", "repurposed", "merged", "suppressed"]);
 
 const asYear = (v) => {
   const m = (v ?? "").toString().match(/\b(1[89]\d{2}|20[0-2]\d)\b/);
@@ -114,14 +115,35 @@ for (const p of lib) {
 for (const [key, s] of Object.entries(sit)) {
   if (lib.some((p) => p.slug === key)) continue;
   const id = s.lithuanian_identity;
+  const reg = registry.find((r) => r.slug === (s.registry_slug ?? key));
   if ((id === "active_parish" || id === "mass_continues") && s.canonical_status === "standing") {
     const w = watchBySlug.get(key);
-    const reg = registry.find((r) => r.slug === (s.registry_slug ?? key));
     const verifiedWeb = (reg?.sources ?? []).some(
       (src) => src.axis === "web-historical" && src.confidence === "verified",
     );
     if (!w && !verifiedWeb)
       add("UNVERIFIED", key, `overlay claims "${id}" with no watch entry and no verified web survey`);
+  }
+
+  // 8. Overlay-only parishes asserting an ENDING on inference alone — the
+  // mirror of the check above. A terminal claim needs evidence exactly as a
+  // favorable one does, and it is the costlier error: an unearned ending is
+  // counted in every closed aggregate on the site. The unnamed 1902
+  // Waterbury church sat in closed/lost off a single Draugas row with zero
+  // indexed mentions and no closure year, while its own profile read
+  // "status not yet verified" (found 2026-07-26). An ending must rest on a
+  // closure year or on a source outside the Draugas registry axis.
+  if (id === "lost" || id === "ethnically_transferred" || ENDED.has(s.canonical_status)) {
+    const hasClosureYear = (reg?.years?.closed ?? []).some((y) => asYear(y.value));
+    const corroborating = (reg?.sources ?? []).filter(
+      (src) => src.axis !== "draugas-registry-1909-2007",
+    );
+    if (!hasClosureYear && !corroborating.length)
+      add(
+        "CONTRADICTION",
+        key,
+        `overlay asserts an ending (status "${s.canonical_status}", identity "${id}") with no closure year and no source outside the Draugas registry axis — must read unverified`,
+      );
   }
 }
 

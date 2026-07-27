@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import registry from "@/data/registry-unified.json";
-import photosData from "@/data/photos.json";
+import { getClearedPhoto } from "@/lib/photos";
 import {
   draugasCitationUrl,
   draugasArchiveUrl,
@@ -271,7 +271,7 @@ export default async function RegistryParishPage({
       </div>
 
       {(() => {
-        const photo = (photosData.parishes as Record<string, any>)[slug];
+        const photo = getClearedPhoto(slug);
         if (!photo) return null;
         return (
           <div className="mt-6 max-w-sm overflow-hidden rounded-lg border border-rule">
@@ -285,6 +285,19 @@ export default async function RegistryParishPage({
             <p className="px-3 py-1.5 text-xs text-muted">
               {photo.attribution}
               {photo.license && <span> · {photo.license}</span>}
+              {photo.archiveUrl && (
+                <span>
+                  {" · "}
+                  <a
+                    href={photo.archiveUrl}
+                    className="underline hover:text-foreground"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Žiburio archive record
+                  </a>
+                </span>
+              )}
             </p>
           </div>
         );

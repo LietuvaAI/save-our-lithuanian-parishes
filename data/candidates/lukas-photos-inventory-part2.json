@@ -1,0 +1,218 @@
+{
+  "part": 2,
+  "images": [
+    {
+      "file": "IMG_1685.jpeg",
+      "content_type": "other",
+      "place": null,
+      "page_number": null,
+      "has_church_photo": false,
+      "photo_description": null,
+      "quality": "good",
+      "notes": "Section-divider page for chapter 'Churches and Their Architecture After 1950' / 'Bažnyčios ir jų architektūra po 1950 m.', with a faint washed-out background photo of a church spire (decorative design, not a usable identifiable photograph) and a small stained-glass thumbnail."
+    },
+    {
+      "file": "IMG_1686.jpeg",
+      "content_type": "text_page",
+      "place": null,
+      "page_number": "112",
+      "has_church_photo": false,
+      "photo_description": null,
+      "quality": "good",
+      "notes": "Essay 'Churches and Their Architecture After 1950' by Algis Lukas; general introduction plus bio of architect Jonas Mulokas (1907-1983). Mentions Nativity of the Blessed Virgin Mary, Immaculate Conception Church (East St. Louis, IL), and Church of the Transfiguration (Maspeth, NY) in passing."
+    },
+    {
+      "file": "IMG_1687.jpeg",
+      "content_type": "text_page",
+      "place": null,
+      "page_number": "113",
+      "has_church_photo": false,
+      "photo_description": null,
+      "quality": "good",
+      "notes": "Continuation of architect bios: Stasys Kudokas (1898-1988), Kazys Kriščiukaitis (1901-1965), Alfonsas Kulpa-Kulpavičius (1923- ), Jonas Kova-Kovalskis (1906-1977). No photos."
+    },
+    {
+      "file": "IMG_1688.jpeg",
+      "content_type": "parish_page",
+      "place": "St. Casimir Lithuanian Church, Los Angeles, California",
+      "page_number": "114",
+      "has_church_photo": true,
+      "photo_description": "Exterior of St. Casimir Lithuanian Church, 2718 George Street, Los Angeles, CA (built 1951); interior main altar with statue of St. Casimir and side altars.",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1689.jpeg",
+      "content_type": "parish_page",
+      "place": "Immaculate Conception Lithuanian Catholic Church, East St. Louis, Illinois",
+      "page_number": "115",
+      "has_church_photo": true,
+      "photo_description": "Exterior facade and interior wood-arched altar of Immaculate Conception Lithuanian Catholic Church, 1509 Baugh Avenue, East St. Louis, IL (built 1956); three stained-glass Lithuanian Madonna windows by Vytautas K. Jonynas; St. Clair County historic-site plaque.",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1690.jpeg",
+      "content_type": "parish_page",
+      "place": "Our Lady of Perpetual Help Lithuanian RC Church, Cleveland, Ohio",
+      "page_number": "116",
+      "has_church_photo": true,
+      "photo_description": "Exterior of Our Lady of Perpetual Help Lithuanian RC Church, 18022 Neff Road, Cleveland, OH (built 1952); interior choir balcony/organ; relief sculpture 'Mary of Šiluva' and outdoor 'Rūpintojėlis' (Pensive Christ) wayside statue, both by sculptor R. Mozoliauskas.",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1691.jpeg",
+      "content_type": "parish_page",
+      "place": "Our Lady of Perpetual Help Lithuanian RC Church, Cleveland, Ohio",
+      "page_number": "117",
+      "has_church_photo": true,
+      "photo_description": "Interior main altar of Our Lady of Perpetual Help Church, Cleveland, OH (remodeled 1987 by architect Edurardas Kersnauskas and sculptor Ramojus Mozoliauskas), flanked by Lithuanian and American flags.",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1692.jpeg",
+      "content_type": "parish_page",
+      "place": "Nativity of the Blessed Virgin Mary Church, Chicago, Illinois",
+      "page_number": "118",
+      "has_church_photo": true,
+      "photo_description": "Exterior facade of Nativity of the Blessed Virgin Mary Church, 6812 South Washtenaw Ave., Chicago, IL (built 1957, architect Jonas Mulokas), showing twin spires and rose window.",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1693.jpeg",
+      "content_type": "parish_page",
+      "place": "Nativity of the Blessed Virgin Mary Church, Chicago, Illinois",
+      "page_number": "119",
+      "has_church_photo": true,
+      "photo_description": "Interior nave of Nativity of the Blessed Virgin Mary Church, Chicago, IL, decorated by Vytautas K. Jonynas; close-up stained glass window; monumental fresco of Our Lady of Šiluva by Sister Mercedes decorating the side altar.",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1694.jpeg",
+      "content_type": "parish_page",
+      "place": "Church of the Transfiguration, Maspeth, New York",
+      "page_number": "120",
+      "has_church_photo": true,
+      "photo_description": "Exterior of the Church of the Transfiguration, 64-14 Clinton Avenue, Maspeth, NY (built 1962, architect Jonas Mulokas); three stained-glass windows depicting Saint Casimir by artist Vytautas K. Jonynas.",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1695.jpeg",
+      "content_type": "parish_page",
+      "place": "Church of the Transfiguration, Maspeth, New York",
+      "page_number": "121",
+      "has_church_photo": true,
+      "photo_description": "Interior nave of the Church of the Transfiguration, Maspeth, NY, interior decoration by Vytautas K. Jonynas; side altar; main altar (the Transfiguration); wood sculpture of the Virgin Mary.",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1696.jpeg",
+      "content_type": "parish_page",
+      "place": "Immaculate Conception Church, Chicago, Illinois",
+      "page_number": "122",
+      "has_church_photo": true,
+      "photo_description": "Exterior of Immaculate Conception Church, 2745 West 44th St., Chicago, IL (built 1964, architect Edo Belli); stained glass window of the Virgin Mary; the baptistery and side entrance.",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1697.jpeg",
+      "content_type": "parish_page",
+      "place": "Immaculate Conception Church, Chicago, Illinois",
+      "page_number": "123",
+      "has_church_photo": true,
+      "photo_description": "Interior of Immaculate Conception Church, Chicago, IL: rear stained glass window by Conrad Schmitt Studios, the main altar, a Virgin Mary shrine, and stained glass windows along the side wall.",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1698.jpeg",
+      "content_type": "parish_page",
+      "place": "Our Lady of Šiluva Chapel, National Shrine of the Immaculate Conception, Washington, DC",
+      "page_number": "124",
+      "has_church_photo": true,
+      "photo_description": "Distant exterior view of the National Shrine of the Immaculate Conception, Washington, DC; wall mosaics of St. Casimir and the Pensive Christ, and ceiling mosaics of the Our Lady of Šiluva chapel, by artist Vytautas K. Jonynas.",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1699.jpeg",
+      "content_type": "parish_page",
+      "place": "Our Lady of Šiluva Chapel, National Shrine of the Immaculate Conception, Washington, DC",
+      "page_number": "125",
+      "has_church_photo": true,
+      "photo_description": "Interior altar of the Our Lady of Šiluva chapel at the National Shrine of the Immaculate Conception, Washington, DC, with the 1966 statue of Our Lady of Šiluva by sculptor Vytautas Kašuba; altar by Vytautas K. Jonynas.",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1700.jpeg",
+      "content_type": "parish_page",
+      "place": "Holy Cross Church, Dayton, Ohio",
+      "page_number": "126",
+      "has_church_photo": true,
+      "photo_description": "Exterior of Holy Cross Church, 1924 Leo Street, Dayton, OH (built 1915, remodeled 1964 by architect Jonas Mulokas); interior with stained glass windows by Adolfas Valeška and a small wood-relief sculpture.",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1701.jpeg",
+      "content_type": "parish_page",
+      "place": "Our Lady of Šiluva R.C. Church, Maizeville, Pennsylvania",
+      "page_number": "127",
+      "has_church_photo": true,
+      "photo_description": "Front facade exterior of Our Lady of Šiluva R.C. Church, 1314 Main Street, Maizeville, PA (built 1966); bas-relief of the apparition of Mary above the altar and a statue of Our Lady of Šiluva, both by Vytautas K. Jonynas.",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1702.jpeg",
+      "content_type": "parish_page",
+      "place": "Providence of God Church, Southfield, Michigan",
+      "page_number": "128",
+      "has_church_photo": true,
+      "photo_description": "Exterior of Providence of God Church, 25335 West Nine Mile Road, Southfield, MI (built 1972, architect A. Kulpa/Kulpavičius); interior nave with stained glass and altar decoration by Vytautas K. Jonynas; a side altar sculpture.",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1703.jpeg",
+      "content_type": "parish_page",
+      "place": "Providence of God Church, Southfield, Michigan",
+      "page_number": "129",
+      "has_church_photo": true,
+      "photo_description": "Interior details at Providence of God Church, Southfield, MI: stained-glass window and baptistery by Vytautas K. Jonynas, a Pensive Christ stained-glass window, a wood-carved relief 'Kryžių Kalnas' (Hill of Crosses in Lithuania) by wood-carving artist Jurgis Daugvila, and a small altar with wood carvings.",
+      "quality": "good"
+    },
+    {
+      "file": "IMG_1704.jpeg",
+      "content_type": "other",
+      "place": null,
+      "page_number": null,
+      "has_church_photo": false,
+      "photo_description": null,
+      "quality": "good",
+      "notes": "Front-matter colophon/imprint page: publisher Lithuanian American Community Inc., Cultural Affairs Council; Managing Editor Algis Lukas; Editor Danutė Bindokienė; Photographer Algis Lukas; Art Editor Vincas Lukas; Layout & Production Editor Paulius Mickus. Copyright 2009, ISBN-13: 978-0-615-26575-9. No page number visible."
+    },
+    {
+      "file": "IMG_1705.jpeg",
+      "content_type": "cover",
+      "place": null,
+      "page_number": null,
+      "has_church_photo": true,
+      "photo_description": "Interior title page for 'Lietuvių Kultūrinis Paveldas Amerikoje' / 'Lithuanian Cultural Legacy in America' by Algis Lukas; a six-panel photo collage in which one small thumbnail shows an unidentified church/building with a mosaic panel and an outdoor statue, while the other five collage panels appear blank/gray in this print.",
+      "quality": "partial"
+    },
+    {
+      "file": "IMG_1706.jpeg",
+      "content_type": "text_page",
+      "place": null,
+      "page_number": "v",
+      "has_church_photo": false,
+      "photo_description": null,
+      "quality": "good",
+      "notes": "Dedication ('Thousand years from first mention of Lithuania') and list of sponsors/honorary sponsors for the publication."
+    },
+    {
+      "file": "IMG_1707.jpeg",
+      "content_type": "toc",
+      "place": null,
+      "page_number": "vii",
+      "has_church_photo": false,
+      "photo_description": null,
+      "quality": "good",
+      "notes": "Table of Contents listing: Introduction (11), Lithuanians in America: A Historical Overview (29), The Lithuanian Embassy (54), Lithuanian Cultural Centers (66), First Lithuanian Churches in America (86), Churches and Their Architecture After 1950 (112), Religious Houses (135), Youth Camps (154), Installed Art (166), Monuments and Wayside Shrines (182), Cemeteries (201), Index and References (219)."
+    }
+  ]
+}
