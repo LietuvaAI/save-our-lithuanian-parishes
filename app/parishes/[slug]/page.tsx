@@ -245,278 +245,53 @@ export default async function ParishPage({
         );
         if (!photo && !hasMap) return null;
         return (
-          <div
-            className={`mt-6 grid gap-5 items-start ${photo && hasMap ? "sm:grid-cols-2" : ""}`}
-          >
-            {photo && (
-              <div className="overflow-hidden rounded-lg border border-rule">
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  width={640}
-                  height={427}
-                  className="w-full h-auto object-cover"
-                />
-                <p className="px-3 py-1.5 text-xs text-muted">
-                  {photo.attribution}
-                  {photo.license && <span> · {photo.license}</span>}
-                  {photo.archiveUrl && (
-                    <span>
-                      {" · "}
-                      <a
-                        href={photo.archiveUrl}
-                        className="underline hover:text-foreground"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Žiburio archive record
-                      </a>
-                    </span>
-                  )}
-                </p>
-              </div>
-            )}
-            {hasMap && (
-              <div className={photo ? "" : "max-w-xl"}>
-                <p className="mb-1.5 text-xs uppercase tracking-wide text-muted">
-                  Among its neighbors — no parish stands alone
-                </p>
-                <ParishContextMap slug={parish.slug} />
-              </div>
-            )}
-          </div>
-        );
-      })()}
-
-      {/* ══ Where it stands today ══ */}
-      <section className="mt-10">
-        <h2 className="font-serif text-xl font-semibold">
-          Where it stands today
-        </h2>
-
-        {!parishAlert && !watchEntry && !caseRecord && situation?.current_use && situation.current_use !== "Unknown" && (
-          <p className="mt-2 leading-relaxed">
-            Current use: {situation.current_use}.
-          </p>
-        )}
-        {!parishAlert && !watchEntry && !caseRecord && (!situation?.current_use || situation.current_use === "Unknown") && (
-          <p className="mt-2 leading-relaxed text-muted">
-            The present-day record for this parish is still being researched.
-            If you know its current state,{" "}
-            <Link href="/report" className="underline hover:text-foreground">
-              tell us
-            </Link>
-            .
-          </p>
-        )}
-
-        {parishAlert && (
-          <div
-            className="mt-4 rounded-lg border-2 px-4 py-3.5"
-            style={{ borderColor: parishAlert.level === "red" ? "var(--es-closed)" : "var(--color-amber-600)" }}
-          >
-            <p className="text-xs uppercase tracking-widest text-muted">
-              {parishCampaign ? "Active campaign" : "Under threat"}
+          <section className="mt-10">
+            <h2 className="font-serif text-xl font-semibold">
+              The church and its place
+            </h2>
+            <p className="mt-1 text-sm text-muted">
+              Among its neighbors — no parish stands alone.
             </p>
-            <p className="mt-1 text-sm leading-relaxed">{parishAlert.whatChanged}</p>
-            <div className="mt-3 flex flex-wrap gap-2 text-sm">
-              {parishCampaign?.hearthUrl && (
-                <a
-                  href={parishCampaign.hearthUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-sm font-semibold hover:opacity-90 transition-opacity"
-                  style={{ background: "var(--es-transferred)", color: "#1c1917" }}
-                >
-                  How to help &rarr;
-                </a>
-              )}
-              <Link
-                href="/under-threat"
-                className="inline-flex items-center gap-1 rounded-md border border-rule px-3 py-1.5 text-sm font-medium hover:border-foreground transition-colors"
-              >
-                All parishes under threat &rarr;
-              </Link>
-            </div>
-            <p className="mt-2 text-xs text-muted">
-              Sources:{" "}
-              {parishAlert.sources.map((s: any, i: number) => (
-                <span key={s.url}>
-                  {i > 0 && " · "}
-                  <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
-                    {s.publisher}
-                  </a>
-                </span>
-              ))}
-            </p>
-            {parishCampaign?.dispatches?.length > 0 && (
-              <div className="mt-3 border-t border-rule pt-3">
-                <p className="text-xs uppercase tracking-wide text-muted mb-1.5">
-                  From Židinys (The Hearth)
-                </p>
-                <ul className="space-y-1">
-                  {parishCampaign.dispatches.map((d: any) => (
-                    <li key={d.url}>
-                      <a
-                        href={d.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm underline hover:text-foreground"
-                      >
-                        {d.title} &rarr;
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        )}
-
-        {watchEntry && (
-          <div className="mt-4 rounded-lg border border-rule overflow-hidden">
-            <div className="px-4 pt-3.5 pb-3">
-              <p className="text-xs uppercase tracking-widest text-muted">
-                Sustainability Watch
-              </p>
-              <p className="mt-1.5 leading-relaxed">{watchEntry.situation}</p>
-
-              <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-                <div>
-                  <p className="text-xs uppercase tracking-wide text-muted mb-1">Clergy</p>
-                  <p className="font-medium">{CLERGY_LABEL[watchEntry.clergy.arrangement] ?? watchEntry.clergy.arrangement}</p>
-                  <p className="mt-1 text-xs text-muted leading-relaxed">{watchEntry.clergy.detail}</p>
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-wide text-muted mb-1">Lithuanian Mass</p>
-                  <p className="font-medium">{FREQUENCY_LABEL[watchEntry.liturgy.frequency] ?? watchEntry.liturgy.frequency}</p>
-                  <p className="mt-1 text-xs text-muted">{watchEntry.liturgy.detail}</p>
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-wide text-muted mb-1">Governance</p>
-                  <p className="font-medium">{GOVERNANCE_LABEL[watchEntry.governance] ?? watchEntry.governance}</p>
-                  <p className="mt-1 text-xs text-muted">{watchEntry.governanceDetail}</p>
-                </div>
-              </div>
-
-              {watchEntry.survivedThreats && (
-                <div className="mt-3 text-sm">
-                  <p className="text-xs uppercase tracking-wide text-muted mb-0.5">Survived</p>
-                  <p className="text-muted leading-relaxed">{watchEntry.survivedThreats}</p>
-                </div>
-              )}
-              {watchEntry.financial && (
-                <div className="mt-3 text-sm">
-                  <p className="text-xs uppercase tracking-wide text-muted mb-0.5">Financial signal</p>
-                  <p className="text-muted leading-relaxed">{watchEntry.financial}</p>
-                </div>
-              )}
-            </div>
-            <div className="border-t border-rule bg-background px-4 py-2.5 flex flex-wrap items-center justify-between gap-2">
-              <p className="text-xs text-muted">
-                Sources:{" "}
-                {(watchEntry.sources as any[]).map((s: any, i: number) => (
-                  <span key={s.url}>
-                    {i > 0 && " · "}
-                    <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
-                      {s.publisher}
-                    </a>
-                  </span>
-                ))}
-                {" · "}checked {watchEntry.dateObserved}
-              </p>
-              <div className="flex gap-2">
-                {watchEntry.hearthUrl && (
-                  <a
-                    href={watchEntry.hearthUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-md border border-rule px-3 py-1 text-xs font-medium hover:border-foreground transition-colors"
-                  >
-                    Read the dispatch &rarr;
-                  </a>
-                )}
-                <Link
-                  href="/sustainability-watch"
-                  className="rounded-md border border-rule px-3 py-1 text-xs font-medium hover:border-foreground transition-colors"
-                >
-                  Sustainability Watch &rarr;
-                </Link>
-              </div>
-            </div>
-            {watchEntry.dispatches?.length > 0 && (
-              <div className="border-t border-rule px-4 py-3">
-                <p className="text-xs uppercase tracking-wide text-muted mb-1.5">
-                  From Židinys (The Hearth)
-                </p>
-                <ul className="space-y-1">
-                  {(watchEntry.dispatches as any[]).map((d: any) => (
-                    <li key={d.url}>
-                      <a
-                        href={d.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm underline hover:text-foreground"
-                      >
-                        {d.title} &rarr;
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        )}
-
-        {caseRecord && (
-          <div className="mt-5">
-            <p className="text-xs uppercase tracking-wide text-muted">
-              The present record · as of {caseRecord.asOf} ·{" "}
-              {caseRecord.confidence === "verified"
-                ? "verified against published sources"
-                : caseRecord.confidence === "reported"
-                  ? "reported — corroboration limited"
-                  : "thin — treat with caution"}
-            </p>
-            <p className="mt-3 leading-relaxed">{caseRecord.summary}</p>
-            {caseRecord.developments.length > 0 && (
-              <ol className="mt-5 space-y-4 border-l-2 border-rule pl-4">
-                {[...caseRecord.developments].sort((a, b) => b.date.localeCompare(a.date)).map((d) => (
-                  <li key={`${d.date}-${d.headline}`}>
-                    <p className="text-xs uppercase tracking-wide text-muted">
-                      {d.date}
-                    </p>
-                    <p className="font-medium">{d.headline}</p>
-                    <p className="text-sm text-muted leading-relaxed">
-                      {d.detail}{" "}
-                      {d.sources.map((s, i) => (
+            <div
+              className={`mt-4 grid gap-5 items-start ${photo && hasMap ? "sm:grid-cols-2" : ""}`}
+            >
+              {photo && (
+                <div className="overflow-hidden rounded-lg border border-rule">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    width={640}
+                    height={427}
+                    className="w-full h-auto object-cover"
+                  />
+                  <p className="px-3 py-1.5 text-xs text-muted">
+                    {photo.attribution}
+                    {photo.license && <span> · {photo.license}</span>}
+                    {photo.archiveUrl && (
+                      <span>
+                        {" · "}
                         <a
-                          key={s.url}
-                          href={s.url}
+                          href={photo.archiveUrl}
+                          className="underline hover:text-foreground"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="underline hover:text-foreground whitespace-nowrap"
                         >
-                          {s.publisher || s.title}
-                          {i < d.sources.length - 1 ? ", " : ""}
+                          Žiburio archive record
                         </a>
-                      ))}
-                    </p>
-                  </li>
-                ))}
-              </ol>
-            )}
-            {caseRecord.gaps && (
-              <p className="mt-4 text-sm text-muted leading-relaxed">
-                <span className="font-medium text-foreground">
-                  What we could not yet establish:
-                </span>{" "}
-                {caseRecord.gaps}
-              </p>
-            )}
-          </div>
-        )}
-      </section>
+                      </span>
+                    )}
+                  </p>
+                </div>
+              )}
+              {hasMap && (
+                <div className={photo ? "" : "max-w-xl"}>
+                  <ParishContextMap slug={parish.slug} />
+                </div>
+              )}
+            </div>
+          </section>
+        );
+      })()}
 
       {/* ══ What it was ══ */}
       <section className="mt-10">
@@ -707,6 +482,262 @@ export default async function ParishPage({
           )}
         </section>
       )}
+
+      {/* ══ Where it stands today ══ */}
+      <section className="mt-10">
+        <h2 className="font-serif text-xl font-semibold">
+          Where it stands today
+        </h2>
+
+        {!parishAlert && !watchEntry && !caseRecord && situation?.current_use && situation.current_use !== "Unknown" && (
+          <p className="mt-2 leading-relaxed">
+            Current use: {situation.current_use}.
+          </p>
+        )}
+        {!parishAlert && !watchEntry && !caseRecord && (!situation?.current_use || situation.current_use === "Unknown") && (
+          <p className="mt-2 leading-relaxed text-muted">
+            The present-day record for this parish is still being researched.
+            If you know its current state,{" "}
+            <Link href="/report" className="underline hover:text-foreground">
+              tell us
+            </Link>
+            .
+          </p>
+        )}
+
+        {parishAlert && (
+          <div
+            className="mt-4 rounded-lg border-2 px-4 py-3.5"
+            style={{ borderColor: parishAlert.level === "red" ? "var(--es-closed)" : "var(--color-amber-600)" }}
+          >
+            <p className="text-xs uppercase tracking-widest text-muted">
+              {parishCampaign ? "Active campaign" : "Under threat"}
+            </p>
+            <p className="mt-1 text-sm leading-relaxed">{parishAlert.whatChanged}</p>
+            <div className="mt-3 flex flex-wrap gap-2 text-sm">
+              {parishCampaign?.hearthUrl && (
+                <a
+                  href={parishCampaign.hearthUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-sm font-semibold hover:opacity-90 transition-opacity"
+                  style={{ background: "var(--es-transferred)", color: "#1c1917" }}
+                >
+                  How to help &rarr;
+                </a>
+              )}
+              <Link
+                href="/under-threat"
+                className="inline-flex items-center gap-1 rounded-md border border-rule px-3 py-1.5 text-sm font-medium hover:border-foreground transition-colors"
+              >
+                All parishes under threat &rarr;
+              </Link>
+            </div>
+            <p className="mt-2 text-xs text-muted">
+              Sources:{" "}
+              {parishAlert.sources.map((s: any, i: number) => (
+                <span key={s.url}>
+                  {i > 0 && " · "}
+                  <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
+                    {s.publisher}
+                  </a>
+                </span>
+              ))}
+            </p>
+            {parishCampaign?.dispatches?.length > 0 && (
+              <div className="mt-3 border-t border-rule pt-3">
+                <p className="text-xs uppercase tracking-wide text-muted mb-1.5">
+                  From Židinys (The Hearth)
+                </p>
+                <ul className="space-y-1">
+                  {parishCampaign.dispatches.map((d: any) => (
+                    <li key={d.url}>
+                      <a
+                        href={d.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm underline hover:text-foreground"
+                      >
+                        {d.title} &rarr;
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
+
+        {watchEntry && (
+          <div className="mt-4 rounded-lg border border-rule overflow-hidden">
+            <div className="px-4 pt-3.5 pb-3">
+              <p className="text-xs uppercase tracking-widest text-muted">
+                Sustainability Watch
+              </p>
+              <p className="mt-1.5 leading-relaxed">{watchEntry.situation}</p>
+
+              <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                <div>
+                  <p className="text-xs uppercase tracking-wide text-muted mb-1">Clergy</p>
+                  <p className="font-medium">{CLERGY_LABEL[watchEntry.clergy.arrangement] ?? watchEntry.clergy.arrangement}</p>
+                  <p className="mt-1 text-xs text-muted leading-relaxed">{watchEntry.clergy.detail}</p>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wide text-muted mb-1">Lithuanian Mass</p>
+                  <p className="font-medium">{FREQUENCY_LABEL[watchEntry.liturgy.frequency] ?? watchEntry.liturgy.frequency}</p>
+                  <p className="mt-1 text-xs text-muted">{watchEntry.liturgy.detail}</p>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wide text-muted mb-1">Governance</p>
+                  <p className="font-medium">{GOVERNANCE_LABEL[watchEntry.governance] ?? watchEntry.governance}</p>
+                  <p className="mt-1 text-xs text-muted">{watchEntry.governanceDetail}</p>
+                </div>
+              </div>
+
+              {watchEntry.survivedThreats && (
+                <div className="mt-3 text-sm">
+                  <p className="text-xs uppercase tracking-wide text-muted mb-0.5">Survived</p>
+                  <p className="text-muted leading-relaxed">{watchEntry.survivedThreats}</p>
+                </div>
+              )}
+              {watchEntry.financial && (
+                <div className="mt-3 text-sm">
+                  <p className="text-xs uppercase tracking-wide text-muted mb-0.5">Financial signal</p>
+                  <p className="text-muted leading-relaxed">{watchEntry.financial}</p>
+                </div>
+              )}
+            </div>
+            <div className="border-t border-rule bg-background px-4 py-2.5 flex flex-wrap items-center justify-between gap-2">
+              <p className="text-xs text-muted">
+                Sources:{" "}
+                {(watchEntry.sources as any[]).map((s: any, i: number) => (
+                  <span key={s.url}>
+                    {i > 0 && " · "}
+                    <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
+                      {s.publisher}
+                    </a>
+                  </span>
+                ))}
+                {" · "}checked {watchEntry.dateObserved}
+              </p>
+              <div className="flex gap-2">
+                {watchEntry.hearthUrl && (
+                  <a
+                    href={watchEntry.hearthUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-md border border-rule px-3 py-1 text-xs font-medium hover:border-foreground transition-colors"
+                  >
+                    Read the dispatch &rarr;
+                  </a>
+                )}
+                <Link
+                  href="/sustainability-watch"
+                  className="rounded-md border border-rule px-3 py-1 text-xs font-medium hover:border-foreground transition-colors"
+                >
+                  Sustainability Watch &rarr;
+                </Link>
+              </div>
+            </div>
+            {watchEntry.dispatches?.length > 0 && (
+              <div className="border-t border-rule px-4 py-3">
+                <p className="text-xs uppercase tracking-wide text-muted mb-1.5">
+                  From Židinys (The Hearth)
+                </p>
+                <ul className="space-y-1">
+                  {(watchEntry.dispatches as any[]).map((d: any) => (
+                    <li key={d.url}>
+                      <a
+                        href={d.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm underline hover:text-foreground"
+                      >
+                        {d.title} &rarr;
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
+
+        {caseRecord && (
+          <div className="mt-6">
+            <h3 className="font-serif text-lg font-semibold">
+              The verified record
+            </h3>
+            <p className="mt-0.5 text-xs uppercase tracking-wide text-muted">
+              as of {caseRecord.asOf} ·{" "}
+              {caseRecord.confidence === "verified"
+                ? "verified against published sources"
+                : caseRecord.confidence === "reported"
+                  ? "reported — corroboration limited"
+                  : "thin — treat with caution"}
+            </p>
+            <p className="mt-3 leading-relaxed">{caseRecord.summary}</p>
+            {caseRecord.developments.length > 0 && (() => {
+              const devs = [...caseRecord.developments].sort((a, b) =>
+                b.date.localeCompare(a.date),
+              );
+              const recent = devs.slice(0, 4);
+              const older = devs.slice(4);
+              const entry = (d: (typeof devs)[number]) => (
+                <li key={`${d.date}-${d.headline}`}>
+                  <p className="text-xs uppercase tracking-wide text-muted">
+                    {d.date}
+                  </p>
+                  <p className="font-medium">{d.headline}</p>
+                  <p className="text-sm text-muted leading-relaxed">
+                    {d.detail}{" "}
+                    {d.sources.map((s, i) => (
+                      <a
+                        key={s.url}
+                        href={s.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-foreground whitespace-nowrap"
+                      >
+                        {s.publisher || s.title}
+                        {i < d.sources.length - 1 ? ", " : ""}
+                      </a>
+                    ))}
+                  </p>
+                </li>
+              );
+              return (
+                <div className="mt-6">
+                  <h3 className="font-serif text-lg font-semibold">
+                    The trail of events
+                  </h3>
+                  <ol className="mt-3 space-y-4 border-l-2 border-rule pl-4">
+                    {recent.map(entry)}
+                  </ol>
+                  {older.length > 0 && (
+                    <details className="mt-3">
+                      <summary className="cursor-pointer text-sm text-muted underline hover:text-foreground">
+                        Earlier entries ({older.length})
+                      </summary>
+                      <ol className="mt-3 space-y-4 border-l-2 border-rule pl-4">
+                        {older.map(entry)}
+                      </ol>
+                    </details>
+                  )}
+                </div>
+              );
+            })()}
+            {caseRecord.gaps && (
+              <p className="mt-4 text-sm text-muted leading-relaxed">
+                <span className="font-medium text-foreground">
+                  What we could not yet establish:
+                </span>{" "}
+                {caseRecord.gaps}
+              </p>
+            )}
+          </div>
+        )}
+      </section>
 
       <section className="mt-10">
         <h2 className="font-serif text-xl font-semibold">
