@@ -81,4 +81,30 @@ research pages.
   only geocoding here; fix it at the source on the next gazetteer revision.
 - Waterbury needs a name-level reconciliation: three Roman Catholic records
   sit on the same city centroid (Šv. Juozapo, Šv. Kazimiero, and this unnamed
-  1902 entry) and only the first is established as distinct.
+  1902 entry) and only the first is established as distinct. New input from the
+  2026-07-26 national-catholic verification: the Lithuanian National Catholic
+  congregation in Waterbury was founded in **1902**, the same year as the
+  unnamed Draugas entry, so the two records may be one congregation seen from
+  either side of the schism. Draugas coded its entry `roman_catholic`, which
+  argues against the identity but does not settle it. Resolve name-level before
+  either record is counted anywhere.
+
+## Both directions of claim are guarded (2026-07-26)
+
+A record must earn a **favorable** identity and an **ending** alike, and the
+lifecycle field is not a licence for either. `audit-classification.mjs` first
+checked favorable claims only when `canonical_status` was `standing`, and
+terminal claims not at all; #82 closed the terminal gap, and the favorable
+gate fell with `lithuanian-national-catholic-parish-waterbury-ct`, which held
+`active_parish` under `canonical_status: unknown` on one medium-confidence
+source that itself read `closed`. Two rules now apply to overlay-only records
+regardless of lifecycle value: a favorable identity needs a watch entry or a
+*verified* web survey, and a favorable identity may not contradict its own
+source's `currentStatus` unless a watch entry or case record supersedes it
+(layer precedence — the Boston and Rochester records carry stale web readings
+their per-parish research has since corrected).
+
+National Catholic records are historical witness only: `usRomanCatholic()`
+and `ParishContextMap` both filter to `congregation_class === "roman_catholic"`,
+so these congregations never enter Roman Catholic headline or diocese figures,
+whatever their status. See binding guardrail 1 in `CLAUDE.md`.

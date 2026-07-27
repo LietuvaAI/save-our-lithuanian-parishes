@@ -116,13 +116,40 @@ for (const [key, s] of Object.entries(sit)) {
   if (lib.some((p) => p.slug === key)) continue;
   const id = s.lithuanian_identity;
   const reg = registry.find((r) => r.slug === (s.registry_slug ?? key));
-  if ((id === "active_parish" || id === "mass_continues") && s.canonical_status === "standing") {
+  // 7. Favorable identity on no research. The claim itself is what needs
+  // evidence, whatever the lifecycle field happens to say — so this must not
+  // be gated on canonical_status. It was, and a record claiming
+  // "active_parish" under canonical_status "unknown" walked straight through:
+  // lithuanian-national-catholic-parish-waterbury-ct, a Lithuanian National
+  // Catholic congregation founded 1902 and short-lived, sat in active_parish
+  // off one medium-confidence source (found 2026-07-26). The favorable mirror
+  // of the terminal-claim gap closed in #82.
+  if (id === "active_parish" || id === "mass_continues") {
     const w = watchBySlug.get(key);
     const verifiedWeb = (reg?.sources ?? []).some(
       (src) => src.axis === "web-historical" && src.confidence === "verified",
     );
     if (!w && !verifiedWeb)
       add("UNVERIFIED", key, `overlay claims "${id}" with no watch entry and no verified web survey`);
+
+    // 7b. The same record also contradicted its own evidence: the one source
+    // it rests on recorded currentStatus "closed" while the overlay read
+    // active_parish. A watch entry or case record legitimately supersedes an
+    // older survey (layer precedence: watch/case beat classifier), so those
+    // are exempt — Šv. Petro, Boston and Šv. Jurgio, Rochester both carry
+    // stale web readings their per-parish research has since corrected.
+    const ENDED_SRC = new Set(["closed", "demolished", "repurposed", "merged", "suppressed"]);
+    if (!w && !caseRecords.has(key)) {
+      const contra = (reg?.sources ?? []).find((src) =>
+        ENDED_SRC.has((src.currentStatus ?? "").toLowerCase()),
+      );
+      if (contra)
+        add(
+          "CONTRADICTION",
+          key,
+          `overlay claims "${id}" but its own ${contra.axis} source records currentStatus "${contra.currentStatus}", with no watch entry or case record to supersede it`,
+        );
+    }
   }
 
   // 8. Overlay-only parishes asserting an ENDING on inference alone — the
