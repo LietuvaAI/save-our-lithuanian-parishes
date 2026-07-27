@@ -10,7 +10,7 @@
       "entity": "Divine Providence (Dievo Apvaizdos)",
       "place": "Southfield, Michigan",
       "diocese": "Archdiocese of Detroit",
-      "dateObserved": "2026-07-22",
+      "dateObserved": "2026-07-27",
       "eventDate": "2026",
       "whatChanged": "The last Lithuanian Catholic parish in metro Detroit is under evaluation in the Archdiocese of Detroit's Families of Parishes restructuring. No closure decree has been issued. The Archdiocese's Listening Session Feedback Survey — the public window to shape the outcome — closes July 31, 2026.",
       "parishLink": "/parishes/dievo-apvaizdos-southfield-mi",
@@ -29,7 +29,7 @@
       "entity": "St. Joseph's (Šv. Juozapo)",
       "place": "Waterbury, Connecticut",
       "diocese": "Archdiocese of Hartford",
-      "dateObserved": "2026-07-22",
+      "dateObserved": "2026-07-27",
       "eventDate": "2023-09-30",
       "whatChanged": "Closed September 30, 2023 under the Archdiocese of Hartford's restructuring plan. Parishioners retained a canon lawyer and continue to contest the closure; the community has so far prevented a complete ending and the canonical fight remains active.",
       "parishLink": "/parishes/sv-juozapo-waterbury-ct",
@@ -226,11 +226,11 @@
       "entity": "Divine Providence (Dievo Apvaizdos)",
       "place": "Southfield, Michigan",
       "parishLink": "/parishes/dievo-apvaizdos-southfield-mi",
-      "hearthUrl": "https://blog.saveourlithuanianparishes.org/i/207579337/divine-providence-lithuanian-catholic-church-southfield-michigan",
+      "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/further-down-the-path-what-divine",
       "since": "2026",
       "who": "The parish community, with this project's public analysis",
       "form": "The parish's case made in the Archdiocese's own published numbers — The Hearth's workbook analysis and the armory on this site — while the restructuring survey window is open",
-      "state": "Press coverage describes the parish as seeking to remain a standalone ethnic parish inside the Archdiocese of Detroit's 2025–2027 restructuring. No proposal naming the parish has surfaced; the survey closes July 31, 2026.",
+      "state": "The parish community seeks to remain a standalone ethnic parish inside the Archdiocese of Detroit's 2025–2027 restructuring. Detroit News reported (May 30, 2026) that at least one proposed model would end weekend Mass at Divine Providence and nine other Planning Area 9 parishes; nothing has been decided. The survey closes July 31, 2026.",
       "dispatches": [
         {
           "title": "In Writing: The 1968 Letter That Made Divine Providence a National Parish",
@@ -259,6 +259,10 @@
         {
           "title": "Do Your Part for Divine Providence",
           "url": "https://blog.saveourlithuanianparishes.org/p/do-your-part-for-divine-providence"
+        },
+        {
+          "title": "Further Down the Path: What Divine Providence Can See from Connecticut and Queens",
+          "url": "https://blog.saveourlithuanianparishes.org/p/further-down-the-path-what-divine"
         }
       ],
       "sources": [
@@ -303,7 +307,7 @@
       "entity": "St. Joseph's (Šv. Juozapo)",
       "place": "Waterbury, Connecticut",
       "parishLink": "/parishes/sv-juozapo-waterbury-ct",
-      "hearthUrl": "https://blog.saveourlithuanianparishes.org/i/207579337/st-josephs-church-waterbury-connecticut",
+      "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/closed-not-ended-the-vatican-appeal",
       "since": "2023",
       "who": "Parishioners of St. Joseph's Lithuanian Catholic Church, Waterbury",
       "form": "Retained a canon lawyer in 2023 to contest the archdiocese's closure decision; GoFundMe to cover legal expenses",
@@ -318,6 +322,12 @@
           "title": "Save St. Joseph's Lithuanian Catholic Church",
           "publisher": "GoFundMe",
           "url": "https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church"
+        }
+      ],
+      "dispatches": [
+        {
+          "title": "Closed, Not Ended: The Vatican Appeal for Šv. Juozapo (St. Joseph's) in Waterbury",
+          "url": "https://blog.saveourlithuanianparishes.org/p/closed-not-ended-the-vatican-appeal"
         }
       ]
     },
