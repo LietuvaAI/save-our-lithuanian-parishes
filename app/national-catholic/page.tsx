@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import registry from "@/data/registry-unified.json";
-import type { RegParish } from "@/lib/registry-scope";
+import { EndStatePill } from "@/components/EndStatePill";
+import { toScopedParish, type RegParish } from "@/lib/registry-scope";
+import type { EndState } from "@/lib/end-state";
 
 export const metadata: Metadata = {
   title: "Lithuanian National Catholic parishes",
@@ -48,30 +50,17 @@ function webStatus(sources?: RegistrySource[]): string | null {
   return ws?.currentStatus ?? null;
 }
 
-const STATUS_LABEL: Record<string, string> = {
-  standing: "Standing",
-  closed: "Closed",
-  demolished: "Demolished",
-  repurposed: "Repurposed",
-  merged: "Merged",
-};
+function statusForRecord(parish: Rec): EndState {
+  const canonical = toScopedParish(parish as RegParish).endState;
+  if (canonical !== "unverified") return canonical;
 
-function StatusBadge({ status }: { status: string | null }) {
-  if (!status) return null;
-  const key = status.toLowerCase().split(/[\s—]/)[0];
-  const label = STATUS_LABEL[key] ?? status;
-  const isOpen = key === "standing";
-  return (
-    <span
-      className="inline-flex rounded-full px-2 py-0.5 text-xs font-medium"
-      style={{
-        background: isOpen ? "var(--mark-standing)" : "var(--muted)",
-        color: isOpen ? "#fff" : "var(--foreground)",
-      }}
-    >
-      {label}
-    </span>
-  );
+  const status = webStatus(parish.sources)?.toLowerCase() ?? "";
+  if (status.includes("demolished")) return "demolished";
+  if (status.includes("repurposed") || status.includes("sold")) {
+    return "repurposed";
+  }
+  if (status.includes("closed") || status.includes("merged")) return "closed";
+  return canonical;
 }
 
 // Group entries by state for display
@@ -117,7 +106,8 @@ export default function NationalCatholicPage() {
             {standingCount === 1
               ? "One congregation is still standing"
               : `${standingCount} congregations are still standing`}{" "}
-            — the rest closed, were demolished, or fate is unresolved.{" "}
+            — the others closed, were demolished, or still need present-status
+            verification.{" "}
           </>
         )}
         These are documented here as historical record. They are part of the
@@ -168,7 +158,6 @@ export default function NationalCatholicPage() {
                 {byState.get(st)!.map((p) => {
                   const founded = yearDisplay(p.years?.founded);
                   const closed = yearDisplay(p.years?.closed);
-                  const status = webStatus(p.sources);
                   const name = p.names.lt || p.names.en || p.slug;
                   const altName = p.names.lt && p.names.en ? p.names.en : null;
                   const wk = p.sources?.find((s) => s.axis === "wolkovich");
@@ -187,7 +176,7 @@ export default function NationalCatholicPage() {
                           )}
                         </div>
                         <div className="flex items-center gap-2">
-                          <StatusBadge status={status} />
+                          <EndStatePill value={statusForRecord(p)} />
                           <span className="text-sm text-muted">{p.city}</span>
                         </div>
                       </div>

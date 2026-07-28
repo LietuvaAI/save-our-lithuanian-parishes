@@ -4,23 +4,7 @@ import {
   OWNERSHIP_SHORT,
   type Parish,
 } from "@/lib/parishes";
-import { resolveEndState } from "@/lib/end-state";
-
-function endStateFor(parish: Parish) {
-  const identity = parish.lithuanianIdentity;
-  const isStanding =
-    (parish.endingMode === "standing" && !parish.yearClosed) ||
-    (!parish.yearClosed &&
-      (identity === "active_parish" || identity === "mass_continues"));
-
-  return resolveEndState(
-    identity,
-    parish.buildingFate,
-    !!parish.yearClosed,
-    isStanding,
-    parish.endingMode,
-  );
-}
+import { resolveParishEndState } from "@/lib/end-state";
 
 export default function ParishViewList({
   parishes,
@@ -47,7 +31,7 @@ export default function ParishViewList({
                 {parish.yearClosed ? ` · Closed ${parish.yearClosed}` : ""}
               </p>
             </div>
-            <EndStatePill value={endStateFor(parish)} />
+            <EndStatePill value={resolveParishEndState(parish)} />
           </div>
 
           {parish.situation && (

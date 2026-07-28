@@ -3,7 +3,13 @@ import Image from "next/image";
 import { getClearedPhoto, clearedOrNull } from "@/lib/photos";
 import Link from "next/link";
 import alertsData from "@/data/alerts.json";
+import { EndStatePill } from "@/components/EndStatePill";
 import { parishes } from "@/lib/parishes";
+import {
+  isLoss,
+  resolveParishEndState,
+  type EndState,
+} from "@/lib/end-state";
 import {
   CLERGY_LABEL,
   FREQUENCY_LABEL,
@@ -40,9 +46,26 @@ type SustainabilityEntry = {
   financial: string | null;
   situation: string;
   sources: { title: string; publisher: string; url: string }[];
+  photo?: {
+    url: string;
+    alt: string;
+    attribution: string;
+    license?: string;
+    rights?: string;
+  };
 };
 
-const entries = (alertsData as any).sustainabilityWatch as SustainabilityEntry[];
+type AlertSummary = {
+  parishLink: string;
+};
+
+const entries = alertsData.sustainabilityWatch as SustainabilityEntry[];
+const parishBySlug = new Map(parishes.map((parish) => [parish.slug, parish]));
+
+function statusForSlug(slug: string): EndState {
+  const parish = parishBySlug.get(slug);
+  return parish ? resolveParishEndState(parish) : "unverified";
+}
 
 function ClergyBadge({ arrangement }: { arrangement: string }) {
   const isHealthy = arrangement === "lithuanian_klebonas";
@@ -68,15 +91,22 @@ function ClergyBadge({ arrangement }: { arrangement: string }) {
 
 /** Build the at-a-glance row data for all standing RC diocese parishes. */
 function buildDashboardRows() {
-  const watchIndex = new Map(
-    ((alertsData as any).sustainabilityWatch as any[]).map((e: any) => [e.parishLink, e])
-  );
+  const watchIndex = new Map(entries.map((entry) => [entry.parishLink, entry]));
   const alertIndex = new Map(
-    (alertsData.alerts as any[]).map((a: any) => [a.parishLink, a])
+    (alertsData.alerts as AlertSummary[]).map((alert) => [
+      alert.parishLink,
+      alert,
+    ]),
   );
 
   return parishes
-    .filter((p) => p.status === "standing" && !p.comparator && p.ownership === "diocese_rc")
+    .filter(
+      (p) =>
+        p.status === "standing" &&
+        !p.comparator &&
+        p.ownership === "diocese_rc" &&
+        !isLoss(resolveParishEndState(p)),
+    )
     .map((p) => {
       const link = `/parishes/${p.slug}`;
       const watch = watchIndex.get(link) ?? null;
@@ -96,10 +126,16 @@ function AllParishesTable() {
   const rows = buildDashboardRows();
   return (
     <section className="mt-10">
-      <h2 className="font-serif text-xl font-semibold">All standing parishes at a glance</h2>
+      <h2 className="font-serif text-xl font-semibold">
+        All standing diocesan parish sites at a glance
+      </h2>
       <p className="mt-1 text-sm text-muted">
-        Every Roman Catholic Lithuanian parish still open in the United States — clergy situation, Lithuanian
-        Mass frequency, and watch status. Parishes under active diocesan pressure appear on the{" "}
+        Every U.S. Roman Catholic record whose parish lifecycle remains
+        standing, including active Lithuanian parishes, places where Lithuanian
+        Mass continues, and churches now serving another community. The status
+        pill distinguishes those outcomes; the remaining columns show clergy,
+        Lithuanian Mass frequency, and watch status. Parishes under active
+        diocesan pressure appear on the{" "}
         <Link href="/under-threat" className="underline hover:text-foreground">
           under-threat page
         </Link>
@@ -119,9 +155,12 @@ function AllParishesTable() {
             {rows.map(({ parish: p, watch, alert }) => (
               <tr key={p.slug} className="border-b border-rule last:border-0 hover:bg-background/50">
                 <td className="px-3 py-2.5">
-                  <Link href={`/parishes/${p.slug}`} className="font-medium hover:underline">
-                    {p.nameLt}
-                  </Link>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <Link href={`/parishes/${p.slug}`} className="font-medium hover:underline">
+                      {p.nameLt}
+                    </Link>
+                    <EndStatePill value={resolveParishEndState(p)} />
+                  </div>
                 </td>
                 <td className="px-3 py-2.5 text-muted whitespace-nowrap">
                   {p.city}, {p.state}
@@ -194,7 +233,7 @@ export default function SustainabilityWatchPage() {
           // unlicensed image renders nothing rather than a broken box.
           const slug = e.parishLink.split("/").pop() ?? "";
           const cleared = getClearedPhoto(slug);
-          const legacy = clearedOrNull((e as any).photo);
+          const legacy = clearedOrNull(e.photo);
           const photo = cleared
             ? {
                 url: cleared.src,
@@ -234,7 +273,10 @@ export default function SustainabilityWatchPage() {
                       </Link>
                       <span className="ml-2 text-muted text-sm">{e.place}</span>
                     </div>
-                    <span className="text-xs text-muted">{e.diocese}</span>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <EndStatePill value={statusForSlug(slug)} />
+                      <span className="text-xs text-muted">{e.diocese}</span>
+                    </div>
                   </div>
 
                   <p className="mt-2 leading-relaxed">{e.situation}</p>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import registry from "@/data/registry-unified.json";
+import { EndStatePill } from "@/components/EndStatePill";
 import { isUS, type RegParish } from "@/lib/registry-scope";
 
 export const metadata: Metadata = {
@@ -69,14 +70,7 @@ function CongCard({ c }: { c: Rec }) {
       <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
         <span className="font-serif text-base font-semibold">{name}</span>
         <div className="flex items-center gap-2">
-          {active && (
-            <span
-              className="inline-flex rounded-full px-2 py-0.5 text-xs font-medium"
-              style={{ background: "var(--mark-standing)", color: "#fff" }}
-            >
-              Confirmed active
-            </span>
-          )}
+          <EndStatePill value={active ? "active_parish" : "unverified"} />
           <span className="text-sm text-muted">
             {city}, {c.state}
           </span>

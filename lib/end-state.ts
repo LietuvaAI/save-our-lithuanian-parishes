@@ -13,7 +13,11 @@
 // ownership context — it is not a status system.
 // ============================================================================
 
-import type { LithuanianIdentity, BuildingFate } from "@/lib/parishes";
+import type {
+  LithuanianIdentity,
+  BuildingFate,
+  Parish,
+} from "@/lib/parishes";
 import {
   PARISH_STATUS_DESCRIPTION,
   PARISH_STATUS_LABEL,
@@ -151,4 +155,21 @@ export function resolveEndState(
   if (identity === "lost") return "closed";
   if (hasClosed) return "closed";
   return "unverified";
+}
+
+/** Resolve a case-filed parish through the same canonical end-state rules. */
+export function resolveParishEndState(parish: Parish): EndState {
+  const identity = parish.lithuanianIdentity;
+  const isStanding =
+    (parish.endingMode === "standing" && !parish.yearClosed) ||
+    (!parish.yearClosed &&
+      (identity === "active_parish" || identity === "mass_continues"));
+
+  return resolveEndState(
+    identity,
+    parish.buildingFate,
+    !!parish.yearClosed,
+    isStanding,
+    parish.endingMode,
+  );
 }
