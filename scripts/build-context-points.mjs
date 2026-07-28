@@ -114,11 +114,7 @@ for (const r of registry.parishes) {
     closed,
     congregationClass: r.congregation_class ?? null,
     diocese: normalizeDiocese(r.diocese),
-    href: libOk
-      ? `/parishes/${lib.slug}`
-      : r.c83_row == null
-        ? `/registry/${r.slug}`
-        : null,
+    href: `/parishes/${libOk ? lib.slug : r.slug}`,
   });
 }
 

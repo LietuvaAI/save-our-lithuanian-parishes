@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import registry from "@/data/registry-unified.json";
 import { EndStatePill } from "@/components/EndStatePill";
+import { canonicalProfileHrefForRegistrySlug } from "@/lib/parish-profile";
 import { toScopedParish, type RegParish } from "@/lib/registry-scope";
 import type { EndState } from "@/lib/end-state";
 
@@ -166,7 +167,10 @@ export default function NationalCatholicPage() {
                       <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
                         <div>
                           <Link
-                            href={`/registry/${p.slug}`}
+                            href={
+                              canonicalProfileHrefForRegistrySlug(p.slug) ??
+                              `/parishes/${p.slug}`
+                            }
                             className="font-serif text-base font-semibold hover:underline"
                           >
                             {name}
@@ -204,7 +208,10 @@ export default function NationalCatholicPage() {
 
                       <div className="mt-2">
                         <Link
-                          href={`/registry/${p.slug}`}
+                          href={
+                            canonicalProfileHrefForRegistrySlug(p.slug) ??
+                            `/parishes/${p.slug}`
+                          }
                           className="text-xs underline hover:text-foreground"
                         >
                           Full research record →

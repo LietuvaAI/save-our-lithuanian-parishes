@@ -112,6 +112,12 @@ const contextClassBySlug = new Map(
     c.congregationClass,
   ]),
 );
+const contextHrefBySlug = new Map(
+  (contextPoints.points as { slug: string; href: string | null }[]).map((c) => [
+    c.slug,
+    c.href,
+  ]),
+);
 
 // Build alert lookup: slug → {kind, whatChanged}
 type AlertKind = "active" | "building" | "watch";
@@ -223,7 +229,10 @@ function buildPoints(): Point[] {
       alertText: alert?.whatChanged ?? null,
       founded: c.foundedYear ?? null,
       closed: c.closedYear ?? null,
-      profile: c.kind === "parish" ? `/registry/${c.slug}` : null,
+      profile:
+        c.kind === "parish"
+          ? (contextHrefBySlug.get(c.slug) ?? `/parishes/${c.slug}`)
+          : null,
       deep: false,
       detail: null,
       congregationClass: (c as { congregationClass?: string }).congregationClass ?? null,
