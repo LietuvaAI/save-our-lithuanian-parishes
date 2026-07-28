@@ -2,53 +2,43 @@ import Link from "next/link";
 import ParishMap from "@/components/ParishMap";
 import { figures } from "@/lib/parishes";
 import alertsData from "@/data/alerts.json";
-import registry from "@/data/registry-unified.json";
+import { scopedParishes, usRegistryParishes } from "@/lib/registry-scope";
+import { toGroup } from "@/lib/end-state";
 
-// Record-level figures derive from the unified registry (never hand-typed).
-const regParishes = (
-  registry as {
-    parishes: {
-      country?: string;
-      city?: string;
-      congregation_class?: string;
-      locked?: { year_founded?: string };
-      years?: { founded?: { value: string }[] };
-      sources?: { ethnic_status?: string }[];
-    }[];
-  }
-).parishes;
-// Exclude settlements/associations whose own sources say "no parish".
-const isRealParish = (p: (typeof regParishes)[number]) =>
-  !(p.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? ""));
-// Scope: U.S. only. Mis-coded Argentina entries stay out (flagged upstream).
-// Canada is documented as a comparator but excluded from U.S. headline counts.
-const isUS = (p: (typeof regParishes)[number]) =>
-  p.country !== "CA" &&
-  !/buenos aires|argentin|rosario/i.test(p.city ?? "");
-
-const usParishesAll = regParishes.filter((p) => isRealParish(p) && isUS(p));
-const REG_TOTAL = usParishesAll.length;
-const REG_ETHNIC  = usParishesAll.filter((p) => p.congregation_class === "roman_catholic").length;
-const REG_NATCATH = usParishesAll.filter((p) => p.congregation_class === "national_catholic_pncc").length;
-const REG_INDEP   = usParishesAll.filter((p) => p.congregation_class === "independent_catholic").length;
+// Homepage figures use the same U.S. register scope as The History and map.
+const romanCatholicParishes = scopedParishes();
+const REG_ETHNIC = romanCatholicParishes.length;
+const REG_CLOSED = romanCatholicParishes.filter(
+  (p) => toGroup(p.endState) === "closed",
+).length;
+const REG_NATCATH = usRegistryParishes().filter(
+  (p) => p.congregation_class === "national_catholic_pncc",
+).length;
 const WATCH_COUNT = (alertsData as { sustainabilityWatch: unknown[] }).sustainabilityWatch.length;
 
 const STATS = [
   {
     value: String(REG_ETHNIC),
-    label: "Lithuanian ethnic (national) parishes documented across the U.S.",
+    label: "Roman Catholic Lithuanian parishes in the full U.S. record.",
     tone: "ink",
   },
   {
-    value: String(REG_NATCATH),
-    label: "Lithuanian National Catholic parishes — communities that separated from Rome, mostly in Pennsylvania and the northeast. Documented as historical witness.",
-    tone: "ink",
+    value: String(REG_CLOSED),
+    label:
+      "Closed in the full U.S. Roman Catholic parish record — all years and all documented endings.",
+    tone: "red",
   },
   {
     value: String(figures.endingMode.diocese_closed),
     label:
-      "closed, merged away, suppressed, or demolished by diocesan decision — documented in the Draugas record, 2008–2026",
+      "Closed by diocesan decision in the 83-parish Draugas case-filed core, 2008–2026.",
     tone: "red",
+  },
+  {
+    value: String(REG_NATCATH),
+    label:
+      "Lithuanian National Catholic parishes, documented separately as historical witness.",
+    tone: "ink",
   },
 ];
 
@@ -106,7 +96,7 @@ export default function Home() {
       </section>
 
 
-<section className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-px bg-rule border border-rule rounded-lg overflow-hidden">
+<section className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-4">
         {STATS.map((s) => (
           <div key={s.label} className="bg-background p-6">
             <div
