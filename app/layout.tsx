@@ -38,6 +38,11 @@ const NAV: NavItem[] = [
     label: "Views",
     children: [
       { href: "/by-diocese", label: "By Diocese" },
+      {
+        href: "/pennsylvania-coal-region",
+        label: "Pennsylvania Coal Region",
+      },
+      { href: "/canadian-comparators", label: "Canadian Comparators" },
       { href: "/under-threat", label: "Under Threat" },
       { href: "/sustainability-watch", label: "Sustainability Watch" },
       { href: "/national-catholic", label: "National Catholic" },
@@ -171,6 +176,18 @@ export default function RootLayout({
               </Link>
               <Link href="/by-diocese" className="hover:text-foreground">
                 By Diocese
+              </Link>
+              <Link
+                href="/pennsylvania-coal-region"
+                className="hover:text-foreground"
+              >
+                Pennsylvania Coal Region
+              </Link>
+              <Link
+                href="/canadian-comparators"
+                className="hover:text-foreground"
+              >
+                Canadian Comparators
               </Link>
               <Link href="/under-threat" className="hover:text-foreground">
                 Under Threat
