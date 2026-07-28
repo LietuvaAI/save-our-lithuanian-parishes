@@ -52,8 +52,12 @@ function CongCard({ c }: { c: Rec }) {
   const axes = [...new Set(sourcesOf(c).map((s) => s.axis).filter(Boolean))] as string[];
   const active = isConfirmedActive(c);
   const name = c.names?.lt || c.names?.en || c.name_variants?.[0] || c.slug;
-  const city = c.city ?? c.city_history?.[0] ?? "";
-  const locationNote = c.city_history?.length
+  const currentCity = c.city ?? c.city_history?.[0] ?? "";
+  const isChicagoArea =
+    !currentCity.startsWith("Chicago") &&
+    c.city_history?.some((location) => location.startsWith("Chicago"));
+  const city = isChicagoArea ? `Chicago area · ${currentCity}` : currentCity;
+  const locationNote = c.record_depth !== "case-filed" && c.city_history?.length
     ? `Earlier locations: ${c.city_history.join(" · ")}`
     : null;
   const tl = sourcesOf(c).find((s) => s.axis === "truelithuania");
@@ -164,8 +168,8 @@ export default function ProtestantPage() {
           Lutheranism had been the dominant faith since the Reformation.
           Immigrant communities in Illinois and Connecticut maintained their
           own congregations and Lithuanian-language worship, distinct from
-          the largely Catholic Lithuanian-American mainstream. Three of the
-          four confirmed congregations are in the Chicago area, reflecting the
+          the largely Catholic Lithuanian-American mainstream. Two of the four
+          confirmed congregations are in the Chicago area, reflecting the
           deep roots of Lithuanian community life there.
         </p>
         <p className="text-muted">
