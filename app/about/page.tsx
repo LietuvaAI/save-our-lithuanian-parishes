@@ -22,59 +22,22 @@ export default function AboutPage() {
         communities can understand what came before, see what is happening now,
         and learn from one another.
       </p>
+      <p className="mt-3 text-sm font-medium">
+        This record was made possible by the young archivists of{" "}
+        <a
+          href="https://archyvas.ziburioltmokykla.org/internship"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4 hover:text-accent"
+        >
+          Skaitmeniniai Knygnešiai
+        </a>
+        .
+      </p>
 
       <AboutNav current="project" />
 
-      <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">Why it exists</h2>
-        <div className="mt-3 space-y-4 leading-relaxed">
-          <p>
-            Lithuanian parishes have long been the <em>židiniai</em> of their
-            communities: hearths of faith, language, memory, education, mutual
-            aid, and identity. A parish story is therefore never only the story
-            of a church building. It is the story of the people and institutions
-            gathered around it.
-          </p>
-          <p>
-            When those stories are scattered across archives, diocesan records,
-            private collections, local memory, and current news, each community
-            is left to understand its situation alone. This project brings the
-            record together and keeps it public.
-          </p>
-        </div>
-      </section>
-
-      <section className="mt-12">
-        <h2 className="font-serif text-2xl font-semibold">What we are building</h2>
-        <div className="mt-4 divide-y divide-rule border-y border-rule">
-          <div className="py-4">
-            <h3 className="font-medium">A connected parish record</h3>
-            <p className="mt-1 text-sm leading-relaxed text-muted">
-              Each parish profile is meant to tell one coherent story across
-              founding, worship, community life, governance, turning points,
-              present condition, and the evidence behind the record.
-            </p>
-          </div>
-          <div className="py-4">
-            <h3 className="font-medium">A bridge between archive and present</h3>
-            <p className="mt-1 text-sm leading-relaxed text-muted">
-              Historical research explains how a community arrived here.
-              Current parish, diocesan, civil, and community sources show what
-              is happening now.
-            </p>
-          </div>
-          <div className="py-4">
-            <h3 className="font-medium">Shared knowledge communities can use</h3>
-            <p className="mt-1 text-sm leading-relaxed text-muted">
-              The record connects communities facing similar questions while
-              keeping documented history, present-day alerts, interpretation,
-              and advocacy visibly distinct.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="mt-12 border-y border-rule py-8">
+      <section className="mt-10 border-y border-rule py-8">
         <p className="text-xs uppercase tracking-widest text-muted">
           The next generation
         </p>
@@ -127,6 +90,55 @@ export default function AboutPage() {
           >
             Visit the public archive
           </a>
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="font-serif text-2xl font-semibold">Why it exists</h2>
+        <div className="mt-3 space-y-4 leading-relaxed">
+          <p>
+            Lithuanian parishes have long been the <em>židiniai</em> of their
+            communities: hearths of faith, language, memory, education, mutual
+            aid, and identity. A parish story is therefore never only the story
+            of a church building. It is the story of the people and institutions
+            gathered around it.
+          </p>
+          <p>
+            When those stories are scattered across archives, diocesan records,
+            private collections, local memory, and current news, each community
+            is left to understand its situation alone. This project brings the
+            record together and keeps it public.
+          </p>
+        </div>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="font-serif text-2xl font-semibold">What we are building</h2>
+        <div className="mt-4 divide-y divide-rule border-y border-rule">
+          <div className="py-4">
+            <h3 className="font-medium">A connected parish record</h3>
+            <p className="mt-1 text-sm leading-relaxed text-muted">
+              Each parish profile is meant to tell one coherent story across
+              founding, worship, community life, governance, turning points,
+              present condition, and the evidence behind the record.
+            </p>
+          </div>
+          <div className="py-4">
+            <h3 className="font-medium">A bridge between archive and present</h3>
+            <p className="mt-1 text-sm leading-relaxed text-muted">
+              Historical research explains how a community arrived here.
+              Current parish, diocesan, civil, and community sources show what
+              is happening now.
+            </p>
+          </div>
+          <div className="py-4">
+            <h3 className="font-medium">Shared knowledge communities can use</h3>
+            <p className="mt-1 text-sm leading-relaxed text-muted">
+              The record connects communities facing similar questions while
+              keeping documented history, present-day alerts, interpretation,
+              and advocacy visibly distinct.
+            </p>
+          </div>
         </div>
       </section>
 
