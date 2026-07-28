@@ -39,7 +39,7 @@ export default function RecordPage() {
   const total = rows.length;
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-12">
+    <div className="mx-auto max-w-6xl px-4 py-12">
       <h1 className="font-serif text-3xl font-semibold">The Record</h1>
       <div className="mt-3 space-y-4 leading-relaxed max-w-3xl">
         <p>
@@ -50,10 +50,8 @@ export default function RecordPage() {
           parish histories, diocesan archives, and community memory.
         </p>
         <p className="text-muted">
-          Each column header is a filter — click to narrow by Lithuanian
-          identity, alert status, building fate, or ownership. The record
-          extends backward through the archives toward the first parishes
-          of the 1880s and forward through{" "}
+          The record extends backward through the archives toward the first
+          parishes of the 1880s and forward through{" "}
           <Link href="/report" className="underline hover:text-accent">
             reports from parish communities
           </Link>{" "}

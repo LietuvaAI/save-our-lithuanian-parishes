@@ -52,7 +52,14 @@ const OWNERSHIP_CELL: Record<Ownership, string> = {
   other_self_owned: "Lutheran",
 };
 
-// ── Dropdown filter in column header ──
+function dateSummary(row: RegistryRow) {
+  if (row.founded && row.closed) return `${row.founded}–${row.closed}`;
+  if (row.founded) return `Founded ${row.founded}`;
+  if (row.closed) return `Closed ${row.closed}`;
+  return "Not yet verified";
+}
+
+// ── Dropdown filter ──
 
 function HeaderFilter<T extends string>({
   label,
@@ -85,17 +92,33 @@ function HeaderFilter<T extends string>({
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className={`flex items-center gap-1 text-xs uppercase tracking-wide font-medium cursor-pointer whitespace-nowrap ${
-          active ? "text-accent" : "text-muted"
+        aria-expanded={open}
+        aria-haspopup="menu"
+        className={`flex h-9 items-center gap-2 rounded-md border px-3 text-sm font-medium cursor-pointer whitespace-nowrap transition-colors ${
+          active
+            ? "border-accent bg-accent/5 text-accent"
+            : "border-rule bg-background text-foreground hover:border-muted"
         }`}
       >
+        <span
+          aria-hidden="true"
+          className={`h-1.5 w-1.5 rounded-full ${
+            active ? "bg-accent" : "bg-muted/40"
+          }`}
+        />
         {label}
-        <span className="text-[10px]">{open ? "▴" : "▾"}</span>
+        <span aria-hidden="true" className="text-[10px] text-muted">
+          {open ? "▴" : "▾"}
+        </span>
       </button>
       {open && (
-        <div className="absolute top-full left-0 mt-1 z-50 bg-background border border-rule rounded-md shadow-md py-1 min-w-max">
+        <div
+          role="menu"
+          className="absolute top-full left-0 mt-1 z-50 max-h-72 min-w-52 max-w-[calc(100vw-2rem)] overflow-y-auto rounded-md border border-rule bg-background py-1 shadow-md"
+        >
           <button
             type="button"
+            role="menuitem"
             onClick={() => {
               onChange(ALL as T | typeof ALL);
               setOpen(false);
@@ -110,6 +133,7 @@ function HeaderFilter<T extends string>({
             <button
               key={opt.value}
               type="button"
+              role="menuitem"
               onClick={() => {
                 onChange(opt.value);
                 setOpen(false);
@@ -208,165 +232,224 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
     query.trim() !== "",
   ].filter(Boolean).length;
 
+  const clearFilters = () => {
+    setQuery("");
+    setIdentity(ALL);
+    setAlert(ALL);
+    setFate(ALL);
+    setOwnership(ALL);
+    setDiocese(ALL);
+  };
+
   return (
     <div>
-      {/* Search + count bar */}
-      <div className="flex flex-wrap gap-2 items-center mb-4">
-        <input
-          type="search"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search parish, city, or state…"
-          className={`${sc} w-64`}
-        />
-        <span className="text-sm text-muted">
-          {filtered.length} of {rows.length}
+      <div className="border-y border-rule py-4">
+        <div className="flex flex-wrap items-center gap-3">
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search parish, city, state, or diocese…"
+            aria-label="Search the parish record"
+            className={`${sc} w-full sm:w-80`}
+          />
+          <span className="text-sm font-medium">
+            {activeFilters > 0
+              ? `${filtered.length} of ${rows.length} records`
+              : `${rows.length} records`}
+          </span>
           {activeFilters > 0 && (
             <button
               type="button"
-              onClick={() => {
-                setQuery("");
-                setIdentity(ALL);
-                setAlert(ALL);
-                setFate(ALL);
-                setOwnership(ALL);
-                setDiocese(ALL);
-              }}
-              className="ml-2 underline text-accent cursor-pointer"
+              onClick={clearFilters}
+              className="text-sm font-medium text-accent underline underline-offset-2 cursor-pointer"
             >
-              clear filters
+              Clear all
             </button>
           )}
-        </span>
+        </div>
+
+        <div className="mt-3 flex flex-wrap items-center gap-2">
+          <HeaderFilter
+            label="Identity"
+            value={identity}
+            onChange={(v) => setIdentity(v)}
+            options={identityOptions}
+          />
+          <HeaderFilter
+            label="Alert"
+            value={alert}
+            onChange={(v) => setAlert(v)}
+            options={alertOptions}
+            allLabel="All (no filter)"
+          />
+          <HeaderFilter
+            label="Building"
+            value={fate}
+            onChange={(v) => setFate(v)}
+            options={fateOptions}
+          />
+          <HeaderFilter
+            label="Ownership"
+            value={ownership}
+            onChange={(v) => setOwnership(v)}
+            options={ownershipOptions}
+          />
+          <HeaderFilter
+            label="Diocese"
+            value={diocese}
+            onChange={(v) => setDiocese(v)}
+            options={dioceseOptions}
+            allLabel="All dioceses"
+          />
+        </div>
       </div>
 
-      <div className="overflow-x-auto border border-rule rounded-lg">
-        <table className="w-full text-sm table-fixed">
-          <colgroup>
-            <col className="w-[20%]" />
-            <col className="w-[14%]" />
-            <col className="w-[5%]" />
-            <col className="w-[5%]" />
-            <col className="w-[13%]" />
-            <col className="w-[14%]" />
-            <col className="w-[15%]" />
-            <col className="w-[14%]" />
-          </colgroup>
-          <thead>
-            <tr className="text-left border-b border-rule">
-              <th className="px-2 py-2 font-medium text-xs uppercase tracking-wide text-muted">
-                Parish
-              </th>
-              <th className="px-2 py-2">
-                <HeaderFilter
-                  label="Diocese"
-                  value={diocese}
-                  onChange={(v) => setDiocese(v)}
-                  options={dioceseOptions}
-                  allLabel="All dioceses"
-                />
-              </th>
-              <th className="px-2 py-2 font-medium text-xs uppercase tracking-wide text-muted">
-                Est.
-              </th>
-              <th className="px-2 py-2 font-medium text-xs uppercase tracking-wide text-muted">
-                Cl.
-              </th>
-              <th className="px-2 py-2">
-                <HeaderFilter
-                  label="Identity"
-                  value={identity}
-                  onChange={(v) => setIdentity(v)}
-                  options={identityOptions}
-                />
-              </th>
-              <th className="px-2 py-2">
-                <HeaderFilter
-                  label="Alert"
-                  value={alert}
-                  onChange={(v) => setAlert(v)}
-                  options={alertOptions}
-                  allLabel="All (no filter)"
-                />
-              </th>
-              <th className="px-2 py-2">
-                <HeaderFilter
-                  label="Building"
-                  value={fate}
-                  onChange={(v) => setFate(v)}
-                  options={fateOptions}
-                />
-              </th>
-              <th className="px-2 py-2">
-                <HeaderFilter
-                  label="Ownership"
-                  value={ownership}
-                  onChange={(v) => setOwnership(v)}
-                  options={ownershipOptions}
-                />
-              </th>
-            </tr>
-          </thead>
-          <tbody>
+      {filtered.length === 0 ? (
+        <div className="mt-8 border-y border-rule py-10 text-center">
+          <p className="font-serif text-xl font-semibold">No matching records</p>
+          <button
+            type="button"
+            onClick={clearFilters}
+            className="mt-2 text-sm font-medium text-accent underline underline-offset-2 cursor-pointer"
+          >
+            Clear search and filters
+          </button>
+        </div>
+      ) : (
+        <>
+          <div className="mt-5 hidden overflow-hidden rounded-md border border-rule lg:block">
+            <table className="w-full table-fixed text-sm">
+              <colgroup>
+                <col className="w-[28%]" />
+                <col className="w-[16%]" />
+                <col className="w-[13%]" />
+                <col className="w-[25%]" />
+                <col className="w-[18%]" />
+              </colgroup>
+              <thead className="bg-[var(--band)]">
+                <tr className="border-b border-rule text-left">
+                  <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-muted">
+                    Parish
+                  </th>
+                  <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-muted">
+                    Diocese
+                  </th>
+                  <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-muted">
+                    Dates
+                  </th>
+                  <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-muted">
+                    Community
+                  </th>
+                  <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-muted">
+                    Property
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {filtered.map((r) => (
+                  <tr
+                    key={r.slug}
+                    className="border-b border-rule align-top transition-colors last:border-0 hover:bg-foreground/[0.025]"
+                  >
+                    <td className="px-4 py-3">
+                      <div className="font-semibold leading-snug">
+                        {r.profileHref !== null ? (
+                          <Link
+                            href={r.profileHref}
+                            className="underline decoration-rule underline-offset-3 hover:text-accent hover:decoration-accent"
+                          >
+                            {r.name}
+                          </Link>
+                        ) : (
+                          r.name
+                        )}
+                      </div>
+                      <span className="mt-0.5 block text-xs text-muted">
+                        {r.city}, {r.state}
+                        {r.comparator ? " · Canada" : ""}
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 text-xs leading-relaxed text-muted">
+                      {r.diocese?.replace(/^(Arch)?diocese of /i, "") ?? "—"}
+                    </td>
+                    <td className="px-4 py-3 text-xs text-muted">
+                      {dateSummary(r)}
+                    </td>
+                    <td className="px-4 py-3">
+                      <div className="flex flex-col items-start gap-1">
+                        <IdentityPill value={r.identity} />
+                        <AlertPill value={r.alert} />
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <div className="flex flex-col items-start gap-1.5">
+                        <FatePill value={r.fate} />
+                        <span className="text-xs text-muted">
+                          {r.ownership
+                            ? OWNERSHIP_CELL[r.ownership]
+                            : "Ownership unverified"}
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <ul className="mt-5 divide-y divide-rule border-y border-rule lg:hidden">
             {filtered.map((r) => (
-              <tr
-                key={r.slug}
-                className="border-b border-rule last:border-0 align-top"
-              >
-                {/* Parish + City */}
-                <td className="px-2 py-2 overflow-hidden">
-                  <div className="font-medium truncate">
-                    {r.profileHref !== null ? (
-                      <Link
-                        href={r.profileHref}
-                        className="underline decoration-rule underline-offset-2 hover:decoration-inherit"
-                      >
-                        {r.name}
-                      </Link>
-                    ) : (
-                      r.name
-                    )}
-                  </div>
-                  <span className="text-xs text-muted truncate block">
-                    {r.city}, {r.state}
-                  </span>
-                  {r.comparator && (
-                    <span className="ml-1 text-xs text-muted">(CA)</span>
+              <li key={r.slug} className="py-4">
+                <div className="font-semibold leading-snug">
+                  {r.profileHref !== null ? (
+                    <Link
+                      href={r.profileHref}
+                      className="underline decoration-rule underline-offset-3 hover:text-accent hover:decoration-accent"
+                    >
+                      {r.name}
+                    </Link>
+                  ) : (
+                    r.name
                   )}
-                </td>
-                {/* Diocese */}
-                <td className="px-2 py-2 text-xs text-muted truncate">
-                  {r.diocese?.replace(/^(Arch)?diocese of /i, "") ?? "—"}
-                </td>
-                {/* Founded */}
-                <td className="px-2 py-2 text-xs text-muted">
-                  {r.founded ?? "—"}
-                </td>
-                {/* Closed */}
-                <td className="px-2 py-2 text-xs text-muted">
-                  {r.closed ?? "—"}
-                </td>
-                {/* Lithuanian Identity */}
-                <td className="px-2 py-2">
+                </div>
+                <div className="mt-0.5 text-sm text-muted">
+                  {r.city}, {r.state}
+                  {r.comparator ? " · Canada" : ""}
+                </div>
+
+                <div className="mt-3 flex flex-wrap gap-1">
                   <IdentityPill value={r.identity} />
-                </td>
-                {/* Alert Status */}
-                <td className="px-2 py-2">
                   <AlertPill value={r.alert} />
-                </td>
-                {/* Building Fate */}
-                <td className="px-2 py-2">
                   <FatePill value={r.fate} />
-                </td>
-                {/* Ownership */}
-                <td className="px-2 py-2 text-xs text-muted truncate">
-                  {r.ownership ? OWNERSHIP_CELL[r.ownership] : "—"}
-                </td>
-              </tr>
+                </div>
+
+                <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 text-xs">
+                  <div>
+                    <dt className="text-muted">Diocese</dt>
+                    <dd className="mt-0.5">
+                      {r.diocese?.replace(/^(Arch)?diocese of /i, "") ??
+                        "Not verified"}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="text-muted">Dates</dt>
+                    <dd className="mt-0.5">{dateSummary(r)}</dd>
+                  </div>
+                  <div>
+                    <dt className="text-muted">Ownership</dt>
+                    <dd className="mt-0.5">
+                      {r.ownership
+                        ? OWNERSHIP_CELL[r.ownership]
+                        : "Not verified"}
+                    </dd>
+                  </div>
+                </dl>
+              </li>
             ))}
-          </tbody>
-        </table>
-      </div>
+          </ul>
+        </>
+      )}
     </div>
   );
 }
