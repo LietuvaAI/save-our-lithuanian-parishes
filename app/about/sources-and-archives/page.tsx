@@ -26,7 +26,14 @@ function SourceRow({
   return (
     <li className="py-4">
       <p className="font-medium">
-        {href ? (
+        {href?.startsWith("/") ? (
+          <Link
+            href={href}
+            className="underline underline-offset-4 hover:text-accent"
+          >
+            {title}
+          </Link>
+        ) : href ? (
           <a
             href={href}
             target="_blank"
@@ -134,8 +141,8 @@ export default function SourcesAndArchivesPage() {
           <SourceRow
             title="Draugas digital archive, 1909–present"
             href="https://www.draugas.org/archyvas-pdf/"
-            role="The historical spine of the parish record: founding notices, jubilees, parish disputes, closures, community response, and present-day reporting."
-            limits="Dated issues are linked directly wherever possible. Newspaper reporting is distinguished from decrees and other institutional acts."
+            role="Draugas (“The Friend”) is the Lithuanian-American newspaper of record, a Catholic newspaper founded in 1909 and published in Chicago continuously ever since. For more than a century it reported parish foundings, jubilees, disputes, closures, campaigns, and community response across the Lithuanian diaspora. It is the historical spine of this record."
+            limits="The 2008–2026 run—all 2,768 issues—was read straight through, and every parish it mentions was entered with dated citations. That completed pass supplies the verified core behind the site’s locked historical figures. The 1909–2007 run is being backfilled issue by issue. A dated newspaper report establishes what was reported at that moment; it does not replace a decree, deed, or other primary institutional record when the claim concerns a canonical or legal act."
           />
           <SourceRow
             title="Skaitmeniniai Knygnešiai / Žiburio digital archive"
@@ -146,14 +153,14 @@ export default function SourcesAndArchivesPage() {
           <SourceRow
             title="William Wolkovich-Valkavičius, Lithuanian Religious Life in America"
             href="https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
-            role="The Catholic-institutional compendium of Lithuanian parishes and religious institutions in the United States."
-            limits="Page-cited structured facts only; the in-copyright text is not republished."
+            role="Father William Wolkovich-Valkavičius’s multi-volume Catholic-institutional history is the most extensive published compendium of Lithuanian parishes and religious institutions in the United States. Volume 3, covering the Midwest and beyond, documents roughly 150 parishes from a small print run that has long been difficult to obtain."
+            limits="Parish facts are extracted with page citations and checked against the wider record. The public evidence ledger links to the Žiburio archive item; the in-copyright book text is not republished."
           />
           <SourceRow
             title="Stasys Michelsonas, Lietuvių Išeivija Amerikoje"
             href="https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
-            role="A secular counterpoint documenting Lithuanian-American settlement and the early church and property conflicts."
-            limits="Page-cited facts and short attributed quotations; divergent readings remain visible."
+            role="Michelsonas’s 1961 history provides an independent secular account of Lithuanian-American settlement, community formation, and early church and property conflicts. It is an important counterpoint to the Catholic-institutional parish histories."
+            limits="Facts and short quotations are page-cited to the public Žiburio archive item. When Michelsonas and an institutional source give different readings, the disagreement is preserved for adjudication rather than silently flattened."
           />
           <SourceRow
             title="Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje"
@@ -171,8 +178,8 @@ export default function SourcesAndArchivesPage() {
         <ul className="mt-4 divide-y divide-rule border-y border-rule">
           <SourceRow
             title="Parish, diocesan, and religious-community records"
-            role="Current parish identity, clergy assignments, Mass schedules, mergers, suppressions, restructuring plans, decrees, and property announcements."
-            limits="The specific page or document is linked on the parish profile and dated when available."
+            role="For every case-filed parish, the research seeks a present-day institutional record: parish and diocesan notices, bulletins, clergy assignments, Mass schedules, merger or suppression decrees, restructuring plans, and property announcements. These sources establish what the parish and building are today and what happened after the historical archive fell silent."
+            limits="The specific page or document is linked on the parish profile and dated when available. A current schedule or directory supports current activity; a decree or official notice is required when the claim concerns a formal canonical act."
           />
           <SourceRow
             title="Vatican and canon-law documents"
@@ -188,8 +195,14 @@ export default function SourcesAndArchivesPage() {
           />
           <SourceRow
             title="Contemporary local and national reporting"
-            role="Closure announcements, community campaigns, financial context, litigation, preservation efforts, and events still unfolding."
-            limits="Current claims carry a publication URL and observation date; active alerts are refreshed on their stated cadence."
+            role="Local and national reporting documents closure announcements, community campaigns, financial context, litigation, preservation efforts, and events still unfolding. It also records how parishioners and public institutions understood and responded to a decision at the time."
+            limits="Current claims carry a publication URL and observation date; active alerts are refreshed on their stated cadence. Reporting is cross-checked against official records when it describes a decree, ownership transfer, court ruling, or other formal act."
+          />
+          <SourceRow
+            title="National parish-closure reversal record"
+            href="/reversals"
+            role="A separate national research program documents every U.S. parish closure we can verify was reversed through the Catholic Church’s own procedures. It supplies the precedent record used by the guidance pages."
+            limits="Each candidate is checked against contemporary reporting and the strongest available official case record. Cases still awaiting verification remain visibly labeled, and rejected candidates remain documented rather than disappearing from the research history."
           />
           <SourceRow
             title="Community reports"

@@ -45,9 +45,7 @@ export default function RecordPage() {
         <p>
           {total} records of Lithuanian parish life across the United States — Roman
           Catholic ethnic parishes, National Catholic congregations, and
-          Protestant communities. The information comes from
-          Lithuanian-language newspapers going back to 1909, out-of-print
-          parish histories, diocesan archives, and community memory.
+          Protestant communities.
         </p>
         <p className="text-muted">
           The record extends backward through the archives toward the first
@@ -63,90 +61,17 @@ export default function RecordPage() {
         <RegistryTable rows={rows} />
       </div>
 
-      <section className="mt-14 max-w-2xl space-y-4 leading-relaxed">
-        <h2 className="font-serif text-2xl font-semibold">The sources</h2>
-        <p>
-          <strong>
-            <a
-              href="https://www.draugas.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-accent"
-            >
-              Draugas
-            </a>
-          </strong>{" "}
-          (&ldquo;The Friend&rdquo;) is the Lithuanian-American newspaper of
-          record — a Catholic daily founded in 1909, published in Chicago
-          continuously ever since, and for over a century the paper that
-          reported every parish founding, jubilee, and closing in the
-          Lithuanian diaspora. It is the backbone of this record. The
-          2008–2026 run — all 2,768 issues — has been read straight through,
-          and every parish it mentions entered the record with dated
-          citations; that verified core is the source of every locked figure
-          on this site. The 1909–2007 run is now being read the same way,
-          issue by issue.
-        </p>
-        <p>
-          <strong>The parish histories.</strong> Father William
-          Wolkovich-Valkavičius&rsquo;s{" "}
-          <a
-            href="https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-accent"
-          >
-            <em>Lithuanian Religious Life in America</em>, Vol. 3
-          </a>{" "}
-          — the Midwest and beyond — documents roughly 150 parishes,
-          in a small print run long out of print. Stasys Michelsonas&rsquo;s{" "}
-          <a
-            href="https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-accent"
-          >
-            <em>Lietuvių Išeivija Amerikoje</em> (1961)
-          </a>{" "}
-          provides an independent secular counterpoint. Both are now in the
-          Žiburio archive; parish-by-parish facts are read into the record
-          with page citations.
-        </p>
-        <p>
-          <strong>Contemporary sources.</strong> For every case-filed
-          parish, a present-day record: diocesan announcements, local press,
-          property records, and parish websites — what the building is
-          today, who holds it, and what has happened since the archives fall
-          silent. And the{" "}
-          <Link href="/reversals" className="underline hover:text-accent">
-            national reversal research
-          </Link>
-          : every U.S. parish closure we can verify that was reversed on the
-          Church&rsquo;s own procedures — the precedent record.
-        </p>
-        <p className="text-sm text-muted">
-          None of the numbers on this site are typed in by hand. They are
-          recalculated automatically from this record every time the site is
-          updated — and if a number ever disagrees with the verified
-          research, the update is blocked until the discrepancy is resolved.
-          The dataset is open —{" "}
-          <a
-            href="https://github.com/LietuvaAI/save-our-lithuanian-parishes"
-            className="underline hover:text-foreground"
-          >
-            check our numbers
-          </a>
-          . Full methods, copyright handling, and what is deliberately held
-          back:{" "}
-          <Link
-            href="/about-the-data"
-            className="underline hover:text-foreground"
-          >
-            About the data
-          </Link>
-          .
-        </p>
-      </section>
+      <p className="mt-10 max-w-2xl border-t border-rule pt-5 text-sm leading-relaxed text-muted">
+        The newspapers, books, official records, current reporting, source
+        hierarchy, and citation rules behind every entry are documented in{" "}
+        <Link
+          href="/about/sources-and-archives"
+          className="font-medium text-foreground underline underline-offset-4 hover:text-accent"
+        >
+          Sources &amp; Archives
+        </Link>
+        .
+      </p>
     </div>
   );
 }
