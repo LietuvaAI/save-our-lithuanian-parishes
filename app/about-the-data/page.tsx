@@ -22,65 +22,82 @@ export default function AboutTheDataPage() {
         About the Data
       </h1>
       <p className="mt-4 text-lg text-muted leading-relaxed">
-        Every figure on this site traces to a dated, published source, and the
-        site refuses to build if a number drifts from the verified research.
-        This page explains how evidence becomes structured data, how records
-        are matched, and how the resulting figures are checked.
+        Three different things work together here: the source archive, the
+        parish case files, and the registry. They are connected, but they are
+        not interchangeable. This page explains how evidence moves from one to
+        the next and how the published results are checked.
       </p>
 
       <AboutNav current="data" />
 
+      <dl className="mt-8 grid gap-4 border-y border-rule py-5 sm:grid-cols-3">
+        <div>
+          <dt className="font-medium">The archive</dt>
+          <dd className="mt-1 text-sm leading-relaxed text-muted">
+            The source material we search and read.
+          </dd>
+        </div>
+        <div>
+          <dt className="font-medium">The case files</dt>
+          <dd className="mt-1 text-sm leading-relaxed text-muted">
+            The deep research assembled for one parish at a time.
+          </dd>
+        </div>
+        <div>
+          <dt className="font-medium">The registry</dt>
+          <dd className="mt-1 text-sm leading-relaxed text-muted">
+            The shared structured record that carries the current findings.
+          </dd>
+        </div>
+      </dl>
+
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          1. The evidence spine — the full <em>Draugas</em> archive
+          1. Find the evidence — the full <em>Draugas</em> archive
         </h2>
         <p className="mt-2 leading-relaxed">
-          The historical spine of the record is the complete digital archive of{" "}
-          <em>Draugas</em>, the Lithuanian-American newspaper, from 1909 to the
-          present. The archive has been worked in two complementary passes.
-          Every issue from January 2008 through May 2026 —{" "}
+          <em>Draugas</em> is the main historical source collection behind this
+          project. We search its complete digital archive, from 1909 to the
+          present, for evidence about Lithuanian parishes. That work has taken
+          place in two passes. Every issue from January 2008 through May 2026 —{" "}
           <strong>2,768 issues</strong> — was read straight through. The
           1909–2007 run was mined issue by issue in a systematic sweep for
           parish names, founding notices, jubilees, property disputes, closures,
           and community response.
         </p>
         <p className="mt-2 leading-relaxed">
-          Together those passes make the full archive, not the 2008–2026 period
-          alone, the evidence base. The archive-wide sweep is designed to detect
-          every parish and recover its documentary trail; it is not a claim that
-          every relevant article has already been fully transcribed or
-          interpreted. Citations link to dated issues wherever the archive
-          allows, and their links are checked against both eras of the{" "}
-          <em>Draugas</em> digital collection.
+          The two passes cover the full archive. Their purpose is to identify
+          parishes and locate the articles that document what happened. This
+          archive-wide search tells us where the evidence is; it does not, by
+          itself, complete the research story of every parish.
         </p>
       </section>
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          2. The deep dives — parish case files
+          2. Research each parish — the case files
         </h2>
         <p className="mt-2 leading-relaxed">
-          The archive-wide pass establishes the national baseline. A deep case
-          file then returns to the full <em>Draugas</em> run for one parish,
-          gathers its evidence across time, resolves identity and date
-          conflicts, and connects that newspaper record to published histories,
-          official documents, current parish sources, and the fate of the
-          building and community.
+          A parish case file is the deep research record for one parish.
+          Researchers return to every relevant <em>Draugas</em> issue across the
+          full archive, put the evidence in chronological order, and reconcile
+          names, dates, mergers, and conflicting accounts. They then compare the
+          newspaper record with published histories, official documents,
+          present-day parish sources, and evidence about the building and
+          community.
         </p>
         <p className="mt-2 leading-relaxed">
-          All <strong>83 U.S. parishes</strong> in the original case-filed
-          record now have parish case files. The wider registry contains many
-          additional parishes and congregations discovered through the full
-          archive and other sources. Those records are being backfilled to the
-          same deep-dive standard parish by parish as research proceeds.
+          The original group of <strong>83 U.S. parishes</strong> now has a case
+          file for every parish. The wider registry contains additional
+          parishes and congregations found in the archive and other sources.
+          We are now working through that larger group and building the same
+          kind of case file for each one.
         </p>
         <p className="mt-2 leading-relaxed">
-          Figures drawn from the completed case-filed record are recalculated
-          automatically whenever the data changes. If a number no longer agrees
-          with the verified parish records, publication is blocked until the
-          discrepancy is resolved. A completed deep dive can refine a date,
-          status, or interpretation, but its sources and unresolved conflicts
-          remain visible.
+          In short: the archive search finds the evidence; the case file
+          evaluates it parish by parish; and the registry carries the current
+          conclusion. As new case files are completed, the registry is updated
+          without hiding older source conflicts or unresolved questions.
         </p>
       </section>
 
@@ -134,20 +151,23 @@ export default function AboutTheDataPage() {
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          5. One registry, honest depth
+          5. Publish the findings — one registry
         </h2>
         <p className="mt-2 leading-relaxed">
-          The sources join into a single research registry —{" "}
+          The registry is the single structured list that powers the map,
+          counts, and parish pages. It brings together the current findings for{" "}
           <strong>{REGISTRY_TOTAL} parishes and congregations</strong> across
-          the U.S. and Canada — matched by city and patron saint across
-          Lithuanian and English spellings.
-          Every parish carries a record-depth label rather than a
-          verified/unverified caste: <em>case-filed</em> (those with full
-          case files), <em>multi-source</em> (documented independently in
-          more than one source), or <em>single-source</em> (documented in
-          one, awaiting corroboration). Where sources conflict — a founding
-          year, a titular, a status — the registry keeps every reading with
-          its citation. Conflicts are data; we do not average them away.
+          the U.S. and Canada, matching the same parish across Lithuanian and
+          English names.
+        </p>
+        <p className="mt-2 leading-relaxed">
+          Each entry says how much research has been completed.{" "}
+          <em>Case-filed</em> means the parish has a full case file.{" "}
+          <em>Multi-source</em> means more than one independent source supports
+          the entry, but the full parish deep dive is not finished.{" "}
+          <em>Single-source</em> means the parish is documented in one source
+          and still needs corroboration. When sources disagree about a name,
+          date, or status, the registry preserves each reading and its citation.
         </p>
         <p className="mt-2 leading-relaxed">
           Not everything is published yet. Cemeteries, schools, monasteries,
@@ -161,11 +181,15 @@ export default function AboutTheDataPage() {
           congregations shown as historical witness.
         </p>
         <p className="mt-2 leading-relaxed">
-          The depth labels are a ladder, not a caste. The commitment is
-          this: <strong>every parish in this record will, in time, carry
-          its own researched case file</strong> — the deep dives proceed
-          parish by parish, and each one moves its parish up the ladder
-          until the whole record stands at the case-filed standard.
+          As the remaining deep dives are completed, those records move to the{" "}
+          <em>case-filed</em> standard. The commitment is that{" "}
+          <strong>
+            every parish in the registry will ultimately have its own researched
+            case file
+          </strong>
+          . Site figures are recalculated from the registry, and automated
+          checks block publication when a protected count no longer agrees with
+          the underlying parish records.
         </p>
       </section>
 
