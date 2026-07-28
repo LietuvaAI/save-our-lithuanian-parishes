@@ -186,7 +186,7 @@ export default function RootLayout({
               >
                 Lietuva.AI
               </a>{" "}
-              · supported by the Žiburio Foundation · data made possible by{" "}
+              · data made possible by{" "}
               <a
                 href="https://archyvas.ziburioltmokykla.org"
                 className="underline hover:text-foreground"
