@@ -80,6 +80,13 @@ function yearOf(variants, { closing = false } = {}) {
   return null;
 }
 
+function closedYearOf(record) {
+  if (record.lifecycle) {
+    return record.lifecycle.selected_closed_year ?? null;
+  }
+  return yearOf(record.years?.closed, { closing: true });
+}
+
 // Registry entries whose own sources say "no parish" are settlements or
 // civic/memorial associations — documented, but not parishes; keep them
 // off the parish map and out of parish counts.
@@ -116,6 +123,7 @@ for (const r of toPlot) {
     continue;
   }
   const isCong = r.congregation_class === "non_catholic_christian";
+  const closedYear = closedYearOf(r);
   points.push({
     kind: isCong ? "congregation" : "parish",
     slug: r.slug,
@@ -124,12 +132,14 @@ for (const r of toPlot) {
     state: r.state,
     country: r.country,
     foundedYear: yearOf(r.years?.founded),
-    closedYear: yearOf(r.years?.closed, { closing: true }),
+    closedYear,
     // lockedStanding: comparator parishes and web-confirmed-standing parishes
     // show as open on the map; non_catholic_christian entries are confirmed
     // active if they have a truelithuania source.
     lockedStanding:
-      !yearOf(r.years?.closed, { closing: true }) && (
+      !closedYear &&
+      r.lifecycle?.canonical_status !== "unresolved" && (
+        r.lifecycle?.canonical_status === "standing" ||
         (r.comparator === true &&
           ["standing", "community_decided"].includes(r.locked?.ending_mode ?? "")) ||
         (r.sources ?? []).some(

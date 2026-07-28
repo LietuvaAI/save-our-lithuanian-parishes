@@ -10194,7 +10194,9 @@
     "variants": [
      "mixed parish (unnamed), Nanticoke",
      "Šv. Juozapo",
-     "St. Joseph"
+     "St. Joseph",
+     "St. Joseph Church (Hanover Section)",
+     "Hanover St. Joseph Church"
     ]
    },
    "city": "Nanticoke",
@@ -10261,6 +10263,20 @@
       2004
      ],
      "importance": 3
+    },
+    {
+     "axis": "diocese-of-scranton",
+     "kind": "diocesan-record",
+     "work": "Consolidated Parishes (2021-03-24)",
+     "pages": "5",
+     "sourceUrl": "https://www.dioceseofscranton.org/wp-content/uploads/2021/03/Consolidated-Parishes-3-24-21.pdf",
+     "cites": "St. Joseph Church (Hanover Section), closed 2001; joined Holy Spirit, Mocanaqua"
+    },
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-page",
+     "cites": "1965-11-03 p. 4",
+     "note": "Nanticoke parish organized in the Hanover district in 1908; present church built in 1924."
     }
    ],
    "years": {
@@ -10276,6 +10292,12 @@
      }
     ],
     "closed": [
+     {
+      "value": "2001",
+      "source": "diocese-of-scranton",
+      "cite": "Consolidated Parishes (2021-03-24), PDF p. 5",
+      "selected": true
+     },
      {
       "value": "not stated",
       "source": "michelsonas-1961",
@@ -10337,23 +10359,32 @@
     {
      "value": "2004",
      "source": "web-historical"
+    },
+    {
+     "value": "2004",
+     "source": "web-historical",
+     "reclassified_as": "sale_or_residential_conversion"
     }
    ],
-   "aliases": [],
+   "aliases": [
+    "st-joseph-hanover-pa",
+    "joseph-hanover-section-pa"
+   ],
    "lifecycle": {
-    "canonical_status": "unresolved",
-    "selected_closed_year": null,
-    "confidence": "pending-diocesan-confirmation"
+    "canonical_status": "closed",
+    "selected_closed_year": 2001,
+    "confidence": "high"
    },
    "events": [
     {
-     "type": "church_closed_or_sold",
-     "year": 2004
+     "type": "sale_or_residential_conversion",
+     "year": 2004,
+     "source": "web-historical"
     }
    ],
    "adjudication": {
     "date": "2026-07-27",
-    "cite": "adjudications/2026-07-27-batch1-closure-years.md",
+    "cite": "brain:docs/research/elip-2026/adjudications.md",
     "status": "verified-or-labeled"
    },
    "city_history": []
@@ -10434,6 +10465,14 @@
       1895
      ],
      "importance": 2
+    },
+    {
+     "axis": "diocese-of-scranton",
+     "kind": "diocesan-record",
+     "work": "Consolidated Parishes (2021-03-24)",
+     "pages": "8",
+     "sourceUrl": "https://www.dioceseofscranton.org/wp-content/uploads/2021/03/Consolidated-Parishes-3-24-21.pdf",
+     "cites": "St. Joseph (Lithuanian), closed 2011-06-05"
     }
    ],
    "years": {
@@ -10454,6 +10493,12 @@
      }
     ],
     "closed": [
+     {
+      "value": "2011",
+      "source": "diocese-of-scranton",
+      "cite": "Consolidated Parishes (2021-03-24), PDF p. 8",
+      "selected": true
+     },
      {
       "value": "2009",
       "source": "draugas-2008-2026"
@@ -10501,7 +10546,24 @@
    "c83_rows": [
     45
    ],
-   "city_history": []
+   "city_history": [],
+   "superseded_year_readings": [
+    {
+     "value": "2009",
+     "source": "draugas-2008-2026"
+    }
+   ],
+   "lifecycle": {
+    "canonical_status": "closed",
+    "selected_closed_year": 2011,
+    "selected_closed_date": "2011-06-05",
+    "confidence": "high"
+   },
+   "adjudication": {
+    "date": "2026-07-27",
+    "cite": "brain:docs/research/elip-2026/adjudications.md",
+    "status": "verified-or-labeled"
+   }
   },
   {
    "slug": "joseph-south-chicago-il",
@@ -18310,7 +18372,10 @@
     "en": "St. Casimir",
     "variants": [
      "Šv. Kazimiero",
-     "St. Casimir"
+     "St. Casimir",
+     "St. Casimir Church, Lyndwood",
+     "Lyndwood St. Casimir Church",
+     "Lynnwood St. Casimir Church"
     ]
    },
    "city": "Wilkes-Barre",
@@ -18335,6 +18400,14 @@
      "confidence": "thin",
      "currentStatus": "standing",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "diocese-of-scranton",
+     "kind": "diocesan-record",
+     "work": "Consolidated Parishes (2021-03-24)",
+     "pages": "11",
+     "sourceUrl": "https://www.dioceseofscranton.org/wp-content/uploads/2021/03/Consolidated-Parishes-3-24-21.pdf",
+     "cites": "St. Casimir (Lithuanian), Lyndwood, Wilkes-Barre, closed 2010-08-29"
     }
    ],
    "years": {
@@ -18344,7 +18417,14 @@
       "source": "draugas-registry-1909-2007"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "2010",
+      "source": "diocese-of-scranton",
+      "cite": "Consolidated Parishes (2021-03-24), PDF p. 11",
+      "selected": true
+     }
+    ]
    },
    "conflicts": [],
    "related_sites": [],
@@ -18365,7 +18445,21 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Scranton",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [
+    "Lyndwood",
+    "Lynnwood"
+   ],
+   "lifecycle": {
+    "canonical_status": "closed",
+    "selected_closed_year": 2010,
+    "selected_closed_date": "2010-08-29",
+    "confidence": "high"
+   },
+   "adjudication": {
+    "date": "2026-07-27",
+    "cite": "brain:docs/research/elip-2026/adjudications.md",
+    "status": "verified-or-labeled"
+   }
   },
   {
    "slug": "st-catherine-st-catharines-on",
@@ -18593,23 +18687,65 @@
      "confidence": "verified",
      "sourceUrl": "https://www.skooknews.com/2020/06/diocese-announces-closure-of-former.html",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-page",
+     "cites": "1909-11-18 p. 10; 1909-12-16 p. 5",
+     "note": "New Lithuanian St. Francis church dedicated 1909-11-25."
+    },
+    {
+     "axis": "draugas-news",
+     "kind": "secondary-history",
+     "sourceUrl": "https://www.draugas.org/news/little-lithuania-usa-schuylkill-county-pa/",
+     "cites": "Parish founded 1895."
+    },
+    {
+     "axis": "lithuanian-genealogy",
+     "kind": "secondary-history",
+     "sourceUrl": "https://lithuaniangenealogy.org/static_db/PA-sfa.php",
+     "cites": "Parish founded 1895."
+    },
+    {
+     "axis": "diocese-of-allentown",
+     "kind": "diocesan-news",
+     "sourceUrl": "https://www.ad-today.com/holy-family-parish-of-minersville/two-minersville-parishes-to-merge",
+     "cites": "St. Francis church building closed with merger effective 2020-07-01."
     }
    ],
    "years": {
     "founded": [
      {
+      "value": "1895",
+      "source": "secondary-histories",
+      "cite": "Draugas News and Lithuanian Global Genealogical Society",
+      "selected": true
+     },
+     {
       "value": "1950",
       "source": "draugas-registry-1909-2007"
      }
     ],
-    "closed": [
-     {
-      "value": "2020",
-      "source": "draugas-registry-1909-2007"
-     }
-    ]
+    "closed": []
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "founded",
+     "variants": [
+      {
+       "value": "1895",
+       "source": "secondary-histories",
+       "cite": "Draugas News and Lithuanian Global Genealogical Society",
+       "selected": true
+      },
+      {
+       "value": "1950",
+       "source": "draugas-registry-1909-2007"
+      }
+     ],
+     "note": "1895 is selected secondary evidence; contemporary Draugas pages prove the parish existed by 1909."
+    }
+   ],
    "related_sites": [],
    "events_refs": [
     {
@@ -18626,10 +18762,47 @@
    "congregation_class": "roman_catholic",
    "axes_count": 3,
    "record_depth": "multi-source",
-   "caveat": "Closed year 2020 removed — derived from TrueLithuania yearsMentioned, not a documented closure date. Draugas last mention is 2007. Pending verification.",
+   "caveat": "The parish existed by 1909; 1895 is the selected secondary founding reading. The St. Francis church building closed effective 2020-07-01, but the reviewed source does not establish the juridic end date of the former parish.",
    "diocese": "Diocese of Allentown",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "superseded_year_readings": [
+    {
+     "value": "1950",
+     "source": "draugas-registry-1909-2007",
+     "field": "founded"
+    },
+    {
+     "value": "2020",
+     "source": "draugas-registry-1909-2007",
+     "field": "closed",
+     "reclassified_as": "church_building_closed"
+    }
+   ],
+   "events": [
+    {
+     "type": "new_church_dedicated",
+     "date": "1909-11-25",
+     "source": "draugas-registry-1909-2007",
+     "cite": "1909-11-18 p. 10; 1909-12-16 p. 5"
+    },
+    {
+     "type": "church_building_closed",
+     "date": "2020-07-01",
+     "source": "diocese-of-allentown",
+     "cite": "Two Minersville Parishes to Merge (2020-06-21)"
+    }
+   ],
+   "lifecycle": {
+    "canonical_status": "unresolved",
+    "selected_closed_year": null,
+    "confidence": "juridic-end-unresolved"
+   },
+   "adjudication": {
+    "date": "2026-07-27",
+    "cite": "brain:docs/research/elip-2026/adjudications.md",
+    "status": "verified-or-labeled"
+   }
   },
   {
    "slug": "st-francis-wilkes-barre-pa",
@@ -18638,7 +18811,9 @@
     "en": "St. Francis",
     "variants": [
      "Šv. Pranciškaus",
-     "St. Francis"
+     "St. Francis",
+     "St. Francis Church, Miners Mills",
+     "Miners Mills St. Francis Church"
     ]
    },
    "city": "Wilkes-Barre",
@@ -18663,6 +18838,14 @@
      "confidence": "reported",
      "currentStatus": "repurposed",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "diocese-of-scranton",
+     "kind": "diocesan-record",
+     "work": "Consolidated Parishes (2021-03-24)",
+     "pages": "11",
+     "sourceUrl": "https://www.dioceseofscranton.org/wp-content/uploads/2021/03/Consolidated-Parishes-3-24-21.pdf",
+     "cites": "St. Francis (Lithuanian), Miners Mills, Wilkes-Barre, closed 2011-06-26"
     }
    ],
    "years": {
@@ -18673,6 +18856,12 @@
      }
     ],
     "closed": [
+     {
+      "value": "2011",
+      "source": "diocese-of-scranton",
+      "cite": "Consolidated Parishes (2021-03-24), PDF p. 11",
+      "selected": true
+     },
      {
       "value": "2008",
       "source": "draugas-registry-1909-2007"
@@ -18698,7 +18887,26 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Scranton",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [
+    "Miners Mills"
+   ],
+   "superseded_year_readings": [
+    {
+     "value": "2008",
+     "source": "draugas-registry-1909-2007"
+    }
+   ],
+   "lifecycle": {
+    "canonical_status": "closed",
+    "selected_closed_year": 2011,
+    "selected_closed_date": "2011-06-26",
+    "confidence": "high"
+   },
+   "adjudication": {
+    "date": "2026-07-27",
+    "cite": "brain:docs/research/elip-2026/adjudications.md",
+    "status": "verified-or-labeled"
+   }
   },
   {
    "slug": "st-francis-youngstown-oh",
@@ -20900,6 +21108,14 @@
      "confidence": "reported",
      "currentStatus": "demolished",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "diocese-of-scranton",
+     "kind": "diocesan-record",
+     "work": "Consolidated Parishes (2021-03-24)",
+     "pages": "10",
+     "sourceUrl": "https://www.dioceseofscranton.org/wp-content/uploads/2021/03/Consolidated-Parishes-3-24-21.pdf",
+     "cites": "Holy Trinity (Lithuanian), closed 2010-05-30"
     }
    ],
    "years": {
@@ -20911,8 +21127,10 @@
     ],
     "closed": [
      {
-      "value": "2015",
-      "source": "draugas-2008-2026"
+      "value": "2010",
+      "source": "diocese-of-scranton",
+      "cite": "Consolidated Parishes (2021-03-24), PDF p. 10",
+      "selected": true
      }
     ]
    },
@@ -20937,7 +21155,32 @@
    "c83_rows": [
     41
    ],
-   "city_history": []
+   "city_history": [],
+   "superseded_year_readings": [
+    {
+     "value": "2015",
+     "source": "draugas-2008-2026",
+     "reclassified_as": "demolition"
+    }
+   ],
+   "events": [
+    {
+     "type": "demolition",
+     "year": 2015,
+     "source": "draugas-2008-2026"
+    }
+   ],
+   "lifecycle": {
+    "canonical_status": "closed",
+    "selected_closed_year": 2010,
+    "selected_closed_date": "2010-05-30",
+    "confidence": "high"
+   },
+   "adjudication": {
+    "date": "2026-07-27",
+    "cite": "brain:docs/research/elip-2026/adjudications.md",
+    "status": "verified-or-labeled"
+   }
   },
   {
    "slug": "vincent-pittsburgh-pa",
@@ -21047,14 +21290,17 @@
   }
  ],
  "registryRevision": {
-  "version": 1,
+  "version": 2,
   "date": "2026-07-27",
   "changelog": [
    "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
    "Collapsed adjudicated same-entity rows while preserving all 83 historical case-file row references in c83_rows.",
    "Excluded seven source rows established not to be parishes and preserved their provenance in excluded.json.",
-   "Established this build as the final brain-generated upstream snapshot before canonical ownership moves to the site repository."
+   "Established this build as the final brain-generated upstream snapshot before canonical ownership moves to the site repository.",
+   "Registry Revision 2: corrected four Scranton/Wilkes-Barre closure identities and exact dates from the Diocese of Scranton consolidated-parishes table.",
+   "Resolved Nanticoke St. Joseph as the Hanover-section entity closed in 2001; retained its later sale/conversion as a building event.",
+   "Reconstructed Minersville St. Francis as founded 1895 (secondary reading), documented the 1909 church dedication, and separated the 2020 building closure from the unresolved juridic parish-end date."
   ],
-  "contentHash": "6b02f70cf570f7bca6e1cc186828144d52ae2b9f0448b39e7a7274f9507c5938"
+  "contentHash": "3b339436d9cd7a0d60dde0259572fbf921c0455de03ed3b5bbcce9475837bd99"
  }
 }

@@ -80,12 +80,19 @@ for (const r of registry.parishes) {
   // Canonical parishes: locked-core year wins on every surface.
   const closed = libOk
     ? (lib.yearClosed ?? null)
-    : yearOf(r.locked?.year_closed, r.years?.closed);
-  const endingMode = libOk ? lib.endingMode : null;
+    : r.lifecycle
+      ? (r.lifecycle.selected_closed_year ?? null)
+      : yearOf(r.locked?.year_closed, r.years?.closed);
+  const endingMode = libOk
+    ? lib.endingMode
+    : r.lifecycle?.canonical_status === "unresolved"
+      ? "undecided"
+      : null;
   const identity = libOk ? lib.lithuanianIdentity : clean(overlay?.lithuanian_identity);
   const buildingFate = libOk ? lib.buildingFate : clean(overlay?.building_fate);
   const isStanding = !!(
     (endingMode === "standing" && !closed) ||
+    (!libOk && r.lifecycle?.canonical_status === "standing" && !closed) ||
     (!closed && (identity === "active_parish" || identity === "mass_continues")) ||
     (!closed && !libOk && overlay?.canonical_status === "standing")
   );
