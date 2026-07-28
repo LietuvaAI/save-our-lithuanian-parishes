@@ -213,9 +213,8 @@ for (const p of parishes) {
   if (p.registrySlug) registrySlugIndex.set(p.registrySlug, p);
 }
 
-// The full classifier overlay (all 220 canonical parishes) — the 86 case-filed
-// entries also flow into parishes.json at build time; the rest are reachable
-// only through this index.
+// The full classifier overlay — the case-filed entries also flow into
+// parishes.json at build time; the rest are reachable only through this index.
 const situationOverlay = (
   situationJson as unknown as {
     parishes: Record<string, ParishSituation & { registry_slug: string }>;

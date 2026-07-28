@@ -38,6 +38,7 @@ export interface RegistryRow {
     | "roman_catholic"
     | "national_catholic_pncc"
     | "non_catholic_christian"
+    | "independent_catholic"
     | null;
   profileHref: string | null;
 }
@@ -135,12 +136,6 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
   const [fate, setFate] = useState<FateStatus | typeof ALL>(ALL);
   const [ownership, setOwnership] = useState<Ownership | typeof ALL>(ALL);
   const [diocese, setDiocese] = useState<string>(ALL);
-  const [state, setState] = useState<string>(ALL);
-
-  const states = useMemo(
-    () => [...new Set(rows.map((r) => r.state))].sort(),
-    [rows]
-  );
 
   const dioceseOptions = useMemo(() => {
     const present = [...new Set(rows.map((r) => r.diocese).filter(Boolean) as string[])].sort();
@@ -193,14 +188,13 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
         (fate === ALL || r.fate === fate) &&
         (ownership === ALL || r.ownership === ownership) &&
         (diocese === ALL || r.diocese === diocese) &&
-        (state === ALL || r.state === state) &&
         (!q ||
           r.name.toLowerCase().includes(q) ||
           r.city.toLowerCase().includes(q) ||
           r.state.toLowerCase().includes(q) ||
           (r.diocese?.toLowerCase().includes(q) ?? false))
     );
-  }, [rows, query, identity, alert, fate, ownership, diocese, state]);
+  }, [rows, query, identity, alert, fate, ownership, diocese]);
 
   const sc =
     "rounded-md border border-rule bg-background px-2 py-1.5 text-sm";
@@ -211,7 +205,6 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
     fate !== ALL,
     ownership !== ALL,
     diocese !== ALL,
-    state !== ALL,
     query.trim() !== "",
   ].filter(Boolean).length;
 
@@ -238,7 +231,6 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
                 setFate(ALL);
                 setOwnership(ALL);
                 setDiocese(ALL);
-                setState(ALL);
               }}
               className="ml-2 underline text-accent cursor-pointer"
             >

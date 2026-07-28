@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import registry from "@/data/registry-unified.json";
+import {
+  isSettlement,
+  isUS,
+  type CongregationClass,
+  type RegParish,
+} from "@/lib/registry-scope";
 
 export const metadata: Metadata = {
   title: "The research record — all registry parishes",
@@ -8,10 +14,20 @@ export const metadata: Metadata = {
     "Every parish in the wider research record — beyond the case-filed core — with its documentation depth and sources, from the unified registry.",
 };
 
-type Rec = (typeof registry.parishes)[number] & Record<string, any>;
+type Rec = RegParish & { conflicts?: unknown[] };
 
 export default function RegistryIndexPage() {
-  const recs = (registry.parishes as Rec[]).filter((p) => !p.c83_row);
+  const allRegistry = (registry as { parishes: Rec[] }).parishes;
+  const inRegistryScope = (p: Rec) =>
+    !isSettlement(p) && (p.country === "CA" || isUS(p));
+  const registryScope = allRegistry.filter(inRegistryScope);
+  const countClass = (klass: CongregationClass) =>
+    registryScope.filter((p) => p.congregation_class === klass).length;
+  const romanCatholicCount = countClass("roman_catholic");
+  const nationalCatholicCount = countClass("national_catholic_pncc");
+  const protestantCount = countClass("non_catholic_christian");
+  const independentCatholicCount = countClass("independent_catholic");
+  const recs = allRegistry.filter((p) => !p.c83_row && inRegistryScope(p));
   const byState = new Map<string, Rec[]>();
   for (const p of recs) {
     const key = p.state || "—";
@@ -53,7 +69,8 @@ export default function RegistryIndexPage() {
             immigrant community — with its own building, priest, and canonical
             standing. Called a &ldquo;national parish&rdquo; in canon law
             because it is constituted by ethnicity, not territory. The dominant
-            form: 202 of the 220 registry entries.
+            form: {romanCatholicCount} of the {registryScope.length} registry
+            entries.
           </p>
         </div>
         <div className="rounded-lg border border-rule px-4 py-4 text-sm leading-relaxed">
@@ -62,8 +79,17 @@ export default function RegistryIndexPage() {
             Communities that separated from Rome in the early 1900s, mostly in
             Pennsylvania and the northeast, joining the Polish National Catholic
             Church (PNCC). They built and ran their own parishes outside
-            diocesan authority. 14 entries — documented as historical witness,
-            not as a recommendation.
+            diocesan authority. {nationalCatholicCount} entries — documented as
+            historical witness, not as a recommendation.
+          </p>
+        </div>
+        <div className="rounded-lg border border-rule px-4 py-4 text-sm leading-relaxed">
+          <p className="font-semibold">Lithuanian Protestant / non-Catholic Christian</p>
+          <p className="mt-1 text-muted">
+            Lutheran, Reformed, Baptist, and other non-Catholic Lithuanian
+            congregations that belong to the wider religious record.{" "}
+            {protestantCount} entries — shown as historical witness alongside
+            the Catholic record.
           </p>
         </div>
         <div className="rounded-lg border border-rule px-4 py-4 text-sm leading-relaxed">
@@ -71,8 +97,9 @@ export default function RegistryIndexPage() {
           <p className="mt-1 text-muted">
             Communities that broke from both Rome and the PNCC — typically
             short-lived schismatic congregations that arose from local disputes
-            in the early immigrant era. 4 entries — documented as historical
-            witness only.
+            in the early immigrant era. {independentCatholicCount}{" "}
+            {independentCatholicCount === 1 ? "entry" : "entries"} — documented
+            as historical witness only.
           </p>
         </div>
         <div className="rounded-lg border border-rule px-4 py-4 text-sm leading-relaxed">

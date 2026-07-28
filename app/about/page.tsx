@@ -39,6 +39,16 @@ const REG_ETHNIC = usParishesAll.filter(
 const REG_NATCATH = usParishesAll.filter(
   (p) => p.congregation_class === "national_catholic_pncc"
 ).length;
+const REG_PROTESTANT = usParishesAll.filter(
+  (p) => p.congregation_class === "non_catholic_christian"
+).length;
+const REG_INDEP = usParishesAll.filter(
+  (p) => p.congregation_class === "independent_catholic"
+).length;
+const REG_INDEP_LABEL =
+  REG_INDEP === 1
+    ? "1 independent Catholic record"
+    : `${REG_INDEP} independent Catholic records`;
 
 export const metadata: Metadata = {
   title: "About",
@@ -49,11 +59,26 @@ export const metadata: Metadata = {
 // ---------------------------------------------------------------------------
 // Photo lookup from sustainability-watch entries
 // ---------------------------------------------------------------------------
+type WatchPhotoEntry = {
+  parishLink?: string;
+  photo?: {
+    url?: string;
+    alt?: string;
+  };
+};
+
+type AlertsPayload = {
+  sustainabilityWatch?: WatchPhotoEntry[];
+};
+
 const photoBySlug = new Map<string, { url: string; alt: string }>();
-for (const entry of ((alertsData as any).sustainabilityWatch ?? []) as any[]) {
+for (const entry of (alertsData as AlertsPayload).sustainabilityWatch ?? []) {
   if (entry.photo?.url && entry.parishLink) {
-    const slug = (entry.parishLink as string).replace(/^\/parishes\//, "");
-    photoBySlug.set(slug, { url: entry.photo.url, alt: entry.photo.alt });
+    const slug = entry.parishLink.replace(/^\/parishes\//, "");
+    photoBySlug.set(slug, {
+      url: entry.photo.url,
+      alt: entry.photo.alt ?? "Parish photo",
+    });
   }
 }
 
@@ -138,8 +163,30 @@ export default function AboutPage() {
   const dioceseStanding = dioceseOwned.filter(
     (x) => x.parish.endingMode === "standing"
   );
+  const dioceseClosed = dioceseOwned.filter(
+    (x) => x.parish.endingMode === "diocese_closed"
+  );
+  const dioceseUnresolved = dioceseOwned.filter(
+    (x) => x.parish.endingMode === "undecided"
+  );
   const communityStanding = communityOwned.filter(
     (x) => x.parish.endingMode === "standing"
+  );
+  const communityDecided = communityOwned.filter(
+    (x) => x.parish.endingMode === "community_decided"
+  );
+  const coalRegion = us.filter((x) => x.parish.coalRegion);
+  const coalDioceseOwned = coalRegion.filter(
+    (x) => x.parish.ownership === "diocese_rc"
+  );
+  const coalDioceseClosed = coalDioceseOwned.filter(
+    (x) => x.parish.endingMode === "diocese_closed"
+  );
+  const coalDioceseStanding = coalDioceseOwned.filter(
+    (x) => x.parish.endingMode === "standing"
+  );
+  const coalDioceseUnresolved = coalDioceseOwned.filter(
+    (x) => x.parish.endingMode === "undecided"
   );
 
   return (
@@ -149,9 +196,10 @@ export default function AboutPage() {
         About
       </h1>
       <p className="mt-4 text-lg text-muted leading-relaxed">
-        Lithuanian immigrants built over two hundred parishes across the
-        United States — schools, choirs, cemeteries, and communities around
-        each one. This is why we keep the record of what happened to them.
+        Lithuanian immigrants built and sustained {REG_TOTAL} documented
+        parish and congregation records across the United States — schools,
+        choirs, cemeteries, and communities around each one. This is why we
+        keep the record of what happened to them.
       </p>
 
       {/* ── The data ── */}
@@ -217,10 +265,13 @@ export default function AboutPage() {
       <section className="mt-12">
         <SectionAnchor id="numbers">The data at a glance</SectionAnchor>
         <p className="mt-2 text-sm text-muted leading-relaxed">
-          {REG_TOTAL} U.S. Lithuanian parishes documented — {REG_ETHNIC} Roman
-          Catholic ethnic (national) parishes and {REG_NATCATH} Lithuanian
-          National Catholic parishes. The full dataset — every parish, its
-          Lithuanian identity, building fate, and alert status — is in{" "}
+          {REG_TOTAL} U.S. Lithuanian parish and congregation records documented
+          — {REG_ETHNIC} Roman Catholic ethnic (national) parishes,{" "}
+          {REG_NATCATH} Lithuanian National Catholic parishes,{" "}
+          {REG_PROTESTANT} Protestant or non-Catholic Christian congregations,
+          and {REG_INDEP_LABEL}. The full dataset — every
+          record, its Lithuanian identity, building fate, and alert status — is
+          in{" "}
           <Link href="/record" className="underline hover:text-foreground">
             the record
           </Link>
@@ -245,15 +296,19 @@ export default function AboutPage() {
             </p>
             <p className="mt-1 text-sm text-muted">
               {dioceseStanding.length} still standing ·{" "}
-              {dioceseOwned.length - dioceseStanding.length} lost
+              {dioceseClosed.length} closed by diocese
             </p>
+            {dioceseUnresolved.length > 0 && (
+              <p className="mt-1 text-xs text-muted">
+                {dioceseUnresolved.length} unresolved
+              </p>
+            )}
             <p className="mt-2 text-sm">
               {Math.round(
-                ((dioceseOwned.length - dioceseStanding.length) /
-                  dioceseOwned.length) *
+                (dioceseClosed.length / dioceseOwned.length) *
                   100
               )}
-              % closure rate
+              % closed by diocese
             </p>
           </div>
           <div className="rounded-lg border border-rule p-5">
@@ -265,8 +320,7 @@ export default function AboutPage() {
             </p>
             <p className="mt-1 text-sm text-muted">
               {communityStanding.length} still standing ·{" "}
-              {communityOwned.length - communityStanding.length} closed on their
-              own terms
+              {communityDecided.length} ended on their own terms
             </p>
             <p className="mt-2 text-sm">0% closed by outside authority</p>
           </div>
@@ -276,7 +330,8 @@ export default function AboutPage() {
           National Catholic and Lutheran — not one was closed by an outside
           authority. Every ending was the community&rsquo;s own decision. Among
           the {dioceseOwned.length} diocese-owned parishes,{" "}
-          {figures.endingMode.diocese_closed} were closed by the diocese.
+          {dioceseClosed.length} were closed by the diocese and{" "}
+          {dioceseUnresolved.length} remain unresolved.
         </p>
       </section>
 
@@ -286,12 +341,13 @@ export default function AboutPage() {
           The Pennsylvania coal region
         </SectionAnchor>
         <p className="mt-2 text-sm text-muted leading-relaxed">
-          {figures.coalRegion.total} Lithuanian parishes in the northeastern
+          {coalRegion.length} Lithuanian parishes in the northeastern
           Pennsylvania coal region — the densest Lithuanian settlement in
-          America. {figures.coalRegion.dioceseOwnedClosed} of the{" "}
-          {figures.coalRegion.dioceseOwned} diocese-owned ones are now closed.
-          Only {figures.coalRegion.dioceseOwnedStanding} survived under diocesan
-          ownership.
+          America. {coalDioceseClosed.length} of the{" "}
+          {coalDioceseOwned.length} diocese-owned ones are now closed by the
+          diocese, {coalDioceseStanding.length} remain standing under diocesan
+          ownership, and {coalDioceseUnresolved.length}{" "}
+          {coalDioceseUnresolved.length === 1 ? "remains" : "remain"} unresolved.
         </p>
         <ul className="mt-5 space-y-3">
           {us

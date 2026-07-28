@@ -17,8 +17,17 @@ import {
   type EndingMode,
   type LithuanianIdentity,
   type BuildingFate,
+  type Ownership,
 } from "@/lib/parishes";
 import { resolveEndState, type EndState } from "@/lib/end-state";
+
+export type CongregationClass =
+  | "roman_catholic"
+  | "national_catholic_pncc"
+  | "non_catholic_christian"
+  | "independent_catholic";
+
+export type RecordDepth = "case-filed" | "multi-source" | "single-source";
 
 export interface RegParish {
   slug: string;
@@ -39,9 +48,9 @@ export interface RegParish {
     closed?: { value: string }[];
   };
   sources?: { ethnic_status?: string }[];
-  congregation_class?: string;
+  congregation_class?: CongregationClass;
   diocese?: string | null;
-  record_depth?: string;
+  record_depth?: RecordDepth;
 }
 
 /** One row of the shared registry-wide view. */
@@ -50,12 +59,19 @@ export interface ScopedParish {
   name: string;
   city: string;
   state: string;
+  country: "US" | "CA";
+  comparator: boolean;
   diocese: string | null;
   founded: number | null;
   closed: number | null;
   endState: EndState;
   endingMode: EndingMode | null;
+  identity: LithuanianIdentity | null;
   buildingFate: BuildingFate | null;
+  ownership: Ownership | null;
+  congregationClass: CongregationClass | null;
+  recordDepth: RecordDepth;
+  alertKind: "active" | "watch" | "building" | null;
   hasAlert: boolean;
   onWatch: boolean;
   profileHref: string | null;
@@ -95,16 +111,25 @@ export function isUS(p: RegParish): boolean {
 
 /** The registry-wide U.S. Roman Catholic parish population. */
 export function usRomanCatholic(): RegParish[] {
+  return usRegistryParishes().filter(
+    (p) => p.congregation_class === "roman_catholic",
+  );
+}
+
+/** The full U.S. /record population: parishes and congregations, no comparators. */
+export function usRegistryParishes(): RegParish[] {
   return (registry as { parishes: RegParish[] }).parishes.filter(
-    (p) =>
-      isUS(p) && p.congregation_class === "roman_catholic" && !isSettlement(p),
+    (p) => isUS(p) && !isSettlement(p),
   );
 }
 
 // Alert + sustainability-watch lookups by slug
-const alertBySlug = new Map<string, string>();
+const alertBySlug = new Map<string, "active" | "watch" | "building">();
 for (const a of alertsData.alerts as { parishLink: string; kind: string }[]) {
-  alertBySlug.set(a.parishLink.replace(/^\/(parishes|registry)\//, ""), a.kind);
+  alertBySlug.set(
+    a.parishLink.replace(/^\/(parishes|registry)\//, ""),
+    a.kind as "active" | "watch" | "building",
+  );
 }
 const sustainBySlug = new Set<string>();
 for (const sw of ((alertsData as Record<string, unknown>)
@@ -146,6 +171,7 @@ export function toScopedParish(p: RegParish): ScopedParish {
   const buildingFate = libOk
     ? (lib!.buildingFate as BuildingFate | null)
     : asFate(overlay?.building_fate);
+  const alertKind = alertBySlug.get(slug) ?? null;
 
   const isStanding = !!(
     (endingMode === "standing" && !closed) ||
@@ -159,6 +185,8 @@ export function toScopedParish(p: RegParish): ScopedParish {
     name: p.names.lt || p.names.en || p.slug,
     city: p.city.replace(/\s*[(;].*$/, ""),
     state: p.state,
+    country: p.country,
+    comparator: p.comparator,
     diocese: normalizeDiocese(p.diocese),
     founded,
     closed,
@@ -170,8 +198,13 @@ export function toScopedParish(p: RegParish): ScopedParish {
       endingMode,
     ),
     endingMode,
+    identity,
     buildingFate,
-    hasAlert: alertBySlug.has(slug),
+    ownership: libOk ? (lib!.ownership as Ownership) : null,
+    congregationClass: p.congregation_class ?? null,
+    recordDepth: p.record_depth ?? "single-source",
+    alertKind,
+    hasAlert: alertKind != null,
     onWatch: sustainBySlug.has(slug),
     profileHref: libOk
       ? `/parishes/${lib!.slug}`

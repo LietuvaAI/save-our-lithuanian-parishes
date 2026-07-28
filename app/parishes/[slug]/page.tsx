@@ -8,6 +8,7 @@ import registry from "@/data/registry-unified.json";
 import alertsData from "@/data/alerts.json";
 import { getClearedPhoto, clearedOrNull } from "@/lib/photos";
 import contextPoints from "@/data/context-points.json";
+import { toScopedParish, type RegParish } from "@/lib/registry-scope";
 import {
   parishes,
   draugasCitationUrl,
@@ -53,6 +54,85 @@ interface CaseRecord {
   gaps: string;
 }
 
+type RegistrySource = {
+  axis?: string;
+  pages?: string;
+  school?: string;
+  convent?: string;
+  cemetery?: string;
+  diocese?: string;
+  description?: string;
+  architect?: string;
+  ethnic_status?: string;
+  lens?: string;
+};
+
+type RegistryEntry = Omit<RegParish, "sources"> & {
+  sources?: RegistrySource[];
+};
+
+type AlertSource = {
+  url: string;
+  publisher: string;
+};
+
+type DispatchLink = {
+  url: string;
+  title: string;
+};
+
+type WatchPhoto = {
+  url?: string;
+  alt?: string;
+  attribution?: string;
+  license?: string;
+  archiveUrl?: string;
+  rights?: string;
+};
+
+type ParishAlertEntry = {
+  parishLink: string;
+  level: string;
+  whatChanged: string;
+  sources: AlertSource[];
+};
+
+type ParishCampaignEntry = {
+  parishLink: string;
+  hearthUrl?: string;
+  dispatches?: DispatchLink[];
+};
+
+type SustainabilityWatchEntry = {
+  parishLink: string;
+  situation: string;
+  clergy: {
+    arrangement: string;
+    detail: string;
+  };
+  liturgy: {
+    frequency: string;
+    detail: string;
+  };
+  governance: string;
+  governanceDetail: string;
+  survivedThreats?: string | null;
+  financial?: string | null;
+  sources: AlertSource[];
+  dateObserved: string;
+  hearthUrl?: string | null;
+  dispatches?: DispatchLink[];
+  photo?: WatchPhoto | null;
+};
+
+type AlertsPayload = {
+  alerts: ParishAlertEntry[];
+  campaigns: ParishCampaignEntry[];
+  sustainabilityWatch?: SustainabilityWatchEntry[];
+};
+
+const alerts = alertsData as AlertsPayload;
+
 function loadCaseRecord(slug: string): CaseRecord | null {
   const p = join(process.cwd(), "data", "case-records", `${slug}.json`);
   return existsSync(p) ? (JSON.parse(readFileSync(p, "utf-8")) as CaseRecord) : null;
@@ -60,31 +140,31 @@ function loadCaseRecord(slug: string): CaseRecord | null {
 
 // Build a registrySlug → registry-entry index for scholarly-source lookups.
 const registryBySlug = new Map(
-  (registry.parishes as any[]).map((p) => [p.slug, p])
+  (registry as { parishes: RegistryEntry[] }).parishes.map((p) => [p.slug, p])
 );
 
 /** Extract Wolkovich and/or Michelsonas sources for a canonical parish. */
-function getScholarlySources(registrySlug: string | null): any[] {
+function getScholarlySources(registrySlug: string | null): RegistrySource[] {
   if (!registrySlug) return [];
   const entry = registryBySlug.get(registrySlug);
   if (!entry) return [];
-  return entry.sources.filter(
-    (s: any) => s.axis === "wolkovich" || s.axis === "michelsonas-1961" || s.axis === "lukas-2009"
+  return (entry.sources ?? []).filter(
+    (s) => s.axis === "wolkovich" || s.axis === "michelsonas-1961" || s.axis === "lukas-2009"
   );
 }
 
 /** Find the alert and/or campaign for a parish by its canonical slug. */
 function getParishAlert(slug: string) {
   const matchLink = `/parishes/${slug}`;
-  const alert = (alertsData.alerts as any[]).find((a) => a.parishLink === matchLink);
-  const campaign = (alertsData.campaigns as any[]).find((c) => c.parishLink === matchLink);
+  const alert = alerts.alerts.find((a) => a.parishLink === matchLink);
+  const campaign = alerts.campaigns.find((c) => c.parishLink === matchLink);
   return { alert, campaign };
 }
 
 /** Find the sustainability-watch entry for a parish by its canonical slug. */
 function getSustainabilityWatch(slug: string) {
   const matchLink = `/parishes/${slug}`;
-  return ((alertsData as any).sustainabilityWatch as any[]).find(
+  return (alerts.sustainabilityWatch ?? []).find(
     (e) => e.parishLink === matchLink
   ) ?? null;
 }
@@ -118,10 +198,12 @@ function storyDek(
   parish: (typeof parishes)[number],
   situationText: string | null,
   endState: ReturnType<typeof resolveEndState>,
+  foundedYear: number | null,
+  closedYear: number | null,
 ): { dek: string; rest: string | null } {
   if (situationText) return splitStory(situationText);
-  const f = parish.yearFounded ? `Founded ${parish.yearFounded}. ` : "";
-  const c = parish.yearClosed ? ` in ${parish.yearClosed}` : "";
+  const f = foundedYear ? `Founded ${foundedYear}. ` : "";
+  const c = closedYear ? ` in ${closedYear}` : "";
   switch (endState) {
     case "unresolved":
       return { dek: `${f}The church stands and the parish's fate is canonically unresolved — the decision is not final.`, rest: null };
@@ -150,11 +232,19 @@ export default async function ParishPage({
   const { slug } = await params;
   const parish = parishes.find((p) => p.slug === slug);
   if (!parish) notFound();
+  const registryEntry = parish.registrySlug ? registryBySlug.get(parish.registrySlug) : null;
+  const scoped = registryEntry ? toScopedParish(registryEntry) : null;
+  const foundedYear = scoped?.founded ?? parish.yearFounded;
+  const closedYear = scoped?.closed ?? parish.yearClosed;
+  const buildingFate = scoped?.buildingFate ?? parish.buildingFate;
+  const endingMode = scoped?.endingMode ?? parish.endingMode;
   const caseRecord = loadCaseRecord(slug);
   const situation = getParishSituation(slug);
   const scholarlySources = getScholarlySources(parish.registrySlug);
   const { alert: parishAlert, campaign: parishCampaign } = getParishAlert(slug);
   const watchEntry = getSustainabilityWatch(slug);
+  const campaignDispatches = parishCampaign?.dispatches ?? [];
+  const watchDispatches = watchEntry?.dispatches ?? [];
 
   // Photo: prefer photos.json, fall back to sustainability-watch entry.
   // Both paths pass through the rights gate — uncleared images never render.
@@ -163,23 +253,38 @@ export default async function ParishPage({
   const photo = photosEntry
     ? photosEntry
     : watchPhoto?.url
-      ? { src: watchPhoto.url, alt: watchPhoto.alt, attribution: watchPhoto.attribution, license: watchPhoto.license, archiveUrl: undefined as string | undefined }
+      ? {
+          src: watchPhoto.url,
+          alt: watchPhoto.alt ?? `${parish.nameLt} photo`,
+          attribution: watchPhoto.attribution ?? "",
+          license: watchPhoto.license,
+          archiveUrl: watchPhoto.archiveUrl,
+        }
       : null;
 
   // The one status verdict, from the shared resolver.
   const isStanding = parish.status === "standing";
-  const endState = resolveEndState(
-    (parish.lithuanianIdentity as LithuanianIdentity | null) ?? null,
-    (parish.buildingFate as BuildingFate | null) ?? null,
-    parish.yearClosed != null || !isStanding,
-    isStanding,
-    parish.endingMode,
+  const endState =
+    scoped?.endState ??
+    resolveEndState(
+      (parish.lithuanianIdentity as LithuanianIdentity | null) ?? null,
+      (parish.buildingFate as BuildingFate | null) ?? null,
+      parish.yearClosed != null || !isStanding,
+      isStanding,
+      parish.endingMode,
+    );
+
+  const { dek, rest } = storyDek(
+    parish,
+    situation?.situation ?? null,
+    endState,
+    foundedYear,
+    closedYear,
   );
 
-  const { dek, rest } = storyDek(parish, situation?.situation ?? null, endState);
-
   const showWhatHappened =
-    !isStanding ||
+    isLoss(endState) ||
+    endState === "unresolved" ||
     parish.survivedReviewThenClosed ||
     !!parish.notes;
 
@@ -297,7 +402,7 @@ export default async function ParishPage({
         <dl className="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-4 text-sm">
           <div>
             <dt className="text-xs uppercase tracking-wide text-muted">Founded</dt>
-            <dd className="mt-0.5">{parish.yearFounded ?? "Not established"}</dd>
+            <dd className="mt-0.5">{foundedYear ?? "Not established"}</dd>
           </div>
           <div>
             <dt className="text-xs uppercase tracking-wide text-muted">Type</dt>
@@ -322,7 +427,7 @@ export default async function ParishPage({
               the author&#8217;s own characterization.
             </p>
             <div className="mt-3 space-y-3">
-              {scholarlySources.map((s: any, i: number) => {
+              {scholarlySources.map((s, i) => {
                 const isWolkovich = s.axis === "wolkovich";
                 const isLukas = s.axis === "lukas-2009";
                 const hasDetail =
@@ -441,19 +546,19 @@ export default async function ParishPage({
             {isLoss(endState) && (
               <div>
                 <dt className="text-xs uppercase tracking-wide text-muted">Closed</dt>
-                <dd className="mt-0.5">{parish.yearClosed ?? "Not established"}</dd>
+                <dd className="mt-0.5">{closedYear ?? "Not established"}</dd>
               </div>
             )}
-            {parish.endingMode !== "standing" && (
+            {endingMode && endingMode !== "standing" && (
               <div>
                 <dt className="text-xs uppercase tracking-wide text-muted">Decision</dt>
-                <dd className="mt-0.5">{ENDING_MODE_LABEL[parish.endingMode]}</dd>
+                <dd className="mt-0.5">{ENDING_MODE_LABEL[endingMode]}</dd>
               </div>
             )}
-            {parish.buildingFate && parish.buildingFate !== "unknown" && parish.buildingFate !== "standing" && (
+            {buildingFate && buildingFate !== "unknown" && buildingFate !== "standing" && (
               <div>
                 <dt className="text-xs uppercase tracking-wide text-muted">Building</dt>
-                <dd className="mt-0.5">{BUILDING_FATE_LABEL[parish.buildingFate as BuildingFate]}</dd>
+                <dd className="mt-0.5">{BUILDING_FATE_LABEL[buildingFate as BuildingFate]}</dd>
               </div>
             )}
           </dl>
@@ -533,7 +638,7 @@ export default async function ParishPage({
             </div>
             <p className="mt-2 text-xs text-muted">
               Sources:{" "}
-              {parishAlert.sources.map((s: any, i: number) => (
+              {parishAlert.sources.map((s, i) => (
                 <span key={s.url}>
                   {i > 0 && " · "}
                   <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
@@ -542,13 +647,13 @@ export default async function ParishPage({
                 </span>
               ))}
             </p>
-            {parishCampaign?.dispatches?.length > 0 && (
+            {campaignDispatches.length > 0 && (
               <div className="mt-3 border-t border-rule pt-3">
                 <p className="text-xs uppercase tracking-wide text-muted mb-1.5">
                   From Židinys (The Hearth)
                 </p>
                 <ul className="space-y-1">
-                  {parishCampaign.dispatches.map((d: any) => (
+                  {campaignDispatches.map((d) => (
                     <li key={d.url}>
                       <a
                         href={d.url}
@@ -608,7 +713,7 @@ export default async function ParishPage({
             <div className="border-t border-rule bg-background px-4 py-2.5 flex flex-wrap items-center justify-between gap-2">
               <p className="text-xs text-muted">
                 Sources:{" "}
-                {(watchEntry.sources as any[]).map((s: any, i: number) => (
+                {watchEntry.sources.map((s, i) => (
                   <span key={s.url}>
                     {i > 0 && " · "}
                     <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
@@ -637,13 +742,13 @@ export default async function ParishPage({
                 </Link>
               </div>
             </div>
-            {watchEntry.dispatches?.length > 0 && (
+            {watchDispatches.length > 0 && (
               <div className="border-t border-rule px-4 py-3">
                 <p className="text-xs uppercase tracking-wide text-muted mb-1.5">
                   From Židinys (The Hearth)
                 </p>
                 <ul className="space-y-1">
-                  {(watchEntry.dispatches as any[]).map((d: any) => (
+                  {watchDispatches.map((d) => (
                     <li key={d.url}>
                       <a
                         href={d.url}

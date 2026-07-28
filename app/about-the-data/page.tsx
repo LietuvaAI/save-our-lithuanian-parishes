@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import registry from "@/data/registry-unified.json";
+import { isSettlement, isUS, type RegParish } from "@/lib/registry-scope";
+
+const REGISTRY_TOTAL = (registry as { parishes: RegParish[] }).parishes.filter(
+  (p) => !isSettlement(p) && (p.country === "CA" || isUS(p))
+).length;
 
 export const metadata: Metadata = {
   title: "About the data",
@@ -120,8 +126,9 @@ export default function AboutTheDataPage() {
         </h2>
         <p className="mt-2 leading-relaxed">
           The sources join into a single research registry —{" "}
-          <strong>220 parishes</strong> across the U.S. and Canada — matched
-          by city and patron saint across Lithuanian and English spellings.
+          <strong>{REGISTRY_TOTAL} parishes and congregations</strong> across
+          the U.S. and Canada — matched by city and patron saint across
+          Lithuanian and English spellings.
           Every parish carries a record-depth label rather than a
           verified/unverified caste: <em>case-filed</em> (those with full
           case files), <em>multi-source</em> (documented independently in

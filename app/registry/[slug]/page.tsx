@@ -5,22 +5,73 @@ import { notFound } from "next/navigation";
 import registry from "@/data/registry-unified.json";
 import { getClearedPhoto } from "@/lib/photos";
 import { splitStory } from "@/lib/dek";
+import { toScopedParish, type RegParish } from "@/lib/registry-scope";
 import {
   draugasCitationUrl,
   draugasArchiveUrl,
   getSituationByRegistrySlug,
-  type Ownership,
 } from "@/lib/parishes";
+import { EndStatePill } from "@/components/EndStatePill";
 import ParishContextMap from "@/components/ParishContextMap";
 import contextPoints from "@/data/context-points.json";
 
 /* Research-record profile pages: every non-canonical parish in the unified
-   registry gets a page built purely from cited source facts. No status
-   verdicts are derived here — sources are quoted, conflicts are shown. */
+   registry gets a page built from cited source facts, with the public status
+   verdict supplied by the same shared resolver used by /record and /history. */
 
-type Rec = (typeof registry.parishes)[number] & Record<string, any>;
+type YearReading = {
+  value: string;
+  source: string;
+  cite?: string;
+};
 
-const researchRecords: Rec[] = (registry.parishes as Rec[]).filter(
+type RegistrySource = {
+  axis: string;
+  ethnic_status?: string;
+  first_mention?: string;
+  last_mention?: string;
+  total_mentions?: number;
+  pages?: string;
+  diocese?: string;
+  school?: string;
+  convent?: string;
+  cemetery?: string;
+  lens?: string;
+  description?: string;
+  architect?: string;
+  address?: string;
+  currentStatus?: string;
+  ownership?: string;
+  sourceUrl?: string;
+  confidence?: string;
+  yearsMentioned?: number[];
+};
+
+type ConflictVariant = {
+  value: string;
+  source: string;
+  cite?: string;
+};
+
+type SourceConflict = {
+  field: string;
+  variants?: ConflictVariant[];
+  note?: string;
+};
+
+type Rec = Omit<RegParish, "names" | "sources" | "years"> & {
+  names: RegParish["names"] & { variants?: string[] };
+  sources?: RegistrySource[];
+  years?: {
+    founded?: YearReading[];
+    closed?: YearReading[];
+  };
+  record_type?: string;
+  caveat?: string;
+  conflicts?: SourceConflict[];
+};
+
+const researchRecords: Rec[] = (registry as { parishes: Rec[] }).parishes.filter(
   (p) => !p.c83_row
 );
 
@@ -82,9 +133,10 @@ const SETTLEMENT_PATTERNS = [
 
 type CommunityKind = "settlement" | "parish";
 
-function communityKind(sources: any[]): CommunityKind {
+function communityKind(sources: RegistrySource[]): CommunityKind {
   for (const s of sources) {
-    if (s.ethnic_status && SETTLEMENT_PATTERNS.some((p) => p.test(s.ethnic_status))) {
+    const ethnicStatus = s.ethnic_status;
+    if (ethnicStatus && SETTLEMENT_PATTERNS.some((p) => p.test(ethnicStatus))) {
       return "settlement";
     }
   }
@@ -104,7 +156,7 @@ function sourceShortName(axis: string) {
   return AXIS_LABEL[axis]?.split(",")[0] ?? axis;
 }
 
-function YearList({ label, items }: { label: string; items: any[] }) {
+function YearList({ label, items }: { label: string; items?: YearReading[] }) {
   if (!items?.length) return null;
   const yearItems = items.filter((v) => isYearValue(v.value));
   const noteItems = items.filter((v) => !isYearValue(v.value));
@@ -152,6 +204,9 @@ export default async function RegistryParishPage({
   const { slug } = await params;
   const p = researchRecords.find((r) => r.slug === slug);
   if (!p) notFound();
+  const scoped = toScopedParish(p);
+  const recordType = p.record_type as string | undefined;
+  const congregationClass = p.congregation_class;
   const name = p.names.lt || p.names.en || "Lithuanian parish";
   const altName = p.names.lt && p.names.en ? p.names.en : null;
   const variants = (p.names.variants || []).filter(
@@ -168,17 +223,18 @@ export default async function RegistryParishPage({
     "web-historical": 6,
     "truelithuania": 7,
   };
-  const sortedSources = [...p.sources].sort(
-    (a: any, b: any) => (SOURCE_ORDER[a.axis] ?? 99) - (SOURCE_ORDER[b.axis] ?? 99)
+  const sortedSources = [...(p.sources ?? [])].sort(
+    (a, b) => (SOURCE_ORDER[a.axis] ?? 99) - (SOURCE_ORDER[b.axis] ?? 99)
   );
-  const axes = [...new Set(sortedSources.map((s: any) => s.axis))] as string[];
-  const kind = communityKind(p.sources);
+  const axes = [...new Set(sortedSources.map((s) => s.axis))];
+  const conflicts = p.conflicts ?? [];
+  const kind = communityKind(p.sources ?? []);
   const situation = getSituationByRegistrySlug(slug);
 
   // The one-sentence story the page opens with: researched situation text
   // where it exists, otherwise an honest sentence from the sourced facts.
-  const founded = asYearNum(p.years?.founded?.[0]?.value);
-  const closed = asYearNum(p.years?.closed?.[0]?.value);
+  const founded = scoped.founded ?? asYearNum(p.years?.founded?.[0]?.value);
+  const closed = scoped.closed ?? asYearNum(p.years?.closed?.[0]?.value);
   const { dek, rest } = (() => {
     // Algorithmic overlay entries carry filler ("minimal research details
     // available") — a composed sentence from sourced facts beats it.
@@ -201,20 +257,48 @@ export default async function RegistryParishPage({
         dek: `${f}The record shows the parish closed in ${closed}; its fuller story is still being researched.`,
         rest: null,
       };
+    switch (scoped.endState) {
+      case "active_parish":
+        return {
+          dek: `${f}The record shows an active Lithuanian parish today.`,
+          rest: null,
+        };
+      case "mass_continues":
+        return {
+          dek: `${f}A Lithuanian Mass continues here inside a parish that is no longer Lithuanian-led.`,
+          rest: null,
+        };
+      case "transferred":
+        return {
+          dek: `${f}The building or parish life continues, but its Lithuanian parish identity has ended.`,
+          rest: null,
+        };
+      case "demolished":
+        return {
+          dek: `${f}The parish is closed and the church building has been demolished.`,
+          rest: null,
+        };
+      case "repurposed":
+        return {
+          dek: `${f}The parish is closed and the building has been repurposed.`,
+          rest: null,
+        };
+      case "closed":
+        return {
+          dek: `${f}The parish is closed; its fuller story is still being researched.`,
+          rest: null,
+        };
+      case "unresolved":
+        return {
+          dek: `${f}The record marks this case as unresolved until the source conflict is settled.`,
+          rest: null,
+        };
+    }
     return {
       dek: `${f}Attested in ${axes.length} ${axes.length === 1 ? "source" : "sources"}; its fate has not yet been established.`,
       rest: null,
     };
   })();
-  // Infer ownership from web-historical source if available
-  const webSource = p.sources.find((s: any) => s.axis === "web-historical") as any;
-  const ownership: Ownership | null =
-    webSource?.ownership === "diocese_rc"
-      ? "diocese_rc"
-      : p.congregation_class === "national_catholic_pncc"
-        ? "national_catholic"
-        : null;
-
   return (
     <article className="mx-auto max-w-3xl px-4 py-12">
       <p className="text-xs uppercase tracking-widest text-muted">
@@ -230,6 +314,10 @@ export default async function RegistryParishPage({
         {p.country === "CA" ? " (Canada)" : ""}
       </p>
 
+      <div className="mt-3">
+        <EndStatePill value={scoped.endState} size="lg" />
+      </div>
+
       <p className="mt-4 font-serif text-xl sm:text-2xl leading-snug max-w-2xl">
         {dek}
       </p>
@@ -239,9 +327,12 @@ export default async function RegistryParishPage({
 
       <div className="mt-4 flex flex-wrap gap-1.5">
         <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium">
-          {RECORD_TYPE_LABEL[p.record_type] ?? CLASS_LABEL[p.congregation_class] ?? p.congregation_class}
+          {(recordType ? RECORD_TYPE_LABEL[recordType] : null) ??
+            (congregationClass ? CLASS_LABEL[congregationClass] : null) ??
+            congregationClass ??
+            "Research record"}
         </span>
-        {p.record_type === "misija" && (
+        {recordType === "misija" && (
           <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
             canonical mission — dependent on a mother parish or diocese
           </span>
@@ -250,15 +341,15 @@ export default async function RegistryParishPage({
           <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
             Lithuanian community — not a distinct national parish
           </span>
-        ) : p.congregation_class === "national_catholic_pncc" ? (
+        ) : congregationClass === "national_catholic_pncc" ? (
           <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
             separated from Rome — documented as historical witness
           </span>
-        ) : p.congregation_class === "independent_catholic" ? (
+        ) : congregationClass === "independent_catholic" ? (
           <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
             independent / schismatic — documented as historical witness
           </span>
-        ) : p.record_type !== "misija" ? (
+        ) : recordType !== "misija" ? (
           <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
             Lithuanian ethnic parish
           </span>
@@ -334,14 +425,14 @@ export default async function RegistryParishPage({
         )}
       </div>
 
-      {p.conflicts?.length > 0 && (
+      {conflicts.length > 0 && (
         <section className="mt-6 rounded-lg border border-rule px-4 py-3 text-sm">
           <p className="font-medium">Where the sources disagree</p>
-          {p.conflicts.map((c: any, i: number) => (
+          {conflicts.map((c, i) => (
             <div key={i} className="mt-2 text-muted">
               <span className="font-medium text-foreground">{c.field}:</span>{" "}
               {(c.variants || [])
-                .map((v: any) => `${v.value} (${v.source}${v.cite ? `, ${v.cite}` : ""})`)
+                .map((v) => `${v.value} (${v.source}${v.cite ? `, ${v.cite}` : ""})`)
                 .join(" · ")}
               {c.note && <div className="mt-1 italic">{c.note}</div>}
             </div>
@@ -388,7 +479,7 @@ export default async function RegistryParishPage({
           Documented in {axes.length} {axes.length === 1 ? "source" : "sources"}
         </h2>
         <div className="mt-3 space-y-3">
-          {sortedSources.map((s: any, i: number) => (
+          {sortedSources.map((s, i) => (
             <div key={i} className="rounded-lg border border-rule px-4 py-3 text-sm">
               <p className="font-medium">{AXIS_LABEL[s.axis] ?? s.axis}</p>
               <p className="mt-1 text-muted leading-relaxed">
@@ -445,8 +536,8 @@ export default async function RegistryParishPage({
                     )}
                     {/* Narrative founding notes from this source */}
                     {(p.years?.founded || [])
-                      .filter((f: any) => f.source === s.axis && !isYearValue(f.value))
-                      .map((f: any, fi: number) => (
+                      .filter((f) => f.source === s.axis && !isYearValue(f.value))
+                      .map((f, fi) => (
                         <span key={fi} className="block leading-relaxed">
                           {f.value}
                         </span>
@@ -559,9 +650,9 @@ export default async function RegistryParishPage({
                 )}
                 {s.axis === "truelithuania" && (
                   <span className="block space-y-1">
-                    {s.yearsMentioned?.length > 0 && (
+                    {s.yearsMentioned && s.yearsMentioned.length > 0 && (
                       <span className="block">
-                        Years mentioned: {(s.yearsMentioned as number[]).join(", ")}.
+                        Years mentioned: {s.yearsMentioned.join(", ")}.
                       </span>
                     )}
                     {s.sourceUrl && (

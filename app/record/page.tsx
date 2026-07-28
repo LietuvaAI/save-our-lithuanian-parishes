@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RegistryTable, { type RegistryRow } from "@/components/RegistryTable";
-import registry from "@/data/registry-unified.json";
-import alertsData from "@/data/alerts.json";
-import { getParishByC83Row, type Ownership, type LithuanianIdentity, type BuildingFate } from "@/lib/parishes";
+import { toScopedParish, usRegistryParishes } from "@/lib/registry-scope";
 import { resolveAlertStatus, resolveIdentity, resolveFate } from "@/lib/unified-status";
 
 export const metadata: Metadata = {
@@ -12,91 +10,26 @@ export const metadata: Metadata = {
     "Every Lithuanian parish in the U.S. research record — the verified Draugas 2008–2026 core plus the wider registry.",
 };
 
-interface RegParish {
-  slug: string;
-  names: { lt: string | null; en: string | null };
-  city: string;
-  state: string;
-  country: "US" | "CA";
-  comparator: boolean;
-  in_locked_scope: boolean;
-  c83_row: number | null;
-  locked?: {
-    ending_mode?: string;
-    year_founded?: string;
-    year_closed?: string;
-  };
-  years?: {
-    founded?: { value: string }[];
-    closed?: { value: string }[];
-  };
-  sources?: { ethnic_status?: string }[];
-  congregation_class?: string;
-  diocese?: string | null;
-  record_depth: RegistryRow["depth"];
-}
-
-// Build alert lookup: parish slug → alert kind
-const alertBySlug = new Map<string, "active" | "watch" | "building">();
-for (const a of (alertsData.alerts as { parishLink: string; kind: string }[])) {
-  const slug = a.parishLink.replace(/^\/(parishes|registry)\//, "");
-  alertBySlug.set(slug, a.kind as "active" | "watch" | "building");
-}
-
-// Build sustainability watch lookup: parish slug → true
-const sustainBySlug = new Set<string>();
-for (const sw of ((alertsData as Record<string, unknown>).sustainabilityWatch as { parishLink: string }[] ?? [])) {
-  sustainBySlug.add(sw.parishLink.replace(/^\/(parishes|registry)\//, ""));
-}
-
 function buildRows(): RegistryRow[] {
-  const regs = (registry as { parishes: RegParish[] }).parishes
-    .filter(
-      (p) =>
-        !(p.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? "")) &&
-        p.country !== "CA" &&
-        !/buenos aires|argentin|rosario/i.test(p.city ?? "")
-    );
-  return regs.map((p) => {
-    const lib =
-      p.c83_row != null ? getParishByC83Row(p.c83_row) : undefined;
-    const libOk = lib && lib.city === p.city;
-    const asYear = (v: string | undefined | null) => {
-      const m = v?.match(/\b(1[89]\d{2}|20[0-2]\d)\b/);
-      return m ? m[1] : null;
-    };
-    const yearOf = (
-      lockedVal: string | undefined,
-      arr: { value: string }[] | undefined
-    ) => asYear(lockedVal) ?? asYear(arr?.[0]?.value);
-
-    const slug = libOk ? lib.slug : p.slug;
-    const alertKind = alertBySlug.get(slug) ?? null;
-    const onSustWatch = sustainBySlug.has(slug);
-
+  return usRegistryParishes().map((p) => {
+    const scoped = toScopedParish(p);
     return {
-      slug,
-      name: p.names.lt || p.names.en || p.slug,
-      city: p.city.replace(/\s*[(;].*$/, ""),
-      state: p.state,
-      country: p.country,
-      comparator: p.comparator,
-      // Three unified dimensions
-      identity: resolveIdentity(libOk ? (lib.lithuanianIdentity as LithuanianIdentity | null) : null),
-      alert: resolveAlertStatus(alertKind, onSustWatch),
-      fate: resolveFate(libOk ? (lib.buildingFate as BuildingFate | null) : null),
-      // Additional
-      founded: yearOf(p.locked?.year_founded, p.years?.founded),
-      closed: yearOf(p.locked?.year_closed, p.years?.closed),
-      depth: p.record_depth,
-      congregationClass: (p.congregation_class as RegistryRow["congregationClass"]) ?? null,
-      ownership: libOk ? (lib.ownership as Ownership) : null,
-      diocese: (p.diocese as string) ?? null,
-      profileHref: libOk
-        ? `/parishes/${lib.slug}`
-        : p.c83_row == null
-          ? `/registry/${p.slug}`
-          : null,
+      slug: scoped.slug,
+      name: scoped.name,
+      city: scoped.city,
+      state: scoped.state,
+      country: scoped.country,
+      comparator: scoped.comparator,
+      identity: resolveIdentity(scoped.identity),
+      alert: resolveAlertStatus(scoped.alertKind, scoped.onWatch),
+      fate: resolveFate(scoped.buildingFate),
+      founded: scoped.founded == null ? null : String(scoped.founded),
+      closed: scoped.closed == null ? null : String(scoped.closed),
+      depth: scoped.recordDepth,
+      congregationClass: scoped.congregationClass,
+      ownership: scoped.ownership,
+      diocese: scoped.diocese,
+      profileHref: scoped.profileHref,
     };
   });
 }
