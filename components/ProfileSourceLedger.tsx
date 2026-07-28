@@ -12,13 +12,33 @@ const GROUP_LABEL: Record<ProfileSourceGroup, string> = {
   visual: "Image and object records",
 };
 
-const GROUP_ORDER: ProfileSourceGroup[] = [
-  "newspaper",
-  "books",
-  "current",
-  "field",
-  "project",
-  "visual",
+const SOURCE_SECTIONS: {
+  id: string;
+  label: string;
+  description: string;
+  groups: ProfileSourceGroup[];
+}[] = [
+  {
+    id: "direct",
+    label: "Primary and current evidence",
+    description:
+      "Dated newspaper issues, current institutional records, and documentary image or object records.",
+    groups: ["newspaper", "current", "visual"],
+  },
+  {
+    id: "secondary",
+    label: "Secondary sources",
+    description:
+      "Published histories, archive volumes, field surveys, heritage inventories, and research syntheses.",
+    groups: ["books", "field"],
+  },
+  {
+    id: "project",
+    label: "Project publications",
+    description:
+      "Related Save Our Lithuanian Parishes and Židinys publications, kept separate from independent evidence.",
+    groups: ["project"],
+  },
 ];
 
 export function ProfileSourceLedger({
@@ -49,52 +69,72 @@ export function ProfileSourceLedger({
           No public source link has been attached to this profile yet.
         </p>
       ) : (
-        GROUP_ORDER.map((group) => {
-          const groupSources = sources.filter((source) => source.group === group);
-          if (groupSources.length === 0) return null;
+        SOURCE_SECTIONS.map((section) => {
+          const sectionSources = section.groups.flatMap((group) =>
+            sources.filter((source) => source.group === group),
+          );
+          if (sectionSources.length === 0) return null;
           return (
-            <div key={group} className="mt-7">
-              <h3 className="text-xs uppercase tracking-wide text-muted">
-                {GROUP_LABEL[group]}
+            <div key={section.id} className="mt-8">
+              <h3 className="font-serif text-xl font-semibold">
+                {section.label}
               </h3>
-              <ol className="mt-2 divide-y divide-rule border-y border-rule">
-                {groupSources.map((source) => (
-                  <li key={source.id} className="py-3.5">
-                    <p className="font-medium">{source.title}</p>
-                    {[source.citation, ...source.additionalCitations]
-                      .filter((citation): citation is string => !!citation)
-                      .map((citation) => (
-                        <p
-                          key={citation}
-                          className="mt-0.5 text-sm leading-relaxed text-muted"
-                        >
-                          {citation}
-                        </p>
+              <p className="mt-1 max-w-2xl text-sm leading-relaxed text-muted">
+                {section.description}
+              </p>
+              {section.groups.map((group) => {
+                const groupSources = sectionSources.filter(
+                  (source) => source.group === group,
+                );
+                if (groupSources.length === 0) return null;
+                return (
+                  <div key={group} className="mt-5">
+                    <h4 className="text-xs uppercase tracking-wide text-muted">
+                      {GROUP_LABEL[group]}
+                    </h4>
+                    <ol className="mt-2 divide-y divide-rule border-y border-rule">
+                      {groupSources.map((source) => (
+                        <li key={source.id} className="py-3.5">
+                          <p className="font-medium">{source.title}</p>
+                          {[source.citation, ...source.additionalCitations]
+                            .filter(
+                              (citation): citation is string => !!citation,
+                            )
+                            .map((citation) => (
+                              <p
+                                key={citation}
+                                className="mt-0.5 text-sm leading-relaxed text-muted"
+                              >
+                                {citation}
+                              </p>
+                            ))}
+                          {source.contexts.length > 0 && (
+                            <p className="mt-1 text-xs leading-relaxed text-muted">
+                              Supports: {source.contexts.join(" · ")}
+                            </p>
+                          )}
+                          {source.url ? (
+                            <a
+                              href={source.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="mt-2 block break-all font-mono text-xs leading-relaxed underline hover:text-accent"
+                            >
+                              {source.url}
+                            </a>
+                          ) : (
+                            <p className="mt-2 text-xs font-medium text-amber-700 dark:text-amber-400">
+                              Public link missing:{" "}
+                              {source.missingLinkNote ??
+                                "the source record needs a stable public URL."}
+                            </p>
+                          )}
+                        </li>
                       ))}
-                    {source.contexts.length > 0 && (
-                      <p className="mt-1 text-xs leading-relaxed text-muted">
-                        Supports: {source.contexts.join(" · ")}
-                      </p>
-                    )}
-                    {source.url ? (
-                      <a
-                        href={source.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-2 block break-all font-mono text-xs leading-relaxed underline hover:text-accent"
-                      >
-                        {source.url}
-                      </a>
-                    ) : (
-                      <p className="mt-2 text-xs font-medium text-amber-700 dark:text-amber-400">
-                        Public link missing:{" "}
-                        {source.missingLinkNote ??
-                          "the source record needs a stable public URL."}
-                      </p>
-                    )}
-                  </li>
-                ))}
-              </ol>
+                    </ol>
+                  </div>
+                );
+              })}
             </div>
           );
         })
