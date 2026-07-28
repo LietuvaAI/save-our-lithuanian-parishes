@@ -20,6 +20,7 @@ import {
   type Ownership,
 } from "@/lib/parishes";
 import { resolveEndState, type EndState } from "@/lib/end-state";
+import { canonicalProfileHrefForRegistrySlug } from "@/lib/parish-profile";
 
 export type CongregationClass =
   | "roman_catholic"
@@ -35,7 +36,7 @@ export interface RegParish {
   city: string;
   state: string;
   country: "US" | "CA";
-  comparator: boolean;
+  comparator: boolean | null;
   in_locked_scope: boolean;
   c83_row: number | null;
   locked?: {
@@ -186,7 +187,7 @@ export function toScopedParish(p: RegParish): ScopedParish {
     city: p.city.replace(/\s*[(;].*$/, ""),
     state: p.state,
     country: p.country,
-    comparator: p.comparator,
+    comparator: p.comparator === true,
     diocese: normalizeDiocese(p.diocese),
     founded,
     closed,
@@ -206,11 +207,7 @@ export function toScopedParish(p: RegParish): ScopedParish {
     alertKind,
     hasAlert: alertKind != null,
     onWatch: sustainBySlug.has(slug),
-    profileHref: libOk
-      ? `/parishes/${lib!.slug}`
-      : p.c83_row == null
-        ? `/registry/${p.slug}`
-        : null,
+    profileHref: canonicalProfileHrefForRegistrySlug(p.slug),
   };
 }
 

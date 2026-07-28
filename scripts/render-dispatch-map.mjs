@@ -11,9 +11,9 @@
 // from data/context-points.json (built in `npm run data`, PR #80): true
 // un-fanned projected coords in the geoAlbersUsa 975×610 frame, end-state
 // `group` with the unresolved guardrail baked in (undecided renders ink,
-// never closed-red), normalized short diocese names, hrefs that encode the
-// record tier (/parishes/ = canonical case file, /registry/ = registry
-// layer). Diocese shapes + per-diocese bboxes: data/diocese-overlay.json.
+// never closed-red), normalized short diocese names, and canonical
+// /parishes/ profile hrefs. Diocese shapes + per-diocese bboxes:
+// data/diocese-overlay.json.
 // Coordinate correctness is guaranteed upstream by scripts/verify-geo.mjs
 // (blocking in `npm run data`) — every point in frame is drawn.
 //
