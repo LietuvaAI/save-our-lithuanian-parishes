@@ -269,7 +269,7 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
           )}
         </div>
 
-        <div className="mt-3 flex flex-wrap items-center gap-2">
+        <div className="mt-3 flex flex-wrap items-center gap-2.5 sm:justify-between lg:justify-start">
           <HeaderFilter
             label="Identity"
             value={identity}
@@ -321,11 +321,11 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
           <div className="mt-5 hidden overflow-hidden rounded-md border border-rule lg:block">
             <table className="w-full table-fixed text-sm">
               <colgroup>
-                <col className="w-[28%]" />
-                <col className="w-[16%]" />
-                <col className="w-[13%]" />
-                <col className="w-[25%]" />
-                <col className="w-[18%]" />
+                <col className="w-[26%]" />
+                <col className="w-[15%]" />
+                <col className="w-[12%]" />
+                <col className="w-[26%]" />
+                <col className="w-[21%]" />
               </colgroup>
               <thead className="bg-[var(--band)]">
                 <tr className="border-b border-rule text-left">
@@ -377,13 +377,13 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
                       {dateSummary(r)}
                     </td>
                     <td className="px-4 py-3">
-                      <div className="flex flex-col items-start gap-1">
+                      <div className="flex flex-col items-start gap-2">
                         <IdentityPill value={r.identity} />
                         <AlertPill value={r.alert} />
                       </div>
                     </td>
                     <td className="px-4 py-3">
-                      <div className="flex flex-col items-start gap-1.5">
+                      <div className="flex flex-col items-start gap-2">
                         <FatePill value={r.fate} />
                         <span className="text-xs text-muted">
                           {r.ownership
@@ -418,13 +418,13 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
                   {r.comparator ? " · Canada" : ""}
                 </div>
 
-                <div className="mt-3 flex flex-wrap gap-1">
+                <div className="mt-3 flex flex-wrap gap-2">
                   <IdentityPill value={r.identity} />
                   <AlertPill value={r.alert} />
                   <FatePill value={r.fate} />
                 </div>
 
-                <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 text-xs">
+                <dl className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 text-xs min-[520px]:grid-cols-3">
                   <div>
                     <dt className="text-muted">Diocese</dt>
                     <dd className="mt-0.5">
