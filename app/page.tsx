@@ -16,6 +16,34 @@ const REG_NATCATH = usRegistryParishes().filter(
 ).length;
 const WATCH_COUNT = (alertsData as { sustainabilityWatch: unknown[] }).sustainabilityWatch.length;
 
+type CurrentAlert = {
+  kind: string;
+  parishLink: string;
+  whatChanged: string;
+};
+
+type CurrentCampaign = {
+  id: string;
+  entity: string;
+  place: string;
+  parishLink: string;
+  hearthUrl: string;
+  actionUrl: string;
+  actionLabel: string;
+};
+
+const currentAlerts = alertsData.alerts as CurrentAlert[];
+const activeCampaigns = (alertsData.campaigns as CurrentCampaign[])
+  .map((campaign) => ({
+    ...campaign,
+    alert: currentAlerts.find(
+      (alert) =>
+        alert.kind === "active" && alert.parishLink === campaign.parishLink,
+    ),
+  }))
+  .filter((campaign) => campaign.alert)
+  .slice(0, 4);
+
 const STATS = [
   {
     value: String(REG_ETHNIC),
@@ -113,61 +141,76 @@ export default function Home() {
       </section>
 
       <section
-        className="mt-10 rounded-lg border border-rule p-5 sm:p-6"
-        style={{ borderLeft: "4px solid var(--mark-closed)" }}
+        className="mt-10 border-y border-rule py-5 sm:py-6"
       >
-        <p className="text-sm uppercase tracking-widest text-muted">
-          Happening now
+        <div className="flex flex-wrap items-baseline justify-between gap-2">
+          <div>
+            <p className="text-sm uppercase tracking-widest text-muted">
+              Happening now
+            </p>
+            <h2 className="mt-1 font-serif text-2xl font-semibold">
+              Active campaigns
+            </h2>
+          </div>
+          <span className="text-sm text-muted">
+            {activeCampaigns.length} communities organizing
+          </span>
+        </div>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted">
+          These communities are acting while their futures are still being
+          decided. Read the current situation, understand the parish record,
+          and respond to the campaign itself.
         </p>
-        <p className="mt-2 leading-relaxed max-w-3xl">
-          Detroit&rsquo;s <strong>Divine Providence</strong>{" "}&mdash; the
-          last Lithuanian Catholic parish in the city &mdash; is inside the
-          Archdiocese
-          of Detroit&rsquo;s restructuring. The record shows that the only
-          window that ever mattered is <em>before</em> the closure letter
-          arrives. That window is open now.{" "}
+
+        <div className="mt-4 divide-y divide-rule border-y border-rule">
+          {activeCampaigns.map((campaign) => (
+            <article key={campaign.id} className="py-4 first:pt-3 last:pb-3">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                <h3 className="font-serif text-lg font-semibold">
+                  {campaign.entity}
+                </h3>
+                <span className="text-sm text-muted">{campaign.place}</span>
+              </div>
+              <p className="mt-1 max-w-4xl text-sm leading-relaxed text-muted">
+                {campaign.alert?.whatChanged}
+              </p>
+              <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+                <Link
+                  href={campaign.parishLink}
+                  className="font-medium underline decoration-rule underline-offset-4 hover:text-accent"
+                >
+                  See parish profile
+                </Link>
+                <a
+                  href={campaign.hearthUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium underline decoration-rule underline-offset-4 hover:text-accent"
+                >
+                  Read what&rsquo;s happening now
+                </a>
+                <a
+                  href={campaign.actionUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex rounded-md px-3 py-1.5 font-semibold text-white transition-opacity hover:opacity-90"
+                  style={{ background: "var(--mark-closed)" }}
+                >
+                  {campaign.actionLabel} &rarr;
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <p className="mt-3 text-sm">
           <Link
-            href="/start-here"
-            className="font-semibold underline hover:text-accent whitespace-nowrap"
+            href="/under-threat"
+            className="font-medium underline underline-offset-4 hover:text-accent"
           >
-            Start here →
-          </Link>{" "}
-          <Link
-            href="/who-does-the-parish-belong-to"
-            className="underline hover:text-accent whitespace-nowrap"
-          >
-            · Why this moment matters →
+            See all current alerts and campaign evidence &rarr;
           </Link>
         </p>
-        <ul className="mt-4 space-y-1.5 border-t border-rule pt-3 text-sm leading-relaxed max-w-3xl">
-          {(alertsData.alerts as { id: string; level: string; entity: string; place: string; parishLink: string; whatChanged: string }[])
-            .filter((a) => a.level === "red")
-            .map((a) => (
-              <li key={a.id}>
-                <span
-                  className="mr-1.5 inline-block h-2 w-2 rounded-full bg-accent"
-                  aria-hidden
-                />
-                <Link href={a.parishLink} className="font-medium hover:underline">
-                  {a.entity}
-                </Link>
-                <span className="text-muted">
-                  {" "}&mdash; {a.place}: {a.whatChanged.split(". ")[0].replace(/\.$/, "")}.
-                </span>
-              </li>
-            ))}
-          <li className="pt-1">
-            <Link href="/under-threat" className="underline hover:text-accent text-sm">
-              All current alerts &rarr;
-            </Link>{" "}
-            <a
-              href="https://blog.saveourlithuanianparishes.org/p/active-campaigns"
-              className="underline hover:text-accent text-sm font-medium"
-            >
-              · Active campaigns — how to help each parish →
-            </a>
-          </li>
-        </ul>
       </section>
 
       <section className="mt-8">
