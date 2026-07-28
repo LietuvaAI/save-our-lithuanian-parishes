@@ -57,12 +57,12 @@ const ASPECT = 1.5;
 const ALIVE = new Set(["active_parish", "mass_continues"]);
 
 const STATE_WORD: Record<EndStateGroup, string> = {
-  active_parish: "active Lithuanian parish",
-  mass_continues: "Lithuanian Mass continues",
-  transferred: "ethnically transferred",
-  unresolved: "unresolved",
-  closed: "closed",
-  unverified: "in the record",
+  active_parish: GROUP_LABEL.active_parish,
+  mass_continues: GROUP_LABEL.mass_continues,
+  transferred: GROUP_LABEL.transferred,
+  unresolved: GROUP_LABEL.unresolved,
+  closed: GROUP_LABEL.closed,
+  unverified: GROUP_LABEL.unverified,
 };
 
 const isNameable = (p: CtxPoint) =>

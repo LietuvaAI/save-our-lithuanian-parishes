@@ -29,17 +29,27 @@ export const metadata: Metadata = {
 
 type NavItem =
   | { href: string; label: string }
-  | { label: string; children: { href: string; label: string }[] };
+  | {
+      label: string;
+      menuAlign?: "left" | "right";
+      children: { href: string; label: string }[];
+    };
 
 const NAV: NavItem[] = [
   { href: "/record", label: "The Record" },
   { href: "/history", label: "The History" },
   {
     label: "Views",
+    menuAlign: "right",
     children: [
       { href: "/by-diocese", label: "By Diocese" },
-      { href: "/under-threat", label: "Under Threat" },
       { href: "/sustainability-watch", label: "Sustainability Watch" },
+      { href: "/under-threat", label: "Parishes Under Threat" },
+      {
+        href: "/pennsylvania-coal-region",
+        label: "Pennsylvania Coal Region",
+      },
+      { href: "/canadian-comparators", label: "Canadian Comparators" },
       { href: "/national-catholic", label: "National Catholic" },
       { href: "/protestant", label: "Protestant" },
     ],
@@ -52,7 +62,17 @@ const NAV: NavItem[] = [
       { href: "/what-canon-law-says", label: "What Canon Law Says" },
     ],
   },
-  { href: "/about", label: "About" },
+  {
+    label: "About",
+    children: [
+      { href: "/about", label: "About the Project" },
+      { href: "/about-the-data", label: "About the Data" },
+      {
+        href: "/about/sources-and-archives",
+        label: "Sources & Archives",
+      },
+    ],
+  },
   { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys (The Hearth)" },
 ];
 
@@ -72,18 +92,25 @@ export default function RootLayout({
             <Link href="/" className="font-serif text-lg font-semibold tracking-tight">
               Save Our Lithuanian Parishes
             </Link>
-            <nav className="flex items-center gap-5 text-sm text-muted">
+            <nav className="flex w-full flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted sm:w-auto sm:justify-end">
               {NAV.map((item) =>
                 "children" in item ? (
                   <div key={item.label} className="relative group">
                     <button
                       type="button"
+                      aria-haspopup="menu"
                       className="flex items-center gap-1 hover:text-foreground transition-colors"
                     >
                       {item.label}
                       <span className="text-[10px] opacity-60">▾</span>
                     </button>
-                    <div className="absolute top-full left-0 hidden group-hover:flex flex-col pt-2 min-w-max z-50">
+                    <div
+                      className={`absolute top-full hidden min-w-max flex-col pt-2 z-50 group-hover:flex group-focus-within:flex ${
+                        item.menuAlign === "right"
+                          ? "right-0 sm:left-0 sm:right-auto"
+                          : "left-0"
+                      }`}
+                    >
                       <div className="flex flex-col bg-background border border-rule rounded-md shadow-md py-1">
                         {item.children.map((child) => (
                           <Link
@@ -145,50 +172,6 @@ export default function RootLayout({
               </a>
               .
             </p>
-            <nav className="flex flex-wrap gap-x-4 gap-y-1 pt-1">
-              <Link href="/start-here" className="hover:text-foreground">
-                Facing a Closure
-              </Link>
-              <Link href="/reversals" className="hover:text-foreground">
-                Reversals
-              </Link>
-              <Link href="/record" className="hover:text-foreground">
-                The Record
-              </Link>
-              <Link href="/history" className="hover:text-foreground">
-                The History
-              </Link>
-              <Link href="/by-diocese" className="hover:text-foreground">
-                By Diocese
-              </Link>
-              <Link href="/under-threat" className="hover:text-foreground">
-                Under Threat
-              </Link>
-              <Link href="/sustainability-watch" className="hover:text-foreground">
-                Sustainability Watch
-              </Link>
-              <Link href="/national-catholic" className="hover:text-foreground">
-                National Catholic
-              </Link>
-              <Link href="/protestant" className="hover:text-foreground">
-                Protestant
-              </Link>
-              <Link href="/what-canon-law-says" className="hover:text-foreground">
-                What Canon Law Says
-              </Link>
-              <Link href="/about-the-data" className="hover:text-foreground">
-                About the data
-              </Link>
-              <Link href="/about" className="hover:text-foreground">
-                About
-              </Link>
-              <Link
-                href="/report"
-                className="font-medium hover:text-foreground"
-              >
-                Report from your parish
-              </Link>
-            </nav>
             <p className="pt-3 mt-1 border-t border-rule">
               © 2026 Save Our Lithuanian Parishes · powered by{" "}
               <a
@@ -199,7 +182,7 @@ export default function RootLayout({
               >
                 Lietuva.AI
               </a>{" "}
-              · supported by the Žiburio Foundation · data made possible by{" "}
+              · data made possible by{" "}
               <a
                 href="https://archyvas.ziburioltmokykla.org"
                 className="underline hover:text-foreground"
@@ -208,8 +191,15 @@ export default function RootLayout({
               >
                 Skaitmeniniai Knygnešiai
               </a>
-              , student interns from Detroit · a documented record, not legal
-              or canonical advice ·{" "}
+              , Žiburio Lithuanian School student interns at{" "}
+              <Link
+                href="/parishes/dievo-apvaizdos-southfield-mi"
+                className="underline hover:text-foreground"
+              >
+                Divine Providence Lithuanian Parish
+              </Link>{" "}
+              in Southfield · a documented record, not legal or canonical
+              advice ·{" "}
               <Link
                 href="/legal"
                 className="underline hover:text-foreground"

@@ -13,7 +13,7 @@
 //   ink + gold ring     = open today but under active threat (kind=active)
 //   gold filled         = genuinely unresolved / undecided fate
 //   purple filled       = building at physical risk (kind=building)
-//   grey hollow         = in the record; fate not yet established
+//   grey hollow         = in the record; present status being verified
 // Who-decided (ending mode) and ownership stay in each parish's popup and
 // profile — the map itself reads at a glance. Views: All · Open today ·
 // Under threat · Lost.
@@ -27,13 +27,20 @@ import {
   ENDING_MODE_LABEL,
   OWNERSHIP_LABEL,
 } from "@/lib/parishes";
-import { resolveEndState, toGroup } from "@/lib/end-state";
+import {
+  GROUP_DESCRIPTION,
+  GROUP_LABEL,
+  resolveEndState,
+  toGroup,
+  type EndStateGroup,
+} from "@/lib/end-state";
 import contextPoints from "@/data/context-points.json";
 
 const FULL = (regData as { frame?: { x: number; y: number; w: number; h: number } })
   .frame ?? { x: 0, y: 0, w: 975, h: 610 };
 const MAX_ZOOM = 20;
 const NE_STATES = new Set(["ME", "NH", "VT", "MA", "RI", "CT", "NY", "NJ", "PA", "MD"]);
+const MW_STATES = new Set(["IL", "IN", "OH", "MI", "WI", "MN", "IA", "MO"]);
 
 type View = { x: number; y: number; w: number; h: number };
 // Status drives fill color. alerted (gold ring) is a separate boolean.
@@ -49,6 +56,7 @@ interface Point {
   x: number;
   y: number;
   status: Status;
+  group: EndStateGroup;
   // alerted = true → draw a gold ring around the dot (kind=active alerts)
   alerted: boolean;
   // inAlerts = true → appears in "Under threat" filter even if status isn't threat/building
@@ -67,13 +75,13 @@ interface Point {
 }
 
 const STATUS_LABEL: Record<Status, string> = {
-  lost: "Closed",
-  open: "Active Lithuanian parish",
-  mass: "Lithuanian Mass continues",
-  threat: "Unresolved — under threat",
+  lost: GROUP_LABEL.closed,
+  open: GROUP_LABEL.active_parish,
+  mass: GROUP_LABEL.mass_continues,
+  threat: GROUP_LABEL.unresolved,
   building: "Building at risk",
-  unknown: "Fate not yet established",
-  transferred: "Lives on, another community",
+  unknown: GROUP_LABEL.unverified,
+  transferred: GROUP_LABEL.transferred,
 };
 
 const FILL: Record<Status, string> = {
@@ -133,10 +141,11 @@ function buildPoints(): Point[] {
       isStanding,
       p.endingMode,
     );
+    const group = toGroup(endState);
     const status: Status =
-      alert?.kind === "building" ? "building" : GROUP_STATUS[toGroup(endState)];
+      alert?.kind === "building" ? "building" : GROUP_STATUS[group];
     const fate: Point["fate"] =
-      status !== "lost"
+      group !== "closed"
         ? null
         : endState === "demolished"
           ? "demolished"
@@ -152,6 +161,7 @@ function buildPoints(): Point[] {
       x: pt.x,
       y: pt.y,
       status,
+      group,
       alerted,
       inAlerts,
       alertText: alert?.whatChanged ?? null,
@@ -182,15 +192,16 @@ function buildPoints(): Point[] {
 
     // Same layer the profile context maps and dispatch renderer use —
     // zero drift with the shared resolver.
-    const group = contextGroupBySlug.get(c.slug);
+    const group =
+      (contextGroupBySlug.get(c.slug) as EndStateGroup | undefined) ??
+      (c.closedYear ? "closed" : "unverified");
     const status: Status =
       alert?.kind === "building"
         ? "building"
-        : (group && GROUP_STATUS[group]) ||
-          (c.closedYear ? "lost" : "unknown");
+        : GROUP_STATUS[group];
     const bf = (c as { buildingFate?: string | null }).buildingFate;
     const fate: Point["fate"] =
-      status !== "lost"
+      group !== "closed"
         ? null
         : bf === "demolished"
           ? "demolished"
@@ -206,6 +217,7 @@ function buildPoints(): Point[] {
       x: c.x,
       y: c.y,
       status,
+      group,
       alerted,
       inAlerts,
       alertText: alert?.whatChanged ?? null,
@@ -270,6 +282,7 @@ export default function ParishMap() {
   const [view, setView] = useState<View>(FULL);
   const [showArchived, setShowArchived] = useState(true);
   const [showDioceses, setShowDioceses] = useState(false);
+  const [expandedKey, setExpandedKey] = useState<EndStateGroup | null>(null);
   const [dioceseBorders, setDioceseBorders] = useState<string | null>(null);
   const svgRef = useRef<SVGSVGElement>(null);
 
@@ -293,14 +306,23 @@ export default function ParishMap() {
   );
 
   const statusCounts = useMemo(() => {
-    const c = { all: classPoints.length, open: 0, mass: 0, threat: 0, lost: 0, unknown: 0, building: 0, transferred: 0 };
+    const c = {
+      all: classPoints.length,
+      open: 0,
+      mass: 0,
+      unresolved: 0,
+      threat: 0,
+      lost: 0,
+      unknown: 0,
+      transferred: 0,
+    };
     for (const p of classPoints) {
-      if (p.status === "open") c.open++;
-      else if (p.status === "mass") c.mass++;
-      else if (p.status === "lost") c.lost++;
-      else if (p.status === "building") c.building++;
-      else if (p.status === "unknown") c.unknown++;
-      else if (p.status === "transferred") c.transferred++;
+      if (p.group === "active_parish") c.open++;
+      else if (p.group === "mass_continues") c.mass++;
+      else if (p.group === "unresolved") c.unresolved++;
+      else if (p.group === "closed") c.lost++;
+      else if (p.group === "unverified") c.unknown++;
+      else if (p.group === "transferred") c.transferred++;
     }
     // "threat" filter = all that are alerted, genuinely unresolved, or building at risk
     c.threat = classPoints.filter(
@@ -308,8 +330,6 @@ export default function ParishMap() {
     ).length;
     return c;
   }, [classPoints]);
-
-  const MW_STATES = new Set(["IL", "IN", "OH", "MI", "WI", "MN", "IA", "MO"]);
 
   function regionView(states: Set<string>) {
     const pts = POINTS.filter((p) => states.has(p.state));
@@ -376,152 +396,183 @@ export default function ParishMap() {
 
   const markR = 6 / Math.sqrt(zoom);
   const btn = "rounded-md border border-rule bg-background px-2.5 py-1 text-sm font-medium hover:border-foreground transition-colors";
-  const seg = (active: boolean) =>
-    `rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
-      active ? "bg-foreground text-background" : "border border-rule hover:border-foreground"
+  const classTab = (active: boolean) =>
+    `rounded-[4px] px-2.5 py-1 text-xs font-medium transition-colors sm:px-3 sm:text-sm ${
+      active
+        ? "bg-background text-foreground shadow-sm"
+        : "text-muted hover:text-foreground"
+    }`;
+  const statusTab = (active: boolean) =>
+    `inline-flex min-h-9 shrink-0 items-center border-b-2 px-1.5 py-1.5 text-xs font-medium whitespace-nowrap transition-colors sm:px-2 ${
+      active
+        ? "border-foreground text-foreground"
+        : "border-transparent text-muted hover:border-rule hover:text-foreground"
     }`;
 
-  const knownPoints = classPoints.filter((p) => p.status !== "unknown");
-  const archivePoints = classPoints.filter((p) => p.status === "unknown");
+  const knownPoints = classPoints.filter((p) => p.group !== "unverified");
+  const archivePoints = classPoints.filter((p) => p.group === "unverified");
 
   const statusFiltered =
     mode === "all"
       ? knownPoints
       : mode === "open"
-        ? knownPoints.filter((p) => p.status === "open")
+        ? knownPoints.filter((p) => p.group === "active_parish")
         : mode === "mass"
-          ? knownPoints.filter((p) => p.status === "mass")
+          ? knownPoints.filter((p) => p.group === "mass_continues")
         : mode === "lost"
           ? knownPoints.filter(
               (p) =>
-                (p.status === "lost" || p.status === "building") &&
+                p.group === "closed" &&
                 (lostFate === "all" || p.fate === lostFate),
             )
           : mode === "transferred"
-            ? knownPoints.filter((p) => p.status === "transferred")
+            ? knownPoints.filter((p) => p.group === "transferred")
             : knownPoints.filter((p) => p.inAlerts || p.status === "threat" || p.status === "building");
 
   const visible = statusFiltered;
 
   return (
     <div>
-      {/* Congregation class filter */}
-      <div className="mb-2 flex flex-wrap items-center gap-2">
-        {(
-          [
-            { key: "all", label: "All" },
-            { key: "roman_catholic", label: "Catholic" },
-            { key: "national_catholic_pncc", label: "National Catholic" },
-            { key: "non_catholic_christian", label: "Protestant" },
-          ] as { key: ClassFilter; label: string }[]
-        ).map(({ key, label }) => (
-          <button
-            key={key}
-            type="button"
-            className={seg(classFilter === key)}
-            onClick={() => setClassFilter(key)}
-          >
-            {label}
-          </button>
-        ))}
-      </div>
-      {/* Status filter + key bar */}
-      <div className="mb-3 flex flex-wrap items-center gap-2">
-        <button
-          type="button"
-          className={seg(mode === "all")}
-          onClick={() => setMode("all")}
-        >
-          All · {statusCounts.all}
-        </button>
-        <SwatchBtn
-          fill="var(--es-active)"
-          label={`Active parish · ${statusCounts.open}`}
-          active={mode === "open"}
-          onClick={() => setMode("open")}
-        />
-        <SwatchBtn
-          fill="var(--es-mass)"
-          label={`Mass continues · ${statusCounts.mass}`}
-          active={mode === "mass"}
-          onClick={() => setMode("mass")}
-        />
-        <SwatchBtn
-          fill="var(--es-transferred)"
-          ring
-          label={`Under threat · ${statusCounts.threat}`}
-          active={mode === "threat"}
-          onClick={() => setMode("threat")}
-        />
-        <SwatchBtn
-          fill="var(--es-transferred)"
-          label={`Transferred · ${statusCounts.transferred}`}
-          active={mode === "transferred"}
-          onClick={() => setMode("transferred")}
-        />
-        <SwatchBtn
-          fill="var(--es-closed)"
-          label={`Closed · ${statusCounts.lost}`}
-          active={mode === "lost"}
-          onClick={() => { setMode("lost"); setLostFate("all"); }}
-        />
-        <button
-          type="button"
-          className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors border ${
-            showArchived
-              ? "border-muted bg-muted/10 text-foreground"
-              : "border-rule text-muted hover:border-foreground"
-          }`}
-          onClick={() => setShowArchived((v) => !v)}
-          title="Parishes attested in the research record but with coordinates; full status being verified"
-        >
-          + Being verified ({archivePoints.length})
-        </button>
-        <button
-          type="button"
-          className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors border ${
-            showDioceses
-              ? "border-muted bg-muted/10 text-foreground"
-              : "border-rule text-muted hover:border-foreground"
-          }`}
-          onClick={toggleDioceses}
-          title="Catholic diocese boundaries (US Census counties merged per diocese; public-domain crosswalk)"
-        >
-          Diocese lines
-        </button>
-      </div>
+      <div className="overflow-hidden rounded-lg border border-rule">
+        <div className="border-b border-rule px-3 pt-2.5 sm:px-4">
+          <div className="flex flex-wrap items-center justify-between gap-x-5 gap-y-2 pb-2.5">
+            <div className="flex min-w-0 items-center gap-2">
+              <span className="shrink-0 text-[11px] font-medium uppercase tracking-widest text-muted">
+                Community
+              </span>
+              <div
+                className="flex min-w-0 items-center rounded-md bg-band p-0.5"
+                role="group"
+                aria-label="Filter by congregation type"
+              >
+                {(
+                  [
+                    { key: "all", label: "All" },
+                    { key: "roman_catholic", label: "Catholic" },
+                    { key: "national_catholic_pncc", label: "National Catholic" },
+                    { key: "non_catholic_christian", label: "Protestant" },
+                  ] as { key: ClassFilter; label: string }[]
+                ).map(({ key, label }) => (
+                  <button
+                    key={key}
+                    type="button"
+                    className={classTab(classFilter === key)}
+                    aria-pressed={classFilter === key}
+                    onClick={() => setClassFilter(key)}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-      {/* How each closure ended — sub-fates, same vocabulary as the flow chart */}
-      {mode === "lost" && (() => {
-        const lostPts = knownPoints.filter((p) => p.status === "lost" || p.status === "building");
-        const n = (f: "closed" | "demolished" | "repurposed") =>
-          lostPts.filter((p) => p.fate === f).length;
-        const sub = (key: "all" | "closed" | "demolished" | "repurposed", label: string) => (
-          <button
-            key={key}
-            type="button"
-            className={`rounded-md px-2.5 py-1 text-xs font-medium transition-colors ${
-              lostFate === key
-                ? "bg-foreground text-background"
-                : "border border-rule hover:border-foreground"
-            }`}
-            onClick={() => setLostFate(key)}
-          >
-            {label}
-          </button>
-        );
-        return (
-          <div className="mb-3 -mt-1 flex flex-wrap items-center gap-1.5 text-xs">
-            <span className="text-muted uppercase tracking-wide">How each closure ended:</span>
-            {sub("all", `All · ${lostPts.length}`)}
-            {sub("closed", `Parish closed · ${n("closed")}`)}
-            {sub("demolished", `Church demolished × · ${n("demolished")}`)}
-            {sub("repurposed", `Building sold on · ${n("repurposed")}`)}
+            <div className="flex items-center gap-4 text-xs text-muted">
+              <label
+                className="flex cursor-pointer items-center gap-1.5 whitespace-nowrap hover:text-foreground"
+                title="Parishes attested in the research record but with their present status still being verified"
+              >
+                <input
+                  type="checkbox"
+                  checked={showArchived}
+                  onChange={() => setShowArchived((v) => !v)}
+                  className="h-3.5 w-3.5 accent-foreground"
+                />
+                Being verified ({archivePoints.length})
+              </label>
+              <label
+                className="flex cursor-pointer items-center gap-1.5 whitespace-nowrap hover:text-foreground"
+                title="Catholic diocese boundaries"
+              >
+                <input
+                  type="checkbox"
+                  checked={showDioceses}
+                  onChange={() => void toggleDioceses()}
+                  className="h-3.5 w-3.5 accent-foreground"
+                />
+                Diocese lines
+              </label>
+            </div>
           </div>
-        );
-      })()}
 
-      <div className="relative">
+          <div
+            className="-mx-1 flex items-end gap-0.5 overflow-x-auto"
+            role="group"
+            aria-label="Filter by parish status"
+          >
+            <button
+              type="button"
+              className={statusTab(mode === "all")}
+              aria-pressed={mode === "all"}
+              onClick={() => setMode("all")}
+            >
+              All · {statusCounts.all}
+            </button>
+            <SwatchBtn
+              fill="var(--es-active)"
+              label={`${GROUP_LABEL.active_parish} · ${statusCounts.open}`}
+              active={mode === "open"}
+              onClick={() => setMode("open")}
+            />
+            <SwatchBtn
+              fill="var(--es-mass)"
+              label={`${GROUP_LABEL.mass_continues} · ${statusCounts.mass}`}
+              active={mode === "mass"}
+              onClick={() => setMode("mass")}
+            />
+            <SwatchBtn
+              fill="var(--es-transferred)"
+              ring
+              label={`Under threat · ${statusCounts.threat}`}
+              active={mode === "threat"}
+              onClick={() => setMode("threat")}
+            />
+            <SwatchBtn
+              fill="var(--es-transferred)"
+              label={`${GROUP_LABEL.transferred} · ${statusCounts.transferred}`}
+              active={mode === "transferred"}
+              onClick={() => setMode("transferred")}
+            />
+            <SwatchBtn
+              fill="var(--es-closed)"
+              label={`${GROUP_LABEL.closed} · ${statusCounts.lost}`}
+              active={mode === "lost"}
+              onClick={() => { setMode("lost"); setLostFate("all"); }}
+            />
+          </div>
+        </div>
+
+        {/* How each closure ended — sub-fates, same vocabulary as the flow chart */}
+        {mode === "lost" && (() => {
+          const lostPts = knownPoints.filter((p) => p.group === "closed");
+          const n = (f: "closed" | "demolished" | "repurposed") =>
+            lostPts.filter((p) => p.fate === f).length;
+          const sub = (key: "all" | "closed" | "demolished" | "repurposed", label: string) => (
+            <button
+              key={key}
+              type="button"
+              className={`rounded-md px-2.5 py-1 text-xs font-medium transition-colors ${
+                lostFate === key
+                  ? "bg-foreground text-background"
+                  : "border border-rule hover:border-foreground"
+              }`}
+              onClick={() => setLostFate(key)}
+            >
+              {label}
+            </button>
+          );
+          return (
+            <div className="flex flex-wrap items-center gap-1.5 border-b border-rule px-3 py-2 text-xs sm:px-4">
+              <span className="text-muted uppercase tracking-wide">How each closure ended:</span>
+              {sub("all", `All · ${lostPts.length}`)}
+              {sub("closed", `Parish closed · ${n("closed")}`)}
+              {sub("demolished", `Church demolished × · ${n("demolished")}`)}
+              {sub("repurposed", `Building sold on · ${n("repurposed")}`)}
+            </div>
+          );
+        })()}
+
+        <div className="grid lg:grid-cols-[minmax(0,1fr)_15rem]">
+          <div className="relative order-2 min-w-0 lg:order-1">
         <svg
           ref={svgRef}
           viewBox={`${view.x} ${view.y} ${view.w} ${view.h}`}
@@ -551,7 +602,7 @@ export default function ParishMap() {
             />
           )}
 
-          {/* Archive crosses — parishes with unestablished fate, shown when toggled */}
+          {/* Archive crosses — parishes being verified, shown when toggled */}
           {showArchived && archivePoints.map((p) => {
             const isHov = hovered?.id === p.id;
             const r = isHov ? markR * 1.2 : markR * 0.9;
@@ -563,7 +614,7 @@ export default function ParishMap() {
                 onKeyDown={(e) => { if (e.key === "Enter") openPoint(p); }}
                 tabIndex={p.profile ? 0 : 0}
                 role="img"
-                aria-label={`${p.name}, ${p.city} ${p.state} — fate not yet established`}
+                aria-label={`${p.name}, ${p.city} ${p.state} — ${GROUP_LABEL.unverified}`}
                 className="cursor-default focus:outline-none"
               >
                 <line x1={p.x - r} y1={p.y} x2={p.x + r} y2={p.y}
@@ -713,52 +764,106 @@ export default function ParishMap() {
               </div>
             );
           })()}
-      </div>
+          </div>
 
-      {/* What this map tracks — the one category system, explained. Counts
-          come from the same statusCounts as the legend, so this block can
-          never disagree with the map above it. */}
-      <div className="mt-4 rounded-lg border border-rule px-4 py-3.5">
-        <p className="text-xs uppercase tracking-widest text-muted">
-          What this map tracks
-        </p>
-        <dl className="mt-2.5 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-sm">
-          {(
-            [
-              ["var(--es-active)", `Active Lithuanian parish · ${statusCounts.open}`, "A Lithuanian parish with regular Lithuanian worship."],
-              ["var(--es-mass)", `Lithuanian Mass continues · ${statusCounts.mass}`, "A Lithuanian Mass is still celebrated inside a parish that is no longer Lithuanian-led — never counted as an active Lithuanian parish."],
-              ["var(--mark-ink)", `Unresolved · ${knownPoints.filter((p) => p.status === "threat").length}`, "The church stands and the parish's fate is contested or canonically undecided — the decision is not final."],
-              ["var(--es-transferred)", `Lives on, another community · ${statusCounts.transferred}`, "The church serves another community today; its life as a Lithuanian parish has ended."],
-              ["var(--es-closed)", `Closed · ${statusCounts.lost}`, "The parish was closed — click the Closed filter to see how each ended: parish closed, building sold on, or church demolished (marked ×)."],
-              ["var(--muted)", `Being verified · ${statusCounts.unknown}`, "Attested in the research record; present status still being researched."],
-            ] as [string, string, string][]
-          ).map(([fill, label, text]) => (
-            <div key={label} className="flex gap-2">
-              <span
-                className="mt-1 inline-block h-2.5 w-2.5 flex-shrink-0 rounded-full"
-                style={{ background: fill }}
-                aria-hidden
-              />
-              <div>
-                <dt className="inline font-medium">{label}</dt>{" "}
-                <dd className="inline text-muted">{text}</dd>
+          <aside
+            className="order-1 border-b border-rule px-3 py-3 sm:px-4 lg:order-2 lg:border-b-0 lg:border-l"
+            aria-label="Map key"
+          >
+            <p className="text-[11px] font-medium uppercase tracking-widest text-muted">
+              Map key
+            </p>
+            <dl className="mt-2 grid grid-cols-2 gap-x-3 gap-y-2 text-xs lg:grid-cols-1 lg:gap-y-2.5">
+              {(
+                [
+                  { group: "active_parish", fill: "var(--es-active)", count: statusCounts.open },
+                  { group: "mass_continues", fill: "var(--es-mass)", count: statusCounts.mass },
+                  { group: "unresolved", fill: "var(--mark-ink)", count: statusCounts.unresolved },
+                  { group: "transferred", fill: "var(--es-transferred)", count: statusCounts.transferred },
+                  { group: "closed", fill: "var(--es-closed)", count: statusCounts.lost },
+                  { group: "unverified", fill: "var(--muted)", count: statusCounts.unknown },
+                ] as { group: EndStateGroup; fill: string; count: number }[]
+              ).map(({ group, fill, count }) => {
+                const expanded = expandedKey === group;
+                const detailId = `map-key-detail-${group}`;
+                return (
+                  <div
+                    key={group}
+                    className={`min-w-0 ${expanded ? "col-span-2 lg:col-span-1" : ""}`}
+                  >
+                    <dt>
+                      <button
+                        type="button"
+                        className="flex w-full min-w-0 items-start gap-2 text-left leading-snug hover:text-foreground"
+                        aria-expanded={expanded}
+                        aria-controls={detailId}
+                        onClick={() => setExpandedKey(expanded ? null : group)}
+                      >
+                        <span
+                          className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                          style={{ background: fill }}
+                          aria-hidden
+                        />
+                        <span className="min-w-0 flex-1 font-medium">
+                          {GROUP_LABEL[group]} · {count}
+                        </span>
+                        <span
+                          className="shrink-0 text-sm leading-none text-muted"
+                          aria-hidden
+                        >
+                          {expanded ? "−" : "+"}
+                        </span>
+                      </button>
+                    </dt>
+                    <dd
+                      id={detailId}
+                      className={`${expanded ? "block" : "hidden"} mt-1 pl-[18px] leading-relaxed text-muted`}
+                    >
+                      {GROUP_DESCRIPTION[group]}
+                    </dd>
+                  </div>
+                );
+              })}
+            </dl>
+            <div className="mt-3 border-t border-rule pt-2.5 text-xs">
+              <p className="font-medium">Marks</p>
+              <div className="mt-1.5 grid grid-cols-2 gap-x-3 gap-y-1.5 text-muted lg:grid-cols-1">
+                <span className="flex items-center gap-2">
+                  <span className="h-2.5 w-2.5 rotate-45 bg-foreground" aria-hidden />
+                  National Catholic
+                </span>
+                <span className="flex items-center gap-2">
+                  <span className="flex h-3 w-3 items-center justify-center rounded-full border border-[var(--mark-community)]" aria-hidden>
+                    <span className="h-1.5 w-1.5 rounded-full bg-[var(--es-transferred)]" />
+                  </span>
+                  Active fight
+                </span>
+                <span className="flex items-center gap-2">
+                  <span className="font-semibold text-foreground" aria-hidden>×</span>
+                  Church demolished
+                </span>
+                <span className="flex items-center gap-2">
+                  <span className="font-semibold text-muted" aria-hidden>+</span>
+                  Being verified
+                </span>
               </div>
             </div>
-          ))}
-        </dl>
-        <p className="mt-3 border-t border-rule pt-2.5 text-xs leading-relaxed text-muted">
-          Counted: Lithuanian parishes and their churches — Roman Catholic by
-          default; National Catholic and Protestant congregations through the
-          filters above. Deliberately not counted: religious-house chapels
-          (vienuolynai — Putnam, Marianapolis, Kennebunkport), cemetery and
-          shrine chapels, and club or school buildings. They are part of the
-          heritage, but no parish was ever erected there — a future layer of
-          the record, never part of the parish figures.
-        </p>
+          </aside>
+        </div>
       </div>
 
+      <p className="mt-2.5 text-xs leading-relaxed text-muted">
+        Counted: Lithuanian parishes and their churches — Roman Catholic by
+        default; National Catholic and Protestant congregations through the
+        filters above. Religious-house, cemetery, shrine, club, and school
+        chapels remain part of the heritage record but not the parish count.{" "}
+        <a href="/about-the-data" className="underline hover:text-foreground">
+          How the record is scoped →
+        </a>
+      </p>
+
       {/* Caption */}
-      <div className="mt-3 min-h-14 rounded-lg border border-rule px-4 py-2.5 text-sm">
+      <div className="mt-2 min-h-9 border-t border-rule pt-2.5 text-sm">
         {mode === "threat" ? (
           <span className="text-muted">
             {statusCounts.threat} parishes and buildings currently watched.{" "}
@@ -807,10 +912,11 @@ function SwatchBtn({
       type="button"
       disabled={disabled}
       onClick={onClick}
-      className={`inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
+      aria-pressed={active}
+      className={`inline-flex min-h-9 shrink-0 items-center gap-1 border-b-2 px-1.5 py-1.5 text-xs font-medium whitespace-nowrap transition-colors sm:px-2 ${
         active
-          ? "bg-foreground text-background"
-          : "border border-rule hover:border-foreground"
+          ? "border-foreground text-foreground"
+          : "border-transparent text-muted hover:border-rule hover:text-foreground"
       }`}
     >
       <svg width={12} height={12} viewBox="0 0 12 12" aria-hidden>

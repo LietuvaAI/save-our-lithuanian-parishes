@@ -19,7 +19,11 @@ import {
   type BuildingFate,
   type LithuanianIdentity,
 } from "@/lib/parishes";
-import { resolveEndState, isLoss } from "@/lib/end-state";
+import {
+  GROUP_DESCRIPTION,
+  resolveEndState,
+  isLoss,
+} from "@/lib/end-state";
 import { splitStory } from "@/lib/dek";
 import { EndStatePill } from "@/components/EndStatePill";
 import { ProfileSourceLedger } from "@/components/ProfileSourceLedger";
@@ -222,13 +226,13 @@ function storyDek(
   const c = closedYear ? ` in ${closedYear}` : "";
   switch (endState) {
     case "unresolved":
-      return { dek: `${f}The church stands and the parish's fate is canonically unresolved — the decision is not final.`, rest: null };
+      return { dek: `${f}${GROUP_DESCRIPTION.unresolved}`, rest: null };
     case "active_parish":
-      return { dek: `${f}It still stands as an active Lithuanian parish today.`, rest: null };
+      return { dek: `${f}${GROUP_DESCRIPTION.active_parish}`, rest: null };
     case "mass_continues":
-      return { dek: `${f}A Lithuanian Mass continues here, within a parish that is no longer Lithuanian-led.`, rest: null };
+      return { dek: `${f}${GROUP_DESCRIPTION.mass_continues}`, rest: null };
     case "transferred":
-      return { dek: `${f}The church lives on, serving another community; its life as a Lithuanian parish has ended.`, rest: null };
+      return { dek: `${f}${GROUP_DESCRIPTION.transferred}`, rest: null };
     case "demolished":
       return { dek: `${f}The parish was closed${c}, and the church was demolished.`, rest: null };
     case "repurposed":
@@ -236,7 +240,7 @@ function storyDek(
     case "closed":
       return { dek: `${f}The parish was closed${c}.`, rest: null };
     default:
-      return { dek: `${f}Attested in the record; its fate has not yet been established.`, rest: null };
+      return { dek: `${f}${GROUP_DESCRIPTION.unverified}`, rest: null };
   }
 }
 

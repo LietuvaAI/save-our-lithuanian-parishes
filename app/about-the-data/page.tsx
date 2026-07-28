@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AboutNav from "@/components/AboutNav";
 import registry from "@/data/registry-unified.json";
 import { isSettlement, isUS, type RegParish } from "@/lib/registry-scope";
 
@@ -8,7 +9,7 @@ const REGISTRY_TOTAL = (registry as { parishes: RegParish[] }).parishes.filter(
 ).length;
 
 export const metadata: Metadata = {
-  title: "About the data",
+  title: "About the Data",
   description:
     "How this record was collected: the full Draugas run, the parish histories, the unified registry, the reversal database — and how every figure is verified.",
 };
@@ -16,59 +17,50 @@ export const metadata: Metadata = {
 export default function AboutTheDataPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-12">
-      <p className="text-xs uppercase tracking-widest text-muted">
-        The methodology
-      </p>
+      <p className="text-xs uppercase tracking-widest text-muted">About</p>
       <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
-        About the data
+        About the Data
       </h1>
       <p className="mt-4 text-lg text-muted leading-relaxed">
-        Every figure on this site traces to a dated, published source, and the
-        site refuses to build if a number drifts from the verified research.
-        This page is the full chain: where the data comes from, how it was
-        collected, and how it is checked.
+        The full <em>Draugas</em> archive provides the evidence. Parish case
+        files turn that evidence into researched histories. One registry carries
+        the current findings and powers the site.
       </p>
+
+      <AboutNav current="data" />
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          1. The core record — <em>Draugas</em>, 2008–2026
+          1. The source archive — <em>Draugas</em>, 1909–present
         </h2>
         <p className="mt-2 leading-relaxed">
-          The spine of the record is the archive of <em>Draugas</em>, the
-          Lithuanian-American newspaper. Every issue from January 2008 through
-          May 2026 — <strong>2,768 issues</strong> — was read and searched,
-          and every U.S. Lithuanian parish mentioned in them entered one
-          dataset: <strong>83 parishes so far</strong>, 58 of them documented
-          in depth in per-parish case files. The headline figures — 83
-          case-filed, 55 closed by diocesan decision, 55 of 55 diocese-owned,
-          0 community-owned parishes closed by an outside authority — are{" "}
-          <em>locked</em>: they are recalculated automatically from the
-          parish record every time the site is updated, and if a recalculated
-          figure ever disagrees with the verified research, the update is
-          blocked until the discrepancy is resolved.
+          <em>Draugas</em> is the project&rsquo;s main historical source. Every
+          issue from January 2008 through May 2026 —{" "}
+          <strong>2,768 issues</strong> — was read straight through. The
+          1909–2007 run was systematically mined for parish names, milestones,
+          disputes, closures, and community response. Together, the two passes
+          cover the full digital archive.
         </p>
         <p className="mt-2 leading-relaxed">
-          Citations link to the dated issue wherever the digitized archive
-          allows, and a verification script checks those deep links against
-          both eras of the <em>Draugas</em> digital archive.
+          This sweep locates the evidence. It is not, by itself, a completed
+          history of every parish.
         </p>
       </section>
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          2. The full canon — <em>Draugas</em> back to 1909
+          2. The parish research — case files
         </h2>
         <p className="mt-2 leading-relaxed">
-          The record does not stop at 2008. The full historical run of{" "}
-          <em>Draugas</em> — from its first issues in 1909 through 2007 —
-          has been read in a systematic archive sweep: parish registries,
-          founding notices, jubilee articles that imply founding years,
-          closure coverage, and a gazetteer of the places Lithuanians built.
-          The sweep&rsquo;s completion brief states its own limits honestly
-          — detection is comprehensive, not exhaustive transcription — and
-          its full results are joined into the registry below. This work
-          recovers the parishes that closed before living memory and the
-          events the modern record only inherits secondhand.
+          For each parish deep dive, relevant <em>Draugas</em> articles from the
+          full archive are assembled and checked against books, official
+          documents, and present-day sources. Conflicting names, dates, and
+          status claims remain visible.
+        </p>
+        <p className="mt-2 leading-relaxed">
+          All <strong>83 U.S. parishes</strong> in the original group now have
+          case files. Additional registry records are being researched in the
+          same way, parish by parish.
         </p>
       </section>
 
@@ -122,38 +114,20 @@ export default function AboutTheDataPage() {
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          5. One registry, honest depth
+          5. The published record — one registry
         </h2>
         <p className="mt-2 leading-relaxed">
-          The sources join into a single research registry —{" "}
+          The registry powers the map, counts, and parish pages. It currently
+          brings together{" "}
           <strong>{REGISTRY_TOTAL} parishes and congregations</strong> across
-          the U.S. and Canada — matched by city and patron saint across
-          Lithuanian and English spellings.
-          Every parish carries a record-depth label rather than a
-          verified/unverified caste: <em>case-filed</em> (those with full
-          case files), <em>multi-source</em> (documented independently in
-          more than one source), or <em>single-source</em> (documented in
-          one, awaiting corroboration). Where sources conflict — a founding
-          year, a titular, a status — the registry keeps every reading with
-          its citation. Conflicts are data; we do not average them away.
+          the U.S. and Canada.
         </p>
         <p className="mt-2 leading-relaxed">
-          Not everything is published yet. Cemeteries, schools, monasteries,
-          convents, and other non-parish sites — and 169 research leads —
-          are held back until they meet the standard above. The{" "}
-          <Link href="/" className="underline hover:text-accent">
-            map
-          </Link>{" "}
-          separates the layers honestly: shape-coded marks are the case-filed core, solid
-          dots the wider research record, squares the non-Catholic
-          congregations shown as historical witness.
-        </p>
-        <p className="mt-2 leading-relaxed">
-          The depth labels are a ladder, not a caste. The commitment is
-          this: <strong>every parish in this record will, in time, carry
-          its own researched case file</strong> — the deep dives proceed
-          parish by parish, and each one moves its parish up the ladder
-          until the whole record stands at the case-filed standard.
+          The labels <em>case-filed</em>, <em>multi-source</em>, and{" "}
+          <em>single-source</em> show how much research supports each entry. As
+          new case files are completed, the registry and site figures update
+          automatically; protected counts cannot publish if they drift from the
+          parish records.
         </p>
       </section>
 
@@ -204,43 +178,7 @@ export default function AboutTheDataPage() {
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          8. Every source at a glance
-        </h2>
-        <p className="mt-2 leading-relaxed text-muted">
-          Everything the site draws from, in one list — what each source
-          contributes and on what terms.
-        </p>
-        <ul className="mt-4 space-y-3 text-sm leading-relaxed">
-          {[
-            ["Draugas, 2008–2026 (2,768 issues, read in full)", "the locked core: 83 case-filed parishes, every headline figure; dated issue citations", "publisher's digital archive; facts cited by issue date"],
-            ["Draugas, 1909–2007 (systematic archive sweep)", "foundings, jubilees, closures, and the parish registry before living memory", "publisher's digital archive, scanned era"],
-            ["Wolkovich-Valkavičius, Lithuanian Religious Life in America, Vol. 3 (1998)", "the Catholic-institutional compendium of ~150 parishes", "in copyright — page-cited facts only, quotes under 25 words"],
-            ["Michelsonas, Lietuvių Išeivija Amerikoje (Keleivis, 1961)", "the secular counterpoint, including the early 'church fights'", "in copyright — page-cited facts only"],
-            ["Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)", "architectural descriptions and photographs of the built heritage", "in copyright — page-cited facts; volume held in the Žiburio archive"],
-            ["Global True Lithuania field survey", "exact building coordinates, Canadian parishes, post-2008 status flags", "constrained axis: locations and flags only; narratives that failed verification are excluded and say so"],
-            ["Contemporary web survey (2026)", "present-day status from diocesan directories and parish websites", "every claim carries its URL and a confidence label; lower priority than print sources"],
-            ["Per-parish research passes", "the present record on profile pages — building fates, current use, clergy", "every claim from a fetched, cited source; 'not established' recorded as such"],
-            ["Parish Watch sweep (155 watched entities)", "the under-threat alerts and their sources", "red items re-checked weekly, amber biweekly"],
-            ["The reversal database", "26 documented closure reversals in three diocesan waves", "researched from contemporary press, adversarially verified; pending cases labeled"],
-            ["Archdiocese of Detroit parish workbooks", "the verifiability layer for the Detroit restructuring figures", "the archdiocese's published documents; every figure links to its workbook page"],
-            ["US Census TIGER geometry (via us-atlas)", "state, county, and diocese boundary geometry", "public domain"],
-            ["us_diocese_mapper county–diocese crosswalk", "which counties form each Catholic diocese", "released into the public domain by its author"],
-            ["OpenStreetMap / Nominatim", "geocoded city coordinates where no exact building location exists", "© OpenStreetMap contributors"],
-            ["Parish photographs", "profile and watch-page images", "individually attributed under each image, license stated where confirmed"],
-            ["Community reports", "corrections and news from people who know the parishes", "reviewed before publication; always marked community-reported"],
-          ].map(([src, gives, terms]) => (
-            <li key={src as string} className="rounded-lg border border-rule px-4 py-3">
-              <span className="font-medium">{src}</span>
-              <span className="block text-muted mt-0.5">{gives}.</span>
-              <span className="block text-xs text-muted mt-0.5">{terms}.</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
-          9. Corrections
+          8. Corrections
         </h2>
         <p className="mt-2 leading-relaxed">
           The dataset is open —{" "}
@@ -261,8 +199,14 @@ export default function AboutTheDataPage() {
       </section>
 
       <p className="mt-10 text-sm text-muted border-t border-rule pt-4">
-        Formal citations for every source, copyright practice, and how to
-        reuse our data:{" "}
+        The complete evidence ecosystem and the role of each source:{" "}
+        <Link
+          href="/about/sources-and-archives"
+          className="underline hover:text-foreground"
+        >
+          Sources &amp; Archives
+        </Link>
+        . Formal copyright practice and how to reuse our data:{" "}
         <Link href="/legal" className="underline hover:text-foreground">
           Legal, attribution &amp; data use
         </Link>

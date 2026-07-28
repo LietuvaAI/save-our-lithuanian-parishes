@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import alertsData from "@/data/alerts.json";
+import { EndStatePill } from "@/components/EndStatePill";
+import { scopedParishes } from "@/lib/registry-scope";
+import type { EndState } from "@/lib/end-state";
 
 export const metadata: Metadata = {
   title: "Under Threat",
@@ -55,9 +58,18 @@ const buildingAlerts = alerts.filter((a) => a.kind === "building");
 
 // Substack base for fallback links
 const SUBSTACK = "https://blog.saveourlithuanianparishes.org";
+const statusByLink = new Map(
+  scopedParishes()
+    .filter((parish) => parish.profileHref)
+    .map((parish) => [parish.profileHref!, parish.endState]),
+);
 
 function slugFromLink(link: string) {
   return link.replace(/^\/(parishes|registry)\//, "");
+}
+
+function statusForLink(link: string): EndState {
+  return statusByLink.get(link) ?? "unverified";
 }
 
 export default function UnderThreatPage() {
@@ -82,9 +94,14 @@ export default function UnderThreatPage() {
 
       {/* ── Open window callout ── */}
       <section className="mt-8 rounded-lg border-2 border-accent/60 px-4 py-3.5">
-        <p className="text-xs uppercase tracking-widest text-muted">
-          The open window
-        </p>
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <p className="text-xs uppercase tracking-widest text-muted">
+            The open window
+          </p>
+          <EndStatePill
+            value={statusForLink("/parishes/dievo-apvaizdos-southfield-mi")}
+          />
+        </div>
         <p className="mt-1 leading-relaxed">
           <strong>Divine Providence, Southfield, Michigan</strong> — the
           Archdiocese of Detroit&rsquo;s one Lithuanian parish — is inside the
@@ -139,7 +156,10 @@ export default function UnderThreatPage() {
                     </Link>
                     <span className="ml-2 text-muted text-sm">{c.place}</span>
                   </div>
-                  <span className="text-xs text-muted">since {c.since}</span>
+                  <div className="flex items-center gap-2">
+                    <EndStatePill value={statusForLink(c.parishLink)} />
+                    <span className="text-xs text-muted">since {c.since}</span>
+                  </div>
                 </div>
 
                 {alert && (
@@ -217,6 +237,7 @@ export default function UnderThreatPage() {
                 </Link>
                 <span className="text-muted text-sm">— {a.place}</span>
                 <span className="ml-auto text-xs text-muted">{a.diocese}</span>
+                <EndStatePill value={statusForLink(a.parishLink)} />
               </div>
               <p className="mt-1.5 text-sm leading-relaxed text-muted">{a.whatChanged}</p>
               {a.caveat && (
@@ -266,6 +287,7 @@ export default function UnderThreatPage() {
                 </Link>
                 <span className="text-muted text-sm">— {a.place}</span>
                 <span className="ml-auto text-xs text-muted">{a.diocese}</span>
+                <EndStatePill value={statusForLink(a.parishLink)} />
               </div>
               <p className="mt-1.5 text-sm leading-relaxed text-muted">{a.whatChanged}</p>
               <p className="mt-1.5 text-xs text-muted">

@@ -13,11 +13,10 @@ import {
   GROUP_LABEL,
   END_STATE_COLOR,
   END_STATE_TEXT,
-  END_STATE_SHORT,
   isAlive,
   type EndStateGroup,
 } from "@/lib/end-state";
-import { EndStateDot } from "@/components/EndStatePill";
+import { EndStatePill } from "@/components/EndStatePill";
 
 export interface DioceseCard {
   name: string;
@@ -102,9 +101,8 @@ export default function DioceseGrid({
             {d.parishes.map((p) => (
               <div
                 key={p.slug}
-                className="px-4 py-2 flex items-center gap-3 text-sm"
+                className="flex flex-wrap items-center gap-x-3 gap-y-1 px-4 py-2.5 text-sm"
               >
-                <EndStateDot value={p.endState} />
                 <div className="flex-1 min-w-0">
                   {p.profileHref ? (
                     <Link
@@ -127,9 +125,7 @@ export default function DioceseGrid({
                         p.closed ?? (isAlive(p.endState) ? "present" : "?")
                       }`}
                 </span>
-                <span className="text-xs text-muted whitespace-nowrap hidden sm:inline w-24 text-right">
-                  {END_STATE_SHORT[p.endState]}
-                </span>
+                <EndStatePill value={p.endState} />
                 {p.hasAlert && (
                   <span
                     className="text-[10px] font-semibold uppercase tracking-wide"

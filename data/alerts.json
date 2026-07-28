@@ -227,6 +227,8 @@
       "place": "Southfield, Michigan",
       "parishLink": "/parishes/dievo-apvaizdos-southfield-mi",
       "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/further-down-the-path-what-divine",
+      "actionUrl": "https://form.jotform.com/261034294481152",
+      "actionLabel": "Complete the Detroit survey",
       "since": "2026",
       "who": "The parish community, with this project's public analysis",
       "form": "The parish's case made in the Archdiocese's own published numbers — The Hearth's workbook analysis and the armory on this site — while the restructuring survey window is open",
@@ -270,6 +272,11 @@
           "title": "Southfield's Divine Providence Lithuanian church seeks to remain a standalone ethnic parish",
           "publisher": "Michigan Catholic Tribune",
           "url": "https://micatholictribune.com/stories/541494701-southfield-s-divine-providence-lithuanian-church-seeks-to-remain-a-standalone-ethnic-parish"
+        },
+        {
+          "title": "Spring 2026 Post Listening Session Feedback",
+          "publisher": "Archdiocese of Detroit",
+          "url": "https://form.jotform.com/261034294481152"
         }
       ]
     },
@@ -279,6 +286,8 @@
       "place": "Hartford, Connecticut",
       "parishLink": "/parishes/svc-trejybes-hartford-ct",
       "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/fifteen-months-the-closing-of-svc",
+      "actionUrl": "https://www.gofundme.com/f/protect-holy-trinity-church",
+      "actionLabel": "Support Hartford's legal fund",
       "since": "2026",
       "who": "Parishioners of Holy Trinity, Hartford, and the broader Lithuanian Catholic community",
       "form": "GoFundMe to retain a canon-law attorney; community advocacy and documentation; push to preserve the building as a Lithuanian cultural center",
@@ -308,6 +317,8 @@
       "place": "Waterbury, Connecticut",
       "parishLink": "/parishes/sv-juozapo-waterbury-ct",
       "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/closed-not-ended-the-vatican-appeal",
+      "actionUrl": "https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church",
+      "actionLabel": "Support Waterbury's appeal",
       "since": "2023",
       "who": "Parishioners of St. Joseph's Lithuanian Catholic Church, Waterbury",
       "form": "Retained a canon lawyer in 2023 to contest the archdiocese's closure decision; GoFundMe to cover legal expenses",
@@ -337,6 +348,8 @@
       "place": "Maspeth, Queens, New York",
       "parishLink": "/parishes/kristaus-atsimainymo-maspeth-ny",
       "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/still-open-still-undecided-the-fight",
+      "actionUrl": "https://www.change.org/p/help-save-a-unique-lithuanian-r-c-church-of-the-transfiguration-in-maspeth-queens",
+      "actionLabel": "Sign the Maspeth petition",
       "since": "2025",
       "who": "Parishioners and preservation supporters, backed by the Knights of Lithuania",
       "form": "A petition of more than 850 signatures, a landmark-designation effort for the church building, and a September 2025 visit from Lithuanian President Gitanas Nausėda",
@@ -351,6 +364,11 @@
           "title": "Nausėda visit",
           "publisher": "QNS",
           "url": "https://qns.com/2025/09/gitanas-nauseda-transfiguration-church/"
+        },
+        {
+          "title": "Help save a unique Lithuanian R C Church of the Transfiguration in Maspeth, Queens",
+          "publisher": "Change.org",
+          "url": "https://www.change.org/p/help-save-a-unique-lithuanian-r-c-church-of-the-transfiguration-in-maspeth-queens"
         }
       ],
       "dispatches": [

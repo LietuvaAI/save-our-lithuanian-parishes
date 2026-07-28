@@ -506,7 +506,7 @@ export default function TimelineChart({
                   : { background: END_STATE_COLOR[g] }
               }
             />
-            {g === "unverified" ? "Record goes quiet — not yet verified" : GROUP_LABEL[g]}
+            {GROUP_LABEL[g]}
           </span>
         ))}
         <span
