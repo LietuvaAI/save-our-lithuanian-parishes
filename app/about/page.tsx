@@ -23,7 +23,8 @@ export default function AboutPage() {
         and learn from one another.
       </p>
       <p className="mt-3 text-sm font-medium">
-        This record was made possible by the young archivists of{" "}
+        This record is powered by the books and documents scanned by the young
+        archivists of{" "}
         <a
           href="https://archyvas.ziburioltmokykla.org/internship"
           target="_blank"
@@ -55,15 +56,17 @@ export default function AboutPage() {
               Skaitmeniniai Knygnešiai
             </a>
             , the Žiburio Lithuanian School&rsquo;s student archive internship
-            in Detroit, is not a footnote to this project. The students&rsquo;
-            work preserving, organizing, and providing access to books and
-            documentary sources made the parish record possible.
+            in Detroit, is not a footnote to this project. The students scan
+            books and documents page by page, preserve and organize the digital
+            files, and make the sources available to communities and
+            researchers. That work created the source base from which the parish
+            data could be built.
           </p>
           <p>
-            Their work matters twice. It gives communities and researchers a
-            public source trail today, and it brings young people into
-            Lithuanian heritage as active researchers, archivists, and
-            custodians, not simply as an audience for a finished history.
+            Their work matters twice. It powers the evidence and data behind
+            this project, and it brings young people into Lithuanian heritage as
+            active researchers, archivists, and custodians, not simply as an
+            audience for a finished history.
           </p>
           <p>
             Working with the archive teaches how to evaluate evidence, preserve
