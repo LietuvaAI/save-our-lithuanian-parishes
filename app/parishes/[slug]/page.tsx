@@ -544,6 +544,7 @@ export default async function ParishPage({
                   alt={photo.alt}
                   width={640}
                   height={427}
+                  loading="eager"
                   className="h-auto w-full object-cover"
                 />
                 <figcaption className="px-3 py-1.5 text-xs text-muted">
