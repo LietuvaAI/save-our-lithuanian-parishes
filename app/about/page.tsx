@@ -1,502 +1,236 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import registry from "@/data/registry-unified.json";
-import alertsData from "@/data/alerts.json";
-import {
-  parishes,
-  figures,
-  getParishSituation,
-  type Parish,
-  type ParishSituation,
-} from "@/lib/parishes";
+import AboutNav from "@/components/AboutNav";
+import { figures } from "@/lib/parishes";
+import { usRegistryParishes } from "@/lib/registry-scope";
 
-// ---------------------------------------------------------------------------
-// Registry-level totals (full documented universe)
-// ---------------------------------------------------------------------------
-const regParishes = (
-  registry as {
-    parishes: {
-      country?: string;
-      city?: string;
-      congregation_class?: string;
-      sources?: { ethnic_status?: string }[];
-    }[];
-  }
-).parishes;
-
-const isRealParish = (p: (typeof regParishes)[number]) =>
-  !(p.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? ""));
-const isUS = (p: (typeof regParishes)[number]) =>
-  p.country !== "CA" &&
-  !/buenos aires|argentin|rosario/i.test(p.city ?? "");
-
-const usParishesAll = regParishes.filter((p) => isRealParish(p) && isUS(p));
-const REG_TOTAL = usParishesAll.length;
-const REG_ETHNIC = usParishesAll.filter(
-  (p) => p.congregation_class === "roman_catholic"
-).length;
-const REG_NATCATH = usParishesAll.filter(
-  (p) => p.congregation_class === "national_catholic_pncc"
-).length;
-const REG_PROTESTANT = usParishesAll.filter(
-  (p) => p.congregation_class === "non_catholic_christian"
-).length;
-const REG_INDEP = usParishesAll.filter(
-  (p) => p.congregation_class === "independent_catholic"
-).length;
-const REG_INDEP_LABEL =
-  REG_INDEP === 1
-    ? "1 independent Catholic record"
-    : `${REG_INDEP} independent Catholic records`;
+const documentedUSRecords = usRegistryParishes().length;
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About the Project",
   description:
-    "What happened to America's Lithuanian parishes — every building, every community, every ending and every survival.",
+    "Why Save Our Lithuanian Parishes keeps the complete, sourced public record of America's Lithuanian parishes.",
 };
-
-// ---------------------------------------------------------------------------
-// Photo lookup from sustainability-watch entries
-// ---------------------------------------------------------------------------
-type WatchPhotoEntry = {
-  parishLink?: string;
-  photo?: {
-    url?: string;
-    alt?: string;
-  };
-};
-
-type AlertsPayload = {
-  sustainabilityWatch?: WatchPhotoEntry[];
-};
-
-const photoBySlug = new Map<string, { url: string; alt: string }>();
-for (const entry of (alertsData as AlertsPayload).sustainabilityWatch ?? []) {
-  if (entry.photo?.url && entry.parishLink) {
-    const slug = entry.parishLink.replace(/^\/parishes\//, "");
-    photoBySlug.set(slug, {
-      url: entry.photo.url,
-      alt: entry.photo.alt ?? "Parish photo",
-    });
-  }
-}
-
-// ---------------------------------------------------------------------------
-// Data helpers
-// ---------------------------------------------------------------------------
-
-interface ParishWithSituation {
-  parish: Parish;
-  situation: ParishSituation;
-}
-
-function loadAll(): ParishWithSituation[] {
-  return parishes
-    .map((p) => ({ parish: p, situation: getParishSituation(p.slug)! }))
-    .filter((x) => x.situation != null);
-}
-
-function ParishLine({ pw }: { pw: ParishWithSituation }) {
-  const { parish: p, situation: s } = pw;
-  const photo = photoBySlug.get(p.slug);
-  return (
-    <li>
-      <Link
-        href={`/parishes/${p.slug}`}
-        className="group flex gap-3 rounded-lg border border-rule px-4 py-3 hover:border-foreground/40 transition-colors"
-      >
-        {photo && (
-          <div className="w-16 h-12 shrink-0 overflow-hidden rounded mt-0.5">
-            <Image
-              src={photo.url}
-              alt={photo.alt}
-              width={64}
-              height={48}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        )}
-        <div className="flex-1 min-w-0">
-          <div className="flex items-baseline gap-2 flex-wrap">
-            <span className="font-medium group-hover:underline">{p.nameLt}</span>
-            <span className="text-sm text-muted">
-              {p.city}, {p.state}
-            </span>
-          </div>
-          <p className="mt-1 text-sm text-muted leading-relaxed">{s.situation}</p>
-          {s.current_use && s.current_use !== "Unknown" && (
-            <p className="mt-0.5 text-xs text-muted">Now: {s.current_use}</p>
-          )}
-        </div>
-      </Link>
-    </li>
-  );
-}
-
-function SectionAnchor({
-  id,
-  children,
-}: {
-  id: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <h2 id={id} className="font-serif text-2xl font-semibold scroll-mt-20">
-      {children}
-    </h2>
-  );
-}
-
-// ---------------------------------------------------------------------------
-// Page
-// ---------------------------------------------------------------------------
 
 export default function AboutPage() {
-  const all = loadAll();
-  const us = all.filter((x) => !x.parish.comparator);
-  const ca = all.filter((x) => x.parish.comparator);
-
-  // ── Ownership data ──
-  const dioceseOwned = us.filter((x) => x.parish.ownership === "diocese_rc");
-  const communityOwned = us.filter((x) => x.parish.ownership !== "diocese_rc");
-  const dioceseStanding = dioceseOwned.filter(
-    (x) => x.parish.endingMode === "standing"
-  );
-  const dioceseClosed = dioceseOwned.filter(
-    (x) => x.parish.endingMode === "diocese_closed"
-  );
-  const dioceseUnresolved = dioceseOwned.filter(
-    (x) => x.parish.endingMode === "undecided"
-  );
-  const communityStanding = communityOwned.filter(
-    (x) => x.parish.endingMode === "standing"
-  );
-  const communityDecided = communityOwned.filter(
-    (x) => x.parish.endingMode === "community_decided"
-  );
-  const coalRegion = us.filter((x) => x.parish.coalRegion);
-  const coalDioceseOwned = coalRegion.filter(
-    (x) => x.parish.ownership === "diocese_rc"
-  );
-  const coalDioceseClosed = coalDioceseOwned.filter(
-    (x) => x.parish.endingMode === "diocese_closed"
-  );
-  const coalDioceseStanding = coalDioceseOwned.filter(
-    (x) => x.parish.endingMode === "standing"
-  );
-  const coalDioceseUnresolved = coalDioceseOwned.filter(
-    (x) => x.parish.endingMode === "undecided"
-  );
-
   return (
     <article className="mx-auto max-w-3xl px-4 py-12">
-      {/* Hero */}
-      <h1 className="font-serif text-3xl sm:text-4xl font-semibold leading-tight">
-        About
+      <p className="text-xs uppercase tracking-widest text-muted">About</p>
+      <h1 className="mt-1 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
+        About the Project
       </h1>
-      <p className="mt-4 text-lg text-muted leading-relaxed">
-        Lithuanian immigrants built and sustained {REG_TOTAL} documented
-        parish and congregation records across the United States — schools,
-        choirs, cemeteries, and communities around each one. This is why we
-        keep the record of what happened to them.
+      <p className="mt-4 text-lg leading-relaxed text-muted">
+        Save Our Lithuanian Parishes keeps the complete public record of the
+        communities Lithuanian immigrants built across America: how each parish
+        began, what sustained it, what changed, where the community and church
+        stand today, and what one parish can learn from another.
       </p>
 
-      {/* ── The data ── */}
-      <section className="mt-8">
-        <SectionAnchor id="the-data">The data</SectionAnchor>
-        <div className="mt-3 space-y-4 leading-relaxed text-sm text-muted">
+      <AboutNav current="project" />
+
+      <section className="mt-10">
+        <h2 className="font-serif text-2xl font-semibold">
+          One parish, one connected story
+        </h2>
+        <div className="mt-3 space-y-4 leading-relaxed">
           <p>
-            The record draws on the full run of the <em>Draugas</em> archive
-            since 1909, published parish histories, and contemporary sources. Its
-            core is the 2008–2026 archive: 2,768 issues, searched in full. Every
-            fact in{" "}
-            <Link href="/record" className="underline hover:text-foreground">
-              the record
-            </Link>{" "}
-            traces to a dated, published issue. All figures are recalculated
-            automatically from the parish record at every update — if a number
-            disagrees with the verified research, the update is blocked until the
-            discrepancy is resolved. The dataset is open:{" "}
-            <a
-              href="https://github.com/LietuvaAI/save-our-lithuanian-parishes"
-              className="underline hover:text-foreground"
-            >
-              check our numbers
-            </a>
-            .
+            The record currently contains{" "}
+            <strong>{documentedUSRecords} documented U.S. parish and congregation records</strong>.
+            Each profile is meant to hold the whole story together: founding,
+            Lithuanian identity, liturgical life, governance, turning points,
+            canonical status, building fate, current use, and the evidence
+            behind every claim.
           </p>
           <p>
-            A unified research registry joins the <em>Draugas</em> core with
-            four further source axes: the 1909–2007 <em>Draugas</em> archive,
-            read issue by issue; William
-            Wolkovich-Valkavičius&rsquo;s three-volume{" "}
-            <em>Lithuanian Religious Life in America</em>; contemporary status
-            sources; and the national closure-reversal research. Full
-            methods, copyright handling, and what is deliberately held back:{" "}
-            <Link href="/about-the-data" className="underline hover:text-foreground">
-              About the data
+            Historical research and current intelligence meet in the same
+            record. The archives explain how a community arrived at the present;
+            parish, diocesan, civil, and community sources show what is happening
+            now. Active campaigns and sustainability concerns remain separate
+            from the parish&rsquo;s canonical status so a current alert never
+            silently rewrites the historical record.
+          </p>
+        </div>
+      </section>
+
+      <section id="ownership" className="mt-12 scroll-mt-20">
+        <h2 className="font-serif text-2xl font-semibold">
+          Ownership is one part of the story
+        </h2>
+        <div
+          className="mt-4 border-l-4 py-1 pl-4"
+          style={{ borderColor: "var(--mark-closed)" }}
+        >
+          <p className="font-medium">Know who holds the deed.</p>
+          <p className="mt-1 text-sm leading-relaxed text-muted">
+            Find your parish among the documented parishes. See its ownership,
+            its outcome, and how its story compares with the rest of the record.
+          </p>
+        </div>
+        <div className="mt-4 space-y-4 leading-relaxed">
+          <p>
+            That remains a necessary question because ownership can shape who
+            has authority over parish property and what options a community has.
+            It is not, however, the whole purpose of this project. Ownership now
+            sits beside the parish&rsquo;s faith, people, institutions, memory,
+            canonical life, and present condition.
+          </p>
+          <p>
+            In the locked 83-parish <em>Draugas</em> case-filed core,{" "}
+            <strong>{figures.endingMode.diocese_closed}</strong> parishes were
+            closed by diocesan decision; all were diocese-owned. None of the{" "}
+            <strong>{figures.communityOwned.total}</strong> community-owned
+            cases was closed by an outside authority. That is a documented
+            pattern within a specifically bounded corpus, not a substitute for
+            the individual evidence and circumstances in each parish profile.
+          </p>
+          <p className="text-sm text-muted">
+            The scope, definitions, and safeguards behind those figures are
+            explained in{" "}
+            <Link
+              href="/about-the-data"
+              className="underline hover:text-foreground"
+            >
+              About the Data
             </Link>
             .
           </p>
         </div>
       </section>
 
-      {/* ── What this record does not argue ── */}
-      <section className="mt-8">
-        <h2 className="font-serif text-xl font-semibold">
+      <section className="mt-12">
+        <h2 className="font-serif text-2xl font-semibold">
           What this record does not argue
         </h2>
-        <p className="mt-2 text-sm text-muted leading-relaxed">
-          This record documents what happened. It does not propose that any
-          parish leave the Roman Catholic Church — the National Catholic
-          parishes appear here as historical witness, not as a recommendation.{" "}
-          <Link
-            href="/what-canon-law-says"
-            className="underline hover:text-foreground"
-          >
-            What canon law says
-          </Link>
-          .
+        <p className="mt-3 leading-relaxed">
+          This project documents what happened and helps communities understand
+          the processes around them. It does not propose that any parish leave
+          the Roman Catholic Church. Lithuanian National Catholic and Protestant
+          congregations appear as historical witness and comparative evidence,
+          not as recommendations. The guidance pages summarize public law and
+          precedent; they are not legal or canonical advice.
         </p>
       </section>
 
-      {/* ── The data at a glance ── */}
       <section className="mt-12">
-        <SectionAnchor id="numbers">The data at a glance</SectionAnchor>
-        <p className="mt-2 text-sm text-muted leading-relaxed">
-          {REG_TOTAL} U.S. Lithuanian parish and congregation records documented
-          — {REG_ETHNIC} Roman Catholic ethnic (national) parishes,{" "}
-          {REG_NATCATH} Lithuanian National Catholic parishes,{" "}
-          {REG_PROTESTANT} Protestant or non-Catholic Christian congregations,
-          and {REG_INDEP_LABEL}. The full dataset — every
-          record, its Lithuanian identity, building fate, and alert status — is
-          in{" "}
-          <Link href="/record" className="underline hover:text-foreground">
-            the record
-          </Link>
-          , filterable by every dimension. The{" "}
-          <Link href="/by-diocese" className="underline hover:text-foreground">
-            diocesan view
-          </Link>{" "}
-          groups parishes by the Catholic diocese responsible for each one.
-        </p>
-      </section>
-
-      {/* ── Ownership and survival ── */}
-      <section className="mt-14">
-        <SectionAnchor id="ownership">Ownership and survival</SectionAnchor>
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div className="rounded-lg border border-rule p-5">
-            <p className="text-xs uppercase tracking-wide text-muted">
-              Diocese-owned (Roman Catholic)
-            </p>
-            <p className="mt-2 font-serif text-3xl font-semibold">
-              {dioceseOwned.length}
-            </p>
-            <p className="mt-1 text-sm text-muted">
-              {dioceseStanding.length} still standing ·{" "}
-              {dioceseClosed.length} closed by diocese
-            </p>
-            {dioceseUnresolved.length > 0 && (
-              <p className="mt-1 text-xs text-muted">
-                {dioceseUnresolved.length} unresolved
-              </p>
-            )}
-            <p className="mt-2 text-sm">
-              {Math.round(
-                (dioceseClosed.length / dioceseOwned.length) *
-                  100
-              )}
-              % closed by diocese
-            </p>
-          </div>
-          <div className="rounded-lg border border-rule p-5">
-            <p className="text-xs uppercase tracking-wide text-muted">
-              Community-owned
-            </p>
-            <p className="mt-2 font-serif text-3xl font-semibold">
-              {communityOwned.length}
-            </p>
-            <p className="mt-1 text-sm text-muted">
-              {communityStanding.length} still standing ·{" "}
-              {communityDecided.length} ended on their own terms
-            </p>
-            <p className="mt-2 text-sm">0% closed by outside authority</p>
-          </div>
-        </div>
-        <p className="mt-4 text-sm text-muted leading-relaxed">
-          Of the {communityOwned.length} community-owned parishes in the record —
-          National Catholic and Lutheran — not one was closed by an outside
-          authority. Every ending was the community&rsquo;s own decision. Among
-          the {dioceseOwned.length} diocese-owned parishes,{" "}
-          {dioceseClosed.length} were closed by the diocese and{" "}
-          {dioceseUnresolved.length} remain unresolved.
-        </p>
-      </section>
-
-      {/* ── Coal region ── */}
-      <section className="mt-14">
-        <SectionAnchor id="coal-region">
-          The Pennsylvania coal region
-        </SectionAnchor>
-        <p className="mt-2 text-sm text-muted leading-relaxed">
-          {coalRegion.length} Lithuanian parishes in the northeastern
-          Pennsylvania coal region — the densest Lithuanian settlement in
-          America. {coalDioceseClosed.length} of the{" "}
-          {coalDioceseOwned.length} diocese-owned ones are now closed by the
-          diocese, {coalDioceseStanding.length} remain standing under diocesan
-          ownership, and {coalDioceseUnresolved.length}{" "}
-          {coalDioceseUnresolved.length === 1 ? "remains" : "remain"} unresolved.
-        </p>
-        <ul className="mt-5 space-y-3">
-          {us
-            .filter((x) => x.parish.coalRegion)
-            .sort((a, b) => a.parish.city.localeCompare(b.parish.city))
-            .map((pw) => (
-              <ParishLine key={pw.parish.slug} pw={pw} />
-            ))}
-        </ul>
-      </section>
-
-      {/* ── Canadian comparators ── */}
-      {ca.length > 0 && (
-        <section className="mt-14">
-          <SectionAnchor id="comparators">
-            The Canadian comparators
-          </SectionAnchor>
-          <p className="mt-2 text-sm text-muted leading-relaxed">
-            {ca.length} Canadian Lithuanian parishes, documented for contrast. In
-            Quebec, civil law gives parishes — not the diocese — juridical
-            ownership of their own property. The diocese cannot act unilaterally.
-            These parishes survived.
-          </p>
-          <ul className="mt-5 space-y-3">
-            {ca
-              .sort((a, b) => a.parish.city.localeCompare(b.parish.city))
-              .map((pw) => (
-                <ParishLine key={pw.parish.slug} pw={pw} />
-              ))}
-          </ul>
-        </section>
-      )}
-
-      {/* ── What communities can do ── */}
-      <section className="mt-14">
-        <SectionAnchor id="what-can-be-done">What communities can do</SectionAnchor>
-        <p className="mt-2 leading-relaxed">
-          Across the United States, parish closures have been reversed —{" "}
-          <Link href="/reversals" className="underline hover:text-foreground">
-            26 documented cases
-          </Link>{" "}
-          — by the Church&rsquo;s own law applied in time. None of these were
-          Lithuanian parishes. They are documented here as precedent for every
-          community facing the same process.
-        </p>
-        <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <Link
-            href="/start-here"
-            className="rounded-lg border border-rule p-4 hover:border-foreground/40 transition-colors"
-          >
-            <p className="font-medium">Facing a Closure</p>
-            <p className="mt-1 text-sm text-muted">
-              Deadlines, rights, and what to do first
-            </p>
-          </Link>
-          <Link
-            href="/reversals"
-            className="rounded-lg border border-rule p-4 hover:border-foreground/40 transition-colors"
-          >
-            <p className="font-medium">Where Rome Said No</p>
-            <p className="mt-1 text-sm text-muted">
-              26 reversed closures — none Lithuanian
-            </p>
-          </Link>
-          <Link
-            href="/what-canon-law-says"
-            className="rounded-lg border border-rule p-4 hover:border-foreground/40 transition-colors"
-          >
-            <p className="font-medium">What Canon Law Says</p>
-            <p className="mt-1 text-sm text-muted">
-              The law that applies — in plain language
-            </p>
-          </Link>
-        </div>
-      </section>
-
-      {/* ── Why we keep this record ── */}
-      <section className="mt-14">
-        <SectionAnchor id="why">Why we keep this record</SectionAnchor>
+        <h2 className="font-serif text-2xl font-semibold">
+          Why we keep the record
+        </h2>
         <div className="mt-3 space-y-4 leading-relaxed">
           <p>
-            When the Lithuanian press was banned under the Tsars, Bishop Motiejus
-            Valančius organized a network — the <em>knygnešiai</em>, the book
-            carriers — that moved the printed word hand to hand across the border,
-            because the institutions that should have carried it would not.
-            Lithuanian identity survived forty years of that ban because ordinary
-            people built their own information network.
+            When the Lithuanian press was banned under the Tsars, Bishop
+            Motiejus Valančius organized the <em>knygnešiai</em>, the book
+            carriers who moved the printed word hand to hand across the border.
+            Lithuanian identity survived because ordinary people built an
+            information network when the institutions around them would not.
           </p>
           <p>
-            This project works the same way. Decisions about parish closures are
-            made inside diocesan processes; the communities that built the
-            parishes are often the last to understand what is coming. So we keep
-            the record ourselves — open, sourced, and growing: backward through
-            the archives, and forward through{" "}
-            <Link href="/report" className="underline hover:text-foreground">
-              reports from parishes
-            </Link>{" "}
-            today.
+            This project works in that tradition. Decisions about parish futures
+            are often made inside processes that are difficult for communities
+            to see as a whole. We keep the record ourselves: open, sourced, and
+            growing backward through the archives and forward through current
+            reports, campaigns, and corrections.
           </p>
           <p className="text-muted">
-            The record is Lithuanian. The legal guidance is universal —
-            those pages are written for any parish, of any heritage, facing the
-            same process.
+            The parish record is Lithuanian. The procedural guidance is
+            universal and is written for any community facing the same kind of
+            decision.
           </p>
         </div>
       </section>
 
-      {/* ── Subscribe + Report ── */}
-      <div className="mt-14 rounded-lg border border-rule p-5">
-        <p className="font-medium">Follow the record</p>
-        <p className="mt-1 text-sm text-muted">
-          Closure alerts, parish case files, and updates — on{" "}
-          <a
-            href="https://blog.saveourlithuanianparishes.org"
-            className="underline hover:text-foreground"
+      <section className="mt-12">
+        <h2 className="font-serif text-2xl font-semibold">
+          From record to action
+        </h2>
+        <div className="mt-4 divide-y divide-rule border-y border-rule">
+          <Link
+            href="/record"
+            className="block py-3.5 hover:text-accent"
           >
-            Židinys (The Hearth)
+            <span className="font-medium">Find a parish</span>
+            <span className="ml-2 text-sm text-muted">
+              Read its profile and evidence ledger
+            </span>
+          </Link>
+          <Link
+            href="/under-threat"
+            className="block py-3.5 hover:text-accent"
+          >
+            <span className="font-medium">See what is happening now</span>
+            <span className="ml-2 text-sm text-muted">
+              Current alerts and active campaigns
+            </span>
+          </Link>
+          <Link
+            href="/start-here"
+            className="block py-3.5 hover:text-accent"
+          >
+            <span className="font-medium">Facing a closure</span>
+            <span className="ml-2 text-sm text-muted">
+              Deadlines, questions, and documented precedents
+            </span>
+          </Link>
+        </div>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="font-serif text-2xl font-semibold">
+          Who keeps the record
+        </h2>
+        <p className="mt-3 leading-relaxed">
+          Save Our Lithuanian Parishes is an independent documentation and
+          advocacy initiative powered by{" "}
+          <a
+            href="https://lietuva.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-accent"
+          >
+            Lietuva.AI
           </a>
+          , supported by the Žiburio Foundation, with archive work made possible
+          by{" "}
+          <a
+            href="https://archyvas.ziburioltmokykla.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-accent"
+          >
+            Skaitmeniniai Knygnešiai
+          </a>
+          , student interns from Detroit. Formal independence, copyright, data
+          use, and correction policies are set out in{" "}
+          <Link href="/legal" className="underline hover:text-accent">
+            Legal, attribution &amp; data use
+          </Link>
           .
         </p>
-        <div className="mt-3 flex flex-wrap gap-3">
-          <a
-            href="https://blog.saveourlithuanianparishes.org/subscribe"
-            className="inline-block rounded-md px-4 py-2 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
-            style={{ background: "var(--mark-closed)" }}
-          >
-            Subscribe
-          </a>
+      </section>
+
+      <section className="mt-12 border-t border-rule pt-6">
+        <h2 className="font-serif text-xl font-semibold">
+          Help the record grow
+        </h2>
+        <p className="mt-2 text-sm leading-relaxed text-muted">
+          Corrections, documents, parish news, photographs, and memories are
+          welcome. Reports are reviewed before publication.
+        </p>
+        <div className="mt-4 flex flex-wrap gap-3">
           <Link
             href="/report"
-            className="inline-block rounded-md border border-rule px-4 py-2 text-sm font-medium hover:border-foreground transition-colors"
+            className="inline-block rounded-md px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            style={{ background: "var(--mark-closed)" }}
           >
             Report from your parish
           </Link>
+          <a
+            href="https://blog.saveourlithuanianparishes.org/subscribe"
+            className="inline-block rounded-md border border-rule px-4 py-2 text-sm font-medium transition-colors hover:border-foreground"
+          >
+            Follow Židinys
+          </a>
         </div>
-      </div>
-
-      {/* ── Provenance ── */}
-      <p className="mt-10 text-sm text-muted border-t border-rule pt-4">
-        All figures on this page are computed from the parish record (
-        {figures.corpusScope}). The dataset is open —{" "}
-        <a
-          href="https://github.com/LietuvaAI/save-our-lithuanian-parishes"
-          className="underline hover:text-foreground"
-        >
-          check our numbers
-        </a>
-        .
-      </p>
+      </section>
     </article>
   );
 }

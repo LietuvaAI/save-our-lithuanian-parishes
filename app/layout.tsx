@@ -52,7 +52,17 @@ const NAV: NavItem[] = [
       { href: "/what-canon-law-says", label: "What Canon Law Says" },
     ],
   },
-  { href: "/about", label: "About" },
+  {
+    label: "About",
+    children: [
+      { href: "/about", label: "About the Project" },
+      { href: "/about-the-data", label: "About the Data" },
+      {
+        href: "/about/sources-and-archives",
+        label: "Sources & Archives",
+      },
+    ],
+  },
   { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys (The Hearth)" },
 ];
 
@@ -72,18 +82,19 @@ export default function RootLayout({
             <Link href="/" className="font-serif text-lg font-semibold tracking-tight">
               Save Our Lithuanian Parishes
             </Link>
-            <nav className="flex items-center gap-5 text-sm text-muted">
+            <nav className="flex w-full flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted sm:w-auto sm:justify-end">
               {NAV.map((item) =>
                 "children" in item ? (
                   <div key={item.label} className="relative group">
                     <button
                       type="button"
+                      aria-haspopup="menu"
                       className="flex items-center gap-1 hover:text-foreground transition-colors"
                     >
                       {item.label}
                       <span className="text-[10px] opacity-60">▾</span>
                     </button>
-                    <div className="absolute top-full left-0 hidden group-hover:flex flex-col pt-2 min-w-max z-50">
+                    <div className="absolute top-full left-0 hidden group-hover:flex group-focus-within:flex flex-col pt-2 min-w-max z-50">
                       <div className="flex flex-col bg-background border border-rule rounded-md shadow-md py-1">
                         {item.children.map((child) => (
                           <Link
@@ -176,11 +187,17 @@ export default function RootLayout({
               <Link href="/what-canon-law-says" className="hover:text-foreground">
                 What Canon Law Says
               </Link>
-              <Link href="/about-the-data" className="hover:text-foreground">
-                About the data
-              </Link>
               <Link href="/about" className="hover:text-foreground">
-                About
+                About the Project
+              </Link>
+              <Link href="/about-the-data" className="hover:text-foreground">
+                About the Data
+              </Link>
+              <Link
+                href="/about/sources-and-archives"
+                className="hover:text-foreground"
+              >
+                Sources &amp; Archives
               </Link>
               <Link
                 href="/report"

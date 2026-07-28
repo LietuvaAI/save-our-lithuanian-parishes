@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AboutNav from "@/components/AboutNav";
 import registry from "@/data/registry-unified.json";
 import { isSettlement, isUS, type RegParish } from "@/lib/registry-scope";
 
@@ -8,7 +9,7 @@ const REGISTRY_TOTAL = (registry as { parishes: RegParish[] }).parishes.filter(
 ).length;
 
 export const metadata: Metadata = {
-  title: "About the data",
+  title: "About the Data",
   description:
     "How this record was collected: the full Draugas run, the parish histories, the unified registry, the reversal database — and how every figure is verified.",
 };
@@ -16,18 +17,18 @@ export const metadata: Metadata = {
 export default function AboutTheDataPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-12">
-      <p className="text-xs uppercase tracking-widest text-muted">
-        The methodology
-      </p>
+      <p className="text-xs uppercase tracking-widest text-muted">About</p>
       <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
-        About the data
+        About the Data
       </h1>
       <p className="mt-4 text-lg text-muted leading-relaxed">
         Every figure on this site traces to a dated, published source, and the
         site refuses to build if a number drifts from the verified research.
-        This page is the full chain: where the data comes from, how it was
-        collected, and how it is checked.
+        This page explains how evidence becomes structured data, how records
+        are matched, and how the resulting figures are checked.
       </p>
+
+      <AboutNav current="data" />
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
@@ -204,43 +205,7 @@ export default function AboutTheDataPage() {
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          8. Every source at a glance
-        </h2>
-        <p className="mt-2 leading-relaxed text-muted">
-          Everything the site draws from, in one list — what each source
-          contributes and on what terms.
-        </p>
-        <ul className="mt-4 space-y-3 text-sm leading-relaxed">
-          {[
-            ["Draugas, 2008–2026 (2,768 issues, read in full)", "the locked core: 83 case-filed parishes, every headline figure; dated issue citations", "publisher's digital archive; facts cited by issue date"],
-            ["Draugas, 1909–2007 (systematic archive sweep)", "foundings, jubilees, closures, and the parish registry before living memory", "publisher's digital archive, scanned era"],
-            ["Wolkovich-Valkavičius, Lithuanian Religious Life in America, Vol. 3 (1998)", "the Catholic-institutional compendium of ~150 parishes", "in copyright — page-cited facts only, quotes under 25 words"],
-            ["Michelsonas, Lietuvių Išeivija Amerikoje (Keleivis, 1961)", "the secular counterpoint, including the early 'church fights'", "in copyright — page-cited facts only"],
-            ["Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)", "architectural descriptions and photographs of the built heritage", "in copyright — page-cited facts; volume held in the Žiburio archive"],
-            ["Global True Lithuania field survey", "exact building coordinates, Canadian parishes, post-2008 status flags", "constrained axis: locations and flags only; narratives that failed verification are excluded and say so"],
-            ["Contemporary web survey (2026)", "present-day status from diocesan directories and parish websites", "every claim carries its URL and a confidence label; lower priority than print sources"],
-            ["Per-parish research passes", "the present record on profile pages — building fates, current use, clergy", "every claim from a fetched, cited source; 'not established' recorded as such"],
-            ["Parish Watch sweep (155 watched entities)", "the under-threat alerts and their sources", "red items re-checked weekly, amber biweekly"],
-            ["The reversal database", "26 documented closure reversals in three diocesan waves", "researched from contemporary press, adversarially verified; pending cases labeled"],
-            ["Archdiocese of Detroit parish workbooks", "the verifiability layer for the Detroit restructuring figures", "the archdiocese's published documents; every figure links to its workbook page"],
-            ["US Census TIGER geometry (via us-atlas)", "state, county, and diocese boundary geometry", "public domain"],
-            ["us_diocese_mapper county–diocese crosswalk", "which counties form each Catholic diocese", "released into the public domain by its author"],
-            ["OpenStreetMap / Nominatim", "geocoded city coordinates where no exact building location exists", "© OpenStreetMap contributors"],
-            ["Parish photographs", "profile and watch-page images", "individually attributed under each image, license stated where confirmed"],
-            ["Community reports", "corrections and news from people who know the parishes", "reviewed before publication; always marked community-reported"],
-          ].map(([src, gives, terms]) => (
-            <li key={src as string} className="rounded-lg border border-rule px-4 py-3">
-              <span className="font-medium">{src}</span>
-              <span className="block text-muted mt-0.5">{gives}.</span>
-              <span className="block text-xs text-muted mt-0.5">{terms}.</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
-          9. Corrections
+          8. Corrections
         </h2>
         <p className="mt-2 leading-relaxed">
           The dataset is open —{" "}
@@ -261,8 +226,14 @@ export default function AboutTheDataPage() {
       </section>
 
       <p className="mt-10 text-sm text-muted border-t border-rule pt-4">
-        Formal citations for every source, copyright practice, and how to
-        reuse our data:{" "}
+        The complete evidence ecosystem and the role of each source:{" "}
+        <Link
+          href="/about/sources-and-archives"
+          className="underline hover:text-foreground"
+        >
+          Sources &amp; Archives
+        </Link>
+        . Formal copyright practice and how to reuse our data:{" "}
         <Link href="/legal" className="underline hover:text-foreground">
           Legal, attribution &amp; data use
         </Link>
