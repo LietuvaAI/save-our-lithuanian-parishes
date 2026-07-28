@@ -21,9 +21,11 @@ export type ProfileSource = {
 
 export type RegistryProfileSource = {
   axis?: string;
+  kind?: string;
   work?: string;
   pages?: string;
   cites?: string;
+  note?: string;
   first_mention?: string;
   last_mention?: string;
   total_mentions?: number;
@@ -72,26 +74,68 @@ function isAbsoluteWebUrl(url: string | null | undefined): url is string {
   return !!url && /^https?:\/\//i.test(url);
 }
 
-function draugasDates(cites: string | undefined): string[] {
+type DraugasCitation = {
+  date: string;
+  detail?: string;
+};
+
+function draugasCitations(cites: string | undefined): DraugasCitation[] {
   if (!cites) return [];
   return cites
     .split(";")
     .map((value) => value.trim())
-    .filter((value) => /^\d{4}-\d{2}-\d{2}$/.test(value));
+    .flatMap((value): DraugasCitation[] => {
+      const match = value.match(/^(\d{4}-\d{2}-\d{2})(?:\s+(.+))?$/);
+      if (!match) return [];
+      const detail = match[2]?.trim();
+      return [{ date: match[1], ...(detail ? { detail } : {}) }];
+    });
 }
 
 function draugasSource(
   date: string,
   context: string,
   title = `Draugas issue, ${date}`,
+  detail?: string,
 ): SourceDraft {
   return {
     group: "newspaper",
     title,
-    citation: `Draugas, ${date}`,
+    citation: `Draugas, ${date}${detail ? `, ${detail}` : ""}`,
     url: draugasCitationUrl(date),
     contexts: [context],
   };
+}
+
+function sourceLabel(axis: string): string {
+  const labels: Record<string, string> = {
+    "draugas-news": "Draugas News",
+    "lithuanian-genealogy": "Lithuanian Global Genealogical Society",
+  };
+  return (
+    labels[axis] ??
+    axis
+      .split("-")
+      .map((word, index) =>
+        index > 0 && word === "of"
+          ? word
+          : word.charAt(0).toUpperCase() + word.slice(1),
+      )
+      .join(" ")
+  );
+}
+
+function sourceCitation(
+  source: RegistryProfileSource,
+  publisher?: string,
+): string | undefined {
+  const pages = source.pages
+    ? `${source.pages.match(/^p(?:p)?\./i) ? "" : "p. "}${source.pages}`
+    : null;
+  const parts = [publisher, pages, source.cites].filter(
+    (value): value is string => !!value,
+  );
+  return parts.length > 0 ? parts.join(" · ") : undefined;
 }
 
 export function draugasProfileSources(
@@ -125,17 +169,41 @@ export function registryProfileSources(
     }
 
     if (axis === "draugas-2008-2026") {
-      for (const date of draugasDates(source.cites)) {
-        drafts.push(draugasSource(date, "Modern Draugas case-file evidence"));
+      for (const citation of draugasCitations(source.cites)) {
+        drafts.push(
+          draugasSource(
+            citation.date,
+            "Modern Draugas case-file evidence",
+            undefined,
+            citation.detail,
+          ),
+        );
       }
       continue;
     }
 
     if (axis === "draugas-registry-1909-2007") {
+      const pageCitations = draugasCitations(source.cites);
+      const pageCitationDates = new Set(
+        pageCitations.map((citation) => citation.date),
+      );
       const mentionContext = source.total_mentions
         ? `Systematic archive sweep; ${source.total_mentions} issues mention this record`
         : "Systematic archive sweep";
-      if (source.first_mention) {
+      for (const citation of pageCitations) {
+        drafts.push(
+          draugasSource(
+            citation.date,
+            source.note ?? "Page-cited historical Draugas evidence",
+            undefined,
+            citation.detail,
+          ),
+        );
+      }
+      if (
+        source.first_mention &&
+        !pageCitationDates.has(source.first_mention)
+      ) {
         drafts.push(
           draugasSource(
             source.first_mention,
@@ -146,7 +214,8 @@ export function registryProfileSources(
       }
       if (
         source.last_mention &&
-        source.last_mention !== source.first_mention
+        source.last_mention !== source.first_mention &&
+        !pageCitationDates.has(source.last_mention)
       ) {
         drafts.push(
           draugasSource(
@@ -156,7 +225,11 @@ export function registryProfileSources(
           ),
         );
       }
-      if (!source.first_mention && !source.last_mention) {
+      if (
+        pageCitations.length === 0 &&
+        !source.first_mention &&
+        !source.last_mention
+      ) {
         drafts.push({
           group: "newspaper",
           title: "Draugas systematic archive sweep, 1909–2007",
@@ -165,6 +238,23 @@ export function registryProfileSources(
           contexts: [mentionContext],
         });
       }
+      continue;
+    }
+
+    if (
+      axis.startsWith("diocese-") ||
+      source.kind?.startsWith("diocesan-")
+    ) {
+      const publisher = sourceLabel(axis);
+      drafts.push({
+        group: "current",
+        title: source.work ?? publisher,
+        citation: sourceCitation(source, publisher),
+        url: isAbsoluteWebUrl(source.sourceUrl) ? source.sourceUrl : null,
+        contexts: ["Official diocesan record"],
+        missingLinkNote:
+          "The registry does not carry the official record URL.",
+      });
       continue;
     }
 
@@ -195,8 +285,8 @@ export function registryProfileSources(
 
     drafts.push({
       group: "field",
-      title: source.work ?? axis,
-      citation: source.pages,
+      title: source.work ?? sourceLabel(axis),
+      citation: sourceCitation(source),
       url: isAbsoluteWebUrl(source.sourceUrl) ? source.sourceUrl : null,
       contexts: ["Registry source"],
       missingLinkNote: "No public URL is recorded for this source.",
