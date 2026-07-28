@@ -13,9 +13,16 @@ type SourceRowProps = {
   href?: string;
   role: string;
   limits: string;
+  checkedLinks?: Array<{ label: string; href: string }>;
 };
 
-function SourceRow({ title, href, role, limits }: SourceRowProps) {
+function SourceRow({
+  title,
+  href,
+  role,
+  limits,
+  checkedLinks,
+}: SourceRowProps) {
   return (
     <li className="py-4">
       <p className="font-medium">
@@ -36,6 +43,27 @@ function SourceRow({ title, href, role, limits }: SourceRowProps) {
       <p className="mt-1 text-xs leading-relaxed text-muted">
         How it is used: {limits}
       </p>
+      {checkedLinks && checkedLinks.length > 0 ? (
+        <div className="mt-3">
+          <p className="text-xs font-medium uppercase tracking-widest text-muted">
+            ELIP pages checked
+          </p>
+          <ul className="mt-2 grid gap-x-5 gap-y-1 text-sm sm:grid-cols-2">
+            {checkedLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-4 hover:text-accent"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
     </li>
   );
 }
@@ -191,8 +219,54 @@ export default function SourcesAndArchivesPage() {
           <SourceRow
             title="ELIP / Enciklopedija Lietuvai ir pasauliui"
             href="https://lietuvai.lt/wiki/JAV_lietuvi%C5%B3_katalik%C5%B3_ba%C5%BEny%C4%8Dios"
-            role="A broad Lithuanian encyclopedia layer connecting churches, communities, schools, organizations, biographies, and downloadable historical works."
-            limits="Excellent coverage and discovery infrastructure; page identity and dates are verified against primary or stronger contemporary sources before registry changes."
+            role="Information and links shared with the project by Edvinas. This broad Lithuanian encyclopedia connects churches, communities, schools, organizations, biographies, and downloadable historical works."
+            limits="Used for registry cross-checks, alternate names, parish leads, and attributed secondary readings. Page identity and dates are verified against primary or stronger contemporary sources before registry changes."
+            checkedLinks={[
+              {
+                label: "ELIP home",
+                href: "https://lietuvai.lt/",
+              },
+              {
+                label: "ELIP support foundation",
+                href: "https://lietuvai.lt/wiki/Enciklopedijos_Lietuvai_ir_pasauliui_paramos_fondas",
+              },
+              {
+                label: "JAV lietuviai",
+                href: "https://lietuvai.lt/wiki/JAV_lietuviai",
+              },
+              {
+                label: "U.S. Lithuanian Catholic churches",
+                href: "https://lietuvai.lt/wiki/JAV_lietuvi%C5%B3_katalik%C5%B3_ba%C5%BEny%C4%8Dios",
+              },
+              {
+                label: "Hartford Holy Trinity (Lithuanian)",
+                href: "https://lietuvai.lt/wiki/Hartford_Holy_Trinity_Church",
+              },
+              {
+                label: "Hartford Holy Trinity (English)",
+                href: "https://lietuvai.lt/wiki/Holy_Trinity_Church_Hartford",
+              },
+              {
+                label: "Rochester St. George",
+                href: "https://lietuvai.lt/wiki/Rochester_St._George_Church",
+              },
+              {
+                label: "U.S. Lithuanian schools, 2022–2023",
+                href: "https://lietuvai.lt/wiki/Lituanistin%C4%97s_mokyklos_JAV_2022-2023_m.",
+              },
+              {
+                label: "U.S. Lithuanian community districts",
+                href: "https://lietuvai.lt/wiki/JAV_lietuvi%C5%B3_apylink%C4%97s",
+              },
+              {
+                label: "Downloadable U.S. Lithuanian history books",
+                href: "https://lietuvai.lt/wiki/JAV_lietuvi%C5%B3_istorija._Knygos",
+              },
+              {
+                label: "BALTICS in USA",
+                href: "https://lietuvai.lt/wiki/BALTICS_in_USA",
+              },
+            ]}
           />
           <SourceRow
             title="Litua Lithuanian church directory"
