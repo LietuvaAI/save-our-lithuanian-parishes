@@ -32,44 +32,55 @@ export default function AboutTheDataPage() {
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          1. The core record — <em>Draugas</em>, 2008–2026
+          1. The evidence spine — the full <em>Draugas</em> archive
         </h2>
         <p className="mt-2 leading-relaxed">
-          The spine of the record is the archive of <em>Draugas</em>, the
-          Lithuanian-American newspaper. Every issue from January 2008 through
-          May 2026 — <strong>2,768 issues</strong> — was read and searched,
-          and every U.S. Lithuanian parish mentioned in them entered one
-          dataset: <strong>83 parishes so far</strong>, 58 of them documented
-          in depth in per-parish case files. The headline figures — 83
-          case-filed, 55 closed by diocesan decision, 55 of 55 diocese-owned,
-          0 community-owned parishes closed by an outside authority — are{" "}
-          <em>locked</em>: they are recalculated automatically from the
-          parish record every time the site is updated, and if a recalculated
-          figure ever disagrees with the verified research, the update is
-          blocked until the discrepancy is resolved.
+          The historical spine of the record is the complete digital archive of{" "}
+          <em>Draugas</em>, the Lithuanian-American newspaper, from 1909 to the
+          present. The archive has been worked in two complementary passes.
+          Every issue from January 2008 through May 2026 —{" "}
+          <strong>2,768 issues</strong> — was read straight through. The
+          1909–2007 run was mined issue by issue in a systematic sweep for
+          parish names, founding notices, jubilees, property disputes, closures,
+          and community response.
         </p>
         <p className="mt-2 leading-relaxed">
-          Citations link to the dated issue wherever the digitized archive
-          allows, and a verification script checks those deep links against
-          both eras of the <em>Draugas</em> digital archive.
+          Together those passes make the full archive, not the 2008–2026 period
+          alone, the evidence base. The archive-wide sweep is designed to detect
+          every parish and recover its documentary trail; it is not a claim that
+          every relevant article has already been fully transcribed or
+          interpreted. Citations link to dated issues wherever the archive
+          allows, and their links are checked against both eras of the{" "}
+          <em>Draugas</em> digital collection.
         </p>
       </section>
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          2. The full canon — <em>Draugas</em> back to 1909
+          2. The deep dives — parish case files
         </h2>
         <p className="mt-2 leading-relaxed">
-          The record does not stop at 2008. The full historical run of{" "}
-          <em>Draugas</em> — from its first issues in 1909 through 2007 —
-          has been read in a systematic archive sweep: parish registries,
-          founding notices, jubilee articles that imply founding years,
-          closure coverage, and a gazetteer of the places Lithuanians built.
-          The sweep&rsquo;s completion brief states its own limits honestly
-          — detection is comprehensive, not exhaustive transcription — and
-          its full results are joined into the registry below. This work
-          recovers the parishes that closed before living memory and the
-          events the modern record only inherits secondhand.
+          The archive-wide pass establishes the national baseline. A deep case
+          file then returns to the full <em>Draugas</em> run for one parish,
+          gathers its evidence across time, resolves identity and date
+          conflicts, and connects that newspaper record to published histories,
+          official documents, current parish sources, and the fate of the
+          building and community.
+        </p>
+        <p className="mt-2 leading-relaxed">
+          All <strong>83 U.S. parishes</strong> in the original case-filed
+          record now have parish case files. The wider registry contains many
+          additional parishes and congregations discovered through the full
+          archive and other sources. Those records are being backfilled to the
+          same deep-dive standard parish by parish as research proceeds.
+        </p>
+        <p className="mt-2 leading-relaxed">
+          Figures drawn from the completed case-filed record are recalculated
+          automatically whenever the data changes. If a number no longer agrees
+          with the verified parish records, publication is blocked until the
+          discrepancy is resolved. A completed deep dive can refine a date,
+          status, or interpretation, but its sources and unresolved conflicts
+          remain visible.
         </p>
       </section>
 
