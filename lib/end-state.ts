@@ -14,6 +14,12 @@
 // ============================================================================
 
 import type { LithuanianIdentity, BuildingFate } from "@/lib/parishes";
+import {
+  PARISH_STATUS_DESCRIPTION,
+  PARISH_STATUS_LABEL,
+  PARISH_STATUS_ORDER,
+  type ParishStatusGroup,
+} from "@/lib/status-copy";
 
 export type EndState =
   | "active_parish"
@@ -25,12 +31,12 @@ export type EndState =
   | "repurposed"
   | "unverified";
 
-/** Canonical display order — life first, then transfer, then loss. */
+/** Canonical display order — life first, then uncertainty, transfer, and loss. */
 export const END_STATE_ORDER: EndState[] = [
   "active_parish",
   "mass_continues",
-  "transferred",
   "unresolved",
+  "transferred",
   "closed",
   "demolished",
   "repurposed",
@@ -38,25 +44,25 @@ export const END_STATE_ORDER: EndState[] = [
 ];
 
 export const END_STATE_LABEL: Record<EndState, string> = {
-  active_parish: "Active Lithuanian parish",
-  mass_continues: "Lithuanian Mass continues",
-  transferred: "Ethnically transferred",
-  unresolved: "Unresolved",
-  closed: "Closed",
-  demolished: "Closed — demolished",
-  repurposed: "Closed — repurposed",
-  unverified: "Not yet verified",
+  active_parish: PARISH_STATUS_LABEL.active_parish,
+  mass_continues: PARISH_STATUS_LABEL.mass_continues,
+  transferred: PARISH_STATUS_LABEL.transferred,
+  unresolved: PARISH_STATUS_LABEL.unresolved,
+  closed: PARISH_STATUS_LABEL.closed,
+  demolished: "Closed — church demolished",
+  repurposed: "Closed — building sold on",
+  unverified: PARISH_STATUS_LABEL.unverified,
 };
 
 export const END_STATE_SHORT: Record<EndState, string> = {
-  active_parish: "Active",
-  mass_continues: "Mass continues",
-  transferred: "Transferred",
-  unresolved: "Unresolved",
-  closed: "Closed",
-  demolished: "Demolished",
-  repurposed: "Repurposed",
-  unverified: "Unverified",
+  active_parish: PARISH_STATUS_LABEL.active_parish,
+  mass_continues: PARISH_STATUS_LABEL.mass_continues,
+  transferred: PARISH_STATUS_LABEL.transferred,
+  unresolved: PARISH_STATUS_LABEL.unresolved,
+  closed: PARISH_STATUS_LABEL.closed,
+  demolished: "Church demolished",
+  repurposed: "Building sold on",
+  unverified: PARISH_STATUS_LABEL.unverified,
 };
 
 export const END_STATE_COLOR: Record<EndState, string> = {
@@ -83,31 +89,14 @@ export const END_STATE_TEXT: Record<EndState, string> = {
 };
 
 /** The six visual groups (loss sub-fates collapsed) for bars and legends. */
-export type EndStateGroup =
-  | "active_parish"
-  | "mass_continues"
-  | "transferred"
-  | "unresolved"
-  | "closed"
-  | "unverified";
+export type EndStateGroup = ParishStatusGroup;
 
-export const GROUP_ORDER: EndStateGroup[] = [
-  "active_parish",
-  "mass_continues",
-  "transferred",
-  "unresolved",
-  "closed",
-  "unverified",
-];
+export const GROUP_ORDER: EndStateGroup[] = [...PARISH_STATUS_ORDER];
 
-export const GROUP_LABEL: Record<EndStateGroup, string> = {
-  active_parish: "Active Lithuanian parish",
-  mass_continues: "Lithuanian Mass continues",
-  transferred: "Ethnically transferred",
-  unresolved: "Unresolved",
-  closed: "Closed",
-  unverified: "Not yet verified",
-};
+export const GROUP_LABEL: Record<EndStateGroup, string> = PARISH_STATUS_LABEL;
+
+export const GROUP_DESCRIPTION: Record<EndStateGroup, string> =
+  PARISH_STATUS_DESCRIPTION;
 
 export function toGroup(s: EndState): EndStateGroup {
   if (s === "demolished" || s === "repurposed") return "closed";

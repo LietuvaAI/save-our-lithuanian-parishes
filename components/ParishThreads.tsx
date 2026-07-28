@@ -63,12 +63,12 @@ const FATE_ORDER: FateKey[] = [
 ];
 
 const GROUP_SUBLABEL: Record<EndStateGroup, string> = {
-  active_parish: "a functioning Lithuanian parish",
-  mass_continues: "Mass survives in a merged or host parish",
-  transferred: "the church now serves another community",
-  unresolved: "canonically undecided — under threat",
-  closed: "the parish is gone; the buildings' fates →",
-  unverified: "fate not yet established",
+  active_parish: "regular Lithuanian worship",
+  mass_continues: "inside a parish no longer Lithuanian-led",
+  transferred: "the church serves another community today",
+  unresolved: "contested or canonically undecided",
+  closed: "parish closed; building fate follows →",
+  unverified: "present status still being researched",
 };
 
 const FATE_OPACITY: Record<FateKey, number> = {

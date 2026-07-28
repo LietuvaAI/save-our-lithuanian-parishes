@@ -15,6 +15,7 @@
 // ============================================================================
 
 import type { LithuanianIdentity, BuildingFate } from "@/lib/parishes";
+import { PARISH_STATUS_LABEL } from "@/lib/status-copy";
 
 // ── Dimension 1: Lithuanian Identity ─────────────────────────────────────────
 // The cultural inheritance question. Reuses LithuanianIdentity from
@@ -23,11 +24,11 @@ import type { LithuanianIdentity, BuildingFate } from "@/lib/parishes";
 export type IdentityStatus = LithuanianIdentity | "unknown";
 
 export const IDENTITY_LABEL: Record<IdentityStatus, string> = {
-  active_parish: "Identity active",
-  mass_continues: "Mass continues",
-  ethnically_transferred: "Transferred",
+  active_parish: PARISH_STATUS_LABEL.active_parish,
+  mass_continues: PARISH_STATUS_LABEL.mass_continues,
+  ethnically_transferred: PARISH_STATUS_LABEL.transferred,
   lost: "Identity lost",
-  unknown: "Unverified",
+  unknown: PARISH_STATUS_LABEL.unverified,
 };
 
 export const IDENTITY_COLOR: Record<IdentityStatus, string> = {

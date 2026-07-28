@@ -11,6 +11,7 @@ import { EndStatePill } from "@/components/EndStatePill";
 import { ProfileSourceLedger } from "@/components/ProfileSourceLedger";
 import ParishContextMap from "@/components/ParishContextMap";
 import contextPoints from "@/data/context-points.json";
+import { GROUP_DESCRIPTION } from "@/lib/end-state";
 import {
   finalizeProfileSources,
   linkedProfileSources,
@@ -276,17 +277,17 @@ export default async function RegistryParishPage({
     switch (scoped.endState) {
       case "active_parish":
         return {
-          dek: `${f}The record shows an active Lithuanian parish today.`,
+          dek: `${f}${GROUP_DESCRIPTION.active_parish}`,
           rest: null,
         };
       case "mass_continues":
         return {
-          dek: `${f}A Lithuanian Mass continues here inside a parish that is no longer Lithuanian-led.`,
+          dek: `${f}${GROUP_DESCRIPTION.mass_continues}`,
           rest: null,
         };
       case "transferred":
         return {
-          dek: `${f}The building or parish life continues, but its Lithuanian parish identity has ended.`,
+          dek: `${f}${GROUP_DESCRIPTION.transferred}`,
           rest: null,
         };
       case "demolished":
@@ -306,12 +307,12 @@ export default async function RegistryParishPage({
         };
       case "unresolved":
         return {
-          dek: `${f}The record marks this case as unresolved until the source conflict is settled.`,
+          dek: `${f}${GROUP_DESCRIPTION.unresolved}`,
           rest: null,
         };
     }
     return {
-      dek: `${f}Attested in ${axes.length} ${axes.length === 1 ? "source" : "sources"}; its fate has not yet been established.`,
+      dek: `${f}${GROUP_DESCRIPTION.unverified}`,
       rest: null,
     };
   })();

@@ -2,6 +2,7 @@ import parishesJson from "@/data/parishes.json";
 import figuresJson from "@/data/figures.json";
 import draugasLinksJson from "@/data/draugas-links.json";
 import situationJson from "@/data/parish-situation.json";
+import { PARISH_STATUS_LABEL } from "@/lib/status-copy";
 
 export type Ownership = "diocese_rc" | "national_catholic" | "other_self_owned";
 export type ParishStatus =
@@ -202,9 +203,9 @@ export const BUILDING_FATE_LABEL: Record<BuildingFate, string> = {
 };
 
 export const LITHUANIAN_IDENTITY_LABEL: Record<LithuanianIdentity, string> = {
-  active_parish: "Lithuanian identity active",
-  mass_continues: "Lithuanian Mass continues",
-  ethnically_transferred: "Ethnically transferred",
+  active_parish: PARISH_STATUS_LABEL.active_parish,
+  mass_continues: PARISH_STATUS_LABEL.mass_continues,
+  ethnically_transferred: PARISH_STATUS_LABEL.transferred,
   lost: "Lithuanian identity lost",
 };
 

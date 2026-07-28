@@ -13,7 +13,7 @@
 //   ink + gold ring     = open today but under active threat (kind=active)
 //   gold filled         = genuinely unresolved / undecided fate
 //   purple filled       = building at physical risk (kind=building)
-//   grey hollow         = in the record; fate not yet established
+//   grey hollow         = in the record; present status being verified
 // Who-decided (ending mode) and ownership stay in each parish's popup and
 // profile — the map itself reads at a glance. Views: All · Open today ·
 // Under threat · Lost.
@@ -27,13 +27,20 @@ import {
   ENDING_MODE_LABEL,
   OWNERSHIP_LABEL,
 } from "@/lib/parishes";
-import { resolveEndState, toGroup } from "@/lib/end-state";
+import {
+  GROUP_DESCRIPTION,
+  GROUP_LABEL,
+  resolveEndState,
+  toGroup,
+  type EndStateGroup,
+} from "@/lib/end-state";
 import contextPoints from "@/data/context-points.json";
 
 const FULL = (regData as { frame?: { x: number; y: number; w: number; h: number } })
   .frame ?? { x: 0, y: 0, w: 975, h: 610 };
 const MAX_ZOOM = 20;
 const NE_STATES = new Set(["ME", "NH", "VT", "MA", "RI", "CT", "NY", "NJ", "PA", "MD"]);
+const MW_STATES = new Set(["IL", "IN", "OH", "MI", "WI", "MN", "IA", "MO"]);
 
 type View = { x: number; y: number; w: number; h: number };
 // Status drives fill color. alerted (gold ring) is a separate boolean.
@@ -49,6 +56,7 @@ interface Point {
   x: number;
   y: number;
   status: Status;
+  group: EndStateGroup;
   // alerted = true → draw a gold ring around the dot (kind=active alerts)
   alerted: boolean;
   // inAlerts = true → appears in "Under threat" filter even if status isn't threat/building
@@ -67,13 +75,13 @@ interface Point {
 }
 
 const STATUS_LABEL: Record<Status, string> = {
-  lost: "Closed",
-  open: "Active Lithuanian parish",
-  mass: "Lithuanian Mass continues",
-  threat: "Unresolved — under threat",
+  lost: GROUP_LABEL.closed,
+  open: GROUP_LABEL.active_parish,
+  mass: GROUP_LABEL.mass_continues,
+  threat: GROUP_LABEL.unresolved,
   building: "Building at risk",
-  unknown: "Fate not yet established",
-  transferred: "Lives on, another community",
+  unknown: GROUP_LABEL.unverified,
+  transferred: GROUP_LABEL.transferred,
 };
 
 const FILL: Record<Status, string> = {
@@ -133,10 +141,11 @@ function buildPoints(): Point[] {
       isStanding,
       p.endingMode,
     );
+    const group = toGroup(endState);
     const status: Status =
-      alert?.kind === "building" ? "building" : GROUP_STATUS[toGroup(endState)];
+      alert?.kind === "building" ? "building" : GROUP_STATUS[group];
     const fate: Point["fate"] =
-      status !== "lost"
+      group !== "closed"
         ? null
         : endState === "demolished"
           ? "demolished"
@@ -152,6 +161,7 @@ function buildPoints(): Point[] {
       x: pt.x,
       y: pt.y,
       status,
+      group,
       alerted,
       inAlerts,
       alertText: alert?.whatChanged ?? null,
@@ -182,15 +192,16 @@ function buildPoints(): Point[] {
 
     // Same layer the profile context maps and dispatch renderer use —
     // zero drift with the shared resolver.
-    const group = contextGroupBySlug.get(c.slug);
+    const group =
+      (contextGroupBySlug.get(c.slug) as EndStateGroup | undefined) ??
+      (c.closedYear ? "closed" : "unverified");
     const status: Status =
       alert?.kind === "building"
         ? "building"
-        : (group && GROUP_STATUS[group]) ||
-          (c.closedYear ? "lost" : "unknown");
+        : GROUP_STATUS[group];
     const bf = (c as { buildingFate?: string | null }).buildingFate;
     const fate: Point["fate"] =
-      status !== "lost"
+      group !== "closed"
         ? null
         : bf === "demolished"
           ? "demolished"
@@ -206,6 +217,7 @@ function buildPoints(): Point[] {
       x: c.x,
       y: c.y,
       status,
+      group,
       alerted,
       inAlerts,
       alertText: alert?.whatChanged ?? null,
@@ -293,14 +305,23 @@ export default function ParishMap() {
   );
 
   const statusCounts = useMemo(() => {
-    const c = { all: classPoints.length, open: 0, mass: 0, threat: 0, lost: 0, unknown: 0, building: 0, transferred: 0 };
+    const c = {
+      all: classPoints.length,
+      open: 0,
+      mass: 0,
+      unresolved: 0,
+      threat: 0,
+      lost: 0,
+      unknown: 0,
+      transferred: 0,
+    };
     for (const p of classPoints) {
-      if (p.status === "open") c.open++;
-      else if (p.status === "mass") c.mass++;
-      else if (p.status === "lost") c.lost++;
-      else if (p.status === "building") c.building++;
-      else if (p.status === "unknown") c.unknown++;
-      else if (p.status === "transferred") c.transferred++;
+      if (p.group === "active_parish") c.open++;
+      else if (p.group === "mass_continues") c.mass++;
+      else if (p.group === "unresolved") c.unresolved++;
+      else if (p.group === "closed") c.lost++;
+      else if (p.group === "unverified") c.unknown++;
+      else if (p.group === "transferred") c.transferred++;
     }
     // "threat" filter = all that are alerted, genuinely unresolved, or building at risk
     c.threat = classPoints.filter(
@@ -308,8 +329,6 @@ export default function ParishMap() {
     ).length;
     return c;
   }, [classPoints]);
-
-  const MW_STATES = new Set(["IL", "IN", "OH", "MI", "WI", "MN", "IA", "MO"]);
 
   function regionView(states: Set<string>) {
     const pts = POINTS.filter((p) => states.has(p.state));
@@ -383,30 +402,30 @@ export default function ParishMap() {
         : "text-muted hover:text-foreground"
     }`;
   const statusTab = (active: boolean) =>
-    `inline-flex min-h-9 shrink-0 items-center border-b-2 px-2 py-1.5 text-xs font-medium whitespace-nowrap transition-colors sm:px-2.5 sm:text-sm ${
+    `inline-flex min-h-9 shrink-0 items-center border-b-2 px-1.5 py-1.5 text-xs font-medium whitespace-nowrap transition-colors sm:px-2 ${
       active
         ? "border-foreground text-foreground"
         : "border-transparent text-muted hover:border-rule hover:text-foreground"
     }`;
 
-  const knownPoints = classPoints.filter((p) => p.status !== "unknown");
-  const archivePoints = classPoints.filter((p) => p.status === "unknown");
+  const knownPoints = classPoints.filter((p) => p.group !== "unverified");
+  const archivePoints = classPoints.filter((p) => p.group === "unverified");
 
   const statusFiltered =
     mode === "all"
       ? knownPoints
       : mode === "open"
-        ? knownPoints.filter((p) => p.status === "open")
+        ? knownPoints.filter((p) => p.group === "active_parish")
         : mode === "mass"
-          ? knownPoints.filter((p) => p.status === "mass")
+          ? knownPoints.filter((p) => p.group === "mass_continues")
         : mode === "lost"
           ? knownPoints.filter(
               (p) =>
-                (p.status === "lost" || p.status === "building") &&
+                p.group === "closed" &&
                 (lostFate === "all" || p.fate === lostFate),
             )
           : mode === "transferred"
-            ? knownPoints.filter((p) => p.status === "transferred")
+            ? knownPoints.filter((p) => p.group === "transferred")
             : knownPoints.filter((p) => p.inAlerts || p.status === "threat" || p.status === "building");
 
   const visible = statusFiltered;
@@ -489,13 +508,13 @@ export default function ParishMap() {
             </button>
             <SwatchBtn
               fill="var(--es-active)"
-              label={`Active · ${statusCounts.open}`}
+              label={`${GROUP_LABEL.active_parish} · ${statusCounts.open}`}
               active={mode === "open"}
               onClick={() => setMode("open")}
             />
             <SwatchBtn
               fill="var(--es-mass)"
-              label={`Mass continues · ${statusCounts.mass}`}
+              label={`${GROUP_LABEL.mass_continues} · ${statusCounts.mass}`}
               active={mode === "mass"}
               onClick={() => setMode("mass")}
             />
@@ -508,13 +527,13 @@ export default function ParishMap() {
             />
             <SwatchBtn
               fill="var(--es-transferred)"
-              label={`Transferred · ${statusCounts.transferred}`}
+              label={`${GROUP_LABEL.transferred} · ${statusCounts.transferred}`}
               active={mode === "transferred"}
               onClick={() => setMode("transferred")}
             />
             <SwatchBtn
               fill="var(--es-closed)"
-              label={`Closed · ${statusCounts.lost}`}
+              label={`${GROUP_LABEL.closed} · ${statusCounts.lost}`}
               active={mode === "lost"}
               onClick={() => { setMode("lost"); setLostFate("all"); }}
             />
@@ -523,7 +542,7 @@ export default function ParishMap() {
 
         {/* How each closure ended — sub-fates, same vocabulary as the flow chart */}
         {mode === "lost" && (() => {
-          const lostPts = knownPoints.filter((p) => p.status === "lost" || p.status === "building");
+          const lostPts = knownPoints.filter((p) => p.group === "closed");
           const n = (f: "closed" | "demolished" | "repurposed") =>
             lostPts.filter((p) => p.fate === f).length;
           const sub = (key: "all" | "closed" | "demolished" | "repurposed", label: string) => (
@@ -582,7 +601,7 @@ export default function ParishMap() {
             />
           )}
 
-          {/* Archive crosses — parishes with unestablished fate, shown when toggled */}
+          {/* Archive crosses — parishes being verified, shown when toggled */}
           {showArchived && archivePoints.map((p) => {
             const isHov = hovered?.id === p.id;
             const r = isHov ? markR * 1.2 : markR * 0.9;
@@ -594,7 +613,7 @@ export default function ParishMap() {
                 onKeyDown={(e) => { if (e.key === "Enter") openPoint(p); }}
                 tabIndex={p.profile ? 0 : 0}
                 role="img"
-                aria-label={`${p.name}, ${p.city} ${p.state} — fate not yet established`}
+                aria-label={`${p.name}, ${p.city} ${p.state} — ${GROUP_LABEL.unverified}`}
                 className="cursor-default focus:outline-none"
               >
                 <line x1={p.x - r} y1={p.y} x2={p.x + r} y2={p.y}
@@ -756,12 +775,12 @@ export default function ParishMap() {
             <dl className="mt-2 grid grid-cols-2 gap-x-3 gap-y-2 text-xs lg:grid-cols-1 lg:gap-y-2.5">
               {(
                 [
-                  ["var(--es-active)", `Active · ${statusCounts.open}`, "Regular Lithuanian worship."],
-                  ["var(--es-mass)", `Mass continues · ${statusCounts.mass}`, "Lithuanian Mass inside a parish no longer Lithuanian-led."],
-                  ["var(--mark-ink)", `Unresolved · ${knownPoints.filter((p) => p.status === "threat").length}`, "The parish or building's fate is not final."],
-                  ["var(--es-transferred)", `Transferred · ${statusCounts.transferred}`, "The church now serves another community."],
-                  ["var(--es-closed)", `Closed · ${statusCounts.lost}`, "The parish was closed, merged, suppressed, or demolished."],
-                  ["var(--muted)", `Being verified · ${statusCounts.unknown}`, "Present status is still being researched."],
+                  ["var(--es-active)", `${GROUP_LABEL.active_parish} · ${statusCounts.open}`, GROUP_DESCRIPTION.active_parish],
+                  ["var(--es-mass)", `${GROUP_LABEL.mass_continues} · ${statusCounts.mass}`, GROUP_DESCRIPTION.mass_continues],
+                  ["var(--mark-ink)", `${GROUP_LABEL.unresolved} · ${statusCounts.unresolved}`, GROUP_DESCRIPTION.unresolved],
+                  ["var(--es-transferred)", `${GROUP_LABEL.transferred} · ${statusCounts.transferred}`, GROUP_DESCRIPTION.transferred],
+                  ["var(--es-closed)", `${GROUP_LABEL.closed} · ${statusCounts.lost}`, GROUP_DESCRIPTION.closed],
+                  ["var(--muted)", `${GROUP_LABEL.unverified} · ${statusCounts.unknown}`, GROUP_DESCRIPTION.unverified],
                 ] as [string, string, string][]
               ).map(([fill, label, text]) => (
                 <div key={label} className="flex min-w-0 gap-2">
@@ -865,7 +884,7 @@ function SwatchBtn({
       disabled={disabled}
       onClick={onClick}
       aria-pressed={active}
-      className={`inline-flex min-h-9 shrink-0 items-center gap-1.5 border-b-2 px-2 py-1.5 text-xs font-medium whitespace-nowrap transition-colors sm:px-2.5 sm:text-sm ${
+      className={`inline-flex min-h-9 shrink-0 items-center gap-1 border-b-2 px-1.5 py-1.5 text-xs font-medium whitespace-nowrap transition-colors sm:px-2 ${
         active
           ? "border-foreground text-foreground"
           : "border-transparent text-muted hover:border-rule hover:text-foreground"
