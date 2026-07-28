@@ -44,10 +44,6 @@ const NAV: NavItem[] = [
     children: [
       { href: "/by-diocese", label: "By Diocese" },
       {
-        href: "/who-does-the-parish-belong-to",
-        label: "Ownership & Survival",
-      },
-      {
         href: "/pennsylvania-coal-region",
         label: "Pennsylvania Coal Region",
       },
