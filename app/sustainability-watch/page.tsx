@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { getClearedPhoto, clearedOrNull } from "@/lib/photos";
 import Link from "next/link";
 import alertsData from "@/data/alerts.json";
 import { parishes } from "@/lib/parishes";
@@ -187,9 +188,23 @@ export default function SustainabilityWatchPage() {
 
       <div className="mt-10 space-y-6">
         {entries.map((e) => {
-          const photo = (e as any).photo as
-            | { url: string; alt: string; attribution: string; license?: string }
-            | undefined;
+          // Photos come from the rights registry (lib/photos.ts gate) —
+          // cleared images only. The alerts-entry photo is a legacy
+          // fallback and passes through the same gate, so a purged or
+          // unlicensed image renders nothing rather than a broken box.
+          const slug = e.parishLink.split("/").pop() ?? "";
+          const cleared = getClearedPhoto(slug);
+          const legacy = clearedOrNull((e as any).photo);
+          const photo = cleared
+            ? {
+                url: cleared.src,
+                alt: cleared.alt,
+                attribution: cleared.attribution,
+                license: cleared.license,
+              }
+            : (legacy as
+                | { url: string; alt: string; attribution: string; license?: string }
+                | null) ?? undefined;
           return (
             <article
               key={e.id}
