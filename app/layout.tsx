@@ -29,15 +29,24 @@ export const metadata: Metadata = {
 
 type NavItem =
   | { href: string; label: string }
-  | { label: string; children: { href: string; label: string }[] };
+  | {
+      label: string;
+      menuAlign?: "left" | "right";
+      children: { href: string; label: string }[];
+    };
 
 const NAV: NavItem[] = [
   { href: "/record", label: "The Record" },
   { href: "/history", label: "The History" },
   {
     label: "Views",
+    menuAlign: "right",
     children: [
       { href: "/by-diocese", label: "By Diocese" },
+      {
+        href: "/who-does-the-parish-belong-to",
+        label: "Ownership & Survival",
+      },
       {
         href: "/pennsylvania-coal-region",
         label: "Pennsylvania Coal Region",
@@ -99,7 +108,13 @@ export default function RootLayout({
                       {item.label}
                       <span className="text-[10px] opacity-60">▾</span>
                     </button>
-                    <div className="absolute top-full left-0 hidden group-hover:flex group-focus-within:flex flex-col pt-2 min-w-max z-50">
+                    <div
+                      className={`absolute top-full hidden min-w-max flex-col pt-2 z-50 group-hover:flex group-focus-within:flex ${
+                        item.menuAlign === "right"
+                          ? "right-0 sm:left-0 sm:right-auto"
+                          : "left-0"
+                      }`}
+                    >
                       <div className="flex flex-col bg-background border border-rule rounded-md shadow-md py-1">
                         {item.children.map((child) => (
                           <Link
@@ -176,6 +191,12 @@ export default function RootLayout({
               </Link>
               <Link href="/by-diocese" className="hover:text-foreground">
                 By Diocese
+              </Link>
+              <Link
+                href="/who-does-the-parish-belong-to"
+                className="hover:text-foreground"
+              >
+                Ownership &amp; Survival
               </Link>
               <Link
                 href="/pennsylvania-coal-region"

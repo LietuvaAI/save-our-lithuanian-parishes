@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AboutNav from "@/components/AboutNav";
-import { figures } from "@/lib/parishes";
-import { usRegistryParishes } from "@/lib/registry-scope";
-
-const documentedUSRecords = usRegistryParishes().length;
 
 export const metadata: Metadata = {
   title: "About the Project",
   description:
-    "Why Save Our Lithuanian Parishes keeps the complete, sourced public record of America's Lithuanian parishes.",
+    "Why Save Our Lithuanian Parishes keeps a connected, sourced public record of Lithuanian parish life in America.",
 };
 
 export default function AboutPage() {
@@ -20,86 +16,109 @@ export default function AboutPage() {
         About the Project
       </h1>
       <p className="mt-4 text-lg leading-relaxed text-muted">
-        Save Our Lithuanian Parishes keeps the complete public record of the
-        communities Lithuanian immigrants built across America: how each parish
-        began, what sustained it, what changed, where the community and church
-        stand today, and what one parish can learn from another.
+        Save Our Lithuanian Parishes is a public record and living-memory
+        project devoted to the communities Lithuanian immigrants built across
+        America. It keeps each parish&rsquo;s past and present connected so
+        communities can understand what came before, see what is happening now,
+        and learn from one another.
       </p>
 
       <AboutNav current="project" />
 
       <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
-          One parish, one connected story
-        </h2>
+        <h2 className="font-serif text-2xl font-semibold">Why it exists</h2>
         <div className="mt-3 space-y-4 leading-relaxed">
           <p>
-            The record currently contains{" "}
-            <strong>{documentedUSRecords} documented U.S. parish and congregation records</strong>.
-            Each profile is meant to hold the whole story together: founding,
-            Lithuanian identity, liturgical life, governance, turning points,
-            canonical status, building fate, current use, and the evidence
-            behind every claim.
+            Lithuanian parishes have long been the <em>židiniai</em> of their
+            communities: hearths of faith, language, memory, education, mutual
+            aid, and identity. A parish story is therefore never only the story
+            of a church building. It is the story of the people and institutions
+            gathered around it.
           </p>
           <p>
-            Historical research and current intelligence meet in the same
-            record. The archives explain how a community arrived at the present;
-            parish, diocesan, civil, and community sources show what is happening
-            now. Active campaigns and sustainability concerns remain separate
-            from the parish&rsquo;s canonical status so a current alert never
-            silently rewrites the historical record.
-          </p>
-        </div>
-      </section>
-
-      <section id="ownership" className="mt-12 scroll-mt-20">
-        <h2 className="font-serif text-2xl font-semibold">
-          Ownership is one part of the story
-        </h2>
-        <div
-          className="mt-4 border-l-4 py-1 pl-4"
-          style={{ borderColor: "var(--mark-closed)" }}
-        >
-          <p className="font-medium">Know who holds the deed.</p>
-          <p className="mt-1 text-sm leading-relaxed text-muted">
-            Find your parish among the documented parishes. See its ownership,
-            its outcome, and how its story compares with the rest of the record.
-          </p>
-        </div>
-        <div className="mt-4 space-y-4 leading-relaxed">
-          <p>
-            That remains a necessary question because ownership can shape who
-            has authority over parish property and what options a community has.
-            It is not, however, the whole purpose of this project. Ownership now
-            sits beside the parish&rsquo;s faith, people, institutions, memory,
-            canonical life, and present condition.
-          </p>
-          <p>
-            In the locked 83-parish <em>Draugas</em> case-filed core,{" "}
-            <strong>{figures.endingMode.diocese_closed}</strong> parishes were
-            closed by diocesan decision; all were diocese-owned. None of the{" "}
-            <strong>{figures.communityOwned.total}</strong> community-owned
-            cases was closed by an outside authority. That is a documented
-            pattern within a specifically bounded corpus, not a substitute for
-            the individual evidence and circumstances in each parish profile.
-          </p>
-          <p className="text-sm text-muted">
-            The scope, definitions, and safeguards behind those figures are
-            explained in{" "}
-            <Link
-              href="/about-the-data"
-              className="underline hover:text-foreground"
-            >
-              About the Data
-            </Link>
-            .
+            When those stories are scattered across archives, diocesan records,
+            private collections, local memory, and current news, each community
+            is left to understand its situation alone. This project brings the
+            record together and keeps it public.
           </p>
         </div>
       </section>
 
       <section className="mt-12">
+        <h2 className="font-serif text-2xl font-semibold">What we are building</h2>
+        <div className="mt-4 divide-y divide-rule border-y border-rule">
+          <div className="py-4">
+            <h3 className="font-medium">A connected parish record</h3>
+            <p className="mt-1 text-sm leading-relaxed text-muted">
+              Each parish profile is meant to tell one coherent story across
+              founding, worship, community life, governance, turning points,
+              present condition, and the evidence behind the record.
+            </p>
+          </div>
+          <div className="py-4">
+            <h3 className="font-medium">A bridge between archive and present</h3>
+            <p className="mt-1 text-sm leading-relaxed text-muted">
+              Historical research explains how a community arrived here.
+              Current parish, diocesan, civil, and community sources show what
+              is happening now.
+            </p>
+          </div>
+          <div className="py-4">
+            <h3 className="font-medium">Shared knowledge communities can use</h3>
+            <p className="mt-1 text-sm leading-relaxed text-muted">
+              The record connects communities facing similar questions while
+              keeping documented history, present-day alerts, interpretation,
+              and advocacy visibly distinct.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-12">
         <h2 className="font-serif text-2xl font-semibold">
-          What this record does not argue
+          Principles of the project
+        </h2>
+        <div className="mt-4 space-y-4 leading-relaxed">
+          <p>
+            <strong>One parish, one canonical record.</strong> Public pages
+            should read from the same underlying identity, chronology, status,
+            and evidence rather than accumulating competing overlays.
+          </p>
+          <p>
+            <strong>Evidence stays attached.</strong> Readers should be able to
+            follow a claim back to the newspaper issue, archive book, official
+            notice, public record, or current source that supports it.
+          </p>
+          <p>
+            <strong>Uncertainty remains visible.</strong> Conflicting dates,
+            incomplete matches, unresolved status, and missing evidence are
+            named rather than silently converted into certainty.
+          </p>
+          <p>
+            <strong>The record can be corrected.</strong> New evidence is
+            welcomed, reviewed, and incorporated without erasing the reasoning
+            behind a change.
+          </p>
+        </div>
+        <p className="mt-4 text-sm leading-relaxed text-muted">
+          The detailed rules live in{" "}
+          <Link href="/about-the-data" className="underline hover:text-foreground">
+            About the Data
+          </Link>
+          ; the evidence ecosystem lives in{" "}
+          <Link
+            href="/about/sources-and-archives"
+            className="underline hover:text-foreground"
+          >
+            Sources &amp; Archives
+          </Link>
+          .
+        </p>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="font-serif text-2xl font-semibold">
+          What this project does not argue
         </h2>
         <p className="mt-3 leading-relaxed">
           This project documents what happened and helps communities understand
@@ -113,7 +132,7 @@ export default function AboutPage() {
 
       <section className="mt-12">
         <h2 className="font-serif text-2xl font-semibold">
-          Why we keep the record
+          In the tradition of the book carriers
         </h2>
         <div className="mt-3 space-y-4 leading-relaxed">
           <p>
@@ -124,52 +143,15 @@ export default function AboutPage() {
             information network when the institutions around them would not.
           </p>
           <p>
-            This project works in that tradition. Decisions about parish futures
-            are often made inside processes that are difficult for communities
-            to see as a whole. We keep the record ourselves: open, sourced, and
-            growing backward through the archives and forward through current
-            reports, campaigns, and corrections.
+            This project works in that tradition: keeping memory in circulation,
+            making knowledge public, and carrying the experience of one
+            community to the next.
           </p>
           <p className="text-muted">
             The parish record is Lithuanian. The procedural guidance is
             universal and is written for any community facing the same kind of
             decision.
           </p>
-        </div>
-      </section>
-
-      <section className="mt-12">
-        <h2 className="font-serif text-2xl font-semibold">
-          From record to action
-        </h2>
-        <div className="mt-4 divide-y divide-rule border-y border-rule">
-          <Link
-            href="/record"
-            className="block py-3.5 hover:text-accent"
-          >
-            <span className="font-medium">Find a parish</span>
-            <span className="ml-2 text-sm text-muted">
-              Read its profile and evidence ledger
-            </span>
-          </Link>
-          <Link
-            href="/under-threat"
-            className="block py-3.5 hover:text-accent"
-          >
-            <span className="font-medium">See what is happening now</span>
-            <span className="ml-2 text-sm text-muted">
-              Current alerts and active campaigns
-            </span>
-          </Link>
-          <Link
-            href="/start-here"
-            className="block py-3.5 hover:text-accent"
-          >
-            <span className="font-medium">Facing a closure</span>
-            <span className="ml-2 text-sm text-muted">
-              Deadlines, questions, and documented precedents
-            </span>
-          </Link>
         </div>
       </section>
 
