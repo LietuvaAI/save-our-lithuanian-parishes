@@ -157,6 +157,43 @@ export default function AboutPage() {
 
       <section className="mt-12">
         <h2 className="font-serif text-2xl font-semibold">
+          The student archive behind the record
+        </h2>
+        <div className="mt-3 space-y-4 leading-relaxed">
+          <p>
+            The research behind this project was made possible by{" "}
+            <a
+              href="https://archyvas.ziburioltmokykla.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-accent"
+            >
+              Skaitmeniniai Knygnešiai
+            </a>
+            , the Žiburio Lithuanian School&rsquo;s student digital archive.
+            Student interns in Detroit preserve, organize, and provide public
+            access to books and documentary sources that would otherwise remain
+            difficult for communities and researchers to reach.
+          </p>
+          <p>
+            The archive is not simply one source consulted by this project. It
+            is part of the infrastructure that made the parish record possible:
+            giving the research a public source trail and carrying Lithuanian
+            memory into the hands of a new generation.
+          </p>
+        </div>
+        <a
+          href="https://archyvas.ziburioltmokykla.org/internship"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-block font-medium underline underline-offset-4 hover:text-accent"
+        >
+          Meet the student archive internship →
+        </a>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="font-serif text-2xl font-semibold">
           Who keeps the record
         </h2>
         <p className="mt-3 leading-relaxed">
