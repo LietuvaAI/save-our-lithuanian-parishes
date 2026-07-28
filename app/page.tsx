@@ -79,8 +79,8 @@ const ACTIONS = [
     primary: true,
   },
   {
-    title: "Know who holds the deed",
-    body: "Find your parish among the documented parishes. See its ownership, its outcome, and how its story compares to the rest of the record.",
+    title: "Find your parish's story",
+    body: "See how it began, how the community changed, where the parish and church stand today, and the sources behind the record.",
     cta: "Find your parish",
     href: "/record",
     primary: false,
