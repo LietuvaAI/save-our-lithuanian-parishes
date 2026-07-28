@@ -9,10 +9,16 @@ export const metadata: Metadata = {
     "The Lithuanian Protestant and independent congregations documented in the research record — Lutheran, Reformed, Baptist, and independent communities that were part of the full geography of Lithuanian religious life in America. Historical witness.",
 };
 
-type RecSource = { axis?: string; sourceUrl?: string; ethnic_status?: string };
-type Rec = Omit<RegParish, "names" | "sources"> & {
+type RecSource = {
+  axis?: string;
+  sourceUrl?: string;
+  ethnic_status?: string;
+  currentStatus?: string;
+};
+type Rec = Omit<RegParish, "names" | "sources" | "locked"> & {
   names: RegParish["names"] & { variants?: string[] };
   sources?: RecSource[];
+  locked?: RegParish["locked"] & { status?: string };
   city_history?: string[];
   name_variants?: string[];
 };
@@ -21,34 +27,35 @@ const CONGS = (registry as { parishes: Rec[] }).parishes.filter(
   (p) => p.congregation_class === "non_catholic_christian" && isUS(p)
 );
 const sourcesOf = (c: Rec): RecSource[] => c.sources ?? [];
+const isConfirmedActive = (c: Rec): boolean =>
+  c.locked?.status === "standing" ||
+  sourcesOf(c).some(
+    (s) => s.currentStatus === "standing" || s.axis === "truelithuania"
+  );
 
-// Congregations with TrueLithuania field survey source have confirmed present-day addresses
-const confirmed = CONGS.filter((c) =>
-  sourcesOf(c).some((s) => s.axis === "truelithuania")
-);
-const historical = CONGS.filter(
-  (c) => !sourcesOf(c).some((s) => s.axis === "truelithuania")
-);
+const confirmed = CONGS.filter(isConfirmedActive);
+const historical = CONGS.filter((c) => !isConfirmedActive(c));
 
 function sourceLabel(axis: string): string {
   const LABELS: Record<string, string> = {
     "draugas-registry-1909-2007": "Draugas archive (1909–2007)",
+    "draugas-2008-2026": "Draugas archive (2008–2026)",
     wolkovich: "Wolkovich-Valkavičius (1998)",
     "michelsonas-1961": "Michelsonas (1961)",
     truelithuania: "Global True Lithuania field survey",
+    "web-historical": "Current and web research",
   };
   return LABELS[axis] ?? axis;
 }
 
 function CongCard({ c }: { c: Rec }) {
   const axes = [...new Set(sourcesOf(c).map((s) => s.axis).filter(Boolean))] as string[];
-  const hasField = axes.includes("truelithuania");
+  const active = isConfirmedActive(c);
   const name = c.names?.lt || c.names?.en || c.name_variants?.[0] || c.slug;
-  const city = c.city_history?.[0] ?? c.city ?? "";
-  const locationNote =
-    c.city_history && c.city_history.length > 1
-      ? `Now ${c.city} (formerly ${c.city_history.slice(1).join(", ")})`
-      : null;
+  const city = c.city ?? c.city_history?.[0] ?? "";
+  const locationNote = c.city_history?.length
+    ? `Earlier locations: ${c.city_history.join(" · ")}`
+    : null;
   const tl = sourcesOf(c).find((s) => s.axis === "truelithuania");
   const nameVariants = (c.name_variants ?? c.names?.variants ?? []).filter(
     (v: string) => v !== name
@@ -58,7 +65,7 @@ function CongCard({ c }: { c: Rec }) {
       <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
         <span className="font-serif text-base font-semibold">{name}</span>
         <div className="flex items-center gap-2">
-          {hasField && (
+          {active && (
             <span
               className="inline-flex rounded-full px-2 py-0.5 text-xs font-medium"
               style={{ background: "var(--mark-standing)", color: "#fff" }}
@@ -133,12 +140,10 @@ export default function ProtestantPage() {
       {/* Active congregations */}
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          {confirmed.length} congregations with confirmed present addresses
+          {confirmed.length} active congregations
         </h2>
         <p className="mt-1 text-sm text-muted">
-          These congregations were documented at their current addresses by the
-          Global True Lithuania field survey and are corroborated by the{" "}
-          <em>Draugas</em> archive or Wolkovich. They are the four standing
+          Current and case-file evidence identifies these as the four standing
           Lithuanian Lutheran congregations in the United States.
         </p>
         <div className="mt-4 space-y-4">
@@ -177,12 +182,12 @@ export default function ProtestantPage() {
       {/* Historical record */}
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          {historical.length} additional congregations — historical record only
+          {historical.length} additional congregations — current status unverified
         </h2>
         <p className="mt-1 text-sm text-muted">
-          Documented in one or two sources; no contemporary field survey
-          confirmation. These include Reformed, Baptist, and independent
-          communities recorded by Wolkovich and Michelsonas.
+          These congregations are documented in historical sources, but their
+          current operating status has not yet been confirmed. They are not
+          classified as closed unless a source records a closure.
         </p>
         <div className="mt-4 space-y-4">
           {historical.map((c) => (
