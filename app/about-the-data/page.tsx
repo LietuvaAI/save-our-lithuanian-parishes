@@ -11,7 +11,7 @@ const REGISTRY_TOTAL = (registry as { parishes: RegParish[] }).parishes.filter(
 export const metadata: Metadata = {
   title: "About the Data",
   description:
-    "How this record was collected: the full Draugas run, the parish histories, the unified registry, the reversal database — and how every figure is verified.",
+    "How parish evidence moves from the Draugas archive and current official sources through adjudication into the unified registry.",
 };
 
 export default function AboutTheDataPage() {
@@ -22,9 +22,10 @@ export default function AboutTheDataPage() {
         About the Data
       </h1>
       <p className="mt-4 text-lg text-muted leading-relaxed">
-        The full <em>Draugas</em> archive provides the evidence. Parish case
-        files turn that evidence into researched histories. One registry carries
-        the current findings and powers the site.
+        The archive reconstructs each parish&rsquo;s history. Current and
+        official sources establish what exists now. The two records are
+        compared claim by claim before a finding enters the registry that
+        powers this site.
       </p>
 
       <AboutNav current="data" />
@@ -49,18 +50,42 @@ export default function AboutTheDataPage() {
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          2. The parish research — case files
+          2. How a parish becomes part of the record
         </h2>
         <p className="mt-2 leading-relaxed">
-          For each parish deep dive, relevant <em>Draugas</em> articles from the
-          full archive are assembled and checked against books, official
-          documents, and present-day sources. Conflicting names, dates, and
-          status claims remain visible.
+          Each deep dive is completed in two evidence passes, followed by a
+          separate decision about what the sources actually establish.
         </p>
+        <div className="mt-5 border-y border-rule divide-y divide-rule">
+          <div className="py-4 sm:grid sm:grid-cols-[9rem_1fr] sm:gap-5">
+            <h3 className="font-semibold">Archive pass</h3>
+            <p className="mt-1 sm:mt-0 leading-relaxed text-muted">
+              The full <em>Draugas</em> run and page-cited parish histories
+              reconstruct names, identities, events, and timelines.
+            </p>
+          </div>
+          <div className="py-4 sm:grid sm:grid-cols-[9rem_1fr] sm:gap-5">
+            <h3 className="font-semibold">Current record</h3>
+            <p className="mt-1 sm:mt-0 leading-relaxed text-muted">
+              Official parish and diocesan records, legal and property
+              documents, current schedules, and reliable local reporting
+              establish the present congregation, governance, ownership, and
+              use of the building.
+            </p>
+          </div>
+          <div className="py-4 sm:grid sm:grid-cols-[9rem_1fr] sm:gap-5">
+            <h3 className="font-semibold">Adjudication</h3>
+            <p className="mt-1 sm:mt-0 leading-relaxed text-muted">
+              The two evidence packets are compared field by field. Established
+              facts enter the registry; secondary, provisional, conflicting,
+              and unresolved readings remain labeled as such.
+            </p>
+          </div>
+        </div>
         <p className="mt-2 leading-relaxed">
           All <strong>83 U.S. parishes</strong> in the original group now have
           case files. Additional registry records are being researched in the
-          same way, parish by parish.
+          same way, in bounded tranches.
         </p>
       </section>
 
@@ -94,21 +119,18 @@ export default function AboutTheDataPage() {
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          4. Contemporary sources
+          4. Continuing updates
         </h2>
         <p className="mt-2 leading-relaxed">
-          A structured web sweep of present-day sources adds building
-          coordinates, post-2008 status changes, and the only systematic
-          coverage of Canadian Lithuanian parishes. These sources are used
-          within known limits — they contribute locations and status flags,
-          and where one of their narratives failed verification against
-          primary sources, that failure is recorded and the claim excluded.
-          Community reports arriving through{" "}
+          Parish life keeps changing, so current claims carry a source date and
+          are checked again when new evidence appears. Community reports
+          arriving through{" "}
           <Link href="/report" className="underline hover:text-accent">
             the report page
           </Link>{" "}
-          are reviewed before anything is published and are always marked
-          community-reported, distinct from the archive-verified record.
+          are reviewed before publication and remain labeled
+          community-reported until independently verified. Failed claims are
+          recorded and excluded rather than quietly absorbed into the record.
         </p>
       </section>
 
