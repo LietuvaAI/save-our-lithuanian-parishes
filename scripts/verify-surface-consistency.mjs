@@ -60,6 +60,21 @@ for (const [slug, e] of Object.entries(situations)) {
     );
 }
 
+// One dot per record: canonical map points + US registry-map points must
+// equal the US registry record count (The Record's headline number).
+{
+  const registry = read("registry-unified.json").parishes;
+  const usRecords = registry.filter(
+    (r) => r.country !== "CA" && !/buenos aires|argentin|rosario/i.test(r.city ?? ""),
+  ).length;
+  const mapPts = read("map.json").points.length;
+  const regPts = read("registry-map.json").points.filter((p) => p.country !== "CA").length;
+  if (mapPts + regPts !== usRecords)
+    errors.push(
+      `map parity: ${mapPts} canonical + ${regPts} registry dots = ${mapPts + regPts}, but The Record counts ${usRecords} US records`,
+    );
+}
+
 if (errors.length) {
   console.error(`SURFACE CONSISTENCY VIOLATIONS (${errors.length}):`);
   for (const e of errors) console.error("  " + e);
