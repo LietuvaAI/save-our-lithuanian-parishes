@@ -147,23 +147,31 @@ export default function RootLayout({
         <footer className="border-t border-rule mt-16">
           <div className="mx-auto max-w-5xl px-4 py-8 text-sm text-muted space-y-2">
             <p>
-              Every figure on this site is recalculated automatically from
-              the parish record — never typed in by hand. The canon: the
-              full run of the{" "}
-              <em>Draugas</em> archive since 1909 — the 2008–2026 issues, all
-              2,768, read straight through; the 1909–2007 run mined issue by
-              issue — with published parish histories and the national
-              reversal research.
-            </p>
-            <p>
-              The dataset is open.{" "}
+              A sourced public record of Lithuanian parish life in America.{" "}
+              <Link
+                href="/about-the-data"
+                className="underline hover:text-foreground"
+              >
+                Research method
+              </Link>
+              {" · "}
+              <Link
+                href="/about/sources-and-archives"
+                className="underline hover:text-foreground"
+              >
+                Sources &amp; Archives
+              </Link>
+              {" · "}
               <a
                 href="https://github.com/LietuvaAI/save-our-lithuanian-parishes"
                 className="underline hover:text-foreground"
               >
                 Check our numbers
               </a>
-              . Dispatches, alerts, and campaigns:{" "}
+              .
+            </p>
+            <p>
+              Dispatches, alerts, and campaigns:{" "}
               <a
                 href="https://blog.saveourlithuanianparishes.org"
                 className="underline hover:text-foreground"

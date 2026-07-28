@@ -283,42 +283,20 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="py-16 max-w-2xl mx-auto">
+      <section className="py-14 max-w-2xl mx-auto">
         <h2 className="font-serif text-2xl font-semibold">
           The communities built them
         </h2>
         <p className="mt-4 leading-relaxed">
           Lithuanian immigrants raised these churches with their own hands
           and their own wages — and around each one grew a world: a school, a
-          choir, a cemetery, a language kept alive an ocean from home. This
-          record documents all of them. The parishes that closed — and what
-          became of their communities and their buildings afterward. The
-          parishes still standing — and what has kept them alive. The ones
-          fighting for their future right now. What happened to each, where
-          each stands today, and what every community can learn from the
-          others.
-        </p>
-        <p className="mt-4 leading-relaxed">
-          The record teaches in both directions. From the parishes that were
-          lost: ownership shaped endings — the deed rested with the diocese,
-          and no solvency, petition, or late appeal ever reversed a closure.
-          From the parishes that fought and won: procedure, in time, works —
-          Rome has reversed closures{" "}
-          <Link href="/reversals" className="underline hover:text-accent">
-            twenty-six documented times
-          </Link>
-          , when parishioners moved before and during the canonical window.
-          We keep both lessons so no community has to learn them alone.
-        </p>
-        <p className="mt-4 leading-relaxed">
-          That is not an argument — it is the record: every entry traces to a
-          dated, published source, open for anyone to verify. It grows
-          backward through the archives and forward through reports from
-          people like you.
+          choir, a cemetery, and a language kept alive an ocean from home.
+          This project keeps each community&rsquo;s history, present condition,
+          and evidence connected so that parishes can learn from one another.
         </p>
         <p className="mt-6">
           <Link href="/about" className="underline hover:text-accent">
-            Why we keep this record — and how you can help →
+            About the project →
           </Link>
         </p>
       </section>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import GuidanceNav from "@/components/GuidanceNav";
 import db from "@/data/reversal-database.json";
 
 export const metadata: Metadata = {
@@ -186,7 +187,9 @@ export default function ReversalsPage() {
         Church&rsquo;s own law, applied in time. This page is the evidence.
       </p>
 
-      <div className="mt-6 rounded-lg border border-rule px-4 py-3 text-sm text-muted">
+      <GuidanceNav current="reversals" />
+
+      <div className="mt-8 rounded-lg border border-rule px-4 py-3 text-sm text-muted">
         <p>
           <span className="font-medium text-foreground">
             How this database was verified:

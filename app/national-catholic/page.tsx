@@ -222,19 +222,18 @@ export default function NationalCatholicPage() {
       {/* Data note */}
       <section className="mt-10 rounded-lg border border-rule px-4 py-3.5 text-sm text-muted leading-relaxed">
         <p>
-          <span className="font-medium text-foreground">Sources and method.</span>{" "}
-          These entries are drawn primarily from Wolkovich-Valkavičius,{" "}
-          <em>Lithuanian Religious Life in America</em>, Vol. 3 (1998), the
-          systematic sweep of the <em>Draugas</em> archive since 1909, and
-          contemporary web survey (2026). Entries marked &ldquo;single-source&rdquo; in
-          the research record are documented in one source only — corrections
-          and additional documentation welcome.{" "}
-          <Link href="/about-the-data" className="underline hover:text-foreground">
-            About the data
+          Every entry retains its source ledger and research-depth label.
+          Entries supported by only one source remain visibly marked until
+          corroborated. See{" "}
+          <Link
+            href="/about/sources-and-archives"
+            className="underline hover:text-foreground"
+          >
+            Sources &amp; Archives
           </Link>
-          {" · "}
+          {" "}for the evidence hierarchy and{" "}
           <Link href="/report" className="underline hover:text-foreground">
-            Report a correction
+            report a correction
           </Link>
           .
         </p>
@@ -252,8 +251,8 @@ export default function NationalCatholicPage() {
           ← Back to the map
         </Link>
         {" · "}
-        <Link href="/registry" className="underline hover:text-foreground">
-          Full research record
+        <Link href="/record" className="underline hover:text-foreground">
+          The full record
         </Link>
         {" · "}
         <Link href="/about" className="underline hover:text-foreground">

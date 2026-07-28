@@ -142,7 +142,7 @@ export default function SourcesAndArchivesPage() {
             title="Draugas digital archive, 1909–present"
             href="https://www.draugas.org/archyvas-pdf/"
             role="Draugas (“The Friend”) is the Lithuanian-American newspaper of record, a Catholic newspaper founded in 1909 and published in Chicago continuously ever since. For more than a century it reported parish foundings, jubilees, disputes, closures, campaigns, and community response across the Lithuanian diaspora. It is the historical spine of this record."
-            limits="The 2008–2026 run—all 2,768 issues—was read straight through, and every parish it mentions was entered with dated citations. That completed pass supplies the verified core behind the site’s locked historical figures. The 1909–2007 run is being backfilled issue by issue. A dated newspaper report establishes what was reported at that moment; it does not replace a decree, deed, or other primary institutional record when the claim concerns a canonical or legal act."
+            limits="The 2008–2026 run—all 2,768 issues—was read straight through, and every parish it mentions was entered with dated citations. The 1909–2007 digital run has been systematically mined for parish identities, dates, and events. Deep case files are now being backfilled parish by parish across that earlier period. A dated newspaper report establishes what was reported at that moment; it does not replace a decree, deed, or other primary institutional record when the claim concerns a canonical or legal act."
           />
           <SourceRow
             title="Skaitmeniniai Knygnešiai / Žiburio digital archive"

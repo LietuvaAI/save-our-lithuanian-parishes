@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import GuidanceNav from "@/components/GuidanceNav";
 import { figures } from "@/lib/parishes";
 
 export const metadata: Metadata = {
@@ -36,9 +37,11 @@ export default function StartHerePage() {
         you to the right help in time.
       </p>
 
+      <GuidanceNav current="closure" />
+
       {/* ── Why we publish this — LEAD ── */}
       <section
-        className="mt-8 rounded-lg border-2 px-5 py-5"
+        className="mt-10 rounded-lg border-2 px-5 py-5"
         style={{ borderColor: "var(--mark-closed)" }}
       >
         <h2 className="font-serif text-xl font-semibold">

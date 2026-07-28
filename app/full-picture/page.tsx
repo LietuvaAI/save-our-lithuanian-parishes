@@ -1,8 +1,7 @@
 import { redirect } from "next/navigation";
 
-// /full-picture has merged into /about, which now contains the full
-// record breakdown: numbers, buildings, identity, ownership, parish lists,
-// and the mission narrative in one place.
+// The old statistical overview now lives in The History. About is reserved
+// for the project's purpose, people, and principles.
 export default function FullPicturePage() {
-  redirect("/about");
+  redirect("/history");
 }

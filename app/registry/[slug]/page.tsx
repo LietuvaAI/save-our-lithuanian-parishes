@@ -640,8 +640,8 @@ export default async function RegistryParishPage({
           ← Back to the map
         </Link>{" "}
         ·{" "}
-        <Link href="/registry" className="underline hover:text-foreground">
-          all research-record parishes
+        <Link href="/record" className="underline hover:text-foreground">
+          the full record
         </Link>
       </p>
     </article>
