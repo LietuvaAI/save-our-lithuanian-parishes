@@ -31,6 +31,7 @@ const REG_TOTAL = usParishesAll.length;
 const REG_ETHNIC  = usParishesAll.filter((p) => p.congregation_class === "roman_catholic").length;
 const REG_NATCATH = usParishesAll.filter((p) => p.congregation_class === "national_catholic_pncc").length;
 const REG_INDEP   = usParishesAll.filter((p) => p.congregation_class === "independent_catholic").length;
+const WATCH_COUNT = (alertsData as { sustainabilityWatch: unknown[] }).sustainabilityWatch.length;
 
 const STATS = [
   {
@@ -78,29 +79,24 @@ const ACTIONS = [
 export default function Home() {
   return (
     <div className="mx-auto max-w-5xl px-4">
-      <section className="pt-6 sm:pt-8 text-center">
-        <p className="text-xs uppercase tracking-widest text-muted mb-2">
+      <section className="pt-5 text-center sm:pt-6">
+        <p className="mb-1.5 text-xs uppercase tracking-widest text-muted">
           Every parish, from the very beginning
         </p>
-        <h1 className="font-serif text-2xl sm:text-3xl font-semibold leading-tight max-w-2xl mx-auto">
+        <h1 className="mx-auto max-w-3xl font-serif text-2xl font-semibold leading-tight sm:text-3xl">
           The public record of America&rsquo;s Lithuanian parishes
         </h1>
-        <p className="mt-3 max-w-2xl mx-auto text-sm leading-relaxed text-muted">
+        <p className="mx-auto mt-2.5 max-w-4xl text-sm leading-relaxed text-muted sm:text-[15px]">
           The past is a torch to the present. America&rsquo;s Lithuanian
-          parishes have long been the <em>židiniai</em>{" "}of our
-          communities&mdash;the hearths where faith was lived, language was
-          spoken, memory was preserved, and identity was formed. Together, they
-          form an unbroken current connecting the Lithuanian past to the present
-          and lighting the road ahead. This project traces the complete history
-          of America&rsquo;s Lithuanian parishes&mdash;from their earliest
-          foundations to the communities discerning their future today. Seen
-          together, the experience of America&rsquo;s Lithuanian parishes helps
-          illuminate the path ahead, because no individual parish should have
-          to find its way in darkness.
+          parishes have long been the <em>židiniai</em> of our
+          communities&mdash;hearths of faith, language, memory, and identity.
+          This record traces every parish from its founding to its present
+          condition, so communities facing the future can learn from one
+          another and none has to find its way in darkness.
         </p>
       </section>
 
-      <section className="mt-8">
+      <section className="mt-5 sm:mt-6">
         <ParishMap />
       </section>
 
@@ -183,7 +179,7 @@ export default function Home() {
         <div className="flex items-baseline gap-3">
           <h2 className="font-serif text-xl font-semibold">Sustainability Watch</h2>
           <span className="text-sm text-muted">
-            {(alertsData as any).sustainabilityWatch.length} parishes
+            {WATCH_COUNT} parishes
           </span>
         </div>
         <p className="mt-1 text-sm text-muted leading-relaxed">
