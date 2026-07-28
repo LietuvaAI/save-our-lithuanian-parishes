@@ -195,8 +195,15 @@ export default function RootLayout({
               >
                 Skaitmeniniai Knygnešiai
               </a>
-              , student interns from Detroit · a documented record, not legal
-              or canonical advice ·{" "}
+              , Žiburio Lithuanian School student interns at{" "}
+              <Link
+                href="/parishes/dievo-apvaizdos-southfield-mi"
+                className="underline hover:text-foreground"
+              >
+                Divine Providence Lithuanian Parish
+              </Link>{" "}
+              in Southfield · a documented record, not legal or canonical
+              advice ·{" "}
               <Link
                 href="/legal"
                 className="underline hover:text-foreground"
