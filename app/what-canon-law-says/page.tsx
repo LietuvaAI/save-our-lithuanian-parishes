@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import GuidanceNav from "@/components/GuidanceNav";
 
 export const metadata: Metadata = {
   title: "What canon law actually says",
@@ -32,7 +33,9 @@ export default function CanonLawPage() {
         ownership is not standing against the Church.
       </p>
 
-      <div className="prose prose-lg dark:prose-invert max-w-none mt-8 prose-headings:font-serif">
+      <GuidanceNav current="canon-law" />
+
+      <div className="prose prose-lg dark:prose-invert max-w-none mt-10 prose-headings:font-serif">
         <h2>The parish owns its property</h2>
         <p>
           Under the Code of Canon Law, every legitimately established parish

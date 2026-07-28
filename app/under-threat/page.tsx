@@ -77,7 +77,7 @@ export default function UnderThreatPage() {
     <div className="mx-auto max-w-3xl px-4 py-12">
       <p className="text-xs uppercase tracking-widest text-muted">Happening now</p>
       <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold">
-        Parapijos Under Threat
+        Parishes Under Threat
       </h1>
       <p className="mt-3 text-muted leading-relaxed">
         Each item below is a current event at a watched parish — a closure, a

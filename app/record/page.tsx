@@ -7,7 +7,7 @@ import { resolveAlertStatus, resolveIdentity, resolveFate } from "@/lib/unified-
 export const metadata: Metadata = {
   title: "The Record",
   description:
-    "Every Lithuanian parish in the U.S. research record — the verified Draugas 2008–2026 core plus the wider registry.",
+    "Every documented Lithuanian parish and congregation in the U.S. research record, with current status and source depth from the unified registry.",
 };
 
 function buildRows(): RegistryRow[] {

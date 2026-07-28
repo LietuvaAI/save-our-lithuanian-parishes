@@ -197,20 +197,18 @@ export default function ProtestantPage() {
       {/* Data note */}
       <section className="mt-10 rounded-lg border border-rule px-4 py-3.5 text-sm text-muted leading-relaxed">
         <p>
-          <span className="font-medium text-foreground">Sources and method.</span>{" "}
-          These entries draw from Wolkovich-Valkavičius,{" "}
-          <em>Lithuanian Religious Life in America</em>, Vol. 3 (1998);
-          Michelsonas, <em>Lietuvių Išeivija Amerikoje</em> (1961); the
-          systematic sweep of the <em>Draugas</em> archive since 1909; and
-          the Global True Lithuania field survey. All {CONGS.length} congregations
-          appear on the homepage map — hover any mark for its record. See a
-          congregation missing?{" "}
+          Every congregation retains its source ledger and current-status
+          confidence. Historical attestation is not treated as proof that a
+          congregation remains active. See{" "}
+          <Link
+            href="/about/sources-and-archives"
+            className="underline hover:text-foreground"
+          >
+            Sources &amp; Archives
+          </Link>
+          {" "}for the evidence hierarchy. See a congregation missing?{" "}
           <Link href="/report" className="underline hover:text-foreground">
             Report it
-          </Link>
-          . Method:{" "}
-          <Link href="/about-the-data" className="underline hover:text-foreground">
-            About the data
           </Link>
           .
         </p>
@@ -225,8 +223,8 @@ export default function ProtestantPage() {
           National Catholic parishes
         </Link>
         {" · "}
-        <Link href="/registry" className="underline hover:text-foreground">
-          Full research record
+        <Link href="/record" className="underline hover:text-foreground">
+          The full record
         </Link>
       </p>
     </article>
