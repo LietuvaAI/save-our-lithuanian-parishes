@@ -307,11 +307,11 @@ export function finalizeProfileSources(
 
   const groupOrder: ProfileSourceGroup[] = [
     "newspaper",
-    "books",
     "current",
+    "visual",
+    "books",
     "field",
     "project",
-    "visual",
   ];
 
   return [...merged.values()]
