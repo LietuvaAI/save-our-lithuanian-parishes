@@ -11,7 +11,6 @@ import contextPoints from "@/data/context-points.json";
 import { toScopedParish, type RegParish } from "@/lib/registry-scope";
 import {
   parishes,
-  draugasCitationUrl,
   getParishSituation,
   ENDING_MODE_LABEL,
   OWNERSHIP_LABEL,
@@ -23,7 +22,17 @@ import {
 import { resolveEndState, isLoss } from "@/lib/end-state";
 import { splitStory } from "@/lib/dek";
 import { EndStatePill } from "@/components/EndStatePill";
+import { ProfileSourceLedger } from "@/components/ProfileSourceLedger";
 import ParishContextMap from "@/components/ParishContextMap";
+import {
+  draugasProfileSources,
+  finalizeProfileSources,
+  linkedProfileSources,
+  photoProfileSource,
+  projectProfileSource,
+  registryProfileSources,
+  type RegistryProfileSource,
+} from "@/lib/profile-sources";
 import {
   CLERGY_LABEL,
   FREQUENCY_LABEL,
@@ -56,7 +65,13 @@ interface CaseRecord {
 
 type RegistrySource = {
   axis?: string;
+  work?: string;
   pages?: string;
+  cites?: string;
+  first_mention?: string;
+  last_mention?: string;
+  total_mentions?: number;
+  sourceUrl?: string;
   school?: string;
   convent?: string;
   cemetery?: string;
@@ -74,6 +89,7 @@ type RegistryEntry = Omit<RegParish, "sources"> & {
 type AlertSource = {
   url: string;
   publisher: string;
+  title?: string;
 };
 
 type DispatchLink = {
@@ -262,6 +278,82 @@ export default async function ParishPage({
         }
       : null;
 
+  const caseSources = caseRecord
+    ? [
+        ...linkedProfileSources(caseRecord.sources, {
+          group: "current",
+          context: "Current verified case record",
+          fallbackTitle: "Current case-record source",
+        }),
+        ...caseRecord.developments.flatMap((development) =>
+          linkedProfileSources(development.sources, {
+            group: "current",
+            context: `Development: ${development.headline}`,
+            fallbackTitle: "Development source",
+          }),
+        ),
+      ]
+    : [];
+  const alertSources = parishAlert
+    ? linkedProfileSources(parishAlert.sources, {
+        group: "current",
+        context: "Current threat alert",
+        fallbackTitle: "Parish alert source",
+      })
+    : [];
+  const watchSources = watchEntry
+    ? linkedProfileSources(watchEntry.sources, {
+        group: "current",
+        context: `Sustainability watch checked ${watchEntry.dateObserved}`,
+        fallbackTitle: "Sustainability-watch source",
+      })
+    : [];
+  const situationSources = situation?.sources
+    ? linkedProfileSources(situation.sources, {
+        group: "current",
+        context: "Adjudicated situation record",
+        fallbackTitle: "Situation-record source",
+      })
+    : [];
+  const projectSources = [
+    ...campaignDispatches.flatMap((dispatch) =>
+      projectProfileSource(
+        dispatch.url,
+        dispatch.title,
+        "Related Židinys campaign dispatch",
+      ),
+    ),
+    ...watchDispatches.flatMap((dispatch) =>
+      projectProfileSource(
+        dispatch.url,
+        dispatch.title,
+        "Related Židinys sustainability dispatch",
+      ),
+    ),
+    ...projectProfileSource(
+      parishCampaign?.hearthUrl,
+      "Židinys campaign page",
+      "Current campaign action page",
+    ),
+    ...projectProfileSource(
+      watchEntry?.hearthUrl,
+      "Židinys sustainability dispatch",
+      "Current sustainability-watch publication",
+    ),
+  ];
+  const profileSources = finalizeProfileSources([
+    draugasProfileSources(parish.citations),
+    registryProfileSources(
+      (registryEntry?.sources ?? []) as RegistryProfileSource[],
+    ),
+    caseSources,
+    alertSources,
+    watchSources,
+    situationSources,
+    projectSources,
+    photoProfileSource(photo),
+  ]);
+
   // The one status verdict, from the shared resolver.
   const isStanding = parish.status === "standing";
   const endState =
@@ -370,19 +462,6 @@ export default async function ParishPage({
                   <p className="px-3 py-1.5 text-xs text-muted">
                     {photo.attribution}
                     {photo.license && <span> · {photo.license}</span>}
-                    {photo.archiveUrl && (
-                      <span>
-                        {" · "}
-                        <a
-                          href={photo.archiveUrl}
-                          className="underline hover:text-foreground"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Žiburio archive record
-                        </a>
-                      </span>
-                    )}
                   </p>
                 </div>
               )}
@@ -426,7 +505,7 @@ export default async function ParishPage({
               As the published record describes it — quoted descriptions are
               the author&#8217;s own characterization.
             </p>
-            <div className="mt-3 space-y-3">
+            <div className="mt-4 space-y-5 border-l-2 border-rule pl-4">
               {scholarlySources.map((s, i) => {
                 const isWolkovich = s.axis === "wolkovich";
                 const isLukas = s.axis === "lukas-2009";
@@ -436,41 +515,26 @@ export default async function ParishPage({
                 return (
                   <div
                     key={i}
-                    className="rounded-lg border border-rule px-4 py-3 text-sm"
+                    className="text-sm"
                   >
                     <p className="font-medium">
                       {isLukas ? (
-                        <a
-                          href="https://archyvas.ziburioltmokykla.org"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="underline hover:text-accent"
-                        >
+                        <>
                           Lukas,{" "}
                           <em>Lietuvių Kultūrinis Paveldas Amerikoje</em> (2009)
-                        </a>
+                        </>
                       ) : isWolkovich ? (
-                        <a
-                          href="https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="underline hover:text-accent"
-                        >
+                        <>
                           Wolkovich-Valkavičius,{" "}
                           <em>Lithuanian Religious Life in America</em>, Vol.&nbsp;3
                           (1998)
-                        </a>
+                        </>
                       ) : (
-                        <a
-                          href="https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="underline hover:text-accent"
-                        >
+                        <>
                           Michelsonas,{" "}
                           <em>Lietuvių Išeivija Amerikoje</em> (1868–1961),
                           Keleivis, 1961
-                        </a>
+                        </>
                       )}
                       {s.pages && (
                         <span className="text-muted font-normal">
@@ -506,18 +570,6 @@ export default async function ParishPage({
                     {s.lens && (
                       <p className="mt-2 text-xs italic text-muted">
                         Note: {s.lens}
-                      </p>
-                    )}
-                    {isLukas && (
-                      <p className="mt-2 text-xs text-muted">
-                        <a
-                          href="https://archyvas.ziburioltmokykla.org"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="underline hover:text-accent"
-                        >
-                          Available in the Žiburio archive →
-                        </a>
                       </p>
                     )}
                   </div>
@@ -637,15 +689,7 @@ export default async function ParishPage({
               </Link>
             </div>
             <p className="mt-2 text-xs text-muted">
-              Sources:{" "}
-              {parishAlert.sources.map((s, i) => (
-                <span key={s.url}>
-                  {i > 0 && " · "}
-                  <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
-                    {s.publisher}
-                  </a>
-                </span>
-              ))}
+              Evidence and full source links are listed below.
             </p>
             {campaignDispatches.length > 0 && (
               <div className="mt-3 border-t border-rule pt-3">
@@ -712,16 +756,7 @@ export default async function ParishPage({
             </div>
             <div className="border-t border-rule bg-background px-4 py-2.5 flex flex-wrap items-center justify-between gap-2">
               <p className="text-xs text-muted">
-                Sources:{" "}
-                {watchEntry.sources.map((s, i) => (
-                  <span key={s.url}>
-                    {i > 0 && " · "}
-                    <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
-                      {s.publisher}
-                    </a>
-                  </span>
-                ))}
-                {" · "}checked {watchEntry.dateObserved}
+                Evidence listed below · checked {watchEntry.dateObserved}
               </p>
               <div className="flex gap-2">
                 {watchEntry.hearthUrl && (
@@ -792,21 +827,13 @@ export default async function ParishPage({
                     {d.date}
                   </p>
                   <p className="font-medium">{d.headline}</p>
-                  <p className="text-sm text-muted leading-relaxed">
-                    {d.detail}{" "}
-                    {d.sources.map((s, i) => (
-                      <a
-                        key={s.url}
-                        href={s.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:text-foreground whitespace-nowrap"
-                      >
-                        {s.publisher || s.title}
-                        {i < d.sources.length - 1 ? ", " : ""}
-                      </a>
-                    ))}
-                  </p>
+                  <p className="text-sm text-muted leading-relaxed">{d.detail}</p>
+                  {d.sources.length > 0 && (
+                    <p className="mt-1 text-xs text-muted">
+                      Sources:{" "}
+                      {[...new Set(d.sources.map((source) => source.publisher || source.title))].join(", ")}
+                    </p>
+                  )}
                 </li>
               );
               return (
@@ -842,33 +869,6 @@ export default async function ParishPage({
         )}
       </section>
 
-      <section className="mt-10">
-        <h2 className="font-serif text-xl font-semibold">
-          Original Draugas coverage
-        </h2>
-        <p className="mt-2 text-sm text-muted leading-relaxed">
-          Every fact above traces to dated issues of <em>Draugas</em>, the
-          Lithuanian-American newspaper of record. Where the issue PDF is
-          openly available, the link opens it directly; otherwise it opens the
-          public Draugas archive for that year — find the issue by its date.
-          Recent years may require a Draugas subscription.
-        </p>
-        <ul className="mt-4 flex flex-wrap gap-2">
-          {parish.citations.map((c) => (
-            <li key={c.date}>
-              <a
-                href={draugasCitationUrl(c.date)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block rounded-md border border-rule px-3 py-1.5 text-sm hover:border-foreground transition-colors"
-              >
-                Draugas, {c.date} ↗
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-
       <section
         className="mt-10 rounded-lg border border-rule p-5"
       >
@@ -889,6 +889,8 @@ export default async function ParishPage({
           </Link>
         </p>
       </section>
+
+      <ProfileSourceLedger sources={profileSources} />
     </div>
   );
 }

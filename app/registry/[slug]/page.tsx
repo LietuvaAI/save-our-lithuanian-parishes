@@ -6,14 +6,18 @@ import registry from "@/data/registry-unified.json";
 import { getClearedPhoto } from "@/lib/photos";
 import { splitStory } from "@/lib/dek";
 import { toScopedParish, type RegParish } from "@/lib/registry-scope";
-import {
-  draugasCitationUrl,
-  draugasArchiveUrl,
-  getSituationByRegistrySlug,
-} from "@/lib/parishes";
+import { getSituationByRegistrySlug } from "@/lib/parishes";
 import { EndStatePill } from "@/components/EndStatePill";
+import { ProfileSourceLedger } from "@/components/ProfileSourceLedger";
 import ParishContextMap from "@/components/ParishContextMap";
 import contextPoints from "@/data/context-points.json";
+import {
+  finalizeProfileSources,
+  linkedProfileSources,
+  photoProfileSource,
+  registryProfileSources,
+  type RegistryProfileSource,
+} from "@/lib/profile-sources";
 
 /* Research-record profile pages: every non-canonical parish in the unified
    registry gets a page built from cited source facts, with the public status
@@ -25,7 +29,7 @@ type YearReading = {
   cite?: string;
 };
 
-type RegistrySource = {
+type RegistrySource = RegistryProfileSource & {
   axis: string;
   ethnic_status?: string;
   first_mention?: string;
@@ -230,6 +234,18 @@ export default async function RegistryParishPage({
   const conflicts = p.conflicts ?? [];
   const kind = communityKind(p.sources ?? []);
   const situation = getSituationByRegistrySlug(slug);
+  const photo = getClearedPhoto(slug);
+  const profileSources = finalizeProfileSources([
+    registryProfileSources(sortedSources),
+    situation?.sources
+      ? linkedProfileSources(situation.sources, {
+          group: "current",
+          context: "Adjudicated situation record",
+          fallbackTitle: "Situation-record source",
+        })
+      : [],
+    photoProfileSource(photo),
+  ]);
 
   // The one-sentence story the page opens with: researched situation text
   // where it exists, otherwise an honest sentence from the sourced facts.
@@ -362,7 +378,6 @@ export default async function RegistryParishPage({
       </div>
 
       {(() => {
-        const photo = getClearedPhoto(slug);
         if (!photo) return null;
         return (
           <div className="mt-6 max-w-sm overflow-hidden rounded-lg border border-rule">
@@ -376,19 +391,6 @@ export default async function RegistryParishPage({
             <p className="px-3 py-1.5 text-xs text-muted">
               {photo.attribution}
               {photo.license && <span> · {photo.license}</span>}
-              {photo.archiveUrl && (
-                <span>
-                  {" · "}
-                  <a
-                    href={photo.archiveUrl}
-                    className="underline hover:text-foreground"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Žiburio archive record
-                  </a>
-                </span>
-              )}
             </p>
           </div>
         );
@@ -451,15 +453,7 @@ export default async function RegistryParishPage({
             This entry documents a Lithuanian community that worshipped together
             — attending Mass, holding devotions, or maintaining a chapel — but
             was not organized as a distinct Lithuanian national parish of its
-            own.{" "}
-            <a
-              href="https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-foreground"
-            >
-              Wolkovich-Valkavičius
-            </a>{" "}
+            own. Wolkovich-Valkavičius{" "}
             recorded communities like this alongside canonical parishes because
             they represent the full lived geography of Lithuanian religious life
             in America: settlements, farm colonies, territorial parishes with
@@ -474,56 +468,40 @@ export default async function RegistryParishPage({
         </section>
       )}
 
-      <section className="mt-8">
+      <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          Documented in {axes.length} {axes.length === 1 ? "source" : "sources"}
+          What the published record adds
         </h2>
-        <div className="mt-3 space-y-3">
+        <p className="mt-2 text-sm leading-relaxed text-muted">
+          {axes.length} independent{" "}
+          {axes.length === 1 ? "source tradition is" : "source traditions are"}{" "}
+          represented. Full citations and public URLs appear in the evidence
+          ledger below.
+        </p>
+        <div className="mt-4 divide-y divide-rule border-y border-rule">
           {sortedSources.map((s, i) => (
-            <div key={i} className="rounded-lg border border-rule px-4 py-3 text-sm">
+            <div key={i} className="py-4 text-sm">
               <p className="font-medium">{AXIS_LABEL[s.axis] ?? s.axis}</p>
               <p className="mt-1 text-muted leading-relaxed">
                 {s.axis === "draugas-registry-1909-2007" && (
                   <span className="block space-y-1">
                     <span className="block">
                       First mentioned:{" "}
-                      {s.first_mention ? (
-                        <a
-                          href={draugasCitationUrl(s.first_mention)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="underline hover:text-accent"
-                        >
-                          {s.first_mention.slice(0, 10)}
-                        </a>
-                      ) : "not recorded"}
+                      {s.first_mention
+                        ? s.first_mention.slice(0, 10)
+                        : "not recorded"}
                       {s.last_mention && s.last_mention !== s.first_mention && (
                         <>
                           {" · "}Last mentioned:{" "}
-                          <a
-                            href={draugasCitationUrl(s.last_mention)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="underline hover:text-accent"
-                          >
-                            {s.last_mention.slice(0, 10)}
-                          </a>
+                          {s.last_mention.slice(0, 10)}
                         </>
                       )}
                       {s.total_mentions ? ` · ${s.total_mentions} issues` : ""}
                     </span>
                     <span className="block text-xs italic">
-                      Links open the <em>Draugas</em> issue PDF (2008–2021) or the{" "}
-                      <a
-                        href={s.first_mention ? draugasArchiveUrl(s.first_mention) : "https://www.draugas.org"}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:text-accent"
-                      >
-                        year archive
-                      </a>{" "}
-                      (pre-2008 and post-2021). Last mention is not a closure date —
-                      it marks when <em>Draugas</em> last reported on this parish.
+                      Last mention is not a closure date; it marks when{" "}
+                      <em>Draugas</em> last reported on this parish. The direct
+                      issue or public year-archive links are listed below.
                     </span>
                   </span>
                 )}
@@ -562,26 +540,15 @@ export default async function RegistryParishPage({
                     <span className="block text-xs">
                       {s.axis === "wolkovich" ? (
                         <>
-                          <a
-                            href="https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="underline hover:text-accent"
-                          >
-                            Wolkovich-Valkavičius, <em>Lithuanian Religious Life in America</em>, Vol. 3 (1998)
-                          </a>
+                          Wolkovich-Valkavičius,{" "}
+                          <em>Lithuanian Religious Life in America</em>, Vol. 3
+                          (1998)
                           {s.pages ? `, ${s.pages}` : ""}
                         </>
                       ) : (
                         <>
-                          <a
-                            href="https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="underline hover:text-accent"
-                          >
-                            Michelsonas, <em>Lietuvių Išeivija Amerikoje</em> (1868–1961), Keleivis, 1961
-                          </a>
+                          Michelsonas, <em>Lietuvių Išeivija Amerikoje</em>{" "}
+                          (1868–1961), Keleivis, 1961
                           {s.pages ? `, ${s.pages}` : ""}
                         </>
                       )}
@@ -602,24 +569,9 @@ export default async function RegistryParishPage({
                       <span className="block text-xs">Address: {s.address}.</span>
                     )}
                     <span className="block text-xs">
-                      <a
-                        href="https://archyvas.ziburioltmokykla.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:text-accent"
-                      >
-                        Lukas, <em>Lietuvių Kultūrinis Paveldas Amerikoje</em> (2009)
-                      </a>
+                      Lukas, <em>Lietuvių Kultūrinis Paveldas Amerikoje</em>{" "}
+                      (2009)
                       {s.pages ? `, ${s.pages}` : ""}
-                      {" · "}
-                      <a
-                        href="https://archyvas.ziburioltmokykla.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:text-accent"
-                      >
-                        Žiburio archive →
-                      </a>
                     </span>
                   </span>
                 )}
@@ -633,13 +585,6 @@ export default async function RegistryParishPage({
                         <>Ownership: {s.ownership === "diocese_rc" ? "Roman Catholic diocese" : s.ownership}.</>
                       )}
                     </span>
-                    {s.sourceUrl ? (
-                      <span className="block text-xs">
-                        <a href={s.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-accent">
-                          Source →
-                        </a>
-                      </span>
-                    ) : null}
                     <span className="block text-xs italic text-muted">
                       Automated web survey of diocesan directories and parish websites (2026).
                       Confidence: {s.confidence ?? "unspecified"}.
@@ -653,18 +598,6 @@ export default async function RegistryParishPage({
                     {s.yearsMentioned && s.yearsMentioned.length > 0 && (
                       <span className="block">
                         Years mentioned: {s.yearsMentioned.join(", ")}.
-                      </span>
-                    )}
-                    {s.sourceUrl && (
-                      <span className="block text-xs">
-                        <a
-                          href={s.sourceUrl}
-                          className="underline hover:text-accent"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                        >
-                          Global True Lithuania field survey →
-                        </a>
                       </span>
                     )}
                     <span className="block text-xs italic text-muted">
@@ -698,6 +631,8 @@ export default async function RegistryParishPage({
           .
         </p>
       </section>
+
+      <ProfileSourceLedger sources={profileSources} />
 
       <p className="mt-8 text-sm text-muted">
         <Link href="/" className="underline hover:text-foreground">

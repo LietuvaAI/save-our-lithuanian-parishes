@@ -1413,7 +1413,32 @@
       "current_use": "Historical only; no living Waterbury PNCC/LNCC congregation found",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "The first parish of the Lithuanian National Catholic Church, founded in Waterbury in 1902 — an independent (neprigulminga) congregation that rejected papal authority. Its founder was the priest Vincas Dilionis, and like most parishes of that movement it was short-lived; no national-catholic congregation exists in Waterbury today. The PNCC Eastern Diocese, which covers Connecticut, lists no Waterbury parish and none identified as Lithuanian, and the movement's one surviving parish is Providence of God in Scranton, Pennsylvania. No parish website, bulletin, or local press record of a living congregation was found, and the Connecticut Lithuanian heritage survey records no independent church in the city. No closure year is established, so none is asserted. Recorded as historical witness to a documented schism, never as a recommendation; not counted in the site's Roman Catholic figures. Open for the Waterbury name-level reconciliation: the unnamed 1902 Lithuanian church recorded from Draugas carries the same founding year and may be this same congregation seen from the Roman Catholic side."
+      "situation": "The first parish of the Lithuanian National Catholic Church, founded in Waterbury in 1902 — an independent (neprigulminga) congregation that rejected papal authority. Its founder was the priest Vincas Dilionis, and like most parishes of that movement it was short-lived; no national-catholic congregation exists in Waterbury today. The PNCC Eastern Diocese, which covers Connecticut, lists no Waterbury parish and none identified as Lithuanian, and the movement's one surviving parish is Providence of God in Scranton, Pennsylvania. No parish website, bulletin, or local press record of a living congregation was found, and the Connecticut Lithuanian heritage survey records no independent church in the city. No closure year is established, so none is asserted. Recorded as historical witness to a documented schism, never as a recommendation; not counted in the site's Roman Catholic figures. Open for the Waterbury name-level reconciliation: the unnamed 1902 Lithuanian church recorded from Draugas carries the same founding year and may be this same congregation seen from the Roman Catholic side.",
+      "sources": [
+        {
+          "title": "Lithuanian Religious Life in America, Vol. 1",
+          "publisher": "William Wolkovich-Valkavičius",
+          "date": "1991"
+        },
+        {
+          "title": "Our Parishes",
+          "publisher": "Eastern Diocese of the Polish National Catholic Church",
+          "date": "accessed 2026-07-28",
+          "url": "https://www.easterndiocesepncc.org/our-parishes/"
+        },
+        {
+          "title": "Our Parishes",
+          "publisher": "Central Diocese of the Polish National Catholic Church",
+          "date": "accessed 2026-07-28",
+          "url": "https://www.centraldiocesepncc.org/about/our-parishes/"
+        },
+        {
+          "title": "Connecticut: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "accessed 2026-07-28",
+          "url": "https://global.truelithuania.com/connecticut-789/"
+        }
+      ]
     },
     "paul-naugatuck-ct": {
       "registry_slug": "paul-naugatuck-ct",
