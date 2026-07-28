@@ -44,12 +44,61 @@ export default function AboutPage() {
 
       <AboutNav current="project" />
 
-      <section className="mt-10 border-y border-rule py-8">
+      <section className="mt-10">
+        <h2 className="font-serif text-2xl font-semibold">Why it exists</h2>
+        <div className="mt-3 space-y-4 leading-relaxed">
+          <p>
+            Lithuanian parishes have long been the <em>židiniai</em> of their
+            communities: hearths of faith, language, memory, education, mutual
+            aid, and identity. A parish story is therefore never only the story
+            of a church building. It is the story of the people and institutions
+            gathered around it.
+          </p>
+          <p>
+            When those stories are scattered across archives, diocesan records,
+            private collections, local memory, and current news, each community
+            is left to understand its situation alone. This project brings the
+            record together and keeps it public.
+          </p>
+        </div>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="font-serif text-2xl font-semibold">What we are building</h2>
+        <div className="mt-4 divide-y divide-rule border-y border-rule">
+          <div className="py-4">
+            <h3 className="font-medium">A connected parish record</h3>
+            <p className="mt-1 text-sm leading-relaxed text-muted">
+              Each parish profile is meant to tell one coherent story across
+              founding, worship, community life, governance, turning points,
+              present condition, and the evidence behind the record.
+            </p>
+          </div>
+          <div className="py-4">
+            <h3 className="font-medium">A bridge between archive and present</h3>
+            <p className="mt-1 text-sm leading-relaxed text-muted">
+              Historical research explains how a community arrived here.
+              Current parish, diocesan, civil, and community sources show what
+              is happening now.
+            </p>
+          </div>
+          <div className="py-4">
+            <h3 className="font-medium">Shared knowledge communities can use</h3>
+            <p className="mt-1 text-sm leading-relaxed text-muted">
+              The record connects communities facing similar questions while
+              keeping documented history, present-day alerts, interpretation,
+              and advocacy visibly distinct.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-12 border-y border-rule py-8">
         <p className="text-xs uppercase tracking-widest text-muted">
           The next generation
         </p>
         <h2 className="mt-1 font-serif text-2xl font-semibold">
-          Young people carrying the archive forward
+          Built by the next generation
         </h2>
         <div className="mt-4 space-y-4 leading-relaxed">
           <p className="text-lg">
@@ -107,55 +156,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">Why it exists</h2>
-        <div className="mt-3 space-y-4 leading-relaxed">
-          <p>
-            Lithuanian parishes have long been the <em>židiniai</em> of their
-            communities: hearths of faith, language, memory, education, mutual
-            aid, and identity. A parish story is therefore never only the story
-            of a church building. It is the story of the people and institutions
-            gathered around it.
-          </p>
-          <p>
-            When those stories are scattered across archives, diocesan records,
-            private collections, local memory, and current news, each community
-            is left to understand its situation alone. This project brings the
-            record together and keeps it public.
-          </p>
-        </div>
-      </section>
-
-      <section className="mt-12">
-        <h2 className="font-serif text-2xl font-semibold">What we are building</h2>
-        <div className="mt-4 divide-y divide-rule border-y border-rule">
-          <div className="py-4">
-            <h3 className="font-medium">A connected parish record</h3>
-            <p className="mt-1 text-sm leading-relaxed text-muted">
-              Each parish profile is meant to tell one coherent story across
-              founding, worship, community life, governance, turning points,
-              present condition, and the evidence behind the record.
-            </p>
-          </div>
-          <div className="py-4">
-            <h3 className="font-medium">A bridge between archive and present</h3>
-            <p className="mt-1 text-sm leading-relaxed text-muted">
-              Historical research explains how a community arrived here.
-              Current parish, diocesan, civil, and community sources show what
-              is happening now.
-            </p>
-          </div>
-          <div className="py-4">
-            <h3 className="font-medium">Shared knowledge communities can use</h3>
-            <p className="mt-1 text-sm leading-relaxed text-muted">
-              The record connects communities facing similar questions while
-              keeping documented history, present-day alerts, interpretation,
-              and advocacy visibly distinct.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section className="mt-12">
         <h2 className="font-serif text-2xl font-semibold">
           Principles of the project
@@ -200,20 +200,6 @@ export default function AboutPage() {
 
       <section className="mt-12">
         <h2 className="font-serif text-2xl font-semibold">
-          What this project does not argue
-        </h2>
-        <p className="mt-3 leading-relaxed">
-          This project documents what happened and helps communities understand
-          the processes around them. It does not propose that any parish leave
-          the Roman Catholic Church. Lithuanian National Catholic and Protestant
-          congregations appear as historical witness and comparative evidence,
-          not as recommendations. The guidance pages summarize public law and
-          precedent; they are not legal or canonical advice.
-        </p>
-      </section>
-
-      <section className="mt-12">
-        <h2 className="font-serif text-2xl font-semibold">
           In the tradition of the book carriers
         </h2>
         <div className="mt-3 space-y-4 leading-relaxed">
@@ -235,30 +221,6 @@ export default function AboutPage() {
             decision.
           </p>
         </div>
-      </section>
-
-      <section className="mt-12">
-        <h2 className="font-serif text-2xl font-semibold">
-          Who keeps the record
-        </h2>
-        <p className="mt-3 leading-relaxed">
-          Save Our Lithuanian Parishes is an independent documentation and
-          advocacy initiative powered by{" "}
-          <a
-            href="https://lietuva.ai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-accent"
-          >
-            Lietuva.AI
-          </a>
-          , and supported by the Žiburio Foundation. Formal independence,
-          copyright, data use, and correction policies are set out in{" "}
-          <Link href="/legal" className="underline hover:text-accent">
-            Legal, attribution &amp; data use
-          </Link>
-          .
-        </p>
       </section>
 
       <section className="mt-12 border-t border-rule pt-6">
