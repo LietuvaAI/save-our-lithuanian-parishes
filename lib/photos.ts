@@ -26,13 +26,16 @@ export type ParishPhoto = {
   attribution: string;
   license?: string;
   archiveUrl?: string;
+  evidenceUrl?: string;
   rights: PhotoRights;
   rightsNote?: string;
 };
 
 /** Photo for a slug (canonical or registry), only if its rights are cleared. */
 export function getClearedPhoto(slug: string): ParishPhoto | null {
-  const entry = (photosData.parishes as Record<string, any>)[slug];
+  const entry = (
+    photosData.parishes as Record<string, ParishPhoto | undefined>
+  )[slug];
   if (!entry || !CLEARED_RIGHTS.has(entry.rights)) return null;
   return entry as ParishPhoto;
 }

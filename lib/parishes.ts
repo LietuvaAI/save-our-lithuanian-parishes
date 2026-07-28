@@ -37,6 +37,13 @@ export type PastoralStatus =
   | "not_applicable"
   | "unknown";
 
+export interface ParishSituationSource {
+  title: string;
+  publisher?: string;
+  date?: string;
+  url?: string;
+}
+
 export interface ParishSituation {
   registry_slug: string;
   canonical_status: string;
@@ -45,6 +52,7 @@ export interface ParishSituation {
   lithuanian_identity: LithuanianIdentity;
   pastoral_status: PastoralStatus;
   situation: string;
+  sources?: ParishSituationSource[];
 }
 
 export interface Citation {
@@ -180,6 +188,7 @@ export function getParishSituation(slug: string): ParishSituation | null {
     lithuanian_identity: p.lithuanianIdentity ?? "lost",
     pastoral_status: p.pastoralStatus ?? "unknown",
     situation: p.situation ?? "",
+    sources: situationOverlay[slug]?.sources,
   };
 }
 
@@ -239,6 +248,7 @@ export function getSituationByRegistrySlug(registrySlug: string): ParishSituatio
       lithuanian_identity: p.lithuanianIdentity ?? "lost",
       pastoral_status: p.pastoralStatus ?? "unknown",
       situation: p.situation ?? "",
+      sources: overlayByRegistrySlug.get(registrySlug)?.sources,
     };
   }
   return overlayByRegistrySlug.get(registrySlug) ?? null;
