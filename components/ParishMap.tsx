@@ -282,6 +282,7 @@ export default function ParishMap() {
   const [view, setView] = useState<View>(FULL);
   const [showArchived, setShowArchived] = useState(true);
   const [showDioceses, setShowDioceses] = useState(false);
+  const [expandedKey, setExpandedKey] = useState<EndStateGroup | null>(null);
   const [dioceseBorders, setDioceseBorders] = useState<string | null>(null);
   const svgRef = useRef<SVGSVGElement>(null);
 
@@ -775,26 +776,54 @@ export default function ParishMap() {
             <dl className="mt-2 grid grid-cols-2 gap-x-3 gap-y-2 text-xs lg:grid-cols-1 lg:gap-y-2.5">
               {(
                 [
-                  ["var(--es-active)", `${GROUP_LABEL.active_parish} · ${statusCounts.open}`, GROUP_DESCRIPTION.active_parish],
-                  ["var(--es-mass)", `${GROUP_LABEL.mass_continues} · ${statusCounts.mass}`, GROUP_DESCRIPTION.mass_continues],
-                  ["var(--mark-ink)", `${GROUP_LABEL.unresolved} · ${statusCounts.unresolved}`, GROUP_DESCRIPTION.unresolved],
-                  ["var(--es-transferred)", `${GROUP_LABEL.transferred} · ${statusCounts.transferred}`, GROUP_DESCRIPTION.transferred],
-                  ["var(--es-closed)", `${GROUP_LABEL.closed} · ${statusCounts.lost}`, GROUP_DESCRIPTION.closed],
-                  ["var(--muted)", `${GROUP_LABEL.unverified} · ${statusCounts.unknown}`, GROUP_DESCRIPTION.unverified],
-                ] as [string, string, string][]
-              ).map(([fill, label, text]) => (
-                <div key={label} className="flex min-w-0 gap-2">
-                  <span
-                    className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
-                    style={{ background: fill }}
-                    aria-hidden
-                  />
-                  <div className="min-w-0 leading-snug">
-                    <dt className="font-medium">{label}</dt>
-                    <dd className="mt-0.5 hidden text-muted lg:block">{text}</dd>
+                  { group: "active_parish", fill: "var(--es-active)", count: statusCounts.open },
+                  { group: "mass_continues", fill: "var(--es-mass)", count: statusCounts.mass },
+                  { group: "unresolved", fill: "var(--mark-ink)", count: statusCounts.unresolved },
+                  { group: "transferred", fill: "var(--es-transferred)", count: statusCounts.transferred },
+                  { group: "closed", fill: "var(--es-closed)", count: statusCounts.lost },
+                  { group: "unverified", fill: "var(--muted)", count: statusCounts.unknown },
+                ] as { group: EndStateGroup; fill: string; count: number }[]
+              ).map(({ group, fill, count }) => {
+                const expanded = expandedKey === group;
+                const detailId = `map-key-detail-${group}`;
+                return (
+                  <div
+                    key={group}
+                    className={`min-w-0 ${expanded ? "col-span-2 lg:col-span-1" : ""}`}
+                  >
+                    <dt>
+                      <button
+                        type="button"
+                        className="flex w-full min-w-0 items-start gap-2 text-left leading-snug hover:text-foreground"
+                        aria-expanded={expanded}
+                        aria-controls={detailId}
+                        onClick={() => setExpandedKey(expanded ? null : group)}
+                      >
+                        <span
+                          className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
+                          style={{ background: fill }}
+                          aria-hidden
+                        />
+                        <span className="min-w-0 flex-1 font-medium">
+                          {GROUP_LABEL[group]} · {count}
+                        </span>
+                        <span
+                          className="shrink-0 text-sm leading-none text-muted"
+                          aria-hidden
+                        >
+                          {expanded ? "−" : "+"}
+                        </span>
+                      </button>
+                    </dt>
+                    <dd
+                      id={detailId}
+                      className={`${expanded ? "block" : "hidden"} mt-1 pl-[18px] leading-relaxed text-muted`}
+                    >
+                      {GROUP_DESCRIPTION[group]}
+                    </dd>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </dl>
             <div className="mt-3 border-t border-rule pt-2.5 text-xs">
               <p className="font-medium">Marks</p>
