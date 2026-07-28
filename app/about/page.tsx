@@ -23,8 +23,14 @@ export default function AboutPage() {
         and learn from one another.
       </p>
       <p className="mt-3 text-sm font-medium">
-        This record is powered by the books and documents scanned by the young
-        archivists of{" "}
+        This record is powered by books scanned and catalogued at{" "}
+        <Link
+          href="/parishes/dievo-apvaizdos-southfield-mi"
+          className="underline underline-offset-4 hover:text-accent"
+        >
+          Divine Providence Lithuanian Parish
+        </Link>{" "}
+        by the young archivists of{" "}
         <a
           href="https://archyvas.ziburioltmokykla.org/internship"
           target="_blank"
@@ -56,23 +62,28 @@ export default function AboutPage() {
               Skaitmeniniai Knygnešiai
             </a>
             , the Žiburio Lithuanian School&rsquo;s student archive internship
-            in Detroit, is not a footnote to this project. The students scan
-            books and documents page by page, preserve and organize the digital
-            files, and make the sources available to communities and
-            researchers. That work created the source base from which the parish
-            data could be built.
+            in Detroit, is rooted in the students&rsquo; own{" "}
+            <Link
+              href="/parishes/dievo-apvaizdos-southfield-mi"
+              className="font-medium underline underline-offset-4 hover:text-accent"
+            >
+              Divine Providence parish
+            </Link>
+            . They are helping promote and preserve it as a living Lithuanian
+            community, not simply studying it from a distance.
           </p>
           <p>
-            Their work matters twice. It powers the evidence and data behind
-            this project, and it brings young people into Lithuanian heritage as
-            active researchers, archivists, and custodians, not simply as an
-            audience for a finished history.
+            The students scanned the parish&rsquo;s books page by page,
+            catalogued the collection, preserved and organized the digital
+            files, and made the sources available to communities and
+            researchers. Those digitized books form the archival foundation for
+            this research and the parish data built from it.
           </p>
           <p>
-            Working with the archive teaches how to evaluate evidence, preserve
-            context, respect rights, and make knowledge usable. Just as
-            importantly, it gives a new generation a real role in deciding how
-            Lithuanian memory will be carried forward.
+            The work continues. As the students scan and catalogue more parish
+            material, they expand the public record while gaining a real role
+            as researchers, archivists, advocates, and future custodians of
+            Lithuanian parish life.
           </p>
         </div>
         <div className="mt-5 flex flex-wrap gap-3">
