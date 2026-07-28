@@ -44,12 +44,12 @@ const NAV: NavItem[] = [
     children: [
       { href: "/by-diocese", label: "By Diocese" },
       { href: "/sustainability-watch", label: "Sustainability Watch" },
+      { href: "/under-threat", label: "Parishes Under Threat" },
       {
         href: "/pennsylvania-coal-region",
         label: "Pennsylvania Coal Region",
       },
       { href: "/canadian-comparators", label: "Canadian Comparators" },
-      { href: "/under-threat", label: "Under Threat" },
       { href: "/national-catholic", label: "National Catholic" },
       { href: "/protestant", label: "Protestant" },
     ],
