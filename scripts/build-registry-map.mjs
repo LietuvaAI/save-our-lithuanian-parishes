@@ -98,18 +98,14 @@ function lonLatOf(rec) {
 const points = [];
 let skippedNoGeo = 0;
 
-// Include:
-//   - All non-locked registry entries (the research record beyond the case-filed core)
-//   - non_catholic_christian AND national_catholic_pncc entries regardless of locked
-//     status — neither class ever appears in parishes.json/map.json, so this is their
-//     only map rendering path.
+// Include: every registry record WITHOUT a canonical case row (c83_row).
+// Rows with a case row — including the non-Roman-Catholic canonical
+// additions (rows 78-83) — render from parishes.json/map.json; plotting
+// them here too double-counted five parishes (homepage "All" said 204
+// while The Record said 199 — caught by Vilija 2026-07-27).
 // Exclude: Argentina mis-codes, "no parish" civic associations.
-const NON_ROMAN = new Set(["non_catholic_christian", "national_catholic_pncc"]);
 const toPlot = registry.parishes.filter(
-  (r) =>
-    (!r.in_locked_scope || NON_ROMAN.has(r.congregation_class)) &&
-    isRealParish(r) &&
-    isNorthAmerica(r)
+  (r) => r.c83_row == null && isRealParish(r) && isNorthAmerica(r)
 );
 
 for (const r of toPlot) {

@@ -110,7 +110,7 @@ export default function RecordPage() {
       <h1 className="font-serif text-3xl font-semibold">The Record</h1>
       <div className="mt-3 space-y-4 leading-relaxed max-w-3xl">
         <p>
-          {total} Lithuanian parishes across the United States — Roman
+          {total} records of Lithuanian parish life across the United States — Roman
           Catholic ethnic parishes, National Catholic congregations, and
           Protestant communities. The information comes from
           Lithuanian-language newspapers going back to 1909, out-of-print
