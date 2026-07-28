@@ -62,6 +62,8 @@ interface Point {
   kindLabel: string | null;
   // congregation_class from registry — drives shape (diamond for PNCC / independent)
   congregationClass: string | null;
+  // Loss sub-fate for closed dots — same vocabulary as the flow chart.
+  fate: "closed" | "demolished" | "repurposed" | null;
 }
 
 const STATUS_LABEL: Record<Status, string> = {
@@ -133,6 +135,14 @@ function buildPoints(): Point[] {
     );
     const status: Status =
       alert?.kind === "building" ? "building" : GROUP_STATUS[toGroup(endState)];
+    const fate: Point["fate"] =
+      status !== "lost"
+        ? null
+        : endState === "demolished"
+          ? "demolished"
+          : endState === "repurposed"
+            ? "repurposed"
+            : "closed";
 
     pts.push({
       id: p.slug,
@@ -150,8 +160,14 @@ function buildPoints(): Point[] {
       profile: `/parishes/${p.slug}`,
       deep: true,
       detail: `${OWNERSHIP_LABEL[p.ownership]} · ${ENDING_MODE_LABEL[p.endingMode]}`,
-      kindLabel: null,
+      kindLabel:
+        contextClassBySlug.get(p.slug) === "national_catholic_pncc"
+          ? "National Catholic (independent from Rome)"
+          : contextClassBySlug.get(p.slug) === "non_catholic_christian"
+            ? "Protestant Lithuanian congregation"
+            : null,
       congregationClass: contextClassBySlug.get(p.slug) ?? null,
+      fate,
     });
   }
 
@@ -172,6 +188,15 @@ function buildPoints(): Point[] {
         ? "building"
         : (group && GROUP_STATUS[group]) ||
           (c.closedYear ? "lost" : "unknown");
+    const bf = (c as { buildingFate?: string | null }).buildingFate;
+    const fate: Point["fate"] =
+      status !== "lost"
+        ? null
+        : bf === "demolished"
+          ? "demolished"
+          : bf === "repurposed_secular" || bf === "repurposed_religious"
+            ? "repurposed"
+            : "closed";
 
     pts.push({
       id: c.slug,
@@ -190,6 +215,7 @@ function buildPoints(): Point[] {
       deep: false,
       detail: null,
       congregationClass: (c as { congregationClass?: string }).congregationClass ?? null,
+      fate,
       kindLabel:
         c.kind === "congregation"
           ? "Non-Catholic Lithuanian congregation"
@@ -235,6 +261,8 @@ export default function ParishMap() {
     setHovered(null);
   }
   const [mode, setMode] = useState<Mode>("all");
+  // Sub-filter inside the Closed view — same sub-fates as the flow chart.
+  const [lostFate, setLostFate] = useState<"all" | "closed" | "demolished" | "repurposed">("all");
   // Default to the Catholic record — the scope The History narrates — so the
   // legend numbers match that page on load; All/National Catholic/Protestant
   // are one click away and the counts follow the selection.
@@ -364,7 +392,11 @@ export default function ParishMap() {
         : mode === "mass"
           ? knownPoints.filter((p) => p.status === "mass")
         : mode === "lost"
-          ? knownPoints.filter((p) => p.status === "lost" || p.status === "building")
+          ? knownPoints.filter(
+              (p) =>
+                (p.status === "lost" || p.status === "building") &&
+                (lostFate === "all" || p.fate === lostFate),
+            )
           : mode === "transferred"
             ? knownPoints.filter((p) => p.status === "transferred")
             : knownPoints.filter((p) => p.inAlerts || p.status === "threat" || p.status === "building");
@@ -431,7 +463,7 @@ export default function ParishMap() {
           fill="var(--es-closed)"
           label={`Closed · ${statusCounts.lost}`}
           active={mode === "lost"}
-          onClick={() => setMode("lost")}
+          onClick={() => { setMode("lost"); setLostFate("all"); }}
         />
         <button
           type="button"
@@ -458,6 +490,36 @@ export default function ParishMap() {
           Diocese lines
         </button>
       </div>
+
+      {/* How each closure ended — sub-fates, same vocabulary as the flow chart */}
+      {mode === "lost" && (() => {
+        const lostPts = knownPoints.filter((p) => p.status === "lost" || p.status === "building");
+        const n = (f: "closed" | "demolished" | "repurposed") =>
+          lostPts.filter((p) => p.fate === f).length;
+        const sub = (key: "all" | "closed" | "demolished" | "repurposed", label: string) => (
+          <button
+            key={key}
+            type="button"
+            className={`rounded-md px-2.5 py-1 text-xs font-medium transition-colors ${
+              lostFate === key
+                ? "bg-foreground text-background"
+                : "border border-rule hover:border-foreground"
+            }`}
+            onClick={() => setLostFate(key)}
+          >
+            {label}
+          </button>
+        );
+        return (
+          <div className="mb-3 -mt-1 flex flex-wrap items-center gap-1.5 text-xs">
+            <span className="text-muted uppercase tracking-wide">How each closure ended:</span>
+            {sub("all", `All · ${lostPts.length}`)}
+            {sub("closed", `Parish closed · ${n("closed")}`)}
+            {sub("demolished", `Church demolished × · ${n("demolished")}`)}
+            {sub("repurposed", `Building sold on · ${n("repurposed")}`)}
+          </div>
+        );
+      })()}
 
       <div className="relative">
         <svg
@@ -560,6 +622,13 @@ export default function ParishMap() {
                     strokeWidth={markR * 0.18}
                   />
                 )}
+                {/* Demolished churches carry the same × the timeline uses */}
+                {p.fate === "demolished" && (
+                  <g stroke="var(--background)" strokeWidth={markR * 0.28} strokeLinecap="round" pointerEvents="none">
+                    <line x1={p.x - r * 0.45} y1={p.y - r * 0.45} x2={p.x + r * 0.45} y2={p.y + r * 0.45} />
+                    <line x1={p.x - r * 0.45} y1={p.y + r * 0.45} x2={p.x + r * 0.45} y2={p.y - r * 0.45} />
+                  </g>
+                )}
               </g>
             );
           })}
@@ -608,7 +677,11 @@ export default function ParishMap() {
                     <span className="inline-block h-2 w-2 rounded-full flex-shrink-0"
                       style={{ background: "var(--mark-building)" }} aria-hidden />
                   )}
-                  <span className="font-medium">{STATUS_LABEL[hovered.status]}</span>
+                  <span className="font-medium">
+                    {STATUS_LABEL[hovered.status]}
+                    {hovered.fate === "demolished" && " — church demolished"}
+                    {hovered.fate === "repurposed" && " — building sold on"}
+                  </span>
                   {hovered.alerted && <span className="text-muted text-xs">— active fight</span>}
                   <span className="text-muted">
                     {hovered.founded ? ` · founded ${hovered.founded}` : ""}
@@ -656,7 +729,7 @@ export default function ParishMap() {
               ["var(--es-mass)", `Lithuanian Mass continues · ${statusCounts.mass}`, "A Lithuanian Mass is still celebrated inside a parish that is no longer Lithuanian-led — never counted as an active Lithuanian parish."],
               ["var(--mark-ink)", `Unresolved · ${knownPoints.filter((p) => p.status === "threat").length}`, "The church stands and the parish's fate is contested or canonically undecided — the decision is not final."],
               ["var(--es-transferred)", `Lives on, another community · ${statusCounts.transferred}`, "The church serves another community today; its life as a Lithuanian parish has ended."],
-              ["var(--es-closed)", `Closed · ${statusCounts.lost}`, "The parish was closed — buildings demolished, sold on, or repurposed."],
+              ["var(--es-closed)", `Closed · ${statusCounts.lost}`, "The parish was closed — click the Closed filter to see how each ended: parish closed, building sold on, or church demolished (marked ×)."],
               ["var(--muted)", `Being verified · ${statusCounts.unknown}`, "Attested in the research record; present status still being researched."],
             ] as [string, string, string][]
           ).map(([fill, label, text]) => (

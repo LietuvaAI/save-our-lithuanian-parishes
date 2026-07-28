@@ -143,6 +143,10 @@ for (const r of toPlot) {
       const v = situationByRegistrySlug.get(r.slug)?.lithuanian_identity;
       return v && v !== "unknown" ? v : null;
     })(),
+    buildingFate: (() => {
+      const v = situationByRegistrySlug.get(r.slug)?.building_fate;
+      return v && v !== "unknown" ? v : null;
+    })(),
     congregationClass: r.congregation_class,
     documentedIn: [...new Set(r.sources.map((s) => AXIS_LABEL[s.axis] ?? s.axis))],
     hasConflicts: (r.conflicts?.length ?? 0) > 0,
