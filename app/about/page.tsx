@@ -74,6 +74,62 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="mt-12 border-y border-rule py-8">
+        <p className="text-xs uppercase tracking-widest text-muted">
+          The next generation
+        </p>
+        <h2 className="mt-1 font-serif text-2xl font-semibold">
+          Young people carrying the archive forward
+        </h2>
+        <div className="mt-4 space-y-4 leading-relaxed">
+          <p className="text-lg">
+            <a
+              href="https://archyvas.ziburioltmokykla.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium underline underline-offset-4 hover:text-accent"
+            >
+              Skaitmeniniai Knygnešiai
+            </a>
+            , the Žiburio Lithuanian School&rsquo;s student archive internship
+            in Detroit, is not a footnote to this project. The students&rsquo;
+            work preserving, organizing, and providing access to books and
+            documentary sources made the parish record possible.
+          </p>
+          <p>
+            Their work matters twice. It gives communities and researchers a
+            public source trail today, and it brings young people into
+            Lithuanian heritage as active researchers, archivists, and
+            custodians, not simply as an audience for a finished history.
+          </p>
+          <p>
+            Working with the archive teaches how to evaluate evidence, preserve
+            context, respect rights, and make knowledge usable. Just as
+            importantly, it gives a new generation a real role in deciding how
+            Lithuanian memory will be carried forward.
+          </p>
+        </div>
+        <div className="mt-5 flex flex-wrap gap-3">
+          <a
+            href="https://archyvas.ziburioltmokykla.org/internship"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-md px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            style={{ background: "var(--mark-closed)" }}
+          >
+            Explore the student internship
+          </a>
+          <a
+            href="https://archyvas.ziburioltmokykla.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-md border border-rule px-4 py-2 text-sm font-medium transition-colors hover:border-foreground"
+          >
+            Visit the public archive
+          </a>
+        </div>
+      </section>
+
       <section className="mt-12">
         <h2 className="font-serif text-2xl font-semibold">
           Principles of the project
@@ -157,43 +213,6 @@ export default function AboutPage() {
 
       <section className="mt-12">
         <h2 className="font-serif text-2xl font-semibold">
-          The student archive behind the record
-        </h2>
-        <div className="mt-3 space-y-4 leading-relaxed">
-          <p>
-            The research behind this project was made possible by{" "}
-            <a
-              href="https://archyvas.ziburioltmokykla.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-accent"
-            >
-              Skaitmeniniai Knygnešiai
-            </a>
-            , the Žiburio Lithuanian School&rsquo;s student digital archive.
-            Student interns in Detroit preserve, organize, and provide public
-            access to books and documentary sources that would otherwise remain
-            difficult for communities and researchers to reach.
-          </p>
-          <p>
-            The archive is not simply one source consulted by this project. It
-            is part of the infrastructure that made the parish record possible:
-            giving the research a public source trail and carrying Lithuanian
-            memory into the hands of a new generation.
-          </p>
-        </div>
-        <a
-          href="https://archyvas.ziburioltmokykla.org/internship"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 inline-block font-medium underline underline-offset-4 hover:text-accent"
-        >
-          Meet the student archive internship →
-        </a>
-      </section>
-
-      <section className="mt-12">
-        <h2 className="font-serif text-2xl font-semibold">
           Who keeps the record
         </h2>
         <p className="mt-3 leading-relaxed">
@@ -207,18 +226,8 @@ export default function AboutPage() {
           >
             Lietuva.AI
           </a>
-          , supported by the Žiburio Foundation, with archive work made possible
-          by{" "}
-          <a
-            href="https://archyvas.ziburioltmokykla.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-accent"
-          >
-            Skaitmeniniai Knygnešiai
-          </a>
-          , student interns from Detroit. Formal independence, copyright, data
-          use, and correction policies are set out in{" "}
+          , and supported by the Žiburio Foundation. Formal independence,
+          copyright, data use, and correction policies are set out in{" "}
           <Link href="/legal" className="underline hover:text-accent">
             Legal, attribution &amp; data use
           </Link>
