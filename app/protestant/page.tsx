@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import registry from "@/data/registry-unified.json";
+import { isUS, type RegParish } from "@/lib/registry-scope";
 
 export const metadata: Metadata = {
   title: "Lithuanian Protestant and independent congregations",
@@ -8,18 +9,25 @@ export const metadata: Metadata = {
     "The Lithuanian Protestant and independent congregations documented in the research record — Lutheran, Reformed, Baptist, and independent communities that were part of the full geography of Lithuanian religious life in America. Historical witness.",
 };
 
-type Rec = (typeof registry.parishes)[number] & Record<string, any>;
+type RecSource = { axis?: string; sourceUrl?: string; ethnic_status?: string };
+type Rec = Omit<RegParish, "names" | "sources"> & {
+  names: RegParish["names"] & { variants?: string[] };
+  sources?: RecSource[];
+  city_history?: string[];
+  name_variants?: string[];
+};
 
-const CONGS = (registry.parishes as Rec[]).filter(
-  (p) => p.congregation_class === "non_catholic_christian"
+const CONGS = (registry as { parishes: Rec[] }).parishes.filter(
+  (p) => p.congregation_class === "non_catholic_christian" && isUS(p)
 );
+const sourcesOf = (c: Rec): RecSource[] => c.sources ?? [];
 
 // Congregations with TrueLithuania field survey source have confirmed present-day addresses
 const confirmed = CONGS.filter((c) =>
-  c.sources.some((s: any) => s.axis === "truelithuania")
+  sourcesOf(c).some((s) => s.axis === "truelithuania")
 );
 const historical = CONGS.filter(
-  (c) => !c.sources.some((s: any) => s.axis === "truelithuania")
+  (c) => !sourcesOf(c).some((s) => s.axis === "truelithuania")
 );
 
 function sourceLabel(axis: string): string {
@@ -33,7 +41,7 @@ function sourceLabel(axis: string): string {
 }
 
 function CongCard({ c }: { c: Rec }) {
-  const axes = [...new Set(c.sources.map((s: any) => s.axis))] as string[];
+  const axes = [...new Set(sourcesOf(c).map((s) => s.axis).filter(Boolean))] as string[];
   const hasField = axes.includes("truelithuania");
   const name = c.names?.lt || c.names?.en || c.name_variants?.[0] || c.slug;
   const city = c.city_history?.[0] ?? c.city ?? "";
@@ -41,7 +49,7 @@ function CongCard({ c }: { c: Rec }) {
     c.city_history && c.city_history.length > 1
       ? `Now ${c.city} (formerly ${c.city_history.slice(1).join(", ")})`
       : null;
-  const tl = c.sources.find((s: any) => s.axis === "truelithuania") as any;
+  const tl = sourcesOf(c).find((s) => s.axis === "truelithuania");
   const nameVariants = (c.name_variants ?? c.names?.variants ?? []).filter(
     (v: string) => v !== name
   );

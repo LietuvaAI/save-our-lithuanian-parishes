@@ -1,14 +1,32 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import registry from "@/data/registry-unified.json";
+import type { RegParish } from "@/lib/registry-scope";
 
 export const metadata: Metadata = {
   title: "Lithuanian National Catholic parishes",
   description:
-    "The 14 Lithuanian National Catholic parishes documented in the research record — communities that separated from Rome in the early 1900s, mostly in Pennsylvania and the Northeast, joining the Polish National Catholic Church. Documented as historical witness.",
+    "The Lithuanian National Catholic parishes documented in the research record — communities that separated from Rome in the early 1900s, mostly in Pennsylvania and the Northeast, joining the Polish National Catholic Church. Documented as historical witness.",
 };
 
-type Rec = (typeof registry.parishes)[number] & Record<string, any>;
+type YearVariant = {
+  value?: string;
+};
+
+type RegistrySource = {
+  axis?: string;
+  currentStatus?: string | null;
+  ethnic_status?: string | null;
+};
+
+type Rec = Omit<RegParish, "sources" | "years"> & {
+  sources?: RegistrySource[];
+  years?: {
+    founded?: YearVariant[];
+    closed?: YearVariant[];
+  };
+  caveat?: string | null;
+};
 
 const PNCC_ENTRIES = (registry.parishes as Rec[])
   .filter((p) => p.congregation_class === "national_catholic_pncc")
@@ -18,15 +36,15 @@ const PNCC_ENTRIES = (registry.parishes as Rec[])
     return ya - yb;
   });
 
-function yearDisplay(variants: any[]): string | null {
+function yearDisplay(variants?: YearVariant[]): string | null {
   if (!variants?.length) return null;
   const v = variants[0].value;
   const m = String(v).match(/\b(1[89]\d\d|20\d\d)\b/);
   return m ? m[1] : String(v);
 }
 
-function webStatus(sources: any[]): string | null {
-  const ws = sources?.find((s: any) => s.axis === "web-historical");
+function webStatus(sources?: RegistrySource[]): string | null {
+  const ws = sources?.find((s) => s.axis === "web-historical");
   return ws?.currentStatus ?? null;
 }
 
@@ -153,7 +171,7 @@ export default function NationalCatholicPage() {
                   const status = webStatus(p.sources);
                   const name = p.names.lt || p.names.en || p.slug;
                   const altName = p.names.lt && p.names.en ? p.names.en : null;
-                  const wk = p.sources?.find((s: any) => s.axis === "wolkovich");
+                  const wk = p.sources?.find((s) => s.axis === "wolkovich");
                   return (
                     <div key={p.slug} className="rounded-lg border border-rule px-4 py-3.5">
                       <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
@@ -182,10 +200,10 @@ export default function NationalCatholicPage() {
                         )}
                       </div>
 
-                      {(wk as any)?.ethnic_status &&
-                        !/^(none|unknown)$/i.test((wk as any).ethnic_status) && (
+                      {wk?.ethnic_status &&
+                        !/^(none|unknown)$/i.test(wk.ethnic_status) && (
                           <p className="mt-2 text-xs text-muted leading-relaxed italic">
-                            Wolkovich: &ldquo;{(wk as any).ethnic_status}&rdquo;
+                            Wolkovich: &ldquo;{wk.ethnic_status}&rdquo;
                           </p>
                         )}
 

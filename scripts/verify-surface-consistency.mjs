@@ -11,6 +11,9 @@
 //      must equal toGroup(resolveEndState(...)) for every canonical slug.
 //   2. No situation-overlay current_use may claim "Active Lithuanian
 //      parish" unless that record's identity is active_parish.
+//   3. Overlay classifier enum values must stay inside the public status
+//      vocabulary used by lib/parishes.ts and lib/unified-status.ts.
+//   4. Map parity must use the same U.S. real-parish scope as /record.
 import { readFileSync } from "node:fs";
 
 const read = (p) =>
@@ -35,8 +38,37 @@ function resolveGroup(identity, buildingFate, hasClosed, isStanding, endingMode)
 const lib = read("parishes.json");
 const ctx = new Map(read("context-points.json").points.map((p) => [p.slug, p.group]));
 const situations = read("parish-situation.json").parishes;
+const registry = read("registry-unified.json").parishes;
 
 const errors = [];
+
+const allowedIdentities = new Set([
+  "active_parish",
+  "mass_continues",
+  "ethnically_transferred",
+  "lost",
+  "unknown",
+]);
+const allowedFates = new Set([
+  "demolished",
+  "standing",
+  "repurposed_religious",
+  "repurposed_secular",
+  "derelict",
+  "unknown",
+]);
+
+function isSettlement(r) {
+  return (r.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? ""));
+}
+
+function isUSRecord(r) {
+  return (
+    !isSettlement(r) &&
+    r.country !== "CA" &&
+    !/buenos aires|argentin|rosario/i.test(r.city ?? "")
+  );
+}
 
 for (const p of lib) {
   const g = ctx.get(p.slug);
@@ -51,6 +83,10 @@ for (const p of lib) {
 }
 
 for (const [slug, e] of Object.entries(situations)) {
+  if (!allowedIdentities.has(e.lithuanian_identity))
+    errors.push(`${slug}: invalid lithuanian_identity "${e.lithuanian_identity}"`);
+  if (!allowedFates.has(e.building_fate))
+    errors.push(`${slug}: invalid building_fate "${e.building_fate}"`);
   if (
     /active lithuanian parish/i.test(e.current_use ?? "") &&
     e.lithuanian_identity !== "active_parish"
@@ -63,10 +99,7 @@ for (const [slug, e] of Object.entries(situations)) {
 // One dot per record: canonical map points + US registry-map points must
 // equal the US registry record count (The Record's headline number).
 {
-  const registry = read("registry-unified.json").parishes;
-  const usRecords = registry.filter(
-    (r) => r.country !== "CA" && !/buenos aires|argentin|rosario/i.test(r.city ?? ""),
-  ).length;
+  const usRecords = registry.filter(isUSRecord).length;
   const mapPts = read("map.json").points.length;
   const regPts = read("registry-map.json").points.filter((p) => p.country !== "CA").length;
   if (mapPts + regPts !== usRecords)
@@ -81,5 +114,5 @@ if (errors.length) {
   process.exit(1);
 }
 console.log(
-  `OK: all canonical map groups match the resolver; no overlay claims an active parish its identity denies.`,
+  `OK: canonical map groups, overlay classifiers, active-claim guard, and /record map parity are consistent.`,
 );
