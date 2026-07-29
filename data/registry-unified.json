@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-27",
+ "generated": "2026-07-28",
  "corpusScope": "parish-registry-unified",
  "inputs": [
   "03eff76ba6053cd5f2ad2f5526d50ea09b5e922826b10046c313af09d33e5c5c",
@@ -21,21 +21,22 @@
  ],
  "principles": "conflicts are data; locked figures untouched; no invented values; every fact cites its source",
  "counts": {
-  "parishes": 200,
+  "parishes": 196,
   "case_filed": 83,
   "case_filed_records": 82,
-  "multi_source": 61,
-  "single_source": 61,
-  "with_exact_geo": 87,
-  "with_city_geo": 114,
+  "multi_source": 65,
+  "single_source": 64,
+  "with_exact_geo": 91,
+  "with_city_geo": 107,
   "needs_geocode": 3,
   "standalone_sites": 167,
   "non_catholic_congregations": 14,
   "excluded": 11,
   "ambiguous": 1,
-  "records": 214,
+  "records": 211,
   "missions": 4,
-  "congregations": 10
+  "congregations": 10,
+  "phases": 1
  },
  "parishes": [
   {
@@ -188,10 +189,13 @@
    "slug": "all-saints-wilkes-barre-pa",
    "names": {
     "lt": "Visų Šventųjų",
-    "en": "All Saints (National Catholic)",
+    "en": "All Saints Lithuanian national/independent Catholic parish",
     "variants": [
      "Visų Šventųjų",
-     "All Saints (National Catholic)"
+     "All Saints (National Catholic)",
+     "tautinė parapija, Wilkes-Barrė, Pa.",
+     "Lithuanian National Catholic parish, Wilkes-Barre",
+     "Wilkes-Barre Lithuanian National Church"
     ]
    },
    "city": "Wilkes-Barre",
@@ -227,18 +231,92 @@
       1932
      ],
      "importance": 3
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "132",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian National Catholic",
+     "diocese": "None",
+     "ownership": "national_catholic"
+    },
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-page",
+     "cites": "1984-07-06 p. 5",
+     "sourceUrl": "https://www.draugas.org/archive/1984_reg/1984-07-06-DRAUGAS-i6-8.pdf",
+     "note": "Retrospective lists the Wilkes-Barre national parish and gives 1929."
+    },
+    {
+     "axis": "draugas-2008-2026",
+     "kind": "newspaper-page",
+     "cites": "2022-10-01 p. 11",
+     "sourceUrl": "https://draugas.org/key/2022_reg/2022-10-01-DRAUGASo.pdf",
+     "note": "Identifies a memorial stone on the wall of the Wilkes-Barre Lithuanian national church."
+    },
+    {
+     "axis": "draugas-2008-2026",
+     "kind": "newspaper-page",
+     "cites": "2024-01-20 pp. 10, 13",
+     "sourceUrl": "https://draugas.org/key/2024_reg/2024-01-20-DRAUGASo.pdf",
+     "note": "Identifies Scranton as the surviving Lithuanian national parish and provides Wilkes-Barre community context."
+    },
+    {
+     "axis": "pncc-central-diocese",
+     "kind": "official-denominational-directory",
+     "work": "Our Parishes",
+     "publisher": "Central Diocese, Polish National Catholic Church",
+     "sourceUrl": "https://www.centraldiocesepncc.org/about/our-parishes/",
+     "accessed": "2026-07-28",
+     "note": "No current Wilkes-Barre national parish is listed; directory absence does not establish a closure date."
+    },
+    {
+     "axis": "lktb-current",
+     "kind": "specialist-institutional-source",
+     "work": "About",
+     "publisher": "Lietuvių Katalikų Tautinė Bažnyčia",
+     "sourceUrl": "https://www.lktb.org/home/about",
+     "accessed": "2026-07-28",
+     "note": "Corroborates Scranton Providence of God as the remaining Lithuanian National Catholic parish."
     }
    ],
    "years": {
     "founded": [
      {
+      "value": "1929",
+      "source": "draugas-registry-1909-2007",
+      "cite": "1984-07-06 p. 5"
+     },
+     {
       "value": "1932",
-      "source": "draugas-registry-1909-2007"
+      "source": "truelithuania",
+      "cite": "cornerstone/building clue"
      }
     ],
     "closed": []
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "founded",
+     "variants": [
+      {
+       "value": "1929",
+       "source": "draugas-registry-1909-2007",
+       "cite": "1984-07-06 p. 5"
+      },
+      {
+       "value": "1932",
+       "source": "truelithuania",
+       "cite": "cornerstone/building clue"
+      }
+     ],
+     "note": "1929 may mark organization; 1932 may mark the building or cornerstone."
+    }
+   ],
    "related_sites": [],
    "events_refs": [
     {
@@ -253,20 +331,51 @@
     "source": "truelithuania"
    },
    "congregation_class": "national_catholic_pncc",
-   "axes_count": 3,
+   "axes_count": 6,
    "record_depth": "multi-source",
-   "diocese": "Diocese of Scranton",
+   "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "aliases": [
+    "parish-wilkes-barre-pa"
+   ],
+   "relationships": [
+    {
+     "type": "distinct_from",
+     "slug": "trinity-wilkes-barre-pa",
+     "note": "Roman Catholic Holy Trinity is a separate institution."
+    },
+    {
+     "type": "sister_institution_not_successor",
+     "slug": "providence-of-god-scranton-pa",
+     "note": "Scranton survives, but no legal succession from Wilkes-Barre is established."
+    }
+   ],
+   "caveat": "No living Wilkes-Barre national congregation is established by the 2024–2026 evidence. The exact end date, ownership, present use, and building disposition remain unresolved; demolition is not claimed.",
+   "lifecycle": {
+    "canonical_status": "closed",
+    "selected_closed_year": null,
+    "confidence": "no-living-congregation-end-date-unresolved"
+   },
+   "adjudication": {
+    "date": "2026-07-28",
+    "cite": "brain:docs/research/parish-canon-beyond-83/tranche-1/survival-ledger.json",
+    "status": "verified-or-labeled"
+   },
+   "needs_human_source_review": true
   },
   {
    "slug": "allsaints-worcester-ma",
    "names": {
-    "lt": null,
-    "en": "All Saints Church (independent/national)",
+    "lt": "Visų Šventųjų",
+    "en": "All Saints independent/national Lithuanian parish",
     "variants": [
      "Visu Sventuju bažnycia (nepriklausoma/tautine)",
-     "All Saints Church (independent/national)"
+     "All Saints Church (independent/national)",
+     "nepriklausoma (tautinė) parapija, Worcester, Mass.",
+     "National Catholic parish attempt, Worcester",
+     "Visu Sventuju",
+     "All Saints independent Lithuanian parish"
     ]
    },
    "city": "Worcester",
@@ -286,6 +395,73 @@
      "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
      "ethnic_status": "independent/schismatic Lithuanian national parish",
      "diocese": "None"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "130",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian National Catholic",
+     "diocese": "None",
+     "ownership": "national_catholic"
+    },
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-page",
+     "cites": "1909-08-12 p. 11",
+     "sourceUrl": "https://www.draugas.org/archive/1909_reg/1909-08-12-DRAUGASw.pdf",
+     "note": "Contemporary report of the All Saints independent parish meeting."
+    },
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-page",
+     "cites": "1910-04-14 p. 4",
+     "sourceUrl": "https://www.draugas.org/archive/1910_reg/1910-04-14-DRAUGASw.pdf",
+     "note": "Reports the remaining All Saints group and its decline."
+    },
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-page",
+     "cites": "1994-09-09 p. 3",
+     "sourceUrl": "https://www.draugas.org/archive/1994_reg/1994-09-09-DRAUGAS-i7-8.pdf",
+     "note": "St. Casimir centennial history confirms the separate All Saints split."
+    },
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-page",
+     "cites": "1919-07-30 p. 3",
+     "sourceUrl": "https://www.draugas.org/archive/1919_reg/1919-07-30-DRAUGASw_2nd_ed_i5-8.pdf",
+     "note": "Later Catholic polemic says Worcester returned to its church; treated as end-state evidence, not a decree."
+    },
+    {
+     "axis": "pncc-eastern-diocese",
+     "kind": "official-denominational-directory",
+     "work": "Our Parishes",
+     "publisher": "Eastern Diocese, Polish National Catholic Church",
+     "sourceUrl": "https://www.easterndiocesepncc.org/our-parishes/",
+     "accessed": "2026-07-28",
+     "note": "No current Worcester All Saints national parish is listed."
+    },
+    {
+     "axis": "diocese-of-worcester",
+     "kind": "official-diocesan-directory",
+     "work": "Parish Finder",
+     "publisher": "Diocese of Worcester",
+     "sourceUrl": "https://worcesterdiocese.org/parishfinder",
+     "accessed": "2026-07-28",
+     "note": "Current Roman Catholic roster checked to separate All Saints from St. Casimir."
+    },
+    {
+     "axis": "truelithuania",
+     "kind": "specialist-heritage-source",
+     "work": "Worcester, Massachusetts",
+     "publisher": "Global True Lithuania",
+     "sourceUrl": "https://global.truelithuania.com/worcester-massachusetts-314/",
+     "accessed": "2026-07-28",
+     "note": "Specialist discovery source; current property and exact end remain unresolved."
     }
    ],
    "years": {
@@ -304,7 +480,29 @@
      }
     ]
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "end date",
+     "variants": [
+      {
+       "value": "declining by 1910",
+       "source": "draugas-registry-1909-2007",
+       "cite": "1910-04-14 p. 4"
+      },
+      {
+       "value": "1913",
+       "source": "michelsonas-1961",
+       "cite": "pp. 344–345"
+      },
+      {
+       "value": "returned by 1919",
+       "source": "draugas-registry-1909-2007",
+       "cite": "1919-07-30 p. 3"
+      }
+     ],
+     "note": "These readings establish a historical end, but not a precise canonical closure date."
+    }
+   ],
    "related_sites": [],
    "events_refs": [],
    "geo": {
@@ -313,12 +511,34 @@
     "precision": "city-centroid",
     "source": "site-geo-cache"
    },
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Diocese of Worcester",
+   "congregation_class": "independent_catholic",
+   "axes_count": 5,
+   "record_depth": "multi-source",
+   "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "aliases": [
+    "parish-worcester-ma"
+   ],
+   "relationships": [
+    {
+     "type": "distinct_from",
+     "slug": "casimir-worcester-ma",
+     "note": "All Saints was the Rome-independent split from Roman Catholic St. Casimir."
+    }
+   ],
+   "caveat": "The parish is directly attested in 1909–1910 and again in retrospective evidence. A 1913 secondary closure reading conflicts with decline by 1910 and a 1919 report that the group had returned; the exact end remains unresolved.",
+   "lifecycle": {
+    "canonical_status": "closed",
+    "selected_closed_year": null,
+    "confidence": "historical-end-supported-date-unresolved"
+   },
+   "adjudication": {
+    "date": "2026-07-28",
+    "cite": "brain:docs/research/parish-canon-beyond-83/tranche-1/survival-ledger.json",
+    "status": "verified-or-labeled"
+   },
+   "needs_human_source_review": true
   },
   {
    "slug": "andrew-new-britain-ct",
@@ -10112,11 +10332,14 @@
   {
    "slug": "joseph-dubois-pa",
    "names": {
-    "lt": null,
-    "en": "St. Joseph parish, DuBois (RC), and rival National Church attempt",
+    "lt": "Šv. Juozapo",
+    "en": "St. Joseph Lithuanian Roman Catholic parish",
     "variants": [
      "Šv. Juozapo parapija, DuBois, Pa. (RC) / nepriklausoma parapija (tautinė)",
-     "St. Joseph parish, DuBois (RC), and rival National Church attempt"
+     "St. Joseph parish, DuBois (RC), and rival National Church attempt",
+     "Šv. Juozapo",
+     "Šv. Juozapo parapija, DuBois, Pa.",
+     "St. Joseph Lithuanian parish, DuBois"
     ]
    },
    "city": "DuBois",
@@ -10134,9 +10357,8 @@
      "pages": "129-130, 139",
      "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
      "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
-     "ethnic_status": "Roman Catholic (existing parish) with a National Catholic breakaway attempt 1903-1910",
-     "diocese": "None",
-     "ownership": "national_catholic"
+     "ethnic_status": "Roman Catholic St. Joseph; Michelsonas also records a separate national-church attempt in DuBois.",
+     "diocese": "Diocese of Erie"
     },
     {
      "axis": "truelithuania",
@@ -10152,25 +10374,84 @@
       2018
      ],
      "importance": 3
+    },
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-page",
+     "cites": "1912-05-02 p. 8",
+     "sourceUrl": "https://www.draugas.org/archive/1912_reg/1912-05-02-DRAUGASw.pdf",
+     "note": "Contemporary donation/accounting item names St. Joseph parish, DuBois."
+    },
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-page",
+     "cites": "1984-07-06 p. 5",
+     "sourceUrl": "https://www.draugas.org/archive/1984_reg/1984-07-06-DRAUGAS-i6-8.pdf",
+     "note": "Separately records a DuBois independent/national attempt in 1903; it is not assigned to St. Joseph."
+    },
+    {
+     "axis": "draugas-2008-2026",
+     "kind": "newspaper-page",
+     "cites": "2018-01-11 p. 4",
+     "sourceUrl": "https://draugas.org/key/2018_reg/2018-01-11-DRAUGASo.pdf",
+     "note": "Documents the Lithuanian church, cemetery, and club heritage context."
+    },
+    {
+     "axis": "diocese-of-erie",
+     "kind": "official-diocesan-directory",
+     "work": "Parishes and Churches Directory",
+     "publisher": "Diocese of Erie",
+     "sourceUrl": "https://www.eriercd.org/directoryparishesandchurches.html",
+     "accessed": "2026-07-28",
+     "note": "DuBois is served by Holy Spirit Parish; St. Joseph is not listed as a current standalone parish or church."
+    },
+    {
+     "axis": "st-nicholas-dubois",
+     "kind": "current-institutional-site",
+     "work": "About Us",
+     "publisher": "St. Nicholas Orthodox Church, DuBois",
+     "sourceUrl": "https://www.stnicholasdubois.org/aboutus",
+     "accessed": "2026-07-28",
+     "note": "Reports purchasing the former St. Joseph Roman Catholic Church at 301 South State Street in April 2020 and converting it for Orthodox use."
+    },
+    {
+     "axis": "pncc-central-diocese",
+     "kind": "official-denominational-directory",
+     "work": "Our Parishes",
+     "publisher": "Central Diocese, Polish National Catholic Church",
+     "sourceUrl": "https://www.centraldiocesepncc.org/about/our-parishes/",
+     "accessed": "2026-07-28",
+     "note": "No current DuBois national parish is listed."
     }
    ],
    "years": {
     "founded": [
      {
-      "value": "1903",
-      "source": "michelsonas-1961",
-      "cite": "129-130, 139"
+      "value": "active by 1912",
+      "source": "draugas-registry-1909-2007",
+      "cite": "1912-05-02 p. 8"
      }
     ],
-    "closed": [
-     {
-      "value": "~1910",
-      "source": "michelsonas-1961",
-      "cite": "129-130, 139"
-     }
-    ]
+    "closed": []
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "entity identity",
+     "variants": [
+      {
+       "value": "Roman Catholic St. Joseph active by 1912",
+       "source": "draugas-registry-1909-2007",
+       "cite": "1912-05-02 p. 8"
+      },
+      {
+       "value": "separate independent/national attempt in 1903",
+       "source": "draugas-registry-1909-2007",
+       "cite": "1984-07-06 p. 5"
+      }
+     ],
+     "note": "The two entities must not be flattened into one denomination or timeline."
+    }
+   ],
    "related_sites": [],
    "events_refs": [],
    "geo": {
@@ -10179,12 +10460,49 @@
     "precision": "exact",
     "source": "truelithuania"
    },
-   "congregation_class": "national_catholic_pncc",
-   "axes_count": 2,
+   "congregation_class": "roman_catholic",
+   "axes_count": 6,
    "record_depth": "multi-source",
-   "diocese": "Diocese of Altoona-Johnstown",
+   "diocese": "Diocese of Erie",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "aliases": [
+    "st-joseph-du-bois-pa"
+   ],
+   "relationships": [
+    {
+     "type": "distinct_from",
+     "label": "DuBois independent/national church attempt, 1903",
+     "note": "The attempt's title, property, governance, and end are not established; no separate row is created."
+    },
+    {
+     "type": "former_building_used_by",
+     "label": "St. Nicholas Orthodox Church",
+     "address": "301 South State Street, DuBois, PA",
+     "since": "2020-04",
+     "note": "Current institutional source; civil deed confirmation remains pending."
+    }
+   ],
+   "events": [
+    {
+     "type": "former_church_purchased_for_orthodox_use",
+     "date": "2020-04",
+     "source": "st-nicholas-dubois",
+     "cite": "About Us"
+    }
+   ],
+   "caveat": "This row is Roman Catholic St. Joseph. A separate DuBois independent/national attempt is attested in 1903 but is not sufficiently identified for its own registry row. St. Joseph's exact suppression or merger date remains unresolved.",
+   "lifecycle": {
+    "canonical_status": "closed",
+    "selected_closed_year": null,
+    "confidence": "not-current-standalone-exact-end-unresolved"
+   },
+   "adjudication": {
+    "date": "2026-07-28",
+    "cite": "brain:docs/research/parish-canon-beyond-83/tranche-1/survival-ledger.json",
+    "status": "verified-or-labeled"
+   },
+   "needs_human_source_review": true
   },
   {
    "slug": "joseph-nanticoke-pa",
@@ -11317,10 +11635,14 @@
   {
    "slug": "lithuanian-national-catholic-parish-waterbury-ct",
    "names": {
-    "lt": null,
-    "en": "Lithuanian National Catholic parish",
+    "lt": "Visų Šventųjų",
+    "en": "All Saints Lithuanian independent/national church",
     "variants": [
-     "Lithuanian National Catholic parish"
+     "Lithuanian National Catholic parish",
+     "Visu Sventuju",
+     "Visų Šventųjų lietuvių nepriklausoma bažnyčia",
+     "All Saints Lithuanian independent church",
+     "All Saints Lithuanian national church"
     ]
    },
    "city": "Waterbury",
@@ -11332,23 +11654,85 @@
    "sources": [
     {
      "axis": "web-historical",
-     "kind": "web-candidate",
+     "kind": "baseline-candidate",
      "idx": 59,
-     "confidence": "medium",
-     "currentStatus": "closed",
-     "ownership": "national_catholic"
+     "confidence": "baseline-only",
+     "currentStatus": "historical; exact end unknown",
+     "ownership": "unknown",
+     "note": "Carries the provisional 1902 baseline; no stable public source URL is attached."
+    },
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-page",
+     "cites": "1984-07-06 p. 5",
+     "sourceUrl": "https://www.draugas.org/archive/1984_reg/1984-07-06-DRAUGAS-i6-8.pdf",
+     "note": "Retrospective identifies the Waterbury independent/national entity as All Saints."
+    },
+    {
+     "axis": "pncc-eastern-diocese",
+     "kind": "official-denominational-directory",
+     "work": "Our Parishes",
+     "publisher": "Eastern Diocese, Polish National Catholic Church",
+     "sourceUrl": "https://www.easterndiocesepncc.org/our-parishes/",
+     "accessed": "2026-07-28",
+     "note": "No current Waterbury PNCC parish is listed; directory absence does not establish an end date."
+    },
+    {
+     "axis": "archdiocese-of-hartford",
+     "kind": "official-diocesan-directory",
+     "work": "Parishes",
+     "publisher": "Archdiocese of Hartford",
+     "sourceUrl": "https://archdioceseofhartford.org/parishes/",
+     "accessed": "2026-07-28",
+     "note": "Current Roman Catholic roster used to separate modern institutions from the historical independent entity."
+    },
+    {
+     "axis": "current-parish-waterbury",
+     "kind": "current-institutional-site",
+     "work": "All Saints/Todos los Santos Parish",
+     "publisher": "All Saints/Todos los Santos Parish",
+     "sourceUrl": "https://allsaintswtby.org/",
+     "accessed": "2026-07-28",
+     "note": "Modern Roman Catholic All Saints is a separate institution."
+    },
+    {
+     "axis": "truelithuania",
+     "kind": "specialist-heritage-source",
+     "work": "Waterbury, Connecticut",
+     "publisher": "Global True Lithuania",
+     "sourceUrl": "https://global.truelithuania.com/waterbury-connecticut-318/",
+     "accessed": "2026-07-28",
+     "note": "Specialist discovery source; does not settle title, property, or end date."
     }
    ],
    "years": {
     "founded": [
      {
       "value": "1902",
-      "source": "web-historical"
+      "source": "web-historical",
+      "provisional": true
      }
     ],
     "closed": []
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "survival and building",
+     "variants": [
+      {
+       "value": "historical independent/national entity",
+       "source": "draugas-registry-1909-2007",
+       "cite": "1984-07-06 p. 5"
+      },
+      {
+       "value": "no current successor established; building status unknown",
+       "source": "current/official pass",
+       "cite": "accessed 2026-07-28"
+      }
+     ],
+     "note": "Directory absence does not prove a closure date or building disposition."
+    }
+   ],
    "related_sites": [],
    "events_refs": [],
    "geo": {
@@ -11357,12 +11741,41 @@
     "precision": "city-centroid",
     "source": "site-geo-cache"
    },
-   "congregation_class": "national_catholic_pncc",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Archdiocese of Hartford",
+   "congregation_class": "independent_catholic",
+   "axes_count": 6,
+   "record_depth": "multi-source",
+   "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "relationships": [
+    {
+     "type": "distinct_from",
+     "slug": "joseph-waterbury-ct",
+     "note": "Roman Catholic St. Joseph is a separate institution."
+    },
+    {
+     "type": "distinct_from",
+     "label": "modern All Saints/Todos los Santos, Waterbury",
+     "note": "The current Roman Catholic parish is not the historical independent entity."
+    },
+    {
+     "type": "distinct_from",
+     "slug": "casimir-waterbury-ct",
+     "note": "The disputed St. Casimir case-file identity is not this entity."
+    }
+   ],
+   "caveat": "The All Saints identity is supported, but the 1902 start remains a provisional baseline and no exact end date, address, property record, or living successor has been established.",
+   "lifecycle": {
+    "canonical_status": "unknown",
+    "selected_closed_year": null,
+    "confidence": "historical-identity-supported-end-unresolved"
+   },
+   "adjudication": {
+    "date": "2026-07-28",
+    "cite": "brain:docs/research/parish-canon-beyond-83/tranche-1/survival-ledger.json",
+    "status": "verified-or-labeled"
+   },
+   "needs_human_source_review": true
   },
   {
    "slug": "lithuanian-toronto-on",
@@ -13988,112 +14401,6 @@
    "city_history": []
   },
   {
-   "slug": "parish-wilkes-barre-pa",
-   "names": {
-    "lt": null,
-    "en": "Lithuanian National Catholic parish, Wilkes-Barre",
-    "variants": [
-     "tautinė parapija, Wilkes-Barrė, Pa.",
-     "Lithuanian National Catholic parish, Wilkes-Barre"
-    ]
-   },
-   "city": "Wilkes-Barre",
-   "state": "PA",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "michelsonas-1961",
-     "kind": "secular-history",
-     "tier": 2,
-     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
-     "pages": "132",
-     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
-     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
-     "ethnic_status": "Lithuanian National Catholic",
-     "diocese": "None",
-     "ownership": "national_catholic"
-    }
-   ],
-   "years": {
-    "founded": [
-     {
-      "value": "1932",
-      "source": "michelsonas-1961",
-      "cite": "132"
-     }
-    ],
-    "closed": []
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [],
-   "geo": {
-    "lat": 41.2464824,
-    "lon": -75.8817316,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "national_catholic_pncc",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Diocese of Scranton",
-   "c83_rows": [],
-   "city_history": []
-  },
-  {
-   "slug": "parish-worcester-ma",
-   "names": {
-    "lt": null,
-    "en": "National Catholic parish attempt, Worcester",
-    "variants": [
-     "nepriklausoma (tautinė) parapija, Worcester, Mass.",
-     "National Catholic parish attempt, Worcester"
-    ]
-   },
-   "city": "Worcester",
-   "state": "MA",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "michelsonas-1961",
-     "kind": "secular-history",
-     "tier": 2,
-     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
-     "pages": "130",
-     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
-     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
-     "ethnic_status": "Lithuanian National Catholic",
-     "diocese": "None",
-     "ownership": "national_catholic"
-    }
-   ],
-   "years": {
-    "founded": [],
-    "closed": []
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [],
-   "geo": {
-    "lat": 42.2625621,
-    "lon": -71.8018877,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "national_catholic_pncc",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Diocese of Worcester",
-   "c83_rows": [],
-   "city_history": []
-  },
-  {
    "slug": "parish-worcester-ma-2",
    "names": {
     "lt": null,
@@ -15544,16 +15851,18 @@
    "slug": "providence-providence-ri",
    "names": {
     "lt": null,
-    "en": "Lithuanian National Catholic parish, Providence",
+    "en": "Providence Lithuanian independent/national Catholic phase",
     "variants": [
      "nepriklausoma (tautinė) parapija, Providence, R.I.",
-     "Lithuanian National Catholic parish, Providence"
+     "Lithuanian National Catholic parish, Providence",
+     "Providence Lithuanian independent phase",
+     "Providence Lithuanian national Catholic phase"
     ]
    },
    "city": "Providence",
    "state": "RI",
    "country": "US",
-   "record_type": "parish",
+   "record_type": "phase",
    "in_locked_scope": false,
    "c83_row": null,
    "sources": [
@@ -15568,6 +15877,59 @@
      "ethnic_status": "Lithuanian National Catholic, later reverted to Roman Catholic",
      "diocese": "None",
      "ownership": "national_catholic"
+    },
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-page",
+     "cites": "1909-08-12 p. 11",
+     "sourceUrl": "https://www.draugas.org/archive/1909_reg/1909-08-12-DRAUGASw.pdf",
+     "note": "Links the Providence independent phase to the Mickevičius dispute."
+    },
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-page",
+     "cites": "1910-08-18 p. 11",
+     "sourceUrl": "https://www.draugas.org/archive/1910_reg/1910-08-18-DRAUGASw.pdf",
+     "note": "Reader letter and editorial response on Mickevičius serving Providence Lithuanians."
+    },
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-page",
+     "cites": "1910-09-29 p. 5",
+     "sourceUrl": "https://www.draugas.org/archive/1910_reg/1910-09-29-DRAUGASw.pdf",
+     "note": "Documents the Providence dispute and money complaint."
+    },
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-page",
+     "cites": "1911-06-15 p. 6",
+     "sourceUrl": "https://www.draugas.org/archive/1911_reg/1911-06-15-DRAUGASw.pdf",
+     "note": "Additional contemporary evidence for the Providence independent phase."
+    },
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-page",
+     "cites": "1919-07-30 p. 3",
+     "sourceUrl": "https://www.draugas.org/archive/1919_reg/1919-07-30-DRAUGASw_2nd_ed_i5-8.pdf",
+     "note": "Later Catholic polemic says Providence returned; treated as phase-end evidence, not a decree."
+    },
+    {
+     "axis": "pncc-eastern-diocese",
+     "kind": "official-denominational-directory",
+     "work": "Our Parishes",
+     "publisher": "Eastern Diocese, Polish National Catholic Church",
+     "sourceUrl": "https://www.easterndiocesepncc.org/our-parishes/",
+     "accessed": "2026-07-28",
+     "note": "No current Providence Lithuanian national parish is listed."
+    },
+    {
+     "axis": "diocese-of-providence",
+     "kind": "official-diocesan-directory",
+     "work": "Parish Finder",
+     "publisher": "Diocese of Providence",
+     "sourceUrl": "https://www.dioceseofprovidence.org/parishfinder",
+     "accessed": "2026-07-28",
+     "note": "The later Roman Catholic St. Casimir record is separate: legal title established in 1919 and closure effective 2017-07-01."
     }
    ],
    "years": {
@@ -15580,7 +15942,23 @@
     ],
     "closed": []
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "institutional continuity",
+     "variants": [
+      {
+       "value": "independent/national phase documented by 1909–1911",
+       "source": "draugas-registry-1909-2007"
+      },
+      {
+       "value": "reported returned by 1919",
+       "source": "draugas-registry-1909-2007",
+       "cite": "1919-07-30 p. 3"
+      }
+     ],
+     "note": "No succession document connects this phase to the later Roman Catholic St. Casimir parish."
+    }
+   ],
    "related_sites": [],
    "events_refs": [],
    "geo": {
@@ -15589,12 +15967,31 @@
     "precision": "city-centroid",
     "source": "site-geo-cache"
    },
-   "congregation_class": "national_catholic_pncc",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Diocese of Providence",
+   "congregation_class": "independent_catholic",
+   "axes_count": 4,
+   "record_depth": "multi-source",
+   "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "relationships": [
+    {
+     "type": "distinct_from",
+     "slug": "casimir-providence-ri",
+     "note": "Later Roman Catholic St. Casimir is separate unless a succession source is found."
+    }
+   ],
+   "caveat": "The independent/national episode is supported as a historical phase, not yet as a durable standalone parish. Its title, corporation, property, governance, and exact end remain unresolved; the later Roman Catholic St. Casimir closure belongs to a separate record.",
+   "lifecycle": {
+    "canonical_status": "unknown",
+    "selected_closed_year": null,
+    "confidence": "phase-supported-durable-parish-unresolved"
+   },
+   "adjudication": {
+    "date": "2026-07-28",
+    "cite": "brain:docs/research/parish-canon-beyond-83/tranche-1/survival-ledger.json",
+    "status": "verified-or-labeled"
+   },
+   "needs_human_source_review": true
   },
   {
    "slug": "providence-scranton-pa",
@@ -19779,70 +20176,6 @@
    "city_history": []
   },
   {
-   "slug": "st-joseph-du-bois-pa",
-   "names": {
-    "lt": "Šv. Juozapo",
-    "en": null,
-    "variants": [
-     "Šv. Juozapo"
-    ]
-   },
-   "city": "Du Bois",
-   "state": "PA",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "draugas-registry-1909-2007",
-     "kind": "newspaper-record",
-     "parish_key": "st-joseph-du-bois-pa",
-     "first_mention": "",
-     "last_mention": "",
-     "total_mentions": 0
-    },
-    {
-     "axis": "web-historical",
-     "kind": "web-survey",
-     "tier": 4,
-     "currentStatus": "closed",
-     "confidence": "verified",
-     "sourceUrl": "https://global.truelithuania.com/du-bois-pennsylvania-2543/",
-     "ownership": "diocese_rc"
-    }
-   ],
-   "years": {
-    "founded": [
-     {
-      "value": "1913",
-      "source": "draugas-registry-1909-2007"
-     }
-    ],
-    "closed": []
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [
-    {
-     "set": "draugas-registry-1909-2007/events-curated",
-     "parish_key": "st-joseph-du-bois-pa"
-    }
-   ],
-   "geo": {
-    "lat": 41.118651,
-    "lon": -78.7622342,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Diocese of Altoona-Johnstown",
-   "c83_rows": [],
-   "city_history": []
-  },
-  {
    "slug": "st-joseph-duryea-pa",
    "names": {
     "lt": "Šv. Juozapo",
@@ -21290,8 +21623,8 @@
   }
  ],
  "registryRevision": {
-  "version": 2,
-  "date": "2026-07-27",
+  "version": 3,
+  "date": "2026-07-28",
   "changelog": [
    "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
    "Collapsed adjudicated same-entity rows while preserving all 83 historical case-file row references in c83_rows.",
@@ -21299,8 +21632,10 @@
    "Established this build as the final brain-generated upstream snapshot before canonical ownership moves to the site repository.",
    "Registry Revision 2: corrected four Scranton/Wilkes-Barre closure identities and exact dates from the Diocese of Scranton consolidated-parishes table.",
    "Resolved Nanticoke St. Joseph as the Hanover-section entity closed in 2001; retained its later sale/conversion as a building event.",
-   "Reconstructed Minersville St. Francis as founded 1895 (secondary reading), documented the 1909 church dedication, and separated the 2020 building closure from the unresolved juridic parish-end date."
+   "Reconstructed Minersville St. Francis as founded 1895 (secondary reading), documented the 1909 church dedication, and separated the 2020 building closure from the unresolved juridic parish-end date.",
+   "Applied parish-canon tranche 1 after archival and current/official review: restored Waterbury All Saints as a distinct historical entity, collapsed Worcester, Wilkes-Barre, and DuBois duplicate rows, marked Providence as a phase, and separated Roman Catholic DuBois St. Joseph from the provisional 1903 national attempt.",
+   "Preserved full direct Draugas issue links, current institutional sources, unresolved boundaries, and the unchanged locked C83 evidence."
   ],
-  "contentHash": "3b339436d9cd7a0d60dde0259572fbf921c0455de03ed3b5bbcce9475837bd99"
+  "contentHash": "d0848eabb987d8c246250da9fb8e69ca4f41df49f6e10956c7f3767c89520735"
  }
 }

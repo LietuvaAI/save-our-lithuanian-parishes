@@ -12,7 +12,10 @@ const REG_CLOSED = romanCatholicParishes.filter(
   (p) => toGroup(p.endState) === "closed",
 ).length;
 const REG_NATCATH = usRegistryParishes().filter(
-  (p) => p.congregation_class === "national_catholic_pncc",
+  (p) =>
+    p.record_type !== "phase" &&
+    (p.congregation_class === "national_catholic_pncc" ||
+      p.congregation_class === "independent_catholic"),
 ).length;
 const WATCH_COUNT = (alertsData as { sustainabilityWatch: unknown[] }).sustainabilityWatch.length;
 
@@ -65,7 +68,7 @@ const STATS = [
   {
     value: String(REG_NATCATH),
     label:
-      "Lithuanian National Catholic parishes, documented separately as historical witness.",
+      "Lithuanian National and independent Catholic parishes, documented separately as historical witness.",
     tone: "ink",
   },
 ];

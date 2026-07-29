@@ -23,6 +23,8 @@ export type RegistryProfileSource = {
   axis?: string;
   kind?: string;
   work?: string;
+  publisher?: string;
+  accessed?: string;
   pages?: string;
   cites?: string;
   note?: string;
@@ -97,12 +99,13 @@ function draugasSource(
   context: string,
   title = `Draugas issue, ${date}`,
   detail?: string,
+  sourceUrl?: string,
 ): SourceDraft {
   return {
     group: "newspaper",
     title,
     citation: `Draugas, ${date}${detail ? `, ${detail}` : ""}`,
-    url: draugasCitationUrl(date),
+    url: isAbsoluteWebUrl(sourceUrl) ? sourceUrl : draugasCitationUrl(date),
     contexts: [context],
   };
 }
@@ -132,7 +135,12 @@ function sourceCitation(
   const pages = source.pages
     ? `${source.pages.match(/^p(?:p)?\./i) ? "" : "p. "}${source.pages}`
     : null;
-  const parts = [publisher, pages, source.cites].filter(
+  const parts = [
+    publisher,
+    pages,
+    source.cites,
+    source.accessed ? `accessed ${source.accessed}` : null,
+  ].filter(
     (value): value is string => !!value,
   );
   return parts.length > 0 ? parts.join(" · ") : undefined;
@@ -176,6 +184,7 @@ export function registryProfileSources(
             "Modern Draugas case-file evidence",
             undefined,
             citation.detail,
+            source.sourceUrl,
           ),
         );
       }
@@ -197,6 +206,7 @@ export function registryProfileSources(
             source.note ?? "Page-cited historical Draugas evidence",
             undefined,
             citation.detail,
+            source.sourceUrl,
           ),
         );
       }
@@ -243,15 +253,24 @@ export function registryProfileSources(
 
     if (
       axis.startsWith("diocese-") ||
-      source.kind?.startsWith("diocesan-")
+      axis.startsWith("archdiocese-") ||
+      axis.startsWith("pncc-") ||
+      source.kind?.startsWith("diocesan-") ||
+      source.kind?.includes("official-") ||
+      source.kind?.includes("current-institutional")
     ) {
-      const publisher = sourceLabel(axis);
+      const publisher = source.publisher ?? sourceLabel(axis);
+      const context = source.kind?.includes("denominational")
+        ? "Official denominational directory"
+        : source.kind?.includes("current-institutional")
+          ? "Current institutional record"
+          : "Official diocesan record";
       drafts.push({
         group: "current",
         title: source.work ?? publisher,
         citation: sourceCitation(source, publisher),
         url: isAbsoluteWebUrl(source.sourceUrl) ? source.sourceUrl : null,
-        contexts: ["Official diocesan record"],
+        contexts: [context],
         missingLinkNote:
           "The registry does not carry the official record URL.",
       });

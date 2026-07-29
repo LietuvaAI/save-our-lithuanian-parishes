@@ -7,7 +7,7 @@ import { toScopedParish, type RegParish } from "@/lib/registry-scope";
 import type { EndState } from "@/lib/end-state";
 
 export const metadata: Metadata = {
-  title: "Lithuanian National Catholic parishes",
+  title: "Lithuanian National and independent Catholic parishes",
   description:
     "The Lithuanian National Catholic parishes documented in the research record — communities that separated from Rome in the early 1900s, mostly in Pennsylvania and the Northeast, joining the Polish National Catholic Church. Documented as historical witness.",
 };
@@ -23,6 +23,7 @@ type RegistrySource = {
 };
 
 type Rec = Omit<RegParish, "sources" | "years"> & {
+  record_type?: string;
   sources?: RegistrySource[];
   years?: {
     founded?: YearVariant[];
@@ -31,13 +32,23 @@ type Rec = Omit<RegParish, "sources" | "years"> & {
   caveat?: string | null;
 };
 
-const PNCC_ENTRIES = (registry.parishes as Rec[])
-  .filter((p) => p.congregation_class === "national_catholic_pncc")
+const NATIONAL_ENTRIES = (registry.parishes as Rec[])
+  .filter(
+    (p) =>
+      p.congregation_class === "national_catholic_pncc" ||
+      p.congregation_class === "independent_catholic",
+  )
   .sort((a, b) => {
     const ya = Number(String(a.years?.founded?.[0]?.value ?? "9999").match(/\d{4}/)?.[0] ?? 9999);
     const yb = Number(String(b.years?.founded?.[0]?.value ?? "9999").match(/\d{4}/)?.[0] ?? 9999);
     return ya - yb;
   });
+const DURABLE_ENTRIES = NATIONAL_ENTRIES.filter(
+  (parish) => parish.record_type !== "phase",
+);
+const PHASE_ENTRIES = NATIONAL_ENTRIES.filter(
+  (parish) => parish.record_type === "phase",
+);
 
 function yearDisplay(variants?: YearVariant[]): string | null {
   if (!variants?.length) return null;
@@ -66,14 +77,14 @@ function statusForRecord(parish: Rec): EndState {
 
 // Group entries by state for display
 const byState = new Map<string, Rec[]>();
-for (const p of PNCC_ENTRIES) {
+for (const p of DURABLE_ENTRIES) {
   const st = p.state || "—";
   if (!byState.has(st)) byState.set(st, []);
   byState.get(st)!.push(p);
 }
 const states = [...byState.keys()].sort();
 
-const standingCount = PNCC_ENTRIES.filter((p) =>
+const standingCount = DURABLE_ENTRIES.filter((p) =>
   webStatus(p.sources)?.toLowerCase().startsWith("standing")
 ).length;
 
@@ -84,7 +95,7 @@ export default function NationalCatholicPage() {
         The research record
       </p>
       <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
-        Lithuanian National Catholic parishes
+        Lithuanian National and independent Catholic parishes
       </h1>
       <p className="mt-4 text-lg text-muted leading-relaxed">
         In the early twentieth century, waves of Lithuanian immigrants —
@@ -100,7 +111,7 @@ export default function NationalCatholicPage() {
       </p>
       <p className="mt-3 text-muted leading-relaxed">
         The research record documents{" "}
-        <strong>{PNCC_ENTRIES.length} Lithuanian National Catholic parishes</strong>{" "}
+        <strong>{DURABLE_ENTRIES.length} durable parish records</strong>{" "}
         across {states.length} states.{" "}
         {standingCount > 0 && (
           <>
@@ -142,7 +153,7 @@ export default function NationalCatholicPage() {
       {/* The parishes */}
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          {PNCC_ENTRIES.length} documented parishes
+          {DURABLE_ENTRIES.length} documented parishes
         </h2>
         <p className="mt-1 text-sm text-muted">
           Sorted by earliest documented founding. Each entry links to its full
@@ -225,6 +236,44 @@ export default function NationalCatholicPage() {
           ))}
         </div>
       </section>
+
+      {PHASE_ENTRIES.length > 0 && (
+        <section className="mt-10 border-t border-rule pt-8">
+          <h2 className="font-serif text-2xl font-semibold">
+            Historical phase evidence
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-muted">
+            These records document a real independent or national phase, but
+            the evidence does not yet establish a durable standalone parish.
+            They remain visible and sourced without being included in the
+            parish count above.
+          </p>
+          <div className="mt-4 divide-y divide-rule border-y border-rule">
+            {PHASE_ENTRIES.map((parish) => (
+              <article key={parish.slug} className="py-4">
+                <Link
+                  href={
+                    canonicalProfileHrefForRegistrySlug(parish.slug) ??
+                    `/parishes/${parish.slug}`
+                  }
+                  className="font-serif text-base font-semibold hover:underline"
+                >
+                  {parish.names.lt || parish.names.en || parish.slug}
+                </Link>
+                <p className="mt-1 text-sm text-muted">
+                  {parish.city}, {parish.state} · historical phase, not counted
+                  as a durable parish
+                </p>
+                {parish.caveat && (
+                  <p className="mt-2 text-sm leading-relaxed text-muted">
+                    {parish.caveat}
+                  </p>
+                )}
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Data note */}
       <section className="mt-10 rounded-lg border border-rule px-4 py-3.5 text-sm text-muted leading-relaxed">

@@ -40,6 +40,7 @@ export const RECORD_TYPE_LABEL: Record<string, string> = {
   parish: "Lithuanian parish (parapija)",
   parapija: "Lithuanian parish (parapija)",
   misija: "Lithuanian mission (misija)",
+  phase: "Historical independent/national phase",
 };
 
 const SETTLEMENT_PATTERNS = [
@@ -213,25 +214,41 @@ function SourceDetails({
     <div className="mt-1 space-y-1 text-muted leading-relaxed">
       {source.axis === "draugas-registry-1909-2007" && (
         <>
-          <p>
-            First recorded mention:{" "}
-            {source.first_mention?.slice(0, 10) ?? "not recorded"}
-            {source.last_mention &&
-              source.last_mention !== source.first_mention && (
-                <> · Last recorded mention: {source.last_mention.slice(0, 10)}</>
-              )}
-            {source.total_mentions
-              ? ` · ${source.total_mentions} issues`
-              : ""}
-          </p>
-          <p className="text-xs italic">
-            Last mention is an archive observation, not a closure date.
-          </p>
+          {source.note && <p>{source.note}</p>}
+          {(source.first_mention ||
+            source.last_mention ||
+            source.total_mentions) && (
+            <>
+              <p>
+                First recorded mention:{" "}
+                {source.first_mention?.slice(0, 10) ?? "not recorded"}
+                {source.last_mention &&
+                  source.last_mention !== source.first_mention && (
+                    <>
+                      {" "}
+                      · Last recorded mention:{" "}
+                      {source.last_mention.slice(0, 10)}
+                    </>
+                  )}
+                {source.total_mentions
+                  ? ` · ${source.total_mentions} issues`
+                  : ""}
+              </p>
+              <p className="text-xs italic">
+                Last mention is an archive observation, not a closure date.
+              </p>
+            </>
+          )}
         </>
       )}
 
       {source.axis === "draugas-2008-2026" && (
-        <p>{source.cites || source.work || "Modern case-file evidence."}</p>
+        <p>
+          {source.note ||
+            source.cites ||
+            source.work ||
+            "Modern case-file evidence."}
+        </p>
       )}
 
       {source.axis === "draugas-jubilee-implied" && (
@@ -323,8 +340,9 @@ function SourceDetails({
 
       {!AXIS_LABEL[source.axis] && (
         <>
-          {source.description && <p>{source.description}</p>}
-          {source.work && <p>{source.work}</p>}
+          {(source.description || source.note) && (
+            <p>{source.description ?? source.note}</p>
+          )}
           {source.pages && <p className="text-xs">Pages: {source.pages}.</p>}
         </>
       )}
@@ -359,7 +377,7 @@ export function ParishPublishedRecord({
         {sources.map((source, index) => (
           <article key={`${source.axis}-${index}`} className="py-4 text-sm">
             <h3 className="font-medium">
-              {AXIS_LABEL[source.axis] ?? source.axis}
+              {source.work ?? AXIS_LABEL[source.axis] ?? source.axis}
             </h3>
             <SourceDetails source={source} profile={profile} />
           </article>

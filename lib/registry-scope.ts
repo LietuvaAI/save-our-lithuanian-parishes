@@ -36,6 +36,7 @@ export interface RegParish {
   city: string;
   state: string;
   country: "US" | "CA";
+  record_type?: string;
   comparator: boolean | null;
   in_locked_scope: boolean;
   c83_row: number | null;

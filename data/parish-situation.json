@@ -1,6 +1,6 @@
 {
-  "generated": "2026-07-22",
-  "note": "Structured classifiers for all 220 canonical parishes from the unified registry. Every field traces to documented facts in the Draugas archive, Wolkovich, Michelsonas, or field sources. The first 86 entries (c83-filed case-core) are hand-edited. The remaining 134 entries are algorithmically generated from registry data using status inference rules.",
+  "generated": "2026-07-28",
+  "note": "Structured present-state classifiers for canonical registry records. Hand-reviewed cases retain source-linked narrative and explicitly labeled uncertainty; generated records remain provisional until verified.",
   "parishes": {
     "sv-kazimiero-gary-in": {
       "registry_slug": "casimir-gary-in",
@@ -896,11 +896,11 @@
     "all-saints-wilkes-barre-pa": {
       "registry_slug": "all-saints-wilkes-barre-pa",
       "canonical_status": "closed",
-      "building_fate": "standing",
-      "current_use": "Unknown",
+      "building_fate": "unknown",
+      "current_use": "Closed historical site; present use and building fate unresolved",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "PNCC (Polish National Catholic Church), not Roman Catholic. Founded 1932 per Draugas. Documented in TrueLithuania but not in RC archival sources."
+      "situation": "All Saints is the canonical Wilkes-Barre national/independent Catholic record; the generic Wilkes-Barre row was a duplicate. Sources disagree between 1929 and 1932. No living congregation is established by the 2024–2026 evidence, but the exact end, ownership, current use, and building disposition remain unresolved; demolition is not claimed."
     },
     "st-casimir-wilkes-barre-pa": {
       "registry_slug": "st-casimir-wilkes-barre-pa",
@@ -1316,15 +1316,6 @@
       "pastoral_status": "unknown",
       "situation": "Documented in registry but minimal research details available. Coal region."
     },
-    "st-joseph-du-bois-pa": {
-      "registry_slug": "st-joseph-du-bois-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Coal region."
-    },
     "lithuanian-easton-pa": {
       "registry_slug": "lithuanian-easton-pa",
       "canonical_status": "unknown",
@@ -1408,37 +1399,12 @@
     },
     "lithuanian-national-catholic-parish-waterbury-ct": {
       "registry_slug": "lithuanian-national-catholic-parish-waterbury-ct",
-      "canonical_status": "closed",
+      "canonical_status": "unknown",
       "building_fate": "unknown",
-      "current_use": "Historical only; no living Waterbury PNCC/LNCC congregation found",
+      "current_use": "No current successor or building disposition established",
       "lithuanian_identity": "lost",
-      "pastoral_status": "not_applicable",
-      "situation": "The first parish of the Lithuanian National Catholic Church, founded in Waterbury in 1902 — an independent (neprigulminga) congregation that rejected papal authority. Its founder was the priest Vincas Dilionis, and like most parishes of that movement it was short-lived; no national-catholic congregation exists in Waterbury today. The PNCC Eastern Diocese, which covers Connecticut, lists no Waterbury parish and none identified as Lithuanian, and the movement's one surviving parish is Providence of God in Scranton, Pennsylvania. No parish website, bulletin, or local press record of a living congregation was found, and the Connecticut Lithuanian heritage survey records no independent church in the city. No closure year is established, so none is asserted. Recorded as historical witness to a documented schism, never as a recommendation; not counted in the site's Roman Catholic figures. Open for the Waterbury name-level reconciliation: the unnamed 1902 Lithuanian church recorded from Draugas carries the same founding year and may be this same congregation seen from the Roman Catholic side.",
-      "sources": [
-        {
-          "title": "Lithuanian Religious Life in America, Vol. 1",
-          "publisher": "William Wolkovich-Valkavičius",
-          "date": "1991"
-        },
-        {
-          "title": "Our Parishes",
-          "publisher": "Eastern Diocese of the Polish National Catholic Church",
-          "date": "accessed 2026-07-28",
-          "url": "https://www.easterndiocesepncc.org/our-parishes/"
-        },
-        {
-          "title": "Our Parishes",
-          "publisher": "Central Diocese of the Polish National Catholic Church",
-          "date": "accessed 2026-07-28",
-          "url": "https://www.centraldiocesepncc.org/about/our-parishes/"
-        },
-        {
-          "title": "Connecticut: Lithuanians and Lithuanian heritage",
-          "publisher": "Global True Lithuania",
-          "date": "accessed 2026-07-28",
-          "url": "https://global.truelithuania.com/connecticut-789/"
-        }
-      ]
+      "pastoral_status": "unknown",
+      "situation": "Draugas identifies a distinct All Saints Lithuanian independent/national church in Waterbury. It was not Roman Catholic St. Joseph, the disputed St. Casimir record, or today's Roman Catholic All Saints/Todos los Santos. No current PNCC successor, exact end date, address, property record, or building fate has been established; the 1902 start remains a provisional baseline."
     },
     "paul-naugatuck-ct": {
       "registry_slug": "paul-naugatuck-ct",
@@ -1775,12 +1741,12 @@
     },
     "allsaints-worcester-ma": {
       "registry_slug": "allsaints-worcester-ma",
-      "canonical_status": "unknown",
+      "canonical_status": "closed",
       "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+      "current_use": "No current All Saints successor established",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "All Saints was a real, Rome-independent Lithuanian parish that split from St. Casimir and is directly attested in 1909–1910. A secondary history gives 1913, while Draugas reports decline by 1910 and return by 1919; the exact end remains unresolved. No current All Saints independent/national successor or building disposition has been established."
     },
     "trinity-new-york-ny": {
       "registry_slug": "trinity-new-york-ny",
@@ -1800,15 +1766,6 @@
       "pastoral_status": "unknown",
       "situation": "Documented in registry but minimal research details available. Status not yet verified."
     },
-    "parish-wilkes-barre-pa": {
-      "registry_slug": "parish-wilkes-barre-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Coal region."
-    },
     "parish-baltimore-md": {
       "registry_slug": "parish-baltimore-md",
       "canonical_status": "unknown",
@@ -1820,12 +1777,12 @@
     },
     "joseph-dubois-pa": {
       "registry_slug": "joseph-dubois-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Coal region."
+      "canonical_status": "closed",
+      "building_fate": "repurposed_religious",
+      "current_use": "St. Nicholas Orthodox Church, 301 South State Street, since 2020",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "This record is St. Joseph Lithuanian Roman Catholic parish, active by 1912 and no longer listed as a standalone Diocese of Erie parish. St. Nicholas Orthodox reports purchasing the former church in April 2020 and using it for Orthodox worship. A separate DuBois independent/national attempt is attested in 1903, but its title, property, and end are unresolved and it is not counted as a parish row."
     },
     "parish-chicago-il-2": {
       "registry_slug": "parish-chicago-il-2",
@@ -1840,19 +1797,10 @@
       "registry_slug": "providence-providence-ri",
       "canonical_status": "unknown",
       "building_fate": "unknown",
-      "current_use": "Unknown",
+      "current_use": "Historical phase; no current independent/national successor established",
       "lithuanian_identity": "unknown",
       "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
-    },
-    "parish-worcester-ma": {
-      "registry_slug": "parish-worcester-ma",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+      "situation": "Draugas supports a Providence Lithuanian independent/national Catholic phase around 1909–1911 and reports a return by 1919. The evidence does not yet establish a durable standalone parish, corporation, property, or exact end. The later Roman Catholic St. Casimir parish, whose legal title began in 1919 and closed in 2017, is a separate record unless a succession source is found."
     },
     "parish-chicago-il-3": {
       "registry_slug": "parish-chicago-il-3",

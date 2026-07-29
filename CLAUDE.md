@@ -21,7 +21,7 @@ Public advocacy site for SaveOurLithuanianParishes.org. This is a **product repo
 - `data/parishes.csv` is a **snapshot** of the canonical dataset in `culturenet-brain/docs/research/draugas/parishes.csv`. Never hand-edit it here — re-snapshot by PR and update `data/PROVENANCE.md`.
 - `scripts/build-data.mjs` validates every derived figure against the locked figure set and **fails the build on drift**. Expected figures change only to match a new upstream locked-figures revision.
 - `data/parishes.json` and `data/figures.json` are generated — regenerate with `npm run data`, commit alongside the script that produced them.
-- `data/registry-unified.json` is the **living canonical unified parish registry as of Registry Revision 2 (2026-07-27)**. `culturenet-brain` retains build provenance and submits new research by held PR; do not replace this file with a raw upstream rebuild. Every content change must bump `registryRevision.version`, update its changelog/hash, and pass `scripts/verify-registry-revision.mjs`.
+- `data/registry-unified.json` is the **living canonical unified parish registry as of Registry Revision 3 (2026-07-28)**. `culturenet-brain` retains build provenance and submits new research by held PR; do not replace this file with a raw upstream rebuild. Every content change must bump `registryRevision.version`, update its changelog/hash, and pass `scripts/verify-registry-revision.mjs`.
 - New data enters under its own `corpusScope` tag; the `draugas-2008-2026` figures never silently mutate.
 
 ## Binding editorial guardrails (from the locked research — do not relax)

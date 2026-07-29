@@ -505,6 +505,11 @@ export default async function ParishPage({
         <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
           {recordDepthLabel(profile)}
         </span>
+        {entry.needs_human_source_review && (
+          <span className="rounded-full border border-amber-300 bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-amber-900 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-200">
+            Human source review pending
+          </span>
+        )}
         {profile.congregationClass === "national_catholic_pncc" && (
           <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
             independent from Rome · historical witness

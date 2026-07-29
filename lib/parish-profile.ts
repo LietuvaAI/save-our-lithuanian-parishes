@@ -59,6 +59,7 @@ export type RegistryEntry = Omit<
     closed?: YearReading[];
   };
   record_type?: string;
+  needs_human_source_review?: boolean;
   aliases?: string[];
   caveat?: string;
   conflicts?: SourceConflict[];
