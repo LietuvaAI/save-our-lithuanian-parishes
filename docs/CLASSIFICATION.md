@@ -106,15 +106,20 @@ research pages.
   with an empty closure year. The column feeds only geocoding here and does not
   override the Revision 4 research hold.
 
-## Public campaign identity locks (2026-07-28)
+## Canonical identity register (2026-07-28)
 
-Every public campaign parish has an explicit `identityLock` in
-`data/alerts.json`. Research can update the documented current status as events
-change, but it cannot silently rename, merge, redirect, relocate, or reclassify
-the institution carrying the campaign. `scripts/verify-campaign-identity.mjs`
-checks the canonical profile, registry row, Lithuanian name, location,
-institution type, ownership, denomination, founding-year anchor, and C83
-lineage on every data build.
+`data/canonical-identity-locks.json` independently freezes the 82 unique U.S.
+canonical identities represented by the 83 C83 source rows. The register locks
+the entity join, canonical profile and registry routes, Lithuanian name, place,
+institution/record type, denomination, and C83 lineage. The four public
+campaign assignments are a stricter subset of the same register.
+
+Research can update current status, building fate, pastoral conditions,
+ownership changes, dates, sources, notes, and campaign actions without changing
+identity. Any identity change requires a new hashed identity revision and
+Vilija review. `scripts/verify-canonical-identities.mjs` checks the core record,
+registry, and campaign layer against the independent register on every data
+build.
 
 ## Both directions of claim are guarded (2026-07-26)
 

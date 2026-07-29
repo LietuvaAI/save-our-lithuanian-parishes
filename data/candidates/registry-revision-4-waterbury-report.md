@@ -28,6 +28,6 @@ Its complete registry record and classifier overlay are preserved in `data/candi
 | Congregation rows | 10 | 10 |
 | Locked C83 cases | 83 | 83 |
 
-## Campaign protection
+## Canonical identity protection
 
-Every entry in `alerts.json → campaigns[]` now carries an explicit `identityLock`. The data build fails if a protected campaign profile is renamed, merged, redirected, relocated, moved to another registry row, assigned different C83 lineage, or reclassified as another institution or denomination. Current status remains updateable because campaigns must reflect documented events.
+`data/canonical-identity-locks.json` independently protects all 82 unique U.S. C83 identities, covering all 83 source rows. The four public campaigns are anchored to entries in that register. The data build fails if a protected identity or campaign assignment is renamed, merged, redirected, relocated, moved to another registry row, assigned different C83 lineage, or reclassified as another institution or denomination. Current status and other evidence-driven facts remain updateable because the public record must reflect documented events.
