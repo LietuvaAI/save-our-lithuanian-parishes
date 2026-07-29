@@ -30,13 +30,14 @@
     "publicCampaigns": 4
   },
   "identityRevision": {
-    "version": 1,
+    "version": 2,
     "date": "2026-07-28",
     "approvedBy": "Vilija",
     "changelog": [
-      "Established the independent canonical identity register for all 82 unique U.S. C83 entities and anchored every public campaign to that register."
+      "Established the independent canonical identity register for all 82 unique U.S. C83 entities and anchored every public campaign to that register.",
+      "Release-audited all 82 identities and corrected four joins: Ansonia St. Anthony, Newark Holy Trinity, Jerusalem Lutheran in Collinsville, and Kansas City St. Casimir on the Kansas side. Retired registry slugs remain aliases; the frozen 83-row source snapshot is unchanged."
     ],
-    "contentHash": "f728486674f386a9f4ae5d51aed0d9fefe6faa9bfe5eb83d6b997f0d14eaf7bc"
+    "contentHash": "33f4b16caeba830c276959ba446ece28a739d2a0de989642670100dc72d0a5d9"
   },
   "campaigns": [
     {
@@ -243,10 +244,10 @@
     },
     {
       "profileSlug": "sv-kazimiero-kansas-city-mo",
-      "registrySlug": "casimir-kansas-city-mo",
+      "registrySlug": "st-casimir-kansas-city-ks",
       "nameLt": "Šv. Kazimiero",
       "city": "Kansas City",
-      "state": "MO",
+      "state": "KS",
       "country": "US",
       "institutionType": "parapija",
       "recordType": "parish",
@@ -439,8 +440,8 @@
     },
     {
       "profileSlug": "lietuviu-baznycia-unnamed-newark-nj",
-      "registrySlug": "holyname-newark-nj",
-      "nameLt": "Lietuvių bažnyčia (unnamed)",
+      "registrySlug": "holy-trinity-newark-nj",
+      "nameLt": "Švč. Trejybės",
       "city": "Newark",
       "state": "NJ",
       "country": "US",
@@ -495,8 +496,8 @@
     },
     {
       "profileSlug": "lietuviu-baznycia-unnamed-ansonia-ct",
-      "registrySlug": "holyname-ansonia-ct",
-      "nameLt": "Lietuvių bažnyčia (unnamed)",
+      "registrySlug": "st-anthony-ansonia-ct",
+      "nameLt": "Šv. Antano",
       "city": "Ansonia",
       "state": "CT",
       "country": "US",
@@ -1211,7 +1212,7 @@
     {
       "profileSlug": "lithuanian-lutheran-church-collinsville-il",
       "registrySlug": "parish-collinsville-il",
-      "nameLt": "Lithuanian Lutheran Church",
+      "nameLt": "Jeruzalės liuteronų parapija",
       "city": "Collinsville",
       "state": "IL",
       "country": "US",

@@ -121,6 +121,14 @@ Vilija review. `scripts/verify-canonical-identities.mjs` checks the core record,
 registry, and campaign layer against the independent register on every data
 build.
 
+Identity Revision 2 and Registry Revision 5 record the completed release audit:
+all 83 frozen U.S. source rows have source-backed case files and resolve to 82
+canonical identities. Four joins were corrected (Ansonia, Newark, Collinsville,
+and Kansas City), and Westville's stale classifier pointer was repaired.
+`scripts/verify-canonical-release.mjs` now enforces that full chain on every
+data build. The audit ledger lives in
+`data/candidates/canonical-identity-release-audit-2026-07-28.md`.
+
 ## Both directions of claim are guarded (2026-07-26)
 
 A record must earn a **favorable** identity and an **ending** alike, and the

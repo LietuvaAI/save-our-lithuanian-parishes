@@ -21,19 +21,19 @@
  ],
  "principles": "conflicts are data; locked figures untouched; no invented values; every fact cites its source",
  "counts": {
-  "parishes": 195,
+  "parishes": 190,
   "case_filed": 83,
   "case_filed_records": 82,
-  "multi_source": 65,
-  "single_source": 63,
+  "multi_source": 63,
+  "single_source": 60,
   "with_exact_geo": 91,
-  "with_city_geo": 106,
-  "needs_geocode": 3,
+  "with_city_geo": 102,
+  "needs_geocode": 2,
   "standalone_sites": 167,
   "non_catholic_congregations": 14,
   "excluded": 11,
   "ambiguous": 1,
-  "records": 210,
+  "records": 205,
   "missions": 4,
   "congregations": 10,
   "phases": 1
@@ -3281,199 +3281,6 @@
    "diocese": "Diocese of Gary",
    "c83_rows": [
     1
-   ],
-   "city_history": []
-  },
-  {
-   "slug": "casimir-kansas-city-ka",
-   "names": {
-    "lt": null,
-    "en": "St. Casimir",
-    "variants": [
-     "St. Casimir"
-    ]
-   },
-   "city": "Kansas City",
-   "state": "KS",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "wolkovich",
-     "kind": "scholar-compendium",
-     "tier": 2,
-     "work": "Wolkovich, Lithuanian Religious Life in America, Vol. 3 (1998)",
-     "pages": "p.160; p.161; p.162",
-     "lccn": "91-76766",
-     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
-     "ethnic_status": "Lithuanian national parish",
-     "school": "1921 (cornerstone)|1923 (opened)",
-     "convent": "",
-     "cemetery": "",
-     "diocese": ""
-    }
-   ],
-   "years": {
-    "founded": [
-     {
-      "value": "1905",
-      "source": "wolkovich",
-      "cite": "Vol.3 p.160; p.161; p.162"
-     }
-    ],
-    "closed": [
-     {
-      "value": "1947",
-      "source": "wolkovich",
-      "cite": "Vol.3 p.160; p.161; p.162"
-     }
-    ]
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [],
-   "geo": {
-    "lat": null,
-    "lon": null,
-    "precision": null,
-    "needs_geocode": true
-   },
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Archdiocese of Kansas City in Kansas",
-   "c83_rows": [],
-   "city_history": []
-  },
-  {
-   "slug": "casimir-kansas-city-ks",
-   "names": {
-    "lt": null,
-    "en": "St. Casimir",
-    "variants": [
-     "St. Casimir"
-    ]
-   },
-   "city": "Kansas City",
-   "state": "KS",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "web-historical",
-     "kind": "web-candidate",
-     "idx": 130,
-     "confidence": "high",
-     "currentStatus": "demolished",
-     "ownership": "diocese_rc"
-    }
-   ],
-   "years": {
-    "founded": [
-     {
-      "value": "1912",
-      "source": "web-historical"
-     }
-    ],
-    "closed": [
-     {
-      "value": "1947",
-      "source": "web-historical"
-     }
-    ]
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [],
-   "geo": {
-    "lat": 39.1134562,
-    "lon": -94.626497,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Archdiocese of Kansas City in Kansas",
-   "c83_rows": [],
-   "city_history": []
-  },
-  {
-   "slug": "casimir-kansas-city-mo",
-   "names": {
-    "lt": "Šv. Kazimiero",
-    "en": null,
-    "variants": [
-     "Šv. Kazimiero"
-    ]
-   },
-   "city": "Kansas City",
-   "state": "MO",
-   "country": "US",
-   "record_type": "parish",
-   "comparator": false,
-   "in_locked_scope": true,
-   "c83_row": 13,
-   "locked": {
-    "ownership": "diocese_rc",
-    "status": "closed",
-    "ending_mode": "diocese_closed",
-    "year_founded": "",
-    "year_closed": "1947",
-    "coal_region": "false",
-    "survived_review_then_closed": "false",
-    "source": "2022-01-13",
-    "notes": "Closed 1947 by a bishop who disliked ethnic parishes; building status unknown."
-   },
-   "sources": [
-    {
-     "axis": "draugas-2008-2026",
-     "kind": "case-file",
-     "ref": "c83 row 13",
-     "cites": "2022-01-13"
-    },
-    {
-     "axis": "draugas-registry-1909-2007",
-     "kind": "newspaper-record",
-     "parish_key": "st-casimir-kansas-city-mo",
-     "first_mention": "1932-09-03",
-     "last_mention": "2006-10-28",
-     "total_mentions": 7
-    }
-   ],
-   "years": {
-    "founded": [],
-    "closed": [
-     {
-      "value": "1947",
-      "source": "draugas-2008-2026"
-     }
-    ]
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [
-    {
-     "set": "draugas-registry-1909-2007/events-curated",
-     "parish_key": "st-casimir-kansas-city-mo"
-    }
-   ],
-   "geo": {
-    "lat": 39.100105,
-    "lon": -94.5781416,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "case-filed",
-   "diocese": "Diocese of Kansas City-St. Joseph",
-   "c83_rows": [
-    13
    ],
    "city_history": []
   },
@@ -8381,7 +8188,7 @@
    "congregation_class": "independent_catholic",
    "axes_count": 3,
    "record_depth": "case-filed",
-   "diocese": "Diocese of Peoria",
+   "diocese": null,
    "caveat": "Adjudicated same-entity (culturenet-brain PR #437, 2026-07-25): this congregation and the record formerly carried as the 'LNCC congregation, Westville' are one — the '~1969' closure was arithmetic from Draugas 2019-02-02 p. 8 ('užsidarė dar prieš 50 metų', 2019−50), not evidence, and fits the sourced 1956–61 window. Jurisdiction corrected: the attested affiliation is the North American Old Roman Catholic Church (Bishop Z. K. Vipartas, succession 1958–1961), not the Polish National Catholic Church — the Peoria diocesan paper called it 'the schismatic Lithuanian parish at Westville' in 1934. Records merge at the next registry refresh.",
    "comparator": false,
    "c83_rows": [
@@ -8398,7 +8205,12 @@
     "source": "2019-02-02",
     "notes": "LITHUANIAN NATIONAL CATHOLIC, community-governed. Closed ~1969 and demolished; bell and cornerstone made into a 2004 memorial; cemetery maintained. Independence removed diocesan risk but not demographic risk."
    },
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-28",
+    "cite": "data/candidates/canonical-identity-release-audit-2026-07-28.md",
+    "status": "identity-release-audited"
+   }
   },
   {
    "slug": "holy-trinity-newark-nj",
@@ -8407,15 +8219,18 @@
     "en": "Holy Trinity",
     "variants": [
      "Švč. Trejybės",
-     "Holy Trinity"
+     "Holy Trinity",
+     "Lietuvių bažnyčia (unnamed)",
+     "Holy Trinity Lithuanian parish",
+     "Holy Trinity-Epiphany"
     ]
    },
    "city": "Newark",
    "state": "NJ",
    "country": "US",
    "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
+   "in_locked_scope": true,
+   "c83_row": 27,
    "sources": [
     {
      "axis": "draugas-registry-1909-2007",
@@ -8456,6 +8271,20 @@
      "confidence": "verified",
      "sourceUrl": "http://newarkreligion.com/rcatholic/holytrinityrc.php",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "draugas-2008-2026",
+     "kind": "case-file",
+     "ref": "c83 row 27",
+     "cites": "2018-02-15; 2022-09-22"
+    },
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-record",
+     "parish_key": "lithuanian-church-newark-nj",
+     "first_mention": "",
+     "last_mention": "",
+     "total_mentions": 0
     }
    ],
    "years": {
@@ -8465,14 +8294,54 @@
       "source": "draugas-registry-1909-2007"
      }
     ],
-    "closed": []
+    "closed": [
+     {
+      "value": "1981",
+      "source": "draugas-2008-2026"
+     }
+    ]
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "founding year",
+     "variants": [
+      {
+       "value": "1901",
+       "source": "draugas-registry-1909-2007",
+       "cite": "1971-12-13 p. 6 (70-year jubilee)"
+      },
+      {
+       "value": "1902",
+       "source": "current case record",
+       "cite": "case record researched 2026-07-16"
+      }
+     ],
+     "note": "The identity is settled; the one-year founding variance remains visible."
+    },
+    {
+     "field": "institution and building outcome",
+     "variants": [
+      {
+       "value": "original church demolished after the 1981 fire",
+       "source": "draugas-2008-2026"
+      },
+      {
+       "value": "parish continued in its hall, merged with Epiphany, and remains active as Holy Trinity-Epiphany",
+       "source": "current/official case record"
+      }
+     ],
+     "note": "Demolition describes the original church building, not suppression of the continuing parish."
+    }
+   ],
    "related_sites": [],
    "events_refs": [
     {
      "set": "draugas-registry-1909-2007/events-curated",
      "parish_key": "holy-trinity-newark-nj"
+    },
+    {
+     "set": "draugas-registry-1909-2007/events-curated",
+     "parish_key": "lithuanian-church-newark-nj"
     }
    ],
    "geo": {
@@ -8483,10 +8352,40 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source",
+   "record_depth": "case-filed",
    "diocese": "Archdiocese of Newark",
-   "c83_rows": [],
-   "city_history": []
+   "c83_rows": [
+    27
+   ],
+   "city_history": [],
+   "comparator": false,
+   "locked": {
+    "ownership": "diocese_rc",
+    "status": "demolished",
+    "ending_mode": "diocese_closed",
+    "year_founded": "",
+    "year_closed": "1981",
+    "coal_region": "false",
+    "survived_review_then_closed": "false",
+    "source": "2018-02-15; 2022-09-22",
+    "notes": "Unnamed Lithuanian church; original building demolished after a 1981 fire; diocese refused repairs; congregation moved to the parish-hall basement; now Portuguese/Brazilian use."
+   },
+   "aliases": [
+    "holyname-newark-nj"
+   ],
+   "events": [],
+   "lifecycle": {
+    "canonical_status": "merged",
+    "selected_closed_year": null,
+    "identity": "ethnically_transferred",
+    "confidence": "identity-confirmed-current-parish-continuity-probable"
+   },
+   "adjudication": {
+    "date": "2026-07-28",
+    "cite": "data/candidates/canonical-identity-release-audit-2026-07-28.md",
+    "status": "identity-release-audited"
+   },
+   "needs_human_source_review": true
   },
   {
    "slug": "holycross-brooklyn-ny",
@@ -9108,156 +9007,6 @@
    "diocese": "Diocese of Harrisburg",
    "c83_rows": [
     49
-   ],
-   "city_history": []
-  },
-  {
-   "slug": "holyname-ansonia-ct",
-   "names": {
-    "lt": "Lietuvių bažnyčia (unnamed)",
-    "en": null,
-    "variants": [
-     "Lietuvių bažnyčia (unnamed)"
-    ]
-   },
-   "city": "Ansonia",
-   "state": "CT",
-   "country": "US",
-   "record_type": "parish",
-   "comparator": false,
-   "in_locked_scope": true,
-   "c83_row": 31,
-   "locked": {
-    "ownership": "diocese_rc",
-    "status": "closed",
-    "ending_mode": "diocese_closed",
-    "year_founded": "",
-    "year_closed": "2015",
-    "coal_region": "false",
-    "survived_review_then_closed": "false",
-    "source": "2017-11-30; 2023-12-09",
-    "notes": "Unnamed Lithuanian church; closed and sold ~2015 to non-Catholics; Gediminas-pillars monument remains in the churchyard."
-   },
-   "sources": [
-    {
-     "axis": "draugas-2008-2026",
-     "kind": "case-file",
-     "ref": "c83 row 31",
-     "cites": "2017-11-30; 2023-12-09"
-    },
-    {
-     "axis": "draugas-registry-1909-2007",
-     "kind": "newspaper-record",
-     "parish_key": "lithuanian-church-ansonia-ct",
-     "first_mention": "",
-     "last_mention": "",
-     "total_mentions": 0
-    }
-   ],
-   "years": {
-    "founded": [],
-    "closed": [
-     {
-      "value": "2015",
-      "source": "draugas-2008-2026"
-     }
-    ]
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [
-    {
-     "set": "draugas-registry-1909-2007/events-curated",
-     "parish_key": "lithuanian-church-ansonia-ct"
-    }
-   ],
-   "geo": {
-    "lat": 41.3434295,
-    "lon": -73.0441144,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "case-filed",
-   "diocese": "Archdiocese of Hartford",
-   "c83_rows": [
-    31
-   ],
-   "city_history": []
-  },
-  {
-   "slug": "holyname-newark-nj",
-   "names": {
-    "lt": "Lietuvių bažnyčia (unnamed)",
-    "en": null,
-    "variants": [
-     "Lietuvių bažnyčia (unnamed)"
-    ]
-   },
-   "city": "Newark",
-   "state": "NJ",
-   "country": "US",
-   "record_type": "parish",
-   "comparator": false,
-   "in_locked_scope": true,
-   "c83_row": 27,
-   "locked": {
-    "ownership": "diocese_rc",
-    "status": "demolished",
-    "ending_mode": "diocese_closed",
-    "year_founded": "",
-    "year_closed": "1981",
-    "coal_region": "false",
-    "survived_review_then_closed": "false",
-    "source": "2018-02-15; 2022-09-22",
-    "notes": "Unnamed Lithuanian church; original building demolished after a 1981 fire; diocese refused repairs; congregation moved to the parish-hall basement; now Portuguese/Brazilian use."
-   },
-   "sources": [
-    {
-     "axis": "draugas-2008-2026",
-     "kind": "case-file",
-     "ref": "c83 row 27",
-     "cites": "2018-02-15; 2022-09-22"
-    },
-    {
-     "axis": "draugas-registry-1909-2007",
-     "kind": "newspaper-record",
-     "parish_key": "lithuanian-church-newark-nj",
-     "first_mention": "",
-     "last_mention": "",
-     "total_mentions": 0
-    }
-   ],
-   "years": {
-    "founded": [],
-    "closed": [
-     {
-      "value": "1981",
-      "source": "draugas-2008-2026"
-     }
-    ]
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [
-    {
-     "set": "draugas-registry-1909-2007/events-curated",
-     "parish_key": "lithuanian-church-newark-nj"
-    }
-   ],
-   "geo": {
-    "lat": 40.735657,
-    "lon": -74.1723667,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "case-filed",
-   "diocese": "Archdiocese of Newark",
-   "c83_rows": [
-    27
    ],
    "city_history": []
   },
@@ -13438,11 +13187,15 @@
   {
    "slug": "parish-collinsville-il",
    "names": {
-    "lt": "Lithuanian Lutheran Church",
-    "en": "Jerusalem Lutheran",
+    "lt": "Jeruzalės liuteronų parapija",
+    "en": "Jerusalem Lutheran Church",
     "variants": [
      "Lithuanian Lutheran Church",
-     "Jerusalem Lutheran"
+     "Jerusalem Lutheran",
+     "Jeruzalės liuteronų",
+     "Jaruzlė Lithuanian Lutheran Parish, Collinsville",
+     "Kolinsvilio Jeruzalės liuteronų lietuvių bažnyčia",
+     "Jeruzalės parapija"
     ]
    },
    "city": "Collinsville",
@@ -13488,7 +13241,22 @@
     ],
     "closed": []
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "governance",
+     "variants": [
+      {
+       "value": "independent/self-governing",
+       "source": "frozen C83 source row 83"
+      },
+      {
+       "value": "member congregation, Lutheran Church-Missouri Synod",
+       "source": "official LCMS locator; current case record"
+      }
+     ],
+     "note": "The congregation owns its property and LCMS polity is congregational, but it is not denominationally independent."
+    }
+   ],
    "related_sites": [],
    "events_refs": [],
    "geo": {
@@ -13507,10 +13275,22 @@
     "Kolinsvilio Jeruzalės liuteronų lietuvių bažnyčia"
    ],
    "city_history": [],
-   "diocese": "Diocese of Belleville",
+   "diocese": null,
    "c83_rows": [
     83
-   ]
+   ],
+   "lifecycle": {
+    "canonical_status": "standing",
+    "selected_closed_year": null,
+    "identity": "ethnically_transferred",
+    "confidence": "identity-and-current-congregation-verified"
+   },
+   "adjudication": {
+    "date": "2026-07-28",
+    "cite": "data/candidates/canonical-identity-release-audit-2026-07-28.md",
+    "status": "identity-release-audited"
+   },
+   "needs_human_source_review": true
   },
   {
    "slug": "parish-grand-prairie-ar",
@@ -17638,15 +17418,18 @@
     "en": "St. Anthony",
     "variants": [
      "Šv. Antano",
-     "St. Anthony"
+     "St. Anthony",
+     "Lietuvių bažnyčia (unnamed)",
+     "St. Anthony's Lithuanian parish",
+     "Šv. Antano lietuvių parapija"
     ]
    },
    "city": "Ansonia",
    "state": "CT",
    "country": "US",
    "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
+   "in_locked_scope": true,
+   "c83_row": 31,
    "sources": [
     {
      "axis": "draugas-registry-1909-2007",
@@ -17685,6 +17468,20 @@
       2015
      ],
      "importance": 3
+    },
+    {
+     "axis": "draugas-2008-2026",
+     "kind": "case-file",
+     "ref": "c83 row 31",
+     "cites": "2017-11-30; 2023-12-09"
+    },
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-record",
+     "parish_key": "lithuanian-church-ansonia-ct",
+     "first_mention": "",
+     "last_mention": "",
+     "total_mentions": 0
     }
    ],
    "years": {
@@ -17698,6 +17495,10 @@
      {
       "value": "2015",
       "source": "draugas-registry-1909-2007"
+     },
+     {
+      "value": "2015",
+      "source": "draugas-2008-2026"
      }
     ]
    },
@@ -17707,6 +17508,10 @@
     {
      "set": "draugas-registry-1909-2007/events-curated",
      "parish_key": "st-anthony-ansonia-ct"
+    },
+    {
+     "set": "draugas-registry-1909-2007/events-curated",
+     "parish_key": "lithuanian-church-ansonia-ct"
     }
    ],
    "geo": {
@@ -17717,10 +17522,40 @@
    },
    "congregation_class": "roman_catholic",
    "axes_count": 3,
-   "record_depth": "multi-source",
+   "record_depth": "case-filed",
    "diocese": "Archdiocese of Hartford",
-   "c83_rows": [],
-   "city_history": []
+   "c83_rows": [
+    31
+   ],
+   "city_history": [],
+   "comparator": false,
+   "locked": {
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "ending_mode": "diocese_closed",
+    "year_founded": "",
+    "year_closed": "2015",
+    "coal_region": "false",
+    "survived_review_then_closed": "false",
+    "source": "2017-11-30; 2023-12-09",
+    "notes": "Unnamed Lithuanian church; closed and sold ~2015 to non-Catholics; Gediminas-pillars monument remains in the churchyard."
+   },
+   "aliases": [
+    "holyname-ansonia-ct"
+   ],
+   "events": [],
+   "lifecycle": {
+    "canonical_status": "closed",
+    "selected_closed_year": 2015,
+    "identity": "lost",
+    "confidence": "identity-confirmed-current-use-probable"
+   },
+   "adjudication": {
+    "date": "2026-07-28",
+    "cite": "data/candidates/canonical-identity-release-audit-2026-07-28.md",
+    "status": "identity-release-audited"
+   },
+   "needs_human_source_review": true
   },
   {
    "slug": "st-anthony-bridgeville-pa",
@@ -18149,17 +17984,20 @@
    "slug": "st-casimir-kansas-city-ks",
    "names": {
     "lt": "Šv. Kazimiero",
-    "en": null,
+    "en": "St. Casimir",
     "variants": [
-     "Šv. Kazimiero"
+     "Šv. Kazimiero",
+     "St. Casimir",
+     "St. Casimir Lithuanian parish",
+     "Kansas City Lithuanian St. Casimir"
     ]
    },
    "city": "Kansas City",
    "state": "KS",
    "country": "US",
    "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
+   "in_locked_scope": true,
+   "c83_row": 13,
    "sources": [
     {
      "axis": "draugas-registry-1909-2007",
@@ -18168,28 +18006,120 @@
      "first_mention": "1932-09-03",
      "last_mention": "2006-10-28",
      "total_mentions": 7
+    },
+    {
+     "axis": "draugas-2008-2026",
+     "kind": "case-file",
+     "ref": "c83 row 13",
+     "cites": "2022-01-13"
+    },
+    {
+     "axis": "draugas-registry-1909-2007",
+     "kind": "newspaper-record",
+     "parish_key": "st-casimir-kansas-city-mo",
+     "first_mention": "1932-09-03",
+     "last_mention": "2006-10-28",
+     "total_mentions": 7
+    },
+    {
+     "axis": "wolkovich",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Wolkovich, Lithuanian Religious Life in America, Vol. 3 (1998)",
+     "pages": "p.160; p.161; p.162",
+     "lccn": "91-76766",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "ethnic_status": "Lithuanian national parish",
+     "school": "1921 (cornerstone)|1923 (opened)",
+     "convent": "",
+     "cemetery": "",
+     "diocese": ""
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-candidate",
+     "idx": 130,
+     "confidence": "high",
+     "currentStatus": "demolished",
+     "ownership": "diocese_rc"
     }
    ],
    "years": {
     "founded": [
      {
+      "value": "1905",
+      "source": "wolkovich",
+      "cite": "Vol.3 p.160; p.161; p.162"
+     },
+     {
       "value": "1912",
       "source": "draugas-registry-1909-2007"
+     },
+     {
+      "value": "1912",
+      "source": "web-historical"
      }
     ],
     "closed": [
      {
       "value": "1947",
       "source": "draugas-registry-1909-2007"
+     },
+     {
+      "value": "1947",
+      "source": "draugas-2008-2026"
+     },
+     {
+      "value": "1947",
+      "source": "wolkovich",
+      "cite": "Vol.3 p.160; p.161; p.162"
+     },
+     {
+      "value": "1947",
+      "source": "web-historical"
      }
     ]
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "founding and church-acquisition dates",
+     "variants": [
+      {
+       "value": "1905 parish founding",
+       "source": "wolkovich",
+       "cite": "Vol. 3 pp. 160-162"
+      },
+      {
+       "value": "1912 church acquisition/opening",
+       "source": "draugas-registry-1909-2007; web-historical"
+      }
+     ],
+     "note": "1905 is the parish founding reading; 1912 describes acquisition/opening of the church building."
+    },
+    {
+     "field": "state",
+     "variants": [
+      {
+       "value": "MO",
+       "source": "frozen C83 source row 13"
+      },
+      {
+       "value": "KS",
+       "source": "Wolkovich; current case record; Kansas sources"
+      }
+     ],
+     "note": "The public canonical place is Kansas City, Kansas. The old -mo profile slug remains only as a stable legacy URL."
+    }
+   ],
    "related_sites": [],
    "events_refs": [
     {
      "set": "draugas-registry-1909-2007/events-curated",
      "parish_key": "st-casimir-kansas-city-ks"
+    },
+    {
+     "set": "draugas-registry-1909-2007/events-curated",
+     "parish_key": "st-casimir-kansas-city-mo"
     }
    ],
    "geo": {
@@ -18199,11 +18129,43 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
+   "axes_count": 3,
+   "record_depth": "case-filed",
    "diocese": "Archdiocese of Kansas City in Kansas",
-   "c83_rows": [],
-   "city_history": []
+   "c83_rows": [
+    13
+   ],
+   "city_history": [],
+   "comparator": false,
+   "locked": {
+    "ownership": "diocese_rc",
+    "status": "closed",
+    "ending_mode": "diocese_closed",
+    "year_founded": "",
+    "year_closed": "1947",
+    "coal_region": "false",
+    "survived_review_then_closed": "false",
+    "source": "2022-01-13",
+    "notes": "Closed 1947 by a bishop who disliked ethnic parishes; building status unknown."
+   },
+   "aliases": [
+    "casimir-kansas-city-mo",
+    "casimir-kansas-city-ka",
+    "casimir-kansas-city-ks"
+   ],
+   "events": [],
+   "lifecycle": {
+    "canonical_status": "closed",
+    "selected_closed_year": 1947,
+    "identity": "lost",
+    "confidence": "identity-and-location-confirmed-building-fate-probable"
+   },
+   "adjudication": {
+    "date": "2026-07-28",
+    "cite": "data/candidates/canonical-identity-release-audit-2026-07-28.md",
+    "status": "identity-release-audited"
+   },
+   "needs_human_source_review": true
   },
   {
    "slug": "st-casimir-mcadoo-pa",
@@ -21568,7 +21530,7 @@
   }
  ],
  "registryRevision": {
-  "version": 4,
+  "version": 5,
   "date": "2026-07-28",
   "changelog": [
    "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
@@ -21581,8 +21543,10 @@
    "Applied parish-canon tranche 1 after archival and current/official review: restored Waterbury All Saints as a distinct historical entity, collapsed Worcester, Wilkes-Barre, and DuBois duplicate rows, marked Providence as a phase, and separated Roman Catholic DuBois St. Joseph from the provisional 1903 national attempt.",
    "Preserved full direct Draugas issue links, current institutional sources, unresolved boundaries, and the unchanged locked C83 evidence.",
    "Moved the unresolved unnamed 1902 Waterbury lead out of the public canonical registry and into a lossless research hold; public St. Joseph campaign identity and historical All Saints identity remain separate and unchanged.",
-   "Added machine-enforced identity locks for every public campaign parish so research cannot silently rename, merge, redirect, relocate, or reclassify the institution carrying a campaign."
+   "Added machine-enforced identity locks for every public campaign parish so research cannot silently rename, merge, redirect, relocate, or reclassify the institution carrying a campaign.",
+   "Release-audited all 82 canonical U.S. C83 identities and repaired four source-to-registry joins: Ansonia St. Anthony, Newark Holy Trinity, Collinsville Jerusalem Lutheran, and Kansas City St. Casimir in Kansas.",
+   "Collapsed five duplicate registry shells while preserving every source, conflict, locked source block, and retired slug as lineage or redirect aliases. The frozen C83 source rows and headline figures remain unchanged."
   ],
-  "contentHash": "06bd3d8bf8394f9d081237efe4a50f236b218dc27ee805a60632ca2cfcd7c727"
+  "contentHash": "12fb783ff0e1803e205eaa2d436045774976710e314cc5aba9dfa7148ea51720"
  }
 }

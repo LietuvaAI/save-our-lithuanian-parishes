@@ -111,13 +111,13 @@
       "situation": "Closed 1998; demolished (year conflicted: 2001 vs 2007). Listed on the National Register of Historic Places, which gave no protection against demolition."
     },
     "sv-kazimiero-kansas-city-mo": {
-      "registry_slug": "casimir-kansas-city-mo",
+      "registry_slug": "st-casimir-kansas-city-ks",
       "canonical_status": "closed",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
+      "building_fate": "demolished",
+      "current_use": "Vacant lot at Broadview and Ridge Avenue in Kansas City, Kansas; the parish bell is preserved at the Wyandotte County Museum",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "Bishop closed the parish in 1947 because he disliked ethnic parishes. Building status unknown."
+      "situation": "St. Casimir was in Kansas City, Kansas, not Missouri. The parish closed in a 1947 forced merger, the church was demolished, and its bell is preserved at the Wyandotte County Museum."
     },
     "sv-kazimiero-brockton-ma": {
       "registry_slug": "casimir-brockton-ma",
@@ -237,13 +237,13 @@
       "situation": "Diocese closed the parish and sold the building; it became a Syrian/Assyrian Catholic cathedral. Interior retained Lithuanian details."
     },
     "lietuviu-baznycia-unnamed-newark-nj": {
-      "registry_slug": "holyname-newark-nj",
-      "canonical_status": "demolished",
+      "registry_slug": "holy-trinity-newark-nj",
+      "canonical_status": "merged",
       "building_fate": "demolished",
-      "current_use": "Parish-hall basement now in Portuguese/Brazilian use; original church demolished after 1981 fire",
+      "current_use": "The original Lithuanian church is gone; Holy Trinity-Epiphany Parish continues in the 1963 parish-hall building at 207 Adams Street and now serves a Portuguese-speaking congregation",
       "lithuanian_identity": "ethnically_transferred",
       "pastoral_status": "not_applicable",
-      "situation": "Original building demolished after a 1981 fire; diocese refused repairs. Congregation moved to the parish-hall basement, which is now in Portuguese/Brazilian use."
+      "situation": "The original Holy Trinity church was demolished after the 1981 fire, but the parish continued in its hall, merged with Epiphany in 2002, and remains active as Holy Trinity-Epiphany. Lithuanian worship has ended."
     },
     "sv-kazimiero-paterson-nj": {
       "registry_slug": "casimir-paterson-nj",
@@ -273,13 +273,13 @@
       "situation": "Diocese closed the parish ~2001; building sold ~2007 and converted to condos. Still apartments in 2023."
     },
     "lietuviu-baznycia-unnamed-ansonia-ct": {
-      "registry_slug": "holyname-ansonia-ct",
+      "registry_slug": "st-anthony-ansonia-ct",
       "canonical_status": "closed",
       "building_fate": "repurposed_religious",
-      "current_use": "Sold to non-Catholics; Gediminas-pillars monument remains in churchyard",
+      "current_use": "The former St. Anthony church at 195-199 North Main Street is now home to Abundant Life Fellowship Ministries; the Lithuanian monument remains in the churchyard",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "Diocese closed the parish and sold it ~2015 to non-Catholics. The Gediminas-pillars monument remains in the churchyard."
+      "situation": "St. Anthony Lithuanian parish closed after its centennial in November 2015. The church survives in non-Catholic Christian use, and the Gediminas-columns monument remains in the former churchyard."
     },
     "sv-juozapo-waterbury-ct": {
       "registry_slug": "joseph-waterbury-ct",
@@ -723,13 +723,13 @@
       "situation": "LNCC, community-governed, never diocesan. Broke from RC in the 1916 schism; community sold the building in 1972 with ~30-40 parishioners at closure; building later demolished. Parish cemetery at Bensalem PA survives."
     },
     "lncc-congregation-westville-il": {
-      "registry_slug": "parish-westville-il",
+      "registry_slug": "holy-cross-westville-il",
       "canonical_status": "demolished",
       "building_fate": "demolished",
-      "current_use": "Demolished; bell and cornerstone made into a 2004 memorial; cemetery maintained",
+      "current_use": "The independent Holy Cross church was demolished; its bell and cornerstone became part of a 2004 memorial, and the cemetery remains",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "LNCC, community-governed. Closed ~1969 and demolished by community decision. Bell and cornerstone made into a 2004 memorial; cemetery maintained. Independence removed diocesan risk but not demographic risk."
+      "situation": "Holy Cross was an independent Lithuanian Catholic congregation, not a Roman Catholic parish of the Diocese of Peoria. The church closed in the sourced 1956-1961 window and was demolished; the older circa-1969 reading remains only as an approximate archival calculation."
     },
     "lietuviu-evangeliku-liuteronu-teviskes-parapija-darien-il": {
       "registry_slug": "angels-darien-il",
@@ -744,10 +744,10 @@
       "registry_slug": "parish-collinsville-il",
       "canonical_status": "standing",
       "building_fate": "standing",
-      "current_use": "Active Lithuanian Lutheran congregation; independent, self-governing, founded by a knygnesis from Taurage",
+      "current_use": "Active worship as Jerusalem Lutheran Church, an LCMS congregation at 305 Collinsville Avenue; weekly Sunday service in English",
       "lithuanian_identity": "ethnically_transferred",
       "pastoral_status": "not_applicable",
-      "situation": "Jerusalem Lutheran Church (LCMS) still holds a weekly service in English; no Lithuanian-language liturgy remains."
+      "situation": "Jerusalem Lutheran Church remains active in its 1903 building as a Lutheran Church-Missouri Synod congregation. Weekly worship continues in English; no current Lithuanian-language liturgy is documented."
     },
     "sv-kazimiero-montreal-qc": {
       "registry_slug": "casimir-montreal-qc",
@@ -1031,11 +1031,11 @@
     "st-anthony-ansonia-ct": {
       "registry_slug": "st-anthony-ansonia-ct",
       "canonical_status": "closed",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
+      "building_fate": "repurposed_religious",
+      "current_use": "The former St. Anthony church at 195-199 North Main Street is now home to Abundant Life Fellowship Ministries; the Lithuanian monument remains in the churchyard",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "Documented in Draugas (14 mentions 1933-2002); closed 2015 per registry. TrueLithuania sources confirm closed status."
+      "situation": "St. Anthony Lithuanian parish closed after its centennial in November 2015. The church survives in non-Catholic Christian use, and the Gediminas-columns monument remains in the former churchyard."
     },
     "st-mary-of-the-angels-brooklyn-ny": {
       "registry_slug": "st-mary-of-the-angels-brooklyn-ny",
@@ -1084,12 +1084,12 @@
     },
     "holy-trinity-newark-nj": {
       "registry_slug": "holy-trinity-newark-nj",
-      "canonical_status": "repurposed",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "lost",
+      "canonical_status": "merged",
+      "building_fate": "demolished",
+      "current_use": "The original Lithuanian church is gone; Holy Trinity-Epiphany Parish continues in the 1963 parish-hall building at 207 Adams Street and now serves a Portuguese-speaking congregation",
+      "lithuanian_identity": "ethnically_transferred",
       "pastoral_status": "not_applicable",
-      "situation": "Documented in Draugas (60 mentions 1927-2007); founded 1901. Web sources mark status as repurposed with demolished/converted flags in TrueLithuania."
+      "situation": "The original Holy Trinity church was demolished after the 1981 fire, but the parish continued in its hall, merged with Epiphany in 2002, and remains active as Holy Trinity-Epiphany. Lithuanian worship has ended."
     },
     "st-ann-jersey-city-nj": {
       "registry_slug": "st-ann-jersey-city-nj",
@@ -1165,12 +1165,12 @@
     },
     "holy-cross-westville-il": {
       "registry_slug": "holy-cross-westville-il",
-      "canonical_status": "closed",
-      "building_fate": "unknown",
-      "current_use": "Reportedly a private residence occupies the church site (single source, uncorroborated). A 2004 memorial built from the rescued bell and cornerstone stands in the separately run Westville Lithuanian Cemetery.",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "The independent Holy Cross church was demolished; its bell and cornerstone became part of a 2004 memorial, and the cemetery remains",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "An independent congregation formed in 1914 by a faction that broke from SS. Peter and Paul over fees, burial rules, and temperance — affiliated with the North American Old Roman Catholic Church, in which its leader Zigmantas K. Vipartas was consecrated a bishop (succession recorded 1958–1961). The congregation dissolved around 1960–61, after his death (1961 per the jurisdiction's own succession list; 1956 carried as a cited minority reading). The original building, a former Presbyterian church bought in 1914, was demolished; its bell and cornerstone became a 2004 memorial in the Westville Lithuanian Cemetery."
+      "situation": "Holy Cross was an independent Lithuanian Catholic congregation, not a Roman Catholic parish of the Diocese of Peoria. The church closed in the sourced 1956-1961 window and was demolished; the older circa-1969 reading remains only as an approximate archival calculation."
     },
     "st-francis-youngstown-oh": {
       "registry_slug": "st-francis-youngstown-oh",
@@ -1255,12 +1255,12 @@
     },
     "st-casimir-kansas-city-ks": {
       "registry_slug": "st-casimir-kansas-city-ks",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+      "canonical_status": "closed",
+      "building_fate": "demolished",
+      "current_use": "Vacant lot at Broadview and Ridge Avenue in Kansas City, Kansas; the parish bell is preserved at the Wyandotte County Museum",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "St. Casimir was in Kansas City, Kansas, not Missouri. The parish closed in a 1947 forced merger, the church was demolished, and its bell is preserved at the Wyandotte County Museum."
     },
     "st-joseph-st-louis-mo": {
       "registry_slug": "st-joseph-st-louis-mo",
@@ -1415,15 +1415,6 @@
       "pastoral_status": "unknown",
       "situation": "Lithuanian Lutheran congregation, not Roman Catholic. Documented in registry but minimal research details available. Status not yet verified."
     },
-    "casimir-kansas-city-ks": {
-      "registry_slug": "casimir-kansas-city-ks",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
-    },
     "francis-indian-harbor-in": {
       "registry_slug": "francis-indian-harbor-in",
       "canonical_status": "unknown",
@@ -1570,15 +1561,6 @@
     },
     "rosary-hartshorne-in": {
       "registry_slug": "rosary-hartshorne-in",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
-    },
-    "casimir-kansas-city-ka": {
-      "registry_slug": "casimir-kansas-city-ka",
       "canonical_status": "unknown",
       "building_fate": "unknown",
       "current_use": "Unknown",
@@ -1891,6 +1873,15 @@
       "lithuanian_identity": "unknown",
       "pastoral_status": "unknown",
       "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "parish-collinsville-il": {
+      "registry_slug": "parish-collinsville-il",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active worship as Jerusalem Lutheran Church, an LCMS congregation at 305 Collinsville Avenue; weekly Sunday service in English",
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "Jerusalem Lutheran Church remains active in its 1903 building as a Lutheran Church-Missouri Synod congregation. Weekly worship continues in English; no current Lithuanian-language liturgy is documented."
     }
   }
 }

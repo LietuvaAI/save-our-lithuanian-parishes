@@ -186,6 +186,8 @@ for (let index = 0; index < parishes.length; index++) {
   p.registrySlug = record.slug;
   p.nameLt = record.names?.lt || p.nameLt;
   p.city = record.city || p.city;
+  p.state = record.state || p.state;
+  p.country = record.country || p.country;
   const lifecycle = record.lifecycle;
   if (!lifecycle) continue;
   const statusMap = {
