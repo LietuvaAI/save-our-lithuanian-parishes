@@ -21,9 +21,13 @@ export type ProfileSource = {
 
 export type RegistryProfileSource = {
   axis?: string;
+  kind?: string;
   work?: string;
+  publisher?: string;
+  accessed?: string;
   pages?: string;
   cites?: string;
+  note?: string;
   first_mention?: string;
   last_mention?: string;
   total_mentions?: number;
@@ -72,26 +76,74 @@ function isAbsoluteWebUrl(url: string | null | undefined): url is string {
   return !!url && /^https?:\/\//i.test(url);
 }
 
-function draugasDates(cites: string | undefined): string[] {
+type DraugasCitation = {
+  date: string;
+  detail?: string;
+};
+
+function draugasCitations(cites: string | undefined): DraugasCitation[] {
   if (!cites) return [];
   return cites
     .split(";")
     .map((value) => value.trim())
-    .filter((value) => /^\d{4}-\d{2}-\d{2}$/.test(value));
+    .flatMap((value): DraugasCitation[] => {
+      const match = value.match(/^(\d{4}-\d{2}-\d{2})(?:\s+(.+))?$/);
+      if (!match) return [];
+      const detail = match[2]?.trim();
+      return [{ date: match[1], ...(detail ? { detail } : {}) }];
+    });
 }
 
 function draugasSource(
   date: string,
   context: string,
   title = `Draugas issue, ${date}`,
+  detail?: string,
+  sourceUrl?: string,
 ): SourceDraft {
   return {
     group: "newspaper",
     title,
-    citation: `Draugas, ${date}`,
-    url: draugasCitationUrl(date),
+    citation: `Draugas, ${date}${detail ? `, ${detail}` : ""}`,
+    url: isAbsoluteWebUrl(sourceUrl) ? sourceUrl : draugasCitationUrl(date),
     contexts: [context],
   };
+}
+
+function sourceLabel(axis: string): string {
+  const labels: Record<string, string> = {
+    "draugas-news": "Draugas News",
+    "lithuanian-genealogy": "Lithuanian Global Genealogical Society",
+  };
+  return (
+    labels[axis] ??
+    axis
+      .split("-")
+      .map((word, index) =>
+        index > 0 && word === "of"
+          ? word
+          : word.charAt(0).toUpperCase() + word.slice(1),
+      )
+      .join(" ")
+  );
+}
+
+function sourceCitation(
+  source: RegistryProfileSource,
+  publisher?: string,
+): string | undefined {
+  const pages = source.pages
+    ? `${source.pages.match(/^p(?:p)?\./i) ? "" : "p. "}${source.pages}`
+    : null;
+  const parts = [
+    publisher,
+    pages,
+    source.cites,
+    source.accessed ? `accessed ${source.accessed}` : null,
+  ].filter(
+    (value): value is string => !!value,
+  );
+  return parts.length > 0 ? parts.join(" · ") : undefined;
 }
 
 export function draugasProfileSources(
@@ -125,17 +177,43 @@ export function registryProfileSources(
     }
 
     if (axis === "draugas-2008-2026") {
-      for (const date of draugasDates(source.cites)) {
-        drafts.push(draugasSource(date, "Modern Draugas case-file evidence"));
+      for (const citation of draugasCitations(source.cites)) {
+        drafts.push(
+          draugasSource(
+            citation.date,
+            "Modern Draugas case-file evidence",
+            undefined,
+            citation.detail,
+            source.sourceUrl,
+          ),
+        );
       }
       continue;
     }
 
     if (axis === "draugas-registry-1909-2007") {
+      const pageCitations = draugasCitations(source.cites);
+      const pageCitationDates = new Set(
+        pageCitations.map((citation) => citation.date),
+      );
       const mentionContext = source.total_mentions
         ? `Systematic archive sweep; ${source.total_mentions} issues mention this record`
         : "Systematic archive sweep";
-      if (source.first_mention) {
+      for (const citation of pageCitations) {
+        drafts.push(
+          draugasSource(
+            citation.date,
+            source.note ?? "Page-cited historical Draugas evidence",
+            undefined,
+            citation.detail,
+            source.sourceUrl,
+          ),
+        );
+      }
+      if (
+        source.first_mention &&
+        !pageCitationDates.has(source.first_mention)
+      ) {
         drafts.push(
           draugasSource(
             source.first_mention,
@@ -146,7 +224,8 @@ export function registryProfileSources(
       }
       if (
         source.last_mention &&
-        source.last_mention !== source.first_mention
+        source.last_mention !== source.first_mention &&
+        !pageCitationDates.has(source.last_mention)
       ) {
         drafts.push(
           draugasSource(
@@ -156,7 +235,11 @@ export function registryProfileSources(
           ),
         );
       }
-      if (!source.first_mention && !source.last_mention) {
+      if (
+        pageCitations.length === 0 &&
+        !source.first_mention &&
+        !source.last_mention
+      ) {
         drafts.push({
           group: "newspaper",
           title: "Draugas systematic archive sweep, 1909–2007",
@@ -165,6 +248,32 @@ export function registryProfileSources(
           contexts: [mentionContext],
         });
       }
+      continue;
+    }
+
+    if (
+      axis.startsWith("diocese-") ||
+      axis.startsWith("archdiocese-") ||
+      axis.startsWith("pncc-") ||
+      source.kind?.startsWith("diocesan-") ||
+      source.kind?.includes("official-") ||
+      source.kind?.includes("current-institutional")
+    ) {
+      const publisher = source.publisher ?? sourceLabel(axis);
+      const context = source.kind?.includes("denominational")
+        ? "Official denominational directory"
+        : source.kind?.includes("current-institutional")
+          ? "Current institutional record"
+          : "Official diocesan record";
+      drafts.push({
+        group: "current",
+        title: source.work ?? publisher,
+        citation: sourceCitation(source, publisher),
+        url: isAbsoluteWebUrl(source.sourceUrl) ? source.sourceUrl : null,
+        contexts: [context],
+        missingLinkNote:
+          "The registry does not carry the official record URL.",
+      });
       continue;
     }
 
@@ -181,22 +290,24 @@ export function registryProfileSources(
     }
 
     if (axis === "web-historical") {
+      // Early extraction passes created web-candidate placeholders before a
+      // public page URL was captured. They remain in the research registry as
+      // provenance, but a URL-less candidate is not a publishable source.
+      if (!isAbsoluteWebUrl(source.sourceUrl)) continue;
       drafts.push({
         group: "current",
         title: "Diocesan and parish web survey",
         citation: source.work ?? "Automated web survey, 2026",
-        url: isAbsoluteWebUrl(source.sourceUrl) ? source.sourceUrl : null,
+        url: source.sourceUrl,
         contexts: ["Current-status and ownership check"],
-        missingLinkNote:
-          "The underlying public page URL is not yet recorded in the registry.",
       });
       continue;
     }
 
     drafts.push({
       group: "field",
-      title: source.work ?? axis,
-      citation: source.pages,
+      title: source.work ?? sourceLabel(axis),
+      citation: sourceCitation(source),
       url: isAbsoluteWebUrl(source.sourceUrl) ? source.sourceUrl : null,
       contexts: ["Registry source"],
       missingLinkNote: "No public URL is recorded for this source.",
@@ -227,6 +338,7 @@ export function linkedProfileSources(
 }
 
 export function photoProfileSource(photo: {
+  src?: string | null;
   archiveUrl?: string | null;
   evidenceUrl?: string | null;
   attribution?: string | null;
@@ -242,9 +354,12 @@ export function photoProfileSource(photo: {
         ? photo.archiveUrl
         : isAbsoluteWebUrl(photo.evidenceUrl)
           ? photo.evidenceUrl
-          : null,
+          : photo.src?.startsWith("/")
+            ? `https://saveourlithuanianparishes.org${photo.src}`
+            : null,
       contexts: ["Profile photograph"],
-      missingLinkNote: "The image attribution does not include an archive URL.",
+      missingLinkNote:
+        "The image attribution does not include an archive or published-file URL.",
     },
   ]);
 }
@@ -275,10 +390,11 @@ export function finalizeProfileSources(
   const merged = new Map<string, ProfileSource>();
 
   for (const [index, source] of flat.entries()) {
+    const normalizedUrl = source.url?.replace(/^http:\/\//i, "https://");
     const key = source.url
       ? source.group === "newspaper"
-        ? `url:${source.url}:${source.citation ?? source.title}`
-        : `url:${source.url}`
+        ? `url:${normalizedUrl}:${source.citation ?? source.title}`
+        : `url:${normalizedUrl}`
       : `missing:${source.group}:${source.title}:${source.citation ?? ""}`;
     const existing = merged.get(key);
     if (existing) {

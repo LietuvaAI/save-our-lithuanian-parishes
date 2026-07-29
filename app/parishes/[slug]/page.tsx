@@ -241,6 +241,35 @@ function profileStory({
   };
 }
 
+function researchRecordStory(recordType: string) {
+  if (recordType === "phase") {
+    return {
+      dek: "The source record documents an independent or national Catholic attempt or phase here. It is preserved as historical evidence, not counted as a durable parish.",
+      rest: null,
+    };
+  }
+  if (recordType === "lead") {
+    return {
+      dek: "This is a bounded research lead whose identity or institutional status has not yet been established. It is preserved for verification, not counted as a parish or congregation.",
+      rest: null,
+    };
+  }
+  return {
+    dek: "This entry preserves historical context connected to Lithuanian religious life. It does not establish a separate parish or congregation and is excluded from public institutional counts.",
+    rest: null,
+  };
+}
+
+function researchStatusCopy(recordType: string) {
+  if (recordType === "phase") {
+    return "This record describes a historical phase or attempt, not a separate present-day parish. The supporting evidence remains linked below.";
+  }
+  if (recordType === "lead") {
+    return "This lead remains unresolved until its identity and institutional status can be verified. It is excluded from public counts.";
+  }
+  return "This entry provides historical context rather than documenting a separate parish. It is excluded from public counts.";
+}
+
 function ownershipLabel(profile: CanonicalParishProfile) {
   if (profile.core) return OWNERSHIP_LABEL[profile.core.ownership];
   const locked = profile.registry.locked?.ownership;
@@ -320,6 +349,8 @@ export default async function ParishPage({
   const buildingFate = scoped.buildingFate ?? core?.buildingFate ?? null;
   const endingMode = scoped.endingMode ?? core?.endingMode ?? null;
   const endState = scoped.endState;
+  const recordType = entry.record_type ?? "parish";
+  const researchOnly = ["phase", "lead", "context"].includes(recordType);
 
   const situation = core
     ? getParishSituation(profile.slug)
@@ -423,13 +454,15 @@ export default async function ParishPage({
     photoProfileSource(photo),
   ]);
 
-  const { dek, rest } = profileStory({
-    situationText: situation?.situation ?? null,
-    endState,
-    founded: foundedYear,
-    closed: closedYear,
-    community,
-  });
+  const { dek, rest } = researchOnly
+    ? researchRecordStory(recordType)
+    : profileStory({
+        situationText: situation?.situation ?? null,
+        endState,
+        founded: foundedYear,
+        closed: closedYear,
+        community,
+      });
 
   const hasMap = (
     contextPoints.points as {
@@ -470,26 +503,28 @@ export default async function ParishPage({
         {entry.country === "CA" ? " · Canada" : ""}
       </p>
 
-      <div className="mt-3 flex flex-wrap items-center gap-3">
-        <EndStatePill value={endState} size="lg" />
-        {(parishAlert || watchEntry) && (
-          <span
-            className="rounded-full border-2 px-3 py-0.5 text-xs font-semibold"
-            style={{
-              borderColor: parishAlert
-                ? "var(--es-closed)"
-                : "var(--mark-ink)",
-              color: parishAlert ? "var(--es-closed)" : "var(--mark-ink)",
-            }}
-          >
-            {parishAlert
-              ? parishCampaign
-                ? "Active campaign"
-                : "Under threat"
-              : "Sustainability watch"}
-          </span>
-        )}
-      </div>
+      {(!researchOnly || parishAlert || watchEntry) && (
+        <div className="mt-3 flex flex-wrap items-center gap-3">
+          {!researchOnly && <EndStatePill value={endState} size="lg" />}
+          {(parishAlert || watchEntry) && (
+            <span
+              className="rounded-full border-2 px-3 py-0.5 text-xs font-semibold"
+              style={{
+                borderColor: parishAlert
+                  ? "var(--es-closed)"
+                  : "var(--mark-ink)",
+                color: parishAlert ? "var(--es-closed)" : "var(--mark-ink)",
+              }}
+            >
+              {parishAlert
+                ? parishCampaign
+                  ? "Active campaign"
+                  : "Under threat"
+                : "Sustainability watch"}
+            </span>
+          )}
+        </div>
+      )}
 
       <p className="mt-4 max-w-2xl font-serif text-xl leading-snug sm:text-2xl">
         {dek}
@@ -505,6 +540,11 @@ export default async function ParishPage({
         <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
           {recordDepthLabel(profile)}
         </span>
+        {entry.needs_human_source_review && (
+          <span className="rounded-full border border-amber-300 bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-amber-900 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-200">
+            Human source review pending
+          </span>
+        )}
         {profile.congregationClass === "national_catholic_pncc" && (
           <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
             independent from Rome · historical witness
@@ -579,7 +619,9 @@ export default async function ParishPage({
             <dt className="text-xs uppercase tracking-wide text-muted">
               Ownership
             </dt>
-            <dd className="mt-0.5">{ownershipLabel(profile)}</dd>
+            <dd className="mt-0.5">
+              {researchOnly ? "Not established" : ownershipLabel(profile)}
+            </dd>
           </div>
           {entry.diocese && (
             <div className="col-span-2 sm:col-span-3">
@@ -666,10 +708,16 @@ export default async function ParishPage({
 
       <section className="mt-10">
         <h2 className="font-serif text-xl font-semibold">
-          Where it stands today
+          {researchOnly ? "Research status" : "Where it stands today"}
         </h2>
 
-        {!parishAlert &&
+        {researchOnly && (
+          <p className="mt-2 leading-relaxed text-muted">
+            {researchStatusCopy(recordType)}
+          </p>
+        )}
+        {!researchOnly &&
+          !parishAlert &&
           !watchEntry &&
           !caseRecord &&
           situation?.current_use &&
@@ -678,7 +726,8 @@ export default async function ParishPage({
               Current use: {situation.current_use}.
             </p>
           )}
-        {!parishAlert &&
+        {!researchOnly &&
+          !parishAlert &&
           !watchEntry &&
           !caseRecord &&
           (!situation?.current_use || situation.current_use === "Unknown") && (
@@ -955,11 +1004,14 @@ export default async function ParishPage({
         <section className="mt-10 border-l-2 border-rule pl-4 text-sm leading-relaxed text-muted">
           <p>
             <span className="font-medium text-foreground">
-              This profile is still being deepened.
+              {researchOnly
+                ? "This research record is still being deepened."
+                : "This profile is still being deepened."}
             </span>{" "}
-            The source record is public now; archival and present-day case
-            research proceeds parish by parish. The research method is
-            described in{" "}
+            {researchOnly
+              ? "The source evidence is public now; further identity and context work remains."
+              : "The source record is public now; archival and present-day case research proceeds parish by parish."}{" "}
+            The research method is described in{" "}
             <Link
               href="/about-the-data"
               className="underline hover:text-foreground"
@@ -973,11 +1025,14 @@ export default async function ParishPage({
 
       <section className="mt-10 rounded-lg border border-rule p-5">
         <p className="font-medium">
-          Do you know this parish? Is something happening there now?
+          {researchOnly
+            ? "Do you know more about this historical record?"
+            : "Do you know this parish? Is something happening there now?"}
         </p>
         <p className="mt-1 text-sm text-muted">
-          The record grows through people who were there. Corrections,
-          documents, photographs, and current news are all welcome.
+          {researchOnly
+            ? "Corrections, corroborating documents, photographs, and local knowledge are all welcome."
+            : "The record grows through people who were there. Corrections, documents, photographs, and current news are all welcome."}
         </p>
         <p className="mt-3">
           <Link

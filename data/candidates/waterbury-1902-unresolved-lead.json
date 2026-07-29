@@ -1,0 +1,76 @@
+{
+  "corpusScope": "registry-research-hold",
+  "generated": "2026-07-28",
+  "status": "excluded-from-public-canonical-registry",
+  "slug": "lithuanian-church-waterbury-ct",
+  "reason": "The row has a provisional 1902 founding reading but no indexed newspaper mentions, named institution, address, corroborating source, or evidence establishing that it is distinct from Waterbury St. Joseph or the historical All Saints independent/national entity.",
+  "publicEffect": "No public profile, map point, category count, or campaign association. The evidence remains available for later identity adjudication.",
+  "protectedIdentities": {
+    "campaign": "St. Joseph Lithuanian Catholic Church, /parishes/sv-juozapo-waterbury-ct",
+    "historical": "All Saints Lithuanian independent/national church, lithuanian-national-catholic-parish-waterbury-ct"
+  },
+  "originalRegistryRecord": {
+    "slug": "lithuanian-church-waterbury-ct",
+    "names": {
+      "lt": "Lietuvių bažnyčia (unnamed)",
+      "en": null,
+      "variants": [
+        "Lietuvių bažnyčia (unnamed)"
+      ]
+    },
+    "city": "Waterbury",
+    "state": "CT",
+    "country": "US",
+    "record_type": "parish",
+    "in_locked_scope": false,
+    "c83_row": null,
+    "sources": [
+      {
+        "axis": "draugas-registry-1909-2007",
+        "kind": "newspaper-record",
+        "parish_key": "lithuanian-church-waterbury-ct",
+        "first_mention": "",
+        "last_mention": "",
+        "total_mentions": 0
+      }
+    ],
+    "years": {
+      "founded": [
+        {
+          "value": "1902",
+          "source": "draugas-registry-1909-2007"
+        }
+      ],
+      "closed": []
+    },
+    "conflicts": [],
+    "related_sites": [],
+    "events_refs": [
+      {
+        "set": "draugas-registry-1909-2007/events-curated",
+        "parish_key": "lithuanian-church-waterbury-ct"
+      }
+    ],
+    "geo": {
+      "lat": 41.5539066,
+      "lon": -73.0438067,
+      "precision": "city-centroid",
+      "source": "site-geo-cache"
+    },
+    "congregation_class": "roman_catholic",
+    "axes_count": 1,
+    "record_depth": "single-source",
+    "diocese": "Archdiocese of Hartford",
+    "c83_rows": [],
+    "city_history": []
+  },
+  "originalSituationOverlay": {
+    "registry_slug": "lithuanian-church-waterbury-ct",
+    "canonical_status": "unknown",
+    "building_fate": "unknown",
+    "current_use": "Unknown",
+    "lithuanian_identity": "unknown",
+    "pastoral_status": "unknown",
+    "situation": "Unnamed Lithuanian church documented in Draugas (founded 1902). One source axis, no indexed mentions, no closure year, no corroborating survey — nothing establishes that this church closed, or whether it is a distinct parish from Šv. Juozapo or Šv. Kazimiero, Waterbury. Status not yet verified."
+  }
+}

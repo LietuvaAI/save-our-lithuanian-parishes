@@ -2,10 +2,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AboutNav from "@/components/AboutNav";
 import registry from "@/data/registry-unified.json";
-import { isSettlement, isUS, type RegParish } from "@/lib/registry-scope";
+import {
+  isPublicRecord,
+  isSettlement,
+  isUS,
+  type RegParish,
+} from "@/lib/registry-scope";
 
 const REGISTRY_TOTAL = (registry as { parishes: RegParish[] }).parishes.filter(
-  (p) => !isSettlement(p) && (p.country === "CA" || isUS(p))
+  (p) =>
+    isPublicRecord(p) &&
+    !isSettlement(p) &&
+    (p.country === "CA" || isUS(p)),
 ).length;
 
 export const metadata: Metadata = {
@@ -83,9 +91,10 @@ export default function AboutTheDataPage() {
           </div>
         </div>
         <p className="mt-2 leading-relaxed">
-          All <strong>83 U.S. parishes</strong> in the original group now have
-          case files. Additional registry records are being researched in the
-          same way, in bounded tranches.
+          All <strong>83 source rows</strong> in the original group,
+          representing <strong>82 canonical parish identities</strong>, now
+          have case files. Additional registry records are being researched in
+          the same way, in bounded tranches.
         </p>
       </section>
 
@@ -141,8 +150,10 @@ export default function AboutTheDataPage() {
         <p className="mt-2 leading-relaxed">
           The registry powers the map, counts, and parish pages. It currently
           brings together{" "}
-          <strong>{REGISTRY_TOTAL} parishes and congregations</strong> across
-          the U.S. and Canada.
+          <strong>{REGISTRY_TOTAL} parishes, missions, and congregations</strong>{" "}
+          across the U.S. and Canada. Historical attempts, unresolved archive
+          leads, and context-only references remain in the research registry
+          but are not counted as institutions.
         </p>
         <p className="mt-2 leading-relaxed">
           The labels <em>case-filed</em>, <em>multi-source</em>, and{" "}

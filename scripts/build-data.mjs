@@ -176,8 +176,8 @@ if (errors.length) {
   process.exit(1);
 }
 
-// The locked figures above describe the frozen 83-row source set. Registry
-// Revision 1 describes the living, unique-entity public record. Apply that
+// The locked figures above describe the frozen 83-row source set. The living
+// registry revision describes the unique-entity public record. Apply that
 // interpreted layer only after the locked arithmetic has passed.
 for (let index = 0; index < parishes.length; index++) {
   const p = parishes[index];
@@ -186,6 +186,8 @@ for (let index = 0; index < parishes.length; index++) {
   p.registrySlug = record.slug;
   p.nameLt = record.names?.lt || p.nameLt;
   p.city = record.city || p.city;
+  p.state = record.state || p.state;
+  p.country = record.country || p.country;
   const lifecycle = record.lifecycle;
   if (!lifecycle) continue;
   const statusMap = {

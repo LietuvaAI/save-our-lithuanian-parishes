@@ -20,7 +20,9 @@ import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 
 const read = (p) =>
   JSON.parse(readFileSync(new URL(`../data/${p}`, import.meta.url), "utf8"));
-const registry = read("registry-unified.json").parishes;
+const registryData = read("registry-unified.json");
+const registry = registryData.parishes;
+const registryRevision = registryData.registryRevision?.version ?? "current";
 const lib = read("parishes.json");
 const sit = read("parish-situation.json").parishes;
 const alerts = read("alerts.json");
@@ -146,7 +148,7 @@ for (const p of lib) {
   if (reg) {
     const regClosed = asYear(reg.locked?.year_closed) ?? asYear(reg.years?.closed?.[0]?.value);
     if (regClosed && p.yearClosed && regClosed !== p.yearClosed)
-      add("YEAR-VARIANCE", slug, `source-block reading ${regClosed} vs selected public reading ${p.yearClosed} — surfaces show the Registry Revision 1 selection; variance stays as a conflict on the research page`);
+      add("YEAR-VARIANCE", slug, `source-block reading ${regClosed} vs selected public reading ${p.yearClosed} — surfaces show the Registry Revision ${registryRevision} selection; variance stays as a conflict on the research page`);
     if (regClosed && standing && p.status !== "undecided")
       add("YEAR-VARIANCE", slug, `standing parish carries a registry closure reading (${regClosed}) — likely a predecessor/building event; surfaces ignore it`);
   }

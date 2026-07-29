@@ -93,20 +93,41 @@ research pages.
 - The 16 missing closure-year and 6 year-variance records were adjudicated in
   brain #449 and folded into Registry Revision 1. Spring Valley remains
   unresolved and Nanticoke remains pending diocesan confirmation by design.
-- Upstream `gazetteer.csv` (Draugas lane, config-as-truth): the unnamed 1902
-  Waterbury church (`lithuanian-church-waterbury-ct`) carries `status=closed`
-  with an empty closure year — the likeliest origin of the ending this repo's
-  overlay inferred and then counted, corrected 2026-07-26. The column feeds
-  only geocoding here; fix it at the source on the next gazetteer revision.
-- Waterbury needs a name-level reconciliation: three Roman Catholic records
-  sit on the same city centroid (Šv. Juozapo, Šv. Kazimiero, and this unnamed
-  1902 entry) and only the first is established as distinct. New input from the
-  2026-07-26 national-catholic verification: the Lithuanian National Catholic
-  congregation in Waterbury was founded in **1902**, the same year as the
-  unnamed Draugas entry, so the two records may be one congregation seen from
-  either side of the schism. Draugas coded its entry `roman_catholic`, which
-  argues against the identity but does not settle it. Resolve name-level before
-  either record is counted anywhere.
+- **Waterbury resolved for public presentation in Registry Revision 4:** the
+  protected public campaign remains Roman Catholic St. Joseph
+  (`sv-juozapo-waterbury-ct` / `joseph-waterbury-ct`). The false St. Casimir
+  C83 row remains merged into that entity. Historical All Saints remains a
+  separate, supported independent/national entity with its unresolved end
+  labeled. The unnamed 1902 row (`lithuanian-church-waterbury-ct`) is excluded
+  from public profiles and counts until name-level identity is established;
+  its complete evidence survives in
+  `data/candidates/waterbury-1902-unresolved-lead.json`.
+- Upstream `gazetteer.csv` still carries that unnamed lead as `status=closed`
+  with an empty closure year. The column feeds only geocoding here and does not
+  override the Revision 4 research hold.
+
+## Canonical identity register (2026-07-28)
+
+`data/canonical-identity-locks.json` independently freezes the 82 unique U.S.
+canonical identities represented by the 83 C83 source rows. The register locks
+the entity join, canonical profile and registry routes, Lithuanian name, place,
+institution/record type, denomination, and C83 lineage. The four public
+campaign assignments are a stricter subset of the same register.
+
+Research can update current status, building fate, pastoral conditions,
+ownership changes, dates, sources, notes, and campaign actions without changing
+identity. Any identity change requires a new hashed identity revision and
+Vilija review. `scripts/verify-canonical-identities.mjs` checks the core record,
+registry, and campaign layer against the independent register on every data
+build.
+
+Identity Revision 2 and Registry Revision 5 record the completed release audit:
+all 83 frozen U.S. source rows have source-backed case files and resolve to 82
+canonical identities. Four joins were corrected (Ansonia, Newark, Collinsville,
+and Kansas City), and Westville's stale classifier pointer was repaired.
+`scripts/verify-canonical-release.mjs` now enforces that full chain on every
+data build. The audit ledger lives in
+`data/candidates/canonical-identity-release-audit-2026-07-28.md`.
 
 ## Both directions of claim are guarded (2026-07-26)
 

@@ -29,6 +29,7 @@ export type CongregationClass =
   | "independent_catholic";
 
 export type RecordDepth = "case-filed" | "multi-source" | "single-source";
+export type PublicRecordType = "parish" | "misija" | "congregation";
 
 export interface RegParish {
   slug: string;
@@ -36,6 +37,7 @@ export interface RegParish {
   city: string;
   state: string;
   country: "US" | "CA";
+  record_type?: string;
   comparator: boolean | null;
   in_locked_scope: boolean;
   c83_row: number | null;
@@ -110,17 +112,24 @@ export function isUS(p: RegParish): boolean {
   );
 }
 
+/** Institutional records published on The Record and the registry map. */
+export function isPublicRecord(p: RegParish): boolean {
+  return ["parish", "misija", "congregation"].includes(p.record_type ?? "");
+}
+
 /** The registry-wide U.S. Roman Catholic parish population. */
 export function usRomanCatholic(): RegParish[] {
   return usRegistryParishes().filter(
-    (p) => p.congregation_class === "roman_catholic",
+    (p) =>
+      p.record_type === "parish" &&
+      p.congregation_class === "roman_catholic",
   );
 }
 
 /** The full U.S. /record population: parishes and congregations, no comparators. */
 export function usRegistryParishes(): RegParish[] {
   return (registry as { parishes: RegParish[] }).parishes.filter(
-    (p) => isUS(p) && !isSettlement(p),
+    (p) => isUS(p) && !isSettlement(p) && isPublicRecord(p),
   );
 }
 

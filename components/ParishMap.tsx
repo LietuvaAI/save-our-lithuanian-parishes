@@ -310,7 +310,12 @@ export default function ParishMap() {
     () =>
       classFilter === "all"
         ? POINTS
-        : POINTS.filter((p) => (p.congregationClass ?? "roman_catholic") === classFilter),
+        : POINTS.filter((p) =>
+            classFilter === "national_catholic_pncc"
+              ? p.congregationClass === "national_catholic_pncc" ||
+                p.congregationClass === "independent_catholic"
+              : (p.congregationClass ?? "roman_catholic") === classFilter,
+          ),
     [classFilter],
   );
 
@@ -406,7 +411,7 @@ export default function ParishMap() {
   const markR = 6 / Math.sqrt(zoom);
   const btn = "rounded-md border border-rule bg-background px-2.5 py-1 text-sm font-medium hover:border-foreground transition-colors";
   const classTab = (active: boolean) =>
-    `rounded-[4px] px-2.5 py-1 text-xs font-medium transition-colors sm:px-3 sm:text-sm ${
+    `rounded-[4px] whitespace-nowrap px-2.5 py-1 text-xs font-medium transition-colors sm:px-3 sm:text-sm ${
       active
         ? "bg-background text-foreground shadow-sm"
         : "text-muted hover:text-foreground"
@@ -458,7 +463,7 @@ export default function ParishMap() {
                   [
                     { key: "all", label: "All" },
                     { key: "roman_catholic", label: "Catholic" },
-                    { key: "national_catholic_pncc", label: "National Catholic" },
+                    { key: "national_catholic_pncc", label: "National & independent" },
                     { key: "non_catholic_christian", label: "Protestant" },
                   ] as { key: ClassFilter; label: string }[]
                 ).map(({ key, label }) => (
@@ -514,7 +519,7 @@ export default function ParishMap() {
               aria-pressed={mode === "all"}
               onClick={() => setMode("all")}
             >
-              All · {statusCounts.all}
+              All records · {statusCounts.all}
             </button>
             <SwatchBtn
               fill="var(--es-active)"
@@ -862,10 +867,11 @@ export default function ParishMap() {
       </div>
 
       <p className="mt-2.5 text-xs leading-relaxed text-muted">
-        Counted: Lithuanian parishes and their churches — Roman Catholic by
-        default; National Catholic and Protestant congregations through the
-        filters above. Religious-house, cemetery, shrine, club, and school
-        chapels remain part of the heritage record but not the parish count.{" "}
+        Shown: Lithuanian parishes, missions, congregations, and their churches
+        — Roman Catholic by default; National Catholic and Protestant records
+        through the filters above. Religious-house, cemetery, shrine, club, and
+        school chapels remain part of the heritage record but not the
+        institutional count.{" "}
         <a href="/about-the-data" className="underline hover:text-foreground">
           How the record is scoped →
         </a>

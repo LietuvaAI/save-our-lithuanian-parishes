@@ -1,6 +1,6 @@
 {
-  "generated": "2026-07-22",
-  "note": "Structured classifiers for all 220 canonical parishes from the unified registry. Every field traces to documented facts in the Draugas archive, Wolkovich, Michelsonas, or field sources. The first 86 entries (c83-filed case-core) are hand-edited. The remaining 134 entries are algorithmically generated from registry data using status inference rules.",
+  "generated": "2026-07-29",
+  "note": "Structured present-state classifiers for canonical registry records. Hand-reviewed cases retain source-linked narrative and explicitly labeled uncertainty; generated records remain provisional until verified.",
   "parishes": {
     "sv-kazimiero-gary-in": {
       "registry_slug": "casimir-gary-in",
@@ -111,13 +111,13 @@
       "situation": "Closed 1998; demolished (year conflicted: 2001 vs 2007). Listed on the National Register of Historic Places, which gave no protection against demolition."
     },
     "sv-kazimiero-kansas-city-mo": {
-      "registry_slug": "casimir-kansas-city-mo",
+      "registry_slug": "st-casimir-kansas-city-ks",
       "canonical_status": "closed",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
+      "building_fate": "demolished",
+      "current_use": "Vacant lot at Broadview and Ridge Avenue in Kansas City, Kansas; the parish bell is preserved at the Wyandotte County Museum",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "Bishop closed the parish in 1947 because he disliked ethnic parishes. Building status unknown."
+      "situation": "St. Casimir was in Kansas City, Kansas, not Missouri. The parish closed in a 1947 forced merger, the church was demolished, and its bell is preserved at the Wyandotte County Museum."
     },
     "sv-kazimiero-brockton-ma": {
       "registry_slug": "casimir-brockton-ma",
@@ -237,13 +237,13 @@
       "situation": "Diocese closed the parish and sold the building; it became a Syrian/Assyrian Catholic cathedral. Interior retained Lithuanian details."
     },
     "lietuviu-baznycia-unnamed-newark-nj": {
-      "registry_slug": "holyname-newark-nj",
-      "canonical_status": "demolished",
+      "registry_slug": "holy-trinity-newark-nj",
+      "canonical_status": "merged",
       "building_fate": "demolished",
-      "current_use": "Parish-hall basement now in Portuguese/Brazilian use; original church demolished after 1981 fire",
+      "current_use": "The original Lithuanian church is gone; Holy Trinity-Epiphany Parish continues in the 1963 parish-hall building at 207 Adams Street and now serves a Portuguese-speaking congregation",
       "lithuanian_identity": "ethnically_transferred",
       "pastoral_status": "not_applicable",
-      "situation": "Original building demolished after a 1981 fire; diocese refused repairs. Congregation moved to the parish-hall basement, which is now in Portuguese/Brazilian use."
+      "situation": "The original Holy Trinity church was demolished after the 1981 fire, but the parish continued in its hall, merged with Epiphany in 2002, and remains active as Holy Trinity-Epiphany. Lithuanian worship has ended."
     },
     "sv-kazimiero-paterson-nj": {
       "registry_slug": "casimir-paterson-nj",
@@ -273,13 +273,13 @@
       "situation": "Diocese closed the parish ~2001; building sold ~2007 and converted to condos. Still apartments in 2023."
     },
     "lietuviu-baznycia-unnamed-ansonia-ct": {
-      "registry_slug": "holyname-ansonia-ct",
+      "registry_slug": "st-anthony-ansonia-ct",
       "canonical_status": "closed",
       "building_fate": "repurposed_religious",
-      "current_use": "Sold to non-Catholics; Gediminas-pillars monument remains in churchyard",
+      "current_use": "The former St. Anthony church at 195-199 North Main Street is now home to Abundant Life Fellowship Ministries; the Lithuanian monument remains in the churchyard",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "Diocese closed the parish and sold it ~2015 to non-Catholics. The Gediminas-pillars monument remains in the churchyard."
+      "situation": "St. Anthony Lithuanian parish closed after its centennial in November 2015. The church survives in non-Catholic Christian use, and the Gediminas-columns monument remains in the former churchyard."
     },
     "sv-juozapo-waterbury-ct": {
       "registry_slug": "joseph-waterbury-ct",
@@ -405,7 +405,7 @@
       "current_use": "Given to convert-priests",
       "lithuanian_identity": "ethnically_transferred",
       "pastoral_status": "not_applicable",
-      "situation": "The original Lithuanian RC church that Scranton Lithuanians built, then lost to the bishop through the courts — the precipitating event of the LNCC schism. Closed ~2009 in the Allentown/Scranton sweep; building given to convert-priests. Coal region."
+      "situation": "St. Joseph, the Roman Catholic Theodore Street parish at the center of Scranton's early property conflict, was closed by the Diocese of Scranton on June 5, 2011. The later Lithuanian National Catholic congregation is Providence of God, a separate institution."
     },
     "sv-mykolo-scranton-pa": {
       "registry_slug": "michael-scranton-pa",
@@ -723,13 +723,13 @@
       "situation": "LNCC, community-governed, never diocesan. Broke from RC in the 1916 schism; community sold the building in 1972 with ~30-40 parishioners at closure; building later demolished. Parish cemetery at Bensalem PA survives."
     },
     "lncc-congregation-westville-il": {
-      "registry_slug": "parish-westville-il",
+      "registry_slug": "holy-cross-westville-il",
       "canonical_status": "demolished",
       "building_fate": "demolished",
-      "current_use": "Demolished; bell and cornerstone made into a 2004 memorial; cemetery maintained",
+      "current_use": "The independent Holy Cross church was demolished; its bell and cornerstone became part of a 2004 memorial, and the cemetery remains",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "LNCC, community-governed. Closed ~1969 and demolished by community decision. Bell and cornerstone made into a 2004 memorial; cemetery maintained. Independence removed diocesan risk but not demographic risk."
+      "situation": "Holy Cross was an independent Lithuanian Catholic congregation, not a Roman Catholic parish of the Diocese of Peoria. The church closed in the sourced 1956-1961 window and was demolished; the older circa-1969 reading remains only as an approximate archival calculation."
     },
     "lietuviu-evangeliku-liuteronu-teviskes-parapija-darien-il": {
       "registry_slug": "angels-darien-il",
@@ -744,10 +744,10 @@
       "registry_slug": "parish-collinsville-il",
       "canonical_status": "standing",
       "building_fate": "standing",
-      "current_use": "Active Lithuanian Lutheran congregation; independent, self-governing, founded by a knygnesis from Taurage",
+      "current_use": "Active worship as Jerusalem Lutheran Church, an LCMS congregation at 305 Collinsville Avenue; weekly Sunday service in English",
       "lithuanian_identity": "ethnically_transferred",
       "pastoral_status": "not_applicable",
-      "situation": "Jerusalem Lutheran Church (LCMS) still holds a weekly service in English; no Lithuanian-language liturgy remains."
+      "situation": "Jerusalem Lutheran Church remains active in its 1903 building as a Lutheran Church-Missouri Synod congregation. Weekly worship continues in English; no current Lithuanian-language liturgy is documented."
     },
     "sv-kazimiero-montreal-qc": {
       "registry_slug": "casimir-montreal-qc",
@@ -896,11 +896,11 @@
     "all-saints-wilkes-barre-pa": {
       "registry_slug": "all-saints-wilkes-barre-pa",
       "canonical_status": "closed",
-      "building_fate": "standing",
-      "current_use": "Unknown",
+      "building_fate": "unknown",
+      "current_use": "Closed historical site; present use and building fate unresolved",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "PNCC (Polish National Catholic Church), not Roman Catholic. Founded 1932 per Draugas. Documented in TrueLithuania but not in RC archival sources."
+      "situation": "All Saints is the canonical Wilkes-Barre national/independent Catholic record; the generic Wilkes-Barre row was a duplicate. Sources disagree between 1929 and 1932. No living congregation is established by the 2024–2026 evidence, but the exact end, ownership, current use, and building disposition remain unresolved; demolition is not claimed."
     },
     "st-casimir-wilkes-barre-pa": {
       "registry_slug": "st-casimir-wilkes-barre-pa",
@@ -1028,23 +1028,14 @@
       "pastoral_status": "not_applicable",
       "situation": "Documented in Draugas (34 mentions 1910-1990); closed 2003 per registry. Web sources mark as repurposed."
     },
-    "lithuanian-church-waterbury-ct": {
-      "registry_slug": "lithuanian-church-waterbury-ct",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Unnamed Lithuanian church documented in Draugas (founded 1902). One source axis, no indexed mentions, no closure year, no corroborating survey — nothing establishes that this church closed, or whether it is a distinct parish from Šv. Juozapo or Šv. Kazimiero, Waterbury. Status not yet verified."
-    },
     "st-anthony-ansonia-ct": {
       "registry_slug": "st-anthony-ansonia-ct",
       "canonical_status": "closed",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
+      "building_fate": "repurposed_religious",
+      "current_use": "The former St. Anthony church at 195-199 North Main Street is now home to Abundant Life Fellowship Ministries; the Lithuanian monument remains in the churchyard",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "Documented in Draugas (14 mentions 1933-2002); closed 2015 per registry. TrueLithuania sources confirm closed status."
+      "situation": "St. Anthony Lithuanian parish closed after its centennial in November 2015. The church survives in non-Catholic Christian use, and the Gediminas-columns monument remains in the former churchyard."
     },
     "st-mary-of-the-angels-brooklyn-ny": {
       "registry_slug": "st-mary-of-the-angels-brooklyn-ny",
@@ -1093,12 +1084,12 @@
     },
     "holy-trinity-newark-nj": {
       "registry_slug": "holy-trinity-newark-nj",
-      "canonical_status": "repurposed",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "lost",
+      "canonical_status": "merged",
+      "building_fate": "demolished",
+      "current_use": "The original Lithuanian church is gone; Holy Trinity-Epiphany Parish continues in the 1963 parish-hall building at 207 Adams Street and now serves a Portuguese-speaking congregation",
+      "lithuanian_identity": "ethnically_transferred",
       "pastoral_status": "not_applicable",
-      "situation": "Documented in Draugas (60 mentions 1927-2007); founded 1901. Web sources mark status as repurposed with demolished/converted flags in TrueLithuania."
+      "situation": "The original Holy Trinity church was demolished after the 1981 fire, but the parish continued in its hall, merged with Epiphany in 2002, and remains active as Holy Trinity-Epiphany. Lithuanian worship has ended."
     },
     "st-ann-jersey-city-nj": {
       "registry_slug": "st-ann-jersey-city-nj",
@@ -1174,12 +1165,12 @@
     },
     "holy-cross-westville-il": {
       "registry_slug": "holy-cross-westville-il",
-      "canonical_status": "closed",
-      "building_fate": "unknown",
-      "current_use": "Reportedly a private residence occupies the church site (single source, uncorroborated). A 2004 memorial built from the rescued bell and cornerstone stands in the separately run Westville Lithuanian Cemetery.",
+      "canonical_status": "demolished",
+      "building_fate": "demolished",
+      "current_use": "The independent Holy Cross church was demolished; its bell and cornerstone became part of a 2004 memorial, and the cemetery remains",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "An independent congregation formed in 1914 by a faction that broke from SS. Peter and Paul over fees, burial rules, and temperance — affiliated with the North American Old Roman Catholic Church, in which its leader Zigmantas K. Vipartas was consecrated a bishop (succession recorded 1958–1961). The congregation dissolved around 1960–61, after his death (1961 per the jurisdiction's own succession list; 1956 carried as a cited minority reading). The original building, a former Presbyterian church bought in 1914, was demolished; its bell and cornerstone became a 2004 memorial in the Westville Lithuanian Cemetery."
+      "situation": "Holy Cross was an independent Lithuanian Catholic congregation, not a Roman Catholic parish of the Diocese of Peoria. The church closed in the sourced 1956-1961 window and was demolished; the older circa-1969 reading remains only as an approximate archival calculation."
     },
     "st-francis-youngstown-oh": {
       "registry_slug": "st-francis-youngstown-oh",
@@ -1264,12 +1255,12 @@
     },
     "st-casimir-kansas-city-ks": {
       "registry_slug": "st-casimir-kansas-city-ks",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+      "canonical_status": "closed",
+      "building_fate": "demolished",
+      "current_use": "Vacant lot at Broadview and Ridge Avenue in Kansas City, Kansas; the parish bell is preserved at the Wyandotte County Museum",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "St. Casimir was in Kansas City, Kansas, not Missouri. The parish closed in a 1947 forced merger, the church was demolished, and its bell is preserved at the Wyandotte County Museum."
     },
     "st-joseph-st-louis-mo": {
       "registry_slug": "st-joseph-st-louis-mo",
@@ -1309,15 +1300,6 @@
     },
     "st-casimir-plymouth-pa": {
       "registry_slug": "st-casimir-plymouth-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Coal region."
-    },
-    "st-joseph-du-bois-pa": {
-      "registry_slug": "st-joseph-du-bois-pa",
       "canonical_status": "unknown",
       "building_fate": "unknown",
       "current_use": "Unknown",
@@ -1388,57 +1370,14 @@
       "pastoral_status": "unknown",
       "situation": "Documented in registry but minimal research details available. Status not yet verified."
     },
-    "louis-maizeville-pa": {
-      "registry_slug": "louis-maizeville-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Coal region."
-    },
-    "ascension-pittsburgh-pa-2": {
-      "registry_slug": "ascension-pittsburgh-pa-2",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Duplicate/variant entry in registry. Needs clarification and consolidation."
-    },
     "lithuanian-national-catholic-parish-waterbury-ct": {
       "registry_slug": "lithuanian-national-catholic-parish-waterbury-ct",
-      "canonical_status": "closed",
+      "canonical_status": "unknown",
       "building_fate": "unknown",
-      "current_use": "Historical only; no living Waterbury PNCC/LNCC congregation found",
+      "current_use": "No current successor or building disposition established",
       "lithuanian_identity": "lost",
-      "pastoral_status": "not_applicable",
-      "situation": "The first parish of the Lithuanian National Catholic Church, founded in Waterbury in 1902 — an independent (neprigulminga) congregation that rejected papal authority. Its founder was the priest Vincas Dilionis, and like most parishes of that movement it was short-lived; no national-catholic congregation exists in Waterbury today. The PNCC Eastern Diocese, which covers Connecticut, lists no Waterbury parish and none identified as Lithuanian, and the movement's one surviving parish is Providence of God in Scranton, Pennsylvania. No parish website, bulletin, or local press record of a living congregation was found, and the Connecticut Lithuanian heritage survey records no independent church in the city. No closure year is established, so none is asserted. Recorded as historical witness to a documented schism, never as a recommendation; not counted in the site's Roman Catholic figures. Open for the Waterbury name-level reconciliation: the unnamed 1902 Lithuanian church recorded from Draugas carries the same founding year and may be this same congregation seen from the Roman Catholic side.",
-      "sources": [
-        {
-          "title": "Lithuanian Religious Life in America, Vol. 1",
-          "publisher": "William Wolkovich-Valkavičius",
-          "date": "1991"
-        },
-        {
-          "title": "Our Parishes",
-          "publisher": "Eastern Diocese of the Polish National Catholic Church",
-          "date": "accessed 2026-07-28",
-          "url": "https://www.easterndiocesepncc.org/our-parishes/"
-        },
-        {
-          "title": "Our Parishes",
-          "publisher": "Central Diocese of the Polish National Catholic Church",
-          "date": "accessed 2026-07-28",
-          "url": "https://www.centraldiocesepncc.org/about/our-parishes/"
-        },
-        {
-          "title": "Connecticut: Lithuanians and Lithuanian heritage",
-          "publisher": "Global True Lithuania",
-          "date": "accessed 2026-07-28",
-          "url": "https://global.truelithuania.com/connecticut-789/"
-        }
-      ]
+      "pastoral_status": "unknown",
+      "situation": "Draugas identifies a distinct All Saints Lithuanian independent/national church in Waterbury. It was not Roman Catholic St. Joseph, the disputed St. Casimir record, or today's Roman Catholic All Saints/Todos los Santos. No current PNCC successor, exact end date, address, property record, or building fate has been established; the 1902 start remains a provisional baseline."
     },
     "paul-naugatuck-ct": {
       "registry_slug": "paul-naugatuck-ct",
@@ -1457,15 +1396,6 @@
       "lithuanian_identity": "unknown",
       "pastoral_status": "unknown",
       "situation": "Lithuanian Lutheran congregation, not Roman Catholic. Documented in registry but minimal research details available. Status not yet verified."
-    },
-    "casimir-kansas-city-ks": {
-      "registry_slug": "casimir-kansas-city-ks",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
     },
     "francis-indian-harbor-in": {
       "registry_slug": "francis-indian-harbor-in",
@@ -1557,15 +1487,6 @@
       "pastoral_status": "unknown",
       "situation": "Documented in registry but minimal research details available. Status not yet verified."
     },
-    "parish-scranton-pa": {
-      "registry_slug": "parish-scranton-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Coal region."
-    },
     "parish-chicago-il": {
       "registry_slug": "parish-chicago-il",
       "canonical_status": "unknown",
@@ -1613,15 +1534,6 @@
     },
     "rosary-hartshorne-in": {
       "registry_slug": "rosary-hartshorne-in",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
-    },
-    "casimir-kansas-city-ka": {
-      "registry_slug": "casimir-kansas-city-ka",
       "canonical_status": "unknown",
       "building_fate": "unknown",
       "current_use": "Unknown",
@@ -1710,15 +1622,6 @@
       "pastoral_status": "unknown",
       "situation": "Documented in registry but minimal research details available. Status not yet verified."
     },
-    "holyname-scranton-pa": {
-      "registry_slug": "holyname-scranton-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Coal region."
-    },
     "joseph-custer-mi": {
       "registry_slug": "joseph-custer-mi",
       "canonical_status": "unknown",
@@ -1755,15 +1658,6 @@
       "pastoral_status": "unknown",
       "situation": "Documented in registry but minimal research details available. Status not yet verified."
     },
-    "parish-pittsburgh-pa": {
-      "registry_slug": "parish-pittsburgh-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
-    },
     "vincent-pittsburgh-pa": {
       "registry_slug": "vincent-pittsburgh-pa",
       "canonical_status": "unknown",
@@ -1775,12 +1669,12 @@
     },
     "allsaints-worcester-ma": {
       "registry_slug": "allsaints-worcester-ma",
-      "canonical_status": "unknown",
+      "canonical_status": "closed",
       "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+      "current_use": "No current All Saints successor established",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "All Saints was a real, Rome-independent Lithuanian parish that split from St. Casimir and is directly attested in 1909–1910. A secondary history gives 1913, while Draugas reports decline by 1910 and return by 1919; the exact end remains unresolved. No current All Saints independent/national successor or building disposition has been established."
     },
     "trinity-new-york-ny": {
       "registry_slug": "trinity-new-york-ny",
@@ -1790,24 +1684,6 @@
       "lithuanian_identity": "unknown",
       "pastoral_status": "unknown",
       "situation": "Documented in registry but minimal research details available. Status not yet verified."
-    },
-    "lawrence-lawrence-ma": {
-      "registry_slug": "lawrence-lawrence-ma",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
-    },
-    "parish-wilkes-barre-pa": {
-      "registry_slug": "parish-wilkes-barre-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Coal region."
     },
     "parish-baltimore-md": {
       "registry_slug": "parish-baltimore-md",
@@ -1820,12 +1696,12 @@
     },
     "joseph-dubois-pa": {
       "registry_slug": "joseph-dubois-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Coal region."
+      "canonical_status": "closed",
+      "building_fate": "repurposed_religious",
+      "current_use": "St. Nicholas Orthodox Church, 301 South State Street, since 2020",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "This record is St. Joseph Lithuanian Roman Catholic parish, active by 1912 and no longer listed as a standalone Diocese of Erie parish. St. Nicholas Orthodox reports purchasing the former church in April 2020 and using it for Orthodox worship. A separate DuBois independent/national attempt is attested in 1903, but its title, property, and end are unresolved and it is not counted as a parish row."
     },
     "parish-chicago-il-2": {
       "registry_slug": "parish-chicago-il-2",
@@ -1840,19 +1716,10 @@
       "registry_slug": "providence-providence-ri",
       "canonical_status": "unknown",
       "building_fate": "unknown",
-      "current_use": "Unknown",
+      "current_use": "Historical phase; no current independent/national successor established",
       "lithuanian_identity": "unknown",
       "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
-    },
-    "parish-worcester-ma": {
-      "registry_slug": "parish-worcester-ma",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+      "situation": "Draugas supports a Providence Lithuanian independent/national Catholic phase around 1909–1911 and reports a return by 1919. The evidence does not yet establish a durable standalone parish, corporation, property, or exact end. The later Roman Catholic St. Casimir parish, whose legal title began in 1919 and closed in 2017, is a separate record unless a succession source is found."
     },
     "parish-chicago-il-3": {
       "registry_slug": "parish-chicago-il-3",
@@ -1862,15 +1729,6 @@
       "lithuanian_identity": "unknown",
       "pastoral_status": "unknown",
       "situation": "Unnamed/duplicate parish entry in registry. Needs clarification."
-    },
-    "parish-worcester-ma-2": {
-      "registry_slug": "parish-worcester-ma-2",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Duplicate/variant entry in registry. Needs clarification."
     },
     "casimir-winnipeg-mb": {
       "registry_slug": "casimir-winnipeg-mb",
@@ -1926,24 +1784,6 @@
       "pastoral_status": "unknown",
       "situation": "Canadian location. Documented in registry but minimal research details available. Status not yet verified."
     },
-    "parish-maizeville-pa": {
-      "registry_slug": "parish-maizeville-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Coal region."
-    },
-    "parish-lawrence-ma": {
-      "registry_slug": "parish-lawrence-ma",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
-    },
     "annunciation-maspeth-ny": {
       "registry_slug": "annunciation-maspeth-ny",
       "canonical_status": "unknown",
@@ -1952,6 +1792,15 @@
       "lithuanian_identity": "unknown",
       "pastoral_status": "unknown",
       "situation": "Documented in registry but minimal research details available. Status not yet verified."
+    },
+    "parish-collinsville-il": {
+      "registry_slug": "parish-collinsville-il",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active worship as Jerusalem Lutheran Church, an LCMS congregation at 305 Collinsville Avenue; weekly Sunday service in English",
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "Jerusalem Lutheran Church remains active in its 1903 building as a Lutheran Church-Missouri Synod congregation. Weekly worship continues in English; no current Lithuanian-language liturgy is documented."
     }
   }
 }

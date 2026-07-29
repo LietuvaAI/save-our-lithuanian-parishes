@@ -3,6 +3,7 @@ import type {
   RegistrySource,
   YearReading,
 } from "@/lib/parish-profile";
+import { OWNERSHIP_LABEL, type Ownership } from "@/lib/parishes";
 
 const AXIS_LABEL: Record<string, string> = {
   "draugas-registry-1909-2007": "Draugas archive, 1909–2007",
@@ -29,6 +30,25 @@ const SOURCE_ORDER: Record<string, number> = {
   truelithuania: 7,
 };
 
+const SURVEY_STATUS_LABEL: Record<string, string> = {
+  closed: "Closed",
+  demolished: "Church demolished",
+  merged: "Merged",
+  open: "Open",
+  open_renamed: "Open under a new name",
+  open_transferred: "Open for another community",
+  repurposed: "Repurposed",
+  standing: "Building standing",
+};
+
+function surveyOwnershipLabel(value: string) {
+  return OWNERSHIP_LABEL[value as Ownership] ?? value.replaceAll("_", " ");
+}
+
+function surveyStatusLabel(value: string) {
+  return SURVEY_STATUS_LABEL[value] ?? value.replaceAll("_", " ");
+}
+
 export const CONGREGATION_CLASS_LABEL: Record<string, string> = {
   roman_catholic: "Roman Catholic parish",
   national_catholic_pncc: "Lithuanian National Catholic parish",
@@ -40,6 +60,9 @@ export const RECORD_TYPE_LABEL: Record<string, string> = {
   parish: "Lithuanian parish (parapija)",
   parapija: "Lithuanian parish (parapija)",
   misija: "Lithuanian mission (misija)",
+  phase: "Historical independent/national phase",
+  lead: "Unresolved research lead",
+  context: "Contextual historical reference",
 };
 
 const SETTLEMENT_PATTERNS = [
@@ -213,25 +236,41 @@ function SourceDetails({
     <div className="mt-1 space-y-1 text-muted leading-relaxed">
       {source.axis === "draugas-registry-1909-2007" && (
         <>
-          <p>
-            First recorded mention:{" "}
-            {source.first_mention?.slice(0, 10) ?? "not recorded"}
-            {source.last_mention &&
-              source.last_mention !== source.first_mention && (
-                <> · Last recorded mention: {source.last_mention.slice(0, 10)}</>
-              )}
-            {source.total_mentions
-              ? ` · ${source.total_mentions} issues`
-              : ""}
-          </p>
-          <p className="text-xs italic">
-            Last mention is an archive observation, not a closure date.
-          </p>
+          {source.note && <p>{source.note}</p>}
+          {(source.first_mention ||
+            source.last_mention ||
+            source.total_mentions) && (
+            <>
+              <p>
+                First recorded mention:{" "}
+                {source.first_mention?.slice(0, 10) ?? "not recorded"}
+                {source.last_mention &&
+                  source.last_mention !== source.first_mention && (
+                    <>
+                      {" "}
+                      · Last recorded mention:{" "}
+                      {source.last_mention.slice(0, 10)}
+                    </>
+                  )}
+                {source.total_mentions
+                  ? ` · ${source.total_mentions} issues`
+                  : ""}
+              </p>
+              <p className="text-xs italic">
+                Last mention is an archive observation, not a closure date.
+              </p>
+            </>
+          )}
         </>
       )}
 
       {source.axis === "draugas-2008-2026" && (
-        <p>{source.cites || source.work || "Modern case-file evidence."}</p>
+        <p>
+          {source.note ||
+            source.cites ||
+            source.work ||
+            "Modern case-file evidence."}
+        </p>
       )}
 
       {source.axis === "draugas-jubilee-implied" && (
@@ -294,11 +333,14 @@ function SourceDetails({
           <p>
             {source.currentStatus &&
               !/^(none|unknown|unspecified)$/i.test(source.currentStatus) && (
-                <>Status as surveyed: {source.currentStatus}. </>
+                <>Status as surveyed: {surveyStatusLabel(source.currentStatus)}. </>
               )}
             {source.ownership &&
               !/^(none|unknown|unspecified)$/i.test(source.ownership) && (
-                <>Ownership as surveyed: {source.ownership}.</>
+                <>
+                  Ownership as surveyed:{" "}
+                  {surveyOwnershipLabel(source.ownership)}.
+                </>
               )}
           </p>
           <p className="text-xs italic">
@@ -323,8 +365,9 @@ function SourceDetails({
 
       {!AXIS_LABEL[source.axis] && (
         <>
-          {source.description && <p>{source.description}</p>}
-          {source.work && <p>{source.work}</p>}
+          {(source.description || source.note) && (
+            <p>{source.description ?? source.note}</p>
+          )}
           {source.pages && <p className="text-xs">Pages: {source.pages}.</p>}
         </>
       )}
@@ -359,7 +402,7 @@ export function ParishPublishedRecord({
         {sources.map((source, index) => (
           <article key={`${source.axis}-${index}`} className="py-4 text-sm">
             <h3 className="font-medium">
-              {AXIS_LABEL[source.axis] ?? source.axis}
+              {source.work ?? AXIS_LABEL[source.axis] ?? source.axis}
             </h3>
             <SourceDetails source={source} profile={profile} />
           </article>
