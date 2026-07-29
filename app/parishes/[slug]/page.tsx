@@ -406,8 +406,8 @@ export default async function ParishPage({
   const watchSources = watchEntry
     ? linkedProfileSources(watchEntry.sources, {
         group: "current",
-        context: `Sustainability watch checked ${watchEntry.dateObserved}`,
-        fallbackTitle: "Sustainability-watch source",
+        context: `Parish sustainability profile checked ${watchEntry.dateObserved}`,
+        fallbackTitle: "Parish sustainability source",
       })
     : [];
   const situationSources = situation?.sources
@@ -440,7 +440,7 @@ export default async function ParishPage({
     ...projectProfileSource(
       watchEntry?.hearthUrl,
       "Židinys sustainability dispatch",
-      "Current sustainability-watch publication",
+      "Current parish sustainability publication",
     ),
   ];
   const profileSources = finalizeProfileSources([
@@ -520,7 +520,7 @@ export default async function ParishPage({
                 ? parishCampaign
                   ? "Active campaign"
                   : "Under threat"
-                : "Sustainability watch"}
+                : "Sustainability profile"}
             </span>
           )}
         </div>
@@ -810,7 +810,7 @@ export default async function ParishPage({
           <div className="mt-4 overflow-hidden rounded-lg border border-rule">
             <div className="px-4 pb-3 pt-3.5">
               <p className="text-xs uppercase tracking-widest text-muted">
-                Sustainability Watch
+                Parish sustainability
               </p>
               <p className="mt-1.5 leading-relaxed">{watchEntry.situation}</p>
 
@@ -893,7 +893,7 @@ export default async function ParishPage({
                   href="/sustainability-watch"
                   className="rounded-md border border-rule px-3 py-1 text-xs font-medium transition-colors hover:border-foreground"
                 >
-                  Sustainability Watch &rarr;
+                  Parish Sustainability &rarr;
                 </Link>
               </div>
             </div>

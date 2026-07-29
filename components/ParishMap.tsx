@@ -881,7 +881,7 @@ export default function ParishMap() {
       <div className="mt-2 min-h-9 border-t border-rule pt-2.5 text-sm">
         {mode === "threat" ? (
           <span className="text-muted">
-            {statusCounts.threat} parishes and buildings currently watched.{" "}
+            {statusCounts.threat} parishes and buildings with current concerns.{" "}
             <a href="/under-threat" className="underline hover:text-foreground font-medium">
               Full situation for each →
             </a>

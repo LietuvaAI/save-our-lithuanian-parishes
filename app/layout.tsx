@@ -47,7 +47,7 @@ const NAV: NavItem[] = [
         href: "/lithuanian-catholic-life-today",
         label: "Catholic Life Today",
       },
-      { href: "/sustainability-watch", label: "Sustainability Watch" },
+      { href: "/sustainability-watch", label: "Parish Sustainability" },
       { href: "/under-threat", label: "Parishes Under Threat" },
       {
         href: "/pennsylvania-coal-region",

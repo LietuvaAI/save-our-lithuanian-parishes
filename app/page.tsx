@@ -218,7 +218,7 @@ export default function Home() {
 
       <section className="mt-8">
         <div className="flex items-baseline gap-3">
-          <h2 className="font-serif text-xl font-semibold">Sustainability Watch</h2>
+          <h2 className="font-serif text-xl font-semibold">Parish Sustainability</h2>
           <span className="text-sm text-muted">
             {WATCH_COUNT} parishes
           </span>
@@ -230,7 +230,7 @@ export default function Home() {
         </p>
         <p className="mt-2 text-sm">
           <Link href="/sustainability-watch" className="underline hover:text-accent font-medium">
-            All parishes on Sustainability Watch &rarr;
+            See all parish sustainability profiles &rarr;
           </Link>
         </p>
       </section>

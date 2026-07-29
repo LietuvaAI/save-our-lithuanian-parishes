@@ -8,7 +8,7 @@ import type { EndState } from "@/lib/end-state";
 export const metadata: Metadata = {
   title: "Under Threat",
   description:
-    "The watched Lithuanian parishes: closures, consolidations, property motions, open windows, and active community campaigns — every item sourced.",
+    "Current Lithuanian parish alerts: closures, consolidations, property motions, open processes, and active community campaigns — every item sourced.",
 };
 
 type Alert = {
@@ -80,14 +80,13 @@ export default function UnderThreatPage() {
         Parishes Under Threat
       </h1>
       <p className="mt-3 text-muted leading-relaxed">
-        Each item below is a current event at a watched parish — a closure, a
-        consolidation, a property motion, an open process — found by the
-        systematic Parish Watch sweep and stated with its sources. Snapshot
-        of {alertsData.snapshot}; red items are re-checked weekly, amber
-        biweekly. Parishes that survived but face slow-burn sustainability
-        challenges are on the{" "}
+        Each item below is a current event involving a closure, consolidation,
+        property motion, or open process, stated with its sources. Snapshot of{" "}
+        {alertsData.snapshot}; red items are re-checked weekly, amber biweekly.
+        Slower questions about clergy, liturgy, governance, and finances live
+        in{" "}
         <Link href="/sustainability-watch" className="underline hover:text-foreground">
-          Sustainability Watch
+          Parish Sustainability
         </Link>
         .
       </p>
@@ -215,7 +214,7 @@ export default function UnderThreatPage() {
       {/* ── Monitored: watch ── */}
       <section className="mt-12">
         <div className="flex items-baseline gap-3">
-          <h2 className="font-serif text-2xl font-semibold">Being watched</h2>
+          <h2 className="font-serif text-2xl font-semibold">Developments to monitor</h2>
           <span className="text-sm text-muted">{watchAlerts.length} parishes</span>
         </div>
         <p className="mt-1 text-sm text-muted leading-relaxed">
@@ -313,7 +312,7 @@ export default function UnderThreatPage() {
       <section className="mt-10 rounded-lg border border-rule px-4 py-3.5 text-sm text-muted leading-relaxed">
         <p>
           <span className="font-medium text-foreground">How this list is built.</span>{" "}
-          The watch layer systematically monitors 155 parishes and sites drawn
+          The current-alert review covers 155 parishes and sites drawn
           from the wider research record — a broader net than the{" "}
           <Link href="/record" className="underline hover:text-foreground">
             case-filed parishes
