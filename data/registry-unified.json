@@ -21,19 +21,19 @@
  ],
  "principles": "conflicts are data; locked figures untouched; no invented values; every fact cites its source",
  "counts": {
-  "parishes": 196,
+  "parishes": 195,
   "case_filed": 83,
   "case_filed_records": 82,
   "multi_source": 65,
-  "single_source": 64,
+  "single_source": 63,
   "with_exact_geo": 91,
-  "with_city_geo": 107,
+  "with_city_geo": 106,
   "needs_geocode": 3,
   "standalone_sites": 167,
   "non_catholic_congregations": 14,
   "excluded": 11,
   "ambiguous": 1,
-  "records": 211,
+  "records": 210,
   "missions": 4,
   "congregations": 10,
   "phases": 1
@@ -11516,61 +11516,6 @@
    "city_history": []
   },
   {
-   "slug": "lithuanian-church-waterbury-ct",
-   "names": {
-    "lt": "Lietuvių bažnyčia (unnamed)",
-    "en": null,
-    "variants": [
-     "Lietuvių bažnyčia (unnamed)"
-    ]
-   },
-   "city": "Waterbury",
-   "state": "CT",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "draugas-registry-1909-2007",
-     "kind": "newspaper-record",
-     "parish_key": "lithuanian-church-waterbury-ct",
-     "first_mention": "",
-     "last_mention": "",
-     "total_mentions": 0
-    }
-   ],
-   "years": {
-    "founded": [
-     {
-      "value": "1902",
-      "source": "draugas-registry-1909-2007"
-     }
-    ],
-    "closed": []
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [
-    {
-     "set": "draugas-registry-1909-2007/events-curated",
-     "parish_key": "lithuanian-church-waterbury-ct"
-    }
-   ],
-   "geo": {
-    "lat": 41.5539066,
-    "lon": -73.0438067,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Archdiocese of Hartford",
-   "c83_rows": [],
-   "city_history": []
-  },
-  {
    "slug": "lithuanian-easton-pa",
    "names": {
     "lt": "",
@@ -21623,7 +21568,7 @@
   }
  ],
  "registryRevision": {
-  "version": 3,
+  "version": 4,
   "date": "2026-07-28",
   "changelog": [
    "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
@@ -21634,8 +21579,10 @@
    "Resolved Nanticoke St. Joseph as the Hanover-section entity closed in 2001; retained its later sale/conversion as a building event.",
    "Reconstructed Minersville St. Francis as founded 1895 (secondary reading), documented the 1909 church dedication, and separated the 2020 building closure from the unresolved juridic parish-end date.",
    "Applied parish-canon tranche 1 after archival and current/official review: restored Waterbury All Saints as a distinct historical entity, collapsed Worcester, Wilkes-Barre, and DuBois duplicate rows, marked Providence as a phase, and separated Roman Catholic DuBois St. Joseph from the provisional 1903 national attempt.",
-   "Preserved full direct Draugas issue links, current institutional sources, unresolved boundaries, and the unchanged locked C83 evidence."
+   "Preserved full direct Draugas issue links, current institutional sources, unresolved boundaries, and the unchanged locked C83 evidence.",
+   "Moved the unresolved unnamed 1902 Waterbury lead out of the public canonical registry and into a lossless research hold; public St. Joseph campaign identity and historical All Saints identity remain separate and unchanged.",
+   "Added machine-enforced identity locks for every public campaign parish so research cannot silently rename, merge, redirect, relocate, or reclassify the institution carrying a campaign."
   ],
-  "contentHash": "d0848eabb987d8c246250da9fb8e69ca4f41df49f6e10956c7f3767c89520735"
+  "contentHash": "06bd3d8bf8394f9d081237efe4a50f236b218dc27ee805a60632ca2cfcd7c727"
  }
 }

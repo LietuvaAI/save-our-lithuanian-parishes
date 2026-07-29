@@ -93,20 +93,28 @@ research pages.
 - The 16 missing closure-year and 6 year-variance records were adjudicated in
   brain #449 and folded into Registry Revision 1. Spring Valley remains
   unresolved and Nanticoke remains pending diocesan confirmation by design.
-- Upstream `gazetteer.csv` (Draugas lane, config-as-truth): the unnamed 1902
-  Waterbury church (`lithuanian-church-waterbury-ct`) carries `status=closed`
-  with an empty closure year — the likeliest origin of the ending this repo's
-  overlay inferred and then counted, corrected 2026-07-26. The column feeds
-  only geocoding here; fix it at the source on the next gazetteer revision.
-- Waterbury needs a name-level reconciliation: three Roman Catholic records
-  sit on the same city centroid (Šv. Juozapo, Šv. Kazimiero, and this unnamed
-  1902 entry) and only the first is established as distinct. New input from the
-  2026-07-26 national-catholic verification: the Lithuanian National Catholic
-  congregation in Waterbury was founded in **1902**, the same year as the
-  unnamed Draugas entry, so the two records may be one congregation seen from
-  either side of the schism. Draugas coded its entry `roman_catholic`, which
-  argues against the identity but does not settle it. Resolve name-level before
-  either record is counted anywhere.
+- **Waterbury resolved for public presentation in Registry Revision 4:** the
+  protected public campaign remains Roman Catholic St. Joseph
+  (`sv-juozapo-waterbury-ct` / `joseph-waterbury-ct`). The false St. Casimir
+  C83 row remains merged into that entity. Historical All Saints remains a
+  separate, supported independent/national entity with its unresolved end
+  labeled. The unnamed 1902 row (`lithuanian-church-waterbury-ct`) is excluded
+  from public profiles and counts until name-level identity is established;
+  its complete evidence survives in
+  `data/candidates/waterbury-1902-unresolved-lead.json`.
+- Upstream `gazetteer.csv` still carries that unnamed lead as `status=closed`
+  with an empty closure year. The column feeds only geocoding here and does not
+  override the Revision 4 research hold.
+
+## Public campaign identity locks (2026-07-28)
+
+Every public campaign parish has an explicit `identityLock` in
+`data/alerts.json`. Research can update the documented current status as events
+change, but it cannot silently rename, merge, redirect, relocate, or reclassify
+the institution carrying the campaign. `scripts/verify-campaign-identity.mjs`
+checks the canonical profile, registry row, Lithuanian name, location,
+institution type, ownership, denomination, founding-year anchor, and C83
+lineage on every data build.
 
 ## Both directions of claim are guarded (2026-07-26)
 

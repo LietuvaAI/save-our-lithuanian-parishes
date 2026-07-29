@@ -226,6 +226,21 @@
       "entity": "Divine Providence (Dievo Apvaizdos)",
       "place": "Southfield, Michigan",
       "parishLink": "/parishes/dievo-apvaizdos-southfield-mi",
+      "identityLock": {
+        "profileSlug": "dievo-apvaizdos-southfield-mi",
+        "registrySlug": "providence-southfield-mi",
+        "nameLt": "Dievo Apvaizdos",
+        "city": "Southfield",
+        "state": "MI",
+        "country": "US",
+        "institutionType": "parapija",
+        "ownership": "diocese_rc",
+        "congregationClass": "roman_catholic",
+        "c83Rows": [
+          63
+        ],
+        "yearFounded": 1908
+      },
       "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/further-down-the-path-what-divine",
       "actionUrl": "https://form.jotform.com/261034294481152",
       "actionLabel": "Complete the Detroit survey",
@@ -285,6 +300,21 @@
       "entity": "Holy Trinity (Švč. Trejybės)",
       "place": "Hartford, Connecticut",
       "parishLink": "/parishes/svc-trejybes-hartford-ct",
+      "identityLock": {
+        "profileSlug": "svc-trejybes-hartford-ct",
+        "registrySlug": "trinity-hartford-ct",
+        "nameLt": "Švč. Trejybės",
+        "city": "Hartford",
+        "state": "CT",
+        "country": "US",
+        "institutionType": "parapija",
+        "ownership": "diocese_rc",
+        "congregationClass": "roman_catholic",
+        "c83Rows": [
+          70
+        ],
+        "yearFounded": null
+      },
       "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/fifteen-months-the-closing-of-svc",
       "actionUrl": "https://www.gofundme.com/f/protect-holy-trinity-church",
       "actionLabel": "Support Hartford's legal fund",
@@ -316,6 +346,22 @@
       "entity": "St. Joseph's (Šv. Juozapo)",
       "place": "Waterbury, Connecticut",
       "parishLink": "/parishes/sv-juozapo-waterbury-ct",
+      "identityLock": {
+        "profileSlug": "sv-juozapo-waterbury-ct",
+        "registrySlug": "joseph-waterbury-ct",
+        "nameLt": "Šv. Juozapo",
+        "city": "Waterbury",
+        "state": "CT",
+        "country": "US",
+        "institutionType": "parapija",
+        "ownership": "diocese_rc",
+        "congregationClass": "roman_catholic",
+        "c83Rows": [
+          32,
+          76
+        ],
+        "yearFounded": 1893
+      },
       "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/closed-not-ended-the-vatican-appeal",
       "actionUrl": "https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church",
       "actionLabel": "Support Waterbury's appeal",
@@ -347,6 +393,21 @@
       "entity": "Transfiguration (Kristaus Atsimainymo)",
       "place": "Maspeth, Queens, New York",
       "parishLink": "/parishes/kristaus-atsimainymo-maspeth-ny",
+      "identityLock": {
+        "profileSlug": "kristaus-atsimainymo-maspeth-ny",
+        "registrySlug": "transfiguration-maspeth-ny",
+        "nameLt": "Kristaus Atsimainymo",
+        "city": "Maspeth",
+        "state": "NY",
+        "country": "US",
+        "institutionType": "parapija",
+        "ownership": "diocese_rc",
+        "congregationClass": "roman_catholic",
+        "c83Rows": [
+          66
+        ],
+        "yearFounded": 1962
+      },
       "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/still-open-still-undecided-the-fight",
       "actionUrl": "https://www.change.org/p/help-save-a-unique-lithuanian-r-c-church-of-the-transfiguration-in-maspeth-queens",
       "actionLabel": "Sign the Maspeth petition",
