@@ -290,14 +290,16 @@ export function registryProfileSources(
     }
 
     if (axis === "web-historical") {
+      // Early extraction passes created web-candidate placeholders before a
+      // public page URL was captured. They remain in the research registry as
+      // provenance, but a URL-less candidate is not a publishable source.
+      if (!isAbsoluteWebUrl(source.sourceUrl)) continue;
       drafts.push({
         group: "current",
         title: "Diocesan and parish web survey",
         citation: source.work ?? "Automated web survey, 2026",
-        url: isAbsoluteWebUrl(source.sourceUrl) ? source.sourceUrl : null,
+        url: source.sourceUrl,
         contexts: ["Current-status and ownership check"],
-        missingLinkNote:
-          "The underlying public page URL is not yet recorded in the registry.",
       });
       continue;
     }
@@ -336,6 +338,7 @@ export function linkedProfileSources(
 }
 
 export function photoProfileSource(photo: {
+  src?: string | null;
   archiveUrl?: string | null;
   evidenceUrl?: string | null;
   attribution?: string | null;
@@ -351,9 +354,12 @@ export function photoProfileSource(photo: {
         ? photo.archiveUrl
         : isAbsoluteWebUrl(photo.evidenceUrl)
           ? photo.evidenceUrl
-          : null,
+          : photo.src?.startsWith("/")
+            ? `https://saveourlithuanianparishes.org${photo.src}`
+            : null,
       contexts: ["Profile photograph"],
-      missingLinkNote: "The image attribution does not include an archive URL.",
+      missingLinkNote:
+        "The image attribution does not include an archive or published-file URL.",
     },
   ]);
 }
@@ -384,10 +390,11 @@ export function finalizeProfileSources(
   const merged = new Map<string, ProfileSource>();
 
   for (const [index, source] of flat.entries()) {
+    const normalizedUrl = source.url?.replace(/^http:\/\//i, "https://");
     const key = source.url
       ? source.group === "newspaper"
-        ? `url:${source.url}:${source.citation ?? source.title}`
-        : `url:${source.url}`
+        ? `url:${normalizedUrl}:${source.citation ?? source.title}`
+        : `url:${normalizedUrl}`
       : `missing:${source.group}:${source.title}:${source.citation ?? ""}`;
     const existing = merged.get(key);
     if (existing) {

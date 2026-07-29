@@ -64,6 +64,7 @@ function isSettlement(r) {
 
 function isUSRecord(r) {
   return (
+    ["parish", "misija", "congregation"].includes(r.record_type) &&
     !isSettlement(r) &&
     r.country !== "CA" &&
     !/buenos aires|argentin|rosario/i.test(r.city ?? "")

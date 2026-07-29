@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import registry from "@/data/registry-unified.json";
 import { EndStatePill } from "@/components/EndStatePill";
-import { isUS, type RegParish } from "@/lib/registry-scope";
+import {
+  isPublicRecord,
+  isUS,
+  type RegParish,
+} from "@/lib/registry-scope";
+import { canonicalProfileHrefForRegistrySlug } from "@/lib/parish-profile";
 
 export const metadata: Metadata = {
   title: "Lithuanian Protestant and independent congregations",
@@ -25,14 +30,15 @@ type Rec = Omit<RegParish, "names" | "sources" | "locked"> & {
 };
 
 const CONGS = (registry as { parishes: Rec[] }).parishes.filter(
-  (p) => p.congregation_class === "non_catholic_christian" && isUS(p)
+  (p) =>
+    p.congregation_class === "non_catholic_christian" &&
+    isUS(p) &&
+    isPublicRecord(p),
 );
 const sourcesOf = (c: Rec): RecSource[] => c.sources ?? [];
 const isConfirmedActive = (c: Rec): boolean =>
   c.locked?.status === "standing" ||
-  sourcesOf(c).some(
-    (s) => s.currentStatus === "standing" || s.axis === "truelithuania"
-  );
+  sourcesOf(c).some((s) => s.currentStatus === "standing");
 
 const confirmed = CONGS.filter(isConfirmedActive);
 const historical = CONGS.filter((c) => !isConfirmedActive(c));
@@ -65,10 +71,17 @@ function CongCard({ c }: { c: Rec }) {
   const nameVariants = (c.name_variants ?? c.names?.variants ?? []).filter(
     (v: string) => v !== name
   );
+  const profileHref =
+    canonicalProfileHrefForRegistrySlug(c.slug) ?? `/parishes/${c.slug}`;
   return (
     <div className="rounded-lg border border-rule px-4 py-3.5">
       <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-        <span className="font-serif text-base font-semibold">{name}</span>
+        <Link
+          href={profileHref}
+          className="font-serif text-base font-semibold hover:underline"
+        >
+          {name}
+        </Link>
         <div className="flex items-center gap-2">
           <EndStatePill value={active ? "active_parish" : "unverified"} />
           <span className="text-sm text-muted">
@@ -109,6 +122,15 @@ function CongCard({ c }: { c: Rec }) {
           </a>
         </p>
       )}
+
+      <p className="mt-2 text-xs">
+        <Link
+          href={profileHref}
+          className="underline hover:text-foreground"
+        >
+          Full research record →
+        </Link>
+      </p>
     </div>
   );
 }
@@ -141,7 +163,7 @@ export default function ProtestantPage() {
           {confirmed.length} active congregations
         </h2>
         <p className="mt-1 text-sm text-muted">
-          Current and case-file evidence identifies these as the four standing
+          Current and case-file evidence identifies these as the standing
           Lithuanian Lutheran congregations in the United States.
         </p>
         <div className="mt-4 space-y-4">

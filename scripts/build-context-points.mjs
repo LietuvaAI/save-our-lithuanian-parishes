@@ -65,10 +65,13 @@ function groupOf({ identity, buildingFate, hasClosed, isStanding, endingMode }) 
 }
 
 const clean = (v) => (v && v !== "unknown" ? v : null);
+const isPublicRecord = (record) =>
+  ["parish", "misija", "congregation"].includes(record.record_type);
 
 const points = [];
 let skipped = 0;
 for (const r of registry.parishes) {
+  if (!isPublicRecord(r)) continue;
   if (r.country === "CA") continue;
   if (/buenos aires|argentin|rosario/i.test(r.city ?? "")) continue;
   if ((r.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? ""))) continue;

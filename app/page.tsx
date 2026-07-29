@@ -13,7 +13,7 @@ const REG_CLOSED = romanCatholicParishes.filter(
 ).length;
 const REG_NATCATH = usRegistryParishes().filter(
   (p) =>
-    p.record_type !== "phase" &&
+    p.record_type === "parish" &&
     (p.congregation_class === "national_catholic_pncc" ||
       p.congregation_class === "independent_catholic"),
 ).length;
@@ -62,7 +62,7 @@ const STATS = [
   {
     value: String(figures.endingMode.diocese_closed),
     label:
-      "Closed by diocesan decision in the 83-parish Draugas case-filed core, 2008–2026.",
+      "Closed by diocesan decision in the original Draugas case-filed core: 83 source rows, 82 canonical parish identities, 2008–2026.",
     tone: "red",
   },
   {

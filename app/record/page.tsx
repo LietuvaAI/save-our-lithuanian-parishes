@@ -7,7 +7,7 @@ import { resolveAlertStatus, resolveIdentity, resolveFate } from "@/lib/unified-
 export const metadata: Metadata = {
   title: "The Record",
   description:
-    "Every documented Lithuanian parish and congregation in the U.S. research record, with current status and source depth from the unified registry.",
+    "Every documented Lithuanian parish, mission, and congregation in the U.S. public record, with current status and source depth from the unified registry.",
 };
 
 function buildRows(): RegistryRow[] {
@@ -43,9 +43,10 @@ export default function RecordPage() {
       <h1 className="font-serif text-3xl font-semibold">The Record</h1>
       <div className="mt-3 space-y-4 leading-relaxed max-w-3xl">
         <p>
-          {total} records of Lithuanian parish life across the United States — Roman
-          Catholic ethnic parishes, National Catholic congregations, and
-          Protestant communities.
+          {total} records of Lithuanian parish life across the United States —
+          Roman Catholic ethnic parishes and missions, National and independent
+          Catholic parishes and congregations, and Protestant parishes and
+          congregations.
         </p>
         <p className="text-muted">
           The record extends backward through the archives toward the first

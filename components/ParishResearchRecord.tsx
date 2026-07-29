@@ -3,6 +3,7 @@ import type {
   RegistrySource,
   YearReading,
 } from "@/lib/parish-profile";
+import { OWNERSHIP_LABEL, type Ownership } from "@/lib/parishes";
 
 const AXIS_LABEL: Record<string, string> = {
   "draugas-registry-1909-2007": "Draugas archive, 1909–2007",
@@ -29,6 +30,25 @@ const SOURCE_ORDER: Record<string, number> = {
   truelithuania: 7,
 };
 
+const SURVEY_STATUS_LABEL: Record<string, string> = {
+  closed: "Closed",
+  demolished: "Church demolished",
+  merged: "Merged",
+  open: "Open",
+  open_renamed: "Open under a new name",
+  open_transferred: "Open for another community",
+  repurposed: "Repurposed",
+  standing: "Building standing",
+};
+
+function surveyOwnershipLabel(value: string) {
+  return OWNERSHIP_LABEL[value as Ownership] ?? value.replaceAll("_", " ");
+}
+
+function surveyStatusLabel(value: string) {
+  return SURVEY_STATUS_LABEL[value] ?? value.replaceAll("_", " ");
+}
+
 export const CONGREGATION_CLASS_LABEL: Record<string, string> = {
   roman_catholic: "Roman Catholic parish",
   national_catholic_pncc: "Lithuanian National Catholic parish",
@@ -41,6 +61,8 @@ export const RECORD_TYPE_LABEL: Record<string, string> = {
   parapija: "Lithuanian parish (parapija)",
   misija: "Lithuanian mission (misija)",
   phase: "Historical independent/national phase",
+  lead: "Unresolved research lead",
+  context: "Contextual historical reference",
 };
 
 const SETTLEMENT_PATTERNS = [
@@ -311,11 +333,14 @@ function SourceDetails({
           <p>
             {source.currentStatus &&
               !/^(none|unknown|unspecified)$/i.test(source.currentStatus) && (
-                <>Status as surveyed: {source.currentStatus}. </>
+                <>Status as surveyed: {surveyStatusLabel(source.currentStatus)}. </>
               )}
             {source.ownership &&
               !/^(none|unknown|unspecified)$/i.test(source.ownership) && (
-                <>Ownership as surveyed: {source.ownership}.</>
+                <>
+                  Ownership as surveyed:{" "}
+                  {surveyOwnershipLabel(source.ownership)}.
+                </>
               )}
           </p>
           <p className="text-xs italic">

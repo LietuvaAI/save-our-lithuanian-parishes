@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-28",
+  "generated": "2026-07-29",
   "note": "Structured present-state classifiers for canonical registry records. Hand-reviewed cases retain source-linked narrative and explicitly labeled uncertainty; generated records remain provisional until verified.",
   "parishes": {
     "sv-kazimiero-gary-in": {
@@ -405,7 +405,7 @@
       "current_use": "Given to convert-priests",
       "lithuanian_identity": "ethnically_transferred",
       "pastoral_status": "not_applicable",
-      "situation": "The original Lithuanian RC church that Scranton Lithuanians built, then lost to the bishop through the courts — the precipitating event of the LNCC schism. Closed ~2009 in the Allentown/Scranton sweep; building given to convert-priests. Coal region."
+      "situation": "St. Joseph, the Roman Catholic Theodore Street parish at the center of Scranton's early property conflict, was closed by the Diocese of Scranton on June 5, 2011. The later Lithuanian National Catholic congregation is Providence of God, a separate institution."
     },
     "sv-mykolo-scranton-pa": {
       "registry_slug": "michael-scranton-pa",
@@ -1370,24 +1370,6 @@
       "pastoral_status": "unknown",
       "situation": "Documented in registry but minimal research details available. Status not yet verified."
     },
-    "louis-maizeville-pa": {
-      "registry_slug": "louis-maizeville-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Coal region."
-    },
-    "ascension-pittsburgh-pa-2": {
-      "registry_slug": "ascension-pittsburgh-pa-2",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Duplicate/variant entry in registry. Needs clarification and consolidation."
-    },
     "lithuanian-national-catholic-parish-waterbury-ct": {
       "registry_slug": "lithuanian-national-catholic-parish-waterbury-ct",
       "canonical_status": "unknown",
@@ -1504,15 +1486,6 @@
       "lithuanian_identity": "unknown",
       "pastoral_status": "unknown",
       "situation": "Documented in registry but minimal research details available. Status not yet verified."
-    },
-    "parish-scranton-pa": {
-      "registry_slug": "parish-scranton-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Coal region."
     },
     "parish-chicago-il": {
       "registry_slug": "parish-chicago-il",
@@ -1649,15 +1622,6 @@
       "pastoral_status": "unknown",
       "situation": "Documented in registry but minimal research details available. Status not yet verified."
     },
-    "holyname-scranton-pa": {
-      "registry_slug": "holyname-scranton-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Coal region."
-    },
     "joseph-custer-mi": {
       "registry_slug": "joseph-custer-mi",
       "canonical_status": "unknown",
@@ -1694,15 +1658,6 @@
       "pastoral_status": "unknown",
       "situation": "Documented in registry but minimal research details available. Status not yet verified."
     },
-    "parish-pittsburgh-pa": {
-      "registry_slug": "parish-pittsburgh-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
-    },
     "vincent-pittsburgh-pa": {
       "registry_slug": "vincent-pittsburgh-pa",
       "canonical_status": "unknown",
@@ -1723,15 +1678,6 @@
     },
     "trinity-new-york-ny": {
       "registry_slug": "trinity-new-york-ny",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
-    },
-    "lawrence-lawrence-ma": {
-      "registry_slug": "lawrence-lawrence-ma",
       "canonical_status": "unknown",
       "building_fate": "unknown",
       "current_use": "Unknown",
@@ -1783,15 +1729,6 @@
       "lithuanian_identity": "unknown",
       "pastoral_status": "unknown",
       "situation": "Unnamed/duplicate parish entry in registry. Needs clarification."
-    },
-    "parish-worcester-ma-2": {
-      "registry_slug": "parish-worcester-ma-2",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Duplicate/variant entry in registry. Needs clarification."
     },
     "casimir-winnipeg-mb": {
       "registry_slug": "casimir-winnipeg-mb",
@@ -1846,24 +1783,6 @@
       "lithuanian_identity": "unknown",
       "pastoral_status": "unknown",
       "situation": "Canadian location. Documented in registry but minimal research details available. Status not yet verified."
-    },
-    "parish-maizeville-pa": {
-      "registry_slug": "parish-maizeville-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Coal region."
-    },
-    "parish-lawrence-ma": {
-      "registry_slug": "parish-lawrence-ma",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
     },
     "annunciation-maspeth-ny": {
       "registry_slug": "annunciation-maspeth-ny",

@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-28",
+ "generated": "2026-07-29",
  "corpusScope": "parish-registry-unified",
  "inputs": [
   "03eff76ba6053cd5f2ad2f5526d50ea09b5e922826b10046c313af09d33e5c5c",
@@ -21,22 +21,24 @@
  ],
  "principles": "conflicts are data; locked figures untouched; no invented values; every fact cites its source",
  "counts": {
-  "parishes": 190,
+  "parishes": 170,
   "case_filed": 83,
   "case_filed_records": 82,
-  "multi_source": 63,
-  "single_source": 60,
-  "with_exact_geo": 91,
-  "with_city_geo": 102,
+  "multi_source": 66,
+  "single_source": 49,
+  "with_exact_geo": 92,
+  "with_city_geo": 92,
   "needs_geocode": 2,
   "standalone_sites": 167,
   "non_catholic_congregations": 14,
   "excluded": 11,
   "ambiguous": 1,
-  "records": 205,
-  "missions": 4,
-  "congregations": 10,
-  "phases": 1
+  "records": 197,
+  "missions": 5,
+  "congregations": 7,
+  "phases": 6,
+  "leads": 7,
+  "context": 2
  },
  "parishes": [
   {
@@ -875,7 +877,7 @@
    "city_history": [
     "Chicago (later Oak Lawn from 1974)"
    ],
-   "diocese": "Diocese of Joliet",
+   "diocese": null,
    "c83_rows": [
     82
    ]
@@ -2117,7 +2119,10 @@
     "lt": "Dangun Žengimo",
     "en": null,
     "variants": [
-     "Dangun Žengimo"
+     "Dangun Žengimo",
+     "Ascension",
+     "Ascension Parish",
+     "Dangun Isengimo parapija"
     ]
    },
    "city": "Pittsburgh",
@@ -2143,6 +2148,25 @@
      "confidence": "verified",
      "sourceUrl": "https://diopitt.org/ascension-north-side",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-candidate",
+     "idx": 38,
+     "confidence": "reported",
+     "currentStatus": "demolished",
+     "ownership": "diocese_rc"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.341-342",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
     }
    ],
    "years": {
@@ -2150,12 +2174,20 @@
      {
       "value": "1906",
       "source": "draugas-registry-1909-2007"
+     },
+     {
+      "value": "1906",
+      "source": "web-historical"
      }
     ],
     "closed": [
      {
       "value": "1962",
       "source": "draugas-registry-1909-2007"
+     },
+     {
+      "value": "1962",
+      "source": "web-historical"
      }
     ]
    },
@@ -2174,66 +2206,22 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
+   "axes_count": 3,
+   "record_depth": "multi-source",
    "diocese": "Diocese of Pittsburgh",
    "c83_rows": [],
-   "city_history": []
-  },
-  {
-   "slug": "ascension-pittsburgh-pa-2",
-   "names": {
-    "lt": null,
-    "en": "Ascension",
-    "variants": [
-     "Ascension"
-    ]
-   },
-   "city": "Pittsburgh",
-   "state": "PA",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "web-historical",
-     "kind": "web-candidate",
-     "idx": 38,
-     "confidence": "reported",
-     "currentStatus": "demolished",
-     "ownership": "diocese_rc"
-    }
+   "city_history": [],
+   "aliases": [
+    "ascension-pittsburgh-pa-2",
+    "parish-pittsburgh-pa"
    ],
-   "years": {
-    "founded": [
-     {
-      "value": "1906",
-      "source": "web-historical"
-     }
-    ],
-    "closed": [
-     {
-      "value": "1962",
-      "source": "web-historical"
-     }
-    ]
+   "events": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "same-entity-shells-collapsed"
    },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [],
-   "geo": {
-    "lat": 40.4406968,
-    "lon": -80.0025666,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Diocese of Pittsburgh",
-   "c83_rows": [],
-   "city_history": []
+   "caveat": "All three shells describe the one Ascension parish in Pittsburgh, founded in 1906 and closed in 1962."
   },
   {
    "slug": "bernard-irons-mi",
@@ -2342,8 +2330,8 @@
    "city": "Chicago (2301 West 22nd Place)",
    "state": "IL",
    "country": "US",
-   "record_type": "congregation",
-   "congregation_class": "non_catholic_christian",
+   "record_type": "phase",
+   "congregation_class": "independent_catholic",
    "in_locked_scope": false,
    "comparator": false,
    "years": {
@@ -2370,7 +2358,13 @@
    "city_history": [
     "Chicago (2301 West 22nd Place)"
    ],
-   "diocese": "Archdiocese of Chicago"
+   "diocese": null,
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "source-classification-audited"
+   },
+   "caveat": "A short-lived Lithuanian separatist Catholic attempt, not a Protestant congregation."
   },
   {
    "slug": "casimir-amsterdam-ny",
@@ -4673,7 +4667,9 @@
     "variants": [
      "šv. Kazimiero parapija",
      "Šv. Kazimiero",
-     "St. Casimir"
+     "St. Casimir",
+     "RC parish, Worcester (Fr. Bukaveckas)",
+     "lietuvių parapija, Worcester, Mass. (kun. Bukaveckas)"
     ]
    },
    "city": "Worcester",
@@ -4753,6 +4749,17 @@
      "sourceUrl": "https://www.bishop-accountability.org/news2008/05_06/2008_06_29_Kush_FinalChimes.htm",
      "ownership": "diocese_rc",
      "surveyed": "2026-07-25"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "128",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Roman Catholic",
+     "diocese": "None"
     }
    ],
    "years": {
@@ -4845,7 +4852,17 @@
    "c83_rows": [
     19
    ],
-   "city_history": []
+   "city_history": [],
+   "aliases": [
+    "parish-worcester-ma-2"
+   ],
+   "events": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "same-entity-shells-collapsed"
+   },
+   "caveat": "Michelsonas's Worcester parish under Fr. Bukaveckas is St. Casimir, not an additional Worcester parish."
   },
   {
    "slug": "christ-the-king-sudbury-on",
@@ -4908,7 +4925,9 @@
     "lt": "Toronto Kristaus prisikėlimo lietuvių bažnyčia",
     "en": null,
     "variants": [
-     "Toronto Kristaus prisikėlimo lietuvių bažnyčia"
+     "Toronto Kristaus prisikėlimo lietuvių bažnyčia",
+     "Prisikėlimo parapija",
+     "Resurrection Parish"
     ]
    },
    "city": "Toronto",
@@ -4928,6 +4947,17 @@
       2001
      ],
      "importance": 2
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.427",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
     }
    ],
    "geo": {
@@ -4944,11 +4974,16 @@
    "related_sites": [],
    "events_refs": [],
    "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
+   "axes_count": 2,
+   "record_depth": "multi-source",
    "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "false-source-join-repaired"
+   }
   },
   {
    "slug": "cong-lithuanian-evangelical-luthera",
@@ -4960,7 +4995,7 @@
    "city": "Boston",
    "state": "MA",
    "country": "US",
-   "record_type": "congregation",
+   "record_type": "lead",
    "congregation_class": "non_catholic_christian",
    "in_locked_scope": false,
    "comparator": false,
@@ -4990,7 +5025,13 @@
    "city_history": [
     "Boston"
    ],
-   "diocese": "Archdiocese of Boston"
+   "diocese": null,
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "source-classification-audited"
+   },
+   "caveat": "The generic Boston source may duplicate the known First Lutheran community; it remains a lead until the identity join is proved."
   },
   {
    "slug": "cong-lithuanian-evangelical-parish",
@@ -5032,7 +5073,7 @@
    "city_history": [
     "Los Angeles"
    ],
-   "diocese": "Archdiocese of Los Angeles"
+   "diocese": null
   },
   {
    "slug": "cong-lithuanian-evangelical-union-c",
@@ -5114,7 +5155,7 @@
    "city_history": [
     "Chicago"
    ],
-   "diocese": "Archdiocese of Chicago"
+   "diocese": null
   },
   {
    "slug": "first-lutheran-boston",
@@ -5154,7 +5195,7 @@
    "city_history": [
     "Boston"
    ],
-   "diocese": "Archdiocese of Boston"
+   "diocese": null
   },
   {
    "slug": "francis-east-chicago-in",
@@ -7584,12 +7625,18 @@
     "precision": "city-centroid",
     "source": "site-geo-cache"
    },
-   "congregation_class": "roman_catholic",
+   "congregation_class": "national_catholic_pncc",
    "axes_count": 1,
    "record_depth": "single-source",
-   "diocese": "Diocese of Pittsburgh",
+   "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "source-classification-audited"
+   },
+   "caveat": "The source describes a Lithuanian separatist parish later taken under PNCC jurisdiction."
   },
   {
    "slug": "george-rochester-ny",
@@ -8635,7 +8682,7 @@
    "city": "Cleveland",
    "state": "OH",
    "country": "US",
-   "record_type": "parish",
+   "record_type": "phase",
    "in_locked_scope": false,
    "c83_row": null,
    "sources": [
@@ -8679,12 +8726,18 @@
     "precision": "city-centroid",
     "source": "site-geo-cache"
    },
-   "congregation_class": "roman_catholic",
+   "congregation_class": "independent_catholic",
    "axes_count": 1,
    "record_depth": "single-source",
-   "diocese": "Diocese of Cleveland",
+   "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "source-classification-audited"
+   },
+   "caveat": "The proposed 1917 Old Catholic organization was abandoned and never became a durable parish."
   },
   {
    "slug": "holycross-dayton-oh",
@@ -9023,7 +9076,7 @@
    "city": "Philadelphia",
    "state": "PA",
    "country": "US",
-   "record_type": "parish",
+   "record_type": "phase",
    "in_locked_scope": false,
    "c83_row": null,
    "sources": [
@@ -9052,73 +9105,18 @@
     "precision": "city-centroid",
     "source": "site-geo-cache"
    },
-   "congregation_class": "roman_catholic",
+   "congregation_class": "independent_catholic",
    "axes_count": 1,
    "record_depth": "single-source",
-   "diocese": "Archdiocese of Philadelphia",
+   "diocese": null,
    "c83_rows": [],
-   "city_history": []
-  },
-  {
-   "slug": "holyname-scranton-pa",
-   "names": {
-    "lt": null,
-    "en": "Scranton Lithuanian parish (unnamed)",
-    "variants": [
-     "Lithuanian church on Theodore St., Scranton",
-     "Scranton Lithuanian parish (unnamed)"
-    ]
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "source-classification-audited"
    },
-   "city": "Scranton",
-   "state": "PA",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "michelsonas-1961",
-     "kind": "secular-history",
-     "tier": 2,
-     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
-     "pages": "34,35,36",
-     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
-     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
-     "ethnic_status": "Lithuanian",
-     "diocese": "unspecified (Irish bishop)"
-    }
-   ],
-   "years": {
-    "founded": [
-     {
-      "value": "not stated (existed under kun. Kuras until his death in 1937)",
-      "source": "michelsonas-1961",
-      "cite": "34,35,36"
-     }
-    ],
-    "closed": [
-     {
-      "value": "n/a - ongoing in 1937 conflict",
-      "source": "michelsonas-1961",
-      "cite": "34,35,36"
-     }
-    ]
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [],
-   "geo": {
-    "lat": 41.4086874,
-    "lon": -75.6621294,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "unspecified (Irish bishop)",
-   "c83_rows": [],
-   "city_history": []
+   "caveat": "A single source attests an unnamed independent/schismatic phase; a durable standalone parish identity is not established."
   },
   {
    "slug": "ignatius-luther-mi",
@@ -9588,7 +9586,10 @@
      "Sacred Heart Parish, Lawrence",
      "tautine (nepriklausoma) parapija, Lawrence",
      "Saldžiausios Jėzaus Širdies",
-     "Sacred Heart Lithuanian National Catholic"
+     "Sacred Heart Lithuanian National Catholic",
+     "Lithuanian National Catholic parish, Lawrence",
+     "tautinė parapija, Lawrence, Mass.",
+     "Lorenso Lietuvių tautinių katalikų bažnyčia"
     ]
    },
    "city": "Lawrence",
@@ -9656,6 +9657,29 @@
      "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
      "ethnic_status": "independent/schismatic Lithuanian national parish",
      "diocese": "None"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "132",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian National Catholic",
+     "diocese": "None",
+     "ownership": "national_catholic"
+    },
+    {
+     "axis": "truelithuania",
+     "kind": "field-survey",
+     "tlId": 289,
+     "sourceUrl": "http://global.truelithuania.com/lt/lawrence-and-lowell-massachusetts-1682/",
+     "statusFlags": [],
+     "yearsMentioned": [
+      2001
+     ],
+     "importance": 3
     }
    ],
    "years": {
@@ -9682,6 +9706,11 @@
       "value": "founded by kun. S. Mickevicius amid the sv. Lauryno parish dispute",
       "source": "michelsonas-1961",
       "cite": "p.324"
+     },
+     {
+      "value": "~1916 (per 1941 25th-anniversary observance)",
+      "source": "michelsonas-1961",
+      "cite": "132"
      }
     ],
     "closed": [
@@ -9746,19 +9775,30 @@
     }
    ],
    "geo": {
-    "lat": 42.7070354,
-    "lon": -71.1631137,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
+    "lat": 42.70895,
+    "lon": -71.155853,
+    "precision": "exact",
+    "source": "truelithuania"
    },
    "congregation_class": "national_catholic_pncc",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed",
-   "diocese": "Archdiocese of Boston",
+   "diocese": null,
    "c83_rows": [
     79
    ],
-   "city_history": []
+   "city_history": [],
+   "aliases": [
+    "lawrence-lawrence-ma",
+    "parish-lawrence-ma"
+   ],
+   "events": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "same-entity-shells-collapsed"
+   },
+   "caveat": "Three shells described the same Sacred Heart Lithuanian National Catholic parish at 150 Garden Street. The 2001 building sale and selected 2002 institutional-end reading remain distinct source readings."
   },
   {
    "slug": "john-coaldale-pa",
@@ -9869,7 +9909,9 @@
     "lt": "Toronto Šv. Jono Krikštytojo lietuvių bažnyčia",
     "en": null,
     "variants": [
-     "Toronto Šv. Jono Krikštytojo lietuvių bažnyčia"
+     "Toronto Šv. Jono Krikštytojo lietuvių bažnyčia",
+     "St. John's Parish",
+     "Šv. Jono Krikštytojo parapija"
     ]
    },
    "city": "Toronto",
@@ -9891,6 +9933,16 @@
       1975
      ],
      "importance": 3
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.425, p.427",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "note": "documented by Michelsonas"
     }
    ],
    "geo": {
@@ -9900,18 +9952,29 @@
     "source": "truelithuania"
    },
    "years": {
-    "founded": [],
+    "founded": [
+     {
+      "value": "1902",
+      "source": "michelsonas-1961",
+      "cite": "p.425, p.427"
+     }
+    ],
     "closed": []
    },
    "conflicts": [],
    "related_sites": [],
    "events_refs": [],
    "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
+   "axes_count": 2,
+   "record_depth": "multi-source",
    "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "false-source-join-repaired"
+   }
   },
   {
    "slug": "jonistai-chicago",
@@ -9924,7 +9987,7 @@
    "state": "IL",
    "country": "US",
    "record_type": "congregation",
-   "congregation_class": "non_catholic_christian",
+   "congregation_class": "independent_catholic",
    "in_locked_scope": false,
    "comparator": false,
    "years": {
@@ -9951,7 +10014,13 @@
    "city_history": [
     "Chicago (seminary at 3125 S. Parnell Ave.)"
    ],
-   "diocese": "Archdiocese of Chicago"
+   "diocese": null,
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "source-classification-audited"
+   },
+   "caveat": "An independent quasi-Catholic movement, not a Protestant congregation."
   },
   {
    "slug": "joseph-cambridge-ma",
@@ -10010,12 +10079,18 @@
     "precision": "city-centroid",
     "source": "site-geo-cache"
    },
-   "congregation_class": "roman_catholic",
+   "congregation_class": "independent_catholic",
    "axes_count": 1,
    "record_depth": "single-source",
-   "diocese": "Archdiocese of Boston",
+   "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "source-classification-audited"
+   },
+   "caveat": "The source describes a brief Lithuanian separatist Catholic congregation in 1917."
   },
   {
    "slug": "joseph-custer-mi",
@@ -10464,7 +10539,9 @@
     "variants": [
      "lietuvių šv. Juozapo parapija (Scrantonas)",
      "Šv. Juozapo",
-     "St. Joseph"
+     "St. Joseph",
+     "Scranton Lithuanian parish (unnamed)",
+     "Lithuanian church on Theodore St., Scranton"
     ]
    },
    "city": "Scranton",
@@ -10540,6 +10617,17 @@
      "pages": "8",
      "sourceUrl": "https://www.dioceseofscranton.org/wp-content/uploads/2021/03/Consolidated-Parishes-3-24-21.pdf",
      "cites": "St. Joseph (Lithuanian), closed 2011-06-05"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "34,35,36",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian",
+     "diocese": "unspecified (Irish bishop)"
     }
    ],
    "years": {
@@ -10557,6 +10645,11 @@
       "value": "1893",
       "source": "michelsonas-1961",
       "cite": "131-133"
+     },
+     {
+      "value": "not stated (existed under kun. Kuras until his death in 1937)",
+      "source": "michelsonas-1961",
+      "cite": "34,35,36"
      }
     ],
     "closed": [
@@ -10569,6 +10662,11 @@
      {
       "value": "2009",
       "source": "draugas-2008-2026"
+     },
+     {
+      "value": "n/a - ongoing in 1937 conflict",
+      "source": "michelsonas-1961",
+      "cite": "34,35,36"
      }
     ]
    },
@@ -10607,7 +10705,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed",
    "diocese": "Diocese of Scranton (Bishop O'Hara)",
    "c83_rows": [
@@ -10627,10 +10725,15 @@
     "confidence": "high"
    },
    "adjudication": {
-    "date": "2026-07-27",
-    "cite": "brain:docs/research/elip-2026/adjudications.md",
-    "status": "verified-or-labeled"
-   }
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "same-entity-shells-collapsed"
+   },
+   "aliases": [
+    "holyname-scranton-pa"
+   ],
+   "events": [],
+   "caveat": "The unnamed Theodore Street parish under Fr. Kuras is St. Joseph. The official diocesan closure date, 2011-06-05, remains the selected institutional end."
   },
   {
    "slug": "joseph-south-chicago-il",
@@ -10975,7 +11078,7 @@
    "congregation_class": "roman_catholic",
    "axes_count": 4,
    "record_depth": "case-filed",
-   "diocese": "Diocese of Hartford",
+   "diocese": "Archdiocese of Hartford",
    "c83_rows": [
     32,
     76
@@ -11019,62 +11122,6 @@
    "city_history": []
   },
   {
-   "slug": "lawrence-lawrence-ma",
-   "names": {
-    "lt": null,
-    "en": "Lithuanian National Catholic parish, Lawrence",
-    "variants": [
-     "tautinė parapija, Lawrence, Mass.",
-     "Lithuanian National Catholic parish, Lawrence"
-    ]
-   },
-   "city": "Lawrence",
-   "state": "MA",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "michelsonas-1961",
-     "kind": "secular-history",
-     "tier": 2,
-     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
-     "pages": "132",
-     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
-     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
-     "ethnic_status": "Lithuanian National Catholic",
-     "diocese": "None",
-     "ownership": "national_catholic"
-    }
-   ],
-   "years": {
-    "founded": [
-     {
-      "value": "~1916 (per 1941 25th-anniversary observance)",
-      "source": "michelsonas-1961",
-      "cite": "132"
-     }
-    ],
-    "closed": []
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [],
-   "geo": {
-    "lat": 42.7070354,
-    "lon": -71.1631137,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "national_catholic_pncc",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Archdiocese of Boston",
-   "c83_rows": [],
-   "city_history": []
-  },
-  {
    "slug": "lithuanian-bronx-ny",
    "names": {
     "lt": "",
@@ -11084,7 +11131,7 @@
    "city": "Bronx",
    "state": "NY",
    "country": "US",
-   "record_type": "parish",
+   "record_type": "lead",
    "in_locked_scope": false,
    "c83_row": null,
    "sources": [
@@ -11125,7 +11172,13 @@
    "record_depth": "single-source",
    "diocese": "Archdiocese of New York",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "unresolved-archive-lead"
+   },
+   "caveat": "The archive seed does not yet establish a named institutional identity. It is preserved for research and withheld from public counts."
   },
   {
    "slug": "lithuanian-church-chester-pa",
@@ -11274,7 +11327,7 @@
    "city": "Easton",
    "state": "PA",
    "country": "US",
-   "record_type": "parish",
+   "record_type": "lead",
    "in_locked_scope": false,
    "c83_row": null,
    "sources": [
@@ -11320,11 +11373,17 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
+   "axes_count": 2,
+   "record_depth": "multi-source",
    "diocese": "Diocese of Allentown",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "unresolved-archive-lead"
+   },
+   "caveat": "The archive seed does not yet establish a named institutional identity. It is preserved for research and withheld from public counts."
   },
   {
    "slug": "lithuanian-national-catholic-parish-waterbury-ct",
@@ -11474,16 +11533,14 @@
   {
    "slug": "lithuanian-toronto-on",
    "names": {
-    "lt": "",
-    "en": null,
-    "variants": [
-     "Prisikėlimo parapija"
-    ]
+    "lt": null,
+    "en": "Toronto Lithuanian parish (1929 archive lead)",
+    "variants": []
    },
    "city": "Toronto",
    "state": "ON",
    "country": "CA",
-   "record_type": "parish",
+   "record_type": "lead",
    "in_locked_scope": false,
    "c83_row": null,
    "sources": [
@@ -11494,17 +11551,6 @@
      "first_mention": "",
      "last_mention": "",
      "total_mentions": 0
-    },
-    {
-     "axis": "michelsonas-1961",
-     "kind": "secular-history",
-     "tier": 2,
-     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
-     "pages": "p.427",
-     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
-     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
-     "ethnic_status": "Lithuanian national parish",
-     "diocese": "None"
     }
    ],
    "years": {
@@ -11524,18 +11570,19 @@
      "parish_key": "lithuanian-toronto-on"
     }
    ],
-   "geo": {
-    "lat": 44.3188413,
-    "lon": -80.6480903,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
+   "geo": null,
    "congregation_class": "roman_catholic",
-   "axes_count": 2,
-   "record_depth": "multi-source",
+   "axes_count": 1,
+   "record_depth": "single-source",
    "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "unresolved-archive-lead"
+   },
+   "caveat": "The 1929 archive seed has no indexed mentions and cannot yet be joined to St. John the Baptist or Resurrection. It is withheld from public counts pending source adjudication."
   },
   {
    "slug": "lithuanian-union-pier-mi",
@@ -11547,7 +11594,7 @@
    "city": "Union Pier",
    "state": "MI",
    "country": "US",
-   "record_type": "parish",
+   "record_type": "lead",
    "in_locked_scope": false,
    "c83_row": null,
    "sources": [
@@ -11588,57 +11635,13 @@
    "record_depth": "single-source",
    "diocese": "Diocese of Kalamazoo",
    "c83_rows": [],
-   "city_history": []
-  },
-  {
-   "slug": "louis-maizeville-pa",
-   "names": {
-    "lt": null,
-    "en": "Our Lady of Šiluva (earlier St. Louis)",
-    "variants": [
-     "Our Lady of Šiluva (earlier St. Louis)"
-    ]
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "unresolved-archive-lead"
    },
-   "city": "Maizeville",
-   "state": "PA",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "web-historical",
-     "kind": "web-candidate",
-     "idx": 3,
-     "confidence": "reported",
-     "currentStatus": "closed",
-     "ownership": "diocese_rc"
-    }
-   ],
-   "years": {
-    "founded": [
-     {
-      "value": "1967",
-      "source": "web-historical"
-     }
-    ],
-    "closed": []
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [],
-   "geo": {
-    "lat": 40.7981439,
-    "lon": -76.2221644,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Diocese of Allentown",
-   "c83_rows": [],
-   "city_history": []
+   "caveat": "The archive seed does not yet establish a named institutional identity. It is preserved for research and withheld from public counts."
   },
   {
    "slug": "mary-chicago-il",
@@ -11691,12 +11694,18 @@
     "precision": "city-centroid",
     "source": "site-geo-cache"
    },
-   "congregation_class": "roman_catholic",
+   "congregation_class": "independent_catholic",
    "axes_count": 1,
    "record_depth": "single-source",
-   "diocese": "Archdiocese of Chicago",
+   "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "source-classification-audited"
+   },
+   "caveat": "The source describes an independent Lithuanian separatist Catholic congregation."
   },
   {
    "slug": "mary-custer-mi",
@@ -12032,7 +12041,7 @@
    "congregation_class": "national_catholic_pncc",
    "axes_count": 3,
    "record_depth": "case-filed",
-   "diocese": "Archdiocese of Philadelphia",
+   "diocese": null,
    "c83_rows": [
     80
    ],
@@ -12585,7 +12594,9 @@
     "lt": "Šiluvos Dievo Motinos",
     "en": null,
     "variants": [
-     "Šiluvos Dievo Motinos"
+     "Šiluvos Dievo Motinos",
+     "Our Lady of Šiluva (earlier St. Louis)",
+     "Maizevilio Šiluvos Mergelės lietuvių bažnyčia"
     ]
    },
    "city": "Maizeville",
@@ -12629,6 +12640,29 @@
      "confidence": "verified",
      "sourceUrl": "https://6abc.com/archive/6275844/",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "web-historical",
+     "kind": "web-candidate",
+     "idx": 3,
+     "confidence": "reported",
+     "currentStatus": "closed",
+     "ownership": "diocese_rc"
+    },
+    {
+     "axis": "truelithuania",
+     "kind": "field-survey",
+     "tlId": 454,
+     "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+     "statusFlags": [
+      "closed",
+      "sold",
+      "burned"
+     ],
+     "yearsMentioned": [
+      1967
+     ],
+     "importance": 3
     }
    ],
    "years": {
@@ -12636,6 +12670,10 @@
      {
       "value": "1967",
       "source": "draugas-registry-1909-2007"
+     },
+     {
+      "value": "1967",
+      "source": "web-historical"
      }
     ],
     "closed": [
@@ -12654,19 +12692,30 @@
     }
    ],
    "geo": {
-    "lat": 40.7981439,
-    "lon": -76.2221644,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
+    "lat": 40.797436,
+    "lon": -76.225957,
+    "precision": "exact",
+    "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 1,
+   "axes_count": 3,
    "record_depth": "case-filed",
    "diocese": "Diocese of Allentown",
    "c83_rows": [
     50
    ],
-   "city_history": []
+   "city_history": [],
+   "aliases": [
+    "louis-maizeville-pa",
+    "parish-maizeville-pa"
+   ],
+   "events": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "same-entity-shells-collapsed"
+   },
+   "caveat": "St. Louis was the earlier church of the parish that became Our Lady of Siluva in Maizeville; the 1967 building is not a second parish."
   },
   {
    "slug": "nativity-chicago-il",
@@ -13011,7 +13060,7 @@
    "congregation_class": "national_catholic_pncc",
    "axes_count": 1,
    "record_depth": "single-source",
-   "diocese": "Archdiocese of Baltimore",
+   "diocese": null,
    "c83_rows": [],
    "city_history": []
   },
@@ -13028,7 +13077,7 @@
    "city": "Chicago (proposed site: corner of Union & Twelfth Streets)",
    "state": "IL",
    "country": "US",
-   "record_type": "parish",
+   "record_type": "phase",
    "in_locked_scope": false,
    "c83_row": null,
    "sources": [
@@ -13066,12 +13115,18 @@
     "precision": "city-centroid",
     "source": "site-geo-cache"
    },
-   "congregation_class": "roman_catholic",
+   "congregation_class": "non_catholic_christian",
    "axes_count": 1,
    "record_depth": "single-source",
-   "diocese": "Archdiocese of Chicago",
+   "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "source-classification-audited"
+   },
+   "caveat": "Twelve Apostles was a proposed non-Catholic, non-denominational movement; no durable parish is established."
   },
   {
    "slug": "parish-chicago-il-2",
@@ -13080,7 +13135,8 @@
     "en": "Independent (National) parish, Town of Lake, Chicago",
     "variants": [
      "nepriklausoma parapija, Town of Lake (Chicago priemiestis)",
-     "Independent (National) parish, Town of Lake, Chicago"
+     "Independent (National) parish, Town of Lake, Chicago",
+     "St. Peter Parish, Town of Lake"
     ]
    },
    "city": "Chicago (Town of Lake)",
@@ -13101,6 +13157,20 @@
      "ethnic_status": "Lithuanian National Catholic",
      "diocese": "None",
      "ownership": "national_catholic"
+    },
+    {
+     "axis": "wolkovich",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Wolkovich, Lithuanian Religious Life in America, Vol. 3 (1998)",
+     "pages": "p.223",
+     "lccn": "91-76766",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "ethnic_status": "Lithuanian separatist Catholic congregation",
+     "school": "",
+     "convent": "",
+     "cemetery": "",
+     "diocese": "independent/separatist"
     }
    ],
    "years": {
@@ -13116,6 +13186,11 @@
       "value": "~1915",
       "source": "michelsonas-1961",
       "cite": "130"
+     },
+     {
+      "value": "1919",
+      "source": "wolkovich",
+      "cite": "Vol. 3 p.223"
      }
     ]
    },
@@ -13129,11 +13204,17 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "national_catholic_pncc",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Archdiocese of Chicago",
+   "axes_count": 2,
+   "record_depth": "multi-source",
+   "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "false-source-join-repaired"
+   },
+   "caveat": "Michelsonas and Wolkovich evidence now meet on this independent Town of Lake parish. No Roman Catholic diocesan affiliation is asserted."
   },
   {
    "slug": "parish-chicago-il-3",
@@ -13148,7 +13229,7 @@
    "city": "Chicago",
    "state": "IL",
    "country": "US",
-   "record_type": "parish",
+   "record_type": "lead",
    "in_locked_scope": false,
    "c83_row": null,
    "sources": [
@@ -13182,7 +13263,13 @@
    "record_depth": "single-source",
    "diocese": "Archdiocese of Chicago",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "source-classification-audited"
+   },
+   "caveat": "The generic Fr. Steponavicius reference cannot yet be joined safely to a named Chicago parish."
   },
   {
    "slug": "parish-collinsville-il",
@@ -13305,7 +13392,7 @@
    "city": "Grand Prairie",
    "state": "AR",
    "country": "US",
-   "record_type": "parish",
+   "record_type": "misija",
    "in_locked_scope": false,
    "c83_row": null,
    "sources": [
@@ -13375,7 +13462,13 @@
    "record_depth": "single-source",
    "diocese": "Diocese of Little Rock",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "source-classification-audited"
+   },
+   "caveat": "The source describes a settler colony with a small chapel for a Lithuanian congregation, properly counted as a mission rather than a parish."
   },
   {
    "slug": "parish-kearny-nj",
@@ -13614,106 +13707,6 @@
    ]
   },
   {
-   "slug": "parish-lawrence-ma",
-   "names": {
-    "lt": "Lorenso Lietuvių tautinių katalikų bažnyčia",
-    "en": null,
-    "variants": [
-     "Lorenso Lietuvių tautinių katalikų bažnyčia"
-    ]
-   },
-   "city": "Lawrence",
-   "state": "MA",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "truelithuania",
-     "kind": "field-survey",
-     "tlId": 289,
-     "sourceUrl": "http://global.truelithuania.com/lt/lawrence-and-lowell-massachusetts-1682/",
-     "statusFlags": [],
-     "yearsMentioned": [
-      2001
-     ],
-     "importance": 3
-    }
-   ],
-   "geo": {
-    "lat": 42.70895,
-    "lon": -71.155853,
-    "precision": "exact",
-    "source": "truelithuania"
-   },
-   "years": {
-    "founded": [],
-    "closed": []
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [],
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Archdiocese of Boston",
-   "c83_rows": [],
-   "city_history": []
-  },
-  {
-   "slug": "parish-maizeville-pa",
-   "names": {
-    "lt": "Maizevilio Šiluvos Mergelės lietuvių bažnyčia",
-    "en": null,
-    "variants": [
-     "Maizevilio Šiluvos Mergelės lietuvių bažnyčia"
-    ]
-   },
-   "city": "Maizeville",
-   "state": "PA",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "truelithuania",
-     "kind": "field-survey",
-     "tlId": 454,
-     "sourceUrl": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
-     "statusFlags": [
-      "closed",
-      "sold",
-      "burned"
-     ],
-     "yearsMentioned": [
-      1967
-     ],
-     "importance": 3
-    }
-   ],
-   "geo": {
-    "lat": 40.797436,
-    "lon": -76.225957,
-    "precision": "exact",
-    "source": "truelithuania"
-   },
-   "years": {
-    "founded": [],
-    "closed": []
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [],
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Diocese of Allentown",
-   "c83_rows": [],
-   "city_history": []
-  },
-  {
    "slug": "parish-melrose-park-il",
    "names": {
     "lt": null,
@@ -13778,7 +13771,7 @@
    "city": "Mt. Pleasant",
    "state": "PA",
    "country": "US",
-   "record_type": "parish",
+   "record_type": "context",
    "in_locked_scope": false,
    "c83_row": null,
    "sources": [
@@ -13824,7 +13817,13 @@
    "record_depth": "single-source",
    "diocese": "Diocese of Greensburg",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "source-classification-audited"
+   },
+   "caveat": "The source describes a Polish parish served by a Lithuanian priest, not a Lithuanian parish."
   },
   {
    "slug": "parish-oglesby-il",
@@ -13916,55 +13915,6 @@
    "city_history": []
   },
   {
-   "slug": "parish-pittsburgh-pa",
-   "names": {
-    "lt": null,
-    "en": "Ascension Parish",
-    "variants": [
-     "Dangun Isengimo parapija",
-     "Ascension Parish"
-    ]
-   },
-   "city": "Pittsburgh",
-   "state": "PA",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "michelsonas-1961",
-     "kind": "secular-history",
-     "tier": 2,
-     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
-     "pages": "p.341-342",
-     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
-     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
-     "ethnic_status": "Lithuanian national parish",
-     "diocese": "None"
-    }
-   ],
-   "years": {
-    "founded": [],
-    "closed": []
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [],
-   "geo": {
-    "lat": 40.4406968,
-    "lon": -80.0025666,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Diocese of Pittsburgh",
-   "c83_rows": [],
-   "city_history": []
-  },
-  {
    "slug": "parish-scottville-mi",
    "names": {
     "lt": null,
@@ -13977,7 +13927,7 @@
    "city": "Scottville",
    "state": "MI",
    "country": "US",
-   "record_type": "parish",
+   "record_type": "lead",
    "in_locked_scope": false,
    "c83_row": null,
    "sources": [
@@ -14014,65 +13964,13 @@
    "record_depth": "single-source",
    "diocese": "Diocese of Grand Rapids",
    "c83_rows": [],
-   "city_history": []
-  },
-  {
-   "slug": "parish-scranton-pa",
-   "names": {
-    "lt": null,
-    "en": "Lithuanian National Catholic Church",
-    "variants": [
-     "Lithuanian National Catholic Church (LNCC)",
-     "Lithuanian National Catholic Church"
-    ]
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "source-classification-audited"
    },
-   "city": "Scranton (founding location)",
-   "state": "PA",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "wolkovich",
-     "kind": "scholar-compendium",
-     "tier": 2,
-     "work": "Wolkovich, Lithuanian Religious Life in America, Vol. 3 (1998)",
-     "pages": "p.226",
-     "lccn": "91-76766",
-     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
-     "ethnic_status": "Lithuanian National (separatist) Catholic Church, independent of Rome",
-     "school": "",
-     "convent": "",
-     "cemetery": "",
-     "diocese": "affiliated for a time with the Polish National Catholic Church; later linked to Old Roman Catholic Church (Abp. Carmel Henry Carfora)"
-    }
-   ],
-   "years": {
-    "founded": [
-     {
-      "value": "1914",
-      "source": "wolkovich",
-      "cite": "Vol.3 p.226"
-     }
-    ],
-    "closed": []
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [],
-   "geo": {
-    "lat": 41.4086874,
-    "lon": -75.6621294,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Diocese of Scranton",
-   "c83_rows": [],
-   "city_history": []
+   "caveat": "The source offers only a Lithuanian-presence lead through a pastor and a separate Bass Lake mission; a Scottville Lithuanian parish is not established."
   },
   {
    "slug": "parish-wasaga-beach-on",
@@ -14122,55 +14020,6 @@
    "axes_count": 1,
    "record_depth": "single-source",
    "diocese": null,
-   "c83_rows": [],
-   "city_history": []
-  },
-  {
-   "slug": "parish-worcester-ma-2",
-   "names": {
-    "lt": null,
-    "en": "RC parish, Worcester (Fr. Bukaveckas)",
-    "variants": [
-     "lietuvių parapija, Worcester, Mass. (kun. Bukaveckas)",
-     "RC parish, Worcester (Fr. Bukaveckas)"
-    ]
-   },
-   "city": "Worcester",
-   "state": "MA",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "michelsonas-1961",
-     "kind": "secular-history",
-     "tier": 2,
-     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
-     "pages": "128",
-     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
-     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
-     "ethnic_status": "Roman Catholic",
-     "diocese": "None"
-    }
-   ],
-   "years": {
-    "founded": [],
-    "closed": []
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [],
-   "geo": {
-    "lat": 42.2625621,
-    "lon": -71.8018877,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Diocese of Worcester",
    "c83_rows": [],
    "city_history": []
   },
@@ -14762,7 +14611,7 @@
     "Naugatuko Šv. Pauliaus lietuvių liuteronų bažnyčia"
    ],
    "city_history": [],
-   "diocese": "Archdiocese of Hartford",
+   "diocese": null,
    "c83_rows": []
   },
   {
@@ -15386,7 +15235,7 @@
    "city_history": [
     "New York City"
    ],
-   "diocese": "Archdiocese of New York"
+   "diocese": null
   },
   {
    "slug": "providence-chicago-il",
@@ -15727,7 +15576,9 @@
      "Divine Providence Parish, Scranton",
      "tautinė (Romai nepriklausoma) parapija, Scrantonas",
      "Dievo Apvaizdos",
-     "Providence of God (National Catholic)"
+     "Providence of God (National Catholic)",
+     "Lithuanian National Catholic Church",
+     "Lithuanian National Catholic Church (LNCC)"
     ]
    },
    "city": "Scranton",
@@ -15809,6 +15660,20 @@
       1930
      ],
      "importance": 2
+    },
+    {
+     "axis": "wolkovich",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Wolkovich, Lithuanian Religious Life in America, Vol. 3 (1998)",
+     "pages": "p.226",
+     "lccn": "91-76766",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "ethnic_status": "Lithuanian National (separatist) Catholic Church, independent of Rome",
+     "school": "",
+     "convent": "",
+     "cemetery": "",
+     "diocese": "affiliated for a time with the Polish National Catholic Church; later linked to Old Roman Catholic Church (Abp. Carmel Henry Carfora)"
     }
    ],
    "years": {
@@ -15820,6 +15685,11 @@
      {
       "value": "1914",
       "source": "web-historical"
+     },
+     {
+      "value": "1914",
+      "source": "wolkovich",
+      "cite": "Vol.3 p.226"
      }
     ],
     "closed": []
@@ -15855,11 +15725,21 @@
    "congregation_class": "national_catholic_pncc",
    "axes_count": 5,
    "record_depth": "case-filed",
-   "diocese": "Diocese of Scranton",
+   "diocese": null,
    "c83_rows": [
     78
    ],
-   "city_history": []
+   "city_history": [],
+   "aliases": [
+    "parish-scranton-pa"
+   ],
+   "events": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "same-entity-shells-collapsed"
+   },
+   "caveat": "The generic Lithuanian National Catholic Church shell is Providence of God, the surviving Scranton LNCC/PNCC-line congregation."
   },
   {
    "slug": "providence-southfield-mi",
@@ -16008,14 +15888,12 @@
    "names": {
     "lt": "",
     "en": "Raymond Baptist Church",
-    "variants": [
-     "St. John's Parish (St. John the Baptist, per abbreviation 'Kr.')"
-    ]
+    "variants": []
    },
    "city": "Chicago",
    "state": "IL",
    "country": "US",
-   "record_type": "congregation",
+   "record_type": "context",
    "congregation_class": "non_catholic_christian",
    "in_locked_scope": false,
    "comparator": false,
@@ -16032,30 +15910,25 @@
      "pages": "p.237",
      "lccn": "91-76766",
      "note": "documented by Wolkovich; outside Catholic-parish registry scope"
-    },
-    {
-     "axis": "michelsonas-1961",
-     "kind": "secular-history",
-     "tier": 2,
-     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
-     "pages": "p.425, p.427",
-     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
-     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
-     "note": "documented by Michelsonas"
     }
    ],
    "conflicts": [],
-   "record_depth": "multi-source",
-   "axes_count": 2,
+   "record_depth": "single-source",
+   "axes_count": 1,
    "name_variants": [
     "Raymond Baptist Church",
     "St. John's Parish (St. John the Baptist, per abbreviation 'Kr.')"
    ],
    "city_history": [
-    "Chicago",
-    "Toronto"
+    "Chicago"
    ],
-   "diocese": "Archdiocese of Chicago"
+   "diocese": null,
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "context-record-separated"
+   },
+   "caveat": "Wolkovich describes an American Baptist congregation joined by a Lithuanian minister, not a distinct Lithuanian ethnic congregation. It remains as context and is excluded from public parish counts."
   },
   {
    "slug": "sacred-heart-new-philadelphia-pa",
@@ -16143,7 +16016,7 @@
    "state": "IL",
    "country": "US",
    "record_type": "congregation",
-   "congregation_class": "non_catholic_christian",
+   "congregation_class": "independent_catholic",
    "in_locked_scope": false,
    "comparator": false,
    "years": {
@@ -16170,7 +16043,13 @@
    "city_history": [
     "Springfield"
    ],
-   "diocese": "Diocese of Springfield in Illinois"
+   "diocese": null,
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "source-classification-audited"
+   },
+   "caveat": "A Lithuanian separatist Catholic congregation, not a Protestant congregation."
   },
   {
    "slug": "ss-peter-and-paul-chicago-il",
@@ -16179,7 +16058,6 @@
     "en": "Ss. Peter and Paul",
     "variants": [
      "STS. PETER & PAUL (WEST PULLMAN)",
-     "St. Peter Parish, Town of Lake",
      "Šv. Petro ir Povilo",
      "Ss. Peter and Paul"
     ]
@@ -16222,20 +16100,6 @@
      "diocese": "Archdiocese of Chicago"
     },
     {
-     "axis": "wolkovich",
-     "kind": "scholar-compendium",
-     "tier": 2,
-     "work": "Wolkovich, Lithuanian Religious Life in America, Vol. 3 (1998)",
-     "pages": "p.223",
-     "lccn": "91-76766",
-     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
-     "ethnic_status": "Lithuanian separatist Catholic congregation",
-     "school": "",
-     "convent": "",
-     "cemetery": "",
-     "diocese": "independent/separatist"
-    },
-    {
      "axis": "truelithuania",
      "kind": "field-survey",
      "tlId": 6477,
@@ -16276,11 +16140,6 @@
       "value": "1973-02-23",
       "source": "wolkovich",
       "cite": "Vol.3 p.147, p.148"
-     },
-     {
-      "value": "1919",
-      "source": "wolkovich",
-      "cite": "Vol.3 p.223"
      }
     ]
    },
@@ -16315,11 +16174,6 @@
        "value": "1973-02-23",
        "source": "wolkovich",
        "cite": "Vol.3 p.147, p.148"
-      },
-      {
-       "value": "1919",
-       "source": "wolkovich",
-       "cite": "Vol.3 p.223"
       }
      ]
     }
@@ -16340,10 +16194,15 @@
    "congregation_class": "roman_catholic",
    "axes_count": 4,
    "record_depth": "multi-source",
-   "caveat": "Closed year 2022 removed — derived from TrueLithuania yearsMentioned, not documented. Other closure entries retained.",
+   "caveat": "The independent Town of Lake St. Peter evidence has been removed; this row is only the Roman Catholic Ss. Peter and Paul parish in West Pullman.",
    "diocese": "Archdiocese of Chicago",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "false-source-join-repaired"
+   }
   },
   {
    "slug": "ss-peter-and-paul-hazleton-pa",
@@ -18826,7 +18685,6 @@
     "lt": "Šv. Pranciškaus",
     "en": "St. Francis",
     "variants": [
-     "nepriklausoma (tautinė) parapija, Athol, Mass.",
      "Šv. Pranciškaus",
      "St. Francis"
     ]
@@ -18853,18 +18711,6 @@
      "confidence": "high",
      "currentStatus": "standing",
      "ownership": "diocese_rc"
-    },
-    {
-     "axis": "michelsonas-1961",
-     "kind": "secular-history",
-     "tier": 2,
-     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
-     "pages": "130",
-     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
-     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
-     "ethnic_status": "Lithuanian National Catholic (attempted, failed)",
-     "diocese": "None",
-     "ownership": "national_catholic"
     },
     {
      "axis": "truelithuania",
@@ -18930,11 +18776,17 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 3,
    "record_depth": "multi-source",
    "diocese": "Diocese of Worcester",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "false-source-join-repaired"
+   },
+   "caveat": "The failed independent/National Catholic attempt is tracked separately from the Roman Catholic St. Francis parish."
   },
   {
    "slug": "st-francis-minersville-pa",
@@ -21525,13 +21377,69 @@
    "city_history": [
     "Chicago (Bridgeport, later Oak Lawn from 1974)"
    ],
-   "diocese": "Archdiocese of Chicago",
+   "diocese": null,
    "c83_rows": []
+  },
+  {
+   "slug": "national-catholic-attempt-athol-ma",
+   "names": {
+    "lt": "Bandymas steigti tautinę katalikų parapiją",
+    "en": "Attempted Lithuanian National Catholic parish",
+    "variants": [
+     "nepriklausoma (tautinė) parapija, Athol, Mass."
+    ]
+   },
+   "city": "Athol",
+   "state": "MA",
+   "country": "US",
+   "record_type": "phase",
+   "in_locked_scope": false,
+   "c83_row": null,
+   "c83_rows": [],
+   "sources": [
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "130",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian National Catholic (attempted, failed)",
+     "diocese": "None",
+     "ownership": "national_catholic"
+    }
+   ],
+   "years": {
+    "founded": [],
+    "closed": []
+   },
+   "conflicts": [],
+   "related_sites": [],
+   "events_refs": [],
+   "geo": {
+    "lat": 42.592998,
+    "lon": -72.237185,
+    "precision": "exact",
+    "source": "truelithuania"
+   },
+   "congregation_class": "independent_catholic",
+   "diocese": null,
+   "comparator": false,
+   "city_history": [],
+   "caveat": "Michelsonas records an attempted independent/National Catholic parish that failed. It is historical movement evidence, not an additional durable Athol parish.",
+   "adjudication": {
+    "date": "2026-07-29",
+    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
+    "status": "historical-attempt-separated"
+   },
+   "axes_count": 1,
+   "record_depth": "single-source"
   }
  ],
  "registryRevision": {
-  "version": 5,
-  "date": "2026-07-28",
+  "version": 6,
+  "date": "2026-07-29",
   "changelog": [
    "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
    "Collapsed adjudicated same-entity rows while preserving all 83 historical case-file row references in c83_rows.",
@@ -21545,8 +21453,13 @@
    "Moved the unresolved unnamed 1902 Waterbury lead out of the public canonical registry and into a lossless research hold; public St. Joseph campaign identity and historical All Saints identity remain separate and unchanged.",
    "Added machine-enforced identity locks for every public campaign parish so research cannot silently rename, merge, redirect, relocate, or reclassify the institution carrying a campaign.",
    "Release-audited all 82 canonical U.S. C83 identities and repaired four source-to-registry joins: Ansonia St. Anthony, Newark Holy Trinity, Collinsville Jerusalem Lutheran, and Kansas City St. Casimir in Kansas.",
-   "Collapsed five duplicate registry shells while preserving every source, conflict, locked source block, and retired slug as lineage or redirect aliases. The frozen C83 source rows and headline figures remain unchanged."
+   "Collapsed five duplicate registry shells while preserving every source, conflict, locked source block, and retired slug as lineage or redirect aliases. The frozen C83 source rows and headline figures remain unchanged.",
+   "Collapsed nine confirmed duplicate source shells into six named institutions, preserving every source and retired slug as lineage and redirect aliases.",
+   "Repaired four cross-entity source joins: Town of Lake versus West Pullman, the Athol National Catholic attempt versus St. Francis, Toronto St. John versus Raymond Baptist, and Toronto Resurrection versus an unresolved archive lead.",
+   "Separated public parishes, missions, and congregations from historical phases, unresolved leads, and contextual mentions so every site count and map uses the same institutional scope.",
+   "Cleared Roman Catholic geographic dioceses from all non-Roman records and corrected source-defined independent, National Catholic, Protestant, mission, lead, and context classifications.",
+   "Normalized Waterbury St. Joseph to the current Archdiocese of Hartford governance label so By Diocese cannot split one jurisdiction into two buckets."
   ],
-  "contentHash": "12fb783ff0e1803e205eaa2d436045774976710e314cc5aba9dfa7148ea51720"
+  "contentHash": "ab79315394335bf854017bb93a3ca968e5d4eed70090868d7a5e4d15614db0b5"
  }
 }

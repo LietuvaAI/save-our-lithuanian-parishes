@@ -237,6 +237,8 @@ const expectedCounts = {
   congregations: registry.filter(
     (record) => record.record_type === "congregation",
   ).length,
+  leads: registry.filter((record) => record.record_type === "lead").length,
+  context: registry.filter((record) => record.record_type === "context").length,
   case_filed: registry
     .filter((record) => record.country === "US")
     .flatMap((record) => record.c83_rows ?? [])

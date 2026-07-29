@@ -44,10 +44,10 @@ const NATIONAL_ENTRIES = (registry.parishes as Rec[])
     return ya - yb;
   });
 const DURABLE_ENTRIES = NATIONAL_ENTRIES.filter(
-  (parish) => parish.record_type !== "phase",
+  (parish) => parish.record_type === "parish",
 );
-const PHASE_ENTRIES = NATIONAL_ENTRIES.filter(
-  (parish) => parish.record_type === "phase",
+const SUPPORTING_ENTRIES = NATIONAL_ENTRIES.filter(
+  (parish) => parish.record_type !== "parish",
 );
 
 function yearDisplay(variants?: YearVariant[]): string | null {
@@ -116,10 +116,10 @@ export default function NationalCatholicPage() {
         {standingCount > 0 && (
           <>
             {standingCount === 1
-              ? "One congregation is still standing"
-              : `${standingCount} congregations are still standing`}{" "}
-            — the others closed, were demolished, or still need present-status
-            verification.{" "}
+              ? "One church building is documented as standing"
+              : `${standingCount} church buildings are documented as standing`}
+            ; the other records document closures, demolitions, repurposing, or
+            a present physical status that still needs verification.{" "}
           </>
         )}
         These are documented here as historical record. They are part of the
@@ -237,40 +237,48 @@ export default function NationalCatholicPage() {
         </div>
       </section>
 
-      {PHASE_ENTRIES.length > 0 && (
+      {SUPPORTING_ENTRIES.length > 0 && (
         <section className="mt-10 border-t border-rule pt-8">
           <h2 className="font-serif text-2xl font-semibold">
-            Historical phase evidence
+            Historical movement and phase evidence
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-muted">
-            These records document a real independent or national phase, but
-            the evidence does not yet establish a durable standalone parish.
-            They remain visible and sourced without being included in the
-            parish count above.
+            These records document a real independent or national
+            congregation, attempt, or phase, but the evidence does not
+            establish a durable standalone parish. They remain visible and
+            sourced without being included in the parish count above.
           </p>
           <div className="mt-4 divide-y divide-rule border-y border-rule">
-            {PHASE_ENTRIES.map((parish) => (
-              <article key={parish.slug} className="py-4">
-                <Link
-                  href={
-                    canonicalProfileHrefForRegistrySlug(parish.slug) ??
-                    `/parishes/${parish.slug}`
-                  }
-                  className="font-serif text-base font-semibold hover:underline"
-                >
-                  {parish.names.lt || parish.names.en || parish.slug}
-                </Link>
-                <p className="mt-1 text-sm text-muted">
-                  {parish.city}, {parish.state} · historical phase, not counted
-                  as a durable parish
-                </p>
-                {parish.caveat && (
-                  <p className="mt-2 text-sm leading-relaxed text-muted">
-                    {parish.caveat}
+            {SUPPORTING_ENTRIES.map((parish) => {
+              const evidenceKind =
+                parish.record_type === "congregation"
+                  ? "historical congregation"
+                  : parish.record_type === "lead"
+                    ? "research lead"
+                    : "historical phase";
+              return (
+                <article key={parish.slug} className="py-4">
+                  <Link
+                    href={
+                      canonicalProfileHrefForRegistrySlug(parish.slug) ??
+                      `/parishes/${parish.slug}`
+                    }
+                    className="font-serif text-base font-semibold hover:underline"
+                  >
+                    {parish.names.lt || parish.names.en || parish.slug}
+                  </Link>
+                  <p className="mt-1 text-sm text-muted">
+                    {parish.city}, {parish.state} · {evidenceKind}, not counted
+                    as a durable parish
                   </p>
-                )}
-              </article>
-            ))}
+                  {parish.caveat && (
+                    <p className="mt-2 text-sm leading-relaxed text-muted">
+                      {parish.caveat}
+                    </p>
+                  )}
+                </article>
+              );
+            })}
           </div>
         </section>
       )}

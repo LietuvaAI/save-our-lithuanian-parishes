@@ -87,11 +87,14 @@ function closedYearOf(record) {
   return yearOf(record.years?.closed, { closing: true });
 }
 
-// Registry entries whose own sources say "no parish" are settlements or
-// civic/memorial associations — documented, but not parishes; keep them
-// off the parish map and out of parish counts.
-function isRealParish(rec) {
-  return !(rec.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? ""));
+// Only institutional records belong on the public map. Historical phases,
+// unresolved leads, context references, and "no parish" settlements remain
+// in the research registry without becoming public parish dots.
+function isPublicRecord(rec) {
+  return (
+    ["parish", "misija", "congregation"].includes(rec.record_type) &&
+    !(rec.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? ""))
+  );
 }
 
 function lonLatOf(rec) {
@@ -110,9 +113,9 @@ let skippedNoGeo = 0;
 // additions (rows 78-83) — render from parishes.json/map.json; plotting
 // them here too double-counted five parishes (homepage "All" said 204
 // while The Record said 199 — caught by Vilija 2026-07-27).
-// Exclude: Argentina mis-codes, "no parish" civic associations.
+// Exclude: Argentina mis-codes and non-public research records.
 const toPlot = registry.parishes.filter(
-  (r) => r.c83_row == null && isRealParish(r) && isNorthAmerica(r)
+  (r) => r.c83_row == null && isPublicRecord(r) && isNorthAmerica(r)
 );
 
 for (const r of toPlot) {
@@ -208,7 +211,7 @@ writeFileSync(
   OUT_PATH,
   JSON.stringify({
     corpusScope: "parish-registry-unified",
-    note: "Research-record layer: all registry entries not in the case-filed core (US + Canada), including all non_catholic_christian congregations. Presentation-layer only; no figures derive from this file.",
+    note: "Public institutional layer beyond the case-filed core: parishes, missions, and congregations in the U.S. and Canada. Historical phases, unresolved leads, and context records remain in the research registry but are not mapped.",
     counts: {
       plotted: out.length,
       parishes: out.filter((p) => p.kind === "parish").length,
