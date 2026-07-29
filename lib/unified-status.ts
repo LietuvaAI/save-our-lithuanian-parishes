@@ -68,9 +68,9 @@ export type AlertStatus =
 
 export const ALERT_LABEL: Record<AlertStatus, string> = {
   active_campaign: "Active campaign",
-  watched: "Being watched",
+  watched: "Development to monitor",
   building_at_risk: "Building at risk",
-  sustainability: "Sustainability watch",
+  sustainability: "Parish sustainability",
   none: "",
 };
 

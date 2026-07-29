@@ -43,7 +43,11 @@ const NAV: NavItem[] = [
     menuAlign: "right",
     children: [
       { href: "/by-diocese", label: "By Diocese" },
-      { href: "/sustainability-watch", label: "Sustainability Watch" },
+      {
+        href: "/lithuanian-catholic-life-today",
+        label: "Lithuanian Catholic Life Today",
+      },
+      { href: "/sustainability-watch", label: "Parish Sustainability" },
       { href: "/under-threat", label: "Parishes Under Threat" },
       {
         href: "/pennsylvania-coal-region",

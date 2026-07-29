@@ -18,9 +18,9 @@ import {
 } from "@/lib/watch-labels";
 
 export const metadata: Metadata = {
-  title: "Sustainability Watch",
+  title: "Parish Sustainability",
   description:
-    "Lithuanian parishes that survived but face slow-burn erosion: clergy shortages, financial strain, ethnic transition, post-merger fragility. The threat is not a letter from the bishop. It is erosion.",
+    "Current evidence about clergy, Lithuanian Mass, governance, and financial conditions at living Lithuanian parishes and missions.",
 };
 
 type SustainabilityEntry = {
@@ -134,7 +134,7 @@ function AllParishesTable() {
         standing, including active Lithuanian parishes, places where Lithuanian
         Mass continues, and churches now serving another community. The status
         pill distinguishes those outcomes; the remaining columns show clergy,
-        Lithuanian Mass frequency, and watch status. Parishes under active
+        Lithuanian Mass frequency, and sustainability-profile coverage. Parishes under active
         diocesan pressure appear on the{" "}
         <Link href="/under-threat" className="underline hover:text-foreground">
           under-threat page
@@ -200,25 +200,23 @@ export default function SustainabilityWatchPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
       <p className="text-xs uppercase tracking-widest text-muted">
-        Standing today
+        Strength and strain
       </p>
       <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
-        Sustainability Watch
+        Parish Sustainability
       </h1>
       <p className="mt-3 text-muted leading-relaxed">
-        Not every parish under pressure faces a closure decree. These parishes
-        survived — or were never directly threatened — but face the slower
-        challenges that decide whether Lithuanian liturgical life continues:
-        clergy shortages, financial strain, ethnic transition, post-merger
-        fragility. The threat is not a letter from the bishop. It is erosion.
+        A living parish can be active and still face the slower challenges that
+        decide whether Lithuanian liturgical life continues: clergy shortages,
+        financial strain, ethnic transition, and post-merger fragility.
       </p>
       <p className="mt-2 text-sm text-muted leading-relaxed">
-        Each entry documents the clergy situation, the Lithuanian Mass schedule,
-        the governance structure, and what threats the parish has already
-        survived — all sourced. Parishes facing active diocesan action are
-        on the{" "}
+        Each sourced profile documents clergy, the Lithuanian Mass schedule,
+        governance, finances when available, and what the community has already
+        survived. Parishes facing an active closure or restructuring action are
+        listed separately on the{" "}
         <Link href="/under-threat" className="underline hover:text-foreground">
-          parishes under threat
+          Parishes Under Threat
         </Link>{" "}
         page.
       </p>
