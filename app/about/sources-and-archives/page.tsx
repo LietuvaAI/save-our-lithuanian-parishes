@@ -291,7 +291,7 @@ export default function SourcesAndArchivesPage() {
             title="Lithuanian Bishops’ Conference diaspora pastoral-care directory"
             href="https://sielovada.org/siaures-amerika/"
             role="The canonical baseline for the current Lithuanian Catholic pastoral network in the United States: parishes, missions, hosted communities, clergy, and liturgical notices."
-            limits="Every U.S. listing is preserved in the Catholic Life Today crosswalk. The directory establishes membership in the Lithuanian pastoral network; parish and diocesan records remain authoritative for juridic status, governance, and formal closure."
+            limits="Every U.S. listing is preserved in the Lithuanian Catholic Life Today crosswalk. The directory establishes membership in the Lithuanian pastoral network; parish and diocesan records remain authoritative for juridic status, governance, and formal closure."
           />
           <SourceRow
             title="USCCB Catholic organizations directory"
