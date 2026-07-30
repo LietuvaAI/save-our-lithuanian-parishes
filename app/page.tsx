@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ParishMap from "@/components/ParishMap";
 import NationalRecordGraphic from "@/components/NationalRecordGraphic";
+import ChurchProcession from "@/components/ChurchProcession";
 import alertsData from "@/data/alerts.json";
 import networkData from "@/data/sielovada-us-network.json";
 import registryData from "@/data/registry-unified.json";
@@ -103,18 +104,18 @@ export default function Home() {
   return (
     <div className="mx-auto max-w-5xl px-4">
       <section className="pt-5 text-center sm:pt-6">
-        <p className="mb-1.5 text-xs uppercase tracking-widest text-muted">
-          Every parish, from the very beginning
-        </p>
         <h1 className="mx-auto max-w-3xl font-serif text-2xl font-semibold leading-tight sm:text-3xl">
           The public record of America&rsquo;s Lithuanian parishes
         </h1>
-        <p className="mx-auto mt-2.5 max-w-3xl text-sm leading-relaxed text-muted sm:text-[15px]">
-          The past is a torch to the present.
+        <p className="mx-auto mt-2.5 max-w-4xl text-sm leading-relaxed text-muted sm:text-[15px]">
+          This project traces the complete history of America&rsquo;s
+          Lithuanian parishes&mdash;from their earliest foundations to the
+          communities discerning their future today.
         </p>
+        <ChurchProcession />
       </section>
 
-      <section className="mt-5 sm:mt-6">
+      <section className="mt-4 sm:mt-5">
         <ParishMap />
       </section>
 
