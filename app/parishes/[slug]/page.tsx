@@ -15,6 +15,7 @@ import {
   ParishRecordReadings,
   RECORD_TYPE_LABEL,
   isCommunityRecord,
+  parishHistoryLead,
 } from "@/components/ParishResearchRecord";
 import { ProfileSourceLedger } from "@/components/ProfileSourceLedger";
 import { splitStory } from "@/lib/dek";
@@ -194,6 +195,20 @@ function profileName(profile: CanonicalParishProfile) {
   );
 }
 
+function historyLeadSentence(sourceLead: string | null) {
+  if (!sourceLead || /^documented by\b/i.test(sourceLead)) return "";
+  const fact = sourceLead.trim().replace(/[.\s]+$/, "");
+  if (/^founded\b/i.test(fact)) {
+    return `It was ${fact
+      .replace(/^founded\b/i, "founded")
+      .replace(/^founded as Lithuanian\b/i, "founded as a Lithuanian")}.`;
+  }
+  if (/^(?:new\b|st[.]|šv[.]|the\b|a\b|an\b|this\b|its\b|in\b|by\b|after\b)/i.test(fact)) {
+    return `${fact}.`;
+  }
+  return `The published history identifies it as ${fact.charAt(0).toLowerCase()}${fact.slice(1)}.`;
+}
+
 function profileStory({
   situationText,
   endState,
@@ -205,6 +220,7 @@ function profileStory({
   state,
   institution,
   currentUse,
+  sourceLead,
 }: {
   situationText: string | null;
   endState: EndState;
@@ -216,6 +232,7 @@ function profileStory({
   state: string | null;
   institution: string;
   currentUse: string | null;
+  sourceLead: string | null;
 }) {
   const internalStatusCopy =
     /documented in (?:the )?(?:draugas )?registry|documented in draugas|minimal (?:research details|documentation)|needs (?:clarification|verification)|status not yet (?:researched|verified)|present status not yet researched|single source only|unnamed\/duplicate parish entry/i;
@@ -236,6 +253,8 @@ function profileStory({
   const institutionCopy =
     institution === "Parish record" ? "parish record" : institution;
   const intro = `${name} ${historical ? "was" : "is"} ${community ? "a Lithuanian worshipping community" : `a ${institutionCopy}`} in ${location}${founded ? `, founded in ${founded}` : ""}.`;
+  const sourceLeadSentence = historyLeadSentence(sourceLead);
+  const opening = [intro, sourceLeadSentence].filter(Boolean).join(" ");
   const knownCurrentUse =
     currentUse && !/^(unknown|not established)$/i.test(currentUse)
       ? currentUse.replace(/\.$/, "")
@@ -243,7 +262,7 @@ function profileStory({
 
   if (community) {
     return splitStory(
-      `${intro} The surviving evidence does not establish a distinct Lithuanian national parish.`,
+      `${opening} The surviving evidence does not establish a distinct Lithuanian national parish.`,
     );
   }
   if (closed && isLoss(endState)) {
@@ -256,42 +275,42 @@ function profileStory({
             ? ` Today, ${knownCurrentUse}.`
             : "";
     return splitStory(
-      `${intro} The parish closed in ${closed}.${outcome}`,
+      `${opening} The parish closed in ${closed}.${outcome}`,
     );
   }
   if (endState === "demolished") {
     return splitStory(
-      `${intro} The parish closed and the church building was demolished.`,
+      `${opening} The parish closed and the church building was demolished.`,
     );
   }
   if (endState === "repurposed") {
     return splitStory(
-      `${intro} The parish closed, but the church building survives in a new use.${knownCurrentUse ? ` Today, ${knownCurrentUse}.` : ""}`,
+      `${opening} The parish closed, but the church building survives in a new use.${knownCurrentUse ? ` Today, ${knownCurrentUse}.` : ""}`,
     );
   }
   if (endState === "closed") {
-    return splitStory(`${intro} The parish is now closed.`);
+    return splitStory(`${opening} The parish is now closed.`);
   }
   if (endState === "transferred") {
     return splitStory(
-      `${intro} Its life as a Lithuanian parish has ended, while the church continues in another community.${knownCurrentUse ? ` Today, ${knownCurrentUse}.` : ""}`,
+      `${opening} Its life as a Lithuanian parish has ended, while the church continues in another community.${knownCurrentUse ? ` Today, ${knownCurrentUse}.` : ""}`,
     );
   }
   if (endState === "active_parish") {
-    return splitStory(`${intro} It remains an active Lithuanian parish.`);
+    return splitStory(`${opening} It remains an active Lithuanian parish.`);
   }
   if (endState === "mass_continues") {
     return splitStory(
-      `${intro} It is no longer Lithuanian-led, but Lithuanian Mass continues.`,
+      `${opening} It is no longer Lithuanian-led, but Lithuanian Mass continues.`,
     );
   }
   if (endState === "unresolved") {
     return splitStory(
-      `${intro} The church stands, but the parish's final institutional status remains unresolved.`,
+      `${opening} The church stands, but the parish's final institutional status remains unresolved.`,
     );
   }
   return splitStory(
-    `${intro} ${GROUP_DESCRIPTION[endState]} Its fuller history remains open for verification.`,
+    `${opening} ${GROUP_DESCRIPTION[endState]} Its fuller history remains open for verification.`,
   );
 }
 
@@ -393,6 +412,7 @@ export default async function ParishPage({
       : null;
   const community = isCommunityRecord(entry.sources ?? []);
   const institution = institutionLabel(profile, community);
+  const sourceLead = parishHistoryLead(profile);
   const foundedYear = scoped.founded ?? core?.yearFounded ?? null;
   const closedYear = scoped.closed ?? core?.yearClosed ?? null;
   const buildingFate = scoped.buildingFate ?? core?.buildingFate ?? null;
@@ -525,6 +545,7 @@ export default async function ParishPage({
         state: entry.state ?? null,
         institution,
         currentUse: situation?.current_use ?? null,
+        sourceLead,
       });
 
   const hasMap = (
@@ -674,6 +695,11 @@ export default async function ParishPage({
           </span>
         )}
       </div>
+
+      <ParishPublishedRecord
+        profile={profile}
+        excludeFact={researchOnly ? null : sourceLead}
+      />
 
       {hasMap && (
         <section className="mt-10">
@@ -1089,8 +1115,6 @@ export default async function ParishPage({
           </div>
         )}
       </section>
-
-      <ParishPublishedRecord profile={profile} />
 
       {profile.recordDepth !== "case-filed" && (
         <section className="mt-10 border-l-2 border-rule pl-4 text-sm leading-relaxed text-muted">

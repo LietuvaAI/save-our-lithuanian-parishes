@@ -3,7 +3,6 @@ import type {
   RegistrySource,
   YearReading,
 } from "@/lib/parish-profile";
-import { OWNERSHIP_LABEL, type Ownership } from "@/lib/parishes";
 
 const AXIS_LABEL: Record<string, string> = {
   "draugas-registry-1909-2007": "Draugas archive, 1909–2007",
@@ -29,25 +28,6 @@ const SOURCE_ORDER: Record<string, number> = {
   "web-historical": 6,
   truelithuania: 7,
 };
-
-const SURVEY_STATUS_LABEL: Record<string, string> = {
-  closed: "Closed",
-  demolished: "Church demolished",
-  merged: "Merged",
-  open: "Open",
-  open_renamed: "Open under a new name",
-  open_transferred: "Open for another community",
-  repurposed: "Repurposed",
-  standing: "Building standing",
-};
-
-function surveyOwnershipLabel(value: string) {
-  return OWNERSHIP_LABEL[value as Ownership] ?? value.replaceAll("_", " ");
-}
-
-function surveyStatusLabel(value: string) {
-  return SURVEY_STATUS_LABEL[value] ?? value.replaceAll("_", " ");
-}
 
 export const CONGREGATION_CLASS_LABEL: Record<string, string> = {
   roman_catholic: "Roman Catholic parish",
@@ -220,191 +200,136 @@ export function ParishRecordReadings({
   );
 }
 
-function SourceDetails({
-  source,
-  profile,
-}: {
-  source: RegistrySource;
-  profile: CanonicalParishProfile;
-}) {
+function cleanFact(value: string | undefined) {
+  const fact = value?.trim();
+  if (!fact || /^(none|unknown|unspecified)$/i.test(fact)) return null;
+  return fact.replace(/\s+/g, " ");
+}
+
+function labeledFact(label: string, value: string | undefined) {
+  const fact = cleanFact(value);
+  return fact ? `${label}: ${fact.replace(/\.$/, "")}.` : null;
+}
+
+function isCitationOnly(value: string) {
+  return (
+    /^(?:c83 row\s*)?\d+(?:[-–/]\d+)*(?:\s*(?:p{1,2}\.?\s*)?\d+(?:[-–]\d+)?)?(?:\s*[;,]\s*\d+(?:[-–/]\d+)*)*$/i.test(
+      value,
+    ) ||
+    /^(?:\d{4}-\d{2}-\d{2})(?:\s*;\s*\d{4}-\d{2}-\d{2})*$/i.test(
+      value,
+    )
+  );
+}
+
+function sourceHistoryFacts(
+  source: RegistrySource,
+  profile: CanonicalParishProfile,
+) {
   const foundingNotes = (profile.registry.years?.founded ?? []).filter(
     (reading) =>
       reading.source === source.axis && !isYearValue(reading.value),
   );
+  const facts = [
+    cleanFact(source.note),
+    cleanFact(source.description),
+    source.cites && !isCitationOnly(source.cites)
+      ? cleanFact(source.cites)
+      : null,
+    cleanFact(source.ethnic_status),
+    ...foundingNotes.map((reading) => cleanFact(reading.value)),
+    labeledFact("School", source.school),
+    labeledFact("Convent", source.convent),
+    labeledFact("Cemetery", source.cemetery),
+    labeledFact("Architect", source.architect),
+    labeledFact("Historic address", source.address),
+  ].filter((fact): fact is string => !!fact);
 
+  return [...new Map(facts.map((fact) => [fact.toLowerCase(), fact])).values()];
+}
+
+function sourceCitationLine(source: RegistrySource) {
+  const pages = source.pages
+    ? /^(?:p{1,2}[.]?\s*)/i.test(source.pages)
+      ? source.pages
+      : `p. ${source.pages}`
+    : null;
+  const parts = [
+    pages,
+    source.cites && isCitationOnly(source.cites) ? source.cites : null,
+  ].filter(Boolean);
+  return parts.join(" · ");
+}
+
+function displayFact(fact: string) {
+  const sentence = `${fact.charAt(0).toUpperCase()}${fact.slice(1)}`;
+  return /[.!?]$/.test(sentence) ? sentence : `${sentence}.`;
+}
+
+function sourceTitle(source: RegistrySource) {
   return (
-    <div className="mt-1 space-y-1 text-muted leading-relaxed">
-      {source.axis === "draugas-registry-1909-2007" && (
-        <>
-          {source.note && <p>{source.note}</p>}
-          {(source.first_mention ||
-            source.last_mention ||
-            source.total_mentions) && (
-            <>
-              <p>
-                First recorded mention:{" "}
-                {source.first_mention?.slice(0, 10) ?? "not recorded"}
-                {source.last_mention &&
-                  source.last_mention !== source.first_mention && (
-                    <>
-                      {" "}
-                      · Last recorded mention:{" "}
-                      {source.last_mention.slice(0, 10)}
-                    </>
-                  )}
-                {source.total_mentions
-                  ? ` · ${source.total_mentions} issues`
-                  : ""}
-              </p>
-              <p className="text-xs italic">
-                Last mention is an archive observation, not a closure date.
-              </p>
-            </>
-          )}
-        </>
-      )}
-
-      {source.axis === "draugas-2008-2026" && (
-        <p>
-          {source.note ||
-            source.cites ||
-            source.work ||
-            "Modern case-file evidence."}
-        </p>
-      )}
-
-      {source.axis === "draugas-jubilee-implied" && (
-        <>
-          <p>{source.cites || source.work || "Date inferred from a reported jubilee."}</p>
-          <p className="text-xs italic">
-            Jubilee arithmetic is retained as a secondary reading until a
-            direct founding record confirms it.
-          </p>
-        </>
-      )}
-
-      {(source.axis === "wolkovich" ||
-        source.axis === "michelsonas-1961") && (
-        <>
-          {source.ethnic_status &&
-            !/^(none|unknown|unspecified)$/i.test(source.ethnic_status) && (
-              <p className="italic">&ldquo;{source.ethnic_status}&rdquo;</p>
-            )}
-          {foundingNotes.map((reading, index) => (
-            <p key={`${reading.value}-${index}`}>{reading.value}</p>
-          ))}
-          {source.diocese &&
-            !/^(none|unknown|unspecified)$/i.test(source.diocese) && (
-              <p className="text-xs">Diocese: {source.diocese}.</p>
-            )}
-          {source.school && <p className="text-xs">School: {source.school}.</p>}
-          {source.convent && (
-            <p className="text-xs">Convent: {source.convent}.</p>
-          )}
-          {source.cemetery && (
-            <p className="text-xs">Cemetery: {source.cemetery}.</p>
-          )}
-          {source.lens && (
-            <p className="text-xs italic">Source note: {source.lens}</p>
-          )}
-          <p className="text-xs">
-            {source.pages ? `Pages: ${source.pages}.` : "Pages not recorded."}
-          </p>
-        </>
-      )}
-
-      {source.axis === "lukas-2009" && (
-        <>
-          {source.description && <p>{source.description}</p>}
-          {source.architect && (
-            <p className="text-xs">Architect: {source.architect}.</p>
-          )}
-          {source.address && (
-            <p className="text-xs">Address: {source.address}.</p>
-          )}
-          <p className="text-xs">
-            {source.pages ? `Pages: ${source.pages}.` : "Pages not recorded."}
-          </p>
-        </>
-      )}
-
-      {source.axis === "web-historical" && (
-        <>
-          <p>
-            {source.currentStatus &&
-              !/^(none|unknown|unspecified)$/i.test(source.currentStatus) && (
-                <>Status as surveyed: {surveyStatusLabel(source.currentStatus)}. </>
-              )}
-            {source.ownership &&
-              !/^(none|unknown|unspecified)$/i.test(source.ownership) && (
-                <>
-                  Ownership as surveyed:{" "}
-                  {surveyOwnershipLabel(source.ownership)}.
-                </>
-              )}
-          </p>
-          <p className="text-xs italic">
-            Contemporary web check. Confidence:{" "}
-            {source.confidence ?? "unspecified"}. Current claims require
-            confirmation against the linked parish, diocesan, or public record.
-          </p>
-        </>
-      )}
-
-      {source.axis === "truelithuania" && (
-        <>
-          {source.yearsMentioned?.length ? (
-            <p>Survey-corpus years: {source.yearsMentioned.join(", ")}.</p>
-          ) : null}
-          <p className="text-xs italic">
-            Field-survey years are observations in that corpus, not founding
-            or closure dates.
-          </p>
-        </>
-      )}
-
-      {!AXIS_LABEL[source.axis] && (
-        <>
-          {(source.description || source.note) && (
-            <p>{source.description ?? source.note}</p>
-          )}
-          {source.pages && <p className="text-xs">Pages: {source.pages}.</p>}
-        </>
-      )}
-    </div>
+    source.work ??
+    AXIS_LABEL[source.axis] ??
+    source.axis.replaceAll("-", " ")
   );
+}
+
+function sortedHistorySources(profile: CanonicalParishProfile) {
+  return [...(profile.registry.sources ?? [])]
+    .sort(
+      (left, right) =>
+        (SOURCE_ORDER[left.axis] ?? 99) - (SOURCE_ORDER[right.axis] ?? 99),
+    )
+    .map((source) => ({
+      source,
+      facts: sourceHistoryFacts(source, profile),
+    }))
+    .filter((entry) => entry.facts.length > 0);
+}
+
+export function parishHistoryLead(profile: CanonicalParishProfile) {
+  return sortedHistorySources(profile)[0]?.facts[0] ?? null;
 }
 
 export function ParishPublishedRecord({
   profile,
+  excludeFact,
 }: {
   profile: CanonicalParishProfile;
+  excludeFact?: string | null;
 }) {
-  const sources = [...(profile.registry.sources ?? [])].sort(
-    (left, right) =>
-      (SOURCE_ORDER[left.axis] ?? 99) - (SOURCE_ORDER[right.axis] ?? 99),
-  );
+  const normalizedExclude = excludeFact?.trim().toLowerCase();
+  const sources = sortedHistorySources(profile)
+    .map(({ source, facts }) => ({
+      source,
+      facts: normalizedExclude
+        ? facts.filter((fact) => fact.trim().toLowerCase() !== normalizedExclude)
+        : facts,
+    }))
+    .filter((entry) => entry.facts.length > 0);
   if (sources.length === 0) return null;
-  const axes = new Set(sources.map((source) => source.axis)).size;
 
   return (
-    <section className="mt-10">
-      <h2 className="font-serif text-xl font-semibold">
-        What the published record adds
+    <section className="mt-10" aria-labelledby="parish-history-heading">
+      <h2 id="parish-history-heading" className="font-serif text-xl font-semibold">
+        Parish history
       </h2>
-      <p className="mt-2 text-sm leading-relaxed text-muted">
-        {axes}{" "}
-        {axes === 1 ? "source tradition is" : "source traditions are"} present
-        in this record. Their complete public links and citations are gathered
-        in the source ledger below.
-      </p>
-      <div className="mt-4 divide-y divide-rule border-y border-rule">
-        {sources.map((source, index) => (
-          <article key={`${source.axis}-${index}`} className="py-4 text-sm">
-            <h3 className="font-medium">
-              {source.work ?? AXIS_LABEL[source.axis] ?? source.axis}
-            </h3>
-            <SourceDetails source={source} profile={profile} />
+      <div className="mt-4 space-y-7 border-l-2 border-rule pl-5">
+        {sources.map(({ source, facts }, index) => (
+          <article key={`${source.axis}-${index}`}>
+            <div className="space-y-2">
+              {facts.map((fact) => (
+                <p key={fact} className="leading-relaxed">
+                  {displayFact(fact)}
+                </p>
+              ))}
+            </div>
+            <p className="mt-2 text-xs leading-relaxed text-muted">
+              {sourceTitle(source)}
+              {sourceCitationLine(source)
+                ? ` · ${sourceCitationLine(source)}`
+                : ""}
+            </p>
           </article>
         ))}
       </div>
