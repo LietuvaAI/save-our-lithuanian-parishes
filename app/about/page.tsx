@@ -48,11 +48,17 @@ export default function AboutPage() {
         <h2 className="font-serif text-2xl font-semibold">Why it exists</h2>
         <div className="mt-3 space-y-4 leading-relaxed">
           <p>
-            Lithuanian parishes have long been the <em>židiniai</em> of their
-            communities: hearths of faith, language, memory, education, mutual
-            aid, and identity. A parish story is therefore never only the story
-            of a church building. It is the story of the people and institutions
-            gathered around it.
+            The past is a torch to the present. America&rsquo;s Lithuanian
+            parishes have long been the <em>židiniai</em> of our
+            communities&mdash;the hearths where faith was lived, language was
+            spoken, memory was preserved, and identity was formed. Together,
+            they form an unbroken current connecting the Lithuanian past to the
+            present and lighting the road ahead. This project traces the
+            complete history of America&rsquo;s Lithuanian parishes&mdash;from
+            their earliest foundations to the communities discerning their
+            future today. Seen together, the experience of America&rsquo;s
+            Lithuanian parishes helps illuminate the path ahead, because no
+            individual parish should have to find its way in darkness.
           </p>
           <p>
             When those stories are scattered across archives, diocesan records,
