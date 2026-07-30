@@ -326,22 +326,8 @@ export default function HistoryPage() {
         </p>
       </div>
 
-      {/* ── The flow: the whole record at a glance, every category ── */}
-      <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
-          Where every parish ended up
-        </h2>
-        <p className="mt-1 text-muted leading-relaxed max-w-3xl mb-6">
-          Each thread is one parish, from its founding decade to where it
-          stands today &mdash; and, for the closed, on to what became of the
-          building. Hover a thread to trace one parish; click it to open the
-          record; click a band to list its parishes.
-        </p>
-        <ParishThreads parishes={threads} />
-      </section>
-
       {/* ── The First Parish ── */}
-      <aside className="mt-12 border-y border-rule py-7">
+      <aside className="mt-10 border-y border-rule py-7">
         <div className="grid gap-7 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.35fr)] md:items-center">
           <figure className="min-w-0">
             <div className="relative aspect-[4/5] overflow-hidden bg-band">
@@ -438,6 +424,20 @@ export default function HistoryPage() {
           </div>
         </div>
       </aside>
+
+      {/* ── The flow: the whole record at a glance, every category ── */}
+      <section className="mt-12">
+        <h2 className="font-serif text-2xl font-semibold">
+          Where every parish ended up
+        </h2>
+        <p className="mt-1 text-muted leading-relaxed max-w-3xl mb-6">
+          Each thread is one parish, from its founding decade to where it
+          stands today &mdash; and, for the closed, on to what became of the
+          building. Hover a thread to trace one parish; click it to open the
+          record; click a band to list its parishes.
+        </p>
+        <ParishThreads parishes={threads} />
+      </section>
 
       {/* ── The exhibit: decade pulse + timeline (one title system) ── */}
       <section className="mt-14">
