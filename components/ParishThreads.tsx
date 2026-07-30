@@ -42,6 +42,9 @@ export interface ThreadParish {
   /** Building fate for the closed family; null for living branches. */
   fateKey: FateKey | null;
   href: string | null;
+  contextNote?: string;
+  contextHref?: string;
+  contextLinkLabel?: string;
 }
 
 const FATE_LABEL: Record<FateKey, string> = {
@@ -285,20 +288,40 @@ export default function ParishThreads({
     return g === "closed" ? `fate:${p.fateKey}` : `g:${g}`;
   };
 
+  const selectParish = (parish: ThreadParish) => {
+    setOpen(bandKeyOf(parish));
+    setFocusSlug(parish.slug);
+  };
+
   const isThreadActive = (p: ThreadParish) => {
     if (matchSlugs.size > 0) return matchSlugs.has(p.slug);
-    if (!hot) return true;
-    if (hot.startsWith("g:") || hot.startsWith("fate:") || hot.startsWith("dec:")) {
-      if (hot.startsWith("dec:")) return decadeOf(p.founded) === hot.slice(4);
-      if (hot === "g:closed") return toGroup(p.endState) === "closed";
-      return bandKeyOf(p) === hot || `g:${toGroup(p.endState)}` === hot;
+    const activeKey = hot ?? focusSlug;
+    if (!activeKey) return true;
+    if (
+      activeKey.startsWith("g:") ||
+      activeKey.startsWith("fate:") ||
+      activeKey.startsWith("dec:")
+    ) {
+      if (activeKey.startsWith("dec:"))
+        return decadeOf(p.founded) === activeKey.slice(4);
+      if (activeKey === "g:closed")
+        return toGroup(p.endState) === "closed";
+      return (
+        bandKeyOf(p) === activeKey ||
+        `g:${toGroup(p.endState)}` === activeKey
+      );
     }
-    return hot === p.slug;
+    return activeKey === p.slug;
   };
-  const anyFocus = hot !== null || matchSlugs.size > 0;
+  const anyFocus =
+    hot !== null || focusSlug !== null || matchSlugs.size > 0;
 
   const hovered =
     hot && !hot.includes(":") ? parishes.find((p) => p.slug === hot) : null;
+  const selected = focusSlug
+    ? parishes.find((p) => p.slug === focusSlug) ?? null
+    : null;
+  const readoutParish = hovered ?? selected;
 
   const threadPath = (p: ThreadParish) => {
     const y0 = model.yOfParishDecade.get(p.slug)!;
@@ -338,26 +361,34 @@ export default function ParishThreads({
           aria-label="Find a parish by name or city"
         />
         <div className="min-h-6 text-sm flex-1" aria-live="polite">
-          {hovered ? (
+          {readoutParish ? (
             <span>
-              <span className="font-serif font-semibold">{hovered.name}</span>
+              <span className="font-serif font-semibold">
+                {readoutParish.name}
+              </span>
               <span className="text-muted">
-                {" "}
-                — {hovered.city}, {hovered.state} ·{" "}
-                {hovered.founded ?? "?"}–
-                {hovered.closed ??
-                  (toGroup(hovered.endState) === "closed" ? "?" : "present")}
+                {" "}— {readoutParish.city}, {readoutParish.state} ·{" "}
+                {readoutParish.founded ?? "?"}–
+                {readoutParish.closed ??
+                  (toGroup(readoutParish.endState) === "closed"
+                    ? "?"
+                    : "present")}
                 {" · "}
-                {toGroup(hovered.endState) === "closed" && hovered.fateKey
-                  ? `Closed — ${FATE_LABEL[hovered.fateKey].toLowerCase()}`
-                  : GROUP_LABEL[toGroup(hovered.endState)]}
-                {" · click to see its group's list"}
+                {toGroup(readoutParish.endState) === "closed" &&
+                readoutParish.fateKey
+                  ? `Closed — ${FATE_LABEL[
+                      readoutParish.fateKey
+                    ].toLowerCase()}`
+                  : GROUP_LABEL[toGroup(readoutParish.endState)]}
+                {hovered
+                  ? " · click to select this parish"
+                  : " · selected"}
               </span>
             </span>
           ) : (
             <span className="text-muted">
-              Each thread is one parish. Hover to trace it; click to open its
-              record; click a band to list its parishes.
+              Each thread is one parish. Hover to trace it; click to select
+              it; click a band to list its parishes.
             </span>
           )}
         </div>
@@ -366,18 +397,16 @@ export default function ParishThreads({
         <ul className="mb-2 flex flex-wrap gap-2 text-sm">
           {matches.map((m) => (
             <li key={m.slug}>
-              {m.href ? (
-                <Link
-                  href={m.href}
-                  className="rounded-md border border-rule px-2 py-1 hover:border-foreground inline-block"
-                >
-                  {m.name} <span className="text-muted">· {m.city}</span>
-                </Link>
-              ) : (
-                <span className="rounded-md border border-rule px-2 py-1 inline-block">
-                  {m.name} <span className="text-muted">· {m.city}</span>
-                </span>
-              )}
+              <button
+                type="button"
+                onClick={() => {
+                  selectParish(m);
+                  setQuery("");
+                }}
+                className="rounded-md border border-rule px-2 py-1 hover:border-foreground"
+              >
+                {m.name} <span className="text-muted">· {m.city}</span>
+              </button>
             </li>
           ))}
         </ul>
@@ -408,9 +437,12 @@ export default function ParishThreads({
                 className="cursor-pointer"
                 onMouseEnter={() => setHot(`dec:${d.key}`)}
                 onMouseLeave={() => setHot(null)}
-                onClick={() =>
-                  setOpen((o) => (o === `dec:${d.key}` ? null : `dec:${d.key}`))
-                }
+                onClick={() => {
+                  setFocusSlug(null);
+                  setOpen((o) =>
+                    o === `dec:${d.key}` ? null : `dec:${d.key}`,
+                  );
+                }}
               >
                 <title>{`${d.key === "Undated" ? "Founding year not established" : `Founded in the ${d.key}`}: ${d.count} — click to list`}</title>
               </rect>
@@ -437,7 +469,9 @@ export default function ParishThreads({
             const g = toGroup(p.endState);
             const active = isThreadActive(p);
             const spotlight =
-              (hot === p.slug || (matchSlugs.size > 0 && matchSlugs.has(p.slug))) &&
+              (hot === p.slug ||
+                focusSlug === p.slug ||
+                (matchSlugs.size > 0 && matchSlugs.has(p.slug))) &&
               active;
             return (
               <g key={p.slug}>
@@ -467,13 +501,23 @@ export default function ParishThreads({
                   stroke="transparent"
                   strokeWidth={7}
                   className="cursor-pointer"
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`Select ${p.name}, ${p.city}, ${p.state}`}
                   onMouseEnter={() => setHot(p.slug)}
                   onMouseLeave={() => setHot(null)}
-                  onClick={() => {
-                    setOpen(bandKeyOf(p));
-                    setFocusSlug(p.slug);
+                  onFocus={() => setHot(p.slug)}
+                  onBlur={() => setHot(null)}
+                  onClick={() => selectParish(p)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      selectParish(p);
+                    }
                   }}
-                />
+                >
+                  <title>{`${p.name}, ${p.city}, ${p.state} — select parish`}</title>
+                </path>
               </g>
             );
           })}
@@ -494,7 +538,12 @@ export default function ParishThreads({
                   className="cursor-pointer"
                   onMouseEnter={() => setHot(`g:${g}`)}
                   onMouseLeave={() => setHot(null)}
-                  onClick={() => setOpen((o) => (o === `g:${g}` ? null : `g:${g}`))}
+                  onClick={() => {
+                    setFocusSlug(null);
+                    setOpen((o) =>
+                      o === `g:${g}` ? null : `g:${g}`,
+                    );
+                  }}
                 >
                   <title>{`${GROUP_LABEL[g]}: ${model.counts[g]} — click to list`}</title>
                 </rect>
@@ -542,7 +591,10 @@ export default function ParishThreads({
                   className="cursor-pointer"
                   onMouseEnter={() => setHot(key)}
                   onMouseLeave={() => setHot(null)}
-                  onClick={() => setOpen((o) => (o === key ? null : key))}
+                  onClick={() => {
+                    setFocusSlug(null);
+                    setOpen((o) => (o === key ? null : key));
+                  }}
                 >
                   <title>{`${isFate ? FATE_LABEL[fate!] : GROUP_LABEL[g]}: ${n} — click to list`}</title>
                 </rect>
@@ -593,6 +645,48 @@ export default function ParishThreads({
 
       {/* ── Side panel: the parishes inside the clicked band ── */}
       <aside className="mt-4 xl:mt-0 xl:w-72 xl:shrink-0 xl:sticky xl:top-4">
+        {selected ? (
+          <div className="mb-3 border-l-4 border-accent bg-band px-4 py-3">
+            <p className="text-[10px] font-semibold uppercase text-muted">
+              Selected parish
+            </p>
+            <h3 className="mt-1 font-serif text-lg font-semibold leading-tight">
+              {selected.name}
+            </h3>
+            <p className="mt-1 text-xs text-muted">
+              {selected.city}, {selected.state} · parish founded{" "}
+              {selected.founded ?? "year not established"}
+            </p>
+            <p className="mt-2 text-sm leading-relaxed">
+              {toGroup(selected.endState) === "closed" && selected.fateKey
+                ? `Closed — ${FATE_LABEL[selected.fateKey].toLowerCase()}.`
+                : `${GROUP_LABEL[toGroup(selected.endState)]}.`}
+            </p>
+            {selected.contextNote ? (
+              <p className="mt-2 text-sm leading-relaxed text-muted">
+                {selected.contextNote}{" "}
+                {selected.contextHref ? (
+                  <a
+                    href={selected.contextHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-medium text-foreground underline hover:text-accent"
+                  >
+                    {selected.contextLinkLabel ?? "Source"}
+                  </a>
+                ) : null}
+              </p>
+            ) : null}
+            {selected.href ? (
+              <Link
+                href={selected.href}
+                className="mt-3 inline-block text-sm font-semibold underline hover:text-accent"
+              >
+                Open parish profile
+              </Link>
+            ) : null}
+          </div>
+        ) : null}
         {open ? (
           <div className="rounded-lg border border-rule overflow-hidden">
             <div className="flex items-center justify-between gap-3 px-4 py-2.5 border-b border-rule bg-foreground/[0.02]">
