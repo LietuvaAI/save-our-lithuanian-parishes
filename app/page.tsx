@@ -45,6 +45,8 @@ const CURRENT_WORSHIP_CLASSES = new Set([
 const currentWorshipEntries = networkData.entries.filter((entry) =>
   CURRENT_WORSHIP_CLASSES.has(entry.networkClass),
 );
+const ACTIVE_CATHOLIC_COMMUNITIES =
+  networkData.counts.activeParishes + networkData.counts.activeMissions;
 const CURRENT_WORSHIP_STATES = new Set(
   currentWorshipEntries.map((entry) => entry.state),
 ).size;
@@ -295,11 +297,12 @@ export default function Home() {
           </span>
         </div>
         <p className="mt-1 text-sm text-muted leading-relaxed">
-          Current Lithuanian Catholic worship gathers at{" "}
-          {networkData.counts.activeParishes} parishes,{" "}
-          {networkData.counts.activeMissions} missions, and{" "}
-          {networkData.counts.massContinues} hosted Masses across{" "}
-          {CURRENT_WORSHIP_STATES} states.
+          {ACTIVE_CATHOLIC_COMMUNITIES} active Lithuanian Catholic communities
+          &mdash; {networkData.counts.activeParishes} parishes and{" "}
+          {networkData.counts.activeMissions} missions &mdash; anchor the
+          network. Another {networkData.counts.massContinues} communities host
+          Lithuanian Masses, reaching {currentWorshipEntries.length} places
+          across {CURRENT_WORSHIP_STATES} states.
         </p>
         <p className="mt-2 text-sm">
           <Link
