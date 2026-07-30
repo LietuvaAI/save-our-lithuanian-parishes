@@ -390,7 +390,6 @@ export default async function ParishPage({
           evidenceUrl: watchPhoto.evidenceUrl,
         }
       : null;
-  const photoSourceUrl = photo?.evidenceUrl ?? photo?.archiveUrl;
   const isLineDrawing = photo?.src.endsWith("-line-drawing.png") ?? false;
 
   const caseSources = caseRecord
@@ -507,44 +506,85 @@ export default async function ParishPage({
         {entry.state ? `, ${entry.state}` : ""}
       </p>
 
-      <h1 className="mt-1 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
-        {name}
-      </h1>
-      <p className="mt-1 text-lg text-muted">
-        {altName ? `${altName} · ` : ""}
-        {entry.city}
-        {entry.state ? `, ${entry.state}` : ""}
-        {entry.country === "CA" ? " · Canada" : ""}
-      </p>
-
-      {(!researchOnly || parishAlert || watchEntry) && (
-        <div className="mt-3 flex flex-wrap items-center gap-3">
-          {!researchOnly && (
-            <EndStatePill
-              value={endState}
-              size="lg"
-              label={
-                recordType === "misija" && endState === "active_parish"
-                  ? "Active Lithuanian mission"
-                  : undefined
+      <div
+        className={
+          photo
+            ? "mt-4 grid grid-cols-[8.5rem_minmax(0,1fr)] items-start gap-4 sm:grid-cols-[12rem_minmax(0,1fr)] sm:gap-6"
+            : ""
+        }
+      >
+        {photo && (
+          <figure className="overflow-hidden rounded-lg border border-rule">
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              width={360}
+              height={270}
+              loading="eager"
+              className={
+                isLineDrawing
+                  ? "aspect-[4/3] w-full bg-[#fffdf9] object-contain p-2"
+                  : "aspect-[4/3] w-full object-cover"
               }
             />
-          )}
-          {(parishAlert || watchEntry) && (
-            <span
-              className="rounded-full border-2 px-3 py-0.5 text-xs font-semibold"
-              style={{
-                borderColor: parishAlert
-                  ? "var(--es-closed)"
-                  : "var(--mark-ink)",
-                color: parishAlert ? "var(--es-closed)" : "var(--mark-ink)",
-              }}
-            >
-              {parishAlert ? currentSignalLabel : "Pastoral profile"}
-            </span>
+            <figcaption className="border-t border-rule px-2 py-1 text-[10px] leading-snug text-muted">
+              <a
+                href="#evidence-sources"
+                className="underline underline-offset-2 hover:text-accent"
+              >
+                {isLineDrawing
+                  ? "Line-art credit & source"
+                  : "Image credit & source"}
+              </a>
+            </figcaption>
+          </figure>
+        )}
+
+        <div>
+          <h1
+            className={`${photo ? "" : "mt-1"} font-serif text-3xl font-semibold leading-tight sm:text-4xl`}
+          >
+            {name}
+          </h1>
+          <p className="mt-1 text-lg text-muted">
+            {altName ? `${altName} · ` : ""}
+            {entry.city}
+            {entry.state ? `, ${entry.state}` : ""}
+            {entry.country === "CA" ? " · Canada" : ""}
+          </p>
+
+          {(!researchOnly || parishAlert || watchEntry) && (
+            <div className="mt-3 flex flex-wrap items-center gap-3">
+              {!researchOnly && (
+                <EndStatePill
+                  value={endState}
+                  size="lg"
+                  label={
+                    recordType === "misija" && endState === "active_parish"
+                      ? "Active Lithuanian mission"
+                      : undefined
+                  }
+                />
+              )}
+              {(parishAlert || watchEntry) && (
+                <span
+                  className="rounded-full border-2 px-3 py-0.5 text-xs font-semibold"
+                  style={{
+                    borderColor: parishAlert
+                      ? "var(--es-closed)"
+                      : "var(--mark-ink)",
+                    color: parishAlert
+                      ? "var(--es-closed)"
+                      : "var(--mark-ink)",
+                  }}
+                >
+                  {parishAlert ? currentSignalLabel : "Pastoral profile"}
+                </span>
+              )}
+            </div>
           )}
         </div>
-      )}
+      </div>
 
       <p className="mt-4 max-w-2xl font-serif text-xl leading-snug sm:text-2xl">
         {dek}
@@ -579,62 +619,19 @@ export default async function ParishPage({
         )}
       </div>
 
-      {(photo || hasMap) && (
+      {hasMap && (
         <section className="mt-10">
           <h2 className="font-serif text-xl font-semibold">
             The church and its place
           </h2>
-          {hasMap && (
-            <p className="mt-1 text-sm text-muted">
-              Among its neighbors — no parish stands alone.
-            </p>
-          )}
-          <div
-            className={`mt-4 grid items-start gap-5 ${
-              photo && hasMap ? "sm:grid-cols-2" : ""
-            }`}
-          >
-            {photo && (
-              <figure className="overflow-hidden rounded-lg border border-rule">
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  width={640}
-                  height={427}
-                  loading="eager"
-                  className={
-                    isLineDrawing
-                      ? "aspect-[4/3] w-full bg-[#fffdf9] object-contain p-3"
-                      : "h-auto w-full object-cover"
-                  }
-                />
-                <figcaption className="px-3 py-1.5 text-xs text-muted">
-                  {photo.attribution}
-                  {photo.license && <span> · {photo.license}</span>}
-                  {photoSourceUrl && (
-                    <>
-                      <span> · </span>
-                      <a
-                        href={photoSourceUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline underline-offset-2 hover:text-accent"
-                      >
-                        Source
-                      </a>
-                    </>
-                  )}
-                </figcaption>
-              </figure>
-            )}
-            {hasMap && (
-              <div className={photo ? "" : "max-w-xl"}>
-                <ParishContextMap
-                  slug={profile.slug}
-                  dioceseLabel={entry.diocese ?? undefined}
-                />
-              </div>
-            )}
+          <p className="mt-1 text-sm text-muted">
+            Among its neighbors — no parish stands alone.
+          </p>
+          <div className="mt-4 max-w-2xl">
+            <ParishContextMap
+              slug={profile.slug}
+              dioceseLabel={entry.diocese ?? undefined}
+            />
           </div>
         </section>
       )}
