@@ -50,7 +50,10 @@ export function ProfileSourceLedger({
   const missingCount = sources.length - linkedCount;
 
   return (
-    <section className="mt-12 border-t border-rule pt-8">
+    <section
+      id="evidence-sources"
+      className="mt-12 scroll-mt-8 border-t border-rule pt-8"
+    >
       <h2 className="font-serif text-2xl font-semibold">Evidence &amp; sources</h2>
       <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
         The links below are the public evidence ledger for this profile. Full
