@@ -41,7 +41,10 @@ import {
   getSituationByRegistrySlug,
   type BuildingFate,
 } from "@/lib/parishes";
-import { clearedOrNull, getClearedPhoto } from "@/lib/photos";
+import {
+  clearedOrNull,
+  getClearedParishPortrait,
+} from "@/lib/photos";
 import {
   draugasProfileSources,
   finalizeProfileSources,
@@ -369,9 +372,9 @@ export default async function ParishPage({
       : "Current development";
 
   const photosEntry =
-    getClearedPhoto(profile.slug) ??
+    getClearedParishPortrait(profile.slug) ??
     (profile.registrySlug !== profile.slug
-      ? getClearedPhoto(profile.registrySlug)
+      ? getClearedParishPortrait(profile.registrySlug)
       : null);
   const watchPhoto = clearedOrNull(watchEntry?.photo);
   const photo = photosEntry

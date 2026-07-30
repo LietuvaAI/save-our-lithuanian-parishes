@@ -40,6 +40,11 @@ export function getClearedPhoto(slug: string): ParishPhoto | null {
   return entry as ParishPhoto;
 }
 
+/** Prefer the site's line-art portrait when cleared, then fall back to the photo. */
+export function getClearedParishPortrait(slug: string): ParishPhoto | null {
+  return getClearedPhoto(`${slug}-line-drawing`) ?? getClearedPhoto(slug);
+}
+
 /** Same gate for photo objects carried on alerts.json entries. */
 export function clearedOrNull<T extends { rights?: string }>(
   photo: T | null | undefined,
