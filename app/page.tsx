@@ -141,11 +141,11 @@ const ACTIONS = [
 export default function Home() {
   return (
     <div className="mx-auto max-w-5xl px-4">
-      <section className="pt-5 text-center sm:pt-6">
+      <section className="pt-3 text-center sm:pt-4">
         <h1 className="mx-auto max-w-3xl font-serif text-2xl font-semibold leading-tight sm:text-3xl">
           The public record of America&rsquo;s Lithuanian parishes
         </h1>
-        <p className="mx-auto mt-2.5 max-w-4xl text-sm leading-relaxed text-muted sm:text-[15px]">
+        <p className="mx-auto mt-1.5 max-w-4xl text-sm leading-relaxed text-muted sm:text-[15px]">
           This project traces the complete history of America&rsquo;s
           Lithuanian parishes&mdash;from their earliest foundations to the
           communities discerning their future today.
