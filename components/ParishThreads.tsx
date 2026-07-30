@@ -12,7 +12,7 @@
 // parishes. Compact fixed-height field, not a row-per-parish list.
 // ============================================================================
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, type MouseEvent } from "react";
 import Link from "next/link";
 import {
   GROUP_ORDER,
@@ -42,7 +42,13 @@ export interface ThreadParish {
   /** Building fate for the closed family; null for living branches. */
   fateKey: FateKey | null;
   href: string | null;
-  contextNote?: string;
+  institutionNote?: string;
+  buildingLineage?: {
+    date: string;
+    title: string;
+    detail: string;
+    state: "lost" | "standing";
+  }[];
   contextHref?: string;
   contextLinkLabel?: string;
 }
@@ -85,7 +91,7 @@ const FATE_OPACITY: Record<FateKey, number> = {
 
 // Geometry — a compact field that leaves room for the side panel.
 const W = 872;
-const TOP = 30;
+const TOP = 58;
 const X_DEC = 148; // right edge of the decade bands
 const DEC_W = 10;
 const X_MID = 404;
@@ -278,7 +284,18 @@ export default function ParishThreads({
     const q = fold(query.trim());
     if (q.length < 2) return [];
     return parishes
-      .filter((p) => fold(`${p.name} ${p.city}`).includes(q))
+      .filter((p) =>
+        fold(
+          [
+            p.name,
+            p.city,
+            p.institutionNote,
+            p.buildingLineage?.map((item) => item.title).join(" "),
+          ]
+            .filter(Boolean)
+            .join(" "),
+        ).includes(q),
+      )
       .slice(0, 8);
   }, [query, parishes]);
   const matchSlugs = useMemo(() => new Set(matches.map((m) => m.slug)), [matches]);
@@ -289,6 +306,7 @@ export default function ParishThreads({
   };
 
   const selectParish = (parish: ThreadParish) => {
+    setHot(null);
     setOpen(bandKeyOf(parish));
     setFocusSlug(parish.slug);
   };
@@ -337,6 +355,89 @@ export default function ParishThreads({
     );
   };
 
+  const threadYAtX = (p: ThreadParish, x: number) => {
+    const y0 = model.yOfParishDecade.get(p.slug)!;
+    const y1 = model.yOfParishMid.get(p.slug)!;
+    const y2 = model.yOfParishTerm.get(p.slug)!;
+    const x0 = X_DEC + DEC_W;
+    const x1 = X_MID;
+    const x2 = X_MID + NODE_W;
+    const x3 = X_END;
+
+    const cubicYAtX = (
+      targetX: number,
+      startX: number,
+      controlX: number,
+      endX: number,
+      startY: number,
+      endY: number,
+    ) => {
+      let low = 0;
+      let high = 1;
+      for (let i = 0; i < 12; i += 1) {
+        const t = (low + high) / 2;
+        const u = 1 - t;
+        const curveX =
+          u * u * u * startX +
+          3 * u * u * t * controlX +
+          3 * u * t * t * controlX +
+          t * t * t * endX;
+        if (curveX < targetX) low = t;
+        else high = t;
+      }
+      const t = (low + high) / 2;
+      const u = 1 - t;
+      return (
+        u * u * u * startY +
+        3 * u * u * t * startY +
+        3 * u * t * t * endY +
+        t * t * t * endY
+      );
+    };
+
+    if (x < x0 || x > x3) return null;
+    if (x <= x1) {
+      return cubicYAtX(x, x0, (x0 + x1) / 2, x1, y0, y1);
+    }
+    if (x <= x2) return y1;
+    return cubicYAtX(x, x2, (x2 + x3) / 2, x3, y1, y2);
+  };
+
+  const nearestThreadAtPointer = (event: MouseEvent<SVGGElement>) => {
+    const svg = event.currentTarget.ownerSVGElement;
+    const screenMatrix = svg?.getScreenCTM();
+    if (!svg || !screenMatrix) return null;
+
+    const pointer = new DOMPoint(event.clientX, event.clientY).matrixTransform(
+      screenMatrix.inverse(),
+    );
+    let nearest: ThreadParish | null = null;
+    let nearestDistance = Number.POSITIVE_INFINITY;
+
+    for (const parish of parishes) {
+      const threadY = threadYAtX(parish, pointer.x);
+      if (threadY === null) continue;
+      const distance = Math.abs(pointer.y - threadY);
+      if (distance < nearestDistance) {
+        nearest = parish;
+        nearestDistance = distance;
+      }
+    }
+
+    return nearest && nearestDistance <= 9 ? nearest : null;
+  };
+
+  const previewNearestThread = (event: MouseEvent<SVGGElement>) => {
+    const nearest = nearestThreadAtPointer(event);
+    const nextHot = nearest?.slug ?? null;
+    setHot((current) => (current === nextHot ? current : nextHot));
+  };
+
+  const selectNearestThread = (event: MouseEvent<SVGGElement>) => {
+    const nearest = nearestThreadAtPointer(event);
+    if (nearest) selectParish(nearest);
+  };
+
   const openLabel = open?.startsWith("fate:")
     ? FATE_LABEL[open.slice(5) as FateKey]
     : open?.startsWith("dec:")
@@ -350,8 +451,8 @@ export default function ParishThreads({
 
   return (
     <div>
-      {/* ── Readout + search: the non-hover entry point is first-class ── */}
-      <div className="flex flex-wrap items-center gap-3 mb-2">
+      {/* ── Search is the reliable non-hover entry point ── */}
+      <div className="mb-3 flex flex-wrap items-center gap-3">
         <input
           type="search"
           value={query}
@@ -360,7 +461,34 @@ export default function ParishThreads({
           className="rounded-md border border-rule bg-background px-2 py-1.5 text-sm w-64"
           aria-label="Find a parish by name or city"
         />
-        <div className="min-h-6 text-sm flex-1" aria-live="polite">
+        <p className="text-sm text-muted">
+          Search or select a thread to lock one parish in place.
+        </p>
+      </div>
+      {matches.length > 0 && (
+        <ul className="mb-3 flex flex-wrap gap-2 text-sm">
+          {matches.map((m) => (
+            <li key={m.slug}>
+              <button
+                type="button"
+                onClick={() => {
+                  selectParish(m);
+                  setQuery("");
+                }}
+                className="rounded-md border border-rule px-2 py-1 hover:border-foreground"
+              >
+                {m.name} <span className="text-muted">· {m.city}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {/* ── Sticky readout keeps hover and selection visible ── */}
+      <div
+        className="sticky top-0 z-20 mb-3 min-h-11 border-y border-rule bg-background/95 px-3 py-2 text-sm backdrop-blur-sm"
+        aria-live="polite"
+      >
           {readoutParish ? (
             <span>
               <span className="font-serif font-semibold">
@@ -380,47 +508,66 @@ export default function ParishThreads({
                       readoutParish.fateKey
                     ].toLowerCase()}`
                   : GROUP_LABEL[toGroup(readoutParish.endState)]}
-                {hovered
-                  ? " · click to select this parish"
+                {hovered && hovered.slug !== selected?.slug
+                  ? " · preview; click to keep selected"
                   : " · selected"}
               </span>
             </span>
           ) : (
             <span className="text-muted">
-              Each thread is one parish. Hover to trace it; click to select
-              it; click a band to list its parishes.
+              Each thread is one parish institution. Click or tap to select;
+              hover previews on desktop; select a band to list its parishes.
             </span>
           )}
-        </div>
       </div>
-      {matches.length > 0 && (
-        <ul className="mb-2 flex flex-wrap gap-2 text-sm">
-          {matches.map((m) => (
-            <li key={m.slug}>
-              <button
-                type="button"
-                onClick={() => {
-                  selectParish(m);
-                  setQuery("");
-                }}
-                className="rounded-md border border-rule px-2 py-1 hover:border-foreground"
-              >
-                {m.name} <span className="text-muted">· {m.city}</span>
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
 
       <div className="min-w-0 max-w-full xl:flex xl:gap-8 xl:items-start">
-      <div className="w-full min-w-0 max-w-full overflow-x-auto xl:flex-1">
-        <svg
-          viewBox={`0 0 ${W} ${model.H}`}
-          className="block w-full max-w-none h-auto"
-          style={{ minWidth: 780 }}
-          role="img"
-          aria-label={`Each of the ${model.total} documented parishes as one thread, from its founding decade to its present end state; closed parishes thread on to their building's fate.`}
-        >
+        <div className="w-full min-w-0 max-w-full overflow-x-auto xl:flex-1">
+          <svg
+            viewBox={`0 0 ${W} ${model.H}`}
+            className="block w-full max-w-none h-auto"
+            style={{ minWidth: 780 }}
+            role="img"
+            aria-label={`Each of the ${model.total} documented parish institutions as one thread, from its founding decade to its present end state; closed parishes thread on to the last documented church building's fate.`}
+          >
+          {/* Column contract: parish history first, building fate only where known */}
+          <text
+            x={X_DEC}
+            y={16}
+            textAnchor="end"
+            fontSize={10}
+            fontWeight={700}
+            fill="var(--foreground)"
+          >
+            PARISH FOUNDED
+          </text>
+          <text
+            x={X_MID + NODE_W / 2}
+            y={16}
+            textAnchor="middle"
+            fontSize={10}
+            fontWeight={700}
+            fill="var(--foreground)"
+          >
+            PARISH STATUS
+          </text>
+          <text
+            x={X_END}
+            y={16}
+            fontSize={10}
+            fontWeight={700}
+            fill="var(--foreground)"
+          >
+            PRESENT CONDITION
+          </text>
+          <text
+            x={X_END}
+            y={31}
+            fontSize={9}
+            fill="var(--muted)"
+          >
+            closed parishes split by church fate
+          </text>
           {/* Decade bands + labels */}
           {model.decadeLayout.map((d) => (
             <g key={d.key}>
@@ -464,63 +611,73 @@ export default function ParishThreads({
             </g>
           ))}
 
-          {/* Threads — halo pair drawn only for the active one */}
-          {parishes.map((p) => {
-            const g = toGroup(p.endState);
-            const active = isThreadActive(p);
-            const spotlight =
-              (hot === p.slug ||
-                focusSlug === p.slug ||
-                (matchSlugs.size > 0 && matchSlugs.has(p.slug))) &&
-              active;
-            return (
-              <g key={p.slug}>
-                {spotlight && (
+          {/* Threads — nearest-line detection keeps dense crossings usable. */}
+          <g
+            onMouseMove={previewNearestThread}
+            onMouseLeave={() => setHot(null)}
+            onClick={selectNearestThread}
+          >
+            <rect
+              x={X_DEC + DEC_W}
+              y={TOP}
+              width={X_END - X_DEC - DEC_W}
+              height={Math.max(model.H - TOP - 36, 1)}
+              fill="transparent"
+            />
+            {parishes.map((p) => {
+              const g = toGroup(p.endState);
+              const active = isThreadActive(p);
+              const spotlight =
+                (hot === p.slug ||
+                  focusSlug === p.slug ||
+                  (matchSlugs.size > 0 && matchSlugs.has(p.slug))) &&
+                active;
+              return (
+                <g key={p.slug}>
+                  {spotlight && (
+                    <path
+                      d={threadPath(p)}
+                      fill="none"
+                      stroke="var(--background)"
+                      strokeWidth={5}
+                      opacity={0.9}
+                    />
+                  )}
                   <path
                     d={threadPath(p)}
                     fill="none"
-                    stroke="var(--background)"
-                    strokeWidth={5}
-                    opacity={0.9}
-                  />
-                )}
-                <path
-                  d={threadPath(p)}
-                  fill="none"
-                  stroke={END_STATE_COLOR[g]}
-                  strokeWidth={spotlight ? 2.4 : 0.7}
-                  opacity={active ? (spotlight ? 1 : anyFocus ? 0.75 : 0.55) : 0.04}
-                />
-                {/* Invisible hover corridor. A click opens the thread's
-                    whole group in the panel (with this parish highlighted)
-                    rather than navigating away — the record link lives in
-                    the list, where the click is deliberate. */}
-                <path
-                  d={threadPath(p)}
-                  fill="none"
-                  stroke="transparent"
-                  strokeWidth={7}
-                  className="cursor-pointer"
-                  role="button"
-                  tabIndex={0}
-                  aria-label={`Select ${p.name}, ${p.city}, ${p.state}`}
-                  onMouseEnter={() => setHot(p.slug)}
-                  onMouseLeave={() => setHot(null)}
-                  onFocus={() => setHot(p.slug)}
-                  onBlur={() => setHot(null)}
-                  onClick={() => selectParish(p)}
-                  onKeyDown={(event) => {
-                    if (event.key === "Enter" || event.key === " ") {
-                      event.preventDefault();
-                      selectParish(p);
+                    stroke={END_STATE_COLOR[g]}
+                    strokeWidth={spotlight ? 2.4 : 0.7}
+                    opacity={
+                      active ? (spotlight ? 1 : anyFocus ? 0.75 : 0.55) : 0.04
                     }
-                  }}
-                >
-                  <title>{`${p.name}, ${p.city}, ${p.state} — select parish`}</title>
-                </path>
-              </g>
-            );
-          })}
+                  />
+                  {/* The corridor remains for deliberate click, keyboard, and
+                      touch selection. Hover is resolved by the parent field. */}
+                  <path
+                    d={threadPath(p)}
+                    fill="none"
+                    stroke="transparent"
+                    strokeWidth={12}
+                    className="cursor-pointer"
+                    role="button"
+                    tabIndex={0}
+                    aria-label={`Select ${p.name}, ${p.city}, ${p.state}`}
+                    onFocus={() => setHot(p.slug)}
+                    onBlur={() => setHot(null)}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        selectParish(p);
+                      }
+                    }}
+                  >
+                    <title>{`${p.name}, ${p.city}, ${p.state} — select parish`}</title>
+                  </path>
+                </g>
+              );
+            })}
+          </g>
 
           {/* Mid nodes (Closed labeled; the rest carry labels at the edge) */}
           {model.groups.map((g) => {
@@ -640,8 +797,8 @@ export default function ParishThreads({
               </g>
             );
           })}
-        </svg>
-      </div>
+          </svg>
+        </div>
 
       {/* ── Side panel: the parishes inside the clicked band ── */}
       <aside className="mt-4 xl:mt-0 xl:w-72 xl:shrink-0 xl:sticky xl:top-4">
@@ -662,20 +819,54 @@ export default function ParishThreads({
                 ? `Closed — ${FATE_LABEL[selected.fateKey].toLowerCase()}.`
                 : `${GROUP_LABEL[toGroup(selected.endState)]}.`}
             </p>
-            {selected.contextNote ? (
+            {selected.institutionNote ? (
               <p className="mt-2 text-sm leading-relaxed text-muted">
-                {selected.contextNote}{" "}
+                {selected.institutionNote}
+              </p>
+            ) : null}
+            {selected.buildingLineage?.length ? (
+              <div className="mt-3 border-t border-rule pt-3">
+                <p className="text-[10px] font-semibold uppercase text-muted">
+                  Church buildings
+                </p>
+                <ol className="mt-2 space-y-3">
+                  {selected.buildingLineage.map((item) => (
+                    <li
+                      key={`${item.date}-${item.title}`}
+                      className="grid grid-cols-[0.65rem_1fr] gap-2"
+                    >
+                      <span
+                        className="mt-1.5 h-2.5 w-2.5 rounded-full"
+                        style={{
+                          background:
+                            item.state === "standing"
+                              ? "var(--es-active)"
+                              : "var(--es-closed)",
+                        }}
+                        aria-hidden
+                      />
+                      <div>
+                        <p className="text-xs font-semibold">
+                          {item.date} · {item.title}
+                        </p>
+                        <p className="mt-0.5 text-xs leading-relaxed text-muted">
+                          {item.detail}
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
                 {selected.contextHref ? (
                   <a
                     href={selected.contextHref}
                     target="_blank"
                     rel="noreferrer"
-                    className="font-medium text-foreground underline hover:text-accent"
+                    className="mt-3 inline-block text-xs font-semibold underline hover:text-accent"
                   >
                     {selected.contextLinkLabel ?? "Source"}
                   </a>
                 ) : null}
-              </p>
+              </div>
             ) : null}
             {selected.href ? (
               <Link
