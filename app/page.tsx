@@ -109,18 +109,10 @@ export default function Home() {
         <h1 className="mx-auto max-w-3xl font-serif text-2xl font-semibold leading-tight sm:text-3xl">
           The public record of America&rsquo;s Lithuanian parishes
         </h1>
-        <p className="mx-auto mt-2.5 max-w-4xl text-sm leading-relaxed text-muted sm:text-[15px]">
-          The past is a torch to the present. America&rsquo;s Lithuanian
-          parishes have long been the <em>židiniai</em>{" "}of our
-          communities&mdash;the hearths where faith was lived, language was
-          spoken, memory was preserved, and identity was formed. Together, they
-          form an unbroken current connecting the Lithuanian past to the present
-          and lighting the road ahead. This project traces the complete history
-          of America&rsquo;s Lithuanian parishes&mdash;from their earliest
-          foundations to the communities discerning their future today. Seen
-          together, the experience of America&rsquo;s Lithuanian parishes helps
-          illuminate the path ahead, because no individual parish should have
-          to find its way in darkness.
+        <p className="mx-auto mt-2.5 max-w-3xl text-sm leading-relaxed text-muted sm:text-[15px]">
+          The past is a torch to the present. Explore the complete record of
+          America&rsquo;s Lithuanian parishes, from their earliest foundations
+          to the communities discerning their future today.
         </p>
       </section>
 
