@@ -528,6 +528,33 @@
         "note": "Held pending permission; staged outside the repo."
       }
     },
+    "svc-trejybes-hartford-ct-line-drawing": {
+      "src": "/images/parishes/hartford-holy-trinity-line-drawing.png",
+      "alt": "Line drawing of Holy Trinity Lithuanian church in Hartford.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a photograph by Litnet, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of Litnet's photograph of Holy Trinity Roman Catholic Church, Hartford. The source photograph is licensed CC BY-SA 4.0; this line-art adaptation is published under the same license. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Hartford_Holy_Trinity_Roman_Catholic_Church,_2000.jpg"
+    },
+    "sv-juozapo-waterbury-ct-line-drawing": {
+      "src": "/images/parishes/waterbury-st-joseph-line-drawing.png",
+      "alt": "Line drawing of St. Joseph Lithuanian church in Waterbury.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a photograph by Farragutful, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of Farragutful's photograph of St. Joseph's Lithuanian Catholic Church, Waterbury. The source photograph is licensed CC BY-SA 4.0; this line-art adaptation is published under the same license. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St._Joseph%27s_Church_-_Waterbury,_Connecticut_01.jpg"
+    },
+    "kristaus-atsimainymo-maspeth-ny-line-drawing": {
+      "src": "/images/parishes/maspeth-transfiguration-line-drawing.png",
+      "alt": "Line drawing of Transfiguration Lithuanian church in Maspeth.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a photograph by Renata3, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of Renata3's photograph of Transfiguration Roman Catholic Church, Maspeth. The source photograph is licensed CC BY-SA 4.0; this line-art adaptation is published under the same license. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Transfiguration_Roman_Catholic_Church_20201114_154344.jpg"
+    },
     "dievo-apvaizdos-southfield-mi-line-drawing": {
       "src": "/images/parishes/southfield-divine-providence-line-drawing.png",
       "alt": "Line drawing of Divine Providence Lithuanian Catholic Church in Southfield.",
