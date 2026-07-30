@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import TimelineChart, {
   type TimelineRow,
@@ -8,21 +9,94 @@ import ParishThreads, {
   type ThreadParish,
   type FateKey,
 } from "@/components/ParishThreads";
-import { scopedParishes } from "@/lib/registry-scope";
+import { scopedParishes, usRegistryParishes } from "@/lib/registry-scope";
 import {
-  GROUP_ORDER,
   toGroup,
   isAlive,
   isLoss,
-  type EndStateGroup,
 } from "@/lib/end-state";
 import { BUILDING_FATE_LABEL, type BuildingFate, parishes as libParishes } from "@/lib/parishes";
+import mapData from "@/data/map.json";
+import photosData from "@/data/photos.json";
 
 export const metadata: Metadata = {
   title: "The History",
   description:
-    "A timeline of every documented Lithuanian parish in the United States — from the first founding in the 1870s to the present day.",
+    "A chronological view of the Roman Catholic Lithuanian parish record in the United States, from the first foundations to today.",
 };
+
+const firstParishSlug = "sv-jurgio-shenandoah-pa";
+const firstParishPhoto = photosData.parishes[firstParishSlug];
+const firstParishPoint = mapData.points.find(
+  (point) => point.slug === firstParishSlug,
+);
+const firstParishDraugasIssues = [
+  {
+    date: "March 27, 2008",
+    href: "https://draugas.org/key/2008_reg/2008-03-27-DRAUGASo.pdf",
+  },
+  {
+    date: "October 27, 2009",
+    href: "https://draugas.org/key/2009_reg/2009-10-27-DRAUGASo.pdf",
+  },
+  {
+    date: "May 30, 2020",
+    href: "https://draugas.org/key/2020_reg/2020-05-30-DRAUGAS.pdf",
+  },
+  {
+    date: "November 1, 2025",
+    href: "https://draugas.org/key/2025_reg/2025-11-01-DRAUGASo.pdf",
+  },
+];
+
+function FirstParishLocatorMap() {
+  return (
+    <svg
+      viewBox="690 105 235 175"
+      role="img"
+      aria-label="Locator map for St. George Lithuanian parish in Shenandoah, Pennsylvania."
+      className="h-auto w-full"
+    >
+      {mapData.statePaths.map((path, index) => (
+        <path
+          key={index}
+          d={path}
+          fill="var(--band)"
+          stroke="var(--foreground)"
+          strokeOpacity={0.22}
+          strokeWidth={0.8}
+        />
+      ))}
+      <path
+        d={mapData.stateBorders}
+        fill="none"
+        stroke="var(--foreground)"
+        strokeOpacity={0.22}
+        strokeWidth={0.8}
+      />
+      {firstParishPoint ? (
+        <>
+          <circle
+            cx={firstParishPoint.x}
+            cy={firstParishPoint.y}
+            r="11"
+            fill="none"
+            stroke="var(--es-closed)"
+            strokeWidth="3"
+          />
+          <circle
+            cx={firstParishPoint.x}
+            cy={firstParishPoint.y}
+            r="5"
+            fill="var(--es-closed)"
+            stroke="var(--background)"
+            strokeWidth="2"
+          />
+        </>
+      ) : null}
+    </svg>
+  );
+}
 
 // ---------------------------------------------------------------------------
 // Data builder (server-side; every figure derives from the shared scope)
@@ -33,8 +107,6 @@ function buildData() {
 
   const dated: TimelineRow[] = [];
   const undated: UndatedRow[] = [];
-  const counts = {} as Record<EndStateGroup, number>;
-  for (const g of GROUP_ORDER) counts[g] = 0;
   const closedFates: Record<FateKey, number> = {
     demolished: 0,
     religious: 0,
@@ -50,8 +122,6 @@ function buildData() {
   );
 
   for (const p of all) {
-    counts[toGroup(p.endState)]++;
-
     // The closed family's building fates — each parish's thread terminal.
     let fateKey: FateKey | null = null;
     if (p.endState === "demolished") fateKey = "demolished";
@@ -155,7 +225,6 @@ function buildData() {
   return {
     dated,
     undated,
-    counts,
     closedFates,
     threads,
     standing,
@@ -183,7 +252,6 @@ export default function HistoryPage() {
   const {
     dated,
     undated,
-    counts,
     closedFates,
     threads,
     standing,
@@ -192,21 +260,40 @@ export default function HistoryPage() {
     total,
     narrative,
   } = buildData();
+  const fullRecord = usRegistryParishes();
+  const fullRecordTotal = fullRecord.length;
+  const romanCatholicMissions = fullRecord.filter(
+    (entry) =>
+      entry.congregation_class === "roman_catholic" &&
+      entry.record_type === "misija",
+  ).length;
+  const otherCommunities = fullRecordTotal - total - romanCatholicMissions;
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
       <p className="text-xs uppercase tracking-widest text-muted">
-        The record · 1870s to today
+        A chronological view · 1870s to today
       </p>
       <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
         The History
       </h1>
       <div className="mt-3 space-y-4 leading-relaxed max-w-3xl">
         <p>
-          Lithuanian immigrants founded the{` ${total} `}Catholic parishes
-          documented so far in this record &mdash; most between the 1870s and
-          1960, in coal towns, factory cities, and urban neighborhoods from
-          Shenandoah to Chicago, with the latest as recent as the 1990s.
+          This history follows the{` ${total} `}Roman Catholic Lithuanian
+          parishes documented in{" "}
+          <Link href="/record" className="underline hover:text-accent">
+            The Record
+          </Link>
+          . Most were founded between the 1870s and 1960, in coal towns,
+          factory cities, and urban neighborhoods from Shenandoah to Chicago,
+          with the latest as recent as the 1990s.
+        </p>
+        <p className="text-sm text-muted">
+          The complete Record contains {fullRecordTotal} entries. Its other{" "}
+          {fullRecordTotal - total} entries are {romanCatholicMissions} Roman
+          Catholic missions and {otherCommunities} National, independent, or
+          Protestant communities, which are counted separately from this
+          parish history.
         </p>
         <p>
           Of the {total}, {lost} are closed. {closedFates.demolished} of
@@ -225,6 +312,18 @@ export default function HistoryPage() {
             continues within a parish that is no longer Lithuanian.
           </span>
         </p>
+        <p className="text-sm text-muted">
+          For the present-day pastoral network &mdash; including missions,
+          hosted Lithuanian Masses, communities, and religious houses &mdash;
+          see{" "}
+          <Link
+            href="/lithuanian-catholic-life-today"
+            className="font-medium text-foreground underline hover:text-accent"
+          >
+            Lithuanian Catholic Life Today
+          </Link>
+          .
+        </p>
       </div>
 
       {/* ── The flow: the whole record at a glance, every category ── */}
@@ -242,29 +341,102 @@ export default function HistoryPage() {
       </section>
 
       {/* ── The First Parish ── */}
-      <aside
-        className="mt-12 max-w-3xl border-l-4 pl-5 py-3 space-y-2 text-sm leading-relaxed"
-        style={{ borderColor: "var(--mark-ink)" }}
-      >
-        <p className="font-serif text-base font-semibold">
-          The first Lithuanian parish in America
-        </p>
-        <p>
-          St. George&rsquo;s (Šv. Jurgio) in Shenandoah, Pennsylvania
-          &mdash; organized by Father Andrius Strupinskas, SJ, a Jesuit
-          who fled Lithuania in 1869. The founding date is contested:
-          sources cite 1872, 1874, 1886, and 1891, reflecting the
-          parish&rsquo;s complicated origins as a joint Polish-Lithuanian
-          congregation that reorganized as Lithuanian. The church building
-          dates to 1893. It was closed in 2006 and demolished in
-          2009&ndash;2010 &mdash; the diocese took approximately $1M in
-          parish savings despite a credible $360K repair estimate,
-          landmark status, and a community treaty.
-        </p>
-        <p className="text-muted text-xs">
-          Sources: <em>Lietuvių Kultūrinis Paveldas Amerikoje</em> (Lukas,
-          2009); Draugas archive 2008&ndash;2026; parish case file.
-        </p>
+      <aside className="mt-12 border-y border-rule py-7">
+        <div className="grid gap-7 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.35fr)] md:items-center">
+          <figure className="min-w-0">
+            <div className="relative aspect-[4/5] overflow-hidden bg-band">
+              <Image
+                src={firstParishPhoto.src}
+                alt={firstParishPhoto.alt}
+                fill
+                className="object-contain"
+                sizes="(min-width: 768px) 36vw, 100vw"
+                priority
+                unoptimized
+              />
+              <div className="absolute bottom-3 right-3 w-40 max-w-[52%] rounded border border-rule bg-background/95 p-2 shadow-sm">
+                <FirstParishLocatorMap />
+                <p className="mt-1 text-[10px] font-semibold leading-tight">
+                  Shenandoah, Pennsylvania
+                </p>
+              </div>
+            </div>
+            <figcaption className="mt-2 text-xs leading-relaxed text-muted">
+              <a
+                href={firstParishPhoto.evidenceUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="underline hover:text-foreground"
+              >
+                {firstParishPhoto.attribution}
+              </a>
+            </figcaption>
+          </figure>
+
+          <div className="min-w-0">
+            <p className="text-xs font-semibold uppercase text-muted">
+              The beginning
+            </p>
+            <h2 className="mt-1 font-serif text-2xl font-semibold leading-tight sm:text-3xl">
+              The first Lithuanian parish in America
+            </h2>
+            <p className="mt-4 leading-relaxed">
+              St. George&rsquo;s (Šv. Jurgio) in Shenandoah, Pennsylvania
+              &mdash; organized by Father Andrius Strupinskas, SJ, a Jesuit
+              who fled Lithuania in 1869. The founding date is contested:
+              sources cite 1872, 1874, 1886, and 1891, reflecting the
+              parish&rsquo;s complicated origins as a joint Polish-Lithuanian
+              congregation that reorganized as Lithuanian. The church building
+              dates to 1893. It was closed in 2006 and demolished in
+              2009&ndash;2010 &mdash; the diocese took approximately $1M in
+              parish savings despite a credible $360K repair estimate,
+              landmark status, and a community treaty.
+            </p>
+
+            <Link
+              href={`/parishes/${firstParishSlug}`}
+              className="mt-4 inline-block font-semibold underline hover:text-accent"
+            >
+              Read the full St. George parish record
+            </Link>
+
+            <div className="mt-5 border-t border-rule pt-4 text-xs leading-relaxed text-muted">
+              <p className="font-semibold text-foreground">Sources</p>
+              <p className="mt-1">
+                <a
+                  href="https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline hover:text-foreground"
+                >
+                  Algis Lukas, <em>Lietuvių Kultūrinis Paveldas Amerikoje</em>{" "}
+                  (2009)
+                </a>
+                {" · "}
+                {firstParishDraugasIssues.map((issue, index) => (
+                  <span key={issue.href}>
+                    {index === 0 ? "Draugas: " : ", "}
+                    <a
+                      href={issue.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="underline hover:text-foreground"
+                    >
+                      {issue.date}
+                    </a>
+                  </span>
+                ))}
+                {" · "}
+                <Link
+                  href={`/parishes/${firstParishSlug}`}
+                  className="underline hover:text-foreground"
+                >
+                  Parish case file and citations
+                </Link>
+              </p>
+            </div>
+          </div>
+        </div>
       </aside>
 
       {/* ── The exhibit: decade pulse + timeline (one title system) ── */}

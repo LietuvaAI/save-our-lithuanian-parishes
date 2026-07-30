@@ -383,11 +383,11 @@ export default function ParishThreads({
         </ul>
       )}
 
-      <div className="xl:flex xl:gap-8 xl:items-start">
-      <div className="overflow-x-auto xl:flex-1 xl:min-w-0">
+      <div className="min-w-0 max-w-full xl:flex xl:gap-8 xl:items-start">
+      <div className="w-full min-w-0 max-w-full overflow-x-auto xl:flex-1">
         <svg
           viewBox={`0 0 ${W} ${model.H}`}
-          className="w-full h-auto"
+          className="block w-full max-w-none h-auto"
           style={{ minWidth: 780 }}
           role="img"
           aria-label={`Each of the ${model.total} documented parishes as one thread, from its founding decade to its present end state; closed parishes thread on to their building's fate.`}
@@ -667,25 +667,27 @@ export default function ParishThreads({
       </div>
 
       {/* Accessible data table (visually hidden) */}
-      <table className="sr-only">
-        <caption>
-          Documented parishes by end state, and building fates of the closed
-        </caption>
-        <tbody>
-          {model.groups.map((g) => (
-            <tr key={g}>
-              <td>{GROUP_LABEL[g]}</td>
-              <td>{model.counts[g]}</td>
-            </tr>
-          ))}
-          {Object.entries(model.fateCounts).map(([k, n]) => (
-            <tr key={k}>
-              <td>Closed — {FATE_LABEL[k as FateKey]}</td>
-              <td>{n}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="sr-only">
+        <table>
+          <caption>
+            Documented parishes by end state, and building fates of the closed
+          </caption>
+          <tbody>
+            {model.groups.map((g) => (
+              <tr key={g}>
+                <td>{GROUP_LABEL[g]}</td>
+                <td>{model.counts[g]}</td>
+              </tr>
+            ))}
+            {Object.entries(model.fateCounts).map(([k, n]) => (
+              <tr key={k}>
+                <td>Closed — {FATE_LABEL[k as FateKey]}</td>
+                <td>{n}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

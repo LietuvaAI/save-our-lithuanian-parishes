@@ -1,13 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import contextPointsData from "@/data/context-points.json";
 import registry from "@/data/registry-unified.json";
 import { EndStatePill } from "@/components/EndStatePill";
+import RecordLensMap, {
+  type RecordLensPoint,
+} from "@/components/RecordLensMap";
 import {
   isPublicRecord,
   isUS,
+  toScopedParish,
   type RegParish,
 } from "@/lib/registry-scope";
 import { canonicalProfileHrefForRegistrySlug } from "@/lib/parish-profile";
+import type { EndState, EndStateGroup } from "@/lib/end-state";
+import {
+  recordMarkColor,
+  recordMarkShape,
+} from "@/lib/record-mark";
 
 export const metadata: Metadata = {
   title: "Lithuanian Protestant and independent congregations",
@@ -28,6 +38,17 @@ type Rec = Omit<RegParish, "names" | "sources" | "locked"> & {
   city_history?: string[];
   name_variants?: string[];
 };
+type ContextPoint = {
+  slug: string;
+  name: string;
+  city: string;
+  state: string;
+  x: number;
+  y: number;
+  group: EndStateGroup;
+  congregationClass: string | null;
+  href: string | null;
+};
 
 const CONGS = (registry as { parishes: Rec[] }).parishes.filter(
   (p) =>
@@ -36,12 +57,39 @@ const CONGS = (registry as { parishes: Rec[] }).parishes.filter(
     isPublicRecord(p),
 );
 const sourcesOf = (c: Rec): RecSource[] => c.sources ?? [];
-const isConfirmedActive = (c: Rec): boolean =>
-  c.locked?.status === "standing" ||
-  sourcesOf(c).some((s) => s.currentStatus === "standing");
-
-const confirmed = CONGS.filter(isConfirmedActive);
-const historical = CONGS.filter((c) => !isConfirmedActive(c));
+const statusForCongregation = (c: Rec): EndState =>
+  toScopedParish(c as RegParish).endState;
+const activeCongregations = CONGS.filter(
+  (congregation) => statusForCongregation(congregation) === "active_parish",
+);
+const transferredCongregations = CONGS.filter(
+  (congregation) => statusForCongregation(congregation) === "transferred",
+);
+const unverifiedCongregations = CONGS.filter(
+  (congregation) => statusForCongregation(congregation) === "unverified",
+);
+const congregationHrefs = new Set(
+  CONGS.map(
+    (congregation) =>
+      canonicalProfileHrefForRegistrySlug(congregation.slug) ??
+      `/parishes/${congregation.slug}`,
+  ),
+);
+const protestantMapPoints = (contextPointsData.points as ContextPoint[])
+  .filter((point) => point.href && congregationHrefs.has(point.href))
+  .map(
+    (point): RecordLensPoint => ({
+      ...point,
+      color: recordMarkColor(point.group),
+      shape: recordMarkShape(point.congregationClass),
+      detail:
+        point.group === "active_parish"
+          ? "active Lithuanian parish"
+          : point.group === "transferred"
+            ? "congregation continues; Lithuanian identity ended"
+            : "current Lithuanian status being verified",
+    }),
+  );
 
 function sourceLabel(axis: string): string {
   const LABELS: Record<string, string> = {
@@ -57,7 +105,7 @@ function sourceLabel(axis: string): string {
 
 function CongCard({ c }: { c: Rec }) {
   const axes = [...new Set(sourcesOf(c).map((s) => s.axis).filter(Boolean))] as string[];
-  const active = isConfirmedActive(c);
+  const status = statusForCongregation(c);
   const name = c.names?.lt || c.names?.en || c.name_variants?.[0] || c.slug;
   const currentCity = c.city ?? c.city_history?.[0] ?? "";
   const isChicagoArea =
@@ -83,7 +131,7 @@ function CongCard({ c }: { c: Rec }) {
           {name}
         </Link>
         <div className="flex items-center gap-2">
-          <EndStatePill value={active ? "active_parish" : "unverified"} />
+          <EndStatePill value={status} />
           <span className="text-sm text-muted">
             {city}, {c.state}
           </span>
@@ -137,72 +185,106 @@ function CongCard({ c }: { c: Rec }) {
 
 export default function ProtestantPage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12">
-      <p className="text-xs uppercase tracking-widest text-muted">
-        The research record
+    <article className="mx-auto max-w-5xl px-4 py-12">
+      <p className="text-xs uppercase text-muted">
+        Tradition view
       </p>
       <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
         Lithuanian Protestant and independent congregations
       </h1>
-      <p className="mt-4 text-lg text-muted leading-relaxed">
-        The majority of Lithuanian immigrants to the United States came from
-        the predominantly Catholic regions of Lithuania. But the record also
-        documents a smaller, distinct current: Lithuanian evangelical Lutheran
-        congregations, Reformed and Baptist communities, and independent
-        schismatic groups that did not follow either Rome or the{" "}
-        <Link href="/national-catholic" className="underline hover:text-foreground">
-          Polish National Catholic Church
-        </Link>
-        . These are part of the full geography of Lithuanian religious life in
-        America — documented here as historical witness alongside the Catholic record.
+      <p className="mt-4 max-w-3xl font-serif text-xl leading-relaxed sm:text-2xl">
+        Where did Lithuanian Protestant congregations take root, and what
+        remains alive?
       </p>
 
-      {/* Active congregations */}
-      <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
-          {confirmed.length} active congregations
-        </h2>
-        <p className="mt-1 text-sm text-muted">
-          Current and case-file evidence identifies these as the standing
-          Lithuanian Lutheran congregations in the United States.
+      <section className="mt-10 border-y border-rule py-8">
+        <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1.5fr)_minmax(16rem,0.7fr)]">
+          <RecordLensMap
+            points={protestantMapPoints}
+            ariaLabel={`${CONGS.length} Lithuanian Protestant parish and congregation records in the United States`}
+            legend={[
+              {
+                label: `Active Lithuanian parish · ${activeCongregations.length}`,
+                color: recordMarkColor("active_parish"),
+                shape: "square",
+              },
+              {
+                label: `Lives on, another community · ${transferredCongregations.length}`,
+                color: recordMarkColor("transferred"),
+                shape: "square",
+              },
+              {
+                label: `Being verified · ${unverifiedCongregations.length}`,
+                color: recordMarkColor("unverified"),
+                shape: "square",
+              },
+            ]}
+          />
+          <div>
+            <p className="font-serif text-6xl font-semibold leading-none">
+              {activeCongregations.length}
+            </p>
+            <h2 className="mt-3 font-serif text-2xl font-semibold leading-tight">
+              Lithuanian Protestant parish remains active
+            </h2>
+            <p className="mt-3 leading-relaxed text-muted">
+              Tėviškės Parish in Darien, Illinois, is the congregation whose
+              present Lithuanian parish life remains active.
+            </p>
+          </div>
+        </div>
+        <p className="mt-5 border-t border-rule pt-3 text-xs leading-relaxed text-muted">
+          Scope: {CONGS.length} public U.S. Protestant parish and congregation
+          records · Registry Revision {registry.registryRevision.version},{" "}
+          {registry.registryRevision.date}
+          {" · "}
+          <Link href="/about-the-data" className="underline hover:text-accent">
+            About the data
+          </Link>
         </p>
+      </section>
+
+      <section className="mt-10 max-w-3xl border-l-4 border-rule py-1 pl-4 text-sm leading-relaxed">
+        <h2 className="font-serif text-lg font-semibold">
+          Lithuanian Lutheranism in America
+        </h2>
+        <p className="mt-2 text-muted">
+          The tradition grew from Prussian Lithuanian communities of the
+          Klaipėda region. Congregations in Illinois and Connecticut maintained
+          their own governance and Lithuanian worship alongside the much larger
+          Catholic diaspora.
+        </p>
+      </section>
+
+      <section className="mt-12 max-w-3xl">
+        <h2 className="font-serif text-2xl font-semibold">
+          Active Lithuanian parish · {activeCongregations.length}
+        </h2>
         <div className="mt-4 space-y-4">
-          {confirmed.map((c) => (
+          {activeCongregations.map((c) => (
             <CongCard key={c.slug} c={c} />
           ))}
         </div>
       </section>
 
-      {/* Context box */}
-      <section className="mt-8 rounded-lg border border-rule px-5 py-4 text-sm leading-relaxed space-y-2">
-        <h2 className="font-serif text-base font-semibold">
-          Lithuanian Lutheranism in America
+      <section className="mt-10 max-w-3xl">
+        <h2 className="font-serif text-2xl font-semibold">
+          Lives on, another community · {transferredCongregations.length}
         </h2>
-        <p className="text-muted">
-          The Lithuanian Lutheran tradition in America is rooted in the
-          Prussian Lithuanian communities of the Klaipėda region, where
-          Lutheranism had been the dominant faith since the Reformation.
-          Immigrant communities in Illinois and Connecticut maintained their
-          own congregations and Lithuanian-language worship, distinct from
-          the largely Catholic Lithuanian-American mainstream. Two of the four
-          confirmed congregations are in the Chicago area, reflecting the
-          deep roots of Lithuanian community life there.
+        <p className="mt-1 text-sm text-muted">
+          The institution continues, but current Lithuanian identity or worship
+          does not.
         </p>
-        <p className="text-muted">
-          Wolkovich-Valkavičius documented these congregations in{" "}
-          <em>Lithuanian Religious Life in America</em> (Vol. 3, 1998) alongside
-          the Catholic parishes, recognizing that the full record of Lithuanian
-          religious life in America cannot be told without them. The{" "}
-          <em>Draugas</em> archive, the Lithuanian Catholic daily, also
-          occasionally noted their activities as part of Lithuanian community
-          news.
-        </p>
+        <div className="mt-4 space-y-4">
+          {transferredCongregations.map((c) => (
+            <CongCard key={c.slug} c={c} />
+          ))}
+        </div>
       </section>
 
-      {/* Historical record */}
-      <section className="mt-10">
+      <section className="mt-10 max-w-3xl">
         <h2 className="font-serif text-2xl font-semibold">
-          {historical.length} additional congregations — current status unverified
+          Being verified · {unverifiedCongregations.length}
         </h2>
         <p className="mt-1 text-sm text-muted">
           These congregations are documented in historical sources, but their
@@ -210,43 +292,19 @@ export default function ProtestantPage() {
           classified as closed unless a source records a closure.
         </p>
         <div className="mt-4 space-y-4">
-          {historical.map((c) => (
+          {unverifiedCongregations.map((c) => (
             <CongCard key={c.slug} c={c} />
           ))}
         </div>
       </section>
 
-      {/* Data note */}
-      <section className="mt-10 rounded-lg border border-rule px-4 py-3.5 text-sm text-muted leading-relaxed">
-        <p>
-          Every congregation retains its source ledger and current-status
-          confidence. Historical attestation is not treated as proof that a
-          congregation remains active. See{" "}
-          <Link
-            href="/about/sources-and-archives"
-            className="underline hover:text-foreground"
-          >
-            Sources &amp; Archives
-          </Link>
-          {" "}for the evidence hierarchy. See a congregation missing?{" "}
-          <Link href="/report" className="underline hover:text-foreground">
-            Report it
-          </Link>
-          .
-        </p>
-      </section>
-
-      <p className="mt-8 text-sm text-muted">
-        <Link href="/" className="underline hover:text-foreground">
-          ← Back to the map
-        </Link>
-        {" · "}
+      <p className="mt-10 max-w-3xl border-t border-rule pt-4 text-sm text-muted">
         <Link href="/national-catholic" className="underline hover:text-foreground">
           National Catholic parishes
         </Link>
         {" · "}
         <Link href="/record" className="underline hover:text-foreground">
-          The full record
+          See the full record
         </Link>
       </p>
     </article>

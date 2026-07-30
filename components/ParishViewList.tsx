@@ -1,10 +1,32 @@
 import Link from "next/link";
+import contextPointsData from "@/data/context-points.json";
 import { EndStatePill } from "@/components/EndStatePill";
 import {
   OWNERSHIP_SHORT,
   type Parish,
 } from "@/lib/parishes";
-import { resolveParishEndState } from "@/lib/end-state";
+import {
+  resolveParishEndState,
+  type EndState,
+} from "@/lib/end-state";
+
+const canonicalStatusByProfile = new Map(
+  (
+    contextPointsData.points as Array<{
+      href: string | null;
+      group: EndState;
+    }>
+  )
+    .filter((parish) => parish.href)
+    .map((parish) => [parish.href!, parish.group]),
+);
+
+function statusForParish(parish: Parish) {
+  return (
+    canonicalStatusByProfile.get(`/parishes/${parish.slug}`) ??
+    resolveParishEndState(parish)
+  );
+}
 
 export default function ParishViewList({
   parishes,
@@ -31,7 +53,7 @@ export default function ParishViewList({
                 {parish.yearClosed ? ` · Closed ${parish.yearClosed}` : ""}
               </p>
             </div>
-            <EndStatePill value={resolveParishEndState(parish)} />
+            <EndStatePill value={statusForParish(parish)} />
           </div>
 
           {parish.situation && (

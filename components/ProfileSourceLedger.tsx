@@ -20,9 +20,9 @@ const SOURCE_SECTIONS: {
 }[] = [
   {
     id: "direct",
-    label: "Primary and current evidence",
+    label: "Contemporary and institutional evidence",
     description:
-      "Dated newspaper issues, current institutional records, and documentary image or object records.",
+      "Dated reporting, current institutional records, and documentary image or object records. A contemporary report is not treated as the legal record of a formal act.",
     groups: ["newspaper", "current", "visual"],
   },
   {

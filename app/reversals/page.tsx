@@ -212,7 +212,7 @@ export default function ReversalsPage() {
       <p className="mt-6 text-sm text-muted">
         In the Lithuanian record itself,{" "}
         <Link href="/record" className="underline hover:text-foreground">
-          no parish in the case-filed record
+          no documented parish
         </Link>{" "}
         was saved by an appeal filed after the decree — the lesson of these
         precedents is that the window is <em>before and during</em>, not after.

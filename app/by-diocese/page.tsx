@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import CompositionBar from "@/components/CompositionBar";
-import DioceseGrid from "@/components/DioceseGrid";
-import DioceseMap, { type DioceseMapCounts } from "@/components/DioceseMap";
+import registry from "@/data/registry-unified.json";
+import DioceseExplorer, {
+  type DioceseExplorerEntry,
+} from "@/components/DioceseExplorer";
+import DioceseClosureRanking from "@/components/DioceseClosureRanking";
 import { scopedParishes, type ScopedParish } from "@/lib/registry-scope";
-import {
-  GROUP_ORDER,
-  toGroup,
-  isLoss,
-  type EndStateGroup,
-} from "@/lib/end-state";
+import { toGroup } from "@/lib/end-state";
 
 export const metadata: Metadata = {
   title: "By Diocese",
@@ -17,153 +14,123 @@ export const metadata: Metadata = {
     "Lithuanian parishes grouped by Catholic diocese — which dioceses preserved their Lithuanian heritage and which did not.",
 };
 
-export interface DioceseSummary {
-  name: string;
-  shortName: string;
-  parishes: ScopedParish[];
-  counts: Record<EndStateGroup, number>;
-  closedCount: number;
-  aliveCount: number;
-}
-
-function buildDioceses(): DioceseSummary[] {
+function buildDioceses(): DioceseExplorerEntry[] {
   const byDiocese = new Map<string, ScopedParish[]>();
-  for (const p of scopedParishes()) {
-    const key = p.diocese ?? "Diocese unassigned";
+  for (const parish of scopedParishes()) {
+    const key = parish.diocese ?? "Diocese unassigned";
     if (!byDiocese.has(key)) byDiocese.set(key, []);
-    byDiocese.get(key)!.push(p);
+    byDiocese.get(key)!.push(parish);
   }
 
-  const summaries: DioceseSummary[] = [];
-  for (const [name, parishes] of byDiocese) {
-    const counts = {} as Record<EndStateGroup, number>;
-    for (const g of GROUP_ORDER) counts[g] = 0;
-    for (const p of parishes) counts[toGroup(p.endState)]++;
-    summaries.push({
-      name,
-      shortName: name.replace(/^(Arch)?diocese of /i, ""),
-      parishes: parishes.sort(
-        (a, b) =>
-          (a.founded ?? 9999) - (b.founded ?? 9999) ||
-          a.name.localeCompare(b.name),
-      ),
-      counts,
-      closedCount: parishes.filter((p) => isLoss(p.endState)).length,
-      aliveCount: parishes.filter((p) => toGroup(p.endState) === "active_parish").length,
-    });
-  }
-  summaries.sort(
-    (a, b) => b.parishes.length - a.parishes.length || a.name.localeCompare(b.name),
-  );
-  return summaries;
+  return [...byDiocese.entries()]
+    .map(([name, parishes]) => {
+      const groups = parishes.map((parish) => toGroup(parish.endState));
+      return {
+        name,
+        shortName: name.replace(/^(Arch)?diocese of /i, ""),
+        total: parishes.length,
+        ended: groups.filter(
+          (group) => group === "closed" || group === "transferred",
+        ).length,
+        formalClosed: groups.filter((group) => group === "closed").length,
+        transferred: groups.filter((group) => group === "transferred").length,
+        active: groups.filter((group) => group === "active_parish").length,
+        unresolved: groups.filter((group) => group === "unresolved").length,
+        parishes: parishes
+          .sort(
+            (a, b) =>
+              (a.founded ?? 9999) - (b.founded ?? 9999) ||
+              a.name.localeCompare(b.name),
+          )
+          .map((parish) => ({
+            slug: parish.slug,
+            name: parish.name,
+            city: parish.city,
+            state: parish.state,
+            founded: parish.founded,
+            closed: parish.closed,
+            endState: parish.endState,
+            profileHref: parish.profileHref,
+          })),
+      };
+    })
+    .sort(
+      (a, b) => b.total - a.total || a.name.localeCompare(b.name),
+    );
 }
 
 export default function ByDiocesePage() {
   const dioceses = buildDioceses();
-  const named = dioceses.filter((d) => d.name !== "Diocese unassigned");
-  const totalParishes = dioceses.reduce((s, d) => s + d.parishes.length, 0);
-  const totalAlive = dioceses.reduce((s, d) => s + d.aliveCount, 0);
-  const totalClosed = dioceses.reduce((s, d) => s + d.closedCount, 0);
-  const emptied = named.filter((d) => d.aliveCount === 0).length;
-
-  const totals = {} as Record<EndStateGroup, number>;
-  for (const g of GROUP_ORDER) totals[g] = 0;
-  for (const d of dioceses)
-    for (const g of GROUP_ORDER) totals[g] += d.counts[g];
+  const named = dioceses.filter(
+    (diocese) => diocese.name !== "Diocese unassigned",
+  );
+  const totalParishes = dioceses.reduce(
+    (sum, diocese) => sum + diocese.total,
+    0,
+  );
+  const totalEnded = dioceses.reduce(
+    (sum, diocese) => sum + diocese.ended,
+    0,
+  );
+  const emptied = named.filter((diocese) => diocese.active === 0).length;
+  const unassigned =
+    dioceses.find((diocese) => diocese.name === "Diocese unassigned")?.total ??
+    0;
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-12">
-      <p className="text-xs uppercase tracking-widest text-muted">
-        The record · by place
+    <article className="mx-auto max-w-5xl px-4 py-12">
+      <p className="text-xs uppercase text-muted">
+        Institutional view
       </p>
-      <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
+      <h1 className="mt-1 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
         By Diocese
       </h1>
-      <div className="mt-3 space-y-4 leading-relaxed max-w-3xl">
-        <p>
-          {`${named.length} Catholic dioceses held the ${totalParishes} documented
-          Lithuanian parishes of the United States. In ${emptied} of them, no
-          Lithuanian parish remains active today.`}{" "}
-          Each bar below shows what happened to one diocese&rsquo;s
-          Lithuanian parishes; every parish links to its full record.
-        </p>
-      </div>
-
-      {/* Summary stats */}
-      <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-3xl">
-        <div className="rounded-lg border border-rule p-4 text-center">
-          <p className="font-serif text-3xl font-semibold">{named.length}</p>
-          <p className="mt-1 text-sm text-muted">Dioceses</p>
-        </div>
-        <div className="rounded-lg border border-rule p-4 text-center">
-          <p
-            className="font-serif text-3xl font-semibold"
-            style={{ color: "var(--es-active)" }}
-          >
-            {totalAlive}
-          </p>
-          <p className="mt-1 text-sm text-muted">Still active</p>
-        </div>
-        <div className="rounded-lg border border-rule p-4 text-center">
-          <p
-            className="font-serif text-3xl font-semibold"
-            style={{ color: "var(--es-closed)" }}
-          >
-            {totalClosed}
-          </p>
-          <p className="mt-1 text-sm text-muted">Closed</p>
-        </div>
-      </div>
-
-      {/* The whole record in one bar */}
-      <section className="mt-10 max-w-3xl">
-        <CompositionBar counts={totals} height={36} />
-      </section>
-
-      {/* The geography of the loss */}
-      <section className="mt-12">
-        <h2 className="font-serif text-2xl font-semibold">
-          The map of the dioceses
-        </h2>
-        <p className="mt-1 text-muted leading-relaxed max-w-3xl mb-5">
-          Every Catholic diocese in the United States, shaded by the share of
-          its documented Lithuanian parishes now closed.
-        </p>
-        <DioceseMap
-          counts={Object.fromEntries(
-            named.map((d) => [
-              d.shortName,
-              {
-                total: d.parishes.length,
-                closed: d.closedCount,
-                alive: d.aliveCount,
-              },
-            ]),
-          ) as DioceseMapCounts}
-        />
-        <p className="mt-3 text-xs text-muted border-t border-rule pt-3 max-w-3xl">
-          Boundaries: US Census county geometry (public domain) merged per
-          diocese via the public-domain county&ndash;diocese crosswalk
-          (kburchfiel/us_diocese_mapper). Diocese lines follow county lines;
-          the few counties split between dioceses follow the crosswalk&rsquo;s
-          primary assignment.
-        </p>
-      </section>
-
-      {/* Diocese cards */}
-      <div className="mt-10">
-        <DioceseGrid dioceses={dioceses} />
-      </div>
-
-      {/* Footer note */}
-      <p className="mt-10 text-sm text-muted border-t border-rule pt-4">
-        Diocese assignments are resolved from historical source entries
-        (Wolkovich, Michelsonas) and geographic city&ndash;diocese lookup.{" "}
-        <Link href="/record" className="underline hover:text-foreground">
-          See the full record
-        </Link>
-        .
+      <p className="mt-4 max-w-3xl font-serif text-xl leading-relaxed sm:text-2xl">
+        Which dioceses preserved Lithuanian parish life, and where did it end?
       </p>
-    </div>
+
+      <section className="mt-10 border-y border-rule py-8">
+        <DioceseExplorer dioceses={named} />
+        <div className="mt-6 grid gap-4 border-t border-rule pt-5 sm:grid-cols-[minmax(0,1fr)_minmax(16rem,0.55fr)]">
+          <div>
+            <p className="font-serif text-2xl font-semibold leading-tight">
+              {emptied} of {named.length} dioceses have no active Lithuanian
+              parish left.
+            </p>
+            <p className="mt-2 leading-relaxed text-muted">
+              Across the national record, Lithuanian parish life has formally
+              closed or transferred to another community at {totalEnded} of{" "}
+              {totalParishes} Roman Catholic parish records.
+            </p>
+          </div>
+          <p className="text-xs leading-relaxed text-muted">
+            Scope: {totalParishes} U.S. Roman Catholic parish records across{" "}
+            {named.length} named dioceses
+            {unassigned > 0 ? `; ${unassigned} remain unassigned` : ""} ·
+            Registry Revision {registry.registryRevision.version},{" "}
+            {registry.registryRevision.date}
+            {" · "}
+            <Link
+              href="/about-the-data"
+              className="underline hover:text-accent"
+            >
+              About the data
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      <DioceseClosureRanking
+        dioceses={named}
+        revision={String(registry.registryRevision.version)}
+        revisionDate={registry.registryRevision.date}
+      />
+
+      <p className="mt-10 text-sm text-muted">
+        <Link href="/record" className="underline hover:text-foreground">
+          See the complete Record
+        </Link>
+      </p>
+    </article>
   );
 }

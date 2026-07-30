@@ -17,9 +17,11 @@ import {
 export function EndStatePill({
   value,
   size = "md",
+  label,
 }: {
   value: EndState;
   size?: "md" | "lg";
+  label?: string;
 }) {
   return (
     <span
@@ -33,7 +35,7 @@ export function EndStatePill({
         color: END_STATE_TEXT[value],
       }}
     >
-      {END_STATE_LABEL[value]}
+      {label ?? END_STATE_LABEL[value]}
     </span>
   );
 }

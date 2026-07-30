@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import RegistryTable, { type RegistryRow } from "@/components/RegistryTable";
 import { toScopedParish, usRegistryParishes } from "@/lib/registry-scope";
-import { resolveAlertStatus, resolveIdentity, resolveFate } from "@/lib/unified-status";
+import { toGroup } from "@/lib/end-state";
+import { resolveAlertStatus, resolveFate } from "@/lib/unified-status";
 
 export const metadata: Metadata = {
   title: "The Record",
@@ -19,8 +20,10 @@ function buildRows(): RegistryRow[] {
       city: scoped.city,
       state: scoped.state,
       country: scoped.country,
+      recordType: scoped.recordType,
       comparator: scoped.comparator,
-      identity: resolveIdentity(scoped.identity),
+      endState: scoped.endState,
+      statusGroup: toGroup(scoped.endState),
       alert: resolveAlertStatus(scoped.alertKind, scoped.onWatch),
       fate: resolveFate(scoped.buildingFate),
       founded: scoped.founded == null ? null : String(scoped.founded),
@@ -37,16 +40,35 @@ function buildRows(): RegistryRow[] {
 export default function RecordPage() {
   const rows = buildRows();
   const total = rows.length;
+  const romanCatholicParishes = rows.filter(
+    (row) =>
+      row.congregationClass === "roman_catholic" &&
+      row.recordType === "parish",
+  ).length;
+  const romanCatholicMissions = rows.filter(
+    (row) =>
+      row.congregationClass === "roman_catholic" &&
+      row.recordType === "misija",
+  ).length;
+  const nationalIndependent = rows.filter(
+    (row) =>
+      row.congregationClass === "national_catholic_pncc" ||
+      row.congregationClass === "independent_catholic",
+  ).length;
+  const protestant = rows.filter(
+    (row) => row.congregationClass === "non_catholic_christian",
+  ).length;
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
       <h1 className="font-serif text-3xl font-semibold">The Record</h1>
       <div className="mt-3 space-y-4 leading-relaxed max-w-3xl">
         <p>
-          {total} records of Lithuanian parish life across the United States —
-          Roman Catholic ethnic parishes and missions, National and independent
-          Catholic parishes and congregations, and Protestant parishes and
-          congregations.
+          {total} records of Lithuanian parish life across the United States:{" "}
+          {romanCatholicParishes} Roman Catholic parishes,{" "}
+          {romanCatholicMissions} Roman Catholic missions,{" "}
+          {nationalIndependent} National or independent Catholic communities,
+          and {protestant} Protestant communities.
         </p>
         <p className="text-muted">
           The record extends backward through the archives toward the first

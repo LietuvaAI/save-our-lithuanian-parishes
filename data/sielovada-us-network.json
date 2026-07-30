@@ -107,8 +107,7 @@
       "address": "25335 W. Nine Mile Rd., Southfield, MI 48033",
       "directoryType": "parish",
       "networkClass": "active_parish",
-      "ministry": "Active Lithuanian parish serving metropolitan Detroit.",
-      "clergy": "Kun. Tomas Miliauskas, MIC, pastor",
+      "ministry": "Active Lithuanian parish serving metropolitan Detroit. Fr. Tomas Miliauskas departed in May 2026; no successor has been named, and proposed archdiocesan restructuring could end weekend Mass.",
       "registrySlug": "providence-southfield-mi",
       "officialSite": "https://www.divineprovidencechurch.com",
       "sourceRefs": ["sielovada-north-america"]
@@ -136,7 +135,7 @@
       "address": "53 Capitol Ave., Hartford, CT 06106",
       "directoryType": "parish",
       "networkClass": "directory_conflict",
-      "ministry": "Still listed by Sielovada, but current parish research records that regular Masses ended May 30, 2026. The community's preservation campaign continues.",
+      "ministry": "Regular Masses ended May 30, 2026. The community's preservation campaign continues.",
       "registrySlug": "trinity-hartford-ct",
       "officialSite": "https://holytrinityhartford.org",
       "sourceRefs": ["sielovada-north-america"],
