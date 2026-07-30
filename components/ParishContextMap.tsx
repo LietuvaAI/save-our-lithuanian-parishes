@@ -11,13 +11,9 @@
 // dispatch map's Vilija-approved v6 construction spec (2026-07-26):
 // 1.5:1 landscape frame padded from the diocese bbox; cell-based same-city
 // fanning at zoom scale (subject never displaced); living parishes as open
-// rings, lost as filled dots; subject enlarged with a dashed halo; label
-// HIERARCHY over completeness — subject always (with sub-line), everything
-// inside the subject diocese named, outside it only canonical parishes,
-// quiet; unresolved parishes bold-ink and always explained; collision-
-// avoiding placement with leader lines and text halos. Colors are the
-// site's own CSS variables (dark mode included), which the dispatch
-// renderer mirrors from globals.css.
+// rings, other outcomes as filled dots; and the subject enlarged with a
+// dashed halo. The profile version deliberately labels only the subject so
+// the parish, diocese, and status pattern remain readable at phone widths.
 // ============================================================================
 
 import { useMemo, useState } from "react";
@@ -55,6 +51,15 @@ interface OverlayDiocese {
 
 const ASPECT = 1.5;
 const ALIVE = new Set(["active_parish", "mass_continues"]);
+type MapFilter = "all" | "diocese" | "living" | "closed" | "other";
+
+const MAP_FILTERS: { value: MapFilter; label: string }[] = [
+  { value: "all", label: "All nearby" },
+  { value: "diocese", label: "This diocese" },
+  { value: "living", label: "Living worship" },
+  { value: "closed", label: "Closed" },
+  { value: "other", label: "Other outcomes" },
+];
 
 const STATE_WORD: Record<EndStateGroup, string> = {
   active_parish: GROUP_LABEL.active_parish,
@@ -65,23 +70,21 @@ const STATE_WORD: Record<EndStateGroup, string> = {
   unverified: GROUP_LABEL.unverified,
 };
 
-const isNameable = (p: CtxPoint) =>
-  !/^\(|unnamed|^record$/i.test(p.name) && p.name !== p.slug;
-
 interface Placed extends CtxPoint {
   px: number;
   py: number;
 }
-interface LabelBox {
-  x: number;
-  y: number;
-  w: number;
-  h: number;
-}
 
-export default function ParishContextMap({ slug }: { slug: string }) {
+export default function ParishContextMap({
+  slug,
+  dioceseLabel,
+}: {
+  slug: string;
+  dioceseLabel?: string;
+}) {
   const router = useRouter();
   const [hot, setHot] = useState<CtxPoint | null>(null);
+  const [filter, setFilter] = useState<MapFilter>("all");
 
   const model = useMemo(() => {
     const points = (contextPoints.points as CtxPoint[]).filter(
@@ -139,125 +142,8 @@ export default function ParishContextMap({ slug }: { slug: string }) {
       });
     }
 
-    // ── Label plan: hierarchy over completeness ──
-    const est = (text: string, fs: number): { w: number; h: number } => ({
-      w: text.length * fs * 0.56,
-      h: fs * 1.15,
-    });
-    const reserved: LabelBox[] = [];
-    const inFrame = (b: LabelBox) =>
-      b.x >= x0 && b.x + b.w <= x0 + w && b.y >= y0 && b.y + b.h <= y0 + h;
-    const collides = (b: LabelBox) =>
-      reserved.some(
-        (r) =>
-          b.x < r.x + r.w && b.x + b.w > r.x && b.y < r.y + r.h && b.y + b.h > r.y,
-      ) ||
-      placed.some(
-        (p) =>
-          p.px > b.x - S * 0.4 && p.px < b.x + b.w + S * 0.4 &&
-          p.py > b.y - S * 0.4 && p.py < b.y + b.h + S * 0.4,
-      );
-
-    const candidates = (p: Placed, bw: number, bh: number): LabelBox[] => {
-      const out: LabelBox[] = [];
-      for (const r of [1.4 * S, 2.4 * S, 3.6 * S]) {
-        for (let i = 0; i < (r === 1.4 * S ? 8 : r === 2.4 * S ? 6 : 4); i++) {
-          const n = r === 1.4 * S ? 8 : r === 2.4 * S ? 6 : 4;
-          const a = (2 * Math.PI * i) / n - Math.PI / 2;
-          out.push({
-            x: p.px + r * Math.cos(a) - (Math.cos(a) < -0.3 ? bw : Math.cos(a) > 0.3 ? 0 : bw / 2),
-            y: p.py + r * Math.sin(a) - bh / 2,
-            w: bw,
-            h: bh,
-          });
-        }
-      }
-      return out;
-    };
-
-    interface PlannedLabel {
-      p: Placed;
-      box: LabelBox;
-      fs: number;
-      bold: boolean;
-      quiet: boolean;
-      leader: boolean;
-    }
-    const labels: PlannedLabel[] = [];
-    const tryLabel = (
-      p: Placed,
-      fs: number,
-      bold: boolean,
-      quiet: boolean,
-      force: boolean,
-    ) => {
-      for (const scale of force ? [1, 0.85] : [1]) {
-        const f = fs * scale;
-        const { w: bw, h: bh } = est(p.name, f);
-        for (const c of candidates(p, bw, bh)) {
-          if (inFrame(c) && !collides(c)) {
-            reserved.push(c);
-            labels.push({
-              p, box: c, fs: f, bold, quiet,
-              leader:
-                Math.hypot(c.x + bw / 2 - p.px, c.y + bh / 2 - p.py) > 1.7 * S + bw / 2,
-            });
-            return true;
-          }
-        }
-      }
-      if (force) {
-        // Force-place beside the dot — and RESERVE it (the hard-learned rule).
-        const f = fs * 0.85;
-        const { w: bw, h: bh } = est(p.name, f);
-        const box = { x: p.px + S, y: p.py - bh / 2, w: bw, h: bh };
-        reserved.push(box);
-        labels.push({ p, box, fs: f, bold, quiet, leader: false });
-        return true;
-      }
-      return false;
-    };
-
     const subjPlaced =
       placed.find((p) => p.slug === slug) ?? { ...subject, px: subject.x, py: subject.y };
-    // Subject label box (title + sub-line) reserved first
-    {
-      const fs = 1.55 * S;
-      const { w: bw } = est(subject.name, fs);
-      const bh = fs * 1.15 + 1.12 * S * 1.3;
-      const box = {
-        x: subjPlaced.px - bw / 2,
-        y: subjPlaced.py - 2.0 * S - bh - 0.6 * S,
-        w: bw,
-        h: bh,
-      };
-      reserved.push(box);
-    }
-
-    const rest = placed.filter((p) => p.slug !== slug);
-    const unresolvedPts = rest.filter((p) => p.group === "unresolved");
-    const inDio = rest.filter(
-      (p) => p.diocese === subject.diocese && p.group !== "unresolved" && isNameable(p),
-    );
-    const outCanonical = rest.filter(
-      (p) =>
-        p.diocese !== subject.diocese &&
-        p.group !== "unresolved" &&
-        p.href?.startsWith("/parishes/") &&
-        isNameable(p),
-    );
-    for (const p of unresolvedPts) tryLabel(p, 1.18 * S, true, false, true);
-    for (const p of inDio) tryLabel(p, 1.18 * S, true, false, false);
-    for (const p of outCanonical) tryLabel(p, 0.95 * S, false, true, false);
-
-    // Neighbor diocese names — skip when the text would clip the frame
-    const dioNames = (overlay.dioceses as OverlayDiocese[])
-      .filter((d) => d.name !== dio.name)
-      .filter((d) => d.cx > x0 && d.cx < x0 + w && d.cy > y0 && d.cy < y0 + h)
-      .filter((d) => {
-        const tw = est(d.name, 1.0 * S).w;
-        return d.cx - tw / 2 > x0 && d.cx + tw / 2 < x0 + w;
-      });
 
     const inDiocese = points.filter((p) => p.diocese === subject.diocese);
     return {
@@ -267,15 +153,24 @@ export default function ParishContextMap({ slug }: { slug: string }) {
       vb: { x0, y0, w, h },
       S,
       placed,
-      labels,
-      dioNames,
       inDioceseN: inDiocese.length,
       closedN: inDiocese.filter((p) => p.group === "closed").length,
     };
   }, [slug]);
 
   if (!model) return null;
-  const { subject, subjPlaced, dio, vb, S, placed, labels, dioNames } = model;
+  const { subject, subjPlaced, dio, vb, S, placed } = model;
+  const visibleNeighbors = placed
+    .filter((p) => p.slug !== slug)
+    .filter((p) => {
+      if (filter === "diocese") return p.diocese === subject.diocese;
+      if (filter === "living") return ALIVE.has(p.group);
+      if (filter === "closed") return p.group === "closed";
+      if (filter === "other") {
+        return !ALIVE.has(p.group) && p.group !== "closed";
+      }
+      return true;
+    });
   const subjWord =
     subject.group === "closed" && subject.closed
       ? `closed ${subject.closed}`
@@ -283,12 +178,60 @@ export default function ParishContextMap({ slug }: { slug: string }) {
 
   return (
     <div>
-      <div className="rounded-lg border border-rule overflow-hidden">
+      <div className="overflow-hidden rounded-lg border border-rule">
+        <div className="flex flex-wrap items-end justify-between gap-2 border-b border-rule px-3 py-2.5">
+          <div>
+            <p className="text-[10px] font-semibold uppercase tracking-widest text-muted">
+              Diocese
+            </p>
+            <p className="mt-0.5 font-serif text-base font-semibold">
+              {dioceseLabel ?? dio.name}
+            </p>
+          </div>
+          <p className="text-xs text-muted">
+            <span className="font-semibold text-foreground">
+              {model.inDioceseN}
+            </span>{" "}
+            recorded
+            <span className="mx-1.5 text-rule">·</span>
+            <span className="font-semibold text-foreground">
+              {model.closedN}
+            </span>{" "}
+            closed
+          </p>
+        </div>
+        <div
+          className="flex flex-wrap gap-1 border-b border-rule px-3 py-2"
+          role="group"
+          aria-label="Filter parish markers"
+        >
+          {MAP_FILTERS.map((option) => {
+            const selected = filter === option.value;
+            return (
+              <button
+                key={option.value}
+                type="button"
+                aria-pressed={selected}
+                onClick={() => {
+                  setFilter(option.value);
+                  setHot(null);
+                }}
+                className={`rounded px-2 py-1 text-[10px] font-medium transition-colors ${
+                  selected
+                    ? "bg-foreground text-background"
+                    : "border border-rule text-muted hover:border-foreground hover:text-foreground"
+                }`}
+              >
+                {option.label}
+              </button>
+            );
+          })}
+        </div>
         <svg
           viewBox={`${vb.x0} ${vb.y0} ${vb.w} ${vb.h}`}
-          className="w-full h-auto"
+          className="h-auto w-full"
           role="img"
-          aria-label={`${subject.name} in the ${dio.name} diocese, with every recorded Lithuanian parish around it`}
+          aria-label={`${subject.name} in ${dioceseLabel ?? dio.name}, with nearby recorded Lithuanian parishes`}
         >
           {/* Diocese layer */}
           {(overlay.dioceses as OverlayDiocese[]).map((d) => (
@@ -314,42 +257,12 @@ export default function ParishContextMap({ slug }: { slug: string }) {
             strokeWidth={0.3 * S}
           />
 
-          {/* Diocese names */}
-          {dioNames.map((d) => (
-            <text
-              key={d.name}
-              x={d.cx}
-              y={d.cy}
-              textAnchor="middle"
-              fontSize={1.0 * S}
-              fontWeight={600}
-              fill="var(--muted)"
-              opacity={0.7}
-              style={{ letterSpacing: "0.08em", textTransform: "uppercase" }}
-              pointerEvents="none"
-            >
-              {d.name}
-            </text>
-          ))}
-          <text
-            x={dio.cx}
-            y={Math.min(dio.bbox[3] + 1.6 * S, vb.y0 + vb.h - S)}
-            textAnchor="middle"
-            fontSize={1.0 * S}
-            fontWeight={600}
-            fill="var(--muted)"
-            style={{ letterSpacing: "0.08em", textTransform: "uppercase" }}
-            pointerEvents="none"
-          >
-            {dio.name}
-          </text>
-
           {/* Neighbor dots — living as open rings, the rest filled */}
-          {placed
-            .filter((p) => p.slug !== slug)
-            .map((p) => {
+          {visibleNeighbors.map((p) => {
               const alive = ALIVE.has(p.group);
-              const r = (hot?.slug === p.slug ? 0.85 : 0.62) * S;
+              const inSubjectDiocese = p.diocese === subject.diocese;
+              const baseRadius = inSubjectDiocese ? 0.68 : 0.48;
+              const r = (hot?.slug === p.slug ? 0.88 : baseRadius) * S;
               return (
                 <circle
                   key={p.slug}
@@ -359,6 +272,7 @@ export default function ParishContextMap({ slug }: { slug: string }) {
                   fill={alive ? "var(--background)" : END_STATE_COLOR[p.group]}
                   stroke={alive ? END_STATE_COLOR[p.group] : "var(--background)"}
                   strokeWidth={(alive ? 0.28 : 0.12) * S}
+                  opacity={inSubjectDiocese ? 1 : 0.42}
                   className={p.href ? "cursor-pointer" : undefined}
                   onMouseEnter={() => setHot(p)}
                   onMouseLeave={() => setHot(null)}
@@ -368,35 +282,6 @@ export default function ParishContextMap({ slug }: { slug: string }) {
                 </circle>
               );
             })}
-
-          {/* Neighbor labels with halos + leaders */}
-          {labels.map(({ p, box, fs, bold, quiet, leader }) => (
-            <g key={`l-${p.slug}`} pointerEvents="none">
-              {leader && (
-                <line
-                  x1={p.px}
-                  y1={p.py}
-                  x2={box.x + box.w / 2}
-                  y2={box.y + box.h / 2}
-                  stroke="var(--muted)"
-                  strokeOpacity={0.55}
-                  strokeWidth={0.07 * S}
-                />
-              )}
-              <text
-                x={box.x}
-                y={box.y + box.h * 0.8}
-                fontSize={fs}
-                fontWeight={bold ? 700 : 400}
-                fill={quiet ? "var(--muted)" : "var(--foreground)"}
-                stroke="var(--background)"
-                strokeWidth={fs * 0.22}
-                paintOrder="stroke"
-              >
-                {p.name}
-              </text>
-            </g>
-          ))}
 
           {/* The subject — filled, dashed halo, named with sub-line */}
           <g>
@@ -448,27 +333,60 @@ export default function ParishContextMap({ slug }: { slug: string }) {
             </text>
           </g>
         </svg>
-      </div>
-
-      {/* Readout + legend-caption */}
-      <div className="mt-1.5 min-h-5 text-sm" aria-live="polite">
-        {hot ? (
-          <span>
-            <span className="font-medium">{hot.name}</span>
-            <span className="text-muted">
-              {" "}
-              — {hot.city}, {hot.state} · {GROUP_LABEL[hot.group]}
-              {hot.closed ? ` (${hot.closed})` : ""}
-              {hot.href ? " · click to open" : ""}
-            </span>
-          </span>
-        ) : (
-          <span className="text-muted">
-            {`The ${dio.name} diocese holds ${model.inDioceseN} recorded Lithuanian ${
-              model.inDioceseN === 1 ? "parish" : "parishes"
-            }; ${model.closedN} ${model.closedN === 1 ? "is" : "are"} closed. Open rings are living parishes; filled dots are gone. Hover any dot; click to open its record.`}
-          </span>
-        )}
+        <div
+          className="min-h-11 border-t border-rule px-3 py-2 text-xs"
+          aria-live="polite"
+        >
+          {hot ? (
+            <p>
+              <span className="font-semibold">{hot.name}</span>
+              <span className="text-muted">
+                {" "}
+                — {hot.city}, {hot.state} · {GROUP_LABEL[hot.group]}
+                {hot.closed ? ` (${hot.closed})` : ""}
+                {hot.href ? " · select to open" : ""}
+              </span>
+            </p>
+          ) : (
+            <p className="text-muted">
+              {filter === "all" &&
+                `Showing ${visibleNeighbors.length} nearby records. The outlined area is ${
+                  dioceseLabel ?? dio.name
+                }; lighter markers are in neighboring dioceses.`}
+              {filter === "diocese" &&
+                `Showing ${visibleNeighbors.length} other recorded parishes inside ${
+                  dioceseLabel ?? dio.name
+                }.`}
+              {filter === "living" &&
+                `Showing ${visibleNeighbors.length} nearby places with active Lithuanian worship.`}
+              {filter === "closed" &&
+                `Showing ${visibleNeighbors.length} nearby closed parishes.`}
+              {filter === "other" &&
+                `Showing ${visibleNeighbors.length} transferred, unresolved, or still-being-verified records.`}{" "}
+              Select any marker to open its record.
+            </p>
+          )}
+        </div>
+        <div className="grid grid-cols-2 gap-x-3 gap-y-1.5 border-t border-rule px-3 py-2 text-[10px] leading-tight text-muted sm:grid-cols-3">
+          {(Object.keys(STATE_WORD) as EndStateGroup[]).map((group) => {
+            const alive = ALIVE.has(group);
+            return (
+              <span key={group} className="flex items-center gap-1.5">
+                <span
+                  className="inline-block size-2.5 shrink-0 rounded-full"
+                  style={{
+                    background: alive
+                      ? "var(--background)"
+                      : END_STATE_COLOR[group],
+                    border: `2px solid ${END_STATE_COLOR[group]}`,
+                  }}
+                  aria-hidden
+                />
+                {GROUP_LABEL[group]}
+              </span>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

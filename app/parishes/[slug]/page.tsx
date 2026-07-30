@@ -629,7 +629,10 @@ export default async function ParishPage({
             )}
             {hasMap && (
               <div className={photo ? "" : "max-w-xl"}>
-                <ParishContextMap slug={profile.slug} />
+                <ParishContextMap
+                  slug={profile.slug}
+                  dioceseLabel={entry.diocese ?? undefined}
+                />
               </div>
             )}
           </div>
