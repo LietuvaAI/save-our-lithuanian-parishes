@@ -52,6 +52,10 @@ const NAV: NavItem[] = [
       { href: "/under-threat", label: "What’s Happening Now" },
       { href: "/by-diocese", label: "By Diocese" },
       {
+        href: "/where-every-parish-ended-up",
+        label: "Where Every Parish Ended Up",
+      },
+      {
         href: "/pennsylvania-coal-region",
         label: "Pennsylvania Coal Region",
       },

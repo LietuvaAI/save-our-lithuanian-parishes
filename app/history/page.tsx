@@ -5,10 +5,7 @@ import TimelineChart, {
   type TimelineRow,
   type UndatedRow,
 } from "@/components/TimelineChart";
-import ParishThreads, {
-  type ThreadParish,
-  type FateKey,
-} from "@/components/ParishThreads";
+import type { FateKey } from "@/components/ParishThreads";
 import { scopedParishes, usRegistryParishes } from "@/lib/registry-scope";
 import {
   toGroup,
@@ -115,7 +112,6 @@ function buildData() {
     standing: 0,
     unrecorded: 0,
   };
-  const threads: ThreadParish[] = [];
 
   const fateBySlug = new Map(
     libParishes.map((p) => [p.slug, p.buildingFate as BuildingFate | null]),
@@ -134,18 +130,6 @@ function buildData() {
       else fateKey = "unrecorded";
     }
     if (fateKey) closedFates[fateKey]++;
-
-    threads.push({
-      slug: p.slug,
-      name: p.name,
-      city: p.city,
-      state: p.state,
-      founded: p.founded,
-      closed: p.closed,
-      endState: p.endState,
-      fateKey,
-      href: p.profileHref,
-    });
 
     const fate = fateBySlug.get(p.slug);
     const detail =
@@ -226,7 +210,6 @@ function buildData() {
     dated,
     undated,
     closedFates,
-    threads,
     standing,
     hostedMass,
     lost,
@@ -253,7 +236,6 @@ export default function HistoryPage() {
     dated,
     undated,
     closedFates,
-    threads,
     standing,
     hostedMass,
     lost,
@@ -425,20 +407,6 @@ export default function HistoryPage() {
         </div>
       </aside>
 
-      {/* ── The flow: the whole record at a glance, every category ── */}
-      <section className="mt-12">
-        <h2 className="font-serif text-2xl font-semibold">
-          Where every parish ended up
-        </h2>
-        <p className="mt-1 text-muted leading-relaxed max-w-3xl mb-6">
-          Each thread is one parish, from its founding decade to where it
-          stands today &mdash; and, for the closed, on to what became of the
-          building. Hover a thread to trace one parish; click it to open the
-          record; click a band to list its parishes.
-        </p>
-        <ParishThreads parishes={threads} />
-      </section>
-
       {/* ── The exhibit: decade pulse + timeline (one title system) ── */}
       <section className="mt-14">
         <h2 className="font-serif text-2xl font-semibold">
@@ -527,6 +495,17 @@ export default function HistoryPage() {
       </section>
 
       <section className="mt-12 max-w-3xl space-y-3 text-sm text-muted leading-relaxed">
+        <p>
+          The parish-by-parish flow from founding decade to present status and
+          building fate is now its own View:{" "}
+          <Link
+            href="/where-every-parish-ended-up"
+            className="underline hover:text-foreground"
+          >
+            Where Every Parish Ended Up
+          </Link>
+          .
+        </p>
         <p>
           The diocese-by-diocese picture &mdash; every parish, every diocese,
           and the map of the dioceses &mdash; is on{" "}
