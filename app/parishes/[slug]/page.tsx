@@ -101,6 +101,7 @@ type WatchPhoto = {
   attribution?: string;
   license?: string;
   archiveUrl?: string;
+  evidenceUrl?: string;
   rights?: string;
 };
 
@@ -386,8 +387,11 @@ export default async function ParishPage({
           attribution: watchPhoto.attribution ?? "",
           license: watchPhoto.license,
           archiveUrl: watchPhoto.archiveUrl,
+          evidenceUrl: watchPhoto.evidenceUrl,
         }
       : null;
+  const photoSourceUrl = photo?.evidenceUrl ?? photo?.archiveUrl;
+  const isLineDrawing = photo?.src.endsWith("-line-drawing.png") ?? false;
 
   const caseSources = caseRecord
     ? [
@@ -598,11 +602,28 @@ export default async function ParishPage({
                   width={640}
                   height={427}
                   loading="eager"
-                  className="h-auto w-full object-cover"
+                  className={
+                    isLineDrawing
+                      ? "aspect-[4/3] w-full bg-[#fffdf9] object-contain p-3"
+                      : "h-auto w-full object-cover"
+                  }
                 />
                 <figcaption className="px-3 py-1.5 text-xs text-muted">
                   {photo.attribution}
                   {photo.license && <span> · {photo.license}</span>}
+                  {photoSourceUrl && (
+                    <>
+                      <span> · </span>
+                      <a
+                        href={photoSourceUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline underline-offset-2 hover:text-accent"
+                      >
+                        Source
+                      </a>
+                    </>
+                  )}
                 </figcaption>
               </figure>
             )}

@@ -6,18 +6,20 @@
     "year": 2009,
     "archiveItemUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
     "copyrightHolder": "Lithuanian American Community Inc., Cultural Affairs Council",
-    "rightsStatus": "In copyright; reuse permission needed and not yet granted as of 2026-07-30."
+    "rightsStatus": "Permission to publish the 19 book-derived line-art adaptations confirmed by Vilija on 2026-07-30; original book photographs remain outside public/."
   },
   "policy": {
-    "published": "A line drawing renders only when its source rights are cleared in data/photos.json and the image exists under public/.",
-    "pending": "Book-derived drawings remain outside public/ and are not committed until permission is granted.",
+    "published": "Approved line drawings render from public/ with their source book page and archive link recorded in data/photos.json.",
+    "pending": "Original book photographs remain outside public/; this release publishes the approved line-art adaptations only.",
     "localStagingSet": "lukas-line-drawings-pending-permission-2026-07-30"
   },
   "counts": {
     "churchSubjects": 26,
-    "publishedCleared": 12,
-    "generatedPendingPermission": 14,
-    "excludedNonParishSubjects": 1
+    "publishedCleared": 26,
+    "generatedPendingPermission": 0,
+    "excludedNonParishSubjects": 1,
+    "publishedBookDerived": 19,
+    "publishedAlternativeOrParishSource": 7
   },
   "subjects": [
     {
@@ -26,8 +28,8 @@
       "bookPhotoFile": "IMG_1665.jpeg",
       "lineDrawing": "/images/parishes/baltimore-st-alphonsus-line-drawing.png",
       "drawingSource": "lukas_book_photo",
-      "rights": "pending_permission",
-      "status": "generated_staged_locally"
+      "rights": "permission_granted",
+      "status": "published"
     },
     {
       "canonicalSlug": "sv-andriejaus-new-britain-ct",
@@ -35,8 +37,8 @@
       "bookPhotoFile": "IMG_1667.jpeg",
       "lineDrawing": "/images/parishes/new-britain-st-andrew-line-drawing.png",
       "drawingSource": "lukas_book_photo",
-      "rights": "pending_permission",
-      "status": "generated_staged_locally"
+      "rights": "permission_granted",
+      "status": "published"
     },
     {
       "canonicalSlug": "sv-andriejaus-philadelphia-pa",
@@ -44,8 +46,8 @@
       "bookPhotoFile": "IMG_1668.jpeg",
       "lineDrawing": "/images/parishes/philadelphia-st-andrew-line-drawing.png",
       "drawingSource": "lukas_book_photo",
-      "rights": "pending_permission",
-      "status": "generated_staged_locally"
+      "rights": "permission_granted",
+      "status": "published"
     },
     {
       "canonicalSlug": "sv-antano-cicero-il",
@@ -53,16 +55,16 @@
       "bookPhotoFile": "IMG_1669.jpeg",
       "lineDrawing": "/images/parishes/cicero-st-anthony-line-drawing.png",
       "drawingSource": "lukas_book_photo",
-      "rights": "pending_permission",
-      "status": "generated_staged_locally"
+      "rights": "permission_granted",
+      "status": "published"
     },
     {
       "canonicalSlug": "svc-m-marijos-apreiskimo-brooklyn-ny",
       "bookPage": 93,
       "bookPhotoFile": "IMG_1670.jpeg",
       "lineDrawing": "/images/parishes/brooklyn-annunciation-line-drawing.png",
-      "drawingSource": "cleared_registry_photo",
-      "rights": "open_license",
+      "drawingSource": "lukas_book_photo",
+      "rights": "permission_granted",
       "status": "published"
     },
     {
@@ -71,8 +73,8 @@
       "bookPhotoFile": "IMG_1671.jpeg",
       "lineDrawing": "/images/parishes/mahanoy-city-st-joseph-line-drawing.png",
       "drawingSource": "lukas_book_photo",
-      "rights": "pending_permission",
-      "status": "generated_staged_locally"
+      "rights": "permission_granted",
+      "status": "published"
     },
     {
       "canonicalSlug": "sv-jurgio-shenandoah-pa",
@@ -98,8 +100,8 @@
       "bookPhotoFile": "IMG_1674.jpeg",
       "lineDrawing": "/images/parishes/scranton-st-joseph-line-drawing.png",
       "drawingSource": "lukas_book_photo",
-      "rights": "pending_permission",
-      "status": "generated_staged_locally"
+      "rights": "permission_granted",
+      "status": "published"
     },
     {
       "canonicalSlug": "sv-kazimiero-providence-ri",
@@ -107,8 +109,8 @@
       "bookPhotoFile": "IMG_1675.jpeg",
       "lineDrawing": "/images/parishes/providence-st-casimir-line-drawing.png",
       "drawingSource": "lukas_book_photo",
-      "rights": "pending_permission",
-      "status": "generated_staged_locally"
+      "rights": "permission_granted",
+      "status": "published"
     },
     {
       "canonicalSlug": "sv-kazimiero-worcester-ma",
@@ -116,8 +118,8 @@
       "bookPhotoFile": "IMG_1676.jpeg",
       "lineDrawing": "/images/parishes/worcester-st-casimir-line-drawing.png",
       "drawingSource": "lukas_book_photo",
-      "rights": "pending_permission",
-      "status": "generated_staged_locally"
+      "rights": "permission_granted",
+      "status": "published"
     },
     {
       "canonicalSlug": "sv-kryziaus-chicago-il",
@@ -133,8 +135,8 @@
       "bookPage": 102,
       "bookPhotoFile": "IMG_1679.jpeg",
       "lineDrawing": "/images/parishes/boston-st-peter-line-drawing.png",
-      "drawingSource": "cleared_registry_photo",
-      "rights": "open_license",
+      "drawingSource": "lukas_book_photo",
+      "rights": "permission_granted",
       "status": "published"
     },
     {
@@ -143,16 +145,16 @@
       "bookPhotoFile": "IMG_1680.jpeg",
       "lineDrawing": "/images/parishes/elizabeth-sts-peter-paul-line-drawing.png",
       "drawingSource": "lukas_book_photo",
-      "rights": "pending_permission",
-      "status": "generated_staged_locally"
+      "rights": "permission_granted",
+      "status": "published"
     },
     {
       "canonicalSlug": "sv-petro-ir-povilo-grand-rapids-mi",
       "bookPage": 104,
       "bookPhotoFile": "IMG_1681.jpeg",
       "lineDrawing": "/images/parishes/grand-rapids-sts-peter-paul-line-drawing.png",
-      "drawingSource": "cleared_registry_photo",
-      "rights": "open_license",
+      "drawingSource": "lukas_book_photo",
+      "rights": "permission_granted",
       "status": "published"
     },
     {
@@ -179,8 +181,8 @@
       "bookPhotoFile": "IMG_1688.jpeg",
       "lineDrawing": "/images/parishes/los-angeles-st-casimir-line-drawing.png",
       "drawingSource": "lukas_book_photo",
-      "rights": "pending_permission",
-      "status": "generated_staged_locally"
+      "rights": "permission_granted",
+      "status": "published"
     },
     {
       "canonicalSlug": "nekaltojo-prasidejimo-east-st-louis-il",
@@ -188,8 +190,8 @@
       "bookPhotoFile": "IMG_1689.jpeg",
       "lineDrawing": "/images/parishes/east-st-louis-immaculate-conception-line-drawing.png",
       "drawingSource": "lukas_book_photo",
-      "rights": "pending_permission",
-      "status": "generated_staged_locally"
+      "rights": "permission_granted",
+      "status": "published"
     },
     {
       "canonicalSlug": "dievo-motinos-nuolatines-pagalbos-cleveland-oh",
@@ -197,8 +199,8 @@
       "bookPhotoFile": "IMG_1690.jpeg",
       "lineDrawing": "/images/parishes/cleveland-our-lady-perpetual-help-line-drawing.png",
       "drawingSource": "lukas_book_photo",
-      "rights": "pending_permission",
-      "status": "generated_staged_locally"
+      "rights": "permission_granted",
+      "status": "published"
     },
     {
       "canonicalSlug": "svc-mergeles-marijos-gimimo-chicago-il",
@@ -206,8 +208,8 @@
       "bookPhotoFile": "IMG_1692.jpeg",
       "lineDrawing": "/images/parishes/chicago-nativity-bvm-line-drawing.png",
       "drawingSource": "lukas_book_photo",
-      "rights": "pending_permission",
-      "status": "generated_staged_locally"
+      "rights": "permission_granted",
+      "status": "published"
     },
     {
       "canonicalSlug": "kristaus-atsimainymo-maspeth-ny",
@@ -224,16 +226,16 @@
       "bookPhotoFile": "IMG_1696.jpeg",
       "lineDrawing": "/images/parishes/brighton-park-immaculate-conception-line-drawing.png",
       "drawingSource": "lukas_book_photo",
-      "rights": "pending_permission",
-      "status": "generated_staged_locally"
+      "rights": "permission_granted",
+      "status": "published"
     },
     {
       "canonicalSlug": "sv-kryziaus-dayton-oh",
       "bookPage": 126,
       "bookPhotoFile": "IMG_1700.jpeg",
       "lineDrawing": "/images/parishes/dayton-holy-cross-line-drawing.png",
-      "drawingSource": "cleared_registry_photo",
-      "rights": "open_license",
+      "drawingSource": "lukas_book_photo",
+      "rights": "permission_granted",
       "status": "published"
     },
     {
@@ -241,8 +243,8 @@
       "bookPage": 127,
       "bookPhotoFile": "IMG_1701.jpeg",
       "lineDrawing": "/images/parishes/maizeville-our-lady-siluva-line-drawing.png",
-      "drawingSource": "cleared_registry_photo",
-      "rights": "open_license",
+      "drawingSource": "lukas_book_photo",
+      "rights": "permission_granted",
       "status": "published"
     },
     {
