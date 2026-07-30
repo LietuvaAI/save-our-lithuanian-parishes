@@ -15,12 +15,18 @@ export default function AboutPage() {
       <h1 className="mt-1 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
         About the Project
       </h1>
-      <p className="mt-4 text-lg leading-relaxed text-muted">
-        Save Our Lithuanian Parishes is a public record and living-memory
-        project devoted to the communities Lithuanian immigrants built across
-        America. It keeps each parish&rsquo;s past and present connected so
-        communities can understand what came before, see what is happening now,
-        and learn from one another.
+      <p className="mt-4 font-serif text-xl leading-relaxed sm:text-2xl">
+        The past is a torch to the present. America&rsquo;s Lithuanian parishes
+        have long been the <em>židiniai</em>{" "}of our
+        communities&mdash;the hearths where faith was lived, language was
+        spoken, memory was preserved, and identity was formed. Together, they
+        form an unbroken current connecting the Lithuanian past to the present
+        and lighting the road ahead. This project traces the complete history
+        of America&rsquo;s Lithuanian parishes&mdash;from their earliest
+        foundations to the communities discerning their future today. Seen
+        together, the experience of America&rsquo;s Lithuanian parishes helps
+        illuminate the path ahead, because no individual parish should have to
+        find its way in darkness.
       </p>
       <p className="mt-3 text-sm font-medium">
         This record is powered by books scanned and catalogued at{" "}
@@ -47,19 +53,6 @@ export default function AboutPage() {
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">Why it exists</h2>
         <div className="mt-3 space-y-4 leading-relaxed">
-          <p>
-            The past is a torch to the present. America&rsquo;s Lithuanian
-            parishes have long been the <em>židiniai</em> of our
-            communities&mdash;the hearths where faith was lived, language was
-            spoken, memory was preserved, and identity was formed. Together,
-            they form an unbroken current connecting the Lithuanian past to the
-            present and lighting the road ahead. This project traces the
-            complete history of America&rsquo;s Lithuanian parishes&mdash;from
-            their earliest foundations to the communities discerning their
-            future today. Seen together, the experience of America&rsquo;s
-            Lithuanian parishes helps illuminate the path ahead, because no
-            individual parish should have to find its way in darkness.
-          </p>
           <p>
             When those stories are scattered across archives, diocesan records,
             private collections, local memory, and current news, each community
