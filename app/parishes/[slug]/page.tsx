@@ -8,6 +8,7 @@ import alertsData from "@/data/alerts.json";
 import contextPoints from "@/data/context-points.json";
 import { EndStatePill } from "@/components/EndStatePill";
 import ParishContextMap from "@/components/ParishContextMap";
+import { ParishLifeTimeline } from "@/components/ParishLifeTimeline";
 import {
   CONGREGATION_CLASS_LABEL,
   ParishPublishedRecord,
@@ -27,6 +28,10 @@ import {
   getCanonicalParishProfile,
   type CanonicalParishProfile,
 } from "@/lib/parish-profile";
+import {
+  getParishTimeline,
+  parishTimelineProfileSources,
+} from "@/lib/parish-timelines";
 import {
   BUILDING_FATE_LABEL,
   ENDING_MODE_LABEL,
@@ -351,6 +356,7 @@ export default async function ParishPage({
     ? getParishSituation(profile.slug)
     : getSituationByRegistrySlug(profile.registrySlug);
   const caseRecord = loadCaseRecord(profile);
+  const parishTimeline = getParishTimeline(profileLinks(profile));
   const { alert: parishAlert, campaign: parishCampaign } =
     getParishAlert(profile);
   const watchEntry = getSustainabilityWatch(profile);
@@ -450,6 +456,7 @@ export default async function ParishPage({
     alertSources,
     watchSources,
     situationSources,
+    parishTimelineProfileSources(parishTimeline),
     projectSources,
     photoProfileSource(photo),
   ]);
@@ -651,6 +658,8 @@ export default async function ParishPage({
           </div>
         )}
       </section>
+
+      {parishTimeline && <ParishLifeTimeline timeline={parishTimeline} />}
 
       {showWhatHappened && (
         <section className="mt-10">

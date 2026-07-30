@@ -1,0 +1,78 @@
+{
+  "timelines": [
+    {
+      "parishLink": "/parishes/dievo-apvaizdos-southfield-mi",
+      "title": "One parish, three church homes",
+      "intro": "The institution founded as St. George in Detroit continues today as Divine Providence in Southfield. Its church buildings changed; the parish community endured.",
+      "asOf": "2026-07-30",
+      "events": [
+        {
+          "date": "1908",
+          "sortYear": 1908,
+          "kind": "parish",
+          "title": "St. George parish founded in Detroit",
+          "detail": "Detroit's Lithuanian Catholics established the parish whose institutional life continues as Divine Providence.",
+          "sourceIds": [
+            "dp-parish-history"
+          ]
+        },
+        {
+          "date": "Before 1968",
+          "sortYear": 1950,
+          "kind": "building_lost",
+          "title": "Two Detroit church homes lost",
+          "detail": "Two successive parish church sites were taken for highway construction. The community rebuilt after each loss.",
+          "sourceIds": [
+            "dp-parish-history"
+          ]
+        },
+        {
+          "date": "1967–1968",
+          "sortYear": 1967,
+          "kind": "decision",
+          "title": "Lithuanian national-parish status secured",
+          "detail": "The parish requested non-territorial Lithuanian status; the Archdiocese of Detroit accepted it in writing on December 31, 1968.",
+          "sourceIds": [
+            "dp-parish-history"
+          ]
+        },
+        {
+          "date": "September 8, 1973",
+          "sortYear": 1973,
+          "kind": "building_current",
+          "title": "Present Southfield church consecrated",
+          "detail": "Parishioners funded and built the church, rectory, and cultural center that remain the community's home today.",
+          "sourceIds": [
+            "dp-parish-history"
+          ]
+        },
+        {
+          "date": "2026",
+          "sortYear": 2026,
+          "kind": "current",
+          "title": "Living parish under restructuring review",
+          "detail": "Lithuanian worship continues, while the parish's future is being considered in the Archdiocese of Detroit restructuring. No closure decree has been issued.",
+          "sourceIds": [
+            "dp-current-report"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "id": "dp-parish-history",
+          "group": "project",
+          "title": "In Writing: The 1968 Letter That Made Divine Providence a National Parish",
+          "citation": "Reproduces the December 31, 1968 Archdiocese of Detroit letter and cites Dievo Apvaizdos Parapija 1908–1973, pp. 48–51.",
+          "url": "https://blog.saveourlithuanianparishes.org/p/in-writing-the-1968-letter-that-made"
+        },
+        {
+          "id": "dp-current-report",
+          "group": "current",
+          "title": "Southfield's Divine Providence Lithuanian church seeks to remain a standalone ethnic parish",
+          "citation": "Michigan Catholic Tribune · current-status reporting checked July 27, 2026.",
+          "url": "https://micatholictribune.com/stories/541494701-southfield-s-divine-providence-lithuanian-church-seeks-to-remain-a-standalone-ethnic-parish"
+        }
+      ]
+    }
+  ]
+}
