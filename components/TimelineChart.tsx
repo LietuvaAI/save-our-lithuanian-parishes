@@ -241,7 +241,9 @@ export default function TimelineChart({
     null,
   );
   const [note, setNote] = useState<string | null>(null);
-  const [legendHot, setLegendHot] = useState<string | null>(null);
+  const [legendHover, setLegendHover] = useState<string | null>(null);
+  const [legendPinned, setLegendPinned] = useState<string | null>(null);
+  const legendHot = legendHover ?? legendPinned;
 
   const rowDimmed = (row: TimelineRow | UndatedRow) => {
     if (!legendHot) return false;
@@ -306,8 +308,8 @@ export default function TimelineChart({
           <span className="font-medium">{note}</span>
         ) : (
           <span className="text-muted">
-            Hover over a parish to see its story. Click to open its full
-            record. Hover the legend to pick out one end state.
+            Select a parish bar for its full record. On desktop, hover to
+            preview. Select an end state to isolate it.
           </span>
         )}
       </div>
@@ -484,16 +486,26 @@ export default function TimelineChart({
         </div>
       </div>
 
-      {/* ── Legend — hover an entry to pick out that end state ── */}
-      <div className="mt-5 flex flex-wrap gap-x-4 gap-y-1.5 text-sm">
+      {/* ── Legend — hover or pin an entry to isolate that end state ── */}
+      <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 border-y border-rule py-3 text-sm">
+        <span className="text-xs font-semibold uppercase text-muted">
+          End state
+        </span>
         {GROUP_ORDER.map((g) => (
-          <span
+          <button
+            type="button"
             key={g}
-            className={`inline-flex items-center gap-1.5 cursor-default rounded px-1 -mx-1 transition-opacity ${
+            className={`inline-flex items-center gap-1.5 rounded px-1 transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${
               legendHot && legendHot !== g ? "opacity-40" : ""
             }`}
-            onMouseEnter={() => setLegendHot(g)}
-            onMouseLeave={() => setLegendHot(null)}
+            onMouseEnter={() => setLegendHover(g)}
+            onMouseLeave={() => setLegendHover(null)}
+            onFocus={() => setLegendHover(g)}
+            onBlur={() => setLegendHover(null)}
+            onClick={() =>
+              setLegendPinned((current) => (current === g ? null : g))
+            }
+            aria-pressed={legendPinned === g}
           >
             <span
               className="inline-block w-3.5 h-3.5 rounded-sm"
@@ -507,14 +519,23 @@ export default function TimelineChart({
               }
             />
             {GROUP_LABEL[g]}
-          </span>
+          </button>
         ))}
-        <span
-          className={`inline-flex items-center gap-1.5 cursor-default rounded px-1 -mx-1 transition-opacity ${
+        <button
+          type="button"
+          className={`inline-flex items-center gap-1.5 rounded px-1 transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${
             legendHot && legendHot !== "demolished-glyph" ? "opacity-40" : ""
           }`}
-          onMouseEnter={() => setLegendHot("demolished-glyph")}
-          onMouseLeave={() => setLegendHot(null)}
+          onMouseEnter={() => setLegendHover("demolished-glyph")}
+          onMouseLeave={() => setLegendHover(null)}
+          onFocus={() => setLegendHover("demolished-glyph")}
+          onBlur={() => setLegendHover(null)}
+          onClick={() =>
+            setLegendPinned((current) =>
+              current === "demolished-glyph" ? null : "demolished-glyph",
+            )
+          }
+          aria-pressed={legendPinned === "demolished-glyph"}
         >
           <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden>
             <rect x="0" y="2" width="9" height="10" rx="1.5" fill="var(--es-closed)" opacity="0.85" />
@@ -524,7 +545,7 @@ export default function TimelineChart({
             </g>
           </svg>
           Building demolished
-        </span>
+        </button>
       </div>
 
       {/* ── Undated parishes ── */}
