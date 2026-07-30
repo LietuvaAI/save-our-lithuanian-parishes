@@ -409,121 +409,179 @@ export default function HistoryPage() {
 
       {/* ── The exhibit: decade pulse + timeline (one title system) ── */}
       <section className="mt-14">
+        <p className="text-xs font-semibold uppercase text-muted">
+          Two waves in one record
+        </p>
         <h2 className="font-serif text-2xl font-semibold">
           A half-century of building; a half-century of closing
         </h2>
-        <div className="mt-3 space-y-4 leading-relaxed max-w-3xl">
-          <p>
-            The founding wave crested in the {narrative.peakFoundDecade}s,
-            when the immigrant generation raised {narrative.peakFoundN}{" "}
-            parishes in a single decade &mdash; churches built from
-            miners&rsquo; and factory workers&rsquo; wages, with a smaller
-            wave after the Second World War as the Displaced Persons
-            generation arrived. Then the direction reversed. Since 1990 the
-            record logs {narrative.closedSince1990} closures,{" "}
-            {narrative.peakClosedN} of them in the{" "}
-            {narrative.peakClosedDecade}s alone &mdash; the heaviest decade
-            of loss &mdash; and {narrative.closedSince2020} more since 2020.
-            The pattern is not history; it is still moving.
+        <p className="mt-2 max-w-3xl leading-relaxed text-muted">
+          The same parish population rises through the immigrant building
+          wave, then turns downward through successive decades of closure.
+          The pattern is not past tense.
+        </p>
+
+        <div className="mt-6 grid grid-cols-2 border-y border-rule sm:grid-cols-4">
+          <div className="border-b border-r border-rule px-3 py-4 sm:border-b-0">
+            <p className="font-serif text-3xl font-semibold">
+              {narrative.peakFoundN}
+            </p>
+            <p className="mt-1 text-xs leading-snug text-muted">
+              founded in the {narrative.peakFoundDecade}s
+            </p>
+          </div>
+          <div className="border-b border-rule px-3 py-4 sm:border-b-0 sm:border-r">
+            <p
+              className="font-serif text-3xl font-semibold"
+              style={{ color: "var(--es-closed)" }}
+            >
+              {narrative.peakClosedN}
+            </p>
+            <p className="mt-1 text-xs leading-snug text-muted">
+              closed in the {narrative.peakClosedDecade}s
+            </p>
+          </div>
+          <div className="border-r border-rule px-3 py-4">
+            <p className="font-serif text-3xl font-semibold">
+              {narrative.closedSince1990}
+            </p>
+            <p className="mt-1 text-xs leading-snug text-muted">
+              closures dated since 1990
+            </p>
+          </div>
+          <div className="px-3 py-4">
+            <p className="font-serif text-3xl font-semibold">
+              {narrative.closedSince2020}
+            </p>
+            <p className="mt-1 text-xs leading-snug text-muted">
+              closures dated since 2020
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-6 grid border-y border-rule text-xs leading-snug text-muted sm:grid-cols-4 sm:divide-x sm:divide-rule">
+          <p className="border-b border-rule px-3 py-3 sm:border-b-0">
+            <span className="mr-2 font-semibold text-foreground">↑</span>
+            Above the line: parishes founded
+          </p>
+          <p className="border-b border-rule px-3 py-3 sm:border-b-0">
+            <span
+              className="mr-2 font-semibold"
+              style={{ color: "var(--es-closed)" }}
+            >
+              ↓
+            </span>
+            Below the line: parishes closed
+          </p>
+          <p className="border-b border-rule px-3 py-3 sm:border-b-0">
+            <span className="mr-2 font-semibold text-foreground">→</span>
+            Each bar: one parish through time
+          </p>
+          <p className="px-3 py-3">
+            <span className="mr-2 font-semibold text-foreground">×</span>
+            Church demolished; a fade means status unknown
           </p>
         </div>
-        <p className="mt-4 text-sm text-muted leading-relaxed max-w-3xl mb-6">
-          How to read it: above the line, parishes founded each decade;
-          below it, in red, parishes closed. Then every parish as one bar,
-          from its founding to its closure &mdash; or to today. Bars that
-          fade out mark parishes whose fate the record has not yet
-          established; an &times; marks a church that no longer exists.
-        </p>
-        <TimelineChart rows={dated} undated={undated} />
 
-        {/* Selective takeaways, computed from the record */}
-        <ul className="mt-6 max-w-3xl space-y-2 text-sm leading-relaxed">
+        <div className="mt-6">
+          <TimelineChart rows={dated} undated={undated} />
+        </div>
+
+        <div className="mt-6 grid border-y border-rule sm:grid-cols-3 sm:divide-x sm:divide-rule">
           {narrative.medianLifespan != null && (
-            <li className="flex gap-2">
-              <span aria-hidden style={{ color: "var(--es-closed)" }}>■</span>
-              <span>
-                The median closed parish stood for{" "}
-                <strong>{narrative.medianLifespan} years</strong> &mdash;
-                institutions built to outlive their founders, dismantled in a
-                generation&rsquo;s time.
-              </span>
-            </li>
+            <div className="border-b border-rule px-3 py-4 sm:border-b-0">
+              <p
+                className="font-serif text-3xl font-semibold"
+                style={{ color: "var(--es-closed)" }}
+              >
+                {narrative.medianLifespan} years
+              </p>
+              <p className="mt-1 text-xs leading-snug text-muted">
+                median lifespan among closed parishes
+              </p>
+            </div>
           )}
           {narrative.oldestAlive && (
-            <li className="flex gap-2">
-              <span aria-hidden style={{ color: "var(--es-active)" }}>■</span>
-              <span>
-                The longest-standing parish still active is{" "}
-                <strong>
-                  {narrative.oldestAlive.profileHref ? (
-                    <Link
-                      href={narrative.oldestAlive.profileHref}
-                      className="underline hover:text-accent"
-                    >
-                      {narrative.oldestAlive.name}
-                    </Link>
-                  ) : (
-                    narrative.oldestAlive.name
-                  )}
-                </strong>{" "}
-                in {narrative.oldestAlive.city},{" "}
-                {narrative.oldestAlive.state} &mdash; since{" "}
-                {narrative.oldestAlive.founded}.
-              </span>
-            </li>
+            <div className="border-b border-rule px-3 py-4 sm:border-b-0">
+              <p
+                className="font-serif text-3xl font-semibold"
+                style={{ color: "var(--es-active)" }}
+              >
+                {narrative.oldestAlive.founded}
+              </p>
+              <p className="mt-1 text-xs leading-snug text-muted">
+                oldest active parish:{" "}
+                {narrative.oldestAlive.profileHref ? (
+                  <Link
+                    href={narrative.oldestAlive.profileHref}
+                    className="font-medium text-foreground underline hover:text-accent"
+                  >
+                    {narrative.oldestAlive.name}
+                  </Link>
+                ) : (
+                  <span className="font-medium text-foreground">
+                    {narrative.oldestAlive.name}
+                  </span>
+                )}
+                , {narrative.oldestAlive.city}, {narrative.oldestAlive.state}
+              </p>
+            </div>
           )}
-          <li className="flex gap-2">
-            <span aria-hidden style={{ color: "var(--mark-ink)" }}>■</span>
-            <span>
-              {undated.length} parishes appear as squares below the timeline
-              &mdash; attested in the record, founding dates still being
-              researched.
-            </span>
-          </li>
-        </ul>
+          <div className="px-3 py-4">
+            <p className="font-serif text-3xl font-semibold">
+              {undated.length}
+            </p>
+            <p className="mt-1 text-xs leading-snug text-muted">
+              parish founding dates still unresolved
+            </p>
+          </div>
+        </div>
 
         <p className="mt-4 text-xs text-muted border-t border-rule pt-3">
           Source: the unified parish registry &mdash; Draugas 1909&ndash;2026,
           Wolkovich-Valkavičius (1998), Michelsonas (1961), Lukas (2009), and
-          the contemporary web survey. Dates resolve from locked figures
-          first, then earliest sourced reading.{" "}
+          contemporary parish, diocesan, and public records.{" "}
           <Link href="/about-the-data" className="underline hover:text-foreground">
-            About the data
+            How the record is built and cited
           </Link>
           .
         </p>
       </section>
 
-      <section className="mt-12 max-w-3xl space-y-3 text-sm text-muted leading-relaxed">
-        <p>
-          The parish-by-parish flow from founding decade to present status and
-          building fate is now its own View:{" "}
-          <Link
-            href="/where-every-parish-ended-up"
-            className="underline hover:text-foreground"
-          >
-            Where Every Parish Ended Up
-          </Link>
-          .
+      <nav
+        aria-label="Related history views"
+        className="mt-12 border-y border-rule py-5"
+      >
+        <p className="text-xs font-semibold uppercase text-muted">
+          Continue exploring
         </p>
-        <p>
-          The diocese-by-diocese picture &mdash; every parish, every diocese,
-          and the map of the dioceses &mdash; is on{" "}
-          <Link href="/by-diocese" className="underline hover:text-foreground">
-            By Diocese
-          </Link>
-          . Every parish links to its full record.
-        </p>
-        <p>
-          {dated.length} parishes with known founding dates are shown in the
-          timeline; {undated.length} more without a known founding date are
-          shown as individual marks below it. The peak decades are computed
-          from the record and labeled directly on the chart. The pattern is
-          not slowing &mdash; it is the ongoing elimination of an ethnic
-          community&rsquo;s institutional infrastructure, one parish at a
-          time.
-        </p>
-      </section>
+        <div className="mt-3 grid gap-4 sm:grid-cols-2 sm:divide-x sm:divide-rule">
+          <div className="sm:pr-5">
+            <Link
+              href="/where-every-parish-ended-up"
+              className="font-serif text-lg font-semibold underline hover:text-accent"
+            >
+              Where Every Parish Ended Up
+            </Link>
+            <p className="mt-1 text-sm leading-relaxed text-muted">
+              Follow every parish from its founding decade to its present
+              status and the fate of its church.
+            </p>
+          </div>
+          <div className="sm:pl-5">
+            <Link
+              href="/by-diocese"
+              className="font-serif text-lg font-semibold underline hover:text-accent"
+            >
+              By Diocese
+            </Link>
+            <p className="mt-1 text-sm leading-relaxed text-muted">
+              Compare the parish record, closure outcomes, and present
+              holdings diocese by diocese.
+            </p>
+          </div>
+        </div>
+      </nav>
     </div>
   );
 }
