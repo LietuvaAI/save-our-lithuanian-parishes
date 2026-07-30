@@ -938,10 +938,10 @@ export default function ParishMap() {
                           {label} · {count}
                         </span>
                         <span
-                          className="shrink-0 text-sm leading-none text-muted"
+                          className="shrink-0 text-xs leading-none text-muted"
                           aria-hidden
                         >
-                          {expanded ? "−" : "+"}
+                          {expanded ? "▴" : "▾"}
                         </span>
                       </button>
                     </dt>
