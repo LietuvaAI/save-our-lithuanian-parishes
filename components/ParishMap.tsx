@@ -57,7 +57,8 @@ type Mode =
   | "mass"
   | "unresolved"
   | "lost"
-  | "transferred";
+  | "transferred"
+  | "unknown";
 type ClassFilter = "all" | "roman_catholic" | "national_catholic_pncc" | "non_catholic_christian";
 type MapKey = EndStateGroup | "active_mission";
 
@@ -300,7 +301,6 @@ export default function ParishMap() {
   // both record types.
   const [classFilter, setClassFilter] = useState<ClassFilter>("roman_catholic");
   const [view, setView] = useState<View>(FULL);
-  const [showArchived, setShowArchived] = useState(true);
   const [showDioceses, setShowDioceses] = useState(false);
   const [expandedKey, setExpandedKey] = useState<MapKey | null>(null);
   const [dioceseBorders, setDioceseBorders] = useState<string | null>(null);
@@ -481,30 +481,29 @@ export default function ParishMap() {
         : "border-transparent text-muted hover:border-rule hover:text-foreground"
     }`;
 
-  const knownPoints = classPoints.filter((p) => p.group !== "unverified");
-  const archivePoints = classPoints.filter((p) => p.group === "unverified");
-
   const statusFiltered =
     mode === "all"
-      ? knownPoints
+      ? classPoints
       : mode === "open"
-        ? knownPoints.filter(
+        ? classPoints.filter(
             (p) => p.group === "active_parish" && p.recordType !== "misija",
           )
         : mode === "mission"
-          ? knownPoints.filter((p) => p.recordType === "misija")
+          ? classPoints.filter((p) => p.recordType === "misija")
           : mode === "mass"
-            ? knownPoints.filter((p) => p.group === "mass_continues")
+            ? classPoints.filter((p) => p.group === "mass_continues")
             : mode === "unresolved"
-              ? knownPoints.filter((p) => p.group === "unresolved")
+              ? classPoints.filter((p) => p.group === "unresolved")
               : mode === "lost"
-                ? knownPoints.filter(
+                ? classPoints.filter(
                     (p) =>
                       p.group === "closed" &&
                       p.recordType !== "misija" &&
                       (lostFate === "all" || p.fate === lostFate),
                   )
-                : knownPoints.filter((p) => p.group === "transferred");
+                : mode === "transferred"
+                  ? classPoints.filter((p) => p.group === "transferred")
+                  : classPoints.filter((p) => p.group === "unverified");
 
   const visible = statusFiltered;
 
@@ -547,19 +546,7 @@ export default function ParishMap() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 text-xs text-muted">
-              <label
-                className="flex cursor-pointer items-center gap-1.5 whitespace-nowrap hover:text-foreground"
-                title="Parishes attested in the research record but with their present status still being verified"
-              >
-                <input
-                  type="checkbox"
-                  checked={showArchived}
-                  onChange={() => setShowArchived((v) => !v)}
-                  className="h-3.5 w-3.5 accent-foreground"
-                />
-                Being verified ({archivePoints.length})
-              </label>
+            <div className="flex items-center text-xs text-muted">
               <label
                 className="flex cursor-pointer items-center gap-1.5 whitespace-nowrap hover:text-foreground"
                 title="Catholic diocese boundaries"
@@ -576,7 +563,7 @@ export default function ParishMap() {
           </div>
 
           <div
-            className="-mx-1 flex items-end gap-0.5 overflow-x-auto"
+            className="-mx-1 flex items-end gap-0.5 overflow-x-auto md:mx-0 md:flex-wrap md:overflow-visible"
             role="group"
             aria-label="Filter by parish status"
           >
@@ -624,12 +611,18 @@ export default function ParishMap() {
               active={mode === "lost"}
               onClick={() => { setMode("lost"); setLostFate("all"); }}
             />
+            <SwatchBtn
+              fill="var(--muted)"
+              label={`${GROUP_LABEL.unverified} · ${statusCounts.unknown}`}
+              active={mode === "unknown"}
+              onClick={() => setMode("unknown")}
+            />
           </div>
         </div>
 
         {/* How each closure ended — sub-fates, same vocabulary as the flow chart */}
         {mode === "lost" && (() => {
-          const lostPts = knownPoints.filter(
+          const lostPts = classPoints.filter(
             (p) => p.group === "closed" && p.recordType !== "misija",
           );
           const n = (f: "closed" | "demolished" | "repurposed") =>
@@ -689,29 +682,6 @@ export default function ParishMap() {
               pointerEvents="none"
             />
           )}
-
-          {/* Archive crosses — parishes being verified, shown when toggled */}
-          {showArchived && archivePoints.map((p) => {
-            const isHov = hovered?.id === p.id;
-            const r = isHov ? markR * 1.2 : markR * 0.9;
-            return (
-              <g key={p.id}
-                onMouseEnter={() => dotEnter(p)} onMouseLeave={dotLeave}
-                onFocus={() => dotEnter(p)} onBlur={dotLeave}
-                onClick={() => openPoint(p)}
-                onKeyDown={(e) => { if (e.key === "Enter") openPoint(p); }}
-                tabIndex={p.profile ? 0 : 0}
-                role="img"
-                aria-label={`${p.name}, ${p.city} ${p.state} — ${GROUP_LABEL.unverified}`}
-                className="cursor-default focus:outline-none"
-              >
-                <line x1={p.x - r} y1={p.y} x2={p.x + r} y2={p.y}
-                  stroke="var(--muted)" strokeOpacity={0.7} strokeWidth={markR * 0.35} strokeLinecap="round" />
-                <line x1={p.x} y1={p.y - r} x2={p.x} y2={p.y + r}
-                  stroke="var(--muted)" strokeOpacity={0.7} strokeWidth={markR * 0.35} strokeLinecap="round" />
-              </g>
-            );
-          })}
 
           {visible.map((p) => {
             const active = hovered?.id === p.id;
@@ -1014,10 +984,6 @@ export default function ParishMap() {
                   <span className="font-semibold text-foreground" aria-hidden>×</span>
                   Church demolished
                 </span>
-                <span className="flex items-center gap-2">
-                  <span className="font-semibold text-muted" aria-hidden>+</span>
-                  Being verified
-                </span>
               </div>
             </div>
           </aside>
@@ -1059,6 +1025,11 @@ export default function ParishMap() {
             <a href="/record" className="underline hover:text-foreground font-medium">
               Full list in The Record →
             </a>
+          </span>
+        ) : mode === "unknown" ? (
+          <span className="text-muted">
+            {statusCounts.unknown} records whose present status is still being
+            verified. Open a mark to inspect what is currently documented.
           </span>
         ) : (
           <span className="text-muted">
