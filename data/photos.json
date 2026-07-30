@@ -528,6 +528,14 @@
         "note": "Held pending permission; staged outside the repo."
       }
     },
+    "dievo-apvaizdos-southfield-mi-line-drawing": {
+      "src": "/images/parishes/southfield-divine-providence-line-drawing.png",
+      "alt": "Line drawing of Divine Providence Lithuanian Catholic Church in Southfield.",
+      "attribution": "Image courtesy Divine Providence Parish archive.",
+      "license": "Used with permission",
+      "rights": "permission_granted",
+      "rightsNote": "Parish line drawing supplied by Vilija for publication on 2026-07-30 from the Divine Providence parish materials."
+    },
     "dievo-apvaizdos-southfield-mi-first-communion": {
       "src": "/images/parishes/divine-providence-first-communion.jpg",
       "alt": "Children celebrate First Communion inside Divine Providence Lithuanian Catholic Church in Southfield.",
