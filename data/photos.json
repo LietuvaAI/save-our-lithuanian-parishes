@@ -528,6 +528,78 @@
         "note": "Held pending permission; staged outside the repo."
       }
     },
+    "sv-jurgio-shenandoah-pa-line-drawing": {
+      "src": "/images/parishes/shenandoah-st-george-line-drawing.png",
+      "alt": "Line drawing of St. George Lithuanian church in Shenandoah.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Lietuviai Amerikoj (Jonas Žilius, 1899), via Wikimedia Commons.",
+      "license": "CC BY 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of a public-domain 1899 image of St. George Lithuanian church in Shenandoah. This line-art adaptation is published under CC BY 4.0. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:17_SHENENDOHA%27RIO_LIETUVISZKA_BA%C5%BDNYCZIA.jpg"
+    },
+    "sv-kryziaus-mount-carmel-pa-line-drawing": {
+      "src": "/images/parishes/mount-carmel-holy-cross-line-drawing.png",
+      "alt": "Line drawing of Holy Cross Lithuanian church in Mount Carmel.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Lietuviai Amerikoj (Jonas Žilius, 1899), via Wikimedia Commons.",
+      "license": "CC BY 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of a public-domain 1899 image of Holy Cross Lithuanian church in Mount Carmel. This line-art adaptation is published under CC BY 4.0. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:10_MT-CARMIU_LIETUVISZKA_BA%C5%BDNYCZIA.jpg"
+    },
+    "svc-trejybes-wilkes-barre-pa-line-drawing": {
+      "src": "/images/parishes/wilkes-barre-holy-trinity-line-drawing.png",
+      "alt": "Line drawing of the first Holy Trinity Lithuanian church in Wilkes-Barre.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Lietuviai Amerikoj (Jonas Žilius, 1899), via Wikimedia Commons.",
+      "license": "CC BY 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of a public-domain 1899 image of the first Holy Trinity Lithuanian church in Wilkes-Barre. This line-art adaptation is published under CC BY 4.0. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:08_WILKES-BARRE_LIETUVISZKA_BA%C5%BDNYCZIA.jpg"
+    },
+    "sv-kazimiero-pittsburgh-pa-line-drawing": {
+      "src": "/images/parishes/pittsburgh-st-casimir-line-drawing.png",
+      "alt": "Line drawing of St. Casimir Lithuanian church in Pittsburgh.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a CC0 photograph by Cbaile19, Wikimedia Commons.",
+      "license": "CC BY 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of Cbaile19's CC0 photograph of St. Casimir church on Pittsburgh's South Side. This line-art adaptation is published under CC BY 4.0. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St._Casimir%E2%80%99s_Church,_South_Side,_Pittsburgh,_2021-07-24.jpg"
+    },
+    "sv-jurgio-chicago-il-line-drawing": {
+      "src": "/images/parishes/chicago-st-george-line-drawing.png",
+      "alt": "Line drawing of St. George Lithuanian church in Chicago.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a public-domain photograph by Percy H. Sloan, via Wikimedia Commons and CARLI Digital Collections.",
+      "license": "CC BY 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of a public-domain 1913 photograph of St. George Lithuanian church in Chicago. This line-art adaptation is published under CC BY 4.0. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Saint_George_Lithuanian_Church,_Chicago,_1913_(NBY_843).jpg"
+    },
+    "sv-kryziaus-chicago-il-line-drawing": {
+      "src": "/images/parishes/chicago-holy-cross-line-drawing.png",
+      "alt": "Line drawing of Holy Cross Lithuanian church in Chicago.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a public-domain photograph by Percy H. Sloan, Newberry Library, via Wikimedia Commons.",
+      "license": "CC BY 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of a public-domain 1914 photograph of Holy Cross Lithuanian church in Chicago. This line-art adaptation is published under CC BY 4.0. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Holy_Cross_Church,_Chicago,_1914_(NBY_723).jpg"
+    },
+    "saldziausios-jezaus-sirdies-lawrence-ma-line-drawing": {
+      "src": "/images/parishes/lawrence-sacred-heart-line-drawing.png",
+      "alt": "Line drawing of Sacred Heart Lithuanian National Catholic church in Lawrence.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a Digital Commonwealth / Boston Public Library image with no known copyright restrictions.",
+      "license": "CC BY 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of a Digital Commonwealth image of the Garden Street church later acquired by Sacred Heart Lithuanian National Catholic parish; the source carries no known copyright restrictions. This line-art adaptation is published under CC BY 4.0. Created 2026-07-30.",
+      "evidenceUrl": "https://www.digitalcommonwealth.org/search/commonwealth:66830b09d"
+    },
+    "ausros-vartu-manhattan-ny-line-drawing": {
+      "src": "/images/parishes/manhattan-our-lady-of-vilnius-line-drawing.png",
+      "alt": "Line drawing of Our Lady of Vilnius Lithuanian church in Manhattan.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a public-domain photograph by James Russiello, Wikimedia Commons.",
+      "license": "CC BY 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of James Russiello's public-domain photograph of Our Lady of Vilnius church in Manhattan. This line-art adaptation is published under CC BY 4.0. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Vilnius_568-570_Broome_Street.jpg"
+    },
     "svc-trejybes-hartford-ct-line-drawing": {
       "src": "/images/parishes/hartford-holy-trinity-line-drawing.png",
       "alt": "Line drawing of Holy Trinity Lithuanian church in Hartford.",
