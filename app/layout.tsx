@@ -32,7 +32,10 @@ type NavItem =
   | {
       label: string;
       menuAlign?: "left" | "right";
-      children: { href: string; label: string }[];
+      children: (
+        | { href: string; label: string }
+        | { section: string }
+      )[];
     };
 
 const NAV: NavItem[] = [
@@ -42,19 +45,21 @@ const NAV: NavItem[] = [
     label: "Views",
     menuAlign: "right",
     children: [
-      { href: "/by-diocese", label: "By Diocese" },
       {
         href: "/lithuanian-catholic-life-today",
         label: "Lithuanian Catholic Life Today",
       },
-      { href: "/sustainability-watch", label: "Parish Sustainability" },
-      { href: "/under-threat", label: "Parishes Under Threat" },
+      { href: "/under-threat", label: "What’s Happening Now" },
+      { href: "/by-diocese", label: "By Diocese" },
       {
         href: "/pennsylvania-coal-region",
         label: "Pennsylvania Coal Region",
       },
       { href: "/canadian-comparators", label: "Canadian Comparators" },
-      { href: "/national-catholic", label: "National Catholic" },
+      {
+        href: "/national-catholic",
+        label: "National & Independent Catholic",
+      },
       { href: "/protestant", label: "Protestant" },
     ],
   },
@@ -116,15 +121,24 @@ export default function RootLayout({
                       }`}
                     >
                       <div className="flex flex-col bg-background border border-rule rounded-md shadow-md py-1">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            className="px-4 py-2 hover:bg-foreground/5 hover:text-foreground transition-colors whitespace-nowrap"
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
+                        {item.children.map((child) =>
+                          "section" in child ? (
+                            <p
+                              key={child.section}
+                              className="mt-1 border-t border-rule px-4 pb-1 pt-2 text-[10px] font-semibold uppercase tracking-widest text-muted first:mt-0 first:border-t-0 first:pt-1"
+                            >
+                              {child.section}
+                            </p>
+                          ) : (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              className="px-4 py-2 hover:bg-foreground/5 hover:text-foreground transition-colors whitespace-nowrap"
+                            >
+                              {child.label}
+                            </Link>
+                          ),
+                        )}
                       </div>
                     </div>
                   </div>
@@ -149,55 +163,42 @@ export default function RootLayout({
         </header>
         <main className="flex-1">{children}</main>
         <footer className="border-t border-rule mt-16">
-          <div className="mx-auto max-w-5xl px-4 py-8 text-sm text-muted space-y-2">
-            <p>
-              A sourced public record of Lithuanian parish life in America.{" "}
+          <div className="mx-auto max-w-5xl px-4 py-7 text-sm text-muted">
+            <nav
+              aria-label="Footer"
+              className="flex flex-wrap gap-x-4 gap-y-2"
+            >
+              <Link href="/about" className="underline hover:text-foreground">
+                About the Project
+              </Link>
               <Link
                 href="/about-the-data"
                 className="underline hover:text-foreground"
               >
-                Research method
+                About the Data
               </Link>
-              {" · "}
               <Link
                 href="/about/sources-and-archives"
                 className="underline hover:text-foreground"
               >
                 Sources &amp; Archives
               </Link>
-              {" · "}
-              <a
-                href="https://github.com/LietuvaAI/save-our-lithuanian-parishes"
-                className="underline hover:text-foreground"
-              >
-                Check our numbers
-              </a>
-              .
-            </p>
-            <p>
-              Dispatches, alerts, and campaigns:{" "}
+              <Link href="/report" className="underline hover:text-foreground">
+                Report a Current Change
+              </Link>
               <a
                 href="https://blog.saveourlithuanianparishes.org"
                 className="underline hover:text-foreground"
               >
                 Židinys (The Hearth)
               </a>
-              .
-            </p>
-            <p className="pt-3 mt-1 border-t border-rule">
-              © 2026 Save Our Lithuanian Parishes · powered by{" "}
-              <a
-                href="https://lietuva.ai"
-                className="underline hover:text-foreground"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Lietuva.AI
-              </a>{" "}
-              · data made possible by{" "}
+            </nav>
+
+            <p className="mt-5 border-t border-rule pt-4 leading-relaxed">
+              Archive and data foundation:{" "}
               <a
                 href="https://archyvas.ziburioltmokykla.org"
-                className="underline hover:text-foreground"
+                className="font-medium text-foreground underline hover:text-accent"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -206,26 +207,42 @@ export default function RootLayout({
               , Žiburio Lithuanian School student interns at{" "}
               <Link
                 href="/parishes/dievo-apvaizdos-southfield-mi"
-                className="underline hover:text-foreground"
+                className="font-medium text-foreground underline hover:text-accent"
               >
                 Divine Providence Lithuanian Parish
               </Link>{" "}
-              in Southfield · a documented record, not legal or canonical
-              advice ·{" "}
-              <Link
-                href="/legal"
-                className="underline hover:text-foreground"
-              >
-                Legal, attribution &amp; data use
-              </Link>{" "}
-              ·{" "}
-              <a
-                href="mailto:info@saveourlithuanianparishes.org"
-                className="underline hover:text-foreground"
-              >
-                Contact
-              </a>
+              in Southfield.
             </p>
+
+            <div className="mt-4 flex flex-col gap-2 border-t border-rule pt-4 text-xs sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+              <p>
+                © 2026 Save Our Lithuanian Parishes · Powered by{" "}
+                <a
+                  href="https://lietuva.ai"
+                  className="underline hover:text-foreground"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Lietuva.AI
+                </a>
+              </p>
+              <p>
+                Documentation, not legal or canonical advice ·{" "}
+                <Link
+                  href="/legal"
+                  className="underline hover:text-foreground"
+                >
+                  Legal, attribution &amp; data use
+                </Link>{" "}
+                ·{" "}
+                <a
+                  href="mailto:info@saveourlithuanianparishes.org"
+                  className="underline hover:text-foreground"
+                >
+                  Contact
+                </a>
+              </p>
+            </div>
           </div>
         </footer>
       </body>

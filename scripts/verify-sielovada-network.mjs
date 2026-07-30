@@ -117,6 +117,24 @@ if (network.counts.listed !== 20) {
   );
 }
 
+const southfield = network.entries.find(
+  (entry) => entry.id === "southfield-divine-providence",
+);
+if (!southfield) {
+  errors.push("Southfield Divine Providence is missing from the current network");
+} else {
+  if (southfield.clergy?.includes("Tomas Miliauskas")) {
+    errors.push(
+      "Southfield still names Fr. Tomas Miliauskas as current clergy after his May 2026 departure",
+    );
+  }
+  if (!southfield.ministry.includes("departed in May 2026")) {
+    errors.push(
+      "Southfield current-life summary lost the May 2026 pastor-departure correction",
+    );
+  }
+}
+
 if (errors.length) {
   console.error(`SIELOVADA NETWORK VIOLATIONS (${errors.length}):`);
   for (const error of errors) console.error(`  ${error}`);

@@ -156,11 +156,12 @@ export default function AboutTheDataPage() {
           but are not counted as institutions.
         </p>
         <p className="mt-2 leading-relaxed">
-          The labels <em>case-filed</em>, <em>multi-source</em>, and{" "}
-          <em>single-source</em> show how much research supports each entry. As
-          new case files are completed, the registry and site figures update
-          automatically; protected counts cannot publish if they drift from the
-          parish records.
+          The registry tracks whether an entry has a deep case file,
+          multiple independent sources, or a single source. Parish profiles
+          expose their evidence ledgers directly. As new case files are
+          completed, the registry and site figures update automatically;
+          protected counts cannot publish if they drift from the parish
+          records.
         </p>
       </section>
 

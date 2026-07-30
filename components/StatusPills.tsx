@@ -32,10 +32,16 @@ function Pill({ label, bg, fg }: { label: string; bg: string; fg: string }) {
   );
 }
 
-export function IdentityPill({ value }: { value: IdentityStatus }) {
+export function IdentityPill({
+  value,
+  label,
+}: {
+  value: IdentityStatus;
+  label?: string;
+}) {
   return (
     <Pill
-      label={IDENTITY_LABEL[value]}
+      label={label ?? IDENTITY_LABEL[value]}
       bg={IDENTITY_COLOR[value]}
       fg={IDENTITY_TEXT[value]}
     />

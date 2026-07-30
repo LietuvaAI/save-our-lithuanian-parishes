@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import GuidanceNav from "@/components/GuidanceNav";
-import { figures } from "@/lib/parishes";
 
 export const metadata: Metadata = {
   title: "Facing a parish closure? Start here",
@@ -54,13 +53,8 @@ export default function StartHerePage() {
             <strong>non-Lithuanian parish</strong>.
           </p>
           <p>
-            Among the{" "}
-            <strong>
-              {figures.endingMode.diocese_closed} Lithuanian parishes
-            </strong>{" "}
-            closed by their diocese in the eighteen years covered by our
-            record — not one has been reversed. Not one appeal filed{" "}
-            <em>after</em> the decree arrived changed the outcome.
+            In the documented Lithuanian closures, not one appeal filed{" "}
+            <em>after</em> the decree arrived reversed a closure.
           </p>
           <p>
             That gap is not a coincidence. It is the record teaching:{" "}
@@ -194,15 +188,10 @@ export default function StartHerePage() {
           Neither alone reopened that church; together they did.
         </p>
         <p className="mt-3 leading-relaxed text-muted">
-          Among Lithuanian parishes in our record:{" "}
-          <strong className="text-foreground">
-            {figures.endingMode.diocese_closed} closures by the diocese.
-            Zero reversed.
-          </strong>{" "}
-          In eighteen years, no appeal filed after the decree arrived ever
-          changed a Lithuanian closure. The 26 precedents are what this record
-          says is possible — but only when the community moves before the
-          decree lands.
+          In the documented Lithuanian closures, no appeal filed after the decree
+          arrived reversed a closure. The 26 national precedents show what is
+          possible — but only when a community moves before the decree or
+          within the appeal window.
         </p>
         <p className="mt-3">
           <Link

@@ -2,7 +2,8 @@
 
 // ============================================================================
 // DioceseMap — the geography of the record: every US Catholic diocese, shaded
-// by how much of its documented Lithuanian parish network is now closed.
+// by how much of its documented Lithuanian parish life has ended through
+// formal closure or transfer to another community.
 // Boundaries: US Census counties (public domain) merged per diocese via the
 // public-domain crosswalk (github.com/kburchfiel/us_diocese_mapper), pre-
 // projected to the same 975x610 frame as the homepage map.
@@ -14,7 +15,13 @@ import overlay from "@/data/diocese-overlay.json";
 
 export interface DioceseMapCounts {
   /** Keyed by short diocese name ("Chicago", "Scranton"…). */
-  [shortName: string]: { total: number; closed: number; alive: number };
+  [shortName: string]: {
+    total: number;
+    ended: number;
+    formalClosed: number;
+    transferred: number;
+    alive: number;
+  };
 }
 
 interface OverlayDiocese {
@@ -37,11 +44,15 @@ const LABEL_OFFSET: Record<string, [number, number]> = {
   Pittsburgh: [-6, 12],
 };
 
-function slugify(name: string) {
-  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-}
-
-export default function DioceseMap({ counts }: { counts: DioceseMapCounts }) {
+export default function DioceseMap({
+  counts,
+  selected,
+  onSelect,
+}: {
+  counts: DioceseMapCounts;
+  selected?: string;
+  onSelect?: (shortName: string) => void;
+}) {
   const [hovered, setHovered] = useState<string | null>(null);
 
   const dioceses = (overlay.dioceses as OverlayDiocese[]).map((d) => ({
@@ -50,8 +61,9 @@ export default function DioceseMap({ counts }: { counts: DioceseMapCounts }) {
   }));
   const inRecord = dioceses.filter((d) => d.stats);
 
-  const hov = hovered
-    ? dioceses.find((d) => d.name === hovered) ?? null
+  const readoutName = hovered ?? selected;
+  const hov = readoutName
+    ? dioceses.find((d) => d.name === readoutName) ?? null
     : null;
 
   return (
@@ -67,7 +79,7 @@ export default function DioceseMap({ counts }: { counts: DioceseMapCounts }) {
               {hov.stats
                 ? ` — ${hov.stats.total} Lithuanian ${
                     hov.stats.total === 1 ? "parish" : "parishes"
-                  } documented · ${hov.stats.closed} closed${
+                  } documented · Lithuanian parish life ended at ${hov.stats.ended}${
                     hov.stats.alive === 0 ? " · none remain active" : ` · ${hov.stats.alive} active`
                   }`
                 : " — no Lithuanian parish in the record"}
@@ -76,8 +88,7 @@ export default function DioceseMap({ counts }: { counts: DioceseMapCounts }) {
         ) : (
           <span className="text-muted">
             Darker red = a larger share of the diocese&rsquo;s Lithuanian
-            parishes closed. Hover for detail; click a diocese to jump to its
-            parishes.
+            parish life ended. Select a diocese to inspect its parishes.
           </span>
         )}
       </div>
@@ -86,33 +97,32 @@ export default function DioceseMap({ counts }: { counts: DioceseMapCounts }) {
         viewBox={`0 0 ${overlay.frame.w} ${overlay.frame.h}`}
         className="w-full h-auto"
         role="img"
-        aria-label="US map of Catholic dioceses shaded by the share of their documented Lithuanian parishes now closed"
+        aria-label="US map of Catholic dioceses shaded by the share of their documented Lithuanian parish life that has ended"
       >
         {/* Diocese fills */}
         {dioceses.map((d) => {
-          const share = d.stats && d.stats.total > 0 ? d.stats.closed / d.stats.total : 0;
+          const share = d.stats && d.stats.total > 0 ? d.stats.ended / d.stats.total : 0;
           const isHov = hovered === d.name;
+          const isSelected = selected === d.name;
           return (
             <path
               key={d.name}
               d={d.path}
               fill={d.stats ? "var(--es-closed)" : "var(--muted)"}
               fillOpacity={d.stats ? 0.1 + 0.72 * share : 0.04}
-              stroke={isHov ? "var(--foreground)" : "none"}
-              strokeWidth={isHov ? 1.2 : 0}
+              stroke={isHov || isSelected ? "var(--foreground)" : "none"}
+              strokeWidth={isSelected ? 2 : isHov ? 1.2 : 0}
               className={d.stats ? "cursor-pointer" : undefined}
               onMouseEnter={() => setHovered(d.name)}
               onMouseLeave={() => setHovered(null)}
               onClick={() => {
                 if (!d.stats) return;
-                document
-                  .getElementById(`diocese-${slugify(d.name)}`)
-                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                onSelect?.(d.name);
               }}
             >
               <title>
                 {d.stats
-                  ? `${d.name}: ${d.stats.closed} of ${d.stats.total} closed${d.stats.alive === 0 ? " — none remain" : ""}`
+                  ? `${d.name}: Lithuanian parish life ended at ${d.stats.ended} of ${d.stats.total}${d.stats.alive === 0 ? " — none remain active" : ""}`
                   : d.name}
               </title>
             </path>
@@ -157,7 +167,7 @@ export default function DioceseMap({ counts }: { counts: DioceseMapCounts }) {
                   fontWeight={400}
                   fill="var(--muted)"
                 >
-                  {`${d.stats!.closed}/${d.stats!.total} closed`}
+                  {`${d.stats!.ended}/${d.stats!.total} ended`}
                 </tspan>
               </text>
             );
@@ -176,7 +186,7 @@ export default function DioceseMap({ counts }: { counts: DioceseMapCounts }) {
               />
             ))}
           </span>
-          share of the diocese&rsquo;s Lithuanian parishes closed — none &rarr; all
+          share of Lithuanian parish life ended — none &rarr; all
         </span>
         <span className="inline-flex items-center gap-1.5">
           <span

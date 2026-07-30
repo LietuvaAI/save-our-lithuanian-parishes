@@ -1,8 +1,10 @@
 import Link from "next/link";
 import ParishMap from "@/components/ParishMap";
-import { figures } from "@/lib/parishes";
+import NationalRecordGraphic from "@/components/NationalRecordGraphic";
 import alertsData from "@/data/alerts.json";
-import { scopedParishes, usRegistryParishes } from "@/lib/registry-scope";
+import networkData from "@/data/sielovada-us-network.json";
+import registryData from "@/data/registry-unified.json";
+import { scopedParishes } from "@/lib/registry-scope";
 import { toGroup } from "@/lib/end-state";
 
 // Homepage figures use the same U.S. register scope as The History and map.
@@ -11,13 +13,39 @@ const REG_ETHNIC = romanCatholicParishes.length;
 const REG_CLOSED = romanCatholicParishes.filter(
   (p) => toGroup(p.endState) === "closed",
 ).length;
-const REG_NATCATH = usRegistryParishes().filter(
+const REG_CLOSED_SINCE_1990 = romanCatholicParishes.filter(
   (p) =>
-    p.record_type === "parish" &&
-    (p.congregation_class === "national_catholic_pncc" ||
-      p.congregation_class === "independent_catholic"),
+    toGroup(p.endState) === "closed" &&
+    p.closed != null &&
+    p.closed >= 1990,
 ).length;
-const WATCH_COUNT = (alertsData as { sustainabilityWatch: unknown[] }).sustainabilityWatch.length;
+const lossesByDiocese = new Map<string, number>();
+for (const parish of romanCatholicParishes) {
+  if (toGroup(parish.endState) !== "closed" || !parish.diocese) continue;
+  lossesByDiocese.set(
+    parish.diocese,
+    (lossesByDiocese.get(parish.diocese) ?? 0) + 1,
+  );
+}
+const TOP_LOSS_DIOCESES = [...lossesByDiocese.entries()].sort(
+  ([nameA, countA], [nameB, countB]) =>
+    countB - countA || nameA.localeCompare(nameB),
+).slice(0, 2);
+const TOP_TWO_LOSS_COUNT = TOP_LOSS_DIOCESES.reduce(
+  (total, [, count]) => total + count,
+  0,
+);
+const CURRENT_WORSHIP_CLASSES = new Set([
+  "active_parish",
+  "active_mission",
+  "mass_continues",
+]);
+const currentWorshipEntries = networkData.entries.filter((entry) =>
+  CURRENT_WORSHIP_CLASSES.has(entry.networkClass),
+);
+const CURRENT_WORSHIP_STATES = new Set(
+  currentWorshipEntries.map((entry) => entry.state),
+).size;
 
 type CurrentAlert = {
   kind: string;
@@ -46,32 +74,6 @@ const activeCampaigns = (alertsData.campaigns as CurrentCampaign[])
   }))
   .filter((campaign) => campaign.alert)
   .slice(0, 4);
-
-const STATS = [
-  {
-    value: String(REG_ETHNIC),
-    label: "Roman Catholic Lithuanian parishes in the full U.S. record.",
-    tone: "ink",
-  },
-  {
-    value: String(REG_CLOSED),
-    label:
-      "Closed in the full U.S. Roman Catholic parish record — all years and all documented endings.",
-    tone: "red",
-  },
-  {
-    value: String(figures.endingMode.diocese_closed),
-    label:
-      "Closed by diocesan decision in the original Draugas case-filed core: 83 source rows, 82 canonical parish identities, 2008–2026.",
-    tone: "red",
-  },
-  {
-    value: String(REG_NATCATH),
-    label:
-      "Lithuanian National and independent Catholic parishes, documented separately as historical witness.",
-    tone: "ink",
-  },
-];
 
 const ACTIONS = [
   {
@@ -127,21 +129,18 @@ export default function Home() {
       </section>
 
 
-<section className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-4">
-        {STATS.map((s) => (
-          <div key={s.label} className="bg-background p-6">
-            <div
-              className="font-serif text-4xl font-semibold"
-              style={{
-                color: s.tone === "red" ? "var(--mark-closed)" : "var(--foreground)",
-              }}
-            >
-              {s.value}
-            </div>
-            <p className="mt-2 text-sm text-muted leading-snug">{s.label}</p>
-          </div>
-        ))}
-      </section>
+      <NationalRecordGraphic
+        total={REG_ETHNIC}
+        closed={REG_CLOSED}
+        closedSince1990={REG_CLOSED_SINCE_1990}
+        concentratedLosses={TOP_TWO_LOSS_COUNT}
+        firstDiocese={TOP_LOSS_DIOCESES[0]?.[0] ?? ""}
+        firstDioceseLosses={TOP_LOSS_DIOCESES[0]?.[1] ?? 0}
+        secondDiocese={TOP_LOSS_DIOCESES[1]?.[0] ?? ""}
+        secondDioceseLosses={TOP_LOSS_DIOCESES[1]?.[1] ?? 0}
+        revision={String(registryData.registryRevision.version)}
+        revisionDate={registryData.registryRevision.date}
+      />
 
       <section
         className="mt-10 border-y border-rule py-5 sm:py-6"
@@ -211,26 +210,33 @@ export default function Home() {
             href="/under-threat"
             className="font-medium underline underline-offset-4 hover:text-accent"
           >
-            See all current alerts and campaign evidence &rarr;
+            See everything happening now &rarr;
           </Link>
         </p>
       </section>
 
       <section className="mt-8">
         <div className="flex items-baseline gap-3">
-          <h2 className="font-serif text-xl font-semibold">Parish Sustainability</h2>
+          <h2 className="font-serif text-xl font-semibold">
+            Lithuanian Catholic life today
+          </h2>
           <span className="text-sm text-muted">
-            {WATCH_COUNT} parishes
+            {currentWorshipEntries.length} places
           </span>
         </div>
         <p className="mt-1 text-sm text-muted leading-relaxed">
-          Parishes that survived — or were never directly threatened — but face slow-burn erosion:
-          clergy shortages, financial strain, post-merger fragility. Clergy situation, Lithuanian Mass
-          schedule, and governance sourced for each.
+          Current Lithuanian Catholic worship gathers at{" "}
+          {networkData.counts.activeParishes} parishes,{" "}
+          {networkData.counts.activeMissions} missions, and{" "}
+          {networkData.counts.massContinues} hosted Masses across{" "}
+          {CURRENT_WORSHIP_STATES} states.
         </p>
         <p className="mt-2 text-sm">
-          <Link href="/sustainability-watch" className="underline hover:text-accent font-medium">
-            See all parish sustainability profiles &rarr;
+          <Link
+            href="/lithuanian-catholic-life-today"
+            className="underline hover:text-accent font-medium"
+          >
+            Explore the living network &rarr;
           </Link>
         </p>
       </section>

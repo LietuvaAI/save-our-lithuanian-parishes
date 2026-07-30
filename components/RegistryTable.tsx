@@ -4,17 +4,21 @@ import { useMemo, useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { type Ownership, OWNERSHIP_SHORT } from "@/lib/parishes";
 import {
-  type IdentityStatus,
   type AlertStatus,
   type FateStatus,
-  IDENTITY_LABEL,
-  IDENTITY_ORDER,
   ALERT_LABEL,
   ALERT_ORDER,
   FATE_LABEL,
   FATE_ORDER,
 } from "@/lib/unified-status";
-import { IdentityPill, AlertPill, FatePill } from "@/components/StatusPills";
+import { AlertPill, FatePill } from "@/components/StatusPills";
+import { EndStatePill } from "@/components/EndStatePill";
+import {
+  GROUP_LABEL,
+  GROUP_ORDER,
+  type EndState,
+  type EndStateGroup,
+} from "@/lib/end-state";
 
 /** One serializable row of the full research registry (built server-side). */
 export interface RegistryRow {
@@ -23,9 +27,11 @@ export interface RegistryRow {
   city: string;
   state: string;
   country: "US" | "CA";
+  recordType: string;
   comparator: boolean;
-  // Three unified dimensions
-  identity: IdentityStatus;
+  // Canonical institutional status plus two independent current/property axes.
+  endState: EndState;
+  statusGroup: EndStateGroup;
   alert: AlertStatus;
   fate: FateStatus;
   // Additional fields
@@ -155,7 +161,7 @@ function HeaderFilter<T extends string>({
 
 export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
   const [query, setQuery] = useState("");
-  const [identity, setIdentity] = useState<IdentityStatus | typeof ALL>(ALL);
+  const [status, setStatus] = useState<EndStateGroup | typeof ALL>(ALL);
   const [alert, setAlert] = useState<AlertStatus | typeof ALL>(ALL);
   const [fate, setFate] = useState<FateStatus | typeof ALL>(ALL);
   const [ownership, setOwnership] = useState<Ownership | typeof ALL>(ALL);
@@ -167,11 +173,11 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
   }, [rows]);
 
   // Only show filter options that exist in the data
-  const identityOptions = useMemo(() => {
-    const present = new Set(rows.map((r) => r.identity));
-    return IDENTITY_ORDER.filter((v) => present.has(v)).map((v) => ({
+  const statusOptions = useMemo(() => {
+    const present = new Set(rows.map((r) => r.statusGroup));
+    return GROUP_ORDER.filter((v) => present.has(v)).map((v) => ({
       value: v,
-      label: IDENTITY_LABEL[v],
+      label: GROUP_LABEL[v],
     }));
   }, [rows]);
 
@@ -207,7 +213,7 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
     const q = query.trim().toLowerCase();
     return rows.filter(
       (r) =>
-        (identity === ALL || r.identity === identity) &&
+        (status === ALL || r.statusGroup === status) &&
         (alert === ALL || r.alert === alert) &&
         (fate === ALL || r.fate === fate) &&
         (ownership === ALL || r.ownership === ownership) &&
@@ -218,13 +224,13 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
           r.state.toLowerCase().includes(q) ||
           (r.diocese?.toLowerCase().includes(q) ?? false))
     );
-  }, [rows, query, identity, alert, fate, ownership, diocese]);
+  }, [rows, query, status, alert, fate, ownership, diocese]);
 
   const sc =
     "rounded-md border border-rule bg-background px-2 py-1.5 text-sm";
 
   const activeFilters = [
-    identity !== ALL,
+    status !== ALL,
     alert !== ALL,
     fate !== ALL,
     ownership !== ALL,
@@ -234,7 +240,7 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
 
   const clearFilters = () => {
     setQuery("");
-    setIdentity(ALL);
+    setStatus(ALL);
     setAlert(ALL);
     setFate(ALL);
     setOwnership(ALL);
@@ -271,13 +277,13 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
 
         <div className="mt-3 flex flex-wrap items-center gap-2.5 sm:justify-between lg:justify-start">
           <HeaderFilter
-            label="Identity"
-            value={identity}
-            onChange={(v) => setIdentity(v)}
-            options={identityOptions}
+            label="Status"
+            value={status}
+            onChange={(v) => setStatus(v)}
+            options={statusOptions}
           />
           <HeaderFilter
-            label="Alert"
+            label="Current signal"
             value={alert}
             onChange={(v) => setAlert(v)}
             options={alertOptions}
@@ -339,7 +345,7 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
                     Dates
                   </th>
                   <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-muted">
-                    Community
+                    Status
                   </th>
                   <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-muted">
                     Property
@@ -368,6 +374,7 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
                       <span className="mt-0.5 block text-xs text-muted">
                         {r.city}, {r.state}
                         {r.comparator ? " · Canada" : ""}
+                        {r.recordType === "misija" ? " · mission" : ""}
                       </span>
                     </td>
                     <td className="px-4 py-3 text-xs leading-relaxed text-muted">
@@ -378,7 +385,15 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex flex-col items-start gap-2">
-                        <IdentityPill value={r.identity} />
+                        <EndStatePill
+                          value={r.endState}
+                          label={
+                            r.recordType === "misija" &&
+                            r.endState === "active_parish"
+                              ? "Active Lithuanian mission"
+                              : undefined
+                          }
+                        />
                         <AlertPill value={r.alert} />
                       </div>
                     </td>
@@ -416,10 +431,19 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
                 <div className="mt-0.5 text-sm text-muted">
                   {r.city}, {r.state}
                   {r.comparator ? " · Canada" : ""}
+                  {r.recordType === "misija" ? " · mission" : ""}
                 </div>
 
                 <div className="mt-3 flex flex-wrap gap-2">
-                  <IdentityPill value={r.identity} />
+                  <EndStatePill
+                    value={r.endState}
+                    label={
+                      r.recordType === "misija" &&
+                      r.endState === "active_parish"
+                        ? "Active Lithuanian mission"
+                        : undefined
+                    }
+                  />
                   <AlertPill value={r.alert} />
                   <FatePill value={r.fate} />
                 </div>

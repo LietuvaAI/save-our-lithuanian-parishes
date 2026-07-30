@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import registry from "@/data/registry-unified.json";
 import ParishViewList from "@/components/ParishViewList";
+import { EndStatePill } from "@/components/EndStatePill";
 import {
   comparatorParishes,
   OWNERSHIP_SHORT,
   type Parish,
 } from "@/lib/parishes";
+import { resolveParishEndState } from "@/lib/end-state";
 
 export const metadata: Metadata = {
   title: "Canadian Comparators",
@@ -28,9 +31,6 @@ const ontarioParishes = canadianParishes.filter(
 const activeParishes = canadianParishes.filter(
   (parish) => parish.lithuanianIdentity === "active_parish",
 );
-const communityDecided = canadianParishes.filter(
-  (parish) => parish.endingMode === "community_decided",
-);
 
 function canadianOwnershipLabel(parish: Parish) {
   return parish.state === "QC"
@@ -38,48 +38,81 @@ function canadianOwnershipLabel(parish: Parish) {
     : OWNERSHIP_SHORT[parish.ownership];
 }
 
-function Figure({ value, label }: { value: number; label: string }) {
-  return (
-    <div className="py-4">
-      <p className="font-serif text-3xl font-semibold">{value}</p>
-      <p className="mt-1 text-xs leading-snug text-muted">{label}</p>
-    </div>
-  );
-}
-
 export default function CanadianComparatorsPage() {
   return (
     <article className="mx-auto max-w-4xl px-4 py-12">
-      <p className="text-xs uppercase tracking-widest text-muted">
+      <p className="text-xs uppercase text-muted">
         Comparative view
       </p>
       <h1 className="mt-1 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
         Canadian comparators
       </h1>
-      <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted">
-        {canadianParishes.length} Canadian Lithuanian parish records are
-        included outside the U.S. totals to make differences in ownership,
-        governance, survival, and community decision-making visible. They are
-        deliberately bounded comparators, not a complete census of Lithuanian
-        religious life in Canada.
+      <p className="mt-4 max-w-3xl font-serif text-xl leading-relaxed sm:text-2xl">
+        What changes when the parish community has a formal role in the
+        property and in the decision about its future?
       </p>
 
-      <section
-        aria-label="Canadian comparator figures"
-        className="mt-8 grid grid-cols-3 divide-x divide-rule border-y border-rule"
-      >
-        <div className="pr-3">
-          <Figure value={canadianParishes.length} label="comparator records" />
+      <section className="mt-10 border-y border-rule py-8">
+        <div className="grid gap-8 lg:grid-cols-[minmax(14rem,0.55fr)_minmax(0,1.45fr)] lg:items-center">
+          <div>
+            <p className="font-serif text-6xl font-semibold leading-none">
+              {activeParishes.length} of {canadianParishes.length}
+            </p>
+            <h2 className="mt-3 font-serif text-2xl font-semibold leading-tight">
+              remain active Lithuanian parishes
+            </h2>
+            <p className="mt-3 leading-relaxed text-muted">
+              The third parish closed, but on the community&rsquo;s own
+              decision. Survival is not guaranteed; agency is the distinction.
+            </p>
+          </div>
+
+          <div aria-label="Ownership, decision, and outcome for the three Canadian comparator parishes">
+            <div className="hidden grid-cols-[1fr_1fr_auto] gap-4 border-b border-rule pb-2 text-xs uppercase text-muted sm:grid">
+              <span>Ownership</span>
+              <span>Decision</span>
+              <span>Today</span>
+            </div>
+            <div className="divide-y divide-rule">
+              {canadianParishes.map((parish) => (
+                <div
+                  key={parish.slug}
+                  className="grid gap-3 py-4 sm:grid-cols-[1fr_1fr_auto] sm:items-center sm:gap-4"
+                >
+                  <div>
+                    <Link
+                      href={`/parishes/${parish.slug}`}
+                      className="font-serif font-semibold hover:underline"
+                    >
+                      {parish.nameLt}
+                    </Link>
+                    <p className="text-xs text-muted">
+                      {parish.city}, {parish.state}
+                    </p>
+                    <p className="mt-1 text-sm">
+                      {canadianOwnershipLabel(parish)}
+                    </p>
+                  </div>
+                  <p className="text-sm leading-relaxed text-muted">
+                    {parish.endingMode === "community_decided"
+                      ? "The parish community chose the ending."
+                      : "Parish governance continues under Quebec civil law."}
+                  </p>
+                  <EndStatePill value={resolveParishEndState(parish)} />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        <div className="px-3">
-          <Figure value={activeParishes.length} label="active Lithuanian parishes" />
-        </div>
-        <div className="pl-3">
-          <Figure
-            value={communityDecided.length}
-            label="community-decided closure"
-          />
-        </div>
+        <p className="mt-5 border-t border-rule pt-3 text-xs leading-relaxed text-muted">
+          Scope: {canadianParishes.length} Canadian comparator parish records;
+          excluded from every U.S. headline figure · Registry Revision{" "}
+          {registry.registryRevision.version}, {registry.registryRevision.date}
+          {" · "}
+          <Link href="/about-the-data" className="underline hover:text-accent">
+            About the data
+          </Link>
+        </p>
       </section>
 
       <section className="mt-12">
@@ -118,32 +151,19 @@ export default function CanadianComparatorsPage() {
 
       <section className="mt-12 border-l-4 border-rule py-1 pl-4">
         <h2 className="font-serif text-xl font-semibold">
-          What this comparison can show
+          The comparison
         </h2>
         <p className="mt-2 text-sm leading-relaxed text-muted">
-          These three records help compare ownership structures, liturgical
-          continuity, and who participates in an ending. They cannot establish a
-          general rule for Canada or replace parish-specific civil and canonical
-          evidence.
+          These records do not claim that every Canadian parish survives.
+          They show communities acting within a different property and
+          governance structure.
         </p>
       </section>
 
-      <p className="mt-12 border-t border-rule pt-5 text-sm leading-relaxed text-muted">
-        Canadian comparators are excluded from every U.S. headline figure.
-        Their profile pages carry the current evidence and source ledger.{" "}
-        <Link href="/about-the-data" className="underline hover:text-foreground">
-          About the Data
-        </Link>
-        {" · "}
-        <Link
-          href="/about/sources-and-archives"
-          className="underline hover:text-foreground"
-        >
-          Sources &amp; Archives
-        </Link>
-        {" · "}
+      <p className="mt-12 border-t border-rule pt-5 text-sm text-muted">
+        Canadian comparators are excluded from every U.S. headline figure.{" "}
         <Link href="/record" className="underline hover:text-foreground">
-          The full record
+          See the full U.S. record
         </Link>
       </p>
     </article>

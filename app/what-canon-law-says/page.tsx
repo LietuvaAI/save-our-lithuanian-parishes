@@ -66,7 +66,7 @@ export default function CanonLawPage() {
           ).
         </p>
 
-        <h2>Then how were 55 parishes closed over their communities&rsquo; objections?</h2>
+        <h2>Then how can a parish be closed over its community&rsquo;s objections?</h2>
         <p>
           Two mechanisms, and neither is ownership in the ordinary sense.
           First, the bishop holds the canonical authority to{" "}
@@ -122,7 +122,7 @@ export default function CanonLawPage() {
         </p>
         <p>
           The timing is the hard lesson. In{" "}
-          <Link href="/record">our own case-filed record</Link>, no appeal
+          <Link href="/record">the Lithuanian parish record</Link>, no appeal
           filed after the decree ever reversed a closure — the national
           reversals were won by communities that moved before the decree or
           within the appeal window after it, a window measured in{" "}

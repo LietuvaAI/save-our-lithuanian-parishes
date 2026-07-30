@@ -333,7 +333,7 @@ export default function SourcesAndArchivesPage() {
         </h2>
         <p className="mt-3 leading-relaxed">
           Each parish profile ends with a public evidence ledger. It separates
-          primary and current evidence, secondary sources, and this
+          contemporary and institutional evidence, secondary sources, and this
           project&rsquo;s own publications. Full URLs are printed as well as
           linked. <em>Draugas</em> citations point to the dated issue; archive
           books point to their public Žiburio item when available. Missing

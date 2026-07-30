@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import contextPointsData from "@/data/context-points.json";
 import registry from "@/data/registry-unified.json";
 import { EndStatePill } from "@/components/EndStatePill";
+import RecordLensMap, {
+  type RecordLensPoint,
+} from "@/components/RecordLensMap";
 import { canonicalProfileHrefForRegistrySlug } from "@/lib/parish-profile";
 import { toScopedParish, type RegParish } from "@/lib/registry-scope";
-import type { EndState } from "@/lib/end-state";
+import type { EndState, EndStateGroup } from "@/lib/end-state";
+import {
+  recordMarkColor,
+  recordMarkShape,
+} from "@/lib/record-mark";
 
 export const metadata: Metadata = {
   title: "Lithuanian National and independent Catholic parishes",
@@ -32,6 +40,18 @@ type Rec = Omit<RegParish, "sources" | "years"> & {
   caveat?: string | null;
 };
 
+type ContextPoint = {
+  slug: string;
+  name: string;
+  city: string;
+  state: string;
+  x: number;
+  y: number;
+  group: EndStateGroup;
+  congregationClass: string | null;
+  href: string | null;
+};
+
 const NATIONAL_ENTRIES = (registry.parishes as Rec[])
   .filter(
     (p) =>
@@ -57,22 +77,14 @@ function yearDisplay(variants?: YearVariant[]): string | null {
   return m ? m[1] : String(v);
 }
 
-function webStatus(sources?: RegistrySource[]): string | null {
-  const ws = sources?.find((s) => s.axis === "web-historical");
-  return ws?.currentStatus ?? null;
-}
-
 function statusForRecord(parish: Rec): EndState {
-  const canonical = toScopedParish(parish as RegParish).endState;
-  if (canonical !== "unverified") return canonical;
-
-  const status = webStatus(parish.sources)?.toLowerCase() ?? "";
-  if (status.includes("demolished")) return "demolished";
-  if (status.includes("repurposed") || status.includes("sold")) {
-    return "repurposed";
-  }
-  if (status.includes("closed") || status.includes("merged")) return "closed";
-  return canonical;
+  const href =
+    canonicalProfileHrefForRegistrySlug(parish.slug) ??
+    `/parishes/${parish.slug}`;
+  return (
+    canonicalStatusByHref.get(href) ??
+    toScopedParish(parish as RegParish).endState
+  );
 }
 
 // Group entries by state for display
@@ -84,80 +96,126 @@ for (const p of DURABLE_ENTRIES) {
 }
 const states = [...byState.keys()].sort();
 
-const standingCount = DURABLE_ENTRIES.filter((p) =>
-  webStatus(p.sources)?.toLowerCase().startsWith("standing")
+const durableHrefs = new Set(
+  DURABLE_ENTRIES.map(
+    (parish) =>
+      canonicalProfileHrefForRegistrySlug(parish.slug) ??
+      `/parishes/${parish.slug}`,
+  ),
+);
+const contextPoints = contextPointsData.points as ContextPoint[];
+const canonicalStatusByHref = new Map(
+  contextPoints
+    .filter((point) => point.href)
+    .map((point) => [point.href!, point.group as EndState]),
+);
+const nationalMapPoints = contextPoints
+  .filter((point) => point.href && durableHrefs.has(point.href))
+  .map(
+    (point): RecordLensPoint => ({
+      ...point,
+      color: recordMarkColor(point.group),
+      shape: recordMarkShape(point.congregationClass),
+      detail:
+        point.group === "transferred"
+          ? "institution operating; Lithuanian liturgy ended"
+          : point.group === "closed"
+            ? "closed"
+            : "present status being verified",
+    }),
+  );
+const closedMapCount = nationalMapPoints.filter(
+  (point) => point.color === recordMarkColor("closed"),
 ).length;
+const operatingMapCount = nationalMapPoints.filter(
+  (point) => point.color === recordMarkColor("transferred"),
+).length;
+const unverifiedMapCount =
+  nationalMapPoints.length - closedMapCount - operatingMapCount;
 
 export default function NationalCatholicPage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12">
-      <p className="text-xs uppercase tracking-widest text-muted">
-        The research record
+    <article className="mx-auto max-w-5xl px-4 py-12">
+      <p className="text-xs uppercase text-muted">
+        Tradition view
       </p>
       <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
         Lithuanian National and independent Catholic parishes
       </h1>
-      <p className="mt-4 text-lg text-muted leading-relaxed">
-        In the early twentieth century, waves of Lithuanian immigrants —
-        concentrated in the coal towns of Pennsylvania and the mill cities of
-        New England — broke with their Roman Catholic dioceses. Their grievances
-        were concrete: who held title to the church building, who controlled
-        parish finances, whether the bishop or the congregation governed local
-        affairs. Some joined the{" "}
-        <strong>Polish National Catholic Church (PNCC)</strong>, founded in
-        Scranton in 1897 by Bishop Francis Hodur, which offered congregational
-        ownership of property and services in immigrant languages. Others formed
-        short-lived independent parishes outside any larger body.
-      </p>
-      <p className="mt-3 text-muted leading-relaxed">
-        The research record documents{" "}
-        <strong>{DURABLE_ENTRIES.length} durable parish records</strong>{" "}
-        across {states.length} states.{" "}
-        {standingCount > 0 && (
-          <>
-            {standingCount === 1
-              ? "One church building is documented as standing"
-              : `${standingCount} church buildings are documented as standing`}
-            ; the other records document closures, demolitions, repurposing, or
-            a present physical status that still needs verification.{" "}
-          </>
-        )}
-        These are documented here as historical record. They are part of the
-        story of how Lithuanian communities navigated the American Catholic
-        hierarchy — not a recommendation or an endorsement of separation from
-        Rome.
+      <p className="mt-4 max-w-3xl font-serif text-xl leading-relaxed sm:text-2xl">
+        What happened to the Lithuanian communities that left Roman Catholic
+        diocesan control?
       </p>
 
-      {/* What the PNCC was */}
-      <section className="mt-8 rounded-lg border border-rule px-5 py-5 text-sm leading-relaxed space-y-3">
-        <h2 className="font-serif text-lg font-semibold">
-          The Polish National Catholic Church
-        </h2>
-        <p className="text-muted">
-          The PNCC was founded in 1897 when Bishop Hodur led a breakaway from
-          the Diocese of Scranton over parish property rights. It retained
-          Catholic sacramental practice and apostolic succession but placed
-          ownership of church buildings in the congregation rather than the
-          diocese, and introduced vernacular liturgy decades before Vatican II.
-          Lithuanian immigrants in PNCC-affiliated parishes maintained their own
-          ethnic identity within the broader Polish National Catholic structure.
+      <section className="mt-10 border-y border-rule py-8">
+        <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1.5fr)_minmax(16rem,0.7fr)]">
+          <RecordLensMap
+            points={nationalMapPoints}
+            ariaLabel={`${DURABLE_ENTRIES.length} Lithuanian National and independent Catholic parish records across ${states.length} states`}
+            legend={[
+              {
+                label: `Closed · ${closedMapCount}`,
+                color: recordMarkColor("closed"),
+                shape: "diamond",
+              },
+              {
+                label: `Institution operating; Lithuanian liturgy ended · ${operatingMapCount}`,
+                color: recordMarkColor("transferred"),
+                shape: "diamond",
+              },
+              {
+                label: `Being verified · ${unverifiedMapCount}`,
+                color: recordMarkColor("unverified"),
+                shape: "diamond",
+              },
+            ]}
+          />
+          <div>
+            <p className="font-serif text-6xl font-semibold leading-none">
+              {DURABLE_ENTRIES.length}
+            </p>
+            <h2 className="mt-3 font-serif text-2xl font-semibold leading-tight">
+              parishes established in {states.length} states
+            </h2>
+            <p className="mt-3 leading-relaxed text-muted">
+              Providence of God in Scranton is the one institution documented
+              as still operating. Its services are now in English; no current
+              Lithuanian-language liturgy is documented.
+            </p>
+          </div>
+        </div>
+        <p className="mt-5 border-t border-rule pt-3 text-xs leading-relaxed text-muted">
+          Scope: {DURABLE_ENTRIES.length} National or independent Catholic
+          parish institutions across {states.length} states · Registry Revision{" "}
+          {registry.registryRevision.version},{" "}
+          {registry.registryRevision.date}
+          {" · "}
+          <Link href="/about-the-data" className="underline hover:text-accent">
+            About the data
+          </Link>
         </p>
-        <p className="text-muted">
-          The PNCC remains a distinct, continuing denomination today. The
-          Lithuanian-founded congregations documented here were separate
-          national parishes organized by Lithuanian immigrants — built, funded,
-          and governed by their own communities.
+      </section>
+
+      <section className="mt-10 max-w-3xl border-l-4 border-rule py-1 pl-4 text-sm leading-relaxed">
+        <h2 className="font-serif text-lg font-semibold">
+          Why these parishes formed
+        </h2>
+        <p className="mt-2 text-muted">
+          Beginning in the early twentieth century, communities in Pennsylvania,
+          New England, and Illinois formed independent parishes or joined the
+          Polish National Catholic Church. The PNCC retained Catholic
+          sacramental practice while placing church property in congregational
+          hands and using immigrant languages in worship.
         </p>
       </section>
 
       {/* The parishes */}
-      <section className="mt-10">
+      <section className="mt-12 max-w-3xl">
         <h2 className="font-serif text-2xl font-semibold">
           {DURABLE_ENTRIES.length} documented parishes
         </h2>
         <p className="mt-1 text-sm text-muted">
-          Sorted by earliest documented founding. Each entry links to its full
-          research record with sources cited.
+          Each entry opens its canonical profile and full source record.
         </p>
 
         <div className="mt-5 space-y-10">
@@ -238,9 +296,9 @@ export default function NationalCatholicPage() {
       </section>
 
       {SUPPORTING_ENTRIES.length > 0 && (
-        <section className="mt-10 border-t border-rule pt-8">
+        <section className="mt-10 max-w-3xl border-t border-rule pt-8">
           <h2 className="font-serif text-2xl font-semibold">
-            Historical movement and phase evidence
+            Related attempts and independent phases
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-muted">
             These records document a real independent or national
@@ -283,44 +341,9 @@ export default function NationalCatholicPage() {
         </section>
       )}
 
-      {/* Data note */}
-      <section className="mt-10 rounded-lg border border-rule px-4 py-3.5 text-sm text-muted leading-relaxed">
-        <p>
-          Every entry retains its source ledger and research-depth label.
-          Entries supported by only one source remain visibly marked until
-          corroborated. See{" "}
-          <Link
-            href="/about/sources-and-archives"
-            className="underline hover:text-foreground"
-          >
-            Sources &amp; Archives
-          </Link>
-          {" "}for the evidence hierarchy and{" "}
-          <Link href="/report" className="underline hover:text-foreground">
-            report a correction
-          </Link>
-          .
-        </p>
-        <p className="mt-2">
-          The map on the homepage marks National Catholic parishes as{" "}
-          <span className="font-mono text-xs">◆</span> diamonds to distinguish
-          them from Roman Catholic parishes, which appear as circles. On the map,
-          filter to &ldquo;Lost&rdquo; and zoom into Pennsylvania and New England to see
-          the full cluster.
-        </p>
-      </section>
-
-      <p className="mt-8 text-sm text-muted">
-        <Link href="/" className="underline hover:text-foreground">
-          ← Back to the map
-        </Link>
-        {" · "}
+      <p className="mt-10 max-w-3xl border-t border-rule pt-4 text-sm text-muted">
         <Link href="/record" className="underline hover:text-foreground">
-          The full record
-        </Link>
-        {" · "}
-        <Link href="/about" className="underline hover:text-foreground">
-          About the project
+          See the full record
         </Link>
       </p>
     </article>

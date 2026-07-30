@@ -122,6 +122,7 @@ for (const r of registry.parishes) {
     y: +xy[1].toFixed(1),
     group: groupOf({ identity, buildingFate, hasClosed: !!closed, isStanding, endingMode }),
     closed,
+    recordType: r.record_type ?? null,
     congregationClass: r.congregation_class ?? null,
     diocese: normalizeDiocese(r.diocese),
     href: `/parishes/${libOk ? lib.slug : r.slug}`,

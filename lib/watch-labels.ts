@@ -1,6 +1,6 @@
 // ============================================================================
-// Sustainability-watch display labels — shared by the /sustainability-watch
-// page and parish profiles so the two surfaces can never drift apart.
+// Sustainability display labels shared by What’s Happening Now and parish
+// profiles so the two surfaces can never drift apart.
 // ============================================================================
 
 export const CLERGY_LABEL: Record<string, string> = {

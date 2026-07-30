@@ -7,7 +7,7 @@
 // source of truth — every page, table, map, and profile imports from here.
 //
 //   1. Lithuanian Identity — "Is it still ours?"
-//   2. Alert Status        — "Is something happening right now?"
+//   2. Current Signal      — "Is something happening right now?"
 //   3. Building Fate       — "What happened to the physical structure?"
 //
 // Colors use the five --mark-* CSS variables defined in globals.css.
@@ -55,7 +55,7 @@ export const IDENTITY_ORDER: IdentityStatus[] = [
   "unknown",
 ];
 
-// ── Dimension 2: Alert Status ────────────────────────────────────────────────
+// ── Dimension 2: Current Signal ──────────────────────────────────────────────
 // What is happening right now. Derived from alerts.json (kind field) and the
 // sustainabilityWatch array.
 
@@ -70,7 +70,7 @@ export const ALERT_LABEL: Record<AlertStatus, string> = {
   active_campaign: "Active campaign",
   watched: "Development to monitor",
   building_at_risk: "Building at risk",
-  sustainability: "Parish sustainability",
+  sustainability: "Pastoral profile",
   none: "",
 };
 
@@ -78,7 +78,7 @@ export const ALERT_COLOR: Record<AlertStatus, string> = {
   active_campaign: "var(--es-closed)",
   watched: "var(--es-transferred)",
   building_at_risk: "var(--mark-building)",
-  sustainability: "var(--mark-ink)",
+  sustainability: "var(--es-mass)",
   none: "transparent",
 };
 
@@ -86,7 +86,7 @@ export const ALERT_TEXT: Record<AlertStatus, string> = {
   active_campaign: "#fff",
   watched: "#1c1917",
   building_at_risk: "#fff",
-  sustainability: "var(--background)",
+  sustainability: "#10261b",
   none: "",
 };
 

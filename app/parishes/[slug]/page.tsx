@@ -99,6 +99,7 @@ type WatchPhoto = {
 type ParishAlertEntry = {
   parishLink: string;
   level: string;
+  kind: "active" | "watch" | "building";
   whatChanged: string;
   sources: AlertSource[];
 };
@@ -298,12 +299,6 @@ function institutionLabel(profile: CanonicalParishProfile, community: boolean) {
   );
 }
 
-function recordDepthLabel(profile: CanonicalParishProfile) {
-  if (profile.recordDepth === "case-filed") return "Deep case file";
-  if (profile.recordDepth === "multi-source") return "Multi-source record";
-  return "Single-source record";
-}
-
 export function generateStaticParams() {
   return canonicalParishProfiles.map((profile) => ({ slug: profile.slug }));
 }
@@ -361,6 +356,11 @@ export default async function ParishPage({
   const watchEntry = getSustainabilityWatch(profile);
   const campaignDispatches = parishCampaign?.dispatches ?? [];
   const watchDispatches = watchEntry?.dispatches ?? [];
+  const currentSignalLabel = parishCampaign
+    ? "Active campaign"
+    : parishAlert?.kind === "building"
+      ? "Building at risk"
+      : "Current development";
 
   const photosEntry =
     getClearedPhoto(profile.slug) ??
@@ -406,8 +406,8 @@ export default async function ParishPage({
   const watchSources = watchEntry
     ? linkedProfileSources(watchEntry.sources, {
         group: "current",
-        context: `Parish sustainability profile checked ${watchEntry.dateObserved}`,
-        fallbackTitle: "Parish sustainability source",
+        context: `Pastoral conditions checked ${watchEntry.dateObserved}`,
+        fallbackTitle: "Pastoral conditions source",
       })
     : [];
   const situationSources = situation?.sources
@@ -429,7 +429,7 @@ export default async function ParishPage({
       projectProfileSource(
         dispatch.url,
         dispatch.title,
-        "Related Židinys sustainability dispatch",
+        "Related Židinys pastoral dispatch",
       ),
     ),
     ...projectProfileSource(
@@ -439,8 +439,8 @@ export default async function ParishPage({
     ),
     ...projectProfileSource(
       watchEntry?.hearthUrl,
-      "Židinys sustainability dispatch",
-      "Current parish sustainability publication",
+      "Židinys pastoral dispatch",
+      "Current parish pastoral publication",
     ),
   ];
   const profileSources = finalizeProfileSources([
@@ -505,7 +505,17 @@ export default async function ParishPage({
 
       {(!researchOnly || parishAlert || watchEntry) && (
         <div className="mt-3 flex flex-wrap items-center gap-3">
-          {!researchOnly && <EndStatePill value={endState} size="lg" />}
+          {!researchOnly && (
+            <EndStatePill
+              value={endState}
+              size="lg"
+              label={
+                recordType === "misija" && endState === "active_parish"
+                  ? "Active Lithuanian mission"
+                  : undefined
+              }
+            />
+          )}
           {(parishAlert || watchEntry) && (
             <span
               className="rounded-full border-2 px-3 py-0.5 text-xs font-semibold"
@@ -516,11 +526,7 @@ export default async function ParishPage({
                 color: parishAlert ? "var(--es-closed)" : "var(--mark-ink)",
               }}
             >
-              {parishAlert
-                ? parishCampaign
-                  ? "Active campaign"
-                  : "Under threat"
-                : "Sustainability profile"}
+              {parishAlert ? currentSignalLabel : "Pastoral profile"}
             </span>
           )}
         </div>
@@ -536,9 +542,6 @@ export default async function ParishPage({
       <div className="mt-4 flex flex-wrap gap-1.5">
         <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium">
           {institutionLabel(profile, community)}
-        </span>
-        <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
-          {recordDepthLabel(profile)}
         </span>
         {entry.needs_human_source_review && (
           <span className="rounded-full border border-amber-300 bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-amber-900 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-200">
@@ -752,7 +755,7 @@ export default async function ParishPage({
             }}
           >
             <p className="text-xs uppercase tracking-widest text-muted">
-              {parishCampaign ? "Active campaign" : "Under threat"}
+              {currentSignalLabel}
             </p>
             <p className="mt-1 text-sm leading-relaxed">
               {parishAlert.whatChanged}
@@ -776,7 +779,7 @@ export default async function ParishPage({
                 href="/under-threat"
                 className="inline-flex items-center gap-1 rounded-md border border-rule px-3 py-1.5 text-sm font-medium transition-colors hover:border-foreground"
               >
-                All parishes under threat &rarr;
+                What&rsquo;s happening now &rarr;
               </Link>
             </div>
             <p className="mt-2 text-xs text-muted">
@@ -810,7 +813,7 @@ export default async function ParishPage({
           <div className="mt-4 overflow-hidden rounded-lg border border-rule">
             <div className="px-4 pb-3 pt-3.5">
               <p className="text-xs uppercase tracking-widest text-muted">
-                Parish sustainability
+                Pastoral conditions
               </p>
               <p className="mt-1.5 leading-relaxed">{watchEntry.situation}</p>
 
@@ -890,10 +893,10 @@ export default async function ParishPage({
                   </a>
                 )}
                 <Link
-                  href="/sustainability-watch"
+                  href="/lithuanian-catholic-life-today#parish-health-heading"
                   className="rounded-md border border-rule px-3 py-1 text-xs font-medium transition-colors hover:border-foreground"
                 >
-                  Parish Sustainability &rarr;
+                  Catholic life today &rarr;
                 </Link>
               </div>
             </div>

@@ -50,6 +50,10 @@ export interface RegParish {
     founded?: { value: string }[];
     closed?: { value: string }[];
   };
+  lifecycle?: {
+    canonical_status?: string;
+    selected_closed_year?: number | null;
+  };
   sources?: { ethnic_status?: string }[];
   congregation_class?: CongregationClass;
   diocese?: string | null;
@@ -63,6 +67,7 @@ export interface ScopedParish {
   city: string;
   state: string;
   country: "US" | "CA";
+  recordType: string;
   comparator: boolean;
   diocese: string | null;
   founded: number | null;
@@ -133,7 +138,7 @@ export function usRegistryParishes(): RegParish[] {
   );
 }
 
-// Alert + sustainability-watch lookups by slug
+// Current-alert and sustainability-profile lookups by slug
 const alertBySlug = new Map<string, "active" | "watch" | "building">();
 for (const a of alertsData.alerts as { parishLink: string; kind: string }[]) {
   alertBySlug.set(
@@ -162,10 +167,18 @@ export function toScopedParish(p: RegParish): ScopedParish {
     : yearOf(p.locked?.year_founded, p.years?.founded);
   const closed = libOk
     ? lib!.yearClosed
-    : yearOf(p.locked?.year_closed, p.years?.closed);
+    : p.lifecycle
+      ? (p.lifecycle.selected_closed_year ?? null)
+      : yearOf(p.locked?.year_closed, p.years?.closed);
 
   const slug = libOk ? lib!.slug : p.slug;
-  const endingMode = libOk ? (lib!.endingMode as EndingMode) : null;
+  const endingMode = libOk
+    ? (lib!.endingMode as EndingMode)
+    : p.lifecycle?.canonical_status === "unresolved"
+      ? "undecided"
+      : p.lifecycle?.canonical_status === "standing"
+        ? "standing"
+        : null;
 
   // Classifiers: canonical parishes carry them in parishes.json; the rest of
   // the registry reads the parish-situation overlay (researched entries).
@@ -196,6 +209,7 @@ export function toScopedParish(p: RegParish): ScopedParish {
     city: p.city.replace(/\s*[(;].*$/, ""),
     state: p.state,
     country: p.country,
+    recordType: p.record_type ?? "parish",
     comparator: p.comparator === true,
     diocese: normalizeDiocese(p.diocese),
     founded,

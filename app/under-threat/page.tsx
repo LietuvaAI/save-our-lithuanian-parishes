@@ -1,14 +1,30 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import alertsData from "@/data/alerts.json";
+import contextPointsData from "@/data/context-points.json";
+import {
+  DiocesePill,
+  DiocesanLeaderLink,
+} from "@/components/DiocesePill";
 import { EndStatePill } from "@/components/EndStatePill";
+import RecordLensMap, {
+  type RecordLensPoint,
+} from "@/components/RecordLensMap";
 import { scopedParishes } from "@/lib/registry-scope";
-import type { EndState } from "@/lib/end-state";
+import type { EndState, EndStateGroup } from "@/lib/end-state";
+import { DIOCESAN_LEADERSHIP_VERIFIED } from "@/lib/diocese-links";
+import {
+  isHollowRecordMark,
+  recordMarkColor,
+  recordMarkShape,
+  SIGNAL_RING_COLOR,
+  type RecordSignal,
+} from "@/lib/record-mark";
 
 export const metadata: Metadata = {
-  title: "Under Threat",
+  title: "What’s Happening Now",
   description:
-    "Current Lithuanian parish alerts: closures, consolidations, property motions, open processes, and active community campaigns — every item sourced.",
+    "Current Lithuanian parish campaigns, diocesan developments, and buildings at risk — every item sourced.",
 };
 
 type Alert = {
@@ -37,6 +53,19 @@ type Campaign = {
   sources: { title: string; publisher: string; url: string }[];
 };
 
+type ContextPoint = {
+  slug: string;
+  name: string;
+  city: string;
+  state: string;
+  x: number;
+  y: number;
+  group: EndStateGroup;
+  recordType: string | null;
+  congregationClass: string | null;
+  href: string | null;
+};
+
 const alerts = alertsData.alerts as Alert[];
 const campaigns = alertsData.campaigns as Campaign[];
 
@@ -55,6 +84,41 @@ const activeCampaigns = campaigns.filter((c) => {
 const activeAlerts = alerts.filter((a) => a.kind === "active");
 const watchAlerts = alerts.filter((a) => a.kind === "watch");
 const buildingAlerts = alerts.filter((a) => a.kind === "building");
+const contextPoints = contextPointsData.points as ContextPoint[];
+
+const alertMapPoints = alerts.flatMap((alert): RecordLensPoint[] => {
+  const slug = alert.parishLink.replace(/^\/(parishes|registry)\//, "");
+  const point = contextPoints.find(
+    (candidate) =>
+      candidate.href === alert.parishLink || candidate.slug === slug,
+  );
+
+  if (!point) return [];
+  return [
+    {
+      ...point,
+      slug: alert.id,
+      href: alert.parishLink,
+      color: recordMarkColor(point.group),
+      shape: recordMarkShape(point.congregationClass),
+      hollow: isHollowRecordMark({
+        group: point.group,
+        recordType: point.recordType,
+      }),
+      ringColor:
+        SIGNAL_RING_COLOR[alert.kind as RecordSignal] ??
+        SIGNAL_RING_COLOR.watch,
+      detail:
+        alert.kind === "active"
+          ? "active campaign"
+          : alert.kind === "building"
+            ? "building at risk"
+            : "development to monitor",
+    },
+  ];
+});
+const unmappedAlertCount = alerts.length - alertMapPoints.length;
+const alertStateCount = new Set(alertMapPoints.map((point) => point.state)).size;
 
 // Substack base for fallback links
 const SUBSTACK = "https://blog.saveourlithuanianparishes.org";
@@ -74,27 +138,101 @@ function statusForLink(link: string): EndState {
 
 export default function UnderThreatPage() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12">
-      <p className="text-xs uppercase tracking-widest text-muted">Happening now</p>
+    <div className="mx-auto max-w-5xl px-4 py-12">
+      <p className="text-xs uppercase text-muted">Happening now</p>
       <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold">
-        Parishes Under Threat
+        What&rsquo;s Happening Now
       </h1>
-      <p className="mt-3 text-muted leading-relaxed">
-        Each item below is a current event involving a closure, consolidation,
-        property motion, or open process, stated with its sources. Snapshot of{" "}
-        {alertsData.snapshot}; red items are re-checked weekly, amber biweekly.
-        Slower questions about clergy, liturgy, governance, and finances live
-        in{" "}
-        <Link href="/sustainability-watch" className="underline hover:text-foreground">
-          Parish Sustainability
+      <p className="mt-4 max-w-3xl font-serif text-xl leading-relaxed sm:text-2xl">
+        Where is a decision, campaign, or building future at stake now?
+      </p>
+
+      <section className="mt-10 border-y border-rule py-8">
+        <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1.5fr)_minmax(16rem,0.7fr)]">
+          <RecordLensMap
+            points={alertMapPoints}
+            ariaLabel={`${alerts.length} current parish situations across ${alertStateCount} states`}
+            legend={[
+              {
+                label: `Active campaign · ${activeAlerts.length}`,
+                color: SIGNAL_RING_COLOR.active,
+                shape: "ring",
+              },
+              {
+                label: `Development · ${watchAlerts.length}`,
+                color: SIGNAL_RING_COLOR.watch,
+                shape: "ring",
+              },
+              {
+                label: `Building at risk · ${buildingAlerts.length}`,
+                color: SIGNAL_RING_COLOR.building,
+                shape: "ring",
+              },
+            ]}
+          />
+          <div>
+            <p className="font-serif text-6xl font-semibold leading-none">
+              {alerts.length}
+            </p>
+            <h2 className="mt-3 font-serif text-2xl font-semibold leading-tight">
+              current situations across {alertStateCount} states
+            </h2>
+            <p className="mt-3 leading-relaxed text-muted">
+              {activeAlerts.length} have active community campaigns.{" "}
+              {watchAlerts.length} more are diocesan or parish developments to
+              monitor. {buildingAlerts.length} concern former parish buildings
+              whose physical future is still at stake.
+            </p>
+            <p className="mt-4 text-xs text-muted">
+              Canonical fill color shows each parish&rsquo;s status; the outer
+              ring shows why it appears in this current-action view.
+            </p>
+          </div>
+        </div>
+        <p className="mt-5 border-t border-rule pt-3 text-xs leading-relaxed text-muted">
+          Scope: {alerts.length} current action signals across {alertStateCount}{" "}
+          states · Snapshot {alertsData.snapshot} · Every item cites its current
+          sources
+          {unmappedAlertCount > 0
+            ? ` · ${unmappedAlertCount} signal${
+                unmappedAlertCount === 1 ? "" : "s"
+              } could not be placed on the map`
+            : ""}
+          {" · "}
+          <Link href="/about-the-data" className="underline hover:text-accent">
+            About the data
+          </Link>
+        </p>
+      </section>
+
+      <nav
+        aria-label="Sections on this page"
+        className="mt-6 flex flex-wrap gap-x-4 gap-y-2 border-b border-rule pb-3 text-sm"
+      >
+        <a href="#active-campaigns" className="font-medium underline hover:text-accent">
+          Active campaigns · {activeCampaigns.length}
+        </a>
+        <a href="#developments" className="font-medium underline hover:text-accent">
+          Developments · {watchAlerts.length}
+        </a>
+        <a href="#buildings" className="font-medium underline hover:text-accent">
+          Buildings · {buildingAlerts.length}
+        </a>
+        <Link
+          href="/lithuanian-catholic-life-today#parish-health-heading"
+          className="font-medium underline hover:text-accent"
+        >
+          Parish health profiles
         </Link>
-        .
+      </nav>
+      <p className="mt-2 text-xs text-muted">
+        Diocesan leadership current as of {DIOCESAN_LEADERSHIP_VERIFIED}.
       </p>
 
       {/* ── Open window callout ── */}
       <section className="mt-8 rounded-lg border-2 border-accent/60 px-4 py-3.5">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <p className="text-xs uppercase tracking-widest text-muted">
+          <p className="text-xs uppercase text-muted">
             The open window
           </p>
           <EndStatePill
@@ -123,7 +261,7 @@ export default function UnderThreatPage() {
       </section>
 
       {/* ── Active campaigns ── */}
-      <section className="mt-10">
+      <section id="active-campaigns" className="mt-10 scroll-mt-24">
         <div className="flex items-baseline gap-3">
           <h2 className="font-serif text-2xl font-semibold">Active campaigns</h2>
           <span className="text-sm text-muted">
@@ -155,9 +293,13 @@ export default function UnderThreatPage() {
                     </Link>
                     <span className="ml-2 text-muted text-sm">{c.place}</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <EndStatePill value={statusForLink(c.parishLink)} />
-                    <span className="text-xs text-muted">since {c.since}</span>
+                  <div className="flex flex-col items-start gap-1 sm:items-end">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <EndStatePill value={statusForLink(c.parishLink)} />
+                      {alert && <DiocesePill name={alert.diocese} />}
+                      <span className="text-xs text-muted">since {c.since}</span>
+                    </div>
+                    {alert && <DiocesanLeaderLink diocese={alert.diocese} />}
                   </div>
                 </div>
 
@@ -212,7 +354,7 @@ export default function UnderThreatPage() {
       </section>
 
       {/* ── Monitored: watch ── */}
-      <section className="mt-12">
+      <section id="developments" className="mt-12 scroll-mt-24">
         <div className="flex items-baseline gap-3">
           <h2 className="font-serif text-2xl font-semibold">Developments to monitor</h2>
           <span className="text-sm text-muted">{watchAlerts.length} parishes</span>
@@ -235,10 +377,15 @@ export default function UnderThreatPage() {
                   {a.entity}
                 </Link>
                 <span className="text-muted text-sm">— {a.place}</span>
-                <span className="ml-auto text-xs text-muted">{a.diocese}</span>
+                <span className="ml-auto">
+                  <DiocesePill name={a.diocese} />
+                </span>
                 <EndStatePill value={statusForLink(a.parishLink)} />
               </div>
               <p className="mt-1.5 text-sm leading-relaxed text-muted">{a.whatChanged}</p>
+              <p className="mt-1">
+                <DiocesanLeaderLink diocese={a.diocese} />
+              </p>
               {a.caveat && (
                 <p className="mt-1 text-xs text-muted italic">{a.caveat}</p>
               )}
@@ -263,7 +410,7 @@ export default function UnderThreatPage() {
       </section>
 
       {/* ── Buildings at risk ── */}
-      <section className="mt-12">
+      <section id="buildings" className="mt-12 scroll-mt-24">
         <div className="flex items-baseline gap-3">
           <h2 className="font-serif text-2xl font-semibold">Buildings at risk</h2>
           <span className="text-sm text-muted">{buildingAlerts.length} buildings</span>
@@ -285,10 +432,15 @@ export default function UnderThreatPage() {
                   {a.entity}
                 </Link>
                 <span className="text-muted text-sm">— {a.place}</span>
-                <span className="ml-auto text-xs text-muted">{a.diocese}</span>
+                <span className="ml-auto">
+                  <DiocesePill name={a.diocese} />
+                </span>
                 <EndStatePill value={statusForLink(a.parishLink)} />
               </div>
               <p className="mt-1.5 text-sm leading-relaxed text-muted">{a.whatChanged}</p>
+              <p className="mt-1">
+                <DiocesanLeaderLink diocese={a.diocese} />
+              </p>
               <p className="mt-1.5 text-xs text-muted">
                 Sources:{" "}
                 {a.sources.map((s, i) => (
@@ -309,37 +461,6 @@ export default function UnderThreatPage() {
         </div>
       </section>
 
-      <section className="mt-10 rounded-lg border border-rule px-4 py-3.5 text-sm text-muted leading-relaxed">
-        <p>
-          <span className="font-medium text-foreground">How this list is built.</span>{" "}
-          The current-alert review covers 155 parishes and sites drawn
-          from the wider research record — a broader net than the{" "}
-          <Link href="/record" className="underline hover:text-foreground">
-            case-filed parishes
-          </Link>{" "}
-          with researched case files, which remain the core record. A parish
-          appearing here is not a verdict: unresolved cases stay unresolved
-          until the record says otherwise. All active campaigns are also
-          published on{" "}
-          <a
-            href={`${SUBSTACK}/p/active-campaigns`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-foreground"
-          >
-            The Hearth
-          </a>
-          . Method and sources:{" "}
-          <Link href="/about-the-data" className="underline hover:text-foreground">
-            About the data
-          </Link>
-          . Know something we don&rsquo;t?{" "}
-          <Link href="/report" className="underline hover:text-foreground">
-            Tell us
-          </Link>
-          .
-        </p>
-      </section>
     </div>
   );
 }
