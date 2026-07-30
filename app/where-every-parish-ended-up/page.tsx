@@ -37,10 +37,26 @@ function buildThreads(): ThreadParish[] {
     const divineProvidence =
       parish.slug === DIVINE_PROVIDENCE_SLUG
         ? {
-            contextNote:
-              "Its institutional lineage begins in 1908 as St. George in Detroit. The present Southfield church was consecrated September 8, 1973.",
+            institutionNote:
+              "Founded in 1908 as St. George in Detroit; the same Lithuanian parish community continues today as Divine Providence in Southfield.",
+            buildingLineage: [
+              {
+                date: "1908–1960s",
+                title: "First and second Detroit homes",
+                detail:
+                  "The community lost two successive church sites to Detroit highway construction.",
+                state: "lost" as const,
+              },
+              {
+                date: "1973–present",
+                title: "Divine Providence, Southfield",
+                detail:
+                  "The parishioner-built church and cultural center were consecrated September 8, 1973, and stand today.",
+                state: "standing" as const,
+              },
+            ],
             contextHref: DIVINE_PROVIDENCE_HISTORY,
-            contextLinkLabel: "Read the parish history",
+            contextLinkLabel: "Read the sourced building history",
           }
         : {};
 
@@ -81,7 +97,7 @@ export default function ParishOutcomeFlowPage() {
   });
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-12">
+    <div className="mx-auto max-w-6xl px-4 py-12">
       <p className="text-xs uppercase tracking-widest text-muted">
         A full-record flow
       </p>
@@ -89,9 +105,10 @@ export default function ParishOutcomeFlowPage() {
         Where did every Lithuanian parish end up?
       </h1>
       <p className="mt-3 max-w-3xl text-lg leading-relaxed">
-        Follow each Roman Catholic Lithuanian parish from its founding decade
-        to its present condition. Closed parishes continue into a final
-        branch showing what became of the church building.
+        Follow each Roman Catholic Lithuanian parish institution from its
+        founding decade to its present condition. Closed parishes continue
+        into a final branch showing what became of the last documented church
+        building.
       </p>
 
       <section className="mt-8 border-y border-rule py-5">
@@ -105,6 +122,11 @@ export default function ParishOutcomeFlowPage() {
           institutional founding decade to present status · registry generated{" "}
           {generated}.
         </p>
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted">
+          This is a parish flow, not a count of individual church buildings.
+          One parish may have occupied several churches; select a parish to
+          see its known building lineage.
+        </p>
       </section>
 
       <section className="mt-8">
@@ -112,43 +134,13 @@ export default function ParishOutcomeFlowPage() {
           One line, one parish
         </h2>
         <p className="mt-2 max-w-3xl leading-relaxed text-muted">
-          Select a line to keep that parish&rsquo;s name, dates, outcome, and
-          profile link visible. Select a decade or outcome band to inspect all
-          parishes inside it.
+          Search, click, or tap a line to keep that parish&rsquo;s identity,
+          dates, outcome, and profile link visible. Hover is a desktop preview.
+          Select a decade or outcome band to inspect all parishes inside it.
         </p>
         <div className="mt-6">
           <ParishThreads parishes={threads} />
         </div>
-      </section>
-
-      <section className="mt-10 border-t border-rule pt-6">
-        <h2 className="font-serif text-xl font-semibold">
-          A parish date is not always a building date
-        </h2>
-        <p className="mt-2 max-w-3xl leading-relaxed">
-          The left-hand decades mark institutional beginnings. Divine
-          Providence therefore begins with its 1908 St. George lineage in
-          Detroit, while its present Southfield church belongs to a later
-          chapter: it was consecrated on September 8, 1973. Select the Divine
-          Providence line to see both dates together.
-        </p>
-        <p className="mt-3 text-sm">
-          <a
-            href={DIVINE_PROVIDENCE_HISTORY}
-            target="_blank"
-            rel="noreferrer"
-            className="font-semibold underline hover:text-accent"
-          >
-            Read the sourced Divine Providence history
-          </a>
-          {" · "}
-          <Link
-            href={`/parishes/${DIVINE_PROVIDENCE_SLUG}`}
-            className="font-semibold underline hover:text-accent"
-          >
-            Open its canonical profile
-          </Link>
-        </p>
       </section>
 
       <p className="mt-8 border-t border-rule pt-4 text-xs leading-relaxed text-muted">
