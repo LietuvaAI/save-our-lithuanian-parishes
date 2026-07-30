@@ -16651,15 +16651,17 @@
      "tier": 4,
      "currentStatus": "open_renamed",
      "confidence": "verified",
-     "sourceUrl": "https://www.sj23tamaqua.org/parish-history",
-     "ownership": "diocese_rc"
+     "sourceUrl": "https://www.sj23tamaqua.org/parish-tour",
+     "ownership": "diocese_rc",
+     "note": "Official successor-parish history: Ss. Peter and Paul was founded in 1911; a frame church followed in 1913; the combined church-school building was begun in 1927; St. John XXIII was formed from Ss. Peter and Paul and St. Jerome in 2015."
     }
    ],
    "years": {
     "founded": [
      {
-      "value": "1927",
-      "source": "draugas-registry-1909-2007"
+      "value": "1911",
+      "source": "web-historical",
+      "cite": "St. John XXIII Parish history"
      }
     ],
     "closed": []
@@ -21438,8 +21440,8 @@
   }
  ],
  "registryRevision": {
-  "version": 6,
-  "date": "2026-07-29",
+  "version": 7,
+  "date": "2026-07-30",
   "changelog": [
    "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
    "Collapsed adjudicated same-entity rows while preserving all 83 historical case-file row references in c83_rows.",
@@ -21458,8 +21460,9 @@
    "Repaired four cross-entity source joins: Town of Lake versus West Pullman, the Athol National Catholic attempt versus St. Francis, Toronto St. John versus Raymond Baptist, and Toronto Resurrection versus an unresolved archive lead.",
    "Separated public parishes, missions, and congregations from historical phases, unresolved leads, and contextual mentions so every site count and map uses the same institutional scope.",
    "Cleared Roman Catholic geographic dioceses from all non-Roman records and corrected source-defined independent, National Catholic, Protestant, mission, lead, and context classifications.",
-   "Normalized Waterbury St. Joseph to the current Archdiocese of Hartford governance label so By Diocese cannot split one jurisdiction into two buckets."
+   "Normalized Waterbury St. Joseph to the current Archdiocese of Hartford governance label so By Diocese cannot split one jurisdiction into two buckets.",
+   "Corrected Tamaqua Ss. Peter and Paul from the 1927 church-school construction year to the official 1911 parish founding, updated the successor-parish source URL, and recorded its 2015 formation into St. John XXIII."
   ],
-  "contentHash": "ab79315394335bf854017bb93a3ca968e5d4eed70090868d7a5e4d15614db0b5"
+  "contentHash": "86476fcfb7545b4b37e1d324684c61473e0518ce3bcb87ee3616b149fa507dfe"
  }
 }

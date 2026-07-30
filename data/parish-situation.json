@@ -351,7 +351,7 @@
       "current_use": "Demolished",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "The strongest thesis case: solvent parish with ~$1M treasury, a credible $360K repair estimate, landmark status, and a treaty — the diocese demolished it anyway in 2009/2010 and took the ~$1M savings. Coal region."
+      "situation": "St. George in Shenandoah, Pennsylvania, was one of the earliest Lithuanian Roman Catholic parishes in the United States and is widely remembered as the first. Organized in the late nineteenth century, it anchored the coal region's Lithuanian community until the Diocese of Allentown closed the parish in 2006 and demolished the church in 2009–2010. Its final years make it one of the record's clearest closure cases: the parish was solvent, held roughly $1 million in savings, had a credible $360,000 repair estimate, landmark status, and a community treaty, yet the diocese proceeded with demolition and took the parish savings."
     },
     "sv-kazimiero-pittston-pa": {
       "registry_slug": "casimir-pittston-pa",
@@ -468,7 +468,7 @@
       "current_use": "Private residence (Lithuanian-descent owner); interior fully intact",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "Diocese closed the parish; building converted to a private residence by a Lithuanian-descent owner. Interior fully intact. Coal region."
+      "situation": "St. Joseph was organized in 1908 in the Hanover section of Nanticoke as a Lithuanian-Polish Catholic parish, and the surviving church was built in 1924. The Diocese of Scranton closed the parish in 2001 and joined it to Holy Spirit Parish in Mocanaqua. The former church was later converted into a private residence by an owner of Lithuanian descent; the interior was reported to remain intact. Its story belongs to the northern Pennsylvania coal-region network, where once-neighboring Lithuanian parishes met sharply different endings."
     },
     "sv-kazimiero-providence-ri": {
       "registry_slug": "casimir-providence-ri",
@@ -787,12 +787,25 @@
     },
     "ss-peter-and-paul-tamaqua-pa": {
       "registry_slug": "ss-peter-and-paul-tamaqua-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in Draugas registry (13 mentions 1910-1959) with current status marked 'standing' by web sources; converted status noted in TrueLithuania (1976, 2018). Present status not yet researched."
+      "canonical_status": "merged",
+      "building_fate": "standing",
+      "current_use": "The Pine Street church remains open as the home of St. John XXIII Parish",
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "Ss. Peter and Paul was founded in 1911 for Tamaqua's Lithuanian Catholics, who first worshipped in a house on Pine Street before building a frame church in 1913. A combined church-and-school building followed in 1927, and the parish school served the community until 1972. After the longtime pastor retired, Ss. Peter and Paul and St. Jerome were united as St. John XXIII Parish in 2014–2015. The Lithuanian parish identity ended in that merger, but its Pine Street building remains the active church of the successor parish; furnishings from both former parishes were incorporated into the renovated interior.",
+      "sources": [
+        {
+          "title": "Parish Tour: Parish History",
+          "publisher": "St. John XXIII Parish",
+          "url": "https://www.sj23tamaqua.org/parish-tour"
+        },
+        {
+          "title": "Diocese merging Tamaqua churches",
+          "publisher": "Times News",
+          "date": "2014-03-31",
+          "url": "https://www.tnonline.com/20140331/diocese-merging-tamaqua-churches/"
+        }
+      ]
     },
     "sacred-heart-new-philadelphia-pa": {
       "registry_slug": "sacred-heart-new-philadelphia-pa",

@@ -200,55 +200,99 @@ function profileStory({
   founded,
   closed,
   community,
+  name,
+  city,
+  state,
+  institution,
+  currentUse,
 }: {
   situationText: string | null;
   endState: EndState;
   founded: number | null;
   closed: number | null;
   community: boolean;
+  name: string;
+  city: string;
+  state: string | null;
+  institution: string;
+  currentUse: string | null;
 }) {
+  const internalStatusCopy =
+    /documented in (?:the )?(?:draugas )?registry|documented in draugas|minimal (?:research details|documentation)|needs (?:clarification|verification)|status not yet (?:researched|verified)|present status not yet researched|single source only|unnamed\/duplicate parish entry/i;
   const researched =
     situationText &&
-    !/minimal research details available/i.test(situationText)
+    !internalStatusCopy.test(situationText)
       ? situationText
       : null;
   if (researched) return splitStory(researched);
 
-  const prefix = founded ? `Founded ${founded}. ` : "";
+  const location = [city, state].filter(Boolean).join(", ");
+  const historical =
+    isLoss(endState) ||
+    endState === "transferred" ||
+    endState === "repurposed" ||
+    endState === "demolished" ||
+    endState === "closed";
+  const institutionCopy =
+    institution === "Parish record" ? "parish record" : institution;
+  const intro = `${name} ${historical ? "was" : "is"} ${community ? "a Lithuanian worshipping community" : `a ${institutionCopy}`} in ${location}${founded ? `, founded in ${founded}` : ""}.`;
+  const knownCurrentUse =
+    currentUse && !/^(unknown|not established)$/i.test(currentUse)
+      ? currentUse.replace(/\.$/, "")
+      : null;
+
   if (community) {
-    return {
-      dek: `${prefix}A Lithuanian community that worshipped together is documented here, although the evidence does not establish a distinct national parish.`,
-      rest: null,
-    };
+    return splitStory(
+      `${intro} The surviving evidence does not establish a distinct Lithuanian national parish.`,
+    );
   }
   if (closed && isLoss(endState)) {
-    return {
-      dek: `${prefix}The record shows the parish closed in ${closed}; its fuller present-day story is still being researched.`,
-      rest: null,
-    };
+    const outcome =
+      endState === "demolished"
+        ? " The church building was later demolished."
+        : endState === "repurposed"
+          ? ` The church building survives in a new use.${knownCurrentUse ? ` Today, ${knownCurrentUse}.` : ""}`
+          : knownCurrentUse
+            ? ` Today, ${knownCurrentUse}.`
+            : "";
+    return splitStory(
+      `${intro} The parish closed in ${closed}.${outcome}`,
+    );
   }
   if (endState === "demolished") {
-    return {
-      dek: `${prefix}The parish is closed and the church building has been demolished.`,
-      rest: null,
-    };
+    return splitStory(
+      `${intro} The parish closed and the church building was demolished.`,
+    );
   }
   if (endState === "repurposed") {
-    return {
-      dek: `${prefix}The parish is closed and the church building has been repurposed.`,
-      rest: null,
-    };
+    return splitStory(
+      `${intro} The parish closed, but the church building survives in a new use.${knownCurrentUse ? ` Today, ${knownCurrentUse}.` : ""}`,
+    );
   }
   if (endState === "closed") {
-    return {
-      dek: `${prefix}The parish is closed; its fuller story is still being researched.`,
-      rest: null,
-    };
+    return splitStory(`${intro} The parish is now closed.`);
   }
-  return {
-    dek: `${prefix}${GROUP_DESCRIPTION[endState]}`,
-    rest: null,
-  };
+  if (endState === "transferred") {
+    return splitStory(
+      `${intro} Its life as a Lithuanian parish has ended, while the church continues in another community.${knownCurrentUse ? ` Today, ${knownCurrentUse}.` : ""}`,
+    );
+  }
+  if (endState === "active_parish") {
+    return splitStory(`${intro} It remains an active Lithuanian parish.`);
+  }
+  if (endState === "mass_continues") {
+    return splitStory(
+      `${intro} It is no longer Lithuanian-led, but Lithuanian Mass continues.`,
+    );
+  }
+  if (endState === "unresolved") {
+    return splitStory(
+      `${intro} The church stands, but the parish's final institutional status remains unresolved.`,
+    );
+  }
+  return splitStory(
+    `${intro} ${GROUP_DESCRIPTION[endState]} Its fuller history remains open for verification.`,
+  );
 }
 
 function researchRecordStory(recordType: string) {
@@ -348,6 +392,7 @@ export default async function ParishPage({
       ? entry.names.en
       : null;
   const community = isCommunityRecord(entry.sources ?? []);
+  const institution = institutionLabel(profile, community);
   const foundedYear = scoped.founded ?? core?.yearFounded ?? null;
   const closedYear = scoped.closed ?? core?.yearClosed ?? null;
   const buildingFate = scoped.buildingFate ?? core?.buildingFate ?? null;
@@ -475,6 +520,11 @@ export default async function ParishPage({
         founded: foundedYear,
         closed: closedYear,
         community,
+        name,
+        city: entry.city,
+        state: entry.state ?? null,
+        institution,
+        currentUse: situation?.current_use ?? null,
       });
 
   const hasMap = (
@@ -509,7 +559,7 @@ export default async function ParishPage({
       <div
         className={
           photo
-            ? "mt-4 grid grid-cols-[8.5rem_minmax(0,1fr)] items-start gap-4 sm:grid-cols-[12rem_minmax(0,1fr)] sm:gap-6"
+            ? "mt-4 grid grid-cols-[10rem_minmax(0,1fr)] items-start gap-4 sm:grid-cols-[16rem_minmax(0,1fr)] sm:gap-7"
             : ""
         }
       >
@@ -542,7 +592,7 @@ export default async function ParishPage({
 
         <div>
           <h1
-            className={`${photo ? "" : "mt-1"} font-serif text-3xl font-semibold leading-tight sm:text-4xl`}
+            className={`${photo ? "text-2xl [overflow-wrap:anywhere]" : "mt-1 text-3xl"} font-serif font-semibold leading-tight sm:text-4xl`}
           >
             {name}
           </h1>
@@ -552,50 +602,56 @@ export default async function ParishPage({
             {entry.state ? `, ${entry.state}` : ""}
             {entry.country === "CA" ? " · Canada" : ""}
           </p>
-
-          {(!researchOnly || parishAlert || watchEntry) && (
-            <div className="mt-3 flex flex-wrap items-center gap-3">
-              {!researchOnly && (
-                <EndStatePill
-                  value={endState}
-                  size="lg"
-                  label={
-                    recordType === "misija" && endState === "active_parish"
-                      ? "Active Lithuanian mission"
-                      : undefined
-                  }
-                />
-              )}
-              {(parishAlert || watchEntry) && (
-                <span
-                  className="rounded-full border-2 px-3 py-0.5 text-xs font-semibold"
-                  style={{
-                    borderColor: parishAlert
-                      ? "var(--es-closed)"
-                      : "var(--mark-ink)",
-                    color: parishAlert
-                      ? "var(--es-closed)"
-                      : "var(--mark-ink)",
-                  }}
-                >
-                  {parishAlert ? currentSignalLabel : "Pastoral profile"}
-                </span>
-              )}
-            </div>
-          )}
         </div>
       </div>
 
-      <p className="mt-4 max-w-2xl font-serif text-xl leading-snug sm:text-2xl">
-        {dek}
-      </p>
-      {rest && (
-        <p className="mt-3 max-w-2xl leading-relaxed text-muted">{rest}</p>
+      {(!researchOnly || parishAlert || watchEntry) && (
+        <div className="mt-3 flex flex-wrap items-center gap-3">
+          {!researchOnly && (
+            <EndStatePill
+              value={endState}
+              size="lg"
+              label={
+                recordType === "misija" && endState === "active_parish"
+                  ? "Active Lithuanian mission"
+                  : undefined
+              }
+            />
+          )}
+          {(parishAlert || watchEntry) && (
+            <span
+              className="rounded-full border-2 px-3 py-0.5 text-xs font-semibold"
+              style={{
+                borderColor: parishAlert
+                  ? "var(--es-closed)"
+                  : "var(--mark-ink)",
+                color: parishAlert ? "var(--es-closed)" : "var(--mark-ink)",
+              }}
+            >
+              {parishAlert ? currentSignalLabel : "Pastoral profile"}
+            </span>
+          )}
+        </div>
       )}
+
+      <section className="mt-7" aria-labelledby="parish-overview-heading">
+        <h2
+          id="parish-overview-heading"
+          className="font-serif text-xl font-semibold"
+        >
+          Overview
+        </h2>
+        <p className="mt-3 max-w-2xl font-serif text-lg leading-relaxed sm:text-xl">
+          {dek}
+        </p>
+        {rest && (
+          <p className="mt-3 max-w-2xl leading-relaxed text-muted">{rest}</p>
+        )}
+      </section>
 
       <div className="mt-4 flex flex-wrap gap-1.5">
         <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium">
-          {institutionLabel(profile, community)}
+          {institution}
         </span>
         {entry.needs_human_source_review && (
           <span className="rounded-full border border-amber-300 bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-amber-900 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-200">
