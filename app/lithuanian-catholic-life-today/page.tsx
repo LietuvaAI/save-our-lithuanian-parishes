@@ -84,6 +84,14 @@ const worshipEntries = entries.filter((entry) =>
     ["active_parish", "active_mission", "mass_continues"] as NetworkClass[]
   ).includes(entry.networkClass),
 );
+const activeCommunityEntries = worshipEntries.filter((entry) =>
+  (["active_parish", "active_mission"] as NetworkClass[]).includes(
+    entry.networkClass,
+  ),
+);
+const hostedMassEntries = worshipEntries.filter(
+  (entry) => entry.networkClass === "mass_continues",
+);
 const otherEntries = entries.filter(
   (entry) => !worshipEntries.includes(entry),
 );
@@ -91,8 +99,8 @@ const sustainabilityEntries =
   alertsData.sustainabilityWatch as SustainabilityEntry[];
 
 const CLASS_LABEL: Record<NetworkClass, string> = {
-  active_parish: "Lithuanian parish",
-  active_mission: "Lithuanian mission",
+  active_parish: "Active parish",
+  active_mission: "Active mission",
   mass_continues: "Hosted Lithuanian Mass",
   unresolved: "Future unresolved",
   no_lithuanian_liturgy: "No current Lithuanian Mass",
@@ -138,8 +146,17 @@ const worshipProfileHrefs = new Set(
     .map(profileHrefForEntry)
     .filter((href): href is string => !!href),
 );
+const networkClassByHref = new Map(
+  worshipEntries.flatMap((entry) => {
+    const href = profileHrefForEntry(entry);
+    return href ? [[href, entry.networkClass] as const] : [];
+  }),
+);
 const currentLifeSustainabilityEntries = sustainabilityEntries.filter(
   (entry) => worshipProfileHrefs.has(entry.parishLink),
+);
+const lemontProfile = sustainabilityEntries.find(
+  (entry) => entry.id === "lemont-matulaitis-mission-watch",
 );
 const weeklyProfileCount = currentLifeSustainabilityEntries.filter(
   (entry) => entry.liturgy.frequency === "weekly",
@@ -194,6 +211,14 @@ const worshipStateCount = new Set(
   worshipEntries.map((entry) => entry.state),
 ).size;
 
+function NetworkClassPill({ value }: { value: NetworkClass }) {
+  return (
+    <span className="inline-flex shrink-0 rounded-full border border-rule px-2 py-0.5 text-[11px] font-semibold leading-4 text-muted">
+      {CLASS_LABEL[value]}
+    </span>
+  );
+}
+
 function NetworkEntryRow({ entry }: { entry: NetworkEntry }) {
   const profileHref = profileHrefForEntry(entry);
 
@@ -208,9 +233,7 @@ function NetworkEntryRow({ entry }: { entry: NetworkEntry }) {
             {entry.city}, {entry.state}
           </p>
         </div>
-        <span className="shrink-0 text-xs font-medium text-muted">
-          {CLASS_LABEL[entry.networkClass]}
-        </span>
+        <NetworkClassPill value={entry.networkClass} />
       </div>
       <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-xs">
         {profileHref ? (
@@ -218,7 +241,7 @@ function NetworkEntryRow({ entry }: { entry: NetworkEntry }) {
             href={profileHref}
             className="font-medium underline underline-offset-2 hover:text-accent"
           >
-            Parish profile
+            Full community record
           </Link>
         ) : null}
         {entry.officialSite ? (
@@ -277,7 +300,7 @@ function SustainabilityProfiles() {
             {standaloneProfileCount}
           </p>
           <p className="mt-1 text-sm leading-snug text-muted">
-            retain standalone parish governance
+            retain standalone governance
           </p>
         </div>
       </div>
@@ -287,71 +310,77 @@ function SustainabilityProfiles() {
           Inspect the {currentLifeSustainabilityEntries.length} communities
         </summary>
         <div className="divide-y divide-rule border-t border-rule">
-          {currentLifeSustainabilityEntries.map((entry) => (
-            <article key={entry.id} className="py-4">
-              <div className="flex flex-wrap items-start justify-between gap-3">
-                <div>
+          {currentLifeSustainabilityEntries.map((entry) => {
+            const networkClass = networkClassByHref.get(entry.parishLink);
+
+            return (
+              <article key={entry.id} className="py-4">
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div>
+                    <Link
+                      href={entry.parishLink}
+                      className="font-serif text-lg font-semibold hover:underline"
+                    >
+                      {entry.entity}
+                    </Link>
+                    <p className="mt-0.5 text-sm text-muted">{entry.place}</p>
+                  </div>
+                  <div className="flex flex-col items-start gap-1 sm:items-end">
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      {networkClass ? (
+                        <NetworkClassPill value={networkClass} />
+                      ) : (
+                        <EndStatePill
+                          value={
+                            statusByHref.get(entry.parishLink) ?? "unverified"
+                          }
+                        />
+                      )}
+                      <DiocesePill name={entry.diocese} />
+                    </div>
+                    <DiocesanLeaderLink diocese={entry.diocese} />
+                  </div>
+                </div>
+                <dl className="mt-3 grid gap-3 text-sm sm:grid-cols-3">
+                  <div>
+                    <dt className="text-xs uppercase text-muted">Clergy</dt>
+                    <dd className="mt-0.5 font-medium">
+                      {CLERGY_LABEL[entry.clergy.arrangement] ??
+                        entry.clergy.arrangement}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs uppercase text-muted">
+                      Lithuanian Mass
+                    </dt>
+                    <dd className="mt-0.5 font-medium">
+                      {FREQUENCY_SHORT[entry.liturgy.frequency] ??
+                        entry.liturgy.frequency}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs uppercase text-muted">
+                      Governance
+                    </dt>
+                    <dd className="mt-0.5 font-medium">
+                      {GOVERNANCE_LABEL[entry.governance] ?? entry.governance}
+                    </dd>
+                  </div>
+                </dl>
+                <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs">
                   <Link
                     href={entry.parishLink}
-                    className="font-serif text-lg font-semibold hover:underline"
+                    className="font-medium underline underline-offset-2 hover:text-accent"
                   >
-                    {entry.entity}
+                    Profile and full evidence
                   </Link>
-                  <p className="mt-0.5 text-sm text-muted">{entry.place}</p>
+                  <span className="text-muted">
+                    Checked {entry.dateObserved}
+                  </span>
                 </div>
-                <div className="flex flex-col items-start gap-1 sm:items-end">
-                  <div className="flex flex-wrap items-center gap-1.5">
-                    <EndStatePill
-                      value={
-                        statusByHref.get(entry.parishLink) ?? "unverified"
-                      }
-                    />
-                    <DiocesePill name={entry.diocese} />
-                  </div>
-                  <DiocesanLeaderLink diocese={entry.diocese} />
-                </div>
-              </div>
-              <dl className="mt-3 grid gap-3 text-sm sm:grid-cols-3">
-                <div>
-                  <dt className="text-xs uppercase text-muted">
-                    Clergy
-                  </dt>
-                  <dd className="mt-0.5 font-medium">
-                    {CLERGY_LABEL[entry.clergy.arrangement] ??
-                      entry.clergy.arrangement}
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-xs uppercase text-muted">
-                    Lithuanian Mass
-                  </dt>
-                  <dd className="mt-0.5 font-medium">
-                    {FREQUENCY_SHORT[entry.liturgy.frequency] ??
-                      entry.liturgy.frequency}
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-xs uppercase text-muted">
-                    Governance
-                  </dt>
-                  <dd className="mt-0.5 font-medium">
-                    {GOVERNANCE_LABEL[entry.governance] ?? entry.governance}
-                  </dd>
-                </div>
-              </dl>
-              <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs">
-                <Link
-                  href={entry.parishLink}
-                  className="font-medium underline underline-offset-2 hover:text-accent"
-                >
-                  Profile and full evidence
-                </Link>
-                <span className="text-muted">
-                  Checked {entry.dateObserved}
-                </span>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
       </details>
     </section>
@@ -405,17 +434,17 @@ export default function LithuanianCatholicLifeTodayPage() {
           />
           <div>
             <p className="font-serif text-6xl font-semibold leading-none">
-              {worshipEntries.length}
+              {activeCommunityEntries.length}
             </p>
             <h2 className="mt-3 font-serif text-2xl font-semibold leading-tight">
-              places still gather for Lithuanian Catholic worship
+              active Lithuanian Catholic communities
             </h2>
             <p className="mt-3 leading-relaxed text-muted">
               {networkData.counts.activeParishes} are Lithuanian parishes,{" "}
-              {networkData.counts.activeMissions} are missions, and{" "}
-              {networkData.counts.massContinues} are Lithuanian Masses hosted
-              by another parish. The surviving network reaches{" "}
-              {worshipStateCount} states.
+              and {networkData.counts.activeMissions} are Lithuanian missions.
+              Another {networkData.counts.massContinues} communities host a
+              Lithuanian Mass, bringing the living worship network to{" "}
+              {worshipEntries.length} places across {worshipStateCount} states.
             </p>
           </div>
         </div>
@@ -438,6 +467,30 @@ export default function LithuanianCatholicLifeTodayPage() {
         </p>
       </section>
 
+      {lemontProfile ? (
+        <section className="mt-9 grid gap-4 border-l-4 border-[var(--es-active)] pl-5 sm:grid-cols-[minmax(12rem,0.55fr)_minmax(0,1.45fr)] sm:gap-8">
+          <div>
+            <p className="text-xs font-medium uppercase text-muted">
+              Mission does not mean minor
+            </p>
+            <h2 className="mt-1 font-serif text-xl font-semibold leading-snug">
+              Blessed Jurgis Matulaitis Mission, Lemont
+            </h2>
+          </div>
+          <div>
+            <p className="leading-relaxed text-muted">
+              {lemontProfile.situation}
+            </p>
+            <Link
+              href={lemontProfile.parishLink}
+              className="mt-3 inline-block text-sm font-medium underline underline-offset-4 hover:text-accent"
+            >
+              See the Lemont community record
+            </Link>
+          </div>
+        </section>
+      ) : null}
+
       <CurrentLifeFactSheet
         places={worshipEntries.length}
         parishes={networkData.counts.activeParishes}
@@ -459,29 +512,34 @@ export default function LithuanianCatholicLifeTodayPage() {
           Inspect the living network
         </h2>
         <div className="mt-4 grid gap-x-8 md:grid-cols-3">
-          {(
-            [
-              ["active_parish", "Parishes"],
-              ["active_mission", "Missions"],
-              ["mass_continues", "Hosted Masses"],
-            ] as const
-          ).map(([networkClass, label]) => {
-            const group = worshipEntries.filter(
-              (entry) => entry.networkClass === networkClass,
-            );
-            return (
-              <div key={networkClass}>
-                <h3 className="text-sm font-semibold">
-                  {label} · {group.length}
-                </h3>
-                <div className="mt-2">
-                  {group.map((entry) => (
-                    <NetworkEntryRow key={entry.id} entry={entry} />
-                  ))}
-                </div>
-              </div>
-            );
-          })}
+          <div className="md:col-span-2">
+            <h3 className="text-sm font-semibold">
+              Active Lithuanian communities · {activeCommunityEntries.length}
+            </h3>
+            <p className="mt-1 max-w-2xl text-sm leading-relaxed text-muted">
+              Parish and mission name the community&rsquo;s canonical form, not
+              the strength or scale of its Lithuanian life.
+            </p>
+            <div className="mt-2 grid gap-x-8 sm:grid-cols-2">
+              {activeCommunityEntries.map((entry) => (
+                <NetworkEntryRow key={entry.id} entry={entry} />
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold">
+              Hosted Lithuanian Masses · {hostedMassEntries.length}
+            </h3>
+            <p className="mt-1 text-sm leading-relaxed text-muted">
+              Lithuanian worship continues inside another parish or worship
+              site.
+            </p>
+            <div className="mt-2">
+              {hostedMassEntries.map((entry) => (
+                <NetworkEntryRow key={entry.id} entry={entry} />
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

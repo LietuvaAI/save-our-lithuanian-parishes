@@ -34,16 +34,17 @@ export default function CurrentLifeFactSheet({
   standaloneGovernance,
   checked,
 }: CurrentLifeFactSheetProps) {
+  const activeCommunities = parishes + missions;
   const networkFigures = [
+    [activeCommunities, "active communities"],
     [parishes, "parishes"],
     [missions, "missions"],
     [hostedMasses, "hosted Masses"],
-    [states, "states"],
   ] as const;
   const pastoralFigures = [
     [lithuanianPastors, "Lithuanian-speaking", "pastors"],
     [weeklyMasses, "weekly Lithuanian", "Masses"],
-    [standaloneGovernance, "standalone parish", "governance"],
+    [standaloneGovernance, "standalone", "governance"],
   ] as const;
 
   return (
@@ -86,7 +87,7 @@ export default function CurrentLifeFactSheet({
               fontFamily="Arial, sans-serif"
               fontSize="19"
             >
-              The current U.S. worship network
+              The current U.S. worship network across {states} states
             </text>
 
             <rect x="56" y="148" width="322" height="260" fill={PALE_GREEN} />
@@ -129,7 +130,15 @@ export default function CurrentLifeFactSheet({
                   <text
                     x={x}
                     y={y + 60}
-                    fill={index === 0 ? GREEN : index === 1 ? GOLD : INK}
+                    fill={
+                      index === 0
+                        ? GREEN
+                        : index === 1
+                          ? INK
+                          : index === 2
+                            ? GOLD
+                            : INK
+                    }
                     fontFamily="Georgia, serif"
                     fontSize="62"
                     fontWeight="700"
