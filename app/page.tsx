@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import ParishMap from "@/components/ParishMap";
 import NationalRecordGraphic from "@/components/NationalRecordGraphic";
@@ -75,6 +76,43 @@ const activeCampaigns = (alertsData.campaigns as CurrentCampaign[])
   }))
   .filter((campaign) => campaign.alert)
   .slice(0, 4);
+
+const CAMPAIGN_ART: Record<
+  string,
+  {
+    src: string;
+    alt: string;
+    attribution: string;
+    sourceUrl?: string;
+  }
+> = {
+  "/parishes/dievo-apvaizdos-southfield-mi": {
+    src: "/images/parishes/southfield-divine-providence-line-drawing.png",
+    alt: "Line drawing of Divine Providence Lithuanian Catholic Church in Southfield.",
+    attribution: "Divine Providence Parish archive",
+  },
+  "/parishes/svc-trejybes-hartford-ct": {
+    src: "/images/parishes/hartford-holy-trinity-line-drawing.png",
+    alt: "Line drawing of Holy Trinity Lithuanian church in Hartford.",
+    attribution: "After Litnet / Wikimedia Commons · CC BY-SA 4.0",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Hartford_Holy_Trinity_Roman_Catholic_Church,_2000.jpg",
+  },
+  "/parishes/sv-juozapo-waterbury-ct": {
+    src: "/images/parishes/waterbury-st-joseph-line-drawing.png",
+    alt: "Line drawing of St. Joseph Lithuanian church in Waterbury.",
+    attribution: "After Farragutful / Wikimedia Commons · CC BY-SA 4.0",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:St._Joseph%27s_Church_-_Waterbury,_Connecticut_01.jpg",
+  },
+  "/parishes/kristaus-atsimainymo-maspeth-ny": {
+    src: "/images/parishes/maspeth-transfiguration-line-drawing.png",
+    alt: "Line drawing of Transfiguration Lithuanian church in Maspeth.",
+    attribution: "After Renata3 / Wikimedia Commons · CC BY-SA 4.0",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Transfiguration_Roman_Catholic_Church_20201114_154344.jpg",
+  },
+};
 
 const ACTIONS = [
   {
@@ -156,44 +194,85 @@ export default function Home() {
         </p>
 
         <div className="mt-4 divide-y divide-rule border-y border-rule">
-          {activeCampaigns.map((campaign) => (
-            <article key={campaign.id} className="py-4 first:pt-3 last:pb-3">
-              <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-                <h3 className="font-serif text-lg font-semibold">
-                  {campaign.entity}
-                </h3>
-                <span className="text-sm text-muted">{campaign.place}</span>
-              </div>
-              <p className="mt-1 max-w-4xl text-sm leading-relaxed text-muted">
-                {campaign.alert?.whatChanged}
-              </p>
-              <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+          {activeCampaigns.map((campaign) => {
+            const art = CAMPAIGN_ART[campaign.parishLink];
+            if (!art) {
+              throw new Error(`Missing campaign art for ${campaign.parishLink}`);
+            }
+
+            return (
+              <article
+                key={campaign.id}
+                className="grid gap-4 py-5 first:pt-4 last:pb-4 sm:grid-cols-[11rem_minmax(0,1fr)] sm:items-center md:grid-cols-[13rem_minmax(0,1fr)] md:gap-6"
+              >
                 <Link
                   href={campaign.parishLink}
-                  className="font-medium underline decoration-rule underline-offset-4 hover:text-accent"
+                  aria-label={`See the parish profile for ${campaign.entity}`}
+                  className="group mx-auto block w-full max-w-[15rem] sm:mx-0"
                 >
-                  See parish profile
+                  <span className="relative block aspect-[4/3] w-full">
+                    <Image
+                      src={art.src}
+                      alt={art.alt}
+                      fill
+                      sizes="(max-width: 639px) 240px, 208px"
+                      className="object-contain mix-blend-multiply transition-transform duration-200 group-hover:scale-[1.02]"
+                    />
+                  </span>
                 </Link>
-                <a
-                  href={campaign.hearthUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium underline decoration-rule underline-offset-4 hover:text-accent"
-                >
-                  Read what&rsquo;s happening now
-                </a>
-                <a
-                  href={campaign.actionUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex rounded-md px-3 py-1.5 font-semibold text-white transition-opacity hover:opacity-90"
-                  style={{ background: "var(--mark-closed)" }}
-                >
-                  {campaign.actionLabel} &rarr;
-                </a>
-              </div>
-            </article>
-          ))}
+                <div className="text-center sm:text-left">
+                  <div className="flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1 sm:justify-between">
+                    <h3 className="font-serif text-lg font-semibold">
+                      {campaign.entity}
+                    </h3>
+                    <span className="text-sm text-muted">{campaign.place}</span>
+                  </div>
+                  <p className="mt-1 max-w-4xl text-sm leading-relaxed text-muted">
+                    {campaign.alert?.whatChanged}
+                  </p>
+                  <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm sm:justify-start">
+                    <Link
+                      href={campaign.parishLink}
+                      className="font-medium underline decoration-rule underline-offset-4 hover:text-accent"
+                    >
+                      See parish profile
+                    </Link>
+                    <a
+                      href={campaign.hearthUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium underline decoration-rule underline-offset-4 hover:text-accent"
+                    >
+                      Read what&rsquo;s happening now
+                    </a>
+                    <a
+                      href={campaign.actionUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex rounded-md px-3 py-1.5 font-semibold text-white transition-opacity hover:opacity-90"
+                      style={{ background: "var(--mark-closed)" }}
+                    >
+                      {campaign.actionLabel} &rarr;
+                    </a>
+                  </div>
+                  <p className="mt-2 text-[10px] leading-tight text-muted/80">
+                    {art.sourceUrl ? (
+                      <a
+                        href={art.sourceUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline decoration-rule underline-offset-2 hover:text-accent"
+                      >
+                        {art.attribution}
+                      </a>
+                    ) : (
+                      art.attribution
+                    )}
+                  </p>
+                </div>
+              </article>
+            );
+          })}
         </div>
 
         <p className="mt-3 text-sm">

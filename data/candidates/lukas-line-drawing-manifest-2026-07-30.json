@@ -1,0 +1,268 @@
+{
+  "_comment": "Line-art coverage for the 26 parish/church subjects in the church sequence on pp. 88-129 of Algis Lukas, Lietuviu kulturinis paveldas Amerikoje (2009). The Washington National Shrine/Our Lady of Siluva Chapel pages are excluded because they are not a parish record. A book-page reference identifies the subject; drawingSource identifies the image actually used to make the line drawing.",
+  "book": {
+    "title": "Lietuviu kulturinis paveldas Amerikoje / Lithuanian Cultural Legacy in America",
+    "author": "Algis Lukas",
+    "year": 2009,
+    "archiveItemUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+    "copyrightHolder": "Lithuanian American Community Inc., Cultural Affairs Council",
+    "rightsStatus": "In copyright; reuse permission needed and not yet granted as of 2026-07-30."
+  },
+  "policy": {
+    "published": "A line drawing renders only when its source rights are cleared in data/photos.json and the image exists under public/.",
+    "pending": "Book-derived drawings remain outside public/ and are not committed until permission is granted.",
+    "localStagingSet": "lukas-line-drawings-pending-permission-2026-07-30"
+  },
+  "counts": {
+    "churchSubjects": 26,
+    "publishedCleared": 12,
+    "generatedPendingPermission": 14,
+    "excludedNonParishSubjects": 1
+  },
+  "subjects": [
+    {
+      "canonicalSlug": "unnamed-lithuanian-parish-baltimore-md",
+      "bookPage": 88,
+      "bookPhotoFile": "IMG_1665.jpeg",
+      "lineDrawing": "/images/parishes/baltimore-st-alphonsus-line-drawing.png",
+      "drawingSource": "lukas_book_photo",
+      "rights": "pending_permission",
+      "status": "generated_staged_locally"
+    },
+    {
+      "canonicalSlug": "sv-andriejaus-new-britain-ct",
+      "bookPage": 90,
+      "bookPhotoFile": "IMG_1667.jpeg",
+      "lineDrawing": "/images/parishes/new-britain-st-andrew-line-drawing.png",
+      "drawingSource": "lukas_book_photo",
+      "rights": "pending_permission",
+      "status": "generated_staged_locally"
+    },
+    {
+      "canonicalSlug": "sv-andriejaus-philadelphia-pa",
+      "bookPage": 91,
+      "bookPhotoFile": "IMG_1668.jpeg",
+      "lineDrawing": "/images/parishes/philadelphia-st-andrew-line-drawing.png",
+      "drawingSource": "lukas_book_photo",
+      "rights": "pending_permission",
+      "status": "generated_staged_locally"
+    },
+    {
+      "canonicalSlug": "sv-antano-cicero-il",
+      "bookPage": 92,
+      "bookPhotoFile": "IMG_1669.jpeg",
+      "lineDrawing": "/images/parishes/cicero-st-anthony-line-drawing.png",
+      "drawingSource": "lukas_book_photo",
+      "rights": "pending_permission",
+      "status": "generated_staged_locally"
+    },
+    {
+      "canonicalSlug": "svc-m-marijos-apreiskimo-brooklyn-ny",
+      "bookPage": 93,
+      "bookPhotoFile": "IMG_1670.jpeg",
+      "lineDrawing": "/images/parishes/brooklyn-annunciation-line-drawing.png",
+      "drawingSource": "cleared_registry_photo",
+      "rights": "open_license",
+      "status": "published"
+    },
+    {
+      "canonicalSlug": "st-joseph-mahanoy-city-pa",
+      "bookPage": 94,
+      "bookPhotoFile": "IMG_1671.jpeg",
+      "lineDrawing": "/images/parishes/mahanoy-city-st-joseph-line-drawing.png",
+      "drawingSource": "lukas_book_photo",
+      "rights": "pending_permission",
+      "status": "generated_staged_locally"
+    },
+    {
+      "canonicalSlug": "sv-jurgio-shenandoah-pa",
+      "bookPage": 95,
+      "bookPhotoFile": "IMG_1672.jpeg",
+      "lineDrawing": "/images/parishes/shenandoah-st-george-line-drawing.png",
+      "drawingSource": "cleared_public_domain_1899_image",
+      "rights": "open_license",
+      "status": "published"
+    },
+    {
+      "canonicalSlug": "sv-juozapo-waterbury-ct",
+      "bookPage": 96,
+      "bookPhotoFile": "IMG_1673.jpeg",
+      "lineDrawing": "/images/parishes/waterbury-st-joseph-line-drawing.png",
+      "drawingSource": "cleared_registry_photo",
+      "rights": "open_license",
+      "status": "published"
+    },
+    {
+      "canonicalSlug": "sv-juozapo-scranton-pa",
+      "bookPage": 97,
+      "bookPhotoFile": "IMG_1674.jpeg",
+      "lineDrawing": "/images/parishes/scranton-st-joseph-line-drawing.png",
+      "drawingSource": "lukas_book_photo",
+      "rights": "pending_permission",
+      "status": "generated_staged_locally"
+    },
+    {
+      "canonicalSlug": "sv-kazimiero-providence-ri",
+      "bookPage": 98,
+      "bookPhotoFile": "IMG_1675.jpeg",
+      "lineDrawing": "/images/parishes/providence-st-casimir-line-drawing.png",
+      "drawingSource": "lukas_book_photo",
+      "rights": "pending_permission",
+      "status": "generated_staged_locally"
+    },
+    {
+      "canonicalSlug": "sv-kazimiero-worcester-ma",
+      "bookPage": 99,
+      "bookPhotoFile": "IMG_1676.jpeg",
+      "lineDrawing": "/images/parishes/worcester-st-casimir-line-drawing.png",
+      "drawingSource": "lukas_book_photo",
+      "rights": "pending_permission",
+      "status": "generated_staged_locally"
+    },
+    {
+      "canonicalSlug": "sv-kryziaus-chicago-il",
+      "bookPage": 100,
+      "bookPhotoFile": "IMG_1677.jpeg",
+      "lineDrawing": "/images/parishes/chicago-holy-cross-line-drawing.png",
+      "drawingSource": "cleared_public_domain_1914_image",
+      "rights": "open_license",
+      "status": "published"
+    },
+    {
+      "canonicalSlug": "sv-petro-boston-ma",
+      "bookPage": 102,
+      "bookPhotoFile": "IMG_1679.jpeg",
+      "lineDrawing": "/images/parishes/boston-st-peter-line-drawing.png",
+      "drawingSource": "cleared_registry_photo",
+      "rights": "open_license",
+      "status": "published"
+    },
+    {
+      "canonicalSlug": "sv-petro-ir-povilo-elizabeth-nj",
+      "bookPage": 103,
+      "bookPhotoFile": "IMG_1680.jpeg",
+      "lineDrawing": "/images/parishes/elizabeth-sts-peter-paul-line-drawing.png",
+      "drawingSource": "lukas_book_photo",
+      "rights": "pending_permission",
+      "status": "generated_staged_locally"
+    },
+    {
+      "canonicalSlug": "sv-petro-ir-povilo-grand-rapids-mi",
+      "bookPage": 104,
+      "bookPhotoFile": "IMG_1681.jpeg",
+      "lineDrawing": "/images/parishes/grand-rapids-sts-peter-paul-line-drawing.png",
+      "drawingSource": "cleared_registry_photo",
+      "rights": "open_license",
+      "status": "published"
+    },
+    {
+      "canonicalSlug": "svc-trejybes-hartford-ct",
+      "bookPage": 105,
+      "bookPhotoFile": "IMG_1682.jpeg",
+      "lineDrawing": "/images/parishes/hartford-holy-trinity-line-drawing.png",
+      "drawingSource": "cleared_registry_photo",
+      "rights": "open_license",
+      "status": "published"
+    },
+    {
+      "canonicalSlug": "svc-trejybes-wilkes-barre-pa",
+      "bookPage": 106,
+      "bookPhotoFile": "IMG_1683.jpeg",
+      "lineDrawing": "/images/parishes/wilkes-barre-holy-trinity-line-drawing.png",
+      "drawingSource": "cleared_public_domain_1899_image",
+      "rights": "open_license",
+      "status": "published"
+    },
+    {
+      "canonicalSlug": "sv-kazimiero-los-angeles-ca",
+      "bookPage": 114,
+      "bookPhotoFile": "IMG_1688.jpeg",
+      "lineDrawing": "/images/parishes/los-angeles-st-casimir-line-drawing.png",
+      "drawingSource": "lukas_book_photo",
+      "rights": "pending_permission",
+      "status": "generated_staged_locally"
+    },
+    {
+      "canonicalSlug": "nekaltojo-prasidejimo-east-st-louis-il",
+      "bookPage": 115,
+      "bookPhotoFile": "IMG_1689.jpeg",
+      "lineDrawing": "/images/parishes/east-st-louis-immaculate-conception-line-drawing.png",
+      "drawingSource": "lukas_book_photo",
+      "rights": "pending_permission",
+      "status": "generated_staged_locally"
+    },
+    {
+      "canonicalSlug": "dievo-motinos-nuolatines-pagalbos-cleveland-oh",
+      "bookPage": 116,
+      "bookPhotoFile": "IMG_1690.jpeg",
+      "lineDrawing": "/images/parishes/cleveland-our-lady-perpetual-help-line-drawing.png",
+      "drawingSource": "lukas_book_photo",
+      "rights": "pending_permission",
+      "status": "generated_staged_locally"
+    },
+    {
+      "canonicalSlug": "svc-mergeles-marijos-gimimo-chicago-il",
+      "bookPage": 118,
+      "bookPhotoFile": "IMG_1692.jpeg",
+      "lineDrawing": "/images/parishes/chicago-nativity-bvm-line-drawing.png",
+      "drawingSource": "lukas_book_photo",
+      "rights": "pending_permission",
+      "status": "generated_staged_locally"
+    },
+    {
+      "canonicalSlug": "kristaus-atsimainymo-maspeth-ny",
+      "bookPage": 120,
+      "bookPhotoFile": "IMG_1694.jpeg",
+      "lineDrawing": "/images/parishes/maspeth-transfiguration-line-drawing.png",
+      "drawingSource": "cleared_registry_photo",
+      "rights": "open_license",
+      "status": "published"
+    },
+    {
+      "canonicalSlug": "svc-m-marijos-nekalto-prasidejimo-chicago-il",
+      "bookPage": 122,
+      "bookPhotoFile": "IMG_1696.jpeg",
+      "lineDrawing": "/images/parishes/brighton-park-immaculate-conception-line-drawing.png",
+      "drawingSource": "lukas_book_photo",
+      "rights": "pending_permission",
+      "status": "generated_staged_locally"
+    },
+    {
+      "canonicalSlug": "sv-kryziaus-dayton-oh",
+      "bookPage": 126,
+      "bookPhotoFile": "IMG_1700.jpeg",
+      "lineDrawing": "/images/parishes/dayton-holy-cross-line-drawing.png",
+      "drawingSource": "cleared_registry_photo",
+      "rights": "open_license",
+      "status": "published"
+    },
+    {
+      "canonicalSlug": "siluvos-dievo-motinos-maizeville-pa",
+      "bookPage": 127,
+      "bookPhotoFile": "IMG_1701.jpeg",
+      "lineDrawing": "/images/parishes/maizeville-our-lady-siluva-line-drawing.png",
+      "drawingSource": "cleared_registry_photo",
+      "rights": "open_license",
+      "status": "published"
+    },
+    {
+      "canonicalSlug": "dievo-apvaizdos-southfield-mi",
+      "bookPage": 128,
+      "bookPhotoFile": "IMG_1702.jpeg",
+      "lineDrawing": "/images/parishes/southfield-divine-providence-line-drawing.png",
+      "drawingSource": "parish_supplied_line_drawing",
+      "rights": "permission_granted",
+      "status": "published"
+    }
+  ],
+  "excluded": [
+    {
+      "subject": "Our Lady of Siluva Chapel, National Shrine of the Immaculate Conception, Washington, DC",
+      "bookPages": [
+        124,
+        125
+      ],
+      "reason": "National shrine chapel, not a parish record."
+    }
+  ]
+}

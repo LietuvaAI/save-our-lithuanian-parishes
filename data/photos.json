@@ -528,6 +528,105 @@
         "note": "Held pending permission; staged outside the repo."
       }
     },
+    "sv-jurgio-shenandoah-pa-line-drawing": {
+      "src": "/images/parishes/shenandoah-st-george-line-drawing.png",
+      "alt": "Line drawing of St. George Lithuanian church in Shenandoah.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Lietuviai Amerikoj (Jonas Žilius, 1899), via Wikimedia Commons.",
+      "license": "CC BY 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of a public-domain 1899 image of St. George Lithuanian church in Shenandoah. This line-art adaptation is published under CC BY 4.0. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:17_SHENENDOHA%27RIO_LIETUVISZKA_BA%C5%BDNYCZIA.jpg"
+    },
+    "sv-kryziaus-mount-carmel-pa-line-drawing": {
+      "src": "/images/parishes/mount-carmel-holy-cross-line-drawing.png",
+      "alt": "Line drawing of Holy Cross Lithuanian church in Mount Carmel.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Lietuviai Amerikoj (Jonas Žilius, 1899), via Wikimedia Commons.",
+      "license": "CC BY 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of a public-domain 1899 image of Holy Cross Lithuanian church in Mount Carmel. This line-art adaptation is published under CC BY 4.0. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:10_MT-CARMIU_LIETUVISZKA_BA%C5%BDNYCZIA.jpg"
+    },
+    "svc-trejybes-wilkes-barre-pa-line-drawing": {
+      "src": "/images/parishes/wilkes-barre-holy-trinity-line-drawing.png",
+      "alt": "Line drawing of the first Holy Trinity Lithuanian church in Wilkes-Barre.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Lietuviai Amerikoj (Jonas Žilius, 1899), via Wikimedia Commons.",
+      "license": "CC BY 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of a public-domain 1899 image of the first Holy Trinity Lithuanian church in Wilkes-Barre. This line-art adaptation is published under CC BY 4.0. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:08_WILKES-BARRE_LIETUVISZKA_BA%C5%BDNYCZIA.jpg"
+    },
+    "sv-kazimiero-pittsburgh-pa-line-drawing": {
+      "src": "/images/parishes/pittsburgh-st-casimir-line-drawing.png",
+      "alt": "Line drawing of St. Casimir Lithuanian church in Pittsburgh.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a CC0 photograph by Cbaile19, Wikimedia Commons.",
+      "license": "CC BY 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of Cbaile19's CC0 photograph of St. Casimir church on Pittsburgh's South Side. This line-art adaptation is published under CC BY 4.0. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St._Casimir%E2%80%99s_Church,_South_Side,_Pittsburgh,_2021-07-24.jpg"
+    },
+    "sv-jurgio-chicago-il-line-drawing": {
+      "src": "/images/parishes/chicago-st-george-line-drawing.png",
+      "alt": "Line drawing of St. George Lithuanian church in Chicago.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a public-domain photograph by Percy H. Sloan, via Wikimedia Commons and CARLI Digital Collections.",
+      "license": "CC BY 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of a public-domain 1913 photograph of St. George Lithuanian church in Chicago. This line-art adaptation is published under CC BY 4.0. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Saint_George_Lithuanian_Church,_Chicago,_1913_(NBY_843).jpg"
+    },
+    "sv-kryziaus-chicago-il-line-drawing": {
+      "src": "/images/parishes/chicago-holy-cross-line-drawing.png",
+      "alt": "Line drawing of Holy Cross Lithuanian church in Chicago.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a public-domain photograph by Percy H. Sloan, Newberry Library, via Wikimedia Commons.",
+      "license": "CC BY 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of a public-domain 1914 photograph of Holy Cross Lithuanian church in Chicago. This line-art adaptation is published under CC BY 4.0. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Holy_Cross_Church,_Chicago,_1914_(NBY_723).jpg"
+    },
+    "saldziausios-jezaus-sirdies-lawrence-ma-line-drawing": {
+      "src": "/images/parishes/lawrence-sacred-heart-line-drawing.png",
+      "alt": "Line drawing of Sacred Heart Lithuanian National Catholic church in Lawrence.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a Digital Commonwealth / Boston Public Library image with no known copyright restrictions.",
+      "license": "CC BY 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of a Digital Commonwealth image of the Garden Street church later acquired by Sacred Heart Lithuanian National Catholic parish; the source carries no known copyright restrictions. This line-art adaptation is published under CC BY 4.0. Created 2026-07-30.",
+      "evidenceUrl": "https://www.digitalcommonwealth.org/search/commonwealth:66830b09d"
+    },
+    "ausros-vartu-manhattan-ny-line-drawing": {
+      "src": "/images/parishes/manhattan-our-lady-of-vilnius-line-drawing.png",
+      "alt": "Line drawing of Our Lady of Vilnius Lithuanian church in Manhattan.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a public-domain photograph by James Russiello, Wikimedia Commons.",
+      "license": "CC BY 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of James Russiello's public-domain photograph of Our Lady of Vilnius church in Manhattan. This line-art adaptation is published under CC BY 4.0. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Vilnius_568-570_Broome_Street.jpg"
+    },
+    "svc-trejybes-hartford-ct-line-drawing": {
+      "src": "/images/parishes/hartford-holy-trinity-line-drawing.png",
+      "alt": "Line drawing of Holy Trinity Lithuanian church in Hartford.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a photograph by Litnet, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of Litnet's photograph of Holy Trinity Roman Catholic Church, Hartford. The source photograph is licensed CC BY-SA 4.0; this line-art adaptation is published under the same license. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Hartford_Holy_Trinity_Roman_Catholic_Church,_2000.jpg"
+    },
+    "sv-juozapo-waterbury-ct-line-drawing": {
+      "src": "/images/parishes/waterbury-st-joseph-line-drawing.png",
+      "alt": "Line drawing of St. Joseph Lithuanian church in Waterbury.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a photograph by Farragutful, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of Farragutful's photograph of St. Joseph's Lithuanian Catholic Church, Waterbury. The source photograph is licensed CC BY-SA 4.0; this line-art adaptation is published under the same license. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St._Joseph%27s_Church_-_Waterbury,_Connecticut_01.jpg"
+    },
+    "kristaus-atsimainymo-maspeth-ny-line-drawing": {
+      "src": "/images/parishes/maspeth-transfiguration-line-drawing.png",
+      "alt": "Line drawing of Transfiguration Lithuanian church in Maspeth.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a photograph by Renata3, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of Renata3's photograph of Transfiguration Roman Catholic Church, Maspeth. The source photograph is licensed CC BY-SA 4.0; this line-art adaptation is published under the same license. Created 2026-07-30.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Transfiguration_Roman_Catholic_Church_20201114_154344.jpg"
+    },
     "dievo-apvaizdos-southfield-mi-line-drawing": {
       "src": "/images/parishes/southfield-divine-providence-line-drawing.png",
       "alt": "Line drawing of Divine Providence Lithuanian Catholic Church in Southfield.",
@@ -802,6 +901,177 @@
         "File:Lithuania National Catholic Church, Scranton, PA - side door 20200621.jpg",
         "all same photographer/date/license (CC BY-SA 4.0, Renata3, 2020-06-21)"
       ]
+    },
+    "unnamed-lithuanian-parish-baltimore-md-line-drawing": {
+      "src": "/images/parishes/baltimore-st-alphonsus-line-drawing.png",
+      "alt": "Line drawing of St. Alphonsus church in Baltimore.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Algis Lukas, Lietuviu kulturinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 88.",
+      "license": "Derivative source; permission pending.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "Generated 2026-07-30 from the in-copyright exterior photograph on p. 88. Permission has not yet been granted; the file is staged outside public/ and will not render or ship until cleared."
+    },
+    "sv-andriejaus-new-britain-ct-line-drawing": {
+      "src": "/images/parishes/new-britain-st-andrew-line-drawing.png",
+      "alt": "Line drawing of St. Andrew Lithuanian church in New Britain.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Algis Lukas, Lietuviu kulturinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 90.",
+      "license": "Derivative source; permission pending.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "Generated 2026-07-30 from the in-copyright exterior photograph on p. 90. Permission has not yet been granted; the file is staged outside public/ and will not render or ship until cleared."
+    },
+    "sv-andriejaus-philadelphia-pa-line-drawing": {
+      "src": "/images/parishes/philadelphia-st-andrew-line-drawing.png",
+      "alt": "Line drawing of St. Andrew Lithuanian church in Philadelphia.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Algis Lukas, Lietuviu kulturinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 91.",
+      "license": "Derivative source; permission pending.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "Generated 2026-07-30 from the in-copyright exterior photograph on p. 91. Permission has not yet been granted; the file is staged outside public/ and will not render or ship until cleared."
+    },
+    "sv-antano-cicero-il-line-drawing": {
+      "src": "/images/parishes/cicero-st-anthony-line-drawing.png",
+      "alt": "Line drawing of St. Anthony Lithuanian church in Cicero.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Algis Lukas, Lietuviu kulturinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 92.",
+      "license": "Derivative source; permission pending.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "Generated 2026-07-30 from the in-copyright exterior photograph on p. 92. Permission has not yet been granted; the file is staged outside public/ and will not render or ship until cleared."
+    },
+    "svc-m-marijos-apreiskimo-brooklyn-ny-line-drawing": {
+      "src": "/images/parishes/brooklyn-annunciation-line-drawing.png",
+      "alt": "Line drawing of Annunciation of the Blessed Virgin Mary church in Brooklyn.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a photograph by Andre Carrotflower, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of Andre Carrotflower's CC BY-SA 4.0 photograph of Annunciation BVM in Williamsburg, Brooklyn. This adaptation is published under the same license. Created 2026-07-30; Lukas p. 93 was used as subject-inventory corroboration only.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Annunciation_of_the_Blessed_Virgin_Mary_RC_Church,_Williamsburg,_Brooklyn,_New_York_-_20221127.jpg"
+    },
+    "st-joseph-mahanoy-city-pa-line-drawing": {
+      "src": "/images/parishes/mahanoy-city-st-joseph-line-drawing.png",
+      "alt": "Line drawing of St. Joseph's Lithuanian church in Mahanoy City.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Algis Lukas, Lietuviu kulturinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 94.",
+      "license": "Derivative source; permission pending.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "Generated 2026-07-30 from the in-copyright lower-left exterior photograph on p. 94. Permission has not yet been granted; the file is staged outside public/ and will not render or ship until cleared."
+    },
+    "sv-juozapo-scranton-pa-line-drawing": {
+      "src": "/images/parishes/scranton-st-joseph-line-drawing.png",
+      "alt": "Line drawing of St. Joseph Lithuanian church in Scranton.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Algis Lukas, Lietuviu kulturinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 97.",
+      "license": "Derivative source; permission pending.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "Generated 2026-07-30 from the in-copyright exterior photograph on p. 97. Permission has not yet been granted; the file is staged outside public/ and will not render or ship until cleared."
+    },
+    "sv-kazimiero-providence-ri-line-drawing": {
+      "src": "/images/parishes/providence-st-casimir-line-drawing.png",
+      "alt": "Line drawing of St. Casimir Lithuanian church in Providence.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Algis Lukas, Lietuviu kulturinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 98.",
+      "license": "Derivative source; permission pending.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "Generated 2026-07-30 from the in-copyright exterior photograph on p. 98. Permission has not yet been granted; the file is staged outside public/ and will not render or ship until cleared."
+    },
+    "sv-kazimiero-worcester-ma-line-drawing": {
+      "src": "/images/parishes/worcester-st-casimir-line-drawing.png",
+      "alt": "Line drawing of St. Casimir Lithuanian church in Worcester.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Algis Lukas, Lietuviu kulturinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 99.",
+      "license": "Derivative source; permission pending.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "Generated 2026-07-30 from the in-copyright exterior photograph on p. 99. Permission has not yet been granted; the file is staged outside public/ and will not render or ship until cleared."
+    },
+    "sv-petro-boston-ma-line-drawing": {
+      "src": "/images/parishes/boston-st-peter-line-drawing.png",
+      "alt": "Line drawing of St. Peter Lithuanian church in South Boston.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a photograph by Lukascb, Wikimedia Commons, CC BY-SA 3.0.",
+      "license": "CC BY-SA 3.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of Lukascb's CC BY-SA 3.0 photograph of St. Peter Church in South Boston. This adaptation is published under the same license. Created 2026-07-30; Lukas p. 102 was used as subject-inventory corroboration only.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:StPeterSouthBostonMA_PWFord.jpg"
+    },
+    "sv-petro-ir-povilo-elizabeth-nj-line-drawing": {
+      "src": "/images/parishes/elizabeth-sts-peter-paul-line-drawing.png",
+      "alt": "Line drawing of Sts. Peter and Paul Lithuanian church in Elizabeth.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Algis Lukas, Lietuviu kulturinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 103.",
+      "license": "Derivative source; permission pending.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "Generated 2026-07-30 from the in-copyright exterior photograph on p. 103. Permission has not yet been granted; the file is staged outside public/ and will not render or ship until cleared."
+    },
+    "sv-petro-ir-povilo-grand-rapids-mi-line-drawing": {
+      "src": "/images/parishes/grand-rapids-sts-peter-paul-line-drawing.png",
+      "alt": "Line drawing of Sts. Peter and Paul Lithuanian church in Grand Rapids.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a photograph by rossograph (Wikimedia Commons username Wingerham52), CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of rossograph/Wingerham52's CC BY-SA 4.0 photograph of Sts. Peter and Paul in Grand Rapids. This adaptation is published under the same license. Created 2026-07-30; Lukas p. 104 was used as subject-inventory corroboration only.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Ss._Peter_and_Paul.jpg"
+    },
+    "sv-kazimiero-los-angeles-ca-line-drawing": {
+      "src": "/images/parishes/los-angeles-st-casimir-line-drawing.png",
+      "alt": "Line drawing of St. Casimir Lithuanian church in Los Angeles.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Algis Lukas, Lietuviu kulturinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 114.",
+      "license": "Derivative source; permission pending.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "Generated 2026-07-30 from the in-copyright exterior photograph on p. 114. Permission has not yet been granted; the file is staged outside public/ and will not render or ship until cleared."
+    },
+    "nekaltojo-prasidejimo-east-st-louis-il-line-drawing": {
+      "src": "/images/parishes/east-st-louis-immaculate-conception-line-drawing.png",
+      "alt": "Line drawing of Immaculate Conception Lithuanian church in East St. Louis.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Algis Lukas, Lietuviu kulturinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 115.",
+      "license": "Derivative source; permission pending.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "Generated 2026-07-30 from the in-copyright exterior photograph on p. 115. Permission has not yet been granted; the file is staged outside public/ and will not render or ship until cleared."
+    },
+    "dievo-motinos-nuolatines-pagalbos-cleveland-oh-line-drawing": {
+      "src": "/images/parishes/cleveland-our-lady-perpetual-help-line-drawing.png",
+      "alt": "Line drawing of Our Lady of Perpetual Help Lithuanian church in Cleveland.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Algis Lukas, Lietuviu kulturinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 116.",
+      "license": "Derivative source; permission pending.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "Generated 2026-07-30 from the in-copyright exterior photograph on p. 116. Permission has not yet been granted; the file is staged outside public/ and will not render or ship until cleared."
+    },
+    "svc-mergeles-marijos-gimimo-chicago-il-line-drawing": {
+      "src": "/images/parishes/chicago-nativity-bvm-line-drawing.png",
+      "alt": "Line drawing of Nativity of the Blessed Virgin Mary Lithuanian church in Chicago.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Algis Lukas, Lietuviu kulturinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 118.",
+      "license": "Derivative source; permission pending.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "Generated 2026-07-30 from the in-copyright exterior photograph on p. 118. Permission has not yet been granted; the file is staged outside public/ and will not render or ship until cleared."
+    },
+    "svc-m-marijos-nekalto-prasidejimo-chicago-il-line-drawing": {
+      "src": "/images/parishes/brighton-park-immaculate-conception-line-drawing.png",
+      "alt": "Line drawing of Immaculate Conception Lithuanian church in Brighton Park, Chicago.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from Algis Lukas, Lietuviu kulturinis paveldas Amerikoje (Lithuanian American Community, 2009), p. 122.",
+      "license": "Derivative source; permission pending.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
+      "rights": "pending_permission",
+      "rightsNote": "Generated 2026-07-30 from the in-copyright exterior photograph on p. 122. Permission has not yet been granted; the file is staged outside public/ and will not render or ship until cleared."
+    },
+    "sv-kryziaus-dayton-oh-line-drawing": {
+      "src": "/images/parishes/dayton-holy-cross-line-drawing.png",
+      "alt": "Line drawing of Holy Cross Lithuanian church in Dayton.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a photograph by Wdzinc, Wikimedia Commons, CC BY-SA 3.0.",
+      "license": "CC BY-SA 3.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of Wdzinc's CC BY-SA 3.0 photograph of Holy Cross Lithuanian Roman Catholic Church in Dayton. This adaptation is published under the same license. Created 2026-07-30; Lukas p. 126 was used as subject-inventory corroboration only.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Holy_Cross_Lithuanian_Roman_Catholic_Church.jpg"
+    },
+    "siluvos-dievo-motinos-maizeville-pa-line-drawing": {
+      "src": "/images/parishes/maizeville-our-lady-siluva-line-drawing.png",
+      "alt": "Line drawing of Our Lady of Siluva church in Maizeville.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a photograph by Shuvaev, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of Shuvaev's CC BY-SA 4.0 photograph of Our Lady of Siluva Church in Maizeville. This adaptation is published under the same license. Created 2026-07-30; Lukas p. 127 was used as subject-inventory corroboration only.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Siluva_RC_Church,_Maizeville_PA_01.JPG"
     }
   },
   "_registryNotes": {
