@@ -110,9 +110,7 @@ export default function Home() {
           The public record of America&rsquo;s Lithuanian parishes
         </h1>
         <p className="mx-auto mt-2.5 max-w-3xl text-sm leading-relaxed text-muted sm:text-[15px]">
-          The past is a torch to the present. Explore the complete record of
-          America&rsquo;s Lithuanian parishes, from their earliest foundations
-          to the communities discerning their future today.
+          The past is a torch to the present.
         </p>
       </section>
 
