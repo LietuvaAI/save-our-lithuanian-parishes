@@ -214,11 +214,6 @@ export default function AboutPage() {
             making knowledge public, and carrying the experience of one
             community to the next.
           </p>
-          <p className="text-muted">
-            The parish record is Lithuanian. The procedural guidance is
-            universal and is written for any community facing the same kind of
-            decision.
-          </p>
         </div>
       </section>
 
