@@ -55,7 +55,8 @@ const CONGS = (registry as { parishes: Rec[] }).parishes.filter(
   (p) =>
     p.congregation_class === "non_catholic_christian" &&
     isUS(p) &&
-    isPublicRecord(p),
+    isPublicRecord(p) &&
+    p.public_census?.included === true,
 );
 const sourcesOf = (c: Rec): RecSource[] => c.sources ?? [];
 const statusForCongregation = (c: Rec): EndState =>
@@ -230,7 +231,10 @@ export default function ProtestantPage() {
               {activeCongregations.length}
             </p>
             <h2 className="mt-3 font-serif text-2xl font-semibold leading-tight">
-              Lithuanian Protestant parish remains active
+              Lithuanian Protestant {activeCongregations.length === 1
+                ? "parish remains"
+                : "parishes remain"}{" "}
+              active
             </h2>
             <p className="mt-3 leading-relaxed text-muted">
               Tėviškės Parish in Darien, Illinois, is the congregation whose

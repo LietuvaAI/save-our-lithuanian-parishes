@@ -14,7 +14,9 @@
 //   3. Overlay classifier enum values must stay inside the public status
 //      vocabulary used by lib/parishes.ts and lib/unified-status.ts.
 //   4. Map parity must use the same U.S. real-parish scope as /record.
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
+import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const read = (p) =>
   JSON.parse(readFileSync(new URL(`../data/${p}`, import.meta.url), "utf8"));
@@ -39,8 +41,37 @@ const lib = read("parishes.json");
 const ctx = new Map(read("context-points.json").points.map((p) => [p.slug, p.group]));
 const situations = read("parish-situation.json").parishes;
 const registry = read("registry-unified.json").parishes;
+const siteFigures = read("site-figures.json");
 
 const errors = [];
+
+// Research-registry totals are operational inventory, not public census
+// figures. Keep them out of the public figure contract and page components so
+// profile, lead, phase, context, and international counts cannot be mistaken
+// for U.S. institutions again.
+if ("researchRegistry" in siteFigures) {
+  errors.push("site-figures.json exposes the internal research-registry total");
+}
+
+function publicSourceFiles(directory) {
+  return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+    const path = join(directory, entry.name);
+    if (entry.isDirectory()) return publicSourceFiles(path);
+    return /\.(?:ts|tsx)$/.test(entry.name) ? [path] : [];
+  });
+}
+
+for (const root of ["app", "components"]) {
+  const directory = fileURLToPath(new URL(`../${root}/`, import.meta.url));
+  for (const path of publicSourceFiles(directory)) {
+    const source = readFileSync(path, "utf8");
+    if (/\bresearchRegistry\b|\.registryRecords\b/.test(source)) {
+      errors.push(
+        `${path}: public source binds an internal research-registry total`,
+      );
+    }
+  }
+}
 
 const allowedIdentities = new Set([
   "active_parish",

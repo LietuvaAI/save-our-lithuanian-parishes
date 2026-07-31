@@ -65,13 +65,17 @@ const NATIONAL_ENTRIES = (registry.parishes as Rec[])
     return ya - yb;
   });
 const DURABLE_ENTRIES = NATIONAL_ENTRIES.filter(
-  (parish) => parish.record_type === "parish",
+  (parish) =>
+    parish.record_type === "parish" &&
+    parish.public_census?.included === true,
 );
 const SUPPORTING_ENTRIES = NATIONAL_ENTRIES.filter(
   (parish) => parish.record_type !== "parish",
 );
 const PUBLIC_SUPPORTING_ENTRIES = SUPPORTING_ENTRIES.filter(
-  (parish) => parish.record_type === "congregation",
+  (parish) =>
+    parish.record_type === "congregation" &&
+    parish.public_census?.included === true,
 );
 
 if (
