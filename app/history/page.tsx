@@ -9,7 +9,6 @@ import type { FateKey } from "@/components/ParishThreads";
 import { scopedParishes, usRegistryParishes } from "@/lib/registry-scope";
 import {
   toGroup,
-  isAlive,
   isLoss,
 } from "@/lib/end-state";
 import { BUILDING_FATE_LABEL, type BuildingFate, parishes as libParishes } from "@/lib/parishes";
@@ -202,9 +201,9 @@ function buildData() {
   const medianLifespan = lifespans.length
     ? lifespans[Math.floor(lifespans.length / 2)]
     : null;
-  const oldestAlive = all
-    .filter((p) => isAlive(p.endState) && !p.closed && p.founded)
-    .sort((a, b) => a.founded! - b.founded!)[0] ?? null;
+  const closureShareSince1990 = lost
+    ? Math.round((closedSince1990 / lost) * 100)
+    : 0;
 
   return {
     dated,
@@ -222,7 +221,7 @@ function buildData() {
       closedSince1990,
       closedSince2020,
       medianLifespan,
-      oldestAlive,
+      closureShareSince1990,
     },
   };
 }
@@ -506,32 +505,17 @@ export default function HistoryPage() {
               </p>
             </div>
           )}
-          {narrative.oldestAlive && (
-            <div className="border-b border-rule px-3 py-4 sm:border-b-0">
-              <p
-                className="font-serif text-3xl font-semibold"
-                style={{ color: "var(--es-active)" }}
-              >
-                {narrative.oldestAlive.founded}
-              </p>
-              <p className="mt-1 text-xs leading-snug text-muted">
-                oldest active parish:{" "}
-                {narrative.oldestAlive.profileHref ? (
-                  <Link
-                    href={narrative.oldestAlive.profileHref}
-                    className="font-medium text-foreground underline hover:text-accent"
-                  >
-                    {narrative.oldestAlive.name}
-                  </Link>
-                ) : (
-                  <span className="font-medium text-foreground">
-                    {narrative.oldestAlive.name}
-                  </span>
-                )}
-                , {narrative.oldestAlive.city}, {narrative.oldestAlive.state}
-              </p>
-            </div>
-          )}
+          <div className="px-3 py-4">
+            <p
+              className="font-serif text-3xl font-semibold"
+              style={{ color: "var(--es-closed)" }}
+            >
+              {narrative.closureShareSince1990}%
+            </p>
+            <p className="mt-1 text-xs leading-snug text-muted">
+              of all closed parishes have a dated closure since 1990
+            </p>
+          </div>
         </div>
 
         <p className="mt-4 text-xs text-muted border-t border-rule pt-3">
