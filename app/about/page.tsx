@@ -64,8 +64,8 @@ export default function AboutPage() {
 
       <section className="mt-12">
         <h2 className="font-serif text-2xl font-semibold">What we are building</h2>
-        <div className="mt-4 divide-y divide-rule border-y border-rule">
-          <div className="py-4">
+        <div className="mt-4 grid gap-6 sm:grid-cols-3">
+          <div>
             <h3 className="font-medium">A connected parish record</h3>
             <p className="mt-1 text-sm leading-relaxed text-muted">
               Each parish profile is meant to tell one coherent story across
@@ -73,7 +73,7 @@ export default function AboutPage() {
               present condition, and the evidence behind the record.
             </p>
           </div>
-          <div className="py-4">
+          <div>
             <h3 className="font-medium">A bridge between archive and present</h3>
             <p className="mt-1 text-sm leading-relaxed text-muted">
               Historical research explains how a community arrived here.
@@ -81,7 +81,7 @@ export default function AboutPage() {
               is happening now.
             </p>
           </div>
-          <div className="py-4">
+          <div>
             <h3 className="font-medium">Shared knowledge communities can use</h3>
             <p className="mt-1 text-sm leading-relaxed text-muted">
               The record connects communities facing similar questions while
@@ -92,7 +92,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mt-12 border-y border-rule py-8">
+      <section className="-mx-4 mt-12 bg-band px-4 py-8 sm:-mx-6 sm:px-6">
         <p className="text-xs uppercase tracking-widest text-muted">
           The next generation
         </p>
@@ -222,7 +222,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mt-12 border-t border-rule pt-6">
+      <section className="mt-12">
         <h2 className="font-serif text-xl font-semibold">
           Help the record grow
         </h2>
