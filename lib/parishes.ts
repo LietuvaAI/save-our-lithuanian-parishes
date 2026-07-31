@@ -128,12 +128,7 @@ export const STATUS_LABEL: Record<ParishStatus, string> = {
   undecided: "Unresolved",
 };
 
-/**
- * Public Draugas archive page for the year of an issue date. Direct PDF
- * filenames vary by year and recent issues sit behind a subscription, so
- * citations link to the public per-year archive page; the dated label
- * identifies the exact issue there.
- */
+/** Public Draugas archive page used only when no issue-level URL is known. */
 export function draugasArchiveUrl(isoDate: string): string {
   return `https://www.draugas.org/archyvas-pdf-${isoDate.slice(0, 4)}/`;
 }
@@ -147,13 +142,14 @@ const draugasLinks = draugasLinksJson.results as Record<string, DraugasLinkEntry
 
 /**
  * Best citation link for a Draugas issue: the direct PDF when
- * scripts/verify-draugas-links.mjs confirmed one exists publicly, otherwise
- * the per-year archive page. Gated (subscriber-only, 401) issues also fall
- * back to the archive page so readers land somewhere navigable.
+ * scripts/verify-draugas-links.mjs confirmed the file exists. Subscriber-only
+ * issues still link to that exact file; the yearly archive is only a fallback
+ * when the verifier could not resolve an issue-level URL.
  */
 export function draugasCitationUrl(isoDate: string): string {
   const entry = draugasLinks[isoDate];
-  return entry?.status === "verified" && entry.url
+  return entry?.url &&
+    (entry.status === "verified" || entry.status === "gated")
     ? entry.url
     : draugasArchiveUrl(isoDate);
 }
