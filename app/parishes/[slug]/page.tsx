@@ -548,6 +548,7 @@ export default async function ParishPage({
   const endState = scoped.endState;
   const recordType = entry.record_type ?? "parish";
   const researchOnly = ["phase", "lead", "context"].includes(recordType);
+  const isLayoutPrototype = profile.slug === "sv-kazimiero-cleveland-oh";
 
   const situation = core
     ? getParishSituation(profile.slug)
@@ -737,7 +738,7 @@ export default async function ParishPage({
             }
           />
         )}
-        {(parishAlert || watchEntry) && (
+        {!isLayoutPrototype && (parishAlert || watchEntry) && (
           <span
             className="rounded-full border-2 px-3 py-0.5 text-xs font-semibold"
             style={{
@@ -752,9 +753,15 @@ export default async function ParishPage({
         )}
         </>
       ) : null}
-      <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium">
-        {institution}
-      </span>
+      {isLayoutPrototype ? (
+        <span className="text-xs uppercase tracking-wide text-muted">
+          {institution}
+        </span>
+      ) : (
+        <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium">
+          {institution}
+        </span>
+      )}
       {entry.needs_human_source_review && (
         <span className="rounded-full border border-amber-300 bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-amber-900 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-200">
           Identity or status unresolved
@@ -780,25 +787,26 @@ export default async function ParishPage({
   const overviewSection = (
     <section
       id="profile-overview"
-      className="mt-7 scroll-mt-8"
+      className={`${isLayoutPrototype ? "mt-5" : "mt-7"} scroll-mt-8`}
       aria-labelledby="parish-overview-heading"
     >
       <h2
         id="parish-overview-heading"
-        className="font-serif text-xl font-semibold"
+        className={isLayoutPrototype ? "text-[10px] font-semibold uppercase tracking-widest text-muted" : "font-serif text-xl font-semibold"}
       >
         Overview
       </h2>
-      <p className="mt-3 max-w-2xl font-serif text-lg leading-relaxed sm:text-xl">
-        {dek}
+      <p className={`max-w-2xl font-serif leading-relaxed ${isLayoutPrototype ? "mt-2 text-lg" : "mt-3 text-lg sm:text-xl"}`}>
+        {isLayoutPrototype ? situation?.situation ?? dek : dek}
       </p>
     </section>
   );
 
   return (
     <article
-      className="mx-auto max-w-4xl px-4 py-12"
+      className={`mx-auto px-4 ${isLayoutPrototype ? "max-w-5xl py-8" : "max-w-4xl py-12"}`}
       data-profile-layout="canonical-v1"
+      data-profile-prototype={isLayoutPrototype ? "cleveland-v2" : undefined}
       data-record-depth={profile.recordDepth}
     >
       <p className="text-xs uppercase tracking-widest text-muted">
@@ -809,53 +817,71 @@ export default async function ParishPage({
         {entry.state ? `, ${entry.state}` : ""}
       </p>
 
-      <div className="mt-4 grid items-start gap-5 md:grid-cols-[20rem_minmax(0,1fr)] md:gap-8 lg:grid-cols-[23rem_minmax(0,1fr)]">
-        <figure className="w-full max-w-md overflow-hidden rounded-lg border border-rule md:max-w-none">
-          {photo ? (
-            <Image
-              src={photo.src}
-              alt={photo.alt}
-              width={720}
-              height={isLineDrawing ? 720 : 540}
-              loading="eager"
-              className={
-                isLineDrawing
-                  ? "aspect-square w-full bg-[#fffdf9] object-contain p-3"
-                  : "aspect-[4/3] w-full object-cover"
-              }
-            />
-          ) : (
-            <div className="flex aspect-square w-full flex-col items-center justify-center bg-band px-8 text-center">
-              <p className="text-xs uppercase tracking-widest text-muted">
-                {institution}
+      <div className={`grid items-start ${isLayoutPrototype ? "mt-3 gap-5 md:grid-cols-[18rem_minmax(0,1fr)] md:gap-7" : "mt-4 gap-5 md:grid-cols-[20rem_minmax(0,1fr)] md:gap-8 lg:grid-cols-[23rem_minmax(0,1fr)]"}`}>
+        <div className={isLayoutPrototype ? "order-2 max-w-sm md:order-1 md:row-span-2" : "max-w-md"}>
+          <figure className={`w-full overflow-hidden md:max-w-none ${isLayoutPrototype ? "" : "rounded-lg border border-rule"}`}>
+            {photo ? (
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                width={720}
+                height={isLineDrawing ? 720 : 540}
+                loading="eager"
+                className={isLineDrawing
+                  ? `aspect-square w-full bg-[#fffdf9] object-contain ${isLayoutPrototype ? "p-0" : "p-3"}`
+                  : "aspect-[4/3] w-full object-cover"}
+              />
+            ) : (
+              <div className="flex aspect-square w-full flex-col items-center justify-center bg-band px-8 text-center">
+                <p className="text-xs uppercase tracking-widest text-muted">
+                  {institution}
+                </p>
+                <p className="mt-3 font-serif text-2xl font-semibold">{name}</p>
+                <p className="mt-1 text-sm text-muted">
+                  {entry.city}
+                  {entry.state ? `, ${entry.state}` : ""}
+                </p>
+                <p className="mt-5 text-xs text-muted">
+                  {foundedYear ? `Established ${foundedYear}` : displayStatus}
+                </p>
+              </div>
+            )}
+            <figcaption className={`${isLayoutPrototype ? "pt-1" : "border-t border-rule px-2 py-1"} text-[10px] leading-snug text-muted`}>
+              {photo ? (
+                <a
+                  href="#evidence-sources"
+                  className="underline underline-offset-2 hover:text-accent"
+                >
+                  {isLineDrawing
+                    ? "Line-art credit & source"
+                    : "Image credit & source"}
+                </a>
+              ) : (
+                "Parish identity record"
+              )}
+            </figcaption>
+          </figure>
+          {isLayoutPrototype && hasMap && (
+            <div className="mt-4 border-t border-rule pt-4">
+              <p className="text-[10px] font-semibold uppercase tracking-widest text-muted">
+                Community and place
               </p>
-              <p className="mt-3 font-serif text-2xl font-semibold">{name}</p>
               <p className="mt-1 text-sm text-muted">
                 {entry.city}
                 {entry.state ? `, ${entry.state}` : ""}
               </p>
-              <p className="mt-5 text-xs text-muted">
-                {foundedYear ? `Established ${foundedYear}` : displayStatus}
-              </p>
+              <div className="mt-2">
+                <ParishContextMap
+                  slug={profile.slug}
+                  dioceseLabel={entry.diocese ?? undefined}
+                  compact
+                />
+              </div>
             </div>
           )}
-          <figcaption className="border-t border-rule px-2 py-1 text-[10px] leading-snug text-muted">
-            {photo ? (
-              <a
-                href="#evidence-sources"
-                className="underline underline-offset-2 hover:text-accent"
-              >
-                {isLineDrawing
-                  ? "Line-art credit & source"
-                  : "Image credit & source"}
-              </a>
-            ) : (
-              "Parish identity record"
-            )}
-          </figcaption>
-        </figure>
+        </div>
 
-        <div className="min-w-0">
+        <div className={isLayoutPrototype ? "order-1 min-w-0 md:order-2" : "min-w-0"}>
           <h1
             className="font-serif text-3xl font-semibold leading-tight [overflow-wrap:anywhere] sm:text-4xl"
           >
@@ -871,24 +897,38 @@ export default async function ParishPage({
           {identityBadges}
           {overviewSection}
         </div>
+        {isLayoutPrototype && (
+          <dl className="order-3 grid grid-cols-2 gap-x-6 gap-y-3 border-t border-rule pt-4 text-sm sm:grid-cols-3 md:col-start-2 md:row-start-2">
+            {profileView.facts.map((fact) => (
+              <div key={fact.label}>
+                <dt className="text-[10px] uppercase tracking-wide text-muted">
+                  {fact.label}
+                </dt>
+                <dd className="mt-0.5 leading-snug">{fact.value}</dd>
+              </div>
+            ))}
+          </dl>
+        )}
       </div>
 
-      <section
+      {!isLayoutPrototype && <section
         id="place-and-jurisdiction"
         className="mt-10"
         aria-labelledby="place-and-jurisdiction-heading"
       >
-        <h2
-          id="place-and-jurisdiction-heading"
-          className="font-serif text-2xl font-semibold"
-        >
-          The community and its place
-        </h2>
-        <p className="mt-2 text-sm text-muted">
-          {entry.city}
-          {entry.state ? `, ${entry.state}` : ""}
-          {entry.diocese ? ` · ${entry.diocese}` : ""}
-        </p>
+        <div>
+          <h2
+            id="place-and-jurisdiction-heading"
+            className="font-serif text-2xl font-semibold"
+          >
+            The community and its place
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-muted">
+            {entry.city}
+            {entry.state ? `, ${entry.state}` : ""}
+            {entry.diocese ? ` · ${entry.diocese}` : ""}
+          </p>
+        </div>
         {hasMap ? (
           <div className="mt-4 max-w-2xl">
             <ParishContextMap
@@ -923,7 +963,87 @@ export default async function ParishPage({
             </div>
           </dl>
         )}
-      </section>
+      </section>}
+
+      {isLayoutPrototype && (
+        <section
+          id="profile-current-life"
+          className="mt-8 max-w-3xl scroll-mt-8"
+          aria-labelledby="profile-current-life-heading"
+        >
+          <h2
+            id="profile-current-life-heading"
+            className="font-serif text-2xl font-semibold"
+          >
+            Where it stands today
+          </h2>
+          <p className="mt-3 leading-relaxed">{profileView.currentSummary}</p>
+          {watchEntry && (
+            <>
+              <dl className="mt-5 grid border-y border-rule py-4 text-sm sm:grid-cols-3 sm:divide-x sm:divide-rule">
+                <div className="pb-3 sm:pb-0 sm:pr-4">
+                  <dt className="text-[10px] uppercase tracking-wide text-muted">
+                    Clergy
+                  </dt>
+                  <dd className="mt-1 font-medium">
+                    {CLERGY_LABEL[watchEntry.clergy.arrangement] ??
+                      watchEntry.clergy.arrangement}
+                  </dd>
+                  <dd className="mt-1 text-xs leading-relaxed text-muted">
+                    Fr. Andrius Morkūnas serves St. Casimir while also working
+                    as a chaplain at University Hospitals.
+                  </dd>
+                </div>
+                <div className="border-t border-rule py-3 sm:border-t-0 sm:px-4 sm:py-0">
+                  <dt className="text-[10px] uppercase tracking-wide text-muted">
+                    Lithuanian Mass
+                  </dt>
+                  <dd className="mt-1 font-medium">
+                    {FREQUENCY_LABEL[watchEntry.liturgy.frequency] ??
+                      watchEntry.liturgy.frequency}
+                  </dd>
+                  <dd className="mt-1 text-xs leading-relaxed text-muted">
+                    Lithuanian Mass is celebrated Sundays at 11:00 a.m.;
+                    English and weekday Masses also continue.
+                  </dd>
+                </div>
+                <div className="border-t border-rule pt-3 sm:border-t-0 sm:pl-4 sm:pt-0">
+                  <dt className="text-[10px] uppercase tracking-wide text-muted">
+                    Governance
+                  </dt>
+                  <dd className="mt-1 font-medium">
+                    {GOVERNANCE_LABEL[watchEntry.governance] ??
+                      watchEntry.governance}
+                  </dd>
+                  <dd className="mt-1 text-xs leading-relaxed text-muted">
+                    The present parish was formed in 2009 from St. George and
+                    Our Lady of Perpetual Help and remains active on Neff Road.
+                  </dd>
+                </div>
+              </dl>
+              {watchEntry.survivedThreats && (
+                <p className="mt-4 text-sm leading-relaxed">
+                  <span className="font-semibold">What it has survived: </span>
+                  The 2009 Cleveland consolidation and a 2014 financial crisis
+                  addressed through a diocesan-approved school-building lease.
+                </p>
+              )}
+              {watchEntry.financial && (
+                <p className="mt-3 text-sm leading-relaxed">
+                  <span className="font-semibold">Financial picture: </span>
+                  The school lease remains part of the parish&rsquo;s financial
+                  story. Current bulletins show normal operations and Mass
+                  intentions extending into 2027.
+                </p>
+              )}
+              <p className="mt-4 text-xs text-muted">
+                Current record checked {watchEntry.dateObserved}. Complete source
+                links appear at the end of this profile.
+              </p>
+            </>
+          )}
+        </section>
+      )}
 
       <ParishPublishedRecord
         profile={profile}
@@ -938,7 +1058,7 @@ export default async function ParishPage({
         fallbackNarrative={profileView.historyFallback}
       />
 
-      <section
+      {!isLayoutPrototype && <section
         id="profile-facts"
         className="mt-10"
         aria-labelledby="profile-facts-heading"
@@ -974,11 +1094,11 @@ export default async function ParishPage({
             </p>
           </div>
         )}
-      </section>
+      </section>}
 
       <ParishProfileChronology items={profileView.chronology} />
 
-      <section
+      {!isLayoutPrototype && <section
         id="present-condition"
         className="mt-10"
         aria-labelledby="present-condition-heading"
@@ -1189,7 +1309,7 @@ export default async function ParishPage({
             security.
           </p>
         )}
-      </section>
+      </section>}
 
       <section
         id="profile-corrections"
