@@ -199,6 +199,10 @@
       "bookPhotoFile": "IMG_1690.jpeg",
       "lineDrawing": "/images/parishes/cleveland-our-lady-perpetual-help-line-drawing.png",
       "drawingSource": "lukas_book_photo",
+      "profileUses": [
+        "dievo-motinos-nuolatines-pagalbos-cleveland-oh",
+        "sv-kazimiero-cleveland-oh"
+      ],
       "rights": "permission_granted",
       "status": "published"
     },

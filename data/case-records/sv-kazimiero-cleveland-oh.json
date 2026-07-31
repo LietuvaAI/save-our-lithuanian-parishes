@@ -3,6 +3,10 @@
   "asOf": "2026-07-09",
   "buildingStatus": "standing",
   "currentUse": "Active diocesan Catholic parish church; Lithuanian Mass Sundays 11:00 am, English Masses Sat/Sun and weekdays",
+  "historicalSummary": [
+    "St. Casimir is Cleveland's successor Lithuanian parish, not a renamed continuation of only one predecessor. It was constituted on October 25, 2009, after St. George and Our Lady of Perpetual Help closed and their communities were joined. The new parish made its home in the former Our Lady of Perpetual Help church at 18022 Neff Road.",
+    "The building and the successor parish therefore have different timelines: the church carries the earlier Our Lady of Perpetual Help history, while St. Casimir's institutional life begins in 2009. A diocesan-approved school lease helped the new parish through a financial crisis in 2014. By 2022, local reporting described an active community with Lithuanian classes, scouts, dance groups, and an interior renovation."
+  ],
   "summary": "St. Casimir Parish at 18022 Neff Rd remains an active parish of the Diocese of Cleveland, listed in the diocesan directory with assigned clergy and no announced restructuring. Its bulletin is current (July 4-5, 2026 issue) and the parish is already booking 2027 Mass intentions; the 11:00 am Sunday Mass is in Lithuanian. Longtime pastor Fr. Joseph A. Bacevice retired April 30, 2025, and Fr. Andrew M. Morkunas was appointed administrator the same day, serving alongside his chaplaincy at University Hospitals; the bulletin indicates a one-priest schedule (no Thursday Mass). This is distinct from the Polish St. Casimir parish at 8223 Sowinski Ave (est. 1891), the parish famously reopened by Vatican order in 2012.",
   "developments": [
     {
@@ -38,7 +42,9 @@
     { "title": "St. Casimir (Polish) (parish directory, Sowinski Ave)", "publisher": "Diocese of Cleveland", "date": "2026", "url": "https://www.dioceseofcleveland.org/parishes/directory/st-casimir-polish" },
     { "title": "Saint Casimir Parish homepage", "publisher": "Saint Casimir Parish", "date": "2026", "url": "http://saintcasimirparish.org/main-en/index-en.html" },
     { "title": "Lithuanian Mass listing", "publisher": "Lithuanians of Cleveland (ltcle.org)", "date": "2026-05-17", "url": "https://ltcle.org/event/lithuanian-mass-80/" },
-    { "title": "St. Casimir Mass times", "publisher": "DiscoverMass", "date": "2026", "url": "https://discovermass.com/church/st-casimir-cleveland-oh/" }
+    { "title": "St. Casimir Mass times", "publisher": "DiscoverMass", "date": "2026", "url": "https://discovermass.com/church/st-casimir-cleveland-oh/" },
+    { "title": "St. Casimir Parish Thriving in Cleveland's Collinwood Neighborhood", "publisher": "Euclid Observer", "date": "2022-03-01", "url": "https://www.theeuclidobserver.com/articles/st-casimir-parish-thriving-in-clevelands-colllinwood-neighborhood/" },
+    { "title": "Our Lady of Perpetual Help Church, Hall and Rectory (St. Casimir Parish)", "publisher": "City of Cleveland", "date": "2026", "url": "https://www.clevelandohio.gov/explore/about-cleveland/designated-landmarks/our-lady-perpetual-help-church-hall-and-rectory-st" }
   ],
   "confidence": "verified",
   "conflictsWithArchiveRecord": "Archive notes 'three Lithuanian priests' (2024); since April 30, 2025 the parish has a single part-time administrator, Fr. Andrew Morkunas. Archive attributes the 2014 school lease to Breakthrough Schools; the tenant that opened there in 2014 was Lakeshore Intergenerational School, a Breakthrough-partnered charter.",

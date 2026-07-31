@@ -669,8 +669,7 @@ export default async function ParishPage({
     isLoss(endState) ||
     endState === "unresolved" ||
     !!core?.survivedReviewThenClosed ||
-    (!!core?.notes && !caseRecord) ||
-    !!entry.conflicts?.length;
+    (!!core?.notes && !caseRecord);
   const statusBadges =
     !researchOnly || parishAlert || watchEntry ? (
       <div
@@ -936,7 +935,7 @@ export default async function ParishPage({
             </p>
           )}
 
-          {core?.notes && (
+          {core?.notes && !caseRecord && (
             <div className="mt-5">
               <p className="text-xs uppercase tracking-wide text-muted">
                 From the record
