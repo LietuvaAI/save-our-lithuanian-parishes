@@ -10,7 +10,6 @@ import {
 import { EndStatePill } from "@/components/EndStatePill";
 import alertsData from "@/data/alerts.json";
 import networkData from "@/data/sielovada-us-network.json";
-import registryData from "@/data/registry-unified.json";
 import { getClearedPhoto } from "@/lib/photos";
 import { scopedParishes } from "@/lib/registry-scope";
 import { toGroup, type EndState } from "@/lib/end-state";
@@ -196,8 +195,6 @@ export default function Home() {
         firstDioceseLosses={TOP_LOSS_DIOCESES[0]?.[1] ?? 0}
         secondDiocese={TOP_LOSS_DIOCESES[1]?.[0] ?? ""}
         secondDioceseLosses={TOP_LOSS_DIOCESES[1]?.[1] ?? 0}
-        revision={String(registryData.registryRevision.version)}
-        revisionDate={registryData.registryRevision.date}
       />
 
       <section

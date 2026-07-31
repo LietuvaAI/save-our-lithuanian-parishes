@@ -10,8 +10,6 @@ type NationalRecordGraphicProps = {
   firstDioceseLosses: number;
   secondDiocese: string;
   secondDioceseLosses: number;
-  revision: string;
-  revisionDate: string;
 };
 
 const INK = "#1c1917";
@@ -31,8 +29,6 @@ export default function NationalRecordGraphic({
   firstDioceseLosses,
   secondDiocese,
   secondDioceseLosses,
-  revision,
-  revisionDate,
 }: NationalRecordGraphicProps) {
   const stages = [
     {
@@ -80,7 +76,7 @@ export default function NationalRecordGraphic({
           label="National parish record graphic"
         >
           <svg
-            viewBox="0 0 1200 520"
+            viewBox="0 0 1200 470"
             role="img"
             aria-label={`${total} documented parishes, ${closed} closed, ${closedSince1990} closures dated since 1990, and ${concentratedLosses} losses concentrated in Scranton and Chicago`}
             className="hidden h-auto w-full sm:block"
@@ -197,19 +193,6 @@ export default function NationalRecordGraphic({
             >
               {secondDiocese}: {secondDioceseLosses} closed parishes
             </text>
-            <text
-              x="56"
-              y="482"
-              fill={MUTED}
-              fontFamily="Arial, sans-serif"
-              fontSize="15"
-            >
-              Save Our Lithuanian Parishes - Registry Revision {revision},{" "}
-              {revisionDate}
-            </text>
-            <rect x="1027" y="458" width="39" height="8" fill="#fdb913" />
-            <rect x="1066" y="458" width="39" height="8" fill="#006a44" />
-            <rect x="1105" y="458" width="39" height="8" fill="#c1272d" />
           </svg>
           <div
             className="divide-y divide-rule border-y border-rule sm:hidden"
@@ -248,9 +231,6 @@ export default function NationalRecordGraphic({
               </p>
               <p>
                 {secondDiocese}: {secondDioceseLosses} closed parishes
-              </p>
-              <p className="mt-2">
-                Registry Revision {revision}, {revisionDate}
               </p>
             </div>
           </div>

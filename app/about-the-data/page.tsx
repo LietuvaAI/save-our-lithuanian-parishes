@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AboutNav from "@/components/AboutNav";
+import revisionHistory from "@/data/registry-revisions.json";
 import registry from "@/data/registry-unified.json";
 import {
   isPublicRecord,
@@ -15,6 +16,8 @@ const REGISTRY_TOTAL = (registry as { parishes: RegParish[] }).parishes.filter(
     !isSettlement(p) &&
     (p.country === "CA" || isUS(p)),
 ).length;
+
+const REGISTRY_REVISIONS = revisionHistory.revisions.slice().reverse();
 
 export const metadata: Metadata = {
   title: "About the Data",
@@ -163,6 +166,35 @@ export default function AboutTheDataPage() {
           protected counts cannot publish if they drift from the parish
           records.
         </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="font-serif text-2xl font-semibold">
+          Registry revision history
+        </h2>
+        <p className="mt-2 leading-relaxed">
+          The registry changes through dated, numbered releases. This is the
+          record of what changed and when.
+        </p>
+        <div className="mt-4 divide-y divide-rule border-y border-rule">
+          {REGISTRY_REVISIONS.map((revision) => (
+            <div
+              key={revision.version}
+              className="py-4 sm:grid sm:grid-cols-[8rem_7rem_minmax(0,1fr)] sm:gap-4"
+            >
+              <p className="font-semibold">Revision {revision.version}</p>
+              <p className="mt-1 text-sm text-muted sm:mt-0">
+                <time dateTime={revision.date}>{revision.date}</time>
+              </p>
+              <div className="mt-2 sm:mt-0">
+                <p className="leading-relaxed">{revision.summary}</p>
+                <p className="mt-1 text-xs text-muted">
+                  {revision.registryRecords} registry records
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="mt-10">

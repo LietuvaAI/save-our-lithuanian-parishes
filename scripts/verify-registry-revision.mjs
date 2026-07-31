@@ -8,7 +8,9 @@ import { readFileSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 
 const path = "data/registry-unified.json";
+const historyPath = "data/registry-revisions.json";
 const registry = JSON.parse(readFileSync(path, "utf8"));
+const history = JSON.parse(readFileSync(historyPath, "utf8"));
 
 const sortValue = (value) => {
   if (Array.isArray(value)) return value.map(sortValue);
@@ -46,6 +48,37 @@ const gitFile = (ref) => {
 const revision = registry.registryRevision;
 if (!Number.isInteger(revision?.version) || revision.version < 1) {
   throw new Error("registryRevision.version must be a positive integer.");
+}
+if (!Array.isArray(history.revisions) || history.revisions.length === 0) {
+  throw new Error(
+    "registry-revisions.json must contain a non-empty revisions array.",
+  );
+}
+history.revisions.forEach((entry, index) => {
+  const expectedVersion = index + 1;
+  if (entry.version !== expectedVersion) {
+    throw new Error(
+      `Registry revision history must be contiguous: expected ${expectedVersion}, found ${entry.version}.`,
+    );
+  }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(entry.date)) {
+    throw new Error(`Registry Revision ${entry.version} has an invalid date.`);
+  }
+  if (index > 0 && entry.date < history.revisions[index - 1].date) {
+    throw new Error("Registry revision dates must be chronological.");
+  }
+  if (!entry.summary?.trim()) {
+    throw new Error(`Registry Revision ${entry.version} needs a summary.`);
+  }
+});
+const latestHistory = history.revisions.at(-1);
+if (
+  latestHistory.version !== revision.version ||
+  latestHistory.date !== revision.date
+) {
+  throw new Error(
+    `Registry revision history ends at Revision ${latestHistory.version} (${latestHistory.date}), but the live registry is Revision ${revision.version} (${revision.date}).`,
+  );
 }
 const actualHash = digest(registry);
 if (revision.contentHash !== actualHash) {
