@@ -288,12 +288,6 @@ export default function ParishMap() {
   function dotLeave() {
     leaveTimer.current = setTimeout(() => setHovered(null), 140);
   }
-  function cardEnter() {
-    if (leaveTimer.current) clearTimeout(leaveTimer.current);
-  }
-  function cardLeave() {
-    setHovered(null);
-  }
   const [mode, setMode] = useState<Mode>("all");
   // Sub-filter inside the Closed view — same sub-fates as the flow chart.
   const [lostFate, setLostFate] = useState<"all" | "closed" | "demolished" | "repurposed">("all");
@@ -666,9 +660,7 @@ export default function ParishMap() {
             const opensRight = lx < 50;
             return (
               <div
-                onMouseEnter={cardEnter}
-                onMouseLeave={cardLeave}
-                className="map-hover-card absolute z-10 rounded-lg border border-rule bg-background/95 px-3.5 py-2.5 text-sm shadow-lg sm:w-72"
+                className="map-hover-card pointer-events-none absolute z-10 rounded-lg border border-rule bg-background/95 px-3.5 py-2.5 text-sm shadow-lg sm:w-72"
                 style={{
                   "--map-hover-x": `${lx}%`,
                   "--map-hover-y": `${Math.min(Math.max(ly, 25), 75)}%`,
@@ -715,12 +707,7 @@ export default function ParishMap() {
                   {hovered.deep ? "Documented in depth — full case file" : "Attested by the research record"}
                 </div>
                 {hovered.profile && (
-                  <a
-                    href={hovered.profile}
-                    className="mt-1.5 block font-medium underline hover:opacity-75"
-                  >
-                    Open the parish record →
-                  </a>
+                  <div className="mt-1.5 font-medium">Click the marker to open its record →</div>
                 )}
               </div>
             );
