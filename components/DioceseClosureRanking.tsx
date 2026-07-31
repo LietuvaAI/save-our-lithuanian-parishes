@@ -38,7 +38,7 @@ export default function DioceseClosureRanking({
   const chartHeight = 154 + ranked.length * 68;
 
   return (
-    <section className="mt-12 border-y border-rule py-8">
+    <section className="mt-8 border-y border-rule py-5">
       <div className="max-w-3xl">
         <p className="text-xs font-medium uppercase text-muted">
           Ranked closure record
@@ -46,14 +46,14 @@ export default function DioceseClosureRanking({
         <h2 className="mt-1 font-serif text-2xl font-semibold">
           Which dioceses closed the most Lithuanian parishes?
         </h2>
-        <p className="mt-2 leading-relaxed text-muted">
+        <p className="mt-1.5 text-sm leading-relaxed text-muted">
           The ranking counts formal parish closures, not transfers to another
           congregation. Open any row below the graphic to inspect the parish
           profiles behind its number.
         </p>
       </div>
 
-      <div className="mt-5">
+      <div className="mt-4">
         <ExportableSvg
           filename="lithuanian-parish-closures-by-diocese"
           label="Ranked diocesan closure graphic"
@@ -189,7 +189,7 @@ export default function DioceseClosureRanking({
         </ExportableSvg>
       </div>
 
-      <div className="mt-7 grid gap-x-6 border-y border-rule sm:grid-cols-2">
+      <div className="mt-4 grid gap-x-6 border-y border-rule sm:grid-cols-2">
         {ranked.map((diocese, index) => {
           const closedParishes = diocese.parishes.filter(
             (parish) => toGroup(parish.endState) === "closed",
