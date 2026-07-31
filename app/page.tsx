@@ -300,20 +300,6 @@ export default function Home() {
                       {campaign.actionLabel} &rarr;
                     </a>
                   </div>
-                  <p className="mt-2 text-[10px] leading-tight text-muted/80">
-                    {art.sourceUrl ? (
-                      <a
-                        href={art.sourceUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline decoration-rule underline-offset-2 hover:text-accent"
-                      >
-                        {art.attribution}
-                      </a>
-                    ) : (
-                      art.attribution
-                    )}
-                  </p>
                 </div>
               </article>
             );
