@@ -994,10 +994,12 @@ export function ParishPublishedRecord({
   profile,
   overviewText,
   supplementalNarrative,
+  fallbackNarrative,
 }: {
   profile: CanonicalParishProfile;
   overviewText?: string;
   supplementalNarrative?: string[];
+  fallbackNarrative?: string[];
 }) {
   const seen = new Set<string>();
   const facts = sortedHistorySources(profile)
@@ -1041,13 +1043,20 @@ export function ParishPublishedRecord({
         .filter(Boolean),
     )
     .filter((group) => group.length > 0);
-  const narrative = (supplementalNarrative ?? []).filter(Boolean);
-  if (narrative.length === 0 && groups.length === 0) return null;
+  const supplemental = (supplementalNarrative ?? []).filter(Boolean);
+  const narrative =
+    supplemental.length > 0 || groups.length > 0
+      ? supplemental
+      : (fallbackNarrative ?? []).filter(Boolean);
 
   return (
-    <section className="mt-10" aria-labelledby="parish-history-heading">
-      <h2 id="parish-history-heading" className="font-serif text-xl font-semibold">
-        Parish history
+    <section
+      id="profile-history"
+      className="mt-10 scroll-mt-8"
+      aria-labelledby="parish-history-heading"
+    >
+      <h2 id="parish-history-heading" className="font-serif text-2xl font-semibold">
+        History
       </h2>
       <div className="mt-4 max-w-2xl space-y-4">
         {narrative.map((paragraph) => (

@@ -8,7 +8,7 @@ import alertsData from "@/data/alerts.json";
 import contextPoints from "@/data/context-points.json";
 import { EndStatePill } from "@/components/EndStatePill";
 import ParishContextMap from "@/components/ParishContextMap";
-import { ParishLifeTimeline } from "@/components/ParishLifeTimeline";
+import { ParishProfileChronology } from "@/components/ParishProfileChronology";
 import {
   CONGREGATION_CLASS_LABEL,
   ParishPublishedRecord,
@@ -19,7 +19,7 @@ import {
 } from "@/components/ParishResearchRecord";
 import { ProfileSourceLedger } from "@/components/ProfileSourceLedger";
 import { splitStory } from "@/lib/dek";
-import { isLoss, type EndState } from "@/lib/end-state";
+import { END_STATE_LABEL, isLoss, type EndState } from "@/lib/end-state";
 import {
   canonicalParishProfiles,
   getCanonicalParishProfile,
@@ -31,7 +31,6 @@ import {
 } from "@/lib/parish-timelines";
 import {
   BUILDING_FATE_LABEL,
-  ENDING_MODE_LABEL,
   INSTITUTION_TYPE_LABEL,
   OWNERSHIP_LABEL,
   getParishSituation,
@@ -50,6 +49,7 @@ import {
   projectProfileSource,
   registryProfileSources,
 } from "@/lib/profile-sources";
+import { buildParishProfileView } from "@/lib/parish-profile-view";
 import { toScopedParish } from "@/lib/registry-scope";
 import {
   CLERGY_LABEL,
@@ -448,19 +448,28 @@ function researchStatusCopy(recordType: string) {
   return "This is historical context rather than a separate parish, and it is not included in parish counts.";
 }
 
+function publicOwnershipLabel(ownership: string | null | undefined) {
+  if (!ownership || /^(none|unknown|unspecified)$/i.test(ownership)) {
+    return null;
+  }
+  if (ownership === "diocese_rc") return "Diocese-owned Roman Catholic";
+  if (ownership === "national_catholic") {
+    return "Lithuanian National Catholic (community-owned)";
+  }
+  if (ownership === "other_self_owned") return "Community-owned";
+  return ownership;
+}
+
 function ownershipLabel(profile: CanonicalParishProfile) {
   if (profile.core) return OWNERSHIP_LABEL[profile.core.ownership];
-  const locked = profile.registry.locked?.ownership;
-  if (locked === "diocese_rc") return "Diocese-owned Roman Catholic";
-  if (locked === "national_catholic")
-    return "Lithuanian National Catholic (community-owned)";
-  if (locked === "other_self_owned") return "Community-owned";
+  const locked = publicOwnershipLabel(profile.registry.locked?.ownership);
+  if (locked) return locked;
 
-  const surveyed = (profile.registry.sources ?? []).find(
-    (source) =>
-      source.ownership &&
-      !/^(none|unknown|unspecified)$/i.test(source.ownership),
-  )?.ownership;
+  const surveyed = publicOwnershipLabel(
+    (profile.registry.sources ?? []).find((source) =>
+      publicOwnershipLabel(source.ownership),
+    )?.ownership,
+  );
   return surveyed ?? "Not established";
 }
 
@@ -474,6 +483,21 @@ function institutionLabel(profile: CanonicalParishProfile, community: boolean) {
     CONGREGATION_CLASS_LABEL[profile.congregationClass ?? ""] ??
     "Parish record"
   );
+}
+
+function readableBuildingStatus(
+  buildingFate: BuildingFate | null,
+  caseStatus: string | null,
+) {
+  if (buildingFate && buildingFate !== "unknown") {
+    if (buildingFate === "standing") return "Standing";
+    return BUILDING_FATE_LABEL[buildingFate];
+  }
+  if (!caseStatus || /^(unknown|not established)$/i.test(caseStatus)) {
+    return null;
+  }
+  const text = caseStatus.replace(/[_-]+/g, " ").trim();
+  return `${text.charAt(0).toUpperCase()}${text.slice(1)}`;
 }
 
 export function generateStaticParams() {
@@ -521,7 +545,6 @@ export default async function ParishPage({
   const foundedYear = scoped.founded ?? core?.yearFounded ?? null;
   const closedYear = scoped.closed ?? core?.yearClosed ?? null;
   const buildingFate = scoped.buildingFate ?? core?.buildingFate ?? null;
-  const endingMode = scoped.endingMode ?? core?.endingMode ?? null;
   const endState = scoped.endState;
   const recordType = entry.record_type ?? "parish";
   const researchOnly = ["phase", "lead", "context"].includes(recordType);
@@ -665,16 +688,44 @@ export default async function ParishPage({
       point.diocese &&
       point.congregationClass === "roman_catholic",
   );
-  const showWhatHappened =
-    isLoss(endState) ||
-    endState === "unresolved" ||
-    !!core?.survivedReviewThenClosed ||
-    (!!core?.notes && !caseRecord);
-  const statusBadges =
-    !researchOnly || parishAlert || watchEntry ? (
-      <div
-        className={`${photo ? "mt-4" : "mt-3"} flex flex-wrap items-center gap-3`}
-      >
+  const baseDisplayStatus =
+    researchOnly
+      ? "Research record"
+      : recordType === "misija" && endState === "active_parish"
+        ? "Active Lithuanian mission"
+        : END_STATE_LABEL[endState];
+  const displayStatus =
+    !researchOnly && closedYear && isLoss(endState)
+      ? `${baseDisplayStatus} · ${closedYear}`
+      : baseDisplayStatus;
+  const profileView = buildParishProfileView({
+    name,
+    city: entry.city,
+    state: entry.state ?? null,
+    country: entry.country,
+    institution,
+    founded: foundedYear,
+    closed: closedYear,
+    status: displayStatus,
+    ownership: researchOnly ? "Not established" : ownershipLabel(profile),
+    diocese: entry.diocese ?? null,
+    building: readableBuildingStatus(
+      buildingFate,
+      caseRecord?.buildingStatus ?? null,
+    ),
+    overview: [dek, rest].filter(Boolean).join(" "),
+    researchOnly,
+    researchStatus: researchStatusCopy(recordType),
+    currentUse: caseRecord?.currentUse ?? situation?.current_use ?? null,
+    caseSummary: caseRecord?.summary ?? null,
+    caseAsOf: caseRecord?.asOf ?? null,
+    developments: caseRecord?.developments ?? [],
+    timelineEvents: parishTimeline?.events ?? [],
+  });
+  const identityBadges = (
+    <div className="mt-4 flex flex-wrap items-center gap-2">
+      {!researchOnly || parishAlert || watchEntry ? (
+        <>
         {!researchOnly && (
           <EndStatePill
             value={endState}
@@ -699,34 +750,56 @@ export default async function ParishPage({
             {parishAlert ? currentSignalLabel : "Pastoral profile"}
           </span>
         )}
-      </div>
-    ) : null;
+        </>
+      ) : null}
+      <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium">
+        {institution}
+      </span>
+      {entry.needs_human_source_review && (
+        <span className="rounded-full border border-amber-300 bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-amber-900 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-200">
+          Identity or status unresolved
+        </span>
+      )}
+      {profile.congregationClass === "national_catholic_pncc" && (
+        <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
+          independent from Rome · historical witness
+        </span>
+      )}
+      {profile.congregationClass === "independent_catholic" && (
+        <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
+          independent Catholic · historical witness
+        </span>
+      )}
+      {core?.comparator && (
+        <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
+          Canadian comparator
+        </span>
+      )}
+    </div>
+  );
   const overviewSection = (
-    <section className="mt-7" aria-labelledby="parish-overview-heading">
+    <section
+      id="profile-overview"
+      className="mt-7 scroll-mt-8"
+      aria-labelledby="parish-overview-heading"
+    >
       <h2
         id="parish-overview-heading"
         className="font-serif text-xl font-semibold"
       >
         Overview
       </h2>
-      <p
-        className={`${photo ? "" : "max-w-2xl"} mt-3 font-serif text-lg leading-relaxed sm:text-xl`}
-      >
+      <p className="mt-3 max-w-2xl font-serif text-lg leading-relaxed sm:text-xl">
         {dek}
       </p>
-      {rest && (
-        <p
-          className={`${photo ? "" : "max-w-2xl"} mt-3 leading-relaxed text-muted`}
-        >
-          {rest}
-        </p>
-      )}
     </section>
   );
 
   return (
     <article
-      className={`mx-auto px-4 py-12 ${photo ? "max-w-4xl" : "max-w-3xl"}`}
+      className="mx-auto max-w-4xl px-4 py-12"
+      data-profile-layout="canonical-v1"
+      data-record-depth={profile.recordDepth}
     >
       <p className="text-xs uppercase tracking-widest text-muted">
         <Link href="/record" className="underline hover:text-foreground">
@@ -736,15 +809,9 @@ export default async function ParishPage({
         {entry.state ? `, ${entry.state}` : ""}
       </p>
 
-      <div
-        className={
-          photo
-            ? "mt-4 grid items-start gap-5 md:grid-cols-[20rem_minmax(0,1fr)] md:gap-8 lg:grid-cols-[23rem_minmax(0,1fr)]"
-            : ""
-        }
-      >
-        {photo && (
-          <figure className="w-full max-w-md overflow-hidden rounded-lg border border-rule md:max-w-none">
+      <div className="mt-4 grid items-start gap-5 md:grid-cols-[20rem_minmax(0,1fr)] md:gap-8 lg:grid-cols-[23rem_minmax(0,1fr)]">
+        <figure className="w-full max-w-md overflow-hidden rounded-lg border border-rule md:max-w-none">
+          {photo ? (
             <Image
               src={photo.src}
               alt={photo.alt}
@@ -757,7 +824,23 @@ export default async function ParishPage({
                   : "aspect-[4/3] w-full object-cover"
               }
             />
-            <figcaption className="border-t border-rule px-2 py-1 text-[10px] leading-snug text-muted">
+          ) : (
+            <div className="flex aspect-square w-full flex-col items-center justify-center bg-band px-8 text-center">
+              <p className="text-xs uppercase tracking-widest text-muted">
+                {institution}
+              </p>
+              <p className="mt-3 font-serif text-2xl font-semibold">{name}</p>
+              <p className="mt-1 text-sm text-muted">
+                {entry.city}
+                {entry.state ? `, ${entry.state}` : ""}
+              </p>
+              <p className="mt-5 text-xs text-muted">
+                {foundedYear ? `Established ${foundedYear}` : displayStatus}
+              </p>
+            </div>
+          )}
+          <figcaption className="border-t border-rule px-2 py-1 text-[10px] leading-snug text-muted">
+            {photo ? (
               <a
                 href="#evidence-sources"
                 className="underline underline-offset-2 hover:text-accent"
@@ -766,13 +849,15 @@ export default async function ParishPage({
                   ? "Line-art credit & source"
                   : "Image credit & source"}
               </a>
-            </figcaption>
-          </figure>
-        )}
+            ) : (
+              "Parish identity record"
+            )}
+          </figcaption>
+        </figure>
 
-        <div className={photo ? "min-w-0" : ""}>
+        <div className="min-w-0">
           <h1
-            className={`${photo ? "text-3xl [overflow-wrap:anywhere]" : "mt-1 text-3xl"} font-serif font-semibold leading-tight sm:text-4xl`}
+            className="font-serif text-3xl font-semibold leading-tight [overflow-wrap:anywhere] sm:text-4xl"
           >
             {name}
           </h1>
@@ -783,92 +868,44 @@ export default async function ParishPage({
             {entry.country === "CA" ? " · Canada" : ""}
           </p>
 
-          {photo && statusBadges}
-          {photo && overviewSection}
+          {identityBadges}
+          {overviewSection}
         </div>
-      </div>
-
-      {!photo && statusBadges}
-      {!photo && overviewSection}
-
-      <div className="mt-4 flex flex-wrap gap-1.5">
-        <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium">
-          {institution}
-        </span>
-        {entry.needs_human_source_review && (
-          <span className="rounded-full border border-amber-300 bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-amber-900 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-200">
-            Identity or status unresolved
-          </span>
-        )}
-        {profile.congregationClass === "national_catholic_pncc" && (
-          <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
-            independent from Rome · historical witness
-          </span>
-        )}
-        {profile.congregationClass === "independent_catholic" && (
-          <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
-            independent Catholic · historical witness
-          </span>
-        )}
-        {core?.comparator && (
-          <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium text-muted">
-            Canadian comparator
-          </span>
-        )}
       </div>
 
       <ParishPublishedRecord
         profile={profile}
         overviewText={researchOnly ? undefined : `${dek} ${rest ?? ""}`}
-        supplementalNarrative={caseRecord?.historicalSummary}
+        supplementalNarrative={
+          caseRecord?.historicalSummary?.length
+            ? caseRecord.historicalSummary
+            : rest
+              ? [rest]
+              : []
+        }
+        fallbackNarrative={profileView.historyFallback}
       />
 
-      {hasMap && (
-        <section className="mt-10">
-          <h2 className="font-serif text-xl font-semibold">
-            The church and its place
-          </h2>
-          <p className="mt-1 text-sm text-muted">
-            Among its neighbors — no parish stands alone.
-          </p>
-          <div className="mt-4 max-w-2xl">
-            <ParishContextMap
-              slug={profile.slug}
-              dioceseLabel={entry.diocese ?? undefined}
-            />
-          </div>
-        </section>
-      )}
-
-      <section className="mt-10">
-        <h2 className="font-serif text-xl font-semibold">At a glance</h2>
-        <dl className="mt-3 grid grid-cols-2 gap-x-8 gap-y-4 text-sm sm:grid-cols-3">
-          <div>
-            <dt className="text-xs uppercase tracking-wide text-muted">
-              Founded
-            </dt>
-            <dd className="mt-0.5">{foundedYear ?? "Not established"}</dd>
-          </div>
-          <div>
-            <dt className="text-xs uppercase tracking-wide text-muted">Type</dt>
-            <dd className="mt-0.5">{institutionLabel(profile, community)}</dd>
-          </div>
-          <div>
-            <dt className="text-xs uppercase tracking-wide text-muted">
-              Ownership
-            </dt>
-            <dd className="mt-0.5">
-              {researchOnly ? "Not established" : ownershipLabel(profile)}
-            </dd>
-          </div>
-          {entry.diocese && (
-            <div className="col-span-2 sm:col-span-3">
+      <section
+        id="profile-facts"
+        className="mt-10"
+        aria-labelledby="profile-facts-heading"
+      >
+        <h2
+          id="profile-facts-heading"
+          className="font-serif text-2xl font-semibold"
+        >
+          At a glance
+        </h2>
+        <dl className="mt-4 grid gap-x-8 gap-y-4 border-y border-rule py-5 text-sm sm:grid-cols-2 lg:grid-cols-3">
+          {profileView.facts.map((fact) => (
+            <div key={fact.label}>
               <dt className="text-xs uppercase tracking-wide text-muted">
-                Diocese
+                {fact.label}
               </dt>
-              <dd className="mt-0.5">{entry.diocese}</dd>
+              <dd className="mt-1 leading-relaxed">{fact.value}</dd>
             </div>
-          )}
+          ))}
         </dl>
         <ParishRecordReadings profile={profile} />
         {community && (
@@ -887,100 +924,27 @@ export default async function ParishPage({
         )}
       </section>
 
-      {parishTimeline && <ParishLifeTimeline timeline={parishTimeline} />}
+      <ParishProfileChronology items={profileView.chronology} />
 
-      {showWhatHappened && (
-        <section className="mt-10">
-          <h2 className="font-serif text-xl font-semibold">What happened</h2>
-          <dl className="mt-3 grid grid-cols-2 gap-x-8 gap-y-4 text-sm sm:grid-cols-3">
-            {isLoss(endState) && (
-              <div>
-                <dt className="text-xs uppercase tracking-wide text-muted">
-                  Closed
-                </dt>
-                <dd className="mt-0.5">{closedYear ?? "Not established"}</dd>
-              </div>
-            )}
-            {endingMode && endingMode !== "standing" && (
-              <div>
-                <dt className="text-xs uppercase tracking-wide text-muted">
-                  Decision
-                </dt>
-                <dd className="mt-0.5">{ENDING_MODE_LABEL[endingMode]}</dd>
-              </div>
-            )}
-            {buildingFate &&
-              buildingFate !== "unknown" &&
-              buildingFate !== "standing" && (
-                <div>
-                  <dt className="text-xs uppercase tracking-wide text-muted">
-                    Building
-                  </dt>
-                  <dd className="mt-0.5">
-                    {BUILDING_FATE_LABEL[buildingFate as BuildingFate]}
-                  </dd>
-                </div>
-              )}
-          </dl>
-
-          {core?.survivedReviewThenClosed && (
-            <p
-              className="mt-5 rounded-lg border border-rule p-4 leading-relaxed"
-              style={{ borderLeft: "4px solid var(--es-closed)" }}
-            >
-              This parish <strong>survived an earlier diocesan review</strong>{" "}
-              and a later one still reached it. It is part of the documented
-              pattern showing that one favorable restructuring decision does
-              not guarantee long-term safety.
-            </p>
-          )}
-
-          {core?.notes && !caseRecord && (
-            <div className="mt-5">
-              <p className="text-xs uppercase tracking-wide text-muted">
-                From the record
-              </p>
-              <p className="mt-1 leading-relaxed">{core.notes}</p>
-            </div>
-          )}
-        </section>
-      )}
-
-      <section className="mt-10">
-        <h2 className="font-serif text-xl font-semibold">
+      <section
+        id="present-condition"
+        className="mt-10"
+        aria-labelledby="present-condition-heading"
+      >
+        <h2
+          id="present-condition-heading"
+          className="font-serif text-2xl font-semibold"
+        >
           {researchOnly ? "Research status" : "Where it stands today"}
         </h2>
-
-        {researchOnly && (
-          <p className="mt-2 leading-relaxed text-muted">
-            {researchStatusCopy(recordType)}
+        <p className="mt-3 max-w-3xl leading-relaxed">
+          {profileView.currentSummary}
+        </p>
+        {profileView.currentAsOf && (
+          <p className="mt-2 text-xs uppercase tracking-wide text-muted">
+            Current record dated {profileView.currentAsOf}
           </p>
         )}
-        {!researchOnly &&
-          !parishAlert &&
-          !watchEntry &&
-          !caseRecord &&
-          situation?.current_use &&
-          situation.current_use !== "Unknown" && (
-            <p className="mt-2 leading-relaxed">
-              Current use: {situation.current_use}.
-            </p>
-          )}
-        {!researchOnly &&
-          !parishAlert &&
-          !watchEntry &&
-          !caseRecord &&
-          (!situation?.current_use || situation.current_use === "Unknown") && (
-            <p className="mt-2 leading-relaxed text-muted">
-              The surviving public sources do not yet establish what occupies
-              the building or whether the community continues. If you know
-              what became of it,{" "}
-              <Link href="/report" className="underline hover:text-foreground">
-                tell us
-              </Link>
-              .
-            </p>
-          )}
 
         {parishAlert && (
           <div
@@ -1162,84 +1126,75 @@ export default async function ParishPage({
           </div>
         )}
 
-        {caseRecord && (
-          <div className="mt-6">
-            <h3 className="font-serif text-lg font-semibold">
-              The verified record
-            </h3>
-            <p className="mt-0.5 text-xs uppercase tracking-wide text-muted">
-              as of {caseRecord.asOf} ·{" "}
-              {caseRecord.confidence === "verified"
-                ? "verified against published sources"
-                : caseRecord.confidence === "reported"
-                  ? "reported — corroboration limited"
-                  : "thin — treat with caution"}
-            </p>
-            <p className="mt-3 leading-relaxed">{caseRecord.summary}</p>
-            {caseRecord.developments.length > 0 &&
-              (() => {
-                const developments = [...caseRecord.developments].sort((a, b) =>
-                  b.date.localeCompare(a.date),
-                );
-                const recent = developments.slice(0, 4);
-                const older = developments.slice(4);
-                const item = (development: (typeof developments)[number]) => (
-                  <li key={`${development.date}-${development.headline}`}>
-                    <p className="text-xs uppercase tracking-wide text-muted">
-                      {development.date}
-                    </p>
-                    <p className="font-medium">{development.headline}</p>
-                    <p className="text-sm leading-relaxed text-muted">
-                      {development.detail}
-                    </p>
-                    {development.sources.length > 0 && (
-                      <p className="mt-1 text-xs text-muted">
-                        Sources:{" "}
-                        {[
-                          ...new Set(
-                            development.sources.map(
-                              (source) => source.publisher || source.title,
-                            ),
-                          ),
-                        ].join(", ")}
-                      </p>
-                    )}
-                  </li>
-                );
-                return (
-                  <div className="mt-6">
-                    <h3 className="font-serif text-lg font-semibold">
-                      The trail of events
-                    </h3>
-                    <ol className="mt-3 space-y-4 border-l-2 border-rule pl-4">
-                      {recent.map(item)}
-                    </ol>
-                    {older.length > 0 && (
-                      <details className="mt-3">
-                        <summary className="cursor-pointer text-sm text-muted underline hover:text-foreground">
-                          Earlier entries ({older.length})
-                        </summary>
-                        <ol className="mt-3 space-y-4 border-l-2 border-rule pl-4">
-                          {older.map(item)}
-                        </ol>
-                      </details>
-                    )}
-                  </div>
-                );
-              })()}
-            {caseRecord.gaps && (
-              <p className="mt-4 text-sm leading-relaxed text-muted">
-                <span className="font-medium text-foreground">
-                  What we could not yet establish:
-                </span>{" "}
-                {caseRecord.gaps}
-              </p>
-            )}
-          </div>
+        {core?.survivedReviewThenClosed && (
+          <p
+            className="mt-5 rounded-lg border border-rule p-4 leading-relaxed"
+            style={{ borderLeft: "4px solid var(--es-closed)" }}
+          >
+            This parish <strong>survived an earlier diocesan review</strong>{" "}
+            before a later decision closed it. Its history shows that one
+            favorable restructuring decision did not guarantee long-term
+            security.
+          </p>
         )}
       </section>
 
-      <section className="mt-10 rounded-lg border border-rule p-5">
+      <section
+        id="place-and-jurisdiction"
+        className="mt-10"
+        aria-labelledby="place-and-jurisdiction-heading"
+      >
+        <h2
+          id="place-and-jurisdiction-heading"
+          className="font-serif text-2xl font-semibold"
+        >
+          The community and its place
+        </h2>
+        <p className="mt-2 text-sm text-muted">
+          {entry.city}
+          {entry.state ? `, ${entry.state}` : ""}
+          {entry.diocese ? ` · ${entry.diocese}` : ""}
+        </p>
+        {hasMap ? (
+          <div className="mt-4 max-w-2xl">
+            <ParishContextMap
+              slug={profile.slug}
+              dioceseLabel={entry.diocese ?? undefined}
+            />
+          </div>
+        ) : (
+          <dl className="mt-4 grid gap-x-8 gap-y-4 border-y border-rule py-5 text-sm sm:grid-cols-3">
+            <div>
+              <dt className="text-xs uppercase tracking-wide text-muted">
+                Place
+              </dt>
+              <dd className="mt-1">
+                {entry.city}
+                {entry.state ? `, ${entry.state}` : ""}
+              </dd>
+            </div>
+            <div>
+              <dt className="text-xs uppercase tracking-wide text-muted">
+                Country
+              </dt>
+              <dd className="mt-1">
+                {entry.country === "CA" ? "Canada" : "United States"}
+              </dd>
+            </div>
+            <div>
+              <dt className="text-xs uppercase tracking-wide text-muted">
+                Jurisdiction
+              </dt>
+              <dd className="mt-1">{entry.diocese ?? "Not established"}</dd>
+            </div>
+          </dl>
+        )}
+      </section>
+
+      <section
+        id="profile-corrections"
+        className="mt-10 rounded-lg border border-rule p-5"
+      >
         <p className="font-medium">
           {researchOnly
             ? "Do you know more about this historical record?"
