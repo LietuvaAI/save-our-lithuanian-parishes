@@ -873,7 +873,7 @@ export default function ParishMap() {
                   All · {statusCounts.all}
                 </label>
               </div>
-              <div className="mt-1 grid grid-cols-1 gap-0.5">
+              <div className="mt-1 grid grid-cols-2 gap-1">
               {(
                 [
                   {
@@ -952,17 +952,18 @@ export default function ParishMap() {
                 return (
                   <div
                     key={key}
-                    className={`min-w-0 rounded-md px-1.5 py-1 ${
-                      expanded ? "col-span-1" : ""
+                    className={`relative min-w-0 rounded-md border-l-2 px-1.5 py-1 text-[11px] ${
+                      expanded ? "col-span-2" : ""
                     } ${
                       active
                         ? "bg-band"
                         : "hover:bg-band/60"
                     }`}
+                    style={{ borderColor: fill }}
                   >
-                    <div className="flex items-start gap-1">
+                    <div>
                       <label
-                        className="flex min-w-0 flex-1 cursor-pointer items-start gap-1.5 text-left leading-snug hover:text-foreground"
+                        className="flex min-w-0 cursor-pointer items-start gap-1.5 pr-5 text-left leading-tight hover:text-foreground"
                       >
                         <input
                           type="checkbox"
@@ -970,18 +971,13 @@ export default function ParishMap() {
                           onChange={() => toggleStatus(itemMode)}
                           className="mt-px h-3.5 w-3.5 shrink-0 accent-foreground"
                         />
-                        <span
-                          className="mt-1 inline-block h-2 w-2 shrink-0 rounded-full"
-                          style={{ background: fill }}
-                          aria-hidden
-                        />
                         <span className="min-w-0 flex-1 font-medium">
                           {label} · {count}
                         </span>
                       </label>
                       <button
                         type="button"
-                        className="flex h-5 w-5 shrink-0 items-center justify-center text-sm leading-none text-muted hover:text-foreground"
+                        className="absolute right-0.5 top-0.5 flex h-5 w-5 items-center justify-center text-sm leading-none text-muted hover:text-foreground"
                         aria-expanded={expanded}
                         aria-controls={detailId}
                         aria-label={`${expanded ? "Hide" : "Explain"} ${label}`}
