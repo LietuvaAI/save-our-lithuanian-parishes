@@ -372,6 +372,16 @@ export default function ParishMap() {
         (point) =>
           (point.congregationClass ?? "roman_catholic") === "roman_catholic",
       ).length,
+      roman_catholic_parishes: POINTS.filter(
+        (point) =>
+          (point.congregationClass ?? "roman_catholic") ===
+            "roman_catholic" && point.recordType === "parish",
+      ).length,
+      roman_catholic_missions: POINTS.filter(
+        (point) =>
+          (point.congregationClass ?? "roman_catholic") ===
+            "roman_catholic" && point.recordType === "misija",
+      ).length,
       national_catholic_pncc: POINTS.filter(
         (point) =>
           point.congregationClass === "national_catholic_pncc" ||
@@ -505,35 +515,23 @@ export default function ParishMap() {
     router.push(p.profile);
   }
 
-  function toggleCommunity(filter: CommunityFilter) {
-    setSelectedCommunities((current) => {
-      const next = new Set(current);
-      if (next.has(filter)) next.delete(filter);
-      else next.add(filter);
-      return next;
-    });
-  }
-
-  function toggleAllCommunities() {
+  function selectCommunity(filter: CommunityFilter | "all") {
     setSelectedCommunities(
-      allCommunitiesSelected ? new Set() : new Set(COMMUNITY_FILTERS),
+      filter === "all" ? new Set(COMMUNITY_FILTERS) : new Set([filter]),
     );
   }
 
-  function toggleStatus(filter: StatusFilter) {
-    setSelectedStatuses((current) => {
-      const next = new Set(current);
-      if (next.has(filter)) next.delete(filter);
-      else next.add(filter);
-      return next;
-    });
+  function selectStatus(filter: StatusFilter) {
+    setSelectedStatuses((current) =>
+      current.size === 1 && current.has(filter)
+        ? new Set(STATUS_FILTERS)
+        : new Set([filter]),
+    );
     if (filter === "lost") setLostFate("all");
   }
 
-  function toggleAllStatuses() {
-    setSelectedStatuses(
-      allStatusesSelected ? new Set() : new Set(STATUS_FILTERS),
-    );
+  function selectAllStatuses() {
+    setSelectedStatuses(new Set(STATUS_FILTERS));
     setLostFate("all");
   }
 
@@ -782,78 +780,114 @@ export default function ParishMap() {
           </div>
 
           <aside
-            className="order-1 border-b border-rule px-3 py-2.5 sm:px-4 lg:order-2 lg:border-b-0 lg:border-l"
+            className="order-1 border-b border-rule px-3 py-3 sm:px-4 lg:order-2 lg:border-b-0 lg:border-l"
             aria-label="Map key and filters"
           >
             <div className="flex items-center justify-between gap-2">
               <p className="text-[11px] font-medium uppercase tracking-widest text-muted">
-                Map filters
+                Map key
               </p>
               <span className="text-[11px] text-muted">
-                {statusCounts.all} shown
+                {visible.length} records shown
               </span>
             </div>
 
             <div
-              className="mt-2 text-xs"
+              className="mt-2.5 text-xs"
               role="group"
               aria-label="Filter by community"
             >
-              <div className="flex items-center justify-between gap-2">
-                <p className="text-[10px] font-semibold uppercase tracking-wide text-muted">
-                  Community
-                </p>
-                <label className="flex cursor-pointer items-center gap-1.5 text-[11px] text-muted hover:text-foreground">
-                  <input
-                    type="checkbox"
-                    checked={allCommunitiesSelected}
-                    onChange={toggleAllCommunities}
-                    className="h-3.5 w-3.5 shrink-0 accent-foreground"
-                  />
-                  All · {communityCounts.all}
-                </label>
-              </div>
-              <div className="mt-1 grid grid-cols-2 gap-1">
+              <p className="text-[10px] font-semibold uppercase tracking-wide text-muted">
+                Community
+              </p>
+              <div className="mt-1.5 grid grid-cols-2 gap-1.5">
+                <button
+                  type="button"
+                  aria-pressed={allCommunitiesSelected}
+                  onClick={() => selectCommunity("all")}
+                  className={`flex min-h-8 items-center gap-2 rounded-md border px-2 py-1.5 text-left text-[11px] font-medium transition-colors ${
+                    allCommunitiesSelected
+                      ? "border-foreground bg-band text-foreground"
+                      : "border-rule text-muted hover:border-foreground hover:text-foreground"
+                  }`}
+                >
+                  <span className="flex h-3.5 w-3.5 items-center justify-center" aria-hidden>
+                    <span className="h-2.5 w-2.5 rounded-full bg-foreground" />
+                  </span>
+                  <span>All · {communityCounts.all}</span>
+                </button>
                 {(
                   [
-                    { key: "roman_catholic", label: "Roman Catholic" },
+                    {
+                      key: "roman_catholic",
+                      label: "Roman Catholic",
+                      shape: "circle",
+                    },
                     {
                       key: "national_catholic_pncc",
-                      label: "National / independent",
+                      label: "National & independent",
+                      shape: "diamond",
                     },
                     {
                       key: "non_catholic_christian",
                       label: "Protestant",
+                      shape: "square",
                     },
-                  ] as { key: CommunityFilter; label: string }[]
-                ).map(({ key, label }) => {
-                  const active = selectedCommunities.has(key);
+                  ] as {
+                    key: CommunityFilter;
+                    label: string;
+                    shape: "circle" | "diamond" | "square";
+                  }[]
+                ).map(({ key, label, shape }) => {
+                  const active =
+                    !allCommunitiesSelected && selectedCommunities.has(key);
                   return (
-                    <label
+                    <button
                       key={key}
-                      className={`flex min-h-7 cursor-pointer items-start gap-1.5 rounded-md px-1.5 py-1 leading-snug transition-colors ${
+                      type="button"
+                      aria-pressed={active}
+                      onClick={() => selectCommunity(key)}
+                      className={`flex min-h-8 items-center gap-2 rounded-md border px-2 py-1.5 text-left text-[11px] leading-tight transition-colors ${
                         active
-                          ? "bg-band font-medium text-foreground"
-                          : "text-muted hover:bg-band/60 hover:text-foreground"
+                          ? "border-foreground bg-band font-medium text-foreground"
+                          : "border-rule text-muted hover:border-foreground hover:text-foreground"
                       }`}
                     >
-                      <input
-                        type="checkbox"
-                        checked={active}
-                        onChange={() => toggleCommunity(key)}
-                        className="mt-px h-3.5 w-3.5 shrink-0 accent-foreground"
-                      />
-                      <span className="min-w-0">
-                        {label} · {communityCounts[key]}
+                      <span className="flex h-3.5 w-3.5 shrink-0 items-center justify-center" aria-hidden>
+                        <span
+                          className={`h-2.5 w-2.5 bg-foreground ${
+                            shape === "circle"
+                              ? "rounded-full"
+                              : shape === "diamond"
+                                ? "rotate-45"
+                                : "rounded-[1px]"
+                          }`}
+                        />
                       </span>
-                    </label>
+                      <span className="min-w-0 flex-1">
+                        {key === "roman_catholic" ? (
+                          <>
+                            {label}
+                            <span className="block text-[10px] font-normal text-muted">
+                              {communityCounts.roman_catholic_parishes} parishes
+                              {" + "}
+                              {communityCounts.roman_catholic_missions} missions
+                            </span>
+                          </>
+                        ) : (
+                          <>
+                            {label} · {communityCounts[key]}
+                          </>
+                        )}
+                      </span>
+                    </button>
                   );
                 })}
               </div>
             </div>
 
             <div
-              className="mt-1.5 border-t border-rule pt-1.5 text-xs"
+              className="mt-2.5 border-t border-rule pt-2.5 text-xs"
               role="group"
               aria-label="Filter by status"
             >
@@ -861,19 +895,20 @@ export default function ParishMap() {
                 <p className="text-[10px] font-semibold uppercase tracking-wide text-muted">
                   Status
                 </p>
-                <label
-                  className="flex cursor-pointer items-center gap-1.5 text-[11px] text-muted hover:text-foreground"
+                <button
+                  type="button"
+                  aria-pressed={allStatusesSelected}
+                  onClick={selectAllStatuses}
+                  className={`rounded-md px-2 py-1 text-[11px] font-medium transition-colors ${
+                    allStatusesSelected
+                      ? "bg-foreground text-background"
+                      : "text-muted hover:bg-band hover:text-foreground"
+                  }`}
                 >
-                  <input
-                    type="checkbox"
-                    checked={allStatusesSelected}
-                    onChange={toggleAllStatuses}
-                    className="h-3.5 w-3.5 shrink-0 accent-foreground"
-                  />
-                  All · {statusCounts.all}
-                </label>
+                  All statuses
+                </button>
               </div>
-              <div className="mt-1 grid grid-cols-2 gap-1">
+              <div className="mt-1.5 grid grid-cols-2 gap-1.5">
               {(
                 [
                   {
@@ -947,37 +982,48 @@ export default function ParishMap() {
                 }[]
               ).map(({ key, mode: itemMode, label, description, fill, count }) => {
                 const expanded = expandedKey === key;
-                const active = selectedStatuses.has(itemMode);
+                const active =
+                  selectedStatuses.size === 1 &&
+                  selectedStatuses.has(itemMode);
                 const detailId = `map-key-detail-${key}`;
                 return (
                   <div
                     key={key}
-                    className={`relative min-w-0 rounded-md border-l-2 px-1.5 py-1 text-[11px] ${
+                    className={`relative min-w-0 rounded-md text-[11px] ${
                       expanded ? "col-span-2" : ""
-                    } ${
-                      active
-                        ? "bg-band"
-                        : "hover:bg-band/60"
                     }`}
-                    style={{ borderColor: fill }}
                   >
-                    <div>
-                      <label
-                        className="flex min-w-0 cursor-pointer items-start gap-1.5 pr-5 text-left leading-tight hover:text-foreground"
+                    <div className="relative">
+                      <button
+                        type="button"
+                        aria-pressed={active}
+                        onClick={() => selectStatus(itemMode)}
+                        className={`flex min-h-8 w-full min-w-0 items-center gap-2 rounded-md border py-1.5 pl-2 pr-7 text-left leading-tight transition-colors ${
+                          active
+                            ? "border-foreground bg-band text-foreground"
+                            : "border-rule text-foreground hover:border-foreground"
+                        }`}
                       >
-                        <input
-                          type="checkbox"
-                          checked={active}
-                          onChange={() => toggleStatus(itemMode)}
-                          className="mt-px h-3.5 w-3.5 shrink-0 accent-foreground"
+                        <span
+                          className={`h-2.5 w-2.5 shrink-0 rounded-full ${
+                            key === "active_mission" ? "border-2 bg-background" : ""
+                          }`}
+                          style={{
+                            background:
+                              key === "active_mission" ? undefined : fill,
+                            borderColor:
+                              key === "active_mission" ? fill : undefined,
+                            opacity: key === "unverified" ? 0.55 : 1,
+                          }}
+                          aria-hidden
                         />
                         <span className="min-w-0 flex-1 font-medium">
                           {label} · {count}
                         </span>
-                      </label>
+                      </button>
                       <button
                         type="button"
-                        className="absolute right-0.5 top-0.5 flex h-5 w-5 items-center justify-center text-sm leading-none text-muted hover:text-foreground"
+                        className="absolute right-1 top-1/2 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded text-sm leading-none text-muted hover:bg-background hover:text-foreground"
                         aria-expanded={expanded}
                         aria-controls={detailId}
                         aria-label={`${expanded ? "Hide" : "Explain"} ${label}`}
@@ -989,7 +1035,7 @@ export default function ParishMap() {
                     </div>
                     <div
                       id={detailId}
-                      className={`${expanded ? "block" : "hidden"} mt-1 pl-5 leading-relaxed text-muted`}
+                      className={`${expanded ? "block" : "hidden"} mt-1.5 rounded-md bg-band px-2.5 py-2 leading-relaxed text-muted`}
                     >
                       {description}
                     </div>
@@ -999,23 +1045,24 @@ export default function ParishMap() {
               </div>
             </div>
 
-            <div className="mt-1.5 border-t border-rule pt-1.5 text-xs">
+            <div className="mt-2.5 border-t border-rule pt-2.5 text-xs">
               <div className="flex items-center justify-between gap-2">
                 <p className="text-[10px] font-semibold uppercase tracking-wide text-muted">
                   Other marks
                 </p>
-                <label
-                  className="flex cursor-pointer items-center gap-1.5 text-[11px] text-muted hover:text-foreground"
+                <button
+                  type="button"
+                  aria-pressed={showDioceses}
+                  onClick={() => void toggleDioceses()}
+                  className={`rounded-md border px-2 py-1 text-[11px] font-medium transition-colors ${
+                    showDioceses
+                      ? "border-foreground bg-band text-foreground"
+                      : "border-rule text-muted hover:border-foreground hover:text-foreground"
+                  }`}
                   title="Catholic diocese boundaries"
                 >
-                  <input
-                    type="checkbox"
-                    checked={showDioceses}
-                    onChange={() => void toggleDioceses()}
-                    className="h-3.5 w-3.5 accent-foreground"
-                  />
                   Diocese lines
-                </label>
+                </button>
               </div>
               <div className="mt-1 grid grid-cols-3 gap-2 text-[10px] leading-tight text-muted">
                 <span className="flex items-start gap-1">

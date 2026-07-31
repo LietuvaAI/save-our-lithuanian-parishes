@@ -2,26 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AboutNav from "@/components/AboutNav";
 import revisionHistory from "@/data/registry-revisions.json";
-import registry from "@/data/registry-unified.json";
-import {
-  isPublicRecord,
-  isSettlement,
-  isUS,
-  scopedParishes,
-  type RegParish,
-} from "@/lib/registry-scope";
-
-const REGISTRY_TOTAL = (registry as { parishes: RegParish[] }).parishes.filter(
-  (p) =>
-    isPublicRecord(p) &&
-    !isSettlement(p) &&
-    (p.country === "CA" || isUS(p)),
-).length;
 
 const REGISTRY_REVISIONS = revisionHistory.revisions.slice().reverse();
-const UNDATED_FOUNDINGS = scopedParishes().filter(
-  (parish) => parish.founded == null,
-).length;
 
 export const metadata: Metadata = {
   title: "About the Data",
@@ -65,43 +47,20 @@ export default function AboutTheDataPage() {
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          2. How a parish becomes part of the record
+          2. Evidence and adjudication
         </h2>
         <p className="mt-2 leading-relaxed">
-          Each deep dive is completed in two evidence passes, followed by a
-          separate decision about what the sources actually establish.
+          Parish records are established through the synthesis of archival,
+          institutional, legal, and contemporary evidence. Claims are evaluated
+          for identity, chronology, continuity, governance, and present status.
+          The registry preserves the distinction between established findings
+          and secondary, provisional, conflicting, or unresolved readings.
         </p>
-        <div className="mt-5 border-y border-rule divide-y divide-rule">
-          <div className="py-4 sm:grid sm:grid-cols-[9rem_1fr] sm:gap-5">
-            <h3 className="font-semibold">Archive pass</h3>
-            <p className="mt-1 sm:mt-0 leading-relaxed text-muted">
-              The full <em>Draugas</em> run and page-cited parish histories
-              reconstruct names, identities, events, and timelines.
-            </p>
-          </div>
-          <div className="py-4 sm:grid sm:grid-cols-[9rem_1fr] sm:gap-5">
-            <h3 className="font-semibold">Current record</h3>
-            <p className="mt-1 sm:mt-0 leading-relaxed text-muted">
-              Official parish and diocesan records, legal and property
-              documents, current schedules, and reliable local reporting
-              establish the present congregation, governance, ownership, and
-              use of the building.
-            </p>
-          </div>
-          <div className="py-4 sm:grid sm:grid-cols-[9rem_1fr] sm:gap-5">
-            <h3 className="font-semibold">Adjudication</h3>
-            <p className="mt-1 sm:mt-0 leading-relaxed text-muted">
-              The two evidence packets are compared field by field. Established
-              facts enter the registry; secondary, provisional, conflicting,
-              and unresolved readings remain labeled as such.
-            </p>
-          </div>
-        </div>
         <p className="mt-2 leading-relaxed">
-          All <strong>83 source rows</strong> in the original group,
-          representing <strong>82 canonical parish identities</strong>, now
-          have case files. Additional registry records are being researched in
-          the same way, in bounded tranches.
+          The initial canonical corpus of{" "}
+          <strong>82 parish identities</strong> now has complete case files.
+          The remaining registry is being reviewed in bounded tranches under
+          the same standard.
         </p>
       </section>
 
@@ -152,29 +111,18 @@ export default function AboutTheDataPage() {
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          5. The published record — one registry
+          5. The published registry
         </h2>
         <p className="mt-2 leading-relaxed">
-          The registry powers the map, counts, and parish pages. It currently
-          brings together{" "}
-          <strong>{REGISTRY_TOTAL} parishes, missions, and congregations</strong>{" "}
-          across the U.S. and Canada. Historical attempts, unresolved archive
-          leads, and context-only references remain in the research registry
-          but are not counted as institutions.
+          A single registry governs the map, aggregate figures, and parish
+          profiles. It distinguishes documented institutions from provisional
+          leads and contextual references, which remain in the research record
+          without entering public institutional totals.
         </p>
         <p className="mt-2 leading-relaxed">
-          The registry tracks whether an entry has a deep case file,
-          multiple independent sources, or a single source. Parish profiles
-          expose their evidence ledgers directly. As new case files are
-          completed, the registry and site figures update automatically;
-          protected counts cannot publish if they drift from the parish
-          records.
-        </p>
-        <p className="mt-2 leading-relaxed">
-          {UNDATED_FOUNDINGS} Roman Catholic parish records do not yet have a
-          verified founding year. They remain in the registry and public
-          counts, but are omitted from calculations that require a known
-          founding date.
+          Each published record carries its evidentiary status and source
+          ledger. Site figures are derived from the registry and validated
+          against it before publication.
         </p>
       </section>
 
