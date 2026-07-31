@@ -54,10 +54,12 @@ export default function AboutPage() {
         <h2 className="font-serif text-2xl font-semibold">Why it exists</h2>
         <div className="mt-3 space-y-4 leading-relaxed">
           <p>
-            When those stories are scattered across archives, diocesan records,
-            private collections, local memory, and current news, each community
-            is left to understand its situation alone. This project brings the
-            record together and keeps it public.
+            No parish should have to understand its past or face its future
+            alone. Yet the record of Lithuanian parish life is scattered across
+            archives, diocesan files, family collections, community memory, and
+            current reporting. This project brings those fragments together as
+            a shared public record, so communities can learn from one another
+            and see their own experience as part of a larger story.
           </p>
         </div>
       </section>
