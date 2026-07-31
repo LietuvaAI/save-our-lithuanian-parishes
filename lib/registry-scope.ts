@@ -36,7 +36,7 @@ export interface RegParish {
   names: { lt: string | null; en: string | null };
   city: string;
   state: string;
-  country: "US" | "CA";
+  country: "US" | "CA" | "AR";
   record_type?: string;
   comparator: boolean | null;
   in_locked_scope: boolean;
@@ -58,6 +58,16 @@ export interface RegParish {
   congregation_class?: CongregationClass;
   diocese?: string | null;
   record_depth?: RecordDepth;
+  public_census?: {
+    included: boolean;
+    scope: string;
+    reason: string;
+    identity_support:
+      | "canonical_case_file"
+      | "multi_source_corroborated"
+      | "single_source_attested"
+      | null;
+  };
 }
 
 /** One row of the shared registry-wide view. */
@@ -66,7 +76,7 @@ export interface ScopedParish {
   name: string;
   city: string;
   state: string;
-  country: "US" | "CA";
+  country: "US" | "CA" | "AR";
   recordType: string;
   comparator: boolean;
   diocese: string | null;
@@ -112,9 +122,7 @@ export function isSettlement(p: RegParish): boolean {
 
 /** Scope: U.S. only; mis-coded Argentina entries out; Canada is a comparator. */
 export function isUS(p: RegParish): boolean {
-  return (
-    p.country !== "CA" && !/buenos aires|argentin|rosario/i.test(p.city ?? "")
-  );
+  return p.country === "US";
 }
 
 /** Institutional records published on The Record and the registry map. */
@@ -134,7 +142,11 @@ export function usRomanCatholic(): RegParish[] {
 /** The full U.S. /record population: parishes and congregations, no comparators. */
 export function usRegistryParishes(): RegParish[] {
   return (registry as { parishes: RegParish[] }).parishes.filter(
-    (p) => isUS(p) && !isSettlement(p) && isPublicRecord(p),
+    (p) =>
+      isUS(p) &&
+      !isSettlement(p) &&
+      isPublicRecord(p) &&
+      p.public_census?.included === true,
   );
 }
 

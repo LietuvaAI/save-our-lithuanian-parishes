@@ -61,7 +61,7 @@ for (const entry of network.entries) {
       errors.push(`${entry.id}: registry match ${entry.registrySlug} is missing`);
     } else if (
       !publicRegistryTypes.has(match.record_type) ||
-      match.country === "CA" ||
+      match.country !== "US" ||
       match.congregation_class !== "roman_catholic"
     ) {
       errors.push(

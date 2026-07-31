@@ -85,7 +85,15 @@ for (const p of lib) {
       slug,
       `identity "active_parish" but lifecycle status "${p.status}"${p.yearClosed ? ` (${p.yearClosed})` : ""} — the parish ended; use mass_continues if Lithuanian liturgy survives, lost if not`,
     );
-  if (!standing && p.status !== "undecided" && !p.yearClosed)
+  // A merger is an institutional transition, not necessarily a closure. Its
+  // date belongs in the event/lineage record unless the source also establishes
+  // suppression or closure. Requiring yearClosed here falsely flagged Newark,
+  // whose parish continued as Holy Trinity-Epiphany after the 2002 merger.
+  if (
+    ENDED.has(p.status) &&
+    p.status !== "merged" &&
+    !p.yearClosed
+  )
     add("DATA-GAP", slug, `status "${p.status}" with no closure year recorded`);
 
   // 2. Favorable identity vs research layers. Not gated on `standing`: the
@@ -174,7 +182,12 @@ for (const [key, s] of Object.entries(sit)) {
   if (id === "active_parish" || id === "mass_continues") {
     const w = watchBySlug.get(key);
     const verifiedWeb = (reg?.sources ?? []).some(
-      (src) => src.axis === "web-historical" && src.confidence === "verified",
+      (src) =>
+        (src.axis === "web-historical" && src.confidence === "verified") ||
+        (src.sourceUrl &&
+          (src.kind?.includes("official-") ||
+            src.kind?.includes("current-institutional") ||
+            src.kind?.includes("denominational-directory"))),
     );
     if (!w && !verifiedWeb)
       add("UNVERIFIED", key, `overlay claims "${id}" with no watch entry and no verified web survey`);

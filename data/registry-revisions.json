@@ -63,6 +63,19 @@
       "evidence": [
         "data/registry-unified.json"
       ]
+    },
+    {
+      "version": 8,
+      "date": "2026-07-31",
+      "registryRecords": 192,
+      "publicUSRecords": 159,
+      "usRomanCatholicParishes": 134,
+      "summary": "Completed the residual identity, census-scope, and source-integrity audit: collapsed five false or duplicate shells, removed unsupported and non-institutional records from public scope, repaired source ledgers and jurisdictions, and made every inclusion explicit.",
+      "evidence": [
+        "data/candidates/registry-revision-8-source-integrity-2026-07-31.md",
+        "data/candidates/public-institution-count-audit-2026-07-31.md",
+        "data/public-institution-ledger.json"
+      ]
     }
   ]
 }

@@ -58,17 +58,8 @@ const allowedFates = new Set([
   "unknown",
 ]);
 
-function isSettlement(r) {
-  return (r.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? ""));
-}
-
 function isUSRecord(r) {
-  return (
-    ["parish", "misija", "congregation"].includes(r.record_type) &&
-    !isSettlement(r) &&
-    r.country !== "CA" &&
-    !/buenos aires|argentin|rosario/i.test(r.city ?? "")
-  );
+  return r.public_census?.included === true;
 }
 
 for (const p of lib) {
@@ -102,7 +93,7 @@ for (const [slug, e] of Object.entries(situations)) {
 {
   const usRecords = registry.filter(isUSRecord).length;
   const mapPts = read("map.json").points.length;
-  const regPts = read("registry-map.json").points.filter((p) => p.country !== "CA").length;
+  const regPts = read("registry-map.json").points.filter((p) => p.country === "US").length;
   if (mapPts + regPts !== usRecords)
     errors.push(
       `map parity: ${mapPts} canonical + ${regPts} registry dots = ${mapPts + regPts}, but The Record counts ${usRecords} US records`,

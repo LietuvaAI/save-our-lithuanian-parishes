@@ -26,7 +26,7 @@ export interface RegistryRow {
   name: string;
   city: string;
   state: string;
-  country: "US" | "CA";
+  country: "US" | "CA" | "AR";
   recordType: string;
   comparator: boolean;
   // Canonical institutional status plus two independent current/property axes.

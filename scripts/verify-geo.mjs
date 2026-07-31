@@ -46,7 +46,7 @@ function nearState(f, pt, kmTol) {
 let checked = 0;
 const bad = [];
 for (const r of registry.parishes) {
-  if (r.country === "CA" || !r.state) continue;
+  if (r.country !== "US" || !r.state) continue;
   const ll = lonLatOf(r);
   if (!ll) continue;
   const f = byPostal.get(r.state);

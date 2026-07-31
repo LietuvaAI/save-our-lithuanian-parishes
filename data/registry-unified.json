@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-29",
+ "generated": "2026-07-31",
  "corpusScope": "parish-registry-unified",
  "inputs": [
   "03eff76ba6053cd5f2ad2f5526d50ea09b5e922826b10046c313af09d33e5c5c",
@@ -21,24 +21,20 @@
  ],
  "principles": "conflicts are data; locked figures untouched; no invented values; every fact cites its source",
  "counts": {
-  "parishes": 170,
+  "records": 192,
+  "parishes": 162,
+  "phases": 8,
+  "missions": 5,
+  "congregations": 6,
+  "leads": 8,
+  "context": 3,
   "case_filed": 83,
   "case_filed_records": 82,
-  "multi_source": 66,
-  "single_source": 49,
+  "multi_source": 71,
+  "single_source": 39,
   "with_exact_geo": 92,
-  "with_city_geo": 92,
-  "needs_geocode": 2,
-  "standalone_sites": 167,
-  "non_catholic_congregations": 14,
-  "excluded": 11,
-  "ambiguous": 1,
-  "records": 197,
-  "missions": 5,
-  "congregations": 7,
-  "phases": 6,
-  "leads": 7,
-  "context": 2
+  "with_city_geo": 87,
+  "needs_geocode": 2
  },
  "parishes": [
   {
@@ -179,13 +175,19 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "multi-source",
    "diocese": "Archdiocese of Chicago",
    "description": "Roseland parish documented with architectural details.",
    "architect": "Jonas Mulokas",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "all-saints-wilkes-barre-pa",
@@ -364,7 +366,13 @@
     "cite": "brain:docs/research/parish-canon-beyond-83/tranche-1/survival-ledger.json",
     "status": "verified-or-labeled"
    },
-   "needs_human_source_review": true
+   "needs_human_source_review": true,
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "allsaints-worcester-ma",
@@ -540,7 +548,13 @@
     "cite": "brain:docs/research/parish-canon-beyond-83/tranche-1/survival-ledger.json",
     "status": "verified-or-labeled"
    },
-   "needs_human_source_review": true
+   "needs_human_source_review": true,
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "andrew-new-britain-ct",
@@ -688,7 +702,13 @@
    "c83_rows": [
     29
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "andrew-philadelphia-pa",
@@ -800,14 +820,20 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "case-filed",
    "diocese": "Archdiocese of Philadelphia",
    "description": "Documented with photographs of the Lithuanian wayside cross and parish grounds.",
    "c83_rows": [
     54
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "angels-darien-il",
@@ -880,7 +906,13 @@
    "diocese": null,
    "c83_rows": [
     82
-   ]
+   ],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "angels-st-catharines-on",
@@ -928,7 +960,13 @@
    "record_depth": "single-source",
    "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": false,
+    "scope": "canadian_comparator",
+    "reason": "Canadian comparator institution; excluded from the U.S. census.",
+    "identity_support": null
+   }
   },
   {
    "slug": "ann-luzerne-pa",
@@ -1044,7 +1082,13 @@
    "c83_rows": [
     71
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "ann-spring-valley-il",
@@ -1253,7 +1297,13 @@
     "cite": "adjudications/2026-07-27-batch1-year-variances.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "annunciation-brooklyn-ny",
@@ -1264,7 +1314,8 @@
      "Apreiškimo parapija, Brooklynas",
      "Apreiškimo parapija",
      "Švč. M. Marijos Apreiškimo",
-     "Annunciation of the BVM"
+     "Annunciation of the BVM",
+     "Niujorko Apreiškimo lietuvių bažnyčia"
     ]
    },
    "city": "Brooklyn",
@@ -1336,6 +1387,20 @@
      "tier": 2,
      "work": "Lukas, Lietuvių Kultūrinis Paveldas Amerikoje (2009)",
      "rights": "in-copyright; cite + fair-use reproduction with attribution"
+    },
+    {
+     "axis": "truelithuania",
+     "kind": "field-survey",
+     "tlId": 131,
+     "sourceUrl": "https://global.truelithuania.com/lt/new-york-city-new-york-604/",
+     "statusFlags": [
+      "closed"
+     ],
+     "yearsMentioned": [
+      1863,
+      1914
+     ],
+     "importance": 2
     }
    ],
    "years": {
@@ -1356,20 +1421,35 @@
     }
    ],
    "geo": {
-    "lat": 40.6526006,
-    "lon": -73.9497211,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
+    "lat": 40.714297,
+    "lon": -73.954772,
+    "precision": "exact",
+    "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 5,
    "record_depth": "case-filed",
    "diocese": "Diocese of Brooklyn",
    "description": "Documented with facade photographs and architectural details.",
    "c83_rows": [
     65
    ],
-   "city_history": []
+   "city_history": [],
+   "aliases": [
+    "annunciation-maspeth-ny"
+   ],
+   "adjudication": {
+    "date": "2026-07-31",
+    "cite": "data/candidates/registry-revision-8-source-integrity-2026-07-31.md",
+    "status": "same-entity-shell-collapsed"
+   },
+   "caveat": "The Global True Lithuania Annunciation point is in Williamsburg, Brooklyn. The Maspeth assignment was a nearest-city import error; Transfiguration remains the distinct Maspeth parish.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "annunciation-kingston-pa",
@@ -1478,73 +1558,13 @@
     "cite": "adjudications/2026-07-27-batch1-closure-years.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
-  },
-  {
-   "slug": "annunciation-maspeth-ny",
-   "names": {
-    "lt": "Niujorko Apreiškimo lietuvių bažnyčia",
-    "en": null,
-    "variants": [
-     "Niujorko Apreiškimo lietuvių bažnyčia"
-    ]
-   },
-   "city": "Maspeth",
-   "state": "NY",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "truelithuania",
-     "kind": "field-survey",
-     "tlId": 131,
-     "sourceUrl": "http://global.truelithuania.com/lt/new-york-city-new-york-604/",
-     "statusFlags": [
-      "closed"
-     ],
-     "yearsMentioned": [
-      1863,
-      1914
-     ],
-     "importance": 2
-    }
-   ],
-   "geo": {
-    "lat": 40.714297,
-    "lon": -73.954772,
-    "precision": "exact",
-    "source": "truelithuania"
-   },
-   "years": {
-    "founded": [],
-    "closed": []
-   },
-   "conflicts": [
-    {
-     "field": "status+titular",
-     "variants": [
-      {
-       "value": "tl field survey flags 'closed'; titular given as Apreiškimo",
-       "source": "truelithuania"
-      },
-      {
-       "value": "site editorial guardrail: Maspeth unresolved — never render as completed closure; known parish titular is Atsimainymo (Transfiguration)",
-       "source": "site CLAUDE.md guardrail"
-      }
-     ],
-     "note": "GUARDRAIL-BINDING: this record must not display a closed status on the site."
-    }
-   ],
-   "related_sites": [],
-   "events_refs": [],
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Diocese of Brooklyn",
-   "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "anthony-cicero-il",
@@ -1685,14 +1705,20 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed",
    "diocese": "Archdiocese of Chicago",
    "description": "Documented with exterior photographs and architectural details.",
    "c83_rows": [
     62
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "anthony-detroit-mi",
@@ -1848,7 +1874,13 @@
    "c83_rows": [
     34
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "anthony-omaha-ne",
@@ -1997,7 +2029,13 @@
    "c83_rows": [
     36
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "anthony-philadelphia-pa",
@@ -2109,9 +2147,21 @@
    "congregation_class": "roman_catholic",
    "axes_count": 1,
    "record_depth": "single-source",
-   "diocese": "unspecified (Irish bishop); Papal delegate in Washington intervened",
+   "diocese": "Archdiocese of Philadelphia",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-31",
+    "cite": "data/candidates/registry-revision-8-source-integrity-2026-07-31.md",
+    "status": "governance-normalized"
+   },
+   "caveat": "Michelsonas p.128 identifies the Archdiocese of Philadelphia; the earlier free-text 'unspecified' label no longer suppresses the jurisdiction.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "ascension-pittsburgh-pa",
@@ -2221,7 +2271,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "same-entity-shells-collapsed"
    },
-   "caveat": "All three shells describe the one Ascension parish in Pittsburgh, founded in 1906 and closed in 1962."
+   "caveat": "All three shells describe the one Ascension parish in Pittsburgh, founded in 1906 and closed in 1962.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "bernard-irons-mi",
@@ -2318,7 +2374,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Grand Rapids",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "bukauskas-independent-chicago",
@@ -2364,7 +2426,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "source-classification-audited"
    },
-   "caveat": "A short-lived Lithuanian separatist Catholic attempt, not a Protestant congregation."
+   "caveat": "A short-lived Lithuanian separatist Catholic attempt, not a Protestant congregation.",
+   "public_census": {
+    "included": false,
+    "scope": "historical_phase",
+    "reason": "Historical organizing phase or attempt; not counted as an institution.",
+    "identity_support": null
+   }
   },
   {
    "slug": "casimir-amsterdam-ny",
@@ -2484,7 +2552,13 @@
    "c83_rows": [
     25
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "casimir-boston-ma",
@@ -2545,7 +2619,13 @@
    "record_depth": "single-source",
    "diocese": "Archdiocese of Boston (Archbishop Williams)",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "casimir-brockton-ma",
@@ -2643,7 +2723,13 @@
    "c83_rows": [
     14
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "casimir-chicago-il",
@@ -2824,6 +2910,12 @@
     "date": "2026-07-27",
     "cite": "adjudications/2026-07-27-batch1-closure-years.md",
     "status": "verified-or-labeled"
+   },
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
    }
   },
   {
@@ -2934,14 +3026,20 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 1,
+   "axes_count": 2,
    "record_depth": "case-filed",
    "diocese": "Diocese of Cleveland",
    "description": "Documented with architectural details and photographs.",
    "c83_rows": [
     59
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "casimir-delhi-on",
@@ -3016,7 +3114,13 @@
    "c83_rows": [
     86
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": false,
+    "scope": "canadian_comparator",
+    "reason": "Canadian comparator institution; excluded from the U.S. census.",
+    "identity_support": null
+   }
   },
   {
    "slug": "casimir-freeland-pa",
@@ -3121,7 +3225,13 @@
     "cite": "adjudications/2026-07-27-freeland-pa-identity.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "casimir-gary-in",
@@ -3276,7 +3386,13 @@
    "c83_rows": [
     1
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "casimir-los-angeles-ca",
@@ -3418,7 +3534,13 @@
    "c83_rows": [
     73
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "casimir-montreal-qc",
@@ -3505,7 +3627,13 @@
    "c83_rows": [
     84
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": false,
+    "scope": "canadian_comparator",
+    "reason": "Canadian comparator institution; excluded from the U.S. census.",
+    "identity_support": null
+   }
   },
   {
    "slug": "casimir-nashua-nh",
@@ -3620,7 +3748,13 @@
     "cite": "adjudications/2026-07-27-batch1-closure-years.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "casimir-new-haven-ct",
@@ -3760,7 +3894,13 @@
     "cite": "adjudications/2026-07-27-batch1-year-variances.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "casimir-paterson-nj",
@@ -3880,7 +4020,13 @@
    "c83_rows": [
     28
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "casimir-philadelphia-pa",
@@ -4022,7 +4168,13 @@
    "c83_rows": [
     55
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "casimir-pittsburgh-pa",
@@ -4159,14 +4311,20 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed",
    "diocese": "Diocese of Pittsburgh",
    "description": "Featured with architectural details and interior photographs.",
    "c83_rows": [
     44
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "casimir-pittston-pa",
@@ -4297,7 +4455,13 @@
    "c83_rows": [
     40
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "casimir-providence-ri",
@@ -4420,7 +4584,13 @@
    "c83_rows": [
     53
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "casimir-rosario-ar",
@@ -4434,7 +4604,7 @@
    },
    "city": "Rosario",
    "state": "AR",
-   "country": "US",
+   "country": "AR",
    "record_type": "parish",
    "in_locked_scope": false,
    "c83_row": null,
@@ -4472,7 +4642,13 @@
    "record_depth": "single-source",
    "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": false,
+    "scope": "international_institution",
+    "reason": "Institution outside the United States; excluded from the U.S. census.",
+    "identity_support": null
+   }
   },
   {
    "slug": "casimir-sioux-city-ia",
@@ -4605,7 +4781,13 @@
    "c83_rows": [
     12
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "casimir-winnipeg-mb",
@@ -4657,7 +4839,13 @@
    "record_depth": "single-source",
    "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": false,
+    "scope": "canadian_comparator",
+    "reason": "Canadian comparator institution; excluded from the U.S. census.",
+    "identity_support": null
+   }
   },
   {
    "slug": "casimir-worcester-ma",
@@ -4862,7 +5050,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "same-entity-shells-collapsed"
    },
-   "caveat": "Michelsonas's Worcester parish under Fr. Bukaveckas is St. Casimir, not an additional Worcester parish."
+   "caveat": "Michelsonas's Worcester parish under Fr. Bukaveckas is St. Casimir, not an additional Worcester parish.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "christ-the-king-sudbury-on",
@@ -4917,7 +5111,13 @@
    "record_depth": "single-source",
    "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": false,
+    "scope": "canadian_comparator",
+    "reason": "Canadian comparator institution; excluded from the U.S. census.",
+    "identity_support": null
+   }
   },
   {
    "slug": "christ-toronto-on",
@@ -4983,6 +5183,12 @@
     "date": "2026-07-29",
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "false-source-join-repaired"
+   },
+   "public_census": {
+    "included": false,
+    "scope": "canadian_comparator",
+    "reason": "Canadian comparator institution; excluded from the U.S. census.",
+    "identity_support": null
    }
   },
   {
@@ -5031,7 +5237,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "source-classification-audited"
    },
-   "caveat": "The generic Boston source may duplicate the known First Lutheran community; it remains a lead until the identity join is proved."
+   "caveat": "The generic Boston source may duplicate the known First Lutheran community; it remains a lead until the identity join is proved.",
+   "public_census": {
+    "included": false,
+    "scope": "research_lead",
+    "reason": "Unresolved research lead; not counted until identity is adjudicated.",
+    "identity_support": null
+   }
   },
   {
    "slug": "cong-lithuanian-evangelical-parish",
@@ -5073,7 +5285,13 @@
    "city_history": [
     "Los Angeles"
    ],
-   "diocese": null
+   "diocese": null,
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "cong-lithuanian-evangelical-union-c",
@@ -5115,7 +5333,13 @@
    "city_history": [
     "Toronto"
    ],
-   "diocese": null
+   "diocese": null,
+   "public_census": {
+    "included": false,
+    "scope": "canadian_comparator",
+    "reason": "Canadian comparator institution; excluded from the U.S. census.",
+    "identity_support": null
+   }
   },
   {
    "slug": "evangelical-reformed-chicago",
@@ -5155,7 +5379,13 @@
    "city_history": [
     "Chicago"
    ],
-   "diocese": null
+   "diocese": null,
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "first-lutheran-boston",
@@ -5195,7 +5425,13 @@
    "city_history": [
     "Boston"
    ],
-   "diocese": null
+   "diocese": null,
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "francis-east-chicago-in",
@@ -5204,7 +5440,8 @@
     "en": "St. Francis",
     "variants": [
      "Šv. Pranciškaus",
-     "St. Francis"
+     "St. Francis",
+     "ST. FRANCIS, INDIAN HARBOR"
     ]
    },
    "city": "East Chicago",
@@ -5247,6 +5484,20 @@
      "confidence": "medium",
      "currentStatus": "demolished",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "wolkovich",
+     "kind": "scholar-compendium",
+     "tier": 2,
+     "work": "Wolkovich, Lithuanian Religious Life in America, Vol. 3 (1998)",
+     "pages": "p.72, p.73, p.74, p.75",
+     "lccn": "91-76766",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "ethnic_status": "Lithuanian national parish",
+     "school": "convent+school opened 1927, Sisters of St. Casimir; closed June 1966 (112 children, 50 Lithuanian speakers)",
+     "convent": "opened 1927",
+     "cemetery": "",
+     "diocese": "Gary"
     }
    ],
    "years": {
@@ -5259,6 +5510,16 @@
       "value": "1934",
       "source": "draugas-jubilee-implied",
       "cite": "1984-08-08 p4 (50 metų)"
+     },
+     {
+      "value": "1903",
+      "source": "wolkovich",
+      "cite": "Vol.3 p.72, p.73, p.74, p.75"
+     },
+     {
+      "value": "1913",
+      "source": "wolkovich",
+      "cite": "Vol.3 p.72, p.73, p.74, p.75"
      }
     ],
     "closed": [
@@ -5269,6 +5530,11 @@
      {
       "value": "1987",
       "source": "web-historical"
+     },
+     {
+      "value": "1987",
+      "source": "wolkovich",
+      "cite": "Vol.3 p.72, p.73, p.74, p.75"
      }
     ]
    },
@@ -5299,84 +5565,7 @@
        "source": "web-historical"
       }
      ]
-    }
-   ],
-   "related_sites": [],
-   "events_refs": [
-    {
-     "set": "draugas-registry-1909-2007/events-curated",
-     "parish_key": "st-francis-east-chicago-in"
-    }
-   ],
-   "geo": {
-    "lat": 41.6397857,
-    "lon": -87.4548466,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "roman_catholic",
-   "axes_count": 2,
-   "record_depth": "case-filed",
-   "diocese": "Diocese of Gary",
-   "c83_rows": [
-    11
-   ],
-   "city_history": []
-  },
-  {
-   "slug": "francis-indian-harbor-in",
-   "names": {
-    "lt": null,
-    "en": "St. Francis",
-    "variants": [
-     "ST. FRANCIS, INDIAN HARBOR",
-     "St. Francis"
-    ]
-   },
-   "city": "Indian Harbor (East Chicago)",
-   "state": "IN",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "wolkovich",
-     "kind": "scholar-compendium",
-     "tier": 2,
-     "work": "Wolkovich, Lithuanian Religious Life in America, Vol. 3 (1998)",
-     "pages": "p.72, p.73, p.74, p.75",
-     "lccn": "91-76766",
-     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
-     "ethnic_status": "Lithuanian national parish",
-     "school": "convent+school opened 1927, Sisters of St. Casimir; closed June 1966 (112 children, 50 Lithuanian speakers)",
-     "convent": "opened 1927",
-     "cemetery": "",
-     "diocese": "Gary"
-    }
-   ],
-   "years": {
-    "founded": [
-     {
-      "value": "1903",
-      "source": "wolkovich",
-      "cite": "Vol.3 p.72, p.73, p.74, p.75"
-     },
-     {
-      "value": "1913",
-      "source": "wolkovich",
-      "cite": "Vol.3 p.72, p.73, p.74, p.75"
-     }
-    ],
-    "closed": [
-     {
-      "value": "1987",
-      "source": "wolkovich",
-      "cite": "Vol.3 p.72, p.73, p.74, p.75"
-     }
-    ]
-   },
-   "conflicts": [
+    },
     {
      "field": "founded",
      "variants": [
@@ -5394,7 +5583,12 @@
     }
    ],
    "related_sites": [],
-   "events_refs": [],
+   "events_refs": [
+    {
+     "set": "draugas-registry-1909-2007/events-curated",
+     "parish_key": "st-francis-east-chicago-in"
+    }
+   ],
    "geo": {
     "lat": 41.6397857,
     "lon": -87.4548466,
@@ -5402,11 +5596,28 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
+   "axes_count": 3,
+   "record_depth": "case-filed",
    "diocese": "Diocese of Gary",
-   "c83_rows": [],
-   "city_history": []
+   "c83_rows": [
+    11
+   ],
+   "city_history": [],
+   "aliases": [
+    "francis-indian-harbor-in"
+   ],
+   "adjudication": {
+    "date": "2026-07-31",
+    "cite": "data/candidates/registry-revision-8-source-integrity-2026-07-31.md",
+    "status": "same-entity-shell-collapsed"
+   },
+   "caveat": "Wolkovich's Indian Harbor entry and the case-filed East Chicago St. Francis describe the same parish. The 1987 and 1989 end readings remain visible as a source conflict.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "francis-lawrence-ma",
@@ -5508,7 +5719,13 @@
    "c83_rows": [
     16
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "gateofdawn-archbald-pa",
@@ -5611,7 +5828,13 @@
     "cite": "adjudications/2026-07-27-batch1-closure-years.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "gateofdawn-chicago-il",
@@ -5847,7 +6070,13 @@
     "cite": "adjudications/2026-07-27-batch1-year-variances.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "gateofdawn-hamilton-on",
@@ -5896,7 +6125,13 @@
    "record_depth": "single-source",
    "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": false,
+    "scope": "canadian_comparator",
+    "reason": "Canadian comparator institution; excluded from the U.S. census.",
+    "identity_support": null
+   }
   },
   {
    "slug": "gateofdawn-manhattan-ny",
@@ -6036,7 +6271,13 @@
    "c83_rows": [
     21
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "gateofdawn-montreal-qc",
@@ -6136,7 +6377,13 @@
    "c83_rows": [
     85
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": false,
+    "scope": "canadian_comparator",
+    "reason": "Canadian comparator institution; excluded from the U.S. census.",
+    "identity_support": null
+   }
   },
   {
    "slug": "gateofdawn-worcester-ma",
@@ -6241,7 +6488,13 @@
     "cite": "adjudications/2026-07-26-ausros-vartu-worcester-ma.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "george-bridgeport-ct",
@@ -6355,14 +6608,20 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "case-filed",
    "diocese": "Diocese of Bridgeport",
    "description": "Documented with exterior photographs.",
    "c83_rows": [
     69
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "george-brooklyn-ny",
@@ -6469,7 +6728,13 @@
    "c83_rows": [
     23
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "george-chicago-il",
@@ -6677,7 +6942,13 @@
     "cite": "adjudications/2026-07-27-batch1-closure-years.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "george-cleveland-oh",
@@ -6862,7 +7133,13 @@
    "c83_rows": [
     37
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "george-haverhill-ma",
@@ -6973,7 +7250,13 @@
     "cite": "adjudications/2026-07-27-batch1-closure-years.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "george-lemont-il",
@@ -7086,75 +7369,20 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 2,
+   "axes_count": 3,
    "record_depth": "case-filed",
    "diocese": "Archdiocese of Chicago",
    "description": "Lithuanian World Center mission documented with interior photographs.",
    "c83_rows": [
     64
    ],
-   "city_history": []
-  },
-  {
-   "slug": "george-mahanoy-city-pa",
-   "names": {
-    "lt": null,
-    "en": "St. George Parish, Mahanoy City",
-    "variants": [
-     "šv. Jurgio parapija (Mahanoy City)",
-     "St. George Parish, Mahanoy City"
-    ]
-   },
-   "city": "Mahanoy City",
-   "state": "PA",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "michelsonas-1961",
-     "kind": "secular-history",
-     "tier": 2,
-     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
-     "pages": "21,22",
-     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
-     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
-     "ethnic_status": "Lithuanian",
-     "diocese": "unspecified (Irish bishop)"
-    }
-   ],
-   "years": {
-    "founded": [
-     {
-      "value": "1874 (Lithuanians began settling and raising funds for a Lithuanian church)",
-      "source": "michelsonas-1961",
-      "cite": "21,22"
-     }
-    ],
-    "closed": [
-     {
-      "value": "still active at time of writing (parish had $8,000 annual income, 300 baptisms, 85 weddings in 1911 per kun. Milukas)",
-      "source": "michelsonas-1961",
-      "cite": "21,22"
-     }
-    ]
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [],
-   "geo": {
-    "lat": 40.8125881,
-    "lon": -76.1416034,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "unspecified (Irish bishop)",
-   "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "george-niagara-falls-ny",
@@ -7300,7 +7528,13 @@
     "cite": "adjudications/2026-07-27-batch1-closure-years.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "george-norwood-ma",
@@ -7443,7 +7677,13 @@
     "cite": "adjudications/2026-07-27-batch1-closure-years.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "george-philadelphia-pa",
@@ -7545,7 +7785,13 @@
    "c83_rows": [
     56
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "george-pittsburgh-pa",
@@ -7636,7 +7882,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "source-classification-audited"
    },
-   "caveat": "The source describes a Lithuanian separatist parish later taken under PNCC jurisdiction."
+   "caveat": "The source describes a Lithuanian separatist parish later taken under PNCC jurisdiction.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "george-rochester-ny",
@@ -7764,14 +8016,20 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "case-filed",
    "diocese": "Diocese of Rochester",
    "description": "Featured with exterior photographs.",
    "c83_rows": [
     22
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "george-shenandoah-pa",
@@ -7924,7 +8182,7 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "case-filed",
    "diocese": "Diocese of Allentown",
    "description": "Identified as the first Lithuanian parish in America, with founding date contested (1872, 1874, 1886, 1891).",
@@ -7952,7 +8210,13 @@
     "cite": "adjudications/2026-07-27-batch1-year-variances.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "holy-cross-schenectady-ny",
@@ -8025,7 +8289,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Albany",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "holy-cross-westville-il",
@@ -8257,6 +8527,12 @@
     "date": "2026-07-28",
     "cite": "data/candidates/canonical-identity-release-audit-2026-07-28.md",
     "status": "identity-release-audited"
+   },
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
    }
   },
   {
@@ -8432,7 +8708,13 @@
     "cite": "data/candidates/canonical-identity-release-audit-2026-07-28.md",
     "status": "identity-release-audited"
    },
-   "needs_human_source_review": true
+   "needs_human_source_review": true,
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "holycross-brooklyn-ny",
@@ -8476,12 +8758,24 @@
     "precision": "city-centroid",
     "source": "site-geo-cache"
    },
-   "congregation_class": "roman_catholic",
+   "congregation_class": "independent_catholic",
    "axes_count": 1,
    "record_depth": "single-source",
-   "diocese": "Diocese of Brooklyn",
+   "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-31",
+    "cite": "data/candidates/registry-revision-8-source-integrity-2026-07-31.md",
+    "status": "denomination-corrected"
+   },
+   "caveat": "Michelsonas identifies Holy Cross as a Lithuanian national parish with no diocese. It remains single-source attested pending corroboration.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "holycross-chicago-il",
@@ -8659,7 +8953,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed",
    "diocese": "Archdiocese of Chicago",
    "description": "Back of the Yards parish, described as the most architecturally impressive Lithuanian church in Chicago.",
@@ -8667,7 +8961,13 @@
    "c83_rows": [
     9
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "holycross-cleveland-oh",
@@ -8737,7 +9037,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "source-classification-audited"
    },
-   "caveat": "The proposed 1917 Old Catholic organization was abandoned and never became a durable parish."
+   "caveat": "The proposed 1917 Old Catholic organization was abandoned and never became a durable parish.",
+   "public_census": {
+    "included": false,
+    "scope": "historical_phase",
+    "reason": "Historical organizing phase or attempt; not counted as an institution.",
+    "identity_support": null
+   }
   },
   {
    "slug": "holycross-dayton-oh",
@@ -8878,14 +9184,20 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed",
    "diocese": "Diocese of Cleveland",
    "description": "National Register of Historic Places parish documented with photographs.",
    "c83_rows": [
     58
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "holycross-mount-carmel-pa",
@@ -9061,7 +9373,13 @@
    "c83_rows": [
     49
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "holyname-philadelphia-pa",
@@ -9116,7 +9434,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "source-classification-audited"
    },
-   "caveat": "A single source attests an unnamed independent/schismatic phase; a durable standalone parish identity is not established."
+   "caveat": "A single source attests an unnamed independent/schismatic phase; a durable standalone parish identity is not established.",
+   "public_census": {
+    "included": false,
+    "scope": "historical_phase",
+    "reason": "Historical organizing phase or attempt; not counted as an institution.",
+    "identity_support": null
+   }
   },
   {
    "slug": "ignatius-luther-mi",
@@ -9174,11 +9498,17 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
+   "axes_count": 2,
+   "record_depth": "multi-source",
    "diocese": "Diocese of Grand Rapids",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "immaculate-chicago-il",
@@ -9319,14 +9649,20 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed",
    "diocese": "Archdiocese of Chicago",
    "description": "Brighton Park parish documented with interior and exterior photographs.",
    "c83_rows": [
     61
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "immaculate-conception-sheboygan-wi",
@@ -9437,7 +9773,13 @@
    "record_depth": "multi-source",
    "diocese": "Archdiocese of Milwaukee",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "immaculate-east-st-louis-il",
@@ -9568,14 +9910,20 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed",
    "diocese": "Diocese of Bellevue (Belleville)",
    "description": "Documented as one of 11 of 13 Catholic churches in the city that survived closures.",
    "c83_rows": [
     75
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "jesus-lawrence-ma",
@@ -9798,7 +10146,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "same-entity-shells-collapsed"
    },
-   "caveat": "Three shells described the same Sacred Heart Lithuanian National Catholic parish at 150 Garden Street. The 2001 building sale and selected 2002 institutional-end reading remain distinct source readings."
+   "caveat": "Three shells described the same Sacred Heart Lithuanian National Catholic parish at 150 Garden Street. The 2001 building sale and selected 2002 institutional-end reading remain distinct source readings.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "john-coaldale-pa",
@@ -9901,7 +10255,13 @@
    "c83_rows": [
     47
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "john-toronto-on",
@@ -9974,6 +10334,12 @@
     "date": "2026-07-29",
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "false-source-join-repaired"
+   },
+   "public_census": {
+    "included": false,
+    "scope": "canadian_comparator",
+    "reason": "Canadian comparator institution; excluded from the U.S. census.",
+    "identity_support": null
    }
   },
   {
@@ -9986,7 +10352,7 @@
    "city": "Chicago (seminary at 3125 S. Parnell Ave.)",
    "state": "IL",
    "country": "US",
-   "record_type": "congregation",
+   "record_type": "context",
    "congregation_class": "independent_catholic",
    "in_locked_scope": false,
    "comparator": false,
@@ -10016,11 +10382,17 @@
    ],
    "diocese": null,
    "adjudication": {
-    "date": "2026-07-29",
-    "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
-    "status": "source-classification-audited"
+    "date": "2026-07-31",
+    "cite": "data/candidates/registry-revision-8-source-integrity-2026-07-31.md",
+    "status": "organization-context-reclassified"
    },
-   "caveat": "An independent quasi-Catholic movement, not a Protestant congregation."
+   "caveat": "St. John Missionary Fathers and their Chicago seminary are an organization/site context record, not a congregation.",
+   "public_census": {
+    "included": false,
+    "scope": "context_only",
+    "reason": "Contextual person, organization, site, or event; not an institution row.",
+    "identity_support": null
+   }
   },
   {
    "slug": "joseph-cambridge-ma",
@@ -10090,68 +10462,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "source-classification-audited"
    },
-   "caveat": "The source describes a brief Lithuanian separatist Catholic congregation in 1917."
-  },
-  {
-   "slug": "joseph-custer-mi",
-   "names": {
-    "lt": null,
-    "en": "St. Joseph Church, Custer",
-    "variants": [
-     "šv. Juozapo bažnyčia (Custer)",
-     "St. Joseph Church, Custer"
-    ]
-   },
-   "city": "Custer",
-   "state": "MI",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "michelsonas-1961",
-     "kind": "secular-history",
-     "tier": 2,
-     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
-     "pages": "58,59",
-     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
-     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
-     "ethnic_status": "Lithuanian (farm colony)",
-     "diocese": "Grand Rapids"
-    }
-   ],
-   "years": {
-    "founded": [
-     {
-      "value": "land donated by Kazimieras Žvirgždas (1 acre)",
-      "source": "michelsonas-1961",
-      "cite": "58,59"
-     }
-    ],
-    "closed": [
-     {
-      "value": "n/a - active at writing, school with 160 pupils taught by Sisters of St. Casimir from Chicago",
-      "source": "michelsonas-1961",
-      "cite": "58,59"
-     }
-    ]
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [],
-   "geo": {
-    "lat": 43.951951,
-    "lon": -86.219521,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Diocese of Grand Rapids",
-   "c83_rows": [],
-   "city_history": []
+   "caveat": "The source describes a brief Lithuanian separatist Catholic congregation in 1917.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "joseph-dubois-pa",
@@ -10326,7 +10643,13 @@
     "cite": "brain:docs/research/parish-canon-beyond-83/tranche-1/survival-ledger.json",
     "status": "verified-or-labeled"
    },
-   "needs_human_source_review": true
+   "needs_human_source_review": true,
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "joseph-nanticoke-pa",
@@ -10491,7 +10814,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed",
    "diocese": "Diocese of Scranton",
    "c83_rows": [
@@ -10529,7 +10852,13 @@
     "cite": "brain:docs/research/elip-2026/adjudications.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "joseph-scranton-pa",
@@ -10733,7 +11062,13 @@
     "holyname-scranton-pa"
    ],
    "events": [],
-   "caveat": "The unnamed Theodore Street parish under Fr. Kuras is St. Joseph. The official diocesan closure date, 2011-06-05, remains the selected institutional end."
+   "caveat": "The unnamed Theodore Street parish under Fr. Kuras is St. Joseph. The official diocesan closure date, 2011-06-05, remains the selected institutional end.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "joseph-south-chicago-il",
@@ -10877,7 +11212,13 @@
    "aliases": [
     "st-joseph-chicago-il"
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "joseph-waterbury-ct",
@@ -11119,7 +11460,13 @@
     "cite": "adjudications/2026-07-26-sv-kazimiero-waterbury-ct.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "lithuanian-bronx-ny",
@@ -11178,7 +11525,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "unresolved-archive-lead"
    },
-   "caveat": "The archive seed does not yet establish a named institutional identity. It is preserved for research and withheld from public counts."
+   "caveat": "The archive seed does not yet establish a named institutional identity. It is preserved for research and withheld from public counts.",
+   "public_census": {
+    "included": false,
+    "scope": "research_lead",
+    "reason": "Unresolved research lead; not counted until identity is adjudicated.",
+    "identity_support": null
+   }
   },
   {
    "slug": "lithuanian-church-chester-pa",
@@ -11193,7 +11546,7 @@
    "city": "Chester",
    "state": "PA",
    "country": "US",
-   "record_type": "parish",
+   "record_type": "lead",
    "in_locked_scope": false,
    "c83_row": null,
    "sources": [
@@ -11242,7 +11595,19 @@
    "record_depth": "multi-source",
    "diocese": "Archdiocese of Philadelphia",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-31",
+    "cite": "data/candidates/registry-revision-8-source-integrity-2026-07-31.md",
+    "status": "unsupported-candidate-reclassified"
+   },
+   "caveat": "The carried Draugas source records zero mentions and the web candidate has no URL or locator. Held as a research lead until institution identity is sourced.",
+   "public_census": {
+    "included": false,
+    "scope": "research_lead",
+    "reason": "Unresolved research lead; not counted until identity is adjudicated.",
+    "identity_support": null
+   }
   },
   {
    "slug": "lithuanian-church-middleport-pa",
@@ -11315,7 +11680,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Allentown",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "lithuanian-easton-pa",
@@ -11383,7 +11754,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "unresolved-archive-lead"
    },
-   "caveat": "The archive seed does not yet establish a named institutional identity. It is preserved for research and withheld from public counts."
+   "caveat": "The archive seed does not yet establish a named institutional identity. It is preserved for research and withheld from public counts.",
+   "public_census": {
+    "included": false,
+    "scope": "research_lead",
+    "reason": "Unresolved research lead; not counted until identity is adjudicated.",
+    "identity_support": null
+   }
   },
   {
    "slug": "lithuanian-national-catholic-parish-waterbury-ct",
@@ -11528,7 +11905,13 @@
     "cite": "brain:docs/research/parish-canon-beyond-83/tranche-1/survival-ledger.json",
     "status": "verified-or-labeled"
    },
-   "needs_human_source_review": true
+   "needs_human_source_review": true,
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "lithuanian-toronto-on",
@@ -11582,7 +11965,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "unresolved-archive-lead"
    },
-   "caveat": "The 1929 archive seed has no indexed mentions and cannot yet be joined to St. John the Baptist or Resurrection. It is withheld from public counts pending source adjudication."
+   "caveat": "The 1929 archive seed has no indexed mentions and cannot yet be joined to St. John the Baptist or Resurrection. It is withheld from public counts pending source adjudication.",
+   "public_census": {
+    "included": false,
+    "scope": "research_lead",
+    "reason": "Unresolved research lead; not counted until identity is adjudicated.",
+    "identity_support": null
+   }
   },
   {
    "slug": "lithuanian-union-pier-mi",
@@ -11641,7 +12030,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "unresolved-archive-lead"
    },
-   "caveat": "The archive seed does not yet establish a named institutional identity. It is preserved for research and withheld from public counts."
+   "caveat": "The archive seed does not yet establish a named institutional identity. It is preserved for research and withheld from public counts.",
+   "public_census": {
+    "included": false,
+    "scope": "research_lead",
+    "reason": "Unresolved research lead; not counted until identity is adjudicated.",
+    "identity_support": null
+   }
   },
   {
    "slug": "mary-chicago-il",
@@ -11705,7 +12100,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "source-classification-audited"
    },
-   "caveat": "The source describes an independent Lithuanian separatist Catholic congregation."
+   "caveat": "The source describes an independent Lithuanian separatist Catholic congregation.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "mary-custer-mi",
@@ -11758,6 +12159,26 @@
      "sourceUrl": "https://vkpk.lt/u-zemelapis/svc-mergeles-marijos-baznycia-kasteryje/",
      "ownership": "diocese_rc",
      "surveyed": "2026-07-25"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "58,59",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian (farm colony)",
+     "diocese": "Grand Rapids",
+     "identity_note": "The land, school, Sisters of St. Casimir, and Custer farm-colony facts belong to St. Mary; the extracted St. Joseph name is not retained as a valid parish alias."
+    },
+    {
+     "axis": "diocese-of-grand-rapids",
+     "kind": "official-current-institutional",
+     "publisher": "Diocese of Grand Rapids",
+     "work": "Saint Mary-Saint Jerome Parish, Custer",
+     "accessed": "2026-07-31",
+     "sourceUrl": "https://grdiocese.org/parishes-location/saint-mary-saint-james-parish-custer/"
     }
    ],
    "years": {
@@ -11790,6 +12211,21 @@
        "cite": "Vol.3 p.82, p.83"
       }
      ]
+    },
+    {
+     "field": "source identity",
+     "variants": [
+      {
+       "value": "Extracted as St. Joseph Church, Custer",
+       "source": "michelsonas-1961",
+       "cite": "pp. 58-59"
+      },
+      {
+       "value": "St. Mary is the documented Custer parish",
+       "source": "wolkovich and Diocese of Grand Rapids"
+      }
+     ],
+     "note": "The extracted shell duplicated the Custer community under the wrong titular; its historical facts are preserved here."
     }
    ],
    "related_sites": [],
@@ -11801,11 +12237,26 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 2,
+   "axes_count": 5,
    "record_depth": "multi-source",
-   "diocese": "Diocese of Grand Rapids (unspecified in text)",
+   "diocese": "Diocese of Grand Rapids",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "aliases": [
+    "joseph-custer-mi"
+   ],
+   "adjudication": {
+    "date": "2026-07-31",
+    "cite": "data/candidates/registry-revision-8-source-integrity-2026-07-31.md",
+    "status": "false-identity-shell-collapsed"
+   },
+   "caveat": "The St. Joseph Custer shell duplicated St. Mary. Its evidence is preserved without publishing a second parish.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "mary-frackville-pa",
@@ -11921,7 +12372,13 @@
    "aliases": [
     "ann-frackville-pa"
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "mary-philadelphia-pa",
@@ -12062,7 +12519,13 @@
     "cite": "adjudications/2026-07-27-batch1-year-variances.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "michael-bayonne-nj",
@@ -12173,7 +12636,13 @@
     "cite": "adjudications/2026-07-27-batch1-closure-years.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "michael-chicago-north-side-il",
@@ -12282,6 +12751,12 @@
     "date": "2026-07-27",
     "cite": "adjudications/2026-07-27-batch1-closure-years.md",
     "status": "verified-or-labeled"
+   },
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
    }
   },
   {
@@ -12424,7 +12899,13 @@
     "cite": "adjudications/2026-07-27-batch1-closure-years.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "motherofgod-cleveland-oh",
@@ -12586,7 +13067,13 @@
    "c83_rows": [
     38
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "motherofgod-maizeville-pa",
@@ -12715,7 +13202,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "same-entity-shells-collapsed"
    },
-   "caveat": "St. Louis was the earlier church of the parish that became Our Lady of Siluva in Maizeville; the 1967 building is not a second parish."
+   "caveat": "St. Louis was the earlier church of the parish that became Our Lady of Siluva in Maizeville; the 1967 building is not a second parish.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "nativity-chicago-il",
@@ -12871,7 +13364,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed",
    "diocese": "Archdiocese of Chicago",
    "description": "Marquette Park parish, documented with photographs of the Mulokas-designed interior.",
@@ -12879,7 +13372,13 @@
    "c83_rows": [
     60
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "our-lady-of-vilna-eynon-pa",
@@ -12948,7 +13447,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Scranton",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "parish-avellaneda-ar",
@@ -12962,7 +13467,7 @@
    },
    "city": "Avellaneda (suburb of Buenos Aires)",
    "state": "AR",
-   "country": "US",
+   "country": "AR",
    "record_type": "parish",
    "in_locked_scope": false,
    "c83_row": null,
@@ -13006,7 +13511,13 @@
    "record_depth": "single-source",
    "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": false,
+    "scope": "international_institution",
+    "reason": "Institution outside the United States; excluded from the U.S. census.",
+    "identity_support": null
+   }
   },
   {
    "slug": "parish-baltimore-md",
@@ -13021,7 +13532,7 @@
    "city": "Baltimore",
    "state": "MD",
    "country": "US",
-   "record_type": "parish",
+   "record_type": "phase",
    "in_locked_scope": false,
    "c83_row": null,
    "sources": [
@@ -13062,7 +13573,19 @@
    "record_depth": "single-source",
    "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-31",
+    "cite": "data/candidates/registry-revision-8-source-integrity-2026-07-31.md",
+    "status": "historical-attempt-reclassified"
+   },
+   "caveat": "A late-1880s independent organizing attempt attested by Michelsonas. Preserved as a research phase until a durable institution is established by further evidence.",
+   "public_census": {
+    "included": false,
+    "scope": "historical_phase",
+    "reason": "Historical organizing phase or attempt; not counted as an institution.",
+    "identity_support": null
+   }
   },
   {
    "slug": "parish-chicago-il",
@@ -13126,7 +13649,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "source-classification-audited"
    },
-   "caveat": "Twelve Apostles was a proposed non-Catholic, non-denominational movement; no durable parish is established."
+   "caveat": "Twelve Apostles was a proposed non-Catholic, non-denominational movement; no durable parish is established.",
+   "public_census": {
+    "included": false,
+    "scope": "historical_phase",
+    "reason": "Historical organizing phase or attempt; not counted as an institution.",
+    "identity_support": null
+   }
   },
   {
    "slug": "parish-chicago-il-2",
@@ -13214,7 +13743,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "false-source-join-repaired"
    },
-   "caveat": "Michelsonas and Wolkovich evidence now meet on this independent Town of Lake parish. No Roman Catholic diocesan affiliation is asserted."
+   "caveat": "Michelsonas and Wolkovich evidence now meet on this independent Town of Lake parish. No Roman Catholic diocesan affiliation is asserted.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "parish-chicago-il-3",
@@ -13269,7 +13804,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "source-classification-audited"
    },
-   "caveat": "The generic Fr. Steponavicius reference cannot yet be joined safely to a named Chicago parish."
+   "caveat": "The generic Fr. Steponavicius reference cannot yet be joined safely to a named Chicago parish.",
+   "public_census": {
+    "included": false,
+    "scope": "research_lead",
+    "reason": "Unresolved research lead; not counted until identity is adjudicated.",
+    "identity_support": null
+   }
   },
   {
    "slug": "parish-collinsville-il",
@@ -13377,7 +13918,13 @@
     "cite": "data/candidates/canonical-identity-release-audit-2026-07-28.md",
     "status": "identity-release-audited"
    },
-   "needs_human_source_review": true
+   "needs_human_source_review": true,
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "parish-grand-prairie-ar",
@@ -13468,7 +14015,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "source-classification-audited"
    },
-   "caveat": "The source describes a settler colony with a small chapel for a Lithuanian congregation, properly counted as a mission rather than a parish."
+   "caveat": "The source describes a settler colony with a small chapel for a Lithuanian congregation, properly counted as a mission rather than a parish.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "parish-kearny-nj",
@@ -13704,7 +14257,13 @@
    },
    "city_history": [
     "Harrison"
-   ]
+   ],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "parish-melrose-park-il",
@@ -13756,7 +14315,13 @@
    "record_depth": "single-source",
    "diocese": "Archdiocese of Chicago",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "parish-mt-pleasant-pa",
@@ -13823,7 +14388,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "source-classification-audited"
    },
-   "caveat": "The source describes a Polish parish served by a Lithuanian priest, not a Lithuanian parish."
+   "caveat": "The source describes a Polish parish served by a Lithuanian priest, not a Lithuanian parish.",
+   "public_census": {
+    "included": false,
+    "scope": "context_only",
+    "reason": "Contextual person, organization, site, or event; not an institution row.",
+    "identity_support": null
+   }
   },
   {
    "slug": "parish-oglesby-il",
@@ -13912,7 +14483,13 @@
    "c83_rows": [
     10
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "parish-scottville-mi",
@@ -13970,7 +14547,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "source-classification-audited"
    },
-   "caveat": "The source offers only a Lithuanian-presence lead through a pastor and a separate Bass Lake mission; a Scottville Lithuanian parish is not established."
+   "caveat": "The source offers only a Lithuanian-presence lead through a pastor and a separate Bass Lake mission; a Scottville Lithuanian parish is not established.",
+   "public_census": {
+    "included": false,
+    "scope": "research_lead",
+    "reason": "Unresolved research lead; not counted until identity is adjudicated.",
+    "identity_support": null
+   }
   },
   {
    "slug": "parish-wasaga-beach-on",
@@ -14021,7 +14604,13 @@
    "record_depth": "single-source",
    "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": false,
+    "scope": "canadian_comparator",
+    "reason": "Canadian comparator institution; excluded from the U.S. census.",
+    "identity_support": null
+   }
   },
   {
    "slug": "paul-elizabeth-nj",
@@ -14118,7 +14707,13 @@
    "c83_rows": [
     67
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "paul-esplen-pa",
@@ -14127,7 +14722,9 @@
     "en": "St. Vincent de Paul",
     "variants": [
      "Šv. Vincento Pauliečio",
-     "St. Vincent de Paul"
+     "St. Vincent de Paul",
+     "St. Vincent Parish",
+     "šv. Vincento parapija"
     ]
    },
    "city": "Esplen",
@@ -14179,6 +14776,23 @@
      "confidence": "verified",
      "sourceUrl": "https://diopitt.org/saint-vincent-de-paul-esplen",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "p.341-342",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian national parish",
+     "diocese": "None"
+    },
+    {
+     "axis": "truelithuania",
+     "kind": "field-survey",
+     "work": "Global True Lithuania: Pittsburgh, Pennsylvania",
+     "sourceUrl": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/"
     }
    ],
    "years": {
@@ -14229,13 +14843,15 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 2,
+   "axes_count": 4,
    "record_depth": "case-filed",
    "diocese": "Diocese of Pittsburgh",
    "c83_rows": [
     43
    ],
-   "aliases": [],
+   "aliases": [
+    "vincent-pittsburgh-pa"
+   ],
    "lifecycle": {
     "canonical_status": "merged",
     "selected_closed_year": 1993,
@@ -14256,11 +14872,18 @@
     }
    ],
    "adjudication": {
-    "date": "2026-07-27",
-    "cite": "adjudications/2026-07-27-batch1-closure-years.md",
-    "status": "verified-or-labeled"
+    "date": "2026-07-31",
+    "cite": "data/candidates/registry-revision-8-source-integrity-2026-07-31.md",
+    "status": "same-entity-shell-collapsed"
    },
-   "city_history": []
+   "city_history": [],
+   "caveat": "Michelsonas's Pittsburgh St. Vincent entry is St. Vincent de Paul in the Esplen neighborhood, not an additional Pittsburgh parish.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "paul-girardville-pa",
@@ -14395,7 +15018,13 @@
    "c83_rows": [
     51
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "paul-grand-rapids-mi",
@@ -14558,7 +15187,13 @@
    "c83_rows": [
     74
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "paul-naugatuck-ct",
@@ -14583,6 +15218,23 @@
      "confidence": "medium",
      "currentStatus": "standing",
      "ownership": "other_self_owned"
+    },
+    {
+     "axis": "lcms-new-england",
+     "kind": "official-denominational-directory",
+     "publisher": "New England District, Lutheran Church-Missouri Synod",
+     "work": "St. Paul Lutheran Church, Naugatuck",
+     "accessed": "2026-07-31",
+     "sourceUrl": "https://ned-lcms.org/church/st-paul-lutheran-church-naugatuck"
+    },
+    {
+     "axis": "naugatuck-historical-society",
+     "kind": "local-historical-record",
+     "publisher": "Naugatuck Historical Society",
+     "work": "Union City history",
+     "accessed": "2026-07-31",
+     "sourceUrl": "https://www.naugatuckhistory.org/unioncity",
+     "note": "Documents the church's service to Lithuanian Lutherans and rebuilding after the 1955 flood."
     }
    ],
    "years": {
@@ -14604,15 +15256,27 @@
     "source": "truelithuania"
    },
    "congregation_class": "non_catholic_christian",
-   "axes_count": 1,
-   "record_depth": "single-source",
+   "axes_count": 3,
+   "record_depth": "multi-source",
    "name_variants": [
     "Šv. Pauliaus liuteronų",
     "Naugatuko Šv. Pauliaus lietuvių liuteronų bažnyčia"
    ],
    "city_history": [],
    "diocese": null,
-   "c83_rows": []
+   "c83_rows": [],
+   "adjudication": {
+    "date": "2026-07-31",
+    "cite": "data/candidates/registry-revision-8-source-integrity-2026-07-31.md",
+    "status": "public-source-ledger-repaired"
+   },
+   "caveat": "The official district directory confirms the present congregation and address; current Lithuanian-language worship or identity remains unestablished.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "peter-boston-ma",
@@ -14816,7 +15480,13 @@
     "cite": "adjudications/2026-07-27-batch1-year-variances.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "peter-cambridge-ma",
@@ -15015,7 +15685,13 @@
     "cite": "adjudications/2026-07-27-batch1-closure-years.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "peter-detroit-mi",
@@ -15195,7 +15871,13 @@
    "c83_rows": [
     35
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "protestant-parish-nyc",
@@ -15235,7 +15917,13 @@
    "city_history": [
     "New York City"
    ],
-   "diocese": null
+   "diocese": null,
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "providence-chicago-il",
@@ -15411,7 +16099,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed",
    "diocese": "Archdiocese of Chicago",
    "description": "Documented with extensive architectural photographs.",
@@ -15419,7 +16107,13 @@
    "c83_rows": [
     8
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "providence-providence-ri",
@@ -15565,7 +16259,13 @@
     "cite": "brain:docs/research/parish-canon-beyond-83/tranche-1/survival-ledger.json",
     "status": "verified-or-labeled"
    },
-   "needs_human_source_review": true
+   "needs_human_source_review": true,
+   "public_census": {
+    "included": false,
+    "scope": "historical_phase",
+    "reason": "Historical organizing phase or attempt; not counted as an institution.",
+    "identity_support": null
+   }
   },
   {
    "slug": "providence-scranton-pa",
@@ -15739,7 +16439,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "same-entity-shells-collapsed"
    },
-   "caveat": "The generic Lithuanian National Catholic Church shell is Providence of God, the surviving Scranton LNCC/PNCC-line congregation."
+   "caveat": "The generic Lithuanian National Catholic Church shell is Providence of God, the surviving Scranton LNCC/PNCC-line congregation.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "providence-southfield-mi",
@@ -15873,7 +16579,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed",
    "diocese": "Archdiocese of Detroit",
    "description": "Documented with architectural details.",
@@ -15881,7 +16587,13 @@
    "c83_rows": [
     63
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "raymond-baptist-chicago",
@@ -15928,7 +16640,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "context-record-separated"
    },
-   "caveat": "Wolkovich describes an American Baptist congregation joined by a Lithuanian minister, not a distinct Lithuanian ethnic congregation. It remains as context and is excluded from public parish counts."
+   "caveat": "Wolkovich describes an American Baptist congregation joined by a Lithuanian minister, not a distinct Lithuanian ethnic congregation. It remains as context and is excluded from public parish counts.",
+   "public_census": {
+    "included": false,
+    "scope": "context_only",
+    "reason": "Contextual person, organization, site, or event; not an institution row.",
+    "identity_support": null
+   }
   },
   {
    "slug": "sacred-heart-new-philadelphia-pa",
@@ -16003,7 +16721,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Allentown",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "springfield-independent",
@@ -16049,7 +16773,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "source-classification-audited"
    },
-   "caveat": "A Lithuanian separatist Catholic congregation, not a Protestant congregation."
+   "caveat": "A Lithuanian separatist Catholic congregation, not a Protestant congregation.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "ss-peter-and-paul-chicago-il",
@@ -16202,6 +16932,12 @@
     "date": "2026-07-29",
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "false-source-join-repaired"
+   },
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
    }
   },
   {
@@ -16259,6 +16995,15 @@
       1911
      ],
      "importance": 3
+    },
+    {
+     "axis": "diocese-of-scranton",
+     "kind": "official-diocesan-record",
+     "publisher": "Diocese of Scranton",
+     "work": "Consolidated Parishes",
+     "accessed": "2026-07-31",
+     "sourceUrl": "https://www.dioceseofscranton.org/wp-content/uploads/2025/07/Consolidated-Parishes-updated-7-2-25.pdf",
+     "note": "Lists Hazleton Ss. Peter and Paul Church and its diocesan closure."
     }
    ],
    "years": {
@@ -16329,11 +17074,23 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "multi-source",
-   "diocese": "unspecified (Irish bishop)",
+   "diocese": "Diocese of Scranton",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-31",
+    "cite": "data/candidates/registry-revision-8-source-integrity-2026-07-31.md",
+    "status": "governance-normalized"
+   },
+   "caveat": "The Diocese of Scranton's official consolidated-parishes table establishes the jurisdiction and closure record.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "ss-peter-and-paul-homestead-pa",
@@ -16402,7 +17159,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Pittsburgh",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "ss-peter-and-paul-rockford-il",
@@ -16523,7 +17286,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Rockford",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "ss-peter-and-paul-sugar-notch-pa",
@@ -16596,7 +17365,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Scranton",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "ss-peter-and-paul-tamaqua-pa",
@@ -16685,7 +17460,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Allentown",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "ss-peter-and-paul-westville-il",
@@ -16830,7 +17611,13 @@
    "record_depth": "multi-source",
    "diocese": "Archdiocese of Chicago (per Cis correspondence, AAChic cited) / possibly Peoria diocese (Skrypka transferred to Chicago's Holy Cross from here)",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-alphonsus-baltimore-md",
@@ -16968,7 +17755,7 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 4,
    "record_depth": "case-filed",
    "diocese": "Archdiocese of Baltimore",
    "description": "Former German parish transferred to Lithuanian community in 1917, documented with architectural history.",
@@ -17018,7 +17805,13 @@
     "cite": "adjudications/holyname-baltimore-md.md",
     "status": "verified-or-labeled"
    },
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "st-ambrose-port-washington-wi",
@@ -17123,7 +17916,13 @@
    "record_depth": "multi-source",
    "diocese": "Archdiocese of Milwaukee",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-ann-beverly-shores-in",
@@ -17193,11 +17992,17 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 2,
+   "axes_count": 3,
    "record_depth": "multi-source",
    "diocese": "Diocese of Gary",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-ann-jersey-city-nj",
@@ -17270,7 +18075,13 @@
    "record_depth": "multi-source",
    "diocese": "Archdiocese of Newark",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-anthony-ansonia-ct",
@@ -17416,7 +18227,13 @@
     "cite": "data/candidates/canonical-identity-release-audit-2026-07-28.md",
     "status": "identity-release-audited"
    },
-   "needs_human_source_review": true
+   "needs_human_source_review": true,
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "st-anthony-bridgeville-pa",
@@ -17485,7 +18302,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Pittsburgh",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "st-anthony-forest-city-pa",
@@ -17553,7 +18376,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Scranton",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-anthony-kewanee-il",
@@ -17622,7 +18451,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Peoria",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "st-bartholomew-waukegan-il",
@@ -17755,7 +18590,13 @@
    "record_depth": "multi-source",
    "diocese": "Archdiocese of Chicago",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-casimir-east-vandergrift-pa",
@@ -17839,7 +18680,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Greensburg",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-casimir-kansas-city-ks",
@@ -18026,7 +18873,13 @@
     "cite": "data/candidates/canonical-identity-release-audit-2026-07-28.md",
     "status": "identity-release-audited"
    },
-   "needs_human_source_review": true
+   "needs_human_source_review": true,
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "st-casimir-mcadoo-pa",
@@ -18099,7 +18952,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Allentown",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-casimir-plymouth-pa",
@@ -18159,11 +19018,17 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
+   "axes_count": 2,
+   "record_depth": "multi-source",
    "diocese": "Diocese of Scranton",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "st-casimir-racine-wi",
@@ -18287,7 +19152,13 @@
    "record_depth": "multi-source",
    "diocese": "Archdiocese of Milwaukee",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-casimir-st-clair-pa",
@@ -18367,7 +19238,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Allentown",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-casimir-st-pete-beach-fl",
@@ -18459,7 +19336,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of St. Petersburg",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-casimir-westfield-ma",
@@ -18528,7 +19411,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Springfield in Massachusetts",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "st-casimir-wilkes-barre-pa",
@@ -18606,7 +19495,7 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 2,
+   "axes_count": 3,
    "record_depth": "multi-source",
    "diocese": "Diocese of Scranton",
    "c83_rows": [],
@@ -18624,6 +19513,12 @@
     "date": "2026-07-27",
     "cite": "brain:docs/research/elip-2026/adjudications.md",
     "status": "verified-or-labeled"
+   },
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
    }
   },
   {
@@ -18679,7 +19574,13 @@
    "record_depth": "single-source",
    "diocese": null,
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": false,
+    "scope": "canadian_comparator",
+    "reason": "Canadian comparator institution; excluded from the U.S. census.",
+    "identity_support": null
+   }
   },
   {
    "slug": "st-francis-athol-ma",
@@ -18788,7 +19689,13 @@
     "cite": "data/candidates/registry-semantics-audit-2026-07-29.md",
     "status": "false-source-join-repaired"
    },
-   "caveat": "The failed independent/National Catholic attempt is tracked separately from the Roman Catholic St. Francis parish."
+   "caveat": "The failed independent/National Catholic attempt is tracked separately from the Roman Catholic St. Francis parish.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-francis-minersville-pa",
@@ -18918,7 +19825,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 5,
    "record_depth": "multi-source",
    "caveat": "The parish existed by 1909; 1895 is the selected secondary founding reading. The St. Francis church building closed effective 2020-07-01, but the reviewed source does not establish the juridic end date of the former parish.",
    "diocese": "Diocese of Allentown",
@@ -18960,6 +19867,12 @@
     "date": "2026-07-27",
     "cite": "brain:docs/research/elip-2026/adjudications.md",
     "status": "verified-or-labeled"
+   },
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
    }
   },
   {
@@ -19041,7 +19954,7 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 2,
+   "axes_count": 3,
    "record_depth": "multi-source",
    "diocese": "Diocese of Scranton",
    "c83_rows": [],
@@ -19064,6 +19977,12 @@
     "date": "2026-07-27",
     "cite": "brain:docs/research/elip-2026/adjudications.md",
     "status": "verified-or-labeled"
+   },
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
    }
   },
   {
@@ -19149,7 +20068,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Cleveland",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-gabriel-milwaukee-wi",
@@ -19249,7 +20174,13 @@
    "record_depth": "multi-source",
    "diocese": "Archdiocese of Milwaukee",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-george-albany-ny",
@@ -19334,7 +20265,13 @@
    "caveat": "Closed year 1986 source corrected to truelithuania; original mis-attributed to Draugas.",
    "diocese": "Diocese of Albany",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-george-detroit-mi",
@@ -19448,7 +20385,13 @@
    "record_depth": "multi-source",
    "diocese": "Archdiocese of Detroit",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-george-saginaw-mi",
@@ -19571,7 +20514,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Saginaw",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-george-utica-ny",
@@ -19635,7 +20584,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Syracuse",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "st-isidore-braddock-pa",
@@ -19704,7 +20659,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Pittsburgh",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "st-john-the-baptist-baltimore-md",
@@ -19787,7 +20748,13 @@
    "record_depth": "multi-source",
    "diocese": "Archdiocese of Baltimore",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-joseph-binghamton-ny",
@@ -19865,7 +20832,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Syracuse",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-joseph-donora-pa",
@@ -19934,7 +20907,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Pittsburgh",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "st-joseph-duryea-pa",
@@ -20002,7 +20981,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Scranton",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-joseph-lowell-ma",
@@ -20082,7 +21067,13 @@
    "record_depth": "multi-source",
    "diocese": "Archdiocese of Boston",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-joseph-mahanoy-city-pa",
@@ -20134,6 +21125,26 @@
      "confidence": "verified",
      "sourceUrl": "https://catholicmasstime.org/church/blessed-teresa-of-calcutta/6792/",
      "ownership": "diocese_rc"
+    },
+    {
+     "axis": "michelsonas-1961",
+     "kind": "secular-history",
+     "tier": 2,
+     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+     "pages": "21,22",
+     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
+     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
+     "ethnic_status": "Lithuanian",
+     "diocese": "unspecified (Irish bishop)",
+     "identity_note": "This passage supports the early organization of Mahanoy City's Lithuanian St. Joseph parish; it does not establish a separate St. George parish."
+    },
+    {
+     "axis": "diocese-of-allentown",
+     "kind": "official-diocesan-directory",
+     "publisher": "Diocese of Allentown",
+     "work": "Diocese of Allentown 2025-2026 directory",
+     "accessed": "2026-07-31",
+     "sourceUrl": "https://www.allentowndiocese.org/sites/default/files/2025-11/2025-2026%20Directory_0.pdf"
     }
    ],
    "years": {
@@ -20145,7 +21156,23 @@
     ],
     "closed": []
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "source identity and organization date",
+     "variants": [
+      {
+       "value": "Lithuanian organizing and fundraising underway by 1874",
+       "source": "michelsonas-1961",
+       "cite": "pp. 21-22"
+      },
+      {
+       "value": "St. Joseph parish founded 1888",
+       "source": "draugas-registry-1909-2007"
+      }
+     ],
+     "note": "The earlier reading is an organizing phase, not a second parish or a selected parish-founding year."
+    }
+   ],
    "related_sites": [],
    "events_refs": [
     {
@@ -20160,11 +21187,26 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 3,
+   "axes_count": 5,
    "record_depth": "multi-source",
    "diocese": "Diocese of Allentown",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "aliases": [
+    "george-mahanoy-city-pa"
+   ],
+   "adjudication": {
+    "date": "2026-07-31",
+    "cite": "data/candidates/registry-revision-8-source-integrity-2026-07-31.md",
+    "status": "false-identity-shell-collapsed"
+   },
+   "caveat": "The extracted St. George shell was a source-to-entity join error. Its evidence now supports St. Joseph without creating a false 1911 closure.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-joseph-st-louis-mo",
@@ -20287,7 +21329,13 @@
    "record_depth": "multi-source",
    "diocese": "Archdiocese of St. Louis",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-luke-bentleyville-pa",
@@ -20351,7 +21399,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Pittsburgh",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "st-mary-of-the-angels-brooklyn-ny",
@@ -20427,7 +21481,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Brooklyn",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-mary-wanamie-pa",
@@ -20500,7 +21560,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Scranton",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-michael-shamokin-pa",
@@ -20564,7 +21630,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Harrisburg",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "st-peter-akron-oh",
@@ -20650,7 +21722,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Cleveland",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-peter-kenosha-wi",
@@ -20756,7 +21834,13 @@
    "record_depth": "multi-source",
    "diocese": "Archdiocese of Milwaukee",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "st-vincent-de-paul-springfield-il",
@@ -20825,7 +21909,13 @@
    "record_depth": "multi-source",
    "diocese": "Diocese of Springfield in Illinois",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "single_source_attested"
+   }
   },
   {
    "slug": "transfiguration-maspeth-ny",
@@ -20959,7 +22049,7 @@
     "source": "truelithuania"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 4,
+   "axes_count": 5,
    "record_depth": "case-filed",
    "diocese": "Diocese of Brooklyn",
    "description": "Documented with extensive architectural analysis of the modernist design.",
@@ -20967,7 +22057,13 @@
    "c83_rows": [
     66
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "trinity-hartford-ct",
@@ -21095,7 +22191,13 @@
    "c83_rows": [
     70
    ],
-   "city_history": []
+   "city_history": [],
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
+   }
   },
   {
    "slug": "trinity-new-york-ny",
@@ -21110,7 +22212,7 @@
    "city": "New York",
    "state": "NY",
    "country": "US",
-   "record_type": "parish",
+   "record_type": "phase",
    "in_locked_scope": false,
    "c83_row": null,
    "sources": [
@@ -21124,6 +22226,15 @@
      "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
      "ethnic_status": "Roman Catholic",
      "diocese": "Archdiocese of New York"
+    },
+    {
+     "axis": "catholic-encyclopedia-1914",
+     "kind": "historical-reference",
+     "work": "Catholic Encyclopedia: Lithuanians in the United States",
+     "publisher": "The Catholic Encyclopedia",
+     "accessed": "2026-07-31",
+     "sourceUrl": "https://www.newadvent.org/cathen/16054a.htm",
+     "note": "Describes the first purely Lithuanian New York congregation as organized in 1885 and ceasing the following year."
     }
    ],
    "years": {
@@ -21136,7 +22247,23 @@
     ],
     "closed": []
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "organization year",
+     "variants": [
+      {
+       "value": "1884",
+       "source": "michelsonas-1961",
+       "cite": "pp. 120, 162"
+      },
+      {
+       "value": "1885",
+       "source": "catholic-encyclopedia-1914"
+      }
+     ],
+     "note": "Both sources describe the same failed early New York organizing attempt, not a lasting Holy Trinity parish."
+    }
+   ],
    "related_sites": [],
    "events_refs": [],
    "geo": {
@@ -21146,11 +22273,23 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
+   "axes_count": 2,
+   "record_depth": "multi-source",
    "diocese": "Archdiocese of New York",
    "c83_rows": [],
-   "city_history": []
+   "city_history": [],
+   "adjudication": {
+    "date": "2026-07-31",
+    "cite": "data/candidates/registry-revision-8-source-integrity-2026-07-31.md",
+    "status": "historical-attempt-reclassified"
+   },
+   "caveat": "An 1884/1885 organizing attempt that ceased within about a year. Preserved as a research phase and excluded from public institutional counts.",
+   "public_census": {
+    "included": false,
+    "scope": "historical_phase",
+    "reason": "Historical organizing phase or attempt; not counted as an institution.",
+    "identity_support": null
+   }
   },
   {
    "slug": "trinity-wilkes-barre-pa",
@@ -21243,7 +22382,7 @@
     "source": "site-geo-cache"
    },
    "congregation_class": "roman_catholic",
-   "axes_count": 2,
+   "axes_count": 3,
    "record_depth": "case-filed",
    "diocese": "Diocese of Scranton",
    "c83_rows": [
@@ -21274,56 +22413,13 @@
     "date": "2026-07-27",
     "cite": "brain:docs/research/elip-2026/adjudications.md",
     "status": "verified-or-labeled"
+   },
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "canonical_case_file"
    }
-  },
-  {
-   "slug": "vincent-pittsburgh-pa",
-   "names": {
-    "lt": null,
-    "en": "St. Vincent Parish",
-    "variants": [
-     "šv. Vincento parapija",
-     "St. Vincent Parish"
-    ]
-   },
-   "city": "Pittsburgh",
-   "state": "PA",
-   "country": "US",
-   "record_type": "parish",
-   "in_locked_scope": false,
-   "c83_row": null,
-   "sources": [
-    {
-     "axis": "michelsonas-1961",
-     "kind": "secular-history",
-     "tier": 2,
-     "work": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
-     "pages": "p.341-342",
-     "rights": "in-copyright; cite + <25-word quote only; no full-text or scan republication",
-     "lens": "secular/freethinker counterpoint; facts separated from [M-framing]",
-     "ethnic_status": "Lithuanian national parish",
-     "diocese": "None"
-    }
-   ],
-   "years": {
-    "founded": [],
-    "closed": []
-   },
-   "conflicts": [],
-   "related_sites": [],
-   "events_refs": [],
-   "geo": {
-    "lat": 40.4406968,
-    "lon": -80.0025666,
-    "precision": "city-centroid",
-    "source": "site-geo-cache"
-   },
-   "congregation_class": "roman_catholic",
-   "axes_count": 1,
-   "record_depth": "single-source",
-   "diocese": "Diocese of Pittsburgh",
-   "c83_rows": [],
-   "city_history": []
   },
   {
    "slug": "zion-lithuanian-lutheran-oak-lawn-il",
@@ -21348,6 +22444,23 @@
      "confidence": "high",
      "currentStatus": "standing",
      "ownership": "other_self_owned"
+    },
+    {
+     "axis": "lcms-northern-illinois",
+     "kind": "official-denominational-directory",
+     "publisher": "Northern Illinois District, Lutheran Church-Missouri Synod",
+     "work": "Congregations directory: Zion Lutheran Church, Oak Lawn",
+     "accessed": "2026-07-31",
+     "sourceUrl": "https://www.nidlcms.org/churches/"
+    },
+    {
+     "axis": "zion-oak-lawn-constitution",
+     "kind": "official-congregational-record",
+     "publisher": "Zion Lutheran Church, Oak Lawn",
+     "work": "Constitution of Zion Lutheran Church",
+     "accessed": "2026-07-31",
+     "sourceUrl": "https://nidlcms.org/wp-content/uploads/2017/03/Zion-Oak-Lawn-Constitution-2017-06.pdf",
+     "note": "The congregation identifies its December 4, 1910 founding by Lithuanian immigrants."
     }
    ],
    "years": {
@@ -21369,8 +22482,8 @@
     "source": "truelithuania"
    },
    "congregation_class": "non_catholic_christian",
-   "axes_count": 1,
-   "record_depth": "single-source",
+   "axes_count": 3,
+   "record_depth": "multi-source",
    "name_variants": [
     "Ziono liuteronų",
     "Zion Lutheran Church, Chicago",
@@ -21380,7 +22493,19 @@
     "Chicago (Bridgeport, later Oak Lawn from 1974)"
    ],
    "diocese": null,
-   "c83_rows": []
+   "c83_rows": [],
+   "adjudication": {
+    "date": "2026-07-31",
+    "cite": "data/candidates/registry-revision-8-source-integrity-2026-07-31.md",
+    "status": "current-status-source-repaired"
+   },
+   "caveat": "The official LCMS district directory confirms an active Oak Lawn congregation led by Rev. Dr. Valdas Ausra; its constitution confirms Lithuanian founding and continuing identity.",
+   "public_census": {
+    "included": true,
+    "scope": "public_us_institution",
+    "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
+    "identity_support": "multi_source_corroborated"
+   }
   },
   {
    "slug": "national-catholic-attempt-athol-ma",
@@ -21436,12 +22561,18 @@
     "status": "historical-attempt-separated"
    },
    "axes_count": 1,
-   "record_depth": "single-source"
+   "record_depth": "single-source",
+   "public_census": {
+    "included": false,
+    "scope": "historical_phase",
+    "reason": "Historical organizing phase or attempt; not counted as an institution.",
+    "identity_support": null
+   }
   }
  ],
  "registryRevision": {
-  "version": 7,
-  "date": "2026-07-30",
+  "version": 8,
+  "date": "2026-07-31",
   "changelog": [
    "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
    "Collapsed adjudicated same-entity rows while preserving all 83 historical case-file row references in c83_rows.",
@@ -21461,8 +22592,16 @@
    "Separated public parishes, missions, and congregations from historical phases, unresolved leads, and contextual mentions so every site count and map uses the same institutional scope.",
    "Cleared Roman Catholic geographic dioceses from all non-Roman records and corrected source-defined independent, National Catholic, Protestant, mission, lead, and context classifications.",
    "Normalized Waterbury St. Joseph to the current Archdiocese of Hartford governance label so By Diocese cannot split one jurisdiction into two buckets.",
-   "Corrected Tamaqua Ss. Peter and Paul from the 1927 church-school construction year to the official 1911 parish founding, updated the successor-parish source URL, and recorded its 2015 formation into St. John XXIII."
+   "Corrected Tamaqua Ss. Peter and Paul from the 1927 church-school construction year to the official 1911 parish founding, updated the successor-parish source URL, and recorded its 2015 formation into St. John XXIII.",
+   "Collapsed five residual duplicate or false-identity shells into Brooklyn Annunciation, East Chicago St. Francis, Mahanoy City St. Joseph, Custer St. Mary, and Esplen St. Vincent de Paul without losing source evidence or retired routes.",
+   "Reclassified New York Holy Trinity as a short-lived 1884/1885 organizing phase so it cannot inflate public institutional counts.",
+   "Reclassified the Baltimore independent-parish attempt as a phase, the Chicago Jonistai order/seminary as context, and the unsupported Chester shell as a lead; none is an institution in the public U.S. census.",
+   "Corrected Brooklyn Holy Cross from Roman Catholic to independent Catholic on its sole source and marked the two Argentine institutions with an explicit international country scope.",
+   "Assigned every research record an explicit public-census inclusion status and reason; public identities are separately labeled canonical case-filed, multi-source corroborated, or single-source attested using only qualifying located evidence.",
+   "Added direct official source links for Zion Oak Lawn and St. Paul Naugatuck; confirmed Zion as an active Lithuanian Lutheran congregation while leaving Naugatuck's current Lithuanian identity unresolved.",
+   "Normalized Philadelphia St. Anthony, Custer St. Mary, and Hazleton Ss. Peter and Paul to their source-supported jurisdictions.",
+   "Recalculated every source-axis and record-depth label and established public source-ledger and release-count guards."
   ],
-  "contentHash": "86476fcfb7545b4b37e1d324684c61473e0518ce3bcb87ee3616b149fa507dfe"
+  "contentHash": "e0c76d3e89388fbe73096f9da405a9e3ee971cf94d444ca700df964be5dbe87c"
  }
 }

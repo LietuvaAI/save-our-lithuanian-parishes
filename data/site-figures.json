@@ -1,51 +1,55 @@
 {
   "generatedFrom": {
-    "registryRevision": 7,
-    "registryDate": "2026-07-30",
+    "registryRevision": 8,
+    "registryDate": "2026-07-31",
     "networkChecked": "2026-07-29"
   },
   "researchRegistry": {
-    "records": 197,
-    "profiles": 197
+    "records": 192,
+    "profiles": 192
   },
   "publicUS": {
-    "records": 168,
-    "romanCatholicParishes": 142,
+    "records": 159,
+    "independentlySupported": 133,
+    "canonicalCaseFiled": 82,
+    "multiSourceCorroborated": 51,
+    "singleSourceAttested": 26,
+    "romanCatholicParishes": 134,
     "romanCatholicMissions": 4,
-    "romanCatholicInstitutions": 146,
-    "nationalIndependentCatholicCommunities": 14,
+    "romanCatholicInstitutions": 138,
+    "nationalIndependentCatholicCommunities": 13,
     "nationalIndependentCatholicParishes": 12,
-    "nationalIndependentCatholicCongregations": 2,
+    "nationalIndependentCatholicCongregations": 1,
     "protestantCommunities": 8,
     "protestantParishes": 4,
     "protestantCongregations": 4,
     "status": {
-      "active_parish": 9,
-      "closed": 104,
+      "active_parish": 10,
+      "closed": 101,
       "mass_continues": 5,
       "transferred": 23,
       "unresolved": 4,
-      "unverified": 23
+      "unverified": 16
     }
   },
   "history": {
-    "parishes": 142,
+    "parishes": 134,
     "status": {
       "active_parish": 7,
-      "closed": 92,
+      "closed": 89,
       "mass_continues": 5,
       "transferred": 21,
       "unresolved": 4,
-      "unverified": 13
+      "unverified": 8
     },
-    "closed": 92,
-    "closedWithDatedYear": 83,
+    "closed": 89,
+    "closedWithDatedYear": 80,
     "closedSince1990": 57,
     "closedSince2020": 5,
     "topClosureDioceses": [
       {
         "diocese": "Scranton",
-        "closed": 12
+        "closed": 13
       },
       {
         "diocese": "Chicago",

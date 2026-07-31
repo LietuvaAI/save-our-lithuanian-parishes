@@ -4,7 +4,7 @@
 // 2. If registry content changed from HEAD (working tree) or HEAD^ (committed
 //    change), the integer revision must increase. No silent mutation.
 import { createHash } from "node:crypto";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 
 const path = "data/registry-unified.json";
@@ -79,6 +79,33 @@ if (
   throw new Error(
     `Registry revision history ends at Revision ${latestHistory.version} (${latestHistory.date}), but the live registry is Revision ${revision.version} (${revision.date}).`,
   );
+}
+const publicUSRecords = registry.parishes.filter(
+  (record) => record.public_census?.included,
+);
+const usRomanCatholicParishes = publicUSRecords.filter(
+  (record) =>
+    record.record_type === "parish" &&
+    record.congregation_class === "roman_catholic",
+);
+const releaseCounts = {
+  registryRecords: registry.parishes.length,
+  publicUSRecords: publicUSRecords.length,
+  usRomanCatholicParishes: usRomanCatholicParishes.length,
+};
+for (const [field, expected] of Object.entries(releaseCounts)) {
+  if (latestHistory[field] !== expected) {
+    throw new Error(
+      `Registry Revision ${revision.version} ledger ${field}=${latestHistory[field]}, expected ${expected}.`,
+    );
+  }
+}
+for (const evidencePath of latestHistory.evidence ?? []) {
+  if (!existsSync(evidencePath)) {
+    throw new Error(
+      `Registry Revision ${revision.version} evidence file is missing: ${evidencePath}`,
+    );
+  }
 }
 const actualHash = digest(registry);
 if (revision.contentHash !== actualHash) {

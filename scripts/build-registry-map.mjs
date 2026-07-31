@@ -51,11 +51,10 @@ const projection = geoConicEqualArea()
   .scale(1300)
   .translate([487.5, 305]);
 
-// Non-North-American records (e.g. Argentina entries mis-coded state "AR")
-// stay out of the map and site counts entirely — the record's scope is the
-// U.S. with Canada as the comparator exception (Vilija 2026-07-21).
+// The registry map shows U.S. institutions plus Canadian comparators. Other
+// international records and research-only object types stay out explicitly.
 function isNorthAmerica(rec) {
-  return !/buenos aires|argentin|rosario/i.test(rec.city ?? "");
+  return rec.country === "US" || rec.country === "CA";
 }
 
 const AXIS_LABEL = {

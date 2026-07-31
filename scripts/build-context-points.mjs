@@ -71,10 +71,7 @@ const isPublicRecord = (record) =>
 const points = [];
 let skipped = 0;
 for (const r of registry.parishes) {
-  if (!isPublicRecord(r)) continue;
-  if (r.country === "CA") continue;
-  if (/buenos aires|argentin|rosario/i.test(r.city ?? "")) continue;
-  if ((r.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? ""))) continue;
+  if (!isPublicRecord(r) || !r.public_census?.included) continue;
 
   const lib = r.c83_row != null ? libByC83Row.get(r.c83_row) : undefined;
   const libOk = !!(lib && lib.city === r.city);

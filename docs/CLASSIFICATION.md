@@ -121,13 +121,27 @@ Vilija review. `scripts/verify-canonical-identities.mjs` checks the core record,
 registry, and campaign layer against the independent register on every data
 build.
 
-Identity Revision 2 and Registry Revision 5 record the completed release audit:
-all 83 frozen U.S. source rows have source-backed case files and resolve to 82
-canonical identities. Four joins were corrected (Ansonia, Newark, Collinsville,
-and Kansas City), and Westville's stale classifier pointer was repaired.
-`scripts/verify-canonical-release.mjs` now enforces that full chain on every
-data build. The audit ledger lives in
-`data/candidates/canonical-identity-release-audit-2026-07-28.md`.
+Identity Revision 2 protects all 83 frozen U.S. source rows across 82 canonical
+identities. Registry Revision 8 is the current publication release: it retains
+those locks while finishing the surrounding identity, scope, and source-ledger
+audit. `scripts/verify-canonical-release.mjs` enforces the protected core;
+`scripts/verify-registry-semantics.mjs` and
+`scripts/verify-public-source-integrity.mjs` enforce the broader registry. The
+identity audit and current revision evidence live in
+`data/candidates/canonical-identity-release-audit-2026-07-28.md` and
+`data/candidates/registry-revision-8-source-integrity-2026-07-31.md`.
+
+### Public institution census
+
+Institutional identity confidence and present-day status are separate axes.
+`data/public-institution-ledger.json` is the sole enumeration behind the public
+U.S. count. Every research record carries an explicit census scope and reason.
+Included identities are labeled `canonical_case_file`,
+`multi_source_corroborated`, or `single_source_attested`; the last tier remains
+visible but must never be described as independently verified. Historical
+attempts, leads, organizations or sites used only as context, Canadian
+comparators, and other international institutions are excluded without
+deleting their evidence.
 
 ## Both directions of claim are guarded (2026-07-26)
 
