@@ -189,24 +189,36 @@ export default function DioceseClosureRanking({
         </ExportableSvg>
       </div>
 
-      <div className="mt-7 divide-y divide-rule border-y border-rule">
+      <div className="mt-7 grid gap-x-6 border-y border-rule sm:grid-cols-2">
         {ranked.map((diocese, index) => {
           const closedParishes = diocese.parishes.filter(
             (parish) => toGroup(parish.endState) === "closed",
           );
           return (
-            <details key={diocese.name} id={anchorFor(diocese.name)}>
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-3 font-medium">
-                <span>
-                  {index + 1}. {diocese.name}
+            <details
+              key={diocese.name}
+              id={anchorFor(diocese.name)}
+              className="group border-b border-rule"
+            >
+              <summary className="grid min-h-10 cursor-pointer list-none grid-cols-[1.5rem_minmax(0,1fr)_auto_1rem] items-center gap-2 px-1 py-2 text-xs hover:bg-band">
+                <span className="text-[10px] text-muted">{index + 1}</span>
+                <span className="min-w-0 font-medium">
+                  {diocese.shortName}
                 </span>
-                <span className="font-serif text-2xl text-accent">
+                <span className="font-serif text-base font-semibold text-accent">
                   {diocese.formalClosed}
                 </span>
+                <span
+                  className="text-center text-sm leading-none text-muted"
+                  aria-hidden
+                >
+                  <span className="group-open:hidden">+</span>
+                  <span className="hidden group-open:inline">−</span>
+                </span>
               </summary>
-              <div className="grid gap-x-6 border-t border-rule py-3 sm:grid-cols-2">
+              <div className="border-t border-rule bg-band px-2 py-2">
                 {closedParishes.map((parish) => (
-                  <p key={parish.slug} className="py-1 text-sm">
+                  <p key={parish.slug} className="py-1 text-[11px] leading-snug">
                     {parish.profileHref ? (
                       <Link
                         href={parish.profileHref}
