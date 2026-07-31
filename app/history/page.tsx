@@ -322,12 +322,6 @@ export default function HistoryPage() {
                 priority
                 unoptimized
               />
-              <div className="absolute bottom-3 right-3 w-40 max-w-[52%] rounded border border-rule bg-background/95 p-2 shadow-sm">
-                <FirstParishLocatorMap />
-                <p className="mt-1 text-[10px] font-semibold leading-tight">
-                  Shenandoah, Pennsylvania
-                </p>
-              </div>
             </div>
             <figcaption className="mt-2 text-xs leading-relaxed text-muted">
               <a
@@ -348,6 +342,17 @@ export default function HistoryPage() {
             <h2 className="mt-1 font-serif text-2xl font-semibold leading-tight sm:text-3xl">
               The first Lithuanian parish in America
             </h2>
+            <div className="mt-4 grid grid-cols-[8rem_minmax(0,1fr)] items-center gap-4 border-y border-rule py-3">
+              <FirstParishLocatorMap />
+              <div>
+                <p className="text-xs font-semibold uppercase text-muted">
+                  Where the record begins
+                </p>
+                <p className="mt-1 font-serif text-lg font-semibold">
+                  Shenandoah, Pennsylvania
+                </p>
+              </div>
+            </div>
             <p className="mt-4 leading-relaxed">
               St. George&rsquo;s (Šv. Jurgio) in Shenandoah, Pennsylvania
               &mdash; organized by Father Andrius Strupinskas, SJ, a Jesuit
