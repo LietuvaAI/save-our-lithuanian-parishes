@@ -30,6 +30,11 @@ const orderedMarkers = [
     source: pageSource,
   },
   {
+    id: "place-and-jurisdiction",
+    marker: 'id="place-and-jurisdiction"',
+    source: pageSource,
+  },
+  {
     id: "profile-history",
     marker: "<ParishPublishedRecord",
     source: pageSource,
@@ -47,11 +52,6 @@ const orderedMarkers = [
   {
     id: "present-condition",
     marker: 'id="present-condition"',
-    source: pageSource,
-  },
-  {
-    id: "place-and-jurisdiction",
-    marker: 'id="place-and-jurisdiction"',
     source: pageSource,
   },
   {

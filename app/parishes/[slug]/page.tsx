@@ -873,6 +873,58 @@ export default async function ParishPage({
         </div>
       </div>
 
+      <section
+        id="place-and-jurisdiction"
+        className="mt-10"
+        aria-labelledby="place-and-jurisdiction-heading"
+      >
+        <h2
+          id="place-and-jurisdiction-heading"
+          className="font-serif text-2xl font-semibold"
+        >
+          The community and its place
+        </h2>
+        <p className="mt-2 text-sm text-muted">
+          {entry.city}
+          {entry.state ? `, ${entry.state}` : ""}
+          {entry.diocese ? ` · ${entry.diocese}` : ""}
+        </p>
+        {hasMap ? (
+          <div className="mt-4 max-w-2xl">
+            <ParishContextMap
+              slug={profile.slug}
+              dioceseLabel={entry.diocese ?? undefined}
+            />
+          </div>
+        ) : (
+          <dl className="mt-4 grid gap-x-8 gap-y-4 border-y border-rule py-5 text-sm sm:grid-cols-3">
+            <div>
+              <dt className="text-xs uppercase tracking-wide text-muted">
+                Place
+              </dt>
+              <dd className="mt-1">
+                {entry.city}
+                {entry.state ? `, ${entry.state}` : ""}
+              </dd>
+            </div>
+            <div>
+              <dt className="text-xs uppercase tracking-wide text-muted">
+                Country
+              </dt>
+              <dd className="mt-1">
+                {entry.country === "CA" ? "Canada" : "United States"}
+              </dd>
+            </div>
+            <div>
+              <dt className="text-xs uppercase tracking-wide text-muted">
+                Jurisdiction
+              </dt>
+              <dd className="mt-1">{entry.diocese ?? "Not established"}</dd>
+            </div>
+          </dl>
+        )}
+      </section>
+
       <ParishPublishedRecord
         profile={profile}
         overviewText={researchOnly ? undefined : `${dek} ${rest ?? ""}`}
@@ -1136,58 +1188,6 @@ export default async function ParishPage({
             favorable restructuring decision did not guarantee long-term
             security.
           </p>
-        )}
-      </section>
-
-      <section
-        id="place-and-jurisdiction"
-        className="mt-10"
-        aria-labelledby="place-and-jurisdiction-heading"
-      >
-        <h2
-          id="place-and-jurisdiction-heading"
-          className="font-serif text-2xl font-semibold"
-        >
-          The community and its place
-        </h2>
-        <p className="mt-2 text-sm text-muted">
-          {entry.city}
-          {entry.state ? `, ${entry.state}` : ""}
-          {entry.diocese ? ` · ${entry.diocese}` : ""}
-        </p>
-        {hasMap ? (
-          <div className="mt-4 max-w-2xl">
-            <ParishContextMap
-              slug={profile.slug}
-              dioceseLabel={entry.diocese ?? undefined}
-            />
-          </div>
-        ) : (
-          <dl className="mt-4 grid gap-x-8 gap-y-4 border-y border-rule py-5 text-sm sm:grid-cols-3">
-            <div>
-              <dt className="text-xs uppercase tracking-wide text-muted">
-                Place
-              </dt>
-              <dd className="mt-1">
-                {entry.city}
-                {entry.state ? `, ${entry.state}` : ""}
-              </dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-wide text-muted">
-                Country
-              </dt>
-              <dd className="mt-1">
-                {entry.country === "CA" ? "Canada" : "United States"}
-              </dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-wide text-muted">
-                Jurisdiction
-              </dt>
-              <dd className="mt-1">{entry.diocese ?? "Not established"}</dd>
-            </div>
-          </dl>
         )}
       </section>
 
