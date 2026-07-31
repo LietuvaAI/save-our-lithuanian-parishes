@@ -1,20 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AboutNav from "@/components/AboutNav";
-import registry from "@/data/registry-unified.json";
-import {
-  isPublicRecord,
-  isSettlement,
-  isUS,
-  type RegParish,
-} from "@/lib/registry-scope";
+import revisionHistory from "@/data/registry-revisions.json";
 
-const REGISTRY_TOTAL = (registry as { parishes: RegParish[] }).parishes.filter(
-  (p) =>
-    isPublicRecord(p) &&
-    !isSettlement(p) &&
-    (p.country === "CA" || isUS(p)),
-).length;
+const REGISTRY_REVISIONS = revisionHistory.revisions.slice().reverse();
 
 export const metadata: Metadata = {
   title: "About the Data",
@@ -58,43 +47,20 @@ export default function AboutTheDataPage() {
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          2. How a parish becomes part of the record
+          2. Evidence and adjudication
         </h2>
         <p className="mt-2 leading-relaxed">
-          Each deep dive is completed in two evidence passes, followed by a
-          separate decision about what the sources actually establish.
+          Parish records are established through the synthesis of archival,
+          institutional, legal, and contemporary evidence. Claims are evaluated
+          for identity, chronology, continuity, governance, and present status.
+          The registry preserves the distinction between established findings
+          and secondary, provisional, conflicting, or unresolved readings.
         </p>
-        <div className="mt-5 border-y border-rule divide-y divide-rule">
-          <div className="py-4 sm:grid sm:grid-cols-[9rem_1fr] sm:gap-5">
-            <h3 className="font-semibold">Archive pass</h3>
-            <p className="mt-1 sm:mt-0 leading-relaxed text-muted">
-              The full <em>Draugas</em> run and page-cited parish histories
-              reconstruct names, identities, events, and timelines.
-            </p>
-          </div>
-          <div className="py-4 sm:grid sm:grid-cols-[9rem_1fr] sm:gap-5">
-            <h3 className="font-semibold">Current record</h3>
-            <p className="mt-1 sm:mt-0 leading-relaxed text-muted">
-              Official parish and diocesan records, legal and property
-              documents, current schedules, and reliable local reporting
-              establish the present congregation, governance, ownership, and
-              use of the building.
-            </p>
-          </div>
-          <div className="py-4 sm:grid sm:grid-cols-[9rem_1fr] sm:gap-5">
-            <h3 className="font-semibold">Adjudication</h3>
-            <p className="mt-1 sm:mt-0 leading-relaxed text-muted">
-              The two evidence packets are compared field by field. Established
-              facts enter the registry; secondary, provisional, conflicting,
-              and unresolved readings remain labeled as such.
-            </p>
-          </div>
-        </div>
         <p className="mt-2 leading-relaxed">
-          All <strong>83 source rows</strong> in the original group,
-          representing <strong>82 canonical parish identities</strong>, now
-          have case files. Additional registry records are being researched in
-          the same way, in bounded tranches.
+          The initial canonical corpus of{" "}
+          <strong>82 parish identities</strong> now has complete case files.
+          The remaining registry is being reviewed in bounded tranches under
+          the same standard.
         </p>
       </section>
 
@@ -145,24 +111,48 @@ export default function AboutTheDataPage() {
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          5. The published record — one registry
+          5. The published registry
         </h2>
         <p className="mt-2 leading-relaxed">
-          The registry powers the map, counts, and parish pages. It currently
-          brings together{" "}
-          <strong>{REGISTRY_TOTAL} parishes, missions, and congregations</strong>{" "}
-          across the U.S. and Canada. Historical attempts, unresolved archive
-          leads, and context-only references remain in the research registry
-          but are not counted as institutions.
+          A single registry governs the map, aggregate figures, and parish
+          profiles. It distinguishes documented institutions from provisional
+          leads and contextual references, which remain in the research record
+          without entering public institutional totals.
         </p>
         <p className="mt-2 leading-relaxed">
-          The registry tracks whether an entry has a deep case file,
-          multiple independent sources, or a single source. Parish profiles
-          expose their evidence ledgers directly. As new case files are
-          completed, the registry and site figures update automatically;
-          protected counts cannot publish if they drift from the parish
-          records.
+          Each published record carries its evidentiary status and source
+          ledger. Site figures are derived from the registry and validated
+          against it before publication.
         </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="font-serif text-2xl font-semibold">
+          Registry revision history
+        </h2>
+        <p className="mt-2 leading-relaxed">
+          The registry changes through dated, numbered releases. This is the
+          record of what changed and when.
+        </p>
+        <div className="mt-4 divide-y divide-rule border-y border-rule">
+          {REGISTRY_REVISIONS.map((revision) => (
+            <div
+              key={revision.version}
+              className="py-4 sm:grid sm:grid-cols-[8rem_7rem_minmax(0,1fr)] sm:gap-4"
+            >
+              <p className="font-semibold">Revision {revision.version}</p>
+              <p className="mt-1 text-sm text-muted sm:mt-0">
+                <time dateTime={revision.date}>{revision.date}</time>
+              </p>
+              <div className="mt-2 sm:mt-0">
+                <p className="leading-relaxed">{revision.summary}</p>
+                <p className="mt-1 text-xs text-muted">
+                  {revision.registryRecords} registry records
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="mt-10">
@@ -232,7 +222,7 @@ export default function AboutTheDataPage() {
         </p>
       </section>
 
-      <p className="mt-10 text-sm text-muted border-t border-rule pt-4">
+      <p className="mt-10 border-t border-rule pt-4 text-sm text-muted">
         The complete evidence ecosystem and the role of each source:{" "}
         <Link
           href="/about/sources-and-archives"
@@ -244,18 +234,7 @@ export default function AboutTheDataPage() {
         <Link href="/legal" className="underline hover:text-foreground">
           Legal, attribution &amp; data use
         </Link>
-        . See also:{" "}
-        <Link href="/record" className="underline hover:text-foreground">
-          the record
-        </Link>{" "}
-        ·{" "}
-        <Link href="/about" className="underline hover:text-foreground">
-          about the project
-        </Link>{" "}
-        ·{" "}
-        <Link href="/reversals" className="underline hover:text-foreground">
-          where Rome said no
-        </Link>
+        .
       </p>
     </article>
   );

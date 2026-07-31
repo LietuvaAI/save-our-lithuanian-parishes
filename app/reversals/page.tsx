@@ -270,15 +270,7 @@ export default function ReversalsPage() {
       <p className="mt-10 text-sm text-muted border-t border-rule pt-4">
         Compiled {db.generated} from the parish-preservation research record;
         every case cites its sources above. This page summarizes public
-        documents and reporting and is not canonical or legal advice. See also:{" "}
-        <Link href="/what-canon-law-says" className="underline hover:text-foreground">
-          what canon law actually says
-        </Link>{" "}
-        ·{" "}
-        <Link href="/start-here" className="underline hover:text-foreground">
-          facing a closure? Start here
-        </Link>
-        .
+        documents and reporting and is not canonical or legal advice.
       </p>
     </article>
   );

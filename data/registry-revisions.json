@@ -1,0 +1,68 @@
+{
+  "_comment": "Dated release ledger for the canonical parish registry. Add one entry whenever registryRevision.version changes; scripts/verify-registry-revision.mjs enforces continuity and agreement with the live registry.",
+  "revisions": [
+    {
+      "version": 1,
+      "date": "2026-07-27",
+      "registryRecords": 214,
+      "summary": "Adopted the merged site registry as canon, consolidated adjudicated duplicate rows, excluded established non-parishes, and preserved all frozen C83 source-row lineage.",
+      "evidence": [
+        "data/candidates/registry-revision-1-merge-report.json"
+      ]
+    },
+    {
+      "version": 2,
+      "date": "2026-07-27",
+      "registryRecords": 214,
+      "summary": "Applied the ELIP adjudications: corrected Scranton and Wilkes-Barre closure identities and dates, resolved Nanticoke and Hanover, and separated Minersville's building closure from its unresolved parish end.",
+      "evidence": [
+        "data/candidates/registry-revision-2-elip-report.md"
+      ]
+    },
+    {
+      "version": 3,
+      "date": "2026-07-28",
+      "registryRecords": 211,
+      "summary": "Applied the first two-pass parish-canon tranche: restored Waterbury All Saints, collapsed Worcester and Wilkes-Barre duplicate rows, treated Providence as a historical phase, and separated the DuBois entities.",
+      "evidence": [
+        "data/candidates/registry-revision-3-tranche1-report.md"
+      ]
+    },
+    {
+      "version": 4,
+      "date": "2026-07-28",
+      "registryRecords": 210,
+      "summary": "Moved the unnamed 1902 Waterbury lead out of the public registry while protecting the distinct St. Joseph campaign and historical All Saints identities.",
+      "evidence": [
+        "data/candidates/registry-revision-4-waterbury-report.md"
+      ]
+    },
+    {
+      "version": 5,
+      "date": "2026-07-28",
+      "registryRecords": 205,
+      "summary": "Release-audited all 82 canonical C83 identities, repaired the Ansonia, Newark, Collinsville, Kansas City, and Westville joins, and collapsed duplicate shells without losing their sources or aliases.",
+      "evidence": [
+        "data/candidates/canonical-identity-release-audit-2026-07-28.md"
+      ]
+    },
+    {
+      "version": 6,
+      "date": "2026-07-29",
+      "registryRecords": 197,
+      "summary": "Completed the registry-semantics audit: consolidated same-entity shells, separated public institutions from phases, leads, and context records, and removed Roman Catholic governance fields from non-Roman records.",
+      "evidence": [
+        "data/candidates/registry-semantics-audit-2026-07-29.md"
+      ]
+    },
+    {
+      "version": 7,
+      "date": "2026-07-30",
+      "registryRecords": 197,
+      "summary": "Corrected Tamaqua Ss. Peter and Paul's parish founding year to 1911, updated its successor-parish source, and recorded its 2015 formation into St. John XXIII.",
+      "evidence": [
+        "data/registry-unified.json"
+      ]
+    }
+  ]
+}

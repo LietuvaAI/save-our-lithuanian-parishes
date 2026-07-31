@@ -101,11 +101,15 @@ function draugasSource(
   detail?: string,
   sourceUrl?: string,
 ): SourceDraft {
+  const issueUrl =
+    isAbsoluteWebUrl(sourceUrl) && sourceUrl.includes(date)
+      ? sourceUrl
+      : draugasCitationUrl(date);
   return {
     group: "newspaper",
     title,
     citation: `Draugas, ${date}${detail ? `, ${detail}` : ""}`,
-    url: isAbsoluteWebUrl(sourceUrl) ? sourceUrl : draugasCitationUrl(date),
+    url: issueUrl,
     contexts: [context],
   };
 }

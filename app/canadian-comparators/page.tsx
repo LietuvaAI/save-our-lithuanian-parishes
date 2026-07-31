@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import registry from "@/data/registry-unified.json";
-import ParishViewList from "@/components/ParishViewList";
 import { EndStatePill } from "@/components/EndStatePill";
 import {
   comparatorParishes,
@@ -21,12 +20,6 @@ const canadianParishes = [...comparatorParishes].sort(
     a.state.localeCompare(b.state) ||
     a.city.localeCompare(b.city) ||
     a.nameLt.localeCompare(b.nameLt),
-);
-const quebecParishes = canadianParishes.filter(
-  (parish) => parish.state === "QC",
-);
-const ontarioParishes = canadianParishes.filter(
-  (parish) => parish.state === "ON",
 );
 const activeParishes = canadianParishes.filter(
   (parish) => parish.lithuanianIdentity === "active_parish",
@@ -115,57 +108,6 @@ export default function CanadianComparatorsPage() {
         </p>
       </section>
 
-      <section className="mt-12">
-        <h2 className="font-serif text-2xl font-semibold">
-          Quebec · {quebecParishes.length}
-        </h2>
-        <p className="mt-2 leading-relaxed">
-          The two Montreal records are classified as active Lithuanian parishes
-          under Quebec civil-law parish ownership. Both retain regular
-          Lithuanian Masses and share a Lithuanian chaplain. Their relevance is
-          structural: the legal and governance setting around parish property
-          differs from the U.S. diocesan-ownership model.
-        </p>
-        <ParishViewList
-          parishes={quebecParishes}
-          ownershipLabel={canadianOwnershipLabel}
-        />
-      </section>
-
-      <section className="mt-12">
-        <h2 className="font-serif text-2xl font-semibold">
-          Ontario · {ontarioParishes.length}
-        </h2>
-        <p className="mt-2 leading-relaxed">
-          The Ontario record prevents the comparison from becoming a simple
-          survival claim. St. Casimir in Delhi closed in 2020 after 61 years,
-          but the community described the ending as its own decision. The
-          contrast is therefore about who governs the outcome, not whether
-          every Canadian parish survives.
-        </p>
-        <ParishViewList
-          parishes={ontarioParishes}
-          ownershipLabel={canadianOwnershipLabel}
-        />
-      </section>
-
-      <section className="mt-12 border-l-4 border-rule py-1 pl-4">
-        <h2 className="font-serif text-xl font-semibold">
-          The comparison
-        </h2>
-        <p className="mt-2 text-sm leading-relaxed text-muted">
-          These records do not claim that every Canadian parish survives.
-          They show communities acting within a different property and
-          governance structure.
-        </p>
-      </section>
-
-      <p className="mt-12 border-t border-rule pt-5 text-sm text-muted">
-        Canadian comparators are excluded from every U.S. headline figure.{" "}
-        <Link href="/record" className="underline hover:text-foreground">
-          See the full U.S. record
-        </Link>
-      </p>
     </article>
   );
 }

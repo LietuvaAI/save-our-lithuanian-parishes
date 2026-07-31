@@ -9,7 +9,6 @@ import type { FateKey } from "@/components/ParishThreads";
 import { scopedParishes, usRegistryParishes } from "@/lib/registry-scope";
 import {
   toGroup,
-  isAlive,
   isLoss,
 } from "@/lib/end-state";
 import { BUILDING_FATE_LABEL, type BuildingFate, parishes as libParishes } from "@/lib/parishes";
@@ -202,9 +201,9 @@ function buildData() {
   const medianLifespan = lifespans.length
     ? lifespans[Math.floor(lifespans.length / 2)]
     : null;
-  const oldestAlive = all
-    .filter((p) => isAlive(p.endState) && !p.closed && p.founded)
-    .sort((a, b) => a.founded! - b.founded!)[0] ?? null;
+  const closureShareSince1990 = lost
+    ? Math.round((closedSince1990 / lost) * 100)
+    : 0;
 
   return {
     dated,
@@ -222,7 +221,7 @@ function buildData() {
       closedSince1990,
       closedSince2020,
       medianLifespan,
-      oldestAlive,
+      closureShareSince1990,
     },
   };
 }
@@ -322,12 +321,6 @@ export default function HistoryPage() {
                 priority
                 unoptimized
               />
-              <div className="absolute bottom-3 right-3 w-40 max-w-[52%] rounded border border-rule bg-background/95 p-2 shadow-sm">
-                <FirstParishLocatorMap />
-                <p className="mt-1 text-[10px] font-semibold leading-tight">
-                  Shenandoah, Pennsylvania
-                </p>
-              </div>
             </div>
             <figcaption className="mt-2 text-xs leading-relaxed text-muted">
               <a
@@ -348,6 +341,17 @@ export default function HistoryPage() {
             <h2 className="mt-1 font-serif text-2xl font-semibold leading-tight sm:text-3xl">
               The first Lithuanian parish in America
             </h2>
+            <div className="mt-4 grid grid-cols-[8rem_minmax(0,1fr)] items-center gap-4 border-y border-rule py-3">
+              <FirstParishLocatorMap />
+              <div>
+                <p className="text-xs font-semibold uppercase text-muted">
+                  Where the record begins
+                </p>
+                <p className="mt-1 font-serif text-lg font-semibold">
+                  Shenandoah, Pennsylvania
+                </p>
+              </div>
+            </div>
             <p className="mt-4 leading-relaxed">
               St. George&rsquo;s (Šv. Jurgio) in Shenandoah, Pennsylvania
               &mdash; organized by Father Andrius Strupinskas, SJ, a Jesuit
@@ -487,7 +491,7 @@ export default function HistoryPage() {
           <TimelineChart rows={dated} undated={undated} />
         </div>
 
-        <div className="mt-6 grid border-y border-rule sm:grid-cols-3 sm:divide-x sm:divide-rule">
+        <div className="mt-6 grid border-y border-rule sm:grid-cols-2 sm:divide-x sm:divide-rule">
           {narrative.medianLifespan != null && (
             <div className="border-b border-rule px-3 py-4 sm:border-b-0">
               <p
@@ -501,38 +505,15 @@ export default function HistoryPage() {
               </p>
             </div>
           )}
-          {narrative.oldestAlive && (
-            <div className="border-b border-rule px-3 py-4 sm:border-b-0">
-              <p
-                className="font-serif text-3xl font-semibold"
-                style={{ color: "var(--es-active)" }}
-              >
-                {narrative.oldestAlive.founded}
-              </p>
-              <p className="mt-1 text-xs leading-snug text-muted">
-                oldest active parish:{" "}
-                {narrative.oldestAlive.profileHref ? (
-                  <Link
-                    href={narrative.oldestAlive.profileHref}
-                    className="font-medium text-foreground underline hover:text-accent"
-                  >
-                    {narrative.oldestAlive.name}
-                  </Link>
-                ) : (
-                  <span className="font-medium text-foreground">
-                    {narrative.oldestAlive.name}
-                  </span>
-                )}
-                , {narrative.oldestAlive.city}, {narrative.oldestAlive.state}
-              </p>
-            </div>
-          )}
           <div className="px-3 py-4">
-            <p className="font-serif text-3xl font-semibold">
-              {undated.length}
+            <p
+              className="font-serif text-3xl font-semibold"
+              style={{ color: "var(--es-closed)" }}
+            >
+              {narrative.closureShareSince1990}%
             </p>
             <p className="mt-1 text-xs leading-snug text-muted">
-              parish founding dates still unresolved
+              of all closed parishes have a dated closure since 1990
             </p>
           </div>
         </div>
@@ -561,11 +542,11 @@ export default function HistoryPage() {
               href="/where-every-parish-ended-up"
               className="font-serif text-lg font-semibold underline hover:text-accent"
             >
-              Where Every Parish Ended Up
+              Lithuanian Churches Through Time
             </Link>
             <p className="mt-1 text-sm leading-relaxed text-muted">
-              Follow every parish from its founding decade to its present
-              status and the fate of its church.
+              Follow each church community from its documented building or
+              parish baseline to its present condition.
             </p>
           </div>
           <div className="sm:pl-5">

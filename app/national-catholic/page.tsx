@@ -341,11 +341,6 @@ export default function NationalCatholicPage() {
         </section>
       )}
 
-      <p className="mt-10 max-w-3xl border-t border-rule pt-4 text-sm text-muted">
-        <Link href="/record" className="underline hover:text-foreground">
-          See the full record
-        </Link>
-      </p>
     </article>
   );
 }

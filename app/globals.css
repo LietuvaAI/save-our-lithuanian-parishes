@@ -68,6 +68,22 @@ body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
+.map-hover-card {
+  right: 0.5rem;
+  bottom: 0.5rem;
+  left: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .map-hover-card {
+    top: var(--map-hover-y);
+    right: auto;
+    bottom: auto;
+    left: var(--map-hover-x);
+    transform: translate(var(--map-hover-shift), -50%);
+  }
+}
+
 /* Thin, quiet scrollbar for in-card lists (the flow chart's side panel). */
 .panel-scroll {
   scrollbar-width: thin;

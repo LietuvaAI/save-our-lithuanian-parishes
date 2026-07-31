@@ -15,7 +15,8 @@
 // Who-decided (ending mode) and ownership stay in each parish's popup and
 // profile — the map itself reads at a glance. Views: All · Open today ·
 // Unresolved · Lost. Current campaigns remain a separate ring annotation.
-import { useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useState, type CSSProperties } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import mapData from "@/data/map.json";
 import regData from "@/data/registry-map.json";
@@ -59,8 +60,27 @@ type Mode =
   | "lost"
   | "transferred"
   | "unknown";
-type ClassFilter = "all" | "roman_catholic" | "national_catholic_pncc" | "non_catholic_christian";
+type StatusFilter = Exclude<Mode, "all">;
+type CommunityFilter =
+  | "roman_catholic"
+  | "national_catholic_pncc"
+  | "non_catholic_christian";
 type MapKey = EndStateGroup | "active_mission";
+
+const STATUS_FILTERS: StatusFilter[] = [
+  "open",
+  "mission",
+  "mass",
+  "unresolved",
+  "transferred",
+  "lost",
+  "unknown",
+];
+const COMMUNITY_FILTERS: CommunityFilter[] = [
+  "roman_catholic",
+  "national_catholic_pncc",
+  "non_catholic_christian",
+];
 
 interface Point {
   id: string;
@@ -86,6 +106,29 @@ interface Point {
   recordType: string | null;
   // Loss sub-fate for closed dots — same vocabulary as the flow chart.
   fate: "closed" | "demolished" | "repurposed" | null;
+}
+
+function communityFilterForPoint(point: Point): CommunityFilter {
+  if (
+    point.congregationClass === "national_catholic_pncc" ||
+    point.congregationClass === "independent_catholic"
+  ) {
+    return "national_catholic_pncc";
+  }
+  if (point.congregationClass === "non_catholic_christian") {
+    return "non_catholic_christian";
+  }
+  return "roman_catholic";
+}
+
+function statusFilterForPoint(point: Point): StatusFilter {
+  if (point.recordType === "misija") return "mission";
+  if (point.group === "active_parish") return "open";
+  if (point.group === "mass_continues") return "mass";
+  if (point.group === "unresolved") return "unresolved";
+  if (point.group === "closed") return "lost";
+  if (point.group === "transferred") return "transferred";
+  return "unknown";
 }
 
 const STATUS_LABEL: Record<Status, string> = {
@@ -285,21 +328,19 @@ export default function ParishMap() {
     setHovered(p);
   }
   function dotLeave() {
-    leaveTimer.current = setTimeout(() => setHovered(null), 90);
+    leaveTimer.current = setTimeout(() => setHovered(null), 140);
   }
-  function cardEnter() {
-    if (leaveTimer.current) clearTimeout(leaveTimer.current);
-  }
-  function cardLeave() {
-    setHovered(null);
-  }
-  const [mode, setMode] = useState<Mode>("all");
+  const [selectedStatuses, setSelectedStatuses] = useState<Set<StatusFilter>>(
+    () => new Set(STATUS_FILTERS),
+  );
   // Sub-filter inside the Closed view — same sub-fates as the flow chart.
   const [lostFate, setLostFate] = useState<"all" | "closed" | "demolished" | "repurposed">("all");
   // Default to Roman Catholic institutions. The map includes missions, while
   // The History is explicitly parish-only, so the visible scope always names
   // both record types.
-  const [classFilter, setClassFilter] = useState<ClassFilter>("roman_catholic");
+  const [selectedCommunities, setSelectedCommunities] = useState<
+    Set<CommunityFilter>
+  >(() => new Set(["roman_catholic"]));
   const [view, setView] = useState<View>(FULL);
   const [showDioceses, setShowDioceses] = useState(false);
   const [expandedKey, setExpandedKey] = useState<MapKey | null>(null);
@@ -319,15 +360,10 @@ export default function ParishMap() {
 
   const classPoints = useMemo(
     () =>
-      classFilter === "all"
-        ? POINTS
-        : POINTS.filter((p) =>
-            classFilter === "national_catholic_pncc"
-              ? p.congregationClass === "national_catholic_pncc" ||
-                p.congregationClass === "independent_catholic"
-              : (p.congregationClass ?? "roman_catholic") === classFilter,
-          ),
-    [classFilter],
+      POINTS.filter((point) =>
+        selectedCommunities.has(communityFilterForPoint(point)),
+      ),
+    [selectedCommunities],
   );
   const communityCounts = useMemo(
     () => ({
@@ -335,6 +371,16 @@ export default function ParishMap() {
       roman_catholic: POINTS.filter(
         (point) =>
           (point.congregationClass ?? "roman_catholic") === "roman_catholic",
+      ).length,
+      roman_catholic_parishes: POINTS.filter(
+        (point) =>
+          (point.congregationClass ?? "roman_catholic") ===
+            "roman_catholic" && point.recordType === "parish",
+      ).length,
+      roman_catholic_missions: POINTS.filter(
+        (point) =>
+          (point.congregationClass ?? "roman_catholic") ===
+            "roman_catholic" && point.recordType === "misija",
       ).length,
       national_catholic_pncc: POINTS.filter(
         (point) =>
@@ -395,13 +441,16 @@ export default function ParishMap() {
     [classPoints],
   );
   const selectedScope =
-    classFilter === "roman_catholic"
+    selectedCommunities.size === 1 &&
+    selectedCommunities.has("roman_catholic")
       ? `${recordTypeCounts.parish} Roman Catholic parishes + ${recordTypeCounts.mission} missions`
-      : classFilter === "national_catholic_pncc"
+      : selectedCommunities.size === 1 &&
+          selectedCommunities.has("national_catholic_pncc")
         ? `${statusCounts.all} National or independent Catholic parish records`
-        : classFilter === "non_catholic_christian"
+        : selectedCommunities.size === 1 &&
+            selectedCommunities.has("non_catholic_christian")
           ? `${statusCounts.all} Protestant parish and congregation records`
-          : `${statusCounts.all} parish, mission, and congregation records`;
+          : `${statusCounts.all} selected parish, mission, and congregation records`;
 
   function regionView(states: Set<string>) {
     const pts = POINTS.filter((p) => states.has(p.state));
@@ -466,162 +515,51 @@ export default function ParishMap() {
     router.push(p.profile);
   }
 
+  function selectCommunity(filter: CommunityFilter | "all") {
+    setSelectedCommunities(
+      filter === "all" ? new Set(COMMUNITY_FILTERS) : new Set([filter]),
+    );
+  }
+
+  function selectStatus(filter: StatusFilter) {
+    setSelectedStatuses((current) =>
+      current.size === 1 && current.has(filter)
+        ? new Set(STATUS_FILTERS)
+        : new Set([filter]),
+    );
+    if (filter === "lost") setLostFate("all");
+  }
+
+  function selectAllStatuses() {
+    setSelectedStatuses(new Set(STATUS_FILTERS));
+    setLostFate("all");
+  }
+
   const markR = 6 / Math.sqrt(zoom);
   const btn = "rounded-md border border-rule bg-background px-2.5 py-1 text-sm font-medium hover:border-foreground transition-colors";
-  const classTab = (active: boolean) =>
-    `rounded-[4px] whitespace-nowrap px-2.5 py-1 text-xs font-medium transition-colors sm:px-3 sm:text-sm ${
-      active
-        ? "bg-background text-foreground shadow-sm"
-        : "text-muted hover:text-foreground"
-    }`;
-  const statusTab = (active: boolean) =>
-    `inline-flex min-h-9 shrink-0 items-center border-b-2 px-1.5 py-1.5 text-xs font-medium whitespace-nowrap transition-colors sm:px-2 ${
-      active
-        ? "border-foreground text-foreground"
-        : "border-transparent text-muted hover:border-rule hover:text-foreground"
-    }`;
 
-  const statusFiltered =
-    mode === "all"
-      ? classPoints
-      : mode === "open"
-        ? classPoints.filter(
-            (p) => p.group === "active_parish" && p.recordType !== "misija",
-          )
-        : mode === "mission"
-          ? classPoints.filter((p) => p.recordType === "misija")
-          : mode === "mass"
-            ? classPoints.filter((p) => p.group === "mass_continues")
-            : mode === "unresolved"
-              ? classPoints.filter((p) => p.group === "unresolved")
-              : mode === "lost"
-                ? classPoints.filter(
-                    (p) =>
-                      p.group === "closed" &&
-                      p.recordType !== "misija" &&
-                      (lostFate === "all" || p.fate === lostFate),
-                  )
-                : mode === "transferred"
-                  ? classPoints.filter((p) => p.group === "transferred")
-                  : classPoints.filter((p) => p.group === "unverified");
+  const statusFiltered = classPoints.filter((point) => {
+    const status = statusFilterForPoint(point);
+    if (!selectedStatuses.has(status)) return false;
+    return !(
+      status === "lost" &&
+      lostFate !== "all" &&
+      point.fate !== lostFate
+    );
+  });
 
   const visible = statusFiltered;
+  const allStatusesSelected = selectedStatuses.size === STATUS_FILTERS.length;
+  const allCommunitiesSelected =
+    selectedCommunities.size === COMMUNITY_FILTERS.length;
+  const closedOnly =
+    selectedStatuses.size === 1 && selectedStatuses.has("lost");
 
   return (
     <div>
       <div className="overflow-hidden rounded-lg border border-rule">
-        <div className="border-b border-rule px-3 pt-2.5 sm:px-4">
-          <div className="flex flex-wrap items-center justify-between gap-x-5 gap-y-2 pb-2.5">
-            <div className="flex min-w-0 items-center gap-2">
-              <span className="shrink-0 text-[11px] font-medium uppercase tracking-widest text-muted">
-                Community
-              </span>
-              <div
-                className="flex min-w-0 items-center overflow-x-auto rounded-md bg-band p-0.5"
-                role="group"
-                aria-label="Filter by congregation type"
-              >
-                {(
-                  [
-                    { key: "all", label: "All communities" },
-                    { key: "roman_catholic", label: "Roman Catholic" },
-                    { key: "national_catholic_pncc", label: "National & independent" },
-                    { key: "non_catholic_christian", label: "Protestant" },
-                  ] as { key: ClassFilter; label: string }[]
-                ).map(({ key, label }) => (
-                  <button
-                    key={key}
-                    type="button"
-                    className={classTab(classFilter === key)}
-                    aria-pressed={classFilter === key}
-                    onClick={() => {
-                      setClassFilter(key);
-                      setMode("all");
-                      setLostFate("all");
-                    }}
-                  >
-                    {label} · {communityCounts[key]}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="flex items-center text-xs text-muted">
-              <label
-                className="flex cursor-pointer items-center gap-1.5 whitespace-nowrap hover:text-foreground"
-                title="Catholic diocese boundaries"
-              >
-                <input
-                  type="checkbox"
-                  checked={showDioceses}
-                  onChange={() => void toggleDioceses()}
-                  className="h-3.5 w-3.5 accent-foreground"
-                />
-                Diocese lines
-              </label>
-            </div>
-          </div>
-
-          <div
-            className="-mx-1 flex items-end gap-0.5 overflow-x-auto md:mx-0 md:flex-wrap md:overflow-visible"
-            role="group"
-            aria-label="Filter by parish status"
-          >
-            <button
-              type="button"
-              className={statusTab(mode === "all")}
-              aria-pressed={mode === "all"}
-              onClick={() => setMode("all")}
-            >
-              All statuses · {statusCounts.all}
-            </button>
-            <SwatchBtn
-              fill="var(--es-active)"
-              label={`${GROUP_LABEL.active_parish} · ${statusCounts.open}`}
-              active={mode === "open"}
-              onClick={() => setMode("open")}
-            />
-            <SwatchBtn
-              fill="var(--es-active)"
-              label={`Mission records · ${statusCounts.mission}`}
-              active={mode === "mission"}
-              onClick={() => setMode("mission")}
-            />
-            <SwatchBtn
-              fill="var(--es-mass)"
-              label={`${GROUP_LABEL.mass_continues} · ${statusCounts.mass}`}
-              active={mode === "mass"}
-              onClick={() => setMode("mass")}
-            />
-            <SwatchBtn
-              fill="var(--mark-ink)"
-              label={`${GROUP_LABEL.unresolved} · ${statusCounts.unresolved}`}
-              active={mode === "unresolved"}
-              onClick={() => setMode("unresolved")}
-            />
-            <SwatchBtn
-              fill="var(--es-transferred)"
-              label={`${GROUP_LABEL.transferred} · ${statusCounts.transferred}`}
-              active={mode === "transferred"}
-              onClick={() => setMode("transferred")}
-            />
-            <SwatchBtn
-              fill="var(--es-closed)"
-              label={`${GROUP_LABEL.closed} · ${statusCounts.lost}`}
-              active={mode === "lost"}
-              onClick={() => { setMode("lost"); setLostFate("all"); }}
-            />
-            <SwatchBtn
-              fill="var(--muted)"
-              label={`${GROUP_LABEL.unverified} · ${statusCounts.unknown}`}
-              active={mode === "unknown"}
-              onClick={() => setMode("unknown")}
-            />
-          </div>
-        </div>
-
         {/* How each closure ended — sub-fates, same vocabulary as the flow chart */}
-        {mode === "lost" && (() => {
+        {closedOnly && (() => {
           const lostPts = classPoints.filter(
             (p) => p.group === "closed" && p.recordType !== "misija",
           );
@@ -652,7 +590,7 @@ export default function ParishMap() {
           );
         })()}
 
-        <div className="grid lg:grid-cols-[minmax(0,1fr)_15rem]">
+        <div className="grid lg:grid-cols-[minmax(0,1fr)_20rem]">
           <div className="relative order-2 min-w-0 lg:order-1">
         <svg
           ref={svgRef}
@@ -687,7 +625,10 @@ export default function ParishMap() {
             const active = hovered?.id === p.id;
 
             // Current signals and unresolved records are slightly larger.
-            const r = active ? markR * 1.35 : (p.signalKind || p.status === "unresolved") ? markR * 1.15 : markR;
+            const r =
+              p.signalKind || p.status === "unresolved"
+                ? markR * 1.15
+                : markR;
             const shape = recordMarkShape(p.congregationClass);
             const hollow = isHollowRecordMark({
               group: p.group,
@@ -707,6 +648,12 @@ export default function ParishMap() {
                 role={p.profile ? "button" : undefined}
                 aria-label={`${p.name}, ${p.city} ${p.state} — ${pointStatusLabel(p)}${p.alerted ? " — active campaign" : ""}.${p.profile ? " Open its record." : ""}`}
                 className={p.profile ? "cursor-pointer focus:outline-none" : "focus:outline-none"}
+                style={{
+                  transformBox: "fill-box",
+                  transformOrigin: "center",
+                  transform: active ? "scale(1.35)" : "scale(1)",
+                  transition: "transform 140ms ease-out",
+                }}
               >
                 {/* Outer rings are reserved for current signals. */}
                 {p.signalKind && (
@@ -775,17 +722,17 @@ export default function ParishMap() {
             const lx = ((hovered.x - view.x) / view.w) * 100;
             const ly = ((hovered.y - view.y) / view.h) * 100;
             if (lx < -2 || lx > 102 || ly < -2 || ly > 102) return null;
-            const below = ly < 32;
+            const opensRight = lx < 50;
             return (
               <div
-                onMouseEnter={cardEnter}
-                onMouseLeave={cardLeave}
-                className="absolute z-10 w-72 rounded-lg border border-rule bg-background/95 px-3.5 py-2.5 text-sm shadow-lg"
+                className="map-hover-card pointer-events-none absolute z-10 rounded-lg border border-rule bg-background/95 px-3.5 py-2.5 text-sm shadow-lg sm:w-72"
                 style={{
-                  left: `${Math.min(Math.max(lx, 15), 85)}%`,
-                  top: `${ly}%`,
-                  transform: below ? "translate(-50%, 16px)" : "translate(-50%, calc(-100% - 16px))",
-                }}
+                  "--map-hover-x": `${lx}%`,
+                  "--map-hover-y": `${Math.min(Math.max(ly, 25), 75)}%`,
+                  "--map-hover-shift": opensRight
+                    ? "20px"
+                    : "calc(-100% - 20px)",
+                } as CSSProperties}
                 aria-live="polite"
               >
                 <div className="font-serif font-semibold">{hovered.name}</div>
@@ -825,12 +772,7 @@ export default function ParishMap() {
                   {hovered.deep ? "Documented in depth — full case file" : "Attested by the research record"}
                 </div>
                 {hovered.profile && (
-                  <a
-                    href={hovered.profile}
-                    className="mt-1.5 block font-medium underline hover:opacity-75"
-                  >
-                    Open the parish record →
-                  </a>
+                  <div className="mt-1.5 font-medium">Click the marker to open its record →</div>
                 )}
               </div>
             );
@@ -839,22 +781,139 @@ export default function ParishMap() {
 
           <aside
             className="order-1 border-b border-rule px-3 py-3 sm:px-4 lg:order-2 lg:border-b-0 lg:border-l"
-            aria-label="Map key"
+            aria-label="Map key and filters"
           >
-            <p className="text-[11px] font-medium uppercase tracking-widest text-muted">
-              Map key
-            </p>
-            <p className="mt-1 text-xs leading-relaxed text-muted">
-              {selectedScope}
-              {classFilter === "roman_catholic"
-                ? ". Missions remain separate from parish headline figures."
-                : "."}
-            </p>
-            <dl className="mt-2 grid grid-cols-2 gap-x-3 gap-y-2 text-xs lg:grid-cols-1 lg:gap-y-2.5">
+            <div className="flex items-center justify-between gap-2">
+              <p className="text-[11px] font-medium uppercase tracking-widest text-muted">
+                Map key
+              </p>
+              <span className="text-[11px] text-muted">
+                {visible.length} records shown
+              </span>
+            </div>
+
+            <div
+              className="mt-2.5 text-xs"
+              role="group"
+              aria-label="Filter by community"
+            >
+              <p className="text-[10px] font-semibold uppercase tracking-wide text-muted">
+                Community
+              </p>
+              <div className="mt-1.5 grid grid-cols-2 gap-1.5">
+                <button
+                  type="button"
+                  aria-pressed={allCommunitiesSelected}
+                  onClick={() => selectCommunity("all")}
+                  className={`flex min-h-8 items-center gap-2 rounded-md border px-2 py-1.5 text-left text-[11px] font-medium transition-colors ${
+                    allCommunitiesSelected
+                      ? "border-foreground bg-band text-foreground"
+                      : "border-rule text-muted hover:border-foreground hover:text-foreground"
+                  }`}
+                >
+                  <span className="flex h-3.5 w-3.5 items-center justify-center" aria-hidden>
+                    <span className="h-2.5 w-2.5 rounded-full bg-foreground" />
+                  </span>
+                  <span>All · {communityCounts.all}</span>
+                </button>
+                {(
+                  [
+                    {
+                      key: "roman_catholic",
+                      label: "Roman Catholic",
+                      shape: "circle",
+                    },
+                    {
+                      key: "national_catholic_pncc",
+                      label: "National & independent",
+                      shape: "diamond",
+                    },
+                    {
+                      key: "non_catholic_christian",
+                      label: "Protestant",
+                      shape: "square",
+                    },
+                  ] as {
+                    key: CommunityFilter;
+                    label: string;
+                    shape: "circle" | "diamond" | "square";
+                  }[]
+                ).map(({ key, label, shape }) => {
+                  const active =
+                    !allCommunitiesSelected && selectedCommunities.has(key);
+                  return (
+                    <button
+                      key={key}
+                      type="button"
+                      aria-pressed={active}
+                      onClick={() => selectCommunity(key)}
+                      className={`flex min-h-8 items-center gap-2 rounded-md border px-2 py-1.5 text-left text-[11px] leading-tight transition-colors ${
+                        active
+                          ? "border-foreground bg-band font-medium text-foreground"
+                          : "border-rule text-muted hover:border-foreground hover:text-foreground"
+                      }`}
+                    >
+                      <span className="flex h-3.5 w-3.5 shrink-0 items-center justify-center" aria-hidden>
+                        <span
+                          className={`h-2.5 w-2.5 bg-foreground ${
+                            shape === "circle"
+                              ? "rounded-full"
+                              : shape === "diamond"
+                                ? "rotate-45"
+                                : "rounded-[1px]"
+                          }`}
+                        />
+                      </span>
+                      <span className="min-w-0 flex-1">
+                        {key === "roman_catholic" ? (
+                          <>
+                            {label}
+                            <span className="block text-[10px] font-normal text-muted">
+                              {communityCounts.roman_catholic_parishes} parishes
+                              {" + "}
+                              {communityCounts.roman_catholic_missions} missions
+                            </span>
+                          </>
+                        ) : (
+                          <>
+                            {label} · {communityCounts[key]}
+                          </>
+                        )}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div
+              className="mt-2.5 border-t border-rule pt-2.5 text-xs"
+              role="group"
+              aria-label="Filter by status"
+            >
+              <div className="flex items-center justify-between gap-2">
+                <p className="text-[10px] font-semibold uppercase tracking-wide text-muted">
+                  Status
+                </p>
+                <button
+                  type="button"
+                  aria-pressed={allStatusesSelected}
+                  onClick={selectAllStatuses}
+                  className={`rounded-md px-2 py-1 text-[11px] font-medium transition-colors ${
+                    allStatusesSelected
+                      ? "bg-foreground text-background"
+                      : "text-muted hover:bg-band hover:text-foreground"
+                  }`}
+                >
+                  All statuses
+                </button>
+              </div>
+              <div className="mt-1.5 grid grid-cols-2 gap-1.5">
               {(
                 [
                   {
                     key: "active_parish",
+                    mode: "open",
                     label: GROUP_LABEL.active_parish,
                     description: GROUP_DESCRIPTION.active_parish,
                     fill: "var(--es-active)",
@@ -862,6 +921,7 @@ export default function ParishMap() {
                   },
                   {
                     key: "active_mission",
+                    mode: "mission",
                     label: "Mission records",
                     description:
                       `${recordTypeCounts.activeMission} active and ${recordTypeCounts.closedMission} closed. Missions keep their own status on the map and are counted separately from parishes.`,
@@ -870,6 +930,7 @@ export default function ParishMap() {
                   },
                   {
                     key: "mass_continues",
+                    mode: "mass",
                     label: GROUP_LABEL.mass_continues,
                     description: GROUP_DESCRIPTION.mass_continues,
                     fill: "var(--es-mass)",
@@ -877,6 +938,7 @@ export default function ParishMap() {
                   },
                   {
                     key: "unresolved",
+                    mode: "unresolved",
                     label: GROUP_LABEL.unresolved,
                     description: GROUP_DESCRIPTION.unresolved,
                     fill: "var(--mark-ink)",
@@ -884,6 +946,7 @@ export default function ParishMap() {
                   },
                   {
                     key: "transferred",
+                    mode: "transferred",
                     label: GROUP_LABEL.transferred,
                     description: GROUP_DESCRIPTION.transferred,
                     fill: "var(--es-transferred)",
@@ -891,16 +954,19 @@ export default function ParishMap() {
                   },
                   {
                     key: "closed",
+                    mode: "lost",
                     label: GROUP_LABEL.closed,
                     description:
-                      classFilter === "roman_catholic"
-                        ? `${recordTypeCounts.closedParish} parishes are closed. Select the Closed filter to see whether each church was demolished, sold on, or remains standing. Closed missions remain in the separate Mission records category.`
+                      selectedCommunities.size === 1 &&
+                      selectedCommunities.has("roman_catholic")
+                        ? `${recordTypeCounts.closedParish} parishes are closed. Filter to Closed to see whether each church was demolished, sold on, or remains standing. Closed missions remain in the separate Mission records category.`
                         : GROUP_DESCRIPTION.closed,
                     fill: "var(--es-closed)",
                     count: statusCounts.lost,
                   },
                   {
                     key: "unverified",
+                    mode: "unknown",
                     label: GROUP_LABEL.unverified,
                     description: GROUP_DESCRIPTION.unverified,
                     fill: "var(--muted)",
@@ -908,79 +974,108 @@ export default function ParishMap() {
                   },
                 ] satisfies {
                   key: MapKey;
+                  mode: Exclude<Mode, "all">;
                   label: string;
                   description: string;
                   fill: string;
                   count: number;
                 }[]
-              ).map(({ key, label, description, fill, count }) => {
+              ).map(({ key, mode: itemMode, label, description, fill, count }) => {
                 const expanded = expandedKey === key;
+                const active =
+                  selectedStatuses.size === 1 &&
+                  selectedStatuses.has(itemMode);
                 const detailId = `map-key-detail-${key}`;
                 return (
                   <div
                     key={key}
-                    className={`min-w-0 ${expanded ? "col-span-2 lg:col-span-1" : ""}`}
+                    className={`relative min-w-0 rounded-md text-[11px] ${
+                      expanded ? "col-span-2" : ""
+                    }`}
                   >
-                    <dt>
+                    <div className="relative">
                       <button
                         type="button"
-                        className="flex w-full min-w-0 items-start gap-2 text-left leading-snug hover:text-foreground"
-                        aria-expanded={expanded}
-                        aria-controls={detailId}
-                        onClick={() => setExpandedKey(expanded ? null : key)}
+                        aria-pressed={active}
+                        onClick={() => selectStatus(itemMode)}
+                        className={`flex min-h-8 w-full min-w-0 items-center gap-2 rounded-md border py-1.5 pl-2 pr-7 text-left leading-tight transition-colors ${
+                          active
+                            ? "border-foreground bg-band text-foreground"
+                            : "border-rule text-foreground hover:border-foreground"
+                        }`}
                       >
                         <span
-                          className="mt-1 inline-block h-2.5 w-2.5 shrink-0 rounded-full"
-                          style={{ background: fill }}
+                          className={`h-2.5 w-2.5 shrink-0 rounded-full ${
+                            key === "active_mission" ? "border-2 bg-background" : ""
+                          }`}
+                          style={{
+                            background:
+                              key === "active_mission" ? undefined : fill,
+                            borderColor:
+                              key === "active_mission" ? fill : undefined,
+                            opacity: key === "unverified" ? 0.55 : 1,
+                          }}
                           aria-hidden
                         />
                         <span className="min-w-0 flex-1 font-medium">
                           {label} · {count}
                         </span>
-                        <span
-                          className="shrink-0 text-xs leading-none text-muted"
-                          aria-hidden
-                        >
-                          {expanded ? "▴" : "▾"}
-                        </span>
                       </button>
-                    </dt>
-                    <dd
+                      <button
+                        type="button"
+                        className="absolute right-1 top-1/2 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded text-sm leading-none text-muted hover:bg-background hover:text-foreground"
+                        aria-expanded={expanded}
+                        aria-controls={detailId}
+                        aria-label={`${expanded ? "Hide" : "Explain"} ${label}`}
+                        title={`${expanded ? "Hide" : "Explain"} ${label}`}
+                        onClick={() => setExpandedKey(expanded ? null : key)}
+                      >
+                        <span aria-hidden>{expanded ? "−" : "+"}</span>
+                      </button>
+                    </div>
+                    <div
                       id={detailId}
-                      className={`${expanded ? "block" : "hidden"} mt-1 pl-[18px] leading-relaxed text-muted`}
+                      className={`${expanded ? "block" : "hidden"} mt-1.5 rounded-md bg-band px-2.5 py-2 leading-relaxed text-muted`}
                     >
                       {description}
-                    </dd>
+                    </div>
                   </div>
                 );
               })}
-            </dl>
-            <div className="mt-3 border-t border-rule pt-2.5 text-xs">
-              <p className="font-medium">Marks</p>
-              <div className="mt-1.5 grid grid-cols-2 gap-x-3 gap-y-1.5 text-muted lg:grid-cols-1">
-                <span className="flex items-center gap-2">
-                  <span className="h-2.5 w-2.5 rounded-full bg-foreground" aria-hidden />
-                  Roman Catholic
-                </span>
-                <span className="flex items-center gap-2">
-                  <span className="h-2.5 w-2.5 rotate-45 bg-foreground" aria-hidden />
-                  National Catholic
-                </span>
-                <span className="flex items-center gap-2">
-                  <span className="h-2.5 w-2.5 rounded-[1px] bg-foreground" aria-hidden />
-                  Protestant
-                </span>
-                <span className="flex items-center gap-2">
+              </div>
+            </div>
+
+            <div className="mt-2.5 border-t border-rule pt-2.5 text-xs">
+              <div className="flex items-center justify-between gap-2">
+                <p className="text-[10px] font-semibold uppercase tracking-wide text-muted">
+                  Other marks
+                </p>
+                <button
+                  type="button"
+                  aria-pressed={showDioceses}
+                  onClick={() => void toggleDioceses()}
+                  className={`rounded-md border px-2 py-1 text-[11px] font-medium transition-colors ${
+                    showDioceses
+                      ? "border-foreground bg-band text-foreground"
+                      : "border-rule text-muted hover:border-foreground hover:text-foreground"
+                  }`}
+                  title="Catholic diocese boundaries"
+                >
+                  Diocese lines
+                </button>
+              </div>
+              <div className="mt-1 grid grid-cols-3 gap-2 text-[10px] leading-tight text-muted">
+                <span className="flex items-start gap-1">
                   <span className="h-2.5 w-2.5 rounded-full border-2 border-[var(--foreground)] bg-background" aria-hidden />
                   Mission or hosted Mass
                 </span>
-                <span className="flex items-center gap-2">
+                <span className="flex items-start gap-1">
                   <span className="flex h-3 w-3 items-center justify-center rounded-full border border-[var(--mark-community)]" aria-hidden>
                     <span className="h-1.5 w-1.5 rounded-full bg-[var(--es-active)]" />
                   </span>
                   Current signal
                 </span>
-                <span className="flex items-center gap-2">
+                <span className="flex items-start gap-1">
                   <span className="font-semibold text-foreground" aria-hidden>×</span>
                   Church demolished
                 </span>
@@ -990,12 +1085,9 @@ export default function ParishMap() {
         </div>
       </div>
 
-      <p className="mt-2.5 text-xs leading-relaxed text-muted">
-        Shown: {selectedScope}. Roman Catholic records appear by default;
-        National Catholic and Protestant records are available through the
-        community filters. Religious-house, cemetery, shrine, club, and school
-        chapels remain part of the heritage record but not the institutional
-        count.{" "}
+      <p className="mt-2 text-xs leading-relaxed text-muted">
+        Shown: {selectedScope}. Religious-house, cemetery, shrine, club, and
+        school chapels remain outside the institutional count.{" "}
         <a href="/about-the-data" className="underline hover:text-foreground">
           How the record is scoped →
         </a>
@@ -1003,12 +1095,14 @@ export default function ParishMap() {
 
       {/* Caption */}
       <div className="mt-2 min-h-9 border-t border-rule pt-2.5 text-sm">
-        {mode === "unresolved" ? (
+        {selectedStatuses.size === 1 &&
+        selectedStatuses.has("unresolved") ? (
           <span className="text-muted">
             {statusCounts.unresolved} records whose outcome remains contested or
             canonically undecided. Open a mark for its evidence.
           </span>
-        ) : mode === "mission" ? (
+        ) : selectedStatuses.size === 1 &&
+          selectedStatuses.has("mission") ? (
           <span className="text-muted">
             {statusCounts.mission} active mission in this historical record.{" "}
             <a
@@ -1018,7 +1112,7 @@ export default function ParishMap() {
               See the complete current Catholic network →
             </a>
           </span>
-        ) : mode === "lost" ? (
+        ) : closedOnly ? (
           <span className="text-muted">
             {statusCounts.lost} records in the Closed category. Hover any mark;
             click to open its record.{" "}
@@ -1026,60 +1120,28 @@ export default function ParishMap() {
               Full list in The Record →
             </a>
           </span>
-        ) : mode === "unknown" ? (
+        ) : selectedStatuses.size === 1 &&
+          selectedStatuses.has("unknown") ? (
           <span className="text-muted">
             {statusCounts.unknown} records whose present status is still being
             verified. Open a mark to inspect what is currently documented.
+          </span>
+        ) : !allStatusesSelected ? (
+          <span className="text-muted">
+            {visible.length} records match the selected community and status
+            filters. Hover any mark; click to open its record.
           </span>
         ) : (
           <span className="text-muted">
             One map — every documented parish, mission, and congregation.
             Hover any mark; click to open its record.{" "}
-            <a href="/under-threat" className="font-medium underline hover:text-foreground">
-              See what&rsquo;s happening now →
-            </a>
+            <Link href="/#happening-now" className="font-medium underline hover:text-foreground">
+              See current campaigns and developments →
+            </Link>
           </span>
         )}
       </div>
 
     </div>
-  );
-}
-
-
-function SwatchBtn({
-  fill,
-  label,
-  active,
-  onClick,
-  disabled,
-}: {
-  fill: string;
-  label: string;
-  active: boolean;
-  onClick: () => void;
-  disabled?: boolean;
-}) {
-  return (
-    <button
-      type="button"
-      disabled={disabled}
-      onClick={onClick}
-      aria-pressed={active}
-      className={`inline-flex min-h-9 shrink-0 items-center gap-1 border-b-2 px-1.5 py-1.5 text-xs font-medium whitespace-nowrap transition-colors sm:px-2 ${
-        active
-          ? "border-foreground text-foreground"
-          : "border-transparent text-muted hover:border-rule hover:text-foreground"
-      }`}
-    >
-      <svg width={12} height={12} viewBox="0 0 12 12" aria-hidden>
-        <circle
-          cx={6} cy={6} r={3.5}
-          fill={active ? "currentColor" : fill}
-          strokeWidth={0}
-        />
-      </svg>
-      {label}
-    </button>
   );
 }

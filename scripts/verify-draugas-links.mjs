@@ -1,7 +1,7 @@
-// Probes direct Draugas PDF URLs for every citation date in data/parishes.json
-// and caches the results in data/draugas-links.json (committed, like the other
-// generated data files). Parish profile pages prefer a verified direct PDF
-// link over the per-year archive page — see draugasCitationUrl in lib/parishes.ts.
+// Resolves direct Draugas PDF URLs for every dated citation in the canonical
+// case files and unified registry, then caches them in data/draugas-links.json.
+// Parish profiles use the exact verified or subscriber-gated issue URL; the
+// per-year archive is only a fallback for unresolved dates.
 //
 // Filename conventions differ by era:
 //   born-digital era (2008+) — predictable, probed as guesses:
@@ -29,6 +29,7 @@
 import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
 
 const PARISHES = new URL("../data/parishes.json", import.meta.url);
+const REGISTRY = new URL("../data/registry-unified.json", import.meta.url);
 const RECORDS_DIR = new URL("../data/case-records/", import.meta.url);
 const CACHE = new URL("../data/draugas-links.json", import.meta.url);
 const RATE_LIMIT_MS = 1000;
@@ -101,8 +102,11 @@ async function resolveDate(date, throttle) {
   const year = date.slice(0, 4);
   const indexed =
     Number(year) < 2008 ? (await yearIndex(year, throttle)).get(date) ?? [] : [];
+  if (indexed.length > 0) {
+    return { status: "verified", url: indexed[0] };
+  }
   let gatedUrl = null;
-  for (const url of [...indexed, ...variantUrls(date)]) {
+  for (const url of variantUrls(date)) {
     await throttle();
     const { status, contentType } = await probe(url);
     if (status === 200 && contentType.includes("pdf")) return { status: "verified", url };
@@ -111,11 +115,51 @@ async function resolveDate(date, throttle) {
   return gatedUrl ? { status: "gated", url: gatedUrl } : { status: "unresolved" };
 }
 
-const dates = [
-  ...new Set(
-    JSON.parse(readFileSync(PARISHES)).flatMap((p) => p.citations.map((c) => c.date))
+const dates = new Set(
+  JSON.parse(readFileSync(PARISHES)).flatMap((parish) =>
+    parish.citations.map((citation) => citation.date),
   ),
-].sort();
+);
+const registry = JSON.parse(readFileSync(REGISTRY)).parishes;
+for (const parish of registry) {
+  for (const source of parish.sources ?? []) {
+    if (!String(source.axis ?? "").startsWith("draugas")) continue;
+    for (const field of ["first_mention", "last_mention"]) {
+      if (/^\d{4}-\d{2}-\d{2}$/.test(source[field] ?? "")) {
+        dates.add(source[field]);
+      }
+    }
+    for (const match of String(source.cites ?? "").matchAll(
+      /\b\d{4}-\d{2}-\d{2}\b/g,
+    )) {
+      dates.add(match[0]);
+    }
+  }
+}
+const addCaseRecordIssueDates = (value) => {
+  if (Array.isArray(value)) {
+    for (const item of value) addCaseRecordIssueDates(item);
+    return;
+  }
+  if (!value || typeof value !== "object") return;
+  if (
+    /^\d{4}-\d{2}-\d{2}$/.test(value.date ?? "") &&
+    /draugas\.org\/(?:archyvas-pdf-\d{4}\/?$|(?:archive|key)\/.*\.pdf$)/i.test(
+      value.url ?? "",
+    )
+  ) {
+    dates.add(value.date);
+  }
+  for (const child of Object.values(value)) addCaseRecordIssueDates(child);
+};
+for (const file of readdirSync(RECORDS_DIR).filter((name) =>
+  name.endsWith(".json"),
+)) {
+  addCaseRecordIssueDates(
+    JSON.parse(readFileSync(new URL(file, RECORDS_DIR), "utf8")),
+  );
+}
+const sortedDates = [...dates].sort();
 
 const prior = existsSync(CACHE) ? JSON.parse(readFileSync(CACHE)).results : {};
 const results = {};
@@ -128,7 +172,7 @@ const throttle = async () => {
   last = Date.now();
 };
 
-for (const date of dates) {
+for (const date of sortedDates) {
   if (KEEP.has(prior[date]?.status)) {
     results[date] = prior[date];
     continue;
@@ -169,7 +213,7 @@ writeFileSync(
   JSON.stringify({ probedAt: new Date().toISOString().slice(0, 10), results }, null, 2) + "\n"
 );
 console.log(
-  `OK: ${dates.length} citation dates (${probed} probed, ${dates.length - probed} cached) — ` +
+  `OK: ${sortedDates.length} citation dates (${probed} probed, ${sortedDates.length - probed} cached) — ` +
     Object.entries(tally).map(([k, v]) => `${k}: ${v}`).join(", ") +
     `; ${recordUrls.size} case-record PDF links checked, ${rot.length} broken`
 );

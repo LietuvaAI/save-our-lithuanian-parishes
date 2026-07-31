@@ -54,18 +54,20 @@ export default function AboutPage() {
         <h2 className="font-serif text-2xl font-semibold">Why it exists</h2>
         <div className="mt-3 space-y-4 leading-relaxed">
           <p>
-            When those stories are scattered across archives, diocesan records,
-            private collections, local memory, and current news, each community
-            is left to understand its situation alone. This project brings the
-            record together and keeps it public.
+            No parish should have to understand its past or face its future
+            alone. Yet the record of Lithuanian parish life is scattered across
+            archives, diocesan files, family collections, community memory, and
+            current reporting. This project brings those fragments together as
+            a shared public record, so communities can learn from one another
+            and see their own experience as part of a larger story.
           </p>
         </div>
       </section>
 
       <section className="mt-12">
         <h2 className="font-serif text-2xl font-semibold">What we are building</h2>
-        <div className="mt-4 divide-y divide-rule border-y border-rule">
-          <div className="py-4">
+        <div className="mt-4 grid gap-6 sm:grid-cols-3">
+          <div>
             <h3 className="font-medium">A connected parish record</h3>
             <p className="mt-1 text-sm leading-relaxed text-muted">
               Each parish profile is meant to tell one coherent story across
@@ -73,7 +75,7 @@ export default function AboutPage() {
               present condition, and the evidence behind the record.
             </p>
           </div>
-          <div className="py-4">
+          <div>
             <h3 className="font-medium">A bridge between archive and present</h3>
             <p className="mt-1 text-sm leading-relaxed text-muted">
               Historical research explains how a community arrived here.
@@ -81,7 +83,7 @@ export default function AboutPage() {
               is happening now.
             </p>
           </div>
-          <div className="py-4">
+          <div>
             <h3 className="font-medium">Shared knowledge communities can use</h3>
             <p className="mt-1 text-sm leading-relaxed text-muted">
               The record connects communities facing similar questions while
@@ -92,7 +94,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mt-12 border-y border-rule py-8">
+      <section className="-mx-4 mt-12 bg-band px-4 py-8 sm:-mx-6 sm:px-6">
         <p className="text-xs uppercase tracking-widest text-muted">
           The next generation
         </p>
@@ -214,15 +216,10 @@ export default function AboutPage() {
             making knowledge public, and carrying the experience of one
             community to the next.
           </p>
-          <p className="text-muted">
-            The parish record is Lithuanian. The procedural guidance is
-            universal and is written for any community facing the same kind of
-            decision.
-          </p>
         </div>
       </section>
 
-      <section className="mt-12 border-t border-rule pt-6">
+      <section className="mt-12">
         <h2 className="font-serif text-xl font-semibold">
           Help the record grow
         </h2>

@@ -348,13 +348,6 @@ export default function SourcesAndArchivesPage() {
         <Link href="/legal" className="underline hover:text-foreground">
           Legal, attribution &amp; data use
         </Link>
-        . For collection, matching, confidence, and validation rules, see{" "}
-        <Link
-          href="/about-the-data"
-          className="underline hover:text-foreground"
-        >
-          About the Data
-        </Link>
         .
       </p>
     </article>

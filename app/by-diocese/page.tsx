@@ -78,26 +78,26 @@ export default function ByDiocesePage() {
     0;
 
   return (
-    <article className="mx-auto max-w-5xl px-4 py-12">
+    <article className="mx-auto max-w-5xl px-4 pb-4 pt-8">
       <p className="text-xs uppercase text-muted">
         Institutional view
       </p>
       <h1 className="mt-1 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
         By Diocese
       </h1>
-      <p className="mt-4 max-w-3xl font-serif text-xl leading-relaxed sm:text-2xl">
+      <p className="mt-2 max-w-3xl font-serif text-lg leading-relaxed sm:text-xl">
         Which dioceses preserved Lithuanian parish life, and where did it end?
       </p>
 
-      <section className="mt-10 border-y border-rule py-8">
+      <section className="mt-6 border-y border-rule py-5">
         <DioceseExplorer dioceses={named} />
-        <div className="mt-6 grid gap-4 border-t border-rule pt-5 sm:grid-cols-[minmax(0,1fr)_minmax(16rem,0.55fr)]">
+        <div className="mt-4 grid gap-3 border-t border-rule pt-4 sm:grid-cols-[minmax(0,1fr)_minmax(16rem,0.55fr)]">
           <div>
-            <p className="font-serif text-2xl font-semibold leading-tight">
+            <p className="font-serif text-xl font-semibold leading-tight">
               {emptied} of {named.length} dioceses have no active Lithuanian
               parish left.
             </p>
-            <p className="mt-2 leading-relaxed text-muted">
+            <p className="mt-1.5 text-sm leading-relaxed text-muted">
               Across the national record, Lithuanian parish life has formally
               closed or transferred to another community at {totalEnded} of{" "}
               {totalParishes} Roman Catholic parish records.
@@ -125,12 +125,6 @@ export default function ByDiocesePage() {
         revision={String(registry.registryRevision.version)}
         revisionDate={registry.registryRevision.date}
       />
-
-      <p className="mt-10 text-sm text-muted">
-        <Link href="/record" className="underline hover:text-foreground">
-          See the complete Record
-        </Link>
-      </p>
     </article>
   );
 }

@@ -141,6 +141,9 @@ const worshipProfileHrefs = new Set(
 const currentLifeSustainabilityEntries = sustainabilityEntries.filter(
   (entry) => worshipProfileHrefs.has(entry.parishLink),
 );
+const sustainabilityByHref = new Map(
+  currentLifeSustainabilityEntries.map((entry) => [entry.parishLink, entry]),
+);
 const weeklyProfileCount = currentLifeSustainabilityEntries.filter(
   (entry) => entry.liturgy.frequency === "weekly",
 ).length;
@@ -196,10 +199,13 @@ const worshipStateCount = new Set(
 
 function NetworkEntryRow({ entry }: { entry: NetworkEntry }) {
   const profileHref = profileHrefForEntry(entry);
+  const sustainability = profileHref
+    ? sustainabilityByHref.get(profileHref)
+    : null;
 
   return (
     <article className="border-t border-rule py-3">
-      <div className="flex items-start justify-between gap-3">
+      <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
           <h3 className="font-serif font-semibold leading-snug">
             {entry.nameLt}
@@ -208,10 +214,52 @@ function NetworkEntryRow({ entry }: { entry: NetworkEntry }) {
             {entry.city}, {entry.state}
           </p>
         </div>
-        <span className="shrink-0 text-xs font-medium text-muted">
-          {CLASS_LABEL[entry.networkClass]}
-        </span>
+        <div className="flex shrink-0 flex-col items-end gap-1">
+          <span className="text-xs font-medium text-muted">
+            {CLASS_LABEL[entry.networkClass]}
+          </span>
+          {sustainability ? (
+            <div className="flex flex-wrap items-center justify-end gap-1.5">
+              <EndStatePill
+                value={
+                  statusByHref.get(sustainability.parishLink) ?? "unverified"
+                }
+              />
+              <DiocesePill name={sustainability.diocese} />
+            </div>
+          ) : null}
+        </div>
       </div>
+      {sustainability ? (
+        <>
+          <p className="mt-1">
+            <DiocesanLeaderLink diocese={sustainability.diocese} />
+          </p>
+          <dl className="mt-2 grid gap-x-3 gap-y-1 text-xs sm:grid-cols-3">
+            <div>
+              <dt className="inline text-muted">Clergy: </dt>
+              <dd className="inline font-medium">
+                {CLERGY_LABEL[sustainability.clergy.arrangement] ??
+                  sustainability.clergy.arrangement}
+              </dd>
+            </div>
+            <div>
+              <dt className="inline text-muted">Lithuanian Mass: </dt>
+              <dd className="inline font-medium">
+                {FREQUENCY_SHORT[sustainability.liturgy.frequency] ??
+                  sustainability.liturgy.frequency}
+              </dd>
+            </div>
+            <div>
+              <dt className="inline text-muted">Governance: </dt>
+              <dd className="inline font-medium">
+                {GOVERNANCE_LABEL[sustainability.governance] ??
+                  sustainability.governance}
+              </dd>
+            </div>
+          </dl>
+        </>
+      ) : null}
       <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-xs">
         {profileHref ? (
           <Link
@@ -231,136 +279,19 @@ function NetworkEntryRow({ entry }: { entry: NetworkEntry }) {
             Official website
           </a>
         ) : null}
+        {sustainability ? (
+          <span className="text-muted">
+            Checked {sustainability.dateObserved}
+          </span>
+        ) : null}
       </div>
     </article>
   );
 }
 
-function SustainabilityProfiles() {
-  return (
-    <section className="mt-14" aria-labelledby="parish-health-heading">
-      <div className="max-w-3xl">
-        <p className="text-xs font-medium uppercase text-muted">
-          Pastoral conditions
-        </p>
-        <h2
-          id="parish-health-heading"
-          className="mt-1 font-serif text-2xl font-semibold"
-        >
-          What sustains the living network?
-        </h2>
-        <p className="mt-2 leading-relaxed text-muted">
-          Across the {currentLifeSustainabilityEntries.length} current worship
-          communities shown below:
-        </p>
-      </div>
-
-      <div className="mt-5 grid border-y border-rule sm:grid-cols-3 sm:divide-x sm:divide-rule">
-        <div className="py-4 sm:px-5 sm:first:pl-0">
-          <p className="font-serif text-4xl font-semibold">
-            {lithuanianKlebonasCount}
-          </p>
-          <p className="mt-1 text-sm leading-snug text-muted">
-            have a Lithuanian-speaking klebonas
-          </p>
-        </div>
-        <div className="border-t border-rule py-4 sm:border-t-0 sm:px-5">
-          <p className="font-serif text-4xl font-semibold">
-            {weeklyProfileCount}
-          </p>
-          <p className="mt-1 text-sm leading-snug text-muted">
-            celebrate a weekly Lithuanian Mass
-          </p>
-        </div>
-        <div className="border-t border-rule py-4 sm:border-t-0 sm:px-5 sm:last:pr-0">
-          <p className="font-serif text-4xl font-semibold">
-            {standaloneProfileCount}
-          </p>
-          <p className="mt-1 text-sm leading-snug text-muted">
-            retain standalone parish governance
-          </p>
-        </div>
-      </div>
-
-      <details className="mt-5 border-y border-rule">
-        <summary className="cursor-pointer py-4 font-medium">
-          Inspect the {currentLifeSustainabilityEntries.length} communities
-        </summary>
-        <div className="divide-y divide-rule border-t border-rule">
-          {currentLifeSustainabilityEntries.map((entry) => (
-            <article key={entry.id} className="py-4">
-              <div className="flex flex-wrap items-start justify-between gap-3">
-                <div>
-                  <Link
-                    href={entry.parishLink}
-                    className="font-serif text-lg font-semibold hover:underline"
-                  >
-                    {entry.entity}
-                  </Link>
-                  <p className="mt-0.5 text-sm text-muted">{entry.place}</p>
-                </div>
-                <div className="flex flex-col items-start gap-1 sm:items-end">
-                  <div className="flex flex-wrap items-center gap-1.5">
-                    <EndStatePill
-                      value={
-                        statusByHref.get(entry.parishLink) ?? "unverified"
-                      }
-                    />
-                    <DiocesePill name={entry.diocese} />
-                  </div>
-                  <DiocesanLeaderLink diocese={entry.diocese} />
-                </div>
-              </div>
-              <dl className="mt-3 grid gap-3 text-sm sm:grid-cols-3">
-                <div>
-                  <dt className="text-xs uppercase text-muted">
-                    Clergy
-                  </dt>
-                  <dd className="mt-0.5 font-medium">
-                    {CLERGY_LABEL[entry.clergy.arrangement] ??
-                      entry.clergy.arrangement}
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-xs uppercase text-muted">
-                    Lithuanian Mass
-                  </dt>
-                  <dd className="mt-0.5 font-medium">
-                    {FREQUENCY_SHORT[entry.liturgy.frequency] ??
-                      entry.liturgy.frequency}
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-xs uppercase text-muted">
-                    Governance
-                  </dt>
-                  <dd className="mt-0.5 font-medium">
-                    {GOVERNANCE_LABEL[entry.governance] ?? entry.governance}
-                  </dd>
-                </div>
-              </dl>
-              <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs">
-                <Link
-                  href={entry.parishLink}
-                  className="font-medium underline underline-offset-2 hover:text-accent"
-                >
-                  Profile and full evidence
-                </Link>
-                <span className="text-muted">
-                  Checked {entry.dateObserved}
-                </span>
-              </div>
-            </article>
-          ))}
-        </div>
-      </details>
-    </section>
-  );
-}
-
 export default function LithuanianCatholicLifeTodayPage() {
   return (
-    <article className="mx-auto max-w-5xl px-4 py-12">
+    <article className="mx-auto max-w-5xl px-4 pt-12 pb-2">
       <p className="text-xs uppercase text-muted">
         Current U.S. view
       </p>
@@ -485,8 +416,6 @@ export default function LithuanianCatholicLifeTodayPage() {
         </div>
       </section>
 
-      <SustainabilityProfiles />
-
       <details className="mt-12 border-y border-rule">
         <summary className="cursor-pointer py-4 font-medium">
           Other official network listings · {otherEntries.length}
@@ -498,15 +427,6 @@ export default function LithuanianCatholicLifeTodayPage() {
         </div>
       </details>
 
-      <p className="mt-10 text-sm text-muted">
-        <Link href="/record" className="underline hover:text-foreground">
-          The complete historical Record
-        </Link>
-        {" · "}
-        <Link href="/under-threat" className="underline hover:text-foreground">
-          What&rsquo;s Happening Now
-        </Link>
-      </p>
     </article>
   );
 }

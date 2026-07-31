@@ -3,11 +3,16 @@ import Link from "next/link";
 import ParishMap from "@/components/ParishMap";
 import NationalRecordGraphic from "@/components/NationalRecordGraphic";
 import ChurchProcession from "@/components/ChurchProcession";
+import {
+  DiocesePill,
+  DiocesanLeaderLink,
+} from "@/components/DiocesePill";
+import { EndStatePill } from "@/components/EndStatePill";
 import alertsData from "@/data/alerts.json";
 import networkData from "@/data/sielovada-us-network.json";
-import registryData from "@/data/registry-unified.json";
+import { getClearedPhoto } from "@/lib/photos";
 import { scopedParishes } from "@/lib/registry-scope";
-import { toGroup } from "@/lib/end-state";
+import { toGroup, type EndState } from "@/lib/end-state";
 
 // Homepage figures use the same U.S. register scope as The History and map.
 const romanCatholicParishes = scopedParishes();
@@ -50,9 +55,14 @@ const CURRENT_WORSHIP_STATES = new Set(
 ).size;
 
 type CurrentAlert = {
+  id: string;
   kind: string;
+  entity: string;
+  place: string;
+  diocese: string;
   parishLink: string;
   whatChanged: string;
+  sources: { title: string; publisher: string; url: string }[];
 };
 
 type CurrentCampaign = {
@@ -66,6 +76,10 @@ type CurrentCampaign = {
 };
 
 const currentAlerts = alertsData.alerts as CurrentAlert[];
+const watchAlerts = currentAlerts.filter((alert) => alert.kind === "watch");
+const buildingAlerts = currentAlerts.filter(
+  (alert) => alert.kind === "building",
+);
 const activeCampaigns = (alertsData.campaigns as CurrentCampaign[])
   .map((campaign) => ({
     ...campaign,
@@ -76,6 +90,20 @@ const activeCampaigns = (alertsData.campaigns as CurrentCampaign[])
   }))
   .filter((campaign) => campaign.alert)
   .slice(0, 4);
+const statusByLink = new Map(
+  romanCatholicParishes
+    .filter((parish) => parish.profileHref)
+    .map((parish) => [parish.profileHref!, parish.endState]),
+);
+
+function statusForLink(link: string): EndState {
+  return statusByLink.get(link) ?? "unverified";
+}
+
+function lineDrawingForLink(link: string) {
+  const slug = link.replace(/^\/(?:parishes|registry)\//, "");
+  return getClearedPhoto(`${slug}-line-drawing`);
+}
 
 const CAMPAIGN_ART: Record<
   string,
@@ -141,11 +169,11 @@ const ACTIONS = [
 export default function Home() {
   return (
     <div className="mx-auto max-w-5xl px-4">
-      <section className="pt-5 text-center sm:pt-6">
+      <section className="pt-3 text-center sm:pt-4">
         <h1 className="mx-auto max-w-3xl font-serif text-2xl font-semibold leading-tight sm:text-3xl">
           The public record of America&rsquo;s Lithuanian parishes
         </h1>
-        <p className="mx-auto mt-2.5 max-w-4xl text-sm leading-relaxed text-muted sm:text-[15px]">
+        <p className="mx-auto mt-1.5 max-w-4xl text-sm leading-relaxed text-muted sm:text-[15px]">
           This project traces the complete history of America&rsquo;s
           Lithuanian parishes&mdash;from their earliest foundations to the
           communities discerning their future today.
@@ -167,12 +195,11 @@ export default function Home() {
         firstDioceseLosses={TOP_LOSS_DIOCESES[0]?.[1] ?? 0}
         secondDiocese={TOP_LOSS_DIOCESES[1]?.[0] ?? ""}
         secondDioceseLosses={TOP_LOSS_DIOCESES[1]?.[1] ?? 0}
-        revision={String(registryData.registryRevision.version)}
-        revisionDate={registryData.registryRevision.date}
       />
 
       <section
-        className="mt-10 border-y border-rule py-5 sm:py-6"
+        id="happening-now"
+        className="mt-10 scroll-mt-24 border-y border-rule py-5 sm:py-6"
       >
         <div className="flex flex-wrap items-baseline justify-between gap-2">
           <div>
@@ -227,6 +254,21 @@ export default function Home() {
                     </h3>
                     <span className="text-sm text-muted">{campaign.place}</span>
                   </div>
+                  <div className="mt-2 flex flex-wrap items-center justify-center gap-2 sm:justify-start">
+                    <EndStatePill
+                      value={statusForLink(campaign.parishLink)}
+                    />
+                    {campaign.alert && (
+                      <DiocesePill name={campaign.alert.diocese} />
+                    )}
+                  </div>
+                  {campaign.alert && (
+                    <p className="mt-1">
+                      <DiocesanLeaderLink
+                        diocese={campaign.alert.diocese}
+                      />
+                    </p>
+                  )}
                   <p className="mt-1 max-w-4xl text-sm leading-relaxed text-muted">
                     {campaign.alert?.whatChanged}
                   </p>
@@ -255,32 +297,125 @@ export default function Home() {
                       {campaign.actionLabel} &rarr;
                     </a>
                   </div>
-                  <p className="mt-2 text-[10px] leading-tight text-muted/80">
-                    {art.sourceUrl ? (
-                      <a
-                        href={art.sourceUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline decoration-rule underline-offset-2 hover:text-accent"
-                      >
-                        {art.attribution}
-                      </a>
-                    ) : (
-                      art.attribution
-                    )}
-                  </p>
                 </div>
               </article>
             );
           })}
         </div>
 
-        <p className="mt-3 text-sm">
+        <div className="mt-7 grid gap-7 lg:grid-cols-2">
+          {[
+            {
+              title: "Developments to monitor",
+              alerts: watchAlerts,
+              description:
+                "Diocesan or parish developments without a documented public campaign.",
+            },
+            {
+              title: "Buildings at risk",
+              alerts: buildingAlerts,
+              description:
+                "Former parish buildings whose sale, demolition, or physical future remains at stake.",
+            },
+          ].map((group) => (
+            <section key={group.title}>
+              <div className="flex items-baseline justify-between gap-3">
+                <h3 className="font-serif text-xl font-semibold">
+                  {group.title}
+                </h3>
+                <span className="text-sm text-muted">
+                  {group.alerts.length}
+                </span>
+              </div>
+              <p className="mt-1 text-sm leading-relaxed text-muted">
+                {group.description}
+              </p>
+              <div className="mt-3 divide-y divide-rule border-y border-rule">
+                {group.alerts.map((alert) => {
+                  const art = lineDrawingForLink(alert.parishLink);
+                  return (
+                    <article
+                      key={alert.id}
+                      className={`py-3 ${art ? "grid grid-cols-[4.75rem_minmax(0,1fr)] gap-3" : ""}`}
+                    >
+                      {art && (
+                        <Link
+                          href={alert.parishLink}
+                          aria-label={`Open ${alert.entity} parish profile`}
+                          className="relative block aspect-square self-start overflow-hidden border border-rule bg-white p-1.5 hover:border-accent"
+                          title={art.attribution}
+                        >
+                          <Image
+                            src={art.src}
+                            alt=""
+                            fill
+                            sizes="76px"
+                            className="object-contain mix-blend-multiply"
+                          />
+                        </Link>
+                      )}
+                      <div className="min-w-0">
+                        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                          <Link
+                            href={alert.parishLink}
+                            className="font-serif font-semibold underline decoration-rule underline-offset-2 hover:text-accent"
+                          >
+                            {alert.entity}
+                          </Link>
+                          <span className="text-sm text-muted">
+                            {alert.place}
+                          </span>
+                        </div>
+                        <div className="mt-2 flex flex-wrap items-center gap-2">
+                          <EndStatePill
+                            value={statusForLink(alert.parishLink)}
+                          />
+                          <DiocesePill name={alert.diocese} />
+                        </div>
+                        <p className="mt-1">
+                          <DiocesanLeaderLink diocese={alert.diocese} />
+                        </p>
+                        <p className="mt-2 text-sm leading-relaxed text-muted">
+                          {alert.whatChanged}
+                        </p>
+                        <p className="mt-2 text-xs leading-relaxed text-muted">
+                          <Link
+                            href={alert.parishLink}
+                            className="font-medium underline hover:text-foreground"
+                          >
+                            Parish profile
+                          </Link>
+                          {" · Sources: "}
+                          {alert.sources.map((source, index) => (
+                            <span key={source.url}>
+                              {index > 0 && " · "}
+                              <a
+                                href={source.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline hover:text-foreground"
+                              >
+                                {source.publisher}
+                              </a>
+                            </span>
+                          ))}
+                        </p>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+            </section>
+          ))}
+        </div>
+
+        <p className="mt-5 text-sm text-muted">
+          Current snapshot: {alertsData.snapshot}.{" "}
           <Link
-            href="/under-threat"
+            href="/report"
             className="font-medium underline underline-offset-4 hover:text-accent"
           >
-            See everything happening now &rarr;
+            Report a current change &rarr;
           </Link>
         </p>
       </section>
