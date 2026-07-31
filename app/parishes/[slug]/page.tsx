@@ -668,9 +668,64 @@ export default async function ParishPage({
     !!core?.survivedReviewThenClosed ||
     !!core?.notes ||
     !!entry.conflicts?.length;
+  const statusBadges =
+    !researchOnly || parishAlert || watchEntry ? (
+      <div
+        className={`${photo ? "mt-4" : "mt-3"} flex flex-wrap items-center gap-3`}
+      >
+        {!researchOnly && (
+          <EndStatePill
+            value={endState}
+            size="lg"
+            label={
+              recordType === "misija" && endState === "active_parish"
+                ? "Active Lithuanian mission"
+                : undefined
+            }
+          />
+        )}
+        {(parishAlert || watchEntry) && (
+          <span
+            className="rounded-full border-2 px-3 py-0.5 text-xs font-semibold"
+            style={{
+              borderColor: parishAlert
+                ? "var(--es-closed)"
+                : "var(--mark-ink)",
+              color: parishAlert ? "var(--es-closed)" : "var(--mark-ink)",
+            }}
+          >
+            {parishAlert ? currentSignalLabel : "Pastoral profile"}
+          </span>
+        )}
+      </div>
+    ) : null;
+  const overviewSection = (
+    <section className="mt-7" aria-labelledby="parish-overview-heading">
+      <h2
+        id="parish-overview-heading"
+        className="font-serif text-xl font-semibold"
+      >
+        Overview
+      </h2>
+      <p
+        className={`${photo ? "" : "max-w-2xl"} mt-3 font-serif text-lg leading-relaxed sm:text-xl`}
+      >
+        {dek}
+      </p>
+      {rest && (
+        <p
+          className={`${photo ? "" : "max-w-2xl"} mt-3 leading-relaxed text-muted`}
+        >
+          {rest}
+        </p>
+      )}
+    </section>
+  );
 
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12">
+    <article
+      className={`mx-auto px-4 py-12 ${photo ? "max-w-4xl" : "max-w-3xl"}`}
+    >
       <p className="text-xs uppercase tracking-widest text-muted">
         <Link href="/record" className="underline hover:text-foreground">
           The Record
@@ -682,21 +737,21 @@ export default async function ParishPage({
       <div
         className={
           photo
-            ? "mt-4 grid grid-cols-[10rem_minmax(0,1fr)] items-start gap-4 sm:grid-cols-[16rem_minmax(0,1fr)] sm:gap-7"
+            ? "mt-4 grid items-start gap-5 md:grid-cols-[20rem_minmax(0,1fr)] md:gap-8 lg:grid-cols-[23rem_minmax(0,1fr)]"
             : ""
         }
       >
         {photo && (
-          <figure className="overflow-hidden rounded-lg border border-rule">
+          <figure className="w-full max-w-md overflow-hidden rounded-lg border border-rule md:max-w-none">
             <Image
               src={photo.src}
               alt={photo.alt}
-              width={360}
-              height={270}
+              width={720}
+              height={isLineDrawing ? 720 : 540}
               loading="eager"
               className={
                 isLineDrawing
-                  ? "aspect-[4/3] w-full bg-[#fffdf9] object-contain p-2"
+                  ? "aspect-square w-full bg-[#fffdf9] object-contain p-3"
                   : "aspect-[4/3] w-full object-cover"
               }
             />
@@ -713,9 +768,9 @@ export default async function ParishPage({
           </figure>
         )}
 
-        <div>
+        <div className={photo ? "min-w-0" : ""}>
           <h1
-            className={`${photo ? "text-2xl [overflow-wrap:anywhere]" : "mt-1 text-3xl"} font-serif font-semibold leading-tight sm:text-4xl`}
+            className={`${photo ? "text-3xl [overflow-wrap:anywhere]" : "mt-1 text-3xl"} font-serif font-semibold leading-tight sm:text-4xl`}
           >
             {name}
           </h1>
@@ -725,52 +780,14 @@ export default async function ParishPage({
             {entry.state ? `, ${entry.state}` : ""}
             {entry.country === "CA" ? " · Canada" : ""}
           </p>
+
+          {photo && statusBadges}
+          {photo && overviewSection}
         </div>
       </div>
 
-      {(!researchOnly || parishAlert || watchEntry) && (
-        <div className="mt-3 flex flex-wrap items-center gap-3">
-          {!researchOnly && (
-            <EndStatePill
-              value={endState}
-              size="lg"
-              label={
-                recordType === "misija" && endState === "active_parish"
-                  ? "Active Lithuanian mission"
-                  : undefined
-              }
-            />
-          )}
-          {(parishAlert || watchEntry) && (
-            <span
-              className="rounded-full border-2 px-3 py-0.5 text-xs font-semibold"
-              style={{
-                borderColor: parishAlert
-                  ? "var(--es-closed)"
-                  : "var(--mark-ink)",
-                color: parishAlert ? "var(--es-closed)" : "var(--mark-ink)",
-              }}
-            >
-              {parishAlert ? currentSignalLabel : "Pastoral profile"}
-            </span>
-          )}
-        </div>
-      )}
-
-      <section className="mt-7" aria-labelledby="parish-overview-heading">
-        <h2
-          id="parish-overview-heading"
-          className="font-serif text-xl font-semibold"
-        >
-          Overview
-        </h2>
-        <p className="mt-3 max-w-2xl font-serif text-lg leading-relaxed sm:text-xl">
-          {dek}
-        </p>
-        {rest && (
-          <p className="mt-3 max-w-2xl leading-relaxed text-muted">{rest}</p>
-        )}
-      </section>
+      {!photo && statusBadges}
+      {!photo && overviewSection}
 
       <div className="mt-4 flex flex-wrap gap-1.5">
         <span className="rounded-full border border-rule px-2.5 py-0.5 text-xs font-medium">
