@@ -3,6 +3,7 @@ import Link from "next/link";
 import alertsData from "@/data/alerts.json";
 import contextPointsData from "@/data/context-points.json";
 import networkData from "@/data/sielovada-us-network.json";
+import siteFigures from "@/data/site-figures.json";
 import {
   DiocesePill,
   DiocesanLeaderLink,
@@ -197,6 +198,16 @@ const worshipStateCount = new Set(
   worshipEntries.map((entry) => entry.state),
 ).size;
 
+if (
+  entries.length !== siteFigures.currentCatholicLife.officialListings ||
+  worshipEntries.length !== siteFigures.currentCatholicLife.worshipPlaces ||
+  worshipStateCount !== siteFigures.currentCatholicLife.states
+) {
+  throw new Error(
+    "Current Catholic life figures do not match site-figures.json",
+  );
+}
+
 function NetworkEntryRow({ entry }: { entry: NetworkEntry }) {
   const profileHref = profileHrefForEntry(entry);
   const sustainability = profileHref
@@ -311,18 +322,21 @@ export default function LithuanianCatholicLifeTodayPage() {
             ariaLabel={`${worshipEntries.length} places with confirmed current Lithuanian Catholic worship across ${worshipStateCount} states`}
             legend={[
               {
-                label: `Parish · ${networkData.counts.activeParishes}`,
+                label:
+                  `Parish · ${siteFigures.currentCatholicLife.activeParishes}`,
                 color: "var(--es-active)",
                 shape: "circle",
               },
               {
-                label: `Mission · ${networkData.counts.activeMissions}`,
+                label:
+                  `Mission · ${siteFigures.currentCatholicLife.activeMissions}`,
                 color: "var(--es-active)",
                 shape: "circle",
                 hollow: true,
               },
               {
-                label: `Hosted Mass · ${networkData.counts.massContinues}`,
+                label:
+                  `Hosted Mass · ${siteFigures.currentCatholicLife.hostedMasses}`,
                 color: "var(--es-mass)",
                 shape: "circle",
                 hollow: true,
@@ -342,18 +356,19 @@ export default function LithuanianCatholicLifeTodayPage() {
               places still gather for Lithuanian Catholic worship
             </h2>
             <p className="mt-3 leading-relaxed text-muted">
-              {networkData.counts.activeParishes} are Lithuanian parishes,{" "}
-              {networkData.counts.activeMissions} are missions, and{" "}
-              {networkData.counts.massContinues} are Lithuanian Masses hosted
+              {siteFigures.currentCatholicLife.activeParishes} are Lithuanian
+              parishes, {siteFigures.currentCatholicLife.activeMissions} are
+              missions, and {siteFigures.currentCatholicLife.hostedMasses} are
+              Lithuanian Masses hosted
               by another parish. The surviving network reaches{" "}
               {worshipStateCount} states.
             </p>
           </div>
         </div>
         <p className="mt-5 border-t border-rule pt-3 text-xs leading-relaxed text-muted">
-          Scope: {networkData.counts.listed} official U.S. network
-          listings; map population: {worshipEntries.length} places with current
-          worship · Checked {networkData.source.checked} · Source:{" "}
+          Scope: {siteFigures.currentCatholicLife.officialListings} official
+          U.S. network listings; map population: {worshipEntries.length} places
+          with current worship · Checked {networkData.source.checked} · Source:{" "}
           <a
             href={networkData.source.url}
             target="_blank"
@@ -371,9 +386,9 @@ export default function LithuanianCatholicLifeTodayPage() {
 
       <CurrentLifeFactSheet
         places={worshipEntries.length}
-        parishes={networkData.counts.activeParishes}
-        missions={networkData.counts.activeMissions}
-        hostedMasses={networkData.counts.massContinues}
+        parishes={siteFigures.currentCatholicLife.activeParishes}
+        missions={siteFigures.currentCatholicLife.activeMissions}
+        hostedMasses={siteFigures.currentCatholicLife.hostedMasses}
         states={worshipStateCount}
         profiledCommunities={currentLifeSustainabilityEntries.length}
         lithuanianPastors={lithuanianKlebonasCount}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import contextPointsData from "@/data/context-points.json";
 import registry from "@/data/registry-unified.json";
+import siteFigures from "@/data/site-figures.json";
 import { EndStatePill } from "@/components/EndStatePill";
 import RecordLensMap, {
   type RecordLensPoint,
@@ -69,6 +70,18 @@ const DURABLE_ENTRIES = NATIONAL_ENTRIES.filter(
 const SUPPORTING_ENTRIES = NATIONAL_ENTRIES.filter(
   (parish) => parish.record_type !== "parish",
 );
+const PUBLIC_SUPPORTING_ENTRIES = SUPPORTING_ENTRIES.filter(
+  (parish) => parish.record_type === "congregation",
+);
+
+if (
+  DURABLE_ENTRIES.length !==
+    siteFigures.publicUS.nationalIndependentCatholicParishes ||
+  PUBLIC_SUPPORTING_ENTRIES.length !==
+    siteFigures.publicUS.nationalIndependentCatholicCongregations
+) {
+  throw new Error("National Catholic figures do not match site-figures.json");
+}
 
 function yearDisplay(variants?: YearVariant[]): string | null {
   if (!variants?.length) return null;

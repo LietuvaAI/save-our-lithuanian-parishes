@@ -6,7 +6,8 @@ import TimelineChart, {
   type UndatedRow,
 } from "@/components/TimelineChart";
 import type { FateKey } from "@/components/ParishThreads";
-import { scopedParishes, usRegistryParishes } from "@/lib/registry-scope";
+import siteFigures from "@/data/site-figures.json";
+import { scopedParishes } from "@/lib/registry-scope";
 import {
   toGroup,
   isLoss,
@@ -178,7 +179,7 @@ function buildData() {
         Math.floor(p.founded / 10) * 10,
         (foundedByDecade.get(Math.floor(p.founded / 10) * 10) ?? 0) + 1,
       );
-    if (p.closed)
+    if (p.closed && toGroup(p.endState) === "closed")
       closedByDecade.set(
         Math.floor(p.closed / 10) * 10,
         (closedByDecade.get(Math.floor(p.closed / 10) * 10) ?? 0) + 1,
@@ -189,10 +190,12 @@ function buildData() {
   const [peakFoundDecade, peakFoundN] = peak(foundedByDecade);
   const [peakClosedDecade, peakClosedN] = peak(closedByDecade);
   const closedSince1990 = all.filter(
-    (p) => p.closed && p.closed >= 1990,
+    (p) =>
+      toGroup(p.endState) === "closed" && p.closed && p.closed >= 1990,
   ).length;
   const closedSince2020 = all.filter(
-    (p) => p.closed && p.closed >= 2020,
+    (p) =>
+      toGroup(p.endState) === "closed" && p.closed && p.closed >= 2020,
   ).length;
   const lifespans = all
     .filter((p) => isLoss(p.endState) && p.founded && p.closed)
@@ -241,14 +244,22 @@ export default function HistoryPage() {
     total,
     narrative,
   } = buildData();
-  const fullRecord = usRegistryParishes();
-  const fullRecordTotal = fullRecord.length;
-  const romanCatholicMissions = fullRecord.filter(
-    (entry) =>
-      entry.congregation_class === "roman_catholic" &&
-      entry.record_type === "misija",
-  ).length;
-  const otherCommunities = fullRecordTotal - total - romanCatholicMissions;
+  const fullRecordTotal = siteFigures.publicUS.records;
+  const romanCatholicMissions = siteFigures.publicUS.romanCatholicMissions;
+  const otherCommunities =
+    siteFigures.publicUS.nationalIndependentCatholicCommunities +
+    siteFigures.publicUS.protestantCommunities;
+
+  if (
+    total !== siteFigures.history.parishes ||
+    lost !== siteFigures.history.closed ||
+    standing !== siteFigures.history.status.active_parish ||
+    hostedMass !== siteFigures.history.status.mass_continues ||
+    narrative.closedSince1990 !== siteFigures.history.closedSince1990 ||
+    narrative.closedSince2020 !== siteFigures.history.closedSince2020
+  ) {
+    throw new Error("History figures do not match data/site-figures.json");
+  }
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">

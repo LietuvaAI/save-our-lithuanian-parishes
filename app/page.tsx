@@ -10,34 +10,19 @@ import {
 import { EndStatePill } from "@/components/EndStatePill";
 import alertsData from "@/data/alerts.json";
 import networkData from "@/data/sielovada-us-network.json";
+import siteFigures from "@/data/site-figures.json";
 import { getClearedPhoto } from "@/lib/photos";
 import { scopedParishes } from "@/lib/registry-scope";
-import { toGroup, type EndState } from "@/lib/end-state";
+import type { EndState } from "@/lib/end-state";
 
-// Homepage figures use the same U.S. register scope as The History and map.
+// Homepage figures come from the build-validated public figure contract.
 const romanCatholicParishes = scopedParishes();
-const REG_ETHNIC = romanCatholicParishes.length;
-const REG_CLOSED = romanCatholicParishes.filter(
-  (p) => toGroup(p.endState) === "closed",
-).length;
-const REG_CLOSED_SINCE_1990 = romanCatholicParishes.filter(
-  (p) =>
-    toGroup(p.endState) === "closed" &&
-    p.closed != null &&
-    p.closed >= 1990,
-).length;
-const lossesByDiocese = new Map<string, number>();
-for (const parish of romanCatholicParishes) {
-  if (toGroup(parish.endState) !== "closed" || !parish.diocese) continue;
-  lossesByDiocese.set(
-    parish.diocese,
-    (lossesByDiocese.get(parish.diocese) ?? 0) + 1,
-  );
-}
-const TOP_LOSS_DIOCESES = [...lossesByDiocese.entries()].sort(
-  ([nameA, countA], [nameB, countB]) =>
-    countB - countA || nameA.localeCompare(nameB),
-).slice(0, 2);
+const REG_ETHNIC = siteFigures.history.parishes;
+const REG_CLOSED = siteFigures.history.closed;
+const REG_CLOSED_SINCE_1990 = siteFigures.history.closedSince1990;
+const TOP_LOSS_DIOCESES = siteFigures.history.topClosureDioceses.map(
+  ({ diocese, closed }) => [diocese, closed] as const,
+);
 const TOP_TWO_LOSS_COUNT = TOP_LOSS_DIOCESES.reduce(
   (total, [, count]) => total + count,
   0,
@@ -50,9 +35,14 @@ const CURRENT_WORSHIP_CLASSES = new Set([
 const currentWorshipEntries = networkData.entries.filter((entry) =>
   CURRENT_WORSHIP_CLASSES.has(entry.networkClass),
 );
-const CURRENT_WORSHIP_STATES = new Set(
-  currentWorshipEntries.map((entry) => entry.state),
-).size;
+const CURRENT_WORSHIP_STATES = siteFigures.currentCatholicLife.states;
+
+if (
+  romanCatholicParishes.length !== siteFigures.history.parishes ||
+  currentWorshipEntries.length !== siteFigures.currentCatholicLife.worshipPlaces
+) {
+  throw new Error("Homepage populations do not match data/site-figures.json");
+}
 
 type CurrentAlert = {
   id: string;
@@ -159,7 +149,7 @@ const ACTIONS = [
   },
   {
     title: "Arm your community with the facts",
-    body: "The deadlines, the seven reasons that don't count, the procedural rights that have reversed closures, and 26 precedents — assembled for your parish council.",
+    body: `The deadlines, the seven reasons that don't count, the procedural rights that have reversed closures, and ${siteFigures.reversals.documented} precedents — assembled for your parish council.`,
     cta: "Start here",
     href: "/start-here",
     primary: false,
@@ -426,14 +416,14 @@ export default function Home() {
             Lithuanian Catholic life today
           </h2>
           <span className="text-sm text-muted">
-            {currentWorshipEntries.length} places
+            {siteFigures.currentCatholicLife.worshipPlaces} places
           </span>
         </div>
         <p className="mt-1 text-sm text-muted leading-relaxed">
           Current Lithuanian Catholic worship gathers at{" "}
-          {networkData.counts.activeParishes} parishes,{" "}
-          {networkData.counts.activeMissions} missions, and{" "}
-          {networkData.counts.massContinues} hosted Masses across{" "}
+          {siteFigures.currentCatholicLife.activeParishes} parishes,{" "}
+          {siteFigures.currentCatholicLife.activeMissions} missions, and{" "}
+          {siteFigures.currentCatholicLife.hostedMasses} hosted Masses across{" "}
           {CURRENT_WORSHIP_STATES} states.
         </p>
         <p className="mt-2 text-sm">

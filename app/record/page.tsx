@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RegistryTable, { type RegistryRow } from "@/components/RegistryTable";
+import siteFigures from "@/data/site-figures.json";
 import { toScopedParish, usRegistryParishes } from "@/lib/registry-scope";
 import { toGroup } from "@/lib/end-state";
 import { resolveAlertStatus, resolveFate } from "@/lib/unified-status";
@@ -39,25 +40,16 @@ function buildRows(): RegistryRow[] {
 
 export default function RecordPage() {
   const rows = buildRows();
-  const total = rows.length;
-  const romanCatholicParishes = rows.filter(
-    (row) =>
-      row.congregationClass === "roman_catholic" &&
-      row.recordType === "parish",
-  ).length;
-  const romanCatholicMissions = rows.filter(
-    (row) =>
-      row.congregationClass === "roman_catholic" &&
-      row.recordType === "misija",
-  ).length;
-  const nationalIndependent = rows.filter(
-    (row) =>
-      row.congregationClass === "national_catholic_pncc" ||
-      row.congregationClass === "independent_catholic",
-  ).length;
-  const protestant = rows.filter(
-    (row) => row.congregationClass === "non_catholic_christian",
-  ).length;
+  const total = siteFigures.publicUS.records;
+  const romanCatholicParishes = siteFigures.publicUS.romanCatholicParishes;
+  const romanCatholicMissions = siteFigures.publicUS.romanCatholicMissions;
+  const nationalIndependent =
+    siteFigures.publicUS.nationalIndependentCatholicCommunities;
+  const protestant = siteFigures.publicUS.protestantCommunities;
+
+  if (rows.length !== total) {
+    throw new Error("The Record population does not match site-figures.json");
+  }
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">

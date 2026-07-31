@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import GuidanceNav from "@/components/GuidanceNav";
+import siteFigures from "@/data/site-figures.json";
 
 export const metadata: Metadata = {
   title: "Facing a parish closure? Start here",
@@ -48,8 +49,8 @@ export default function StartHerePage() {
         </h2>
         <div className="mt-3 space-y-3 leading-relaxed">
           <p>
-            Twenty-six U.S. parish closures have been reversed by the
-            Church&rsquo;s own process. Every one of them was a{" "}
+            {siteFigures.reversals.documented} U.S. parish closures have been
+            reversed by the Church&rsquo;s own process. Every one of them was a{" "}
             <strong>non-Lithuanian parish</strong>.
           </p>
           <p>
@@ -61,11 +62,12 @@ export default function StartHerePage() {
             <strong>
               the window that works is the one before the letter arrives.
             </strong>{" "}
-            The 26 cases documented here are a public record for every
-            community to learn from — Lithuanian or not. We keep them because
-            the experience of one parish is the knowledge of another. Standing
-            up for a parish inside the Church&rsquo;s own law is not standing
-            against the Church. It is asking the Church to follow it.
+            The {siteFigures.reversals.documented} cases documented here are a
+            public record for every community to learn from — Lithuanian or
+            not. We keep them because the experience of one parish is the
+            knowledge of another. Standing up for a parish inside the
+            Church&rsquo;s own law is not standing against the Church. It is
+            asking the Church to follow it.
           </p>
           <p className="text-sm text-muted">
             See{" "}
@@ -171,7 +173,8 @@ export default function StartHerePage() {
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          4. It has worked — 26 times, in other parishes
+          4. It has worked — {siteFigures.reversals.documented} times, in other
+          parishes
         </h2>
         <p className="mt-2 leading-relaxed">
           Rome has reversed U.S. parish closures in three diocesan waves —
@@ -189,16 +192,17 @@ export default function StartHerePage() {
         </p>
         <p className="mt-3 leading-relaxed text-muted">
           In the documented Lithuanian closures, no appeal filed after the decree
-          arrived reversed a closure. The 26 national precedents show what is
-          possible — but only when a community moves before the decree or
-          within the appeal window.
+          arrived reversed a closure. The {siteFigures.reversals.documented}{" "}
+          national precedents show what is possible — but only when a community
+          moves before the decree or within the appeal window.
         </p>
         <p className="mt-3">
           <Link
             href="/reversals"
             className="font-medium underline hover:text-foreground"
           >
-            Read all 26 precedents, with decree numbers and sources →
+            Read all {siteFigures.reversals.documented} precedents, with decree
+            numbers and sources →
           </Link>
         </p>
       </section>

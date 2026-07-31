@@ -1,0 +1,82 @@
+{
+  "generatedFrom": {
+    "registryRevision": 7,
+    "registryDate": "2026-07-30",
+    "networkChecked": "2026-07-29"
+  },
+  "researchRegistry": {
+    "records": 197,
+    "profiles": 197
+  },
+  "publicUS": {
+    "records": 168,
+    "romanCatholicParishes": 142,
+    "romanCatholicMissions": 4,
+    "romanCatholicInstitutions": 146,
+    "nationalIndependentCatholicCommunities": 14,
+    "nationalIndependentCatholicParishes": 12,
+    "nationalIndependentCatholicCongregations": 2,
+    "protestantCommunities": 8,
+    "protestantParishes": 4,
+    "protestantCongregations": 4,
+    "status": {
+      "active_parish": 9,
+      "closed": 104,
+      "mass_continues": 5,
+      "transferred": 23,
+      "unresolved": 4,
+      "unverified": 23
+    }
+  },
+  "history": {
+    "parishes": 142,
+    "status": {
+      "active_parish": 7,
+      "closed": 92,
+      "mass_continues": 5,
+      "transferred": 21,
+      "unresolved": 4,
+      "unverified": 13
+    },
+    "closed": 92,
+    "closedWithDatedYear": 83,
+    "closedSince1990": 57,
+    "closedSince2020": 5,
+    "topClosureDioceses": [
+      {
+        "diocese": "Scranton",
+        "closed": 12
+      },
+      {
+        "diocese": "Chicago",
+        "closed": 11
+      }
+    ]
+  },
+  "currentCatholicLife": {
+    "officialListings": 20,
+    "worshipPlaces": 14,
+    "activeParishes": 7,
+    "activeMissions": 2,
+    "hostedMasses": 5,
+    "states": 9
+  },
+  "canonicalCore": {
+    "sourceRows": 83,
+    "identities": 82,
+    "canadianComparators": 3
+  },
+  "coalRegion": {
+    "parishes": 15,
+    "dioceseOwned": 14,
+    "dioceseEnded": 11,
+    "dioceseStanding": 3,
+    "communityOwned": 1
+  },
+  "reversals": {
+    "documented": 26,
+    "excluded": 2,
+    "pending": 14,
+    "verified": 12
+  }
+}

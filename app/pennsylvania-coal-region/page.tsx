@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import contextPointsData from "@/data/context-points.json";
 import registry from "@/data/registry-unified.json";
+import siteFigures from "@/data/site-figures.json";
 import CoalRegionMatrix, {
   type CoalMatrixCell,
   type CoalMatrixParish,
@@ -11,8 +12,7 @@ import type { EndState } from "@/lib/end-state";
 
 export const metadata: Metadata = {
   title: "The Pennsylvania Coal Region",
-  description:
-    "The 15 Lithuanian parishes documented in northeastern Pennsylvania's coal region, compared by ownership and outcome.",
+  description: `The ${siteFigures.coalRegion.parishes} Lithuanian parishes documented in northeastern Pennsylvania's coal region, compared by ownership and outcome.`,
 };
 
 const coalRegion = parishes
@@ -57,6 +57,16 @@ const standingDioceseOwned = dioceseOwned.filter(
 const unresolved = dioceseOwned.filter(
   (parish) => statusForParish(parish) === "unresolved",
 );
+
+if (
+  coalRegion.length !== siteFigures.coalRegion.parishes ||
+  dioceseOwned.length !== siteFigures.coalRegion.dioceseOwned ||
+  closedByDiocese.length !== siteFigures.coalRegion.dioceseEnded ||
+  standingDioceseOwned.length !== siteFigures.coalRegion.dioceseStanding ||
+  communityOwned.length !== siteFigures.coalRegion.communityOwned
+) {
+  throw new Error("Coal-region figures do not match site-figures.json");
+}
 
 function matrixParishes(records: Parish[]): CoalMatrixParish[] {
   return records.map((parish) => ({

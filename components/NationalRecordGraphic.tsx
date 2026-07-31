@@ -48,7 +48,7 @@ export default function NationalRecordGraphic({
     },
     {
       value: concentratedLosses,
-      label: ["closed in Scranton", "or Chicago"],
+      label: [`closed in ${firstDiocese}`, `or ${secondDiocese}`],
       color: GREEN,
     },
   ];
@@ -78,7 +78,7 @@ export default function NationalRecordGraphic({
           <svg
             viewBox="0 0 1200 470"
             role="img"
-            aria-label={`${total} documented parishes, ${closed} closed, ${closedSince1990} closures dated since 1990, and ${concentratedLosses} losses concentrated in Scranton and Chicago`}
+            aria-label={`${total} documented parishes, ${closed} closed, ${closedSince1990} closures dated since 1990, and ${concentratedLosses} losses concentrated in ${firstDiocese} and ${secondDiocese}`}
             className="hidden h-auto w-full sm:block"
           >
             <rect width="1200" height="520" fill={PAPER} />
@@ -197,7 +197,7 @@ export default function NationalRecordGraphic({
           <div
             className="divide-y divide-rule border-y border-rule sm:hidden"
             role="img"
-            aria-label={`${total} documented parishes, ${closed} closed, ${closedSince1990} closures dated since 1990, and ${concentratedLosses} losses concentrated in Scranton and Chicago`}
+            aria-label={`${total} documented parishes, ${closed} closed, ${closedSince1990} closures dated since 1990, and ${concentratedLosses} losses concentrated in ${firstDiocese} and ${secondDiocese}`}
           >
             {stages.map((stage, index) => (
               <div

@@ -84,13 +84,13 @@ function DecadePulse({
     for (const r of rows) {
       const fd = Math.floor(r.founded / 10) * 10;
       if (map.has(fd)) map.get(fd)!.founded++;
-      if (r.closed) {
+      if (r.closed && toGroup(r.endState) === "closed") {
         const cd = Math.floor(r.closed / 10) * 10;
         if (map.has(cd)) map.get(cd)!.closed++;
       }
     }
     for (const u of undated) {
-      if (u.closed) {
+      if (u.closed && toGroup(u.endState) === "closed") {
         const cd = Math.floor(u.closed / 10) * 10;
         if (map.has(cd)) map.get(cd)!.closed++;
       }

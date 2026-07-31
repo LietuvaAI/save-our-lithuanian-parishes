@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AboutNav from "@/components/AboutNav";
 import revisionHistory from "@/data/registry-revisions.json";
+import siteFigures from "@/data/site-figures.json";
 
 const REGISTRY_REVISIONS = revisionHistory.revisions.slice().reverse();
 
@@ -58,7 +59,10 @@ export default function AboutTheDataPage() {
         </p>
         <p className="mt-2 leading-relaxed">
           The initial canonical corpus of{" "}
-          <strong>82 parish identities</strong> now has complete case files.
+          <strong>
+            {siteFigures.canonicalCore.identities} parish identities
+          </strong>{" "}
+          now has complete case files.
           The remaining registry is being reviewed in bounded tranches under
           the same standard.
         </p>
@@ -124,6 +128,50 @@ export default function AboutTheDataPage() {
           ledger. Site figures are derived from the registry and validated
           against it before publication.
         </p>
+        <div className="mt-4 overflow-x-auto border-y border-rule">
+          <table className="w-full min-w-[34rem] text-left text-sm">
+            <thead className="text-xs uppercase text-muted">
+              <tr>
+                <th className="py-2 pr-4 font-medium">Public surface</th>
+                <th className="py-2 font-medium">Population counted</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-rule">
+              <tr>
+                <th className="py-3 pr-4 font-semibold">The Record</th>
+                <td className="py-3">
+                  {siteFigures.publicUS.records} public U.S. institutions: {" "}
+                  {siteFigures.publicUS.romanCatholicParishes} Roman Catholic
+                  parishes, {siteFigures.publicUS.romanCatholicMissions} Roman
+                  Catholic missions, {" "}
+                  {siteFigures.publicUS.nationalIndependentCatholicCommunities}{" "}
+                  National or independent Catholic communities, and {" "}
+                  {siteFigures.publicUS.protestantCommunities} Protestant
+                  communities.
+                </td>
+              </tr>
+              <tr>
+                <th className="py-3 pr-4 font-semibold">The History</th>
+                <td className="py-3">
+                  {siteFigures.history.parishes} U.S. Roman Catholic parishes;
+                  missions and other traditions are outside this historical
+                  comparison.
+                </td>
+              </tr>
+              <tr>
+                <th className="py-3 pr-4 font-semibold">
+                  Catholic Life Today
+                </th>
+                <td className="py-3">
+                  {siteFigures.currentCatholicLife.worshipPlaces} places with
+                  current Lithuanian Catholic worship, from {" "}
+                  {siteFigures.currentCatholicLife.officialListings} official
+                  network listings.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section className="mt-10">
