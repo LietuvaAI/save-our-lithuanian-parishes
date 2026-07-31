@@ -15,15 +15,11 @@ import {
   ParishRecordReadings,
   RECORD_TYPE_LABEL,
   isCommunityRecord,
-  parishHistoryLead,
+  parishHistoryLeadNarrative,
 } from "@/components/ParishResearchRecord";
 import { ProfileSourceLedger } from "@/components/ProfileSourceLedger";
 import { splitStory } from "@/lib/dek";
-import {
-  GROUP_DESCRIPTION,
-  isLoss,
-  type EndState,
-} from "@/lib/end-state";
+import { isLoss, type EndState } from "@/lib/end-state";
 import {
   canonicalParishProfiles,
   getCanonicalParishProfile,
@@ -195,20 +191,6 @@ function profileName(profile: CanonicalParishProfile) {
   );
 }
 
-function historyLeadSentence(sourceLead: string | null) {
-  if (!sourceLead || /^documented by\b/i.test(sourceLead)) return "";
-  const fact = sourceLead.trim().replace(/[.\s]+$/, "");
-  if (/^founded\b/i.test(fact)) {
-    return `It was ${fact
-      .replace(/^founded\b/i, "founded")
-      .replace(/^founded as Lithuanian\b/i, "founded as a Lithuanian")}.`;
-  }
-  if (/^(?:new\b|st[.]|šv[.]|the\b|a\b|an\b|this\b|its\b|in\b|by\b|after\b)/i.test(fact)) {
-    return `${fact}.`;
-  }
-  return `The published history identifies it as ${fact.charAt(0).toLowerCase()}${fact.slice(1)}.`;
-}
-
 function profileStory({
   situationText,
   endState,
@@ -234,6 +216,127 @@ function profileStory({
   currentUse: string | null;
   sourceLead: string | null;
 }) {
+  function narrativeSituation(text: string) {
+    if (
+      /^No Lithuanian Šv[.] Kazimiero parish ever stood inside Chicago itself/i.test(
+        text,
+      )
+    ) {
+      return "Šv. Kazimiero belonged to Chicago Heights, a separate city south of Chicago, rather than Chicago itself. The parish was founded in 1911, celebrated its first Mass at Easter 1912, and closed in the late 1980s. Sources give 1987 and 1989; the exact year remains unresolved. Earlier references to Marquette Park and Brighton Park appear to have confused the parish with the Sisters of St. Casimir motherhouse there. Ten stained-glass windows, each donated by a Lithuanian family, reached the Vilnius Archdiocese restoration trust around 2008. Their maker remains uncertain; a proposed attribution to Adolfas Valeška is disputed in Draugas reporting from 2013.";
+    }
+    if (/^Argentina location\b/i.test(text)) {
+      return `${name} belonged to Lithuanian Catholic life in Argentina. It appears here as a diaspora comparator and is not included in United States parish counts.`;
+    }
+    if (
+      /^Diocese closed the parish ~2009 in the Allentown wave; building sold to a private individual/i.test(
+        text,
+      )
+    ) {
+      return "The Diocese of Allentown closed the parish around 2009. The church was sold to R. Demyanovich for about $24,000 to prevent its conversion to warehouse use. This was a private sale, not a community buyout. The parish belongs to the Pennsylvania coal-region story.";
+    }
+    if (/^LNCC, community-governed, never diocesan\./i.test(text)) {
+      return "This community-governed Lithuanian National Catholic parish broke from Roman Catholic authority during the 1916 schism. When it closed in 1972, about 30 to 40 parishioners remained; the community sold the building, which was later demolished. The parish cemetery in Bensalem, Pennsylvania, survives.";
+    }
+    return text
+      .replace(
+        /^Survived an earlier ~(\d{4}) closure danger; ~\$(\d+)K community savings deemed insufficient\. Diocese closed\/merged the parish in (\d{4}) into ([^;]+); building sold to Spanish-speakers\.$/i,
+        "The parish survived a closure threat around $1, although diocesan officials considered its roughly $$$2,000 in community savings insufficient. In $3, the diocese closed the parish and merged it into $4. The church was sold to a Spanish-speaking congregation.",
+      )
+      .replace(
+        /^Diocese closed the parish (June \d{1,2} \d{4}) under Together in Faith, merged into ([^.]+)\. Survived a (\d{4}) closure scare but resistance only delayed the outcome\. Only (\d+) registered parishioners at closure\.$/i,
+        "The diocese closed the parish on $1 under Together in Faith and merged it into $2. The community had survived a closure threat in $3, but its resistance only delayed the outcome. At closure, just $4 parishioners were registered.",
+      )
+      .replace(
+        /^Founded ~(\d{4}); by (\d{4}) described as the ([^.]+)\./i,
+        `${name} was founded around $1. In $2, the surrounding neighborhood was described as the $3.`,
+      )
+      .replace(
+        /^Founded (\d{4}), rebuilt (\d{4});\s*/i,
+        `${name} was founded in $1 and rebuilt in $2. `,
+      )
+      .replace(/^Founded (\d{4});\s*/i, `${name} was founded in $1. `)
+      .replace(/^Founded (\d{4})\.\s*/i, `${name} was founded in $1. `)
+      .replace(/^Closed (\d{4});\s*/i, `The parish closed in $1. `)
+      .replace(/^Survived\b/i, "The parish survived")
+      .replace(
+        /^Bridgeport\.\s*/i,
+        "This was the Lithuanian parish in Chicago's Bridgeport neighborhood. ",
+      )
+      .replace(
+        /\bLetter campaign to the cardinal and Pope failed\./i,
+        "Parishioners appealed to the cardinal and the Pope, but the campaign failed.",
+      )
+      .replace(
+        /;\s*rescue committee concluded saving it was impossible\./i,
+        ". A rescue committee concluded that the church could not be saved.",
+      )
+      .replace(
+        /^Marquette Park\.\s*/i,
+        "This parish serves Chicago's Marquette Park neighborhood. ",
+      )
+      .replace(
+        /^Pilsen\/Brighton Park area\.\s*/i,
+        "The parish served Chicago's Pilsen and Brighton Park area. ",
+      )
+      .replace(
+        /^18th Street\/Pilsen\.\s*/i,
+        "The parish served Chicago's 18th Street and Pilsen neighborhood. ",
+      )
+      .replace(
+        /^Back of the Yards\.\s*/i,
+        "The parish served Chicago's Back of the Yards neighborhood. ",
+      )
+      .replace(
+        /^East Side\.\s*/i,
+        "The parish served Chicago's East Side. ",
+      )
+      .replace(
+        /^Pittsburgh area\.\s*/i,
+        "The parish served the Pittsburgh area. ",
+      )
+      .replace(/^Queens\.\s*/i, "The parish served Queens. ")
+      .replace(
+        /^Last Lithuanian priest died; diocese sold the building to a Mexican Catholic congregation around (\d{4})\./i,
+        "After the parish's last Lithuanian priest died, the diocese sold the church to a Mexican Catholic congregation around $1.",
+      )
+      .replace(
+        /\bLithuanian identity erased\./i,
+        "Its life as a Lithuanian parish ended, while the church continued in another Catholic community.",
+      )
+      .replace(
+        /\bBuilding fate (?:is )?(?:unrecorded|not recorded)\./gi,
+        "What became of the church building has not yet been established.",
+      )
+      .replace(
+        /^Historical reference only; closed (\d{4})\. Building may remain but identity uncertain\.$/i,
+        "The parish closed in $1. The surviving sources do not yet establish whether its church building remains or what became of it.",
+      )
+      .replace(
+        /\bSurvived inside the diocese; by (\d{4}) the sole surviving Lithuanian (?:Roman Catholic|RC) parish in Chicago\./i,
+        "It survived successive diocesan changes. By $1, it was Chicago's sole surviving Lithuanian Roman Catholic parish.",
+      )
+      .replace(
+        /\bChronic deficit covered by the archdiocese as a high-interest loan; building valued ~\$(\d+)M and not parish-owned\./i,
+        "The archdiocese has covered a chronic operating deficit through a high-interest loan. The church building, valued at roughly $$$1 million, remains archdiocesan property.",
+      )
+      .replace(/^Closed (\d{4}) when\b/i, "The parish closed in $1 when")
+      .replace(/(^|[.!?]\s+)Diocese\b/g, "$1The diocese")
+      .replace(/\bclosed\/merged\b/gi, "closed and merged")
+      .replace(/\bSpanish-speakers\b/gi, "a Spanish-speaking congregation")
+      .replace(/\bRC\b/g, "Roman Catholic")
+      .replace(/\s*\(adjudicated \d{4}-\d{2}-\d{2}[^)]*\)/gi, "")
+      .replace(/\s*Registry Revision \d+[^.]*\./gi, "")
+      .replace(/a ~(\d+)-year\b/gi, "a nearly $1-year")
+      .replace(/~end of (\d{4})/gi, "near the end of $1")
+      .replace(/\s~(\d{4})\b/g, " around $1")
+      .replace(
+        /\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|June?|July?|Aug(?:ust)?|Sept?(?:ember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?) (\d{1,2}) (\d{4})\b/g,
+        "$1 $2, $3",
+      )
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
   const internalStatusCopy =
     /documented in (?:the )?(?:draugas )?registry|documented in draugas|minimal (?:research details|documentation)|needs (?:clarification|verification)|status not yet (?:researched|verified)|present status not yet researched|single source only|unnamed\/duplicate parish entry/i;
   const researched =
@@ -241,7 +344,7 @@ function profileStory({
     !internalStatusCopy.test(situationText)
       ? situationText
       : null;
-  if (researched) return splitStory(researched);
+  if (researched) return splitStory(narrativeSituation(researched));
 
   const location = [city, state].filter(Boolean).join(", ");
   const historical =
@@ -253,8 +356,7 @@ function profileStory({
   const institutionCopy =
     institution === "Parish record" ? "parish record" : institution;
   const intro = `${name} ${historical ? "was" : "is"} ${community ? "a Lithuanian worshipping community" : `a ${institutionCopy}`} in ${location}${founded ? `, founded in ${founded}` : ""}.`;
-  const sourceLeadSentence = historyLeadSentence(sourceLead);
-  const opening = [intro, sourceLeadSentence].filter(Boolean).join(" ");
+  const opening = [intro, sourceLead].filter(Boolean).join(" ");
   const knownCurrentUse =
     currentUse && !/^(unknown|not established)$/i.test(currentUse)
       ? currentUse.replace(/\.$/, "")
@@ -310,37 +412,37 @@ function profileStory({
     );
   }
   return splitStory(
-    `${opening} ${GROUP_DESCRIPTION[endState]} Its fuller history remains open for verification.`,
+    `${opening} The surviving sources do not yet establish the community's later history.`,
   );
 }
 
 function researchRecordStory(recordType: string) {
   if (recordType === "phase") {
     return {
-      dek: "The source record documents an independent or national Catholic attempt or phase here. It is preserved as historical evidence, not counted as a durable parish.",
+      dek: "A short-lived independent or national Catholic movement took shape here, but the surviving evidence does not establish a durable parish.",
       rest: null,
     };
   }
   if (recordType === "lead") {
     return {
-      dek: "This is a bounded research lead whose identity or institutional status has not yet been established. It is preserved for verification, not counted as a parish or congregation.",
+      dek: "The surviving evidence points to a possible Lithuanian religious community here, but its name and institutional status remain uncertain.",
       rest: null,
     };
   }
   return {
-    dek: "This entry preserves historical context connected to Lithuanian religious life. It does not establish a separate parish or congregation and is excluded from public institutional counts.",
+    dek: "This place or episode belongs to the history of Lithuanian religious life, but it does not represent a separate parish or congregation.",
     rest: null,
   };
 }
 
 function researchStatusCopy(recordType: string) {
   if (recordType === "phase") {
-    return "This record describes a historical phase or attempt, not a separate present-day parish. The supporting evidence remains linked below.";
+    return "This was a historical attempt or phase, not a separate present-day parish.";
   }
   if (recordType === "lead") {
-    return "This lead remains unresolved until its identity and institutional status can be verified. It is excluded from public counts.";
+    return "The community's identity and institutional status remain unresolved, so it is not included in parish counts.";
   }
-  return "This entry provides historical context rather than documenting a separate parish. It is excluded from public counts.";
+  return "This is historical context rather than a separate parish, and it is not included in parish counts.";
 }
 
 function ownershipLabel(profile: CanonicalParishProfile) {
@@ -412,7 +514,7 @@ export default async function ParishPage({
       : null;
   const community = isCommunityRecord(entry.sources ?? []);
   const institution = institutionLabel(profile, community);
-  const sourceLead = parishHistoryLead(profile);
+  const sourceLead = parishHistoryLeadNarrative(profile);
   const foundedYear = scoped.founded ?? core?.yearFounded ?? null;
   const closedYear = scoped.closed ?? core?.yearClosed ?? null;
   const buildingFate = scoped.buildingFate ?? core?.buildingFate ?? null;
@@ -676,7 +778,7 @@ export default async function ParishPage({
         </span>
         {entry.needs_human_source_review && (
           <span className="rounded-full border border-amber-300 bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-amber-900 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-200">
-            Human source review pending
+            Identity or status unresolved
           </span>
         )}
         {profile.congregationClass === "national_catholic_pncc" && (
@@ -698,7 +800,7 @@ export default async function ParishPage({
 
       <ParishPublishedRecord
         profile={profile}
-        excludeFact={researchOnly ? null : sourceLead}
+        overviewText={researchOnly ? undefined : `${dek} ${rest ?? ""}`}
       />
 
       {hasMap && (
@@ -719,7 +821,7 @@ export default async function ParishPage({
       )}
 
       <section className="mt-10">
-        <h2 className="font-serif text-xl font-semibold">What it was</h2>
+        <h2 className="font-serif text-xl font-semibold">At a glance</h2>
         <dl className="mt-3 grid grid-cols-2 gap-x-8 gap-y-4 text-sm sm:grid-cols-3">
           <div>
             <dt className="text-xs uppercase tracking-wide text-muted">
@@ -850,8 +952,9 @@ export default async function ParishPage({
           !caseRecord &&
           (!situation?.current_use || situation.current_use === "Unknown") && (
             <p className="mt-2 leading-relaxed text-muted">
-              The present-day record for this parish is still being researched.
-              If you know its current state,{" "}
+              The surviving public sources do not yet establish what occupies
+              the building or whether the community continues. If you know
+              what became of it,{" "}
               <Link href="/report" className="underline hover:text-foreground">
                 tell us
               </Link>
@@ -1115,29 +1218,6 @@ export default async function ParishPage({
           </div>
         )}
       </section>
-
-      {profile.recordDepth !== "case-filed" && (
-        <section className="mt-10 border-l-2 border-rule pl-4 text-sm leading-relaxed text-muted">
-          <p>
-            <span className="font-medium text-foreground">
-              {researchOnly
-                ? "This research record is still being deepened."
-                : "This profile is still being deepened."}
-            </span>{" "}
-            {researchOnly
-              ? "The source evidence is public now; further identity and context work remains."
-              : "The source record is public now; archival and present-day case research proceeds parish by parish."}{" "}
-            The research method is described in{" "}
-            <Link
-              href="/about-the-data"
-              className="underline hover:text-foreground"
-            >
-              About the Data
-            </Link>
-            .
-          </p>
-        </section>
-      )}
 
       <section className="mt-10 rounded-lg border border-rule p-5">
         <p className="font-medium">
