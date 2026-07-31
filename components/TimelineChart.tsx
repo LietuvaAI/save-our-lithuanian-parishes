@@ -548,31 +548,6 @@ export default function TimelineChart({
         </button>
       </div>
 
-      {/* ── Undated parishes ── */}
-      {undated.length > 0 && (
-        <div className="mt-6">
-          <p className="text-sm text-muted mb-2">
-            {undated.length} parishes without a known founding date &mdash;
-            each square is one parish:
-          </p>
-          <div className="flex flex-wrap gap-1.5">
-            {undated.map((u) => (
-              <span
-                key={u.slug}
-                className="inline-block w-3.5 h-3.5 rounded-sm cursor-pointer border border-rule/30"
-                style={{
-                  background: END_STATE_COLOR[toGroup(u.endState)],
-                  opacity: rowDimmed(u) ? 0.1 : 1,
-                }}
-                title={`${u.name} — ${u.city}, ${u.state} · ${END_STATE_LABEL[u.endState]}${u.closed ? ` (closed ${u.closed})` : ""}`}
-                onMouseEnter={() => setHovered(u)}
-                onMouseLeave={() => setHovered(null)}
-                onClick={() => u.profileHref && router.push(u.profileHref)}
-              />
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   );
 }

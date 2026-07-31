@@ -492,7 +492,7 @@ export default function HistoryPage() {
           <TimelineChart rows={dated} undated={undated} />
         </div>
 
-        <div className="mt-6 grid border-y border-rule sm:grid-cols-3 sm:divide-x sm:divide-rule">
+        <div className="mt-6 grid border-y border-rule sm:grid-cols-2 sm:divide-x sm:divide-rule">
           {narrative.medianLifespan != null && (
             <div className="border-b border-rule px-3 py-4 sm:border-b-0">
               <p
@@ -532,14 +532,6 @@ export default function HistoryPage() {
               </p>
             </div>
           )}
-          <div className="px-3 py-4">
-            <p className="font-serif text-3xl font-semibold">
-              {undated.length}
-            </p>
-            <p className="mt-1 text-xs leading-snug text-muted">
-              parish founding dates still unresolved
-            </p>
-          </div>
         </div>
 
         <p className="mt-4 text-xs text-muted border-t border-rule pt-3">

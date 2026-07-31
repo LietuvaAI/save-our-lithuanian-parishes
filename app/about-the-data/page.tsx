@@ -7,6 +7,7 @@ import {
   isPublicRecord,
   isSettlement,
   isUS,
+  scopedParishes,
   type RegParish,
 } from "@/lib/registry-scope";
 
@@ -18,6 +19,9 @@ const REGISTRY_TOTAL = (registry as { parishes: RegParish[] }).parishes.filter(
 ).length;
 
 const REGISTRY_REVISIONS = revisionHistory.revisions.slice().reverse();
+const UNDATED_FOUNDINGS = scopedParishes().filter(
+  (parish) => parish.founded == null,
+).length;
 
 export const metadata: Metadata = {
   title: "About the Data",
@@ -165,6 +169,12 @@ export default function AboutTheDataPage() {
           completed, the registry and site figures update automatically;
           protected counts cannot publish if they drift from the parish
           records.
+        </p>
+        <p className="mt-2 leading-relaxed">
+          {UNDATED_FOUNDINGS} Roman Catholic parish records do not yet have a
+          verified founding year. They remain in the registry and public
+          counts, but are omitted from calculations that require a known
+          founding date.
         </p>
       </section>
 
