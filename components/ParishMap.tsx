@@ -15,7 +15,7 @@
 // Who-decided (ending mode) and ownership stay in each parish's popup and
 // profile — the map itself reads at a glance. Views: All · Open today ·
 // Unresolved · Lost. Current campaigns remain a separate ring annotation.
-import { useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import mapData from "@/data/map.json";
@@ -286,7 +286,7 @@ export default function ParishMap() {
     setHovered(p);
   }
   function dotLeave() {
-    leaveTimer.current = setTimeout(() => setHovered(null), 90);
+    leaveTimer.current = setTimeout(() => setHovered(null), 140);
   }
   function cardEnter() {
     if (leaveTimer.current) clearTimeout(leaveTimer.current);
@@ -566,7 +566,10 @@ export default function ParishMap() {
             const active = hovered?.id === p.id;
 
             // Current signals and unresolved records are slightly larger.
-            const r = active ? markR * 1.35 : (p.signalKind || p.status === "unresolved") ? markR * 1.15 : markR;
+            const r =
+              p.signalKind || p.status === "unresolved"
+                ? markR * 1.15
+                : markR;
             const shape = recordMarkShape(p.congregationClass);
             const hollow = isHollowRecordMark({
               group: p.group,
@@ -586,6 +589,12 @@ export default function ParishMap() {
                 role={p.profile ? "button" : undefined}
                 aria-label={`${p.name}, ${p.city} ${p.state} — ${pointStatusLabel(p)}${p.alerted ? " — active campaign" : ""}.${p.profile ? " Open its record." : ""}`}
                 className={p.profile ? "cursor-pointer focus:outline-none" : "focus:outline-none"}
+                style={{
+                  transformBox: "fill-box",
+                  transformOrigin: "center",
+                  transform: active ? "scale(1.35)" : "scale(1)",
+                  transition: "transform 140ms ease-out",
+                }}
               >
                 {/* Outer rings are reserved for current signals. */}
                 {p.signalKind && (
@@ -654,17 +663,19 @@ export default function ParishMap() {
             const lx = ((hovered.x - view.x) / view.w) * 100;
             const ly = ((hovered.y - view.y) / view.h) * 100;
             if (lx < -2 || lx > 102 || ly < -2 || ly > 102) return null;
-            const below = ly < 32;
+            const opensRight = lx < 50;
             return (
               <div
                 onMouseEnter={cardEnter}
                 onMouseLeave={cardLeave}
-                className="absolute z-10 w-72 rounded-lg border border-rule bg-background/95 px-3.5 py-2.5 text-sm shadow-lg"
+                className="map-hover-card absolute z-10 rounded-lg border border-rule bg-background/95 px-3.5 py-2.5 text-sm shadow-lg sm:w-72"
                 style={{
-                  left: `${Math.min(Math.max(lx, 15), 85)}%`,
-                  top: `${ly}%`,
-                  transform: below ? "translate(-50%, 16px)" : "translate(-50%, calc(-100% - 16px))",
-                }}
+                  "--map-hover-x": `${lx}%`,
+                  "--map-hover-y": `${Math.min(Math.max(ly, 25), 75)}%`,
+                  "--map-hover-shift": opensRight
+                    ? "20px"
+                    : "calc(-100% - 20px)",
+                } as CSSProperties}
                 aria-live="polite"
               >
                 <div className="font-serif font-semibold">{hovered.name}</div>
