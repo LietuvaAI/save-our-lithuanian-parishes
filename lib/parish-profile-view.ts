@@ -37,7 +37,7 @@ interface ParishProfileViewInput {
   name: string;
   city: string;
   state: string | null;
-  country: "US" | "CA";
+  country: "US" | "CA" | "AR";
   institution: string;
   founded: number | null;
   closed: number | null;
@@ -56,10 +56,16 @@ interface ParishProfileViewInput {
 }
 
 function location(input: ParishProfileViewInput) {
+  const country =
+    input.country === "CA"
+      ? "Canada"
+      : input.country === "AR"
+        ? "Argentina"
+        : null;
   return [
     input.city,
     input.state,
-    input.country === "CA" ? "Canada" : null,
+    country,
   ]
     .filter(Boolean)
     .join(", ");

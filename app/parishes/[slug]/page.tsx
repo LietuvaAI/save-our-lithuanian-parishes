@@ -892,6 +892,7 @@ export default async function ParishPage({
             {entry.city}
             {entry.state ? `, ${entry.state}` : ""}
             {entry.country === "CA" ? " · Canada" : ""}
+            {entry.country === "AR" ? " · Argentina" : ""}
           </p>
 
           {identityBadges}
@@ -952,7 +953,11 @@ export default async function ParishPage({
                 Country
               </dt>
               <dd className="mt-1">
-                {entry.country === "CA" ? "Canada" : "United States"}
+                {entry.country === "CA"
+                  ? "Canada"
+                  : entry.country === "AR"
+                    ? "Argentina"
+                    : "United States"}
               </dd>
             </div>
             <div>

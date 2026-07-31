@@ -16,15 +16,7 @@ const errors = [];
 const publicTypes = new Set(["parish", "misija", "congregation"]);
 const researchOnlyTypes = new Set(["phase", "lead", "context"]);
 const allowedTypes = new Set([...publicTypes, ...researchOnlyTypes]);
-const isUS = (record) =>
-  record.country !== "CA" &&
-  !/buenos aires|argentin|rosario/i.test(record.city ?? "");
-const isSettlement = (record) =>
-  (record.sources ?? []).some((source) =>
-    /no parish/i.test(source.ethnic_status ?? ""),
-  );
-const isPublic = (record) =>
-  publicTypes.has(record.record_type) && !isSettlement(record);
+const isInstitution = (record) => publicTypes.has(record.record_type);
 const requireRecord = (slug) => {
   const record = bySlug.get(slug);
   if (!record) errors.push(`${slug}: required record is missing`);
@@ -50,7 +42,7 @@ for (const record of records) {
     );
   }
   if (
-    isPublic(record) &&
+    isInstitution(record) &&
     !(record.names?.lt?.trim() || record.names?.en?.trim())
   ) {
     errors.push(`${record.slug}: public record has no human-readable name`);
@@ -87,6 +79,26 @@ const duplicateGroups = [
   {
     canonical: "casimir-worcester-ma",
     aliases: ["parish-worcester-ma-2"],
+  },
+  {
+    canonical: "annunciation-brooklyn-ny",
+    aliases: ["annunciation-maspeth-ny"],
+  },
+  {
+    canonical: "francis-east-chicago-in",
+    aliases: ["francis-indian-harbor-in"],
+  },
+  {
+    canonical: "st-joseph-mahanoy-city-pa",
+    aliases: ["george-mahanoy-city-pa"],
+  },
+  {
+    canonical: "mary-custer-mi",
+    aliases: ["joseph-custer-mi"],
+  },
+  {
+    canonical: "paul-esplen-pa",
+    aliases: ["vincent-pittsburgh-pa"],
   },
 ];
 for (const group of duplicateGroups) {
@@ -153,7 +165,7 @@ const expectedClassifications = {
   "mary-chicago-il": ["parish", "independent_catholic"],
   "parish-chicago-il": ["phase", "non_catholic_christian"],
   "bukauskas-independent-chicago": ["phase", "independent_catholic"],
-  "jonistai-chicago": ["congregation", "independent_catholic"],
+  "jonistai-chicago": ["context", "independent_catholic"],
   "springfield-independent": ["congregation", "independent_catholic"],
   "parish-mt-pleasant-pa": ["context", "roman_catholic"],
   "parish-scottville-mi": ["lead", "roman_catholic"],
@@ -163,6 +175,8 @@ const expectedClassifications = {
     "non_catholic_christian",
   ],
   "parish-chicago-il-3": ["lead", "roman_catholic"],
+  "trinity-new-york-ny": ["phase", "roman_catholic"],
+  "holycross-brooklyn-ny": ["parish", "independent_catholic"],
 };
 for (const [slug, [recordType, congregationClass]] of Object.entries(
   expectedClassifications,
@@ -198,9 +212,7 @@ for (const [field, expected] of Object.entries(expectedCounts)) {
   }
 }
 
-const usPublic = records.filter(
-  (record) => isUS(record) && isPublic(record),
-);
+const usPublic = records.filter((record) => record.public_census?.included);
 const usRomanParishes = usPublic.filter(
   (record) =>
     record.record_type === "parish" &&
@@ -231,6 +243,47 @@ if (waterburyJoseph?.diocese !== "Archdiocese of Hartford") {
   errors.push(
     `joseph-waterbury-ct: expected current Archdiocese of Hartford governance, found ${waterburyJoseph?.diocese ?? "none"}`,
   );
+}
+const expectedJurisdictions = {
+  "anthony-philadelphia-pa": "Archdiocese of Philadelphia",
+  "mary-custer-mi": "Diocese of Grand Rapids",
+  "ss-peter-and-paul-hazleton-pa": "Diocese of Scranton",
+};
+for (const [slug, expectedDiocese] of Object.entries(expectedJurisdictions)) {
+  const record = requireRecord(slug);
+  if (record?.diocese !== expectedDiocese) {
+    errors.push(
+      `${slug}: expected ${expectedDiocese}, found ${record?.diocese ?? "none"}`,
+    );
+  }
+}
+const expectedResearchOnly = {
+  "trinity-new-york-ny": "phase",
+  "parish-baltimore-md": "phase",
+  "jonistai-chicago": "context",
+  "lithuanian-church-chester-pa": "lead",
+};
+for (const [slug, expectedType] of Object.entries(expectedResearchOnly)) {
+  const record = requireRecord(slug);
+  if (record?.record_type !== expectedType || record?.public_census?.included) {
+    errors.push(
+      `${slug}: expected research-only ${expectedType}, found ${record?.record_type}/${record?.public_census?.scope}`,
+    );
+  }
+}
+const brooklynHolyCross = requireRecord("holycross-brooklyn-ny");
+if (brooklynHolyCross?.congregation_class !== "independent_catholic") {
+  errors.push(
+    `holycross-brooklyn-ny: expected independent_catholic, found ${brooklynHolyCross?.congregation_class}`,
+  );
+}
+for (const slug of ["parish-avellaneda-ar", "casimir-rosario-ar"]) {
+  const record = requireRecord(slug);
+  if (record?.country !== "AR" || record?.public_census?.scope !== "international_institution") {
+    errors.push(
+      `${slug}: expected AR international institution scope, found ${record?.country}/${record?.public_census?.scope}`,
+    );
+  }
 }
 if (
   usRomanParishes.some(

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-29",
+  "generated": "2026-07-31",
   "note": "Structured present-state classifiers for canonical registry records. Hand-reviewed cases retain source-linked narrative and explicitly labeled uncertainty; generated records remain provisional until verified.",
   "parishes": {
     "sv-kazimiero-gary-in": {
@@ -1394,30 +1394,49 @@
     },
     "paul-naugatuck-ct": {
       "registry_slug": "paul-naugatuck-ct",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active St. Paul Lutheran Church at 350 Millville Avenue, Naugatuck",
       "lithuanian_identity": "unknown",
       "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+      "situation": "St. Paul remains an active LCMS congregation at its Naugatuck address. Historical sources document its Lithuanian Lutheran community and post-flood rebuilding; current Lithuanian-language worship or community identity has not yet been established.",
+      "sources": [
+        {
+          "title": "St. Paul Lutheran Church, Naugatuck",
+          "publisher": "New England District LCMS",
+          "date": "accessed 2026-07-31",
+          "url": "https://ned-lcms.org/church/st-paul-lutheran-church-naugatuck"
+        },
+        {
+          "title": "Union City history",
+          "publisher": "Naugatuck Historical Society",
+          "date": "accessed 2026-07-31",
+          "url": "https://www.naugatuckhistory.org/unioncity"
+        }
+      ]
     },
     "zion-lithuanian-lutheran-oak-lawn-il": {
       "registry_slug": "zion-lithuanian-lutheran-oak-lawn-il",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Lithuanian Lutheran congregation, not Roman Catholic. Documented in registry but minimal research details available. Status not yet verified."
-    },
-    "francis-indian-harbor-in": {
-      "registry_slug": "francis-indian-harbor-in",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+      "canonical_status": "standing",
+      "building_fate": "standing",
+      "current_use": "Active Zion Lithuanian Lutheran congregation at 9000 Menard Avenue in Oak Lawn, led by Rev. Dr. Valdas Ausra",
+      "lithuanian_identity": "active_parish",
+      "pastoral_status": "own_priest",
+      "situation": "Founded by Lithuanian immigrants in 1910, Zion remains an active LCMS congregation in Oak Lawn under Rev. Dr. Valdas Ausra. The official district directory and the congregation's constitution establish its current institutional life and Lithuanian founding.",
+      "sources": [
+        {
+          "title": "Congregations directory: Zion Lutheran Church, Oak Lawn",
+          "publisher": "Northern Illinois District LCMS",
+          "date": "accessed 2026-07-31",
+          "url": "https://www.nidlcms.org/churches/"
+        },
+        {
+          "title": "Constitution of Zion Lutheran Church",
+          "publisher": "Zion Lutheran Church, Oak Lawn",
+          "date": "accessed 2026-07-31",
+          "url": "https://nidlcms.org/wp-content/uploads/2017/03/Zion-Oak-Lawn-Constitution-2017-06.pdf"
+        }
+      ]
     },
     "mary-custer-mi": {
       "registry_slug": "mary-custer-mi",
@@ -1608,15 +1627,6 @@
       "pastoral_status": "unknown",
       "situation": "Documented in registry but minimal research details available. Coal region."
     },
-    "george-mahanoy-city-pa": {
-      "registry_slug": "george-mahanoy-city-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Coal region."
-    },
     "parish-mt-pleasant-pa": {
       "registry_slug": "parish-mt-pleasant-pa",
       "canonical_status": "unknown",
@@ -1628,15 +1638,6 @@
     },
     "anthony-philadelphia-pa": {
       "registry_slug": "anthony-philadelphia-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
-    },
-    "joseph-custer-mi": {
-      "registry_slug": "joseph-custer-mi",
       "canonical_status": "unknown",
       "building_fate": "unknown",
       "current_use": "Unknown",
@@ -1671,15 +1672,6 @@
       "pastoral_status": "unknown",
       "situation": "Documented in registry but minimal research details available. Status not yet verified."
     },
-    "vincent-pittsburgh-pa": {
-      "registry_slug": "vincent-pittsburgh-pa",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
-    },
     "allsaints-worcester-ma": {
       "registry_slug": "allsaints-worcester-ma",
       "canonical_status": "closed",
@@ -1688,15 +1680,6 @@
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
       "situation": "All Saints was a real, Rome-independent Lithuanian parish that split from St. Casimir and is directly attested in 1909–1910. A secondary history gives 1913, while Draugas reports decline by 1910 and return by 1919; the exact end remains unresolved. No current All Saints independent/national successor or building disposition has been established."
-    },
-    "trinity-new-york-ny": {
-      "registry_slug": "trinity-new-york-ny",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
     },
     "parish-baltimore-md": {
       "registry_slug": "parish-baltimore-md",
@@ -1796,15 +1779,6 @@
       "lithuanian_identity": "unknown",
       "pastoral_status": "unknown",
       "situation": "Canadian location. Documented in registry but minimal research details available. Status not yet verified."
-    },
-    "annunciation-maspeth-ny": {
-      "registry_slug": "annunciation-maspeth-ny",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
     },
     "parish-collinsville-il": {
       "registry_slug": "parish-collinsville-il",

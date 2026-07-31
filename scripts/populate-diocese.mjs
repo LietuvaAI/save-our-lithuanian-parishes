@@ -310,7 +310,7 @@ const unresolved = [];
 
 for (const p of registry.parishes) {
   // Skip non-US parishes
-  if (p.country === "CA" || /buenos aires|argentin|rosario/i.test(p.city ?? "")) {
+  if (p.country !== "US") {
     p.diocese = null;
     stats.skipped++;
     continue;

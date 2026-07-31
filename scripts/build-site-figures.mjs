@@ -15,19 +15,10 @@ const context = read("context-points.json");
 const canonicalRows = read("parishes.json");
 const map = read("map.json");
 const registryMap = read("registry-map.json");
+const publicInstitutionLedger = read("public-institution-ledger.json");
 const network = read("sielovada-us-network.json");
 const reversals = read("reversal-database.json");
 
-const publicTypes = new Set(["parish", "misija", "congregation"]);
-const isSettlement = (record) =>
-  (record.sources ?? []).some((source) =>
-    /no parish/i.test(source.ethnic_status ?? ""),
-  );
-const isUS = (record) =>
-  record.country !== "CA" &&
-  !/buenos aires|argentin|rosario/i.test(record.city ?? "");
-const isPublic = (record) =>
-  publicTypes.has(record.record_type) && !isSettlement(record);
 const count = (records, predicate) => records.filter(predicate).length;
 const tally = (records, keyOf) =>
   Object.fromEntries(
@@ -46,7 +37,18 @@ const expectSum = (label, total, parts) =>
   expect(label, parts.reduce((sum, value) => sum + value, 0), total);
 
 const records = registry.parishes;
-const usPublic = records.filter((record) => isUS(record) && isPublic(record));
+const usPublic = records.filter((record) => record.public_census?.included);
+const canonicalCaseFiled = usPublic.filter(
+  (record) => record.public_census.identity_support === "canonical_case_file",
+);
+const multiSourceCorroborated = usPublic.filter(
+  (record) => record.public_census.identity_support === "multi_source_corroborated",
+);
+const singleSourceAttested = usPublic.filter(
+  (record) => record.public_census.identity_support === "single_source_attested",
+);
+const independentlySupported =
+  canonicalCaseFiled.length + multiSourceCorroborated.length;
 const usRomanCatholicParishes = usPublic.filter(
   (record) =>
     record.record_type === "parish" &&
@@ -115,10 +117,20 @@ const currentWorshipStates = new Set(
 
 const latestRevision = revisions.revisions.at(-1);
 const registryMapUS = registryMap.points.filter(
-  (point) => point.country !== "CA",
+  (point) => point.country === "US",
 ).length;
 
 expect("registry counts.records", registry.counts.records, records.length);
+expect(
+  "public institution ledger revision",
+  publicInstitutionLedger.registryRevision,
+  registry.registryRevision.version,
+);
+expect(
+  "public institution ledger count",
+  publicInstitutionLedger.counts.publicUSInstitutions,
+  usPublic.length,
+);
 expect(
   "latest revision registry count",
   latestRevision.registryRecords,
@@ -183,6 +195,10 @@ const figures = {
   },
   publicUS: {
     records: usPublic.length,
+    independentlySupported,
+    canonicalCaseFiled: canonicalCaseFiled.length,
+    multiSourceCorroborated: multiSourceCorroborated.length,
+    singleSourceAttested: singleSourceAttested.length,
     romanCatholicParishes: usRomanCatholicParishes.length,
     romanCatholicMissions: usRomanCatholicMissions.length,
     romanCatholicInstitutions:
@@ -257,6 +273,7 @@ writeFileSync(
 
 console.log(
   `OK: public figure contract — ${figures.publicUS.records} U.S. records, ` +
+    `${figures.publicUS.independentlySupported} independently supported, ` +
     `${figures.history.parishes} Roman Catholic parishes, ` +
     `${figures.currentCatholicLife.worshipPlaces} current worship places.`,
 );
