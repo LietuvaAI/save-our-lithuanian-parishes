@@ -1011,10 +1011,10 @@ export default async function ParishPage({
                 </a>
               )}
               <Link
-                href="/under-threat"
+                href="/#happening-now"
                 className="inline-flex items-center gap-1 rounded-md border border-rule px-3 py-1.5 text-sm font-medium transition-colors hover:border-foreground"
               >
-                What&rsquo;s happening now &rarr;
+                All current campaigns &rarr;
               </Link>
             </div>
             <p className="mt-2 text-xs text-muted">

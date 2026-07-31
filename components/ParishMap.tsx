@@ -16,6 +16,7 @@
 // profile — the map itself reads at a glance. Views: All · Open today ·
 // Unresolved · Lost. Current campaigns remain a separate ring annotation.
 import { useMemo, useRef, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import mapData from "@/data/map.json";
 import regData from "@/data/registry-map.json";
@@ -1035,9 +1036,9 @@ export default function ParishMap() {
           <span className="text-muted">
             One map — every documented parish, mission, and congregation.
             Hover any mark; click to open its record.{" "}
-            <a href="/under-threat" className="font-medium underline hover:text-foreground">
-              See what&rsquo;s happening now →
-            </a>
+            <Link href="/#happening-now" className="font-medium underline hover:text-foreground">
+              See current campaigns and developments →
+            </Link>
           </span>
         )}
       </div>

@@ -503,8 +503,8 @@ export default function LithuanianCatholicLifeTodayPage() {
           The complete historical Record
         </Link>
         {" · "}
-        <Link href="/under-threat" className="underline hover:text-foreground">
-          What&rsquo;s Happening Now
+        <Link href="/#happening-now" className="underline hover:text-foreground">
+          Current campaigns and developments
         </Link>
       </p>
     </article>

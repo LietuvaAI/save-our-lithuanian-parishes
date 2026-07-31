@@ -53,7 +53,6 @@ const NAV: NavItem[] = [
         href: "/lithuanian-catholic-life-today",
         label: "Lithuanian Catholic Life Today",
       },
-      { href: "/under-threat", label: "What’s Happening Now" },
       { href: "/by-diocese", label: "By Diocese" },
       {
         href: "/pennsylvania-coal-region",
