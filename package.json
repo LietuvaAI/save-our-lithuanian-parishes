@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "data": "node scripts/verify-registry-revision.mjs && node scripts/verify-draugas-citation-coverage.mjs && node scripts/verify-sielovada-network.mjs && node scripts/build-data.mjs && node scripts/verify-canonical-identities.mjs && node scripts/verify-canonical-release.mjs && node scripts/verify-registry-semantics.mjs && node scripts/build-map.mjs && node scripts/build-registry-map.mjs && node scripts/build-diocese-overlay.mjs && node scripts/build-context-points.mjs && node scripts/verify-geo.mjs && node scripts/verify-classifier-watch.mjs && node scripts/verify-photo-rights.mjs && node scripts/verify-surface-consistency.mjs && node scripts/verify-profile-parity.mjs && node scripts/verify-profile-layout.mjs",
+    "data": "node scripts/verify-registry-revision.mjs && node scripts/verify-draugas-citation-coverage.mjs && node scripts/verify-sielovada-network.mjs && node scripts/build-data.mjs && node scripts/verify-canonical-identities.mjs && node scripts/verify-canonical-release.mjs && node scripts/verify-registry-semantics.mjs && node scripts/build-map.mjs && node scripts/build-registry-map.mjs && node scripts/build-diocese-overlay.mjs && node scripts/build-context-points.mjs && node scripts/build-site-figures.mjs && node scripts/verify-geo.mjs && node scripts/verify-classifier-watch.mjs && node scripts/verify-photo-rights.mjs && node scripts/verify-surface-consistency.mjs && node scripts/verify-profile-parity.mjs && node scripts/verify-profile-layout.mjs",
     "verify:profile-layout": "node scripts/verify-profile-layout.mjs",
     "verify:registry-revision": "node scripts/verify-registry-revision.mjs",
     "verify:canonical-release": "node scripts/verify-canonical-release.mjs",

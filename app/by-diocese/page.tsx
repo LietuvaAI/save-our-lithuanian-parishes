@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import registry from "@/data/registry-unified.json";
+import siteFigures from "@/data/site-figures.json";
 import DioceseExplorer, {
   type DioceseExplorerEntry,
 } from "@/components/DioceseExplorer";
@@ -76,6 +77,10 @@ export default function ByDiocesePage() {
   const unassigned =
     dioceses.find((diocese) => diocese.name === "Diocese unassigned")?.total ??
     0;
+
+  if (totalParishes !== siteFigures.history.parishes) {
+    throw new Error("By Diocese population does not match site-figures.json");
+  }
 
   return (
     <article className="mx-auto max-w-5xl px-4 pb-4 pt-8">

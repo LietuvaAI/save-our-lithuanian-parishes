@@ -41,6 +41,7 @@ import {
   type RecordSignal,
 } from "@/lib/record-mark";
 import contextPoints from "@/data/context-points.json";
+import siteFigures from "@/data/site-figures.json";
 
 const FULL = (regData as { frame?: { x: number; y: number; w: number; h: number } })
   .frame ?? { x: 0, y: 0, w: 975, h: 610 };
@@ -306,6 +307,45 @@ function buildPoints(): Point[] {
 }
 
 const POINTS = buildPoints();
+
+const mapCommunityCounts = {
+  romanCatholic: POINTS.filter(
+    (point) => communityFilterForPoint(point) === "roman_catholic",
+  ).length,
+  nationalIndependent: POINTS.filter(
+    (point) => communityFilterForPoint(point) === "national_catholic_pncc",
+  ).length,
+  protestant: POINTS.filter(
+    (point) => communityFilterForPoint(point) === "non_catholic_christian",
+  ).length,
+};
+const mapStatusCounts = {
+  active_parish: POINTS.filter((point) => point.group === "active_parish")
+    .length,
+  mass_continues: POINTS.filter((point) => point.group === "mass_continues")
+    .length,
+  unresolved: POINTS.filter((point) => point.group === "unresolved").length,
+  transferred: POINTS.filter((point) => point.group === "transferred").length,
+  closed: POINTS.filter((point) => point.group === "closed").length,
+  unverified: POINTS.filter((point) => point.group === "unverified").length,
+};
+
+if (
+  POINTS.length !== siteFigures.publicUS.records ||
+  mapCommunityCounts.romanCatholic !==
+    siteFigures.publicUS.romanCatholicInstitutions ||
+  mapCommunityCounts.nationalIndependent !==
+    siteFigures.publicUS.nationalIndependentCatholicCommunities ||
+  mapCommunityCounts.protestant !== siteFigures.publicUS.protestantCommunities ||
+  mapStatusCounts.active_parish !== siteFigures.publicUS.status.active_parish ||
+  mapStatusCounts.mass_continues !== siteFigures.publicUS.status.mass_continues ||
+  mapStatusCounts.unresolved !== siteFigures.publicUS.status.unresolved ||
+  mapStatusCounts.transferred !== siteFigures.publicUS.status.transferred ||
+  mapStatusCounts.closed !== siteFigures.publicUS.status.closed ||
+  mapStatusCounts.unverified !== siteFigures.publicUS.status.unverified
+) {
+  throw new Error("Homepage map populations do not match site-figures.json");
+}
 
 function clampView(v: View): View {
   const w = Math.min(Math.max(v.w, FULL.w / MAX_ZOOM), FULL.w);

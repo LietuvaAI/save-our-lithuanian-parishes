@@ -4,6 +4,7 @@ import ParishThreads, {
   type ThreadParish,
 } from "@/components/ParishThreads";
 import registryData from "@/data/registry-unified.json";
+import siteFigures from "@/data/site-figures.json";
 import { scopedParishes } from "@/lib/registry-scope";
 import { toGroup } from "@/lib/end-state";
 
@@ -69,6 +70,13 @@ export default function ParishOutcomeFlowPage() {
     year: "numeric",
     timeZone: "UTC",
   });
+
+  if (
+    threads.length !== siteFigures.history.parishes ||
+    closed.length !== siteFigures.history.closed
+  ) {
+    throw new Error("Timeline population does not match site-figures.json");
+  }
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import contextPointsData from "@/data/context-points.json";
 import registry from "@/data/registry-unified.json";
+import siteFigures from "@/data/site-figures.json";
 import { EndStatePill } from "@/components/EndStatePill";
 import RecordLensMap, {
   type RecordLensPoint,
@@ -68,6 +69,10 @@ const transferredCongregations = CONGS.filter(
 const unverifiedCongregations = CONGS.filter(
   (congregation) => statusForCongregation(congregation) === "unverified",
 );
+
+if (CONGS.length !== siteFigures.publicUS.protestantCommunities) {
+  throw new Error("Protestant figures do not match site-figures.json");
+}
 const congregationHrefs = new Set(
   CONGS.map(
     (congregation) =>

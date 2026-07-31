@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import registry from "@/data/registry-unified.json";
+import siteFigures from "@/data/site-figures.json";
 import { EndStatePill } from "@/components/EndStatePill";
 import {
   comparatorParishes,
@@ -11,8 +12,7 @@ import { resolveParishEndState } from "@/lib/end-state";
 
 export const metadata: Metadata = {
   title: "Canadian Comparators",
-  description:
-    "Three Canadian Lithuanian parish records included to compare survival, ownership, and community decision-making with the U.S. record.",
+  description: `${siteFigures.canonicalCore.canadianComparators} Canadian Lithuanian parish records included to compare survival, ownership, and community decision-making with the U.S. record.`,
 };
 
 const canadianParishes = [...comparatorParishes].sort(
@@ -24,6 +24,10 @@ const canadianParishes = [...comparatorParishes].sort(
 const activeParishes = canadianParishes.filter(
   (parish) => parish.lithuanianIdentity === "active_parish",
 );
+
+if (canadianParishes.length !== siteFigures.canonicalCore.canadianComparators) {
+  throw new Error("Canadian comparator count does not match site-figures.json");
+}
 
 function canadianOwnershipLabel(parish: Parish) {
   return parish.state === "QC"
