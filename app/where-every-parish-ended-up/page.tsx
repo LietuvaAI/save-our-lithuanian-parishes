@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import ParishThreads, {
   type FateKey,
   type ThreadParish,
@@ -108,18 +107,6 @@ export default function ParishOutcomeFlowPage() {
         </div>
       </section>
 
-      <p className="mt-8 border-t border-rule pt-4 text-xs leading-relaxed text-muted">
-        Every line derives from the unified parish registry. Building
-        baselines, present classifications, and outcomes remain linked to the
-        canonical parish profiles.{" "}
-        <Link
-          href="/about-the-data"
-          className="underline hover:text-foreground"
-        >
-          About the data
-        </Link>
-        .
-      </p>
     </div>
   );
 }

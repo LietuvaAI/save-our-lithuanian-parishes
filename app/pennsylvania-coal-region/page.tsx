@@ -155,12 +155,6 @@ export default function PennsylvaniaCoalRegionPage() {
           </Link>
         </p>
       </section>
-
-      <p className="mt-10 text-sm text-muted">
-        <Link href="/record" className="underline hover:text-foreground">
-          See all parish profiles in the Record
-        </Link>
-      </p>
     </article>
   );
 }

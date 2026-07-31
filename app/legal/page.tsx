@@ -224,20 +224,6 @@ export default function LegalPage() {
         </p>
       </section>
 
-      <p className="mt-10 text-sm text-muted border-t border-rule pt-4">
-        © 2026 Save Our Lithuanian Parishes · an initiative powered by
-        Lietuva.AI ·{" "}
-        <Link href="/about-the-data" className="underline hover:text-foreground">
-          About the data
-        </Link>{" "}
-        ·{" "}
-        <a
-          href="mailto:info@saveourlithuanianparishes.org"
-          className="underline hover:text-foreground"
-        >
-          info@saveourlithuanianparishes.org
-        </a>
-      </p>
     </article>
   );
 }

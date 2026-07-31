@@ -1128,7 +1128,7 @@ export default async function ParishPage({
                   </a>
                 )}
                 <Link
-                  href="/lithuanian-catholic-life-today#parish-health-heading"
+                  href="/lithuanian-catholic-life-today#worship-network-heading"
                   className="rounded-md border border-rule px-3 py-1 text-xs font-medium transition-colors hover:border-foreground"
                 >
                   Catholic life today &rarr;

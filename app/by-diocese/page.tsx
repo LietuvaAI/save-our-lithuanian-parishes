@@ -125,12 +125,6 @@ export default function ByDiocesePage() {
         revision={String(registry.registryRevision.version)}
         revisionDate={registry.registryRevision.date}
       />
-
-      <p className="mt-10 text-sm text-muted">
-        <Link href="/record" className="underline hover:text-foreground">
-          See the complete Record
-        </Link>
-      </p>
     </article>
   );
 }

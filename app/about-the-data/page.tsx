@@ -232,7 +232,7 @@ export default function AboutTheDataPage() {
         </p>
       </section>
 
-      <p className="mt-10 text-sm text-muted border-t border-rule pt-4">
+      <p className="mt-10 border-t border-rule pt-4 text-sm text-muted">
         The complete evidence ecosystem and the role of each source:{" "}
         <Link
           href="/about/sources-and-archives"
@@ -244,18 +244,7 @@ export default function AboutTheDataPage() {
         <Link href="/legal" className="underline hover:text-foreground">
           Legal, attribution &amp; data use
         </Link>
-        . See also:{" "}
-        <Link href="/record" className="underline hover:text-foreground">
-          the record
-        </Link>{" "}
-        ·{" "}
-        <Link href="/about" className="underline hover:text-foreground">
-          about the project
-        </Link>{" "}
-        ·{" "}
-        <Link href="/reversals" className="underline hover:text-foreground">
-          where Rome said no
-        </Link>
+        .
       </p>
     </article>
   );
