@@ -561,11 +561,11 @@ export default function HistoryPage() {
               href="/where-every-parish-ended-up"
               className="font-serif text-lg font-semibold underline hover:text-accent"
             >
-              Where Every Parish Ended Up
+              Lithuanian Churches Through Time
             </Link>
             <p className="mt-1 text-sm leading-relaxed text-muted">
-              Follow every parish from its founding decade to its present
-              status and the fate of its church.
+              Follow each church community from its documented building or
+              parish baseline to its present condition.
             </p>
           </div>
           <div className="sm:pl-5">
