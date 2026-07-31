@@ -11,6 +11,7 @@ import { EndStatePill } from "@/components/EndStatePill";
 import alertsData from "@/data/alerts.json";
 import networkData from "@/data/sielovada-us-network.json";
 import registryData from "@/data/registry-unified.json";
+import { getClearedPhoto } from "@/lib/photos";
 import { scopedParishes } from "@/lib/registry-scope";
 import { toGroup, type EndState } from "@/lib/end-state";
 
@@ -98,6 +99,11 @@ const statusByLink = new Map(
 
 function statusForLink(link: string): EndState {
   return statusByLink.get(link) ?? "unverified";
+}
+
+function lineDrawingForLink(link: string) {
+  const slug = link.replace(/^\/(?:parishes|registry)\//, "");
+  return getClearedPhoto(`${slug}-line-drawing`);
 }
 
 const CAMPAIGN_ART: Record<
@@ -342,53 +348,79 @@ export default function Home() {
                 {group.description}
               </p>
               <div className="mt-3 divide-y divide-rule border-y border-rule">
-                {group.alerts.map((alert) => (
-                  <article key={alert.id} className="py-3">
-                    <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                      <Link
-                        href={alert.parishLink}
-                        className="font-serif font-semibold underline decoration-rule underline-offset-2 hover:text-accent"
-                      >
-                        {alert.entity}
-                      </Link>
-                      <span className="text-sm text-muted">{alert.place}</span>
-                    </div>
-                    <div className="mt-2 flex flex-wrap items-center gap-2">
-                      <EndStatePill
-                        value={statusForLink(alert.parishLink)}
-                      />
-                      <DiocesePill name={alert.diocese} />
-                    </div>
-                    <p className="mt-1">
-                      <DiocesanLeaderLink diocese={alert.diocese} />
-                    </p>
-                    <p className="mt-2 text-sm leading-relaxed text-muted">
-                      {alert.whatChanged}
-                    </p>
-                    <p className="mt-2 text-xs leading-relaxed text-muted">
-                      <Link
-                        href={alert.parishLink}
-                        className="font-medium underline hover:text-foreground"
-                      >
-                        Parish profile
-                      </Link>
-                      {" · Sources: "}
-                      {alert.sources.map((source, index) => (
-                        <span key={source.url}>
-                          {index > 0 && " · "}
-                          <a
-                            href={source.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="underline hover:text-foreground"
+                {group.alerts.map((alert) => {
+                  const art = lineDrawingForLink(alert.parishLink);
+                  return (
+                    <article
+                      key={alert.id}
+                      className={`py-3 ${art ? "grid grid-cols-[4.75rem_minmax(0,1fr)] gap-3" : ""}`}
+                    >
+                      {art && (
+                        <Link
+                          href={alert.parishLink}
+                          aria-label={`Open ${alert.entity} parish profile`}
+                          className="relative block aspect-square self-start overflow-hidden border border-rule bg-white p-1.5 hover:border-accent"
+                          title={art.attribution}
+                        >
+                          <Image
+                            src={art.src}
+                            alt=""
+                            fill
+                            sizes="76px"
+                            className="object-contain mix-blend-multiply"
+                          />
+                        </Link>
+                      )}
+                      <div className="min-w-0">
+                        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                          <Link
+                            href={alert.parishLink}
+                            className="font-serif font-semibold underline decoration-rule underline-offset-2 hover:text-accent"
                           >
-                            {source.publisher}
-                          </a>
-                        </span>
-                      ))}
-                    </p>
-                  </article>
-                ))}
+                            {alert.entity}
+                          </Link>
+                          <span className="text-sm text-muted">
+                            {alert.place}
+                          </span>
+                        </div>
+                        <div className="mt-2 flex flex-wrap items-center gap-2">
+                          <EndStatePill
+                            value={statusForLink(alert.parishLink)}
+                          />
+                          <DiocesePill name={alert.diocese} />
+                        </div>
+                        <p className="mt-1">
+                          <DiocesanLeaderLink diocese={alert.diocese} />
+                        </p>
+                        <p className="mt-2 text-sm leading-relaxed text-muted">
+                          {alert.whatChanged}
+                        </p>
+                        <p className="mt-2 text-xs leading-relaxed text-muted">
+                          <Link
+                            href={alert.parishLink}
+                            className="font-medium underline hover:text-foreground"
+                          >
+                            Parish profile
+                          </Link>
+                          {" · Sources: "}
+                          {alert.sources.map((source, index) => (
+                            <span key={source.url}>
+                              {index > 0 && " · "}
+                              <a
+                                href={source.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline hover:text-foreground"
+                              >
+                                {source.publisher}
+                              </a>
+                            </span>
+                          ))}
+                        </p>
+                      </div>
+                    </article>
+                  );
+                })}
               </div>
             </section>
           ))}
