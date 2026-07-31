@@ -54,6 +54,8 @@ export interface ParishSituation {
   pastoral_status: PastoralStatus;
   situation: string;
   sources?: ParishSituationSource[];
+  current_record_as_of?: string;
+  current_record_path?: string;
 }
 
 export interface Citation {

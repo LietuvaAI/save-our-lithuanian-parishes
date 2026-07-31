@@ -7754,17 +7754,64 @@
     "founded": [
      {
       "value": "1920",
-      "source": "draugas-registry-1909-2007"
+      "source": "draugas-registry-1909-2007",
+      "selected": false
+     },
+     {
+      "value": "1902",
+      "source": "archdiocese-of-philadelphia",
+      "cite": "https://archphila.org/parish/st-george-philadelphia/",
+      "selected": true
      }
     ],
     "closed": [
      {
       "value": "2016",
-      "source": "draugas-2008-2026"
+      "source": "draugas-2008-2026",
+      "selected": false
+     },
+     {
+      "value": "2019",
+      "source": "archdiocese-of-philadelphia",
+      "cite": "https://archphila.org/parish/st-george-philadelphia/",
+      "selected": true
      }
     ]
    },
-   "conflicts": [],
+   "conflicts": [
+    {
+     "field": "founded",
+     "variants": [
+      {
+       "value": "1920",
+       "source": "draugas-registry-1909-2007",
+       "selected": false
+      },
+      {
+       "value": "1902",
+       "source": "archdiocese-of-philadelphia",
+       "cite": "https://archphila.org/parish/st-george-philadelphia/",
+       "selected": true
+      }
+     ]
+    },
+    {
+     "field": "closed",
+     "variants": [
+      {
+       "value": "2016",
+       "source": "draugas-2008-2026",
+       "selected": false
+      },
+      {
+       "value": "2019",
+       "source": "archdiocese-of-philadelphia",
+       "cite": "https://archphila.org/parish/st-george-philadelphia/",
+       "selected": true
+      }
+     ]
+    }
+   ],
    "related_sites": [],
    "events_refs": [
     {
@@ -7791,6 +7838,18 @@
     "scope": "public_us_institution",
     "reason": "Adjudicated U.S. parish, mission, or congregation included in the public census.",
     "identity_support": "canonical_case_file"
+   },
+   "lifecycle": {
+    "canonical_status": "merged",
+    "selected_founded_year": 1902,
+    "selected_closed_year": 2019,
+    "identity": "lost",
+    "confidence": "high"
+   },
+   "adjudication": {
+    "date": "2026-07-31",
+    "cite": "data/case-records/sv-jurgio-philadelphia-pa.json",
+    "status": "verified-or-labeled"
    }
   },
   {
@@ -22571,7 +22630,7 @@
   }
  ],
  "registryRevision": {
-  "version": 8,
+  "version": 9,
   "date": "2026-07-31",
   "changelog": [
    "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
@@ -22600,8 +22659,11 @@
    "Assigned every research record an explicit public-census inclusion status and reason; public identities are separately labeled canonical case-filed, multi-source corroborated, or single-source attested using only qualifying located evidence.",
    "Added direct official source links for Zion Oak Lawn and St. Paul Naugatuck; confirmed Zion as an active Lithuanian Lutheran congregation while leaving Naugatuck's current Lithuanian identity unresolved.",
    "Normalized Philadelphia St. Anthony, Custer St. Mary, and Hazleton Ss. Peter and Paul to their source-supported jurisdictions.",
-   "Recalculated every source-axis and record-depth label and established public source-ledger and release-count guards."
+   "Recalculated every source-axis and record-depth label and established public source-ledger and release-count guards.",
+   "Projected all 83 deep case records into the public current-condition layer; 25 required a building-fate or situation correction.",
+   "Corrected Philadelphia St. George to the Archdiocese's official 1902-2019 parish lifecycle while preserving the older 1920/2016 readings as explicit conflicts.",
+   "Established case-record/overlay parity as a blocking publication guard so researched building outcomes cannot regress to unknown or imply an active parish."
   ],
-  "contentHash": "e0c76d3e89388fbe73096f9da405a9e3ee971cf94d444ca700df964be5dbe87c"
+  "contentHash": "732c454aca62845755756647f529a4f042fc3c1671f8c57274312f2f27f01597"
  }
 }

@@ -59,6 +59,16 @@ name and city.
     entities in the stated geographic and denominational scope.
 11. Publication scope and identity support are explicit fields, not inferred
     from names, cities, route counts, source-axis totals, or prose.
+12. A distinct predecessor parish remains one historical institution even when
+    its canonical or community life continues in a successor.
+13. A newly constituted successor parish is a second institution. A rename or
+    relocation of the same institution is not.
+14. Institutions and physical sites have separate counts. A standing,
+    demolished, sold, or repurposed church building never determines whether
+    the parish institution is active.
+15. Active-life counts include only the living parish, mission, or hosted-Mass
+    community. Historical predecessors may be linked to it but do not become
+    active through that relationship.
 
 ## Required import sequence
 
@@ -137,3 +147,48 @@ A registry import is ready only when:
 Design work begins only after this contract is green. Presentation may change;
 entity identity, source lineage, and published counts may not be reinterpreted
 in the design layer.
+
+## Design-facing count contract
+
+Design and page code consume `data/site-figures.json`; they do not count routes,
+profiles, search results, map points, or raw registry rows. The public scopes are:
+
+- `publicUS.records`: all approved U.S. parish, mission, and congregation
+  institutions in the current revision;
+- `publicUS.romanCatholicParishes`: distinct historical U.S. Roman Catholic
+  parish institutions only;
+- `currentCatholicLife`: the separate current pastoral network reconciled to
+  the Sielovada directory; and
+- `canonicalCore`: the frozen case-filed source corpus, not the whole public
+  institution census.
+
+`data/public-institution-ledger.json` is the inspectable enumeration behind the
+public U.S. count. Internal research-profile totals never appear on public
+surfaces. The design layer may label and visualize these values, but may not
+combine populations or derive replacement counts.
+
+## Profile and infographic projection
+
+The canonical parish profile must present three linked records without
+flattening them:
+
+1. **Institution life:** organization/founding, canonical changes, merger or
+   suppression, and current institutional status.
+2. **Churches and sites:** every sourced physical church home or major parish
+   site, with its own construction/acquisition, use, disposition, demolition,
+   and reuse events.
+3. **Continuity:** typed links showing where canonical life, congregation,
+   worship, records, artifacts, or other inheritance continued.
+
+The national history flow remains an institution-lifespan view. A present
+building's dedication year must not replace its parish's founding year. Building
+events appear as separate markers or in a separate building/site mode generated
+from the same site projection. For example, Divine Providence may carry its
+institutional lineage from 1908 while separately showing the 1949 Schaefer
+church, its 1970 demolition, and the present Southfield church dedicated in
+1973.
+
+Clicking an institution line opens the parish profile. Clicking or selecting a
+building marker opens that building/site record within the profile. Neither
+interaction may synthesize dates or relationships from narrative prose at
+render time.

@@ -1,7 +1,7 @@
 # Public institution count audit
 
 **Audit date:** 2026-07-31
-**Registry revision:** 8
+**Registry revision:** 9
 
 ## Press-safe claim
 

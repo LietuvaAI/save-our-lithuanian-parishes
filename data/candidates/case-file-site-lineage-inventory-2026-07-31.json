@@ -1,0 +1,1480 @@
+{
+  "generated": "2026-07-31",
+  "purpose": "Planning inventory for source-backed institution/site/lineage extraction. Heuristic matches are not public facts.",
+  "publication_rule": "No site or lineage edge may publish until a human-reviewed extraction names the entities, predicate, date, exact locator, and source URL.",
+  "totals": {
+    "case_files": 83,
+    "with_sources": 83,
+    "with_developments": 82,
+    "with_historical_summary": 2,
+    "site_extraction_candidates": 57,
+    "lineage_extraction_candidates": 63
+  },
+  "entries": [
+    {
+      "slug": "ausros-vartu-chicago-il",
+      "case_record": "data/case-records/ausros-vartu-chicago-il.json",
+      "as_of": "2026-07-16",
+      "source_count": 5,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "moved"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "absorbed"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "ausros-vartu-manhattan-ny",
+      "case_record": "data/case-records/ausros-vartu-manhattan-ny.json",
+      "as_of": "2026-07-25",
+      "source_count": 5,
+      "development_count": 5,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [
+        "continued"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "ausros-vartu-worcester-ma",
+      "case_record": "data/case-records/ausros-vartu-worcester-ma.json",
+      "as_of": "2026-07-16",
+      "source_count": 6,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "relocated"
+      ],
+      "matched_lineage_terms": [
+        "merger",
+        "successor",
+        "continued"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "dievo-apvaizdos-chicago-il",
+      "case_record": "data/case-records/dievo-apvaizdos-chicago-il.json",
+      "as_of": "2026-07-16",
+      "source_count": 7,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [
+        "consolidation",
+        "continued",
+        "suppressed"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "dievo-apvaizdos-scranton-pa",
+      "case_record": "data/case-records/dievo-apvaizdos-scranton-pa.json",
+      "as_of": "2026-07-09",
+      "source_count": 5,
+      "development_count": 2,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [
+        "merged"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "dievo-apvaizdos-southfield-mi",
+      "case_record": "data/case-records/dievo-apvaizdos-southfield-mi.json",
+      "as_of": "2026-07-25",
+      "source_count": 4,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [
+        "successor"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "dievo-motinos-nuolatines-pagalbos-cleveland-oh",
+      "case_record": "data/case-records/dievo-motinos-nuolatines-pagalbos-cleveland-oh.json",
+      "as_of": "2026-07-16",
+      "source_count": 9,
+      "development_count": 5,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "moved"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "successor",
+        "suppressed"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "kristaus-atsimainymo-maspeth-ny",
+      "case_record": "data/case-records/kristaus-atsimainymo-maspeth-ny.json",
+      "as_of": "2026-07-09",
+      "source_count": 7,
+      "development_count": 6,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [
+        "moved"
+      ],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "lietuviu-baznycia-kearny-kearny-nj",
+      "case_record": "data/case-records/lietuviu-baznycia-kearny-kearny-nj.json",
+      "as_of": "2026-07-16",
+      "source_count": 14,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "moved",
+        "relocated"
+      ],
+      "matched_lineage_terms": [
+        "consolidation"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "lietuviu-baznycia-unnamed-ansonia-ct",
+      "case_record": "data/case-records/lietuviu-baznycia-unnamed-ansonia-ct.json",
+      "as_of": "2026-07-16",
+      "source_count": 6,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [
+        "former church",
+        "relocated"
+      ],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "lietuviu-baznycia-unnamed-haverhill-ma",
+      "case_record": "data/case-records/lietuviu-baznycia-unnamed-haverhill-ma.json",
+      "as_of": "2026-07-16",
+      "source_count": 7,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [
+        "merged",
+        "consolidated",
+        "consolidation"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "lietuviu-baznycia-unnamed-newark-nj",
+      "case_record": "data/case-records/lietuviu-baznycia-unnamed-newark-nj.json",
+      "as_of": "2026-07-16",
+      "source_count": 7,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "original church",
+        "relocated",
+        "fire"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "continued",
+        "suppressed"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "lietuviu-evangeliku-liuteronu-teviskes-parapija-darien-il",
+      "case_record": "data/case-records/lietuviu-evangeliku-liuteronu-teviskes-parapija-darien-il.json",
+      "as_of": "2026-07-16",
+      "source_count": 8,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "moved"
+      ],
+      "matched_lineage_terms": [
+        "merger"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "lithuanian-lutheran-church-collinsville-il",
+      "case_record": "data/case-records/lithuanian-lutheran-church-collinsville-il.json",
+      "as_of": "2026-07-16",
+      "source_count": 5,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "lncc-congregation-westville-il",
+      "case_record": "data/case-records/lncc-congregation-westville-il.json",
+      "as_of": "2026-07-16",
+      "source_count": 4,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [
+        "former church"
+      ],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "nekaltojo-prasidejimo-ausros-vartu-archbald-pa",
+      "case_record": "data/case-records/nekaltojo-prasidejimo-ausros-vartu-archbald-pa.json",
+      "as_of": "2026-07-16",
+      "source_count": 5,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "rebuilt",
+        "burned"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "consolidated",
+        "successor",
+        "absorbed"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "nekaltojo-prasidejimo-east-st-louis-il",
+      "case_record": "data/case-records/nekaltojo-prasidejimo-east-st-louis-il.json",
+      "as_of": "2026-07-16",
+      "source_count": 5,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [
+        "moved",
+        "burned"
+      ],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "pal-jurgio-matulaicio-misija-lemont-il",
+      "case_record": "data/case-records/pal-jurgio-matulaicio-misija-lemont-il.json",
+      "as_of": "2026-07-16",
+      "source_count": 6,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "saldziausios-jezaus-sirdies-lawrence-ma",
+      "case_record": "data/case-records/saldziausios-jezaus-sirdies-lawrence-ma.json",
+      "as_of": "2026-07-16",
+      "source_count": 6,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "siluvos-dievo-motinos-maizeville-pa",
+      "case_record": "data/case-records/siluvos-dievo-motinos-maizeville-pa.json",
+      "as_of": "2026-07-16",
+      "source_count": 6,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "fire"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "successor"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-andriejaus-new-britain-ct",
+      "case_record": "data/case-records/sv-andriejaus-new-britain-ct.json",
+      "as_of": "2026-07-16",
+      "source_count": 7,
+      "development_count": 5,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "former church",
+        "moved"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "consolidation",
+        "suppressed"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-andriejaus-philadelphia-pa",
+      "case_record": "data/case-records/sv-andriejaus-philadelphia-pa.json",
+      "as_of": "2026-07-16",
+      "source_count": 6,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "replaced"
+      ],
+      "matched_lineage_terms": [
+        "merged"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-antano-cicero-il",
+      "case_record": "data/case-records/sv-antano-cicero-il.json",
+      "as_of": "2026-07-16",
+      "source_count": 7,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [
+        "merged",
+        "continued"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-antano-detroit-mi",
+      "case_record": "data/case-records/sv-antano-detroit-mi.json",
+      "as_of": "2026-07-16",
+      "source_count": 6,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "former church",
+        "moved"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "records at",
+        "records held"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-antano-omaha-ne",
+      "case_record": "data/case-records/sv-antano-omaha-ne.json",
+      "as_of": "2026-07-16",
+      "source_count": 11,
+      "development_count": 5,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "burned"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "successor"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-jono-coaldale-pa",
+      "case_record": "data/case-records/sv-jono-coaldale-pa.json",
+      "as_of": "2026-07-16",
+      "source_count": 5,
+      "development_count": 5,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "moved",
+        "burned"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "consolidation",
+        "successor",
+        "continued",
+        "absorbed"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-juozapo-nanticoke-pa",
+      "case_record": "data/case-records/sv-juozapo-nanticoke-pa.json",
+      "as_of": "2026-07-16",
+      "source_count": 6,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "former church"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "consolidation"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-juozapo-scranton-pa",
+      "case_record": "data/case-records/sv-juozapo-scranton-pa.json",
+      "as_of": "2026-07-16",
+      "source_count": 6,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "original church"
+      ],
+      "matched_lineage_terms": [
+        "consolidated",
+        "consolidation",
+        "successor"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-juozapo-south-chicago-il",
+      "case_record": "data/case-records/sv-juozapo-south-chicago-il.json",
+      "as_of": "2026-07-16",
+      "source_count": 5,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "new church"
+      ],
+      "matched_lineage_terms": [
+        "absorbed"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-juozapo-waterbury-ct",
+      "case_record": "data/case-records/sv-juozapo-waterbury-ct.json",
+      "as_of": "2026-07-16",
+      "source_count": 7,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [
+        "merged",
+        "absorbed"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-jurgio-bridgeport-ct",
+      "case_record": "data/case-records/sv-jurgio-bridgeport-ct.json",
+      "as_of": "2026-07-16",
+      "source_count": 13,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "consolidation"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-jurgio-brooklyn-ny",
+      "case_record": "data/case-records/sv-jurgio-brooklyn-ny.json",
+      "as_of": "2026-07-16",
+      "source_count": 10,
+      "development_count": 6,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "replaced"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "suppressed"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-jurgio-chicago-il",
+      "case_record": "data/case-records/sv-jurgio-chicago-il.json",
+      "as_of": "2026-07-16",
+      "source_count": 6,
+      "development_count": 2,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [
+        "replaced"
+      ],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-jurgio-cleveland-oh",
+      "case_record": "data/case-records/sv-jurgio-cleveland-oh.json",
+      "as_of": "2026-07-16",
+      "source_count": 10,
+      "development_count": 6,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "former church",
+        "moved",
+        "relocated"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "consolidated",
+        "successor",
+        "suppressed"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-jurgio-niagara-falls-ny",
+      "case_record": "data/case-records/sv-jurgio-niagara-falls-ny.json",
+      "as_of": "2026-07-16",
+      "source_count": 5,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "first church"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "successor"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-jurgio-norwood-ma",
+      "case_record": "data/case-records/sv-jurgio-norwood-ma.json",
+      "as_of": "2026-07-16",
+      "source_count": 5,
+      "development_count": 5,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "moved",
+        "relocated"
+      ],
+      "matched_lineage_terms": [
+        "continued",
+        "suppressed"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-jurgio-philadelphia-pa",
+      "case_record": "data/case-records/sv-jurgio-philadelphia-pa.json",
+      "as_of": "2026-07-16",
+      "source_count": 6,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "consolidated",
+        "continued"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-jurgio-rochester-ny",
+      "case_record": "data/case-records/sv-jurgio-rochester-ny.json",
+      "as_of": "2026-07-16",
+      "source_count": 9,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "second church",
+        "moved",
+        "relocated"
+      ],
+      "matched_lineage_terms": [
+        "merged"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-jurgio-shenandoah-pa",
+      "case_record": "data/case-records/sv-jurgio-shenandoah-pa.json",
+      "as_of": "2026-07-09",
+      "source_count": 5,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kazimiero-amsterdam-ny",
+      "case_record": "data/case-records/sv-kazimiero-amsterdam-ny.json",
+      "as_of": "2026-07-16",
+      "source_count": 4,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "moved",
+        "relocated"
+      ],
+      "matched_lineage_terms": [
+        "consolidation",
+        "suppressed"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kazimiero-brockton-ma",
+      "case_record": "data/case-records/sv-kazimiero-brockton-ma.json",
+      "as_of": "2026-07-16",
+      "source_count": 6,
+      "development_count": 5,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "new church",
+        "moved"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "consolidation",
+        "successor",
+        "absorbed"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kazimiero-chicago-il",
+      "case_record": "data/case-records/sv-kazimiero-chicago-il.json",
+      "as_of": "2026-07-16",
+      "source_count": 11,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "second church",
+        "new church"
+      ],
+      "matched_lineage_terms": [
+        "merged"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kazimiero-cleveland-oh",
+      "case_record": "data/case-records/sv-kazimiero-cleveland-oh.json",
+      "as_of": "2026-07-09",
+      "source_count": 7,
+      "development_count": 3,
+      "has_historical_summary": true,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [
+        "successor"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kazimiero-gary-in",
+      "case_record": "data/case-records/sv-kazimiero-gary-in.json",
+      "as_of": "2026-07-16",
+      "source_count": 3,
+      "development_count": 2,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "first church",
+        "moved",
+        "fire"
+      ],
+      "matched_lineage_terms": [
+        "continued"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kazimiero-kansas-city-mo",
+      "case_record": "data/case-records/sv-kazimiero-kansas-city-mo.json",
+      "as_of": "2026-07-16",
+      "source_count": 4,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "moved",
+        "relocated"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "merger"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kazimiero-los-angeles-ca",
+      "case_record": "data/case-records/sv-kazimiero-los-angeles-ca.json",
+      "as_of": "2026-07-16",
+      "source_count": 5,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [
+        "consolidation"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kazimiero-nashua-nh",
+      "case_record": "data/case-records/sv-kazimiero-nashua-nh.json",
+      "as_of": "2026-07-16",
+      "source_count": 6,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [
+        "original church"
+      ],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kazimiero-new-haven-ct",
+      "case_record": "data/case-records/sv-kazimiero-new-haven-ct.json",
+      "as_of": "2026-07-16",
+      "source_count": 6,
+      "development_count": 5,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [
+        "original church",
+        "moved",
+        "relocated"
+      ],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kazimiero-paterson-nj",
+      "case_record": "data/case-records/sv-kazimiero-paterson-nj.json",
+      "as_of": "2026-07-16",
+      "source_count": 6,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [
+        "current church"
+      ],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kazimiero-philadelphia-pa",
+      "case_record": "data/case-records/sv-kazimiero-philadelphia-pa.json",
+      "as_of": "2026-07-16",
+      "source_count": 9,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [
+        "merged",
+        "continued",
+        "suppressed"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kazimiero-pittsburgh-pa",
+      "case_record": "data/case-records/sv-kazimiero-pittsburgh-pa.json",
+      "as_of": "2026-07-16",
+      "source_count": 8,
+      "development_count": 6,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "former church"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "successor",
+        "continued"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kazimiero-pittston-pa",
+      "case_record": "data/case-records/sv-kazimiero-pittston-pa.json",
+      "as_of": "2026-07-16",
+      "source_count": 7,
+      "development_count": 5,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "former church",
+        "moved"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "consolidated",
+        "consolidation",
+        "successor",
+        "absorbed"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kazimiero-providence-ri",
+      "case_record": "data/case-records/sv-kazimiero-providence-ri.json",
+      "as_of": "2026-07-16",
+      "source_count": 9,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kazimiero-sioux-city-ia",
+      "case_record": "data/case-records/sv-kazimiero-sioux-city-ia.json",
+      "as_of": "2026-07-16",
+      "source_count": 2,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [
+        "replaced"
+      ],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kazimiero-waterbury-ct",
+      "case_record": "data/case-records/sv-kazimiero-waterbury-ct.json",
+      "as_of": "2026-07-16",
+      "source_count": 5,
+      "development_count": 0,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [
+        "merged",
+        "merger"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kazimiero-worcester-ma",
+      "case_record": "data/case-records/sv-kazimiero-worcester-ma.json",
+      "as_of": "2026-07-16",
+      "source_count": 6,
+      "development_count": 5,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "moved"
+      ],
+      "matched_lineage_terms": [
+        "merged"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-konstantino-oglesby-il",
+      "case_record": "data/case-records/sv-konstantino-oglesby-il.json",
+      "as_of": "2026-07-16",
+      "source_count": 5,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "consolidated",
+        "consolidation",
+        "successor",
+        "continued"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kryziaus-chicago-il",
+      "case_record": "data/case-records/sv-kryziaus-chicago-il.json",
+      "as_of": "2026-07-16",
+      "source_count": 8,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [
+        "merged",
+        "consolidation"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kryziaus-dayton-oh",
+      "case_record": "data/case-records/sv-kryziaus-dayton-oh.json",
+      "as_of": "2026-07-16",
+      "source_count": 7,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "first church",
+        "relocated"
+      ],
+      "matched_lineage_terms": [
+        "merger",
+        "consolidation"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-kryziaus-mount-carmel-pa",
+      "case_record": "data/case-records/sv-kryziaus-mount-carmel-pa.json",
+      "as_of": "2026-07-16",
+      "source_count": 7,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "consolidation",
+        "successor"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-m-marijos-apsireiskimo-frackville-pa",
+      "case_record": "data/case-records/sv-m-marijos-apsireiskimo-frackville-pa.json",
+      "as_of": "2026-07-16",
+      "source_count": 8,
+      "development_count": 5,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "current church",
+        "moved",
+        "relocated"
+      ],
+      "matched_lineage_terms": [
+        "merger",
+        "consolidated",
+        "consolidation",
+        "successor",
+        "absorbed"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-marijos-apreiskimo-kingston-pa",
+      "case_record": "data/case-records/sv-marijos-apreiskimo-kingston-pa.json",
+      "as_of": "2026-07-16",
+      "source_count": 4,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [
+        "consolidated",
+        "successor",
+        "records held"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-marijos-tautine-kataliku-parapija-philadelphia-pa",
+      "case_record": "data/case-records/sv-marijos-tautine-kataliku-parapija-philadelphia-pa.json",
+      "as_of": "2026-07-16",
+      "source_count": 4,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [
+        "former church"
+      ],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-mykolo-bayonne-nj",
+      "case_record": "data/case-records/sv-mykolo-bayonne-nj.json",
+      "as_of": "2026-07-16",
+      "source_count": 9,
+      "development_count": 6,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "moved",
+        "relocated"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "consolidated",
+        "successor"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-mykolo-north-chicago-il",
+      "case_record": "data/case-records/sv-mykolo-north-chicago-il.json",
+      "as_of": "2026-07-16",
+      "source_count": 6,
+      "development_count": 2,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [
+        "merged",
+        "merger"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-mykolo-scranton-pa",
+      "case_record": "data/case-records/sv-mykolo-scranton-pa.json",
+      "as_of": "2026-07-16",
+      "source_count": 5,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [
+        "former church",
+        "current church",
+        "moved",
+        "relocated",
+        "replaced"
+      ],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-onos-luzerne-pa",
+      "case_record": "data/case-records/sv-onos-luzerne-pa.json",
+      "as_of": "2026-07-16",
+      "source_count": 11,
+      "development_count": 5,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "moved"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "consolidated",
+        "consolidation",
+        "continued"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-onos-spring-valley-il",
+      "case_record": "data/case-records/sv-onos-spring-valley-il.json",
+      "as_of": "2026-07-16",
+      "source_count": 5,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "moved"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "successor"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-petro-boston-ma",
+      "case_record": "data/case-records/sv-petro-boston-ma.json",
+      "as_of": "2026-07-16",
+      "source_count": 9,
+      "development_count": 6,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "current church",
+        "fire"
+      ],
+      "matched_lineage_terms": [
+        "merger",
+        "continued"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-petro-cambridge-ma",
+      "case_record": "data/case-records/sv-petro-cambridge-ma.json",
+      "as_of": "2026-07-16",
+      "source_count": 11,
+      "development_count": 5,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [
+        "former church"
+      ],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-petro-detroit-mi",
+      "case_record": "data/case-records/sv-petro-detroit-mi.json",
+      "as_of": "2026-07-16",
+      "source_count": 5,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [
+        "former church",
+        "moved"
+      ],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-petro-ir-povilo-elizabeth-nj",
+      "case_record": "data/case-records/sv-petro-ir-povilo-elizabeth-nj.json",
+      "as_of": "2026-07-09",
+      "source_count": 6,
+      "development_count": 2,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "fire"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "consolidation"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-petro-ir-povilo-grand-rapids-mi",
+      "case_record": "data/case-records/sv-petro-ir-povilo-grand-rapids-mi.json",
+      "as_of": "2026-07-16",
+      "source_count": 8,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [
+        "merger"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-pranciskaus-east-chicago-in",
+      "case_record": "data/case-records/sv-pranciskaus-east-chicago-in.json",
+      "as_of": "2026-07-16",
+      "source_count": 3,
+      "development_count": 2,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "former church"
+      ],
+      "matched_lineage_terms": [
+        "successor"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-pranciskaus-lawrence-ma",
+      "case_record": "data/case-records/sv-pranciskaus-lawrence-ma.json",
+      "as_of": "2026-07-16",
+      "source_count": 5,
+      "development_count": 6,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "moved"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "consolidated",
+        "successor",
+        "continued"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-vincento-de-paul-girardville-pa",
+      "case_record": "data/case-records/sv-vincento-de-paul-girardville-pa.json",
+      "as_of": "2026-07-16",
+      "source_count": 4,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "relocated",
+        "replaced"
+      ],
+      "matched_lineage_terms": [
+        "merger"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "sv-vincento-pauliecio-esplen-pa",
+      "case_record": "data/case-records/sv-vincento-pauliecio-esplen-pa.json",
+      "as_of": "2026-07-16",
+      "source_count": 5,
+      "development_count": 5,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "moved"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "consolidated",
+        "successor",
+        "suppressed"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "svc-m-marijos-apreiskimo-brooklyn-ny",
+      "case_record": "data/case-records/svc-m-marijos-apreiskimo-brooklyn-ny.json",
+      "as_of": "2026-07-31",
+      "source_count": 14,
+      "development_count": 7,
+      "has_historical_summary": true,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "moved",
+        "relocated"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "consolidated"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "svc-m-marijos-nekalto-prasidejimo-chicago-il",
+      "case_record": "data/case-records/svc-m-marijos-nekalto-prasidejimo-chicago-il.json",
+      "as_of": "2026-07-16",
+      "source_count": 4,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "second church"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "merger",
+        "consolidated"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "svc-mergeles-marijos-gimimo-chicago-il",
+      "case_record": "data/case-records/svc-mergeles-marijos-gimimo-chicago-il.json",
+      "as_of": "2026-07-09",
+      "source_count": 6,
+      "development_count": 2,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "svc-trejybes-hartford-ct",
+      "case_record": "data/case-records/svc-trejybes-hartford-ct.json",
+      "as_of": "2026-07-16",
+      "source_count": 8,
+      "development_count": 3,
+      "has_historical_summary": false,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "matched_site_terms": [],
+      "matched_lineage_terms": [],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "svc-trejybes-wilkes-barre-pa",
+      "case_record": "data/case-records/svc-trejybes-wilkes-barre-pa.json",
+      "as_of": "2026-07-16",
+      "source_count": 7,
+      "development_count": 5,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "relocated"
+      ],
+      "matched_lineage_terms": [
+        "merged",
+        "consolidated",
+        "consolidation",
+        "successor"
+      ],
+      "publication_state": "manual_review_required"
+    },
+    {
+      "slug": "unnamed-lithuanian-parish-baltimore-md",
+      "case_record": "data/case-records/unnamed-lithuanian-parish-baltimore-md.json",
+      "as_of": "2026-07-26",
+      "source_count": 6,
+      "development_count": 4,
+      "has_historical_summary": false,
+      "site_extraction_candidate": true,
+      "lineage_extraction_candidate": true,
+      "matched_site_terms": [
+        "rebuilt"
+      ],
+      "matched_lineage_terms": [
+        "consolidated",
+        "consolidation",
+        "continued",
+        "suppressed"
+      ],
+      "publication_state": "manual_review_required"
+    }
+  ]
+}

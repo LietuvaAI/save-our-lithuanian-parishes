@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "registryRevision": 8,
+  "registryRevision": 9,
   "registryDate": "2026-07-31",
   "claim": "The public record documents 159 adjudicated U.S. Lithuanian religious institutions: 82 canonical case-filed identities, 51 additional multi-source corroborated identities, and 26 attested in one published source pending corroboration.",
   "inclusionRule": "Count one canonical entity when country is US, record type is parish, misija, or congregation, and identity adjudication places it in public_us_institution scope.",
