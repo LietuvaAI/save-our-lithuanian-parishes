@@ -993,9 +993,11 @@ function narrativeGroup(fact: string) {
 export function ParishPublishedRecord({
   profile,
   overviewText,
+  supplementalNarrative,
 }: {
   profile: CanonicalParishProfile;
   overviewText?: string;
+  supplementalNarrative?: string[];
 }) {
   const seen = new Set<string>();
   const facts = sortedHistorySources(profile)
@@ -1011,8 +1013,6 @@ export function ParishPublishedRecord({
       seen.add(key);
       return true;
     });
-  if (facts.length === 0) return null;
-
   const groups = ["origins", "parish-life", "what-changed"]
     .map((group) =>
       facts
@@ -1041,6 +1041,8 @@ export function ParishPublishedRecord({
         .filter(Boolean),
     )
     .filter((group) => group.length > 0);
+  const narrative = (supplementalNarrative ?? []).filter(Boolean);
+  if (narrative.length === 0 && groups.length === 0) return null;
 
   return (
     <section className="mt-10" aria-labelledby="parish-history-heading">
@@ -1048,6 +1050,11 @@ export function ParishPublishedRecord({
         Parish history
       </h2>
       <div className="mt-4 max-w-2xl space-y-4">
+        {narrative.map((paragraph) => (
+          <p key={paragraph} className="leading-relaxed text-muted">
+            {paragraph}
+          </p>
+        ))}
         {groups.map((group, index) => (
           <p key={index} className="leading-relaxed text-muted">
             {group.join(" ")}

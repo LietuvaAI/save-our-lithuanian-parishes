@@ -4,7 +4,7 @@
 // 2026-07-27. A period only ends the dek when it isn't part of a known
 // abbreviation.
 const ABBR =
-  /(Šv|Švč|šv|švč|Sv|Svc|sv|St|Sts|Mr|Mrs|Rev|Fr|Dr|Mons|Vol|No|Nr|p|pp|apyt)$/u;
+  /(Šv|Švč|šv|švč|Sv|Svc|sv|St|Sts|Mr|Mrs|Rev|Fr|Dr|Mons|Vol|No|Nr|p|pp|apyt|a[.]m|p[.]m)$/u;
 
 export function splitStory(text: string): { dek: string; rest: string | null } {
   // A boundary under 40 chars makes a headline too thin ("Founded 1895.") —

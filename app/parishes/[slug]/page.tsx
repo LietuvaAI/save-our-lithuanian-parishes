@@ -68,6 +68,7 @@ interface CaseRecord {
   asOf: string;
   buildingStatus: string;
   currentUse: string;
+  historicalSummary?: string[];
   summary: string;
   developments: {
     date: string;
@@ -339,13 +340,6 @@ function profileStory({
 
   const internalStatusCopy =
     /documented in (?:the )?(?:draugas )?registry|documented in draugas|minimal (?:research details|documentation)|needs (?:clarification|verification)|status not yet (?:researched|verified)|present status not yet researched|single source only|unnamed\/duplicate parish entry/i;
-  const researched =
-    situationText &&
-    !internalStatusCopy.test(situationText)
-      ? situationText
-      : null;
-  if (researched) return splitStory(narrativeSituation(researched));
-
   const location = [city, state].filter(Boolean).join(", ");
   const historical =
     isLoss(endState) ||
@@ -356,6 +350,15 @@ function profileStory({
   const institutionCopy =
     institution === "Parish record" ? "parish record" : institution;
   const intro = `${name} ${historical ? "was" : "is"} ${community ? "a Lithuanian worshipping community" : `a ${institutionCopy}`} in ${location}${founded ? `, founded in ${founded}` : ""}.`;
+  const researched =
+    situationText &&
+    !internalStatusCopy.test(situationText)
+      ? situationText
+      : null;
+  if (researched) {
+    return splitStory(`${intro} ${narrativeSituation(researched)}`);
+  }
+
   const opening = [intro, sourceLead].filter(Boolean).join(" ");
   const knownCurrentUse =
     currentUse && !/^(unknown|not established)$/i.test(currentUse)
@@ -666,7 +669,7 @@ export default async function ParishPage({
     isLoss(endState) ||
     endState === "unresolved" ||
     !!core?.survivedReviewThenClosed ||
-    !!core?.notes ||
+    (!!core?.notes && !caseRecord) ||
     !!entry.conflicts?.length;
   const statusBadges =
     !researchOnly || parishAlert || watchEntry ? (
@@ -818,6 +821,7 @@ export default async function ParishPage({
       <ParishPublishedRecord
         profile={profile}
         overviewText={researchOnly ? undefined : `${dek} ${rest ?? ""}`}
+        supplementalNarrative={caseRecord?.historicalSummary}
       />
 
       {hasMap && (
