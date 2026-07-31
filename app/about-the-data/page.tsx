@@ -194,9 +194,11 @@ export default function AboutTheDataPage() {
               </p>
               <div className="mt-2 sm:mt-0">
                 <p className="leading-relaxed">{revision.summary}</p>
-                <p className="mt-1 text-xs text-muted">
-                  {revision.registryRecords} registry records
-                </p>
+                {revision.publicUSRecords != null && (
+                  <p className="mt-1 text-xs text-muted">
+                    {revision.publicUSRecords} public U.S. institutions
+                  </p>
+                )}
               </div>
             </div>
           ))}

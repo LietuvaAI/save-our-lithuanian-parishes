@@ -189,10 +189,6 @@ const figures = {
     registryDate: registry.registryRevision.date,
     networkChecked: network.source.checked,
   },
-  researchRegistry: {
-    records: records.length,
-    profiles: records.length,
-  },
   publicUS: {
     records: usPublic.length,
     independentlySupported,
