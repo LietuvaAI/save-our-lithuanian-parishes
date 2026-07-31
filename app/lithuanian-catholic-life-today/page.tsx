@@ -360,7 +360,7 @@ function SustainabilityProfiles() {
 
 export default function LithuanianCatholicLifeTodayPage() {
   return (
-    <article className="mx-auto max-w-5xl px-4 py-12">
+    <article className="mx-auto max-w-5xl px-4 pt-12 pb-2">
       <p className="text-xs uppercase text-muted">
         Current U.S. view
       </p>
@@ -498,7 +498,7 @@ export default function LithuanianCatholicLifeTodayPage() {
         </div>
       </details>
 
-      <p className="mt-10 text-sm text-muted">
+      <p className="mt-6 text-sm text-muted">
         <Link href="/record" className="underline hover:text-foreground">
           The complete historical Record
         </Link>

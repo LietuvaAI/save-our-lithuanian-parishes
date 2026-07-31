@@ -165,8 +165,8 @@ export default function RootLayout({
           </div>
         </header>
         <main className="flex-1">{children}</main>
-        <footer className="border-t border-rule mt-16">
-          <div className="mx-auto max-w-5xl px-4 py-7 text-sm text-muted">
+        <footer className="mt-10 border-t border-rule">
+          <div className="mx-auto max-w-5xl px-4 py-5 text-sm text-muted">
             <nav
               aria-label="Footer"
               className="flex flex-wrap gap-x-4 gap-y-2"
@@ -197,7 +197,7 @@ export default function RootLayout({
               </a>
             </nav>
 
-            <p className="mt-5 border-t border-rule pt-4 leading-relaxed">
+            <p className="mt-4 leading-relaxed">
               Archive and data foundation:{" "}
               <a
                 href="https://archyvas.ziburioltmokykla.org"
@@ -217,7 +217,7 @@ export default function RootLayout({
               in Southfield.
             </p>
 
-            <div className="mt-4 flex flex-col gap-2 border-t border-rule pt-4 text-xs sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+            <div className="mt-3 flex flex-col gap-2 text-xs sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
               <p>
                 © 2026 Save Our Lithuanian Parishes · Powered by{" "}
                 <a
