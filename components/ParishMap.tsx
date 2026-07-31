@@ -785,12 +785,14 @@ export default function ParishMap() {
             className="order-1 border-b border-rule px-3 py-2.5 sm:px-4 lg:order-2 lg:border-b-0 lg:border-l"
             aria-label="Map key and filters"
           >
-            <p className="text-[11px] font-medium uppercase tracking-widest text-muted">
-              Map filters
-            </p>
-            <p className="mt-0.5 text-xs leading-snug text-muted">
-              {statusCounts.all} records in the selected communities
-            </p>
+            <div className="flex items-center justify-between gap-2">
+              <p className="text-[11px] font-medium uppercase tracking-widest text-muted">
+                Map filters
+              </p>
+              <span className="text-[11px] text-muted">
+                {statusCounts.all} shown
+              </span>
+            </div>
 
             <div
               className="mt-2 text-xs"
@@ -851,7 +853,7 @@ export default function ParishMap() {
             </div>
 
             <div
-              className="mt-2 border-t border-rule pt-2 text-xs"
+              className="mt-1.5 border-t border-rule pt-1.5 text-xs"
               role="group"
               aria-label="Filter by status"
             >
@@ -1001,10 +1003,24 @@ export default function ParishMap() {
               </div>
             </div>
 
-            <div className="mt-2 border-t border-rule pt-2 text-xs">
-              <p className="text-[10px] font-semibold uppercase tracking-wide text-muted">
-                Other marks
-              </p>
+            <div className="mt-1.5 border-t border-rule pt-1.5 text-xs">
+              <div className="flex items-center justify-between gap-2">
+                <p className="text-[10px] font-semibold uppercase tracking-wide text-muted">
+                  Other marks
+                </p>
+                <label
+                  className="flex cursor-pointer items-center gap-1.5 text-[11px] text-muted hover:text-foreground"
+                  title="Catholic diocese boundaries"
+                >
+                  <input
+                    type="checkbox"
+                    checked={showDioceses}
+                    onChange={() => void toggleDioceses()}
+                    className="h-3.5 w-3.5 accent-foreground"
+                  />
+                  Diocese lines
+                </label>
+              </div>
               <div className="mt-1 grid grid-cols-3 gap-2 text-[10px] leading-tight text-muted">
                 <span className="flex items-start gap-1">
                   <span className="h-2.5 w-2.5 rounded-full border-2 border-[var(--foreground)] bg-background" aria-hidden />
@@ -1022,19 +1038,6 @@ export default function ParishMap() {
                 </span>
               </div>
             </div>
-
-            <label
-              className="mt-2 flex cursor-pointer items-center gap-1.5 border-t border-rule pt-2 text-xs text-muted hover:text-foreground"
-              title="Catholic diocese boundaries"
-            >
-              <input
-                type="checkbox"
-                checked={showDioceses}
-                onChange={() => void toggleDioceses()}
-                className="h-3.5 w-3.5 accent-foreground"
-              />
-              Show diocese lines
-            </label>
           </aside>
         </div>
       </div>
