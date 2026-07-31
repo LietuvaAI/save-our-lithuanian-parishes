@@ -1001,6 +1001,33 @@
       "rights": "permission_granted",
       "rightsNote": "Permission to publish this line-art adaptation was confirmed by Vilija on 2026-07-30. The drawing was created from the exterior photograph on p. 103; source © Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9)."
     },
+    "sv-vincento-de-paul-girardville-pa-line-drawing": {
+      "src": "/images/parishes/girardville-st-vincent-de-paul-line-drawing.png",
+      "alt": "Line drawing of St. Vincent de Paul church in Girardville.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a photograph by Shuvaev, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of Shuvaev's photograph of St. Vincent de Paul Roman Catholic Church in Girardville. The source photograph is licensed CC BY-SA 4.0; this line-art adaptation is published under the same license. Created 2026-07-31.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St._Vincent_de_Paul_RC_Church,_Girardville_PA_02.JPG"
+    },
+    "sv-mykolo-bayonne-nj-line-drawing": {
+      "src": "/images/parishes/bayonne-st-michael-line-drawing.png",
+      "alt": "Line drawing of the former St. Michael Lithuanian church in Bayonne.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a photograph by Farragutful, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of Farragutful's photograph of the former St. Michael Lithuanian Roman Catholic Church property in Bayonne, now used by the Syriac Catholic Eparchy of Our Lady of Deliverance. The source photograph is licensed CC BY-SA 4.0; this line-art adaptation is published under the same license. Created 2026-07-31.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St._Joseph_Cathedral_-_Bayonne,_New_Jersey_01.jpg"
+    },
+    "st-ann-beverly-shores-in-line-drawing": {
+      "src": "/images/parishes/beverly-shores-st-ann-line-drawing.png",
+      "alt": "Line drawing of the sanctuary at St. Ann of the Dunes in Beverly Shores.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a photograph by Steve Shook, Wikimedia Commons, CC BY 2.0.",
+      "license": "CC BY 2.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of Steve Shook's photograph of the distinctive sanctuary and wooded altar wall at St. Ann of the Dunes in Beverly Shores. The source photograph is licensed CC BY 2.0; this line-art adaptation is published under the same license. Created 2026-07-31.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St._Ann_of_the_Dunes_Church,_circa_1980s_-_Beverly_Shores,_Indiana_(51842003228).jpg"
+    },
     "sv-petro-ir-povilo-grand-rapids-mi-line-drawing": {
       "src": "/images/parishes/grand-rapids-sts-peter-paul-line-drawing.png",
       "alt": "Line drawing of Sts. Peter and Paul Lithuanian church in Grand Rapids.",
