@@ -149,11 +149,16 @@ const draugasLinks = draugasLinksJson.results as Record<string, DraugasLinkEntry
  * when the verifier could not resolve an issue-level URL.
  */
 export function draugasCitationUrl(isoDate: string): string {
+  return draugasDirectCitationUrl(isoDate) ?? draugasArchiveUrl(isoDate);
+}
+
+/** Exact issue URL only; returns null instead of substituting a year index. */
+export function draugasDirectCitationUrl(isoDate: string): string | null {
   const entry = draugasLinks[isoDate];
   return entry?.url &&
     (entry.status === "verified" || entry.status === "gated")
     ? entry.url
-    : draugasArchiveUrl(isoDate);
+    : null;
 }
 
 export const INSTITUTION_TYPE_LABEL: Record<InstitutionType, string> = {

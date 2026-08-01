@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type {
   ProfileSource,
   ProfileSourceGroup,
@@ -46,7 +47,9 @@ export function ProfileSourceLedger({
 }: {
   sources: ProfileSource[];
 }) {
-  const linkedCount = sources.filter((source) => source.url).length;
+  const linkedCount = sources.filter(
+    (source) => source.url || source.internalHref,
+  ).length;
   const missingCount = sources.length - linkedCount;
 
   return (
@@ -123,7 +126,14 @@ export function ProfileSourceLedger({
                                 Supports: {source.contexts.join(" · ")}
                               </p>
                             )}
-                            {source.url ? (
+                            {source.internalHref ? (
+                              <Link
+                                href={source.internalHref}
+                                className="mt-2 block text-sm font-medium underline decoration-1 underline-offset-2 hover:text-accent"
+                              >
+                                View the complete dated Draugas index
+                              </Link>
+                            ) : source.url ? (
                               <a
                                 href={source.url}
                                 target="_blank"

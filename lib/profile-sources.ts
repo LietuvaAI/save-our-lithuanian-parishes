@@ -1,4 +1,7 @@
-import { draugasArchiveUrl, draugasCitationUrl } from "@/lib/parishes";
+import {
+  draugasArchiveUrl,
+  draugasDirectCitationUrl,
+} from "@/lib/parishes";
 
 export type ProfileSourceGroup =
   | "newspaper"
@@ -15,6 +18,7 @@ export type ProfileSource = {
   citation?: string;
   additionalCitations: string[];
   url: string | null;
+  internalHref?: string;
   contexts: string[];
   missingLinkNote?: string;
 };
@@ -31,6 +35,7 @@ export type RegistryProfileSource = {
   first_mention?: string;
   last_mention?: string;
   total_mentions?: number;
+  parish_key?: string;
   sourceUrl?: string;
 };
 
@@ -39,6 +44,21 @@ export type LinkedProfileSource = {
   title?: string;
   publisher?: string;
   date?: string;
+};
+
+export type DraugasRegistryPublication = {
+  href: string | null;
+  totalHitOccurrences: number;
+  uniqueDatedIssueCount: number;
+  firstIssueDate: string | null;
+  lastIssueDate: string | null;
+  undatedHitOccurrences: number;
+  issues: {
+    date: string;
+    pages: string[];
+    hitOccurrences: number;
+    url: string | null;
+  }[];
 };
 
 type SourceDraft = Omit<
@@ -104,13 +124,15 @@ function draugasSource(
   const issueUrl =
     isAbsoluteWebUrl(sourceUrl) && sourceUrl.includes(date)
       ? sourceUrl
-      : draugasCitationUrl(date);
+      : draugasDirectCitationUrl(date);
   return {
     group: "newspaper",
     title,
     citation: `Draugas, ${date}${detail ? `, ${detail}` : ""}`,
     url: issueUrl,
     contexts: [context],
+    missingLinkNote:
+      "This dated registry entry does not yet have a verified issue-level URL.",
   };
 }
 
@@ -161,6 +183,7 @@ export function draugasProfileSources(
 
 export function registryProfileSources(
   sources: RegistryProfileSource[],
+  options: { draugasRecord?: DraugasRegistryPublication | null } = {},
 ): ProfileSource[] {
   const drafts: SourceDraft[] = [];
 
@@ -201,7 +224,7 @@ export function registryProfileSources(
         pageCitations.map((citation) => citation.date),
       );
       const mentionContext = source.total_mentions
-        ? `Systematic archive sweep; ${source.total_mentions} issues mention this record`
+        ? `Systematic archive sweep; ${source.total_mentions} attributed archive references`
         : "Systematic archive sweep";
       for (const citation of pageCitations) {
         drafts.push(
@@ -213,6 +236,55 @@ export function registryProfileSources(
             source.sourceUrl,
           ),
         );
+      }
+      if (options.draugasRecord) {
+        const record = options.draugasRecord;
+        if (record.href) {
+          drafts.push({
+            group: "newspaper",
+            title: `Draugas registry, 1909–2007 — all ${record.totalHitOccurrences.toLocaleString("en-US")} indexed references`,
+            citation: [
+              `${record.uniqueDatedIssueCount.toLocaleString("en-US")} dated issue files`,
+              record.firstIssueDate ? `first ${record.firstIssueDate}` : null,
+              record.lastIssueDate ? `last ${record.lastIssueDate}` : null,
+            ]
+              .filter(Boolean)
+              .join(" · "),
+            url: null,
+            internalHref: record.href,
+            contexts: ["Systematic Draugas archive index"],
+          });
+        } else {
+          for (const issue of record.issues) {
+            drafts.push({
+              group: "newspaper",
+              title: `Draugas issue, ${issue.date}`,
+              citation: [
+                `Draugas, ${issue.date}`,
+                issue.pages.length > 0 ? `pp. ${issue.pages.join(", ")}` : null,
+                `${issue.hitOccurrences} indexed ${issue.hitOccurrences === 1 ? "reference" : "references"}`,
+              ]
+                .filter(Boolean)
+                .join(" · "),
+              url: issue.url,
+              contexts: ["Systematic Draugas archive index"],
+              missingLinkNote:
+                "This dated registry entry does not yet have a verified issue-level URL.",
+            });
+          }
+          if (record.undatedHitOccurrences > 0) {
+            drafts.push({
+              group: "newspaper",
+              title: "Draugas registry references without an issue date",
+              citation: `${record.undatedHitOccurrences} indexed references`,
+              url: null,
+              contexts: ["Systematic Draugas archive index"],
+              missingLinkNote:
+                "These registry references do not carry an issue date.",
+            });
+          }
+        }
+        continue;
       }
       if (
         source.first_mention &&
@@ -395,7 +467,9 @@ export function finalizeProfileSources(
 
   for (const [index, source] of flat.entries()) {
     const normalizedUrl = source.url?.replace(/^http:\/\//i, "https://");
-    const key = source.url
+    const key = source.internalHref
+      ? `internal:${source.internalHref}`
+      : source.url
       ? source.group === "newspaper"
         ? `url:${normalizedUrl}:${source.citation ?? source.title}`
         : `url:${normalizedUrl}`
