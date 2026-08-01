@@ -115,6 +115,20 @@
         "data/canonical-public-census-adjudications.json",
         "data/candidates/registry-revision-11-st-peter-detroit-dates-2026-08-01.md"
       ]
+    },
+    {
+      "version": 12,
+      "date": "2026-08-01",
+      "registryRecords": 192,
+      "publicUSRecords": 154,
+      "usRomanCatholicParishes": 132,
+      "summary": "Added page-cited 1973 evidence for the Divine Providence Schaefer church lifecycle and its origin relationship with St. George; 154 public U.S. institutions, 131 physical worship sites, and 51 continuity edges unchanged.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/canonical-public-census-adjudications.json",
+        "data/candidates/registry-revision-12-divine-providence-schaefer-evidence-2026-08-01.md"
+      ]
     }
   ]
 }

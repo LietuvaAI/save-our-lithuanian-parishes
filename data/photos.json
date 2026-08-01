@@ -635,6 +635,14 @@
       "rights": "permission_granted",
       "rightsNote": "Parish line drawing supplied by Vilija for publication on 2026-07-30 from the Divine Providence parish materials."
     },
+    "divine-providence-detroit-schaefer-site-line-drawing": {
+      "src": "/images/parishes/detroit-divine-providence-schaefer-line-drawing.png",
+      "alt": "Line drawing of the Divine Providence Lithuanian Catholic Church on Schaefer Road in Detroit, used from 1949 to 1970.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from the church photograph in Dievo Apvaizdos lietuvių parapija / Divine Providence Lithuanian Parish, 1908-1973.",
+      "license": "Used with permission",
+      "rights": "permission_granted",
+      "rightsNote": "Source photograph and parish-history scans supplied by Vilija for publication on 2026-08-01. The public Žiburio archive item URL will be added when supplied; canonical source is the 1973 first-edition parish history, p. 25."
+    },
     "dievo-apvaizdos-southfield-mi-first-communion": {
       "src": "/images/parishes/divine-providence-first-communion.jpg",
       "alt": "Children celebrate First Communion inside Divine Providence Lithuanian Catholic Church in Southfield.",

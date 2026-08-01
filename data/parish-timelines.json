@@ -2,16 +2,16 @@
   "timelines": [
     {
       "parishLink": "/parishes/dievo-apvaizdos-southfield-mi",
-      "title": "One parish, three church homes",
-      "intro": "The institution founded as St. George in Detroit continues today as Divine Providence in Southfield. Its church buildings changed; the parish community endured.",
-      "asOf": "2026-07-30",
+      "title": "Two linked parishes, three church homes",
+      "intro": "St. George and Divine Providence are distinct, linked parish institutions. Divine Providence grew from the St. George community in 1949 while St. George remained active, then moved from Schaefer Road to Southfield.",
+      "asOf": "2026-08-01",
       "events": [
         {
           "date": "1908",
           "sortYear": 1908,
           "kind": "parish",
           "title": "St. George parish founded in Detroit",
-          "detail": "Detroit's Lithuanian Catholics established the parish whose institutional life continues as Divine Providence.",
+          "detail": "Detroit's Lithuanian Catholics established St. George. Divine Providence later grew from its community as a distinct parish institution.",
           "sourceIds": [
             "dp-parish-history"
           ]

@@ -322,7 +322,14 @@ export default async function ParishPage({
   const lithuanianMass = watchEntry
     ? (FREQUENCY_LABEL[watchEntry.liturgy.frequency] ??
       watchEntry.liturgy.frequency)
-    : null;
+    : caseRecord?.currentUse &&
+        /(?:Lithuanian(?:-language)?\s+Mass|Mass(?:es)?[^.]*Lithuanian)/i.test(
+          caseRecord.currentUse,
+        )
+      ? /(?:Sunday|weekly)/i.test(caseRecord.currentUse)
+        ? "Weekly"
+        : "Documented"
+      : null;
 
   const photosEntry =
     getClearedParishPortrait(profile.slug) ??

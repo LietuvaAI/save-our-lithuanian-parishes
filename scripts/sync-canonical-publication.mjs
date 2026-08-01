@@ -18,10 +18,10 @@ const revisions = read("registry-revisions.json");
 const projection = read("canonical-publication-projection.json");
 const adjudications = read("canonical-public-census-adjudications.json");
 
-const TARGET_REVISION = 11;
+const TARGET_REVISION = 12;
 const TARGET_DATE = "2026-08-01";
 const CHANGELOG =
-  "Registry Revision 11: corrected St. Peter Detroit's institutional founding to 1920 while retaining 1921 as the church-opening year and 1995 as the parish closure year; public count, identity, and classification are unchanged.";
+  "Registry Revision 12: added page-cited 1973 parish-history evidence for the Divine Providence Schaefer church and St. George origin relationship; public count, identity, classification, site count, and continuity-edge count are unchanged.";
 
 if (projection.schema !== "culturenet-parish-publication-projection.v1") {
   throw new Error(`Unsupported publication projection schema: ${projection.schema}`);
@@ -182,12 +182,12 @@ const revisionEntry = {
   publicUSRecords: publicRecords.length,
   usRomanCatholicParishes: romanCatholicParishes,
   summary:
-    "Synchronized the St. Peter Detroit institution/building date correction from CultureNet: parish founded 1920, church opened 1921, parish closed 1995; 154 public U.S. institutions unchanged.",
+    "Added page-cited 1973 evidence for the Divine Providence Schaefer church lifecycle and its origin relationship with St. George; 154 public U.S. institutions, 131 physical worship sites, and 51 continuity edges unchanged.",
   evidence: [
     "data/canonical-publication-projection.json",
     "data/canonical-infographic-projection.json",
     "data/canonical-public-census-adjudications.json",
-    "data/candidates/registry-revision-11-st-peter-detroit-dates-2026-08-01.md",
+    "data/candidates/registry-revision-12-divine-providence-schaefer-evidence-2026-08-01.md",
   ],
 };
 const priorRevision = revisions.revisions.find(
@@ -205,16 +205,16 @@ const removed = adjudications.decisions
       `| ${decision.registry_slug} | ${decision.scope} | ${decision.reason} |`,
   )
   .join("\n");
-const report = `# Registry Revision 11: St. Peter Detroit institution and church dates
+const report = `# Registry Revision 12: Divine Providence Schaefer evidence
 
 **Date:** ${TARGET_DATE}
 **Authority:** CultureNet parish publication projection
 **Public U.S. institutions:** ${publicRecords.length}
 **Count-risk rows:** 0
 
-The canonical record now distinguishes the founding of St. Peter Lithuanian parish in 1920 from the opening of its church in 1921. The parish remained a distinct institution until its closure in 1995; the former church survives in community use.
+The canonical record now carries page-cited evidence from the 1973 first-edition Divine Providence parish history for the Schaefer church: groundbreaking on July 25, 1948; cornerstone blessing on March 6, 1949; completed-church blessing in December 1949; and the final Schaefer Mass on May 17, 1970. The same source confirms that Divine Providence was formed from the St. George community while St. George still remained active.
 
-This revision changes no public census membership, institution identity, record type, class, status group, or closure year.
+St. George and Divine Providence remain distinct, linked parish institutions. Schaefer and Southfield remain successive building sites of the same Divine Providence institution. This revision changes no public census membership, institution identity, record type, class, status group, lifecycle date, physical-site count, or continuity-edge count.
 
 ## Census reconciliation
 
@@ -235,7 +235,7 @@ write("registry-unified.json", registry);
 write("registry-revisions.json", revisions);
 writeFileSync(
   new URL(
-    "../data/candidates/registry-revision-11-st-peter-detroit-dates-2026-08-01.md",
+    "../data/candidates/registry-revision-12-divine-providence-schaefer-evidence-2026-08-01.md",
     import.meta.url,
   ),
   report,

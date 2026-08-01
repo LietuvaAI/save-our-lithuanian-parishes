@@ -5471,6 +5471,49 @@
         "conflict_preserved": false,
         "state": "accepted"
       },
+      "assertion_type": "site_lifecycle",
+      "confidence": "high",
+      "id": "assert:detroit:divine-providence-schaefer-chronology-1973",
+      "object": {
+        "canonical_entity_id": "cn:building_site:divine-providence-detroit-schaefer-site",
+        "church_blessed": "1949-12",
+        "cornerstone_blessed": "1949-03-06",
+        "groundbreaking": "1948-07-25",
+        "last_mass": "1970-05-17",
+        "site_use_period": "1949-1970"
+      },
+      "predicate": "archival_chronology_attests_building_site_lifecycle",
+      "source_artifact_id": "src:divine-providence:parish-history-book:1973",
+      "source_locator": "Scan-sequence pp. 25 and 35: groundbreaking, cornerstone and church blessings, and last Mass on Schaefer",
+      "subject": {
+        "canonical_entity_id": "cn:institution:divine-providence-southfield-mi"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "origin_relationship",
+      "confidence": "high",
+      "id": "assert:detroit:divine-providence-st-george-origin-book-1973",
+      "object": {
+        "canonical_entity_id": "cn:institution:st-george-detroit-mi",
+        "date_text": "1948-1949",
+        "interpretation": "About 100 St. George parishioners broke ground for a new Lithuanian church intended to replace St. George at 1313 Westminster; Divine Providence was chosen as the name because St. George still remained active."
+      },
+      "predicate": "institution_originated_from_institution",
+      "source_artifact_id": "src:divine-providence:parish-history-book:1973",
+      "source_locator": "Scan-sequence p. 25, Divine Providence Chronology (1948-1973), by Anthony Dainius",
+      "subject": {
+        "canonical_entity_id": "cn:institution:divine-providence-southfield-mi"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
       "assertion_type": "site_location",
       "confidence": "medium",
       "id": "assert:detroit:schaefer-location-photo",
@@ -13119,6 +13162,7 @@
         "end": null,
         "source_assertion_ids": [
           "assert:detroit:divine-providence-originated-from-st-george-1949",
+          "assert:detroit:divine-providence-st-george-origin-book-1973",
           "assert:detroit:divine-providence-name-1949"
         ],
         "start": "1949"
@@ -16393,7 +16437,7 @@
       "slug": "robert-damyanovich"
     }
   ],
-  "content_hash": "sha256:d2582e75fe34726d3b2f6708b6b538bc31c76084af935c88c85a0e7637c9e980",
+  "content_hash": "sha256:4300f98b9a08d619776cb6c1430d87ad9a34c5d833872984cceb2b5fb97ebef9",
   "counts": {
     "by_institution_class": {
       "independent_catholic": 4,
@@ -31543,6 +31587,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -31560,6 +31605,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -31580,6 +31626,7 @@
       },
       "evidence_assertion_ids": [
         "assert:detroit:divine-providence-originated-from-st-george-1949",
+        "assert:detroit:divine-providence-st-george-origin-book-1973",
         "assert:detroit:st-george-aod-lifecycle-1908-1965"
       ],
       "id": "rel:detroit:divine-providence-originated-from-st-george",
@@ -31595,6 +31642,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -31603,6 +31651,7 @@
       },
       "source_artifact_ids": [
         "src:archdiocese-detroit:closed-parishes:st-george-detroit:2026-07-31",
+        "src:divine-providence:parish-history-book:1973",
         "src:divine-providence:parish-history:2026-07-31"
       ],
       "target": {
@@ -31646,6 +31695,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -31675,6 +31725,7 @@
       },
       "evidence_assertion_ids": [
         "assert:detroit:divine-providence-schaefer-1949",
+        "assert:detroit:divine-providence-schaefer-chronology-1973",
         "assert:detroit:schaefer-location-photo"
       ],
       "id": "rel:detroit:divine-providence-used-schaefer-site",
@@ -31690,6 +31741,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -31698,6 +31750,7 @@
       },
       "source_artifact_ids": [
         "src:detroit-historical-society:divine-providence-schaefer-photo",
+        "src:divine-providence:parish-history-book:1973",
         "src:divine-providence:parish-history:2026-07-31"
       ],
       "target": {
@@ -31885,6 +31938,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -31928,6 +31982,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -45790,6 +45845,22 @@
         "status": "public_web"
       },
       "title": "Divine Providence current parish homepage"
+    },
+    {
+      "artifact_type": "internal_archive_book_scan",
+      "id": "src:divine-providence:parish-history-book:1973",
+      "locator": {
+        "exact_label": "Dievo Apvaizdos lietuviu parapija / Divine Providence Lithuanian Parish, 1908-1973, first edition, Southfield, Michigan, 1973",
+        "page": "scan-sequence pp. 23-25, 28, 30, 32, 35-36",
+        "section": "Divine Providence Chronology (1948-1973), by Anthony Dainius; St. George and Schaefer site history"
+      },
+      "rights": {
+        "access": "CultureNet research corpus; public Ziburio archive URL pending",
+        "public_url": null,
+        "quote_policy": "cite by edition and page; add the public archive URL before publishing a direct source link",
+        "status": "project_internal"
+      },
+      "title": "Divine Providence Lithuanian Parish first-edition history, 1908-1973"
     },
     {
       "artifact_type": "public_web_snapshot",

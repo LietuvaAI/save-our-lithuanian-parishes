@@ -2,7 +2,7 @@
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
-    "publication_projection_hash": "sha256:d2582e75fe34726d3b2f6708b6b538bc31c76084af935c88c85a0e7637c9e980",
+    "publication_projection_hash": "sha256:4300f98b9a08d619776cb6c1430d87ad9a34c5d833872984cceb2b5fb97ebef9",
     "publication_projection_revision": "canonical-public-census-2026-07-31",
     "repository": "LietuvaAI/culturenet-brain"
   },
@@ -6271,7 +6271,7 @@
       "unit": "Canadian Lithuanian parish comparator"
     }
   },
-  "content_hash": "sha256:ad07ef25b3f80e2eca093c63e468f891e75a5b24c46e12e9b2b9bf97d572fdbd",
+  "content_hash": "sha256:8f834fb5d6d15e0350654a65ed8caf3488a715f2ad2878c5039c994806bd365e",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -6975,6 +6975,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -6992,6 +6993,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -7012,6 +7014,7 @@
       },
       "evidence_assertion_ids": [
         "assert:detroit:divine-providence-originated-from-st-george-1949",
+        "assert:detroit:divine-providence-st-george-origin-book-1973",
         "assert:detroit:st-george-aod-lifecycle-1908-1965"
       ],
       "id": "rel:detroit:divine-providence-originated-from-st-george",
@@ -7027,6 +7030,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -7035,6 +7039,7 @@
       },
       "source_artifact_ids": [
         "src:archdiocese-detroit:closed-parishes:st-george-detroit:2026-07-31",
+        "src:divine-providence:parish-history-book:1973",
         "src:divine-providence:parish-history:2026-07-31"
       ],
       "target": {
@@ -7089,6 +7094,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"

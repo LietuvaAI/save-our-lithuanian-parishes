@@ -25,6 +25,9 @@ const publicationByRegistrySlug = new Map(
     institution,
   ]),
 );
+const canonicalEntityById = new Map(
+  publication.canonical_entities.map((entity) => [entity.id, entity]),
+);
 const libParishes = read("parishes.json");
 const libByC83Row = new Map(
   libParishes.filter((parish) => !parish.mergedInto).flatMap((parish) =>
@@ -77,6 +80,9 @@ let skipped = 0;
 for (const r of registry.parishes) {
   const institution = publicationByRegistrySlug.get(r.slug);
   if (!institution) continue;
+  const canonicalEntity = canonicalEntityById.get(
+    institution.culturenet_entity_id,
+  );
 
   const lib = r.c83_row != null ? libByC83Row.get(r.c83_row) : undefined;
   const libOk = !!(lib && lib.city === r.city);
@@ -85,9 +91,11 @@ for (const r of registry.parishes) {
   // Canonical parishes: locked-core year wins on every surface.
   const closed = libOk
     ? (lib.yearClosed ?? null)
-    : r.lifecycle
-      ? (r.lifecycle.selected_closed_year ?? null)
-      : yearOf(r.locked?.year_closed, r.years?.closed);
+    : canonicalEntity?.lifecycle
+      ? asYear(canonicalEntity.lifecycle.end)
+      : r.lifecycle
+        ? (r.lifecycle.selected_closed_year ?? null)
+        : yearOf(r.locked?.year_closed, r.years?.closed);
   const endingMode = libOk
     ? lib.endingMode
     : r.lifecycle?.canonical_status === "unresolved"

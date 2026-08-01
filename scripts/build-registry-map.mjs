@@ -24,6 +24,21 @@ const GEO_CAND = new URL("../data/candidates/geo.json", import.meta.url);
 const OUT_PATH = new URL("../data/registry-map.json", import.meta.url);
 
 const registry = JSON.parse(readFileSync(REGISTRY_PATH, "utf-8"));
+const publication = JSON.parse(
+  readFileSync(
+    new URL("../data/canonical-publication-projection.json", import.meta.url),
+    "utf-8",
+  ),
+);
+const institutionByRegistrySlug = new Map(
+  publication.public_institutions.map((institution) => [
+    institution.registry_slug,
+    institution,
+  ]),
+);
+const canonicalEntityById = new Map(
+  publication.canonical_entities.map((entity) => [entity.id, entity]),
+);
 const geoCache = {
   ...JSON.parse(readFileSync(GEO_CAND, "utf-8")),
   ...JSON.parse(readFileSync(GEO_MAIN, "utf-8")),
@@ -79,7 +94,23 @@ function yearOf(variants, { closing = false } = {}) {
   return null;
 }
 
+function canonicalLifecycleOf(record) {
+  const institution = institutionByRegistrySlug.get(record.slug);
+  return institution
+    ? canonicalEntityById.get(institution.culturenet_entity_id)?.lifecycle
+    : null;
+}
+
+function foundedYearOf(record) {
+  const lifecycle = canonicalLifecycleOf(record);
+  return lifecycle ? yearOf([{ value: lifecycle.start }]) : yearOf(record.years?.founded);
+}
+
 function closedYearOf(record) {
+  const lifecycle = canonicalLifecycleOf(record);
+  if (lifecycle) {
+    return yearOf([{ value: lifecycle.end }], { closing: true });
+  }
   if (record.lifecycle) {
     return record.lifecycle.selected_closed_year ?? null;
   }
@@ -135,7 +166,7 @@ for (const r of toPlot) {
     city: r.city_history?.[0] || r.city,
     state: r.state,
     country: r.country,
-    foundedYear: yearOf(r.years?.founded),
+    foundedYear: foundedYearOf(r),
     closedYear,
     // lockedStanding: comparator parishes and web-confirmed-standing parishes
     // show as open on the map; non_catholic_christian entries are confirmed

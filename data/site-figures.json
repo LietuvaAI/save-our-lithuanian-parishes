@@ -1,11 +1,11 @@
 {
   "generatedFrom": {
-    "registryRevision": 11,
+    "registryRevision": 12,
     "registryDate": "2026-08-01",
     "canonicalPublicationRevision": "canonical-public-census-2026-07-31",
-    "canonicalPublicationHash": "sha256:d2582e75fe34726d3b2f6708b6b538bc31c76084af935c88c85a0e7637c9e980",
+    "canonicalPublicationHash": "sha256:4300f98b9a08d619776cb6c1430d87ad9a34c5d833872984cceb2b5fb97ebef9",
     "canonicalInfographicRevision": "canonical-infographic-units-2026-08-01",
-    "canonicalInfographicHash": "sha256:ad07ef25b3f80e2eca093c63e468f891e75a5b24c46e12e9b2b9bf97d572fdbd",
+    "canonicalInfographicHash": "sha256:8f834fb5d6d15e0350654a65ed8caf3488a715f2ad2878c5039c994806bd365e",
     "networkChecked": "2026-07-29"
   },
   "publicUS": {
