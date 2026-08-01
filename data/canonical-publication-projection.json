@@ -5724,6 +5724,26 @@
     },
     {
       "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "lifecycle_dates",
+      "confidence": "high",
+      "id": "assert:detroit:st-george-foundation-book-1973",
+      "object": {
+        "canonical_entity_id": "cn:institution:st-george-detroit-mi",
+        "date_text": "1908",
+        "interpretation": "St. George Lithuanian parish was organized in 1908 by Father Casimir Valaitis and the St. George Society."
+      },
+      "predicate": "institution_founding_attested",
+      "source_artifact_id": "src:divine-providence:parish-history-book:1973",
+      "source_locator": "Printed pp. 11 and 21, St. George parish histories",
+      "subject": {
+        "canonical_entity_id": "cn:institution:st-george-detroit-mi"
+      }
+    },
+    {
+      "adjudication": {
         "conflict_preserved": true,
         "state": "accepted"
       },
@@ -5757,6 +5777,29 @@
       "predicate": "institution_used_site",
       "source_artifact_id": "src:divine-providence:parish-history:2026-07-31",
       "source_locator": "Parish History paragraph naming Westminster/Cardoni and the 1917 brick St. George",
+      "subject": {
+        "canonical_entity_id": "cn:institution:st-george-detroit-mi"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "site_lifecycle",
+      "confidence": "high",
+      "id": "assert:detroit:st-george-westminster-cardoni-chronology-book-1973",
+      "object": {
+        "brick_church_blessed": "1917",
+        "brick_church_construction_began": "1916",
+        "brick_church_demolished": "1966-02-04",
+        "canonical_entity_id": "cn:building_site:st-george-detroit-westminster-cardoni-site",
+        "wooden_church_blessed": "1909",
+        "wooden_church_built": "1908"
+      },
+      "predicate": "archival_chronology_attests_building_site_lifecycle",
+      "source_artifact_id": "src:divine-providence:parish-history-book:1973",
+      "source_locator": "Printed pp. 11-14 and 21-24: wooden and brick church chronology and February 4, 1966 demolition",
       "subject": {
         "canonical_entity_id": "cn:institution:st-george-detroit-mi"
       }
@@ -16437,7 +16480,7 @@
       "slug": "robert-damyanovich"
     }
   ],
-  "content_hash": "sha256:7756c73bed1176cecb57cec3f192c20627f53ed423f94845747882f9a16a1296",
+  "content_hash": "sha256:86bfebdcc2d1e5d532b2c1af5c52b55ec690b8a78318e54dd8701e44739b7a0e",
   "counts": {
     "by_institution_class": {
       "independent_catholic": 4,
@@ -27237,8 +27280,10 @@
       "culturenet_entity_id": "cn:institution:st-george-detroit-mi",
       "evidence_assertion_ids": [
         "assert:detroit:st-george-aod-lifecycle-1908-1965",
+        "assert:detroit:st-george-foundation-book-1973",
         "assert:detroit:st-george-lineage-begins-1908",
-        "assert:detroit:st-george-used-westminster-cardoni"
+        "assert:detroit:st-george-used-westminster-cardoni",
+        "assert:detroit:st-george-westminster-cardoni-chronology-book-1973"
       ],
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
@@ -27251,6 +27296,7 @@
       "registry_slug": "st-george-detroit-mi",
       "source_artifact_ids": [
         "src:archdiocese-detroit:closed-parishes:st-george-detroit:2026-07-31",
+        "src:divine-providence:parish-history-book:1973",
         "src:divine-providence:parish-history:2026-07-31"
       ],
       "state": "MI"
@@ -32041,7 +32087,8 @@
       },
       "evidence_assertion_ids": [
         "assert:detroit:st-george-aod-lifecycle-1908-1965",
-        "assert:detroit:st-george-used-westminster-cardoni"
+        "assert:detroit:st-george-used-westminster-cardoni",
+        "assert:detroit:st-george-westminster-cardoni-chronology-book-1973"
       ],
       "id": "rel:detroit:st-george-used-westminster-cardoni-site",
       "identity_effect": "site_context_only",
@@ -32063,6 +32110,7 @@
       },
       "source_artifact_ids": [
         "src:archdiocese-detroit:closed-parishes:st-george-detroit:2026-07-31",
+        "src:divine-providence:parish-history-book:1973",
         "src:divine-providence:parish-history:2026-07-31"
       ],
       "target": {
@@ -45854,8 +45902,8 @@
       "id": "src:divine-providence:parish-history-book:1973",
       "locator": {
         "exact_label": "Dievo Apvaizdos lietuviu parapija / Divine Providence Lithuanian Parish, 1908-1973, first edition, Southfield, Michigan, 1973",
-        "page": "scan-sequence pp. 23-25, 28, 30, 32, 35-36",
-        "section": "Divine Providence Chronology (1948-1973), by Anthony Dainius; St. George and Schaefer site history"
+        "page": "printed pp. 11-25, 28, 30, 32, 35-36",
+        "section": "St. George's Lithuanian Parish and Divine Providence Chronology (1948-1973), by Anthony Dainius"
       },
       "rights": {
         "access": "public Žiburio archive item",

@@ -652,6 +652,15 @@
       "rights": "permission_granted",
       "rightsNote": "Image supplied by Vilija for publication on 2026-07-29 from the Friends of Divine Providence Virbalas briefing asset set."
     },
+    "st-george-detroit-mi-line-drawing": {
+      "src": "/images/parishes/detroit-st-george-line-drawing.png",
+      "alt": "Line drawing of the 1916 St. George Lithuanian Catholic Church in Detroit.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from the church photograph in Dievo Apvaizdos lietuvių parapija / Divine Providence Lithuanian Parish, 1908-1973.",
+      "license": "Used with permission",
+      "rights": "permission_granted",
+      "rightsNote": "Source photograph and parish-history scans supplied by Vilija for publication on 2026-08-01. Canonical source: 1973 first-edition parish history, printed p. 14.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260331_1774920079895"
+    },
     "sv-petro-detroit-mi-line-drawing": {
       "src": "/images/parishes/detroit-st-peter-line-drawing.png",
       "alt": "Line drawing of St. Peter Lithuanian Catholic Church in Detroit as it appeared in 1960.",

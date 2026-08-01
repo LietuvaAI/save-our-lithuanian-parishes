@@ -23574,7 +23574,7 @@
     }
   ],
   "registryRevision": {
-    "version": 13,
+    "version": 14,
     "date": "2026-08-01",
     "changelog": [
       "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
@@ -23611,15 +23611,16 @@
       "Registry Revision 10: made the CultureNet parish publication projection authoritative for public U.S. institution identity, scope, type, class, and profile route; removed five adjudicated duplicate or non-institution rows from public scope without deleting their research evidence.",
       "Registry Revision 11: corrected St. Peter Detroit's institutional founding to 1920 while retaining 1921 as the church-opening year and 1995 as the parish closure year; public count, identity, and classification are unchanged.",
       "Registry Revision 12: added page-cited 1973 parish-history evidence for the Divine Providence Schaefer church and St. George origin relationship; public count, identity, classification, site count, and continuity-edge count are unchanged.",
-      "Registry Revision 13: linked the 1973 Divine Providence parish history to its public Žiburio archive item; public counts, identities, classifications, lifecycle dates, site counts, and continuity-edge counts are unchanged."
+      "Registry Revision 13: linked the 1973 Divine Providence parish history to its public Žiburio archive item; public counts, identities, classifications, lifecycle dates, site counts, and continuity-edge counts are unchanged.",
+      "Registry Revision 14: added page-cited St. George Detroit parish and church-building chronology from the 1973 parish history, plus cleared line art; public counts, identities, classifications, site counts, and continuity-edge counts are unchanged."
     ],
-    "contentHash": "19d5c1e12e5ad569cb6309887d8ec28b7112acd097148a506e7a4234635b869b"
+    "contentHash": "653463122f42675776cb4378a9481db1eba7ce7de457ef0188e87857ff77582f"
   },
   "publicationAuthority": {
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
     "revisionId": "canonical-public-census-2026-07-31",
-    "contentHash": "sha256:7756c73bed1176cecb57cec3f192c20627f53ed423f94845747882f9a16a1296",
+    "contentHash": "sha256:86bfebdcc2d1e5d532b2c1af5c52b55ec690b8a78318e54dd8701e44739b7a0e",
     "publicUSInstitutions": 154,
     "synchronized": "2026-08-01"
   }

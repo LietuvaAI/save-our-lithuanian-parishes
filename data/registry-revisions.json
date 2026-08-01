@@ -143,6 +143,20 @@
         "data/canonical-public-census-adjudications.json",
         "data/candidates/registry-revision-13-divine-providence-public-archive-link-2026-08-01.md"
       ]
+    },
+    {
+      "version": 14,
+      "date": "2026-08-01",
+      "registryRecords": 192,
+      "publicUSRecords": 154,
+      "usRomanCatholicParishes": 132,
+      "summary": "Added page-cited St. George Detroit parish and church-building chronology from the public 1973 parish history, plus cleared line art; 154 public U.S. institutions, 131 physical worship sites, and 51 continuity edges unchanged.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/canonical-public-census-adjudications.json",
+        "data/candidates/registry-revision-14-st-george-detroit-history-and-line-art-2026-08-01.md"
+      ]
     }
   ]
 }

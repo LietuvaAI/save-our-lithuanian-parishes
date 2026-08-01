@@ -44,6 +44,12 @@ const publication = JSON.parse(
     "utf8",
   ),
 );
+const infographic = JSON.parse(
+  fs.readFileSync(
+    path.join(ROOT, "data", "canonical-infographic-projection.json"),
+    "utf8",
+  ),
+);
 const comparatorCount = JSON.parse(
   fs.readFileSync(path.join(ROOT, "data", "parishes.json"), "utf8"),
 ).filter((parish) => parish.comparator && !parish.mergedInto).length;
@@ -109,6 +115,7 @@ const requiredFragments = [
     "grid min-w-0",
     "worship-site mobile width containment",
   ],
+  [worshipSitesSource, "site.milestones.map", "worship-site milestone list"],
   [relatedRecordsSource, 'id="related-records"', "related records section id"],
   [ledgerSource, 'id="evidence-sources"', "evidence section id"],
   [
@@ -203,14 +210,32 @@ if (
   errors.push("Divine Providence parish history lacks its public archive URL");
 }
 
+const stGeorgeSite = infographic.building_site_history.find(
+  (site) =>
+    site.culturenet_entity_id ===
+    "cn:building_site:st-george-detroit-westminster-cardoni-site",
+);
+const stGeorgeMilestones = new Map(
+  (stGeorgeSite?.milestones ?? []).map((milestone) => [
+    milestone.event,
+    milestone.date,
+  ]),
+);
+for (const [event, date] of [
+  ["wooden_church_built", "1908"],
+  ["wooden_church_blessed", "1909"],
+  ["brick_church_construction_began", "1916"],
+  ["brick_church_blessed", "1917"],
+  ["brick_church_demolished", "1966-02-04"],
+]) {
+  if (stGeorgeMilestones.get(event) !== date) {
+    errors.push(`St. George Detroit site milestone drifted: ${event}`);
+  }
+}
+
 const relationshipTypes = [
   ...new Set(
-    JSON.parse(
-      fs.readFileSync(
-        path.join(ROOT, "data", "canonical-infographic-projection.json"),
-        "utf8",
-      ),
-    ).continuity_edges.map((edge) => edge.relationship_type),
+    infographic.continuity_edges.map((edge) => edge.relationship_type),
   ),
 ].sort();
 const mappedRelationshipTypes = [

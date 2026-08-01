@@ -30,6 +30,21 @@ export function ProfileWorshipSites({ sites }: { sites: WorshipSiteRow[] }) {
                 Outcome &middot;{" "}
                 <span className="text-foreground">{site.outcome}</span>
               </p>
+              {site.milestones.length > 0 && (
+                <ol className="mt-3 space-y-1.5 border-t border-border pt-3">
+                  {site.milestones.map((milestone) => (
+                    <li
+                      key={milestone.id}
+                      className="grid gap-x-3 text-xs leading-relaxed sm:grid-cols-[88px_minmax(0,1fr)]"
+                    >
+                      <time className="font-mono text-[10.5px] font-medium tabular-nums text-muted">
+                        {milestone.date}
+                      </time>
+                      <span>{milestone.label}</span>
+                    </li>
+                  ))}
+                </ol>
+              )}
             </div>
           </li>
         ))}

@@ -4,9 +4,9 @@
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
     "revisionId": "canonical-public-census-2026-07-31",
-    "contentHash": "sha256:7756c73bed1176cecb57cec3f192c20627f53ed423f94845747882f9a16a1296"
+    "contentHash": "sha256:86bfebdcc2d1e5d532b2c1af5c52b55ec690b8a78318e54dd8701e44739b7a0e"
   },
-  "registryRevision": 13,
+  "registryRevision": 14,
   "registryDate": "2026-08-01",
   "claim": "The current documented record contains 154 distinct U.S. Lithuanian religious institutions.",
   "inclusionRule": "Count one canonical U.S. institution when CultureNet publishes it as a parish, mission, or congregation. Buildings, duplicate aliases, historical attempts, hosted worship, research leads, and comparators remain linked context and never increase this total.",
@@ -4640,11 +4640,14 @@
       "protectedCampaign": false,
       "assertionIds": [
         "assert:detroit:st-george-aod-lifecycle-1908-1965",
+        "assert:detroit:st-george-foundation-book-1973",
         "assert:detroit:st-george-lineage-begins-1908",
-        "assert:detroit:st-george-used-westminster-cardoni"
+        "assert:detroit:st-george-used-westminster-cardoni",
+        "assert:detroit:st-george-westminster-cardoni-chronology-book-1973"
       ],
       "sourceArtifactIds": [
         "src:archdiocese-detroit:closed-parishes:st-george-detroit:2026-07-31",
+        "src:divine-providence:parish-history-book:1973",
         "src:divine-providence:parish-history:2026-07-31"
       ],
       "sourceFamilies": [
@@ -4684,6 +4687,12 @@
           "label": "Archdiocese of Detroit closed parishes register entry for St. George Detroit",
           "locator": "Archdiocese of Detroit Closed Parishes, S section, St. George Parish (Detroit), fetched 2026-07-31",
           "url": "https://www.aod.org/closed-parishes"
+        },
+        {
+          "sourceArtifactId": "src:divine-providence:parish-history-book:1973",
+          "label": "Divine Providence Lithuanian Parish first-edition history, 1908-1973",
+          "locator": "Dievo Apvaizdos lietuviu parapija / Divine Providence Lithuanian Parish, 1908-1973, first edition, Southfield, Michigan, 1973",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260331_1774920079895"
         },
         {
           "sourceArtifactId": "src:divine-providence:parish-history:2026-07-31",

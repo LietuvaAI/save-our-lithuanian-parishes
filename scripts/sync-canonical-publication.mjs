@@ -18,10 +18,10 @@ const revisions = read("registry-revisions.json");
 const projection = read("canonical-publication-projection.json");
 const adjudications = read("canonical-public-census-adjudications.json");
 
-const TARGET_REVISION = 13;
+const TARGET_REVISION = 14;
 const TARGET_DATE = "2026-08-01";
 const CHANGELOG =
-  "Registry Revision 13: linked the 1973 Divine Providence parish history to its public Žiburio archive item; public counts, identities, classifications, lifecycle dates, site counts, and continuity-edge counts are unchanged.";
+  "Registry Revision 14: added page-cited St. George Detroit parish and church-building chronology from the 1973 parish history, plus cleared line art; public counts, identities, classifications, site counts, and continuity-edge counts are unchanged.";
 
 if (projection.schema !== "culturenet-parish-publication-projection.v1") {
   throw new Error(`Unsupported publication projection schema: ${projection.schema}`);
@@ -182,12 +182,12 @@ const revisionEntry = {
   publicUSRecords: publicRecords.length,
   usRomanCatholicParishes: romanCatholicParishes,
   summary:
-    "Linked the page-cited 1973 Divine Providence parish history to its public Žiburio archive item; 154 public U.S. institutions, 131 physical worship sites, and 51 continuity edges unchanged.",
+    "Added page-cited St. George Detroit parish and church-building chronology from the public 1973 parish history, plus cleared line art; 154 public U.S. institutions, 131 physical worship sites, and 51 continuity edges unchanged.",
   evidence: [
     "data/canonical-publication-projection.json",
     "data/canonical-infographic-projection.json",
     "data/canonical-public-census-adjudications.json",
-    "data/candidates/registry-revision-13-divine-providence-public-archive-link-2026-08-01.md",
+    "data/candidates/registry-revision-14-st-george-detroit-history-and-line-art-2026-08-01.md",
   ],
 };
 const priorRevision = revisions.revisions.find(
@@ -205,16 +205,16 @@ const removed = adjudications.decisions
       `| ${decision.registry_slug} | ${decision.scope} | ${decision.reason} |`,
   )
   .join("\n");
-const report = `# Registry Revision 13: Divine Providence public archive link
+const report = `# Registry Revision 14: St. George Detroit history and line art
 
 **Date:** ${TARGET_DATE}
 **Authority:** CultureNet parish publication projection
 **Public U.S. institutions:** ${publicRecords.length}
 **Count-risk rows:** 0
 
-The page-cited 1973 first-edition Divine Providence parish history now resolves to its [public Žiburio archive item](https://archyvas.ziburioltmokykla.org/item/20260331_1774920079895). Its evidence supports the Schaefer church chronology and the parish's origin relationship with St. George.
+The St. George Detroit profile now carries page-cited evidence from the [public 1973 Divine Providence parish history](https://archyvas.ziburioltmokykla.org/item/20260331_1774920079895): the parish was organized in 1908; its wooden church was built in 1908 and blessed in 1909; its brick church was begun in 1916 and blessed in 1917; and that church was demolished on February 4, 1966 for the Chrysler Freeway. A cleared line-art adaptation of the printed p. 14 church photograph now illustrates St. George's own profile.
 
-This source-link revision changes no public census membership, institution identity, record type, class, status group, lifecycle date, physical-site count, or continuity-edge count.
+St. George remains a distinct historical parish institution linked to, but not collapsed into, Divine Providence. This evidence-and-media revision changes no public census membership, institution identity, record type, class, status group, physical-site count, or continuity-edge count.
 
 ## Census reconciliation
 
@@ -235,7 +235,7 @@ write("registry-unified.json", registry);
 write("registry-revisions.json", revisions);
 writeFileSync(
   new URL(
-    "../data/candidates/registry-revision-13-divine-providence-public-archive-link-2026-08-01.md",
+    "../data/candidates/registry-revision-14-st-george-detroit-history-and-line-art-2026-08-01.md",
     import.meta.url,
   ),
   report,

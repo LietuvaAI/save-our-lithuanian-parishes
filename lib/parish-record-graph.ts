@@ -25,6 +25,11 @@ export type WorshipSiteRow = {
   range: string | null;
   outcome: string;
   demolishedYear: number | null;
+  milestones: Array<{
+    id: string;
+    date: string;
+    label: string;
+  }>;
 };
 
 export type RelatedRecordRow = {
@@ -114,6 +119,11 @@ export function getWorshipSitesForInstitution(
       range: usePeriodRange(site, entityId),
       outcome: siteOutcome(site),
       demolishedYear: site.demolished_year,
+      milestones: site.milestones.map((milestone) => ({
+        id: `${milestone.assertion_id}:${milestone.event}`,
+        date: milestone.date,
+        label: milestone.label,
+      })),
     }))
     .sort((a, b) => {
       const aYear = yearOf(a.range) ?? 0;

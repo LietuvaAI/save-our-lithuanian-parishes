@@ -58,6 +58,14 @@ export type BuildingSiteHistoryRow = {
   first_documented_year: number | null;
   lifecycle_text: Record<string, unknown> | null;
   demolished_year: number | null;
+  milestones: Array<{
+    assertion_id: string;
+    event: string;
+    label: string;
+    date: string;
+    source_artifact_id: string;
+    source_locator?: string | null;
+  }>;
   institution_use_periods: InstitutionUsePeriod[];
   condition_relationships: Array<{
     relationship_id: string;
