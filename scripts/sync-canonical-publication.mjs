@@ -18,10 +18,10 @@ const revisions = read("registry-revisions.json");
 const projection = read("canonical-publication-projection.json");
 const adjudications = read("canonical-public-census-adjudications.json");
 
-const TARGET_REVISION = 10;
-const TARGET_DATE = "2026-07-31";
+const TARGET_REVISION = 11;
+const TARGET_DATE = "2026-08-01";
 const CHANGELOG =
-  "Registry Revision 10: made the CultureNet parish publication projection authoritative for public U.S. institution identity, scope, type, class, and profile route; removed five adjudicated duplicate or non-institution rows from public scope without deleting their research evidence.";
+  "Registry Revision 11: corrected St. Peter Detroit's institutional founding to 1920 while retaining 1921 as the church-opening year and 1995 as the parish closure year; public count, identity, and classification are unchanged.";
 
 if (projection.schema !== "culturenet-parish-publication-projection.v1") {
   throw new Error(`Unsupported publication projection schema: ${projection.schema}`);
@@ -182,11 +182,12 @@ const revisionEntry = {
   publicUSRecords: publicRecords.length,
   usRomanCatholicParishes: romanCatholicParishes,
   summary:
-    "Synchronized public identity and census scope to the complete CultureNet publication projection: 154 U.S. institutions, five explicit exclusions, unique canonical entities and profile routes, and no pending count-risk rows.",
+    "Synchronized the St. Peter Detroit institution/building date correction from CultureNet: parish founded 1920, church opened 1921, parish closed 1995; 154 public U.S. institutions unchanged.",
   evidence: [
     "data/canonical-publication-projection.json",
+    "data/canonical-infographic-projection.json",
     "data/canonical-public-census-adjudications.json",
-    "data/candidates/registry-revision-10-canonical-projection-2026-07-31.md",
+    "data/candidates/registry-revision-11-st-peter-detroit-dates-2026-08-01.md",
   ],
 };
 const priorRevision = revisions.revisions.find(
@@ -204,14 +205,16 @@ const removed = adjudications.decisions
       `| ${decision.registry_slug} | ${decision.scope} | ${decision.reason} |`,
   )
   .join("\n");
-const report = `# Registry Revision 10: canonical publication projection
+const report = `# Registry Revision 11: St. Peter Detroit institution and church dates
 
 **Date:** ${TARGET_DATE}
 **Authority:** CultureNet parish publication projection
 **Public U.S. institutions:** ${publicRecords.length}
 **Count-risk rows:** 0
 
-The public site now receives institution identity, census membership, type, class, canonical entity ID, and public profile route from one CultureNet publication projection. The site's registry remains the display layer for narrative, lifecycle, media, and public source detail.
+The canonical record now distinguishes the founding of St. Peter Lithuanian parish in 1920 from the opening of its church in 1921. The parish remained a distinct institution until its closure in 1995; the former church survives in community use.
+
+This revision changes no public census membership, institution identity, record type, class, status group, or closure year.
 
 ## Census reconciliation
 
@@ -232,7 +235,7 @@ write("registry-unified.json", registry);
 write("registry-revisions.json", revisions);
 writeFileSync(
   new URL(
-    "../data/candidates/registry-revision-10-canonical-projection-2026-07-31.md",
+    "../data/candidates/registry-revision-11-st-peter-detroit-dates-2026-08-01.md",
     import.meta.url,
   ),
   report,

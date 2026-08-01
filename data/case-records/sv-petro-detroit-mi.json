@@ -3,8 +3,44 @@
   "asOf": "2026-07-16",
   "buildingStatus": "converted",
   "currentUse": "Community center — the All Saints Neighborhood Center, home base of the nonprofit Urban Neighborhood Initiatives (UNI) at 8300 Longworth St. in Detroit's Springwells neighborhood",
-  "summary": "The modest wooden church of Šv. Petro (St. Peter) Lithuanian parish still stands in southwest Detroit and has been converted to secular community use. The Archdiocese of Detroit's official closed-parishes list records the parish as active 1921–1995. After the 1995 closure, the church's statues, furniture, and the large Lithuanian wayside cross that stood in front of the building were donated to Lithuania; the brick cladding added in the parish's late Lithuanian era was removed and the original wooden exterior restored (Global True Lithuania). Beginning in 1997, All Saints Catholic Parish and the nonprofit now called Urban Neighborhood Initiatives (founded 1997 as Neighborhood Centers Incorporated) restored the empty church building into the All Saints Neighborhood Center, a hub for youth and adult programs in the Springwells neighborhood. The center holds some historical plaques about the building's Lithuanian past in the first room beyond the entrance, but the building otherwise retains no Lithuanian details. UNI remains active at 8300 Longworth St., Detroit, MI 48209 as of 2026, with annual reports published through 2025. No preservation campaign, Lithuanian community activity, or recent press about the building was found.",
+  "summary": "Šv. Petro (St. Peter) was founded in 1920 as a distinct Lithuanian parish for Detroit's growing Delray community; its church opened in 1921. The modest church still stands in southwest Detroit and has been converted to secular community use. The Archdiocese of Detroit's closed-parishes register gives 1921–1995, using the church-opening year rather than the parish's 1920 institutional founding. After the 1995 closure, the church's statues, furniture, and the large Lithuanian wayside cross that stood in front of the building were donated to Lithuania; the brick cladding added in the parish's late Lithuanian era was removed and the original wooden exterior restored (Global True Lithuania). Beginning in 1997, All Saints Catholic Parish and the nonprofit now called Urban Neighborhood Initiatives (founded 1997 as Neighborhood Centers Incorporated) restored the empty church building into the All Saints Neighborhood Center, a hub for youth and adult programs in the Springwells neighborhood. The center holds some historical plaques about the building's Lithuanian past in the first room beyond the entrance, but the building otherwise retains no Lithuanian details. UNI remains active at 8300 Longworth St., Detroit, MI 48209 as of 2026, with annual reports published through 2025.",
+  "historicalSummary": [
+    "Lithuanian families drawn to Detroit's automobile industry established a growing community in Delray before the First World War. They initially traveled across the city to Šv. Jurgio for Lithuanian worship. In 1920, a separate Lithuanian parish was founded for Delray under Father Jurgis Jonaitis; its first services were held at nearby Holy Cross Hungarian Catholic Church.",
+    "The community acquired land at Mullane and Longworth and raised its own church in 1921. The church and the parish therefore have different start dates: Šv. Petro's institutional life begins in 1920, while its church-building history begins in 1921. The parish remained there until its closure in 1995."
+  ],
   "developments": [
+    {
+      "date": "1920",
+      "headline": "A distinct Lithuanian parish was founded for Delray",
+      "detail": "Lithuanians in southwest Detroit had previously traveled to Šv. Jurgio for worship. St. Peter parish was founded in 1920 under Father Jurgis Jonaitis and first celebrated Mass at nearby Holy Cross Hungarian Catholic Church.",
+      "sources": [
+        {
+          "title": "St. Peter Lithuanian Roman Catholic Church",
+          "publisher": "Detroit1701.org",
+          "date": "undated (accessed 2026-08-01)",
+          "url": "https://detroit1701.org/St.%20Peter%20Lithuanian.html"
+        }
+      ]
+    },
+    {
+      "date": "1921",
+      "headline": "The parish opened its church at Mullane and Longworth",
+      "detail": "After worshipping temporarily at Holy Cross, the St. Peter community raised its own small church in 1921 at Mullane and Longworth. This is the building that survived the parish's 1995 closure and later became the All Saints Neighborhood Center.",
+      "sources": [
+        {
+          "title": "St. Peter Lithuanian Roman Catholic Church",
+          "publisher": "Detroit1701.org",
+          "date": "undated (accessed 2026-08-01)",
+          "url": "https://detroit1701.org/St.%20Peter%20Lithuanian.html"
+        },
+        {
+          "title": "Detroit, Michigan: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "circa 2012 (accessed 2026-07-16)",
+          "url": "https://global.truelithuania.com/detroit-michigan-10/"
+        }
+      ]
+    },
     {
       "date": "1995",
       "headline": "Parish closed; contents sent to Lithuania",
@@ -85,11 +121,11 @@
     {
       "title": "St. Peter Lithuanian Roman Catholic Church",
       "publisher": "Detroit1701.org",
-      "date": "undated (via search excerpts only; page blocked by Cloudflare)",
+      "date": "undated (accessed 2026-08-01)",
       "url": "https://detroit1701.org/St.%20Peter%20Lithuanian.html"
     }
   ],
   "confidence": "probable",
   "conflictsWithArchiveRecord": "No contradictions. The archive record is corroborated on every point: diocesan closure in 1995 (AOD lists the parish as 1921–1995), closure tied to the retirement of the last pastor (search excerpts of Detroit1701.org name him as Fr. Casimir Burkus — plausible refinement of the archive's unnamed 'pastor retired'), and contents shipped to Lithuania (Global True Lithuania specifies statues, furniture, and the front-yard wayside cross were donated to Lithuania). Refinements: founding can now be dated — parish founded 1920, church built/opened 1921 (AOD gives 1921–1995 as parish dates; Detroit1701 excerpts say founded 1920 with the building raised by 1921). The parish is confirmed distinct from Detroit Šv. Antano (AOD lists St. Anthony Lithuanian separately, 1920–2013) and Southfield Dievo Apvaizdos (Divine Providence, still listed as records repository).",
-  "gaps": "The Detroit1701.org page — the most detailed single source on this church — is behind a Cloudflare challenge and could not be opened directly; its facts (founder, Fr. Burkus, takeover by All Saints parish) are cited here only via search-result excerpts. The identification of the former church with the address 8300 Longworth St. is an inference chain, not stated in one source: Global True Lithuania says the All Saints Neighborhood Center occupies the former St. Peter building since 1997, and UNI's own site places the All Saints Neighborhood Center/its offices at 8300 Longworth — no source opened states 'St. Peter Lithuanian church = 8300 Longworth' verbatim. No property-transaction record, sale price, or current deed holder was found (searched AOD, UNI, and general web) — whether the archdiocese, All Saints Parish, or UNI owns the building today is unverified. No recent press, preservation campaigns, Lithuanian community reunions, or Draugas coverage of the building was found in searches (English and Lithuanian). The exact street address the parish used historically (Vernor Hwy vs. Longworth) was not confirmed from an opened source."
+  "gaps": "No property-transaction record, sale price, or current deed holder was found; whether the archdiocese, All Saints Parish, or UNI owns the building today remains unverified. No recent preservation campaign or Lithuanian community activity at the building was identified. Parish-history pages and a 1960 church photograph supplied on 2026-08-01 corroborate the 1920 founding and 1921 church-opening distinction and give a July 10, 1921 dedication date, but the scanned volume's exact title, publisher, and stable archive URL still need to be identified before that page-level citation is published."
 }

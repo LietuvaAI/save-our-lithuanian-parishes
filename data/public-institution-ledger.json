@@ -4,10 +4,10 @@
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
     "revisionId": "canonical-public-census-2026-07-31",
-    "contentHash": "sha256:6480545ad402bb1a00c7e27749dfb9716489d202658ff4d61438aba247c0d995"
+    "contentHash": "sha256:d2582e75fe34726d3b2f6708b6b538bc31c76084af935c88c85a0e7637c9e980"
   },
-  "registryRevision": 10,
-  "registryDate": "2026-07-31",
+  "registryRevision": 11,
+  "registryDate": "2026-08-01",
   "claim": "The current documented record contains 154 distinct U.S. Lithuanian religious institutions.",
   "inclusionRule": "Count one canonical U.S. institution when CultureNet publishes it as a parish, mission, or congregation. Buildings, duplicate aliases, historical attempts, hosted worship, research leads, and comparators remain linked context and never increase this total.",
   "counts": {
@@ -4711,9 +4711,13 @@
       "canonicalDetailStatus": "closed",
       "protectedCampaign": false,
       "assertionIds": [
+        "assert:detroit:st-peter-aod-register-1921-1995",
+        "assert:detroit:st-peter-founded-1920",
         "assert:detroit:st-peter-used-site"
       ],
       "sourceArtifactIds": [
+        "src:archdiocese-detroit:closed-parishes:st-peter-lithuanian:2026-08-01",
+        "src:detroit1701:st-peter-lithuanian:2026-08-01",
         "src:global-true-lithuania:detroit:2026-07-31"
       ],
       "sourceFamilies": [
@@ -4762,6 +4766,18 @@
         }
       ],
       "canonicalSources": [
+        {
+          "sourceArtifactId": "src:archdiocese-detroit:closed-parishes:st-peter-lithuanian:2026-08-01",
+          "label": "Archdiocese of Detroit closed parishes register entry for St. Peter Lithuanian",
+          "locator": "Archdiocese of Detroit Closed Parishes, S section, St. Peter (Lithuanian) Parish (Detroit), fetched 2026-08-01",
+          "url": "https://www.aod.org/closed-parishes"
+        },
+        {
+          "sourceArtifactId": "src:detroit1701:st-peter-lithuanian:2026-08-01",
+          "label": "Detroit1701 history of St. Peter Lithuanian parish and church",
+          "locator": "Detroit1701.org, St. Peter Lithuanian Roman Catholic Church, fetched 2026-08-01",
+          "url": "https://detroit1701.org/St.%20Peter%20Lithuanian.html"
+        },
         {
           "sourceArtifactId": "src:global-true-lithuania:detroit:2026-07-31",
           "label": "Detroit Lithuanian heritage inventory",

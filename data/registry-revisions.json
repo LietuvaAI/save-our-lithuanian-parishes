@@ -101,6 +101,20 @@
         "data/canonical-public-census-adjudications.json",
         "data/candidates/registry-revision-10-canonical-projection-2026-07-31.md"
       ]
+    },
+    {
+      "version": 11,
+      "date": "2026-08-01",
+      "registryRecords": 192,
+      "publicUSRecords": 154,
+      "usRomanCatholicParishes": 132,
+      "summary": "Synchronized the St. Peter Detroit institution/building date correction from CultureNet: parish founded 1920, church opened 1921, parish closed 1995; 154 public U.S. institutions unchanged.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/canonical-public-census-adjudications.json",
+        "data/candidates/registry-revision-11-st-peter-detroit-dates-2026-08-01.md"
+      ]
     }
   ]
 }

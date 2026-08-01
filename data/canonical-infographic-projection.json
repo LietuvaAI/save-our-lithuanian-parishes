@@ -2,7 +2,7 @@
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
-    "publication_projection_hash": "sha256:6480545ad402bb1a00c7e27749dfb9716489d202658ff4d61438aba247c0d995",
+    "publication_projection_hash": "sha256:d2582e75fe34726d3b2f6708b6b538bc31c76084af935c88c85a0e7637c9e980",
     "publication_projection_revision": "canonical-public-census-2026-07-31",
     "repository": "LietuvaAI/culturenet-brain"
   },
@@ -6271,7 +6271,7 @@
       "unit": "Canadian Lithuanian parish comparator"
     }
   },
-  "content_hash": "sha256:dba1ba922e8470fb9d3b0bbf3628fb241070f876746be94f9f3e721a33725158",
+  "content_hash": "sha256:ad07ef25b3f80e2eca093c63e468f891e75a5b24c46e12e9b2b9bf97d572fdbd",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -8484,7 +8484,7 @@
     "roman_catholic_parish_institutions": 132,
     "roman_catholic_parishes_with_closure_year": 92,
     "roman_catholic_parishes_with_founding_year": 121,
-    "site_r10_founding_fallbacks": 65,
+    "site_r10_founding_fallbacks": 64,
     "unresolved_founding_years": 16
   },
   "generated": "2026-08-01",
@@ -11416,16 +11416,16 @@
       "canonical_name": "St. Peter Lithuanian parish, Detroit",
       "city": "Detroit",
       "closed": {
-        "authority": "reviewed_case_snapshot",
+        "authority": "canonical_graph",
         "display": "1995",
         "year": 1995
       },
       "culturenet_entity_id": "cn:institution:st-peter-detroit-mi",
       "diocese": "Detroit",
       "founded": {
-        "authority": "site_r10_baseline",
-        "display": "1921",
-        "year": 1921
+        "authority": "canonical_graph",
+        "display": "1920",
+        "year": 1920
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",

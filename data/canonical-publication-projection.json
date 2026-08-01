@@ -5720,6 +5720,46 @@
     },
     {
       "adjudication": {
+        "conflict_preserved": true,
+        "state": "accepted"
+      },
+      "assertion_type": "lifecycle_dates",
+      "confidence": "high",
+      "id": "assert:detroit:st-peter-aod-register-1921-1995",
+      "object": {
+        "canonical_entity_id": "cn:institution:st-peter-detroit-mi",
+        "date_text": "1921-1995",
+        "interpretation": "official closed-parish register span; 1921 is retained as the church-opening year, while the institution was founded in 1920"
+      },
+      "predicate": "institution_lifecycle_attested",
+      "source_artifact_id": "src:archdiocese-detroit:closed-parishes:st-peter-lithuanian:2026-08-01",
+      "source_locator": "Closed Parishes, S section, St. Peter (Lithuanian) Parish (Detroit): 1921-1995",
+      "subject": {
+        "canonical_entity_id": "cn:institution:st-peter-detroit-mi"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": true,
+        "state": "accepted"
+      },
+      "assertion_type": "lifecycle_dates",
+      "confidence": "high",
+      "id": "assert:detroit:st-peter-founded-1920",
+      "object": {
+        "canonical_entity_id": "cn:institution:st-peter-detroit-mi",
+        "date_text": "1920",
+        "interpretation": "parish founding; the church building opened in 1921"
+      },
+      "predicate": "institution_founding_attested",
+      "source_artifact_id": "src:detroit1701:st-peter-lithuanian:2026-08-01",
+      "source_locator": "History paragraphs stating that St. Peter parish was founded in 1920, first worshipped at Holy Cross, and raised its church in 1921",
+      "subject": {
+        "canonical_entity_id": "cn:institution:st-peter-detroit-mi"
+      }
+    },
+    {
+      "adjudication": {
         "conflict_preserved": false,
         "state": "accepted"
       },
@@ -16001,6 +16041,14 @@
       "formation_basis": "historical_parish",
       "id": "cn:institution:st-peter-detroit-mi",
       "institution_subtype": "parish",
+      "lifecycle": {
+        "end": "1995",
+        "source_assertion_ids": [
+          "assert:detroit:st-peter-founded-1920",
+          "assert:detroit:st-peter-aod-register-1921-1995"
+        ],
+        "start": "1920"
+      },
       "lifecycle_status": "closed",
       "slug": "st-peter-detroit-mi"
     },
@@ -16345,7 +16393,7 @@
       "slug": "robert-damyanovich"
     }
   ],
-  "content_hash": "sha256:6480545ad402bb1a00c7e27749dfb9716489d202658ff4d61438aba247c0d995",
+  "content_hash": "sha256:d2582e75fe34726d3b2f6708b6b538bc31c76084af935c88c85a0e7637c9e980",
   "counts": {
     "by_institution_class": {
       "independent_catholic": 4,
@@ -26106,6 +26154,8 @@
       "city": "Detroit",
       "culturenet_entity_id": "cn:institution:st-peter-detroit-mi",
       "evidence_assertion_ids": [
+        "assert:detroit:st-peter-aod-register-1921-1995",
+        "assert:detroit:st-peter-founded-1920",
         "assert:detroit:st-peter-used-site"
       ],
       "identity_support": "two_pass_case_file",
@@ -26119,6 +26169,8 @@
       "registry_projection_profile": "/parishes/peter-detroit-mi",
       "registry_slug": "peter-detroit-mi",
       "source_artifact_ids": [
+        "src:archdiocese-detroit:closed-parishes:st-peter-lithuanian:2026-08-01",
+        "src:detroit1701:st-peter-lithuanian:2026-08-01",
         "src:global-true-lithuania:detroit:2026-07-31"
       ],
       "state": "MI"
@@ -32020,6 +32072,14 @@
         "display_name": "St. Peter Lithuanian parish, Detroit",
         "entity_id": "cn:institution:st-peter-detroit-mi",
         "entity_type": "institution",
+        "lifecycle": {
+          "end": "1995",
+          "source_assertion_ids": [
+            "assert:detroit:st-peter-founded-1920",
+            "assert:detroit:st-peter-aod-register-1921-1995"
+          ],
+          "start": "1920"
+        },
         "slug": "st-peter-detroit-mi"
       },
       "source_artifact_ids": [
@@ -43717,6 +43777,22 @@
     },
     {
       "artifact_type": "public_web_snapshot",
+      "id": "src:archdiocese-detroit:closed-parishes:st-peter-lithuanian:2026-08-01",
+      "locator": {
+        "exact_label": "Archdiocese of Detroit Closed Parishes, S section, St. Peter (Lithuanian) Parish (Detroit), fetched 2026-08-01",
+        "page": "Closed Parishes",
+        "section": "St. Peter (Lithuanian) Parish (Detroit): 1921-1995"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://www.aod.org/closed-parishes",
+        "quote_policy": "cite and summarize",
+        "status": "public_web"
+      },
+      "title": "Archdiocese of Detroit closed parishes register entry for St. Peter Lithuanian"
+    },
+    {
+      "artifact_type": "public_web_snapshot",
       "id": "src:archdiocese-detroit:restructuring:planning-area-8:2026-07-31",
       "locator": {
         "exact_label": "Archdiocese of Detroit Restructuring, Planning Area 8, observed 2026-07-31",
@@ -45650,6 +45726,22 @@
         "status": "public_web"
       },
       "title": "Photograph metadata for Divine Providence on Schaefer Highway"
+    },
+    {
+      "artifact_type": "public_web_snapshot",
+      "id": "src:detroit1701:st-peter-lithuanian:2026-08-01",
+      "locator": {
+        "exact_label": "Detroit1701.org, St. Peter Lithuanian Roman Catholic Church, fetched 2026-08-01",
+        "page": "St. Peter Lithuanian Roman Catholic Church",
+        "section": "Parish founded in 1920; services first held at Holy Cross; church raised in 1921"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://detroit1701.org/St.%20Peter%20Lithuanian.html",
+        "quote_policy": "cite and summarize",
+        "status": "public_web"
+      },
+      "title": "Detroit1701 history of St. Peter Lithuanian parish and church"
     },
     {
       "artifact_type": "official_decree",
