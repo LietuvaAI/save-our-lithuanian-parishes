@@ -63,7 +63,7 @@ export default function AboutTheDataPage() {
           Of these, {siteFigures.publicUS.independentlySupported} have a
           completed two-pass case file or support from multiple source
           families; the remaining {siteFigures.publicUS.singleSourceAttested}
-          are explicitly marked for corroboration.
+          {" "}are explicitly marked for corroboration.
         </p>
       </section>
 
