@@ -497,7 +497,10 @@ export default async function ParishPage({
         {entry.state ? `, ${entry.state}` : ""}
       </p>
 
-      <div className="mt-4 grid items-start gap-x-10 gap-y-6 md:grid-cols-[272px_minmax(0,1fr)]">
+      <div
+        id="profile-identity"
+        className="mt-4 grid items-start gap-x-10 gap-y-6 md:grid-cols-[272px_minmax(0,1fr)]"
+      >
         <div>
           <figure className="w-full">
             {parishPhoto ? (
@@ -710,22 +713,6 @@ export default async function ParishPage({
             </div>
           )}
 
-          {caseRecord?.gaps && (
-            <div className="mt-5 border-t border-rule pt-4">
-              <p className="font-mono text-[10.5px] font-medium uppercase tracking-[0.09em] text-muted">
-                What the record cannot yet establish
-              </p>
-              <p className="mt-1.5 text-[13.5px] leading-relaxed text-muted">
-                {caseRecord.gaps}
-              </p>
-              {caseRecord.conflictsWithArchiveRecord && (
-                <p className="mt-2 text-[13.5px] leading-relaxed text-muted">
-                  {caseRecord.conflictsWithArchiveRecord}
-                </p>
-              )}
-            </div>
-          )}
-
           {institutionDates?.foundedUnresolved && (
             <p className="mt-4 text-[13.5px] leading-relaxed text-muted">
               The founding year is not established in the canonical record and is
@@ -739,7 +726,10 @@ export default async function ParishPage({
 
       <ProfileSourceLedger sources={profileSources} />
 
-      <div className="mt-8 grid gap-x-10 border-t border-rule pt-6 md:grid-cols-[158px_minmax(0,1fr)]">
+      <div
+        id="profile-corrections"
+        className="mt-8 grid gap-x-10 border-t border-rule pt-6 md:grid-cols-[158px_minmax(0,1fr)]"
+      >
         <div />
         <div className="max-w-[38em] bg-band px-6 py-5">
           <p className="font-serif text-[16.5px] font-semibold leading-snug">
