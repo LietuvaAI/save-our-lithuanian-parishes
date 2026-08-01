@@ -16437,7 +16437,7 @@
       "slug": "robert-damyanovich"
     }
   ],
-  "content_hash": "sha256:4300f98b9a08d619776cb6c1430d87ad9a34c5d833872984cceb2b5fb97ebef9",
+  "content_hash": "sha256:7756c73bed1176cecb57cec3f192c20627f53ed423f94845747882f9a16a1296",
   "counts": {
     "by_institution_class": {
       "independent_catholic": 4,
@@ -26324,6 +26324,8 @@
         "assert:detroit:divine-providence-pastor-vacancy-reported",
         "assert:detroit:divine-providence-planning-area-8-current",
         "assert:detroit:divine-providence-restructuring-survey-window",
+        "assert:detroit:divine-providence-schaefer-chronology-1973",
+        "assert:detroit:divine-providence-st-george-origin-book-1973",
         "assert:detroit:southfield-dedicated-1973"
       ],
       "identity_support": "two_pass_case_file",
@@ -26340,6 +26342,7 @@
         "src:archdiocese-detroit:restructuring:planning-area-8:2026-07-31",
         "src:archdiocese-detroit:restructuring:planning-areas:2026-07-31",
         "src:divine-providence:homepage-current:2026-07-31",
+        "src:divine-providence:parish-history-book:1973",
         "src:divine-providence:parish-history:2026-07-31",
         "src:laikmetis:divine-providence-pastor-report:2026-07-23"
       ],
@@ -45855,10 +45858,10 @@
         "section": "Divine Providence Chronology (1948-1973), by Anthony Dainius; St. George and Schaefer site history"
       },
       "rights": {
-        "access": "CultureNet research corpus; public Ziburio archive URL pending",
-        "public_url": null,
-        "quote_policy": "cite by edition and page; add the public archive URL before publishing a direct source link",
-        "status": "project_internal"
+        "access": "public Žiburio archive item",
+        "public_url": "https://archyvas.ziburioltmokykla.org/item/20260331_1774920079895",
+        "quote_policy": "cite by edition and page; link to the public archive item",
+        "status": "public_archive"
       },
       "title": "Divine Providence Lithuanian Parish first-edition history, 1908-1973"
     },

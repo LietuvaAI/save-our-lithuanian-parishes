@@ -1,4 +1,5 @@
 import { draugasArchiveUrl, draugasCitationUrl } from "@/lib/parishes";
+import type { PublicationSourceArtifact } from "@/lib/publication-projection";
 
 export type ProfileSourceGroup =
   | "newspaper"
@@ -74,6 +75,41 @@ const BOOKS: Record<
 
 function isAbsoluteWebUrl(url: string | null | undefined): url is string {
   return !!url && /^https?:\/\//i.test(url);
+}
+
+function canonicalArtifactGroup(
+  artifactType: string,
+): ProfileSourceGroup {
+  if (/newspaper|periodical|news|report/.test(artifactType)) {
+    return "newspaper";
+  }
+  if (/archive|book|history|historical|scholarly|compendium/.test(artifactType)) {
+    return "books";
+  }
+  if (/field|specialist/.test(artifactType)) return "field";
+  if (/official|municipal|public_web/.test(artifactType)) return "current";
+  return "project";
+}
+
+export function canonicalArtifactProfileSources(
+  artifacts: PublicationSourceArtifact[],
+): ProfileSource[] {
+  return finalizeProfileSources(
+    artifacts.flatMap((artifact): SourceDraft[] => {
+      const url = artifact.rights?.public_url;
+      if (!isAbsoluteWebUrl(url)) return [];
+      const citation = artifact.locator?.page;
+      return [
+        {
+          group: canonicalArtifactGroup(artifact.artifact_type),
+          title: artifact.title,
+          citation: citation || undefined,
+          url,
+          contexts: ["Canonical CultureNet evidence"],
+        },
+      ];
+    }),
+  );
 }
 
 type DraugasCitation = {

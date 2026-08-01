@@ -50,7 +50,9 @@ import {
   researchRecordStory,
   researchStatusCopy,
 } from "@/lib/profile-narrative";
+import { getPublicationSourceArtifacts } from "@/lib/publication-projection";
 import {
+  canonicalArtifactProfileSources,
   draugasProfileSources,
   finalizeProfileSources,
   linkedProfileSources,
@@ -417,6 +419,9 @@ export default async function ParishPage({
   const profileSources = finalizeProfileSources([
     core ? draugasProfileSources(core.citations) : [],
     registryProfileSources(entry.sources ?? []),
+    canonicalArtifactProfileSources(
+      getPublicationSourceArtifacts(profile.registrySlug),
+    ),
     caseSources,
     alertSources,
     watchSources,

@@ -2,7 +2,7 @@
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
-    "publication_projection_hash": "sha256:4300f98b9a08d619776cb6c1430d87ad9a34c5d833872984cceb2b5fb97ebef9",
+    "publication_projection_hash": "sha256:7756c73bed1176cecb57cec3f192c20627f53ed423f94845747882f9a16a1296",
     "publication_projection_revision": "canonical-public-census-2026-07-31",
     "repository": "LietuvaAI/culturenet-brain"
   },
@@ -6271,7 +6271,7 @@
       "unit": "Canadian Lithuanian parish comparator"
     }
   },
-  "content_hash": "sha256:8f834fb5d6d15e0350654a65ed8caf3488a715f2ad2878c5039c994806bd365e",
+  "content_hash": "sha256:f9d79825f26926d4de9443b975cfad6bc4303e7800038d088239d4b3423caa30",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",

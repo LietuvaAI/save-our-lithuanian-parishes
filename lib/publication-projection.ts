@@ -33,6 +33,23 @@ export type PublicationInstitution = {
   source_artifact_ids: string[];
 };
 
+export type PublicationSourceArtifact = {
+  artifact_type: string;
+  id: string;
+  locator?: {
+    exact_label?: string;
+    page?: string;
+    section?: string;
+  };
+  rights?: {
+    access?: string;
+    public_url?: string;
+    quote_policy?: string;
+    status?: string;
+  };
+  title: string;
+};
+
 type PublicationProjection = {
   schema: string;
   revision_id: string;
@@ -52,7 +69,7 @@ type PublicationProjection = {
   canonical_entities: Record<string, unknown>[];
   relationships: Record<string, unknown>[];
   assertions: Record<string, unknown>[];
-  source_artifacts: Record<string, unknown>[];
+  source_artifacts: PublicationSourceArtifact[];
   campaign_identity_locks: Record<string, unknown>[];
 };
 
@@ -69,6 +86,9 @@ const byRegistrySlug = new Map(
 );
 const byProfilePath = new Map(
   publicInstitutions.map((institution) => [institution.public_profile, institution]),
+);
+const sourceById = new Map(
+  publicationSources.map((source) => [source.id, source]),
 );
 
 if (byRegistrySlug.size !== publicationCounts.public_us_institutions) {
@@ -96,4 +116,15 @@ export function getPublicationInstitutionByProfile(
   profilePath: string,
 ): PublicationInstitution | null {
   return byProfilePath.get(profilePath) ?? null;
+}
+
+export function getPublicationSourceArtifacts(
+  registrySlug: string,
+): PublicationSourceArtifact[] {
+  const institution = byRegistrySlug.get(registrySlug);
+  if (!institution) return [];
+  return institution.source_artifact_ids.flatMap((sourceId) => {
+    const source = sourceById.get(sourceId);
+    return source ? [source] : [];
+  });
 }

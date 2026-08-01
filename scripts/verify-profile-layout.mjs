@@ -34,6 +34,10 @@ const graphSource = fs.readFileSync(
   path.join(ROOT, "lib", "parish-record-graph.ts"),
   "utf8",
 );
+const profileSourcesSource = fs.readFileSync(
+  path.join(ROOT, "lib", "profile-sources.ts"),
+  "utf8",
+);
 const publication = JSON.parse(
   fs.readFileSync(
     path.join(ROOT, "data", "canonical-publication-projection.json"),
@@ -107,6 +111,16 @@ const requiredFragments = [
   ],
   [relatedRecordsSource, 'id="related-records"', "related records section id"],
   [ledgerSource, 'id="evidence-sources"', "evidence section id"],
+  [
+    pageSource,
+    "canonicalArtifactProfileSources(",
+    "canonical source-artifact ledger adapter",
+  ],
+  [
+    profileSourcesSource,
+    "artifact.rights?.public_url",
+    "canonical public-source URL resolution",
+  ],
   // A building event must be distinguishable from an institutional one.
   [chronologySource, "Worship site", "building-event tag"],
   // Unresolved founding years are shown as unresolved, never estimated.
@@ -169,6 +183,24 @@ if (pageSource.includes('href="/contribute"')) {
 }
 if (pageSource.includes("const foundedYear = scoped.founded")) {
   errors.push("profile narrative bypasses canonical institutional dates");
+}
+
+const divineProvidence = publication.public_institutions.find(
+  (institution) => institution.registry_slug === "providence-southfield-mi",
+);
+const divineProvidenceHistoryId =
+  "src:divine-providence:parish-history-book:1973";
+const divineProvidenceHistory = publication.source_artifacts.find(
+  (source) => source.id === divineProvidenceHistoryId,
+);
+if (!divineProvidence?.source_artifact_ids.includes(divineProvidenceHistoryId)) {
+  errors.push("Divine Providence profile is missing its 1973 parish-history source");
+}
+if (
+  divineProvidenceHistory?.rights?.public_url !==
+  "https://archyvas.ziburioltmokykla.org/item/20260331_1774920079895"
+) {
+  errors.push("Divine Providence parish history lacks its public archive URL");
 }
 
 const relationshipTypes = [
