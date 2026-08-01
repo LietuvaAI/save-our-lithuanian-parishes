@@ -314,9 +314,6 @@ export default async function ParishPage({
     ? (FREQUENCY_LABEL[watchEntry.liturgy.frequency] ??
       watchEntry.liturgy.frequency)
     : null;
-  const photoCaption = photo(
-    standingSiteYear,
-  );
 
   const photosEntry =
     getClearedParishPortrait(profile.slug) ??
