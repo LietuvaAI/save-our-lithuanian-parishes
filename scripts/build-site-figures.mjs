@@ -10,9 +10,9 @@ const read = (path) =>
 
 const registry = read("registry-unified.json");
 const projection = read("canonical-publication-projection.json");
+const infographic = read("canonical-infographic-projection.json");
 const revisions = read("registry-revisions.json");
 const context = read("context-points.json");
-const canonicalRows = read("parishes.json");
 const map = read("map.json");
 const registryMap = read("registry-map.json");
 const publicInstitutionLedger = read("public-institution-ledger.json");
@@ -77,15 +77,21 @@ const usRomanCatholicParishPoints = contextPoints.filter(
     point.congregationClass === "roman_catholic",
 );
 const publicStatus = tally(contextPoints, (point) => point.group);
-const historyStatus = tally(
-  usRomanCatholicParishPoints,
-  (point) => point.group,
+const institutionHistory = infographic.institution_history;
+const romanCatholicParishHistory = institutionHistory.filter(
+  (row) =>
+    row.record_type === "parish" &&
+    row.institution_class === "roman_catholic",
 );
-const closedParishes = usRomanCatholicParishPoints.filter(
-  (point) => point.group === "closed",
+const historyStatus = tally(
+  romanCatholicParishHistory,
+  (row) => row.status_group,
+);
+const closedParishes = romanCatholicParishHistory.filter(
+  (row) => row.status_group === "closed",
 );
 const topClosureDioceses = Object.entries(
-  tally(closedParishes, (point) => point.diocese ?? "Unassigned"),
+  tally(closedParishes, (row) => row.diocese ?? "Unassigned"),
 )
   .sort(([nameA, countA], [nameB, countB]) =>
     countB - countA || nameA.localeCompare(nameB),
@@ -93,17 +99,8 @@ const topClosureDioceses = Object.entries(
   .slice(0, 2)
   .map(([diocese, closed]) => ({ diocese, closed }));
 
-const canonicalUSRows = canonicalRows.filter((record) => !record.comparator);
-const canonicalUSIdentities = canonicalUSRows.filter(
-  (record) => !record.mergedInto,
-);
-const canadianComparators = canonicalRows.filter(
-  (record) => record.comparator && !record.mergedInto,
-);
-const coalRegion = canonicalUSIdentities.filter((record) => record.coalRegion);
-const coalDioceseOwned = coalRegion.filter(
-  (record) => record.ownership === "diocese_rc",
-);
+const canadianComparators = infographic.comparators.canada;
+const coalRegion = infographic.regional_views.pennsylvania_coal_region;
 
 const currentWorshipClasses = new Set([
   "active_parish",
@@ -147,6 +144,21 @@ expect("public U.S. context points", contextPoints.length, usPublic.length);
 expect(
   "Roman Catholic parish context points",
   usRomanCatholicParishPoints.length,
+  usRomanCatholicParishes.length,
+);
+expect(
+  "canonical infographic institution count",
+  institutionHistory.length,
+  usPublic.length,
+);
+expect(
+  "canonical infographic publication authority",
+  infographic.authority.publication_projection_hash,
+  projection.content_hash,
+);
+expect(
+  "canonical Roman Catholic parish history",
+  romanCatholicParishHistory.length,
   usRomanCatholicParishes.length,
 );
 expectSum("public U.S. class/type partition", usPublic.length, [
@@ -196,6 +208,8 @@ const figures = {
     registryDate: registry.registryRevision.date,
     canonicalPublicationRevision: projection.revision_id,
     canonicalPublicationHash: projection.content_hash,
+    canonicalInfographicRevision: infographic.revision_id,
+    canonicalInfographicHash: infographic.content_hash,
     networkChecked: network.source.checked,
   },
   publicUS: {
@@ -233,10 +247,23 @@ const figures = {
     parishes: usRomanCatholicParishes.length,
     status: historyStatus,
     closed: closedParishes.length,
-    closedWithDatedYear: count(closedParishes, (point) => point.closed != null),
-    closedSince1990: count(closedParishes, (point) => point.closed >= 1990),
-    closedSince2020: count(closedParishes, (point) => point.closed >= 2020),
+    closedWithDatedYear: count(closedParishes, (row) => row.closed.year != null),
+    closedSince1990: count(
+      closedParishes,
+      (row) => row.closed.year != null && row.closed.year >= 1990,
+    ),
+    closedSince2020: count(
+      closedParishes,
+      (row) => row.closed.year != null && row.closed.year >= 2020,
+    ),
     topClosureDioceses,
+  },
+  physicalSites: {
+    worshipSites: infographic.counts.physical_worship_sites,
+    allBuildingSiteEntities: infographic.counts.building_site_entities,
+  },
+  continuity: {
+    relationships: infographic.counts.institution_continuity_edges,
   },
   currentCatholicLife: {
     officialListings: network.counts.listed,
@@ -247,20 +274,15 @@ const figures = {
     states: currentWorshipStates,
   },
   comparators: {
-    canadianParishes: canadianComparators.length,
+    canadianParishes: canadianComparators.population,
   },
   coalRegion: {
-    parishes: coalRegion.length,
-    dioceseOwned: coalDioceseOwned.length,
-    dioceseEnded: count(
-      coalDioceseOwned,
-      (record) => record.endingMode === "diocese_closed",
-    ),
-    dioceseStanding: count(
-      coalDioceseOwned,
-      (record) => record.endingMode === "standing",
-    ),
-    communityOwned: coalRegion.length - coalDioceseOwned.length,
+    parishes: coalRegion.population,
+    dioceseOwned: coalRegion.counts.diocese_owned,
+    dioceseEnded: coalRegion.counts.diocese_ended,
+    dioceseStanding: coalRegion.counts.diocese_standing,
+    dioceseUnresolved: coalRegion.counts.diocese_unresolved,
+    communityOwned: coalRegion.counts.community_owned,
   },
   reversals: {
     documented: reversals.stats.reversals,

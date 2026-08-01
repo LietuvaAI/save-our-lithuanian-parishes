@@ -42,6 +42,7 @@ const ctx = new Map(read("context-points.json").points.map((p) => [p.slug, p.gro
 const situations = read("parish-situation.json").parishes;
 const registry = read("registry-unified.json").parishes;
 const publication = read("canonical-publication-projection.json");
+const infographic = read("canonical-infographic-projection.json");
 const siteFigures = read("site-figures.json");
 
 const errors = [];
@@ -63,6 +64,26 @@ if (
   publication.content_hash
 ) {
   errors.push("site figures are not tied to the canonical publication hash");
+}
+if (
+  siteFigures.generatedFrom?.canonicalInfographicHash !==
+  infographic.content_hash
+) {
+  errors.push("site figures are not tied to the canonical infographic hash");
+}
+if (
+  siteFigures.history?.parishes !==
+  infographic.counts.roman_catholic_parish_institutions
+) {
+  errors.push("history population differs from the canonical infographic projection");
+}
+if (
+  siteFigures.history?.closedSince1990 !==
+    infographic.counts.closed_roman_catholic_parishes_since_1990 ||
+  siteFigures.history?.closedSince2020 !==
+    infographic.counts.closed_roman_catholic_parishes_since_2020
+) {
+  errors.push("public closure-period figures differ from canonical institution dates");
 }
 
 function publicSourceFiles(directory) {

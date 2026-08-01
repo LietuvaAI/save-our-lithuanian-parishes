@@ -1,120 +1,99 @@
 import type { Metadata } from "next";
-import ParishThreads, {
-  type FateKey,
-  type ThreadParish,
-} from "@/components/ParishThreads";
-import registryData from "@/data/registry-unified.json";
-import siteFigures from "@/data/site-figures.json";
-import { scopedParishes } from "@/lib/registry-scope";
-import { toGroup } from "@/lib/end-state";
+import Link from "next/link";
+import PhysicalSiteTimeline, {
+  type PhysicalSiteState,
+  type PhysicalSiteTimelineRow,
+} from "@/components/PhysicalSiteTimeline";
+import {
+  infographicCounts,
+  physicalWorshipSiteHistory,
+} from "@/lib/infographic-projection";
 
 export const metadata: Metadata = {
-  title: "Lithuanian Churches Through Time",
+  title: "Lithuanian Church Buildings Through Time",
   description:
-    "Follow every documented Roman Catholic Lithuanian church from its building or parish baseline through its present condition.",
+    "A physical-site view of documented Lithuanian Catholic churches and worship places, kept separate from parish-institution history.",
 };
 
-const DIVINE_PROVIDENCE_SLUG = "dievo-apvaizdos-southfield-mi";
+function stateForSite(
+  conditionTypes: Set<string>,
+  demolishedYear: number | null,
+): PhysicalSiteState {
+  if (demolishedYear || conditionTypes.has("building-demolished")) {
+    return "demolished";
+  }
+  if (conditionTypes.has("building-repurposed")) return "repurposed";
+  if (conditionTypes.has("building-listed-for-sale")) return "listed_for_sale";
+  if (conditionTypes.has("building-standing")) return "standing";
+  return "not_established";
+}
 
-function buildThreads(): ThreadParish[] {
-  return scopedParishes().map((parish) => {
-    let fateKey: FateKey | null = null;
-
-    if (parish.endState === "demolished") fateKey = "demolished";
-    else if (parish.endState === "repurposed") {
-      fateKey =
-        parish.buildingFate === "repurposed_secular"
-          ? "secular"
-          : "religious";
-    } else if (parish.endState === "closed") {
-      if (parish.buildingFate === "standing") fateKey = "standing";
-      else if (parish.buildingFate === "derelict") fateKey = "derelict";
-      else fateKey = "unrecorded";
-    }
-
-    const divineProvidence = parish.slug === DIVINE_PROVIDENCE_SLUG;
-
+function buildSites(): PhysicalSiteTimelineRow[] {
+  return physicalWorshipSiteHistory.map((site) => {
+    const conditionTypes = new Set(
+      site.condition_relationships.map((condition) => condition.relationship_type),
+    );
+    const profiles = site.institution_use_periods
+      .map((period) => period.institution_profile)
+      .filter((profile): profile is string => profile != null);
     return {
-      slug: parish.slug,
-      name: parish.name,
-      city: parish.city,
-      state: parish.state,
-      anchorYear: divineProvidence ? 1973 : parish.founded,
-      anchorLabel: divineProvidence
-        ? "Southfield church consecrated"
-        : "parish baseline",
-      endState: parish.endState,
-      fateKey,
-      href: parish.profileHref,
+      slug: site.slug,
+      name: site.name,
+      firstYear: site.first_documented_year,
+      endYear: site.demolished_year,
+      state: stateForSite(conditionTypes, site.demolished_year),
+      profileHref: profiles.at(-1) ?? null,
     };
   });
 }
 
-export default function ParishOutcomeFlowPage() {
-  const threads = buildThreads();
-  const closed = threads.filter(
-    (parish) => toGroup(parish.endState) === "closed",
-  );
-  const demolished = closed.filter(
-    (parish) => parish.fateKey === "demolished",
-  ).length;
-  const reused = closed.filter(
-    (parish) =>
-      parish.fateKey === "religious" || parish.fateKey === "secular",
-  ).length;
-  const generated = new Date(
-    `${registryData.generated}T00:00:00Z`,
-  ).toLocaleDateString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-    timeZone: "UTC",
-  });
+export default function ChurchBuildingHistoryPage() {
+  const sites = buildSites();
+  const stateCounts = Object.fromEntries(
+    sites.reduce((counts, site) => {
+      counts.set(site.state, (counts.get(site.state) ?? 0) + 1);
+      return counts;
+    }, new Map<PhysicalSiteState, number>()),
+  ) as Partial<Record<PhysicalSiteState, number>>;
 
-  if (
-    threads.length !== siteFigures.history.parishes ||
-    closed.length !== siteFigures.history.closed
-  ) {
-    throw new Error("Timeline population does not match site-figures.json");
+  if (sites.length !== infographicCounts.physical_worship_sites) {
+    throw new Error("Physical worship-site population drifted.");
   }
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8">
-      <p className="text-xs uppercase tracking-widest text-muted">
-        A national view
-      </p>
+    <article className="mx-auto max-w-6xl px-4 py-8">
+      <p className="text-xs uppercase text-muted">Physical-site view</p>
       <h1 className="mt-1 max-w-3xl font-serif text-3xl font-semibold leading-tight sm:text-4xl">
-        Lithuanian churches through time
+        Lithuanian church buildings through time
       </h1>
       <p className="mt-2 max-w-3xl text-lg leading-relaxed">
-        Follow each Roman Catholic Lithuanian church community from its
-        documented beginning to its present condition.
+        When did each documented church or worship site enter the Lithuanian
+        parish story, and what is known about the building today?
       </p>
 
-      <section className="mt-5 border-y border-rule py-3">
-        <p className="max-w-3xl font-serif text-lg leading-relaxed">
-          Of {threads.length} parishes, {closed.length} are closed. Their
-          buildings did not share one fate: {demolished} were demolished and{" "}
-          {reused} passed into religious or secular reuse.
+      <section className="mt-5 border-y border-rule py-4">
+        <p className="max-w-3xl leading-relaxed">
+          The canonical graph currently identifies {sites.length} physical
+          worship sites connected to the U.S. parish record. It records{" "}
+          {stateCounts.demolished ?? 0} as demolished and{" "}
+          {stateCounts.repurposed ?? 0} as repurposed; the present condition of{" "}
+          {stateCounts.not_established ?? 0} sites is not yet established in
+          the building ledger.
         </p>
-        <p className="mt-1 text-xs leading-relaxed text-muted">
-          Scope: {threads.length} U.S. Roman Catholic Lithuanian parishes ·
-          record current to {generated}. Lines begin with a documented church
-          date or, where that date is not yet established, the parish founding
-          year. Divine Providence begins with its Southfield church,
-          consecrated in 1973.
+        <p className="mt-2 max-w-3xl text-xs leading-relaxed text-muted">
+          This is a building history, not an institution count. A parish may
+          have used several buildings, and one building may have served more
+          than one congregation. Parish foundations and closures remain in{" "}
+          <Link href="/history" className="underline hover:text-foreground">
+            The History
+          </Link>
+          .
         </p>
       </section>
 
-      <section className="mt-6">
-        <h2 className="font-serif text-xl font-semibold">
-          From first home to present condition
-        </h2>
-        <div className="mt-3">
-          <ParishThreads parishes={threads} />
-        </div>
+      <section className="mt-6 overflow-x-auto">
+        <PhysicalSiteTimeline sites={sites} />
       </section>
-
-    </div>
+    </article>
   );
 }

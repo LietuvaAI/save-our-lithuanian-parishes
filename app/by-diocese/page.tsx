@@ -6,8 +6,11 @@ import DioceseExplorer, {
   type DioceseExplorerEntry,
 } from "@/components/DioceseExplorer";
 import DioceseClosureRanking from "@/components/DioceseClosureRanking";
-import { scopedParishes, type ScopedParish } from "@/lib/registry-scope";
-import { toGroup } from "@/lib/end-state";
+import {
+  romanCatholicParishHistory,
+  type InstitutionHistoryRow,
+} from "@/lib/infographic-projection";
+import type { EndState } from "@/lib/end-state";
 
 export const metadata: Metadata = {
   title: "By Diocese",
@@ -16,8 +19,8 @@ export const metadata: Metadata = {
 };
 
 function buildDioceses(): DioceseExplorerEntry[] {
-  const byDiocese = new Map<string, ScopedParish[]>();
-  for (const parish of scopedParishes()) {
+  const byDiocese = new Map<string, InstitutionHistoryRow[]>();
+  for (const parish of romanCatholicParishHistory) {
     const key = parish.diocese ?? "Diocese unassigned";
     if (!byDiocese.has(key)) byDiocese.set(key, []);
     byDiocese.get(key)!.push(parish);
@@ -25,7 +28,7 @@ function buildDioceses(): DioceseExplorerEntry[] {
 
   return [...byDiocese.entries()]
     .map(([name, parishes]) => {
-      const groups = parishes.map((parish) => toGroup(parish.endState));
+      const groups = parishes.map((parish) => parish.status_group);
       return {
         name,
         shortName: name.replace(/^(Arch)?diocese of /i, ""),
@@ -40,18 +43,18 @@ function buildDioceses(): DioceseExplorerEntry[] {
         parishes: parishes
           .sort(
             (a, b) =>
-              (a.founded ?? 9999) - (b.founded ?? 9999) ||
+              (a.founded.year ?? 9999) - (b.founded.year ?? 9999) ||
               a.name.localeCompare(b.name),
           )
           .map((parish) => ({
-            slug: parish.slug,
+            slug: parish.registry_slug,
             name: parish.name,
             city: parish.city,
             state: parish.state,
-            founded: parish.founded,
-            closed: parish.closed,
-            endState: parish.endState,
-            profileHref: parish.profileHref,
+            founded: parish.founded.year,
+            closed: parish.closed.year,
+            endState: parish.status_group as EndState,
+            profileHref: parish.public_profile,
           })),
       };
     })

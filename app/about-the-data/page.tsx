@@ -159,6 +159,26 @@ export default function AboutTheDataPage() {
               </tr>
               <tr>
                 <th className="py-3 pr-4 font-semibold">
+                  Church Buildings Through Time
+                </th>
+                <td className="py-3">
+                  {siteFigures.physicalSites.worshipSites} documented physical
+                  worship sites. Buildings are never added to the public
+                  institution count.
+                </td>
+              </tr>
+              <tr>
+                <th className="py-3 pr-4 font-semibold">
+                  Where Parish Life Continued
+                </th>
+                <td className="py-3">
+                  {siteFigures.continuity.relationships} typed continuity
+                  relationships among institutions. A merger or succession
+                  connects records; it does not collapse distinct parishes.
+                </td>
+              </tr>
+              <tr>
+                <th className="py-3 pr-4 font-semibold">
                   Catholic Life Today
                 </th>
                 <td className="py-3">

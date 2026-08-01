@@ -3,36 +3,36 @@ import Link from "next/link";
 import registry from "@/data/registry-unified.json";
 import siteFigures from "@/data/site-figures.json";
 import { EndStatePill } from "@/components/EndStatePill";
-import {
-  comparatorParishes,
-  OWNERSHIP_SHORT,
-  type Parish,
-} from "@/lib/parishes";
-import { resolveParishEndState } from "@/lib/end-state";
+import { canadianComparators } from "@/lib/infographic-projection";
+import type { EndState } from "@/lib/end-state";
 
 export const metadata: Metadata = {
   title: "Canadian Comparators",
   description: `${siteFigures.comparators.canadianParishes} Canadian Lithuanian parish records included to compare survival, ownership, and community decision-making with the U.S. record.`,
 };
 
-const canadianParishes = [...comparatorParishes].sort(
+const canadianParishes = [...canadianComparators.parishes].sort(
   (a, b) =>
-    a.state.localeCompare(b.state) ||
+    a.province.localeCompare(b.province) ||
     a.city.localeCompare(b.city) ||
-    a.nameLt.localeCompare(b.nameLt),
+    a.name.localeCompare(b.name),
 );
 const activeParishes = canadianParishes.filter(
-  (parish) => parish.lithuanianIdentity === "active_parish",
+  (parish) => parish.status_group === "active_parish",
 );
 
 if (canadianParishes.length !== siteFigures.comparators.canadianParishes) {
   throw new Error("Canadian comparator count does not match site-figures.json");
 }
 
-function canadianOwnershipLabel(parish: Parish) {
-  return parish.state === "QC"
+type CanadianComparator = (typeof canadianParishes)[number];
+
+function canadianOwnershipLabel(parish: CanadianComparator) {
+  return parish.province === "QC"
     ? "Parish-owned under Quebec civil law"
-    : OWNERSHIP_SHORT[parish.ownership];
+    : parish.ownership === "diocese_rc"
+      ? "Diocese-owned Roman Catholic"
+      : "Ownership documented in the comparator record";
 }
 
 export default function CanadianComparatorsPage() {
@@ -78,24 +78,24 @@ export default function CanadianComparatorsPage() {
                 >
                   <div>
                     <Link
-                      href={`/parishes/${parish.slug}`}
+                      href={parish.profile}
                       className="font-serif font-semibold hover:underline"
                     >
-                      {parish.nameLt}
+                      {parish.name}
                     </Link>
                     <p className="text-xs text-muted">
-                      {parish.city}, {parish.state}
+                      {parish.city}, {parish.province}
                     </p>
                     <p className="mt-1 text-sm">
                       {canadianOwnershipLabel(parish)}
                     </p>
                   </div>
                   <p className="text-sm leading-relaxed text-muted">
-                    {parish.endingMode === "community_decided"
+                    {parish.ending_mode === "community_decided"
                       ? "The parish community chose the ending."
                       : "Parish governance continues under Quebec civil law."}
                   </p>
-                  <EndStatePill value={resolveParishEndState(parish)} />
+                  <EndStatePill value={parish.status_group as EndState} />
                 </div>
               ))}
             </div>

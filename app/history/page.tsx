@@ -5,14 +5,9 @@ import TimelineChart, {
   type TimelineRow,
   type UndatedRow,
 } from "@/components/TimelineChart";
-import type { FateKey } from "@/components/ParishThreads";
 import siteFigures from "@/data/site-figures.json";
-import { scopedParishes } from "@/lib/registry-scope";
-import {
-  toGroup,
-  isLoss,
-} from "@/lib/end-state";
-import { BUILDING_FATE_LABEL, type BuildingFate, parishes as libParishes } from "@/lib/parishes";
+import { romanCatholicParishHistory } from "@/lib/infographic-projection";
+import type { EndState } from "@/lib/end-state";
 import mapData from "@/data/map.json";
 import photosData from "@/data/photos.json";
 
@@ -96,93 +91,62 @@ function FirstParishLocatorMap() {
 }
 
 // ---------------------------------------------------------------------------
-// Data builder (server-side; every figure derives from the shared scope)
+// Data builder (server-side; every figure derives from the canonical
+// institution-history projection, never from physical-site events)
 // ---------------------------------------------------------------------------
 
 function buildData() {
-  const all = scopedParishes();
+  const all = romanCatholicParishHistory;
 
   const dated: TimelineRow[] = [];
   const undated: UndatedRow[] = [];
-  const closedFates: Record<FateKey, number> = {
-    demolished: 0,
-    religious: 0,
-    secular: 0,
-    derelict: 0,
-    standing: 0,
-    unrecorded: 0,
-  };
-
-  const fateBySlug = new Map(
-    libParishes.map((p) => [p.slug, p.buildingFate as BuildingFate | null]),
-  );
 
   for (const p of all) {
-    // The closed family's building fates — each parish's thread terminal.
-    let fateKey: FateKey | null = null;
-    if (p.endState === "demolished") fateKey = "demolished";
-    else if (p.endState === "repurposed")
-      fateKey =
-        p.buildingFate === "repurposed_secular" ? "secular" : "religious";
-    else if (p.endState === "closed") {
-      if (p.buildingFate === "standing") fateKey = "standing";
-      else if (p.buildingFate === "derelict") fateKey = "derelict";
-      else fateKey = "unrecorded";
-    }
-    if (fateKey) closedFates[fateKey]++;
-
-    const fate = fateBySlug.get(p.slug);
-    const detail =
-      fate && fate !== "unknown" && fate !== "standing"
-        ? `Building ${BUILDING_FATE_LABEL[fate].toLowerCase()}`
-        : "";
-
-    if (p.founded) {
+    const founded = p.founded.year;
+    const closed = p.closed.year;
+    const endState = p.status_group as EndState;
+    if (founded) {
       dated.push({
-        slug: p.slug,
+        slug: p.registry_slug,
         name: p.name,
         city: p.city,
         state: p.state,
-        founded: p.founded,
-        closed: p.closed,
-        endState: p.endState,
-        detail,
-        profileHref: p.profileHref,
+        founded,
+        closed,
+        endState,
+        detail: "",
+        profileHref: p.public_profile,
       });
     } else {
       undated.push({
-        slug: p.slug,
+        slug: p.registry_slug,
         name: p.name,
         city: p.city,
         state: p.state,
-        closed: p.closed,
-        endState: p.endState,
-        profileHref: p.profileHref,
+        closed,
+        endState,
+        profileHref: p.public_profile,
       });
     }
   }
 
-  const standing = all.filter(
-    (p) => toGroup(p.endState) === "active_parish" && !p.closed,
-  ).length;
-  const hostedMass = all.filter(
-    (p) => toGroup(p.endState) === "mass_continues" && !p.closed,
-  ).length;
-  const lost = all.filter((p) => isLoss(p.endState)).length;
+  const standing = all.filter((p) => p.status_group === "active_parish").length;
+  const hostedMass = all.filter((p) => p.status_group === "mass_continues").length;
+  const lost = all.filter((p) => p.status_group === "closed").length;
 
   // ── Narrative figures for the timeline section (all record-derived) ──
   const foundedByDecade = new Map<number, number>();
   const closedByDecade = new Map<number, number>();
   for (const p of all) {
-    if (p.founded)
+    if (p.founded.year)
       foundedByDecade.set(
-        Math.floor(p.founded / 10) * 10,
-        (foundedByDecade.get(Math.floor(p.founded / 10) * 10) ?? 0) + 1,
+        Math.floor(p.founded.year / 10) * 10,
+        (foundedByDecade.get(Math.floor(p.founded.year / 10) * 10) ?? 0) + 1,
       );
-    if (p.closed && toGroup(p.endState) === "closed")
+    if (p.closed.year && p.status_group === "closed")
       closedByDecade.set(
-        Math.floor(p.closed / 10) * 10,
-        (closedByDecade.get(Math.floor(p.closed / 10) * 10) ?? 0) + 1,
+        Math.floor(p.closed.year / 10) * 10,
+        (closedByDecade.get(Math.floor(p.closed.year / 10) * 10) ?? 0) + 1,
       );
   }
   const peak = (m: Map<number, number>) =>
@@ -191,15 +155,18 @@ function buildData() {
   const [peakClosedDecade, peakClosedN] = peak(closedByDecade);
   const closedSince1990 = all.filter(
     (p) =>
-      toGroup(p.endState) === "closed" && p.closed && p.closed >= 1990,
+      p.status_group === "closed" && p.closed.year && p.closed.year >= 1990,
   ).length;
   const closedSince2020 = all.filter(
     (p) =>
-      toGroup(p.endState) === "closed" && p.closed && p.closed >= 2020,
+      p.status_group === "closed" && p.closed.year && p.closed.year >= 2020,
   ).length;
   const lifespans = all
-    .filter((p) => isLoss(p.endState) && p.founded && p.closed)
-    .map((p) => p.closed! - p.founded!)
+    .filter(
+      (p) =>
+        p.status_group === "closed" && p.founded.year && p.closed.year,
+    )
+    .map((p) => p.closed.year! - p.founded.year!)
     .sort((a, b) => a - b);
   const medianLifespan = lifespans.length
     ? lifespans[Math.floor(lifespans.length / 2)]
@@ -211,7 +178,6 @@ function buildData() {
   return {
     dated,
     undated,
-    closedFates,
     standing,
     hostedMass,
     lost,
@@ -237,7 +203,6 @@ export default function HistoryPage() {
   const {
     dated,
     undated,
-    closedFates,
     standing,
     hostedMass,
     lost,
@@ -288,11 +253,10 @@ export default function HistoryPage() {
           parish history.
         </p>
         <p>
-          Of the {total}, {lost} are closed. {closedFates.demolished} of
-          their churches have been demolished;{" "}
-          {closedFates.religious + closedFates.secular} were sold on &mdash;{" "}
-          {closedFates.religious} to other congregations, {closedFates.secular}{" "}
-          to secular use.
+          Of the {total}, {lost} parish institutions are closed. Their church
+          buildings have separate histories: some were demolished, some were
+          transferred or repurposed, and some communities worshipped at more
+          than one site.
         </p>
         <p
           className="font-serif text-lg"
@@ -494,7 +458,7 @@ export default function HistoryPage() {
           </p>
           <p className="px-3 py-3">
             <span className="mr-2 font-semibold text-foreground">×</span>
-            Church demolished; a fade means status unknown
+            A fade means the parish&rsquo;s present status is unknown
           </p>
         </div>
 
@@ -572,6 +536,18 @@ export default function HistoryPage() {
               holdings diocese by diocese.
             </p>
           </div>
+        </div>
+        <div className="mt-4 border-t border-rule pt-4">
+          <Link
+            href="/where-parish-life-continued"
+            className="font-serif text-lg font-semibold underline hover:text-accent"
+          >
+            Where Parish Life Continued
+          </Link>
+          <p className="mt-1 max-w-2xl text-sm leading-relaxed text-muted">
+            Follow mergers, successors, and canonical continuity without
+            collapsing distinct parish institutions into one record.
+          </p>
         </div>
       </nav>
     </div>
