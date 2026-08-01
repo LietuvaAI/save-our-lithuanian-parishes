@@ -28,6 +28,7 @@ import {
   type CanonicalParishProfile,
 } from "@/lib/parish-profile";
 import {
+  getIdentityNoticesForInstitution,
   getInstitutionDates,
   getRelatedRecordsForInstitution,
   getWorshipSitesForInstitution,
@@ -47,6 +48,7 @@ import {
 import { clearedOrNull, getClearedParishPortrait } from "@/lib/photos";
 import {
   profileStory,
+  campaignProfileDek,
   researchRecordStory,
   researchStatusCopy,
 } from "@/lib/profile-narrative";
@@ -278,6 +280,8 @@ export default async function ParishPage({
   const recordType = entry.record_type ?? "parish";
   const researchOnly = ["phase", "lead", "context"].includes(recordType);
   const institutionDates = getInstitutionDates(profile.href);
+  const isUsProjection =
+    entry.country === "US" && typeof institutionDates?.entityId === "string";
   const foundedYear = institutionDates
     ? institutionDates.foundedYear
     : (scoped.founded ?? core?.yearFounded ?? null);
@@ -308,19 +312,35 @@ export default async function ParishPage({
   const relatedRecords = getRelatedRecordsForInstitution(
     institutionDates?.entityId ?? null,
   );
+  const identityNotices = getIdentityNoticesForInstitution(
+    institutionDates?.entityId ?? null,
+  );
+  const activeWorshipSite =
+    worshipSites.find((site) => !site.demolishedYear) ?? null;
   const standingSite =
     worshipSites.find(
       (site) => !site.demolishedYear && /present/i.test(site.range ?? ""),
-    ) ?? null;
+    ) ?? activeWorshipSite;
   const standingSiteYear = standingSite?.range?.match(/(\d{4})/)?.[1] ?? null;
   const institutionEnded =
     closedYear !== null ||
     ["closed", "demolished", "repurposed", "transferred"].includes(endState);
-  const currentChurch = institutionEnded
-    ? "No current parish church"
-    : standingSiteYear
-      ? `Dedicated ${standingSiteYear}`
-      : readableBuildingStatus(buildingFate, caseRecord?.buildingStatus ?? null);
+  const currentChurch =
+    recordType === "misija"
+      ? (activeWorshipSite?.name ?? "Not established")
+      : institutionEnded
+        ? (activeWorshipSite?.name ??
+          worshipSites[0]?.outcome ??
+          "None recorded")
+        : standingSiteYear
+          ? `Dedicated ${standingSiteYear}`
+          : readableBuildingStatus(
+              buildingFate,
+              caseRecord?.buildingStatus ?? null,
+            );
+  const renderedWorshipSites =
+    recordType === "misija" || !isUsProjection ? [] : worshipSites;
+  const renderedRelatedRecords = !isUsProjection ? [] : relatedRecords;
   const lithuanianMass = watchEntry
     ? (FREQUENCY_LABEL[watchEntry.liturgy.frequency] ??
       watchEntry.liturgy.frequency)
@@ -446,6 +466,10 @@ export default async function ParishPage({
         currentUse: situation?.current_use ?? null,
         sourceLead,
       });
+  const displayDek =
+    parishCampaign && caseRecord?.summary
+      ? campaignProfileDek(caseRecord.summary)
+      : dek;
 
   const hasMap = (
     contextPoints.points as {
@@ -455,6 +479,7 @@ export default async function ParishPage({
     }[]
   ).some(
     (point) =>
+      isUsProjection &&
       point.slug === profile.slug &&
       point.diocese &&
       point.congregationClass === "roman_catholic",
@@ -462,11 +487,15 @@ export default async function ParishPage({
 
   // Status is stated once, here: a dot and a label. Not also a pill, a fact row,
   // and a prose sentence. docs/design-system-profile.md §6.
-  const statusLabel = researchOnly
+  const baseStatusLabel = researchOnly
     ? "Research record"
     : recordType === "misija" && endState === "active_parish"
       ? "Active Lithuanian mission"
       : END_STATE_LABEL[endState];
+  const statusLabel =
+    !researchOnly && endState === "closed" && closedYear
+      ? `${baseStatusLabel} ${closedYear}`
+      : baseStatusLabel;
 
   const imageCaption = [
     isLineDrawing ? "Line art" : "Photograph",
@@ -491,7 +520,7 @@ export default async function ParishPage({
       buildingFate,
       caseRecord?.buildingStatus ?? null,
     ),
-    overview: [dek, rest].filter(Boolean).join(" "),
+    overview: [displayDek, rest].filter(Boolean).join(" "),
     researchOnly,
     researchStatus: researchStatusCopy(recordType),
     currentUse: caseRecord?.currentUse ?? situation?.current_use ?? null,
@@ -502,7 +531,27 @@ export default async function ParishPage({
     existed: institutionDates?.existed ?? null,
     currentChurch,
     lithuanianMass,
+    recordType,
+    institutionEnded,
   });
+
+  const contextMapFigure = hasMap ? (
+    <figure>
+      <p className="font-mono text-[10.5px] font-medium uppercase tracking-[0.15em] text-muted">
+        Among its neighbours
+      </p>
+      {entry.diocese && (
+        <p className="mt-2 font-serif text-sm">{entry.diocese}</p>
+      )}
+      <div className="mt-2.5">
+        <ParishContextMap
+          slug={profile.slug}
+          dioceseLabel={entry.diocese ?? undefined}
+          compact
+        />
+      </div>
+    </figure>
+  ) : null;
 
   return (
     <article
@@ -523,8 +572,9 @@ export default async function ParishPage({
         className="mt-4 grid items-start gap-x-10 gap-y-6 md:grid-cols-[272px_minmax(0,1fr)]"
       >
         <div className="min-w-0">
-          <figure className="w-full">
-            {parishPhoto ? (
+          {parishPhoto ? (
+            <>
+              <figure className="w-full">
               <Image
                 src={parishPhoto.src}
                 alt={parishPhoto.alt}
@@ -537,7 +587,20 @@ export default async function ParishPage({
                     : "aspect-[4/3] w-full object-cover"
                 }
               />
-            ) : (
+                <figcaption className="mt-1.5 font-mono text-[10.5px] leading-normal text-muted">
+                  <a href="#evidence-sources" className="hover:text-accent">
+                    {imageCaption}
+                  </a>
+                </figcaption>
+              </figure>
+              {contextMapFigure && (
+                <div className="mt-6">{contextMapFigure}</div>
+              )}
+            </>
+          ) : contextMapFigure ? (
+            contextMapFigure
+          ) : (
+            <figure className="w-full">
               <div className="flex aspect-square w-full flex-col items-center justify-center bg-band px-8 text-center">
                 <p className="font-mono text-[10.5px] uppercase tracking-[0.15em] text-muted">
                   {institution}
@@ -551,33 +614,11 @@ export default async function ParishPage({
                   {foundedYear ? `Established ${foundedYear}` : statusLabel}
                 </p>
               </div>
-            )}
-            <figcaption className="mt-1.5 font-mono text-[10.5px] leading-normal text-muted">
-              {parishPhoto ? (
-                <a href="#evidence-sources" className="hover:text-accent">
-                  {imageCaption}
-                </a>
-              ) : (
-                "Parish identity record"
-              )}
-            </figcaption>
-          </figure>
-
-          {hasMap && (
-            <figure className="mt-6">
-              <p className="font-mono text-[10.5px] font-medium uppercase tracking-[0.15em] text-muted">
-                Among its neighbours
-              </p>
-              {entry.diocese && (
-                <p className="mt-2 font-serif text-sm">{entry.diocese}</p>
-              )}
-              <div className="mt-2.5">
-                <ParishContextMap
-                  slug={profile.slug}
-                  dioceseLabel={entry.diocese ?? undefined}
-                  compact
-                />
-              </div>
+              <figcaption className="mt-1.5 font-mono text-[10.5px] leading-normal text-muted">
+                {recordType === "misija"
+                  ? "Mission identity record"
+                  : "Parish identity record"}
+              </figcaption>
             </figure>
           )}
         </div>
@@ -599,9 +640,9 @@ export default async function ParishPage({
               {!researchOnly && <EndStateDot value={endState} />}
               {statusLabel}
             </span>
-            {institutionDates?.foundedUnresolved ? (
+            {recordType !== "misija" && institutionDates?.foundedUnresolved ? (
               <span className="text-muted">Founding year unresolved</span>
-            ) : institutionDates?.foundedYear ? (
+            ) : recordType !== "misija" && institutionDates?.foundedYear ? (
               <span className="text-muted">
                 Founded {institutionDates.foundedYear}
               </span>
@@ -609,20 +650,35 @@ export default async function ParishPage({
             {entry.diocese && <span className="text-muted">{entry.diocese}</span>}
           </div>
 
-          <dl className="mt-4 grid max-w-[38em] gap-x-6 gap-y-4 border-t border-rule pt-3.5 sm:grid-cols-4">
-            {profileView.facts.map((fact) => (
-              <div key={fact.label}>
-                <dt className="font-mono text-[10.5px] font-medium uppercase tracking-[0.09em] text-muted">
-                  {fact.label}
-                </dt>
-                <dd className="mt-1.5 text-sm leading-snug">{fact.value}</dd>
-              </div>
-            ))}
-          </dl>
+          {isUsProjection && (
+            <dl className="mt-4 grid max-w-[38em] gap-x-6 gap-y-4 border-t border-rule pt-3.5 sm:grid-cols-4">
+              {profileView.facts.map((fact) => (
+                <div key={fact.label}>
+                  <dt className="font-mono text-[10.5px] font-medium uppercase tracking-[0.09em] text-muted">
+                    {fact.label}
+                  </dt>
+                  <dd className="mt-1.5 text-sm leading-snug">{fact.value}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
 
           <p className="mt-4 max-w-[34em] font-serif text-[16.5px] leading-relaxed">
-            {dek}
+            {displayDek}
           </p>
+
+          {identityNotices.map((notice) => (
+            <div
+              key={notice.id}
+              data-profile-identity-notice={notice.id}
+              className="mt-5 max-w-[34em] bg-band px-4 py-3.5"
+            >
+              <p className="font-mono text-[10.5px] font-medium uppercase tracking-[0.15em] text-muted">
+                {notice.label}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed">{notice.text}</p>
+            </div>
+          ))}
 
           {parishAlert && (
             <div
@@ -678,9 +734,27 @@ export default async function ParishPage({
         </div>
       </div>
 
+      {!isUsProjection && (
+        <div
+          data-profile-scope="outside-us-projection"
+          className="mt-8 grid gap-x-10 border-t border-rule pt-6 md:grid-cols-[158px_minmax(0,1fr)]"
+        >
+          <p className="font-mono text-[10.5px] font-medium uppercase tracking-[0.15em] text-muted">
+            Scope
+          </p>
+          <p className="max-w-[38em] bg-band px-5 py-4 text-sm leading-relaxed text-foreground">
+            Projected for U.S. institutions only. This comparator is retained for
+            historical comparison, outside the U.S. institution and building
+            projection.
+          </p>
+        </div>
+      )}
+
       <ParishPublishedRecord
         profile={profile}
-        overviewText={researchOnly ? undefined : `${dek} ${rest ?? ""}`}
+        overviewText={
+          researchOnly ? undefined : `${displayDek} ${rest ?? ""}`
+        }
         supplementalNarrative={
           caseRecord?.historicalSummary?.length
             ? caseRecord.historicalSummary
@@ -689,13 +763,18 @@ export default async function ParishPage({
               : []
         }
         fallbackNarrative={profileView.historyFallback}
+        closingNote={
+          core?.survivedReviewThenClosed
+            ? "Survived review, then closed. This parish remained open after an earlier diocesan review, but a later decision ended its institutional life."
+            : undefined
+        }
       />
 
       <ParishProfileChronology items={profileView.chronology} />
 
-      <ProfileWorshipSites sites={worshipSites} />
+      <ProfileWorshipSites sites={renderedWorshipSites} />
 
-      <ProfileRelatedRecords records={relatedRecords} />
+      <ProfileRelatedRecords records={renderedRelatedRecords} />
 
       <ProfileSection
         id="present-condition"
@@ -710,17 +789,6 @@ export default async function ParishPage({
           <p className="font-serif text-[15.5px] leading-relaxed">
             {profileView.currentSummary}
           </p>
-
-          {core?.survivedReviewThenClosed && (
-            <p className="mt-4 text-[13.5px] leading-relaxed text-muted">
-              <span className="font-medium text-foreground">
-                Survived review, then closed.
-              </span>{" "}
-              This parish remained open after an earlier diocesan review, but a
-              later decision ended its institutional life. The earlier reprieve
-              did not guarantee long-term security.
-            </p>
-          )}
 
           {watchEntry && (
             <div className="mt-4 flex flex-col gap-2 text-[13.5px] leading-relaxed text-muted">
@@ -765,7 +833,8 @@ export default async function ParishPage({
         <div />
         <div className="max-w-[38em] bg-band px-6 py-5">
           <p className="font-serif text-[16.5px] font-semibold leading-snug">
-            Do you know this parish? Is something happening there now?
+            Do you know this {recordType === "misija" ? "mission" : "parish"}?
+            Is something happening there now?
           </p>
           <p className="mt-2 text-[13.5px] leading-relaxed text-muted">
             The record grows through people who were there. Corrections,

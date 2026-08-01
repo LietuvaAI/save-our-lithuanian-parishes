@@ -43,6 +43,12 @@ export type RelatedRecordRow = {
   confidence: string;
 };
 
+export type IdentityNotice = {
+  id: string;
+  label: string;
+  text: string;
+};
+
 function humanize(value: string) {
   return value.replace(/[_-]+/g, " ").replace(/\s+/g, " ").trim();
 }
@@ -86,8 +92,42 @@ const CONDITION_PRECEDENCE: Record<string, number> = {
   "building-standing": 1,
 };
 
+const CONDITION_LABELS: Record<string, string> = {
+  "building-demolished": "Demolished",
+  "building-repurposed": "Repurposed",
+  "building-listed-for-sale": "Listed for sale",
+  "building-standing": "Standing",
+};
+
+function siteDemolishedYear(site: BuildingSiteHistoryRow): number | null {
+  if (site.demolished_year) return site.demolished_year;
+  return (
+    site.milestones
+      .filter((milestone) => /demolish|razed|torn_down/i.test(milestone.event))
+      .map((milestone) => yearOf(milestone.date))
+      .filter((year): year is number => year !== null)
+      .sort((a, b) => b - a)[0] ?? null
+  );
+}
+
 function siteOutcome(site: BuildingSiteHistoryRow): string {
-  if (site.demolished_year) return `Demolished ${site.demolished_year}`;
+  const demolishedYear = siteDemolishedYear(site);
+  if (demolishedYear) return `Demolished ${demolishedYear}`;
+  const conditionTypes = new Set(
+    site.condition_relationships.map((entry) => entry.relationship_type),
+  );
+  if (
+    conditionTypes.has("building-repurposed") &&
+    conditionTypes.has("building-standing")
+  ) {
+    return "Repurposed, standing";
+  }
+  if (
+    conditionTypes.has("building-listed-for-sale") &&
+    conditionTypes.has("building-standing")
+  ) {
+    return "Listed for sale, standing";
+  }
   const condition = [...site.condition_relationships].sort(
     (a, b) =>
       (CONDITION_PRECEDENCE[b.relationship_type] ?? 0) -
@@ -95,7 +135,12 @@ function siteOutcome(site: BuildingSiteHistoryRow): string {
       (yearOf(b.date?.start) ?? yearOf(b.date?.end) ?? 0) -
         (yearOf(a.date?.start) ?? yearOf(a.date?.end) ?? 0),
   )[0];
-  if (condition) return titleCase(condition.relationship_type);
+  if (condition) {
+    return (
+      CONDITION_LABELS[condition.relationship_type] ??
+      titleCase(condition.relationship_type)
+    );
+  }
   return "Not established";
 }
 
@@ -118,7 +163,7 @@ export function getWorshipSitesForInstitution(
       name: site.name,
       range: usePeriodRange(site, entityId),
       outcome: siteOutcome(site),
-      demolishedYear: site.demolished_year,
+      demolishedYear: siteDemolishedYear(site),
       milestones: site.milestones.map((milestone) => ({
         id: `${milestone.assertion_id}:${milestone.event}`,
         date: milestone.date,
@@ -223,6 +268,41 @@ export function getRelatedRecordsForInstitution(
       };
     })
     .sort((a, b) => a.kind.localeCompare(b.kind) || a.name.localeCompare(b.name));
+}
+
+/**
+ * A small, high identity note for an adjudicated overlap between distinct
+ * institutions. It prevents a reader from mistaking an origin date for the
+ * predecessor parish's closure date.
+ */
+export function getIdentityNoticesForInstitution(
+  entityId: string | null,
+): IdentityNotice[] {
+  if (!entityId) return [];
+  return continuityEdges
+    .filter(
+      (edge) =>
+        edge.publication_state === "publishable" &&
+        edge.adjudication_state === "accepted" &&
+        edge.identity_effect === "distinct_institutions_lineage" &&
+        String((edge.date as Record<string, unknown> | null)?.certainty ?? "")
+          .toLowerCase()
+          .includes("overlap") &&
+        (edge.source.entity_id === entityId || edge.target.entity_id === entityId),
+    )
+    .map((edge) => ({
+      id: edge.id,
+      label: "Distinct institutions",
+      text: terminalSentence(
+        String((edge.date as Record<string, unknown> | null)?.label ?? ""),
+      ),
+    }))
+    .filter((notice) => notice.text.length > 1);
+}
+
+function terminalSentence(value: string): string {
+  const text = value.trim();
+  return /[.!?]$/.test(text) ? text : `${text}.`;
 }
 
 /** The institution's own founding/ending, with unresolved dates left unresolved. */

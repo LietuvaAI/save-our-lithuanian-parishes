@@ -34,6 +34,10 @@ const graphSource = fs.readFileSync(
   path.join(ROOT, "lib", "parish-record-graph.ts"),
   "utf8",
 );
+const profileViewSource = fs.readFileSync(
+  path.join(ROOT, "lib", "parish-profile-view.ts"),
+  "utf8",
+);
 const profileSourcesSource = fs.readFileSync(
   path.join(ROOT, "lib", "profile-sources.ts"),
   "utf8",
@@ -116,6 +120,11 @@ const requiredFragments = [
     "worship-site mobile width containment",
   ],
   [worshipSitesSource, "site.milestones.map", "worship-site milestone list"],
+  [
+    worshipSitesSource,
+    "if (sites.length === 0) return null;",
+    "empty worship-site section omission",
+  ],
   [relatedRecordsSource, 'id="related-records"', "related records section id"],
   [ledgerSource, 'id="evidence-sources"', "evidence section id"],
   [
@@ -138,11 +147,42 @@ const requiredFragments = [
     "canonical institutional founding date",
   ],
   [
-    pageSource,
-    '"No current parish church"',
-    "closed-institution current-church treatment",
+    profileViewSource,
+    'label: input.institutionEnded ? "Former church" : "Current church"',
+    "closed-institution former-church treatment",
   ],
   [pageSource, "survivedReviewThenClosed", "survived-review warning"],
+  [
+    pageSource,
+    'data-profile-scope="outside-us-projection"',
+    "non-U.S. projection scope band",
+  ],
+  [
+    pageSource,
+    'recordType !== "misija" && institutionDates',
+    "mission founding-strip omission",
+  ],
+  [
+    pageSource,
+    'recordType === "misija" || !isUsProjection ? [] : worshipSites',
+    "mission and comparator worship-site omission",
+  ],
+  [
+    profileViewSource,
+    'label: "Worships in"',
+    "mission worship-place vocabulary",
+  ],
+  [profileViewSource, 'label: "Active"', "mission active vocabulary"],
+  [
+    graphSource,
+    'return "Repurposed, standing"',
+    "standing repurposed-site outcome",
+  ],
+  [
+    graphSource,
+    "getIdentityNoticesForInstitution",
+    "adjudicated institution-overlap notice",
+  ],
   [pageSource, 'href="/report"', "profile correction route"],
   [
     graphSource,
@@ -192,6 +232,18 @@ if (pageSource.includes("const foundedYear = scoped.founded")) {
   errors.push("profile narrative bypasses canonical institutional dates");
 }
 
+const profileOutputSources = [
+  pageSource,
+  historySource,
+  chronologySource,
+  worshipSitesSource,
+  relatedRecordsSource,
+  profileViewSource,
+].join("\n");
+if (/#b3aca2/i.test(profileOutputSources)) {
+  errors.push("map-marker color #b3aca2 is used in profile text output");
+}
+
 const divineProvidence = publication.public_institutions.find(
   (institution) => institution.registry_slug === "providence-southfield-mi",
 );
@@ -231,6 +283,129 @@ for (const [event, date] of [
   if (stGeorgeMilestones.get(event) !== date) {
     errors.push(`St. George Detroit site milestone drifted: ${event}`);
   }
+}
+
+const institutionByProfile = new Map(
+  infographic.institution_history.map((institution) => [
+    institution.public_profile,
+    institution,
+  ]),
+);
+const institutionByEntityId = new Map(
+  infographic.institution_history.map((institution) => [
+    institution.culturenet_entity_id,
+    institution,
+  ]),
+);
+const siteByEntityId = new Map(
+  infographic.building_site_history.map((site) => [
+    site.culturenet_entity_id,
+    site,
+  ]),
+);
+
+// The visual cases are also semantic regression cases. These assertions protect
+// the current canon where the design reference still reflects an older packet.
+const stAnthonyDetroit = institutionByProfile.get(
+  "/parishes/sv-antano-detroit-mi",
+);
+const stAnthonySite = siteByEntityId.get(
+  "cn:building_site:st-anthony-detroit-25th-street-site",
+);
+const stAnthonyConditions = new Set(
+  (stAnthonySite?.condition_relationships ?? []).map(
+    (condition) => condition.relationship_type,
+  ),
+);
+if (
+  stAnthonyDetroit?.closed?.year !== 2013 ||
+  !stAnthonyConditions.has("building-repurposed") ||
+  !stAnthonyConditions.has("building-standing")
+) {
+  errors.push("Detroit St. Anthony closed-standing case drifted");
+}
+if (
+  !infographic.continuity_edges.some(
+    (edge) =>
+      edge.id === "rel:detroit:st-anthony-merged-into-divine-providence" &&
+      edge.relationship_type === "institution-merged-into-institution",
+  )
+) {
+  errors.push("Detroit St. Anthony merge relationship drifted");
+}
+
+const stPeterDetroit = institutionByProfile.get(
+  "/parishes/sv-petro-detroit-mi",
+);
+const stPeterSite = siteByEntityId.get(
+  "cn:building_site:st-peter-detroit-site",
+);
+const stPeterUse = stPeterSite?.institution_use_periods.find(
+  (period) => period.institution_entity_id === stPeterDetroit?.culturenet_entity_id,
+);
+if (
+  stPeterDetroit?.founded?.year !== 1920 ||
+  stPeterUse?.date?.start !== "1921" ||
+  stPeterUse?.date?.end !== "1995"
+) {
+  errors.push(
+    "Detroit St. Peter must retain its 1920 institution and 1921-1995 worship site",
+  );
+}
+
+const stGeorgeDetroit = institutionByProfile.get(
+  "/parishes/st-george-detroit-mi",
+);
+const stGeorgeOrigin = infographic.continuity_edges.find(
+  (edge) => edge.id === "rel:detroit:divine-providence-originated-from-st-george",
+);
+if (
+  stGeorgeDetroit?.founded?.year !== 1908 ||
+  stGeorgeDetroit?.closed?.year !== 1965 ||
+  stGeorgeOrigin?.adjudication_state !== "accepted" ||
+  stGeorgeOrigin?.identity_effect !== "distinct_institutions_lineage"
+) {
+  errors.push(
+    "Detroit St. George must remain a distinct 1908-1965 institution overlapping Divine Providence from 1949",
+  );
+}
+if (profileOutputSources.includes("Transferred, date disputed")) {
+  errors.push("stale St. George transfer-date treatment returned");
+}
+
+const lemontMission = institutionByProfile.get(
+  "/parishes/pal-jurgio-matulaicio-misija-lemont-il",
+);
+if (
+  lemontMission?.record_type !== "misija" ||
+  infographic.counts.roman_catholic_parish_institutions !== 132 ||
+  publication.counts.by_record_type.misija !== 4
+) {
+  errors.push("mission vocabulary or Roman Catholic parish count drifted");
+}
+
+const frackville = institutionByProfile.get(
+  "/parishes/sv-m-marijos-apsireiskimo-frackville-pa",
+);
+const frackvilleContinuation = infographic.continuity_edges.find(
+  (edge) => edge.id === "rel:ef-5:frackville-continued-st-joseph",
+);
+if (
+  frackville?.founded?.year !== 1914 ||
+  !frackvilleContinuation ||
+  institutionByEntityId.has(frackvilleContinuation.target?.entity_id)
+) {
+  errors.push(
+    "Frackville must retain its canonical 1914 founding and unlinked continuation endpoint",
+  );
+}
+
+if (
+  infographic.comparators.canada.counted_in_public_us_institution_total !==
+    false ||
+  infographic.comparators.canada.population !== 3
+) {
+  errors.push("Canadian comparator scope drifted");
 }
 
 const relationshipTypes = [

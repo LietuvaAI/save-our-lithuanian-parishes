@@ -1001,11 +1001,13 @@ export function ParishPublishedRecord({
   overviewText,
   supplementalNarrative,
   fallbackNarrative,
+  closingNote,
 }: {
   profile: CanonicalParishProfile;
   overviewText?: string;
   supplementalNarrative?: string[];
   fallbackNarrative?: string[];
+  closingNote?: string;
 }) {
   const seen = new Set<string>();
   const facts = sortedHistorySources(profile)
@@ -1075,6 +1077,9 @@ export function ParishPublishedRecord({
             {group.join(" ")}
           </p>
         ))}
+        {closingNote && (
+          <p className="leading-relaxed text-foreground">{closingNote}</p>
+        )}
       </div>
     </section>
   );

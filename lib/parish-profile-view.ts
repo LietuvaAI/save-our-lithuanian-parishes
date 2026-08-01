@@ -67,6 +67,8 @@ interface ParishProfileViewInput {
   /** The standing church and its own dedication year — a building fact, labelled as one. */
   currentChurch: string | null;
   lithuanianMass: string | null;
+  recordType: string;
+  institutionEnded: boolean;
 }
 
 const BUILDING_EVENT =
@@ -136,6 +138,7 @@ function classify(title: string, detail: string) {
 
 function chronology(input: ParishProfileViewInput) {
   const items: ParishProfileChronologyItem[] = [];
+  const institutionNoun = input.recordType === "misija" ? "Mission" : "Parish";
 
   function push(
     item: Omit<ParishProfileChronologyItem, "kind" | "loss">,
@@ -156,7 +159,7 @@ function chronology(input: ParishProfileViewInput) {
   } else if (input.founded) {
     push({
       date: String(input.founded),
-      title: "Parish established",
+      title: `${institutionNoun} established`,
       detail: `${input.name} was established in ${location(input)}.`,
       sources: [],
       sortYear: input.founded,
@@ -190,8 +193,8 @@ function chronology(input: ParishProfileViewInput) {
   ) {
     push({
       date: String(input.closed),
-      title: "Parish life ended",
-      detail: `The parish closed in ${input.closed}.`,
+      title: `${institutionNoun} life ended`,
+      detail: `The ${institutionNoun.toLowerCase()} closed in ${input.closed}.`,
       sources: [],
       sortYear: input.closed,
     });
@@ -220,6 +223,21 @@ function chronology(input: ParishProfileViewInput) {
  * docs/design-system-profile.md §6.
  */
 function facts(input: ParishProfileViewInput): ParishProfileFact[] {
+  if (input.recordType === "misija") {
+    return [
+      { label: "Institution", value: input.institution },
+      { label: "Active", value: input.status },
+      {
+        label: "Worships in",
+        value: input.currentChurch ?? input.building ?? "Not established",
+      },
+      {
+        label: "Lithuanian Mass",
+        value: input.lithuanianMass ?? "Not established",
+      },
+    ];
+  }
+
   return [
     { label: "Institution", value: input.institution },
     {
@@ -233,7 +251,7 @@ function facts(input: ParishProfileViewInput): ParishProfileFact[] {
           : "Founding year unresolved"),
     },
     {
-      label: "Current church",
+      label: input.institutionEnded ? "Former church" : "Current church",
       value: input.currentChurch ?? input.building ?? "Not established",
     },
     {

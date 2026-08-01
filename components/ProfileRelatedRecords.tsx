@@ -16,7 +16,7 @@ export function ProfileRelatedRecords({
     <ProfileSection
       id="related-records"
       label="Related records"
-      note={"Each is its own\nparish record"}
+      note={"Each is its own\ninstitution record"}
     >
       <ol className="max-w-[40em]">
         {records.map((record) => (
