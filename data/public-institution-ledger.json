@@ -6,7 +6,7 @@
     "revisionId": "canonical-public-census-2026-07-31",
     "contentHash": "sha256:6480545ad402bb1a00c7e27749dfb9716489d202658ff4d61438aba247c0d995"
   },
-  "registryRevision": 9,
+  "registryRevision": 10,
   "registryDate": "2026-07-31",
   "claim": "The current documented record contains 154 distinct U.S. Lithuanian religious institutions.",
   "inclusionRule": "Count one canonical U.S. institution when CultureNet publishes it as a parish, mission, or congregation. Buildings, duplicate aliases, historical attempts, hosted worship, research leads, and comparators remain linked context and never increase this total.",

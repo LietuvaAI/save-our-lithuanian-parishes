@@ -18,10 +18,10 @@ const revisions = read("registry-revisions.json");
 const projection = read("canonical-publication-projection.json");
 const adjudications = read("canonical-public-census-adjudications.json");
 
-const TARGET_REVISION = 9;
+const TARGET_REVISION = 10;
 const TARGET_DATE = "2026-07-31";
 const CHANGELOG =
-  "Registry Revision 9: made the CultureNet parish publication projection authoritative for public U.S. institution identity, scope, type, class, and profile route; removed five adjudicated duplicate or non-institution rows from public scope without deleting their research evidence.";
+  "Registry Revision 10: made the CultureNet parish publication projection authoritative for public U.S. institution identity, scope, type, class, and profile route; removed five adjudicated duplicate or non-institution rows from public scope without deleting their research evidence.";
 
 if (projection.schema !== "culturenet-parish-publication-projection.v1") {
   throw new Error(`Unsupported publication projection schema: ${projection.schema}`);
@@ -186,7 +186,7 @@ const revisionEntry = {
   evidence: [
     "data/canonical-publication-projection.json",
     "data/canonical-public-census-adjudications.json",
-    "data/candidates/registry-revision-9-canonical-projection-2026-07-31.md",
+    "data/candidates/registry-revision-10-canonical-projection-2026-07-31.md",
   ],
 };
 const priorRevision = revisions.revisions.find(
@@ -204,7 +204,7 @@ const removed = adjudications.decisions
       `| ${decision.registry_slug} | ${decision.scope} | ${decision.reason} |`,
   )
   .join("\n");
-const report = `# Registry Revision 9: canonical publication projection
+const report = `# Registry Revision 10: canonical publication projection
 
 **Date:** ${TARGET_DATE}
 **Authority:** CultureNet parish publication projection
@@ -232,7 +232,7 @@ write("registry-unified.json", registry);
 write("registry-revisions.json", revisions);
 writeFileSync(
   new URL(
-    "../data/candidates/registry-revision-9-canonical-projection-2026-07-31.md",
+    "../data/candidates/registry-revision-10-canonical-projection-2026-07-31.md",
     import.meta.url,
   ),
   report,

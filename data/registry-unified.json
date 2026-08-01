@@ -8054,17 +8054,64 @@
         "founded": [
           {
             "value": "1920",
-            "source": "draugas-registry-1909-2007"
+            "source": "draugas-registry-1909-2007",
+            "selected": false
+          },
+          {
+            "value": "1902",
+            "source": "archdiocese-of-philadelphia",
+            "cite": "https://archphila.org/parish/st-george-philadelphia/",
+            "selected": true
           }
         ],
         "closed": [
           {
             "value": "2016",
-            "source": "draugas-2008-2026"
+            "source": "draugas-2008-2026",
+            "selected": false
+          },
+          {
+            "value": "2019",
+            "source": "archdiocese-of-philadelphia",
+            "cite": "https://archphila.org/parish/st-george-philadelphia/",
+            "selected": true
           }
         ]
       },
-      "conflicts": [],
+      "conflicts": [
+        {
+          "field": "founded",
+          "variants": [
+            {
+              "value": "1920",
+              "source": "draugas-registry-1909-2007",
+              "selected": false
+            },
+            {
+              "value": "1902",
+              "source": "archdiocese-of-philadelphia",
+              "cite": "https://archphila.org/parish/st-george-philadelphia/",
+              "selected": true
+            }
+          ]
+        },
+        {
+          "field": "closed",
+          "variants": [
+            {
+              "value": "2016",
+              "source": "draugas-2008-2026",
+              "selected": false
+            },
+            {
+              "value": "2019",
+              "source": "archdiocese-of-philadelphia",
+              "cite": "https://archphila.org/parish/st-george-philadelphia/",
+              "selected": true
+            }
+          ]
+        }
+      ],
       "related_sites": [],
       "events_refs": [
         {
@@ -8097,6 +8144,18 @@
         "canonical_detail_status": "merged",
         "projection_record_id": "proj:pmc-7:st-george",
         "protected_campaign": false
+      },
+      "lifecycle": {
+        "canonical_status": "merged",
+        "selected_founded_year": 1902,
+        "selected_closed_year": 2019,
+        "identity": "lost",
+        "confidence": "high"
+      },
+      "adjudication": {
+        "date": "2026-07-31",
+        "cite": "data/case-records/sv-jurgio-philadelphia-pa.json",
+        "status": "verified-or-labeled"
       }
     },
     {
@@ -23515,7 +23574,7 @@
     }
   ],
   "registryRevision": {
-    "version": 9,
+    "version": 10,
     "date": "2026-07-31",
     "changelog": [
       "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
@@ -23545,9 +23604,13 @@
       "Added direct official source links for Zion Oak Lawn and St. Paul Naugatuck; confirmed Zion as an active Lithuanian Lutheran congregation while leaving Naugatuck's current Lithuanian identity unresolved.",
       "Normalized Philadelphia St. Anthony, Custer St. Mary, and Hazleton Ss. Peter and Paul to their source-supported jurisdictions.",
       "Recalculated every source-axis and record-depth label and established public source-ledger and release-count guards.",
-      "Registry Revision 9: made the CultureNet parish publication projection authoritative for public U.S. institution identity, scope, type, class, and profile route; removed five adjudicated duplicate or non-institution rows from public scope without deleting their research evidence."
+      "Projected all 83 deep case records into the public current-condition layer; 25 required a building-fate or situation correction.",
+      "Corrected Philadelphia St. George to the Archdiocese's official 1902-2019 parish lifecycle while preserving the older 1920/2016 readings as explicit conflicts.",
+      "Established case-record/overlay parity as a blocking publication guard so researched building outcomes cannot regress to unknown or imply an active parish.",
+      "Registry Revision 9: made the CultureNet parish publication projection authoritative for public U.S. institution identity, scope, type, class, and profile route; removed five adjudicated duplicate or non-institution rows from public scope without deleting their research evidence.",
+      "Registry Revision 10: made the CultureNet parish publication projection authoritative for public U.S. institution identity, scope, type, class, and profile route; removed five adjudicated duplicate or non-institution rows from public scope without deleting their research evidence."
     ],
-    "contentHash": "df174734d897a8484960a75bedff452b287775bd7e064480903a55a05981fdc9"
+    "contentHash": "725a79ddc86b18c2effa3299ea3c5349a926c546a9e9918aee5fc39eb71c1787"
   },
   "publicationAuthority": {
     "repository": "LietuvaAI/culturenet-brain",

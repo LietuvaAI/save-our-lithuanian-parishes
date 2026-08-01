@@ -1,4 +1,4 @@
-# Registry Revision 9: canonical publication projection
+# Registry Revision 10: canonical publication projection
 
 **Date:** 2026-07-31
 **Authority:** CultureNet parish publication projection

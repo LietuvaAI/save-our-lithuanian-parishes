@@ -83,11 +83,23 @@
       "registryRecords": 192,
       "publicUSRecords": 154,
       "usRomanCatholicParishes": 132,
+      "summary": "Reconciled deep case-file current conditions with the public overlay, corrected Philadelphia St. George to the official 1902-2019 lifecycle, and added a blocking case/overlay parity guard.",
+      "evidence": [
+        "data/candidates/registry-revision-9-current-condition-2026-07-31.md",
+        "data/public-institution-ledger.json"
+      ]
+    },
+    {
+      "version": 10,
+      "date": "2026-07-31",
+      "registryRecords": 192,
+      "publicUSRecords": 154,
+      "usRomanCatholicParishes": 132,
       "summary": "Synchronized public identity and census scope to the complete CultureNet publication projection: 154 U.S. institutions, five explicit exclusions, unique canonical entities and profile routes, and no pending count-risk rows.",
       "evidence": [
         "data/canonical-publication-projection.json",
         "data/canonical-public-census-adjudications.json",
-        "data/candidates/registry-revision-9-canonical-projection-2026-07-31.md"
+        "data/candidates/registry-revision-10-canonical-projection-2026-07-31.md"
       ]
     }
   ]
