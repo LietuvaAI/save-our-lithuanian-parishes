@@ -1,51 +1,63 @@
 {
   "generatedFrom": {
-    "registryRevision": 8,
+    "registryRevision": 10,
     "registryDate": "2026-07-31",
+    "canonicalPublicationRevision": "canonical-public-census-2026-07-31",
+    "canonicalPublicationHash": "sha256:6480545ad402bb1a00c7e27749dfb9716489d202658ff4d61438aba247c0d995",
     "networkChecked": "2026-07-29"
   },
   "publicUS": {
-    "records": 159,
+    "records": 154,
     "independentlySupported": 133,
-    "canonicalCaseFiled": 82,
-    "multiSourceCorroborated": 51,
-    "singleSourceAttested": 26,
-    "romanCatholicParishes": 134,
+    "singleSourceAttested": 21,
+    "profilesPendingDeepCase": 45,
+    "byRecordType": {
+      "congregation": 6,
+      "misija": 4,
+      "parish": 144
+    },
+    "byInstitutionClass": {
+      "independent_catholic": 4,
+      "national_catholic_pncc": 6,
+      "non_catholic_christian": 8,
+      "roman_catholic": 136
+    },
+    "romanCatholicParishes": 132,
     "romanCatholicMissions": 4,
-    "romanCatholicInstitutions": 138,
-    "nationalIndependentCatholicCommunities": 13,
-    "nationalIndependentCatholicParishes": 12,
+    "romanCatholicInstitutions": 136,
+    "nationalIndependentCatholicCommunities": 10,
+    "nationalIndependentCatholicParishes": 9,
     "nationalIndependentCatholicCongregations": 1,
     "protestantCommunities": 8,
-    "protestantParishes": 4,
-    "protestantCongregations": 4,
+    "protestantParishes": 3,
+    "protestantCongregations": 5,
     "status": {
       "active_parish": 10,
-      "closed": 101,
+      "closed": 99,
       "mass_continues": 5,
       "transferred": 23,
       "unresolved": 4,
-      "unverified": 16
+      "unverified": 13
     }
   },
   "history": {
-    "parishes": 134,
+    "parishes": 132,
     "status": {
       "active_parish": 7,
-      "closed": 89,
+      "closed": 88,
       "mass_continues": 5,
       "transferred": 21,
       "unresolved": 4,
-      "unverified": 8
+      "unverified": 7
     },
-    "closed": 89,
-    "closedWithDatedYear": 80,
-    "closedSince1990": 57,
+    "closed": 88,
+    "closedWithDatedYear": 79,
+    "closedSince1990": 56,
     "closedSince2020": 5,
     "topClosureDioceses": [
       {
         "diocese": "Scranton",
-        "closed": 13
+        "closed": 12
       },
       {
         "diocese": "Chicago",
@@ -61,10 +73,8 @@
     "hostedMasses": 5,
     "states": 9
   },
-  "canonicalCore": {
-    "sourceRows": 83,
-    "identities": 82,
-    "canadianComparators": 3
+  "comparators": {
+    "canadianParishes": 3
   },
   "coalRegion": {
     "parishes": 15,

@@ -1,15 +1,15 @@
 // Build the public figure contract used by every aggregate site surface.
 //
-// The registry contains several legitimate populations: the research registry,
-// public U.S. institutions, Roman Catholic parishes, the canonical C83 corpus,
-// and the current Sielovada network. Keeping their arithmetic here makes those
-// boundaries explicit and gives the build one place to detect scope drift.
+// CultureNet's publication projection defines the public U.S. institution
+// population. The site registry and generated map layers may enrich those
+// identities, but they may not change membership or totals.
 import { readFileSync, writeFileSync } from "node:fs";
 
 const read = (path) =>
   JSON.parse(readFileSync(new URL(`../data/${path}`, import.meta.url), "utf8"));
 
 const registry = read("registry-unified.json");
+const projection = read("canonical-publication-projection.json");
 const revisions = read("registry-revisions.json");
 const context = read("context-points.json");
 const canonicalRows = read("parishes.json");
@@ -37,35 +37,37 @@ const expectSum = (label, total, parts) =>
   expect(label, parts.reduce((sum, value) => sum + value, 0), total);
 
 const records = registry.parishes;
-const usPublic = records.filter((record) => record.public_census?.included);
-const canonicalCaseFiled = usPublic.filter(
-  (record) => record.public_census.identity_support === "canonical_case_file",
-);
-const multiSourceCorroborated = usPublic.filter(
-  (record) => record.public_census.identity_support === "multi_source_corroborated",
+const registryBySlug = new Map(records.map((record) => [record.slug, record]));
+const usPublic = projection.public_institutions.map((institution) => {
+  const record = registryBySlug.get(institution.registry_slug);
+  if (!record) {
+    throw new Error(`${institution.registry_slug}: missing site display record`);
+  }
+  return { ...institution, display: record };
+});
+const independentlySupported = usPublic.filter(
+  (record) => record.identity_support !== "single_source_attested",
 );
 const singleSourceAttested = usPublic.filter(
-  (record) => record.public_census.identity_support === "single_source_attested",
+  (record) => record.identity_support === "single_source_attested",
 );
-const independentlySupported =
-  canonicalCaseFiled.length + multiSourceCorroborated.length;
 const usRomanCatholicParishes = usPublic.filter(
   (record) =>
     record.record_type === "parish" &&
-    record.congregation_class === "roman_catholic",
+    record.institution_class === "roman_catholic",
 );
 const usRomanCatholicMissions = usPublic.filter(
   (record) =>
     record.record_type === "misija" &&
-    record.congregation_class === "roman_catholic",
+    record.institution_class === "roman_catholic",
 );
 const usNationalIndependent = usPublic.filter(
   (record) =>
-    record.congregation_class === "national_catholic_pncc" ||
-    record.congregation_class === "independent_catholic",
+    record.institution_class === "national_catholic_pncc" ||
+    record.institution_class === "independent_catholic",
 );
 const usProtestant = usPublic.filter(
-  (record) => record.congregation_class === "non_catholic_christian",
+  (record) => record.institution_class === "non_catholic_christian",
 );
 
 const contextPoints = context.points;
@@ -122,9 +124,14 @@ const registryMapUS = registryMap.points.filter(
 
 expect("registry counts.records", registry.counts.records, records.length);
 expect(
-  "public institution ledger revision",
-  publicInstitutionLedger.registryRevision,
-  registry.registryRevision.version,
+  "canonical publication count",
+  projection.public_institutions.length,
+  projection.counts.public_us_institutions,
+);
+expect(
+  "public institution ledger authority",
+  publicInstitutionLedger.authority.contentHash,
+  projection.content_hash,
 );
 expect(
   "public institution ledger count",
@@ -187,14 +194,17 @@ const figures = {
   generatedFrom: {
     registryRevision: registry.registryRevision.version,
     registryDate: registry.registryRevision.date,
+    canonicalPublicationRevision: projection.revision_id,
+    canonicalPublicationHash: projection.content_hash,
     networkChecked: network.source.checked,
   },
   publicUS: {
     records: usPublic.length,
-    independentlySupported,
-    canonicalCaseFiled: canonicalCaseFiled.length,
-    multiSourceCorroborated: multiSourceCorroborated.length,
+    independentlySupported: independentlySupported.length,
     singleSourceAttested: singleSourceAttested.length,
+    profilesPendingDeepCase: projection.counts.profiles_pending_deep_case,
+    byRecordType: projection.counts.by_record_type,
+    byInstitutionClass: projection.counts.by_institution_class,
     romanCatholicParishes: usRomanCatholicParishes.length,
     romanCatholicMissions: usRomanCatholicMissions.length,
     romanCatholicInstitutions:
@@ -236,10 +246,8 @@ const figures = {
     hostedMasses: network.counts.massContinues,
     states: currentWorshipStates,
   },
-  canonicalCore: {
-    sourceRows: canonicalUSRows.length,
-    identities: canonicalUSIdentities.length,
-    canadianComparators: canadianComparators.length,
+  comparators: {
+    canadianParishes: canadianComparators.length,
   },
   coalRegion: {
     parishes: coalRegion.length,

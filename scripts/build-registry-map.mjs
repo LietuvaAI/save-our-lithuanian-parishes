@@ -1,6 +1,6 @@
 // Builds data/registry-map.json: pre-projected points for the RESEARCH-RECORD
 // layer — every parish/congregation in the unified registry (corpusScope
-// parish-registry-unified) that is NOT in the case-filed core (map.json).
+// parish-registry-unified) that is not already represented in map.json.
 // non_catholic_christian entries are included here regardless of in_locked_scope
 // because they are never in parishes.json/map.json. Same geoAlbersUsa 975x610
 // frame as scripts/build-map.mjs.
@@ -30,7 +30,7 @@ const geoCache = {
 };
 
 // Classifier overlay — carries researched lithuanian_identity for registry
-// entries beyond the case-filed core, so the map can distinguish a standing
+// supplemental registry entries, so the map can distinguish a standing
 // Lithuanian parish from a standing church whose ethnic mission moved on.
 const SIT_PATH = new URL("../data/parish-situation.json", import.meta.url);
 const situationByRegistrySlug = new Map(
@@ -92,6 +92,8 @@ function closedYearOf(record) {
 function isPublicRecord(rec) {
   return (
     ["parish", "misija", "congregation"].includes(rec.record_type) &&
+    (rec.public_census?.included === true ||
+      rec.public_census?.scope === "canadian_comparator") &&
     !(rec.sources ?? []).some((s) => /no parish/i.test(s.ethnic_status ?? ""))
   );
 }
@@ -124,7 +126,7 @@ for (const r of toPlot) {
     skippedNoGeo++;
     continue;
   }
-  const isCong = r.congregation_class === "non_catholic_christian";
+  const isCong = r.record_type === "congregation";
   const closedYear = closedYearOf(r);
   points.push({
     kind: isCong ? "congregation" : "parish",
@@ -210,7 +212,7 @@ writeFileSync(
   OUT_PATH,
   JSON.stringify({
     corpusScope: "parish-registry-unified",
-    note: "Public institutional layer beyond the case-filed core: parishes, missions, and congregations in the U.S. and Canada. Historical phases, unresolved leads, and context records remain in the research registry but are not mapped.",
+    note: "Public institutional map layer: parishes, missions, and congregations in the U.S. and Canada. Historical phases, unresolved leads, and context records remain in the research registry but are not mapped.",
     counts: {
       plotted: out.length,
       parishes: out.filter((p) => p.kind === "parish").length,

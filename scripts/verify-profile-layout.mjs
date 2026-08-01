@@ -18,9 +18,15 @@ const ledgerSource = fs.readFileSync(
   path.join(ROOT, "components", "ProfileSourceLedger.tsx"),
   "utf8",
 );
-const registry = JSON.parse(
-  fs.readFileSync(path.join(ROOT, "data", "registry-unified.json"), "utf8"),
-).parishes;
+const publication = JSON.parse(
+  fs.readFileSync(
+    path.join(ROOT, "data", "canonical-publication-projection.json"),
+    "utf8",
+  ),
+);
+const comparatorCount = JSON.parse(
+  fs.readFileSync(path.join(ROOT, "data", "parishes.json"), "utf8"),
+).filter((parish) => parish.comparator && !parish.mergedInto).length;
 
 const errors = [];
 const orderedMarkers = [
@@ -122,5 +128,5 @@ const caseRecordCount = fs
   .filter((file) => file.endsWith(".json")).length;
 
 console.log(
-  `OK: canonical profile layout — ${orderedMarkers.length} ordered sections, ${registry.length} registry profiles, ${caseRecordCount} case records.`,
+  `OK: canonical profile layout — ${orderedMarkers.length} ordered sections across ${publication.counts.public_us_institutions} U.S. institution profiles and ${comparatorCount} Canadian comparators; ${caseRecordCount} public case-record overlays.`,
 );

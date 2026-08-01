@@ -3,7 +3,7 @@ import { join } from "node:path";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import alertsData from "@/data/alerts.json";
 import contextPoints from "@/data/context-points.json";
 import { EndStatePill } from "@/components/EndStatePill";
@@ -530,6 +530,7 @@ export default async function ParishPage({
   const { slug } = await params;
   const profile = getCanonicalParishProfile(slug);
   if (!profile) notFound();
+  if (slug !== profile.slug) redirect(profile.href);
 
   const entry = profile.registry;
   const core = profile.core;

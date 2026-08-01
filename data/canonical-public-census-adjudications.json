@@ -1,0 +1,57 @@
+{
+  "schema": "culturenet-parish-public-census-adjudications.v1",
+  "as_of": "2026-07-31",
+  "base_snapshot": {
+    "source": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r9/data/public-institution-ledger.json",
+    "public_us_institutions": 159
+  },
+  "current_public_us_institutions": 154,
+  "decisions": [
+    {
+      "registry_slug": "our-lady-of-vilna-eynon-pa",
+      "decision": "exclude_duplicate_alias",
+      "scope": "duplicate_alias",
+      "canonical_public_registry_slug": "gateofdawn-archbald-pa",
+      "canonical_entity_id": "cn:institution:our-lady-vilna-eynon-pa",
+      "confidence": "high",
+      "reason": "The Eynon Our Lady of Vilna row and the Archbald/Eynon Gate of Dawn row describe the same Lithuanian Roman Catholic parish, rebuilt in 1915 and closed in 2001-2002; retaining both would count one institution twice.",
+      "adjudication": "repo://culturenet-brain/docs/research/parish-canon/adjudications/2026-07-31-eynon-archbald-duplicate.md"
+    },
+    {
+      "registry_slug": "holycross-brooklyn-ny",
+      "decision": "exclude_non_institution_record",
+      "scope": "source_conflation",
+      "canonical_entity_id": "cn:historical_phase:holy-cross-lithuanian-attribution-brooklyn-ny",
+      "confidence": "high",
+      "reason": "The only Lithuanian attribution conflicts with the Diocese of Brooklyn's complete historical list, which identifies Holy Cross Flatbush as an 1852 territorial parish and Holy Cross Maspeth as Polish while explicitly naming the diocese's Lithuanian parishes.",
+      "adjudication": "repo://culturenet-brain/docs/research/parish-canon/adjudications/2026-07-31-count-risk-noninstitution-rows.md"
+    },
+    {
+      "registry_slug": "joseph-cambridge-ma",
+      "decision": "exclude_non_institution_record",
+      "scope": "historical_phase",
+      "canonical_entity_id": "cn:historical_phase:st-joseph-independent-attempt-cambridge-ma",
+      "confidence": "medium",
+      "reason": "The evidence establishes only a brief May 1917 independent organizing episode and does not establish a durable congregation, parish property, or worship site distinct from Cambridge Immaculate Conception.",
+      "adjudication": "repo://culturenet-brain/docs/research/parish-canon/adjudications/2026-07-31-count-risk-noninstitution-rows.md"
+    },
+    {
+      "registry_slug": "springfield-independent",
+      "decision": "exclude_non_institution_record",
+      "scope": "historical_phase",
+      "canonical_entity_id": "cn:historical_phase:lithuanian-independent-attempt-springfield-il",
+      "confidence": "medium",
+      "reason": "The approximately 1948 reference is a single-source attempt with no established name, clergy, congregation, property, or worship site; later scholarship explicitly says no independent corroboration was found.",
+      "adjudication": "repo://culturenet-brain/docs/research/parish-canon/adjudications/2026-07-31-count-risk-noninstitution-rows.md"
+    },
+    {
+      "registry_slug": "parish-melrose-park-il",
+      "decision": "exclude_non_institution_record",
+      "scope": "hosted_worship_context",
+      "canonical_entity_id": "cn:organization:lithuanian-catholic-community-melrose-park-il",
+      "confidence": "high",
+      "reason": "The contemporary record documents Lithuanian societies and hosted Catholic ministry in a territorial parish, explicitly stating that Melrose Park had no Lithuanian parish; later unnamed parish wording is insufficient to create a separate institution.",
+      "adjudication": "repo://culturenet-brain/docs/research/parish-canon/adjudications/2026-07-31-count-risk-noninstitution-rows.md"
+    }
+  ]
+}

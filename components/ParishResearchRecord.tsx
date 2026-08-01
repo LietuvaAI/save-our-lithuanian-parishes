@@ -72,6 +72,12 @@ function sourceShortName(axis: string) {
   return AXIS_LABEL[axis]?.split(",")[0] ?? axis;
 }
 
+function publicConflictSource(source: string) {
+  return /^frozen C83 source row \d+$/i.test(source)
+    ? "earlier registry record"
+    : source;
+}
+
 function YearList({
   label,
   items,
@@ -179,7 +185,7 @@ export function ParishRecordReadings({
                 {(conflict.variants ?? [])
                   .map(
                     (variant) =>
-                      `${variant.value} (${variant.source}${
+                      `${variant.value} (${publicConflictSource(variant.source)}${
                         variant.cite ? `, ${variant.cite}` : ""
                       })`,
                   )

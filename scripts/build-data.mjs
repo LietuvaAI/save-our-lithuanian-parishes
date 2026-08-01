@@ -199,6 +199,9 @@ for (let index = 0; index < parishes.length; index++) {
   p.status = statusMap[lifecycle.canonical_status] ?? p.status;
   if (lifecycle.canonical_status === "standing") p.endingMode = "standing";
   if (lifecycle.canonical_status === "unresolved") p.endingMode = "undecided";
+  if (lifecycle.selected_founded_year != null) {
+    p.yearFounded = lifecycle.selected_founded_year;
+  }
   p.yearClosed = lifecycle.selected_closed_year ?? null;
   if (lifecycle.identity) p.lithuanianIdentity = lifecycle.identity;
 }

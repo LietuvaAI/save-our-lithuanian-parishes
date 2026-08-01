@@ -30,14 +30,15 @@
     "publicCampaigns": 4
   },
   "identityRevision": {
-    "version": 2,
-    "date": "2026-07-28",
+    "version": 3,
+    "date": "2026-07-31",
     "approvedBy": "Vilija",
     "changelog": [
       "Established the independent canonical identity register for all 82 unique U.S. C83 entities and anchored every public campaign to that register.",
-      "Release-audited all 82 identities and corrected four joins: Ansonia St. Anthony, Newark Holy Trinity, Jerusalem Lutheran in Collinsville, and Kansas City St. Casimir on the Kansas side. Retired registry slugs remain aliases; the frozen 83-row source snapshot is unchanged."
+      "Release-audited all 82 identities and corrected four joins: Ansonia St. Anthony, Newark Holy Trinity, Jerusalem Lutheran in Collinsville, and Kansas City St. Casimir on the Kansas side. Retired registry slugs remain aliases; the frozen 83-row source snapshot is unchanged.",
+      "Aligned Westville Holy Cross and Collinsville Jerusalem with the canonical CultureNet publication projection as congregations rather than parishes; entity identity, tradition, route, place, and source lineage are unchanged."
     ],
-    "contentHash": "33f4b16caeba830c276959ba446ece28a739d2a0de989642670100dc72d0a5d9"
+    "contentHash": "25420a07c60118b5a1a877c5b5e4c92fc815a7d819f43e475977a5c6739fba52"
   },
   "campaigns": [
     {
@@ -1189,7 +1190,7 @@
       "state": "IL",
       "country": "US",
       "institutionType": "parapija",
-      "recordType": "parish",
+      "recordType": "congregation",
       "congregationClass": "independent_catholic",
       "c83Rows": [
         81
@@ -1217,7 +1218,7 @@
       "state": "IL",
       "country": "US",
       "institutionType": "parapija",
-      "recordType": "parish",
+      "recordType": "congregation",
       "congregationClass": "non_catholic_christian",
       "c83Rows": [
         83

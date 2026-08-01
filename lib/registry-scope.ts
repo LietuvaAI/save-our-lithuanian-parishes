@@ -21,6 +21,10 @@ import {
 } from "@/lib/parishes";
 import { resolveEndState, type EndState } from "@/lib/end-state";
 import { canonicalProfileHrefForRegistrySlug } from "@/lib/parish-profile";
+import {
+  getPublicationInstitution,
+  isPublishedInstitution,
+} from "@/lib/publication-projection";
 
 export type CongregationClass =
   | "roman_catholic"
@@ -63,7 +67,7 @@ export interface RegParish {
     scope: string;
     reason: string;
     identity_support:
-      | "canonical_case_file"
+      | "two_pass_case_file"
       | "multi_source_corroborated"
       | "single_source_attested"
       | null;
@@ -127,15 +131,19 @@ export function isUS(p: RegParish): boolean {
 
 /** Institutional records published on The Record and the registry map. */
 export function isPublicRecord(p: RegParish): boolean {
-  return ["parish", "misija", "congregation"].includes(p.record_type ?? "");
+  return isPublishedInstitution(p.slug);
 }
 
 /** The registry-wide U.S. Roman Catholic parish population. */
 export function usRomanCatholic(): RegParish[] {
   return usRegistryParishes().filter(
-    (p) =>
-      p.record_type === "parish" &&
-      p.congregation_class === "roman_catholic",
+    (p) => {
+      const publication = getPublicationInstitution(p.slug);
+      return (
+        publication?.record_type === "parish" &&
+        publication.institution_class === "roman_catholic"
+      );
+    },
   );
 }
 
@@ -145,8 +153,7 @@ export function usRegistryParishes(): RegParish[] {
     (p) =>
       isUS(p) &&
       !isSettlement(p) &&
-      isPublicRecord(p) &&
-      p.public_census?.included === true,
+      isPublicRecord(p),
   );
 }
 
@@ -166,6 +173,10 @@ for (const sw of ((alertsData as Record<string, unknown>)
 
 /** Build the shared row for one registry entry. */
 export function toScopedParish(p: RegParish): ScopedParish {
+  const publication = getPublicationInstitution(p.slug);
+  if (!publication && p.country === "US") {
+    throw new Error(`${p.slug}: scoped record is absent from the canonical publication projection.`);
+  }
   const lib = p.c83_row != null ? getParishByC83Row(p.c83_row) : undefined;
   const libOk = !!(lib && lib.city === p.city);
 
@@ -221,7 +232,7 @@ export function toScopedParish(p: RegParish): ScopedParish {
     city: p.city.replace(/\s*[(;].*$/, ""),
     state: p.state,
     country: p.country,
-    recordType: p.record_type ?? "parish",
+    recordType: publication?.record_type ?? p.record_type ?? "parish",
     comparator: p.comparator === true,
     diocese: normalizeDiocese(p.diocese),
     founded,
@@ -237,12 +248,13 @@ export function toScopedParish(p: RegParish): ScopedParish {
     identity,
     buildingFate,
     ownership: libOk ? (lib!.ownership as Ownership) : null,
-    congregationClass: p.congregation_class ?? null,
+    congregationClass: publication?.institution_class ?? p.congregation_class ?? null,
     recordDepth: p.record_depth ?? "single-source",
     alertKind,
     hasAlert: alertKind != null,
     onWatch: sustainBySlug.has(slug),
-    profileHref: canonicalProfileHrefForRegistrySlug(p.slug),
+    profileHref:
+      canonicalProfileHrefForRegistrySlug(p.slug) ?? publication?.public_profile ?? null,
   };
 }
 

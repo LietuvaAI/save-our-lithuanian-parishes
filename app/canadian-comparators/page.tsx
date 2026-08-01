@@ -12,7 +12,7 @@ import { resolveParishEndState } from "@/lib/end-state";
 
 export const metadata: Metadata = {
   title: "Canadian Comparators",
-  description: `${siteFigures.canonicalCore.canadianComparators} Canadian Lithuanian parish records included to compare survival, ownership, and community decision-making with the U.S. record.`,
+  description: `${siteFigures.comparators.canadianParishes} Canadian Lithuanian parish records included to compare survival, ownership, and community decision-making with the U.S. record.`,
 };
 
 const canadianParishes = [...comparatorParishes].sort(
@@ -25,7 +25,7 @@ const activeParishes = canadianParishes.filter(
   (parish) => parish.lithuanianIdentity === "active_parish",
 );
 
-if (canadianParishes.length !== siteFigures.canonicalCore.canadianComparators) {
+if (canadianParishes.length !== siteFigures.comparators.canadianParishes) {
   throw new Error("Canadian comparator count does not match site-figures.json");
 }
 

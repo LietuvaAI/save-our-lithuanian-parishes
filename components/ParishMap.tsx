@@ -231,7 +231,7 @@ function buildPoints(): Point[] {
       alertText: alert?.whatChanged ?? null,
       founded: p.yearFounded,
       closed: p.yearClosed,
-      profile: `/parishes/${p.slug}`,
+      profile: contextHrefBySlug.get(p.slug) ?? `/parishes/${p.slug}`,
       deep: true,
       detail: `${OWNERSHIP_LABEL[p.ownership]} · ${ENDING_MODE_LABEL[p.endingMode]}`,
       kindLabel:
