@@ -58,13 +58,12 @@ export default function AboutTheDataPage() {
           and secondary, provisional, conflicting, or unresolved readings.
         </p>
         <p className="mt-2 leading-relaxed">
-          The initial canonical corpus of{" "}
-          <strong>
-            {siteFigures.canonicalCore.identities} parish identities
-          </strong>{" "}
-          now has complete case files.
-          The remaining registry is being reviewed in bounded tranches under
-          the same standard.
+          The published census currently contains{" "}
+          <strong>{siteFigures.publicUS.records} distinct U.S. institutions</strong>.
+          Of these, {siteFigures.publicUS.independentlySupported} have a
+          completed two-pass case file or support from multiple source
+          families; the remaining {siteFigures.publicUS.singleSourceAttested}
+          are explicitly marked for corroboration.
         </p>
       </section>
 
@@ -194,11 +193,6 @@ export default function AboutTheDataPage() {
               </p>
               <div className="mt-2 sm:mt-0">
                 <p className="leading-relaxed">{revision.summary}</p>
-                {revision.publicUSRecords != null && (
-                  <p className="mt-1 text-xs text-muted">
-                    {revision.publicUSRecords} public U.S. institutions
-                  </p>
-                )}
               </div>
             </div>
           ))}

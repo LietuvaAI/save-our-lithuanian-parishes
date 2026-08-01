@@ -41,6 +41,7 @@ const lib = read("parishes.json");
 const ctx = new Map(read("context-points.json").points.map((p) => [p.slug, p.group]));
 const situations = read("parish-situation.json").parishes;
 const registry = read("registry-unified.json").parishes;
+const publication = read("canonical-publication-projection.json");
 const siteFigures = read("site-figures.json");
 
 const errors = [];
@@ -49,8 +50,19 @@ const errors = [];
 // figures. Keep them out of the public figure contract and page components so
 // profile, lead, phase, context, and international counts cannot be mistaken
 // for U.S. institutions again.
-if ("researchRegistry" in siteFigures) {
+if ("researchRegistry" in siteFigures || "canonicalCore" in siteFigures) {
   errors.push("site-figures.json exposes the internal research-registry total");
+}
+if (siteFigures.publicUS?.records !== publication.counts.public_us_institutions) {
+  errors.push(
+    `site figures publish ${siteFigures.publicUS?.records} U.S. institutions; canonical projection requires ${publication.counts.public_us_institutions}`,
+  );
+}
+if (
+  siteFigures.generatedFrom?.canonicalPublicationHash !==
+  publication.content_hash
+) {
+  errors.push("site figures are not tied to the canonical publication hash");
 }
 
 function publicSourceFiles(directory) {
@@ -65,9 +77,13 @@ for (const root of ["app", "components"]) {
   const directory = fileURLToPath(new URL(`../${root}/`, import.meta.url));
   for (const path of publicSourceFiles(directory)) {
     const source = readFileSync(path, "utf8");
-    if (/\bresearchRegistry\b|\.registryRecords\b/.test(source)) {
+    if (
+      /\bresearchRegistry\b|\.registryRecords\b|\.publicUSRecords\b/.test(
+        source,
+      )
+    ) {
       errors.push(
-        `${path}: public source binds an internal research-registry total`,
+        `${path}: public source binds an internal or superseded registry total`,
       );
     }
   }
@@ -122,7 +138,13 @@ for (const [slug, e] of Object.entries(situations)) {
 // One dot per record: canonical map points + US registry-map points must
 // equal the US registry record count (The Record's headline number).
 {
-  const usRecords = registry.filter(isUSRecord).length;
+  const usRecords = publication.counts.public_us_institutions;
+  const registryPublic = registry.filter(isUSRecord).length;
+  if (registryPublic !== usRecords) {
+    errors.push(
+      `display registry publishes ${registryPublic} U.S. rows; canonical projection requires ${usRecords}`,
+    );
+  }
   const mapPts = read("map.json").points.length;
   const regPts = read("registry-map.json").points.filter((p) => p.country === "US").length;
   if (mapPts + regPts !== usRecords)

@@ -1,16 +1,22 @@
 // Build the inspectable ledger behind the public U.S. institution count.
 //
-// This is a census of adjudicated registry identities, not a count of source
-// mentions. Every included row carries an explicit scope decision and at
-// least one source link with a locator.
+// CultureNet's publication projection is the identity and census authority.
+// The site registry contributes only its richer public source links and
+// display detail; it cannot add or remove institutions from this ledger.
 import { readFileSync, writeFileSync } from "node:fs";
 
 const read = (path) =>
   JSON.parse(readFileSync(new URL(`../data/${path}`, import.meta.url), "utf8"));
 
+const projection = read("canonical-publication-projection.json");
 const registry = read("registry-unified.json");
 const draugasLinks = read("draugas-links.json").results;
-const publicTypes = new Set(["parish", "misija", "congregation"]);
+const registryBySlug = new Map(
+  registry.parishes.map((record) => [record.slug, record]),
+);
+const sourceArtifactById = new Map(
+  projection.source_artifacts.map((source) => [source.id, source]),
+);
 const bookSources = {
   wolkovich: {
     label: "Lithuanian Religious Life in America, Vol. 3",
@@ -26,24 +32,6 @@ const bookSources = {
   },
 };
 
-const expectedScope = (record) => {
-  if (record.record_type === "phase") return "historical_phase";
-  if (record.record_type === "lead") return "research_lead";
-  if (record.record_type === "context") return "context_only";
-  if (record.country === "CA" && publicTypes.has(record.record_type)) {
-    return "canadian_comparator";
-  }
-  if (record.country !== "US" && publicTypes.has(record.record_type)) {
-    return "international_institution";
-  }
-  if (record.country === "US" && publicTypes.has(record.record_type)) {
-    return "public_us_institution";
-  }
-  throw new Error(
-    `${record.slug}: cannot derive census scope for ${record.record_type}/${record.country}`,
-  );
-};
-
 const dateFromSource = (source) => {
   const text = [source.cites, source.first_mention, source.last_mention]
     .filter(Boolean)
@@ -52,8 +40,10 @@ const dateFromSource = (source) => {
 };
 const draugasUrl = (date) => {
   if (!date) return "https://www.draugas.org/archyvas-pdf/";
-  const verified = draugasLinks[date];
-  return verified?.url ?? `https://www.draugas.org/archyvas-pdf-${date.slice(0, 4)}/`;
+  return (
+    draugasLinks[date]?.url ??
+    `https://www.draugas.org/archyvas-pdf-${date.slice(0, 4)}/`
+  );
 };
 const sourceLabel = (source) =>
   source.work ??
@@ -76,130 +66,61 @@ const sourceUrl = (source) => {
   }
   return null;
 };
-const evidenceFor = (record) =>
+const registryEvidence = (record) =>
   (record.sources ?? []).map((source) => ({
     sourceFamily: source.axis,
     label: sourceLabel(source),
     locator: sourceLocator(source),
     url: sourceUrl(source),
   }));
-const qualifyingFamilies = (record) =>
-  new Set(
-    evidenceFor(record)
-      .filter((source) => source.url && source.locator)
-      .map((source) =>
-        source.sourceFamily?.startsWith("draugas")
-          ? "draugas"
-          : source.sourceFamily,
-      ),
-  );
-const expectedIdentitySupport = (record) => {
-  if (record.in_locked_scope) return "canonical_case_file";
-  const familyCount = qualifyingFamilies(record).size;
-  if (familyCount >= 2) return "multi_source_corroborated";
-  if (familyCount === 1) return "single_source_attested";
-  return "unsupported";
-};
+const canonicalEvidence = (institution) =>
+  institution.source_artifact_ids
+    .map((id) => sourceArtifactById.get(id))
+    .filter(Boolean)
+    .map((source) => ({
+      sourceArtifactId: source.id,
+      label: source.title,
+      locator:
+        source.locator?.exact_label ??
+        source.locator?.section ??
+        source.locator?.page ??
+        null,
+      url: source.rights?.public_url ?? null,
+    }));
 
 const errors = [];
-const identifierOwner = new Map();
-for (const record of registry.parishes) {
-  const scope = expectedScope(record);
-  if (record.public_census?.scope !== scope) {
-    errors.push(
-      `${record.slug}: public_census.scope=${record.public_census?.scope}, expected ${scope}`,
-    );
+const entries = projection.public_institutions.map((institution) => {
+  const record = registryBySlug.get(institution.registry_slug);
+  if (!record) {
+    errors.push(`${institution.registry_slug}: missing site display record`);
+    return null;
   }
-  if (record.public_census?.included !== (scope === "public_us_institution")) {
-    errors.push(`${record.slug}: public_census.included disagrees with scope`);
+  const evidence = registryEvidence(record);
+  const canonicalSources = canonicalEvidence(institution);
+  if (
+    ![...evidence, ...canonicalSources].some(
+      (source) => source.url && source.locator,
+    )
+  ) {
+    errors.push(`${institution.registry_slug}: no public linked source locator`);
   }
-  for (const identifier of [record.slug, ...(record.aliases ?? [])]) {
-    const owner = identifierOwner.get(identifier);
-    if (owner && owner !== record.slug) {
-      errors.push(`${identifier}: identifier belongs to both ${owner} and ${record.slug}`);
-    }
-    identifierOwner.set(identifier, record.slug);
-  }
-}
-
-const publicRecords = registry.parishes.filter(
-  (record) => record.public_census?.included,
-);
-const canonicalCaseFiled = publicRecords.filter(
-  (record) => record.public_census.identity_support === "canonical_case_file",
-);
-const multiSourceCorroborated = publicRecords.filter(
-  (record) => record.public_census.identity_support === "multi_source_corroborated",
-);
-const singleSourceAttested = publicRecords.filter(
-  (record) => record.public_census.identity_support === "single_source_attested",
-);
-const independentlySupported = [
-  ...canonicalCaseFiled,
-  ...multiSourceCorroborated,
-];
-
-for (const record of publicRecords) {
-  const evidence = evidenceFor(record);
-  if (!evidence.some((source) => source.url && source.locator)) {
-    errors.push(`${record.slug}: no linked evidence with a source locator`);
-  }
-  if (/\battempt\b/i.test(`${record.names?.lt ?? ""} ${record.names?.en ?? ""}`)) {
-    errors.push(`${record.slug}: an organizing attempt remains in the public census`);
-  }
-  const expectedSupport = expectedIdentitySupport(record);
-  if (record.public_census.identity_support !== expectedSupport) {
-    errors.push(
-      `${record.slug}: identity_support=${record.public_census.identity_support}, expected ${expectedSupport}`,
-    );
-  }
-}
-
-const exclusions = Object.fromEntries(
-  [...registry.parishes
-    .filter((record) => !record.public_census.included)
-    .reduce((counts, record) => {
-      const scope = record.public_census.scope;
-      counts.set(scope, (counts.get(scope) ?? 0) + 1);
-      return counts;
-    }, new Map())]
-    .sort(([a], [b]) => a.localeCompare(b)),
-);
-const classPartition = Object.fromEntries(
-  [...publicRecords.reduce((counts, record) => {
-    const key = record.congregation_class;
-    counts.set(key, (counts.get(key) ?? 0) + 1);
-    return counts;
-  }, new Map())].sort(([a], [b]) => a.localeCompare(b)),
-);
-const typePartition = Object.fromEntries(
-  [...publicRecords.reduce((counts, record) => {
-    counts.set(record.record_type, (counts.get(record.record_type) ?? 0) + 1);
-    return counts;
-  }, new Map())].sort(([a], [b]) => a.localeCompare(b)),
-);
-
-if (publicRecords.length + Object.values(exclusions).reduce((a, b) => a + b, 0) !== registry.parishes.length) {
-  errors.push("Public and excluded scope partitions do not reconcile to the registry");
-}
-if (errors.length) {
-  console.error(`PUBLIC INSTITUTION LEDGER VIOLATIONS (${errors.length}):`);
-  for (const error of errors) console.error(`  ${error}`);
-  process.exit(1);
-}
-
-const entries = publicRecords
-  .map((record) => ({
-    slug: record.slug,
-    profile: `/parishes/${record.slug}`,
-    name: record.names?.lt || record.names?.en || record.slug,
-    englishName: record.names?.en || null,
-    city: record.city,
-    state: record.state,
-    recordType: record.record_type,
-    institutionClass: record.congregation_class,
-    identitySupport: record.public_census.identity_support,
-    recordDepth: record.record_depth,
+  return {
+    slug: institution.registry_slug,
+    canonicalSlug: institution.canonical_slug,
+    canonicalEntityId: institution.culturenet_entity_id,
+    profile: institution.public_profile,
+    name: institution.name,
+    canonicalName: institution.canonical_name,
+    aliases: institution.aliases,
+    city: institution.city,
+    state: institution.state,
+    recordType: institution.record_type,
+    institutionClass: institution.institution_class,
+    identitySupport: institution.identity_support,
+    canonicalDetailStatus: institution.canonical_detail_status,
+    protectedCampaign: institution.protected_campaign,
+    assertionIds: institution.evidence_assertion_ids,
+    sourceArtifactIds: institution.source_artifact_ids,
     sourceFamilies: [
       ...new Set(
         (record.sources ?? []).map((source) =>
@@ -207,34 +128,59 @@ const entries = publicRecords
         ),
       ),
     ].sort(),
-    evidence: evidenceFor(record),
-  }))
-  .sort((a, b) =>
+    evidence,
+    canonicalSources,
+  };
+});
+
+const publishedEntries = entries.filter(Boolean);
+const independentlySupported = publishedEntries.filter(
+  (entry) => entry.identitySupport !== "single_source_attested",
+);
+const singleSourceAttested = publishedEntries.filter(
+  (entry) => entry.identitySupport === "single_source_attested",
+);
+
+if (publishedEntries.length !== projection.counts.public_us_institutions) {
+  errors.push(
+    `ledger contains ${publishedEntries.length} institutions; expected ${projection.counts.public_us_institutions}`,
+  );
+}
+if (errors.length) {
+  console.error(`PUBLIC INSTITUTION LEDGER VIOLATIONS (${errors.length}):`);
+  errors.forEach((error) => console.error(`  ${error}`));
+  process.exit(1);
+}
+
+publishedEntries.sort(
+  (a, b) =>
     a.state.localeCompare(b.state) ||
     a.city.localeCompare(b.city) ||
     a.name.localeCompare(b.name),
-  );
+);
 
 const ledger = {
-  schemaVersion: 1,
+  schemaVersion: 2,
+  authority: {
+    repository: "LietuvaAI/culturenet-brain",
+    path: "docs/research/parish-canon/publication-projection.json",
+    revisionId: projection.revision_id,
+    contentHash: projection.content_hash,
+  },
   registryRevision: registry.registryRevision.version,
   registryDate: registry.registryRevision.date,
-  claim:
-    `The public record documents ${publicRecords.length} adjudicated U.S. Lithuanian religious institutions: ${canonicalCaseFiled.length} canonical case-filed identities, ${multiSourceCorroborated.length} additional multi-source corroborated identities, and ${singleSourceAttested.length} attested in one published source pending corroboration.`,
+  claim: `The current documented record contains ${publishedEntries.length} distinct U.S. Lithuanian religious institutions.`,
   inclusionRule:
-    "Count one canonical entity when country is US, record type is parish, misija, or congregation, and identity adjudication places it in public_us_institution scope.",
+    "Count one canonical U.S. institution when CultureNet publishes it as a parish, mission, or congregation. Buildings, duplicate aliases, historical attempts, hosted worship, research leads, and comparators remain linked context and never increase this total.",
   counts: {
-    researchRecords: registry.parishes.length,
-    publicUSInstitutions: publicRecords.length,
+    publicUSInstitutions: publishedEntries.length,
     independentlySupported: independentlySupported.length,
-    canonicalCaseFiled: canonicalCaseFiled.length,
-    multiSourceCorroborated: multiSourceCorroborated.length,
     singleSourceAttested: singleSourceAttested.length,
-    excluded: exclusions,
-    byRecordType: typePartition,
-    byInstitutionClass: classPartition,
+    profilesPendingDeepCase: projection.counts.profiles_pending_deep_case,
+    byRecordType: projection.counts.by_record_type,
+    byInstitutionClass: projection.counts.by_institution_class,
   },
-  entries,
+  entries: publishedEntries,
 };
 
 writeFileSync(
@@ -242,55 +188,25 @@ writeFileSync(
   `${JSON.stringify(ledger, null, 2)}\n`,
 );
 
-const attestedRows = singleSourceAttested
-  .sort((a, b) => a.state.localeCompare(b.state) || a.city.localeCompare(b.city))
-  .map(
-    (record) =>
-      `| ${record.names?.lt || record.names?.en || record.slug} | ${record.city}, ${record.state} | ${record.record_type} | ${record.sources[0]?.axis ?? "unknown"} ${record.sources[0]?.pages ?? ""} |`,
-  )
-  .join("\n");
 const audit = `# Public institution count audit
 
-**Audit date:** 2026-07-31
+**Audit date:** ${registry.registryRevision.date}
 **Registry revision:** ${registry.registryRevision.version}
+**Canonical authority:** CultureNet ${projection.revision_id}
 
 ## Press-safe claim
 
-The public record documents **${publicRecords.length} adjudicated U.S. Lithuanian religious institutions**: **${canonicalCaseFiled.length} canonical case-filed identities**, **${multiSourceCorroborated.length} additional identities corroborated by at least two qualifying source families**, and **${singleSourceAttested.length} attested in one published, located source** and explicitly awaiting corroboration.
+The current documented record contains **${publishedEntries.length} distinct U.S. Lithuanian religious institutions**: ${projection.counts.by_record_type.parish} parishes, ${projection.counts.by_record_type.misija} missions, and ${projection.counts.by_record_type.congregation} congregations.
 
-Do not state that exactly ${publicRecords.length} institutions are the permanently final historical universe. State that the current documented record contains ${publicRecords.length}, name the revision/date, and preserve the **${independentlySupported.length} independently supported + ${singleSourceAttested.length} single-source attested** evidence distinction.
+Of these, ${independentlySupported.length} are supported by a completed two-pass case file or multiple source families. ${singleSourceAttested.length} are attested in one located published source and remain explicitly labeled for corroboration. This evidence-depth distinction does not change the institution count.
 
-## Reconciliation
+## Scope
 
-- Research records: **${registry.parishes.length}**
-- Public U.S. institutions: **${publicRecords.length}**
-- Historical phases excluded: **${exclusions.historical_phase ?? 0}**
-- Research leads excluded: **${exclusions.research_lead ?? 0}**
-- Context-only records excluded: **${exclusions.context_only ?? 0}**
-- Canadian comparator institutions excluded: **${exclusions.canadian_comparator ?? 0}**
-- Other international institutions excluded: **${exclusions.international_institution ?? 0}**
-
-The included and excluded partitions sum exactly to ${registry.parishes.length}.
-
-## Corrections in this audit
-
-- Baltimore's late-1880s independent-parish attempt is a historical phase, not an institution.
-- Chicago's St. John Missionary Fathers (Jonistai) record is organization/seminary context, not a congregation.
-- Chester's carried sources contain zero Draugas mentions and no linked web evidence, so it is a research lead rather than an institution.
-- Brooklyn Holy Cross remains an attested institution but is independent Catholic, not Roman Catholic, on the sole source currently attached.
-- Avellaneda and Rosario are explicitly coded as Argentine institutions rather than excluded through city-name pattern matching.
-
-## Single-source attested institutions
-
-These ${singleSourceAttested.length} rows remain visible and source-linked, but they do not enter the independently supported subtotal until a second qualifying source family or full case file confirms identity.
-
-| Institution | Place | Type | Current source |
-|---|---|---|---|
-${attestedRows}
+The count includes canonical U.S. institutions only. Buildings and sites, successor entities, duplicate aliases, historical organizing attempts, hosted worship communities, leads, context records, and international comparators are preserved as linked research context and excluded from the institution total.
 
 ## Machine contract
 
-\`data/public-institution-ledger.json\` lists all ${publicRecords.length} included identities, evidence families, locators, and links. The build fails if an inclusion lacks linked evidence, an organizing attempt enters the count, identifiers collide, support tiers drift, or the included/excluded arithmetic no longer reconciles.
+\`data/canonical-publication-projection.json\` is the sole identity and census input. \`data/public-institution-ledger.json\` lists every included institution, its canonical entity ID and public route, and its site and CultureNet source links. The build fails on count drift, duplicate identifiers or routes, missing display joins, or absent public source locators.
 `;
 writeFileSync(
   new URL(
@@ -301,5 +217,5 @@ writeFileSync(
 );
 
 console.log(
-  `OK: public institution ledger — ${publicRecords.length} U.S. institutions (${canonicalCaseFiled.length} canonical case-filed + ${multiSourceCorroborated.length} multi-source corroborated + ${singleSourceAttested.length} single-source attested); ${registry.parishes.length} research records reconciled.`,
+  `OK: public institution ledger — ${publishedEntries.length} canonical U.S. institutions; ${independentlySupported.length} independently supported and ${singleSourceAttested.length} single-source attested.`,
 );

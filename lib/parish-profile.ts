@@ -6,6 +6,10 @@ import type {
   RegParish,
 } from "@/lib/registry-scope";
 import type { RegistryProfileSource } from "@/lib/profile-sources";
+import {
+  publicInstitutions,
+  type PublicationInstitution,
+} from "@/lib/publication-projection";
 
 export type YearReading = {
   value: string;
@@ -78,11 +82,13 @@ export type CanonicalParishProfile = {
   registrySlug: string;
   registry: RegistryEntry;
   core: Parish | null;
+  publication: PublicationInstitution | null;
   congregationClass: CongregationClass | null;
   recordDepth: RecordDepth;
 };
 
 const registryEntries = (registryData as { parishes: RegistryEntry[] }).parishes;
+const registryBySlug = new Map(registryEntries.map((entry) => [entry.slug, entry]));
 
 const coreByC83Row = new Map<number, Parish>();
 for (const parish of parishes) {
@@ -103,20 +109,61 @@ function coreForRegistryEntry(entry: RegistryEntry): Parish | null {
   return core?.city === entry.city ? core : null;
 }
 
-export const canonicalParishProfiles: CanonicalParishProfile[] =
-  registryEntries.map((entry) => {
+const usPublicationProfiles: CanonicalParishProfile[] =
+  publicInstitutions.map((publication) => {
+    const entry = registryBySlug.get(publication.registry_slug);
+    if (!entry) {
+      throw new Error(
+        `${publication.registry_slug}: canonical publication row has no site display record.`,
+      );
+    }
     const core = coreForRegistryEntry(entry);
-    const slug = core?.slug ?? entry.slug;
+    const slug = publication.public_profile.replace(/^\/parishes\//, "");
+    if (!slug || slug === publication.public_profile) {
+      throw new Error(
+        `${publication.registry_slug}: invalid canonical profile route ${publication.public_profile}.`,
+      );
+    }
     return {
       slug,
-      href: `/parishes/${slug}`,
+      href: publication.public_profile,
       registrySlug: entry.slug,
       registry: entry,
       core,
-      congregationClass: entry.congregation_class ?? null,
+      publication,
+      congregationClass: publication.institution_class,
       recordDepth: entry.record_depth ?? "single-source",
     };
   });
+
+const comparatorProfiles: CanonicalParishProfile[] = parishes
+  .filter((core) => core.comparator)
+  .map((core) => {
+    const entry = registryEntries.find(
+      (candidate) =>
+        candidate.c83_row != null &&
+        core.c83Rows.includes(candidate.c83_row) &&
+        candidate.city === core.city,
+    );
+    if (!entry) {
+      throw new Error(`${core.slug}: Canadian comparator has no site display record.`);
+    }
+    return {
+      slug: core.slug,
+      href: `/parishes/${core.slug}`,
+      registrySlug: entry.slug,
+      registry: entry,
+      core,
+      publication: null,
+      congregationClass: entry.congregation_class ?? null,
+      recordDepth: entry.record_depth ?? "case-filed",
+    };
+  });
+
+export const canonicalParishProfiles: CanonicalParishProfile[] = [
+  ...usPublicationProfiles,
+  ...comparatorProfiles,
+];
 
 const profileBySlug = new Map<string, CanonicalParishProfile>();
 const profileByRegistrySlug = new Map<string, CanonicalParishProfile>();
@@ -129,6 +176,15 @@ for (const profile of canonicalParishProfiles) {
     );
   }
   profileBySlug.set(profile.slug, profile);
+  if (profile.core?.slug && profile.core.slug !== profile.slug) {
+    const legacyCollision = profileBySlug.get(profile.core.slug);
+    if (legacyCollision && legacyCollision.registrySlug !== profile.registrySlug) {
+      throw new Error(
+        `Legacy profile route collision: ${profile.core.slug} represents both ${legacyCollision.registrySlug} and ${profile.registrySlug}.`,
+      );
+    }
+    profileBySlug.set(profile.core.slug, profile);
+  }
   for (const registrySlug of [
     profile.registrySlug,
     ...(profile.registry.aliases ?? []),

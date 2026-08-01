@@ -5,7 +5,7 @@
       "version": 1,
       "date": "2026-07-27",
       "registryRecords": 214,
-      "summary": "Adopted the merged site registry as canon, consolidated adjudicated duplicate rows, excluded established non-parishes, and preserved all frozen C83 source-row lineage.",
+      "summary": "Adopted the merged site registry, consolidated adjudicated duplicate rows, excluded established non-parishes, and preserved source-row lineage.",
       "evidence": [
         "data/candidates/registry-revision-1-merge-report.json"
       ]
@@ -41,7 +41,7 @@
       "version": 5,
       "date": "2026-07-28",
       "registryRecords": 205,
-      "summary": "Release-audited all 82 canonical C83 identities, repaired the Ansonia, Newark, Collinsville, Kansas City, and Westville joins, and collapsed duplicate shells without losing their sources or aliases.",
+      "summary": "Release-audited the completed case-file cohort, repaired the Ansonia, Newark, Collinsville, Kansas City, and Westville joins, and collapsed duplicate shells without losing their sources or aliases.",
       "evidence": [
         "data/candidates/canonical-identity-release-audit-2026-07-28.md"
       ]
@@ -75,6 +75,19 @@
         "data/candidates/registry-revision-8-source-integrity-2026-07-31.md",
         "data/candidates/public-institution-count-audit-2026-07-31.md",
         "data/public-institution-ledger.json"
+      ]
+    },
+    {
+      "version": 9,
+      "date": "2026-07-31",
+      "registryRecords": 192,
+      "publicUSRecords": 154,
+      "usRomanCatholicParishes": 132,
+      "summary": "Synchronized public identity and census scope to the complete CultureNet publication projection: 154 U.S. institutions, five explicit exclusions, unique canonical entities and profile routes, and no pending count-risk rows.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-public-census-adjudications.json",
+        "data/candidates/registry-revision-9-canonical-projection-2026-07-31.md"
       ]
     }
   ]

@@ -18,6 +18,13 @@ const read = (p) =>
 
 const PROJ = geoAlbersUsa().scale(1300).translate([487.5, 305]);
 const registry = read("registry-unified.json");
+const publication = read("canonical-publication-projection.json");
+const publicationByRegistrySlug = new Map(
+  publication.public_institutions.map((institution) => [
+    institution.registry_slug,
+    institution,
+  ]),
+);
 const libParishes = read("parishes.json");
 const libByC83Row = new Map(
   libParishes.filter((parish) => !parish.mergedInto).flatMap((parish) =>
@@ -65,13 +72,11 @@ function groupOf({ identity, buildingFate, hasClosed, isStanding, endingMode }) 
 }
 
 const clean = (v) => (v && v !== "unknown" ? v : null);
-const isPublicRecord = (record) =>
-  ["parish", "misija", "congregation"].includes(record.record_type);
-
 const points = [];
 let skipped = 0;
 for (const r of registry.parishes) {
-  if (!isPublicRecord(r) || !r.public_census?.included) continue;
+  const institution = publicationByRegistrySlug.get(r.slug);
+  if (!institution) continue;
 
   const lib = r.c83_row != null ? libByC83Row.get(r.c83_row) : undefined;
   const libOk = !!(lib && lib.city === r.city);
@@ -119,10 +124,10 @@ for (const r of registry.parishes) {
     y: +xy[1].toFixed(1),
     group: groupOf({ identity, buildingFate, hasClosed: !!closed, isStanding, endingMode }),
     closed,
-    recordType: r.record_type ?? null,
-    congregationClass: r.congregation_class ?? null,
+    recordType: institution.record_type,
+    congregationClass: institution.institution_class,
     diocese: normalizeDiocese(r.diocese),
-    href: `/parishes/${libOk ? lib.slug : r.slug}`,
+    href: institution.public_profile,
   });
 }
 
