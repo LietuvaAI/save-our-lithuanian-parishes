@@ -21,7 +21,7 @@ import { ProfileRelatedRecords } from "@/components/ProfileRelatedRecords";
 import { ProfileSection } from "@/components/ProfileSection";
 import { ProfileSourceLedger } from "@/components/ProfileSourceLedger";
 import { ProfileWorshipSites } from "@/components/ProfileWorshipSites";
-import { END_STATE_LABEL, isLoss } from "@/lib/end-state";
+import { END_STATE_LABEL } from "@/lib/end-state";
 import {
   canonicalParishProfiles,
   getCanonicalParishProfile,
@@ -314,6 +314,9 @@ export default async function ParishPage({
     ? (FREQUENCY_LABEL[watchEntry.liturgy.frequency] ??
       watchEntry.liturgy.frequency)
     : null;
+  const photoCaption = photo(
+    standingSiteYear,
+  );
 
   const photosEntry =
     getClearedParishPortrait(profile.slug) ??
@@ -321,7 +324,7 @@ export default async function ParishPage({
       ? getClearedParishPortrait(profile.registrySlug)
       : null);
   const watchPhoto = clearedOrNull(watchEntry?.photo);
-  const photo = photosEntry
+  const parishPhoto = photosEntry
     ? photosEntry
     : watchPhoto?.url
       ? {
@@ -333,7 +336,7 @@ export default async function ParishPage({
           evidenceUrl: watchPhoto.evidenceUrl,
         }
       : null;
-  const isLineDrawing = photo?.src.endsWith("-line-drawing.png") ?? false;
+  const isLineDrawing = parishPhoto?.src.endsWith("-line-drawing.png") ?? false;
 
   const caseSources = caseRecord
     ? [
@@ -407,7 +410,7 @@ export default async function ParishPage({
     situationSources,
     parishTimelineProfileSources(parishTimeline),
     projectSources,
-    photoProfileSource(photo),
+    photoProfileSource(parishPhoto),
   ]);
 
   const { dek, rest } = researchOnly
@@ -446,6 +449,14 @@ export default async function ParishPage({
     : recordType === "misija" && endState === "active_parish"
       ? "Active Lithuanian mission"
       : END_STATE_LABEL[endState];
+
+  const imageCaption = [
+    isLineDrawing ? "Line art" : "Photograph",
+    standingSiteYear ? `the ${standingSiteYear} church` : null,
+    "credit & source",
+  ]
+    .filter(Boolean)
+    .join(" \u00b7 ");
 
   const profileView = buildParishProfileView({
     name,
@@ -492,10 +503,10 @@ export default async function ParishPage({
       <div className="mt-4 grid items-start gap-x-10 gap-y-6 md:grid-cols-[272px_minmax(0,1fr)]">
         <div>
           <figure className="w-full">
-            {photo ? (
+            {parishPhoto ? (
               <Image
-                src={photo.src}
-                alt={photo.alt}
+                src={parishPhoto.src}
+                alt={parishPhoto.alt}
                 width={720}
                 height={isLineDrawing ? 720 : 540}
                 loading="eager"
@@ -521,11 +532,9 @@ export default async function ParishPage({
               </div>
             )}
             <figcaption className="mt-1.5 font-mono text-[10.5px] leading-normal text-muted">
-              {photo ? (
+              {parishPhoto ? (
                 <a href="#evidence-sources" className="hover:text-accent">
-                  {isLineDrawing ? "Line art" : "Photograph"}
-                  {standingSiteYear ? ` \u00b7 the ${standingSiteYear} church` : ""}{" "}
-                  \u00b7 credit &amp; source
+                  {imageCaption}
                 </a>
               ) : (
                 "Parish identity record"
@@ -553,7 +562,7 @@ export default async function ParishPage({
         </div>
 
         <div className="min-w-0">
-          <h1 className="font-serif text-3xl font-semibold leading-tight [overflow-wrap:anywhere] sm:text-[31px]">
+          <h1 className="font-serif text-3xl font-semibold leading-tight [overflow-wrap:anywhere]">
             {name}
           </h1>
           <p className="mt-2.5 font-serif text-base text-muted">
@@ -571,13 +580,11 @@ export default async function ParishPage({
             </span>
             {institutionDates?.foundedUnresolved ? (
               <span className="text-muted">Founding year unresolved</span>
-            ) : (
-              institutionDates?.foundedYear && (
-                <span className="text-muted">
-                  Founded {institutionDates.foundedYear}
-                </span>
-              )
-            )}
+            ) : institutionDates?.foundedYear ? (
+              <span className="text-muted">
+                Founded {institutionDates.foundedYear}
+              </span>
+            ) : null}
             {entry.diocese && <span className="text-muted">{entry.diocese}</span>}
           </div>
 
@@ -729,7 +736,7 @@ export default async function ParishPage({
             </p>
           )}
         </div>
-      </ParishPublishedRecord>
+      </ProfileSection>
 
       <ParishRecordReadings profile={profile} />
 
