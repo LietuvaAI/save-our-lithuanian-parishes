@@ -7,6 +7,7 @@ import type { EndState } from "@/lib/end-state";
 
 export type CoalMatrixParish = {
   slug: string;
+  profileHref: string;
   name: string;
   city: string;
   endState: EndState;
@@ -124,7 +125,7 @@ export default function CoalRegionMatrix({
               >
                 <div>
                   <Link
-                    href={`/parishes/${parish.slug}`}
+                    href={parish.profileHref}
                     className="font-medium underline underline-offset-2 hover:text-accent"
                   >
                     {parish.name}

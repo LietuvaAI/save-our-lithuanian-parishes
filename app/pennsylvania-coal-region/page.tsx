@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import contextPointsData from "@/data/context-points.json";
 import registry from "@/data/registry-unified.json";
 import siteFigures from "@/data/site-figures.json";
 import CoalRegionMatrix, {
   type CoalMatrixCell,
   type CoalMatrixParish,
 } from "@/components/CoalRegionMatrix";
-import { parishes, type Parish } from "@/lib/parishes";
+import { pennsylvaniaCoalRegion } from "@/lib/infographic-projection";
 import type { EndState } from "@/lib/end-state";
 
 export const metadata: Metadata = {
@@ -15,11 +14,10 @@ export const metadata: Metadata = {
   description: `The ${siteFigures.coalRegion.parishes} Lithuanian parishes documented in northeastern Pennsylvania's coal region, compared by ownership and outcome.`,
 };
 
-const coalRegion = parishes
-  .filter((parish) => parish.coalRegion && !parish.comparator)
+const coalRegion = [...pennsylvaniaCoalRegion.institutions]
   .sort(
     (a, b) =>
-      a.city.localeCompare(b.city) || a.nameLt.localeCompare(b.nameLt),
+      a.city.localeCompare(b.city) || a.name.localeCompare(b.name),
   );
 const dioceseOwned = coalRegion.filter(
   (parish) => parish.ownership === "diocese_rc",
@@ -27,35 +25,18 @@ const dioceseOwned = coalRegion.filter(
 const communityOwned = coalRegion.filter(
   (parish) => parish.ownership !== "diocese_rc",
 );
-const canonicalStatusByProfile = new Map(
-  (
-    contextPointsData.points as Array<{
-      href: string | null;
-      group: EndState;
-    }>
-  )
-    .filter((parish) => parish.href)
-    .map((parish) => [parish.href!, parish.group]),
-);
-
-function statusForParish(parish: Parish): EndState {
-  return (
-    canonicalStatusByProfile.get(`/parishes/${parish.slug}`) ?? "unverified"
-  );
-}
-
 const closedByDiocese = dioceseOwned.filter(
   (parish) =>
-    parish.endingMode === "diocese_closed" &&
-    statusForParish(parish) !== "unresolved",
+    parish.ending_mode === "diocese_closed" &&
+    parish.status_group !== "unresolved",
 );
 const standingDioceseOwned = dioceseOwned.filter(
   (parish) =>
-    parish.endingMode !== "diocese_closed" &&
-    statusForParish(parish) !== "unresolved",
+    parish.ending_mode !== "diocese_closed" &&
+    parish.status_group !== "unresolved",
 );
 const unresolved = dioceseOwned.filter(
-  (parish) => statusForParish(parish) === "unresolved",
+  (parish) => parish.status_group === "unresolved",
 );
 
 if (
@@ -68,12 +49,15 @@ if (
   throw new Error("Coal-region figures do not match site-figures.json");
 }
 
-function matrixParishes(records: Parish[]): CoalMatrixParish[] {
+type CoalRegionInstitution = (typeof coalRegion)[number];
+
+function matrixParishes(records: CoalRegionInstitution[]): CoalMatrixParish[] {
   return records.map((parish) => ({
-    slug: parish.slug,
-    name: parish.nameLt,
+    slug: parish.registry_slug,
+    profileHref: parish.public_profile,
+    name: parish.name,
     city: parish.city,
-    endState: statusForParish(parish),
+    endState: parish.status_group as EndState,
   }));
 }
 

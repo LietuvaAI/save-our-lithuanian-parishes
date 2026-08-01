@@ -12,11 +12,10 @@ import alertsData from "@/data/alerts.json";
 import networkData from "@/data/sielovada-us-network.json";
 import siteFigures from "@/data/site-figures.json";
 import { getClearedPhoto } from "@/lib/photos";
-import { scopedParishes } from "@/lib/registry-scope";
+import { romanCatholicParishHistory } from "@/lib/infographic-projection";
 import type { EndState } from "@/lib/end-state";
 
 // Homepage figures come from the build-validated public figure contract.
-const romanCatholicParishes = scopedParishes();
 const REG_ETHNIC = siteFigures.history.parishes;
 const REG_CLOSED = siteFigures.history.closed;
 const REG_CLOSED_SINCE_1990 = siteFigures.history.closedSince1990;
@@ -38,7 +37,7 @@ const currentWorshipEntries = networkData.entries.filter((entry) =>
 const CURRENT_WORSHIP_STATES = siteFigures.currentCatholicLife.states;
 
 if (
-  romanCatholicParishes.length !== siteFigures.history.parishes ||
+  romanCatholicParishHistory.length !== siteFigures.history.parishes ||
   currentWorshipEntries.length !== siteFigures.currentCatholicLife.worshipPlaces
 ) {
   throw new Error("Homepage populations do not match data/site-figures.json");
@@ -81,9 +80,10 @@ const activeCampaigns = (alertsData.campaigns as CurrentCampaign[])
   .filter((campaign) => campaign.alert)
   .slice(0, 4);
 const statusByLink = new Map(
-  romanCatholicParishes
-    .filter((parish) => parish.profileHref)
-    .map((parish) => [parish.profileHref!, parish.endState]),
+  romanCatholicParishHistory.map((parish) => [
+    parish.public_profile,
+    parish.status_group as EndState,
+  ]),
 );
 
 function statusForLink(link: string): EndState {
