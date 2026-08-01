@@ -19,6 +19,10 @@ import {
 } from "@/components/ParishResearchRecord";
 import { ProfileSourceLedger } from "@/components/ProfileSourceLedger";
 import { splitStory } from "@/lib/dek";
+import {
+  getDraugasMentionRecord,
+  hasDraugasMentionPage,
+} from "@/lib/draugas-mentions";
 import { END_STATE_LABEL, isLoss, type EndState } from "@/lib/end-state";
 import {
   canonicalParishProfiles,
@@ -650,9 +654,19 @@ export default async function ParishPage({
       "Current parish pastoral publication",
     ),
   ];
+  const draugasRecord = getDraugasMentionRecord(profile);
   const profileSources = finalizeProfileSources([
     core ? draugasProfileSources(core.citations) : [],
-    registryProfileSources(entry.sources ?? []),
+    registryProfileSources(entry.sources ?? [], {
+      draugasRecord: draugasRecord
+        ? {
+            ...draugasRecord,
+            href: hasDraugasMentionPage(draugasRecord)
+              ? `${profile.href}/draugas`
+              : null,
+          }
+        : null,
+    }),
     caseSources,
     alertSources,
     watchSources,
