@@ -1,6 +1,8 @@
 import {
   buildingSiteHistory,
+  canadianComparators,
   continuityEdges,
+  getInfographicInstitutionByEntityId,
   getInfographicInstitutionByProfile,
   type BuildingSiteHistoryRow,
   type ContinuityEdge,
@@ -31,6 +33,7 @@ export type RelatedRecordRow = {
   kind: string;
   name: string;
   href: string | null;
+  linkQualifier: string | null;
   meta: string | null;
   confidence: string;
 };
@@ -68,12 +71,25 @@ function usePeriodRange(
 }
 
 /**
- * What became of the building. Demolition is authoritative; otherwise the most
- * recent condition relationship is reported as the record states it.
+ * What became of the building. Irreversible and specific outcomes outrank a
+ * generic standing condition; dates break ties within the same outcome class.
  */
+const CONDITION_PRECEDENCE: Record<string, number> = {
+  "building-demolished": 4,
+  "building-repurposed": 3,
+  "building-listed-for-sale": 2,
+  "building-standing": 1,
+};
+
 function siteOutcome(site: BuildingSiteHistoryRow): string {
   if (site.demolished_year) return `Demolished ${site.demolished_year}`;
-  const condition = site.condition_relationships.at(-1);
+  const condition = [...site.condition_relationships].sort(
+    (a, b) =>
+      (CONDITION_PRECEDENCE[b.relationship_type] ?? 0) -
+        (CONDITION_PRECEDENCE[a.relationship_type] ?? 0) ||
+      (yearOf(b.date?.start) ?? yearOf(b.date?.end) ?? 0) -
+        (yearOf(a.date?.start) ?? yearOf(a.date?.end) ?? 0),
+  )[0];
   if (condition) return titleCase(condition.relationship_type);
   return "Not established";
 }
@@ -110,14 +126,37 @@ export function getWorshipSitesForInstitution(
  * Relationship labels read from the subject institution's point of view. An
  * unmapped type is humanized rather than guessed at.
  */
+const RELATIONSHIP_LABELS: Record<
+  string,
+  { source: string; target: string }
+> = {
+  "congregation/canonical-life-continued-in": {
+    source: "Continues in",
+    target: "Continues here",
+  },
+  "institution-merged-into-institution": {
+    source: "Merged into",
+    target: "Merged in",
+  },
+  "institution-originated-from-institution": {
+    source: "Originated from",
+    target: "Origin of",
+  },
+  "institution-succeeded-by-institution": {
+    source: "Succeeded by",
+    target: "Successor to",
+  },
+  "institution-renamed-as-same-entity": {
+    source: "Renamed as",
+    target: "Formerly named",
+  },
+};
+
 function relationshipKind(edge: ContinuityEdge, isSource: boolean): string {
-  const type = edge.relationship_type;
-  if (/merge/i.test(type)) return isSource ? "Merged into" : "Merged in";
-  if (/succeed|successor/i.test(type)) return isSource ? "Succeeded by" : "Successor to";
-  if (/reloc|moved/i.test(type)) return "Relocated";
-  if (/preced|predecessor|root/i.test(type)) return isSource ? "Predecessor of" : "Predecessor";
-  if (/continu/i.test(type)) return isSource ? "Continues in" : "Continues here";
-  return titleCase(type);
+  const labels = RELATIONSHIP_LABELS[edge.relationship_type];
+  return labels
+    ? labels[isSource ? "source" : "target"]
+    : titleCase(edge.relationship_type);
 }
 
 function endpointMeta(endpoint: ContinuityEndpoint, edge: ContinuityEdge) {
@@ -151,17 +190,24 @@ export function getRelatedRecordsForInstitution(
   return continuityEdges
     .filter(
       (edge) =>
-        edge.publication_state === "published" &&
+        edge.publication_state === "publishable" &&
+        edge.source.entity_id !== edge.target.entity_id &&
         (edge.source.entity_id === entityId || edge.target.entity_id === entityId),
     )
     .map((edge) => {
       const isSource = edge.source.entity_id === entityId;
       const other = isSource ? edge.target : edge.source;
+      const publicProfile = getInfographicInstitutionByEntityId(
+        other.entity_id,
+      )?.public_profile;
       return {
         id: edge.id,
         kind: relationshipKind(edge, isSource),
         name: other.display_name,
-        href: other.slug ? `/parishes/${other.slug}` : null,
+        href: publicProfile ?? null,
+        linkQualifier: publicProfile
+          ? null
+          : "No separate Lithuanian parish profile",
         meta: endpointMeta(other, edge),
         confidence: edge.confidence,
       };
@@ -172,7 +218,30 @@ export function getRelatedRecordsForInstitution(
 /** The institution's own founding/ending, with unresolved dates left unresolved. */
 export function getInstitutionDates(profileHref: string) {
   const row = getInfographicInstitutionByProfile(profileHref);
-  if (!row) return null;
+  if (!row) {
+    const comparator = canadianComparators.parishes.find(
+      (candidate) => candidate.profile === profileHref,
+    );
+    if (!comparator) return null;
+    const unresolved = comparator.founded_year === null;
+    return {
+      entityId: null,
+      foundedYear: comparator.founded_year,
+      foundedDisplay: comparator.founded_year
+        ? String(comparator.founded_year)
+        : null,
+      foundedUnresolved: unresolved,
+      closedYear: comparator.closed_year,
+      closedDisplay: comparator.closed_year
+        ? String(comparator.closed_year)
+        : null,
+      existed: unresolved
+        ? "Founding year unresolved"
+        : comparator.closed_year
+          ? `${comparator.founded_year}\u2013${comparator.closed_year}`
+          : `${comparator.founded_year}\u2013present`,
+    };
+  }
   const unresolved =
     row.founded.authority === "unresolved" || row.founded.year === null;
   return {

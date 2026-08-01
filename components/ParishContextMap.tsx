@@ -195,7 +195,7 @@ export default function ParishContextMap({
       : STATE_WORD[subject.group];
 
   return (
-    <div>
+    <div className="min-w-0 max-w-full overflow-hidden">
       <div className={compact ? "relative overflow-hidden" : "overflow-hidden rounded-lg border border-rule"}>
         <div className={`flex flex-wrap items-end justify-between gap-2 ${compact ? "pb-2" : "border-b border-rule px-3 py-2.5"}`}>
           <div>

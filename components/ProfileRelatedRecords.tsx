@@ -40,9 +40,11 @@ export function ProfileRelatedRecords({
                   record.name
                 )}
               </p>
-              {record.meta && (
+              {(record.linkQualifier || record.meta) && (
                 <p className="mt-1 font-mono text-[11.5px] leading-normal text-muted">
-                  {record.meta}
+                  {[record.linkQualifier, record.meta]
+                    .filter(Boolean)
+                    .join(" \u00b7 ")}
                 </p>
               )}
             </div>

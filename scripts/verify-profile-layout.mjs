@@ -22,8 +22,16 @@ const relatedRecordsSource = fs.readFileSync(
   path.join(ROOT, "components", "ProfileRelatedRecords.tsx"),
   "utf8",
 );
+const contextMapSource = fs.readFileSync(
+  path.join(ROOT, "components", "ParishContextMap.tsx"),
+  "utf8",
+);
 const ledgerSource = fs.readFileSync(
   path.join(ROOT, "components", "ProfileSourceLedger.tsx"),
+  "utf8",
+);
+const graphSource = fs.readFileSync(
+  path.join(ROOT, "lib", "parish-record-graph.ts"),
   "utf8",
 );
 const publication = JSON.parse(
@@ -92,12 +100,45 @@ const requiredFragments = [
   [historySource, 'id="profile-history"', "history section id"],
   [chronologySource, 'id="parish-chronology"', "chronology section id"],
   [worshipSitesSource, 'id="worship-sites"', "worship sites section id"],
+  [
+    worshipSitesSource,
+    "grid min-w-0",
+    "worship-site mobile width containment",
+  ],
   [relatedRecordsSource, 'id="related-records"', "related records section id"],
   [ledgerSource, 'id="evidence-sources"', "evidence section id"],
   // A building event must be distinguishable from an institutional one.
   [chronologySource, "Worship site", "building-event tag"],
   // Unresolved founding years are shown as unresolved, never estimated.
   [pageSource, "foundedUnresolved", "unresolved founding treatment"],
+  [
+    pageSource,
+    "const foundedYear = institutionDates",
+    "canonical institutional founding date",
+  ],
+  [
+    pageSource,
+    '"No current parish church"',
+    "closed-institution current-church treatment",
+  ],
+  [pageSource, "survivedReviewThenClosed", "survived-review warning"],
+  [pageSource, 'href="/report"', "profile correction route"],
+  [
+    graphSource,
+    'edge.publication_state === "publishable"',
+    "publishable continuity-edge filter",
+  ],
+  [
+    graphSource,
+    "getInfographicInstitutionByEntityId",
+    "entity-id profile resolution",
+  ],
+  [graphSource, "CONDITION_PRECEDENCE", "worship-site outcome precedence"],
+  [
+    contextMapSource,
+    'className="min-w-0 max-w-full overflow-hidden"',
+    "compact-map overflow containment",
+  ],
 ];
 
 for (const [source, fragment, label] of requiredFragments) {
@@ -122,6 +163,35 @@ if (pageSource.includes("<EndStatePill")) {
 }
 if (pageSource.includes('id="profile-facts"')) {
   errors.push('superseded section present: "At a glance" (profile-facts)');
+}
+if (pageSource.includes('href="/contribute"')) {
+  errors.push("profile correction CTA points to nonexistent /contribute route");
+}
+if (pageSource.includes("const foundedYear = scoped.founded")) {
+  errors.push("profile narrative bypasses canonical institutional dates");
+}
+
+const relationshipTypes = [
+  ...new Set(
+    JSON.parse(
+      fs.readFileSync(
+        path.join(ROOT, "data", "canonical-infographic-projection.json"),
+        "utf8",
+      ),
+    ).continuity_edges.map((edge) => edge.relationship_type),
+  ),
+].sort();
+const mappedRelationshipTypes = [
+  "congregation/canonical-life-continued-in",
+  "institution-merged-into-institution",
+  "institution-originated-from-institution",
+  "institution-renamed-as-same-entity",
+  "institution-succeeded-by-institution",
+];
+if (JSON.stringify(relationshipTypes) !== JSON.stringify(mappedRelationshipTypes)) {
+  errors.push(
+    `continuity relationship vocabulary changed: ${relationshipTypes.join(", ")}`,
+  );
 }
 
 if (errors.length > 0) {

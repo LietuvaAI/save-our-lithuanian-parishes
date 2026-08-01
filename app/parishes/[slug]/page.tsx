@@ -271,12 +271,17 @@ export default async function ParishPage({
   const community = isCommunityRecord(entry.sources ?? []);
   const institution = institutionLabel(profile, community);
   const sourceLead = parishHistoryLeadNarrative(profile);
-  const foundedYear = scoped.founded ?? core?.yearFounded ?? null;
-  const closedYear = scoped.closed ?? core?.yearClosed ?? null;
   const buildingFate = scoped.buildingFate ?? core?.buildingFate ?? null;
   const endState = scoped.endState;
   const recordType = entry.record_type ?? "parish";
   const researchOnly = ["phase", "lead", "context"].includes(recordType);
+  const institutionDates = getInstitutionDates(profile.href);
+  const foundedYear = institutionDates
+    ? institutionDates.foundedYear
+    : (scoped.founded ?? core?.yearFounded ?? null);
+  const closedYear = institutionDates
+    ? institutionDates.closedYear
+    : (scoped.closed ?? core?.yearClosed ?? null);
 
   const situation = core
     ? getParishSituation(profile.slug)
@@ -295,7 +300,6 @@ export default async function ParishPage({
 
   // Canonical record graph: institutions, worship sites, and continuity
   // relationships stay three distinct units.
-  const institutionDates = getInstitutionDates(profile.href);
   const worshipSites = getWorshipSitesForInstitution(
     institutionDates?.entityId ?? null,
   );
@@ -307,9 +311,14 @@ export default async function ParishPage({
       (site) => !site.demolishedYear && /present/i.test(site.range ?? ""),
     ) ?? null;
   const standingSiteYear = standingSite?.range?.match(/(\d{4})/)?.[1] ?? null;
-  const currentChurch = standingSiteYear
-    ? `Dedicated ${standingSiteYear}`
-    : readableBuildingStatus(buildingFate, caseRecord?.buildingStatus ?? null);
+  const institutionEnded =
+    closedYear !== null ||
+    ["closed", "demolished", "repurposed", "transferred"].includes(endState);
+  const currentChurch = institutionEnded
+    ? "No current parish church"
+    : standingSiteYear
+      ? `Dedicated ${standingSiteYear}`
+      : readableBuildingStatus(buildingFate, caseRecord?.buildingStatus ?? null);
   const lithuanianMass = watchEntry
     ? (FREQUENCY_LABEL[watchEntry.liturgy.frequency] ??
       watchEntry.liturgy.frequency)
@@ -501,7 +510,7 @@ export default async function ParishPage({
         id="profile-identity"
         className="mt-4 grid items-start gap-x-10 gap-y-6 md:grid-cols-[272px_minmax(0,1fr)]"
       >
-        <div>
+        <div className="min-w-0">
           <figure className="w-full">
             {parishPhoto ? (
               <Image
@@ -690,6 +699,17 @@ export default async function ParishPage({
             {profileView.currentSummary}
           </p>
 
+          {core?.survivedReviewThenClosed && (
+            <p className="mt-4 text-[13.5px] leading-relaxed text-muted">
+              <span className="font-medium text-foreground">
+                Survived review, then closed.
+              </span>{" "}
+              This parish remained open after an earlier diocesan review, but a
+              later decision ended its institutional life. The earlier reprieve
+              did not guarantee long-term security.
+            </p>
+          )}
+
           {watchEntry && (
             <div className="mt-4 flex flex-col gap-2 text-[13.5px] leading-relaxed text-muted">
               <p>
@@ -740,7 +760,7 @@ export default async function ParishPage({
             documents, photographs, and current news are all welcome.
           </p>
           <Link
-            href="/contribute"
+            href="/report"
             className="mt-4 inline-block px-4 py-2.5 text-[13.5px] font-medium text-background"
             style={{ background: "var(--accent)" }}
           >
