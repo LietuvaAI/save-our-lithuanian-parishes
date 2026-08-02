@@ -127,6 +127,16 @@ type ParishCampaignEntry = {
   parishLink: string;
   hearthUrl?: string;
   dispatches?: DispatchLink[];
+  sources?: AlertSource[];
+  profile?: {
+    institutionalSummary?: string;
+    siteDetail?: string;
+    liturgy?: {
+      value: string;
+      detail?: string;
+      href?: string;
+    };
+  };
 };
 
 type SustainabilityWatchEntry = {
@@ -338,37 +348,38 @@ export default async function ParishPage({
     worshipSites.find(
       (site) => !site.demolishedYear && /present/i.test(site.range ?? ""),
     ) ?? activeWorshipSite;
-  const standingSiteYear = standingSite?.range?.match(/(\d{4})/)?.[1] ?? null;
+  const selectedWorshipSite = standingSite ?? activeWorshipSite;
+  const standingSiteYear = selectedWorshipSite?.range?.match(/(\d{4})/)?.[1] ?? null;
   const institutionEnded =
     closedYear !== null ||
     ["closed", "demolished", "repurposed", "transferred"].includes(endState);
   const currentChurch =
     recordType === "misija"
       ? (activeWorshipSite?.name ?? "Not established")
-      : institutionEnded
-        ? (activeWorshipSite?.name ??
-          worshipSites[0]?.outcome ??
-          "None recorded")
-        : standingSiteYear
-          ? `Dedicated ${standingSiteYear}`
-          : readableBuildingStatus(
-              buildingFate,
-              caseRecord?.buildingStatus ?? null,
-            );
+      : (selectedWorshipSite?.name ??
+        readableBuildingStatus(
+          buildingFate,
+          caseRecord?.buildingStatus ?? null,
+        ));
+  const currentChurchDetail =
+    parishCampaign?.profile?.siteDetail ?? selectedWorshipSite?.outcome ?? null;
   const renderedWorshipSites =
     recordType === "misija" || !isUsProjection ? [] : worshipSites;
   const renderedRelatedRecords = !isUsProjection ? [] : relatedRecords;
-  const lithuanianMass = watchEntry
-    ? (FREQUENCY_LABEL[watchEntry.liturgy.frequency] ??
-      watchEntry.liturgy.frequency)
-    : caseRecord?.currentUse &&
-        /Lithuanian[^.]*Mass|Mass(?:es)?[^.]*Lithuanian/i.test(
-          caseRecord.currentUse,
-        )
-      ? /(?:Sunday|weekly)/i.test(caseRecord.currentUse)
-        ? "Weekly"
-        : "Documented"
-      : null;
+  const campaignLiturgy = parishCampaign?.profile?.liturgy;
+  const lithuanianMass = campaignLiturgy
+    ? campaignLiturgy.value
+    : watchEntry
+      ? (FREQUENCY_LABEL[watchEntry.liturgy.frequency] ??
+        watchEntry.liturgy.frequency)
+      : caseRecord?.currentUse &&
+          /Lithuanian[^.]*Mass|Mass(?:es)?[^.]*Lithuanian/i.test(
+            caseRecord.currentUse,
+          )
+        ? /(?:Sunday|weekly)/i.test(caseRecord.currentUse)
+          ? "Weekly"
+          : "Documented"
+        : null;
   const worshipLabel =
     entry.congregation_class === "non_catholic_christian"
       ? "Lithuanian worship"
@@ -416,6 +427,13 @@ export default async function ParishPage({
         group: "current",
         context: "Current threat alert",
         fallbackTitle: "Parish alert source",
+      })
+    : [];
+  const campaignSources = parishCampaign?.sources
+    ? linkedProfileSources(parishCampaign.sources, {
+        group: "current",
+        context: "Current campaign status",
+        fallbackTitle: "Campaign source",
       })
     : [];
   const watchSources = watchEntry
@@ -466,6 +484,7 @@ export default async function ParishPage({
     ),
     caseSources,
     alertSources,
+    campaignSources,
     watchSources,
     situationSources,
     parishTimelineProfileSources(parishTimeline),
@@ -492,6 +511,7 @@ export default async function ParishPage({
     parishCampaign && caseRecord?.summary
       ? campaignProfileDek(caseRecord.summary)
       : dek;
+  const displayRest = parishCampaign ? null : rest;
 
   const hasMap = (
     contextPoints.points as {
@@ -543,7 +563,7 @@ export default async function ParishPage({
       buildingFate,
       caseRecord?.buildingStatus ?? null,
     ),
-    overview: [displayDek, rest].filter(Boolean).join(" "),
+    overview: [displayDek, displayRest].filter(Boolean).join(" "),
     researchOnly,
     researchStatus: researchStatusCopy(recordType),
     currentUse: caseRecord?.currentUse ?? situation?.current_use ?? null,
@@ -553,11 +573,16 @@ export default async function ParishPage({
     timelineEvents: parishTimeline?.events ?? [],
     existed: institutionDates?.existed ?? null,
     currentChurch,
+    currentChurchDetail,
     lithuanianMass,
+    lithuanianMassDetail: campaignLiturgy?.detail ?? null,
+    lithuanianMassHref: campaignLiturgy?.href ?? null,
     worshipLabel,
     recordType,
     institutionEnded,
     institutionTransition,
+    institutionalSummaryOverride:
+      parishCampaign?.profile?.institutionalSummary ?? null,
   });
 
   const contextMapFigure = hasMap ? (
@@ -687,7 +712,20 @@ export default async function ParishPage({
                     <dt className="font-mono text-[10.5px] font-medium uppercase tracking-[0.09em] text-muted">
                       {fact.label}
                     </dt>
-                    <dd className="mt-1.5 text-sm leading-snug">{fact.value}</dd>
+                    <dd className="mt-1.5 text-sm leading-snug">
+                      {fact.href ? (
+                        <Link className="underline underline-offset-2" href={fact.href}>
+                          {fact.value}
+                        </Link>
+                      ) : (
+                        fact.value
+                      )}
+                      {fact.detail && (
+                        <span className="mt-1 block text-xs leading-relaxed text-muted">
+                          {fact.detail}
+                        </span>
+                      )}
+                    </dd>
                   </div>
                 ))}
               </dl>
@@ -696,7 +734,7 @@ export default async function ParishPage({
                 className="mt-4 max-w-[38em] text-sm leading-relaxed text-foreground"
               >
                 <span className="mr-2 font-mono text-[10.5px] font-medium uppercase tracking-[0.09em] text-muted">
-                  Institutional reading
+                  What happened
                 </span>
                 {profileView.institutionalSummary}
               </p>
@@ -707,21 +745,27 @@ export default async function ParishPage({
             profile={profile}
             leadText={displayDek}
             overviewText={
-              researchOnly ? undefined : `${displayDek} ${rest ?? ""}`
+              researchOnly
+                ? undefined
+                : [displayDek, displayRest].filter(Boolean).join(" ")
             }
             supplementalNarrative={
               caseRecord?.historicalNarrative?.length
                 ? caseRecord.historicalNarrative.map((paragraph) => paragraph.text)
                 : caseRecord?.historicalSummary?.length
                   ? caseRecord.historicalSummary
-                : rest
-                  ? [rest]
+                : displayRest
+                  ? [displayRest]
                   : []
             }
-            fallbackNarrative={profileView.historyFallback}
+            fallbackNarrative={
+              caseRecord?.summary ? [] : profileView.historyFallback
+            }
             closingNote={
-              core?.survivedReviewThenClosed
-                ? "Survived review, then closed. This parish remained open after an earlier diocesan review, but a later decision ended its institutional life."
+              core?.survivedReviewThenClosed && institutionTransition === "merged"
+                ? "Survived review, then merged. This parish remained open after an earlier diocesan review, but a later decision merged its juridic life into a successor parish."
+                : core?.survivedReviewThenClosed
+                  ? "Survived review, then closed. This parish remained open after an earlier diocesan review, but a later decision ended its institutional life."
                 : undefined
             }
             embedded

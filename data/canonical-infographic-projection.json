@@ -2,7 +2,7 @@
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
-    "publication_projection_hash": "sha256:86bfebdcc2d1e5d532b2c1af5c52b55ec690b8a78318e54dd8701e44739b7a0e",
+    "publication_projection_hash": "sha256:672d35f50129411e1b2b6753a21ebb9428fae50e9dd2b4e1a33996e803ce35e3",
     "publication_projection_revision": "canonical-public-census-2026-07-31",
     "repository": "LietuvaAI/culturenet-brain"
   },
@@ -340,7 +340,19 @@
       "slug": "divine-providence-detroit-schaefer-site"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "current_official_site",
+            "end": null,
+            "label": "Standing and in active parish use as observed July 31, 2026",
+            "start": "2026-07-31"
+          },
+          "relationship_id": "rel:detroit:divine-providence-southfield-building-standing-2026",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:divine-providence-southfield-site",
       "demolished_year": null,
@@ -6513,7 +6525,7 @@
       "unit": "Canadian Lithuanian parish comparator"
     }
   },
-  "content_hash": "sha256:3b5c197493aeae2c8c2fbf3d8e0740ee97c908653bec59b8b5c0d1b18907c621",
+  "content_hash": "sha256:f9c2b9b3137cff8eb9383f07cf4a1807b7beb8589913e0756dd0489cf2ba0613",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -8721,7 +8733,7 @@
   "counts": {
     "building_site_entities": 168,
     "canadian_comparator_parishes": 3,
-    "closed_roman_catholic_parishes": 88,
+    "closed_roman_catholic_parishes": 87,
     "closed_roman_catholic_parishes_since_1990": 55,
     "closed_roman_catholic_parishes_since_2020": 3,
     "closed_roman_catholic_parishes_with_dated_year": 79,
@@ -10920,9 +10932,9 @@
         "rel:waterbury:st-joseph-used-original-church"
       ],
       "state": "CT",
-      "status_authority": "site_r10_baseline",
+      "status_authority": "current_campaign_adjudication",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-08-02"
     },
     {
       "building_fate": "unknown",
@@ -11812,9 +11824,9 @@
         "rel:detroit:st-anthony-records-held-at-divine-providence"
       ],
       "state": "MI",
-      "status_authority": "site_r10_baseline",
+      "status_authority": "current_campaign_adjudication",
       "status_group": "active_parish",
-      "status_observed_at": "2026-07-25"
+      "status_observed_at": "2026-08-02"
     },
     {
       "building_fate": "unknown",
@@ -13291,9 +13303,9 @@
         "rel:maspeth:transfiguration-used-perry-predecessor"
       ],
       "state": "NY",
-      "status_authority": "site_r10_baseline",
-      "status_group": "unresolved",
-      "status_observed_at": "2026-07-09"
+      "status_authority": "current_campaign_adjudication",
+      "status_group": "transferred",
+      "status_observed_at": "2026-08-02"
     },
     {
       "building_fate": "standing",
@@ -13323,9 +13335,9 @@
         "rel:hartford:holy-trinity-used-capitol-avenue-church"
       ],
       "state": "CT",
-      "status_authority": "site_r10_baseline",
-      "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_authority": "current_campaign_adjudication",
+      "status_group": "unresolved",
+      "status_observed_at": "2026-08-02"
     },
     {
       "building_fate": "demolished",

@@ -7,6 +7,7 @@ const read = (path) =>
   JSON.parse(readFileSync(new URL(`../data/${path}`, import.meta.url), "utf8"));
 const infographic = read("canonical-infographic-projection.json");
 const publication = read("canonical-publication-projection.json");
+const alerts = read("alerts.json");
 const errors = [];
 
 const sortValue = (value) => {
@@ -138,6 +139,52 @@ const southfieldSite = sites.find(
 );
 if (!southfieldSite || southfieldSite.first_documented_year !== 1973) {
   errors.push("Divine Providence Southfield worship site must begin in 1973");
+}
+if (
+  !southfieldSite?.condition_relationships.some(
+    (condition) => condition.relationship_type === "building-standing",
+  )
+) {
+  errors.push("Divine Providence Southfield site lacks an explicit standing assertion");
+}
+
+const institutionByProfile = new Map(
+  institutions.map((institution) => [institution.public_profile, institution]),
+);
+const campaignAdjudications = [
+  [
+    "/parishes/dievo-apvaizdos-southfield-mi",
+    "active_parish",
+    null,
+  ],
+  ["/parishes/svc-trejybes-hartford-ct", "unresolved", null],
+  ["/parishes/sv-juozapo-waterbury-ct", "closed", 2024],
+  ["/parishes/kristaus-atsimainymo-maspeth-ny", "transferred", 2019],
+];
+for (const [profile, status, endedYear] of campaignAdjudications) {
+  const institution = institutionByProfile.get(profile);
+  if (
+    institution?.status_group !== status ||
+    institution?.closed?.year !== endedYear ||
+    institution?.status_authority !== "current_campaign_adjudication"
+  ) {
+    errors.push(`${profile}: current campaign adjudication drifted`);
+  }
+}
+
+const campaignByProfile = new Map(
+  alerts.campaigns.map((campaign) => [campaign.parishLink, campaign]),
+);
+const campaignLiturgy = [
+  ["/parishes/dievo-apvaizdos-southfield-mi", "Weekly"],
+  ["/parishes/svc-trejybes-hartford-ct", "Regular Mass ended 30 May 2026"],
+  ["/parishes/sv-juozapo-waterbury-ct", "Special Mass documented 2 Aug 2026"],
+  ["/parishes/kristaus-atsimainymo-maspeth-ny", "Moved to Annunciation, Brooklyn"],
+];
+for (const [profile, value] of campaignLiturgy) {
+  if (campaignByProfile.get(profile)?.profile?.liturgy?.value !== value) {
+    errors.push(`${profile}: campaign liturgy wording drifted`);
+  }
 }
 
 const brooklynAnnunciation = institutions.find(

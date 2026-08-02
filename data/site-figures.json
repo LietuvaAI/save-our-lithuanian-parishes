@@ -1,11 +1,11 @@
 {
   "generatedFrom": {
-    "registryRevision": 14,
-    "registryDate": "2026-08-01",
+    "registryRevision": 15,
+    "registryDate": "2026-08-02",
     "canonicalPublicationRevision": "canonical-public-census-2026-07-31",
-    "canonicalPublicationHash": "sha256:86bfebdcc2d1e5d532b2c1af5c52b55ec690b8a78318e54dd8701e44739b7a0e",
+    "canonicalPublicationHash": "sha256:672d35f50129411e1b2b6753a21ebb9428fae50e9dd2b4e1a33996e803ce35e3",
     "canonicalInfographicRevision": "canonical-infographic-units-2026-08-01",
-    "canonicalInfographicHash": "sha256:3b5c197493aeae2c8c2fbf3d8e0740ee97c908653bec59b8b5c0d1b18907c621",
+    "canonicalInfographicHash": "sha256:f9c2b9b3137cff8eb9383f07cf4a1807b7beb8589913e0756dd0489cf2ba0613",
     "networkChecked": "2026-07-29"
   },
   "publicUS": {
@@ -35,9 +35,9 @@
     "protestantCongregations": 5,
     "status": {
       "active_parish": 9,
-      "closed": 99,
+      "closed": 98,
       "mass_continues": 6,
-      "transferred": 23,
+      "transferred": 24,
       "unresolved": 4,
       "unverified": 13
     }
@@ -46,13 +46,13 @@
     "parishes": 132,
     "status": {
       "active_parish": 6,
-      "closed": 88,
+      "closed": 87,
       "mass_continues": 6,
-      "transferred": 21,
+      "transferred": 22,
       "unresolved": 4,
       "unverified": 7
     },
-    "closed": 88,
+    "closed": 87,
     "closedWithDatedYear": 79,
     "closedSince1990": 55,
     "closedSince2020": 3,

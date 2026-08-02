@@ -18,6 +18,8 @@ export interface ProfileTimelineEvent {
 export interface ParishProfileFact {
   label: string;
   value: string;
+  detail?: string | null;
+  href?: string | null;
 }
 
 export type ChronologyEventKind = "institution" | "building";
@@ -71,11 +73,15 @@ interface ParishProfileViewInput {
   existed: string | null;
   /** The standing church and its own dedication year — a building fact, labelled as one. */
   currentChurch: string | null;
+  currentChurchDetail: string | null;
   lithuanianMass: string | null;
+  lithuanianMassDetail: string | null;
+  lithuanianMassHref: string | null;
   worshipLabel: "Lithuanian Mass" | "Lithuanian worship";
   recordType: string;
   institutionEnded: boolean;
   institutionTransition: InstitutionTransition;
+  institutionalSummaryOverride: string | null;
 }
 
 const BUILDING_EVENT =
@@ -269,10 +275,13 @@ function facts(input: ParishProfileViewInput): ParishProfileFact[] {
       {
         label: "Worships in",
         value: input.currentChurch ?? input.building ?? "Not established",
+        detail: input.currentChurchDetail,
       },
       {
         label: input.worshipLabel,
         value: input.lithuanianMass ?? "Not established",
+        detail: input.lithuanianMassDetail,
+        href: input.lithuanianMassHref,
       },
     ];
   }
@@ -288,14 +297,14 @@ function facts(input: ParishProfileViewInput): ParishProfileFact[] {
   const institutionalLife =
     input.endState === "active_parish"
       ? `${existed} \u00b7 active`
-      : input.endState === "mass_continues"
-        ? input.institutionTransition === "merged"
-          ? `${existed} \u00b7 merged`
-          : input.institutionTransition === "succeeded"
-            ? `${existed} \u00b7 succeeded by another parish`
-            : input.institutionTransition === "continued"
-              ? `${existed} \u00b7 continues in another institution`
-              : existed
+      : input.institutionTransition === "merged"
+        ? `${existed} \u00b7 merged`
+        : input.institutionTransition === "succeeded"
+          ? `${existed} \u00b7 succeeded by another parish`
+          : input.institutionTransition === "continued"
+            ? `${existed} \u00b7 continues in another institution`
+            : input.endState === "mass_continues"
+              ? existed
         : input.endState === "transferred"
           ? `${existed} \u00b7 Lithuanian parish ended`
           : ["closed", "demolished", "repurposed"].includes(input.endState)
@@ -310,12 +319,17 @@ function facts(input: ParishProfileViewInput): ParishProfileFact[] {
     },
     {
       label:
-        input.endState === "mass_continues"
-          ? "Worship site"
-          : input.institutionEnded
+        input.institutionEnded &&
+        (!input.currentChurchDetail ||
+          /^(demolished|not established|none recorded)/i.test(
+            input.currentChurchDetail,
+          ))
             ? "Former church"
-            : "Current church",
+            : input.institutionEnded
+              ? "Church today"
+              : "Current church",
       value: input.currentChurch ?? input.building ?? "Not established",
+      detail: input.currentChurchDetail,
     },
     {
       label: input.worshipLabel,
@@ -324,11 +338,16 @@ function facts(input: ParishProfileViewInput): ParishProfileFact[] {
         (input.endState === "mass_continues"
           ? "Continues; frequency not established"
           : "Not established"),
+      detail: input.lithuanianMassDetail,
+      href: input.lithuanianMassHref,
     },
   ];
 }
 
 function institutionalSummary(input: ParishProfileViewInput) {
+  if (input.institutionalSummaryOverride) {
+    return input.institutionalSummaryOverride;
+  }
   if (input.recordType === "misija") {
     return "This is an active Lithuanian mission rather than a territorial or ethnic parish.";
   }

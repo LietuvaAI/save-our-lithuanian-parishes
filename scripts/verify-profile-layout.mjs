@@ -116,8 +116,8 @@ const requiredFragments = [
   [historySource, "About this parish", "top About heading"],
   [
     pageSource,
-    "fallbackNarrative={profileView.historyFallback}",
-    "history fallback",
+    "caseRecord?.summary ? [] : profileView.historyFallback",
+    "case summary precedence over generated history fallback",
   ],
   [pageSource, "items={profileView.chronology}", "normalized chronology"],
   [
@@ -178,6 +178,12 @@ const requiredFragments = [
     "closed-institution former-church treatment",
   ],
   [pageSource, "survivedReviewThenClosed", "survived-review warning"],
+  [pageSource, "currentChurchDetail", "worship-site status detail"],
+  [pageSource, "campaignLiturgy?.detail", "campaign liturgy qualification"],
+  [pageSource, "campaignLiturgy?.href", "campaign liturgy destination link"],
+  [pageSource, "campaignSources", "campaign evidence ledger sources"],
+  [pageSource, "fact.detail", "fact-level status detail rendering"],
+  [pageSource, "What happened", "plain institutional outcome label"],
   [
     pageSource,
     'data-profile-scope="outside-us-projection"',

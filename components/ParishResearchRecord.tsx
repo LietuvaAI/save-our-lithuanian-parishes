@@ -554,6 +554,7 @@ function formatHistoricDate(value: string) {
 
 function narrativeFact(fact: string) {
   const value = fact.trim().replace(/[.\s]+$/, "");
+  if (/^~?\d{4}(?:-\d{2}-\d{2})?$/.test(value)) return "";
   const approximateMilestone = value.match(
     /^~(\d{4})\s*\(([^)]+)\)$/,
   );

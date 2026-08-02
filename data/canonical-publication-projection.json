@@ -5317,6 +5317,27 @@
         "conflict_preserved": false,
         "state": "accepted"
       },
+      "assertion_type": "site_status",
+      "confidence": "high",
+      "id": "assert:detroit:divine-providence-southfield-building-standing-2026",
+      "object": {
+        "canonical_entity_id": "cn:building_site:divine-providence-southfield-site",
+        "date_text": "2026-07-31",
+        "status": "standing and in active parish use"
+      },
+      "observed_at": "2026-07-31",
+      "predicate": "building_site_standing",
+      "source_artifact_id": "src:divine-providence:homepage-current:2026-07-31",
+      "source_locator": "Homepage identifies the Southfield church and publishes its current worship schedule",
+      "subject": {
+        "canonical_entity_id": "cn:event:divine-providence-southfield-building-standing-2026"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
       "assertion_type": "identity_lifecycle",
       "confidence": "high",
       "id": "assert:detroit:divine-providence-name-1949",
@@ -12367,6 +12388,13 @@
     },
     {
       "aliases": [],
+      "canonical_name": "Divine Providence Southfield current church standing assessment",
+      "entity_type": "event",
+      "id": "cn:event:divine-providence-southfield-building-standing-2026",
+      "slug": "divine-providence-southfield-building-standing-2026"
+    },
+    {
+      "aliases": [],
       "canonical_name": "Holy Cross Westville church demolition",
       "entity_type": "event",
       "id": "cn:event:holy-cross-westville-demolition",
@@ -16480,7 +16508,7 @@
       "slug": "robert-damyanovich"
     }
   ],
-  "content_hash": "sha256:86bfebdcc2d1e5d532b2c1af5c52b55ec690b8a78318e54dd8701e44739b7a0e",
+  "content_hash": "sha256:672d35f50129411e1b2b6753a21ebb9428fae50e9dd2b4e1a33996e803ce35e3",
   "counts": {
     "by_institution_class": {
       "independent_catholic": 4,
@@ -19518,12 +19546,14 @@
       "display_name": "Divine Providence Southfield church and cultural center site",
       "entity_type": "building_site",
       "evidence_assertion_ids": [
+        "assert:detroit:divine-providence-southfield-building-standing-2026",
         "assert:detroit:southfield-dedicated-1973"
       ],
       "id": "proj:lineage:site-divine-providence-southfield",
       "reason": "Present church/cultural center site is linked context for the active parish, not a second parish row.",
       "slug": "divine-providence-southfield-site",
       "source_artifact_ids": [
+        "src:divine-providence:homepage-current:2026-07-31",
         "src:divine-providence:parish-history:2026-07-31"
       ]
     },
@@ -31063,6 +31093,40 @@
         "entity_id": "cn:building_site:ss-peter-paul-first-church-homestead-pa",
         "entity_type": "building_site",
         "slug": "ss-peter-paul-first-church-homestead-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "current_official_site",
+        "end": null,
+        "label": "Standing and in active parish use as observed July 31, 2026",
+        "start": "2026-07-31"
+      },
+      "evidence_assertion_ids": [
+        "assert:detroit:divine-providence-southfield-building-standing-2026"
+      ],
+      "id": "rel:detroit:divine-providence-southfield-building-standing-2026",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Divine Providence Southfield current church standing assessment",
+        "entity_id": "cn:event:divine-providence-southfield-building-standing-2026",
+        "entity_type": "event",
+        "slug": "divine-providence-southfield-building-standing-2026"
+      },
+      "source_artifact_ids": [
+        "src:divine-providence:homepage-current:2026-07-31"
+      ],
+      "target": {
+        "display_name": "Divine Providence Southfield church and cultural center site",
+        "entity_id": "cn:building_site:divine-providence-southfield-site",
+        "entity_type": "building_site",
+        "slug": "divine-providence-southfield-site"
       }
     },
     {
