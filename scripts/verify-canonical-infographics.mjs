@@ -87,6 +87,16 @@ if (sites.some((row) => row.counted_in_public_institution_total !== false)) {
 if (sites.some((row) => row.site_class === "unclassified")) {
   errors.push("an unclassified physical site remains in the projection");
 }
+for (const institution of institutions) {
+  if (
+    institution.status_group === "active_parish" &&
+    institution.closed.year !== null
+  ) {
+    errors.push(
+      `${institution.registry_slug}: ended institution is labeled active_parish`,
+    );
+  }
+}
 if (
   coalRegion.institutions.some(
     (row) => !institutions.some(
@@ -128,6 +138,22 @@ const southfieldSite = sites.find(
 );
 if (!southfieldSite || southfieldSite.first_documented_year !== 1973) {
   errors.push("Divine Providence Southfield worship site must begin in 1973");
+}
+
+const brooklynAnnunciation = institutions.find(
+  (institution) =>
+    institution.public_profile ===
+    "/parishes/svc-m-marijos-apreiskimo-brooklyn-ny",
+);
+if (
+  brooklynAnnunciation?.closed.year !== 2019 ||
+  brooklynAnnunciation?.status_group !== "mass_continues" ||
+  brooklynAnnunciation?.status_authority !==
+    "canonical_status_adjudication"
+) {
+  errors.push(
+    "Brooklyn Annunciation must remain a 2019 merged institution where Lithuanian Mass continues",
+  );
 }
 
 const aggregatePages = [

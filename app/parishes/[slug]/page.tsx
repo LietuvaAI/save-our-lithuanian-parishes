@@ -276,10 +276,10 @@ export default async function ParishPage({
   const institution = institutionLabel(profile, community);
   const sourceLead = parishHistoryLeadNarrative(profile);
   const buildingFate = scoped.buildingFate ?? core?.buildingFate ?? null;
-  const endState = scoped.endState;
   const recordType = entry.record_type ?? "parish";
   const researchOnly = ["phase", "lead", "context"].includes(recordType);
   const institutionDates = getInstitutionDates(profile.href);
+  const endState = institutionDates?.statusGroup ?? scoped.endState;
   const isUsProjection =
     entry.country === "US" && typeof institutionDates?.entityId === "string";
   const foundedYear = institutionDates
@@ -348,7 +348,7 @@ export default async function ParishPage({
     ? (FREQUENCY_LABEL[watchEntry.liturgy.frequency] ??
       watchEntry.liturgy.frequency)
     : caseRecord?.currentUse &&
-        /(?:Lithuanian(?:-language)?\s+Mass|Mass(?:es)?[^.]*Lithuanian)/i.test(
+        /Lithuanian[^.]*Mass|Mass(?:es)?[^.]*Lithuanian/i.test(
           caseRecord.currentUse,
         )
       ? /(?:Sunday|weekly)/i.test(caseRecord.currentUse)
@@ -518,6 +518,7 @@ export default async function ParishPage({
     founded: establishedYear,
     closed: closedYear,
     status: statusLabel,
+    endState,
     ownership: researchOnly ? "Not established" : ownershipLabel(profile),
     diocese: entry.diocese ?? null,
     building: readableBuildingStatus(
@@ -670,9 +671,27 @@ export default async function ParishPage({
             </dl>
           )}
 
-          <p className="mt-4 max-w-[34em] font-serif text-[16.5px] leading-relaxed">
-            {displayDek}
-          </p>
+          <ParishPublishedRecord
+            profile={profile}
+            leadText={displayDek}
+            overviewText={
+              researchOnly ? undefined : `${displayDek} ${rest ?? ""}`
+            }
+            supplementalNarrative={
+              caseRecord?.historicalSummary?.length
+                ? caseRecord.historicalSummary
+                : rest
+                  ? [rest]
+                  : []
+            }
+            fallbackNarrative={profileView.historyFallback}
+            closingNote={
+              core?.survivedReviewThenClosed
+                ? "Survived review, then closed. This parish remained open after an earlier diocesan review, but a later decision ended its institutional life."
+                : undefined
+            }
+            embedded
+          />
 
           {identityNotices.map((notice) => (
             <div
@@ -756,26 +775,6 @@ export default async function ParishPage({
           </p>
         </div>
       )}
-
-      <ParishPublishedRecord
-        profile={profile}
-        overviewText={
-          researchOnly ? undefined : `${displayDek} ${rest ?? ""}`
-        }
-        supplementalNarrative={
-          caseRecord?.historicalSummary?.length
-            ? caseRecord.historicalSummary
-            : rest
-              ? [rest]
-              : []
-        }
-        fallbackNarrative={profileView.historyFallback}
-        closingNote={
-          core?.survivedReviewThenClosed
-            ? "Survived review, then closed. This parish remained open after an earlier diocesan review, but a later decision ended its institutional life."
-            : undefined
-        }
-      />
 
       <ParishProfileChronology items={profileView.chronology} />
 

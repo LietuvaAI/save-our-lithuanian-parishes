@@ -6513,7 +6513,7 @@
       "unit": "Canadian Lithuanian parish comparator"
     }
   },
-  "content_hash": "sha256:006dbe5e4ee405c9f0c71071336a4605420495435c04b12be26ee7450552e89f",
+  "content_hash": "sha256:0a4116c08510c88650f562eba6a77aa9219f939d0b86ed3e81150767deb2139d",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -9003,9 +9003,9 @@
         "rel:lineage-1:annunciation-used-north-fifth-site"
       ],
       "state": "NY",
-      "status_authority": "site_r10_baseline",
-      "status_group": "active_parish",
-      "status_observed_at": "2026-07-31"
+      "status_authority": "canonical_status_adjudication",
+      "status_group": "mass_continues",
+      "status_observed_at": "2026-08-02"
     },
     {
       "building_fate": "demolished",

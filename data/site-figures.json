@@ -5,7 +5,7 @@
     "canonicalPublicationRevision": "canonical-public-census-2026-07-31",
     "canonicalPublicationHash": "sha256:86bfebdcc2d1e5d532b2c1af5c52b55ec690b8a78318e54dd8701e44739b7a0e",
     "canonicalInfographicRevision": "canonical-infographic-units-2026-08-01",
-    "canonicalInfographicHash": "sha256:006dbe5e4ee405c9f0c71071336a4605420495435c04b12be26ee7450552e89f",
+    "canonicalInfographicHash": "sha256:0a4116c08510c88650f562eba6a77aa9219f939d0b86ed3e81150767deb2139d",
     "networkChecked": "2026-07-29"
   },
   "publicUS": {
@@ -34,9 +34,9 @@
     "protestantParishes": 3,
     "protestantCongregations": 5,
     "status": {
-      "active_parish": 10,
+      "active_parish": 9,
       "closed": 99,
-      "mass_continues": 5,
+      "mass_continues": 6,
       "transferred": 23,
       "unresolved": 4,
       "unverified": 13
@@ -45,9 +45,9 @@
   "history": {
     "parishes": 132,
     "status": {
-      "active_parish": 7,
+      "active_parish": 6,
       "closed": 88,
-      "mass_continues": 5,
+      "mass_continues": 6,
       "transferred": 21,
       "unresolved": 4,
       "unverified": 7

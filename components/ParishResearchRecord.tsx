@@ -998,16 +998,20 @@ function narrativeGroup(fact: string) {
 
 export function ParishPublishedRecord({
   profile,
+  leadText,
   overviewText,
   supplementalNarrative,
   fallbackNarrative,
   closingNote,
+  embedded = false,
 }: {
   profile: CanonicalParishProfile;
+  leadText?: string;
   overviewText?: string;
   supplementalNarrative?: string[];
   fallbackNarrative?: string[];
   closingNote?: string;
+  embedded?: boolean;
 }) {
   const seen = new Set<string>();
   const facts = sortedHistorySources(profile)
@@ -1060,20 +1064,36 @@ export function ParishPublishedRecord({
   return (
     <section
       id="profile-history"
-      className="mt-10 scroll-mt-8"
+      className={
+        embedded
+          ? "mt-5 scroll-mt-8 border-t border-rule pt-4"
+          : "mt-10 scroll-mt-8"
+      }
       aria-labelledby="parish-history-heading"
     >
-      <h2 id="parish-history-heading" className="font-serif text-2xl font-semibold">
-        History
+      <h2
+        id="parish-history-heading"
+        className={
+          embedded
+            ? "font-mono text-[10.5px] font-medium uppercase tracking-[0.15em] text-muted"
+            : "font-serif text-2xl font-semibold"
+        }
+      >
+        {embedded ? "About this parish" : "History"}
       </h2>
-      <div className="mt-4 max-w-2xl space-y-4">
+      <div className="mt-3 max-w-[38em] space-y-4">
+        {leadText && (
+          <p className="font-serif text-[16.5px] leading-relaxed text-foreground">
+            {leadText}
+          </p>
+        )}
         {narrative.map((paragraph) => (
-          <p key={paragraph} className="leading-relaxed text-muted">
+          <p key={paragraph} className="text-[15px] leading-relaxed text-muted">
             {paragraph}
           </p>
         ))}
         {groups.map((group, index) => (
-          <p key={index} className="leading-relaxed text-muted">
+          <p key={index} className="text-[15px] leading-relaxed text-muted">
             {group.join(" ")}
           </p>
         ))}

@@ -63,9 +63,9 @@ const comparatorCount = JSON.parse(
 
 const errors = [];
 
-// Canonical profile order, v2. Identity carries status, facts, and the dek;
-// history, chronology, buildings, relationships, present condition, evidence,
-// corrections follow. docs/design-system-profile.md §5.
+// Canonical profile order, v2. Identity carries status, facts, and the full
+// About/history narrative; chronology, buildings, relationships, present
+// condition, evidence, and corrections follow. docs/design-system-profile.md §5.
 const orderedMarkers = [
   { id: "profile-identity", marker: 'id="profile-identity"', source: pageSource },
   { id: "profile-history", marker: "<ParishPublishedRecord", source: pageSource },
@@ -108,6 +108,8 @@ for (const section of orderedMarkers) {
 
 const requiredFragments = [
   [pageSource, 'data-profile-layout="canonical-v2"', "layout version"],
+  [pageSource, "embedded", "history embedded in the top About area"],
+  [historySource, "About this parish", "top About heading"],
   [
     pageSource,
     "fallbackNarrative={profileView.historyFallback}",
@@ -156,7 +158,12 @@ const requiredFragments = [
   ],
   [
     profileViewSource,
-    'label: input.institutionEnded ? "Former church" : "Current church"',
+    'input.endState === "mass_continues"',
+    "continuing-Mass worship-site treatment",
+  ],
+  [
+    profileViewSource,
+    '"Former church"',
     "closed-institution former-church treatment",
   ],
   [pageSource, "survivedReviewThenClosed", "survived-review warning"],
@@ -248,6 +255,9 @@ if (pageSource.includes('href="/contribute"')) {
 if (pageSource.includes("const foundedYear = scoped.founded")) {
   errors.push("profile narrative bypasses canonical institutional dates");
 }
+if ((pageSource.match(/<ParishPublishedRecord/g) ?? []).length !== 1) {
+  errors.push("profile history must render exactly once");
+}
 
 const profileOutputSources = [
   pageSource,
@@ -308,6 +318,20 @@ const institutionByProfile = new Map(
     institution,
   ]),
 );
+
+const brooklynAnnunciation = institutionByProfile.get(
+  "/parishes/svc-m-marijos-apreiskimo-brooklyn-ny",
+);
+if (
+  brooklynAnnunciation?.closed?.year !== 2019 ||
+  brooklynAnnunciation?.status_group !== "mass_continues" ||
+  brooklynAnnunciation?.status_authority !==
+    "canonical_status_adjudication"
+) {
+  errors.push(
+    "Brooklyn Annunciation must render as a 2019 merged institution where Lithuanian Mass continues",
+  );
+}
 const institutionByEntityId = new Map(
   infographic.institution_history.map((institution) => [
     institution.culturenet_entity_id,

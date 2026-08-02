@@ -25,6 +25,7 @@ import {
   getPublicationInstitution,
   isPublishedInstitution,
 } from "@/lib/publication-projection";
+import { getInfographicInstitutionByProfile } from "@/lib/infographic-projection";
 
 export type CongregationClass =
   | "roman_catholic"
@@ -179,20 +180,22 @@ export function toScopedParish(p: RegParish): ScopedParish {
   }
   const lib = p.c83_row != null ? getParishByC83Row(p.c83_row) : undefined;
   const libOk = !!(lib && lib.city === p.city);
+  const profileHref = publication?.public_profile ?? null;
+  const canonical = profileHref
+    ? getInfographicInstitutionByProfile(profileHref)
+    : null;
+  if (publication && !canonical) {
+    throw new Error(
+      `${p.slug}: published institution is absent from the canonical infographic projection.`,
+    );
+  }
 
-  // Canonical parishes: the locked-core years are authoritative on every
-  // surface; registry readings that differ stay visible as conflicts on the
-  // research pages, never as silently divergent display values
-  // (2026-07-26 audit: Shenandoah showed closure 2010 — its demolition
-  // year — on the timeline while the profile said 2006).
-  const founded = libOk
-    ? (lib!.yearFounded ?? yearOf(p.locked?.year_founded, p.years?.founded))
-    : yearOf(p.locked?.year_founded, p.years?.founded);
-  const closed = libOk
-    ? lib!.yearClosed
-    : p.lifecycle
-      ? (p.lifecycle.selected_closed_year ?? null)
-      : yearOf(p.locked?.year_closed, p.years?.closed);
+  // Public dates and status come from the same CultureNet infographic
+  // projection used by the history views and site-wide figures. The frozen
+  // source-row library remains available as evidence, but never overrides the
+  // adjudicated public institution lifecycle.
+  const founded = canonical?.founded.year ?? null;
+  const closed = canonical?.closed.year ?? null;
 
   const slug = libOk ? lib!.slug : p.slug;
   const endingMode = libOk
@@ -211,20 +214,31 @@ export function toScopedParish(p: RegParish): ScopedParish {
   const asFate = (v: string | null | undefined) =>
     v && v !== "unknown" ? (v as BuildingFate) : null;
 
-  const identity = libOk
-    ? (lib!.lithuanianIdentity as LithuanianIdentity | null)
-    : asIdentity(overlay?.lithuanian_identity);
+  const identityFromCanonicalStatus = (): LithuanianIdentity | null => {
+    switch (canonical?.status_group) {
+      case "active_parish":
+      case "mass_continues":
+        return canonical.status_group;
+      case "transferred":
+        return "ethnically_transferred";
+      case "closed":
+        return "lost";
+      case "unresolved":
+      case "unverified":
+        return null;
+      default:
+        return null;
+    }
+  };
+  const identity = canonical
+    ? identityFromCanonicalStatus()
+    : libOk
+      ? (lib!.lithuanianIdentity as LithuanianIdentity | null)
+      : asIdentity(overlay?.lithuanian_identity);
   const buildingFate = libOk
     ? (lib!.buildingFate as BuildingFate | null)
     : asFate(overlay?.building_fate);
   const alertKind = alertBySlug.get(slug) ?? null;
-
-  const isStanding = !!(
-    (endingMode === "standing" && !closed) ||
-    (!closed &&
-      (identity === "active_parish" || identity === "mass_continues")) ||
-    (!closed && !libOk && overlay?.canonical_status === "standing")
-  );
 
   return {
     slug,
@@ -237,13 +251,15 @@ export function toScopedParish(p: RegParish): ScopedParish {
     diocese: normalizeDiocese(p.diocese),
     founded,
     closed,
-    endState: resolveEndState(
-      identity,
-      buildingFate,
-      !!closed,
-      isStanding,
-      endingMode,
-    ),
+    endState: canonical
+      ? canonical.status_group
+      : resolveEndState(
+          identity,
+          buildingFate,
+          !!closed,
+          false,
+          endingMode,
+        ),
     endingMode,
     identity,
     buildingFate,
@@ -254,7 +270,7 @@ export function toScopedParish(p: RegParish): ScopedParish {
     hasAlert: alertKind != null,
     onWatch: sustainBySlug.has(slug),
     profileHref:
-      canonicalProfileHrefForRegistrySlug(p.slug) ?? publication?.public_profile ?? null,
+      canonicalProfileHrefForRegistrySlug(p.slug) ?? profileHref,
   };
 }
 

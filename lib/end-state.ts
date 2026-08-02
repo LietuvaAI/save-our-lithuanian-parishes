@@ -134,7 +134,10 @@ export function resolveEndState(
   endingMode?: string | null,
 ): EndState {
   if (endingMode === "undecided") return "unresolved";
-  if (isStanding && identity === "mass_continues") return "mass_continues";
+  // A predecessor institution may have ended while Lithuanian Mass continues
+  // at its church under a successor. The liturgical status therefore outranks
+  // the predecessor's closed year (Brooklyn Annunciation, 2019).
+  if (identity === "mass_continues") return "mass_continues";
   if (isStanding && identity === "ethnically_transferred") return "transferred";
   // A parish whose lifecycle layer is frozen "standing" by the locked
   // snapshot but whose identity research has established the end shows the

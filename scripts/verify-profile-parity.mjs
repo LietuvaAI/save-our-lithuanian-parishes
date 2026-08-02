@@ -5,16 +5,12 @@ const readData = (name) =>
 
 const registry = readData("registry-unified.json").parishes;
 const projection = readData("canonical-publication-projection.json");
+const infographic = readData("canonical-infographic-projection.json");
 const core = readData("parishes.json").filter((parish) => !parish.mergedInto);
 const comparators = core.filter((parish) => parish.comparator);
 const contextPoints = readData("context-points.json").points;
 const registryMap = readData("registry-map.json").points;
 const alerts = readData("alerts.json");
-
-const yearOf = (value) => {
-  const match = String(value ?? "").match(/\b(1[89]\d{2}|20\d{2})\b/);
-  return match ? Number(match[1]) : null;
-};
 
 const fail = (message) => {
   throw new Error(`Profile parity failed: ${message}`);
@@ -27,16 +23,21 @@ for (const entry of registry) {
 }
 
 const routeByRegistrySlug = new Map();
-const institutionByProfile = new Map();
-const institutionByRegistrySlug = new Map();
-const entityById = new Map(
-  projection.canonical_entities.map((entity) => [entity.id, entity]),
+const infographicByProfile = new Map(
+  infographic.institution_history.map((institution) => [
+    institution.public_profile,
+    institution,
+  ]),
+);
+const infographicByRegistrySlug = new Map(
+  infographic.institution_history.map((institution) => [
+    institution.registry_slug,
+    institution,
+  ]),
 );
 const routeSlugSet = new Set();
 const legacyRouteSlugSet = new Set();
 for (const institution of projection.public_institutions) {
-  institutionByProfile.set(institution.public_profile, institution);
-  institutionByRegistrySlug.set(institution.registry_slug, institution);
   const entry = registryBySlug.get(institution.registry_slug);
   if (!entry) fail(`${institution.registry_slug} has no display record`);
   if (!entry.public_census?.included) {
@@ -98,20 +99,18 @@ for (const point of contextPoints) {
   if (!routeSlugSet.has(point.href.slice("/parishes/".length))) {
     fail(`context point ${point.slug} links to missing ${point.href}`);
   }
-  const institution = institutionByProfile.get(point.href);
-  const entity = institution
-    ? entityById.get(institution.culturenet_entity_id)
-    : null;
-  const registryEntry = institution
-    ? registryBySlug.get(institution.registry_slug)
-    : null;
-  if (entity?.lifecycle && registryEntry?.c83_row == null) {
-    const expectedClosed = yearOf(entity.lifecycle.end);
-    if (point.closed !== expectedClosed) {
-      fail(
-        `context point ${point.slug} closes ${point.closed}; canonical lifecycle requires ${expectedClosed}`,
-      );
-    }
+  const canonical = infographicByProfile.get(point.href);
+  if (!canonical) {
+    fail(`context point ${point.slug} has no infographic institution`);
+  }
+  if (
+    point.founded !== canonical.founded.year ||
+    point.closed !== canonical.closed.year ||
+    point.group !== canonical.status_group
+  ) {
+    fail(
+      `context point ${point.slug} disagrees with its canonical infographic lifecycle`,
+    );
   }
 }
 
@@ -120,13 +119,10 @@ for (const point of registryMap) {
   if (point.country === "US" && !routeByRegistrySlug.has(point.slug)) {
     fail(`U.S. registry map parish ${point.slug} has no canonical profile`);
   }
-  const institution = institutionByRegistrySlug.get(point.slug);
-  const entity = institution
-    ? entityById.get(institution.culturenet_entity_id)
-    : null;
-  if (entity?.lifecycle) {
-    const expectedFounded = yearOf(entity.lifecycle.start);
-    const expectedClosed = yearOf(entity.lifecycle.end);
+  const canonical = infographicByRegistrySlug.get(point.slug);
+  if (canonical) {
+    const expectedFounded = canonical.founded.year;
+    const expectedClosed = canonical.closed.year;
     if (
       point.foundedYear !== expectedFounded ||
       point.closedYear !== expectedClosed

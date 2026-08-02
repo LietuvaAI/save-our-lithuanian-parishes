@@ -316,6 +316,7 @@ export function getInstitutionDates(profileHref: string) {
     const unresolved = comparator.founded_year === null;
     return {
       entityId: null,
+      statusGroup: comparator.status_group,
       foundedYear: comparator.founded_year,
       foundedDisplay: comparator.founded_year
         ? String(comparator.founded_year)
@@ -360,6 +361,7 @@ export function getInstitutionDates(profileHref: string) {
             : `${foundedDisplay}\u2013present`;
   return {
     entityId: row.culturenet_entity_id,
+    statusGroup: row.status_group,
     foundedYear: row.founded.year,
     foundedDisplay,
     foundedUnresolved: unresolved,

@@ -1,3 +1,5 @@
+import type { EndState } from "@/lib/end-state";
+
 export interface ProfileDevelopment {
   date: string;
   headline: string;
@@ -51,6 +53,7 @@ interface ParishProfileViewInput {
   founded: number | null;
   closed: number | null;
   status: string;
+  endState: EndState;
   ownership: string;
   diocese: string | null;
   building: string | null;
@@ -191,10 +194,15 @@ function chronology(input: ParishProfileViewInput) {
         /\b(close|closed|closure|suppress|merged|ended)\b/i.test(item.title),
     )
   ) {
+    const worshipContinues = input.endState === "mass_continues";
     push({
       date: String(input.closed),
-      title: `${institutionNoun} life ended`,
-      detail: `The ${institutionNoun.toLowerCase()} closed in ${input.closed}.`,
+      title: worshipContinues
+        ? `Distinct ${institutionNoun.toLowerCase()} merged into its successor`
+        : `${institutionNoun} life ended`,
+      detail: worshipContinues
+        ? `The former ${institutionNoun.toLowerCase()} institution ended in ${input.closed}; Lithuanian worship continues under its successor.`
+        : `The ${institutionNoun.toLowerCase()} institution ended in ${input.closed}.`,
       sources: [],
       sortYear: input.closed,
     });
@@ -251,7 +259,12 @@ function facts(input: ParishProfileViewInput): ParishProfileFact[] {
           : "Founding year unresolved"),
     },
     {
-      label: input.institutionEnded ? "Former church" : "Current church",
+      label:
+        input.endState === "mass_continues"
+          ? "Worship site"
+          : input.institutionEnded
+            ? "Former church"
+            : "Current church",
       value: input.currentChurch ?? input.building ?? "Not established",
     },
     {
