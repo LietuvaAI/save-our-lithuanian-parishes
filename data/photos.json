@@ -1151,6 +1151,15 @@
       "rights": "permission_granted",
       "rightsNote": "The same St. Anthony church photograph appears in Draugas's 2011 parish-jubilee article, predating its later publication by VKPK. Vilija confirmed use of the source photograph for this line-art adaptation on 2026-08-01. The generated drawing is published with attribution to the earliest accessible online source.",
       "evidenceUrl": "https://www.draugas.org/legacy/06-02-11detroit.html"
+    },
+    "lietuviu-baznycia-unnamed-newark-nj-line-drawing": {
+      "src": "/images/parishes/newark-holy-trinity-line-drawing.png",
+      "alt": "Line drawing of Holy Trinity Lithuanian Roman Catholic Church on Adams Street in Newark, New Jersey.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a public-domain image supplied by Vilija; online copy credited to Alberto Valdes by Newark Religion.",
+      "license": "Public domain source; line-art adaptation CC BY 4.0",
+      "rights": "public_domain",
+      "rightsNote": "Vilija confirmed the source image's public-domain provenance on 2026-08-02. Newark Religion identifies the online copy as 'Photo from Alberto Valdes' but does not provide the underlying postcard date or an open license; the public-domain determination rests on the separately confirmed provenance. This line-art adaptation is published under CC BY 4.0.",
+      "evidenceUrl": "https://newarkreligion.com/photos/displayimage.php?album=202&pid=2287"
     }
   },
   "_registryNotes": {
