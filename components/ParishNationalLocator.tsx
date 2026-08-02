@@ -91,7 +91,7 @@ export default function ParishNationalLocator({ slug }: { slug: string }) {
 
   const region = regionForState(subject.state);
   const view = REGION_VIEW[region];
-  const pointRadius = view.width / 75;
+  const pointRadius = view.width / 48;
 
   return (
     <figure data-profile-national-locator className="mt-5 border-t border-rule pt-4">
@@ -122,7 +122,7 @@ export default function ParishNationalLocator({ slug }: { slug: string }) {
         <circle
           cx={subject.x}
           cy={subject.y}
-          r={pointRadius * 2.25}
+          r={pointRadius * 2.1}
           fill="none"
           stroke="var(--accent)"
           strokeWidth={pointRadius * 0.42}
