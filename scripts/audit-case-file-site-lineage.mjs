@@ -52,11 +52,15 @@ const entries = readdirSync(caseDirectory)
   .filter((file) => file.endsWith(".json"))
   .map((file) => {
     const record = JSON.parse(readFileSync(new URL(file, caseDirectory), "utf8"));
+    const historicalNarrative = (record.historicalNarrative ?? []).map(
+      (paragraph) => paragraph.text,
+    );
     const text = normalize([
       record.summary,
       record.conflictsWithArchiveRecord,
       record.gaps,
       ...(record.historicalSummary ?? []),
+      ...historicalNarrative,
       ...(record.developments ?? []).flatMap((development) => [
         development.headline,
         development.detail,
@@ -71,7 +75,9 @@ const entries = readdirSync(caseDirectory)
       as_of: record.asOf,
       source_count: record.sources?.length ?? 0,
       development_count: record.developments?.length ?? 0,
-      has_historical_summary: Boolean(record.historicalSummary?.length),
+      has_historical_summary: Boolean(
+        record.historicalSummary?.length || historicalNarrative.length,
+      ),
       site_extraction_candidate: matchedSiteTerms.length > 0,
       lineage_extraction_candidate: matchedLineageTerms.length > 0,
       matched_site_terms: matchedSiteTerms,
@@ -131,7 +137,7 @@ site stages or an institution-lineage event.
 - Case files: **${totals.case_files}**
 - With linked sources: **${totals.with_sources}**
 - With developments: **${totals.with_developments}**
-- With a separate historical-summary field: **${totals.with_historical_summary}**
+- With a public historical narrative: **${totals.with_historical_summary}**
 - Site-extraction candidates: **${totals.site_extraction_candidates}**
 - Lineage-extraction candidates: **${totals.lineage_extraction_candidates}**
 

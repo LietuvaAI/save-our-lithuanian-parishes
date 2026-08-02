@@ -1,14 +1,14 @@
 // Cross-surface status consistency guard. Born 2026-07-27, after the
 // homepage map shipped its own private status derivation and labeled 30+
 // standing buildings "Active today" while The History said 11 — "nothing
-// matches across the site" (Vilija). Every surface must derive status from
-// lib/end-state.ts resolveEndState; this guard proves the generated layers
+// matches across the site" (Vilija). Every public surface must now read the
+// CultureNet infographic projection; this guard proves the generated layers
 // agree with it and blocks the build when any surface drifts.
 //
 // Checks:
 //   1. context-points.json group (shared by profile context maps, the
 //      homepage map's registry dots, and the Hearth dispatch renderer)
-//      must equal toGroup(resolveEndState(...)) for every canonical slug.
+//      must equal the projected status and ending year for every mapped row.
 //   2. No situation-overlay current_use may claim "Active Lithuanian
 //      parish" unless that record's identity is active_parish.
 //   3. Overlay classifier enum values must stay inside the public status
@@ -21,24 +21,7 @@ import { fileURLToPath } from "node:url";
 const read = (p) =>
   JSON.parse(readFileSync(new URL(`../data/${p}`, import.meta.url), "utf8"));
 
-// Mirror of lib/end-state.ts resolveEndState + toGroup (scripts can't import TS).
-function resolveGroup(identity, buildingFate, hasClosed, isStanding, endingMode) {
-  if (endingMode === "undecided") return "unresolved";
-  if (isStanding && identity === "lost") return "closed";
-  if (isStanding && !identity) return "unverified";
-  if (isStanding)
-    return identity === "mass_continues" ? "mass_continues"
-      : identity === "ethnically_transferred" ? "transferred" : "active_parish";
-  if (identity === "ethnically_transferred") return "transferred";
-  if (buildingFate === "demolished") return "closed";
-  if (buildingFate === "repurposed_secular" || buildingFate === "repurposed_religious") return "closed";
-  if (identity === "lost") return "closed";
-  if (hasClosed) return "closed";
-  return "unverified";
-}
-
-const lib = read("parishes.json");
-const ctx = new Map(read("context-points.json").points.map((p) => [p.slug, p.group]));
+const contextPoints = read("context-points.json").points;
 const situations = read("parish-situation.json").parishes;
 const registry = read("registry-unified.json").parishes;
 const publication = read("canonical-publication-projection.json");
@@ -130,16 +113,25 @@ function isUSRecord(r) {
   return r.public_census?.included === true;
 }
 
-for (const p of lib) {
-  const g = ctx.get(p.slug);
-  if (!g) continue; // no coordinates — not on any map
-  const isStanding = p.status === "standing";
-  const want = resolveGroup(
-    p.lithuanianIdentity, p.buildingFate,
-    p.yearClosed != null || !isStanding, isStanding, p.endingMode,
-  );
-  if (g !== want)
-    errors.push(`${p.slug}: context-points group "${g}" != resolver "${want}"`);
+const infographicByProfile = new Map(
+  infographic.institution_history.map((row) => [row.public_profile, row]),
+);
+for (const point of contextPoints) {
+  const canonical = infographicByProfile.get(point.href);
+  if (!canonical) {
+    errors.push(`${point.slug}: context point has no canonical infographic row`);
+    continue;
+  }
+  if (point.group !== canonical.status_group) {
+    errors.push(
+      `${point.slug}: context group "${point.group}" != canonical "${canonical.status_group}"`,
+    );
+  }
+  if (point.closed !== canonical.closed.year) {
+    errors.push(
+      `${point.slug}: context ending ${point.closed ?? "present"} != canonical ${canonical.closed.year ?? "present"}`,
+    );
+  }
 }
 
 for (const [slug, e] of Object.entries(situations)) {
@@ -180,5 +172,5 @@ if (errors.length) {
   process.exit(1);
 }
 console.log(
-  `OK: canonical map groups, overlay classifiers, active-claim guard, and /record map parity are consistent.`,
+  `OK: canonical map groups and dates, overlay classifiers, active-claim guard, and /record map parity are consistent.`,
 );

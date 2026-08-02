@@ -19,14 +19,18 @@ const read = (p) =>
 const PROJ = geoAlbersUsa().scale(1300).translate([487.5, 305]);
 const registry = read("registry-unified.json");
 const publication = read("canonical-publication-projection.json");
+const infographic = read("canonical-infographic-projection.json");
 const publicationByRegistrySlug = new Map(
   publication.public_institutions.map((institution) => [
     institution.registry_slug,
     institution,
   ]),
 );
-const canonicalEntityById = new Map(
-  publication.canonical_entities.map((entity) => [entity.id, entity]),
+const infographicByProfile = new Map(
+  infographic.institution_history.map((institution) => [
+    institution.public_profile,
+    institution,
+  ]),
 );
 const libParishes = read("parishes.json");
 const libByC83Row = new Map(
@@ -34,22 +38,10 @@ const libByC83Row = new Map(
     (parish.c83Rows ?? []).map((row) => [row, parish]),
   ),
 );
-const situation = read("parish-situation.json").parishes;
 const geoCache = {
   ...read("candidates/geo.json"),
   ...read("geo.json"),
 };
-
-const situationByRegistrySlug = new Map(
-  Object.values(situation).map((e) => [e.registry_slug, e]),
-);
-
-const asYear = (v) => {
-  const m = (v ?? "").match(/\b(1[89]\d{2}|20[0-2]\d)\b/);
-  return m ? parseInt(m[1]) : null;
-};
-const yearOf = (lockedVal, arr) =>
-  asYear(lockedVal) ?? asYear(arr?.[0]?.value) ?? null;
 
 const normalizeDiocese = (raw) => {
   if (!raw) return null;
@@ -59,56 +51,23 @@ const normalizeDiocese = (raw) => {
   return d ? d.replace(/^(Arch)?diocese of /i, "") : null;
 };
 
-// Mirrors lib/end-state.ts resolveEndState, loss sub-fates collapsed.
-function groupOf({ identity, buildingFate, hasClosed, isStanding, endingMode }) {
-  if (endingMode === "undecided") return "unresolved";
-  if (isStanding && identity === "lost") return "closed";
-  if (isStanding && !identity) return "unverified";
-  if (isStanding) return identity === "mass_continues" ? "mass_continues"
-    : identity === "ethnically_transferred" ? "transferred" : "active_parish";
-  if (identity === "ethnically_transferred") return "transferred";
-  if (buildingFate === "demolished") return "closed";
-  if (buildingFate === "repurposed_secular" || buildingFate === "repurposed_religious") return "closed";
-  if (identity === "lost") return "closed";
-  if (hasClosed) return "closed";
-  return "unverified";
-}
-
-const clean = (v) => (v && v !== "unknown" ? v : null);
 const points = [];
 let skipped = 0;
 for (const r of registry.parishes) {
   const institution = publicationByRegistrySlug.get(r.slug);
   if (!institution) continue;
-  const canonicalEntity = canonicalEntityById.get(
-    institution.culturenet_entity_id,
+  const canonicalInfographic = infographicByProfile.get(
+    institution.public_profile,
   );
+  if (!canonicalInfographic) {
+    throw new Error(
+      `${institution.registry_slug}: missing canonical infographic institution`,
+    );
+  }
 
   const lib = r.c83_row != null ? libByC83Row.get(r.c83_row) : undefined;
   const libOk = !!(lib && lib.city === r.city);
-  const overlay = libOk ? null : situationByRegistrySlug.get(r.slug);
-
-  // Canonical parishes: locked-core year wins on every surface.
-  const closed = libOk
-    ? (lib.yearClosed ?? null)
-    : canonicalEntity?.lifecycle
-      ? asYear(canonicalEntity.lifecycle.end)
-      : r.lifecycle
-        ? (r.lifecycle.selected_closed_year ?? null)
-        : yearOf(r.locked?.year_closed, r.years?.closed);
-  const endingMode = libOk
-    ? lib.endingMode
-    : r.lifecycle?.canonical_status === "unresolved"
-      ? "undecided"
-      : null;
-  const identity = libOk ? lib.lithuanianIdentity : clean(overlay?.lithuanian_identity);
-  const buildingFate = libOk ? lib.buildingFate : clean(overlay?.building_fate);
-  const isStanding = !!(
-    (endingMode === "standing" && !closed) ||
-    (!libOk && r.lifecycle?.canonical_status === "standing" && !closed) ||
-    (!closed && (identity === "active_parish" || identity === "mass_continues")) ||
-    (!closed && !libOk && overlay?.canonical_status === "standing")
-  );
+  const closed = canonicalInfographic.closed.year;
 
   const g = r.geo ?? {};
   const ll =
@@ -130,7 +89,8 @@ for (const r of registry.parishes) {
     state: r.state,
     x: +xy[0].toFixed(1),
     y: +xy[1].toFixed(1),
-    group: groupOf({ identity, buildingFate, hasClosed: !!closed, isStanding, endingMode }),
+    group: canonicalInfographic.status_group,
+    founded: canonicalInfographic.founded.year,
     closed,
     recordType: institution.record_type,
     congregationClass: institution.institution_class,
@@ -143,7 +103,7 @@ writeFileSync(
   new URL("../data/context-points.json", import.meta.url),
   JSON.stringify(
     {
-      note: "Shared diocese-zoom point layer — true un-fanned geoAlbersUsa 975x610 coords. Consumed by components/ParishContextMap.tsx and scripts/render-dispatch-map.mjs. Group mirrors lib/end-state.ts.",
+      note: "Shared diocese-zoom point layer — true un-fanned geoAlbersUsa 975x610 coords. Consumed by components/ParishContextMap.tsx and scripts/render-dispatch-map.mjs. Public lifecycle fields come from the canonical infographic projection.",
       frame: { w: 975, h: 610 },
       counts: { points: points.length, skippedNoGeo: skipped },
       points,

@@ -13304,10 +13304,11 @@
       "slug": "michael-scranton-pa",
       "names": {
         "lt": "Šv. Mykolo",
-        "en": "St. Michael",
+        "en": "St. Michael the Archangel",
         "variants": [
           "Šv. Mykolo",
-          "St. Michael"
+          "St. Michael",
+          "St. Michael the Archangel"
         ]
       },
       "city": "Scranton",
@@ -13364,38 +13365,27 @@
             2025
           ],
           "importance": 3
+        },
+        {
+          "axis": "published-parish-history",
+          "kind": "page-cited-secondary-source",
+          "title": "Vladas Būtėnas, Pennsylvanijos angliakasių Lietuva",
+          "date": "1977",
+          "locator": "Šv. Mykolo parapija section and p. 304",
+          "archiveUrlPending": true
         }
       ],
       "years": {
         "founded": [
           {
-            "value": "1942",
-            "source": "draugas-registry-1909-2007"
-          },
-          {
-            "value": "1927",
-            "source": "draugas-jubilee-implied",
-            "cite": "1967-06-28 p4 (40 metų)"
+            "value": "1914",
+            "source": "published-parish-history",
+            "cite": "Būtėnas, Pennsylvanijos angliakasių Lietuva, Šv. Mykolo parapija"
           }
         ],
         "closed": []
       },
-      "conflicts": [
-        {
-          "field": "founded",
-          "variants": [
-            {
-              "value": "1942",
-              "source": "draugas-registry-1909-2007"
-            },
-            {
-              "value": "1927",
-              "source": "draugas-jubilee-implied",
-              "cite": "1967-06-28 p4 (40 metų)"
-            }
-          ]
-        }
-      ],
+      "conflicts": [],
       "related_sites": [],
       "events_refs": [
         {
@@ -13410,7 +13400,7 @@
         "source": "truelithuania"
       },
       "congregation_class": "roman_catholic",
-      "axes_count": 3,
+      "axes_count": 4,
       "record_depth": "case-filed",
       "diocese": "Diocese of Scranton",
       "c83_rows": [
@@ -13420,11 +13410,23 @@
         {
           "value": "2025",
           "source": "web-historical"
+        },
+        {
+          "value": "1942",
+          "source": "draugas-registry-1909-2007",
+          "reason": "This is the replacement brick church year, not the parish founding year."
+        },
+        {
+          "value": "1927",
+          "source": "draugas-jubilee-implied",
+          "cite": "1967-06-28 p4 (40 metų)",
+          "reason": "Jubilee-derived reading superseded by the 1977 published parish history's explicit 1914 founding."
         }
       ],
       "aliases": [],
       "lifecycle": {
         "canonical_status": "standing",
+        "selected_founded_year": 1914,
         "selected_closed_year": null,
         "identity": "ethnically_transferred",
         "confidence": "high"
@@ -23574,8 +23576,8 @@
     }
   ],
   "registryRevision": {
-    "version": 14,
-    "date": "2026-08-01",
+    "version": 17,
+    "date": "2026-08-02",
     "changelog": [
       "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
       "Collapsed adjudicated same-entity rows while preserving all 83 historical case-file row references in c83_rows.",
@@ -23612,16 +23614,19 @@
       "Registry Revision 11: corrected St. Peter Detroit's institutional founding to 1920 while retaining 1921 as the church-opening year and 1995 as the parish closure year; public count, identity, and classification are unchanged.",
       "Registry Revision 12: added page-cited 1973 parish-history evidence for the Divine Providence Schaefer church and St. George origin relationship; public count, identity, classification, site count, and continuity-edge count are unchanged.",
       "Registry Revision 13: linked the 1973 Divine Providence parish history to its public Žiburio archive item; public counts, identities, classifications, lifecycle dates, site counts, and continuity-edge counts are unchanged.",
-      "Registry Revision 14: added page-cited St. George Detroit parish and church-building chronology from the 1973 parish history, plus cleared line art; public counts, identities, classifications, site counts, and continuity-edge counts are unchanged."
+      "Registry Revision 14: added page-cited St. George Detroit parish and church-building chronology from the 1973 parish history, plus cleared line art; public counts, identities, classifications, site counts, and continuity-edge counts are unchanged.",
+      "Registry Revision 15: reconciled the four protected campaign profiles to current official evidence, separated institution and building status, and corrected Hartford and Maspeth status groups; public institution, site, and continuity-edge counts are unchanged.",
+      "Registry Revision 16: clarified Saint Michael the Archangel Parish in Scranton as one surviving parish across its former Jackson Street church and current Saint Lucy home, and distinguished its current Latin Mass from undocumented Lithuanian worship; public counts are unchanged.",
+      "Registry Revision 17: established Saint Michael the Archangel Parish in Scranton in 1914, promoted its original wooden church as a distinct worship site, and enriched its school, language, and two-church history from the 1977 published parish account; the public institution count remains unchanged."
     ],
-    "contentHash": "653463122f42675776cb4378a9481db1eba7ce7de457ef0188e87857ff77582f"
+    "contentHash": "bc4fb1e11792de29975eeea414a9e8046fef7b46251387ab32627845ea6daffd"
   },
   "publicationAuthority": {
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
     "revisionId": "canonical-public-census-2026-07-31",
-    "contentHash": "sha256:86bfebdcc2d1e5d532b2c1af5c52b55ec690b8a78318e54dd8701e44739b7a0e",
+    "contentHash": "sha256:0c68ed54a90e5af4e7805dcde2a30ea6f3bee90f3816632c4733a8a3e596956a",
     "publicUSInstitutions": 154,
-    "synchronized": "2026-08-01"
+    "synchronized": "2026-08-02"
   }
 }

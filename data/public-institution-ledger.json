@@ -4,10 +4,10 @@
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
     "revisionId": "canonical-public-census-2026-07-31",
-    "contentHash": "sha256:86bfebdcc2d1e5d532b2c1af5c52b55ec690b8a78318e54dd8701e44739b7a0e"
+    "contentHash": "sha256:0c68ed54a90e5af4e7805dcde2a30ea6f3bee90f3816632c4733a8a3e596956a"
   },
-  "registryRevision": 14,
-  "registryDate": "2026-08-01",
+  "registryRevision": 17,
+  "registryDate": "2026-08-02",
   "claim": "The current documented record contains 154 distinct U.S. Lithuanian religious institutions.",
   "inclusionRule": "Count one canonical U.S. institution when CultureNet publishes it as a parish, mission, or congregation. Buildings, duplicate aliases, historical attempts, hosted worship, research leads, and comparators remain linked context and never increase this total.",
   "counts": {
@@ -9691,14 +9691,17 @@
       "canonicalDetailStatus": "active_non_lithuanian_continuation",
       "protectedCampaign": false,
       "assertionIds": [
+        "assert:nsp-8:st-michael-scranton-archive-history",
         "assert:nsp-8:st-michael-scranton-lifecycle",
         "assert:nsp-8:st-michael-scranton-sites"
       ],
       "sourceArtifactIds": [
+        "src:nsp-8:butenas-pennsylvania-coal-lithuania-st-michael:1977",
         "src:nsp-8:st-michael-scranton-case:2026-07-16"
       ],
       "sourceFamilies": [
         "draugas",
+        "published-parish-history",
         "truelithuania",
         "web-historical"
       ],
@@ -9726,9 +9729,21 @@
           "label": "truelithuania",
           "locator": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/",
           "url": "http://global.truelithuania.com/lt/northern-coal-region-scranton-1614/"
+        },
+        {
+          "sourceFamily": "published-parish-history",
+          "label": "published-parish-history",
+          "locator": null,
+          "url": null
         }
       ],
       "canonicalSources": [
+        {
+          "sourceArtifactId": "src:nsp-8:butenas-pennsylvania-coal-lithuania-st-michael:1977",
+          "label": "Vladas Būtėnas, Pennsylvanijos angliakasių Lietuva — Šv. Mykolo parapija",
+          "locator": "Šv. Mykolo parapija",
+          "url": null
+        },
         {
           "sourceArtifactId": "src:nsp-8:st-michael-scranton-case:2026-07-16",
           "label": "Saint Michael Scranton current-condition case file",

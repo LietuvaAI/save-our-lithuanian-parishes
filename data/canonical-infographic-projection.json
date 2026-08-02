@@ -2,7 +2,7 @@
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
-    "publication_projection_hash": "sha256:86bfebdcc2d1e5d532b2c1af5c52b55ec690b8a78318e54dd8701e44739b7a0e",
+    "publication_projection_hash": "sha256:0c68ed54a90e5af4e7805dcde2a30ea6f3bee90f3816632c4733a8a3e596956a",
     "publication_projection_revision": "canonical-public-census-2026-07-31",
     "repository": "LietuvaAI/culturenet-brain"
   },
@@ -340,7 +340,19 @@
       "slug": "divine-providence-detroit-schaefer-site"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "current_official_site",
+            "end": null,
+            "label": "Standing and in active parish use as observed July 31, 2026",
+            "start": "2026-07-31"
+          },
+          "relationship_id": "rel:detroit:divine-providence-southfield-building-standing-2026",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:divine-providence-southfield-site",
       "demolished_year": null,
@@ -5867,9 +5879,9 @@
       "institution_use_periods": [
         {
           "date": {
-            "certainty": "case file",
+            "certainty": "1977 published parish history and current-condition case file",
             "end": "2025-09-28",
-            "start": "1942 current-building reading"
+            "start": "1942"
           },
           "institution_entity_id": "cn:institution:st-michael-archangel-scranton-pa",
           "institution_profile": "/parishes/sv-mykolo-scranton-pa",
@@ -5880,9 +5892,10 @@
       "lifecycle_text": {
         "end": "vacant and listed after 2025-09-28",
         "source_assertion_ids": [
+          "assert:nsp-8:st-michael-scranton-archive-history",
           "assert:nsp-8:st-michael-scranton-sites"
         ],
-        "start": "1942 listing date"
+        "start": "1942"
       },
       "milestones": [],
       "name": "Former Saint Michael church, Scranton",
@@ -5891,6 +5904,40 @@
       ],
       "site_class": "worship_site",
       "slug": "st-michael-jackson-street-scranton-pa"
+    },
+    {
+      "condition_relationships": [],
+      "counted_in_public_institution_total": false,
+      "culturenet_entity_id": "cn:building_site:st-michael-original-wooden-church-scranton-pa",
+      "demolished_year": null,
+      "first_documented_year": 1914,
+      "institution_use_periods": [
+        {
+          "date": {
+            "certainty": "1977 published parish history",
+            "end": "1942",
+            "start": "1914"
+          },
+          "institution_entity_id": "cn:institution:st-michael-archangel-scranton-pa",
+          "institution_profile": "/parishes/sv-mykolo-scranton-pa",
+          "relationship_id": "rel:nsp-8:st-michael-used-original-wooden-church",
+          "relationship_type": "institution-used-site"
+        }
+      ],
+      "lifecycle_text": {
+        "end": "replaced by 1942 brick church; later physical disposition unresolved",
+        "source_assertion_ids": [
+          "assert:nsp-8:st-michael-original-wooden-church"
+        ],
+        "start": "1914"
+      },
+      "milestones": [],
+      "name": "Original Saint Michael Lithuanian church, Scranton",
+      "related_public_institution_ids": [
+        "cn:institution:st-michael-archangel-scranton-pa"
+      ],
+      "site_class": "worship_site",
+      "slug": "st-michael-original-wooden-church-scranton-pa"
     },
     {
       "condition_relationships": [],
@@ -6513,7 +6560,7 @@
       "unit": "Canadian Lithuanian parish comparator"
     }
   },
-  "content_hash": "sha256:006dbe5e4ee405c9f0c71071336a4605420495435c04b12be26ee7450552e89f",
+  "content_hash": "sha256:8551f6e1bc2d951d40181b2fc31e627c5e404c4f931ba9160e86df99979abc3a",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -8719,15 +8766,15 @@
     }
   ],
   "counts": {
-    "building_site_entities": 168,
+    "building_site_entities": 169,
     "canadian_comparator_parishes": 3,
-    "closed_roman_catholic_parishes": 88,
+    "closed_roman_catholic_parishes": 87,
     "closed_roman_catholic_parishes_since_1990": 55,
     "closed_roman_catholic_parishes_since_2020": 3,
     "closed_roman_catholic_parishes_with_dated_year": 79,
     "coal_region_parish_institutions": 15,
     "institution_continuity_edges": 51,
-    "physical_worship_sites": 131,
+    "physical_worship_sites": 132,
     "public_us_institutions": 154,
     "roman_catholic_parish_institutions": 132,
     "roman_catholic_parishes_with_closure_year": 92,
@@ -8988,9 +9035,9 @@
       "culturenet_entity_id": "cn:institution:annunciation-bvm-williamsburg-ny",
       "diocese": "Brooklyn",
       "founded": {
-        "authority": "canonical_graph",
-        "display": "1863",
-        "year": 1863
+        "authority": "canonical_infographic_adjudication",
+        "display": "1914",
+        "year": 1914
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
@@ -9003,9 +9050,9 @@
         "rel:lineage-1:annunciation-used-north-fifth-site"
       ],
       "state": "NY",
-      "status_authority": "site_r10_baseline",
-      "status_group": "active_parish",
-      "status_observed_at": "2026-07-31"
+      "status_authority": "canonical_status_adjudication",
+      "status_group": "mass_continues",
+      "status_observed_at": "2026-08-02"
     },
     {
       "building_fate": "demolished",
@@ -10920,9 +10967,9 @@
         "rel:waterbury:st-joseph-used-original-church"
       ],
       "state": "CT",
-      "status_authority": "site_r10_baseline",
+      "status_authority": "current_campaign_adjudication",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-08-02"
     },
     {
       "building_fate": "unknown",
@@ -11178,8 +11225,8 @@
       "diocese": "Scranton",
       "founded": {
         "authority": "canonical_graph",
-        "display": "1917 dedication; exact founding unresolved",
-        "year": 1917
+        "display": "1914",
+        "year": 1914
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
@@ -11190,6 +11237,7 @@
       "relationship_ids": [
         "rel:nsp-8:st-michael-relocated-st-lucy",
         "rel:nsp-8:st-michael-used-jackson-church",
+        "rel:nsp-8:st-michael-used-original-wooden-church",
         "rel:nsp-8:st-michael-used-rectory"
       ],
       "state": "PA",
@@ -11812,9 +11860,9 @@
         "rel:detroit:st-anthony-records-held-at-divine-providence"
       ],
       "state": "MI",
-      "status_authority": "site_r10_baseline",
+      "status_authority": "current_campaign_adjudication",
       "status_group": "active_parish",
-      "status_observed_at": "2026-07-25"
+      "status_observed_at": "2026-08-02"
     },
     {
       "building_fate": "unknown",
@@ -13291,9 +13339,9 @@
         "rel:maspeth:transfiguration-used-perry-predecessor"
       ],
       "state": "NY",
-      "status_authority": "site_r10_baseline",
-      "status_group": "unresolved",
-      "status_observed_at": "2026-07-09"
+      "status_authority": "current_campaign_adjudication",
+      "status_group": "transferred",
+      "status_observed_at": "2026-08-02"
     },
     {
       "building_fate": "standing",
@@ -13323,9 +13371,9 @@
         "rel:hartford:holy-trinity-used-capitol-avenue-church"
       ],
       "state": "CT",
-      "status_authority": "site_r10_baseline",
-      "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_authority": "current_campaign_adjudication",
+      "status_group": "unresolved",
+      "status_observed_at": "2026-08-02"
     },
     {
       "building_fate": "demolished",
@@ -13605,7 +13653,7 @@
     {
       "counted_in_public_institution_total": false,
       "id": "physical_worship_site_history",
-      "population": 131,
+      "population": 132,
       "unit": "accepted physical church, chapel, shrine, or worship site"
     },
     {

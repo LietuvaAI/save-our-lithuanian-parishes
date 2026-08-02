@@ -1,9 +1,9 @@
 {
   "slug": "svc-trejybes-hartford-ct",
-  "asOf": "2026-07-16",
+  "asOf": "2026-08-02",
   "buildingStatus": "standing",
-  "currentUse": "Catholic church building (mission of the Cathedral parish, Archdiocese of Hartford) at 53 Capitol Ave. Regular Masses — including the Sunday 9:00 am Lithuanian/English Mass — were announced to end May 30, 2026; funerals and baptisms continue. Parishioners are campaigning to convert the building into a Lithuanian cultural center.",
-  "summary": "Holy Trinity (Švč. Trejybės) Lithuanian Roman Catholic Church still stands at 53 Capitol Avenue in Hartford, but the parish has been through a devastating eighteen months. In late January 2025 the Archdiocese of Hartford placed its longtime priest, Fr. Charles Jacobs, on administrative leave over alleged financial improprieties, stating he had admitted taking an undisclosed amount of parish money for personal use; Very Rev. John Melnick, rector of the Cathedral, was appointed administrator, and the February 2025 bulletin confirmed the parish is canonically a mission of the Cathedral parish. In August 2025 Hartford police closed their larceny investigation for insufficient evidence, but the archdiocese kept Jacobs on leave pending a canonical process and did not return him to the parish. In April 2026 parishioners were notified of a partial closure: citing a loss of over $74,000 since March 2025, a lack of clergy, and unaffordable repairs, leadership announced that Masses would cease as of May 30, 2026, while funerals and baptisms would continue. As of the February 2025 bulletin the parish (about 300 families drawing from 47 Connecticut zip codes) still celebrated a Sunday 9:00 am Lithuanian/English Mass. Parishioners now hope to turn the historic 1928 church into a cultural center celebrating Hartford's Lithuanian roots.",
+  "currentUse": "Archdiocesan Catholic mission with a standing church at 53 Capitol Avenue. Regular Masses ended May 30, 2026; funerals and baptisms continue. Parishioners are contesting the partial closure and advocating preservation as a Lithuanian cultural center.",
+  "summary": "Holy Trinity remains listed by the Archdiocese of Hartford as a mission at 53 Capitol Avenue. Its regular Mass schedule, including the Sunday Lithuanian/English Mass, ended May 30, 2026 after leadership cited financial losses, clergy limits, and unaffordable repairs. Funerals and baptisms continue in the standing 1928 church. Because the mission still exists and parishioners are contesting the partial closure while seeking a Lithuanian cultural future for the building, its final institutional outcome remains unresolved rather than fully closed.",
   "developments": [
     {
       "date": "2025-01/2025-02",
@@ -59,6 +59,18 @@
   ],
   "sources": [
     {
+      "title": "Parish directory",
+      "publisher": "Archdiocese of Hartford",
+      "date": "2026-08-02",
+      "url": "https://archdioceseofhartford.org/parishes/"
+    },
+    {
+      "title": "Northern Vicariate mission listing",
+      "publisher": "Archdiocese of Hartford",
+      "date": "2026-06-18",
+      "url": "https://archdioceseofhartford.org/wp-content/uploads/2026/06/Northern-Vicariate-06-18-2026.pdf"
+    },
+    {
       "title": "Hartford parishioners met with notice of partial closure for Holy Trinity Catholic Church",
       "publisher": "WTNH",
       "date": "2026-04 (approx.)",
@@ -108,6 +120,6 @@
     }
   ],
   "confidence": "verified",
-  "conflictsWithArchiveRecord": "No contradictions, but a major refinement: the archive record's \"standing / active as of late 2023\" is now outdated. The building still stands and the parish survived into 2026, but regular Masses (including the Lithuanian Sunday Mass, still listed in the Feb 2025 bulletin) were announced to end May 30, 2026 in a \"partial closure\" driven by a $74,000+ loss since March 2025, clergy shortage, and the January 2025 Fr. Charles Jacobs financial scandal. Also a refinement of ownership context: the Feb 2025 bulletin confirms Holy Trinity is canonically a mission of the Cathedral (St. Joseph) parish, not a standalone parish — consistent with \"diocese_rc\" ownership but more precise. Nothing found that speaks to the archive's 2017 hall-only-access ambiguity.",
-  "gaps": "Could not verify: (1) the exact publication date of the WTNH partial-closure article (site returned 403; AMP version gave only \"3 months ago\" from July 2026, i.e. ~April 2026); (2) whether Masses in fact ceased after May 30, 2026, and whether a final/farewell Mass was held — no post-May-2026 coverage found; (3) the outcome of the canonical process against Fr. Jacobs (still pending as of Aug 2025 reporting); (4) any formal organization, fundraising, or agreement behind the proposed Lithuanian cultural center — only parishioner hopes reported, and a \"Holy Trinity Cultural Arts Center\" Facebook page surfaced in search but could not be opened to confirm it relates to Hartford; (5) when Holy Trinity became a mission of the Cathedral parish (possibly the 2017 archdiocesan restructuring, but no source directly ties the two); (6) the parish website (holytrinityhartford.org) blocked fetching (HTTP 403), so its current announcements could not be read — note its odd spam-looking subdomains in search results suggest possible site compromise; (7) no Draugas or other Lithuanian-language coverage of the 2026 closure was found via search."
+  "conflictsWithArchiveRecord": "The archive's standing, active reading is now historically superseded. The church still stands and Holy Trinity remains listed by the Archdiocese as a mission, but its regular Mass schedule ended May 30, 2026. The result is a partial closure with an unresolved mission outcome, not a completed institutional closure.",
+  "gaps": "No final decree ending the mission was located. The long-term sacramental schedule, governance of the proposed cultural use, and outcome of the community's challenge remain unresolved."
 }

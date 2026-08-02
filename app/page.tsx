@@ -105,9 +105,9 @@ const CAMPAIGN_ART: Record<
   }
 > = {
   "/parishes/dievo-apvaizdos-southfield-mi": {
-    src: "/images/parishes/southfield-divine-providence-line-drawing.png",
+    src: "/images/parishes/southfield-divine-providence-current-line-drawing.png",
     alt: "Line drawing of Divine Providence Lithuanian Catholic Church in Southfield.",
-    attribution: "Divine Providence Parish archive",
+    attribution: "Current photograph supplied by Vilija Jurgutis",
   },
   "/parishes/svc-trejybes-hartford-ct": {
     src: "/images/parishes/hartford-holy-trinity-line-drawing.png",

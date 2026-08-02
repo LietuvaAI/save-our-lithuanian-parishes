@@ -1,7 +1,7 @@
 "use client";
 
 // The homepage map: ONE mark system across the whole record (Vilija
-// 2026-07-21), colored by the SHARED end-state resolver (lib/end-state.ts)
+// 2026-07-21), colored by the canonical CultureNet infographic projection
 // so the map always agrees with the profiles and The History (Vilija
 // 2026-07-27: the map must match the history flow). Shape = congregation
 // class:
@@ -29,8 +29,6 @@ import {
 import {
   GROUP_DESCRIPTION,
   GROUP_LABEL,
-  resolveEndState,
-  toGroup,
   type EndStateGroup,
 } from "@/lib/end-state";
 import {
@@ -178,6 +176,16 @@ const contextRecordTypeBySlug = new Map(
     (c) => [c.slug, c.recordType],
   ),
 );
+const contextFoundedBySlug = new Map(
+  (contextPoints.points as { slug: string; founded: number | null }[]).map(
+    (c) => [c.slug, c.founded],
+  ),
+);
+const contextClosedBySlug = new Map(
+  (contextPoints.points as { slug: string; closed: number | null }[]).map(
+    (c) => [c.slug, c.closed],
+  ),
+);
 
 // Build alert lookup: slug → {kind, whatChanged}
 type AlertKind = RecordSignal;
@@ -198,22 +206,18 @@ function buildPoints(): Point[] {
     const alert = alertBySlug.get(p.slug);
     const alerted = !!alert && alert.kind === "active";
 
-    const isStanding = p.status === "standing";
-    const endState = resolveEndState(
-      (p.lithuanianIdentity as never) ?? null,
-      (p.buildingFate as never) ?? null,
-      p.yearClosed != null || !isStanding,
-      isStanding,
-      p.endingMode,
-    );
-    const group = toGroup(endState);
+    const group = contextGroupBySlug.get(p.slug) as EndStateGroup;
+    if (!group) {
+      throw new Error(`${p.slug}: map point is missing canonical context`);
+    }
     const status: Status = GROUP_STATUS[group];
     const fate: Point["fate"] =
       group !== "closed"
         ? null
-        : endState === "demolished"
+        : p.buildingFate === "demolished"
           ? "demolished"
-          : endState === "repurposed"
+          : p.buildingFate === "repurposed_secular" ||
+              p.buildingFate === "repurposed_religious"
             ? "repurposed"
             : "closed";
 
@@ -229,8 +233,8 @@ function buildPoints(): Point[] {
       alerted,
       signalKind: alert?.kind ?? null,
       alertText: alert?.whatChanged ?? null,
-      founded: p.yearFounded,
-      closed: p.yearClosed,
+      founded: contextFoundedBySlug.get(p.slug) ?? null,
+      closed: contextClosedBySlug.get(p.slug) ?? null,
       profile: contextHrefBySlug.get(p.slug) ?? `/parishes/${p.slug}`,
       deep: true,
       detail: `${OWNERSHIP_LABEL[p.ownership]} · ${ENDING_MODE_LABEL[p.endingMode]}`,
@@ -282,8 +286,8 @@ function buildPoints(): Point[] {
       alerted,
       signalKind: alert?.kind ?? null,
       alertText: alert?.whatChanged ?? null,
-      founded: c.foundedYear ?? null,
-      closed: c.closedYear ?? null,
+      founded: contextFoundedBySlug.get(c.slug) ?? c.foundedYear ?? null,
+      closed: contextClosedBySlug.get(c.slug) ?? c.closedYear ?? null,
       profile:
         c.kind === "parish"
           ? (contextHrefBySlug.get(c.slug) ?? `/parishes/${c.slug}`)

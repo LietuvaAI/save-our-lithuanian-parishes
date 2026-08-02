@@ -1,9 +1,9 @@
 {
   "slug": "dievo-apvaizdos-southfield-mi",
-  "asOf": "2026-08-01",
+  "asOf": "2026-08-02",
   "buildingStatus": "standing",
   "currentUse": "Active diocesan Lithuanian Catholic parish; Lithuanian-language Masses Sundays and Fridays, English Mass Saturdays",
-  "summary": "Divine Providence is the sole surviving Lithuanian Roman Catholic parish institution in metropolitan Detroit. Formed in 1949 from the St. George parish community while St. George itself remained active, it first worshipped in the Divine Providence church on Schaefer Road in Detroit. That church was demolished in November 1970 for freeway construction; the same parish institution moved to Southfield, where its present church and cultural center were dedicated on September 8, 1973. St. Anthony Lithuanian Parish merged into Divine Providence in 2013. The parish continues a Sunday Lithuanian Mass. Since its pastor departed in May 2026, no successor has been publicly confirmed, while the Archdiocese considers Planning Area 8 models that could end weekend Mass there.",
+  "summary": "Divine Providence is the sole surviving Lithuanian Roman Catholic parish institution in metropolitan Detroit. Formed in 1949 from the St. George parish community while St. George itself remained active, it first worshipped in the Divine Providence church on Schaefer Road in Detroit. That church was demolished in November 1970 for freeway construction; the same parish institution moved to Southfield, where its present church and cultural center were dedicated on September 8, 1973. St. Anthony Lithuanian Parish merged into Divine Providence in 2013. The parish remains active with weekly Lithuanian worship. It is included in the Archdiocese of Detroit's Planning Area 8 restructuring process, but no merger, closure, or final pastorate decision has been made.",
   "historicalSummary": [
     "Divine Providence grew from Detroit's first Lithuanian Catholic parish, St. George. On July 25, 1948, about 100 St. George parishioners broke ground for a new Lithuanian church south of Grand River on Schaefer. Because the original St. George parish and church still remained active, the chancery would not allow the name to be reused; the new parish institution was named Divine Providence.",
     "The Schaefer church's cornerstone was blessed on March 6, 1949, and the completed church was blessed that December. St. George remained a distinct parish through 1965, and its Westminster church was demolished for the Chrysler Freeway in 1966. Divine Providence then faced a second displacement when the Jeffries Freeway took the Schaefer site.",
@@ -51,6 +51,18 @@
   ],
   "sources": [
     {
+      "title": "Archdiocesan Restructuring Planning Area 8",
+      "publisher": "Archdiocese of Detroit",
+      "date": "2026-08-02",
+      "url": "https://restructuring.aod.org/planning-area-8"
+    },
+    {
+      "title": "Archdiocesan Restructuring Frequently Asked Questions",
+      "publisher": "Archdiocese of Detroit",
+      "date": "2026-08-02",
+      "url": "https://restructuring.aod.org/frequently-asked-questions"
+    },
+    {
       "title": "Divine Providence Church – Lithuanian Catholic Church (parish website)",
       "publisher": "Divine Providence Parish",
       "date": "2026",
@@ -76,6 +88,6 @@
     }
   ],
   "confidence": "verified",
-  "conflictsWithArchiveRecord": "No contradictions. One refinement: the Detroit News list places Divine Providence in Planning Area 9 (southeastern Oakland County); a separate report grouped some Southfield parishes in Planning Area 8, so area assignment reporting varies slightly.",
-  "gaps": "Could not independently confirm the parish's specific listening-session dates (2026-05-30 and 2026-06-06) or the March 2026 workbook. Unknown which specific model or models would end weekend Mass at Divine Providence and whether the final plan, due in winter 2027, will retain it."
+  "conflictsWithArchiveRecord": "No contradiction in the historical record. Current official Archdiocese materials place Divine Providence in Planning Area 8 and describe all published models as drafts; no final restructuring decision has been made.",
+  "gaps": "The final Planning Area 8 pastorate model has not been decided. The Archdiocese says feedback review and model refinement follow the July 31, 2026 survey deadline, with final plans expected in spring 2027."
 }

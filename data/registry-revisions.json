@@ -157,6 +157,49 @@
         "data/canonical-public-census-adjudications.json",
         "data/candidates/registry-revision-14-st-george-detroit-history-and-line-art-2026-08-01.md"
       ]
+    },
+    {
+      "version": 15,
+      "date": "2026-08-02",
+      "registryRecords": 192,
+      "publicUSRecords": 154,
+      "usRomanCatholicParishes": 132,
+      "summary": "Reconciled Divine Providence, Hartford Holy Trinity, Waterbury St. Joseph, and Maspeth Transfiguration to current official evidence; separated institution, building, and liturgy states; corrected the closed Roman Catholic count to 87 while keeping 154 public U.S. institutions unchanged.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/alerts.json",
+        "data/parish-situation.json",
+        "data/candidates/registry-revision-15-campaign-current-condition-2026-08-02.md"
+      ]
+    },
+    {
+      "version": 16,
+      "date": "2026-08-02",
+      "registryRecords": 192,
+      "publicUSRecords": 154,
+      "usRomanCatholicParishes": 132,
+      "summary": "Clarified Saint Michael the Archangel Parish in Scranton as a surviving parish that relocated in 2025, separated its former Lithuanian church from its current Saint Lucy worship site, and distinguished the current Latin Mass schedule from undocumented Lithuanian worship; public counts are unchanged.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/case-records/sv-mykolo-scranton-pa.json",
+        "data/candidates/registry-revision-16-st-michael-scranton-relocation-2026-08-02.md"
+      ]
+    },
+    {
+      "version": 17,
+      "date": "2026-08-02",
+      "registryRecords": 192,
+      "publicUSRecords": 154,
+      "usRomanCatholicParishes": 132,
+      "summary": "Established Saint Michael the Archangel Parish in Scranton in 1914, promoted its original wooden church from a held candidate to a canonical worship site, and added the 1942 replacement church, school, community, and Lithuanian-language history from the 1977 published parish account; the public institution count remains unchanged.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/case-records/sv-mykolo-scranton-pa.json",
+        "data/candidates/registry-revision-17-st-michael-scranton-archive-history-2026-08-02.md"
+      ]
     }
   ]
 }

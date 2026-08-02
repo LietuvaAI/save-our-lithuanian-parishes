@@ -6,8 +6,8 @@
     "case_files": 83,
     "with_sources": 83,
     "with_developments": 82,
-    "with_historical_summary": 2,
-    "site_extraction_candidates": 57,
+    "with_historical_summary": 4,
+    "site_extraction_candidates": 58,
     "lineage_extraction_candidates": 63
   },
   "entries": [
@@ -99,14 +99,17 @@
     {
       "slug": "dievo-apvaizdos-southfield-mi",
       "case_record": "data/case-records/dievo-apvaizdos-southfield-mi.json",
-      "as_of": "2026-07-25",
+      "as_of": "2026-08-01",
       "source_count": 4,
-      "development_count": 4,
-      "has_historical_summary": false,
-      "site_extraction_candidate": false,
+      "development_count": 2,
+      "has_historical_summary": true,
+      "site_extraction_candidate": true,
       "lineage_extraction_candidate": true,
-      "matched_site_terms": [],
+      "matched_site_terms": [
+        "moved"
+      ],
       "matched_lineage_terms": [
+        "merged",
         "successor"
       ],
       "publication_state": "manual_review_required"
@@ -403,8 +406,8 @@
       "slug": "sv-antano-detroit-mi",
       "case_record": "data/case-records/sv-antano-detroit-mi.json",
       "as_of": "2026-07-16",
-      "source_count": 6,
-      "development_count": 3,
+      "source_count": 7,
+      "development_count": 4,
       "has_historical_summary": false,
       "site_extraction_candidate": true,
       "lineage_extraction_candidate": true,
@@ -1249,12 +1252,11 @@
       "case_record": "data/case-records/sv-petro-detroit-mi.json",
       "as_of": "2026-07-16",
       "source_count": 5,
-      "development_count": 3,
-      "has_historical_summary": false,
+      "development_count": 5,
+      "has_historical_summary": true,
       "site_extraction_candidate": true,
       "lineage_extraction_candidate": false,
       "matched_site_terms": [
-        "former church",
         "moved"
       ],
       "matched_lineage_terms": [],
@@ -1375,7 +1377,7 @@
       "slug": "svc-m-marijos-apreiskimo-brooklyn-ny",
       "case_record": "data/case-records/svc-m-marijos-apreiskimo-brooklyn-ny.json",
       "as_of": "2026-07-31",
-      "source_count": 14,
+      "source_count": 15,
       "development_count": 7,
       "has_historical_summary": true,
       "site_extraction_candidate": true,
@@ -1387,7 +1389,9 @@
       "matched_lineage_terms": [
         "merged",
         "merger",
-        "consolidated"
+        "consolidated",
+        "successor",
+        "continued"
       ],
       "publication_state": "manual_review_required"
     },

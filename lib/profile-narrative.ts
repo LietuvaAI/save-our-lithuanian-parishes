@@ -156,6 +156,7 @@ export function profileStory({
     /documented in (?:the )?(?:draugas )?registry|documented in draugas|minimal (?:research details|documentation)|needs (?:clarification|verification)|status not yet (?:researched|verified)|present status not yet researched|single source only|unnamed\/duplicate parish entry/i;
   const location = [city, state].filter(Boolean).join(", ");
   const historical =
+    closed !== null ||
     isLoss(endState) ||
     endState === "transferred" ||
     endState === "repurposed" ||

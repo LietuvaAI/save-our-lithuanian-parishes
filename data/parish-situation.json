@@ -1549,11 +1549,11 @@
       "registry_slug": "joseph-waterbury-ct",
       "canonical_status": "closed",
       "building_fate": "standing",
-      "current_use": "Closed church retained by the merged Our Lady of Mount Carmel Parish (Waterbury); no regular Masses, but listed as \"open for weddings & funerals\" through the parish office. The ancillary parish campus on John Street (school, former convent, garage, club building) was put up for sale via a City of Waterbury RFP in October 2025.",
+      "current_use": "Catholic sacred church retained by Our Lady of Mount Carmel Parish after the May 1, 2024 merger. No regular Mass schedule; weddings and funerals by arrangement, with a special Mass documented on August 2, 2026. Ancillary campus buildings were offered for sale separately from the church.",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "First Lithuanian RC parish in New England (founded 1893/94). Survived the 2002 St. Patrick merger; a genuine grassroots revival did not save it. Diocese closed it Sept 30 2023 under the Hartford 2017 plan.",
-      "current_record_as_of": "2026-07-16",
+      "situation": "Regular parish operations ended in September 2023. An archdiocesan decree merged Saint Joseph into Our Lady of Mount Carmel effective May 1, 2024, ending its separate juridic parish while retaining the church as a Catholic sacred edifice without regularly scheduled Masses. The community continues its canonical appeal and documents occasional special worship in the church.",
+      "current_record_as_of": "2026-08-02",
       "current_record_path": "data/case-records/sv-juozapo-waterbury-ct.json",
       "sources": [
         {
@@ -1597,6 +1597,12 @@
           "publisher": "Global True Lithuania",
           "date": "2017 (updates through ~2023)",
           "url": "https://global.truelithuania.com/connecticut-789/"
+        },
+        {
+          "title": "Saint Joseph and Our Lady of Mount Carmel merger decree",
+          "publisher": "Archdiocese of Hartford",
+          "date": "2024-03-04",
+          "url": "https://archdioceseofhartford.org/wp-content/uploads/2024/03/1-Waterbury-Merger-Decree-OLMC-Saint-Joseph-FINAL1.pdf"
         }
       ]
     },
@@ -2311,7 +2317,7 @@
       "lithuanian_identity": "ethnically_transferred",
       "pastoral_status": "not_applicable",
       "situation": "The Lithuanian parish identity ended, while the St. Michael FSSP personal parish continued in the building until September 28, 2025. That congregation relocated to St. Lucy's Church; the former Lithuanian church and rectory now stand vacant and are listed for sale.",
-      "current_record_as_of": "2026-07-16",
+      "current_record_as_of": "2026-08-02",
       "current_record_path": "data/case-records/sv-mykolo-scranton-pa.json",
       "sources": [
         {
@@ -2343,6 +2349,14 @@
           "publisher": "Global True Lithuania",
           "date": "2026-07-16 (accessed)",
           "url": "https://global.truelithuania.com/northern-coal-region-scranton-1614/"
+        },
+        {
+          "title": "Vladas Būtėnas, Pennsylvanijos angliakasių Lietuva — Šv. Mykolo parapija",
+          "publisher": "Lithuanian Library Press",
+          "date": "1977",
+          "access": "Vilija-provided page scans",
+          "archiveUrlPending": true,
+          "locator": "Šv. Mykolo parapija section and p. 304"
         }
       ]
     },
@@ -3179,8 +3193,8 @@
       "current_use": "Active diocesan Lithuanian Catholic parish; Lithuanian-language Masses Sundays and Fridays, English Mass Saturdays",
       "lithuanian_identity": "active_parish",
       "pastoral_status": "shared_priest",
-      "situation": "The sole surviving Lithuanian Roman Catholic parish in metro Detroit; included in Planning Area 8 of the Archdiocese of Detroit's 2025–2027 restructuring process. Three draft pastorate models remain under consideration, and no final decision has been made.",
-      "current_record_as_of": "2026-08-01",
+      "situation": "The sole surviving Lithuanian Roman Catholic parish institution in metro Detroit remains active in Southfield. It is included in Planning Area 8 of the Archdiocese of Detroit's restructuring process. The July 31 feedback window has closed; feedback review and model refinement are underway, and no final pastorate decision has been made.",
+      "current_record_as_of": "2026-08-02",
       "current_record_path": "data/case-records/dievo-apvaizdos-southfield-mi.json",
       "sources": [
         {
@@ -3206,6 +3220,18 @@
           "publisher": "St. Mary of the Immaculate Conception, Monroe",
           "date": "2026",
           "url": "https://stmarymonroe.org/aod-restructuring"
+        },
+        {
+          "title": "Archdiocesan Restructuring Planning Area 8",
+          "publisher": "Archdiocese of Detroit",
+          "date": "2026",
+          "url": "https://restructuring.aod.org/planning-area-8"
+        },
+        {
+          "title": "Archdiocesan Restructuring Frequently Asked Questions",
+          "publisher": "Archdiocese of Detroit",
+          "date": "2026",
+          "url": "https://restructuring.aod.org/frequently-asked-questions"
         }
       ]
     },
@@ -3260,12 +3286,12 @@
     },
     "svc-m-marijos-apreiskimo-brooklyn-ny": {
       "registry_slug": "annunciation-brooklyn-ny",
-      "canonical_status": "standing",
+      "canonical_status": "merged",
       "building_fate": "standing",
       "current_use": "Active Roman Catholic worship site (Church of the Annunciation of the BVM, 259 North 5th Street, Brooklyn) of the merged Parish of Our Lady of Mount Carmel–Annunciation, Diocese of Brooklyn; home of New York City's weekly Lithuanian-language Sunday Mass (10:00 AM), plus Spanish (11:30 AM) and English (6:00 PM) Sunday Masses and seasonal weekday Masses.",
-      "lithuanian_identity": "active_parish",
+      "lithuanian_identity": "mass_continues",
       "pastoral_status": "shared_priest",
-      "situation": "Annunciation in Williamsburg carries Brooklyn's Lithuanian liturgical life: a weekly 10:00 a.m. Lithuanian Mass — strengthened when Maspeth's Lithuanian Mass moved here in September 2025 — with Lithuanian chaplain Fr. Valdemaras Lisovski confirmed on the Lithuanian Bishops' Conference roster.",
+      "situation": "The distinct Annunciation parish merged into Our Lady of Mount Carmel–Annunciation in 2019. Its Williamsburg church remains an active worship site of the successor parish, where a weekly 10:00 a.m. Lithuanian Mass continues; Maspeth's Lithuanian Mass moved there permanently in September 2025.",
       "current_record_as_of": "2026-07-31",
       "current_record_path": "data/case-records/svc-m-marijos-apreiskimo-brooklyn-ny.json",
       "sources": [
@@ -3357,13 +3383,13 @@
     },
     "kristaus-atsimainymo-maspeth-ny": {
       "registry_slug": "transfiguration-maspeth-ny",
-      "canonical_status": "undecided",
+      "canonical_status": "merged",
       "building_fate": "standing",
-      "current_use": "Active Catholic church open on a limited basis: Sunday Masses (9:30 am and 12:30 pm Latin) plus weddings/funerals on request, within Transfiguration–St. Stanislaus Kostka parish.",
-      "lithuanian_identity": "active_parish",
-      "pastoral_status": "unknown",
-      "situation": "Queens. Diocese of Brooklyn issued a closure letter Feb 16 2025 but reversed it Sept 12 2025 to limited-basis opening. Status genuinely unresolved as of March 2026. Not closed, no community buyout.",
-      "current_record_as_of": "2026-07-09",
+      "current_use": "The Perry Avenue church remains open under Transfiguration–St. Stanislaus Kostka Parish, with Sunday Masses at 9:30 a.m. and 12:30 p.m. Latin. The Lithuanian Mass moved permanently to Annunciation in Williamsburg on September 1, 2025.",
+      "lithuanian_identity": "ethnically_transferred",
+      "pastoral_status": "not_applicable",
+      "situation": "The historical Lithuanian parish merged into Transfiguration–St. Stanislaus Kostka effective September 1, 2019. Its Perry Avenue church remains in Catholic worship under the successor parish, but Lithuanian worship moved to Annunciation in Williamsburg in 2025. The unresolved question concerns the building's longer-term use and landmark effort, not the former parish's institutional status.",
+      "current_record_as_of": "2026-08-02",
       "current_record_path": "data/case-records/kristaus-atsimainymo-maspeth-ny.json",
       "sources": [
         {
@@ -3407,6 +3433,12 @@
           "publisher": "QNS",
           "date": "2025-02-19",
           "url": "https://qns.com/2025/02/transfiguration-church-maspeth-possible-closure/"
+        },
+        {
+          "title": "Current Mass schedule",
+          "publisher": "Transfiguration–St. Stanislaus Kostka Parish",
+          "date": "2026-08-02",
+          "url": "https://transtans.org/mass-schedule/"
         }
       ]
     },
@@ -3649,13 +3681,13 @@
     },
     "svc-trejybes-hartford-ct": {
       "registry_slug": "trinity-hartford-ct",
-      "canonical_status": "standing",
+      "canonical_status": "undecided",
       "building_fate": "standing",
-      "current_use": "Catholic church building (mission of the Cathedral parish, Archdiocese of Hartford) at 53 Capitol Ave. Regular Masses — including the Sunday 9:00 am Lithuanian/English Mass — were announced to end May 30, 2026; funerals and baptisms continue. Parishioners are campaigning to convert the building into a Lithuanian cultural center.",
+      "current_use": "Archdiocesan Catholic mission with a standing church at 53 Capitol Avenue. Regular Masses ended May 30, 2026; funerals and baptisms continue. Parishioners are contesting the partial closure and advocating preservation as a Lithuanian cultural center.",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "Holy Trinity's regular Masses — including the Sunday 9:00 a.m. Lithuanian/English Mass — ended May 30, 2026, amid a financial crisis and the aftermath of a priest-theft investigation. Only funerals and baptisms continue in the building; parishioners campaign to preserve the church as a Lithuanian cultural center.",
-      "current_record_as_of": "2026-07-16",
+      "situation": "Holy Trinity remains an archdiocesan mission, but its regular Mass schedule ended May 30, 2026. Funerals and baptisms continue. Because the mission still exists and the partial closure is being contested, the institutional outcome remains unresolved rather than fully closed.",
+      "current_record_as_of": "2026-08-02",
       "current_record_path": "data/case-records/svc-trejybes-hartford-ct.json",
       "sources": [
         {
@@ -3705,6 +3737,18 @@
           "publisher": "ELIP — Enciklopedija Lietuvai ir pasauliui (lietuvai.lt)",
           "date": "accessed 2026-07-27",
           "url": "https://lietuvai.lt/wiki/Holy_Trinity_Church_Hartford"
+        },
+        {
+          "title": "Parish directory",
+          "publisher": "Archdiocese of Hartford",
+          "date": "2026-08-02",
+          "url": "https://archdioceseofhartford.org/parishes/"
+        },
+        {
+          "title": "Northern Vicariate mission listing",
+          "publisher": "Archdiocese of Hartford",
+          "date": "2026-06-18",
+          "url": "https://archdioceseofhartford.org/wp-content/uploads/2026/06/Northern-Vicariate-06-18-2026.pdf"
         }
       ]
     },

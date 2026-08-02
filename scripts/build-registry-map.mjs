@@ -30,6 +30,12 @@ const publication = JSON.parse(
     "utf-8",
   ),
 );
+const infographic = JSON.parse(
+  readFileSync(
+    new URL("../data/canonical-infographic-projection.json", import.meta.url),
+    "utf-8",
+  ),
+);
 const institutionByRegistrySlug = new Map(
   publication.public_institutions.map((institution) => [
     institution.registry_slug,
@@ -38,6 +44,12 @@ const institutionByRegistrySlug = new Map(
 );
 const canonicalEntityById = new Map(
   publication.canonical_entities.map((entity) => [entity.id, entity]),
+);
+const infographicByRegistrySlug = new Map(
+  infographic.institution_history.map((institution) => [
+    institution.registry_slug,
+    institution,
+  ]),
 );
 const geoCache = {
   ...JSON.parse(readFileSync(GEO_CAND, "utf-8")),
@@ -102,11 +114,15 @@ function canonicalLifecycleOf(record) {
 }
 
 function foundedYearOf(record) {
+  const projected = infographicByRegistrySlug.get(record.slug);
+  if (projected) return projected.founded.year;
   const lifecycle = canonicalLifecycleOf(record);
   return lifecycle ? yearOf([{ value: lifecycle.start }]) : yearOf(record.years?.founded);
 }
 
 function closedYearOf(record) {
+  const projected = infographicByRegistrySlug.get(record.slug);
+  if (projected) return projected.closed.year;
   const lifecycle = canonicalLifecycleOf(record);
   if (lifecycle) {
     return yearOf([{ value: lifecycle.end }], { closing: true });
@@ -158,6 +174,7 @@ for (const r of toPlot) {
     continue;
   }
   const isCong = r.record_type === "congregation";
+  const projectedInstitution = infographicByRegistrySlug.get(r.slug);
   const closedYear = closedYearOf(r);
   points.push({
     kind: isCong ? "congregation" : "parish",
@@ -172,19 +189,37 @@ for (const r of toPlot) {
     // show as open on the map; non_catholic_christian entries are confirmed
     // active if they have a truelithuania source.
     lockedStanding:
-      !closedYear &&
-      r.lifecycle?.canonical_status !== "unresolved" && (
-        r.lifecycle?.canonical_status === "standing" ||
-        (r.comparator === true &&
-          ["standing", "community_decided"].includes(r.locked?.ending_mode ?? "")) ||
-        (r.sources ?? []).some(
-          (s) =>
-            (s.axis === "web-historical" && /^(standing|open)/i.test(s.currentStatus ?? "")) ||
-            s.axis === "truelithuania"
-        )
-      ),
+      projectedInstitution
+        ? ["active_parish", "mass_continues"].includes(
+            projectedInstitution.status_group,
+          )
+        : !closedYear &&
+          r.lifecycle?.canonical_status !== "unresolved" &&
+          (r.lifecycle?.canonical_status === "standing" ||
+            (r.comparator === true &&
+              ["standing", "community_decided"].includes(
+                r.locked?.ending_mode ?? "",
+              )) ||
+            (r.sources ?? []).some(
+              (s) =>
+                (s.axis === "web-historical" &&
+                  /^(standing|open)/i.test(s.currentStatus ?? "")) ||
+                s.axis === "truelithuania",
+            )),
     depth: r.record_depth,
     identity: (() => {
+      if (projectedInstitution) {
+        if (projectedInstitution.status_group === "active_parish") {
+          return "active_parish";
+        }
+        if (projectedInstitution.status_group === "mass_continues") {
+          return "mass_continues";
+        }
+        if (projectedInstitution.status_group === "transferred") {
+          return "ethnically_transferred";
+        }
+        if (projectedInstitution.status_group === "closed") return "lost";
+      }
       const v = situationByRegistrySlug.get(r.slug)?.lithuanian_identity;
       return v && v !== "unknown" ? v : null;
     })(),

@@ -52,7 +52,7 @@ const CHURCHES: ProcessionChurch[] = [
     label: "Our Lady of Vilnius, Manhattan",
   },
   {
-    src: "/images/parishes/southfield-divine-providence-line-drawing.png",
+    src: "/images/parishes/southfield-divine-providence-current-line-drawing.png",
     alt: "Line drawing of Divine Providence Lithuanian church in Southfield.",
     href: "/parishes/dievo-apvaizdos-southfield-mi",
     label: "Divine Providence, Southfield",
