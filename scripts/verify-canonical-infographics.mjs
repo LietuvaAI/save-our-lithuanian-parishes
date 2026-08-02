@@ -146,13 +146,16 @@ const brooklynAnnunciation = institutions.find(
     "/parishes/svc-m-marijos-apreiskimo-brooklyn-ny",
 );
 if (
+  brooklynAnnunciation?.founded.year !== 1914 ||
+  brooklynAnnunciation?.founded.authority !==
+    "canonical_infographic_adjudication" ||
   brooklynAnnunciation?.closed.year !== 2019 ||
   brooklynAnnunciation?.status_group !== "mass_continues" ||
   brooklynAnnunciation?.status_authority !==
     "canonical_status_adjudication"
 ) {
   errors.push(
-    "Brooklyn Annunciation must remain a 2019 merged institution where Lithuanian Mass continues",
+    "Brooklyn Annunciation must remain Lithuanian from 1914 and a 2019 merged institution where Lithuanian Mass continues",
   );
 }
 

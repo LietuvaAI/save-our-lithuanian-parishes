@@ -7,6 +7,7 @@ export type InfographicDateFact = {
   display: string | null;
   authority:
     | "canonical_graph"
+    | "canonical_infographic_adjudication"
     | "reviewed_case_snapshot"
     | "site_r10_baseline"
     | "unresolved";

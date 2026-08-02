@@ -6513,7 +6513,7 @@
       "unit": "Canadian Lithuanian parish comparator"
     }
   },
-  "content_hash": "sha256:0a4116c08510c88650f562eba6a77aa9219f939d0b86ed3e81150767deb2139d",
+  "content_hash": "sha256:3b5c197493aeae2c8c2fbf3d8e0740ee97c908653bec59b8b5c0d1b18907c621",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -8988,9 +8988,9 @@
       "culturenet_entity_id": "cn:institution:annunciation-bvm-williamsburg-ny",
       "diocese": "Brooklyn",
       "founded": {
-        "authority": "canonical_graph",
-        "display": "1863",
-        "year": 1863
+        "authority": "canonical_infographic_adjudication",
+        "display": "1914",
+        "year": 1914
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
