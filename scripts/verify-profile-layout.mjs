@@ -186,13 +186,11 @@ const requiredFragments = [
     'input.endState === "mass_continues"',
     "continuing-Mass worship-site treatment",
   ],
-  [
-    profileViewSource,
-    '"Former church"',
-    "closed-institution former-church treatment",
-  ],
+  [profileViewSource, 'label: "Church building"', "shared church-building fact"],
+  [profileViewSource, "Building status", "explicit building outcome"],
   [pageSource, "survivedReviewThenClosed", "survived-review warning"],
   [pageSource, "currentChurchDetail", "worship-site status detail"],
+  [pageSource, "data-profile-building-status", "headline building status"],
   [pageSource, "campaignLiturgy?.detail", "campaign liturgy qualification"],
   [pageSource, "campaignLiturgy?.href", "campaign liturgy destination link"],
   [pageSource, "campaignSources", "campaign evidence ledger sources"],
@@ -467,6 +465,26 @@ if (
   )
 ) {
   errors.push("Detroit St. Anthony merge relationship drifted");
+}
+
+const ourLadyVilniusManhattan = institutionByProfile.get(
+  "/parishes/ausros-vartu-manhattan-ny",
+);
+const ourLadyVilniusManhattanSite = siteByEntityId.get(
+  "cn:building_site:our-lady-of-vilnius-broome-street-ny",
+);
+if (
+  ourLadyVilniusManhattan?.status_group !== "closed" ||
+  ourLadyVilniusManhattan?.closed?.year !== 2007 ||
+  ourLadyVilniusManhattan?.building_fate !== "demolished" ||
+  ourLadyVilniusManhattanSite?.demolished_year !== 2015 ||
+  !ourLadyVilniusManhattanSite?.condition_relationships.some(
+    (condition) => condition.relationship_type === "building-demolished",
+  )
+) {
+  errors.push(
+    "Manhattan Our Lady of Vilnius must keep parish closure and 2015 church demolition as separate canonical facts",
+  );
 }
 
 const ascensionPittsburgh = institutionByProfile.get(
