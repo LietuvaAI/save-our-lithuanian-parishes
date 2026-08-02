@@ -30,6 +30,7 @@ import {
 import {
   getIdentityNoticesForInstitution,
   getInstitutionDates,
+  getInstitutionTransition,
   getRelatedRecordsForInstitution,
   getWorshipSitesForInstitution,
 } from "@/lib/parish-record-graph";
@@ -324,6 +325,9 @@ export default async function ParishPage({
   const relatedRecords = getRelatedRecordsForInstitution(
     institutionDates?.entityId ?? null,
   );
+  const institutionTransition = getInstitutionTransition(
+    institutionDates?.entityId ?? null,
+  );
   const identityNotices = getIdentityNoticesForInstitution(
     institutionDates?.entityId ?? null,
   );
@@ -364,6 +368,10 @@ export default async function ParishPage({
         ? "Weekly"
         : "Documented"
       : null;
+  const worshipLabel =
+    entry.congregation_class === "non_catholic_christian"
+      ? "Lithuanian worship"
+      : "Lithuanian Mass";
 
   const portraitState = getParishPortraitState([
     profile.slug,
@@ -545,8 +553,10 @@ export default async function ParishPage({
     existed: institutionDates?.existed ?? null,
     currentChurch,
     lithuanianMass,
+    worshipLabel,
     recordType,
     institutionEnded,
+    institutionTransition,
   });
 
   const contextMapFigure = hasMap ? (
@@ -668,16 +678,27 @@ export default async function ParishPage({
           </div>
 
           {isUsProjection && (
-            <dl className="mt-4 grid max-w-[38em] gap-x-6 gap-y-4 border-t border-rule pt-3.5 sm:grid-cols-4">
-              {profileView.facts.map((fact) => (
-                <div key={fact.label}>
-                  <dt className="font-mono text-[10.5px] font-medium uppercase tracking-[0.09em] text-muted">
-                    {fact.label}
-                  </dt>
-                  <dd className="mt-1.5 text-sm leading-snug">{fact.value}</dd>
-                </div>
-              ))}
-            </dl>
+            <>
+              <dl className="mt-4 grid max-w-[38em] gap-x-6 gap-y-4 border-t border-rule pt-3.5 sm:grid-cols-4">
+                {profileView.facts.map((fact) => (
+                  <div key={fact.label}>
+                    <dt className="font-mono text-[10.5px] font-medium uppercase tracking-[0.09em] text-muted">
+                      {fact.label}
+                    </dt>
+                    <dd className="mt-1.5 text-sm leading-snug">{fact.value}</dd>
+                  </div>
+                ))}
+              </dl>
+              <p
+                data-profile-institutional-reading
+                className="mt-4 max-w-[38em] text-sm leading-relaxed text-foreground"
+              >
+                <span className="mr-2 font-mono text-[10.5px] font-medium uppercase tracking-[0.09em] text-muted">
+                  Institutional reading
+                </span>
+                {profileView.institutionalSummary}
+              </p>
+            </>
           )}
 
           <ParishPublishedRecord

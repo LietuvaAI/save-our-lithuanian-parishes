@@ -116,6 +116,11 @@ const requiredFragments = [
     "history fallback",
   ],
   [pageSource, "items={profileView.chronology}", "normalized chronology"],
+  [
+    pageSource,
+    "data-profile-institutional-reading",
+    "top institutional reading",
+  ],
   [historySource, 'id="profile-history"', "history section id"],
   [chronologySource, 'id="parish-chronology"', "chronology section id"],
   [chronologySource, "<details", "expandable chronology events"],
@@ -190,10 +195,21 @@ const requiredFragments = [
     "mission worship-place vocabulary",
   ],
   [profileViewSource, 'label: "Active"', "mission active vocabulary"],
+  [pageSource, '"Lithuanian worship"', "non-Catholic worship vocabulary"],
   [
     profileViewSource,
-    '"Parish institution"',
-    "merged-institution lifecycle vocabulary",
+    'label: "Institutional life"',
+    "institutional lifecycle vocabulary",
+  ],
+  [
+    graphSource,
+    "getInstitutionTransition",
+    "canonical institutional-transition selector",
+  ],
+  [
+    profileViewSource,
+    'input.institutionTransition === "merged"',
+    "merger-specific institutional wording",
   ],
   [
     graphSource,
@@ -337,6 +353,37 @@ if (
 ) {
   errors.push(
     "Brooklyn Annunciation must render as a 2019 merged institution where Lithuanian Mass continues",
+  );
+}
+const massContinuesInstitutions = infographic.institution_history.filter(
+  (institution) => institution.status_group === "mass_continues",
+);
+const mergedMassProfiles = massContinuesInstitutions
+  .filter((institution) =>
+    infographic.continuity_edges.some(
+      (edge) =>
+        edge.publication_state === "publishable" &&
+        edge.relationship_type === "institution-merged-into-institution" &&
+        edge.source.entity_id === institution.culturenet_entity_id,
+    ),
+  )
+  .map((institution) => institution.public_profile)
+  .sort();
+const expectedMergedMassProfiles = [
+  "/parishes/svc-m-marijos-apreiskimo-brooklyn-ny",
+  "/parishes/svc-m-marijos-nekalto-prasidejimo-chicago-il",
+].sort();
+if (
+  JSON.stringify(mergedMassProfiles) !==
+  JSON.stringify(expectedMergedMassProfiles)
+) {
+  errors.push(
+    "continuing-Mass merger vocabulary no longer matches the canonical transition edges",
+  );
+}
+if (massContinuesInstitutions.length - mergedMassProfiles.length !== 4) {
+  errors.push(
+    "continuing-Mass profiles with unresolved institutional transitions drifted",
   );
 }
 const institutionByEntityId = new Map(

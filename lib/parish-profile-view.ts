@@ -1,4 +1,5 @@
 import type { EndState } from "@/lib/end-state";
+import type { InstitutionTransition } from "@/lib/parish-record-graph";
 
 export interface ProfileDevelopment {
   date: string;
@@ -39,6 +40,7 @@ export interface ParishProfileChronologyItem {
 export interface ParishProfileViewModel {
   historyFallback: string[];
   facts: ParishProfileFact[];
+  institutionalSummary: string;
   chronology: ParishProfileChronologyItem[];
   currentSummary: string;
   currentAsOf: string | null;
@@ -70,8 +72,10 @@ interface ParishProfileViewInput {
   /** The standing church and its own dedication year — a building fact, labelled as one. */
   currentChurch: string | null;
   lithuanianMass: string | null;
+  worshipLabel: "Lithuanian Mass" | "Lithuanian worship";
   recordType: string;
   institutionEnded: boolean;
+  institutionTransition: InstitutionTransition;
 }
 
 const BUILDING_EVENT =
@@ -267,7 +271,7 @@ function facts(input: ParishProfileViewInput): ParishProfileFact[] {
         value: input.currentChurch ?? input.building ?? "Not established",
       },
       {
-        label: "Lithuanian Mass",
+        label: input.worshipLabel,
         value: input.lithuanianMass ?? "Not established",
       },
     ];
@@ -281,18 +285,28 @@ function facts(input: ParishProfileViewInput): ParishProfileFact[] {
           : `${input.founded}\u2013present`
         : "Founding year unresolved"),
   );
+  const institutionalLife =
+    input.endState === "active_parish"
+      ? `${existed} \u00b7 active`
+      : input.endState === "mass_continues"
+        ? input.institutionTransition === "merged"
+          ? `${existed} \u00b7 merged`
+          : input.institutionTransition === "succeeded"
+            ? `${existed} \u00b7 succeeded by another parish`
+            : input.institutionTransition === "continued"
+              ? `${existed} \u00b7 continues in another institution`
+              : existed
+        : input.endState === "transferred"
+          ? `${existed} \u00b7 Lithuanian parish ended`
+          : ["closed", "demolished", "repurposed"].includes(input.endState)
+            ? `${existed} \u00b7 closed`
+            : existed;
 
   return [
     { label: "Institution", value: input.institution },
     {
-      label:
-        input.endState === "mass_continues"
-          ? "Parish institution"
-          : "Existed",
-      value:
-        input.endState === "mass_continues"
-          ? `${existed} \u00b7 merged`
-          : existed,
+      label: "Institutional life",
+      value: institutionalLife,
     },
     {
       label:
@@ -304,10 +318,45 @@ function facts(input: ParishProfileViewInput): ParishProfileFact[] {
       value: input.currentChurch ?? input.building ?? "Not established",
     },
     {
-      label: "Lithuanian Mass",
-      value: input.lithuanianMass ?? "Not established",
+      label: input.worshipLabel,
+      value:
+        input.lithuanianMass ??
+        (input.endState === "mass_continues"
+          ? "Continues; frequency not established"
+          : "Not established"),
     },
   ];
+}
+
+function institutionalSummary(input: ParishProfileViewInput) {
+  if (input.recordType === "misija") {
+    return "This is an active Lithuanian mission rather than a territorial or ethnic parish.";
+  }
+  if (input.endState === "active_parish") {
+    return "The Lithuanian parish institution remains active.";
+  }
+  if (input.endState === "mass_continues") {
+    if (input.institutionTransition === "merged") {
+      return "The distinct Lithuanian parish merged into a successor institution; Lithuanian Mass continues at its worship site.";
+    }
+    if (input.institutionTransition === "succeeded") {
+      return "The distinct Lithuanian parish was succeeded by another institution; Lithuanian Mass continues at its worship site.";
+    }
+    if (input.institutionTransition === "continued") {
+      return "The parish's canonical or congregational life continues in another institution, where Lithuanian Mass is still celebrated.";
+    }
+    return "Lithuanian Mass continues, but the record does not yet establish the parish institution's final transition.";
+  }
+  if (input.endState === "transferred") {
+    return "The Lithuanian parish institution ended; another community uses the church today.";
+  }
+  if (input.endState === "unresolved") {
+    return "The record does not yet establish a final institutional outcome.";
+  }
+  if (["closed", "demolished", "repurposed"].includes(input.endState)) {
+    return "The parish institution ended; the church building's later history is recorded separately.";
+  }
+  return "The institution is documented, but its present status is still being verified.";
 }
 
 export function buildParishProfileView(
@@ -316,6 +365,7 @@ export function buildParishProfileView(
   return {
     historyFallback: historyFallback(input),
     facts: facts(input),
+    institutionalSummary: institutionalSummary(input),
     chronology: chronology(input),
     currentSummary: currentSummary(input),
     currentAsOf: input.caseAsOf,

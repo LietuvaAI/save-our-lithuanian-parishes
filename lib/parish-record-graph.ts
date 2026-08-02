@@ -49,6 +49,12 @@ export type IdentityNotice = {
   text: string;
 };
 
+export type InstitutionTransition =
+  | "merged"
+  | "succeeded"
+  | "continued"
+  | null;
+
 function humanize(value: string) {
   return value.replace(/[_-]+/g, " ").replace(/\s+/g, " ").trim();
 }
@@ -270,6 +276,33 @@ export function getRelatedRecordsForInstitution(
     .sort((a, b) => a.kind.localeCompare(b.kind) || a.name.localeCompare(b.name));
 }
 
+/** The reviewed outgoing institutional transition, never inferred from status. */
+export function getInstitutionTransition(
+  entityId: string | null,
+): InstitutionTransition {
+  if (!entityId) return null;
+  const outgoingTypes = new Set(
+    continuityEdges
+      .filter(
+        (edge) =>
+          edge.publication_state === "publishable" &&
+          edge.source.entity_id === entityId &&
+          edge.source.entity_id !== edge.target.entity_id,
+      )
+      .map((edge) => edge.relationship_type),
+  );
+  if (outgoingTypes.has("institution-merged-into-institution")) {
+    return "merged";
+  }
+  if (outgoingTypes.has("institution-succeeded-by-institution")) {
+    return "succeeded";
+  }
+  if (outgoingTypes.has("congregation/canonical-life-continued-in")) {
+    return "continued";
+  }
+  return null;
+}
+
 /**
  * A small, high identity note for an adjudicated overlap between distinct
  * institutions. It prevents a reader from mistaking an origin date for the
@@ -352,6 +385,8 @@ export function getInstitutionDates(profileHref: string) {
     ? "Founding year unresolved"
     : closedDisplay
       ? `${foundedDisplay}\u2013${closedDisplay}`
+      : row.status_group === "mass_continues"
+        ? `${foundedDisplay}\u2013institutional transition unresolved`
       : institutionEnded
         ? `${foundedDisplay}\u2013end date unresolved`
         : row.status_group === "unresolved"
