@@ -149,11 +149,19 @@
     },
     "pal-jurgio-matulaicio-misija-lemont-il": {
       "src": "/images/parishes/lemont-matulaitis-mission.jpg",
-      "alt": "Blessed Jurgis Matulaitis Mission chapel interior at the Lithuanian World Center.",
-      "attribution": "Lithuanian World Center organization page.",
-      "license": "Lithuanian World Center website source; reuse permission not confirmed.",
-      "rights": "pending_permission",
-      "rightsNote": "Lithuanian World Center website image; permission request pending; image held until granted."
+      "alt": "Exterior of Blessed Jurgis Matulaitis Mission at the Lithuanian World Center in Lemont.",
+      "attribution": "Photograph supplied by Vilija for Save Our Lithuanian Parishes.",
+      "license": "Used with permission",
+      "rights": "permission_granted",
+      "rightsNote": "Vilija supplied this exterior photograph and confirmed permission to publish it and a line-art adaptation on 2026-08-01."
+    },
+    "pal-jurgio-matulaicio-misija-lemont-il-line-drawing": {
+      "src": "/images/parishes/lemont-matulaitis-mission-line-drawing.png",
+      "alt": "Line drawing of Blessed Jurgis Matulaitis Mission at the Lithuanian World Center in Lemont.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a photograph supplied by Vilija.",
+      "license": "Used with permission",
+      "rights": "permission_granted",
+      "rightsNote": "Vilija supplied the exterior source photograph and confirmed permission to publish this line-art adaptation on 2026-08-01. The drawing removes landscaping and flagpoles while preserving the chapel's distinctive A-frame facade, cross, entrance, and side wings."
     },
     "unnamed-lithuanian-parish-baltimore-md": {
       "src": "/images/parishes/baltimore-st-alphonsus.jpg",
