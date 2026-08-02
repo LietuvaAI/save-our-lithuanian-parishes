@@ -3,9 +3,47 @@
   "asOf": "2026-07-31",
   "buildingStatus": "standing",
   "currentUse": "Active Roman Catholic worship site (Church of the Annunciation of the BVM, 259 North 5th Street, Brooklyn) of the merged Parish of Our Lady of Mount Carmel–Annunciation, Diocese of Brooklyn; home of New York City's weekly Lithuanian-language Sunday Mass (10:00 AM), plus Spanish (11:30 AM) and English (6:00 PM) Sunday Masses and seasonal weekday Masses.",
-  "historicalSummary": [
-    "Annunciation's building predates its Lithuanian chapter. The Diocese of Brooklyn dates the parish to 1863 and records that it began as a German parish. It became Lithuanian in 1914, the year this record uses for the founding of the Lithuanian parish.",
-    "In 2014, Annunciation welcomed Archbishop Gintaras Grušas of Vilnius for Confirmation, the first visit by a Lithuanian archbishop in the church's history. On March 24, 2019, more than 600 parishioners, supporters, and dignitaries gathered for its rededication after a multi-million-dollar restoration. The liturgy also marked Annunciation's merger with neighboring Our Lady of Mount Carmel; the restored church remained the only church in New York City then offering a weekly Lithuanian liturgy."
+  "historicalNarrative": [
+    {
+      "text": "Annunciation's building predates its Lithuanian chapter. The Diocese of Brooklyn dates the parish to 1863, when it began as a German parish. It became Lithuanian in 1914, the year this record uses for the beginning of the distinct Lithuanian parish.",
+      "sources": [
+        {
+          "url": "https://dioceseofbrooklyn.org/offices/diocesan-archives/parishes/",
+          "locator": "Annunciation of the Blessed Virgin Mary, Williamsburg parish entry"
+        }
+      ]
+    },
+    {
+      "text": "The parish was also a center of Lithuanian civic and cultural life. Michelsonas records that around 1919 its pastor, Fr. Petkus, lent an upstairs parish hall for volunteer drills by men hoping to form a Lithuanian Brigade. His survey later identifies Annunciation as Brooklyn's Lithuanian ethnic parish and notes that it maintained its own choir.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje",
+          "locator": "p. 264; pp. 333–334"
+        }
+      ]
+    },
+    {
+      "text": "In 2014, Annunciation welcomed Archbishop Gintaras Grušas of Vilnius for Confirmation, the first visit by a Lithuanian archbishop in the church's history. On March 24, 2019, more than 600 parishioners, supporters, and dignitaries gathered for its rededication after a multi-million-dollar restoration. The work renewed the ceiling and altar, restored statues and artwork, refurbished the 1930 pipe organ, and expanded the vestibule.",
+      "sources": [
+        {
+          "url": "https://thetablet.org/lithuanian-archbishop-visits-brooklyn-parish/",
+          "locator": "2014 confirmation visit"
+        },
+        {
+          "url": "https://thetablet.org/lithuanian-church-in-williamsburg-is-rededicated/",
+          "locator": "2019 restoration and rededication"
+        }
+      ]
+    },
+    {
+      "text": "The 2019 liturgy also marked Annunciation's merger with neighboring Our Lady of Mount Carmel. The distinct Annunciation parish ended, but its restored church continued as a worship site of the successor parish and remained a home for weekly Lithuanian liturgy.",
+      "sources": [
+        {
+          "url": "https://thetablet.org/lithuanian-church-in-williamsburg-is-rededicated/",
+          "locator": "2019 merger and continuing Lithuanian worship"
+        }
+      ]
+    }
   ],
   "summary": "The distinct Annunciation parish merged into Our Lady of Mount Carmel–Annunciation in 2019. Its church at 259 North 5th Street in Williamsburg remains standing, renovated, and in active use as a worship site of that successor parish. The Lithuanian Bishops' Conference roster identifies Fr. Valdemaras Lisovski as Lithuanian chaplain. The successor parish passed through public turmoil after pastor Msgr. Jamie Gigantiello permitted Sabrina Carpenter to film a music video in the church before its October 31, 2023 release. On November 18, 2024, the diocese relieved him of pastoral responsibilities after an independent investigation found he had moved about $1.9 million in parish funds (2019–2021) to entities tied to Frank Carone, former chief of staff to Mayor Eric Adams; Auxiliary Bishop Witold Mroziewski was appointed parish administrator. Effective September 1, 2025, the diocese permanently relocated the Lithuanian-language Mass from Transfiguration Church in Maspeth to Annunciation, citing financial stress and a priest shortage — making Annunciation the consolidated home of Lithuanian Catholic worship in New York City, with a 10:00 AM Lithuanian Sunday Mass on the current parish schedule. The Lithuanian community remains active there: Lithuania's Deputy Foreign Minister Taurimas Valys attended a Christmas Eve event at the church organized with the Maironis school and scouts in December 2025. A new deacon was assigned to the successor parish effective December 8, 2025, indicating normal diocesan staffing continues.",
   "developments": [
@@ -114,6 +152,12 @@
     }
   ],
   "sources": [
+    {
+      "title": "Lietuvių Išeivija Amerikoje — Annunciation entries, pp. 264 and 333–334",
+      "publisher": "Stasys Michelsonas / Keleivis",
+      "date": "1961",
+      "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
+    },
     {
       "title": "List of Parishes — Annunciation of the BVM, Williamsburg",
       "publisher": "Diocese of Brooklyn Archives",

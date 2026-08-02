@@ -12,8 +12,8 @@ site stages or an institution-lineage event.
 - Case files: **83**
 - With linked sources: **83**
 - With developments: **82**
-- With a separate historical-summary field: **2**
-- Site-extraction candidates: **57**
+- With a public historical narrative: **4**
+- Site-extraction candidates: **58**
 - Lineage-extraction candidates: **63**
 
 ## Publication boundary
@@ -32,7 +32,7 @@ relationship, and retain an exact locator and source URL.
 | `ausros-vartu-worcester-ma` | yes | yes | 3 | 6 |
 | `dievo-apvaizdos-chicago-il` | no | yes | 3 | 7 |
 | `dievo-apvaizdos-scranton-pa` | no | yes | 2 | 5 |
-| `dievo-apvaizdos-southfield-mi` | no | yes | 4 | 4 |
+| `dievo-apvaizdos-southfield-mi` | yes | yes | 2 | 4 |
 | `dievo-motinos-nuolatines-pagalbos-cleveland-oh` | yes | yes | 5 | 9 |
 | `kristaus-atsimainymo-maspeth-ny` | yes | no | 6 | 7 |
 | `lietuviu-baznycia-kearny-kearny-nj` | yes | yes | 4 | 14 |
@@ -47,7 +47,7 @@ relationship, and retain an exact locator and source URL.
 | `sv-andriejaus-new-britain-ct` | yes | yes | 5 | 7 |
 | `sv-andriejaus-philadelphia-pa` | yes | yes | 3 | 6 |
 | `sv-antano-cicero-il` | no | yes | 4 | 7 |
-| `sv-antano-detroit-mi` | yes | yes | 3 | 6 |
+| `sv-antano-detroit-mi` | yes | yes | 4 | 7 |
 | `sv-antano-omaha-ne` | yes | yes | 5 | 11 |
 | `sv-jono-coaldale-pa` | yes | yes | 5 | 5 |
 | `sv-juozapo-nanticoke-pa` | yes | yes | 4 | 6 |
@@ -92,14 +92,14 @@ relationship, and retain an exact locator and source URL.
 | `sv-onos-spring-valley-il` | yes | yes | 4 | 5 |
 | `sv-petro-boston-ma` | yes | yes | 6 | 9 |
 | `sv-petro-cambridge-ma` | yes | no | 5 | 11 |
-| `sv-petro-detroit-mi` | yes | no | 3 | 5 |
+| `sv-petro-detroit-mi` | yes | no | 5 | 5 |
 | `sv-petro-ir-povilo-elizabeth-nj` | yes | yes | 2 | 6 |
 | `sv-petro-ir-povilo-grand-rapids-mi` | no | yes | 4 | 8 |
 | `sv-pranciskaus-east-chicago-in` | yes | yes | 2 | 3 |
 | `sv-pranciskaus-lawrence-ma` | yes | yes | 6 | 5 |
 | `sv-vincento-de-paul-girardville-pa` | yes | yes | 3 | 4 |
 | `sv-vincento-pauliecio-esplen-pa` | yes | yes | 5 | 5 |
-| `svc-m-marijos-apreiskimo-brooklyn-ny` | yes | yes | 7 | 14 |
+| `svc-m-marijos-apreiskimo-brooklyn-ny` | yes | yes | 7 | 15 |
 | `svc-m-marijos-nekalto-prasidejimo-chicago-il` | yes | yes | 4 | 4 |
 | `svc-trejybes-wilkes-barre-pa` | yes | yes | 5 | 7 |
 | `unnamed-lithuanian-parish-baltimore-md` | yes | yes | 4 | 6 |

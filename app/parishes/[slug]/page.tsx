@@ -73,10 +73,19 @@ interface CaseSource {
   url: string;
 }
 
+interface HistoricalNarrativeParagraph {
+  text: string;
+  sources: {
+    url: string;
+    locator: string;
+  }[];
+}
+
 interface CaseRecord {
   asOf: string;
   buildingStatus: string;
   currentUse: string;
+  historicalNarrative?: HistoricalNarrativeParagraph[];
   historicalSummary?: string[];
   summary: string;
   developments: {
@@ -678,8 +687,10 @@ export default async function ParishPage({
               researchOnly ? undefined : `${displayDek} ${rest ?? ""}`
             }
             supplementalNarrative={
-              caseRecord?.historicalSummary?.length
-                ? caseRecord.historicalSummary
+              caseRecord?.historicalNarrative?.length
+                ? caseRecord.historicalNarrative.map((paragraph) => paragraph.text)
+                : caseRecord?.historicalSummary?.length
+                  ? caseRecord.historicalSummary
                 : rest
                   ? [rest]
                   : []
