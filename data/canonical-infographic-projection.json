@@ -2,7 +2,7 @@
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
-    "publication_projection_hash": "sha256:6480545ad402bb1a00c7e27749dfb9716489d202658ff4d61438aba247c0d995",
+    "publication_projection_hash": "sha256:86bfebdcc2d1e5d532b2c1af5c52b55ec690b8a78318e54dd8701e44739b7a0e",
     "publication_projection_revision": "canonical-public-census-2026-07-31",
     "repository": "LietuvaAI/culturenet-brain"
   },
@@ -21,6 +21,7 @@
         ],
         "start": "2008 city record; marketed 2011"
       },
+      "milestones": [],
       "name": "109 Gold Street apartments, Brooklyn",
       "related_public_institution_ids": [],
       "site_class": "redeveloped_site",
@@ -62,6 +63,7 @@
         ],
         "start": "1934"
       },
+      "milestones": [],
       "name": "Annunciation BVM church, Frackville",
       "related_public_institution_ids": [
         "cn:institution:annunciation-bvm-frackville-pa"
@@ -104,6 +106,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Annunciation BVM Cemetery, Frackville",
       "related_public_institution_ids": [
         "cn:institution:annunciation-bvm-frackville-pa"
@@ -136,6 +139,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Saint Joseph the Worker chapel and youth center, Frackville",
       "related_public_institution_ids": [],
       "site_class": "worship_site",
@@ -167,6 +171,7 @@
         ],
         "start": "1957"
       },
+      "milestones": [],
       "name": "Annunciation BVM parish hall, Frackville",
       "related_public_institution_ids": [
         "cn:institution:annunciation-bvm-frackville-pa"
@@ -209,6 +214,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Former Annunciation BVM rectory, Frackville",
       "related_public_institution_ids": [
         "cn:institution:annunciation-bvm-frackville-pa"
@@ -249,6 +255,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Annunciation church site, Williamsburg",
       "related_public_institution_ids": [
         "cn:institution:annunciation-bvm-williamsburg-ny"
@@ -291,6 +298,40 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [
+        {
+          "assertion_id": "assert:detroit:divine-providence-schaefer-chronology-1973",
+          "date": "1948-07-25",
+          "event": "groundbreaking",
+          "label": "Groundbreaking",
+          "source_artifact_id": "src:divine-providence:parish-history-book:1973",
+          "source_locator": "Scan-sequence pp. 25 and 35: groundbreaking, cornerstone and church blessings, and last Mass on Schaefer"
+        },
+        {
+          "assertion_id": "assert:detroit:divine-providence-schaefer-chronology-1973",
+          "date": "1949-12",
+          "event": "church_blessed",
+          "label": "Church blessed",
+          "source_artifact_id": "src:divine-providence:parish-history-book:1973",
+          "source_locator": "Scan-sequence pp. 25 and 35: groundbreaking, cornerstone and church blessings, and last Mass on Schaefer"
+        },
+        {
+          "assertion_id": "assert:detroit:divine-providence-schaefer-chronology-1973",
+          "date": "1949-03-06",
+          "event": "cornerstone_blessed",
+          "label": "Cornerstone blessed",
+          "source_artifact_id": "src:divine-providence:parish-history-book:1973",
+          "source_locator": "Scan-sequence pp. 25 and 35: groundbreaking, cornerstone and church blessings, and last Mass on Schaefer"
+        },
+        {
+          "assertion_id": "assert:detroit:divine-providence-schaefer-chronology-1973",
+          "date": "1970-05-17",
+          "event": "last_mass",
+          "label": "Last Mass",
+          "source_artifact_id": "src:divine-providence:parish-history-book:1973",
+          "source_locator": "Scan-sequence pp. 25 and 35: groundbreaking, cornerstone and church blessings, and last Mass on Schaefer"
+        }
+      ],
       "name": "Former Divine Providence church site on Schaefer Road, Detroit",
       "related_public_institution_ids": [
         "cn:institution:divine-providence-southfield-mi"
@@ -320,6 +361,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Divine Providence Southfield church and cultural center site",
       "related_public_institution_ids": [
         "cn:institution:divine-providence-southfield-mi"
@@ -349,6 +391,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "East Seventh Street Lithuanian chapel site",
       "related_public_institution_ids": [
         "cn:institution:st-joseph-st-casimir-boston-ma"
@@ -370,6 +413,7 @@
         ],
         "start": "2026"
       },
+      "milestones": [],
       "name": "The Enclaves townhouse at former Saint Mary site, Philadelphia",
       "related_public_institution_ids": [],
       "site_class": "redeveloped_site",
@@ -402,6 +446,7 @@
         ],
         "start": "1872"
       },
+      "milestones": [],
       "name": "Former Saint Casimir church at Wooster Square",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-new-haven-ct"
@@ -461,6 +506,7 @@
         ],
         "start": "1915"
       },
+      "milestones": [],
       "name": "Holy Cross church, 46th Street, Chicago",
       "related_public_institution_ids": [
         "cn:institution:holy-cross-lithuanian-chicago-il"
@@ -493,6 +539,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Holy Cross Cemetery, Hudson",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-nashua-nh"
@@ -528,6 +575,7 @@
         ],
         "start": "1915"
       },
+      "milestones": [],
       "name": "Holy Cross church site, Dayton",
       "related_public_institution_ids": [
         "cn:institution:holy-cross-dayton-oh"
@@ -574,6 +622,7 @@
         ],
         "start": "1914 acquired"
       },
+      "milestones": [],
       "name": "Former Holy Cross National Catholic church, Westville",
       "related_public_institution_ids": [
         "cn:institution:holy-cross-national-catholic-westville-il"
@@ -606,6 +655,7 @@
         ],
         "start": "1908 school mission; present building date unresolved"
       },
+      "milestones": [],
       "name": "Holy Cross Lithuanian School, Mount Carmel",
       "related_public_institution_ids": [
         "cn:institution:holy-cross-mount-carmel-pa"
@@ -638,6 +688,7 @@
         ],
         "start": "1892 cornerstone reading"
       },
+      "milestones": [],
       "name": "Holy Cross church, Mount Carmel",
       "related_public_institution_ids": [
         "cn:institution:holy-cross-mount-carmel-pa"
@@ -666,6 +717,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Holy Trinity Hartford 1903 converted worship building",
       "related_public_institution_ids": [
         "cn:institution:holy-trinity-hartford-ct"
@@ -706,6 +758,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Holy Trinity Lithuanian church, 53 Capitol Avenue, Hartford",
       "related_public_institution_ids": [
         "cn:institution:holy-trinity-hartford-ct"
@@ -752,6 +805,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Former Holy Trinity church, Newark",
       "related_public_institution_ids": [
         "cn:institution:holy-trinity-lithuanian-newark-nj"
@@ -798,6 +852,7 @@
         ],
         "start": "1963"
       },
+      "milestones": [],
       "name": "Holy Trinity-Epiphany parish-hall church, Newark",
       "related_public_institution_ids": [
         "cn:institution:holy-trinity-lithuanian-newark-nj"
@@ -844,6 +899,7 @@
         ],
         "start": "1911 secondary"
       },
+      "milestones": [],
       "name": "Former Holy Trinity church site, Wilkes-Barre",
       "related_public_institution_ids": [
         "cn:institution:holy-trinity-wilkes-barre-pa"
@@ -878,6 +934,7 @@
         ],
         "start": "1964"
       },
+      "milestones": [],
       "name": "Immaculate Conception church site, Brighton Park",
       "related_public_institution_ids": [],
       "site_class": "worship_site",
@@ -922,6 +979,7 @@
         ],
         "start": "1956"
       },
+      "milestones": [],
       "name": "Immaculate Conception chapel building, East St. Louis",
       "related_public_institution_ids": [
         "cn:institution:immaculate-conception-east-st-louis-il"
@@ -968,6 +1026,7 @@
         ],
         "start": "1910 or 1913"
       },
+      "milestones": [],
       "name": "Former Immaculate Conception church, Cambridge",
       "related_public_institution_ids": [
         "cn:institution:immaculate-conception-cambridge-ma"
@@ -1014,6 +1073,7 @@
         ],
         "start": "1972"
       },
+      "milestones": [],
       "name": "Former Immaculate Conception rectory, Cambridge",
       "related_public_institution_ids": [
         "cn:institution:immaculate-conception-cambridge-ma"
@@ -1048,6 +1108,7 @@
         ],
         "start": "1903"
       },
+      "milestones": [],
       "name": "Jerusalem Lutheran church building, Collinsville",
       "related_public_institution_ids": [
         "cn:institution:jerusalem-lutheran-collinsville-il"
@@ -1077,6 +1138,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Lietuva Colony chapel near Hazen",
       "related_public_institution_ids": [
         "cn:institution:lietuva-colony-mission-grand-prairie-ar"
@@ -1109,6 +1171,7 @@
         ],
         "start": "1917"
       },
+      "milestones": [],
       "name": "Lithuanian National Catholic Cemetery, Methuen",
       "related_public_institution_ids": [
         "cn:institution:sacred-heart-jesus-national-catholic-lawrence-ma"
@@ -1137,6 +1200,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Lithuanian Evangelical Reformed church site, 1942 N. Spaulding",
       "related_public_institution_ids": [
         "cn:institution:lithuanian-evangelical-reformed-chicago-il"
@@ -1165,6 +1229,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Lithuanian World Center mission church site",
       "related_public_institution_ids": [
         "cn:institution:blessed-jurgis-matulaitis-mission-lemont-il"
@@ -1193,6 +1258,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Nativity of the Blessed Virgin Mary church site, Chicago",
       "related_public_institution_ids": [
         "cn:institution:nativity-bvm-chicago-il"
@@ -1228,6 +1294,7 @@
         ],
         "start": "2010-06-27"
       },
+      "milestones": [],
       "name": "Our Lady of Lourdes host church site, Rochester",
       "related_public_institution_ids": [
         "cn:institution:st-george-lithuanian-rochester-ny"
@@ -1263,6 +1330,7 @@
         ],
         "start": "approximately 1955"
       },
+      "milestones": [],
       "name": "Our Lady of Sorrows church, Kearny",
       "related_public_institution_ids": [
         "cn:institution:our-lady-of-sorrows-kearny-harrison-nj"
@@ -1298,6 +1366,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Former Our Lady of Sorrows half-basement church, Harrison",
       "related_public_institution_ids": [
         "cn:institution:our-lady-of-sorrows-kearny-harrison-nj"
@@ -1332,6 +1401,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Former Our Lady of Vilna church-school site, Chicago",
       "related_public_institution_ids": [
         "cn:institution:our-lady-of-vilna-pilsen-chicago-il"
@@ -1366,6 +1436,7 @@
         ],
         "start": "approximately 1925"
       },
+      "milestones": [],
       "name": "Our Lady of Vilna church, Worcester",
       "related_public_institution_ids": [
         "cn:institution:our-lady-of-vilna-worcester-ma"
@@ -1412,6 +1483,7 @@
         ],
         "start": "1910 selected; source variants preserved"
       },
+      "milestones": [],
       "name": "Our Lady of Vilnius church building, Manhattan",
       "related_public_institution_ids": [
         "cn:institution:our-lady-of-vilnius-manhattan-ny"
@@ -1454,6 +1526,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Our Lady of Perpetual Help / St. Casimir Neff Road church site",
       "related_public_institution_ids": [
         "cn:institution:our-lady-perpetual-help-cleveland-oh",
@@ -1483,6 +1556,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Our Lady of Siluva church at 35th and Union, Chicago",
       "related_public_institution_ids": [
         "cn:institution:our-lady-siluva-national-chicago-il"
@@ -1516,6 +1590,7 @@
         ],
         "start": "1967"
       },
+      "milestones": [],
       "name": "Our Lady of Siluva church, Maizeville",
       "related_public_institution_ids": [
         "cn:institution:our-lady-siluva-maizeville-pa"
@@ -1558,6 +1633,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Our Lady of Vilna Cemetery, Eynon",
       "related_public_institution_ids": [
         "cn:institution:our-lady-vilna-eynon-pa"
@@ -1590,6 +1666,7 @@
         ],
         "start": "2024-03-13"
       },
+      "milestones": [],
       "name": "Cleared Our Lady of Vilna church lot, Eynon",
       "related_public_institution_ids": [],
       "site_class": "worship_site",
@@ -1632,6 +1709,7 @@
         ],
         "start": "1901"
       },
+      "milestones": [],
       "name": "First Our Lady of Vilna church, Eynon",
       "related_public_institution_ids": [
         "cn:institution:our-lady-vilna-eynon-pa"
@@ -1676,6 +1754,7 @@
         ],
         "start": "1915"
       },
+      "milestones": [],
       "name": "Our Lady of Vilna church, Eynon",
       "related_public_institution_ids": [
         "cn:institution:our-lady-vilna-eynon-pa"
@@ -1722,6 +1801,7 @@
         ],
         "start": "1927"
       },
+      "milestones": [],
       "name": "Providence of God church campus, Pilsen",
       "related_public_institution_ids": [
         "cn:institution:providence-of-god-pilsen-chicago-il"
@@ -1754,6 +1834,7 @@
         ],
         "start": "1915-1930"
       },
+      "milestones": [],
       "name": "Providence of God church, Scranton",
       "related_public_institution_ids": [
         "cn:institution:providence-of-god-scranton-pa"
@@ -1785,6 +1866,7 @@
           "assert:pcs-6:luzerne-sites"
         ]
       },
+      "milestones": [],
       "name": "Sacred Heart of Jesus church, Luzerne",
       "related_public_institution_ids": [],
       "site_class": "worship_site",
@@ -1836,6 +1918,7 @@
         ],
         "start": "acquired 1917; building predates parish"
       },
+      "milestones": [],
       "name": "Former Sacred Heart of Jesus National Catholic church, Lawrence",
       "related_public_institution_ids": [
         "cn:institution:sacred-heart-jesus-national-catholic-lawrence-ma"
@@ -1864,6 +1947,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Salem Evangelical and Reformed Church host site, Chicago",
       "related_public_institution_ids": [
         "cn:institution:lithuanian-evangelical-reformed-chicago-il"
@@ -1892,6 +1976,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Sandara Hall, South Boston",
       "related_public_institution_ids": [
         "cn:institution:lithuanian-lutheran-congregation-boston-ma"
@@ -1924,6 +2009,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Saints Peter and Paul Cemetery, Grand Rapids",
       "related_public_institution_ids": [
         "cn:institution:ss-peter-paul-grand-rapids-mi"
@@ -1956,6 +2042,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Former Saints Peter and Paul convent, Grand Rapids",
       "related_public_institution_ids": [
         "cn:institution:ss-peter-paul-grand-rapids-mi"
@@ -1984,6 +2071,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Ss. Peter and Paul first church, Homestead",
       "related_public_institution_ids": [
         "cn:institution:ss-peter-and-paul-homestead-pa"
@@ -2012,6 +2100,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Ss. Peter and Paul second church, Homestead",
       "related_public_institution_ids": [
         "cn:institution:ss-peter-and-paul-homestead-pa"
@@ -2044,6 +2133,7 @@
         ],
         "start": "1920s"
       },
+      "milestones": [],
       "name": "Saints Peter and Paul church, Grand Rapids",
       "related_public_institution_ids": [
         "cn:institution:ss-peter-paul-grand-rapids-mi"
@@ -2087,6 +2177,7 @@
         ],
         "start": "1910"
       },
+      "milestones": [],
       "name": "Saints Peter and Paul church, Elizabeth",
       "related_public_institution_ids": [
         "cn:institution:ss-peter-paul-elizabeth-nj"
@@ -2119,6 +2210,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Saints Peter and Paul school facility, Grand Rapids",
       "related_public_institution_ids": [
         "cn:institution:ss-peter-paul-grand-rapids-mi"
@@ -2153,6 +2245,7 @@
         ],
         "start": "1842-1845"
       },
+      "milestones": [],
       "name": "National Shrine of Saint Alphonsus Liguori, Baltimore",
       "related_public_institution_ids": [
         "cn:institution:st-alphonsus-baltimore-md"
@@ -2188,6 +2281,7 @@
         ],
         "start": "1911"
       },
+      "milestones": [],
       "name": "Former Saint Andrew church site, New Britain",
       "related_public_institution_ids": [
         "cn:institution:st-andrew-new-britain-ct"
@@ -2219,6 +2313,7 @@
           "assert:pmc-7:st-andrew-sites"
         ]
       },
+      "milestones": [],
       "name": "Saint Andrew church, Philadelphia",
       "related_public_institution_ids": [
         "cn:institution:st-andrew-lithuanian-philadelphia-pa"
@@ -2250,6 +2345,7 @@
           "assert:pmc-7:st-andrew-sites"
         ]
       },
+      "milestones": [],
       "name": "Former Saint Andrew rectory, Philadelphia",
       "related_public_institution_ids": [
         "cn:institution:st-andrew-lithuanian-philadelphia-pa"
@@ -2293,6 +2389,7 @@
         ],
         "start": "1924 basement church; 1960 upper worship level"
       },
+      "milestones": [],
       "name": "Former Saint Ann church, Luzerne",
       "related_public_institution_ids": [
         "cn:institution:st-ann-luzerne-pa"
@@ -2351,6 +2448,7 @@
         ],
         "start": "1897"
       },
+      "milestones": [],
       "name": "Former Saint Anne church, Spring Valley",
       "related_public_institution_ids": [
         "cn:institution:st-anne-spring-valley-il"
@@ -2385,6 +2483,7 @@
         ],
         "start": "1925"
       },
+      "milestones": [],
       "name": "Saint Anthony church site, Cicero",
       "related_public_institution_ids": [
         "cn:institution:st-anthony-cicero-il"
@@ -2413,6 +2512,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "St. Anthony church building, Kewanee",
       "related_public_institution_ids": [
         "cn:institution:st-anthony-kewanee-il"
@@ -2479,6 +2579,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Former St. Anthony Lithuanian church site, Detroit",
       "related_public_institution_ids": [
         "cn:institution:st-anthony-detroit-mi"
@@ -2512,6 +2613,7 @@
         ],
         "start": "1907"
       },
+      "milestones": [],
       "name": "First Saint Anthony church, Omaha",
       "related_public_institution_ids": [
         "cn:institution:st-anthony-omaha-ne"
@@ -2540,6 +2642,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "St. Anthony first church property, Philadelphia",
       "related_public_institution_ids": [
         "cn:institution:st-anthony-lithuanian-philadelphia-pa"
@@ -2580,6 +2683,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "St. Anthony church on Millers Run Road, Bridgeville",
       "related_public_institution_ids": [
         "cn:institution:st-anthony-bridgeville-pa"
@@ -2626,6 +2730,7 @@
         ],
         "start": "1915"
       },
+      "milestones": [],
       "name": "Former Saint Anthony church site, Ansonia",
       "related_public_institution_ids": [
         "cn:institution:st-anthony-ansonia-ct"
@@ -2659,6 +2764,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Former Saint Anthony school, Omaha",
       "related_public_institution_ids": [
         "cn:institution:st-anthony-omaha-ne"
@@ -2692,6 +2798,7 @@
         ],
         "start": "1936"
       },
+      "milestones": [],
       "name": "Former Saint Anthony church, Omaha",
       "related_public_institution_ids": [
         "cn:institution:st-anthony-omaha-ne"
@@ -2726,6 +2833,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Former Saint Casimir church-school, Chicago Heights",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-chicago-heights-il"
@@ -2784,6 +2892,7 @@
         ],
         "start": "1957"
       },
+      "milestones": [],
       "name": "Former Saint Casimir church, Brockton",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-brockton-ma"
@@ -2830,6 +2939,7 @@
         ],
         "start": "1912"
       },
+      "milestones": [],
       "name": "Former Saint Casimir church site, Kansas City, Kansas",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-kansas-city-ks"
@@ -2883,6 +2993,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Former Saint Casimir church, Amsterdam",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-amsterdam-ny"
@@ -2941,6 +3052,7 @@
         ],
         "start": "1927"
       },
+      "milestones": [],
       "name": "Former Saint Casimir main church, Gary",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-gary-in"
@@ -2984,6 +3096,7 @@
         ],
         "start": "1912"
       },
+      "milestones": [],
       "name": "First Saint Casimir church, Paterson",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-paterson-nj"
@@ -3012,6 +3125,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "St. Casimir first church and rectory, Plymouth",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-plymouth-pa"
@@ -3053,6 +3167,7 @@
           "assert:pmc-7:st-casimir-sites"
         ]
       },
+      "milestones": [],
       "name": "Saint Casimir church, Philadelphia",
       "related_public_institution_ids": [
         "cn:institution:st-andrew-lithuanian-philadelphia-pa",
@@ -3101,6 +3216,7 @@
         ],
         "start": "1915"
       },
+      "milestones": [],
       "name": "Former Saint Casimir church site, Sioux City",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-sioux-city-ia"
@@ -3132,6 +3248,7 @@
           "assert:nsp-8:st-casimir-providence-sites"
         ]
       },
+      "milestones": [],
       "name": "Saint Casimir Lithuanian sun-cross memorial, Providence",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-providence-ri"
@@ -3160,6 +3277,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Saint Casimir church site, Los Angeles",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-los-angeles-ca"
@@ -3188,6 +3306,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "St. Casimir church, Lynwood, Hanover Township",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-plymouth-pa"
@@ -3241,6 +3360,7 @@
         ],
         "start": "1962"
       },
+      "milestones": [],
       "name": "Former Saint Casimir church, Paterson",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-paterson-nj"
@@ -3269,6 +3389,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Former St. Casimir church, 38 Parkside Avenue, Westfield",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-westfield-ma"
@@ -3303,6 +3424,7 @@
         ],
         "start": "approximately 1909"
       },
+      "milestones": [],
       "name": "Former Saint Casimir church, Pittston",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-pittston-pa"
@@ -3361,6 +3483,7 @@
         ],
         "start": "1916"
       },
+      "milestones": [],
       "name": "Former Saint Casimir church, Worcester",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-worcester-ma"
@@ -3393,6 +3516,7 @@
         ],
         "start": "1918"
       },
+      "milestones": [],
       "name": "Former Saint Casimir rectory, Philadelphia",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-lithuanian-philadelphia-pa"
@@ -3439,6 +3563,7 @@
         ],
         "start": "1902"
       },
+      "milestones": [],
       "name": "Former Saint Casimir church, Pittsburgh",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-pittsburgh-pa"
@@ -3473,6 +3598,7 @@
         ],
         "start": "1918"
       },
+      "milestones": [],
       "name": "Former Saint Casimir school and first church, Gary",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-gary-in"
@@ -3504,6 +3630,7 @@
           "assert:pmc-7:st-casimir-sites"
         ]
       },
+      "milestones": [],
       "name": "Former Saint Casimir school, Philadelphia",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-lithuanian-philadelphia-pa"
@@ -3550,6 +3677,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Former Saint Casimir school, Pittsburgh",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-pittsburgh-pa"
@@ -3596,6 +3724,7 @@
         ],
         "start": "1924"
       },
+      "milestones": [],
       "name": "Former Saint Casimir Lithuanian School, Worcester",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-worcester-ma"
@@ -3624,6 +3753,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "St. Casimir second church, Plymouth",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-plymouth-pa"
@@ -3667,6 +3797,7 @@
         ],
         "start": "1934-1935"
       },
+      "milestones": [],
       "name": "Former Saint Casimir church, Providence",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-providence-ri"
@@ -3710,6 +3841,7 @@
         ],
         "start": "1857 building; Lithuanian use around 1909"
       },
+      "milestones": [],
       "name": "Former Saint Casimir church, Nashua",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-nashua-nh"
@@ -3756,6 +3888,7 @@
         ],
         "start": "1919"
       },
+      "milestones": [],
       "name": "Former Saint Constantine church, Oglesby",
       "related_public_institution_ids": [
         "cn:institution:st-constantine-oglesby-il"
@@ -3809,6 +3942,7 @@
         ],
         "start": "1921"
       },
+      "milestones": [],
       "name": "Former Saint Francis church, Lawrence",
       "related_public_institution_ids": [
         "cn:institution:st-francis-lawrence-ma"
@@ -3855,6 +3989,7 @@
         ],
         "start": "1913"
       },
+      "milestones": [],
       "name": "Saint Francis church building, East Chicago",
       "related_public_institution_ids": [
         "cn:institution:st-francis-east-chicago-in"
@@ -3887,6 +4022,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Former Saint Francis Forest Lake estate, Methuen",
       "related_public_institution_ids": [
         "cn:institution:st-francis-lawrence-ma"
@@ -3922,6 +4058,7 @@
         ],
         "start": "1909-11-25"
       },
+      "milestones": [],
       "name": "Saint Francis of Assisi church building, Minersville",
       "related_public_institution_ids": [
         "cn:institution:st-francis-minersville-pa"
@@ -3950,6 +4087,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "St. George 1967 church building, Utica",
       "related_public_institution_ids": [
         "cn:institution:st-george-utica-ny"
@@ -3978,6 +4116,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "St. George Lithuanian cemetery, Utica",
       "related_public_institution_ids": [
         "cn:institution:st-george-utica-ny"
@@ -4007,6 +4146,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "St. George Cleveland church site",
       "related_public_institution_ids": [
         "cn:institution:st-george-cleveland-oh"
@@ -4040,6 +4180,7 @@
         ],
         "start": "1950"
       },
+      "milestones": [],
       "name": "Former Saint George convent, Norwood",
       "related_public_institution_ids": [
         "cn:institution:st-george-norwood-ma"
@@ -4069,6 +4210,48 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [
+        {
+          "assertion_id": "assert:detroit:st-george-westminster-cardoni-chronology-book-1973",
+          "date": "1908",
+          "event": "wooden_church_built",
+          "label": "Wooden church built",
+          "source_artifact_id": "src:divine-providence:parish-history-book:1973",
+          "source_locator": "Printed pp. 11-14 and 21-24: wooden and brick church chronology and February 4, 1966 demolition"
+        },
+        {
+          "assertion_id": "assert:detroit:st-george-westminster-cardoni-chronology-book-1973",
+          "date": "1909",
+          "event": "wooden_church_blessed",
+          "label": "Wooden church blessed",
+          "source_artifact_id": "src:divine-providence:parish-history-book:1973",
+          "source_locator": "Printed pp. 11-14 and 21-24: wooden and brick church chronology and February 4, 1966 demolition"
+        },
+        {
+          "assertion_id": "assert:detroit:st-george-westminster-cardoni-chronology-book-1973",
+          "date": "1916",
+          "event": "brick_church_construction_began",
+          "label": "Brick church construction began",
+          "source_artifact_id": "src:divine-providence:parish-history-book:1973",
+          "source_locator": "Printed pp. 11-14 and 21-24: wooden and brick church chronology and February 4, 1966 demolition"
+        },
+        {
+          "assertion_id": "assert:detroit:st-george-westminster-cardoni-chronology-book-1973",
+          "date": "1917",
+          "event": "brick_church_blessed",
+          "label": "Brick church blessed",
+          "source_artifact_id": "src:divine-providence:parish-history-book:1973",
+          "source_locator": "Printed pp. 11-14 and 21-24: wooden and brick church chronology and February 4, 1966 demolition"
+        },
+        {
+          "assertion_id": "assert:detroit:st-george-westminster-cardoni-chronology-book-1973",
+          "date": "1966-02-04",
+          "event": "brick_church_demolished",
+          "label": "Brick church demolished",
+          "source_artifact_id": "src:divine-providence:parish-history-book:1973",
+          "source_locator": "Printed pp. 11-14 and 21-24: wooden and brick church chronology and February 4, 1966 demolition"
+        }
+      ],
       "name": "St. George Detroit church site",
       "related_public_institution_ids": [
         "cn:institution:st-george-detroit-mi"
@@ -4123,6 +4306,7 @@
         ],
         "start": "1927"
       },
+      "milestones": [],
       "name": "Former Saint George Roman Catholic church, Niagara Falls",
       "related_public_institution_ids": [
         "cn:institution:st-george-niagara-falls-ny"
@@ -4156,6 +4340,7 @@
         ],
         "start": "1915"
       },
+      "milestones": [],
       "name": "First Saint George church, Niagara Falls",
       "related_public_institution_ids": [
         "cn:institution:st-george-niagara-falls-ny"
@@ -4191,6 +4376,7 @@
         ],
         "start": "1935"
       },
+      "milestones": [],
       "name": "Former Saint George church site, Hudson Avenue",
       "related_public_institution_ids": [
         "cn:institution:st-george-lithuanian-rochester-ny"
@@ -4219,6 +4405,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "St. George Lithuanian National Catholic cemetery, Pittsburgh",
       "related_public_institution_ids": [
         "cn:institution:st-george-lithuanian-national-pittsburgh-pa"
@@ -4265,6 +4452,7 @@
         ],
         "start": "1902"
       },
+      "milestones": [],
       "name": "Former Saint George church site, Lituanica Avenue",
       "related_public_institution_ids": [
         "cn:institution:st-george-bridgeport-chicago-il"
@@ -4308,6 +4496,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Saint George parish hall, Brooklyn",
       "related_public_institution_ids": [
         "cn:institution:st-george-brooklyn-ny"
@@ -4342,6 +4531,7 @@
         ],
         "start": "1908"
       },
+      "milestones": [],
       "name": "Former Saint George parish school, Chicago",
       "related_public_institution_ids": [
         "cn:institution:st-george-bridgeport-chicago-il"
@@ -4376,6 +4566,7 @@
         ],
         "start": "1907"
       },
+      "milestones": [],
       "name": "Saint George church site, Bridgeport",
       "related_public_institution_ids": [
         "cn:institution:st-george-bridgeport-ct"
@@ -4418,6 +4609,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Former Saint George rectory, Niagara Falls",
       "related_public_institution_ids": [
         "cn:institution:st-george-niagara-falls-ny"
@@ -4451,6 +4643,7 @@
         ],
         "start": "1926"
       },
+      "milestones": [],
       "name": "Former Saint George rectory, Norwood",
       "related_public_institution_ids": [
         "cn:institution:st-george-norwood-ma"
@@ -4484,6 +4677,7 @@
         ],
         "start": "1950s"
       },
+      "milestones": [],
       "name": "Former Saint George school, Norwood",
       "related_public_institution_ids": [
         "cn:institution:st-george-norwood-ma"
@@ -4524,6 +4718,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Saint George church site, Shenandoah",
       "related_public_institution_ids": [
         "cn:institution:st-george-shenandoah-pa"
@@ -4568,6 +4763,7 @@
         ],
         "start": "1915"
       },
+      "milestones": [],
       "name": "Former Saint George church, Norwood",
       "related_public_institution_ids": [
         "cn:institution:st-george-norwood-ma"
@@ -4611,6 +4807,7 @@
         ],
         "start": "1920"
       },
+      "milestones": [],
       "name": "Saint George church-school building, Philadelphia",
       "related_public_institution_ids": [
         "cn:institution:st-george-lithuanian-philadelphia-pa"
@@ -4644,6 +4841,7 @@
         ],
         "start": "1949 at parish; moved after 2004"
       },
+      "milestones": [],
       "name": "Saint George Lithuanian-American veterans monument at Highland Cemetery",
       "related_public_institution_ids": [
         "cn:institution:st-george-norwood-ma"
@@ -4690,6 +4888,7 @@
         ],
         "start": "1892"
       },
+      "milestones": [],
       "name": "Former Saint George church site, Haverhill",
       "related_public_institution_ids": [
         "cn:institution:st-george-haverhill-ma"
@@ -4744,6 +4943,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Saint George church, Brooklyn",
       "related_public_institution_ids": [
         "cn:institution:st-george-brooklyn-ny"
@@ -4772,6 +4972,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "St. Isidore church on Talbot Street, Braddock",
       "related_public_institution_ids": [
         "cn:institution:st-isidore-braddock-pa"
@@ -4805,6 +5006,7 @@
         ],
         "start": "1921-07-04"
       },
+      "milestones": [],
       "name": "Former Saint John the Baptist church, Coaldale",
       "related_public_institution_ids": [
         "cn:institution:st-john-baptist-coaldale-pa"
@@ -4849,6 +5051,7 @@
         ],
         "start": "1914"
       },
+      "milestones": [],
       "name": "First Saint John the Baptist church, Coaldale",
       "related_public_institution_ids": [
         "cn:institution:st-john-baptist-coaldale-pa"
@@ -4877,6 +5080,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "St. John host church, New York",
       "related_public_institution_ids": [
         "cn:institution:lithuanian-protestant-parish-new-york-ny"
@@ -4917,6 +5121,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "St. John Lutheran church site, Darien",
       "related_public_institution_ids": [
         "cn:institution:teviske-lithuanian-lutheran-darien-il"
@@ -4948,6 +5153,7 @@
           "assert:pcs-6:luzerne-sites"
         ]
       },
+      "milestones": [],
       "name": "Saint John Nepomucene church, Luzerne",
       "related_public_institution_ids": [],
       "site_class": "worship_site",
@@ -4977,6 +5183,7 @@
           "assert:pcs-6:luzerne-sites"
         ]
       },
+      "milestones": [],
       "name": "Saint John Nepomucene rectory, Luzerne",
       "related_public_institution_ids": [],
       "site_class": "parish_ancillary_site",
@@ -5007,6 +5214,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Former Saint John the Baptist rectory, Coaldale",
       "related_public_institution_ids": [
         "cn:institution:st-john-baptist-coaldale-pa"
@@ -5047,6 +5255,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Former Saint Joseph church, 301 South State Street, DuBois",
       "related_public_institution_ids": [
         "cn:institution:st-joseph-dubois-pa"
@@ -5075,6 +5284,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "St. Joseph church, Donora",
       "related_public_institution_ids": [
         "cn:institution:st-joseph-donora-pa"
@@ -5121,6 +5331,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Former Saint Joseph church, Scranton",
       "related_public_institution_ids": [
         "cn:institution:st-joseph-scranton-pa"
@@ -5155,6 +5366,7 @@
         ],
         "start": "1949"
       },
+      "milestones": [],
       "name": "Saint Joseph church building, South Chicago",
       "related_public_institution_ids": [
         "cn:institution:st-joseph-south-chicago-il"
@@ -5189,6 +5401,7 @@
         ],
         "start": "1924"
       },
+      "milestones": [],
       "name": "Former Saint Joseph church, Nanticoke-Hanover",
       "related_public_institution_ids": [
         "cn:institution:st-joseph-nanticoke-hanover-pa"
@@ -5223,6 +5436,7 @@
         ],
         "start": "approximately 1906"
       },
+      "milestones": [],
       "name": "Saint Joseph rectory site, South Chicago",
       "related_public_institution_ids": [
         "cn:institution:st-joseph-south-chicago-il"
@@ -5275,6 +5489,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Saint Joseph Lithuanian church, 46 Congress Avenue, Waterbury",
       "related_public_institution_ids": [
         "cn:institution:st-joseph-waterbury-ct"
@@ -5303,6 +5518,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Original Saint Joseph Lithuanian church building, Waterbury",
       "related_public_institution_ids": [
         "cn:institution:st-joseph-waterbury-ct"
@@ -5334,6 +5550,7 @@
           "assert:nsp-8:st-michael-scranton-lifecycle"
         ]
       },
+      "milestones": [],
       "name": "Saint Lucy Church, Scranton",
       "related_public_institution_ids": [
         "cn:institution:st-michael-archangel-scranton-pa"
@@ -5374,6 +5591,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "St. Luke 1909 church, Bentleyville",
       "related_public_institution_ids": [
         "cn:institution:st-luke-bentleyville-pa"
@@ -5406,6 +5624,7 @@
         ],
         "start": "1906"
       },
+      "milestones": [],
       "name": "Saint Mary of the Annunciation Lithuanian Cemetery, Pringle",
       "related_public_institution_ids": [
         "cn:institution:st-mary-annunciation-kingston-pa"
@@ -5439,6 +5658,7 @@
         ],
         "start": "1903 basement; 1908 upper church"
       },
+      "milestones": [],
       "name": "Saint Mary of the Annunciation church, Kingston",
       "related_public_institution_ids": [
         "cn:institution:st-mary-annunciation-kingston-pa"
@@ -5460,6 +5680,7 @@
         ],
         "start": "2016"
       },
+      "milestones": [],
       "name": "Former Saint Mary of the Annunciation church lot, Kingston",
       "related_public_institution_ids": [],
       "site_class": "worship_site",
@@ -5490,6 +5711,7 @@
           "assert:nsp-8:st-mary-philadelphia-sites"
         ]
       },
+      "milestones": [],
       "name": "Saint Mary Lithuanian National Catholic Cemetery, Bensalem",
       "related_public_institution_ids": [
         "cn:institution:st-mary-lithuanian-national-philadelphia-pa"
@@ -5521,6 +5743,7 @@
           "assert:nsp-8:st-mary-philadelphia-sites"
         ]
       },
+      "milestones": [],
       "name": "Saint Mary Lithuanian National Catholic church, Philadelphia",
       "related_public_institution_ids": [
         "cn:institution:st-mary-lithuanian-national-philadelphia-pa"
@@ -5541,6 +5764,7 @@
           "assert:nsp-8:st-mary-philadelphia-sites"
         ]
       },
+      "milestones": [],
       "name": "Former Saint Mary church vacant lot, Philadelphia",
       "related_public_institution_ids": [],
       "site_class": "worship_site",
@@ -5567,6 +5791,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "St. Michael church, Shamokin",
       "related_public_institution_ids": [
         "cn:institution:st-michael-shamokin-pa"
@@ -5625,6 +5850,7 @@
         ],
         "start": "1977 attributed secondary"
       },
+      "milestones": [],
       "name": "Former Saint Michael church complex, Bayonne",
       "related_public_institution_ids": [
         "cn:institution:st-michael-bayonne-nj"
@@ -5658,6 +5884,7 @@
         ],
         "start": "1942 listing date"
       },
+      "milestones": [],
       "name": "Former Saint Michael church, Scranton",
       "related_public_institution_ids": [
         "cn:institution:st-michael-archangel-scranton-pa"
@@ -5689,6 +5916,7 @@
           "assert:nsp-8:st-michael-scranton-sites"
         ]
       },
+      "milestones": [],
       "name": "Former Saint Michael rectory, Scranton",
       "related_public_institution_ids": [
         "cn:institution:st-michael-archangel-scranton-pa"
@@ -5735,6 +5963,7 @@
         ],
         "start": "1904"
       },
+      "milestones": [],
       "name": "Former Saint Michael church site, Wabansia Avenue",
       "related_public_institution_ids": [
         "cn:institution:st-michael-north-side-chicago-il"
@@ -5777,6 +6006,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Former St. Peter Lithuanian church site, Detroit",
       "related_public_institution_ids": [
         "cn:institution:st-peter-detroit-mi"
@@ -5805,6 +6035,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Saint Peter Lithuanian church site, South Boston",
       "related_public_institution_ids": [
         "cn:institution:st-peter-south-boston-ma"
@@ -5833,6 +6064,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "St. Peter church, 24 State Street, Westfield",
       "related_public_institution_ids": [],
       "site_class": "worship_site",
@@ -5864,6 +6096,7 @@
         ],
         "start": "1906"
       },
+      "milestones": [],
       "name": "Saint Vincent de Paul former Armory church, Girardville",
       "related_public_institution_ids": [
         "cn:institution:st-vincent-de-paul-girardville-pa"
@@ -5908,6 +6141,7 @@
         ],
         "start": "1923 construction; 1925 consecration"
       },
+      "milestones": [],
       "name": "Saint Vincent de Paul church, Girardville",
       "related_public_institution_ids": [
         "cn:institution:st-vincent-de-paul-girardville-pa"
@@ -5936,6 +6170,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "St. Vincent de Paul church at Eighth and Enos, Springfield",
       "related_public_institution_ids": [
         "cn:institution:st-vincent-de-paul-springfield-il"
@@ -5979,6 +6214,7 @@
         ],
         "start": "1903"
       },
+      "milestones": [],
       "name": "Original Saint Vincent de Paul church, Esplen",
       "related_public_institution_ids": [
         "cn:institution:st-vincent-de-paul-esplen-pa"
@@ -6000,6 +6236,7 @@
         ],
         "start": "after original church demolition"
       },
+      "milestones": [],
       "name": "Replacement structure on the former Saint Vincent church site, Esplen",
       "related_public_institution_ids": [],
       "site_class": "worship_site",
@@ -6052,6 +6289,7 @@
         ],
         "start": null
       },
+      "milestones": [],
       "name": "Former Saint Vincent de Paul school and church, Esplen",
       "related_public_institution_ids": [
         "cn:institution:st-vincent-de-paul-esplen-pa"
@@ -6092,6 +6330,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Former Tėviškė Lithuanian Lutheran church site, Marquette Park",
       "related_public_institution_ids": [
         "cn:institution:teviske-lithuanian-lutheran-darien-il"
@@ -6144,6 +6383,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Transfiguration Lithuanian church, Perry Avenue, Maspeth",
       "related_public_institution_ids": [
         "cn:institution:transfiguration-maspeth-ny"
@@ -6184,6 +6424,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Original Transfiguration Lithuanian church, Hull Avenue, Maspeth",
       "related_public_institution_ids": [
         "cn:institution:transfiguration-maspeth-ny"
@@ -6212,6 +6453,7 @@
         }
       ],
       "lifecycle_text": null,
+      "milestones": [],
       "name": "Transfiguration predecessor church building on Perry Avenue, Maspeth",
       "related_public_institution_ids": [
         "cn:institution:transfiguration-maspeth-ny"
@@ -6271,7 +6513,7 @@
       "unit": "Canadian Lithuanian parish comparator"
     }
   },
-  "content_hash": "sha256:dba1ba922e8470fb9d3b0bbf3628fb241070f876746be94f9f3e721a33725158",
+  "content_hash": "sha256:006dbe5e4ee405c9f0c71071336a4605420495435c04b12be26ee7450552e89f",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -6975,6 +7217,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -6992,6 +7235,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -7012,6 +7256,7 @@
       },
       "evidence_assertion_ids": [
         "assert:detroit:divine-providence-originated-from-st-george-1949",
+        "assert:detroit:divine-providence-st-george-origin-book-1973",
         "assert:detroit:st-george-aod-lifecycle-1908-1965"
       ],
       "id": "rel:detroit:divine-providence-originated-from-st-george",
@@ -7027,6 +7272,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -7035,6 +7281,7 @@
       },
       "source_artifact_ids": [
         "src:archdiocese-detroit:closed-parishes:st-george-detroit:2026-07-31",
+        "src:divine-providence:parish-history-book:1973",
         "src:divine-providence:parish-history:2026-07-31"
       ],
       "target": {
@@ -7089,6 +7336,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -8484,7 +8732,7 @@
     "roman_catholic_parish_institutions": 132,
     "roman_catholic_parishes_with_closure_year": 92,
     "roman_catholic_parishes_with_founding_year": 121,
-    "site_r10_founding_fallbacks": 65,
+    "site_r10_founding_fallbacks": 64,
     "unresolved_founding_years": 16
   },
   "generated": "2026-08-01",
@@ -11416,16 +11664,16 @@
       "canonical_name": "St. Peter Lithuanian parish, Detroit",
       "city": "Detroit",
       "closed": {
-        "authority": "reviewed_case_snapshot",
+        "authority": "canonical_graph",
         "display": "1995",
         "year": 1995
       },
       "culturenet_entity_id": "cn:institution:st-peter-detroit-mi",
       "diocese": "Detroit",
       "founded": {
-        "authority": "site_r10_baseline",
-        "display": "1921",
-        "year": 1921
+        "authority": "canonical_graph",
+        "display": "1920",
+        "year": 1920
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",

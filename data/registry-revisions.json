@@ -101,6 +101,62 @@
         "data/canonical-public-census-adjudications.json",
         "data/candidates/registry-revision-10-canonical-projection-2026-07-31.md"
       ]
+    },
+    {
+      "version": 11,
+      "date": "2026-08-01",
+      "registryRecords": 192,
+      "publicUSRecords": 154,
+      "usRomanCatholicParishes": 132,
+      "summary": "Synchronized the St. Peter Detroit institution/building date correction from CultureNet: parish founded 1920, church opened 1921, parish closed 1995; 154 public U.S. institutions unchanged.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/canonical-public-census-adjudications.json",
+        "data/candidates/registry-revision-11-st-peter-detroit-dates-2026-08-01.md"
+      ]
+    },
+    {
+      "version": 12,
+      "date": "2026-08-01",
+      "registryRecords": 192,
+      "publicUSRecords": 154,
+      "usRomanCatholicParishes": 132,
+      "summary": "Added page-cited 1973 evidence for the Divine Providence Schaefer church lifecycle and its origin relationship with St. George; 154 public U.S. institutions, 131 physical worship sites, and 51 continuity edges unchanged.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/canonical-public-census-adjudications.json",
+        "data/candidates/registry-revision-12-divine-providence-schaefer-evidence-2026-08-01.md"
+      ]
+    },
+    {
+      "version": 13,
+      "date": "2026-08-01",
+      "registryRecords": 192,
+      "publicUSRecords": 154,
+      "usRomanCatholicParishes": 132,
+      "summary": "Linked the page-cited 1973 Divine Providence parish history to its public Žiburio archive item; 154 public U.S. institutions, 131 physical worship sites, and 51 continuity edges unchanged.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/canonical-public-census-adjudications.json",
+        "data/candidates/registry-revision-13-divine-providence-public-archive-link-2026-08-01.md"
+      ]
+    },
+    {
+      "version": 14,
+      "date": "2026-08-01",
+      "registryRecords": 192,
+      "publicUSRecords": 154,
+      "usRomanCatholicParishes": 132,
+      "summary": "Added page-cited St. George Detroit parish and church-building chronology from the public 1973 parish history, plus cleared line art; 154 public U.S. institutions, 131 physical worship sites, and 51 continuity edges unchanged.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/canonical-public-census-adjudications.json",
+        "data/candidates/registry-revision-14-st-george-detroit-history-and-line-art-2026-08-01.md"
+      ]
     }
   ]
 }

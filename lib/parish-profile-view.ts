@@ -17,12 +17,21 @@ export interface ParishProfileFact {
   value: string;
 }
 
+export type ChronologyEventKind = "institution" | "building";
+
 export interface ParishProfileChronologyItem {
   date: string;
   title: string;
   detail: string;
   sources: string[];
   sortYear: number;
+  /**
+   * Building events carry a visible tag so no reader mistakes a dedication or
+   * demolition for a parish founding or ending.
+   */
+  kind: ChronologyEventKind;
+  /** Red date: a loss, or a documented threat of one. */
+  loss: boolean;
 }
 
 export interface ParishProfileViewModel {
@@ -53,7 +62,20 @@ interface ParishProfileViewInput {
   caseAsOf: string | null;
   developments: ProfileDevelopment[];
   timelineEvents: ProfileTimelineEvent[];
+  /** Institution lifecycle as the canonical projection states it. */
+  existed: string | null;
+  /** The standing church and its own dedication year — a building fact, labelled as one. */
+  currentChurch: string | null;
+  lithuanianMass: string | null;
+  recordType: string;
+  institutionEnded: boolean;
 }
+
+const BUILDING_EVENT =
+  /\b(dedicat|demolish|razed|rebuilt|rebuild|construct|cornerstone|church building|building sold|sold the (?:church|building)|repurpos|torn down|fire|burned|site)\b/i;
+
+const LOSS_EVENT =
+  /\b(clos|closure|suppress|demolish|razed|merged|merger|transferred|sold|ended|end of|lost|lose|losing|at risk|threat|slated|dissolv|torn down)\b/i;
 
 function location(input: ParishProfileViewInput) {
   const country =
@@ -106,12 +128,27 @@ function currentSummary(input: ParishProfileViewInput) {
   return terminalPunctuation(input.overview);
 }
 
+function classify(title: string, detail: string) {
+  const text = `${title} ${detail}`;
+  return {
+    kind: (BUILDING_EVENT.test(text) ? "building" : "institution") as ChronologyEventKind,
+    loss: LOSS_EVENT.test(text),
+  };
+}
+
 function chronology(input: ParishProfileViewInput) {
   const items: ParishProfileChronologyItem[] = [];
+  const institutionNoun = input.recordType === "misija" ? "Mission" : "Parish";
+
+  function push(
+    item: Omit<ParishProfileChronologyItem, "kind" | "loss">,
+  ) {
+    items.push({ ...item, ...classify(item.title, item.detail) });
+  }
 
   if (input.timelineEvents.length > 0) {
     for (const event of input.timelineEvents) {
-      items.push({
+      push({
         date: event.date,
         title: event.title,
         detail: event.detail,
@@ -120,9 +157,9 @@ function chronology(input: ParishProfileViewInput) {
       });
     }
   } else if (input.founded) {
-    items.push({
+    push({
       date: String(input.founded),
-      title: "Parish established",
+      title: `${institutionNoun} established`,
       detail: `${input.name} was established in ${location(input)}.`,
       sources: [],
       sortYear: input.founded,
@@ -131,7 +168,7 @@ function chronology(input: ParishProfileViewInput) {
 
   for (const development of input.developments) {
     const year = Number.parseInt(development.date.slice(0, 4), 10);
-    items.push({
+    push({
       date: development.date,
       title: development.headline,
       detail: development.detail,
@@ -154,10 +191,10 @@ function chronology(input: ParishProfileViewInput) {
         /\b(close|closed|closure|suppress|merged|ended)\b/i.test(item.title),
     )
   ) {
-    items.push({
+    push({
       date: String(input.closed),
-      title: "Parish life ended",
-      detail: `The parish closed in ${input.closed}.`,
+      title: `${institutionNoun} life ended`,
+      detail: `The ${institutionNoun.toLowerCase()} closed in ${input.closed}.`,
       sources: [],
       sortYear: input.closed,
     });
@@ -173,10 +210,55 @@ function chronology(input: ParishProfileViewInput) {
     })
     .sort(
       (a, b) =>
-        a.sortYear - b.sortYear ||
-        a.date.localeCompare(b.date) ||
+        b.sortYear - a.sortYear ||
+        b.date.localeCompare(a.date) ||
         a.title.localeCompare(b.title),
     );
+}
+
+/**
+ * Four facts, true for every institution, each labelled with its own unit.
+ * Ownership and per-site outcomes belong to the worship-sites section — a bare
+ * "Church building" row silently blends a building fact into an institution row.
+ * docs/design-system-profile.md §6.
+ */
+function facts(input: ParishProfileViewInput): ParishProfileFact[] {
+  if (input.recordType === "misija") {
+    return [
+      { label: "Institution", value: input.institution },
+      { label: "Active", value: input.status },
+      {
+        label: "Worships in",
+        value: input.currentChurch ?? input.building ?? "Not established",
+      },
+      {
+        label: "Lithuanian Mass",
+        value: input.lithuanianMass ?? "Not established",
+      },
+    ];
+  }
+
+  return [
+    { label: "Institution", value: input.institution },
+    {
+      label: "Existed",
+      value:
+        input.existed ??
+        (input.founded
+          ? input.closed
+            ? `${input.founded}\u2013${input.closed}`
+            : `${input.founded}\u2013present`
+          : "Founding year unresolved"),
+    },
+    {
+      label: input.institutionEnded ? "Former church" : "Current church",
+      value: input.currentChurch ?? input.building ?? "Not established",
+    },
+    {
+      label: "Lithuanian Mass",
+      value: input.lithuanianMass ?? "Not established",
+    },
+  ];
 }
 
 export function buildParishProfileView(
@@ -184,23 +266,7 @@ export function buildParishProfileView(
 ): ParishProfileViewModel {
   return {
     historyFallback: historyFallback(input),
-    facts: [
-      {
-        label: "Founded",
-        value: input.founded ? String(input.founded) : "Not established",
-      },
-      { label: "Present status", value: input.status },
-      { label: "Type", value: input.institution },
-      { label: "Ownership", value: input.ownership },
-      {
-        label: "Diocese or jurisdiction",
-        value: input.diocese ?? "Not established",
-      },
-      {
-        label: "Church building",
-        value: input.building ?? "Not established",
-      },
-    ],
+    facts: facts(input),
     chronology: chronology(input),
     currentSummary: currentSummary(input),
     currentAsOf: input.caseAsOf,

@@ -14,8 +14,32 @@ const chronologySource = fs.readFileSync(
   path.join(ROOT, "components", "ParishProfileChronology.tsx"),
   "utf8",
 );
+const worshipSitesSource = fs.readFileSync(
+  path.join(ROOT, "components", "ProfileWorshipSites.tsx"),
+  "utf8",
+);
+const relatedRecordsSource = fs.readFileSync(
+  path.join(ROOT, "components", "ProfileRelatedRecords.tsx"),
+  "utf8",
+);
+const contextMapSource = fs.readFileSync(
+  path.join(ROOT, "components", "ParishContextMap.tsx"),
+  "utf8",
+);
 const ledgerSource = fs.readFileSync(
   path.join(ROOT, "components", "ProfileSourceLedger.tsx"),
+  "utf8",
+);
+const graphSource = fs.readFileSync(
+  path.join(ROOT, "lib", "parish-record-graph.ts"),
+  "utf8",
+);
+const profileViewSource = fs.readFileSync(
+  path.join(ROOT, "lib", "parish-profile-view.ts"),
+  "utf8",
+);
+const profileSourcesSource = fs.readFileSync(
+  path.join(ROOT, "lib", "profile-sources.ts"),
   "utf8",
 );
 const publication = JSON.parse(
@@ -24,35 +48,33 @@ const publication = JSON.parse(
     "utf8",
   ),
 );
+const infographic = JSON.parse(
+  fs.readFileSync(
+    path.join(ROOT, "data", "canonical-infographic-projection.json"),
+    "utf8",
+  ),
+);
 const comparatorCount = JSON.parse(
   fs.readFileSync(path.join(ROOT, "data", "parishes.json"), "utf8"),
 ).filter((parish) => parish.comparator && !parish.mergedInto).length;
 
 const errors = [];
+
+// Canonical profile order, v2. Identity carries status, facts, and the dek;
+// history, chronology, buildings, relationships, present condition, evidence,
+// corrections follow. docs/design-system-profile.md §5.
 const orderedMarkers = [
-  {
-    id: "profile-overview",
-    marker: 'id="profile-overview"',
-    source: pageSource,
-  },
-  {
-    id: "place-and-jurisdiction",
-    marker: 'id="place-and-jurisdiction"',
-    source: pageSource,
-  },
-  {
-    id: "profile-history",
-    marker: "<ParishPublishedRecord",
-    source: pageSource,
-  },
-  {
-    id: "profile-facts",
-    marker: 'id="profile-facts"',
-    source: pageSource,
-  },
+  { id: "profile-identity", marker: 'id="profile-identity"', source: pageSource },
+  { id: "profile-history", marker: "<ParishPublishedRecord", source: pageSource },
   {
     id: "parish-chronology",
     marker: "<ParishProfileChronology",
+    source: pageSource,
+  },
+  { id: "worship-sites", marker: "<ProfileWorshipSites", source: pageSource },
+  {
+    id: "related-records",
+    marker: "<ProfileRelatedRecords",
     source: pageSource,
   },
   {
@@ -60,14 +82,10 @@ const orderedMarkers = [
     marker: 'id="present-condition"',
     source: pageSource,
   },
+  { id: "evidence-sources", marker: "<ProfileSourceLedger", source: pageSource },
   {
     id: "profile-corrections",
     marker: 'id="profile-corrections"',
-    source: pageSource,
-  },
-  {
-    id: "evidence-sources",
-    marker: "<ProfileSourceLedger",
     source: pageSource,
   },
 ];
@@ -86,26 +104,109 @@ for (const section of orderedMarkers) {
 }
 
 const requiredFragments = [
-  [pageSource, 'data-profile-layout="canonical-v1"', "layout version"],
+  [pageSource, 'data-profile-layout="canonical-v2"', "layout version"],
   [
     pageSource,
     "fallbackNarrative={profileView.historyFallback}",
     "history fallback",
   ],
-  [
-    pageSource,
-    "items={profileView.chronology}",
-    "normalized chronology",
-  ],
+  [pageSource, "items={profileView.chronology}", "normalized chronology"],
   [historySource, 'id="profile-history"', "history section id"],
   [chronologySource, 'id="parish-chronology"', "chronology section id"],
+  [worshipSitesSource, 'id="worship-sites"', "worship sites section id"],
+  [
+    worshipSitesSource,
+    "grid min-w-0",
+    "worship-site mobile width containment",
+  ],
+  [worshipSitesSource, "site.milestones.map", "worship-site milestone list"],
+  [
+    worshipSitesSource,
+    "if (sites.length === 0) return null;",
+    "empty worship-site section omission",
+  ],
+  [relatedRecordsSource, 'id="related-records"', "related records section id"],
   [ledgerSource, 'id="evidence-sources"', "evidence section id"],
+  [
+    pageSource,
+    "canonicalArtifactProfileSources(",
+    "canonical source-artifact ledger adapter",
+  ],
+  [
+    profileSourcesSource,
+    "artifact.rights?.public_url",
+    "canonical public-source URL resolution",
+  ],
+  // A building event must be distinguishable from an institutional one.
+  [chronologySource, "Worship site", "building-event tag"],
+  // Unresolved founding years are shown as unresolved, never estimated.
+  [pageSource, "foundedUnresolved", "unresolved founding treatment"],
+  [
+    pageSource,
+    "const foundedYear = institutionDates",
+    "canonical institutional founding date",
+  ],
+  [
+    profileViewSource,
+    'label: input.institutionEnded ? "Former church" : "Current church"',
+    "closed-institution former-church treatment",
+  ],
+  [pageSource, "survivedReviewThenClosed", "survived-review warning"],
+  [
+    pageSource,
+    'data-profile-scope="outside-us-projection"',
+    "non-U.S. projection scope band",
+  ],
+  [
+    pageSource,
+    'recordType !== "misija" && institutionDates',
+    "mission founding-strip omission",
+  ],
+  [
+    pageSource,
+    'recordType === "misija" || !isUsProjection ? [] : worshipSites',
+    "mission and comparator worship-site omission",
+  ],
+  [
+    profileViewSource,
+    'label: "Worships in"',
+    "mission worship-place vocabulary",
+  ],
+  [profileViewSource, 'label: "Active"', "mission active vocabulary"],
+  [
+    graphSource,
+    'return "Repurposed, standing"',
+    "standing repurposed-site outcome",
+  ],
+  [
+    graphSource,
+    "getIdentityNoticesForInstitution",
+    "adjudicated institution-overlap notice",
+  ],
+  [pageSource, 'href="/report"', "profile correction route"],
+  [
+    graphSource,
+    'edge.publication_state === "publishable"',
+    "publishable continuity-edge filter",
+  ],
+  [
+    graphSource,
+    "getInfographicInstitutionByEntityId",
+    "entity-id profile resolution",
+  ],
+  [graphSource, "CONDITION_PRECEDENCE", "worship-site outcome precedence"],
+  [
+    contextMapSource,
+    'className="min-w-0 max-w-full overflow-hidden"',
+    "compact-map overflow containment",
+  ],
 ];
 
 for (const [source, fragment, label] of requiredFragments) {
   if (!source.includes(fragment)) errors.push(`missing ${label}`);
 }
 
+// Research narration stays in the research record and About the Data.
 for (const forbidden of [
   "caseRecord.gaps",
   "What we could not yet establish",
@@ -115,6 +216,214 @@ for (const forbidden of [
   if (pageSource.includes(forbidden)) {
     errors.push(`internal or superseded profile language is public: ${forbidden}`);
   }
+}
+
+// Status is stated once. The identity strip owns it; nothing else repeats it.
+if (pageSource.includes("<EndStatePill")) {
+  errors.push("status is stated twice: EndStatePill alongside the identity strip");
+}
+if (pageSource.includes('id="profile-facts"')) {
+  errors.push('superseded section present: "At a glance" (profile-facts)');
+}
+if (pageSource.includes('href="/contribute"')) {
+  errors.push("profile correction CTA points to nonexistent /contribute route");
+}
+if (pageSource.includes("const foundedYear = scoped.founded")) {
+  errors.push("profile narrative bypasses canonical institutional dates");
+}
+
+const profileOutputSources = [
+  pageSource,
+  historySource,
+  chronologySource,
+  worshipSitesSource,
+  relatedRecordsSource,
+  profileViewSource,
+].join("\n");
+if (/#b3aca2/i.test(profileOutputSources)) {
+  errors.push("map-marker color #b3aca2 is used in profile text output");
+}
+
+const divineProvidence = publication.public_institutions.find(
+  (institution) => institution.registry_slug === "providence-southfield-mi",
+);
+const divineProvidenceHistoryId =
+  "src:divine-providence:parish-history-book:1973";
+const divineProvidenceHistory = publication.source_artifacts.find(
+  (source) => source.id === divineProvidenceHistoryId,
+);
+if (!divineProvidence?.source_artifact_ids.includes(divineProvidenceHistoryId)) {
+  errors.push("Divine Providence profile is missing its 1973 parish-history source");
+}
+if (
+  divineProvidenceHistory?.rights?.public_url !==
+  "https://archyvas.ziburioltmokykla.org/item/20260331_1774920079895"
+) {
+  errors.push("Divine Providence parish history lacks its public archive URL");
+}
+
+const stGeorgeSite = infographic.building_site_history.find(
+  (site) =>
+    site.culturenet_entity_id ===
+    "cn:building_site:st-george-detroit-westminster-cardoni-site",
+);
+const stGeorgeMilestones = new Map(
+  (stGeorgeSite?.milestones ?? []).map((milestone) => [
+    milestone.event,
+    milestone.date,
+  ]),
+);
+for (const [event, date] of [
+  ["wooden_church_built", "1908"],
+  ["wooden_church_blessed", "1909"],
+  ["brick_church_construction_began", "1916"],
+  ["brick_church_blessed", "1917"],
+  ["brick_church_demolished", "1966-02-04"],
+]) {
+  if (stGeorgeMilestones.get(event) !== date) {
+    errors.push(`St. George Detroit site milestone drifted: ${event}`);
+  }
+}
+
+const institutionByProfile = new Map(
+  infographic.institution_history.map((institution) => [
+    institution.public_profile,
+    institution,
+  ]),
+);
+const institutionByEntityId = new Map(
+  infographic.institution_history.map((institution) => [
+    institution.culturenet_entity_id,
+    institution,
+  ]),
+);
+const siteByEntityId = new Map(
+  infographic.building_site_history.map((site) => [
+    site.culturenet_entity_id,
+    site,
+  ]),
+);
+
+// The visual cases are also semantic regression cases. These assertions protect
+// the current canon where the design reference still reflects an older packet.
+const stAnthonyDetroit = institutionByProfile.get(
+  "/parishes/sv-antano-detroit-mi",
+);
+const stAnthonySite = siteByEntityId.get(
+  "cn:building_site:st-anthony-detroit-25th-street-site",
+);
+const stAnthonyConditions = new Set(
+  (stAnthonySite?.condition_relationships ?? []).map(
+    (condition) => condition.relationship_type,
+  ),
+);
+if (
+  stAnthonyDetroit?.closed?.year !== 2013 ||
+  !stAnthonyConditions.has("building-repurposed") ||
+  !stAnthonyConditions.has("building-standing")
+) {
+  errors.push("Detroit St. Anthony closed-standing case drifted");
+}
+if (
+  !infographic.continuity_edges.some(
+    (edge) =>
+      edge.id === "rel:detroit:st-anthony-merged-into-divine-providence" &&
+      edge.relationship_type === "institution-merged-into-institution",
+  )
+) {
+  errors.push("Detroit St. Anthony merge relationship drifted");
+}
+
+const stPeterDetroit = institutionByProfile.get(
+  "/parishes/sv-petro-detroit-mi",
+);
+const stPeterSite = siteByEntityId.get(
+  "cn:building_site:st-peter-detroit-site",
+);
+const stPeterUse = stPeterSite?.institution_use_periods.find(
+  (period) => period.institution_entity_id === stPeterDetroit?.culturenet_entity_id,
+);
+if (
+  stPeterDetroit?.founded?.year !== 1920 ||
+  stPeterUse?.date?.start !== "1921" ||
+  stPeterUse?.date?.end !== "1995"
+) {
+  errors.push(
+    "Detroit St. Peter must retain its 1920 institution and 1921-1995 worship site",
+  );
+}
+
+const stGeorgeDetroit = institutionByProfile.get(
+  "/parishes/st-george-detroit-mi",
+);
+const stGeorgeOrigin = infographic.continuity_edges.find(
+  (edge) => edge.id === "rel:detroit:divine-providence-originated-from-st-george",
+);
+if (
+  stGeorgeDetroit?.founded?.year !== 1908 ||
+  stGeorgeDetroit?.closed?.year !== 1965 ||
+  stGeorgeOrigin?.adjudication_state !== "accepted" ||
+  stGeorgeOrigin?.identity_effect !== "distinct_institutions_lineage"
+) {
+  errors.push(
+    "Detroit St. George must remain a distinct 1908-1965 institution overlapping Divine Providence from 1949",
+  );
+}
+if (profileOutputSources.includes("Transferred, date disputed")) {
+  errors.push("stale St. George transfer-date treatment returned");
+}
+
+const lemontMission = institutionByProfile.get(
+  "/parishes/pal-jurgio-matulaicio-misija-lemont-il",
+);
+if (
+  lemontMission?.record_type !== "misija" ||
+  infographic.counts.roman_catholic_parish_institutions !== 132 ||
+  publication.counts.by_record_type.misija !== 4
+) {
+  errors.push("mission vocabulary or Roman Catholic parish count drifted");
+}
+
+const frackville = institutionByProfile.get(
+  "/parishes/sv-m-marijos-apsireiskimo-frackville-pa",
+);
+const frackvilleContinuation = infographic.continuity_edges.find(
+  (edge) => edge.id === "rel:ef-5:frackville-continued-st-joseph",
+);
+if (
+  frackville?.founded?.year !== 1914 ||
+  !frackvilleContinuation ||
+  institutionByEntityId.has(frackvilleContinuation.target?.entity_id)
+) {
+  errors.push(
+    "Frackville must retain its canonical 1914 founding and unlinked continuation endpoint",
+  );
+}
+
+if (
+  infographic.comparators.canada.counted_in_public_us_institution_total !==
+    false ||
+  infographic.comparators.canada.population !== 3
+) {
+  errors.push("Canadian comparator scope drifted");
+}
+
+const relationshipTypes = [
+  ...new Set(
+    infographic.continuity_edges.map((edge) => edge.relationship_type),
+  ),
+].sort();
+const mappedRelationshipTypes = [
+  "congregation/canonical-life-continued-in",
+  "institution-merged-into-institution",
+  "institution-originated-from-institution",
+  "institution-renamed-as-same-entity",
+  "institution-succeeded-by-institution",
+];
+if (JSON.stringify(relationshipTypes) !== JSON.stringify(mappedRelationshipTypes)) {
+  errors.push(
+    `continuity relationship vocabulary changed: ${relationshipTypes.join(", ")}`,
+  );
 }
 
 if (errors.length > 0) {
@@ -128,5 +437,5 @@ const caseRecordCount = fs
   .filter((file) => file.endsWith(".json")).length;
 
 console.log(
-  `OK: canonical profile layout — ${orderedMarkers.length} ordered sections across ${publication.counts.public_us_institutions} U.S. institution profiles and ${comparatorCount} Canadian comparators; ${caseRecordCount} public case-record overlays.`,
+  `OK: canonical profile layout v2 \u2014 ${orderedMarkers.length} ordered sections across ${publication.counts.public_us_institutions} U.S. institution profiles and ${comparatorCount} Canadian comparators; ${caseRecordCount} public case-record overlays.`,
 );

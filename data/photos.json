@@ -635,6 +635,15 @@
       "rights": "permission_granted",
       "rightsNote": "Parish line drawing supplied by Vilija for publication on 2026-07-30 from the Divine Providence parish materials."
     },
+    "divine-providence-detroit-schaefer-site-line-drawing": {
+      "src": "/images/parishes/detroit-divine-providence-schaefer-line-drawing.png",
+      "alt": "Line drawing of the Divine Providence Lithuanian Catholic Church on Schaefer Road in Detroit, used from 1949 to 1970.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from the church photograph in Dievo Apvaizdos lietuvių parapija / Divine Providence Lithuanian Parish, 1908-1973.",
+      "license": "Used with permission",
+      "rights": "permission_granted",
+      "rightsNote": "Source photograph and parish-history scans supplied by Vilija for publication on 2026-08-01. Canonical source: 1973 first-edition parish history, p. 25.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260331_1774920079895"
+    },
     "dievo-apvaizdos-southfield-mi-first-communion": {
       "src": "/images/parishes/divine-providence-first-communion.jpg",
       "alt": "Children celebrate First Communion inside Divine Providence Lithuanian Catholic Church in Southfield.",
@@ -642,6 +651,23 @@
       "license": "Used with permission",
       "rights": "permission_granted",
       "rightsNote": "Image supplied by Vilija for publication on 2026-07-29 from the Friends of Divine Providence Virbalas briefing asset set."
+    },
+    "st-george-detroit-mi-line-drawing": {
+      "src": "/images/parishes/detroit-st-george-line-drawing.png",
+      "alt": "Line drawing of the 1916 St. George Lithuanian Catholic Church in Detroit.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from the church photograph in Dievo Apvaizdos lietuvių parapija / Divine Providence Lithuanian Parish, 1908-1973.",
+      "license": "Used with permission",
+      "rights": "permission_granted",
+      "rightsNote": "Source photograph and parish-history scans supplied by Vilija for publication on 2026-08-01. Canonical source: 1973 first-edition parish history, printed p. 14.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260331_1774920079895"
+    },
+    "sv-petro-detroit-mi-line-drawing": {
+      "src": "/images/parishes/detroit-st-peter-line-drawing.png",
+      "alt": "Line drawing of St. Peter Lithuanian Catholic Church in Detroit as it appeared in 1960.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a parish-history photograph captioned 'Sv. Petro baznycia 1960 metais.'",
+      "license": "Used with permission",
+      "rights": "permission_granted",
+      "rightsNote": "Source photograph and parish-history scans supplied by Vilija for publication on 2026-08-01. The exact title and publication metadata of the scanned parish volume remain to be identified; the source photograph is captioned 'Sv. Petro baznycia 1960 metais.'"
     },
     "sv-kazimiero-pittston-pa": {
       "src": "/images/parishes/pittston-st-casimir.jpg",
@@ -1108,6 +1134,15 @@
       "rights": "permission_granted",
       "rightsNote": "Permission to publish this line-art adaptation was confirmed by Vilija on 2026-07-30. The drawing was created from the exterior photograph on p. 127; source © Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9).",
       "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786"
+    },
+    "sv-antano-detroit-mi-line-drawing": {
+      "src": "/images/parishes/detroit-st-anthony-line-drawing.png",
+      "alt": "Line drawing of the former St. Anthony Lithuanian Catholic Church at West Vernor Highway and 25th Street in Detroit.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from the church photograph published with Draugas's 2011 St. Anthony parish-jubilee article.",
+      "license": "Used with permission",
+      "rights": "permission_granted",
+      "rightsNote": "The same St. Anthony church photograph appears in Draugas's 2011 parish-jubilee article, predating its later publication by VKPK. Vilija confirmed use of the source photograph for this line-art adaptation on 2026-08-01. The generated drawing is published with attribution to the earliest accessible online source.",
+      "evidenceUrl": "https://www.draugas.org/legacy/06-02-11detroit.html"
     }
   },
   "_registryNotes": {

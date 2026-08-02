@@ -1,27 +1,19 @@
 {
   "slug": "dievo-apvaizdos-southfield-mi",
-  "asOf": "2026-07-25",
+  "asOf": "2026-08-01",
   "buildingStatus": "standing",
   "currentUse": "Active diocesan Lithuanian Catholic parish; Lithuanian-language Masses Sundays and Fridays, English Mass Saturdays",
-  "summary": "Divine Providence remains an open, functioning parish at 25335 W. Nine Mile Rd., Southfield, with a regular Lithuanian/English Mass schedule. Fr. Tomas Miliauskas, MIC, pastor since December 2021, departed in May 2026, and no successor has been publicly named — as of late July 2026 the archdiocese had not decided whether to accept another priest from Lithuania. It belongs to a four-parish Family of Parishes (with Transfiguration, Our Lady of La Salette, and Our Mother of Perpetual Help) now called the 'Family Sent on Mission,' which received a newly assigned support priest in June 2026. In the Archdiocese of Detroit restructuring, Divine Providence is in Planning Area 9, and Detroit News reported on May 30, 2026 that it is among ten Area 9 parishes that would stop holding weekend Mass under at least one proposed pastorate model. No decision has been made: spring 2026 listening sessions have run their course, an online feedback survey stays open through July 31, 2026, and the published timeline calls for the archbishop's discernment in fall 2026, final plans in winter 2027, and implementation July 1, 2027.",
+  "summary": "Divine Providence is the sole surviving Lithuanian Roman Catholic parish institution in metropolitan Detroit. Formed in 1949 from the St. George parish community while St. George itself remained active, it first worshipped in the Divine Providence church on Schaefer Road in Detroit. That church was demolished in November 1970 for freeway construction; the same parish institution moved to Southfield, where its present church and cultural center were dedicated on September 8, 1973. St. Anthony Lithuanian Parish merged into Divine Providence in 2013. The parish continues a Sunday Lithuanian Mass. Since its pastor departed in May 2026, no successor has been publicly confirmed, while the Archdiocese considers Planning Area 8 models that could end weekend Mass there.",
+  "historicalSummary": [
+    "Divine Providence grew from Detroit's first Lithuanian Catholic parish, St. George. On July 25, 1948, about 100 St. George parishioners broke ground for a new Lithuanian church south of Grand River on Schaefer. Because the original St. George parish and church still remained active, the chancery would not allow the name to be reused; the new parish institution was named Divine Providence.",
+    "The Schaefer church's cornerstone was blessed on March 6, 1949, and the completed church was blessed that December. St. George remained a distinct parish through 1965, and its Westminster church was demolished for the Chrysler Freeway in 1966. Divine Providence then faced a second displacement when the Jeffries Freeway took the Schaefer site.",
+    "The last Mass on Schaefer was celebrated May 17, 1970. Beginning May 24, the parish worshipped temporarily at St. Beatrice in Southfield while building its permanent home. The Schaefer church was demolished in November 1970; the present Divine Providence church and cultural center on Nine Mile Road were dedicated September 8, 1973."
+  ],
   "developments": [
-    {
-      "date": "2026-06-22",
-      "headline": "New priest assigned to parish's Family of Parishes",
-      "detail": "Archdiocese of Detroit clergy announcements named Fr. Sama Muma full-time priest support to the 'Family Sent on Mission' Family of Parishes, which includes Divine Providence (Lithuanian), Southfield.",
-      "sources": [
-        {
-          "title": "Archdiocese of Detroit clergy announcements: June 22, 2026",
-          "publisher": "Detroit Catholic",
-          "date": "2026-06-22",
-          "url": "https://www.detroitcatholic.com/news/archdiocese-of-detroit-clergy-announcements-june-22-2026"
-        }
-      ]
-    },
     {
       "date": "2026-05-30",
       "headline": "Named among parishes that could lose weekend Mass",
-      "detail": "Detroit News reported Divine Providence, Southfield, is one of ten Planning Area 9 parishes that would stop holding weekend Mass in at least one proposed restructuring model; at least 58 parishes archdiocese-wide were similarly flagged.",
+      "detail": "Detroit News reported that Divine Providence could stop holding weekend Mass under at least one proposed restructuring model; current Archdiocese materials place the parish in Planning Area 8 and state that no final decision has been made.",
       "sources": [
         {
           "title": "Archdiocese of Detroit's list of parishes chosen for halted Masses grows (Detroit News via republication)",
@@ -34,6 +26,12 @@
           "publisher": "News Pub / Detroit News",
           "date": "2026-05-30",
           "url": "https://newspub.live/midwest/detroit-mi/archdiocese-of-detroits-list-of-parishes-chosen-for-halted-masses-grows/"
+        },
+        {
+          "title": "Archdiocesan Restructuring Planning Area 8",
+          "publisher": "Archdiocese of Detroit",
+          "date": "2026",
+          "url": "https://restructuring.aod.org/planning-area-8"
         }
       ]
     },
@@ -47,19 +45,6 @@
           "publisher": "Detroit Catholic",
           "date": "2026-05-11",
           "url": "https://www.detroitcatholic.com/news/just-over-one-third-of-parish-listening-sessions-completed-amid-restructuring-process"
-        }
-      ]
-    },
-    {
-      "date": "2026-07-23",
-      "headline": "No pastor named since Fr. Miliauskas departed in May",
-      "detail": "Lithuanian press reported that Fr. Tomas Miliauskas, MIC, who led the parish from December 2021, left in May 2026, and that during Archbishop Lionginas Virbalas's July 18–19 pastoral visit the Archdiocese of Detroit had not yet decided whether to accept another priest from Lithuania. The parish website and the archdiocesan directory still listed Fr. Miliauskas at the time — apparently stale listings.",
-      "sources": [
-        {
-          "title": "Dar vienai lietuvių parapijai JAV gresia uždarymas",
-          "publisher": "Laikmetis.lt",
-          "date": "2026-07-23",
-          "url": "https://laikmetis.lt/dar-vienai-lietuviu-parapijai-jav-gresia-uzdarymas/"
         }
       ]
     }
@@ -92,5 +77,5 @@
   ],
   "confidence": "verified",
   "conflictsWithArchiveRecord": "No contradictions. One refinement: the Detroit News list places Divine Providence in Planning Area 9 (southeastern Oakland County); a separate report grouped some Southfield parishes in Planning Area 8, so area assignment reporting varies slightly.",
-  "gaps": "Could not independently confirm the parish's specific listening-session dates (2026-05-30 and 2026-06-06) or the March 2026 workbook — the official restructuring.aod.org site returned 403 and the parish site/bulletins do not mention restructuring. Unknown which specific model(s) would end weekend Mass at Divine Providence and whether the final plan (due winter 2027) will retain it. The original Detroit News article is paywalled; verified via two republications. Where Fr. Miliauskas was reassigned after May 2026 is not established."
+  "gaps": "Could not independently confirm the parish's specific listening-session dates (2026-05-30 and 2026-06-06) or the March 2026 workbook. Unknown which specific model or models would end weekend Mass at Divine Providence and whether the final plan, due in winter 2027, will retain it."
 }

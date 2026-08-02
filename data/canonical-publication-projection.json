@@ -5471,6 +5471,49 @@
         "conflict_preserved": false,
         "state": "accepted"
       },
+      "assertion_type": "site_lifecycle",
+      "confidence": "high",
+      "id": "assert:detroit:divine-providence-schaefer-chronology-1973",
+      "object": {
+        "canonical_entity_id": "cn:building_site:divine-providence-detroit-schaefer-site",
+        "church_blessed": "1949-12",
+        "cornerstone_blessed": "1949-03-06",
+        "groundbreaking": "1948-07-25",
+        "last_mass": "1970-05-17",
+        "site_use_period": "1949-1970"
+      },
+      "predicate": "archival_chronology_attests_building_site_lifecycle",
+      "source_artifact_id": "src:divine-providence:parish-history-book:1973",
+      "source_locator": "Scan-sequence pp. 25 and 35: groundbreaking, cornerstone and church blessings, and last Mass on Schaefer",
+      "subject": {
+        "canonical_entity_id": "cn:institution:divine-providence-southfield-mi"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "origin_relationship",
+      "confidence": "high",
+      "id": "assert:detroit:divine-providence-st-george-origin-book-1973",
+      "object": {
+        "canonical_entity_id": "cn:institution:st-george-detroit-mi",
+        "date_text": "1948-1949",
+        "interpretation": "About 100 St. George parishioners broke ground for a new Lithuanian church intended to replace St. George at 1313 Westminster; Divine Providence was chosen as the name because St. George still remained active."
+      },
+      "predicate": "institution_originated_from_institution",
+      "source_artifact_id": "src:divine-providence:parish-history-book:1973",
+      "source_locator": "Scan-sequence p. 25, Divine Providence Chronology (1948-1973), by Anthony Dainius",
+      "subject": {
+        "canonical_entity_id": "cn:institution:divine-providence-southfield-mi"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
       "assertion_type": "site_location",
       "confidence": "medium",
       "id": "assert:detroit:schaefer-location-photo",
@@ -5681,6 +5724,26 @@
     },
     {
       "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "lifecycle_dates",
+      "confidence": "high",
+      "id": "assert:detroit:st-george-foundation-book-1973",
+      "object": {
+        "canonical_entity_id": "cn:institution:st-george-detroit-mi",
+        "date_text": "1908",
+        "interpretation": "St. George Lithuanian parish was organized in 1908 by Father Casimir Valaitis and the St. George Society."
+      },
+      "predicate": "institution_founding_attested",
+      "source_artifact_id": "src:divine-providence:parish-history-book:1973",
+      "source_locator": "Printed pp. 11 and 21, St. George parish histories",
+      "subject": {
+        "canonical_entity_id": "cn:institution:st-george-detroit-mi"
+      }
+    },
+    {
+      "adjudication": {
         "conflict_preserved": true,
         "state": "accepted"
       },
@@ -5716,6 +5779,69 @@
       "source_locator": "Parish History paragraph naming Westminster/Cardoni and the 1917 brick St. George",
       "subject": {
         "canonical_entity_id": "cn:institution:st-george-detroit-mi"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "site_lifecycle",
+      "confidence": "high",
+      "id": "assert:detroit:st-george-westminster-cardoni-chronology-book-1973",
+      "object": {
+        "brick_church_blessed": "1917",
+        "brick_church_construction_began": "1916",
+        "brick_church_demolished": "1966-02-04",
+        "canonical_entity_id": "cn:building_site:st-george-detroit-westminster-cardoni-site",
+        "wooden_church_blessed": "1909",
+        "wooden_church_built": "1908"
+      },
+      "predicate": "archival_chronology_attests_building_site_lifecycle",
+      "source_artifact_id": "src:divine-providence:parish-history-book:1973",
+      "source_locator": "Printed pp. 11-14 and 21-24: wooden and brick church chronology and February 4, 1966 demolition",
+      "subject": {
+        "canonical_entity_id": "cn:institution:st-george-detroit-mi"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": true,
+        "state": "accepted"
+      },
+      "assertion_type": "lifecycle_dates",
+      "confidence": "high",
+      "id": "assert:detroit:st-peter-aod-register-1921-1995",
+      "object": {
+        "canonical_entity_id": "cn:institution:st-peter-detroit-mi",
+        "date_text": "1921-1995",
+        "interpretation": "official closed-parish register span; 1921 is retained as the church-opening year, while the institution was founded in 1920"
+      },
+      "predicate": "institution_lifecycle_attested",
+      "source_artifact_id": "src:archdiocese-detroit:closed-parishes:st-peter-lithuanian:2026-08-01",
+      "source_locator": "Closed Parishes, S section, St. Peter (Lithuanian) Parish (Detroit): 1921-1995",
+      "subject": {
+        "canonical_entity_id": "cn:institution:st-peter-detroit-mi"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": true,
+        "state": "accepted"
+      },
+      "assertion_type": "lifecycle_dates",
+      "confidence": "high",
+      "id": "assert:detroit:st-peter-founded-1920",
+      "object": {
+        "canonical_entity_id": "cn:institution:st-peter-detroit-mi",
+        "date_text": "1920",
+        "interpretation": "parish founding; the church building opened in 1921"
+      },
+      "predicate": "institution_founding_attested",
+      "source_artifact_id": "src:detroit1701:st-peter-lithuanian:2026-08-01",
+      "source_locator": "History paragraphs stating that St. Peter parish was founded in 1920, first worshipped at Holy Cross, and raised its church in 1921",
+      "subject": {
+        "canonical_entity_id": "cn:institution:st-peter-detroit-mi"
       }
     },
     {
@@ -13079,6 +13205,7 @@
         "end": null,
         "source_assertion_ids": [
           "assert:detroit:divine-providence-originated-from-st-george-1949",
+          "assert:detroit:divine-providence-st-george-origin-book-1973",
           "assert:detroit:divine-providence-name-1949"
         ],
         "start": "1949"
@@ -16001,6 +16128,14 @@
       "formation_basis": "historical_parish",
       "id": "cn:institution:st-peter-detroit-mi",
       "institution_subtype": "parish",
+      "lifecycle": {
+        "end": "1995",
+        "source_assertion_ids": [
+          "assert:detroit:st-peter-founded-1920",
+          "assert:detroit:st-peter-aod-register-1921-1995"
+        ],
+        "start": "1920"
+      },
       "lifecycle_status": "closed",
       "slug": "st-peter-detroit-mi"
     },
@@ -16345,7 +16480,7 @@
       "slug": "robert-damyanovich"
     }
   ],
-  "content_hash": "sha256:6480545ad402bb1a00c7e27749dfb9716489d202658ff4d61438aba247c0d995",
+  "content_hash": "sha256:86bfebdcc2d1e5d532b2c1af5c52b55ec690b8a78318e54dd8701e44739b7a0e",
   "counts": {
     "by_institution_class": {
       "independent_catholic": 4,
@@ -26106,6 +26241,8 @@
       "city": "Detroit",
       "culturenet_entity_id": "cn:institution:st-peter-detroit-mi",
       "evidence_assertion_ids": [
+        "assert:detroit:st-peter-aod-register-1921-1995",
+        "assert:detroit:st-peter-founded-1920",
         "assert:detroit:st-peter-used-site"
       ],
       "identity_support": "two_pass_case_file",
@@ -26119,6 +26256,8 @@
       "registry_projection_profile": "/parishes/peter-detroit-mi",
       "registry_slug": "peter-detroit-mi",
       "source_artifact_ids": [
+        "src:archdiocese-detroit:closed-parishes:st-peter-lithuanian:2026-08-01",
+        "src:detroit1701:st-peter-lithuanian:2026-08-01",
         "src:global-true-lithuania:detroit:2026-07-31"
       ],
       "state": "MI"
@@ -26228,6 +26367,8 @@
         "assert:detroit:divine-providence-pastor-vacancy-reported",
         "assert:detroit:divine-providence-planning-area-8-current",
         "assert:detroit:divine-providence-restructuring-survey-window",
+        "assert:detroit:divine-providence-schaefer-chronology-1973",
+        "assert:detroit:divine-providence-st-george-origin-book-1973",
         "assert:detroit:southfield-dedicated-1973"
       ],
       "identity_support": "two_pass_case_file",
@@ -26244,6 +26385,7 @@
         "src:archdiocese-detroit:restructuring:planning-area-8:2026-07-31",
         "src:archdiocese-detroit:restructuring:planning-areas:2026-07-31",
         "src:divine-providence:homepage-current:2026-07-31",
+        "src:divine-providence:parish-history-book:1973",
         "src:divine-providence:parish-history:2026-07-31",
         "src:laikmetis:divine-providence-pastor-report:2026-07-23"
       ],
@@ -27138,8 +27280,10 @@
       "culturenet_entity_id": "cn:institution:st-george-detroit-mi",
       "evidence_assertion_ids": [
         "assert:detroit:st-george-aod-lifecycle-1908-1965",
+        "assert:detroit:st-george-foundation-book-1973",
         "assert:detroit:st-george-lineage-begins-1908",
-        "assert:detroit:st-george-used-westminster-cardoni"
+        "assert:detroit:st-george-used-westminster-cardoni",
+        "assert:detroit:st-george-westminster-cardoni-chronology-book-1973"
       ],
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
@@ -27152,6 +27296,7 @@
       "registry_slug": "st-george-detroit-mi",
       "source_artifact_ids": [
         "src:archdiocese-detroit:closed-parishes:st-george-detroit:2026-07-31",
+        "src:divine-providence:parish-history-book:1973",
         "src:divine-providence:parish-history:2026-07-31"
       ],
       "state": "MI"
@@ -31491,6 +31636,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -31508,6 +31654,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -31528,6 +31675,7 @@
       },
       "evidence_assertion_ids": [
         "assert:detroit:divine-providence-originated-from-st-george-1949",
+        "assert:detroit:divine-providence-st-george-origin-book-1973",
         "assert:detroit:st-george-aod-lifecycle-1908-1965"
       ],
       "id": "rel:detroit:divine-providence-originated-from-st-george",
@@ -31543,6 +31691,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -31551,6 +31700,7 @@
       },
       "source_artifact_ids": [
         "src:archdiocese-detroit:closed-parishes:st-george-detroit:2026-07-31",
+        "src:divine-providence:parish-history-book:1973",
         "src:divine-providence:parish-history:2026-07-31"
       ],
       "target": {
@@ -31594,6 +31744,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -31623,6 +31774,7 @@
       },
       "evidence_assertion_ids": [
         "assert:detroit:divine-providence-schaefer-1949",
+        "assert:detroit:divine-providence-schaefer-chronology-1973",
         "assert:detroit:schaefer-location-photo"
       ],
       "id": "rel:detroit:divine-providence-used-schaefer-site",
@@ -31638,6 +31790,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -31646,6 +31799,7 @@
       },
       "source_artifact_ids": [
         "src:detroit-historical-society:divine-providence-schaefer-photo",
+        "src:divine-providence:parish-history-book:1973",
         "src:divine-providence:parish-history:2026-07-31"
       ],
       "target": {
@@ -31833,6 +31987,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -31876,6 +32031,7 @@
           "end": null,
           "source_assertion_ids": [
             "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
             "assert:detroit:divine-providence-name-1949"
           ],
           "start": "1949"
@@ -31931,7 +32087,8 @@
       },
       "evidence_assertion_ids": [
         "assert:detroit:st-george-aod-lifecycle-1908-1965",
-        "assert:detroit:st-george-used-westminster-cardoni"
+        "assert:detroit:st-george-used-westminster-cardoni",
+        "assert:detroit:st-george-westminster-cardoni-chronology-book-1973"
       ],
       "id": "rel:detroit:st-george-used-westminster-cardoni-site",
       "identity_effect": "site_context_only",
@@ -31953,6 +32110,7 @@
       },
       "source_artifact_ids": [
         "src:archdiocese-detroit:closed-parishes:st-george-detroit:2026-07-31",
+        "src:divine-providence:parish-history-book:1973",
         "src:divine-providence:parish-history:2026-07-31"
       ],
       "target": {
@@ -32020,6 +32178,14 @@
         "display_name": "St. Peter Lithuanian parish, Detroit",
         "entity_id": "cn:institution:st-peter-detroit-mi",
         "entity_type": "institution",
+        "lifecycle": {
+          "end": "1995",
+          "source_assertion_ids": [
+            "assert:detroit:st-peter-founded-1920",
+            "assert:detroit:st-peter-aod-register-1921-1995"
+          ],
+          "start": "1920"
+        },
         "slug": "st-peter-detroit-mi"
       },
       "source_artifact_ids": [
@@ -43717,6 +43883,22 @@
     },
     {
       "artifact_type": "public_web_snapshot",
+      "id": "src:archdiocese-detroit:closed-parishes:st-peter-lithuanian:2026-08-01",
+      "locator": {
+        "exact_label": "Archdiocese of Detroit Closed Parishes, S section, St. Peter (Lithuanian) Parish (Detroit), fetched 2026-08-01",
+        "page": "Closed Parishes",
+        "section": "St. Peter (Lithuanian) Parish (Detroit): 1921-1995"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://www.aod.org/closed-parishes",
+        "quote_policy": "cite and summarize",
+        "status": "public_web"
+      },
+      "title": "Archdiocese of Detroit closed parishes register entry for St. Peter Lithuanian"
+    },
+    {
+      "artifact_type": "public_web_snapshot",
       "id": "src:archdiocese-detroit:restructuring:planning-area-8:2026-07-31",
       "locator": {
         "exact_label": "Archdiocese of Detroit Restructuring, Planning Area 8, observed 2026-07-31",
@@ -45652,6 +45834,22 @@
       "title": "Photograph metadata for Divine Providence on Schaefer Highway"
     },
     {
+      "artifact_type": "public_web_snapshot",
+      "id": "src:detroit1701:st-peter-lithuanian:2026-08-01",
+      "locator": {
+        "exact_label": "Detroit1701.org, St. Peter Lithuanian Roman Catholic Church, fetched 2026-08-01",
+        "page": "St. Peter Lithuanian Roman Catholic Church",
+        "section": "Parish founded in 1920; services first held at Holy Cross; church raised in 1921"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://detroit1701.org/St.%20Peter%20Lithuanian.html",
+        "quote_policy": "cite and summarize",
+        "status": "public_web"
+      },
+      "title": "Detroit1701 history of St. Peter Lithuanian parish and church"
+    },
+    {
       "artifact_type": "official_decree",
       "id": "src:diocese-brooklyn:transfiguration-st-stanislaus-merger:2019",
       "locator": {
@@ -45698,6 +45896,22 @@
         "status": "public_web"
       },
       "title": "Divine Providence current parish homepage"
+    },
+    {
+      "artifact_type": "internal_archive_book_scan",
+      "id": "src:divine-providence:parish-history-book:1973",
+      "locator": {
+        "exact_label": "Dievo Apvaizdos lietuviu parapija / Divine Providence Lithuanian Parish, 1908-1973, first edition, Southfield, Michigan, 1973",
+        "page": "printed pp. 11-25, 28, 30, 32, 35-36",
+        "section": "St. George's Lithuanian Parish and Divine Providence Chronology (1948-1973), by Anthony Dainius"
+      },
+      "rights": {
+        "access": "public Žiburio archive item",
+        "public_url": "https://archyvas.ziburioltmokykla.org/item/20260331_1774920079895",
+        "quote_policy": "cite by edition and page; link to the public archive item",
+        "status": "public_archive"
+      },
+      "title": "Divine Providence Lithuanian Parish first-edition history, 1908-1973"
     },
     {
       "artifact_type": "public_web_snapshot",

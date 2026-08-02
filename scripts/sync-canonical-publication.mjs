@@ -18,10 +18,10 @@ const revisions = read("registry-revisions.json");
 const projection = read("canonical-publication-projection.json");
 const adjudications = read("canonical-public-census-adjudications.json");
 
-const TARGET_REVISION = 10;
-const TARGET_DATE = "2026-07-31";
+const TARGET_REVISION = 14;
+const TARGET_DATE = "2026-08-01";
 const CHANGELOG =
-  "Registry Revision 10: made the CultureNet parish publication projection authoritative for public U.S. institution identity, scope, type, class, and profile route; removed five adjudicated duplicate or non-institution rows from public scope without deleting their research evidence.";
+  "Registry Revision 14: added page-cited St. George Detroit parish and church-building chronology from the 1973 parish history, plus cleared line art; public counts, identities, classifications, site counts, and continuity-edge counts are unchanged.";
 
 if (projection.schema !== "culturenet-parish-publication-projection.v1") {
   throw new Error(`Unsupported publication projection schema: ${projection.schema}`);
@@ -182,11 +182,12 @@ const revisionEntry = {
   publicUSRecords: publicRecords.length,
   usRomanCatholicParishes: romanCatholicParishes,
   summary:
-    "Synchronized public identity and census scope to the complete CultureNet publication projection: 154 U.S. institutions, five explicit exclusions, unique canonical entities and profile routes, and no pending count-risk rows.",
+    "Added page-cited St. George Detroit parish and church-building chronology from the public 1973 parish history, plus cleared line art; 154 public U.S. institutions, 131 physical worship sites, and 51 continuity edges unchanged.",
   evidence: [
     "data/canonical-publication-projection.json",
+    "data/canonical-infographic-projection.json",
     "data/canonical-public-census-adjudications.json",
-    "data/candidates/registry-revision-10-canonical-projection-2026-07-31.md",
+    "data/candidates/registry-revision-14-st-george-detroit-history-and-line-art-2026-08-01.md",
   ],
 };
 const priorRevision = revisions.revisions.find(
@@ -204,14 +205,16 @@ const removed = adjudications.decisions
       `| ${decision.registry_slug} | ${decision.scope} | ${decision.reason} |`,
   )
   .join("\n");
-const report = `# Registry Revision 10: canonical publication projection
+const report = `# Registry Revision 14: St. George Detroit history and line art
 
 **Date:** ${TARGET_DATE}
 **Authority:** CultureNet parish publication projection
 **Public U.S. institutions:** ${publicRecords.length}
 **Count-risk rows:** 0
 
-The public site now receives institution identity, census membership, type, class, canonical entity ID, and public profile route from one CultureNet publication projection. The site's registry remains the display layer for narrative, lifecycle, media, and public source detail.
+The St. George Detroit profile now carries page-cited evidence from the [public 1973 Divine Providence parish history](https://archyvas.ziburioltmokykla.org/item/20260331_1774920079895): the parish was organized in 1908; its wooden church was built in 1908 and blessed in 1909; its brick church was begun in 1916 and blessed in 1917; and that church was demolished on February 4, 1966 for the Chrysler Freeway. A cleared line-art adaptation of the printed p. 14 church photograph now illustrates St. George's own profile.
+
+St. George remains a distinct historical parish institution linked to, but not collapsed into, Divine Providence. This evidence-and-media revision changes no public census membership, institution identity, record type, class, status group, physical-site count, or continuity-edge count.
 
 ## Census reconciliation
 
@@ -232,7 +235,7 @@ write("registry-unified.json", registry);
 write("registry-revisions.json", revisions);
 writeFileSync(
   new URL(
-    "../data/candidates/registry-revision-10-canonical-projection-2026-07-31.md",
+    "../data/candidates/registry-revision-14-st-george-detroit-history-and-line-art-2026-08-01.md",
     import.meta.url,
   ),
   report,
