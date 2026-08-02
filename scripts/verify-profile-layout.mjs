@@ -26,6 +26,10 @@ const contextMapSource = fs.readFileSync(
   path.join(ROOT, "components", "ParishContextMap.tsx"),
   "utf8",
 );
+const nationalLocatorSource = fs.readFileSync(
+  path.join(ROOT, "components", "ParishNationalLocator.tsx"),
+  "utf8",
+);
 const ledgerSource = fs.readFileSync(
   path.join(ROOT, "components", "ProfileSourceLedger.tsx"),
   "utf8",
@@ -242,6 +246,22 @@ const requiredFragments = [
     contextMapSource,
     'className="min-w-0 max-w-full overflow-hidden"',
     "compact-map overflow containment",
+  ],
+  [pageSource, "<ParishNationalLocator", "profile national locator"],
+  [
+    nationalLocatorSource,
+    "data-profile-national-locator",
+    "national locator contract",
+  ],
+  [
+    nationalLocatorSource,
+    "Where in the United States",
+    "national locator purpose label",
+  ],
+  [
+    nationalLocatorSource,
+    "contextPoints.points",
+    "canonical shared map coordinates",
   ],
 ];
 

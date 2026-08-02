@@ -8,6 +8,7 @@ import alertsData from "@/data/alerts.json";
 import contextPoints from "@/data/context-points.json";
 import { EndStateDot } from "@/components/EndStatePill";
 import ParishContextMap from "@/components/ParishContextMap";
+import ParishNationalLocator from "@/components/ParishNationalLocator";
 import { ParishProfileChronology } from "@/components/ParishProfileChronology";
 import {
   CONGREGATION_CLASS_LABEL,
@@ -574,6 +575,7 @@ export default async function ParishPage({
           compact
         />
       </div>
+      <ParishNationalLocator slug={profile.slug} />
     </figure>
   ) : null;
 
