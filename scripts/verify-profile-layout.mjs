@@ -58,6 +58,20 @@ const infographic = JSON.parse(
     "utf8",
   ),
 );
+const registry = JSON.parse(
+  fs.readFileSync(path.join(ROOT, "data", "registry-unified.json"), "utf8"),
+);
+const stMichaelScrantonCase = JSON.parse(
+  fs.readFileSync(
+    path.join(
+      ROOT,
+      "data",
+      "case-records",
+      "sv-mykolo-scranton-pa.json",
+    ),
+    "utf8",
+  ),
+);
 const photos = JSON.parse(
   fs.readFileSync(path.join(ROOT, "data", "photos.json"), "utf8"),
 );
@@ -623,6 +637,37 @@ if (JSON.stringify(relationshipTypes) !== JSON.stringify(mappedRelationshipTypes
   errors.push(
     `continuity relationship vocabulary changed: ${relationshipTypes.join(", ")}`,
   );
+}
+
+const stMichaelScranton = registry.parishes.find(
+  (parish) => parish.slug === "michael-scranton-pa",
+);
+const stLucyScranton = infographic.building_site_history.find(
+  (site) => site.slug === "st-lucy-church-scranton-pa",
+);
+const stMichaelJackson = infographic.building_site_history.find(
+  (site) => site.slug === "st-michael-jackson-street-scranton-pa",
+);
+if (
+  stMichaelScranton?.names?.en !== "St. Michael the Archangel" ||
+  stMichaelScrantonCase.profile?.currentSite?.value !==
+    "Saint Lucy Church, Scranton" ||
+  stMichaelScrantonCase.profile?.formerSite?.value !==
+    "Saint Michael Church, 1703 Jackson Street" ||
+  stMichaelScrantonCase.profile?.liturgy?.value !==
+    "No regular Lithuanian Mass documented"
+) {
+  errors.push(
+    "Saint Michael Scranton must distinguish its surviving parish, current Saint Lucy home, former Jackson Street church, and current non-Lithuanian liturgy",
+  );
+}
+if (
+  stLucyScranton?.lifecycle_text?.end !==
+    "active Saint Michael FSSP worship site" ||
+  stMichaelJackson?.lifecycle_text?.end !==
+    "vacant and listed after 2025-09-28"
+) {
+  errors.push("Saint Michael Scranton worship-site lifecycle readings drifted");
 }
 
 if (errors.length > 0) {

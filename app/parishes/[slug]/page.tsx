@@ -89,6 +89,27 @@ interface CaseRecord {
   currentUse: string;
   historicalNarrative?: HistoricalNarrativeParagraph[];
   historicalSummary?: string[];
+  profile?: {
+    institutionalLife?: string;
+    institutionalSummary?: string;
+    currentSite?: {
+      label: string;
+      value: string;
+      detail?: string;
+      href?: string;
+    };
+    formerSite?: {
+      label: string;
+      value: string;
+      detail?: string;
+      href?: string;
+    };
+    liturgy?: {
+      value: string;
+      detail?: string;
+      href?: string;
+    };
+  };
   summary: string;
   developments: {
     date: string;
@@ -343,7 +364,9 @@ export default async function ParishPage({
     institutionDates?.entityId ?? null,
   );
   const activeWorshipSite =
-    worshipSites.find((site) => !site.demolishedYear) ?? null;
+    worshipSites.find((site) => site.isCurrent) ??
+    worshipSites.find((site) => !site.demolishedYear) ??
+    null;
   const standingSite =
     worshipSites.find(
       (site) => !site.demolishedYear && /present/i.test(site.range ?? ""),
@@ -354,21 +377,28 @@ export default async function ParishPage({
     closedYear !== null ||
     ["closed", "demolished", "repurposed", "transferred"].includes(endState);
   const currentChurch =
-    recordType === "misija"
+    caseRecord?.profile?.currentSite?.value ??
+    (recordType === "misija"
       ? (activeWorshipSite?.name ?? "Not established")
       : (selectedWorshipSite?.name ??
         readableBuildingStatus(
           buildingFate,
           caseRecord?.buildingStatus ?? null,
-        ));
+        )));
   const currentChurchDetail =
-    parishCampaign?.profile?.siteDetail ?? selectedWorshipSite?.outcome ?? null;
+    caseRecord?.profile?.currentSite?.detail ??
+    parishCampaign?.profile?.siteDetail ??
+    selectedWorshipSite?.outcome ??
+    null;
   const renderedWorshipSites =
     recordType === "misija" || !isUsProjection ? [] : worshipSites;
   const renderedRelatedRecords = !isUsProjection ? [] : relatedRecords;
   const campaignLiturgy = parishCampaign?.profile?.liturgy;
+  const caseLiturgy = caseRecord?.profile?.liturgy;
   const lithuanianMass = campaignLiturgy
     ? campaignLiturgy.value
+    : caseLiturgy
+      ? caseLiturgy.value
     : watchEntry
       ? (FREQUENCY_LABEL[watchEntry.liturgy.frequency] ??
         watchEntry.liturgy.frequency)
@@ -573,16 +603,24 @@ export default async function ParishPage({
     timelineEvents: parishTimeline?.events ?? [],
     existed: institutionDates?.existed ?? null,
     currentChurch,
+    currentChurchLabel: caseRecord?.profile?.currentSite?.label ?? null,
     currentChurchDetail,
+    currentChurchHref: caseRecord?.profile?.currentSite?.href ?? null,
+    formerChurch: caseRecord?.profile?.formerSite ?? null,
     lithuanianMass,
-    lithuanianMassDetail: campaignLiturgy?.detail ?? null,
-    lithuanianMassHref: campaignLiturgy?.href ?? null,
+    lithuanianMassDetail:
+      campaignLiturgy?.detail ?? caseLiturgy?.detail ?? null,
+    lithuanianMassHref: campaignLiturgy?.href ?? caseLiturgy?.href ?? null,
     worshipLabel,
     recordType,
     institutionEnded,
     institutionTransition,
+    institutionalLifeOverride:
+      caseRecord?.profile?.institutionalLife ?? null,
     institutionalSummaryOverride:
-      parishCampaign?.profile?.institutionalSummary ?? null,
+      parishCampaign?.profile?.institutionalSummary ??
+      caseRecord?.profile?.institutionalSummary ??
+      null,
   });
 
   const contextMapFigure = hasMap ? (
@@ -723,6 +761,30 @@ export default async function ParishPage({
                       {fact.detail && (
                         <span className="mt-1 block text-xs leading-relaxed text-muted">
                           {fact.detail}
+                        </span>
+                      )}
+                      {fact.secondary && (
+                        <span className="mt-3 block border-t border-rule pt-2.5">
+                          <span className="block font-mono text-[10px] font-medium uppercase tracking-[0.09em] text-muted">
+                            {fact.secondary.label}
+                          </span>
+                          <span className="mt-1 block">
+                            {fact.secondary.href ? (
+                              <Link
+                                className="underline underline-offset-2"
+                                href={fact.secondary.href}
+                              >
+                                {fact.secondary.value}
+                              </Link>
+                            ) : (
+                              fact.secondary.value
+                            )}
+                          </span>
+                          {fact.secondary.detail && (
+                            <span className="mt-1 block text-xs leading-relaxed text-muted">
+                              {fact.secondary.detail}
+                            </span>
+                          )}
                         </span>
                       )}
                     </dd>

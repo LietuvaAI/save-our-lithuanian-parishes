@@ -13304,10 +13304,11 @@
       "slug": "michael-scranton-pa",
       "names": {
         "lt": "Šv. Mykolo",
-        "en": "St. Michael",
+        "en": "St. Michael the Archangel",
         "variants": [
           "Šv. Mykolo",
-          "St. Michael"
+          "St. Michael",
+          "St. Michael the Archangel"
         ]
       },
       "city": "Scranton",
@@ -23574,7 +23575,7 @@
     }
   ],
   "registryRevision": {
-    "version": 15,
+    "version": 16,
     "date": "2026-08-02",
     "changelog": [
       "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
@@ -23613,9 +23614,10 @@
       "Registry Revision 12: added page-cited 1973 parish-history evidence for the Divine Providence Schaefer church and St. George origin relationship; public count, identity, classification, site count, and continuity-edge count are unchanged.",
       "Registry Revision 13: linked the 1973 Divine Providence parish history to its public Žiburio archive item; public counts, identities, classifications, lifecycle dates, site counts, and continuity-edge counts are unchanged.",
       "Registry Revision 14: added page-cited St. George Detroit parish and church-building chronology from the 1973 parish history, plus cleared line art; public counts, identities, classifications, site counts, and continuity-edge counts are unchanged.",
-      "Registry Revision 15: reconciled the four protected campaign profiles to current official evidence, separated institution and building status, and corrected Hartford and Maspeth status groups; public institution, site, and continuity-edge counts are unchanged."
+      "Registry Revision 15: reconciled the four protected campaign profiles to current official evidence, separated institution and building status, and corrected Hartford and Maspeth status groups; public institution, site, and continuity-edge counts are unchanged.",
+      "Registry Revision 16: clarified Saint Michael the Archangel Parish in Scranton as one surviving parish across its former Jackson Street church and current Saint Lucy home, and distinguished its current Latin Mass from undocumented Lithuanian worship; public counts are unchanged."
     ],
-    "contentHash": "d5d2abf5b18787f9e28d07862bb0c73c6139dc660fd0a8ada19e121c1ae6214d"
+    "contentHash": "3ac74d53da034df5fa68363804eb104cfa178d0760f846e70784aa482ec5e234"
   },
   "publicationAuthority": {
     "repository": "LietuvaAI/culturenet-brain",

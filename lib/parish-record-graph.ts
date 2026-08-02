@@ -23,6 +23,8 @@ export type WorshipSiteRow = {
   name: string;
   /** Range this institution used the site, as text. Never a founding date. */
   range: string | null;
+  /** True only when the canonical relationship identifies the current site. */
+  isCurrent: boolean;
   outcome: string;
   demolishedYear: number | null;
   milestones: Array<{
@@ -147,6 +149,10 @@ function siteOutcome(site: BuildingSiteHistoryRow): string {
       titleCase(condition.relationship_type)
     );
   }
+  const lifecycleOutcome = site.lifecycle_text?.end;
+  if (typeof lifecycleOutcome === "string" && lifecycleOutcome.trim()) {
+    return `${lifecycleOutcome.charAt(0).toUpperCase()}${lifecycleOutcome.slice(1)}`;
+  }
   return "Not established";
 }
 
@@ -163,19 +169,27 @@ export function getWorshipSitesForInstitution(
             (period) => period.institution_entity_id === entityId,
           )),
     )
-    .map((site) => ({
-      entityId: site.culturenet_entity_id,
-      slug: site.slug,
-      name: site.name,
-      range: usePeriodRange(site, entityId),
-      outcome: siteOutcome(site),
-      demolishedYear: siteDemolishedYear(site),
-      milestones: site.milestones.map((milestone) => ({
-        id: `${milestone.assertion_id}:${milestone.event}`,
-        date: milestone.date,
-        label: milestone.label,
-      })),
-    }))
+    .map((site) => {
+      const usePeriod = site.institution_use_periods.find(
+        (period) => period.institution_entity_id === entityId,
+      );
+      return {
+        entityId: site.culturenet_entity_id,
+        slug: site.slug,
+        name: site.name,
+        range: usePeriodRange(site, entityId),
+        isCurrent:
+          usePeriod?.relationship_type === "institution-relocated-to-site" ||
+          Boolean(usePeriod?.date && !usePeriod.date.end && /present/i.test(usePeriod.date.label ?? "")),
+        outcome: siteOutcome(site),
+        demolishedYear: siteDemolishedYear(site),
+        milestones: site.milestones.map((milestone) => ({
+          id: `${milestone.assertion_id}:${milestone.event}`,
+          date: milestone.date,
+          label: milestone.label,
+        })),
+      };
+    })
     .sort((a, b) => {
       const aYear = yearOf(a.range) ?? 0;
       const bYear = yearOf(b.range) ?? 0;

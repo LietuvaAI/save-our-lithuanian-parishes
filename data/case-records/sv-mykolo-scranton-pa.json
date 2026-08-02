@@ -3,6 +3,27 @@
   "asOf": "2026-07-16",
   "buildingStatus": "for-sale",
   "currentUse": "Vacant former church and rectory at 1703 Jackson Street, actively listed for commercial sale; the St. Michael the Archangel parish community (FSSP Latin Mass) that occupied it now worships at St. Lucy's Church, 949 Scranton St.",
+  "profile": {
+    "institutionalLife": "1917 dedication; exact founding unresolved · parish survives at a new church",
+    "institutionalSummary": "Saint Michael the Archangel Parish survives. Its Lithuanian identity ended when the Latin Mass community assumed its life in the late 1990s; the same parish relocated from the former Lithuanian church on Jackson Street to Saint Lucy Church in 2025.",
+    "currentSite": {
+      "label": "Current parish home",
+      "value": "Saint Lucy Church, Scranton",
+      "detail": "949 Scranton Street · principal worship site since 28 Sep 2025",
+      "href": "https://fsspscranton.wordpress.com/"
+    },
+    "formerSite": {
+      "label": "Former Lithuanian church",
+      "value": "Saint Michael Church, 1703 Jackson Street",
+      "detail": "Standing, vacant, and listed for sale after the final Mass on 28 Sep 2025",
+      "href": "https://www.lewith-freeman.com/p/1703-Jackson-Street-Scranton-PA-18504/dmgid_186324175"
+    },
+    "liturgy": {
+      "value": "No regular Lithuanian Mass documented",
+      "detail": "The surviving parish celebrates the Traditional Latin Mass at Saint Lucy Church; its Lithuanian parish identity ended in the late 1990s.",
+      "href": "https://fsspscranton.wordpress.com/mass-devotions/"
+    }
+  },
   "summary": "The former Lithuanian church of St. Michael at 1703 Jackson Street, Scranton, is still standing but no longer in liturgical use: the St. Michael the Archangel parish community held its final Mass there on September 28, 2025, then processed with the Eucharist through West Scranton to its new home at the historic St. Lucy Church (949 Scranton St.), a relocation ordered by Bishop Bambera under the Diocese of Scranton's Vision 2030 pastoral planning process. The parish began as the personal parish for Scranton's Lithuanian community, dedicated by Bishop M.J. Hoban in 1917; as the Lithuanian community waned, Bishop James Timlin moved the diocese's Latin Mass community there in the late 1990s, and it later became a permanent apostolate of the Priestly Fraternity of St. Peter. That parish continues today under pastor Fr. Anthony Dorsa, FSSP, with a full Traditional Latin Mass schedule (Sundays 8:00 am Low and 10:30 am High) at St. Lucy's. The vacated Jackson Street property — a 4,468 sq ft brick church (built 1942) plus a 2,069 sq ft rectory on 0.43 acres — is an active commercial listing at $350,000 (MLS SC261850, shown by Lewith & Freeman), marketed to \"religious organizations, non-profits, businesses, or developers,\" and was still active as of July 16, 2026. A Lithuanian heritage survey notes that stained-glass windows with Lithuanian inscriptions survived inside the church, though nothing on the exterior identifies its Lithuanian origins.",
   "developments": [
     {
@@ -21,6 +42,12 @@
           "publisher": "St. Michael the Archangel Parish (FSSP Scranton)",
           "date": "2026-07-16 (accessed)",
           "url": "https://fsspscranton.wordpress.com/about-us/"
+        },
+        {
+          "title": "St. Michael the Archangel Parish at St. Lucy's Church — 28 Sep 2025 bulletin",
+          "publisher": "St. Michael the Archangel Parish (FSSP Scranton)",
+          "date": "2025-09-28",
+          "url": "https://fsspscranton.wordpress.com/wp-content/uploads/2025/09/bulletin-sept.-28th_2025.pdf"
         }
       ]
     },
@@ -69,6 +96,12 @@
       "publisher": "St. Michael the Archangel Parish (FSSP Scranton)",
       "date": "2026-07-16 (accessed)",
       "url": "https://fsspscranton.wordpress.com/about-us/"
+    },
+    {
+      "title": "St. Michael the Archangel Parish at St. Lucy's Church — 28 Sep 2025 bulletin",
+      "publisher": "St. Michael the Archangel Parish (FSSP Scranton)",
+      "date": "2025-09-28",
+      "url": "https://fsspscranton.wordpress.com/wp-content/uploads/2025/09/bulletin-sept.-28th_2025.pdf"
     },
     {
       "title": "Mass & Devotions – FSSP Scranton",

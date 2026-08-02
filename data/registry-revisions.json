@@ -172,6 +172,20 @@
         "data/parish-situation.json",
         "data/candidates/registry-revision-15-campaign-current-condition-2026-08-02.md"
       ]
+    },
+    {
+      "version": 16,
+      "date": "2026-08-02",
+      "registryRecords": 192,
+      "publicUSRecords": 154,
+      "usRomanCatholicParishes": 132,
+      "summary": "Clarified Saint Michael the Archangel Parish in Scranton as a surviving parish that relocated in 2025, separated its former Lithuanian church from its current Saint Lucy worship site, and distinguished the current Latin Mass schedule from undocumented Lithuanian worship; public counts are unchanged.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/case-records/sv-mykolo-scranton-pa.json",
+        "data/candidates/registry-revision-16-st-michael-scranton-relocation-2026-08-02.md"
+      ]
     }
   ]
 }

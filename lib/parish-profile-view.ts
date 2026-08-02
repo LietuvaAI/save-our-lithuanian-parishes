@@ -20,6 +20,12 @@ export interface ParishProfileFact {
   value: string;
   detail?: string | null;
   href?: string | null;
+  secondary?: {
+    label: string;
+    value: string;
+    detail?: string | null;
+    href?: string | null;
+  } | null;
 }
 
 export type ChronologyEventKind = "institution" | "building";
@@ -73,7 +79,15 @@ interface ParishProfileViewInput {
   existed: string | null;
   /** The standing church and its own dedication year — a building fact, labelled as one. */
   currentChurch: string | null;
+  currentChurchLabel: string | null;
   currentChurchDetail: string | null;
+  currentChurchHref: string | null;
+  formerChurch: {
+    label: string;
+    value: string;
+    detail?: string | null;
+    href?: string | null;
+  } | null;
   lithuanianMass: string | null;
   lithuanianMassDetail: string | null;
   lithuanianMassHref: string | null;
@@ -81,6 +95,7 @@ interface ParishProfileViewInput {
   recordType: string;
   institutionEnded: boolean;
   institutionTransition: InstitutionTransition;
+  institutionalLifeOverride: string | null;
   institutionalSummaryOverride: string | null;
 }
 
@@ -295,7 +310,8 @@ function facts(input: ParishProfileViewInput): ParishProfileFact[] {
         : "Founding year unresolved"),
   );
   const institutionalLife =
-    input.endState === "active_parish"
+    input.institutionalLifeOverride ??
+    (input.endState === "active_parish"
       ? `${existed} \u00b7 active`
       : input.institutionTransition === "merged"
         ? `${existed} \u00b7 merged`
@@ -309,7 +325,7 @@ function facts(input: ParishProfileViewInput): ParishProfileFact[] {
           ? `${existed} \u00b7 Lithuanian parish ended`
           : ["closed", "demolished", "repurposed"].includes(input.endState)
             ? `${existed} \u00b7 closed`
-            : existed;
+            : existed);
 
   return [
     { label: "Institution", value: input.institution },
@@ -319,7 +335,8 @@ function facts(input: ParishProfileViewInput): ParishProfileFact[] {
     },
     {
       label:
-        input.institutionEnded &&
+        input.currentChurchLabel ??
+        (input.institutionEnded &&
         (!input.currentChurchDetail ||
           /^(demolished|not established|none recorded)/i.test(
             input.currentChurchDetail,
@@ -327,9 +344,11 @@ function facts(input: ParishProfileViewInput): ParishProfileFact[] {
             ? "Former church"
             : input.institutionEnded
               ? "Church today"
-              : "Current church",
+              : "Current church"),
       value: input.currentChurch ?? input.building ?? "Not established",
       detail: input.currentChurchDetail,
+      href: input.currentChurchHref,
+      secondary: input.formerChurch,
     },
     {
       label: input.worshipLabel,

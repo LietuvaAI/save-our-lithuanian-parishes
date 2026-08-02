@@ -16,13 +16,12 @@ const write = (path, value) =>
 const registry = read("registry-unified.json");
 const revisions = read("registry-revisions.json");
 const projection = read("canonical-publication-projection.json");
-const infographic = read("canonical-infographic-projection.json");
 const adjudications = read("canonical-public-census-adjudications.json");
 
-const TARGET_REVISION = 15;
+const TARGET_REVISION = 16;
 const TARGET_DATE = "2026-08-02";
 const CHANGELOG =
-  "Registry Revision 15: reconciled the four protected campaign profiles to current official evidence, separated institution and building status, and corrected Hartford and Maspeth status groups; public institution, site, and continuity-edge counts are unchanged.";
+  "Registry Revision 16: clarified Saint Michael the Archangel Parish in Scranton as one surviving parish across its former Jackson Street church and current Saint Lucy home, and distinguished its current Latin Mass from undocumented Lithuanian worship; public counts are unchanged.";
 
 if (projection.schema !== "culturenet-parish-publication-projection.v1") {
   throw new Error(`Unsupported publication projection schema: ${projection.schema}`);
@@ -183,13 +182,12 @@ const revisionEntry = {
   publicUSRecords: publicRecords.length,
   usRomanCatholicParishes: romanCatholicParishes,
   summary:
-    "Reconciled Divine Providence, Hartford Holy Trinity, Waterbury St. Joseph, and Maspeth Transfiguration to current official evidence; separated institution, building, and liturgy states; corrected the closed Roman Catholic count to 87 while keeping 154 public U.S. institutions unchanged.",
+    "Clarified Saint Michael the Archangel Parish in Scranton as a surviving parish that relocated in 2025, separated its former Lithuanian church from its current Saint Lucy worship site, and distinguished the current Latin Mass schedule from undocumented Lithuanian worship; public counts are unchanged.",
   evidence: [
     "data/canonical-publication-projection.json",
     "data/canonical-infographic-projection.json",
-    "data/alerts.json",
-    "data/parish-situation.json",
-    "data/candidates/registry-revision-15-campaign-current-condition-2026-08-02.md",
+    "data/case-records/sv-mykolo-scranton-pa.json",
+    "data/candidates/registry-revision-16-st-michael-scranton-relocation-2026-08-02.md",
   ],
 };
 const priorRevision = revisions.revisions.find(
@@ -207,23 +205,22 @@ const removed = adjudications.decisions
       `| ${decision.registry_slug} | ${decision.scope} | ${decision.reason} |`,
   )
   .join("\n");
-const infographicClosedCount =
-  infographic.counts.closed_roman_catholic_parishes;
-const report = `# Registry Revision 15: protected campaign current conditions
+const report = `# Registry Revision 16: Saint Michael Scranton relocation
 
 **Date:** ${TARGET_DATE}
 **Authority:** CultureNet parish publication projection
 **Public U.S. institutions:** ${publicRecords.length}
 **Count-risk rows:** 0
 
-This revision reconciles the four protected public campaign profiles to their current official records and keeps three different questions separate: what happened to the historical institution, what condition the church building is in, and whether Lithuanian worship continues on a regular or occasional basis.
+This revision corrects the public reading of Saint Michael the Archangel Parish in Scranton without changing census membership or lifecycle counts.
 
-- **Divine Providence, Southfield:** remains an active Lithuanian parish in Planning Area 8; no final restructuring decision has been made. Its current church now has an explicit standing-site assertion.
-- **Holy Trinity, Hartford:** remains an archdiocesan mission after its regular Mass schedule ended; its partial closure is unresolved, not a completed closure.
-- **Saint Joseph, Waterbury:** its separate parish merged into Our Lady of Mount Carmel effective May 1, 2024; the church remains a Catholic sacred edifice without a regular Mass schedule, with occasional special worship documented.
-- **Transfiguration, Maspeth:** the Lithuanian parish merged in 2019; its church remains in Sunday use under the successor parish, while Lithuanian Mass moved to Annunciation in 2025.
+- The parish entity survives and relocated from 1703 Jackson Street to Saint Lucy Church on September 28, 2025.
+- Saint Lucy Church is the parish's current principal worship site.
+- The former Lithuanian Saint Michael Church remains standing at 1703 Jackson Street, is vacant, and is listed for sale.
+- The current parish celebrates the Traditional Latin Mass. No regular Lithuanian Mass is documented.
+- The English profile name is restored to **St. Michael the Archangel**.
 
-These corrections change the Roman Catholic status distribution: the closed count is now ${infographicClosedCount} rather than 88. Public census membership remains ${publicRecords.length}; physical worship sites and continuity edges are unchanged.
+The profile header now presents the current and former churches as two linked site readings under one institution. Canonical public membership remains ${publicRecords.length}; physical worship sites and continuity edges are unchanged.
 
 ## Census reconciliation
 
@@ -244,7 +241,7 @@ write("registry-unified.json", registry);
 write("registry-revisions.json", revisions);
 writeFileSync(
   new URL(
-    "../data/candidates/registry-revision-15-campaign-current-condition-2026-08-02.md",
+    "../data/candidates/registry-revision-16-st-michael-scranton-relocation-2026-08-02.md",
     import.meta.url,
   ),
   report,
