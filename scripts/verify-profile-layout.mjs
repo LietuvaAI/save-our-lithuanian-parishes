@@ -255,7 +255,7 @@ const requiredFragments = [
   ],
   [
     nationalLocatorSource,
-    "Where in the United States",
+    "Where in the {region}",
     "national locator purpose label",
   ],
   [
