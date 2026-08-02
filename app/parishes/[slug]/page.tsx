@@ -371,25 +371,43 @@ export default async function ParishPage({
     worshipSites.find(
       (site) => !site.demolishedYear && /present/i.test(site.range ?? ""),
     ) ?? activeWorshipSite;
-  const selectedWorshipSite = standingSite ?? activeWorshipSite;
+  // A demolished church is still the institution's church building. Do not
+  // replace its identity with the outcome label merely because no site stands.
+  const selectedWorshipSite =
+    standingSite ?? activeWorshipSite ?? worshipSites[0] ?? null;
   const standingSiteYear = selectedWorshipSite?.range?.match(/(\d{4})/)?.[1] ?? null;
-  const institutionEnded =
-    closedYear !== null ||
-    ["closed", "demolished", "repurposed", "transferred"].includes(endState);
+  const fallbackBuildingOutcome = readableBuildingStatus(
+    buildingFate,
+    caseRecord?.buildingStatus ?? null,
+  );
+  const buildingOutcome =
+    selectedWorshipSite?.outcome &&
+    !/^not established$/i.test(selectedWorshipSite.outcome)
+      ? selectedWorshipSite.outcome
+      : fallbackBuildingOutcome;
   const currentChurch =
-    caseRecord?.profile?.currentSite?.value ??
     (recordType === "misija"
-      ? (activeWorshipSite?.name ?? "Not established")
+      ? (caseRecord?.profile?.currentSite?.value ??
+        activeWorshipSite?.name ??
+        "Not established")
       : (selectedWorshipSite?.name ??
-        readableBuildingStatus(
-          buildingFate,
-          caseRecord?.buildingStatus ?? null,
-        )));
-  const currentChurchDetail =
+        caseRecord?.profile?.currentSite?.value ??
+        "Not established"));
+  const rawCurrentChurchDetail =
     caseRecord?.profile?.currentSite?.detail ??
     parishCampaign?.profile?.siteDetail ??
-    selectedWorshipSite?.outcome ??
     null;
+  const currentChurchDetail =
+    rawCurrentChurchDetail &&
+    buildingOutcome &&
+    rawCurrentChurchDetail
+      .toLowerCase()
+      .startsWith(buildingOutcome.toLowerCase())
+      ? rawCurrentChurchDetail
+          .slice(buildingOutcome.length)
+          .replace(/^\s*[\u00b7:;,-]\s*/, "")
+          .replace(/^./, (character) => character.toUpperCase())
+      : rawCurrentChurchDetail;
   const renderedWorshipSites =
     recordType === "misija" || !isUsProjection ? [] : worshipSites;
   const renderedRelatedRecords = !isUsProjection ? [] : relatedRecords;
@@ -564,10 +582,25 @@ export default async function ParishPage({
     : recordType === "misija" && endState === "active_parish"
       ? "Active Lithuanian mission"
       : END_STATE_LABEL[endState];
+  const closedInstitutionLabel = /congregation/i.test(institution)
+    ? "Congregation closed"
+    : /mission/i.test(institution)
+      ? "Mission closed"
+      : "Parish closed";
   const statusLabel =
-    !researchOnly && endState === "closed" && closedYear
-      ? `${baseStatusLabel} ${institutionDates?.closedDisplay ?? closedYear}`
+    !researchOnly && ["closed", "demolished", "repurposed"].includes(endState)
+      ? `${closedInstitutionLabel}${closedYear ? ` ${closedYear}` : ""}`
       : baseStatusLabel;
+  const buildingStatusLabel =
+    !researchOnly && buildingOutcome && !/^not established$/i.test(buildingOutcome)
+      ? /^demolished\b/i.test(buildingOutcome)
+        ? `Church ${buildingOutcome.toLowerCase()}`
+        : /^repurposed\b/i.test(buildingOutcome)
+          ? `Church ${buildingOutcome.toLowerCase()}`
+          : /^standing\b/i.test(buildingOutcome)
+            ? "Church standing"
+            : `Church \u00b7 ${buildingOutcome}`
+      : null;
 
   const imageCaption = [
     isLineDrawing ? "Line art" : "Photograph",
@@ -603,7 +636,7 @@ export default async function ParishPage({
     timelineEvents: parishTimeline?.events ?? [],
     existed: institutionDates?.existed ?? null,
     currentChurch,
-    currentChurchLabel: caseRecord?.profile?.currentSite?.label ?? null,
+    buildingOutcome,
     currentChurchDetail,
     currentChurchHref: caseRecord?.profile?.currentSite?.href ?? null,
     formerChurch: caseRecord?.profile?.formerSite ?? null,
@@ -613,7 +646,6 @@ export default async function ParishPage({
     lithuanianMassHref: campaignLiturgy?.href ?? caseLiturgy?.href ?? null,
     worshipLabel,
     recordType,
-    institutionEnded,
     institutionTransition,
     institutionalLifeOverride:
       caseRecord?.profile?.institutionalLife ?? null,
@@ -732,6 +764,14 @@ export default async function ParishPage({
               {!researchOnly && <EndStateDot value={endState} />}
               {statusLabel}
             </span>
+            {buildingStatusLabel && (
+              <span
+                data-profile-building-status
+                className="text-muted"
+              >
+                {buildingStatusLabel}
+              </span>
+            )}
             {recordType !== "misija" && institutionDates?.foundedUnresolved ? (
               <span className="text-muted">Founding year unresolved</span>
             ) : recordType !== "misija" && institutionDates?.foundedYear ? (

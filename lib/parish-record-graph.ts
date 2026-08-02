@@ -151,6 +151,9 @@ function siteOutcome(site: BuildingSiteHistoryRow): string {
   }
   const lifecycleOutcome = site.lifecycle_text?.end;
   if (typeof lifecycleOutcome === "string" && lifecycleOutcome.trim()) {
+    if (/active.*worship site|worship site.*active/i.test(lifecycleOutcome)) {
+      return "Standing, active worship site";
+    }
     return `${lifecycleOutcome.charAt(0).toUpperCase()}${lifecycleOutcome.slice(1)}`;
   }
   return "Not established";

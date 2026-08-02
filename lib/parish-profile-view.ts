@@ -77,9 +77,9 @@ interface ParishProfileViewInput {
   timelineEvents: ProfileTimelineEvent[];
   /** Institution lifecycle as the canonical projection states it. */
   existed: string | null;
-  /** The standing church and its own dedication year — a building fact, labelled as one. */
+  /** The institution's principal church site, whether standing or demolished. */
   currentChurch: string | null;
-  currentChurchLabel: string | null;
+  buildingOutcome: string | null;
   currentChurchDetail: string | null;
   currentChurchHref: string | null;
   formerChurch: {
@@ -93,7 +93,6 @@ interface ParishProfileViewInput {
   lithuanianMassHref: string | null;
   worshipLabel: "Lithuanian Mass" | "Lithuanian worship";
   recordType: string;
-  institutionEnded: boolean;
   institutionTransition: InstitutionTransition;
   institutionalLifeOverride: string | null;
   institutionalSummaryOverride: string | null;
@@ -301,14 +300,17 @@ function facts(input: ParishProfileViewInput): ParishProfileFact[] {
     ];
   }
 
-  const existed = readableLifecycleRange(
-    input.existed ??
-      (input.founded
-        ? input.closed
-          ? `${input.founded}\u2013${input.closed}`
-          : `${input.founded}\u2013present`
-        : "Founding year unresolved"),
-  );
+  const existed =
+    input.founded === null && input.closed
+      ? `Founding year unresolved \u00b7 ended ${input.closed}`
+      : readableLifecycleRange(
+          input.existed ??
+            (input.founded
+              ? input.closed
+                ? `${input.founded}\u2013${input.closed}`
+                : `${input.founded}\u2013present`
+              : "Founding year unresolved"),
+        );
   const institutionalLife =
     input.institutionalLifeOverride ??
     (input.endState === "active_parish"
@@ -321,10 +323,12 @@ function facts(input: ParishProfileViewInput): ParishProfileFact[] {
             ? `${existed} \u00b7 continues in another institution`
             : input.endState === "mass_continues"
               ? existed
-        : input.endState === "transferred"
+          : input.endState === "transferred"
           ? `${existed} \u00b7 Lithuanian parish ended`
           : ["closed", "demolished", "repurposed"].includes(input.endState)
-            ? `${existed} \u00b7 closed`
+            ? /\bended\b/i.test(existed)
+              ? existed
+              : `${existed} \u00b7 closed`
             : existed);
 
   return [
@@ -334,19 +338,19 @@ function facts(input: ParishProfileViewInput): ParishProfileFact[] {
       value: institutionalLife,
     },
     {
-      label:
-        input.currentChurchLabel ??
-        (input.institutionEnded &&
-        (!input.currentChurchDetail ||
-          /^(demolished|not established|none recorded)/i.test(
-            input.currentChurchDetail,
-          ))
-            ? "Former church"
-            : input.institutionEnded
-              ? "Church today"
-              : "Current church"),
+      label: "Church building",
       value: input.currentChurch ?? input.building ?? "Not established",
-      detail: input.currentChurchDetail,
+      detail: [
+        input.buildingOutcome
+          ? `Building status \u00b7 ${input.buildingOutcome}`
+          : null,
+        input.currentChurchDetail &&
+        input.currentChurchDetail !== input.buildingOutcome
+          ? input.currentChurchDetail
+          : null,
+      ]
+        .filter(Boolean)
+        .join(" \u00b7 ") || null,
       href: input.currentChurchHref,
       secondary: input.formerChurch,
     },
@@ -392,7 +396,22 @@ function institutionalSummary(input: ParishProfileViewInput) {
     return "The record does not yet establish a final institutional outcome.";
   }
   if (["closed", "demolished", "repurposed"].includes(input.endState)) {
-    return "The parish institution ended; the church building's later history is recorded separately.";
+    const ended = input.closed
+      ? `The parish institution ended in ${input.closed}.`
+      : "The parish institution ended.";
+    if (/^demolished\b/i.test(input.buildingOutcome ?? "")) {
+      const year = input.buildingOutcome?.match(/\b(\d{4})\b/)?.[1];
+      return `${ended} Its church building was demolished${year ? ` in ${year}` : ""}.`;
+    }
+    if (/^repurposed\b/i.test(input.buildingOutcome ?? "")) {
+      return /standing/i.test(input.buildingOutcome ?? "")
+        ? `${ended} Its former church was repurposed and remains standing.`
+        : `${ended} Its former church was repurposed.`;
+    }
+    if (/^standing\b/i.test(input.buildingOutcome ?? "")) {
+      return `${ended} Its former church remains standing.`;
+    }
+    return `${ended} The building's present condition is not yet established.`;
   }
   return "The institution is documented, but its present status is still being verified.";
 }
