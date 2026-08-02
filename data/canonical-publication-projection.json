@@ -5317,27 +5317,6 @@
         "conflict_preserved": false,
         "state": "accepted"
       },
-      "assertion_type": "site_status",
-      "confidence": "high",
-      "id": "assert:detroit:divine-providence-southfield-building-standing-2026",
-      "object": {
-        "canonical_entity_id": "cn:building_site:divine-providence-southfield-site",
-        "date_text": "2026-07-31",
-        "status": "standing and in active parish use"
-      },
-      "observed_at": "2026-07-31",
-      "predicate": "building_site_standing",
-      "source_artifact_id": "src:divine-providence:homepage-current:2026-07-31",
-      "source_locator": "Homepage identifies the Southfield church and publishes its current worship schedule",
-      "subject": {
-        "canonical_entity_id": "cn:event:divine-providence-southfield-building-standing-2026"
-      }
-    },
-    {
-      "adjudication": {
-        "conflict_preserved": false,
-        "state": "accepted"
-      },
       "assertion_type": "identity_lifecycle",
       "confidence": "high",
       "id": "assert:detroit:divine-providence-name-1949",
@@ -9086,6 +9065,51 @@
         "conflict_preserved": false,
         "state": "accepted"
       },
+      "assertion_type": "site_lineage",
+      "confidence": "high",
+      "id": "assert:nsp-8:st-michael-original-wooden-church",
+      "object": {
+        "identity": "original modest wooden Saint Michael Lithuanian parish church",
+        "later_disposition": "unresolved",
+        "location": "Hyde Park, Scranton; exact address not established in supplied pages",
+        "use": "parish worship site from 1914 until the 1942 brick replacement"
+      },
+      "predicate": "original_wooden_church_served_parish_until_1942_replacement",
+      "source_artifact_id": "src:nsp-8:butenas-pennsylvania-coal-lithuania-st-michael:1977",
+      "source_locator": "Šv. Mykolo parapija section; original-church photograph caption",
+      "subject": {
+        "canonical_entity_id": "cn:building_site:st-michael-original-wooden-church-scranton-pa"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "lifecycle",
+      "confidence": "high",
+      "id": "assert:nsp-8:st-michael-scranton-archive-history",
+      "object": {
+        "community_1972": "660 parishioners and 121 pupils; Lithuanian-language use had sharply declined",
+        "first_church": "modest wooden church built for the new parish",
+        "first_pastor": "Father Adomas Lopata",
+        "founded": "1914 in Scranton's Hyde Park section",
+        "heritage": "Lithuanian-language records and stained-glass inscriptions",
+        "replacement_church": "brick church built in 1942 under Father Jonas Boll-Baltusevičius",
+        "school_1961": "six grades, 205 pupils; parish 230 families and approximately 700 people"
+      },
+      "predicate": "lithuanian_parish_founded_in_1914_built_two_churches_and_school",
+      "source_artifact_id": "src:nsp-8:butenas-pennsylvania-coal-lithuania-st-michael:1977",
+      "source_locator": "Šv. Mykolo parapija section and p. 304",
+      "subject": {
+        "canonical_entity_id": "cn:institution:st-michael-archangel-scranton-pa"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
       "assertion_type": "lifecycle",
       "confidence": "high",
       "id": "assert:nsp-8:st-michael-scranton-lifecycle",
@@ -9093,8 +9117,9 @@
         "current_identity": "FSSP Saint Michael the Archangel personal parish",
         "current_worship": "active FSSP schedule at 949 Scranton Street",
         "ethnic_transfer": "Latin Mass community assigned in late 1990s as Lithuanian community waned",
-        "lithuanian_origin": "personal parish dedicated in 1917",
-        "relocation": "final Jackson Street Mass 2025-09-28, then move to Saint Lucy Church"
+        "lithuanian_origin": "Lithuanian Roman Catholic parish established in Hyde Park in 1914",
+        "relocation": "final Jackson Street Mass 2025-09-28, then move to Saint Lucy Church",
+        "site_lineage": "original wooden church, 1942 brick replacement, then Saint Lucy Church from 2025-09-28"
       },
       "observed_at": "2026-07-16",
       "predicate": "same_parish_survived_ethnic_transfer_and_relocated_to_st_lucy_in_2025",
@@ -9106,17 +9131,17 @@
     },
     {
       "adjudication": {
-        "conflict_preserved": true,
-        "state": "conflict_preserved"
+        "conflict_preserved": false,
+        "state": "accepted"
       },
       "assertion_type": "site_lineage",
-      "confidence": "medium",
+      "confidence": "high",
       "id": "assert:nsp-8:st-michael-scranton-sites",
       "object": {
         "church": "1703 Jackson Street; 4,468 square feet; listing says built 1942",
-        "earlier_building": "1917 dedication versus 1942 current building implies an earlier building not yet identified",
         "heritage": "Lithuanian-inscribed stained glass documented; disposition unknown",
         "listing": "$350,000 active commercial listing as of 2026-07-16",
+        "predecessor": "the 1942 brick church replaced the parish's original wooden church",
         "rectory": "2,069 square feet on same sale property"
       },
       "observed_at": "2026-07-16",
@@ -12177,11 +12202,29 @@
       "lifecycle": {
         "end": "vacant and listed after 2025-09-28",
         "source_assertion_ids": [
+          "assert:nsp-8:st-michael-scranton-archive-history",
           "assert:nsp-8:st-michael-scranton-sites"
         ],
-        "start": "1942 listing date"
+        "start": "1942"
       },
       "slug": "st-michael-jackson-street-scranton-pa"
+    },
+    {
+      "aliases": [
+        "Senoji Šv. Mykolo parapijos bažnyčia",
+        "Original wooden Saint Michael church"
+      ],
+      "canonical_name": "Original Saint Michael Lithuanian church, Scranton",
+      "entity_type": "building_site",
+      "id": "cn:building_site:st-michael-original-wooden-church-scranton-pa",
+      "lifecycle": {
+        "end": "replaced by 1942 brick church; later physical disposition unresolved",
+        "source_assertion_ids": [
+          "assert:nsp-8:st-michael-original-wooden-church"
+        ],
+        "start": "1914"
+      },
+      "slug": "st-michael-original-wooden-church-scranton-pa"
     },
     {
       "aliases": [
@@ -12385,13 +12428,6 @@
       "event_subtype": "building_status_assessment",
       "id": "cn:event:divine-providence-schaefer-demolition-1970",
       "slug": "divine-providence-schaefer-demolition-1970"
-    },
-    {
-      "aliases": [],
-      "canonical_name": "Divine Providence Southfield current church standing assessment",
-      "entity_type": "event",
-      "id": "cn:event:divine-providence-southfield-building-standing-2026",
-      "slug": "divine-providence-southfield-building-standing-2026"
     },
     {
       "aliases": [],
@@ -16015,9 +16051,10 @@
       "institution_subtype": "parish",
       "lifecycle": {
         "source_assertion_ids": [
+          "assert:nsp-8:st-michael-scranton-archive-history",
           "assert:nsp-8:st-michael-scranton-lifecycle"
         ],
-        "start": "1917 dedication; exact founding unresolved"
+        "start": "1914"
       },
       "lifecycle_status": "active_non_lithuanian_continuation",
       "slug": "st-michael-archangel-scranton-pa"
@@ -16508,7 +16545,7 @@
       "slug": "robert-damyanovich"
     }
   ],
-  "content_hash": "sha256:672d35f50129411e1b2b6753a21ebb9428fae50e9dd2b4e1a33996e803ce35e3",
+  "content_hash": "sha256:0c68ed54a90e5af4e7805dcde2a30ea6f3bee90f3816632c4733a8a3e596956a",
   "counts": {
     "by_institution_class": {
       "independent_catholic": 4,
@@ -19546,14 +19583,12 @@
       "display_name": "Divine Providence Southfield church and cultural center site",
       "entity_type": "building_site",
       "evidence_assertion_ids": [
-        "assert:detroit:divine-providence-southfield-building-standing-2026",
         "assert:detroit:southfield-dedicated-1973"
       ],
       "id": "proj:lineage:site-divine-providence-southfield",
       "reason": "Present church/cultural center site is linked context for the active parish, not a second parish row.",
       "slug": "divine-providence-southfield-site",
       "source_artifact_ids": [
-        "src:divine-providence:homepage-current:2026-07-31",
         "src:divine-providence:parish-history:2026-07-31"
       ]
     },
@@ -22126,20 +22161,54 @@
       "display_name": "Former Saint Michael church, Scranton",
       "entity_type": "building_site",
       "evidence_assertion_ids": [
+        "assert:nsp-8:st-michael-scranton-archive-history",
         "assert:nsp-8:st-michael-scranton-sites"
       ],
       "id": "proj:nsp-8:st-michael-jackson-church",
       "lifecycle": {
         "end": "vacant and listed after 2025-09-28",
         "source_assertion_ids": [
+          "assert:nsp-8:st-michael-scranton-archive-history",
           "assert:nsp-8:st-michael-scranton-sites"
         ],
-        "start": "1942 listing date"
+        "start": "1942"
       },
       "reason": "The former Lithuanian church is vacant and for sale after the parish relocation.",
       "slug": "st-michael-jackson-street-scranton-pa",
       "source_artifact_ids": [
+        "src:nsp-8:butenas-pennsylvania-coal-lithuania-st-michael:1977",
         "src:nsp-8:st-michael-scranton-case:2026-07-16"
+      ]
+    },
+    {
+      "aliases": [
+        "Original wooden Saint Michael church",
+        "Senoji Šv. Mykolo parapijos bažnyčia"
+      ],
+      "canonical_entity_id": "cn:building_site:st-michael-original-wooden-church-scranton-pa",
+      "counts": {
+        "active_institution_census": false,
+        "building_site_census": true,
+        "historical_institution_census": false
+      },
+      "decision": "publish_linked_context_only",
+      "display_name": "Original Saint Michael Lithuanian church, Scranton",
+      "entity_type": "building_site",
+      "evidence_assertion_ids": [
+        "assert:nsp-8:st-michael-original-wooden-church"
+      ],
+      "id": "proj:nsp-8:st-michael-original-wooden-church",
+      "lifecycle": {
+        "end": "replaced by 1942 brick church; later physical disposition unresolved",
+        "source_assertion_ids": [
+          "assert:nsp-8:st-michael-original-wooden-church"
+        ],
+        "start": "1914"
+      },
+      "reason": "The original wooden church was the parish's first worship site and was replaced by the 1942 brick church; its later physical disposition remains unresolved.",
+      "slug": "st-michael-original-wooden-church-scranton-pa",
+      "source_artifact_ids": [
+        "src:nsp-8:butenas-pennsylvania-coal-lithuania-st-michael:1977"
       ]
     },
     {
@@ -25811,6 +25880,7 @@
       "city": "Scranton",
       "culturenet_entity_id": "cn:institution:st-michael-archangel-scranton-pa",
       "evidence_assertion_ids": [
+        "assert:nsp-8:st-michael-scranton-archive-history",
         "assert:nsp-8:st-michael-scranton-lifecycle",
         "assert:nsp-8:st-michael-scranton-sites"
       ],
@@ -25825,6 +25895,7 @@
       "registry_projection_profile": "/parishes/michael-scranton-pa",
       "registry_slug": "michael-scranton-pa",
       "source_artifact_ids": [
+        "src:nsp-8:butenas-pennsylvania-coal-lithuania-st-michael:1977",
         "src:nsp-8:st-michael-scranton-case:2026-07-16"
       ],
       "state": "PA"
@@ -31093,40 +31164,6 @@
         "entity_id": "cn:building_site:ss-peter-paul-first-church-homestead-pa",
         "entity_type": "building_site",
         "slug": "ss-peter-paul-first-church-homestead-pa"
-      }
-    },
-    {
-      "adjudication_state": "accepted",
-      "confidence": "high",
-      "counting_effect": "status_context_only",
-      "date": {
-        "certainty": "current_official_site",
-        "end": null,
-        "label": "Standing and in active parish use as observed July 31, 2026",
-        "start": "2026-07-31"
-      },
-      "evidence_assertion_ids": [
-        "assert:detroit:divine-providence-southfield-building-standing-2026"
-      ],
-      "id": "rel:detroit:divine-providence-southfield-building-standing-2026",
-      "identity_effect": "status_context_only",
-      "projection_group": "building_site_status",
-      "publication_state": "publishable",
-      "relationship_type": "building-standing",
-      "source": {
-        "display_name": "Divine Providence Southfield current church standing assessment",
-        "entity_id": "cn:event:divine-providence-southfield-building-standing-2026",
-        "entity_type": "event",
-        "slug": "divine-providence-southfield-building-standing-2026"
-      },
-      "source_artifact_ids": [
-        "src:divine-providence:homepage-current:2026-07-31"
-      ],
-      "target": {
-        "display_name": "Divine Providence Southfield church and cultural center site",
-        "entity_id": "cn:building_site:divine-providence-southfield-site",
-        "entity_type": "building_site",
-        "slug": "divine-providence-southfield-site"
       }
     },
     {
@@ -40724,9 +40761,10 @@
         "entity_type": "institution",
         "lifecycle": {
           "source_assertion_ids": [
+            "assert:nsp-8:st-michael-scranton-archive-history",
             "assert:nsp-8:st-michael-scranton-lifecycle"
           ],
-          "start": "1917 dedication; exact founding unresolved"
+          "start": "1914"
         },
         "slug": "st-michael-archangel-scranton-pa"
       },
@@ -40747,7 +40785,7 @@
       }
     },
     {
-      "adjudication_state": "conflict_preserved",
+      "adjudication_state": "accepted",
       "assertion_temporal_context": [
         {
           "assertion_id": "assert:nsp-8:st-michael-scranton-lifecycle",
@@ -40758,14 +40796,15 @@
           "observed_at": "2026-07-16"
         }
       ],
-      "confidence": "medium",
+      "confidence": "high",
       "counting_effect": "site_count_only",
       "date": {
-        "certainty": "case file",
+        "certainty": "1977 published parish history and current-condition case file",
         "end": "2025-09-28",
-        "start": "1942 current-building reading"
+        "start": "1942"
       },
       "evidence_assertion_ids": [
+        "assert:nsp-8:st-michael-scranton-archive-history",
         "assert:nsp-8:st-michael-scranton-lifecycle",
         "assert:nsp-8:st-michael-scranton-sites"
       ],
@@ -40780,13 +40819,15 @@
         "entity_type": "institution",
         "lifecycle": {
           "source_assertion_ids": [
+            "assert:nsp-8:st-michael-scranton-archive-history",
             "assert:nsp-8:st-michael-scranton-lifecycle"
           ],
-          "start": "1917 dedication; exact founding unresolved"
+          "start": "1914"
         },
         "slug": "st-michael-archangel-scranton-pa"
       },
       "source_artifact_ids": [
+        "src:nsp-8:butenas-pennsylvania-coal-lithuania-st-michael:1977",
         "src:nsp-8:st-michael-scranton-case:2026-07-16"
       ],
       "target": {
@@ -40796,11 +40837,60 @@
         "lifecycle": {
           "end": "vacant and listed after 2025-09-28",
           "source_assertion_ids": [
+            "assert:nsp-8:st-michael-scranton-archive-history",
             "assert:nsp-8:st-michael-scranton-sites"
           ],
-          "start": "1942 listing date"
+          "start": "1942"
         },
         "slug": "st-michael-jackson-street-scranton-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "confidence": "high",
+      "counting_effect": "site_count_only",
+      "date": {
+        "certainty": "1977 published parish history",
+        "end": "1942",
+        "start": "1914"
+      },
+      "evidence_assertion_ids": [
+        "assert:nsp-8:st-michael-original-wooden-church",
+        "assert:nsp-8:st-michael-scranton-archive-history"
+      ],
+      "id": "rel:nsp-8:st-michael-used-original-wooden-church",
+      "identity_effect": "site_context_only",
+      "projection_group": "institution_site",
+      "publication_state": "publishable",
+      "relationship_type": "institution-used-site",
+      "source": {
+        "display_name": "Saint Michael the Archangel Parish, Scranton",
+        "entity_id": "cn:institution:st-michael-archangel-scranton-pa",
+        "entity_type": "institution",
+        "lifecycle": {
+          "source_assertion_ids": [
+            "assert:nsp-8:st-michael-scranton-archive-history",
+            "assert:nsp-8:st-michael-scranton-lifecycle"
+          ],
+          "start": "1914"
+        },
+        "slug": "st-michael-archangel-scranton-pa"
+      },
+      "source_artifact_ids": [
+        "src:nsp-8:butenas-pennsylvania-coal-lithuania-st-michael:1977"
+      ],
+      "target": {
+        "display_name": "Original Saint Michael Lithuanian church, Scranton",
+        "entity_id": "cn:building_site:st-michael-original-wooden-church-scranton-pa",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": "replaced by 1942 brick church; later physical disposition unresolved",
+          "source_assertion_ids": [
+            "assert:nsp-8:st-michael-original-wooden-church"
+          ],
+          "start": "1914"
+        },
+        "slug": "st-michael-original-wooden-church-scranton-pa"
       }
     },
     {
@@ -40831,9 +40921,10 @@
         "entity_type": "institution",
         "lifecycle": {
           "source_assertion_ids": [
+            "assert:nsp-8:st-michael-scranton-archive-history",
             "assert:nsp-8:st-michael-scranton-lifecycle"
           ],
-          "start": "1917 dedication; exact founding unresolved"
+          "start": "1914"
         },
         "slug": "st-michael-archangel-scranton-pa"
       },
@@ -47290,6 +47381,21 @@
       "title": "Sacred Heart of Jesus National Catholic Lawrence current-condition case file"
     },
     {
+      "artifact_type": "published_history",
+      "id": "src:nsp-8:butenas-pennsylvania-coal-lithuania-st-michael:1977",
+      "locator": {
+        "exact_label": "Šv. Mykolo parapija",
+        "page": "St. Michael section and p. 304; supplied page images",
+        "section": "1914 founding, original wooden church, 1942 brick replacement, Lithuanian inscriptions, parish school, 1961 counts, and 1972 community and language conditions"
+      },
+      "rights": {
+        "access": "Vilija-provided page scans",
+        "quote_policy": "cite the volume and page or section; summarize until the public archive item is linked",
+        "status": "admitted_secondary_source_archive_url_pending"
+      },
+      "title": "Vladas Būtėnas, Pennsylvanijos angliakasių Lietuva — Šv. Mykolo parapija"
+    },
+    {
       "artifact_type": "canonical_case_file",
       "id": "src:nsp-8:providence-god-scranton-case:2026-07-09",
       "locator": {
@@ -47343,7 +47449,7 @@
       "locator": {
         "exact_label": "Current-condition case file: sv-mykolo-scranton-pa",
         "page": "JSON record",
-        "section": "Lithuanian parish phase, FSSP continuity, 1917 and 1942 building tension, 2025 relocation, former church and rectory sale listing, and heritage gaps"
+        "section": "1914 Lithuanian parish founding, two-church lineage, FSSP continuity, 2025 relocation, former church and rectory sale listing, and heritage gaps"
       },
       "rights": {
         "access": "repository",

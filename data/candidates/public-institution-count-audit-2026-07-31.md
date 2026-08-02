@@ -1,7 +1,7 @@
 # Public institution count audit
 
 **Audit date:** 2026-08-02
-**Registry revision:** 16
+**Registry revision:** 17
 **Canonical authority:** CultureNet canonical-public-census-2026-07-31
 
 ## Press-safe claim

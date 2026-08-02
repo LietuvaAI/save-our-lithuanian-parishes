@@ -1,11 +1,11 @@
 {
   "generatedFrom": {
-    "registryRevision": 16,
+    "registryRevision": 17,
     "registryDate": "2026-08-02",
     "canonicalPublicationRevision": "canonical-public-census-2026-07-31",
-    "canonicalPublicationHash": "sha256:672d35f50129411e1b2b6753a21ebb9428fae50e9dd2b4e1a33996e803ce35e3",
+    "canonicalPublicationHash": "sha256:0c68ed54a90e5af4e7805dcde2a30ea6f3bee90f3816632c4733a8a3e596956a",
     "canonicalInfographicRevision": "canonical-infographic-units-2026-08-01",
-    "canonicalInfographicHash": "sha256:f9c2b9b3137cff8eb9383f07cf4a1807b7beb8589913e0756dd0489cf2ba0613",
+    "canonicalInfographicHash": "sha256:8551f6e1bc2d951d40181b2fc31e627c5e404c4f931ba9160e86df99979abc3a",
     "networkChecked": "2026-07-29"
   },
   "publicUS": {
@@ -68,8 +68,8 @@
     ]
   },
   "physicalSites": {
-    "worshipSites": 131,
-    "allBuildingSiteEntities": 168
+    "worshipSites": 132,
+    "allBuildingSiteEntities": 169
   },
   "continuity": {
     "relationships": 51

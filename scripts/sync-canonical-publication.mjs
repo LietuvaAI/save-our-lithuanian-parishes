@@ -16,12 +16,13 @@ const write = (path, value) =>
 const registry = read("registry-unified.json");
 const revisions = read("registry-revisions.json");
 const projection = read("canonical-publication-projection.json");
+const infographic = read("canonical-infographic-projection.json");
 const adjudications = read("canonical-public-census-adjudications.json");
 
-const TARGET_REVISION = 16;
+const TARGET_REVISION = 17;
 const TARGET_DATE = "2026-08-02";
 const CHANGELOG =
-  "Registry Revision 16: clarified Saint Michael the Archangel Parish in Scranton as one surviving parish across its former Jackson Street church and current Saint Lucy home, and distinguished its current Latin Mass from undocumented Lithuanian worship; public counts are unchanged.";
+  "Registry Revision 17: established Saint Michael the Archangel Parish in Scranton in 1914, promoted its original wooden church as a distinct worship site, and enriched its school, language, and two-church history from the 1977 published parish account; the public institution count remains unchanged.";
 
 if (projection.schema !== "culturenet-parish-publication-projection.v1") {
   throw new Error(`Unsupported publication projection schema: ${projection.schema}`);
@@ -182,12 +183,12 @@ const revisionEntry = {
   publicUSRecords: publicRecords.length,
   usRomanCatholicParishes: romanCatholicParishes,
   summary:
-    "Clarified Saint Michael the Archangel Parish in Scranton as a surviving parish that relocated in 2025, separated its former Lithuanian church from its current Saint Lucy worship site, and distinguished the current Latin Mass schedule from undocumented Lithuanian worship; public counts are unchanged.",
+    "Established Saint Michael the Archangel Parish in Scranton in 1914, promoted its original wooden church from a held candidate to a canonical worship site, and added the 1942 replacement church, school, community, and Lithuanian-language history from the 1977 published parish account; the public institution count remains unchanged.",
   evidence: [
     "data/canonical-publication-projection.json",
     "data/canonical-infographic-projection.json",
     "data/case-records/sv-mykolo-scranton-pa.json",
-    "data/candidates/registry-revision-16-st-michael-scranton-relocation-2026-08-02.md",
+    "data/candidates/registry-revision-17-st-michael-scranton-archive-history-2026-08-02.md",
   ],
 };
 const priorRevision = revisions.revisions.find(
@@ -205,22 +206,26 @@ const removed = adjudications.decisions
       `| ${decision.registry_slug} | ${decision.scope} | ${decision.reason} |`,
   )
   .join("\n");
-const report = `# Registry Revision 16: Saint Michael Scranton relocation
+const report = `# Registry Revision 17: Saint Michael Scranton archive history
 
 **Date:** ${TARGET_DATE}
 **Authority:** CultureNet parish publication projection
 **Public U.S. institutions:** ${publicRecords.length}
 **Count-risk rows:** 0
 
-This revision corrects the public reading of Saint Michael the Archangel Parish in Scranton without changing census membership or lifecycle counts.
+This revision admits the 1977 published Saint Michael parish history without changing public census membership.
 
+- The Lithuanian parish was established in Hyde Park in 1914.
+- Its original modest wooden church is now an accepted worship site rather than a held candidate; its later physical disposition remains unresolved.
+- The parish replaced it with the brick Jackson Street church in 1942.
+- The record now carries the parish school, 1961 community counts, and the documented decline of Lithuanian-language life by 1972.
 - The parish entity survives and relocated from 1703 Jackson Street to Saint Lucy Church on September 28, 2025.
 - Saint Lucy Church is the parish's current principal worship site.
 - The former Lithuanian Saint Michael Church remains standing at 1703 Jackson Street, is vacant, and is listed for sale.
 - The current parish celebrates the Traditional Latin Mass. No regular Lithuanian Mass is documented.
 - The English profile name is restored to **St. Michael the Archangel**.
 
-The profile header now presents the current and former churches as two linked site readings under one institution. Canonical public membership remains ${publicRecords.length}; physical worship sites and continuity edges are unchanged.
+The profile presents one continuing parish institution across three worship sites. Canonical public membership remains ${publicRecords.length}; physical worship sites are now ${infographic.counts.physical_worship_sites}.
 
 ## Census reconciliation
 
@@ -241,7 +246,7 @@ write("registry-unified.json", registry);
 write("registry-revisions.json", revisions);
 writeFileSync(
   new URL(
-    "../data/candidates/registry-revision-16-st-michael-scranton-relocation-2026-08-02.md",
+    "../data/candidates/registry-revision-17-st-michael-scranton-archive-history-2026-08-02.md",
     import.meta.url,
   ),
   report,

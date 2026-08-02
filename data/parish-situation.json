@@ -2317,7 +2317,7 @@
       "lithuanian_identity": "ethnically_transferred",
       "pastoral_status": "not_applicable",
       "situation": "The Lithuanian parish identity ended, while the St. Michael FSSP personal parish continued in the building until September 28, 2025. That congregation relocated to St. Lucy's Church; the former Lithuanian church and rectory now stand vacant and are listed for sale.",
-      "current_record_as_of": "2026-07-16",
+      "current_record_as_of": "2026-08-02",
       "current_record_path": "data/case-records/sv-mykolo-scranton-pa.json",
       "sources": [
         {
@@ -2349,6 +2349,14 @@
           "publisher": "Global True Lithuania",
           "date": "2026-07-16 (accessed)",
           "url": "https://global.truelithuania.com/northern-coal-region-scranton-1614/"
+        },
+        {
+          "title": "Vladas Būtėnas, Pennsylvanijos angliakasių Lietuva — Šv. Mykolo parapija",
+          "publisher": "Lithuanian Library Press",
+          "date": "1977",
+          "access": "Vilija-provided page scans",
+          "archiveUrlPending": true,
+          "locator": "Šv. Mykolo parapija section and p. 304"
         }
       ]
     },

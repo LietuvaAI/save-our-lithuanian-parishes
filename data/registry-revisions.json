@@ -186,6 +186,20 @@
         "data/case-records/sv-mykolo-scranton-pa.json",
         "data/candidates/registry-revision-16-st-michael-scranton-relocation-2026-08-02.md"
       ]
+    },
+    {
+      "version": 17,
+      "date": "2026-08-02",
+      "registryRecords": 192,
+      "publicUSRecords": 154,
+      "usRomanCatholicParishes": 132,
+      "summary": "Established Saint Michael the Archangel Parish in Scranton in 1914, promoted its original wooden church from a held candidate to a canonical worship site, and added the 1942 replacement church, school, community, and Lithuanian-language history from the 1977 published parish account; the public institution count remains unchanged.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/case-records/sv-mykolo-scranton-pa.json",
+        "data/candidates/registry-revision-17-st-michael-scranton-archive-history-2026-08-02.md"
+      ]
     }
   ]
 }

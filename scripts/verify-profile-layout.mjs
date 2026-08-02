@@ -648,8 +648,14 @@ const stLucyScranton = infographic.building_site_history.find(
 const stMichaelJackson = infographic.building_site_history.find(
   (site) => site.slug === "st-michael-jackson-street-scranton-pa",
 );
+const stMichaelOriginal = infographic.building_site_history.find(
+  (site) => site.slug === "st-michael-original-wooden-church-scranton-pa",
+);
 if (
   stMichaelScranton?.names?.en !== "St. Michael the Archangel" ||
+  stMichaelScranton?.lifecycle?.selected_founded_year !== 1914 ||
+  stMichaelScrantonCase.profile?.institutionalLife !==
+    "1914-present · parish survives at a new church" ||
   stMichaelScrantonCase.profile?.currentSite?.value !==
     "Saint Lucy Church, Scranton" ||
   stMichaelScrantonCase.profile?.formerSite?.value !==
@@ -665,7 +671,10 @@ if (
   stLucyScranton?.lifecycle_text?.end !==
     "active Saint Michael FSSP worship site" ||
   stMichaelJackson?.lifecycle_text?.end !==
-    "vacant and listed after 2025-09-28"
+    "vacant and listed after 2025-09-28" ||
+  stMichaelOriginal?.lifecycle_text?.start !== "1914" ||
+  stMichaelOriginal?.lifecycle_text?.end !==
+    "replaced by 1942 brick church; later physical disposition unresolved"
 ) {
   errors.push("Saint Michael Scranton worship-site lifecycle readings drifted");
 }
