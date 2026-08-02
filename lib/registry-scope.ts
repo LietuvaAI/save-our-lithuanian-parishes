@@ -160,7 +160,8 @@ export function usRegistryParishes(): RegParish[] {
 
 // Current-alert and sustainability-profile lookups by slug
 const alertBySlug = new Map<string, "active" | "watch" | "building">();
-for (const a of alertsData.alerts as { parishLink: string; kind: string }[]) {
+for (const a of alertsData.alerts as { parishLink?: string; kind: string }[]) {
+  if (!a.parishLink) continue;
   alertBySlug.set(
     a.parishLink.replace(/^\/(parishes|registry)\//, ""),
     a.kind as "active" | "watch" | "building",

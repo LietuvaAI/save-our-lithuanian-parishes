@@ -129,7 +129,9 @@
       "dateObserved": "2026-07-19",
       "eventDate": "2026-07-01",
       "whatChanged": "Consolidated into St. Patrick Parish (White Haven) effective July 1, 2026, under the Diocese of Scranton's Vision 2030 pastoral plan.",
-      "parishLink": "/parishes/casimir-freeland-pa",
+      "status": "closed",
+      "relatedProfileLink": "/parishes/casimir-freeland-pa",
+      "relatedProfileLabel": "St. Casimir predecessor record",
       "caveat": "The research record holds a single-source entry for an early mixed Lithuanian–Polish–Slovak–Rusyn parish in Freeland. Whether Our Lady of the Immaculate Conception is that parish's continuation is not yet confirmed — the identity check is an open research task.",
       "sources": [
         {

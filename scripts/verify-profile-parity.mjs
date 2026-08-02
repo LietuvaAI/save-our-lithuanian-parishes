@@ -140,7 +140,22 @@ const linkedEntries = [
   ...(alerts.sustainabilityWatch ?? []),
 ];
 for (const entry of linkedEntries) {
-  const link = entry.parishLink;
+  if (entry.parishLink && entry.relatedProfileLink) {
+    fail(
+      `alert ${entry.id ?? "without id"} cannot treat a related record as its subject profile`,
+    );
+  }
+  if (entry.relatedProfileLink && !entry.relatedProfileLabel) {
+    fail(`alert ${entry.id ?? "without id"} needs a related profile label`);
+  }
+  if (entry.relatedProfileLink && !entry.status) {
+    fail(`alert ${entry.id ?? "without id"} needs its own status`);
+  }
+  const link = entry.parishLink ?? entry.relatedProfileLink;
+  if (!link) {
+    fail(`alert ${entry.id ?? "without id"} has no profile relationship`);
+    continue;
+  }
   if (link.startsWith("/parishes/")) {
     const slug = link.slice("/parishes/".length);
     if (!routeSlugSet.has(slug) && !legacyRouteSlugSet.has(slug)) {
