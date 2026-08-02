@@ -1,5 +1,5 @@
 {
-  "probedAt": "2026-07-31",
+  "probedAt": "2026-08-02",
   "results": {
     "1909-07-26": {
       "status": "verified",
@@ -917,6 +917,10 @@
       "status": "verified",
       "url": "https://www.draugas.org/archive/2007_reg/2007-05-01-DRAUGAS-i13-16.pdf"
     },
+    "2007-05-03": {
+      "status": "verified",
+      "url": "https://www.draugas.org/archive/2007_reg/2007-05-03-DRAUGAS-i13-16.pdf"
+    },
     "2007-05-31": {
       "status": "verified",
       "url": "https://www.draugas.org/archive/2007_reg/2007-05-31-DRAUGAS-i13-16.pdf"
@@ -968,6 +972,10 @@
     "2007-09-27": {
       "status": "verified",
       "url": "https://www.draugas.org/archive/2007_reg/2007-09-27-DRAUGAS-i13-16.pdf"
+    },
+    "2007-10-02": {
+      "status": "verified",
+      "url": "https://www.draugas.org/archive/2007_reg/2007-10-02-DRAUGAS-i13-16.pdf"
     },
     "2007-10-11": {
       "status": "verified",
@@ -1113,6 +1121,10 @@
       "status": "verified",
       "url": "https://draugas.org/key/2008_reg/2008-09-06-DRAUGASo.pdf"
     },
+    "2008-09-23": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2008_reg/2008-09-23-DRAUGASo.pdf"
+    },
     "2008-10-28": {
       "status": "verified",
       "url": "https://draugas.org/key/2008_reg/2008-10-28-DRAUGASo.pdf"
@@ -1232,6 +1244,10 @@
     "2013-02-26": {
       "status": "verified",
       "url": "https://draugas.org/key/2013_reg/2013-02-26-DRAUGAS.pdf"
+    },
+    "2013-03-28": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2013_reg/2013-03-28-DRAUGAS.pdf"
     },
     "2013-06-20": {
       "status": "verified",
