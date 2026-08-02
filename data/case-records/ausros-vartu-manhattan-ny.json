@@ -3,7 +3,56 @@
   "asOf": "2026-07-25",
   "buildingStatus": "demolished",
   "currentUse": "570 Broome, a 25-story, 54-unit luxury condominium tower (completed 2019), occupies the church site.",
-  "summary": "Our Lady of Vilnius Church at 568-570 Broome Street was demolished in April 2015 — Draugas reported the demolition under way with a farewell gathering on April 26, 2015 (105 candles for the building's 105 years), and stated in 2016 that the building was 'galutinai nugriautas 2015 m. balandį' — four years after the NY Court of Appeals ruled for the archdiocese. The archdiocese sold the property to Extell Development for $13 million; Extell flipped it to SoHo Broome Condos LLC for $18.4 million in early 2014, and a residential tower permit was filed that August. Today the site holds 570 Broome, a 25-story, 54-unit condominium designed by Tahir Demircioglu (Builtd) for Agime Group, completed in 2019; the building's marketing makes no mention of the church. The parish tabernacle went to the Church of the Blessed Kateri Tekakwitha and sacramental records to St. Anthony of Padua on Sullivan Street. The parishioner-run memorial blog remains active as of May 2026, now advocating for other endangered churches such as St. Mary's in Yonkers.",
+  "historicalNarrative": [
+    {
+      "text": "Aušros Vartų parish and its church at 568-570 Broome Street emerged from Manhattan's Lithuanian immigrant community in the opening years of the twentieth century. The surviving record does not yield one uncontested founding date: contemporary and retrospective accounts variously point to a 1905 parish authorization or centennial, a December 1909 opening, and a 1910 building date. The public record therefore leaves the parish's founding year unresolved rather than choosing among them.",
+      "sources": [
+        { "url": "https://www.draugas.org/archive/2007_reg/2007-01-25-DRAUGAS-i13-16.pdf", "locator": "p. 1" },
+        { "url": "https://www.draugas.org/archive/2007_reg/2007-05-01-DRAUGAS-i13-16.pdf", "locator": "p. 1" },
+        { "url": "https://draugas.org/key/2014_reg/2014-07-10-DRAUGAS.pdf", "locator": "p. 5" }
+      ]
+    },
+    {
+      "text": "The yellow-brick Lombard-Gothic church was designed by Harry G. Wiseman and built with immigrant donations at a reported cost of $25,000. It became a Lithuanian Catholic anchor in lower Manhattan. Its later interior included stained-glass windows by Vytautas Kazimieras Jonynas, acquired in the 1980s from Brooklyn's closed Lithuanian Church of Our Lady Queen of Angels, so the building also carried sacred art rescued from an earlier lost parish.",
+      "sources": [
+        { "url": "https://draugas.org/key/2014_reg/2014-07-10-DRAUGAS.pdf", "locator": "p. 5" }
+      ]
+    },
+    {
+      "text": "The closing unfolded without a final liturgy. On January 19, 2007, Aušros Vartų was absent from the archdiocese's morning list of 21 parish closures, but a separate statement that evening said it would close anyway. On February 26, while pastor Eugene Sawicki was summoned to meet Cardinal Edward Egan, the locks were changed and a guard posted. Parishioners later entered the church on April 29 and found the interior stripped: the Jonynas windows were gone, the Marian icon had been removed, and a neighbor reported that pews had been trucked away before dawn.",
+      "sources": [
+        { "url": "https://www.draugas.org/archive/2007_reg/2007-01-25-DRAUGAS-i13-16.pdf", "locator": "p. 1" },
+        { "url": "https://www.draugas.org/archive/2007_reg/2007-02-28-DRAUGAS-i13-16.pdf", "locator": "p. 1" },
+        { "url": "https://www.draugas.org/archive/2007_reg/2007-05-03-DRAUGAS-i13-16.pdf", "locator": "p. 6" }
+      ]
+    },
+    {
+      "text": "The community answered the lockout with a sustained public campaign. Beginning March 4, 2007, parishioners gathered outside the locked church every Sunday for prayer, hymns, and what they called a virtual church; the gatherings continued for eight years. They delivered 396 signed petitions and more than 3,000 online statements, appealed to Lithuanian and American church leaders, and carried the case to President Valdas Adamkus, who raised it with Pope Benedict XVI on April 28, 2007. The pope told him he knew the case and would discuss it with the American bishops.",
+      "sources": [
+        { "url": "https://www.draugas.org/archive/2007_reg/2007-05-01-DRAUGAS-i13-16.pdf", "locator": "p. 1" },
+        { "url": "https://www.draugas.org/archive/2007_reg/2007-10-02-DRAUGAS-i13-16.pdf", "locator": "pp. 4-5" },
+        { "url": "https://draugas.org/key/2015_reg/2015-04-30-DRAUGAS.pdf", "locator": "pp. 1, 4" }
+      ]
+    },
+    {
+      "text": "The fight proceeded on both canonical and civil tracks. Parishioners appealed to the Congregation for the Clergy on April 4, 2007 and later to the Apostolic Signatura; no published outcome of either canonical appeal has been found. A New York lawsuit stopped demolition in 2008, and an appellate stay preserved the building again in January 2009. In December 2011, however, the New York Court of Appeals entered the final civil ruling allowing the archdiocese to demolish it.",
+      "sources": [
+        { "url": "https://www.draugas.org/archive/2007_reg/2007-10-02-DRAUGAS-i13-16.pdf", "locator": "p. 4" },
+        { "url": "https://draugas.org/key/2008_reg/2008-09-23-DRAUGASo.pdf", "locator": "p. 4" },
+        { "url": "https://draugas.org/key/2011_reg/2011-12-17-DRAUGASo.pdf", "locator": "p. 1" }
+      ]
+    },
+    {
+      "text": "The Jonynas windows reached Marijampolė, Lithuania, on March 25, 2013, intended for a future church there. The Broome Street church itself was demolished in April 2015. At a farewell gathering on April 26, parishioners lit 105 candles for the building's 105 years; the following year Draugas confirmed that it had been completely razed that April. A condominium tower now occupies the site, but the former parish community continues to maintain its memorial record and support other endangered churches.",
+      "sources": [
+        { "url": "https://draugas.org/key/2013_reg/2013-03-28-DRAUGAS.pdf", "locator": "p. 1" },
+        { "url": "https://draugas.org/key/2015_reg/2015-04-30-DRAUGAS.pdf", "locator": "pp. 1, 4" },
+        { "url": "https://draugas.org/key/2016_reg/2016-08-25-DRAUGAS.pdf", "locator": "p. 5" },
+        { "url": "http://ausrosvartunyc.blogspot.com/", "locator": "memorial blog, accessed 28 May 2026" }
+      ]
+    }
+  ],
+  "summary": "Our Lady of Vilnius Church at 568-570 Broome Street was demolished in April 2015 — Draugas reported the demolition under way with a farewell gathering on April 26, 2015 (105 candles for the building's 105 years), and stated in 2016 that the building was 'galutinai nugriautas 2015 m. balandį' — four years after the NY Court of Appeals ruled for the archdiocese. Contemporary reports describe a 2013 sale to Extell and a 2014 resale for $18.4 million, but the printed buyer names and component prices are not fully consistent. A residential tower permit followed in August 2014. Today the site holds 570 Broome, a 25-story, 54-unit condominium designed by Tahir Demircioglu (Builtd) for Agime Group, completed in 2019; the building's marketing makes no mention of the church. The parish tabernacle went to the Church of the Blessed Kateri Tekakwitha and sacramental records to St. Anthony of Padua on Sullivan Street. The parishioner-run memorial blog remains active as of May 2026, now advocating for other endangered churches such as St. Mary's in Yonkers.",
   "developments": [
     {
       "date": "2026-05-28",
@@ -53,12 +102,18 @@
   ],
   "sources": [
     { "title": "Our Lady of Vilnius Church", "publisher": "Wikipedia", "date": "n.d.", "url": "https://en.wikipedia.org/wiki/Our_Lady_of_Vilnius_Church" },
+    { "title": "Tuštėjanti Aušros Vartų bažnyčia — Draugas, 2007-05-03, p. 6", "publisher": "Draugas", "date": "2007-05-03", "url": "https://www.draugas.org/archive/2007_reg/2007-05-03-DRAUGAS-i13-16.pdf" },
+    { "title": "Appeal chain and petition record — Draugas, 2007-10-02, pp. 4-5", "publisher": "Draugas", "date": "2007-10-02", "url": "https://www.draugas.org/archive/2007_reg/2007-10-02-DRAUGAS-i13-16.pdf" },
+    { "title": "Civil and canonical appeal status — Draugas, 2008-09-23, p. 4", "publisher": "Draugas", "date": "2008-09-23", "url": "https://draugas.org/key/2008_reg/2008-09-23-DRAUGASo.pdf" },
+    { "title": "Final ruling in Blaudziunas v. Egan — Draugas, 2011-12-17, p. 1", "publisher": "Draugas", "date": "2011-12-17", "url": "https://draugas.org/key/2011_reg/2011-12-17-DRAUGASo.pdf" },
+    { "title": "V. K. Jonyno vitražai grįžo į Lietuvą — Draugas, 2013-03-28, p. 1", "publisher": "Draugas", "date": "2013-03-28", "url": "https://draugas.org/key/2013_reg/2013-03-28-DRAUGAS.pdf" },
+    { "title": "Vietoj lietuviškos bažnyčios — prabangūs butai? — Draugas, 2014-07-10, p. 5", "publisher": "Draugas", "date": "2014-07-10", "url": "https://draugas.org/key/2014_reg/2014-07-10-DRAUGAS.pdf" },
     { "title": "No last-minute miracle for O.L. Vilnius Church? Tower plan is filed", "publisher": "The Villager / amNewYork", "date": "2014-09-18", "url": "https://www.amny.com/news/no-last-minute-miracle-for-o-l-vilnius-church-tower-plan-is-filed/" },
     { "title": "Our Lady of Vilnius, NYC (memorial blog)", "publisher": "ausrosvartunyc.blogspot.com", "date": "2026-05-28", "url": "http://ausrosvartunyc.blogspot.com/" },
     { "title": "570 Broome Street: Condos for Sale", "publisher": "CityRealty", "date": "n.d.", "url": "https://www.cityrealty.com/nyc/soho/570-broome-street/74318" },
     { "title": "570 Broome official site", "publisher": "570broomenyc.com", "date": "n.d.", "url": "https://www.570broomenyc.com/" }
   ],
   "confidence": "verified",
-  "conflictsWithArchiveRecord": "The 2015-vs-2020 demolition conflict is RESOLVED: the June 2020 Draugas 'demolition in progress' item is a recycled near-verbatim reprint of the April 2015 farewell report (same 105 candles, same 'praėjusį sekmadienį' framing). Demolition = April 2015, per Draugas 2015-04-30 pp. 1, 4 and 2016-08-25 p. 5. Archive's 'sold for tens of millions' overstates the archdiocese's sale ($13M to Extell); the $18.4M flip was Extell's, not the church's.",
+  "conflictsWithArchiveRecord": "The 2015-vs-2020 demolition conflict is RESOLVED: the June 2020 Draugas 'demolition in progress' item is a recycled near-verbatim reprint of the April 2015 farewell report (same 105 candles, same 'praėjusį sekmadienį' framing). Demolition = April 2015, per Draugas 2015-04-30 pp. 1, 4 and 2016-08-25 p. 5. Sale figures remain source-qualified: $13M was a 2013 listing valuation, while later reports identify a 2013 Extell purchase and a 2014 $18.4M resale but differ on the buyer name and component prices.",
   "gaps": "Exact demolition day within April 2015 not pinned (demolition was under way by the April 26 farewell). Fate of statues and Tadas Sviderskis icon beyond tabernacle/records unknown — archdiocese said items were stored for reuse. Village Preservation and Tribeca Citizen retrospectives not located; City Lore page returned 403."
 }
