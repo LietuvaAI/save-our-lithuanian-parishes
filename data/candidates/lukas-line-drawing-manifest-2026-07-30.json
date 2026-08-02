@@ -253,10 +253,10 @@
     },
     {
       "canonicalSlug": "dievo-apvaizdos-southfield-mi",
-      "bookPage": 128,
-      "bookPhotoFile": "IMG_1702.jpeg",
-      "lineDrawing": "/images/parishes/southfield-divine-providence-line-drawing.png",
-      "drawingSource": "parish_supplied_line_drawing",
+      "lineDrawing": "/images/parishes/southfield-divine-providence-current-line-drawing.png",
+      "drawingSource": "vilija_supplied_current_photo",
+      "sourcePhotoFile": "326544554_3404360493214494_2142345705219463415_n.jpg",
+      "sourceSupplied": "2026-08-02",
       "rights": "permission_granted",
       "status": "published"
     }

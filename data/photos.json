@@ -636,12 +636,12 @@
       "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Transfiguration_Roman_Catholic_Church_20201114_154344.jpg"
     },
     "dievo-apvaizdos-southfield-mi-line-drawing": {
-      "src": "/images/parishes/southfield-divine-providence-line-drawing.png",
+      "src": "/images/parishes/southfield-divine-providence-current-line-drawing.png",
       "alt": "Line drawing of Divine Providence Lithuanian Catholic Church in Southfield.",
-      "attribution": "Image courtesy Divine Providence Parish archive.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a current exterior photograph supplied by Vilija Jurgutis.",
       "license": "Used with permission",
       "rights": "permission_granted",
-      "rightsNote": "Parish line drawing supplied by Vilija for publication on 2026-07-30 from the Divine Providence parish materials."
+      "rightsNote": "Source photograph supplied by Vilija for publication on 2026-08-02. The drawing depicts the present Divine Providence church in Southfield and replaces the earlier parish-bulletin illustration."
     },
     "divine-providence-detroit-schaefer-site-line-drawing": {
       "src": "/images/parishes/detroit-divine-providence-schaefer-line-drawing.png",
