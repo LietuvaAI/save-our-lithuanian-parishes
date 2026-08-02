@@ -49,7 +49,11 @@ type CurrentAlert = {
   entity: string;
   place: string;
   diocese: string;
-  parishLink: string;
+  parishLink?: string;
+  relatedProfileLink?: string;
+  relatedProfileLabel?: string;
+  status?: EndState;
+  caveat?: string;
   whatChanged: string;
   sources: { title: string; publisher: string; url: string }[];
 };
@@ -322,13 +326,15 @@ export default function Home() {
               </p>
               <div className="mt-3 divide-y divide-rule border-y border-rule">
                 {group.alerts.map((alert) => {
-                  const art = lineDrawingForLink(alert.parishLink);
+                  const art = alert.parishLink
+                    ? lineDrawingForLink(alert.parishLink)
+                    : null;
                   return (
                     <article
                       key={alert.id}
                       className={`py-3 ${art ? "grid grid-cols-[4.75rem_minmax(0,1fr)] gap-3" : ""}`}
                     >
-                      {art && (
+                      {art && alert.parishLink && (
                         <Link
                           href={alert.parishLink}
                           aria-label={`Open ${alert.entity} parish profile`}
@@ -346,19 +352,30 @@ export default function Home() {
                       )}
                       <div className="min-w-0">
                         <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                          <Link
-                            href={alert.parishLink}
-                            className="font-serif font-semibold underline decoration-rule underline-offset-2 hover:text-accent"
-                          >
-                            {alert.entity}
-                          </Link>
+                          {alert.parishLink ? (
+                            <Link
+                              href={alert.parishLink}
+                              className="font-serif font-semibold underline decoration-rule underline-offset-2 hover:text-accent"
+                            >
+                              {alert.entity}
+                            </Link>
+                          ) : (
+                            <h4 className="font-serif font-semibold">
+                              {alert.entity}
+                            </h4>
+                          )}
                           <span className="text-sm text-muted">
                             {alert.place}
                           </span>
                         </div>
                         <div className="mt-2 flex flex-wrap items-center gap-2">
                           <EndStatePill
-                            value={statusForLink(alert.parishLink)}
+                            value={
+                              alert.status ??
+                              (alert.parishLink
+                                ? statusForLink(alert.parishLink)
+                                : "unverified")
+                            }
                           />
                           <DiocesePill name={alert.diocese} />
                         </div>
@@ -368,14 +385,29 @@ export default function Home() {
                         <p className="mt-2 text-sm leading-relaxed text-muted">
                           {alert.whatChanged}
                         </p>
+                        {alert.caveat && (
+                          <p className="mt-2 text-sm leading-relaxed text-foreground">
+                            {alert.caveat}
+                          </p>
+                        )}
                         <p className="mt-2 text-xs leading-relaxed text-muted">
-                          <Link
-                            href={alert.parishLink}
-                            className="font-medium underline hover:text-foreground"
-                          >
-                            Parish profile
-                          </Link>
-                          {" · Sources: "}
+                          {(alert.parishLink || alert.relatedProfileLink) && (
+                            <>
+                              <Link
+                                href={
+                                  alert.parishLink ?? alert.relatedProfileLink!
+                                }
+                                className="font-medium underline hover:text-foreground"
+                              >
+                                {alert.parishLink
+                                  ? "Parish profile"
+                                  : alert.relatedProfileLabel ??
+                                    "Related parish record"}
+                              </Link>
+                              {" · "}
+                            </>
+                          )}
+                          {"Sources: "}
                           {alert.sources.map((source, index) => (
                             <span key={source.url}>
                               {index > 0 && " · "}

@@ -190,10 +190,14 @@ const contextClosedBySlug = new Map(
 // Build alert lookup: slug → {kind, whatChanged}
 type AlertKind = RecordSignal;
 const alertBySlug = new Map<string, { kind: AlertKind; whatChanged: string }>(
-  (alertsData.alerts as { parishLink: string; kind?: string; whatChanged: string }[]).map((a) => [
-    a.parishLink.replace(/^\/(parishes|registry)\//, ""),
-    { kind: (a.kind ?? "watch") as AlertKind, whatChanged: a.whatChanged },
-  ])
+  (alertsData.alerts as { parishLink?: string; kind?: string; whatChanged: string }[])
+    .filter((a): a is { parishLink: string; kind?: string; whatChanged: string } =>
+      Boolean(a.parishLink),
+    )
+    .map((a) => [
+      a.parishLink.replace(/^\/(parishes|registry)\//, ""),
+      { kind: (a.kind ?? "watch") as AlertKind, whatChanged: a.whatChanged },
+    ])
 );
 
 function buildPoints(): Point[] {

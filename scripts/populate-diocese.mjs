@@ -241,6 +241,7 @@ const alerts = JSON.parse(readFileSync(join(DATA, "alerts.json"), "utf-8"));
 // Priority 1: alerts.json (standardized diocese names)
 const alertDiocese = new Map();
 for (const a of alerts.alerts ?? []) {
+  if (!a.parishLink) continue;
   const slug = a.parishLink.replace(/^\/(parishes|registry)\//, "");
   if (a.diocese) alertDiocese.set(slug, a.diocese);
 }
