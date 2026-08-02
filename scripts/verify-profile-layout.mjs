@@ -54,6 +54,9 @@ const infographic = JSON.parse(
     "utf8",
   ),
 );
+const photos = JSON.parse(
+  fs.readFileSync(path.join(ROOT, "data", "photos.json"), "utf8"),
+);
 const comparatorCount = JSON.parse(
   fs.readFileSync(path.join(ROOT, "data", "parishes.json"), "utf8"),
 ).filter((parish) => parish.comparator && !parish.mergedInto).length;
@@ -147,6 +150,11 @@ const requiredFragments = [
     "canonical institutional founding date",
   ],
   [
+    pageSource,
+    "institutionDates?.foundedUnresolved",
+    "unresolved founding excluded from narrative dates",
+  ],
+  [
     profileViewSource,
     'label: input.institutionEnded ? "Former church" : "Current church"',
     "closed-institution former-church treatment",
@@ -195,6 +203,11 @@ const requiredFragments = [
     "entity-id profile resolution",
   ],
   [graphSource, "CONDITION_PRECEDENCE", "worship-site outcome precedence"],
+  [graphSource, "row.closed.display", "qualified ending-date display"],
+  [graphSource, "end date unresolved", "unresolved ending-date treatment"],
+  [pageSource, "data-profile-image-state", "profile image-state contract"],
+  [pageSource, "Image file held", "pending-permission image wording"],
+  [pageSource, "Image not yet gathered", "ungathered image wording"],
   [
     contextMapSource,
     'className="min-w-0 max-w-full overflow-hidden"',
@@ -212,6 +225,10 @@ for (const forbidden of [
   "What we could not yet establish",
   "The trail of events",
   "The verified record",
+  "Projected for U.S. institutions only",
+  "conflict_preserved",
+  "Adjudicated situation record",
+  "canonical record",
 ]) {
   if (pageSource.includes(forbidden)) {
     errors.push(`internal or superseded profile language is public: ${forbidden}`);
@@ -334,6 +351,29 @@ if (
   errors.push("Detroit St. Anthony merge relationship drifted");
 }
 
+const ascensionPittsburgh = institutionByProfile.get(
+  "/parishes/ascension-pittsburgh-pa",
+);
+const ascensionSites = infographic.building_site_history.filter((site) =>
+  site.related_public_institution_ids.includes(
+    ascensionPittsburgh?.culturenet_entity_id,
+  ),
+);
+const ascensionEdges = infographic.continuity_edges.filter(
+  (edge) =>
+    edge.source.entity_id === ascensionPittsburgh?.culturenet_entity_id ||
+    edge.target.entity_id === ascensionPittsburgh?.culturenet_entity_id,
+);
+if (
+  ascensionPittsburgh?.founded?.year !== 1906 ||
+  ascensionPittsburgh?.founded?.authority !== "site_r10_baseline" ||
+  ascensionPittsburgh?.closed?.year !== 1962 ||
+  ascensionSites.length !== 0 ||
+  ascensionEdges.length !== 0
+) {
+  errors.push("Pittsburgh Ascension thin-record case drifted");
+}
+
 const stPeterDetroit = institutionByProfile.get(
   "/parishes/sv-petro-detroit-mi",
 );
@@ -373,6 +413,26 @@ if (profileOutputSources.includes("Transferred, date disputed")) {
   errors.push("stale St. George transfer-date treatment returned");
 }
 
+const newark = institutionByProfile.get(
+  "/parishes/lietuviu-baznycia-unnamed-newark-nj",
+);
+const newarkEdge = infographic.continuity_edges.find(
+  (edge) => edge.id === "rel:identity-1:newark-merged",
+);
+const newarkSites = infographic.building_site_history.filter((site) =>
+  site.related_public_institution_ids.includes(newark?.culturenet_entity_id),
+);
+if (
+  newark?.founded?.year !== 1902 ||
+  newark?.closed?.display !== "2002 selected" ||
+  newarkEdge?.adjudication_state !== "conflict_preserved" ||
+  newarkEdge?.date?.start !== "2002 selected" ||
+  institutionByEntityId.has(newarkEdge?.target?.entity_id) ||
+  newarkSites.filter((site) => site.site_class === "worship_site").length !== 2
+) {
+  errors.push("Newark selected-date conflict case drifted");
+}
+
 const lemontMission = institutionByProfile.get(
   "/parishes/pal-jurgio-matulaicio-misija-lemont-il",
 );
@@ -383,6 +443,14 @@ if (
 ) {
   errors.push("mission vocabulary or Roman Catholic parish count drifted");
 }
+if (
+  photos.parishes["pal-jurgio-matulaicio-misija-lemont-il"]?.rights !==
+    "permission_granted" ||
+  photos.parishes["pal-jurgio-matulaicio-misija-lemont-il-line-drawing"]
+    ?.rights !== "permission_granted"
+) {
+  errors.push("Lemont must render its cleared line-art portrait");
+}
 
 const frackville = institutionByProfile.get(
   "/parishes/sv-m-marijos-apsireiskimo-frackville-pa",
@@ -392,12 +460,39 @@ const frackvilleContinuation = infographic.continuity_edges.find(
 );
 if (
   frackville?.founded?.year !== 1914 ||
+  frackville?.closed?.year !== null ||
+  frackville?.status_group !== "transferred" ||
   !frackvilleContinuation ||
   institutionByEntityId.has(frackvilleContinuation.target?.entity_id)
 ) {
   errors.push(
     "Frackville must retain its canonical 1914 founding and unlinked continuation endpoint",
   );
+}
+const frackvilleSiteClasses = infographic.building_site_history
+  .filter((site) =>
+    site.related_public_institution_ids.includes(
+      frackville?.culturenet_entity_id,
+    ),
+  )
+  .map((site) => site.site_class)
+  .sort();
+if (
+  JSON.stringify(frackvilleSiteClasses) !==
+  JSON.stringify([
+    "cemetery",
+    "parish_ancillary_site",
+    "parish_ancillary_site",
+    "worship_site",
+  ])
+) {
+  errors.push("Frackville four-site class inventory drifted");
+}
+if (
+  photos.parishes["sv-m-marijos-apsireiskimo-frackville-pa"]?.rights !==
+  "pending_permission"
+) {
+  errors.push("Frackville pending-permission image state drifted");
 }
 
 if (

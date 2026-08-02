@@ -31,18 +31,47 @@ export type ParishPhoto = {
   rightsNote?: string;
 };
 
+export type ParishPortraitState =
+  | { state: "cleared"; photo: ParishPhoto }
+  | { state: "pending_permission"; photo: null }
+  | { state: "not_gathered"; photo: null };
+
+function photoEntry(slug: string): ParishPhoto | null {
+  return (
+    (photosData.parishes as Record<string, ParishPhoto | undefined>)[slug] ??
+    null
+  );
+}
+
 /** Photo for a slug (canonical or registry), only if its rights are cleared. */
 export function getClearedPhoto(slug: string): ParishPhoto | null {
-  const entry = (
-    photosData.parishes as Record<string, ParishPhoto | undefined>
-  )[slug];
+  const entry = photoEntry(slug);
   if (!entry || !CLEARED_RIGHTS.has(entry.rights)) return null;
-  return entry as ParishPhoto;
+  return entry;
 }
 
 /** Prefer the site's line-art portrait when cleared, then fall back to the photo. */
 export function getClearedParishPortrait(slug: string): ParishPhoto | null {
   return getClearedPhoto(`${slug}-line-drawing`) ?? getClearedPhoto(slug);
+}
+
+/**
+ * Publication state for the reserved profile-image slot. Pending files never
+ * leave the rights gate, but they remain distinguishable from images that have
+ * not yet been gathered.
+ */
+export function getParishPortraitState(
+  slugs: string | string[],
+): ParishPortraitState {
+  const candidates = [...new Set(Array.isArray(slugs) ? slugs : [slugs])]
+    .flatMap((slug) => [photoEntry(`${slug}-line-drawing`), photoEntry(slug)])
+    .filter((entry): entry is ParishPhoto => entry !== null);
+  const cleared = candidates.find((entry) => CLEARED_RIGHTS.has(entry.rights));
+  if (cleared) return { state: "cleared", photo: cleared };
+  if (candidates.some((entry) => entry.rights === "pending_permission")) {
+    return { state: "pending_permission", photo: null };
+  }
+  return { state: "not_gathered", photo: null };
 }
 
 /** Same gate for photo objects carried on alerts.json entries. */

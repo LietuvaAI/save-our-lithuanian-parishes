@@ -332,19 +332,39 @@ export function getInstitutionDates(profileHref: string) {
           : `${comparator.founded_year}\u2013present`,
     };
   }
+  const foundedDisplay =
+    row.founded.display?.trim() ||
+    (row.founded.year === null ? null : String(row.founded.year));
+  const closedDisplay =
+    row.closed.display?.trim() ||
+    (row.closed.year === null ? null : String(row.closed.year));
   const unresolved =
-    row.founded.authority === "unresolved" || row.founded.year === null;
+    row.founded.authority === "unresolved" ||
+    row.founded.year === null ||
+    /(?:founding|canonical start|year) unresolved|year not given/i.test(
+      foundedDisplay ?? "",
+    );
+  const institutionEnded = ["closed", "transferred"].includes(
+    row.status_group,
+  );
+  const existed = unresolved
+    ? "Founding year unresolved"
+    : closedDisplay
+      ? `${foundedDisplay}\u2013${closedDisplay}`
+      : institutionEnded
+        ? `${foundedDisplay}\u2013end date unresolved`
+        : row.status_group === "unresolved"
+          ? `${foundedDisplay}\u2013outcome unresolved`
+          : row.status_group === "unverified"
+            ? `${foundedDisplay}\u2013present status unresolved`
+            : `${foundedDisplay}\u2013present`;
   return {
     entityId: row.culturenet_entity_id,
     foundedYear: row.founded.year,
-    foundedDisplay: row.founded.display,
+    foundedDisplay,
     foundedUnresolved: unresolved,
     closedYear: row.closed.year,
-    closedDisplay: row.closed.display,
-    existed: unresolved
-      ? "Founding year unresolved"
-      : row.closed.year
-        ? `${row.founded.year}\u2013${row.closed.year}`
-        : `${row.founded.year}\u2013present`,
+    closedDisplay,
+    existed,
   };
 }
