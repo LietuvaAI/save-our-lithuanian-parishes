@@ -45,7 +45,7 @@ import {
   getSituationByRegistrySlug,
   type BuildingFate,
 } from "@/lib/parishes";
-import { clearedOrNull, getClearedParishPortrait } from "@/lib/photos";
+import { clearedOrNull, getParishPortraitState } from "@/lib/photos";
 import {
   profileStory,
   campaignProfileDek,
@@ -250,7 +250,7 @@ export async function generateMetadata({
     .join(", ");
   return {
     title: `${name} \u2014 ${location}`,
-    description: `Canonical research profile for ${name}, ${location}: status, history, current evidence, conflicts, and complete source links.`,
+    description: `${name} in ${location}: history, present condition, related places, and public source links.`,
   };
 }
 
@@ -288,6 +288,9 @@ export default async function ParishPage({
   const closedYear = institutionDates
     ? institutionDates.closedYear
     : (scoped.closed ?? core?.yearClosed ?? null);
+  const establishedYear = institutionDates?.foundedUnresolved
+    ? null
+    : foundedYear;
 
   const situation = core
     ? getParishSituation(profile.slug)
@@ -353,11 +356,11 @@ export default async function ParishPage({
         : "Documented"
       : null;
 
-  const photosEntry =
-    getClearedParishPortrait(profile.slug) ??
-    (profile.registrySlug !== profile.slug
-      ? getClearedParishPortrait(profile.registrySlug)
-      : null);
+  const portraitState = getParishPortraitState([
+    profile.slug,
+    profile.registrySlug,
+  ]);
+  const photosEntry = portraitState.photo;
   const watchPhoto = clearedOrNull(watchEntry?.photo);
   const parishPhoto = photosEntry
     ? photosEntry
@@ -372,6 +375,7 @@ export default async function ParishPage({
         }
       : null;
   const isLineDrawing = parishPhoto?.src.endsWith("-line-drawing.png") ?? false;
+  const imageState = parishPhoto ? "cleared" : portraitState.state;
 
   const caseSources = caseRecord
     ? [
@@ -406,7 +410,7 @@ export default async function ParishPage({
   const situationSources = situation?.sources
     ? linkedProfileSources(situation.sources, {
         group: "current",
-        context: "Adjudicated situation record",
+        context: "Current parish situation",
         fallbackTitle: "Situation-record source",
       })
     : [];
@@ -456,7 +460,7 @@ export default async function ParishPage({
     : profileStory({
         situationText: situation?.situation ?? null,
         endState,
-        founded: foundedYear,
+        founded: establishedYear,
         closed: closedYear,
         community,
         name,
@@ -494,7 +498,7 @@ export default async function ParishPage({
       : END_STATE_LABEL[endState];
   const statusLabel =
     !researchOnly && endState === "closed" && closedYear
-      ? `${baseStatusLabel} ${closedYear}`
+      ? `${baseStatusLabel} ${institutionDates?.closedDisplay ?? closedYear}`
       : baseStatusLabel;
 
   const imageCaption = [
@@ -511,7 +515,7 @@ export default async function ParishPage({
     state: entry.state ?? null,
     country: entry.country,
     institution,
-    founded: foundedYear,
+    founded: establishedYear,
     closed: closedYear,
     status: statusLabel,
     ownership: researchOnly ? "Not established" : ownershipLabel(profile),
@@ -557,6 +561,7 @@ export default async function ParishPage({
     <article
       className="mx-auto max-w-[1060px] px-4 py-10"
       data-profile-layout="canonical-v2"
+      data-profile-image-state={imageState}
       data-record-depth={profile.recordDepth}
     >
       <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
@@ -611,13 +616,15 @@ export default async function ParishPage({
                   {entry.state ? `, ${entry.state}` : ""}
                 </p>
                 <p className="mt-5 font-mono text-[10.5px] text-muted">
-                  {foundedYear ? `Established ${foundedYear}` : statusLabel}
+                  {establishedYear
+                    ? `Established ${establishedYear}`
+                    : statusLabel}
                 </p>
               </div>
               <figcaption className="mt-1.5 font-mono text-[10.5px] leading-normal text-muted">
-                {recordType === "misija"
-                  ? "Mission identity record"
-                  : "Parish identity record"}
+                {portraitState.state === "pending_permission"
+                  ? "Image file held \u00b7 permission pending"
+                  : "Image not yet gathered"}
               </figcaption>
             </figure>
           )}
@@ -644,7 +651,7 @@ export default async function ParishPage({
               <span className="text-muted">Founding year unresolved</span>
             ) : recordType !== "misija" && institutionDates?.foundedYear ? (
               <span className="text-muted">
-                Founded {institutionDates.foundedYear}
+                Founded {institutionDates.foundedDisplay}
               </span>
             ) : null}
             {entry.diocese && <span className="text-muted">{entry.diocese}</span>}
@@ -743,9 +750,9 @@ export default async function ParishPage({
             Scope
           </p>
           <p className="max-w-[38em] bg-band px-5 py-4 text-sm leading-relaxed text-foreground">
-            Projected for U.S. institutions only. This comparator is retained for
-            historical comparison, outside the U.S. institution and building
-            projection.
+            This Canadian parish is included for comparison with Lithuanian
+            parish life in the United States. It remains outside the U.S.
+            national totals and map.
           </p>
         </div>
       )}
@@ -815,8 +822,8 @@ export default async function ParishPage({
 
           {institutionDates?.foundedUnresolved && (
             <p className="mt-4 text-[13.5px] leading-relaxed text-muted">
-              The founding year is not established in the canonical record and is
-              left unresolved rather than estimated.
+              The sources do not yet establish a founding year, so no year is
+              estimated here.
             </p>
           )}
         </div>
