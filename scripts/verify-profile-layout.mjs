@@ -64,11 +64,16 @@ const comparatorCount = JSON.parse(
 const errors = [];
 
 // Canonical profile order, v2. Identity carries status, facts, and the full
-// About/history narrative; chronology, buildings, relationships, present
-// condition, evidence, and corrections follow. docs/design-system-profile.md §5.
+// About/history narrative and present condition orient the reader first.
+// Compact chronology, buildings, relationships, evidence, and corrections follow.
 const orderedMarkers = [
   { id: "profile-identity", marker: 'id="profile-identity"', source: pageSource },
   { id: "profile-history", marker: "<ParishPublishedRecord", source: pageSource },
+  {
+    id: "present-condition",
+    marker: 'id="present-condition"',
+    source: pageSource,
+  },
   {
     id: "parish-chronology",
     marker: "<ParishProfileChronology",
@@ -78,11 +83,6 @@ const orderedMarkers = [
   {
     id: "related-records",
     marker: "<ProfileRelatedRecords",
-    source: pageSource,
-  },
-  {
-    id: "present-condition",
-    marker: 'id="present-condition"',
     source: pageSource,
   },
   { id: "evidence-sources", marker: "<ProfileSourceLedger", source: pageSource },
@@ -118,6 +118,8 @@ const requiredFragments = [
   [pageSource, "items={profileView.chronology}", "normalized chronology"],
   [historySource, 'id="profile-history"', "history section id"],
   [chronologySource, 'id="parish-chronology"', "chronology section id"],
+  [chronologySource, "<details", "expandable chronology events"],
+  [chronologySource, "href={source.url}", "linked chronology evidence"],
   [worshipSitesSource, 'id="worship-sites"', "worship sites section id"],
   [
     worshipSitesSource,
@@ -188,6 +190,11 @@ const requiredFragments = [
     "mission worship-place vocabulary",
   ],
   [profileViewSource, 'label: "Active"', "mission active vocabulary"],
+  [
+    profileViewSource,
+    '"Parish institution"',
+    "merged-institution lifecycle vocabulary",
+  ],
   [
     graphSource,
     'return "Repurposed, standing"',

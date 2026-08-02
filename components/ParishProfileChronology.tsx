@@ -27,37 +27,62 @@ export function ParishProfileChronology({
           No secure sequence of dated events is established for this record.
         </p>
       ) : (
-        <ol className="max-w-[40em]">
+        <ol className="max-w-[40em] divide-y divide-rule border-b border-rule">
           {items.map((item) => (
             <li
               key={`${item.date}-${item.title}`}
-              className="grid gap-x-[22px] pb-[18px] md:grid-cols-[104px_minmax(0,1fr)]"
+              className="min-w-0"
             >
-              <span
-                className={`pt-0.5 font-mono text-[11px] font-medium tabular-nums tracking-wider [white-space:nowrap] ${
-                  item.loss ? "text-accent" : "text-muted"
-                }`}
-              >
-                {item.date}
-              </span>
-              <div>
-                {item.kind === "building" && (
-                  <span className="mb-1.5 block font-mono text-[9.5px] font-medium uppercase tracking-[0.14em] text-muted">
-                    Worship site
+              <details className="group">
+                <summary className="grid cursor-pointer list-none grid-cols-[88px_minmax(0,1fr)_18px] gap-x-3 py-3.5 marker:content-none md:grid-cols-[104px_minmax(0,1fr)_18px] md:gap-x-[22px] [&::-webkit-details-marker]:hidden">
+                  <span
+                    className={`pt-0.5 font-mono text-[11px] font-medium tabular-nums tracking-wider [white-space:nowrap] ${
+                      item.loss ? "text-accent" : "text-muted"
+                    }`}
+                  >
+                    {item.date}
                   </span>
-                )}
-                <p className="text-sm font-semibold leading-snug">{item.title}</p>
-                {item.detail && (
-                  <p className="mt-1 text-[13.5px] leading-relaxed text-muted">
-                    {item.detail}
-                  </p>
-                )}
-                {item.sources.length > 0 && (
-                  <p className="mt-1 font-mono text-[10.5px] leading-normal text-muted">
-                    {item.sources.join(" \u00b7 ")}
-                  </p>
-                )}
-              </div>
+                  <span className="min-w-0">
+                    {item.kind === "building" && (
+                      <span className="mb-1 block font-mono text-[9.5px] font-medium uppercase tracking-[0.14em] text-muted">
+                        Worship site
+                      </span>
+                    )}
+                    <span className="block text-sm font-semibold leading-snug">
+                      {item.title}
+                    </span>
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="text-right text-base leading-none text-muted transition-transform group-open:rotate-45"
+                  >
+                    +
+                  </span>
+                </summary>
+                <div className="pb-4 pl-0 md:pl-[126px]">
+                  {item.detail && (
+                    <p className="text-[13.5px] leading-relaxed text-muted">
+                      {item.detail}
+                    </p>
+                  )}
+                  {item.sources.length > 0 && (
+                    <ul className="mt-2 flex flex-col gap-1.5">
+                      {item.sources.map((source) => (
+                        <li key={source.url}>
+                          <a
+                            href={source.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[12.5px] underline decoration-1 underline-offset-2 hover:text-accent"
+                          >
+                            {source.label} &rarr;
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </details>
             </li>
           ))}
         </ol>

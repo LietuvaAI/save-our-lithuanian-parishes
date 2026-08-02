@@ -787,12 +787,6 @@ export default async function ParishPage({
         </div>
       )}
 
-      <ParishProfileChronology items={profileView.chronology} />
-
-      <ProfileWorshipSites sites={renderedWorshipSites} />
-
-      <ProfileRelatedRecords records={renderedRelatedRecords} />
-
       <ProfileSection
         id="present-condition"
         label={researchOnly ? "Research status" : "Where it stands today"}
@@ -838,6 +832,12 @@ export default async function ParishPage({
           )}
         </div>
       </ProfileSection>
+
+      <ParishProfileChronology items={profileView.chronology} />
+
+      <ProfileWorshipSites sites={renderedWorshipSites} />
+
+      <ProfileRelatedRecords records={renderedRelatedRecords} />
 
       <ParishRecordReadings profile={profile} />
 

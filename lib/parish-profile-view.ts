@@ -4,7 +4,7 @@ export interface ProfileDevelopment {
   date: string;
   headline: string;
   detail: string;
-  sources: { publisher: string; title: string }[];
+  sources: { publisher: string; title: string; url: string }[];
 }
 
 export interface ProfileTimelineEvent {
@@ -25,7 +25,7 @@ export interface ParishProfileChronologyItem {
   date: string;
   title: string;
   detail: string;
-  sources: string[];
+  sources: { label: string; url: string }[];
   sortYear: number;
   /**
    * Building events carry a visible tag so no reader mistakes a dedication or
@@ -98,6 +98,29 @@ function location(input: ParishProfileViewInput) {
 
 function terminalPunctuation(value: string) {
   return /[.!?]$/.test(value) ? value : `${value}.`;
+}
+
+const SHORT_MONTH = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+function readableLifecycleRange(value: string) {
+  return value.replace(
+    /\b(\d{4})-(\d{2})-(\d{2})\b/g,
+    (_match, year: string, month: string, day: string) =>
+      `${Number(day)} ${SHORT_MONTH[Number(month) - 1]} ${year}`,
+  );
 }
 
 function withIndefiniteArticle(value: string) {
@@ -176,11 +199,15 @@ function chronology(input: ParishProfileViewInput) {
       title: development.headline,
       detail: development.detail,
       sources: [
-        ...new Set(
-          development.sources.map(
-            (source) => source.publisher || source.title,
-          ),
-        ),
+        ...new Map(
+          development.sources.map((source) => [
+            source.url,
+            {
+              label: source.title || source.publisher || "Read source",
+              url: source.url,
+            },
+          ]),
+        ).values(),
       ],
       sortYear: Number.isFinite(year) ? year : 9999,
     });
@@ -246,17 +273,26 @@ function facts(input: ParishProfileViewInput): ParishProfileFact[] {
     ];
   }
 
+  const existed = readableLifecycleRange(
+    input.existed ??
+      (input.founded
+        ? input.closed
+          ? `${input.founded}\u2013${input.closed}`
+          : `${input.founded}\u2013present`
+        : "Founding year unresolved"),
+  );
+
   return [
     { label: "Institution", value: input.institution },
     {
-      label: "Existed",
+      label:
+        input.endState === "mass_continues"
+          ? "Parish institution"
+          : "Existed",
       value:
-        input.existed ??
-        (input.founded
-          ? input.closed
-            ? `${input.founded}\u2013${input.closed}`
-            : `${input.founded}\u2013present`
-          : "Founding year unresolved"),
+        input.endState === "mass_continues"
+          ? `${existed} \u00b7 merged`
+          : existed,
     },
     {
       label:
