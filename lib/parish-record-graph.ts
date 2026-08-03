@@ -121,8 +121,12 @@ function siteDemolishedYear(site: BuildingSiteHistoryRow): number | null {
 function siteOutcome(site: BuildingSiteHistoryRow): string {
   const demolishedYear = siteDemolishedYear(site);
   if (demolishedYear) return `Demolished ${demolishedYear}`;
+  const currentConditions = site.condition_relationships.filter((entry) => {
+    if (entry.relationship_type === "building-demolished") return true;
+    return entry.date?.end == null;
+  });
   const conditionTypes = new Set(
-    site.condition_relationships.map((entry) => entry.relationship_type),
+    currentConditions.map((entry) => entry.relationship_type),
   );
   if (
     conditionTypes.has("building-repurposed") &&
@@ -136,7 +140,7 @@ function siteOutcome(site: BuildingSiteHistoryRow): string {
   ) {
     return "Listed for sale, standing";
   }
-  const condition = [...site.condition_relationships].sort(
+  const condition = [...currentConditions].sort(
     (a, b) =>
       (CONDITION_PRECEDENCE[b.relationship_type] ?? 0) -
         (CONDITION_PRECEDENCE[a.relationship_type] ?? 0) ||

@@ -31,7 +31,7 @@ export type InstitutionHistoryRow = {
   founded: InfographicDateFact;
   closed: InfographicDateFact;
   building_fate: string | null;
-  building_fate_authority: "terminal_site_condition" | "site_r10_baseline" | "unresolved";
+  building_fate_authority: "terminal_site_condition" | "unresolved";
   terminal_worship_site_ids: string[];
   building_fate_relationship_ids: string[];
   legacy_building_fate?: string;
@@ -79,6 +79,13 @@ export type BuildingSiteHistoryRow = {
     confidence?: string | null;
   }>;
   related_public_institution_ids: string[];
+  related_public_profiles: string[];
+  public_profile_link_status:
+    | "direct_institution_use"
+    | "institution_lineage"
+    | "site_lineage"
+    | "institution_and_site_lineage"
+    | "context_only_no_public_profile";
   counted_in_public_institution_total: false;
 };
 
@@ -112,6 +119,13 @@ type InfographicProjection = {
   generated: string;
   content_hash: string;
   authority: Record<string, unknown>;
+  condition_resolution_contract: {
+    current_relationship_rule: string;
+    precedence: string[];
+    legal_pairs: string[][];
+    institution_summary_rule: string;
+    legacy_rule: string;
+  };
   counts: {
     public_us_institutions: number;
     roman_catholic_parish_institutions: number;

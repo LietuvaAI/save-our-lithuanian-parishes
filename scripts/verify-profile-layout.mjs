@@ -620,9 +620,10 @@ if (
     "parish_ancillary_site",
     "parish_ancillary_site",
     "worship_site",
+    "worship_site",
   ])
 ) {
-  errors.push("Frackville four-site class inventory drifted");
+  errors.push("Frackville five-site class inventory drifted");
 }
 if (
   photos.parishes["sv-m-marijos-apsireiskimo-frackville-pa"]?.rights !==

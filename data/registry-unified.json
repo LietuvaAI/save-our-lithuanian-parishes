@@ -23662,7 +23662,7 @@
     }
   ],
   "registryRevision": {
-    "version": 19,
+    "version": 20,
     "date": "2026-08-03",
     "changelog": [
       "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
@@ -23705,15 +23705,16 @@
       "Registry Revision 16: clarified Saint Michael the Archangel Parish in Scranton as one surviving parish across its former Jackson Street church and current Saint Lucy home, and distinguished its current Latin Mass from undocumented Lithuanian worship; public counts are unchanged.",
       "Registry Revision 17: established Saint Michael the Archangel Parish in Scranton in 1914, promoted its original wooden church as a distinct worship site, and enriched its school, language, and two-church history from the 1977 published parish account; the public institution count remains unchanged.",
       "Registry Revision 18: admitted Our Lady of Siluva Mission in Mundelein as a distinct active Roman Catholic mission and reconciled Brooklyn Annunciation, Maspeth Transfiguration, and Hartford Holy Trinity to the current canonical status projection.",
-      "Registry Revision 19: projected explicit standing conditions for the current Lithuanian Catholic worship network, linked the missing Beverly Shores site and Chicago Immaculate Conception lineage, and made terminal-site evidence authoritative for unambiguous institution building summaries."
+      "Registry Revision 19: projected explicit standing conditions for the current Lithuanian Catholic worship network, linked the missing Beverly Shores site and Chicago Immaculate Conception lineage, and made terminal-site evidence authoritative for unambiguous institution building summaries.",
+      "Registry Revision 20: corrected worship-building classification, promoted nine evidence-backed site conditions, rejected semantically unresolved founding dates, and limited institution building summaries to terminal-site authority."
     ],
-    "contentHash": "21fce7ef1f029dfab72d1d93ae379c0217f08511baa5ce688fa24baa6a9c5c60"
+    "contentHash": "001ffed4172f73d3dcc2513a85b15a4d16ded1a02b1deec177aa5fe9652c3938"
   },
   "publicationAuthority": {
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
-    "revisionId": "canonical-public-census-2026-08-03-living-worship-sites",
-    "contentHash": "sha256:0939f80de42cf16d6451a4d6d1510b6fc5b4c1eab84081a12dc024ab99a4264f",
+    "revisionId": "canonical-public-census-2026-08-03-building-condition-coverage",
+    "contentHash": "sha256:27debd93bc909cc92fcec4990c8ebba0ca154dddcc6dc96c8217c0eab675ed06",
     "publicUSInstitutions": 155,
     "synchronized": "2026-08-03"
   }

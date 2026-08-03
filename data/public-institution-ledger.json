@@ -3,10 +3,10 @@
   "authority": {
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
-    "revisionId": "canonical-public-census-2026-08-03-living-worship-sites",
-    "contentHash": "sha256:0939f80de42cf16d6451a4d6d1510b6fc5b4c1eab84081a12dc024ab99a4264f"
+    "revisionId": "canonical-public-census-2026-08-03-building-condition-coverage",
+    "contentHash": "sha256:27debd93bc909cc92fcec4990c8ebba0ca154dddcc6dc96c8217c0eab675ed06"
   },
-  "registryRevision": 19,
+  "registryRevision": 20,
   "registryDate": "2026-08-03",
   "claim": "The current documented record contains 155 distinct U.S. Lithuanian religious institutions.",
   "inclusionRule": "Count one canonical U.S. institution when CultureNet publishes it as a parish, mission, or congregation. Buildings, duplicate aliases, historical attempts, hosted worship, research leads, and comparators remain linked context and never increase this total.",
@@ -9919,12 +9919,14 @@
       "canonicalDetailStatus": "closed",
       "protectedCampaign": false,
       "assertionIds": [
+        "assert:lineage-1:butenas-shenandoah-1872-1891-distinction",
         "assert:lineage-1:shenandoah-closed-2006",
         "assert:lineage-1:shenandoah-closure-dispute-2008",
         "assert:lineage-1:shenandoah-st-george-1891",
         "assert:lineage-1:shenandoah-used-south-jardin-site"
       ],
       "sourceArtifactIds": [
+        "src:lineage-1:butenas-pensylvanijos-angliakasiu-lietuva:1977:pp15-20",
         "src:lineage-1:draugas-shenandoah-demolition:2009-10-27:p6",
         "src:lineage-1:draugas-shenandoah-jubilee:1941-11-03:p2",
         "src:lineage-1:draugas-shenandoah-threat:2008-03-27:p4"
@@ -9974,6 +9976,12 @@
         }
       ],
       "canonicalSources": [
+        {
+          "sourceArtifactId": "src:lineage-1:butenas-pensylvanijos-angliakasiu-lietuva:1977:pp15-20",
+          "label": "Vladas Būtėnas, Pensylvanijos angliakasių Lietuva — Shenandoah Saint Casimir and Saint George",
+          "locator": "Vladas Būtėnas, Pensylvanijos angliakasių Lietuva, Pirmoji Amerikos lietuvių sostinė—Shenandoah",
+          "url": null
+        },
         {
           "sourceArtifactId": "src:lineage-1:draugas-shenandoah-demolition:2009-10-27:p6",
           "label": "Draugas Saint George demolition report",

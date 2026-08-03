@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 
 function fateKey(buildingFate: string | null): FateKey {
   if (buildingFate === "demolished") return "demolished";
+  if (buildingFate === "repurposed") return "repurposed";
   if (buildingFate === "repurposed_religious") return "religious";
   if (buildingFate === "repurposed_secular") return "secular";
   if (buildingFate === "derelict") return "derelict";
@@ -40,7 +41,11 @@ function buildThreads(): ThreadParish[] {
     endState: institution.status_group,
     fateKey:
       institution.status_group === "closed"
-        ? fateKey(institution.building_fate)
+        ? fateKey(
+            institution.building_fate_authority === "terminal_site_condition"
+              ? institution.building_fate
+              : null,
+          )
         : null,
     href: institution.public_profile,
   }));

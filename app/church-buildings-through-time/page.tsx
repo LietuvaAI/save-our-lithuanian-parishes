@@ -16,9 +16,18 @@ export const metadata: Metadata = {
 };
 
 function stateForSite(
-  conditionTypes: Set<string>,
+  conditionRelationships: (typeof physicalWorshipSiteHistory)[number]["condition_relationships"],
   demolishedYear: number | null,
 ): PhysicalSiteState {
+  const conditionTypes = new Set(
+    conditionRelationships
+      .filter((condition) => {
+        if (condition.relationship_type === "building-demolished") return true;
+        const end = condition.date?.end;
+        return end == null;
+      })
+      .map((condition) => condition.relationship_type),
+  );
   if (demolishedYear || conditionTypes.has("building-demolished")) {
     return "demolished";
   }
@@ -30,18 +39,17 @@ function stateForSite(
 
 function buildSites(): PhysicalSiteTimelineRow[] {
   return physicalWorshipSiteHistory.map((site) => {
-    const conditionTypes = new Set(
-      site.condition_relationships.map((condition) => condition.relationship_type),
-    );
-    const profiles = site.institution_use_periods
+    const directProfiles = site.institution_use_periods
       .map((period) => period.institution_profile)
       .filter((profile): profile is string => profile != null);
+    const profiles =
+      directProfiles.length > 0 ? directProfiles : site.related_public_profiles;
     return {
       slug: site.slug,
       name: site.name,
       firstYear: site.first_documented_year,
       endYear: site.demolished_year,
-      state: stateForSite(conditionTypes, site.demolished_year),
+      state: stateForSite(site.condition_relationships, site.demolished_year),
       profileHref: profiles.at(-1) ?? null,
     };
   });

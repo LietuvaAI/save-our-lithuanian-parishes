@@ -19,10 +19,10 @@ const projection = read("canonical-publication-projection.json");
 const infographic = read("canonical-infographic-projection.json");
 const adjudications = read("canonical-public-census-adjudications.json");
 
-const TARGET_REVISION = 19;
+const TARGET_REVISION = 20;
 const TARGET_DATE = "2026-08-03";
 const CHANGELOG =
-  "Registry Revision 19: projected explicit standing conditions for the current Lithuanian Catholic worship network, linked the missing Beverly Shores site and Chicago Immaculate Conception lineage, and made terminal-site evidence authoritative for unambiguous institution building summaries.";
+  "Registry Revision 20: corrected worship-building classification, promoted nine evidence-backed site conditions, rejected semantically unresolved founding dates, and limited institution building summaries to terminal-site authority.";
 
 if (projection.schema !== "culturenet-parish-publication-projection.v1") {
   throw new Error(`Unsupported publication projection schema: ${projection.schema}`);
@@ -206,12 +206,12 @@ const revisionEntry = {
   publicUSRecords: publicRecords.length,
   usRomanCatholicParishes: romanCatholicParishes,
   summary:
-    "Projected 15 explicitly standing current worship sites across 14 living Roman Catholic institution lines, including the newly modeled St. Ann of the Dunes site in Beverly Shores.",
+    "Corrected physical-site coverage and founding-date semantics without changing the 155-institution public census.",
   evidence: [
     "data/canonical-publication-projection.json",
     "data/canonical-infographic-projection.json",
     "data/canonical-public-census-adjudications.json",
-    "data/candidates/registry-revision-19-living-worship-sites-2026-08-03.md",
+    "data/candidates/registry-revision-20-building-condition-coverage-2026-08-03.md",
   ],
 };
 const priorRevision = revisions.revisions.find(
@@ -249,14 +249,14 @@ const currentWorshipSiteIds = new Set(
   ),
 );
 
-const report = `# Registry Revision 19: living worship-site conditions
+const report = `# Registry Revision 20: building-condition coverage and timeline dates
 
 **Date:** ${TARGET_DATE}
 **Authority:** CultureNet parish publication projection
 **Public U.S. institutions:** ${publicRecords.length}
 **Count-risk rows:** 0
 
-This revision projects site-level condition evidence for the current Lithuanian Catholic pastoral network without changing institution identity or status counts.
+This revision corrects physical-site classification, promotes evidence-backed conditions, and prevents non-founding dates from anchoring the institution timeline without changing institution identity or status counts.
 
 - ${catholicWorshipContinues.length} Roman Catholic institution lines retain Lithuanian worship.
 - Those lines use ${currentWorshipSiteIds.size} current worship sites; Saint Andrew, Philadelphia also uses the retained Saint Casimir church.
@@ -264,9 +264,15 @@ This revision projects site-level condition evidence for the current Lithuanian 
 - St. Ann of the Dunes, Beverly Shores now has its own canonical Golfwood Road worship-site entity.
 - Chicago Immaculate Conception is linked to its existing 44th Street church through the 2019 merger.
 - Rochester Saint George summarizes from the standing Our Lady of Lourdes host church while preserving the former Hudson Avenue church as a separate repurposed site.
+- The Darien Lutheran host church now carries the same explicit standing evidence required for living Catholic worship sites.
+- Four post-demolition lots or replacement structures are classified as redevelopment context rather than worship buildings.
+- Saint George Detroit, Saint Mary Kingston, Saint Mary National Philadelphia, and Sacred Heart Luzerne now carry explicit demolition relationships.
+- Freeland's 1880 settlement date and Manhattan's explicitly unresolved 1905 reading no longer anchor institution lines.
+- Saint George Shenandoah remains a distinct 1891 institution; its 1872 Lithuanian-Polish predecessor remains separate historical context.
+- Institution building fate is published only from a terminal-site condition. Site Revision 10 fate remains compatibility context and is never rendering authority.
 
 The canonical Roman Catholic population is ${catholicInstitutions.length}: ${romanCatholicParishes} parishes plus ${catholicMissions.length} missions. Of these, ${closedCatholicInstitutions.length} are closed and ${catholicWorshipContinues.length} retain Lithuanian worship.
-The physical worship-site history now contains ${infographic.counts.physical_worship_sites} sites; the increase from 133 to 134 is the newly modeled Beverly Shores church, not a new institution.
+The physical worship-site history now contains ${infographic.counts.physical_worship_sites} sites. The four-record decrease from 134 reflects corrected classification of post-demolition lots and replacement structures, not deleted evidence.
 
 ## Census reconciliation
 
@@ -287,7 +293,7 @@ write("registry-unified.json", registry);
 write("registry-revisions.json", revisions);
 writeFileSync(
   new URL(
-    "../data/candidates/registry-revision-19-living-worship-sites-2026-08-03.md",
+    "../data/candidates/registry-revision-20-building-condition-coverage-2026-08-03.md",
     import.meta.url,
   ),
   report,

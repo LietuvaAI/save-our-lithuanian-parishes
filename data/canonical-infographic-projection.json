@@ -2,8 +2,8 @@
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
-    "publication_projection_hash": "sha256:0939f80de42cf16d6451a4d6d1510b6fc5b4c1eab84081a12dc024ab99a4264f",
-    "publication_projection_revision": "canonical-public-census-2026-08-03-living-worship-sites",
+    "publication_projection_hash": "sha256:27debd93bc909cc92fcec4990c8ebba0ca154dddcc6dc96c8217c0eab675ed06",
+    "publication_projection_revision": "canonical-public-census-2026-08-03-building-condition-coverage",
     "repository": "LietuvaAI/culturenet-brain"
   },
   "building_site_history": [
@@ -23,12 +23,30 @@
       },
       "milestones": [],
       "name": "109 Gold Street apartments, Brooklyn",
-      "related_public_institution_ids": [],
+      "public_profile_link_status": "site_lineage",
+      "related_public_institution_ids": [
+        "cn:institution:st-george-brooklyn-ny"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jurgio-brooklyn-ny"
+      ],
       "site_class": "redeveloped_site",
       "slug": "109-gold-street-brooklyn-ny"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "reviewed current-condition case file",
+            "end": null,
+            "label": "standing as a current secondary church",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:coverage-17:frackville-annunciation-church",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:annunciation-bvm-church-frackville-pa",
       "demolished_year": null,
@@ -65,8 +83,12 @@
       },
       "milestones": [],
       "name": "Annunciation BVM church, Frackville",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:annunciation-bvm-frackville-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-m-marijos-apsireiskimo-frackville-pa"
       ],
       "site_class": "worship_site",
       "slug": "annunciation-bvm-church-frackville-pa"
@@ -108,14 +130,30 @@
       },
       "milestones": [],
       "name": "Annunciation BVM Cemetery, Frackville",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:annunciation-bvm-frackville-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-m-marijos-apsireiskimo-frackville-pa"
       ],
       "site_class": "cemetery",
       "slug": "annunciation-cemetery-frackville-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "reviewed current-condition case file",
+            "end": null,
+            "label": "standing in documented current chapel use",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:coverage-17:frackville-chapel",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:annunciation-chapel-youth-center-frackville-pa",
       "demolished_year": null,
@@ -141,7 +179,13 @@
       },
       "milestones": [],
       "name": "Saint Joseph the Worker chapel and youth center, Frackville",
-      "related_public_institution_ids": [],
+      "public_profile_link_status": "institution_lineage",
+      "related_public_institution_ids": [
+        "cn:institution:annunciation-bvm-frackville-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-m-marijos-apsireiskimo-frackville-pa"
+      ],
       "site_class": "worship_site",
       "slug": "annunciation-chapel-youth-center-frackville-pa"
     },
@@ -173,8 +217,12 @@
       },
       "milestones": [],
       "name": "Annunciation BVM parish hall, Frackville",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:annunciation-bvm-frackville-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-m-marijos-apsireiskimo-frackville-pa"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "annunciation-parish-hall-frackville-pa"
@@ -216,8 +264,12 @@
       },
       "milestones": [],
       "name": "Former Annunciation BVM rectory, Frackville",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:annunciation-bvm-frackville-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-m-marijos-apsireiskimo-frackville-pa"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "annunciation-rectory-frackville-pa"
@@ -269,8 +321,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Annunciation church site, Williamsburg",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:annunciation-bvm-williamsburg-ny"
+      ],
+      "related_public_profiles": [
+        "/parishes/svc-m-marijos-apreiskimo-brooklyn-ny"
       ],
       "site_class": "worship_site",
       "slug": "annunciation-williamsburg-north-fifth-street"
@@ -345,8 +401,14 @@
         }
       ],
       "name": "Former Divine Providence church site on Schaefer Road, Detroit",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
-        "cn:institution:divine-providence-southfield-mi"
+        "cn:institution:divine-providence-southfield-mi",
+        "cn:institution:st-anthony-detroit-mi"
+      ],
+      "related_public_profiles": [
+        "/parishes/dievo-apvaizdos-southfield-mi",
+        "/parishes/sv-antano-detroit-mi"
       ],
       "site_class": "worship_site",
       "slug": "divine-providence-detroit-schaefer-site"
@@ -387,8 +449,14 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Divine Providence Southfield church and cultural center site",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
-        "cn:institution:divine-providence-southfield-mi"
+        "cn:institution:divine-providence-southfield-mi",
+        "cn:institution:st-anthony-detroit-mi"
+      ],
+      "related_public_profiles": [
+        "/parishes/dievo-apvaizdos-southfield-mi",
+        "/parishes/sv-antano-detroit-mi"
       ],
       "site_class": "worship_site",
       "slug": "divine-providence-southfield-site"
@@ -417,8 +485,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "East Seventh Street Lithuanian chapel site",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-joseph-st-casimir-boston-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/casimir-boston-ma"
       ],
       "site_class": "worship_site",
       "slug": "east-seventh-street-chapel-boston-ma"
@@ -439,7 +511,13 @@
       },
       "milestones": [],
       "name": "The Enclaves townhouse at former Saint Mary site, Philadelphia",
-      "related_public_institution_ids": [],
+      "public_profile_link_status": "site_lineage",
+      "related_public_institution_ids": [
+        "cn:institution:st-mary-lithuanian-national-philadelphia-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-marijos-tautine-kataliku-parapija-philadelphia-pa"
+      ],
       "site_class": "redeveloped_site",
       "slug": "enclaves-townhouse-331-reed-philadelphia-pa"
     },
@@ -472,8 +550,12 @@
       },
       "milestones": [],
       "name": "Former Saint Casimir church at Wooster Square",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-new-haven-ct"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-new-haven-ct"
       ],
       "site_class": "worship_site",
       "slug": "former-st-casimir-greene-street-new-haven-ct"
@@ -532,8 +614,12 @@
       },
       "milestones": [],
       "name": "Holy Cross church, 46th Street, Chicago",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:holy-cross-lithuanian-chicago-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kryziaus-chicago-il"
       ],
       "site_class": "worship_site",
       "slug": "holy-cross-46th-street-chicago-il"
@@ -565,8 +651,12 @@
       },
       "milestones": [],
       "name": "Holy Cross Cemetery, Hudson",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-nashua-nh"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-nashua-nh"
       ],
       "site_class": "cemetery",
       "slug": "holy-cross-cemetery-hudson-nh"
@@ -613,8 +703,12 @@
       },
       "milestones": [],
       "name": "Holy Cross church site, Dayton",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:holy-cross-dayton-oh"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kryziaus-dayton-oh"
       ],
       "site_class": "worship_site",
       "slug": "holy-cross-leo-street-dayton-oh"
@@ -660,8 +754,12 @@
       },
       "milestones": [],
       "name": "Former Holy Cross National Catholic church, Westville",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:holy-cross-national-catholic-westville-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/lncc-congregation-westville-il"
       ],
       "site_class": "worship_site",
       "slug": "holy-cross-main-street-westville-il"
@@ -693,8 +791,12 @@
       },
       "milestones": [],
       "name": "Holy Cross Lithuanian School, Mount Carmel",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:holy-cross-mount-carmel-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kryziaus-mount-carmel-pa"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "holy-cross-school-mount-carmel-pa"
@@ -726,8 +828,12 @@
       },
       "milestones": [],
       "name": "Holy Cross church, Mount Carmel",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:holy-cross-mount-carmel-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kryziaus-mount-carmel-pa"
       ],
       "site_class": "worship_site",
       "slug": "holy-cross-sixth-poplar-mount-carmel-pa"
@@ -755,8 +861,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Holy Trinity Hartford 1903 converted worship building",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:holy-trinity-hartford-ct"
+      ],
+      "related_public_profiles": [
+        "/parishes/svc-trejybes-hartford-ct"
       ],
       "site_class": "worship_site",
       "slug": "holy-trinity-hartford-1903-building"
@@ -796,8 +906,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Holy Trinity Lithuanian church, 53 Capitol Avenue, Hartford",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:holy-trinity-hartford-ct"
+      ],
+      "related_public_profiles": [
+        "/parishes/svc-trejybes-hartford-ct"
       ],
       "site_class": "worship_site",
       "slug": "holy-trinity-hartford-capitol-avenue-church"
@@ -843,8 +957,12 @@
       },
       "milestones": [],
       "name": "Former Holy Trinity church, Newark",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:holy-trinity-lithuanian-newark-nj"
+      ],
+      "related_public_profiles": [
+        "/parishes/lietuviu-baznycia-unnamed-newark-nj"
       ],
       "site_class": "worship_site",
       "slug": "holy-trinity-original-church-adams-newark-nj"
@@ -890,8 +1008,12 @@
       },
       "milestones": [],
       "name": "Holy Trinity-Epiphany parish-hall church, Newark",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:holy-trinity-lithuanian-newark-nj"
+      ],
+      "related_public_profiles": [
+        "/parishes/lietuviu-baznycia-unnamed-newark-nj"
       ],
       "site_class": "worship_site",
       "slug": "holy-trinity-parish-hall-adams-newark-nj"
@@ -937,8 +1059,12 @@
       },
       "milestones": [],
       "name": "Former Holy Trinity church site, Wilkes-Barre",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:holy-trinity-wilkes-barre-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/svc-trejybes-wilkes-barre-pa"
       ],
       "site_class": "worship_site",
       "slug": "holy-trinity-south-street-wilkes-barre-pa"
@@ -996,8 +1122,12 @@
       },
       "milestones": [],
       "name": "Immaculate Conception church site, Brighton Park",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:immaculate-conception-brighton-park-chicago-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/svc-m-marijos-nekalto-prasidejimo-chicago-il"
       ],
       "site_class": "worship_site",
       "slug": "immaculate-conception-44th-street-chicago-il"
@@ -1043,8 +1173,12 @@
       },
       "milestones": [],
       "name": "Immaculate Conception chapel building, East St. Louis",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:immaculate-conception-east-st-louis-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/nekaltojo-prasidejimo-east-st-louis-il"
       ],
       "site_class": "worship_site",
       "slug": "immaculate-conception-baugh-avenue-east-st-louis-il"
@@ -1090,8 +1224,12 @@
       },
       "milestones": [],
       "name": "Former Immaculate Conception church, Cambridge",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:immaculate-conception-cambridge-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-petro-cambridge-ma"
       ],
       "site_class": "worship_site",
       "slug": "immaculate-conception-church-windsor-street-cambridge-ma"
@@ -1137,8 +1275,12 @@
       },
       "milestones": [],
       "name": "Former Immaculate Conception rectory, Cambridge",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:immaculate-conception-cambridge-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-petro-cambridge-ma"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "immaculate-conception-rectory-windsor-street-cambridge-ma"
@@ -1172,8 +1314,12 @@
       },
       "milestones": [],
       "name": "Jerusalem Lutheran church building, Collinsville",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:jerusalem-lutheran-collinsville-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/lithuanian-lutheran-church-collinsville-il"
       ],
       "site_class": "worship_site",
       "slug": "jerusalem-lutheran-collinsville-il"
@@ -1202,8 +1348,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Lietuva Colony chapel near Hazen",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:lietuva-colony-mission-grand-prairie-ar"
+      ],
+      "related_public_profiles": [
+        "/parishes/parish-grand-prairie-ar"
       ],
       "site_class": "worship_site",
       "slug": "lietuva-colony-chapel-grand-prairie-ar"
@@ -1235,8 +1385,12 @@
       },
       "milestones": [],
       "name": "Lithuanian National Catholic Cemetery, Methuen",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:sacred-heart-jesus-national-catholic-lawrence-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/saldziausios-jezaus-sirdies-lawrence-ma"
       ],
       "site_class": "cemetery",
       "slug": "lithuanian-national-catholic-cemetery-methuen-ma"
@@ -1264,8 +1418,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Lithuanian Evangelical Reformed church site, 1942 N. Spaulding",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:lithuanian-evangelical-reformed-chicago-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/evangelical-reformed-chicago"
       ],
       "site_class": "worship_site",
       "slug": "lithuanian-reformed-1942-spaulding-chicago-il"
@@ -1305,8 +1463,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Lithuanian World Center mission church site",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:blessed-jurgis-matulaitis-mission-lemont-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/pal-jurgio-matulaicio-misija-lemont-il"
       ],
       "site_class": "worship_site",
       "slug": "lithuanian-world-center-mission-church-lemont-il"
@@ -1346,8 +1508,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Nativity of the Blessed Virgin Mary church site, Chicago",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:nativity-bvm-chicago-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/svc-mergeles-marijos-gimimo-chicago-il"
       ],
       "site_class": "worship_site",
       "slug": "nativity-bvm-washtenaw-chicago-il"
@@ -1394,8 +1560,12 @@
       },
       "milestones": [],
       "name": "Our Lady of Lourdes host church site, Rochester",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-lithuanian-rochester-ny"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jurgio-rochester-ny"
       ],
       "site_class": "worship_site",
       "slug": "our-lady-of-lourdes-varinna-drive-rochester-ny"
@@ -1430,8 +1600,12 @@
       },
       "milestones": [],
       "name": "Our Lady of Sorrows church, Kearny",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:our-lady-of-sorrows-kearny-harrison-nj"
+      ],
+      "related_public_profiles": [
+        "/parishes/lietuviu-baznycia-kearny-kearny-nj"
       ],
       "site_class": "worship_site",
       "slug": "our-lady-of-sorrows-davis-avenue-kearny-nj"
@@ -1466,8 +1640,12 @@
       },
       "milestones": [],
       "name": "Former Our Lady of Sorrows half-basement church, Harrison",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:our-lady-of-sorrows-kearny-harrison-nj"
+      ],
+      "related_public_profiles": [
+        "/parishes/lietuviu-baznycia-kearny-kearny-nj"
       ],
       "site_class": "worship_site",
       "slug": "our-lady-of-sorrows-harrison-nj"
@@ -1501,8 +1679,12 @@
       },
       "milestones": [],
       "name": "Former Our Lady of Vilna church-school site, Chicago",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:our-lady-of-vilna-pilsen-chicago-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/ausros-vartu-chicago-il"
       ],
       "site_class": "worship_site",
       "slug": "our-lady-of-vilna-23rd-place-chicago-il"
@@ -1536,8 +1718,12 @@
       },
       "milestones": [],
       "name": "Our Lady of Vilna church, Worcester",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:our-lady-of-vilna-worcester-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/ausros-vartu-worcester-ma"
       ],
       "site_class": "worship_site",
       "slug": "our-lady-of-vilna-sterling-street-worcester-ma"
@@ -1583,8 +1769,12 @@
       },
       "milestones": [],
       "name": "Our Lady of Vilnius church building, Manhattan",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:our-lady-of-vilnius-manhattan-ny"
+      ],
+      "related_public_profiles": [
+        "/parishes/ausros-vartu-manhattan-ny"
       ],
       "site_class": "worship_site",
       "slug": "our-lady-of-vilnius-broome-street-ny"
@@ -1638,9 +1828,16 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Our Lady of Perpetual Help / St. Casimir Neff Road church site",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:our-lady-perpetual-help-cleveland-oh",
-        "cn:institution:st-casimir-cleveland-lithuanian-oh"
+        "cn:institution:st-casimir-cleveland-lithuanian-oh",
+        "cn:institution:st-george-cleveland-oh"
+      ],
+      "related_public_profiles": [
+        "/parishes/dievo-motinos-nuolatines-pagalbos-cleveland-oh",
+        "/parishes/sv-kazimiero-cleveland-oh",
+        "/parishes/sv-jurgio-cleveland-oh"
       ],
       "site_class": "worship_site",
       "slug": "our-lady-perpetual-help-cleveland-neff-site"
@@ -1668,8 +1865,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Our Lady of Siluva church at 35th and Union, Chicago",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:our-lady-siluva-national-chicago-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/mary-chicago-il"
       ],
       "site_class": "worship_site",
       "slug": "our-lady-siluva-35th-union-chicago-il"
@@ -1702,8 +1903,12 @@
       },
       "milestones": [],
       "name": "Our Lady of Siluva church, Maizeville",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:our-lady-siluva-maizeville-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/siluvos-dievo-motinos-maizeville-pa"
       ],
       "site_class": "worship_site",
       "slug": "our-lady-siluva-main-street-maizeville-pa"
@@ -1745,8 +1950,12 @@
       },
       "milestones": [],
       "name": "Our Lady of Vilna Cemetery, Eynon",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:our-lady-vilna-eynon-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/nekaltojo-prasidejimo-ausros-vartu-archbald-pa"
       ],
       "site_class": "cemetery",
       "slug": "our-lady-vilna-cemetery-eynon-pa"
@@ -1778,8 +1987,14 @@
       },
       "milestones": [],
       "name": "Cleared Our Lady of Vilna church lot, Eynon",
-      "related_public_institution_ids": [],
-      "site_class": "worship_site",
+      "public_profile_link_status": "institution_and_site_lineage",
+      "related_public_institution_ids": [
+        "cn:institution:our-lady-vilna-eynon-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/nekaltojo-prasidejimo-ausros-vartu-archbald-pa"
+      ],
+      "site_class": "redeveloped_site",
       "slug": "our-lady-vilna-cleared-lot-eynon-pa"
     },
     {
@@ -1821,8 +2036,12 @@
       },
       "milestones": [],
       "name": "First Our Lady of Vilna church, Eynon",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:our-lady-vilna-eynon-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/nekaltojo-prasidejimo-ausros-vartu-archbald-pa"
       ],
       "site_class": "worship_site",
       "slug": "our-lady-vilna-first-church-eynon-pa"
@@ -1866,8 +2085,12 @@
       },
       "milestones": [],
       "name": "Our Lady of Vilna church, Eynon",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:our-lady-vilna-eynon-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/nekaltojo-prasidejimo-ausros-vartu-archbald-pa"
       ],
       "site_class": "worship_site",
       "slug": "our-lady-vilna-third-street-eynon-pa"
@@ -1913,8 +2136,12 @@
       },
       "milestones": [],
       "name": "Providence of God church campus, Pilsen",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:providence-of-god-pilsen-chicago-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/dievo-apvaizdos-chicago-il"
       ],
       "site_class": "worship_site",
       "slug": "providence-of-god-18th-street-chicago-il"
@@ -1946,14 +2173,28 @@
       },
       "milestones": [],
       "name": "Providence of God church, Scranton",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:providence-of-god-scranton-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/dievo-apvaizdos-scranton-pa"
       ],
       "site_class": "worship_site",
       "slug": "providence-of-god-sumner-scranton-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "reviewed case file; exact dates unresolved",
+            "label": "sold and demolished after the 1999 consolidation"
+          },
+          "relationship_id": "rel:coverage-17:luzerne-sacred-heart",
+          "relationship_type": "building-demolished"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:sacred-heart-church-luzerne-pa",
       "demolished_year": null,
@@ -1978,7 +2219,9 @@
       },
       "milestones": [],
       "name": "Sacred Heart of Jesus church, Luzerne",
+      "public_profile_link_status": "context_only_no_public_profile",
       "related_public_institution_ids": [],
+      "related_public_profiles": [],
       "site_class": "worship_site",
       "slug": "sacred-heart-church-luzerne-pa"
     },
@@ -2030,8 +2273,12 @@
       },
       "milestones": [],
       "name": "Former Sacred Heart of Jesus National Catholic church, Lawrence",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:sacred-heart-jesus-national-catholic-lawrence-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/saldziausios-jezaus-sirdies-lawrence-ma"
       ],
       "site_class": "worship_site",
       "slug": "sacred-heart-garden-street-lawrence-ma"
@@ -2059,8 +2306,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Salem Evangelical and Reformed Church host site, Chicago",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:lithuanian-evangelical-reformed-chicago-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/evangelical-reformed-chicago"
       ],
       "site_class": "worship_site",
       "slug": "salem-6824-emerald-chicago-il"
@@ -2088,8 +2339,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Sandara Hall, South Boston",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:lithuanian-lutheran-congregation-boston-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/first-lutheran-boston"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "sandara-hall-south-boston-ma"
@@ -2130,8 +2385,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Santa Maria del Popolo Church, Mundelein",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:our-lady-of-siluva-mission-mundelein-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/our-lady-of-siluva-mission-mundelein-il"
       ],
       "site_class": "worship_site",
       "slug": "santa-maria-del-popolo-mundelein-il"
@@ -2163,8 +2422,12 @@
       },
       "milestones": [],
       "name": "Saints Peter and Paul Cemetery, Grand Rapids",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:ss-peter-paul-grand-rapids-mi"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-petro-ir-povilo-grand-rapids-mi"
       ],
       "site_class": "cemetery",
       "slug": "ss-peter-paul-cemetery-grand-rapids-mi"
@@ -2196,8 +2459,12 @@
       },
       "milestones": [],
       "name": "Former Saints Peter and Paul convent, Grand Rapids",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:ss-peter-paul-grand-rapids-mi"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-petro-ir-povilo-grand-rapids-mi"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "ss-peter-paul-convent-grand-rapids-mi"
@@ -2225,8 +2492,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Ss. Peter and Paul first church, Homestead",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:ss-peter-and-paul-homestead-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/ss-peter-and-paul-homestead-pa"
       ],
       "site_class": "worship_site",
       "slug": "ss-peter-paul-first-church-homestead-pa"
@@ -2254,8 +2525,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Ss. Peter and Paul second church, Homestead",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:ss-peter-and-paul-homestead-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/ss-peter-and-paul-homestead-pa"
       ],
       "site_class": "worship_site",
       "slug": "ss-peter-paul-mifflin-church-homestead-pa"
@@ -2287,8 +2562,12 @@
       },
       "milestones": [],
       "name": "Saints Peter and Paul church, Grand Rapids",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:ss-peter-paul-grand-rapids-mi"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-petro-ir-povilo-grand-rapids-mi"
       ],
       "site_class": "worship_site",
       "slug": "ss-peter-paul-myrtle-street-grand-rapids-mi"
@@ -2331,8 +2610,12 @@
       },
       "milestones": [],
       "name": "Saints Peter and Paul church, Elizabeth",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:ss-peter-paul-elizabeth-nj"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-petro-ir-povilo-elizabeth-nj"
       ],
       "site_class": "worship_site",
       "slug": "ss-peter-paul-ripley-place-elizabeth-nj"
@@ -2364,8 +2647,12 @@
       },
       "milestones": [],
       "name": "Saints Peter and Paul school facility, Grand Rapids",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:ss-peter-paul-grand-rapids-mi"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-petro-ir-povilo-grand-rapids-mi"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "ss-peter-paul-school-grand-rapids-mi"
@@ -2399,8 +2686,12 @@
       },
       "milestones": [],
       "name": "National Shrine of Saint Alphonsus Liguori, Baltimore",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-alphonsus-baltimore-md"
+      ],
+      "related_public_profiles": [
+        "/parishes/unnamed-lithuanian-parish-baltimore-md"
       ],
       "site_class": "worship_site",
       "slug": "st-alphonsus-saratoga-baltimore-md"
@@ -2435,8 +2726,12 @@
       },
       "milestones": [],
       "name": "Former Saint Andrew church site, New Britain",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-andrew-new-britain-ct"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-andriejaus-new-britain-ct"
       ],
       "site_class": "worship_site",
       "slug": "st-andrew-church-street-new-britain-ct"
@@ -2479,8 +2774,14 @@
       },
       "milestones": [],
       "name": "Saint Andrew church, Philadelphia",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
-        "cn:institution:st-andrew-lithuanian-philadelphia-pa"
+        "cn:institution:st-andrew-lithuanian-philadelphia-pa",
+        "cn:institution:st-casimir-lithuanian-philadelphia-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-andriejaus-philadelphia-pa",
+        "/parishes/sv-kazimiero-philadelphia-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-andrew-nineteenth-wallace-philadelphia-pa"
@@ -2511,14 +2812,32 @@
       },
       "milestones": [],
       "name": "Former Saint Andrew rectory, Philadelphia",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
-        "cn:institution:st-andrew-lithuanian-philadelphia-pa"
+        "cn:institution:st-andrew-lithuanian-philadelphia-pa",
+        "cn:institution:st-casimir-lithuanian-philadelphia-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-andriejaus-philadelphia-pa",
+        "/parishes/sv-kazimiero-philadelphia-pa"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "st-andrew-rectory-wallace-philadelphia-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "reviewed current-condition case file",
+            "end": null,
+            "label": "standing in active successor-parish worship use",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:coverage-17:luzerne-st-ann",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-ann-bennett-street-luzerne-pa",
       "demolished_year": null,
@@ -2555,8 +2874,12 @@
       },
       "milestones": [],
       "name": "Former Saint Ann church, Luzerne",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-ann-luzerne-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-onos-luzerne-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-ann-bennett-street-luzerne-pa"
@@ -2603,8 +2926,12 @@
       },
       "milestones": [],
       "name": "Saint Ann of the Dunes church site, Beverly Shores",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-ann-beverly-shores-in"
+      ],
+      "related_public_profiles": [
+        "/parishes/st-ann-beverly-shores-in"
       ],
       "site_class": "worship_site",
       "slug": "st-ann-of-the-dunes-golfwood-beverly-shores-in"
@@ -2662,8 +2989,12 @@
       },
       "milestones": [],
       "name": "Former Saint Anne church, Spring Valley",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-anne-spring-valley-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-onos-spring-valley-il"
       ],
       "site_class": "worship_site",
       "slug": "st-anne-fourth-street-spring-valley-il"
@@ -2709,8 +3040,12 @@
       },
       "milestones": [],
       "name": "Saint Anthony church site, Cicero",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-anthony-cicero-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-antano-cicero-il"
       ],
       "site_class": "worship_site",
       "slug": "st-anthony-49th-court-cicero-il"
@@ -2738,8 +3073,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "St. Anthony church building, Kewanee",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-anthony-kewanee-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/st-anthony-kewanee-il"
       ],
       "site_class": "worship_site",
       "slug": "st-anthony-church-kewanee-il"
@@ -2805,8 +3144,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Former St. Anthony Lithuanian church site, Detroit",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-anthony-detroit-mi"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-antano-detroit-mi"
       ],
       "site_class": "worship_site",
       "slug": "st-anthony-detroit-25th-street-site"
@@ -2839,8 +3182,12 @@
       },
       "milestones": [],
       "name": "First Saint Anthony church, Omaha",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-anthony-omaha-ne"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-antano-omaha-ne"
       ],
       "site_class": "worship_site",
       "slug": "st-anthony-first-church-omaha-ne"
@@ -2868,8 +3215,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "St. Anthony first church property, Philadelphia",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-anthony-lithuanian-philadelphia-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/anthony-philadelphia-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-anthony-first-church-philadelphia-pa"
@@ -2909,8 +3260,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "St. Anthony church on Millers Run Road, Bridgeville",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-anthony-bridgeville-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/st-anthony-bridgeville-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-anthony-millers-run-bridgeville-pa"
@@ -2956,8 +3311,12 @@
       },
       "milestones": [],
       "name": "Former Saint Anthony church site, Ansonia",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-anthony-ansonia-ct"
+      ],
+      "related_public_profiles": [
+        "/parishes/lietuviu-baznycia-unnamed-ansonia-ct"
       ],
       "site_class": "worship_site",
       "slug": "st-anthony-north-main-ansonia-ct"
@@ -2990,8 +3349,12 @@
       },
       "milestones": [],
       "name": "Former Saint Anthony school, Omaha",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-anthony-omaha-ne"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-antano-omaha-ne"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "st-anthony-school-omaha-ne"
@@ -3024,8 +3387,12 @@
       },
       "milestones": [],
       "name": "Former Saint Anthony church, Omaha",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-anthony-omaha-ne"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-antano-omaha-ne"
       ],
       "site_class": "worship_site",
       "slug": "st-anthony-thirty-second-street-omaha-ne"
@@ -3059,8 +3426,12 @@
       },
       "milestones": [],
       "name": "Former Saint Casimir church-school, Chicago Heights",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-chicago-heights-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-chicago-il"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-14th-street-chicago-heights-il"
@@ -3118,8 +3489,12 @@
       },
       "milestones": [],
       "name": "Former Saint Casimir church, Brockton",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-brockton-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-brockton-ma"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-ames-street-brockton-ma"
@@ -3165,8 +3540,12 @@
       },
       "milestones": [],
       "name": "Former Saint Casimir church site, Kansas City, Kansas",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-kansas-city-ks"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-kansas-city-mo"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-broadview-ridge-kansas-city-ks"
@@ -3219,8 +3598,12 @@
       },
       "milestones": [],
       "name": "Former Saint Casimir church, Amsterdam",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-amsterdam-ny"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-amsterdam-ny"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-east-main-street-amsterdam-ny"
@@ -3278,8 +3661,12 @@
       },
       "milestones": [],
       "name": "Former Saint Casimir main church, Gary",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-gary-in"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-gary-in"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-fifteenth-avenue-gary-in"
@@ -3322,8 +3709,12 @@
       },
       "milestones": [],
       "name": "First Saint Casimir church, Paterson",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-paterson-nj"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-paterson-nj"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-first-church-paterson-nj"
@@ -3351,8 +3742,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "St. Casimir first church and rectory, Plymouth",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-plymouth-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/st-casimir-plymouth-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-first-church-plymouth-pa"
@@ -3405,9 +3800,14 @@
       },
       "milestones": [],
       "name": "Saint Casimir church, Philadelphia",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-andrew-lithuanian-philadelphia-pa",
         "cn:institution:st-casimir-lithuanian-philadelphia-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-andriejaus-philadelphia-pa",
+        "/parishes/sv-kazimiero-philadelphia-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-fourth-wharton-philadelphia-pa"
@@ -3454,8 +3854,12 @@
       },
       "milestones": [],
       "name": "Former Saint Casimir church site, Sioux City",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-sioux-city-ia"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-sioux-city-ia"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-leech-avenue-sioux-city-ia"
@@ -3486,8 +3890,12 @@
       },
       "milestones": [],
       "name": "Saint Casimir Lithuanian sun-cross memorial, Providence",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-providence-ri"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-providence-ri"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "st-casimir-lithuanian-monument-providence-ri"
@@ -3527,8 +3935,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Saint Casimir church site, Los Angeles",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-los-angeles-ca"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-los-angeles-ca"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-los-angeles-st-george-street"
@@ -3556,8 +3968,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "St. Casimir church, Lynwood, Hanover Township",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-plymouth-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/st-casimir-plymouth-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-lynwood-church-hanover-township-pa"
@@ -3610,8 +4026,12 @@
       },
       "milestones": [],
       "name": "Former Saint Casimir church, Paterson",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-paterson-nj"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-paterson-nj"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-montgomery-street-paterson-nj"
@@ -3639,8 +4059,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Former St. Casimir church, 38 Parkside Avenue, Westfield",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-westfield-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/st-casimir-westfield-ma"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-parkside-westfield-ma"
@@ -3674,8 +4098,12 @@
       },
       "milestones": [],
       "name": "Former Saint Casimir church, Pittston",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-pittston-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-pittston-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-pittston-pa"
@@ -3733,8 +4161,12 @@
       },
       "milestones": [],
       "name": "Former Saint Casimir church, Worcester",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-worcester-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-worcester-ma"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-providence-street-worcester-ma"
@@ -3766,8 +4198,12 @@
       },
       "milestones": [],
       "name": "Former Saint Casimir rectory, Philadelphia",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-lithuanian-philadelphia-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-philadelphia-pa"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "st-casimir-rectory-wharton-philadelphia-pa"
@@ -3813,8 +4249,12 @@
       },
       "milestones": [],
       "name": "Former Saint Casimir church, Pittsburgh",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-pittsburgh-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-pittsburgh-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-sarah-street-pittsburgh-pa"
@@ -3848,8 +4288,12 @@
       },
       "milestones": [],
       "name": "Former Saint Casimir school and first church, Gary",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-gary-in"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-gary-in"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-school-first-church-gary-in"
@@ -3880,8 +4324,12 @@
       },
       "milestones": [],
       "name": "Former Saint Casimir school, Philadelphia",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-lithuanian-philadelphia-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-philadelphia-pa"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "st-casimir-school-philadelphia-pa"
@@ -3927,8 +4375,12 @@
       },
       "milestones": [],
       "name": "Former Saint Casimir school, Pittsburgh",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-pittsburgh-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-pittsburgh-pa"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "st-casimir-school-pittsburgh-pa"
@@ -3974,8 +4426,12 @@
       },
       "milestones": [],
       "name": "Former Saint Casimir Lithuanian School, Worcester",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-worcester-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-worcester-ma"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "st-casimir-school-waverly-street-worcester-ma"
@@ -4003,8 +4459,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "St. Casimir second church, Plymouth",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-plymouth-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/st-casimir-plymouth-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-second-church-plymouth-pa"
@@ -4047,8 +4507,12 @@
       },
       "milestones": [],
       "name": "Former Saint Casimir church, Providence",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-providence-ri"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-providence-ri"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-smith-street-providence-ri"
@@ -4091,8 +4555,12 @@
       },
       "milestones": [],
       "name": "Former Saint Casimir church, Nashua",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-casimir-nashua-nh"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-kazimiero-nashua-nh"
       ],
       "site_class": "worship_site",
       "slug": "st-casimir-temple-street-nashua-nh"
@@ -4138,8 +4606,12 @@
       },
       "milestones": [],
       "name": "Former Saint Constantine church, Oglesby",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-constantine-oglesby-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-konstantino-oglesby-il"
       ],
       "site_class": "worship_site",
       "slug": "st-constantine-florence-street-oglesby-il"
@@ -4192,8 +4664,12 @@
       },
       "milestones": [],
       "name": "Former Saint Francis church, Lawrence",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-francis-lawrence-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-pranciskaus-lawrence-ma"
       ],
       "site_class": "worship_site",
       "slug": "st-francis-bradford-street-lawrence-ma"
@@ -4239,8 +4715,12 @@
       },
       "milestones": [],
       "name": "Saint Francis church building, East Chicago",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-francis-east-chicago-in"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-pranciskaus-east-chicago-in"
       ],
       "site_class": "worship_site",
       "slug": "st-francis-fir-street-east-chicago-in"
@@ -4272,8 +4752,12 @@
       },
       "milestones": [],
       "name": "Former Saint Francis Forest Lake estate, Methuen",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-francis-lawrence-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-pranciskaus-lawrence-ma"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "st-francis-forest-lake-estate-methuen-ma"
@@ -4308,8 +4792,12 @@
       },
       "milestones": [],
       "name": "Saint Francis of Assisi church building, Minersville",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-francis-minersville-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/st-francis-minersville-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-francis-minersville-pa"
@@ -4337,8 +4825,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "St. George 1967 church building, Utica",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-utica-ny"
+      ],
+      "related_public_profiles": [
+        "/parishes/st-george-utica-ny"
       ],
       "site_class": "worship_site",
       "slug": "st-george-1967-church-utica-ny"
@@ -4366,8 +4858,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "St. George Lithuanian cemetery, Utica",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-utica-ny"
+      ],
+      "related_public_profiles": [
+        "/parishes/st-george-utica-ny"
       ],
       "site_class": "cemetery",
       "slug": "st-george-cemetery-utica-ny"
@@ -4396,8 +4892,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "St. George Cleveland church site",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-cleveland-oh"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jurgio-cleveland-oh"
       ],
       "site_class": "worship_site",
       "slug": "st-george-cleveland-superior-site"
@@ -4430,17 +4930,33 @@
       },
       "milestones": [],
       "name": "Former Saint George convent, Norwood",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-norwood-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jurgio-norwood-ma"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "st-george-convent-norwood-ma"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "page-cited parish history",
+            "end": "1966-02-04",
+            "label": "brick church demolished February 4, 1966",
+            "start": "1966-02-04"
+          },
+          "relationship_id": "rel:coverage-17:detroit-st-george",
+          "relationship_type": "building-demolished"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-george-detroit-westminster-cardoni-site",
-      "demolished_year": null,
+      "demolished_year": 1966,
       "first_documented_year": 1908,
       "institution_use_periods": [
         {
@@ -4501,8 +5017,16 @@
         }
       ],
       "name": "St. George Detroit church site",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
+        "cn:institution:divine-providence-southfield-mi",
+        "cn:institution:st-anthony-detroit-mi",
         "cn:institution:st-george-detroit-mi"
+      ],
+      "related_public_profiles": [
+        "/parishes/dievo-apvaizdos-southfield-mi",
+        "/parishes/sv-antano-detroit-mi",
+        "/parishes/st-george-detroit-mi"
       ],
       "site_class": "worship_site",
       "slug": "st-george-detroit-westminster-cardoni-site"
@@ -4556,8 +5080,12 @@
       },
       "milestones": [],
       "name": "Former Saint George Roman Catholic church, Niagara Falls",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-niagara-falls-ny"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jurgio-niagara-falls-ny"
       ],
       "site_class": "worship_site",
       "slug": "st-george-falls-street-niagara-falls-ny"
@@ -4590,8 +5118,12 @@
       },
       "milestones": [],
       "name": "First Saint George church, Niagara Falls",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-niagara-falls-ny"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jurgio-niagara-falls-ny"
       ],
       "site_class": "worship_site",
       "slug": "st-george-first-church-niagara-falls-ny"
@@ -4626,8 +5158,12 @@
       },
       "milestones": [],
       "name": "Former Saint George church site, Hudson Avenue",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-lithuanian-rochester-ny"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jurgio-rochester-ny"
       ],
       "site_class": "worship_site",
       "slug": "st-george-hudson-avenue-rochester-ny"
@@ -4655,8 +5191,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "St. George Lithuanian National Catholic cemetery, Pittsburgh",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-lithuanian-national-pittsburgh-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/george-pittsburgh-pa"
       ],
       "site_class": "cemetery",
       "slug": "st-george-lithuanian-cemetery-pittsburgh-pa"
@@ -4702,8 +5242,12 @@
       },
       "milestones": [],
       "name": "Former Saint George church site, Lituanica Avenue",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-bridgeport-chicago-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jurgio-chicago-il"
       ],
       "site_class": "worship_site",
       "slug": "st-george-lituanica-church-chicago-il"
@@ -4746,8 +5290,12 @@
       },
       "milestones": [],
       "name": "Saint George parish hall, Brooklyn",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-brooklyn-ny"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jurgio-brooklyn-ny"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "st-george-parish-hall-brooklyn-ny"
@@ -4781,8 +5329,12 @@
       },
       "milestones": [],
       "name": "Former Saint George parish school, Chicago",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-bridgeport-chicago-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jurgio-chicago-il"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "st-george-parish-school-chicago-il"
@@ -4816,8 +5368,12 @@
       },
       "milestones": [],
       "name": "Saint George church site, Bridgeport",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-bridgeport-ct"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jurgio-bridgeport-ct"
       ],
       "site_class": "worship_site",
       "slug": "st-george-park-avenue-bridgeport-ct"
@@ -4859,8 +5415,12 @@
       },
       "milestones": [],
       "name": "Former Saint George rectory, Niagara Falls",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-niagara-falls-ny"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jurgio-niagara-falls-ny"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "st-george-rectory-niagara-falls-ny"
@@ -4893,8 +5453,12 @@
       },
       "milestones": [],
       "name": "Former Saint George rectory, Norwood",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-norwood-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jurgio-norwood-ma"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "st-george-rectory-norwood-ma"
@@ -4927,8 +5491,12 @@
       },
       "milestones": [],
       "name": "Former Saint George school, Norwood",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-norwood-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jurgio-norwood-ma"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "st-george-school-norwood-ma"
@@ -4968,8 +5536,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Saint George church site, Shenandoah",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-shenandoah-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jurgio-shenandoah-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-george-shenandoah-south-jardin-site"
@@ -5013,8 +5585,12 @@
       },
       "milestones": [],
       "name": "Former Saint George church, Norwood",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-norwood-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jurgio-norwood-ma"
       ],
       "site_class": "worship_site",
       "slug": "st-george-st-james-avenue-norwood-ma"
@@ -5057,8 +5633,12 @@
       },
       "milestones": [],
       "name": "Saint George church-school building, Philadelphia",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-lithuanian-philadelphia-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jurgio-philadelphia-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-george-venango-philadelphia-pa"
@@ -5091,8 +5671,12 @@
       },
       "milestones": [],
       "name": "Saint George Lithuanian-American veterans monument at Highland Cemetery",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-norwood-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jurgio-norwood-ma"
       ],
       "site_class": "cemetery",
       "slug": "st-george-veterans-monument-highland-cemetery-norwood-ma"
@@ -5138,8 +5722,12 @@
       },
       "milestones": [],
       "name": "Former Saint George church site, Haverhill",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-haverhill-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/lietuviu-baznycia-unnamed-haverhill-ma"
       ],
       "site_class": "worship_site",
       "slug": "st-george-washington-street-haverhill-ma"
@@ -5193,8 +5781,12 @@
       },
       "milestones": [],
       "name": "Saint George church, Brooklyn",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-george-brooklyn-ny"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jurgio-brooklyn-ny"
       ],
       "site_class": "worship_site",
       "slug": "st-george-york-street-brooklyn-ny"
@@ -5222,8 +5814,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "St. Isidore church on Talbot Street, Braddock",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-isidore-braddock-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/st-isidore-braddock-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-isidore-talbot-street-braddock-pa"
@@ -5256,8 +5852,12 @@
       },
       "milestones": [],
       "name": "Former Saint John the Baptist church, Coaldale",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-john-baptist-coaldale-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jono-coaldale-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-john-baptist-coaldale-pa"
@@ -5301,8 +5901,12 @@
       },
       "milestones": [],
       "name": "First Saint John the Baptist church, Coaldale",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-john-baptist-coaldale-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jono-coaldale-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-john-first-church-coaldale-pa"
@@ -5330,14 +5934,30 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "St. John host church, New York",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:lithuanian-protestant-parish-new-york-ny"
+      ],
+      "related_public_profiles": [
+        "/parishes/protestant-parish-nyc"
       ],
       "site_class": "worship_site",
       "slug": "st-john-host-church-new-york-ny"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "official current congregation sources",
+            "end": null,
+            "label": "standing in documented current Lutheran worship use",
+            "start": "2026-08-03"
+          },
+          "relationship_id": "rel:coverage-17:darien-st-john-lutheran",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-john-lutheran-cass-avenue-darien-il",
       "demolished_year": null,
@@ -5371,8 +5991,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "St. John Lutheran church site, Darien",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:teviske-lithuanian-lutheran-darien-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/lietuviu-evangeliku-liuteronu-teviskes-parapija-darien-il"
       ],
       "site_class": "worship_site",
       "slug": "st-john-lutheran-cass-avenue-darien-il"
@@ -5403,7 +6027,9 @@
       },
       "milestones": [],
       "name": "Saint John Nepomucene church, Luzerne",
+      "public_profile_link_status": "context_only_no_public_profile",
       "related_public_institution_ids": [],
+      "related_public_profiles": [],
       "site_class": "worship_site",
       "slug": "st-john-nepomucene-church-luzerne-pa"
     },
@@ -5433,7 +6059,9 @@
       },
       "milestones": [],
       "name": "Saint John Nepomucene rectory, Luzerne",
+      "public_profile_link_status": "context_only_no_public_profile",
       "related_public_institution_ids": [],
+      "related_public_profiles": [],
       "site_class": "parish_ancillary_site",
       "slug": "st-john-nepomucene-rectory-luzerne-pa"
     },
@@ -5464,8 +6092,12 @@
       },
       "milestones": [],
       "name": "Former Saint John the Baptist rectory, Coaldale",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-john-baptist-coaldale-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-jono-coaldale-pa"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "st-john-rectory-coaldale-pa"
@@ -5505,8 +6137,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Former Saint Joseph church, 301 South State Street, DuBois",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-joseph-dubois-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/joseph-dubois-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-joseph-dubois-south-state-street-church"
@@ -5534,8 +6170,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "St. Joseph church, Donora",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-joseph-donora-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/st-joseph-donora-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-joseph-former-presbyterian-donora-pa"
@@ -5581,8 +6221,12 @@
       },
       "milestones": [],
       "name": "Former Saint Joseph church, Scranton",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-joseph-scranton-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-juozapo-scranton-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-joseph-main-avenue-scranton-pa"
@@ -5616,8 +6260,12 @@
       },
       "milestones": [],
       "name": "Saint Joseph church building, South Chicago",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-joseph-south-chicago-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-juozapo-south-chicago-il"
       ],
       "site_class": "worship_site",
       "slug": "st-joseph-marquette-avenue-south-chicago-il"
@@ -5651,8 +6299,12 @@
       },
       "milestones": [],
       "name": "Former Saint Joseph church, Nanticoke-Hanover",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-joseph-nanticoke-hanover-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-juozapo-nanticoke-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-joseph-pine-street-nanticoke-pa"
@@ -5686,8 +6338,12 @@
       },
       "milestones": [],
       "name": "Saint Joseph rectory site, South Chicago",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-joseph-south-chicago-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-juozapo-south-chicago-il"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "st-joseph-rectory-saginaw-avenue-south-chicago-il"
@@ -5739,8 +6395,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Saint Joseph Lithuanian church, 46 Congress Avenue, Waterbury",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-joseph-waterbury-ct"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-juozapo-waterbury-ct"
       ],
       "site_class": "worship_site",
       "slug": "st-joseph-waterbury-congress-avenue-church"
@@ -5768,8 +6428,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Original Saint Joseph Lithuanian church building, Waterbury",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-joseph-waterbury-ct"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-juozapo-waterbury-ct"
       ],
       "site_class": "worship_site",
       "slug": "st-joseph-waterbury-original-1894-church"
@@ -5800,8 +6464,12 @@
       },
       "milestones": [],
       "name": "Saint Lucy Church, Scranton",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-michael-archangel-scranton-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-mykolo-scranton-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-lucy-church-scranton-pa"
@@ -5841,8 +6509,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "St. Luke 1909 church, Bentleyville",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-luke-bentleyville-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/st-luke-bentleyville-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-luke-1909-church-bentleyville-pa"
@@ -5874,17 +6546,33 @@
       },
       "milestones": [],
       "name": "Saint Mary of the Annunciation Lithuanian Cemetery, Pringle",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-mary-annunciation-kingston-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-marijos-apreiskimo-kingston-pa"
       ],
       "site_class": "cemetery",
       "slug": "st-mary-annunciation-cemetery-pringle-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "heritage survey; exact day unresolved",
+            "end": "2016",
+            "label": "church demolished in 2016",
+            "start": "2016"
+          },
+          "relationship_id": "rel:coverage-17:kingston-st-mary",
+          "relationship_type": "building-demolished"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-mary-annunciation-church-kingston-pa",
-      "demolished_year": null,
+      "demolished_year": 2016,
       "first_documented_year": 1903,
       "institution_use_periods": [
         {
@@ -5908,8 +6596,12 @@
       },
       "milestones": [],
       "name": "Saint Mary of the Annunciation church, Kingston",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-mary-annunciation-kingston-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-marijos-apreiskimo-kingston-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-mary-annunciation-church-kingston-pa"
@@ -5930,8 +6622,14 @@
       },
       "milestones": [],
       "name": "Former Saint Mary of the Annunciation church lot, Kingston",
-      "related_public_institution_ids": [],
-      "site_class": "worship_site",
+      "public_profile_link_status": "site_lineage",
+      "related_public_institution_ids": [
+        "cn:institution:st-mary-annunciation-kingston-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-marijos-apreiskimo-kingston-pa"
+      ],
+      "site_class": "redeveloped_site",
       "slug": "st-mary-annunciation-former-lot-kingston-pa"
     },
     {
@@ -5961,14 +6659,28 @@
       },
       "milestones": [],
       "name": "Saint Mary Lithuanian National Catholic Cemetery, Bensalem",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-mary-lithuanian-national-philadelphia-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-marijos-tautine-kataliku-parapija-philadelphia-pa"
       ],
       "site_class": "cemetery",
       "slug": "st-mary-lithuanian-national-cemetery-bensalem-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "case-file lineage; exact date unresolved",
+            "label": "church demolished before the documented vacant-lot state"
+          },
+          "relationship_id": "rel:coverage-17:philadelphia-st-mary-national",
+          "relationship_type": "building-demolished"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-mary-national-church-reed-philadelphia-pa",
       "demolished_year": null,
@@ -5993,8 +6705,12 @@
       },
       "milestones": [],
       "name": "Saint Mary Lithuanian National Catholic church, Philadelphia",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-mary-lithuanian-national-philadelphia-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-marijos-tautine-kataliku-parapija-philadelphia-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-mary-national-church-reed-philadelphia-pa"
@@ -6014,8 +6730,14 @@
       },
       "milestones": [],
       "name": "Former Saint Mary church vacant lot, Philadelphia",
-      "related_public_institution_ids": [],
-      "site_class": "worship_site",
+      "public_profile_link_status": "site_lineage",
+      "related_public_institution_ids": [
+        "cn:institution:st-mary-lithuanian-national-philadelphia-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-marijos-tautine-kataliku-parapija-philadelphia-pa"
+      ],
+      "site_class": "redeveloped_site",
       "slug": "st-mary-national-vacant-lot-reed-philadelphia-pa"
     },
     {
@@ -6041,8 +6763,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "St. Michael church, Shamokin",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-michael-shamokin-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/st-michael-shamokin-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-michael-church-shamokin-pa"
@@ -6100,8 +6826,12 @@
       },
       "milestones": [],
       "name": "Former Saint Michael church complex, Bayonne",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-michael-bayonne-nj"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-mykolo-bayonne-nj"
       ],
       "site_class": "worship_site",
       "slug": "st-michael-east-23rd-bayonne-nj"
@@ -6135,8 +6865,12 @@
       },
       "milestones": [],
       "name": "Former Saint Michael church, Scranton",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-michael-archangel-scranton-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-mykolo-scranton-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-michael-jackson-street-scranton-pa"
@@ -6169,8 +6903,12 @@
       },
       "milestones": [],
       "name": "Original Saint Michael Lithuanian church, Scranton",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-michael-archangel-scranton-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-mykolo-scranton-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-michael-original-wooden-church-scranton-pa"
@@ -6201,8 +6939,12 @@
       },
       "milestones": [],
       "name": "Former Saint Michael rectory, Scranton",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-michael-archangel-scranton-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-mykolo-scranton-pa"
       ],
       "site_class": "parish_ancillary_site",
       "slug": "st-michael-rectory-jackson-scranton-pa"
@@ -6248,8 +6990,12 @@
       },
       "milestones": [],
       "name": "Former Saint Michael church site, Wabansia Avenue",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-michael-north-side-chicago-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-mykolo-north-chicago-il"
       ],
       "site_class": "worship_site",
       "slug": "st-michael-wabansia-chicago-il"
@@ -6291,8 +7037,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Former St. Peter Lithuanian church site, Detroit",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-peter-detroit-mi"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-petro-detroit-mi"
       ],
       "site_class": "worship_site",
       "slug": "st-peter-detroit-site"
@@ -6332,14 +7082,32 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Saint Peter Lithuanian church site, South Boston",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
+        "cn:institution:st-joseph-st-casimir-boston-ma",
         "cn:institution:st-peter-south-boston-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/casimir-boston-ma",
+        "/parishes/sv-petro-boston-ma"
       ],
       "site_class": "worship_site",
       "slug": "st-peter-flaherty-way-south-boston-ma"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "official diocesan publication",
+            "end": null,
+            "label": "retained successor worship site",
+            "start": "2017-09-11"
+          },
+          "relationship_id": "rel:coverage-17:westfield-st-peter",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-peter-state-street-westfield-ma",
       "demolished_year": null,
@@ -6361,7 +7129,13 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "St. Peter church, 24 State Street, Westfield",
-      "related_public_institution_ids": [],
+      "public_profile_link_status": "institution_lineage",
+      "related_public_institution_ids": [
+        "cn:institution:st-casimir-westfield-ma"
+      ],
+      "related_public_profiles": [
+        "/parishes/st-casimir-westfield-ma"
+      ],
       "site_class": "worship_site",
       "slug": "st-peter-state-street-westfield-ma"
     },
@@ -6393,8 +7167,12 @@
       },
       "milestones": [],
       "name": "Saint Vincent de Paul former Armory church, Girardville",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-vincent-de-paul-girardville-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-vincento-de-paul-girardville-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-vincent-armory-church-girardville-pa"
@@ -6438,8 +7216,12 @@
       },
       "milestones": [],
       "name": "Saint Vincent de Paul church, Girardville",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-vincent-de-paul-girardville-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-vincento-de-paul-girardville-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-vincent-de-paul-second-c-street-girardville-pa"
@@ -6467,8 +7249,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "St. Vincent de Paul church at Eighth and Enos, Springfield",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-vincent-de-paul-springfield-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/st-vincent-de-paul-springfield-il"
       ],
       "site_class": "worship_site",
       "slug": "st-vincent-eighth-enos-springfield-il"
@@ -6511,8 +7297,12 @@
       },
       "milestones": [],
       "name": "Original Saint Vincent de Paul church, Esplen",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-vincent-de-paul-esplen-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-vincento-pauliecio-esplen-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-vincent-original-church-esplen-pa"
@@ -6533,8 +7323,14 @@
       },
       "milestones": [],
       "name": "Replacement structure on the former Saint Vincent church site, Esplen",
-      "related_public_institution_ids": [],
-      "site_class": "worship_site",
+      "public_profile_link_status": "site_lineage",
+      "related_public_institution_ids": [
+        "cn:institution:st-vincent-de-paul-esplen-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-vincento-pauliecio-esplen-pa"
+      ],
+      "site_class": "redeveloped_site",
       "slug": "st-vincent-replacement-structure-esplen-pa"
     },
     {
@@ -6586,8 +7382,12 @@
       },
       "milestones": [],
       "name": "Former Saint Vincent de Paul school and church, Esplen",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:st-vincent-de-paul-esplen-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/sv-vincento-pauliecio-esplen-pa"
       ],
       "site_class": "worship_site",
       "slug": "st-vincent-school-church-esplen-pa"
@@ -6627,8 +7427,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Former Tėviškė Lithuanian Lutheran church site, Marquette Park",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:teviske-lithuanian-lutheran-darien-il"
+      ],
+      "related_public_profiles": [
+        "/parishes/lietuviu-evangeliku-liuteronu-teviskes-parapija-darien-il"
       ],
       "site_class": "worship_site",
       "slug": "teviske-former-troy-street-chicago-il"
@@ -6680,8 +7484,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Transfiguration Lithuanian church, Perry Avenue, Maspeth",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:transfiguration-maspeth-ny"
+      ],
+      "related_public_profiles": [
+        "/parishes/kristaus-atsimainymo-maspeth-ny"
       ],
       "site_class": "worship_site",
       "slug": "transfiguration-maspeth-current-church"
@@ -6721,8 +7529,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Original Transfiguration Lithuanian church, Hull Avenue, Maspeth",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:transfiguration-maspeth-ny"
+      ],
+      "related_public_profiles": [
+        "/parishes/kristaus-atsimainymo-maspeth-ny"
       ],
       "site_class": "worship_site",
       "slug": "transfiguration-maspeth-hull-avenue-church"
@@ -6750,8 +7562,12 @@
       "lifecycle_text": null,
       "milestones": [],
       "name": "Transfiguration predecessor church building on Perry Avenue, Maspeth",
+      "public_profile_link_status": "direct_institution_use",
       "related_public_institution_ids": [
         "cn:institution:transfiguration-maspeth-ny"
+      ],
+      "related_public_profiles": [
+        "/parishes/kristaus-atsimainymo-maspeth-ny"
       ],
       "site_class": "worship_site",
       "slug": "transfiguration-maspeth-perry-predecessor-church"
@@ -6808,7 +7624,28 @@
       "unit": "Canadian Lithuanian parish comparator"
     }
   },
-  "content_hash": "sha256:ac458819c78df57ef6d1bdee50aecc6598e1e87e967d5537ef8c3ca73d2d0aa1",
+  "condition_resolution_contract": {
+    "current_relationship_rule": "demolition is irreversible; other conditions are current only when open-ended",
+    "institution_summary_rule": "publish only when every terminal worship site resolves to the same condition",
+    "legacy_rule": "site_r10 building fate is compatibility context only and never canonical rendering authority",
+    "legal_pairs": [
+      [
+        "building-repurposed",
+        "building-standing"
+      ],
+      [
+        "building-listed-for-sale",
+        "building-standing"
+      ]
+    ],
+    "precedence": [
+      "building-demolished",
+      "building-repurposed",
+      "building-listed-for-sale",
+      "building-standing"
+    ]
+  },
+  "content_hash": "sha256:e29053ddc004b29b433aaadf93b8be1d6793116d59570796dd110a507a398cb6",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -9017,24 +9854,24 @@
     "building_site_entities": 171,
     "canadian_comparator_parishes": 3,
     "closed_roman_catholic_parishes": 87,
-    "closed_roman_catholic_parishes_since_1990": 55,
-    "closed_roman_catholic_parishes_since_2020": 3,
-    "closed_roman_catholic_parishes_with_dated_year": 79,
+    "closed_roman_catholic_parishes_since_1990": 54,
+    "closed_roman_catholic_parishes_since_2020": 2,
+    "closed_roman_catholic_parishes_with_dated_year": 78,
     "coal_region_parish_institutions": 15,
     "institution_continuity_edges": 51,
-    "physical_worship_sites": 134,
+    "physical_worship_sites": 130,
     "public_us_institutions": 155,
     "roman_catholic_parish_institutions": 132,
-    "roman_catholic_parishes_with_closure_year": 92,
-    "roman_catholic_parishes_with_founding_year": 121,
-    "site_r10_founding_fallbacks": 65,
-    "unresolved_founding_years": 16
+    "roman_catholic_parishes_with_closure_year": 91,
+    "roman_catholic_parishes_with_founding_year": 119,
+    "site_r10_founding_fallbacks": 64,
+    "unresolved_founding_years": 18
   },
   "generated": "2026-08-03",
   "institution_history": [
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "All Saints, Chicago, IL",
       "city": "Chicago",
@@ -9052,6 +9889,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Visų Šventųjų",
       "public_profile": "/parishes/all-saints-chicago-il",
       "record_type": "parish",
@@ -9064,8 +9902,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "All Saints Lithuanian national/independent Catholic parish, Wilkes-Barre",
       "city": "Wilkes-Barre",
@@ -9083,6 +9921,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "national_catholic_pncc",
+      "legacy_building_fate": "unknown",
       "name": "Visų Šventųjų",
       "public_profile": "/parishes/all-saints-wilkes-barre-pa",
       "record_type": "parish",
@@ -9095,8 +9934,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "All Saints independent/national Lithuanian parish, Worcester",
       "city": "Worcester",
@@ -9114,6 +9953,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "independent_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Visų Šventųjų",
       "public_profile": "/parishes/allsaints-worcester-ma",
       "record_type": "parish",
@@ -9126,8 +9966,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Andrew Lithuanian Roman Catholic Parish, New Britain",
       "city": "New Britain",
@@ -9145,6 +9985,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šv. Andriejaus",
       "public_profile": "/parishes/sv-andriejaus-new-britain-ct",
       "record_type": "parish",
@@ -9204,8 +10045,10 @@
     },
     {
       "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:coverage-17:darien-st-john-lutheran"
+      ],
       "canonical_name": "Tėviškė Lithuanian Evangelical Lutheran Parish",
       "city": "Darien",
       "closed": {
@@ -9240,8 +10083,10 @@
     },
     {
       "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:coverage-17:luzerne-st-ann"
+      ],
       "canonical_name": "Saint Ann Lithuanian Roman Catholic Parish, Luzerne",
       "city": "Luzerne",
       "closed": {
@@ -9275,9 +10120,11 @@
       ]
     },
     {
-      "building_fate": "repurposed_religious",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:illinois-1:spring-valley-repurposed"
+      ],
       "canonical_name": "Saint Anne Lithuanian Roman Catholic Parish, Spring Valley",
       "city": "Spring Valley",
       "closed": {
@@ -9294,6 +10141,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Onos",
       "public_profile": "/parishes/sv-onos-spring-valley-il",
       "record_type": "parish",
@@ -9348,8 +10196,8 @@
       ]
     },
     {
-      "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Mary of the Annunciation Lithuanian Roman Catholic Parish, Kingston",
       "city": "Kingston",
@@ -9367,6 +10215,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "demolished",
       "name": "Šv. Marijos Apreiškimo",
       "public_profile": "/parishes/sv-marijos-apreiskimo-kingston-pa",
       "record_type": "parish",
@@ -9421,9 +10270,12 @@
       ]
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:detroit:st-anthony-building-repurposed-cultural-center",
+        "rel:detroit:st-anthony-building-standing-non-active"
+      ],
       "canonical_name": "St. Anthony Lithuanian parish, Detroit",
       "city": "Detroit",
       "closed": {
@@ -9440,6 +10292,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šv. Antano",
       "public_profile": "/parishes/sv-antano-detroit-mi",
       "record_type": "parish",
@@ -9458,8 +10311,8 @@
       ]
     },
     {
-      "building_fate": "repurposed_religious",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Anthony Lithuanian Roman Catholic Parish, Omaha",
       "city": "Omaha",
@@ -9477,6 +10330,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Antano",
       "public_profile": "/parishes/sv-antano-omaha-ne",
       "record_type": "parish",
@@ -9496,8 +10350,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Anthony Lithuanian Parish, Philadelphia",
       "city": "Philadelphia",
@@ -9515,6 +10369,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "St. Anthony's Church, Philadelphia",
       "public_profile": "/parishes/anthony-philadelphia-pa",
       "record_type": "parish",
@@ -9531,8 +10386,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Dangun Žengimo, Pittsburgh, PA",
       "city": "Pittsburgh",
@@ -9550,6 +10405,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Dangun Žengimo",
       "public_profile": "/parishes/ascension-pittsburgh-pa",
       "record_type": "parish",
@@ -9562,8 +10418,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Bernard Parish, Irons, MI",
       "city": "Irons",
@@ -9581,6 +10437,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "St. Bernard Parish",
       "public_profile": "/parishes/bernard-irons-mi",
       "record_type": "parish",
@@ -9593,8 +10450,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "repurposed_religious",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Amsterdam",
       "city": "Amsterdam",
@@ -9612,6 +10469,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-amsterdam-ny",
       "record_type": "parish",
@@ -9628,8 +10486,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Joseph / St. Casimir Parish, South Boston",
       "city": "Boston (South Boston)",
@@ -9647,6 +10505,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "St. Joseph / St. Casimir Parish (first Boston parish)",
       "public_profile": "/parishes/casimir-boston-ma",
       "record_type": "parish",
@@ -9664,9 +10523,11 @@
       ]
     },
     {
-      "building_fate": "repurposed_religious",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:mne-1:brockton-repurposed"
+      ],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Brockton",
       "city": "Brockton",
       "closed": {
@@ -9683,6 +10544,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-brockton-ma",
       "record_type": "parish",
@@ -9700,8 +10562,8 @@
       ]
     },
     {
-      "building_fate": "repurposed_religious",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Chicago Heights",
       "city": "Chicago Heights",
@@ -9719,6 +10581,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-chicago-il",
       "record_type": "parish",
@@ -9774,8 +10637,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Casimir Parish, Freeland",
       "city": "Freeland",
@@ -9787,12 +10650,13 @@
       "culturenet_entity_id": "cn:institution:st-casimir-freeland-pa",
       "diocese": "Scranton",
       "founded": {
-        "authority": "site_r10_baseline",
+        "authority": "unresolved",
         "display": "Lithuanians settled 1880; parish organized by kun. Varnagiris (year not given, before 1894)",
-        "year": 1880
+        "year": null
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/casimir-freeland-pa",
       "record_type": "parish",
@@ -9807,8 +10671,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "repurposed_religious",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Gary",
       "city": "Gary",
@@ -9826,6 +10690,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-gary-in",
       "record_type": "parish",
@@ -9881,8 +10746,8 @@
       ]
     },
     {
-      "building_fate": "repurposed_secular",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Nashua",
       "city": "Nashua",
@@ -9900,6 +10765,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-nashua-nh",
       "record_type": "parish",
@@ -9916,8 +10782,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "repurposed_secular",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, New Haven",
       "city": "New Haven",
@@ -9935,6 +10801,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-new-haven-ct",
       "record_type": "parish",
@@ -9951,9 +10818,11 @@
       ]
     },
     {
-      "building_fate": "repurposed_religious",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:ne-3:paterson-repurposed"
+      ],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Paterson",
       "city": "Paterson",
       "closed": {
@@ -9970,6 +10839,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-paterson-nj",
       "record_type": "parish",
@@ -9987,8 +10857,8 @@
       ]
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Philadelphia",
       "city": "Philadelphia",
@@ -10006,6 +10876,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-philadelphia-pa",
       "record_type": "parish",
@@ -10023,8 +10894,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "repurposed_secular",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Pittsburgh",
       "city": "Pittsburgh",
@@ -10042,6 +10913,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-pittsburgh-pa",
       "record_type": "parish",
@@ -10058,8 +10930,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "repurposed_secular",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Pittston",
       "city": "Pittston",
@@ -10077,6 +10949,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-pittston-pa",
       "record_type": "parish",
@@ -10094,8 +10967,8 @@
       ]
     },
     {
-      "building_fate": "repurposed_religious",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Providence",
       "city": "Providence",
@@ -10113,6 +10986,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-providence-ri",
       "record_type": "parish",
@@ -10130,8 +11004,10 @@
     },
     {
       "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:case-2:sioux-city-building-demolished"
+      ],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Sioux City",
       "city": "Sioux City",
       "closed": {
@@ -10164,9 +11040,11 @@
       ]
     },
     {
-      "building_fate": "repurposed_religious",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:successor-2:worcester-church-repurposed"
+      ],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Worcester",
       "city": "Worcester",
       "closed": {
@@ -10183,6 +11061,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-worcester-ma",
       "record_type": "parish",
@@ -10303,8 +11182,10 @@
     },
     {
       "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:mne-1:east-chicago-demolished"
+      ],
       "canonical_name": "Saint Francis Lithuanian Roman Catholic Parish, East Chicago",
       "city": "East Chicago",
       "closed": {
@@ -10337,8 +11218,8 @@
       ]
     },
     {
-      "building_fate": "repurposed_secular",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Francis Lithuanian Roman Catholic Parish, Lawrence",
       "city": "Lawrence",
@@ -10356,6 +11237,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Pranciškaus",
       "public_profile": "/parishes/sv-pranciskaus-lawrence-ma",
       "record_type": "parish",
@@ -10372,8 +11254,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Our Lady of Vilna Lithuanian Roman Catholic Parish, Eynon",
       "city": "Archbald",
@@ -10391,6 +11273,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "demolished",
       "name": "Nekaltojo Prasidėjimo-Aušros Vartų",
       "public_profile": "/parishes/nekaltojo-prasidejimo-ausros-vartu-archbald-pa",
       "record_type": "parish",
@@ -10408,8 +11291,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Our Lady of Vilna Lithuanian Roman Catholic Parish, Pilsen",
       "city": "Chicago",
@@ -10427,6 +11310,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Aušros Vartų",
       "public_profile": "/parishes/ausros-vartu-chicago-il",
       "record_type": "parish",
@@ -10444,8 +11328,10 @@
     },
     {
       "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:successor-2:manhattan-demolished"
+      ],
       "canonical_name": "Our Lady of Vilnius Lithuanian Roman Catholic Parish, Manhattan",
       "city": "Manhattan",
       "closed": {
@@ -10456,9 +11342,9 @@
       "culturenet_entity_id": "cn:institution:our-lady-of-vilnius-manhattan-ny",
       "diocese": "New York",
       "founded": {
-        "authority": "canonical_graph",
+        "authority": "unresolved",
         "display": "1905 centennial reading; canonical start unresolved",
-        "year": 1905
+        "year": null
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
@@ -10479,8 +11365,8 @@
       ]
     },
     {
-      "building_fate": "repurposed_religious",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Our Lady of Vilna Roman Catholic Parish, Worcester",
       "city": "Worcester",
@@ -10498,6 +11384,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_religious",
       "name": "Aušros Vartų",
       "public_profile": "/parishes/ausros-vartu-worcester-ma",
       "record_type": "parish",
@@ -10514,8 +11401,8 @@
       ]
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Bridgeport",
       "city": "Bridgeport",
@@ -10533,6 +11420,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/sv-jurgio-bridgeport-ct",
       "record_type": "parish",
@@ -10551,8 +11439,10 @@
     },
     {
       "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:ne-3:brooklyn-church-demolished"
+      ],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Brooklyn",
       "city": "Brooklyn",
       "closed": {
@@ -10587,8 +11477,8 @@
       ]
     },
     {
-      "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Chicago",
       "city": "Chicago",
@@ -10606,6 +11496,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "demolished",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/sv-jurgio-chicago-il",
       "record_type": "parish",
@@ -10621,8 +11512,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. George Lithuanian parish, Cleveland",
       "city": "Cleveland",
@@ -10640,6 +11531,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/sv-jurgio-cleveland-oh",
       "record_type": "parish",
@@ -10658,8 +11550,10 @@
     },
     {
       "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:identity-1:haverhill-demolished"
+      ],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Haverhill",
       "city": "Haverhill",
       "closed": {
@@ -10730,8 +11624,8 @@
       ]
     },
     {
-      "building_fate": "repurposed_religious",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Niagara Falls",
       "city": "Niagara Falls",
@@ -10749,6 +11643,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/sv-jurgio-niagara-falls-ny",
       "record_type": "parish",
@@ -10766,8 +11661,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "repurposed_secular",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Norwood",
       "city": "Norwood",
@@ -10785,6 +11680,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/sv-jurgio-norwood-ma",
       "record_type": "parish",
@@ -10803,8 +11699,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "repurposed_religious",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Philadelphia",
       "city": "Philadelphia",
@@ -10822,6 +11718,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/sv-jurgio-philadelphia-pa",
       "record_type": "parish",
@@ -10840,8 +11737,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. George Lithuanian National Catholic Parish, Pittsburgh",
       "city": "Pittsburgh",
@@ -10859,6 +11756,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "national_catholic_pncc",
+      "legacy_building_fate": "unknown",
       "name": "St. George Parish",
       "public_profile": "/parishes/george-pittsburgh-pa",
       "record_type": "parish",
@@ -10914,8 +11812,10 @@
     },
     {
       "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:lineage-1:shenandoah-building-demolished-2009"
+      ],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Shenandoah",
       "city": "Shenandoah",
       "closed": {
@@ -10948,8 +11848,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Holy Cross, Schenectady, NY",
       "city": "Schenectady",
@@ -10967,6 +11867,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Kryžiaus",
       "public_profile": "/parishes/holy-cross-schenectady-ny",
       "record_type": "parish",
@@ -10980,8 +11881,10 @@
     },
     {
       "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:mne-1:westville-demolished"
+      ],
       "canonical_name": "Holy Cross Lithuanian National Catholic Church, Westville",
       "city": "Westville",
       "closed": {
@@ -11014,8 +11917,8 @@
       ]
     },
     {
-      "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Holy Trinity Lithuanian Roman Catholic Parish, Newark",
       "city": "Newark",
@@ -11033,6 +11936,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "demolished",
       "name": "Švč. Trejybės",
       "public_profile": "/parishes/lietuviu-baznycia-unnamed-newark-nj",
       "record_type": "parish",
@@ -11051,15 +11955,15 @@
       ]
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Holy Cross Lithuanian Roman Catholic Parish, Chicago",
       "city": "Chicago",
       "closed": {
-        "authority": "reviewed_case_snapshot",
-        "display": "2020",
-        "year": 2020
+        "authority": "unresolved",
+        "display": "1980s, exact year unresolved",
+        "year": null
       },
       "culturenet_entity_id": "cn:institution:holy-cross-lithuanian-chicago-il",
       "diocese": "Chicago",
@@ -11070,6 +11974,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šv. Kryžiaus",
       "public_profile": "/parishes/sv-kryziaus-chicago-il",
       "record_type": "parish",
@@ -11126,8 +12031,8 @@
       ]
     },
     {
-      "building_fate": "repurposed_secular",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Holy Cross Lithuanian Roman Catholic Parish, Mount Carmel",
       "city": "Mount Carmel",
@@ -11145,6 +12050,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Kryžiaus",
       "public_profile": "/parishes/sv-kryziaus-mount-carmel-pa",
       "record_type": "parish",
@@ -11161,8 +12067,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Ignatius Parish, Luther, MI",
       "city": "Luther",
@@ -11180,6 +12086,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "St. Ignatius Parish",
       "public_profile": "/parishes/ignatius-luther-mi",
       "record_type": "parish",
@@ -11230,8 +12137,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Immaculate Conception, Sheboygan, WI",
       "city": "Sheboygan",
@@ -11249,6 +12156,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Nekaltojo Prasidėjimo",
       "public_profile": "/parishes/immaculate-conception-sheboygan-wi",
       "record_type": "parish",
@@ -11261,8 +12169,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Immaculate Conception Lithuanian Roman Catholic Parish, East St. Louis",
       "city": "East St. Louis",
@@ -11280,6 +12188,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Nekaltojo Prasidėjimo",
       "public_profile": "/parishes/nekaltojo-prasidejimo-east-st-louis-il",
       "record_type": "parish",
@@ -11297,8 +12206,8 @@
       ]
     },
     {
-      "building_fate": "repurposed_religious",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Sacred Heart of Jesus Lithuanian National Catholic Parish, Lawrence",
       "city": "Lawrence",
@@ -11316,6 +12225,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "national_catholic_pncc",
+      "legacy_building_fate": "repurposed_religious",
       "name": "Saldžiausios Jėzaus Širdies",
       "public_profile": "/parishes/saldziausios-jezaus-sirdies-lawrence-ma",
       "record_type": "parish",
@@ -11331,8 +12241,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "repurposed_secular",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint John the Baptist Lithuanian Roman Catholic Parish, Coaldale",
       "city": "Coaldale",
@@ -11350,6 +12260,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Jono",
       "public_profile": "/parishes/sv-jono-coaldale-pa",
       "record_type": "parish",
@@ -11369,9 +12280,11 @@
       ]
     },
     {
-      "building_fate": "repurposed_religious",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:evidence-t1:dubois-church-repurposed-orthodox-2020"
+      ],
       "canonical_name": "Saint Joseph Lithuanian Roman Catholic Parish, DuBois",
       "city": "DuBois",
       "closed": {
@@ -11388,6 +12301,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/joseph-dubois-pa",
       "record_type": "parish",
@@ -11404,8 +12318,8 @@
       ]
     },
     {
-      "building_fate": "repurposed_secular",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Joseph Lithuanian Roman Catholic Parish, Nanticoke-Hanover",
       "city": "Nanticoke",
@@ -11423,6 +12337,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/sv-juozapo-nanticoke-pa",
       "record_type": "parish",
@@ -11440,8 +12355,8 @@
       ]
     },
     {
-      "building_fate": "repurposed_religious",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Joseph Lithuanian Roman Catholic Parish, Scranton",
       "city": "Scranton",
@@ -11459,6 +12374,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/sv-juozapo-scranton-pa",
       "record_type": "parish",
@@ -11476,8 +12392,8 @@
       ]
     },
     {
-      "building_fate": "repurposed_secular",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Joseph Lithuanian Roman Catholic Parish, South Chicago",
       "city": "South Chicago",
@@ -11495,6 +12411,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/sv-juozapo-south-chicago-il",
       "record_type": "parish",
@@ -11554,8 +12471,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Lithuanian church (unnamed), Middleport, PA",
       "city": "Middleport",
@@ -11573,6 +12490,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Lietuvių bažnyčia (unnamed)",
       "public_profile": "/parishes/lithuanian-church-middleport-pa",
       "record_type": "parish",
@@ -11585,8 +12503,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "All Saints Lithuanian independent/national Catholic institution, Waterbury",
       "city": "Waterbury",
@@ -11604,6 +12522,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "independent_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Visų Šventųjų",
       "public_profile": "/parishes/lithuanian-national-catholic-parish-waterbury-ct",
       "record_type": "parish",
@@ -11616,8 +12535,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Our Lady of Siluva Lithuanian National Catholic Parish, Chicago",
       "city": "Chicago (Bridgeport; 35th & Union / 3501-3509 So. Union Ave.)",
@@ -11635,6 +12554,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "independent_catholic",
+      "legacy_building_fate": "unknown",
       "name": "St. Mary / Our Lady of Šiluva",
       "public_profile": "/parishes/mary-chicago-il",
       "record_type": "parish",
@@ -11651,8 +12571,8 @@
       ]
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Mary Parish, Custer, MI",
       "city": "Custer",
@@ -11670,6 +12590,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "St. Mary Parish",
       "public_profile": "/parishes/mary-custer-mi",
       "record_type": "parish",
@@ -11683,8 +12604,10 @@
     },
     {
       "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:coverage-17:frackville-annunciation-church"
+      ],
       "canonical_name": "Annunciation BVM Lithuanian Roman Catholic Parish, Frackville",
       "city": "Frackville",
       "closed": {
@@ -11721,8 +12644,8 @@
       ]
     },
     {
-      "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Mary Lithuanian National Catholic Parish, Philadelphia",
       "city": "Philadelphia",
@@ -11740,6 +12663,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "national_catholic_pncc",
+      "legacy_building_fate": "demolished",
       "name": "Šv. Marijos Tautinė Katalikų Parapija",
       "public_profile": "/parishes/sv-marijos-tautine-kataliku-parapija-philadelphia-pa",
       "record_type": "parish",
@@ -11755,9 +12679,11 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate": "listed_for_sale",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:successor-2:bayonne-listed-redevelopment"
+      ],
       "canonical_name": "Saint Michael Lithuanian Roman Catholic Parish, Bayonne",
       "city": "Bayonne",
       "closed": {
@@ -11774,6 +12700,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šv. Mykolo",
       "public_profile": "/parishes/sv-mykolo-bayonne-nj",
       "record_type": "parish",
@@ -11792,8 +12719,10 @@
     },
     {
       "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:chicago-1:st-michael-demolished"
+      ],
       "canonical_name": "Saint Michael Lithuanian Roman Catholic Parish, Chicago North Side",
       "city": "Chicago",
       "closed": {
@@ -11827,8 +12756,8 @@
       ]
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Michael the Archangel Parish, Scranton",
       "city": "Scranton",
@@ -11846,6 +12775,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šv. Mykolo",
       "public_profile": "/parishes/sv-mykolo-scranton-pa",
       "record_type": "parish",
@@ -11904,8 +12834,8 @@
       ]
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Our Lady of Siluva Lithuanian Roman Catholic Parish, Maizeville",
       "city": "Maizeville",
@@ -11923,6 +12853,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šiluvos Dievo Motinos",
       "public_profile": "/parishes/siluvos-dievo-motinos-maizeville-pa",
       "record_type": "parish",
@@ -12014,8 +12945,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Independent (National) parish, Town of Lake, Chicago, Chicago (Town of Lake), IL",
       "city": "Chicago (Town of Lake)",
@@ -12033,6 +12964,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "national_catholic_pncc",
+      "legacy_building_fate": "unknown",
       "name": "Independent (National) parish, Town of Lake, Chicago",
       "public_profile": "/parishes/parish-chicago-il-2",
       "record_type": "parish",
@@ -12045,8 +12977,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Jerusalem Lutheran Church, Collinsville",
       "city": "Collinsville",
@@ -12064,6 +12996,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "non_catholic_christian",
+      "legacy_building_fate": "standing",
       "name": "Jeruzalės liuteronų parapija",
       "public_profile": "/parishes/lithuanian-lutheran-church-collinsville-il",
       "record_type": "congregation",
@@ -12080,8 +13013,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Lietuva Colony Catholic Mission, Grand Prairie",
       "city": "Grand Prairie",
@@ -12099,6 +13032,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Lietuva Colony, Grand Prairie",
       "public_profile": "/parishes/parish-grand-prairie-ar",
       "record_type": "misija",
@@ -12115,8 +13049,8 @@
       ]
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Our Lady of Sorrows Lithuanian Roman Catholic Parish, Kearny-Harrison",
       "city": "Kearny",
@@ -12134,6 +13068,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Sopulingosios Dievo Motinos",
       "public_profile": "/parishes/lietuviu-baznycia-kearny-kearny-nj",
       "record_type": "parish",
@@ -12151,9 +13086,11 @@
       ]
     },
     {
-      "building_fate": "repurposed_secular",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:illinois-1:oglesby-repurposed"
+      ],
       "canonical_name": "Saint Constantine Lithuanian Roman Catholic Parish, Oglesby",
       "city": "Oglesby",
       "closed": {
@@ -12170,6 +13107,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Konstantino",
       "public_profile": "/parishes/sv-konstantino-oglesby-il",
       "record_type": "parish",
@@ -12187,8 +13125,8 @@
       ]
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saints Peter and Paul Lithuanian Roman Catholic Parish, Elizabeth",
       "city": "Elizabeth",
@@ -12206,6 +13144,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/sv-petro-ir-povilo-elizabeth-nj",
       "record_type": "parish",
@@ -12223,9 +13162,11 @@
       ]
     },
     {
-      "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:ef-5:esplen-school-repurposed"
+      ],
       "canonical_name": "Saint Vincent de Paul Lithuanian Roman Catholic Parish, Esplen",
       "city": "Esplen",
       "closed": {
@@ -12242,6 +13183,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "demolished",
       "name": "Šv. Vincento Pauliečio",
       "public_profile": "/parishes/sv-vincento-pauliecio-esplen-pa",
       "record_type": "parish",
@@ -12260,8 +13202,8 @@
       ]
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Vincent de Paul Lithuanian Roman Catholic Parish, Girardville",
       "city": "Girardville",
@@ -12279,6 +13221,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šv. Vincento de Paul",
       "public_profile": "/parishes/sv-vincento-de-paul-girardville-pa",
       "record_type": "parish",
@@ -12297,8 +13240,8 @@
       ]
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saints Peter and Paul Roman Catholic Parish, Grand Rapids",
       "city": "Grand Rapids",
@@ -12316,6 +13259,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/sv-petro-ir-povilo-grand-rapids-mi",
       "record_type": "parish",
@@ -12336,8 +13280,8 @@
       ]
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Paul Lithuanian Lutheran, Naugatuck, CT",
       "city": "Naugatuck",
@@ -12355,6 +13299,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "non_catholic_christian",
+      "legacy_building_fate": "standing",
       "name": "St. Paul Lithuanian Lutheran",
       "public_profile": "/parishes/paul-naugatuck-ct",
       "record_type": "parish",
@@ -12406,9 +13351,11 @@
       ]
     },
     {
-      "building_fate": "repurposed_secular",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:mne-1:cambridge-church-repurposed"
+      ],
       "canonical_name": "Immaculate Conception Lithuanian Roman Catholic Parish, Cambridge",
       "city": "Cambridge",
       "closed": {
@@ -12425,6 +13372,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_secular",
       "name": "Nekalto Prasidėjimo",
       "public_profile": "/parishes/sv-petro-cambridge-ma",
       "record_type": "parish",
@@ -12442,9 +13390,11 @@
       ]
     },
     {
-      "building_fate": "repurposed_secular",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:detroit:st-peter-site-repurposed-community-center"
+      ],
       "canonical_name": "St. Peter Lithuanian parish, Detroit",
       "city": "Detroit",
       "closed": {
@@ -12461,6 +13411,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Petro",
       "public_profile": "/parishes/sv-petro-detroit-mi",
       "record_type": "parish",
@@ -12512,8 +13463,8 @@
       ]
     },
     {
-      "building_fate": "repurposed_religious",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Providence of God Lithuanian Roman Catholic Parish, Chicago",
       "city": "Chicago",
@@ -12531,6 +13482,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_religious",
       "name": "Dievo Apvaizdos",
       "public_profile": "/parishes/dievo-apvaizdos-chicago-il",
       "record_type": "parish",
@@ -12548,8 +13500,8 @@
       ]
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Providence of God Lithuanian National Catholic Parish, Scranton",
       "city": "Scranton",
@@ -12567,6 +13519,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "national_catholic_pncc",
+      "legacy_building_fate": "standing",
       "name": "Dievo Apvaizdos",
       "public_profile": "/parishes/dievo-apvaizdos-scranton-pa",
       "record_type": "parish",
@@ -12626,8 +13579,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Sacred Heart, New Philadelphia, PA",
       "city": "New Philadelphia",
@@ -12645,6 +13598,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Švč. Jėzaus Širdies",
       "public_profile": "/parishes/sacred-heart-new-philadelphia-pa",
       "record_type": "parish",
@@ -12657,8 +13611,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Ss. Peter and Paul, Chicago, IL",
       "city": "Chicago",
@@ -12676,6 +13630,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/ss-peter-and-paul-chicago-il",
       "record_type": "parish",
@@ -12688,8 +13643,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Ss. Peter & Paul, Hazleton, PA",
       "city": "Hazleton",
@@ -12707,6 +13662,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/ss-peter-and-paul-hazleton-pa",
       "record_type": "parish",
@@ -12719,8 +13675,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Ss. Peter and Paul Lithuanian Parish, Homestead",
       "city": "Homestead",
@@ -12738,6 +13694,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/ss-peter-and-paul-homestead-pa",
       "record_type": "parish",
@@ -12756,8 +13713,8 @@
       ]
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Ss. Peter and Paul, Rockford, IL",
       "city": "Rockford",
@@ -12775,6 +13732,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/ss-peter-and-paul-rockford-il",
       "record_type": "parish",
@@ -12787,8 +13745,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Ss. Peter & Paul, Sugar Notch, PA",
       "city": "Sugar Notch",
@@ -12806,6 +13764,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/ss-peter-and-paul-sugar-notch-pa",
       "record_type": "parish",
@@ -12818,8 +13777,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Ss. Peter & Paul (now St. John XXIII), Tamaqua, PA",
       "city": "Tamaqua",
@@ -12837,6 +13796,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/ss-peter-and-paul-tamaqua-pa",
       "record_type": "parish",
@@ -12849,8 +13809,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Ss. Peter and Paul, Westville, IL",
       "city": "Westville",
@@ -12868,6 +13828,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "demolished",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/ss-peter-and-paul-westville-il",
       "record_type": "parish",
@@ -12880,8 +13841,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Alphonsus Parish and National Shrine, Baltimore",
       "city": "Baltimore",
@@ -12899,6 +13860,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šv. Alfonso",
       "public_profile": "/parishes/unnamed-lithuanian-parish-baltimore-md",
       "record_type": "parish",
@@ -12915,8 +13877,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Ambrose, Port Washington, WI",
       "city": "Port Washington",
@@ -12934,6 +13896,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Ambraziejaus",
       "public_profile": "/parishes/st-ambrose-port-washington-wi",
       "record_type": "misija",
@@ -12983,8 +13946,8 @@
       ]
     },
     {
-      "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Ann, Jersey City, NJ",
       "city": "Jersey City",
@@ -13002,6 +13965,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "demolished",
       "name": "Šv. Onos",
       "public_profile": "/parishes/st-ann-jersey-city-nj",
       "record_type": "parish",
@@ -13014,8 +13978,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "repurposed_religious",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Anthony Lithuanian Roman Catholic Parish, Ansonia",
       "city": "Ansonia",
@@ -13033,6 +13997,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Antano",
       "public_profile": "/parishes/lietuviu-baznycia-unnamed-ansonia-ct",
       "record_type": "parish",
@@ -13049,8 +14014,8 @@
       ]
     },
     {
-      "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Anthony Lithuanian Parish, Bridgeville",
       "city": "Bridgeville",
@@ -13068,6 +14033,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "demolished",
       "name": "Šv. Antano",
       "public_profile": "/parishes/st-anthony-bridgeville-pa",
       "record_type": "parish",
@@ -13085,8 +14051,8 @@
       ]
     },
     {
-      "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Anthony, Forest City, PA",
       "city": "Forest City",
@@ -13104,6 +14070,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "demolished",
       "name": "Šv. Antano",
       "public_profile": "/parishes/st-anthony-forest-city-pa",
       "record_type": "parish",
@@ -13116,8 +14083,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Anthony Lithuanian Parish, Kewanee",
       "city": "Kewanee",
@@ -13135,6 +14102,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Antano",
       "public_profile": "/parishes/st-anthony-kewanee-il",
       "record_type": "parish",
@@ -13152,8 +14120,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Bartholomew, Waukegan, IL",
       "city": "Waukegan",
@@ -13171,6 +14139,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Baltramiejaus",
       "public_profile": "/parishes/st-bartholomew-waukegan-il",
       "record_type": "parish",
@@ -13183,8 +14152,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Casimir, East Vandergrift, PA",
       "city": "East Vandergrift",
@@ -13202,6 +14171,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/st-casimir-east-vandergrift-pa",
       "record_type": "parish",
@@ -13215,8 +14185,10 @@
     },
     {
       "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:identity-1:kansas-city-demolished"
+      ],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Kansas City, Kansas",
       "city": "Kansas City",
       "closed": {
@@ -13249,8 +14221,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Casimir, McAdoo, PA",
       "city": "McAdoo",
@@ -13268,6 +14240,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/st-casimir-mcadoo-pa",
       "record_type": "parish",
@@ -13280,8 +14253,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Casimir Lithuanian Parish, Plymouth and Lynwood",
       "city": "Plymouth",
@@ -13299,6 +14272,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/st-casimir-plymouth-pa",
       "record_type": "parish",
@@ -13318,8 +14292,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Casimir, Racine, WI",
       "city": "Racine",
@@ -13337,6 +14311,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/st-casimir-racine-wi",
       "record_type": "parish",
@@ -13349,8 +14324,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Casimir, St. Clair, PA",
       "city": "St. Clair",
@@ -13368,6 +14343,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/st-casimir-st-clair-pa",
       "record_type": "parish",
@@ -13380,8 +14356,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Casimir Mission, St. Pete Beach, FL",
       "city": "St. Pete Beach",
@@ -13399,6 +14375,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/st-casimir-st-pete-beach-fl",
       "record_type": "misija",
@@ -13411,8 +14388,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Casimir Lithuanian Parish, Westfield",
       "city": "Westfield",
@@ -13430,6 +14407,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/st-casimir-westfield-ma",
       "record_type": "parish",
@@ -13447,8 +14425,8 @@
       ]
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Casimir, Wilkes-Barre, PA",
       "city": "Wilkes-Barre",
@@ -13466,6 +14444,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/st-casimir-wilkes-barre-pa",
       "record_type": "parish",
@@ -13478,8 +14457,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Francis, Athol, MA",
       "city": "Athol",
@@ -13497,6 +14476,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šv. Pranciškaus",
       "public_profile": "/parishes/st-francis-athol-ma",
       "record_type": "parish",
@@ -13509,8 +14489,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Saint Francis of Assisi Lithuanian Roman Catholic Parish, Minersville",
       "city": "Minersville",
@@ -13528,6 +14508,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Pranciškaus",
       "public_profile": "/parishes/st-francis-minersville-pa",
       "record_type": "parish",
@@ -13544,8 +14525,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Francis, Wilkes-Barre, PA",
       "city": "Wilkes-Barre",
@@ -13563,6 +14544,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Pranciškaus",
       "public_profile": "/parishes/st-francis-wilkes-barre-pa",
       "record_type": "parish",
@@ -13575,8 +14557,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Francis, Youngstown, OH",
       "city": "Youngstown",
@@ -13594,6 +14576,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Pranciškaus",
       "public_profile": "/parishes/st-francis-youngstown-oh",
       "record_type": "parish",
@@ -13606,8 +14589,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Gabriel, Milwaukee, WI",
       "city": "Milwaukee",
@@ -13625,6 +14608,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Gabrieliaus",
       "public_profile": "/parishes/st-gabriel-milwaukee-wi",
       "record_type": "parish",
@@ -13637,8 +14621,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. George, Albany, NY",
       "city": "Albany",
@@ -13656,6 +14640,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/st-george-albany-ny",
       "record_type": "parish",
@@ -13668,9 +14653,11 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate": "demolished",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:coverage-17:detroit-st-george"
+      ],
       "canonical_name": "St. George Lithuanian parish, Detroit",
       "city": "Detroit",
       "closed": {
@@ -13687,6 +14674,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/st-george-detroit-mi",
       "record_type": "parish",
@@ -13704,8 +14692,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. George, Saginaw, MI",
       "city": "Saginaw",
@@ -13723,6 +14711,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/st-george-saginaw-mi",
       "record_type": "parish",
@@ -13735,8 +14724,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. George Lithuanian Parish, Utica",
       "city": "Utica",
@@ -13754,6 +14743,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/st-george-utica-ny",
       "record_type": "parish",
@@ -13769,8 +14759,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Isidore Lithuanian Parish, Braddock",
       "city": "Braddock",
@@ -13788,6 +14778,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Izidoriaus",
       "public_profile": "/parishes/st-isidore-braddock-pa",
       "record_type": "parish",
@@ -13805,8 +14796,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. John the Baptist (Lithuanian 1905-1916), Baltimore, MD",
       "city": "Baltimore",
@@ -13824,6 +14815,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Jono",
       "public_profile": "/parishes/st-john-the-baptist-baltimore-md",
       "record_type": "parish",
@@ -13836,8 +14828,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Joseph, Binghamton, NY",
       "city": "Binghamton",
@@ -13855,6 +14847,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/st-joseph-binghamton-ny",
       "record_type": "parish",
@@ -13867,8 +14860,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Joseph Lithuanian Parish, Donora",
       "city": "Donora",
@@ -13886,6 +14879,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "demolished",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/st-joseph-donora-pa",
       "record_type": "parish",
@@ -13902,8 +14896,8 @@
       ]
     },
     {
-      "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Joseph, Duryea, PA",
       "city": "Duryea",
@@ -13921,6 +14915,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "demolished",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/st-joseph-duryea-pa",
       "record_type": "parish",
@@ -13933,8 +14928,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Joseph, Lowell, MA",
       "city": "Lowell",
@@ -13952,6 +14947,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/st-joseph-lowell-ma",
       "record_type": "parish",
@@ -13964,8 +14960,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Joseph (now Mother Teresa of Calcutta), Mahanoy City, PA",
       "city": "Mahanoy City",
@@ -13983,6 +14979,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/st-joseph-mahanoy-city-pa",
       "record_type": "parish",
@@ -13995,8 +14992,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Joseph, St. Louis, MO",
       "city": "St. Louis",
@@ -14014,6 +15011,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/st-joseph-st-louis-mo",
       "record_type": "parish",
@@ -14026,8 +15024,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Luke Parish, Bentleyville",
       "city": "Bentleyville",
@@ -14045,6 +15043,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Luko",
       "public_profile": "/parishes/st-luke-bentleyville-pa",
       "record_type": "parish",
@@ -14062,8 +15061,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Mary of the Angels, Brooklyn, NY",
       "city": "Brooklyn",
@@ -14081,6 +15080,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Marijos Angelų Karalienės",
       "public_profile": "/parishes/st-mary-of-the-angels-brooklyn-ny",
       "record_type": "parish",
@@ -14093,8 +15093,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Mary, Wanamie, PA",
       "city": "Wanamie",
@@ -14112,6 +15112,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Marijos",
       "public_profile": "/parishes/st-mary-wanamie-pa",
       "record_type": "parish",
@@ -14124,8 +15125,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Michael the Archangel Lithuanian Parish, Shamokin",
       "city": "Shamokin",
@@ -14143,6 +15144,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "demolished",
       "name": "Šv. Mykolo",
       "public_profile": "/parishes/st-michael-shamokin-pa",
       "record_type": "parish",
@@ -14160,8 +15162,8 @@
       ]
     },
     {
-      "building_fate": "unknown",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Peter, Akron, OH",
       "city": "Akron",
@@ -14179,6 +15181,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Petro",
       "public_profile": "/parishes/st-peter-akron-oh",
       "record_type": "parish",
@@ -14191,8 +15194,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Peter, Kenosha, WI",
       "city": "Kenosha",
@@ -14210,6 +15213,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "standing",
       "name": "Šv. Petro",
       "public_profile": "/parishes/st-peter-kenosha-wi",
       "record_type": "parish",
@@ -14222,8 +15226,8 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "St. Vincent de Paul Lithuanian Parish, Springfield",
       "city": "Springfield",
@@ -14241,6 +15245,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "demolished",
       "name": "Šv. Vincento Pauliečio",
       "public_profile": "/parishes/st-vincent-de-paul-springfield-il",
       "record_type": "parish",
@@ -14338,8 +15343,10 @@
     },
     {
       "building_fate": "demolished",
-      "building_fate_authority": "site_r10_baseline",
-      "building_fate_relationship_ids": [],
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:coal-1:holy-trinity-demolished"
+      ],
       "canonical_name": "Holy Trinity Lithuanian Roman Catholic Parish, Wilkes-Barre",
       "city": "Wilkes-Barre",
       "closed": {
@@ -14373,8 +15380,8 @@
       ]
     },
     {
-      "building_fate": "standing",
-      "building_fate_authority": "site_r10_baseline",
+      "building_fate": null,
+      "building_fate_authority": "unresolved",
       "building_fate_relationship_ids": [],
       "canonical_name": "Zion Lithuanian Lutheran, Oak Lawn, IL",
       "city": "Oak Lawn",
@@ -14392,6 +15399,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "non_catholic_christian",
+      "legacy_building_fate": "standing",
       "name": "Zion Lithuanian Lutheran",
       "public_profile": "/parishes/zion-lithuanian-lutheran-oak-lawn-il",
       "record_type": "parish",
@@ -14606,7 +15614,7 @@
       "unit": "distinct U.S. Roman Catholic parish institution"
     }
   },
-  "revision_id": "canonical-infographic-units-2026-08-03-living-worship-sites",
+  "revision_id": "canonical-infographic-units-2026-08-03-building-condition-coverage",
   "schema": "culturenet-parish-infographic-projection.v1",
   "unit_contracts": [
     {
@@ -14622,7 +15630,7 @@
     {
       "counted_in_public_institution_total": false,
       "id": "physical_worship_site_history",
-      "population": 134,
+      "population": 130,
       "unit": "accepted physical church, chapel, shrine, or worship site"
     },
     {

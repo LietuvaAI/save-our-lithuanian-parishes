@@ -91,7 +91,7 @@ for (const [label, actual, expected] of [
   ["Roman Catholic mission institutions in combined scope", romanMissionHistory.length, 5],
   ["closed Roman Catholic parish and mission institutions", closedRomanInstitutions.length, 90],
   ["Roman Catholic institutions retaining Lithuanian worship", retainingLithuanianWorship.length, 14],
-  ["physical worship-site histories", worshipSites.length, 134],
+  ["physical worship-site histories", worshipSites.length, 130],
 ]) {
   if (actual !== expected) errors.push(`${label}: ${actual} != ${expected}`);
 }
@@ -137,6 +137,85 @@ for (const siteId of currentWorshipSiteIds) {
   );
   if (!site || conditions.size !== 1 || !conditions.has("building-standing")) {
     errors.push(`${siteId}: current worship site lacks an explicit standing-only condition`);
+  }
+}
+
+const currentConditionTypes = (site) =>
+  site.condition_relationships
+    .filter(
+      (row) =>
+        row.relationship_type === "building-demolished" || row.date?.end == null,
+    )
+    .map((row) => row.relationship_type);
+const resolveSiteCondition = (site) => {
+  const current = new Set(currentConditionTypes(site));
+  return infographic.condition_resolution_contract.precedence.find((condition) =>
+    current.has(condition),
+  ) ?? null;
+};
+const expectedConditionCounts = new Map([
+  ["building-demolished", 23],
+  ["building-standing", 23],
+  ["building-repurposed", 16],
+  ["building-listed-for-sale", 1],
+  [null, 67],
+]);
+const actualConditionCounts = new Map();
+for (const site of worshipSites) {
+  const condition = resolveSiteCondition(site);
+  actualConditionCounts.set(condition, (actualConditionCounts.get(condition) ?? 0) + 1);
+}
+for (const [condition, expected] of expectedConditionCounts) {
+  const actual = actualConditionCounts.get(condition) ?? 0;
+  if (actual !== expected) errors.push(`${condition ?? "not established"}: ${actual} != ${expected}`);
+}
+const terminalAuthority = institutions.filter(
+  (row) => row.building_fate_authority === "terminal_site_condition",
+);
+if (terminalAuthority.length !== 43) {
+  errors.push(`terminal-site building-fate authority: ${terminalAuthority.length} != 43`);
+}
+for (const institution of institutions) {
+  if (
+    institution.building_fate_authority === "unresolved" &&
+    institution.building_fate !== null
+  ) {
+    errors.push(`${institution.registry_slug}: unresolved fate leaks a rendered value`);
+  }
+  if (institution.building_fate_authority === "site_r10_baseline") {
+    errors.push(`${institution.registry_slug}: legacy baseline is rendered as canonical fate`);
+  }
+}
+const expectedPrecedence = [
+  "building-demolished",
+  "building-repurposed",
+  "building-listed-for-sale",
+  "building-standing",
+];
+if (
+  JSON.stringify(infographic.condition_resolution_contract.precedence) !==
+  JSON.stringify(expectedPrecedence)
+) {
+  errors.push("building-condition precedence contract drifted");
+}
+const darien = sites.find(
+  (site) => site.slug === "st-john-lutheran-cass-avenue-darien-il",
+);
+if (!darien || resolveSiteCondition(darien) !== "building-standing") {
+  errors.push("Darien living-worship site lacks canonical standing evidence");
+}
+for (const slug of [
+  "our-lady-vilna-cleared-lot-eynon-pa",
+  "st-mary-annunciation-former-lot-kingston-pa",
+  "st-mary-national-vacant-lot-reed-philadelphia-pa",
+  "st-vincent-replacement-structure-esplen-pa",
+]) {
+  const site = sites.find((row) => row.slug === slug);
+  if (site?.site_class !== "redeveloped_site") {
+    errors.push(`${slug}: post-demolition entity must be a redeveloped site`);
+  }
+  if (!(site?.related_public_profiles?.length > 0)) {
+    errors.push(`${slug}: redeveloped site lacks a lineage-backed public profile`);
   }
 }
 for (const institution of institutions) {
@@ -193,6 +272,19 @@ if (!southfieldSite || southfieldSite.first_documented_year !== 1973) {
 }
 if (southfieldSite?.demolished_year !== null) {
   errors.push("Divine Providence Southfield current worship site is marked demolished");
+}
+
+for (const slug of ["casimir-freeland-pa", "gateofdawn-manhattan-ny"]) {
+  const institution = institutions.find((row) => row.registry_slug === slug);
+  if (institution?.founded.year !== null || institution?.founded.authority !== "unresolved") {
+    errors.push(`${slug}: non-founding historical date must remain off the founding timeline`);
+  }
+}
+const shenandoah = institutions.find(
+  (row) => row.registry_slug === "george-shenandoah-pa",
+);
+if (shenandoah?.founded.year !== 1891) {
+  errors.push("Saint George Shenandoah must begin in 1891, after the distinct 1872 joint predecessor");
 }
 
 const institutionByProfile = new Map(
