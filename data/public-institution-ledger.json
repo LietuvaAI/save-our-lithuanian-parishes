@@ -3,18 +3,18 @@
   "authority": {
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
-    "revisionId": "canonical-public-census-2026-08-02-mundelein",
-    "contentHash": "sha256:d6ffc38153548995aa3975a713e3609e69e34679bec708a8ed1ee6d3e211df3c"
+    "revisionId": "canonical-public-census-2026-08-03-living-worship-sites",
+    "contentHash": "sha256:0939f80de42cf16d6451a4d6d1510b6fc5b4c1eab84081a12dc024ab99a4264f"
   },
-  "registryRevision": 18,
-  "registryDate": "2026-08-02",
+  "registryRevision": 19,
+  "registryDate": "2026-08-03",
   "claim": "The current documented record contains 155 distinct U.S. Lithuanian religious institutions.",
   "inclusionRule": "Count one canonical U.S. institution when CultureNet publishes it as a parish, mission, or congregation. Buildings, duplicate aliases, historical attempts, hosted worship, research leads, and comparators remain linked context and never increase this total.",
   "counts": {
     "publicUSInstitutions": 155,
     "independentlySupported": 134,
     "singleSourceAttested": 21,
-    "profilesPendingDeepCase": 45,
+    "profilesPendingDeepCase": 44,
     "byRecordType": {
       "congregation": 6,
       "misija": 5,
@@ -3056,20 +3056,26 @@
       "canonicalEntityId": "cn:institution:st-ann-beverly-shores-in",
       "profile": "/parishes/st-ann-beverly-shores-in",
       "name": "Šv. Onos",
-      "canonicalName": "Šv. Onos, Beverly Shores, IN",
-      "aliases": [],
+      "canonicalName": "Saint Ann of the Dunes Lithuanian Catholic community, Beverly Shores",
+      "aliases": [
+        "St. Ann of the Dunes",
+        "Šv. Onos"
+      ],
       "city": "Beverly Shores",
       "state": "IN",
       "recordType": "parish",
       "institutionClass": "roman_catholic",
       "identitySupport": "multi_source_corroborated",
-      "canonicalDetailStatus": "pending_deep_case",
+      "canonicalDetailStatus": "mass_continues_at_successor_worship_site",
       "protectedCampaign": false,
       "assertionIds": [
-        "assert:cib-9:st-ann-beverly-shores-in:identity"
+        "assert:living-sites-16:st-ann-current-community",
+        "assert:living-sites-16:st-ann-of-the-dunes-golfwood-beverly-shores-in-standing",
+        "assert:living-sites-16:st-ann-site"
       ],
       "sourceArtifactIds": [
-        "src:cib-9:st-ann-beverly-shores-in:research-index-2026-07-31"
+        "src:living-sites-16:st-ann-diocese",
+        "src:living-sites-16:st-ann-parish"
       ],
       "sourceFamilies": [
         "draugas",
@@ -3098,10 +3104,16 @@
       ],
       "canonicalSources": [
         {
-          "sourceArtifactId": "src:cib-9:st-ann-beverly-shores-in:research-index-2026-07-31",
-          "label": "Corroborated identity evidence for Šv. Onos, Beverly Shores",
-          "locator": "research-index public_registry_slug: st-ann-beverly-shores-in",
-          "url": "repo://culturenet-brain/docs/research/parish-canon/research-index.json"
+          "sourceArtifactId": "src:living-sites-16:st-ann-diocese",
+          "label": "Diocese of Gary — St. Ann of the Dunes (St. Patrick Parish)",
+          "locator": "St. Ann of the Dunes is a worship site of St. Patrick Catholic Community in Chesterton",
+          "url": "https://dcgary.org/parish/st-ann-dunes-beverly-shores"
+        },
+        {
+          "sourceArtifactId": "src:living-sites-16:st-ann-parish",
+          "label": "St. Ann of the Dunes current parish and Mass information",
+          "locator": "433 E. Golfwood Road worship site and current Mass schedule",
+          "url": "https://www.st-ann-of-the-dunes.org/mass-schedule/"
         }
       ]
     },

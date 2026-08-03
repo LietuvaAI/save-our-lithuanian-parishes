@@ -91,6 +91,7 @@ for (const [label, actual, expected] of [
   ["Roman Catholic mission institutions in combined scope", romanMissionHistory.length, 5],
   ["closed Roman Catholic parish and mission institutions", closedRomanInstitutions.length, 90],
   ["Roman Catholic institutions retaining Lithuanian worship", retainingLithuanianWorship.length, 14],
+  ["physical worship-site histories", worshipSites.length, 134],
 ]) {
   if (actual !== expected) errors.push(`${label}: ${actual} != ${expected}`);
 }
@@ -108,6 +109,35 @@ if (sites.some((row) => row.counted_in_public_institution_total !== false)) {
 }
 if (sites.some((row) => row.site_class === "unclassified")) {
   errors.push("an unclassified physical site remains in the projection");
+}
+const currentWorshipSiteIds = new Set(
+  retainingLithuanianWorship.flatMap(
+    (institution) => institution.terminal_worship_site_ids ?? [],
+  ),
+);
+if (currentWorshipSiteIds.size !== 15) {
+  errors.push(`current Catholic network uses ${currentWorshipSiteIds.size} sites, expected 15`);
+}
+for (const institution of retainingLithuanianWorship) {
+  if (!(institution.terminal_worship_site_ids?.length > 0)) {
+    errors.push(`${institution.registry_slug}: living line lacks a terminal worship site`);
+  }
+  if (
+    institution.building_fate !== "standing" ||
+    institution.building_fate_authority !== "terminal_site_condition" ||
+    !(institution.building_fate_relationship_ids?.length > 0)
+  ) {
+    errors.push(`${institution.registry_slug}: living building summary lacks canonical terminal-site standing evidence`);
+  }
+}
+for (const siteId of currentWorshipSiteIds) {
+  const site = sites.find((row) => row.culturenet_entity_id === siteId);
+  const conditions = new Set(
+    site?.condition_relationships.map((row) => row.relationship_type) ?? [],
+  );
+  if (!site || conditions.size !== 1 || !conditions.has("building-standing")) {
+    errors.push(`${siteId}: current worship site lacks an explicit standing-only condition`);
+  }
 }
 for (const institution of institutions) {
   if (

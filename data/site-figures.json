@@ -1,18 +1,18 @@
 {
   "generatedFrom": {
-    "registryRevision": 18,
-    "registryDate": "2026-08-02",
-    "canonicalPublicationRevision": "canonical-public-census-2026-08-02-mundelein",
-    "canonicalPublicationHash": "sha256:d6ffc38153548995aa3975a713e3609e69e34679bec708a8ed1ee6d3e211df3c",
-    "canonicalInfographicRevision": "canonical-infographic-units-2026-08-02-mundelein",
-    "canonicalInfographicHash": "sha256:de55f0713bc82d3bb08d6979095422e8071eaa3cf2aaf3eb308c1ec534655c41",
+    "registryRevision": 19,
+    "registryDate": "2026-08-03",
+    "canonicalPublicationRevision": "canonical-public-census-2026-08-03-living-worship-sites",
+    "canonicalPublicationHash": "sha256:0939f80de42cf16d6451a4d6d1510b6fc5b4c1eab84081a12dc024ab99a4264f",
+    "canonicalInfographicRevision": "canonical-infographic-units-2026-08-03-living-worship-sites",
+    "canonicalInfographicHash": "sha256:ac458819c78df57ef6d1bdee50aecc6598e1e87e967d5537ef8c3ca73d2d0aa1",
     "networkChecked": "2026-08-02"
   },
   "publicUS": {
     "records": 155,
     "independentlySupported": 134,
     "singleSourceAttested": 21,
-    "profilesPendingDeepCase": 45,
+    "profilesPendingDeepCase": 44,
     "byRecordType": {
       "congregation": 6,
       "misija": 5,
@@ -83,8 +83,8 @@
     "retainingLithuanianWorship": 14
   },
   "physicalSites": {
-    "worshipSites": 133,
-    "allBuildingSiteEntities": 170
+    "worshipSites": 134,
+    "allBuildingSiteEntities": 171
   },
   "continuity": {
     "relationships": 51

@@ -215,6 +215,20 @@
         "data/sielovada-us-network.json",
         "data/candidates/registry-revision-18-mundelein-current-life-2026-08-02.md"
       ]
+    },
+    {
+      "version": 19,
+      "date": "2026-08-03",
+      "registryRecords": 193,
+      "publicUSRecords": 155,
+      "usRomanCatholicParishes": 132,
+      "summary": "Projected 15 explicitly standing current worship sites across 14 living Roman Catholic institution lines, including the newly modeled St. Ann of the Dunes site in Beverly Shores.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/canonical-public-census-adjudications.json",
+        "data/candidates/registry-revision-19-living-worship-sites-2026-08-03.md"
+      ]
     }
   ]
 }
