@@ -271,6 +271,20 @@
         "data/canonical-public-census-adjudications.json",
         "data/canonical-infographic-projection.json"
       ]
+    },
+    {
+      "version": 23,
+      "date": "2026-08-03",
+      "registryRecords": 193,
+      "publicUSRecords": 155,
+      "usRomanCatholicParishes": 132,
+      "summary": "Imported typed Brain-owned Catholic jurisdiction names and diocese/archdiocese classifications without changing public populations.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/canonical-public-census-adjudications.json",
+        "data/canonical-infographic-projection.json"
+      ]
     }
   ]
 }

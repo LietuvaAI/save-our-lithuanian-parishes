@@ -23662,7 +23662,7 @@
     }
   ],
   "registryRevision": {
-    "version": 22,
+    "version": 23,
     "date": "2026-08-03",
     "changelog": [
       "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
@@ -23708,15 +23708,16 @@
       "Registry Revision 19: projected explicit standing conditions for the current Lithuanian Catholic worship network, linked the missing Beverly Shores site and Chicago Immaculate Conception lineage, and made terminal-site evidence authoritative for unambiguous institution building summaries.",
       "Registry Revision 20: corrected worship-building classification, promoted nine evidence-backed site conditions, rejected semantically unresolved founding dates, and limited institution building summaries to terminal-site authority.",
       "Registry Revision 21: attached the verified direct Žiburio archive item for the Būtėnas Shenandoah chronology source without changing canonical counts or adjudications.",
-      "Registry Revision 22: imported the Brain-owned current pastoral network, moved Dayton's present Lithuanian-worship claim to unresolved, and added Washington Epiphany as non-census hosted pastoral context."
+      "Registry Revision 22: imported the Brain-owned current pastoral network, moved Dayton's present Lithuanian-worship claim to unresolved, and added Washington Epiphany as non-census hosted pastoral context.",
+      "Registry Revision 23: imported typed Brain-owned Catholic jurisdictions so public labels distinguish dioceses from archdioceses without site-side inference."
     ],
-    "contentHash": "f3678b4c1e7fcb0fa1d789ca34e647de390e6dcd23b0811ebb4bea93db832cfa"
+    "contentHash": "e469ff4556a1deafd23e607245aa5c2dc58499b2a794ded3d90810498e109f2f"
   },
   "publicationAuthority": {
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
     "revisionId": "canonical-public-census-2026-08-03-brain-single-source",
-    "contentHash": "sha256:69a62cce5013de13c53d5d18d61a61c73af9aeda2860d10e72a4803c1d4978dd",
+    "contentHash": "sha256:2ca8b79e2ef560002c521e73ae8083674b43fb4a90e97fa9226788b082686c7a",
     "publicUSInstitutions": 155,
     "synchronized": "2026-08-03"
   }

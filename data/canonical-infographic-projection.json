@@ -2,7 +2,7 @@
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
-    "publication_projection_hash": "sha256:69a62cce5013de13c53d5d18d61a61c73af9aeda2860d10e72a4803c1d4978dd",
+    "publication_projection_hash": "sha256:2ca8b79e2ef560002c521e73ae8083674b43fb4a90e97fa9226788b082686c7a",
     "publication_projection_revision": "canonical-public-census-2026-08-03-brain-single-source",
     "repository": "LietuvaAI/culturenet-brain"
   },
@@ -7673,7 +7673,7 @@
       "building-standing"
     ]
   },
-  "content_hash": "sha256:1e088a46ae469cebc5661fcc00738e7483acbb64128ad1c1bba816195ff80e37",
+  "content_hash": "sha256:3c937db0e2aff888e196a40b0c0a2b5093f7bcc09969b39439fbfec8c55d26ef",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -10396,6 +10396,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Chicago",
+        "jurisdiction_type": "archdiocese",
+        "key": "Chicago",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Visų Šventųjų",
       "public_profile": "/parishes/all-saints-chicago-il",
@@ -10431,6 +10438,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "national_catholic_pncc",
+      "jurisdiction": null,
       "legacy_building_fate": "unknown",
       "name": "Visų Šventųjų",
       "public_profile": "/parishes/all-saints-wilkes-barre-pa",
@@ -10466,6 +10474,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "independent_catholic",
+      "jurisdiction": null,
       "legacy_building_fate": "unknown",
       "name": "Visų Šventųjų",
       "public_profile": "/parishes/allsaints-worcester-ma",
@@ -10501,6 +10510,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Hartford",
+        "jurisdiction_type": "archdiocese",
+        "key": "Hartford",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šv. Andriejaus",
       "public_profile": "/parishes/sv-andriejaus-new-britain-ct",
@@ -10543,6 +10559,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Philadelphia",
+        "jurisdiction_type": "archdiocese",
+        "key": "Philadelphia",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Šv. Andriejaus",
       "public_profile": "/parishes/sv-andriejaus-philadelphia-pa",
       "record_type": "parish",
@@ -10587,6 +10610,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "non_catholic_christian",
+      "jurisdiction": null,
       "name": "Lietuvių Evangelikų Liuteronų Tėviškės Parapija",
       "public_profile": "/parishes/lietuviu-evangeliku-liuteronu-teviskes-parapija-darien-il",
       "record_type": "parish",
@@ -10628,6 +10652,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Scranton",
+        "jurisdiction_type": "diocese",
+        "key": "Scranton",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Šv. Onos",
       "public_profile": "/parishes/sv-onos-luzerne-pa",
       "record_type": "parish",
@@ -10669,6 +10700,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Peoria",
+        "jurisdiction_type": "diocese",
+        "key": "Peoria",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Onos",
       "public_profile": "/parishes/sv-onos-spring-valley-il",
@@ -10710,6 +10748,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Brooklyn",
+        "jurisdiction_type": "diocese",
+        "key": "Brooklyn",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Švč. M. Marijos Apreiškimo",
       "public_profile": "/parishes/svc-m-marijos-apreiskimo-brooklyn-ny",
       "record_type": "parish",
@@ -10749,6 +10794,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Scranton",
+        "jurisdiction_type": "diocese",
+        "key": "Scranton",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "demolished",
       "name": "Šv. Marijos Apreiškimo",
       "public_profile": "/parishes/sv-marijos-apreiskimo-kingston-pa",
@@ -10791,6 +10843,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Chicago",
+        "jurisdiction_type": "archdiocese",
+        "key": "Chicago",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Šv. Antano",
       "public_profile": "/parishes/sv-antano-cicero-il",
       "record_type": "parish",
@@ -10832,6 +10891,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Detroit",
+        "jurisdiction_type": "archdiocese",
+        "key": "Detroit",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šv. Antano",
       "public_profile": "/parishes/sv-antano-detroit-mi",
@@ -10873,6 +10939,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Omaha",
+        "jurisdiction_type": "archdiocese",
+        "key": "Omaha",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Antano",
       "public_profile": "/parishes/sv-antano-omaha-ne",
@@ -10915,6 +10988,13 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Philadelphia",
+        "jurisdiction_type": "archdiocese",
+        "key": "Philadelphia",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "St. Anthony's Church, Philadelphia",
       "public_profile": "/parishes/anthony-philadelphia-pa",
@@ -10954,6 +11034,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Pittsburgh",
+        "jurisdiction_type": "diocese",
+        "key": "Pittsburgh",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Dangun Žengimo",
       "public_profile": "/parishes/ascension-pittsburgh-pa",
@@ -10989,6 +11076,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Grand Rapids",
+        "jurisdiction_type": "diocese",
+        "key": "Grand Rapids",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "St. Bernard Parish",
       "public_profile": "/parishes/bernard-irons-mi",
@@ -11024,6 +11118,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Albany",
+        "jurisdiction_type": "diocese",
+        "key": "Albany",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-amsterdam-ny",
@@ -11063,6 +11164,13 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Boston",
+        "jurisdiction_type": "archdiocese",
+        "key": "Boston",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "St. Joseph / St. Casimir Parish (first Boston parish)",
       "public_profile": "/parishes/casimir-boston-ma",
@@ -11105,6 +11213,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Boston",
+        "jurisdiction_type": "archdiocese",
+        "key": "Boston",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-brockton-ma",
@@ -11145,6 +11260,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Chicago",
+        "jurisdiction_type": "archdiocese",
+        "key": "Chicago",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-chicago-il",
@@ -11186,6 +11308,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Cleveland",
+        "jurisdiction_type": "diocese",
+        "key": "Cleveland",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-cleveland-oh",
       "record_type": "parish",
@@ -11226,6 +11355,13 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Scranton",
+        "jurisdiction_type": "diocese",
+        "key": "Scranton",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/casimir-freeland-pa",
@@ -11263,6 +11399,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Gary",
+        "jurisdiction_type": "diocese",
+        "key": "Gary",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-gary-in",
@@ -11306,6 +11449,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Los Angeles",
+        "jurisdiction_type": "archdiocese",
+        "key": "Los Angeles",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-los-angeles-ca",
       "record_type": "parish",
@@ -11344,6 +11494,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Manchester",
+        "jurisdiction_type": "diocese",
+        "key": "Manchester",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-nashua-nh",
@@ -11383,6 +11540,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Hartford",
+        "jurisdiction_type": "archdiocese",
+        "key": "Hartford",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-new-haven-ct",
@@ -11424,6 +11588,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Paterson",
+        "jurisdiction_type": "diocese",
+        "key": "Paterson",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-paterson-nj",
@@ -11464,6 +11635,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Philadelphia",
+        "jurisdiction_type": "archdiocese",
+        "key": "Philadelphia",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-philadelphia-pa",
@@ -11504,6 +11682,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Pittsburgh",
+        "jurisdiction_type": "diocese",
+        "key": "Pittsburgh",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-pittsburgh-pa",
@@ -11543,6 +11728,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Scranton",
+        "jurisdiction_type": "diocese",
+        "key": "Scranton",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-pittston-pa",
@@ -11583,6 +11775,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Providence",
+        "jurisdiction_type": "diocese",
+        "key": "Providence",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-providence-ri",
@@ -11624,6 +11823,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Sioux City",
+        "jurisdiction_type": "diocese",
+        "key": "Sioux City",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-sioux-city-ia",
       "record_type": "parish",
@@ -11664,6 +11870,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Worcester",
+        "jurisdiction_type": "diocese",
+        "key": "Worcester",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-worcester-ma",
@@ -11705,6 +11918,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "non_catholic_christian",
+      "jurisdiction": null,
       "name": "Lithuanian Evangelical Parish",
       "public_profile": "/parishes/cong-lithuanian-evangelical-parish",
       "record_type": "congregation",
@@ -11739,6 +11953,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "non_catholic_christian",
+      "jurisdiction": null,
       "name": "Chicago Evangelical Reformed Church",
       "public_profile": "/parishes/evangelical-reformed-chicago",
       "record_type": "congregation",
@@ -11779,6 +11994,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "non_catholic_christian",
+      "jurisdiction": null,
       "name": "First Lutheran Church, Boston (Lithuanian congregation)",
       "public_profile": "/parishes/first-lutheran-boston",
       "record_type": "congregation",
@@ -11817,6 +12033,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Gary",
+        "jurisdiction_type": "diocese",
+        "key": "Gary",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Šv. Pranciškaus",
       "public_profile": "/parishes/sv-pranciskaus-east-chicago-in",
       "record_type": "parish",
@@ -11855,6 +12078,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Boston",
+        "jurisdiction_type": "archdiocese",
+        "key": "Boston",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Pranciškaus",
       "public_profile": "/parishes/sv-pranciskaus-lawrence-ma",
@@ -11894,6 +12124,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Scranton",
+        "jurisdiction_type": "diocese",
+        "key": "Scranton",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "demolished",
       "name": "Nekaltojo Prasidėjimo-Aušros Vartų",
       "public_profile": "/parishes/nekaltojo-prasidejimo-ausros-vartu-archbald-pa",
@@ -11934,6 +12171,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Chicago",
+        "jurisdiction_type": "archdiocese",
+        "key": "Chicago",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Aušros Vartų",
       "public_profile": "/parishes/ausros-vartu-chicago-il",
@@ -11975,6 +12219,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of New York",
+        "jurisdiction_type": "archdiocese",
+        "key": "New York",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Aušros Vartų",
       "public_profile": "/parishes/ausros-vartu-manhattan-ny",
       "record_type": "parish",
@@ -12014,6 +12265,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Worcester",
+        "jurisdiction_type": "diocese",
+        "key": "Worcester",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_religious",
       "name": "Aušros Vartų",
       "public_profile": "/parishes/ausros-vartu-worcester-ma",
@@ -12053,6 +12311,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Bridgeport",
+        "jurisdiction_type": "diocese",
+        "key": "Bridgeport",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/sv-jurgio-bridgeport-ct",
@@ -12095,6 +12360,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Brooklyn",
+        "jurisdiction_type": "diocese",
+        "key": "Brooklyn",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/sv-jurgio-brooklyn-ny",
       "record_type": "parish",
@@ -12135,6 +12407,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Chicago",
+        "jurisdiction_type": "archdiocese",
+        "key": "Chicago",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "demolished",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/sv-jurgio-chicago-il",
@@ -12173,6 +12452,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Cleveland",
+        "jurisdiction_type": "diocese",
+        "key": "Cleveland",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/sv-jurgio-cleveland-oh",
@@ -12215,6 +12501,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Boston",
+        "jurisdiction_type": "archdiocese",
+        "key": "Boston",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/lietuviu-baznycia-unnamed-haverhill-ma",
       "record_type": "parish",
@@ -12256,6 +12549,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Chicago",
+        "jurisdiction_type": "archdiocese",
+        "key": "Chicago",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Pal. Jurgio Matulaičio Misija",
       "public_profile": "/parishes/pal-jurgio-matulaicio-misija-lemont-il",
       "record_type": "misija",
@@ -12294,6 +12594,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Buffalo",
+        "jurisdiction_type": "diocese",
+        "key": "Buffalo",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/sv-jurgio-niagara-falls-ny",
@@ -12334,6 +12641,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Boston",
+        "jurisdiction_type": "archdiocese",
+        "key": "Boston",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/sv-jurgio-norwood-ma",
@@ -12375,6 +12689,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Philadelphia",
+        "jurisdiction_type": "archdiocese",
+        "key": "Philadelphia",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/sv-jurgio-philadelphia-pa",
@@ -12416,6 +12737,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "national_catholic_pncc",
+      "jurisdiction": null,
       "legacy_building_fate": "unknown",
       "name": "St. George Parish",
       "public_profile": "/parishes/george-pittsburgh-pa",
@@ -12455,6 +12777,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Rochester",
+        "jurisdiction_type": "diocese",
+        "key": "Rochester",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/sv-jurgio-rochester-ny",
@@ -12498,6 +12827,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Allentown",
+        "jurisdiction_type": "diocese",
+        "key": "Allentown",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/sv-jurgio-shenandoah-pa",
       "record_type": "parish",
@@ -12536,6 +12872,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Albany",
+        "jurisdiction_type": "diocese",
+        "key": "Albany",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Kryžiaus",
       "public_profile": "/parishes/holy-cross-schenectady-ny",
@@ -12573,6 +12916,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "independent_catholic",
+      "jurisdiction": null,
       "name": "Šv. Kryžiaus",
       "public_profile": "/parishes/lncc-congregation-westville-il",
       "record_type": "congregation",
@@ -12611,6 +12955,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Newark",
+        "jurisdiction_type": "archdiocese",
+        "key": "Newark",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "demolished",
       "name": "Švč. Trejybės",
       "public_profile": "/parishes/lietuviu-baznycia-unnamed-newark-nj",
@@ -12652,6 +13003,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Chicago",
+        "jurisdiction_type": "archdiocese",
+        "key": "Chicago",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šv. Kryžiaus",
       "public_profile": "/parishes/sv-kryziaus-chicago-il",
@@ -12694,6 +13052,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Cleveland",
+        "jurisdiction_type": "diocese",
+        "key": "Cleveland",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Šv. Kryžiaus",
       "public_profile": "/parishes/sv-kryziaus-dayton-oh",
       "record_type": "parish",
@@ -12734,6 +13099,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Harrisburg",
+        "jurisdiction_type": "diocese",
+        "key": "Harrisburg",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Kryžiaus",
       "public_profile": "/parishes/sv-kryziaus-mount-carmel-pa",
@@ -12773,6 +13145,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Grand Rapids",
+        "jurisdiction_type": "diocese",
+        "key": "Grand Rapids",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "St. Ignatius Parish",
       "public_profile": "/parishes/ignatius-luther-mi",
@@ -12810,6 +13189,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Chicago",
+        "jurisdiction_type": "archdiocese",
+        "key": "Chicago",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Švč. M. Marijos Nekalto Prasidėjimo",
       "public_profile": "/parishes/svc-m-marijos-nekalto-prasidejimo-chicago-il",
       "record_type": "parish",
@@ -12849,6 +13235,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Milwaukee",
+        "jurisdiction_type": "archdiocese",
+        "key": "Milwaukee",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Nekaltojo Prasidėjimo",
       "public_profile": "/parishes/immaculate-conception-sheboygan-wi",
@@ -12884,6 +13277,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Belleville",
+        "jurisdiction_type": "diocese",
+        "key": "Belleville",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Nekaltojo Prasidėjimo",
       "public_profile": "/parishes/nekaltojo-prasidejimo-east-st-louis-il",
@@ -12924,6 +13324,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "national_catholic_pncc",
+      "jurisdiction": null,
       "legacy_building_fate": "repurposed_religious",
       "name": "Saldžiausios Jėzaus Širdies",
       "public_profile": "/parishes/saldziausios-jezaus-sirdies-lawrence-ma",
@@ -12962,6 +13363,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Allentown",
+        "jurisdiction_type": "diocese",
+        "key": "Allentown",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Jono",
       "public_profile": "/parishes/sv-jono-coaldale-pa",
@@ -13006,6 +13414,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Erie",
+        "jurisdiction_type": "diocese",
+        "key": "Erie",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/joseph-dubois-pa",
@@ -13045,6 +13460,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Scranton",
+        "jurisdiction_type": "diocese",
+        "key": "Scranton",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/sv-juozapo-nanticoke-pa",
@@ -13085,6 +13507,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Scranton",
+        "jurisdiction_type": "diocese",
+        "key": "Scranton",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/sv-juozapo-scranton-pa",
@@ -13125,6 +13554,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Chicago",
+        "jurisdiction_type": "archdiocese",
+        "key": "Chicago",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/sv-juozapo-south-chicago-il",
@@ -13167,6 +13603,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Hartford",
+        "jurisdiction_type": "archdiocese",
+        "key": "Hartford",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/sv-juozapo-waterbury-ct",
@@ -13210,6 +13653,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Allentown",
+        "jurisdiction_type": "diocese",
+        "key": "Allentown",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Lietuvių bažnyčia (unnamed)",
       "public_profile": "/parishes/lithuanian-church-middleport-pa",
@@ -13245,6 +13695,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "independent_catholic",
+      "jurisdiction": null,
       "legacy_building_fate": "unknown",
       "name": "Visų Šventųjų",
       "public_profile": "/parishes/lithuanian-national-catholic-parish-waterbury-ct",
@@ -13280,6 +13731,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "independent_catholic",
+      "jurisdiction": null,
       "legacy_building_fate": "unknown",
       "name": "St. Mary / Our Lady of Šiluva",
       "public_profile": "/parishes/mary-chicago-il",
@@ -13319,6 +13771,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Grand Rapids",
+        "jurisdiction_type": "diocese",
+        "key": "Grand Rapids",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "St. Mary Parish",
       "public_profile": "/parishes/mary-custer-mi",
@@ -13356,6 +13815,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Allentown",
+        "jurisdiction_type": "diocese",
+        "key": "Allentown",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Šv. M. Marijos Apsireiškimo",
       "public_profile": "/parishes/sv-m-marijos-apsireiskimo-frackville-pa",
       "record_type": "parish",
@@ -13398,6 +13864,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "national_catholic_pncc",
+      "jurisdiction": null,
       "legacy_building_fate": "demolished",
       "name": "Šv. Marijos Tautinė Katalikų Parapija",
       "public_profile": "/parishes/sv-marijos-tautine-kataliku-parapija-philadelphia-pa",
@@ -13438,6 +13905,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Newark",
+        "jurisdiction_type": "archdiocese",
+        "key": "Newark",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šv. Mykolo",
       "public_profile": "/parishes/sv-mykolo-bayonne-nj",
@@ -13480,6 +13954,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Chicago",
+        "jurisdiction_type": "archdiocese",
+        "key": "Chicago",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Šv. Mykolo",
       "public_profile": "/parishes/sv-mykolo-north-chicago-il",
       "record_type": "parish",
@@ -13519,6 +14000,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Scranton",
+        "jurisdiction_type": "diocese",
+        "key": "Scranton",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šv. Mykolo",
       "public_profile": "/parishes/sv-mykolo-scranton-pa",
@@ -13563,6 +14051,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Cleveland",
+        "jurisdiction_type": "diocese",
+        "key": "Cleveland",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_religious",
       "name": "Dievo Motinos Nuolatinės Pagalbos",
       "public_profile": "/parishes/dievo-motinos-nuolatines-pagalbos-cleveland-oh",
@@ -13603,6 +14098,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Allentown",
+        "jurisdiction_type": "diocese",
+        "key": "Allentown",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šiluvos Dievo Motinos",
       "public_profile": "/parishes/siluvos-dievo-motinos-maizeville-pa",
@@ -13645,6 +14147,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Chicago",
+        "jurisdiction_type": "archdiocese",
+        "key": "Chicago",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Švč. Mergelės Marijos Gimimo",
       "public_profile": "/parishes/svc-mergeles-marijos-gimimo-chicago-il",
       "record_type": "parish",
@@ -13685,6 +14194,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Chicago",
+        "jurisdiction_type": "archdiocese",
+        "key": "Chicago",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Šiluvos Mergelės Marijos lietuvių katalikų misija",
       "public_profile": "/parishes/our-lady-of-siluva-mission-mundelein-il",
       "record_type": "misija",
@@ -13723,6 +14239,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "national_catholic_pncc",
+      "jurisdiction": null,
       "legacy_building_fate": "unknown",
       "name": "Independent (National) parish, Town of Lake, Chicago",
       "public_profile": "/parishes/parish-chicago-il-2",
@@ -13758,6 +14275,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "non_catholic_christian",
+      "jurisdiction": null,
       "legacy_building_fate": "standing",
       "name": "Jeruzalės liuteronų parapija",
       "public_profile": "/parishes/lithuanian-lutheran-church-collinsville-il",
@@ -13797,6 +14315,13 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Little Rock",
+        "jurisdiction_type": "diocese",
+        "key": "Little Rock",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Lietuva Colony, Grand Prairie",
       "public_profile": "/parishes/parish-grand-prairie-ar",
@@ -13836,6 +14361,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Newark",
+        "jurisdiction_type": "archdiocese",
+        "key": "Newark",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Sopulingosios Dievo Motinos",
       "public_profile": "/parishes/lietuviu-baznycia-kearny-kearny-nj",
@@ -13878,6 +14410,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Peoria",
+        "jurisdiction_type": "diocese",
+        "key": "Peoria",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Konstantino",
       "public_profile": "/parishes/sv-konstantino-oglesby-il",
@@ -13918,6 +14457,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Newark",
+        "jurisdiction_type": "archdiocese",
+        "key": "Newark",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/sv-petro-ir-povilo-elizabeth-nj",
@@ -13960,6 +14506,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Pittsburgh",
+        "jurisdiction_type": "diocese",
+        "key": "Pittsburgh",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "demolished",
       "name": "Šv. Vincento Pauliečio",
       "public_profile": "/parishes/sv-vincento-pauliecio-esplen-pa",
@@ -14001,6 +14554,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Allentown",
+        "jurisdiction_type": "diocese",
+        "key": "Allentown",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šv. Vincento de Paul",
       "public_profile": "/parishes/sv-vincento-de-paul-girardville-pa",
@@ -14042,6 +14602,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Grand Rapids",
+        "jurisdiction_type": "diocese",
+        "key": "Grand Rapids",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/sv-petro-ir-povilo-grand-rapids-mi",
@@ -14085,6 +14652,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "non_catholic_christian",
+      "jurisdiction": null,
       "legacy_building_fate": "standing",
       "name": "St. Paul Lithuanian Lutheran",
       "public_profile": "/parishes/paul-naugatuck-ct",
@@ -14122,6 +14690,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Boston",
+        "jurisdiction_type": "archdiocese",
+        "key": "Boston",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Šv. Petro",
       "public_profile": "/parishes/sv-petro-boston-ma",
       "record_type": "parish",
@@ -14164,6 +14739,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Boston",
+        "jurisdiction_type": "archdiocese",
+        "key": "Boston",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_secular",
       "name": "Nekalto Prasidėjimo",
       "public_profile": "/parishes/sv-petro-cambridge-ma",
@@ -14206,6 +14788,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Detroit",
+        "jurisdiction_type": "archdiocese",
+        "key": "Detroit",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_secular",
       "name": "Šv. Petro",
       "public_profile": "/parishes/sv-petro-detroit-mi",
@@ -14245,6 +14834,7 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "non_catholic_christian",
+      "jurisdiction": null,
       "name": "Lithuanian Protestant Parish, New York City",
       "public_profile": "/parishes/protestant-parish-nyc",
       "record_type": "congregation",
@@ -14283,6 +14873,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Chicago",
+        "jurisdiction_type": "archdiocese",
+        "key": "Chicago",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_religious",
       "name": "Dievo Apvaizdos",
       "public_profile": "/parishes/dievo-apvaizdos-chicago-il",
@@ -14323,6 +14920,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "national_catholic_pncc",
+      "jurisdiction": null,
       "legacy_building_fate": "standing",
       "name": "Dievo Apvaizdos",
       "public_profile": "/parishes/dievo-apvaizdos-scranton-pa",
@@ -14364,6 +14962,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Detroit",
+        "jurisdiction_type": "archdiocese",
+        "key": "Detroit",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Dievo Apvaizdos",
       "public_profile": "/parishes/dievo-apvaizdos-southfield-mi",
       "record_type": "parish",
@@ -14408,6 +15013,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Allentown",
+        "jurisdiction_type": "diocese",
+        "key": "Allentown",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Švč. Jėzaus Širdies",
       "public_profile": "/parishes/sacred-heart-new-philadelphia-pa",
@@ -14443,6 +15055,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Chicago",
+        "jurisdiction_type": "archdiocese",
+        "key": "Chicago",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/ss-peter-and-paul-chicago-il",
@@ -14478,6 +15097,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Scranton",
+        "jurisdiction_type": "diocese",
+        "key": "Scranton",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/ss-peter-and-paul-hazleton-pa",
@@ -14513,6 +15139,13 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Pittsburgh",
+        "jurisdiction_type": "diocese",
+        "key": "Pittsburgh",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/ss-peter-and-paul-homestead-pa",
@@ -14554,6 +15187,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Rockford",
+        "jurisdiction_type": "diocese",
+        "key": "Rockford",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/ss-peter-and-paul-rockford-il",
@@ -14589,6 +15229,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Scranton",
+        "jurisdiction_type": "diocese",
+        "key": "Scranton",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/ss-peter-and-paul-sugar-notch-pa",
@@ -14624,6 +15271,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Allentown",
+        "jurisdiction_type": "diocese",
+        "key": "Allentown",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/ss-peter-and-paul-tamaqua-pa",
@@ -14659,6 +15313,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Chicago",
+        "jurisdiction_type": "archdiocese",
+        "key": "Chicago",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "demolished",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/ss-peter-and-paul-westville-il",
@@ -14694,6 +15355,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Baltimore",
+        "jurisdiction_type": "archdiocese",
+        "key": "Baltimore",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šv. Alfonso",
       "public_profile": "/parishes/unnamed-lithuanian-parish-baltimore-md",
@@ -14733,6 +15401,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Milwaukee",
+        "jurisdiction_type": "archdiocese",
+        "key": "Milwaukee",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Ambraziejaus",
       "public_profile": "/parishes/st-ambrose-port-washington-wi",
@@ -14770,6 +15445,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Gary",
+        "jurisdiction_type": "diocese",
+        "key": "Gary",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Šv. Onos",
       "public_profile": "/parishes/st-ann-beverly-shores-in",
       "record_type": "parish",
@@ -14808,6 +15490,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Newark",
+        "jurisdiction_type": "archdiocese",
+        "key": "Newark",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "demolished",
       "name": "Šv. Onos",
       "public_profile": "/parishes/st-ann-jersey-city-nj",
@@ -14843,6 +15532,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Hartford",
+        "jurisdiction_type": "archdiocese",
+        "key": "Hartford",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Antano",
       "public_profile": "/parishes/lietuviu-baznycia-unnamed-ansonia-ct",
@@ -14882,6 +15578,13 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Pittsburgh",
+        "jurisdiction_type": "diocese",
+        "key": "Pittsburgh",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "demolished",
       "name": "Šv. Antano",
       "public_profile": "/parishes/st-anthony-bridgeville-pa",
@@ -14922,6 +15625,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Scranton",
+        "jurisdiction_type": "diocese",
+        "key": "Scranton",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "demolished",
       "name": "Šv. Antano",
       "public_profile": "/parishes/st-anthony-forest-city-pa",
@@ -14957,6 +15667,13 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Peoria",
+        "jurisdiction_type": "diocese",
+        "key": "Peoria",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Antano",
       "public_profile": "/parishes/st-anthony-kewanee-il",
@@ -14997,6 +15714,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Chicago",
+        "jurisdiction_type": "archdiocese",
+        "key": "Chicago",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Baltramiejaus",
       "public_profile": "/parishes/st-bartholomew-waukegan-il",
@@ -15032,6 +15756,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Greensburg",
+        "jurisdiction_type": "diocese",
+        "key": "Greensburg",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/st-casimir-east-vandergrift-pa",
@@ -15069,6 +15800,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Kansas City in Kansas",
+        "jurisdiction_type": "archdiocese",
+        "key": "Kansas City in Kansas",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-kansas-city-mo",
       "record_type": "parish",
@@ -15107,6 +15845,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Allentown",
+        "jurisdiction_type": "diocese",
+        "key": "Allentown",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/st-casimir-mcadoo-pa",
@@ -15142,6 +15887,13 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Scranton",
+        "jurisdiction_type": "diocese",
+        "key": "Scranton",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/st-casimir-plymouth-pa",
@@ -15184,6 +15936,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Milwaukee",
+        "jurisdiction_type": "archdiocese",
+        "key": "Milwaukee",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/st-casimir-racine-wi",
@@ -15219,6 +15978,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Allentown",
+        "jurisdiction_type": "diocese",
+        "key": "Allentown",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/st-casimir-st-clair-pa",
@@ -15254,6 +16020,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of St. Petersburg",
+        "jurisdiction_type": "diocese",
+        "key": "St. Petersburg",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/st-casimir-st-pete-beach-fl",
@@ -15289,6 +16062,13 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Springfield in Massachusetts",
+        "jurisdiction_type": "diocese",
+        "key": "Springfield in Massachusetts",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/st-casimir-westfield-ma",
@@ -15329,6 +16109,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Scranton",
+        "jurisdiction_type": "diocese",
+        "key": "Scranton",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/st-casimir-wilkes-barre-pa",
@@ -15364,6 +16151,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Worcester",
+        "jurisdiction_type": "diocese",
+        "key": "Worcester",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šv. Pranciškaus",
       "public_profile": "/parishes/st-francis-athol-ma",
@@ -15399,6 +16193,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Allentown",
+        "jurisdiction_type": "diocese",
+        "key": "Allentown",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Pranciškaus",
       "public_profile": "/parishes/st-francis-minersville-pa",
@@ -15438,6 +16239,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Scranton",
+        "jurisdiction_type": "diocese",
+        "key": "Scranton",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Pranciškaus",
       "public_profile": "/parishes/st-francis-wilkes-barre-pa",
@@ -15473,6 +16281,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Cleveland",
+        "jurisdiction_type": "diocese",
+        "key": "Cleveland",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Pranciškaus",
       "public_profile": "/parishes/st-francis-youngstown-oh",
@@ -15508,6 +16323,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Milwaukee",
+        "jurisdiction_type": "archdiocese",
+        "key": "Milwaukee",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Gabrieliaus",
       "public_profile": "/parishes/st-gabriel-milwaukee-wi",
@@ -15543,6 +16365,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Albany",
+        "jurisdiction_type": "diocese",
+        "key": "Albany",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/st-george-albany-ny",
@@ -15580,6 +16409,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Detroit",
+        "jurisdiction_type": "archdiocese",
+        "key": "Detroit",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/st-george-detroit-mi",
@@ -15620,6 +16456,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Saginaw",
+        "jurisdiction_type": "diocese",
+        "key": "Saginaw",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/st-george-saginaw-mi",
@@ -15655,6 +16498,13 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Syracuse",
+        "jurisdiction_type": "diocese",
+        "key": "Syracuse",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/st-george-utica-ny",
@@ -15693,6 +16543,13 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Pittsburgh",
+        "jurisdiction_type": "diocese",
+        "key": "Pittsburgh",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Izidoriaus",
       "public_profile": "/parishes/st-isidore-braddock-pa",
@@ -15733,6 +16590,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Baltimore",
+        "jurisdiction_type": "archdiocese",
+        "key": "Baltimore",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Jono",
       "public_profile": "/parishes/st-john-the-baptist-baltimore-md",
@@ -15768,6 +16632,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Syracuse",
+        "jurisdiction_type": "diocese",
+        "key": "Syracuse",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/st-joseph-binghamton-ny",
@@ -15803,6 +16674,13 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Pittsburgh",
+        "jurisdiction_type": "diocese",
+        "key": "Pittsburgh",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "demolished",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/st-joseph-donora-pa",
@@ -15842,6 +16720,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Scranton",
+        "jurisdiction_type": "diocese",
+        "key": "Scranton",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "demolished",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/st-joseph-duryea-pa",
@@ -15877,6 +16762,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Boston",
+        "jurisdiction_type": "archdiocese",
+        "key": "Boston",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/st-joseph-lowell-ma",
@@ -15912,6 +16804,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Allentown",
+        "jurisdiction_type": "diocese",
+        "key": "Allentown",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/st-joseph-mahanoy-city-pa",
@@ -15947,6 +16846,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of St. Louis",
+        "jurisdiction_type": "archdiocese",
+        "key": "St. Louis",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/st-joseph-st-louis-mo",
@@ -15982,6 +16888,13 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Pittsburgh",
+        "jurisdiction_type": "diocese",
+        "key": "Pittsburgh",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Luko",
       "public_profile": "/parishes/st-luke-bentleyville-pa",
@@ -16022,6 +16935,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Brooklyn",
+        "jurisdiction_type": "diocese",
+        "key": "Brooklyn",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Marijos Angelų Karalienės",
       "public_profile": "/parishes/st-mary-of-the-angels-brooklyn-ny",
@@ -16057,6 +16977,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Scranton",
+        "jurisdiction_type": "diocese",
+        "key": "Scranton",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Marijos",
       "public_profile": "/parishes/st-mary-wanamie-pa",
@@ -16092,6 +17019,13 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Harrisburg",
+        "jurisdiction_type": "diocese",
+        "key": "Harrisburg",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "demolished",
       "name": "Šv. Mykolo",
       "public_profile": "/parishes/st-michael-shamokin-pa",
@@ -16132,6 +17066,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Cleveland",
+        "jurisdiction_type": "diocese",
+        "key": "Cleveland",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "unknown",
       "name": "Šv. Petro",
       "public_profile": "/parishes/st-peter-akron-oh",
@@ -16167,6 +17108,13 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Milwaukee",
+        "jurisdiction_type": "archdiocese",
+        "key": "Milwaukee",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "standing",
       "name": "Šv. Petro",
       "public_profile": "/parishes/st-peter-kenosha-wi",
@@ -16202,6 +17150,13 @@
       },
       "identity_support": "single_source_attested",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Springfield in Illinois",
+        "jurisdiction_type": "diocese",
+        "key": "Springfield in Illinois",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "legacy_building_fate": "demolished",
       "name": "Šv. Vincento Pauliečio",
       "public_profile": "/parishes/st-vincent-de-paul-springfield-il",
@@ -16243,6 +17198,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Brooklyn",
+        "jurisdiction_type": "diocese",
+        "key": "Brooklyn",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Kristaus Atsimainymo",
       "public_profile": "/parishes/kristaus-atsimainymo-maspeth-ny",
       "record_type": "parish",
@@ -16287,6 +17249,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Archdiocese of Hartford",
+        "jurisdiction_type": "archdiocese",
+        "key": "Hartford",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Švč. Trejybės",
       "public_profile": "/parishes/svc-trejybes-hartford-ct",
       "record_type": "parish",
@@ -16329,6 +17298,13 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "jurisdiction": {
+        "authority": "brain_canonical_assertion",
+        "canonical_name": "Diocese of Scranton",
+        "jurisdiction_type": "diocese",
+        "key": "Scranton",
+        "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
+      },
       "name": "Švč. Trejybės",
       "public_profile": "/parishes/svc-trejybes-wilkes-barre-pa",
       "record_type": "parish",
@@ -16368,6 +17344,7 @@
       },
       "identity_support": "multi_source_corroborated",
       "institution_class": "non_catholic_christian",
+      "jurisdiction": null,
       "legacy_building_fate": "standing",
       "name": "Zion Lithuanian Lutheran",
       "public_profile": "/parishes/zion-lithuanian-lutheran-oak-lawn-il",
@@ -16584,7 +17561,7 @@
       "unit": "distinct U.S. Roman Catholic parish institution"
     }
   },
-  "revision_id": "canonical-infographic-units-2026-08-03-brain-single-source",
+  "revision_id": "canonical-infographic-units-2026-08-03-brain-jurisdictions",
   "schema": "culturenet-parish-infographic-projection.v1",
   "unit_contracts": [
     {
