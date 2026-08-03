@@ -1,11 +1,11 @@
 {
   "generatedFrom": {
-    "registryRevision": 21,
+    "registryRevision": 22,
     "registryDate": "2026-08-03",
-    "canonicalPublicationRevision": "canonical-public-census-2026-08-03-ziburio-source-link",
-    "canonicalPublicationHash": "sha256:3ded1c84949c6b3c9d9fcf12c3e574ba2e04839a065866d7c192d3a84a9728c1",
-    "canonicalInfographicRevision": "canonical-infographic-units-2026-08-03-ziburio-source-link",
-    "canonicalInfographicHash": "sha256:2f2895b9585d7cf7d66ef9b0df799924413500b822a0caf226016f06fba35c21",
+    "canonicalPublicationRevision": "canonical-public-census-2026-08-03-brain-single-source",
+    "canonicalPublicationHash": "sha256:69a62cce5013de13c53d5d18d61a61c73af9aeda2860d10e72a4803c1d4978dd",
+    "canonicalInfographicRevision": "canonical-infographic-units-2026-08-03-brain-single-source",
+    "canonicalInfographicHash": "sha256:1e088a46ae469cebc5661fcc00738e7483acbb64128ad1c1bba816195ff80e37",
     "networkChecked": "2026-08-03"
   },
   "publicUS": {
@@ -36,9 +36,9 @@
     "status": {
       "active_parish": 10,
       "closed": 98,
-      "mass_continues": 6,
+      "mass_continues": 5,
       "transferred": 24,
-      "unresolved": 4,
+      "unresolved": 5,
       "unverified": 13
     }
   },
@@ -47,9 +47,9 @@
     "status": {
       "active_parish": 6,
       "closed": 87,
-      "mass_continues": 6,
+      "mass_continues": 5,
       "transferred": 22,
-      "unresolved": 4,
+      "unresolved": 5,
       "unverified": 7
     },
     "closed": 87,
@@ -74,17 +74,17 @@
     "status": {
       "active_parish": 8,
       "closed": 90,
-      "mass_continues": 6,
+      "mass_continues": 5,
       "transferred": 22,
-      "unresolved": 4,
+      "unresolved": 5,
       "unverified": 7
     },
     "closed": 90,
-    "retainingLithuanianWorship": 14
+    "retainingLithuanianWorship": 13
   },
   "physicalSites": {
-    "worshipSites": 130,
-    "allBuildingSiteEntities": 171
+    "worshipSites": 131,
+    "allBuildingSiteEntities": 172
   },
   "continuity": {
     "relationships": 51

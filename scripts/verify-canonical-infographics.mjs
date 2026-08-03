@@ -90,8 +90,8 @@ for (const [label, actual, expected] of [
   ["Roman Catholic parish institutions in combined scope", romanHistory.length, 132],
   ["Roman Catholic mission institutions in combined scope", romanMissionHistory.length, 5],
   ["closed Roman Catholic parish and mission institutions", closedRomanInstitutions.length, 90],
-  ["Roman Catholic institutions retaining Lithuanian worship", retainingLithuanianWorship.length, 14],
-  ["physical worship-site histories", worshipSites.length, 130],
+  ["Roman Catholic institutions retaining Lithuanian worship", retainingLithuanianWorship.length, 13],
+  ["physical worship-site histories", worshipSites.length, 131],
 ]) {
   if (actual !== expected) errors.push(`${label}: ${actual} != ${expected}`);
 }
@@ -115,8 +115,8 @@ const currentWorshipSiteIds = new Set(
     (institution) => institution.terminal_worship_site_ids ?? [],
   ),
 );
-if (currentWorshipSiteIds.size !== 15) {
-  errors.push(`current Catholic network uses ${currentWorshipSiteIds.size} sites, expected 15`);
+if (currentWorshipSiteIds.size !== 14) {
+  errors.push(`current institution histories use ${currentWorshipSiteIds.size} sites, expected 14`);
 }
 for (const institution of retainingLithuanianWorship) {
   if (!(institution.terminal_worship_site_ids?.length > 0)) {
@@ -155,7 +155,7 @@ const resolveSiteCondition = (site) => {
 };
 const expectedConditionCounts = new Map([
   ["building-demolished", 23],
-  ["building-standing", 23],
+  ["building-standing", 24],
   ["building-repurposed", 16],
   ["building-listed-for-sale", 1],
   [null, 67],
@@ -176,6 +176,15 @@ if (terminalAuthority.length !== 43) {
   errors.push(`terminal-site building-fate authority: ${terminalAuthority.length} != 43`);
 }
 for (const institution of institutions) {
+  if (institution.status_authority !== "brain_canonical_assertion") {
+    errors.push(`${institution.registry_slug}: status is not controlled by a Brain assertion`);
+  }
+  if (
+    institution.founded.authority !== "brain_canonical_assertion" ||
+    institution.closed.authority !== "brain_canonical_assertion"
+  ) {
+    errors.push(`${institution.registry_slug}: lifecycle display fields are not controlled by Brain assertions`);
+  }
   if (
     institution.building_fate_authority === "unresolved" &&
     institution.building_fate !== null
@@ -276,7 +285,11 @@ if (southfieldSite?.demolished_year !== null) {
 
 for (const slug of ["casimir-freeland-pa", "gateofdawn-manhattan-ny"]) {
   const institution = institutions.find((row) => row.registry_slug === slug);
-  if (institution?.founded.year !== null || institution?.founded.authority !== "unresolved") {
+  if (
+    institution?.founded.year !== null ||
+    institution?.founded.authority !== "brain_canonical_assertion" ||
+    institution?.founded.source_authority !== "unresolved"
+  ) {
     errors.push(`${slug}: non-founding historical date must remain off the founding timeline`);
   }
 }
@@ -321,7 +334,8 @@ for (const [profile, status, endedYear, authority] of campaignAdjudications) {
   if (
     institution?.status_group !== status ||
     institution?.closed?.year !== endedYear ||
-    institution?.status_authority !== authority
+    institution?.status_authority !== "brain_canonical_assertion" ||
+    institution?.status_source_authority !== authority
   ) {
     errors.push(`${profile}: current campaign adjudication drifted`);
   }
@@ -349,11 +363,13 @@ const brooklynAnnunciation = institutions.find(
 );
 if (
   brooklynAnnunciation?.founded.year !== 1914 ||
-  brooklynAnnunciation?.founded.authority !==
+  brooklynAnnunciation?.founded.authority !== "brain_canonical_assertion" ||
+  brooklynAnnunciation?.founded.source_authority !==
     "canonical_infographic_adjudication" ||
   brooklynAnnunciation?.closed.year !== 2019 ||
   brooklynAnnunciation?.status_group !== "mass_continues" ||
-  brooklynAnnunciation?.status_authority !==
+  brooklynAnnunciation?.status_authority !== "brain_canonical_assertion" ||
+  brooklynAnnunciation?.status_source_authority !==
     "canonical_status_adjudication"
 ) {
   errors.push(

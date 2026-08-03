@@ -19,10 +19,10 @@ const projection = read("canonical-publication-projection.json");
 const infographic = read("canonical-infographic-projection.json");
 const adjudications = read("canonical-public-census-adjudications.json");
 
-const TARGET_REVISION = 21;
+const TARGET_REVISION = 22;
 const TARGET_DATE = "2026-08-03";
 const CHANGELOG =
-  "Registry Revision 21: attached the verified direct Žiburio archive item for the Būtėnas Shenandoah chronology source without changing canonical counts or adjudications.";
+  "Registry Revision 22: imported the Brain-owned current pastoral network, moved Dayton's present Lithuanian-worship claim to unresolved, and added Washington Epiphany as non-census hosted pastoral context.";
 
 if (projection.schema !== "culturenet-parish-publication-projection.v1") {
   throw new Error(`Unsupported publication projection schema: ${projection.schema}`);
@@ -206,12 +206,12 @@ const revisionEntry = {
   publicUSRecords: publicRecords.length,
   usRomanCatholicParishes: romanCatholicParishes,
   summary:
-    "Published the direct Žiburio archive source link for the Shenandoah 1872–1891 chronology without changing the 155-institution public census.",
+    "Imported the Brain-owned current pastoral network and separated the 137-institution history from the 14-place current pastoral view.",
   evidence: [
     "data/canonical-publication-projection.json",
     "data/canonical-infographic-projection.json",
     "data/canonical-public-census-adjudications.json",
-    "data/candidates/registry-revision-21-ziburio-source-link-2026-08-03.md",
+    "data/canonical-infographic-projection.json",
   ],
 };
 const priorRevision = revisions.revisions.find(

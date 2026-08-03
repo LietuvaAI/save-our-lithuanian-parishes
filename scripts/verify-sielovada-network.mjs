@@ -6,6 +6,7 @@ const read = (name) =>
   );
 
 const network = read("sielovada-us-network.json");
+const infographic = read("canonical-infographic-projection.json");
 const registry = read("registry-unified.json").parishes;
 const registryBySlug = new Map(registry.map((record) => [record.slug, record]));
 const errors = [];
@@ -155,6 +156,38 @@ for (const [label, actual, expected] of [
 ]) {
   if (JSON.stringify(actual) !== JSON.stringify(expected)) {
     errors.push(`${label} changed: ${actual.join(", ")}`);
+  }
+}
+
+const canonicalPastoral = infographic.current_pastoral_network;
+if (!canonicalPastoral) {
+  errors.push("Brain projection lacks current_pastoral_network");
+} else {
+  if (JSON.stringify(network) !== JSON.stringify(canonicalPastoral.directory)) {
+    errors.push(
+      "site pastoral directory differs from the Brain-generated directory projection",
+    );
+  }
+  const siteMembership = network.entries
+    .filter((entry) =>
+      ["active_parish", "active_mission", "mass_continues"].includes(
+        entry.networkClass,
+      ),
+    )
+    .map((entry) =>
+      `${entry.networkClass}:${entry.registrySlug ?? entry.canonicalEntityId ?? entry.id}`,
+    )
+    .sort();
+  const brainMembership = canonicalPastoral.members
+    .map(
+      (entry) =>
+        `${entry.network_class}:${entry.registry_slug ?? entry.entity_id}`,
+    )
+    .sort();
+  if (JSON.stringify(siteMembership) !== JSON.stringify(brainMembership)) {
+    errors.push(
+      `current pastoral membership differs from Brain: site=${siteMembership.join(", ")} brain=${brainMembership.join(", ")}`,
+    );
   }
 }
 
