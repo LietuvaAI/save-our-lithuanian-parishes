@@ -363,6 +363,12 @@ export default function LithuanianCatholicLifeTodayPage() {
               by another parish. The surviving network reaches{" "}
               {worshipStateCount} states.
             </p>
+            <p className="mt-3 text-xs leading-relaxed text-muted">
+              “Lithuanian parish” and “Lithuanian mission” here mean a
+              Sielovada-listed community with verified current Lithuanian
+              pastoral ministry. A Catholic parish may remain juridically open
+              without being counted in this active Lithuanian pastoral network.
+            </p>
           </div>
         </div>
         <p className="mt-5 border-t border-rule pt-3 text-xs leading-relaxed text-muted">

@@ -132,6 +132,32 @@ if (network.counts.listed !== 20) {
   );
 }
 
+const expectedActiveParishSlugs = [
+  "andrew-philadelphia-pa",
+  "casimir-cleveland-oh",
+  "casimir-los-angeles-ca",
+  "nativity-chicago-il",
+  "peter-boston-ma",
+  "providence-southfield-mi",
+];
+const expectedActiveMissionSlugs = [
+  "george-lemont-il",
+  "our-lady-of-siluva-mission-mundelein-il",
+];
+const activeSlugs = (networkClass) =>
+  network.entries
+    .filter((entry) => entry.networkClass === networkClass)
+    .map((entry) => entry.registrySlug)
+    .sort();
+for (const [label, actual, expected] of [
+  ["active parish membership", activeSlugs("active_parish"), expectedActiveParishSlugs],
+  ["active mission membership", activeSlugs("active_mission"), expectedActiveMissionSlugs],
+]) {
+  if (JSON.stringify(actual) !== JSON.stringify(expected)) {
+    errors.push(`${label} changed: ${actual.join(", ")}`);
+  }
+}
+
 const southfield = network.entries.find(
   (entry) => entry.id === "southfield-divine-providence",
 );
