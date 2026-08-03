@@ -10,7 +10,34 @@ export type InfographicDateFact = {
     | "canonical_infographic_adjudication"
     | "reviewed_case_snapshot"
     | "site_r10_baseline"
+    | "brain_canonical_assertion"
     | "unresolved";
+  source_authority?: string;
+};
+
+export type CanonicalJurisdiction = {
+  key: string;
+  canonical_name: string;
+  jurisdiction_type: "diocese" | "archdiocese";
+  authority: "brain_canonical_assertion";
+  source_assertion_id: string;
+};
+
+export type CurrentPastoralDirectoryEntry = {
+  id: string;
+  nameLt: string;
+  nameEn: string;
+  city: string;
+  state: string;
+  address: string;
+  directoryType: string;
+  networkClass: string;
+  ministry: string;
+  note?: string;
+  registrySlug?: string | null;
+  canonicalEntityId?: string | null;
+  officialSite?: string | null;
+  sourceRefs: string[];
 };
 
 export type InstitutionHistoryRow = {
@@ -25,6 +52,7 @@ export type InstitutionHistoryRow = {
   institution_class: PublicationInstitutionClass;
   identity_support: string;
   diocese: string | null;
+  jurisdiction: CanonicalJurisdiction | null;
   status_group: EndStateGroup;
   status_authority: string;
   status_observed_at: string | null;
@@ -147,6 +175,36 @@ type InfographicProjection = {
   institution_history: InstitutionHistoryRow[];
   building_site_history: BuildingSiteHistoryRow[];
   continuity_edges: ContinuityEdge[];
+  current_pastoral_network: {
+    unit: string;
+    counted_in_public_institution_total: false;
+    source_assertion_id: string;
+    observed_at: string;
+    counts: {
+      active_parish: number;
+      active_mission: number;
+      mass_continues: number;
+    };
+    members: Array<{
+      network_class: "active_parish" | "active_mission" | "mass_continues";
+      entity_id: string;
+      registry_slug: string | null;
+      site_id?: string;
+      entity_type: string;
+      canonical_name: string;
+    }>;
+    excluded_pending_current_verification: Array<{
+      entity_id: string;
+      reason: string;
+    }>;
+    directory_source_assertion_id: string;
+    directory: {
+      entries: CurrentPastoralDirectoryEntry[];
+      counts: Record<string, number>;
+      networkRevision: Record<string, unknown>;
+      source: Record<string, unknown>;
+    };
+  };
   regional_views: {
     pennsylvania_coal_region: {
       unit: string;
@@ -200,6 +258,8 @@ export const canonicalInfographics = projectionData as InfographicProjection;
 export const institutionHistory = canonicalInfographics.institution_history;
 export const buildingSiteHistory = canonicalInfographics.building_site_history;
 export const continuityEdges = canonicalInfographics.continuity_edges;
+export const currentPastoralNetwork =
+  canonicalInfographics.current_pastoral_network;
 export const infographicCounts = canonicalInfographics.counts;
 export const pennsylvaniaCoalRegion =
   canonicalInfographics.regional_views.pennsylvania_coal_region;
@@ -219,6 +279,11 @@ export const romanCatholicInstitutionHistory = institutionHistory.filter(
 export const physicalWorshipSiteHistory = buildingSiteHistory.filter(
   (row) => row.site_class === "worship_site",
 );
+export const additionalCurrentHostedCommunities =
+  currentPastoralNetwork.directory.entries.filter(
+    (entry) =>
+      entry.networkClass === "mass_continues" && !entry.registrySlug,
+  );
 
 const institutionByEntityId = new Map(
   institutionHistory.map((row) => [row.culturenet_entity_id, row]),
@@ -244,6 +309,15 @@ if (
 }
 if (physicalWorshipSiteHistory.length !== infographicCounts.physical_worship_sites) {
   throw new Error("Canonical physical worship-site count drifted.");
+}
+if (
+  additionalCurrentHostedCommunities.length !== 1 ||
+  additionalCurrentHostedCommunities[0]?.canonicalEntityId !==
+    "cn:organization:washington-epiphany-lithuanian-community"
+) {
+  throw new Error(
+    "Canonical additional hosted-community set must contain Washington Epiphany only.",
+  );
 }
 
 export function getInfographicInstitutionByEntityId(entityId: string) {
