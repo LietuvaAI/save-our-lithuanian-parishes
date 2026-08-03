@@ -23662,7 +23662,7 @@
     }
   ],
   "registryRevision": {
-    "version": 23,
+    "version": 24,
     "date": "2026-08-03",
     "changelog": [
       "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
@@ -23709,15 +23709,16 @@
       "Registry Revision 20: corrected worship-building classification, promoted nine evidence-backed site conditions, rejected semantically unresolved founding dates, and limited institution building summaries to terminal-site authority.",
       "Registry Revision 21: attached the verified direct Žiburio archive item for the Būtėnas Shenandoah chronology source without changing canonical counts or adjudications.",
       "Registry Revision 22: imported the Brain-owned current pastoral network, moved Dayton's present Lithuanian-worship claim to unresolved, and added Washington Epiphany as non-census hosted pastoral context.",
-      "Registry Revision 23: imported typed Brain-owned Catholic jurisdictions so public labels distinguish dioceses from archdioceses without site-side inference."
+      "Registry Revision 23: imported typed Brain-owned Catholic jurisdictions so public labels distinguish dioceses from archdioceses without site-side inference.",
+      "Registry Revision 24: imported Brain-adjudicated continuation statuses and card explanations for the 22 institutions that live on in another community."
     ],
-    "contentHash": "e469ff4556a1deafd23e607245aa5c2dc58499b2a794ded3d90810498e109f2f"
+    "contentHash": "9d9b4d8a92dc74486094c58d30004b6c2f62bfc160cb3bbd0e879b77a261d0f8"
   },
   "publicationAuthority": {
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
-    "revisionId": "canonical-public-census-2026-08-03-brain-single-source",
-    "contentHash": "sha256:2ca8b79e2ef560002c521e73ae8083674b43fb4a90e97fa9226788b082686c7a",
+    "revisionId": "canonical-public-census-2026-08-03-continuation-authority",
+    "contentHash": "sha256:32e541763c4d95f43844e412c32a15703e3ae871cff962c0ecedd99ac5d8eae6",
     "publicUSInstitutions": 155,
     "synchronized": "2026-08-03"
   }

@@ -1,11 +1,11 @@
 {
   "generatedFrom": {
-    "registryRevision": 23,
+    "registryRevision": 24,
     "registryDate": "2026-08-03",
-    "canonicalPublicationRevision": "canonical-public-census-2026-08-03-brain-single-source",
-    "canonicalPublicationHash": "sha256:2ca8b79e2ef560002c521e73ae8083674b43fb4a90e97fa9226788b082686c7a",
-    "canonicalInfographicRevision": "canonical-infographic-units-2026-08-03-brain-jurisdictions",
-    "canonicalInfographicHash": "sha256:3c937db0e2aff888e196a40b0c0a2b5093f7bcc09969b39439fbfec8c55d26ef",
+    "canonicalPublicationRevision": "canonical-public-census-2026-08-03-continuation-authority",
+    "canonicalPublicationHash": "sha256:32e541763c4d95f43844e412c32a15703e3ae871cff962c0ecedd99ac5d8eae6",
+    "canonicalInfographicRevision": "canonical-infographic-units-2026-08-03-continuation-authority",
+    "canonicalInfographicHash": "sha256:5d441dcabfe735b438783f3da70a96be9dd1a1a1463d653149be95e205593d2d",
     "networkChecked": "2026-08-03"
   },
   "publicUS": {
