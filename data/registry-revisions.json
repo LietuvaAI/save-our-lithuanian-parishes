@@ -243,6 +243,20 @@
         "data/canonical-public-census-adjudications.json",
         "data/candidates/registry-revision-20-building-condition-coverage-2026-08-03.md"
       ]
+    },
+    {
+      "version": 21,
+      "date": "2026-08-03",
+      "registryRecords": 193,
+      "publicUSRecords": 155,
+      "usRomanCatholicParishes": 132,
+      "summary": "Published the direct Žiburio archive source link for the Shenandoah 1872–1891 chronology without changing the 155-institution public census.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/canonical-public-census-adjudications.json",
+        "data/candidates/registry-revision-21-ziburio-source-link-2026-08-03.md"
+      ]
     }
   ]
 }

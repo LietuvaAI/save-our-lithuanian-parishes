@@ -1,8 +1,8 @@
 # Public institution count audit
 
 **Audit date:** 2026-08-03
-**Registry revision:** 20
-**Canonical authority:** CultureNet canonical-public-census-2026-08-03-building-condition-coverage
+**Registry revision:** 21
+**Canonical authority:** CultureNet canonical-public-census-2026-08-03-ziburio-source-link
 
 ## Press-safe claim
 

@@ -23662,7 +23662,7 @@
     }
   ],
   "registryRevision": {
-    "version": 20,
+    "version": 21,
     "date": "2026-08-03",
     "changelog": [
       "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
@@ -23706,15 +23706,16 @@
       "Registry Revision 17: established Saint Michael the Archangel Parish in Scranton in 1914, promoted its original wooden church as a distinct worship site, and enriched its school, language, and two-church history from the 1977 published parish account; the public institution count remains unchanged.",
       "Registry Revision 18: admitted Our Lady of Siluva Mission in Mundelein as a distinct active Roman Catholic mission and reconciled Brooklyn Annunciation, Maspeth Transfiguration, and Hartford Holy Trinity to the current canonical status projection.",
       "Registry Revision 19: projected explicit standing conditions for the current Lithuanian Catholic worship network, linked the missing Beverly Shores site and Chicago Immaculate Conception lineage, and made terminal-site evidence authoritative for unambiguous institution building summaries.",
-      "Registry Revision 20: corrected worship-building classification, promoted nine evidence-backed site conditions, rejected semantically unresolved founding dates, and limited institution building summaries to terminal-site authority."
+      "Registry Revision 20: corrected worship-building classification, promoted nine evidence-backed site conditions, rejected semantically unresolved founding dates, and limited institution building summaries to terminal-site authority.",
+      "Registry Revision 21: attached the verified direct Žiburio archive item for the Būtėnas Shenandoah chronology source without changing canonical counts or adjudications."
     ],
-    "contentHash": "001ffed4172f73d3dcc2513a85b15a4d16ded1a02b1deec177aa5fe9652c3938"
+    "contentHash": "e8f1f5907402f7a57c4414a43d3e1c13217c5ed597cb0457b2bb1f19cb6088b0"
   },
   "publicationAuthority": {
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
-    "revisionId": "canonical-public-census-2026-08-03-building-condition-coverage",
-    "contentHash": "sha256:27debd93bc909cc92fcec4990c8ebba0ca154dddcc6dc96c8217c0eab675ed06",
+    "revisionId": "canonical-public-census-2026-08-03-ziburio-source-link",
+    "contentHash": "sha256:3ded1c84949c6b3c9d9fcf12c3e574ba2e04839a065866d7c192d3a84a9728c1",
     "publicUSInstitutions": 155,
     "synchronized": "2026-08-03"
   }
