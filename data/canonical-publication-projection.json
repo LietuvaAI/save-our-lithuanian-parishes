@@ -8871,6 +8871,232 @@
       },
       "assertion_type": "identity",
       "confidence": "high",
+      "id": "assert:display-19:jurisdiction-vocabulary",
+      "object": {
+        "jurisdictions": [
+          {
+            "canonical_name": "Diocese of Albany",
+            "jurisdiction_type": "diocese",
+            "key": "Albany"
+          },
+          {
+            "canonical_name": "Diocese of Allentown",
+            "jurisdiction_type": "diocese",
+            "key": "Allentown"
+          },
+          {
+            "canonical_name": "Archdiocese of Baltimore",
+            "jurisdiction_type": "archdiocese",
+            "key": "Baltimore"
+          },
+          {
+            "canonical_name": "Diocese of Belleville",
+            "jurisdiction_type": "diocese",
+            "key": "Belleville"
+          },
+          {
+            "canonical_name": "Archdiocese of Boston",
+            "jurisdiction_type": "archdiocese",
+            "key": "Boston"
+          },
+          {
+            "canonical_name": "Diocese of Bridgeport",
+            "jurisdiction_type": "diocese",
+            "key": "Bridgeport"
+          },
+          {
+            "canonical_name": "Diocese of Brooklyn",
+            "jurisdiction_type": "diocese",
+            "key": "Brooklyn"
+          },
+          {
+            "canonical_name": "Diocese of Buffalo",
+            "jurisdiction_type": "diocese",
+            "key": "Buffalo"
+          },
+          {
+            "canonical_name": "Archdiocese of Chicago",
+            "jurisdiction_type": "archdiocese",
+            "key": "Chicago"
+          },
+          {
+            "canonical_name": "Diocese of Cleveland",
+            "jurisdiction_type": "diocese",
+            "key": "Cleveland"
+          },
+          {
+            "canonical_name": "Archdiocese of Detroit",
+            "jurisdiction_type": "archdiocese",
+            "key": "Detroit"
+          },
+          {
+            "canonical_name": "Diocese of Erie",
+            "jurisdiction_type": "diocese",
+            "key": "Erie"
+          },
+          {
+            "canonical_name": "Diocese of Gary",
+            "jurisdiction_type": "diocese",
+            "key": "Gary"
+          },
+          {
+            "canonical_name": "Diocese of Grand Rapids",
+            "jurisdiction_type": "diocese",
+            "key": "Grand Rapids"
+          },
+          {
+            "canonical_name": "Diocese of Greensburg",
+            "jurisdiction_type": "diocese",
+            "key": "Greensburg"
+          },
+          {
+            "canonical_name": "Diocese of Harrisburg",
+            "jurisdiction_type": "diocese",
+            "key": "Harrisburg"
+          },
+          {
+            "canonical_name": "Archdiocese of Hartford",
+            "jurisdiction_type": "archdiocese",
+            "key": "Hartford"
+          },
+          {
+            "canonical_name": "Archdiocese of Kansas City in Kansas",
+            "jurisdiction_type": "archdiocese",
+            "key": "Kansas City in Kansas"
+          },
+          {
+            "canonical_name": "Diocese of Little Rock",
+            "jurisdiction_type": "diocese",
+            "key": "Little Rock"
+          },
+          {
+            "canonical_name": "Archdiocese of Los Angeles",
+            "jurisdiction_type": "archdiocese",
+            "key": "Los Angeles"
+          },
+          {
+            "canonical_name": "Diocese of Manchester",
+            "jurisdiction_type": "diocese",
+            "key": "Manchester"
+          },
+          {
+            "canonical_name": "Archdiocese of Milwaukee",
+            "jurisdiction_type": "archdiocese",
+            "key": "Milwaukee"
+          },
+          {
+            "canonical_name": "Archdiocese of New York",
+            "jurisdiction_type": "archdiocese",
+            "key": "New York"
+          },
+          {
+            "canonical_name": "Archdiocese of Newark",
+            "jurisdiction_type": "archdiocese",
+            "key": "Newark"
+          },
+          {
+            "canonical_name": "Archdiocese of Omaha",
+            "jurisdiction_type": "archdiocese",
+            "key": "Omaha"
+          },
+          {
+            "canonical_name": "Diocese of Paterson",
+            "jurisdiction_type": "diocese",
+            "key": "Paterson"
+          },
+          {
+            "canonical_name": "Diocese of Peoria",
+            "jurisdiction_type": "diocese",
+            "key": "Peoria"
+          },
+          {
+            "canonical_name": "Archdiocese of Philadelphia",
+            "jurisdiction_type": "archdiocese",
+            "key": "Philadelphia"
+          },
+          {
+            "canonical_name": "Diocese of Pittsburgh",
+            "jurisdiction_type": "diocese",
+            "key": "Pittsburgh"
+          },
+          {
+            "canonical_name": "Diocese of Providence",
+            "jurisdiction_type": "diocese",
+            "key": "Providence"
+          },
+          {
+            "canonical_name": "Diocese of Rochester",
+            "jurisdiction_type": "diocese",
+            "key": "Rochester"
+          },
+          {
+            "canonical_name": "Diocese of Rockford",
+            "jurisdiction_type": "diocese",
+            "key": "Rockford"
+          },
+          {
+            "canonical_name": "Diocese of Saginaw",
+            "jurisdiction_type": "diocese",
+            "key": "Saginaw"
+          },
+          {
+            "canonical_name": "Diocese of Scranton",
+            "jurisdiction_type": "diocese",
+            "key": "Scranton"
+          },
+          {
+            "canonical_name": "Diocese of Sioux City",
+            "jurisdiction_type": "diocese",
+            "key": "Sioux City"
+          },
+          {
+            "canonical_name": "Diocese of Springfield in Illinois",
+            "jurisdiction_type": "diocese",
+            "key": "Springfield in Illinois"
+          },
+          {
+            "canonical_name": "Diocese of Springfield in Massachusetts",
+            "jurisdiction_type": "diocese",
+            "key": "Springfield in Massachusetts"
+          },
+          {
+            "canonical_name": "Archdiocese of St. Louis",
+            "jurisdiction_type": "archdiocese",
+            "key": "St. Louis"
+          },
+          {
+            "canonical_name": "Diocese of St. Petersburg",
+            "jurisdiction_type": "diocese",
+            "key": "St. Petersburg"
+          },
+          {
+            "canonical_name": "Diocese of Syracuse",
+            "jurisdiction_type": "diocese",
+            "key": "Syracuse"
+          },
+          {
+            "canonical_name": "Diocese of Worcester",
+            "jurisdiction_type": "diocese",
+            "key": "Worcester"
+          }
+        ],
+        "unit": "Catholic ecclesiastical jurisdiction"
+      },
+      "observed_at": "2026-08-03",
+      "predicate": "canonical_us_catholic_jurisdiction_vocabulary",
+      "source_artifact_id": "src:display-19:usccb-dioceses:2026-08-03",
+      "source_locator": "All Dioceses directory; canonical jurisdiction names and diocese/archdiocese types",
+      "subject": {
+        "canonical_entity_id": "cn:organization:culturenet-parish-display-authority"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "identity",
+      "confidence": "high",
       "id": "assert:early-12:boston-institution",
       "object": {
         "formation_year": "1895",
@@ -20889,7 +21115,7 @@
       "slug": "robert-damyanovich"
     }
   ],
-  "content_hash": "sha256:69a62cce5013de13c53d5d18d61a61c73af9aeda2860d10e72a4803c1d4978dd",
+  "content_hash": "sha256:2ca8b79e2ef560002c521e73ae8083674b43fb4a90e97fa9226788b082686c7a",
   "counts": {
     "by_institution_class": {
       "independent_catholic": 4,
@@ -51866,6 +52092,22 @@
         "status": "brain_canonical_migration"
       },
       "title": "Reviewed institution display selections before authority cutover"
+    },
+    {
+      "artifact_type": "official_ecclesiastical_directory",
+      "id": "src:display-19:usccb-dioceses:2026-08-03",
+      "locator": {
+        "exact_label": "All Dioceses",
+        "page": "Bishops and Dioceses",
+        "section": "United States dioceses and archdioceses"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://www.usccb.org/about/bishops-and-dioceses/all-dioceses",
+        "quote_policy": "cite and summarize",
+        "status": "official_ecclesiastical_directory"
+      },
+      "title": "United States Conference of Catholic Bishops — All Dioceses"
     },
     {
       "artifact_type": "public_web_snapshot",

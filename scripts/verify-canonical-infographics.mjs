@@ -185,6 +185,29 @@ for (const institution of institutions) {
   ) {
     errors.push(`${institution.registry_slug}: lifecycle display fields are not controlled by Brain assertions`);
   }
+  if (institution.diocese === null) {
+    if (institution.jurisdiction !== null) {
+      errors.push(`${institution.registry_slug}: null jurisdiction key has a structured jurisdiction`);
+    }
+  } else {
+    const jurisdiction = institution.jurisdiction;
+    if (
+      !jurisdiction ||
+      jurisdiction.key !== institution.diocese ||
+      jurisdiction.authority !== "brain_canonical_assertion" ||
+      !["diocese", "archdiocese"].includes(jurisdiction.jurisdiction_type)
+    ) {
+      errors.push(`${institution.registry_slug}: jurisdiction is not a typed Brain assertion`);
+    } else {
+      const prefix =
+        jurisdiction.jurisdiction_type === "archdiocese"
+          ? "Archdiocese of "
+          : "Diocese of ";
+      if (!jurisdiction.canonical_name.startsWith(prefix)) {
+        errors.push(`${institution.registry_slug}: jurisdiction label/type mismatch`);
+      }
+    }
+  }
   if (
     institution.building_fate_authority === "unresolved" &&
     institution.building_fate !== null

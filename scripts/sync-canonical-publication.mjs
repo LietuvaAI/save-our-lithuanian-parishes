@@ -19,10 +19,10 @@ const projection = read("canonical-publication-projection.json");
 const infographic = read("canonical-infographic-projection.json");
 const adjudications = read("canonical-public-census-adjudications.json");
 
-const TARGET_REVISION = 22;
+const TARGET_REVISION = 23;
 const TARGET_DATE = "2026-08-03";
 const CHANGELOG =
-  "Registry Revision 22: imported the Brain-owned current pastoral network, moved Dayton's present Lithuanian-worship claim to unresolved, and added Washington Epiphany as non-census hosted pastoral context.";
+  "Registry Revision 23: imported typed Brain-owned Catholic jurisdictions so public labels distinguish dioceses from archdioceses without site-side inference.";
 
 if (projection.schema !== "culturenet-parish-publication-projection.v1") {
   throw new Error(`Unsupported publication projection schema: ${projection.schema}`);
@@ -206,7 +206,7 @@ const revisionEntry = {
   publicUSRecords: publicRecords.length,
   usRomanCatholicParishes: romanCatholicParishes,
   summary:
-    "Imported the Brain-owned current pastoral network and separated the 137-institution history from the 14-place current pastoral view.",
+    "Imported typed Brain-owned Catholic jurisdiction names and diocese/archdiocese classifications without changing public populations.",
   evidence: [
     "data/canonical-publication-projection.json",
     "data/canonical-infographic-projection.json",
