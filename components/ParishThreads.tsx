@@ -40,6 +40,7 @@ export interface ThreadParish {
   state: string;
   anchorYear: number | null;
   anchorLabel: string;
+  recordType: "parish" | "misija";
   endState: EndState;
   /** Building fate for the closed family; null for living branches. */
   fateKey: FateKey | null;
@@ -65,13 +66,21 @@ const FATE_ORDER: FateKey[] = [
 ];
 
 const GROUP_SUBLABEL: Record<EndStateGroup, string> = {
-  active_parish: "regular Lithuanian worship",
+  active_parish: "active parish or mission with Lithuanian worship",
   mass_continues: "inside a parish no longer Lithuanian-led",
   transferred: "the church serves another community today",
   unresolved: "contested or canonically undecided",
-  closed: "parish closed; building fate follows →",
+  closed: "institution closed; building fate follows →",
   unverified: "present status still being researched",
 };
+
+const FLOW_GROUP_LABEL: Record<EndStateGroup, string> = {
+  ...GROUP_LABEL,
+  active_parish: "Active Lithuanian parish or mission",
+};
+
+const institutionType = (recordType: ThreadParish["recordType"]) =>
+  recordType === "misija" ? "Mission" : "Parish";
 
 const FATE_OPACITY: Record<FateKey, number> = {
   demolished: 0.95,
@@ -418,7 +427,7 @@ export default function ParishThreads({
         ? "Baseline year not established"
         : `Baseline in the ${open.slice(4)}`
       : open
-        ? GROUP_LABEL[open.slice(2) as EndStateGroup]
+        ? FLOW_GROUP_LABEL[open.slice(2) as EndStateGroup]
         : null;
   const openMembers = open ? (model.bandMembers.get(open) ?? []) : [];
 
@@ -468,16 +477,16 @@ export default function ParishThreads({
               {" "}
               · {hovered.city}, {hovered.state} · {hovered.anchorLabel}{" "}
               {hovered.anchorYear ?? "not established"} ·{" "}
-              {toGroup(hovered.endState) === "closed" && hovered.fateKey
+              {institutionType(hovered.recordType)} · {toGroup(hovered.endState) === "closed" && hovered.fateKey
                 ? `closed; ${FATE_LABEL[hovered.fateKey].toLowerCase()}`
-                : GROUP_LABEL[toGroup(hovered.endState)]}
+                : FLOW_GROUP_LABEL[toGroup(hovered.endState)]}
               {" · click to open profile"}
             </span>
           </span>
         ) : (
           <span className="text-muted">
             Hover a line to identify it. Click or tap a line to open its
-            parish profile.
+            institution profile.
           </span>
         )}
       </div>
@@ -489,7 +498,7 @@ export default function ParishThreads({
             className="block w-full max-w-none h-auto"
             style={{ minWidth: 740 }}
             role="img"
-            aria-label={`Each of the ${model.total} documented Roman Catholic Lithuanian church communities as one line, from a building or parish baseline to its present condition; closed parishes continue to the last documented church building's fate.`}
+            aria-label={`Each of the ${model.total} documented Roman Catholic Lithuanian parishes and missions as one line, from its institutional beginning to its present condition; closed institutions continue to the last documented church building's fate.`}
           >
           {/* Church baseline first, building fate only where documented. */}
           <text
@@ -510,7 +519,7 @@ export default function ParishThreads({
             fontWeight={700}
             fill="var(--foreground)"
           >
-            PARISH STATUS
+            INSTITUTION STATUS
           </text>
           <text
             x={X_END}
@@ -527,7 +536,7 @@ export default function ParishThreads({
             fontSize={9}
             fill="var(--muted)"
           >
-            closed parishes split by church fate
+            closed institutions split by church fate
           </text>
           {/* Decade bands + labels */}
           {model.decadeLayout.map((d) => (
@@ -659,7 +668,7 @@ export default function ParishThreads({
                     );
                   }}
                 >
-                  <title>{`${GROUP_LABEL[g]}: ${model.counts[g]} — click to list`}</title>
+                  <title>{`${FLOW_GROUP_LABEL[g]}: ${model.counts[g]} — click to list`}</title>
                 </rect>
                 {g === "closed" && (
                   <text
@@ -669,7 +678,7 @@ export default function ParishThreads({
                     fontWeight={600}
                     fill="var(--foreground)"
                   >
-                    {GROUP_LABEL[g]}
+                    {FLOW_GROUP_LABEL[g]}
                     <tspan fontWeight={400} fill="var(--muted)">
                       {` · ${model.counts[g]}`}
                     </tspan>
@@ -709,7 +718,7 @@ export default function ParishThreads({
                     setOpen((o) => (o === key ? null : key));
                   }}
                 >
-                  <title>{`${isFate ? FATE_LABEL[fate!] : GROUP_LABEL[g]}: ${n} — click to list`}</title>
+                  <title>{`${isFate ? FATE_LABEL[fate!] : FLOW_GROUP_LABEL[g]}: ${n} — click to list`}</title>
                 </rect>
                 {fate === "demolished" && (
                   <g stroke="var(--foreground)" strokeWidth={1.4} opacity={0.85}>
@@ -737,7 +746,7 @@ export default function ParishThreads({
                     fontWeight={600}
                     fill="var(--foreground)"
                   >
-                    {GROUP_LABEL[g]}
+                    {FLOW_GROUP_LABEL[g]}
                     <tspan fontWeight={400} fill="var(--muted)">{` · ${n}`}</tspan>
                     <tspan
                       x={X_END + NODE_W + 8}
@@ -763,7 +772,7 @@ export default function ParishThreads({
                 {openLabel}
                 <span className="ml-2 font-sans text-sm font-normal text-muted">
                   {openMembers.length}{" "}
-                  {openMembers.length === 1 ? "parish" : "parishes"}
+                  {openMembers.length === 1 ? "institution" : "institutions"}
                 </span>
               </h3>
               <button
@@ -788,7 +797,7 @@ export default function ParishThreads({
                     <span className="font-medium">{m.name}</span>
                   )}
                   <span className="block text-xs text-muted">
-                    {m.city}, {m.state} · {m.anchorLabel}{" "}
+                    {institutionType(m.recordType)} · {m.city}, {m.state} · {m.anchorLabel}{" "}
                     {m.anchorYear ?? "not established"}
                   </span>
                 </li>
@@ -802,13 +811,13 @@ export default function ParishThreads({
       <div className="sr-only">
         <table>
           <caption>
-            Documented church communities by end state, and building fates of
-            the closed
+            Documented Roman Catholic Lithuanian parishes and missions by end
+            state, and building fates of the closed
           </caption>
           <tbody>
             {model.groups.map((g) => (
               <tr key={g}>
-                <td>{GROUP_LABEL[g]}</td>
+                <td>{FLOW_GROUP_LABEL[g]}</td>
                 <td>{model.counts[g]}</td>
               </tr>
             ))}

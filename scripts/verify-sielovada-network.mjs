@@ -78,8 +78,13 @@ for (const entry of network.entries) {
       `${entry.id}: a religious house must remain outside parish counts`,
     );
   }
-  if (entry.networkClass === "active_parish" && !entry.registrySlug) {
-    errors.push(`${entry.id}: active parish lacks a canonical registry match`);
+  if (
+    ["active_parish", "active_mission"].includes(entry.networkClass) &&
+    !entry.registrySlug
+  ) {
+    errors.push(
+      `${entry.id}: active parish or mission lacks a canonical registry match`,
+    );
   }
 }
 
@@ -106,9 +111,19 @@ for (const [field, expected] of Object.entries(expectedCounts)) {
   }
 }
 
-if (network.counts.activeParishes !== 7) {
+if (network.counts.activeParishes !== 6) {
   errors.push(
-    `active parish canon changed: expected 7, found ${network.counts.activeParishes}`,
+    `active parish canon changed: expected 6, found ${network.counts.activeParishes}`,
+  );
+}
+if (network.counts.activeMissions !== 2) {
+  errors.push(
+    `active mission canon changed: expected 2, found ${network.counts.activeMissions}`,
+  );
+}
+if (network.counts.massContinues !== 6) {
+  errors.push(
+    `hosted Lithuanian Mass canon changed: expected 6, found ${network.counts.massContinues}`,
   );
 }
 if (network.counts.listed !== 20) {

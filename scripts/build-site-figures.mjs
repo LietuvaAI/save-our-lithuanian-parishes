@@ -83,8 +83,21 @@ const romanCatholicParishHistory = institutionHistory.filter(
     row.record_type === "parish" &&
     row.institution_class === "roman_catholic",
 );
+const romanCatholicMissionHistory = institutionHistory.filter(
+  (row) =>
+    row.record_type === "misija" &&
+    row.institution_class === "roman_catholic",
+);
+const romanCatholicInstitutionHistory = [
+  ...romanCatholicParishHistory,
+  ...romanCatholicMissionHistory,
+];
 const historyStatus = tally(
   romanCatholicParishHistory,
+  (row) => row.status_group,
+);
+const romanCatholicInstitutionStatus = tally(
+  romanCatholicInstitutionHistory,
   (row) => row.status_group,
 );
 const closedParishes = romanCatholicParishHistory.filter(
@@ -160,6 +173,16 @@ expect(
   "canonical Roman Catholic parish history",
   romanCatholicParishHistory.length,
   usRomanCatholicParishes.length,
+);
+expect(
+  "canonical Roman Catholic mission history",
+  romanCatholicMissionHistory.length,
+  usRomanCatholicMissions.length,
+);
+expect(
+  "canonical Roman Catholic parish and mission history",
+  romanCatholicInstitutionHistory.length,
+  usRomanCatholicParishes.length + usRomanCatholicMissions.length,
 );
 expectSum("public U.S. class/type partition", usPublic.length, [
   usRomanCatholicParishes.length,
@@ -257,6 +280,22 @@ const figures = {
       (row) => row.closed.year != null && row.closed.year >= 2020,
     ),
     topClosureDioceses,
+  },
+  catholicInstitutionFlow: {
+    institutions: romanCatholicInstitutionHistory.length,
+    parishes: romanCatholicParishHistory.length,
+    missions: romanCatholicMissionHistory.length,
+    status: romanCatholicInstitutionStatus,
+    closed: count(
+      romanCatholicInstitutionHistory,
+      (row) => row.status_group === "closed",
+    ),
+    retainingLithuanianWorship: count(
+      romanCatholicInstitutionHistory,
+      (row) =>
+        row.status_group === "active_parish" ||
+        row.status_group === "mass_continues",
+    ),
   },
   physicalSites: {
     worshipSites: infographic.counts.physical_worship_sites,

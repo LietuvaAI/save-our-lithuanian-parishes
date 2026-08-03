@@ -21,16 +21,16 @@
   ],
   "principles": "conflicts are data; locked figures untouched; no invented values; every fact cites its source",
   "counts": {
-    "records": 192,
+    "records": 193,
     "parishes": 160,
     "phases": 8,
-    "missions": 5,
+    "missions": 6,
     "congregations": 8,
     "leads": 8,
     "context": 3,
     "case_filed": 83,
     "case_filed_records": 82,
-    "multi_source": 71,
+    "multi_source": 72,
     "single_source": 39,
     "with_exact_geo": 92,
     "with_city_geo": 87,
@@ -23573,10 +23573,96 @@
         "reason": "Historical organizing phase or attempt; not counted as an institution.",
         "identity_support": null
       }
+    },
+    {
+      "slug": "our-lady-of-siluva-mission-mundelein-il",
+      "names": {
+        "lt": "Šiluvos Mergelės Marijos lietuvių katalikų misija",
+        "en": "Our Lady of Siluva Lithuanian Mission",
+        "variants": [
+          "Our Lady of Siluva Lithuanian Catholic Mission",
+          "Waukegan-Lake County Lithuanian Catholic Mission"
+        ]
+      },
+      "city": "Mundelein",
+      "state": "IL",
+      "country": "US",
+      "record_type": "misija",
+      "comparator": false,
+      "in_locked_scope": false,
+      "sources": [
+        {
+          "axis": "official-current",
+          "kind": "archdiocesan-directory",
+          "ref": "Our Lady of Siluva Lithuanian Mission",
+          "sourceUrl": "https://www.archchicago.org/about-us/parish-directory"
+        },
+        {
+          "axis": "official-current",
+          "kind": "archdiocesan-reporting",
+          "ref": "Lithuanians have new option for worshipping",
+          "sourceUrl": "https://www.chicagocatholic.com/chicagoland/-/article/2014/02/09/lithuanians-have-new-option-for-worshipping"
+        },
+        {
+          "axis": "sielovada",
+          "kind": "pastoral-directory",
+          "ref": "Šiaurės Amerika",
+          "sourceUrl": "https://sielovada.org/siaures-amerika/"
+        },
+        {
+          "axis": "sielovada",
+          "kind": "pastoral-visit-report",
+          "ref": "LVK delegato užsienio lietuvių sielovadai viešnagė pas Amerikos lietuvius",
+          "sourceUrl": "https://sielovada.org/lvk-delegato-uzsienio-lietuviu-sielovadai-viesnage-pas-amerikos-lietuvius/"
+        }
+      ],
+      "years": {
+        "founded": [
+          {
+            "value": "2013",
+            "source": "official-current",
+            "cite": "Archdiocesan decree in December 2013; first Mass 2013-12-15"
+          }
+        ],
+        "closed": []
+      },
+      "conflicts": [],
+      "related_sites": [
+        {
+          "name": "Santa Maria del Popolo Church",
+          "address": "116 N Lake St, Mundelein, IL 60060",
+          "relationship": "hosted_monthly_lithuanian_mass"
+        }
+      ],
+      "events_refs": [],
+      "geo": {
+        "lat": 42.26441,
+        "lon": -88.00341,
+        "precision": "address-geocode",
+        "source": "Santa Maria del Popolo host-site address"
+      },
+      "congregation_class": "roman_catholic",
+      "axes_count": 2,
+      "record_depth": "multi-source",
+      "diocese": "Archdiocese of Chicago",
+      "description": "Archdiocesan Lithuanian mission established in 2013 for the Waukegan and Lake County area, with monthly Lithuanian Mass at Santa Maria del Popolo in Mundelein.",
+      "city_history": [],
+      "public_census": {
+        "included": true,
+        "scope": "public_us_institution",
+        "reason": "Included by the canonical CultureNet parish publication projection.",
+        "identity_support": "multi_source_corroborated",
+        "canonical_entity_id": "cn:institution:our-lady-of-siluva-mission-mundelein-il",
+        "canonical_slug": "our-lady-of-siluva-mission-mundelein-il",
+        "canonical_profile": "/parishes/our-lady-of-siluva-mission-mundelein-il",
+        "canonical_detail_status": "active_monthly_lithuanian_worship",
+        "projection_record_id": "proj:mundelein-15:mission",
+        "protected_campaign": false
+      }
     }
   ],
   "registryRevision": {
-    "version": 17,
+    "version": 18,
     "date": "2026-08-02",
     "changelog": [
       "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
@@ -23617,16 +23703,17 @@
       "Registry Revision 14: added page-cited St. George Detroit parish and church-building chronology from the 1973 parish history, plus cleared line art; public counts, identities, classifications, site counts, and continuity-edge counts are unchanged.",
       "Registry Revision 15: reconciled the four protected campaign profiles to current official evidence, separated institution and building status, and corrected Hartford and Maspeth status groups; public institution, site, and continuity-edge counts are unchanged.",
       "Registry Revision 16: clarified Saint Michael the Archangel Parish in Scranton as one surviving parish across its former Jackson Street church and current Saint Lucy home, and distinguished its current Latin Mass from undocumented Lithuanian worship; public counts are unchanged.",
-      "Registry Revision 17: established Saint Michael the Archangel Parish in Scranton in 1914, promoted its original wooden church as a distinct worship site, and enriched its school, language, and two-church history from the 1977 published parish account; the public institution count remains unchanged."
+      "Registry Revision 17: established Saint Michael the Archangel Parish in Scranton in 1914, promoted its original wooden church as a distinct worship site, and enriched its school, language, and two-church history from the 1977 published parish account; the public institution count remains unchanged.",
+      "Registry Revision 18: admitted Our Lady of Siluva Mission in Mundelein as a distinct active Roman Catholic mission and reconciled Brooklyn Annunciation, Maspeth Transfiguration, and Hartford Holy Trinity to the current canonical status projection."
     ],
-    "contentHash": "bc4fb1e11792de29975eeea414a9e8046fef7b46251387ab32627845ea6daffd"
+    "contentHash": "8629071a4f3550425769374715f6433a4dd3c66d7b7dbf3c812d9e4de8d016de"
   },
   "publicationAuthority": {
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
-    "revisionId": "canonical-public-census-2026-07-31",
-    "contentHash": "sha256:0c68ed54a90e5af4e7805dcde2a30ea6f3bee90f3816632c4733a8a3e596956a",
-    "publicUSInstitutions": 154,
+    "revisionId": "canonical-public-census-2026-08-02-mundelein",
+    "contentHash": "sha256:d6ffc38153548995aa3975a713e3609e69e34679bec708a8ed1ee6d3e211df3c",
+    "publicUSInstitutions": 155,
     "synchronized": "2026-08-02"
   }
 }

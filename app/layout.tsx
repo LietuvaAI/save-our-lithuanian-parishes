@@ -47,6 +47,10 @@ const NAV: NavItem[] = [
     children: [
       {
         href: "/where-every-parish-ended-up",
+        label: "Where Parishes & Missions Ended Up",
+      },
+      {
+        href: "/church-buildings-through-time",
         label: "Church Buildings Through Time",
       },
       {

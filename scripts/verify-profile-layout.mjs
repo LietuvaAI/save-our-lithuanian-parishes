@@ -575,7 +575,7 @@ const lemontMission = institutionByProfile.get(
 if (
   lemontMission?.record_type !== "misija" ||
   infographic.counts.roman_catholic_parish_institutions !== 132 ||
-  publication.counts.by_record_type.misija !== 4
+  publication.counts.by_record_type.misija !== 5
 ) {
   errors.push("mission vocabulary or Roman Catholic parish count drifted");
 }

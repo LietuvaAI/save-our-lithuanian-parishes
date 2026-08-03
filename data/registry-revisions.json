@@ -200,6 +200,21 @@
         "data/case-records/sv-mykolo-scranton-pa.json",
         "data/candidates/registry-revision-17-st-michael-scranton-archive-history-2026-08-02.md"
       ]
+    },
+    {
+      "version": 18,
+      "date": "2026-08-02",
+      "registryRecords": 193,
+      "publicUSRecords": 155,
+      "usRomanCatholicParishes": 132,
+      "summary": "Admitted Our Lady of Siluva Mission in Mundelein as a distinct active Roman Catholic mission and reconciled the current status of Brooklyn Annunciation, Maspeth Transfiguration, and Hartford Holy Trinity from the CultureNet canonical projection.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/canonical-public-census-adjudications.json",
+        "data/sielovada-us-network.json",
+        "data/candidates/registry-revision-18-mundelein-current-life-2026-08-02.md"
+      ]
     }
   ]
 }

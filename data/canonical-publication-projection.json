@@ -8296,6 +8296,66 @@
     },
     {
       "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:mundelein-15:current-worship",
+      "object": {
+        "frequency": "monthly",
+        "host_site": "Santa Maria del Popolo Church"
+      },
+      "observed_at": "2024",
+      "predicate": "active_monthly_lithuanian_worship",
+      "source_artifact_id": "src:mundelein-15:sielovada-visit-2024",
+      "source_locator": "Pastoral visit section describing monthly Lithuanian Mass",
+      "subject": {
+        "canonical_entity_id": "cn:institution:our-lady-of-siluva-mission-mundelein-il"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "site_identity",
+      "confidence": "high",
+      "id": "assert:mundelein-15:host-site",
+      "object": {
+        "address": "116 N Lake St, Mundelein, IL 60060",
+        "name": "Santa Maria del Popolo Church"
+      },
+      "predicate": "hosts_lithuanian_mission_worship",
+      "source_artifact_id": "src:mundelein-15:archdiocese-directory",
+      "source_locator": "Mission directory entry and address",
+      "subject": {
+        "canonical_entity_id": "cn:building_site:santa-maria-del-popolo-mundelein-il"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "identity",
+      "confidence": "high",
+      "id": "assert:mundelein-15:mission-identity",
+      "object": {
+        "canonical_name": "Our Lady of Siluva Lithuanian Mission",
+        "decree_date": "2013-12",
+        "first_mass": "2013-12-15",
+        "place": "Mundelein, Illinois"
+      },
+      "predicate": "officially_erected_lithuanian_mission",
+      "source_artifact_id": "src:mundelein-15:chicago-catholic-2014",
+      "source_locator": "Article paragraphs describing the decree and first Mass",
+      "subject": {
+        "canonical_entity_id": "cn:institution:our-lady-of-siluva-mission-mundelein-il"
+      }
+    },
+    {
+      "adjudication": {
         "conflict_preserved": true,
         "state": "conflict_preserved"
       },
@@ -10771,6 +10831,16 @@
       "lifecycle_status": "historical_host_site",
       "site_subtype": "host_hall",
       "slug": "sandara-hall-south-boston-ma"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Santa Maria del Popolo Church, Mundelein",
+      "entity_type": "building_site",
+      "evidence_depth": "official archdiocesan directory",
+      "id": "cn:building_site:santa-maria-del-popolo-mundelein-il",
+      "lifecycle_status": "standing_active_host_site",
+      "site_subtype": "host_church",
+      "slug": "santa-maria-del-popolo-mundelein-il"
     },
     {
       "aliases": [
@@ -13931,6 +14001,20 @@
     },
     {
       "aliases": [
+        "Šiluvos Mergelės Marijos lietuvių katalikų misija",
+        "Waukegan-Lake County Lithuanian Catholic Mission"
+      ],
+      "canonical_name": "Our Lady of Siluva Lithuanian Mission, Mundelein",
+      "entity_type": "institution",
+      "evidence_depth": "official archdiocesan sources plus current pastoral reporting",
+      "formation_basis": "archdiocesan_decree_and_first_mass",
+      "id": "cn:institution:our-lady-of-siluva-mission-mundelein-il",
+      "institution_subtype": "misija",
+      "lifecycle_status": "active_monthly_lithuanian_worship",
+      "slug": "our-lady-of-siluva-mission-mundelein-il"
+    },
+    {
+      "aliases": [
         "Sopulingosios Dievo Motinos",
         "Our Lady of Sorrows Lithuanian R.C. Church"
       ],
@@ -16545,24 +16629,24 @@
       "slug": "robert-damyanovich"
     }
   ],
-  "content_hash": "sha256:0c68ed54a90e5af4e7805dcde2a30ea6f3bee90f3816632c4733a8a3e596956a",
+  "content_hash": "sha256:d6ffc38153548995aa3975a713e3609e69e34679bec708a8ed1ee6d3e211df3c",
   "counts": {
     "by_institution_class": {
       "independent_catholic": 4,
       "national_catholic_pncc": 6,
       "non_catholic_christian": 8,
-      "roman_catholic": 136
+      "roman_catholic": 137
     },
     "by_record_type": {
       "congregation": 6,
-      "misija": 4,
+      "misija": 5,
       "parish": 144
     },
     "profiles_pending_deep_case": 45,
     "protected_campaign_assignments": 4,
-    "public_us_institutions": 154
+    "public_us_institutions": 155
   },
-  "generated": "2026-07-31",
+  "generated": "2026-08-02",
   "linked_context": [
     {
       "aliases": [
@@ -23566,6 +23650,7 @@
       "culturenet-parish-lineage-detroit-cleveland-pilot-2026-07-31",
       "culturenet-parish-living-network-1-2026-07-31",
       "culturenet-parish-midwest-new-england-lineage-1-2026-07-31",
+      "culturenet-parish-mundelein-current-mission-15-2026-08-02",
       "culturenet-parish-national-scranton-providence-lineage-8-2026-07-31",
       "culturenet-parish-new-england-midwest-continuity-2-2026-07-31",
       "culturenet-parish-northeast-coal-sites-4-2026-07-31",
@@ -25988,6 +26073,37 @@
       "source_artifact_ids": [
         "src:living-1:archchicago-directory:2026-07",
         "src:living-1:nativity-bvm:2026-07-31"
+      ],
+      "state": "IL"
+    },
+    {
+      "aliases": [
+        "Waukegan-Lake County Lithuanian Catholic Mission",
+        "Šiluvos Mergelės Marijos lietuvių katalikų misija"
+      ],
+      "canonical_detail_status": "active_monthly_lithuanian_worship",
+      "canonical_name": "Our Lady of Siluva Lithuanian Mission, Mundelein",
+      "canonical_slug": "our-lady-of-siluva-mission-mundelein-il",
+      "city": "Mundelein",
+      "culturenet_entity_id": "cn:institution:our-lady-of-siluva-mission-mundelein-il",
+      "evidence_assertion_ids": [
+        "assert:mundelein-15:current-worship",
+        "assert:mundelein-15:host-site",
+        "assert:mundelein-15:mission-identity"
+      ],
+      "identity_support": "multi_source_corroborated",
+      "institution_class": "roman_catholic",
+      "migration_state": "mundelein_current_mission_15_projected",
+      "name": "Šiluvos Mergelės Marijos lietuvių katalikų misija",
+      "projection_record_id": "proj:mundelein-15:mission",
+      "protected_campaign": false,
+      "public_profile": "/parishes/our-lady-of-siluva-mission-mundelein-il",
+      "record_type": "misija",
+      "registry_slug": "our-lady-of-siluva-mission-mundelein-il",
+      "source_artifact_ids": [
+        "src:mundelein-15:archdiocese-directory",
+        "src:mundelein-15:chicago-catholic-2014",
+        "src:mundelein-15:sielovada-visit-2024"
       ],
       "state": "IL"
     },
@@ -36693,6 +36809,49 @@
       }
     },
     {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:mundelein-15:current-worship",
+          "observed_at": "2024"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "site_count_only",
+      "date": {
+        "certainty": "official_current_record",
+        "end": null,
+        "label": "monthly Lithuanian mission worship",
+        "precision": "day_and_open_end",
+        "start": "2013-12-15"
+      },
+      "evidence_assertion_ids": [
+        "assert:mundelein-15:current-worship",
+        "assert:mundelein-15:host-site"
+      ],
+      "id": "rel:mundelein-15:mission-used-host-site",
+      "identity_effect": "site_context_only",
+      "projection_group": "institution_site",
+      "publication_state": "publishable",
+      "relationship_type": "institution-used-site",
+      "source": {
+        "display_name": "Our Lady of Siluva Lithuanian Mission, Mundelein",
+        "entity_id": "cn:institution:our-lady-of-siluva-mission-mundelein-il",
+        "entity_type": "institution",
+        "slug": "our-lady-of-siluva-mission-mundelein-il"
+      },
+      "source_artifact_ids": [
+        "src:mundelein-15:archdiocese-directory",
+        "src:mundelein-15:sielovada-visit-2024"
+      ],
+      "target": {
+        "display_name": "Santa Maria del Popolo Church, Mundelein",
+        "entity_id": "cn:building_site:santa-maria-del-popolo-mundelein-il",
+        "entity_type": "building_site",
+        "slug": "santa-maria-del-popolo-mundelein-il"
+      }
+    },
+    {
       "adjudication_state": "conflict_preserved",
       "assertion_temporal_context": [
         {
@@ -43982,7 +44141,7 @@
       }
     }
   ],
-  "revision_id": "canonical-public-census-2026-07-31",
+  "revision_id": "canonical-public-census-2026-08-02-mundelein",
   "schema": "culturenet-parish-publication-projection.v1",
   "scope": {
     "country": "US",
@@ -47171,6 +47330,48 @@
         "status": "brain_canonical_evidence"
       },
       "title": "Holy Cross National Catholic Westville current-condition case file"
+    },
+    {
+      "artifact_type": "official_directory",
+      "id": "src:mundelein-15:archdiocese-directory",
+      "locator": {
+        "exact_label": "Our Lady of Siluva Lithuanian Mission, 116 N Lake St, Mundelein"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://www.archchicago.org/about-us/parish-directory",
+        "quote_policy": "cite and summarize",
+        "status": "official_current_source"
+      },
+      "title": "Archdiocese of Chicago parish directory"
+    },
+    {
+      "artifact_type": "official_archdiocesan_reporting",
+      "id": "src:mundelein-15:chicago-catholic-2014",
+      "locator": {
+        "exact_label": "Chicago Catholic, February 9, 2014; decree, first Mass, and monthly worship"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://www.chicagocatholic.com/chicagoland/-/article/2014/02/09/lithuanians-have-new-option-for-worshipping",
+        "quote_policy": "cite and summarize",
+        "status": "official_archdiocesan_reporting"
+      },
+      "title": "Lithuanians have new option for worshipping"
+    },
+    {
+      "artifact_type": "pastoral_visit_report",
+      "id": "src:mundelein-15:sielovada-visit-2024",
+      "locator": {
+        "exact_label": "2024 pastoral visit; monthly Lithuanian Mass and current community life"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://sielovada.org/lvk-delegato-uzsienio-lietuviu-sielovadai-viesnage-pas-amerikos-lietuvius/",
+        "quote_policy": "cite and summarize",
+        "status": "official_pastoral_reporting"
+      },
+      "title": "LVK delegato užsienio lietuvių sielovadai viešnagė pas Amerikos lietuvius"
     },
     {
       "artifact_type": "canonical_case_file",

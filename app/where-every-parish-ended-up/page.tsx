@@ -1,99 +1,124 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import PhysicalSiteTimeline, {
-  type PhysicalSiteState,
-  type PhysicalSiteTimelineRow,
-} from "@/components/PhysicalSiteTimeline";
+import ParishThreads, {
+  type FateKey,
+  type ThreadParish,
+} from "@/components/ParishThreads";
 import {
-  infographicCounts,
-  physicalWorshipSiteHistory,
+  canonicalInfographics,
+  romanCatholicInstitutionHistory,
+  romanCatholicMissionHistory,
+  romanCatholicParishHistory,
 } from "@/lib/infographic-projection";
+import { toGroup } from "@/lib/end-state";
 
 export const metadata: Metadata = {
-  title: "Lithuanian Church Buildings Through Time",
+  title: "Where Every Lithuanian Parish and Mission Ended Up",
   description:
-    "A physical-site view of documented Lithuanian Catholic churches and worship places, kept separate from parish-institution history.",
+    "Follow every documented Roman Catholic Lithuanian parish and mission from its institutional beginning to its present status.",
 };
 
-function stateForSite(
-  conditionTypes: Set<string>,
-  demolishedYear: number | null,
-): PhysicalSiteState {
-  if (demolishedYear || conditionTypes.has("building-demolished")) {
-    return "demolished";
-  }
-  if (conditionTypes.has("building-repurposed")) return "repurposed";
-  if (conditionTypes.has("building-listed-for-sale")) return "listed_for_sale";
-  if (conditionTypes.has("building-standing")) return "standing";
-  return "not_established";
+function fateKey(buildingFate: string | null): FateKey {
+  if (buildingFate === "demolished") return "demolished";
+  if (buildingFate === "repurposed_religious") return "religious";
+  if (buildingFate === "repurposed_secular") return "secular";
+  if (buildingFate === "derelict") return "derelict";
+  if (buildingFate === "standing") return "standing";
+  return "unrecorded";
 }
 
-function buildSites(): PhysicalSiteTimelineRow[] {
-  return physicalWorshipSiteHistory.map((site) => {
-    const conditionTypes = new Set(
-      site.condition_relationships.map((condition) => condition.relationship_type),
-    );
-    const profiles = site.institution_use_periods
-      .map((period) => period.institution_profile)
-      .filter((profile): profile is string => profile != null);
-    return {
-      slug: site.slug,
-      name: site.name,
-      firstYear: site.first_documented_year,
-      endYear: site.demolished_year,
-      state: stateForSite(conditionTypes, site.demolished_year),
-      profileHref: profiles.at(-1) ?? null,
-    };
+function buildThreads(): ThreadParish[] {
+  return romanCatholicInstitutionHistory.map((institution) => ({
+    slug: institution.registry_slug,
+    name: institution.name,
+    city: institution.city,
+    state: institution.state,
+    anchorYear: institution.founded.year,
+    anchorLabel:
+      institution.record_type === "misija" ? "Established" : "Founded",
+    recordType: institution.record_type as "parish" | "misija",
+    endState: institution.status_group,
+    fateKey:
+      institution.status_group === "closed"
+        ? fateKey(institution.building_fate)
+        : null,
+    href: institution.public_profile,
+  }));
+}
+
+export default function ParishOutcomeFlowPage() {
+  const threads = buildThreads();
+  const closed = threads.filter(
+    (institution) => toGroup(institution.endState) === "closed",
+  );
+  const retainingLithuanianWorship = threads.filter(
+    (institution) =>
+      institution.endState === "active_parish" ||
+      institution.endState === "mass_continues",
+  );
+  const generated = new Date(
+    `${canonicalInfographics.generated}T00:00:00Z`,
+  ).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
   });
-}
 
-export default function ChurchBuildingHistoryPage() {
-  const sites = buildSites();
-  const stateCounts = Object.fromEntries(
-    sites.reduce((counts, site) => {
-      counts.set(site.state, (counts.get(site.state) ?? 0) + 1);
-      return counts;
-    }, new Map<PhysicalSiteState, number>()),
-  ) as Partial<Record<PhysicalSiteState, number>>;
-
-  if (sites.length !== infographicCounts.physical_worship_sites) {
-    throw new Error("Physical worship-site population drifted.");
+  if (
+    threads.length !==
+    romanCatholicParishHistory.length + romanCatholicMissionHistory.length
+  ) {
+    throw new Error("Parish-and-mission flow population drifted.");
   }
 
   return (
     <article className="mx-auto max-w-6xl px-4 py-8">
-      <p className="text-xs uppercase text-muted">Physical-site view</p>
+      <p className="text-xs uppercase text-muted">Institution outcome view</p>
       <h1 className="mt-1 max-w-3xl font-serif text-3xl font-semibold leading-tight sm:text-4xl">
-        Lithuanian church buildings through time
+        Where every Lithuanian parish and mission ended up
       </h1>
       <p className="mt-2 max-w-3xl text-lg leading-relaxed">
-        When did each documented church or worship site enter the Lithuanian
-        parish story, and what is known about the building today?
+        Follow each Roman Catholic Lithuanian parish and mission from its
+        institutional beginning to its present condition. Closed institutions
+        continue into the recorded fate of their last church building.
       </p>
 
       <section className="mt-5 border-y border-rule py-4">
-        <p className="max-w-3xl leading-relaxed">
-          The canonical graph currently identifies {sites.length} physical
-          worship sites connected to the U.S. parish record. It records{" "}
-          {stateCounts.demolished ?? 0} as demolished and{" "}
-          {stateCounts.repurposed ?? 0} as repurposed; the present condition of{" "}
-          {stateCounts.not_established ?? 0} sites is not yet established in
-          the building ledger.
+        <p className="max-w-3xl font-serif text-xl leading-relaxed">
+          Of <strong>{threads.length}</strong> Roman Catholic Lithuanian
+          parishes and missions, <strong>{closed.length}</strong> have closed.{" "}
+          <strong>{retainingLithuanianWorship.length}</strong> still hold
+          Lithuanian worship.
         </p>
-        <p className="mt-2 max-w-3xl text-xs leading-relaxed text-muted">
-          This is a building history, not an institution count. A parish may
-          have used several buildings, and one building may have served more
-          than one congregation. Parish foundations and closures remain in{" "}
-          <Link href="/history" className="underline hover:text-foreground">
-            The History
+        <p className="mt-2 max-w-3xl text-sm text-muted">
+          Scope: {romanCatholicParishHistory.length} parish institutions +{" "}
+          {romanCatholicMissionHistory.length} missions · canonical projection
+          generated {generated}. A parish and its church building are distinct
+          records.
+        </p>
+        <p className="mt-2 text-sm">
+          <Link
+            href="/church-buildings-through-time"
+            className="font-semibold underline hover:text-accent"
+          >
+            View the physical church buildings separately
           </Link>
-          .
         </p>
       </section>
 
-      <section className="mt-6 overflow-x-auto">
-        <PhysicalSiteTimeline sites={sites} />
+      <section className="mt-6">
+        <ParishThreads parishes={threads} />
       </section>
+
+      <p className="mt-8 border-t border-rule pt-4 text-xs leading-relaxed text-muted">
+        Every line and figure derives from the canonical CultureNet projection.
+        Open any line for the institution profile and its evidence. See{" "}
+        <Link href="/about-the-data" className="underline hover:text-foreground">
+          About the Data
+        </Link>{" "}
+        for scope and method.
+      </p>
     </article>
   );
 }
