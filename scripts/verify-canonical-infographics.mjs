@@ -57,6 +57,9 @@ const closed = romanHistory.filter((row) => row.status_group === "closed");
 const closedRomanInstitutions = romanInstitutionHistory.filter(
   (row) => row.status_group === "closed",
 );
+const transferredRomanInstitutions = romanInstitutionHistory.filter(
+  (row) => row.status_group === "transferred",
+);
 const retainingLithuanianWorship = romanInstitutionHistory.filter(
   (row) =>
     row.status_group === "active_parish" ||
@@ -218,6 +221,60 @@ for (const institution of institutions) {
     errors.push(`${institution.registry_slug}: legacy baseline is rendered as canonical fate`);
   }
 }
+if (transferredRomanInstitutions.length !== 22) {
+  errors.push(
+    `transferred Roman Catholic institutions: ${transferredRomanInstitutions.length} != 22`,
+  );
+}
+for (const institution of transferredRomanInstitutions) {
+  const summary = institution.continuation_summary;
+  if (
+    institution.status_source_authority !==
+    "canonical_continuation_status_adjudication"
+  ) {
+    errors.push(
+      `${institution.registry_slug}: transferred status is not explicitly adjudicated in Brain`,
+    );
+  }
+  if (
+    !summary?.continuation_mode ||
+    !summary.destination_name ||
+    !summary.status_basis ||
+    !summary.display_summary ||
+    !(summary.source_urls?.length > 0) ||
+    !summary.source_assertion_id
+  ) {
+    errors.push(
+      `${institution.registry_slug}: transferred status lacks a canonical card explanation`,
+    );
+  }
+}
+for (const institution of romanInstitutionHistory) {
+  if (
+    institution.status_group !== "transferred" &&
+    institution.continuation_summary != null
+  ) {
+    errors.push(
+      `${institution.registry_slug}: continuation summary appears outside the transferred band`,
+    );
+  }
+}
+const grandRapids = transferredRomanInstitutions.find(
+  (row) => row.registry_slug === "paul-grand-rapids-mi",
+);
+if (
+  grandRapids?.continuation_summary?.continuation_mode !==
+    "same_institution_new_community" ||
+  grandRapids?.continuation_summary?.effective_date !== null ||
+  !grandRapids?.continuation_summary?.display_summary.includes(
+    "has not taken effect",
+  ) ||
+  !grandRapids?.continuation_summary?.future_plan?.includes("not yet effective")
+) {
+  errors.push(
+    "Grand Rapids must remain an open non-Lithuanian parish with only a future merger plan",
+  );
+}
 const expectedPrecedence = [
   "building-demolished",
   "building-repurposed",
@@ -349,7 +406,7 @@ const campaignAdjudications = [
     "/parishes/kristaus-atsimainymo-maspeth-ny",
     "transferred",
     2019,
-    "brain_current_status_adjudication",
+    "canonical_continuation_status_adjudication",
   ],
 ];
 for (const [profile, status, endedYear, authority] of campaignAdjudications) {

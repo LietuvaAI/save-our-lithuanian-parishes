@@ -1,8 +1,8 @@
 # Public institution count audit
 
 **Audit date:** 2026-08-03
-**Registry revision:** 23
-**Canonical authority:** CultureNet canonical-public-census-2026-08-03-brain-single-source
+**Registry revision:** 24
+**Canonical authority:** CultureNet canonical-public-census-2026-08-03-continuation-authority
 
 ## Press-safe claim
 

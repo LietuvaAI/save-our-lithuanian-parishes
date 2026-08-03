@@ -285,6 +285,20 @@
         "data/canonical-public-census-adjudications.json",
         "data/canonical-infographic-projection.json"
       ]
+    },
+    {
+      "version": 24,
+      "date": "2026-08-03",
+      "registryRecords": 193,
+      "publicUSRecords": 155,
+      "usRomanCatholicParishes": 132,
+      "summary": "Imported Brain-adjudicated continuation statuses, modes, destinations, explanations, and evidence without changing public populations or status totals.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/canonical-public-census-adjudications.json",
+        "data/canonical-infographic-projection.json"
+      ]
     }
   ]
 }

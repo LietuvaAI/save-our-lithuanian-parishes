@@ -2,8 +2,8 @@
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
-    "publication_projection_hash": "sha256:2ca8b79e2ef560002c521e73ae8083674b43fb4a90e97fa9226788b082686c7a",
-    "publication_projection_revision": "canonical-public-census-2026-08-03-brain-single-source",
+    "publication_projection_hash": "sha256:32e541763c4d95f43844e412c32a15703e3ae871cff962c0ecedd99ac5d8eae6",
+    "publication_projection_revision": "canonical-public-census-2026-08-03-continuation-authority",
     "repository": "LietuvaAI/culturenet-brain"
   },
   "building_site_history": [
@@ -7673,7 +7673,7 @@
       "building-standing"
     ]
   },
-  "content_hash": "sha256:3c937db0e2aff888e196a40b0c0a2b5093f7bcc09969b39439fbfec8c55d26ef",
+  "content_hash": "sha256:5d441dcabfe735b438783f3da70a96be9dd1a1a1463d653149be95e205593d2d",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -10642,6 +10642,37 @@
         "source_authority": "canonical_graph",
         "year": 1999
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:pcs-6:luzerne-lifecycle",
+          "assert:pcs-6:luzerne-sites"
+        ],
+        "continuation_mode": "merged_successor",
+        "continuity_relationship_ids": [
+          "rel:pcs-6:luzerne-merged-holy-family"
+        ],
+        "destination_name": "Holy Family Parish, Luzerne",
+        "display_summary": "Merged into Holy Family Parish, which continues regular Catholic worship in the former Saint Ann church; Lithuanian liturgy no longer continues.",
+        "effective_date": "1999-12-26",
+        "future_plan": null,
+        "observed_at": "2026-07-16",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-onos-luzerne-pa",
+        "source_urls": [
+          "https://www.holyfamilyluzerne.org/St--Ann-Parish",
+          "https://www.holyfamilyluzerne.org/Parish-History",
+          "https://www.holyfamilyluzerne.org/catholic-community-of-luzerne",
+          "https://www.holyfamilyluzerne.org/mass-schedule",
+          "https://www.holyfamilyluzerne.org/",
+          "https://www.dioceseofscranton.org/find-a-parish/holy-family-parish-luzerne-luzerne/",
+          "https://www.dioceseofscranton.org/bishop-announces-clergy-appointments-june-14-2022/",
+          "https://www.dioceseofscranton.org/parishioners-turn-gratitude-into-action-during-40-days-of-service-to-honor-pastor/",
+          "https://www.dioceseofscranton.org/vision-2030/",
+          "https://www.holyfamilyluzerne.org/Sacred-Heart-Parish",
+          "https://www.holyfamilyluzerne.org/St--John-Nepomucene-Parish"
+        ],
+        "status_basis": "The historical Lithuanian institution ended in a merger or canonical reorganization; a successor continues without current Lithuanian ministry."
+      },
       "culturenet_entity_id": "cn:institution:st-ann-luzerne-pa",
       "diocese": "Scranton",
       "founded": {
@@ -10671,7 +10702,7 @@
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
       "status_observed_at": "2026-07-16",
-      "status_source_authority": "site_r10_baseline",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:st-ann-bennett-street-luzerne-pa"
       ]
@@ -10929,6 +10960,37 @@
         "source_authority": "canonical_graph",
         "year": 2014
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:nem-2:omaha-lifecycle",
+          "assert:nem-2:omaha-sites"
+        ],
+        "continuation_mode": "successor_and_site_new_community",
+        "continuity_relationship_ids": [
+          "rel:nem-2:omaha-continued-sspp"
+        ],
+        "destination_name": "Saints Peter and Paul Parish, Omaha",
+        "display_summary": "Merged into Saints Peter and Paul Parish in 2014; the former church is probably used by Iglesia Cristiana Pacto de Fe, with the exact parcel match still qualified.",
+        "effective_date": "2014-06-15",
+        "future_plan": null,
+        "observed_at": "2026-07-16",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-antano-omaha-ne",
+        "source_urls": [
+          "https://catholicvoiceomaha.com/three-omaha-churches-prepare-for-last-liturgies/",
+          "https://global.truelithuania.com/omaha-nebraska-719/",
+          "https://www.flickr.com/photos/thebouncingczech/6783041344",
+          "https://en.wikipedia.org/wiki/List_of_churches_in_the_Roman_Catholic_Archdiocese_of_Omaha",
+          "https://douglascohistory.org/omahas-lithuanian-community/",
+          "https://www.google.com/maps/search/Iglesia+Cristiana+Pacto+de+Fe+Omaha",
+          "https://www.bibletimes.app/find-a-church/us/nebraska/omaha/iglesia-cristiana-pacto-de-fe-inc",
+          "https://causes.benevity.org/causes/840-271297416",
+          "https://iglesiacristianapa4.wixsite.com/pactodefeomaha",
+          "https://discovermass.com/church/st-anthony-omaha-ne/",
+          "https://stspeterpaulomaha.org/welcome/"
+        ],
+        "status_basis": "The Lithuanian institution ended; Catholic life continues through a successor while the former site serves another community."
+      },
       "culturenet_entity_id": "cn:institution:st-anthony-omaha-ne",
       "diocese": "Omaha",
       "founded": {
@@ -10961,7 +11023,7 @@
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
       "status_observed_at": "2026-07-16",
-      "status_source_authority": "site_r10_baseline",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:st-anthony-thirty-second-street-omaha-ne"
       ]
@@ -11578,6 +11640,30 @@
         "source_authority": "canonical_graph",
         "year": 2014
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:ne-3:paterson-lifecycle",
+          "assert:ne-3:paterson-sites"
+        ],
+        "continuation_mode": "former_site_new_community",
+        "continuity_relationship_ids": [],
+        "destination_name": "Grace Gospel Church, Paterson",
+        "display_summary": "The Lithuanian parish closed in 2014; its former church and rectory now serve Grace Gospel Church, a Protestant congregation.",
+        "effective_date": "after 2014-03-02",
+        "future_plan": null,
+        "observed_at": "2026-07-16",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-kazimiero-paterson-nj",
+        "source_urls": [
+          "https://global.truelithuania.com/new-jersey-613/",
+          "https://gracegospelchurch.org/",
+          "https://www.facebook.com/241557646039227",
+          "https://vkpk.lt/u-zemelapis/sv-kazimiero-baznycia-patersone/",
+          "https://gcatholic.org/churches/usa-03/19002",
+          "https://discovermass.com/church/st-casimir-paterson-nj/"
+        ],
+        "status_basis": "The Lithuanian institution ended, while its former worship site now serves another religious community."
+      },
       "culturenet_entity_id": "cn:institution:st-casimir-paterson-nj",
       "diocese": "Paterson",
       "founded": {
@@ -11608,7 +11694,7 @@
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
       "status_observed_at": "2026-07-16",
-      "status_source_authority": "site_r10_baseline",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:st-casimir-montgomery-street-paterson-nj"
       ]
@@ -12255,6 +12341,30 @@
         "source_authority": "unresolved",
         "year": null
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:successor-2:worcester-vilna-continuity",
+          "assert:successor-2:worcester-vilna-site"
+        ],
+        "continuation_mode": "same_institution_new_community",
+        "continuity_relationship_ids": [],
+        "destination_name": "Our Lady of Vilna Parish, Worcester",
+        "display_summary": "The same Catholic parish remains active and now serves a Vietnamese Catholic community; Lithuanian liturgy no longer continues.",
+        "effective_date": "by 2017",
+        "future_plan": null,
+        "observed_at": "2026-07-16",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#ausros-vartu-worcester-ma",
+        "source_urls": [
+          "https://global.truelithuania.com/worcester-massachusetts-314/",
+          "https://catholicfreepress.org/news/our-lady-of-vilna-parish-celebrates-100-year-anniversary",
+          "https://catholicmasstime.org/church/our-lady-of-vilna/18960/",
+          "https://discovermass.com/church/our-lady-of-vilna-worcester-ma/",
+          "https://catholicchurch.directory/mass-times/ma_worcester_our-lady-of-vilna-parish",
+          "https://www.churchfinder.com/churches/ma/worcester/our-lady-vilna-parish-lithuanian"
+        ],
+        "status_basis": "The same juridic parish remains open, but it no longer has current Lithuanian liturgy or organized Lithuanian pastoral ministry."
+      },
       "culturenet_entity_id": "cn:institution:our-lady-of-vilna-worcester-ma",
       "diocese": "Worcester",
       "founded": {
@@ -12284,7 +12394,7 @@
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
       "status_observed_at": "2026-07-16",
-      "status_source_authority": "site_r10_baseline",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:our-lady-of-vilna-sterling-street-worcester-ma"
       ]
@@ -12300,6 +12410,40 @@
         "display": null,
         "source_authority": "unresolved",
         "year": null
+      },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:current-1:bridgeport-historical-institution",
+          "assert:current-1:bridgeport-joint-administration-2026",
+          "assert:current-1:bridgeport-site-and-schedule-2026"
+        ],
+        "continuation_mode": "merged_successor",
+        "continuity_relationship_ids": [
+          "rel:current-1:bridgeport-joint-governance"
+        ],
+        "destination_name": "Saint Charles Borromeo Parish and Saint George, Bridgeport",
+        "display_summary": "Saint George continues jointly with Saint Charles Borromeo Parish, serving a predominantly Spanish-speaking community with Spanish and English worship.",
+        "effective_date": null,
+        "future_plan": null,
+        "observed_at": "2026-07-16",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-jurgio-bridgeport-ct",
+        "source_urls": [
+          "https://en.wikipedia.org/wiki/Saint_George_Parish_(Bridgeport,_Connecticut)",
+          "https://www.stcharlesbridgeport.org/",
+          "https://www.stcharlesbridgeport.org/mass-schedule",
+          "https://www.stcharlesbridgeport.org/about-4",
+          "https://www.stcharlesbridgeport.org/clergy-and-staff-directory",
+          "https://www.stcharlesbridgeport.org/parish-information",
+          "https://global.truelithuania.com/connecticut-789/",
+          "https://discovermass.com/church/st-george-bridgeport-ct/",
+          "https://catholicmasstime.org/church/st-george-catholic-church/1017/",
+          "https://www.bridgeportdiocese.org/mass-times/",
+          "https://www.bridgeportdiocese.org/parishes/",
+          "https://ctcemeteries.org/resources/parishes-in-the-diocese-of-bridgeport/",
+          "https://www.litua.com/lt.php/zinynas/baznycios"
+        ],
+        "status_basis": "The historical Lithuanian institution ended in a merger or canonical reorganization; a successor continues without current Lithuanian ministry."
       },
       "culturenet_entity_id": "cn:institution:st-george-bridgeport-ct",
       "diocese": "Bridgeport",
@@ -12331,7 +12475,7 @@
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
       "status_observed_at": "2026-07-16",
-      "status_source_authority": "site_r10_baseline",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:st-george-park-avenue-bridgeport-ct"
       ]
@@ -12584,6 +12728,31 @@
         "source_authority": "canonical_graph",
         "year": 2008
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:nec-4:niagara-lifecycle",
+          "assert:nec-4:niagara-sites"
+        ],
+        "continuation_mode": "successor_and_site_new_community",
+        "continuity_relationship_ids": [
+          "rel:nec-4:niagara-continued-divine-mercy"
+        ],
+        "destination_name": "Divine Mercy Parish, Niagara Falls",
+        "display_summary": "Catholic parish life continued in Divine Mercy Parish; the former Lithuanian church now serves the Independent Anglican Church as Saint George's Pro-Cathedral.",
+        "effective_date": "2008-2009",
+        "future_plan": null,
+        "observed_at": "2026-07-16",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-jurgio-niagara-falls-ny",
+        "source_urls": [
+          "https://www.niagara-gazette.com/news/local_news/a-rebirth-for-st-georges-church/article_132b51c5-4237-52b5-91c3-06c527e2d216.html",
+          "https://shipoffools.com/mystery-worshipper/st-george-the-martyr-niagara-falls-new-york-usa/",
+          "https://nfhpc.weebly.com/st-georges-roman-catholic-church.html",
+          "http://www.independentanglicanchurch.com/diocese-of-st-george",
+          "http://www.independentanglicanchurch.com/an-outline-of-our-church"
+        ],
+        "status_basis": "The Lithuanian institution ended; Catholic life continues through a successor while the former site serves another community."
+      },
       "culturenet_entity_id": "cn:institution:st-george-niagara-falls-ny",
       "diocese": "Buffalo",
       "founded": {
@@ -12616,7 +12785,7 @@
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
       "status_observed_at": "2026-07-16",
-      "status_source_authority": "site_r10_baseline",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": []
     },
     {
@@ -12945,6 +13114,34 @@
         "source_authority": "canonical_graph",
         "year": 2002
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:identity-1:newark-current",
+          "assert:identity-1:newark-lineage",
+          "assert:identity-1:newark-sites"
+        ],
+        "continuation_mode": "merged_successor",
+        "continuity_relationship_ids": [
+          "rel:identity-1:newark-merged"
+        ],
+        "destination_name": "Holy Trinity-Epiphany Parish, Newark",
+        "display_summary": "Merged with Epiphany as Holy Trinity-Epiphany Parish, now serving a Portuguese-speaking community from the former parish hall; the original church is gone.",
+        "effective_date": "2002 selected",
+        "future_plan": null,
+        "observed_at": "2026-07-16",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#lietuviu-baznycia-unnamed-newark-nj",
+        "source_urls": [
+          "https://global.truelithuania.com/new-jersey-613/",
+          "http://newarkreligion.com/rcatholic/holytrinityrc.php",
+          "https://en.wikipedia.org/wiki/List_of_churches_in_the_Archdiocese_of_Newark",
+          "https://rcan.org/parishes/",
+          "https://gcatholic.org/churches/usa-03/18490",
+          "https://discovermass.com/church/holy-trinity-ephiphany-newark-nj/",
+          "https://www.catholicdirectory.com/newark/church/holy-trinity-epiphany-parish"
+        ],
+        "status_basis": "The historical Lithuanian institution ended in a merger or canonical reorganization; a successor continues without current Lithuanian ministry."
+      },
       "culturenet_entity_id": "cn:institution:holy-trinity-lithuanian-newark-nj",
       "diocese": "Newark",
       "founded": {
@@ -12975,8 +13172,8 @@
       "state": "NJ",
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
-      "status_observed_at": null,
-      "status_source_authority": "site_r10_baseline",
+      "status_observed_at": "2026-07-16",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:holy-trinity-parish-hall-adams-newark-nj"
       ]
@@ -13135,6 +13332,24 @@
         "source_authority": "unresolved",
         "year": null
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:cib-9:ignatius-luther-mi:identity"
+        ],
+        "continuation_mode": "merged_successor",
+        "continuity_relationship_ids": [],
+        "destination_name": "Saint Ann-Saint Ignatius Parish, Baldwin",
+        "display_summary": "Folded into Saint Ann-Saint Ignatius Parish in 2011; Saint Ignatius remains an active mission chapel in Luther without current Lithuanian ministry.",
+        "effective_date": "2011",
+        "future_plan": null,
+        "observed_at": "2026-08-03",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#ignatius-luther-mi",
+        "source_urls": [
+          "https://grdiocese.org/parishes-location/saint-ann-saint-ignatius-parish-baldwin/"
+        ],
+        "status_basis": "The historical Lithuanian institution ended in a merger or canonical reorganization; a successor continues without current Lithuanian ministry."
+      },
       "culturenet_entity_id": "cn:institution:ignatius-luther-mi",
       "diocese": "Grand Rapids",
       "founded": {
@@ -13161,8 +13376,8 @@
       "state": "MI",
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
-      "status_observed_at": null,
-      "status_source_authority": "site_r10_baseline",
+      "status_observed_at": "2026-08-03",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": []
     },
     {
@@ -13267,6 +13482,31 @@
         "source_authority": "canonical_graph",
         "year": 2014
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:illinois-1:east-st-louis-lifecycle",
+          "assert:illinois-1:east-st-louis-site"
+        ],
+        "continuation_mode": "designated_chapel",
+        "continuity_relationship_ids": [
+          "rel:illinois-1:east-st-louis-continued-st-augustine"
+        ],
+        "destination_name": "Saint Augustine of Hippo Parish, East St. Louis",
+        "display_summary": "Became the Chapel of Immaculate Conception under Saint Augustine of Hippo Parish; weekly Catholic worship continues without Lithuanian ministry.",
+        "effective_date": "2014-05-26",
+        "future_plan": null,
+        "observed_at": "2026-07-16",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#nekaltojo-prasidejimo-east-st-louis-il",
+        "source_urls": [
+          "https://www.diobelle.org/directory/parishes/immaculate-conception-chapel-east-st-louis",
+          "https://www.diobelle.org/canonical-affairs/archives/list-of-closed-parishes",
+          "https://global.truelithuania.com/st-louis-missouri-illinois-1719/",
+          "https://stlouispatina.com/churches-of-east-st-louis-part-8/",
+          "https://discovermass.com/church/immaculate-conception-east-saint-louis-il/"
+        ],
+        "status_basis": "The independent Lithuanian institution ended, while Catholic worship continues under another parish without current Lithuanian ministry."
+      },
       "culturenet_entity_id": "cn:institution:immaculate-conception-east-st-louis-il",
       "diocese": "Belleville",
       "founded": {
@@ -13297,7 +13537,7 @@
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
       "status_observed_at": "2026-07-16",
-      "status_source_authority": "site_r10_baseline",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:immaculate-conception-baugh-avenue-east-st-louis-il"
       ]
@@ -13497,6 +13737,30 @@
         "source_authority": "canonical_graph",
         "year": 2011
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:coal-1:scranton-lifecycle",
+          "assert:coal-1:scranton-site"
+        ],
+        "continuation_mode": "former_site_new_community",
+        "continuity_relationship_ids": [],
+        "destination_name": "Saint Thomas More Parish, Scranton",
+        "display_summary": "The Lithuanian parish closed in 2011; its former church now serves Saint Thomas More Parish of the Personal Ordinariate of the Chair of Saint Peter.",
+        "effective_date": "after 2011-06-05",
+        "future_plan": null,
+        "observed_at": "2026-07-16",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-juozapo-scranton-pa",
+        "source_urls": [
+          "https://www.dioceseofscranton.org/wp-content/uploads/2024/07/Consolidated-Parishes-updated-7-3-24.pdf",
+          "https://global.truelithuania.com/northern-coal-region-scranton-1614/",
+          "https://thecatholictravelguide.com/destinations/u-s-a/scranton-pennsylvania-saint-thomas-more-catholic-church/",
+          "https://philanthropydaily.com/beauty-in-the-broken-places-how-a-scranton-parish-is-reviving-newmans-vision/",
+          "https://catholicmasstime.org/church/st-joseph-lithuanian/17181/",
+          "https://discovermass.com/church/st-thomas-more-scranton-pa/"
+        ],
+        "status_basis": "The Lithuanian institution ended, while its former worship site now serves another religious community."
+      },
       "culturenet_entity_id": "cn:institution:st-joseph-scranton-pa",
       "diocese": "Scranton",
       "founded": {
@@ -13527,7 +13791,7 @@
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
       "status_observed_at": "2026-07-16",
-      "status_source_authority": "site_r10_baseline",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:st-joseph-main-avenue-scranton-pa"
       ]
@@ -13761,6 +14025,25 @@
         "source_authority": "unresolved",
         "year": null
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:cib-9:mary-custer-mi:identity"
+        ],
+        "continuation_mode": "merged_successor",
+        "continuity_relationship_ids": [],
+        "destination_name": "Saint Mary-Saint Jerome Parish, Custer",
+        "display_summary": "Reestablished in 2012 as Saint Mary-Saint Jerome Parish; regular Catholic worship continues at Saint Mary Church, which retains Lithuanian artistic elements.",
+        "effective_date": "2012",
+        "future_plan": null,
+        "observed_at": "2026-08-03",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#mary-custer-mi",
+        "source_urls": [
+          "https://grdiocese.org/parishes-location/saint-mary-saint-james-parish-custer/",
+          "https://grdiocese.org/bishop-walkowiak-announces-pastoral-appointments-3/"
+        ],
+        "status_basis": "The historical Lithuanian institution ended in a merger or canonical reorganization; a successor continues without current Lithuanian ministry."
+      },
       "culturenet_entity_id": "cn:institution:mary-custer-mi",
       "diocese": "Grand Rapids",
       "founded": {
@@ -13787,8 +14070,8 @@
       "state": "MI",
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
-      "status_observed_at": null,
-      "status_source_authority": "site_r10_baseline",
+      "status_observed_at": "2026-08-03",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": []
     },
     {
@@ -13804,6 +14087,35 @@
         "display": null,
         "source_authority": "unresolved",
         "year": null
+      },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:ef-5:frackville-lifecycle",
+          "assert:ef-5:frackville-museum-lineage",
+          "assert:ef-5:frackville-sites"
+        ],
+        "continuation_mode": "merged_successor",
+        "continuity_relationship_ids": [
+          "rel:ef-5:frackville-continued-st-joseph"
+        ],
+        "destination_name": "Saint Joseph the Worker Parish, Frackville",
+        "display_summary": "Consolidated into Saint Joseph the Worker Parish; the former Annunciation complex remains in secondary church, chapel, and parish-office use without Lithuanian liturgy.",
+        "effective_date": "by 2026",
+        "future_plan": null,
+        "observed_at": "2026-07-16",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-m-marijos-apsireiskimo-frackville-pa",
+        "source_urls": [
+          "https://www.stjoesfrackville.com/",
+          "https://catholicmasstime.org/church/annunciation-b-v-m-lithuanian/6782/",
+          "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+          "https://global.truelithuania.com/category/usa/pennsylvania/",
+          "https://shensentinel.com/news/shenandoahs-lithuanian-heritage-on-display-at-new-museum/",
+          "https://kofl144.weebly.com/annual-lithuanian-days.html",
+          "https://www.allentowndiocese.org/maps/parishes",
+          "https://gcatholic.org/churches/usa-03/23603"
+        ],
+        "status_basis": "The historical Lithuanian institution ended in a merger or canonical reorganization; a successor continues without current Lithuanian ministry."
       },
       "culturenet_entity_id": "cn:institution:annunciation-bvm-frackville-pa",
       "diocese": "Allentown",
@@ -13837,7 +14149,7 @@
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
       "status_observed_at": "2026-07-16",
-      "status_source_authority": "site_r10_baseline",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:annunciation-bvm-church-frackville-pa"
       ]
@@ -13895,6 +14207,35 @@
         "source_authority": "canonical_graph",
         "year": 2009
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:successor-2:bayonne-lineage",
+          "assert:successor-2:bayonne-site"
+        ],
+        "continuation_mode": "merged_successor",
+        "continuity_relationship_ids": [
+          "rel:successor-2:bayonne-merged-st-joseph"
+        ],
+        "destination_name": "Saint John Paul II Parish, Bayonne",
+        "display_summary": "The Lithuanian parish merged into Saint Joseph Parish; successor ownership now rests with Saint John Paul II Parish while the former complex awaits redevelopment.",
+        "effective_date": "after 2009",
+        "future_plan": null,
+        "observed_at": "2026-07-16",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-mykolo-bayonne-nj",
+        "source_urls": [
+          "https://global.truelithuania.com/tag/st-michael-lithuanian-church-bayonne/",
+          "https://en.wikipedia.org/wiki/St._Joseph_Cathedral_(Bayonne,_New_Jersey)",
+          "https://gcatholic.org/churches/northamerica/3639.htm",
+          "https://jerseycatholic.org/mount-carmel-has-been-a-fervent-incubator-of-polish-culture-catholic-faith-in-bayonne-photos-1",
+          "https://www.bayonnenj.org/_Content/pdf/P-23-024-15-East-23rd-Street-RDP-Rev1.pdf",
+          "https://www.bayonnenj.org/_Content/pdf/ordinances/O-24-56.pdf",
+          "https://jerseydigs.com/15-21-east-23rd-street-bayonne-development/",
+          "https://www.bayonnenj.org/_Content/pdf/A-5-Statement-of-App-P-25-016.pdf",
+          "https://www.bayonnenj.org/_Content/pdf/agendas/2025-09-09-PB-Agenda.pdf"
+        ],
+        "status_basis": "The historical Lithuanian institution ended in a merger or canonical reorganization; a successor continues without current Lithuanian ministry."
+      },
       "culturenet_entity_id": "cn:institution:st-michael-bayonne-nj",
       "diocese": "Newark",
       "founded": {
@@ -13925,7 +14266,7 @@
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
       "status_observed_at": "2026-07-16",
-      "status_source_authority": "site_r10_baseline",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:st-michael-east-23rd-bayonne-nj"
       ]
@@ -13990,6 +14331,32 @@
         "source_authority": "unresolved",
         "year": null
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:nsp-8:st-michael-scranton-archive-history",
+          "assert:nsp-8:st-michael-scranton-lifecycle",
+          "assert:nsp-8:st-michael-scranton-sites"
+        ],
+        "continuation_mode": "successor_community_relocated",
+        "continuity_relationship_ids": [
+          "rel:nsp-8:st-michael-relocated-st-lucy"
+        ],
+        "destination_name": "Saint Michael the Archangel Parish at Saint Lucy Church, Scranton",
+        "display_summary": "The later Saint Michael FSSP parish community relocated to Saint Lucy Church in 2025; the former Lithuanian church is vacant and listed for sale.",
+        "effective_date": "2025-09-28",
+        "future_plan": null,
+        "observed_at": "2026-07-16",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-mykolo-scranton-pa",
+        "source_urls": [
+          "https://www.dioceseofscranton.org/a-new-beginning-saint-michael-parish-finds-new-home-at-historic-saint-lucy-church/",
+          "https://fsspscranton.wordpress.com/about-us/",
+          "https://fsspscranton.wordpress.com/mass-devotions/",
+          "https://www.lewith-freeman.com/p/1703-Jackson-Street-Scranton-PA-18504/dmgid_186324175",
+          "https://global.truelithuania.com/northern-coal-region-scranton-1614/"
+        ],
+        "status_basis": "The Lithuanian institution ended; a later community that used its church has relocated and continues elsewhere."
+      },
       "culturenet_entity_id": "cn:institution:st-michael-archangel-scranton-pa",
       "diocese": "Scranton",
       "founded": {
@@ -14022,7 +14389,7 @@
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
       "status_observed_at": "2026-07-16",
-      "status_source_authority": "site_r10_baseline",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:st-lucy-church-scranton-pa"
       ]
@@ -14351,6 +14718,39 @@
         "source_authority": "unresolved",
         "year": null
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:identity-1:kearny-current",
+          "assert:identity-1:kearny-one-parish",
+          "assert:identity-1:kearny-sites"
+        ],
+        "continuation_mode": "same_institution_new_community",
+        "continuity_relationship_ids": [],
+        "destination_name": "Our Lady of Sorrows Parish, Kearny",
+        "display_summary": "The same parish remains active with regular English-language Catholic worship; no current Lithuanian Mass is published.",
+        "effective_date": null,
+        "future_plan": null,
+        "observed_at": "2026-07-16",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#lietuviu-baznycia-kearny-kearny-nj",
+        "source_urls": [
+          "https://olskearny.org/",
+          "https://olskearny.org/olsweb/?page_id=299",
+          "https://olskearny.org/olsweb/?page_id=19",
+          "https://rcan.org/clergy-appointments-may-2024/",
+          "https://rcan.org/parish-planning-process/",
+          "https://rcan.org/planning-area-i-southeast-essex/",
+          "https://rcan.org/wp-content/uploads/2025/09/Essex-County-Southeast.pdf",
+          "https://container.parishesonline.com/bulletins/03/4021/20250803B.pdf",
+          "https://global.truelithuania.com/tag/lithuanians-in-kearny-new-jersey/",
+          "https://global.truelithuania.com/new-jersey-613/",
+          "https://discovermass.com/church/our-lady-of-sorrows-kearny-nj/",
+          "https://www.draugas.org/archive/1954_reg/1954-03-05-DRAUGAS.pdf",
+          "https://www.draugas.org/archive/1954_reg/1954-12-04-DRAUGAS.pdf",
+          "https://olskearny.org/olsweb/?page_id=110"
+        ],
+        "status_basis": "The same juridic parish remains open, but it no longer has current Lithuanian liturgy or organized Lithuanian pastoral ministry."
+      },
       "culturenet_entity_id": "cn:institution:our-lady-of-sorrows-kearny-harrison-nj",
       "diocese": "Newark",
       "founded": {
@@ -14381,7 +14781,7 @@
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
       "status_observed_at": "2026-07-16",
-      "status_source_authority": "site_r10_baseline",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:our-lady-of-sorrows-davis-avenue-kearny-nj"
       ]
@@ -14592,6 +14992,34 @@
         "source_authority": "unresolved",
         "year": null
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:nem-2:grand-rapids-active",
+          "assert:nem-2:grand-rapids-sites"
+        ],
+        "continuation_mode": "same_institution_new_community",
+        "continuity_relationship_ids": [
+          "rel:nem-2:grand-rapids-future-merger"
+        ],
+        "destination_name": "Saints Peter and Paul Parish, Grand Rapids",
+        "display_summary": "The same parish remains active with regular non-Lithuanian Catholic worship; a future merger into the Basilica of Saint Adalbert is planned but has not taken effect.",
+        "effective_date": null,
+        "future_plan": "Merger into the Basilica of Saint Adalbert upon the current pastor's retirement; not yet effective.",
+        "observed_at": "2026-07-16",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-petro-ir-povilo-grand-rapids-mi",
+        "source_urls": [
+          "https://grdiocese.org/wp-content/uploads/2025/07/rooted-in-christ-pastoral-plan-final-june-2025.pdf",
+          "https://wnycatholic.org/2025/07/15/crippling-priest-shortage-leads-to-restructuring-of-grand-rapids-diocese/",
+          "https://www.crainsgrandrapids.com/news/real-estate/catholic-diocese-to-close-4-west-michigan-churches-opening-land-for-development/",
+          "https://ssppgr.com/bulletins",
+          "https://ssppgr.com/calendars-and-schedules/mass-hours",
+          "https://ssppgr.com/staff-2",
+          "https://global.truelithuania.com/grand-rapids-michigan-3897/",
+          "https://discovermass.com/church/saints-peter-and-paul-grand-rapids-mi/"
+        ],
+        "status_basis": "The same juridic parish remains open, but it no longer has current Lithuanian liturgy or organized Lithuanian pastoral ministry."
+      },
       "culturenet_entity_id": "cn:institution:ss-peter-paul-grand-rapids-mi",
       "diocese": "Grand Rapids",
       "founded": {
@@ -14625,7 +15053,7 @@
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
       "status_observed_at": "2026-07-16",
-      "status_source_authority": "site_r10_baseline",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:ss-peter-paul-myrtle-street-grand-rapids-mi"
       ]
@@ -15177,6 +15605,25 @@
         "source_authority": "unresolved",
         "year": null
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:cib-9:ss-peter-and-paul-rockford-il:identity"
+        ],
+        "continuation_mode": "same_institution_new_community",
+        "continuity_relationship_ids": [],
+        "destination_name": "Saints Peter and Paul Parish, Rockford",
+        "display_summary": "The same parish remains active as a Hispanic national parish with Spanish-language ministry; Lithuanian parish life no longer continues.",
+        "effective_date": null,
+        "future_plan": null,
+        "observed_at": "2026-08-03",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#ss-peter-and-paul-rockford-il",
+        "source_urls": [
+          "https://www.rockforddiocese.org/parishes/",
+          "https://www.rockforddiocese.org/pdfs/accounting/Parish-Number-Listing.pdf"
+        ],
+        "status_basis": "The same juridic parish remains open, but it no longer has current Lithuanian liturgy or organized Lithuanian pastoral ministry."
+      },
       "culturenet_entity_id": "cn:institution:ss-peter-and-paul-rockford-il",
       "diocese": "Rockford",
       "founded": {
@@ -15203,8 +15650,8 @@
       "state": "IL",
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
-      "status_observed_at": null,
-      "status_source_authority": "site_r10_baseline",
+      "status_observed_at": "2026-08-03",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": []
     },
     {
@@ -15261,6 +15708,25 @@
         "source_authority": "unresolved",
         "year": null
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:cib-9:ss-peter-and-paul-tamaqua-pa:identity"
+        ],
+        "continuation_mode": "merged_successor",
+        "continuity_relationship_ids": [],
+        "destination_name": "Saint John XXIII Parish, Tamaqua",
+        "display_summary": "United with Saint Jerome as Saint John XXIII Parish; the former Lithuanian Pine Street church remains the active church of the successor parish.",
+        "effective_date": "2014-2015",
+        "future_plan": null,
+        "observed_at": "2026-08-03",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#ss-peter-and-paul-tamaqua-pa",
+        "source_urls": [
+          "https://www.sj23tamaqua.org/parish-tour",
+          "https://www.tnonline.com/20140331/diocese-merging-tamaqua-churches/"
+        ],
+        "status_basis": "The historical Lithuanian institution ended in a merger or canonical reorganization; a successor continues without current Lithuanian ministry."
+      },
       "culturenet_entity_id": "cn:institution:ss-peter-and-paul-tamaqua-pa",
       "diocese": "Allentown",
       "founded": {
@@ -15287,8 +15753,8 @@
       "state": "PA",
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
-      "status_observed_at": null,
-      "status_source_authority": "site_r10_baseline",
+      "status_observed_at": "2026-08-03",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": []
     },
     {
@@ -15345,6 +15811,31 @@
         "source_authority": "unresolved",
         "year": null
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:identity-1:baltimore-current",
+          "assert:identity-1:baltimore-institution",
+          "assert:identity-1:baltimore-site"
+        ],
+        "continuation_mode": "same_institution_new_community",
+        "continuity_relationship_ids": [],
+        "destination_name": "National Shrine of Saint Alphonsus Liguori, Baltimore",
+        "display_summary": "Lithuanian worship ended in 2017; Saint Alphonsus remains an active FSSP personal parish and national shrine centered on the Traditional Latin Mass.",
+        "effective_date": "2017",
+        "future_plan": null,
+        "observed_at": "2026-07-26",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#unnamed-lithuanian-parish-baltimore-md",
+        "source_urls": [
+          "https://en.wikipedia.org/wiki/National_Shrine_of_St._Alphonsus_Liguori",
+          "https://global.truelithuania.com/baltimore-maryland-497/",
+          "https://catholicreview.org/st-alphonsus-shrine-entrusted-priestly-fraternity-st-peter/",
+          "https://catholicreview.org/latin-mass-to-have-permanent-home-at-st-alphonsus-will-end-at-hagerstown-parish-in-august/",
+          "https://www.americamagazine.org/faith/2024/04/17/baltimore-archdiocese-parish-closures-247731/",
+          "https://www.stalphonsusbalt.org/"
+        ],
+        "status_basis": "The same juridic parish remains open, but it no longer has current Lithuanian liturgy or organized Lithuanian pastoral ministry."
+      },
       "culturenet_entity_id": "cn:institution:st-alphonsus-baltimore-md",
       "diocese": "Baltimore",
       "founded": {
@@ -15373,8 +15864,8 @@
       "state": "MD",
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
-      "status_observed_at": null,
-      "status_source_authority": "site_r10_baseline",
+      "status_observed_at": "2026-07-26",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:st-alphonsus-saratoga-baltimore-md"
       ]
@@ -16141,6 +16632,25 @@
         "source_authority": "unresolved",
         "year": null
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:cib-9:st-francis-athol-ma:identity"
+        ],
+        "continuation_mode": "same_institution_new_community",
+        "continuity_relationship_ids": [],
+        "destination_name": "Saint Francis of Assisi Parish, North Quabbin Catholic Community",
+        "display_summary": "The same parish remains active within the North Quabbin Catholic Community with English-language worship; no current Lithuanian ministry is published.",
+        "effective_date": null,
+        "future_plan": null,
+        "observed_at": "2026-08-03",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#st-francis-athol-ma",
+        "source_urls": [
+          "https://worcesterdiocese.org/parishfinder",
+          "https://nqcatholic.com/"
+        ],
+        "status_basis": "The same juridic parish remains open, but it no longer has current Lithuanian liturgy or organized Lithuanian pastoral ministry."
+      },
       "culturenet_entity_id": "cn:institution:st-francis-athol-ma",
       "diocese": "Worcester",
       "founded": {
@@ -16167,8 +16677,8 @@
       "state": "MA",
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
-      "status_observed_at": null,
-      "status_source_authority": "site_r10_baseline",
+      "status_observed_at": "2026-08-03",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": []
     },
     {
@@ -17098,6 +17608,25 @@
         "source_authority": "unresolved",
         "year": null
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:cib-9:st-peter-kenosha-wi:identity"
+        ],
+        "continuation_mode": "same_institution_new_community",
+        "continuity_relationship_ids": [],
+        "destination_name": "Saint Peter Parish, Kenosha",
+        "display_summary": "The same parish remains active with a full English-language Mass schedule; Lithuanian heritage survives culturally rather than through current Lithuanian liturgy.",
+        "effective_date": null,
+        "future_plan": null,
+        "observed_at": "2026-08-03",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#st-peter-kenosha-wi",
+        "source_urls": [
+          "https://www.stpeterskenosha.com/",
+          "https://www.stpeterskenosha.com/mass-times/"
+        ],
+        "status_basis": "The same juridic parish remains open, but it no longer has current Lithuanian liturgy or organized Lithuanian pastoral ministry."
+      },
       "culturenet_entity_id": "cn:institution:st-peter-kenosha-wi",
       "diocese": "Milwaukee",
       "founded": {
@@ -17124,8 +17653,8 @@
       "state": "WI",
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
-      "status_observed_at": null,
-      "status_source_authority": "site_r10_baseline",
+      "status_observed_at": "2026-08-03",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": []
     },
     {
@@ -17188,6 +17717,36 @@
         "source_authority": "canonical_graph",
         "year": 2019
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:maspeth:church-limited-use-retained-2025",
+          "assert:maspeth:current-church-dedicated-1962",
+          "assert:maspeth:lithuanian-mass-moved-2025",
+          "assert:maspeth:transfiguration-established-1908",
+          "assert:maspeth:transfiguration-merged-2019"
+        ],
+        "continuation_mode": "merged_successor",
+        "continuity_relationship_ids": [
+          "rel:maspeth:transfiguration-merged-into-successor"
+        ],
+        "destination_name": "Transfiguration-Saint Stanislaus Kostka Parish, Maspeth",
+        "display_summary": "Merged into Transfiguration-Saint Stanislaus Kostka Parish in 2019; the church remains in limited worship use, while Lithuanian Mass moved to Annunciation in 2025.",
+        "effective_date": "2019-09-01",
+        "future_plan": null,
+        "observed_at": "2026-07-09",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#kristaus-atsimainymo-maspeth-ny",
+        "source_urls": [
+          "https://transtans.org/",
+          "https://qns.com/2025/12/lithuanian-officials-visit-historic-maspeth-church/",
+          "https://qns.com/2025/09/gitanas-nauseda-transfiguration-church/",
+          "https://qns.com/2025/09/transfiguration-church-not-closing/",
+          "https://qns.com/2025/07/lithuanian-catholic-church-transfiguration/",
+          "https://www.newyorkalmanack.com/2025/04/church-of-the-transfiguration-2/",
+          "https://qns.com/2025/02/transfiguration-church-maspeth-possible-closure/"
+        ],
+        "status_basis": "The historical Lithuanian institution ended in a merger or canonical reorganization; a successor continues without current Lithuanian ministry."
+      },
       "culturenet_entity_id": "cn:institution:transfiguration-maspeth-ny",
       "diocese": "Brooklyn",
       "founded": {
@@ -17219,8 +17778,8 @@
       "state": "NY",
       "status_authority": "brain_canonical_assertion",
       "status_group": "transferred",
-      "status_observed_at": "2026-08-02",
-      "status_source_authority": "brain_current_status_adjudication",
+      "status_observed_at": "2026-07-09",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:transfiguration-maspeth-current-church"
       ]
@@ -17561,7 +18120,7 @@
       "unit": "distinct U.S. Roman Catholic parish institution"
     }
   },
-  "revision_id": "canonical-infographic-units-2026-08-03-brain-jurisdictions",
+  "revision_id": "canonical-infographic-units-2026-08-03-continuation-authority",
   "schema": "culturenet-parish-infographic-projection.v1",
   "unit_contracts": [
     {

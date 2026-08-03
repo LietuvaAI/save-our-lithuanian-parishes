@@ -23,6 +23,27 @@ export type CanonicalJurisdiction = {
   source_assertion_id: string;
 };
 
+export type InstitutionContinuationSummary = {
+  continuation_mode:
+    | "designated_chapel"
+    | "former_site_new_community"
+    | "merged_successor"
+    | "same_institution_new_community"
+    | "successor_and_site_new_community"
+    | "successor_community_relocated";
+  destination_name: string;
+  effective_date: string | null;
+  status_basis: string;
+  display_summary: string;
+  future_plan: string | null;
+  continuity_relationship_ids: string[];
+  canonical_evidence_assertion_ids: string[];
+  source_record: string;
+  source_urls: string[];
+  observed_at: string;
+  source_assertion_id: string;
+};
+
 export type CurrentPastoralDirectoryEntry = {
   id: string;
   nameLt: string;
@@ -55,7 +76,9 @@ export type InstitutionHistoryRow = {
   jurisdiction: CanonicalJurisdiction | null;
   status_group: EndStateGroup;
   status_authority: string;
+  status_source_authority: string;
   status_observed_at: string | null;
+  continuation_summary?: InstitutionContinuationSummary;
   founded: InfographicDateFact;
   closed: InfographicDateFact;
   building_fate: string | null;
