@@ -1,14 +1,14 @@
 # Public institution count audit
 
 **Audit date:** 2026-08-02
-**Registry revision:** 17
-**Canonical authority:** CultureNet canonical-public-census-2026-07-31
+**Registry revision:** 18
+**Canonical authority:** CultureNet canonical-public-census-2026-08-02-mundelein
 
 ## Press-safe claim
 
-The current documented record contains **154 distinct U.S. Lithuanian religious institutions**: 144 parishes, 4 missions, and 6 congregations.
+The current documented record contains **155 distinct U.S. Lithuanian religious institutions**: 144 parishes, 5 missions, and 6 congregations.
 
-Of these, 133 are supported by a completed two-pass case file or multiple source families. 21 are attested in one located published source and remain explicitly labeled for corroboration. This evidence-depth distinction does not change the institution count.
+Of these, 134 are supported by a completed two-pass case file or multiple source families. 21 are attested in one located published source and remain explicitly labeled for corroboration. This evidence-depth distinction does not change the institution count.
 
 ## Scope
 

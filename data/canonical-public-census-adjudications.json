@@ -1,11 +1,11 @@
 {
   "schema": "culturenet-parish-public-census-adjudications.v1",
-  "as_of": "2026-07-31",
+  "as_of": "2026-08-02",
   "base_snapshot": {
     "source": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r9/data/public-institution-ledger.json",
     "public_us_institutions": 159
   },
-  "current_public_us_institutions": 154,
+  "current_public_us_institutions": 155,
   "decisions": [
     {
       "registry_slug": "our-lady-of-vilna-eynon-pa",

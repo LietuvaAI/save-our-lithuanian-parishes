@@ -1,32 +1,32 @@
 {
   "generatedFrom": {
-    "registryRevision": 17,
+    "registryRevision": 18,
     "registryDate": "2026-08-02",
-    "canonicalPublicationRevision": "canonical-public-census-2026-07-31",
-    "canonicalPublicationHash": "sha256:0c68ed54a90e5af4e7805dcde2a30ea6f3bee90f3816632c4733a8a3e596956a",
-    "canonicalInfographicRevision": "canonical-infographic-units-2026-08-01",
-    "canonicalInfographicHash": "sha256:8551f6e1bc2d951d40181b2fc31e627c5e404c4f931ba9160e86df99979abc3a",
-    "networkChecked": "2026-07-29"
+    "canonicalPublicationRevision": "canonical-public-census-2026-08-02-mundelein",
+    "canonicalPublicationHash": "sha256:d6ffc38153548995aa3975a713e3609e69e34679bec708a8ed1ee6d3e211df3c",
+    "canonicalInfographicRevision": "canonical-infographic-units-2026-08-02-mundelein",
+    "canonicalInfographicHash": "sha256:de55f0713bc82d3bb08d6979095422e8071eaa3cf2aaf3eb308c1ec534655c41",
+    "networkChecked": "2026-08-02"
   },
   "publicUS": {
-    "records": 154,
-    "independentlySupported": 133,
+    "records": 155,
+    "independentlySupported": 134,
     "singleSourceAttested": 21,
     "profilesPendingDeepCase": 45,
     "byRecordType": {
       "congregation": 6,
-      "misija": 4,
+      "misija": 5,
       "parish": 144
     },
     "byInstitutionClass": {
       "independent_catholic": 4,
       "national_catholic_pncc": 6,
       "non_catholic_christian": 8,
-      "roman_catholic": 136
+      "roman_catholic": 137
     },
     "romanCatholicParishes": 132,
-    "romanCatholicMissions": 4,
-    "romanCatholicInstitutions": 136,
+    "romanCatholicMissions": 5,
+    "romanCatholicInstitutions": 137,
     "nationalIndependentCatholicCommunities": 10,
     "nationalIndependentCatholicParishes": 9,
     "nationalIndependentCatholicCongregations": 1,
@@ -34,7 +34,7 @@
     "protestantParishes": 3,
     "protestantCongregations": 5,
     "status": {
-      "active_parish": 9,
+      "active_parish": 10,
       "closed": 98,
       "mass_continues": 6,
       "transferred": 24,
@@ -67,9 +67,24 @@
       }
     ]
   },
+  "catholicInstitutionFlow": {
+    "institutions": 137,
+    "parishes": 132,
+    "missions": 5,
+    "status": {
+      "active_parish": 8,
+      "closed": 90,
+      "mass_continues": 6,
+      "transferred": 22,
+      "unresolved": 4,
+      "unverified": 7
+    },
+    "closed": 90,
+    "retainingLithuanianWorship": 14
+  },
   "physicalSites": {
-    "worshipSites": 132,
-    "allBuildingSiteEntities": 169
+    "worshipSites": 133,
+    "allBuildingSiteEntities": 170
   },
   "continuity": {
     "relationships": 51
@@ -77,9 +92,9 @@
   "currentCatholicLife": {
     "officialListings": 20,
     "worshipPlaces": 14,
-    "activeParishes": 7,
+    "activeParishes": 6,
     "activeMissions": 2,
-    "hostedMasses": 5,
+    "hostedMasses": 6,
     "states": 9
   },
   "comparators": {

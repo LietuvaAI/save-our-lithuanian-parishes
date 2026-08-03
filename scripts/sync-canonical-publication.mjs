@@ -19,10 +19,10 @@ const projection = read("canonical-publication-projection.json");
 const infographic = read("canonical-infographic-projection.json");
 const adjudications = read("canonical-public-census-adjudications.json");
 
-const TARGET_REVISION = 17;
+const TARGET_REVISION = 18;
 const TARGET_DATE = "2026-08-02";
 const CHANGELOG =
-  "Registry Revision 17: established Saint Michael the Archangel Parish in Scranton in 1914, promoted its original wooden church as a distinct worship site, and enriched its school, language, and two-church history from the 1977 published parish account; the public institution count remains unchanged.";
+  "Registry Revision 18: admitted Our Lady of Siluva Mission in Mundelein as a distinct active Roman Catholic mission and reconciled Brooklyn Annunciation, Maspeth Transfiguration, and Hartford Holy Trinity to the current canonical status projection.";
 
 if (projection.schema !== "culturenet-parish-publication-projection.v1") {
   throw new Error(`Unsupported publication projection schema: ${projection.schema}`);
@@ -132,6 +132,29 @@ const typedCounts = {
     .length,
   context: registry.parishes.filter((record) => record.record_type === "context")
     .length,
+  case_filed: registry.parishes
+    .filter((record) => record.country === "US")
+    .flatMap((record) => record.c83_rows ?? [])
+    .filter((row) => row >= 1 && row <= 83).length,
+  case_filed_records: registry.parishes.filter(
+    (record) =>
+      record.country === "US" &&
+      (record.c83_rows ?? []).some((row) => row >= 1 && row <= 83),
+  ).length,
+  multi_source: registry.parishes.filter(
+    (record) => record.record_depth === "multi-source",
+  ).length,
+  single_source: registry.parishes.filter(
+    (record) => record.record_depth === "single-source",
+  ).length,
+  with_exact_geo: registry.parishes.filter(
+    (record) => record.geo?.precision === "exact",
+  ).length,
+  with_city_geo: registry.parishes.filter(
+    (record) => record.geo?.precision === "city-centroid",
+  ).length,
+  needs_geocode: registry.parishes.filter((record) => record.geo?.needs_geocode)
+    .length,
 };
 registry.counts = { ...registry.counts, ...typedCounts };
 registry.publicationAuthority = {
@@ -183,12 +206,13 @@ const revisionEntry = {
   publicUSRecords: publicRecords.length,
   usRomanCatholicParishes: romanCatholicParishes,
   summary:
-    "Established Saint Michael the Archangel Parish in Scranton in 1914, promoted its original wooden church from a held candidate to a canonical worship site, and added the 1942 replacement church, school, community, and Lithuanian-language history from the 1977 published parish account; the public institution count remains unchanged.",
+    "Admitted Our Lady of Siluva Mission in Mundelein as a distinct active Roman Catholic mission and reconciled the current status of Brooklyn Annunciation, Maspeth Transfiguration, and Hartford Holy Trinity from the CultureNet canonical projection.",
   evidence: [
     "data/canonical-publication-projection.json",
     "data/canonical-infographic-projection.json",
-    "data/case-records/sv-mykolo-scranton-pa.json",
-    "data/candidates/registry-revision-17-st-michael-scranton-archive-history-2026-08-02.md",
+    "data/canonical-public-census-adjudications.json",
+    "data/sielovada-us-network.json",
+    "data/candidates/registry-revision-18-mundelein-current-life-2026-08-02.md",
   ],
 };
 const priorRevision = revisions.revisions.find(
@@ -206,26 +230,37 @@ const removed = adjudications.decisions
       `| ${decision.registry_slug} | ${decision.scope} | ${decision.reason} |`,
   )
   .join("\n");
-const report = `# Registry Revision 17: Saint Michael Scranton archive history
+const catholicInstitutions = infographic.institution_history.filter(
+  (institution) =>
+    institution.institution_class === "roman_catholic" &&
+    ["parish", "misija"].includes(institution.record_type),
+);
+const catholicMissions = catholicInstitutions.filter(
+  (institution) => institution.record_type === "misija",
+);
+const closedCatholicInstitutions = catholicInstitutions.filter(
+  (institution) => institution.status_group === "closed",
+);
+const catholicWorshipContinues = catholicInstitutions.filter((institution) =>
+  ["active_parish", "mass_continues"].includes(institution.status_group),
+);
+
+const report = `# Registry Revision 18: Mundelein and current Catholic life
 
 **Date:** ${TARGET_DATE}
 **Authority:** CultureNet parish publication projection
 **Public U.S. institutions:** ${publicRecords.length}
 **Count-risk rows:** 0
 
-This revision admits the 1977 published Saint Michael parish history without changing public census membership.
+This revision admits the current Our Lady of Siluva Lithuanian Mission in Mundelein as a distinct canonical institution and reconciles current-life categories without changing historical parish identities.
 
-- The Lithuanian parish was established in Hyde Park in 1914.
-- Its original modest wooden church is now an accepted worship site rather than a held candidate; its later physical disposition remains unresolved.
-- The parish replaced it with the brick Jackson Street church in 1942.
-- The record now carries the parish school, 1961 community counts, and the documented decline of Lithuanian-language life by 1972.
-- The parish entity survives and relocated from 1703 Jackson Street to Saint Lucy Church on September 28, 2025.
-- Saint Lucy Church is the parish's current principal worship site.
-- The former Lithuanian Saint Michael Church remains standing at 1703 Jackson Street, is vacant, and is listed for sale.
-- The current parish celebrates the Traditional Latin Mass. No regular Lithuanian Mass is documented.
-- The English profile name is restored to **St. Michael the Archangel**.
+- Mundelein was established by Archdiocese of Chicago decree in December 2013; its first Mass was celebrated on December 15, 2013.
+- The mission celebrates monthly Lithuanian Mass at Santa Maria del Popolo Church for the Waukegan and Lake County community.
+- Brooklyn Annunciation is a merged parish institution where weekly Lithuanian Mass continues, not an active Lithuanian parish institution.
+- Maspeth Transfiguration lives on in another community; Lithuanian Mass moved to Brooklyn Annunciation in 2019.
+- Hartford Holy Trinity remains unresolved while its partial-closure dispute continues.
 
-The profile presents one continuing parish institution across three worship sites. Canonical public membership remains ${publicRecords.length}; physical worship sites are now ${infographic.counts.physical_worship_sites}.
+The canonical Roman Catholic population is ${catholicInstitutions.length}: ${romanCatholicParishes} parishes plus ${catholicMissions.length} missions. Of these, ${closedCatholicInstitutions.length} are closed and ${catholicWorshipContinues.length} retain Lithuanian worship.
 
 ## Census reconciliation
 
@@ -246,7 +281,7 @@ write("registry-unified.json", registry);
 write("registry-revisions.json", revisions);
 writeFileSync(
   new URL(
-    "../data/candidates/registry-revision-17-st-michael-scranton-archive-history-2026-08-02.md",
+    "../data/candidates/registry-revision-18-mundelein-current-life-2026-08-02.md",
     import.meta.url,
   ),
   report,

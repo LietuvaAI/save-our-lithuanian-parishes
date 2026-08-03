@@ -190,6 +190,14 @@ export const canadianComparators = canonicalInfographics.comparators.canada;
 export const romanCatholicParishHistory = institutionHistory.filter(
   (row) => row.record_type === "parish" && row.institution_class === "roman_catholic",
 );
+export const romanCatholicMissionHistory = institutionHistory.filter(
+  (row) => row.record_type === "misija" && row.institution_class === "roman_catholic",
+);
+export const romanCatholicInstitutionHistory = institutionHistory.filter(
+  (row) =>
+    (row.record_type === "parish" || row.record_type === "misija") &&
+    row.institution_class === "roman_catholic",
+);
 export const physicalWorshipSiteHistory = buildingSiteHistory.filter(
   (row) => row.site_class === "worship_site",
 );
@@ -209,6 +217,12 @@ if (
   infographicCounts.roman_catholic_parish_institutions
 ) {
   throw new Error("Canonical Roman Catholic parish-history count drifted.");
+}
+if (
+  romanCatholicInstitutionHistory.length !==
+  romanCatholicParishHistory.length + romanCatholicMissionHistory.length
+) {
+  throw new Error("Canonical Roman Catholic parish-and-mission count drifted.");
 }
 if (physicalWorshipSiteHistory.length !== infographicCounts.physical_worship_sites) {
   throw new Error("Canonical physical worship-site count drifted.");

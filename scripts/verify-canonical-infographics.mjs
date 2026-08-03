@@ -49,7 +49,19 @@ const canada = infographic.comparators.canada;
 const romanHistory = institutions.filter(
   (row) => row.record_type === "parish" && row.institution_class === "roman_catholic",
 );
+const romanMissionHistory = institutions.filter(
+  (row) => row.record_type === "misija" && row.institution_class === "roman_catholic",
+);
+const romanInstitutionHistory = [...romanHistory, ...romanMissionHistory];
 const closed = romanHistory.filter((row) => row.status_group === "closed");
+const closedRomanInstitutions = romanInstitutionHistory.filter(
+  (row) => row.status_group === "closed",
+);
+const retainingLithuanianWorship = romanInstitutionHistory.filter(
+  (row) =>
+    row.status_group === "active_parish" ||
+    row.status_group === "mass_continues",
+);
 const unique = (values) => new Set(values).size;
 
 const checks = [
@@ -71,6 +83,15 @@ const checks = [
   ["closed Roman Catholic parishes", closed.length, infographic.counts.closed_roman_catholic_parishes],
 ];
 for (const [label, actual, expected] of checks) {
+  if (actual !== expected) errors.push(`${label}: ${actual} != ${expected}`);
+}
+for (const [label, actual, expected] of [
+  ["Roman Catholic parish and mission institutions", romanInstitutionHistory.length, 137],
+  ["Roman Catholic parish institutions in combined scope", romanHistory.length, 132],
+  ["Roman Catholic mission institutions in combined scope", romanMissionHistory.length, 5],
+  ["closed Roman Catholic parish and mission institutions", closedRomanInstitutions.length, 90],
+  ["Roman Catholic institutions retaining Lithuanian worship", retainingLithuanianWorship.length, 14],
+]) {
   if (actual !== expected) errors.push(`${label}: ${actual} != ${expected}`);
 }
 if (institutions.length !== publication.counts.public_us_institutions) {
@@ -140,12 +161,8 @@ const southfieldSite = sites.find(
 if (!southfieldSite || southfieldSite.first_documented_year !== 1973) {
   errors.push("Divine Providence Southfield worship site must begin in 1973");
 }
-if (
-  !southfieldSite?.condition_relationships.some(
-    (condition) => condition.relationship_type === "building-standing",
-  )
-) {
-  errors.push("Divine Providence Southfield site lacks an explicit standing assertion");
+if (southfieldSite?.demolished_year !== null) {
+  errors.push("Divine Providence Southfield current worship site is marked demolished");
 }
 
 const institutionByProfile = new Map(
@@ -156,17 +173,33 @@ const campaignAdjudications = [
     "/parishes/dievo-apvaizdos-southfield-mi",
     "active_parish",
     null,
+    "site_r10_baseline",
   ],
-  ["/parishes/svc-trejybes-hartford-ct", "unresolved", null],
-  ["/parishes/sv-juozapo-waterbury-ct", "closed", 2024],
-  ["/parishes/kristaus-atsimainymo-maspeth-ny", "transferred", 2019],
+  [
+    "/parishes/svc-trejybes-hartford-ct",
+    "unresolved",
+    null,
+    "brain_current_status_adjudication",
+  ],
+  [
+    "/parishes/sv-juozapo-waterbury-ct",
+    "closed",
+    2024,
+    "site_r10_baseline",
+  ],
+  [
+    "/parishes/kristaus-atsimainymo-maspeth-ny",
+    "transferred",
+    2019,
+    "brain_current_status_adjudication",
+  ],
 ];
-for (const [profile, status, endedYear] of campaignAdjudications) {
+for (const [profile, status, endedYear, authority] of campaignAdjudications) {
   const institution = institutionByProfile.get(profile);
   if (
     institution?.status_group !== status ||
     institution?.closed?.year !== endedYear ||
-    institution?.status_authority !== "current_campaign_adjudication"
+    institution?.status_authority !== authority
   ) {
     errors.push(`${profile}: current campaign adjudication drifted`);
   }
@@ -211,6 +244,7 @@ const aggregatePages = [
   "app/history/page.tsx",
   "app/by-diocese/page.tsx",
   "app/where-every-parish-ended-up/page.tsx",
+  "app/church-buildings-through-time/page.tsx",
   "app/where-parish-life-continued/page.tsx",
   "app/pennsylvania-coal-region/page.tsx",
   "app/canadian-comparators/page.tsx",
@@ -230,10 +264,27 @@ for (const relativePath of aggregatePages) {
     errors.push(relativePath + ": aggregate view reads generated map points as canon");
   }
 }
-const physicalSitePage = readFileSync(
+const institutionFlowPage = readFileSync(
   new URL("../app/where-every-parish-ended-up/page.tsx", import.meta.url),
   "utf8",
 );
+if (!/romanCatholicInstitutionHistory/.test(institutionFlowPage)) {
+  errors.push("institution-outcome view does not use the canonical parish-and-mission population");
+}
+if (/physicalWorshipSiteHistory/.test(institutionFlowPage)) {
+  errors.push("institution-outcome view reads the physical-site population");
+}
+
+const physicalSitePage = readFileSync(
+  new URL("../app/church-buildings-through-time/page.tsx", import.meta.url),
+  "utf8",
+);
+if (!/physicalWorshipSiteHistory/.test(physicalSitePage)) {
+  errors.push("physical-site view does not use the canonical worship-site population");
+}
+if (/romanCatholicInstitutionHistory/.test(physicalSitePage)) {
+  errors.push("physical-site view reads the institution population");
+}
 if (/DIVINE_PROVIDENCE|dievo-apvaizdos-southfield/.test(physicalSitePage)) {
   errors.push("physical-site view contains a Divine Providence one-off");
 }

@@ -1,28 +1,28 @@
 {
   "networkRevision": {
-    "version": 1,
-    "date": "2026-07-29",
-    "basis": "Complete United States listing on the Lithuanian Bishops' Conference diaspora pastoral-care directory, reconciled to the site's canonical parish registry."
+    "version": 2,
+    "date": "2026-08-02",
+    "basis": "Complete United States listing on the Lithuanian Bishops' Conference diaspora pastoral-care directory, reconciled to the canonical CultureNet institution projection and current juridic status evidence."
   },
   "source": {
     "id": "sielovada-north-america",
     "title": "Sielovada: North America",
     "publisher": "Užsienio lietuvių sielovada",
     "url": "https://sielovada.org/siaures-amerika/",
-    "checked": "2026-07-29",
+    "checked": "2026-08-02",
     "authority": "Canonical baseline for membership in the current Lithuanian Catholic pastoral network. Diocesan and parish records remain authoritative for juridic parish status, governance, and formal closure."
   },
   "counts": {
     "listed": 20,
-    "activeParishes": 7,
+    "activeParishes": 6,
     "activeMissions": 2,
-    "massContinues": 5,
-    "unresolved": 1,
-    "noLithuanianLiturgy": 3,
+    "massContinues": 6,
+    "unresolved": 0,
+    "noLithuanianLiturgy": 4,
     "directoryConflict": 1,
     "religiousHouse": 1,
-    "registryMatches": 15,
-    "networkOnly": 5
+    "registryMatches": 16,
+    "networkOnly": 4
   },
   "entries": [
     {
@@ -38,7 +38,9 @@
       "clergy": "Kun. Gediminas Keršys, Lithuanian chaplain",
       "registrySlug": "st-ann-beverly-shores-in",
       "officialSite": "https://www.st-ann-of-the-dunes.org",
-      "sourceRefs": ["sielovada-north-america"]
+      "sourceRefs": [
+        "sielovada-north-america"
+      ]
     },
     {
       "id": "boston-st-peter",
@@ -52,7 +54,9 @@
       "ministry": "Active Lithuanian parish and the living Lithuanian Catholic parish center for New England.",
       "registrySlug": "peter-boston-ma",
       "officialSite": "https://www.stpeterlithuanianparish.org",
-      "sourceRefs": ["sielovada-north-america"]
+      "sourceRefs": [
+        "sielovada-north-america"
+      ]
     },
     {
       "id": "cicero-st-anthony",
@@ -66,7 +70,9 @@
       "ministry": "Lithuanian Mass continues in a parish that is no longer Lithuanian-led.",
       "clergy": "Kun. Gediminas Keršys, Lithuanian chaplain",
       "registrySlug": "anthony-cicero-il",
-      "sourceRefs": ["sielovada-north-america"]
+      "sourceRefs": [
+        "sielovada-north-america"
+      ]
     },
     {
       "id": "chicago-nativity",
@@ -81,7 +87,9 @@
       "clergy": "Kun. Jaunius Kelpšas, pastor",
       "registrySlug": "nativity-chicago-il",
       "officialSite": "https://chicagonativitybvm.org",
-      "sourceRefs": ["sielovada-north-america"]
+      "sourceRefs": [
+        "sielovada-north-america"
+      ]
     },
     {
       "id": "chicago-immaculate-conception",
@@ -96,7 +104,9 @@
       "clergy": "Kun. Gediminas Keršys, Lithuanian chaplain",
       "registrySlug": "immaculate-chicago-il",
       "officialSite": "https://immaculateconception-fiveholymartyrs.org",
-      "sourceRefs": ["sielovada-north-america"]
+      "sourceRefs": [
+        "sielovada-north-america"
+      ]
     },
     {
       "id": "southfield-divine-providence",
@@ -110,7 +120,9 @@
       "ministry": "Active Lithuanian parish serving metropolitan Detroit. Fr. Tomas Miliauskas departed in May 2026; no successor has been named, and proposed archdiocesan restructuring could end weekend Mass.",
       "registrySlug": "providence-southfield-mi",
       "officialSite": "https://www.divineprovidencechurch.com",
-      "sourceRefs": ["sielovada-north-america"]
+      "sourceRefs": [
+        "sielovada-north-america"
+      ]
     },
     {
       "id": "philadelphia-st-andrew",
@@ -124,7 +136,9 @@
       "ministry": "Active Lithuanian parish; Sielovada lists Lithuanian Mass twice monthly.",
       "registrySlug": "andrew-philadelphia-pa",
       "officialSite": "https://saintandrewlithuanianparish.org",
-      "sourceRefs": ["sielovada-north-america"]
+      "sourceRefs": [
+        "sielovada-north-america"
+      ]
     },
     {
       "id": "hartford-holy-trinity",
@@ -138,7 +152,9 @@
       "ministry": "Regular Masses ended May 30, 2026. The community's preservation campaign continues.",
       "registrySlug": "trinity-hartford-ct",
       "officialSite": "https://holytrinityhartford.org",
-      "sourceRefs": ["sielovada-north-america"],
+      "sourceRefs": [
+        "sielovada-north-america"
+      ],
       "note": "Directory membership is preserved as evidence, but it does not override the newer closure record."
     },
     {
@@ -153,7 +169,9 @@
       "ministry": "Lithuanian Franciscan religious house in the pastoral network; not a parish and never counted as one.",
       "clergy": "Br. Jonas Bacevičius, OFM, superior",
       "officialSite": "https://www.franciscanguesthouse.com",
-      "sourceRefs": ["sielovada-north-america"]
+      "sourceRefs": [
+        "sielovada-north-america"
+      ]
     },
     {
       "id": "cleveland-st-casimir",
@@ -168,7 +186,9 @@
       "clergy": "Rev. Andrius Morkūnas, pastor",
       "registrySlug": "casimir-cleveland-oh",
       "officialSite": "http://www.saintcasimirparish.org",
-      "sourceRefs": ["sielovada-north-america"]
+      "sourceRefs": [
+        "sielovada-north-america"
+      ]
     },
     {
       "id": "lemont-matulaitis-mission",
@@ -183,7 +203,9 @@
       "clergy": "Kun. Artūras Sederevičius, SJ, chaplain",
       "registrySlug": "george-lemont-il",
       "officialSite": "https://www.matulaitismission.com",
-      "sourceRefs": ["sielovada-north-america"]
+      "sourceRefs": [
+        "sielovada-north-america"
+      ]
     },
     {
       "id": "los-angeles-st-casimir",
@@ -198,7 +220,9 @@
       "clergy": "Kun. Tomas Karanauskas, pastor",
       "registrySlug": "casimir-los-angeles-ca",
       "officialSite": "https://stcasimirchurchla.org",
-      "sourceRefs": ["sielovada-north-america"]
+      "sourceRefs": [
+        "sielovada-north-america"
+      ]
     },
     {
       "id": "mundelein-our-lady-of-siluva-mission",
@@ -209,11 +233,14 @@
       "address": "116 N. Lake St., Mundelein, IL 60060",
       "directoryType": "mission",
       "networkClass": "active_mission",
-      "ministry": "Active Lithuanian Catholic mission for the Waukegan and Lake County area.",
+      "ministry": "Active Lithuanian Catholic mission with monthly Lithuanian Mass at Santa Maria del Popolo Church.",
       "clergy": "Kun. Gediminas Keršys, Lithuanian chaplain",
       "officialSite": "https://www.facebook.com/waukeganbendruomene",
-      "sourceRefs": ["sielovada-north-america"],
-      "note": "Current pastoral-network record; a distinct historical parish-registry identity has not yet been adjudicated."
+      "sourceRefs": [
+        "sielovada-north-america"
+      ],
+      "note": "Distinct mission established by Archdiocese of Chicago decree in December 2013; admitted to the canonical registry on 2026-08-02.",
+      "registrySlug": "our-lady-of-siluva-mission-mundelein-il"
     },
     {
       "id": "new-philadelphia-holy-cross",
@@ -225,7 +252,9 @@
       "directoryType": "parish",
       "networkClass": "no_lithuanian_liturgy",
       "ministry": "Sielovada lists Mass only in English.",
-      "sourceRefs": ["sielovada-north-america"],
+      "sourceRefs": [
+        "sielovada-north-america"
+      ],
       "note": "Not joined to the historical Sacred Heart registry row. The names and addresses differ, so the identity requires adjudication."
     },
     {
@@ -236,12 +265,14 @@
       "state": "NY",
       "address": "259 N. 5th St., Brooklyn, NY 11211",
       "directoryType": "church",
-      "networkClass": "active_parish",
-      "ministry": "Active Lithuanian parish and the current center of Lithuanian Catholic worship in New York.",
+      "networkClass": "mass_continues",
+      "ministry": "The Lithuanian parish institution merged in 2019; weekly Lithuanian Mass continues at Annunciation Church within the successor parish.",
       "clergy": "Kun. Valdemaras Lisovski, Lithuanian chaplain",
       "registrySlug": "annunciation-brooklyn-ny",
       "officialSite": "https://www.katalikai.nyc",
-      "sourceRefs": ["sielovada-north-america"]
+      "sourceRefs": [
+        "sielovada-north-america"
+      ]
     },
     {
       "id": "maspeth-transfiguration",
@@ -251,11 +282,13 @@
       "state": "NY",
       "address": "64-14 Clinton Ave., Maspeth, NY 11378",
       "directoryType": "parish",
-      "networkClass": "unresolved",
-      "ministry": "The parish remains in the Sielovada network, but its reopening and Lithuanian liturgical future remain unresolved.",
+      "networkClass": "no_lithuanian_liturgy",
+      "ministry": "Lithuanian parish life ended at this church in 2019; its Lithuanian Mass moved to Annunciation Church in Brooklyn.",
       "clergy": "Kun. Valdemaras Lisovski, Lithuanian chaplain",
       "registrySlug": "transfiguration-maspeth-ny",
-      "sourceRefs": ["sielovada-north-america"]
+      "sourceRefs": [
+        "sielovada-north-america"
+      ]
     },
     {
       "id": "rochester-st-george-mission",
@@ -268,7 +301,9 @@
       "networkClass": "mass_continues",
       "ministry": "Lithuanian Mass continues as a mission community at Our Lady of Lourdes Church.",
       "registrySlug": "george-rochester-ny",
-      "sourceRefs": ["sielovada-north-america"]
+      "sourceRefs": [
+        "sielovada-north-america"
+      ]
     },
     {
       "id": "scranton-st-michael",
@@ -282,7 +317,9 @@
       "ministry": "Sielovada lists Mass in English and Latin, not Lithuanian.",
       "registrySlug": "michael-scranton-pa",
       "officialSite": "https://fsspscranton.wordpress.com",
-      "sourceRefs": ["sielovada-north-america"]
+      "sourceRefs": [
+        "sielovada-north-america"
+      ]
     },
     {
       "id": "scranton-holy-rosary",
@@ -295,7 +332,9 @@
       "networkClass": "no_lithuanian_liturgy",
       "ministry": "Sielovada lists Mass only in English.",
       "officialSite": "https://marymotherofgodparish.org",
-      "sourceRefs": ["sielovada-north-america"],
+      "sourceRefs": [
+        "sielovada-north-america"
+      ],
       "note": "Current pastoral-network record; no distinct canonical Lithuanian parish-registry match has been established."
     },
     {
@@ -309,7 +348,9 @@
       "networkClass": "mass_continues",
       "ministry": "Lithuanian Mass is celebrated on the last Sunday of each month inside a territorial host parish.",
       "officialSite": "https://georgetownepiphany.org",
-      "sourceRefs": ["sielovada-north-america"],
+      "sourceRefs": [
+        "sielovada-north-america"
+      ],
       "note": "Host church with Lithuanian ministry; not a Lithuanian ethnic parish."
     }
   ]
