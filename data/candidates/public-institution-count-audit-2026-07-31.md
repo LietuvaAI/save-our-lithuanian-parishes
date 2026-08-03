@@ -1,8 +1,8 @@
 # Public institution count audit
 
-**Audit date:** 2026-08-02
-**Registry revision:** 18
-**Canonical authority:** CultureNet canonical-public-census-2026-08-02-mundelein
+**Audit date:** 2026-08-03
+**Registry revision:** 19
+**Canonical authority:** CultureNet canonical-public-census-2026-08-03-living-worship-sites
 
 ## Press-safe claim
 

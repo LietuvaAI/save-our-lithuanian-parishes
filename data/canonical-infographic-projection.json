@@ -2,8 +2,8 @@
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
-    "publication_projection_hash": "sha256:d6ffc38153548995aa3975a713e3609e69e34679bec708a8ed1ee6d3e211df3c",
-    "publication_projection_revision": "canonical-public-census-2026-08-02-mundelein",
+    "publication_projection_hash": "sha256:0939f80de42cf16d6451a4d6d1510b6fc5b4c1eab84081a12dc024ab99a4264f",
+    "publication_projection_revision": "canonical-public-census-2026-08-03-living-worship-sites",
     "repository": "LietuvaAI/culturenet-brain"
   },
   "building_site_history": [
@@ -223,7 +223,19 @@
       "slug": "annunciation-rectory-frackville-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "reviewed current-use evidence",
+            "end": null,
+            "label": "standing in documented current worship use",
+            "start": "2026-07-31"
+          },
+          "relationship_id": "rel:living-sites-16:annunciation-williamsburg-north-fifth-street-standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:annunciation-williamsburg-north-fifth-street",
       "demolished_year": null,
@@ -340,7 +352,19 @@
       "slug": "divine-providence-detroit-schaefer-site"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "reviewed current-use evidence",
+            "end": null,
+            "label": "standing in documented current worship use",
+            "start": "2026-07-31"
+          },
+          "relationship_id": "rel:living-sites-16:divine-providence-southfield-site-standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:divine-providence-southfield-site",
       "demolished_year": null,
@@ -349,9 +373,9 @@
         {
           "date": {
             "certainty": "source_attested",
-            "end": "1973-09-08",
+            "end": null,
             "label": "Present Southfield complex dedicated September 8, 1973",
-            "precision": "day",
+            "precision": "day_and_open_end",
             "start": "1973-09-08"
           },
           "institution_entity_id": "cn:institution:divine-providence-southfield-mi",
@@ -548,7 +572,19 @@
       "slug": "holy-cross-cemetery-hudson-nh"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "reviewed current-use evidence",
+            "end": null,
+            "label": "standing in documented current worship use",
+            "start": "2026-07-31"
+          },
+          "relationship_id": "rel:living-sites-16:holy-cross-leo-street-dayton-oh-standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:holy-cross-leo-street-dayton-oh",
       "demolished_year": null,
@@ -908,7 +944,19 @@
       "slug": "holy-trinity-south-street-wilkes-barre-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "reviewed current-use evidence",
+            "end": null,
+            "label": "standing in documented current worship use",
+            "start": "2026-07-31"
+          },
+          "relationship_id": "rel:living-sites-16:immaculate-conception-44th-street-chicago-il-standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:immaculate-conception-44th-street-chicago-il",
       "demolished_year": null,
@@ -925,6 +973,18 @@
           "institution_profile": null,
           "relationship_id": "rel:current-1:immaculate-successor-uses-site",
           "relationship_type": "institution-used-site"
+        },
+        {
+          "date": {
+            "certainty": "reviewed case file and official merger record",
+            "end": "2019",
+            "label": "historic parish used the 44th Street church until its merger",
+            "start": "1964"
+          },
+          "institution_entity_id": "cn:institution:immaculate-conception-brighton-park-chicago-il",
+          "institution_profile": "/parishes/svc-m-marijos-nekalto-prasidejimo-chicago-il",
+          "relationship_id": "rel:living-sites-16:immaculate-original-used-44th-street-site",
+          "relationship_type": "institution-used-site"
         }
       ],
       "lifecycle_text": {
@@ -936,7 +996,9 @@
       },
       "milestones": [],
       "name": "Immaculate Conception church site, Brighton Park",
-      "related_public_institution_ids": [],
+      "related_public_institution_ids": [
+        "cn:institution:immaculate-conception-brighton-park-chicago-il"
+      ],
       "site_class": "worship_site",
       "slug": "immaculate-conception-44th-street-chicago-il"
     },
@@ -1209,7 +1271,19 @@
       "slug": "lithuanian-reformed-1942-spaulding-chicago-il"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "reviewed current-use evidence",
+            "end": null,
+            "label": "standing in documented current worship use",
+            "start": "2026-07-31"
+          },
+          "relationship_id": "rel:living-sites-16:lithuanian-world-center-mission-church-lemont-il-standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:lithuanian-world-center-mission-church-lemont-il",
       "demolished_year": null,
@@ -1238,7 +1312,19 @@
       "slug": "lithuanian-world-center-mission-church-lemont-il"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "reviewed current-use evidence",
+            "end": null,
+            "label": "standing in documented current worship use",
+            "start": "2026-07-31"
+          },
+          "relationship_id": "rel:living-sites-16:nativity-bvm-washtenaw-chicago-il-standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:nativity-bvm-washtenaw-chicago-il",
       "demolished_year": null,
@@ -1267,7 +1353,19 @@
       "slug": "nativity-bvm-washtenaw-chicago-il"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "reviewed current-use evidence",
+            "end": null,
+            "label": "standing in documented current worship use",
+            "start": "2026-07-31"
+          },
+          "relationship_id": "rel:living-sites-16:our-lady-of-lourdes-varinna-drive-rochester-ny-standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:our-lady-of-lourdes-varinna-drive-rochester-ny",
       "demolished_year": null,
@@ -1492,7 +1590,19 @@
       "slug": "our-lady-of-vilnius-broome-street-ny"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "reviewed current-use evidence",
+            "end": null,
+            "label": "standing in documented current worship use",
+            "start": "2026-07-31"
+          },
+          "relationship_id": "rel:living-sites-16:our-lady-perpetual-help-cleveland-neff-site-standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:our-lady-perpetual-help-cleveland-neff-site",
       "demolished_year": null,
@@ -1985,7 +2095,19 @@
       "slug": "sandara-hall-south-boston-ma"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "reviewed current-use evidence",
+            "end": null,
+            "label": "standing in documented current worship use",
+            "start": "2024"
+          },
+          "relationship_id": "rel:living-sites-16:santa-maria-del-popolo-mundelein-il-standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:santa-maria-del-popolo-mundelein-il",
       "demolished_year": null,
@@ -2320,7 +2442,19 @@
       "slug": "st-andrew-church-street-new-britain-ct"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "reviewed current-use evidence",
+            "end": null,
+            "label": "standing in documented current worship use",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:living-sites-16:st-andrew-nineteenth-wallace-philadelphia-pa-standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-andrew-nineteenth-wallace-philadelphia-pa",
       "demolished_year": null,
@@ -2430,6 +2564,54 @@
     {
       "condition_relationships": [
         {
+          "confidence": "high",
+          "date": {
+            "certainty": "official current parish schedule",
+            "end": null,
+            "label": "standing in active Catholic worship use",
+            "start": "2026-07-25"
+          },
+          "relationship_id": "rel:living-sites-16:st-ann-of-the-dunes-golfwood-beverly-shores-in-standing",
+          "relationship_type": "building-standing"
+        }
+      ],
+      "counted_in_public_institution_total": false,
+      "culturenet_entity_id": "cn:building_site:st-ann-of-the-dunes-golfwood-beverly-shores-in",
+      "demolished_year": null,
+      "first_documented_year": 1954,
+      "institution_use_periods": [
+        {
+          "date": {
+            "certainty": "official current diocesan record; governance-change date unresolved",
+            "end": null,
+            "label": "Lithuanian community continues worship at the historic church under St. Patrick governance",
+            "start": "1954"
+          },
+          "institution_entity_id": "cn:institution:st-ann-beverly-shores-in",
+          "institution_profile": "/parishes/st-ann-beverly-shores-in",
+          "relationship_id": "rel:living-sites-16:st-ann-community-uses-golfwood-site",
+          "relationship_type": "institution-used-site"
+        }
+      ],
+      "lifecycle_text": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:living-sites-16:st-ann-site",
+          "assert:living-sites-16:st-ann-of-the-dunes-golfwood-beverly-shores-in-standing"
+        ],
+        "start": "1954"
+      },
+      "milestones": [],
+      "name": "Saint Ann of the Dunes church site, Beverly Shores",
+      "related_public_institution_ids": [
+        "cn:institution:st-ann-beverly-shores-in"
+      ],
+      "site_class": "worship_site",
+      "slug": "st-ann-of-the-dunes-golfwood-beverly-shores-in"
+    },
+    {
+      "condition_relationships": [
+        {
           "confidence": "medium",
           "date": {
             "certainty": "current user confirmed; transfer sequence unresolved",
@@ -2487,7 +2669,19 @@
       "slug": "st-anne-fourth-street-spring-valley-il"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "reviewed current-use evidence",
+            "end": null,
+            "label": "standing in documented current worship use",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:living-sites-16:st-anthony-49th-court-cicero-il-standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-anthony-49th-court-cicero-il",
       "demolished_year": null,
@@ -3164,7 +3358,19 @@
       "slug": "st-casimir-first-church-plymouth-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "reviewed current-use evidence",
+            "end": null,
+            "label": "standing in documented current worship use",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:living-sites-16:st-casimir-fourth-wharton-philadelphia-pa-standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-casimir-fourth-wharton-philadelphia-pa",
       "demolished_year": null,
@@ -3287,7 +3493,19 @@
       "slug": "st-casimir-lithuanian-monument-providence-ri"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "reviewed current-use evidence",
+            "end": null,
+            "label": "standing in documented current worship use",
+            "start": "2026-07-31"
+          },
+          "relationship_id": "rel:living-sites-16:st-casimir-los-angeles-st-george-street-standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-casimir-los-angeles-st-george-street",
       "demolished_year": null,
@@ -6080,7 +6298,19 @@
       "slug": "st-peter-detroit-site"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "reviewed current-use evidence",
+            "end": null,
+            "label": "standing in documented current worship use",
+            "start": "2026-07-31"
+          },
+          "relationship_id": "rel:living-sites-16:st-peter-flaherty-way-south-boston-ma-standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-peter-flaherty-way-south-boston-ma",
       "demolished_year": null,
@@ -6578,7 +6808,7 @@
       "unit": "Canadian Lithuanian parish comparator"
     }
   },
-  "content_hash": "sha256:de55f0713bc82d3bb08d6979095422e8071eaa3cf2aaf3eb308c1ec534655c41",
+  "content_hash": "sha256:ac458819c78df57ef6d1bdee50aecc6598e1e87e967d5537ef8c3ca73d2d0aa1",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -8784,7 +9014,7 @@
     }
   ],
   "counts": {
-    "building_site_entities": 170,
+    "building_site_entities": 171,
     "canadian_comparator_parishes": 3,
     "closed_roman_catholic_parishes": 87,
     "closed_roman_catholic_parishes_since_1990": 55,
@@ -8792,7 +9022,7 @@
     "closed_roman_catholic_parishes_with_dated_year": 79,
     "coal_region_parish_institutions": 15,
     "institution_continuity_edges": 51,
-    "physical_worship_sites": 133,
+    "physical_worship_sites": 134,
     "public_us_institutions": 155,
     "roman_catholic_parish_institutions": 132,
     "roman_catholic_parishes_with_closure_year": 92,
@@ -8800,10 +9030,12 @@
     "site_r10_founding_fallbacks": 65,
     "unresolved_founding_years": 16
   },
-  "generated": "2026-08-02",
+  "generated": "2026-08-03",
   "institution_history": [
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "All Saints, Chicago, IL",
       "city": "Chicago",
       "closed": {
@@ -8828,10 +9060,13 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "All Saints Lithuanian national/independent Catholic parish, Wilkes-Barre",
       "city": "Wilkes-Barre",
       "closed": {
@@ -8856,10 +9091,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "All Saints independent/national Lithuanian parish, Worcester",
       "city": "Worcester",
       "closed": {
@@ -8884,10 +9122,13 @@
       "state": "MA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Andrew Lithuanian Roman Catholic Parish, New Britain",
       "city": "New Britain",
       "closed": {
@@ -8914,10 +9155,18 @@
       "state": "CT",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-andrew-church-street-new-britain-ct"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:living-sites-16:st-andrew-nineteenth-wallace-philadelphia-pa-standing",
+        "rel:living-sites-16:st-casimir-fourth-wharton-philadelphia-pa-standing"
+      ],
       "canonical_name": "Saint Andrew Lithuanian Roman Catholic Parish, Philadelphia",
       "city": "Philadelphia",
       "closed": {
@@ -8947,10 +9196,16 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "active_parish",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-andrew-nineteenth-wallace-philadelphia-pa",
+        "cn:building_site:st-casimir-fourth-wharton-philadelphia-pa"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Tėviškė Lithuanian Evangelical Lutheran Parish",
       "city": "Darien",
       "closed": {
@@ -8978,10 +9233,15 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "active_parish",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-john-lutheran-cass-avenue-darien-il"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Ann Lithuanian Roman Catholic Parish, Luzerne",
       "city": "Luzerne",
       "closed": {
@@ -9009,10 +9269,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-ann-bennett-street-luzerne-pa"
+      ]
     },
     {
       "building_fate": "repurposed_religious",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Anne Lithuanian Roman Catholic Parish, Spring Valley",
       "city": "Spring Valley",
       "closed": {
@@ -9039,10 +9304,17 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "unresolved",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-anne-fourth-street-spring-valley-il"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:living-sites-16:annunciation-williamsburg-north-fifth-street-standing"
+      ],
       "canonical_name": "Annunciation of the Blessed Virgin Mary Parish, Williamsburg",
       "city": "Brooklyn",
       "closed": {
@@ -9070,10 +9342,15 @@
       "state": "NY",
       "status_authority": "canonical_status_adjudication",
       "status_group": "mass_continues",
-      "status_observed_at": "2026-08-02"
+      "status_observed_at": "2026-08-02",
+      "terminal_worship_site_ids": [
+        "cn:building_site:annunciation-williamsburg-north-fifth-street"
+      ]
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Mary of the Annunciation Lithuanian Roman Catholic Parish, Kingston",
       "city": "Kingston",
       "closed": {
@@ -9103,10 +9380,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:living-sites-16:st-anthony-49th-court-cicero-il-standing"
+      ],
       "canonical_name": "Saint Anthony Roman Catholic Parish, Cicero",
       "city": "Cicero",
       "closed": {
@@ -9133,10 +9415,15 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "mass_continues",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-anthony-49th-court-cicero-il"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Anthony Lithuanian parish, Detroit",
       "city": "Detroit",
       "closed": {
@@ -9165,10 +9452,15 @@
       "state": "MI",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-anthony-detroit-25th-street-site"
+      ]
     },
     {
       "building_fate": "repurposed_religious",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Anthony Lithuanian Roman Catholic Parish, Omaha",
       "city": "Omaha",
       "closed": {
@@ -9198,10 +9490,15 @@
       "state": "NE",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-anthony-thirty-second-street-omaha-ne"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Anthony Lithuanian Parish, Philadelphia",
       "city": "Philadelphia",
       "closed": {
@@ -9228,10 +9525,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-anthony-first-church-philadelphia-pa"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Dangun Žengimo, Pittsburgh, PA",
       "city": "Pittsburgh",
       "closed": {
@@ -9256,10 +9558,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Bernard Parish, Irons, MI",
       "city": "Irons",
       "closed": {
@@ -9284,10 +9589,13 @@
       "state": "MI",
       "status_authority": "site_r10_baseline",
       "status_group": "unverified",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "repurposed_religious",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Amsterdam",
       "city": "Amsterdam",
       "closed": {
@@ -9314,10 +9622,15 @@
       "state": "NY",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-casimir-east-main-street-amsterdam-ny"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Joseph / St. Casimir Parish, South Boston",
       "city": "Boston (South Boston)",
       "closed": {
@@ -9345,10 +9658,15 @@
       "state": "MA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:east-seventh-street-chapel-boston-ma"
+      ]
     },
     {
       "building_fate": "repurposed_religious",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Brockton",
       "city": "Brockton",
       "closed": {
@@ -9376,10 +9694,15 @@
       "state": "MA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-casimir-ames-street-brockton-ma"
+      ]
     },
     {
       "building_fate": "repurposed_religious",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Chicago Heights",
       "city": "Chicago Heights",
       "closed": {
@@ -9406,10 +9729,17 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-casimir-14th-street-chicago-heights-il"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:living-sites-16:our-lady-perpetual-help-cleveland-neff-site-standing"
+      ],
       "canonical_name": "St. Casimir Lithuanian parish, Cleveland",
       "city": "Cleveland",
       "closed": {
@@ -9438,10 +9768,15 @@
       "state": "OH",
       "status_authority": "site_r10_baseline",
       "status_group": "active_parish",
-      "status_observed_at": "2026-07-09"
+      "status_observed_at": "2026-07-09",
+      "terminal_worship_site_ids": [
+        "cn:building_site:our-lady-perpetual-help-cleveland-neff-site"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Casimir Parish, Freeland",
       "city": "Freeland",
       "closed": {
@@ -9468,10 +9803,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "repurposed_religious",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Gary",
       "city": "Gary",
       "closed": {
@@ -9499,10 +9837,18 @@
       "state": "IN",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-casimir-fifteenth-avenue-gary-in",
+        "cn:building_site:st-casimir-school-first-church-gary-in"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:living-sites-16:st-casimir-los-angeles-st-george-street-standing"
+      ],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Los Angeles",
       "city": "Los Angeles",
       "closed": {
@@ -9529,10 +9875,15 @@
       "state": "CA",
       "status_authority": "site_r10_baseline",
       "status_group": "active_parish",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-casimir-los-angeles-st-george-street"
+      ]
     },
     {
       "building_fate": "repurposed_secular",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Nashua",
       "city": "Nashua",
       "closed": {
@@ -9561,10 +9912,13 @@
       "state": "NH",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "repurposed_secular",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, New Haven",
       "city": "New Haven",
       "closed": {
@@ -9591,10 +9945,15 @@
       "state": "CT",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:former-st-casimir-greene-street-new-haven-ct"
+      ]
     },
     {
       "building_fate": "repurposed_religious",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Paterson",
       "city": "Paterson",
       "closed": {
@@ -9622,10 +9981,15 @@
       "state": "NJ",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-casimir-montgomery-street-paterson-nj"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Philadelphia",
       "city": "Philadelphia",
       "closed": {
@@ -9655,10 +10019,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "repurposed_secular",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Pittsburgh",
       "city": "Pittsburgh",
       "closed": {
@@ -9687,10 +10054,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "repurposed_secular",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Pittston",
       "city": "Pittston",
       "closed": {
@@ -9718,10 +10088,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-casimir-pittston-pa"
+      ]
     },
     {
       "building_fate": "repurposed_religious",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Providence",
       "city": "Providence",
       "closed": {
@@ -9750,10 +10125,13 @@
       "state": "RI",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Sioux City",
       "city": "Sioux City",
       "closed": {
@@ -9780,10 +10158,15 @@
       "state": "IA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-casimir-leech-avenue-sioux-city-ia"
+      ]
     },
     {
       "building_fate": "repurposed_religious",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Worcester",
       "city": "Worcester",
       "closed": {
@@ -9812,10 +10195,15 @@
       "state": "MA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-casimir-providence-street-worcester-ma"
+      ]
     },
     {
       "building_fate": null,
+      "building_fate_authority": "unresolved",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Lithuanian Evangelical Lutheran Parish, Los Angeles",
       "city": "Los Angeles",
       "closed": {
@@ -9840,10 +10228,13 @@
       "state": "CA",
       "status_authority": "site_r10_baseline",
       "status_group": "unverified",
-      "status_observed_at": "2026-07-31"
+      "status_observed_at": "2026-07-31",
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": null,
+      "building_fate_authority": "unresolved",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Lithuanian Evangelical Reformed Church, Chicago",
       "city": "Chicago",
       "closed": {
@@ -9871,10 +10262,16 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "unverified",
-      "status_observed_at": "2026-07-31"
+      "status_observed_at": "2026-07-31",
+      "terminal_worship_site_ids": [
+        "cn:building_site:lithuanian-reformed-1942-spaulding-chicago-il",
+        "cn:building_site:salem-6824-emerald-chicago-il"
+      ]
     },
     {
       "building_fate": null,
+      "building_fate_authority": "unresolved",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Lithuanian Lutheran Congregation, Boston",
       "city": "Boston",
       "closed": {
@@ -9901,10 +10298,13 @@
       "state": "MA",
       "status_authority": "site_r10_baseline",
       "status_group": "unverified",
-      "status_observed_at": "2026-07-31"
+      "status_observed_at": "2026-07-31",
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Francis Lithuanian Roman Catholic Parish, East Chicago",
       "city": "East Chicago",
       "closed": {
@@ -9931,10 +10331,15 @@
       "state": "IN",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-francis-fir-street-east-chicago-in"
+      ]
     },
     {
       "building_fate": "repurposed_secular",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Francis Lithuanian Roman Catholic Parish, Lawrence",
       "city": "Lawrence",
       "closed": {
@@ -9963,10 +10368,13 @@
       "state": "MA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Our Lady of Vilna Lithuanian Roman Catholic Parish, Eynon",
       "city": "Archbald",
       "closed": {
@@ -9996,10 +10404,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Our Lady of Vilna Lithuanian Roman Catholic Parish, Pilsen",
       "city": "Chicago",
       "closed": {
@@ -10026,10 +10437,15 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:our-lady-of-vilna-23rd-place-chicago-il"
+      ]
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Our Lady of Vilnius Lithuanian Roman Catholic Parish, Manhattan",
       "city": "Manhattan",
       "closed": {
@@ -10057,10 +10473,15 @@
       "state": "NY",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-25"
+      "status_observed_at": "2026-07-25",
+      "terminal_worship_site_ids": [
+        "cn:building_site:our-lady-of-vilnius-broome-street-ny"
+      ]
     },
     {
       "building_fate": "repurposed_religious",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Our Lady of Vilna Roman Catholic Parish, Worcester",
       "city": "Worcester",
       "closed": {
@@ -10087,10 +10508,15 @@
       "state": "MA",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:our-lady-of-vilna-sterling-street-worcester-ma"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Bridgeport",
       "city": "Bridgeport",
       "closed": {
@@ -10118,10 +10544,15 @@
       "state": "CT",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-george-park-avenue-bridgeport-ct"
+      ]
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Brooklyn",
       "city": "Brooklyn",
       "closed": {
@@ -10150,10 +10581,15 @@
       "state": "NY",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-george-york-street-brooklyn-ny"
+      ]
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Chicago",
       "city": "Chicago",
       "closed": {
@@ -10181,10 +10617,13 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. George Lithuanian parish, Cleveland",
       "city": "Cleveland",
       "closed": {
@@ -10212,10 +10651,15 @@
       "state": "OH",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-george-cleveland-superior-site"
+      ]
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Haverhill",
       "city": "Haverhill",
       "closed": {
@@ -10243,10 +10687,17 @@
       "state": "MA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-george-washington-street-haverhill-ma"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:living-sites-16:lithuanian-world-center-mission-church-lemont-il-standing"
+      ],
       "canonical_name": "Blessed Jurgis Matulaitis Lithuanian Catholic Mission, Lemont",
       "city": "Lemont",
       "closed": {
@@ -10273,10 +10724,15 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "active_parish",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:lithuanian-world-center-mission-church-lemont-il"
+      ]
     },
     {
       "building_fate": "repurposed_religious",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Niagara Falls",
       "city": "Niagara Falls",
       "closed": {
@@ -10306,10 +10762,13 @@
       "state": "NY",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "repurposed_secular",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Norwood",
       "city": "Norwood",
       "closed": {
@@ -10340,10 +10799,13 @@
       "state": "MA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "repurposed_religious",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Philadelphia",
       "city": "Philadelphia",
       "closed": {
@@ -10372,10 +10834,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-george-venango-philadelphia-pa"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. George Lithuanian National Catholic Parish, Pittsburgh",
       "city": "Pittsburgh",
       "closed": {
@@ -10402,10 +10869,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
-      "building_fate": "repurposed_religious",
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:living-sites-16:our-lady-of-lourdes-varinna-drive-rochester-ny-standing"
+      ],
       "canonical_name": "Saint George Lithuanian Catholic Community, Rochester",
       "city": "Rochester",
       "closed": {
@@ -10422,6 +10894,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_religious",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/sv-jurgio-rochester-ny",
       "record_type": "parish",
@@ -10434,10 +10907,15 @@
       "state": "NY",
       "status_authority": "site_r10_baseline",
       "status_group": "mass_continues",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:our-lady-of-lourdes-varinna-drive-rochester-ny"
+      ]
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Shenandoah",
       "city": "Shenandoah",
       "closed": {
@@ -10464,10 +10942,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-09"
+      "status_observed_at": "2026-07-09",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-george-shenandoah-south-jardin-site"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Holy Cross, Schenectady, NY",
       "city": "Schenectady",
       "closed": {
@@ -10492,10 +10975,13 @@
       "state": "NY",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Holy Cross Lithuanian National Catholic Church, Westville",
       "city": "Westville",
       "closed": {
@@ -10522,10 +11008,15 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:holy-cross-main-street-westville-il"
+      ]
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Holy Trinity Lithuanian Roman Catholic Parish, Newark",
       "city": "Newark",
       "closed": {
@@ -10554,10 +11045,15 @@
       "state": "NJ",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:holy-trinity-parish-hall-adams-newark-nj"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Holy Cross Lithuanian Roman Catholic Parish, Chicago",
       "city": "Chicago",
       "closed": {
@@ -10585,10 +11081,17 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:holy-cross-46th-street-chicago-il"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:living-sites-16:holy-cross-leo-street-dayton-oh-standing"
+      ],
       "canonical_name": "Holy Cross Lithuanian Roman Catholic Parish, Dayton",
       "city": "Dayton",
       "closed": {
@@ -10617,10 +11120,15 @@
       "state": "OH",
       "status_authority": "site_r10_baseline",
       "status_group": "mass_continues",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:holy-cross-leo-street-dayton-oh"
+      ]
     },
     {
       "building_fate": "repurposed_secular",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Holy Cross Lithuanian Roman Catholic Parish, Mount Carmel",
       "city": "Mount Carmel",
       "closed": {
@@ -10649,10 +11157,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Ignatius Parish, Luther, MI",
       "city": "Luther",
       "closed": {
@@ -10677,10 +11188,15 @@
       "state": "MI",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:living-sites-16:immaculate-conception-44th-street-chicago-il-standing"
+      ],
       "canonical_name": "Immaculate Conception Lithuanian Roman Catholic Parish, Brighton Park",
       "city": "Chicago",
       "closed": {
@@ -10702,15 +11218,21 @@
       "record_type": "parish",
       "registry_slug": "immaculate-chicago-il",
       "relationship_ids": [
-        "rel:current-1:immaculate-merged-into-successor"
+        "rel:current-1:immaculate-merged-into-successor",
+        "rel:living-sites-16:immaculate-original-used-44th-street-site"
       ],
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "mass_continues",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:immaculate-conception-44th-street-chicago-il"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Immaculate Conception, Sheboygan, WI",
       "city": "Sheboygan",
       "closed": {
@@ -10735,10 +11257,13 @@
       "state": "WI",
       "status_authority": "site_r10_baseline",
       "status_group": "unverified",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Immaculate Conception Lithuanian Roman Catholic Parish, East St. Louis",
       "city": "East St. Louis",
       "closed": {
@@ -10766,10 +11291,15 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:immaculate-conception-baugh-avenue-east-st-louis-il"
+      ]
     },
     {
       "building_fate": "repurposed_religious",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Sacred Heart of Jesus Lithuanian National Catholic Parish, Lawrence",
       "city": "Lawrence",
       "closed": {
@@ -10797,10 +11327,13 @@
       "state": "MA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "repurposed_secular",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint John the Baptist Lithuanian Roman Catholic Parish, Coaldale",
       "city": "Coaldale",
       "closed": {
@@ -10830,10 +11363,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-john-baptist-coaldale-pa"
+      ]
     },
     {
       "building_fate": "repurposed_religious",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Joseph Lithuanian Roman Catholic Parish, DuBois",
       "city": "DuBois",
       "closed": {
@@ -10860,10 +11398,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-joseph-dubois-south-state-street-church"
+      ]
     },
     {
       "building_fate": "repurposed_secular",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Joseph Lithuanian Roman Catholic Parish, Nanticoke-Hanover",
       "city": "Nanticoke",
       "closed": {
@@ -10891,10 +11434,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-joseph-pine-street-nanticoke-pa"
+      ]
     },
     {
       "building_fate": "repurposed_religious",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Joseph Lithuanian Roman Catholic Parish, Scranton",
       "city": "Scranton",
       "closed": {
@@ -10922,10 +11470,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-joseph-main-avenue-scranton-pa"
+      ]
     },
     {
       "building_fate": "repurposed_secular",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Joseph Lithuanian Roman Catholic Parish, South Chicago",
       "city": "South Chicago",
       "closed": {
@@ -10953,10 +11506,17 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-joseph-marquette-avenue-south-chicago-il"
+      ]
     },
     {
-      "building_fate": "unknown",
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:waterbury:st-joseph-building-standing-retained"
+      ],
       "canonical_name": "Saint Joseph Lithuanian Catholic Parish, Waterbury",
       "city": "Waterbury",
       "closed": {
@@ -10973,6 +11533,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "unknown",
       "name": "Šv. Juozapo",
       "public_profile": "/parishes/sv-juozapo-waterbury-ct",
       "record_type": "parish",
@@ -10987,10 +11548,15 @@
       "state": "CT",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-joseph-waterbury-congress-avenue-church"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Lithuanian church (unnamed), Middleport, PA",
       "city": "Middleport",
       "closed": {
@@ -11015,10 +11581,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "All Saints Lithuanian independent/national Catholic institution, Waterbury",
       "city": "Waterbury",
       "closed": {
@@ -11043,10 +11612,13 @@
       "state": "CT",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Our Lady of Siluva Lithuanian National Catholic Parish, Chicago",
       "city": "Chicago (Bridgeport; 35th & Union / 3501-3509 So. Union Ave.)",
       "closed": {
@@ -11073,10 +11645,15 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "unverified",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:our-lady-siluva-35th-union-chicago-il"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Mary Parish, Custer, MI",
       "city": "Custer",
       "closed": {
@@ -11101,10 +11678,13 @@
       "state": "MI",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Annunciation BVM Lithuanian Roman Catholic Parish, Frackville",
       "city": "Frackville",
       "closed": {
@@ -11135,10 +11715,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:annunciation-bvm-church-frackville-pa"
+      ]
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Mary Lithuanian National Catholic Parish, Philadelphia",
       "city": "Philadelphia",
       "closed": {
@@ -11166,10 +11751,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Michael Lithuanian Roman Catholic Parish, Bayonne",
       "city": "Bayonne",
       "closed": {
@@ -11197,10 +11785,15 @@
       "state": "NJ",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-michael-east-23rd-bayonne-nj"
+      ]
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Michael Lithuanian Roman Catholic Parish, Chicago North Side",
       "city": "Chicago",
       "closed": {
@@ -11228,10 +11821,15 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-michael-wabansia-chicago-il"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Michael the Archangel Parish, Scranton",
       "city": "Scranton",
       "closed": {
@@ -11261,10 +11859,17 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-lucy-church-scranton-pa"
+      ]
     },
     {
-      "building_fate": "repurposed_religious",
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:living-sites-16:our-lady-perpetual-help-cleveland-neff-site-standing"
+      ],
       "canonical_name": "Our Lady of Perpetual Help Lithuanian parish, Cleveland",
       "city": "Cleveland",
       "closed": {
@@ -11281,6 +11886,7 @@
       },
       "identity_support": "two_pass_case_file",
       "institution_class": "roman_catholic",
+      "legacy_building_fate": "repurposed_religious",
       "name": "Dievo Motinos Nuolatinės Pagalbos",
       "public_profile": "/parishes/dievo-motinos-nuolatines-pagalbos-cleveland-oh",
       "record_type": "parish",
@@ -11292,10 +11898,15 @@
       "state": "OH",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:our-lady-perpetual-help-cleveland-neff-site"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Our Lady of Siluva Lithuanian Roman Catholic Parish, Maizeville",
       "city": "Maizeville",
       "closed": {
@@ -11323,10 +11934,17 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:our-lady-siluva-main-street-maizeville-pa"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:living-sites-16:nativity-bvm-washtenaw-chicago-il-standing"
+      ],
       "canonical_name": "Nativity of the Blessed Virgin Mary Lithuanian Roman Catholic Parish, Chicago",
       "city": "Chicago",
       "closed": {
@@ -11353,10 +11971,17 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "active_parish",
-      "status_observed_at": "2026-07-09"
+      "status_observed_at": "2026-07-09",
+      "terminal_worship_site_ids": [
+        "cn:building_site:nativity-bvm-washtenaw-chicago-il"
+      ]
     },
     {
-      "building_fate": null,
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:living-sites-16:santa-maria-del-popolo-mundelein-il-standing"
+      ],
       "canonical_name": "Our Lady of Siluva Lithuanian Mission, Mundelein",
       "city": "Mundelein",
       "closed": {
@@ -11383,10 +12008,15 @@
       "state": "IL",
       "status_authority": "brain_current_status_adjudication",
       "status_group": "active_parish",
-      "status_observed_at": "2026-08-02"
+      "status_observed_at": "2026-08-02",
+      "terminal_worship_site_ids": [
+        "cn:building_site:santa-maria-del-popolo-mundelein-il"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Independent (National) parish, Town of Lake, Chicago, Chicago (Town of Lake), IL",
       "city": "Chicago (Town of Lake)",
       "closed": {
@@ -11411,10 +12041,13 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Jerusalem Lutheran Church, Collinsville",
       "city": "Collinsville",
       "closed": {
@@ -11441,10 +12074,15 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:jerusalem-lutheran-collinsville-il"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Lietuva Colony Catholic Mission, Grand Prairie",
       "city": "Grand Prairie",
       "closed": {
@@ -11471,10 +12109,15 @@
       "state": "AR",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:lietuva-colony-chapel-grand-prairie-ar"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Our Lady of Sorrows Lithuanian Roman Catholic Parish, Kearny-Harrison",
       "city": "Kearny",
       "closed": {
@@ -11502,10 +12145,15 @@
       "state": "NJ",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:our-lady-of-sorrows-davis-avenue-kearny-nj"
+      ]
     },
     {
       "building_fate": "repurposed_secular",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Constantine Lithuanian Roman Catholic Parish, Oglesby",
       "city": "Oglesby",
       "closed": {
@@ -11533,10 +12181,15 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-constantine-florence-street-oglesby-il"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saints Peter and Paul Lithuanian Roman Catholic Parish, Elizabeth",
       "city": "Elizabeth",
       "closed": {
@@ -11564,10 +12217,15 @@
       "state": "NJ",
       "status_authority": "site_r10_baseline",
       "status_group": "unresolved",
-      "status_observed_at": "2026-07-09"
+      "status_observed_at": "2026-07-09",
+      "terminal_worship_site_ids": [
+        "cn:building_site:ss-peter-paul-ripley-place-elizabeth-nj"
+      ]
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Vincent de Paul Lithuanian Roman Catholic Parish, Esplen",
       "city": "Esplen",
       "closed": {
@@ -11596,10 +12254,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-vincent-school-church-esplen-pa"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Vincent de Paul Lithuanian Roman Catholic Parish, Girardville",
       "city": "Girardville",
       "closed": {
@@ -11628,10 +12291,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-vincent-de-paul-second-c-street-girardville-pa"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saints Peter and Paul Roman Catholic Parish, Grand Rapids",
       "city": "Grand Rapids",
       "closed": {
@@ -11662,10 +12330,15 @@
       "state": "MI",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:ss-peter-paul-myrtle-street-grand-rapids-mi"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Paul Lithuanian Lutheran, Naugatuck, CT",
       "city": "Naugatuck",
       "closed": {
@@ -11690,10 +12363,15 @@
       "state": "CT",
       "status_authority": "site_r10_baseline",
       "status_group": "unverified",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:living-sites-16:st-peter-flaherty-way-south-boston-ma-standing"
+      ],
       "canonical_name": "Saint Peter Lithuanian Roman Catholic Parish, South Boston",
       "city": "Boston",
       "closed": {
@@ -11722,10 +12400,15 @@
       "state": "MA",
       "status_authority": "site_r10_baseline",
       "status_group": "active_parish",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-peter-flaherty-way-south-boston-ma"
+      ]
     },
     {
       "building_fate": "repurposed_secular",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Immaculate Conception Lithuanian Roman Catholic Parish, Cambridge",
       "city": "Cambridge",
       "closed": {
@@ -11753,10 +12436,15 @@
       "state": "MA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:immaculate-conception-church-windsor-street-cambridge-ma"
+      ]
     },
     {
       "building_fate": "repurposed_secular",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Peter Lithuanian parish, Detroit",
       "city": "Detroit",
       "closed": {
@@ -11783,10 +12471,15 @@
       "state": "MI",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-peter-detroit-site"
+      ]
     },
     {
       "building_fate": null,
+      "building_fate_authority": "unresolved",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Lithuanian Protestant Parish, New York",
       "city": "New York City",
       "closed": {
@@ -11813,10 +12506,15 @@
       "state": "NY",
       "status_authority": "site_r10_baseline",
       "status_group": "unverified",
-      "status_observed_at": "2026-07-31"
+      "status_observed_at": "2026-07-31",
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-john-host-church-new-york-ny"
+      ]
     },
     {
       "building_fate": "repurposed_religious",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Providence of God Lithuanian Roman Catholic Parish, Chicago",
       "city": "Chicago",
       "closed": {
@@ -11844,10 +12542,15 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:providence-of-god-18th-street-chicago-il"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Providence of God Lithuanian National Catholic Parish, Scranton",
       "city": "Scranton",
       "closed": {
@@ -11874,10 +12577,17 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": "2026-07-09"
+      "status_observed_at": "2026-07-09",
+      "terminal_worship_site_ids": [
+        "cn:building_site:providence-of-god-sumner-scranton-pa"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:living-sites-16:divine-providence-southfield-site-standing"
+      ],
       "canonical_name": "Divine Providence Lithuanian Catholic Parish, Southfield",
       "city": "Southfield",
       "closed": {
@@ -11910,10 +12620,15 @@
       "state": "MI",
       "status_authority": "site_r10_baseline",
       "status_group": "active_parish",
-      "status_observed_at": "2026-07-25"
+      "status_observed_at": "2026-07-25",
+      "terminal_worship_site_ids": [
+        "cn:building_site:divine-providence-southfield-site"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Sacred Heart, New Philadelphia, PA",
       "city": "New Philadelphia",
       "closed": {
@@ -11938,10 +12653,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Ss. Peter and Paul, Chicago, IL",
       "city": "Chicago",
       "closed": {
@@ -11966,10 +12684,13 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Ss. Peter & Paul, Hazleton, PA",
       "city": "Hazleton",
       "closed": {
@@ -11994,10 +12715,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Ss. Peter and Paul Lithuanian Parish, Homestead",
       "city": "Homestead",
       "closed": {
@@ -12026,10 +12750,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:ss-peter-paul-mifflin-church-homestead-pa"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Ss. Peter and Paul, Rockford, IL",
       "city": "Rockford",
       "closed": {
@@ -12054,10 +12783,13 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Ss. Peter & Paul, Sugar Notch, PA",
       "city": "Sugar Notch",
       "closed": {
@@ -12082,10 +12814,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "unverified",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Ss. Peter & Paul (now St. John XXIII), Tamaqua, PA",
       "city": "Tamaqua",
       "closed": {
@@ -12110,10 +12845,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Ss. Peter and Paul, Westville, IL",
       "city": "Westville",
       "closed": {
@@ -12138,10 +12876,13 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Alphonsus Parish and National Shrine, Baltimore",
       "city": "Baltimore",
       "closed": {
@@ -12168,10 +12909,15 @@
       "state": "MD",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-alphonsus-saratoga-baltimore-md"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Ambrose, Port Washington, WI",
       "city": "Port Washington",
       "closed": {
@@ -12196,11 +12942,16 @@
       "state": "WI",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "standing",
-      "canonical_name": "Šv. Onos, Beverly Shores, IN",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:living-sites-16:st-ann-of-the-dunes-golfwood-beverly-shores-in-standing"
+      ],
+      "canonical_name": "Saint Ann of the Dunes Lithuanian Catholic community, Beverly Shores",
       "city": "Beverly Shores",
       "closed": {
         "authority": "unresolved",
@@ -12220,14 +12971,21 @@
       "public_profile": "/parishes/st-ann-beverly-shores-in",
       "record_type": "parish",
       "registry_slug": "st-ann-beverly-shores-in",
-      "relationship_ids": [],
+      "relationship_ids": [
+        "rel:living-sites-16:st-ann-community-uses-golfwood-site"
+      ],
       "state": "IN",
       "status_authority": "site_r10_baseline",
       "status_group": "mass_continues",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-ann-of-the-dunes-golfwood-beverly-shores-in"
+      ]
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Ann, Jersey City, NJ",
       "city": "Jersey City",
       "closed": {
@@ -12252,10 +13010,13 @@
       "state": "NJ",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "repurposed_religious",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Anthony Lithuanian Roman Catholic Parish, Ansonia",
       "city": "Ansonia",
       "closed": {
@@ -12282,10 +13043,15 @@
       "state": "CT",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-anthony-north-main-ansonia-ct"
+      ]
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Anthony Lithuanian Parish, Bridgeville",
       "city": "Bridgeville",
       "closed": {
@@ -12313,10 +13079,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-anthony-millers-run-bridgeville-pa"
+      ]
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Anthony, Forest City, PA",
       "city": "Forest City",
       "closed": {
@@ -12341,10 +13112,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Anthony Lithuanian Parish, Kewanee",
       "city": "Kewanee",
       "closed": {
@@ -12372,10 +13146,15 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-anthony-church-kewanee-il"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Bartholomew, Waukegan, IL",
       "city": "Waukegan",
       "closed": {
@@ -12400,10 +13179,13 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Casimir, East Vandergrift, PA",
       "city": "East Vandergrift",
       "closed": {
@@ -12428,10 +13210,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "unverified",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Kansas City, Kansas",
       "city": "Kansas City",
       "closed": {
@@ -12458,10 +13243,15 @@
       "state": "KS",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-casimir-broadview-ridge-kansas-city-ks"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Casimir, McAdoo, PA",
       "city": "McAdoo",
       "closed": {
@@ -12486,10 +13276,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "unverified",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Casimir Lithuanian Parish, Plymouth and Lynwood",
       "city": "Plymouth",
       "closed": {
@@ -12519,10 +13312,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "unverified",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-casimir-lynwood-church-hanover-township-pa"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Casimir, Racine, WI",
       "city": "Racine",
       "closed": {
@@ -12547,10 +13345,13 @@
       "state": "WI",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Casimir, St. Clair, PA",
       "city": "St. Clair",
       "closed": {
@@ -12575,10 +13376,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Casimir Mission, St. Pete Beach, FL",
       "city": "St. Pete Beach",
       "closed": {
@@ -12603,10 +13407,13 @@
       "state": "FL",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Casimir Lithuanian Parish, Westfield",
       "city": "Westfield",
       "closed": {
@@ -12634,10 +13441,15 @@
       "state": "MA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-casimir-parkside-westfield-ma"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Casimir, Wilkes-Barre, PA",
       "city": "Wilkes-Barre",
       "closed": {
@@ -12662,10 +13474,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Francis, Athol, MA",
       "city": "Athol",
       "closed": {
@@ -12690,10 +13505,13 @@
       "state": "MA",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Saint Francis of Assisi Lithuanian Roman Catholic Parish, Minersville",
       "city": "Minersville",
       "closed": {
@@ -12720,10 +13538,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "unresolved",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-francis-minersville-pa"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Francis, Wilkes-Barre, PA",
       "city": "Wilkes-Barre",
       "closed": {
@@ -12748,10 +13571,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Francis, Youngstown, OH",
       "city": "Youngstown",
       "closed": {
@@ -12776,10 +13602,13 @@
       "state": "OH",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Gabriel, Milwaukee, WI",
       "city": "Milwaukee",
       "closed": {
@@ -12804,10 +13633,13 @@
       "state": "WI",
       "status_authority": "site_r10_baseline",
       "status_group": "unverified",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. George, Albany, NY",
       "city": "Albany",
       "closed": {
@@ -12832,10 +13664,13 @@
       "state": "NY",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. George Lithuanian parish, Detroit",
       "city": "Detroit",
       "closed": {
@@ -12863,10 +13698,15 @@
       "state": "MI",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-george-detroit-westminster-cardoni-site"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. George, Saginaw, MI",
       "city": "Saginaw",
       "closed": {
@@ -12891,10 +13731,13 @@
       "state": "MI",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. George Lithuanian Parish, Utica",
       "city": "Utica",
       "closed": {
@@ -12922,10 +13765,13 @@
       "state": "NY",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Isidore Lithuanian Parish, Braddock",
       "city": "Braddock",
       "closed": {
@@ -12953,10 +13799,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-isidore-talbot-street-braddock-pa"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. John the Baptist (Lithuanian 1905-1916), Baltimore, MD",
       "city": "Baltimore",
       "closed": {
@@ -12981,10 +13832,13 @@
       "state": "MD",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Joseph, Binghamton, NY",
       "city": "Binghamton",
       "closed": {
@@ -13009,10 +13863,13 @@
       "state": "NY",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Joseph Lithuanian Parish, Donora",
       "city": "Donora",
       "closed": {
@@ -13039,10 +13896,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-joseph-former-presbyterian-donora-pa"
+      ]
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Joseph, Duryea, PA",
       "city": "Duryea",
       "closed": {
@@ -13067,10 +13929,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Joseph, Lowell, MA",
       "city": "Lowell",
       "closed": {
@@ -13095,10 +13960,13 @@
       "state": "MA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Joseph (now Mother Teresa of Calcutta), Mahanoy City, PA",
       "city": "Mahanoy City",
       "closed": {
@@ -13123,10 +13991,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Joseph, St. Louis, MO",
       "city": "St. Louis",
       "closed": {
@@ -13151,10 +14022,13 @@
       "state": "MO",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Luke Parish, Bentleyville",
       "city": "Bentleyville",
       "closed": {
@@ -13182,10 +14056,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-luke-1909-church-bentleyville-pa"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Mary of the Angels, Brooklyn, NY",
       "city": "Brooklyn",
       "closed": {
@@ -13210,10 +14089,13 @@
       "state": "NY",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Mary, Wanamie, PA",
       "city": "Wanamie",
       "closed": {
@@ -13238,10 +14120,13 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Michael the Archangel Lithuanian Parish, Shamokin",
       "city": "Shamokin",
       "closed": {
@@ -13269,10 +14154,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-michael-church-shamokin-pa"
+      ]
     },
     {
       "building_fate": "unknown",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Peter, Akron, OH",
       "city": "Akron",
       "closed": {
@@ -13297,10 +14187,13 @@
       "state": "OH",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Peter, Kenosha, WI",
       "city": "Kenosha",
       "closed": {
@@ -13325,10 +14218,13 @@
       "state": "WI",
       "status_authority": "site_r10_baseline",
       "status_group": "transferred",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "St. Vincent de Paul Lithuanian Parish, Springfield",
       "city": "Springfield",
       "closed": {
@@ -13355,10 +14251,17 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-vincent-eighth-enos-springfield-il"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:maspeth:current-church-standing-2026"
+      ],
       "canonical_name": "Transfiguration Lithuanian Catholic Parish, Maspeth",
       "city": "Maspeth",
       "closed": {
@@ -13389,10 +14292,17 @@
       "state": "NY",
       "status_authority": "brain_current_status_adjudication",
       "status_group": "transferred",
-      "status_observed_at": "2026-08-02"
+      "status_observed_at": "2026-08-02",
+      "terminal_worship_site_ids": [
+        "cn:building_site:transfiguration-maspeth-current-church"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:hartford:holy-trinity-building-standing-2026"
+      ],
       "canonical_name": "Holy Trinity Lithuanian Catholic institution, Hartford",
       "city": "Hartford",
       "closed": {
@@ -13421,10 +14331,15 @@
       "state": "CT",
       "status_authority": "brain_current_status_adjudication",
       "status_group": "unresolved",
-      "status_observed_at": "2026-08-02"
+      "status_observed_at": "2026-08-02",
+      "terminal_worship_site_ids": [
+        "cn:building_site:holy-trinity-hartford-capitol-avenue-church"
+      ]
     },
     {
       "building_fate": "demolished",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Holy Trinity Lithuanian Roman Catholic Parish, Wilkes-Barre",
       "city": "Wilkes-Barre",
       "closed": {
@@ -13452,10 +14367,15 @@
       "state": "PA",
       "status_authority": "site_r10_baseline",
       "status_group": "closed",
-      "status_observed_at": "2026-07-16"
+      "status_observed_at": "2026-07-16",
+      "terminal_worship_site_ids": [
+        "cn:building_site:holy-trinity-south-street-wilkes-barre-pa"
+      ]
     },
     {
       "building_fate": "standing",
+      "building_fate_authority": "site_r10_baseline",
+      "building_fate_relationship_ids": [],
       "canonical_name": "Zion Lithuanian Lutheran, Oak Lawn, IL",
       "city": "Oak Lawn",
       "closed": {
@@ -13480,7 +14400,8 @@
       "state": "IL",
       "status_authority": "site_r10_baseline",
       "status_group": "active_parish",
-      "status_observed_at": null
+      "status_observed_at": null,
+      "terminal_worship_site_ids": []
     }
   ],
   "publication_rules": [
@@ -13685,7 +14606,7 @@
       "unit": "distinct U.S. Roman Catholic parish institution"
     }
   },
-  "revision_id": "canonical-infographic-units-2026-08-02-mundelein",
+  "revision_id": "canonical-infographic-units-2026-08-03-living-worship-sites",
   "schema": "culturenet-parish-infographic-projection.v1",
   "unit_contracts": [
     {
@@ -13701,7 +14622,7 @@
     {
       "counted_in_public_institution_total": false,
       "id": "physical_worship_site_history",
-      "population": 133,
+      "population": 134,
       "unit": "accepted physical church, chapel, shrine, or worship site"
     },
     {

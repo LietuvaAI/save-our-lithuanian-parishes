@@ -1674,65 +1674,6 @@
       },
       "assertion_type": "identity",
       "confidence": "medium",
-      "id": "assert:cib-9:st-ann-beverly-shores-in:identity",
-      "object": {
-        "building_sites": "not adjudicated in identity-only packet",
-        "city": "Beverly Shores",
-        "country": "US",
-        "current_condition": "not adjudicated in identity-only packet",
-        "identity_support": "multi_source_corroborated",
-        "institution_class": "roman_catholic",
-        "lifecycle_status": "not adjudicated in identity-only packet",
-        "name": "Šv. Onos",
-        "public_evidence": [
-          {
-            "label": "Draugas archive",
-            "locator": "",
-            "sourceFamily": "draugas-registry-1909-2007",
-            "url": "https://www.draugas.org/archyvas-pdf/"
-          },
-          {
-            "label": "truelithuania",
-            "locator": "http://global.truelithuania.com/lt/indiana-746/",
-            "sourceFamily": "truelithuania",
-            "url": "http://global.truelithuania.com/lt/indiana-746/"
-          },
-          {
-            "label": "web-historical",
-            "locator": "https://dcgary.org/parish/st-ann-dunes-beverly-shores",
-            "sourceFamily": "web-historical",
-            "url": "https://dcgary.org/parish/st-ann-dunes-beverly-shores"
-          }
-        ],
-        "record_depth": "multi-source",
-        "record_type": "parish",
-        "research_collection_refs": [
-          "repo://culturenet-brain/docs/research/draugas",
-          "repo://culturenet-brain/docs/research/draugas-parish-registry-1909-2007",
-          "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r9/data/candidates/truelithuania-map-2026-07-17.json",
-          "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r9/data/candidates/web-historical-2026-07-15.json"
-        ],
-        "source_families": [
-          "draugas",
-          "truelithuania",
-          "web-historical"
-        ],
-        "state": "IN"
-      },
-      "predicate": "multi_source_corroborated_public_institution_identity",
-      "source_artifact_id": "src:cib-9:st-ann-beverly-shores-in:research-index-2026-07-31",
-      "source_locator": "research-index record st-ann-beverly-shores-in",
-      "subject": {
-        "canonical_entity_id": "cn:institution:st-ann-beverly-shores-in"
-      }
-    },
-    {
-      "adjudication": {
-        "conflict_preserved": false,
-        "state": "accepted"
-      },
-      "assertion_type": "identity",
-      "confidence": "medium",
       "id": "assert:cib-9:st-ann-jersey-city-nj:identity",
       "object": {
         "building_sites": "not adjudicated in identity-only packet",
@@ -7821,6 +7762,429 @@
         "state": "accepted"
       },
       "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:living-sites-16:annunciation-williamsburg-north-fifth-street-standing",
+      "object": {
+        "canonical_site_id": "cn:building_site:annunciation-williamsburg-north-fifth-street",
+        "derived_from_assertion_ids": [
+          "assert:lineage-1:successor-uses-annunciation-site",
+          "assert:lineage-1:annunciation-current-mass"
+        ],
+        "status": "standing in documented current worship use"
+      },
+      "observed_at": "2026-07-31",
+      "predicate": "documented_current_worship_use_establishes_building_standing",
+      "source_artifact_id": "src:living-sites-16:lineage-packet",
+      "source_locator": "Reviewed accepted current-use assertions named in derived_from_assertion_ids",
+      "subject": {
+        "canonical_entity_id": "cn:event:annunciation-williamsburg-north-fifth-street-standing-current-worship"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:living-sites-16:divine-providence-southfield-site-standing",
+      "object": {
+        "canonical_site_id": "cn:building_site:divine-providence-southfield-site",
+        "derived_from_assertion_ids": [
+          "assert:detroit:divine-providence-planning-area-8-current",
+          "assert:detroit:divine-providence-current-worship"
+        ],
+        "status": "standing in documented current worship use"
+      },
+      "observed_at": "2026-07-31",
+      "predicate": "documented_current_worship_use_establishes_building_standing",
+      "source_artifact_id": "src:living-sites-16:detroit_cleveland-packet",
+      "source_locator": "Reviewed accepted current-use assertions named in derived_from_assertion_ids",
+      "subject": {
+        "canonical_entity_id": "cn:event:divine-providence-southfield-site-standing-current-worship"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:living-sites-16:holy-cross-leo-street-dayton-oh-standing",
+      "object": {
+        "canonical_site_id": "cn:building_site:holy-cross-leo-street-dayton-oh",
+        "derived_from_assertion_ids": [
+          "assert:current-1:dayton-founded-and-dedicated",
+          "assert:current-1:dayton-active-2026"
+        ],
+        "status": "standing in documented current worship use"
+      },
+      "observed_at": "2026-07-31",
+      "predicate": "documented_current_worship_use_establishes_building_standing",
+      "source_artifact_id": "src:living-sites-16:current-packet",
+      "source_locator": "Reviewed accepted current-use assertions named in derived_from_assertion_ids",
+      "subject": {
+        "canonical_entity_id": "cn:event:holy-cross-leo-street-dayton-oh-standing-current-worship"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:living-sites-16:immaculate-conception-44th-street-chicago-il-standing",
+      "object": {
+        "canonical_site_id": "cn:building_site:immaculate-conception-44th-street-chicago-il",
+        "derived_from_assertion_ids": [
+          "assert:current-1:immaculate-merged-2019",
+          "assert:current-1:immaculate-site-lithuanian-mass-2026"
+        ],
+        "status": "standing in documented current worship use"
+      },
+      "observed_at": "2026-07-31",
+      "predicate": "documented_current_worship_use_establishes_building_standing",
+      "source_artifact_id": "src:living-sites-16:current-packet",
+      "source_locator": "Reviewed accepted current-use assertions named in derived_from_assertion_ids",
+      "subject": {
+        "canonical_entity_id": "cn:event:immaculate-conception-44th-street-chicago-il-standing-current-worship"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "site_relationship",
+      "confidence": "high",
+      "id": "assert:living-sites-16:immaculate-original-used-site",
+      "object": {
+        "derived_from_assertion_ids": [
+          "assert:current-1:immaculate-merged-2019",
+          "assert:current-1:immaculate-site-lithuanian-mass-2026"
+        ],
+        "end": "2019",
+        "institution_entity_id": "cn:institution:immaculate-conception-brighton-park-chicago-il",
+        "site_entity_id": "cn:building_site:immaculate-conception-44th-street-chicago-il",
+        "start": "1964"
+      },
+      "predicate": "historic_parish_used_44th_street_church_until_2019_merger",
+      "source_artifact_id": "src:living-sites-16:current-packet",
+      "source_locator": "Reviewed Immaculate Conception institution, merger, and current-site assertions",
+      "subject": {
+        "canonical_entity_id": "cn:event:immaculate-conception-brighton-park-site-use-through-2019"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:living-sites-16:lithuanian-world-center-mission-church-lemont-il-standing",
+      "object": {
+        "canonical_site_id": "cn:building_site:lithuanian-world-center-mission-church-lemont-il",
+        "derived_from_assertion_ids": [
+          "assert:living-1:lemont-active-2026",
+          "assert:living-1:lemont-rents-community-site"
+        ],
+        "status": "standing in documented current worship use"
+      },
+      "observed_at": "2026-07-31",
+      "predicate": "documented_current_worship_use_establishes_building_standing",
+      "source_artifact_id": "src:living-sites-16:living-packet",
+      "source_locator": "Reviewed accepted current-use assertions named in derived_from_assertion_ids",
+      "subject": {
+        "canonical_entity_id": "cn:event:lithuanian-world-center-mission-church-lemont-il-standing-current-worship"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:living-sites-16:nativity-bvm-washtenaw-chicago-il-standing",
+      "object": {
+        "canonical_site_id": "cn:building_site:nativity-bvm-washtenaw-chicago-il",
+        "derived_from_assertion_ids": [
+          "assert:living-1:nativity-active-2026",
+          "assert:living-1:nativity-uses-washtenaw-site"
+        ],
+        "status": "standing in documented current worship use"
+      },
+      "observed_at": "2026-07-31",
+      "predicate": "documented_current_worship_use_establishes_building_standing",
+      "source_artifact_id": "src:living-sites-16:living-packet",
+      "source_locator": "Reviewed accepted current-use assertions named in derived_from_assertion_ids",
+      "subject": {
+        "canonical_entity_id": "cn:event:nativity-bvm-washtenaw-chicago-il-standing-current-worship"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:living-sites-16:our-lady-of-lourdes-varinna-drive-rochester-ny-standing",
+      "object": {
+        "canonical_site_id": "cn:building_site:our-lady-of-lourdes-varinna-drive-rochester-ny",
+        "derived_from_assertion_ids": [
+          "assert:current-1:rochester-relocated-2010",
+          "assert:current-1:rochester-directory-2026"
+        ],
+        "status": "standing in documented current worship use"
+      },
+      "observed_at": "2026-07-31",
+      "predicate": "documented_current_worship_use_establishes_building_standing",
+      "source_artifact_id": "src:living-sites-16:current-packet",
+      "source_locator": "Reviewed accepted current-use assertions named in derived_from_assertion_ids",
+      "subject": {
+        "canonical_entity_id": "cn:event:our-lady-of-lourdes-varinna-drive-rochester-ny-standing-current-worship"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:living-sites-16:our-lady-perpetual-help-cleveland-neff-site-standing",
+      "object": {
+        "canonical_site_id": "cn:building_site:our-lady-perpetual-help-cleveland-neff-site",
+        "derived_from_assertion_ids": [
+          "assert:cleveland:st-casimir-uses-neff-site",
+          "assert:cleveland:lithuanian-mass-current-st-casimir"
+        ],
+        "status": "standing in documented current worship use"
+      },
+      "observed_at": "2026-07-31",
+      "predicate": "documented_current_worship_use_establishes_building_standing",
+      "source_artifact_id": "src:living-sites-16:detroit_cleveland-packet",
+      "source_locator": "Reviewed accepted current-use assertions named in derived_from_assertion_ids",
+      "subject": {
+        "canonical_entity_id": "cn:event:our-lady-perpetual-help-cleveland-neff-site-standing-current-worship"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:living-sites-16:santa-maria-del-popolo-mundelein-il-standing",
+      "object": {
+        "canonical_site_id": "cn:building_site:santa-maria-del-popolo-mundelein-il",
+        "derived_from_assertion_ids": [
+          "assert:mundelein-15:current-worship",
+          "assert:mundelein-15:host-site"
+        ],
+        "status": "standing in documented current worship use"
+      },
+      "observed_at": "2024",
+      "predicate": "documented_current_worship_use_establishes_building_standing",
+      "source_artifact_id": "src:living-sites-16:mundelein-packet",
+      "source_locator": "Reviewed accepted current-use assertions named in derived_from_assertion_ids",
+      "subject": {
+        "canonical_entity_id": "cn:event:santa-maria-del-popolo-mundelein-il-standing-current-worship"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:living-sites-16:st-andrew-nineteenth-wallace-philadelphia-pa-standing",
+      "object": {
+        "canonical_site_id": "cn:building_site:st-andrew-nineteenth-wallace-philadelphia-pa",
+        "derived_from_assertion_ids": [
+          "assert:pmc-7:st-andrew-lifecycle",
+          "assert:pmc-7:st-andrew-sites"
+        ],
+        "status": "standing in documented current worship use"
+      },
+      "observed_at": "2026-07-16",
+      "predicate": "documented_current_worship_use_establishes_building_standing",
+      "source_artifact_id": "src:living-sites-16:philadelphia-packet",
+      "source_locator": "Reviewed accepted current-use assertions named in derived_from_assertion_ids",
+      "subject": {
+        "canonical_entity_id": "cn:event:st-andrew-nineteenth-wallace-philadelphia-pa-standing-current-worship"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:living-sites-16:st-ann-current-community",
+      "object": {
+        "address": "433 E. Golfwood Road, Beverly Shores, IN",
+        "current_governance": "worship site of St. Patrick Catholic Community",
+        "site": "Saint Ann of the Dunes",
+        "status": "active Catholic worship site with Lithuanian ministry"
+      },
+      "observed_at": "2026-07-25",
+      "predicate": "lithuanian_mass_continues_at_st_ann_of_the_dunes_worship_site",
+      "source_artifact_id": "src:living-sites-16:st-ann-diocese",
+      "source_locator": "Official diocesan parish entry",
+      "subject": {
+        "canonical_entity_id": "cn:institution:st-ann-beverly-shores-in"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:living-sites-16:st-ann-of-the-dunes-golfwood-beverly-shores-in-standing",
+      "object": {
+        "canonical_site_id": "cn:building_site:st-ann-of-the-dunes-golfwood-beverly-shores-in",
+        "status": "standing in active Catholic worship use"
+      },
+      "observed_at": "2026-07-25",
+      "predicate": "official_current_worship_schedule_establishes_building_standing",
+      "source_artifact_id": "src:living-sites-16:st-ann-parish",
+      "source_locator": "Current Mass schedule for the Golfwood Road church",
+      "subject": {
+        "canonical_entity_id": "cn:event:st-ann-of-the-dunes-golfwood-beverly-shores-in-standing-current-worship"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "site_identity",
+      "confidence": "high",
+      "id": "assert:living-sites-16:st-ann-site",
+      "object": {
+        "address": "433 E. Golfwood Road, Beverly Shores, IN",
+        "building_year": "1954",
+        "current_use": "St. Patrick Catholic Community worship site"
+      },
+      "predicate": "historic_lithuanian_church_is_current_catholic_worship_site",
+      "source_artifact_id": "src:living-sites-16:st-ann-diocese",
+      "source_locator": "Official diocesan parish entry and current worship-site designation",
+      "subject": {
+        "canonical_entity_id": "cn:building_site:st-ann-of-the-dunes-golfwood-beverly-shores-in"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:living-sites-16:st-anthony-49th-court-cicero-il-standing",
+      "object": {
+        "canonical_site_id": "cn:building_site:st-anthony-49th-court-cicero-il",
+        "derived_from_assertion_ids": [
+          "assert:current-1:cicero-active-2026",
+          "assert:current-1:cicero-current-site"
+        ],
+        "status": "standing in documented current worship use"
+      },
+      "observed_at": "2026-07-16",
+      "predicate": "documented_current_worship_use_establishes_building_standing",
+      "source_artifact_id": "src:living-sites-16:current-packet",
+      "source_locator": "Reviewed accepted current-use assertions named in derived_from_assertion_ids",
+      "subject": {
+        "canonical_entity_id": "cn:event:st-anthony-49th-court-cicero-il-standing-current-worship"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:living-sites-16:st-casimir-fourth-wharton-philadelphia-pa-standing",
+      "object": {
+        "canonical_site_id": "cn:building_site:st-casimir-fourth-wharton-philadelphia-pa",
+        "derived_from_assertion_ids": [
+          "assert:pmc-7:st-andrew-lifecycle",
+          "assert:pmc-7:st-casimir-lifecycle"
+        ],
+        "status": "standing in documented current worship use"
+      },
+      "observed_at": "2026-07-16",
+      "predicate": "documented_current_worship_use_establishes_building_standing",
+      "source_artifact_id": "src:living-sites-16:philadelphia-packet",
+      "source_locator": "Reviewed accepted current-use assertions named in derived_from_assertion_ids",
+      "subject": {
+        "canonical_entity_id": "cn:event:st-casimir-fourth-wharton-philadelphia-pa-standing-current-worship"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:living-sites-16:st-casimir-los-angeles-st-george-street-standing",
+      "object": {
+        "canonical_site_id": "cn:building_site:st-casimir-los-angeles-st-george-street",
+        "derived_from_assertion_ids": [
+          "assert:living-1:la-active-2026",
+          "assert:living-1:la-uses-current-site"
+        ],
+        "status": "standing in documented current worship use"
+      },
+      "observed_at": "2026-07-31",
+      "predicate": "documented_current_worship_use_establishes_building_standing",
+      "source_artifact_id": "src:living-sites-16:living-packet",
+      "source_locator": "Reviewed accepted current-use assertions named in derived_from_assertion_ids",
+      "subject": {
+        "canonical_entity_id": "cn:event:st-casimir-los-angeles-st-george-street-standing-current-worship"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:living-sites-16:st-peter-flaherty-way-south-boston-ma-standing",
+      "object": {
+        "canonical_site_id": "cn:building_site:st-peter-flaherty-way-south-boston-ma",
+        "derived_from_assertion_ids": [
+          "assert:living-1:boston-active-2026",
+          "assert:living-1:boston-uses-flaherty-site"
+        ],
+        "status": "standing in documented current worship use"
+      },
+      "observed_at": "2026-07-31",
+      "predicate": "documented_current_worship_use_establishes_building_standing",
+      "source_artifact_id": "src:living-sites-16:living-packet",
+      "source_locator": "Reviewed accepted current-use assertions named in derived_from_assertion_ids",
+      "subject": {
+        "canonical_entity_id": "cn:event:st-peter-flaherty-way-south-boston-ma-standing-current-worship"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
       "confidence": "medium",
       "effective_from": "2025-09-12",
       "effective_to": null,
@@ -11020,6 +11384,25 @@
     },
     {
       "aliases": [
+        "433 East Golfwood Road"
+      ],
+      "canonical_name": "Saint Ann of the Dunes church site, Beverly Shores",
+      "entity_type": "building_site",
+      "id": "cn:building_site:st-ann-of-the-dunes-golfwood-beverly-shores-in",
+      "lifecycle": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:living-sites-16:st-ann-site",
+          "assert:living-sites-16:st-ann-of-the-dunes-golfwood-beverly-shores-in-standing"
+        ],
+        "start": "1954"
+      },
+      "lifecycle_status": "standing_active_catholic_worship_site",
+      "site_subtype": "worship_site",
+      "slug": "st-ann-of-the-dunes-golfwood-beverly-shores-in"
+    },
+    {
+      "aliases": [
         "100 East 4th Street"
       ],
       "canonical_name": "Former Saint Anne church, Spring Valley",
@@ -12490,6 +12873,13 @@
       "slug": "transfiguration-maspeth-perry-predecessor-church"
     },
     {
+      "aliases": [],
+      "canonical_name": "Current-worship standing condition for annunciation-williamsburg-north-fifth-street",
+      "entity_type": "event",
+      "id": "cn:event:annunciation-williamsburg-north-fifth-street-standing-current-worship",
+      "slug": "annunciation-williamsburg-north-fifth-street-standing-current-worship"
+    },
+    {
       "aliases": [
         "Schaefer church demolition"
       ],
@@ -12498,6 +12888,20 @@
       "event_subtype": "building_status_assessment",
       "id": "cn:event:divine-providence-schaefer-demolition-1970",
       "slug": "divine-providence-schaefer-demolition-1970"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Current-worship standing condition for divine-providence-southfield-site",
+      "entity_type": "event",
+      "id": "cn:event:divine-providence-southfield-site-standing-current-worship",
+      "slug": "divine-providence-southfield-site-standing-current-worship"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Current-worship standing condition for holy-cross-leo-street-dayton-oh",
+      "entity_type": "event",
+      "id": "cn:event:holy-cross-leo-street-dayton-oh-standing-current-worship",
+      "slug": "holy-cross-leo-street-dayton-oh-standing-current-worship"
     },
     {
       "aliases": [],
@@ -12536,6 +12940,20 @@
     },
     {
       "aliases": [],
+      "canonical_name": "Current-worship standing condition for immaculate-conception-44th-street-chicago-il",
+      "entity_type": "event",
+      "id": "cn:event:immaculate-conception-44th-street-chicago-il-standing-current-worship",
+      "slug": "immaculate-conception-44th-street-chicago-il-standing-current-worship"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Immaculate Conception parish use of the 44th Street church through the 2019 merger",
+      "entity_type": "event",
+      "id": "cn:event:immaculate-conception-brighton-park-site-use-through-2019",
+      "slug": "immaculate-conception-brighton-park-site-use-through-2019"
+    },
+    {
+      "aliases": [],
       "canonical_name": "Immaculate Conception Cambridge affordable-housing conversion",
       "entity_type": "event",
       "id": "cn:event:immaculate-conception-cambridge-housing-conversion-2012",
@@ -12550,6 +12968,27 @@
     },
     {
       "aliases": [],
+      "canonical_name": "Current-worship standing condition for lithuanian-world-center-mission-church-lemont-il",
+      "entity_type": "event",
+      "id": "cn:event:lithuanian-world-center-mission-church-lemont-il-standing-current-worship",
+      "slug": "lithuanian-world-center-mission-church-lemont-il-standing-current-worship"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Current-worship standing condition for nativity-bvm-washtenaw-chicago-il",
+      "entity_type": "event",
+      "id": "cn:event:nativity-bvm-washtenaw-chicago-il-standing-current-worship",
+      "slug": "nativity-bvm-washtenaw-chicago-il-standing-current-worship"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Current-worship standing condition for our-lady-of-lourdes-varinna-drive-rochester-ny",
+      "entity_type": "event",
+      "id": "cn:event:our-lady-of-lourdes-varinna-drive-rochester-ny-standing-current-worship",
+      "slug": "our-lady-of-lourdes-varinna-drive-rochester-ny-standing-current-worship"
+    },
+    {
+      "aliases": [],
       "canonical_name": "Our Lady of Vilnius church demolition",
       "entity_type": "event",
       "id": "cn:event:our-lady-of-vilnius-demolition-2015",
@@ -12561,6 +13000,13 @@
         "start": "2015-04"
       },
       "slug": "our-lady-of-vilnius-demolition-2015"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Current-worship standing condition for our-lady-perpetual-help-cleveland-neff-site",
+      "entity_type": "event",
+      "id": "cn:event:our-lady-perpetual-help-cleveland-neff-site-standing-current-worship",
+      "slug": "our-lady-perpetual-help-cleveland-neff-site-standing-current-worship"
     },
     {
       "aliases": [],
@@ -12606,6 +13052,27 @@
     },
     {
       "aliases": [],
+      "canonical_name": "Current-worship standing condition for santa-maria-del-popolo-mundelein-il",
+      "entity_type": "event",
+      "id": "cn:event:santa-maria-del-popolo-mundelein-il-standing-current-worship",
+      "slug": "santa-maria-del-popolo-mundelein-il-standing-current-worship"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Current-worship standing condition for st-andrew-nineteenth-wallace-philadelphia-pa",
+      "entity_type": "event",
+      "id": "cn:event:st-andrew-nineteenth-wallace-philadelphia-pa-standing-current-worship",
+      "slug": "st-andrew-nineteenth-wallace-philadelphia-pa-standing-current-worship"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Current-worship standing condition for Saint Ann of the Dunes",
+      "entity_type": "event",
+      "id": "cn:event:st-ann-of-the-dunes-golfwood-beverly-shores-in-standing-current-worship",
+      "slug": "st-ann-of-the-dunes-golfwood-beverly-shores-in-standing-current-worship"
+    },
+    {
+      "aliases": [],
       "canonical_name": "Saint Anne church Protestant reuse",
       "entity_type": "event",
       "id": "cn:event:st-anne-spring-valley-protestant-reuse",
@@ -12617,6 +13084,13 @@
         "start": null
       },
       "slug": "st-anne-spring-valley-protestant-reuse"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Current-worship standing condition for st-anthony-49th-court-cicero-il",
+      "entity_type": "event",
+      "id": "cn:event:st-anthony-49th-court-cicero-il-standing-current-worship",
+      "slug": "st-anthony-49th-court-cicero-il-standing-current-worship"
     },
     {
       "aliases": [
@@ -12693,6 +13167,13 @@
     },
     {
       "aliases": [],
+      "canonical_name": "Current-worship standing condition for st-casimir-fourth-wharton-philadelphia-pa",
+      "entity_type": "event",
+      "id": "cn:event:st-casimir-fourth-wharton-philadelphia-pa-standing-current-worship",
+      "slug": "st-casimir-fourth-wharton-philadelphia-pa-standing-current-worship"
+    },
+    {
+      "aliases": [],
       "canonical_name": "Saint Casimir Gary complex Protestant reuse",
       "entity_type": "event",
       "id": "cn:event:st-casimir-gary-protestant-reuse",
@@ -12711,6 +13192,13 @@
       "entity_type": "event",
       "id": "cn:event:st-casimir-kansas-city-demolition",
       "slug": "st-casimir-kansas-city-demolition"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Current-worship standing condition for st-casimir-los-angeles-st-george-street",
+      "entity_type": "event",
+      "id": "cn:event:st-casimir-los-angeles-st-george-street-standing-current-worship",
+      "slug": "st-casimir-los-angeles-st-george-street-standing-current-worship"
     },
     {
       "aliases": [],
@@ -12957,6 +13445,13 @@
       "entity_type": "event",
       "id": "cn:event:st-michael-church-demolition-after-1970",
       "slug": "st-michael-church-demolition-after-1970"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Current-worship standing condition for st-peter-flaherty-way-south-boston-ma",
+      "entity_type": "event",
+      "id": "cn:event:st-peter-flaherty-way-south-boston-ma-standing-current-worship",
+      "slug": "st-peter-flaherty-way-south-boston-ma-standing-current-worship"
     },
     {
       "aliases": [
@@ -14547,14 +15042,17 @@
       "slug": "st-andrew-new-britain-ct"
     },
     {
-      "aliases": [],
-      "canonical_name": "Šv. Onos, Beverly Shores, IN",
+      "aliases": [
+        "Šv. Onos",
+        "St. Ann of the Dunes"
+      ],
+      "canonical_name": "Saint Ann of the Dunes Lithuanian Catholic community, Beverly Shores",
       "entity_type": "institution",
-      "evidence_depth": "multi-source identity; deep case file missing",
-      "formation_basis": "multi_source_corroborated_public_identity",
+      "evidence_depth": "official diocesan and parish current sources",
+      "formation_basis": "distinct_lithuanian_mission_and_later_parish",
       "id": "cn:institution:st-ann-beverly-shores-in",
       "institution_subtype": "parish",
-      "lifecycle_status": "pending_deep_case",
+      "lifecycle_status": "mass_continues_at_successor_worship_site",
       "slug": "st-ann-beverly-shores-in"
     },
     {
@@ -16629,7 +17127,7 @@
       "slug": "robert-damyanovich"
     }
   ],
-  "content_hash": "sha256:d6ffc38153548995aa3975a713e3609e69e34679bec708a8ed1ee6d3e211df3c",
+  "content_hash": "sha256:0939f80de42cf16d6451a4d6d1510b6fc5b4c1eab84081a12dc024ab99a4264f",
   "counts": {
     "by_institution_class": {
       "independent_catholic": 4,
@@ -16642,11 +17140,11 @@
       "misija": 5,
       "parish": 144
     },
-    "profiles_pending_deep_case": 45,
+    "profiles_pending_deep_case": 44,
     "protected_campaign_assignments": 4,
     "public_us_institutions": 155
   },
-  "generated": "2026-08-02",
+  "generated": "2026-08-03",
   "linked_context": [
     {
       "aliases": [
@@ -23649,6 +24147,7 @@
       "culturenet-parish-institution-site-lineage-1-2026-07-31",
       "culturenet-parish-lineage-detroit-cleveland-pilot-2026-07-31",
       "culturenet-parish-living-network-1-2026-07-31",
+      "culturenet-parish-living-worship-sites-16-2026-08-03",
       "culturenet-parish-midwest-new-england-lineage-1-2026-07-31",
       "culturenet-parish-mundelein-current-mission-15-2026-08-02",
       "culturenet-parish-national-scranton-providence-lineage-8-2026-07-31",
@@ -26883,26 +27382,32 @@
       "state": "WI"
     },
     {
-      "aliases": [],
-      "canonical_detail_status": "pending_deep_case",
-      "canonical_name": "Šv. Onos, Beverly Shores, IN",
+      "aliases": [
+        "St. Ann of the Dunes",
+        "Šv. Onos"
+      ],
+      "canonical_detail_status": "mass_continues_at_successor_worship_site",
+      "canonical_name": "Saint Ann of the Dunes Lithuanian Catholic community, Beverly Shores",
       "canonical_slug": "st-ann-beverly-shores-in",
       "city": "Beverly Shores",
       "culturenet_entity_id": "cn:institution:st-ann-beverly-shores-in",
       "evidence_assertion_ids": [
-        "assert:cib-9:st-ann-beverly-shores-in:identity"
+        "assert:living-sites-16:st-ann-current-community",
+        "assert:living-sites-16:st-ann-of-the-dunes-golfwood-beverly-shores-in-standing",
+        "assert:living-sites-16:st-ann-site"
       ],
       "identity_support": "multi_source_corroborated",
       "institution_class": "roman_catholic",
-      "migration_state": "corroborated_identity_backbone_9_projected",
+      "migration_state": "living_worship_sites_16_projected",
       "name": "Šv. Onos",
-      "projection_record_id": "proj:cib-9:st-ann-beverly-shores-in",
+      "projection_record_id": "proj:living-sites-16:st-ann-beverly-shores",
       "protected_campaign": false,
       "public_profile": "/parishes/st-ann-beverly-shores-in",
       "record_type": "parish",
       "registry_slug": "st-ann-beverly-shores-in",
       "source_artifact_ids": [
-        "src:cib-9:st-ann-beverly-shores-in:research-index-2026-07-31"
+        "src:living-sites-16:st-ann-diocese",
+        "src:living-sites-16:st-ann-parish"
       ],
       "state": "IN"
     },
@@ -31940,9 +32445,9 @@
       "counting_effect": "no_count_change",
       "date": {
         "certainty": "source_attested",
-        "end": "1973-09-08",
+        "end": null,
         "label": "Present Southfield complex dedicated September 8, 1973",
-        "precision": "day",
+        "precision": "day_and_open_end",
         "start": "1973-09-08"
       },
       "evidence_assertion_ids": [
@@ -35624,6 +36129,754 @@
         "entity_id": "cn:building_site:teviske-former-troy-street-chicago-il",
         "entity_type": "building_site",
         "slug": "teviske-former-troy-street-chicago-il"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:living-sites-16:annunciation-williamsburg-north-fifth-street-standing",
+          "observed_at": "2026-07-31"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "reviewed current-use evidence",
+        "end": null,
+        "label": "standing in documented current worship use",
+        "start": "2026-07-31"
+      },
+      "evidence_assertion_ids": [
+        "assert:living-sites-16:annunciation-williamsburg-north-fifth-street-standing"
+      ],
+      "id": "rel:living-sites-16:annunciation-williamsburg-north-fifth-street-standing",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Current-worship standing condition for annunciation-williamsburg-north-fifth-street",
+        "entity_id": "cn:event:annunciation-williamsburg-north-fifth-street-standing-current-worship",
+        "entity_type": "event",
+        "slug": "annunciation-williamsburg-north-fifth-street-standing-current-worship"
+      },
+      "source_artifact_ids": [
+        "src:living-sites-16:lineage-packet"
+      ],
+      "target": {
+        "display_name": "Annunciation church site, Williamsburg",
+        "entity_id": "cn:building_site:annunciation-williamsburg-north-fifth-street",
+        "entity_type": "building_site",
+        "slug": "annunciation-williamsburg-north-fifth-street"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:living-sites-16:divine-providence-southfield-site-standing",
+          "observed_at": "2026-07-31"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "reviewed current-use evidence",
+        "end": null,
+        "label": "standing in documented current worship use",
+        "start": "2026-07-31"
+      },
+      "evidence_assertion_ids": [
+        "assert:living-sites-16:divine-providence-southfield-site-standing"
+      ],
+      "id": "rel:living-sites-16:divine-providence-southfield-site-standing",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Current-worship standing condition for divine-providence-southfield-site",
+        "entity_id": "cn:event:divine-providence-southfield-site-standing-current-worship",
+        "entity_type": "event",
+        "slug": "divine-providence-southfield-site-standing-current-worship"
+      },
+      "source_artifact_ids": [
+        "src:living-sites-16:detroit_cleveland-packet"
+      ],
+      "target": {
+        "display_name": "Divine Providence Southfield church and cultural center site",
+        "entity_id": "cn:building_site:divine-providence-southfield-site",
+        "entity_type": "building_site",
+        "slug": "divine-providence-southfield-site"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:living-sites-16:holy-cross-leo-street-dayton-oh-standing",
+          "observed_at": "2026-07-31"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "reviewed current-use evidence",
+        "end": null,
+        "label": "standing in documented current worship use",
+        "start": "2026-07-31"
+      },
+      "evidence_assertion_ids": [
+        "assert:living-sites-16:holy-cross-leo-street-dayton-oh-standing"
+      ],
+      "id": "rel:living-sites-16:holy-cross-leo-street-dayton-oh-standing",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Current-worship standing condition for holy-cross-leo-street-dayton-oh",
+        "entity_id": "cn:event:holy-cross-leo-street-dayton-oh-standing-current-worship",
+        "entity_type": "event",
+        "slug": "holy-cross-leo-street-dayton-oh-standing-current-worship"
+      },
+      "source_artifact_ids": [
+        "src:living-sites-16:current-packet"
+      ],
+      "target": {
+        "display_name": "Holy Cross church site, Dayton",
+        "entity_id": "cn:building_site:holy-cross-leo-street-dayton-oh",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:current-1:dayton-founded-and-dedicated",
+            "assert:current-1:dayton-active-2026"
+          ],
+          "start": "1915"
+        },
+        "slug": "holy-cross-leo-street-dayton-oh"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:living-sites-16:immaculate-conception-44th-street-chicago-il-standing",
+          "observed_at": "2026-07-31"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "reviewed current-use evidence",
+        "end": null,
+        "label": "standing in documented current worship use",
+        "start": "2026-07-31"
+      },
+      "evidence_assertion_ids": [
+        "assert:living-sites-16:immaculate-conception-44th-street-chicago-il-standing"
+      ],
+      "id": "rel:living-sites-16:immaculate-conception-44th-street-chicago-il-standing",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Current-worship standing condition for immaculate-conception-44th-street-chicago-il",
+        "entity_id": "cn:event:immaculate-conception-44th-street-chicago-il-standing-current-worship",
+        "entity_type": "event",
+        "slug": "immaculate-conception-44th-street-chicago-il-standing-current-worship"
+      },
+      "source_artifact_ids": [
+        "src:living-sites-16:current-packet"
+      ],
+      "target": {
+        "display_name": "Immaculate Conception church site, Brighton Park",
+        "entity_id": "cn:building_site:immaculate-conception-44th-street-chicago-il",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:current-1:immaculate-site-lithuanian-mass-2026"
+          ],
+          "start": "1964"
+        },
+        "slug": "immaculate-conception-44th-street-chicago-il"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "confidence": "high",
+      "counting_effect": "site_count_only",
+      "date": {
+        "certainty": "reviewed case file and official merger record",
+        "end": "2019",
+        "label": "historic parish used the 44th Street church until its merger",
+        "start": "1964"
+      },
+      "evidence_assertion_ids": [
+        "assert:living-sites-16:immaculate-original-used-site"
+      ],
+      "id": "rel:living-sites-16:immaculate-original-used-44th-street-site",
+      "identity_effect": "site_context_only",
+      "projection_group": "institution_site",
+      "publication_state": "publishable",
+      "relationship_type": "institution-used-site",
+      "source": {
+        "display_name": "Immaculate Conception Lithuanian Roman Catholic Parish, Brighton Park",
+        "entity_id": "cn:institution:immaculate-conception-brighton-park-chicago-il",
+        "entity_type": "institution",
+        "lifecycle": {
+          "end": "2019",
+          "source_assertion_ids": [
+            "assert:current-1:immaculate-founded-1914",
+            "assert:current-1:immaculate-merged-2019"
+          ],
+          "start": "1914"
+        },
+        "slug": "immaculate-conception-brighton-park-chicago-il"
+      },
+      "source_artifact_ids": [
+        "src:living-sites-16:current-packet"
+      ],
+      "target": {
+        "display_name": "Immaculate Conception church site, Brighton Park",
+        "entity_id": "cn:building_site:immaculate-conception-44th-street-chicago-il",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:current-1:immaculate-site-lithuanian-mass-2026"
+          ],
+          "start": "1964"
+        },
+        "slug": "immaculate-conception-44th-street-chicago-il"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:living-sites-16:lithuanian-world-center-mission-church-lemont-il-standing",
+          "observed_at": "2026-07-31"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "reviewed current-use evidence",
+        "end": null,
+        "label": "standing in documented current worship use",
+        "start": "2026-07-31"
+      },
+      "evidence_assertion_ids": [
+        "assert:living-sites-16:lithuanian-world-center-mission-church-lemont-il-standing"
+      ],
+      "id": "rel:living-sites-16:lithuanian-world-center-mission-church-lemont-il-standing",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Current-worship standing condition for lithuanian-world-center-mission-church-lemont-il",
+        "entity_id": "cn:event:lithuanian-world-center-mission-church-lemont-il-standing-current-worship",
+        "entity_type": "event",
+        "slug": "lithuanian-world-center-mission-church-lemont-il-standing-current-worship"
+      },
+      "source_artifact_ids": [
+        "src:living-sites-16:living-packet"
+      ],
+      "target": {
+        "display_name": "Lithuanian World Center mission church site",
+        "entity_id": "cn:building_site:lithuanian-world-center-mission-church-lemont-il",
+        "entity_type": "building_site",
+        "slug": "lithuanian-world-center-mission-church-lemont-il"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:living-sites-16:nativity-bvm-washtenaw-chicago-il-standing",
+          "observed_at": "2026-07-31"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "reviewed current-use evidence",
+        "end": null,
+        "label": "standing in documented current worship use",
+        "start": "2026-07-31"
+      },
+      "evidence_assertion_ids": [
+        "assert:living-sites-16:nativity-bvm-washtenaw-chicago-il-standing"
+      ],
+      "id": "rel:living-sites-16:nativity-bvm-washtenaw-chicago-il-standing",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Current-worship standing condition for nativity-bvm-washtenaw-chicago-il",
+        "entity_id": "cn:event:nativity-bvm-washtenaw-chicago-il-standing-current-worship",
+        "entity_type": "event",
+        "slug": "nativity-bvm-washtenaw-chicago-il-standing-current-worship"
+      },
+      "source_artifact_ids": [
+        "src:living-sites-16:living-packet"
+      ],
+      "target": {
+        "display_name": "Nativity of the Blessed Virgin Mary church site, Chicago",
+        "entity_id": "cn:building_site:nativity-bvm-washtenaw-chicago-il",
+        "entity_type": "building_site",
+        "slug": "nativity-bvm-washtenaw-chicago-il"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:living-sites-16:our-lady-of-lourdes-varinna-drive-rochester-ny-standing",
+          "observed_at": "2026-07-31"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "reviewed current-use evidence",
+        "end": null,
+        "label": "standing in documented current worship use",
+        "start": "2026-07-31"
+      },
+      "evidence_assertion_ids": [
+        "assert:living-sites-16:our-lady-of-lourdes-varinna-drive-rochester-ny-standing"
+      ],
+      "id": "rel:living-sites-16:our-lady-of-lourdes-varinna-drive-rochester-ny-standing",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Current-worship standing condition for our-lady-of-lourdes-varinna-drive-rochester-ny",
+        "entity_id": "cn:event:our-lady-of-lourdes-varinna-drive-rochester-ny-standing-current-worship",
+        "entity_type": "event",
+        "slug": "our-lady-of-lourdes-varinna-drive-rochester-ny-standing-current-worship"
+      },
+      "source_artifact_ids": [
+        "src:living-sites-16:current-packet"
+      ],
+      "target": {
+        "display_name": "Our Lady of Lourdes host church site, Rochester",
+        "entity_id": "cn:building_site:our-lady-of-lourdes-varinna-drive-rochester-ny",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:current-1:rochester-relocated-2010",
+            "assert:current-1:rochester-directory-2026"
+          ],
+          "start": "2010-06-27"
+        },
+        "slug": "our-lady-of-lourdes-varinna-drive-rochester-ny"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:living-sites-16:our-lady-perpetual-help-cleveland-neff-site-standing",
+          "observed_at": "2026-07-31"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "reviewed current-use evidence",
+        "end": null,
+        "label": "standing in documented current worship use",
+        "start": "2026-07-31"
+      },
+      "evidence_assertion_ids": [
+        "assert:living-sites-16:our-lady-perpetual-help-cleveland-neff-site-standing"
+      ],
+      "id": "rel:living-sites-16:our-lady-perpetual-help-cleveland-neff-site-standing",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Current-worship standing condition for our-lady-perpetual-help-cleveland-neff-site",
+        "entity_id": "cn:event:our-lady-perpetual-help-cleveland-neff-site-standing-current-worship",
+        "entity_type": "event",
+        "slug": "our-lady-perpetual-help-cleveland-neff-site-standing-current-worship"
+      },
+      "source_artifact_ids": [
+        "src:living-sites-16:detroit_cleveland-packet"
+      ],
+      "target": {
+        "display_name": "Our Lady of Perpetual Help / St. Casimir Neff Road church site",
+        "entity_id": "cn:building_site:our-lady-perpetual-help-cleveland-neff-site",
+        "entity_type": "building_site",
+        "slug": "our-lady-perpetual-help-cleveland-neff-site"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:living-sites-16:santa-maria-del-popolo-mundelein-il-standing",
+          "observed_at": "2024"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "reviewed current-use evidence",
+        "end": null,
+        "label": "standing in documented current worship use",
+        "start": "2024"
+      },
+      "evidence_assertion_ids": [
+        "assert:living-sites-16:santa-maria-del-popolo-mundelein-il-standing"
+      ],
+      "id": "rel:living-sites-16:santa-maria-del-popolo-mundelein-il-standing",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Current-worship standing condition for santa-maria-del-popolo-mundelein-il",
+        "entity_id": "cn:event:santa-maria-del-popolo-mundelein-il-standing-current-worship",
+        "entity_type": "event",
+        "slug": "santa-maria-del-popolo-mundelein-il-standing-current-worship"
+      },
+      "source_artifact_ids": [
+        "src:living-sites-16:mundelein-packet"
+      ],
+      "target": {
+        "display_name": "Santa Maria del Popolo Church, Mundelein",
+        "entity_id": "cn:building_site:santa-maria-del-popolo-mundelein-il",
+        "entity_type": "building_site",
+        "slug": "santa-maria-del-popolo-mundelein-il"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:living-sites-16:st-andrew-nineteenth-wallace-philadelphia-pa-standing",
+          "observed_at": "2026-07-16"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "reviewed current-use evidence",
+        "end": null,
+        "label": "standing in documented current worship use",
+        "start": "2026-07-16"
+      },
+      "evidence_assertion_ids": [
+        "assert:living-sites-16:st-andrew-nineteenth-wallace-philadelphia-pa-standing"
+      ],
+      "id": "rel:living-sites-16:st-andrew-nineteenth-wallace-philadelphia-pa-standing",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Current-worship standing condition for st-andrew-nineteenth-wallace-philadelphia-pa",
+        "entity_id": "cn:event:st-andrew-nineteenth-wallace-philadelphia-pa-standing-current-worship",
+        "entity_type": "event",
+        "slug": "st-andrew-nineteenth-wallace-philadelphia-pa-standing-current-worship"
+      },
+      "source_artifact_ids": [
+        "src:living-sites-16:philadelphia-packet"
+      ],
+      "target": {
+        "display_name": "Saint Andrew church, Philadelphia",
+        "entity_id": "cn:building_site:st-andrew-nineteenth-wallace-philadelphia-pa",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": "standing in active Lithuanian parish use",
+          "source_assertion_ids": [
+            "assert:pmc-7:st-andrew-sites"
+          ]
+        },
+        "slug": "st-andrew-nineteenth-wallace-philadelphia-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:living-sites-16:st-ann-current-community",
+          "observed_at": "2026-07-25"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "site_count_only",
+      "date": {
+        "certainty": "official current diocesan record; governance-change date unresolved",
+        "end": null,
+        "label": "Lithuanian community continues worship at the historic church under St. Patrick governance",
+        "start": "1954"
+      },
+      "evidence_assertion_ids": [
+        "assert:living-sites-16:st-ann-current-community",
+        "assert:living-sites-16:st-ann-site"
+      ],
+      "id": "rel:living-sites-16:st-ann-community-uses-golfwood-site",
+      "identity_effect": "site_context_only",
+      "projection_group": "institution_site",
+      "publication_state": "publishable",
+      "relationship_type": "institution-used-site",
+      "source": {
+        "display_name": "Saint Ann of the Dunes Lithuanian Catholic community, Beverly Shores",
+        "entity_id": "cn:institution:st-ann-beverly-shores-in",
+        "entity_type": "institution",
+        "slug": "st-ann-beverly-shores-in"
+      },
+      "source_artifact_ids": [
+        "src:living-sites-16:st-ann-diocese"
+      ],
+      "target": {
+        "display_name": "Saint Ann of the Dunes church site, Beverly Shores",
+        "entity_id": "cn:building_site:st-ann-of-the-dunes-golfwood-beverly-shores-in",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:living-sites-16:st-ann-site",
+            "assert:living-sites-16:st-ann-of-the-dunes-golfwood-beverly-shores-in-standing"
+          ],
+          "start": "1954"
+        },
+        "slug": "st-ann-of-the-dunes-golfwood-beverly-shores-in"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:living-sites-16:st-ann-of-the-dunes-golfwood-beverly-shores-in-standing",
+          "observed_at": "2026-07-25"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "official current parish schedule",
+        "end": null,
+        "label": "standing in active Catholic worship use",
+        "start": "2026-07-25"
+      },
+      "evidence_assertion_ids": [
+        "assert:living-sites-16:st-ann-of-the-dunes-golfwood-beverly-shores-in-standing"
+      ],
+      "id": "rel:living-sites-16:st-ann-of-the-dunes-golfwood-beverly-shores-in-standing",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Current-worship standing condition for Saint Ann of the Dunes",
+        "entity_id": "cn:event:st-ann-of-the-dunes-golfwood-beverly-shores-in-standing-current-worship",
+        "entity_type": "event",
+        "slug": "st-ann-of-the-dunes-golfwood-beverly-shores-in-standing-current-worship"
+      },
+      "source_artifact_ids": [
+        "src:living-sites-16:st-ann-parish"
+      ],
+      "target": {
+        "display_name": "Saint Ann of the Dunes church site, Beverly Shores",
+        "entity_id": "cn:building_site:st-ann-of-the-dunes-golfwood-beverly-shores-in",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:living-sites-16:st-ann-site",
+            "assert:living-sites-16:st-ann-of-the-dunes-golfwood-beverly-shores-in-standing"
+          ],
+          "start": "1954"
+        },
+        "slug": "st-ann-of-the-dunes-golfwood-beverly-shores-in"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:living-sites-16:st-anthony-49th-court-cicero-il-standing",
+          "observed_at": "2026-07-16"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "reviewed current-use evidence",
+        "end": null,
+        "label": "standing in documented current worship use",
+        "start": "2026-07-16"
+      },
+      "evidence_assertion_ids": [
+        "assert:living-sites-16:st-anthony-49th-court-cicero-il-standing"
+      ],
+      "id": "rel:living-sites-16:st-anthony-49th-court-cicero-il-standing",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Current-worship standing condition for st-anthony-49th-court-cicero-il",
+        "entity_id": "cn:event:st-anthony-49th-court-cicero-il-standing-current-worship",
+        "entity_type": "event",
+        "slug": "st-anthony-49th-court-cicero-il-standing-current-worship"
+      },
+      "source_artifact_ids": [
+        "src:living-sites-16:current-packet"
+      ],
+      "target": {
+        "display_name": "Saint Anthony church site, Cicero",
+        "entity_id": "cn:building_site:st-anthony-49th-court-cicero-il",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:current-1:cicero-current-site"
+          ],
+          "start": "1925"
+        },
+        "slug": "st-anthony-49th-court-cicero-il"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:living-sites-16:st-casimir-fourth-wharton-philadelphia-pa-standing",
+          "observed_at": "2026-07-16"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "reviewed current-use evidence",
+        "end": null,
+        "label": "standing in documented current worship use",
+        "start": "2026-07-16"
+      },
+      "evidence_assertion_ids": [
+        "assert:living-sites-16:st-casimir-fourth-wharton-philadelphia-pa-standing"
+      ],
+      "id": "rel:living-sites-16:st-casimir-fourth-wharton-philadelphia-pa-standing",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Current-worship standing condition for st-casimir-fourth-wharton-philadelphia-pa",
+        "entity_id": "cn:event:st-casimir-fourth-wharton-philadelphia-pa-standing-current-worship",
+        "entity_type": "event",
+        "slug": "st-casimir-fourth-wharton-philadelphia-pa-standing-current-worship"
+      },
+      "source_artifact_ids": [
+        "src:living-sites-16:philadelphia-packet"
+      ],
+      "target": {
+        "display_name": "Saint Casimir church, Philadelphia",
+        "entity_id": "cn:building_site:st-casimir-fourth-wharton-philadelphia-pa",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": "standing in active Saint Andrew worship-site use",
+          "source_assertion_ids": [
+            "assert:pmc-7:st-casimir-sites"
+          ]
+        },
+        "slug": "st-casimir-fourth-wharton-philadelphia-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:living-sites-16:st-casimir-los-angeles-st-george-street-standing",
+          "observed_at": "2026-07-31"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "reviewed current-use evidence",
+        "end": null,
+        "label": "standing in documented current worship use",
+        "start": "2026-07-31"
+      },
+      "evidence_assertion_ids": [
+        "assert:living-sites-16:st-casimir-los-angeles-st-george-street-standing"
+      ],
+      "id": "rel:living-sites-16:st-casimir-los-angeles-st-george-street-standing",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Current-worship standing condition for st-casimir-los-angeles-st-george-street",
+        "entity_id": "cn:event:st-casimir-los-angeles-st-george-street-standing-current-worship",
+        "entity_type": "event",
+        "slug": "st-casimir-los-angeles-st-george-street-standing-current-worship"
+      },
+      "source_artifact_ids": [
+        "src:living-sites-16:living-packet"
+      ],
+      "target": {
+        "display_name": "Saint Casimir church site, Los Angeles",
+        "entity_id": "cn:building_site:st-casimir-los-angeles-st-george-street",
+        "entity_type": "building_site",
+        "slug": "st-casimir-los-angeles-st-george-street"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:living-sites-16:st-peter-flaherty-way-south-boston-ma-standing",
+          "observed_at": "2026-07-31"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "reviewed current-use evidence",
+        "end": null,
+        "label": "standing in documented current worship use",
+        "start": "2026-07-31"
+      },
+      "evidence_assertion_ids": [
+        "assert:living-sites-16:st-peter-flaherty-way-south-boston-ma-standing"
+      ],
+      "id": "rel:living-sites-16:st-peter-flaherty-way-south-boston-ma-standing",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Current-worship standing condition for st-peter-flaherty-way-south-boston-ma",
+        "entity_id": "cn:event:st-peter-flaherty-way-south-boston-ma-standing-current-worship",
+        "entity_type": "event",
+        "slug": "st-peter-flaherty-way-south-boston-ma-standing-current-worship"
+      },
+      "source_artifact_ids": [
+        "src:living-sites-16:living-packet"
+      ],
+      "target": {
+        "display_name": "Saint Peter Lithuanian church site, South Boston",
+        "entity_id": "cn:building_site:st-peter-flaherty-way-south-boston-ma",
+        "entity_type": "building_site",
+        "slug": "st-peter-flaherty-way-south-boston-ma"
       }
     },
     {
@@ -44141,7 +45394,7 @@
       }
     }
   ],
-  "revision_id": "canonical-public-census-2026-08-02-mundelein",
+  "revision_id": "canonical-public-census-2026-08-03-living-worship-sites",
   "schema": "culturenet-parish-publication-projection.v1",
   "scope": {
     "country": "US",
@@ -44850,22 +46103,6 @@
         "status": "brain_canonical_evidence"
       },
       "title": "Corroborated identity evidence for St. Ambrose, Port Washington"
-    },
-    {
-      "artifact_type": "canonical_research_index_entry",
-      "id": "src:cib-9:st-ann-beverly-shores-in:research-index-2026-07-31",
-      "locator": {
-        "exact_label": "research-index public_registry_slug: st-ann-beverly-shores-in",
-        "page": "JSON record",
-        "section": "identity, public census scope, source families, public evidence, and research depth"
-      },
-      "rights": {
-        "access": "repository",
-        "public_url": "repo://culturenet-brain/docs/research/parish-canon/research-index.json",
-        "quote_policy": "cite the underlying public evidence; this packet adjudicates identity only",
-        "status": "brain_canonical_evidence"
-      },
-      "title": "Corroborated identity evidence for Šv. Onos, Beverly Shores"
     },
     {
       "artifact_type": "canonical_research_index_entry",
@@ -47250,6 +48487,118 @@
         "status": "newspaper_web"
       },
       "title": "Tėviškė Darien relocation report"
+    },
+    {
+      "artifact_type": "reviewed_canonical_packet",
+      "id": "src:living-sites-16:current-packet",
+      "locator": {
+        "exact_label": "Referenced accepted current-use assertions named in each condition assertion"
+      },
+      "rights": {
+        "access": "repository",
+        "public_url": "repo://culturenet-brain/docs/research/parish-canon/migration-tranches/current-worship-hosts-1/packet.json",
+        "quote_policy": "follow the referenced assertion to its underlying public source artifact",
+        "status": "brain_canonical_evidence"
+      },
+      "title": "Reviewed canonical evidence packet: culturenet-parish-current-worship-hosts-1-2026-07-31"
+    },
+    {
+      "artifact_type": "reviewed_canonical_packet",
+      "id": "src:living-sites-16:detroit_cleveland-packet",
+      "locator": {
+        "exact_label": "Referenced accepted current-use assertions named in each condition assertion"
+      },
+      "rights": {
+        "access": "repository",
+        "public_url": "repo://culturenet-brain/docs/research/parish-canon/reference-tranches/detroit-cleveland/packet.json",
+        "quote_policy": "follow the referenced assertion to its underlying public source artifact",
+        "status": "brain_canonical_evidence"
+      },
+      "title": "Reviewed canonical evidence packet: culturenet-parish-lineage-detroit-cleveland-pilot-2026-07-31"
+    },
+    {
+      "artifact_type": "reviewed_canonical_packet",
+      "id": "src:living-sites-16:lineage-packet",
+      "locator": {
+        "exact_label": "Referenced accepted current-use assertions named in each condition assertion"
+      },
+      "rights": {
+        "access": "repository",
+        "public_url": "repo://culturenet-brain/docs/research/parish-canon/migration-tranches/institution-site-lineage-1/packet.json",
+        "quote_policy": "follow the referenced assertion to its underlying public source artifact",
+        "status": "brain_canonical_evidence"
+      },
+      "title": "Reviewed canonical evidence packet: culturenet-parish-institution-site-lineage-1-2026-07-31"
+    },
+    {
+      "artifact_type": "reviewed_canonical_packet",
+      "id": "src:living-sites-16:living-packet",
+      "locator": {
+        "exact_label": "Referenced accepted current-use assertions named in each condition assertion"
+      },
+      "rights": {
+        "access": "repository",
+        "public_url": "repo://culturenet-brain/docs/research/parish-canon/migration-tranches/living-network-1/packet.json",
+        "quote_policy": "follow the referenced assertion to its underlying public source artifact",
+        "status": "brain_canonical_evidence"
+      },
+      "title": "Reviewed canonical evidence packet: culturenet-parish-living-network-1-2026-07-31"
+    },
+    {
+      "artifact_type": "reviewed_canonical_packet",
+      "id": "src:living-sites-16:mundelein-packet",
+      "locator": {
+        "exact_label": "Referenced accepted current-use assertions named in each condition assertion"
+      },
+      "rights": {
+        "access": "repository",
+        "public_url": "repo://culturenet-brain/docs/research/parish-canon/migration-tranches/mundelein-current-mission-15/packet.json",
+        "quote_policy": "follow the referenced assertion to its underlying public source artifact",
+        "status": "brain_canonical_evidence"
+      },
+      "title": "Reviewed canonical evidence packet: culturenet-parish-mundelein-current-mission-15-2026-08-02"
+    },
+    {
+      "artifact_type": "reviewed_canonical_packet",
+      "id": "src:living-sites-16:philadelphia-packet",
+      "locator": {
+        "exact_label": "Referenced accepted current-use assertions named in each condition assertion"
+      },
+      "rights": {
+        "access": "repository",
+        "public_url": "repo://culturenet-brain/docs/research/parish-canon/migration-tranches/philadelphia-mount-carmel-lineage-7/packet.json",
+        "quote_policy": "follow the referenced assertion to its underlying public source artifact",
+        "status": "brain_canonical_evidence"
+      },
+      "title": "Reviewed canonical evidence packet: culturenet-parish-philadelphia-mount-carmel-lineage-7-2026-07-31"
+    },
+    {
+      "artifact_type": "official_diocesan_directory",
+      "id": "src:living-sites-16:st-ann-diocese",
+      "locator": {
+        "exact_label": "St. Ann of the Dunes is a worship site of St. Patrick Catholic Community in Chesterton"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://dcgary.org/parish/st-ann-dunes-beverly-shores",
+        "quote_policy": "cite and summarize",
+        "status": "official_current_source"
+      },
+      "title": "Diocese of Gary — St. Ann of the Dunes (St. Patrick Parish)"
+    },
+    {
+      "artifact_type": "official_parish_schedule",
+      "id": "src:living-sites-16:st-ann-parish",
+      "locator": {
+        "exact_label": "433 E. Golfwood Road worship site and current Mass schedule"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://www.st-ann-of-the-dunes.org/mass-schedule/",
+        "quote_policy": "cite and summarize",
+        "status": "official_current_source"
+      },
+      "title": "St. Ann of the Dunes current parish and Mass information"
     },
     {
       "artifact_type": "canonical_case_file",

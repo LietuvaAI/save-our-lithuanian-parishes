@@ -18746,8 +18746,8 @@
         "canonical_entity_id": "cn:institution:st-ann-beverly-shores-in",
         "canonical_slug": "st-ann-beverly-shores-in",
         "canonical_profile": "/parishes/st-ann-beverly-shores-in",
-        "canonical_detail_status": "pending_deep_case",
-        "projection_record_id": "proj:cib-9:st-ann-beverly-shores-in",
+        "canonical_detail_status": "mass_continues_at_successor_worship_site",
+        "projection_record_id": "proj:living-sites-16:st-ann-beverly-shores",
         "protected_campaign": false
       }
     },
@@ -23662,8 +23662,8 @@
     }
   ],
   "registryRevision": {
-    "version": 18,
-    "date": "2026-08-02",
+    "version": 19,
+    "date": "2026-08-03",
     "changelog": [
       "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
       "Collapsed adjudicated same-entity rows while preserving all 83 historical case-file row references in c83_rows.",
@@ -23704,16 +23704,17 @@
       "Registry Revision 15: reconciled the four protected campaign profiles to current official evidence, separated institution and building status, and corrected Hartford and Maspeth status groups; public institution, site, and continuity-edge counts are unchanged.",
       "Registry Revision 16: clarified Saint Michael the Archangel Parish in Scranton as one surviving parish across its former Jackson Street church and current Saint Lucy home, and distinguished its current Latin Mass from undocumented Lithuanian worship; public counts are unchanged.",
       "Registry Revision 17: established Saint Michael the Archangel Parish in Scranton in 1914, promoted its original wooden church as a distinct worship site, and enriched its school, language, and two-church history from the 1977 published parish account; the public institution count remains unchanged.",
-      "Registry Revision 18: admitted Our Lady of Siluva Mission in Mundelein as a distinct active Roman Catholic mission and reconciled Brooklyn Annunciation, Maspeth Transfiguration, and Hartford Holy Trinity to the current canonical status projection."
+      "Registry Revision 18: admitted Our Lady of Siluva Mission in Mundelein as a distinct active Roman Catholic mission and reconciled Brooklyn Annunciation, Maspeth Transfiguration, and Hartford Holy Trinity to the current canonical status projection.",
+      "Registry Revision 19: projected explicit standing conditions for the current Lithuanian Catholic worship network, linked the missing Beverly Shores site and Chicago Immaculate Conception lineage, and made terminal-site evidence authoritative for unambiguous institution building summaries."
     ],
-    "contentHash": "8629071a4f3550425769374715f6433a4dd3c66d7b7dbf3c812d9e4de8d016de"
+    "contentHash": "21fce7ef1f029dfab72d1d93ae379c0217f08511baa5ce688fa24baa6a9c5c60"
   },
   "publicationAuthority": {
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
-    "revisionId": "canonical-public-census-2026-08-02-mundelein",
-    "contentHash": "sha256:d6ffc38153548995aa3975a713e3609e69e34679bec708a8ed1ee6d3e211df3c",
+    "revisionId": "canonical-public-census-2026-08-03-living-worship-sites",
+    "contentHash": "sha256:0939f80de42cf16d6451a4d6d1510b6fc5b4c1eab84081a12dc024ab99a4264f",
     "publicUSInstitutions": 155,
-    "synchronized": "2026-08-02"
+    "synchronized": "2026-08-03"
   }
 }

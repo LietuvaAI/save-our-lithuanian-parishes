@@ -31,6 +31,10 @@ export type InstitutionHistoryRow = {
   founded: InfographicDateFact;
   closed: InfographicDateFact;
   building_fate: string | null;
+  building_fate_authority: "terminal_site_condition" | "site_r10_baseline" | "unresolved";
+  terminal_worship_site_ids: string[];
+  building_fate_relationship_ids: string[];
+  legacy_building_fate?: string;
   relationship_ids: string[];
 };
 
