@@ -1,8 +1,8 @@
 # Public institution count audit
 
 **Audit date:** 2026-08-03
-**Registry revision:** 21
-**Canonical authority:** CultureNet canonical-public-census-2026-08-03-ziburio-source-link
+**Registry revision:** 22
+**Canonical authority:** CultureNet canonical-public-census-2026-08-03-brain-single-source
 
 ## Press-safe claim
 

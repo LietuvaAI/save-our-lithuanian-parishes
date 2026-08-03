@@ -23662,7 +23662,7 @@
     }
   ],
   "registryRevision": {
-    "version": 21,
+    "version": 22,
     "date": "2026-08-03",
     "changelog": [
       "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
@@ -23707,15 +23707,16 @@
       "Registry Revision 18: admitted Our Lady of Siluva Mission in Mundelein as a distinct active Roman Catholic mission and reconciled Brooklyn Annunciation, Maspeth Transfiguration, and Hartford Holy Trinity to the current canonical status projection.",
       "Registry Revision 19: projected explicit standing conditions for the current Lithuanian Catholic worship network, linked the missing Beverly Shores site and Chicago Immaculate Conception lineage, and made terminal-site evidence authoritative for unambiguous institution building summaries.",
       "Registry Revision 20: corrected worship-building classification, promoted nine evidence-backed site conditions, rejected semantically unresolved founding dates, and limited institution building summaries to terminal-site authority.",
-      "Registry Revision 21: attached the verified direct Žiburio archive item for the Būtėnas Shenandoah chronology source without changing canonical counts or adjudications."
+      "Registry Revision 21: attached the verified direct Žiburio archive item for the Būtėnas Shenandoah chronology source without changing canonical counts or adjudications.",
+      "Registry Revision 22: imported the Brain-owned current pastoral network, moved Dayton's present Lithuanian-worship claim to unresolved, and added Washington Epiphany as non-census hosted pastoral context."
     ],
-    "contentHash": "e8f1f5907402f7a57c4414a43d3e1c13217c5ed597cb0457b2bb1f19cb6088b0"
+    "contentHash": "f3678b4c1e7fcb0fa1d789ca34e647de390e6dcd23b0811ebb4bea93db832cfa"
   },
   "publicationAuthority": {
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
-    "revisionId": "canonical-public-census-2026-08-03-ziburio-source-link",
-    "contentHash": "sha256:3ded1c84949c6b3c9d9fcf12c3e574ba2e04839a065866d7c192d3a84a9728c1",
+    "revisionId": "canonical-public-census-2026-08-03-brain-single-source",
+    "contentHash": "sha256:69a62cce5013de13c53d5d18d61a61c73af9aeda2860d10e72a4803c1d4978dd",
     "publicUSInstitutions": 155,
     "synchronized": "2026-08-03"
   }

@@ -11,8 +11,8 @@ This provenance-only revision attaches the verified direct Žiburio archive item
 - The source preserves the distinction between the 1872 joint Lithuanian–Polish Saint Casimir predecessor and the separate Lithuanian Saint George parish organized in 1891.
 - The canonical source status is now `published_online_secondary_source`; no pending-link qualifier remains.
 
-The canonical Roman Catholic population is 137: 132 parishes plus 5 missions. Of these, 90 are closed and 14 retain Lithuanian worship.
-The physical worship-site history now contains 130 sites. The four-record decrease from 134 reflects corrected classification of post-demolition lots and replacement structures, not deleted evidence.
+The canonical Roman Catholic population is 137: 132 parishes plus 5 missions. Of these, 90 are closed and 13 retain Lithuanian worship.
+The physical worship-site history now contains 131 sites. The four-record decrease from 134 reflects corrected classification of post-demolition lots and replacement structures, not deleted evidence.
 
 ## Census reconciliation
 

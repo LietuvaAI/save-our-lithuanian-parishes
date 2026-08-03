@@ -386,7 +386,8 @@ const brooklynAnnunciation = institutionByProfile.get(
 if (
   brooklynAnnunciation?.closed?.year !== 2019 ||
   brooklynAnnunciation?.status_group !== "mass_continues" ||
-  brooklynAnnunciation?.status_authority !==
+  brooklynAnnunciation?.status_authority !== "brain_canonical_assertion" ||
+  brooklynAnnunciation?.status_source_authority !==
     "canonical_status_adjudication"
 ) {
   errors.push(
@@ -419,7 +420,7 @@ if (
     "continuing-Mass merger vocabulary no longer matches the canonical transition edges",
   );
 }
-if (massContinuesInstitutions.length - mergedMassProfiles.length !== 4) {
+if (massContinuesInstitutions.length - mergedMassProfiles.length !== 3) {
   errors.push(
     "continuing-Mass profiles with unresolved institutional transitions drifted",
   );
@@ -502,7 +503,8 @@ const ascensionEdges = infographic.continuity_edges.filter(
 );
 if (
   ascensionPittsburgh?.founded?.year !== 1906 ||
-  ascensionPittsburgh?.founded?.authority !== "site_r10_baseline" ||
+  ascensionPittsburgh?.founded?.authority !== "brain_canonical_assertion" ||
+  ascensionPittsburgh?.founded?.source_authority !== "site_r10_baseline" ||
   ascensionPittsburgh?.closed?.year !== 1962 ||
   ascensionSites.length !== 0 ||
   ascensionEdges.length !== 0

@@ -55,7 +55,7 @@ const FATE_LABEL: Record<FateKey, string> = {
   secular: "Sold — secular use now",
   derelict: "Standing derelict",
   standing: "Building still standing",
-  unrecorded: "Building fate unrecorded",
+  unrecorded: "Building condition not yet established",
 };
 
 const FATE_ORDER: FateKey[] = [
@@ -70,7 +70,7 @@ const FATE_ORDER: FateKey[] = [
 
 const GROUP_SUBLABEL: Record<EndStateGroup, string> = {
   active_parish: "active parish or mission with Lithuanian worship",
-  mass_continues: "inside a parish no longer Lithuanian-led",
+  mass_continues: "in a hosted, merged, mission-community, or no longer Lithuanian-led setting",
   transferred: "the church serves another community today",
   unresolved: "contested or canonically undecided",
   closed: "institution closed; building fate follows →",
@@ -428,7 +428,7 @@ export default function ParishThreads({
     ? FATE_LABEL[open.slice(5) as FateKey]
     : open?.startsWith("dec:")
       ? open.slice(4) === "Undated"
-        ? "Baseline year not established"
+        ? "Baseline year not yet established"
         : `Baseline in the ${open.slice(4)}`
       : open
         ? FLOW_GROUP_LABEL[open.slice(2) as EndStateGroup]
@@ -480,7 +480,7 @@ export default function ParishThreads({
             <span className="text-muted">
               {" "}
               · {hovered.city}, {hovered.state} · {hovered.anchorLabel}{" "}
-              {hovered.anchorYear ?? "not established"} ·{" "}
+              {hovered.anchorYear ?? "not yet established"} ·{" "}
               {institutionType(hovered.recordType)} · {toGroup(hovered.endState) === "closed" && hovered.fateKey
                 ? `closed; ${FATE_LABEL[hovered.fateKey].toLowerCase()}`
                 : FLOW_GROUP_LABEL[toGroup(hovered.endState)]}
@@ -564,7 +564,7 @@ export default function ParishThreads({
                   );
                 }}
               >
-                <title>{`${d.key === "Undated" ? "Baseline year not established" : `Baseline in the ${d.key}`}: ${d.count} — click to list`}</title>
+                  <title>{`${d.key === "Undated" ? "Baseline year not yet established" : `Baseline in the ${d.key}`}: ${d.count} — click to list`}</title>
               </rect>
               <text
                 x={X_DEC - 8}
@@ -787,6 +787,12 @@ export default function ParishThreads({
                 Close
               </button>
             </div>
+            {open === "fate:unrecorded" ? (
+              <p className="mt-2 text-sm text-muted">
+                The canonical Brain record does not yet establish the present
+                condition of the relevant terminal worship site.
+              </p>
+            ) : null}
             <ul className="mt-3 grid gap-x-6 gap-y-2 text-sm sm:grid-cols-2 lg:grid-cols-3">
               {openMembers.map((m) => (
                 <li key={m.slug} className="border-t border-rule/60 pt-2">
@@ -802,7 +808,7 @@ export default function ParishThreads({
                   )}
                   <span className="block text-xs text-muted">
                     {institutionType(m.recordType)} · {m.city}, {m.state} · {m.anchorLabel}{" "}
-                    {m.anchorYear ?? "not established"}
+                    {m.anchorYear ?? "not yet established"}
                   </span>
                 </li>
               ))}

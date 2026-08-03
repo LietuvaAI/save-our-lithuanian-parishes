@@ -6055,6 +6055,2817 @@
     },
     {
       "adjudication": {
+        "conflict_preserved": true,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:display-19:institution-fields",
+      "object": {
+        "rows": [
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1989",
+              "year": 1989
+            },
+            "diocese": "Chicago",
+            "entity_id": "cn:institution:all-saints-chicago-il",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1906",
+              "year": 1906
+            },
+            "registry_slug": "all-saints-chicago-il",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": null,
+            "entity_id": "cn:institution:all-saints-wilkes-barre-national-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1929",
+              "year": 1929
+            },
+            "registry_slug": "all-saints-wilkes-barre-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1913",
+              "year": 1913
+            },
+            "diocese": null,
+            "entity_id": "cn:institution:all-saints-worcester-independent-ma",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "~1908 (split from sv. Kazimiero)",
+              "year": 1908
+            },
+            "registry_slug": "allsaints-worcester-ma",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2017",
+              "year": 2017
+            },
+            "diocese": "Hartford",
+            "entity_id": "cn:institution:st-andrew-new-britain-ct",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1896",
+              "year": 1896
+            },
+            "registry_slug": "andrew-new-britain-ct",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Philadelphia",
+            "entity_id": "cn:institution:st-andrew-lithuanian-philadelphia-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1924",
+              "year": 1924
+            },
+            "registry_slug": "andrew-philadelphia-pa",
+            "status_group": "active_parish",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": null,
+            "entity_id": "cn:institution:teviske-lithuanian-lutheran-darien-il",
+            "founded": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "registry_slug": "angels-darien-il",
+            "status_group": "active_parish",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "1999-12-26",
+              "year": 1999
+            },
+            "diocese": "Scranton",
+            "entity_id": "cn:institution:st-ann-luzerne-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1924-08-03",
+              "year": 1924
+            },
+            "registry_slug": "ann-luzerne-pa",
+            "status_group": "transferred",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1987",
+              "year": 1987
+            },
+            "diocese": "Peoria",
+            "entity_id": "cn:institution:st-anne-spring-valley-il",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1895",
+              "year": 1895
+            },
+            "registry_slug": "ann-spring-valley-il",
+            "status_group": "unresolved",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2019-03-24",
+              "year": 2019
+            },
+            "diocese": "Brooklyn",
+            "entity_id": "cn:institution:annunciation-bvm-williamsburg-ny",
+            "founded": {
+              "authority": "canonical_infographic_adjudication",
+              "display": "1914",
+              "year": 1914
+            },
+            "registry_slug": "annunciation-brooklyn-ny",
+            "status_group": "mass_continues",
+            "status_observed_at": "2026-08-02",
+            "status_source_authority": "canonical_status_adjudication"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2009-11-22",
+              "year": 2009
+            },
+            "diocese": "Scranton",
+            "entity_id": "cn:institution:st-mary-annunciation-kingston-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1902",
+              "year": 1902
+            },
+            "registry_slug": "annunciation-kingston-pa",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Chicago",
+            "entity_id": "cn:institution:st-anthony-cicero-il",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1911",
+              "year": 1911
+            },
+            "registry_slug": "anthony-cicero-il",
+            "status_group": "mass_continues",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "reviewed_case_snapshot",
+              "display": "2013",
+              "year": 2013
+            },
+            "diocese": "Detroit",
+            "entity_id": "cn:institution:st-anthony-detroit-mi",
+            "founded": {
+              "authority": "reviewed_case_snapshot",
+              "display": "1920",
+              "year": 1920
+            },
+            "registry_slug": "anthony-detroit-mi",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2014-06",
+              "year": 2014
+            },
+            "diocese": "Omaha",
+            "entity_id": "cn:institution:st-anthony-omaha-ne",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1906-1907",
+              "year": 1906
+            },
+            "registry_slug": "anthony-omaha-ne",
+            "status_group": "transferred",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "closed after deed dispute (undated), later sold, then restarted; by 1961, three Lithuanian churches exist in Philadelphia",
+              "year": 1961
+            },
+            "diocese": "Philadelphia",
+            "entity_id": "cn:institution:st-anthony-lithuanian-philadelphia-pa",
+            "founded": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "registry_slug": "anthony-philadelphia-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1962",
+              "year": 1962
+            },
+            "diocese": "Pittsburgh",
+            "entity_id": "cn:institution:ascension-pittsburgh-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1906",
+              "year": 1906
+            },
+            "registry_slug": "ascension-pittsburgh-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Grand Rapids",
+            "entity_id": "cn:institution:bernard-irons-mi",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1920",
+              "year": 1920
+            },
+            "registry_slug": "bernard-irons-mi",
+            "status_group": "unverified",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2009",
+              "year": 2009
+            },
+            "diocese": "Albany",
+            "entity_id": "cn:institution:st-casimir-amsterdam-ny",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1904",
+              "year": 1904
+            },
+            "registry_slug": "casimir-amsterdam-ny",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "~1903-04 (abandoned by parishioners)",
+              "year": 1903
+            },
+            "diocese": "Boston",
+            "entity_id": "cn:institution:st-joseph-st-casimir-boston-ma",
+            "founded": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "registry_slug": "casimir-boston-ma",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2008-06",
+              "year": 2008
+            },
+            "diocese": "Boston",
+            "entity_id": "cn:institution:st-casimir-brockton-ma",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "approximately 1898",
+              "year": 1898
+            },
+            "registry_slug": "casimir-brockton-ma",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "1987 selected; 1989 alternate",
+              "year": 1987
+            },
+            "diocese": "Chicago",
+            "entity_id": "cn:institution:st-casimir-chicago-heights-il",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1911",
+              "year": 1911
+            },
+            "registry_slug": "casimir-chicago-il",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Cleveland",
+            "entity_id": "cn:institution:st-casimir-cleveland-lithuanian-oh",
+            "founded": {
+              "authority": "reviewed_case_snapshot",
+              "display": "2009",
+              "year": 2009
+            },
+            "registry_slug": "casimir-cleveland-oh",
+            "status_group": "active_parish",
+            "status_observed_at": "2026-07-09",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "2008",
+              "year": 2008
+            },
+            "diocese": "Scranton",
+            "entity_id": "cn:institution:st-casimir-freeland-pa",
+            "founded": {
+              "authority": "unresolved",
+              "display": "Lithuanians settled 1880; parish organized by kun. Varnagiris (year not given, before 1894)",
+              "year": null
+            },
+            "registry_slug": "casimir-freeland-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "1998 selected; 2000 alternate",
+              "year": 1998
+            },
+            "diocese": "Gary",
+            "entity_id": "cn:institution:st-casimir-gary-in",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1918",
+              "year": 1918
+            },
+            "registry_slug": "casimir-gary-in",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Los Angeles",
+            "entity_id": "cn:institution:st-casimir-los-angeles-ca",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1941",
+              "year": 1941
+            },
+            "registry_slug": "casimir-los-angeles-ca",
+            "status_group": "active_parish",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2002 canonical unification; 2003 alternate church closing",
+              "year": 2002
+            },
+            "diocese": "Manchester",
+            "entity_id": "cn:institution:st-casimir-nashua-nh",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "around 1909",
+              "year": 1909
+            },
+            "registry_slug": "casimir-nashua-nh",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2002",
+              "year": 2002
+            },
+            "diocese": "Hartford",
+            "entity_id": "cn:institution:st-casimir-new-haven-ct",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1909",
+              "year": 1909
+            },
+            "registry_slug": "casimir-new-haven-ct",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2014",
+              "year": 2014
+            },
+            "diocese": "Paterson",
+            "entity_id": "cn:institution:st-casimir-paterson-nj",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1911-1912",
+              "year": 1911
+            },
+            "registry_slug": "casimir-paterson-nj",
+            "status_group": "transferred",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2011-07-01",
+              "year": 2011
+            },
+            "diocese": "Philadelphia",
+            "entity_id": "cn:institution:st-casimir-lithuanian-philadelphia-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1893",
+              "year": 1893
+            },
+            "registry_slug": "casimir-philadelphia-pa",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "1992",
+              "year": 1992
+            },
+            "diocese": "Pittsburgh",
+            "entity_id": "cn:institution:st-casimir-pittsburgh-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1893",
+              "year": 1893
+            },
+            "registry_slug": "casimir-pittsburgh-pa",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2008-04-06",
+              "year": 2008
+            },
+            "diocese": "Scranton",
+            "entity_id": "cn:institution:st-casimir-pittston-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1890",
+              "year": 1890
+            },
+            "registry_slug": "casimir-pittston-pa",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2017-07-01",
+              "year": 2017
+            },
+            "diocese": "Providence",
+            "entity_id": "cn:institution:st-casimir-providence-ri",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1904-1919",
+              "year": 1904
+            },
+            "registry_slug": "casimir-providence-ri",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "1998",
+              "year": 1998
+            },
+            "diocese": "Sioux City",
+            "entity_id": "cn:institution:st-casimir-sioux-city-ia",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1915",
+              "year": 1915
+            },
+            "registry_slug": "casimir-sioux-city-ia",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2008-06-30",
+              "year": 2008
+            },
+            "diocese": "Worcester",
+            "entity_id": "cn:institution:st-casimir-worcester-ma",
+            "founded": {
+              "authority": "reviewed_case_snapshot",
+              "display": "1898",
+              "year": 1898
+            },
+            "registry_slug": "casimir-worcester-ma",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": null,
+            "entity_id": "cn:institution:lithuanian-evangelical-lutheran-los-angeles-ca",
+            "founded": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "registry_slug": "cong-lithuanian-evangelical-parish",
+            "status_group": "unverified",
+            "status_observed_at": "2026-07-31",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": null,
+            "entity_id": "cn:institution:lithuanian-evangelical-reformed-chicago-il",
+            "founded": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "registry_slug": "evangelical-reformed-chicago",
+            "status_group": "unverified",
+            "status_observed_at": "2026-07-31",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": null,
+            "entity_id": "cn:institution:lithuanian-lutheran-congregation-boston-ma",
+            "founded": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "registry_slug": "first-lutheran-boston",
+            "status_group": "unverified",
+            "status_observed_at": "2026-07-31",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "1987",
+              "year": 1987
+            },
+            "diocese": "Gary",
+            "entity_id": "cn:institution:st-francis-east-chicago-in",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1913",
+              "year": 1913
+            },
+            "registry_slug": "francis-east-chicago-in",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2002",
+              "year": 2002
+            },
+            "diocese": "Boston",
+            "entity_id": "cn:institution:st-francis-lawrence-ma",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1903",
+              "year": 1903
+            },
+            "registry_slug": "francis-lawrence-ma",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2001-2002",
+              "year": 2001
+            },
+            "diocese": "Scranton",
+            "entity_id": "cn:institution:our-lady-vilna-eynon-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1901",
+              "year": 1901
+            },
+            "registry_slug": "gateofdawn-archbald-pa",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "1987",
+              "year": 1987
+            },
+            "diocese": "Chicago",
+            "entity_id": "cn:institution:our-lady-of-vilna-pilsen-chicago-il",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1906",
+              "year": 1906
+            },
+            "registry_slug": "gateofdawn-chicago-il",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2007-02-26 worship access ended",
+              "year": 2007
+            },
+            "diocese": "New York",
+            "entity_id": "cn:institution:our-lady-of-vilnius-manhattan-ny",
+            "founded": {
+              "authority": "unresolved",
+              "display": "1905 centennial reading; canonical start unresolved",
+              "year": null
+            },
+            "registry_slug": "gateofdawn-manhattan-ny",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-25",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Worcester",
+            "entity_id": "cn:institution:our-lady-of-vilna-worcester-ma",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1925",
+              "year": 1925
+            },
+            "registry_slug": "gateofdawn-worcester-ma",
+            "status_group": "transferred",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Bridgeport",
+            "entity_id": "cn:institution:st-george-bridgeport-ct",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1912",
+              "year": 1912
+            },
+            "registry_slug": "george-bridgeport-ct",
+            "status_group": "transferred",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "1986",
+              "year": 1986
+            },
+            "diocese": "Brooklyn",
+            "entity_id": "cn:institution:st-george-brooklyn-ny",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1909",
+              "year": 1909
+            },
+            "registry_slug": "george-brooklyn-ny",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "1990",
+              "year": 1990
+            },
+            "diocese": "Chicago",
+            "entity_id": "cn:institution:st-george-bridgeport-chicago-il",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1892",
+              "year": 1892
+            },
+            "registry_slug": "george-chicago-il",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "reviewed_case_snapshot",
+              "display": "2009",
+              "year": 2009
+            },
+            "diocese": "Cleveland",
+            "entity_id": "cn:institution:st-george-cleveland-oh",
+            "founded": {
+              "authority": "reviewed_case_snapshot",
+              "display": "1895",
+              "year": 1895
+            },
+            "registry_slug": "george-cleveland-oh",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "1998",
+              "year": 1998
+            },
+            "diocese": "Boston",
+            "entity_id": "cn:institution:st-george-haverhill-ma",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "approximately 1910",
+              "year": 1910
+            },
+            "registry_slug": "george-haverhill-ma",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Chicago",
+            "entity_id": "cn:institution:blessed-jurgis-matulaitis-mission-lemont-il",
+            "founded": {
+              "authority": "reviewed_case_snapshot",
+              "display": "1990",
+              "year": 1990
+            },
+            "registry_slug": "george-lemont-il",
+            "status_group": "active_parish",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2008-2009",
+              "year": 2008
+            },
+            "diocese": "Buffalo",
+            "entity_id": "cn:institution:st-george-niagara-falls-ny",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1914-1915",
+              "year": 1914
+            },
+            "registry_slug": "george-niagara-falls-ny",
+            "status_group": "transferred",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2004",
+              "year": 2004
+            },
+            "diocese": "Boston",
+            "entity_id": "cn:institution:st-george-norwood-ma",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1912",
+              "year": 1912
+            },
+            "registry_slug": "george-norwood-ma",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2019-07-01",
+              "year": 2019
+            },
+            "diocese": "Philadelphia",
+            "entity_id": "cn:institution:st-george-lithuanian-philadelphia-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1902",
+              "year": 1902
+            },
+            "registry_slug": "george-philadelphia-pa",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1923 (came under PNCC jurisdiction mid-summer 1923, under Fr. Kazimieras Petrusevičius)",
+              "year": 1923
+            },
+            "diocese": null,
+            "entity_id": "cn:institution:st-george-lithuanian-national-pittsburgh-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1913 (per Ambrose)",
+              "year": 1913
+            },
+            "registry_slug": "george-pittsburgh-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Rochester",
+            "entity_id": "cn:institution:st-george-lithuanian-rochester-ny",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1908",
+              "year": 1908
+            },
+            "registry_slug": "george-rochester-ny",
+            "status_group": "mass_continues",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2006",
+              "year": 2006
+            },
+            "diocese": "Allentown",
+            "entity_id": "cn:institution:st-george-shenandoah-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1891",
+              "year": 1891
+            },
+            "registry_slug": "george-shenandoah-pa",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-09",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Albany",
+            "entity_id": "cn:institution:holy-cross-schenectady-ny",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1920",
+              "year": 1920
+            },
+            "registry_slug": "holy-cross-schenectady-ny",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "reviewed_case_snapshot",
+              "display": "1969",
+              "year": 1969
+            },
+            "diocese": null,
+            "entity_id": "cn:institution:holy-cross-national-catholic-westville-il",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1914",
+              "year": 1914
+            },
+            "registry_slug": "holy-cross-westville-il",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2002 selected",
+              "year": 2002
+            },
+            "diocese": "Newark",
+            "entity_id": "cn:institution:holy-trinity-lithuanian-newark-nj",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1902",
+              "year": 1902
+            },
+            "registry_slug": "holy-trinity-newark-nj",
+            "status_group": "transferred",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": "1980s, exact year unresolved",
+              "year": null
+            },
+            "diocese": "Chicago",
+            "entity_id": "cn:institution:holy-cross-lithuanian-chicago-il",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1904",
+              "year": 1904
+            },
+            "registry_slug": "holycross-chicago-il",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Cleveland",
+            "entity_id": "cn:institution:holy-cross-dayton-oh",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1914",
+              "year": 1914
+            },
+            "registry_slug": "holycross-dayton-oh",
+            "status_group": "unresolved",
+            "status_observed_at": "2026-08-03",
+            "status_source_authority": "canonical_status_adjudication"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "1995",
+              "year": 1995
+            },
+            "diocese": "Harrisburg",
+            "entity_id": "cn:institution:holy-cross-mount-carmel-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1886-1892",
+              "year": 1886
+            },
+            "registry_slug": "holycross-mount-carmel-pa",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Grand Rapids",
+            "entity_id": "cn:institution:ignatius-luther-mi",
+            "founded": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "registry_slug": "ignatius-luther-mi",
+            "status_group": "transferred",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2019",
+              "year": 2019
+            },
+            "diocese": "Chicago",
+            "entity_id": "cn:institution:immaculate-conception-brighton-park-chicago-il",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1914",
+              "year": 1914
+            },
+            "registry_slug": "immaculate-chicago-il",
+            "status_group": "mass_continues",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Milwaukee",
+            "entity_id": "cn:institution:immaculate-conception-sheboygan-wi",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1917",
+              "year": 1917
+            },
+            "registry_slug": "immaculate-conception-sheboygan-wi",
+            "status_group": "unverified",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2014-05-26",
+              "year": 2014
+            },
+            "diocese": "Belleville",
+            "entity_id": "cn:institution:immaculate-conception-east-st-louis-il",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1895",
+              "year": 1895
+            },
+            "registry_slug": "immaculate-east-st-louis-il",
+            "status_group": "transferred",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2001-2002",
+              "year": 2001
+            },
+            "diocese": null,
+            "entity_id": "cn:institution:sacred-heart-jesus-national-catholic-lawrence-ma",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1916",
+              "year": 1916
+            },
+            "registry_slug": "jesus-lawrence-ma",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2008-07-15",
+              "year": 2008
+            },
+            "diocese": "Allentown",
+            "entity_id": "cn:institution:st-john-baptist-coaldale-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1914",
+              "year": 1914
+            },
+            "registry_slug": "john-coaldale-pa",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Erie",
+            "entity_id": "cn:institution:st-joseph-dubois-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "active by 1912",
+              "year": 1912
+            },
+            "registry_slug": "joseph-dubois-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2001",
+              "year": 2001
+            },
+            "diocese": "Scranton",
+            "entity_id": "cn:institution:st-joseph-nanticoke-hanover-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1908",
+              "year": 1908
+            },
+            "registry_slug": "joseph-nanticoke-pa",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2011-06-05",
+              "year": 2011
+            },
+            "diocese": "Scranton",
+            "entity_id": "cn:institution:st-joseph-scranton-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1895",
+              "year": 1895
+            },
+            "registry_slug": "joseph-scranton-pa",
+            "status_group": "transferred",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "reviewed_case_snapshot",
+              "display": "1987",
+              "year": 1987
+            },
+            "diocese": "Chicago",
+            "entity_id": "cn:institution:st-joseph-south-chicago-il",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1900",
+              "year": 1900
+            },
+            "registry_slug": "joseph-south-chicago-il",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2024-05-01",
+              "year": 2024
+            },
+            "diocese": "Hartford",
+            "entity_id": "cn:institution:st-joseph-waterbury-ct",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1894-03-28",
+              "year": 1894
+            },
+            "registry_slug": "joseph-waterbury-ct",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Allentown",
+            "entity_id": "cn:institution:lithuanian-church-middleport-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1948",
+              "year": 1948
+            },
+            "registry_slug": "lithuanian-church-middleport-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": null,
+            "entity_id": "cn:institution:all-saints-waterbury-independent-ct",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1902",
+              "year": 1902
+            },
+            "registry_slug": "lithuanian-national-catholic-parish-waterbury-ct",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": null,
+            "entity_id": "cn:institution:our-lady-siluva-national-chicago-il",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1916 (incorporated May 17, 1916, by Stasys Mickevičius)",
+              "year": 1916
+            },
+            "registry_slug": "mary-chicago-il",
+            "status_group": "unverified",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Grand Rapids",
+            "entity_id": "cn:institution:mary-custer-mi",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1889",
+              "year": 1889
+            },
+            "registry_slug": "mary-custer-mi",
+            "status_group": "transferred",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Allentown",
+            "entity_id": "cn:institution:annunciation-bvm-frackville-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1914",
+              "year": 1914
+            },
+            "registry_slug": "mary-frackville-pa",
+            "status_group": "transferred",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "1957-1972",
+              "year": 1957
+            },
+            "diocese": null,
+            "entity_id": "cn:institution:st-mary-lithuanian-national-philadelphia-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1926",
+              "year": 1926
+            },
+            "registry_slug": "mary-philadelphia-pa",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2009",
+              "year": 2009
+            },
+            "diocese": "Newark",
+            "entity_id": "cn:institution:st-michael-bayonne-nj",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1907",
+              "year": 1907
+            },
+            "registry_slug": "michael-bayonne-nj",
+            "status_group": "transferred",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "1970",
+              "year": 1970
+            },
+            "diocese": "Chicago",
+            "entity_id": "cn:institution:st-michael-north-side-chicago-il",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1903",
+              "year": 1903
+            },
+            "registry_slug": "michael-chicago-north-side-il",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Scranton",
+            "entity_id": "cn:institution:st-michael-archangel-scranton-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1914",
+              "year": 1914
+            },
+            "registry_slug": "michael-scranton-pa",
+            "status_group": "transferred",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "reviewed_case_snapshot",
+              "display": "2009",
+              "year": 2009
+            },
+            "diocese": "Cleveland",
+            "entity_id": "cn:institution:our-lady-perpetual-help-cleveland-oh",
+            "founded": {
+              "authority": "reviewed_case_snapshot",
+              "display": "1929",
+              "year": 1929
+            },
+            "registry_slug": "motherofgod-cleveland-oh",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2008-07-15",
+              "year": 2008
+            },
+            "diocese": "Allentown",
+            "entity_id": "cn:institution:our-lady-siluva-maizeville-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1907",
+              "year": 1907
+            },
+            "registry_slug": "motherofgod-maizeville-pa",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Chicago",
+            "entity_id": "cn:institution:nativity-bvm-chicago-il",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1927",
+              "year": 1927
+            },
+            "registry_slug": "nativity-chicago-il",
+            "status_group": "active_parish",
+            "status_observed_at": "2026-07-09",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Chicago",
+            "entity_id": "cn:institution:our-lady-of-siluva-mission-mundelein-il",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "2013",
+              "year": 2013
+            },
+            "registry_slug": "our-lady-of-siluva-mission-mundelein-il",
+            "status_group": "active_parish",
+            "status_observed_at": "2026-08-02",
+            "status_source_authority": "brain_current_status_adjudication"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "~1915",
+              "year": 1915
+            },
+            "diocese": null,
+            "entity_id": "cn:institution:parish-chicago-il-2",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1913",
+              "year": 1913
+            },
+            "registry_slug": "parish-chicago-il-2",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": null,
+            "entity_id": "cn:institution:jerusalem-lutheran-collinsville-il",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1903-01-25",
+              "year": 1903
+            },
+            "registry_slug": "parish-collinsville-il",
+            "status_group": "transferred",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1899",
+              "year": 1899
+            },
+            "diocese": "Little Rock",
+            "entity_id": "cn:institution:lietuva-colony-mission-grand-prairie-ar",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1893",
+              "year": 1893
+            },
+            "registry_slug": "parish-grand-prairie-ar",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Newark",
+            "entity_id": "cn:institution:our-lady-of-sorrows-kearny-harrison-nj",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1914-1915",
+              "year": 1914
+            },
+            "registry_slug": "parish-kearny-nj",
+            "status_group": "transferred",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "1953",
+              "year": 1953
+            },
+            "diocese": "Peoria",
+            "entity_id": "cn:institution:st-constantine-oglesby-il",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1919",
+              "year": 1919
+            },
+            "registry_slug": "parish-oglesby-il",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2009-07-01",
+              "year": 2009
+            },
+            "diocese": "Newark",
+            "entity_id": "cn:institution:ss-peter-paul-elizabeth-nj",
+            "founded": {
+              "authority": "reviewed_case_snapshot",
+              "display": "1895",
+              "year": 1895
+            },
+            "registry_slug": "paul-elizabeth-nj",
+            "status_group": "unresolved",
+            "status_observed_at": "2026-07-09",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "1993",
+              "year": 1993
+            },
+            "diocese": "Pittsburgh",
+            "entity_id": "cn:institution:st-vincent-de-paul-esplen-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1903",
+              "year": 1903
+            },
+            "registry_slug": "paul-esplen-pa",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2015",
+              "year": 2015
+            },
+            "diocese": "Allentown",
+            "entity_id": "cn:institution:st-vincent-de-paul-girardville-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1906-1907",
+              "year": 1906
+            },
+            "registry_slug": "paul-girardville-pa",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Grand Rapids",
+            "entity_id": "cn:institution:ss-peter-paul-grand-rapids-mi",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1904",
+              "year": 1904
+            },
+            "registry_slug": "paul-grand-rapids-mi",
+            "status_group": "transferred",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": null,
+            "entity_id": "cn:institution:paul-naugatuck-ct",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1907",
+              "year": 1907
+            },
+            "registry_slug": "paul-naugatuck-ct",
+            "status_group": "unverified",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Boston",
+            "entity_id": "cn:institution:st-peter-south-boston-ma",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1896",
+              "year": 1896
+            },
+            "registry_slug": "peter-boston-ma",
+            "status_group": "active_parish",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2004",
+              "year": 2004
+            },
+            "diocese": "Boston",
+            "entity_id": "cn:institution:immaculate-conception-cambridge-ma",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1909",
+              "year": 1909
+            },
+            "registry_slug": "peter-cambridge-ma",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "1995",
+              "year": 1995
+            },
+            "diocese": "Detroit",
+            "entity_id": "cn:institution:st-peter-detroit-mi",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1920",
+              "year": 1920
+            },
+            "registry_slug": "peter-detroit-mi",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": null,
+            "entity_id": "cn:institution:lithuanian-protestant-parish-new-york-ny",
+            "founded": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "registry_slug": "protestant-parish-nyc",
+            "status_group": "unverified",
+            "status_observed_at": "2026-07-31",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2016-07-01",
+              "year": 2016
+            },
+            "diocese": "Chicago",
+            "entity_id": "cn:institution:providence-of-god-pilsen-chicago-il",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1903 canonically; organized 1900",
+              "year": 1903
+            },
+            "registry_slug": "providence-chicago-il",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": null,
+            "entity_id": "cn:institution:providence-of-god-scranton-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1913-1914",
+              "year": 1913
+            },
+            "registry_slug": "providence-scranton-pa",
+            "status_group": "transferred",
+            "status_observed_at": "2026-07-09",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Detroit",
+            "entity_id": "cn:institution:divine-providence-southfield-mi",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1949",
+              "year": 1949
+            },
+            "registry_slug": "providence-southfield-mi",
+            "status_group": "active_parish",
+            "status_observed_at": "2026-07-25",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "2008",
+              "year": 2008
+            },
+            "diocese": "Allentown",
+            "entity_id": "cn:institution:sacred-heart-new-philadelphia-pa",
+            "founded": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "registry_slug": "sacred-heart-new-philadelphia-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "2022",
+              "year": 2022
+            },
+            "diocese": "Chicago",
+            "entity_id": "cn:institution:ss-peter-and-paul-chicago-il",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1959",
+              "year": 1959
+            },
+            "registry_slug": "ss-peter-and-paul-chicago-il",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "2010",
+              "year": 2010
+            },
+            "diocese": "Scranton",
+            "entity_id": "cn:institution:ss-peter-and-paul-hazleton-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1896",
+              "year": 1896
+            },
+            "registry_slug": "ss-peter-and-paul-hazleton-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1992",
+              "year": 1992
+            },
+            "diocese": "Pittsburgh",
+            "entity_id": "cn:institution:ss-peter-and-paul-homestead-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1901",
+              "year": 1901
+            },
+            "registry_slug": "ss-peter-and-paul-homestead-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Rockford",
+            "entity_id": "cn:institution:ss-peter-and-paul-rockford-il",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1911",
+              "year": 1911
+            },
+            "registry_slug": "ss-peter-and-paul-rockford-il",
+            "status_group": "transferred",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Scranton",
+            "entity_id": "cn:institution:ss-peter-and-paul-sugar-notch-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1913",
+              "year": 1913
+            },
+            "registry_slug": "ss-peter-and-paul-sugar-notch-pa",
+            "status_group": "unverified",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Allentown",
+            "entity_id": "cn:institution:ss-peter-and-paul-tamaqua-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1911",
+              "year": 1911
+            },
+            "registry_slug": "ss-peter-and-paul-tamaqua-pa",
+            "status_group": "transferred",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1989",
+              "year": 1989
+            },
+            "diocese": "Chicago",
+            "entity_id": "cn:institution:ss-peter-and-paul-westville-il",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1897",
+              "year": 1897
+            },
+            "registry_slug": "ss-peter-and-paul-westville-il",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Baltimore",
+            "entity_id": "cn:institution:st-alphonsus-baltimore-md",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "Lithuanian use 1917",
+              "year": 1917
+            },
+            "registry_slug": "st-alphonsus-baltimore-md",
+            "status_group": "transferred",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1964",
+              "year": 1964
+            },
+            "diocese": "Milwaukee",
+            "entity_id": "cn:institution:st-ambrose-port-washington-wi",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1902 (St. Lawrence Society)",
+              "year": 1902
+            },
+            "registry_slug": "st-ambrose-port-washington-wi",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Gary",
+            "entity_id": "cn:institution:st-ann-beverly-shores-in",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1951",
+              "year": 1951
+            },
+            "registry_slug": "st-ann-beverly-shores-in",
+            "status_group": "mass_continues",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Newark",
+            "entity_id": "cn:institution:st-ann-jersey-city-nj",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1913",
+              "year": 1913
+            },
+            "registry_slug": "st-ann-jersey-city-nj",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2015-11-29",
+              "year": 2015
+            },
+            "diocese": "Hartford",
+            "entity_id": "cn:institution:st-anthony-ansonia-ct",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1915",
+              "year": 1915
+            },
+            "registry_slug": "st-anthony-ansonia-ct",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "2007",
+              "year": 2007
+            },
+            "diocese": "Pittsburgh",
+            "entity_id": "cn:institution:st-anthony-bridgeville-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1915",
+              "year": 1915
+            },
+            "registry_slug": "st-anthony-bridgeville-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Scranton",
+            "entity_id": "cn:institution:st-anthony-forest-city-pa",
+            "founded": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "registry_slug": "st-anthony-forest-city-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1982",
+              "year": 1982
+            },
+            "diocese": "Peoria",
+            "entity_id": "cn:institution:st-anthony-kewanee-il",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1913",
+              "year": 1913
+            },
+            "registry_slug": "st-anthony-kewanee-il",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "2008",
+              "year": 2008
+            },
+            "diocese": "Chicago",
+            "entity_id": "cn:institution:st-bartholomew-waukegan-il",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1896",
+              "year": 1896
+            },
+            "registry_slug": "st-bartholomew-waukegan-il",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Greensburg",
+            "entity_id": "cn:institution:st-casimir-east-vandergrift-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1924",
+              "year": 1924
+            },
+            "registry_slug": "st-casimir-east-vandergrift-pa",
+            "status_group": "unverified",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "1947",
+              "year": 1947
+            },
+            "diocese": "Kansas City in Kansas",
+            "entity_id": "cn:institution:st-casimir-kansas-city-ks",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1912",
+              "year": 1912
+            },
+            "registry_slug": "st-casimir-kansas-city-ks",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Allentown",
+            "entity_id": "cn:institution:st-casimir-mcadoo-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1928",
+              "year": 1928
+            },
+            "registry_slug": "st-casimir-mcadoo-pa",
+            "status_group": "unverified",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Scranton",
+            "entity_id": "cn:institution:st-casimir-plymouth-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1888",
+              "year": 1888
+            },
+            "registry_slug": "st-casimir-plymouth-pa",
+            "status_group": "unverified",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1998",
+              "year": 1998
+            },
+            "diocese": "Milwaukee",
+            "entity_id": "cn:institution:st-casimir-racine-wi",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1910",
+              "year": 1910
+            },
+            "registry_slug": "st-casimir-racine-wi",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "2010",
+              "year": 2010
+            },
+            "diocese": "Allentown",
+            "entity_id": "cn:institution:st-casimir-st-clair-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1917",
+              "year": 1917
+            },
+            "registry_slug": "st-casimir-st-clair-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "2017",
+              "year": 2017
+            },
+            "diocese": "St. Petersburg",
+            "entity_id": "cn:institution:st-casimir-st-pete-beach-fl",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1975",
+              "year": 1975
+            },
+            "registry_slug": "st-casimir-st-pete-beach-fl",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "2003",
+              "year": 2003
+            },
+            "diocese": "Springfield in Massachusetts",
+            "entity_id": "cn:institution:st-casimir-westfield-ma",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1917",
+              "year": 1917
+            },
+            "registry_slug": "st-casimir-westfield-ma",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "2010",
+              "year": 2010
+            },
+            "diocese": "Scranton",
+            "entity_id": "cn:institution:st-casimir-wilkes-barre-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1957",
+              "year": 1957
+            },
+            "registry_slug": "st-casimir-wilkes-barre-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Worcester",
+            "entity_id": "cn:institution:st-francis-athol-ma",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1912",
+              "year": 1912
+            },
+            "registry_slug": "st-francis-athol-ma",
+            "status_group": "transferred",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Allentown",
+            "entity_id": "cn:institution:st-francis-minersville-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1895 attributed secondary; documented by 1909",
+              "year": 1895
+            },
+            "registry_slug": "st-francis-minersville-pa",
+            "status_group": "unresolved",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "2011",
+              "year": 2011
+            },
+            "diocese": "Scranton",
+            "entity_id": "cn:institution:st-francis-wilkes-barre-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1918",
+              "year": 1918
+            },
+            "registry_slug": "st-francis-wilkes-barre-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1979",
+              "year": 1979
+            },
+            "diocese": "Cleveland",
+            "entity_id": "cn:institution:st-francis-youngstown-oh",
+            "founded": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "registry_slug": "st-francis-youngstown-oh",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Milwaukee",
+            "entity_id": "cn:institution:st-gabriel-milwaukee-wi",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1913",
+              "year": 1913
+            },
+            "registry_slug": "st-gabriel-milwaukee-wi",
+            "status_group": "unverified",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1986",
+              "year": 1986
+            },
+            "diocese": "Albany",
+            "entity_id": "cn:institution:st-george-albany-ny",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1917",
+              "year": 1917
+            },
+            "registry_slug": "st-george-albany-ny",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "1965",
+              "year": 1965
+            },
+            "diocese": "Detroit",
+            "entity_id": "cn:institution:st-george-detroit-mi",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1908",
+              "year": 1908
+            },
+            "registry_slug": "st-george-detroit-mi",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "2015",
+              "year": 2015
+            },
+            "diocese": "Saginaw",
+            "entity_id": "cn:institution:st-george-saginaw-mi",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1918",
+              "year": 1918
+            },
+            "registry_slug": "st-george-saginaw-mi",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "2007",
+              "year": 2007
+            },
+            "diocese": "Syracuse",
+            "entity_id": "cn:institution:st-george-utica-ny",
+            "founded": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "registry_slug": "st-george-utica-ny",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1985",
+              "year": 1985
+            },
+            "diocese": "Pittsburgh",
+            "entity_id": "cn:institution:st-isidore-braddock-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1918",
+              "year": 1918
+            },
+            "registry_slug": "st-isidore-braddock-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1916",
+              "year": 1916
+            },
+            "diocese": "Baltimore",
+            "entity_id": "cn:institution:st-john-the-baptist-baltimore-md",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1905",
+              "year": 1905
+            },
+            "registry_slug": "st-john-the-baptist-baltimore-md",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "2008",
+              "year": 2008
+            },
+            "diocese": "Syracuse",
+            "entity_id": "cn:institution:st-joseph-binghamton-ny",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1916",
+              "year": 1916
+            },
+            "registry_slug": "st-joseph-binghamton-ny",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1963",
+              "year": 1963
+            },
+            "diocese": "Pittsburgh",
+            "entity_id": "cn:institution:st-joseph-donora-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1906",
+              "year": 1906
+            },
+            "registry_slug": "st-joseph-donora-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Scranton",
+            "entity_id": "cn:institution:st-joseph-duryea-pa",
+            "founded": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "registry_slug": "st-joseph-duryea-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "2003",
+              "year": 2003
+            },
+            "diocese": "Boston",
+            "entity_id": "cn:institution:st-joseph-lowell-ma",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1911",
+              "year": 1911
+            },
+            "registry_slug": "st-joseph-lowell-ma",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Allentown",
+            "entity_id": "cn:institution:st-joseph-mahanoy-city-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1888",
+              "year": 1888
+            },
+            "registry_slug": "st-joseph-mahanoy-city-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1970",
+              "year": 1970
+            },
+            "diocese": "St. Louis",
+            "entity_id": "cn:institution:st-joseph-st-louis-mo",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1916",
+              "year": 1916
+            },
+            "registry_slug": "st-joseph-st-louis-mo",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1994",
+              "year": 1994
+            },
+            "diocese": "Pittsburgh",
+            "entity_id": "cn:institution:st-luke-bentleyville-pa",
+            "founded": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "registry_slug": "st-luke-bentleyville-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1981",
+              "year": 1981
+            },
+            "diocese": "Brooklyn",
+            "entity_id": "cn:institution:st-mary-of-the-angels-brooklyn-ny",
+            "founded": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "registry_slug": "st-mary-of-the-angels-brooklyn-ny",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Scranton",
+            "entity_id": "cn:institution:st-mary-wanamie-pa",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1925",
+              "year": 1925
+            },
+            "registry_slug": "st-mary-wanamie-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1995",
+              "year": 1995
+            },
+            "diocese": "Harrisburg",
+            "entity_id": "cn:institution:st-michael-shamokin-pa",
+            "founded": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "registry_slug": "st-michael-shamokin-pa",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1989",
+              "year": 1989
+            },
+            "diocese": "Cleveland",
+            "entity_id": "cn:institution:st-peter-akron-oh",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "c.1917-19 (mission care begins 1917; parish organized under Fr. Janusas c.1919)",
+              "year": 1917
+            },
+            "registry_slug": "st-peter-akron-oh",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Milwaukee",
+            "entity_id": "cn:institution:st-peter-kenosha-wi",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1907",
+              "year": 1907
+            },
+            "registry_slug": "st-peter-kenosha-wi",
+            "status_group": "transferred",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "site_r10_baseline",
+              "display": "1972",
+              "year": 1972
+            },
+            "diocese": "Springfield in Illinois",
+            "entity_id": "cn:institution:st-vincent-de-paul-springfield-il",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1909",
+              "year": 1909
+            },
+            "registry_slug": "st-vincent-de-paul-springfield-il",
+            "status_group": "closed",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2019-09-01",
+              "year": 2019
+            },
+            "diocese": "Brooklyn",
+            "entity_id": "cn:institution:transfiguration-maspeth-ny",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1908",
+              "year": 1908
+            },
+            "registry_slug": "transfiguration-maspeth-ny",
+            "status_group": "transferred",
+            "status_observed_at": "2026-08-02",
+            "status_source_authority": "brain_current_status_adjudication"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": "Hartford",
+            "entity_id": "cn:institution:holy-trinity-hartford-ct",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1903",
+              "year": 1903
+            },
+            "registry_slug": "trinity-hartford-ct",
+            "status_group": "unresolved",
+            "status_observed_at": "2026-08-02",
+            "status_source_authority": "brain_current_status_adjudication"
+          },
+          {
+            "closed": {
+              "authority": "canonical_graph",
+              "display": "2010-05-30",
+              "year": 2010
+            },
+            "diocese": "Scranton",
+            "entity_id": "cn:institution:holy-trinity-wilkes-barre-pa",
+            "founded": {
+              "authority": "canonical_graph",
+              "display": "1893",
+              "year": 1893
+            },
+            "registry_slug": "trinity-wilkes-barre-pa",
+            "status_group": "closed",
+            "status_observed_at": "2026-07-16",
+            "status_source_authority": "site_r10_baseline"
+          },
+          {
+            "closed": {
+              "authority": "unresolved",
+              "display": null,
+              "year": null
+            },
+            "diocese": null,
+            "entity_id": "cn:institution:zion-lithuanian-lutheran-oak-lawn-il",
+            "founded": {
+              "authority": "site_r10_baseline",
+              "display": "1910",
+              "year": 1910
+            },
+            "registry_slug": "zion-lithuanian-lutheran-oak-lawn-il",
+            "status_group": "active_parish",
+            "status_observed_at": null,
+            "status_source_authority": "site_r10_baseline"
+          }
+        ],
+        "unit": "public institution"
+      },
+      "observed_at": "2026-08-03",
+      "predicate": "canonical_public_institution_display_fields",
+      "source_artifact_id": "src:display-19:reviewed-projection:2026-08-03",
+      "source_locator": "Complete 155-row field selection with prior authority retained",
+      "subject": {
+        "canonical_entity_id": "cn:organization:culturenet-parish-display-authority"
+      }
+    },
+    {
+      "adjudication": {
         "conflict_preserved": false,
         "state": "accepted"
       },
@@ -9828,6 +12639,157 @@
     },
     {
       "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:pastoral-18:epiphany-standing",
+      "object": {
+        "canonical_entity_id": "cn:building_site:epiphany-catholic-church-georgetown-dc",
+        "condition": "building-standing",
+        "date": {
+          "certainty": "official current pastoral reporting",
+          "end": null,
+          "label": "standing in documented current worship use",
+          "start": "2026-08-03"
+        }
+      },
+      "observed_at": "2026-08-03",
+      "predicate": "building_standing",
+      "source_artifact_id": "src:pastoral-18:washington-community:2024-04-29",
+      "source_locator": "Current worship occurs at Epiphany Catholic Church",
+      "subject": {
+        "canonical_entity_id": "cn:event:epiphany-georgetown-standing-assessment"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": true,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:pastoral-18:membership",
+      "object": {
+        "counts": {
+          "active_mission": 2,
+          "active_parish": 6,
+          "current_worship_places": 14,
+          "mass_continues": 6
+        },
+        "excluded_pending_current_verification": [
+          {
+            "entity_id": "cn:institution:holy-cross-dayton-oh",
+            "reason": "2021 Lithuanian readings are documented; current 2026 continuation is not established"
+          }
+        ],
+        "members": [
+          {
+            "entity_id": "cn:institution:st-peter-south-boston-ma",
+            "network_class": "active_parish",
+            "registry_slug": "peter-boston-ma"
+          },
+          {
+            "entity_id": "cn:institution:nativity-bvm-chicago-il",
+            "network_class": "active_parish",
+            "registry_slug": "nativity-chicago-il"
+          },
+          {
+            "entity_id": "cn:institution:divine-providence-southfield-mi",
+            "network_class": "active_parish",
+            "registry_slug": "providence-southfield-mi"
+          },
+          {
+            "entity_id": "cn:institution:st-andrew-lithuanian-philadelphia-pa",
+            "network_class": "active_parish",
+            "registry_slug": "andrew-philadelphia-pa"
+          },
+          {
+            "entity_id": "cn:institution:st-casimir-cleveland-lithuanian-oh",
+            "network_class": "active_parish",
+            "registry_slug": "casimir-cleveland-oh"
+          },
+          {
+            "entity_id": "cn:institution:st-casimir-los-angeles-ca",
+            "network_class": "active_parish",
+            "registry_slug": "casimir-los-angeles-ca"
+          },
+          {
+            "entity_id": "cn:institution:blessed-jurgis-matulaitis-mission-lemont-il",
+            "network_class": "active_mission",
+            "registry_slug": "george-lemont-il"
+          },
+          {
+            "entity_id": "cn:institution:our-lady-of-siluva-mission-mundelein-il",
+            "network_class": "active_mission",
+            "registry_slug": "our-lady-of-siluva-mission-mundelein-il"
+          },
+          {
+            "entity_id": "cn:institution:st-ann-beverly-shores-in",
+            "network_class": "mass_continues",
+            "registry_slug": "st-ann-beverly-shores-in"
+          },
+          {
+            "entity_id": "cn:institution:st-anthony-cicero-il",
+            "network_class": "mass_continues",
+            "registry_slug": "anthony-cicero-il"
+          },
+          {
+            "entity_id": "cn:institution:immaculate-conception-brighton-park-chicago-il",
+            "network_class": "mass_continues",
+            "registry_slug": "immaculate-chicago-il"
+          },
+          {
+            "entity_id": "cn:institution:annunciation-bvm-williamsburg-ny",
+            "network_class": "mass_continues",
+            "registry_slug": "annunciation-brooklyn-ny"
+          },
+          {
+            "entity_id": "cn:institution:st-george-lithuanian-rochester-ny",
+            "network_class": "mass_continues",
+            "registry_slug": "george-rochester-ny"
+          },
+          {
+            "entity_id": "cn:organization:washington-epiphany-lithuanian-community",
+            "network_class": "mass_continues",
+            "registry_slug": null,
+            "site_id": "cn:building_site:epiphany-catholic-church-georgetown-dc"
+          }
+        ],
+        "unit": "current pastoral places, not historical institutions"
+      },
+      "observed_at": "2026-08-03",
+      "predicate": "current_us_lithuanian_catholic_pastoral_membership",
+      "source_artifact_id": "src:pastoral-18:sielovada-us:2026-08-03",
+      "source_locator": "Complete U.S. directory reconciled to existing canonical entities",
+      "subject": {
+        "canonical_entity_id": "cn:organization:us-lithuanian-catholic-pastoral-network"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:pastoral-18:washington-monthly-mass",
+      "object": {
+        "frequency": "last Sunday of each month",
+        "host_site_id": "cn:building_site:epiphany-catholic-church-georgetown-dc",
+        "institution_census_included": false
+      },
+      "observed_at": "2026-08-03",
+      "predicate": "monthly_lithuanian_mass_at_epiphany_church",
+      "source_artifact_id": "src:pastoral-18:washington-community:2024-04-29",
+      "source_locator": "Current monthly worship and hosted-community description",
+      "subject": {
+        "canonical_entity_id": "cn:organization:washington-epiphany-lithuanian-community"
+      }
+    },
+    {
+      "adjudication": {
         "conflict_preserved": true,
         "state": "conflict_preserved"
       },
@@ -10192,6 +13154,380 @@
       "source_locator": "Summary; 2026-07-16 development; conflicts; gaps",
       "subject": {
         "canonical_entity_id": "cn:building_site:st-george-venango-philadelphia-pa"
+      }
+    },
+    {
+      "adjudication": {
+        "reason": "Official directory transcription reconciled to Brain institution identities and the separately asserted current pastoral network.",
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:sielovada-directory-20:canonical-directory",
+      "object": {
+        "counts": {
+          "activeMissions": 2,
+          "activeParishes": 6,
+          "directoryConflict": 1,
+          "listed": 20,
+          "massContinues": 6,
+          "networkOnly": 4,
+          "noLithuanianLiturgy": 4,
+          "registryMatches": 16,
+          "religiousHouse": 1,
+          "unresolved": 0
+        },
+        "entries": [
+          {
+            "address": "PO Box 727, Beverly Shores, IN 46301-0727",
+            "city": "Beverly Shores",
+            "clergy": "Kun. Gediminas Keršys, Lithuanian chaplain",
+            "directoryType": "mission",
+            "id": "beverly-shores-st-ann",
+            "ministry": "Lithuanian Mass continues monthly inside a diocesan worship site.",
+            "nameEn": "St. Ann of the Dunes Church",
+            "nameLt": "Beverly Shores misija",
+            "networkClass": "mass_continues",
+            "officialSite": "https://www.st-ann-of-the-dunes.org",
+            "registrySlug": "st-ann-beverly-shores-in",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "IN"
+          },
+          {
+            "address": "75 Flaherty Way, Boston, MA 02127",
+            "city": "Boston",
+            "directoryType": "parish",
+            "id": "boston-st-peter",
+            "ministry": "Active Lithuanian parish and the living Lithuanian Catholic parish center for New England.",
+            "nameEn": "St. Peter Lithuanian Parish",
+            "nameLt": "Bostono Šv. Petro lietuvių parapija",
+            "networkClass": "active_parish",
+            "officialSite": "https://www.stpeterlithuanianparish.org",
+            "registrySlug": "peter-boston-ma",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "MA"
+          },
+          {
+            "address": "1510 S. 49th Court, Cicero, IL 60804",
+            "city": "Cicero",
+            "clergy": "Kun. Gediminas Keršys, Lithuanian chaplain",
+            "directoryType": "parish",
+            "id": "cicero-st-anthony",
+            "ministry": "Lithuanian Mass continues in a parish that is no longer Lithuanian-led.",
+            "nameEn": "St. Anthony Parish",
+            "nameLt": "Čikagos Šv. Antano parapija (Cicero)",
+            "networkClass": "mass_continues",
+            "registrySlug": "anthony-cicero-il",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "IL"
+          },
+          {
+            "address": "6812 S. Washtenaw Ave., Chicago, IL 60629",
+            "city": "Chicago",
+            "clergy": "Kun. Jaunius Kelpšas, pastor",
+            "directoryType": "parish",
+            "id": "chicago-nativity",
+            "ministry": "Active Lithuanian parish with regular Lithuanian worship.",
+            "nameEn": "Nativity of the B.V.M. Parish",
+            "nameLt": "Čikagos Švč. Mergelės Marijos Gimimo parapija",
+            "networkClass": "active_parish",
+            "officialSite": "https://chicagonativitybvm.org",
+            "registrySlug": "nativity-chicago-il",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "IL"
+          },
+          {
+            "address": "2745 W. 44th St., Chicago, IL 60632",
+            "city": "Chicago",
+            "clergy": "Kun. Gediminas Keršys, Lithuanian chaplain",
+            "directoryType": "parish",
+            "id": "chicago-immaculate-conception",
+            "ministry": "Lithuanian Mass continues inside the merged Immaculate Conception and Five Holy Martyrs parish.",
+            "nameEn": "Immaculate Conception Parish",
+            "nameLt": "Čikagos Švč. Mergelės Marijos Nekaltojo Prasidėjimo parapija",
+            "networkClass": "mass_continues",
+            "officialSite": "https://immaculateconception-fiveholymartyrs.org",
+            "registrySlug": "immaculate-chicago-il",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "IL"
+          },
+          {
+            "address": "25335 W. Nine Mile Rd., Southfield, MI 48033",
+            "city": "Southfield",
+            "directoryType": "parish",
+            "id": "southfield-divine-providence",
+            "ministry": "Active Lithuanian parish serving metropolitan Detroit. Fr. Tomas Miliauskas departed in May 2026; no successor has been named, and proposed archdiocesan restructuring could end weekend Mass.",
+            "nameEn": "Divine Providence Parish",
+            "nameLt": "Detroito Dievo Apvaizdos parapija",
+            "networkClass": "active_parish",
+            "officialSite": "https://www.divineprovidencechurch.com",
+            "registrySlug": "providence-southfield-mi",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "MI"
+          },
+          {
+            "address": "1913 Wallace St., Philadelphia, PA 19130",
+            "city": "Philadelphia",
+            "directoryType": "parish",
+            "id": "philadelphia-st-andrew",
+            "ministry": "Active Lithuanian parish; Sielovada lists Lithuanian Mass twice monthly.",
+            "nameEn": "St. Andrew Church",
+            "nameLt": "Filadelfijos Šv. Andriejaus parapija",
+            "networkClass": "active_parish",
+            "officialSite": "https://saintandrewlithuanianparish.org",
+            "registrySlug": "andrew-philadelphia-pa",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "PA"
+          },
+          {
+            "address": "53 Capitol Ave., Hartford, CT 06106",
+            "city": "Hartford",
+            "directoryType": "parish",
+            "id": "hartford-holy-trinity",
+            "ministry": "Regular Masses ended May 30, 2026. The community's preservation campaign continues.",
+            "nameEn": "Holy Trinity Church",
+            "nameLt": "Hartfordo Švč. Trejybės parapija",
+            "networkClass": "directory_conflict",
+            "note": "Directory membership is preserved as evidence, but it does not override the newer closure record.",
+            "officialSite": "https://holytrinityhartford.org",
+            "registrySlug": "trinity-hartford-ct",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "CT"
+          },
+          {
+            "address": "PO Box 980, Kennebunkport, ME 04046",
+            "city": "Kennebunkport",
+            "clergy": "Br. Jonas Bacevičius, OFM, superior",
+            "directoryType": "religious_house",
+            "id": "kennebunkport-st-anthony-friary",
+            "ministry": "Lithuanian Franciscan religious house in the pastoral network; not a parish and never counted as one.",
+            "nameEn": "St. Anthony Friary",
+            "nameLt": "Kennebunkport Šv. Antano vienuolynas",
+            "networkClass": "religious_house",
+            "officialSite": "https://www.franciscanguesthouse.com",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "ME"
+          },
+          {
+            "address": "8022 Neff Rd., Cleveland, OH 44119",
+            "city": "Cleveland",
+            "clergy": "Rev. Andrius Morkūnas, pastor",
+            "directoryType": "parish",
+            "id": "cleveland-st-casimir",
+            "ministry": "Active Lithuanian parish with Lithuanian and English worship.",
+            "nameEn": "St. Casimir Church",
+            "nameLt": "Klivlendo Šv. Kazimiero parapija",
+            "networkClass": "active_parish",
+            "officialSite": "http://www.saintcasimirparish.org",
+            "registrySlug": "casimir-cleveland-oh",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "OH"
+          },
+          {
+            "address": "14911 127th St., Lemont, IL 60439",
+            "city": "Lemont",
+            "clergy": "Kun. Artūras Sederevičius, SJ, chaplain",
+            "directoryType": "mission",
+            "id": "lemont-matulaitis-mission",
+            "ministry": "Active Lithuanian Catholic mission inside the Lithuanian World Center.",
+            "nameEn": "Blessed Jurgis Matulaitis Lithuanian Mission",
+            "nameLt": "Lemonto Pal. Jurgio Matulaičio misija",
+            "networkClass": "active_mission",
+            "officialSite": "https://www.matulaitismission.com",
+            "registrySlug": "george-lemont-il",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "IL"
+          },
+          {
+            "address": "2718 St. George St., Los Angeles, CA 90027",
+            "city": "Los Angeles",
+            "clergy": "Kun. Tomas Karanauskas, pastor",
+            "directoryType": "parish",
+            "id": "los-angeles-st-casimir",
+            "ministry": "Active Lithuanian parish with parish and cultural life.",
+            "nameEn": "St. Casimir Parish",
+            "nameLt": "Los Andželo Šv. Kazimiero parapija",
+            "networkClass": "active_parish",
+            "officialSite": "https://stcasimirchurchla.org",
+            "registrySlug": "casimir-los-angeles-ca",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "CA"
+          },
+          {
+            "address": "116 N. Lake St., Mundelein, IL 60060",
+            "city": "Mundelein",
+            "clergy": "Kun. Gediminas Keršys, Lithuanian chaplain",
+            "directoryType": "mission",
+            "id": "mundelein-our-lady-of-siluva-mission",
+            "ministry": "Active Lithuanian Catholic mission with monthly Lithuanian Mass at Santa Maria del Popolo Church.",
+            "nameEn": "Our Lady of Siluva Lithuanian Catholic Mission",
+            "nameLt": "Šiluvos Mergelės Marijos lietuvių katalikų misija",
+            "networkClass": "active_mission",
+            "note": "Distinct mission established by Archdiocese of Chicago decree in December 2013; admitted to the canonical registry on 2026-08-02.",
+            "officialSite": "https://www.facebook.com/waukeganbendruomene",
+            "registrySlug": "our-lady-of-siluva-mission-mundelein-il",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "IL"
+          },
+          {
+            "address": "101 Valley St., New Philadelphia, PA 17959",
+            "city": "New Philadelphia",
+            "directoryType": "parish",
+            "id": "new-philadelphia-holy-cross",
+            "ministry": "Sielovada lists Mass only in English.",
+            "nameEn": "Holy Cross Church",
+            "nameLt": "Naujosios Filadelfijos Šv. Kryžiaus parapija",
+            "networkClass": "no_lithuanian_liturgy",
+            "note": "Not joined to the historical Sacred Heart registry row. The names and addresses differ, so the identity requires adjudication.",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "PA"
+          },
+          {
+            "address": "259 N. 5th St., Brooklyn, NY 11211",
+            "city": "Brooklyn",
+            "clergy": "Kun. Valdemaras Lisovski, Lithuanian chaplain",
+            "directoryType": "church",
+            "id": "brooklyn-annunciation",
+            "ministry": "The Lithuanian parish institution merged in 2019; weekly Lithuanian Mass continues at Annunciation Church within the successor parish.",
+            "nameEn": "Annunciation of the B.V.M. Church",
+            "nameLt": "Niujorko Apreiškimo Mergelei Marijai bažnyčia",
+            "networkClass": "mass_continues",
+            "officialSite": "https://www.katalikai.nyc",
+            "registrySlug": "annunciation-brooklyn-ny",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "NY"
+          },
+          {
+            "address": "64-14 Clinton Ave., Maspeth, NY 11378",
+            "city": "Maspeth",
+            "clergy": "Kun. Valdemaras Lisovski, Lithuanian chaplain",
+            "directoryType": "parish",
+            "id": "maspeth-transfiguration",
+            "ministry": "Lithuanian parish life ended at this church in 2019; its Lithuanian Mass moved to Annunciation Church in Brooklyn.",
+            "nameEn": "Transfiguration Church",
+            "nameLt": "Niujorko Atsimainymo parapija",
+            "networkClass": "no_lithuanian_liturgy",
+            "registrySlug": "transfiguration-maspeth-ny",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "NY"
+          },
+          {
+            "address": "150 Varinna Dr., Rochester, NY 14618",
+            "city": "Rochester",
+            "directoryType": "mission_community",
+            "id": "rochester-st-george-mission",
+            "ministry": "Lithuanian Mass continues as a mission community at Our Lady of Lourdes Church.",
+            "nameEn": "St. George Lithuanian Mission Community",
+            "nameLt": "Ročesterio Šv. Jurgio lietuvių katalikų misijinė bendruomenė",
+            "networkClass": "mass_continues",
+            "registrySlug": "george-rochester-ny",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "NY"
+          },
+          {
+            "address": "1703 Jackson St., Scranton, PA 18504",
+            "city": "Scranton",
+            "directoryType": "parish",
+            "id": "scranton-st-michael",
+            "ministry": "Sielovada lists Mass in English and Latin, not Lithuanian.",
+            "nameEn": "St. Michael's Lithuanian Church",
+            "nameLt": "Skrantono Šv. Mykolo lietuvių parapija",
+            "networkClass": "no_lithuanian_liturgy",
+            "officialSite": "https://fsspscranton.wordpress.com",
+            "registrySlug": "michael-scranton-pa",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "PA"
+          },
+          {
+            "address": "316 William St., Scranton, PA 18508",
+            "city": "Scranton",
+            "directoryType": "mission_community",
+            "id": "scranton-holy-rosary",
+            "ministry": "Sielovada lists Mass only in English.",
+            "nameEn": "Holy Rosary Worship Site",
+            "nameLt": "Skrantono Švč. Rožančiaus misijinė bendruomenė",
+            "networkClass": "no_lithuanian_liturgy",
+            "note": "Current pastoral-network record; no distinct canonical Lithuanian parish-registry match has been established.",
+            "officialSite": "https://marymotherofgodparish.org",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "PA"
+          },
+          {
+            "address": "2712 Dumbarton St. NW, Washington, DC 20007",
+            "canonicalEntityId": "cn:organization:washington-epiphany-lithuanian-community",
+            "city": "Washington",
+            "directoryType": "church",
+            "id": "washington-epiphany",
+            "ministry": "Lithuanian Mass is celebrated on the last Sunday of each month inside a territorial host parish.",
+            "nameEn": "Epiphany Catholic Church",
+            "nameLt": "Vašingtono Viešpaties Apsireiškimo bažnyčia",
+            "networkClass": "mass_continues",
+            "note": "Host church with Lithuanian ministry; not a Lithuanian ethnic parish.",
+            "officialSite": "https://georgetownepiphany.org",
+            "sourceRefs": [
+              "sielovada-north-america"
+            ],
+            "state": "DC"
+          }
+        ],
+        "networkRevision": {
+          "basis": "Complete United States listing on the Lithuanian Bishops' Conference diaspora pastoral-care directory, reconciled to the canonical CultureNet institution projection and current juridic status evidence.",
+          "date": "2026-08-02",
+          "version": 2
+        },
+        "source": {
+          "authority": "Canonical baseline for membership in the current Lithuanian Catholic pastoral network. Diocesan and parish records remain authoritative for juridic parish status, governance, and formal closure.",
+          "checked": "2026-08-03",
+          "id": "sielovada-north-america",
+          "publisher": "Užsienio lietuvių sielovada",
+          "title": "Sielovada: North America",
+          "url": "https://sielovada.org/siaures-amerika/"
+        }
+      },
+      "observed_at": "2026-08-03",
+      "predicate": "canonical_us_lithuanian_catholic_directory",
+      "source_artifact_id": "src:sielovada-directory-20:north-america:2026-08-03",
+      "source_locator": "Complete U.S. directory listing, entry-by-entry transcription and canonical reconciliation",
+      "subject": {
+        "canonical_entity_id": "cn:organization:sielovada-us-directory"
       }
     },
     {
@@ -10841,6 +14177,15 @@
         "start": "2026"
       },
       "slug": "enclaves-townhouse-331-reed-philadelphia-pa"
+    },
+    {
+      "aliases": [
+        "2712 Dumbarton Street NW"
+      ],
+      "canonical_name": "Epiphany Catholic Church, Georgetown",
+      "entity_type": "building_site",
+      "id": "cn:building_site:epiphany-catholic-church-georgetown-dc",
+      "slug": "epiphany-catholic-church-georgetown-dc"
     },
     {
       "aliases": [
@@ -13173,6 +16518,13 @@
       "entity_type": "event",
       "id": "cn:event:divine-providence-southfield-site-standing-current-worship",
       "slug": "divine-providence-southfield-site-standing-current-worship"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Epiphany Church standing-condition assessment",
+      "entity_type": "event",
+      "id": "cn:event:epiphany-georgetown-standing-assessment",
+      "slug": "epiphany-georgetown-standing-assessment"
     },
     {
       "aliases": [],
@@ -17397,6 +20749,13 @@
     },
     {
       "aliases": [],
+      "canonical_name": "CultureNet parish public-field authority",
+      "entity_type": "organization",
+      "id": "cn:organization:culturenet-parish-display-authority",
+      "slug": "culturenet-parish-display-authority"
+    },
+    {
+      "aliases": [],
       "canonical_name": "Diocese of Brooklyn",
       "entity_type": "organization",
       "id": "cn:organization:diocese-of-brooklyn",
@@ -17460,6 +20819,15 @@
     },
     {
       "aliases": [
+        "Užsienio lietuvių sielovados JAV sąrašas"
+      ],
+      "canonical_name": "Sielovada United States directory",
+      "entity_type": "organization",
+      "id": "cn:organization:sielovada-us-directory",
+      "slug": "sielovada-us-directory"
+    },
+    {
+      "aliases": [
         "South Boston Seaport Collaborative"
       ],
       "canonical_name": "South Boston Seaport Catholic Collaborative",
@@ -17495,6 +20863,24 @@
     },
     {
       "aliases": [
+        "JAV lietuvių katalikų sielovados tinklas"
+      ],
+      "canonical_name": "United States Lithuanian Catholic pastoral network",
+      "entity_type": "organization",
+      "id": "cn:organization:us-lithuanian-catholic-pastoral-network",
+      "slug": "us-lithuanian-catholic-pastoral-network"
+    },
+    {
+      "aliases": [
+        "Vašingtono Viešpaties Apsireiškimo bažnyčios lietuvių bendruomenė"
+      ],
+      "canonical_name": "Washington Lithuanian Catholic community at Epiphany Church",
+      "entity_type": "organization",
+      "id": "cn:organization:washington-epiphany-lithuanian-community",
+      "slug": "washington-epiphany-lithuanian-community"
+    },
+    {
+      "aliases": [
         "R. Demyanovich"
       ],
       "canonical_name": "Robert Damyanovich",
@@ -17503,7 +20889,7 @@
       "slug": "robert-damyanovich"
     }
   ],
-  "content_hash": "sha256:3ded1c84949c6b3c9d9fcf12c3e574ba2e04839a065866d7c192d3a84a9728c1",
+  "content_hash": "sha256:69a62cce5013de13c53d5d18d61a61c73af9aeda2860d10e72a4803c1d4978dd",
   "counts": {
     "by_institution_class": {
       "independent_catholic": 4,
@@ -24508,12 +27894,15 @@
   ],
   "provenance": {
     "packet_ids": [
+      "culturenet-parish-building-condition-coverage-17-2026-08-03",
       "culturenet-parish-chicago-lineage-1-2026-07-31",
       "culturenet-parish-coal-region-lineage-1-2026-07-31",
       "culturenet-parish-corroborated-identity-backbone-9-2026-07-31",
       "culturenet-parish-count-risk-adjudications-13-2026-07-31",
+      "culturenet-parish-current-pastoral-network-18-2026-08-03",
       "culturenet-parish-current-worship-hosts-1-2026-07-31",
       "culturenet-parish-deep-case-backfill-14-2026-07-31",
+      "culturenet-parish-display-authority-19-2026-08-03",
       "culturenet-parish-early-institutions-12-2026-07-31",
       "culturenet-parish-esplen-frackville-lineage-5-2026-07-31",
       "culturenet-parish-evidence-tranche-1-canonical-migration-2026-07-31",
@@ -24534,6 +27923,7 @@
       "culturenet-parish-philadelphia-mount-carmel-lineage-7-2026-07-31",
       "culturenet-parish-protected-campaigns-hartford-waterbury-maspeth-2026-07-31",
       "culturenet-parish-reviewed-case-lineage-2-2026-07-31",
+      "culturenet-parish-sielovada-directory-20-2026-08-03",
       "culturenet-parish-successor-and-site-lineage-2-2026-07-31"
     ],
     "publication_baseline": "repo://culturenet-brain/docs/research/parish-canon/publication-baseline.json",
@@ -43197,6 +46587,86 @@
       "adjudication_state": "accepted",
       "assertion_temporal_context": [
         {
+          "assertion_id": "assert:pastoral-18:epiphany-standing",
+          "observed_at": "2026-08-03"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "official current pastoral reporting",
+        "end": null,
+        "label": "standing in documented current worship use",
+        "start": "2026-08-03"
+      },
+      "evidence_assertion_ids": [
+        "assert:pastoral-18:epiphany-standing"
+      ],
+      "id": "rel:pastoral-18:epiphany-standing",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Epiphany Church standing-condition assessment",
+        "entity_id": "cn:event:epiphany-georgetown-standing-assessment",
+        "entity_type": "event",
+        "slug": "epiphany-georgetown-standing-assessment"
+      },
+      "source_artifact_ids": [
+        "src:pastoral-18:washington-community:2024-04-29"
+      ],
+      "target": {
+        "display_name": "Epiphany Catholic Church, Georgetown",
+        "entity_id": "cn:building_site:epiphany-catholic-church-georgetown-dc",
+        "entity_type": "building_site",
+        "slug": "epiphany-catholic-church-georgetown-dc"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:pastoral-18:washington-monthly-mass",
+          "observed_at": "2026-08-03"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "site_count_only",
+      "date": {
+        "certainty": "official pastoral directory and report",
+        "end": null,
+        "label": "monthly Lithuanian Mass in the territorial host church",
+        "start": null
+      },
+      "evidence_assertion_ids": [
+        "assert:pastoral-18:washington-monthly-mass"
+      ],
+      "id": "rel:pastoral-18:washington-community-uses-epiphany",
+      "identity_effect": "site_context_only",
+      "projection_group": "institution_site",
+      "publication_state": "publishable",
+      "relationship_type": "organization-used-site",
+      "source": {
+        "display_name": "Washington Lithuanian Catholic community at Epiphany Church",
+        "entity_id": "cn:organization:washington-epiphany-lithuanian-community",
+        "entity_type": "organization",
+        "slug": "washington-epiphany-lithuanian-community"
+      },
+      "source_artifact_ids": [
+        "src:pastoral-18:washington-community:2024-04-29"
+      ],
+      "target": {
+        "display_name": "Epiphany Catholic Church, Georgetown",
+        "entity_id": "cn:building_site:epiphany-catholic-church-georgetown-dc",
+        "entity_type": "building_site",
+        "slug": "epiphany-catholic-church-georgetown-dc"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
           "assertion_id": "assert:pcs-6:girardville-lifecycle",
           "observed_at": "2026-07-16"
         }
@@ -46231,7 +49701,7 @@
       }
     }
   ],
-  "revision_id": "canonical-public-census-2026-08-03-ziburio-source-link",
+  "revision_id": "canonical-public-census-2026-08-03-brain-single-source",
   "schema": "culturenet-parish-publication-projection.v1",
   "scope": {
     "country": "US",
@@ -48382,6 +51852,22 @@
       "title": "2025 Catholic Diocese of Cleveland Directory"
     },
     {
+      "artifact_type": "canonical_projection_migration",
+      "id": "src:display-19:reviewed-projection:2026-08-03",
+      "locator": {
+        "exact_label": "155 institution history rows",
+        "page": "infographic-projection.json",
+        "section": "institution_history status, jurisdiction, founding, and ending selections"
+      },
+      "rights": {
+        "access": "repository",
+        "public_url": "repo://culturenet-brain/docs/research/parish-canon/infographic-projection.json",
+        "quote_policy": "cite underlying field evidence and preserve prior authority",
+        "status": "brain_canonical_migration"
+      },
+      "title": "Reviewed institution display selections before authority cutover"
+    },
+    {
       "artifact_type": "public_web_snapshot",
       "id": "src:divine-providence:homepage-current:2026-07-31",
       "locator": {
@@ -49992,6 +53478,38 @@
       "title": "3553 W Vernor Offering Memorandum"
     },
     {
+      "artifact_type": "official_pastoral_directory",
+      "id": "src:pastoral-18:sielovada-us:2026-08-03",
+      "locator": {
+        "exact_label": "Complete United States directory listing",
+        "page": "Šiaurės Amerika",
+        "section": "Jungtinės Amerikos Valstijos"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://sielovada.org/siaures-amerika/",
+        "quote_policy": "cite and summarize",
+        "status": "official_pastoral_directory"
+      },
+      "title": "Užsienio lietuvių sielovada — Šiaurės Amerika"
+    },
+    {
+      "artifact_type": "official_pastoral_report",
+      "id": "src:pastoral-18:washington-community:2024-04-29",
+      "locator": {
+        "exact_label": "Washington Lithuanian community at Epiphany Church",
+        "page": "Article",
+        "section": "Monthly Lithuanian worship and community history"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://sielovada.org/sutvirtinima-prieme-burys-vasingtono-lietuviu/",
+        "quote_policy": "cite and summarize",
+        "status": "official_pastoral_report"
+      },
+      "title": "Sutvirtinimą priėmė būrys Vašingtono lietuvių"
+    },
+    {
       "artifact_type": "canonical_case_file",
       "id": "src:pcs-6:girardville-case:2026-07-16",
       "locator": {
@@ -50134,6 +53652,22 @@
         "status": "public_web"
       },
       "title": "QNS report on the September 2025 Transfiguration decision"
+    },
+    {
+      "artifact_type": "official_pastoral_directory",
+      "id": "src:sielovada-directory-20:north-america:2026-08-03",
+      "locator": {
+        "exact_label": "Complete United States directory listing",
+        "page": "Šiaurės Amerika",
+        "section": "Jungtinės Amerikos Valstijos"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://sielovada.org/siaures-amerika/",
+        "quote_policy": "cite and summarize",
+        "status": "official_pastoral_directory"
+      },
+      "title": "Užsienio lietuvių sielovada — Šiaurės Amerika"
     },
     {
       "artifact_type": "public_web_snapshot",

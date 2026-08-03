@@ -257,6 +257,20 @@
         "data/canonical-public-census-adjudications.json",
         "data/candidates/registry-revision-21-ziburio-source-link-2026-08-03.md"
       ]
+    },
+    {
+      "version": 22,
+      "date": "2026-08-03",
+      "registryRecords": 193,
+      "publicUSRecords": 155,
+      "usRomanCatholicParishes": 132,
+      "summary": "Imported the Brain-owned current pastoral network and separated the 137-institution history from the 14-place current pastoral view.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/canonical-public-census-adjudications.json",
+        "data/canonical-infographic-projection.json"
+      ]
     }
   ]
 }
