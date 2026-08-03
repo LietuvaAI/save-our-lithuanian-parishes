@@ -2,8 +2,8 @@
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
-    "publication_projection_hash": "sha256:27debd93bc909cc92fcec4990c8ebba0ca154dddcc6dc96c8217c0eab675ed06",
-    "publication_projection_revision": "canonical-public-census-2026-08-03-building-condition-coverage",
+    "publication_projection_hash": "sha256:3ded1c84949c6b3c9d9fcf12c3e574ba2e04839a065866d7c192d3a84a9728c1",
+    "publication_projection_revision": "canonical-public-census-2026-08-03-ziburio-source-link",
     "repository": "LietuvaAI/culturenet-brain"
   },
   "building_site_history": [
@@ -7645,7 +7645,7 @@
       "building-standing"
     ]
   },
-  "content_hash": "sha256:e29053ddc004b29b433aaadf93b8be1d6793116d59570796dd110a507a398cb6",
+  "content_hash": "sha256:2f2895b9585d7cf7d66ef9b0df799924413500b822a0caf226016f06fba35c21",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -15614,7 +15614,7 @@
       "unit": "distinct U.S. Roman Catholic parish institution"
     }
   },
-  "revision_id": "canonical-infographic-units-2026-08-03-building-condition-coverage",
+  "revision_id": "canonical-infographic-units-2026-08-03-ziburio-source-link",
   "schema": "culturenet-parish-infographic-projection.v1",
   "unit_contracts": [
     {

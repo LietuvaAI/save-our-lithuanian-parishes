@@ -17503,7 +17503,7 @@
       "slug": "robert-damyanovich"
     }
   ],
-  "content_hash": "sha256:27debd93bc909cc92fcec4990c8ebba0ca154dddcc6dc96c8217c0eab675ed06",
+  "content_hash": "sha256:3ded1c84949c6b3c9d9fcf12c3e574ba2e04839a065866d7c192d3a84a9728c1",
   "counts": {
     "by_institution_class": {
       "independent_catholic": 4,
@@ -46231,7 +46231,7 @@
       }
     }
   ],
-  "revision_id": "canonical-public-census-2026-08-03-building-condition-coverage",
+  "revision_id": "canonical-public-census-2026-08-03-ziburio-source-link",
   "schema": "culturenet-parish-publication-projection.v1",
   "scope": {
     "country": "US",
@@ -49158,10 +49158,10 @@
         "section": "Saint Casimir predecessor history and Saint George parish organization"
       },
       "rights": {
-        "access": "Vilija-provided page photographs; Žiburio archive item reported available",
-        "public_url": null,
-        "quote_policy": "cite the volume and printed pages; summarize until the exact archive item URL is attached",
-        "status": "admitted_secondary_source_archive_url_pending"
+        "access": "Vilija-provided page photographs; direct Žiburio archive item verified 2026-08-03",
+        "public_url": "https://archyvas.ziburioltmokykla.org/item/20260802_1785700061361",
+        "quote_policy": "cite the volume, printed pages, and direct Žiburio archive item",
+        "status": "published_online_secondary_source"
       },
       "title": "Vladas Būtėnas, Pensylvanijos angliakasių Lietuva — Shenandoah Saint Casimir and Saint George"
     },
@@ -49904,9 +49904,10 @@
         "section": "1914 founding, original wooden church, 1942 brick replacement, Lithuanian inscriptions, parish school, 1961 counts, and 1972 community and language conditions"
       },
       "rights": {
-        "access": "Vilija-provided page scans",
-        "quote_policy": "cite the volume and page or section; summarize until the public archive item is linked",
-        "status": "admitted_secondary_source_archive_url_pending"
+        "access": "Vilija-provided page scans; direct Žiburio archive item verified 2026-08-03",
+        "public_url": "https://archyvas.ziburioltmokykla.org/item/20260802_1785700061361",
+        "quote_policy": "cite the volume, page or section, and direct Žiburio archive item",
+        "status": "published_online_secondary_source"
       },
       "title": "Vladas Būtėnas, Pennsylvanijos angliakasių Lietuva — Šv. Mykolo parapija"
     },

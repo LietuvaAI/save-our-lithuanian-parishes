@@ -19,10 +19,10 @@ const projection = read("canonical-publication-projection.json");
 const infographic = read("canonical-infographic-projection.json");
 const adjudications = read("canonical-public-census-adjudications.json");
 
-const TARGET_REVISION = 20;
+const TARGET_REVISION = 21;
 const TARGET_DATE = "2026-08-03";
 const CHANGELOG =
-  "Registry Revision 20: corrected worship-building classification, promoted nine evidence-backed site conditions, rejected semantically unresolved founding dates, and limited institution building summaries to terminal-site authority.";
+  "Registry Revision 21: attached the verified direct Žiburio archive item for the Būtėnas Shenandoah chronology source without changing canonical counts or adjudications.";
 
 if (projection.schema !== "culturenet-parish-publication-projection.v1") {
   throw new Error(`Unsupported publication projection schema: ${projection.schema}`);
@@ -206,12 +206,12 @@ const revisionEntry = {
   publicUSRecords: publicRecords.length,
   usRomanCatholicParishes: romanCatholicParishes,
   summary:
-    "Corrected physical-site coverage and founding-date semantics without changing the 155-institution public census.",
+    "Published the direct Žiburio archive source link for the Shenandoah 1872–1891 chronology without changing the 155-institution public census.",
   evidence: [
     "data/canonical-publication-projection.json",
     "data/canonical-infographic-projection.json",
     "data/canonical-public-census-adjudications.json",
-    "data/candidates/registry-revision-20-building-condition-coverage-2026-08-03.md",
+    "data/candidates/registry-revision-21-ziburio-source-link-2026-08-03.md",
   ],
 };
 const priorRevision = revisions.revisions.find(
@@ -243,33 +243,18 @@ const closedCatholicInstitutions = catholicInstitutions.filter(
 const catholicWorshipContinues = catholicInstitutions.filter((institution) =>
   ["active_parish", "mass_continues"].includes(institution.status_group),
 );
-const currentWorshipSiteIds = new Set(
-  catholicWorshipContinues.flatMap(
-    (institution) => institution.terminal_worship_site_ids ?? [],
-  ),
-);
-
-const report = `# Registry Revision 20: building-condition coverage and timeline dates
+const report = `# Registry Revision 21: Žiburio source link
 
 **Date:** ${TARGET_DATE}
 **Authority:** CultureNet parish publication projection
 **Public U.S. institutions:** ${publicRecords.length}
 **Count-risk rows:** 0
 
-This revision corrects physical-site classification, promotes evidence-backed conditions, and prevents non-founding dates from anchoring the institution timeline without changing institution identity or status counts.
+This provenance-only revision attaches the verified direct Žiburio archive item for Vladas Būtėnas, *Pensylvanijos angliakasių Lietuva*, printed pp. 15–20. It changes no institution identity, lifecycle adjudication, site classification, or public count.
 
-- ${catholicWorshipContinues.length} Roman Catholic institution lines retain Lithuanian worship.
-- Those lines use ${currentWorshipSiteIds.size} current worship sites; Saint Andrew, Philadelphia also uses the retained Saint Casimir church.
-- Every current site carries an explicit canonical \`building-standing\` relationship with provenance.
-- St. Ann of the Dunes, Beverly Shores now has its own canonical Golfwood Road worship-site entity.
-- Chicago Immaculate Conception is linked to its existing 44th Street church through the 2019 merger.
-- Rochester Saint George summarizes from the standing Our Lady of Lourdes host church while preserving the former Hudson Avenue church as a separate repurposed site.
-- The Darien Lutheran host church now carries the same explicit standing evidence required for living Catholic worship sites.
-- Four post-demolition lots or replacement structures are classified as redevelopment context rather than worship buildings.
-- Saint George Detroit, Saint Mary Kingston, Saint Mary National Philadelphia, and Sacred Heart Luzerne now carry explicit demolition relationships.
-- Freeland's 1880 settlement date and Manhattan's explicitly unresolved 1905 reading no longer anchor institution lines.
-- Saint George Shenandoah remains a distinct 1891 institution; its 1872 Lithuanian-Polish predecessor remains separate historical context.
-- Institution building fate is published only from a terminal-site condition. Site Revision 10 fate remains compatibility context and is never rendering authority.
+- Direct source: https://archyvas.ziburioltmokykla.org/item/20260802_1785700061361
+- The source preserves the distinction between the 1872 joint Lithuanian–Polish Saint Casimir predecessor and the separate Lithuanian Saint George parish organized in 1891.
+- The canonical source status is now \`published_online_secondary_source\`; no pending-link qualifier remains.
 
 The canonical Roman Catholic population is ${catholicInstitutions.length}: ${romanCatholicParishes} parishes plus ${catholicMissions.length} missions. Of these, ${closedCatholicInstitutions.length} are closed and ${catholicWorshipContinues.length} retain Lithuanian worship.
 The physical worship-site history now contains ${infographic.counts.physical_worship_sites} sites. The four-record decrease from 134 reflects corrected classification of post-demolition lots and replacement structures, not deleted evidence.
@@ -293,7 +278,7 @@ write("registry-unified.json", registry);
 write("registry-revisions.json", revisions);
 writeFileSync(
   new URL(
-    "../data/candidates/registry-revision-20-building-condition-coverage-2026-08-03.md",
+    "../data/candidates/registry-revision-21-ziburio-source-link-2026-08-03.md",
     import.meta.url,
   ),
   report,
