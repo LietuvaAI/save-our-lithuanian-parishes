@@ -429,6 +429,26 @@ const institutionFlowPage = readFileSync(
   new URL("../app/where-every-parish-ended-up/page.tsx", import.meta.url),
   "utf8",
 );
+const parishThreadsComponent = readFileSync(
+  new URL("../components/ParishThreads.tsx", import.meta.url),
+  "utf8",
+);
+if (
+  !institutionFlowPage.includes("additionalCurrentHostedCommunities") ||
+  !institutionFlowPage.includes("additionalHostedCommunities=")
+) {
+  errors.push(
+    "institution flow does not project additional current hosted communities from Brain",
+  );
+}
+if (
+  !parishThreadsComponent.includes('open === "g:mass_continues"') ||
+  !parishThreadsComponent.includes("not one of the 137 historical")
+) {
+  errors.push(
+    "Mass-continues drawer does not separate the additional current hosted community",
+  );
+}
 if (!/romanCatholicInstitutionHistory/.test(institutionFlowPage)) {
   errors.push("institution-outcome view does not use the canonical parish-and-mission population");
 }

@@ -48,6 +48,15 @@ export interface ThreadParish {
   href: string | null;
 }
 
+export interface AdditionalHostedCommunity {
+  id: string;
+  name: string;
+  city: string;
+  state: string;
+  ministry: string;
+  officialSite?: string;
+}
+
 const FATE_LABEL: Record<FateKey, string> = {
   demolished: "Building demolished",
   repurposed: "Building repurposed",
@@ -118,8 +127,10 @@ const fold = (s: string) =>
 
 export default function ParishThreads({
   parishes,
+  additionalHostedCommunities = [],
 }: {
   parishes: ThreadParish[];
+  additionalHostedCommunities?: AdditionalHostedCommunity[];
 }) {
   const router = useRouter();
   const [hot, setHot] = useState<string | null>(null); // slug | band key
@@ -813,6 +824,49 @@ export default function ParishThreads({
                 </li>
               ))}
             </ul>
+            {open === "g:mass_continues" &&
+            additionalHostedCommunities.length > 0 ? (
+              <div className="mt-5 border-t border-rule pt-4">
+                <h4 className="font-serif text-base font-semibold">
+                  Additional current hosted community
+                  <span className="ml-2 font-sans text-sm font-normal text-muted">
+                    · {additionalHostedCommunities.length}
+                  </span>
+                </h4>
+                <p className="mt-1 max-w-3xl text-sm text-muted">
+                  Current Lithuanian worship outside the 137 historical
+                  Lithuanian parish and mission institutions.
+                </p>
+                <ul className="mt-3 grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-3">
+                  {additionalHostedCommunities.map((community) => (
+                    <li
+                      key={community.id}
+                      className="border border-rule bg-background p-3"
+                    >
+                      {community.officialSite ? (
+                        <a
+                          href={community.officialSite}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="font-medium underline decoration-rule underline-offset-2 hover:decoration-inherit"
+                        >
+                          {community.name}
+                        </a>
+                      ) : (
+                        <span className="font-medium">{community.name}</span>
+                      )}
+                      <span className="mt-1 block text-xs text-muted">
+                        {community.city}, {community.state} · {community.ministry}
+                      </span>
+                      <span className="mt-2 block text-xs font-semibold">
+                        Current hosted community — not one of the 137 historical
+                        institutions
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
           </section>
         ) : null}
       </div>

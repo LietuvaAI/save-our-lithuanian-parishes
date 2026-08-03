@@ -5,6 +5,7 @@ import ParishThreads, {
   type ThreadParish,
 } from "@/components/ParishThreads";
 import {
+  additionalCurrentHostedCommunities,
   canonicalInfographics,
   romanCatholicInstitutionHistory,
   romanCatholicMissionHistory,
@@ -113,7 +114,19 @@ export default function ParishOutcomeFlowPage() {
       </section>
 
       <section className="mt-6">
-        <ParishThreads parishes={threads} />
+        <ParishThreads
+          parishes={threads}
+          additionalHostedCommunities={additionalCurrentHostedCommunities.map(
+            (community) => ({
+              id: community.id,
+              name: community.nameLt,
+              city: community.city,
+              state: community.state,
+              ministry: community.ministry,
+              officialSite: community.officialSite ?? undefined,
+            }),
+          )}
+        />
       </section>
 
       <p className="mt-8 border-t border-rule pt-4 text-xs leading-relaxed text-muted">
