@@ -229,6 +229,20 @@
         "data/canonical-public-census-adjudications.json",
         "data/candidates/registry-revision-19-living-worship-sites-2026-08-03.md"
       ]
+    },
+    {
+      "version": 20,
+      "date": "2026-08-03",
+      "registryRecords": 193,
+      "publicUSRecords": 155,
+      "usRomanCatholicParishes": 132,
+      "summary": "Corrected physical-site coverage and founding-date semantics without changing the 155-institution public census.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/canonical-public-census-adjudications.json",
+        "data/candidates/registry-revision-20-building-condition-coverage-2026-08-03.md"
+      ]
     }
   ]
 }

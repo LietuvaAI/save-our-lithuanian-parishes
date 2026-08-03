@@ -3992,6 +3992,236 @@
     },
     {
       "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:coverage-17:darien-st-john-lutheran",
+      "object": {
+        "canonical_entity_id": "cn:building_site:st-john-lutheran-cass-avenue-darien-il",
+        "condition": "building-standing",
+        "date": {
+          "certainty": "official current congregation sources",
+          "end": null,
+          "label": "standing in documented current Lutheran worship use",
+          "start": "2026-08-03"
+        }
+      },
+      "observed_at": "2026-08-03",
+      "predicate": "building_standing",
+      "source_artifact_id": "src:coverage-17:darien",
+      "source_locator": "7214 South Cass Avenue and current Lithuanian services",
+      "subject": {
+        "canonical_entity_id": "cn:event:darien-st-john-lutheran-condition-assessment"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:coverage-17:detroit-st-george",
+      "object": {
+        "canonical_entity_id": "cn:building_site:st-george-detroit-westminster-cardoni-site",
+        "condition": "building-demolished",
+        "date": {
+          "certainty": "page-cited parish history",
+          "end": "1966-02-04",
+          "label": "brick church demolished February 4, 1966",
+          "start": "1966-02-04"
+        }
+      },
+      "observed_at": "2026-08-03",
+      "predicate": "building_demolished",
+      "source_artifact_id": "src:coverage-17:detroit",
+      "source_locator": "St. George church chronology and February 4, 1966 demolition",
+      "subject": {
+        "canonical_entity_id": "cn:event:detroit-st-george-condition-assessment"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "medium",
+      "id": "assert:coverage-17:frackville-annunciation-church",
+      "object": {
+        "canonical_entity_id": "cn:building_site:annunciation-bvm-church-frackville-pa",
+        "condition": "building-standing",
+        "date": {
+          "certainty": "reviewed current-condition case file",
+          "end": null,
+          "label": "standing as a current secondary church",
+          "start": "2026-07-16"
+        }
+      },
+      "observed_at": "2026-08-03",
+      "predicate": "building_standing",
+      "source_artifact_id": "src:coverage-17:frackville",
+      "source_locator": "standing church and chapel/youth-center Eucharistic Adoration",
+      "subject": {
+        "canonical_entity_id": "cn:event:frackville-annunciation-church-condition-assessment"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "medium",
+      "id": "assert:coverage-17:frackville-chapel",
+      "object": {
+        "canonical_entity_id": "cn:building_site:annunciation-chapel-youth-center-frackville-pa",
+        "condition": "building-standing",
+        "date": {
+          "certainty": "reviewed current-condition case file",
+          "end": null,
+          "label": "standing in documented current chapel use",
+          "start": "2026-07-16"
+        }
+      },
+      "observed_at": "2026-08-03",
+      "predicate": "building_standing",
+      "source_artifact_id": "src:coverage-17:frackville",
+      "source_locator": "standing church and chapel/youth-center Eucharistic Adoration",
+      "subject": {
+        "canonical_entity_id": "cn:event:frackville-chapel-condition-assessment"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "medium",
+      "id": "assert:coverage-17:kingston-st-mary",
+      "object": {
+        "canonical_entity_id": "cn:building_site:st-mary-annunciation-church-kingston-pa",
+        "condition": "building-demolished",
+        "date": {
+          "certainty": "heritage survey; exact day unresolved",
+          "end": "2016",
+          "label": "church demolished in 2016",
+          "start": "2016"
+        }
+      },
+      "observed_at": "2026-08-03",
+      "predicate": "building_demolished",
+      "source_artifact_id": "src:coverage-17:kingston",
+      "source_locator": "2016 demolition and vacant-lot site lineage",
+      "subject": {
+        "canonical_entity_id": "cn:event:kingston-st-mary-condition-assessment"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:coverage-17:luzerne-sacred-heart",
+      "object": {
+        "canonical_entity_id": "cn:building_site:sacred-heart-church-luzerne-pa",
+        "condition": "building-demolished",
+        "date": {
+          "certainty": "reviewed case file; exact dates unresolved",
+          "label": "sold and demolished after the 1999 consolidation"
+        }
+      },
+      "observed_at": "2026-08-03",
+      "predicate": "building_demolished",
+      "source_artifact_id": "src:coverage-17:luzerne",
+      "source_locator": "surviving Saint Ann site and demolished Sacred Heart site",
+      "subject": {
+        "canonical_entity_id": "cn:event:luzerne-sacred-heart-condition-assessment"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:coverage-17:luzerne-st-ann",
+      "object": {
+        "canonical_entity_id": "cn:building_site:st-ann-bennett-street-luzerne-pa",
+        "condition": "building-standing",
+        "date": {
+          "certainty": "reviewed current-condition case file",
+          "end": null,
+          "label": "standing in active successor-parish worship use",
+          "start": "2026-07-16"
+        }
+      },
+      "observed_at": "2026-08-03",
+      "predicate": "building_standing",
+      "source_artifact_id": "src:coverage-17:luzerne",
+      "source_locator": "surviving Saint Ann site and demolished Sacred Heart site",
+      "subject": {
+        "canonical_entity_id": "cn:event:luzerne-st-ann-condition-assessment"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "medium",
+      "id": "assert:coverage-17:philadelphia-st-mary-national",
+      "object": {
+        "canonical_entity_id": "cn:building_site:st-mary-national-church-reed-philadelphia-pa",
+        "condition": "building-demolished",
+        "date": {
+          "certainty": "case-file lineage; exact date unresolved",
+          "label": "church demolished before the documented vacant-lot state"
+        }
+      },
+      "observed_at": "2026-08-03",
+      "predicate": "building_demolished",
+      "source_artifact_id": "src:coverage-17:philadelphia",
+      "source_locator": "demolished church, vacant lot, and townhouse redevelopment",
+      "subject": {
+        "canonical_entity_id": "cn:event:philadelphia-st-mary-national-condition-assessment"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:coverage-17:westfield-st-peter",
+      "object": {
+        "canonical_entity_id": "cn:building_site:st-peter-state-street-westfield-ma",
+        "condition": "building-standing",
+        "date": {
+          "certainty": "official diocesan publication",
+          "end": null,
+          "label": "retained successor worship site",
+          "start": "2017-09-11"
+        }
+      },
+      "observed_at": "2026-08-03",
+      "predicate": "building_standing",
+      "source_artifact_id": "src:coverage-17:westfield",
+      "source_locator": "2003 merger and retained State Street church",
+      "subject": {
+        "canonical_entity_id": "cn:event:westfield-st-peter-condition-assessment"
+      }
+    },
+    {
+      "adjudication": {
         "conflict_preserved": true,
         "state": "conflict_preserved"
       },
@@ -7271,6 +7501,26 @@
       "source_locator": "North America directory entry identifies Annunciation church at 259 North 5th Street",
       "subject": {
         "canonical_entity_id": "cn:institution:annunciation-bvm-williamsburg-ny"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "identity_lifecycle",
+      "confidence": "high",
+      "id": "assert:lineage-1:butenas-shenandoah-1872-1891-distinction",
+      "object": {
+        "predecessor": "joint Lithuanian-Polish Saint Casimir society organized in 1872",
+        "saint_george": "separate Lithuanian Saint George parish organized February 12, 1891",
+        "status": "the 1872 predecessor origin and 1891 Saint George institution start are distinct"
+      },
+      "predicate": "published_history_distinguishes_predecessor_from_saint_george_parish",
+      "source_artifact_id": "src:lineage-1:butenas-pensylvanijos-angliakasiu-lietuva:1977:pp15-20",
+      "source_locator": "Printed p. 15 identifies the 1872 joint society; printed p. 18 identifies the February 12, 1891 Saint George parish organization",
+      "subject": {
+        "canonical_entity_id": "cn:institution:st-george-shenandoah-pa"
       }
     },
     {
@@ -12880,6 +13130,34 @@
       "slug": "annunciation-williamsburg-north-fifth-street-standing-current-worship"
     },
     {
+      "aliases": [],
+      "canonical_name": "Condition assessment for darien-st-john-lutheran",
+      "entity_type": "event",
+      "id": "cn:event:darien-st-john-lutheran-condition-assessment",
+      "lifecycle": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:coverage-17:darien-st-john-lutheran"
+        ],
+        "start": "2026-08-03"
+      },
+      "slug": "darien-st-john-lutheran-condition-assessment"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Condition assessment for detroit-st-george",
+      "entity_type": "event",
+      "id": "cn:event:detroit-st-george-condition-assessment",
+      "lifecycle": {
+        "end": "1966-02-04",
+        "source_assertion_ids": [
+          "assert:coverage-17:detroit-st-george"
+        ],
+        "start": "1966-02-04"
+      },
+      "slug": "detroit-st-george-condition-assessment"
+    },
+    {
       "aliases": [
         "Schaefer church demolition"
       ],
@@ -12895,6 +13173,34 @@
       "entity_type": "event",
       "id": "cn:event:divine-providence-southfield-site-standing-current-worship",
       "slug": "divine-providence-southfield-site-standing-current-worship"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Condition assessment for frackville-annunciation-church",
+      "entity_type": "event",
+      "id": "cn:event:frackville-annunciation-church-condition-assessment",
+      "lifecycle": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:coverage-17:frackville-annunciation-church"
+        ],
+        "start": "2026-07-16"
+      },
+      "slug": "frackville-annunciation-church-condition-assessment"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Condition assessment for frackville-chapel",
+      "entity_type": "event",
+      "id": "cn:event:frackville-chapel-condition-assessment",
+      "lifecycle": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:coverage-17:frackville-chapel"
+        ],
+        "start": "2026-07-16"
+      },
+      "slug": "frackville-chapel-condition-assessment"
     },
     {
       "aliases": [],
@@ -12968,10 +13274,52 @@
     },
     {
       "aliases": [],
+      "canonical_name": "Condition assessment for kingston-st-mary",
+      "entity_type": "event",
+      "id": "cn:event:kingston-st-mary-condition-assessment",
+      "lifecycle": {
+        "end": "2016",
+        "source_assertion_ids": [
+          "assert:coverage-17:kingston-st-mary"
+        ],
+        "start": "2016"
+      },
+      "slug": "kingston-st-mary-condition-assessment"
+    },
+    {
+      "aliases": [],
       "canonical_name": "Current-worship standing condition for lithuanian-world-center-mission-church-lemont-il",
       "entity_type": "event",
       "id": "cn:event:lithuanian-world-center-mission-church-lemont-il-standing-current-worship",
       "slug": "lithuanian-world-center-mission-church-lemont-il-standing-current-worship"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Condition assessment for luzerne-sacred-heart",
+      "entity_type": "event",
+      "id": "cn:event:luzerne-sacred-heart-condition-assessment",
+      "lifecycle": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:coverage-17:luzerne-sacred-heart"
+        ],
+        "start": null
+      },
+      "slug": "luzerne-sacred-heart-condition-assessment"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Condition assessment for luzerne-st-ann",
+      "entity_type": "event",
+      "id": "cn:event:luzerne-st-ann-condition-assessment",
+      "lifecycle": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:coverage-17:luzerne-st-ann"
+        ],
+        "start": "2026-07-16"
+      },
+      "slug": "luzerne-st-ann-condition-assessment"
     },
     {
       "aliases": [],
@@ -13035,6 +13383,20 @@
         "start": "1914"
       },
       "slug": "our-lady-vilna-fire-1914"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Condition assessment for philadelphia-st-mary-national",
+      "entity_type": "event",
+      "id": "cn:event:philadelphia-st-mary-national-condition-assessment",
+      "lifecycle": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:coverage-17:philadelphia-st-mary-national"
+        ],
+        "start": null
+      },
+      "slug": "philadelphia-st-mary-national-condition-assessment"
     },
     {
       "aliases": [],
@@ -13512,6 +13874,20 @@
       "entity_type": "event",
       "id": "cn:event:transfiguration-maspeth-hull-fire-1925",
       "slug": "transfiguration-maspeth-hull-fire-1925"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Condition assessment for westfield-st-peter",
+      "entity_type": "event",
+      "id": "cn:event:westfield-st-peter-condition-assessment",
+      "lifecycle": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:coverage-17:westfield-st-peter"
+        ],
+        "start": "2017-09-11"
+      },
+      "slug": "westfield-st-peter-condition-assessment"
     },
     {
       "aliases": [
@@ -17127,7 +17503,7 @@
       "slug": "robert-damyanovich"
     }
   ],
-  "content_hash": "sha256:0939f80de42cf16d6451a4d6d1510b6fc5b4c1eab84081a12dc024ab99a4264f",
+  "content_hash": "sha256:27debd93bc909cc92fcec4990c8ebba0ca154dddcc6dc96c8217c0eab675ed06",
   "counts": {
     "by_institution_class": {
       "independent_catholic": 4,
@@ -25713,6 +26089,7 @@
       "city": "Shenandoah",
       "culturenet_entity_id": "cn:institution:st-george-shenandoah-pa",
       "evidence_assertion_ids": [
+        "assert:lineage-1:butenas-shenandoah-1872-1891-distinction",
         "assert:lineage-1:shenandoah-closed-2006",
         "assert:lineage-1:shenandoah-closure-dispute-2008",
         "assert:lineage-1:shenandoah-st-george-1891",
@@ -25729,6 +26106,7 @@
       "registry_projection_profile": "/parishes/george-shenandoah-pa",
       "registry_slug": "george-shenandoah-pa",
       "source_artifact_ids": [
+        "src:lineage-1:butenas-pensylvanijos-angliakasiu-lietuva:1977:pp15-20",
         "src:lineage-1:draugas-shenandoah-demolition:2009-10-27:p6",
         "src:lineage-1:draugas-shenandoah-jubilee:1941-11-03:p2",
         "src:lineage-1:draugas-shenandoah-threat:2008-03-27:p4"
@@ -30802,6 +31180,465 @@
         "entity_id": "cn:building_site:our-lady-siluva-35th-union-chicago-il",
         "entity_type": "building_site",
         "slug": "our-lady-siluva-35th-union-chicago-il"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:coverage-17:darien-st-john-lutheran",
+          "observed_at": "2026-08-03"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "official current congregation sources",
+        "end": null,
+        "label": "standing in documented current Lutheran worship use",
+        "start": "2026-08-03"
+      },
+      "evidence_assertion_ids": [
+        "assert:coverage-17:darien-st-john-lutheran"
+      ],
+      "id": "rel:coverage-17:darien-st-john-lutheran",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Condition assessment for darien-st-john-lutheran",
+        "entity_id": "cn:event:darien-st-john-lutheran-condition-assessment",
+        "entity_type": "event",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:coverage-17:darien-st-john-lutheran"
+          ],
+          "start": "2026-08-03"
+        },
+        "slug": "darien-st-john-lutheran-condition-assessment"
+      },
+      "source_artifact_ids": [
+        "src:coverage-17:darien"
+      ],
+      "target": {
+        "display_name": "St. John Lutheran church site, Darien",
+        "entity_id": "cn:building_site:st-john-lutheran-cass-avenue-darien-il",
+        "entity_type": "building_site",
+        "slug": "st-john-lutheran-cass-avenue-darien-il"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:coverage-17:detroit-st-george",
+          "observed_at": "2026-08-03"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "page-cited parish history",
+        "end": "1966-02-04",
+        "label": "brick church demolished February 4, 1966",
+        "start": "1966-02-04"
+      },
+      "evidence_assertion_ids": [
+        "assert:coverage-17:detroit-st-george"
+      ],
+      "id": "rel:coverage-17:detroit-st-george",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-demolished",
+      "source": {
+        "display_name": "Condition assessment for detroit-st-george",
+        "entity_id": "cn:event:detroit-st-george-condition-assessment",
+        "entity_type": "event",
+        "lifecycle": {
+          "end": "1966-02-04",
+          "source_assertion_ids": [
+            "assert:coverage-17:detroit-st-george"
+          ],
+          "start": "1966-02-04"
+        },
+        "slug": "detroit-st-george-condition-assessment"
+      },
+      "source_artifact_ids": [
+        "src:coverage-17:detroit"
+      ],
+      "target": {
+        "display_name": "St. George Detroit church site",
+        "entity_id": "cn:building_site:st-george-detroit-westminster-cardoni-site",
+        "entity_type": "building_site",
+        "slug": "st-george-detroit-westminster-cardoni-site"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:coverage-17:frackville-annunciation-church",
+          "observed_at": "2026-08-03"
+        }
+      ],
+      "confidence": "medium",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "reviewed current-condition case file",
+        "end": null,
+        "label": "standing as a current secondary church",
+        "start": "2026-07-16"
+      },
+      "evidence_assertion_ids": [
+        "assert:coverage-17:frackville-annunciation-church"
+      ],
+      "id": "rel:coverage-17:frackville-annunciation-church",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Condition assessment for frackville-annunciation-church",
+        "entity_id": "cn:event:frackville-annunciation-church-condition-assessment",
+        "entity_type": "event",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:coverage-17:frackville-annunciation-church"
+          ],
+          "start": "2026-07-16"
+        },
+        "slug": "frackville-annunciation-church-condition-assessment"
+      },
+      "source_artifact_ids": [
+        "src:coverage-17:frackville"
+      ],
+      "target": {
+        "display_name": "Annunciation BVM church, Frackville",
+        "entity_id": "cn:building_site:annunciation-bvm-church-frackville-pa",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:ef-5:frackville-sites"
+          ],
+          "start": "1934"
+        },
+        "slug": "annunciation-bvm-church-frackville-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:coverage-17:frackville-chapel",
+          "observed_at": "2026-08-03"
+        }
+      ],
+      "confidence": "medium",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "reviewed current-condition case file",
+        "end": null,
+        "label": "standing in documented current chapel use",
+        "start": "2026-07-16"
+      },
+      "evidence_assertion_ids": [
+        "assert:coverage-17:frackville-chapel"
+      ],
+      "id": "rel:coverage-17:frackville-chapel",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Condition assessment for frackville-chapel",
+        "entity_id": "cn:event:frackville-chapel-condition-assessment",
+        "entity_type": "event",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:coverage-17:frackville-chapel"
+          ],
+          "start": "2026-07-16"
+        },
+        "slug": "frackville-chapel-condition-assessment"
+      },
+      "source_artifact_ids": [
+        "src:coverage-17:frackville"
+      ],
+      "target": {
+        "display_name": "Saint Joseph the Worker chapel and youth center, Frackville",
+        "entity_id": "cn:building_site:annunciation-chapel-youth-center-frackville-pa",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:ef-5:frackville-sites"
+          ],
+          "start": null
+        },
+        "slug": "annunciation-chapel-youth-center-frackville-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:coverage-17:kingston-st-mary",
+          "observed_at": "2026-08-03"
+        }
+      ],
+      "confidence": "medium",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "heritage survey; exact day unresolved",
+        "end": "2016",
+        "label": "church demolished in 2016",
+        "start": "2016"
+      },
+      "evidence_assertion_ids": [
+        "assert:coverage-17:kingston-st-mary"
+      ],
+      "id": "rel:coverage-17:kingston-st-mary",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-demolished",
+      "source": {
+        "display_name": "Condition assessment for kingston-st-mary",
+        "entity_id": "cn:event:kingston-st-mary-condition-assessment",
+        "entity_type": "event",
+        "lifecycle": {
+          "end": "2016",
+          "source_assertion_ids": [
+            "assert:coverage-17:kingston-st-mary"
+          ],
+          "start": "2016"
+        },
+        "slug": "kingston-st-mary-condition-assessment"
+      },
+      "source_artifact_ids": [
+        "src:coverage-17:kingston"
+      ],
+      "target": {
+        "display_name": "Saint Mary of the Annunciation church, Kingston",
+        "entity_id": "cn:building_site:st-mary-annunciation-church-kingston-pa",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": "demolished 2016, exact year probable",
+          "source_assertion_ids": [
+            "assert:pcs-6:kingston-sites"
+          ],
+          "start": "1903 basement; 1908 upper church"
+        },
+        "slug": "st-mary-annunciation-church-kingston-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:coverage-17:luzerne-sacred-heart",
+          "observed_at": "2026-08-03"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "reviewed case file; exact dates unresolved",
+        "label": "sold and demolished after the 1999 consolidation"
+      },
+      "evidence_assertion_ids": [
+        "assert:coverage-17:luzerne-sacred-heart"
+      ],
+      "id": "rel:coverage-17:luzerne-sacred-heart",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-demolished",
+      "source": {
+        "display_name": "Condition assessment for luzerne-sacred-heart",
+        "entity_id": "cn:event:luzerne-sacred-heart-condition-assessment",
+        "entity_type": "event",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:coverage-17:luzerne-sacred-heart"
+          ],
+          "start": null
+        },
+        "slug": "luzerne-sacred-heart-condition-assessment"
+      },
+      "source_artifact_ids": [
+        "src:coverage-17:luzerne"
+      ],
+      "target": {
+        "display_name": "Sacred Heart of Jesus church, Luzerne",
+        "entity_id": "cn:building_site:sacred-heart-church-luzerne-pa",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": "sold and demolished after consolidation; exact dates unresolved",
+          "source_assertion_ids": [
+            "assert:pcs-6:luzerne-sites"
+          ]
+        },
+        "slug": "sacred-heart-church-luzerne-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:coverage-17:luzerne-st-ann",
+          "observed_at": "2026-08-03"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "reviewed current-condition case file",
+        "end": null,
+        "label": "standing in active successor-parish worship use",
+        "start": "2026-07-16"
+      },
+      "evidence_assertion_ids": [
+        "assert:coverage-17:luzerne-st-ann"
+      ],
+      "id": "rel:coverage-17:luzerne-st-ann",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Condition assessment for luzerne-st-ann",
+        "entity_id": "cn:event:luzerne-st-ann-condition-assessment",
+        "entity_type": "event",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:coverage-17:luzerne-st-ann"
+          ],
+          "start": "2026-07-16"
+        },
+        "slug": "luzerne-st-ann-condition-assessment"
+      },
+      "source_artifact_ids": [
+        "src:coverage-17:luzerne"
+      ],
+      "target": {
+        "display_name": "Former Saint Ann church, Luzerne",
+        "entity_id": "cn:building_site:st-ann-bennett-street-luzerne-pa",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": "standing in active Holy Family Parish use",
+          "source_assertion_ids": [
+            "assert:pcs-6:luzerne-sites"
+          ],
+          "start": "1924 basement church; 1960 upper worship level"
+        },
+        "slug": "st-ann-bennett-street-luzerne-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:coverage-17:philadelphia-st-mary-national",
+          "observed_at": "2026-08-03"
+        }
+      ],
+      "confidence": "medium",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "case-file lineage; exact date unresolved",
+        "label": "church demolished before the documented vacant-lot state"
+      },
+      "evidence_assertion_ids": [
+        "assert:coverage-17:philadelphia-st-mary-national"
+      ],
+      "id": "rel:coverage-17:philadelphia-st-mary-national",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-demolished",
+      "source": {
+        "display_name": "Condition assessment for philadelphia-st-mary-national",
+        "entity_id": "cn:event:philadelphia-st-mary-national-condition-assessment",
+        "entity_type": "event",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:coverage-17:philadelphia-st-mary-national"
+          ],
+          "start": null
+        },
+        "slug": "philadelphia-st-mary-national-condition-assessment"
+      },
+      "source_artifact_ids": [
+        "src:coverage-17:philadelphia"
+      ],
+      "target": {
+        "display_name": "Saint Mary Lithuanian National Catholic church, Philadelphia",
+        "entity_id": "cn:building_site:st-mary-national-church-reed-philadelphia-pa",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": "demolished; exact date unresolved",
+          "source_assertion_ids": [
+            "assert:nsp-8:st-mary-philadelphia-sites"
+          ]
+        },
+        "slug": "st-mary-national-church-reed-philadelphia-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:coverage-17:westfield-st-peter",
+          "observed_at": "2026-08-03"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "official diocesan publication",
+        "end": null,
+        "label": "retained successor worship site",
+        "start": "2017-09-11"
+      },
+      "evidence_assertion_ids": [
+        "assert:coverage-17:westfield-st-peter"
+      ],
+      "id": "rel:coverage-17:westfield-st-peter",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Condition assessment for westfield-st-peter",
+        "entity_id": "cn:event:westfield-st-peter-condition-assessment",
+        "entity_type": "event",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:coverage-17:westfield-st-peter"
+          ],
+          "start": "2017-09-11"
+        },
+        "slug": "westfield-st-peter-condition-assessment"
+      },
+      "source_artifact_ids": [
+        "src:coverage-17:westfield"
+      ],
+      "target": {
+        "display_name": "St. Peter church, 24 State Street, Westfield",
+        "entity_id": "cn:building_site:st-peter-state-street-westfield-ma",
+        "entity_type": "building_site",
+        "slug": "st-peter-state-street-westfield-ma"
       }
     },
     {
@@ -45394,7 +46231,7 @@
       }
     }
   ],
-  "revision_id": "canonical-public-census-2026-08-03-living-worship-sites",
+  "revision_id": "canonical-public-census-2026-08-03-building-condition-coverage",
   "schema": "culturenet-parish-publication-projection.v1",
   "scope": {
     "country": "US",
@@ -46775,6 +47612,118 @@
         "status": "page_cited_secondary_source"
       },
       "title": "William Wolkovich-Valkavicius, Lithuanian Religious Life in America, Volume 3"
+    },
+    {
+      "artifact_type": "official_current_church_sources",
+      "id": "src:coverage-17:darien",
+      "locator": {
+        "exact_label": "Tėviškė directory and St. John Lutheran current-site records",
+        "page": "public web records",
+        "section": "7214 South Cass Avenue and current Lithuanian services"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://www.stjohnslutheran.org/",
+        "quote_policy": "cite and summarize",
+        "status": "official_current_site"
+      },
+      "title": "Tėviškė and St. John Lutheran current Darien worship records"
+    },
+    {
+      "artifact_type": "public_archive_book",
+      "id": "src:coverage-17:detroit",
+      "locator": {
+        "exact_label": "Dievo Apvaizdos lietuviu parapija / Divine Providence Lithuanian Parish, 1908-1973",
+        "page": "printed pp. 11-14 and 21-24",
+        "section": "St. George church chronology and February 4, 1966 demolition"
+      },
+      "rights": {
+        "access": "public Žiburio archive item",
+        "public_url": "https://archyvas.ziburioltmokykla.org/item/20260331_1774920079895",
+        "quote_policy": "cite by edition and page; link to the public archive item",
+        "status": "public_archive"
+      },
+      "title": "Divine Providence Lithuanian Parish first-edition history, 1908-1973"
+    },
+    {
+      "artifact_type": "canonical_case_file",
+      "id": "src:coverage-17:frackville",
+      "locator": {
+        "exact_label": "Current-condition case file: sv-m-marijos-apsireiskimo-frackville-pa",
+        "page": "JSON record",
+        "section": "standing church and chapel/youth-center Eucharistic Adoration"
+      },
+      "rights": {
+        "access": "repository",
+        "public_url": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-m-marijos-apsireiskimo-frackville-pa.json",
+        "quote_policy": "cite underlying sources",
+        "status": "brain_canonical_evidence"
+      },
+      "title": "Annunciation BVM Frackville current-condition case file"
+    },
+    {
+      "artifact_type": "canonical_case_file",
+      "id": "src:coverage-17:kingston",
+      "locator": {
+        "exact_label": "Current-condition case file: sv-marijos-apreiskimo-kingston-pa",
+        "page": "JSON record",
+        "section": "2016 demolition and vacant-lot site lineage"
+      },
+      "rights": {
+        "access": "repository",
+        "public_url": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-marijos-apreiskimo-kingston-pa.json",
+        "quote_policy": "cite underlying sources and preserve demolition-year confidence",
+        "status": "brain_canonical_evidence"
+      },
+      "title": "Saint Mary of the Annunciation Kingston current-condition case file"
+    },
+    {
+      "artifact_type": "canonical_case_file",
+      "id": "src:coverage-17:luzerne",
+      "locator": {
+        "exact_label": "Current-condition case file: sv-onos-luzerne-pa",
+        "page": "JSON record",
+        "section": "surviving Saint Ann site and demolished Sacred Heart site"
+      },
+      "rights": {
+        "access": "repository",
+        "public_url": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-onos-luzerne-pa.json",
+        "quote_policy": "cite underlying sources and retain unresolved transaction details",
+        "status": "brain_canonical_evidence"
+      },
+      "title": "Saint Ann Luzerne current-condition case file"
+    },
+    {
+      "artifact_type": "canonical_case_file",
+      "id": "src:coverage-17:philadelphia",
+      "locator": {
+        "exact_label": "Current-condition case file: sv-marijos-tautine-kataliku-parapija-philadelphia-pa",
+        "page": "JSON record",
+        "section": "demolished church, vacant lot, and townhouse redevelopment"
+      },
+      "rights": {
+        "access": "repository",
+        "public_url": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-marijos-tautine-kataliku-parapija-philadelphia-pa.json",
+        "quote_policy": "cite underlying sources and preserve unresolved demolition date",
+        "status": "brain_canonical_evidence"
+      },
+      "title": "Saint Mary Lithuanian National Catholic Philadelphia current-condition case file"
+    },
+    {
+      "artifact_type": "official_diocesan_news",
+      "id": "src:coverage-17:westfield",
+      "locator": {
+        "exact_label": "St. Peter and St. Casimir Parish celebrates centennials of founding parishes",
+        "page": "lines 49-54",
+        "section": "2003 merger and retained State Street church"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://iobserve.org/2017/09/11/st-peter-and-st-casimir-celebrate-centennials-of-founding-parishes/",
+        "quote_policy": "cite and summarize",
+        "status": "official_diocesan_publication"
+      },
+      "title": "St. Peter and St. Casimir Parish celebrates centennials of founding parishes"
     },
     {
       "artifact_type": "official_diocesan_directory",
@@ -48199,6 +49148,22 @@
         "status": "diocesan_news"
       },
       "title": "Annunciation rededication and merger report"
+    },
+    {
+      "artifact_type": "published_history_page_photographs",
+      "id": "src:lineage-1:butenas-pensylvanijos-angliakasiu-lietuva:1977:pp15-20",
+      "locator": {
+        "exact_label": "Vladas Būtėnas, Pensylvanijos angliakasių Lietuva, Pirmoji Amerikos lietuvių sostinė—Shenandoah",
+        "page": "printed pp. 15-20",
+        "section": "Saint Casimir predecessor history and Saint George parish organization"
+      },
+      "rights": {
+        "access": "Vilija-provided page photographs; Žiburio archive item reported available",
+        "public_url": null,
+        "quote_policy": "cite the volume and printed pages; summarize until the exact archive item URL is attached",
+        "status": "admitted_secondary_source_archive_url_pending"
+      },
+      "title": "Vladas Būtėnas, Pensylvanijos angliakasių Lietuva — Shenandoah Saint Casimir and Saint George"
     },
     {
       "artifact_type": "public_archive_pdf",

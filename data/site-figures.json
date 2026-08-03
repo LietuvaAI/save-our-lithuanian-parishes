@@ -1,11 +1,11 @@
 {
   "generatedFrom": {
-    "registryRevision": 19,
+    "registryRevision": 20,
     "registryDate": "2026-08-03",
-    "canonicalPublicationRevision": "canonical-public-census-2026-08-03-living-worship-sites",
-    "canonicalPublicationHash": "sha256:0939f80de42cf16d6451a4d6d1510b6fc5b4c1eab84081a12dc024ab99a4264f",
-    "canonicalInfographicRevision": "canonical-infographic-units-2026-08-03-living-worship-sites",
-    "canonicalInfographicHash": "sha256:ac458819c78df57ef6d1bdee50aecc6598e1e87e967d5537ef8c3ca73d2d0aa1",
+    "canonicalPublicationRevision": "canonical-public-census-2026-08-03-building-condition-coverage",
+    "canonicalPublicationHash": "sha256:27debd93bc909cc92fcec4990c8ebba0ca154dddcc6dc96c8217c0eab675ed06",
+    "canonicalInfographicRevision": "canonical-infographic-units-2026-08-03-building-condition-coverage",
+    "canonicalInfographicHash": "sha256:e29053ddc004b29b433aaadf93b8be1d6793116d59570796dd110a507a398cb6",
     "networkChecked": "2026-08-02"
   },
   "publicUS": {
@@ -53,9 +53,9 @@
       "unverified": 7
     },
     "closed": 87,
-    "closedWithDatedYear": 79,
-    "closedSince1990": 55,
-    "closedSince2020": 3,
+    "closedWithDatedYear": 78,
+    "closedSince1990": 54,
+    "closedSince2020": 2,
     "topClosureDioceses": [
       {
         "diocese": "Scranton",
@@ -83,7 +83,7 @@
     "retainingLithuanianWorship": 14
   },
   "physicalSites": {
-    "worshipSites": 134,
+    "worshipSites": 130,
     "allBuildingSiteEntities": 171
   },
   "continuity": {

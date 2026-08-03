@@ -27,6 +27,7 @@ import {
 
 export type FateKey =
   | "demolished"
+  | "repurposed"
   | "religious"
   | "secular"
   | "derelict"
@@ -49,6 +50,7 @@ export interface ThreadParish {
 
 const FATE_LABEL: Record<FateKey, string> = {
   demolished: "Building demolished",
+  repurposed: "Building repurposed",
   religious: "Sold to another congregation",
   secular: "Sold — secular use now",
   derelict: "Standing derelict",
@@ -58,6 +60,7 @@ const FATE_LABEL: Record<FateKey, string> = {
 
 const FATE_ORDER: FateKey[] = [
   "demolished",
+  "repurposed",
   "religious",
   "secular",
   "derelict",
@@ -84,6 +87,7 @@ const institutionType = (recordType: ThreadParish["recordType"]) =>
 
 const FATE_OPACITY: Record<FateKey, number> = {
   demolished: 0.95,
+  repurposed: 0.68,
   religious: 0.6,
   secular: 0.5,
   derelict: 0.42,
