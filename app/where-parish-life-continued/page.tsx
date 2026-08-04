@@ -70,7 +70,7 @@ export default function ParishContinuityPage() {
         </p>
         <p className="mt-2 max-w-3xl text-xs leading-relaxed text-muted">
           These relationships do not add to or subtract from the{" "}
-          <Link href="/record" className="underline hover:text-foreground">
+          <Link href="/parishes" className="underline hover:text-foreground">
             public institution count
           </Link>
           . They explain how distinct parish histories connect.

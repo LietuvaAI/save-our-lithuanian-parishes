@@ -237,16 +237,16 @@ export default function HistoryPage() {
       <div className="mt-3 space-y-4 leading-relaxed max-w-3xl">
         <p>
           This history follows the{` ${total} `}Roman Catholic Lithuanian
-          parishes documented in{" "}
-          <Link href="/record" className="underline hover:text-accent">
-            The Record
+          parishes documented in the{" "}
+          <Link href="/parishes" className="underline hover:text-accent">
+            parish profile directory
           </Link>
           . Most were founded between the 1870s and 1960, in coal towns,
           factory cities, and urban neighborhoods from Shenandoah to Chicago,
           with the latest as recent as the 1990s.
         </p>
         <p className="text-sm text-muted">
-          The complete Record contains {fullRecordTotal} entries. Its other{" "}
+          The complete profile directory contains {fullRecordTotal} entries. Its other{" "}
           {fullRecordTotal - total} entries are {romanCatholicMissions} Roman
           Catholic missions and {otherCommunities} National, independent, or
           Protestant communities, which are counted separately from this

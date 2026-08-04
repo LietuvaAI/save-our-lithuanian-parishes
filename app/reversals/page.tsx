@@ -210,7 +210,7 @@ export default function ReversalsPage() {
 
       <p className="mt-6 text-sm text-muted">
         In the Lithuanian record itself,{" "}
-        <Link href="/record" className="underline hover:text-foreground">
+        <Link href="/parishes" className="underline hover:text-foreground">
           no documented parish
         </Link>{" "}
         was saved by an appeal filed after the decree — the lesson of these

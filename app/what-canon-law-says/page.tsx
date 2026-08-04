@@ -122,7 +122,7 @@ export default function CanonLawPage() {
         </p>
         <p>
           The timing is the hard lesson. In{" "}
-          <Link href="/record">the Lithuanian parish record</Link>, no appeal
+          <Link href="/parishes">the Lithuanian parish profiles</Link>, no appeal
           filed after the decree ever reversed a closure — the national
           reversals were won by communities that moved before the decree or
           within the appeal window after it, a window measured in{" "}
@@ -152,7 +152,7 @@ export default function CanonLawPage() {
           the faithful who built and sustain it. That is a position argued{" "}
           <em>from</em> canon law, not against it. This site does not propose
           that any parish leave the Catholic Church; the independent parishes
-          in <Link href="/record">the record</Link> appear as historical
+          in <Link href="/parishes">the profile directory</Link> appear as historical
           witness, not as a recommendation.
         </p>
         <p className="text-sm">

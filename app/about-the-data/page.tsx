@@ -137,7 +137,7 @@ export default function AboutTheDataPage() {
             </thead>
             <tbody className="divide-y divide-rule">
               <tr>
-                <th className="py-3 pr-4 font-semibold">The Record</th>
+                <th className="py-3 pr-4 font-semibold">Profile directory</th>
                 <td className="py-3">
                   {siteFigures.publicUS.records} public U.S. institutions: {" "}
                   {siteFigures.publicUS.romanCatholicParishes} Roman Catholic

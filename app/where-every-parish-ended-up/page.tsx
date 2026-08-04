@@ -111,6 +111,14 @@ export default function ParishOutcomeFlowPage() {
             View the physical church buildings separately
           </Link>
         </p>
+        <p className="mt-2 text-sm">
+          <Link
+            href="/parishes"
+            className="font-semibold underline hover:text-accent"
+          >
+            Browse all published parish and community profiles
+          </Link>
+        </p>
       </section>
 
       <section className="mt-6">
