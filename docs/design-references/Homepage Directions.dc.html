@@ -29,34 +29,203 @@ a{color:#1c1917}a:hover{color:#7d1f1f}
 </style>
 </helmet>
 
-<!--
-  Design reference — SOLP homepage directions (go-live tranche).
-  Approved homepage = option 1a "The Atlas". 1b kept for reference only.
-  Layout/behavior reference ONLY; production builds from canonical data.
-  Full section-by-section spec: ../handoff-codex-go-live.md
-
-  Both option cards are inline-styled Design Component templates. The logic
-  class at the bottom (script[data-dc-script]) supplies navMenus, campaigns,
-  alertGroups, procession art, and the map legend keys. Renders offline with
-  the sibling support.js; map art = assets/homepage-map.svg; procession art =
-  public/images/parishes/*-line-drawing.png.
--->
-
 <section class="dv-turn" id="t1">
-<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Homepage — approved direction 1a "The Atlas" (main @ 5bfd748)</span></div>
-<p class="dv-note">1a is the approved homepage: a sequential atlas where the map owns the top and the page reads downward as the intended journey (frieze → map → outcomes → now → living network → actions). It removes the national-record figures section, makes Parish &amp; Mission Outcomes the single primary path, splits the watch list into its own heading, keeps campaign urgency prominent, and states 155 / 137 / 131 in one line. All editorial wording, church illustrations, campaign art, and the Židinys block are preserved. 1b (front-page variant) is retained below for reference only.</p>
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Homepage — two contrasting directions (main @ 5bfd748)</span></div>
+<p class="dv-note">Both remove the national-record figures section (no stat strip replaces it), keep the map as the first substantial interaction, make Parish &amp; Mission Outcomes the primary path, keep campaign urgency prominent, and state 155 / 137 / 131 in one line. All editorial wording, church illustrations, campaign art, and the Židinys block are preserved. <a class="dv-oid" href="#1a">1a</a> is a sequential atlas: the map owns the whole top, and the page reads downward as the intended journey (map → now → outcomes → profiles). <a class="dv-oid" href="#1b">1b</a> is a front page of record: map and Happening-now sit side by side above the fold, with the population index in the masthead.</p>
 <div class="dv-opts">
 
 <div class="dv-opt" id="1a" data-screen-label="1a Atlas">
-<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>The Atlas — map-first, sequential journey (APPROVED)</div>
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>The Atlas — map-first, sequential journey, quiet</div>
 <div class="dv-card" style="width:1200px">
-  <div style="padding:60px;text-align:center;color:#78716c;font:14px/1.6 system-ui">Full 1a “The Atlas” layout — see the live copy in the project (<code>Homepage Directions.dc.html</code>) and the section-by-section build spec in <a href="../handoff-codex-go-live.md">handoff-codex-go-live.md §1</a>. This committed reference is trimmed to the header note so the file stays reviewable; the authoritative source-of-truth markup ships in the project workspace.</div>
+
+  <header style="border-bottom:1px solid #e7e5e4">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:14px 32px 12px">
+      <a href="#1a" style="font-family:'Source Serif 4',Georgia,serif;font-size:19px;font-weight:600;letter-spacing:-0.01em;text-decoration:none">Save Our Lithuanian Parishes</a>
+      <nav style="display:flex;gap:20px;font-size:13.5px;color:#78716c">
+        <a href="#1a" style="color:#1c1917;font-weight:600;text-decoration:none">Parish &amp; Mission Outcomes</a>
+        <a href="#1a" style="color:#78716c;text-decoration:none">All Profiles</a>
+        <sc-for list="{{ navMenus }}" as="m" hint-placeholder-count="3">
+          <div style="position:relative" onMouseEnter="{{ m.enter }}" onMouseLeave="{{ m.leave }}">
+            <a href="#1a" style="color:#78716c;text-decoration:none;display:inline-flex;align-items:center;gap:4px" style-hover="color:#1c1917">{{ m.label }} <span style="font-size:10px;opacity:0.6">▾</span></a>
+            <sc-if value="{{ m.open }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;top:100%;right:0;z-index:50;padding-top:8px">
+                <div style="display:flex;flex-direction:column;background:#fffdf9;border:1px solid #e7e5e4;border-radius:6px;box-shadow:0 4px 14px rgba(28,25,23,0.10);padding:4px 0;min-width:max-content">
+                  <sc-for list="{{ m.items }}" as="i" hint-placeholder-count="3">
+                    <a href="#1a" style="padding:8px 16px;font-size:13px;color:#1c1917;text-decoration:none;white-space:nowrap" style-hover="background:rgba(28,25,23,0.05)">{{ i }}</a>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+        <a href="#1a" style="color:#78716c;text-decoration:none">Židinys (The Hearth)</a>
+      </nav>
+    </div>
+    <div style="display:flex;height:3px"><div style="flex:1;background:#FDB913"></div><div style="flex:1;background:#006A44"></div><div style="flex:1;background:#C1272D"></div></div>
+  </header>
+
+  <div style="margin:0 32px;border-bottom:1px solid #e7e5e4;padding:12px 0 6px">
+    <div style="display:grid;grid-template-columns:repeat(8,1fr);gap:8px;align-items:end;height:76px">
+      <sc-for list="{{ procession }}" as="p" hint-placeholder-count="8">
+        {{ p.elTall }}
+      </sc-for>
+    </div>
+    <p style="margin:5px 0 0;font-size:10.5px;color:#78716c"><span style="font-weight:600;color:#1c1917">The first parish</span> · St. George, Shenandoah · 1893 church</p>
+  </div>
+
+  <div style="padding:26px 32px 8px;text-align:center">
+    <h1 style="margin:0 auto;max-width:760px;font-family:'Source Serif 4',Georgia,serif;font-size:34px;line-height:1.15;font-weight:600">The public record of America’s Lithuanian parishes</h1>
+    <p style="margin:10px auto 0;max-width:820px;font-size:15px;line-height:1.6;color:#78716c">This project traces the complete history of America’s Lithuanian parishes—from their earliest foundations to the communities discerning their future today.</p>
+    <p style="margin:14px auto 0;max-width:920px;font-size:13px;line-height:1.7;color:#78716c">One record, three populations: 155 institutions and communities on this map and in All Profiles · 137 Roman Catholic institutions (132 parishes + 5 missions) in Parish &amp; Mission Outcomes · 131 physical worship sites in Church Buildings Through Time.</p>
+  </div>
+
+  <div style="padding:18px 32px 0">
+    <div style="border:1px solid #e7e5e4;border-radius:8px;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) 236px">
+      <div style="position:relative;min-width:0">
+        <img src="assets/homepage-map.svg" alt="Map of the United States showing all 155 documented Lithuanian parishes, missions, and congregations" style="display:block;width:100%;height:auto">
+      </div>
+      <aside style="border-left:1px solid #e7e5e4;padding:14px 16px;display:flex;flex-direction:column;gap:10px" aria-label="Map key and filters">
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <span style="font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#78716c">Status</span>
+          <sc-for list="{{ statusKey }}" as="k" hint-placeholder-count="7">
+            <div style="display:flex;align-items:center;gap:8px;border:1px solid #e7e5e4;border-radius:6px;padding:5px 8px;font-size:11px;line-height:1.35">
+              <span style="width:10px;height:10px;flex:none;border-radius:50%;background:{{ k.bg }};border:{{ k.border }}"></span>
+              <span style="min-width:0;font-weight:500">{{ k.label }} · {{ k.count }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </aside>
+    </div>
+    <p style="margin:10px 0 0;font-size:13px;color:#78716c">One map — every documented parish, mission, and congregation. Hover any mark; click to open its record.</p>
+  </div>
+
+  <div style="margin:26px 32px 0;background:#f3eee2;border-radius:8px;padding:26px 30px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:32px;align-items:center">
+    <div>
+      <p style="margin:0;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#78716c">Start with the outcomes</p>
+      <h2 style="margin:6px 0 0;font-family:'Source Serif 4',Georgia,serif;font-size:27px;line-height:1.2;font-weight:600">Parish &amp; Mission Outcomes</h2>
+      <p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:#78716c">Follow all 137 Roman Catholic institutions — 132 parishes and 5 missions — from founding to where each one ended up. 90 have closed.</p>
+      <a href="#1a" style="display:inline-block;margin-top:14px;background:#7d1f1f;color:#fff;border-radius:6px;padding:10px 18px;font-size:14px;font-weight:600;text-decoration:none">Explore parish and mission outcomes →</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;border-left:1px solid #d6d0c8;padding-left:28px">
+      <sc-for list="{{ secondaryDoors }}" as="d" hint-placeholder-count="4">
+        <a href="#1a" style="text-decoration:none;color:#1c1917;font-size:13.5px;line-height:1.45"><span style="font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#d6d0c8">{{ d.title }}</span><span style="color:#78716c"> — {{ d.desc }}</span></a>
+      </sc-for>
+    </div>
+  </div>
+
+  <section style="margin:30px 32px 0;border-top:1px solid #e7e5e4;border-bottom:1px solid #e7e5e4;padding:22px 0" data-screen-label="1a Happening now">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px">
+      <div>
+        <p style="margin:0;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:#78716c">Happening now</p>
+        <h2 style="margin:4px 0 0;font-family:'Source Serif 4',Georgia,serif;font-size:24px;font-weight:600">Active campaigns</h2>
+      </div>
+      <span style="font-size:13px;color:#78716c">4 communities organizing</span>
+    </div>
+    <div style="margin-top:14px;border-top:1px solid #e7e5e4">
+      <sc-for list="{{ campaigns }}" as="c" hint-placeholder-count="4">
+        <article style="display:grid;grid-template-columns:170px minmax(0,1fr);gap:22px;align-items:center;padding:18px 0;border-bottom:1px solid #e7e5e4">
+          {{ c.artLargeEl }}
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
+              <h3 style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-size:17px;font-weight:600">{{ c.entity }}</h3>
+              <span style="font-size:13px;color:#78716c">{{ c.place }}</span>
+            </div>
+            <p style="margin:7px 0 0;font-size:13px;line-height:1.55;color:#78716c">{{ c.what }}</p>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+    <div style="margin-top:26px;display:flex;justify-content:space-between;align-items:baseline;gap:16px">
+      <h2 style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-size:24px;font-weight:600">On the watch list</h2>
+      <span style="font-size:13px;color:#78716c">6 records being monitored</span>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:14px">
+      <sc-for list="{{ alertGroups }}" as="g" hint-placeholder-count="2">
+        <section>
+          <div style="display:flex;justify-content:space-between;align-items:baseline"><h3 style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-size:17px;font-weight:600">{{ g.title }}</h3><span style="font-size:13px;color:#78716c">{{ g.count }}</span></div>
+          <p style="margin:4px 0 0;font-size:12.5px;line-height:1.5;color:#78716c">{{ g.description }}</p>
+        </section>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="margin:40px auto 0;max-width:640px;padding:0 32px">
+    <h2 style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-size:24px;font-weight:600">The communities built them</h2>
+    <p style="margin:14px 0 0;font-size:15px;line-height:1.7">Lithuanian immigrants raised these churches with their own hands and their own wages — and around each one grew a world: a school, a choir, a cemetery, and a language kept alive an ocean from home.</p>
+  </section>
+
 </div>
 </div>
 
 </div>
-<p class="dv-next">Build spec: <a href="../handoff-codex-go-live.md">handoff-codex-go-live.md</a> §1 (homepage) — order, nav fidelity, removed sections, and figures to confirm against canon.</p>
+<p class="dv-next">Approved direction: 1a. Full build spec (order, nav fidelity, removed sections, figures to confirm): ../handoff-codex-go-live.md §1. This committed reference is condensed for readability; the exhaustively-styled working copy (with 1b variant, full campaign/watch copy, map legend, and procession art bindings) lives in the project workspace as the source of truth.</p>
 </section>
 </x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { openMenu: null };
+  renderVals() {
+    const MENUS = [
+      { label: "Explore", items: ["The History", "Church Buildings Through Time", "Where Parish Life Continued", "Lithuanian Catholic Life Today", "By Diocese", "Pennsylvania Coal Region", "Canadian Comparators", "National & Independent Catholic", "Protestant"] },
+      { label: "Guidance", items: ["Facing a Closure", "Reversals", "What Canon Law Says"] },
+      { label: "About", items: ["About the Project", "About the Data", "Sources & Archives"] },
+    ];
+    const navMenus = MENUS.map((m) => ({
+      ...m,
+      open: this.state.openMenu === m.label,
+      enter: () => this.setState({ openMenu: m.label }),
+      leave: () => this.setState((s) => (s.openMenu === m.label ? { openMenu: null } : null)),
+    }));
+    const ES = { active: "#2d6a4f", mass: "#74a892", transferred: "#d5c28b", closed: "#7d1f1f", unverified: "#78716c", unresolved: "#151515" };
+    const none = "none";
+    const im = (src, alt, style, title) => React.createElement("img", { src, alt, title, style });
+    const artLarge = { width: 170, height: 128, objectFit: "contain", mixBlendMode: "multiply" };
+    const friezeTall = { width: "100%", height: 76, objectFit: "contain", mixBlendMode: "multiply", filter: "contrast(1.25)" };
+    const decorate = (vals) => {
+      vals.campaigns.forEach((c) => { c.artLargeEl = im(c.art, c.alt, artLarge); });
+      vals.procession.forEach((p) => { p.elTall = im(p.src, p.alt, friezeTall, p.label); });
+      return vals;
+    };
+    return decorate({
+      navMenus,
+      statusKey: [
+        { label: "Active Lithuanian parishes", count: 8, bg: ES.active, border: none },
+        { label: "Mission records", count: 5, bg: "#fffdf9", border: "2px solid " + ES.active },
+        { label: "Lithuanian Mass continues", count: 5, bg: ES.mass, border: none },
+        { label: "Unresolved", count: 5, bg: ES.unresolved, border: none },
+        { label: "Lives on in another community", count: 24, bg: ES.transferred, border: none },
+        { label: "Closed", count: 95, bg: ES.closed, border: none },
+        { label: "Being verified", count: 13, bg: "#b3aca2", border: none },
+      ],
+      secondaryDoors: [
+        { title: "The History", desc: "how the parishes rose, and how they were lost" },
+        { title: "All Parish Profiles", desc: "browse all 155 public profiles" },
+        { title: "Church Buildings Through Time", desc: "131 physical worship sites" },
+        { title: "Lithuanian Catholic Life Today", desc: "the current pastoral network — 14 places" },
+      ],
+      campaigns: [
+        { entity: "Divine Providence (Dievo Apvaizdos)", place: "Southfield, Michigan", what: "Part of Planning Area 8 in the Archdiocese of Detroit’s 2025–2027 restructuring; three draft pastorate models under consideration.", art: "public/images/parishes/southfield-divine-providence-current-line-drawing.png", alt: "Line drawing of Divine Providence Lithuanian Catholic Church in Southfield." },
+        { entity: "Holy Trinity (Švč. Trejybės)", place: "Hartford, Connecticut", what: "Regular Mass schedule ended May 30, 2026; parishioners contest the partial closure while seeking to preserve the church as a Lithuanian cultural center.", art: "public/images/parishes/hartford-holy-trinity-line-drawing.png", alt: "Line drawing of Holy Trinity Lithuanian church in Hartford." },
+        { entity: "St. Joseph’s (Šv. Juozapo)", place: "Waterbury, Connecticut", what: "Merged into Our Lady of Mount Carmel effective May 1, 2024; community continues its canonical appeal.", art: "public/images/parishes/waterbury-st-joseph-line-drawing.png", alt: "Line drawing of St. Joseph Lithuanian church in Waterbury." },
+        { entity: "Transfiguration (Kristaus Atsimainymo)", place: "Maspeth, Queens, New York", what: "Merged 2019; Lithuanian Mass moved to Annunciation in Williamsburg on September 1, 2025; longer-term building use remains an open question.", art: "public/images/parishes/maspeth-transfiguration-line-drawing.png", alt: "Line drawing of Transfiguration Lithuanian church in Maspeth." },
+      ],
+      alertGroups: [
+        { title: "Developments to monitor", count: 4, description: "Diocesan or parish developments without a documented public campaign." },
+        { title: "Buildings at risk", count: 2, description: "Former parish buildings whose sale, demolition, or physical future remains at stake." },
+      ],
+      procession: [
+        { src: "public/images/parishes/shenandoah-st-george-line-drawing.png", alt: "Line drawing of St. George Lithuanian church in Shenandoah.", label: "St. George, Shenandoah" },
+        { src: "public/images/parishes/mount-carmel-holy-cross-line-drawing.png", alt: "Line drawing of Holy Cross Lithuanian church in Mount Carmel.", label: "Holy Cross, Mount Carmel" },
+        { src: "public/images/parishes/wilkes-barre-holy-trinity-line-drawing.png", alt: "Line drawing of the first Holy Trinity Lithuanian church in Wilkes-Barre.", label: "Holy Trinity, Wilkes-Barre" },
+        { src: "public/images/parishes/pittsburgh-st-casimir-line-drawing.png", alt: "Line drawing of St. Casimir Lithuanian church in Pittsburgh.", label: "St. Casimir, Pittsburgh" },
+        { src: "public/images/parishes/chicago-st-george-line-drawing.png", alt: "Line drawing of St. George Lithuanian church in Chicago.", label: "St. George, Chicago" },
+        { src: "public/images/parishes/chicago-holy-cross-line-drawing.png", alt: "Line drawing of Holy Cross Lithuanian church in Chicago.", label: "Holy Cross, Chicago" },
+        { src: "public/images/parishes/manhattan-our-lady-of-vilnius-line-drawing.png", alt: "Line drawing of Our Lady of Vilnius Lithuanian church in Manhattan.", label: "Our Lady of Vilnius, Manhattan" },
+        { src: "public/images/parishes/southfield-divine-providence-current-line-drawing.png", alt: "Line drawing of Divine Providence Lithuanian church in Southfield.", label: "Divine Providence, Southfield" },
+      ],
+    });
+  }
+}
+</script>
 </body>
 </html>
