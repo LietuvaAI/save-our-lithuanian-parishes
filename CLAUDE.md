@@ -41,14 +41,16 @@ The public institution census is a separate launch-critical contract. `data/cano
 
 `data/alerts.json` campaigns carry a `hearthUrl` field — the site renders "How to help" CTAs from it on `/under-threat` and on parish profiles. The `sustainabilityWatch` array carries `hearthUrl` for dispatches on the `/sustainability-watch` page. When a new dispatch is published on The Hearth, add its URL to the matching entry.
 
-**Has a dispatch:**
-- Divine Providence, Southfield MI — 7 dedicated posts + campaign anchor (hearthUrl set)
+**Has a dispatch (all four active campaigns covered as of 2026-07-27):**
+- Divine Providence, Southfield MI — dedicated post series + campaign anchor (hearthUrl = the pinned flagship "Further Down the Path")
+- Maspeth, Queens NY — "Still Open, Still Undecided" (2026-07-26; hearthUrl set)
+- Hartford CT — "Fifteen Months: The Closing of Švč. Trejybės" (2026-07-27; hearthUrl set)
+- Waterbury CT — "Closed, Not Ended: The Vatican Appeal" (2026-07-27; hearthUrl set)
 - South Boston MA — "The Boston Hill of Crosses" (hearthUrl set, sustainability watch)
 
-**Writing queue — under-threat campaigns (zero dedicated coverage):**
-1. **Maspeth, Queens NY** — presidential visit, 700 signatures, landmark push. Strongest untold story.
-2. **Hartford CT** — partial closure notice, GoFundMe for canon lawyer, cultural-center push.
-3. **Waterbury CT** — closed 2023, canonical appeal ongoing since, GoFundMe active.
+Two posts were deliberately unpublished from the live blog on Vilija's decision (2026-08-04): "The Parish That Won in Court Twice" and "How You Can Help Save America's Lithuanian Parishes" — their archives were removed in the same change; do not re-archive or link them.
+
+**Writing queue — under-threat campaigns:** none open; new dispatches follow events.
 
 **No campaign yet (future, as events develop):**
 - Girardville PA, Freeland PA, Bayonne NJ, Scranton PA (St. Michael), Elizabeth NJ, Beverly Shores IN.
