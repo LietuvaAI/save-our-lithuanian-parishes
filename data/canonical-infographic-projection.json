@@ -2,8 +2,8 @@
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
-    "publication_projection_hash": "sha256:32e541763c4d95f43844e412c32a15703e3ae871cff962c0ecedd99ac5d8eae6",
-    "publication_projection_revision": "canonical-public-census-2026-08-03-continuation-authority",
+    "publication_projection_hash": "sha256:7280ab28bb77de9cb7801c41d37b524118a921cf6d0b0a39659b5476aead0a32",
+    "publication_projection_revision": "canonical-public-census-2026-08-03-building-condition-reconciliation",
     "repository": "LietuvaAI/culturenet-brain"
   },
   "building_site_history": [
@@ -550,7 +550,30 @@
       "slug": "epiphany-catholic-church-georgetown-dc"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "converted to the Gables residential condominiums",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:new-haven-st-casimir:repurposed",
+          "relationship_type": "building-repurposed"
+        },
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "building remains standing; converted to the Gables residential condominiums",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:new-haven-st-casimir:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:former-st-casimir-greene-street-new-haven-ct",
       "demolished_year": null,
@@ -589,7 +612,19 @@
       "slug": "former-st-casimir-greene-street-new-haven-ct"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "standing in weekly Catholic worship use as a Saint Oscar Romero Parish site",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:chicago-holy-cross:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:holy-cross-46th-street-chicago-il",
       "demolished_year": null,
@@ -830,7 +865,30 @@
       "slug": "holy-cross-school-mount-carmel-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "reported in warehouse use, with the former church partly derelict",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:mount-carmel-holy-cross:repurposed",
+          "relationship_type": "building-repurposed"
+        },
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "building remains standing; reported in warehouse use, with the former church partly derelict",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:mount-carmel-holy-cross:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:holy-cross-sixth-poplar-mount-carmel-pa",
       "demolished_year": null,
@@ -867,7 +925,19 @@
       "slug": "holy-cross-sixth-poplar-mount-carmel-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "standing after regular Masses ended, with funerals and baptisms continuing",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:hartford-holy-trinity:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:holy-trinity-hartford-1903-building",
       "demolished_year": null,
@@ -996,7 +1066,19 @@
       "slug": "holy-trinity-original-church-adams-newark-nj"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "standing in current Holy Trinity-Epiphany parish worship use",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:newark-holy-trinity-hall:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:holy-trinity-parish-hall-adams-newark-nj",
       "demolished_year": null,
@@ -1161,7 +1243,19 @@
       "slug": "immaculate-conception-44th-street-chicago-il"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "standing in weekly Catholic worship use as Immaculate Conception Chapel",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:east-st-louis-immaculate-conception:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:immaculate-conception-baugh-avenue-east-st-louis-il",
       "demolished_year": null,
@@ -1314,7 +1408,19 @@
       "slug": "immaculate-conception-rectory-windsor-street-cambridge-ma"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "standing in weekly worship use by Jerusalem Lutheran Church",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:collinsville-jerusalem-lutheran:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:jerusalem-lutheran-collinsville-il",
       "demolished_year": null,
@@ -1599,7 +1705,19 @@
       "slug": "our-lady-of-lourdes-varinna-drive-rochester-ny"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "standing as an active Archdiocese of Newark parish church",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:kearny-our-lady-of-sorrows:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:our-lady-of-sorrows-davis-avenue-kearny-nj",
       "demolished_year": null,
@@ -1679,7 +1797,19 @@
       "slug": "our-lady-of-sorrows-harrison-nj"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "former combined church-school building reported standing but closed",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:chicago-our-lady-of-vilna:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:our-lady-of-vilna-23rd-place-chicago-il",
       "demolished_year": null,
@@ -1718,7 +1848,19 @@
       "slug": "our-lady-of-vilna-23rd-place-chicago-il"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "standing as an active Catholic parish serving a Vietnamese community",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:worcester-our-lady-of-vilna:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:our-lady-of-vilna-sterling-street-worcester-ma",
       "demolished_year": null,
@@ -1904,7 +2046,19 @@
       "slug": "our-lady-siluva-35th-union-chicago-il"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "church reported standing; post-sale occupant and present use remain unresolved",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:maizeville-our-lady-of-siluva:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:our-lady-siluva-main-street-maizeville-pa",
       "demolished_year": null,
@@ -2124,7 +2278,30 @@
       "slug": "our-lady-vilna-third-street-eynon-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "sold in 2025 to another church congregation for continued community and worship use",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:chicago-providence-of-god:repurposed",
+          "relationship_type": "building-repurposed"
+        },
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "building remains standing; sold in 2025 to another church congregation for continued community and worship use",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:chicago-providence-of-god:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:providence-of-god-18th-street-chicago-il",
       "demolished_year": null,
@@ -2175,7 +2352,19 @@
       "slug": "providence-of-god-18th-street-chicago-il"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "standing as an active PNCC parish church in the June 2026 directory",
+            "start": "2026-07-09"
+          },
+          "relationship_id": "rel:condition-reconciliation:scranton-providence-of-god:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:providence-of-god-sumner-scranton-pa",
       "demolished_year": null,
@@ -2564,7 +2753,19 @@
       "slug": "ss-peter-paul-mifflin-church-homestead-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "standing as an active parish church; the announced merger is future and contingent",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:grand-rapids-peter-paul:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:ss-peter-paul-myrtle-street-grand-rapids-mi",
       "demolished_year": null,
@@ -2601,7 +2802,19 @@
       "slug": "ss-peter-paul-myrtle-street-grand-rapids-mi"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "standing in current worship use by the merged Saint Adalbert and Saints Peter and Paul Parish",
+            "start": "2026-07-09"
+          },
+          "relationship_id": "rel:condition-reconciliation:elizabeth-peter-paul:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:ss-peter-paul-ripley-place-elizabeth-nj",
       "demolished_year": null,
@@ -2686,7 +2899,19 @@
       "slug": "ss-peter-paul-school-grand-rapids-mi"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "standing as the active National Shrine of Saint Alphonsus Liguori",
+            "start": "2026-07-26"
+          },
+          "relationship_id": "rel:condition-reconciliation:baltimore-st-alphonsus:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-alphonsus-saratoga-baltimore-md",
       "demolished_year": null,
@@ -2725,7 +2950,19 @@
       "slug": "st-alphonsus-saratoga-baltimore-md"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "former church building reported standing after sale and interior removal",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:new-britain-st-andrew:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-andrew-church-street-new-britain-ct",
       "demolished_year": null,
@@ -3299,7 +3536,30 @@
       "slug": "st-anthony-millers-run-bridgeville-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "used by Abundant Life Fellowship Ministries for Protestant worship",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:ansonia-st-anthony:repurposed",
+          "relationship_type": "building-repurposed"
+        },
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "building remains standing; used by Abundant Life Fellowship Ministries for Protestant worship",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:ansonia-st-anthony:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-anthony-north-main-ansonia-ct",
       "demolished_year": null,
@@ -3388,7 +3648,30 @@
       "slug": "st-anthony-school-omaha-ne"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "used by Iglesia Cristiana Pacto de Fe for Protestant worship",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:omaha-st-anthony:repurposed",
+          "relationship_type": "building-repurposed"
+        },
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "building remains standing; used by Iglesia Cristiana Pacto de Fe for Protestant worship",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:omaha-st-anthony:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-anthony-thirty-second-street-omaha-ne",
       "demolished_year": null,
@@ -3426,7 +3709,30 @@
       "slug": "st-anthony-thirty-second-street-omaha-ne"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "reported in use by a non-Catholic congregation",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:chicago-heights-st-casimir:repurposed",
+          "relationship_type": "building-repurposed"
+        },
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "building remains standing; reported in use by a non-Catholic congregation",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:chicago-heights-st-casimir:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-casimir-14th-street-chicago-heights-il",
       "demolished_year": null,
@@ -3583,9 +3889,20 @@
         {
           "confidence": "medium",
           "date": {
-            "certainty": "movement and contemporary sources",
-            "end": "2010-10-27 dedication",
-            "start": "2010"
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "building stands after its 2010 conversion to Buddhist temple use",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:amsterdam-st-casimir:standing",
+          "relationship_type": "building-standing"
+        },
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "movement and contemporary sources; current operation unverified",
+            "label": "converted and dedicated for Buddhist temple use on October 27, 2010",
+            "start": "2010-10-27"
           },
           "relationship_id": "rel:ne-3:amsterdam-repurposed",
           "relationship_type": "building-repurposed"
@@ -4098,7 +4415,30 @@
       "slug": "st-casimir-parkside-westfield-ma"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "converted to private residential use",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:pittston-st-casimir:repurposed",
+          "relationship_type": "building-repurposed"
+        },
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "building remains standing; converted to private residential use",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:pittston-st-casimir:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-casimir-pittston-pa",
       "demolished_year": null,
@@ -4288,7 +4628,30 @@
       "slug": "st-casimir-sarah-street-pittsburgh-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "used by Power and Light Church of Gary",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:gary-st-casimir-first-church:repurposed",
+          "relationship_type": "building-repurposed"
+        },
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "building remains standing; used by Power and Light Church of Gary",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:gary-st-casimir-first-church:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-casimir-school-first-church-gary-in",
       "demolished_year": null,
@@ -4498,7 +4861,30 @@
       "slug": "st-casimir-second-church-plymouth-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "used by Getsemani Seventh-day Adventist Church",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:providence-st-casimir:repurposed",
+          "relationship_type": "building-repurposed"
+        },
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "building remains standing; used by Getsemani Seventh-day Adventist Church",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:providence-st-casimir:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-casimir-smith-street-providence-ri",
       "demolished_year": null,
@@ -4897,7 +5283,30 @@
       "slug": "st-george-cemetery-utica-ny"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "part of Food Strong's Superior Farm community-hub campus",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:cleveland-st-george:repurposed",
+          "relationship_type": "building-repurposed"
+        },
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "building remains standing; part of Food Strong's Superior Farm community-hub campus",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:cleveland-st-george:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-george-cleveland-superior-site",
       "demolished_year": null,
@@ -5062,11 +5471,22 @@
     {
       "condition_relationships": [
         {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "building stands after rededication for Anglican worship",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:niagara-st-george:standing",
+          "relationship_type": "building-standing"
+        },
+        {
           "confidence": "high",
           "date": {
             "certainty": "contemporary reporting",
-            "end": "2010-08-08 rededication",
-            "start": "2010"
+            "label": "rededicated for Anglican worship on August 8, 2010",
+            "start": "2010-08-08"
           },
           "relationship_id": "rel:nec-4:niagara-repurposed",
           "relationship_type": "building-repurposed"
@@ -5157,7 +5577,30 @@
       "slug": "st-george-first-church-niagara-falls-ny"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "used by House of Prayer and Restoration for Apostolic worship",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:rochester-st-george:repurposed",
+          "relationship_type": "building-repurposed"
+        },
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "building remains standing; used by House of Prayer and Restoration for Apostolic worship",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:rochester-st-george:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-george-hudson-avenue-rochester-ny",
       "demolished_year": null,
@@ -5368,7 +5811,19 @@
       "slug": "st-george-parish-school-chicago-il"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "standing in current Catholic worship use with Saint Charles Borromeo Parish",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:bridgeport-st-george:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-george-park-avenue-bridgeport-ct",
       "demolished_year": null,
@@ -5577,11 +6032,22 @@
     {
       "condition_relationships": [
         {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "building stands after conversion to residential condominiums",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:norwood-st-george:standing",
+          "relationship_type": "building-standing"
+        },
+        {
           "confidence": "medium",
           "date": {
-            "certainty": "Globe-attributed conversion period",
-            "end": "2010",
-            "start": "2008"
+            "certainty": "Globe-attributed 2008-2010 conversion period",
+            "label": "condominium conversion completed by 2010",
+            "start": "2010"
           },
           "relationship_id": "rel:nem-2:norwood-church-repurposed",
           "relationship_type": "building-repurposed"
@@ -5624,7 +6090,19 @@
       "slug": "st-george-st-james-avenue-norwood-ma"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "standing in current Catholic worship use by Saint John Paul II Parish",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:philadelphia-st-george:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-george-venango-philadelphia-pa",
       "demolished_year": null,
@@ -5853,7 +6331,19 @@
       "slug": "st-isidore-talbot-street-braddock-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "privately owned former church kept largely intact",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:coaldale-st-john:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-john-baptist-coaldale-pa",
       "demolished_year": null,
@@ -6209,7 +6699,30 @@
       "slug": "st-joseph-former-presbyterian-donora-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "used by Saint Thomas More Ordinariate Parish for Catholic worship",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:scranton-st-joseph:repurposed",
+          "relationship_type": "building-repurposed"
+        },
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "building remains standing; used by Saint Thomas More Ordinariate Parish for Catholic worship",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:scranton-st-joseph:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-joseph-main-avenue-scranton-pa",
       "demolished_year": null,
@@ -6260,7 +6773,30 @@
       "slug": "st-joseph-main-avenue-scranton-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "parish complex absorbed into later institutional and social-service use",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:south-chicago-st-joseph:repurposed",
+          "relationship_type": "building-repurposed"
+        },
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "building remains standing; parish complex absorbed into later institutional and social-service use",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:south-chicago-st-joseph:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-joseph-marquette-avenue-south-chicago-il",
       "demolished_year": null,
@@ -6299,7 +6835,30 @@
       "slug": "st-joseph-marquette-avenue-south-chicago-il"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "converted to a private single-family residence",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:nanticoke-st-joseph:repurposed",
+          "relationship_type": "building-repurposed"
+        },
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "building remains standing; converted to a private single-family residence",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:nanticoke-st-joseph:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-joseph-pine-street-nanticoke-pa",
       "demolished_year": null,
@@ -6434,7 +6993,19 @@
       "slug": "st-joseph-waterbury-congress-avenue-church"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "retained by the merged parish for weddings and funerals",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:waterbury-st-joseph:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-joseph-waterbury-original-1894-church",
       "demolished_year": null,
@@ -6467,7 +7038,19 @@
       "slug": "st-joseph-waterbury-original-1894-church"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "standing in current worship use by Saint Michael the Archangel Parish",
+            "start": "2026-08-02"
+          },
+          "relationship_id": "rel:condition-reconciliation:scranton-st-lucy:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-lucy-church-scranton-pa",
       "demolished_year": null,
@@ -6865,7 +7448,30 @@
       "slug": "st-michael-east-23rd-bayonne-nj"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "actively listed for commercial sale at $350,000",
+            "start": "2026-08-02"
+          },
+          "relationship_id": "rel:condition-reconciliation:scranton-st-michael-jackson:listed-for-sale",
+          "relationship_type": "building-listed-for-sale"
+        },
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "former church and rectory remain standing but vacant",
+            "start": "2026-08-02"
+          },
+          "relationship_id": "rel:condition-reconciliation:scranton-st-michael-jackson:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-michael-jackson-street-scranton-pa",
       "demolished_year": null,
@@ -7206,7 +7812,19 @@
       "slug": "st-vincent-armory-church-girardville-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "structured current-condition case review",
+            "end": null,
+            "label": "church remains standing and vacant after its January 5, 2026 final Mass",
+            "start": "2026-07-16"
+          },
+          "relationship_id": "rel:condition-reconciliation:girardville-st-vincent:standing",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-vincent-de-paul-second-c-street-girardville-pa",
       "demolished_year": null,
@@ -7673,7 +8291,7 @@
       "building-standing"
     ]
   },
-  "content_hash": "sha256:5d441dcabfe735b438783f3da70a96be9dd1a1a1463d653149be95e205593d2d",
+  "content_hash": "sha256:b1867e977d050dab4a2f220405ca4d337d8e42b4664a1e47513339fb6d133d89",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -10489,9 +11107,11 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:new-britain-st-andrew:standing"
+      ],
       "canonical_name": "Saint Andrew Lithuanian Roman Catholic Parish, New Britain",
       "city": "New Britain",
       "closed": {
@@ -10517,7 +11137,6 @@
         "key": "Hartford",
         "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
       },
-      "legacy_building_fate": "standing",
       "name": "Šv. Andriejaus",
       "public_profile": "/parishes/sv-andriejaus-new-britain-ct",
       "record_type": "parish",
@@ -10949,9 +11568,12 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:omaha-st-anthony:repurposed",
+        "rel:condition-reconciliation:omaha-st-anthony:standing"
+      ],
       "canonical_name": "Saint Anthony Lithuanian Roman Catholic Parish, Omaha",
       "city": "Omaha",
       "closed": {
@@ -11159,9 +11781,12 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:amsterdam-st-casimir:standing",
+        "rel:ne-3:amsterdam-repurposed"
+      ],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Amsterdam",
       "city": "Amsterdam",
       "closed": {
@@ -11301,9 +11926,12 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:chicago-heights-st-casimir:repurposed",
+        "rel:condition-reconciliation:chicago-heights-st-casimir:standing"
+      ],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Chicago Heights",
       "city": "Chicago Heights",
       "closed": {
@@ -11440,9 +12068,13 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:gary-st-casimir-first-church:repurposed",
+        "rel:condition-reconciliation:gary-st-casimir-first-church:standing",
+        "rel:mne-1:gary-repurposed"
+      ],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Gary",
       "city": "Gary",
       "closed": {
@@ -11581,9 +12213,12 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:new-haven-st-casimir:repurposed",
+        "rel:condition-reconciliation:new-haven-st-casimir:standing"
+      ],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, New Haven",
       "city": "New Haven",
       "closed": {
@@ -11793,9 +12428,12 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:pittston-st-casimir:repurposed",
+        "rel:condition-reconciliation:pittston-st-casimir:standing"
+      ],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Pittston",
       "city": "Pittston",
       "closed": {
@@ -12236,9 +12874,11 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:chicago-our-lady-of-vilna:standing"
+      ],
       "canonical_name": "Our Lady of Vilna Lithuanian Roman Catholic Parish, Pilsen",
       "city": "Chicago",
       "closed": {
@@ -12264,7 +12904,6 @@
         "key": "Chicago",
         "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
       },
-      "legacy_building_fate": "standing",
       "name": "Aušros Vartų",
       "public_profile": "/parishes/ausros-vartu-chicago-il",
       "record_type": "parish",
@@ -12330,9 +12969,11 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:worcester-our-lady-of-vilna:standing"
+      ],
       "canonical_name": "Our Lady of Vilna Roman Catholic Parish, Worcester",
       "city": "Worcester",
       "closed": {
@@ -12400,9 +13041,11 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:bridgeport-st-george:standing"
+      ],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Bridgeport",
       "city": "Bridgeport",
       "closed": {
@@ -12462,7 +13105,6 @@
         "key": "Bridgeport",
         "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
       },
-      "legacy_building_fate": "standing",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/sv-jurgio-bridgeport-ct",
       "record_type": "parish",
@@ -12575,9 +13217,12 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:cleveland-st-george:repurposed",
+        "rel:condition-reconciliation:cleveland-st-george:standing"
+      ],
       "canonical_name": "St. George Lithuanian parish, Cleveland",
       "city": "Cleveland",
       "closed": {
@@ -12837,9 +13482,11 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:philadelphia-st-george:standing"
+      ],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Philadelphia",
       "city": "Philadelphia",
       "closed": {
@@ -13103,9 +13750,11 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:newark-holy-trinity-hall:standing"
+      ],
       "canonical_name": "Holy Trinity Lithuanian Roman Catholic Parish, Newark",
       "city": "Newark",
       "closed": {
@@ -13179,9 +13828,11 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:chicago-holy-cross:standing"
+      ],
       "canonical_name": "Holy Cross Lithuanian Roman Catholic Parish, Chicago",
       "city": "Chicago",
       "closed": {
@@ -13207,7 +13858,6 @@
         "key": "Chicago",
         "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
       },
-      "legacy_building_fate": "standing",
       "name": "Šv. Kryžiaus",
       "public_profile": "/parishes/sv-kryziaus-chicago-il",
       "record_type": "parish",
@@ -13471,9 +14121,11 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:east-st-louis-immaculate-conception:standing"
+      ],
       "canonical_name": "Immaculate Conception Lithuanian Roman Catholic Parish, East St. Louis",
       "city": "East St. Louis",
       "closed": {
@@ -13524,7 +14176,6 @@
         "key": "Belleville",
         "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
       },
-      "legacy_building_fate": "standing",
       "name": "Nekaltojo Prasidėjimo",
       "public_profile": "/parishes/nekaltojo-prasidejimo-east-st-louis-il",
       "record_type": "parish",
@@ -13582,9 +14233,11 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:coaldale-st-john:standing"
+      ],
       "canonical_name": "Saint John the Baptist Lithuanian Roman Catholic Parish, Coaldale",
       "city": "Coaldale",
       "closed": {
@@ -13679,9 +14332,12 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:nanticoke-st-joseph:repurposed",
+        "rel:condition-reconciliation:nanticoke-st-joseph:standing"
+      ],
       "canonical_name": "Saint Joseph Lithuanian Roman Catholic Parish, Nanticoke-Hanover",
       "city": "Nanticoke",
       "closed": {
@@ -13726,9 +14382,12 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:scranton-st-joseph:repurposed",
+        "rel:condition-reconciliation:scranton-st-joseph:standing"
+      ],
       "canonical_name": "Saint Joseph Lithuanian Roman Catholic Parish, Scranton",
       "city": "Scranton",
       "closed": {
@@ -13797,9 +14456,12 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:south-chicago-st-joseph:repurposed",
+        "rel:condition-reconciliation:south-chicago-st-joseph:standing"
+      ],
       "canonical_name": "Saint Joseph Lithuanian Roman Catholic Parish, South Chicago",
       "city": "South Chicago",
       "closed": {
@@ -14320,9 +14982,11 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:scranton-st-lucy:standing"
+      ],
       "canonical_name": "Saint Michael the Archangel Parish, Scranton",
       "city": "Scranton",
       "closed": {
@@ -14374,7 +15038,6 @@
         "key": "Scranton",
         "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
       },
-      "legacy_building_fate": "standing",
       "name": "Šv. Mykolo",
       "public_profile": "/parishes/sv-mykolo-scranton-pa",
       "record_type": "parish",
@@ -14444,9 +15107,11 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:maizeville-our-lady-of-siluva:standing"
+      ],
       "canonical_name": "Our Lady of Siluva Lithuanian Roman Catholic Parish, Maizeville",
       "city": "Maizeville",
       "closed": {
@@ -14472,7 +15137,6 @@
         "key": "Allentown",
         "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
       },
-      "legacy_building_fate": "standing",
       "name": "Šiluvos Dievo Motinos",
       "public_profile": "/parishes/siluvos-dievo-motinos-maizeville-pa",
       "record_type": "parish",
@@ -14621,9 +15285,11 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:collinsville-jerusalem-lutheran:standing"
+      ],
       "canonical_name": "Jerusalem Lutheran Church, Collinsville",
       "city": "Collinsville",
       "closed": {
@@ -14643,7 +15309,6 @@
       "identity_support": "two_pass_case_file",
       "institution_class": "non_catholic_christian",
       "jurisdiction": null,
-      "legacy_building_fate": "standing",
       "name": "Jeruzalės liuteronų parapija",
       "public_profile": "/parishes/lithuanian-lutheran-church-collinsville-il",
       "record_type": "congregation",
@@ -14707,9 +15372,11 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:kearny-our-lady-of-sorrows:standing"
+      ],
       "canonical_name": "Our Lady of Sorrows Lithuanian Roman Catholic Parish, Kearny-Harrison",
       "city": "Kearny",
       "closed": {
@@ -14768,7 +15435,6 @@
         "key": "Newark",
         "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
       },
-      "legacy_building_fate": "standing",
       "name": "Sopulingosios Dievo Motinos",
       "public_profile": "/parishes/lietuviu-baznycia-kearny-kearny-nj",
       "record_type": "parish",
@@ -14836,9 +15502,11 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:elizabeth-peter-paul:standing"
+      ],
       "canonical_name": "Saints Peter and Paul Lithuanian Roman Catholic Parish, Elizabeth",
       "city": "Elizabeth",
       "closed": {
@@ -14864,7 +15532,6 @@
         "key": "Newark",
         "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
       },
-      "legacy_building_fate": "standing",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/sv-petro-ir-povilo-elizabeth-nj",
       "record_type": "parish",
@@ -14933,9 +15600,11 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:girardville-st-vincent:standing"
+      ],
       "canonical_name": "Saint Vincent de Paul Lithuanian Roman Catholic Parish, Girardville",
       "city": "Girardville",
       "closed": {
@@ -14961,7 +15630,6 @@
         "key": "Allentown",
         "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
       },
-      "legacy_building_fate": "standing",
       "name": "Šv. Vincento de Paul",
       "public_profile": "/parishes/sv-vincento-de-paul-girardville-pa",
       "record_type": "parish",
@@ -14981,9 +15649,11 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:grand-rapids-peter-paul:standing"
+      ],
       "canonical_name": "Saints Peter and Paul Roman Catholic Parish, Grand Rapids",
       "city": "Grand Rapids",
       "closed": {
@@ -15037,7 +15707,6 @@
         "key": "Grand Rapids",
         "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
       },
-      "legacy_building_fate": "standing",
       "name": "Šv. Petro ir Povilo",
       "public_profile": "/parishes/sv-petro-ir-povilo-grand-rapids-mi",
       "record_type": "parish",
@@ -15280,9 +15949,12 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:chicago-providence-of-god:repurposed",
+        "rel:condition-reconciliation:chicago-providence-of-god:standing"
+      ],
       "canonical_name": "Providence of God Lithuanian Roman Catholic Parish, Chicago",
       "city": "Chicago",
       "closed": {
@@ -15327,9 +15999,11 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:scranton-providence-of-god:standing"
+      ],
       "canonical_name": "Providence of God Lithuanian National Catholic Parish, Scranton",
       "city": "Scranton",
       "closed": {
@@ -15349,7 +16023,6 @@
       "identity_support": "two_pass_case_file",
       "institution_class": "national_catholic_pncc",
       "jurisdiction": null,
-      "legacy_building_fate": "standing",
       "name": "Dievo Apvaizdos",
       "public_profile": "/parishes/dievo-apvaizdos-scranton-pa",
       "record_type": "parish",
@@ -15800,9 +16473,11 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:baltimore-st-alphonsus:standing"
+      ],
       "canonical_name": "Saint Alphonsus Parish and National Shrine, Baltimore",
       "city": "Baltimore",
       "closed": {
@@ -15853,7 +16528,6 @@
         "key": "Baltimore",
         "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
       },
-      "legacy_building_fate": "standing",
       "name": "Šv. Alfonso",
       "public_profile": "/parishes/unnamed-lithuanian-parish-baltimore-md",
       "record_type": "parish",
@@ -16002,9 +16676,12 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:ansonia-st-anthony:repurposed",
+        "rel:condition-reconciliation:ansonia-st-anthony:standing"
+      ],
       "canonical_name": "Saint Anthony Lithuanian Roman Catholic Parish, Ansonia",
       "city": "Ansonia",
       "closed": {
@@ -18120,7 +18797,7 @@
       "unit": "distinct U.S. Roman Catholic parish institution"
     }
   },
-  "revision_id": "canonical-infographic-units-2026-08-03-continuation-authority",
+  "revision_id": "canonical-infographic-units-2026-08-03-building-condition-reconciliation",
   "schema": "culturenet-parish-infographic-projection.v1",
   "unit_contracts": [
     {

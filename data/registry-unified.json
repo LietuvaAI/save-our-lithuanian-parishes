@@ -23662,7 +23662,7 @@
     }
   ],
   "registryRevision": {
-    "version": 24,
+    "version": 25,
     "date": "2026-08-03",
     "changelog": [
       "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
@@ -23710,15 +23710,16 @@
       "Registry Revision 21: attached the verified direct Žiburio archive item for the Būtėnas Shenandoah chronology source without changing canonical counts or adjudications.",
       "Registry Revision 22: imported the Brain-owned current pastoral network, moved Dayton's present Lithuanian-worship claim to unresolved, and added Washington Epiphany as non-census hosted pastoral context.",
       "Registry Revision 23: imported typed Brain-owned Catholic jurisdictions so public labels distinguish dioceses from archdioceses without site-side inference.",
-      "Registry Revision 24: imported Brain-adjudicated continuation statuses and card explanations for the 22 institutions that live on in another community."
+      "Registry Revision 24: imported Brain-adjudicated continuation statuses and card explanations for the 22 institutions that live on in another community.",
+      "Registry Revision 25: imported Brain-adjudicated physical-site conditions reconciled from canonical current-condition case evidence."
     ],
-    "contentHash": "9d9b4d8a92dc74486094c58d30004b6c2f62bfc160cb3bbd0e879b77a261d0f8"
+    "contentHash": "bc33ef124a0bb2571b173fd7d3c659ad30e6155e30def92d254cb6d5bd6ec69b"
   },
   "publicationAuthority": {
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
-    "revisionId": "canonical-public-census-2026-08-03-continuation-authority",
-    "contentHash": "sha256:32e541763c4d95f43844e412c32a15703e3ae871cff962c0ecedd99ac5d8eae6",
+    "revisionId": "canonical-public-census-2026-08-03-building-condition-reconciliation",
+    "contentHash": "sha256:7280ab28bb77de9cb7801c41d37b524118a921cf6d0b0a39659b5476aead0a32",
     "publicUSInstitutions": 155,
     "synchronized": "2026-08-03"
   }

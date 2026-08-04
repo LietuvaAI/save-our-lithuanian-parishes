@@ -1,11 +1,11 @@
 {
   "generatedFrom": {
-    "registryRevision": 24,
+    "registryRevision": 25,
     "registryDate": "2026-08-03",
-    "canonicalPublicationRevision": "canonical-public-census-2026-08-03-continuation-authority",
-    "canonicalPublicationHash": "sha256:32e541763c4d95f43844e412c32a15703e3ae871cff962c0ecedd99ac5d8eae6",
-    "canonicalInfographicRevision": "canonical-infographic-units-2026-08-03-continuation-authority",
-    "canonicalInfographicHash": "sha256:5d441dcabfe735b438783f3da70a96be9dd1a1a1463d653149be95e205593d2d",
+    "canonicalPublicationRevision": "canonical-public-census-2026-08-03-building-condition-reconciliation",
+    "canonicalPublicationHash": "sha256:7280ab28bb77de9cb7801c41d37b524118a921cf6d0b0a39659b5476aead0a32",
+    "canonicalInfographicRevision": "canonical-infographic-units-2026-08-03-building-condition-reconciliation",
+    "canonicalInfographicHash": "sha256:b1867e977d050dab4a2f220405ca4d337d8e42b4664a1e47513339fb6d133d89",
     "networkChecked": "2026-08-03"
   },
   "publicUS": {
