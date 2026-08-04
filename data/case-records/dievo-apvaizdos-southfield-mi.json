@@ -11,6 +11,19 @@
   ],
   "developments": [
     {
+      "date": "2026-05-11",
+      "headline": "Listening-session waves and July 31 feedback deadline",
+      "detail": "Detroit Catholic reported 156 sessions at 78 parishes completed, further waves beginning May 20 and June 17, and an online survey accepting feedback on the models through July 31, 2026.",
+      "sources": [
+        {
+          "title": "Just over one-third of parish listening sessions completed amid restructuring process",
+          "publisher": "Detroit Catholic",
+          "date": "2026-05-11",
+          "url": "https://www.detroitcatholic.com/news/just-over-one-third-of-parish-listening-sessions-completed-amid-restructuring-process"
+        }
+      ]
+    },
+    {
       "date": "2026-05-30",
       "headline": "Named among parishes that could lose weekend Mass",
       "detail": "Detroit News reported that Divine Providence could stop holding weekend Mass under at least one proposed restructuring model; current Archdiocese materials place the parish in Planning Area 8 and state that no final decision has been made.",
@@ -36,15 +49,15 @@
       ]
     },
     {
-      "date": "2026-05-11",
-      "headline": "Listening-session waves and July 31 feedback deadline",
-      "detail": "Detroit Catholic reported 156 sessions at 78 parishes completed, further waves beginning May 20 and June 17, and an online survey accepting feedback on the models through July 31, 2026.",
+      "date": "2026-07-31",
+      "headline": "Public feedback window closes",
+      "detail": "The Archdiocese of Detroit's Listening Session Feedback Survey closed on July 31, 2026 — the restructuring site now reads 'The Post-Listening Session Survey is Now Closed.' Divine Providence remains an active Lithuanian personal parish in Planning Area 8 while the three draft pastorate models are refined (Phase 2, through December 2026). Per the Archdiocese's published timeline, Archbishop Weisenburger announces pastorate decisions in Phase 3, January-June 2027, with implementation beginning July 2027; no final decision has been made.",
       "sources": [
         {
-          "title": "Just over one-third of parish listening sessions completed amid restructuring process",
-          "publisher": "Detroit Catholic",
-          "date": "2026-05-11",
-          "url": "https://www.detroitcatholic.com/news/just-over-one-third-of-parish-listening-sessions-completed-amid-restructuring-process"
+          "title": "Archdiocesan Restructuring — Planning Process (official four-phase timeline; survey marked closed)",
+          "publisher": "Archdiocese of Detroit, restructuring.aod.org",
+          "date": "accessed 2026-08-04",
+          "url": "https://restructuring.aod.org/planning-process"
         }
       ]
     }
@@ -85,6 +98,12 @@
       "publisher": "St. Mary of the Immaculate Conception, Monroe",
       "date": "2026",
       "url": "https://stmarymonroe.org/aod-restructuring"
+    },
+    {
+      "title": "Archdiocesan Restructuring — Planning Process (official four-phase timeline; survey marked closed)",
+      "publisher": "Archdiocese of Detroit, restructuring.aod.org",
+      "date": "accessed 2026-08-04",
+      "url": "https://restructuring.aod.org/planning-process"
     }
   ],
   "confidence": "verified",

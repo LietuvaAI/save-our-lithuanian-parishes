@@ -1,11 +1,11 @@
 ---
 title: "How You Can Help Save Detroit's Divine Providence Lithuanian Parish"
-subtitle: "Five things you can do right now to protect Divine Providence — starting with the Archdiocese survey, open until July 31."
+subtitle: "Five things you can do right now to protect Divine Providence — starting with being present: registered, at Mass, counted."
 date: 2026-07-15
 substackUrl: https://blog.saveourlithuanianparishes.org/p/how-you-can-help-save-our-lithuanian
-archivedAt: 2026-07-21
+archivedAt: 2026-08-04
 ---
-**Update:** This post remains as the Divine Providence-specific guide. For the latest urgent requests across parishes, start with [Active Campaigns](https://blog.saveourlithuanianparishes.org/p/active-campaigns). For general ways to support the work, see [How You Can Help](https://blog.saveourlithuanianparishes.org/p/how-you-can-help-save-americas-lithuanian).
+**Update:** This post remains as the Divine Providence-specific guide. For the latest urgent requests across parishes, start with [Active Campaigns](https://blog.saveourlithuanianparishes.org/p/active-campaigns).
 ![](https://substackcdn.com/image/fetch/$s_!jWuA!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F728151e6-afd1-4e8f-9287-91eb579384af_1600x1200.jpeg)
 **A parish is people.**
 
@@ -29,9 +29,9 @@ So yes — in law, it belongs to the Archdiocese. But in our hearts it always ha
 
 The Archdiocese of Detroit is restructuring now — and this is our moment to be heard. Here is how you can help.
 
-### 1. Take the survey — by July 31
+### 1. The survey has closed — stay present
 
-The [Archdiocese of Detroit Listening Session Feedback Survey](https://form.jotform.com/261034294481152) is the single most important thing you can do. It is open until July 31, 2026.
+The Archdiocese of Detroit Listening Session Feedback Survey closed on July 31, 2026. The parish’s case now moves through discernment — the models are refined through December 2026, and pastorate decisions are announced in the first half of 2027. What matters in this stage is presence: registered, at Mass, counted. Current asks are tracked at [Active Campaigns](https://blog.saveourlithuanianparishes.org/p/active-campaigns).
 
 Speak from faith first — how Divine Providence has helped your family pray, worship, and raise Catholic children. Our [full guide to the survey](https://saveourlithuanianparishes.substack.com/p/do-your-part-for-divine-providence) walks you through it, point by point.
 
