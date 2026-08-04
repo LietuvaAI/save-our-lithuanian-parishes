@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Source_Serif_4 } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  IBM_Plex_Mono,
+  Source_Serif_4,
+} from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 
@@ -11,6 +16,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const timelineMono = IBM_Plex_Mono({
+  variable: "--font-timeline-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 const serifDisplay = Source_Serif_4({
@@ -104,7 +115,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${serifDisplay.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${timelineMono.variable} ${serifDisplay.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <header>

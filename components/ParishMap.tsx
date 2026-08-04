@@ -13,8 +13,9 @@
 //   outer ring          = current campaign, watch, or building-risk signal
 //   ×                   = church demolished
 // Who-decided (ending mode) and ownership stay in each parish's popup and
-// profile — the map itself reads at a glance. Views: All · Open today ·
-// Unresolved · Lost. Current campaigns remain a separate ring annotation.
+// profile — the map itself reads at a glance. Mission is a record type and a
+// hollow-mark treatment, never a seventh status. Current campaigns remain a
+// separate ring annotation.
 import { useMemo, useRef, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -53,7 +54,6 @@ type Status = "lost" | "open" | "mass" | "unresolved" | "building" | "unknown" |
 type Mode =
   | "all"
   | "open"
-  | "mission"
   | "mass"
   | "unresolved"
   | "lost"
@@ -64,11 +64,10 @@ type CommunityFilter =
   | "roman_catholic"
   | "national_catholic_pncc"
   | "non_catholic_christian";
-type MapKey = EndStateGroup | "active_mission";
+type MapKey = EndStateGroup;
 
 const STATUS_FILTERS: StatusFilter[] = [
   "open",
-  "mission",
   "mass",
   "unresolved",
   "transferred",
@@ -121,7 +120,6 @@ function communityFilterForPoint(point: Point): CommunityFilter {
 }
 
 function statusFilterForPoint(point: Point): StatusFilter {
-  if (point.recordType === "misija") return "mission";
   if (point.group === "active_parish") return "open";
   if (point.group === "mass_continues") return "mass";
   if (point.group === "unresolved") return "unresolved";
@@ -383,12 +381,12 @@ export default function ParishMap() {
   );
   // Sub-filter inside the Closed view — same sub-fates as the flow chart.
   const [lostFate, setLostFate] = useState<"all" | "closed" | "demolished" | "repurposed">("all");
-  // Default to Roman Catholic institutions. The map includes missions, while
-  // The History is explicitly parish-only, so the visible scope always names
-  // both record types.
+  // The homepage opens on the complete public census. Visitors can narrow to
+  // Roman Catholic, National/Independent Catholic, or Protestant records from
+  // the key, but the first view must match the 155-institution route contract.
   const [selectedCommunities, setSelectedCommunities] = useState<
     Set<CommunityFilter>
-  >(() => new Set(["roman_catholic"]));
+  >(() => new Set(COMMUNITY_FILTERS));
   const [view, setView] = useState<View>(FULL);
   const [showDioceses, setShowDioceses] = useState(false);
   const [expandedKey, setExpandedKey] = useState<MapKey | null>(null);
@@ -446,7 +444,6 @@ export default function ParishMap() {
     const c = {
       all: classPoints.length,
       open: 0,
-      mission: 0,
       mass: 0,
       unresolved: 0,
       lost: 0,
@@ -454,8 +451,7 @@ export default function ParishMap() {
       transferred: 0,
     };
     for (const p of classPoints) {
-      if (p.recordType === "misija") c.mission++;
-      else if (p.group === "active_parish") c.open++;
+      if (p.group === "active_parish") c.open++;
       else if (p.group === "mass_continues") c.mass++;
       else if (p.group === "unresolved") c.unresolved++;
       else if (p.group === "closed") c.lost++;
@@ -481,10 +477,6 @@ export default function ParishMap() {
         (point) =>
           point.group === "closed" && point.recordType === "misija",
       ).length,
-      activeMission: classPoints.filter(
-        (point) =>
-          point.group === "active_parish" && point.recordType === "misija",
-      ).length,
     }),
     [classPoints],
   );
@@ -499,6 +491,17 @@ export default function ParishMap() {
             selectedCommunities.has("non_catholic_christian")
           ? `${statusCounts.all} Protestant parish and congregation records`
           : `${statusCounts.all} selected parish, mission, and congregation records`;
+  const activeStatusLabel =
+    selectedCommunities.size === 1 &&
+    selectedCommunities.has("roman_catholic")
+      ? "Active Lithuanian parish or mission"
+      : selectedCommunities.size === 1 &&
+          selectedCommunities.has("non_catholic_christian")
+        ? "Active Lithuanian congregation"
+        : selectedCommunities.size === 1 &&
+            selectedCommunities.has("national_catholic_pncc")
+          ? "Active Lithuanian parish"
+          : "Active Lithuanian community";
 
   function regionView(states: Set<string>) {
     const pts = POINTS.filter((p) => states.has(p.state));
@@ -962,19 +965,11 @@ export default function ParishMap() {
                   {
                     key: "active_parish",
                     mode: "open",
-                    label: GROUP_LABEL.active_parish,
-                    description: GROUP_DESCRIPTION.active_parish,
+                    label: activeStatusLabel,
+                    description:
+                      "Regular Lithuanian worship continues in an active Lithuanian-led parish, mission, or congregation. Mission records use a hollow map mark; record type never becomes a separate status.",
                     fill: "var(--es-active)",
                     count: statusCounts.open,
-                  },
-                  {
-                    key: "active_mission",
-                    mode: "mission",
-                    label: "Mission records",
-                    description:
-                      `${recordTypeCounts.activeMission} active and ${recordTypeCounts.closedMission} closed. Missions keep their own status on the map and are counted separately from parishes.`,
-                    fill: "var(--es-active)",
-                    count: statusCounts.mission,
                   },
                   {
                     key: "mass_continues",
@@ -1007,7 +1002,7 @@ export default function ParishMap() {
                     description:
                       selectedCommunities.size === 1 &&
                       selectedCommunities.has("roman_catholic")
-                        ? `${recordTypeCounts.closedParish} parishes are closed. Filter to Closed to see whether each church was demolished, sold on, or remains standing. Closed missions remain in the separate Mission records category.`
+                        ? `${recordTypeCounts.closedParish} parishes and ${recordTypeCounts.closedMission} missions are closed. Filter to Closed to see whether each terminal church was demolished, repurposed, listed, standing, or not yet established.`
                         : GROUP_DESCRIPTION.closed,
                     fill: "var(--es-closed)",
                     count: statusCounts.lost,
@@ -1053,14 +1048,9 @@ export default function ParishMap() {
                         }`}
                       >
                         <span
-                          className={`h-2.5 w-2.5 shrink-0 rounded-full ${
-                            key === "active_mission" ? "border-2 bg-background" : ""
-                          }`}
+                          className="h-2.5 w-2.5 shrink-0 rounded-full"
                           style={{
-                            background:
-                              key === "active_mission" ? undefined : fill,
-                            borderColor:
-                              key === "active_mission" ? fill : undefined,
+                            background: fill,
                             opacity: key === "unverified" ? 0.55 : 1,
                           }}
                           aria-hidden
@@ -1148,17 +1138,6 @@ export default function ParishMap() {
           <span className="text-muted">
             {statusCounts.unresolved} records whose outcome remains contested or
             canonically undecided. Open a mark for its evidence.
-          </span>
-        ) : selectedStatuses.size === 1 &&
-          selectedStatuses.has("mission") ? (
-          <span className="text-muted">
-            {statusCounts.mission} active mission in this historical record.{" "}
-            <a
-              href="/lithuanian-catholic-life-today"
-              className="font-medium underline hover:text-foreground"
-            >
-              See the complete current Catholic network →
-            </a>
           </span>
         ) : closedOnly ? (
           <span className="text-muted">
