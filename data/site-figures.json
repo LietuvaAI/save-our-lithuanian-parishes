@@ -89,14 +89,6 @@
   "continuity": {
     "relationships": 51
   },
-  "currentCatholicLife": {
-    "officialListings": 20,
-    "worshipPlaces": 14,
-    "activeParishes": 6,
-    "activeMissions": 2,
-    "hostedMasses": 6,
-    "states": 9
-  },
   "comparators": {
     "canadianParishes": 3
   },

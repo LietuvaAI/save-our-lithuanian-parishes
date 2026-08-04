@@ -16,7 +16,6 @@ const context = read("context-points.json");
 const map = read("map.json");
 const registryMap = read("registry-map.json");
 const publicInstitutionLedger = read("public-institution-ledger.json");
-const network = read("sielovada-us-network.json");
 const reversals = read("reversal-database.json");
 
 const count = (records, predicate) => records.filter(predicate).length;
@@ -78,6 +77,12 @@ const usRomanCatholicParishPoints = contextPoints.filter(
 );
 const publicStatus = tally(contextPoints, (point) => point.group);
 const institutionHistory = infographic.institution_history;
+const network = infographic.current_pastoral_network?.directory;
+if (!network) {
+  throw new Error(
+    "Canonical infographic projection lacks current_pastoral_network.directory",
+  );
+}
 const romanCatholicParishHistory = institutionHistory.filter(
   (row) =>
     row.record_type === "parish" &&
@@ -123,10 +128,6 @@ const currentWorshipClasses = new Set([
 const currentWorship = network.entries.filter((entry) =>
   currentWorshipClasses.has(entry.networkClass),
 );
-const currentWorshipStates = new Set(
-  currentWorship.map((entry) => entry.state),
-).size;
-
 const latestRevision = revisions.revisions.at(-1);
 const registryMapUS = registryMap.points.filter(
   (point) => point.country === "US",
@@ -304,14 +305,6 @@ const figures = {
   continuity: {
     relationships: infographic.counts.institution_continuity_edges,
   },
-  currentCatholicLife: {
-    officialListings: network.counts.listed,
-    worshipPlaces: currentWorship.length,
-    activeParishes: network.counts.activeParishes,
-    activeMissions: network.counts.activeMissions,
-    hostedMasses: network.counts.massContinues,
-    states: currentWorshipStates,
-  },
   comparators: {
     canadianParishes: canadianComparators.population,
   },
@@ -340,5 +333,5 @@ console.log(
   `OK: public figure contract — ${figures.publicUS.records} U.S. records, ` +
     `${figures.publicUS.independentlySupported} independently supported, ` +
     `${figures.history.parishes} Roman Catholic parishes, ` +
-    `${figures.currentCatholicLife.worshipPlaces} current worship places.`,
+    `${currentWorship.length} current worship places.`,
 );

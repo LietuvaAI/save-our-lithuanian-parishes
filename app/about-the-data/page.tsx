@@ -3,8 +3,13 @@ import Link from "next/link";
 import AboutNav from "@/components/AboutNav";
 import revisionHistory from "@/data/registry-revisions.json";
 import siteFigures from "@/data/site-figures.json";
+import { currentPastoralNetwork } from "@/lib/infographic-projection";
 
 const REGISTRY_REVISIONS = revisionHistory.revisions.slice().reverse();
+const CURRENT_WORSHIP_PLACES =
+  currentPastoralNetwork.counts.active_parish +
+  currentPastoralNetwork.counts.active_mission +
+  currentPastoralNetwork.counts.mass_continues;
 
 export const metadata: Metadata = {
   title: "About the Data",
@@ -182,10 +187,10 @@ export default function AboutTheDataPage() {
                   Catholic Life Today
                 </th>
                 <td className="py-3">
-                  {siteFigures.currentCatholicLife.worshipPlaces} places with
+                  {CURRENT_WORSHIP_PLACES} places with
                   current Lithuanian Catholic worship, from {" "}
-                  {siteFigures.currentCatholicLife.officialListings} official
-                  network listings.
+                  {Number(currentPastoralNetwork.directory.counts.listed)}{" "}
+                  official network listings.
                 </td>
               </tr>
             </tbody>

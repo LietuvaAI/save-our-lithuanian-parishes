@@ -1,12 +1,28 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
+
+const legacySideFile = new URL(
+  "../data/sielovada-us-network.json",
+  import.meta.url,
+);
+if (existsSync(legacySideFile)) {
+  throw new Error(
+    "Legacy pastoral-network side file must not exist; read current_pastoral_network from the Brain infographic projection",
+  );
+}
 
 const read = (name) =>
   JSON.parse(
     readFileSync(new URL(`../data/${name}`, import.meta.url), "utf8"),
   );
 
-const network = read("sielovada-us-network.json");
 const infographic = read("canonical-infographic-projection.json");
+const canonicalPastoral = infographic.current_pastoral_network;
+if (!canonicalPastoral?.directory) {
+  throw new Error(
+    "Brain projection lacks current_pastoral_network.directory",
+  );
+}
+const network = canonicalPastoral.directory;
 const registry = read("registry-unified.json").parishes;
 const registryBySlug = new Map(registry.map((record) => [record.slug, record]));
 const errors = [];
@@ -159,36 +175,28 @@ for (const [label, actual, expected] of [
   }
 }
 
-const canonicalPastoral = infographic.current_pastoral_network;
-if (!canonicalPastoral) {
-  errors.push("Brain projection lacks current_pastoral_network");
-} else {
-  if (JSON.stringify(network) !== JSON.stringify(canonicalPastoral.directory)) {
-    errors.push(
-      "site pastoral directory differs from the Brain-generated directory projection",
-    );
-  }
-  const siteMembership = network.entries
-    .filter((entry) =>
-      ["active_parish", "active_mission", "mass_continues"].includes(
-        entry.networkClass,
-      ),
-    )
-    .map((entry) =>
-      `${entry.networkClass}:${entry.registrySlug ?? entry.canonicalEntityId ?? entry.id}`,
-    )
-    .sort();
-  const brainMembership = canonicalPastoral.members
-    .map(
-      (entry) =>
-        `${entry.network_class}:${entry.registry_slug ?? entry.entity_id}`,
-    )
-    .sort();
-  if (JSON.stringify(siteMembership) !== JSON.stringify(brainMembership)) {
-    errors.push(
-      `current pastoral membership differs from Brain: site=${siteMembership.join(", ")} brain=${brainMembership.join(", ")}`,
-    );
-  }
+const directoryMembership = network.entries
+  .filter((entry) =>
+    ["active_parish", "active_mission", "mass_continues"].includes(
+      entry.networkClass,
+    ),
+  )
+  .map((entry) =>
+    `${entry.networkClass}:${entry.registrySlug ?? entry.canonicalEntityId ?? entry.id}`,
+  )
+  .sort();
+const canonicalMembership = canonicalPastoral.members
+  .map(
+    (entry) =>
+      `${entry.network_class}:${entry.registry_slug ?? entry.entity_id}`,
+  )
+  .sort();
+if (
+  JSON.stringify(directoryMembership) !== JSON.stringify(canonicalMembership)
+) {
+  errors.push(
+    `canonical pastoral directory/member mismatch: directory=${directoryMembership.join(", ")} members=${canonicalMembership.join(", ")}`,
+  );
 }
 
 const southfield = network.entries.find(

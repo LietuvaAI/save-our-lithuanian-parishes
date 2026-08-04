@@ -51,9 +51,22 @@ export type CurrentPastoralDirectoryEntry = {
   city: string;
   state: string;
   address: string;
-  directoryType: string;
-  networkClass: string;
+  directoryType:
+    | "parish"
+    | "mission"
+    | "mission_community"
+    | "church"
+    | "religious_house";
+  networkClass:
+    | "active_parish"
+    | "active_mission"
+    | "mass_continues"
+    | "unresolved"
+    | "no_lithuanian_liturgy"
+    | "directory_conflict"
+    | "religious_house";
   ministry: string;
+  clergy?: string;
   note?: string;
   registrySlug?: string | null;
   canonicalEntityId?: string | null;
