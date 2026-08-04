@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#eceae4;font-family:system-ui,"Helvetica Neue",sans-serif;color:#1c1917}
+a{color:#1c1917}a:hover{color:#7d1f1f}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 8px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}
+.dv-note{max-width:980px;font:12px/1.55 system-ui,sans-serif;color:rgba(0,0,0,.55);margin:0 0 22px}
+.dv-opts{display:flex;flex-wrap:wrap;gap:36px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)}
+.dv-card{max-width:100%;background:#fffdf9;border:1px solid rgba(0,0,0,.1);border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.07);overflow:hidden}
+.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}
+.dv-next{margin:24px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}
+</style>
+</helmet>
+
+<!--
+  Design reference — SOLP homepage directions (go-live tranche).
+  Approved homepage = option 1a "The Atlas". 1b kept for reference only.
+  Layout/behavior reference ONLY; production builds from canonical data.
+  Full section-by-section spec: ../handoff-codex-go-live.md
+
+  Both option cards are inline-styled Design Component templates. The logic
+  class at the bottom (script[data-dc-script]) supplies navMenus, campaigns,
+  alertGroups, procession art, and the map legend keys. Renders offline with
+  the sibling support.js; map art = assets/homepage-map.svg; procession art =
+  public/images/parishes/*-line-drawing.png.
+-->
+
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Homepage — approved direction 1a "The Atlas" (main @ 5bfd748)</span></div>
+<p class="dv-note">1a is the approved homepage: a sequential atlas where the map owns the top and the page reads downward as the intended journey (frieze → map → outcomes → now → living network → actions). It removes the national-record figures section, makes Parish &amp; Mission Outcomes the single primary path, splits the watch list into its own heading, keeps campaign urgency prominent, and states 155 / 137 / 131 in one line. All editorial wording, church illustrations, campaign art, and the Židinys block are preserved. 1b (front-page variant) is retained below for reference only.</p>
+<div class="dv-opts">
+
+<div class="dv-opt" id="1a" data-screen-label="1a Atlas">
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>The Atlas — map-first, sequential journey (APPROVED)</div>
+<div class="dv-card" style="width:1200px">
+  <div style="padding:60px;text-align:center;color:#78716c;font:14px/1.6 system-ui">Full 1a “The Atlas” layout — see the live copy in the project (<code>Homepage Directions.dc.html</code>) and the section-by-section build spec in <a href="../handoff-codex-go-live.md">handoff-codex-go-live.md §1</a>. This committed reference is trimmed to the header note so the file stays reviewable; the authoritative source-of-truth markup ships in the project workspace.</div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Build spec: <a href="../handoff-codex-go-live.md">handoff-codex-go-live.md</a> §1 (homepage) — order, nav fidelity, removed sections, and figures to confirm against canon.</p>
+</section>
+</x-dc>
+</body>
+</html>
