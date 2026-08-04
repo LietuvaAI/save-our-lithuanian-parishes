@@ -58,6 +58,17 @@ const signalLabel: Record<RecordSignal, string> = {
   building: "Building at risk",
 };
 
+const statusLabelForRow = (row: AllProfilesTimelineRow) => {
+  if (row.statusGroup !== "active_parish") {
+    return GROUP_LABEL[row.statusGroup];
+  }
+  if (row.recordType === "misija") return "Active Lithuanian mission";
+  if (row.recordType === "congregation") {
+    return "Active Lithuanian congregation";
+  }
+  return GROUP_LABEL.active_parish;
+};
+
 function TimelineGrid() {
   return (
     <span className="pointer-events-none absolute inset-0" aria-hidden>
@@ -94,6 +105,7 @@ function TimelineAxis() {
 
 function TimelineMark({ row }: { row: AllProfilesTimelineRow }) {
   const color = END_STATE_COLOR[row.statusGroup];
+  const statusLabel = statusLabelForRow(row);
   const live =
     row.closed === null &&
     (row.statusGroup === "active_parish" ||
@@ -132,7 +144,7 @@ function TimelineMark({ row }: { row: AllProfilesTimelineRow }) {
       <span
         className="absolute top-1/2 h-2 -translate-y-1/2 rounded-full"
         style={{ left, width, background: color }}
-        title={`${row.founded}–${row.closed ?? "present"}: ${GROUP_LABEL[row.statusGroup]}`}
+        title={`${row.founded}–${row.closed ?? "present"}: ${statusLabel}`}
       />
       <span
         className={`absolute top-1/2 size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 ${live ? "bg-background" : "border-background"}`}
@@ -336,7 +348,9 @@ export default function AllProfilesTimeline({
                   style={{ background: END_STATE_COLOR[group] }}
                   aria-hidden
                 />
-                {GROUP_LABEL[group]}
+                {group === "active_parish"
+                  ? "Active Lithuanian community"
+                  : GROUP_LABEL[group]}
               </span>
             ))}
           </div>
@@ -367,6 +381,7 @@ export default function AllProfilesTimeline({
             <ol className="divide-y divide-rule">
               {filtered.map((row) => {
                 const suffix = recordTypeSuffix(row.recordType);
+                const statusLabel = statusLabelForRow(row);
                 return (
                   <li
                     key={row.slug}
@@ -386,8 +401,8 @@ export default function AllProfilesTimeline({
                               ? { borderColor: END_STATE_COLOR.unverified }
                               : { background: END_STATE_COLOR[row.statusGroup] }
                           }
-                          title={GROUP_LABEL[row.statusGroup]}
-                          aria-label={GROUP_LABEL[row.statusGroup]}
+                          title={statusLabel}
+                          aria-label={statusLabel}
                         />
                         <div className="min-w-0">
                           <Link

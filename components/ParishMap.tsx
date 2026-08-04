@@ -491,6 +491,17 @@ export default function ParishMap() {
             selectedCommunities.has("non_catholic_christian")
           ? `${statusCounts.all} Protestant parish and congregation records`
           : `${statusCounts.all} selected parish, mission, and congregation records`;
+  const activeStatusLabel =
+    selectedCommunities.size === 1 &&
+    selectedCommunities.has("roman_catholic")
+      ? "Active Lithuanian parish or mission"
+      : selectedCommunities.size === 1 &&
+          selectedCommunities.has("non_catholic_christian")
+        ? "Active Lithuanian congregation"
+        : selectedCommunities.size === 1 &&
+            selectedCommunities.has("national_catholic_pncc")
+          ? "Active Lithuanian parish"
+          : "Active Lithuanian community";
 
   function regionView(states: Set<string>) {
     const pts = POINTS.filter((p) => states.has(p.state));
@@ -954,8 +965,9 @@ export default function ParishMap() {
                   {
                     key: "active_parish",
                     mode: "open",
-                    label: GROUP_LABEL.active_parish,
-                    description: `${GROUP_DESCRIPTION.active_parish} Missions use a hollow map mark.`,
+                    label: activeStatusLabel,
+                    description:
+                      "Regular Lithuanian worship continues in an active Lithuanian-led parish, mission, or congregation. Mission records use a hollow map mark; record type never becomes a separate status.",
                     fill: "var(--es-active)",
                     count: statusCounts.open,
                   },
