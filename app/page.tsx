@@ -9,10 +9,12 @@ import {
 } from "@/components/DiocesePill";
 import { EndStatePill } from "@/components/EndStatePill";
 import alertsData from "@/data/alerts.json";
-import networkData from "@/data/sielovada-us-network.json";
 import siteFigures from "@/data/site-figures.json";
 import { getClearedPhoto } from "@/lib/photos";
-import { romanCatholicParishHistory } from "@/lib/infographic-projection";
+import {
+  currentPastoralNetwork,
+  romanCatholicParishHistory,
+} from "@/lib/infographic-projection";
 import type { EndState } from "@/lib/end-state";
 
 // Homepage figures come from the build-validated public figure contract.
@@ -31,16 +33,24 @@ const CURRENT_WORSHIP_CLASSES = new Set([
   "active_mission",
   "mass_continues",
 ]);
-const currentWorshipEntries = networkData.entries.filter((entry) =>
-  CURRENT_WORSHIP_CLASSES.has(entry.networkClass),
-);
-const CURRENT_WORSHIP_STATES = siteFigures.currentCatholicLife.states;
+const currentWorshipEntries =
+  currentPastoralNetwork.directory.entries.filter((entry) =>
+    CURRENT_WORSHIP_CLASSES.has(entry.networkClass),
+  );
+const currentPastoralCounts = currentPastoralNetwork.counts;
+const CURRENT_WORSHIP_COUNT =
+  currentPastoralCounts.active_parish +
+  currentPastoralCounts.active_mission +
+  currentPastoralCounts.mass_continues;
+const CURRENT_WORSHIP_STATES = new Set(
+  currentWorshipEntries.map((entry) => entry.state),
+).size;
 
 if (
   romanCatholicParishHistory.length !== siteFigures.history.parishes ||
-  currentWorshipEntries.length !== siteFigures.currentCatholicLife.worshipPlaces
+  currentWorshipEntries.length !== CURRENT_WORSHIP_COUNT
 ) {
-  throw new Error("Homepage populations do not match data/site-figures.json");
+  throw new Error("Homepage populations do not match canonical projections");
 }
 
 type CurrentAlert = {
@@ -462,14 +472,14 @@ export default function Home() {
             Lithuanian Catholic life today
           </h2>
           <span className="text-sm text-muted">
-            {siteFigures.currentCatholicLife.worshipPlaces} places
+            {CURRENT_WORSHIP_COUNT} places
           </span>
         </div>
         <p className="mt-1 text-sm text-muted leading-relaxed">
           Current Lithuanian Catholic worship gathers at{" "}
-          {siteFigures.currentCatholicLife.activeParishes} parishes,{" "}
-          {siteFigures.currentCatholicLife.activeMissions} missions, and{" "}
-          {siteFigures.currentCatholicLife.hostedMasses} hosted Masses across{" "}
+          {currentPastoralCounts.active_parish} parishes,{" "}
+          {currentPastoralCounts.active_mission} missions, and{" "}
+          {currentPastoralCounts.mass_continues} hosted Masses across{" "}
           {CURRENT_WORSHIP_STATES} states.
         </p>
         <p className="mt-2 text-sm">
