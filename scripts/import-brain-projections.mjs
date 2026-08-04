@@ -20,22 +20,6 @@ for (const [source, target] of pairs) {
   writeFileSync(new URL(target, import.meta.url), contents);
 }
 
-const infographic = JSON.parse(
-  readFileSync(
-    new URL(
-      "../../culturenet-brain/docs/research/parish-canon/infographic-projection.json",
-      import.meta.url,
-    ),
-    "utf8",
-  ),
+console.log(
+  "OK: imported canonical publication and infographic projections from CultureNet Brain.",
 );
-const pastoralDirectory = infographic.current_pastoral_network?.directory;
-if (!pastoralDirectory) {
-  throw new Error("Brain infographic projection lacks the canonical pastoral directory");
-}
-writeFileSync(
-  new URL("../data/sielovada-us-network.json", import.meta.url),
-  `${JSON.stringify(pastoralDirectory, null, 2)}\n`,
-);
-
-console.log("OK: imported canonical projections and pastoral directory from CultureNet Brain.");

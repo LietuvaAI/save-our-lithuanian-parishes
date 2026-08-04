@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import alertsData from "@/data/alerts.json";
 import contextPointsData from "@/data/context-points.json";
-import networkData from "@/data/sielovada-us-network.json";
-import siteFigures from "@/data/site-figures.json";
 import {
   DiocesePill,
   DiocesanLeaderLink,
@@ -25,6 +23,10 @@ import {
   FREQUENCY_SHORT,
   GOVERNANCE_LABEL,
 } from "@/lib/watch-labels";
+import {
+  currentPastoralNetwork,
+  type CurrentPastoralDirectoryEntry,
+} from "@/lib/infographic-projection";
 
 export const metadata: Metadata = {
   title: "Lithuanian Catholic Life Today",
@@ -32,27 +34,8 @@ export const metadata: Metadata = {
     "Where Lithuanian Catholic life still gathers in the United States: active parishes, missions, and Lithuanian Masses hosted within other churches.",
 };
 
-type NetworkClass =
-  | "active_parish"
-  | "active_mission"
-  | "mass_continues"
-  | "unresolved"
-  | "no_lithuanian_liturgy"
-  | "directory_conflict"
-  | "religious_house";
-
-type NetworkEntry = {
-  id: string;
-  nameLt: string;
-  nameEn: string;
-  city: string;
-  state: string;
-  networkClass: NetworkClass;
-  ministry: string;
-  clergy?: string;
-  registrySlug?: string;
-  officialSite?: string;
-};
+type NetworkClass = CurrentPastoralDirectoryEntry["networkClass"];
+type NetworkEntry = CurrentPastoralDirectoryEntry;
 
 type SustainabilityEntry = {
   id: string;
@@ -79,7 +62,9 @@ type ContextPoint = {
   href: string | null;
 };
 
-const entries = networkData.entries as NetworkEntry[];
+const networkDirectory = currentPastoralNetwork.directory;
+const pastoralCounts = currentPastoralNetwork.counts;
+const entries = networkDirectory.entries;
 const worshipEntries = entries.filter((entry) =>
   (
     ["active_parish", "active_mission", "mass_continues"] as NetworkClass[]
@@ -199,12 +184,14 @@ const worshipStateCount = new Set(
 ).size;
 
 if (
-  entries.length !== siteFigures.currentCatholicLife.officialListings ||
-  worshipEntries.length !== siteFigures.currentCatholicLife.worshipPlaces ||
-  worshipStateCount !== siteFigures.currentCatholicLife.states
+  entries.length !== Number(networkDirectory.counts.listed) ||
+  worshipEntries.length !==
+    pastoralCounts.active_parish +
+      pastoralCounts.active_mission +
+      pastoralCounts.mass_continues
 ) {
   throw new Error(
-    "Current Catholic life figures do not match site-figures.json",
+    "Current Catholic life figures do not match the canonical pastoral projection",
   );
 }
 
@@ -323,20 +310,20 @@ export default function LithuanianCatholicLifeTodayPage() {
             legend={[
               {
                 label:
-                  `Parish · ${siteFigures.currentCatholicLife.activeParishes}`,
+                  `Parish · ${pastoralCounts.active_parish}`,
                 color: "var(--es-active)",
                 shape: "circle",
               },
               {
                 label:
-                  `Mission · ${siteFigures.currentCatholicLife.activeMissions}`,
+                  `Mission · ${pastoralCounts.active_mission}`,
                 color: "var(--es-active)",
                 shape: "circle",
                 hollow: true,
               },
               {
                 label:
-                  `Hosted Mass · ${siteFigures.currentCatholicLife.hostedMasses}`,
+                  `Hosted Mass · ${pastoralCounts.mass_continues}`,
                 color: "var(--es-mass)",
                 shape: "circle",
                 hollow: true,
@@ -356,9 +343,9 @@ export default function LithuanianCatholicLifeTodayPage() {
               places still gather for Lithuanian Catholic worship
             </h2>
             <p className="mt-3 leading-relaxed text-muted">
-              {siteFigures.currentCatholicLife.activeParishes} are Lithuanian
-              parishes, {siteFigures.currentCatholicLife.activeMissions} are
-              missions, and {siteFigures.currentCatholicLife.hostedMasses} are
+              {pastoralCounts.active_parish} are Lithuanian parishes,{" "}
+              {pastoralCounts.active_mission} are missions, and{" "}
+              {pastoralCounts.mass_continues} are
               Lithuanian Masses hosted
               by another parish. The surviving network reaches{" "}
               {worshipStateCount} states.
@@ -372,11 +359,12 @@ export default function LithuanianCatholicLifeTodayPage() {
           </div>
         </div>
         <p className="mt-5 border-t border-rule pt-3 text-xs leading-relaxed text-muted">
-          Scope: {siteFigures.currentCatholicLife.officialListings} official
+          Scope: {Number(networkDirectory.counts.listed)} official
           U.S. network listings; map population: {worshipEntries.length} places
-          with current worship · Checked {networkData.source.checked} · Source:{" "}
+          with current worship · Checked{" "}
+          {String(networkDirectory.source.checked)} · Source:{" "}
           <a
-            href={networkData.source.url}
+            href={String(networkDirectory.source.url)}
             target="_blank"
             rel="noopener noreferrer"
             className="underline underline-offset-2 hover:text-accent"
@@ -392,15 +380,15 @@ export default function LithuanianCatholicLifeTodayPage() {
 
       <CurrentLifeFactSheet
         places={worshipEntries.length}
-        parishes={siteFigures.currentCatholicLife.activeParishes}
-        missions={siteFigures.currentCatholicLife.activeMissions}
-        hostedMasses={siteFigures.currentCatholicLife.hostedMasses}
+        parishes={pastoralCounts.active_parish}
+        missions={pastoralCounts.active_mission}
+        hostedMasses={pastoralCounts.mass_continues}
         states={worshipStateCount}
         profiledCommunities={currentLifeSustainabilityEntries.length}
         lithuanianPastors={lithuanianKlebonasCount}
         weeklyMasses={weeklyProfileCount}
         standaloneGovernance={standaloneProfileCount}
-        checked={networkData.source.checked}
+        checked={String(networkDirectory.source.checked)}
       />
 
       <section className="mt-12" aria-labelledby="worship-network-heading">
