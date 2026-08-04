@@ -19,10 +19,10 @@ const projection = read("canonical-publication-projection.json");
 const infographic = read("canonical-infographic-projection.json");
 const adjudications = read("canonical-public-census-adjudications.json");
 
-const TARGET_REVISION = 24;
+const TARGET_REVISION = 25;
 const TARGET_DATE = "2026-08-03";
 const CHANGELOG =
-  "Registry Revision 24: imported Brain-adjudicated continuation statuses and card explanations for the 22 institutions that live on in another community.";
+  "Registry Revision 25: imported Brain-adjudicated physical-site conditions reconciled from canonical current-condition case evidence.";
 
 if (projection.schema !== "culturenet-parish-publication-projection.v1") {
   throw new Error(`Unsupported publication projection schema: ${projection.schema}`);
@@ -206,7 +206,7 @@ const revisionEntry = {
   publicUSRecords: publicRecords.length,
   usRomanCatholicParishes: romanCatholicParishes,
   summary:
-    "Imported Brain-adjudicated continuation statuses, modes, destinations, explanations, and evidence without changing public populations or status totals.",
+    "Imported Brain-adjudicated physical-site conditions from canonical current-condition case evidence without changing institution or site populations.",
   evidence: [
     "data/canonical-publication-projection.json",
     "data/canonical-infographic-projection.json",

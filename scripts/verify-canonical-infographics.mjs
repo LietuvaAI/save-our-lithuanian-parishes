@@ -158,10 +158,10 @@ const resolveSiteCondition = (site) => {
 };
 const expectedConditionCounts = new Map([
   ["building-demolished", 23],
-  ["building-standing", 24],
-  ["building-repurposed", 16],
-  ["building-listed-for-sale", 1],
-  [null, 67],
+  ["building-standing", 44],
+  ["building-repurposed", 33],
+  ["building-listed-for-sale", 2],
+  [null, 29],
 ]);
 const actualConditionCounts = new Map();
 for (const site of worshipSites) {
@@ -175,8 +175,8 @@ for (const [condition, expected] of expectedConditionCounts) {
 const terminalAuthority = institutions.filter(
   (row) => row.building_fate_authority === "terminal_site_condition",
 );
-if (terminalAuthority.length !== 43) {
-  errors.push(`terminal-site building-fate authority: ${terminalAuthority.length} != 43`);
+if (terminalAuthority.length !== 73) {
+  errors.push(`terminal-site building-fate authority: ${terminalAuthority.length} != 73`);
 }
 for (const institution of institutions) {
   if (institution.status_authority !== "brain_canonical_assertion") {

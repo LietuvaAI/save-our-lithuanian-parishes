@@ -299,6 +299,20 @@
         "data/canonical-public-census-adjudications.json",
         "data/canonical-infographic-projection.json"
       ]
+    },
+    {
+      "version": 25,
+      "date": "2026-08-03",
+      "registryRecords": 193,
+      "publicUSRecords": 155,
+      "usRomanCatholicParishes": 132,
+      "summary": "Imported Brain-adjudicated physical-site conditions from canonical current-condition case evidence without changing institution or site populations.",
+      "evidence": [
+        "data/canonical-publication-projection.json",
+        "data/canonical-infographic-projection.json",
+        "data/canonical-public-census-adjudications.json",
+        "data/canonical-infographic-projection.json"
+      ]
     }
   ]
 }
