@@ -7,6 +7,7 @@ import PhysicalSiteTimeline, {
 import {
   infographicCounts,
   physicalWorshipSiteHistory,
+  resolvePhysicalSiteCondition,
 } from "@/lib/infographic-projection";
 
 export const metadata: Metadata = {
@@ -14,28 +15,6 @@ export const metadata: Metadata = {
   description:
     "A physical-site view of documented Lithuanian Catholic churches and worship places, kept separate from parish-institution history.",
 };
-
-function stateForSite(
-  conditionRelationships: (typeof physicalWorshipSiteHistory)[number]["condition_relationships"],
-  demolishedYear: number | null,
-): PhysicalSiteState {
-  const conditionTypes = new Set(
-    conditionRelationships
-      .filter((condition) => {
-        if (condition.relationship_type === "building-demolished") return true;
-        const end = condition.date?.end;
-        return end == null;
-      })
-      .map((condition) => condition.relationship_type),
-  );
-  if (demolishedYear || conditionTypes.has("building-demolished")) {
-    return "demolished";
-  }
-  if (conditionTypes.has("building-repurposed")) return "repurposed";
-  if (conditionTypes.has("building-listed-for-sale")) return "listed_for_sale";
-  if (conditionTypes.has("building-standing")) return "standing";
-  return "not_established";
-}
 
 function buildSites(): PhysicalSiteTimelineRow[] {
   return physicalWorshipSiteHistory.map((site) => {
@@ -49,7 +28,7 @@ function buildSites(): PhysicalSiteTimelineRow[] {
       name: site.name,
       firstYear: site.first_documented_year,
       endYear: site.demolished_year,
-      state: stateForSite(site.condition_relationships, site.demolished_year),
+      state: resolvePhysicalSiteCondition(site.condition_relationships),
       profileHref: profiles.at(-1) ?? null,
     };
   });

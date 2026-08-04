@@ -520,6 +520,12 @@ const physicalSitePage = readFileSync(
 if (!/physicalWorshipSiteHistory/.test(physicalSitePage)) {
   errors.push("physical-site view does not use the canonical worship-site population");
 }
+if (!/resolvePhysicalSiteCondition/.test(physicalSitePage)) {
+  errors.push("physical-site view does not use the canonical condition resolver");
+}
+if (/state:\s*[^,\n]*demolished_year/.test(physicalSitePage)) {
+  errors.push("physical-site view resolves condition from demolished_year outside the canonical contract");
+}
 if (/romanCatholicInstitutionHistory/.test(physicalSitePage)) {
   errors.push("physical-site view reads the institution population");
 }

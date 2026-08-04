@@ -153,6 +153,13 @@ export type BuildingSiteHistoryRow = {
   counted_in_public_institution_total: false;
 };
 
+export type PhysicalSiteCondition =
+  | "demolished"
+  | "repurposed"
+  | "listed_for_sale"
+  | "standing"
+  | "not_established";
+
 export type ContinuityEndpoint = {
   entity_id: string;
   entity_type: string;
@@ -297,6 +304,8 @@ export const continuityEdges = canonicalInfographics.continuity_edges;
 export const currentPastoralNetwork =
   canonicalInfographics.current_pastoral_network;
 export const infographicCounts = canonicalInfographics.counts;
+export const conditionResolutionContract =
+  canonicalInfographics.condition_resolution_contract;
 export const pennsylvaniaCoalRegion =
   canonicalInfographics.regional_views.pennsylvania_coal_region;
 export const canadianComparators = canonicalInfographics.comparators.canada;
@@ -315,6 +324,44 @@ export const romanCatholicInstitutionHistory = institutionHistory.filter(
 export const physicalWorshipSiteHistory = buildingSiteHistory.filter(
   (row) => row.site_class === "worship_site",
 );
+
+const PHYSICAL_SITE_STATE_BY_RELATIONSHIP = {
+  "building-demolished": "demolished",
+  "building-repurposed": "repurposed",
+  "building-listed-for-sale": "listed_for_sale",
+  "building-standing": "standing",
+} as const satisfies Record<string, Exclude<PhysicalSiteCondition, "not_established">>;
+
+/**
+ * Resolve a site's present condition exactly as Brain's projection contract
+ * specifies: demolition is irreversible; other conditions are current only
+ * while their relationship is open-ended; conflicts follow canonical
+ * precedence. Historical helpers such as `demolished_year` never decide the
+ * current category independently.
+ */
+export function resolvePhysicalSiteCondition(
+  relationships: BuildingSiteHistoryRow["condition_relationships"],
+): PhysicalSiteCondition {
+  const currentRelationships = new Set(
+    relationships
+      .filter(
+        (relationship) =>
+          relationship.relationship_type === "building-demolished" ||
+          relationship.date?.end == null,
+      )
+      .map((relationship) => relationship.relationship_type),
+  );
+  const resolvedRelationship = conditionResolutionContract.precedence.find(
+    (relationship) => currentRelationships.has(relationship),
+  );
+
+  return resolvedRelationship &&
+    resolvedRelationship in PHYSICAL_SITE_STATE_BY_RELATIONSHIP
+    ? PHYSICAL_SITE_STATE_BY_RELATIONSHIP[
+        resolvedRelationship as keyof typeof PHYSICAL_SITE_STATE_BY_RELATIONSHIP
+      ]
+    : "not_established";
+}
 export const additionalCurrentHostedCommunities =
   currentPastoralNetwork.directory.entries.filter(
     (entry) =>
