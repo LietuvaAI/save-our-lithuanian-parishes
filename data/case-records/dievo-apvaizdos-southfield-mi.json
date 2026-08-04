@@ -51,7 +51,7 @@
     {
       "date": "2026-07-31",
       "headline": "Public feedback window closes",
-      "detail": "The Archdiocese of Detroit's Listening Session Feedback Survey closed on July 31, 2026. Divine Providence remains an active Lithuanian personal parish in Planning Area 8 while feedback is reviewed and the three draft pastorate models are refined; the Archdiocese states no final decision has been made, with final plans expected in spring 2027."
+      "detail": "The Archdiocese of Detroit's Listening Session Feedback Survey closed on July 31, 2026 — the restructuring site now reads 'The Post-Listening Session Survey is Now Closed.' Divine Providence remains an active Lithuanian personal parish in Planning Area 8 while the three draft pastorate models are refined (Phase 2, through December 2026). Per the Archdiocese's published timeline, Archbishop Weisenburger announces pastorate decisions in Phase 3, January-June 2027, with implementation beginning July 2027; no final decision has been made."
     }
   ],
   "sources": [
@@ -90,6 +90,12 @@
       "publisher": "St. Mary of the Immaculate Conception, Monroe",
       "date": "2026",
       "url": "https://stmarymonroe.org/aod-restructuring"
+    },
+    {
+      "title": "Archdiocesan Restructuring — Planning Process (official four-phase timeline; survey marked closed)",
+      "publisher": "Archdiocese of Detroit, restructuring.aod.org",
+      "date": "accessed 2026-08-04",
+      "url": "https://restructuring.aod.org/planning-process"
     }
   ],
   "confidence": "verified",
