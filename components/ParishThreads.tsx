@@ -1,16 +1,27 @@
 "use client";
 
 // ============================================================================
-// ParishThreads — every church community as its own thread: documented
-// building or parish baseline → present
-// end state → (for the closed) the building's fate, on one aligned right
-// edge. Per the 2026-07-26 thread-chart research brief (NYT "How Every
-// Member Got to Congress" is the verified precedent): thin base strokes so
-// the field reads as woven texture; hover pops one thread with a halo and
-// dims the rest to near-invisibility; a name search is a first-class,
-// non-hover entry point; categories (not entities) carry permanent labels;
-// clicking a thread opens the parish record, clicking a band lists its
-// parishes. Compact fixed-height field, not a row-per-parish list.
+// ParishThreads — every Lithuanian Roman Catholic institution as its own line,
+// from the decade it began to where it stands today. Closed institutions gather
+// and then fan out by what became of the church they last used.
+//
+// Two rules govern this component:
+//
+//   1. It is an INSTITUTION view. An institution and its church building are
+//      separate units with separate populations. Building condition belongs to
+//      /church-buildings-through-time and is never counted here.
+//   2. Every label, count and explanation comes from the canonical projection.
+//      The component holds no parish list, description map, or per-parish
+//      exception.
+//
+// Presentation notes (2026-08-04, approved design):
+//   · one headed column at each edge — a second "end state" heading over the
+//     Closed bracket read as the same question asked twice;
+//   · label positions are decluttered and carry a leader back to their band,
+//     because a two-member band is only a few units tall and proximity alone
+//     attaches its label to the wrong mark;
+//   · "not yet established" is stated as a research gap, never as an outcome;
+//   · a future plan is labelled as a plan, never as a completed merger.
 // ============================================================================
 
 import { useMemo, useState, type MouseEvent } from "react";
@@ -25,26 +36,39 @@ import {
   type EndStateGroup,
 } from "@/lib/end-state";
 
+/** Canonical terminal-site conditions, plus the coverage gap. */
 export type FateKey =
   | "demolished"
   | "repurposed"
-  | "religious"
-  | "secular"
-  | "derelict"
+  | "listed_for_sale"
   | "standing"
   | "unrecorded";
+
+export interface ThreadContinuation {
+  mode: string;
+  summary: string;
+  destination: string | null;
+  effective: string | null;
+  futurePlan: string | null;
+}
 
 export interface ThreadParish {
   slug: string;
   name: string;
   city: string;
   state: string;
+  /** Full canonical jurisdiction name; never built by prefixing a short field. */
+  jurisdiction: string | null;
   anchorYear: number | null;
   anchorLabel: string;
+  anchorDisplay: string | null;
+  endedDisplay: string | null;
   recordType: "parish" | "misija";
   endState: EndState;
-  /** Building fate for the closed family; null for living branches. */
+  /** Terminal-site condition for the closed family; null for living branches. */
   fateKey: FateKey | null;
+  /** Brain's adjudicated continuation, on transferred institutions only. */
+  continuation: ThreadContinuation | null;
   href: string | null;
 }
 
@@ -58,31 +82,53 @@ export interface AdditionalHostedCommunity {
 }
 
 const FATE_LABEL: Record<FateKey, string> = {
-  demolished: "Building demolished",
-  repurposed: "Building repurposed",
-  religious: "Sold to another congregation",
-  secular: "Sold — secular use now",
-  derelict: "Standing derelict",
-  standing: "Building still standing",
-  unrecorded: "Building condition not yet established",
+  demolished: "Demolished",
+  repurposed: "Repurposed",
+  listed_for_sale: "Listed for sale",
+  standing: "Closed parish — church standing",
+  unrecorded: "Terminal church outcome not yet established",
+};
+
+const FATE_SUB: Record<FateKey, string> = {
+  demolished: "their last church was demolished",
+  repurposed: "no longer a Lithuanian place of worship",
+  listed_for_sale: "on the market",
+  standing: "the institution ended; its church did not",
+  unrecorded: "a research gap, not an outcome",
+};
+
+// Long drawer explanations. Each says what the category counts and, just as
+// importantly, what it does not claim.
+const FATE_NOTE: Partial<Record<FateKey, string>> = {
+  demolished:
+    "These historical Roman Catholic institutions are closed, and their final documented worship sites were later demolished. This view counts parishes and missions, not every building they used: each institution appears once, according to the condition of its terminal worship site. Earlier churches belonging to the same parish are recorded separately among the church buildings. Parish closure and building demolition are also separate events and may have happened in different years.",
+  repurposed:
+    "These closed Roman Catholic institutions have terminal worship sites that survive in another use. Repurposed may mean worship by another Christian community, conversion into housing, or use as a cultural or community facility. This view counts each historical institution once and assigns a building outcome only when its terminal worship site — or all of its terminal sites — resolves canonically to the same condition. It therefore does not include every repurposed building associated with the Lithuanian parish story.",
+  standing:
+    "The historical Lithuanian parish has ended, but its terminal church building remains standing. This category covers only closed parish institutions; standing churches belonging to active, hosted-Mass, or transferred communities appear in their respective parish-status groups.",
+  unrecorded:
+    "These are closed institutions whose canonical terminal worship site does not yet carry an accepted present-condition assertion. This does not mean that the church is gone. It means the record has not yet established whether that terminal building still stands, was repurposed, was demolished, or reached another documented outcome.",
+};
+
+const GROUP_NOTE: Partial<Record<EndStateGroup, string>> = {
+  transferred:
+    "The historical Lithuanian parish no longer operates as a current Lithuanian pastoral institution, but its life continues in another form: the same parish may now serve a different community, a successor parish may carry Catholic life forward, or the former church may serve another religious community. This category does not mean that every institution closed or merged. Each card identifies the exact form of continuity established in the record.",
 };
 
 const FATE_ORDER: FateKey[] = [
   "demolished",
   "repurposed",
-  "religious",
-  "secular",
-  "derelict",
+  "listed_for_sale",
   "standing",
   "unrecorded",
 ];
 
 const GROUP_SUBLABEL: Record<EndStateGroup, string> = {
-  active_parish: "active parish or mission with Lithuanian worship",
-  mass_continues: "in a hosted, merged, mission-community, or no longer Lithuanian-led setting",
-  transferred: "the church serves another community today",
+  active_parish: "regular Lithuanian worship today",
+  mass_continues: "inside a parish no longer Lithuanian-led",
+  transferred: "no longer a Lithuanian pastoral institution",
   unresolved: "contested or canonically undecided",
-  closed: "institution closed; building fate follows →",
+  closed: "institution closed; the church follows →",
   unverified: "present status still being researched",
 };
 
@@ -96,12 +142,10 @@ const institutionType = (recordType: ThreadParish["recordType"]) =>
 
 const FATE_OPACITY: Record<FateKey, number> = {
   demolished: 0.95,
-  repurposed: 0.68,
-  religious: 0.6,
-  secular: 0.5,
-  derelict: 0.42,
-  standing: 0.32,
-  unrecorded: 0.18,
+  repurposed: 0.7,
+  listed_for_sale: 0.68,
+  standing: 0.68,
+  unrecorded: 0.22,
 };
 
 // Geometry — a compact field with room for labels at both edges.
@@ -115,6 +159,9 @@ const NODE_W = 12;
 const GAP_DEC = 9;
 const GAP_MID = 26;
 const GAP_FATE = 13;
+// A decade label is one line; a terminal label is a title plus a sub-line.
+const DEC_LABEL_GAP = 16;
+const TERM_LABEL_GAP = 32;
 
 function decadeOf(anchorYear: number | null): string {
   if (!anchorYear) return "Undated";
@@ -123,7 +170,34 @@ function decadeOf(anchorYear: number | null): string {
 }
 
 const fold = (s: string) =>
-  s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+/**
+ * Lay label centres out in order, pushing each at least `minGap` below the one
+ * above, then settle back up from the last if that overruns the field. The bands
+ * themselves never move — only their labels, which carry a leader line home.
+ */
+function declutterLabels(
+  bands: { y0: number; y1: number }[],
+  minGap: number,
+  floor: number,
+): number[] {
+  const out: number[] = [];
+  let previous = Number.NEGATIVE_INFINITY;
+  for (const band of bands) {
+    const centre = Math.max((band.y0 + band.y1) / 2, previous + minGap);
+    out.push(centre);
+    previous = centre;
+  }
+  if (out.length && out[out.length - 1] > floor) {
+    let ceiling = floor;
+    for (let i = out.length - 1; i >= 0; i -= 1) {
+      if (out[i] > ceiling) out[i] = ceiling;
+      ceiling = out[i] - minGap;
+    }
+  }
+  return out;
+}
 
 export default function ParishThreads({
   parishes,
@@ -167,8 +241,7 @@ export default function ParishThreads({
         );
 
     const total = parishes.length;
-    const U =
-      (560 - GAP_DEC * (decadeKeys.length - 1)) / Math.max(total, 1);
+    const U = (560 - GAP_DEC * (decadeKeys.length - 1)) / Math.max(total, 1);
 
     const decadeLayout: {
       key: string;
@@ -195,7 +268,6 @@ export default function ParishThreads({
     const byGroup = new Map<EndStateGroup, ThreadParish[]>();
     for (const g of groups) byGroup.set(g, []);
     for (const p of parishes) byGroup.get(toGroup(p.endState))!.push(p);
-    // Within a node, order by decade then name so left-side order carries over.
     const decadeIdx = (p: ThreadParish) =>
       decadeKeys.indexOf(decadeOf(p.anchorYear));
     for (const g of groups)
@@ -272,16 +344,31 @@ export default function ParishThreads({
 
     const H = Math.max(fieldBottom, tyy - GAP_MID) + 36;
 
+    // Label positions are decluttered independently of the bands.
+    const labelFloor = H - 30;
+    const decadeLabelY = declutterLabels(
+      decadeLayout,
+      DEC_LABEL_GAP,
+      labelFloor,
+    );
+    const termLabelY = declutterLabels(
+      termKeys.map((key) => term.get(key)!),
+      TERM_LABEL_GAP,
+      labelFloor,
+    );
+
     const bandMembers = new Map<string, ThreadParish[]>(termMembers);
     for (const g of groups) bandMembers.set(`g:${g}`, byGroup.get(g)!);
     for (const k of decadeKeys) bandMembers.set(`dec:${k}`, decades.get(k)!);
 
     return {
       decadeLayout,
+      decadeLabelY,
       groups,
       mid,
       termKeys,
       term,
+      termLabelY,
       bandMembers,
       yOfParishDecade,
       yOfParishMid,
@@ -306,7 +393,10 @@ export default function ParishThreads({
       )
       .slice(0, 8);
   }, [query, parishes]);
-  const matchSlugs = useMemo(() => new Set(matches.map((m) => m.slug)), [matches]);
+  const matchSlugs = useMemo(
+    () => new Set(matches.map((m) => m.slug)),
+    [matches],
+  );
 
   const bandKeyOf = (p: ThreadParish) => {
     const g = toGroup(p.endState);
@@ -324,11 +414,9 @@ export default function ParishThreads({
     ) {
       if (activeKey.startsWith("dec:"))
         return decadeOf(p.anchorYear) === activeKey.slice(4);
-      if (activeKey === "g:closed")
-        return toGroup(p.endState) === "closed";
+      if (activeKey === "g:closed") return toGroup(p.endState) === "closed";
       return (
-        bandKeyOf(p) === activeKey ||
-        `g:${toGroup(p.endState)}` === activeKey
+        bandKeyOf(p) === activeKey || `g:${toGroup(p.endState)}` === activeKey
       );
     }
     return activeKey === p.slug;
@@ -393,9 +481,7 @@ export default function ParishThreads({
     };
 
     if (x < x0 || x > x3) return null;
-    if (x <= x1) {
-      return cubicYAtX(x, x0, (x0 + x1) / 2, x1, y0, y1);
-    }
+    if (x <= x1) return cubicYAtX(x, x0, (x0 + x1) / 2, x1, y0, y1);
     if (x <= x2) return y1;
     return cubicYAtX(x, x2, (x2 + x3) / 2, x3, y1, y2);
   };
@@ -435,16 +521,36 @@ export default function ParishThreads({
     if (nearest?.href) router.push(nearest.href);
   };
 
-  const openLabel = open?.startsWith("fate:")
-    ? FATE_LABEL[open.slice(5) as FateKey]
+  const openFate: FateKey | null = open?.startsWith("fate:")
+    ? (open.slice(5) as FateKey)
+    : null;
+  const openGroup: EndStateGroup | null = open?.startsWith("g:")
+    ? (open.slice(2) as EndStateGroup)
+    : null;
+  const openLabel = openFate
+    ? FATE_LABEL[openFate]
     : open?.startsWith("dec:")
       ? open.slice(4) === "Undated"
-        ? "Baseline year not yet established"
-        : `Baseline in the ${open.slice(4)}`
-      : open
-        ? FLOW_GROUP_LABEL[open.slice(2) as EndStateGroup]
+        ? "No established beginning"
+        : `Began in the ${open.slice(4)}`
+      : openGroup
+        ? FLOW_GROUP_LABEL[openGroup]
+        : null;
+  const openNote = openFate
+    ? FATE_NOTE[openFate]
+    : openGroup
+      ? (GROUP_NOTE[openGroup] ?? null)
+      : open?.startsWith("dec:") && open.slice(4) === "Undated"
+        ? "No founding year is established for these records; none is inferred."
         : null;
   const openMembers = open ? (model.bandMembers.get(open) ?? []) : [];
+
+  // A leader from the band's true centre to its displaced label.
+  const leaderPath = (bandCy: number, labelCy: number) => {
+    const x0 = X_END + NODE_W;
+    if (Math.abs(labelCy - bandCy) <= 2) return `M ${x0} ${bandCy} H ${x0 + 7}`;
+    return `M ${x0} ${bandCy} H ${x0 + 3} L ${x0 + 6} ${labelCy} H ${x0 + 7}`;
+  };
 
   return (
     <div>
@@ -455,7 +561,7 @@ export default function ParishThreads({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Find a parish by name or city…"
-          className="rounded-md border border-rule bg-background px-2 py-1.5 text-sm w-64"
+          className="w-64 rounded-md border border-rule bg-background px-2 py-1.5 text-sm"
           aria-label="Find a parish by name or city"
         />
       </div>
@@ -490,9 +596,12 @@ export default function ParishThreads({
             <span className="font-serif font-semibold">{hovered.name}</span>
             <span className="text-muted">
               {" "}
-              · {hovered.city}, {hovered.state} · {hovered.anchorLabel}{" "}
-              {hovered.anchorYear ?? "not yet established"} ·{" "}
-              {institutionType(hovered.recordType)} · {toGroup(hovered.endState) === "closed" && hovered.fateKey
+              · {hovered.city}, {hovered.state}
+              {hovered.jurisdiction ? ` · ${hovered.jurisdiction}` : ""} ·{" "}
+              {hovered.anchorLabel}{" "}
+              {hovered.anchorDisplay ?? "not yet established"} ·{" "}
+              {institutionType(hovered.recordType)} ·{" "}
+              {toGroup(hovered.endState) === "closed" && hovered.fateKey
                 ? `closed; ${FATE_LABEL[hovered.fateKey].toLowerCase()}`
                 : FLOW_GROUP_LABEL[toGroup(hovered.endState)]}
               {" · click to open profile"}
@@ -510,284 +619,259 @@ export default function ParishThreads({
         <div className="w-full min-w-0 max-w-full overflow-x-auto">
           <svg
             viewBox={`0 0 ${W} ${model.H}`}
-            className="block w-full max-w-none h-auto"
+            className="block h-auto w-full max-w-none"
             style={{ minWidth: 740 }}
             role="img"
-            aria-label={`Each of the ${model.total} documented Roman Catholic Lithuanian parishes and missions as one line, from its institutional beginning to its present condition; closed institutions continue to the last documented church building's fate.`}
+            aria-label={`Each of the ${model.total} documented Roman Catholic Lithuanian parishes and missions as one line, from the decade it began to where it stands today; the closed fan out by what became of the church they last used.`}
           >
-          {/* Church baseline first, building fate only where documented. */}
-          <text
-            x={X_DEC}
-            y={16}
-            textAnchor="end"
-            fontSize={10}
-            fontWeight={700}
-            fill="var(--foreground)"
-          >
-            BUILDING / BASELINE
-          </text>
-          <text
-            x={X_MID + NODE_W / 2}
-            y={16}
-            textAnchor="middle"
-            fontSize={10}
-            fontWeight={700}
-            fill="var(--foreground)"
-          >
-            INSTITUTION STATUS
-          </text>
-          <text
-            x={X_END}
-            y={16}
-            fontSize={10}
-            fontWeight={700}
-            fill="var(--foreground)"
-          >
-            PRESENT CONDITION
-          </text>
-          <text
-            x={X_END}
-            y={31}
-            fontSize={9}
-            fill="var(--muted)"
-          >
-            closed institutions split by church fate
-          </text>
-          {/* Decade bands + labels */}
-          {model.decadeLayout.map((d) => (
-            <g key={d.key}>
-              <rect
-                x={X_DEC}
-                y={d.y0}
-                width={DEC_W}
-                height={Math.max(d.y1 - d.y0, 2.5)}
-                fill="var(--mark-ink)"
-                opacity={
-                  hot === `dec:${d.key}` ? 0.9 : anyFocus ? 0.25 : 0.55
-                }
-                rx={2}
-                className="cursor-pointer"
-                onMouseEnter={() => setHot(`dec:${d.key}`)}
-                onMouseLeave={() => setHot(null)}
-                onClick={() => {
-                  setOpen((o) =>
-                    o === `dec:${d.key}` ? null : `dec:${d.key}`,
-                  );
-                }}
-              >
-                  <title>{`${d.key === "Undated" ? "Baseline year not yet established" : `Baseline in the ${d.key}`}: ${d.count} — click to list`}</title>
-              </rect>
-              <text
-                x={X_DEC - 8}
-                y={(d.y0 + d.y1) / 2}
-                textAnchor="end"
-                dominantBaseline="central"
-                fontSize={d.count >= 8 ? 12 : 10}
-                fontWeight={600}
-                fill="var(--foreground)"
-                opacity={anyFocus && hot !== `dec:${d.key}` ? 0.35 : 1}
-              >
-                {d.key}
-                <tspan fontWeight={400} fill="var(--muted)">
-                  {` · ${d.count}`}
-                </tspan>
-              </text>
-            </g>
-          ))}
+            {/* One heading at each edge. A second "end state" heading over the
+                Closed bracket read as the same question asked twice. */}
+            <text
+              x={X_DEC}
+              y={16}
+              textAnchor="end"
+              fontSize={10}
+              fontWeight={700}
+              fill="var(--foreground)"
+            >
+              BEGAN
+            </text>
+            <text
+              x={X_END}
+              y={16}
+              fontSize={10}
+              fontWeight={700}
+              fill="var(--foreground)"
+            >
+              WHERE IT STANDS TODAY
+            </text>
+            <text x={X_END} y={31} fontSize={9} fill="var(--muted)">
+              closed parishes fan out by what became of the church
+            </text>
 
-          {/* Threads — nearest-line detection keeps dense crossings usable. */}
-          <g
-            onMouseMove={previewNearestThread}
-            onMouseLeave={() => setHot(null)}
-            onClick={selectNearestThread}
-          >
-            <rect
-              x={X_DEC + DEC_W}
-              y={TOP}
-              width={X_END - X_DEC - DEC_W}
-              height={Math.max(model.H - TOP - 36, 1)}
-              fill="transparent"
-            />
-            {parishes.map((p) => {
-              const g = toGroup(p.endState);
-              const active = isThreadActive(p);
-              const spotlight =
-                (hot === p.slug ||
-                  (matchSlugs.size > 0 && matchSlugs.has(p.slug))) &&
-                active;
+            {/* Decade bands + decluttered labels */}
+            {model.decadeLayout.map((d, i) => {
+              const labelY = model.decadeLabelY[i];
               return (
-                <g key={p.slug}>
-                  {spotlight && (
-                    <path
-                      d={threadPath(p)}
-                      fill="none"
-                      stroke="var(--background)"
-                      strokeWidth={5}
-                      opacity={0.9}
-                    />
-                  )}
-                  <path
-                    d={threadPath(p)}
-                    fill="none"
-                    stroke={END_STATE_COLOR[g]}
-                    strokeWidth={spotlight ? 2.4 : 0.7}
+                <g key={d.key}>
+                  <rect
+                    x={X_DEC}
+                    y={d.y0}
+                    width={DEC_W}
+                    height={Math.max(d.y1 - d.y0, 2.5)}
+                    fill="var(--mark-ink)"
                     opacity={
-                      active ? (spotlight ? 1 : anyFocus ? 0.75 : 0.55) : 0.04
+                      hot === `dec:${d.key}` ? 0.9 : anyFocus ? 0.25 : 0.55
                     }
-                  />
-                  {/* Wide transparent corridor improves pointer and keyboard use. */}
-                  <path
-                    d={threadPath(p)}
-                    fill="none"
-                    stroke="transparent"
-                    strokeWidth={18}
+                    rx={2}
                     className="cursor-pointer"
-                    role="button"
-                    tabIndex={0}
-                    aria-label={`Open ${p.name}, ${p.city}, ${p.state} profile`}
-                    onFocus={() => setHot(p.slug)}
-                    onBlur={() => setHot(null)}
-                    onKeyDown={(event) => {
-                      if (event.key === "Enter" || event.key === " ") {
-                        event.preventDefault();
-                        if (p.href) router.push(p.href);
-                      }
+                    onMouseEnter={() => setHot(`dec:${d.key}`)}
+                    onMouseLeave={() => setHot(null)}
+                    onClick={() => {
+                      setOpen((o) =>
+                        o === `dec:${d.key}` ? null : `dec:${d.key}`,
+                      );
                     }}
                   >
-                    <title>{`${p.name}, ${p.city}, ${p.state} — click to open profile`}</title>
-                  </path>
+                    <title>{`${d.key === "Undated" ? "No established beginning" : `Began in the ${d.key}`}: ${d.count} — click to list`}</title>
+                  </rect>
+                  <text
+                    x={X_DEC - 8}
+                    y={labelY}
+                    textAnchor="end"
+                    dominantBaseline="central"
+                    fontSize={d.count >= 8 ? 12 : 10}
+                    fontWeight={600}
+                    fill="var(--foreground)"
+                    opacity={anyFocus && hot !== `dec:${d.key}` ? 0.35 : 1}
+                  >
+                    {d.key}
+                    <tspan fontWeight={400} fill="var(--muted)">
+                      {` · ${d.count}`}
+                    </tspan>
+                  </text>
                 </g>
               );
             })}
-          </g>
 
-          {/* Mid nodes (Closed labeled; the rest carry labels at the edge) */}
-          {model.groups.map((g) => {
-            const b = model.mid.get(g)!;
-            return (
-              <g key={`m-${g}`}>
-                <rect
-                  x={X_MID}
-                  y={b.y0}
-                  width={NODE_W}
-                  height={Math.max(b.y1 - b.y0, 3)}
-                  fill={END_STATE_COLOR[g]}
-                  opacity={anyFocus && hot !== `g:${g}` ? 0.35 : 0.95}
-                  rx={2}
-                  className="cursor-pointer"
-                  onMouseEnter={() => setHot(`g:${g}`)}
-                  onMouseLeave={() => setHot(null)}
-                  onClick={() => {
-                    setOpen((o) =>
-                      o === `g:${g}` ? null : `g:${g}`,
-                    );
-                  }}
-                >
-                  <title>{`${FLOW_GROUP_LABEL[g]}: ${model.counts[g]} — click to list`}</title>
-                </rect>
-                {g === "closed" && (
-                  <text
-                    x={X_MID - 2}
-                    y={b.y0 - 8}
-                    fontSize={13}
-                    fontWeight={600}
-                    fill="var(--foreground)"
-                  >
-                    {FLOW_GROUP_LABEL[g]}
-                    <tspan fontWeight={400} fill="var(--muted)">
-                      {` · ${model.counts[g]}`}
-                    </tspan>
-                  </text>
-                )}
-              </g>
-            );
-          })}
-
-          {/* Terminal nodes + labels on the aligned edge */}
-          {model.termKeys.map((key) => {
-            const t = model.term.get(key)!;
-            const isFate = key.startsWith("fate:");
-            const fate = isFate ? (key.slice(5) as FateKey) : null;
-            const g = isFate
-              ? ("closed" as EndStateGroup)
-              : (key.slice(2) as EndStateGroup);
-            const n = model.bandMembers.get(key)!.length;
-            const cy = (t.y0 + t.y1) / 2;
-            return (
-              <g
-                key={key}
-                opacity={anyFocus && hot !== key && hot !== `g:${g}` ? 0.4 : 1}
-              >
-                <rect
-                  x={X_END}
-                  y={t.y0}
-                  width={NODE_W}
-                  height={Math.max(t.y1 - t.y0, 3)}
-                  fill={END_STATE_COLOR[g]}
-                  opacity={fate ? FATE_OPACITY[fate] : 0.95}
-                  rx={2}
-                  className="cursor-pointer"
-                  onMouseEnter={() => setHot(key)}
-                  onMouseLeave={() => setHot(null)}
-                  onClick={() => {
-                    setOpen((o) => (o === key ? null : key));
-                  }}
-                >
-                  <title>{`${isFate ? FATE_LABEL[fate!] : FLOW_GROUP_LABEL[g]}: ${n} — click to list`}</title>
-                </rect>
-                {fate === "demolished" && (
-                  <g stroke="var(--foreground)" strokeWidth={1.4} opacity={0.85}>
-                    <line x1={X_END + 2} y1={t.y0 + 3} x2={X_END + NODE_W - 2} y2={t.y1 - 3} />
-                    <line x1={X_END + 2} y1={t.y1 - 3} x2={X_END + NODE_W - 2} y2={t.y0 + 3} />
+            {/* Threads — nearest-line detection keeps dense crossings usable. */}
+            <g
+              onMouseMove={previewNearestThread}
+              onMouseLeave={() => setHot(null)}
+              onClick={selectNearestThread}
+            >
+              <rect
+                x={X_DEC + DEC_W}
+                y={TOP}
+                width={X_END - X_DEC - DEC_W}
+                height={Math.max(model.H - TOP - 36, 1)}
+                fill="transparent"
+              />
+              {parishes.map((p) => {
+                const g = toGroup(p.endState);
+                const active = isThreadActive(p);
+                const spotlight =
+                  (hot === p.slug ||
+                    (matchSlugs.size > 0 && matchSlugs.has(p.slug))) &&
+                  active;
+                return (
+                  <g key={p.slug}>
+                    {spotlight && (
+                      <path
+                        d={threadPath(p)}
+                        fill="none"
+                        stroke="var(--background)"
+                        strokeWidth={5}
+                        opacity={0.9}
+                      />
+                    )}
+                    <path
+                      d={threadPath(p)}
+                      fill="none"
+                      stroke={END_STATE_COLOR[g]}
+                      strokeWidth={spotlight ? 2.4 : 0.7}
+                      opacity={
+                        active ? (spotlight ? 1 : anyFocus ? 0.75 : 0.55) : 0.04
+                      }
+                    />
+                    {/* Wide transparent corridor improves pointer and keyboard use. */}
+                    <path
+                      d={threadPath(p)}
+                      fill="none"
+                      stroke="transparent"
+                      strokeWidth={18}
+                      className="cursor-pointer"
+                      role="button"
+                      tabIndex={0}
+                      aria-label={`Open ${p.name}, ${p.city}, ${p.state} profile`}
+                      onFocus={() => setHot(p.slug)}
+                      onBlur={() => setHot(null)}
+                      onKeyDown={(event) => {
+                        if (event.key === "Enter" || event.key === " ") {
+                          event.preventDefault();
+                          if (p.href) router.push(p.href);
+                        }
+                      }}
+                    >
+                      <title>{`${p.name}, ${p.city}, ${p.state} — click to open profile`}</title>
+                    </path>
                   </g>
-                )}
-                {isFate ? (
+                );
+              })}
+            </g>
+
+            {/* Mid column — the Closed bracket, where the closed gather */}
+            {model.groups.map((g) => {
+              const b = model.mid.get(g)!;
+              return (
+                <g key={`m-${g}`}>
+                  <rect
+                    x={X_MID}
+                    y={b.y0}
+                    width={NODE_W}
+                    height={Math.max(b.y1 - b.y0, 3)}
+                    fill={END_STATE_COLOR[g]}
+                    opacity={anyFocus && hot !== `g:${g}` ? 0.35 : 0.95}
+                    rx={2}
+                    className="cursor-pointer"
+                    onMouseEnter={() => setHot(`g:${g}`)}
+                    onMouseLeave={() => setHot(null)}
+                    onClick={() => {
+                      setOpen((o) => (o === `g:${g}` ? null : `g:${g}`));
+                    }}
+                  >
+                    <title>{`${FLOW_GROUP_LABEL[g]}: ${model.counts[g]} — click to list`}</title>
+                  </rect>
+                  {g === "closed" && (
+                    <text
+                      x={X_MID - 2}
+                      y={b.y0 - 8}
+                      fontSize={13}
+                      fontWeight={600}
+                      fill="var(--foreground)"
+                    >
+                      {FLOW_GROUP_LABEL[g]}
+                      <tspan fontWeight={400} fill="var(--muted)">
+                        {` · ${model.counts[g]}`}
+                      </tspan>
+                    </text>
+                  )}
+                </g>
+              );
+            })}
+
+            {/* Terminal nodes + decluttered labels with leaders */}
+            {model.termKeys.map((key, i) => {
+              const t = model.term.get(key)!;
+              const isFate = key.startsWith("fate:");
+              const fate = isFate ? (key.slice(5) as FateKey) : null;
+              const g = isFate
+                ? ("closed" as EndStateGroup)
+                : (key.slice(2) as EndStateGroup);
+              const n = model.bandMembers.get(key)!.length;
+              const bandCy = (t.y0 + t.y1) / 2;
+              const cy = model.termLabelY[i];
+              return (
+                <g
+                  key={key}
+                  opacity={anyFocus && hot !== key && hot !== `g:${g}` ? 0.4 : 1}
+                >
+                  <rect
+                    x={X_END}
+                    y={t.y0}
+                    width={NODE_W}
+                    height={Math.max(t.y1 - t.y0, 7)}
+                    fill={END_STATE_COLOR[g]}
+                    opacity={fate ? FATE_OPACITY[fate] : 0.95}
+                    rx={2}
+                    className="cursor-pointer"
+                    onMouseEnter={() => setHot(key)}
+                    onMouseLeave={() => setHot(null)}
+                    onClick={() => {
+                      setOpen((o) => (o === key ? null : key));
+                    }}
+                  >
+                    <title>{`${isFate ? FATE_LABEL[fate!] : FLOW_GROUP_LABEL[g]}: ${n} — click to list`}</title>
+                  </rect>
+                  <path
+                    d={leaderPath(bandCy, cy)}
+                    fill="none"
+                    stroke={END_STATE_COLOR[g]}
+                    strokeWidth={0.8}
+                    opacity={0.55}
+                  />
                   <text
-                    x={X_END + NODE_W + 8}
-                    y={cy}
-                    dominantBaseline="central"
-                    fontSize={12}
+                    x={X_END + NODE_W + 10}
+                    y={cy - 7}
+                    fontSize={isFate ? 12 : 13}
                     fontWeight={fate === "demolished" ? 700 : 600}
                     fill="var(--foreground)"
                   >
-                    {FATE_LABEL[fate!]}
-                    <tspan fontWeight={400} fill="var(--muted)">{` · ${n}`}</tspan>
-                  </text>
-                ) : (
-                  <text
-                    x={X_END + NODE_W + 8}
-                    y={cy - 7}
-                    fontSize={13}
-                    fontWeight={600}
-                    fill="var(--foreground)"
-                  >
-                    {FLOW_GROUP_LABEL[g]}
+                    {isFate ? FATE_LABEL[fate!] : FLOW_GROUP_LABEL[g]}
                     <tspan fontWeight={400} fill="var(--muted)">{` · ${n}`}</tspan>
                     <tspan
-                      x={X_END + NODE_W + 8}
+                      x={X_END + NODE_W + 10}
                       dy={14}
                       fontSize={10.5}
                       fontWeight={400}
                       fill="var(--muted)"
                     >
-                      {GROUP_SUBLABEL[g]}
+                      {isFate ? FATE_SUB[fate!] : GROUP_SUBLABEL[g]}
                     </tspan>
                   </text>
-                )}
-              </g>
-            );
-          })}
+                </g>
+              );
+            })}
           </svg>
         </div>
 
         {open ? (
           <section className="mt-5 border-y border-rule py-4">
-            <div className="flex items-center justify-between gap-4">
+            <div className="flex items-baseline justify-between gap-4">
               <h3 className="font-serif text-lg font-semibold">
                 {openLabel}
                 <span className="ml-2 font-sans text-sm font-normal text-muted">
-                  {openMembers.length}{" "}
-                  {openMembers.length === 1 ? "institution" : "institutions"}
+                  {openMembers.length} of {model.total}
                 </span>
               </h3>
               <button
@@ -798,13 +882,12 @@ export default function ParishThreads({
                 Close
               </button>
             </div>
-            {open === "fate:unrecorded" ? (
-              <p className="mt-2 text-sm text-muted">
-                The canonical Brain record does not yet establish the present
-                condition of the relevant terminal worship site.
+            {openNote ? (
+              <p className="mt-2 max-w-4xl text-sm leading-relaxed text-muted">
+                {openNote}
               </p>
             ) : null}
-            <ul className="mt-3 grid gap-x-6 gap-y-2 text-sm sm:grid-cols-2 lg:grid-cols-3">
+            <ul className="mt-3 grid gap-x-6 gap-y-3 text-sm sm:grid-cols-2 lg:grid-cols-3">
               {openMembers.map((m) => (
                 <li key={m.slug} className="border-t border-rule/60 pt-2">
                   {m.href ? (
@@ -818,9 +901,27 @@ export default function ParishThreads({
                     <span className="font-medium">{m.name}</span>
                   )}
                   <span className="block text-xs text-muted">
-                    {institutionType(m.recordType)} · {m.city}, {m.state} · {m.anchorLabel}{" "}
-                    {m.anchorYear ?? "not yet established"}
+                    {institutionType(m.recordType)} · {m.city}, {m.state}
+                    {m.jurisdiction ? ` · ${m.jurisdiction}` : ""}
                   </span>
+                  <span className="block text-xs">
+                    {m.anchorLabel}{" "}
+                    {m.anchorDisplay ?? "year not yet established"}
+                    {m.endedDisplay ? ` · ended ${m.endedDisplay}` : ""}
+                  </span>
+                  {m.continuation ? (
+                    <span className="mt-1 block text-xs leading-relaxed text-muted">
+                      {m.continuation.summary}
+                    </span>
+                  ) : null}
+                  {m.continuation?.futurePlan ? (
+                    <span className="mt-1 block text-xs leading-relaxed text-muted">
+                      <strong className="font-semibold text-foreground">
+                        Planned, not yet effective:
+                      </strong>{" "}
+                      {m.continuation.futurePlan}
+                    </span>
+                  ) : null}
                 </li>
               ))}
             </ul>
@@ -833,9 +934,14 @@ export default function ParishThreads({
                     · {additionalHostedCommunities.length}
                   </span>
                 </h4>
-                <p className="mt-1 max-w-3xl text-sm text-muted">
-                  Current Lithuanian worship outside the 137 historical
-                  Lithuanian parish and mission institutions.
+                <p className="mt-1 max-w-4xl text-sm leading-relaxed text-muted">
+                  Lithuanian worship continues in six hosted communities within
+                  a merged or host parish, diocesan church, or mission community
+                  rather than an active Lithuanian-led parish. Five correspond to
+                  institutions in this {model.total}-member historical record.
+                  The sixth is a current place of Lithuanian worship but not one
+                  of those historical institutions, so the historical band holds
+                  five while the current hosted-Mass list holds all six.
                 </p>
                 <ul className="mt-3 grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-3">
                   {additionalHostedCommunities.map((community) => (
@@ -856,7 +962,8 @@ export default function ParishThreads({
                         <span className="font-medium">{community.name}</span>
                       )}
                       <span className="mt-1 block text-xs text-muted">
-                        {community.city}, {community.state} · {community.ministry}
+                        {community.city}, {community.state} ·{" "}
+                        {community.ministry}
                       </span>
                       <span className="mt-2 block text-xs font-semibold">
                         Current hosted community — not one of the 137 historical
@@ -875,8 +982,8 @@ export default function ParishThreads({
       <div className="sr-only">
         <table>
           <caption>
-            Documented Roman Catholic Lithuanian parishes and missions by end
-            state, and building fates of the closed
+            Documented Roman Catholic Lithuanian parishes and missions by
+            present status, and the terminal church outcomes of the closed
           </caption>
           <tbody>
             {model.groups.map((g) => (
