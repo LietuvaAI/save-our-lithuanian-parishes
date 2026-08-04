@@ -19,7 +19,7 @@ export const PARISH_STATUS_ORDER: ParishStatusGroup[] = [
 ];
 
 export const PARISH_STATUS_LABEL: Record<ParishStatusGroup, string> = {
-  active_parish: "Active Lithuanian parish",
+  active_parish: "Active Lithuanian parish or mission",
   mass_continues: "Lithuanian Mass continues",
   unresolved: "Unresolved",
   transferred: "Lives on, another community",
@@ -28,7 +28,8 @@ export const PARISH_STATUS_LABEL: Record<ParishStatusGroup, string> = {
 };
 
 export const PARISH_STATUS_DESCRIPTION: Record<ParishStatusGroup, string> = {
-  active_parish: "A Lithuanian parish with regular Lithuanian worship.",
+  active_parish:
+    "Regular Lithuanian worship continues in an active Lithuanian-led parish or mission. Missions are members of this status group, not a separate population.",
   mass_continues:
     "A Lithuanian Mass is still celebrated inside a parish that is no longer Lithuanian-led — never counted as an active Lithuanian parish.",
   unresolved:

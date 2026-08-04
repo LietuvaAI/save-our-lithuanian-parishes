@@ -513,6 +513,46 @@ if (/physicalWorshipSiteHistory/.test(institutionFlowPage)) {
   errors.push("institution-outcome view reads the physical-site population");
 }
 
+const homepage = readFileSync(
+  new URL("../app/page.tsx", import.meta.url),
+  "utf8",
+);
+const homepageMap = readFileSync(
+  new URL("../components/ParishMap.tsx", import.meta.url),
+  "utf8",
+);
+if (/NationalRecordGraphic/.test(homepage)) {
+  errors.push("homepage still renders the retired national-record figure strip");
+}
+if (
+  !/infographicCounts/.test(homepage) ||
+  !/romanCatholicInstitutionHistory/.test(homepage) ||
+  !/currentPastoralNetwork/.test(homepage)
+) {
+  errors.push("homepage population index does not read the canonical projections");
+}
+if (!/new Set\(COMMUNITY_FILTERS\)/.test(homepageMap)) {
+  errors.push("homepage map does not open on all canonical institution classes");
+}
+
+const allProfilesPage = readFileSync(
+  new URL("../app/parishes/page.tsx", import.meta.url),
+  "utf8",
+);
+if (
+  !/institutionHistory/.test(allProfilesPage) ||
+  !/AllProfilesTimeline/.test(allProfilesPage)
+) {
+  errors.push("All Profiles does not render the canonical institution timeline");
+}
+if (
+  /RegistryTable/.test(allProfilesPage) ||
+  /registry-scope/.test(allProfilesPage) ||
+  /data\/parishes\.json/.test(allProfilesPage)
+) {
+  errors.push("All Profiles reads a legacy directory source instead of Brain canon");
+}
+
 const physicalSitePage = readFileSync(
   new URL("../app/church-buildings-through-time/page.tsx", import.meta.url),
   "utf8",
