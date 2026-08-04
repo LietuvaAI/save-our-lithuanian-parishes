@@ -1164,9 +1164,9 @@ export default function ParishMap() {
           <span className="text-muted">
             {statusCounts.lost} records in the Closed category. Hover any mark;
             click to open its record.{" "}
-            <a href="/record" className="underline hover:text-foreground font-medium">
-              Full list in The Record →
-            </a>
+            <Link href="/parishes" className="underline hover:text-foreground font-medium">
+              Browse all parish profiles →
+            </Link>
           </span>
         ) : selectedStatuses.size === 1 &&
           selectedStatuses.has("unknown") ? (

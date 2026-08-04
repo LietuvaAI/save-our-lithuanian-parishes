@@ -39,16 +39,16 @@ type NavItem =
     };
 
 const NAV: NavItem[] = [
-  { href: "/record", label: "The Record" },
-  { href: "/history", label: "The History" },
   {
-    label: "Views",
+    href: "/where-every-parish-ended-up",
+    label: "Parish & Mission Outcomes",
+  },
+  { href: "/parishes", label: "All Profiles" },
+  {
+    label: "Explore",
     menuAlign: "right",
     children: [
-      {
-        href: "/where-every-parish-ended-up",
-        label: "Where Parishes & Missions Ended Up",
-      },
+      { href: "/history", label: "The History" },
       {
         href: "/church-buildings-through-time",
         label: "Church Buildings Through Time",
@@ -179,6 +179,9 @@ export default function RootLayout({
               aria-label="Footer"
               className="flex flex-wrap gap-x-4 gap-y-2"
             >
+              <Link href="/parishes" className="underline hover:text-foreground">
+                All Parish Profiles
+              </Link>
               <Link href="/about" className="underline hover:text-foreground">
                 About the Project
               </Link>

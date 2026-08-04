@@ -148,7 +148,7 @@ const ACTIONS = [
     title: "Find your parish's story",
     body: "See how it began, how the community changed, where the parish and church stand today, and the sources behind the record.",
     cta: "Find your parish",
-    href: "/record",
+    href: "/parishes",
     primary: false,
   },
   {
@@ -172,6 +172,20 @@ export default function Home() {
           Lithuanian parishes&mdash;from their earliest foundations to the
           communities discerning their future today.
         </p>
+        <div className="mt-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm">
+          <Link
+            href="/where-every-parish-ended-up"
+            className="font-semibold underline underline-offset-4 hover:text-accent"
+          >
+            Explore parish and mission outcomes
+          </Link>
+          <Link
+            href="/parishes"
+            className="text-muted underline underline-offset-4 hover:text-foreground"
+          >
+            Browse all profiles
+          </Link>
+        </div>
         <ChurchProcession />
       </section>
 

@@ -20,7 +20,7 @@ import {
   type EndStateGroup,
 } from "@/lib/end-state";
 
-/** One serializable row of the full research registry (built server-side). */
+/** One serializable row of the canonical public profile directory. */
 export interface RegistryRow {
   slug: string;
   name: string;
@@ -63,6 +63,12 @@ function dateSummary(row: RegistryRow) {
   if (row.founded) return `Founded ${row.founded}`;
   if (row.closed) return `Closed ${row.closed}`;
   return "Not yet verified";
+}
+
+function recordTypeSuffix(row: RegistryRow) {
+  if (row.recordType === "misija") return " · mission";
+  if (row.recordType === "congregation") return " · congregation";
+  return "";
 }
 
 // ── Dropdown filter ──
@@ -159,7 +165,13 @@ function HeaderFilter<T extends string>({
 
 // ── Main table ──
 
-export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
+export default function RegistryTable({
+  rows,
+  noun = "records",
+}: {
+  rows: RegistryRow[];
+  noun?: "records" | "profiles";
+}) {
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState<EndStateGroup | typeof ALL>(ALL);
   const [alert, setAlert] = useState<AlertStatus | typeof ALL>(ALL);
@@ -256,13 +268,13 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search parish, city, state, or diocese…"
-            aria-label="Search the parish record"
+            aria-label="Search the profile directory"
             className={`${sc} w-full sm:w-80`}
           />
           <span className="text-sm font-medium">
             {activeFilters > 0
-              ? `${filtered.length} of ${rows.length} records`
-              : `${rows.length} records`}
+              ? `${filtered.length} of ${rows.length} ${noun}`
+              : `${rows.length} ${noun}`}
           </span>
           {activeFilters > 0 && (
             <button
@@ -336,7 +348,7 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
               <thead className="bg-[var(--band)]">
                 <tr className="border-b border-rule text-left">
                   <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-muted">
-                    Parish
+                    Profile
                   </th>
                   <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-muted">
                     Diocese
@@ -374,7 +386,7 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
                       <span className="mt-0.5 block text-xs text-muted">
                         {r.city}, {r.state}
                         {r.comparator ? " · Canada" : ""}
-                        {r.recordType === "misija" ? " · mission" : ""}
+                        {recordTypeSuffix(r)}
                       </span>
                     </td>
                     <td className="px-4 py-3 text-xs leading-relaxed text-muted">
@@ -431,7 +443,7 @@ export default function RegistryTable({ rows }: { rows: RegistryRow[] }) {
                 <div className="mt-0.5 text-sm text-muted">
                   {r.city}, {r.state}
                   {r.comparator ? " · Canada" : ""}
-                  {r.recordType === "misija" ? " · mission" : ""}
+                  {recordTypeSuffix(r)}
                 </div>
 
                 <div className="mt-3 flex flex-wrap gap-2">

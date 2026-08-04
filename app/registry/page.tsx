@@ -1,8 +1,7 @@
-import { redirect } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 
-// The Record is the single public index for every parish and congregation.
-// Legacy /registry/[slug] links permanently redirect to the canonical
-// /parishes/[slug] profile architecture.
+// The research registry is not a second public directory. Keep its legacy URL
+// working while sending readers to the canonical profile directory.
 export default function RegistryIndexPage() {
-  redirect("/record");
+  permanentRedirect("/parishes");
 }

@@ -682,8 +682,8 @@ export default async function ParishPage({
       data-record-depth={profile.recordDepth}
     >
       <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
-        <Link href="/record" className="hover:text-foreground">
-          The Record
+        <Link href="/parishes" className="hover:text-foreground">
+          All Parish Profiles
         </Link>{" "}
         / {entry.city}
         {entry.state ? `, ${entry.state}` : ""}

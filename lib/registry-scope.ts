@@ -130,7 +130,7 @@ export function isUS(p: RegParish): boolean {
   return p.country === "US";
 }
 
-/** Institutional records published on The Record and the registry map. */
+/** Institutional records published in the profile directory and registry map. */
 export function isPublicRecord(p: RegParish): boolean {
   return isPublishedInstitution(p.slug);
 }
@@ -148,7 +148,7 @@ export function usRomanCatholic(): RegParish[] {
   );
 }
 
-/** The full U.S. /record population: parishes and congregations, no comparators. */
+/** The full U.S. /parishes population: parishes and congregations, no comparators. */
 export function usRegistryParishes(): RegParish[] {
   return (registry as { parishes: RegParish[] }).parishes.filter(
     (p) =>
