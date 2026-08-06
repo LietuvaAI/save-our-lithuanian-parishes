@@ -3,7 +3,7 @@ title: "Fifteen Months: The Closing of Švč. Trejybės (Holy Trinity) in Hartfo
 subtitle: "In February 2025 the parish bulletin printed an assurance that Masses would continue as usual. On May 30, 2026, they ended for good. The fight now is for the building."
 date: 2026-07-27
 substackUrl: https://blog.saveourlithuanianparishes.org/p/fifteen-months-the-closing-of-svc
-archivedAt: 2026-07-27
+archivedAt: 2026-08-04
 ---
 ![](https://substackcdn.com/image/fetch/$s_!-kL0!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb1c087b0-8cbc-4a0b-83fb-e644e906d2ac_734x750.jpeg)Švč. Trejybės (Holy Trinity), 53 Capitol Avenue, Hartford — May 2000. Photo: Litnet, Wikimedia Commons, CC BY-SA 4.0.
 The bulletin of February 9, 2025 reads like any other week at Holy Trinity — Švč. Trejybės, the Lithuanian church at 53 Capitol Avenue in Hartford. Mass Times: Saturday vigil at 4:00; Sunday at 9:00 a.m., marked “(Lithuanian/English),” and again at 10:30; weekday Masses at 12:05. A parish of some 300 families, drawn from 47 Connecticut zip codes to a church their forebears raised between 1915 and 1928, on land the community bought in 1900. The Lithuanian daily newspaper *Draugas* — published since 1909, the diaspora’s paper of record — first mentions Hartford’s Lithuanian parish in [February 1912](https://www.draugas.org/archive/1912_reg/1912-02-15-DRAUGASw.pdf) and returns to it 557 times across the following century. The church stands in *Lithuanian Cultural Legacy in America* (2009, p. 105), the compendium’s chapter on the first Lithuanian churches in America, its St. Casimir and Jesus stained glass photographed in color.
@@ -12,7 +12,7 @@ The same February bulletin carries a second document: a letter to parishioners f
 
 Fifteen months later, none of the three held.
 
-#### What the record shows, month by month
+#### The closing, month by month
 
 **January–February 2025.** Fr. Jacobs is placed on leave, announced to parishioners at the January 26 Mass. The rector of the Cathedral, Very Rev. John Melnick, is appointed administrator — Holy Trinity, the bulletin reminds its readers, is canonically a mission of the Cathedral parish, not an independent one. The Sunday Lithuanian Mass continues.
 
@@ -20,21 +20,21 @@ Fifteen months later, none of the three held.
 
 **April 2026.** Parishioners are told after Mass that Holy Trinity will partially close: regular Masses end as of May 30; funerals and baptisms continue. The reasons given: a loss of more than $74,000 since March 2025 despite reduced expenses, no clergy to assign, repairs the parish cannot afford. One parishioner, Dalia Giedrimienė, asked the question the notice did not answer: “Where will we go? I don’t have any other place to go.”
 
-**May 30, 2026.** The last regular Masses are held. In the record, Holy Trinity now stands [Closed](https://saveourlithuanianparishes.org/parishes/svc-trejybes-hartford-ct).
+**May 30, 2026.** The last regular Masses are held.
 
 #### What it means
 
-Connecticut’s record holds seven verified Lithuanian Catholic churches, and two Waterbury records still being researched — among them an unnamed church founded in 1902, known only from *Draugas*. New Britain — closed. New Haven — closed. Ansonia, both of them — closed. Waterbury’s Šv. Juozapo — closed in 2023, its canonical appeal still running. Bridgeport’s Šv. Jurgio — the building serves other communities now. With Hartford’s Masses ended, the record counts no Lithuanian church in Connecticut holding a regular Lithuanian Mass. Connecticut is a small state, but its roughly 33,000 Lithuanians are nearly one percent of its population — the largest share of any state in America — and, by the record’s count, they now have nowhere in the state to hear Sunday Mass in Lithuanian.
+Hartford’s closing lands harder for what surrounds it. New Britain — closed. New Haven — closed. Ansonia, both parishes — closed. Waterbury’s Šv. Juozapo — closed in 2023, its canonical appeal still running. Bridgeport’s Šv. Jurgio — the building serves other communities now. With Hartford’s Masses ended, no Lithuanian church in Connecticut holds a regular Lithuanian Mass. Connecticut is a small state, but its roughly 33,000 Lithuanians are nearly one percent of its population — the largest share of any state in America — and they now have nowhere in the state to hear Sunday Mass in Lithuanian.
 ![](https://substackcdn.com/image/fetch/$s_!rpt-!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F94baff2b-f588-4ec2-895d-b778675aa7e5_3000x3016.png)The Connecticut record at a glance. Classifications and wording follow the site’s canon; every record is on the full interactive map at saveourlithuanianparishes.org.
-Maspeth, [the previous dispatch](https://blog.saveourlithuanianparishes.org/p/still-open-still-undecided-the-fight), shows what an open window looks like: a community that organized before the decision — petition, landmark filings, a presidential visit — and a diocese that stopped short of closing. Hartford shows the window closing: fifteen months from a printed assurance that “weekend Masses will continue as usual” to the end of Masses, with the community told, not consulted. [The documented reversals](https://saveourlithuanianparishes.org/reversals) in the American record were won by communities that acted before and during the process. That is the lesson Hartford’s record now carries for every parish still open.
+Maspeth, told [here](https://blog.saveourlithuanianparishes.org/p/still-open-still-undecided-the-fight), shows what an open window looks like: a community that organized before the decision — petition, landmark filings, a presidential visit — and a diocese that stopped short of closing. Hartford shows the window closing: fifteen months from a printed assurance that “weekend Masses will continue as usual” to the end of Masses, with the community told, not consulted. [The documented reversals](https://saveourlithuanianparishes.org/reversals) across American dioceses were won by communities that acted before and during the process. That is the lesson Hartford leaves for every parish still open.
 
-It is not the end of the story. Waterbury’s community, whose church closed in 2023, retained a canon lawyer and has so far prevented a complete ending. Hartford’s community has begun the same way — and what it is defending is the building.
+Waterbury's community, whose church closed in 2023, retained a canon lawyer and has so far prevented a complete ending. Hartford’s community has begun the same way — and what it is defending is the building.
 
 #### The fight for the building
 
 What the parishioners are fighting for now is the building and what it holds — the red Gothic Revival walls an immigrant community raised over thirteen years, the windows, the memory of the Lithuanian neighborhood around it that urban renewal already took once. Their stated hope, reported when the closure was announced: a Lithuanian cultural center at 53 Capitol Avenue, keeping the church as a home for Hartford’s Lithuanian life.
 
-The concrete step is already underway. A GoFundMe — [“Protect Holy Trinity Church”](https://www.gofundme.com/f/protect-holy-trinity-church), organized by Christian Allyn of Hartford and opened on May 24, six days before the last Mass — is raising the $5,000 retainer for a canon lawyer to advocate for the church’s preservation with the archdiocese, the same path Waterbury’s community took. As of this writing it stands at $4,370 of $5,000: **$630 short**.
+The concrete step is already underway. A GoFundMe — [“Protect Holy Trinity Church”](https://www.gofundme.com/f/protect-holy-trinity-church), organized by Christian Allyn of Hartford and opened on May 24, six days before the last Mass — is raising the $5,000 retainer for a canon lawyer to advocate for the church’s preservation with the archdiocese, the same path Waterbury’s community took. As of July 27, it stood at $4,370 of $5,000: **$630 short**.
 
 #### What you can do today
 
@@ -44,7 +44,7 @@ The concrete step is already underway. A GoFundMe — [“Protect Holy Trinity C
 
 **If your parish is still open, read Hartford twice.** The window to act is before the letter, before the notice after Mass. Start at [saveourlithuanianparishes.org/start-here](https://saveourlithuanianparishes.org/start-here). Every active campaign is tracked at [/under-threat](https://saveourlithuanianparishes.org/under-threat).
 
-Three signals will tell where Hartford is heading: whether the canon lawyer is retained and the preservation case opened; what the archdiocese decides about the building and its contents; and whether the cultural-center proposal takes formal shape. The record will carry each as it comes.
+Fifteen months separated the bulletin that promised an ordinary year from the Sunday the Masses ended. What comes now started late — the retainer, the canon-law case, the cultural-center plan — and Hartford knows it. The building still stands on Capitol Avenue, and the community that filled it for a century and a quarter is still here. The months ahead decide whether those two facts stay joined.
 
 ---
 
