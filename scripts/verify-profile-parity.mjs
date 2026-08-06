@@ -10,7 +10,7 @@ const core = readData("parishes.json").filter((parish) => !parish.mergedInto);
 const comparators = core.filter((parish) => parish.comparator);
 const contextPoints = readData("context-points.json").points;
 const registryMap = readData("registry-map.json").points;
-const alerts = readData("alerts.json");
+const alerts = readData("canonical-current-events-projection.json");
 
 const fail = (message) => {
   throw new Error(`Profile parity failed: ${message}`);

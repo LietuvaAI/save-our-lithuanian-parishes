@@ -112,7 +112,7 @@ export default function CanonLawPage() {
           <Src href="https://www.ncronline.org/news/parish/bishop-reopen-12-closed-cleveland-parishes">
             National Catholic Reporter
           </Src>
-          ). And Cleveland is not alone. Our research now documents{" "}
+          ). And Cleveland is not alone. The available cases include{" "}
           <Link href="/reversals">twenty-six reversed closures</Link>
           {" "}in three diocesan waves — Allentown in 2011, Cleveland in
           2012, Buffalo in 2025 — every one won not by protest alone, and

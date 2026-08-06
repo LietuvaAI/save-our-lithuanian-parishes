@@ -39,7 +39,12 @@ parishes from the registry), establish and source:
 ## Data model (output format)
 
 Each researched parish produces a `sustainabilityWatch` entry in
-`data/alerts.json` with the following fields:
+> **Data-location update (2026-08-06):** the model described below now lives in
+> Brain's reviewed current-events source and is delivered to the site through
+> `data/canonical-current-events-projection.json`. References to editing
+> `data/alerts.json` are historical; that file is retired and build-forbidden.
+
+The Brain current-events source uses the following fields:
 
 ```json
 {
@@ -283,7 +288,7 @@ for the parish profile page:
 
 The research engine should produce:
 
-1. **Updated `data/alerts.json`** with populated `sustainabilityWatch[]`
+1. **Updated Brain current-events source** with populated `sustainabilityWatch[]`, followed by a regenerated projection
    entries for each researched parish
 2. **Photo files** in `public/images/parishes/{slug}.jpg` with
    attribution recorded in the JSON

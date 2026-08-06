@@ -18,7 +18,7 @@ import {
 export const metadata: Metadata = {
   title: "Lithuanian National and independent Catholic parishes",
   description:
-    "The Lithuanian National Catholic parishes documented in the research record — communities that separated from Rome in the early 1900s, mostly in Pennsylvania and the Northeast, joining the Polish National Catholic Church. Documented as historical witness.",
+    "Lithuanian National and independent Catholic parishes formed outside Roman Catholic authority, especially in Pennsylvania and the Northeast.",
 };
 
 type YearVariant = {
@@ -203,9 +203,7 @@ export default function NationalCatholicPage() {
         </div>
         <p className="mt-5 border-t border-rule pt-3 text-xs leading-relaxed text-muted">
           Scope: {DURABLE_ENTRIES.length} National or independent Catholic
-          parish institutions across {states.length} states · Registry Revision{" "}
-          {registry.registryRevision.version},{" "}
-          {registry.registryRevision.date}
+          parish institutions across {states.length} states
           {" · "}
           <Link href="/about-the-data" className="underline hover:text-accent">
             About the data
@@ -232,7 +230,7 @@ export default function NationalCatholicPage() {
           {DURABLE_ENTRIES.length} documented parishes
         </h2>
         <p className="mt-1 text-sm text-muted">
-          Each entry opens its canonical profile and full source record.
+          Each entry opens a parish profile with its history and sources.
         </p>
 
         <div className="mt-5 space-y-10">
@@ -300,7 +298,7 @@ export default function NationalCatholicPage() {
                           }
                           className="text-xs underline hover:text-foreground"
                         >
-                          Full research record →
+                          Full parish profile →
                         </Link>
                       </div>
                     </div>

@@ -234,7 +234,9 @@ function normalizeCity(raw) {
 // ── Load data ───────────────────────────────────────────────────────────────
 
 const registry = JSON.parse(readFileSync(join(DATA, "registry-unified.json"), "utf-8"));
-const alerts = JSON.parse(readFileSync(join(DATA, "alerts.json"), "utf-8"));
+const alerts = JSON.parse(
+  readFileSync(join(DATA, "canonical-current-events-projection.json"), "utf-8"),
+);
 
 // ── Build priority lookups ──────────────────────────────────────────────────
 

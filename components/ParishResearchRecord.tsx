@@ -41,7 +41,7 @@ export const RECORD_TYPE_LABEL: Record<string, string> = {
   parapija: "Lithuanian parish (parapija)",
   misija: "Lithuanian mission (misija)",
   phase: "Historical independent/national phase",
-  lead: "Unresolved research lead",
+  lead: "Unresolved historical lead",
   context: "Contextual historical reference",
 };
 

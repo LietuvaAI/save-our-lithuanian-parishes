@@ -224,7 +224,7 @@
       "current_use": "Probable identification: the former St. Casimir Lithuanian church building at 283 E 14th Street, Chicago Heights, IL is standing and used by a non-Catholic congregation; International Pentecostal Assemblies Ecumenical lists that address as its office (site copyright 2020), and Global True Lithuania reports a non-Catholic church operating inside a building surrounded by empty lots, with the Lithuanian name still carved in the cornerstone.",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "No Lithuanian Šv. Kazimiero parish ever stood inside Chicago itself — the record resolves to Chicago Heights, a separate municipality south of the city. The parish there was founded 1911 (first Mass Easter 1912) and closed in the late 1980s — 1987 per Global True Lithuania, 1989 per Wolkovich Vol 3 p. 147; variance carried, not resolved (adjudicated 2026-07-27). The earlier 'Marquette Park/Brighton Park' note was a compiler's guess, likely from the Sisters of St. Casimir motherhouse there. The Draugas source articles never name a neighborhood; the ten stained-glass windows, each donated by a Lithuanian family, reached the Vilnius Archdiocese restoration trust around 2008, their maker undetermined (the Adolfas Valeška attribution is disputed in Draugas 2013-09-07). Registry Revision 1 resolves the canonical city to Chicago Heights.",
+      "situation": "Saint Casimir belonged to Chicago Heights, a separate city south of Chicago, rather than Chicago itself. The parish was founded in 1911, celebrated its first Mass at Easter 1912, and closed in the late 1980s. Sources give 1987 and 1989; the exact year remains unresolved. Earlier references to Marquette Park and Brighton Park appear to have confused the parish with the Sisters of Saint Casimir motherhouse there. Ten stained-glass windows, each donated by a Lithuanian family, reached the Vilnius Archdiocese restoration trust around 2008. Their maker remains uncertain; a proposed attribution to Adolfas Valeška is disputed in Draugas reporting from 2013.",
       "current_record_as_of": "2026-07-16",
       "current_record_path": "data/case-records/sv-kazimiero-chicago-il.json",
       "sources": [
@@ -965,7 +965,7 @@
       "current_use": "570 Broome, a 25-story, 54-unit luxury condominium tower (completed 2019), occupies the church site.",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "The strongest case in the record: Our Lady of Vilnius, SoHo. Cardinal Egan closed it in 2007 with no debt. NY Court of Appeals ruled against parishioners in 2011. Diocese sold the building, which was demolished. The central ownership test case.",
+      "situation": "Cardinal Egan closed Our Lady of Vilnius in 2007 while the parish carried no debt. The New York Court of Appeals ruled against parishioners in 2011. The archdiocese then sold the building, which was demolished. The case became a central test of parish ownership and diocesan authority.",
       "current_record_as_of": "2026-07-25",
       "current_record_path": "data/case-records/ausros-vartu-manhattan-ny.json",
       "sources": [
@@ -1549,7 +1549,7 @@
       "registry_slug": "joseph-waterbury-ct",
       "canonical_status": "closed",
       "building_fate": "standing",
-      "current_use": "Catholic sacred church retained by Our Lady of Mount Carmel Parish after the May 1, 2024 merger. No regular Mass schedule; weddings and funerals by arrangement, with a special Mass documented on August 2, 2026. Ancillary campus buildings were offered for sale separately from the church.",
+      "current_use": "Closed church retained by the merged Our Lady of Mount Carmel Parish; no regular Masses, but the parish lists it as open for weddings and funerals by arrangement. The ancillary parish campus on John Street was offered for sale separately from the church in October 2025.",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
       "situation": "Regular parish operations ended in September 2023. An archdiocesan decree merged Saint Joseph into Our Lady of Mount Carmel effective May 1, 2024, ending its separate juridic parish while retaining the church as a Catholic sacred edifice without regularly scheduled Masses. The community continues its canonical appeal and documents occasional special worship in the church.",
@@ -1906,7 +1906,7 @@
       "current_use": "Active Roman Catholic church — home of St. Casimir Parish (Švento Kazimiero Parapija), the Lithuanian successor parish of the Diocese of Cleveland, at 18022 Neff Rd, Cleveland, OH 44119",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "Closed Oct 18 2009 and merged with Sv. Jurgio into the new Sv. Kazimiero parish. The former DMNP building became the worship site of the consolidated parish, which is why the building fate is repurposed rather than lost. This parish ended in that merger, exactly as Sv. Jurgio did, and the Lithuanian life that continues in the building belongs to the successor record sv-kazimiero-cleveland-oh — counting it here as well would count one community as two living parishes.",
+      "situation": "Our Lady of Perpetual Help closed on October 18, 2009, and merged with Saint George to form the new Saint Casimir parish. Its former church became the worship site of the consolidated parish. Lithuanian parish life continues there through Saint Casimir; the two predecessor parishes are not counted as additional living parishes.",
       "current_record_as_of": "2026-07-16",
       "current_record_path": "data/case-records/dievo-motinos-nuolatines-pagalbos-cleveland-oh.json",
       "sources": [
@@ -1973,7 +1973,7 @@
       "current_use": "Vacant lot with adjoining former rectory, listed for sale by the Diocese of Allentown in June 2024; a Gold Star Highway billboard memorializes the church",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "St. George in Shenandoah, Pennsylvania, was one of the earliest Lithuanian Roman Catholic parishes in the United States and is widely remembered as the first. Organized in the late nineteenth century, it anchored the coal region's Lithuanian community until the Diocese of Allentown closed the parish in 2006 and demolished the church in 2009–2010. Its final years make it one of the record's clearest closure cases: the parish was solvent, held roughly $1 million in savings, had a credible $360,000 repair estimate, landmark status, and a community treaty, yet the diocese proceeded with demolition and took the parish savings.",
+      "situation": "St. George in Shenandoah, Pennsylvania, was one of the earliest Lithuanian Roman Catholic parishes in the United States and is widely remembered as the first. Organized in the late nineteenth century, it anchored the coal region's Lithuanian community until the Diocese of Allentown closed the parish in 2006 and demolished the church in 2009–2010. At closure, the parish was solvent, held roughly $1 million in savings, had a credible $360,000 repair estimate, landmark status, and a community treaty; the diocese nevertheless proceeded with demolition and took the parish savings.",
       "current_record_as_of": "2026-07-09",
       "current_record_path": "data/case-records/sv-jurgio-shenandoah-pa.json",
       "sources": [
@@ -3449,7 +3449,7 @@
       "current_use": "Active Catholic worship site (one weekend Mass) of the merged St. Adalbert and Sts. Peter and Paul Parish, Archdiocese of Newark",
       "lithuanian_identity": "mass_continues",
       "pastoral_status": "unknown",
-      "situation": "Merged canonically into the Polish parish of Saint Adalbert on July 1, 2009, the church remains standing and still holds one weekend Mass, but it is no longer an independent Lithuanian parish. Mass-time aggregators still list an 11:00 am Lithuanian Sunday Mass, and that could not be independently verified for 2026 — so Lithuanian liturgical life here is recorded as continuing inside a host parish that is no longer Lithuanian-led, never as a standing Lithuanian parish. The parish sits in the Archdiocese of Newark's 'We Are His Witnesses' restructuring discernment; no closure or further merger has been decided, so the ending stays unresolved. Church built 1895, under financial and maintenance stress by 2022 with the rectory sold after an electrical fire, and one of the last Lithuanian churches in New Jersey.",
+      "situation": "The parish merged into the Polish parish of Saint Adalbert on July 1, 2009. The church remains standing and still holds one weekend Mass, but it is no longer an independent Lithuanian parish. Online Mass listings show an 11:00 am Lithuanian Sunday Mass, although a current Lithuanian schedule could not be confirmed for 2026. The parish is part of the Archdiocese of Newark's 'We Are His Witnesses' restructuring discernment; no closure or further merger has been decided, so its final outcome remains unresolved. The church was built in 1895. By 2022 it faced financial and maintenance pressure, and the rectory was sold after an electrical fire.",
       "current_record_as_of": "2026-07-09",
       "current_record_path": "data/case-records/sv-petro-ir-povilo-elizabeth-nj.json",
       "sources": [
@@ -3498,7 +3498,7 @@
       "current_use": "Active Roman Catholic parish church — Our Lady of Sorrows, 136 Davis Ave., Kearny, NJ (Archdiocese of Newark), founded 1915 as Our Lady of Sorrows Lithuanian R.C. Church; still holding daily and Sunday Masses",
       "lithuanian_identity": "ethnically_transferred",
       "pastoral_status": "not_applicable",
-      "situation": "Our Lady of Sorrows in Kearny continues with a single English Sunday Mass; no Lithuanian Mass was found on any current schedule and the parish is absent from the Lithuanian Bishops' Conference roster. Succession (adjudicated 2026-07-27): one parish throughout — founded 1914-15 as the Kearny-Harrison Sopulingosios Dievo Motinos (Our Lady of Sorrows) Lithuanian parish, it first worshipped in St. Cecilia's parish hall in Kearny, then in a modest half-basement church in neighboring Harrison, until the present 136 Davis Ave church was built in Kearny (ground blessed August 30, 1953; completed for the 40th anniversary, 1955); the Harrison building was sold to non-Catholics.",
+      "situation": "Our Lady of Sorrows in Kearny continues with a single English Sunday Mass. Current schedules list no Lithuanian Mass, and the parish is absent from the Lithuanian Bishops' Conference roster. Founded in 1914–1915 as the Kearny-Harrison Lithuanian parish, it first worshipped in Saint Cecilia's parish hall in Kearny and then in a modest half-basement church in neighboring Harrison. The present church at 136 Davis Avenue was completed in Kearny for the parish's fortieth anniversary in 1955; the Harrison building was sold to a non-Catholic community.",
       "current_record_as_of": "2026-07-16",
       "current_record_path": "data/case-records/lietuviu-baznycia-kearny-kearny-nj.json",
       "sources": [
@@ -5349,7 +5349,7 @@
       "current_use": "St. Nicholas Orthodox Church, 301 South State Street, since 2020",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "This record is St. Joseph Lithuanian Roman Catholic parish, active by 1912 and no longer listed as a standalone Diocese of Erie parish. St. Nicholas Orthodox reports purchasing the former church in April 2020 and using it for Orthodox worship. A separate DuBois independent/national attempt is attested in 1903, but its title, property, and end are unresolved and it is not counted as a parish row."
+      "situation": "Saint Joseph was a Lithuanian Roman Catholic parish active by 1912 and is no longer listed as a standalone Diocese of Erie parish. Saint Nicholas Orthodox reports purchasing the former church in April 2020 and using it for Orthodox worship. A 1903 source also describes a separate Lithuanian independent or national Catholic attempt in DuBois, but its name, property, and later history remain unresolved; it is not counted as a separate parish."
     },
     "parish-chicago-il-2": {
       "registry_slug": "parish-chicago-il-2",

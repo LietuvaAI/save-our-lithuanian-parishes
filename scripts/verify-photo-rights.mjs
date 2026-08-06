@@ -9,7 +9,7 @@
 //   2. Entries with cleared rights must have their image file present in
 //      public/; entries still pending must NOT — a pending image sitting in
 //      the public repo is distribution before permission.
-//   3. alerts.json photo objects without cleared rights are counted as held
+//   3. current-events photo objects without cleared rights are counted as held
 //      (the render gate in lib/photos.ts already skips them) — reported,
 //      not fatal, since absence of the field is the safe state.
 import { readFileSync, existsSync } from "node:fs";
@@ -21,7 +21,7 @@ const CLEARED = new Set(["permission_granted", "public_domain", "open_license", 
 const VALID = new Set([...CLEARED, "pending_permission"]);
 
 const photos = read("photos.json").parishes;
-const alerts = read("alerts.json");
+const alerts = read("canonical-current-events-projection.json");
 
 const errors = [];
 let cleared = 0;

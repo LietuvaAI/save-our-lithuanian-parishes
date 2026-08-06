@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import registry from "@/data/registry-unified.json";
 import siteFigures from "@/data/site-figures.json";
 import { EndStatePill } from "@/components/EndStatePill";
 import { canadianComparators } from "@/lib/infographic-projection";
@@ -8,7 +7,7 @@ import type { EndState } from "@/lib/end-state";
 
 export const metadata: Metadata = {
   title: "Canadian Comparators",
-  description: `${siteFigures.comparators.canadianParishes} Canadian Lithuanian parish records included to compare survival, ownership, and community decision-making with the U.S. record.`,
+  description: `${siteFigures.comparators.canadianParishes} Canadian Lithuanian parishes included to compare survival, ownership, and community decision-making with the United States.`,
 };
 
 const canadianParishes = [...canadianComparators.parishes].sort(
@@ -32,7 +31,7 @@ function canadianOwnershipLabel(parish: CanadianComparator) {
     ? "Parish-owned under Quebec civil law"
     : parish.ownership === "diocese_rc"
       ? "Diocese-owned Roman Catholic"
-      : "Ownership documented in the comparator record";
+      : "Ownership not yet established";
 }
 
 export default function CanadianComparatorsPage() {
@@ -102,9 +101,8 @@ export default function CanadianComparatorsPage() {
           </div>
         </div>
         <p className="mt-5 border-t border-rule pt-3 text-xs leading-relaxed text-muted">
-          Scope: {canadianParishes.length} Canadian comparator parish records;
-          excluded from every U.S. headline figure · Registry Revision{" "}
-          {registry.registryRevision.version}, {registry.registryRevision.date}
+          Scope: {canadianParishes.length} Canadian comparator parishes;
+          excluded from every U.S. headline figure
           {" · "}
           <Link href="/about-the-data" className="underline hover:text-accent">
             About the data

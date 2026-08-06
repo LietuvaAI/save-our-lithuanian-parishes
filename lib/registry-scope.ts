@@ -10,7 +10,7 @@
 // ============================================================================
 
 import registry from "@/data/registry-unified.json";
-import alertsData from "@/data/alerts.json";
+import alertsData from "@/data/canonical-current-events-projection.json";
 import {
   getParishByC83Row,
   getSituationByRegistrySlug,
@@ -236,9 +236,11 @@ export function toScopedParish(p: RegParish): ScopedParish {
     : libOk
       ? (lib!.lithuanianIdentity as LithuanianIdentity | null)
       : asIdentity(overlay?.lithuanian_identity);
-  const buildingFate = libOk
-    ? (lib!.buildingFate as BuildingFate | null)
-    : asFate(overlay?.building_fate);
+  const buildingFate = canonical
+    ? asFate(canonical.building_fate)
+    : libOk
+      ? (lib!.buildingFate as BuildingFate | null)
+      : asFate(overlay?.building_fate);
   const alertKind = alertBySlug.get(slug) ?? null;
 
   return {

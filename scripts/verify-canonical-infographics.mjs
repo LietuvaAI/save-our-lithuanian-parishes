@@ -7,7 +7,7 @@ const read = (path) =>
   JSON.parse(readFileSync(new URL(`../data/${path}`, import.meta.url), "utf8"));
 const infographic = read("canonical-infographic-projection.json");
 const publication = read("canonical-publication-projection.json");
-const alerts = read("alerts.json");
+const alerts = read("canonical-current-events-projection.json");
 const errors = [];
 
 const sortValue = (value) => {
@@ -427,7 +427,7 @@ const campaignByProfile = new Map(
 const campaignLiturgy = [
   ["/parishes/dievo-apvaizdos-southfield-mi", "Weekly"],
   ["/parishes/svc-trejybes-hartford-ct", "Regular Mass ended 30 May 2026"],
-  ["/parishes/sv-juozapo-waterbury-ct", "Special Mass documented 2 Aug 2026"],
+  ["/parishes/sv-juozapo-waterbury-ct", "No regular Mass schedule"],
   ["/parishes/kristaus-atsimainymo-maspeth-ny", "Moved to Annunciation, Brooklyn"],
 ];
 for (const [profile, value] of campaignLiturgy) {

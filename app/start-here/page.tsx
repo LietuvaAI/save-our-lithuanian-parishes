@@ -32,9 +32,8 @@ export default function StartHerePage() {
         A restructuring letter. A &ldquo;listening session.&rdquo; A merger
         notice. If this is arriving at your parish — any parish, of any
         heritage — the Church&rsquo;s own law gives you standing, rights, and
-        precedent. This page is the short version of everything our research
-        verified. It is not legal or canonical advice; it is the map that gets
-        you to the right help in time.
+        precedent. This page condenses the verified evidence. It is not legal
+        or canonical advice; it is a map to the right help in time.
       </p>
 
       <GuidanceNav current="closure" />
@@ -58,16 +57,15 @@ export default function StartHerePage() {
             <em>after</em> the decree arrived reversed a closure.
           </p>
           <p>
-            That gap is not a coincidence. It is the record teaching:{" "}
+            That difference points to a practical lesson:{" "}
             <strong>
               the window that works is the one before the letter arrives.
             </strong>{" "}
-            The {siteFigures.reversals.documented} cases documented here are a
-            public record for every community to learn from — Lithuanian or
-            not. We keep them because the experience of one parish is the
-            knowledge of another. Standing up for a parish inside the
-            Church&rsquo;s own law is not standing against the Church. It is
-            asking the Church to follow it.
+            The {siteFigures.reversals.documented} cases offer precedents for
+            every community — Lithuanian or not. The experience of one parish
+            can become the knowledge of another. Standing up for a parish
+            inside the Church&rsquo;s own law is not standing against the
+            Church. It is asking the Church to follow it.
           </p>
           <p className="text-sm text-muted">
             See{" "}

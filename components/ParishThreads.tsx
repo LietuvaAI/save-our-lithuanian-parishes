@@ -107,12 +107,12 @@ const FATE_NOTE: Partial<Record<FateKey, string>> = {
   standing:
     "The historical Lithuanian parish has ended, but its terminal church building remains standing. This category covers only closed parish institutions; standing churches belonging to active, hosted-Mass, or transferred communities appear in their respective parish-status groups.",
   unrecorded:
-    "These are closed institutions whose canonical terminal worship site does not yet carry an accepted present-condition assertion. This does not mean that the church is gone. It means the record has not yet established whether that terminal building still stands, was repurposed, was demolished, or reached another documented outcome.",
+    "The present condition of these closed institutions' final worship sites has not yet been established. This does not mean that a church is gone: it may still stand, have another use, have been demolished, or have reached another outcome that has not yet been confirmed.",
 };
 
 const GROUP_NOTE: Partial<Record<EndStateGroup, string>> = {
   transferred:
-    "The historical Lithuanian parish no longer operates as a current Lithuanian pastoral institution, but its life continues in another form: the same parish may now serve a different community, a successor parish may carry Catholic life forward, or the former church may serve another religious community. This category does not mean that every institution closed or merged. Each card identifies the exact form of continuity established in the record.",
+    "The historical Lithuanian parish no longer operates as a current Lithuanian pastoral institution, but its life continues in another form: the same parish may now serve a different community, a successor parish may carry Catholic life forward, or the former church may serve another religious community. This category does not mean that every institution closed or merged. Each card identifies the confirmed form of continuity.",
 };
 
 const FATE_ORDER: FateKey[] = [

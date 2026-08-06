@@ -368,6 +368,18 @@ export const additionalCurrentHostedCommunities =
       entry.networkClass === "mass_continues" && !entry.registrySlug,
   );
 
+const currentPastoralDirectoryByRegistrySlug = new Map(
+  currentPastoralNetwork.directory.entries.flatMap((entry) =>
+    entry.registrySlug ? [[entry.registrySlug, entry] as const] : [],
+  ),
+);
+
+export function getCurrentPastoralDirectoryEntry(
+  registrySlug: string,
+): CurrentPastoralDirectoryEntry | null {
+  return currentPastoralDirectoryByRegistrySlug.get(registrySlug) ?? null;
+}
+
 const institutionByEntityId = new Map(
   institutionHistory.map((row) => [row.culturenet_entity_id, row]),
 );

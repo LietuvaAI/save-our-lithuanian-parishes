@@ -28,7 +28,7 @@ const read = (name) =>
   );
 const core = read("parishes.json");
 const registry = read("registry-unified.json").parishes;
-const alerts = read("alerts.json");
+const alerts = read("canonical-current-events-projection.json");
 const registryBySlug = new Map(
   registry.map((record) => [record.slug, record]),
 );

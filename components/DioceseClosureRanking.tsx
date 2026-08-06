@@ -5,8 +5,6 @@ import type { DioceseExplorerEntry } from "@/components/DioceseExplorer";
 
 type DioceseClosureRankingProps = {
   dioceses: DioceseExplorerEntry[];
-  revision: string;
-  revisionDate: string;
 };
 
 const PAPER = "#fffdf9";
@@ -22,8 +20,6 @@ function anchorFor(name: string) {
 
 export default function DioceseClosureRanking({
   dioceses,
-  revision,
-  revisionDate,
 }: DioceseClosureRankingProps) {
   const ranked = dioceses
     .filter((diocese) => diocese.formalClosed > 0)
@@ -41,7 +37,7 @@ export default function DioceseClosureRanking({
     <section className="mt-8 border-y border-rule py-5">
       <div className="max-w-3xl">
         <p className="text-xs font-medium uppercase text-muted">
-          Ranked closure record
+          Diocese comparison
         </p>
         <h2 className="mt-1 font-serif text-2xl font-semibold">
           Which dioceses closed the most Lithuanian parishes?
@@ -82,7 +78,7 @@ export default function DioceseClosureRanking({
               fontFamily="Arial, sans-serif"
               fontSize="18"
             >
-              Formal closures in the U.S. Roman Catholic parish record
+              Formal closures among U.S. Lithuanian Roman Catholic parishes
             </text>
 
             {ranked.map((diocese, index) => {
@@ -152,8 +148,7 @@ export default function DioceseClosureRanking({
               fontFamily="Arial, sans-serif"
               fontSize="15"
             >
-              Save Our Lithuanian Parishes - Registry Revision {revision},{" "}
-              {revisionDate}
+              Save Our Lithuanian Parishes · formal parish closures
             </text>
           </svg>
           <div
@@ -182,9 +177,6 @@ export default function DioceseClosureRanking({
                 </div>
               </div>
             ))}
-            <p className="pt-2 text-xs text-muted">
-              Registry Revision {revision}, {revisionDate}
-            </p>
           </div>
         </ExportableSvg>
       </div>
