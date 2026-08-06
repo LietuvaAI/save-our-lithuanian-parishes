@@ -4,7 +4,7 @@ subtitle: "What you can do today for Lithuanian Catholic parishes under threat."
 date: 2026-07-18
 substackUrl: https://blog.saveourlithuanianparishes.org/p/active-campaigns
 archivedAt: 2026-08-04
-note: "Canonical campaigns page (DECISIONS.md 2026-07-21); re-archived in full after the 2026-08-04 block rework — statuses synced to the four dispatches, U-PAVELDAS heritage record added for Waterbury."
+note: "Canonical campaigns page (DECISIONS.md 2026-07-21); re-archived after the 2026-08-04 block rework + collection-appeal softening (record-collection asks removed per Vilija; personal-fronting claim removed)."
 ---
 ## Found active campaigns
 
@@ -108,7 +108,7 @@ Ask larger Lithuanian institutions and foundations to pay attention to the Conne
 
 -
 
-Help document Holy Trinity’s history: photographs, bulletins, anniversary books, choir programs, parish histories, and personal testimony all matter.
+Holy Trinity’s history — photographs, bulletins, anniversary books, parish histories — matters to the preservation case; if you hold pieces of it, keep them safe.
 
 -
 
@@ -134,7 +134,7 @@ Campaign / advocacy links: [Protect Holy Trinity Church GoFundMe](https://www.go
 
 Photo: St. Joseph’s Lithuanian Catholic Church, Waterbury. Farragutful, CC BY-SA 4.0, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:St._Joseph%27s_Church_-_Waterbury,_Connecticut_01.jpg).
 
-Status: Šv. Juozapo — St. Joseph’s — is the first Lithuanian Roman Catholic parish in New England, founded in 1894. The Archdiocese of Hartford closed the church on September 30, 2023, but in its final weeks a parishioner working with a canon lawyer appealed to the Vatican — and almost three years later the church still stands: not sold, not demolished, in Catholic hands, and explicitly excluded from the 2025 sale of the rest of the parish campus. Nearly $10,000 of the canonical fight has been fronted from one parishioner’s own pocket. The church and its Lithuanian club are documented on U-PAVELDAS, Lithuania’s state register of cultural heritage significant to Lithuania abroad.
+Status: Šv. Juozapo — St. Joseph’s — is the first Lithuanian Roman Catholic parish in New England, founded in 1894. The Archdiocese of Hartford closed the church on September 30, 2023, but in its final weeks a parishioner working with a canon lawyer appealed to the Vatican — and almost three years later the church still stands: not sold, not demolished, in Catholic hands, and explicitly excluded from the 2025 sale of the rest of the parish campus. The canonical fight has cost nearly $10,000 so far. The church and its Lithuanian club are documented on U-PAVELDAS, Lithuania’s state register of cultural heritage significant to Lithuania abroad.
 
 Current threat/status: Vatican appeal pending, no ruling published; the City of Waterbury posted a request for proposals for the former parish campus in October 2025 — the church itself excluded.
 
@@ -146,7 +146,7 @@ Current threat/status: Vatican appeal pending, no ruling published; the City of 
 
 -
 
-Send documents, photographs, anniversary books, bulletins, and testimony that show St. Joseph’s Lithuanian Catholic history.
+If you hold pieces of St. Joseph’s history — documents, photographs, anniversary books — keep them safe; they matter to the preservation case.
 
 -
 
@@ -220,7 +220,7 @@ Campaign / advocacy links: [Historic Districts Council advocacy page](https://hd
 
 ## Tell us what is happening
 
-If your parish has an urgent need, a hidden archive, a closure threat, or a story that should be documented, contact us. Send one photograph, one bulletin, one correction, one date, one document, or one name of someone we should talk with.
+If your parish faces a closure threat, or a fact in these pages needs correcting, contact us.
 
 Email [info@saveourlithuanianparishes.org](mailto:info@saveourlithuanianparishes.org) or use the [parish report form](https://saveourlithuanianparishes.org/report).
 

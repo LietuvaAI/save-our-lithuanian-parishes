@@ -62,7 +62,7 @@ What to watch is concrete: the Landmarks Preservation Commission’s answer to t
 
 **Back the landmark case.** Two Requests for Evaluation are before the Landmarks Preservation Commission, and the case for designation is public — [read it](https://www.newyorkalmanack.com/2025/04/church-of-the-transfiguration-2/), share it, and add your support to the organizations carrying it. Council Member Holden’s letter shows what support from a neighbor looks like.
 
-**Send what you hold.** Photographs, bulletins, wedding records, parish histories — the record is what preservation cases stand on. The parish’s page is [here](https://saveourlithuanianparishes.org/parishes/kristaus-atsimainymo-maspeth-ny); documents and corrections go through [saveourlithuanianparishes.org/report](https://saveourlithuanianparishes.org/report).
+**Corrections welcome.** If a date or fact in this story needs fixing, the parish’s page is [here](https://saveourlithuanianparishes.org/parishes/kristaus-atsimainymo-maspeth-ny); corrections go through [saveourlithuanianparishes.org/report](https://saveourlithuanianparishes.org/report).
 
 **Go to Mass.** Sunday, 9:30 a.m., or the Latin Mass at 12:30 p.m. — 64-25 Perry Avenue, Maspeth. The February case against this church began with “declining parishioner numbers.” That argument is answered in person, on Sunday.
 

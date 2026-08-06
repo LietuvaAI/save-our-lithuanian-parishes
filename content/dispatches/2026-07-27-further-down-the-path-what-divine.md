@@ -24,7 +24,7 @@ What Hartford shows: assurances are not the process. The window is before the le
 
 #### Waterbury: after the window — because someone acted inside it
 
-Šv. Juozapo — St. Joseph’s, the first Lithuanian Roman Catholic parish in New England — closed on September 30, 2023, one hundred and fourteen years to the day after it first entered the Lithuanian paper of record. But in its final weeks, a parishioner working with a canon lawyer mounted an appeal to the Vatican. Almost three years later, no ruling has been published — and the church still stands: not sold, not demolished, in Catholic hands, and explicitly excluded from the sale of the rest of the parish campus in 2025. The campaign has so far prevented a complete ending. The cost has a number too: nearly $10,000 of the canonical fight fronted from one parishioner’s own pocket.
+Šv. Juozapo — St. Joseph’s, the first Lithuanian Roman Catholic parish in New England — closed on September 30, 2023, one hundred and fourteen years to the day after it first entered the Lithuanian paper of record. But in its final weeks, a parishioner working with a canon lawyer mounted an appeal to the Vatican. Almost three years later, no ruling has been published — and the church still stands: not sold, not demolished, in Catholic hands, and explicitly excluded from the sale of the rest of the parish campus in 2025. The campaign has so far prevented a complete ending. The cost has a number too: nearly $10,000 in canonical-fight expenses so far.
 
 What Waterbury shows: even after the window closes, the Church’s own process can keep the question open — and the later the start, the steeper the price.
 

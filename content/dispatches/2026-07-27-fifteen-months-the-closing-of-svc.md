@@ -40,7 +40,7 @@ The concrete step is already underway. A GoFundMe — [“Protect Holy Trinity C
 
 **Close the gap.** The canon-lawyer retainer needs $630 more. [The GoFundMe is here](https://www.gofundme.com/f/protect-holy-trinity-church).
 
-**Send what you hold.** Bulletins, photographs, sacramental records, parish histories — the record is what preservation cases stand on, and Holy Trinity’s record is still being assembled. The parish’s page is [here](https://saveourlithuanianparishes.org/parishes/svc-trejybes-hartford-ct); documents and corrections go through [saveourlithuanianparishes.org/report](https://saveourlithuanianparishes.org/report).
+**Corrections welcome.** If a date or fact in this story needs fixing, the parish’s page is [here](https://saveourlithuanianparishes.org/parishes/svc-trejybes-hartford-ct); corrections go through [saveourlithuanianparishes.org/report](https://saveourlithuanianparishes.org/report).
 
 **If your parish is still open, read Hartford twice.** The window to act is before the letter, before the notice after Mass. Start at [saveourlithuanianparishes.org/start-here](https://saveourlithuanianparishes.org/start-here). Every active campaign is tracked at [/under-threat](https://saveourlithuanianparishes.org/under-threat).
 
@@ -60,6 +60,6 @@ Fifteen months separated the bulletin that promised an ordinary year from the Su
 
 **The Lithuanian press of record:** *Draugas* — the Lithuanian daily, published since 1909: [Feb. 15, 1912 (the parish’s first appearance — open archive)](https://www.draugas.org/archive/1912_reg/1912-02-15-DRAUGASw.pdf) · [Nov. 30, 2017](https://www.draugas.org/key/2017_reg/2017-11-30-DRAUGAS.pdf) · [Dec. 9, 2023](https://www.draugas.org/key/2023_reg/2023-12-09-DRAUGAS.pdf) (recent issues require the Draugas subscriber password; or browse the open [2017](https://www.draugas.org/archyvas-pdf-2017/) and [2023](https://www.draugas.org/archyvas-pdf-2023/) archives).
 
-**The heritage record:** *Lietuvių kultūrinis paveldas Amerikoje / Lithuanian Cultural Legacy in America* (Lithuanian American Community, Inc., Cultural Affairs Council, 2009), p. 105 · [Connecticut — Global True Lithuania (heritage survey: construction 1915–1928; the state’s Lithuanian share)](https://global.truelithuania.com/connecticut-789/)
+**The heritage record:** *Lietuvių kultūrinis paveldas Amerikoje / Lithuanian Cultural Legacy in America* (Lithuanian American Community, Inc., Cultural Affairs Council, 2009), p. 105 · [Connecticut — Global True Lithuania (heritage survey: construction 1915–1928; the ~33,000 Lithuanians, nearly one percent of the state — the figure cited above)](https://global.truelithuania.com/connecticut-789/)
 
 **The record:** [The parish’s case record](https://saveourlithuanianparishes.org/parishes/svc-trejybes-hartford-ct) · [Documented US closure reversals](https://saveourlithuanianparishes.org/reversals)
