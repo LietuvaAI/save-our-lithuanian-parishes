@@ -178,7 +178,7 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-4xl py-6 text-center sm:py-8">
-        <h1 className="font-serif text-3xl font-semibold leading-tight sm:text-5xl">
+        <h1 className="font-serif text-[1.75rem] font-semibold leading-tight sm:text-[2.625rem]">
           The Living Record of America&rsquo;s Lithuanian Parishes
         </h1>
         <p className="mx-auto mt-3 max-w-3xl text-base leading-relaxed text-muted sm:text-lg">
