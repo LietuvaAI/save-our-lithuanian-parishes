@@ -44,7 +44,7 @@ The concrete step is already underway. A GoFundMe — [“Protect Holy Trinity C
 
 **If your parish is still open, read Hartford twice.** The window to act is before the letter, before the notice after Mass. Start at [saveourlithuanianparishes.org/start-here](https://saveourlithuanianparishes.org/start-here). Every active campaign is tracked at [/under-threat](https://saveourlithuanianparishes.org/under-threat).
 
-Fifteen months separated the bulletin that promised an ordinary year from the Sunday the Masses ended. What comes now started late — the retainer, the canon-law case, the cultural-center plan — and Hartford knows it. The building still stands on Capitol Avenue, and the community that filled it for a century and a quarter is still here. The months ahead decide whether those two facts stay joined.
+Fifteen months separated the bulletin that promised an ordinary year from the Sunday the Masses ended. The retainer for a canon lawyer is still being raised, and the cultural-center proposal has not yet taken formal shape. The building still stands on Capitol Avenue, and the community that filled it for a century and a quarter is still here.
 
 ---
 

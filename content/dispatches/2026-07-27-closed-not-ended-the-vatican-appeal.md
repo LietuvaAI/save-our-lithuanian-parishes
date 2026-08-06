@@ -36,7 +36,7 @@ The cost of staying there has a number. The GoFundMe for the canonical fight sho
 
 **If your parish is still open, learn the one lesson Waterbury teaches.** The appeal that holds was the appeal filed in time. Start at [saveourlithuanianparishes.org/start-here](https://saveourlithuanianparishes.org/start-here). Every active campaign is tracked at [/under-threat](https://saveourlithuanianparishes.org/under-threat).
 
-What happens next rests with Rome, and with what the merged parish decides about a building it has not sold. The appeal filed in the parish’s final weeks has bought what these fights rarely get: time, and a church still standing to walk back into. Rome has not spoken. Until it does, the ending is unwritten.
+Nearly three years after the last Mass, the appeal is still pending, and the church is still standing.
 
 ---
 
