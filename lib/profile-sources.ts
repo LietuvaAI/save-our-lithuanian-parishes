@@ -232,62 +232,11 @@ export function registryProfileSources(
     }
 
     if (axis === "draugas-registry-1909-2007") {
-      const pageCitations = draugasCitations(source.cites);
-      const pageCitationDates = new Set(
-        pageCitations.map((citation) => citation.date),
-      );
-      const mentionContext = source.total_mentions
-        ? `Systematic archive sweep; ${source.total_mentions} indexed references to this record`
-        : "Systematic archive sweep";
-      for (const citation of pageCitations) {
-        drafts.push(
-          draugasSource(
-            citation.date,
-            source.note ?? "Page-cited historical Draugas evidence",
-            undefined,
-            citation.detail,
-            source.sourceUrl,
-          ),
-        );
-      }
-      if (
-        source.first_mention &&
-        !pageCitationDates.has(source.first_mention)
-      ) {
-        drafts.push(
-          draugasSource(
-            source.first_mention,
-            `${mentionContext}; first recorded mention`,
-            `Draugas first recorded mention, ${source.first_mention}`,
-          ),
-        );
-      }
-      if (
-        source.last_mention &&
-        source.last_mention !== source.first_mention &&
-        !pageCitationDates.has(source.last_mention)
-      ) {
-        drafts.push(
-          draugasSource(
-            source.last_mention,
-            `${mentionContext}; last recorded mention, not a closure date`,
-            `Draugas last recorded mention, ${source.last_mention}`,
-          ),
-        );
-      }
-      if (
-        pageCitations.length === 0 &&
-        !source.first_mention &&
-        !source.last_mention
-      ) {
-        drafts.push({
-          group: "newspaper",
-          title: "Draugas systematic archive sweep, 1909–2007",
-          citation: source.work,
-          url: "https://www.draugas.org/archyvas-pdf/",
-          contexts: [mentionContext],
-        });
-      }
+      // The historical registry series is a machine-attributed navigation
+      // index, not an entity-reviewed source ledger. Keep it in Brain for
+      // research, but do not publish its totals or candidate issue links on
+      // parish profiles. Individually reviewed case-file citations continue
+      // to enter through draugasProfileSources above.
       continue;
     }
 

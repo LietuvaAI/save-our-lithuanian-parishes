@@ -27,17 +27,17 @@ canonical home or prescribes a hand-maintained site snapshot is superseded.
 - Committed like the other generated data files; re-run the script to refresh. Verified/gated entries are kept on re-runs, unresolved dates are re-probed.
 - Parish profile pages link citations to the verified direct PDF when one exists, otherwise to the public per-year archive page (`draugasCitationUrl` in `lib/parishes.ts`). This file affects **links only** — no figures are derived from it.
 
+## Public Draugas boundary (2026-08-07)
+
+- The machine-attributed 1909–2007 mention index is research infrastructure, not a public parish source ledger. Same-name parishes, religious organizations, venues, and unrelated city words can collide inside OCR context windows.
+- Public profiles do not expose that index, its candidate issue links, or totals derived from it. `scripts/verify-public-draugas-boundary.mjs` blocks those surfaces from returning.
+- Individually reviewed Draugas citations attached to canonical case-file claims may still publish with their direct issue links. Those citations identify the specific evidence used for a claim and do not inherit the unreviewed mention-index totals.
+
 ## canonical-publication-projection.json
 
 - **Authority:** Generated in `culturenet-brain` from the unified CultureNet parish canon and copied here as a release artifact. It is the sole authority for public U.S. institution membership, identity, type, class, canonical entity ID, and profile route.
 - **Current release:** 155 public U.S. institutions: 144 parishes, 5 missions, and 6 congregations. The class split is 137 Roman Catholic, 6 PNCC, 4 independent Catholic, and 8 non-Catholic Christian. The canonical publication revision is `canonical-public-census-2026-08-03-building-condition-reconciliation`; the canonical infographic revision is `canonical-infographic-units-2026-08-03-building-condition-reconciliation`.
 - **Scope:** Buildings and sites, duplicate aliases, historical phases, source conflations, hosted-worship context, research leads, Canadian comparators, and other international institutions remain linked research context and never increase the U.S. total.
-
-## canonical-draugas-mention-projection.json
-
-- **Authority:** Generated in `culturenet-brain` from the reviewed 1909–2007 Draugas mention index and the canonical public-institution projection, then copied here as a deployment artifact. It is never edited or adjudicated in the site repository.
-- **Unit:** An indexed reference occurrence, grouped under a dated Draugas PDF issue file. It is not a count of distinct articles. Each public row carries direct issue URLs and page locators but no OCR text or search snippets.
-- **Identity discipline:** The primary series supplies the public profile total. Any related legacy identity index remains a separately labeled series and is never silently added to the primary count.
 
 ## registry-unified.json
 

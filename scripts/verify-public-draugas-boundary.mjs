@@ -1,0 +1,70 @@
+import { existsSync, readFileSync } from "node:fs";
+import { join } from "node:path";
+
+const root = process.cwd();
+const errors = [];
+
+for (const relativePath of [
+  "app/parishes/[slug]/draugas/page.tsx",
+  "data/canonical-draugas-mention-projection.json",
+  "lib/draugas-mentions.ts",
+  "scripts/verify-draugas-mention-projection.mjs",
+]) {
+  if (existsSync(join(root, relativePath))) {
+    errors.push(`${relativePath}: unreviewed Draugas ledger surface remains public`);
+  }
+}
+
+for (const relativePath of [
+  "app/parishes/[slug]/page.tsx",
+  "components/ProfileSourceLedger.tsx",
+]) {
+  const source = readFileSync(join(root, relativePath), "utf8");
+  for (const forbidden of [
+    "canonical-draugas-mention-projection",
+    "getDraugasProfileLedger",
+    "draugasLedger",
+    "/draugas",
+  ]) {
+    if (source.includes(forbidden)) {
+      errors.push(`${relativePath}: forbidden public ledger token ${forbidden}`);
+    }
+  }
+}
+
+const importer = readFileSync(
+  join(root, "scripts/import-brain-projections.mjs"),
+  "utf8",
+);
+if (importer.includes("canonical-draugas-mention-projection")) {
+  errors.push(
+    "scripts/import-brain-projections.mjs: unreviewed Draugas ledger projection is imported",
+  );
+}
+
+const profileSources = readFileSync(join(root, "lib/profile-sources.ts"), "utf8");
+const historicalRegistryBlock = profileSources.match(
+  /if \(axis === "draugas-registry-1909-2007"\) \{([\s\S]*?)\n\s*\}/,
+);
+if (!historicalRegistryBlock) {
+  errors.push("lib/profile-sources.ts: historical Draugas registry boundary is missing");
+} else if (!historicalRegistryBlock[1].includes("continue;")) {
+  errors.push("lib/profile-sources.ts: historical Draugas registry candidates are not suppressed");
+} else {
+  for (const forbidden of ["draugasSource(", "source.total_mentions", "drafts.push("]) {
+    if (historicalRegistryBlock[1].includes(forbidden)) {
+      errors.push(
+        `lib/profile-sources.ts: historical Draugas registry block publishes ${forbidden}`,
+      );
+    }
+  }
+}
+
+if (errors.length > 0) {
+  console.error(errors.join("\n"));
+  process.exit(1);
+}
+
+console.log(
+  "OK: unreviewed 1909-2007 Draugas index remains research-only; reviewed case citations may publish.",
+);
