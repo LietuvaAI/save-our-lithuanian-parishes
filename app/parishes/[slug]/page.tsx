@@ -24,7 +24,6 @@ import { ProfileSourceLedger } from "@/components/ProfileSourceLedger";
 import { ProfileWorshipSites } from "@/components/ProfileWorshipSites";
 import { END_STATE_LABEL } from "@/lib/end-state";
 import { getCurrentPastoralDirectoryEntry } from "@/lib/infographic-projection";
-import { getDraugasProfileLedger } from "@/lib/draugas-mentions";
 import {
   canonicalParishProfiles,
   getCanonicalParishProfile,
@@ -561,7 +560,6 @@ export default async function ParishPage({
     projectSources,
     photoProfileSource(parishPhoto),
   ]);
-  const draugasLedger = getDraugasProfileLedger(profile);
 
   const relatedAlertSummary =
     parishAlert?.relatedProfileLink && parishAlert.context
@@ -1059,20 +1057,7 @@ export default async function ParishPage({
 
       <ParishRecordReadings profile={profile} />
 
-      <ProfileSourceLedger
-        sources={profileSources}
-        draugasLedger={
-          draugasLedger
-            ? {
-                href: `${profile.href}/draugas`,
-                indexedOccurrences: draugasLedger.primary.indexedOccurrences,
-                datedIssueFiles: draugasLedger.primary.datedIssueFiles,
-                firstIssueDate: draugasLedger.primary.firstIssueDate,
-                lastIssueDate: draugasLedger.primary.lastIssueDate,
-              }
-            : null
-        }
-      />
+      <ProfileSourceLedger sources={profileSources} />
 
       <div
         id="profile-corrections"

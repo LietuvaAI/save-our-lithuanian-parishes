@@ -2,7 +2,6 @@ import type {
   ProfileSource,
   ProfileSourceGroup,
 } from "@/lib/profile-sources";
-import Link from "next/link";
 
 const GROUP_LABEL: Record<ProfileSourceGroup, string> = {
   newspaper: "Newspaper evidence",
@@ -44,16 +43,8 @@ const SOURCE_SECTIONS: {
 
 export function ProfileSourceLedger({
   sources,
-  draugasLedger,
 }: {
   sources: ProfileSource[];
-  draugasLedger?: {
-    href: string;
-    indexedOccurrences: number;
-    datedIssueFiles: number;
-    firstIssueDate: string | null;
-    lastIssueDate: string | null;
-  } | null;
 }) {
   const linkedCount = sources.filter((source) => source.url).length;
   const missingCount = sources.length - linkedCount;
@@ -69,30 +60,6 @@ export function ProfileSourceLedger({
         supports, and provides a direct public link when one is available. The
         complete URL is printed for traceability.
       </p>
-
-      {draugasLedger && (
-        <div className="mt-6 max-w-2xl border-y border-rule bg-band px-5 py-5">
-          <p className="font-mono text-xs uppercase text-muted">
-            Draugas, 1909–2007
-          </p>
-          <h3 className="mt-2 font-serif text-xl font-semibold">
-            {draugasLedger.indexedOccurrences.toLocaleString("en-US")} indexed
-            references in {draugasLedger.datedIssueFiles.toLocaleString("en-US")} dated
-            issue files
-          </h3>
-          <p className="mt-2 text-sm leading-relaxed text-muted">
-            Browse every dated issue file and its recorded page locator. The
-            count is a reference-occurrence total, not a count of distinct
-            articles.
-          </p>
-          <Link
-            href={draugasLedger.href}
-            className="mt-3 inline-block text-sm font-medium underline underline-offset-3 hover:text-accent"
-          >
-            Open the complete Draugas ledger →
-          </Link>
-        </div>
-      )}
 
       {sources.length === 0 ? (
         <p className="mt-5 border-y border-rule py-4 text-sm text-muted">
