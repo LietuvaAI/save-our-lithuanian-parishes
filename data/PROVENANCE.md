@@ -33,6 +33,12 @@ canonical home or prescribes a hand-maintained site snapshot is superseded.
 - **Current release:** 155 public U.S. institutions: 144 parishes, 5 missions, and 6 congregations. The class split is 137 Roman Catholic, 6 PNCC, 4 independent Catholic, and 8 non-Catholic Christian. The canonical publication revision is `canonical-public-census-2026-08-03-building-condition-reconciliation`; the canonical infographic revision is `canonical-infographic-units-2026-08-03-building-condition-reconciliation`.
 - **Scope:** Buildings and sites, duplicate aliases, historical phases, source conflations, hosted-worship context, research leads, Canadian comparators, and other international institutions remain linked research context and never increase the U.S. total.
 
+## canonical-draugas-mention-projection.json
+
+- **Authority:** Generated in `culturenet-brain` from the reviewed 1909–2007 Draugas mention index and the canonical public-institution projection, then copied here as a deployment artifact. It is never edited or adjudicated in the site repository.
+- **Unit:** An indexed reference occurrence, grouped under a dated Draugas PDF issue file. It is not a count of distinct articles. Each public row carries direct issue URLs and page locators but no OCR text or search snippets.
+- **Identity discipline:** The primary series supplies the public profile total. Any related legacy identity index remains a separately labeled series and is never silently added to the primary count.
+
 ## registry-unified.json
 
 - **Canonical source:** `culturenet-brain/docs/research/parish-canon/public-display/registry-unified.json`. The site copy is a hash-verified deployment artifact and cannot independently change public facts.
