@@ -75,7 +75,8 @@ const parishes = rows.map((r, index) => {
     endingMode: r.ending_mode,
     institutionType: isMisija ? "misija" : "parapija",
     // Classifier fields — enriched below from situation overlay.
-    // parish-situation.json is the source of truth for these.
+    // Brain's imported display artifact supplies legacy classifier detail here;
+    // canonical public projections override it on public surfaces.
     lithuanianIdentity: null,
     buildingFate: null,
     currentUse: null,
@@ -105,7 +106,7 @@ for (let index = 0; index < parishes.length; index++) {
 }
 
 // Enrich with ALL situation-overlay fields from parish-situation.json.
-// This is the single merge point: the overlay is the source of truth for
+// This is the legacy merge point: the imported Brain display artifact supplies
 // classifier fields the CSV doesn't carry. After this, parishes.json has
 // everything and the app never reads the overlay directly.
 const sitPath = new URL("../data/parish-situation.json", import.meta.url);

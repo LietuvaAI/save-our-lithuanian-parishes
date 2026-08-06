@@ -16,15 +16,15 @@ Public advocacy site for SaveOurLithuanianParishes.org. This is a **product repo
 
 **Solid first, stories forever.** Before any press moment: every record verified/adjudicated or explicitly labeled "still being researched" — nothing in between. Completion meter: `scripts/audit-classification.mjs` (CONTRADICTION and UNVERIFIED must be 0). Classification canon: `docs/CLASSIFICATION.md` — surfaces that disagree with it are wrong. A hosted Lithuanian Mass never counts as a standing Lithuanian parish in headline figures. Full doctrine + the adjudication campaign: `culturenet-brain/docs/strategy/solp-launch-legitimacy-2026-07-26.md`.
 
-The public institution census is a separate launch-critical contract. `data/canonical-publication-projection.json`, generated in `culturenet-brain`, is the sole authority for U.S. institution identity, membership, type, class, canonical entity ID, and public route. `data/public-institution-ledger.json` is derived from that projection. Never infer the count from research rows, route totals, or display-registry shape. Historical phases, leads, context, buildings, duplicate aliases, Canadian comparators, and other international institutions never enter the U.S. count.
+The public institution census is a separate launch-critical contract. `data/canonical-publication-projection.json`, generated in `culturenet-brain`, is the sole authority for U.S. institution identity, membership, type, class, canonical entity ID, and public route. `data/public-institution-ledger.json` is derived from that projection. A former site-owned identity-lock file was retired because it duplicated this authority; the build forbids its return. Never infer the count from research rows, route totals, or display-registry shape. Historical phases, leads, context, buildings, duplicate aliases, Canadian comparators, and other international institutions never enter the U.S. count.
 
 ## Data discipline (the credibility of the whole project)
 
-- `data/parishes.csv` is a **snapshot** of the canonical dataset in `culturenet-brain/docs/research/draugas/parishes.csv`. Never hand-edit it here — re-snapshot by PR and update `data/PROVENANCE.md`.
+- Every factual deployment artifact in `data/` is imported from `culturenet-brain` by `scripts/import-brain-projections.mjs` or generated from those imports. Never hand-edit an imported artifact in this repo.
 - `scripts/build-data.mjs` validates every derived figure against the locked figure set and **fails the build on drift**. Expected figures change only to match a new upstream locked-figures revision.
 - `data/parishes.json` and `data/figures.json` are generated — regenerate with `npm run data`, commit alongside the script that produced them.
-- `data/canonical-publication-projection.json` is the checked-in release artifact from `culturenet-brain`. Update it only from the Brain builder output, then run `npm run sync:canonical-publication`.
-- `data/registry-unified.json` is the site display registry. It retains narrative, lifecycle, geography, media, and source detail, but its public census fields are synchronized from the Brain projection and may not override it. Every display-content change must follow `docs/REGISTRY-INGESTION-CONTRACT.md`, bump `registryRevision.version`, update its changelog/hash/release counts, and pass the identity, scope, and public-source guards.
+- `data/canonical-publication-projection.json`, `data/canonical-infographic-projection.json`, and `data/canonical-current-events-projection.json` are checked-in Brain release artifacts. Update them only through the Brain builders and the import script.
+- `data/registry-unified.json`, `data/parish-situation.json`, `data/parish-timelines.json`, `data/photos.json`, `data/parishes.csv`, case records, and the reversal database are Brain-owned public-display or evidence artifacts. The site imports them byte-for-byte and verifies their Brain manifest hashes. They are never an independent factual authority and may not override the canonical projections.
 - New data enters under its own `corpusScope` tag; the `draugas-2008-2026` figures never silently mutate.
 
 ## Binding editorial guardrails (from the locked research — do not relax)
@@ -36,10 +36,11 @@ The public institution census is a separate launch-critical contract. `data/cano
 5. **No invented numbers.** Blank fields stay blank.
 6. **Never publish research-cohort totals as institution totals.** Public U.S. counts come only from the canonical publication projection; evidence-depth labels describe research maturity, not a separate census.
 7. **Site framing (Vilija 2026-07-21): the site's mission is the RECORD, not the deed thesis.** The site documents every parish — what happened to it, where it stands now, and what communities can learn from each other: from those that were lost AND from those that fought and won. "Ownership decided endings" and "procedure in time wins" are two *lessons inside* the record, not the site's identity. Accordingly: site visuals (the homepage map) encode *present status* (open / under threat / lost / fate unestablished); the who-decided (`ending_mode`) encoding remains for the Draugas-article graphics, charts, profile marks, and popups, where it originated. Unresolved cases (Maspeth) render as *under threat*, never as closed. Scope: the U.S., with Canada as the comparator exception; Argentine and other international records stay research-only unless a separate view explicitly includes them.
+8. **Public voice follows [`docs/VOICE.md`](docs/VOICE.md).** Lead with the parish, community, building, or event—not with the database or research workflow. State uncertainty directly and preserve every canonical distinction. Homepage cards must explain what happened and why the subject belongs on the site; an internal provenance caveat is never the card's main content. `npm run verify:reader-copy` blocks recurring process-first phrases.
 
 ## Hearth dispatch queue (Substack alignment)
 
-`data/alerts.json` campaigns carry a `hearthUrl` field — the site renders "How to help" CTAs from it on `/under-threat` and on parish profiles. The `sustainabilityWatch` array carries `hearthUrl` for dispatches on the `/sustainability-watch` page. When a new dispatch is published on The Hearth, add its URL to the matching entry.
+The Brain-owned current-events source carries `hearthUrl` fields for campaigns and sustainability-watch entries. The site renders those links from `data/canonical-current-events-projection.json`. Add or change a dispatch URL in Brain, rebuild the projection, then import it here.
 
 **Has a dispatch (all four active campaigns covered as of 2026-07-27):**
 - Divine Providence, Southfield MI — dedicated post series + campaign anchor (hearthUrl = the pinned flagship "Further Down the Path")
@@ -59,7 +60,7 @@ Two posts were deliberately unpublished from the live blog on Vilija's decision 
 
 Two tiers of living parishes: `/under-threat` (active diocesan action, clock ticking) and `/sustainability-watch` (survived or never threatened, but wounded — slow-burn erosion).
 
-**Data model** (`alerts.json → sustainabilityWatch[]`): each entry documents clergy (arrangement + detail), liturgy (lithuanianMass, frequency, detail), governance (standalone/collaborative/merged/mission), survivedThreats, financial signal, situation summary, sources. Clergy arrangement enum: `lithuanian_klebonas`, `collaborative_pastor`, `visiting_priest`, `no_lithuanian_clergy`, `unknown`.
+**Data model** (Brain current-events source → `canonical-current-events-projection.json → sustainabilityWatch[]`): each entry documents clergy (arrangement + detail), liturgy (lithuanianMass, frequency, detail), governance (standalone/collaborative/merged/mission), survivedThreats, financial signal, situation summary, sources. Clergy arrangement enum: `lithuanian_klebonas`, `collaborative_pastor`, `visiting_priest`, `no_lithuanian_clergy`, `unknown`.
 
 **Research queue — parishes to add (need sourced clergy/liturgy/governance data):**
 1. **St. Andrew (Šv. Andriejaus), Philadelphia PA** — only Lithuanian-language Sunday Mass in Pennsylvania; rectory sold ~2023-24 for $1.2M to fund operations.

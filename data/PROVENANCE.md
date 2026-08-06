@@ -1,9 +1,21 @@
 # Data Provenance
 
+## Current authority and import contract (2026-08-06)
+
+`culturenet-brain` is the sole factual authority. This repository contains
+checked-in deployment artifacts because the site builds statically, but those
+files are not separately maintained snapshots: `scripts/import-brain-projections.mjs`
+copies them from Brain and `scripts/verify-brain-single-source.mjs` checks their
+revision IDs, content hashes, canonical entity joins, all case-file hashes, and
+the public-display manifest. A factual change begins in Brain, is rebuilt there,
+and is then imported mechanically. The older chronology below records how the
+project reached this contract; any earlier statement that names the site as the
+canonical home or prescribes a hand-maintained site snapshot is superseded.
+
 ## parishes.csv
 
 - **Canonical source:** `LietuvaAI/culturenet-brain` → `docs/research/draugas/parishes.csv`
-- **Snapshot taken:** 2026-07-27 (**Revision 2 relock**), from culturenet-brain PR #448 (dataset refresh + relock, branch commit `524134a`); byte-identical to the refreshed canonical CSV, SHA-256 `03eff76ba6053cd5f2ad2f5526d50ea09b5e922826b10046c313af09d33e5c5c`. That PR formalizes upstream the nine adjudications this snapshot already carried (site commit `0448f6a`, 2026-07-23: Rochester → standing, Brighton Park status aligned, 7 `year_closed` backfills) and adds the East St. Louis notes correction (independent parish ended 2014 — Designated Chapel; clears the audit's last STALE-TEXT finding), which is this re-snapshot's only net row change. Previous snapshot 2026-07-15 from culturenet-brain PR #321 (citation-date fix, branch commit `f8a9649`; before that 2026-07-08 from `main` at `b2804c2`).
+- **Deployment artifact:** imported byte-for-byte from Brain and covered by `data/canonical-public-display-manifest.json`. The dated snapshot history is retained in git, not used as a second authority.
 - **Locked figure set:** `docs/research/draugas/Draugas-Infographic-Locked-Figures.md` (**Revision 2, locked 2026-07-27** — headline set unchanged from the published Revision 1: 83 case-filed so far / 55 diocese-closed / 0 community-owned closed by an outside authority; standing 22→23, community-decided 4→3 per the Rochester reclassification; Revision 1 figures remain valid as published), same folder. Scope: 83 case-filed so far from the Draugas 2008–2026 corpus — the first dataset, not a ceiling. Every headline figure this site displays is re-derived from the CSV at build time and validated against that locked set by `scripts/build-data.mjs`. **The build fails if any figure drifts.**
 - **Corpus:** the *Draugas* born-digital archive, 2 January 2008 – 21 May 2026 — 2,768 issues searched (2 of 2,770 corrupt). Source line: „Šaltinis: „Draugo" archyvas, 2008–2026 m."
 - **Scope:** 86 rows = 83 U.S. Lithuanian parishes case-filed so far + 3 Canadian comparators (states QC/ON; excluded from all U.S. figures). 83 is the Draugas 2008–2026 yield; the number will grow as the full archive and other sources are case-filed.
@@ -23,15 +35,15 @@
 
 ## registry-unified.json
 
-- **Canonical source as of Registry Revision 25 (2026-08-03): this file in `LietuvaAI/save-our-lithuanian-parishes`.** `culturenet-brain` retains the source research, extraction artifacts, exclusions, and page-cited provenance; research enters the site only through held, adjudicated revision PRs. The consumer contract for future CultureNet imports is `docs/REGISTRY-INGESTION-CONTRACT.md`.
+- **Canonical source:** `culturenet-brain/docs/research/parish-canon/public-display/registry-unified.json`. The site copy is a hash-verified deployment artifact and cannot independently change public facts.
 - **Revision 2–8 evidence and adjudication:** Revisions 2–5 apply ELIP and the first two-pass parish-canon tranche, isolate the unresolved Waterbury lead, and release-audit all 82 locked identities. Revision 6 consolidates duplicate shells and separates public institutions from phases, leads, and context. Revision 7 corrects Tamaqua's parish/building chronology. Revision 8 completes the residual single-source identity audit, collapses five more false or duplicate shells, reclassifies the New York Holy Trinity attempt as a phase, repairs public source ledgers and jurisdiction labels, and recalculates source depth. Replayable applications and reports live in `scripts/apply-registry-revision*.mjs` and `data/candidates/*report*.md`.
 - **Revision 1 build:** final upstream rebuild from brain plus a field-by-field merge over the enriched site snapshot. The merge preserved diocese coverage, exact geo, 2026-07-25 web-survey sources, congregation-class corrections, four mission records, ten site-owned congregation records, and editorial caveats. It folded in brain #445/#448/#449 and site #92, including Westville, Chicago Heights, Kearny/Harrison, Baltimore, Waterbury, Cambridge, Freeland, closure-year, and year-variance adjudications.
-- **Role after Registry Revision 10:** This is the site display layer for narrative, lifecycle, geography, media, and source detail. Public census fields are synchronized from `canonical-publication-projection.json`; this file cannot independently add, remove, merge, or reclassify a public institution.
+- **Role now:** Brain-owned legacy display/evidence fields used only where the canonical projections do not supply the presentation detail. It cannot override canonical identity, lifecycle, institution outcome, terminal-site condition, current pastoral-network membership, or current-event claims.
 - **Public counts:** 155 U.S. institutions, including 132 U.S. Roman Catholic parishes and 5 Roman Catholic missions. Of the 155 institutions, 134 have a completed two-pass case file or multiple-source corroboration and 21 are single-source attested. The machine-readable census lives in `public-institution-ledger.json`; explicit exclusions from prior site scopes live in `canonical-public-census-adjudications.json`.
 - **What it is:** one living record per adjudicated entity, with per-source provenance, carried conflicts, selected lifecycle readings, source-row aliases, lineage, `record_depth`, `congregation_class`, diocese, and geo. Locked source blocks remain provenance and are not silently rewritten when a later adjudication selects a different interpretation.
 - **Figures discipline:** Full-record, map, profile, History, and By Diocese figures begin with the Brain publication projection, then join site display fields by canonical registry slug. `data/site-figures.json` is regenerated from that contract and blocks publication when any surface drifts.
 - **Mutation guard:** `registryRevision.version`, dated changelog, and SHA-256 content hash are mandatory. `data/registry-revisions.json` keeps the dated release ledger, and its latest entry must match the live registry revision. `scripts/verify-registry-revision.mjs` runs first in `npm run data` and fails if content changes without a revision bump or the ledger falls out of sync.
-- **Canonical identity and release guards:** `data/canonical-identity-locks.json` is the independent, hashed register for all 82 unique U.S. C83 identities covering the 83 source rows. It locks entity joins, canonical profile and registry routes, Lithuanian names, places, institution/record type, denomination, and C83 lineage. Its four campaign assignments are a protected subset. `scripts/verify-canonical-identities.mjs` blocks drift across the core record, registry, and campaign layer. `scripts/verify-canonical-release.mjs` additionally requires all 83 case files, the sole intentional Waterbury row merge, resolved duplicate aliases, classifier joins, and exact embedded registry counts. Identity-register changes require an explicit revision bump and Vilija review. Current status, ownership, dates, sources, and campaign actions remain updateable as documented evidence changes.
+- **Canonical identity and release guards:** Brain's publication projection owns identity and public routes; its case manifest covers all 83 case files; its current-events projection binds campaigns to canonical entity IDs. `scripts/verify-canonical-identities.mjs` fails if those joins drift or if the retired site-owned identity lock returns. `scripts/verify-canonical-release.mjs` additionally requires the sole intentional Waterbury row merge, resolved duplicate aliases, classifier joins, and exact embedded registry counts.
 - **Held upstream (NOT snapshotted, per Vilija 2026-07-18):** `sites.json` (cemeteries, institutions, Jewish congregations/orgs, monasteries, chapels, shrines) and `leads.json`.
 
 ## Non-Catholic source import
@@ -46,7 +58,8 @@
 
 ## Update protocol
 
-Never hand-edit `data/parishes.csv` in this repo. If the upstream canonical CSV changes (e.g., Maspeth resolves), re-snapshot it here in a PR, update this file's snapshot line, and update the expected figures in `scripts/build-data.mjs` **only** to match a new upstream locked-figures revision.
+Never hand-edit a factual artifact in this repo. Change Brain, run its release
+guards, then run the site import and full data/build checks.
 
 ## Binding data cautions (from the locked figure set)
 
@@ -73,7 +86,9 @@ Two alerts concern registry-layer parishes with no case-record, correctly so (ca
 - **Freeland, PA** — "Our Lady of the Immaculate Conception" consolidated into St. Patrick (White Haven) effective 2026-07-01 (Diocese of Scranton, Vision 2030). Registry has `parish-freeland-pa`, a single-source row for an *unnamed mixed Lithuanian-Polish-Slovak-Rusyn parish* — whether OLIC is that parish's continuation is **unconfirmed**; identity check is an upstream culturenet-brain lead before the event attaches to the registry record.
 - **St. Ann of the Dunes, Beverly Shores, IN** (`st-ann-beverly-shores-in`, multi-source) — named in the Diocese of Gary's Porter Planning Area consolidation (five parishes → two worship sites, March 2026 plan).
 
-Both events' public surface is the proposed alerts snapshot (see `docs/alerts-surface-proposal.md`), pending Vilija's design choice. Known upstream blind spots left alone per handoff: `casimir-montreal-qc`, `gateofdawn-montreal-qc`, `casimir-winnipeg-mb` (WebSearch budget exhaustion — next brain sweep's first priority). Guardrails re-affirmed in any future surface copy: Maspeth never rendered closed; Elizabeth NJ canonically unresolved; the case-filed figure never conflated with the 155-entity watch layer.
+This 2026-07-19 note predates the Brain current-events projection and is kept
+only as project history. The public surface now reads the reviewed, canonical-ID-
+bound current-events projection; it does not consume Parish Watch files directly.
 
 ## 2026-07-25 — Ten-parish status research applied; Divine Providence clergy update
 

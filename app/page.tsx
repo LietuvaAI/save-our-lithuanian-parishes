@@ -7,7 +7,7 @@ import {
   DiocesanLeaderLink,
 } from "@/components/DiocesePill";
 import { EndStatePill } from "@/components/EndStatePill";
-import alertsData from "@/data/alerts.json";
+import alertsData from "@/data/canonical-current-events-projection.json";
 import { getClearedPhoto } from "@/lib/photos";
 import {
   currentPastoralNetwork,
@@ -64,7 +64,8 @@ type CurrentAlert = {
   relatedProfileLink?: string;
   relatedProfileLabel?: string;
   status?: EndState;
-  caveat?: string;
+  statusLabel?: string;
+  context?: string;
   whatChanged: string;
   sources: { title: string; publisher: string; url: string }[];
 };
@@ -188,7 +189,7 @@ export default function Home() {
           began, changed, and where they stand now.
         </p>
         <p className="mx-auto mt-4 max-w-4xl text-sm leading-relaxed">
-          One public record, three populations: {" "}
+          Three views, three distinct populations: {" "}
           <Link
             href="/parishes"
             className="font-semibold underline decoration-rule underline-offset-4 hover:text-accent"
@@ -275,7 +276,7 @@ export default function Home() {
         </div>
         <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted">
           These communities are acting while their futures are still being
-          decided. Read the current situation, understand the parish record,
+          decided. Read what is happening, understand the parish&rsquo;s history,
           and respond to the campaign itself.
         </p>
 
@@ -449,14 +450,20 @@ export default function Home() {
                           </span>
                         </div>
                         <div className="mt-2 flex flex-wrap items-center gap-2">
-                          <EndStatePill
-                            value={
-                              alert.status ??
-                              (alert.parishLink
-                                ? statusForLink(alert.parishLink)
-                                : "unverified")
-                            }
-                          />
+                          {alert.statusLabel ? (
+                            <span className="inline-block rounded-full border border-rule bg-band px-2 py-0.5 text-[11px] font-medium leading-tight whitespace-nowrap">
+                              {alert.statusLabel}
+                            </span>
+                          ) : (
+                            <EndStatePill
+                              value={
+                                alert.status ??
+                                (alert.parishLink
+                                  ? statusForLink(alert.parishLink)
+                                  : "unverified")
+                              }
+                            />
+                          )}
                           <DiocesePill name={alert.diocese} />
                         </div>
                         <p className="mt-1">
@@ -465,9 +472,9 @@ export default function Home() {
                         <p className="mt-2 text-sm leading-relaxed text-muted">
                           {alert.whatChanged}
                         </p>
-                        {alert.caveat && (
+                        {alert.context && (
                           <p className="mt-2 text-sm leading-relaxed text-foreground">
-                            {alert.caveat}
+                            {alert.context}
                           </p>
                         )}
                         <p className="mt-2 text-xs leading-relaxed text-muted">
@@ -512,7 +519,7 @@ export default function Home() {
         </div>
 
         <p className="mt-5 text-sm text-muted">
-          Current snapshot: {alertsData.snapshot}.{" "}
+          Current as of {alertsData.snapshot}.{" "}
           <Link
             href="/report"
             className="font-medium underline underline-offset-4 hover:text-accent"
@@ -542,11 +549,11 @@ export default function Home() {
 
       <section className="rounded-lg border border-rule p-6 text-center sm:p-8">
         <h2 className="font-serif text-2xl font-semibold">
-          Follow the record as it grows
+          Follow new findings and developments
         </h2>
         <p className="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-muted">
-          Dispatches from the record — closure alerts, parish case files, and
-          what communities are doing about it — arrive by email.
+          Closure alerts, parish histories, and news from communities working
+          to protect their churches arrive by email.
         </p>
         <p className="mt-4">
           <a

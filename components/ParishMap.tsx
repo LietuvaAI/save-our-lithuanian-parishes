@@ -21,7 +21,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import mapData from "@/data/map.json";
 import regData from "@/data/registry-map.json";
-import alertsData from "@/data/alerts.json";
+import alertsData from "@/data/canonical-current-events-projection.json";
 import {
   usParishes,
   ENDING_MODE_LABEL,
@@ -820,10 +820,12 @@ export default function ParishMap() {
                   <div className="text-muted text-xs mt-0.5">{hovered.kindLabel}</div>
                 )}
                 <div className="text-muted text-xs mt-0.5">
-                  {hovered.deep ? "Documented in depth — full case file" : "Attested by the research record"}
+                  {hovered.deep
+                    ? "Detailed profile and sources available"
+                    : "Basic profile — evidence remains limited"}
                 </div>
                 {hovered.profile && (
-                  <div className="mt-1.5 font-medium">Click the marker to open its record →</div>
+                  <div className="mt-1.5 font-medium">Click the marker to open its profile →</div>
                 )}
               </div>
             );
@@ -1127,7 +1129,7 @@ export default function ParishMap() {
         Shown: {selectedScope}. Religious-house, cemetery, shrine, club, and
         school chapels remain outside the institutional count.{" "}
         <a href="/about-the-data" className="underline hover:text-foreground">
-          How the record is scoped →
+          What is included →
         </a>
       </p>
 
@@ -1136,13 +1138,13 @@ export default function ParishMap() {
         {selectedStatuses.size === 1 &&
         selectedStatuses.has("unresolved") ? (
           <span className="text-muted">
-            {statusCounts.unresolved} records whose outcome remains contested or
-            canonically undecided. Open a mark for its evidence.
+            {statusCounts.unresolved} institutions whose outcome remains contested
+            or canonically undecided. Open a mark for details and sources.
           </span>
         ) : closedOnly ? (
           <span className="text-muted">
-            {statusCounts.lost} records in the Closed category. Hover any mark;
-            click to open its record.{" "}
+            {statusCounts.lost} institutions in the Closed category. Hover any
+            mark; click to open its profile.{" "}
             <Link href="/parishes" className="underline hover:text-foreground font-medium">
               Browse all parish profiles →
             </Link>
@@ -1150,18 +1152,18 @@ export default function ParishMap() {
         ) : selectedStatuses.size === 1 &&
           selectedStatuses.has("unknown") ? (
           <span className="text-muted">
-            {statusCounts.unknown} records whose present status is still being
-            verified. Open a mark to inspect what is currently documented.
+            The present status of {statusCounts.unknown} institutions has not yet
+            been established. Open a mark for the available details and sources.
           </span>
         ) : !allStatusesSelected ? (
           <span className="text-muted">
-            {visible.length} records match the selected community and status
-            filters. Hover any mark; click to open its record.
+            {visible.length} institutions match the selected community and status
+            filters. Hover any mark; click to open its profile.
           </span>
         ) : (
           <span className="text-muted">
-            One map — every documented parish, mission, and congregation.
-            Hover any mark; click to open its record.{" "}
+            One map — every published parish, mission, and congregation. Hover
+            any mark; click to open its profile.{" "}
             <Link href="/#happening-now" className="font-medium underline hover:text-foreground">
               See current campaigns and developments →
             </Link>

@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     template: "%s — Save Our Lithuanian Parishes",
   },
   description:
-    "The public record of America's Lithuanian parishes — every parish we can document, what happened to it, where it stands today, and what communities can learn from each other.",
+    "The living history of America's Lithuanian parishes, missions, and congregations — how they began, how they changed, and where they stand today.",
 };
 
 type NavItem =

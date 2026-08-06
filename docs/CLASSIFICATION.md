@@ -8,13 +8,13 @@ disagrees with this document, the surface is wrong.*
 
 | Dimension | Values | Source of truth |
 |---|---|---|
-| Lifecycle (`status`) | closed · demolished · merged · suppressed · standing · undecided | canonical `parishes.csv` snapshot (locked core) |
-| Who decided (`endingMode`) | diocese_closed · community_decided · standing · undecided | canonical snapshot (locked figures count these) |
-| Lithuanian identity | active_parish · mass_continues · ethnically_transferred · lost · *(null = unverified)* | `parish-situation.json` overlay (site-owned, research-driven) |
-| Building fate | standing · demolished · repurposed_religious · repurposed_secular · derelict · unknown | overlay |
-| Pastoral status | own_priest · shared_priest · visiting_priest · not_applicable · unknown | overlay, reconciled to watch research |
-| Watch layer | clergy arrangement, Lithuanian Mass + frequency, governance | `alerts.json` sustainabilityWatch (freshest, per-parish sourced) |
-| Alerts | active campaign · watched · building at risk | `alerts.json` |
+| Lifecycle (`status`) | closed · demolished · merged · suppressed · standing · undecided | Brain canonical institution projection |
+| Who decided (`endingMode`) | diocese_closed · community_decided · standing · undecided | Brain canonical assertion graph |
+| Lithuanian identity | active_parish · mass_continues · ethnically_transferred · lost · *(null = unverified)* | Brain canonical institution projection |
+| Building fate | standing · demolished · repurposed · listed for sale · not established | terminal physical-site assertions in the Brain projection |
+| Pastoral status | active parish · active mission · hosted Mass | Brain `current_pastoral_network` projection |
+| Watch layer | clergy arrangement, Lithuanian Mass + frequency, governance | Brain current-events projection `sustainabilityWatch` |
+| Alerts | active campaign · watched · building at risk | Brain current-events projection |
 
 ## The identity rubric (locked 2026-07-26)
 
@@ -49,11 +49,12 @@ Hearth dispatch renderer) must be kept in sync — they say so in comments.
 
 ## Layer precedence on display
 
-Freshest first: **watch/alert research → case records → classifier-derived
-pill → archival notes.** Profile pages order sections accordingly ("Where it
-stands today" leads). Canonical years (locked core) are authoritative on
-every surface; registry readings that differ appear only as conflicts on
-research pages.
+Every public fact begins in Brain. The canonical institution/site/current-network
+projections decide classifications and dates; the current-events projection
+adds reviewed current developments; Brain-owned case records and public-display
+artifacts provide evidence and presentation detail without overriding those
+projections. Profile pages order sections accordingly ("Where it stands today"
+leads). Conflicting source readings appear only as explicitly labeled evidence.
 
 ## The guards (all block `npm run data` / the build)
 
@@ -108,11 +109,10 @@ research pages.
 
 ## Canonical identity register (2026-07-28)
 
-`data/canonical-identity-locks.json` independently freezes the 82 unique U.S.
-canonical identities represented by the 83 C83 source rows. The register locks
-the entity join, canonical profile and registry routes, Lithuanian name, place,
-institution/record type, denomination, and C83 lineage. The four public
-campaign assignments are a stricter subset of the same register.
+The Brain publication projection owns every canonical entity join, public
+profile route, name, place, institution type, and class. Brain's case manifest
+accounts for the 83 case files and their entity identities; the Brain current-
+events projection binds campaign assignments to those same canonical IDs.
 
 Research can update current status, building fate, pastoral conditions,
 ownership changes, dates, sources, notes, and campaign actions without changing
@@ -121,7 +121,7 @@ Vilija review. `scripts/verify-canonical-identities.mjs` checks the core record,
 registry, and campaign layer against the independent register on every data
 build.
 
-Identity Revision 2 protects all 83 frozen U.S. source rows across 82 canonical
+The Brain release guards protect all 83 frozen U.S. source rows across 82 canonical
 identities. Registry Revision 8 is the current publication release: it retains
 those locks while finishing the surrounding identity, scope, and source-ledger
 audit. `scripts/verify-canonical-release.mjs` enforces the protected core;

@@ -171,7 +171,8 @@ export const ENDING_MODE_ORDER: EndingMode[] = [
 
 // ---------------------------------------------------------------------------
 // Situation classifiers — merged into parishes.json at build time from
-// parish-situation.json. The overlay is the source of truth; the build
+// parish-situation.json. This Brain-owned legacy display artifact supplies
+// presentation detail only; canonical projections override factual fields. The build
 // script merges it; the app reads only parishes.json.
 // ---------------------------------------------------------------------------
 
@@ -221,7 +222,7 @@ for (const p of parishes) {
   if (p.registrySlug) registrySlugIndex.set(p.registrySlug, p);
 }
 
-// The full classifier overlay — the case-filed entries also flow into
+// The full Brain-owned legacy classifier display artifact — case-filed entries also flow into
 // parishes.json at build time; the rest are reachable only through this index.
 const situationOverlay = (
   situationJson as unknown as {

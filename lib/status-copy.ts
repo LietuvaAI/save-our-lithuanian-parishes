@@ -38,5 +38,5 @@ export const PARISH_STATUS_DESCRIPTION: Record<ParishStatusGroup, string> = {
   closed:
     "The parish was closed — click the Closed filter to see how each ended: parish closed, building sold on, or church demolished (marked ×).",
   unverified:
-    "Attested in the research record; present status still being researched.",
+    "Documented in historical sources; its present status has not yet been established.",
 };

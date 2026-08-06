@@ -387,13 +387,16 @@ function institutionalSummary(input: ParishProfileViewInput) {
     if (input.institutionTransition === "continued") {
       return "The parish's canonical or congregational life continues in another institution, where Lithuanian Mass is still celebrated.";
     }
-    return "Lithuanian Mass continues, but the record does not yet establish the parish institution's final transition.";
+    return "Lithuanian Mass continues, but the parish institution's final transition has not yet been established.";
   }
   if (input.endState === "transferred") {
     return "The Lithuanian parish institution ended; another community uses the church today.";
   }
   if (input.endState === "unresolved") {
-    return "The record does not yet establish a final institutional outcome.";
+    if (input.institutionTransition === "merged" && input.closed) {
+      return `The Lithuanian parish merged into a successor institution in ${input.closed}; the remaining unresolved question concerns its church or successor arrangement, not whether the historical parish ended.`;
+    }
+    return "A final institutional outcome has not yet been established.";
   }
   if (["closed", "demolished", "repurposed"].includes(input.endState)) {
     const ended = input.closed

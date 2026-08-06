@@ -237,7 +237,7 @@ export function registryProfileSources(
         pageCitations.map((citation) => citation.date),
       );
       const mentionContext = source.total_mentions
-        ? `Systematic archive sweep; ${source.total_mentions} issues mention this record`
+        ? `Systematic archive sweep; ${source.total_mentions} relevant issues`
         : "Systematic archive sweep";
       for (const citation of pageCitations) {
         drafts.push(

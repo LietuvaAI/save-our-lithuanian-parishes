@@ -56,7 +56,7 @@ export const IDENTITY_ORDER: IdentityStatus[] = [
 ];
 
 // ── Dimension 2: Current Signal ──────────────────────────────────────────────
-// What is happening right now. Derived from alerts.json (kind field) and the
+// What is happening right now. Derived from the Brain current-events projection and the
 // sustainabilityWatch array.
 
 export type AlertStatus =
@@ -142,7 +142,7 @@ export const FATE_ORDER: FateStatus[] = [
 
 // ── Resolution helpers ───────────────────────────────────────────────────────
 
-/** Map an alert kind from alerts.json + sustainability watch membership to AlertStatus. */
+/** Map a canonical current-event kind plus sustainability-watch membership to AlertStatus. */
 export function resolveAlertStatus(
   alertKind: "active" | "watch" | "building" | null,
   onSustainabilityWatch: boolean,

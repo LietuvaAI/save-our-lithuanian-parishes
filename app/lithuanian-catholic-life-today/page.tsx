@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import alertsData from "@/data/alerts.json";
+import alertsData from "@/data/canonical-current-events-projection.json";
 import contextPointsData from "@/data/context-points.json";
 import {
   DiocesePill,

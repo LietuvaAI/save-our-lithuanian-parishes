@@ -14,7 +14,7 @@ import photosData from "@/data/photos.json";
 export const metadata: Metadata = {
   title: "The History",
   description:
-    "A chronological view of the Roman Catholic Lithuanian parish record in the United States, from the first foundations to today.",
+    "A chronological history of Roman Catholic Lithuanian parishes in the United States, from the first foundations to today.",
 };
 
 const firstParishSlug = "sv-jurgio-shenandoah-pa";
@@ -320,7 +320,7 @@ export default function HistoryPage() {
               <FirstParishLocatorMap />
               <div>
                 <p className="text-xs font-semibold uppercase text-muted">
-                  Where the record begins
+                  Where the parish story begins
                 </p>
                 <p className="mt-1 font-serif text-lg font-semibold">
                   Shenandoah, Pennsylvania
@@ -344,7 +344,7 @@ export default function HistoryPage() {
               href={`/parishes/${firstParishSlug}`}
               className="mt-4 inline-block font-semibold underline hover:text-accent"
             >
-              Read the full St. George parish record
+              Read the full St. George parish profile
             </Link>
 
             <div className="mt-5 border-t border-rule pt-4 text-xs leading-relaxed text-muted">
@@ -389,7 +389,7 @@ export default function HistoryPage() {
       {/* ── The exhibit: decade pulse + timeline (one title system) ── */}
       <section className="mt-14">
         <p className="text-xs font-semibold uppercase text-muted">
-          Two waves in one record
+          Two waves across a century
         </p>
         <h2 className="font-serif text-2xl font-semibold">
           A half-century of building; a half-century of closing
@@ -494,11 +494,11 @@ export default function HistoryPage() {
         </div>
 
         <p className="mt-4 text-xs text-muted border-t border-rule pt-3">
-          Source: the unified parish registry &mdash; Draugas 1909&ndash;2026,
-          Wolkovich-Valkavičius (1998), Michelsonas (1961), Lukas (2009), and
-          contemporary parish, diocesan, and public records.{" "}
+          Sources include Draugas 1909&ndash;2026, Wolkovich-Valkavičius
+          (1998), Michelsonas (1961), Lukas (2009), and contemporary parish,
+          diocesan, and public documents.{" "}
           <Link href="/about-the-data" className="underline hover:text-foreground">
-            How the record is built and cited
+            Sources and methods
           </Link>
           .
         </p>
@@ -532,8 +532,8 @@ export default function HistoryPage() {
               By Diocese
             </Link>
             <p className="mt-1 text-sm leading-relaxed text-muted">
-              Compare the parish record, closure outcomes, and present
-              holdings diocese by diocese.
+              Compare parish histories, closure outcomes, and present holdings
+              diocese by diocese.
             </p>
           </div>
         </div>
@@ -545,8 +545,8 @@ export default function HistoryPage() {
             Where Parish Life Continued
           </Link>
           <p className="mt-1 max-w-2xl text-sm leading-relaxed text-muted">
-            Follow mergers, successors, and canonical continuity without
-            collapsing distinct parish institutions into one record.
+            Follow mergers, successors, and canonical continuity while keeping
+            distinct parish institutions separate.
           </p>
         </div>
       </nav>

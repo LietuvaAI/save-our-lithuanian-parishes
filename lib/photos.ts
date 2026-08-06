@@ -74,7 +74,7 @@ export function getParishPortraitState(
   return { state: "not_gathered", photo: null };
 }
 
-/** Same gate for photo objects carried on alerts.json entries. */
+/** Same gate for photo objects carried on canonical current-event entries. */
 export function clearedOrNull<T extends { rights?: string }>(
   photo: T | null | undefined,
 ): T | null {

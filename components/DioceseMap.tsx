@@ -79,10 +79,10 @@ export default function DioceseMap({
               {hov.stats
                 ? ` — ${hov.stats.total} Lithuanian ${
                     hov.stats.total === 1 ? "parish" : "parishes"
-                  } documented · Lithuanian parish life ended at ${hov.stats.ended}${
+                  } · parish life ended at ${hov.stats.ended}${
                     hov.stats.alive === 0 ? " · none remain active" : ` · ${hov.stats.alive} active`
                   }`
-                : " — no Lithuanian parish in the record"}
+                : " — no Lithuanian parish included"}
             </span>
           </span>
         ) : (
@@ -194,7 +194,7 @@ export default function DioceseMap({
             style={{ background: "var(--muted)", opacity: 0.12 }}
             aria-hidden
           />
-          no Lithuanian parish in the record
+          no Lithuanian parish included
         </span>
       </div>
     </div>

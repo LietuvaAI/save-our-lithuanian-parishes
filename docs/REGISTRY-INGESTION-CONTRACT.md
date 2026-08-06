@@ -29,14 +29,14 @@ adjudicate their factual content.
 That boundary includes identity, census membership, status, selected dates,
 jurisdiction, institution-to-site relationships, building conditions, the
 Sielovada directory transcription, current pastoral membership, and all public
-counts. `data/canonical-*.json` and `data/sielovada-us-network.json` are generated
+counts. `data/canonical-*.json` files are generated
 deployment caches imported with `npm run data:import-brain`. A verifier must
 reject any local difference from the embedded Brain directory projection.
 
 CultureNet should distinguish these objects before publication:
 
 - **Source artifact:** a book, issue, page, image, directory entry, decree, or
-  website snapshot.
+  Brain release artifact imported for deployment.
 - **Evidence assertion:** one source-backed claim with subject, predicate,
   value, date or date range, exact locator, and confidence.
 - **Candidate entity:** a provisional institution, person, building, place,

@@ -1,9 +1,7 @@
-// Release guard for the fully audited 82-identity public record.
-//
-// The identity hash protects what each institution is. This companion guard
-// verifies that every frozen source row still has its case file, that resolved
-// duplicate shells cannot return, and that registry metadata and overlays
-// agree with the canonical joins.
+// Release guard for the fully audited case-filed source cohort.
+// Brain's publication and display releases own identity. This guard verifies
+// that every frozen source row still has its case file, resolved duplicate
+// shells cannot return, and imported display metadata agrees with those joins.
 import {
   readFileSync,
   readdirSync,
@@ -17,7 +15,6 @@ const readData = (name) =>
 const registryData = readData("registry-unified.json");
 const registry = registryData.parishes;
 const core = readData("parishes.json");
-const identities = readData("canonical-identity-locks.json");
 const situations = readData("parish-situation.json").parishes;
 const sourceRows = parse(
   readFileSync(new URL("../data/parishes.csv", import.meta.url)),
@@ -104,23 +101,17 @@ const canonicalCore = core.filter(
 if (canonicalCore.length !== 82) {
   errors.push(`expected 82 canonical U.S. profiles, found ${canonicalCore.length}`);
 }
-if (identities.identities.length !== 82) {
-  errors.push(
-    `expected 82 identity-register entries, found ${identities.identities.length}`,
-  );
-}
-
-const identityRows = identities.identities
-  .flatMap((identity) => identity.c83Rows)
+const identityRows = canonicalCore
+  .flatMap((identity) => identity.c83Rows ?? [])
   .sort((left, right) => left - right);
 if (
   identityRows.length !== 83 ||
   identityRows.some((row, index) => row !== index + 1)
 ) {
-  errors.push("identity register does not cover frozen C83 rows 1-83 exactly");
+  errors.push("Brain-imported canonical profiles do not cover frozen C83 rows 1-83 exactly");
 }
-const mergedIdentities = identities.identities.filter(
-  (identity) => identity.c83Rows.length > 1,
+const mergedIdentities = canonicalCore.filter(
+  (identity) => (identity.c83Rows ?? []).length > 1,
 );
 if (
   mergedIdentities.length !== 1 ||
@@ -182,8 +173,8 @@ const resolvedJoins = [
   },
 ];
 for (const expected of resolvedJoins) {
-  const identity = identities.identities.find((entry) =>
-    entry.c83Rows.includes(expected.row),
+  const identity = canonicalCore.find((entry) =>
+    (entry.c83Rows ?? []).includes(expected.row),
   );
   if (!identity) {
     errors.push(`C83 row ${expected.row}: audited identity is missing`);
@@ -208,23 +199,23 @@ for (const expected of resolvedJoins) {
   }
 }
 
-for (const identity of identities.identities) {
+for (const identity of canonicalCore) {
   if (/\(unnamed\)/i.test(identity.nameLt)) {
     errors.push(
-      `${identity.profileSlug}: audited canonical identity reverted to an unnamed label`,
+      `${identity.slug}: audited canonical identity reverted to an unnamed label`,
     );
   }
-  const profile = coreBySlug.get(identity.profileSlug);
+  const profile = coreBySlug.get(identity.slug);
   if (!profile) {
-    errors.push(`${identity.profileSlug}: canonical profile is missing`);
+    errors.push(`${identity.slug}: canonical profile is missing`);
     continue;
   }
-  const overlay = situations[identity.profileSlug];
+  const overlay = situations[identity.slug];
   if (!overlay) {
-    errors.push(`${identity.profileSlug}: situation overlay is missing`);
+    errors.push(`${identity.slug}: situation overlay is missing`);
   } else if (overlay.registry_slug !== identity.registrySlug) {
     errors.push(
-      `${identity.profileSlug}: overlay points to ${overlay.registry_slug}, expected ${identity.registrySlug}`,
+      `${identity.slug}: overlay points to ${overlay.registry_slug}, expected ${identity.registrySlug}`,
     );
   }
 }

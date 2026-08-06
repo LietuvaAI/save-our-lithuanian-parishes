@@ -38,6 +38,7 @@ interface CtxPoint {
   congregationClass: string | null;
   diocese: string | null;
   href: string | null;
+  recordType: string;
 }
 
 interface OverlayDiocese {
@@ -69,6 +70,12 @@ const STATE_WORD: Record<EndStateGroup, string> = {
   closed: GROUP_LABEL.closed,
   unverified: GROUP_LABEL.unverified,
 };
+
+function pointStatus(point: Pick<CtxPoint, "group" | "recordType">) {
+  return point.group === "active_parish" && point.recordType === "misija"
+    ? "Active Lithuanian mission"
+    : GROUP_LABEL[point.group];
+}
 
 interface Placed extends CtxPoint {
   px: number;
@@ -192,7 +199,7 @@ export default function ParishContextMap({
   const subjWord =
     subject.group === "closed" && subject.closed
       ? `closed ${subject.closed}`
-      : STATE_WORD[subject.group];
+      : pointStatus(subject);
 
   return (
     <div className="min-w-0 max-w-full overflow-hidden">
@@ -298,7 +305,7 @@ export default function ParishContextMap({
                   onMouseLeave={compact ? undefined : () => setHot(null)}
                   onClick={compact ? undefined : () => p.href && router.push(p.href)}
                 >
-                  <title>{`${p.name} — ${p.city}, ${p.state} · ${GROUP_LABEL[p.group]}${p.closed ? ` (${p.closed})` : ""}`}</title>
+                  <title>{`${p.name} — ${p.city}, ${p.state} · ${pointStatus(p)}${p.closed ? ` (${p.closed})` : ""}`}</title>
                 </circle>
               );
             })}
@@ -367,7 +374,7 @@ export default function ParishContextMap({
                 <span className="font-semibold">{hot.name}</span>
                 <span className="text-muted">
                   {" "}
-                  — {hot.city}, {hot.state} · {GROUP_LABEL[hot.group]}
+                  — {hot.city}, {hot.state} · {pointStatus(hot)}
                   {hot.closed ? ` (${hot.closed})` : ""}
                   {hot.href ? " · select to open" : ""}
                 </span>

@@ -380,6 +380,8 @@ export function getInstitutionDates(profileHref: string) {
       closedDisplay: comparator.closed_year
         ? String(comparator.closed_year)
         : null,
+      continuationSummary: null,
+      terminalSiteIds: [] as string[],
       existed: unresolved
         ? "Founding year unresolved"
         : comparator.closed_year
@@ -423,6 +425,8 @@ export function getInstitutionDates(profileHref: string) {
     foundedUnresolved: unresolved,
     closedYear: row.closed.year,
     closedDisplay,
+    continuationSummary: row.continuation_summary?.display_summary ?? null,
+    terminalSiteIds: row.terminal_worship_site_ids,
     existed,
   };
 }

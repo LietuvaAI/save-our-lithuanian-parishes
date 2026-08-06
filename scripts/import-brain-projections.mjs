@@ -1,25 +1,85 @@
 // Import generated canonical projections from the sibling CultureNet Brain
 // checkout. These files are committed build caches for deployments; they are
 // never authored or adjudicated in the site repository.
-import { readFileSync, writeFileSync } from "node:fs";
+import { readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { resolve } from "node:path";
 
-const pairs = [
+const brainRoot = resolve(
+  process.env.CULTURENET_BRAIN_ROOT ??
+    new URL("../../culturenet-brain/", import.meta.url).pathname,
+);
+
+const jsonPairs = [
   [
-    "../../culturenet-brain/docs/research/parish-canon/publication-projection.json",
+    "docs/research/parish-canon/publication-projection.json",
     "../data/canonical-publication-projection.json",
   ],
   [
-    "../../culturenet-brain/docs/research/parish-canon/infographic-projection.json",
+    "docs/research/parish-canon/infographic-projection.json",
     "../data/canonical-infographic-projection.json",
+  ],
+  [
+    "docs/research/parish-canon/current-events/public-projection.json",
+    "../data/canonical-current-events-projection.json",
+  ],
+  [
+    "docs/research/parish-canon/case-files/manifest.json",
+    "../data/canonical-case-files-manifest.json",
+  ],
+  [
+    "docs/research/parish-canon/public-census-adjudications.json",
+    "../data/canonical-public-census-adjudications.json",
+  ],
+  [
+    "docs/research/parish-canon/public-display/registry-unified.json",
+    "../data/registry-unified.json",
+  ],
+  [
+    "docs/research/parish-canon/public-display/parish-situation.json",
+    "../data/parish-situation.json",
+  ],
+  [
+    "docs/research/parish-canon/public-display/parish-timelines.json",
+    "../data/parish-timelines.json",
+  ],
+  [
+    "docs/research/parish-canon/public-display/photos.json",
+    "../data/photos.json",
+  ],
+  [
+    "docs/research/parish-canon/public-display/manifest.json",
+    "../data/canonical-public-display-manifest.json",
+  ],
+  [
+    "docs/research/parish-preservation-deep-research/phase-2-reversal-database.json",
+    "../data/reversal-database.json",
   ],
 ];
 
-for (const [source, target] of pairs) {
-  const contents = readFileSync(new URL(source, import.meta.url), "utf8");
+for (const [source, target] of jsonPairs) {
+  const contents = readFileSync(resolve(brainRoot, source), "utf8");
   JSON.parse(contents);
   writeFileSync(new URL(target, import.meta.url), contents);
 }
 
-console.log(
-  "OK: imported canonical publication and infographic projections from CultureNet Brain.",
+for (const [source, target] of [
+  ["docs/research/draugas/parishes.csv", "../data/parishes.csv"],
+]) {
+  writeFileSync(
+    new URL(target, import.meta.url),
+    readFileSync(resolve(brainRoot, source)),
+  );
+}
+
+const caseSource = resolve(
+  brainRoot,
+  "docs/research/parish-canon/case-files/current",
 );
+const caseTarget = new URL("../data/case-records/", import.meta.url);
+for (const filename of readdirSync(caseSource).filter((name) => name.endsWith(".json"))) {
+  const contents = readFileSync(resolve(caseSource, filename), "utf8");
+  JSON.parse(contents);
+  writeFileSync(new URL(filename, caseTarget), contents);
+}
+
+console.log("OK: imported canonical projections and Brain-owned case evidence from CultureNet Brain.");

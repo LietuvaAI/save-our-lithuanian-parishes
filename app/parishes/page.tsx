@@ -3,7 +3,7 @@ import Link from "next/link";
 import AllProfilesTimeline, {
   type AllProfilesTimelineRow,
 } from "@/components/AllProfilesTimeline";
-import alertsData from "@/data/alerts.json";
+import alertsData from "@/data/canonical-current-events-projection.json";
 import {
   infographicCounts,
   institutionHistory,
@@ -13,7 +13,7 @@ import type { RecordSignal } from "@/lib/record-mark";
 export const metadata: Metadata = {
   title: "All Parish Profiles",
   description:
-    "A searchable century timeline of every published U.S. Lithuanian parish, mission, and congregation profile in the canonical public record.",
+    "A searchable century timeline of every published U.S. Lithuanian parish, mission, and congregation profile.",
 };
 
 type SignalSource = { parishLink?: string };
@@ -96,7 +96,7 @@ export default function ParishProfilesPage() {
         Profile directory · the parish view
       </p>
       <h1 className="mt-1 font-serif text-3xl font-semibold sm:text-4xl">
-        Every parish, across the whole record
+        Every parish, mission, and congregation
       </h1>
       <div className="mt-4 max-w-4xl space-y-3 leading-relaxed">
         <p>
@@ -154,11 +154,10 @@ export default function ParishProfilesPage() {
         >
           building view
         </Link>
-        . All {rows.length} lanes, dates, and profile routes are generated from
-        the canonical CultureNet institution projection. A hollow marker at
-        the far right means the founding year has not yet been established; it
-        is a research gap, not a claim that the institution began in 2026. The
-        source hierarchy and citation rules are documented in {" "}
+        . A hollow marker at the far right means the founding year has not yet
+        been established; it does not mean that the institution began in 2026.
+        Dates, names, and outcomes follow the sources linked in each profile.
+        The evidence and citation rules are explained in {" "}
         <Link
           href="/about/sources-and-archives"
           className="font-medium text-foreground underline underline-offset-4 hover:text-accent"

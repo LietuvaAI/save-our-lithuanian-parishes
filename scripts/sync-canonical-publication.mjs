@@ -1,6 +1,6 @@
 // Synchronize the site's rich display registry with the canonical CultureNet
 // publication projection. CultureNet decides public identity, count, type,
-// class, and route; the site retains narrative, lifecycle, media, and source
+// class, and route; Brain-owned display artifacts supply narrative, media, and source
 // detail for rendering.
 import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync } from "node:fs";
