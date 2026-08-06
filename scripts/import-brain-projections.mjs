@@ -19,6 +19,10 @@ const jsonPairs = [
     "../data/canonical-infographic-projection.json",
   ],
   [
+    "docs/research/parish-canon/draugas-mention-projection.json",
+    "../data/canonical-draugas-mention-projection.json",
+  ],
+  [
     "docs/research/parish-canon/current-events/public-projection.json",
     "../data/canonical-current-events-projection.json",
   ],
