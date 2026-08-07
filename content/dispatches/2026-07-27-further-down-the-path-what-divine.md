@@ -15,19 +15,19 @@ This site documents every Lithuanian Catholic parish in America — the lost, th
 
 The Church of the Transfiguration in Queens received a closure letter on February 16, 2025. The response did not wait for a decree. Within weeks there was a petition — 875 signatures by late July — two landmark filings with the New York City Landmarks Preservation Commission, a coalition of preservation organizations, a council member’s letter, and, by September, the President of Lithuania standing in front of the church. At the end of August 2025, the Diocese of Brooklyn said in a letter read at Masses that the church would not be closed or sold. Weekend Masses continue there — on terms the diocese calls temporary, which is why Maspeth counts as unresolved rather than saved. But the parish community is still in its church, and the decision-makers moved.
 
-What Maspeth shows: the response that works starts before the decision — and visibility, organized early, changes what a diocese can quietly do.
+The response that works starts before the decision — and visibility, organized early, changes what a diocese can quietly do.
 
 ### Hartford: the window closing
 
 Švč. Trejybės — Holy Trinity — printed three assurances in its parish bulletin in February 2025: that the church was financially stable, that it could pay its bills, and that weekend Masses would continue as usual. Fifteen months later, none of the three held. Regular Masses ended on May 30, 2026. Parishioners were told after Mass, not consulted before it; no canonical appeal was filed while the window was open. The community’s fight continues — but it is now a fight for the building, a hoped-for Lithuanian cultural center, and the retainer for a canon lawyer is still being raised after the fact.
 
-Hartford’s lesson is shorter: assurances are not the process. The window is before the letter.
+Assurances are not the process. The window is before the letter.
 
 ### Waterbury: after the window — because someone acted inside it
 
 Šv. Juozapo — St. Joseph’s, the first Lithuanian Roman Catholic parish in New England — closed on September 30, 2023, one hundred and fourteen years to the day after it first entered the Lithuanian paper of record. But in its final weeks, a parishioner working with a canon lawyer mounted an appeal to the Vatican. Almost three years later, no ruling has been published — and the church still stands: not sold, not demolished, in Catholic hands, and explicitly excluded from the sale of the rest of the parish campus in 2025. The campaign has so far prevented a complete ending. The cost has a number too: nearly $10,000 in canonical-fight expenses so far.
 
-And Waterbury: even after the window closes, the Church’s own process can keep the question open — and the later the start, the steeper the price.
+Even after the window closes, the Church’s own process can keep the question open — and the later the start, the steeper the price.
 
 ### Detroit, reading the map
 
