@@ -4,9 +4,11 @@ import {
   continuityEdges,
   getInfographicInstitutionByEntityId,
   getInfographicInstitutionByProfile,
+  resolvePhysicalSiteCondition,
   type BuildingSiteHistoryRow,
   type ContinuityEdge,
   type ContinuityEndpoint,
+  type PhysicalSiteCondition,
 } from "@/lib/infographic-projection";
 
 /**
@@ -25,6 +27,8 @@ export type WorshipSiteRow = {
   range: string | null;
   /** True only when the canonical relationship identifies the current site. */
   isCurrent: boolean;
+  /** Present physical condition resolved by Brain's projection contract. */
+  condition: PhysicalSiteCondition;
   outcome: string;
   demolishedYear: number | null;
   milestones: Array<{
@@ -89,24 +93,6 @@ function usePeriodRange(
   return null;
 }
 
-/**
- * What became of the building. Irreversible and specific outcomes outrank a
- * generic standing condition; dates break ties within the same outcome class.
- */
-const CONDITION_PRECEDENCE: Record<string, number> = {
-  "building-demolished": 4,
-  "building-repurposed": 3,
-  "building-listed-for-sale": 2,
-  "building-standing": 1,
-};
-
-const CONDITION_LABELS: Record<string, string> = {
-  "building-demolished": "Demolished",
-  "building-repurposed": "Repurposed",
-  "building-listed-for-sale": "Listed for sale",
-  "building-standing": "Standing",
-};
-
 function siteDemolishedYear(site: BuildingSiteHistoryRow): number | null {
   if (site.demolished_year) return site.demolished_year;
   return (
@@ -119,8 +105,11 @@ function siteDemolishedYear(site: BuildingSiteHistoryRow): number | null {
 }
 
 function siteOutcome(site: BuildingSiteHistoryRow): string {
-  const demolishedYear = siteDemolishedYear(site);
-  if (demolishedYear) return `Demolished ${demolishedYear}`;
+  const condition = resolvePhysicalSiteCondition(site.condition_relationships);
+  const demolishedYear = condition === "demolished" ? siteDemolishedYear(site) : null;
+  if (condition === "demolished") {
+    return demolishedYear ? `Demolished ${demolishedYear}` : "Demolished";
+  }
   const currentConditions = site.condition_relationships.filter((entry) => {
     if (entry.relationship_type === "building-demolished") return true;
     return entry.date?.end == null;
@@ -140,26 +129,9 @@ function siteOutcome(site: BuildingSiteHistoryRow): string {
   ) {
     return "Listed for sale, standing";
   }
-  const condition = [...currentConditions].sort(
-    (a, b) =>
-      (CONDITION_PRECEDENCE[b.relationship_type] ?? 0) -
-        (CONDITION_PRECEDENCE[a.relationship_type] ?? 0) ||
-      (yearOf(b.date?.start) ?? yearOf(b.date?.end) ?? 0) -
-        (yearOf(a.date?.start) ?? yearOf(a.date?.end) ?? 0),
-  )[0];
-  if (condition) {
-    return (
-      CONDITION_LABELS[condition.relationship_type] ??
-      titleCase(condition.relationship_type)
-    );
-  }
-  const lifecycleOutcome = site.lifecycle_text?.end;
-  if (typeof lifecycleOutcome === "string" && lifecycleOutcome.trim()) {
-    if (/active.*worship site|worship site.*active/i.test(lifecycleOutcome)) {
-      return "Standing, active worship site";
-    }
-    return `${lifecycleOutcome.charAt(0).toUpperCase()}${lifecycleOutcome.slice(1)}`;
-  }
+  if (condition === "repurposed") return "Repurposed";
+  if (condition === "listed_for_sale") return "Listed for sale";
+  if (condition === "standing") return "Standing";
   return "Not established";
 }
 
@@ -188,6 +160,7 @@ export function getWorshipSitesForInstitution(
         isCurrent:
           usePeriod?.relationship_type === "institution-relocated-to-site" ||
           Boolean(usePeriod?.date && !usePeriod.date.end && /present/i.test(usePeriod.date.label ?? "")),
+        condition: resolvePhysicalSiteCondition(site.condition_relationships),
         outcome: siteOutcome(site),
         demolishedYear: siteDemolishedYear(site),
         milestones: site.milestones.map((milestone) => ({
@@ -380,6 +353,8 @@ export function getInstitutionDates(profileHref: string) {
       closedDisplay: comparator.closed_year
         ? String(comparator.closed_year)
         : null,
+      continuationSummary: null,
+      terminalSiteIds: [] as string[],
       existed: unresolved
         ? "Founding year unresolved"
         : comparator.closed_year
@@ -423,6 +398,8 @@ export function getInstitutionDates(profileHref: string) {
     foundedUnresolved: unresolved,
     closedYear: row.closed.year,
     closedDisplay,
+    continuationSummary: row.continuation_summary?.display_summary ?? null,
+    terminalSiteIds: row.terminal_worship_site_ids,
     existed,
   };
 }

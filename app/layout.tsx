@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Source_Serif_4 } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  IBM_Plex_Mono,
+  Source_Serif_4,
+} from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 
@@ -13,6 +18,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const timelineMono = IBM_Plex_Mono({
+  variable: "--font-timeline-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
+
 const serifDisplay = Source_Serif_4({
   variable: "--font-serif-display",
   subsets: ["latin", "latin-ext"],
@@ -24,7 +35,7 @@ export const metadata: Metadata = {
     template: "%s — Save Our Lithuanian Parishes",
   },
   description:
-    "The public record of America's Lithuanian parishes — every parish we can document, what happened to it, where it stands today, and what communities can learn from each other.",
+    "The living history of America's Lithuanian parishes, missions, and congregations — how they began, how they changed, and where they stand today.",
 };
 
 type NavItem =
@@ -104,7 +115,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${serifDisplay.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${timelineMono.variable} ${serifDisplay.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <header>

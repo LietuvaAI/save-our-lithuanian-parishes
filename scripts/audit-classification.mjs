@@ -25,7 +25,7 @@ const registry = registryData.parishes;
 const registryRevision = registryData.registryRevision?.version ?? "current";
 const lib = read("parishes.json");
 const sit = read("parish-situation.json").parishes;
-const alerts = read("alerts.json");
+const alerts = read("canonical-current-events-projection.json");
 
 const watchBySlug = new Map(
   (alerts.sustainabilityWatch ?? []).map((e) => [e.parishLink.split("/").pop(), e]),

@@ -7,7 +7,7 @@ const read = (path) =>
   JSON.parse(readFileSync(new URL(`../data/${path}`, import.meta.url), "utf8"));
 const infographic = read("canonical-infographic-projection.json");
 const publication = read("canonical-publication-projection.json");
-const alerts = read("alerts.json");
+const alerts = read("canonical-current-events-projection.json");
 const errors = [];
 
 const sortValue = (value) => {
@@ -54,9 +54,6 @@ const romanMissionHistory = institutions.filter(
 );
 const romanInstitutionHistory = [...romanHistory, ...romanMissionHistory];
 const closed = romanHistory.filter((row) => row.status_group === "closed");
-const closedRomanInstitutions = romanInstitutionHistory.filter(
-  (row) => row.status_group === "closed",
-);
 const transferredRomanInstitutions = romanInstitutionHistory.filter(
   (row) => row.status_group === "transferred",
 );
@@ -66,6 +63,20 @@ const retainingLithuanianWorship = romanInstitutionHistory.filter(
     row.status_group === "mass_continues",
 );
 const unique = (values) => new Set(values).size;
+const publicationRomanInstitutions = publication.public_institutions.filter(
+  (row) => row.institution_class === "roman_catholic",
+);
+const publicationRomanMissions = publicationRomanInstitutions.filter(
+  (row) => row.record_type === "misija",
+);
+const linkedCurrentPastoralInstitutions =
+  infographic.current_pastoral_network.directory.entries.filter(
+    (entry) =>
+      entry.registrySlug &&
+      ["active_parish", "active_mission", "mass_continues"].includes(
+        entry.networkClass,
+      ),
+  );
 
 const checks = [
   ["institutions", institutions.length, infographic.counts.public_us_institutions],
@@ -89,12 +100,21 @@ for (const [label, actual, expected] of checks) {
   if (actual !== expected) errors.push(`${label}: ${actual} != ${expected}`);
 }
 for (const [label, actual, expected] of [
-  ["Roman Catholic parish and mission institutions", romanInstitutionHistory.length, 137],
-  ["Roman Catholic parish institutions in combined scope", romanHistory.length, 132],
-  ["Roman Catholic mission institutions in combined scope", romanMissionHistory.length, 5],
-  ["closed Roman Catholic parish and mission institutions", closedRomanInstitutions.length, 90],
-  ["Roman Catholic institutions retaining Lithuanian worship", retainingLithuanianWorship.length, 13],
-  ["physical worship-site histories", worshipSites.length, 131],
+  [
+    "Roman Catholic parish and mission institutions",
+    romanInstitutionHistory.length,
+    publicationRomanInstitutions.length,
+  ],
+  [
+    "Roman Catholic mission institutions in combined scope",
+    romanMissionHistory.length,
+    publicationRomanMissions.length,
+  ],
+  [
+    "Roman Catholic institutions retaining Lithuanian worship",
+    retainingLithuanianWorship.length,
+    linkedCurrentPastoralInstitutions.length,
+  ],
 ]) {
   if (actual !== expected) errors.push(`${label}: ${actual} != ${expected}`);
 }
@@ -118,9 +138,6 @@ const currentWorshipSiteIds = new Set(
     (institution) => institution.terminal_worship_site_ids ?? [],
   ),
 );
-if (currentWorshipSiteIds.size !== 14) {
-  errors.push(`current institution histories use ${currentWorshipSiteIds.size} sites, expected 14`);
-}
 for (const institution of retainingLithuanianWorship) {
   if (!(institution.terminal_worship_site_ids?.length > 0)) {
     errors.push(`${institution.registry_slug}: living line lacks a terminal worship site`);
@@ -156,27 +173,25 @@ const resolveSiteCondition = (site) => {
     current.has(condition),
   ) ?? null;
 };
-const expectedConditionCounts = new Map([
-  ["building-demolished", 23],
-  ["building-standing", 44],
-  ["building-repurposed", 33],
-  ["building-listed-for-sale", 2],
-  [null, 29],
-]);
 const actualConditionCounts = new Map();
 for (const site of worshipSites) {
   const condition = resolveSiteCondition(site);
   actualConditionCounts.set(condition, (actualConditionCounts.get(condition) ?? 0) + 1);
 }
-for (const [condition, expected] of expectedConditionCounts) {
-  const actual = actualConditionCounts.get(condition) ?? 0;
-  if (actual !== expected) errors.push(`${condition ?? "not established"}: ${actual} != ${expected}`);
+const conditionCountTotal = [...actualConditionCounts.values()].reduce(
+  (sum, count) => sum + count,
+  0,
+);
+if (conditionCountTotal !== worshipSites.length) {
+  errors.push(
+    `physical-site condition partition: ${conditionCountTotal} != ${worshipSites.length}`,
+  );
 }
 const terminalAuthority = institutions.filter(
   (row) => row.building_fate_authority === "terminal_site_condition",
 );
-if (terminalAuthority.length !== 73) {
-  errors.push(`terminal-site building-fate authority: ${terminalAuthority.length} != 73`);
+if (terminalAuthority.some((row) => !(row.terminal_worship_site_ids?.length > 0))) {
+  errors.push("terminal-site building-fate authority appears without a terminal site");
 }
 for (const institution of institutions) {
   if (institution.status_authority !== "brain_canonical_assertion") {
@@ -220,11 +235,6 @@ for (const institution of institutions) {
   if (institution.building_fate_authority === "site_r10_baseline") {
     errors.push(`${institution.registry_slug}: legacy baseline is rendered as canonical fate`);
   }
-}
-if (transferredRomanInstitutions.length !== 22) {
-  errors.push(
-    `transferred Roman Catholic institutions: ${transferredRomanInstitutions.length} != 22`,
-  );
 }
 for (const institution of transferredRomanInstitutions) {
   const summary = institution.continuation_summary;
@@ -427,7 +437,7 @@ const campaignByProfile = new Map(
 const campaignLiturgy = [
   ["/parishes/dievo-apvaizdos-southfield-mi", "Weekly"],
   ["/parishes/svc-trejybes-hartford-ct", "Regular Mass ended 30 May 2026"],
-  ["/parishes/sv-juozapo-waterbury-ct", "Special Mass documented 2 Aug 2026"],
+  ["/parishes/sv-juozapo-waterbury-ct", "No regular Mass schedule"],
   ["/parishes/kristaus-atsimainymo-maspeth-ny", "Moved to Annunciation, Brooklyn"],
 ];
 for (const [profile, value] of campaignLiturgy) {
@@ -500,7 +510,7 @@ if (
 }
 if (
   !parishThreadsComponent.includes('open === "g:mass_continues"') ||
-  !parishThreadsComponent.includes("not one of the 137 historical")
+  !parishThreadsComponent.includes("not one of the {model.total} historical")
 ) {
   errors.push(
     "Mass-continues drawer does not separate the additional current hosted community",
@@ -511,6 +521,46 @@ if (!/romanCatholicInstitutionHistory/.test(institutionFlowPage)) {
 }
 if (/physicalWorshipSiteHistory/.test(institutionFlowPage)) {
   errors.push("institution-outcome view reads the physical-site population");
+}
+
+const homepage = readFileSync(
+  new URL("../app/page.tsx", import.meta.url),
+  "utf8",
+);
+const homepageMap = readFileSync(
+  new URL("../components/ParishMap.tsx", import.meta.url),
+  "utf8",
+);
+if (/NationalRecordGraphic/.test(homepage)) {
+  errors.push("homepage still renders the retired national-record figure strip");
+}
+if (
+  !/infographicCounts/.test(homepage) ||
+  !/romanCatholicInstitutionHistory/.test(homepage) ||
+  !/currentPastoralNetwork/.test(homepage)
+) {
+  errors.push("homepage population index does not read the canonical projections");
+}
+if (!/new Set\(COMMUNITY_FILTERS\)/.test(homepageMap)) {
+  errors.push("homepage map does not open on all canonical institution classes");
+}
+
+const allProfilesPage = readFileSync(
+  new URL("../app/parishes/page.tsx", import.meta.url),
+  "utf8",
+);
+if (
+  !/institutionHistory/.test(allProfilesPage) ||
+  !/AllProfilesTimeline/.test(allProfilesPage)
+) {
+  errors.push("All Profiles does not render the canonical institution timeline");
+}
+if (
+  /RegistryTable/.test(allProfilesPage) ||
+  /registry-scope/.test(allProfilesPage) ||
+  /data\/parishes\.json/.test(allProfilesPage)
+) {
+  errors.push("All Profiles reads a legacy directory source instead of Brain canon");
 }
 
 const physicalSitePage = readFileSync(

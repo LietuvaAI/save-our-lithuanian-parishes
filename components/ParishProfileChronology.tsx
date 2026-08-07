@@ -24,7 +24,7 @@ export function ParishProfileChronology({
     >
       {items.length === 0 ? (
         <p className="max-w-[40em] text-sm leading-relaxed text-muted">
-          No secure sequence of dated events is established for this record.
+          No secure sequence of dated events has yet been established.
         </p>
       ) : (
         <ol className="max-w-[40em] divide-y divide-rule border-b border-rule">

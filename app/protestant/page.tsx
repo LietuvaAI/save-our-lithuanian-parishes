@@ -23,7 +23,7 @@ import {
 export const metadata: Metadata = {
   title: "Lithuanian Protestant and independent congregations",
   description:
-    "The Lithuanian Protestant and independent congregations documented in the research record — Lutheran, Reformed, Baptist, and independent communities that were part of the full geography of Lithuanian religious life in America. Historical witness.",
+    "Lithuanian Lutheran, Reformed, Baptist, and independent congregations form part of the wider history of Lithuanian religious life in America.",
 };
 
 type RecSource = {
@@ -182,7 +182,7 @@ function CongCard({ c }: { c: Rec }) {
           href={profileHref}
           className="underline hover:text-foreground"
         >
-          Full research record →
+          Full congregation profile →
         </Link>
       </p>
     </div>
@@ -243,9 +243,7 @@ export default function ProtestantPage() {
           </div>
         </div>
         <p className="mt-5 border-t border-rule pt-3 text-xs leading-relaxed text-muted">
-          Scope: {CONGS.length} public U.S. Protestant parish and congregation
-          records · Registry Revision {registry.registryRevision.version},{" "}
-          {registry.registryRevision.date}
+          Scope: {CONGS.length} public U.S. Protestant parishes and congregations
           {" · "}
           <Link href="/about-the-data" className="underline hover:text-accent">
             About the data

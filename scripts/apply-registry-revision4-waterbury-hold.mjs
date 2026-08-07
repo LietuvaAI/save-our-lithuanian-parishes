@@ -37,7 +37,10 @@ const leadSituation = situations.parishes[leadSlug];
 if (!leadSituation) throw new Error(`Missing situation overlay for ${leadSlug}.`);
 
 const campaign = JSON.parse(
-  readFileSync(new URL("../data/alerts.json", import.meta.url), "utf8"),
+  readFileSync(
+    new URL("../data/canonical-current-events-projection.json", import.meta.url),
+    "utf8",
+  ),
 ).campaigns.find((entry) => entry.id === "waterbury-campaign");
 if (campaign?.parishLink !== "/parishes/sv-juozapo-waterbury-ct") {
   throw new Error("Waterbury campaign is not anchored to canonical St. Joseph.");

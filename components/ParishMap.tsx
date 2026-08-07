@@ -13,14 +13,15 @@
 //   outer ring          = current campaign, watch, or building-risk signal
 //   ×                   = church demolished
 // Who-decided (ending mode) and ownership stay in each parish's popup and
-// profile — the map itself reads at a glance. Views: All · Open today ·
-// Unresolved · Lost. Current campaigns remain a separate ring annotation.
+// profile — the map itself reads at a glance. Mission is a record type and a
+// hollow-mark treatment, never a seventh status. Current campaigns remain a
+// separate ring annotation.
 import { useMemo, useRef, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import mapData from "@/data/map.json";
 import regData from "@/data/registry-map.json";
-import alertsData from "@/data/alerts.json";
+import alertsData from "@/data/canonical-current-events-projection.json";
 import {
   usParishes,
   ENDING_MODE_LABEL,
@@ -53,7 +54,6 @@ type Status = "lost" | "open" | "mass" | "unresolved" | "building" | "unknown" |
 type Mode =
   | "all"
   | "open"
-  | "mission"
   | "mass"
   | "unresolved"
   | "lost"
@@ -64,11 +64,10 @@ type CommunityFilter =
   | "roman_catholic"
   | "national_catholic_pncc"
   | "non_catholic_christian";
-type MapKey = EndStateGroup | "active_mission";
+type MapKey = EndStateGroup;
 
 const STATUS_FILTERS: StatusFilter[] = [
   "open",
-  "mission",
   "mass",
   "unresolved",
   "transferred",
@@ -103,8 +102,15 @@ interface Point {
   // congregation_class from registry — drives shape (diamond for PNCC / independent)
   congregationClass: string | null;
   recordType: string | null;
-  // Loss sub-fate for closed dots — same vocabulary as the flow chart.
-  fate: "closed" | "demolished" | "repurposed" | null;
+  // Canonical terminal-site summary for closed institutions. This is an
+  // institution-level projection, not a count of every historical building.
+  fate:
+    | "demolished"
+    | "repurposed"
+    | "standing"
+    | "listed_for_sale"
+    | "not_established"
+    | null;
 }
 
 function communityFilterForPoint(point: Point): CommunityFilter {
@@ -121,7 +127,6 @@ function communityFilterForPoint(point: Point): CommunityFilter {
 }
 
 function statusFilterForPoint(point: Point): StatusFilter {
-  if (point.recordType === "misija") return "mission";
   if (point.group === "active_parish") return "open";
   if (point.group === "mass_continues") return "mass";
   if (point.group === "unresolved") return "unresolved";
@@ -186,6 +191,22 @@ const contextClosedBySlug = new Map(
     (c) => [c.slug, c.closed],
   ),
 );
+const contextBuildingFateBySlug = new Map(
+  (contextPoints.points as {
+    slug: string;
+    buildingFate:
+      | "demolished"
+      | "repurposed"
+      | "standing"
+      | "listed_for_sale"
+      | null;
+  }[]).map((c) => [c.slug, c.buildingFate]),
+);
+
+function canonicalClosedFate(slug: string, group: EndStateGroup): Point["fate"] {
+  if (group !== "closed") return null;
+  return contextBuildingFateBySlug.get(slug) ?? "not_established";
+}
 
 // Build alert lookup: slug → {kind, whatChanged}
 type AlertKind = RecordSignal;
@@ -215,15 +236,7 @@ function buildPoints(): Point[] {
       throw new Error(`${p.slug}: map point is missing canonical context`);
     }
     const status: Status = GROUP_STATUS[group];
-    const fate: Point["fate"] =
-      group !== "closed"
-        ? null
-        : p.buildingFate === "demolished"
-          ? "demolished"
-          : p.buildingFate === "repurposed_secular" ||
-              p.buildingFate === "repurposed_religious"
-            ? "repurposed"
-            : "closed";
+    const fate = canonicalClosedFate(p.slug, group);
 
     pts.push({
       id: p.slug,
@@ -268,15 +281,7 @@ function buildPoints(): Point[] {
       (contextGroupBySlug.get(c.slug) as EndStateGroup | undefined) ??
       (c.closedYear ? "closed" : "unverified");
     const status: Status = GROUP_STATUS[group];
-    const bf = (c as { buildingFate?: string | null }).buildingFate;
-    const fate: Point["fate"] =
-      group !== "closed"
-        ? null
-        : bf === "demolished"
-          ? "demolished"
-          : bf === "repurposed_secular" || bf === "repurposed_religious"
-            ? "repurposed"
-            : "closed";
+    const fate = canonicalClosedFate(c.slug, group);
 
     pts.push({
       id: c.slug,
@@ -382,13 +387,20 @@ export default function ParishMap() {
     () => new Set(STATUS_FILTERS),
   );
   // Sub-filter inside the Closed view — same sub-fates as the flow chart.
-  const [lostFate, setLostFate] = useState<"all" | "closed" | "demolished" | "repurposed">("all");
-  // Default to Roman Catholic institutions. The map includes missions, while
-  // The History is explicitly parish-only, so the visible scope always names
-  // both record types.
+  const [lostFate, setLostFate] = useState<
+    | "all"
+    | "demolished"
+    | "repurposed"
+    | "standing"
+    | "listed_for_sale"
+    | "not_established"
+  >("all");
+  // The homepage opens on the complete public census. Visitors can narrow to
+  // Roman Catholic, National/Independent Catholic, or Protestant records from
+  // the key, but the first view must match the 155-institution route contract.
   const [selectedCommunities, setSelectedCommunities] = useState<
     Set<CommunityFilter>
-  >(() => new Set(["roman_catholic"]));
+  >(() => new Set(COMMUNITY_FILTERS));
   const [view, setView] = useState<View>(FULL);
   const [showDioceses, setShowDioceses] = useState(false);
   const [expandedKey, setExpandedKey] = useState<MapKey | null>(null);
@@ -446,7 +458,6 @@ export default function ParishMap() {
     const c = {
       all: classPoints.length,
       open: 0,
-      mission: 0,
       mass: 0,
       unresolved: 0,
       lost: 0,
@@ -454,8 +465,7 @@ export default function ParishMap() {
       transferred: 0,
     };
     for (const p of classPoints) {
-      if (p.recordType === "misija") c.mission++;
-      else if (p.group === "active_parish") c.open++;
+      if (p.group === "active_parish") c.open++;
       else if (p.group === "mass_continues") c.mass++;
       else if (p.group === "unresolved") c.unresolved++;
       else if (p.group === "closed") c.lost++;
@@ -481,10 +491,6 @@ export default function ParishMap() {
         (point) =>
           point.group === "closed" && point.recordType === "misija",
       ).length,
-      activeMission: classPoints.filter(
-        (point) =>
-          point.group === "active_parish" && point.recordType === "misija",
-      ).length,
     }),
     [classPoints],
   );
@@ -499,6 +505,17 @@ export default function ParishMap() {
             selectedCommunities.has("non_catholic_christian")
           ? `${statusCounts.all} Protestant parish and congregation records`
           : `${statusCounts.all} selected parish, mission, and congregation records`;
+  const activeStatusLabel =
+    selectedCommunities.size === 1 &&
+    selectedCommunities.has("roman_catholic")
+      ? "Active Lithuanian parish or mission"
+      : selectedCommunities.size === 1 &&
+          selectedCommunities.has("non_catholic_christian")
+        ? "Active Lithuanian congregation"
+        : selectedCommunities.size === 1 &&
+            selectedCommunities.has("national_catholic_pncc")
+          ? "Active Lithuanian parish"
+          : "Active Lithuanian community";
 
   function regionView(states: Set<string>) {
     const pts = POINTS.filter((p) => states.has(p.state));
@@ -608,12 +625,19 @@ export default function ParishMap() {
       <div className="overflow-hidden rounded-lg border border-rule">
         {/* How each closure ended — sub-fates, same vocabulary as the flow chart */}
         {closedOnly && (() => {
-          const lostPts = classPoints.filter(
-            (p) => p.group === "closed" && p.recordType !== "misija",
-          );
-          const n = (f: "closed" | "demolished" | "repurposed") =>
+          const lostPts = classPoints.filter((p) => p.group === "closed");
+          const n = (f: Exclude<Point["fate"], null>) =>
             lostPts.filter((p) => p.fate === f).length;
-          const sub = (key: "all" | "closed" | "demolished" | "repurposed", label: string) => (
+          const sub = (
+            key:
+              | "all"
+              | "demolished"
+              | "repurposed"
+              | "standing"
+              | "listed_for_sale"
+              | "not_established",
+            label: string,
+          ) => (
             <button
               key={key}
               type="button"
@@ -631,9 +655,15 @@ export default function ParishMap() {
             <div className="flex flex-wrap items-center gap-1.5 border-b border-rule px-3 py-2 text-xs sm:px-4">
               <span className="text-muted uppercase tracking-wide">How each closure ended:</span>
               {sub("all", `All · ${lostPts.length}`)}
-              {sub("closed", `Parish closed · ${n("closed")}`)}
               {sub("demolished", `Church demolished × · ${n("demolished")}`)}
-              {sub("repurposed", `Building sold on · ${n("repurposed")}`)}
+              {sub("repurposed", `Church repurposed · ${n("repurposed")}`)}
+              {sub("standing", `Church standing · ${n("standing")}`)}
+              {n("listed_for_sale") > 0 &&
+                sub("listed_for_sale", `Listed for sale · ${n("listed_for_sale")}`)}
+              {sub(
+                "not_established",
+                `Condition not established · ${n("not_established")}`,
+              )}
             </div>
           );
         })()}
@@ -797,7 +827,11 @@ export default function ParishMap() {
                   <span className="font-medium">
                     {pointStatusLabel(hovered)}
                     {hovered.fate === "demolished" && " — church demolished"}
-                    {hovered.fate === "repurposed" && " — building sold on"}
+                    {hovered.fate === "repurposed" && " — church repurposed"}
+                    {hovered.fate === "standing" && " — church standing"}
+                    {hovered.fate === "listed_for_sale" && " — listed for sale"}
+                    {hovered.fate === "not_established" &&
+                      " — terminal-site condition not established"}
                   </span>
                   {hovered.alerted && <span className="text-muted text-xs">— active campaign</span>}
                   <span className="text-muted">
@@ -817,10 +851,12 @@ export default function ParishMap() {
                   <div className="text-muted text-xs mt-0.5">{hovered.kindLabel}</div>
                 )}
                 <div className="text-muted text-xs mt-0.5">
-                  {hovered.deep ? "Documented in depth — full case file" : "Attested by the research record"}
+                  {hovered.deep
+                    ? "Detailed profile and sources available"
+                    : "Basic profile — evidence remains limited"}
                 </div>
                 {hovered.profile && (
-                  <div className="mt-1.5 font-medium">Click the marker to open its record →</div>
+                  <div className="mt-1.5 font-medium">Click the marker to open its profile →</div>
                 )}
               </div>
             );
@@ -962,19 +998,11 @@ export default function ParishMap() {
                   {
                     key: "active_parish",
                     mode: "open",
-                    label: GROUP_LABEL.active_parish,
-                    description: GROUP_DESCRIPTION.active_parish,
+                    label: activeStatusLabel,
+                    description:
+                      "Regular Lithuanian worship continues in an active Lithuanian-led parish, mission, or congregation. Mission records use a hollow map mark; record type never becomes a separate status.",
                     fill: "var(--es-active)",
                     count: statusCounts.open,
-                  },
-                  {
-                    key: "active_mission",
-                    mode: "mission",
-                    label: "Mission records",
-                    description:
-                      `${recordTypeCounts.activeMission} active and ${recordTypeCounts.closedMission} closed. Missions keep their own status on the map and are counted separately from parishes.`,
-                    fill: "var(--es-active)",
-                    count: statusCounts.mission,
                   },
                   {
                     key: "mass_continues",
@@ -1007,7 +1035,7 @@ export default function ParishMap() {
                     description:
                       selectedCommunities.size === 1 &&
                       selectedCommunities.has("roman_catholic")
-                        ? `${recordTypeCounts.closedParish} parishes are closed. Filter to Closed to see whether each church was demolished, sold on, or remains standing. Closed missions remain in the separate Mission records category.`
+                        ? `${recordTypeCounts.closedParish} parishes and ${recordTypeCounts.closedMission} missions are closed. Filter to Closed to see whether each terminal church was demolished, repurposed, listed, standing, or not yet established.`
                         : GROUP_DESCRIPTION.closed,
                     fill: "var(--es-closed)",
                     count: statusCounts.lost,
@@ -1053,14 +1081,9 @@ export default function ParishMap() {
                         }`}
                       >
                         <span
-                          className={`h-2.5 w-2.5 shrink-0 rounded-full ${
-                            key === "active_mission" ? "border-2 bg-background" : ""
-                          }`}
+                          className="h-2.5 w-2.5 shrink-0 rounded-full"
                           style={{
-                            background:
-                              key === "active_mission" ? undefined : fill,
-                            borderColor:
-                              key === "active_mission" ? fill : undefined,
+                            background: fill,
                             opacity: key === "unverified" ? 0.55 : 1,
                           }}
                           aria-hidden
@@ -1137,7 +1160,7 @@ export default function ParishMap() {
         Shown: {selectedScope}. Religious-house, cemetery, shrine, club, and
         school chapels remain outside the institutional count.{" "}
         <a href="/about-the-data" className="underline hover:text-foreground">
-          How the record is scoped →
+          What is included →
         </a>
       </p>
 
@@ -1146,24 +1169,13 @@ export default function ParishMap() {
         {selectedStatuses.size === 1 &&
         selectedStatuses.has("unresolved") ? (
           <span className="text-muted">
-            {statusCounts.unresolved} records whose outcome remains contested or
-            canonically undecided. Open a mark for its evidence.
-          </span>
-        ) : selectedStatuses.size === 1 &&
-          selectedStatuses.has("mission") ? (
-          <span className="text-muted">
-            {statusCounts.mission} active mission in this historical record.{" "}
-            <a
-              href="/lithuanian-catholic-life-today"
-              className="font-medium underline hover:text-foreground"
-            >
-              See the complete current Catholic network →
-            </a>
+            {statusCounts.unresolved} institutions whose outcome remains contested
+            or canonically undecided. Open a mark for details and sources.
           </span>
         ) : closedOnly ? (
           <span className="text-muted">
-            {statusCounts.lost} records in the Closed category. Hover any mark;
-            click to open its record.{" "}
+            {statusCounts.lost} institutions in the Closed category. Hover any
+            mark; click to open its profile.{" "}
             <Link href="/parishes" className="underline hover:text-foreground font-medium">
               Browse all parish profiles →
             </Link>
@@ -1171,18 +1183,18 @@ export default function ParishMap() {
         ) : selectedStatuses.size === 1 &&
           selectedStatuses.has("unknown") ? (
           <span className="text-muted">
-            {statusCounts.unknown} records whose present status is still being
-            verified. Open a mark to inspect what is currently documented.
+            The present status of {statusCounts.unknown} institutions has not yet
+            been established. Open a mark for the available details and sources.
           </span>
         ) : !allStatusesSelected ? (
           <span className="text-muted">
-            {visible.length} records match the selected community and status
-            filters. Hover any mark; click to open its record.
+            {visible.length} institutions match the selected community and status
+            filters. Hover any mark; click to open its profile.
           </span>
         ) : (
           <span className="text-muted">
-            One map — every documented parish, mission, and congregation.
-            Hover any mark; click to open its record.{" "}
+            One map — every published parish, mission, and congregation. Hover
+            any mark; click to open its profile.{" "}
             <Link href="/#happening-now" className="font-medium underline hover:text-foreground">
               See current campaigns and developments →
             </Link>

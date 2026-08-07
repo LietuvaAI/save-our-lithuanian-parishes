@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import alertsData from "@/data/alerts.json";
+import alertsData from "@/data/canonical-current-events-projection.json";
 import contextPoints from "@/data/context-points.json";
 import { EndStateDot } from "@/components/EndStatePill";
 import ParishContextMap from "@/components/ParishContextMap";
@@ -23,6 +23,7 @@ import { ProfileSection } from "@/components/ProfileSection";
 import { ProfileSourceLedger } from "@/components/ProfileSourceLedger";
 import { ProfileWorshipSites } from "@/components/ProfileWorshipSites";
 import { END_STATE_LABEL } from "@/lib/end-state";
+import { getCurrentPastoralDirectoryEntry } from "@/lib/infographic-projection";
 import {
   canonicalParishProfiles,
   getCanonicalParishProfile,
@@ -137,7 +138,9 @@ type WatchPhoto = {
 };
 
 type ParishAlertEntry = {
-  parishLink: string;
+  parishLink?: string;
+  relatedProfileLink?: string;
+  context?: string;
   level: string;
   kind: "active" | "watch" | "building";
   whatChanged: string;
@@ -146,6 +149,7 @@ type ParishAlertEntry = {
 
 type ParishCampaignEntry = {
   parishLink: string;
+  state: string;
   hearthUrl?: string;
   dispatches?: DispatchLink[];
   sources?: AlertSource[];
@@ -177,6 +181,7 @@ type SustainabilityWatchEntry = {
 };
 
 type AlertsPayload = {
+  snapshot: string;
   alerts: ParishAlertEntry[];
   campaigns: ParishCampaignEntry[];
   sustainabilityWatch?: SustainabilityWatchEntry[];
@@ -205,7 +210,10 @@ function profileLinks(profile: CanonicalParishProfile) {
 function getParishAlert(profile: CanonicalParishProfile) {
   const links = profileLinks(profile);
   return {
-    alert: alerts.alerts.find((entry) => links.has(entry.parishLink)) ?? null,
+    alert:
+      alerts.alerts.find((entry) =>
+        links.has(entry.parishLink ?? entry.relatedProfileLink ?? ""),
+      ) ?? null,
     campaign:
       alerts.campaigns.find((entry) => links.has(entry.parishLink)) ?? null,
   };
@@ -317,13 +325,15 @@ export default async function ParishPage({
   const community = isCommunityRecord(entry.sources ?? []);
   const institution = institutionLabel(profile, community);
   const sourceLead = parishHistoryLeadNarrative(profile);
-  const buildingFate = scoped.buildingFate ?? core?.buildingFate ?? null;
   const recordType = entry.record_type ?? "parish";
   const researchOnly = ["phase", "lead", "context"].includes(recordType);
   const institutionDates = getInstitutionDates(profile.href);
   const endState = institutionDates?.statusGroup ?? scoped.endState;
   const isUsProjection =
     entry.country === "US" && typeof institutionDates?.entityId === "string";
+  const buildingFate = isUsProjection
+    ? scoped.buildingFate
+    : (scoped.buildingFate ?? core?.buildingFate ?? null);
   const foundedYear = institutionDates
     ? institutionDates.foundedYear
     : (scoped.founded ?? core?.yearFounded ?? null);
@@ -341,6 +351,9 @@ export default async function ParishPage({
   const parishTimeline = getParishTimeline(profileLinks(profile));
   const { alert: parishAlert, campaign: parishCampaign } = getParishAlert(profile);
   const watchEntry = getSustainabilityWatch(profile);
+  const pastoralDirectoryEntry = isUsProjection
+    ? getCurrentPastoralDirectoryEntry(profile.registrySlug)
+    : null;
   const campaignDispatches = parishCampaign?.dispatches ?? [];
   const watchDispatches = watchEntry?.dispatches ?? [];
   const currentSignalLabel = parishCampaign
@@ -363,39 +376,42 @@ export default async function ParishPage({
   const identityNotices = getIdentityNoticesForInstitution(
     institutionDates?.entityId ?? null,
   );
-  const activeWorshipSite =
-    worshipSites.find((site) => site.isCurrent) ??
-    worshipSites.find((site) => !site.demolishedYear) ??
-    null;
-  const standingSite =
-    worshipSites.find(
-      (site) => !site.demolishedYear && /present/i.test(site.range ?? ""),
-    ) ?? activeWorshipSite;
+  const activeWorshipSite = worshipSites.find((site) => site.isCurrent) ?? null;
+  const terminalWorshipSite = worshipSites.find((site) =>
+    institutionDates?.terminalSiteIds.includes(site.entityId),
+  );
   // A demolished church is still the institution's church building. Do not
   // replace its identity with the outcome label merely because no site stands.
-  const selectedWorshipSite =
-    standingSite ?? activeWorshipSite ?? worshipSites[0] ?? null;
+  // For canonical U.S. profiles, however, Brain alone decides which site is
+  // terminal. Associated sites remain visible below but are never promoted by
+  // a site-side heuristic.
+  const selectedWorshipSite = isUsProjection
+    ? (terminalWorshipSite ?? null)
+    : (activeWorshipSite ?? worshipSites[0] ?? null);
   const standingSiteYear = selectedWorshipSite?.range?.match(/(\d{4})/)?.[1] ?? null;
   const fallbackBuildingOutcome = readableBuildingStatus(
     buildingFate,
     caseRecord?.buildingStatus ?? null,
   );
-  const buildingOutcome =
-    selectedWorshipSite?.outcome &&
-    !/^not established$/i.test(selectedWorshipSite.outcome)
+  const buildingOutcome = isUsProjection
+    ? (selectedWorshipSite?.outcome ?? "Not established")
+    : selectedWorshipSite?.outcome &&
+        !/^not established$/i.test(selectedWorshipSite.outcome)
       ? selectedWorshipSite.outcome
       : fallbackBuildingOutcome;
   const currentChurch =
     (recordType === "misija"
-      ? (caseRecord?.profile?.currentSite?.value ??
-        activeWorshipSite?.name ??
+      ? (activeWorshipSite?.name ??
+        (!isUsProjection ? caseRecord?.profile?.currentSite?.value : null) ??
         "Not established")
       : (selectedWorshipSite?.name ??
-        caseRecord?.profile?.currentSite?.value ??
-        "Not established"));
+        (!isUsProjection ? caseRecord?.profile?.currentSite?.value : null) ??
+        (worshipSites.length > 0
+          ? "Terminal worship site not established"
+          : "Worship site not established")));
   const rawCurrentChurchDetail =
-    caseRecord?.profile?.currentSite?.detail ??
     parishCampaign?.profile?.siteDetail ??
+    (!isUsProjection ? caseRecord?.profile?.currentSite?.detail : null) ??
     null;
   const currentChurchDetail =
     rawCurrentChurchDetail &&
@@ -412,11 +428,18 @@ export default async function ParishPage({
     recordType === "misija" || !isUsProjection ? [] : worshipSites;
   const renderedRelatedRecords = !isUsProjection ? [] : relatedRecords;
   const campaignLiturgy = parishCampaign?.profile?.liturgy;
-  const caseLiturgy = caseRecord?.profile?.liturgy;
+  const caseLiturgy = !isUsProjection ? caseRecord?.profile?.liturgy : null;
   const lithuanianMass = campaignLiturgy
     ? campaignLiturgy.value
     : caseLiturgy
       ? caseLiturgy.value
+    : pastoralDirectoryEntry?.networkClass === "mass_continues"
+      ? /monthly/i.test(pastoralDirectoryEntry.ministry)
+        ? "Monthly"
+        : "Continues"
+    : pastoralDirectoryEntry?.networkClass === "active_parish" ||
+        pastoralDirectoryEntry?.networkClass === "active_mission"
+      ? "Regular"
     : watchEntry
       ? (FREQUENCY_LABEL[watchEntry.liturgy.frequency] ??
         watchEntry.liturgy.frequency)
@@ -540,10 +563,16 @@ export default async function ParishPage({
     photoProfileSource(parishPhoto),
   ]);
 
+  const relatedAlertSummary =
+    parishAlert?.relatedProfileLink && parishAlert.context
+      ? `${parishAlert.context} ${parishAlert.whatChanged}`
+      : parishAlert?.whatChanged;
+  const canonicalCurrentSummary =
+    parishCampaign?.state ?? relatedAlertSummary ?? null;
   const { dek, rest } = researchOnly
     ? researchRecordStory(recordType)
     : profileStory({
-        situationText: situation?.situation ?? null,
+        situationText: isUsProjection ? null : (situation?.situation ?? null),
         endState,
         founded: establishedYear,
         closed: closedYear,
@@ -552,13 +581,12 @@ export default async function ParishPage({
         city: entry.city,
         state: entry.state ?? null,
         institution,
-        currentUse: situation?.current_use ?? null,
+        currentUse: isUsProjection ? null : (situation?.current_use ?? null),
         sourceLead,
       });
-  const displayDek =
-    parishCampaign && caseRecord?.summary
-      ? campaignProfileDek(caseRecord.summary)
-      : dek;
+  const displayDek = canonicalCurrentSummary
+    ? campaignProfileDek(canonicalCurrentSummary)
+    : dek;
   const displayRest = parishCampaign ? null : rest;
 
   const hasMap = (
@@ -578,7 +606,7 @@ export default async function ParishPage({
   // Status is stated once, here: a dot and a label. Not also a pill, a fact row,
   // and a prose sentence. docs/design-system-profile.md §6.
   const baseStatusLabel = researchOnly
-    ? "Research record"
+    ? RECORD_TYPE_LABEL[recordType] ?? "Historical context"
     : recordType === "misija" && endState === "active_parish"
       ? "Active Lithuanian mission"
       : END_STATE_LABEL[endState];
@@ -629,29 +657,50 @@ export default async function ParishPage({
     overview: [displayDek, displayRest].filter(Boolean).join(" "),
     researchOnly,
     researchStatus: researchStatusCopy(recordType),
-    currentUse: caseRecord?.currentUse ?? situation?.current_use ?? null,
-    caseSummary: caseRecord?.summary ?? null,
-    caseAsOf: caseRecord?.asOf ?? null,
+    currentUse: isUsProjection
+      ? canonicalCurrentSummary
+      : (caseRecord?.currentUse ?? situation?.current_use ?? null),
+    caseSummary: isUsProjection
+      ? canonicalCurrentSummary
+      : (caseRecord?.summary ?? null),
+    caseAsOf: isUsProjection
+      ? canonicalCurrentSummary
+        ? alertsData.snapshot
+        : null
+      : (caseRecord?.asOf ?? null),
     developments: caseRecord?.developments ?? [],
     timelineEvents: parishTimeline?.events ?? [],
     existed: institutionDates?.existed ?? null,
     currentChurch,
     buildingOutcome,
     currentChurchDetail,
-    currentChurchHref: caseRecord?.profile?.currentSite?.href ?? null,
-    formerChurch: caseRecord?.profile?.formerSite ?? null,
+    currentChurchHref: !isUsProjection
+      ? (caseRecord?.profile?.currentSite?.href ?? null)
+      : null,
+    formerChurch: !isUsProjection
+      ? (caseRecord?.profile?.formerSite ?? null)
+      : null,
     lithuanianMass,
     lithuanianMassDetail:
-      campaignLiturgy?.detail ?? caseLiturgy?.detail ?? null,
-    lithuanianMassHref: campaignLiturgy?.href ?? caseLiturgy?.href ?? null,
+      campaignLiturgy?.detail ??
+      caseLiturgy?.detail ??
+      pastoralDirectoryEntry?.ministry ??
+      null,
+    lithuanianMassHref:
+      campaignLiturgy?.href ??
+      caseLiturgy?.href ??
+      pastoralDirectoryEntry?.officialSite ??
+      null,
     worshipLabel,
     recordType,
     institutionTransition,
-    institutionalLifeOverride:
-      caseRecord?.profile?.institutionalLife ?? null,
+    institutionalLifeOverride: !isUsProjection
+      ? (caseRecord?.profile?.institutionalLife ?? null)
+      : null,
     institutionalSummaryOverride:
       parishCampaign?.profile?.institutionalSummary ??
-      caseRecord?.profile?.institutionalSummary ??
+      institutionDates?.continuationSummary ??
+      (!isUsProjection ? caseRecord?.profile?.institutionalSummary : null) ??
       null,
   });
 
@@ -958,10 +1007,10 @@ export default async function ParishPage({
 
       <ProfileSection
         id="present-condition"
-        label={researchOnly ? "Research status" : "Where it stands today"}
+        label={researchOnly ? "What is known" : "Where it stands today"}
         note={
           profileView.currentAsOf
-            ? `Record dated\n${profileView.currentAsOf}`
+            ? `Current as of\n${profileView.currentAsOf}`
             : undefined
         }
       >
@@ -1023,7 +1072,7 @@ export default async function ParishPage({
             Is something happening there now?
           </p>
           <p className="mt-2 text-[13.5px] leading-relaxed text-muted">
-            The record grows through people who were there. Corrections,
+            People who were there can help complete this history. Corrections,
             documents, photographs, and current news are all welcome.
           </p>
           <Link

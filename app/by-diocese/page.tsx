@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import registry from "@/data/registry-unified.json";
 import siteFigures from "@/data/site-figures.json";
 import DioceseExplorer, {
   type DioceseExplorerEntry,
@@ -106,17 +105,15 @@ export default function ByDiocesePage() {
               parish left.
             </p>
             <p className="mt-1.5 text-sm leading-relaxed text-muted">
-              Across the national record, Lithuanian parish life has formally
-              closed or transferred to another community at {totalEnded} of{" "}
-              {totalParishes} Roman Catholic parish records.
+              Lithuanian parish life has formally closed or transferred to
+              another community at {totalEnded} of {totalParishes} Roman
+              Catholic parishes.
             </p>
           </div>
           <p className="text-xs leading-relaxed text-muted">
-            Scope: {totalParishes} U.S. Roman Catholic parish records across{" "}
+            Scope: {totalParishes} U.S. Roman Catholic parishes across{" "}
             {named.length} named dioceses
-            {unassigned > 0 ? `; ${unassigned} remain unassigned` : ""} ·
-            Registry Revision {registry.registryRevision.version},{" "}
-            {registry.registryRevision.date}
+            {unassigned > 0 ? `; ${unassigned} remain unassigned` : ""}
             {" · "}
             <Link
               href="/about-the-data"
@@ -128,11 +125,7 @@ export default function ByDiocesePage() {
         </div>
       </section>
 
-      <DioceseClosureRanking
-        dioceses={named}
-        revision={String(registry.registryRevision.version)}
-        revisionDate={registry.registryRevision.date}
-      />
+      <DioceseClosureRanking dioceses={named} />
     </article>
   );
 }

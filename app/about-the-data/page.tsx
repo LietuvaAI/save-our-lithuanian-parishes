@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AboutNav from "@/components/AboutNav";
-import revisionHistory from "@/data/registry-revisions.json";
 import siteFigures from "@/data/site-figures.json";
 import { currentPastoralNetwork } from "@/lib/infographic-projection";
 
-const REGISTRY_REVISIONS = revisionHistory.revisions.slice().reverse();
 const CURRENT_WORSHIP_PLACES =
   currentPastoralNetwork.counts.active_parish +
   currentPastoralNetwork.counts.active_mission +
@@ -200,28 +198,16 @@ export default function AboutTheDataPage() {
 
       <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold">
-          Registry revision history
+          Canonical release
         </h2>
         <p className="mt-2 leading-relaxed">
-          The registry changes through dated, numbered releases. This is the
-          record of what changed and when.
+          The current site was generated from CultureNet Brain publication
+          release <code>{siteFigures.generatedFrom.canonicalPublicationRevision}</code>
+          {" "}and infographic release{" "}
+          <code>{siteFigures.generatedFrom.canonicalInfographicRevision}</code>.
+          Their content hashes are checked during every build, so a copied or
+          independently edited site snapshot cannot silently replace them.
         </p>
-        <div className="mt-4 divide-y divide-rule border-y border-rule">
-          {REGISTRY_REVISIONS.map((revision) => (
-            <div
-              key={revision.version}
-              className="py-4 sm:grid sm:grid-cols-[8rem_7rem_minmax(0,1fr)] sm:gap-4"
-            >
-              <p className="font-semibold">Revision {revision.version}</p>
-              <p className="mt-1 text-sm text-muted sm:mt-0">
-                <time dateTime={revision.date}>{revision.date}</time>
-              </p>
-              <div className="mt-2 sm:mt-0">
-                <p className="leading-relaxed">{revision.summary}</p>
-              </div>
-            </div>
-          ))}
-        </div>
       </section>
 
       <section className="mt-10">

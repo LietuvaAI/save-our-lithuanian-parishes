@@ -99,3 +99,7 @@ body {
 .panel-scroll::-webkit-scrollbar-track {
   background: transparent;
 }
+
+.timeline-year {
+  font-family: var(--font-timeline-mono), ui-monospace, monospace;
+}

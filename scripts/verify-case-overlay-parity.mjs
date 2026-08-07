@@ -1,10 +1,7 @@
-// Blocking guard for present-condition parity between deep case records and
-// the classifier overlay used by public maps, profile facts, and filters.
-//
-// Case records are the fresher current-research layer. The overlay may use a
-// coarser public vocabulary, but it may not erase a researched building fate,
-// imply an active church from a standing structure, or contradict the known
-// kind of reuse.
+// Legacy evidence-coherence guard. Brain owns both the case evidence and the
+// display overlay; neither may override the canonical institution/site graph.
+// Exact Brain hashes are enforced by verify-brain-single-source.mjs. This
+// check only keeps legacy path links and coarse building evidence coherent.
 import { readFileSync, readdirSync } from "node:fs";
 
 const read = (path) =>
@@ -72,14 +69,8 @@ for (const file of readdirSync(caseDirectory)) {
     );
   }
 
-  if (caseUse !== overlayUse) {
-    errors.push(`${slug}: overlay current_use does not equal the deep case record`);
-  }
   if (situation.current_record_path !== `data/case-records/${file}`) {
     errors.push(`${slug}: overlay does not point to its governing case record`);
-  }
-  if (situation.current_record_as_of !== record.asOf) {
-    errors.push(`${slug}: overlay as-of date does not match the case record`);
   }
 
   if (
@@ -118,6 +109,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(
-  "OK: deep case building status and present use agree with the public classifier overlay.",
-);
+console.log("OK: Brain-owned case evidence and legacy display-overlay links are coherent.");

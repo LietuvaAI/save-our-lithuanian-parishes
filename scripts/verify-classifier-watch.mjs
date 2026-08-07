@@ -13,7 +13,7 @@ import { readFileSync } from "node:fs";
 
 const read = (p) =>
   JSON.parse(readFileSync(new URL(`../data/${p}`, import.meta.url), "utf8"));
-const alerts = read("alerts.json");
+const alerts = read("canonical-current-events-projection.json");
 const sit = read("parish-situation.json").parishes;
 
 const bad = [];

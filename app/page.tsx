@@ -1,33 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
 import ParishMap from "@/components/ParishMap";
-import NationalRecordGraphic from "@/components/NationalRecordGraphic";
 import ChurchProcession from "@/components/ChurchProcession";
 import {
   DiocesePill,
   DiocesanLeaderLink,
 } from "@/components/DiocesePill";
 import { EndStatePill } from "@/components/EndStatePill";
-import alertsData from "@/data/alerts.json";
-import siteFigures from "@/data/site-figures.json";
+import alertsData from "@/data/canonical-current-events-projection.json";
 import { getClearedPhoto } from "@/lib/photos";
 import {
   currentPastoralNetwork,
+  infographicCounts,
+  institutionHistory,
+  romanCatholicInstitutionHistory,
+  romanCatholicMissionHistory,
   romanCatholicParishHistory,
 } from "@/lib/infographic-projection";
 import type { EndState } from "@/lib/end-state";
 
-// Homepage figures come from the build-validated public figure contract.
-const REG_ETHNIC = siteFigures.history.parishes;
-const REG_CLOSED = siteFigures.history.closed;
-const REG_CLOSED_SINCE_1990 = siteFigures.history.closedSince1990;
-const TOP_LOSS_DIOCESES = siteFigures.history.topClosureDioceses.map(
-  ({ diocese, closed }) => [diocese, closed] as const,
-);
-const TOP_TWO_LOSS_COUNT = TOP_LOSS_DIOCESES.reduce(
-  (total, [, count]) => total + count,
-  0,
-);
+// The homepage index names three distinct canonical populations. They are
+// linked, never added together or treated as interchangeable denominators.
+const PUBLIC_INSTITUTIONS = infographicCounts.public_us_institutions;
+const ROMAN_CATHOLIC_INSTITUTIONS = romanCatholicInstitutionHistory.length;
+const ROMAN_CATHOLIC_PARISHES = romanCatholicParishHistory.length;
+const ROMAN_CATHOLIC_MISSIONS = romanCatholicMissionHistory.length;
+const CLOSED_ROMAN_CATHOLIC_INSTITUTIONS =
+  romanCatholicInstitutionHistory.filter(
+    (institution) => institution.status_group === "closed",
+  ).length;
+const PHYSICAL_WORSHIP_SITES = infographicCounts.physical_worship_sites;
 const CURRENT_WORSHIP_CLASSES = new Set([
   "active_parish",
   "active_mission",
@@ -42,12 +44,11 @@ const CURRENT_WORSHIP_COUNT =
   currentPastoralCounts.active_parish +
   currentPastoralCounts.active_mission +
   currentPastoralCounts.mass_continues;
-const CURRENT_WORSHIP_STATES = new Set(
-  currentWorshipEntries.map((entry) => entry.state),
-).size;
 
 if (
-  romanCatholicParishHistory.length !== siteFigures.history.parishes ||
+  institutionHistory.length !== PUBLIC_INSTITUTIONS ||
+  ROMAN_CATHOLIC_INSTITUTIONS !==
+    ROMAN_CATHOLIC_PARISHES + ROMAN_CATHOLIC_MISSIONS ||
   currentWorshipEntries.length !== CURRENT_WORSHIP_COUNT
 ) {
   throw new Error("Homepage populations do not match canonical projections");
@@ -63,7 +64,8 @@ type CurrentAlert = {
   relatedProfileLink?: string;
   relatedProfileLabel?: string;
   status?: EndState;
-  caveat?: string;
+  statusLabel?: string;
+  context?: string;
   whatChanged: string;
   sources: { title: string; publisher: string; url: string }[];
 };
@@ -94,9 +96,9 @@ const activeCampaigns = (alertsData.campaigns as CurrentCampaign[])
   .filter((campaign) => campaign.alert)
   .slice(0, 4);
 const statusByLink = new Map(
-  romanCatholicParishHistory.map((parish) => [
-    parish.public_profile,
-    parish.status_group as EndState,
+  institutionHistory.map((institution) => [
+    institution.public_profile,
+    institution.status_group as EndState,
   ]),
 );
 
@@ -146,74 +148,114 @@ const CAMPAIGN_ART: Record<
   },
 };
 
-const ACTIONS = [
+const SECONDARY_DOORS = [
   {
-    title: "Something happening at your parish?",
-    body: "A restructuring letter, a listening session, a building listed for sale, a merger notice — document it while it is happening, not after. Reports are reviewed before anything is published.",
-    cta: "Report it",
-    href: "/report",
-    primary: true,
+    title: "The History",
+    body: "See the rise and contraction of the parish network over time.",
+    href: "/history",
   },
   {
-    title: "Find your parish's story",
-    body: "See how it began, how the community changed, where the parish and church stand today, and the sources behind the record.",
-    cta: "Find your parish",
+    title: "All Parish Profiles",
+    body: `Search all ${PUBLIC_INSTITUTIONS} published U.S. institution profiles.`,
     href: "/parishes",
-    primary: false,
   },
   {
-    title: "Arm your community with the facts",
-    body: `The deadlines, the seven reasons that don't count, the procedural rights that have reversed closures, and ${siteFigures.reversals.documented} precedents — assembled for your parish council.`,
-    cta: "Start here",
-    href: "/start-here",
-    primary: false,
+    title: "Church Buildings Through Time",
+    body: `Follow ${PHYSICAL_WORSHIP_SITES} physical worship sites separately.`,
+    href: "/church-buildings-through-time",
+  },
+  {
+    title: "Lithuanian Catholic Life Today",
+    body: `Find the ${CURRENT_WORSHIP_COUNT} current places of Lithuanian worship.`,
+    href: "/lithuanian-catholic-life-today",
   },
 ];
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-5xl px-4">
-      <section className="pt-3 text-center sm:pt-4">
-        <h1 className="mx-auto max-w-3xl font-serif text-2xl font-semibold leading-tight sm:text-3xl">
-          The public record of America&rsquo;s Lithuanian parishes
-        </h1>
-        <p className="mx-auto mt-1.5 max-w-4xl text-sm leading-relaxed text-muted sm:text-[15px]">
-          This project traces the complete history of America&rsquo;s
-          Lithuanian parishes&mdash;from their earliest foundations to the
-          communities discerning their future today.
-        </p>
-        <div className="mt-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm">
-          <Link
-            href="/where-every-parish-ended-up"
-            className="font-semibold underline underline-offset-4 hover:text-accent"
-          >
-            Explore parish and mission outcomes
-          </Link>
-          <Link
-            href="/parishes"
-            className="text-muted underline underline-offset-4 hover:text-foreground"
-          >
-            Browse all profiles
-          </Link>
-        </div>
+    <div className="mx-auto max-w-6xl px-4">
+      <section className="pt-2 sm:pt-3">
         <ChurchProcession />
       </section>
 
-      <section className="mt-4 sm:mt-5">
+      <section className="mx-auto max-w-4xl py-6 text-center sm:py-8">
+        <h1 className="font-serif text-3xl font-semibold leading-tight sm:text-5xl">
+          The Living Record of America&rsquo;s Lithuanian Parishes
+        </h1>
+        <p className="mx-auto mt-3 max-w-3xl text-base leading-relaxed text-muted sm:text-lg">
+          From their immigrant-era foundations to the communities carrying
+          Lithuanian religious life forward today, this project documents how
+          America&rsquo;s Lithuanian parishes, missions, and congregations
+          began, changed, and where they stand now.
+        </p>
+        <p className="mx-auto mt-4 max-w-4xl text-sm leading-relaxed">
+          Three views, three distinct populations: {" "}
+          <Link
+            href="/parishes"
+            className="font-semibold underline decoration-rule underline-offset-4 hover:text-accent"
+          >
+            {PUBLIC_INSTITUTIONS} institutions
+          </Link>
+          {" · "}
+          <Link
+            href="/where-every-parish-ended-up"
+            className="font-semibold underline decoration-rule underline-offset-4 hover:text-accent"
+          >
+            {ROMAN_CATHOLIC_INSTITUTIONS} Roman Catholic ({ROMAN_CATHOLIC_PARISHES} parishes +{" "}
+            {ROMAN_CATHOLIC_MISSIONS} missions)
+          </Link>
+          {" · "}
+          <Link
+            href="/church-buildings-through-time"
+            className="font-semibold underline decoration-rule underline-offset-4 hover:text-accent"
+          >
+            {PHYSICAL_WORSHIP_SITES} worship sites
+          </Link>
+          .
+        </p>
+      </section>
+
+      <section aria-label="Explore the national parish map">
         <ParishMap />
       </section>
 
+      <section className="mt-8 rounded-lg bg-band px-6 py-7 sm:mt-10 sm:px-8 lg:grid lg:grid-cols-[minmax(18rem,1.35fr)_minmax(0,1fr)] lg:items-center lg:gap-10">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+            Start with the outcomes
+          </p>
+          <h2 className="mt-1 font-serif text-2xl font-semibold sm:text-3xl">
+            Parish &amp; Mission Outcomes
+          </h2>
+          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
+            Follow all {ROMAN_CATHOLIC_INSTITUTIONS} Roman Catholic
+            institutions — {ROMAN_CATHOLIC_PARISHES} parishes and {" "}
+            {ROMAN_CATHOLIC_MISSIONS} missions — from founding to where each
+            one ended up. {CLOSED_ROMAN_CATHOLIC_INSTITUTIONS} have closed.
+          </p>
+          <Link
+            href="/where-every-parish-ended-up"
+            className="mt-4 inline-flex rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+          >
+            Explore parish and mission outcomes →
+          </Link>
+        </div>
 
-      <NationalRecordGraphic
-        total={REG_ETHNIC}
-        closed={REG_CLOSED}
-        closedSince1990={REG_CLOSED_SINCE_1990}
-        concentratedLosses={TOP_TWO_LOSS_COUNT}
-        firstDiocese={TOP_LOSS_DIOCESES[0]?.[0] ?? ""}
-        firstDioceseLosses={TOP_LOSS_DIOCESES[0]?.[1] ?? 0}
-        secondDiocese={TOP_LOSS_DIOCESES[1]?.[0] ?? ""}
-        secondDioceseLosses={TOP_LOSS_DIOCESES[1]?.[1] ?? 0}
-      />
+        <div className="mt-7 flex flex-col gap-3 border-t border-rule pt-6 lg:mt-0 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+            {SECONDARY_DOORS.map((door) => (
+              <Link
+                key={door.href}
+                href={door.href}
+                className="group text-sm leading-relaxed"
+              >
+                <strong className="font-semibold underline decoration-rule underline-offset-4 group-hover:text-accent">
+                  {door.title}
+                </strong>
+                <span className="text-muted"> — {door.body}</span>
+              </Link>
+            ))}
+        </div>
+      </section>
 
       <section
         id="happening-now"
@@ -234,7 +276,7 @@ export default function Home() {
         </div>
         <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted">
           These communities are acting while their futures are still being
-          decided. Read the current situation, understand the parish record,
+          decided. Read what is happening, understand the parish&rsquo;s history,
           and respond to the campaign itself.
         </p>
 
@@ -309,8 +351,7 @@ export default function Home() {
                       href={campaign.actionUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex rounded-md px-3 py-1.5 font-semibold text-white transition-opacity hover:opacity-90"
-                      style={{ background: "var(--mark-closed)" }}
+                      className="inline-flex rounded-md border border-accent px-3 py-1.5 font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
                     >
                       {campaign.actionLabel} &rarr;
                     </a>
@@ -320,8 +361,24 @@ export default function Home() {
             );
           })}
         </div>
+      </section>
 
-        <div className="mt-7 grid gap-7 lg:grid-cols-2">
+      <section id="watch-list" className="mt-12 scroll-mt-24">
+        <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-rule pb-3">
+          <div>
+            <p className="text-sm uppercase tracking-widest text-muted">
+              Current signals
+            </p>
+            <h2 className="mt-1 font-serif text-2xl font-semibold">
+              On the watch list
+            </h2>
+          </div>
+          <span className="text-sm text-muted">
+            {watchAlerts.length + buildingAlerts.length} records to monitor
+          </span>
+        </div>
+
+        <div className="mt-6 grid gap-8 lg:grid-cols-2">
           {[
             {
               title: "Developments to monitor",
@@ -393,14 +450,20 @@ export default function Home() {
                           </span>
                         </div>
                         <div className="mt-2 flex flex-wrap items-center gap-2">
-                          <EndStatePill
-                            value={
-                              alert.status ??
-                              (alert.parishLink
-                                ? statusForLink(alert.parishLink)
-                                : "unverified")
-                            }
-                          />
+                          {alert.statusLabel ? (
+                            <span className="inline-block rounded-full border border-rule bg-band px-2 py-0.5 text-[11px] font-medium leading-tight whitespace-nowrap">
+                              {alert.statusLabel}
+                            </span>
+                          ) : (
+                            <EndStatePill
+                              value={
+                                alert.status ??
+                                (alert.parishLink
+                                  ? statusForLink(alert.parishLink)
+                                  : "unverified")
+                              }
+                            />
+                          )}
                           <DiocesePill name={alert.diocese} />
                         </div>
                         <p className="mt-1">
@@ -409,9 +472,9 @@ export default function Home() {
                         <p className="mt-2 text-sm leading-relaxed text-muted">
                           {alert.whatChanged}
                         </p>
-                        {alert.caveat && (
+                        {alert.context && (
                           <p className="mt-2 text-sm leading-relaxed text-foreground">
-                            {alert.caveat}
+                            {alert.context}
                           </p>
                         )}
                         <p className="mt-2 text-xs leading-relaxed text-muted">
@@ -456,7 +519,7 @@ export default function Home() {
         </div>
 
         <p className="mt-5 text-sm text-muted">
-          Current snapshot: {alertsData.snapshot}.{" "}
+          Current as of {alertsData.snapshot}.{" "}
           <Link
             href="/report"
             className="font-medium underline underline-offset-4 hover:text-accent"
@@ -466,84 +529,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="mt-8">
-        <div className="flex items-baseline gap-3">
-          <h2 className="font-serif text-xl font-semibold">
-            Lithuanian Catholic life today
-          </h2>
-          <span className="text-sm text-muted">
-            {CURRENT_WORSHIP_COUNT} places
-          </span>
-        </div>
-        <p className="mt-1 text-sm text-muted leading-relaxed">
-          Current Lithuanian Catholic worship gathers at{" "}
-          {currentPastoralCounts.active_parish} parishes,{" "}
-          {currentPastoralCounts.active_mission} missions, and{" "}
-          {currentPastoralCounts.mass_continues} hosted Masses across{" "}
-          {CURRENT_WORSHIP_STATES} states.
-        </p>
-        <p className="mt-2 text-sm">
-          <Link
-            href="/lithuanian-catholic-life-today"
-            className="underline hover:text-accent font-medium"
-          >
-            Explore the living network &rarr;
-          </Link>
-        </p>
-      </section>
-
-      <section className="mt-12">
-        <h2 className="font-serif text-2xl font-semibold text-center">
-          What you can do
-        </h2>
-        <div className="mt-6 grid gap-4 sm:grid-cols-3">
-          {ACTIONS.map((a) => (
-            <div
-              key={a.title}
-              className="rounded-lg border border-rule p-5 flex flex-col"
-            >
-              <h3 className="font-serif text-lg font-semibold">{a.title}</h3>
-              <p className="mt-2 text-sm text-muted leading-relaxed flex-1">
-                {a.body}
-              </p>
-              <p className="mt-4">
-                <Link
-                  href={a.href}
-                  className={
-                    a.primary
-                      ? "inline-block rounded-md px-4 py-2 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
-                      : "inline-block rounded-md border border-rule px-4 py-2 text-sm font-medium hover:border-foreground transition-colors"
-                  }
-                  style={a.primary ? { background: "var(--mark-closed)" } : undefined}
-                >
-                  {a.cta}
-                </Link>
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="mt-12 rounded-lg border border-rule p-6 sm:p-8 text-center">
-        <h2 className="font-serif text-2xl font-semibold">
-          Follow the record as it grows
-        </h2>
-        <p className="mt-2 max-w-xl mx-auto text-sm text-muted leading-relaxed">
-          Dispatches from the record — closure alerts, parish case files, and
-          what communities are doing about it — arrive by email.
-        </p>
-        <p className="mt-4">
-          <a
-            href="https://blog.saveourlithuanianparishes.org/subscribe"
-            className="inline-block rounded-md px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
-            style={{ background: "var(--mark-closed)" }}
-          >
-            Subscribe to our blog: Židinys (The Hearth)
-          </a>
-        </p>
-      </section>
-
-      <section className="py-14 max-w-2xl mx-auto">
+      <section className="mx-auto max-w-2xl py-14">
         <h2 className="font-serif text-2xl font-semibold">
           The communities built them
         </h2>
@@ -558,6 +544,24 @@ export default function Home() {
           <Link href="/about" className="underline hover:text-accent">
             About the project →
           </Link>
+        </p>
+      </section>
+
+      <section className="rounded-lg border border-rule p-6 text-center sm:p-8">
+        <h2 className="font-serif text-2xl font-semibold">
+          Follow new findings and developments
+        </h2>
+        <p className="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-muted">
+          Closure alerts, parish histories, and news from communities working
+          to protect their churches arrive by email.
+        </p>
+        <p className="mt-4">
+          <a
+            href="https://blog.saveourlithuanianparishes.org/subscribe"
+            className="inline-block rounded-md border border-accent px-5 py-2.5 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
+          >
+            Subscribe to our blog: Židinys (The Hearth)
+          </a>
         </p>
       </section>
     </div>

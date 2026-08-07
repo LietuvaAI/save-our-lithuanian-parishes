@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f6f4ef; }
+  a { color: #7d1f1f; }
+  a:hover { color: #5f1717; }
+  .row:hover { background: rgba(28,25,23,0.04) !important; }
+  .row:hover .open { opacity: 1 !important; }
+  .row:hover .yr { color: #57534e !important; }
+</style>
+</helmet>
+
+<div style="font-family:ui-sans-serif,system-ui,'Segoe UI',sans-serif;color:#1c1917;background:#f6f4ef;padding:28px 0 60px">
+<div style="max-width:1180px;margin:0 auto;background:#fffdf9;border:1px solid #e7e5e4;border-radius:10px;overflow:hidden">
+
+  <header style="border-bottom:1px solid #e7e5e4">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:14px 32px 12px">
+      <a href="#" style="font-family:'Source Serif 4',Georgia,serif;font-size:19px;font-weight:600;letter-spacing:-0.01em;text-decoration:none;color:#1c1917">Save Our Lithuanian Parishes</a>
+      <nav style="display:flex;gap:20px;font-size:13.5px;color:#78716c;align-items:center">
+        <a href="#" style="color:#78716c;text-decoration:none">Parish &amp; Mission Outcomes</a>
+        <a href="#" style="color:#1c1917;font-weight:600;text-decoration:none">All Profiles</a>
+        <sc-for list="{{ navMenus }}" as="m" hint-placeholder-count="3">
+          <div style="position:relative" onMouseEnter="{{ m.enter }}" onMouseLeave="{{ m.leave }}">
+            <a href="#" style="color:#78716c;text-decoration:none;display:inline-flex;align-items:center;gap:4px">{{ m.label }} <span style="font-size:10px;opacity:0.6">▾</span></a>
+            <sc-if value="{{ m.open }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;top:100%;right:0;z-index:60;padding-top:8px">
+                <div style="display:flex;flex-direction:column;background:#fffdf9;border:1px solid #e7e5e4;border-radius:6px;box-shadow:0 4px 14px rgba(28,25,23,0.10);padding:4px 0;min-width:max-content">
+                  <sc-for list="{{ m.items }}" as="i" hint-placeholder-count="3">
+                    <a href="#" style="padding:8px 16px;font-size:13px;color:#1c1917;text-decoration:none;white-space:nowrap">{{ i }}</a>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+        <a href="#" style="color:#78716c;text-decoration:none">Židinys (The Hearth)</a>
+      </nav>
+    </div>
+    <div style="display:flex;height:3px"><div style="flex:1;background:#FDB913"></div><div style="flex:1;background:#006A44"></div><div style="flex:1;background:#C1272D"></div></div>
+  </header>
+
+  <div style="padding:40px 44px 0">
+    <p style="margin:0;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#78716c">Profile directory · the parish view</p>
+    <h1 style="margin:6px 0 0;font-family:'Source Serif 4',Georgia,serif;font-size:38px;line-height:1.08;font-weight:600">Every parish, across the whole record</h1>
+    <p style="margin:14px 0 0;max-width:760px;font-size:15px;line-height:1.62">This is the <strong>institution view</strong> — every Lithuanian parish, mission, and congregation as a community in its own right, not a building. Each is drawn as a life on one shared timeline that runs from the 1880s, when the first congregations were founded by immigrant communities, to the present day: the bar marks the years the institution existed, colored by what became of it, and left open where the community still lives. Use it to find a parish by name, place, or era and open its full profile. For the physical churches — which a parish may have moved through more than one of — see the <a href="#" style="font-weight:600;text-decoration:underline;text-underline-offset:3px">building view</a>; for how the whole population changed over time and where each parish ended up, see <a href="#" style="font-weight:600;text-decoration:underline;text-underline-offset:3px">Parish &amp; Mission Outcomes</a>.</p>
+    <div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:10px">
+      <a href="#" style="display:inline-flex;align-items:center;gap:10px;border:1px solid #e7e5e4;border-radius:8px;padding:10px 14px;text-decoration:none;color:#1c1917">
+        <span style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#78716c">Building view</span>
+        <span style="font-size:13.5px;font-weight:600">Church Buildings Through Time</span><span style="color:#78716c">→</span>
+      </a>
+      <a href="#" style="display:inline-flex;align-items:center;gap:10px;border:1px solid #e7e5e4;border-radius:8px;padding:10px 14px;text-decoration:none;color:#1c1917">
+        <span style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#78716c">Outcomes</span>
+        <span style="font-size:13.5px;font-weight:600">Where every parish ended up</span><span style="color:#78716c">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sticky toolbar + axis -->
+  <div style="position:sticky;top:0;z-index:30;background:#fffdf9;margin-top:24px;border-top:1px solid #e7e5e4;border-bottom:1px solid #e7e5e4">
+    <div style="padding:13px 44px 12px">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px">
+        <input type="search" value="{{ query }}" onInput="{{ onQuery }}" placeholder="Search parish, city, state, or diocese…" aria-label="Search the profile directory" style="width:280px;max-width:100%;border:1px solid #e7e5e4;border-radius:6px;background:#fffdf9;padding:9px 12px;font-size:14px;color:#1c1917;font-family:inherit">
+        <sc-for list="{{ dropFilters }}" as="f" hint-placeholder-count="2">
+          <div style="position:relative" onMouseLeave="{{ f.close }}">
+            <a href="#" onClick="{{ f.toggle }}" style="display:inline-flex;align-items:center;gap:8px;height:37px;border-radius:6px;border:1px solid {{ f.borderColor }};background:{{ f.bgColor }};color:{{ f.textColor }};padding:0 12px;font-size:13.5px;font-weight:500;text-decoration:none;white-space:nowrap">
+              {{ f.label }} <span style="font-size:10px;color:#78716c">▾</span>
+            </a>
+            <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;top:100%;left:0;z-index:40;padding-top:4px">
+                <div style="max-height:300px;overflow-y:auto;min-width:210px;background:#fffdf9;border:1px solid #e7e5e4;border-radius:6px;box-shadow:0 6px 18px rgba(28,25,23,0.12);padding:4px 0">
+                  <sc-for list="{{ f.options }}" as="o" hint-placeholder-count="4">
+                    <a href="#" onClick="{{ o.pick }}" style="display:block;padding:7px 14px;font-size:13.5px;color:#1c1917;text-decoration:none;font-weight:{{ o.weight }}">{{ o.label }}</a>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+        <div style="display:inline-flex;border:1px solid #e7e5e4;border-radius:6px;overflow:hidden">
+          <sc-for list="{{ sorts }}" as="so" hint-placeholder-count="3">
+            <a href="#" onClick="{{ so.pick }}" style="padding:8px 12px;font-size:12.5px;font-weight:500;text-decoration:none;background:{{ so.bg }};color:{{ so.fg }};border-left:{{ so.border }}">{{ so.label }}</a>
+          </sc-for>
+        </div>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#78716c">{{ countLabel }}</span>
+        <sc-if value="{{ anyFilter }}" hint-placeholder-val="{{ false }}">
+          <a href="#" onClick="{{ clearAll }}" style="font-size:13.5px;font-weight:500;text-decoration:underline;text-underline-offset:2px">Clear all</a>
+        </sc-if>
+      </div>
+      <div style="margin-top:11px;display:flex;flex-wrap:wrap;gap:2px">
+        <sc-for list="{{ alphabet }}" as="l" hint-placeholder-count="26">
+          <a href="#" onClick="{{ l.pick }}" title="{{ l.title }}" style="display:inline-flex;align-items:center;justify-content:center;width:23px;height:23px;border-radius:5px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:{{ l.weight }};text-decoration:none;color:{{ l.color }};background:{{ l.bg }};pointer-events:{{ l.pointer }};opacity:{{ l.opacity }}">{{ l.label }}</a>
+        </sc-for>
+      </div>
+    </div>
+    <!-- axis -->
+    <div style="position:relative;height:22px;margin:0 44px;border-top:1px solid #f1eee7">
+      <div style="position:absolute;left:300px;right:8px;top:0;bottom:0">
+        <sc-for list="{{ ticks }}" as="t" hint-placeholder-count="8">
+          <span style="position:absolute;left:{{ t.left }};transform:translateX(-50%);top:4px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#a8a29e">{{ t.label }}</span>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lanes -->
+  <div style="position:relative;padding:0 44px">
+    <div style="position:absolute;left:344px;right:52px;top:0;bottom:0;z-index:0;pointer-events:none">
+      <sc-for list="{{ gridlines }}" as="g" hint-placeholder-count="8">
+        <span style="position:absolute;left:{{ g.left }};top:0;bottom:0;width:1px;background:{{ g.color }}"></span>
+      </sc-for>
+    </div>
+    <div style="position:relative;z-index:1">
+      <sc-for list="{{ visibleRows }}" as="r" hint-placeholder-count="18">
+        <a href="#" class="row" style="display:grid;grid-template-columns:300px minmax(0,1fr);align-items:center;gap:0;text-decoration:none;color:inherit;border-bottom:1px solid #f4f1ea;padding:5px 8px">
+          <div style="display:flex;align-items:center;gap:10px;min-width:0;padding-right:16px">
+            <span title="{{ r.statusLabel }}" style="flex:none;width:8px;height:8px;border-radius:50%;background:{{ r.dotColor }};border:{{ r.dotBorder }}"></span>
+            <div style="min-width:0">
+              <div style="font-weight:600;font-size:13.5px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ r.name }}<span style="color:#a8a29e;font-weight:400">{{ r.tag }}</span></div>
+              <div style="font-size:11.5px;color:#78716c;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ r.place }}</div>
+            </div>
+          </div>
+          {{ r.track }}
+        </a>
+      </sc-for>
+      <sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}">
+        <div style="padding:44px 16px;text-align:center">
+          <p style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-size:20px;font-weight:600">No matching profiles</p>
+          <a href="#" onClick="{{ clearAll }}" style="display:inline-block;margin-top:8px;font-size:14px;font-weight:500;text-decoration:underline;text-underline-offset:2px">Clear search and filters</a>
+        </div>
+      </sc-if>
+      <sc-if value="{{ loading }}" hint-placeholder-val="{{ false }}">
+        <div style="padding:44px 16px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#a8a29e">loading 155 institutions…</div>
+      </sc-if>
+    </div>
+  </div>
+
+  <div style="padding:20px 44px 40px">
+    <div style="display:flex;flex-wrap:wrap;gap:14px 16px;align-items:center;border-top:1px solid #e7e5e4;padding-top:14px">
+      <span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#78716c">Key</span>
+      <sc-for list="{{ legend }}" as="g" hint-placeholder-count="6">
+        <span style="display:inline-flex;align-items:center;gap:7px;font-size:12px;color:#78716c"><span style="width:9px;height:9px;border-radius:50%;background:{{ g.dot }};border:{{ g.border }}"></span>{{ g.label }}</span>
+      </sc-for>
+      <span style="display:inline-flex;align-items:center;gap:7px;font-size:12px;color:#78716c"><span style="width:9px;height:9px;border-radius:50%;background:#fffdf9;border:1.5px solid #2d6a4f"></span>ends open at today · still living</span>
+      <span style="display:inline-flex;align-items:center;gap:7px;font-size:12px;color:#78716c"><span style="width:8px;height:8px;border-radius:50%;background:#7d1f1f;box-shadow:0 0 0 2.5px rgba(125,31,31,0.18)"></span>current campaign or signal</span>
+    </div>
+    <p style="margin:14px 0 0;max-width:700px;font-size:12px;line-height:1.5;color:#78716c">Institutions only — the physical churches are counted separately in the <a href="#" style="text-decoration:underline;text-underline-offset:2px">building view</a>. All 155 lanes, dates, and profile routes are generated from the canonical publication projection; institutions with no verified founding year appear as a hollow marker at the far right until dated.</p>
+  </div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180,&quot;height&quot;:960}}">
+class Component extends DCLogic {
+  state = { rows: null, query: "", letter: "all", stateF: "all", diocese: "all", sort: "name", openMenu: null, openFilter: null };
+  MIN = 1880; MAX = 2026;
+
+  STATUS = {
+    active_parish:  { label: "Active parish",   bar: "#2d6a4f", dot: "#2d6a4f", border: "none", live: true },
+    mass_continues: { label: "Mass continues",  bar: "#74a892", dot: "#74a892", border: "none", live: true },
+    transferred:    { label: "Transferred",     bar: "#d5c28b", dot: "#d5c28b", border: "none", live: false },
+    unresolved:     { label: "Unresolved",      bar: "#151515", dot: "#151515", border: "none", live: false },
+    closed:         { label: "Closed",          bar: "#7d1f1f", dot: "#7d1f1f", border: "none", live: false },
+    unverified:     { label: "Not yet verified",bar: "#b3aca2", dot: "#fffdf9", border: "1.5px solid #b3aca2", live: false },
+  };
+  STATUS_ORDER = ["active_parish","mass_continues","transferred","unresolved","closed","unverified"];
+
+  componentDidMount() {
+    fetch("data/all-profiles-155.json").then((r) => r.json()).then((rows) => this.setState({ rows }))
+      .catch(() => this.setState({ rows: [] }));
+  }
+
+  x(year) { return ((year - this.MIN) / (this.MAX - this.MIN)) * 100; }
+  short(d) { return d ? d.replace(/^(Arch)?diocese of /i, "") : "—"; }
+
+  track(r) {
+    const meta = this.STATUS[r.status] || this.STATUS.unverified;
+    const col = meta.bar;
+    const kids = [React.createElement("div", { key: "b", style: { position: "absolute", left: 0, right: 8, top: "50%", height: 1, background: "#f4f1ea" } })];
+    if (r.founded == null) {
+      kids.push(React.createElement("div", { key: "nd", style: { position: "absolute", right: 8, top: "50%", transform: "translate(50%,-50%)", width: 8, height: 8, borderRadius: "50%", border: "1.5px dashed #b3aca2", background: "#fffdf9" }, title: "No verified founding year" }));
+      kids.push(React.createElement("span", { key: "q", className: "yr", style: { position: "absolute", right: 8, top: "50%", transform: "translate(18px,-50%)", fontFamily: "'IBM Plex Mono',monospace", fontSize: 10, color: "#c9c2b8" } }, "undated"));
+    } else {
+      const endYear = r.closed != null ? r.closed : this.MAX;
+      const left = this.x(r.founded), width = Math.max(this.x(endYear) - left, 0.5);
+      const pct = (v) => "calc(" + v + "% * (100% - 8px) / 100%)";
+      kids.push(React.createElement("div", { key: "bar", style: { position: "absolute", left: pct(left), width: "calc(" + width + "% * (100% - 8px) / 100%)", top: "50%", transform: "translateY(-50%)", height: 4, borderRadius: 2, background: col } }));
+      kids.push(React.createElement("div", { key: "sd", style: { position: "absolute", left: pct(left), top: "50%", transform: "translate(-50%,-50%)", width: 5, height: 5, borderRadius: "50%", background: col } }));
+      kids.push(React.createElement("span", { key: "fy", className: "yr", style: { position: "absolute", left: pct(left), top: "50%", transform: "translate(-100%,-50%)", paddingRight: 6, fontFamily: "'IBM Plex Mono',monospace", fontSize: 10, color: "#b3aca2" } }, r.founded));
+      if (r.closed != null) {
+        kids.push(React.createElement("div", { key: "ed", style: { position: "absolute", left: pct(this.x(r.closed)), top: "50%", transform: "translate(-50%,-50%)", width: 5, height: 5, borderRadius: "50%", background: col } }));
+        kids.push(React.createElement("span", { key: "cy", className: "yr", style: { position: "absolute", left: pct(this.x(r.closed)), top: "50%", transform: "translate(6px,-50%)", fontFamily: "'IBM Plex Mono',monospace", fontSize: 10, fontWeight: 500, color: "#b3aca2" } }, r.closed));
+      } else if (meta.live) {
+        kids.push(React.createElement("div", { key: "op", style: { position: "absolute", left: pct(this.x(this.MAX)), top: "50%", transform: "translate(-50%,-50%)", width: 8, height: 8, borderRadius: "50%", border: "1.5px solid " + col, background: "#fffdf9" }, title: "Still living today" }));
+      } else {
+        kids.push(React.createElement("div", { key: "og", style: { position: "absolute", left: pct(this.x(this.MAX)), top: "50%", transform: "translate(-50%,-50%)", width: 7, height: 7, borderRadius: "50%", border: "1.5px solid " + col, background: "#fffdf9", opacity: 0.7 }, title: "Ongoing / unresolved end" }));
+      }
+      if (r.signal) {
+        kids.push(React.createElement("div", { key: "sg", style: { position: "absolute", left: pct(this.x(endYear)), top: "50%", transform: "translate(-50%,-50%)", width: 7, height: 7, borderRadius: "50%", background: "#7d1f1f", boxShadow: "0 0 0 2.5px rgba(125,31,31,0.18)" }, title: "Current campaign or signal" }));
+      }
+    }
+    return React.createElement("div", { style: { position: "relative", height: 22 } }, kids);
+  }
+
+  buildDrop(key, label, allLabel, opts) {
+    const s = this.state, cur = s[key], active = cur !== "all";
+    const options = [{ v: "all", label: allLabel }, ...opts].map((o) => ({
+      label: o.label, weight: cur === o.v ? 600 : 400,
+      pick: (e) => { e && e.preventDefault(); this.setState({ [key]: o.v, openFilter: null }); },
+    }));
+    return { label, open: s.openFilter === key, options,
+      borderColor: active ? "#7d1f1f" : "#e7e5e4", bgColor: active ? "rgba(125,31,31,0.05)" : "#fffdf9",
+      textColor: active ? "#7d1f1f" : "#1c1917", dotColor: active ? "#7d1f1f" : "rgba(120,113,108,0.4)",
+      toggle: (e) => { e && e.preventDefault(); this.setState((st) => ({ openFilter: st.openFilter === key ? null : key })); },
+      close: () => this.setState((st) => (st.openFilter === key ? { openFilter: null } : null)) };
+  }
+
+  renderVals() {
+    const s = this.state, rows = s.rows || [];
+    const MENUS = [
+      { label: "Explore", items: ["The History", "Church Buildings Through Time", "Where Parish Life Continued", "Lithuanian Catholic Life Today", "By Diocese", "Pennsylvania Coal Region", "Canadian Comparators", "National & Independent Catholic", "Protestant"] },
+      { label: "Guidance", items: ["Facing a Closure", "Reversals", "What Canon Law Says"] },
+      { label: "About", items: ["About the Project", "About the Data", "Sources & Archives"] },
+    ];
+    const navMenus = MENUS.map((m) => ({ ...m,
+      open: s.openMenu === m.label,
+      enter: () => this.setState({ openMenu: m.label }),
+      leave: () => this.setState((st) => (st.openMenu === m.label ? { openMenu: null } : null)),
+    }));
+
+    const q = s.query.trim().toLowerCase();
+    let filtered = rows.filter((r) =>
+      (s.letter === "all" || (r.name[0] || "").toUpperCase() === s.letter) &&
+      (s.stateF === "all" || r.state === s.stateF) &&
+      (s.diocese === "all" || r.diocese === s.diocese) &&
+      (!q || r.name.toLowerCase().includes(q) || (r.lith || "").toLowerCase().includes(q) || r.city.toLowerCase().includes(q) || r.state.toLowerCase().includes(q) || (r.diocese || "").toLowerCase().includes(q))
+    );
+    const big = 999999;
+    if (s.sort === "name") filtered = filtered.slice().sort((a, b) => a.name.localeCompare(b.name, "lt", { sensitivity: "base" }));
+    if (s.sort === "founded") filtered = filtered.slice().sort((a, b) => (a.founded ?? big) - (b.founded ?? big) || a.name.localeCompare(b.name));
+    if (s.sort === "closed") filtered = filtered.slice().sort((a, b) => (a.closed ?? big) - (b.closed ?? big) || a.name.localeCompare(b.name));
+
+    const visibleRows = filtered.map((r) => {
+      const meta = this.STATUS[r.status] || this.STATUS.unverified;
+      return { name: r.name,
+        tag: r.record === "misija" ? "  · mission" : r.record === "congregation" ? "  · congregation" : "",
+        place: r.city + ", " + r.state + (r.diocese ? "  ·  " + this.short(r.diocese) : ""),
+        statusLabel: meta.label, dotColor: meta.dot, dotBorder: meta.border,
+        track: this.track(r) };
+    });
+
+    const ticks = [1880,1900,1920,1940,1960,1980,2000,2020].map((y) => ({ label: y, left: this.x(y) + "%" }));
+    const gridlines = [1880,1900,1920,1940,1960,1980,2000,2020].map((y) => ({ left: this.x(y) + "%", color: "#f1eee7" }));
+
+    const present = new Set(rows.map((r) => (r.name[0] || "").toUpperCase()));
+    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map((L) => {
+      const has = present.has(L), sel = s.letter === L;
+      return { label: L, title: has ? L : L + " — none",
+        pick: (e) => { e && e.preventDefault(); if (has) this.setState((st) => ({ letter: st.letter === L ? "all" : L })); },
+        weight: sel ? 600 : 400, color: sel ? "#fff" : has ? "#1c1917" : "#d6d0c8",
+        bg: sel ? "#7d1f1f" : "transparent", pointer: has ? "auto" : "none", opacity: has ? 1 : 0.55 };
+    });
+
+    const states = [...new Set(rows.map((r) => r.state))].sort();
+    const dioceses = [...new Set(rows.map((r) => r.diocese).filter(Boolean))].sort();
+    const dropFilters = [
+      this.buildDrop("stateF", s.stateF === "all" ? "State" : s.stateF, "All states", states.map((v) => ({ v, label: v }))),
+      this.buildDrop("diocese", s.diocese === "all" ? "Diocese" : this.short(s.diocese), "All dioceses", dioceses.map((v) => ({ v, label: this.short(v) }))),
+    ];
+
+    const SORTS = [{ k: "name", label: "A–Z" }, { k: "founded", label: "Earliest" }, { k: "closed", label: "Latest ending" }];
+    const sorts = SORTS.map((so, i) => ({ label: so.label,
+      bg: s.sort === so.k ? "#1c1917" : "#fffdf9", fg: s.sort === so.k ? "#fff" : "#1c1917",
+      border: i === 0 ? "none" : "1px solid #e7e5e4",
+      pick: (e) => { e && e.preventDefault(); this.setState({ sort: so.k }); } }));
+
+    const anyFilter = q !== "" || s.letter !== "all" || s.stateF !== "all" || s.diocese !== "all";
+    const total = rows.length;
+    const countLabel = !s.rows ? "…" : anyFilter ? (filtered.length + " / " + total) : (total + " institutions");
+    const legend = this.STATUS_ORDER.map((k) => ({ label: this.STATUS[k].label, dot: this.STATUS[k].dot, border: this.STATUS[k].border }));
+
+    return { navMenus, dropFilters, sorts, alphabet, ticks, gridlines, visibleRows, legend, anyFilter, countLabel, query: s.query,
+      loading: !s.rows, empty: !!s.rows && filtered.length === 0,
+      onQuery: (e) => this.setState({ query: e.target.value }),
+      clearAll: (e) => { e && e.preventDefault(); this.setState({ query: "", letter: "all", stateF: "all", diocese: "all" }); } };
+  }
+}
+</script>
+</body>
+</html>

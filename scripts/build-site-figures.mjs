@@ -11,7 +11,6 @@ const read = (path) =>
 const registry = read("registry-unified.json");
 const projection = read("canonical-publication-projection.json");
 const infographic = read("canonical-infographic-projection.json");
-const revisions = read("registry-revisions.json");
 const context = read("context-points.json");
 const map = read("map.json");
 const registryMap = read("registry-map.json");
@@ -128,7 +127,6 @@ const currentWorshipClasses = new Set([
 const currentWorship = network.entries.filter((entry) =>
   currentWorshipClasses.has(entry.networkClass),
 );
-const latestRevision = revisions.revisions.at(-1);
 const registryMapUS = registryMap.points.filter(
   (point) => point.country === "US",
 ).length;
@@ -148,11 +146,6 @@ expect(
   "public institution ledger count",
   publicInstitutionLedger.counts.publicUSInstitutions,
   usPublic.length,
-);
-expect(
-  "latest revision registry count",
-  latestRevision.registryRecords,
-  records.length,
 );
 expect("public U.S. context points", contextPoints.length, usPublic.length);
 expect(

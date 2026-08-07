@@ -1,6 +1,12 @@
 # Alerts surface — design options (proposal, not built)
 
-**Context:** Parish Watch (culturenet-brain PR #388) produces `alerts.jsonl` — currently 8 red/amber items, refreshed weekly (red) / biweekly (amber) / monthly (full sweep). The Hearth's dispatch queue consumes it directly (out of scope here). Question: how does the *site* surface these? Per data discipline, whatever is chosen lands as a snapshot by PR (`data/alerts.json`), never a live feed.
+> **Superseded 2026-08-06.** This is a historical design proposal, not an
+> operating data contract. Current events are adjudicated in Brain, bound to
+> canonical entity IDs and sources, built as a content-hashed projection, and
+> imported mechanically by the site. `data/alerts.json` is retired and forbidden
+> by the build.
+
+**Historical context:** Parish Watch (culturenet-brain PR #388) produced `alerts.jsonl` for research review.
 
 ## Option A — "Happening now" strip + /now page (recommended)
 
