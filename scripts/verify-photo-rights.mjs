@@ -22,6 +22,7 @@ const VALID = new Set([...CLEARED, "pending_permission"]);
 
 const photos = read("photos.json").parishes;
 const alerts = read("canonical-current-events-projection.json");
+const infographics = read("canonical-infographic-projection.json");
 
 const errors = [];
 let cleared = 0;
@@ -45,6 +46,32 @@ for (const [slug, e] of Object.entries(photos)) {
   }
 }
 
+const activeNetworkClasses = new Set(["active_parish", "active_mission"]);
+const activeNetworkEntries = infographics.current_pastoral_network.directory.entries.filter(
+  (entry) => activeNetworkClasses.has(entry.networkClass),
+);
+for (const entry of activeNetworkEntries) {
+  const institution = infographics.institution_history.find(
+    (candidate) => candidate.registry_slug === entry.registrySlug,
+  );
+  if (!institution) {
+    errors.push(
+      `${entry.id}: active network entry has no institution-history join for ${entry.registrySlug}`,
+    );
+    continue;
+  }
+  const profileSlug = institution.public_profile.replace(/^\/parishes\//, "");
+  const portraitKey = `${profileSlug}-line-drawing`;
+  const portrait = photos[portraitKey];
+  if (!portrait) {
+    errors.push(`${entry.id}: active parish or mission is missing ${portraitKey}`);
+  } else if (!CLEARED.has(portrait.rights)) {
+    errors.push(
+      `${entry.id}: active parish or mission portrait ${portraitKey} is not cleared`,
+    );
+  }
+}
+
 let watchHeld = 0;
 for (const e of alerts.sustainabilityWatch ?? []) {
   if (e.photo && !CLEARED.has(e.photo.rights ?? "")) watchHeld++;
@@ -56,5 +83,5 @@ if (errors.length) {
   process.exit(1);
 }
 console.log(
-  `OK: ${Object.keys(photos).length} photo entries traced — ${cleared} cleared and rendering, ${held} held pending permission; ${watchHeld} watch-entry photos held by the render gate.`,
+  `OK: ${Object.keys(photos).length} photo entries traced — ${cleared} cleared and rendering, ${held} held pending permission; ${activeNetworkEntries.length} active parishes and missions have cleared line drawings; ${watchHeld} watch-entry photos held by the render gate.`,
 );

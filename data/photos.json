@@ -1116,6 +1116,15 @@
       "rights": "permission_granted",
       "rightsNote": "Permission to publish this line-art adaptation was confirmed by Vilija on 2026-07-30. The drawing was created from the exterior photograph on p. 118; source © Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9)."
     },
+    "our-lady-of-siluva-mission-mundelein-il-line-drawing": {
+      "src": "/images/parishes/mundelein-santa-maria-del-popolo-line-drawing.png",
+      "alt": "Line drawing of Santa Maria del Popolo Church in Mundelein, host worship site of Our Lady of Šiluva Lithuanian Mission.",
+      "attribution": "AI-assisted original architectural line drawing by Save Our Lithuanian Parishes, based on the host church exterior published by Santa Maria del Popolo.",
+      "license": "SOLP original illustration",
+      "rights": "own_work",
+      "rightsNote": "Created by Save Our Lithuanian Parishes on 2026-08-07 from the public-facing exterior architecture shown on the official Santa Maria del Popolo website. The illustration records the building form without redistributing the source photograph. Santa Maria del Popolo is the canonical current worship site of Our Lady of Šiluva Lithuanian Mission in Mundelein.",
+      "evidenceUrl": "https://santamariadelpopolo.org/"
+    },
     "svc-m-marijos-nekalto-prasidejimo-chicago-il-line-drawing": {
       "src": "/images/parishes/brighton-park-immaculate-conception-line-drawing.png",
       "alt": "Line drawing of Immaculate Conception Lithuanian church in Brighton Park, Chicago.",
