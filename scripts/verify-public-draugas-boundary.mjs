@@ -53,6 +53,23 @@ for (const required of [
   }
 }
 
+const redirectRoutePath = "app/parishes/[slug]/draugas/route.ts";
+if (!existsSync(join(root, redirectRoutePath))) {
+  errors.push(`${redirectRoutePath}: deployment-safe redirect endpoint is missing`);
+} else {
+  const redirectRoute = readFileSync(join(root, redirectRoutePath), "utf8");
+  for (const required of ["NextResponse.redirect", "308", "/parishes/"]) {
+    if (!redirectRoute.includes(required)) {
+      errors.push(`${redirectRoutePath}: redirect requirement is missing ${required}`);
+    }
+  }
+  for (const forbidden of ["canonical-draugas", "indexedOccurrences", "issues"]) {
+    if (redirectRoute.includes(forbidden)) {
+      errors.push(`${redirectRoutePath}: retired ledger content token remains ${forbidden}`);
+    }
+  }
+}
+
 const profileSources = readFileSync(join(root, "lib/profile-sources.ts"), "utf8");
 const historicalRegistryBlock = profileSources.match(
   /if \(axis === "draugas-registry-1909-2007"\) \{([\s\S]*?)\n\s*\}/,
