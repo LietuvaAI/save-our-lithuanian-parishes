@@ -132,6 +132,57 @@ for (const point of contextPoints) {
       `${point.slug}: context ending ${point.closed ?? "present"} != canonical ${canonical.closed.year ?? "present"}`,
     );
   }
+  if (point.buildingFate !== canonical.building_fate) {
+    errors.push(
+      `${point.slug}: context building fate "${point.buildingFate ?? "not established"}" != canonical "${canonical.building_fate ?? "not established"}"`,
+    );
+  }
+  if (point.buildingFateAuthority !== canonical.building_fate_authority) {
+    errors.push(
+      `${point.slug}: context building-fate authority differs from Brain`,
+    );
+  }
+}
+
+const homepageMapSource = readFileSync(
+  new URL("../components/ParishMap.tsx", import.meta.url),
+  "utf8",
+);
+if (/p\.buildingFate|const\s+bf\s*=/.test(homepageMapSource)) {
+  errors.push("homepage map reads a legacy building-fate field");
+}
+if (!/contextBuildingFateBySlug/.test(homepageMapSource)) {
+  errors.push("homepage map does not read Brain's canonical building-fate projection");
+}
+
+const profileGraphSource = readFileSync(
+  new URL("../lib/parish-record-graph.ts", import.meta.url),
+  "utf8",
+);
+if (!/resolvePhysicalSiteCondition/.test(profileGraphSource)) {
+  errors.push("parish profiles do not use the canonical physical-site resolver");
+}
+if (
+  /CONDITION_PRECEDENCE|CONDITION_LABELS|lifecycleOutcome/.test(
+    profileGraphSource,
+  )
+) {
+  errors.push("parish profiles contain an independent site-condition resolver");
+}
+
+const profilePageSource = readFileSync(
+  new URL("../app/parishes/[slug]/page.tsx", import.meta.url),
+  "utf8",
+);
+if (!/isUsProjection\s*\?\s*\(terminalWorshipSite \?\? null\)/s.test(profilePageSource)) {
+  errors.push("canonical U.S. profiles can still invent a terminal worship site");
+}
+const profileNarrativeSource = readFileSync(
+  new URL("../lib/profile-narrative.ts", import.meta.url),
+  "utf8",
+);
+if (/The church stands, but the parish's final institutional status remains unresolved/.test(profileNarrativeSource)) {
+  errors.push("unresolved institution prose asserts an unproven building condition");
 }
 
 for (const [slug, e] of Object.entries(situations)) {

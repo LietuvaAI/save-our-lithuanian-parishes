@@ -102,8 +102,15 @@ interface Point {
   // congregation_class from registry — drives shape (diamond for PNCC / independent)
   congregationClass: string | null;
   recordType: string | null;
-  // Loss sub-fate for closed dots — same vocabulary as the flow chart.
-  fate: "closed" | "demolished" | "repurposed" | null;
+  // Canonical terminal-site summary for closed institutions. This is an
+  // institution-level projection, not a count of every historical building.
+  fate:
+    | "demolished"
+    | "repurposed"
+    | "standing"
+    | "listed_for_sale"
+    | "not_established"
+    | null;
 }
 
 function communityFilterForPoint(point: Point): CommunityFilter {
@@ -184,6 +191,22 @@ const contextClosedBySlug = new Map(
     (c) => [c.slug, c.closed],
   ),
 );
+const contextBuildingFateBySlug = new Map(
+  (contextPoints.points as {
+    slug: string;
+    buildingFate:
+      | "demolished"
+      | "repurposed"
+      | "standing"
+      | "listed_for_sale"
+      | null;
+  }[]).map((c) => [c.slug, c.buildingFate]),
+);
+
+function canonicalClosedFate(slug: string, group: EndStateGroup): Point["fate"] {
+  if (group !== "closed") return null;
+  return contextBuildingFateBySlug.get(slug) ?? "not_established";
+}
 
 // Build alert lookup: slug → {kind, whatChanged}
 type AlertKind = RecordSignal;
@@ -213,15 +236,7 @@ function buildPoints(): Point[] {
       throw new Error(`${p.slug}: map point is missing canonical context`);
     }
     const status: Status = GROUP_STATUS[group];
-    const fate: Point["fate"] =
-      group !== "closed"
-        ? null
-        : p.buildingFate === "demolished"
-          ? "demolished"
-          : p.buildingFate === "repurposed_secular" ||
-              p.buildingFate === "repurposed_religious"
-            ? "repurposed"
-            : "closed";
+    const fate = canonicalClosedFate(p.slug, group);
 
     pts.push({
       id: p.slug,
@@ -266,15 +281,7 @@ function buildPoints(): Point[] {
       (contextGroupBySlug.get(c.slug) as EndStateGroup | undefined) ??
       (c.closedYear ? "closed" : "unverified");
     const status: Status = GROUP_STATUS[group];
-    const bf = (c as { buildingFate?: string | null }).buildingFate;
-    const fate: Point["fate"] =
-      group !== "closed"
-        ? null
-        : bf === "demolished"
-          ? "demolished"
-          : bf === "repurposed_secular" || bf === "repurposed_religious"
-            ? "repurposed"
-            : "closed";
+    const fate = canonicalClosedFate(c.slug, group);
 
     pts.push({
       id: c.slug,
@@ -380,7 +387,14 @@ export default function ParishMap() {
     () => new Set(STATUS_FILTERS),
   );
   // Sub-filter inside the Closed view — same sub-fates as the flow chart.
-  const [lostFate, setLostFate] = useState<"all" | "closed" | "demolished" | "repurposed">("all");
+  const [lostFate, setLostFate] = useState<
+    | "all"
+    | "demolished"
+    | "repurposed"
+    | "standing"
+    | "listed_for_sale"
+    | "not_established"
+  >("all");
   // The homepage opens on the complete public census. Visitors can narrow to
   // Roman Catholic, National/Independent Catholic, or Protestant records from
   // the key, but the first view must match the 155-institution route contract.
@@ -611,12 +625,19 @@ export default function ParishMap() {
       <div className="overflow-hidden rounded-lg border border-rule">
         {/* How each closure ended — sub-fates, same vocabulary as the flow chart */}
         {closedOnly && (() => {
-          const lostPts = classPoints.filter(
-            (p) => p.group === "closed" && p.recordType !== "misija",
-          );
-          const n = (f: "closed" | "demolished" | "repurposed") =>
+          const lostPts = classPoints.filter((p) => p.group === "closed");
+          const n = (f: Exclude<Point["fate"], null>) =>
             lostPts.filter((p) => p.fate === f).length;
-          const sub = (key: "all" | "closed" | "demolished" | "repurposed", label: string) => (
+          const sub = (
+            key:
+              | "all"
+              | "demolished"
+              | "repurposed"
+              | "standing"
+              | "listed_for_sale"
+              | "not_established",
+            label: string,
+          ) => (
             <button
               key={key}
               type="button"
@@ -634,9 +655,15 @@ export default function ParishMap() {
             <div className="flex flex-wrap items-center gap-1.5 border-b border-rule px-3 py-2 text-xs sm:px-4">
               <span className="text-muted uppercase tracking-wide">How each closure ended:</span>
               {sub("all", `All · ${lostPts.length}`)}
-              {sub("closed", `Parish closed · ${n("closed")}`)}
               {sub("demolished", `Church demolished × · ${n("demolished")}`)}
-              {sub("repurposed", `Building sold on · ${n("repurposed")}`)}
+              {sub("repurposed", `Church repurposed · ${n("repurposed")}`)}
+              {sub("standing", `Church standing · ${n("standing")}`)}
+              {n("listed_for_sale") > 0 &&
+                sub("listed_for_sale", `Listed for sale · ${n("listed_for_sale")}`)}
+              {sub(
+                "not_established",
+                `Condition not established · ${n("not_established")}`,
+              )}
             </div>
           );
         })()}
@@ -800,7 +827,11 @@ export default function ParishMap() {
                   <span className="font-medium">
                     {pointStatusLabel(hovered)}
                     {hovered.fate === "demolished" && " — church demolished"}
-                    {hovered.fate === "repurposed" && " — building sold on"}
+                    {hovered.fate === "repurposed" && " — church repurposed"}
+                    {hovered.fate === "standing" && " — church standing"}
+                    {hovered.fate === "listed_for_sale" && " — listed for sale"}
+                    {hovered.fate === "not_established" &&
+                      " — terminal-site condition not established"}
                   </span>
                   {hovered.alerted && <span className="text-muted text-xs">— active campaign</span>}
                   <span className="text-muted">
