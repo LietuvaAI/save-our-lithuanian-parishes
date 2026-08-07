@@ -65,7 +65,7 @@ export default function ChurchProcession() {
       className="mt-3 border-y border-rule py-1.5"
       aria-label="Lithuanian church line drawings from Shenandoah to Southfield"
     >
-      <div className="grid h-16 grid-cols-8 items-end gap-1 sm:h-20 sm:gap-2">
+      <div className="grid h-14 grid-cols-8 items-end gap-1 sm:gap-2">
         {CHURCHES.map((church) => (
           <Link
             key={church.href}

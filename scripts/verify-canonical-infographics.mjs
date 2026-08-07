@@ -541,6 +541,33 @@ if (
 ) {
   errors.push("homepage population index does not read the canonical projections");
 }
+if (
+  !/activeNetwork\s*=\s*currentPastoralNetwork\.directory\.entries/.test(
+    homepage,
+  ) ||
+  !/institutionHistory\.find/.test(homepage) ||
+  !/activeNetwork\.map/.test(homepage)
+) {
+  errors.push(
+    "homepage living-network cards do not project the Brain pastoral network and institution history",
+  );
+}
+if (
+  !/getClearedPhoto/.test(homepage) ||
+  !/active pastoral-network entry has no cleared line drawing/.test(homepage)
+) {
+  errors.push(
+    "homepage living-network artwork does not fail closed through the photo-rights gate",
+  );
+}
+if (
+  !/activeCampaigns\.length !== alertsData\.counts\.campaigns/.test(homepage) ||
+  /activeCampaigns[\s\S]{0,600}\.slice\(0,\s*4\)/.test(homepage)
+) {
+  errors.push(
+    "homepage campaign rail is truncated or not checked against the Brain current-events projection",
+  );
+}
 if (!/new Set\(COMMUNITY_FILTERS\)/.test(homepageMap)) {
   errors.push("homepage map does not open on all canonical institution classes");
 }
