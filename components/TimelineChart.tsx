@@ -282,7 +282,7 @@ export default function TimelineChart({
     <div>
       {/* ── Sticky detail panel ── */}
       <div
-        className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm border-b border-rule min-h-10 px-3 py-2 text-sm"
+        className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm border-b border-rule min-h-10 px-3 py-2 text-body-copy"
         aria-live="polite"
       >
         {hovered ? (
@@ -487,8 +487,8 @@ export default function TimelineChart({
       </div>
 
       {/* ── Legend — hover or pin an entry to isolate that end state ── */}
-      <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 border-y border-rule py-3 text-sm">
-        <span className="text-xs font-semibold uppercase text-muted">
+      <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 border-y border-rule py-3 text-body-copy">
+        <span className="text-small-copy font-semibold uppercase text-muted">
           End state
         </span>
         {GROUP_ORDER.map((g) => (

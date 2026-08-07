@@ -83,10 +83,10 @@ export default function DioceseGrid({
           {/* Header */}
           <div className="px-4 py-3 border-b border-rule bg-foreground/[0.02]">
             <div className="flex items-baseline justify-between gap-4 flex-wrap">
-              <h2 className="font-serif text-lg font-semibold">
+              <h2 className="font-serif text-subsection-title font-semibold">
                 {d.shortName}
               </h2>
-              <span className="text-sm text-muted">
+              <span className="text-body-copy text-muted">
                 {d.parishes.length}{" "}
                 {d.parishes.length === 1 ? "parish" : "parishes"}
                 {d.closedCount > 0 && ` · ${d.closedCount} closed`}
@@ -101,7 +101,7 @@ export default function DioceseGrid({
             {d.parishes.map((p) => (
               <div
                 key={p.slug}
-                className="flex flex-wrap items-center gap-x-3 gap-y-1 px-4 py-2.5 text-sm"
+                className="flex flex-wrap items-center gap-x-3 gap-y-1 px-4 py-2.5 text-body-copy"
               >
                 <div className="flex-1 min-w-0">
                   {p.profileHref ? (
@@ -114,11 +114,11 @@ export default function DioceseGrid({
                   ) : (
                     <span className="font-medium">{p.name}</span>
                   )}
-                  <span className="ml-2 text-xs text-muted">
+                  <span className="ml-2 text-small-copy text-muted">
                     {p.city}, {p.state}
                   </span>
                 </div>
-                <span className="text-xs text-muted tabular-nums whitespace-nowrap hidden sm:inline">
+                <span className="text-small-copy text-muted tabular-nums whitespace-nowrap hidden sm:inline">
                   {p.founded == null && p.closed == null
                     ? "—"
                     : `${p.founded ?? "?"}–${

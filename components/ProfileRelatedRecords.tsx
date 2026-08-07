@@ -28,7 +28,7 @@ export function ProfileRelatedRecords({
               {record.kind}
             </span>
             <div>
-              <p className="text-sm font-semibold leading-snug">
+              <p className="text-body-copy font-semibold leading-snug">
                 {record.href ? (
                   <Link
                     href={record.href}

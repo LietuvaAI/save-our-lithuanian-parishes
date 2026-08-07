@@ -706,7 +706,7 @@ export default async function ParishPage({
         Among its neighbours
       </p>
       {entry.diocese && (
-        <p className="mt-2 font-serif text-sm">{entry.diocese}</p>
+        <p className="mt-2 font-serif text-body-copy">{entry.diocese}</p>
       )}
       <div className="mt-2.5">
         <ParishContextMap
@@ -772,8 +772,8 @@ export default async function ParishPage({
                 <p className="font-mono text-[10.5px] uppercase tracking-[0.15em] text-muted">
                   {institution}
                 </p>
-                <p className="mt-3 font-serif text-2xl font-semibold">{name}</p>
-                <p className="mt-1 text-sm text-muted">
+                <p className="mt-3 font-serif text-section-title font-semibold">{name}</p>
+                <p className="mt-1 text-body-copy text-muted">
                   {entry.city}
                   {entry.state ? `, ${entry.state}` : ""}
                 </p>
@@ -793,10 +793,10 @@ export default async function ParishPage({
         </div>
 
         <div className="min-w-0">
-          <h1 className="font-serif text-3xl font-semibold leading-tight [overflow-wrap:anywhere]">
+          <h1 className="font-serif text-page-title font-semibold leading-tight [overflow-wrap:anywhere]">
             {name}
           </h1>
-          <p className="mt-2.5 font-serif text-base text-muted">
+          <p className="mt-2.5 font-serif text-card-title text-muted">
             {altName ? `${altName} \u00b7 ` : ""}
             {entry.city}
             {entry.state ? `, ${entry.state}` : ""}
@@ -868,7 +868,7 @@ export default async function ParishPage({
                     <dt className="font-mono text-[10.5px] font-medium uppercase tracking-[0.09em] text-muted">
                       {fact.label}
                     </dt>
-                    <dd className="mt-1.5 text-sm leading-snug">
+                    <dd className="mt-1.5 text-body-copy leading-snug">
                       {fact.href ? (
                         <Link className="underline underline-offset-2" href={fact.href}>
                           {fact.value}
@@ -877,7 +877,7 @@ export default async function ParishPage({
                         fact.value
                       )}
                       {fact.detail && (
-                        <span className="mt-1 block text-xs leading-relaxed text-muted">
+                        <span className="mt-1 block text-small-copy leading-relaxed text-muted">
                           {fact.detail}
                         </span>
                       )}
@@ -899,7 +899,7 @@ export default async function ParishPage({
                             )}
                           </span>
                           {fact.secondary.detail && (
-                            <span className="mt-1 block text-xs leading-relaxed text-muted">
+                            <span className="mt-1 block text-small-copy leading-relaxed text-muted">
                               {fact.secondary.detail}
                             </span>
                           )}
@@ -921,7 +921,7 @@ export default async function ParishPage({
               <p className="font-mono text-[10.5px] font-medium uppercase tracking-[0.15em] text-muted">
                 {notice.label}
               </p>
-              <p className="mt-2 text-sm leading-relaxed">{notice.text}</p>
+              <p className="mt-2 text-body-copy leading-relaxed">{notice.text}</p>
             </div>
           ))}
 
@@ -936,7 +936,7 @@ export default async function ParishPage({
               <p className="font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
                 {currentSignalLabel}
               </p>
-              <p className="mt-2 text-sm leading-relaxed">
+              <p className="mt-2 text-body-copy leading-relaxed">
                 {parishAlert.whatChanged}
               </p>
               <div className="mt-3.5 flex flex-wrap gap-2.5">
@@ -945,7 +945,7 @@ export default async function ParishPage({
                     href={parishCampaign.hearthUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3.5 py-2 text-sm font-medium text-background"
+                    className="px-3.5 py-2 text-body-copy font-medium text-background"
                     style={{ background: "var(--accent)" }}
                   >
                     How to help &rarr;
@@ -953,7 +953,7 @@ export default async function ParishPage({
                 )}
                 <Link
                   href="/#happening-now"
-                  className="border border-rule px-3.5 py-2 text-sm font-medium hover:border-foreground"
+                  className="border border-rule px-3.5 py-2 text-body-copy font-medium hover:border-foreground"
                 >
                   All current campaigns &rarr;
                 </Link>
@@ -987,7 +987,7 @@ export default async function ParishPage({
           <p className="font-mono text-[10.5px] font-medium uppercase tracking-[0.15em] text-muted">
             Scope
           </p>
-          <p className="max-w-[38em] bg-band px-5 py-4 text-sm leading-relaxed text-foreground">
+          <p className="max-w-[38em] bg-band px-5 py-4 text-body-copy leading-relaxed text-foreground">
             This Canadian parish is included for comparison with Lithuanian
             parish life in the United States. It remains outside the U.S.
             national totals and map.

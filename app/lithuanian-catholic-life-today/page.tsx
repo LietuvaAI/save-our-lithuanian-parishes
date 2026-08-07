@@ -240,12 +240,12 @@ function NetworkEntryRow({ entry }: { entry: NetworkEntry }) {
           <h3 className="font-serif font-semibold leading-snug">
             {entry.nameLt}
           </h3>
-          <p className="mt-0.5 text-xs text-muted">
+          <p className="mt-0.5 text-small-copy text-muted">
             {entry.city}, {entry.state}
           </p>
         </div>
         <div className="flex shrink-0 flex-col items-end gap-1">
-          <span className="text-xs font-medium text-muted">
+          <span className="text-small-copy font-medium text-muted">
             {CLASS_LABEL[entry.networkClass]}
           </span>
           {sustainability ? (
@@ -265,7 +265,7 @@ function NetworkEntryRow({ entry }: { entry: NetworkEntry }) {
           <p className="mt-1">
             <DiocesanLeaderLink diocese={sustainability.diocese} />
           </p>
-          <dl className="mt-2 grid gap-x-3 gap-y-1 text-xs sm:grid-cols-3">
+          <dl className="mt-2 grid gap-x-3 gap-y-1 text-small-copy sm:grid-cols-3">
             <div>
               <dt className="inline text-muted">Clergy: </dt>
               <dd className="inline font-medium">
@@ -290,7 +290,7 @@ function NetworkEntryRow({ entry }: { entry: NetworkEntry }) {
           </dl>
         </>
       ) : null}
-      <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-xs">
+      <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-small-copy">
         {profileHref ? (
           <Link
             href={profileHref}
@@ -323,13 +323,13 @@ function NetworkEntryRow({ entry }: { entry: NetworkEntry }) {
 export default function LithuanianCatholicLifeTodayPage() {
   return (
     <article className="mx-auto max-w-5xl px-4 pt-12 pb-2">
-      <p className="text-xs uppercase text-muted">
+      <p className="text-small-copy uppercase text-muted">
         Current U.S. view
       </p>
-      <h1 className="mt-1 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
+      <h1 className="mt-1 font-serif text-page-title font-semibold leading-tight">
         Lithuanian Catholic life today
       </h1>
-      <p className="mt-4 max-w-3xl font-serif text-xl leading-relaxed sm:text-2xl">
+      <p className="mt-4 max-w-3xl font-serif text-section-title leading-relaxed sm:text-section-title">
         Where does Lithuanian Catholic worship still gather in the United
         States?
       </p>
@@ -369,10 +369,10 @@ export default function LithuanianCatholicLifeTodayPage() {
             ]}
           />
           <div>
-            <p className="font-serif text-6xl font-semibold leading-none">
+            <p className="font-serif text-page-title font-semibold leading-none">
               {worshipEntries.length}
             </p>
-            <h2 className="mt-3 font-serif text-2xl font-semibold leading-tight">
+            <h2 className="mt-3 font-serif text-section-title font-semibold leading-tight">
               places still gather for Lithuanian Catholic worship
             </h2>
             <p className="mt-3 leading-relaxed text-muted">
@@ -383,7 +383,7 @@ export default function LithuanianCatholicLifeTodayPage() {
               by another parish. The surviving network reaches{" "}
               {worshipStateCount} states.
             </p>
-            <p className="mt-3 text-xs leading-relaxed text-muted">
+            <p className="mt-3 text-small-copy leading-relaxed text-muted">
               “Lithuanian parish” and “Lithuanian mission” here mean a
               Sielovada-listed community with verified current Lithuanian
               pastoral ministry. A Catholic parish may remain juridically open
@@ -391,7 +391,7 @@ export default function LithuanianCatholicLifeTodayPage() {
             </p>
           </div>
         </div>
-        <p className="mt-5 border-t border-rule pt-3 text-xs leading-relaxed text-muted">
+        <p className="mt-5 border-t border-rule pt-3 text-small-copy leading-relaxed text-muted">
           Scope: {Number(networkDirectory.counts.listed)} official
           U.S. network listings; map population: {worshipEntries.length} places
           with current worship · Checked{" "}
@@ -427,7 +427,7 @@ export default function LithuanianCatholicLifeTodayPage() {
       <section className="mt-12" aria-labelledby="worship-network-heading">
         <h2
           id="worship-network-heading"
-          className="font-serif text-2xl font-semibold"
+          className="font-serif text-section-title font-semibold"
         >
           Inspect the living network
         </h2>
@@ -444,7 +444,7 @@ export default function LithuanianCatholicLifeTodayPage() {
             );
             return (
               <div key={networkClass}>
-                <h3 className="text-sm font-semibold">
+                <h3 className="font-sans text-card-title font-semibold">
                   {label} · {group.length}
                 </h3>
                 <div className="mt-2">

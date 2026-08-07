@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-12">
-      <p className="text-xs uppercase tracking-widest text-muted">About</p>
-      <h1 className="mt-1 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
+      <p className="text-small-copy uppercase tracking-widest text-muted">About</p>
+      <h1 className="mt-1 font-serif text-page-title font-semibold leading-tight">
         About the Project
       </h1>
-      <p className="mt-4 font-serif text-xl leading-relaxed sm:text-2xl">
+      <p className="mt-4 font-serif text-section-title leading-relaxed sm:text-section-title">
         The past is a torch to the present. America&rsquo;s Lithuanian parishes
         have long been the <em>židiniai</em>{" "}of our
         communities&mdash;the hearths where faith was lived, language was
@@ -28,7 +28,7 @@ export default function AboutPage() {
         illuminate the path ahead, because no individual parish should have to
         find its way in darkness.
       </p>
-      <p className="mt-3 text-sm font-medium">
+      <p className="mt-3 text-body-copy font-medium">
         This record is powered by books scanned and catalogued at{" "}
         <Link
           href="/parishes/dievo-apvaizdos-southfield-mi"
@@ -51,7 +51,7 @@ export default function AboutPage() {
       <AboutNav current="project" />
 
       <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">Why it exists</h2>
+        <h2 className="font-serif text-section-title font-semibold">Why it exists</h2>
         <div className="mt-3 space-y-4 leading-relaxed">
           <p>
             No parish should have to understand its past or face its future
@@ -65,11 +65,11 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-12">
-        <h2 className="font-serif text-2xl font-semibold">What we are building</h2>
+        <h2 className="font-serif text-section-title font-semibold">What we are building</h2>
         <div className="mt-4 grid gap-6 sm:grid-cols-3">
           <div>
             <h3 className="font-medium">A connected parish record</h3>
-            <p className="mt-1 text-sm leading-relaxed text-muted">
+            <p className="mt-1 text-body-copy leading-relaxed text-muted">
               Each parish profile is meant to tell one coherent story across
               founding, worship, community life, governance, turning points,
               present condition, and the evidence behind the record.
@@ -77,7 +77,7 @@ export default function AboutPage() {
           </div>
           <div>
             <h3 className="font-medium">A bridge between archive and present</h3>
-            <p className="mt-1 text-sm leading-relaxed text-muted">
+            <p className="mt-1 text-body-copy leading-relaxed text-muted">
               Historical research explains how a community arrived here.
               Current parish, diocesan, civil, and community sources show what
               is happening now.
@@ -85,7 +85,7 @@ export default function AboutPage() {
           </div>
           <div>
             <h3 className="font-medium">Shared knowledge communities can use</h3>
-            <p className="mt-1 text-sm leading-relaxed text-muted">
+            <p className="mt-1 text-body-copy leading-relaxed text-muted">
               The record connects communities facing similar questions while
               keeping documented history, present-day alerts, interpretation,
               and advocacy visibly distinct.
@@ -95,14 +95,14 @@ export default function AboutPage() {
       </section>
 
       <section className="-mx-4 mt-12 bg-band px-4 py-8 sm:-mx-6 sm:px-6">
-        <p className="text-xs uppercase tracking-widest text-muted">
+        <p className="text-small-copy uppercase tracking-widest text-muted">
           The next generation
         </p>
-        <h2 className="mt-1 font-serif text-2xl font-semibold">
+        <h2 className="mt-1 font-serif text-section-title font-semibold">
           Built by the next generation
         </h2>
         <div className="mt-4 space-y-4 leading-relaxed">
-          <p className="text-lg">
+          <p className="text-subsection-title">
             <a
               href="https://archyvas.ziburioltmokykla.org"
               target="_blank"
@@ -141,7 +141,7 @@ export default function AboutPage() {
             href="https://archyvas.ziburioltmokykla.org/internship"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded-md px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            className="inline-block rounded-md px-4 py-2 text-body-copy font-semibold text-white transition-opacity hover:opacity-90"
             style={{ background: "var(--mark-closed)" }}
           >
             Explore the student internship
@@ -150,7 +150,7 @@ export default function AboutPage() {
             href="https://archyvas.ziburioltmokykla.org"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded-md border border-rule px-4 py-2 text-sm font-medium transition-colors hover:border-foreground"
+            className="inline-block rounded-md border border-rule px-4 py-2 text-body-copy font-medium transition-colors hover:border-foreground"
           >
             Visit the public archive
           </a>
@@ -158,7 +158,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-12">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           Principles of the project
         </h2>
         <div className="mt-4 space-y-4 leading-relaxed">
@@ -183,7 +183,7 @@ export default function AboutPage() {
             behind a change.
           </p>
         </div>
-        <p className="mt-4 text-sm leading-relaxed text-muted">
+        <p className="mt-4 text-body-copy leading-relaxed text-muted">
           The detailed rules live in{" "}
           <Link href="/about-the-data" className="underline hover:text-foreground">
             About the Data
@@ -200,7 +200,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-12">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           In the tradition of the book carriers
         </h2>
         <div className="mt-3 space-y-4 leading-relaxed">
@@ -220,24 +220,24 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-12">
-        <h2 className="font-serif text-xl font-semibold">
+        <h2 className="font-serif text-subsection-title font-semibold">
           Help the record grow
         </h2>
-        <p className="mt-2 text-sm leading-relaxed text-muted">
+        <p className="mt-2 text-body-copy leading-relaxed text-muted">
           Corrections, documents, parish news, photographs, and memories are
           welcome. Reports are reviewed before publication.
         </p>
         <div className="mt-4 flex flex-wrap gap-3">
           <Link
             href="/report"
-            className="inline-block rounded-md px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            className="inline-block rounded-md px-4 py-2 text-body-copy font-semibold text-white transition-opacity hover:opacity-90"
             style={{ background: "var(--mark-closed)" }}
           >
             Report from your parish
           </Link>
           <a
             href="https://blog.saveourlithuanianparishes.org/subscribe"
-            className="inline-block rounded-md border border-rule px-4 py-2 text-sm font-medium transition-colors hover:border-foreground"
+            className="inline-block rounded-md border border-rule px-4 py-2 text-body-copy font-medium transition-colors hover:border-foreground"
           >
             Follow Židinys
           </a>

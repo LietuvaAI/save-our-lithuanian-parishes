@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 export default function LegalPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-12">
-      <h1 className="font-serif text-3xl sm:text-4xl font-semibold leading-tight">
+      <h1 className="font-serif text-page-title font-semibold leading-tight">
         Legal, attribution &amp; data use
       </h1>
 
       <section className="mt-8">
-        <h2 className="font-serif text-2xl font-semibold">Who we are</h2>
+        <h2 className="font-serif text-section-title font-semibold">Who we are</h2>
         <p className="mt-2 leading-relaxed">
           SaveOurLithuanianParishes.org is an independent documentation and
           advocacy initiative, powered by <strong>Lietuva.AI</strong>. It is
@@ -28,7 +28,7 @@ export default function LegalPage() {
       </section>
 
       <section className="mt-8">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           Not legal or canonical advice
         </h2>
         <p className="mt-2 leading-relaxed">
@@ -53,7 +53,7 @@ export default function LegalPage() {
       </section>
 
       <section className="mt-8">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           Accuracy &amp; corrections
         </h2>
         <p className="mt-2 leading-relaxed">
@@ -81,7 +81,7 @@ export default function LegalPage() {
       </section>
 
       <section className="mt-8">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           Sources &amp; attribution
         </h2>
         <p className="mt-2 leading-relaxed">
@@ -137,7 +137,7 @@ export default function LegalPage() {
       </section>
 
       <section className="mt-8">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           Copyright &amp; fair use
         </h2>
         <p className="mt-2 leading-relaxed">
@@ -160,7 +160,7 @@ export default function LegalPage() {
       </section>
 
       <section className="mt-8">
-        <h2 className="font-serif text-2xl font-semibold">Using our data</h2>
+        <h2 className="font-serif text-section-title font-semibold">Using our data</h2>
         <p className="mt-2 leading-relaxed">
           Verification is always free — anyone may read, check, and cite
           this record. Our dataset and the site&rsquo;s original text are
@@ -194,7 +194,7 @@ export default function LegalPage() {
           </a>{" "}
           on GitHub, where the dataset lives. Suggested citation:
         </p>
-        <p className="mt-3 rounded-md border border-rule px-4 py-3 text-sm leading-relaxed">
+        <p className="mt-3 rounded-md border border-rule px-4 py-3 text-body-copy leading-relaxed">
           Save Our Lithuanian Parishes, <em>The Record of America&rsquo;s
           Lithuanian Parishes</em> (2026), saveourlithuanianparishes.org —
           an initiative powered by Lietuva.AI. Underlying sources as cited
@@ -203,7 +203,7 @@ export default function LegalPage() {
       </section>
 
       <section className="mt-8">
-        <h2 className="font-serif text-2xl font-semibold">Privacy</h2>
+        <h2 className="font-serif text-section-title font-semibold">Privacy</h2>
         <p className="mt-2 leading-relaxed">
           This site runs no ads, sets no marketing cookies, and asks for no
           accounts. Standard technical logs are kept by our hosting

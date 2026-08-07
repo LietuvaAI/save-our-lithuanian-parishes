@@ -69,7 +69,7 @@ export default function DioceseMap({
   return (
     <div>
       {/* Hover readout — fixed height so the map doesn't jump */}
-      <div className="min-h-6 mb-1.5 text-sm" aria-live="polite">
+      <div className="min-h-6 mb-1.5 text-body-copy" aria-live="polite">
         {hov ? (
           <span>
             <span className="font-serif font-semibold">
@@ -175,7 +175,7 @@ export default function DioceseMap({
       </svg>
 
       {/* Legend: sequential ramp */}
-      <div className="mt-2 flex flex-wrap items-center gap-3 text-xs text-muted">
+      <div className="mt-2 flex flex-wrap items-center gap-3 text-small-copy text-muted">
         <span className="inline-flex items-center gap-1.5">
           <span className="flex h-3 w-28 rounded-sm overflow-hidden" aria-hidden>
             {[0, 0.25, 0.5, 0.75, 1].map((s) => (

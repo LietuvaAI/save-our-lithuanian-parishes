@@ -228,10 +228,10 @@ export default function HistoryPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
-      <p className="text-xs uppercase tracking-widest text-muted">
+      <p className="text-small-copy uppercase tracking-widest text-muted">
         A chronological view · 1870s to today
       </p>
-      <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
+      <h1 className="mt-1 font-serif text-page-title font-semibold leading-tight">
         The History
       </h1>
       <div className="mt-3 space-y-4 leading-relaxed max-w-3xl">
@@ -245,7 +245,7 @@ export default function HistoryPage() {
           factory cities, and urban neighborhoods from Shenandoah to Chicago,
           with the latest as recent as the 1990s.
         </p>
-        <p className="text-sm text-muted">
+        <p className="text-body-copy text-muted">
           The complete profile directory contains {fullRecordTotal} entries. Its other{" "}
           {fullRecordTotal - total} entries are {romanCatholicMissions} Roman
           Catholic missions and {otherCommunities} National, independent, or
@@ -259,16 +259,16 @@ export default function HistoryPage() {
           than one site.
         </p>
         <p
-          className="font-serif text-lg"
+          className="font-serif text-subsection-title"
           style={{ color: "var(--es-active)" }}
         >
           {standing} still stand as Lithuanian parishes today
-          <span className="text-muted font-sans text-base">
+          <span className="text-muted font-sans text-card-title">
             {" "}&mdash; and at {hostedMass} more churches, a Lithuanian Mass
             continues within a parish that is no longer Lithuanian.
           </span>
         </p>
-        <p className="text-sm text-muted">
+        <p className="text-body-copy text-muted">
           For the present-day pastoral network &mdash; including missions,
           hosted Lithuanian Masses, communities, and religious houses &mdash;
           see{" "}
@@ -297,7 +297,7 @@ export default function HistoryPage() {
                 unoptimized
               />
             </div>
-            <figcaption className="mt-2 text-xs leading-relaxed text-muted">
+            <figcaption className="mt-2 text-small-copy leading-relaxed text-muted">
               <a
                 href={firstParishPhoto.evidenceUrl}
                 target="_blank"
@@ -310,19 +310,19 @@ export default function HistoryPage() {
           </figure>
 
           <div className="min-w-0">
-            <p className="text-xs font-semibold uppercase text-muted">
+            <p className="text-small-copy font-semibold uppercase text-muted">
               The beginning
             </p>
-            <h2 className="mt-1 font-serif text-2xl font-semibold leading-tight sm:text-3xl">
+            <h2 className="mt-1 font-serif text-section-title font-semibold leading-tight">
               The first Lithuanian parish in America
             </h2>
             <div className="mt-4 grid grid-cols-[8rem_minmax(0,1fr)] items-center gap-4 border-y border-rule py-3">
               <FirstParishLocatorMap />
               <div>
-                <p className="text-xs font-semibold uppercase text-muted">
+                <p className="text-small-copy font-semibold uppercase text-muted">
                   Where the parish story begins
                 </p>
-                <p className="mt-1 font-serif text-lg font-semibold">
+                <p className="mt-1 font-serif text-subsection-title font-semibold">
                   Shenandoah, Pennsylvania
                 </p>
               </div>
@@ -347,7 +347,7 @@ export default function HistoryPage() {
               Read the full St. George parish profile
             </Link>
 
-            <div className="mt-5 border-t border-rule pt-4 text-xs leading-relaxed text-muted">
+            <div className="mt-5 border-t border-rule pt-4 text-small-copy leading-relaxed text-muted">
               <p className="font-semibold text-foreground">Sources</p>
               <p className="mt-1">
                 <a
@@ -388,10 +388,10 @@ export default function HistoryPage() {
 
       {/* ── The exhibit: decade pulse + timeline (one title system) ── */}
       <section className="mt-14">
-        <p className="text-xs font-semibold uppercase text-muted">
+        <p className="text-small-copy font-semibold uppercase text-muted">
           Two waves across a century
         </p>
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           A half-century of building; a half-century of closing
         </h2>
         <p className="mt-2 max-w-3xl leading-relaxed text-muted">
@@ -402,43 +402,43 @@ export default function HistoryPage() {
 
         <div className="mt-6 grid grid-cols-2 border-y border-rule sm:grid-cols-4">
           <div className="border-b border-r border-rule px-3 py-4 sm:border-b-0">
-            <p className="font-serif text-3xl font-semibold">
+            <p className="font-serif text-page-title font-semibold">
               {narrative.peakFoundN}
             </p>
-            <p className="mt-1 text-xs leading-snug text-muted">
+            <p className="mt-1 text-small-copy leading-snug text-muted">
               founded in the {narrative.peakFoundDecade}s
             </p>
           </div>
           <div className="border-b border-rule px-3 py-4 sm:border-b-0 sm:border-r">
             <p
-              className="font-serif text-3xl font-semibold"
+              className="font-serif text-page-title font-semibold"
               style={{ color: "var(--es-closed)" }}
             >
               {narrative.peakClosedN}
             </p>
-            <p className="mt-1 text-xs leading-snug text-muted">
+            <p className="mt-1 text-small-copy leading-snug text-muted">
               closed in the {narrative.peakClosedDecade}s
             </p>
           </div>
           <div className="border-r border-rule px-3 py-4">
-            <p className="font-serif text-3xl font-semibold">
+            <p className="font-serif text-page-title font-semibold">
               {narrative.closedSince1990}
             </p>
-            <p className="mt-1 text-xs leading-snug text-muted">
+            <p className="mt-1 text-small-copy leading-snug text-muted">
               closures dated since 1990
             </p>
           </div>
           <div className="px-3 py-4">
-            <p className="font-serif text-3xl font-semibold">
+            <p className="font-serif text-page-title font-semibold">
               {narrative.closedSince2020}
             </p>
-            <p className="mt-1 text-xs leading-snug text-muted">
+            <p className="mt-1 text-small-copy leading-snug text-muted">
               closures dated since 2020
             </p>
           </div>
         </div>
 
-        <div className="mt-6 grid border-y border-rule text-xs leading-snug text-muted sm:grid-cols-4 sm:divide-x sm:divide-rule">
+        <div className="mt-6 grid border-y border-rule text-small-copy leading-snug text-muted sm:grid-cols-4 sm:divide-x sm:divide-rule">
           <p className="border-b border-rule px-3 py-3 sm:border-b-0">
             <span className="mr-2 font-semibold text-foreground">↑</span>
             Above the line: parishes founded
@@ -470,30 +470,30 @@ export default function HistoryPage() {
           {narrative.medianLifespan != null && (
             <div className="border-b border-rule px-3 py-4 sm:border-b-0">
               <p
-                className="font-serif text-3xl font-semibold"
+                className="font-serif text-page-title font-semibold"
                 style={{ color: "var(--es-closed)" }}
               >
                 {narrative.medianLifespan} years
               </p>
-              <p className="mt-1 text-xs leading-snug text-muted">
+              <p className="mt-1 text-small-copy leading-snug text-muted">
                 median lifespan among closed parishes
               </p>
             </div>
           )}
           <div className="px-3 py-4">
             <p
-              className="font-serif text-3xl font-semibold"
+              className="font-serif text-page-title font-semibold"
               style={{ color: "var(--es-closed)" }}
             >
               {narrative.closureShareSince1990}%
             </p>
-            <p className="mt-1 text-xs leading-snug text-muted">
+            <p className="mt-1 text-small-copy leading-snug text-muted">
               of all closed parishes have a dated closure since 1990
             </p>
           </div>
         </div>
 
-        <p className="mt-4 text-xs text-muted border-t border-rule pt-3">
+        <p className="mt-4 text-small-copy text-muted border-t border-rule pt-3">
           Sources include Draugas 1909&ndash;2026, Wolkovich-Valkavičius
           (1998), Michelsonas (1961), Lukas (2009), and contemporary parish,
           diocesan, and public documents.{" "}
@@ -508,18 +508,18 @@ export default function HistoryPage() {
         aria-label="Related history views"
         className="mt-12 border-y border-rule py-5"
       >
-        <p className="text-xs font-semibold uppercase text-muted">
+        <p className="text-small-copy font-semibold uppercase text-muted">
           Continue exploring
         </p>
         <div className="mt-3 grid gap-4 sm:grid-cols-2 sm:divide-x sm:divide-rule">
           <div className="sm:pr-5">
             <Link
               href="/where-every-parish-ended-up"
-              className="font-serif text-lg font-semibold underline hover:text-accent"
+              className="font-serif text-subsection-title font-semibold underline hover:text-accent"
             >
               Lithuanian Churches Through Time
             </Link>
-            <p className="mt-1 text-sm leading-relaxed text-muted">
+            <p className="mt-1 text-body-copy leading-relaxed text-muted">
               Follow each church community from its documented building or
               parish baseline to its present condition.
             </p>
@@ -527,11 +527,11 @@ export default function HistoryPage() {
           <div className="sm:pl-5">
             <Link
               href="/by-diocese"
-              className="font-serif text-lg font-semibold underline hover:text-accent"
+              className="font-serif text-subsection-title font-semibold underline hover:text-accent"
             >
               By Diocese
             </Link>
-            <p className="mt-1 text-sm leading-relaxed text-muted">
+            <p className="mt-1 text-body-copy leading-relaxed text-muted">
               Compare parish histories, closure outcomes, and present holdings
               diocese by diocese.
             </p>
@@ -540,11 +540,11 @@ export default function HistoryPage() {
         <div className="mt-4 border-t border-rule pt-4">
           <Link
             href="/where-parish-life-continued"
-            className="font-serif text-lg font-semibold underline hover:text-accent"
+            className="font-serif text-subsection-title font-semibold underline hover:text-accent"
           >
             Where Parish Life Continued
           </Link>
-          <p className="mt-1 max-w-2xl text-sm leading-relaxed text-muted">
+          <p className="mt-1 max-w-2xl text-body-copy leading-relaxed text-muted">
             Follow mergers, successors, and canonical continuity while keeping
             distinct parish institutions separate.
           </p>

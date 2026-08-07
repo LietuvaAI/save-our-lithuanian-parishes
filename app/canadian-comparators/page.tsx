@@ -37,13 +37,13 @@ function canadianOwnershipLabel(parish: CanadianComparator) {
 export default function CanadianComparatorsPage() {
   return (
     <article className="mx-auto max-w-4xl px-4 py-12">
-      <p className="text-xs uppercase text-muted">
+      <p className="text-small-copy uppercase text-muted">
         Comparative view
       </p>
-      <h1 className="mt-1 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
+      <h1 className="mt-1 font-serif text-page-title font-semibold leading-tight">
         Canadian comparators
       </h1>
-      <p className="mt-4 max-w-3xl font-serif text-xl leading-relaxed sm:text-2xl">
+      <p className="mt-4 max-w-3xl font-serif text-section-title leading-relaxed sm:text-section-title">
         What changes when the parish community has a formal role in the
         property and in the decision about its future?
       </p>
@@ -51,10 +51,10 @@ export default function CanadianComparatorsPage() {
       <section className="mt-10 border-y border-rule py-8">
         <div className="grid gap-8 lg:grid-cols-[minmax(14rem,0.55fr)_minmax(0,1.45fr)] lg:items-center">
           <div>
-            <p className="font-serif text-6xl font-semibold leading-none">
+            <p className="font-serif text-page-title font-semibold leading-none">
               {activeParishes.length} of {canadianParishes.length}
             </p>
-            <h2 className="mt-3 font-serif text-2xl font-semibold leading-tight">
+            <h2 className="mt-3 font-serif text-section-title font-semibold leading-tight">
               remain active Lithuanian parishes
             </h2>
             <p className="mt-3 leading-relaxed text-muted">
@@ -64,7 +64,7 @@ export default function CanadianComparatorsPage() {
           </div>
 
           <div aria-label="Ownership, decision, and outcome for the three Canadian comparator parishes">
-            <div className="hidden grid-cols-[1fr_1fr_auto] gap-4 border-b border-rule pb-2 text-xs uppercase text-muted sm:grid">
+            <div className="hidden grid-cols-[1fr_1fr_auto] gap-4 border-b border-rule pb-2 text-small-copy uppercase text-muted sm:grid">
               <span>Ownership</span>
               <span>Decision</span>
               <span>Today</span>
@@ -82,14 +82,14 @@ export default function CanadianComparatorsPage() {
                     >
                       {parish.name}
                     </Link>
-                    <p className="text-xs text-muted">
+                    <p className="text-small-copy text-muted">
                       {parish.city}, {parish.province}
                     </p>
-                    <p className="mt-1 text-sm">
+                    <p className="mt-1 text-body-copy">
                       {canadianOwnershipLabel(parish)}
                     </p>
                   </div>
-                  <p className="text-sm leading-relaxed text-muted">
+                  <p className="text-body-copy leading-relaxed text-muted">
                     {parish.ending_mode === "community_decided"
                       ? "The parish community chose the ending."
                       : "Parish governance continues under Quebec civil law."}
@@ -100,7 +100,7 @@ export default function CanadianComparatorsPage() {
             </div>
           </div>
         </div>
-        <p className="mt-5 border-t border-rule pt-3 text-xs leading-relaxed text-muted">
+        <p className="mt-5 border-t border-rule pt-3 text-small-copy leading-relaxed text-muted">
           Scope: {canadianParishes.length} Canadian comparator parishes;
           excluded from every U.S. headline figure
           {" · "}

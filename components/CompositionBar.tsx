@@ -57,7 +57,7 @@ export default function CompositionBar({
         })}
       </div>
       {/* Labels beneath — big segments direct-labeled, the rest in the row */}
-      <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+      <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-body-copy">
         {present.map((g) => (
           <span key={g} className="inline-flex items-center gap-1.5">
             <span
@@ -65,7 +65,7 @@ export default function CompositionBar({
               style={{ background: END_STATE_COLOR[g] }}
             />
             {GROUP_LABEL[g]}
-            <span className="text-muted text-xs">
+            <span className="text-muted text-small-copy">
               {counts[g]} · {Math.round((counts[g] / total) * 100)}%
             </span>
           </span>

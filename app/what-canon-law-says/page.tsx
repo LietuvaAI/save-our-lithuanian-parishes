@@ -24,10 +24,10 @@ function Src({ href, children }: { href: string; children: React.ReactNode }) {
 export default function CanonLawPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-12">
-      <h1 className="font-serif text-3xl sm:text-4xl font-semibold leading-tight">
+      <h1 className="font-serif text-page-title font-semibold leading-tight">
         What canon law actually says
       </h1>
-      <p className="mt-4 text-lg text-muted leading-relaxed">
+      <p className="mt-4 text-subsection-title text-muted leading-relaxed">
         The surprise at the bottom of the parish ownership question: the
         Church&rsquo;s own law is not the obstacle. Standing for community
         ownership is not standing against the Church.
@@ -155,7 +155,7 @@ export default function CanonLawPage() {
           in <Link href="/parishes">the profile directory</Link> appear as historical
           witness, not as a recommendation.
         </p>
-        <p className="text-sm">
+        <p className="text-body-copy">
           <em>
             This page summarizes public sources and is not canonical or legal
             advice. We are seeking review by a canon lawyer; corrections are

@@ -23,7 +23,7 @@ export function ParishProfileChronology({
       }
     >
       {items.length === 0 ? (
-        <p className="max-w-[40em] text-sm leading-relaxed text-muted">
+        <p className="max-w-[40em] text-body-copy leading-relaxed text-muted">
           No secure sequence of dated events has yet been established.
         </p>
       ) : (
@@ -48,13 +48,13 @@ export function ParishProfileChronology({
                         Worship site
                       </span>
                     )}
-                    <span className="block text-sm font-semibold leading-snug">
+                    <span className="block text-body-copy font-semibold leading-snug">
                       {item.title}
                     </span>
                   </span>
                   <span
                     aria-hidden="true"
-                    className="text-right text-base leading-none text-muted transition-transform group-open:rotate-45"
+                    className="text-right text-card-title leading-none text-muted transition-transform group-open:rotate-45"
                   >
                     +
                   </span>

@@ -99,14 +99,14 @@ function YearList({
             <span key={`${item.source}-${item.value}-${index}`}>
               {index > 0 && " · "}
               {item.value}{" "}
-              <span className="text-sm text-muted">
+              <span className="text-body-copy text-muted">
                 ({sourceShortName(item.source)}
                 {item.cite ? `, ${item.cite}` : ""})
               </span>
             </span>
           ))}
           {differ && (
-            <span className="ml-2 inline-block rounded border border-rule px-1.5 py-px text-xs text-muted">
+            <span className="ml-2 inline-block rounded border border-rule px-1.5 py-px text-small-copy text-muted">
               sources differ — all readings kept
             </span>
           )}
@@ -115,10 +115,10 @@ function YearList({
       {noteItems.map((item, index) => (
         <p
           key={`${item.source}-${item.value}-${index}`}
-          className="text-sm leading-relaxed text-muted"
+          className="text-body-copy leading-relaxed text-muted"
         >
           {item.value}{" "}
-          <span className="text-xs">
+          <span className="text-small-copy">
             — {sourceShortName(item.source)}
             {item.cite ? `, ${item.cite}` : ""}
           </span>
@@ -152,7 +152,7 @@ export function ParishRecordReadings({
   }
 
   return (
-    <details className="mt-5 border-t border-rule pt-4 text-sm leading-relaxed">
+    <details className="mt-5 border-t border-rule pt-4 text-body-copy leading-relaxed">
       <summary className="cursor-pointer font-medium underline decoration-rule underline-offset-4 hover:decoration-foreground">
         Names, date readings, and source conflicts
       </summary>
@@ -195,7 +195,7 @@ export function ParishRecordReadings({
                 )}
               </div>
             ))}
-            <p className="mt-2 text-xs text-muted">
+            <p className="mt-2 text-small-copy text-muted">
               Every documented reading remains attached to its source; a
               difference is never silently flattened.
             </p>
@@ -1077,7 +1077,7 @@ export function ParishPublishedRecord({
         className={
           embedded
             ? "font-mono text-[10.5px] font-medium uppercase tracking-[0.15em] text-muted"
-            : "font-serif text-2xl font-semibold"
+            : "font-serif text-section-title font-semibold"
         }
       >
         History

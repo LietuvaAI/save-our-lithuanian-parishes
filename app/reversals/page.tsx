@@ -72,7 +72,7 @@ function Badge({
         : "border-rule text-foreground";
   return (
     <span
-      className={`inline-block rounded-full border px-2.5 py-0.5 text-xs font-medium ${style}`}
+      className={`inline-block rounded-full border px-2.5 py-0.5 text-small-copy font-medium ${style}`}
     >
       {children}
     </span>
@@ -87,7 +87,7 @@ function CaseCard({ c }: { c: Case }) {
       <summary className="cursor-pointer list-none">
         <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
           <span className="font-serif font-semibold">{c.parish}</span>
-          <span className="text-muted text-sm">
+          <span className="text-muted text-body-copy">
             {c.city}
             {c.state ? `, ${c.state}` : ""}
           </span>
@@ -104,13 +104,13 @@ function CaseCard({ c }: { c: Case }) {
           )}
         </div>
         {c.ethnicIdentity && !/none|unknown/i.test(c.ethnicIdentity) && (
-          <p className="mt-1.5 text-sm text-muted">
+          <p className="mt-1.5 text-body-copy text-muted">
             {c.ethnicIdentity.split(".")[0].slice(0, 160)}
           </p>
         )}
-        <p className="mt-1 text-xs text-muted underline">Open the case file</p>
+        <p className="mt-1 text-small-copy text-muted underline">Open the case file</p>
       </summary>
-      <div className="mt-3 space-y-2.5 text-sm border-t border-rule pt-3">
+      <div className="mt-3 space-y-2.5 text-body-copy border-t border-rule pt-3">
         {minersville && (
           <p className="rounded-md border border-rule px-3 py-2 text-muted">
             <strong>Reconciliation note:</strong> a separate, widely-circulated
@@ -149,7 +149,7 @@ function CaseCard({ c }: { c: Case }) {
           </p>
         )}
         {c.sources?.length > 0 && (
-          <p className="text-xs text-muted break-words">
+          <p className="text-small-copy text-muted break-words">
             <span className="font-medium">Sources:</span>{" "}
             {c.sources.join(" · ")}
           </p>
@@ -169,13 +169,13 @@ export default function ReversalsPage() {
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-12">
-      <p className="text-xs uppercase tracking-widest text-muted">
+      <p className="text-small-copy uppercase tracking-widest text-muted">
         The precedent record
       </p>
-      <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
+      <h1 className="mt-1 font-serif text-page-title font-semibold leading-tight">
         Where Rome said no
       </h1>
-      <p className="mt-4 text-lg text-muted leading-relaxed">
+      <p className="mt-4 text-subsection-title text-muted leading-relaxed">
         Across the United States, parish closures have been reversed —{" "}
         <strong className="text-foreground">
           {db.stats.reversals} documented cases
@@ -188,7 +188,7 @@ export default function ReversalsPage() {
 
       <GuidanceNav current="reversals" />
 
-      <div className="mt-8 rounded-lg border border-rule px-4 py-3 text-sm text-muted">
+      <div className="mt-8 rounded-lg border border-rule px-4 py-3 text-body-copy text-muted">
         <p>
           <span className="font-medium text-foreground">
             How this database was verified:
@@ -208,7 +208,7 @@ export default function ReversalsPage() {
         </p>
       </div>
 
-      <p className="mt-6 text-sm text-muted">
+      <p className="mt-6 text-body-copy text-muted">
         In the Lithuanian record itself,{" "}
         <Link href="/parishes" className="underline hover:text-foreground">
           no documented parish
@@ -227,8 +227,8 @@ export default function ReversalsPage() {
         if (cases.length === 0) return null;
         return (
           <section key={w.key} className="mt-10">
-            <h2 className="font-serif text-2xl font-semibold">{w.title}</h2>
-            {w.blurb && <p className="mt-1.5 text-muted text-sm">{w.blurb}</p>}
+            <h2 className="font-serif text-section-title font-semibold">{w.title}</h2>
+            {w.blurb && <p className="mt-1.5 text-muted text-body-copy">{w.blurb}</p>}
             <div className="mt-4 space-y-3">
               {cases.map((c) => (
                 <CaseCard key={`${c.parish}-${c.city}`} c={c} />
@@ -239,10 +239,10 @@ export default function ReversalsPage() {
       })}
 
       <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           Investigated and excluded
         </h2>
-        <p className="mt-1.5 text-muted text-sm">
+        <p className="mt-1.5 text-muted text-body-copy">
           These candidates were researched and found <em>not</em> to be
           reversals. We show them because a precedent list you can trust must
           also show its exclusions.
@@ -251,7 +251,7 @@ export default function ReversalsPage() {
           {db.excludedAsNonReversals.map((c) => (
             <div
               key={`${c.parish}-${c.city}`}
-              className="rounded-lg border border-rule px-4 py-3 text-sm"
+              className="rounded-lg border border-rule px-4 py-3 text-body-copy"
             >
               <div className="font-serif font-semibold">
                 {c.parish}{" "}
@@ -266,7 +266,7 @@ export default function ReversalsPage() {
         </div>
       </section>
 
-      <p className="mt-10 text-sm text-muted border-t border-rule pt-4">
+      <p className="mt-10 text-body-copy text-muted border-t border-rule pt-4">
         Compiled {db.generated} from the parish-preservation research record;
         every case cites its sources above. This page summarizes public
         documents and reporting and is not canonical or legal advice.

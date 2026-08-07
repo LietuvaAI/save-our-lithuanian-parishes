@@ -36,13 +36,13 @@ export default function DioceseClosureRanking({
   return (
     <section className="mt-8 border-y border-rule py-5">
       <div className="max-w-3xl">
-        <p className="text-xs font-medium uppercase text-muted">
+        <p className="text-small-copy font-medium uppercase text-muted">
           Diocese comparison
         </p>
-        <h2 className="mt-1 font-serif text-2xl font-semibold">
+        <h2 className="mt-1 font-serif text-section-title font-semibold">
           Which dioceses closed the most Lithuanian parishes?
         </h2>
-        <p className="mt-1.5 text-sm leading-relaxed text-muted">
+        <p className="mt-1.5 text-body-copy leading-relaxed text-muted">
           The ranking counts formal parish closures, not transfers to another
           congregation. Open any row below the graphic to inspect the parish
           profiles behind its number.
@@ -159,10 +159,10 @@ export default function DioceseClosureRanking({
             {ranked.map((diocese, index) => (
               <div key={diocese.name}>
                 <div className="flex items-baseline justify-between gap-3">
-                  <p className="text-sm font-medium">
+                  <p className="text-body-copy font-medium">
                     {index + 1}. {diocese.shortName}
                   </p>
-                  <p className="font-serif text-xl font-semibold">
+                  <p className="font-serif text-section-title font-semibold">
                     {diocese.formalClosed}
                   </p>
                 </div>
@@ -192,16 +192,16 @@ export default function DioceseClosureRanking({
               id={anchorFor(diocese.name)}
               className="group border-b border-rule"
             >
-              <summary className="grid min-h-10 cursor-pointer list-none grid-cols-[1.5rem_minmax(0,1fr)_auto_1rem] items-center gap-2 px-1 py-2 text-xs hover:bg-band">
+              <summary className="grid min-h-10 cursor-pointer list-none grid-cols-[1.5rem_minmax(0,1fr)_auto_1rem] items-center gap-2 px-1 py-2 text-small-copy hover:bg-band">
                 <span className="text-[10px] text-muted">{index + 1}</span>
                 <span className="min-w-0 font-medium">
                   {diocese.shortName}
                 </span>
-                <span className="font-serif text-base font-semibold text-accent">
+                <span className="font-serif text-card-title font-semibold text-accent">
                   {diocese.formalClosed}
                 </span>
                 <span
-                  className="text-center text-sm leading-none text-muted"
+                  className="text-center text-body-copy leading-none text-muted"
                   aria-hidden
                 >
                   <span className="group-open:hidden">+</span>

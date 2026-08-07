@@ -54,14 +54,14 @@ export default function CoalRegionMatrix({
         {outcomes.map((outcome) => (
           <div
             key={outcome}
-            className="pb-1 text-center text-[10px] font-medium uppercase text-muted sm:text-xs"
+            className="pb-1 text-center text-[10px] font-medium uppercase text-muted sm:text-small-copy"
           >
             {outcome}
           </div>
         ))}
         {ownershipRows.map((ownership) => (
           <div key={ownership} className="contents">
-            <div className="flex items-center text-sm font-semibold">
+            <div className="flex items-center text-body-copy font-semibold">
               {ownership}
             </div>
             {outcomes.map((outcome) => {
@@ -98,7 +98,7 @@ export default function CoalRegionMatrix({
                         : 1,
                   }}
                 >
-                  <span className="block font-serif text-3xl font-semibold">
+                  <span className="block font-serif text-page-title font-semibold">
                     {cell.parishes.length}
                   </span>
                   <span className="mt-1 block text-[11px]">
@@ -112,7 +112,7 @@ export default function CoalRegionMatrix({
       </div>
 
       <div className="mt-5 border-t border-rule pt-4">
-        <h3 className="font-serif text-lg font-semibold">
+        <h3 className="font-serif text-subsection-title font-semibold">
           {selected.ownership} · {selected.outcome.toLowerCase()} ·{" "}
           {selected.parishes.length}
         </h3>
@@ -130,14 +130,14 @@ export default function CoalRegionMatrix({
                   >
                     {parish.name}
                   </Link>
-                  <p className="mt-0.5 text-xs text-muted">{parish.city}, PA</p>
+                  <p className="mt-0.5 text-small-copy text-muted">{parish.city}, PA</p>
                 </div>
                 <EndStatePill value={parish.endState} />
               </div>
             ))}
           </div>
         ) : (
-          <p className="mt-2 text-sm text-muted">No parish is in this cell.</p>
+          <p className="mt-2 text-body-copy text-muted">No parish is in this cell.</p>
         )}
       </div>
     </div>

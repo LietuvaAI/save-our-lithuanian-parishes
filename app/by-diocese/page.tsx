@@ -86,13 +86,13 @@ export default function ByDiocesePage() {
 
   return (
     <article className="mx-auto max-w-5xl px-4 pb-4 pt-8">
-      <p className="text-xs uppercase text-muted">
+      <p className="text-small-copy uppercase text-muted">
         Institutional view
       </p>
-      <h1 className="mt-1 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
+      <h1 className="mt-1 font-serif text-page-title font-semibold leading-tight">
         By Diocese
       </h1>
-      <p className="mt-2 max-w-3xl font-serif text-lg leading-relaxed sm:text-xl">
+      <p className="mt-2 max-w-3xl font-serif text-subsection-title leading-relaxed sm:text-section-title">
         Which dioceses preserved Lithuanian parish life, and where did it end?
       </p>
 
@@ -100,17 +100,17 @@ export default function ByDiocesePage() {
         <DioceseExplorer dioceses={named} />
         <div className="mt-4 grid gap-3 border-t border-rule pt-4 sm:grid-cols-[minmax(0,1fr)_minmax(16rem,0.55fr)]">
           <div>
-            <p className="font-serif text-xl font-semibold leading-tight">
+            <p className="font-serif text-section-title font-semibold leading-tight">
               {emptied} of {named.length} dioceses have no active Lithuanian
               parish left.
             </p>
-            <p className="mt-1.5 text-sm leading-relaxed text-muted">
+            <p className="mt-1.5 text-body-copy leading-relaxed text-muted">
               Lithuanian parish life has formally closed or transferred to
               another community at {totalEnded} of {totalParishes} Roman
               Catholic parishes.
             </p>
           </div>
-          <p className="text-xs leading-relaxed text-muted">
+          <p className="text-small-copy leading-relaxed text-muted">
             Scope: {totalParishes} U.S. Roman Catholic parishes across{" "}
             {named.length} named dioceses
             {unassigned > 0 ? `; ${unassigned} remain unassigned` : ""}

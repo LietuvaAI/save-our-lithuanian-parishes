@@ -220,7 +220,7 @@ export default function Home() {
           history of America&rsquo;s Lithuanian parishes&mdash;from their earliest
           foundations to the communities discerning their future today.
         </p>
-        <p className="mt-3 text-sm">
+        <p className="mt-3 text-body-copy">
           <Link
             href="/about"
             className="font-semibold underline decoration-rule underline-offset-4 hover:text-accent"
@@ -244,7 +244,7 @@ export default function Home() {
             href={stat.href}
             className="group px-3 py-4 text-center hover:bg-band/60"
           >
-            <span className="block font-serif text-2xl font-semibold text-foreground group-hover:text-accent">
+            <span className="block font-serif text-section-title font-semibold text-foreground group-hover:text-accent">
               {stat.value}
             </span>
             <span className="mt-0.5 block text-[12px] font-semibold leading-tight">
@@ -258,31 +258,31 @@ export default function Home() {
       </nav>
 
       <section className="mt-12" aria-labelledby="living-network-heading">
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+        <p className="text-small-copy font-semibold uppercase tracking-[0.16em] text-muted">
           Lithuanian Catholic life today
         </p>
         <div className="mt-1 flex flex-wrap items-end justify-between gap-3 border-b border-rule pb-3">
           <div>
             <h2
               id="living-network-heading"
-              className="font-serif text-3xl font-semibold"
+              className="font-serif text-page-title font-semibold"
             >
               The living network
             </h2>
           </div>
           <Link
             href="/lithuanian-catholic-life-today"
-            className="text-sm font-semibold underline decoration-rule underline-offset-4 hover:text-accent"
+            className="text-body-copy font-semibold underline decoration-rule underline-offset-4 hover:text-accent"
           >
             See all {CURRENT_WORSHIP_COUNT} places →
           </Link>
         </div>
 
         <div className="mt-5 flex flex-wrap items-baseline justify-between gap-2">
-          <h3 className="font-serif text-2xl font-semibold">
+          <h3 className="font-serif text-section-title font-semibold">
             Still standing <span className="text-muted">· {activeNetwork.length}</span>
           </h3>
-          <span className="text-sm text-muted">
+          <span className="text-body-copy text-muted">
             {currentPastoralNetwork.counts.active_parish} parishes + {" "}
             {currentPastoralNetwork.counts.active_mission} missions
           </span>
@@ -358,7 +358,7 @@ export default function Home() {
             className="scroll-mt-24 overflow-hidden rounded-lg border border-rule"
           >
             <header className="flex items-baseline justify-between gap-3 bg-accent px-5 py-3 text-white">
-              <h3 className="text-[11px] font-semibold uppercase tracking-[0.15em]">
+              <h3 className="font-sans text-[11px] font-semibold uppercase tracking-[0.15em]">
                 Active campaigns
               </h3>
               <span className="text-[11px]">
@@ -451,7 +451,7 @@ export default function Home() {
 
           <section className="overflow-hidden rounded-lg border border-rule">
             <header className="flex items-baseline justify-between gap-3 bg-[#292524] px-5 py-3 text-white">
-              <h3 className="text-[11px] font-semibold uppercase tracking-[0.15em]">
+              <h3 className="font-sans text-[11px] font-semibold uppercase tracking-[0.15em]">
                 On the watch list
               </h3>
               <span className="text-[11px]">
@@ -502,20 +502,20 @@ export default function Home() {
       </section>
 
       <section className="mx-auto my-14 max-w-3xl rounded-lg border border-rule bg-band/50 p-6 text-center sm:p-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+        <p className="text-small-copy font-semibold uppercase tracking-[0.16em] text-muted">
           Židinys · The Hearth
         </p>
-        <h2 className="mt-2 font-serif text-2xl font-semibold">
+        <h2 className="mt-2 font-serif text-section-title font-semibold">
           Follow new findings and developments
         </h2>
-        <p className="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-muted">
+        <p className="mx-auto mt-2 max-w-xl text-body-copy leading-relaxed text-muted">
           Closure alerts, parish histories, and news from communities working
           to protect their churches arrive by email.
         </p>
         <p className="mt-4">
           <a
             href="https://blog.saveourlithuanianparishes.org/subscribe"
-            className="inline-block rounded-md border border-accent px-5 py-2.5 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
+            className="inline-block rounded-md border border-accent px-5 py-2.5 text-body-copy font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
           >
             Subscribe to Židinys (The Hearth)
           </a>

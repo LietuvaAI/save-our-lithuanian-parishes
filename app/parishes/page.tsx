@@ -91,61 +91,24 @@ export default function ParishProfilesPage() {
   }
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-10 sm:py-12">
-      <p className="text-xs font-semibold uppercase tracking-widest text-muted">
+    <div className="mx-auto max-w-7xl px-4 pb-10 pt-[22px]">
+      <p className="text-ui-label font-semibold uppercase tracking-[0.15em] text-muted">
         Profile directory · the parish view
       </p>
-      <h1 className="mt-1 font-serif text-3xl font-semibold sm:text-4xl">
+      <h1 className="mt-1 font-serif text-page-title font-semibold">
         Every parish, mission, and congregation
       </h1>
-      <div className="mt-4 max-w-4xl space-y-3 leading-relaxed">
-        <p>
-          This is the <strong>institution view</strong> — every Lithuanian
-          parish, mission, and congregation as a community in its own right,
-          not a building. Each is drawn as a life on one shared timeline that
-          runs from the 1880s to the present day: the bar marks the years the
-          institution existed, colored by what became of it, and left open
-          where the community still lives. Use it to find a parish by name,
-          place, or era and open its full profile.
-        </p>
-        <p className="text-sm text-muted">
-          For the physical churches — which a parish may have moved through
-          more than one of — see the building view. For how the whole population
-          changed over time and where each parish ended up, see Parish &amp;
-          Mission Outcomes.
-        </p>
-      </div>
+      <p className="mt-2 max-w-[90ch] text-body-copy text-muted">
+        Browse all {rows.length} published U.S. parish, mission, and
+        congregation profiles on one shared timeline, then open any record for
+        its full history and sources.
+      </p>
 
-      <div className="mt-5 flex flex-wrap gap-3">
-        <Link
-          href="/church-buildings-through-time"
-          className="group inline-flex items-center gap-3 rounded-lg border border-rule px-4 py-3 hover:border-foreground"
-        >
-          <span className="text-[11px] font-semibold uppercase tracking-widest text-muted">
-            Building view
-          </span>
-          <span className="text-sm font-semibold group-hover:text-accent">
-            Church Buildings Through Time →
-          </span>
-        </Link>
-        <Link
-          href="/where-every-parish-ended-up"
-          className="group inline-flex items-center gap-3 rounded-lg border border-rule px-4 py-3 hover:border-foreground"
-        >
-          <span className="text-[11px] font-semibold uppercase tracking-widest text-muted">
-            Outcomes
-          </span>
-          <span className="text-sm font-semibold group-hover:text-accent">
-            Where every parish ended up →
-          </span>
-        </Link>
-      </div>
-
-      <div className="mt-7">
+      <div className="mt-4">
         <AllProfilesTimeline rows={rows} />
       </div>
 
-      <p className="mt-8 max-w-3xl border-t border-rule pt-5 text-sm leading-relaxed text-muted">
+      <p className="mt-8 max-w-3xl border-t border-rule pt-5 text-support-copy text-muted">
         Institutions only — the physical churches are counted separately in
         the {" "}
         <Link

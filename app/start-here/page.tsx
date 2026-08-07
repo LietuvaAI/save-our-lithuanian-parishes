@@ -22,13 +22,13 @@ const SEVEN_REASONS = [
 export default function StartHerePage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-12">
-      <p className="text-xs uppercase tracking-widest text-muted">
+      <p className="text-small-copy uppercase tracking-widest text-muted">
         The parishioner&rsquo;s guide
       </p>
-      <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
+      <h1 className="mt-1 font-serif text-page-title font-semibold leading-tight">
         Facing a closure? Start here.
       </h1>
-      <p className="mt-4 text-lg text-muted leading-relaxed">
+      <p className="mt-4 text-subsection-title text-muted leading-relaxed">
         A restructuring letter. A &ldquo;listening session.&rdquo; A merger
         notice. If this is arriving at your parish — any parish, of any
         heritage — the Church&rsquo;s own law gives you standing, rights, and
@@ -43,7 +43,7 @@ export default function StartHerePage() {
         className="mt-10 rounded-lg border-2 px-5 py-5"
         style={{ borderColor: "var(--mark-closed)" }}
       >
-        <h2 className="font-serif text-xl font-semibold">
+        <h2 className="font-serif text-subsection-title font-semibold">
           Why we publish this
         </h2>
         <div className="mt-3 space-y-3 leading-relaxed">
@@ -67,7 +67,7 @@ export default function StartHerePage() {
             inside the Church&rsquo;s own law is not standing against the
             Church. It is asking the Church to follow it.
           </p>
-          <p className="text-sm text-muted">
+          <p className="text-body-copy text-muted">
             See{" "}
             <Link
               href="/what-canon-law-says"
@@ -88,7 +88,7 @@ export default function StartHerePage() {
       </section>
 
       <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           1. The clock is the first fact
         </h2>
         <p className="mt-2 leading-relaxed">
@@ -112,7 +112,7 @@ export default function StartHerePage() {
       </section>
 
       <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           2. The seven reasons that don&rsquo;t count
         </h2>
         <p className="mt-2 leading-relaxed">
@@ -136,7 +136,7 @@ export default function StartHerePage() {
       </section>
 
       <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           3. The procedural questions that decide appeals
         </h2>
         <p className="mt-2 leading-relaxed">
@@ -170,7 +170,7 @@ export default function StartHerePage() {
       </section>
 
       <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           4. It has worked — {siteFigures.reversals.documented} times, in other
           parishes
         </h2>
@@ -206,7 +206,7 @@ export default function StartHerePage() {
       </section>
 
       <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           5. Document everything, starting today
         </h2>
         <p className="mt-2 leading-relaxed">

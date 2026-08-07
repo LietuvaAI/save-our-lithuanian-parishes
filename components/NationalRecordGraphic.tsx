@@ -57,14 +57,14 @@ export default function NationalRecordGraphic({
     <section className="mt-10 border-y border-rule py-7">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <p className="text-xs font-medium uppercase text-muted">
+          <p className="text-small-copy font-medium uppercase text-muted">
             The national record
           </p>
-          <h2 className="mt-1 font-serif text-2xl font-semibold">
+          <h2 className="mt-1 font-serif text-section-title font-semibold">
             Four figures tell the scale of the loss
           </h2>
         </div>
-        <p className="max-w-sm text-xs leading-relaxed text-muted">
+        <p className="max-w-sm text-small-copy leading-relaxed text-muted">
           Every number is drawn from the same population of Roman Catholic
           Lithuanian parishes.
         </p>
@@ -205,17 +205,17 @@ export default function NationalRecordGraphic({
                 className="grid grid-cols-[5rem_minmax(0,1fr)] items-center gap-3 py-4"
               >
                 <p
-                  className="font-serif text-4xl font-semibold"
+                  className="font-serif text-page-title font-semibold"
                   style={{ color: stage.color }}
                 >
                   {stage.value}
                 </p>
                 <div>
-                  <p className="text-sm font-semibold leading-snug">
+                  <p className="text-body-copy font-semibold leading-snug">
                     {stage.label.join(" ")}
                   </p>
                   {index < stages.length - 1 ? (
-                    <p className="mt-1 text-xs text-muted">
+                    <p className="mt-1 text-small-copy text-muted">
                       {Math.round(
                         (stages[index + 1].value / stage.value) * 100,
                       )}
@@ -225,7 +225,7 @@ export default function NationalRecordGraphic({
                 </div>
               </div>
             ))}
-            <div className="py-4 text-xs leading-relaxed text-muted">
+            <div className="py-4 text-small-copy leading-relaxed text-muted">
               <p>
                 {firstDiocese}: {firstDioceseLosses} closed parishes
               </p>
@@ -237,7 +237,7 @@ export default function NationalRecordGraphic({
         </ExportableSvg>
       </div>
 
-      <p className="mt-4 text-sm leading-relaxed text-muted">
+      <p className="mt-4 text-body-copy leading-relaxed text-muted">
         <Link href="/history" className="underline hover:text-foreground">
           Follow the losses over time
         </Link>

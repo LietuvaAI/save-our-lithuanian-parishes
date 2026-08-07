@@ -106,7 +106,7 @@ function HeaderFilter<T extends string>({
         onClick={() => setOpen(!open)}
         aria-expanded={open}
         aria-haspopup="menu"
-        className={`flex h-9 items-center gap-2 rounded-md border px-3 text-sm font-medium cursor-pointer whitespace-nowrap transition-colors ${
+        className={`flex h-9 items-center gap-2 rounded-md border px-3 text-body-copy font-medium cursor-pointer whitespace-nowrap transition-colors ${
           active
             ? "border-accent bg-accent/5 text-accent"
             : "border-rule bg-background text-foreground hover:border-muted"
@@ -135,7 +135,7 @@ function HeaderFilter<T extends string>({
               onChange(ALL as T | typeof ALL);
               setOpen(false);
             }}
-            className={`block w-full text-left px-3 py-1.5 text-sm hover:bg-foreground/5 ${
+            className={`block w-full text-left px-3 py-1.5 text-body-copy hover:bg-foreground/5 ${
               !active ? "font-semibold" : ""
             }`}
           >
@@ -150,7 +150,7 @@ function HeaderFilter<T extends string>({
                 onChange(opt.value);
                 setOpen(false);
               }}
-              className={`block w-full text-left px-3 py-1.5 text-sm hover:bg-foreground/5 ${
+              className={`block w-full text-left px-3 py-1.5 text-body-copy hover:bg-foreground/5 ${
                 value === opt.value ? "font-semibold" : ""
               }`}
             >
@@ -239,7 +239,7 @@ export default function RegistryTable({
   }, [rows, query, status, alert, fate, ownership, diocese]);
 
   const sc =
-    "rounded-md border border-rule bg-background px-2 py-1.5 text-sm";
+    "rounded-md border border-rule bg-background px-2 py-1.5 text-body-copy";
 
   const activeFilters = [
     status !== ALL,
@@ -271,7 +271,7 @@ export default function RegistryTable({
             aria-label="Search the profile directory"
             className={`${sc} w-full sm:w-80`}
           />
-          <span className="text-sm font-medium">
+          <span className="text-body-copy font-medium">
             {activeFilters > 0
               ? `${filtered.length} of ${rows.length} ${noun}`
               : `${rows.length} ${noun}`}
@@ -280,7 +280,7 @@ export default function RegistryTable({
             <button
               type="button"
               onClick={clearFilters}
-              className="text-sm font-medium text-accent underline underline-offset-2 cursor-pointer"
+              className="text-body-copy font-medium text-accent underline underline-offset-2 cursor-pointer"
             >
               Clear all
             </button>
@@ -325,11 +325,11 @@ export default function RegistryTable({
 
       {filtered.length === 0 ? (
         <div className="mt-8 border-y border-rule py-10 text-center">
-          <p className="font-serif text-xl font-semibold">No matching records</p>
+          <p className="font-serif text-section-title font-semibold">No matching records</p>
           <button
             type="button"
             onClick={clearFilters}
-            className="mt-2 text-sm font-medium text-accent underline underline-offset-2 cursor-pointer"
+            className="mt-2 text-body-copy font-medium text-accent underline underline-offset-2 cursor-pointer"
           >
             Clear search and filters
           </button>
@@ -337,7 +337,7 @@ export default function RegistryTable({
       ) : (
         <>
           <div className="mt-5 hidden overflow-hidden rounded-md border border-rule lg:block">
-            <table className="w-full table-fixed text-sm">
+            <table className="w-full table-fixed text-body-copy">
               <colgroup>
                 <col className="w-[26%]" />
                 <col className="w-[15%]" />
@@ -347,19 +347,19 @@ export default function RegistryTable({
               </colgroup>
               <thead className="bg-[var(--band)]">
                 <tr className="border-b border-rule text-left">
-                  <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-muted">
+                  <th className="px-4 py-3 text-small-copy font-semibold uppercase tracking-wide text-muted">
                     Profile
                   </th>
-                  <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-muted">
+                  <th className="px-4 py-3 text-small-copy font-semibold uppercase tracking-wide text-muted">
                     Diocese
                   </th>
-                  <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-muted">
+                  <th className="px-4 py-3 text-small-copy font-semibold uppercase tracking-wide text-muted">
                     Dates
                   </th>
-                  <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-muted">
+                  <th className="px-4 py-3 text-small-copy font-semibold uppercase tracking-wide text-muted">
                     Status
                   </th>
-                  <th className="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-muted">
+                  <th className="px-4 py-3 text-small-copy font-semibold uppercase tracking-wide text-muted">
                     Property
                   </th>
                 </tr>
@@ -383,16 +383,16 @@ export default function RegistryTable({
                           r.name
                         )}
                       </div>
-                      <span className="mt-0.5 block text-xs text-muted">
+                      <span className="mt-0.5 block text-small-copy text-muted">
                         {r.city}, {r.state}
                         {r.comparator ? " · Canada" : ""}
                         {recordTypeSuffix(r)}
                       </span>
                     </td>
-                    <td className="px-4 py-3 text-xs leading-relaxed text-muted">
+                    <td className="px-4 py-3 text-small-copy leading-relaxed text-muted">
                       {r.diocese?.replace(/^(Arch)?diocese of /i, "") ?? "—"}
                     </td>
-                    <td className="px-4 py-3 text-xs text-muted">
+                    <td className="px-4 py-3 text-small-copy text-muted">
                       {dateSummary(r)}
                     </td>
                     <td className="px-4 py-3">
@@ -412,7 +412,7 @@ export default function RegistryTable({
                     <td className="px-4 py-3">
                       <div className="flex flex-col items-start gap-2">
                         <FatePill value={r.fate} />
-                        <span className="text-xs text-muted">
+                        <span className="text-small-copy text-muted">
                           {r.ownership
                             ? OWNERSHIP_CELL[r.ownership]
                             : "Ownership unverified"}
@@ -440,7 +440,7 @@ export default function RegistryTable({
                     r.name
                   )}
                 </div>
-                <div className="mt-0.5 text-sm text-muted">
+                <div className="mt-0.5 text-body-copy text-muted">
                   {r.city}, {r.state}
                   {r.comparator ? " · Canada" : ""}
                   {recordTypeSuffix(r)}
@@ -460,7 +460,7 @@ export default function RegistryTable({
                   <FatePill value={r.fate} />
                 </div>
 
-                <dl className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 text-xs min-[520px]:grid-cols-3">
+                <dl className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 text-small-copy min-[520px]:grid-cols-3">
                   <div>
                     <dt className="text-muted">Diocese</dt>
                     <dd className="mt-0.5">

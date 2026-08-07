@@ -46,16 +46,16 @@ function SourceRow({
           title
         )}
       </p>
-      <p className="mt-1 text-sm leading-relaxed text-muted">{role}</p>
-      <p className="mt-1 text-xs leading-relaxed text-muted">
+      <p className="mt-1 text-body-copy leading-relaxed text-muted">{role}</p>
+      <p className="mt-1 text-small-copy leading-relaxed text-muted">
         How it is used: {limits}
       </p>
       {checkedLinks && checkedLinks.length > 0 ? (
         <div className="mt-3">
-          <p className="text-xs font-medium uppercase tracking-widest text-muted">
+          <p className="text-small-copy font-medium uppercase tracking-widest text-muted">
             ELIP pages checked
           </p>
-          <ul className="mt-2 grid gap-x-5 gap-y-1 text-sm sm:grid-cols-2">
+          <ul className="mt-2 grid gap-x-5 gap-y-1 text-body-copy sm:grid-cols-2">
             {checkedLinks.map((link) => (
               <li key={link.href}>
                 <a
@@ -78,11 +78,11 @@ function SourceRow({
 export default function SourcesAndArchivesPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-12">
-      <p className="text-xs uppercase tracking-widest text-muted">About</p>
-      <h1 className="mt-1 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
+      <p className="text-small-copy uppercase tracking-widest text-muted">About</p>
+      <h1 className="mt-1 font-serif text-page-title font-semibold leading-tight">
         Sources &amp; Archives
       </h1>
-      <p className="mt-4 text-lg leading-relaxed text-muted">
+      <p className="mt-4 text-subsection-title leading-relaxed text-muted">
         This record joins historical archives, published scholarship, official
         institutional records, contemporary reporting, field surveys, and
         community knowledge. Their roles are not interchangeable: each claim is
@@ -92,13 +92,13 @@ export default function SourcesAndArchivesPage() {
       <AboutNav current="sources" />
 
       <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           How source authority works
         </h2>
         <div className="mt-4 divide-y divide-rule border-y border-rule">
           <div className="py-4">
             <p className="font-medium">Direct and institutional evidence</p>
-            <p className="mt-1 text-sm leading-relaxed text-muted">
+            <p className="mt-1 text-body-copy leading-relaxed text-muted">
               Decrees, parish and diocesan notices, bulletins, civil records,
               property records, public filings, and photographs of the object
               itself are used for the acts or conditions they directly record.
@@ -106,7 +106,7 @@ export default function SourcesAndArchivesPage() {
           </div>
           <div className="py-4">
             <p className="font-medium">Contemporary newspaper evidence</p>
-            <p className="mt-1 text-sm leading-relaxed text-muted">
+            <p className="mt-1 text-body-copy leading-relaxed text-muted">
               A dated <em>Draugas</em> issue or local news report is evidence of
               what was reported at that moment. It may be contemporaneous
               without being the primary legal record of a canonical act.
@@ -114,7 +114,7 @@ export default function SourcesAndArchivesPage() {
           </div>
           <div className="py-4">
             <p className="font-medium">Published histories and field research</p>
-            <p className="mt-1 text-sm leading-relaxed text-muted">
+            <p className="mt-1 text-body-copy leading-relaxed text-muted">
               Books, heritage surveys, encyclopedias, and community histories
               supply context, identity leads, architectural detail, and
               competing readings. Important claims are cross-checked before
@@ -123,7 +123,7 @@ export default function SourcesAndArchivesPage() {
           </div>
           <div className="py-4">
             <p className="font-medium">Directories and discovery sources</p>
-            <p className="mt-1 text-sm leading-relaxed text-muted">
+            <p className="mt-1 text-body-copy leading-relaxed text-muted">
               Directories help locate parishes, clergy, organizations, and
               possible continuities. They are excellent discovery
               infrastructure, but an identity match is verified before it
@@ -134,7 +134,7 @@ export default function SourcesAndArchivesPage() {
       </section>
 
       <section className="mt-12">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           Core archives and published works
         </h2>
         <ul className="mt-4 divide-y divide-rule border-y border-rule">
@@ -172,7 +172,7 @@ export default function SourcesAndArchivesPage() {
       </section>
 
       <section className="mt-12">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           Current and official evidence
         </h2>
         <ul className="mt-4 divide-y divide-rule border-y border-rule">
@@ -213,10 +213,10 @@ export default function SourcesAndArchivesPage() {
       </section>
 
       <section className="mt-12">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           Research and discovery networks
         </h2>
-        <p className="mt-2 text-sm leading-relaxed text-muted">
+        <p className="mt-2 text-body-copy leading-relaxed text-muted">
           These sources are especially valuable for finding leads, alternate
           names, institutions, clergy, and heritage sites. They do not write
           directly into the registry without identity checking and
@@ -303,7 +303,7 @@ export default function SourcesAndArchivesPage() {
       </section>
 
       <section className="mt-12">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           Geography, images, and technical sources
         </h2>
         <ul className="mt-4 divide-y divide-rule border-y border-rule">
@@ -328,7 +328,7 @@ export default function SourcesAndArchivesPage() {
       </section>
 
       <section className="mt-12">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           What appears on a parish profile
         </h2>
         <p className="mt-3 leading-relaxed">
@@ -342,7 +342,7 @@ export default function SourcesAndArchivesPage() {
         </p>
       </section>
 
-      <p className="mt-12 border-t border-rule pt-5 text-sm leading-relaxed text-muted">
+      <p className="mt-12 border-t border-rule pt-5 text-body-copy leading-relaxed text-muted">
         For copyright practice, formal attribution, correction policy, and
         reuse terms, see{" "}
         <Link href="/legal" className="underline hover:text-foreground">

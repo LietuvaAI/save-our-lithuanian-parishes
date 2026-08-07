@@ -110,13 +110,13 @@ const matrixCells: CoalMatrixCell[] = [
 export default function PennsylvaniaCoalRegionPage() {
   return (
     <article className="mx-auto max-w-5xl px-4 py-12">
-      <p className="text-xs uppercase text-muted">
+      <p className="text-small-copy uppercase text-muted">
         Regional view
       </p>
-      <h1 className="mt-1 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
+      <h1 className="mt-1 font-serif text-page-title font-semibold leading-tight">
         The Pennsylvania coal region
       </h1>
-      <p className="mt-4 max-w-3xl font-serif text-xl leading-relaxed sm:text-2xl">
+      <p className="mt-4 max-w-3xl font-serif text-section-title leading-relaxed sm:text-section-title">
         Did ownership affect survival in America&rsquo;s densest Lithuanian
         parish region?
       </p>
@@ -125,10 +125,10 @@ export default function PennsylvaniaCoalRegionPage() {
         <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1.25fr)_minmax(17rem,0.75fr)]">
           <CoalRegionMatrix cells={matrixCells} />
           <div>
-            <p className="font-serif text-6xl font-semibold leading-none">
+            <p className="font-serif text-page-title font-semibold leading-none">
               {closedByDiocese.length} of {dioceseOwned.length}
             </p>
-            <h2 className="mt-3 font-serif text-2xl font-semibold leading-tight">
+            <h2 className="mt-3 font-serif text-section-title font-semibold leading-tight">
               diocese-owned parishes ended by diocesan decision
             </h2>
             <p className="mt-3 leading-relaxed text-muted">
@@ -138,7 +138,7 @@ export default function PennsylvaniaCoalRegionPage() {
             </p>
           </div>
         </div>
-        <p className="mt-6 border-t border-rule pt-3 text-xs leading-relaxed text-muted">
+        <p className="mt-6 border-t border-rule pt-3 text-small-copy leading-relaxed text-muted">
           Scope: {coalRegion.length} parish records in northeastern
           Pennsylvania · Ownership and institutional outcome · Registry
           Revision {registry.registryRevision.version},{" "}

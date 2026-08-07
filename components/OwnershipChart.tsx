@@ -119,10 +119,10 @@ export default function OwnershipChart({ parishes }: { parishes: Parish[] }) {
     <div>
       <div className="grid gap-10 sm:grid-cols-[3fr_1fr]">
         <section>
-          <h3 className="font-serif text-lg font-semibold">
+          <h3 className="font-serif text-subsection-title font-semibold">
             Diocese-owned <span className="text-muted font-normal">— {diocese.length} parishes</span>
           </h3>
-          <p className="text-sm mt-1" style={{ color: "var(--mark-closed)" }}>
+          <p className="text-body-copy mt-1" style={{ color: "var(--mark-closed)" }}>
             {dioceseClosed} closed by the diocese
           </p>
           <div className="mt-3">
@@ -138,10 +138,10 @@ export default function OwnershipChart({ parishes }: { parishes: Parish[] }) {
         </section>
 
         <section>
-          <h3 className="font-serif text-lg font-semibold">
+          <h3 className="font-serif text-subsection-title font-semibold">
             Community-owned <span className="text-muted font-normal">— {community.length}</span>
           </h3>
-          <p className="text-sm mt-1">
+          <p className="text-body-copy mt-1">
             {communityClosed} closed by any outside authority
           </p>
           <div className="mt-3">
@@ -158,12 +158,12 @@ export default function OwnershipChart({ parishes }: { parishes: Parish[] }) {
       </div>
 
       <div
-        className="mt-8 min-h-16 rounded-lg border border-rule px-4 py-3 text-sm"
+        className="mt-8 min-h-16 rounded-lg border border-rule px-4 py-3 text-body-copy"
         aria-live="polite"
       >
         {hovered ? (
           <div>
-            <span className="font-serif font-semibold text-base">
+            <span className="font-serif font-semibold text-card-title">
               {hovered.nameLt}
             </span>{" "}
             <span className="text-muted">
@@ -196,7 +196,7 @@ export default function OwnershipChart({ parishes }: { parishes: Parish[] }) {
         )}
       </div>
 
-      <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+      <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-body-copy">
         {ENDING_MODE_ORDER.map((mode) => (
           <span key={mode} className="inline-flex items-center gap-1.5">
             <MarkIcon mode={mode} />

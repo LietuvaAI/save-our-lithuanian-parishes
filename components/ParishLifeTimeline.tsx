@@ -26,10 +26,10 @@ export function ParishLifeTimeline({
 }) {
   return (
     <section className="mt-10">
-      <p className="text-xs uppercase tracking-wide text-muted">
+      <p className="text-small-copy uppercase tracking-wide text-muted">
         Parish and church through time
       </p>
-      <h2 className="mt-1 font-serif text-2xl font-semibold">
+      <h2 className="mt-1 font-serif text-section-title font-semibold">
         {timeline.title}
       </h2>
       <p className="mt-2 max-w-2xl leading-relaxed text-muted">
@@ -52,7 +52,7 @@ export function ParishLifeTimeline({
               style={{ background: KIND_COLOR[event.kind] }}
               aria-hidden
             />
-            <p className="text-xs font-semibold uppercase text-muted sm:mt-5">
+            <p className="text-small-copy font-semibold uppercase text-muted sm:mt-5">
               {event.date}
             </p>
             <p
@@ -61,17 +61,17 @@ export function ParishLifeTimeline({
             >
               {KIND_LABEL[event.kind]}
             </p>
-            <h3 className="mt-1 font-serif text-lg font-semibold leading-tight">
+            <h3 className="mt-1 font-serif text-subsection-title font-semibold leading-tight">
               {event.title}
             </h3>
-            <p className="mt-1.5 text-sm leading-relaxed text-muted">
+            <p className="mt-1.5 text-body-copy leading-relaxed text-muted">
               {event.detail}
             </p>
           </li>
         ))}
       </ol>
 
-      <p className="mt-5 border-t border-rule pt-3 text-xs leading-relaxed text-muted">
+      <p className="mt-5 border-t border-rule pt-3 text-small-copy leading-relaxed text-muted">
         The line follows one parish institution across successive church
         buildings. Dates are shown only as precisely as the cited evidence
         allows · record checked {timeline.asOf} ·{" "}

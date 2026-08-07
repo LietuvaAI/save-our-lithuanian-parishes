@@ -99,7 +99,7 @@ export default function ParishNationalLocator({ slug }: { slug: string }) {
         <p className="font-mono text-[10.5px] font-medium uppercase tracking-[0.15em] text-muted">
           Where in the {region}
         </p>
-        <p className="shrink-0 text-xs text-muted">
+        <p className="shrink-0 text-small-copy text-muted">
           {subject.city}, {subject.state}
         </p>
       </div>

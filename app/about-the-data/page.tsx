@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 export default function AboutTheDataPage() {
   return (
     <article className="mx-auto max-w-3xl px-4 py-12">
-      <p className="text-xs uppercase tracking-widest text-muted">About</p>
-      <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
+      <p className="text-small-copy uppercase tracking-widest text-muted">About</p>
+      <h1 className="mt-1 font-serif text-page-title font-semibold leading-tight">
         About the Data
       </h1>
-      <p className="mt-4 text-lg text-muted leading-relaxed">
+      <p className="mt-4 text-subsection-title text-muted leading-relaxed">
         The archive reconstructs each parish&rsquo;s history. Current and
         official sources establish what exists now. The two records are
         compared claim by claim before a finding enters the registry that
@@ -32,7 +32,7 @@ export default function AboutTheDataPage() {
       <AboutNav current="data" />
 
       <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           1. The source archive — <em>Draugas</em>, 1909–present
         </h2>
         <p className="mt-2 leading-relaxed">
@@ -50,7 +50,7 @@ export default function AboutTheDataPage() {
       </section>
 
       <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           2. Evidence and adjudication
         </h2>
         <p className="mt-2 leading-relaxed">
@@ -71,7 +71,7 @@ export default function AboutTheDataPage() {
       </section>
 
       <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           3. The books — published parish histories
         </h2>
         <p className="mt-2 leading-relaxed">
@@ -99,7 +99,7 @@ export default function AboutTheDataPage() {
       </section>
 
       <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           4. Continuing updates
         </h2>
         <p className="mt-2 leading-relaxed">
@@ -116,7 +116,7 @@ export default function AboutTheDataPage() {
       </section>
 
       <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           5. The published registry
         </h2>
         <p className="mt-2 leading-relaxed">
@@ -131,8 +131,8 @@ export default function AboutTheDataPage() {
           against it before publication.
         </p>
         <div className="mt-4 overflow-x-auto border-y border-rule">
-          <table className="w-full min-w-[34rem] text-left text-sm">
-            <thead className="text-xs uppercase text-muted">
+          <table className="w-full min-w-[34rem] text-left text-body-copy">
+            <thead className="text-small-copy uppercase text-muted">
               <tr>
                 <th className="py-2 pr-4 font-medium">Public surface</th>
                 <th className="py-2 font-medium">Population counted</th>
@@ -197,7 +197,7 @@ export default function AboutTheDataPage() {
       </section>
 
       <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           Canonical release
         </h2>
         <p className="mt-2 leading-relaxed">
@@ -211,7 +211,7 @@ export default function AboutTheDataPage() {
       </section>
 
       <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           6. The reversal database
         </h2>
         <p className="mt-2 leading-relaxed">
@@ -230,7 +230,7 @@ export default function AboutTheDataPage() {
       </section>
 
       <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           7. The geographic data — basemap, boundaries, coordinates
         </h2>
         <p className="mt-2 leading-relaxed">
@@ -256,7 +256,7 @@ export default function AboutTheDataPage() {
       </section>
 
       <section className="mt-10">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           8. Corrections
         </h2>
         <p className="mt-2 leading-relaxed">
@@ -277,7 +277,7 @@ export default function AboutTheDataPage() {
         </p>
       </section>
 
-      <p className="mt-10 border-t border-rule pt-4 text-sm text-muted">
+      <p className="mt-10 border-t border-rule pt-4 text-body-copy text-muted">
         The complete evidence ecosystem and the role of each source:{" "}
         <Link
           href="/about/sources-and-archives"

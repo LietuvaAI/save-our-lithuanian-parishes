@@ -153,13 +153,13 @@ const unverifiedMapCount =
 export default function NationalCatholicPage() {
   return (
     <article className="mx-auto max-w-5xl px-4 py-12">
-      <p className="text-xs uppercase text-muted">
+      <p className="text-small-copy uppercase text-muted">
         Tradition view
       </p>
-      <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
+      <h1 className="mt-1 font-serif text-page-title font-semibold leading-tight">
         Lithuanian National and independent Catholic parishes
       </h1>
-      <p className="mt-4 max-w-3xl font-serif text-xl leading-relaxed sm:text-2xl">
+      <p className="mt-4 max-w-3xl font-serif text-section-title leading-relaxed sm:text-section-title">
         What happened to the Lithuanian communities that left Roman Catholic
         diocesan control?
       </p>
@@ -188,10 +188,10 @@ export default function NationalCatholicPage() {
             ]}
           />
           <div>
-            <p className="font-serif text-6xl font-semibold leading-none">
+            <p className="font-serif text-page-title font-semibold leading-none">
               {DURABLE_ENTRIES.length}
             </p>
-            <h2 className="mt-3 font-serif text-2xl font-semibold leading-tight">
+            <h2 className="mt-3 font-serif text-section-title font-semibold leading-tight">
               parishes established in {states.length} states
             </h2>
             <p className="mt-3 leading-relaxed text-muted">
@@ -201,7 +201,7 @@ export default function NationalCatholicPage() {
             </p>
           </div>
         </div>
-        <p className="mt-5 border-t border-rule pt-3 text-xs leading-relaxed text-muted">
+        <p className="mt-5 border-t border-rule pt-3 text-small-copy leading-relaxed text-muted">
           Scope: {DURABLE_ENTRIES.length} National or independent Catholic
           parish institutions across {states.length} states
           {" · "}
@@ -211,8 +211,8 @@ export default function NationalCatholicPage() {
         </p>
       </section>
 
-      <section className="mt-10 max-w-3xl border-l-4 border-rule py-1 pl-4 text-sm leading-relaxed">
-        <h2 className="font-serif text-lg font-semibold">
+      <section className="mt-10 max-w-3xl border-l-4 border-rule py-1 pl-4 text-body-copy leading-relaxed">
+        <h2 className="font-serif text-subsection-title font-semibold">
           Why these parishes formed
         </h2>
         <p className="mt-2 text-muted">
@@ -226,17 +226,17 @@ export default function NationalCatholicPage() {
 
       {/* The parishes */}
       <section className="mt-12 max-w-3xl">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           {DURABLE_ENTRIES.length} documented parishes
         </h2>
-        <p className="mt-1 text-sm text-muted">
+        <p className="mt-1 text-body-copy text-muted">
           Each entry opens a parish profile with its history and sources.
         </p>
 
         <div className="mt-5 space-y-10">
           {states.map((st) => (
             <div key={st}>
-              <h3 className="font-serif text-lg font-semibold border-b border-rule pb-1.5">
+              <h3 className="font-serif text-subsection-title font-semibold border-b border-rule pb-1.5">
                 {st}
               </h3>
               <div className="mt-3 space-y-4">
@@ -255,21 +255,21 @@ export default function NationalCatholicPage() {
                               canonicalProfileHrefForRegistrySlug(p.slug) ??
                               `/parishes/${p.slug}`
                             }
-                            className="font-serif text-base font-semibold hover:underline"
+                            className="font-serif text-card-title font-semibold hover:underline"
                           >
                             {name}
                           </Link>
                           {altName && (
-                            <span className="ml-2 text-sm text-muted">{altName}</span>
+                            <span className="ml-2 text-body-copy text-muted">{altName}</span>
                           )}
                         </div>
                         <div className="flex items-center gap-2">
                           <EndStatePill value={statusForRecord(p)} />
-                          <span className="text-sm text-muted">{p.city}</span>
+                          <span className="text-body-copy text-muted">{p.city}</span>
                         </div>
                       </div>
 
-                      <div className="mt-1.5 flex flex-wrap gap-x-4 gap-y-0.5 text-sm text-muted">
+                      <div className="mt-1.5 flex flex-wrap gap-x-4 gap-y-0.5 text-body-copy text-muted">
                         {founded && <span>Founded {founded}</span>}
                         {closed && <span>Closed {closed}</span>}
                         {!founded && !closed && (
@@ -279,13 +279,13 @@ export default function NationalCatholicPage() {
 
                       {wk?.ethnic_status &&
                         !/^(none|unknown)$/i.test(wk.ethnic_status) && (
-                          <p className="mt-2 text-xs text-muted leading-relaxed italic">
+                          <p className="mt-2 text-small-copy text-muted leading-relaxed italic">
                             Wolkovich: &ldquo;{wk.ethnic_status}&rdquo;
                           </p>
                         )}
 
                       {p.caveat && (
-                        <p className="mt-2 text-xs text-muted leading-relaxed border-t border-rule pt-2">
+                        <p className="mt-2 text-small-copy text-muted leading-relaxed border-t border-rule pt-2">
                           Note: {p.caveat}
                         </p>
                       )}
@@ -296,7 +296,7 @@ export default function NationalCatholicPage() {
                             canonicalProfileHrefForRegistrySlug(p.slug) ??
                             `/parishes/${p.slug}`
                           }
-                          className="text-xs underline hover:text-foreground"
+                          className="text-small-copy underline hover:text-foreground"
                         >
                           Full parish profile →
                         </Link>
@@ -312,10 +312,10 @@ export default function NationalCatholicPage() {
 
       {SUPPORTING_ENTRIES.length > 0 && (
         <section className="mt-10 max-w-3xl border-t border-rule pt-8">
-          <h2 className="font-serif text-2xl font-semibold">
+          <h2 className="font-serif text-section-title font-semibold">
             Related attempts and independent phases
           </h2>
-          <p className="mt-2 text-sm leading-relaxed text-muted">
+          <p className="mt-2 text-body-copy leading-relaxed text-muted">
             These records document a real independent or national
             congregation, attempt, or phase, but the evidence does not
             establish a durable standalone parish. They remain visible and
@@ -336,16 +336,16 @@ export default function NationalCatholicPage() {
                       canonicalProfileHrefForRegistrySlug(parish.slug) ??
                       `/parishes/${parish.slug}`
                     }
-                    className="font-serif text-base font-semibold hover:underline"
+                    className="font-serif text-card-title font-semibold hover:underline"
                   >
                     {parish.names.lt || parish.names.en || parish.slug}
                   </Link>
-                  <p className="mt-1 text-sm text-muted">
+                  <p className="mt-1 text-body-copy text-muted">
                     {parish.city}, {parish.state} · {evidenceKind}, not counted
                     as a durable parish
                   </p>
                   {parish.caveat && (
-                    <p className="mt-2 text-sm leading-relaxed text-muted">
+                    <p className="mt-2 text-body-copy leading-relaxed text-muted">
                       {parish.caveat}
                     </p>
                   )}
