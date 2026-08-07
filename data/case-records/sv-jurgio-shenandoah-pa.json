@@ -3,6 +3,30 @@
   "asOf": "2026-07-09",
   "buildingStatus": "demolished",
   "currentUse": "Vacant lot with adjoining former rectory, listed for sale by the Diocese of Allentown in June 2024; a Gold Star Highway billboard memorializes the church",
+  "historicalNarrative": [
+    {
+      "text": "St. George parish emerged from Shenandoah's Lithuanian community after eighteen organizers met on February 12, 1891 and resolved to form a separate Lithuanian parish. At a public meeting on March 31, Father Petras Abromaitis announced that permission had been obtained; by April 7 the organizers had collected more than $4,000 for the new parish, which took the name St. George.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260802_1785700061361",
+          "locator": "Pensilvanijos angliakasių Lietuva, pp. 18–19"
+        }
+      ]
+    },
+    {
+      "text": "The parish church was dedicated on May 12, 1894. It became one of the central institutions of Lithuanian life in Pennsylvania's coal region and remained the community's spiritual landmark until the Diocese of Allentown closed the parish in 2006.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260802_1785700061361",
+          "locator": "Pensilvanijos angliakasių Lietuva, p. 20"
+        },
+        {
+          "url": "https://shensentinel.com/news/st-george-lot-rectory-to-be-listed-for-sale/",
+          "locator": "Closure and former church-site history"
+        }
+      ]
+    }
+  ],
   "summary": "The church was razed in 2009 and its site on South Jardin Street remains a vacant lot. In June 2024 the Diocese of Allentown, through Divine Mercy Parish, listed the lot bundled with the former rectory for $139,900, with proceeds to the parish. A billboard along the Gold Star Highway reminds motorists of the lost landmark, and heritage advocates funded a commemorative plaque for Shenandoah's 'Little Lithuania' after the diocese reneged on a promised symbolic belfry. Salvaged stained glass from St. George's is now displayed at the Lithuanian Heritage Museum, which opened September 7, 2025 at 318 East Centre Street in a former family funeral home, open by appointment. The Lithuanian Days festival, America's oldest continuous ethnic festival, continues at Lakewood Park in Barnesville, with the 2026 edition set for August 15-16 and proceeds benefiting the museum.",
   "developments": [
     {
@@ -32,6 +56,7 @@
     }
   ],
   "sources": [
+    { "title": "Pensilvanijos angliakasių Lietuva", "publisher": "Žiburio lietuvių mokyklos archyvas", "date": "book scan accessed 2026-08-03", "url": "https://archyvas.ziburioltmokykla.org/item/20260802_1785700061361" },
     { "title": "St. George lot, rectory to be listed for sale", "publisher": "The Shenandoah Sentinel", "date": "2024-06-17", "url": "https://shensentinel.com/news/st-george-lot-rectory-to-be-listed-for-sale/" },
     { "title": "Shenandoah's Lithuanian heritage on display at new museum", "publisher": "The Shenandoah Sentinel", "date": "2025-09-08", "url": "https://shensentinel.com/news/shenandoahs-lithuanian-heritage-on-display-at-new-museum/" },
     { "title": "A new museum in Pennsylvania preserves 150 years of Lithuanian-American history", "publisher": "LRT English", "date": "2025-10-25", "url": "https://www.lrt.lt/en/news-in-english/19/2721503/a-new-musuem-in-pennsylvania-preserves-150-years-of-lithuanian-american-history" },

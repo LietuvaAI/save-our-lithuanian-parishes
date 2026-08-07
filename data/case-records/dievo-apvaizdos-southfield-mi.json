@@ -3,6 +3,35 @@
   "asOf": "2026-07-25",
   "buildingStatus": "standing",
   "currentUse": "Active diocesan Lithuanian Catholic parish; Lithuanian-language Masses Sundays and Fridays, English Mass Saturdays",
+  "historicalNarrative": [
+    {
+      "text": "Divine Providence grew from Detroit's first Lithuanian Catholic parish, St. George. On July 25, 1948, about 100 St. George parishioners broke ground for a new Lithuanian church south of Grand River on Schaefer. Because the original St. George parish and church still remained active, the chancery would not allow the name to be reused; the new parish institution was named Divine Providence.",
+      "sources": [
+        {
+          "url": "https://blog.saveourlithuanianparishes.org/p/in-writing-the-1968-letter-that-made",
+          "locator": "Parish-history reconstruction citing Dievo Apvaizdos Parapija 1908–1973, pp. 48–51"
+        }
+      ]
+    },
+    {
+      "text": "The Schaefer church's cornerstone was blessed on March 6, 1949, and the completed church was blessed that December. St. George remained a distinct parish through 1965, and its Westminster church was demolished for the Chrysler Freeway in 1966. Divine Providence then faced a second displacement when the Jeffries Freeway took the Schaefer site.",
+      "sources": [
+        {
+          "url": "https://blog.saveourlithuanianparishes.org/p/in-writing-the-1968-letter-that-made",
+          "locator": "Parish-history reconstruction citing Dievo Apvaizdos Parapija 1908–1973, pp. 48–51"
+        }
+      ]
+    },
+    {
+      "text": "The last Mass on Schaefer was celebrated May 17, 1970. Beginning May 24, the parish worshipped temporarily at St. Beatrice in Southfield while building its permanent home. The Schaefer church was demolished in November 1970; the present Divine Providence church and cultural center on Nine Mile Road were dedicated September 8, 1973.",
+      "sources": [
+        {
+          "url": "https://blog.saveourlithuanianparishes.org/p/in-writing-the-1968-letter-that-made",
+          "locator": "Parish-history reconstruction citing Dievo Apvaizdos Parapija 1908–1973, pp. 48–51"
+        }
+      ]
+    }
+  ],
   "summary": "Divine Providence remains an open, functioning parish at 25335 W. Nine Mile Rd., Southfield, with a regular Lithuanian/English Mass schedule. Fr. Tomas Miliauskas, MIC, pastor since December 2021, departed in May 2026, and no successor has been publicly named — as of late July 2026 the archdiocese had not decided whether to accept another priest from Lithuania. It belongs to a four-parish Family of Parishes (with Transfiguration, Our Lady of La Salette, and Our Mother of Perpetual Help) now called the 'Family Sent on Mission,' which received a newly assigned support priest in June 2026. In the Archdiocese of Detroit restructuring, Divine Providence is in Planning Area 9, and Detroit News reported on May 30, 2026 that it is among ten Area 9 parishes that would stop holding weekend Mass under at least one proposed pastorate model. No decision has been made: spring 2026 listening sessions have run their course, an online feedback survey stays open through July 31, 2026, and the published timeline calls for the archbishop's discernment in fall 2026, final plans in winter 2027, and implementation July 1, 2027.",
   "developments": [
     {
@@ -65,6 +94,12 @@
     }
   ],
   "sources": [
+    {
+      "title": "In Writing: The 1968 Letter That Made Divine Providence a National Parish",
+      "publisher": "Save Our Lithuanian Parishes",
+      "date": "2026",
+      "url": "https://blog.saveourlithuanianparishes.org/p/in-writing-the-1968-letter-that-made"
+    },
     {
       "title": "Divine Providence Church – Lithuanian Catholic Church (parish website)",
       "publisher": "Divine Providence Parish",

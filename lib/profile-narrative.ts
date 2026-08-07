@@ -234,27 +234,6 @@ export function profileStory({
   );
 }
 
-/**
- * Active campaign profiles need enough of the case-file summary to orient a
- * reader before the alert. Keep the opening context and the current decision
- * point, while leaving the complete account to History and Present condition.
- */
-export function campaignProfileDek(summary: string) {
-  const sentences: string[] = [];
-  let remaining: string | null = summary.trim();
-
-  while (remaining) {
-    const part = splitStory(remaining);
-    sentences.push(part.dek);
-    remaining = part.rest;
-  }
-
-  if (sentences.length <= 3) return sentences.join(" ");
-  return [sentences[0], sentences[1], sentences.at(-1)]
-    .filter((sentence): sentence is string => Boolean(sentence))
-    .join(" ");
-}
-
 export function researchRecordStory(recordType: string) {
   if (recordType === "phase") {
     return {

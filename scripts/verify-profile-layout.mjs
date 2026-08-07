@@ -81,8 +81,8 @@ const comparatorCount = JSON.parse(
 
 const errors = [];
 
-// Canonical profile order, v2. Identity carries status, facts, and the full
-// About/history narrative and present condition orient the reader first.
+// Canonical profile order, v2. Identity carries status, then the full history
+// and present condition orient the reader before the supporting record.
 // Compact chronology, buildings, relationships, evidence, and corrections follow.
 const orderedMarkers = [
   { id: "profile-identity", marker: 'id="profile-identity"', source: pageSource },
@@ -126,19 +126,19 @@ for (const section of orderedMarkers) {
 
 const requiredFragments = [
   [pageSource, 'data-profile-layout="canonical-v2"', "layout version"],
-  [pageSource, "embedded", "history embedded in the top About area"],
-  [historySource, "About this parish", "top About heading"],
+  [pageSource, "embedded", "history embedded in the profile identity area"],
+  [historySource, ">\n        History\n      </h2>", "top History heading"],
   [
     pageSource,
-    "caseRecord?.summary ? [] : profileView.historyFallback",
-    "case summary precedence over generated history fallback",
+    "historicalLeadNarrative ? [] : profileView.historyFallback",
+    "sourced history precedence over generated history fallback",
+  ],
+  [
+    pageSource,
+    "caseRecord?.summary ??\n      situation?.situation ??",
+    "case summary routed to present condition",
   ],
   [pageSource, "items={profileView.chronology}", "normalized chronology"],
-  [
-    pageSource,
-    "data-profile-institutional-reading",
-    "top institutional reading",
-  ],
   [historySource, 'id="profile-history"', "history section id"],
   [chronologySource, 'id="parish-chronology"', "chronology section id"],
   [chronologySource, "<details", "expandable chronology events"],
@@ -195,7 +195,6 @@ const requiredFragments = [
   [pageSource, "campaignLiturgy?.href", "campaign liturgy destination link"],
   [pageSource, "campaignSources", "campaign evidence ledger sources"],
   [pageSource, "fact.detail", "fact-level status detail rendering"],
-  [pageSource, "What happened", "plain institutional outcome label"],
   [
     pageSource,
     'data-profile-scope="outside-us-projection"',
@@ -297,6 +296,7 @@ for (const forbidden of [
   "What we could not yet establish",
   "The trail of events",
   "The verified record",
+  "What happened",
   "Projected for U.S. institutions only",
   "conflict_preserved",
   "Adjudicated situation record",

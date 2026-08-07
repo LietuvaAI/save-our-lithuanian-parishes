@@ -37,7 +37,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/ausros-vartu-manhattan-ny.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/ausros-vartu-manhattan-ny.json",
-      "content_sha256": "074c1f7c18b799523aff852f87727685deddb084f370f00c14527b09cdf0e5fd",
+      "content_sha256": "c7e7a6aec7999e3f6f691a25671f847bbf41f619ae419149b37abaa91bfa4d97",
       "source_record_slug": "ausros-vartu-manhattan-ny",
       "as_of": "2026-07-25",
       "registry_slugs": [
@@ -46,7 +46,7 @@
       "situation_keys": [
         "ausros-vartu-manhattan-ny"
       ],
-      "source_count": 5,
+      "source_count": 11,
       "development_count": 5,
       "site_extraction_candidate": false,
       "lineage_extraction_candidate": true,
@@ -109,7 +109,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/dievo-apvaizdos-southfield-mi.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/dievo-apvaizdos-southfield-mi.json",
-      "content_sha256": "acd39639e5d5f248eff582e5e7680ca1173794afa9104c7734b27dee687d981a",
+      "content_sha256": "11e1de5a4aec8782c9d9007ed6b82efe06c27e527d06a244e25e1298455d42a8",
       "source_record_slug": "dievo-apvaizdos-southfield-mi",
       "as_of": "2026-07-25",
       "registry_slugs": [
@@ -118,7 +118,7 @@
       "situation_keys": [
         "dievo-apvaizdos-southfield-mi"
       ],
-      "source_count": 4,
+      "source_count": 5,
       "development_count": 4,
       "site_extraction_candidate": false,
       "lineage_extraction_candidate": true,
@@ -649,7 +649,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-jurgio-norwood-ma.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-jurgio-norwood-ma.json",
-      "content_sha256": "829cd0fcfec307e5e6544486ceed1513e4f28f1f10ebfa6d31a91ed3139cdd0a",
+      "content_sha256": "acc276dabc5a5d101800e1bdcb4f902e206dbb1f5aa8ebc1d0c8f93aa41e6b99",
       "source_record_slug": "sv-jurgio-norwood-ma",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -703,7 +703,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-jurgio-shenandoah-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-jurgio-shenandoah-pa.json",
-      "content_sha256": "97b4dd6baeec94f7890d6c9859fb164bbbc5b655227f8bcc6f2db5148f700e43",
+      "content_sha256": "0f9785f808db36772caca16f46986067c28c9a6b50c0d54ece525bb9bf6d06ac",
       "source_record_slug": "sv-jurgio-shenandoah-pa",
       "as_of": "2026-07-09",
       "registry_slugs": [
@@ -712,7 +712,7 @@
       "situation_keys": [
         "sv-jurgio-shenandoah-pa"
       ],
-      "source_count": 5,
+      "source_count": 6,
       "development_count": 3,
       "site_extraction_candidate": false,
       "lineage_extraction_candidate": false,
@@ -1459,7 +1459,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/svc-trejybes-hartford-ct.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/svc-trejybes-hartford-ct.json",
-      "content_sha256": "7697c46a69c5554c19377458253b62aa60815bbd56d9105fded7abf17892692e",
+      "content_sha256": "be2d1c73a8b97b461369a38cf6f63e5840275d55b91ad4d2e794f27bb7dddfa6",
       "source_record_slug": "svc-trejybes-hartford-ct",
       "as_of": "2026-07-16",
       "registry_slugs": [
