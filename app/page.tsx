@@ -180,13 +180,13 @@ export default function Home() {
 
       <section className="mx-auto max-w-4xl py-6 text-center sm:py-8">
         <h1 className="font-serif text-3xl font-semibold leading-tight sm:text-5xl">
-          The Living Record of America&rsquo;s Lithuanian Parishes
+          The Record of America&rsquo;s Lithuanian Parishes
         </h1>
         <p className="mx-auto mt-3 max-w-3xl text-base leading-relaxed text-muted sm:text-lg">
-          From their immigrant-era foundations to the communities carrying
-          Lithuanian religious life forward today, this project documents how
-          America&rsquo;s Lithuanian parishes, missions, and congregations
-          began, changed, and where they stand now.
+          From their immigrant-era foundations to the present day, this project
+          documents how America&rsquo;s Lithuanian parishes, missions, and
+          congregations were established, how they changed, and what became of
+          their communities and churches.
         </p>
         <p className="mx-auto mt-4 max-w-4xl text-sm leading-relaxed">
           Three views, three distinct populations: {" "}
