@@ -1,14 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import ParishMap from "@/components/ParishMap";
 import ChurchProcession from "@/components/ChurchProcession";
-import {
-  DiocesePill,
-  DiocesanLeaderLink,
-} from "@/components/DiocesePill";
+import { DiocesePill } from "@/components/DiocesePill";
 import { EndStatePill } from "@/components/EndStatePill";
+import ParishMap from "@/components/ParishMap";
 import alertsData from "@/data/canonical-current-events-projection.json";
-import { getClearedPhoto } from "@/lib/photos";
 import {
   currentPastoralNetwork,
   infographicCounts,
@@ -18,45 +14,24 @@ import {
   romanCatholicParishHistory,
 } from "@/lib/infographic-projection";
 import type { EndState } from "@/lib/end-state";
+import { getClearedPhoto } from "@/lib/photos";
 
-// The homepage index names three distinct canonical populations. They are
-// linked, never added together or treated as interchangeable denominators.
 const PUBLIC_INSTITUTIONS = infographicCounts.public_us_institutions;
 const ROMAN_CATHOLIC_INSTITUTIONS = romanCatholicInstitutionHistory.length;
 const ROMAN_CATHOLIC_PARISHES = romanCatholicParishHistory.length;
 const ROMAN_CATHOLIC_MISSIONS = romanCatholicMissionHistory.length;
-const CLOSED_ROMAN_CATHOLIC_INSTITUTIONS =
-  romanCatholicInstitutionHistory.filter(
-    (institution) => institution.status_group === "closed",
-  ).length;
 const PHYSICAL_WORSHIP_SITES = infographicCounts.physical_worship_sites;
-const CURRENT_WORSHIP_CLASSES = new Set([
-  "active_parish",
-  "active_mission",
-  "mass_continues",
-]);
-const currentWorshipEntries =
-  currentPastoralNetwork.directory.entries.filter((entry) =>
-    CURRENT_WORSHIP_CLASSES.has(entry.networkClass),
-  );
-const currentPastoralCounts = currentPastoralNetwork.counts;
 const CURRENT_WORSHIP_COUNT =
-  currentPastoralCounts.active_parish +
-  currentPastoralCounts.active_mission +
-  currentPastoralCounts.mass_continues;
-
-if (
-  institutionHistory.length !== PUBLIC_INSTITUTIONS ||
-  ROMAN_CATHOLIC_INSTITUTIONS !==
-    ROMAN_CATHOLIC_PARISHES + ROMAN_CATHOLIC_MISSIONS ||
-  currentWorshipEntries.length !== CURRENT_WORSHIP_COUNT
-) {
-  throw new Error("Homepage populations do not match canonical projections");
-}
+  currentPastoralNetwork.counts.active_parish +
+  currentPastoralNetwork.counts.active_mission +
+  currentPastoralNetwork.counts.mass_continues;
+const ACTIVE_NETWORK_COUNT =
+  currentPastoralNetwork.counts.active_parish +
+  currentPastoralNetwork.counts.active_mission;
 
 type CurrentAlert = {
   id: string;
-  kind: string;
+  kind: "active" | "watch" | "building";
   entity: string;
   place: string;
   diocese: string;
@@ -85,6 +60,7 @@ const watchAlerts = currentAlerts.filter((alert) => alert.kind === "watch");
 const buildingAlerts = currentAlerts.filter(
   (alert) => alert.kind === "building",
 );
+const monitoredAlerts = [...watchAlerts, ...buildingAlerts];
 const activeCampaigns = (alertsData.campaigns as CurrentCampaign[])
   .map((campaign) => ({
     ...campaign,
@@ -93,8 +69,13 @@ const activeCampaigns = (alertsData.campaigns as CurrentCampaign[])
         alert.kind === "active" && alert.parishLink === campaign.parishLink,
     ),
   }))
-  .filter((campaign) => campaign.alert)
-  .slice(0, 4);
+  .filter(
+    (
+      campaign,
+    ): campaign is CurrentCampaign & { alert: CurrentAlert } =>
+      Boolean(campaign.alert),
+  );
+
 const statusByLink = new Map(
   institutionHistory.map((institution) => [
     institution.public_profile,
@@ -106,68 +87,114 @@ function statusForLink(link: string): EndState {
   return statusByLink.get(link) ?? "unverified";
 }
 
-function lineDrawingForLink(link: string) {
-  const slug = link.replace(/^\/(?:parishes|registry)\//, "");
-  return getClearedPhoto(`${slug}-line-drawing`);
+function profileSlug(link: string) {
+  return link.split("/").filter(Boolean).at(-1) ?? "";
 }
 
-const CAMPAIGN_ART: Record<
-  string,
-  {
-    src: string;
-    alt: string;
-    attribution: string;
-    sourceUrl?: string;
-  }
-> = {
-  "/parishes/dievo-apvaizdos-southfield-mi": {
-    src: "/images/parishes/southfield-divine-providence-current-line-drawing.png",
-    alt: "Line drawing of Divine Providence Lithuanian Catholic Church in Southfield.",
-    attribution: "Current photograph supplied by Vilija Jurgutis",
-  },
-  "/parishes/svc-trejybes-hartford-ct": {
-    src: "/images/parishes/hartford-holy-trinity-line-drawing.png",
-    alt: "Line drawing of Holy Trinity Lithuanian church in Hartford.",
-    attribution: "After Litnet / Wikimedia Commons · CC BY-SA 4.0",
-    sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:Hartford_Holy_Trinity_Roman_Catholic_Church,_2000.jpg",
-  },
-  "/parishes/sv-juozapo-waterbury-ct": {
-    src: "/images/parishes/waterbury-st-joseph-line-drawing.png",
-    alt: "Line drawing of St. Joseph Lithuanian church in Waterbury.",
-    attribution: "After Farragutful / Wikimedia Commons · CC BY-SA 4.0",
-    sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:St._Joseph%27s_Church_-_Waterbury,_Connecticut_01.jpg",
-  },
-  "/parishes/kristaus-atsimainymo-maspeth-ny": {
-    src: "/images/parishes/maspeth-transfiguration-line-drawing.png",
-    alt: "Line drawing of Transfiguration Lithuanian church in Maspeth.",
-    attribution: "After Renata3 / Wikimedia Commons · CC BY-SA 4.0",
-    sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:Transfiguration_Roman_Catholic_Church_20201114_154344.jpg",
-  },
-};
+function lineDrawingForLink(link: string) {
+  return getClearedPhoto(`${profileSlug(link)}-line-drawing`);
+}
 
-const SECONDARY_DOORS = [
+function firstSentence(text: string) {
+  const match = text.match(/^.*?[.!?](?:\s|$)/);
+  return match?.[0].trim() ?? text;
+}
+
+const campaignLinks = new Set(
+  activeCampaigns.map((campaign) => campaign.parishLink),
+);
+const activeNetwork = currentPastoralNetwork.directory.entries
+  .filter(
+    (entry) =>
+      entry.networkClass === "active_parish" ||
+      entry.networkClass === "active_mission",
+  )
+  .map((entry) => {
+    const institution = institutionHistory.find(
+      (candidate) => candidate.registry_slug === entry.registrySlug,
+    );
+    if (!institution) {
+      throw new Error(
+        `${entry.id}: active pastoral-network entry has no canonical institution`,
+      );
+    }
+    const art = lineDrawingForLink(institution.public_profile);
+    if (!art) {
+      throw new Error(
+        `${institution.registry_slug}: active pastoral-network entry has no cleared line drawing`,
+      );
+    }
+    return {
+      id: entry.id,
+      nameEn: entry.nameEn,
+      nameLt: entry.nameLt,
+      city: institution.city,
+      state: institution.state,
+      founded: institution.founded,
+      profileHref: institution.public_profile,
+      description: firstSentence(entry.ministry),
+      mission: entry.networkClass === "active_mission",
+      campaign: campaignLinks.has(institution.public_profile),
+      art,
+    };
+  })
+  .sort(
+    (a, b) =>
+      (a.founded.year ?? Number.POSITIVE_INFINITY) -
+        (b.founded.year ?? Number.POSITIVE_INFINITY) ||
+      a.nameEn.localeCompare(b.nameEn),
+  );
+
+if (
+  institutionHistory.length !== PUBLIC_INSTITUTIONS ||
+  ROMAN_CATHOLIC_INSTITUTIONS !==
+    ROMAN_CATHOLIC_PARISHES + ROMAN_CATHOLIC_MISSIONS ||
+  CURRENT_WORSHIP_COUNT !==
+    currentPastoralNetwork.directory.entries.filter((entry) =>
+      ["active_parish", "active_mission", "mass_continues"].includes(
+        entry.networkClass,
+      ),
+    ).length ||
+  activeNetwork.length !== ACTIVE_NETWORK_COUNT ||
+  activeCampaigns.length !== alertsData.counts.campaigns ||
+  monitoredAlerts.length !==
+    currentAlerts.filter(
+      (alert) => alert.kind === "watch" || alert.kind === "building",
+    ).length
+) {
+  throw new Error("Homepage populations do not match Brain projections");
+}
+
+const STAT_CARDS = [
   {
-    title: "The History",
-    body: "See the rise and contraction of the parish network over time.",
-    href: "/history",
-  },
-  {
-    title: "All Parish Profiles",
-    body: `Search all ${PUBLIC_INSTITUTIONS} published U.S. institution profiles.`,
+    value: PUBLIC_INSTITUTIONS,
+    label: "communities",
+    detail: "All public profiles",
     href: "/parishes",
   },
   {
-    title: "Church Buildings Through Time",
-    body: `Follow ${PHYSICAL_WORSHIP_SITES} physical worship sites separately.`,
+    value: ROMAN_CATHOLIC_INSTITUTIONS,
+    label: "RC parishes & missions",
+    detail: `${ROMAN_CATHOLIC_PARISHES} parishes + ${ROMAN_CATHOLIC_MISSIONS} missions`,
+    href: "/where-every-parish-ended-up",
+  },
+  {
+    value: PHYSICAL_WORSHIP_SITES,
+    label: "church buildings",
+    detail: "Physical worship sites",
     href: "/church-buildings-through-time",
   },
   {
-    title: "Lithuanian Catholic Life Today",
-    body: `Find the ${CURRENT_WORSHIP_COUNT} current places of Lithuanian worship.`,
+    value: CURRENT_WORSHIP_COUNT,
+    label: "places of Catholic worship",
+    detail: "Lithuanian worship today",
     href: "/lithuanian-catholic-life-today",
+  },
+  {
+    value: activeCampaigns.length,
+    label: "communities organizing now",
+    detail: "Current campaigns",
+    href: "/#active-campaigns",
   },
 ];
 
@@ -178,40 +205,23 @@ export default function Home() {
         <ChurchProcession />
       </section>
 
-      <section className="mx-auto max-w-4xl py-6 text-center sm:py-8">
-        <h1 className="font-serif text-3xl font-semibold leading-tight sm:text-5xl">
+      <section className="mx-auto max-w-4xl py-5 text-center sm:py-7">
+        <h1 className="font-serif text-3xl font-semibold leading-tight sm:text-4xl">
           The Record of America&rsquo;s Lithuanian Parishes
         </h1>
-        <p className="mx-auto mt-3 max-w-3xl text-base leading-relaxed text-muted sm:text-lg">
+        <p className="mx-auto mt-3 max-w-3xl text-[15px] leading-relaxed text-muted sm:text-base">
           From their immigrant-era foundations to the present day, this project
           documents how America&rsquo;s Lithuanian parishes, missions, and
           congregations were established, how they changed, and what became of
           their communities and churches.
         </p>
-        <p className="mx-auto mt-4 max-w-4xl text-sm leading-relaxed">
-          Three views, three distinct populations: {" "}
+        <p className="mt-3 text-sm">
           <Link
-            href="/parishes"
+            href="/about"
             className="font-semibold underline decoration-rule underline-offset-4 hover:text-accent"
           >
-            {PUBLIC_INSTITUTIONS} institutions
+            About the project →
           </Link>
-          {" · "}
-          <Link
-            href="/where-every-parish-ended-up"
-            className="font-semibold underline decoration-rule underline-offset-4 hover:text-accent"
-          >
-            {ROMAN_CATHOLIC_INSTITUTIONS} Roman Catholic ({ROMAN_CATHOLIC_PARISHES} parishes +{" "}
-            {ROMAN_CATHOLIC_MISSIONS} missions)
-          </Link>
-          {" · "}
-          <Link
-            href="/church-buildings-through-time"
-            className="font-semibold underline decoration-rule underline-offset-4 hover:text-accent"
-          >
-            {PHYSICAL_WORSHIP_SITES} worship sites
-          </Link>
-          .
         </p>
       </section>
 
@@ -219,336 +229,270 @@ export default function Home() {
         <ParishMap />
       </section>
 
-      <section className="mt-8 rounded-lg bg-band px-6 py-7 sm:mt-10 sm:px-8 lg:grid lg:grid-cols-[minmax(18rem,1.35fr)_minmax(0,1fr)] lg:items-center lg:gap-10">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
-            Start with the outcomes
-          </p>
-          <h2 className="mt-1 font-serif text-2xl font-semibold sm:text-3xl">
-            Parish &amp; Mission Outcomes
-          </h2>
-          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
-            Follow all {ROMAN_CATHOLIC_INSTITUTIONS} Roman Catholic
-            institutions — {ROMAN_CATHOLIC_PARISHES} parishes and {" "}
-            {ROMAN_CATHOLIC_MISSIONS} missions — from founding to where each
-            one ended up. {CLOSED_ROMAN_CATHOLIC_INSTITUTIONS} have closed.
-          </p>
+      <nav
+        aria-label="The record at a glance"
+        className="mt-5 grid divide-y divide-rule border-y border-rule sm:grid-cols-5 sm:divide-x sm:divide-y-0"
+      >
+        {STAT_CARDS.map((stat) => (
           <Link
-            href="/where-every-parish-ended-up"
-            className="mt-4 inline-flex rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            key={stat.href}
+            href={stat.href}
+            className="group px-3 py-4 text-center hover:bg-band/60"
           >
-            Explore parish and mission outcomes →
+            <span className="block font-serif text-2xl font-semibold text-foreground group-hover:text-accent">
+              {stat.value}
+            </span>
+            <span className="mt-0.5 block text-[12px] font-semibold leading-tight">
+              {stat.label}
+            </span>
+            <span className="mt-1 block text-[10px] leading-tight text-muted">
+              {stat.detail}
+            </span>
+          </Link>
+        ))}
+      </nav>
+
+      <section className="mt-12" aria-labelledby="living-network-heading">
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+          Lithuanian Catholic life today
+        </p>
+        <div className="mt-1 flex flex-wrap items-end justify-between gap-3 border-b border-rule pb-3">
+          <div>
+            <h2
+              id="living-network-heading"
+              className="font-serif text-3xl font-semibold"
+            >
+              The living network
+            </h2>
+            <p className="mt-1 max-w-3xl text-sm leading-relaxed text-muted">
+              Six active parishes and two active missions remain Lithuanian-led.
+              Six additional host communities celebrate Lithuanian Mass.
+            </p>
+          </div>
+          <Link
+            href="/lithuanian-catholic-life-today"
+            className="text-sm font-semibold underline decoration-rule underline-offset-4 hover:text-accent"
+          >
+            See all {CURRENT_WORSHIP_COUNT} places →
           </Link>
         </div>
 
-        <div className="mt-7 flex flex-col gap-3 border-t border-rule pt-6 lg:mt-0 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
-            {SECONDARY_DOORS.map((door) => (
-              <Link
-                key={door.href}
-                href={door.href}
-                className="group text-sm leading-relaxed"
-              >
-                <strong className="font-semibold underline decoration-rule underline-offset-4 group-hover:text-accent">
-                  {door.title}
-                </strong>
-                <span className="text-muted"> — {door.body}</span>
-              </Link>
-            ))}
-        </div>
-      </section>
-
-      <section
-        id="happening-now"
-        className="mt-10 scroll-mt-24 border-y border-rule py-5 sm:py-6"
-      >
-        <div className="flex flex-wrap items-baseline justify-between gap-2">
-          <div>
-            <p className="text-sm uppercase tracking-widest text-muted">
-              Happening now
-            </p>
-            <h2 className="mt-1 font-serif text-2xl font-semibold">
-              Active campaigns
-            </h2>
-          </div>
+        <div className="mt-5 flex flex-wrap items-baseline justify-between gap-2">
+          <h3 className="font-serif text-2xl font-semibold">
+            Still standing <span className="text-muted">· {activeNetwork.length}</span>
+          </h3>
           <span className="text-sm text-muted">
-            {activeCampaigns.length} communities organizing
-          </span>
-        </div>
-        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted">
-          These communities are acting while their futures are still being
-          decided. Read what is happening, understand the parish&rsquo;s history,
-          and respond to the campaign itself.
-        </p>
-
-        <div className="mt-4 divide-y divide-rule border-y border-rule">
-          {activeCampaigns.map((campaign) => {
-            const art = CAMPAIGN_ART[campaign.parishLink];
-            if (!art) {
-              throw new Error(`Missing campaign art for ${campaign.parishLink}`);
-            }
-
-            return (
-              <article
-                key={campaign.id}
-                className="grid gap-4 py-5 first:pt-4 last:pb-4 sm:grid-cols-[11rem_minmax(0,1fr)] sm:items-center md:grid-cols-[13rem_minmax(0,1fr)] md:gap-6"
-              >
-                <Link
-                  href={campaign.parishLink}
-                  aria-label={`See the parish profile for ${campaign.entity}`}
-                  className="group mx-auto block w-full max-w-[15rem] sm:mx-0"
-                >
-                  <span className="relative block aspect-[4/3] w-full">
-                    <Image
-                      src={art.src}
-                      alt={art.alt}
-                      fill
-                      sizes="(max-width: 639px) 240px, 208px"
-                      className="object-contain mix-blend-multiply transition-transform duration-200 group-hover:scale-[1.02]"
-                    />
-                  </span>
-                </Link>
-                <div className="text-center sm:text-left">
-                  <div className="flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1 sm:justify-between">
-                    <h3 className="font-serif text-lg font-semibold">
-                      {campaign.entity}
-                    </h3>
-                    <span className="text-sm text-muted">{campaign.place}</span>
-                  </div>
-                  <div className="mt-2 flex flex-wrap items-center justify-center gap-2 sm:justify-start">
-                    <EndStatePill
-                      value={statusForLink(campaign.parishLink)}
-                    />
-                    {campaign.alert && (
-                      <DiocesePill name={campaign.alert.diocese} />
-                    )}
-                  </div>
-                  {campaign.alert && (
-                    <p className="mt-1">
-                      <DiocesanLeaderLink
-                        diocese={campaign.alert.diocese}
-                      />
-                    </p>
-                  )}
-                  <p className="mt-1 max-w-4xl text-sm leading-relaxed text-muted">
-                    {campaign.alert?.whatChanged}
-                  </p>
-                  <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm sm:justify-start">
-                    <Link
-                      href={campaign.parishLink}
-                      className="font-medium underline decoration-rule underline-offset-4 hover:text-accent"
-                    >
-                      See parish profile
-                    </Link>
-                    <a
-                      href={campaign.hearthUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-medium underline decoration-rule underline-offset-4 hover:text-accent"
-                    >
-                      Read what&rsquo;s happening now
-                    </a>
-                    <a
-                      href={campaign.actionUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex rounded-md border border-accent px-3 py-1.5 font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
-                    >
-                      {campaign.actionLabel} &rarr;
-                    </a>
-                  </div>
-                </div>
-              </article>
-            );
-          })}
-        </div>
-      </section>
-
-      <section id="watch-list" className="mt-12 scroll-mt-24">
-        <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-rule pb-3">
-          <div>
-            <p className="text-sm uppercase tracking-widest text-muted">
-              Current signals
-            </p>
-            <h2 className="mt-1 font-serif text-2xl font-semibold">
-              On the watch list
-            </h2>
-          </div>
-          <span className="text-sm text-muted">
-            {watchAlerts.length + buildingAlerts.length} records to monitor
+            {currentPastoralNetwork.counts.active_parish} parishes + {" "}
+            {currentPastoralNetwork.counts.active_mission} missions
           </span>
         </div>
 
-        <div className="mt-6 grid gap-8 lg:grid-cols-2">
-          {[
-            {
-              title: "Developments to monitor",
-              alerts: watchAlerts,
-              description:
-                "Diocesan or parish developments without a documented public campaign.",
-            },
-            {
-              title: "Buildings at risk",
-              alerts: buildingAlerts,
-              description:
-                "Former parish buildings whose sale, demolition, or physical future remains at stake.",
-            },
-          ].map((group) => (
-            <section key={group.title}>
-              <div className="flex items-baseline justify-between gap-3">
-                <h3 className="font-serif text-xl font-semibold">
-                  {group.title}
-                </h3>
-                <span className="text-sm text-muted">
-                  {group.alerts.length}
+        <div className="mt-4 grid gap-3 md:grid-cols-2">
+          {activeNetwork.map((entry) => (
+            <Link
+              key={entry.id}
+              href={entry.profileHref}
+              className="group grid min-h-[116px] grid-cols-[104px_minmax(0,1fr)] gap-4 rounded-lg border border-rule bg-background p-3 hover:border-foreground"
+            >
+              <span
+                className="relative block h-[92px] w-[104px] overflow-hidden bg-white"
+                title={entry.art.attribution}
+              >
+                <Image
+                  src={entry.art.src}
+                  alt={entry.art.alt}
+                  fill
+                  sizes="104px"
+                  className="object-contain mix-blend-multiply transition-transform duration-200 group-hover:scale-[1.03]"
+                />
+              </span>
+              <span className="min-w-0 self-center">
+                <span className="block font-serif text-[15.5px] font-semibold leading-tight group-hover:text-accent">
+                  {entry.nameEn}
                 </span>
-              </div>
-              <p className="mt-1 text-sm leading-relaxed text-muted">
-                {group.description}
-              </p>
-              <div className="mt-3 divide-y divide-rule border-y border-rule">
-                {group.alerts.map((alert) => {
-                  const art = alert.parishLink
-                    ? lineDrawingForLink(alert.parishLink)
-                    : null;
-                  return (
-                    <article
-                      key={alert.id}
-                      className={`py-3 ${art ? "grid grid-cols-[4.75rem_minmax(0,1fr)] gap-3" : ""}`}
-                    >
-                      {art && alert.parishLink && (
-                        <Link
-                          href={alert.parishLink}
-                          aria-label={`Open ${alert.entity} parish profile`}
-                          className="relative block aspect-square self-start overflow-hidden border border-rule bg-white p-1.5 hover:border-accent"
-                          title={art.attribution}
-                        >
-                          <Image
-                            src={art.src}
-                            alt=""
-                            fill
-                            sizes="76px"
-                            className="object-contain mix-blend-multiply"
-                          />
-                        </Link>
-                      )}
-                      <div className="min-w-0">
-                        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                          {alert.parishLink ? (
-                            <Link
-                              href={alert.parishLink}
-                              className="font-serif font-semibold underline decoration-rule underline-offset-2 hover:text-accent"
-                            >
-                              {alert.entity}
-                            </Link>
-                          ) : (
-                            <h4 className="font-serif font-semibold">
-                              {alert.entity}
-                            </h4>
-                          )}
-                          <span className="text-sm text-muted">
-                            {alert.place}
-                          </span>
-                        </div>
-                        <div className="mt-2 flex flex-wrap items-center gap-2">
-                          {alert.statusLabel ? (
-                            <span className="inline-block rounded-full border border-rule bg-band px-2 py-0.5 text-[11px] font-medium leading-tight whitespace-nowrap">
-                              {alert.statusLabel}
-                            </span>
-                          ) : (
-                            <EndStatePill
-                              value={
-                                alert.status ??
-                                (alert.parishLink
-                                  ? statusForLink(alert.parishLink)
-                                  : "unverified")
-                              }
-                            />
-                          )}
-                          <DiocesePill name={alert.diocese} />
-                        </div>
-                        <p className="mt-1">
-                          <DiocesanLeaderLink diocese={alert.diocese} />
-                        </p>
-                        <p className="mt-2 text-sm leading-relaxed text-muted">
-                          {alert.whatChanged}
-                        </p>
-                        {alert.context && (
-                          <p className="mt-2 text-sm leading-relaxed text-foreground">
-                            {alert.context}
-                          </p>
-                        )}
-                        <p className="mt-2 text-xs leading-relaxed text-muted">
-                          {(alert.parishLink || alert.relatedProfileLink) && (
-                            <>
-                              <Link
-                                href={
-                                  alert.parishLink ?? alert.relatedProfileLink!
-                                }
-                                className="font-medium underline hover:text-foreground"
-                              >
-                                {alert.parishLink
-                                  ? "Parish profile"
-                                  : alert.relatedProfileLabel ??
-                                    "Related parish record"}
-                              </Link>
-                              {" · "}
-                            </>
-                          )}
-                          {"Sources: "}
-                          {alert.sources.map((source, index) => (
-                            <span key={source.url}>
-                              {index > 0 && " · "}
-                              <a
-                                href={source.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="underline hover:text-foreground"
-                              >
-                                {source.publisher}
-                              </a>
-                            </span>
-                          ))}
-                        </p>
-                      </div>
-                    </article>
-                  );
-                })}
-              </div>
-            </section>
+                <span className="mt-0.5 block text-[12px] leading-tight text-muted">
+                  {entry.nameLt}
+                </span>
+                <span className="mt-1.5 block text-[12px] leading-tight text-muted">
+                  {entry.city}, {entry.state}
+                  {entry.founded.year ? ` · est. ${entry.founded.year}` : ""}
+                </span>
+                <span className="mt-1.5 flex flex-wrap items-center gap-1.5">
+                  <span className="inline-flex items-center gap-1 rounded-full border border-rule px-2 py-0.5 text-[10px] font-semibold">
+                    <span
+                      className={`size-2 rounded-full border border-[var(--es-active)] ${
+                        entry.mission ? "bg-background" : "bg-[var(--es-active)]"
+                      }`}
+                      aria-hidden
+                    />
+                    {entry.mission ? "Mission" : "Parish"}
+                  </span>
+                  {entry.campaign && (
+                    <span className="rounded-full bg-[var(--mark-community)] px-2 py-0.5 text-[10px] font-semibold text-foreground">
+                      Active campaign
+                    </span>
+                  )}
+                </span>
+                <span className="mt-1.5 block text-[13px] leading-snug text-muted">
+                  {entry.description}
+                </span>
+              </span>
+            </Link>
           ))}
         </div>
 
-        <p className="mt-5 text-sm text-muted">
-          Current as of {alertsData.snapshot}.{" "}
-          <Link
-            href="/report"
-            className="font-medium underline underline-offset-4 hover:text-accent"
+        <div className="mt-8 grid gap-5 lg:grid-cols-2">
+          <section
+            id="active-campaigns"
+            className="scroll-mt-24 overflow-hidden rounded-lg border border-rule"
           >
-            Report a current change &rarr;
-          </Link>
-        </p>
+            <header className="flex items-baseline justify-between gap-3 bg-accent px-5 py-3 text-white">
+              <h3 className="font-serif text-xl font-semibold">
+                Active campaigns
+              </h3>
+              <span className="text-sm">
+                {activeCampaigns.length} organizing
+              </span>
+            </header>
+            <p className="bg-[#faf7f0] px-5 py-3 text-[13px] leading-relaxed text-muted">
+              Communities organizing while parish, ministry, or building
+              decisions remain active.
+            </p>
+            <div className="divide-y divide-rule">
+              {activeCampaigns.map((campaign) => {
+                const art = lineDrawingForLink(campaign.parishLink);
+                if (!art) {
+                  throw new Error(
+                    `Missing cleared campaign art for ${campaign.parishLink}`,
+                  );
+                }
+                return (
+                  <article
+                    key={campaign.id}
+                    className="grid grid-cols-[88px_minmax(0,1fr)] gap-3 p-4"
+                  >
+                    <Link
+                      href={campaign.parishLink}
+                      className="relative block h-[82px] w-[88px] bg-white"
+                      title={art.attribution}
+                      aria-label={`Open ${campaign.entity} profile`}
+                    >
+                      <Image
+                        src={art.src}
+                        alt=""
+                        fill
+                        sizes="88px"
+                        className="object-contain mix-blend-multiply"
+                      />
+                    </Link>
+                    <div className="min-w-0">
+                      <h4 className="font-serif text-[15.5px] font-semibold leading-tight">
+                        <Link
+                          href={campaign.parishLink}
+                          className="hover:text-accent"
+                        >
+                          {campaign.entity}
+                        </Link>
+                      </h4>
+                      <p className="mt-1 text-[12px] leading-tight text-muted">
+                        {campaign.place} · {campaign.alert.diocese}
+                      </p>
+                      <div className="mt-2 flex flex-wrap items-center gap-1.5">
+                        <EndStatePill
+                          value={statusForLink(campaign.parishLink)}
+                        />
+                        <DiocesePill name={campaign.alert.diocese} />
+                      </div>
+                      <p className="mt-2 text-[13px] leading-relaxed text-muted">
+                        {campaign.alert.whatChanged}
+                      </p>
+                      <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-[12px] font-semibold">
+                        <Link
+                          href={campaign.parishLink}
+                          className="underline decoration-rule underline-offset-4 hover:text-accent"
+                        >
+                          Profile
+                        </Link>
+                        <a
+                          href={campaign.hearthUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline decoration-rule underline-offset-4 hover:text-accent"
+                        >
+                          What&rsquo;s happening
+                        </a>
+                        <a
+                          href={campaign.actionUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-accent underline decoration-rule underline-offset-4"
+                        >
+                          {campaign.actionLabel} →
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </section>
+
+          <section className="overflow-hidden rounded-lg border border-rule">
+            <header className="flex items-baseline justify-between gap-3 bg-[#292524] px-5 py-3 text-white">
+              <h3 className="font-serif text-xl font-semibold">
+                On the watch list
+              </h3>
+              <span className="text-sm">
+                {monitoredAlerts.length} monitored
+              </span>
+            </header>
+            <p className="bg-[#faf7f0] px-5 py-3 text-[13px] leading-relaxed text-muted">
+              Current developments without a documented public campaign,
+              including former church buildings at risk.
+            </p>
+            <div className="divide-y divide-rule">
+              {monitoredAlerts.map((alert) => (
+                <article key={alert.id} className="px-5 py-3.5">
+                  <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                    {alert.parishLink ? (
+                      <Link
+                        href={alert.parishLink}
+                        className="font-serif text-[15.5px] font-semibold hover:text-accent"
+                      >
+                        {alert.entity}
+                      </Link>
+                    ) : (
+                      <h4 className="font-serif text-[15.5px] font-semibold">
+                        {alert.entity}
+                      </h4>
+                    )}
+                    <span className="text-[12px] text-muted">
+                      {alert.place}
+                    </span>
+                  </div>
+                  <p className="mt-1 text-[13px] leading-relaxed text-muted">
+                    {alert.whatChanged}
+                  </p>
+                  <div className="mt-2 flex flex-wrap items-center gap-2">
+                    <span className="rounded-full border border-rule px-2 py-0.5 text-[10px] font-semibold">
+                      {alert.kind === "building"
+                        ? "Building at risk"
+                        : "Development to monitor"}
+                    </span>
+                    <DiocesePill name={alert.diocese} />
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        </div>
       </section>
 
-      <section className="mx-auto max-w-2xl py-14">
-        <h2 className="font-serif text-2xl font-semibold">
-          The communities built them
-        </h2>
-        <p className="mt-4 leading-relaxed">
-          Lithuanian immigrants raised these churches with their own hands
-          and their own wages — and around each one grew a world: a school, a
-          choir, a cemetery, and a language kept alive an ocean from home.
-          This project keeps each community&rsquo;s history, present condition,
-          and evidence connected so that parishes can learn from one another.
+      <section className="mx-auto my-14 max-w-3xl rounded-lg border border-rule bg-band/50 p-6 text-center sm:p-8">
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+          Židinys · The Hearth
         </p>
-        <p className="mt-6">
-          <Link href="/about" className="underline hover:text-accent">
-            About the project →
-          </Link>
-        </p>
-      </section>
-
-      <section className="rounded-lg border border-rule p-6 text-center sm:p-8">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="mt-2 font-serif text-2xl font-semibold">
           Follow new findings and developments
         </h2>
         <p className="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-muted">
@@ -560,7 +504,7 @@ export default function Home() {
             href="https://blog.saveourlithuanianparishes.org/subscribe"
             className="inline-block rounded-md border border-accent px-5 py-2.5 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
           >
-            Subscribe to our blog: Židinys (The Hearth)
+            Subscribe to Židinys (The Hearth)
           </a>
         </p>
       </section>
