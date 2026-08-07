@@ -83,11 +83,11 @@ export default function DioceseExplorer({
           <div className="flex items-center justify-between gap-3">
             <label
               htmlFor="diocese-select"
-              className="text-[11px] font-medium uppercase tracking-widest text-muted"
+              className="text-ui-label font-medium uppercase tracking-widest text-muted"
             >
               Diocese navigator
             </label>
-            <span className="text-[11px] text-muted">
+            <span className="text-ui-label text-muted">
               {selected.total} parish records
             </span>
           </div>
@@ -105,7 +105,7 @@ export default function DioceseExplorer({
           </select>
 
           <div className="mt-3 border-y border-rule py-3">
-            <p className="text-[10px] font-semibold uppercase tracking-wide text-muted">
+            <p className="text-ui-label font-semibold uppercase tracking-wide text-muted">
               {selected.name}
             </p>
             <div className="mt-1 flex items-end justify-between gap-3">
@@ -114,7 +114,7 @@ export default function DioceseExplorer({
               </h2>
               <p className="shrink-0 font-serif text-section-title font-semibold leading-none">
                 {selected.ended}
-                <span className="ml-1 font-sans text-[11px] font-normal text-muted">
+                <span className="ml-1 font-sans text-ui-label font-normal text-muted">
                   of {selected.total}
                 </span>
               </p>
@@ -122,7 +122,7 @@ export default function DioceseExplorer({
           </div>
 
           <div
-            className="mt-2 grid grid-cols-2 gap-1 text-[11px]"
+            className="mt-2 grid grid-cols-2 gap-1 text-ui-label"
             aria-label={`${selected.shortName} outcome summary`}
           >
             {[
@@ -161,10 +161,10 @@ export default function DioceseExplorer({
           </div>
 
           <div className="mt-3 flex items-center justify-between gap-2">
-            <p className="text-[10px] font-semibold uppercase tracking-wide text-muted">
+            <p className="text-ui-label font-semibold uppercase tracking-wide text-muted">
               Parish records
             </p>
-            <span className="text-[10px] text-muted">Select to open</span>
+            <span className="text-ui-label text-muted">Select to open</span>
           </div>
           <div className="mt-1 max-h-[23rem] divide-y divide-rule overflow-y-auto border-y border-rule">
             {selected.parishes.map((parish) => (
@@ -183,11 +183,11 @@ export default function DioceseExplorer({
                         {parish.name}
                       </span>
                     )}
-                    <p className="mt-0.5 text-[10px] text-muted">
+                    <p className="mt-0.5 text-ui-label text-muted">
                       {parish.city}, {parish.state}
                     </p>
                   </div>
-                  <span className="inline-flex max-w-[7rem] shrink-0 items-center gap-1 text-right text-[10px] leading-tight text-muted">
+                  <span className="inline-flex max-w-[7rem] shrink-0 items-center gap-1 text-right text-ui-label leading-tight text-muted">
                     <EndStateDot value={parish.endState} />
                     {END_STATE_SHORT[parish.endState]}
                   </span>

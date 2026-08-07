@@ -208,10 +208,10 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-4xl py-5 text-center sm:py-7">
-        <h1 className="font-serif text-[26px] font-semibold leading-[1.2]">
+        <h1 className="font-serif text-masthead-title font-semibold">
           America&rsquo;s Lithuanian Parishes
         </h1>
-        <p className="mx-auto mt-3 max-w-3xl text-[13px] leading-relaxed text-muted">
+        <p className="mx-auto mt-3 max-w-3xl text-body-copy leading-relaxed text-muted">
           America&rsquo;s Lithuanian parishes have long been the {" "}
           <em>židiniai</em> of our communities&mdash;the hearths where faith was
           lived, language was spoken, memory was preserved, and identity was
@@ -247,10 +247,10 @@ export default function Home() {
             <span className="block font-serif text-section-title font-semibold text-foreground group-hover:text-accent">
               {stat.value}
             </span>
-            <span className="mt-0.5 block text-[12px] font-semibold leading-tight">
+            <span className="mt-0.5 block text-support-copy font-semibold leading-tight">
               {stat.label}
             </span>
-            <span className="mt-1 block text-[11px] leading-tight text-muted">
+            <span className="mt-1 block text-ui-label leading-tight text-muted">
               {stat.detail}
             </span>
           </Link>
@@ -287,7 +287,7 @@ export default function Home() {
             {currentPastoralNetwork.counts.active_mission} missions
           </span>
         </div>
-        <p className="mt-1 max-w-3xl text-[13px] leading-relaxed text-muted">
+        <p className="mt-1 max-w-3xl text-body-copy leading-relaxed text-muted">
           Of the {ROMAN_CATHOLIC_INSTITUTIONS} Lithuanian Catholic institutions
           ever founded in America, these six parishes and two missions still
           gather for Lithuanian worship — the living remnant of the whole
@@ -314,18 +314,18 @@ export default function Home() {
                 />
               </span>
               <span className="min-w-0 self-center">
-                <span className="block font-serif text-[15.5px] font-semibold leading-tight group-hover:text-accent">
+                <span className="block font-serif text-card-title font-semibold leading-tight group-hover:text-accent">
                   {entry.nameEn}
                 </span>
-                <span className="mt-0.5 block text-[12px] leading-tight text-muted">
+                <span className="mt-0.5 block text-support-copy leading-tight text-muted">
                   {entry.nameLt}
                 </span>
-                <span className="mt-1.5 block text-[12px] leading-tight text-muted">
+                <span className="mt-1.5 block text-support-copy leading-tight text-muted">
                   {entry.city}, {entry.state}
                   {entry.founded.year ? ` · est. ${entry.founded.year}` : ""}
                 </span>
                 <span className="mt-1.5 flex flex-wrap items-center gap-1.5">
-                  <span className="inline-flex items-center gap-1 rounded-full border border-rule px-2 py-0.5 text-[11px] font-semibold">
+                  <span className="inline-flex items-center gap-1 rounded-full border border-rule px-2 py-0.5 text-ui-label font-semibold">
                     <span
                       className={`size-2 rounded-full border border-[var(--es-active)] ${
                         entry.mission ? "bg-background" : "bg-[var(--es-active)]"
@@ -335,7 +335,7 @@ export default function Home() {
                     {entry.mission ? "Mission" : "Parish"}
                   </span>
                   {entry.campaign && (
-                    <span className="inline-flex items-center gap-1 rounded-full border border-[#b08b33] bg-white px-2 py-0.5 text-[11px] font-semibold text-foreground">
+                    <span className="inline-flex items-center gap-1 rounded-full border border-[#b08b33] bg-white px-2 py-0.5 text-ui-label font-semibold text-foreground">
                       <span
                         className="size-2 rounded-full bg-[var(--es-active)]"
                         aria-hidden
@@ -344,7 +344,7 @@ export default function Home() {
                     </span>
                   )}
                 </span>
-                <span className="mt-1.5 block text-[13px] leading-snug text-muted">
+                <span className="mt-1.5 block text-body-copy leading-snug text-muted">
                   {entry.description}
                 </span>
               </span>
@@ -358,14 +358,14 @@ export default function Home() {
             className="scroll-mt-24 overflow-hidden rounded-lg border border-rule"
           >
             <header className="flex items-baseline justify-between gap-3 bg-accent px-5 py-3 text-white">
-              <h3 className="font-sans text-[11px] font-semibold uppercase tracking-[0.15em]">
+              <h3 className="font-sans text-ui-label font-semibold uppercase tracking-[0.15em]">
                 Active campaigns
               </h3>
-              <span className="text-[11px]">
+              <span className="text-ui-label">
                 {activeCampaigns.length} organizing
               </span>
             </header>
-            <p className="bg-[#faf7f0] px-5 py-3 text-[13px] leading-relaxed text-muted">
+            <p className="bg-[#faf7f0] px-5 py-3 text-body-copy leading-relaxed text-muted">
               {activeCampaignCountLabel} parishes face decisions about their
               future right now. Each campaign is led by its own community; this
               project documents their situations and shows how to support them.
@@ -398,7 +398,7 @@ export default function Home() {
                       />
                     </Link>
                     <div className="min-w-0">
-                      <h4 className="font-serif text-[15.5px] font-semibold leading-tight">
+                      <h4 className="font-serif text-card-title font-semibold leading-tight">
                         <Link
                           href={campaign.parishLink}
                           className="hover:text-accent"
@@ -406,7 +406,7 @@ export default function Home() {
                           {campaign.entity}
                         </Link>
                       </h4>
-                      <p className="mt-1 text-[12px] leading-tight text-muted">
+                      <p className="mt-1 text-support-copy leading-tight text-muted">
                         {campaign.place} · {campaign.alert.diocese}
                       </p>
                       <div className="mt-2 flex flex-wrap items-center gap-1.5">
@@ -415,10 +415,10 @@ export default function Home() {
                         />
                         <DiocesePill name={campaign.alert.diocese} />
                       </div>
-                      <p className="mt-2 text-[13px] leading-relaxed text-muted">
+                      <p className="mt-2 text-body-copy leading-relaxed text-muted">
                         {campaign.alert.whatChanged}
                       </p>
-                      <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-[12px] font-semibold">
+                      <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-support-copy font-semibold">
                         <Link
                           href={campaign.parishLink}
                           className="underline decoration-rule underline-offset-4 hover:text-accent"
@@ -451,14 +451,14 @@ export default function Home() {
 
           <section className="overflow-hidden rounded-lg border border-rule">
             <header className="flex items-baseline justify-between gap-3 bg-[#292524] px-5 py-3 text-white">
-              <h3 className="font-sans text-[11px] font-semibold uppercase tracking-[0.15em]">
+              <h3 className="font-sans text-ui-label font-semibold uppercase tracking-[0.15em]">
                 On the watch list
               </h3>
-              <span className="text-[11px]">
+              <span className="text-ui-label">
                 {monitoredAlerts.length} monitored
               </span>
             </header>
-            <p className="bg-[#faf7f0] px-5 py-3 text-[13px] leading-relaxed text-muted">
+            <p className="bg-[#faf7f0] px-5 py-3 text-body-copy leading-relaxed text-muted">
               Situations the project is tracking before they harden into
               outcomes — planning-area consolidations, buildings on the market,
               and fates still canonically unresolved.
@@ -470,24 +470,24 @@ export default function Home() {
                     {alert.parishLink ? (
                       <Link
                         href={alert.parishLink}
-                        className="font-serif text-[15.5px] font-semibold hover:text-accent"
+                        className="font-serif text-card-title font-semibold hover:text-accent"
                       >
                         {alert.entity}
                       </Link>
                     ) : (
-                      <h4 className="font-serif text-[15.5px] font-semibold">
+                      <h4 className="font-serif text-card-title font-semibold">
                         {alert.entity}
                       </h4>
                     )}
-                    <span className="text-[12px] text-muted">
+                    <span className="text-support-copy text-muted">
                       {alert.place}
                     </span>
                   </div>
-                  <p className="mt-1 text-[13px] leading-relaxed text-muted">
+                  <p className="mt-1 text-body-copy leading-relaxed text-muted">
                     {alert.whatChanged}
                   </p>
                   <div className="mt-2 flex flex-wrap items-center gap-2">
-                    <span className="rounded-full border border-rule px-2 py-0.5 text-[11px] font-semibold">
+                    <span className="rounded-full border border-rule px-2 py-0.5 text-ui-label font-semibold">
                       {alert.kind === "building"
                         ? "Building at risk"
                         : "Development to monitor"}

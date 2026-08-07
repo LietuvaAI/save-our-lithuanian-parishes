@@ -62,18 +62,18 @@ export default function OutcomeModeExplorer({
 
   return (
     <>
-      <h1 className="font-serif text-[clamp(26px,3vw,34px)] font-semibold leading-[1.08]">
+      <h1 className="font-serif text-outcomes-title font-semibold">
         The State of Lithuanian Catholic Parishes in America
       </h1>
 
       {institutions ? (
-        <p className="mt-2 max-w-[90ch] text-[15px] leading-relaxed">
+        <p className="mt-2 max-w-[90ch] text-lead-copy">
           Of <strong>{institutionCount}</strong> Lithuanian Roman Catholic
           parishes and missions, <strong>{closedCount}</strong> have closed;
           Lithuanian worship continues at <strong>{currentWorshipPlaces}</strong>.
         </p>
       ) : (
-        <p className="mt-2 max-w-[90ch] text-[15px] leading-relaxed">
+        <p className="mt-2 max-w-[90ch] text-lead-copy">
           The record identifies <strong>{physicalSiteCount}</strong> physical
           worship sites: <strong>{standingSiteCount}</strong> standing, {" "}
           <strong>{demolishedSiteCount}</strong> demolished, {" "}
@@ -86,9 +86,11 @@ export default function OutcomeModeExplorer({
       )}
 
       <section className="mt-3 border-y border-rule py-3">
-        <h2 className="font-serif text-[16px] font-semibold">How to read this</h2>
+        <h2 className="font-serif text-compact-heading font-semibold">
+          How to read this
+        </h2>
         {institutions ? (
-          <p className="mt-1 max-w-[90ch] text-[13.5px] leading-relaxed">
+          <p className="mt-1 max-w-[90ch] text-body-copy leading-relaxed">
             Every line is one institution&mdash;one parish or mission, counted
             once&mdash;running from the decade it began to where it stands
             today. This view follows {parishCount} U.S. Roman Catholic parishes
@@ -105,7 +107,7 @@ export default function OutcomeModeExplorer({
             .
           </p>
         ) : (
-          <p className="mt-1 max-w-[90ch] text-[13.5px] leading-relaxed">
+          <p className="mt-1 max-w-[90ch] text-body-copy leading-relaxed">
             Every row is one physical church or worship site. A parish or
             mission may have used several buildings, and one building may have
             served more than one congregation. Building conditions come only
@@ -114,7 +116,7 @@ export default function OutcomeModeExplorer({
             to follow each institution once.
           </p>
         )}
-        <p className="mt-1.5 max-w-[90ch] text-[12.5px] leading-relaxed text-muted">
+        <p className="mt-1.5 max-w-[90ch] text-support-copy leading-relaxed text-muted">
           Canonical projection {revision}, generated {generated}.
         </p>
       </section>
@@ -124,7 +126,7 @@ export default function OutcomeModeExplorer({
           {institutions ? "Institution by institution" : "Building by building"}
         </h2>
         <div
-          className="inline-flex overflow-hidden rounded-md border border-rule bg-background p-0.5 text-[13px] font-semibold"
+          className="inline-flex overflow-hidden rounded-md border border-rule bg-background p-0.5 text-support-copy font-semibold"
           role="group"
           aria-label="Choose an outcomes view"
         >

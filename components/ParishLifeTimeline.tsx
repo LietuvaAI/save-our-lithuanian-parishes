@@ -56,7 +56,7 @@ export function ParishLifeTimeline({
               {event.date}
             </p>
             <p
-              className="mt-1 text-[10px] font-semibold uppercase"
+              className="mt-1 text-ui-label font-semibold uppercase"
               style={{ color: KIND_COLOR[event.kind] }}
             >
               {KIND_LABEL[event.kind]}

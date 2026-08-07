@@ -36,7 +36,7 @@ export function ParishProfileChronology({
               <details className="group">
                 <summary className="grid cursor-pointer list-none grid-cols-[88px_minmax(0,1fr)_18px] gap-x-3 py-3.5 marker:content-none md:grid-cols-[104px_minmax(0,1fr)_18px] md:gap-x-[22px] [&::-webkit-details-marker]:hidden">
                   <span
-                    className={`pt-0.5 font-mono text-[11px] font-medium tabular-nums tracking-wider [white-space:nowrap] ${
+                    className={`pt-0.5 font-mono text-ui-label font-medium tabular-nums tracking-wider [white-space:nowrap] ${
                       item.loss ? "text-accent" : "text-muted"
                     }`}
                   >
@@ -44,7 +44,7 @@ export function ParishProfileChronology({
                   </span>
                   <span className="min-w-0">
                     {item.kind === "building" && (
-                      <span className="mb-1 block font-mono text-[9.5px] font-medium uppercase tracking-[0.14em] text-muted">
+                      <span className="mb-1 block font-mono text-ui-label font-medium uppercase tracking-[0.14em] text-muted">
                         Worship site
                       </span>
                     )}
@@ -61,7 +61,7 @@ export function ParishProfileChronology({
                 </summary>
                 <div className="pb-4 pl-0 md:pl-[126px]">
                   {item.detail && (
-                    <p className="text-[13.5px] leading-relaxed text-muted">
+                    <p className="text-body-copy leading-relaxed text-muted">
                       {item.detail}
                     </p>
                   )}
@@ -73,7 +73,7 @@ export function ParishProfileChronology({
                             href={source.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[12.5px] underline decoration-1 underline-offset-2 hover:text-accent"
+                            className="text-support-copy underline decoration-1 underline-offset-2 hover:text-accent"
                           >
                             {source.label} &rarr;
                           </a>

@@ -149,7 +149,9 @@ const FATE_OPACITY: Record<FateKey, number> = {
 };
 
 // Geometry — a compact field with room for labels at both edges.
-const W = 872;
+// Leave enough viewBox width for the longest canonical outcome label at the
+// shared 13.5px body size; otherwise SVG clipping makes the type look broken.
+const W = 980;
 const TOP = 58;
 const X_DEC = 148; // right edge of the decade bands
 const DEC_W = 10;
@@ -630,22 +632,27 @@ export default function ParishThreads({
               x={X_DEC}
               y={16}
               textAnchor="end"
-              fontSize={10}
               fontWeight={700}
               fill="var(--foreground)"
+              className="font-mono text-ui-label tracking-[0.12em]"
             >
               BEGAN
             </text>
             <text
               x={X_END}
               y={16}
-              fontSize={10}
               fontWeight={700}
               fill="var(--foreground)"
+              className="font-mono text-ui-label tracking-[0.12em]"
             >
               WHERE IT STANDS TODAY
             </text>
-            <text x={X_END} y={31} fontSize={9} fill="var(--muted)">
+            <text
+              x={X_END}
+              y={32}
+              fill="var(--muted)"
+              className="font-sans text-small-copy"
+            >
               closed parishes fan out by what became of the church
             </text>
 
@@ -680,10 +687,10 @@ export default function ParishThreads({
                     y={labelY}
                     textAnchor="end"
                     dominantBaseline="central"
-                    fontSize={d.count >= 8 ? 12 : 10}
                     fontWeight={600}
                     fill="var(--foreground)"
                     opacity={anyFocus && hot !== `dec:${d.key}` ? 0.35 : 1}
+                    className="font-mono text-ui-label"
                   >
                     {d.key}
                     <tspan fontWeight={400} fill="var(--muted)">
@@ -786,9 +793,9 @@ export default function ParishThreads({
                     <text
                       x={X_MID - 2}
                       y={b.y0 - 8}
-                      fontSize={13}
                       fontWeight={600}
                       fill="var(--foreground)"
+                      className="font-sans text-body-copy"
                     >
                       {FLOW_GROUP_LABEL[g]}
                       <tspan fontWeight={400} fill="var(--muted)">
@@ -843,18 +850,18 @@ export default function ParishThreads({
                   <text
                     x={X_END + NODE_W + 10}
                     y={cy - 7}
-                    fontSize={isFate ? 12 : 13}
                     fontWeight={fate === "demolished" ? 700 : 600}
                     fill="var(--foreground)"
+                    className="font-sans text-body-copy"
                   >
                     {isFate ? FATE_LABEL[fate!] : FLOW_GROUP_LABEL[g]}
                     <tspan fontWeight={400} fill="var(--muted)">{` · ${n}`}</tspan>
                     <tspan
                       x={X_END + NODE_W + 10}
                       dy={14}
-                      fontSize={10.5}
                       fontWeight={400}
                       fill="var(--muted)"
+                      className="text-small-copy"
                     >
                       {isFate ? FATE_SUB[fate!] : GROUP_SUBLABEL[g]}
                     </tspan>
@@ -893,12 +900,14 @@ export default function ParishThreads({
                   {m.href ? (
                     <Link
                       href={m.href}
-                      className="font-medium underline decoration-rule underline-offset-2 hover:decoration-inherit"
+                      className="font-serif text-card-title font-semibold underline decoration-rule underline-offset-2 hover:decoration-inherit"
                     >
                       {m.name}
                     </Link>
                   ) : (
-                    <span className="font-medium">{m.name}</span>
+                    <span className="font-serif text-card-title font-semibold">
+                      {m.name}
+                    </span>
                   )}
                   <span className="block text-small-copy text-muted">
                     {institutionType(m.recordType)} · {m.city}, {m.state}
@@ -910,12 +919,12 @@ export default function ParishThreads({
                     {m.endedDisplay ? ` · ended ${m.endedDisplay}` : ""}
                   </span>
                   {m.continuation ? (
-                    <span className="mt-1 block text-small-copy leading-relaxed text-muted">
+                    <span className="mt-1 block text-support-copy leading-relaxed text-muted">
                       {m.continuation.summary}
                     </span>
                   ) : null}
                   {m.continuation?.futurePlan ? (
-                    <span className="mt-1 block text-small-copy leading-relaxed text-muted">
+                    <span className="mt-1 block text-support-copy leading-relaxed text-muted">
                       <strong className="font-semibold text-foreground">
                         Planned, not yet effective:
                       </strong>{" "}
@@ -954,12 +963,14 @@ export default function ParishThreads({
                           href={community.officialSite}
                           target="_blank"
                           rel="noreferrer"
-                          className="font-medium underline decoration-rule underline-offset-2 hover:decoration-inherit"
+                          className="font-serif text-card-title font-semibold underline decoration-rule underline-offset-2 hover:decoration-inherit"
                         >
                           {community.name}
                         </a>
                       ) : (
-                        <span className="font-medium">{community.name}</span>
+                        <span className="font-serif text-card-title font-semibold">
+                          {community.name}
+                        </span>
                       )}
                       <span className="mt-1 block text-small-copy text-muted">
                         {community.city}, {community.state} ·{" "}

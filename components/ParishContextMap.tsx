@@ -206,7 +206,7 @@ export default function ParishContextMap({
       <div className={compact ? "relative overflow-hidden" : "overflow-hidden rounded-lg border border-rule"}>
         <div className={`flex flex-wrap items-end justify-between gap-2 ${compact ? "pb-2" : "border-b border-rule px-3 py-2.5"}`}>
           <div>
-            <p className="text-[10px] font-semibold uppercase tracking-widest text-muted">
+            <p className="text-ui-label font-semibold uppercase tracking-widest text-muted">
               Diocese
             </p>
             <p className="mt-0.5 font-serif text-card-title font-semibold">
@@ -242,7 +242,7 @@ export default function ParishContextMap({
                     setFilter(option.value);
                     setHot(null);
                   }}
-                  className={`rounded px-2 py-1 text-[10px] font-medium transition-colors ${
+                  className={`rounded px-2 py-1 text-ui-label font-medium transition-colors ${
                     selected
                       ? "bg-foreground text-background"
                       : "border border-rule text-muted hover:border-foreground hover:text-foreground"
@@ -401,7 +401,7 @@ export default function ParishContextMap({
           </div>
         )}
         {!compact && (
-          <div className="grid grid-cols-2 gap-x-3 gap-y-1.5 border-t border-rule px-3 py-2 text-[10px] leading-tight text-muted sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-x-3 gap-y-1.5 border-t border-rule px-3 py-2 text-ui-label leading-tight text-muted sm:grid-cols-3">
             {(Object.keys(STATE_WORD) as EndStateGroup[]).map((group) => {
               const alive = ALIVE.has(group);
               return (
@@ -429,7 +429,7 @@ export default function ParishContextMap({
             className="group absolute inset-0 rounded border border-transparent text-left focus-visible:border-foreground focus-visible:outline-none"
             aria-label={`Open the interactive parish map for ${subject.name}`}
           >
-            <span className="absolute bottom-2 right-2 rounded bg-background/95 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide shadow-sm ring-1 ring-rule transition-colors group-hover:bg-foreground group-hover:text-background">
+            <span className="absolute bottom-2 right-2 rounded bg-background/95 px-2 py-1 text-ui-label font-semibold uppercase tracking-wide shadow-sm ring-1 ring-rule transition-colors group-hover:bg-foreground group-hover:text-background">
               Open map
             </span>
           </button>
@@ -449,7 +449,7 @@ export default function ParishContextMap({
           >
             <div className="sticky top-0 z-10 flex items-center justify-between border-b border-rule bg-background px-4 py-3">
               <div>
-                <p className="text-[10px] font-semibold uppercase tracking-widest text-muted">
+                <p className="text-ui-label font-semibold uppercase tracking-widest text-muted">
                   Community and place
                 </p>
                 <p className="font-serif text-subsection-title font-semibold">

@@ -24,16 +24,16 @@ export function ProfileSection({
       className="mt-8 grid scroll-mt-8 gap-x-10 border-t border-rule pt-6 md:grid-cols-[158px_minmax(0,1fr)]"
     >
       <div>
-        <h2 className="font-mono text-[10.5px] font-medium uppercase tracking-[0.15em] text-muted">
+        <h2 className="font-mono text-ui-label font-medium uppercase tracking-[0.15em] text-muted">
           {label}
         </h2>
         {note && (
-          <p className="mt-2 whitespace-pre-line font-mono text-[10.5px] leading-relaxed tracking-wider text-muted">
+          <p className="mt-2 whitespace-pre-line font-mono text-ui-label leading-relaxed tracking-wider text-muted">
             {note}
           </p>
         )}
         {accentNote && (
-          <p className="mt-2 whitespace-pre-line font-mono text-[10.5px] leading-relaxed tracking-wider text-accent">
+          <p className="mt-2 whitespace-pre-line font-mono text-ui-label leading-relaxed tracking-wider text-accent">
             {accentNote}
           </p>
         )}

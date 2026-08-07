@@ -6,7 +6,7 @@ import {
 export function DiocesePill({ name }: { name: string }) {
   const href = dioceseOfficialUrl(name);
   const className =
-    "inline-flex max-w-full items-center gap-1 rounded-full border border-rule px-2.5 py-1 text-[11px] font-medium leading-tight text-foreground transition-colors";
+    "inline-flex max-w-full items-center gap-1 rounded-full border border-rule px-2.5 py-1 text-ui-label font-medium leading-tight text-foreground transition-colors";
 
   if (!href) {
     return <span className={className}>{name}</span>;

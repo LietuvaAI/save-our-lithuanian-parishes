@@ -1076,7 +1076,7 @@ export function ParishPublishedRecord({
         id="parish-history-heading"
         className={
           embedded
-            ? "font-mono text-[10.5px] font-medium uppercase tracking-[0.15em] text-muted"
+            ? "font-mono text-ui-label font-medium uppercase tracking-[0.15em] text-muted"
             : "font-serif text-section-title font-semibold"
         }
       >
@@ -1084,17 +1084,17 @@ export function ParishPublishedRecord({
       </h2>
       <div className="mt-3 max-w-[38em] space-y-4">
         {leadText && (
-          <p className="font-serif text-[16.5px] leading-relaxed text-foreground">
+          <p className="font-serif text-subsection-title leading-relaxed text-foreground">
             {leadText}
           </p>
         )}
         {narrative.map((paragraph) => (
-          <p key={paragraph} className="text-[15px] leading-relaxed text-muted">
+          <p key={paragraph} className="text-card-title leading-relaxed text-muted">
             {paragraph}
           </p>
         ))}
         {groups.map((group, index) => (
-          <p key={index} className="text-[15px] leading-relaxed text-muted">
+          <p key={index} className="text-card-title leading-relaxed text-muted">
             {group.join(" ")}
           </p>
         ))}

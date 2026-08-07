@@ -65,7 +65,7 @@ export default function DioceseClosureRanking({
               x="56"
               y="62"
               fill={INK}
-              fontFamily="Georgia, serif"
+              fontFamily="var(--font-serif-display), Georgia, serif"
               fontSize="34"
               fontWeight="700"
             >
@@ -75,7 +75,7 @@ export default function DioceseClosureRanking({
               x="56"
               y="98"
               fill={MUTED}
-              fontFamily="Arial, sans-serif"
+              fontFamily="var(--font-geist-sans), Arial, sans-serif"
               fontSize="18"
             >
               Formal closures among U.S. Lithuanian Roman Catholic parishes
@@ -90,7 +90,7 @@ export default function DioceseClosureRanking({
                     x="56"
                     y={y + 25}
                     fill={MUTED}
-                    fontFamily="Arial, sans-serif"
+                    fontFamily="var(--font-geist-sans), Arial, sans-serif"
                     fontSize="16"
                     fontWeight="700"
                   >
@@ -100,7 +100,7 @@ export default function DioceseClosureRanking({
                     x="92"
                     y={y + 25}
                     fill={INK}
-                    fontFamily="Arial, sans-serif"
+                    fontFamily="var(--font-geist-sans), Arial, sans-serif"
                     fontSize="20"
                     fontWeight="700"
                   >
@@ -124,7 +124,7 @@ export default function DioceseClosureRanking({
                     x="1072"
                     y={y + 27}
                     fill={INK}
-                    fontFamily="Georgia, serif"
+                    fontFamily="var(--font-serif-display), Georgia, serif"
                     fontSize="26"
                     fontWeight="700"
                   >
@@ -145,7 +145,7 @@ export default function DioceseClosureRanking({
               x="56"
               y={chartHeight - 25}
               fill={MUTED}
-              fontFamily="Arial, sans-serif"
+              fontFamily="var(--font-geist-sans), Arial, sans-serif"
               fontSize="15"
             >
               Save Our Lithuanian Parishes · formal parish closures
@@ -193,7 +193,7 @@ export default function DioceseClosureRanking({
               className="group border-b border-rule"
             >
               <summary className="grid min-h-10 cursor-pointer list-none grid-cols-[1.5rem_minmax(0,1fr)_auto_1rem] items-center gap-2 px-1 py-2 text-small-copy hover:bg-band">
-                <span className="text-[10px] text-muted">{index + 1}</span>
+                <span className="text-ui-label text-muted">{index + 1}</span>
                 <span className="min-w-0 font-medium">
                   {diocese.shortName}
                 </span>
@@ -210,7 +210,7 @@ export default function DioceseClosureRanking({
               </summary>
               <div className="border-t border-rule bg-band px-2 py-2">
                 {closedParishes.map((parish) => (
-                  <p key={parish.slug} className="py-1 text-[11px] leading-snug">
+                  <p key={parish.slug} className="py-1 text-ui-label leading-snug">
                     {parish.profileHref ? (
                       <Link
                         href={parish.profileHref}

@@ -50,7 +50,7 @@ function DioceseBar({
         return (
           <div
             key={g}
-            className="flex items-center justify-center text-[10px] font-medium leading-none"
+            className="flex items-center justify-center text-ui-label font-medium leading-none"
             style={{
               width: `${pct}%`,
               minWidth: 10,
@@ -128,7 +128,7 @@ export default function DioceseGrid({
                 <EndStatePill value={p.endState} />
                 {p.hasAlert && (
                   <span
-                    className="text-[10px] font-semibold uppercase tracking-wide"
+                    className="text-ui-label font-semibold uppercase tracking-wide"
                     style={{ color: "var(--es-closed)" }}
                   >
                     Alert

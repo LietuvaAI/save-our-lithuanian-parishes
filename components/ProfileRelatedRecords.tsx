@@ -24,7 +24,7 @@ export function ProfileRelatedRecords({
             key={record.id}
             className="grid gap-x-[22px] pb-5 md:grid-cols-[104px_minmax(0,1fr)]"
           >
-            <span className="pt-0.5 font-mono text-[10.5px] font-medium uppercase tracking-wider text-muted">
+            <span className="pt-0.5 font-mono text-ui-label font-medium uppercase tracking-wider text-muted">
               {record.kind}
             </span>
             <div>
@@ -41,7 +41,7 @@ export function ProfileRelatedRecords({
                 )}
               </p>
               {(record.linkQualifier || record.meta) && (
-                <p className="mt-1 font-mono text-[11.5px] leading-normal text-muted">
+                <p className="mt-1 font-mono text-small-copy leading-normal text-muted">
                   {[record.linkQualifier, record.meta]
                     .filter(Boolean)
                     .join(" \u00b7 ")}

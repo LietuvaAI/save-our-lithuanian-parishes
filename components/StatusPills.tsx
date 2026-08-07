@@ -24,7 +24,7 @@ function Pill({ label, bg, fg }: { label: string; bg: string; fg: string }) {
   if (!label) return null;
   return (
     <span
-      className="inline-block rounded-full px-2 py-0.5 text-[11px] font-medium leading-tight whitespace-nowrap"
+      className="inline-block rounded-full px-2 py-0.5 text-ui-label font-medium leading-tight whitespace-nowrap"
       style={{ background: bg, color: fg }}
     >
       {label}
