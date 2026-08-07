@@ -75,6 +75,8 @@ const activeCampaigns = (alertsData.campaigns as CurrentCampaign[])
     ): campaign is CurrentCampaign & { alert: CurrentAlert } =>
       Boolean(campaign.alert),
   );
+const activeCampaignCountLabel =
+  activeCampaigns.length === 4 ? "Four" : String(activeCampaigns.length);
 
 const statusByLink = new Map(
   institutionHistory.map((institution) => [
@@ -206,14 +208,17 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-4xl py-5 text-center sm:py-7">
-        <h1 className="font-serif text-3xl font-semibold leading-tight sm:text-4xl">
-          The Record of America&rsquo;s Lithuanian Parishes
+        <h1 className="font-serif text-[26px] font-semibold leading-[1.2]">
+          America&rsquo;s Lithuanian Parishes
         </h1>
-        <p className="mx-auto mt-3 max-w-3xl text-[15px] leading-relaxed text-muted sm:text-base">
-          From their immigrant-era foundations to the present day, this project
-          documents how America&rsquo;s Lithuanian parishes, missions, and
-          congregations were established, how they changed, and what became of
-          their communities and churches.
+        <p className="mx-auto mt-3 max-w-3xl text-[13px] leading-relaxed text-muted">
+          America&rsquo;s Lithuanian parishes have long been the {" "}
+          <em>židiniai</em> of our communities&mdash;the hearths where faith was
+          lived, language was spoken, memory was preserved, and identity was
+          formed. Together, they form an unbroken current connecting the
+          Lithuanian past to the present. This project traces the complete
+          history of America&rsquo;s Lithuanian parishes&mdash;from their earliest
+          foundations to the communities discerning their future today.
         </p>
         <p className="mt-3 text-sm">
           <Link
@@ -245,7 +250,7 @@ export default function Home() {
             <span className="mt-0.5 block text-[12px] font-semibold leading-tight">
               {stat.label}
             </span>
-            <span className="mt-1 block text-[10px] leading-tight text-muted">
+            <span className="mt-1 block text-[11px] leading-tight text-muted">
               {stat.detail}
             </span>
           </Link>
@@ -264,10 +269,6 @@ export default function Home() {
             >
               The living network
             </h2>
-            <p className="mt-1 max-w-3xl text-sm leading-relaxed text-muted">
-              Six active parishes and two active missions remain Lithuanian-led.
-              Six additional host communities celebrate Lithuanian Mass.
-            </p>
           </div>
           <Link
             href="/lithuanian-catholic-life-today"
@@ -286,6 +287,12 @@ export default function Home() {
             {currentPastoralNetwork.counts.active_mission} missions
           </span>
         </div>
+        <p className="mt-1 max-w-3xl text-[13px] leading-relaxed text-muted">
+          Of the {ROMAN_CATHOLIC_INSTITUTIONS} Lithuanian Catholic institutions
+          ever founded in America, these six parishes and two missions still
+          gather for Lithuanian worship — the living remnant of the whole
+          network.
+        </p>
 
         <div className="mt-4 grid gap-3 md:grid-cols-2">
           {activeNetwork.map((entry) => (
@@ -318,7 +325,7 @@ export default function Home() {
                   {entry.founded.year ? ` · est. ${entry.founded.year}` : ""}
                 </span>
                 <span className="mt-1.5 flex flex-wrap items-center gap-1.5">
-                  <span className="inline-flex items-center gap-1 rounded-full border border-rule px-2 py-0.5 text-[10px] font-semibold">
+                  <span className="inline-flex items-center gap-1 rounded-full border border-rule px-2 py-0.5 text-[11px] font-semibold">
                     <span
                       className={`size-2 rounded-full border border-[var(--es-active)] ${
                         entry.mission ? "bg-background" : "bg-[var(--es-active)]"
@@ -328,7 +335,11 @@ export default function Home() {
                     {entry.mission ? "Mission" : "Parish"}
                   </span>
                   {entry.campaign && (
-                    <span className="rounded-full bg-[var(--mark-community)] px-2 py-0.5 text-[10px] font-semibold text-foreground">
+                    <span className="inline-flex items-center gap-1 rounded-full border border-[#b08b33] bg-white px-2 py-0.5 text-[11px] font-semibold text-foreground">
+                      <span
+                        className="size-2 rounded-full bg-[var(--es-active)]"
+                        aria-hidden
+                      />
                       Active campaign
                     </span>
                   )}
@@ -347,16 +358,17 @@ export default function Home() {
             className="scroll-mt-24 overflow-hidden rounded-lg border border-rule"
           >
             <header className="flex items-baseline justify-between gap-3 bg-accent px-5 py-3 text-white">
-              <h3 className="font-serif text-xl font-semibold">
+              <h3 className="text-[11px] font-semibold uppercase tracking-[0.15em]">
                 Active campaigns
               </h3>
-              <span className="text-sm">
+              <span className="text-[11px]">
                 {activeCampaigns.length} organizing
               </span>
             </header>
             <p className="bg-[#faf7f0] px-5 py-3 text-[13px] leading-relaxed text-muted">
-              Communities organizing while parish, ministry, or building
-              decisions remain active.
+              {activeCampaignCountLabel} parishes face decisions about their
+              future right now. Each campaign is led by its own community; this
+              project documents their situations and shows how to support them.
             </p>
             <div className="divide-y divide-rule">
               {activeCampaigns.map((campaign) => {
@@ -439,16 +451,17 @@ export default function Home() {
 
           <section className="overflow-hidden rounded-lg border border-rule">
             <header className="flex items-baseline justify-between gap-3 bg-[#292524] px-5 py-3 text-white">
-              <h3 className="font-serif text-xl font-semibold">
+              <h3 className="text-[11px] font-semibold uppercase tracking-[0.15em]">
                 On the watch list
               </h3>
-              <span className="text-sm">
+              <span className="text-[11px]">
                 {monitoredAlerts.length} monitored
               </span>
             </header>
             <p className="bg-[#faf7f0] px-5 py-3 text-[13px] leading-relaxed text-muted">
-              Current developments without a documented public campaign,
-              including former church buildings at risk.
+              Situations the project is tracking before they harden into
+              outcomes — planning-area consolidations, buildings on the market,
+              and fates still canonically unresolved.
             </p>
             <div className="divide-y divide-rule">
               {monitoredAlerts.map((alert) => (
@@ -474,7 +487,7 @@ export default function Home() {
                     {alert.whatChanged}
                   </p>
                   <div className="mt-2 flex flex-wrap items-center gap-2">
-                    <span className="rounded-full border border-rule px-2 py-0.5 text-[10px] font-semibold">
+                    <span className="rounded-full border border-rule px-2 py-0.5 text-[11px] font-semibold">
                       {alert.kind === "building"
                         ? "Building at risk"
                         : "Development to monitor"}
