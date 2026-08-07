@@ -9,6 +9,8 @@ archivedAt: 2026-08-07
 
 **A community at a crossroads: Parishioners gather outside Divine Providence Lithuanian Catholic Church following the Archdiocese of Detroit’s May 30, 2026 listening session on parish restructuring.***Photograph by Darius Rudis, longtime parishioner.*
 
+*A signed essay by Vilija Jurgutis — the one personal piece on these pages.*
+
 Every article about a Lithuanian parish in America went into the same case files — every closure and every merger, every Vatican appeal and every court case, every fundraising campaign, every final Mass, every anniversary and celebration, every demolition. Each one, on its own, read like just another chapter in the life of a single community. By the time I reached the end, the case files held eighty-three Lithuanian Catholic parishes. Fifty-five of them had closed, merged, or lost their independence.
 
 At first I believed I was documenting history. Somewhere along the way, history began to explain itself — and that is the reason for this Substack.
