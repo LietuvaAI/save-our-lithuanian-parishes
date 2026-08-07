@@ -59,7 +59,7 @@ const NAV: NavItem[] = [
     label: "Explore",
     menuAlign: "right",
     children: [
-      { href: "/history", label: "The History" },
+      { href: "/history", label: "The Rise & Loss" },
       {
         href: "/where-parish-life-continued",
         label: "Where Parish Life Continued",
@@ -67,11 +67,6 @@ const NAV: NavItem[] = [
       {
         href: "/lithuanian-catholic-life-today",
         label: "Lithuanian Catholic Life Today",
-      },
-      { href: "/by-diocese", label: "By Diocese" },
-      {
-        href: "/pennsylvania-coal-region",
-        label: "Pennsylvania Coal Region",
       },
       { href: "/canadian-comparators", label: "Canadian Comparators" },
       {

@@ -667,6 +667,47 @@ for (const [label, source] of [
   }
 }
 
+const historyPage = readFileSync(
+  new URL("../app/history/page.tsx", import.meta.url),
+  "utf8",
+);
+const historyAdapter = readFileSync(
+  new URL("../lib/history-projection.ts", import.meta.url),
+  "utf8",
+);
+const retiredDiocesePage = readFileSync(
+  new URL("../app/by-diocese/page.tsx", import.meta.url),
+  "utf8",
+);
+const retiredCoalPage = readFileSync(
+  new URL("../app/pennsylvania-coal-region/page.tsx", import.meta.url),
+  "utf8",
+);
+if (
+  !/historyProjection/.test(historyPage) ||
+  /site-figures|registry-unified|registry-scope|data\/parishes/.test(historyPage)
+) {
+  errors.push("History does not render exclusively through its canonical adapter");
+}
+if (
+  !/romanCatholicParishHistory/.test(historyAdapter) ||
+  !/pennsylvaniaCoalRegion/.test(historyAdapter) ||
+  !/infographicCounts/.test(historyAdapter)
+) {
+  errors.push("History adapter does not derive its populations from canonical Brain projections");
+}
+if (
+  !/permanentRedirect/.test(retiredDiocesePage) ||
+  !/\/history#loss-by-diocese/.test(retiredDiocesePage) ||
+  !/permanentRedirect/.test(retiredCoalPage) ||
+  !/\/history#beginning/.test(retiredCoalPage)
+) {
+  errors.push("retired diocese or coal-region route does not redirect into History");
+}
+if (/href:\s*["']\/(?:by-diocese|pennsylvania-coal-region)/.test(primaryNavigation)) {
+  errors.push("primary navigation still exposes a retired standalone History view");
+}
+
 if (errors.length) {
   console.error(`CANONICAL INFOGRAPHIC VIOLATIONS (${errors.length}):`);
   errors.forEach((error) => console.error(`  ${error}`));

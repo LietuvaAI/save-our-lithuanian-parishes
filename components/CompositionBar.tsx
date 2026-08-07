@@ -1,7 +1,7 @@
 // ============================================================================
 // CompositionBar — one 100% bar showing the end-state composition of a parish
 // population. The "what happened to all of them" exhibit, shared by /history
-// and /by-diocese. Five groups, 2px seams, direct labels beneath the big
+// and /history. Five groups, 2px seams, direct labels beneath the big
 // segments; small segments carry their number when it fits, tooltip always.
 // Server-safe: no client hooks.
 // ============================================================================

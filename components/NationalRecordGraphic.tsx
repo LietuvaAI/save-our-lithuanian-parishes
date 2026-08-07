@@ -242,7 +242,7 @@ export default function NationalRecordGraphic({
           Follow the losses over time
         </Link>
         {" · "}
-        <Link href="/by-diocese" className="underline hover:text-foreground">
+        <Link href="/history#loss-by-diocese" className="underline hover:text-foreground">
           Inspect every diocese
         </Link>
       </p>
