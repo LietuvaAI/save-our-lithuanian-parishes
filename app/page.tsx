@@ -292,17 +292,17 @@ export default function Home() {
             <Link
               key={entry.id}
               href={entry.profileHref}
-              className="group grid min-h-[116px] grid-cols-[104px_minmax(0,1fr)] gap-4 rounded-lg border border-rule bg-background p-3 hover:border-foreground"
+              className="group grid grid-cols-[92px_minmax(0,1fr)] gap-3 rounded-lg border border-rule bg-background px-3 py-2 hover:border-foreground"
             >
               <span
-                className="relative block h-[92px] w-[104px] overflow-hidden bg-white"
+                className="relative block h-[76px] w-[92px] self-center overflow-hidden bg-white"
                 title={entry.art.attribution}
               >
                 <Image
                   src={entry.art.src}
                   alt={entry.art.alt}
                   fill
-                  sizes="104px"
+                  sizes="92px"
                   className="object-contain mix-blend-multiply transition-transform duration-200 group-hover:scale-[1.03]"
                 />
               </span>
