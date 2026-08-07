@@ -1,8 +1,8 @@
 # Public institution count audit
 
-**Audit date:** 2026-08-03
-**Registry revision:** 25
-**Canonical authority:** CultureNet canonical-public-census-2026-08-03-building-condition-reconciliation
+**Audit date:** 2026-08-07
+**Registry revision:** 26
+**Canonical authority:** CultureNet canonical-public-census-2026-08-07-terminal-building-research
 
 ## Press-safe claim
 

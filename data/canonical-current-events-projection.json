@@ -4,8 +4,8 @@
   "authority": {
     "repository": "LietuvaAI/culturenet-brain",
     "source_path": "docs/research/parish-canon/current-events/source.json",
-    "publication_projection_revision": "canonical-public-census-2026-08-03-building-condition-reconciliation",
-    "infographic_projection_revision": "canonical-infographic-units-2026-08-03-building-condition-reconciliation"
+    "publication_projection_revision": "canonical-public-census-2026-08-07-terminal-building-research",
+    "infographic_projection_revision": "canonical-infographic-units-2026-08-07-terminal-building-research"
   },
   "scope": "parish-watch-current-events",
   "snapshot": "2026-08-06",
@@ -1320,5 +1320,5 @@
       "canonicalEntityId": "cn:institution:blessed-jurgis-matulaitis-mission-lemont-il"
     }
   ],
-  "content_hash": "sha256:b7052063cab83f195dfad0953dc1e11db66fe0e820400ceb0ea2ebdb8d7a3cf9"
+  "content_hash": "sha256:2433938286c228c05e723cc0a33f1ed61b3b3c0cdb456643f0483f33dc00b752"
 }
