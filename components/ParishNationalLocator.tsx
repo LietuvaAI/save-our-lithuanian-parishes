@@ -96,7 +96,7 @@ export default function ParishNationalLocator({ slug }: { slug: string }) {
   return (
     <figure data-profile-national-locator className="mt-5 border-t border-rule pt-4">
       <div className="flex items-baseline justify-between gap-3">
-        <p className="font-mono text-[10.5px] font-medium uppercase tracking-[0.15em] text-muted">
+        <p className="font-mono text-ui-label font-medium uppercase tracking-[0.15em] text-muted">
           Where in the {region}
         </p>
         <p className="shrink-0 text-small-copy text-muted">

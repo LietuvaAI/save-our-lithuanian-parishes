@@ -119,7 +119,7 @@ function HeaderFilter<T extends string>({
           }`}
         />
         {label}
-        <span aria-hidden="true" className="text-[10px] text-muted">
+        <span aria-hidden="true" className="text-ui-label text-muted">
           {open ? "▴" : "▾"}
         </span>
       </button>

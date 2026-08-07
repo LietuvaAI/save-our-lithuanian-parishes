@@ -85,7 +85,7 @@ export default function ChurchProcession() {
           </Link>
         ))}
       </div>
-      <p className="mt-1 text-left text-[10px] leading-tight text-muted sm:text-[11px]">
+      <p className="mt-1 text-left text-ui-label leading-tight text-muted">
         <span className="font-semibold text-foreground">The first parish</span>
         {" · "}
         St. George, Shenandoah

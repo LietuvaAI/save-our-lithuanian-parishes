@@ -52,8 +52,8 @@ const CHART_W = 700;
 const M = { top: 26, right: 10, bottom: 8 };
 const TOTAL_W = NAME_W + CHART_W + M.right;
 
-const BAR_H = 11;
-const BAR_GAP = 2.5;
+const BAR_H = 13;
+const BAR_GAP = 3;
 const STEP = BAR_H + BAR_GAP;
 
 function xScale(year: number) {
@@ -124,8 +124,8 @@ function DecadePulse({
         x={NAME_W - 10}
         y={zero - 26}
         textAnchor="end"
-        fontSize={9.5}
         fill="var(--muted)"
+        className="font-sans text-ui-label"
       >
         founded ↑
       </text>
@@ -133,8 +133,8 @@ function DecadePulse({
         x={NAME_W - 10}
         y={zero + 32}
         textAnchor="end"
-        fontSize={9.5}
         fill="var(--muted)"
+        className="font-sans text-ui-label"
       >
         closed ↓
       </text>
@@ -199,9 +199,9 @@ function DecadePulse({
                 x={cx}
                 y={zero - vh(founded) - 6}
                 textAnchor="middle"
-                fontSize={10}
                 fontWeight={600}
                 fill="var(--foreground)"
+                className="font-sans text-ui-label"
               >
                 {`${founded} founded in the ${decade}s`}
               </text>
@@ -211,9 +211,9 @@ function DecadePulse({
                 x={cx}
                 y={zero + vh(closed) + 13}
                 textAnchor="middle"
-                fontSize={10}
                 fontWeight={600}
                 fill="var(--es-closed)"
+                className="font-sans text-ui-label"
               >
                 {`${closed} closed in the ${decade}s`}
               </text>
@@ -358,8 +358,8 @@ export default function TimelineChart({
                   x={xScale(yr)}
                   y={M.top - 8}
                   textAnchor="middle"
-                  fontSize={8}
                   fill="var(--muted)"
+                  className="font-mono text-ui-label"
                 >
                   {yr}
                 </text>
@@ -380,9 +380,9 @@ export default function TimelineChart({
               x={xScale(YEAR_MAX) - 3}
               y={M.top - 8}
               textAnchor="end"
-              fontSize={8}
               fill="var(--foreground)"
               opacity={0.6}
+              className="font-mono text-ui-label"
             >
               Today
             </text>
@@ -424,9 +424,9 @@ export default function TimelineChart({
                     y={yOff + h / 2}
                     textAnchor="end"
                     dominantBaseline="central"
-                    fontSize={8.5}
                     fill={isHov ? "var(--foreground)" : "var(--muted)"}
                     fontWeight={isHov ? 600 : 400}
+                    className="font-sans text-ui-label"
                   >
                     {truncName(`${row.name} · ${row.city}`)}
                   </text>
@@ -471,10 +471,10 @@ export default function TimelineChart({
                       y={yOff + h / 2}
                       textAnchor="end"
                       dominantBaseline="central"
-                      fontSize={7.5}
                       fontWeight={600}
                       fill={END_STATE_TEXT[group]}
                       opacity={rowDimmed(row) ? 0.06 : 1}
+                      className="font-sans text-ui-label"
                     >
                       {`${row.city}, ${row.state}`}
                     </text>

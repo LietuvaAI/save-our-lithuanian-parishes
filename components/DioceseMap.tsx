@@ -151,21 +151,21 @@ export default function DioceseMap({
                 x={lx}
                 y={ly}
                 textAnchor="middle"
-                fontSize={9}
                 fontWeight={600}
                 fill="var(--foreground)"
                 stroke="var(--background)"
                 strokeWidth={2.5}
                 paintOrder="stroke"
                 pointerEvents="none"
+                className="font-sans text-ui-label"
               >
                 {d.name}
                 <tspan
                   x={lx}
-                  dy={10}
-                  fontSize={8}
+                  dy={12}
                   fontWeight={400}
                   fill="var(--muted)"
+                  className="text-ui-label"
                 >
                   {`${d.stats!.ended}/${d.stats!.total} ended`}
                 </tspan>

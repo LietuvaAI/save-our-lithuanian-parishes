@@ -54,7 +54,7 @@ export default function CoalRegionMatrix({
         {outcomes.map((outcome) => (
           <div
             key={outcome}
-            className="pb-1 text-center text-[10px] font-medium uppercase text-muted sm:text-small-copy"
+            className="pb-1 text-center text-ui-label font-medium uppercase text-muted sm:text-small-copy"
           >
             {outcome}
           </div>
@@ -101,7 +101,7 @@ export default function CoalRegionMatrix({
                   <span className="block font-serif text-page-title font-semibold">
                     {cell.parishes.length}
                   </span>
-                  <span className="mt-1 block text-[11px]">
+                  <span className="mt-1 block text-ui-label">
                     {selectedCell ? "Selected" : "Inspect"}
                   </span>
                 </button>

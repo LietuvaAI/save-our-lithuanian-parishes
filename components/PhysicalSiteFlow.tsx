@@ -53,7 +53,9 @@ const STATE_COLOR: Record<PhysicalSiteState, string> = {
   not_established: "var(--es-unverified)",
 };
 
-const W = 872;
+// Match the institution flow's typographic canvas so switching modes keeps
+// axis, label, and body type at the same visual scale.
+const W = 980;
 const TOP = 54;
 const X_DECADE = 178;
 const DECADE_WIDTH = 10;
@@ -357,22 +359,27 @@ export default function PhysicalSiteFlow({
             x={X_DECADE}
             y={16}
             textAnchor="end"
-            fontSize={10}
             fontWeight={700}
             fill="var(--foreground)"
+            className="font-mono text-ui-label tracking-[0.12em]"
           >
             FIRST DOCUMENTED
           </text>
           <text
             x={X_STATE}
             y={16}
-            fontSize={10}
             fontWeight={700}
             fill="var(--foreground)"
+            className="font-mono text-ui-label tracking-[0.12em]"
           >
             CONDITION TODAY
           </text>
-          <text x={X_STATE} y={31} fontSize={9} fill="var(--muted)">
+          <text
+            x={X_STATE}
+            y={32}
+            fill="var(--muted)"
+            className="font-sans text-small-copy"
+          >
             one line per physical worship site
           </text>
 
@@ -409,10 +416,10 @@ export default function PhysicalSiteFlow({
                   y={model.decadeLabelY[index]}
                   textAnchor="end"
                   dominantBaseline="central"
-                  fontSize={decade.count >= 8 ? 12 : 10}
                   fontWeight={600}
                   fill="var(--foreground)"
                   opacity={anyFocus && hot !== key ? 0.35 : 1}
+                  className="font-mono text-ui-label"
                 >
                   {decade.key}
                   <tspan fontWeight={400} fill="var(--muted)">
@@ -513,11 +520,10 @@ export default function PhysicalSiteFlow({
                 <text
                   x={X_STATE + STATE_WIDTH + 10}
                   y={model.stateLabelY[index] - 5}
-                  fontSize={13}
                   fontWeight={700}
                   fill="var(--foreground)"
                   opacity={anyFocus && hot !== key ? 0.35 : 1}
-                  className="cursor-pointer"
+                  className="cursor-pointer font-sans text-body-copy"
                   onClick={() => setOpen((value) => (value === key ? null : key))}
                 >
                   {STATE_LABEL[state]}
@@ -527,9 +533,9 @@ export default function PhysicalSiteFlow({
                   <tspan
                     x={X_STATE + STATE_WIDTH + 10}
                     dy={15}
-                    fontSize={10}
                     fontWeight={400}
                     fill="var(--muted)"
+                    className="text-small-copy"
                   >
                     {STATE_SUBLABEL[state]}
                   </tspan>
@@ -565,7 +571,7 @@ export default function PhysicalSiteFlow({
             {openMembers.map((site) => {
               const content = (
                 <>
-                  <span className="block font-serif text-[15.5px] font-semibold leading-tight">
+                  <span className="block font-serif text-card-title font-semibold leading-tight">
                     {site.name}
                   </span>
                   <span className="mt-1 block text-small-copy text-muted">

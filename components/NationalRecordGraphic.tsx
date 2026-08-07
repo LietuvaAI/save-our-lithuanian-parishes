@@ -86,7 +86,7 @@ export default function NationalRecordGraphic({
               x="56"
               y="66"
               fill={INK}
-              fontFamily="Georgia, serif"
+              fontFamily="var(--font-serif-display), Georgia, serif"
               fontSize="36"
               fontWeight="700"
             >
@@ -96,7 +96,7 @@ export default function NationalRecordGraphic({
               x="56"
               y="102"
               fill={MUTED}
-              fontFamily="Arial, sans-serif"
+              fontFamily="var(--font-geist-sans), Arial, sans-serif"
               fontSize="19"
             >
               One parish population, followed from the full record into the
@@ -112,7 +112,7 @@ export default function NationalRecordGraphic({
                     x={x}
                     y="224"
                     fill={stage.color}
-                    fontFamily="Georgia, serif"
+                    fontFamily="var(--font-serif-display), Georgia, serif"
                     fontSize="82"
                     fontWeight="700"
                   >
@@ -122,7 +122,7 @@ export default function NationalRecordGraphic({
                     x={x}
                     y="272"
                     fill={INK}
-                    fontFamily="Arial, sans-serif"
+                    fontFamily="var(--font-geist-sans), Arial, sans-serif"
                     fontSize="21"
                     fontWeight="700"
                   >
@@ -132,7 +132,7 @@ export default function NationalRecordGraphic({
                     x={x}
                     y="301"
                     fill={INK}
-                    fontFamily="Arial, sans-serif"
+                    fontFamily="var(--font-geist-sans), Arial, sans-serif"
                     fontSize="21"
                     fontWeight="700"
                   >
@@ -179,7 +179,7 @@ export default function NationalRecordGraphic({
               x="56"
               y="438"
               fill={MUTED}
-              fontFamily="Arial, sans-serif"
+              fontFamily="var(--font-geist-sans), Arial, sans-serif"
               fontSize="18"
             >
               {firstDiocese}: {firstDioceseLosses} closed parishes
@@ -188,7 +188,7 @@ export default function NationalRecordGraphic({
               x="465"
               y="438"
               fill={MUTED}
-              fontFamily="Arial, sans-serif"
+              fontFamily="var(--font-geist-sans), Arial, sans-serif"
               fontSize="18"
             >
               {secondDiocese}: {secondDioceseLosses} closed parishes

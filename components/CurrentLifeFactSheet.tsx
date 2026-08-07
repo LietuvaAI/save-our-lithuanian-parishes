@@ -73,7 +73,7 @@ export default function CurrentLifeFactSheet({
               x="56"
               y="68"
               fill={INK}
-              fontFamily="Georgia, serif"
+              fontFamily="var(--font-serif-display), Georgia, serif"
               fontSize="36"
               fontWeight="700"
             >
@@ -83,7 +83,7 @@ export default function CurrentLifeFactSheet({
               x="56"
               y="104"
               fill={MUTED}
-              fontFamily="Arial, sans-serif"
+              fontFamily="var(--font-geist-sans), Arial, sans-serif"
               fontSize="19"
             >
               The current U.S. worship network
@@ -94,7 +94,7 @@ export default function CurrentLifeFactSheet({
               x="88"
               y="286"
               fill={GREEN}
-              fontFamily="Georgia, serif"
+              fontFamily="var(--font-serif-display), Georgia, serif"
               fontSize="126"
               fontWeight="700"
             >
@@ -104,7 +104,7 @@ export default function CurrentLifeFactSheet({
               x="88"
               y="338"
               fill={INK}
-              fontFamily="Arial, sans-serif"
+              fontFamily="var(--font-geist-sans), Arial, sans-serif"
               fontSize="25"
               fontWeight="700"
             >
@@ -114,7 +114,7 @@ export default function CurrentLifeFactSheet({
               x="88"
               y="372"
               fill={INK}
-              fontFamily="Arial, sans-serif"
+              fontFamily="var(--font-geist-sans), Arial, sans-serif"
               fontSize="25"
               fontWeight="700"
             >
@@ -130,7 +130,7 @@ export default function CurrentLifeFactSheet({
                     x={x}
                     y={y + 60}
                     fill={index === 0 ? GREEN : index === 1 ? GOLD : INK}
-                    fontFamily="Georgia, serif"
+                    fontFamily="var(--font-serif-display), Georgia, serif"
                     fontSize="62"
                     fontWeight="700"
                   >
@@ -140,7 +140,7 @@ export default function CurrentLifeFactSheet({
                     x={x + 88}
                     y={y + 53}
                     fill={INK}
-                    fontFamily="Arial, sans-serif"
+                    fontFamily="var(--font-geist-sans), Arial, sans-serif"
                     fontSize="23"
                     fontWeight="700"
                   >
@@ -155,7 +155,7 @@ export default function CurrentLifeFactSheet({
               x="56"
               y="506"
               fill={INK}
-              fontFamily="Arial, sans-serif"
+              fontFamily="var(--font-geist-sans), Arial, sans-serif"
               fontSize="22"
               fontWeight="700"
             >
@@ -172,7 +172,7 @@ export default function CurrentLifeFactSheet({
                     x={x}
                     y="620"
                     fill={color}
-                    fontFamily="Georgia, serif"
+                    fontFamily="var(--font-serif-display), Georgia, serif"
                     fontSize="76"
                     fontWeight="700"
                   >
@@ -182,7 +182,7 @@ export default function CurrentLifeFactSheet({
                     x={x + 82}
                     y="586"
                     fill={INK}
-                    fontFamily="Arial, sans-serif"
+                    fontFamily="var(--font-geist-sans), Arial, sans-serif"
                     fontSize="20"
                     fontWeight="700"
                   >
@@ -192,7 +192,7 @@ export default function CurrentLifeFactSheet({
                     x={x + 82}
                     y="614"
                     fill={INK}
-                    fontFamily="Arial, sans-serif"
+                    fontFamily="var(--font-geist-sans), Arial, sans-serif"
                     fontSize="20"
                     fontWeight="700"
                   >
@@ -206,7 +206,7 @@ export default function CurrentLifeFactSheet({
               x="56"
               y="710"
               fill={MUTED}
-              fontFamily="Arial, sans-serif"
+              fontFamily="var(--font-geist-sans), Arial, sans-serif"
               fontSize="15"
             >
               Source: Sielovada North America and current parish evidence -

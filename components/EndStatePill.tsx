@@ -28,7 +28,7 @@ export function EndStatePill({
       className={
         size === "lg"
           ? "rounded-full px-3.5 py-1 text-body-copy font-semibold whitespace-nowrap"
-          : "inline-block rounded-full px-2 py-0.5 text-[11px] font-medium leading-tight whitespace-nowrap"
+          : "inline-block rounded-full px-2 py-0.5 text-ui-label font-medium leading-tight whitespace-nowrap"
       }
       style={{
         background: END_STATE_COLOR[value],

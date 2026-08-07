@@ -42,6 +42,14 @@
 
   /* Shared editorial ramp. Use these named sizes instead of framework steps so
      the reference typography remains stable across routes. */
+  --text-masthead-title: 26px;
+  --text-masthead-title--line-height: 1.2;
+  --text-outcomes-title: clamp(26px, 3vw, 34px);
+  --text-outcomes-title--line-height: 1.08;
+  --text-lead-copy: 15px;
+  --text-lead-copy--line-height: 1.55;
+  --text-compact-heading: 16px;
+  --text-compact-heading--line-height: 1.25;
   --text-page-title: 28px;
   --text-page-title--line-height: 1.12;
   --text-section-title: 22px;

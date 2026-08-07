@@ -5,7 +5,13 @@ const ROOT = process.cwd();
 const SOURCE_ROOTS = ["app", "components"];
 const FORBIDDEN_FRAMEWORK_STEPS =
   /\b(?:(?:sm|md|lg|xl):)?text-(?:xs|sm|base|lg|xl|2xl|3xl|4xl|5xl|6xl)\b/g;
+const FORBIDDEN_ARBITRARY_PIXEL_STEPS =
+  /\btext-\[(?:\d+(?:\.\d+)?px|clamp\([^\]]+\))\]/g;
 const REQUIRED_THEME_TOKENS = [
+  "--text-masthead-title: 26px",
+  "--text-outcomes-title: clamp(26px, 3vw, 34px)",
+  "--text-lead-copy: 15px",
+  "--text-compact-heading: 16px",
   "--text-page-title: 28px",
   "--text-section-title: 22px",
   "--text-subsection-title: 17px",
@@ -41,6 +47,52 @@ for (const relativeRoot of SOURCE_ROOTS) {
         `${path.relative(ROOT, file)}:${line}: uses framework size ${match[0]}; use the shared editorial ramp`,
       );
     }
+    for (const match of source.matchAll(FORBIDDEN_ARBITRARY_PIXEL_STEPS)) {
+      const line = source.slice(0, match.index).split("\n").length;
+      errors.push(
+        `${path.relative(ROOT, file)}:${line}: uses one-off size ${match[0]}; use a named editorial token`,
+      );
+    }
+  }
+}
+
+const typographySurfaces = [
+  ["components/ParishThreads.tsx", [
+    "font-mono text-ui-label",
+    "font-sans text-body-copy",
+    "font-serif text-card-title",
+  ]],
+  ["components/PhysicalSiteFlow.tsx", [
+    "font-mono text-ui-label",
+    "font-sans text-body-copy",
+    "font-serif text-card-title",
+  ]],
+  ["components/TimelineChart.tsx", [
+    "font-mono text-ui-label",
+    "font-sans text-ui-label",
+  ]],
+  ["components/DioceseMap.tsx", ["font-sans text-ui-label"]],
+];
+for (const [file, requiredFragments] of typographySurfaces) {
+  const source = fs.readFileSync(path.join(ROOT, file), "utf8");
+  if (/fontSize=/.test(source)) {
+    errors.push(`${file}: bypasses the shared ramp with an inline SVG font size`);
+  }
+  for (const fragment of requiredFragments) {
+    if (!source.includes(fragment)) {
+      errors.push(`${file}: missing shared typography role ${fragment}`);
+    }
+  }
+}
+
+for (const file of [
+  "components/NationalRecordGraphic.tsx",
+  "components/DioceseClosureRanking.tsx",
+  "components/CurrentLifeFactSheet.tsx",
+]) {
+  const source = fs.readFileSync(path.join(ROOT, file), "utf8");
+  if (/fontFamily="(?:Arial|Georgia)/.test(source)) {
+    errors.push(`${file}: uses a raw font family instead of the site font variables`);
   }
 }
 

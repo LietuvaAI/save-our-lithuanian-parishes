@@ -78,7 +78,7 @@ export default function ParishContinuityPage() {
       </section>
 
       <section className="mt-6">
-        <div className="hidden grid-cols-[minmax(0,1fr)_11rem_minmax(0,1fr)] gap-4 border-y border-rule py-2 text-[10px] uppercase text-muted sm:grid">
+        <div className="hidden grid-cols-[minmax(0,1fr)_11rem_minmax(0,1fr)] gap-4 border-y border-rule py-2 text-ui-label uppercase text-muted sm:grid">
           <span>Earlier institution</span>
           <span>Relationship</span>
           <span>Later institution</span>

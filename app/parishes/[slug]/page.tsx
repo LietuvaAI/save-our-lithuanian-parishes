@@ -702,7 +702,7 @@ export default async function ParishPage({
 
   const contextMapFigure = hasMap ? (
     <figure>
-      <p className="font-mono text-[10.5px] font-medium uppercase tracking-[0.15em] text-muted">
+      <p className="font-mono text-ui-label font-medium uppercase tracking-[0.15em] text-muted">
         Among its neighbours
       </p>
       {entry.diocese && (
@@ -726,7 +726,7 @@ export default async function ParishPage({
       data-profile-image-state={imageState}
       data-record-depth={profile.recordDepth}
     >
-      <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
+      <p className="font-mono text-ui-label uppercase tracking-[0.16em] text-muted">
         <Link href="/parishes" className="hover:text-foreground">
           All Parish Profiles
         </Link>{" "}
@@ -754,7 +754,7 @@ export default async function ParishPage({
                     : "aspect-[4/3] w-full object-cover"
                 }
               />
-                <figcaption className="mt-1.5 font-mono text-[10.5px] leading-normal text-muted">
+                <figcaption className="mt-1.5 font-mono text-ui-label leading-normal text-muted">
                   <a href="#evidence-sources" className="hover:text-accent">
                     {imageCaption}
                   </a>
@@ -769,7 +769,7 @@ export default async function ParishPage({
           ) : (
             <figure className="w-full">
               <div className="flex aspect-square w-full flex-col items-center justify-center bg-band px-8 text-center">
-                <p className="font-mono text-[10.5px] uppercase tracking-[0.15em] text-muted">
+                <p className="font-mono text-ui-label uppercase tracking-[0.15em] text-muted">
                   {institution}
                 </p>
                 <p className="mt-3 font-serif text-section-title font-semibold">{name}</p>
@@ -777,13 +777,13 @@ export default async function ParishPage({
                   {entry.city}
                   {entry.state ? `, ${entry.state}` : ""}
                 </p>
-                <p className="mt-5 font-mono text-[10.5px] text-muted">
+                <p className="mt-5 font-mono text-ui-label text-muted">
                   {establishedYear
                     ? `Established ${establishedYear}`
                     : statusLabel}
                 </p>
               </div>
-              <figcaption className="mt-1.5 font-mono text-[10.5px] leading-normal text-muted">
+              <figcaption className="mt-1.5 font-mono text-ui-label leading-normal text-muted">
                 {portraitState.state === "pending_permission"
                   ? "Image file held \u00b7 permission pending"
                   : "Image not yet gathered"}
@@ -804,7 +804,7 @@ export default async function ParishPage({
             {entry.country === "AR" ? " \u00b7 Argentina" : ""}
           </p>
 
-          <div className="mt-4 flex flex-wrap items-center gap-x-[18px] gap-y-2 font-mono text-[11px] font-medium uppercase tracking-[0.09em]">
+          <div className="mt-4 flex flex-wrap items-center gap-x-[18px] gap-y-2 font-mono text-ui-label font-medium uppercase tracking-[0.09em]">
             <span className="inline-flex items-center gap-2">
               {!researchOnly && <EndStateDot value={endState} />}
               {statusLabel}
@@ -865,7 +865,7 @@ export default async function ParishPage({
               <dl className="mt-4 grid max-w-[38em] gap-x-6 gap-y-4 border-t border-rule pt-3.5 sm:grid-cols-4">
                 {profileView.facts.map((fact) => (
                   <div key={fact.label}>
-                    <dt className="font-mono text-[10.5px] font-medium uppercase tracking-[0.09em] text-muted">
+                    <dt className="font-mono text-ui-label font-medium uppercase tracking-[0.09em] text-muted">
                       {fact.label}
                     </dt>
                     <dd className="mt-1.5 text-body-copy leading-snug">
@@ -883,7 +883,7 @@ export default async function ParishPage({
                       )}
                       {fact.secondary && (
                         <span className="mt-3 block border-t border-rule pt-2.5">
-                          <span className="block font-mono text-[10px] font-medium uppercase tracking-[0.09em] text-muted">
+                          <span className="block font-mono text-ui-label font-medium uppercase tracking-[0.09em] text-muted">
                             {fact.secondary.label}
                           </span>
                           <span className="mt-1 block">
@@ -918,7 +918,7 @@ export default async function ParishPage({
               data-profile-identity-notice={notice.id}
               className="mt-5 max-w-[34em] bg-band px-4 py-3.5"
             >
-              <p className="font-mono text-[10.5px] font-medium uppercase tracking-[0.15em] text-muted">
+              <p className="font-mono text-ui-label font-medium uppercase tracking-[0.15em] text-muted">
                 {notice.label}
               </p>
               <p className="mt-2 text-body-copy leading-relaxed">{notice.text}</p>
@@ -933,7 +933,7 @@ export default async function ParishPage({
                 borderLeft: "3px solid var(--accent)",
               }}
             >
-              <p className="font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
+              <p className="font-mono text-ui-label font-medium uppercase tracking-[0.16em] text-accent">
                 {currentSignalLabel}
               </p>
               <p className="mt-2 text-body-copy leading-relaxed">
@@ -966,7 +966,7 @@ export default async function ParishPage({
                         href={dispatch.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[13.5px] underline decoration-1 underline-offset-2 hover:text-foreground"
+                        className="text-body-copy underline decoration-1 underline-offset-2 hover:text-foreground"
                       >
                         {dispatch.title} &rarr;
                       </a>
@@ -984,7 +984,7 @@ export default async function ParishPage({
           data-profile-scope="outside-us-projection"
           className="mt-8 grid gap-x-10 border-t border-rule pt-6 md:grid-cols-[158px_minmax(0,1fr)]"
         >
-          <p className="font-mono text-[10.5px] font-medium uppercase tracking-[0.15em] text-muted">
+          <p className="font-mono text-ui-label font-medium uppercase tracking-[0.15em] text-muted">
             Scope
           </p>
           <p className="max-w-[38em] bg-band px-5 py-4 text-body-copy leading-relaxed text-foreground">
@@ -1005,12 +1005,12 @@ export default async function ParishPage({
         }
       >
         <div className="max-w-[38em]">
-          <p className="font-serif text-[15.5px] leading-relaxed">
+          <p className="font-serif text-card-title leading-relaxed">
             {profileView.currentSummary}
           </p>
 
           {watchEntry && (
-            <div className="mt-4 flex flex-col gap-2 text-[13.5px] leading-relaxed text-muted">
+            <div className="mt-4 flex flex-col gap-2 text-body-copy leading-relaxed text-muted">
               <p>
                 <span className="text-foreground">
                   {CLERGY_LABEL[watchEntry.clergy.arrangement] ??
@@ -1033,7 +1033,7 @@ export default async function ParishPage({
           )}
 
           {institutionDates?.foundedUnresolved && (
-            <p className="mt-4 text-[13.5px] leading-relaxed text-muted">
+            <p className="mt-4 text-body-copy leading-relaxed text-muted">
               The sources do not yet establish a founding year, so no year is
               estimated here.
             </p>
@@ -1057,17 +1057,17 @@ export default async function ParishPage({
       >
         <div />
         <div className="max-w-[38em] bg-band px-6 py-5">
-          <p className="font-serif text-[16.5px] font-semibold leading-snug">
+          <p className="font-serif text-subsection-title font-semibold leading-snug">
             Do you know this {recordType === "misija" ? "mission" : "parish"}?
             Is something happening there now?
           </p>
-          <p className="mt-2 text-[13.5px] leading-relaxed text-muted">
+          <p className="mt-2 text-body-copy leading-relaxed text-muted">
             People who were there can help complete this history. Corrections,
             documents, photographs, and current news are all welcome.
           </p>
           <Link
             href="/report"
-            className="mt-4 inline-block px-4 py-2.5 text-[13.5px] font-medium text-background"
+            className="mt-4 inline-block px-4 py-2.5 text-body-copy font-medium text-background"
             style={{ background: "var(--accent)" }}
           >
             Report it &rarr;

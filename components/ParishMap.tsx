@@ -868,10 +868,10 @@ export default function ParishMap() {
             aria-label="Map key and filters"
           >
             <div className="flex items-center justify-between gap-2">
-              <p className="text-[11px] font-medium uppercase tracking-widest text-muted">
+              <p className="text-ui-label font-medium uppercase tracking-widest text-muted">
                 Map key
               </p>
-              <span className="text-[11px] text-muted">
+              <span className="text-ui-label text-muted">
                 {visible.length} records shown
               </span>
             </div>
@@ -881,7 +881,7 @@ export default function ParishMap() {
               role="group"
               aria-label="Filter by community"
             >
-              <p className="text-[10px] font-semibold uppercase tracking-wide text-muted">
+              <p className="text-ui-label font-semibold uppercase tracking-wide text-muted">
                 Community
               </p>
               <div className="mt-1.5 grid grid-cols-2 gap-1.5">
@@ -889,7 +889,7 @@ export default function ParishMap() {
                   type="button"
                   aria-pressed={allCommunitiesSelected}
                   onClick={() => selectCommunity("all")}
-                  className={`flex min-h-8 items-center gap-2 rounded-md border px-2 py-1.5 text-left text-[11px] font-medium transition-colors ${
+                  className={`flex min-h-8 items-center gap-2 rounded-md border px-2 py-1.5 text-left text-ui-label font-medium transition-colors ${
                     allCommunitiesSelected
                       ? "border-foreground bg-band text-foreground"
                       : "border-rule text-muted hover:border-foreground hover:text-foreground"
@@ -931,7 +931,7 @@ export default function ParishMap() {
                       type="button"
                       aria-pressed={active}
                       onClick={() => selectCommunity(key)}
-                      className={`flex min-h-8 items-center gap-2 rounded-md border px-2 py-1.5 text-left text-[11px] leading-tight transition-colors ${
+                      className={`flex min-h-8 items-center gap-2 rounded-md border px-2 py-1.5 text-left text-ui-label leading-tight transition-colors ${
                         active
                           ? "border-foreground bg-band font-medium text-foreground"
                           : "border-rule text-muted hover:border-foreground hover:text-foreground"
@@ -952,7 +952,7 @@ export default function ParishMap() {
                         {key === "roman_catholic" ? (
                           <>
                             {label}
-                            <span className="block text-[10px] font-normal text-muted">
+                            <span className="block text-ui-label font-normal text-muted">
                               {communityCounts.roman_catholic_parishes} parishes
                               {" + "}
                               {communityCounts.roman_catholic_missions} missions
@@ -976,14 +976,14 @@ export default function ParishMap() {
               aria-label="Filter by status"
             >
               <div className="flex items-center justify-between gap-2">
-                <p className="text-[10px] font-semibold uppercase tracking-wide text-muted">
+                <p className="text-ui-label font-semibold uppercase tracking-wide text-muted">
                   Status
                 </p>
                 <button
                   type="button"
                   aria-pressed={allStatusesSelected}
                   onClick={selectAllStatuses}
-                  className={`rounded-md px-2 py-1 text-[11px] font-medium transition-colors ${
+                  className={`rounded-md px-2 py-1 text-ui-label font-medium transition-colors ${
                     allStatusesSelected
                       ? "bg-foreground text-background"
                       : "text-muted hover:bg-band hover:text-foreground"
@@ -1065,7 +1065,7 @@ export default function ParishMap() {
                 return (
                   <div
                     key={key}
-                    className={`relative min-w-0 rounded-md text-[11px] ${
+                    className={`relative min-w-0 rounded-md text-ui-label ${
                       expanded ? "col-span-2" : ""
                     }`}
                   >
@@ -1118,14 +1118,14 @@ export default function ParishMap() {
 
             <div className="mt-2.5 border-t border-rule pt-2.5 text-small-copy">
               <div className="flex items-center justify-between gap-2">
-                <p className="text-[10px] font-semibold uppercase tracking-wide text-muted">
+                <p className="text-ui-label font-semibold uppercase tracking-wide text-muted">
                   Other marks
                 </p>
                 <button
                   type="button"
                   aria-pressed={showDioceses}
                   onClick={() => void toggleDioceses()}
-                  className={`rounded-md border px-2 py-1 text-[11px] font-medium transition-colors ${
+                  className={`rounded-md border px-2 py-1 text-ui-label font-medium transition-colors ${
                     showDioceses
                       ? "border-foreground bg-band text-foreground"
                       : "border-rule text-muted hover:border-foreground hover:text-foreground"
@@ -1135,7 +1135,7 @@ export default function ParishMap() {
                   Diocese lines
                 </button>
               </div>
-              <div className="mt-1 grid grid-cols-3 gap-2 text-[10px] leading-tight text-muted">
+              <div className="mt-1 grid grid-cols-3 gap-2 text-ui-label leading-tight text-muted">
                 <span className="flex items-start gap-1">
                   <span className="h-2.5 w-2.5 rounded-full border-2 border-[var(--foreground)] bg-background" aria-hidden />
                   Mission or hosted Mass

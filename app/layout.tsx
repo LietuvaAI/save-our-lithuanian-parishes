@@ -129,7 +129,7 @@ export default function RootLayout({
                       className="flex items-center gap-1 hover:text-foreground transition-colors"
                     >
                       {item.label}
-                      <span className="text-[10px] opacity-60">▾</span>
+                      <span className="text-ui-label opacity-60">▾</span>
                     </button>
                     <div
                       className={`absolute top-full hidden min-w-max flex-col pt-2 z-50 group-hover:flex group-focus-within:flex ${
@@ -143,7 +143,7 @@ export default function RootLayout({
                           "section" in child ? (
                             <p
                               key={child.section}
-                              className="mt-1 border-t border-rule px-4 pb-1 pt-2 text-[10px] font-semibold uppercase tracking-widest text-muted first:mt-0 first:border-t-0 first:pt-1"
+                              className="mt-1 border-t border-rule px-4 pb-1 pt-2 text-ui-label font-semibold uppercase tracking-widest text-muted first:mt-0 first:border-t-0 first:pt-1"
                             >
                               {child.section}
                             </p>
