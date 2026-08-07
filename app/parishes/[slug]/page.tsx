@@ -51,7 +51,6 @@ import {
 import { clearedOrNull, getParishPortraitState } from "@/lib/photos";
 import {
   profileStory,
-  campaignProfileDek,
   researchRecordStory,
   researchStatusCopy,
 } from "@/lib/profile-narrative";
@@ -92,7 +91,6 @@ interface CaseRecord {
   historicalSummary?: string[];
   profile?: {
     institutionalLife?: string;
-    institutionalSummary?: string;
     currentSite?: {
       label: string;
       value: string;
@@ -154,7 +152,6 @@ type ParishCampaignEntry = {
   dispatches?: DispatchLink[];
   sources?: AlertSource[];
   profile?: {
-    institutionalSummary?: string;
     siteDetail?: string;
     liturgy?: {
       value: string;
@@ -521,6 +518,9 @@ export default async function ParishPage({
         fallbackTitle: "Situation-record source",
       })
     : [];
+  const publicationSourceArtifacts = getPublicationSourceArtifacts(
+    profile.registrySlug,
+  );
   const projectSources = [
     ...campaignDispatches.flatMap((dispatch) =>
       projectProfileSource(
@@ -550,9 +550,7 @@ export default async function ParishPage({
   const profileSources = finalizeProfileSources([
     core ? draugasProfileSources(core.citations) : [],
     registryProfileSources(entry.sources ?? []),
-    canonicalArtifactProfileSources(
-      getPublicationSourceArtifacts(profile.registrySlug),
-    ),
+    canonicalArtifactProfileSources(publicationSourceArtifacts),
     caseSources,
     alertSources,
     campaignSources,
@@ -569,10 +567,11 @@ export default async function ParishPage({
       : parishAlert?.whatChanged;
   const canonicalCurrentSummary =
     parishCampaign?.state ?? relatedAlertSummary ?? null;
+  const historicalLeadNarrative = parishTimeline?.intro ?? null;
   const { dek, rest } = researchOnly
     ? researchRecordStory(recordType)
     : profileStory({
-        situationText: isUsProjection ? null : (situation?.situation ?? null),
+        situationText: historicalLeadNarrative,
         endState,
         founded: establishedYear,
         closed: closedYear,
@@ -581,13 +580,11 @@ export default async function ParishPage({
         city: entry.city,
         state: entry.state ?? null,
         institution,
-        currentUse: isUsProjection ? null : (situation?.current_use ?? null),
+        currentUse: situation?.current_use ?? null,
         sourceLead,
       });
-  const displayDek = canonicalCurrentSummary
-    ? campaignProfileDek(canonicalCurrentSummary)
-    : dek;
-  const displayRest = parishCampaign ? null : rest;
+  const displayDek = dek;
+  const displayRest = rest;
 
   const hasMap = (
     contextPoints.points as {
@@ -657,16 +654,20 @@ export default async function ParishPage({
     overview: [displayDek, displayRest].filter(Boolean).join(" "),
     researchOnly,
     researchStatus: researchStatusCopy(recordType),
-    currentUse: isUsProjection
-      ? canonicalCurrentSummary
-      : (caseRecord?.currentUse ?? situation?.current_use ?? null),
-    caseSummary: isUsProjection
-      ? canonicalCurrentSummary
-      : (caseRecord?.summary ?? null),
+    currentUse:
+      canonicalCurrentSummary ??
+      caseRecord?.currentUse ??
+      situation?.current_use ??
+      null,
+    caseSummary:
+      canonicalCurrentSummary ??
+      caseRecord?.summary ??
+      situation?.situation ??
+      null,
     caseAsOf: isUsProjection
       ? canonicalCurrentSummary
         ? alertsData.snapshot
-        : null
+        : (caseRecord?.asOf ?? null)
       : (caseRecord?.asOf ?? null),
     developments: caseRecord?.developments ?? [],
     timelineEvents: parishTimeline?.events ?? [],
@@ -697,11 +698,6 @@ export default async function ParishPage({
     institutionalLifeOverride: !isUsProjection
       ? (caseRecord?.profile?.institutionalLife ?? null)
       : null,
-    institutionalSummaryOverride:
-      parishCampaign?.profile?.institutionalSummary ??
-      institutionDates?.continuationSummary ??
-      (!isUsProjection ? caseRecord?.profile?.institutionalSummary : null) ??
-      null,
   });
 
   const contextMapFigure = hasMap ? (
@@ -831,6 +827,39 @@ export default async function ParishPage({
             {entry.diocese && <span className="text-muted">{entry.diocese}</span>}
           </div>
 
+          <ParishPublishedRecord
+            profile={profile}
+            leadText={displayDek}
+            overviewText={
+              researchOnly
+                ? undefined
+                : [displayDek, displayRest].filter(Boolean).join(" ")
+            }
+            supplementalNarrative={
+              caseRecord?.historicalNarrative?.length
+                ? caseRecord.historicalNarrative.map(
+                    (paragraph) => paragraph.text,
+                  )
+                : caseRecord?.historicalSummary?.length
+                  ? caseRecord.historicalSummary
+                  : displayRest
+                    ? [displayRest]
+                    : []
+            }
+            fallbackNarrative={
+              historicalLeadNarrative ? [] : profileView.historyFallback
+            }
+            closingNote={
+              core?.survivedReviewThenClosed &&
+              institutionTransition === "merged"
+                ? "Survived review, then merged. This parish remained open after an earlier diocesan review, but a later decision merged its juridic life into a successor parish."
+                : core?.survivedReviewThenClosed
+                  ? "Survived review, then closed. This parish remained open after an earlier diocesan review, but a later decision ended its institutional life."
+                  : undefined
+            }
+            embedded
+          />
+
           {isUsProjection && (
             <>
               <dl className="mt-4 grid max-w-[38em] gap-x-6 gap-y-4 border-t border-rule pt-3.5 sm:grid-cols-4">
@@ -880,47 +909,8 @@ export default async function ParishPage({
                   </div>
                 ))}
               </dl>
-              <p
-                data-profile-institutional-reading
-                className="mt-4 max-w-[38em] text-sm leading-relaxed text-foreground"
-              >
-                <span className="mr-2 font-mono text-[10.5px] font-medium uppercase tracking-[0.09em] text-muted">
-                  What happened
-                </span>
-                {profileView.institutionalSummary}
-              </p>
             </>
           )}
-
-          <ParishPublishedRecord
-            profile={profile}
-            leadText={displayDek}
-            overviewText={
-              researchOnly
-                ? undefined
-                : [displayDek, displayRest].filter(Boolean).join(" ")
-            }
-            supplementalNarrative={
-              caseRecord?.historicalNarrative?.length
-                ? caseRecord.historicalNarrative.map((paragraph) => paragraph.text)
-                : caseRecord?.historicalSummary?.length
-                  ? caseRecord.historicalSummary
-                : displayRest
-                  ? [displayRest]
-                  : []
-            }
-            fallbackNarrative={
-              caseRecord?.summary ? [] : profileView.historyFallback
-            }
-            closingNote={
-              core?.survivedReviewThenClosed && institutionTransition === "merged"
-                ? "Survived review, then merged. This parish remained open after an earlier diocesan review, but a later decision merged its juridic life into a successor parish."
-                : core?.survivedReviewThenClosed
-                  ? "Survived review, then closed. This parish remained open after an earlier diocesan review, but a later decision ended its institutional life."
-                : undefined
-            }
-            embedded
-          />
 
           {identityNotices.map((notice) => (
             <div

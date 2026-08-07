@@ -48,7 +48,6 @@ export interface ParishProfileChronologyItem {
 export interface ParishProfileViewModel {
   historyFallback: string[];
   facts: ParishProfileFact[];
-  institutionalSummary: string;
   chronology: ParishProfileChronologyItem[];
   currentSummary: string;
   currentAsOf: string | null;
@@ -95,7 +94,6 @@ interface ParishProfileViewInput {
   recordType: string;
   institutionTransition: InstitutionTransition;
   institutionalLifeOverride: string | null;
-  institutionalSummaryOverride: string | null;
 }
 
 const BUILDING_EVENT =
@@ -367,65 +365,12 @@ function facts(input: ParishProfileViewInput): ParishProfileFact[] {
   ];
 }
 
-function institutionalSummary(input: ParishProfileViewInput) {
-  if (input.institutionalSummaryOverride) {
-    return input.institutionalSummaryOverride;
-  }
-  if (input.recordType === "misija") {
-    return "This is an active Lithuanian mission rather than a territorial or ethnic parish.";
-  }
-  if (input.endState === "active_parish") {
-    return "The Lithuanian parish institution remains active.";
-  }
-  if (input.endState === "mass_continues") {
-    if (input.institutionTransition === "merged") {
-      return "The distinct Lithuanian parish merged into a successor institution; Lithuanian Mass continues at its worship site.";
-    }
-    if (input.institutionTransition === "succeeded") {
-      return "The distinct Lithuanian parish was succeeded by another institution; Lithuanian Mass continues at its worship site.";
-    }
-    if (input.institutionTransition === "continued") {
-      return "The parish's canonical or congregational life continues in another institution, where Lithuanian Mass is still celebrated.";
-    }
-    return "Lithuanian Mass continues, but the parish institution's final transition has not yet been established.";
-  }
-  if (input.endState === "transferred") {
-    return "The Lithuanian parish institution ended; another community uses the church today.";
-  }
-  if (input.endState === "unresolved") {
-    if (input.institutionTransition === "merged" && input.closed) {
-      return `The Lithuanian parish merged into a successor institution in ${input.closed}; the remaining unresolved question concerns its church or successor arrangement, not whether the historical parish ended.`;
-    }
-    return "A final institutional outcome has not yet been established.";
-  }
-  if (["closed", "demolished", "repurposed"].includes(input.endState)) {
-    const ended = input.closed
-      ? `The parish institution ended in ${input.closed}.`
-      : "The parish institution ended.";
-    if (/^demolished\b/i.test(input.buildingOutcome ?? "")) {
-      const year = input.buildingOutcome?.match(/\b(\d{4})\b/)?.[1];
-      return `${ended} Its church building was demolished${year ? ` in ${year}` : ""}.`;
-    }
-    if (/^repurposed\b/i.test(input.buildingOutcome ?? "")) {
-      return /standing/i.test(input.buildingOutcome ?? "")
-        ? `${ended} Its former church was repurposed and remains standing.`
-        : `${ended} Its former church was repurposed.`;
-    }
-    if (/^standing\b/i.test(input.buildingOutcome ?? "")) {
-      return `${ended} Its former church remains standing.`;
-    }
-    return `${ended} The building's present condition is not yet established.`;
-  }
-  return "The institution is documented, but its present status is still being verified.";
-}
-
 export function buildParishProfileView(
   input: ParishProfileViewInput,
 ): ParishProfileViewModel {
   return {
     historyFallback: historyFallback(input),
     facts: facts(input),
-    institutionalSummary: institutionalSummary(input),
     chronology: chronology(input),
     currentSummary: currentSummary(input),
     currentAsOf: input.caseAsOf,

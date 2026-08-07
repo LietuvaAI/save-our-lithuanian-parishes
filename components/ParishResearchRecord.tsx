@@ -1080,7 +1080,7 @@ export function ParishPublishedRecord({
             : "font-serif text-2xl font-semibold"
         }
       >
-        {embedded ? "About this parish" : "History"}
+        History
       </h2>
       <div className="mt-3 max-w-[38em] space-y-4">
         {leadText && (
