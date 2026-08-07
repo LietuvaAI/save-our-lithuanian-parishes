@@ -1,3 +1,6 @@
+"use client";
+
+import { useMemo, useState } from "react";
 import Link from "next/link";
 
 export type PhysicalSiteState =
@@ -42,18 +45,41 @@ export default function PhysicalSiteTimeline({
 }: {
   sites: PhysicalSiteTimelineRow[];
 }) {
-  const dated = sites
+  const [query, setQuery] = useState("");
+  const visibleSites = useMemo(() => {
+    const foldedQuery = query.trim().toLocaleLowerCase();
+    if (!foldedQuery) return sites;
+    return sites.filter((site) =>
+      site.name.toLocaleLowerCase().includes(foldedQuery),
+    );
+  }, [query, sites]);
+  const dated = visibleSites
     .filter((site) => site.firstYear != null)
     .sort(
       (a, b) =>
         a.firstYear! - b.firstYear! || a.name.localeCompare(b.name),
     );
-  const undated = sites
+  const undated = visibleSites
     .filter((site) => site.firstYear == null)
     .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <div>
+      <div className="mb-3 flex flex-wrap items-center gap-3">
+        <input
+          type="search"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          placeholder="Find a church or worship site…"
+          className="w-72 rounded-md border border-rule bg-background px-2 py-1.5 text-sm"
+          aria-label="Find a church or worship site"
+        />
+        {query.trim() ? (
+          <span className="text-xs text-muted">
+            {visibleSites.length} of {sites.length} sites
+          </span>
+        ) : null}
+      </div>
       <div className="grid grid-cols-[minmax(11rem,0.72fr)_minmax(22rem,1.28fr)] gap-3 border-y border-rule py-2 text-[10px] uppercase text-muted">
         <span>Physical church or worship site</span>
         <div className="flex justify-between">
@@ -108,8 +134,17 @@ export default function PhysicalSiteTimeline({
         })}
       </div>
 
+      {visibleSites.length === 0 ? (
+        <p className="border-b border-rule py-6 text-sm text-muted">
+          No worship site matches that search.
+        </p>
+      ) : null}
+
       {undated.length > 0 ? (
-        <details className="mt-4 border-y border-rule py-3">
+        <details
+          className="mt-4 border-y border-rule py-3"
+          open={query.trim() ? true : undefined}
+        >
           <summary className="cursor-pointer text-sm font-medium">
             {undated.length} worship sites without a documented building date
           </summary>
