@@ -61,10 +61,6 @@ const NAV: NavItem[] = [
     children: [
       { href: "/history", label: "The History" },
       {
-        href: "/church-buildings-through-time",
-        label: "Church Buildings Through Time",
-      },
-      {
         href: "/where-parish-life-continued",
         label: "Where Parish Life Continued",
       },

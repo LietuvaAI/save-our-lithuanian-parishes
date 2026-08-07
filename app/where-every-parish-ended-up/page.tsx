@@ -75,7 +75,13 @@ function buildThreads(): ThreadParish[] {
   }));
 }
 
-export default function ParishOutcomeFlowPage() {
+export default async function ParishOutcomeFlowPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ view?: string | string[] }>;
+}) {
+  const requestedView = (await searchParams).view;
+  const initialMode = requestedView === "buildings" ? "buildings" : "institutions";
   const threads = buildThreads();
   const closed = threads.filter(
     (institution) => toGroup(institution.endState) === "closed",
@@ -128,6 +134,7 @@ export default function ParishOutcomeFlowPage() {
         }
         revision={canonicalInfographics.revision_id}
         generated={generated}
+        initialMode={initialMode}
         institutionView={
           <ParishThreads
             parishes={threads}

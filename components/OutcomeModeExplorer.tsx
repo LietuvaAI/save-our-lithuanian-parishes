@@ -20,6 +20,7 @@ export default function OutcomeModeExplorer({
   unestablishedSiteCount,
   revision,
   generated,
+  initialMode,
   institutionView,
   buildingView,
 }: {
@@ -37,11 +38,27 @@ export default function OutcomeModeExplorer({
   unestablishedSiteCount: number;
   revision: string;
   generated: string;
+  initialMode: Mode;
   institutionView: ReactNode;
   buildingView: ReactNode;
 }) {
-  const [mode, setMode] = useState<Mode>("institutions");
+  const [mode, setMode] = useState<Mode>(initialMode);
   const institutions = mode === "institutions";
+
+  const selectMode = (nextMode: Mode) => {
+    setMode(nextMode);
+    const url = new URL(window.location.href);
+    if (nextMode === "buildings") {
+      url.searchParams.set("view", "buildings");
+    } else {
+      url.searchParams.delete("view");
+    }
+    window.history.replaceState(
+      window.history.state,
+      "",
+      `${url.pathname}${url.search}${url.hash}`,
+    );
+  };
 
   return (
     <>
@@ -113,7 +130,7 @@ export default function OutcomeModeExplorer({
         >
           <button
             type="button"
-            onClick={() => setMode("institutions")}
+            onClick={() => selectMode("institutions")}
             aria-pressed={institutions}
             className={`rounded px-3 py-1.5 transition-colors ${
               institutions
@@ -125,7 +142,7 @@ export default function OutcomeModeExplorer({
           </button>
           <button
             type="button"
-            onClick={() => setMode("buildings")}
+            onClick={() => selectMode("buildings")}
             aria-pressed={!institutions}
             className={`rounded px-3 py-1.5 transition-colors ${
               institutions

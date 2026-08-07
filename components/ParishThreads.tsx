@@ -9,7 +9,7 @@
 //
 //   1. It is an INSTITUTION view. An institution and its church building are
 //      separate units with separate populations. Building condition belongs to
-//      /church-buildings-through-time and is never counted here.
+//      Buildings mode on /where-every-parish-ended-up and is never counted here.
 //   2. Every label, count and explanation comes from the canonical projection.
 //      The component holds no parish list, description map, or per-parish
 //      exception.

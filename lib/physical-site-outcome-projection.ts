@@ -1,12 +1,24 @@
-import type {
-  PhysicalSiteState,
-  PhysicalSiteTimelineRow,
-} from "@/components/PhysicalSiteTimeline";
 import {
   infographicCounts,
   physicalWorshipSiteHistory,
   resolvePhysicalSiteCondition,
 } from "@/lib/infographic-projection";
+
+export type PhysicalSiteState =
+  | "demolished"
+  | "repurposed"
+  | "listed_for_sale"
+  | "standing"
+  | "not_established";
+
+export type PhysicalSiteTimelineRow = {
+  slug: string;
+  name: string;
+  firstYear: number | null;
+  endYear: number | null;
+  state: PhysicalSiteState;
+  profileHref: string | null;
+};
 
 const sites: PhysicalSiteTimelineRow[] = physicalWorshipSiteHistory.map(
   (site) => {
@@ -41,8 +53,9 @@ if (sites.length !== infographicCounts.physical_worship_sites) {
 }
 
 /**
- * The one public projection for the physical-site timeline. Institution pages
- * consume this adapter rather than interpreting raw site relationships.
+ * The one public projection for Buildings mode in Parish & Mission Outcomes.
+ * Public surfaces consume this adapter rather than interpreting raw site
+ * relationships.
  */
 export const physicalSiteOutcomeProjection = {
   sites,

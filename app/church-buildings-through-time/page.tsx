@@ -1,54 +1,5 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import PhysicalSiteTimeline from "@/components/PhysicalSiteTimeline";
-import { physicalSiteOutcomeProjection } from "@/lib/physical-site-outcome-projection";
-
-export const metadata: Metadata = {
-  title: "Lithuanian Church Buildings Through Time",
-  description:
-    "A physical-site view of documented Lithuanian Catholic churches and worship places, kept separate from parish-institution history.",
-};
+import { permanentRedirect } from "next/navigation";
 
 export default function ChurchBuildingHistoryPage() {
-  const { sites, stateCounts } = physicalSiteOutcomeProjection;
-
-  return (
-    <article className="mx-auto max-w-6xl px-4 py-8">
-      <p className="text-small-copy uppercase text-muted">Physical-site view</p>
-      <h1 className="mt-1 max-w-3xl font-serif text-page-title font-semibold leading-tight">
-        Lithuanian church buildings through time
-      </h1>
-      <p className="mt-2 max-w-3xl text-subsection-title leading-relaxed">
-        When did each documented church or worship site enter the Lithuanian
-        parish story, and what is known about the building today?
-      </p>
-
-      <section className="mt-5 border-y border-rule py-4">
-        <p className="max-w-3xl leading-relaxed">
-          The canonical graph currently identifies {sites.length} physical
-          worship sites connected to the U.S. parish record. It records{" "}
-          {stateCounts.demolished ?? 0} as demolished and{" "}
-          {stateCounts.repurposed ?? 0} as repurposed; the present condition of{" "}
-          {stateCounts.not_established ?? 0} sites is not yet established in
-          the building ledger.
-        </p>
-        <p className="mt-2 max-w-3xl text-small-copy leading-relaxed text-muted">
-          This is a building history, not an institution count. A parish or
-          mission may have used several buildings, and one building may have
-          served more than one congregation. Follow institutional outcomes in{" "}
-          <Link
-            href="/where-every-parish-ended-up"
-            className="underline hover:text-foreground"
-          >
-            Where Every Parish and Mission Ended Up
-          </Link>
-          .
-        </p>
-      </section>
-
-      <section className="mt-6 overflow-x-auto">
-        <PhysicalSiteTimeline sites={sites} />
-      </section>
-    </article>
-  );
+  permanentRedirect("/where-every-parish-ended-up?view=buildings");
 }

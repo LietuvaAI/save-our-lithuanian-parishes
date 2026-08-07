@@ -162,7 +162,7 @@ export default function AboutTheDataPage() {
               </tr>
               <tr>
                 <th className="py-3 pr-4 font-semibold">
-                  Church Buildings Through Time
+                  Buildings mode in Parish &amp; Mission Outcomes
                 </th>
                 <td className="py-3">
                   {siteFigures.physicalSites.worshipSites} documented physical
