@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import OutcomeModeExplorer from "@/components/OutcomeModeExplorer";
+import PhysicalSiteFlow from "@/components/PhysicalSiteFlow";
 import ParishThreads, {
   type FateKey,
   type ThreadParish,
 } from "@/components/ParishThreads";
-import PhysicalSiteTimeline from "@/components/PhysicalSiteTimeline";
 import {
   additionalCurrentHostedCommunities,
   canonicalInfographics,
@@ -144,7 +144,7 @@ export default function ParishOutcomeFlowPage() {
           />
         }
         buildingView={
-          <PhysicalSiteTimeline sites={physicalSiteOutcomeProjection.sites} />
+          <PhysicalSiteFlow sites={physicalSiteOutcomeProjection.sites} />
         }
       />
 

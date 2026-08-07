@@ -504,6 +504,10 @@ const outcomeModeExplorer = readFileSync(
   new URL("../components/OutcomeModeExplorer.tsx", import.meta.url),
   "utf8",
 );
+const physicalSiteFlow = readFileSync(
+  new URL("../components/PhysicalSiteFlow.tsx", import.meta.url),
+  "utf8",
+);
 if (
   !institutionFlowPage.includes("additionalCurrentHostedCommunities") ||
   !institutionFlowPage.includes("additionalHostedCommunities=")
@@ -536,6 +540,13 @@ if (
   !/Church buildings/.test(outcomeModeExplorer)
 ) {
   errors.push("institution-outcome view does not expose both approved modes");
+}
+if (
+  !/PhysicalSiteFlow/.test(institutionFlowPage) ||
+  !/FIRST DOCUMENTED/.test(physicalSiteFlow) ||
+  !/CONDITION TODAY/.test(physicalSiteFlow)
+) {
+  errors.push("Buildings mode does not render the canonical physical-site flow");
 }
 
 const homepage = readFileSync(
