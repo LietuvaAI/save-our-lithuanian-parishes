@@ -6,7 +6,7 @@ substackUrl: https://blog.saveourlithuanianparishes.org/p/active-campaigns
 archivedAt: 2026-08-04
 note: "Canonical campaigns page (DECISIONS.md 2026-07-21); re-archived after the 2026-08-04 block rework + collection-appeal softening (record-collection asks removed per Vilija; personal-fronting claim removed)."
 ---
-## Found active campaigns
+## Four active campaigns
 
 Four current campaigns are listed below. Start here, then jump to the full action section for each parish underneath.
 
