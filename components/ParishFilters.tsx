@@ -94,7 +94,7 @@ export default function ParishFilters({
   const sortedStates = [...byState.keys()].sort();
 
   const selectClass =
-    "rounded-md border border-rule bg-background px-2 py-1.5 text-sm";
+    "rounded-md border border-rule bg-background px-2 py-1.5 text-body-copy";
 
   const activeFilters =
     identity !== ALL || ownership !== ALL || ending !== ALL || state !== ALL || query;
@@ -102,7 +102,7 @@ export default function ParishFilters({
   return (
     <div>
       <div className="flex flex-wrap gap-3 items-end mb-6">
-        <label className="flex flex-col gap-1 text-xs text-muted">
+        <label className="flex flex-col gap-1 text-small-copy text-muted">
           Search
           <input
             type="search"
@@ -112,7 +112,7 @@ export default function ParishFilters({
             className={`${selectClass} w-44`}
           />
         </label>
-        <label className="flex flex-col gap-1 text-xs text-muted">
+        <label className="flex flex-col gap-1 text-small-copy text-muted">
           Lithuanian identity
           <select
             value={identity}
@@ -134,7 +134,7 @@ export default function ParishFilters({
             <option value="lost">{LITHUANIAN_IDENTITY_LABEL.lost}</option>
           </select>
         </label>
-        <label className="flex flex-col gap-1 text-xs text-muted">
+        <label className="flex flex-col gap-1 text-small-copy text-muted">
           Ownership
           <select
             value={ownership}
@@ -153,7 +153,7 @@ export default function ParishFilters({
             </option>
           </select>
         </label>
-        <label className="flex flex-col gap-1 text-xs text-muted">
+        <label className="flex flex-col gap-1 text-small-copy text-muted">
           Outcome
           <select
             value={ending}
@@ -173,7 +173,7 @@ export default function ParishFilters({
             <option value="undecided">{ENDING_MODE_LABEL.undecided}</option>
           </select>
         </label>
-        <label className="flex flex-col gap-1 text-xs text-muted">
+        <label className="flex flex-col gap-1 text-small-copy text-muted">
           State
           <select
             value={state}
@@ -190,7 +190,7 @@ export default function ParishFilters({
         </label>
       </div>
 
-      <p className="text-sm text-muted mb-4">
+      <p className="text-body-copy text-muted mb-4">
         {filtered.length} of {parishes.length} parishes
         {activeFilters ? " match" : ""}
       </p>
@@ -202,9 +202,9 @@ export default function ParishFilters({
           );
           return (
             <section key={st}>
-              <h2 className="font-serif text-xl font-semibold border-b border-rule pb-2">
+              <h2 className="font-serif text-subsection-title font-semibold border-b border-rule pb-2">
                 {STATE_NAME[st] ?? st}{" "}
-                <span className="text-muted text-sm font-normal">
+                <span className="text-muted text-body-copy font-normal">
                   · {list.length}{" "}
                   {list.length === 1 ? "parish" : "parishes"}
                 </span>
@@ -228,7 +228,7 @@ export default function ParishFilters({
                           <span className="font-medium group-hover:underline">
                             {p.nameLt}
                           </span>{" "}
-                          <span className="text-sm text-muted">
+                          <span className="text-body-copy text-muted">
                             — {p.city} ·{" "}
                             {ENDING_MODE_LABEL[p.endingMode]}
                             {p.yearFounded && p.yearClosed
@@ -240,12 +240,12 @@ export default function ParishFilters({
                                   : ""}
                           </span>
                           {showIdentity && (
-                            <span className="ml-1.5 rounded border border-rule px-1.5 py-px text-xs text-muted">
+                            <span className="ml-1.5 rounded border border-rule px-1.5 py-px text-small-copy text-muted">
                               {LITHUANIAN_IDENTITY_LABEL[p.lithuanianIdentity!]}
                             </span>
                           )}
                           {p.hasRecord && (
-                            <span className="ml-1.5 rounded border border-rule px-1.5 py-px text-xs text-muted">
+                            <span className="ml-1.5 rounded border border-rule px-1.5 py-px text-small-copy text-muted">
                               present record
                             </span>
                           )}

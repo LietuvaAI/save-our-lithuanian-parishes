@@ -95,7 +95,7 @@ export default function DioceseExplorer({
             id="diocese-select"
             value={selected.shortName}
             onChange={(event) => setSelectedName(event.target.value)}
-            className="mt-2 w-full rounded-md border border-rule bg-background px-2.5 py-1.5 text-xs"
+            className="mt-2 w-full rounded-md border border-rule bg-background px-2.5 py-1.5 text-small-copy"
           >
             {dioceses.map((diocese) => (
               <option key={diocese.name} value={diocese.shortName}>
@@ -109,10 +109,10 @@ export default function DioceseExplorer({
               {selected.name}
             </p>
             <div className="mt-1 flex items-end justify-between gap-3">
-              <h2 className="max-w-[12rem] text-sm font-semibold leading-snug">
+              <h2 className="max-w-[12rem] text-card-title font-semibold leading-snug">
                 Lithuanian parish life ended
               </h2>
-              <p className="shrink-0 font-serif text-2xl font-semibold leading-none">
+              <p className="shrink-0 font-serif text-section-title font-semibold leading-none">
                 {selected.ended}
                 <span className="ml-1 font-sans text-[11px] font-normal text-muted">
                   of {selected.total}
@@ -174,12 +174,12 @@ export default function DioceseExplorer({
                     {parish.profileHref ? (
                       <Link
                         href={parish.profileHref}
-                        className="text-xs font-medium leading-snug underline underline-offset-2 hover:text-accent"
+                        className="text-small-copy font-medium leading-snug underline underline-offset-2 hover:text-accent"
                       >
                         {parish.name}
                       </Link>
                     ) : (
-                      <span className="text-xs font-medium leading-snug">
+                      <span className="text-small-copy font-medium leading-snug">
                         {parish.name}
                       </span>
                     )}

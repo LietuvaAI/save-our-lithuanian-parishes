@@ -209,11 +209,11 @@ export default function ParishContextMap({
             <p className="text-[10px] font-semibold uppercase tracking-widest text-muted">
               Diocese
             </p>
-            <p className="mt-0.5 font-serif text-base font-semibold">
+            <p className="mt-0.5 font-serif text-card-title font-semibold">
               {dioceseLabel ?? dio.name}
             </p>
           </div>
-          <p className="text-xs text-muted">
+          <p className="text-small-copy text-muted">
             <span className="font-semibold text-foreground">
               {model.inDioceseN}
             </span>{" "}
@@ -366,7 +366,7 @@ export default function ParishContextMap({
         </svg>
         {!compact && (
           <div
-            className="min-h-11 border-t border-rule px-3 py-2 text-xs"
+            className="min-h-11 border-t border-rule px-3 py-2 text-small-copy"
             aria-live="polite"
           >
             {hot ? (
@@ -452,14 +452,14 @@ export default function ParishContextMap({
                 <p className="text-[10px] font-semibold uppercase tracking-widest text-muted">
                   Community and place
                 </p>
-                <p className="font-serif text-lg font-semibold">
+                <p className="font-serif text-subsection-title font-semibold">
                   {subject.name} · {dioceseLabel ?? dio.name}
                 </p>
               </div>
               <button
                 type="button"
                 onClick={() => setExpanded(false)}
-                className="flex size-9 items-center justify-center rounded border border-rule text-2xl leading-none hover:border-foreground"
+                className="flex size-9 items-center justify-center rounded border border-rule text-section-title leading-none hover:border-foreground"
                 aria-label="Close parish map"
                 title="Close map"
               >

@@ -27,7 +27,7 @@ export function EndStatePill({
     <span
       className={
         size === "lg"
-          ? "rounded-full px-3.5 py-1 text-sm font-semibold whitespace-nowrap"
+          ? "rounded-full px-3.5 py-1 text-body-copy font-semibold whitespace-nowrap"
           : "inline-block rounded-full px-2 py-0.5 text-[11px] font-medium leading-tight whitespace-nowrap"
       }
       style={{
@@ -59,7 +59,7 @@ export function EndStateDot({
 
 export function EndStateShort({ value }: { value: EndState }) {
   return (
-    <span className="inline-flex items-center gap-1.5 text-xs text-muted whitespace-nowrap">
+    <span className="inline-flex items-center gap-1.5 text-small-copy text-muted whitespace-nowrap">
       <EndStateDot value={value} />
       {END_STATE_SHORT[value]}
     </span>
@@ -77,14 +77,14 @@ export function LegendSwatch({
   detail?: string;
 }) {
   return (
-    <span className="inline-flex items-baseline gap-1.5 text-sm whitespace-nowrap">
+    <span className="inline-flex items-baseline gap-1.5 text-body-copy whitespace-nowrap">
       <span
         className="inline-block w-3 h-3 rounded-sm self-center"
         style={{ background: END_STATE_COLOR[group] }}
       />
       {GROUP_LABEL[group]}
       {typeof count === "number" && (
-        <span className="text-muted text-xs">
+        <span className="text-muted text-small-copy">
           {count}
           {detail ? ` (${detail})` : ""}
         </span>

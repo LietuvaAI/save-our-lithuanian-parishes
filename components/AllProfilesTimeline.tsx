@@ -90,13 +90,15 @@ function TimelineAxis() {
       {DECADES.map((year) => (
         <span
           key={year}
-          className="timeline-year absolute bottom-2 -translate-x-1/2 text-[10px] text-muted"
+          className={`timeline-year absolute bottom-2 text-small-copy text-muted ${
+            year === START_YEAR ? "" : "-translate-x-1/2"
+          }`}
           style={{ left: yearPosition(year) }}
         >
           {year}
         </span>
       ))}
-      <span className="timeline-year absolute bottom-2 right-0 translate-x-1/2 text-[10px] font-semibold text-foreground">
+      <span className="timeline-year absolute bottom-2 right-0 text-small-copy font-semibold text-foreground">
         {END_YEAR}
       </span>
     </div>
@@ -233,7 +235,7 @@ export default function AllProfilesTimeline({
   );
 
   const selectClass =
-    "rounded-md border border-rule bg-background px-3 py-2 text-sm";
+    "rounded-md border border-rule bg-background px-2.5 py-2 text-support-copy";
   const anyFilter =
     query.trim() !== "" ||
     letter !== "all" ||
@@ -249,17 +251,17 @@ export default function AllProfilesTimeline({
   return (
     <div>
       <section
-        className="sticky top-0 z-30 border-y border-rule bg-background/95 py-4 backdrop-blur"
+        className="sticky top-0 z-30 border-y border-rule bg-background/95 py-[9px] backdrop-blur"
         aria-label="Profile filters"
       >
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-[minmax(16rem,1fr)_auto_auto_auto]">
+        <div className="grid grid-cols-2 gap-2 lg:grid-cols-[minmax(16rem,1fr)_auto_auto_auto]">
           <input
             type="search"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search name, place, state, or diocese…"
             aria-label="Search all institution profiles"
-            className={selectClass}
+            className={`${selectClass} col-span-2 lg:col-span-1`}
           />
           <select
             value={state}
@@ -291,7 +293,7 @@ export default function AllProfilesTimeline({
             value={sort}
             onChange={(event) => setSort(event.target.value as SortMode)}
             aria-label="Sort profiles"
-            className={selectClass}
+            className={`${selectClass} col-span-2 lg:col-span-1`}
           >
             <option value="az">Sort: A–Z</option>
             <option value="earliest">Sort: Earliest</option>
@@ -301,15 +303,18 @@ export default function AllProfilesTimeline({
             <button
               type="button"
               onClick={clearFilters}
-              className="text-sm font-semibold underline underline-offset-4 hover:text-accent"
+              className="text-support-copy font-semibold underline underline-offset-4 hover:text-accent"
             >
               Clear all
             </button>
           )}
         </div>
 
-        <div className="mt-4 flex flex-wrap items-center gap-1" aria-label="A to Z profile index">
-          <span className="mr-2 text-xs font-semibold uppercase tracking-widest text-muted">
+        <div
+          className="mt-2 flex flex-nowrap items-center gap-1 overflow-x-auto sm:flex-wrap sm:overflow-visible"
+          aria-label="A to Z profile index"
+        >
+          <span className="mr-2 text-ui-label font-semibold uppercase tracking-[0.15em] text-muted">
             A–Z
           </span>
           {LETTERS.map((optionLetter) => {
@@ -322,7 +327,7 @@ export default function AllProfilesTimeline({
                 disabled={!enabled}
                 aria-pressed={selected}
                 onClick={() => setLetter(selected ? "all" : optionLetter)}
-                className={`size-7 rounded font-mono text-xs font-semibold disabled:opacity-25 ${
+                className={`size-7 shrink-0 rounded font-mono text-small-copy font-semibold disabled:opacity-25 ${
                   selected
                     ? "bg-accent text-white"
                     : "enabled:hover:bg-band enabled:hover:text-accent"
@@ -334,13 +339,13 @@ export default function AllProfilesTimeline({
           })}
         </div>
 
-        <div className="mt-3 flex flex-wrap items-center justify-between gap-3 text-sm">
+        <div className="mt-2 flex flex-wrap items-center gap-x-5 gap-y-1 text-small-copy">
           <span className="font-medium">
             {filtered.length === rows.length
               ? `${rows.length} institutions`
               : `${filtered.length} of ${rows.length} institutions`}
           </span>
-          <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted" aria-label="Status colors">
+          <div className="flex flex-wrap gap-x-4 gap-y-1 text-small-copy text-muted" aria-label="Status colors">
             {GROUP_ORDER.map((group) => (
               <span key={group} className="inline-flex items-center gap-1.5">
                 <span
@@ -359,11 +364,11 @@ export default function AllProfilesTimeline({
 
       {filtered.length === 0 ? (
         <section className="border-b border-rule py-12 text-center">
-          <h2 className="font-serif text-xl font-semibold">No matching profiles</h2>
+          <h2 className="font-serif text-subsection-title font-semibold">No matching profiles</h2>
           <button
             type="button"
             onClick={clearFilters}
-            className="mt-2 text-sm font-semibold text-accent underline underline-offset-4"
+            className="mt-2 text-support-copy font-semibold text-accent underline underline-offset-4"
           >
             Clear search and filters
           </button>
@@ -372,7 +377,7 @@ export default function AllProfilesTimeline({
         <div className="mt-6 overflow-x-auto border-y border-rule">
           <div className="min-w-[58rem]">
             <div className="sticky top-0 z-30 grid grid-cols-[19rem_minmax(36rem,1fr)] border-b border-rule bg-background/95 backdrop-blur">
-              <div className="sticky left-0 z-40 flex items-end border-r border-rule bg-background px-4 pb-2 text-xs font-semibold uppercase tracking-widest text-muted">
+              <div className="sticky left-0 z-40 flex items-end border-r border-rule bg-background px-4 pb-2 text-ui-label font-semibold uppercase tracking-[0.15em] text-muted">
                 Institution
               </div>
               <TimelineAxis />
@@ -407,14 +412,14 @@ export default function AllProfilesTimeline({
                         <div className="min-w-0">
                           <Link
                             href={row.profileHref}
-                            className="font-serif font-semibold leading-tight underline decoration-rule underline-offset-2 hover:text-accent"
+                            className="font-serif text-card-title font-semibold underline decoration-rule underline-offset-2 hover:text-accent"
                           >
                             {row.canonicalName}
                           </Link>
-                          <span className="mt-0.5 block text-xs leading-snug text-muted">
+                          <span className="mt-0.5 block text-small-copy text-muted">
                             {row.lithuanianName}
                           </span>
-                          <span className="mt-0.5 block text-xs leading-snug text-muted">
+                          <span className="mt-0.5 block text-small-copy text-muted">
                             {row.city}, {row.state}
                             {suffix ? ` · ${suffix}` : ""}
                             {row.jurisdiction ? ` · ${row.jurisdiction}` : ""}
@@ -432,10 +437,10 @@ export default function AllProfilesTimeline({
                       <span className="absolute inset-x-2 top-1/2 h-0">
                         <TimelineMark row={row} />
                       </span>
-                      <span className="timeline-year absolute bottom-1.5 left-3 text-[10px] text-muted">
+                      <span className="timeline-year absolute bottom-1.5 left-3 text-small-copy text-muted">
                         {row.founded ?? "year not established"}
                       </span>
-                      <span className="timeline-year absolute bottom-1.5 right-3 text-[10px] text-muted">
+                      <span className="timeline-year absolute bottom-1.5 right-3 text-small-copy text-muted">
                         {row.closed ??
                           (row.statusGroup === "active_parish" ||
                           row.statusGroup === "mass_continues"

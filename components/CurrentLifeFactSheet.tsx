@@ -49,10 +49,10 @@ export default function CurrentLifeFactSheet({
   return (
     <section className="mt-12 border-y border-rule py-7">
       <div>
-        <p className="text-xs font-medium uppercase text-muted">
+        <p className="text-small-copy font-medium uppercase text-muted">
           Shareable fact sheet
         </p>
-        <h2 className="mt-1 font-serif text-2xl font-semibold">
+        <h2 className="mt-1 font-serif text-section-title font-semibold">
           Lithuanian Catholic life today, at a glance
         </h2>
       </div>
@@ -222,22 +222,22 @@ export default function CurrentLifeFactSheet({
             aria-label={`${places} current worship places: ${parishes} parishes, ${missions} missions, ${hostedMasses} hosted Masses across ${states} states. Among ${profiledCommunities} profiled communities, ${lithuanianPastors} have Lithuanian-speaking pastors, ${weeklyMasses} have weekly Lithuanian Masses, and ${standaloneGovernance} retain standalone governance.`}
           >
             <div className="border-y border-rule py-5">
-              <p className="font-serif text-6xl font-semibold text-[var(--es-active)]">
+              <p className="font-serif text-page-title font-semibold text-[var(--es-active)]">
                 {places}
               </p>
-              <p className="mt-1 font-serif text-xl font-semibold leading-tight">
+              <p className="mt-1 font-serif text-section-title font-semibold leading-tight">
                 places still gather for Lithuanian Catholic worship
               </p>
             </div>
             <div className="grid grid-cols-2 border-b border-rule">
               {networkFigures.map(([value, label]) => (
                 <div key={label} className="border-b border-rule py-4 odd:pr-3 even:border-l even:pl-3">
-                  <p className="font-serif text-3xl font-semibold">{value}</p>
-                  <p className="text-sm text-muted">{label}</p>
+                  <p className="font-serif text-page-title font-semibold">{value}</p>
+                  <p className="text-body-copy text-muted">{label}</p>
                 </div>
               ))}
             </div>
-            <p className="mt-5 text-sm font-semibold leading-snug">
+            <p className="mt-5 text-body-copy font-semibold leading-snug">
               Pastoral conditions among {profiledCommunities} profiled worship
               communities
             </p>
@@ -247,14 +247,14 @@ export default function CurrentLifeFactSheet({
                   key={lineOne}
                   className="grid grid-cols-[4rem_minmax(0,1fr)] items-center gap-2 py-3"
                 >
-                  <p className="font-serif text-3xl font-semibold">{value}</p>
-                  <p className="text-sm font-medium">
+                  <p className="font-serif text-page-title font-semibold">{value}</p>
+                  <p className="text-body-copy font-medium">
                     {lineOne} {lineTwo}
                   </p>
                 </div>
               ))}
             </div>
-            <p className="mt-3 text-xs leading-relaxed text-muted">
+            <p className="mt-3 text-small-copy leading-relaxed text-muted">
               Source: Sielovada North America and current parish evidence ·
               Checked {checked}
             </p>

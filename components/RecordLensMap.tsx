@@ -221,7 +221,7 @@ export default function RecordLensMap({
           />
         ))}
       </svg>
-      <figcaption className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted">
+      <figcaption className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-small-copy text-muted">
         {legend.map((item) => (
           <span key={item.label} className="inline-flex items-center gap-2">
             <LegendMark
@@ -235,10 +235,10 @@ export default function RecordLensMap({
       </figcaption>
       {selected ? (
         <div
-          className="mt-4 border-t border-rule pt-3 text-sm"
+          className="mt-4 border-t border-rule pt-3 text-body-copy"
           aria-live="polite"
         >
-          <p className="font-serif text-base font-semibold">{selected.name}</p>
+          <p className="font-serif text-card-title font-semibold">{selected.name}</p>
           <p className="mt-0.5 text-muted">
             {selected.city}, {selected.state}
             {selected.detail ? ` · ${selected.detail}` : ""}

@@ -14,11 +14,11 @@ export default function ChurchBuildingHistoryPage() {
 
   return (
     <article className="mx-auto max-w-6xl px-4 py-8">
-      <p className="text-xs uppercase text-muted">Physical-site view</p>
-      <h1 className="mt-1 max-w-3xl font-serif text-3xl font-semibold leading-tight sm:text-4xl">
+      <p className="text-small-copy uppercase text-muted">Physical-site view</p>
+      <h1 className="mt-1 max-w-3xl font-serif text-page-title font-semibold leading-tight">
         Lithuanian church buildings through time
       </h1>
-      <p className="mt-2 max-w-3xl text-lg leading-relaxed">
+      <p className="mt-2 max-w-3xl text-subsection-title leading-relaxed">
         When did each documented church or worship site enter the Lithuanian
         parish story, and what is known about the building today?
       </p>
@@ -32,7 +32,7 @@ export default function ChurchBuildingHistoryPage() {
           {stateCounts.not_established ?? 0} sites is not yet established in
           the building ledger.
         </p>
-        <p className="mt-2 max-w-3xl text-xs leading-relaxed text-muted">
+        <p className="mt-2 max-w-3xl text-small-copy leading-relaxed text-muted">
           This is a building history, not an institution count. A parish or
           mission may have used several buildings, and one building may have
           served more than one congregation. Follow institutional outcomes in{" "}

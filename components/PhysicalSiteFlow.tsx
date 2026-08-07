@@ -297,13 +297,13 @@ export default function PhysicalSiteFlow({
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           placeholder="Find a church or worship site…"
-          className="w-72 rounded-md border border-rule bg-background px-2 py-1.5 text-sm"
+          className="w-72 rounded-md border border-rule bg-background px-2 py-1.5 text-body-copy"
           aria-label="Find a church or worship site"
         />
       </div>
 
       {matches.length > 0 ? (
-        <ul className="mb-3 flex flex-wrap gap-2 text-sm">
+        <ul className="mb-3 flex flex-wrap gap-2 text-body-copy">
           {matches.map((site) => (
             <li key={site.slug}>
               {site.profileHref ? (
@@ -324,7 +324,7 @@ export default function PhysicalSiteFlow({
       ) : null}
 
       <div
-        className="mb-3 flex min-h-10 items-center border-y border-rule px-3 py-2 text-sm"
+        className="mb-3 flex min-h-10 items-center border-y border-rule px-3 py-2 text-body-copy"
         aria-live="polite"
       >
         {hovered ? (
@@ -544,11 +544,11 @@ export default function PhysicalSiteFlow({
         <section className="mt-5 border-t-2 border-foreground pt-4">
           <div className="flex items-start justify-between gap-4">
             <div>
-              <h3 className="font-serif text-xl font-semibold">
+              <h3 className="font-serif text-subsection-title font-semibold">
                 {openLabel} · {openMembers.length} of {model.total}
               </h3>
               {openNote ? (
-                <p className="mt-1 max-w-3xl text-sm leading-relaxed text-muted">
+                <p className="mt-1 max-w-3xl text-body-copy leading-relaxed text-muted">
                   {openNote}
                 </p>
               ) : null}
@@ -556,7 +556,7 @@ export default function PhysicalSiteFlow({
             <button
               type="button"
               onClick={() => setOpen(null)}
-              className="shrink-0 text-sm font-semibold underline decoration-rule underline-offset-4"
+              className="shrink-0 text-body-copy font-semibold underline decoration-rule underline-offset-4"
             >
               Close list
             </button>
@@ -568,13 +568,13 @@ export default function PhysicalSiteFlow({
                   <span className="block font-serif text-[15.5px] font-semibold leading-tight">
                     {site.name}
                   </span>
-                  <span className="mt-1 block text-xs text-muted">
+                  <span className="mt-1 block text-small-copy text-muted">
                     Worship site in the building ledger
                   </span>
-                  <span className="mt-1 block text-xs text-muted">
+                  <span className="mt-1 block text-small-copy text-muted">
                     First documented {site.firstYear ?? "year not established"}
                   </span>
-                  <span className="mt-1.5 block text-sm font-semibold">
+                  <span className="mt-1.5 block text-body-copy font-semibold">
                     {STATE_LABEL[site.state]}
                   </span>
                 </>

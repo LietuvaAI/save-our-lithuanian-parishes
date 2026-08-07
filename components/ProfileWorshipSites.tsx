@@ -23,7 +23,7 @@ export function ProfileWorshipSites({ sites }: { sites: WorshipSiteRow[] }) {
               {site.range ?? "Undated"}
             </span>
             <div className="min-w-0">
-              <p className="text-sm font-semibold leading-snug [overflow-wrap:anywhere]">
+              <p className="text-body-copy font-semibold leading-snug [overflow-wrap:anywhere]">
                 {site.name}
               </p>
               <p className="mt-1.5 font-mono text-[10.5px] font-medium uppercase tracking-wider text-muted">
@@ -35,7 +35,7 @@ export function ProfileWorshipSites({ sites }: { sites: WorshipSiteRow[] }) {
                   {site.milestones.map((milestone) => (
                     <li
                       key={milestone.id}
-                      className="grid gap-x-3 text-xs leading-relaxed sm:grid-cols-[88px_minmax(0,1fr)]"
+                      className="grid gap-x-3 text-small-copy leading-relaxed sm:grid-cols-[88px_minmax(0,1fr)]"
                     >
                       <time className="font-mono text-[10.5px] font-medium tabular-nums text-muted">
                         {milestone.date}

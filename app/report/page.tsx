@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ReportPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
-      <h1 className="font-serif text-3xl font-semibold">
+      <h1 className="font-serif text-page-title font-semibold">
         What is happening at your parish?
       </h1>
       <div className="mt-4 max-w-2xl space-y-4 leading-relaxed">
@@ -42,7 +42,7 @@ export default function ReportPage() {
         </p>
         <div className="rounded-lg border border-rule p-5">
           <p className="font-medium">The submission form is coming soon.</p>
-          <p className="mt-1 text-sm text-muted">
+          <p className="mt-1 text-body-copy text-muted">
             We are building a proper intake with review before publication.
             Until it is live, follow the project on GitHub —{" "}
             <a

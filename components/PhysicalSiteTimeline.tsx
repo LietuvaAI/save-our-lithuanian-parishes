@@ -71,11 +71,11 @@ export default function PhysicalSiteTimeline({
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           placeholder="Find a church or worship site…"
-          className="w-72 rounded-md border border-rule bg-background px-2 py-1.5 text-sm"
+          className="w-72 rounded-md border border-rule bg-background px-2 py-1.5 text-body-copy"
           aria-label="Find a church or worship site"
         />
         {query.trim() ? (
-          <span className="text-xs text-muted">
+          <span className="text-small-copy text-muted">
             {visibleSites.length} of {sites.length} sites
           </span>
         ) : null}
@@ -97,7 +97,7 @@ export default function PhysicalSiteTimeline({
           const width = Math.max(0.7, end - start);
           const content = (
             <>
-              <span className="min-w-0 truncate text-xs font-medium group-hover:underline">
+              <span className="min-w-0 truncate text-small-copy font-medium group-hover:underline">
                 {site.name}
               </span>
               <span className="relative h-5 bg-band">
@@ -135,7 +135,7 @@ export default function PhysicalSiteTimeline({
       </div>
 
       {visibleSites.length === 0 ? (
-        <p className="border-b border-rule py-6 text-sm text-muted">
+        <p className="border-b border-rule py-6 text-body-copy text-muted">
           No worship site matches that search.
         </p>
       ) : null}
@@ -145,10 +145,10 @@ export default function PhysicalSiteTimeline({
           className="mt-4 border-y border-rule py-3"
           open={query.trim() ? true : undefined}
         >
-          <summary className="cursor-pointer text-sm font-medium">
+          <summary className="cursor-pointer text-body-copy font-medium">
             {undated.length} worship sites without a documented building date
           </summary>
-          <div className="mt-3 columns-1 gap-6 text-xs sm:columns-2">
+          <div className="mt-3 columns-1 gap-6 text-small-copy sm:columns-2">
             {undated.map((site) => (
               <p key={site.slug} className="mb-2 break-inside-avoid">
                 {site.profileHref ? (
@@ -164,7 +164,7 @@ export default function PhysicalSiteTimeline({
         </details>
       ) : null}
 
-      <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 border-y border-rule py-3 text-xs">
+      <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 border-y border-rule py-3 text-small-copy">
         {Object.entries(LABEL).map(([state, label]) => (
           <span key={state} className="inline-flex items-center gap-2">
             <span

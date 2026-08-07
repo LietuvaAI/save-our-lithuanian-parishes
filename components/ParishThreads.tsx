@@ -561,12 +561,12 @@ export default function ParishThreads({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Find a parish by name or city…"
-          className="w-64 rounded-md border border-rule bg-background px-2 py-1.5 text-sm"
+          className="w-64 rounded-md border border-rule bg-background px-2 py-1.5 text-body-copy"
           aria-label="Find a parish by name or city"
         />
       </div>
       {matches.length > 0 && (
-        <ul className="mb-3 flex flex-wrap gap-2 text-sm">
+        <ul className="mb-3 flex flex-wrap gap-2 text-body-copy">
           {matches.map((m) => (
             <li key={m.slug}>
               {m.href ? (
@@ -588,7 +588,7 @@ export default function ParishThreads({
 
       {/* A stable readout makes dense line hover usable without moving layout. */}
       <div
-        className="mb-3 flex min-h-10 items-center border-y border-rule px-3 py-2 text-sm"
+        className="mb-3 flex min-h-10 items-center border-y border-rule px-3 py-2 text-body-copy"
         aria-live="polite"
       >
         {hovered ? (
@@ -868,26 +868,26 @@ export default function ParishThreads({
         {open ? (
           <section className="mt-5 border-y border-rule py-4">
             <div className="flex items-baseline justify-between gap-4">
-              <h3 className="font-serif text-lg font-semibold">
+              <h3 className="font-serif text-subsection-title font-semibold">
                 {openLabel}
-                <span className="ml-2 font-sans text-sm font-normal text-muted">
+                <span className="ml-2 font-sans text-body-copy font-normal text-muted">
                   {openMembers.length} of {model.total}
                 </span>
               </h3>
               <button
                 type="button"
                 onClick={() => setOpen(null)}
-                className="text-sm font-medium underline underline-offset-2 hover:text-accent"
+                className="text-body-copy font-medium underline underline-offset-2 hover:text-accent"
               >
                 Close
               </button>
             </div>
             {openNote ? (
-              <p className="mt-2 max-w-4xl text-sm leading-relaxed text-muted">
+              <p className="mt-2 max-w-4xl text-body-copy leading-relaxed text-muted">
                 {openNote}
               </p>
             ) : null}
-            <ul className="mt-3 grid gap-x-6 gap-y-3 text-sm sm:grid-cols-2 lg:grid-cols-3">
+            <ul className="mt-3 grid gap-x-6 gap-y-3 text-body-copy sm:grid-cols-2 lg:grid-cols-3">
               {openMembers.map((m) => (
                 <li key={m.slug} className="border-t border-rule/60 pt-2">
                   {m.href ? (
@@ -900,22 +900,22 @@ export default function ParishThreads({
                   ) : (
                     <span className="font-medium">{m.name}</span>
                   )}
-                  <span className="block text-xs text-muted">
+                  <span className="block text-small-copy text-muted">
                     {institutionType(m.recordType)} · {m.city}, {m.state}
                     {m.jurisdiction ? ` · ${m.jurisdiction}` : ""}
                   </span>
-                  <span className="block text-xs">
+                  <span className="block text-small-copy">
                     {m.anchorLabel}{" "}
                     {m.anchorDisplay ?? "year not yet established"}
                     {m.endedDisplay ? ` · ended ${m.endedDisplay}` : ""}
                   </span>
                   {m.continuation ? (
-                    <span className="mt-1 block text-xs leading-relaxed text-muted">
+                    <span className="mt-1 block text-small-copy leading-relaxed text-muted">
                       {m.continuation.summary}
                     </span>
                   ) : null}
                   {m.continuation?.futurePlan ? (
-                    <span className="mt-1 block text-xs leading-relaxed text-muted">
+                    <span className="mt-1 block text-small-copy leading-relaxed text-muted">
                       <strong className="font-semibold text-foreground">
                         Planned, not yet effective:
                       </strong>{" "}
@@ -928,13 +928,13 @@ export default function ParishThreads({
             {open === "g:mass_continues" &&
             additionalHostedCommunities.length > 0 ? (
               <div className="mt-5 border-t border-rule pt-4">
-                <h4 className="font-serif text-base font-semibold">
+                <h4 className="font-serif text-card-title font-semibold">
                   Additional current hosted community
-                  <span className="ml-2 font-sans text-sm font-normal text-muted">
+                  <span className="ml-2 font-sans text-body-copy font-normal text-muted">
                     · {additionalHostedCommunities.length}
                   </span>
                 </h4>
-                <p className="mt-1 max-w-4xl text-sm leading-relaxed text-muted">
+                <p className="mt-1 max-w-4xl text-body-copy leading-relaxed text-muted">
                   Lithuanian worship continues in six hosted communities within
                   a merged or host parish, diocesan church, or mission community
                   rather than an active Lithuanian-led parish. Five correspond to
@@ -943,7 +943,7 @@ export default function ParishThreads({
                   of those historical institutions, so the historical band holds
                   five while the current hosted-Mass list holds all six.
                 </p>
-                <ul className="mt-3 grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-3">
+                <ul className="mt-3 grid gap-3 text-body-copy sm:grid-cols-2 lg:grid-cols-3">
                   {additionalHostedCommunities.map((community) => (
                     <li
                       key={community.id}
@@ -961,11 +961,11 @@ export default function ParishThreads({
                       ) : (
                         <span className="font-medium">{community.name}</span>
                       )}
-                      <span className="mt-1 block text-xs text-muted">
+                      <span className="mt-1 block text-small-copy text-muted">
                         {community.city}, {community.state} ·{" "}
                         {community.ministry}
                       </span>
-                      <span className="mt-2 block text-xs font-semibold">
+                      <span className="mt-2 block text-small-copy font-semibold">
                         Current hosted community — not one of the {model.total} historical
                         institutions
                       </span>

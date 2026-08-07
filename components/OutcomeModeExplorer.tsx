@@ -103,7 +103,7 @@ export default function OutcomeModeExplorer({
       </section>
 
       <div className="mt-5 flex flex-wrap items-end justify-between gap-3">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           {institutions ? "Institution by institution" : "Building by building"}
         </h2>
         <div

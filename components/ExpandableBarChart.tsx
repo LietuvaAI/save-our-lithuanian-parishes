@@ -46,13 +46,13 @@ export default function ExpandableBarChart({
                 onClick={() => setExpanded(isExpanded ? null : item.key)}
                 className="w-full flex items-baseline gap-3 text-left group cursor-pointer"
               >
-                <dd className="font-serif text-2xl font-semibold w-10 text-right shrink-0">
+                <dd className="font-serif text-section-title font-semibold w-10 text-right shrink-0">
                   {item.count}
                 </dd>
                 <div className="flex-1">
                   <dt className="font-medium group-hover:underline">
                     {item.label}
-                    <span className="ml-1.5 text-xs text-muted font-normal">
+                    <span className="ml-1.5 text-small-copy text-muted font-normal">
                       {isExpanded ? "▴" : "▾"}
                     </span>
                   </dt>
@@ -92,16 +92,16 @@ export default function ExpandableBarChart({
                             <span className="font-medium group-hover/item:underline">
                               {p.name}
                             </span>
-                            <span className="text-sm text-muted">
+                            <span className="text-body-copy text-muted">
                               {p.city}, {p.state}
                             </span>
                           </div>
-                          <p className="mt-1 text-sm text-muted leading-relaxed">
+                          <p className="mt-1 text-body-copy text-muted leading-relaxed">
                             {p.situation}
                           </p>
                           {p.currentUse &&
                             p.currentUse !== "Unknown" && (
-                              <p className="mt-0.5 text-xs text-muted">
+                              <p className="mt-0.5 text-small-copy text-muted">
                                 Now: {p.currentUse}
                               </p>
                             )}

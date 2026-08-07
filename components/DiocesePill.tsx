@@ -36,7 +36,7 @@ export function DiocesanLeaderLink({ diocese }: { diocese: string }) {
       href={leader.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex max-w-full items-baseline gap-1 text-xs text-muted underline decoration-rule underline-offset-2 hover:text-foreground"
+      className="inline-flex max-w-full items-baseline gap-1 text-small-copy text-muted underline decoration-rule underline-offset-2 hover:text-foreground"
       title={`Open the official ${leader.role.toLowerCase()} page`}
     >
       <span>

@@ -132,29 +132,29 @@ function CongCard({ c }: { c: Rec }) {
       <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
         <Link
           href={profileHref}
-          className="font-serif text-base font-semibold hover:underline"
+          className="font-serif text-card-title font-semibold hover:underline"
         >
           {name}
         </Link>
         <div className="flex items-center gap-2">
           <EndStatePill value={status} />
-          <span className="text-sm text-muted">
+          <span className="text-body-copy text-muted">
             {city}, {c.state}
           </span>
         </div>
       </div>
 
       {nameVariants.length > 0 && (
-        <p className="mt-1 text-xs text-muted">
+        <p className="mt-1 text-small-copy text-muted">
           Also: {nameVariants.join(" · ")}
         </p>
       )}
 
       {locationNote && (
-        <p className="mt-0.5 text-xs text-muted italic">{locationNote}</p>
+        <p className="mt-0.5 text-small-copy text-muted italic">{locationNote}</p>
       )}
 
-      <p className="mt-2 text-xs text-muted">
+      <p className="mt-2 text-small-copy text-muted">
         Sources:{" "}
         {axes.map((a, i) => (
           <span key={a}>
@@ -165,7 +165,7 @@ function CongCard({ c }: { c: Rec }) {
       </p>
 
       {tl?.sourceUrl && (
-        <p className="mt-1 text-xs">
+        <p className="mt-1 text-small-copy">
           <a
             href={tl.sourceUrl}
             target="_blank"
@@ -177,7 +177,7 @@ function CongCard({ c }: { c: Rec }) {
         </p>
       )}
 
-      <p className="mt-2 text-xs">
+      <p className="mt-2 text-small-copy">
         <Link
           href={profileHref}
           className="underline hover:text-foreground"
@@ -192,13 +192,13 @@ function CongCard({ c }: { c: Rec }) {
 export default function ProtestantPage() {
   return (
     <article className="mx-auto max-w-5xl px-4 py-12">
-      <p className="text-xs uppercase text-muted">
+      <p className="text-small-copy uppercase text-muted">
         Tradition view
       </p>
-      <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
+      <h1 className="mt-1 font-serif text-page-title font-semibold leading-tight">
         Lithuanian Protestant and independent congregations
       </h1>
-      <p className="mt-4 max-w-3xl font-serif text-xl leading-relaxed sm:text-2xl">
+      <p className="mt-4 max-w-3xl font-serif text-section-title leading-relaxed sm:text-section-title">
         Where did Lithuanian Protestant congregations take root, and what
         remains alive?
       </p>
@@ -227,10 +227,10 @@ export default function ProtestantPage() {
             ]}
           />
           <div>
-            <p className="font-serif text-6xl font-semibold leading-none">
+            <p className="font-serif text-page-title font-semibold leading-none">
               {activeCongregations.length}
             </p>
-            <h2 className="mt-3 font-serif text-2xl font-semibold leading-tight">
+            <h2 className="mt-3 font-serif text-section-title font-semibold leading-tight">
               Lithuanian Protestant {activeCongregations.length === 1
                 ? "parish remains"
                 : "parishes remain"}{" "}
@@ -242,7 +242,7 @@ export default function ProtestantPage() {
             </p>
           </div>
         </div>
-        <p className="mt-5 border-t border-rule pt-3 text-xs leading-relaxed text-muted">
+        <p className="mt-5 border-t border-rule pt-3 text-small-copy leading-relaxed text-muted">
           Scope: {CONGS.length} public U.S. Protestant parishes and congregations
           {" · "}
           <Link href="/about-the-data" className="underline hover:text-accent">
@@ -251,8 +251,8 @@ export default function ProtestantPage() {
         </p>
       </section>
 
-      <section className="mt-10 max-w-3xl border-l-4 border-rule py-1 pl-4 text-sm leading-relaxed">
-        <h2 className="font-serif text-lg font-semibold">
+      <section className="mt-10 max-w-3xl border-l-4 border-rule py-1 pl-4 text-body-copy leading-relaxed">
+        <h2 className="font-serif text-subsection-title font-semibold">
           Lithuanian Lutheranism in America
         </h2>
         <p className="mt-2 text-muted">
@@ -264,7 +264,7 @@ export default function ProtestantPage() {
       </section>
 
       <section className="mt-12 max-w-3xl">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           Active Lithuanian parish · {activeCongregations.length}
         </h2>
         <div className="mt-4 space-y-4">
@@ -275,10 +275,10 @@ export default function ProtestantPage() {
       </section>
 
       <section className="mt-10 max-w-3xl">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           Lives on, another community · {transferredCongregations.length}
         </h2>
-        <p className="mt-1 text-sm text-muted">
+        <p className="mt-1 text-body-copy text-muted">
           The institution continues, but current Lithuanian identity or worship
           does not.
         </p>
@@ -290,10 +290,10 @@ export default function ProtestantPage() {
       </section>
 
       <section className="mt-10 max-w-3xl">
-        <h2 className="font-serif text-2xl font-semibold">
+        <h2 className="font-serif text-section-title font-semibold">
           Being verified · {unverifiedCongregations.length}
         </h2>
-        <p className="mt-1 text-sm text-muted">
+        <p className="mt-1 text-body-copy text-muted">
           These congregations are documented in historical sources, but their
           current operating status has not yet been confirmed. They are not
           classified as closed unless a source records a closure.

@@ -148,7 +148,7 @@ export default function ParishOutcomeFlowPage() {
         }
       />
 
-      <p className="mt-8 border-t border-rule pt-4 text-xs leading-relaxed text-muted">
+      <p className="mt-8 border-t border-rule pt-4 text-small-copy leading-relaxed text-muted">
         Every line and figure derives from the canonical CultureNet projection.
         Institution lines begin at the institution&rsquo;s own founding year;
         building rows begin with the first documented use of the physical site.

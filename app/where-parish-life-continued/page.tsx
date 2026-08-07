@@ -53,11 +53,11 @@ export default function ParishContinuityPage() {
 
   return (
     <article className="mx-auto max-w-5xl px-4 py-8">
-      <p className="text-xs uppercase text-muted">Continuity view</p>
-      <h1 className="mt-1 max-w-3xl font-serif text-3xl font-semibold leading-tight sm:text-4xl">
+      <p className="text-small-copy uppercase text-muted">Continuity view</p>
+      <h1 className="mt-1 max-w-3xl font-serif text-page-title font-semibold leading-tight">
         Where parish life continued
       </h1>
-      <p className="mt-2 max-w-3xl text-lg leading-relaxed">
+      <p className="mt-2 max-w-3xl text-subsection-title leading-relaxed">
         When one Lithuanian parish ended, where did its canonical life,
         congregation, records, or institutional identity continue?
       </p>
@@ -68,7 +68,7 @@ export default function ParishContinuityPage() {
           relationships. Each link connects institutions without treating a
           predecessor and successor as the same parish.
         </p>
-        <p className="mt-2 max-w-3xl text-xs leading-relaxed text-muted">
+        <p className="mt-2 max-w-3xl text-small-copy leading-relaxed text-muted">
           These relationships do not add to or subtract from the{" "}
           <Link href="/parishes" className="underline hover:text-foreground">
             public institution count
@@ -87,13 +87,13 @@ export default function ParishContinuityPage() {
           {edges.map((edge) => (
             <div
               key={edge.id}
-              className="grid gap-1 py-3 text-sm sm:grid-cols-[minmax(0,1fr)_11rem_minmax(0,1fr)] sm:items-center sm:gap-4"
+              className="grid gap-1 py-3 text-body-copy sm:grid-cols-[minmax(0,1fr)_11rem_minmax(0,1fr)] sm:items-center sm:gap-4"
             >
               <EntityName
                 entityId={edge.source.entity_id}
                 fallback={edge.source.display_name}
               />
-              <span className="text-xs text-muted">
+              <span className="text-small-copy text-muted">
                 {RELATIONSHIP_LABEL[edge.relationship_type] ??
                   edge.relationship_type}
               </span>

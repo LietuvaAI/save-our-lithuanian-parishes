@@ -33,7 +33,7 @@ export default function GuidanceNav({
             key={item.id}
             href={item.href}
             aria-current={active ? "page" : undefined}
-            className={`border-b-2 pb-2 text-sm font-medium transition-colors ${
+            className={`border-b-2 pb-2 text-body-copy font-medium transition-colors ${
               active
                 ? "border-foreground text-foreground"
                 : "border-transparent text-muted hover:text-foreground"

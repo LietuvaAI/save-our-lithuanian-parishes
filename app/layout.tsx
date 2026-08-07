@@ -120,10 +120,10 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <header>
           <div className="mx-auto max-w-5xl px-4 py-3 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
-            <Link href="/" className="font-serif text-lg font-semibold tracking-tight">
+            <Link href="/" className="font-serif text-subsection-title font-semibold tracking-tight">
               Save Our Lithuanian Parishes
             </Link>
-            <nav className="flex w-full flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted sm:w-auto sm:justify-end">
+            <nav className="flex w-full flex-wrap items-center gap-x-5 gap-y-2 text-body-copy text-muted sm:w-auto sm:justify-end">
               {NAV.map((item) =>
                 "children" in item ? (
                   <div key={item.label} className="relative group">
@@ -185,7 +185,7 @@ export default function RootLayout({
         </header>
         <main className="flex-1">{children}</main>
         <footer className="mt-10 border-t border-rule">
-          <div className="mx-auto max-w-5xl px-4 py-5 text-sm text-muted">
+          <div className="mx-auto max-w-5xl px-4 py-5 text-body-copy text-muted">
             <nav
               aria-label="Footer"
               className="flex flex-wrap gap-x-4 gap-y-2"
@@ -239,7 +239,7 @@ export default function RootLayout({
               in Southfield.
             </p>
 
-            <div className="mt-3 flex flex-col gap-2 text-xs sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+            <div className="mt-3 flex flex-col gap-2 text-small-copy sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
               <p>
                 © 2026 Save Our Lithuanian Parishes · Powered by{" "}
                 <a

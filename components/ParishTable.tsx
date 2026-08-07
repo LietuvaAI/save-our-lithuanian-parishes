@@ -39,12 +39,12 @@ export default function ParishTable({ parishes }: { parishes: Parish[] }) {
   }, [parishes, query, ownership, endingMode, state]);
 
   const selectClass =
-    "rounded-md border border-rule bg-background px-2 py-1.5 text-sm";
+    "rounded-md border border-rule bg-background px-2 py-1.5 text-body-copy";
 
   return (
     <div>
       <div className="flex flex-wrap gap-3 items-end mb-4">
-        <label className="flex flex-col gap-1 text-xs text-muted">
+        <label className="flex flex-col gap-1 text-small-copy text-muted">
           Search
           <input
             type="search"
@@ -54,7 +54,7 @@ export default function ParishTable({ parishes }: { parishes: Parish[] }) {
             className={`${selectClass} w-44`}
           />
         </label>
-        <label className="flex flex-col gap-1 text-xs text-muted">
+        <label className="flex flex-col gap-1 text-small-copy text-muted">
           Ownership
           <select
             value={ownership}
@@ -67,7 +67,7 @@ export default function ParishTable({ parishes }: { parishes: Parish[] }) {
             <option value="other_self_owned">Lutheran, self-owned</option>
           </select>
         </label>
-        <label className="flex flex-col gap-1 text-xs text-muted">
+        <label className="flex flex-col gap-1 text-small-copy text-muted">
           Outcome
           <select
             value={endingMode}
@@ -81,7 +81,7 @@ export default function ParishTable({ parishes }: { parishes: Parish[] }) {
             <option value="undecided">Unresolved</option>
           </select>
         </label>
-        <label className="flex flex-col gap-1 text-xs text-muted">
+        <label className="flex flex-col gap-1 text-small-copy text-muted">
           State
           <select
             value={state}
@@ -96,15 +96,15 @@ export default function ParishTable({ parishes }: { parishes: Parish[] }) {
             ))}
           </select>
         </label>
-        <span className="text-sm text-muted pb-1.5">
+        <span className="text-body-copy text-muted pb-1.5">
           {filtered.length} of {parishes.length} parishes
         </span>
       </div>
 
       <div className="overflow-x-auto border border-rule rounded-lg">
-        <table className="w-full text-sm">
+        <table className="w-full text-body-copy">
           <thead>
-            <tr className="text-left text-xs uppercase tracking-wide text-muted border-b border-rule">
+            <tr className="text-left text-small-copy uppercase tracking-wide text-muted border-b border-rule">
               <th className="px-3 py-2 font-medium">Parish</th>
               <th className="px-3 py-2 font-medium">City</th>
               <th className="px-3 py-2 font-medium">St.</th>
@@ -135,14 +135,14 @@ export default function ParishTable({ parishes }: { parishes: Parish[] }) {
                     {ENDING_MODE_LABEL[p.endingMode]}
                   </span>
                   {p.endingMode === "diocese_closed" && p.status !== "closed" && (
-                    <span className="block text-xs text-muted mt-0.5">
+                    <span className="block text-small-copy text-muted mt-0.5">
                       {STATUS_LABEL[p.status]}
                     </span>
                   )}
                 </td>
                 <td className="px-3 py-2">{p.yearFounded ?? "—"}</td>
                 <td className="px-3 py-2">{p.yearClosed ?? "—"}</td>
-                <td className="px-3 py-2 text-xs text-muted max-w-56">
+                <td className="px-3 py-2 text-small-copy text-muted max-w-56">
                   {p.citations.map((c) => c.date).join(" · ")}
                 </td>
               </tr>

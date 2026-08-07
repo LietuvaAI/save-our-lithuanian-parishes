@@ -601,7 +601,7 @@ export default function ParishMap() {
   }
 
   const markR = 6 / Math.sqrt(zoom);
-  const btn = "rounded-md border border-rule bg-background px-2.5 py-1 text-sm font-medium hover:border-foreground transition-colors";
+  const btn = "rounded-md border border-rule bg-background px-2.5 py-1 text-body-copy font-medium hover:border-foreground transition-colors";
 
   const statusFiltered = classPoints.filter((point) => {
     const status = statusFilterForPoint(point);
@@ -641,7 +641,7 @@ export default function ParishMap() {
             <button
               key={key}
               type="button"
-              className={`rounded-md px-2.5 py-1 text-xs font-medium transition-colors ${
+              className={`rounded-md px-2.5 py-1 text-small-copy font-medium transition-colors ${
                 lostFate === key
                   ? "bg-foreground text-background"
                   : "border border-rule hover:border-foreground"
@@ -652,7 +652,7 @@ export default function ParishMap() {
             </button>
           );
           return (
-            <div className="flex flex-wrap items-center gap-1.5 border-b border-rule px-3 py-2 text-xs sm:px-4">
+            <div className="flex flex-wrap items-center gap-1.5 border-b border-rule px-3 py-2 text-small-copy sm:px-4">
               <span className="text-muted uppercase tracking-wide">How each closure ended:</span>
               {sub("all", `All · ${lostPts.length}`)}
               {sub("demolished", `Church demolished × · ${n("demolished")}`)}
@@ -803,7 +803,7 @@ export default function ParishMap() {
             const opensRight = lx < 50;
             return (
               <div
-                className="map-hover-card pointer-events-none absolute z-10 rounded-lg border border-rule bg-background/95 px-3.5 py-2.5 text-sm shadow-lg sm:w-72"
+                className="map-hover-card pointer-events-none absolute z-10 rounded-lg border border-rule bg-background/95 px-3.5 py-2.5 text-body-copy shadow-lg sm:w-72"
                 style={{
                   "--map-hover-x": `${lx}%`,
                   "--map-hover-y": `${Math.min(Math.max(ly, 25), 75)}%`,
@@ -833,24 +833,24 @@ export default function ParishMap() {
                     {hovered.fate === "not_established" &&
                       " — terminal-site condition not established"}
                   </span>
-                  {hovered.alerted && <span className="text-muted text-xs">— active campaign</span>}
+                  {hovered.alerted && <span className="text-muted text-small-copy">— active campaign</span>}
                   <span className="text-muted">
                     {hovered.founded ? ` · founded ${hovered.founded}` : ""}
                     {hovered.closed ? `, lost ${hovered.closed}` : ""}
                   </span>
                 </div>
                 {hovered.alertText && (
-                  <p className="mt-1.5 text-xs leading-relaxed text-muted border-t border-rule pt-1.5">
+                  <p className="mt-1.5 text-small-copy leading-relaxed text-muted border-t border-rule pt-1.5">
                     {hovered.alertText}
                   </p>
                 )}
                 {hovered.detail && (
-                  <div className="text-muted text-xs mt-0.5">{hovered.detail}</div>
+                  <div className="text-muted text-small-copy mt-0.5">{hovered.detail}</div>
                 )}
                 {hovered.kindLabel && (
-                  <div className="text-muted text-xs mt-0.5">{hovered.kindLabel}</div>
+                  <div className="text-muted text-small-copy mt-0.5">{hovered.kindLabel}</div>
                 )}
-                <div className="text-muted text-xs mt-0.5">
+                <div className="text-muted text-small-copy mt-0.5">
                   {hovered.deep
                     ? "Detailed profile and sources available"
                     : "Basic profile — evidence remains limited"}
@@ -877,7 +877,7 @@ export default function ParishMap() {
             </div>
 
             <div
-              className="mt-2.5 text-xs"
+              className="mt-2.5 text-small-copy"
               role="group"
               aria-label="Filter by community"
             >
@@ -971,7 +971,7 @@ export default function ParishMap() {
             </div>
 
             <div
-              className="mt-2.5 border-t border-rule pt-2.5 text-xs"
+              className="mt-2.5 border-t border-rule pt-2.5 text-small-copy"
               role="group"
               aria-label="Filter by status"
             >
@@ -1094,7 +1094,7 @@ export default function ParishMap() {
                       </button>
                       <button
                         type="button"
-                        className="absolute right-1 top-1/2 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded text-sm leading-none text-muted hover:bg-background hover:text-foreground"
+                        className="absolute right-1 top-1/2 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded text-body-copy leading-none text-muted hover:bg-background hover:text-foreground"
                         aria-expanded={expanded}
                         aria-controls={detailId}
                         aria-label={`${expanded ? "Hide" : "Explain"} ${label}`}
@@ -1116,7 +1116,7 @@ export default function ParishMap() {
               </div>
             </div>
 
-            <div className="mt-2.5 border-t border-rule pt-2.5 text-xs">
+            <div className="mt-2.5 border-t border-rule pt-2.5 text-small-copy">
               <div className="flex items-center justify-between gap-2">
                 <p className="text-[10px] font-semibold uppercase tracking-wide text-muted">
                   Other marks
@@ -1156,7 +1156,7 @@ export default function ParishMap() {
         </div>
       </div>
 
-      <p className="mt-2 text-xs leading-relaxed text-muted">
+      <p className="mt-2 text-small-copy leading-relaxed text-muted">
         Shown: {selectedScope}. Religious-house, cemetery, shrine, club, and
         school chapels remain outside the institutional count.{" "}
         <a href="/about-the-data" className="underline hover:text-foreground">
@@ -1165,7 +1165,7 @@ export default function ParishMap() {
       </p>
 
       {/* Caption */}
-      <div className="mt-2 min-h-9 border-t border-rule pt-2.5 text-sm">
+      <div className="mt-2 min-h-9 border-t border-rule pt-2.5 text-body-copy">
         {selectedStatuses.size === 1 &&
         selectedStatuses.has("unresolved") ? (
           <span className="text-muted">
