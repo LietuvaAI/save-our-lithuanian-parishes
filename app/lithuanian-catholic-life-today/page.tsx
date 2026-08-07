@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import alertsData from "@/data/canonical-current-events-projection.json";
 import contextPointsData from "@/data/context-points.json";
@@ -12,6 +13,7 @@ import RecordLensMap, {
 } from "@/components/RecordLensMap";
 import CurrentLifeFactSheet from "@/components/CurrentLifeFactSheet";
 import { canonicalProfileHrefForRegistrySlug } from "@/lib/parish-profile";
+import { getClearedPhoto } from "@/lib/photos";
 import type { EndState, EndStateGroup } from "@/lib/end-state";
 import {
   isHollowRecordMark,
@@ -197,12 +199,42 @@ if (
 
 function NetworkEntryRow({ entry }: { entry: NetworkEntry }) {
   const profileHref = profileHrefForEntry(entry);
+  const isActiveInstitution =
+    entry.networkClass === "active_parish" ||
+    entry.networkClass === "active_mission";
+  const profileSlug = profileHref?.replace(/^\/parishes\//, "") ?? null;
+  const portrait =
+    isActiveInstitution && profileSlug
+      ? getClearedPhoto(`${profileSlug}-line-drawing`)
+      : null;
+  if (isActiveInstitution && !portrait) {
+    throw new Error(`Missing active-network line drawing for ${entry.id}`);
+  }
   const sustainability = profileHref
     ? sustainabilityByHref.get(profileHref)
     : null;
 
   return (
-    <article className="border-t border-rule py-3">
+    <article
+      className={`border-t border-rule py-3 ${portrait ? "grid grid-cols-[4.75rem_minmax(0,1fr)] gap-3" : ""}`}
+    >
+      {portrait && profileHref ? (
+        <Link
+          href={profileHref}
+          aria-label={`Open the parish profile for ${entry.nameLt}`}
+          className="relative block aspect-square self-start overflow-hidden border border-rule bg-white p-1.5 hover:border-accent"
+          title={portrait.attribution}
+        >
+          <Image
+            src={portrait.src}
+            alt=""
+            fill
+            sizes="76px"
+            className="object-contain mix-blend-multiply"
+          />
+        </Link>
+      ) : null}
+      <div className="min-w-0">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
           <h3 className="font-serif font-semibold leading-snug">
@@ -282,6 +314,7 @@ function NetworkEntryRow({ entry }: { entry: NetworkEntry }) {
             Checked {sustainability.dateObserved}
           </span>
         ) : null}
+      </div>
       </div>
     </article>
   );
