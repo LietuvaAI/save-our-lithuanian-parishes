@@ -78,7 +78,7 @@ Share the research on Divine Providence, including the [1968 national parish let
 
 [Draugas article, “Kam priklauso parapijos?”](https://www.draugas.org/kam-priklauso-parapijos/)
 
-Campaign / advocacy links: [Divine Providence Facebook page](https://www.facebook.com/DivineProvidenceLithuanianCatholicChurch/) and the Archdiocese’s [Planning Area 8 page](https://restructuring.aod.org/planning-area-8). The flagship dispatch: [Further Down the Path](https://blog.saveourlithuanianparishes.org/p/further-down-the-path-what-divine).
+Campaign / advocacy links: [Divine Providence Facebook page](https://www.facebook.com/DivineProvidenceLithuanianCatholicChurch/) and the Archdiocese’s [Planning Area 8 page](https://restructuring.aod.org/planning-area-8). The parish’s case, in the archdiocese’s own published numbers: [The Numbers Behind Divine Providence](https://blog.saveourlithuanianparishes.org/p/the-numbers-behind-divine-providence).
 
 ## Holy Trinity Church - Hartford, Connecticut
 
