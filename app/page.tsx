@@ -184,7 +184,7 @@ const STAT_CARDS = [
     value: PHYSICAL_WORSHIP_SITES,
     label: "church buildings",
     detail: "Physical worship sites",
-    href: "/church-buildings-through-time",
+    href: "/where-every-parish-ended-up?view=buildings",
   },
   {
     value: CURRENT_WORSHIP_COUNT,

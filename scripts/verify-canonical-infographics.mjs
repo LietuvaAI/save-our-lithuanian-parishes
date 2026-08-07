@@ -624,8 +624,13 @@ const physicalSiteAdapter = readFileSync(
   new URL("../lib/physical-site-outcome-projection.ts", import.meta.url),
   "utf8",
 );
-if (!/physicalSiteOutcomeProjection/.test(physicalSitePage)) {
-  errors.push("physical-site view does not use the canonical building-view adapter");
+if (
+  !/permanentRedirect/.test(physicalSitePage) ||
+  !/where-every-parish-ended-up\?view=buildings/.test(physicalSitePage)
+) {
+  errors.push(
+    "retired standalone building route does not redirect to Outcomes Buildings mode",
+  );
 }
 if (!/physicalWorshipSiteHistory/.test(physicalSiteAdapter)) {
   errors.push("building-view adapter does not use the canonical worship-site population");
@@ -641,6 +646,25 @@ if (/romanCatholicInstitutionHistory/.test(physicalSiteAdapter)) {
 }
 if (/DIVINE_PROVIDENCE|dievo-apvaizdos-southfield/.test(physicalSiteAdapter)) {
   errors.push("physical-site view contains a Divine Providence one-off");
+}
+
+const aboutDataPage = readFileSync(
+  new URL("../app/about-the-data/page.tsx", import.meta.url),
+  "utf8",
+);
+const primaryNavigation = readFileSync(
+  new URL("../app/layout.tsx", import.meta.url),
+  "utf8",
+);
+for (const [label, source] of [
+  ["primary navigation", primaryNavigation],
+  ["homepage", homepage],
+  ["All Profiles", allProfilesPage],
+  ["About the Data", aboutDataPage],
+]) {
+  if (/church-buildings-through-time/.test(source)) {
+    errors.push(`${label} still links to the retired standalone building route`);
+  }
 }
 
 if (errors.length) {

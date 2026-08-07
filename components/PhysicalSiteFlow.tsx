@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import type {
   PhysicalSiteState,
   PhysicalSiteTimelineRow,
-} from "@/components/PhysicalSiteTimeline";
+} from "@/lib/physical-site-outcome-projection";
 
 const STATE_ORDER: PhysicalSiteState[] = [
   "standing",

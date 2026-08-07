@@ -112,7 +112,7 @@ export default function ParishProfilesPage() {
         Institutions only — the physical churches are counted separately in
         the {" "}
         <Link
-          href="/church-buildings-through-time"
+          href="/where-every-parish-ended-up?view=buildings"
           className="font-medium text-foreground underline underline-offset-4 hover:text-accent"
         >
           building view
