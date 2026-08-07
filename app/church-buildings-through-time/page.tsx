@@ -1,14 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import PhysicalSiteTimeline, {
-  type PhysicalSiteState,
-  type PhysicalSiteTimelineRow,
-} from "@/components/PhysicalSiteTimeline";
-import {
-  infographicCounts,
-  physicalWorshipSiteHistory,
-  resolvePhysicalSiteCondition,
-} from "@/lib/infographic-projection";
+import PhysicalSiteTimeline from "@/components/PhysicalSiteTimeline";
+import { physicalSiteOutcomeProjection } from "@/lib/physical-site-outcome-projection";
 
 export const metadata: Metadata = {
   title: "Lithuanian Church Buildings Through Time",
@@ -16,36 +9,8 @@ export const metadata: Metadata = {
     "A physical-site view of documented Lithuanian Catholic churches and worship places, kept separate from parish-institution history.",
 };
 
-function buildSites(): PhysicalSiteTimelineRow[] {
-  return physicalWorshipSiteHistory.map((site) => {
-    const directProfiles = site.institution_use_periods
-      .map((period) => period.institution_profile)
-      .filter((profile): profile is string => profile != null);
-    const profiles =
-      directProfiles.length > 0 ? directProfiles : site.related_public_profiles;
-    return {
-      slug: site.slug,
-      name: site.name,
-      firstYear: site.first_documented_year,
-      endYear: site.demolished_year,
-      state: resolvePhysicalSiteCondition(site.condition_relationships),
-      profileHref: profiles.at(-1) ?? null,
-    };
-  });
-}
-
 export default function ChurchBuildingHistoryPage() {
-  const sites = buildSites();
-  const stateCounts = Object.fromEntries(
-    sites.reduce((counts, site) => {
-      counts.set(site.state, (counts.get(site.state) ?? 0) + 1);
-      return counts;
-    }, new Map<PhysicalSiteState, number>()),
-  ) as Partial<Record<PhysicalSiteState, number>>;
-
-  if (sites.length !== infographicCounts.physical_worship_sites) {
-    throw new Error("Physical worship-site population drifted.");
-  }
+  const { sites, stateCounts } = physicalSiteOutcomeProjection;
 
   return (
     <article className="mx-auto max-w-6xl px-4 py-8">

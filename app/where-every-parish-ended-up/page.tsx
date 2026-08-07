@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import OutcomeModeExplorer from "@/components/OutcomeModeExplorer";
 import ParishThreads, {
   type FateKey,
   type ThreadParish,
 } from "@/components/ParishThreads";
+import PhysicalSiteTimeline from "@/components/PhysicalSiteTimeline";
 import {
   additionalCurrentHostedCommunities,
   canonicalInfographics,
@@ -14,6 +16,7 @@ import {
   romanCatholicParishHistory,
 } from "@/lib/infographic-projection";
 import { toGroup } from "@/lib/end-state";
+import { physicalSiteOutcomeProjection } from "@/lib/physical-site-outcome-projection";
 
 export const metadata: Metadata = {
   title: "The State of Lithuanian Catholic Parishes in America",
@@ -99,87 +102,57 @@ export default function ParishOutcomeFlowPage() {
   }
 
   return (
-    <article className="mx-auto max-w-6xl px-4 py-8">
-      <p className="text-xs uppercase text-muted">Institution outcome view</p>
-      <h1 className="mt-1 max-w-3xl font-serif text-3xl font-semibold leading-tight sm:text-4xl">
-        The State of Lithuanian Catholic Parishes in America
-      </h1>
-      <p className="mt-2 max-w-2xl font-serif text-xl leading-snug text-muted">
-        What became of {threads.length} parishes and missions&mdash;and where
-        Lithuanian worship continues today
-      </p>
-
-      <section className="mt-5 border-y border-rule py-4">
-        <p className="max-w-3xl text-lg leading-relaxed">
-          Of <strong>{threads.length}</strong> Lithuanian Roman Catholic
-          parishes and missions, <strong>{closed.length}</strong> have closed.
-          Lithuanian worship continues at{" "}
-          <strong>{currentWorshipPlaces}</strong>.
-        </p>
-        <p className="mt-3 max-w-3xl text-sm leading-relaxed">
-          Every line below is one <strong>institution</strong> &mdash; one parish
-          or mission, counted once &mdash; running from the decade it began to
-          where it stands today. This view follows <strong>institutions</strong>,
-          not <strong>buildings</strong>: {romanCatholicParishHistory.length}{" "}
-          U.S. Roman Catholic parishes and{" "}
-          {romanCatholicMissionHistory.length} missions, each listed once. The{" "}
-          {closed.length} that closed gather together, then fan out by what
-          became of the church they last used &mdash; but what happened to an
-          institution and what happened to its building are separate facts,
-          counted separately. Lithuanian National Catholic congregations, other
-          non-Roman Catholic institutions, research-only records and Canadian
-          comparators are outside this population; all{" "}
-          {infographicCounts.public_us_institutions} published U.S. profiles are
-          in the{" "}
-          <Link href="/parishes" className="underline hover:text-accent">
-            full directory
-          </Link>
-          .
-        </p>
-        <p className="mt-2 max-w-3xl text-xs leading-relaxed text-muted">
-          Canonical projection {canonicalInfographics.revision_id}, generated{" "}
-          {generated}.
-        </p>
-        <p className="mt-3 text-sm">
-          <Link
-            href="/church-buildings-through-time"
-            className="font-semibold underline hover:text-accent"
-          >
-            Follow the church buildings separately
-          </Link>
-          <span className="text-muted">
-            {" "}
-            &mdash; a different population, counted as physical sites
-          </span>
-        </p>
-      </section>
-
-      <h2 className="mt-8 font-serif text-2xl font-semibold">
-        Institution by institution
-      </h2>
-
-      <section className="mt-4">
-        <ParishThreads
-          parishes={threads}
-          additionalHostedCommunities={additionalCurrentHostedCommunities.map(
-            (community) => ({
-              id: community.id,
-              name: community.nameLt,
-              city: community.city,
-              state: community.state,
-              ministry: community.ministry,
-              officialSite: community.officialSite ?? undefined,
-            }),
-          )}
-        />
-      </section>
+    <article className="mx-auto max-w-6xl px-4 py-5 sm:py-6">
+      <OutcomeModeExplorer
+        institutionCount={threads.length}
+        parishCount={romanCatholicParishHistory.length}
+        missionCount={romanCatholicMissionHistory.length}
+        closedCount={closed.length}
+        currentWorshipPlaces={currentWorshipPlaces}
+        publicInstitutionCount={infographicCounts.public_us_institutions}
+        physicalSiteCount={physicalSiteOutcomeProjection.sites.length}
+        demolishedSiteCount={
+          physicalSiteOutcomeProjection.stateCounts.demolished ?? 0
+        }
+        repurposedSiteCount={
+          physicalSiteOutcomeProjection.stateCounts.repurposed ?? 0
+        }
+        standingSiteCount={
+          physicalSiteOutcomeProjection.stateCounts.standing ?? 0
+        }
+        listedSiteCount={
+          physicalSiteOutcomeProjection.stateCounts.listed_for_sale ?? 0
+        }
+        unestablishedSiteCount={
+          physicalSiteOutcomeProjection.stateCounts.not_established ?? 0
+        }
+        revision={canonicalInfographics.revision_id}
+        generated={generated}
+        institutionView={
+          <ParishThreads
+            parishes={threads}
+            additionalHostedCommunities={additionalCurrentHostedCommunities.map(
+              (community) => ({
+                id: community.id,
+                name: community.nameLt,
+                city: community.city,
+                state: community.state,
+                ministry: community.ministry,
+                officialSite: community.officialSite ?? undefined,
+              }),
+            )}
+          />
+        }
+        buildingView={
+          <PhysicalSiteTimeline sites={physicalSiteOutcomeProjection.sites} />
+        }
+      />
 
       <p className="mt-8 border-t border-rule pt-4 text-xs leading-relaxed text-muted">
-        Every line and figure derives from the canonical CultureNet projection. A
-        line begins at its institution&rsquo;s own founding year &mdash; never at
-        the dedication of a church it later used; where no founding year is
-        established, the line starts in the undated band. Open any line for the
-        institution profile and its evidence. See{" "}
+        Every line and figure derives from the canonical CultureNet projection.
+        Institution lines begin at the institution&rsquo;s own founding year;
+        building rows begin with the first documented use of the physical site.
+        Open a line or row for the related profile and its evidence. See{" "}
         <Link
           href="/about-the-data"
           className="underline hover:text-foreground"

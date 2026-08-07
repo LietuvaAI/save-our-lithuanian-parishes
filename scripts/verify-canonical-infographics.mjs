@@ -500,6 +500,10 @@ const parishThreadsComponent = readFileSync(
   new URL("../components/ParishThreads.tsx", import.meta.url),
   "utf8",
 );
+const outcomeModeExplorer = readFileSync(
+  new URL("../components/OutcomeModeExplorer.tsx", import.meta.url),
+  "utf8",
+);
 if (
   !institutionFlowPage.includes("additionalCurrentHostedCommunities") ||
   !institutionFlowPage.includes("additionalHostedCommunities=")
@@ -520,7 +524,18 @@ if (!/romanCatholicInstitutionHistory/.test(institutionFlowPage)) {
   errors.push("institution-outcome view does not use the canonical parish-and-mission population");
 }
 if (/physicalWorshipSiteHistory/.test(institutionFlowPage)) {
-  errors.push("institution-outcome view reads the physical-site population");
+  errors.push("institution-outcome view reads raw physical-site relationships");
+}
+if (!/physicalSiteOutcomeProjection/.test(institutionFlowPage)) {
+  errors.push(
+    "institution-outcome view does not consume the canonical building-view adapter",
+  );
+}
+if (
+  !/Parishes &amp; missions/.test(outcomeModeExplorer) ||
+  !/Church buildings/.test(outcomeModeExplorer)
+) {
+  errors.push("institution-outcome view does not expose both approved modes");
 }
 
 const homepage = readFileSync(
@@ -594,19 +609,26 @@ const physicalSitePage = readFileSync(
   new URL("../app/church-buildings-through-time/page.tsx", import.meta.url),
   "utf8",
 );
-if (!/physicalWorshipSiteHistory/.test(physicalSitePage)) {
-  errors.push("physical-site view does not use the canonical worship-site population");
+const physicalSiteAdapter = readFileSync(
+  new URL("../lib/physical-site-outcome-projection.ts", import.meta.url),
+  "utf8",
+);
+if (!/physicalSiteOutcomeProjection/.test(physicalSitePage)) {
+  errors.push("physical-site view does not use the canonical building-view adapter");
 }
-if (!/resolvePhysicalSiteCondition/.test(physicalSitePage)) {
-  errors.push("physical-site view does not use the canonical condition resolver");
+if (!/physicalWorshipSiteHistory/.test(physicalSiteAdapter)) {
+  errors.push("building-view adapter does not use the canonical worship-site population");
 }
-if (/state:\s*[^,\n]*demolished_year/.test(physicalSitePage)) {
+if (!/resolvePhysicalSiteCondition/.test(physicalSiteAdapter)) {
+  errors.push("building-view adapter does not use the canonical condition resolver");
+}
+if (/state:\s*[^,\n]*demolished_year/.test(physicalSiteAdapter)) {
   errors.push("physical-site view resolves condition from demolished_year outside the canonical contract");
 }
-if (/romanCatholicInstitutionHistory/.test(physicalSitePage)) {
+if (/romanCatholicInstitutionHistory/.test(physicalSiteAdapter)) {
   errors.push("physical-site view reads the institution population");
 }
-if (/DIVINE_PROVIDENCE|dievo-apvaizdos-southfield/.test(physicalSitePage)) {
+if (/DIVINE_PROVIDENCE|dievo-apvaizdos-southfield/.test(physicalSiteAdapter)) {
   errors.push("physical-site view contains a Divine Providence one-off");
 }
 
