@@ -1,14 +1,14 @@
 {
   "schema": "culturenet-parish-public-display-manifest.v1",
   "authority": "LietuvaAI/culturenet-brain",
-  "publication_projection_revision": "canonical-public-census-2026-08-03-building-condition-reconciliation",
-  "infographic_projection_revision": "canonical-infographic-units-2026-08-03-building-condition-reconciliation",
+  "publication_projection_revision": "canonical-public-census-2026-08-07-terminal-building-research",
+  "infographic_projection_revision": "canonical-infographic-units-2026-08-07-terminal-building-research",
   "current_events_revision": "parish-current-events-2026-08-06",
   "files": [
     {
       "path": "docs/research/parish-canon/public-display/registry-unified.json",
       "site_path": "data/registry-unified.json",
-      "sha256": "535d2c179099899f2c44f7425fe7d3432da73cfcd843d8c198ef34f66f998d50"
+      "sha256": "26a5ccda29c37dfc3feafeb82bcdbc51218f1a54b8f24fcb6f538015e5a59557"
     },
     {
       "path": "docs/research/parish-canon/public-display/parish-situation.json",

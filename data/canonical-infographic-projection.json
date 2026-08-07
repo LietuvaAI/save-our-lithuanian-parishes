@@ -2,8 +2,8 @@
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
-    "publication_projection_hash": "sha256:7280ab28bb77de9cb7801c41d37b524118a921cf6d0b0a39659b5476aead0a32",
-    "publication_projection_revision": "canonical-public-census-2026-08-03-building-condition-reconciliation",
+    "publication_projection_hash": "sha256:7c2b2308cc538148f2687bd18c60318b92d4b09d625f9cb7c50ee49c43375898",
+    "publication_projection_revision": "canonical-public-census-2026-08-07-terminal-building-research",
     "repository": "LietuvaAI/culturenet-brain"
   },
   "building_site_history": [
@@ -2720,7 +2720,19 @@
       "slug": "ss-peter-paul-first-church-homestead-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "field-research heritage inventory",
+            "end": null,
+            "label": "used by Higher Call church",
+            "start": "2026-08-07"
+          },
+          "relationship_id": "rel:terminal-22:homestead-peter-paul",
+          "relationship_type": "building-repurposed"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:ss-peter-paul-mifflin-church-homestead-pa",
       "demolished_year": null,
@@ -3316,7 +3328,19 @@
       "slug": "st-anthony-49th-court-cicero-il"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "field-research heritage inventory",
+            "end": null,
+            "label": "former church reported standing and vacant",
+            "start": "2026-08-07"
+          },
+          "relationship_id": "rel:terminal-22:kewanee-st-anthony",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-anthony-church-kewanee-il",
       "demolished_year": null,
@@ -3491,10 +3515,22 @@
       "slug": "st-anthony-first-church-philadelphia-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "field-research heritage inventory",
+            "end": "2012",
+            "label": "church demolished in 2012",
+            "start": "2012"
+          },
+          "relationship_id": "rel:terminal-22:bridgeville-st-anthony",
+          "relationship_type": "building-demolished"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-anthony-millers-run-bridgeville-pa",
-      "demolished_year": null,
+      "demolished_year": 2012,
       "first_documented_year": 1915,
       "institution_use_periods": [
         {
@@ -4382,7 +4418,19 @@
       "slug": "st-casimir-montgomery-street-paterson-nj"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "official City of Westfield property notice",
+            "end": null,
+            "label": "standing at the official municipal on-site sale inspection",
+            "start": "2025-09-17"
+          },
+          "relationship_id": "rel:terminal-22:westfield-st-casimir",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-casimir-parkside-westfield-ma",
       "demolished_year": null,
@@ -5217,7 +5265,19 @@
       "slug": "st-francis-minersville-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "field-research heritage inventory",
+            "end": null,
+            "label": "former church reported standing empty",
+            "start": "2026-08-07"
+          },
+          "relationship_id": "rel:terminal-22:utica-st-george",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-george-1967-church-utica-ny",
       "demolished_year": null,
@@ -6298,7 +6358,19 @@
       "slug": "st-george-york-street-brooklyn-ny"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "field-research heritage inventory",
+            "end": null,
+            "label": "used by First Church of God in Christ",
+            "start": "2026-08-07"
+          },
+          "relationship_id": "rel:terminal-22:braddock-st-isidore",
+          "relationship_type": "building-repurposed"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-isidore-talbot-street-braddock-pa",
       "demolished_year": null,
@@ -7086,7 +7158,19 @@
       "slug": "st-lucy-church-scranton-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "high",
+          "date": {
+            "certainty": "official Diocese of Pittsburgh parish history",
+            "end": null,
+            "label": "standing and retained by the successor parish",
+            "start": "2026-08-07"
+          },
+          "relationship_id": "rel:terminal-22:bentleyville-st-luke",
+          "relationship_type": "building-standing"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-luke-1909-church-bentleyville-pa",
       "demolished_year": null,
@@ -7352,10 +7436,22 @@
       "slug": "st-mary-national-vacant-lot-reed-philadelphia-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "field-research heritage inventory",
+            "end": "2015",
+            "label": "church demolished in 2015; basement remains",
+            "start": "2015"
+          },
+          "relationship_id": "rel:terminal-22:shamokin-st-michael",
+          "relationship_type": "building-demolished"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-michael-church-shamokin-pa",
-      "demolished_year": null,
+      "demolished_year": 2015,
       "first_documented_year": null,
       "institution_use_periods": [
         {
@@ -7873,10 +7969,22 @@
       "slug": "st-vincent-de-paul-second-c-street-girardville-pa"
     },
     {
-      "condition_relationships": [],
+      "condition_relationships": [
+        {
+          "confidence": "medium",
+          "date": {
+            "certainty": "local heritage record; one published retrospective gives 1975",
+            "end": "1976",
+            "label": "church and rectory demolished in 1976",
+            "start": "1976"
+          },
+          "relationship_id": "rel:terminal-22:springfield-st-vincent",
+          "relationship_type": "building-demolished"
+        }
+      ],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-vincent-eighth-enos-springfield-il",
-      "demolished_year": null,
+      "demolished_year": 1976,
       "first_documented_year": 1908,
       "institution_use_periods": [
         {
@@ -8291,7 +8399,7 @@
       "building-standing"
     ]
   },
-  "content_hash": "sha256:b1867e977d050dab4a2f220405ca4d337d8e42b4664a1e47513339fb6d133d89",
+  "content_hash": "sha256:fb633d839a549025ffb803ddaf57a09374c21d9f5fe37331fa27b0a07b808b11",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -10990,7 +11098,7 @@
     "source_assertion_id": "assert:pastoral-18:membership",
     "unit": "current Lithuanian Catholic parish, mission, or hosted pastoral community"
   },
-  "generated": "2026-08-03",
+  "generated": "2026-08-07",
   "institution_history": [
     {
       "building_fate": null,
@@ -11423,9 +11531,11 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "demolished",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:coverage-17:kingston-st-mary"
+      ],
       "canonical_name": "Saint Mary of the Annunciation Lithuanian Roman Catholic Parish, Kingston",
       "city": "Kingston",
       "closed": {
@@ -11451,7 +11561,6 @@
         "key": "Scranton",
         "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
       },
-      "legacy_building_fate": "demolished",
       "name": "Šv. Marijos Apreiškimo",
       "public_profile": "/parishes/sv-marijos-apreiskimo-kingston-pa",
       "record_type": "parish",
@@ -11467,7 +11576,9 @@
       "status_group": "closed",
       "status_observed_at": "2026-07-16",
       "status_source_authority": "site_r10_baseline",
-      "terminal_worship_site_ids": []
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-mary-annunciation-church-kingston-pa"
+      ]
     },
     {
       "building_fate": "standing",
@@ -12167,9 +12278,11 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:ne-3:nashua-church-repurposed"
+      ],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Nashua",
       "city": "Nashua",
       "closed": {
@@ -12210,7 +12323,9 @@
       "status_group": "closed",
       "status_observed_at": "2026-07-16",
       "status_source_authority": "site_r10_baseline",
-      "terminal_worship_site_ids": []
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-casimir-temple-street-nashua-nh"
+      ]
     },
     {
       "building_fate": "repurposed",
@@ -12335,9 +12450,11 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:living-sites-16:st-casimir-fourth-wharton-philadelphia-pa-standing"
+      ],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Philadelphia",
       "city": "Philadelphia",
       "closed": {
@@ -12363,7 +12480,6 @@
         "key": "Philadelphia",
         "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
       },
-      "legacy_building_fate": "standing",
       "name": "Šv. Kazimiero",
       "public_profile": "/parishes/sv-kazimiero-philadelphia-pa",
       "record_type": "parish",
@@ -12379,12 +12495,16 @@
       "status_group": "closed",
       "status_observed_at": "2026-07-16",
       "status_source_authority": "site_r10_baseline",
-      "terminal_worship_site_ids": []
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-casimir-fourth-wharton-philadelphia-pa"
+      ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:successor-2:pittsburgh-church-repurposed"
+      ],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Pittsburgh",
       "city": "Pittsburgh",
       "closed": {
@@ -12425,7 +12545,9 @@
       "status_group": "closed",
       "status_observed_at": "2026-07-16",
       "status_source_authority": "site_r10_baseline",
-      "terminal_worship_site_ids": []
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-casimir-sarah-street-pittsburgh-pa"
+      ]
     },
     {
       "building_fate": "repurposed",
@@ -12478,9 +12600,12 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:providence-st-casimir:repurposed",
+        "rel:condition-reconciliation:providence-st-casimir:standing"
+      ],
       "canonical_name": "Saint Casimir Lithuanian Roman Catholic Parish, Providence",
       "city": "Providence",
       "closed": {
@@ -12521,7 +12646,9 @@
       "status_group": "closed",
       "status_observed_at": "2026-07-16",
       "status_source_authority": "site_r10_baseline",
-      "terminal_worship_site_ids": []
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-casimir-smith-street-providence-ri"
+      ]
     },
     {
       "building_fate": "demolished",
@@ -12781,9 +12908,11 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:nem-2:francis-church-repurposed"
+      ],
       "canonical_name": "Saint Francis Lithuanian Roman Catholic Parish, Lawrence",
       "city": "Lawrence",
       "closed": {
@@ -12824,12 +12953,16 @@
       "status_group": "closed",
       "status_observed_at": "2026-07-16",
       "status_source_authority": "site_r10_baseline",
-      "terminal_worship_site_ids": []
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-francis-bradford-street-lawrence-ma"
+      ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "demolished",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:nec-4:archbald-church-demolished"
+      ],
       "canonical_name": "Our Lady of Vilna Lithuanian Roman Catholic Parish, Eynon",
       "city": "Archbald",
       "closed": {
@@ -12855,7 +12988,6 @@
         "key": "Scranton",
         "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
       },
-      "legacy_building_fate": "demolished",
       "name": "Nekaltojo Prasidėjimo-Aušros Vartų",
       "public_profile": "/parishes/nekaltojo-prasidejimo-ausros-vartu-archbald-pa",
       "record_type": "parish",
@@ -12871,7 +13003,9 @@
       "status_group": "closed",
       "status_observed_at": "2026-07-16",
       "status_source_authority": "site_r10_baseline",
-      "terminal_worship_site_ids": []
+      "terminal_worship_site_ids": [
+        "cn:building_site:our-lady-vilna-third-street-eynon-pa"
+      ]
     },
     {
       "building_fate": "standing",
@@ -13172,9 +13306,11 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "demolished",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:chicago-1:st-george-demolished"
+      ],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Chicago",
       "city": "Chicago",
       "closed": {
@@ -13200,7 +13336,6 @@
         "key": "Chicago",
         "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
       },
-      "legacy_building_fate": "demolished",
       "name": "Šv. Jurgio",
       "public_profile": "/parishes/sv-jurgio-chicago-il",
       "record_type": "parish",
@@ -13214,7 +13349,9 @@
       "status_group": "closed",
       "status_observed_at": "2026-07-16",
       "status_source_authority": "site_r10_baseline",
-      "terminal_worship_site_ids": []
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-george-lituanica-church-chicago-il"
+      ]
     },
     {
       "building_fate": "repurposed",
@@ -13362,9 +13499,12 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:niagara-st-george:standing",
+        "rel:nec-4:niagara-repurposed"
+      ],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Niagara Falls",
       "city": "Niagara Falls",
       "closed": {
@@ -13431,12 +13571,17 @@
       "status_group": "transferred",
       "status_observed_at": "2026-07-16",
       "status_source_authority": "canonical_continuation_status_adjudication",
-      "terminal_worship_site_ids": []
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-george-falls-street-niagara-falls-ny"
+      ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:norwood-st-george:standing",
+        "rel:nem-2:norwood-church-repurposed"
+      ],
       "canonical_name": "Saint George Lithuanian Roman Catholic Parish, Norwood",
       "city": "Norwood",
       "closed": {
@@ -13479,7 +13624,9 @@
       "status_group": "closed",
       "status_observed_at": "2026-07-16",
       "status_source_authority": "site_r10_baseline",
-      "terminal_worship_site_ids": []
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-george-st-james-avenue-norwood-ma"
+      ]
     },
     {
       "building_fate": "standing",
@@ -13925,9 +14072,12 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:condition-reconciliation:mount-carmel-holy-cross:repurposed",
+        "rel:condition-reconciliation:mount-carmel-holy-cross:standing"
+      ],
       "canonical_name": "Holy Cross Lithuanian Roman Catholic Parish, Mount Carmel",
       "city": "Mount Carmel",
       "closed": {
@@ -13968,7 +14118,9 @@
       "status_group": "closed",
       "status_observed_at": "2026-07-16",
       "status_source_authority": "site_r10_baseline",
-      "terminal_worship_site_ids": []
+      "terminal_worship_site_ids": [
+        "cn:building_site:holy-cross-sixth-poplar-mount-carmel-pa"
+      ]
     },
     {
       "building_fate": null,
@@ -14194,9 +14346,11 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:nem-2:sacred-heart-repurposed"
+      ],
       "canonical_name": "Sacred Heart of Jesus Lithuanian National Catholic Parish, Lawrence",
       "city": "Lawrence",
       "closed": {
@@ -14230,7 +14384,9 @@
       "status_group": "closed",
       "status_observed_at": "2026-07-16",
       "status_source_authority": "site_r10_baseline",
-      "terminal_worship_site_ids": []
+      "terminal_worship_site_ids": [
+        "cn:building_site:sacred-heart-garden-street-lawrence-ma"
+      ]
     },
     {
       "building_fate": "standing",
@@ -14817,9 +14973,11 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "demolished",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:coverage-17:philadelphia-st-mary-national"
+      ],
       "canonical_name": "Saint Mary Lithuanian National Catholic Parish, Philadelphia",
       "city": "Philadelphia",
       "closed": {
@@ -14839,7 +14997,6 @@
       "identity_support": "two_pass_case_file",
       "institution_class": "national_catholic_pncc",
       "jurisdiction": null,
-      "legacy_building_fate": "demolished",
       "name": "Šv. Marijos Tautinė Katalikų Parapija",
       "public_profile": "/parishes/sv-marijos-tautine-kataliku-parapija-philadelphia-pa",
       "record_type": "parish",
@@ -14853,7 +15010,9 @@
       "status_group": "closed",
       "status_observed_at": "2026-07-16",
       "status_source_authority": "site_r10_baseline",
-      "terminal_worship_site_ids": []
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-mary-national-church-reed-philadelphia-pa"
+      ]
     },
     {
       "building_fate": "listed_for_sale",
@@ -16219,9 +16378,11 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:terminal-22:homestead-peter-paul"
+      ],
       "canonical_name": "Ss. Peter and Paul Lithuanian Parish, Homestead",
       "city": "Homestead",
       "closed": {
@@ -16725,9 +16886,11 @@
       ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "demolished",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:terminal-22:bridgeville-st-anthony"
+      ],
       "canonical_name": "St. Anthony Lithuanian Parish, Bridgeville",
       "city": "Bridgeville",
       "closed": {
@@ -16753,7 +16916,6 @@
         "key": "Pittsburgh",
         "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
       },
-      "legacy_building_fate": "demolished",
       "name": "Šv. Antano",
       "public_profile": "/parishes/st-anthony-bridgeville-pa",
       "record_type": "parish",
@@ -16814,9 +16976,11 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:terminal-22:kewanee-st-anthony"
+      ],
       "canonical_name": "St. Anthony Lithuanian Parish, Kewanee",
       "city": "Kewanee",
       "closed": {
@@ -17209,9 +17373,11 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:terminal-22:westfield-st-casimir"
+      ],
       "canonical_name": "St. Casimir Lithuanian Parish, Westfield",
       "city": "Westfield",
       "closed": {
@@ -17664,9 +17830,11 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:terminal-22:utica-st-george"
+      ],
       "canonical_name": "St. George Lithuanian Parish, Utica",
       "city": "Utica",
       "closed": {
@@ -17706,12 +17874,16 @@
       "status_group": "closed",
       "status_observed_at": null,
       "status_source_authority": "site_r10_baseline",
-      "terminal_worship_site_ids": []
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-george-1967-church-utica-ny"
+      ]
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "repurposed",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:terminal-22:braddock-st-isidore"
+      ],
       "canonical_name": "St. Isidore Lithuanian Parish, Braddock",
       "city": "Braddock",
       "closed": {
@@ -18054,9 +18226,11 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "standing",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:terminal-22:bentleyville-st-luke"
+      ],
       "canonical_name": "St. Luke Parish, Bentleyville",
       "city": "Bentleyville",
       "closed": {
@@ -18185,9 +18359,11 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "demolished",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:terminal-22:shamokin-st-michael"
+      ],
       "canonical_name": "St. Michael the Archangel Lithuanian Parish, Shamokin",
       "city": "Shamokin",
       "closed": {
@@ -18213,7 +18389,6 @@
         "key": "Harrisburg",
         "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
       },
-      "legacy_building_fate": "demolished",
       "name": "Šv. Mykolo",
       "public_profile": "/parishes/st-michael-shamokin-pa",
       "record_type": "parish",
@@ -18335,9 +18510,11 @@
       "terminal_worship_site_ids": []
     },
     {
-      "building_fate": null,
-      "building_fate_authority": "unresolved",
-      "building_fate_relationship_ids": [],
+      "building_fate": "demolished",
+      "building_fate_authority": "terminal_site_condition",
+      "building_fate_relationship_ids": [
+        "rel:terminal-22:springfield-st-vincent"
+      ],
       "canonical_name": "St. Vincent de Paul Lithuanian Parish, Springfield",
       "city": "Springfield",
       "closed": {
@@ -18363,7 +18540,6 @@
         "key": "Springfield in Illinois",
         "source_assertion_id": "assert:display-19:jurisdiction-vocabulary"
       },
-      "legacy_building_fate": "demolished",
       "name": "Šv. Vincento Pauliečio",
       "public_profile": "/parishes/st-vincent-de-paul-springfield-il",
       "record_type": "parish",
@@ -18797,7 +18973,7 @@
       "unit": "distinct U.S. Roman Catholic parish institution"
     }
   },
-  "revision_id": "canonical-infographic-units-2026-08-03-building-condition-reconciliation",
+  "revision_id": "canonical-infographic-units-2026-08-07-terminal-building-research",
   "schema": "culturenet-parish-infographic-projection.v1",
   "unit_contracts": [
     {

@@ -16080,6 +16080,240 @@
         "conflict_preserved": false,
         "state": "accepted"
       },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:terminal-22:bentleyville-st-luke",
+      "object": {
+        "canonical_entity_id": "cn:building_site:st-luke-1909-church-bentleyville-pa",
+        "condition": "building-standing",
+        "date": {
+          "certainty": "official Diocese of Pittsburgh parish history",
+          "end": null,
+          "label": "standing and retained by the successor parish",
+          "start": "2026-08-07"
+        }
+      },
+      "observed_at": "2026-08-07",
+      "predicate": "building_standing",
+      "source_artifact_id": "src:terminal-22:bentleyville",
+      "source_locator": "1909 church retained by the successor parish",
+      "subject": {
+        "canonical_entity_id": "cn:event:bentleyville-st-luke-condition-assessment"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "medium",
+      "id": "assert:terminal-22:braddock-st-isidore",
+      "object": {
+        "canonical_entity_id": "cn:building_site:st-isidore-talbot-street-braddock-pa",
+        "condition": "building-repurposed",
+        "date": {
+          "certainty": "field-research heritage inventory",
+          "end": null,
+          "label": "used by First Church of God in Christ",
+          "start": "2026-08-07"
+        }
+      },
+      "observed_at": "2026-08-07",
+      "predicate": "building_repurposed",
+      "source_artifact_id": "src:terminal-22:braddock_homestead",
+      "source_locator": "current successor uses of both former Lithuanian churches",
+      "subject": {
+        "canonical_entity_id": "cn:event:braddock-st-isidore-condition-assessment"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "medium",
+      "id": "assert:terminal-22:bridgeville-st-anthony",
+      "object": {
+        "canonical_entity_id": "cn:building_site:st-anthony-millers-run-bridgeville-pa",
+        "condition": "building-demolished",
+        "date": {
+          "certainty": "field-research heritage inventory",
+          "end": "2012",
+          "label": "church demolished in 2012",
+          "start": "2012"
+        }
+      },
+      "observed_at": "2026-08-07",
+      "predicate": "building_demolished",
+      "source_artifact_id": "src:terminal-22:bridgeville",
+      "source_locator": "2007 church closure and 2012 demolition",
+      "subject": {
+        "canonical_entity_id": "cn:event:bridgeville-st-anthony-condition-assessment"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "medium",
+      "id": "assert:terminal-22:homestead-peter-paul",
+      "object": {
+        "canonical_entity_id": "cn:building_site:ss-peter-paul-mifflin-church-homestead-pa",
+        "condition": "building-repurposed",
+        "date": {
+          "certainty": "field-research heritage inventory",
+          "end": null,
+          "label": "used by Higher Call church",
+          "start": "2026-08-07"
+        }
+      },
+      "observed_at": "2026-08-07",
+      "predicate": "building_repurposed",
+      "source_artifact_id": "src:terminal-22:braddock_homestead",
+      "source_locator": "current successor uses of both former Lithuanian churches",
+      "subject": {
+        "canonical_entity_id": "cn:event:homestead-peter-paul-condition-assessment"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "medium",
+      "id": "assert:terminal-22:kewanee-st-anthony",
+      "object": {
+        "canonical_entity_id": "cn:building_site:st-anthony-church-kewanee-il",
+        "condition": "building-standing",
+        "date": {
+          "certainty": "field-research heritage inventory",
+          "end": null,
+          "label": "former church reported standing and vacant",
+          "start": "2026-08-07"
+        }
+      },
+      "observed_at": "2026-08-07",
+      "predicate": "building_standing",
+      "source_artifact_id": "src:terminal-22:kewanee",
+      "source_locator": "standing former church after successor congregation folded",
+      "subject": {
+        "canonical_entity_id": "cn:event:kewanee-st-anthony-condition-assessment"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "medium",
+      "id": "assert:terminal-22:shamokin-st-michael",
+      "object": {
+        "canonical_entity_id": "cn:building_site:st-michael-church-shamokin-pa",
+        "condition": "building-demolished",
+        "date": {
+          "certainty": "field-research heritage inventory",
+          "end": "2015",
+          "label": "church demolished in 2015; basement remains",
+          "start": "2015"
+        }
+      },
+      "observed_at": "2026-08-07",
+      "predicate": "building_demolished",
+      "source_artifact_id": "src:terminal-22:shamokin",
+      "source_locator": "2015 demolition with basement remaining",
+      "subject": {
+        "canonical_entity_id": "cn:event:shamokin-st-michael-condition-assessment"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": true,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "medium",
+      "id": "assert:terminal-22:springfield-st-vincent",
+      "object": {
+        "canonical_entity_id": "cn:building_site:st-vincent-eighth-enos-springfield-il",
+        "condition": "building-demolished",
+        "date": {
+          "certainty": "local heritage record; one published retrospective gives 1975",
+          "end": "1976",
+          "label": "church and rectory demolished in 1976",
+          "start": "1976"
+        }
+      },
+      "observed_at": "2026-08-07",
+      "predicate": "building_demolished",
+      "source_artifact_id": "src:terminal-22:springfield",
+      "source_locator": "church and rectory demolition in 1976",
+      "subject": {
+        "canonical_entity_id": "cn:event:springfield-st-vincent-condition-assessment"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "medium",
+      "id": "assert:terminal-22:utica-st-george",
+      "object": {
+        "canonical_entity_id": "cn:building_site:st-george-1967-church-utica-ny",
+        "condition": "building-standing",
+        "date": {
+          "certainty": "field-research heritage inventory",
+          "end": null,
+          "label": "former church reported standing empty",
+          "start": "2026-08-07"
+        }
+      },
+      "observed_at": "2026-08-07",
+      "predicate": "building_standing",
+      "source_artifact_id": "src:terminal-22:utica",
+      "source_locator": "closed 2007 and reported standing empty",
+      "subject": {
+        "canonical_entity_id": "cn:event:utica-st-george-condition-assessment"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "medium",
+      "id": "assert:terminal-22:westfield-st-casimir",
+      "object": {
+        "canonical_entity_id": "cn:building_site:st-casimir-parkside-westfield-ma",
+        "condition": "building-standing",
+        "date": {
+          "certainty": "official City of Westfield property notice",
+          "end": null,
+          "label": "standing at the official municipal on-site sale inspection",
+          "start": "2025-09-17"
+        }
+      },
+      "observed_at": "2026-08-07",
+      "predicate": "building_standing",
+      "source_artifact_id": "src:terminal-22:westfield",
+      "source_locator": "on-site pre-proposal meetings at 38 Parkside Avenue in September 2025",
+      "subject": {
+        "canonical_entity_id": "cn:event:westfield-st-casimir-condition-assessment"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
       "assertion_type": "site_relationship",
       "confidence": "high",
       "id": "assert:waterbury:olmc-uses-st-joseph-church",
@@ -18805,6 +19039,34 @@
     },
     {
       "aliases": [],
+      "canonical_name": "Condition assessment for bentleyville-st-luke",
+      "entity_type": "event",
+      "id": "cn:event:bentleyville-st-luke-condition-assessment",
+      "lifecycle": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:terminal-22:bentleyville-st-luke"
+        ],
+        "start": "2026-08-07"
+      },
+      "slug": "bentleyville-st-luke-condition-assessment"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Condition assessment for braddock-st-isidore",
+      "entity_type": "event",
+      "id": "cn:event:braddock-st-isidore-condition-assessment",
+      "lifecycle": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:terminal-22:braddock-st-isidore"
+        ],
+        "start": "2026-08-07"
+      },
+      "slug": "braddock-st-isidore-condition-assessment"
+    },
+    {
+      "aliases": [],
       "canonical_name": "Condition assessment for bridgeport-st-george (standing)",
       "entity_type": "event",
       "id": "cn:event:bridgeport-st-george-standing-assessment",
@@ -18816,6 +19078,20 @@
         "start": "2026-07-16"
       },
       "slug": "bridgeport-st-george-standing-assessment"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Condition assessment for bridgeville-st-anthony",
+      "entity_type": "event",
+      "id": "cn:event:bridgeville-st-anthony-condition-assessment",
+      "lifecycle": {
+        "end": "2012",
+        "source_assertion_ids": [
+          "assert:terminal-22:bridgeville-st-anthony"
+        ],
+        "start": "2012"
+      },
+      "slug": "bridgeville-st-anthony-condition-assessment"
     },
     {
       "aliases": [],
@@ -19179,6 +19455,20 @@
     },
     {
       "aliases": [],
+      "canonical_name": "Condition assessment for homestead-peter-paul",
+      "entity_type": "event",
+      "id": "cn:event:homestead-peter-paul-condition-assessment",
+      "lifecycle": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:terminal-22:homestead-peter-paul"
+        ],
+        "start": "2026-08-07"
+      },
+      "slug": "homestead-peter-paul-condition-assessment"
+    },
+    {
+      "aliases": [],
       "canonical_name": "Current-worship standing condition for immaculate-conception-44th-street-chicago-il",
       "entity_type": "event",
       "id": "cn:event:immaculate-conception-44th-street-chicago-il-standing-current-worship",
@@ -19218,6 +19508,20 @@
         "start": "2026-07-16"
       },
       "slug": "kearny-our-lady-of-sorrows-standing-assessment"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Condition assessment for kewanee-st-anthony",
+      "entity_type": "event",
+      "id": "cn:event:kewanee-st-anthony-condition-assessment",
+      "lifecycle": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:terminal-22:kewanee-st-anthony"
+        ],
+        "start": "2026-08-07"
+      },
+      "slug": "kewanee-st-anthony-condition-assessment"
     },
     {
       "aliases": [],
@@ -19732,6 +20036,20 @@
     },
     {
       "aliases": [],
+      "canonical_name": "Condition assessment for shamokin-st-michael",
+      "entity_type": "event",
+      "id": "cn:event:shamokin-st-michael-condition-assessment",
+      "lifecycle": {
+        "end": "2015",
+        "source_assertion_ids": [
+          "assert:terminal-22:shamokin-st-michael"
+        ],
+        "start": "2015"
+      },
+      "slug": "shamokin-st-michael-condition-assessment"
+    },
+    {
+      "aliases": [],
       "canonical_name": "Condition assessment for south-chicago-st-joseph (repurposed)",
       "entity_type": "event",
       "id": "cn:event:south-chicago-st-joseph-repurposed-assessment",
@@ -19757,6 +20075,20 @@
         "start": "2026-07-16"
       },
       "slug": "south-chicago-st-joseph-standing-assessment"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Condition assessment for springfield-st-vincent",
+      "entity_type": "event",
+      "id": "cn:event:springfield-st-vincent-condition-assessment",
+      "lifecycle": {
+        "end": "1976",
+        "source_assertion_ids": [
+          "assert:terminal-22:springfield-st-vincent"
+        ],
+        "start": "1976"
+      },
+      "slug": "springfield-st-vincent-condition-assessment"
     },
     {
       "aliases": [],
@@ -20216,6 +20548,20 @@
     },
     {
       "aliases": [],
+      "canonical_name": "Condition assessment for utica-st-george",
+      "entity_type": "event",
+      "id": "cn:event:utica-st-george-condition-assessment",
+      "lifecycle": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:terminal-22:utica-st-george"
+        ],
+        "start": "2026-08-07"
+      },
+      "slug": "utica-st-george-condition-assessment"
+    },
+    {
+      "aliases": [],
       "canonical_name": "Condition assessment for waterbury-st-joseph (standing)",
       "entity_type": "event",
       "id": "cn:event:waterbury-st-joseph-standing-assessment",
@@ -20227,6 +20573,20 @@
         "start": "2026-07-16"
       },
       "slug": "waterbury-st-joseph-standing-assessment"
+    },
+    {
+      "aliases": [],
+      "canonical_name": "Condition assessment for westfield-st-casimir",
+      "entity_type": "event",
+      "id": "cn:event:westfield-st-casimir-condition-assessment",
+      "lifecycle": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:terminal-22:westfield-st-casimir"
+        ],
+        "start": "2025-09-17"
+      },
+      "slug": "westfield-st-casimir-condition-assessment"
     },
     {
       "aliases": [],
@@ -23911,7 +24271,7 @@
       "slug": "robert-damyanovich"
     }
   ],
-  "content_hash": "sha256:7280ab28bb77de9cb7801c41d37b524118a921cf6d0b0a39659b5476aead0a32",
+  "content_hash": "sha256:7c2b2308cc538148f2687bd18c60318b92d4b09d625f9cb7c50ee49c43375898",
   "counts": {
     "by_institution_class": {
       "independent_catholic": 4,
@@ -23928,7 +24288,7 @@
     "protected_campaign_assignments": 4,
     "public_us_institutions": 155
   },
-  "generated": "2026-08-03",
+  "generated": "2026-08-07",
   "linked_context": [
     {
       "aliases": [
@@ -30948,7 +31308,8 @@
       "culturenet-parish-protected-campaigns-hartford-waterbury-maspeth-2026-07-31",
       "culturenet-parish-reviewed-case-lineage-2-2026-07-31",
       "culturenet-parish-sielovada-directory-20-2026-08-03",
-      "culturenet-parish-successor-and-site-lineage-2-2026-07-31"
+      "culturenet-parish-successor-and-site-lineage-2-2026-07-31",
+      "culturenet-parish-terminal-building-research-22-2026-08-07"
     ],
     "publication_baseline": "repo://culturenet-brain/docs/research/parish-canon/publication-baseline.json",
     "publication_readiness": "repo://culturenet-brain/docs/research/parish-canon/publication-readiness.json"
@@ -55278,6 +55639,429 @@
     },
     {
       "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:terminal-22:bentleyville-st-luke",
+          "observed_at": "2026-08-07"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "official Diocese of Pittsburgh parish history",
+        "end": null,
+        "label": "standing and retained by the successor parish",
+        "start": "2026-08-07"
+      },
+      "evidence_assertion_ids": [
+        "assert:terminal-22:bentleyville-st-luke"
+      ],
+      "id": "rel:terminal-22:bentleyville-st-luke",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Condition assessment for bentleyville-st-luke",
+        "entity_id": "cn:event:bentleyville-st-luke-condition-assessment",
+        "entity_type": "event",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:terminal-22:bentleyville-st-luke"
+          ],
+          "start": "2026-08-07"
+        },
+        "slug": "bentleyville-st-luke-condition-assessment"
+      },
+      "source_artifact_ids": [
+        "src:terminal-22:bentleyville"
+      ],
+      "target": {
+        "display_name": "St. Luke 1909 church, Bentleyville",
+        "entity_id": "cn:building_site:st-luke-1909-church-bentleyville-pa",
+        "entity_type": "building_site",
+        "slug": "st-luke-1909-church-bentleyville-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:terminal-22:braddock-st-isidore",
+          "observed_at": "2026-08-07"
+        }
+      ],
+      "confidence": "medium",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "field-research heritage inventory",
+        "end": null,
+        "label": "used by First Church of God in Christ",
+        "start": "2026-08-07"
+      },
+      "evidence_assertion_ids": [
+        "assert:terminal-22:braddock-st-isidore"
+      ],
+      "id": "rel:terminal-22:braddock-st-isidore",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-repurposed",
+      "source": {
+        "display_name": "Condition assessment for braddock-st-isidore",
+        "entity_id": "cn:event:braddock-st-isidore-condition-assessment",
+        "entity_type": "event",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:terminal-22:braddock-st-isidore"
+          ],
+          "start": "2026-08-07"
+        },
+        "slug": "braddock-st-isidore-condition-assessment"
+      },
+      "source_artifact_ids": [
+        "src:terminal-22:braddock_homestead"
+      ],
+      "target": {
+        "display_name": "St. Isidore church on Talbot Street, Braddock",
+        "entity_id": "cn:building_site:st-isidore-talbot-street-braddock-pa",
+        "entity_type": "building_site",
+        "slug": "st-isidore-talbot-street-braddock-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:terminal-22:bridgeville-st-anthony",
+          "observed_at": "2026-08-07"
+        }
+      ],
+      "confidence": "medium",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "field-research heritage inventory",
+        "end": "2012",
+        "label": "church demolished in 2012",
+        "start": "2012"
+      },
+      "evidence_assertion_ids": [
+        "assert:terminal-22:bridgeville-st-anthony"
+      ],
+      "id": "rel:terminal-22:bridgeville-st-anthony",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-demolished",
+      "source": {
+        "display_name": "Condition assessment for bridgeville-st-anthony",
+        "entity_id": "cn:event:bridgeville-st-anthony-condition-assessment",
+        "entity_type": "event",
+        "lifecycle": {
+          "end": "2012",
+          "source_assertion_ids": [
+            "assert:terminal-22:bridgeville-st-anthony"
+          ],
+          "start": "2012"
+        },
+        "slug": "bridgeville-st-anthony-condition-assessment"
+      },
+      "source_artifact_ids": [
+        "src:terminal-22:bridgeville"
+      ],
+      "target": {
+        "display_name": "St. Anthony church on Millers Run Road, Bridgeville",
+        "entity_id": "cn:building_site:st-anthony-millers-run-bridgeville-pa",
+        "entity_type": "building_site",
+        "slug": "st-anthony-millers-run-bridgeville-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:terminal-22:homestead-peter-paul",
+          "observed_at": "2026-08-07"
+        }
+      ],
+      "confidence": "medium",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "field-research heritage inventory",
+        "end": null,
+        "label": "used by Higher Call church",
+        "start": "2026-08-07"
+      },
+      "evidence_assertion_ids": [
+        "assert:terminal-22:homestead-peter-paul"
+      ],
+      "id": "rel:terminal-22:homestead-peter-paul",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-repurposed",
+      "source": {
+        "display_name": "Condition assessment for homestead-peter-paul",
+        "entity_id": "cn:event:homestead-peter-paul-condition-assessment",
+        "entity_type": "event",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:terminal-22:homestead-peter-paul"
+          ],
+          "start": "2026-08-07"
+        },
+        "slug": "homestead-peter-paul-condition-assessment"
+      },
+      "source_artifact_ids": [
+        "src:terminal-22:braddock_homestead"
+      ],
+      "target": {
+        "display_name": "Ss. Peter and Paul second church, Homestead",
+        "entity_id": "cn:building_site:ss-peter-paul-mifflin-church-homestead-pa",
+        "entity_type": "building_site",
+        "slug": "ss-peter-paul-mifflin-church-homestead-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:terminal-22:kewanee-st-anthony",
+          "observed_at": "2026-08-07"
+        }
+      ],
+      "confidence": "medium",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "field-research heritage inventory",
+        "end": null,
+        "label": "former church reported standing and vacant",
+        "start": "2026-08-07"
+      },
+      "evidence_assertion_ids": [
+        "assert:terminal-22:kewanee-st-anthony"
+      ],
+      "id": "rel:terminal-22:kewanee-st-anthony",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Condition assessment for kewanee-st-anthony",
+        "entity_id": "cn:event:kewanee-st-anthony-condition-assessment",
+        "entity_type": "event",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:terminal-22:kewanee-st-anthony"
+          ],
+          "start": "2026-08-07"
+        },
+        "slug": "kewanee-st-anthony-condition-assessment"
+      },
+      "source_artifact_ids": [
+        "src:terminal-22:kewanee"
+      ],
+      "target": {
+        "display_name": "St. Anthony church building, Kewanee",
+        "entity_id": "cn:building_site:st-anthony-church-kewanee-il",
+        "entity_type": "building_site",
+        "slug": "st-anthony-church-kewanee-il"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:terminal-22:shamokin-st-michael",
+          "observed_at": "2026-08-07"
+        }
+      ],
+      "confidence": "medium",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "field-research heritage inventory",
+        "end": "2015",
+        "label": "church demolished in 2015; basement remains",
+        "start": "2015"
+      },
+      "evidence_assertion_ids": [
+        "assert:terminal-22:shamokin-st-michael"
+      ],
+      "id": "rel:terminal-22:shamokin-st-michael",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-demolished",
+      "source": {
+        "display_name": "Condition assessment for shamokin-st-michael",
+        "entity_id": "cn:event:shamokin-st-michael-condition-assessment",
+        "entity_type": "event",
+        "lifecycle": {
+          "end": "2015",
+          "source_assertion_ids": [
+            "assert:terminal-22:shamokin-st-michael"
+          ],
+          "start": "2015"
+        },
+        "slug": "shamokin-st-michael-condition-assessment"
+      },
+      "source_artifact_ids": [
+        "src:terminal-22:shamokin"
+      ],
+      "target": {
+        "display_name": "St. Michael church, Shamokin",
+        "entity_id": "cn:building_site:st-michael-church-shamokin-pa",
+        "entity_type": "building_site",
+        "slug": "st-michael-church-shamokin-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:terminal-22:springfield-st-vincent",
+          "observed_at": "2026-08-07"
+        }
+      ],
+      "confidence": "medium",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "local heritage record; one published retrospective gives 1975",
+        "end": "1976",
+        "label": "church and rectory demolished in 1976",
+        "start": "1976"
+      },
+      "evidence_assertion_ids": [
+        "assert:terminal-22:springfield-st-vincent"
+      ],
+      "id": "rel:terminal-22:springfield-st-vincent",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-demolished",
+      "source": {
+        "display_name": "Condition assessment for springfield-st-vincent",
+        "entity_id": "cn:event:springfield-st-vincent-condition-assessment",
+        "entity_type": "event",
+        "lifecycle": {
+          "end": "1976",
+          "source_assertion_ids": [
+            "assert:terminal-22:springfield-st-vincent"
+          ],
+          "start": "1976"
+        },
+        "slug": "springfield-st-vincent-condition-assessment"
+      },
+      "source_artifact_ids": [
+        "src:terminal-22:springfield"
+      ],
+      "target": {
+        "display_name": "St. Vincent de Paul church at Eighth and Enos, Springfield",
+        "entity_id": "cn:building_site:st-vincent-eighth-enos-springfield-il",
+        "entity_type": "building_site",
+        "slug": "st-vincent-eighth-enos-springfield-il"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:terminal-22:utica-st-george",
+          "observed_at": "2026-08-07"
+        }
+      ],
+      "confidence": "medium",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "field-research heritage inventory",
+        "end": null,
+        "label": "former church reported standing empty",
+        "start": "2026-08-07"
+      },
+      "evidence_assertion_ids": [
+        "assert:terminal-22:utica-st-george"
+      ],
+      "id": "rel:terminal-22:utica-st-george",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Condition assessment for utica-st-george",
+        "entity_id": "cn:event:utica-st-george-condition-assessment",
+        "entity_type": "event",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:terminal-22:utica-st-george"
+          ],
+          "start": "2026-08-07"
+        },
+        "slug": "utica-st-george-condition-assessment"
+      },
+      "source_artifact_ids": [
+        "src:terminal-22:utica"
+      ],
+      "target": {
+        "display_name": "St. George 1967 church building, Utica",
+        "entity_id": "cn:building_site:st-george-1967-church-utica-ny",
+        "entity_type": "building_site",
+        "slug": "st-george-1967-church-utica-ny"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:terminal-22:westfield-st-casimir",
+          "observed_at": "2026-08-07"
+        }
+      ],
+      "confidence": "medium",
+      "counting_effect": "status_context_only",
+      "date": {
+        "certainty": "official City of Westfield property notice",
+        "end": null,
+        "label": "standing at the official municipal on-site sale inspection",
+        "start": "2025-09-17"
+      },
+      "evidence_assertion_ids": [
+        "assert:terminal-22:westfield-st-casimir"
+      ],
+      "id": "rel:terminal-22:westfield-st-casimir",
+      "identity_effect": "status_context_only",
+      "projection_group": "building_site_status",
+      "publication_state": "publishable",
+      "relationship_type": "building-standing",
+      "source": {
+        "display_name": "Condition assessment for westfield-st-casimir",
+        "entity_id": "cn:event:westfield-st-casimir-condition-assessment",
+        "entity_type": "event",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:terminal-22:westfield-st-casimir"
+          ],
+          "start": "2025-09-17"
+        },
+        "slug": "westfield-st-casimir-condition-assessment"
+      },
+      "source_artifact_ids": [
+        "src:terminal-22:westfield"
+      ],
+      "target": {
+        "display_name": "Former St. Casimir church, 38 Parkside Avenue, Westfield",
+        "entity_id": "cn:building_site:st-casimir-parkside-westfield-ma",
+        "entity_type": "building_site",
+        "slug": "st-casimir-parkside-westfield-ma"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
       "confidence": "high",
       "counting_effect": "no_count_change",
       "date": {
@@ -55565,7 +56349,7 @@
       }
     }
   ],
-  "revision_id": "canonical-public-census-2026-08-03-building-condition-reconciliation",
+  "revision_id": "canonical-public-census-2026-08-07-terminal-building-research",
   "schema": "culturenet-parish-publication-projection.v1",
   "scope": {
     "country": "US",
@@ -60300,6 +61084,134 @@
         "status": "brain_canonical_evidence"
       },
       "title": "Our Lady of Vilna Worcester current-condition case file"
+    },
+    {
+      "artifact_type": "official_diocesan_parish_history",
+      "id": "src:terminal-22:bentleyville",
+      "locator": {
+        "exact_label": "Saint Luke, Bentleyville",
+        "page": "official diocesan web record",
+        "section": "1909 church retained by the successor parish"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://diopitt.org/saint-luke-bentleyville",
+        "quote_policy": "cite and summarize",
+        "status": "official_diocesan_source"
+      },
+      "title": "Saint Luke, Bentleyville"
+    },
+    {
+      "artifact_type": "field_research_heritage_inventory",
+      "id": "src:terminal-22:braddock_homestead",
+      "locator": {
+        "exact_label": "St. Isidore, Braddock, and Ss. Peter and Paul, Homestead",
+        "page": "public web record",
+        "section": "current successor uses of both former Lithuanian churches"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/",
+        "quote_policy": "cite and summarize",
+        "status": "public_heritage_inventory"
+      },
+      "title": "Pittsburgh area: Lithuanians and Lithuanian heritage"
+    },
+    {
+      "artifact_type": "field_research_heritage_inventory",
+      "id": "src:terminal-22:bridgeville",
+      "locator": {
+        "exact_label": "St. Anthony Lithuanian church, Bridgeville",
+        "page": "public web record",
+        "section": "2007 church closure and 2012 demolition"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://global.truelithuania.com/pennsylvania-114/",
+        "quote_policy": "cite and summarize",
+        "status": "public_heritage_inventory"
+      },
+      "title": "Pennsylvania: Lithuanians and Lithuanian heritage"
+    },
+    {
+      "artifact_type": "field_research_heritage_inventory",
+      "id": "src:terminal-22:kewanee",
+      "locator": {
+        "exact_label": "Kewanee St. Anthony Lithuanian church",
+        "page": "public web record",
+        "section": "standing former church after successor congregation folded"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://global.truelithuania.com/kewanee-illinois-4005/",
+        "quote_policy": "cite and summarize",
+        "status": "public_heritage_inventory"
+      },
+      "title": "Kewanee (IL) Lithuanian heritage sites"
+    },
+    {
+      "artifact_type": "field_research_heritage_inventory",
+      "id": "src:terminal-22:shamokin",
+      "locator": {
+        "exact_label": "Shamokin St. Michael Archangel Lithuanian church",
+        "page": "public web record",
+        "section": "2015 demolition with basement remaining"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+        "quote_policy": "cite and summarize",
+        "status": "public_heritage_inventory"
+      },
+      "title": "Shenandoah and southern Coal Region: Lithuanian heritage"
+    },
+    {
+      "artifact_type": "local_heritage_record",
+      "id": "src:terminal-22:springfield",
+      "locator": {
+        "exact_label": "St. Vincent de Paul Lithuanian Catholic Church",
+        "page": "public web record",
+        "section": "church and rectory demolition in 1976"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://epnia.com/history-and-development-of-the-enos-park-area/st-vincent-de-paul-lithuanian-catholic-church/",
+        "quote_policy": "cite and summarize; preserve the 1975 alternate year published by Illinois Times",
+        "status": "local_heritage_record"
+      },
+      "title": "St. Vincent de Paul Lithuanian Catholic Church"
+    },
+    {
+      "artifact_type": "field_research_heritage_inventory",
+      "id": "src:terminal-22:utica",
+      "locator": {
+        "exact_label": "Utica St. George Lithuanian church",
+        "page": "public web record",
+        "section": "closed 2007 and reported standing empty"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://global.truelithuania.com/upstate-new-york-831/",
+        "quote_policy": "cite and summarize",
+        "status": "public_heritage_inventory"
+      },
+      "title": "Upstate New York: Lithuanians and Lithuanian heritage"
+    },
+    {
+      "artifact_type": "official_municipal_property_notice",
+      "id": "src:terminal-22:westfield",
+      "locator": {
+        "exact_label": "City of Westfield Bid 26-002, Sale of Parkside Academy",
+        "page": "official bid posting",
+        "section": "on-site pre-proposal meetings at 38 Parkside Avenue in September 2025"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://www.cityofwestfield.org/bids.aspx?bidID=412",
+        "quote_policy": "cite and summarize",
+        "status": "official_municipal_source"
+      },
+      "title": "Sale of Parkside Academy"
     },
     {
       "artifact_type": "public_web_snapshot",
