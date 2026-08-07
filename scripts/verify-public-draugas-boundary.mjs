@@ -42,6 +42,17 @@ if (importer.includes("canonical-draugas-mention-projection")) {
   );
 }
 
+const nextConfig = readFileSync(join(root, "next.config.ts"), "utf8");
+for (const required of [
+  'source: "/parishes/:slug/draugas"',
+  'destination: "/parishes/:slug"',
+  "permanent: true",
+]) {
+  if (!nextConfig.includes(required)) {
+    errors.push(`next.config.ts: retired Draugas route redirect is missing ${required}`);
+  }
+}
+
 const profileSources = readFileSync(join(root, "lib/profile-sources.ts"), "utf8");
 const historicalRegistryBlock = profileSources.match(
   /if \(axis === "draugas-registry-1909-2007"\) \{([\s\S]*?)\n\s*\}/,

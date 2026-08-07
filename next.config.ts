@@ -8,6 +8,13 @@ const nextConfig: NextConfig = {
       { source: "/data", destination: "/record", permanent: true },
       { source: "/network", destination: "/about", permanent: true },
       { source: "/now", destination: "/under-threat", permanent: true },
+      // The unreviewed Draugas ledger pages were retired on 2026-08-07.
+      // Preserve inbound links by returning visitors to the canonical profile.
+      {
+        source: "/parishes/:slug/draugas",
+        destination: "/parishes/:slug",
+        permanent: true,
+      },
       // Registry Revision 1 same-entity adjudications.
       {
         source: "/parishes/sv-kazimiero-waterbury-ct",
