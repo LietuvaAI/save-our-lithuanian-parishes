@@ -226,7 +226,7 @@ export function profileStory({
   }
   if (endState === "unresolved") {
     return splitStory(
-      `${opening} The church stands, but the parish's final institutional status remains unresolved.`,
+      `${opening} The parish's final institutional outcome remains unresolved.`,
     );
   }
   return splitStory(

@@ -9,7 +9,9 @@
 // Every point: slug, name, city/state, x/y (geoAlbersUsa 975x610), end-state
 // group (mirrors lib/end-state.ts resolveEndState — KEEP IN SYNC; undecided
 // endingMode renders unresolved, never closed: binding guardrail), closed
-// year, congregation class, normalized diocese, profile href.
+// year, congregation class, normalized diocese, profile href, and the
+// canonical terminal-site summary. The homepage must never recover building
+// outcomes from the legacy parish library or situation overlay.
 import { readFileSync, writeFileSync } from "node:fs";
 import { geoAlbersUsa } from "d3-geo";
 
@@ -94,6 +96,8 @@ for (const r of registry.parishes) {
     closed,
     recordType: institution.record_type,
     congregationClass: institution.institution_class,
+    buildingFate: canonicalInfographic.building_fate,
+    buildingFateAuthority: canonicalInfographic.building_fate_authority,
     diocese: normalizeDiocese(r.diocese),
     href: institution.public_profile,
   });

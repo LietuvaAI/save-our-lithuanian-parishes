@@ -325,13 +325,15 @@ export default async function ParishPage({
   const community = isCommunityRecord(entry.sources ?? []);
   const institution = institutionLabel(profile, community);
   const sourceLead = parishHistoryLeadNarrative(profile);
-  const buildingFate = scoped.buildingFate ?? core?.buildingFate ?? null;
   const recordType = entry.record_type ?? "parish";
   const researchOnly = ["phase", "lead", "context"].includes(recordType);
   const institutionDates = getInstitutionDates(profile.href);
   const endState = institutionDates?.statusGroup ?? scoped.endState;
   const isUsProjection =
     entry.country === "US" && typeof institutionDates?.entityId === "string";
+  const buildingFate = isUsProjection
+    ? scoped.buildingFate
+    : (scoped.buildingFate ?? core?.buildingFate ?? null);
   const foundedYear = institutionDates
     ? institutionDates.foundedYear
     : (scoped.founded ?? core?.yearFounded ?? null);
@@ -374,29 +376,27 @@ export default async function ParishPage({
   const identityNotices = getIdentityNoticesForInstitution(
     institutionDates?.entityId ?? null,
   );
-  const activeWorshipSite =
-    worshipSites.find((site) => site.isCurrent) ??
-    worshipSites.find((site) => !site.demolishedYear) ??
-    null;
+  const activeWorshipSite = worshipSites.find((site) => site.isCurrent) ?? null;
   const terminalWorshipSite = worshipSites.find((site) =>
     institutionDates?.terminalSiteIds.includes(site.entityId),
   );
-  const standingSite =
-    worshipSites.find(
-      (site) => !site.demolishedYear && /present/i.test(site.range ?? ""),
-    ) ?? activeWorshipSite;
   // A demolished church is still the institution's church building. Do not
   // replace its identity with the outcome label merely because no site stands.
-  const selectedWorshipSite =
-    terminalWorshipSite ?? standingSite ?? activeWorshipSite ?? worshipSites[0] ?? null;
+  // For canonical U.S. profiles, however, Brain alone decides which site is
+  // terminal. Associated sites remain visible below but are never promoted by
+  // a site-side heuristic.
+  const selectedWorshipSite = isUsProjection
+    ? (terminalWorshipSite ?? null)
+    : (activeWorshipSite ?? worshipSites[0] ?? null);
   const standingSiteYear = selectedWorshipSite?.range?.match(/(\d{4})/)?.[1] ?? null;
   const fallbackBuildingOutcome = readableBuildingStatus(
     buildingFate,
     caseRecord?.buildingStatus ?? null,
   );
-  const buildingOutcome =
-    selectedWorshipSite?.outcome &&
-    !/^not established$/i.test(selectedWorshipSite.outcome)
+  const buildingOutcome = isUsProjection
+    ? (selectedWorshipSite?.outcome ?? "Not established")
+    : selectedWorshipSite?.outcome &&
+        !/^not established$/i.test(selectedWorshipSite.outcome)
       ? selectedWorshipSite.outcome
       : fallbackBuildingOutcome;
   const currentChurch =
@@ -405,8 +405,10 @@ export default async function ParishPage({
         (!isUsProjection ? caseRecord?.profile?.currentSite?.value : null) ??
         "Not established")
       : (selectedWorshipSite?.name ??
-        caseRecord?.profile?.currentSite?.value ??
-        "Not established"));
+        (!isUsProjection ? caseRecord?.profile?.currentSite?.value : null) ??
+        (worshipSites.length > 0
+          ? "Terminal worship site not established"
+          : "Worship site not established")));
   const rawCurrentChurchDetail =
     parishCampaign?.profile?.siteDetail ??
     (!isUsProjection ? caseRecord?.profile?.currentSite?.detail : null) ??

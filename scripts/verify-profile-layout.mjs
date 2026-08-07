@@ -254,7 +254,11 @@ const requiredFragments = [
     "getInfographicInstitutionByEntityId",
     "entity-id profile resolution",
   ],
-  [graphSource, "CONDITION_PRECEDENCE", "worship-site outcome precedence"],
+  [
+    graphSource,
+    "resolvePhysicalSiteCondition",
+    "canonical worship-site outcome resolver",
+  ],
   [graphSource, "row.closed.display", "qualified ending-date display"],
   [graphSource, "end date unresolved", "unresolved ending-date treatment"],
   [pageSource, "data-profile-image-state", "profile image-state contract"],

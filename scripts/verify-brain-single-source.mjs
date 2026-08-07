@@ -134,6 +134,18 @@ if (existsSync(new URL("alerts.json", DATA))) {
 if (existsSync(new URL("canonical-identity-locks.json", DATA))) {
   errors.push("legacy site-owned canonical identity lock must not exist");
 }
+if (existsSync(new URL("registry-revisions.json", DATA))) {
+  errors.push("legacy site-owned registry revision snapshot must not exist");
+}
+const publicationJoinSource = readFileSync(
+  new URL("verify-brain-display-join.mjs", import.meta.url),
+  "utf8",
+);
+if (/writeFileSync|appendFileSync|renameSync/.test(publicationJoinSource)) {
+  errors.push(
+    "the normal publication join may validate Brain artifacts but must not rewrite them",
+  );
+}
 for (const directory of ["app", "components", "lib"]) {
   const stack = [new URL(`../${directory}/`, import.meta.url).pathname];
   while (stack.length) {

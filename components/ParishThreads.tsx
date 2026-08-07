@@ -966,7 +966,7 @@ export default function ParishThreads({
                         {community.ministry}
                       </span>
                       <span className="mt-2 block text-xs font-semibold">
-                        Current hosted community — not one of the 137 historical
+                        Current hosted community — not one of the {model.total} historical
                         institutions
                       </span>
                     </li>
