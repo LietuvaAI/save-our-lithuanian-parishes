@@ -1,555 +1,226 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import TimelineChart, {
-  type TimelineRow,
-  type UndatedRow,
-} from "@/components/TimelineChart";
-import siteFigures from "@/data/site-figures.json";
-import { romanCatholicParishHistory } from "@/lib/infographic-projection";
-import type { EndState } from "@/lib/end-state";
-import mapData from "@/data/map.json";
+import HistoryAliveCurve from "@/components/HistoryAliveCurve";
+import HistoryDioceseLoss from "@/components/HistoryDioceseLoss";
+import HistoryTwoWaves from "@/components/HistoryTwoWaves";
 import photosData from "@/data/photos.json";
+import { historyProjection } from "@/lib/history-projection";
 
 export const metadata: Metadata = {
-  title: "The History",
+  title: "The Rise and Loss of America’s Lithuanian Parishes",
   description:
-    "A chronological history of Roman Catholic Lithuanian parishes in the United States, from the first foundations to today.",
+    "A chronological, regional, and diocesan history of America’s Lithuanian Roman Catholic parishes from the 1880s to today.",
 };
 
-const firstParishSlug = "sv-jurgio-shenandoah-pa";
-const firstParishPhoto = photosData.parishes[firstParishSlug];
-const firstParishPoint = mapData.points.find(
-  (point) => point.slug === firstParishSlug,
-);
-const firstParishDraugasIssues = [
-  {
-    date: "March 27, 2008",
-    href: "https://draugas.org/key/2008_reg/2008-03-27-DRAUGASo.pdf",
-  },
-  {
-    date: "October 27, 2009",
-    href: "https://draugas.org/key/2009_reg/2009-10-27-DRAUGASo.pdf",
-  },
-  {
-    date: "May 30, 2020",
-    href: "https://draugas.org/key/2020_reg/2020-05-30-DRAUGAS.pdf",
-  },
-  {
-    date: "November 1, 2025",
-    href: "https://draugas.org/key/2025_reg/2025-11-01-DRAUGASo.pdf",
-  },
-];
+const shenandoahSlug = "sv-jurgio-shenandoah-pa";
+const shenandoahDrawing =
+  photosData.parishes["sv-jurgio-shenandoah-pa-line-drawing"];
 
-function FirstParishLocatorMap() {
+function Divider({ numeral, children }: { numeral: string; children: React.ReactNode }) {
   return (
-    <svg
-      viewBox="690 105 235 175"
-      role="img"
-      aria-label="Locator map for St. George Lithuanian parish in Shenandoah, Pennsylvania."
-      className="h-auto w-full"
-    >
-      {mapData.statePaths.map((path, index) => (
-        <path
-          key={index}
-          d={path}
-          fill="var(--band)"
-          stroke="var(--foreground)"
-          strokeOpacity={0.22}
-          strokeWidth={0.8}
-        />
-      ))}
-      <path
-        d={mapData.stateBorders}
-        fill="none"
-        stroke="var(--foreground)"
-        strokeOpacity={0.22}
-        strokeWidth={0.8}
-      />
-      {firstParishPoint ? (
-        <>
-          <circle
-            cx={firstParishPoint.x}
-            cy={firstParishPoint.y}
-            r="11"
-            fill="none"
-            stroke="var(--es-closed)"
-            strokeWidth="3"
-          />
-          <circle
-            cx={firstParishPoint.x}
-            cy={firstParishPoint.y}
-            r="5"
-            fill="var(--es-closed)"
-            stroke="var(--background)"
-            strokeWidth="2"
-          />
-        </>
-      ) : null}
-    </svg>
+    <div className="mb-5 flex items-center gap-3 border-b border-rule pb-2 font-sans text-ui-label font-semibold uppercase tracking-widest text-muted">
+      <span className="font-mono text-foreground">{numeral}</span>
+      <span>{children}</span>
+    </div>
   );
 }
 
-// ---------------------------------------------------------------------------
-// Data builder (server-side; every figure derives from the canonical
-// institution-history projection, never from physical-site events)
-// ---------------------------------------------------------------------------
-
-function buildData() {
-  const all = romanCatholicParishHistory;
-
-  const dated: TimelineRow[] = [];
-  const undated: UndatedRow[] = [];
-
-  for (const p of all) {
-    const founded = p.founded.year;
-    const closed = p.closed.year;
-    const endState = p.status_group as EndState;
-    if (founded) {
-      dated.push({
-        slug: p.registry_slug,
-        name: p.name,
-        city: p.city,
-        state: p.state,
-        founded,
-        closed,
-        endState,
-        detail: "",
-        profileHref: p.public_profile,
-      });
-    } else {
-      undated.push({
-        slug: p.registry_slug,
-        name: p.name,
-        city: p.city,
-        state: p.state,
-        closed,
-        endState,
-        profileHref: p.public_profile,
-      });
-    }
-  }
-
-  const standing = all.filter((p) => p.status_group === "active_parish").length;
-  const hostedMass = all.filter((p) => p.status_group === "mass_continues").length;
-  const lost = all.filter((p) => p.status_group === "closed").length;
-
-  // ── Narrative figures for the timeline section (all record-derived) ──
-  const foundedByDecade = new Map<number, number>();
-  const closedByDecade = new Map<number, number>();
-  for (const p of all) {
-    if (p.founded.year)
-      foundedByDecade.set(
-        Math.floor(p.founded.year / 10) * 10,
-        (foundedByDecade.get(Math.floor(p.founded.year / 10) * 10) ?? 0) + 1,
-      );
-    if (p.closed.year && p.status_group === "closed")
-      closedByDecade.set(
-        Math.floor(p.closed.year / 10) * 10,
-        (closedByDecade.get(Math.floor(p.closed.year / 10) * 10) ?? 0) + 1,
-      );
-  }
-  const peak = (m: Map<number, number>) =>
-    [...m.entries()].sort((a, b) => b[1] - a[1])[0] ?? [0, 0];
-  const [peakFoundDecade, peakFoundN] = peak(foundedByDecade);
-  const [peakClosedDecade, peakClosedN] = peak(closedByDecade);
-  const closedSince1990 = all.filter(
-    (p) =>
-      p.status_group === "closed" && p.closed.year && p.closed.year >= 1990,
-  ).length;
-  const closedSince2020 = all.filter(
-    (p) =>
-      p.status_group === "closed" && p.closed.year && p.closed.year >= 2020,
-  ).length;
-  const lifespans = all
-    .filter(
-      (p) =>
-        p.status_group === "closed" && p.founded.year && p.closed.year,
-    )
-    .map((p) => p.closed.year! - p.founded.year!)
-    .sort((a, b) => a - b);
-  const medianLifespan = lifespans.length
-    ? lifespans[Math.floor(lifespans.length / 2)]
-    : null;
-  const closureShareSince1990 = lost
-    ? Math.round((closedSince1990 / lost) * 100)
-    : 0;
-
-  return {
-    dated,
-    undated,
-    standing,
-    hostedMass,
-    lost,
-    total: all.length,
-    narrative: {
-      peakFoundDecade,
-      peakFoundN,
-      peakClosedDecade,
-      peakClosedN,
-      closedSince1990,
-      closedSince2020,
-      medianLifespan,
-      closureShareSince1990,
-    },
-  };
+function Stat({ value, children, red = false }: { value: number; children: React.ReactNode; red?: boolean }) {
+  return (
+    <div className="border-r border-rule px-4 py-4 last:border-r-0">
+      <p className={`font-serif text-page-title font-semibold ${red ? "text-[var(--es-closed)]" : ""}`}>{value}</p>
+      <p className="mt-1 font-sans text-small-copy leading-snug text-muted">{children}</p>
+    </div>
+  );
 }
 
-// ---------------------------------------------------------------------------
-// Page
-// ---------------------------------------------------------------------------
-
 export default function HistoryPage() {
-  const {
-    dated,
-    undated,
-    standing,
-    hostedMass,
-    lost,
-    total,
-    narrative,
-  } = buildData();
-  const fullRecordTotal = siteFigures.publicUS.records;
-  const romanCatholicMissions = siteFigures.publicUS.romanCatholicMissions;
-  const otherCommunities =
-    siteFigures.publicUS.nationalIndependentCatholicCommunities +
-    siteFigures.publicUS.protestantCommunities;
-
-  if (
-    total !== siteFigures.history.parishes ||
-    lost !== siteFigures.history.closed ||
-    standing !== siteFigures.history.status.active_parish ||
-    hostedMass !== siteFigures.history.status.mass_continues ||
-    narrative.closedSince1990 !== siteFigures.history.closedSince1990 ||
-    narrative.closedSince2020 !== siteFigures.history.closedSince2020
-  ) {
-    throw new Error("History figures do not match data/site-figures.json");
-  }
+  const { counts, decades, years, dioceses, peakYear, currentYearPoint, peakFoundedDecade, peakClosedDecade } = historyProjection;
+  const scranton = dioceses.find((diocese) => diocese.key === "Scranton")!;
+  const chicago = dioceses.find((diocese) => diocese.key === "Chicago")!;
+  const pittsburgh = dioceses.find((diocese) => diocese.key === "Pittsburgh")!;
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-12">
-      <p className="text-small-copy uppercase tracking-widest text-muted">
-        A chronological view · 1870s to today
-      </p>
-      <h1 className="mt-1 font-serif text-page-title font-semibold leading-tight">
-        The History
-      </h1>
-      <div className="mt-3 space-y-4 leading-relaxed max-w-3xl">
-        <p>
-          This history follows the{` ${total} `}Roman Catholic Lithuanian
-          parishes documented in the{" "}
-          <Link href="/parishes" className="underline hover:text-accent">
-            parish profile directory
-          </Link>
-          . Most were founded between the 1870s and 1960, in coal towns,
-          factory cities, and urban neighborhoods from Shenandoah to Chicago,
-          with the latest as recent as the 1990s.
+    <article className="mx-auto max-w-5xl px-4 pb-12 pt-8">
+      <header className="max-w-4xl">
+        <p className="font-sans text-small-copy uppercase tracking-widest text-muted">
+          A chronological view · 1880s to today
         </p>
-        <p className="text-body-copy text-muted">
-          The complete profile directory contains {fullRecordTotal} entries. Its other{" "}
-          {fullRecordTotal - total} entries are {romanCatholicMissions} Roman
-          Catholic missions and {otherCommunities} National, independent, or
-          Protestant communities, which are counted separately from this
-          parish history.
+        <h1 className="mt-1 font-serif text-outcomes-title font-semibold tracking-tight">
+          The Rise and Loss of America&rsquo;s Lithuanian Parishes
+        </h1>
+        <p className="mt-3 max-w-3xl font-serif text-lead-copy leading-relaxed text-muted">
+          From Pennsylvania coal towns to the industrial cities of the Midwest
+          and Northeast, {counts.total} Roman Catholic parish institutions
+          formed a national Lithuanian network. This is how that network grew,
+          reached its height, and contracted.
         </p>
-        <p>
-          Of the {total}, {lost} parish institutions are closed. Their church
-          buildings have separate histories: some were demolished, some were
-          transferred or repurposed, and some communities worshipped at more
-          than one site.
+        <p className="mt-3 font-sans text-support-copy text-muted">
+          Parish-only history: missions and physical church sites are counted
+          in their own canonical populations. Every figure below is derived
+          from projection <span className="font-mono">{historyProjection.revision}</span>.
         </p>
-        <p
-          className="font-serif text-subsection-title"
-          style={{ color: "var(--es-active)" }}
-        >
-          {standing} still stand as Lithuanian parishes today
-          <span className="text-muted font-sans text-card-title">
-            {" "}&mdash; and at {hostedMass} more churches, a Lithuanian Mass
-            continues within a parish that is no longer Lithuanian.
-          </span>
-        </p>
-        <p className="text-body-copy text-muted">
-          For the present-day pastoral network &mdash; including missions,
-          hosted Lithuanian Masses, communities, and religious houses &mdash;
-          see{" "}
-          <Link
-            href="/lithuanian-catholic-life-today"
-            className="font-medium text-foreground underline hover:text-accent"
-          >
-            Lithuanian Catholic Life Today
-          </Link>
-          .
-        </p>
-      </div>
+      </header>
 
-      {/* ── The First Parish ── */}
-      <aside className="mt-10 border-y border-rule py-7">
-        <div className="grid gap-7 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.35fr)] md:items-center">
-          <figure className="min-w-0">
+      <section id="beginning" className="scroll-mt-8 pt-12">
+        <Divider numeral="I">The beginning</Divider>
+        <h2 className="font-serif text-section-title font-semibold">
+          It began in Pennsylvania coal country
+        </h2>
+        <div className="mt-6 grid items-start gap-8 md:grid-cols-[minmax(15rem,0.72fr)_minmax(0,1.28fr)]">
+          <figure>
             <div className="relative aspect-[4/5] overflow-hidden bg-band">
               <Image
-                src={firstParishPhoto.src}
-                alt={firstParishPhoto.alt}
+                src={shenandoahDrawing.src}
+                alt={shenandoahDrawing.alt}
                 fill
-                className="object-contain"
-                sizes="(min-width: 768px) 36vw, 100vw"
+                className="object-contain p-3"
+                sizes="(min-width: 768px) 34vw, 100vw"
                 priority
                 unoptimized
               />
             </div>
-            <figcaption className="mt-2 text-small-copy leading-relaxed text-muted">
-              <a
-                href={firstParishPhoto.evidenceUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="underline hover:text-foreground"
-              >
-                {firstParishPhoto.attribution}
-              </a>
+            <figcaption className="mt-2 font-sans text-small-copy leading-relaxed text-muted">
+              {shenandoahDrawing.attribution}
             </figcaption>
           </figure>
-
-          <div className="min-w-0">
-            <p className="text-small-copy font-semibold uppercase text-muted">
-              The beginning
+          <div className="space-y-4 font-serif text-lead-copy leading-relaxed">
+            <p>
+              Pennsylvania contains {counts.pennsylvania} of the {counts.total}{" "}
+              documented Roman Catholic Lithuanian parishes. The earliest dated
+              foundations in the state appear at Mount Carmel in 1886, Plymouth
+              and Mahanoy City in 1888, and Pittston in 1890.
             </p>
-            <h2 className="mt-1 font-serif text-section-title font-semibold leading-tight">
-              The first Lithuanian parish in America
-            </h2>
-            <div className="mt-4 grid grid-cols-[8rem_minmax(0,1fr)] items-center gap-4 border-y border-rule py-3">
-              <FirstParishLocatorMap />
-              <div>
-                <p className="text-small-copy font-semibold uppercase text-muted">
-                  Where the parish story begins
-                </p>
-                <p className="mt-1 font-serif text-subsection-title font-semibold">
-                  Shenandoah, Pennsylvania
-                </p>
-              </div>
-            </div>
-            <p className="mt-4 leading-relaxed">
-              St. George&rsquo;s (Šv. Jurgio) in Shenandoah, Pennsylvania
-              &mdash; organized by Father Andrius Strupinskas, SJ, a Jesuit
-              who fled Lithuania in 1869. The founding date is contested:
-              sources cite 1872, 1874, 1886, and 1891, reflecting the
-              parish&rsquo;s complicated origins as a joint Polish-Lithuanian
-              congregation that reorganized as Lithuanian. The church building
-              dates to 1893. It was closed in 2006 and demolished in
-              2009&ndash;2010 &mdash; the diocese took approximately $1M in
-              parish savings despite a credible $360K repair estimate,
-              landmark status, and a community treaty.
+            <p>
+              St. George in Shenandoah followed in 1891. Its Lithuanian church
+              was dedicated in 1893, and the parish became a central symbol of
+              the first large Lithuanian settlement in the United States. The
+              parish closed in 2006; the church was demolished in 2009.
             </p>
-
-            <Link
-              href={`/parishes/${firstParishSlug}`}
-              className="mt-4 inline-block font-semibold underline hover:text-accent"
-            >
-              Read the full St. George parish profile
+            <p>
+              The regional comparison makes the later pattern visible. Of the
+              {` ${counts.coalRegion.diocese_owned} `}diocese-owned parish
+              institutions in the canonical northeastern Pennsylvania coal-region
+              set, {counts.coalRegion.diocese_ended} ended; three remain in other
+              documented outcomes. The set&rsquo;s one community-owned comparison
+              remains standing.
+            </p>
+            <p className="font-sans text-support-copy text-muted">
+              This is an institutional and ownership comparison, not a claim
+              that ownership alone caused an outcome.
+            </p>
+            <Link href={`/parishes/${shenandoahSlug}`} className="inline-block font-sans text-body-copy font-semibold underline hover:text-accent">
+              Read the St. George parish history and its cited evidence
             </Link>
-
-            <div className="mt-5 border-t border-rule pt-4 text-small-copy leading-relaxed text-muted">
-              <p className="font-semibold text-foreground">Sources</p>
-              <p className="mt-1">
-                <a
-                  href="https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="underline hover:text-foreground"
-                >
-                  Algis Lukas, <em>Lietuvių Kultūrinis Paveldas Amerikoje</em>{" "}
-                  (2009)
-                </a>
-                {" · "}
-                {firstParishDraugasIssues.map((issue, index) => (
-                  <span key={issue.href}>
-                    {index === 0 ? "Draugas: " : ", "}
-                    <a
-                      href={issue.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="underline hover:text-foreground"
-                    >
-                      {issue.date}
-                    </a>
-                  </span>
-                ))}
-                {" · "}
-                <Link
-                  href={`/parishes/${firstParishSlug}`}
-                  className="underline hover:text-foreground"
-                >
-                  Parish case file and citations
-                </Link>
-              </p>
-            </div>
+            <p className="border-t border-rule pt-3 font-sans text-small-copy text-muted">
+              Source image: Jonas Žilius, <em>Lietuviai Amerikoj</em> (1899),
+              public domain. Regional figures and parish dates follow the
+              canonical projection; detailed evidence remains attached to each
+              parish profile.
+            </p>
           </div>
         </div>
-      </aside>
+      </section>
 
-      {/* ── The exhibit: decade pulse + timeline (one title system) ── */}
-      <section className="mt-14">
-        <p className="text-small-copy font-semibold uppercase text-muted">
-          Two waves across a century
-        </p>
+      <section id="two-waves" className="scroll-mt-8 pt-14">
+        <Divider numeral="II">Two waves across a century</Divider>
         <h2 className="font-serif text-section-title font-semibold">
           A half-century of building; a half-century of closing
         </h2>
-        <p className="mt-2 max-w-3xl leading-relaxed text-muted">
-          The same parish population rises through the immigrant building
-          wave, then turns downward through successive decades of closure.
-          The pattern is not past tense.
+        <p className="mt-3 max-w-3xl font-serif text-lead-copy leading-relaxed text-muted">
+          Each square is one parish institution. Black marks record dated
+          foundations; red marks record dated formal closures. Select any mark
+          to open the corresponding parish profile.
         </p>
-
         <div className="mt-6 grid grid-cols-2 border-y border-rule sm:grid-cols-4">
-          <div className="border-b border-r border-rule px-3 py-4 sm:border-b-0">
-            <p className="font-serif text-page-title font-semibold">
-              {narrative.peakFoundN}
-            </p>
-            <p className="mt-1 text-small-copy leading-snug text-muted">
-              founded in the {narrative.peakFoundDecade}s
-            </p>
-          </div>
-          <div className="border-b border-rule px-3 py-4 sm:border-b-0 sm:border-r">
-            <p
-              className="font-serif text-page-title font-semibold"
-              style={{ color: "var(--es-closed)" }}
-            >
-              {narrative.peakClosedN}
-            </p>
-            <p className="mt-1 text-small-copy leading-snug text-muted">
-              closed in the {narrative.peakClosedDecade}s
-            </p>
-          </div>
-          <div className="border-r border-rule px-3 py-4">
-            <p className="font-serif text-page-title font-semibold">
-              {narrative.closedSince1990}
-            </p>
-            <p className="mt-1 text-small-copy leading-snug text-muted">
-              closures dated since 1990
-            </p>
-          </div>
-          <div className="px-3 py-4">
-            <p className="font-serif text-page-title font-semibold">
-              {narrative.closedSince2020}
-            </p>
-            <p className="mt-1 text-small-copy leading-snug text-muted">
-              closures dated since 2020
-            </p>
-          </div>
+          <Stat value={peakFoundedDecade.founded.length}>{`founded in the ${peakFoundedDecade.decade}s`}</Stat>
+          <Stat value={peakClosedDecade.closed.length} red>{`closed in the ${peakClosedDecade.decade}s`}</Stat>
+          <Stat value={counts.closedSince1990}>formal closures dated since 1990</Stat>
+          <Stat value={counts.closedSince2020}>formal closures dated since 2020</Stat>
         </div>
-
-        <div className="mt-6 grid border-y border-rule text-small-copy leading-snug text-muted sm:grid-cols-4 sm:divide-x sm:divide-rule">
-          <p className="border-b border-rule px-3 py-3 sm:border-b-0">
-            <span className="mr-2 font-semibold text-foreground">↑</span>
-            Above the line: parishes founded
-          </p>
-          <p className="border-b border-rule px-3 py-3 sm:border-b-0">
-            <span
-              className="mr-2 font-semibold"
-              style={{ color: "var(--es-closed)" }}
-            >
-              ↓
-            </span>
-            Below the line: parishes closed
-          </p>
-          <p className="border-b border-rule px-3 py-3 sm:border-b-0">
-            <span className="mr-2 font-semibold text-foreground">→</span>
-            Each bar: one parish through time
-          </p>
-          <p className="px-3 py-3">
-            <span className="mr-2 font-semibold text-foreground">×</span>
-            A fade means the parish&rsquo;s present status is unknown
-          </p>
-        </div>
-
-        <div className="mt-6">
-          <TimelineChart rows={dated} undated={undated} />
-        </div>
-
-        <div className="mt-6 grid border-y border-rule sm:grid-cols-2 sm:divide-x sm:divide-rule">
-          {narrative.medianLifespan != null && (
-            <div className="border-b border-rule px-3 py-4 sm:border-b-0">
-              <p
-                className="font-serif text-page-title font-semibold"
-                style={{ color: "var(--es-closed)" }}
-              >
-                {narrative.medianLifespan} years
-              </p>
-              <p className="mt-1 text-small-copy leading-snug text-muted">
-                median lifespan among closed parishes
-              </p>
-            </div>
-          )}
-          <div className="px-3 py-4">
-            <p
-              className="font-serif text-page-title font-semibold"
-              style={{ color: "var(--es-closed)" }}
-            >
-              {narrative.closureShareSince1990}%
-            </p>
-            <p className="mt-1 text-small-copy leading-snug text-muted">
-              of all closed parishes have a dated closure since 1990
-            </p>
-          </div>
-        </div>
-
-        <p className="mt-4 text-small-copy text-muted border-t border-rule pt-3">
-          Sources include Draugas 1909&ndash;2026, Wolkovich-Valkavičius
-          (1998), Michelsonas (1961), Lukas (2009), and contemporary parish,
-          diocesan, and public documents.{" "}
-          <Link href="/about-the-data" className="underline hover:text-foreground">
-            Sources and methods
-          </Link>
-          .
+        <div className="mt-7"><HistoryTwoWaves decades={decades} /></div>
+        <p className="mt-4 border-t border-rule pt-3 font-sans text-small-copy text-muted">
+          {counts.foundedUndated} parish founding years and {counts.formalClosureUndated} formal-closure years are not established and therefore do not appear as dated squares.
         </p>
       </section>
 
-      <nav
-        aria-label="Related history views"
-        className="mt-12 border-y border-rule py-5"
-      >
-        <p className="text-small-copy font-semibold uppercase text-muted">
-          Continue exploring
+      <section id="century-arc" className="scroll-mt-8 pt-14">
+        <Divider numeral="III">The arc of the century</Divider>
+        <h2 className="font-serif text-section-title font-semibold">
+          From expansion to long contraction
+        </h2>
+        <p className="mt-3 max-w-3xl font-serif text-lead-copy leading-relaxed text-muted">
+          The dated record reaches a high point of {peakYear.alive} living
+          parish institutions in {peakYear.year}. By {currentYearPoint.year},
+          {` ${currentYearPoint.alive} `}have a dated beginning without a dated
+          institutional ending. That is a historical-life measure—not the count
+          of active Lithuanian-led parishes today.
         </p>
-        <div className="mt-3 grid gap-4 sm:grid-cols-2 sm:divide-x sm:divide-rule">
-          <div className="sm:pr-5">
-            <Link
-              href="/where-every-parish-ended-up"
-              className="font-serif text-subsection-title font-semibold underline hover:text-accent"
-            >
-              Lithuanian Churches Through Time
-            </Link>
-            <p className="mt-1 text-body-copy leading-relaxed text-muted">
-              Follow each church community from its documented building or
-              parish baseline to its present condition.
-            </p>
-          </div>
-          <div className="sm:pl-5">
-            <Link
-              href="/by-diocese"
-              className="font-serif text-subsection-title font-semibold underline hover:text-accent"
-            >
-              By Diocese
-            </Link>
-            <p className="mt-1 text-body-copy leading-relaxed text-muted">
-              Compare parish histories, closure outcomes, and present holdings
-              diocese by diocese.
-            </p>
-          </div>
+        <div className="mt-7"><HistoryAliveCurve years={years} /></div>
+        <div className="mt-8 grid gap-5 border-y border-rule py-5 md:grid-cols-3 md:divide-x md:divide-rule">
+          <Era title="The building wave">
+            By the end of the 1920s, {counts.foundedBy1929} parish institutions
+            had a dated foundation. Migration, mines, mills, and urban
+            neighborhoods produced the dense national network.
+          </Era>
+          <Era title="War and renewal">
+            The middle decades added fewer foundations, but the parish network
+            remained near its greatest extent through the postwar period.
+          </Era>
+          <Era title="The long contraction">
+            Formal closures accelerated late in the century: {counts.closedSince1990}
+            of today&rsquo;s closed parishes have closure dates in 1990 or later.
+          </Era>
         </div>
-        <div className="mt-4 border-t border-rule pt-4">
-          <Link
-            href="/where-parish-life-continued"
-            className="font-serif text-subsection-title font-semibold underline hover:text-accent"
-          >
-            Where Parish Life Continued
-          </Link>
-          <p className="mt-1 max-w-2xl text-body-copy leading-relaxed text-muted">
-            Follow mergers, successors, and canonical continuity while keeping
-            distinct parish institutions separate.
+        <p className="mt-4 font-sans text-small-copy leading-relaxed text-muted">
+          Method: for each year, the curve subtracts every dated institutional
+          ending from every dated foundation. The {counts.foundedUndated}
+          undated founding years cannot enter the curve; {counts.formalClosureUndated}
+          formal closures have no dated position. Current canonical status is
+          shown on parish profiles and the Outcomes view.
+        </p>
+      </section>
+
+      <section id="loss-by-diocese" className="scroll-mt-8 pt-14">
+        <Divider numeral="IV">The loss, diocese by diocese</Divider>
+        <h2 className="font-serif text-section-title font-semibold">
+          The national contraction was administered locally
+        </h2>
+        <div className="mt-3 max-w-4xl space-y-3 font-serif text-lead-copy leading-relaxed text-muted">
+          <p>
+            The canonical jurisdiction field places these parishes in {counts.namedDioceses}{" "}
+            named dioceses and archdioceses. {counts.diocesesWithoutActive} now
+            have no active Lithuanian parish. Across the full parish population,
+            {` ${counts.endedOrTransferred} of ${counts.total} `}are formally
+            closed or live on through another community.
+          </p>
+          <p>
+            The Diocese of Scranton has {scranton.total} documented Lithuanian
+            parishes and none active; the Archdiocese of Chicago has one active
+            parish among {chicago.total}; and all {pittsburgh.total} documented
+            parishes in the Diocese of Pittsburgh are closed or transferred.
           </p>
         </div>
-      </nav>
+        <div className="mt-7"><HistoryDioceseLoss dioceses={dioceses} currentYear={historyProjection.currentYear} /></div>
+      </section>
+
+      <footer className="mt-14 border-t border-rule pt-5 font-sans text-support-copy text-muted">
+        <Link href="/about-the-data" className="font-medium text-foreground underline hover:text-accent">Read the methodology and source policy</Link>
+        {" · "}
+        <Link href="/where-every-parish-ended-up" className="font-medium text-foreground underline hover:text-accent">Explore current institutional outcomes</Link>
+        {" · "}
+        <Link href="/parishes" className="font-medium text-foreground underline hover:text-accent">Open all profiles</Link>
+      </footer>
+    </article>
+  );
+}
+
+function Era({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div className="md:px-5 first:pl-0 last:pr-0">
+      <h3 className="font-serif text-subsection-title font-semibold">{title}</h3>
+      <p className="mt-2 font-sans text-body-copy leading-relaxed text-muted">{children}</p>
     </div>
   );
 }

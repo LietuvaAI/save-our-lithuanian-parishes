@@ -67,11 +67,19 @@ const typographySurfaces = [
     "font-sans text-body-copy",
     "font-serif text-card-title",
   ]],
-  ["components/TimelineChart.tsx", [
+  ["components/HistoryAliveCurve.tsx", [
     "font-mono text-ui-label",
     "font-sans text-ui-label",
   ]],
-  ["components/DioceseMap.tsx", ["font-sans text-ui-label"]],
+  ["components/HistoryTwoWaves.tsx", [
+    "font-mono text-ui-label",
+    "font-sans text-ui-label",
+  ]],
+  ["components/HistoryDioceseLoss.tsx", [
+    "font-mono text-ui-label",
+    "font-sans text-ui-label",
+    "font-serif text-card-title",
+  ]],
 ];
 for (const [file, requiredFragments] of typographySurfaces) {
   const source = fs.readFileSync(path.join(ROOT, file), "utf8");
@@ -87,7 +95,7 @@ for (const [file, requiredFragments] of typographySurfaces) {
 
 for (const file of [
   "components/NationalRecordGraphic.tsx",
-  "components/DioceseClosureRanking.tsx",
+  "components/HistoryDioceseLoss.tsx",
   "components/CurrentLifeFactSheet.tsx",
 ]) {
   const source = fs.readFileSync(path.join(ROOT, file), "utf8");
