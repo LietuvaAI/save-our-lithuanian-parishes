@@ -184,19 +184,26 @@ export default function HistoryPage() {
 
       <section id="loss-by-diocese" className="scroll-mt-8 pt-12">
         <Divider numeral="IV">The loss, diocese by diocese</Divider>
-        <div className="space-y-3 font-serif text-lead-copy leading-[1.7]">
+        <h2 className="font-serif text-section-title font-semibold text-[var(--es-closed)]">
+          {counts.diocesesWithoutActive} of {counts.namedDioceses} dioceses have no active Lithuanian parish left
+        </h2>
+        <div className="mt-3 space-y-3 font-serif text-lead-copy leading-[1.7]">
           <p>
-            The canonical jurisdiction field places these parishes in {counts.namedDioceses}{" "}
-            named dioceses and archdioceses. {counts.diocesesWithoutActive} now
-            have no active Lithuanian parish. Across the full parish population,
-            {` ${counts.endedOrTransferred} of ${counts.total} `}are formally
-            closed or live on through another community.
+            The loss was not evenly spread — it followed the geography of the
+            founding. The dioceses that held the most Lithuanian parish life
+            lost the most of it: Scranton, which once held {scranton.total}{" "}
+            parishes, kept none active; Chicago kept one of {chicago.total};
+            Pittsburgh lost all {pittsburgh.total}. Of the {counts.namedDioceses}{" "}
+            dioceses that ever held a Lithuanian parish, {counts.diocesesWithoutActive}{" "}
+            now have none — and at {counts.endedOrTransferred} of the {counts.total}{" "}
+            parishes, Lithuanian parish life has formally closed or been
+            transferred to another community.
           </p>
           <p>
-            The Diocese of Scranton has {scranton.total} documented Lithuanian
-            parishes and none active; the Archdiocese of Chicago has one active
-            parish among {chicago.total}; and all {pittsburgh.total} documented
-            parishes in the Diocese of Pittsburgh are closed or transferred.
+            Each diocese below is shaded by how much of its Lithuanian parish
+            life is gone — drag the year slider to watch the map turn from green
+            to red as the closures accumulate, and hover any diocese for its full
+            count.
           </p>
         </div>
         <div className="mt-7"><HistoryDioceseLoss dioceses={dioceses} currentYear={historyProjection.currentYear} /></div>
