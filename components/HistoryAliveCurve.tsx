@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
-import type { HistoryYear } from "@/lib/history-projection";
+import { useEffect, useMemo, useRef, useState } from "react";
+import type { HistoryParish, HistoryYear } from "@/lib/history-projection";
 
 const WIDTH = 920;
 const HEIGHT = 330;
@@ -10,10 +10,14 @@ const MARGIN = { top: 34, right: 28, bottom: 42, left: 48 };
 
 export default function HistoryAliveCurve({
   years,
+  parishes,
 }: {
   years: readonly HistoryYear[];
+  parishes: readonly HistoryParish[];
 }) {
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
+  const [rosterOpen, setRosterOpen] = useState(false);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
   const minYear = years[0]?.year ?? 1880;
   const maxYear = years.at(-1)?.year ?? 2026;
   const maxAlive = Math.max(...years.map((point) => point.alive), 1);
@@ -35,8 +39,34 @@ export default function HistoryAliveCurve({
   const selected = years.find(
     (point) => point.year === (selectedYear ?? 1960),
   ) ?? null;
+  const aliveRoster = useMemo(() => {
+    if (!selected) return [];
+    return parishes
+      .filter(
+        (parish) =>
+          parish.foundedYear != null &&
+          parish.foundedYear <= selected.year &&
+          (parish.endedYear == null || parish.endedYear > selected.year),
+      )
+      .sort((a, b) => a.canonicalName.localeCompare(b.canonicalName));
+  }, [parishes, selected]);
   const yTicks = [0, 30, 60, 90, 120];
   const yearTicks = [1880, 1900, 1920, 1940, 1960, 1980, 2000, 2020, maxYear];
+
+  useEffect(() => {
+    if (!rosterOpen) return;
+    closeButtonRef.current?.focus();
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setRosterOpen(false);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [rosterOpen]);
+
+  const openRoster = (year: number) => {
+    setSelectedYear(year);
+    setRosterOpen(true);
+  };
 
   return (
     <div>
@@ -100,9 +130,15 @@ export default function HistoryAliveCurve({
                 tabIndex={0}
                 role="button"
                 aria-label={`${point.year}: ${point.alive} parishes alive; ${point.founded.length} founded; ${point.ended.length} ended`}
-                onClick={() => setSelectedYear(point.year)}
+                onClick={() => openRoster(point.year)}
                 onMouseEnter={() => setSelectedYear(point.year)}
                 onFocus={() => setSelectedYear(point.year)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    openRoster(point.year);
+                  }
+                }}
               />
             );
           })}
@@ -135,9 +171,18 @@ export default function HistoryAliveCurve({
             {selected ? selected.year : "Select a point"}
           </p>
           {selected ? (
-            <p className="mt-1 font-serif text-section-title font-semibold">
-              {selected.alive} parishes alive
-            </p>
+            <>
+              <p className="mt-1 font-serif text-section-title font-semibold">
+                {selected.alive} parishes alive
+              </p>
+              <button
+                type="button"
+                onClick={() => openRoster(selected.year)}
+                className="mt-2 font-sans text-support-copy font-semibold underline decoration-rule underline-offset-4 hover:text-accent"
+              >
+                View the full parish list
+              </button>
+            </>
           ) : null}
         </div>
         <EventList title="Founded" entries={selected?.founded ?? []} />
@@ -149,6 +194,64 @@ export default function HistoryAliveCurve({
         <Key color="var(--es-closed)" label="ending event" />
         <Key color="var(--mark-community)" label="both in the same year" />
       </div>
+
+      {rosterOpen && selected ? (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/45 p-4"
+          onMouseDown={(event) => {
+            if (event.currentTarget === event.target) setRosterOpen(false);
+          }}
+        >
+          <section
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="alive-roster-title"
+            className="max-h-[86vh] w-full max-w-4xl overflow-y-auto border border-rule bg-background shadow-2xl"
+          >
+            <header className="sticky top-0 z-10 flex items-start justify-between gap-5 border-b border-rule bg-background px-5 py-4 sm:px-7">
+              <div>
+                <p className="font-mono text-ui-label uppercase tracking-[0.15em] text-muted">
+                  {selected.year} · dated institutional histories
+                </p>
+                <h2 id="alive-roster-title" className="mt-1 font-serif text-page-title font-semibold">
+                  {aliveRoster.length} parishes alive
+                </h2>
+              </div>
+              <button
+                ref={closeButtonRef}
+                type="button"
+                onClick={() => setRosterOpen(false)}
+                className="rounded border border-rule px-3 py-2 font-sans text-support-copy font-semibold hover:border-foreground"
+              >
+                Close
+              </button>
+            </header>
+
+            <div className="px-5 py-5 sm:px-7 sm:py-6">
+              <p className="max-w-3xl font-serif text-body-copy leading-[1.7] text-muted">
+                This roster includes every parish with a documented foundation
+                on or before {selected.year} and no documented institutional
+                ending by that year. A parish without an established founding
+                year cannot be placed on this curve.
+              </p>
+              <ol className="mt-5 grid gap-x-8 gap-y-0 border-t border-rule md:grid-cols-2">
+                {aliveRoster.map((parish) => (
+                  <li key={parish.slug} className="border-b border-rule py-3">
+                    <Link href={parish.profileHref} className="group block">
+                      <span className="block font-serif text-card-title font-semibold group-hover:text-accent">
+                        {parish.canonicalName}
+                      </span>
+                      <span className="mt-1 block font-sans text-small-copy text-muted">
+                        {parish.city}, {parish.state} · founded {parish.foundedYear}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </section>
+        </div>
+      ) : null}
     </div>
   );
 }

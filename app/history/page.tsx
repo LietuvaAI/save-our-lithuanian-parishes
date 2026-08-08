@@ -157,7 +157,9 @@ export default function HistoryPage() {
           institutional ending. That is a historical-life measure—not the count
           of active Lithuanian-led parishes today.
         </p>
-        <div className="mt-7"><HistoryAliveCurve years={years} /></div>
+        <div className="mt-7">
+          <HistoryAliveCurve years={years} parishes={historyProjection.parishes} />
+        </div>
         <div className="mt-8 grid gap-5 border-y border-rule py-5 md:grid-cols-3 md:divide-x md:divide-rule">
           <Era title="The building wave">
             By the end of the 1920s, {counts.foundedBy1929} parish institutions
@@ -174,11 +176,12 @@ export default function HistoryPage() {
           </Era>
         </div>
         <p className="mt-4 font-sans text-small-copy leading-relaxed text-muted">
-          Method: for each year, the curve subtracts every dated institutional
-          ending from every dated foundation. The {counts.foundedUndated}
-          undated founding years cannot enter the curve; {counts.formalClosureUndated}
-          formal closures have no dated position. Current canonical status is
-          shown on parish profiles and the Outcomes view.
+          Method: for each year, the curve counts parish institutions with a
+          dated foundation on or before that year and no dated institutional
+          ending by that year. The {counts.foundedUndated} undated founding years
+          cannot enter the curve; {counts.formalClosureUndated} formal closures
+          have no dated position. Current canonical status is shown on parish
+          profiles and the Outcomes view.
         </p>
       </section>
 

@@ -86,13 +86,12 @@ const years: HistoryYear[] = [];
 for (let year = 1880; year <= currentYear; year += 1) {
   const founded = parishes.filter((parish) => parish.foundedYear === year);
   const ended = parishes.filter((parish) => parish.endedYear === year);
-  const alive =
-    parishes.filter(
-      (parish) => parish.foundedYear != null && parish.foundedYear <= year,
-    ).length -
-    parishes.filter(
-      (parish) => parish.endedYear != null && parish.endedYear <= year,
-    ).length;
+  const alive = parishes.filter(
+    (parish) =>
+      parish.foundedYear != null &&
+      parish.foundedYear <= year &&
+      (parish.endedYear == null || parish.endedYear > year),
+  ).length;
   years.push({ year, alive, founded, ended });
 }
 
@@ -139,9 +138,9 @@ const statusCounts = Object.fromEntries(
   ]),
 ) as Record<EndStateGroup, number>;
 
-const peakYear = years.reduce((peak, year) =>
-  year.alive >= peak.alive ? year : peak,
-);
+const peakAlive = Math.max(...years.map((year) => year.alive));
+const peakYears = years.filter((year) => year.alive === peakAlive);
+const peakYear = peakYears[Math.floor(peakYears.length / 2)]!;
 const peakFoundedDecade = decades.reduce((peak, decade) =>
   decade.founded.length > peak.founded.length ? decade : peak,
 );
