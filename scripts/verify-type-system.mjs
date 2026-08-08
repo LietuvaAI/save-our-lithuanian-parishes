@@ -119,6 +119,11 @@ const allProfilesContract = [
   [profilesTimeline, "py-[9px]", "compact sticky toolbar"],
   [profilesTimeline, "text-small-copy text-muted", "11.5px status key"],
   [profilesTimeline, "font-mono text-small-copy", "IBM Plex Mono A–Z index"],
+  [profilesTimeline, "index * 20", "uncluttered 20-year timeline ticks"],
+  [profilesTimeline, "min-h-11", "compact profile lanes"],
+  [profilesTimeline, "font-serif text-body-copy", "13.5px profile lane names"],
+  [profilesTimeline, "h-1 -translate-y-1/2", "compact four-pixel lifespan bars"],
+  [profilesTimeline, "block truncate", "single-line profile lane titles"],
 ];
 for (const [source, fragment, label] of allProfilesContract) {
   if (!source.includes(fragment)) errors.push(`All Profiles: missing ${label}`);
