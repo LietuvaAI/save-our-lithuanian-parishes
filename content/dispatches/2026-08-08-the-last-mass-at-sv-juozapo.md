@@ -5,7 +5,9 @@ date: 2026-08-08
 substackUrl: https://blog.saveourlithuanianparishes.org/p/the-last-mass-at-sv-juozapo
 archivedAt: 2026-08-08
 ---
-![](https://substackcdn.com/image/fetch/$s_!B1CG!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5a55df0b-dc56-41a4-8938-83b831385f4a_3720x3021.jpeg)Šv. Juozapo (St. Joseph’s), 46 Congress Avenue, Waterbury. Photo: Farragutful, Wikimedia Commons, CC BY-SA 4.0.
+![](https://substackcdn.com/image/fetch/$s_!31G5!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F16325468-c35a-4557-a627-e7befb3d03fe_675x900.jpeg)
+
+*Šv. Juozapo (St. Joseph’s), 46 Congress Avenue, Waterbury — “First Lithuanian Parish In New England, Est. 1894.” Photo: Consulate General of Lithuania in New York, used with permission.*
 
 The choir sang first. At half past nine on the morning of Sunday, August 2, in the brick church at 46 Congress Avenue in Waterbury, a short concert honored Aleksandras Aleksis, organist and choir director at Šv. Juozapo — St. Joseph’s — from 1924 to 1974 and the composer of the Knights of Lithuania anthem. The Mass followed at ten. The century-old organ played, the readings were in Lithuanian and English, and people wept. It was the last Mass in the church. Afterward, Monsignor Vittorio Guerrera performed [the ceremony that formally closed the building](https://www.primepublishers.com/towntimesnews/news/community_events/final-mass-to-be-held-at-oldest-lithuanian-church-in-new-england-august-2/article_848335ac-44e6-43ec-b0a4-e30b4dfc58ec.html).
 
@@ -31,12 +33,10 @@ The church at 46 Congress Avenue is closed, still standing, and still in Catholi
 
 ### Sources
 
-**The last Mass and the closing ceremony:** [Final Mass to be Held at Oldest Lithuanian Church in New England August 2](https://www.primepublishers.com/towntimesnews/news/community_events/final-mass-to-be-held-at-oldest-lithuanian-church-in-new-england-august-2/article_848335ac-44e6-43ec-b0a4-e30b4dfc58ec.html) — Town Times (Prime Publishers) · “Lietuvos Vyčių suvažiavimas — atsisveikinant su šventove,” *Draugas*, August 8, 2026, pp. 8–9 (the choral tribute, the closing ceremony, the windows, and Dana Ringienė-Šarkienė)
+**The last Mass and the closing ceremony:** [“Lietuvos Vyčių suvažiavimas — atsisveikinant su šventove,” Draugas, August 8, 2026, pp. 8–9](https://www.draugas.org/key/2026_reg/2026-08-08-DRAUGAS.pdf) · [Final Mass to be Held at Oldest Lithuanian Church in New England August 2](https://www.primepublishers.com/towntimesnews/news/community_events/final-mass-to-be-held-at-oldest-lithuanian-church-in-new-england-august-2/article_848335ac-44e6-43ec-b0a4-e30b4dfc58ec.html) — Town Times (Prime Publishers)
 
 **The closure and the appeal:** [Parishioners fight Waterbury church closure](https://www.wfsb.com/2023/08/28/parishioners-fight-waterbury-church-closure/) — WFSB, Aug. 28, 2023 · [Parishioners appeal to Vatican after Waterbury Catholic church closure](https://www.fox61.com/article/news/local/new-haven-county/waterbury/waterbury-church-closure-sparks-appeal-archdiocese-grapples-priest-shortage/520-40c9e570-1a02-48b2-86fa-5f2fa6da6c51) — FOX61
 
-**The campus sale:** [Purchase and Sale of Former St. Joseph Parish Corp. Properties, RFP 8610-Wtby](https://www.highergov.com/sl/contract-opportunity/ct-purchase-and-sale-of-former-st-joseph-p-56659918/) — City of Waterbury, Oct. 2025
-
-**The Lithuanian press of record:** [Every Draugas mention of this parish since 1909](https://saveourlithuanianparishes.org/parishes/sv-juozapo-waterbury-ct/draugas)
+**The campus sale:** [Purchase and Sale of Former St. Joseph Parish Corp. Properties, RFP 8610-Wtby](https://www.highergov.com/sl/contract-opportunity/ct-purchase-and-sale-of-former-st-joseph-p-56659918/) — City of Waterbury, Oct. 2025**The record:** [The parish’s case record](https://saveourlithuanianparishes.org/parishes/sv-juozapo-waterbury-ct) · [Documented US closure reversals](https://saveourlithuanianparishes.org/reversals)
 
 **The record:** [The parish’s case record](https://saveourlithuanianparishes.org/parishes/sv-juozapo-waterbury-ct) · [Documented US closure reversals](https://saveourlithuanianparishes.org/reversals)
