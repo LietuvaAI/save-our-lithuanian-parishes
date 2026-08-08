@@ -321,7 +321,7 @@
       "entity": "Divine Providence (Dievo Apvaizdos)",
       "place": "Southfield, Michigan",
       "parishLink": "/parishes/dievo-apvaizdos-southfield-mi",
-      "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/further-down-the-path-what-divine",
+      "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/the-numbers-behind-divine-providence",
       "actionUrl": "https://restructuring.aod.org/planning-area-8",
       "actionLabel": "Review Planning Area 8",
       "since": "2026",
@@ -350,10 +350,6 @@
           "url": "https://blog.saveourlithuanianparishes.org/p/the-parish-brings-christ"
         },
         {
-          "title": "How You Can Help Save Detroit's Divine Providence Lithuanian Parish",
-          "url": "https://blog.saveourlithuanianparishes.org/p/how-you-can-help-save-our-lithuanian"
-        },
-        {
           "title": "By the Numbers: The Archdiocese of Detroit's 13 Ethnic Parishes",
           "url": "https://blog.saveourlithuanianparishes.org/p/who-the-archdioceses-ethnic-parishes"
         },
@@ -364,10 +360,6 @@
         {
           "title": "Do Your Part for Divine Providence",
           "url": "https://blog.saveourlithuanianparishes.org/p/do-your-part-for-divine-providence"
-        },
-        {
-          "title": "Further Down the Path: What Divine Providence Can See from Connecticut and Queens",
-          "url": "https://blog.saveourlithuanianparishes.org/p/further-down-the-path-what-divine"
         }
       ],
       "sources": [
@@ -1320,5 +1312,5 @@
       "canonicalEntityId": "cn:institution:blessed-jurgis-matulaitis-mission-lemont-il"
     }
   ],
-  "content_hash": "sha256:2433938286c228c05e723cc0a33f1ed61b3b3c0cdb456643f0483f33dc00b752"
+  "content_hash": "sha256:74f9679d6593816290c2426b22480fd42ad9e46e058fbf3d17af02665957159b"
 }
