@@ -697,6 +697,16 @@ if (
   errors.push("History adapter does not derive its populations from canonical Brain projections");
 }
 if (
+  !historyAdapter.includes(
+    "(parish.endedYear == null || parish.endedYear > year)",
+  ) ||
+  /\)\.length\s*-\s*parishes\.filter/.test(historyAdapter)
+) {
+  errors.push(
+    "History alive curve is not a roster-reproducible dated interval count",
+  );
+}
+if (
   !/permanentRedirect/.test(retiredDiocesePage) ||
   !/\/history#loss-by-diocese/.test(retiredDiocesePage) ||
   !/permanentRedirect/.test(retiredCoalPage) ||

@@ -137,6 +137,10 @@ const historyChart = fs.readFileSync(
   path.join(ROOT, "components", "HistoryTwoWaves.tsx"),
   "utf8",
 );
+const historyCurve = fs.readFileSync(
+  path.join(ROOT, "components", "HistoryAliveCurve.tsx"),
+  "utf8",
+);
 const historyDioceseMap = fs.readFileSync(
   path.join(ROOT, "components", "HistoryDioceseLoss.tsx"),
   "utf8",
@@ -154,6 +158,10 @@ const historyDesignContract = [
   [historyChart, "gap-x-[3px]", "compact decade spacing"],
   [historyChart, "min-h-[118px]", "approved founding-wave height"],
   [historyChart, "min-h-[74px]", "approved closure-wave height"],
+  [historyPage, "parishes={historyProjection.parishes}", "canonical parish roster supplied to the curve"],
+  [historyCurve, "View the full parish list", "year-roster affordance"],
+  [historyCurve, 'role="dialog"', "accessible year-roster dialog"],
+  [historyCurve, "aliveRoster.map", "complete selected-year roster"],
   [historyDioceseMap, "When each diocese lost its parishes", "approved diocese-timeline heading"],
   [historyDioceseMap, "color-mix(in srgb, var(--es-active)", "proportional green-to-yellow loss ramp"],
   [historyDioceseMap, "color-mix(in srgb, var(--mark-community)", "proportional yellow-to-red loss ramp"],
