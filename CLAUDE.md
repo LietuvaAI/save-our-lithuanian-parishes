@@ -43,13 +43,17 @@ The public institution census is a separate launch-critical contract. `data/cano
 The Brain-owned current-events source carries `hearthUrl` fields for campaigns and sustainability-watch entries. The site renders those links from `data/canonical-current-events-projection.json`. Add or change a dispatch URL in Brain, rebuild the projection, then import it here.
 
 **Has a dispatch (all four active campaigns covered as of 2026-07-27):**
-- Divine Providence, Southfield MI — dedicated post series + campaign anchor (hearthUrl = the pinned flagship "Further Down the Path")
+- Divine Providence, Southfield MI — dedicated post series + campaign anchor (hearthUrl = "The Numbers Behind Divine Providence" since 2026-08-07)
 - Maspeth, Queens NY — "Still Open, Still Undecided" (2026-07-26; hearthUrl set)
 - Hartford CT — "Fifteen Months: The Closing of Švč. Trejybės" (2026-07-27; hearthUrl set)
-- Waterbury CT — "Closed, Not Ended: The Vatican Appeal" (2026-07-27; hearthUrl set)
+- Waterbury CT — "Closed, Not Ended: The Vatican Appeal" (2026-07-27; hearthUrl set) + "The Last Mass at Šv. Juozapo" (2026-08-08, the Aug 2 final Mass and formal closing of the building)
 - South Boston MA — "The Boston Hill of Crosses" (hearthUrl set, sustainability watch)
 
-Two posts were deliberately unpublished from the live blog on Vilija's decision (2026-08-04): "The Parish That Won in Court Twice" and "How You Can Help Save America's Lithuanian Parishes" — their archives were removed in the same change; do not re-archive or link them.
+Four posts were deliberately unpublished from the live blog on Vilija's decision: "The Parish That Won in Court Twice" and "How You Can Help Save America's Lithuanian Parishes" (2026-08-04); "How You Can Help Save Detroit's Divine Providence Lithuanian Parish" (2026-08-07); and the former pinned flagship "Further Down the Path: What Divine Providence Can See from Connecticut and Queens" (2026-08-07 — it compressed the three East Coast dispatches and the DP series instead of adding to them). Their archives are removed; do not re-archive or link them.
+
+The blog's front door is **"Who Owns an Ethnic Parish?"** — pinned 2026-08-07 alongside Active Campaigns, and the one signed personal essay (Hearth voice register, rule 7).
+
+**`content/dispatches/` is a mirror of the live blog, not an independent copy.** Regenerate it from `/api/v1/archive` + `/api/v1/posts/<slug>` rather than hand-editing; a live post is always the source of truth. (Archive edits were silently reverted twice by concurrent "Restore …" PRs — regenerate, don't merge by hand.)
 
 **Writing queue — under-threat campaigns:** none open; new dispatches follow events.
 
