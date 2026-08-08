@@ -186,7 +186,15 @@ export default function HistoryAliveCurve({
           ) : null}
         </div>
         <EventList title="Founded" entries={selected?.founded ?? []} />
-        <EventList title="Institutional ending" entries={selected?.ended ?? []} />
+        <EventList
+          title="Institutional ending"
+          entries={selected?.ended ?? []}
+          outsideCurve={
+            selected
+              ? selected.ended.length - selected.endedInDatedPopulation.length
+              : 0
+          }
+        />
       </div>
 
       <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 font-sans text-small-copy text-muted">
@@ -229,10 +237,10 @@ export default function HistoryAliveCurve({
 
             <div className="px-5 py-5 sm:px-7 sm:py-6">
               <p className="max-w-3xl font-serif text-body-copy leading-[1.7] text-muted">
-                This roster includes every parish with a documented foundation
-                on or before {selected.year} and no documented institutional
-                ending by that year. A parish without an established founding
-                year cannot be placed on this curve.
+                This end-of-year roster includes every parish with a documented
+                foundation on or before {selected.year} and no documented
+                institutional ending by that year. A parish without an established
+                founding year cannot be placed on this curve.
               </p>
               <ol className="mt-5 grid gap-x-8 gap-y-0 border-t border-rule md:grid-cols-2">
                 {aliveRoster.map((parish) => (
@@ -259,9 +267,11 @@ export default function HistoryAliveCurve({
 function EventList({
   title,
   entries,
+  outsideCurve = 0,
 }: {
   title: string;
   entries: Readonly<HistoryYear["founded"]>;
+  outsideCurve?: number;
 }) {
   return (
     <div>
@@ -282,6 +292,14 @@ function EventList({
       ) : (
         <p className="mt-1 text-support-copy text-muted">No dated event.</p>
       )}
+      {outsideCurve > 0 ? (
+        <p className="mt-2 font-sans text-small-copy leading-relaxed text-muted">
+          {outsideCurve}{" "}
+          {outsideCurve === 1 ? "ending record does" : "ending records do"} not
+          change the curve because the corresponding founding year is not
+          established.
+        </p>
+      ) : null}
     </div>
   );
 }

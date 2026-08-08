@@ -31,6 +31,7 @@ export type HistoryYear = {
   alive: number;
   founded: HistoryParish[];
   ended: HistoryParish[];
+  endedInDatedPopulation: HistoryParish[];
 };
 
 export type HistoryDiocese = {
@@ -86,13 +87,17 @@ const years: HistoryYear[] = [];
 for (let year = 1880; year <= currentYear; year += 1) {
   const founded = parishes.filter((parish) => parish.foundedYear === year);
   const ended = parishes.filter((parish) => parish.endedYear === year);
+  const endedInDatedPopulation = ended.filter(
+    (parish) =>
+      parish.foundedYear != null && parish.foundedYear <= year,
+  );
   const alive = parishes.filter(
     (parish) =>
       parish.foundedYear != null &&
       parish.foundedYear <= year &&
       (parish.endedYear == null || parish.endedYear > year),
   ).length;
-  years.push({ year, alive, founded, ended });
+  years.push({ year, alive, founded, ended, endedInDatedPopulation });
 }
 
 const dioceseMap = new Map<string, HistoryParish[]>();
@@ -141,6 +146,10 @@ const statusCounts = Object.fromEntries(
 const peakAlive = Math.max(...years.map((year) => year.alive));
 const peakYears = years.filter((year) => year.alive === peakAlive);
 const peakYear = peakYears[Math.floor(peakYears.length / 2)]!;
+const peakRange = {
+  start: peakYears[0]!.year,
+  end: peakYears.at(-1)!.year,
+};
 const peakFoundedDecade = decades.reduce((peak, decade) =>
   decade.founded.length > peak.founded.length ? decade : peak,
 );
@@ -161,6 +170,11 @@ export const historyProjection = {
     total: parishes.length,
     status: statusCounts,
     foundedUndated: parishes.filter((parish) => parish.foundedYear == null).length,
+    datedEndingsOutsideCurve: parishes.filter(
+      (parish) =>
+        parish.endedYear != null &&
+        (parish.foundedYear == null || parish.foundedYear > parish.endedYear),
+    ).length,
     formalClosureUndated: parishes.filter(
       (parish) => parish.status === "closed" && parish.endedYear == null,
     ).length,
@@ -189,10 +203,20 @@ export const historyProjection = {
     coalRegion: pennsylvaniaCoalRegion.counts,
   },
   peakYear,
+  peakRange,
   currentYearPoint: years.at(-1)!,
   peakFoundedDecade,
   peakClosedDecade,
 } as const;
+
+const yearDeltaMismatch = years.find((year, index) => {
+  if (index === 0) return false;
+  const previous = years[index - 1]!;
+  return (
+    year.alive !==
+    previous.alive + year.founded.length - year.endedInDatedPopulation.length
+  );
+});
 
 if (
   historyProjection.counts.total !==
@@ -204,7 +228,8 @@ if (
   historyProjection.counts.closedSince2020 !==
     infographicCounts.closed_roman_catholic_parishes_since_2020 ||
   historyProjection.counts.coalRegion.diocese_owned !== 14 ||
-  historyProjection.counts.coalRegion.diocese_ended !== 11
+  historyProjection.counts.coalRegion.diocese_ended !== 11 ||
+  yearDeltaMismatch != null
 ) {
   throw new Error("Canonical History projection drifted from its unit contracts.");
 }

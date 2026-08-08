@@ -158,6 +158,11 @@ export default function HistoryDioceseLoss({
             </span>
             <Key color="var(--band)" label="none begun yet / no record" border />
           </div>
+          <p className="mt-2 font-sans text-small-copy leading-relaxed text-muted">
+            Historical years use only dated foundations and endings. Today also
+            includes current closed or transferred outcomes whose ending year is
+            not established; those records are not assigned to an earlier year.
+          </p>
         </div>
 
         <aside className="border-l-0 border-rule lg:border-l lg:pl-4" aria-live="polite">

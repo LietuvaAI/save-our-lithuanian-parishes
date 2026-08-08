@@ -700,6 +700,8 @@ if (
   !historyAdapter.includes(
     "(parish.endedYear == null || parish.endedYear > year)",
   ) ||
+  !historyAdapter.includes("endedInDatedPopulation") ||
+  !historyAdapter.includes("yearDeltaMismatch") ||
   /\)\.length\s*-\s*parishes\.filter/.test(historyAdapter)
 ) {
   errors.push(
