@@ -19,16 +19,19 @@ const shenandoahDrawing =
 
 function Divider({ numeral, children }: { numeral: string; children: React.ReactNode }) {
   return (
-    <div className="mb-5 flex items-center gap-3 border-b border-rule pb-2 font-sans text-ui-label font-semibold uppercase tracking-widest text-muted">
-      <span className="font-mono text-foreground">{numeral}</span>
-      <span>{children}</span>
+    <div className="relative mb-6 flex items-center justify-center">
+      <div className="absolute inset-x-0 top-1/2 border-t border-rule" aria-hidden="true" />
+      <div className="relative flex items-center gap-2 bg-background px-3 font-sans text-ui-label font-semibold uppercase tracking-[0.15em] text-muted">
+        <span className="font-mono text-foreground">{numeral}</span>
+        <span>{children}</span>
+      </div>
     </div>
   );
 }
 
 function Stat({ value, children, red = false }: { value: number; children: React.ReactNode; red?: boolean }) {
   return (
-    <div className="border-r border-rule px-4 py-4 last:border-r-0">
+    <div className="border-r border-rule px-3 py-3 last:border-r-0">
       <p className={`font-serif text-page-title font-semibold ${red ? "text-[var(--es-closed)]" : ""}`}>{value}</p>
       <p className="mt-1 font-sans text-small-copy leading-snug text-muted">{children}</p>
     </div>
@@ -68,7 +71,7 @@ export default function HistoryPage() {
         <h2 className="font-serif text-section-title font-semibold">
           It began in Pennsylvania coal country
         </h2>
-        <div className="mt-6 grid items-start gap-8 md:grid-cols-[minmax(15rem,0.72fr)_minmax(0,1.28fr)]">
+        <div className="mt-5 grid items-start gap-8 md:grid-cols-[minmax(15rem,0.72fr)_minmax(0,1.28fr)]">
           <figure>
             <div className="relative aspect-[4/5] overflow-hidden bg-band">
               <Image
@@ -85,7 +88,7 @@ export default function HistoryPage() {
               {shenandoahDrawing.attribution}
             </figcaption>
           </figure>
-          <div className="space-y-4 font-serif text-lead-copy leading-relaxed">
+          <div className="space-y-4 font-serif text-lead-copy leading-[1.7]">
             <p>
               Pennsylvania contains {counts.pennsylvania} of the {counts.total}{" "}
               documented Roman Catholic Lithuanian parishes. The earliest dated
@@ -123,34 +126,31 @@ export default function HistoryPage() {
         </div>
       </section>
 
-      <section id="two-waves" className="scroll-mt-8 pt-14">
+      <section id="two-waves" className="scroll-mt-8 pt-12">
         <Divider numeral="II">Two waves across a century</Divider>
-        <h2 className="font-serif text-section-title font-semibold">
-          A half-century of building; a half-century of closing
-        </h2>
-        <p className="mt-3 max-w-3xl font-serif text-lead-copy leading-relaxed text-muted">
+        <p className="font-serif text-lead-copy leading-[1.7]">
           Each square is one parish institution. Black marks record dated
           foundations; red marks record dated formal closures. Select any mark
           to open the corresponding parish profile.
         </p>
-        <div className="mt-6 grid grid-cols-2 border-y border-rule sm:grid-cols-4">
+        <div className="mt-5 grid grid-cols-2 border-y border-rule sm:grid-cols-4">
           <Stat value={peakFoundedDecade.founded.length}>{`founded in the ${peakFoundedDecade.decade}s`}</Stat>
           <Stat value={peakClosedDecade.closed.length} red>{`closed in the ${peakClosedDecade.decade}s`}</Stat>
           <Stat value={counts.closedSince1990}>formal closures dated since 1990</Stat>
           <Stat value={counts.closedSince2020}>formal closures dated since 2020</Stat>
         </div>
-        <div className="mt-7"><HistoryTwoWaves decades={decades} /></div>
+        <div className="mt-5"><HistoryTwoWaves decades={decades} /></div>
         <p className="mt-4 border-t border-rule pt-3 font-sans text-small-copy text-muted">
           {counts.foundedUndated} parish founding years and {counts.formalClosureUndated} formal-closure years are not established and therefore do not appear as dated squares.
         </p>
       </section>
 
-      <section id="century-arc" className="scroll-mt-8 pt-14">
+      <section id="century-arc" className="scroll-mt-8 pt-12">
         <Divider numeral="III">The arc of the century</Divider>
         <h2 className="font-serif text-section-title font-semibold">
-          From expansion to long contraction
+          Lithuanian parishes alive, year by year
         </h2>
-        <p className="mt-3 max-w-3xl font-serif text-lead-copy leading-relaxed text-muted">
+        <p className="mt-3 font-serif text-lead-copy leading-[1.7]">
           The dated record reaches a high point of {peakYear.alive} living
           parish institutions in {peakYear.year}. By {currentYearPoint.year},
           {` ${currentYearPoint.alive} `}have a dated beginning without a dated
@@ -182,12 +182,9 @@ export default function HistoryPage() {
         </p>
       </section>
 
-      <section id="loss-by-diocese" className="scroll-mt-8 pt-14">
+      <section id="loss-by-diocese" className="scroll-mt-8 pt-12">
         <Divider numeral="IV">The loss, diocese by diocese</Divider>
-        <h2 className="font-serif text-section-title font-semibold">
-          The national contraction was administered locally
-        </h2>
-        <div className="mt-3 max-w-4xl space-y-3 font-serif text-lead-copy leading-relaxed text-muted">
+        <div className="space-y-3 font-serif text-lead-copy leading-[1.7]">
           <p>
             The canonical jurisdiction field places these parishes in {counts.namedDioceses}{" "}
             named dioceses and archdioceses. {counts.diocesesWithoutActive} now

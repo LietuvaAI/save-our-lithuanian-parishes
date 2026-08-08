@@ -129,9 +129,40 @@ for (const [source, fragment, label] of allProfilesContract) {
   if (!source.includes(fragment)) errors.push(`All Profiles: missing ${label}`);
 }
 
+const historyPage = fs.readFileSync(
+  path.join(ROOT, "app", "history", "page.tsx"),
+  "utf8",
+);
+const historyChart = fs.readFileSync(
+  path.join(ROOT, "components", "HistoryTwoWaves.tsx"),
+  "utf8",
+);
+const historyDesignContract = [
+  [historyPage, "absolute inset-x-0 top-1/2 border-t border-rule", "centered divider rule"],
+  [historyPage, "justify-center", "centered divider label"],
+  [historyPage, "tracking-[0.15em]", "approved divider letterspacing"],
+  [historyPage, "Lithuanian parishes alive, year by year", "approved century-arc heading"],
+  [historyPage, "leading-[1.7]", "15px/1.7 narrative rhythm"],
+  [historyChart, "size-2 rounded-[1px]", "compact eight-pixel unit marks"],
+  [historyChart, "gap-x-[3px]", "compact decade spacing"],
+  [historyChart, "min-h-[118px]", "approved founding-wave height"],
+  [historyChart, "min-h-[74px]", "approved closure-wave height"],
+];
+for (const [source, fragment, label] of historyDesignContract) {
+  if (!source.includes(fragment)) errors.push(`History: missing ${label}`);
+}
+for (const forbiddenHeading of [
+  "From expansion to long contraction",
+  "The national contraction was administered locally",
+]) {
+  if (historyPage.includes(forbiddenHeading)) {
+    errors.push(`History: unapproved replacement heading remains: ${forbiddenHeading}`);
+  }
+}
+
 if (errors.length) {
   console.error(errors.join("\n"));
   process.exit(1);
 }
 
-console.log("OK: shared typography ramp and All Profiles presentation contract passed.");
+console.log("OK: shared typography ramp, All Profiles, and History presentation contracts passed.");
