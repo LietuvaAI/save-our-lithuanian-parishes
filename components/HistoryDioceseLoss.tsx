@@ -14,6 +14,19 @@ type OverlayDiocese = {
 
 const START_YEAR = 1900;
 
+function lossColor(ended: number, begun: number) {
+  if (begun === 0) return "var(--band)";
+  const share = Math.max(0, Math.min(1, ended / begun));
+  if (share === 0) return "var(--es-active)";
+  if (share === 1) return "var(--es-closed)";
+  if (share <= 0.5) {
+    const green = Math.round((1 - share * 2) * 100);
+    return `color-mix(in srgb, var(--es-active) ${green}%, var(--mark-community))`;
+  }
+  const yellow = Math.round((2 - share * 2) * 100);
+  return `color-mix(in srgb, var(--mark-community) ${yellow}%, var(--es-closed))`;
+}
+
 export default function HistoryDioceseLoss({
   dioceses,
   currentYear,
@@ -35,11 +48,18 @@ export default function HistoryDioceseLoss({
   const selected = byKey.get(activeKey) ?? dioceses[0];
 
   const statsAt = (diocese: HistoryDiocese) => {
-    const begun = diocese.parishes.filter(
-      (parish) => parish.foundedYear != null && parish.foundedYear <= year,
-    );
+    const isToday = year === currentYear;
+    const begun = isToday
+      ? diocese.parishes
+      : diocese.parishes.filter(
+          (parish) => parish.foundedYear != null && parish.foundedYear <= year,
+        );
     const ended = begun.filter(
-      (parish) => parish.endedYear != null && parish.endedYear <= year,
+      (parish) =>
+        (parish.endedYear != null && parish.endedYear <= year) ||
+        (isToday &&
+          parish.endedYear == null &&
+          (parish.status === "closed" || parish.status === "transferred")),
     );
     return { begun: begun.length, ended: ended.length };
   };
@@ -100,21 +120,15 @@ export default function HistoryDioceseLoss({
                 {(overlay.dioceses as OverlayDiocese[]).map((shape) => {
                   const diocese = byKey.get(shape.name);
                   const stats = diocese ? statsAt(diocese) : null;
-                  const partial = stats && stats.begun > 0 && stats.ended > 0 && stats.ended < stats.begun;
-                  const allEnded = stats && stats.begun > 0 && stats.ended === stats.begun;
-                  const fill = !stats || stats.begun === 0
-                    ? "var(--band)"
-                    : allEnded
-                      ? "var(--es-closed)"
-                      : partial
-                        ? "var(--mark-community)"
-                        : "var(--es-active)";
+                  const fill = stats
+                    ? lossColor(stats.ended, stats.begun)
+                    : "var(--band)";
                   return (
                     <path
                       key={shape.name}
                       d={shape.path}
                       fill={fill}
-                      fillOpacity={!stats || stats.begun === 0 ? 0.35 : 0.82}
+                      fillOpacity={!stats || stats.begun === 0 ? 0.35 : 1}
                       stroke={activeKey === shape.name ? "var(--foreground)" : "var(--background)"}
                       strokeWidth={activeKey === shape.name ? 2 / zoom : 0.45 / zoom}
                       className={diocese ? "cursor-pointer" : undefined}
@@ -132,9 +146,16 @@ export default function HistoryDioceseLoss({
           </div>
 
           <div className="mt-2 flex flex-wrap gap-x-4 gap-y-2 font-sans text-small-copy text-muted">
-            <Key color="var(--es-active)" label="no dated ending yet" />
-            <Key color="var(--mark-community)" label="some parish life ended" />
-            <Key color="var(--es-closed)" label="all begun parish life ended" />
+            <span className="inline-flex items-center gap-2">
+              <span
+                className="h-3 w-24 rounded-sm"
+                style={{
+                  background:
+                    "linear-gradient(to right, var(--es-active), var(--mark-community), var(--es-closed))",
+                }}
+              />
+              <span>share of parish histories ended</span>
+            </span>
             <Key color="var(--band)" label="none begun yet / no record" border />
           </div>
         </div>
@@ -145,7 +166,8 @@ export default function HistoryDioceseLoss({
               <p className="font-mono text-ui-label uppercase tracking-widest text-muted">{year}</p>
               <h3 className="mt-1 font-serif text-subsection-title font-semibold">{selected.canonicalName}</h3>
               <p className="mt-2 font-serif text-section-title font-semibold">
-                {statsAt(selected).ended} of {statsAt(selected).begun} dated histories ended
+                {statsAt(selected).ended} of {statsAt(selected).begun}{" "}
+                {year === currentYear ? "parish histories" : "dated histories"} ended
               </p>
               <dl className="mt-4 grid grid-cols-2 gap-x-3 gap-y-2 text-support-copy">
                 <dt className="text-muted">All documented</dt><dd>{selected.total}</dd>
@@ -158,7 +180,13 @@ export default function HistoryDioceseLoss({
         </aside>
       </div>
 
-      <div className="mt-8 space-y-6">
+      <section className="mt-10">
+        <h2 className="font-serif text-section-title font-semibold">
+          When each diocese lost its parishes
+        </h2>
+      </section>
+
+      <div className="mt-6 space-y-6">
         {dioceses.map((diocese) => (
           <DioceseTimeline key={diocese.key} diocese={diocese} currentYear={currentYear} />
         ))}
