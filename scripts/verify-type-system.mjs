@@ -137,6 +137,10 @@ const historyChart = fs.readFileSync(
   path.join(ROOT, "components", "HistoryTwoWaves.tsx"),
   "utf8",
 );
+const historyDioceseMap = fs.readFileSync(
+  path.join(ROOT, "components", "HistoryDioceseLoss.tsx"),
+  "utf8",
+);
 const historyDesignContract = [
   [historyPage, "absolute inset-x-0 top-1/2 border-t border-rule", "centered divider rule"],
   [historyPage, "justify-center", "centered divider label"],
@@ -150,6 +154,11 @@ const historyDesignContract = [
   [historyChart, "gap-x-[3px]", "compact decade spacing"],
   [historyChart, "min-h-[118px]", "approved founding-wave height"],
   [historyChart, "min-h-[74px]", "approved closure-wave height"],
+  [historyDioceseMap, "When each diocese lost its parishes", "approved diocese-timeline heading"],
+  [historyDioceseMap, "color-mix(in srgb, var(--es-active)", "proportional green-to-yellow loss ramp"],
+  [historyDioceseMap, "color-mix(in srgb, var(--mark-community)", "proportional yellow-to-red loss ramp"],
+  [historyDioceseMap, "parish.endedYear == null", "undated endings assigned to Today"],
+  [historyDioceseMap, "linear-gradient(to right, var(--es-active), var(--mark-community), var(--es-closed))", "loss-ramp legend"],
 ];
 for (const [source, fragment, label] of historyDesignContract) {
   if (!source.includes(fragment)) errors.push(`History: missing ${label}`);
