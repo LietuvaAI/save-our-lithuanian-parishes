@@ -39,7 +39,7 @@ function Stat({ value, children, red = false }: { value: number; children: React
 }
 
 export default function HistoryPage() {
-  const { counts, decades, years, dioceses, peakYear, currentYearPoint, peakFoundedDecade, peakClosedDecade } = historyProjection;
+  const { counts, decades, years, dioceses, peakYear, peakRange, currentYearPoint, peakFoundedDecade, peakClosedDecade } = historyProjection;
   const scranton = dioceses.find((diocese) => diocese.key === "Scranton")!;
   const chicago = dioceses.find((diocese) => diocese.key === "Chicago")!;
   const pittsburgh = dioceses.find((diocese) => diocese.key === "Pittsburgh")!;
@@ -151,8 +151,9 @@ export default function HistoryPage() {
           Lithuanian parishes alive, year by year
         </h2>
         <p className="mt-3 font-serif text-lead-copy leading-[1.7]">
-          The dated record reaches a high point of {peakYear.alive} living
-          parish institutions in {peakYear.year}. By {currentYearPoint.year},
+          The dated record reaches a high plateau of {peakYear.alive} living
+          parish institutions from {peakRange.start} through {peakRange.end}. By{" "}
+          {currentYearPoint.year},
           {` ${currentYearPoint.alive} `}have a dated beginning without a dated
           institutional ending. That is a historical-life measure—not the count
           of active Lithuanian-led parishes today.
@@ -176,12 +177,14 @@ export default function HistoryPage() {
           </Era>
         </div>
         <p className="mt-4 font-sans text-small-copy leading-relaxed text-muted">
-          Method: for each year, the curve counts parish institutions with a
-          dated foundation on or before that year and no dated institutional
-          ending by that year. The {counts.foundedUndated} undated founding years
-          cannot enter the curve; {counts.formalClosureUndated} formal closures
-          have no dated position. Current canonical status is shown on parish
-          profiles and the Outcomes view.
+          Method: at the end of each year, the curve counts parish institutions
+          with a dated foundation on or before that year and no dated
+          institutional ending by that year. The {counts.foundedUndated} undated
+          founding years cannot enter the curve; {counts.formalClosureUndated} formal
+          closures have no dated position. The {counts.datedEndingsOutsideCurve} dated
+          ending events attached to records without a dated foundation remain visible
+          as events but do not change the curve. Current canonical status is shown on
+          parish profiles and the Outcomes view.
         </p>
       </section>
 
