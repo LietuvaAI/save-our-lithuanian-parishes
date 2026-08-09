@@ -1,0 +1,26 @@
+{
+  "comment": "Hearth posts Vilija deliberately unpublished. Their archives must not exist and nothing may link to them. Used by scripts/verify-dispatch-mirror.mjs.",
+  "retired": [
+    {
+      "slug": "the-parish-that-won-in-court-twice",
+      "title": "The Parish That Won in Court Twice",
+      "unpublished": "2026-08-04"
+    },
+    {
+      "slug": "how-you-can-help-save-americas-lithuanian",
+      "title": "How You Can Help Save America's Lithuanian Parishes",
+      "unpublished": "2026-08-04"
+    },
+    {
+      "slug": "how-you-can-help-save-our-lithuanian",
+      "title": "How You Can Help Save Detroit's Divine Providence Lithuanian Parish",
+      "unpublished": "2026-08-07"
+    },
+    {
+      "slug": "further-down-the-path-what-divine",
+      "title": "Further Down the Path: What Divine Providence Can See from Connecticut and Queens",
+      "unpublished": "2026-08-07",
+      "note": "Former pinned flagship; compressed the three East Coast dispatches and the DP series instead of adding to them."
+    }
+  ]
+}
