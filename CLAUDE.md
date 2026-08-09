@@ -53,7 +53,11 @@ Four posts were deliberately unpublished from the live blog on Vilija's decision
 
 The blog's front door is **"Who Owns an Ethnic Parish?"** — pinned 2026-08-07 alongside Active Campaigns, and the one signed personal essay (Hearth voice register, rule 7).
 
-**`content/dispatches/` is a mirror of the live blog, not an independent copy.** Regenerate it from `/api/v1/archive` + `/api/v1/posts/<slug>` rather than hand-editing; a live post is always the source of truth. (Archive edits were silently reverted twice by concurrent "Restore …" PRs — regenerate, don't merge by hand.)
+**`content/dispatches/` is a mirror of the live blog, not an independent copy.** Regenerate it from `/api/v1/archive` + `/api/v1/posts/<slug>` rather than hand-editing; a live post is always the source of truth.
+
+`scripts/verify-dispatch-mirror.mjs` enforces this. It runs offline in `npm run data` (frontmatter well-formed, filename/date/slug agree, no archive for a retired post, nothing links to one) and does the real comparison with `npm run verify:dispatch-mirror:live` — slug-set parity plus title, subtitle and normalized body text against the live posts. Retired posts are listed in `content/dispatches/retired.json`; unpublish a post, add it there, delete its archive. Run the `:live` check after any publishing session. Repair is always regeneration, never a hand-merge.
+
+Why the guard exists: on 2026-08-08 a day of archive edits was reported merged but only part reached `main` — PR #162 carried 4 of its branch's 16 commits — and the archives sat wrong for a day before anyone noticed.
 
 **Writing queue — under-threat campaigns:** none open; new dispatches follow events.
 
