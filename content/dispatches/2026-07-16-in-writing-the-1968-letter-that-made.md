@@ -46,7 +46,7 @@ The community met every condition the letter named. Lithuanians funded the paris
 
 ### Why this is different
 
-Every argument in this publication about metrics and yardsticks rests, in the end, on this letter. Divine Providence is a [personal (national) parish under canon law](https://saveourlithuanianparishes.substack.com/p/a-personal-parish-not-a-place), a category the Church’s own law provides for, defined by a people rather than a territory. The Archdiocese did not stumble into that status; it granted it, deliberately, in writing, in 1968.
+Every argument in this publication about metrics and yardsticks rests, in the end, on this letter. Divine Providence is a personal (national) parish under canon law, a category the Church’s own law provides for, defined by a people rather than a territory. The Archdiocese did not stumble into that status; it granted it, deliberately, in writing, in 1968.
 
 Which means that measuring Divine Providence today by territorial metrics (the size of the surrounding neighborhood, whether another church sits nearby, how the local population has shifted) is not only the wrong test; it contradicts the Archdiocese’s own written decision that this parish would never be territorial in the first place. And the single condition attached to that decision, that the community fund itself, has been kept in full.
 
@@ -65,6 +65,6 @@ The 1968 letter shown here is from the Office of the Vicar for Parishes, Archdio
 On Bishop Thomas J. Gumbleton (consecrated auxiliary bishop of Detroit, May 1, 1968, by Archbishop John Dearden) — [Wikipedia](https://en.wikipedia.org/wiki/Thomas_Gumbleton); [Archdiocese of Detroit](https://www.aod.org/announcements-newsroom/newsroom/2024/april/bishop-gumbleton-retired-auxiliary-bishop-of-detroit-dies-at-94).
 
 - 
-On personal/national parishes in canon law (Canon 518) — see our companion post, [“A Personal Parish, Not a Place.”](https://saveourlithuanianparishes.substack.com/p/a-personal-parish-not-a-place)
+On personal/national parishes in canon law: Canon 518, Code of Canon Law.
 
 *A note on the request text: the 1967 wording is reproduced from the parish anniversary book; obvious typographical errors in the original have been silently corrected, but no words have been changed.*
