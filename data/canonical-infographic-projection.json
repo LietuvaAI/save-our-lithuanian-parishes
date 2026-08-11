@@ -2,8 +2,8 @@
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
-    "publication_projection_hash": "sha256:7c2b2308cc538148f2687bd18c60318b92d4b09d625f9cb7c50ee49c43375898",
-    "publication_projection_revision": "canonical-public-census-2026-08-07-terminal-building-research",
+    "publication_projection_hash": "sha256:4be15ea4ad10bd769bb7e1f017fbd458fc4f04ac66016ed355f86688104707fa",
+    "publication_projection_revision": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
     "repository": "LietuvaAI/culturenet-brain"
   },
   "building_site_history": [
@@ -8399,7 +8399,7 @@
       "building-standing"
     ]
   },
-  "content_hash": "sha256:fb633d839a549025ffb803ddaf57a09374c21d9f5fe37331fa27b0a07b808b11",
+  "content_hash": "sha256:5cb7bd44b5b9593176fe4117f7579686a7df1ff4753dcd34b85e95af33abd98e",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -10776,6 +10776,7 @@
         },
         {
           "address": "PO Box 980, Kennebunkport, ME 04046",
+          "canonicalEntityId": "cn:organization:kennebunk-lithuanian-franciscan-friary",
           "city": "Kennebunkport",
           "clergy": "Br. Jonas Bacevičius, OFM, superior",
           "directoryType": "religious_house",
@@ -11098,7 +11099,7 @@
     "source_assertion_id": "assert:pastoral-18:membership",
     "unit": "current Lithuanian Catholic parish, mission, or hosted pastoral community"
   },
-  "generated": "2026-08-07",
+  "generated": "2026-08-11",
   "institution_history": [
     {
       "building_fate": null,
@@ -18973,7 +18974,7 @@
       "unit": "distinct U.S. Roman Catholic parish institution"
     }
   },
-  "revision_id": "canonical-infographic-units-2026-08-07-terminal-building-research",
+  "revision_id": "canonical-infographic-units-2026-08-11-wider-catholic-life-geocodes",
   "schema": "culturenet-parish-infographic-projection.v1",
   "unit_contracts": [
     {
@@ -18999,10 +19000,117 @@
       "unit": "current Lithuanian Catholic parish, mission, or hosted pastoral community"
     },
     {
+      "complete_historical_census": false,
+      "counted_in_public_institution_total": false,
+      "id": "documented_religious_house",
+      "population": 2,
+      "unit": "documented current U.S. Lithuanian Catholic religious house"
+    },
+    {
+      "counted_in_current_pastoral_network": false,
+      "counted_in_public_institution_total": false,
+      "id": "additional_occasional_worship_community",
+      "population": 1,
+      "unit": "additional documented community with occasional hosted Lithuanian Catholic worship"
+    },
+    {
       "counted_in_public_institution_total": false,
       "id": "institution_continuity",
       "population": 51,
       "unit": "accepted typed relationship between distinct institutions or same-entity phases"
     }
-  ]
+  ],
+  "wider_catholic_life": {
+    "additional_pastoral_communities": {
+      "communities": [
+        {
+          "city": "Marietta",
+          "classification": "occasional_hosted_worship_community",
+          "counted_in_current_14_place_network": false,
+          "counted_in_public_institution_total": false,
+          "counted_in_roman_catholic_parish_mission_history": false,
+          "current_sielovada_directory_member": false,
+          "entity_id": "cn:organization:atlanta-lithuanian-catholic-worship-community",
+          "explanation": "A 2018 donor plaque uses the word mission, and the Atlanta Lithuanian community documents occasional Lithuanian Masses at St. Ann Church. No archdiocesan evidence reviewed here establishes a formally erected Lithuanian mission or a regular current Lithuanian liturgy.",
+          "formal_mission_status_established": false,
+          "geo": {
+            "lat": 33.9995725,
+            "lon": -84.4077564,
+            "precision": "address_geocode",
+            "source_artifact_id": "src:religious-houses-atlanta-23:address-geocodes:2026-08-11"
+          },
+          "host_address": "4905 Roswell Road, Marietta, GA 30062",
+          "host_name": "The Catholic Church of St. Ann",
+          "host_site": "https://st-ann.org/",
+          "latest_documented_lithuanian_mass": "2026-03-28",
+          "name_en": "Atlanta Lithuanian Catholic worship community",
+          "name_lt": "Atlantos lietuvių katalikų bendruomenė",
+          "official_community_site": "https://www.lietuviaiatlantoje.org/",
+          "regular_schedule_established": false,
+          "state": "GA"
+        }
+      ],
+      "counted_in_current_pastoral_network": false,
+      "counted_in_public_institution_total": false,
+      "counted_in_roman_catholic_parish_mission_history": false,
+      "observed_at": "2026-08-10",
+      "population": 1,
+      "source_assertion_id": "assert:religious-houses-atlanta-23:atlanta-current-classification",
+      "unit": "additional documented communities outside the regular Sielovada-derived network"
+    },
+    "documented_religious_houses": {
+      "counted_in_public_institution_total": false,
+      "counted_in_roman_catholic_parish_mission_history": false,
+      "houses": [
+        {
+          "address": "28 Beach Ave, Kennebunk, ME 04043",
+          "city": "Kennebunk",
+          "community_type": "men_religious_house",
+          "current_status": "current",
+          "entity_id": "cn:organization:kennebunk-lithuanian-franciscan-friary",
+          "geo": {
+            "lat": 43.3545865,
+            "lon": -70.4780363,
+            "precision": "address_geocode",
+            "source_artifact_id": "src:religious-houses-atlanta-23:address-geocodes:2026-08-11"
+          },
+          "name_en": "Lithuanian Franciscan Friary at Kennebunk",
+          "name_lt": "Kennebunko lietuvių pranciškonų vienuolynas",
+          "official_site": "https://ofm.lt/kas-mes-esame/brolijos/brolija-kenebunke/",
+          "source_artifact_ids": [
+            "src:religious-houses-atlanta-23:hill-of-crosses-plaque:2018",
+            "src:religious-houses-atlanta-23:kennebunk-ofm:2026-08-10"
+          ],
+          "state": "ME"
+        },
+        {
+          "address": "600 Liberty Highway, Putnam, CT 06260",
+          "city": "Putnam",
+          "community_type": "women_religious_house",
+          "current_status": "current",
+          "entity_id": "cn:organization:putnam-immaculate-conception-sisters",
+          "geo": {
+            "lat": 41.9283014,
+            "lon": -71.868653,
+            "precision": "address_geocode",
+            "source_artifact_id": "src:religious-houses-atlanta-23:address-geocodes:2026-08-11"
+          },
+          "name_en": "Immaculate Conception Convent and Center",
+          "name_lt": "Putnamo Švč. Mergelės Marijos Nekaltojo Prasidėjimo seserų vienuolynas",
+          "official_site": "https://www.immaculateconceptioncenter.org/",
+          "source_artifact_ids": [
+            "src:religious-houses-atlanta-23:hill-of-crosses-plaque:2018",
+            "src:religious-houses-atlanta-23:putnam-diocese:2026-08-10",
+            "src:religious-houses-atlanta-23:putnam-center:2026-08-10"
+          ],
+          "state": "CT"
+        }
+      ],
+      "observed_at": "2026-08-10",
+      "population": 2,
+      "population_claim": "documented set, not a complete historical census of every Lithuanian religious house in the United States",
+      "source_assertion_id": "assert:religious-houses-atlanta-23:current-religious-houses",
+      "unit": "documented current Lithuanian Catholic religious house"
+    }
+  }
 }

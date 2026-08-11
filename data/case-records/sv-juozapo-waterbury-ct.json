@@ -1,8 +1,8 @@
 {
   "slug": "sv-juozapo-waterbury-ct",
-  "asOf": "2026-07-16",
+  "asOf": "2026-08-08",
   "buildingStatus": "standing",
-  "currentUse": "Closed church retained by the merged Our Lady of Mount Carmel Parish (Waterbury); no regular Masses, but listed as \"open for weddings & funerals\" through the parish office. The ancillary parish campus on John Street (school, former convent, garage, club building) was put up for sale via a City of Waterbury RFP in October 2025.",
+  "currentUse": "Closed church building. The parish was suppressed on September 30, 2023 and absorbed into Our Lady of Mount Carmel Parish (Waterbury); until the summer of 2026 the merged parish listed St. Joseph as “open for weddings & funerals” by arrangement with the parish office. On August 2, 2026 a final Mass was celebrated and the church building was formally closed as a place of worship. The building has not been sold or demolished; the ancillary parish campus on John Street (school, former convent, garage, club building) was put up for sale via a City of Waterbury RFP in October 2025, with the church and its lot excluded.",
   "summary": "The 1904 brick church at 46 Congress Ave (corner of John Street) is still standing and has not been sold or demolished. After the parish's suppression it was absorbed into Our Lady of Mount Carmel Parish, whose current website lists St. Joseph as \"open for weddings & funerals\" by arrangement with the parish office — so the building remains in Catholic hands with occasional sacramental use, but no regular Mass schedule. In October 2025 the City of Waterbury issued RFP 8610-Wtby (posted Oct 7, responses due Oct 30, 2025) offering for sale the former St. Joseph Parish Corp. properties at 23-47 John Street — the school building, former convent, garage, and \"club\" building — while explicitly excluding the church building and its lot from the sale; no buyer or price has been published. In August 2023 parishioner Christian Allyn, working with a canon lawyer and members of Knights of Lithuania Council 7, filed a Vatican appeal against the closure; no published outcome of that appeal was found. The Knights of Lithuania Council 7, which formerly met in St. Joseph's school, now meets in the basement of Our Lady of Mt. Carmel Church at 785 Highland Ave. The story reached a national audience in April 2025 via \"Little Lithuania,\" an episode of the podcast The Final Service about Allyn's fight for the church.",
   "developments": [
     {
@@ -60,6 +60,24 @@
           "publisher": "Knights of Lithuania Council 7",
           "date": "2026-07-16",
           "url": "https://www.knightsoflithuaniacouncil7.org/about"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-02",
+      "headline": "Final Mass and formal closing of the church building",
+      "detail": "A Mass at 10 a.m. on Sunday, August 2, 2026 closed the 112th national convention of the Knights of Lithuania. Fr. Audrius Arštikaitis, rector of the Pontifical Lithuanian College of St. Casimir in Rome and the organization's spiritual advisor, travelled from Rome to celebrate it; a choral tribute to Aleksandras Aleksis, organist and choir director at the parish 1924–1974, preceded it at 9:30 a.m. Afterward Monsignor Vittorio Guerrera performed the ceremony formally closing the church building as a place of worship. No published ruling on the 2023 Vatican appeal has been reported, and the building has not been sold or demolished. Draugas reports that the 1931 stained-glass windows — which carry Lithuanian inscriptions naming donor families and the Šv. Kazimiero and Šv. Juozapo mutual-aid societies, installed under klebonas Juozas Valantiejus — remain an open preservation question, and that the Lithuanian Research and Studies Center holds the Aleksis archive.",
+      "sources": [
+        {
+          "title": "Final Mass to be Held at Oldest Lithuanian Church in New England August 2",
+          "publisher": "Town Times (Prime Publishers)",
+          "url": "https://www.primepublishers.com/towntimesnews/news/community_events/final-mass-to-be-held-at-oldest-lithuanian-church-in-new-england-august-2/article_848335ac-44e6-43ec-b0a4-e30b4dfc58ec.html"
+        },
+        {
+          "title": "Lietuvos Vyčių suvažiavimas — atsisveikinant su šventove",
+          "publisher": "Draugas",
+          "date": "2026-08-08",
+          "detail": "print edition, pp. 8–9"
         }
       ]
     }

@@ -19,6 +19,7 @@
 import { useMemo, useRef, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { geoAlbersUsa } from "d3-geo";
 import mapData from "@/data/map.json";
 import regData from "@/data/registry-map.json";
 import alertsData from "@/data/canonical-current-events-projection.json";
@@ -41,6 +42,7 @@ import {
 } from "@/lib/record-mark";
 import contextPoints from "@/data/context-points.json";
 import siteFigures from "@/data/site-figures.json";
+import { widerCatholicLifeRecords } from "@/lib/wider-catholic-life";
 
 const FULL = (regData as { frame?: { x: number; y: number; w: number; h: number } })
   .frame ?? { x: 0, y: 0, w: 975, h: 610 };
@@ -111,6 +113,7 @@ interface Point {
     | "listed_for_sale"
     | "not_established"
     | null;
+  widerClassification?: string;
 }
 
 function communityFilterForPoint(point: Point): CommunityFilter {
@@ -146,6 +149,7 @@ const STATUS_LABEL: Record<Status, string> = {
 };
 
 function pointStatusLabel(point: Point) {
+  if (point.widerClassification) return point.widerClassification;
   if (point.group === "active_parish" && point.recordType === "misija") {
     return "Active Lithuanian mission";
   }
@@ -321,6 +325,40 @@ function buildPoints(): Point[] {
 
 const POINTS = buildPoints();
 
+const widerProjection = geoAlbersUsa().scale(1300).translate([487.5, 305]);
+const WIDER_CATHOLIC_LIFE_POINTS: Point[] = widerCatholicLifeRecords.flatMap(
+  (record) => {
+    const projected = widerProjection([record.geo.lon, record.geo.lat]);
+    if (!projected) return [];
+    return [
+      {
+        id: record.slug,
+        name: record.nameLt,
+        city: record.city,
+        state: record.state,
+        x: projected[0],
+        y: projected[1],
+        status: "unknown",
+        group: "unverified",
+        alerted: false,
+        signalKind: null,
+        alertText: null,
+        founded: null,
+        closed: null,
+        profile: record.href,
+        deep: true,
+        detail: "Separate wider Catholic-life record",
+        kindLabel:
+          "Outside the 155-institution census and the regular 14-place worship network",
+        congregationClass: null,
+        recordType: null,
+        fate: null,
+        widerClassification: record.classificationLabel,
+      },
+    ];
+  },
+);
+
 const mapCommunityCounts = {
   romanCatholic: POINTS.filter(
     (point) => communityFilterForPoint(point) === "roman_catholic",
@@ -358,6 +396,9 @@ if (
   mapStatusCounts.unverified !== siteFigures.publicUS.status.unverified
 ) {
   throw new Error("Homepage map populations do not match site-figures.json");
+}
+if (WIDER_CATHOLIC_LIFE_POINTS.length !== 3) {
+  throw new Error("Homepage wider Catholic-life map layer must contain three records");
 }
 
 function clampView(v: View): View {
@@ -403,6 +444,7 @@ export default function ParishMap() {
   >(() => new Set(COMMUNITY_FILTERS));
   const [view, setView] = useState<View>(FULL);
   const [showDioceses, setShowDioceses] = useState(false);
+  const [showWiderCatholicLife, setShowWiderCatholicLife] = useState(true);
   const [expandedKey, setExpandedKey] = useState<MapKey | null>(null);
   const [dioceseBorders, setDioceseBorders] = useState<string | null>(null);
   const svgRef = useRef<SVGSVGElement>(null);
@@ -779,6 +821,53 @@ export default function ParishMap() {
               </g>
             );
           })}
+
+          {showWiderCatholicLife &&
+            WIDER_CATHOLIC_LIFE_POINTS.map((p) => {
+              const active = hovered?.id === p.id;
+              const record = widerCatholicLifeRecords.find(
+                (candidate) => candidate.slug === p.id,
+              );
+              const hollow =
+                record?.classification === "occasional_worship_community";
+              const fill = hollow
+                ? "var(--background)"
+                : "var(--foreground)";
+              const stroke = hollow
+                ? "var(--mark-community)"
+                : "var(--background)";
+              const r = markR * 1.25;
+              return (
+                <g
+                  key={p.id}
+                  onMouseEnter={() => dotEnter(p)}
+                  onMouseLeave={dotLeave}
+                  onFocus={() => dotEnter(p)}
+                  onBlur={dotLeave}
+                  onClick={() => openPoint(p)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter") openPoint(p);
+                  }}
+                  tabIndex={0}
+                  role="button"
+                  aria-label={`${p.name}, ${p.city} ${p.state} — ${pointStatusLabel(p)}. Open its record.`}
+                  className="cursor-pointer focus:outline-none"
+                  style={{
+                    transformBox: "fill-box",
+                    transformOrigin: "center",
+                    transform: active ? "scale(1.35)" : "scale(1)",
+                    transition: "transform 140ms ease-out",
+                  }}
+                >
+                  <path
+                    d={`M ${p.x} ${p.y - r * 1.2} L ${p.x + r} ${p.y + r * 0.8} L ${p.x - r} ${p.y + r * 0.8} Z`}
+                    fill={fill}
+                    stroke={stroke}
+                    strokeWidth={hollow ? markR * 0.34 : markR * 0.18}
+                  />
+                </g>
+              );
+            })}
         </svg>
 
         {/* Region shortcuts */}
@@ -872,8 +961,42 @@ export default function ParishMap() {
                 Map key
               </p>
               <span className="text-ui-label text-muted">
-                {visible.length} records shown
+                {visible.length} census records shown
+                {showWiderCatholicLife
+                  ? ` + ${WIDER_CATHOLIC_LIFE_POINTS.length} wider records`
+                  : ""}
               </span>
+            </div>
+
+            <div className="mt-2.5 border-t border-rule pt-2.5 text-small-copy">
+              <button
+                type="button"
+                aria-pressed={showWiderCatholicLife}
+                onClick={() => setShowWiderCatholicLife((shown) => !shown)}
+                className={`flex w-full items-center justify-between gap-3 rounded-md border px-2.5 py-2 text-left transition-colors ${
+                  showWiderCatholicLife
+                    ? "border-foreground bg-band text-foreground"
+                    : "border-rule text-muted hover:border-foreground hover:text-foreground"
+                }`}
+              >
+                <span>
+                  <span className="font-medium">Wider Catholic life · 3</span>
+                  <span className="mt-0.5 block text-ui-label font-normal text-muted">
+                    2 religious houses + 1 occasional community
+                  </span>
+                </span>
+                <span className="flex items-center gap-1.5" aria-hidden>
+                  <span className="h-3 w-3 [clip-path:polygon(50%_0,100%_100%,0_100%)] bg-foreground" />
+                  <span className="relative h-3 w-3">
+                    <span className="absolute inset-0 [clip-path:polygon(50%_0,100%_100%,0_100%)] bg-[#b08b33]" />
+                    <span className="absolute inset-[2px] [clip-path:polygon(50%_0,100%_100%,0_100%)] bg-background" />
+                  </span>
+                </span>
+              </button>
+              <p className="mt-1.5 text-ui-label leading-relaxed text-muted">
+                Separate from the 155-institution census and regular 14-place
+                worship network.
+              </p>
             </div>
 
             <div

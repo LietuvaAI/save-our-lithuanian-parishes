@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { geoAlbersUsa } from "d3-geo";
 import alertsData from "@/data/canonical-current-events-projection.json";
 import contextPointsData from "@/data/context-points.json";
 import {
@@ -29,6 +30,10 @@ import {
   currentPastoralNetwork,
   type CurrentPastoralDirectoryEntry,
 } from "@/lib/infographic-projection";
+import {
+  widerCatholicLifeRecords,
+  type WiderCatholicLifeRecord,
+} from "@/lib/wider-catholic-life";
 
 export const metadata: Metadata = {
   title: "Lithuanian Catholic Life Today",
@@ -73,7 +78,8 @@ const worshipEntries = entries.filter((entry) =>
   ).includes(entry.networkClass),
 );
 const otherEntries = entries.filter(
-  (entry) => !worshipEntries.includes(entry),
+  (entry) =>
+    !worshipEntries.includes(entry) && entry.networkClass !== "religious_house",
 );
 const sustainabilityEntries =
   alertsData.sustainabilityWatch as SustainabilityEntry[];
@@ -181,6 +187,36 @@ const worshipMapPoints = worshipEntries.flatMap(
   },
 );
 
+const mapProjection = geoAlbersUsa().scale(1300).translate([487.5, 305]);
+const widerMapPoints = widerCatholicLifeRecords.flatMap(
+  (record): RecordLensPoint[] => {
+    const projected = mapProjection([record.geo.lon, record.geo.lat]);
+    if (!projected) return [];
+    return [
+      {
+        slug: record.slug,
+        name: record.nameLt,
+        city: record.city,
+        state: record.state,
+        x: projected[0],
+        y: projected[1],
+        href: record.href,
+        color:
+          record.classification === "religious_house"
+            ? "var(--foreground)"
+            : "var(--mark-community)",
+        shape: "triangle",
+        hollow: record.classification === "occasional_worship_community",
+        detail: record.classificationLabel,
+      },
+    ];
+  },
+);
+const currentCatholicLifeMapPoints = [
+  ...worshipMapPoints,
+  ...widerMapPoints,
+];
+
 const worshipStateCount = new Set(
   worshipEntries.map((entry) => entry.state),
 ).size;
@@ -195,6 +231,9 @@ if (
   throw new Error(
     "Current Catholic life figures do not match the canonical pastoral projection",
   );
+}
+if (widerMapPoints.length !== widerCatholicLifeRecords.length) {
+  throw new Error("A wider Catholic-life record could not be projected on the map");
 }
 
 function NetworkEntryRow({ entry }: { entry: NetworkEntry }) {
@@ -320,6 +359,51 @@ function NetworkEntryRow({ entry }: { entry: NetworkEntry }) {
   );
 }
 
+function WiderCatholicLifeRow({
+  record,
+}: {
+  record: WiderCatholicLifeRecord;
+}) {
+  return (
+    <article className="border-t border-rule py-4">
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <h3 className="font-serif text-card-title font-semibold leading-snug">
+            <Link href={record.href} className="hover:text-accent">
+              {record.nameLt}
+            </Link>
+          </h3>
+          <p className="mt-0.5 text-small-copy text-muted">
+            {record.city}, {record.state} · {record.classificationLabel}
+          </p>
+        </div>
+        <span className="text-small-copy font-medium text-muted">
+          {record.currentStatus}
+        </span>
+      </div>
+      <p className="mt-2 text-body-copy leading-relaxed text-muted">
+        {record.explanation}
+      </p>
+      <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-small-copy">
+        <Link
+          href={record.href}
+          className="font-medium underline underline-offset-2 hover:text-accent"
+        >
+          Record and sources
+        </Link>
+        <a
+          href={record.officialSite}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-accent"
+        >
+          Official website
+        </a>
+      </div>
+    </article>
+  );
+}
+
 export default function LithuanianCatholicLifeTodayPage() {
   return (
     <article className="mx-auto max-w-5xl px-4 pt-12 pb-2">
@@ -337,9 +421,9 @@ export default function LithuanianCatholicLifeTodayPage() {
       <section className="mt-10 border-y border-rule py-8">
         <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1.5fr)_minmax(16rem,0.7fr)]">
           <RecordLensMap
-            points={worshipMapPoints}
+            points={currentCatholicLifeMapPoints}
             initialSelection="southfield-divine-providence"
-            ariaLabel={`${worshipEntries.length} places with confirmed current Lithuanian Catholic worship across ${worshipStateCount} states`}
+            ariaLabel={`${worshipEntries.length} regular places of current Lithuanian Catholic worship, plus two documented religious houses and one additional occasional-worship community`}
             legend={[
               {
                 label:
@@ -365,6 +449,17 @@ export default function LithuanianCatholicLifeTodayPage() {
                 label: "Current campaign",
                 color: SIGNAL_RING_COLOR.active,
                 shape: "ring",
+              },
+              {
+                label: "Religious house · 2",
+                color: "var(--foreground)",
+                shape: "triangle",
+              },
+              {
+                label: "Occasional community · 1",
+                color: "var(--mark-community)",
+                shape: "triangle",
+                hollow: true,
               },
             ]}
           />
@@ -394,7 +489,8 @@ export default function LithuanianCatholicLifeTodayPage() {
         <p className="mt-5 border-t border-rule pt-3 text-small-copy leading-relaxed text-muted">
           Scope: {Number(networkDirectory.counts.listed)} official
           U.S. network listings; map population: {worshipEntries.length} places
-          with current worship · Checked{" "}
+          with regular current worship, plus {widerCatholicLifeRecords.length}
+          {" "}wider Catholic-life records · Checked{" "}
           {String(networkDirectory.source.checked)} · Source:{" "}
           <a
             href={String(networkDirectory.source.url)}
@@ -455,6 +551,27 @@ export default function LithuanianCatholicLifeTodayPage() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      <section className="mt-12" aria-labelledby="wider-life-heading">
+        <h2
+          id="wider-life-heading"
+          className="font-serif text-section-title font-semibold"
+        >
+          Wider Lithuanian Catholic life · {widerCatholicLifeRecords.length}
+        </h2>
+        <p className="mt-2 max-w-3xl text-body-copy leading-relaxed text-muted">
+          Two current religious houses and one additional occasional-worship
+          community are documented separately. They appear on the map and have
+          their own records, but they do not change the 155-institution census,
+          the 137 Roman Catholic parish-and-mission histories, or the 14-place
+          regular worship network.
+        </p>
+        <div className="mt-4 grid gap-x-8 md:grid-cols-2">
+          {widerCatholicLifeRecords.map((record) => (
+            <WiderCatholicLifeRow key={record.entityId} record={record} />
+          ))}
         </div>
       </section>
 

@@ -23662,8 +23662,8 @@
     }
   ],
   "registryRevision": {
-    "version": 26,
-    "date": "2026-08-07",
+    "version": 29,
+    "date": "2026-08-11",
     "changelog": [
       "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
       "Collapsed adjudicated same-entity rows while preserving all 83 historical case-file row references in c83_rows.",
@@ -23712,16 +23712,19 @@
       "Registry Revision 23: imported typed Brain-owned Catholic jurisdictions so public labels distinguish dioceses from archdioceses without site-side inference.",
       "Registry Revision 24: imported Brain-adjudicated continuation statuses and card explanations for the 22 institutions that live on in another community.",
       "Registry Revision 25: imported Brain-adjudicated physical-site conditions reconciled from canonical current-condition case evidence.",
-      "Registry Revision 26: synchronized the Brain-owned public-display authority to canonical-public-census-2026-08-07-terminal-building-research; public identity and membership are unchanged."
+      "Registry Revision 26: synchronized the Brain-owned public-display authority to canonical-public-census-2026-08-07-terminal-building-research; public identity and membership are unchanged.",
+      "Registry Revision 27: synchronized the Brain-owned public-display authority to canonical-public-census-2026-08-10-religious-houses-atlanta; public identity and membership are unchanged.",
+      "Registry Revision 28: synchronized the Brain-owned public-display authority to canonical-public-census-2026-08-10-religious-houses-atlanta; public identity and membership are unchanged.",
+      "Registry Revision 29: synchronized the Brain-owned public-display authority to canonical-public-census-2026-08-11-wider-catholic-life-geocodes; public identity and membership are unchanged."
     ],
-    "contentHash": "efb51815e056f305b18f5ca947585e72686039c52887b8e9d75a9886c3c7f96f"
+    "contentHash": "1c950992401e2b290d28b9fd95dfaec330a67b0beda6c3038dcfcfb36952fd8e"
   },
   "publicationAuthority": {
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
-    "revisionId": "canonical-public-census-2026-08-07-terminal-building-research",
-    "contentHash": "sha256:7c2b2308cc538148f2687bd18c60318b92d4b09d625f9cb7c50ee49c43375898",
+    "revisionId": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
+    "contentHash": "sha256:4be15ea4ad10bd769bb7e1f017fbd458fc4f04ac66016ed355f86688104707fa",
     "publicUSInstitutions": 155,
-    "synchronized": "2026-08-07"
+    "synchronized": "2026-08-11"
   }
 }

@@ -1,14 +1,14 @@
 {
   "schema": "culturenet-parish-public-display-manifest.v1",
   "authority": "LietuvaAI/culturenet-brain",
-  "publication_projection_revision": "canonical-public-census-2026-08-07-terminal-building-research",
-  "infographic_projection_revision": "canonical-infographic-units-2026-08-07-terminal-building-research",
+  "publication_projection_revision": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
+  "infographic_projection_revision": "canonical-infographic-units-2026-08-11-wider-catholic-life-geocodes",
   "current_events_revision": "parish-current-events-2026-08-06",
   "files": [
     {
       "path": "docs/research/parish-canon/public-display/registry-unified.json",
       "site_path": "data/registry-unified.json",
-      "sha256": "26a5ccda29c37dfc3feafeb82bcdbc51218f1a54b8f24fcb6f538015e5a59557"
+      "sha256": "f2f4cb2a2984967eef41ba9af7f6a854a2f6e696a503292b0ab31a84d9931995"
     },
     {
       "path": "docs/research/parish-canon/public-display/parish-situation.json",

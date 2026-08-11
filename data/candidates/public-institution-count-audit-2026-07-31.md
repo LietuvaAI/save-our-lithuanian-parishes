@@ -1,8 +1,8 @@
 # Public institution count audit
 
-**Audit date:** 2026-08-07
-**Registry revision:** 26
-**Canonical authority:** CultureNet canonical-public-census-2026-08-07-terminal-building-research
+**Audit date:** 2026-08-11
+**Registry revision:** 29
+**Canonical authority:** CultureNet canonical-public-census-2026-08-11-wider-catholic-life-geocodes
 
 ## Press-safe claim
 

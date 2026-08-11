@@ -4,8 +4,8 @@
   "authority": {
     "repository": "LietuvaAI/culturenet-brain",
     "source_path": "docs/research/parish-canon/current-events/source.json",
-    "publication_projection_revision": "canonical-public-census-2026-08-07-terminal-building-research",
-    "infographic_projection_revision": "canonical-infographic-units-2026-08-07-terminal-building-research"
+    "publication_projection_revision": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
+    "infographic_projection_revision": "canonical-infographic-units-2026-08-11-wider-catholic-life-geocodes"
   },
   "scope": "parish-watch-current-events",
   "snapshot": "2026-08-06",
@@ -1312,5 +1312,5 @@
       "canonicalEntityId": "cn:institution:blessed-jurgis-matulaitis-mission-lemont-il"
     }
   ],
-  "content_hash": "sha256:74f9679d6593816290c2426b22480fd42ad9e46e058fbf3d17af02665957159b"
+  "content_hash": "sha256:2534367e92300079050a1de3817b1e5a1046d9cccf29238c833456b37e394484"
 }
