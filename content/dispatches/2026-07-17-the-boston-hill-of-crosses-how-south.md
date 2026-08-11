@@ -3,15 +3,14 @@ title: "The Boston Hill of Crosses: How South Boston Saved Its Lithuanian Parish
 subtitle: "In 2004, the Archdiocese of Boston moved to close 82 of its 357 parishes. St. Peter Lithuanian in South Boston was one of them. This is how a few hundred people saved it."
 date: 2026-07-17
 substackUrl: https://blog.saveourlithuanianparishes.org/p/the-boston-hill-of-crosses-how-south
-archivedAt: 2026-08-08
+archivedAt: 2026-08-11
 ---
 ![](https://substackcdn.com/image/fetch/$s_!mJpl!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F29ffe8ea-7540-451a-b1a8-6e7f98ef636a_680x450.jpeg)
-
 The notices came at the end of May 2004. The Archdiocese of Boston’s reconfiguration plan slated 82 of its 357 parishes to close — nearly one in four. On May 25, word reached St. Peter Lithuanian Church in South Boston: Archbishop Seán P. O’Malley intended to close its church and school. St. Peter’s had been the spiritual and cultural center of the city’s Lithuanian community for a century — its parish rooted in the 1890s, its church dating to 1904.
 
 In the end, some 60 of those churches were lost. St. Peter’s was not. It is still open, still holds a Lithuanian Sunday Mass, and in October 2024 it celebrated the 120th anniversary of its church. The difference between the parishes that closed and this one comes down to what this community did in the months after that notice arrived.
 
-## What they did
+### What they did
 
 The parishioners did not wait, and they did not simply grieve. By June 1, an appeal was underway — they used the church’s own formal process, not protest alone. On June 13, hundreds of parishioners surrounded the church and founded a supporters’ movement, the *rėmėjai*, the Friends of St. Peter Lithuanian Parish. Roughly 600 people joined on the first day. That gave the community something loose outrage never provides: a single organized body, with a name and standing, that the archdiocese would have to deal with directly.
 
@@ -21,7 +20,7 @@ Then, on October 31, 2004, after a *Vėlinės* — All Souls’ — Mass, they b
 
 The name invoked the real one. Outside Šiauliai in northern Lithuania stands the original **Kryžių kalnas**, the Hill of Crosses, which grew after the failed uprisings against Russian rule in 1831 and 1863 and became, under Soviet occupation, a place the regime could not erase — bulldozed flat three times, guarded, and rebuilt each time overnight, until it held more than a hundred thousand crosses. To plant crosses before a church slated for closure is to say, in the oldest language the nation has, *you can flatten this and we will build it again.* It turned an internal parish dispute into a story the wider public could see and understand.
 
-## What it won — and what it cost
+### What it won — and what it cost
 
 It worked: thirteen months after the notice, in the summer of 2005, the archdiocese — on the recommendation of a reconfiguration committee made up mostly of laypeople — agreed that no closure date for St. Peter’s would be set, indefinitely. The parish’s own pastor, kun. Steponas Žukas, laid out the reprieve in *Draugas* that July. It held. It has held ever since.
 
@@ -29,7 +28,7 @@ But survival did not mean everything stayed the same, and this is the honest par
 
 The crosses stayed. On October 27, 2019, fifteen years after the first ones went into the ground, the parish rededicated the monument; a Lithuanian priest, Fr. Aurelijus Gricius, blessed it, and the Friends of St. Peter commissioned a new metal cross. What had begun as a barricade had become, in the words of the archdiocese’s own newspaper, “a monument to the persistence and faith of the archdiocese’s small but proud Lithuanian community.”
 
-## What worked
+### What worked
 
 On October 20, 2024, St. Peter’s marked the 120th anniversary of its church with a jubilee Mass that ended on two words needing no translation: **„Parapija gyvuoja!“** — *The parish lives.*
 
@@ -49,7 +48,7 @@ There is still a Lithuanian Mass in South Boston, and there is still a hill of c
 
 ---
 
-## Sources
+### Sources
 
 **The scale of the 2004 closures.** The reconfiguration plan slated 82 of the archdiocese’s 357 parishes to close (Draugas, Sept. 28, 2004, p. 4); roughly 60 churches were ultimately lost (The Boston Pilot, “Archdiocese to lose 60 churches,” May 28, 2004). St. Peter’s received its notice on May 25, 2004.
 
