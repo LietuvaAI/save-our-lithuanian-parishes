@@ -604,9 +604,9 @@ const allProfilesPage = readFileSync(
 );
 if (
   !/institutionHistory/.test(allProfilesPage) ||
-  !/AllProfilesTimeline/.test(allProfilesPage)
+  !/AllProfilesDirectory/.test(allProfilesPage)
 ) {
-  errors.push("All Profiles does not render the canonical institution timeline");
+  errors.push("All Profiles does not render the canonical institution directory");
 }
 if (
   /RegistryTable/.test(allProfilesPage) ||
