@@ -11,7 +11,7 @@ Four current campaigns are listed below. Start here, then jump to the full actio
 
 Jump to: [Divine Providence](https://blog.saveourlithuanianparishes.org/i/207579337/divine-providence-lithuanian-catholic-church-southfield-michigan) | [Holy Trinity](https://blog.saveourlithuanianparishes.org/i/207579337/holy-trinity-church-hartford-connecticut) | [St. Joseph’s](https://blog.saveourlithuanianparishes.org/i/207579337/st-josephs-church-waterbury-connecticut) | [Transfiguration](https://blog.saveourlithuanianparishes.org/i/207579337/church-of-the-transfiguration-maspeth-queens-new-york)
 
-Quick guide: Divine Providence: restructuring — pastorate decisions announced in the first half of 2027. Holy Trinity: regular Masses ended May 2026; the fight is now for the building and a Lithuanian cultural center. St. Joseph’s: closed 2023, Vatican appeal still open, church still standing. Transfiguration: closure stopped, nothing settled — petition and landmark push continue.
+Quick guide: Divine Providence: restructuring; pastorate decisions announced in the first half of 2027. Holy Trinity: regular Masses ended May 2026; the fight is now for the building and a Lithuanian cultural center. St. Joseph’s: closed 2023, Vatican appeal still open, church still standing. Transfiguration: closure stopped, nothing settled; petition and landmark push continue.
 
 ### Divine Providence Lithuanian Catholic Church - Southfield, Michigan
 ![](https://substackcdn.com/image/fetch/$s_!44o4!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F07bc3897-55d2-4d46-be9d-69e435602374_2560x1920.jpeg)
@@ -24,7 +24,7 @@ Current threat/status: Restructuring review.
 ### What help is needed now
 
 - 
-Review the Archdiocese’s [Planning Area 8 draft models](https://restructuring.aod.org/planning-area-8), and stay close to the parish — registered, present, counted.
+Review the Archdiocese’s [Planning Area 8 draft models](https://restructuring.aod.org/planning-area-8), and stay close to the parish: registered, present, counted.
 
 - 
 Send written feedback if you have an official channel from the listening session or parish process. Keep it factual, respectful, and faith-first.
@@ -67,7 +67,7 @@ Campaign / advocacy links: [Divine Providence Facebook page](https://www.faceboo
 ![](https://substackcdn.com/image/fetch/$s_!FTFp!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F29126975-6527-47d0-baaa-b29187d8c5f0_734x750.jpeg)
 Photo: Holy Trinity Roman Catholic Church, Hartford. Litnet, CC BY-SA 4.0, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hartford_Holy_Trinity_Roman_Catholic_Church,_2000.jpg).
 
-Status: Švč. Trejybės — Holy Trinity — was Hartford’s Lithuanian parish from 1900. In February 2025 the parish bulletin printed three assurances: the church was financially stable, could pay its bills, and weekend Masses would continue as usual. Fifteen months later none of the three held — regular Masses ended on May 30, 2026, and parishioners were told after Mass, with no canonical appeal filed while the window was open. The community’s fight continues: for the building, for a Lithuanian cultural center within it, and for the canon-lawyer retainer still being raised.
+Status: Švč. Trejybės (Holy Trinity) was Hartford’s Lithuanian parish from 1900. In February 2025 the parish bulletin printed three assurances: the church was financially stable, could pay its bills, and weekend Masses would continue as usual. Fifteen months later none of the three held: regular Masses ended on May 30, 2026, and parishioners were told after Mass, with no canonical appeal filed while the window was open. The community’s fight continues: for the building, for a Lithuanian cultural center within it, and for the canon-lawyer retainer still being raised.
 
 Current threat/status: Regular Masses ended May 30, 2026; the building’s future is undecided, and the community is organizing after the fact.
 
@@ -83,7 +83,7 @@ Share the GoFundMe with Lithuanian organizations, parish networks, family groups
 Ask larger Lithuanian institutions and foundations to pay attention to the Connecticut situation.
 
 - 
-Holy Trinity’s history — photographs, bulletins, anniversary books, parish histories — matters to the preservation case; if you hold pieces of it, keep them safe.
+Holy Trinity’s history (photographs, bulletins, anniversary books, parish histories) matters to the preservation case; if you hold pieces of it, keep them safe.
 
 - 
 Pray for the Hartford community as it works to preserve what generations built.
@@ -102,9 +102,9 @@ Campaign / advocacy links: [Protect Holy Trinity Church GoFundMe](https://www.go
 ![](https://substackcdn.com/image/fetch/$s_!rwCr!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F74ce06c5-c8c1-4b84-9e51-904feb3a65a4_3720x3021.jpeg)
 Photo: St. Joseph’s Lithuanian Catholic Church, Waterbury. Farragutful, CC BY-SA 4.0, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:St._Joseph%27s_Church_-_Waterbury,_Connecticut_01.jpg).
 
-Status: Šv. Juozapo — St. Joseph’s — is the first Lithuanian Roman Catholic parish in New England, founded in 1894. The Archdiocese of Hartford closed the church on September 30, 2023, but in its final weeks a parishioner working with a canon lawyer appealed to the Vatican — and almost three years later the church still stands: not sold, not demolished, in Catholic hands, and explicitly excluded from the 2025 sale of the rest of the parish campus. On August 2, 2026, a final Mass was celebrated there and a monsignor performed the ceremony that formally closed the building as a place of worship. The canonical fight has cost nearly $10,000 so far. The church and its Lithuanian club are documented on U-PAVELDAS, Lithuania’s state register of cultural heritage significant to Lithuania abroad.
+Status: Šv. Juozapo (St. Joseph’s) is the first Lithuanian Roman Catholic parish in New England, founded in 1894. The Archdiocese of Hartford closed the church on September 30, 2023, but in its final weeks a parishioner working with a canon lawyer appealed to the Vatican, and almost three years later the church still stands: not sold, not demolished, in Catholic hands, and explicitly excluded from the 2025 sale of the rest of the parish campus. On August 2, 2026, a final Mass was celebrated there and a monsignor performed the ceremony that formally closed the building as a place of worship. The canonical fight has cost nearly $10,000 so far. The church and its Lithuanian club are documented on U-PAVELDAS, Lithuania’s state register of cultural heritage significant to Lithuania abroad.
 
-Current threat/status: building formally closed as a place of worship on August 2, 2026; Vatican appeal still pending, no ruling published; the City of Waterbury posted a request for proposals for the former parish campus in October 2025 — the church itself excluded.
+Current threat/status: building formally closed as a place of worship on August 2, 2026; Vatican appeal still pending, no ruling published; the City of Waterbury posted a request for proposals for the former parish campus in October 2025, with the church itself excluded.
 
 ### What help is needed now
 
@@ -112,7 +112,7 @@ Current threat/status: building formally closed as a place of worship on August 
 [Share and support the existing St. Joseph’s legal-expense fundraiser](https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church) if you are able.
 
 - 
-If you hold pieces of St. Joseph’s history — documents, photographs, anniversary books — keep them safe; they matter to the preservation case.
+If you hold pieces of St. Joseph’s history (documents, photographs, anniversary books), keep them safe; they matter to the preservation case.
 
 - 
 Connect Waterbury parishioners with Hartford and national Lithuanian Catholic advocates so the Connecticut cases are not isolated.
@@ -137,9 +137,9 @@ Campaign / advocacy links: [Save St. Joseph’s Lithuanian Catholic Church GoFun
 ![](https://substackcdn.com/image/fetch/$s_!B2-7!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8d79acde-4ed0-4ebc-b3d1-13d65441d443_4032x3024.jpeg)
 Photo: Church of the Transfiguration, Maspeth. Renata3, CC BY-SA 4.0, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Transfiguration_Roman_Catholic_Church_20201114_154344.jpg).
 
-Status: Kristaus Atsimainymo — the Church of the Transfiguration — was founded as a Lithuanian parish in 1908 and received a closure letter from the Diocese of Brooklyn on February 16, 2025. The response came before any decree: a petition that reached 875 signatures by late July 2026, two landmark filings with the New York City Landmarks Preservation Commission, a coalition of preservation organizations, a council member’s letter — and, by September 2025, the President of Lithuania standing in front of the church. At the end of August 2025 the diocese said in a letter read at Masses that the church would not be closed or sold; weekend Masses continue on terms the diocese calls temporary.
+Status: Kristaus Atsimainymo (the Church of the Transfiguration) was founded as a Lithuanian parish in 1908 and received a closure letter from the Diocese of Brooklyn on February 16, 2025. The response came before any decree: a petition that reached 875 signatures by late July 2026, two landmark filings with the New York City Landmarks Preservation Commission, a coalition of preservation organizations, a council member’s letter, and by September 2025 the President of Lithuania standing in front of the church. At the end of August 2025 the diocese said in a letter read at Masses that the church would not be closed or sold; weekend Masses continue on terms the diocese calls temporary.
 
-Current threat/status: Unresolved — open on reduced, temporary terms; the landmark question is still pending. Nothing is settled either way.
+Current threat/status: Unresolved; open on reduced, temporary terms; the landmark question is still pending. Nothing is settled either way.
 
 ### What help is needed now
 
