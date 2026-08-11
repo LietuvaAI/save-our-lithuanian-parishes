@@ -39,7 +39,7 @@ Send written feedback if you have an official channel from the listening session
 Share the parish’s [official website](https://divineprovidencechurch.com/), Mass schedule, registration page, and [donation page](https://divineprovidencechurch.com/donations/) with people who have drifted away.
 
 - 
-Share the research on Divine Providence, including the [1968 national parish letter](https://blog.saveourlithuanianparishes.org/p/in-writing-the-1968-letter-that-made), [parish numbers](https://blog.saveourlithuanianparishes.org/p/the-numbers-behind-divine-providence), and [canon-law case for personal parishes](https://blog.saveourlithuanianparishes.org/p/a-personal-parish-not-a-place).
+Share the research on Divine Providence, including the [1968 national parish letter](https://blog.saveourlithuanianparishes.org/p/in-writing-the-1968-letter-that-made), [parish numbers](https://blog.saveourlithuanianparishes.org/p/the-numbers-behind-divine-providence).
 
 ### Key links
 
