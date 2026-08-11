@@ -6,7 +6,7 @@ substackUrl: https://blog.saveourlithuanianparishes.org/p/the-last-mass-at-sv-ju
 archivedAt: 2026-08-11
 ---
 ![](https://substackcdn.com/image/fetch/$s_!31G5!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F16325468-c35a-4557-a627-e7befb3d03fe_675x900.jpeg)
-*Šv. Juozapo (St. Joseph’s), 46 Congress Avenue, Waterbury — “First Lithuanian Parish In New England, Est. 1894.” *
+*Šv. Juozapo (St. Joseph’s), 46 Congress Avenue, Waterbury — “First Lithuanian Parish In New England, Est. 1894.” Photo: Consulate General of Lithuania in New York, used with permission.*
 
 On Sunday, August 2, at half past nine in the morning, a short concert in the brick church at 46 Congress Avenue in Waterbury honored Aleksandras Aleksis, the organist and choir director of Šv. Juozapo (St. Joseph's) from 1924 to 1974. He was also the composer of the Knights of Lithuania anthem. Following the choir performance, the last Mass was held at ten. The readings were in both Lithuanian and English. The century-old organ played. Some people wept. It was like a funeral for a church. Afterwards, Monsignor Vittorio Guerrera performed the final closing ceremony for the building.
 
