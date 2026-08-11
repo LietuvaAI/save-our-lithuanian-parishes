@@ -1,6 +1,6 @@
 ---
 title: "Who Owns an Ethnic Parish?"
-subtitle: "What eighteen years of history taught me about the future of America's immigrant churches"
+subtitle: "What the Draugas record of 83 Lithuanian parishes and 55 diocesan closures reveals about ownership—and who has the final say."
 date: 2026-07-09
 substackUrl: https://blog.saveourlithuanianparishes.org/p/who-does-the-parish-belong-to
 archivedAt: 2026-08-11
@@ -11,81 +11,175 @@ archivedAt: 2026-08-11
 
 *A signed essay by Vilija Jurgutis, the one personal piece on these pages.*
 
-For the past several months I have been reading every article I could find about Lithuanian parishes in America and filing each one into the same set of case files. Closures, mergers, Vatican appeals, court cases, fundraising campaigns, final Masses, anniversaries, demolitions. Read one at a time, each article felt like a chapter in the life of one particular community. By the time I reached the end of the archive, my case files held eighty-three Lithuanian Catholic parishes, and fifty-five of them had closed, merged, or lost their independence.
+*This article first appeared in Lithuanian in Draugas, a Lithuanian-American newspaper published in Chicago, under the title “Kam priklauso parapija?” (“Who Does the Parish Belong To?”). It appeared in the June 11, 2026 issue (Vol. CXVII, No. 47): [https://www.draugas.org/kam-priklauso-parapijos/](https://www.draugas.org/kam-priklauso-parapijos/)*
 
-I started out believing I was simply documenting history. At some point the history started explaining itself, and that is the reason I started this Substack.
+Over the past eighteen years, Lithuanian parishes across America have closed one after another—fifty-five of them. Draugas wrote about each one separately. And we mourned each one separately: an old church, a shrinking community, tired people. A different city, a different year, a different parish. Viewed one at a time, each closing appeared to be a separate misfortune with its own separate cause.
 
-My research began with Lithuanian Catholic parishes, but the question it raises belongs to every immigrant community in America: Polish, Slovak, Croatian, Ukrainian, Italian, German, Hungarian, Lebanese, Vietnamese. Our churches were never only the place where Mass was celebrated on Sunday. Around them grew schools and archives, scout troops and choirs, museums, language classes, dance groups, the whole web of institutions through which a people hands its culture to its children. So when one of these churches closes, the loss is never only the building. The question that has been occupying me for months is simply: why does this keep happening?
+But these closings can also be read differently—all together, as one long record. That record now exists. The entire Draugas archive since 2008 has been read in full, and every American Lithuanian parish mentioned in it has been entered into the same record—eighty-three of them. Gathered in one place, the closings no longer appear to be isolated events.
 
-### We Have Been Reading the Story One Parish at a Time
+One truth emerges from them. A parish’s fate is determined not by faith, money, the number of people, or even how courageously the community fought for it. It is determined by one thing: whose hands hold the parish property.
 
-For nearly two decades Draugas faithfully reported each Lithuanian parish closure as it happened. One year it was Shenandoah, another year Boston, then New York, then Waterbury, then Philadelphia, then the earlier chapters of our own parish history here in Detroit. Each article described a different community in its own particular circumstances, and the explanations always had a familiar sound. The neighborhood had changed. The congregation had grown older. The building needed expensive repairs. There were fewer priests. Attendance had declined.
+#### Whose Name Is on the Deed?
 
-Because we encountered these stories one at a time, a year or more apart, in communities a hundred miles from each other, we naturally assumed that each closure had its own separate cause. Reading the news as it arrives, that is all you can see. An archive lets you do something the newspaper cannot: lay all of the stories side by side and ask what appears when they are read together. When I did that, the history stopped being a sequence of sad events and started to show a shape no single article could show.
+“Who does the parish belong to?” Draugas has raised a similar question before. In 2009, the first lecture at the Third Conference on Lithuanian Catholic Pastoral Ministry in the United States was titled “Who Does the Church Belong To?” The question was simple, but the answer surprised many parishioners.
 
-### The Question That Kept Returning
+Lithuanians in America built their churches themselves—with their own hands and their own money. But the building and land almost never belonged to those who built them. They belonged to the diocese.
 
-When I began, I expected the evidence to confirm what we have all repeated for years: that financially healthy parishes survive, that thriving communities outlast struggling ones, that determined parishioners stand a better chance of keeping their churches open. Some of that mattered at the margins. None of it consistently explained what actually happened.
+This was not an accident or a local mistake. It was the result of a longstanding decision of Church law. In 1884, the Plenary Council of Baltimore decided that parish land and buildings belonged to the local diocese rather than to the parish itself. Draugas recalled the same point in 2020: “all parish real estate … must belong to the local dioceses, not to the parish.” This decision applied equally to every parish, including those built and maintained entirely by the community. It remains in force today. It is the root of this entire history.
 
-Instead I kept coming back to a question I had not set out to ask: who owned the church? Legally, on the deed. Once I started reading the record through that lens, stories that had seemed unrelated began to fit together, as if they had been waiting for the right question all along.
+A member of St. Peter Parish in Boston explained what this meant in daily life in a 2022 interview with Draugas. The community wanted to obtain historic protection for its church and could not even do that. “We cannot even do that,” she said, “because the owners of this church are not us, but the archdiocese.”
 
-### Money Was Not Enough
+That is why the separate closings form one record. Of the 83 parishes gathered, 55 were closed by diocesan decision. Some were demolished, while others were merged with other parishes. All 55, without exception, were diocese-owned Roman Catholic parishes.
 
-The strongest assumption about parish closures is that financial health determines survival. The record says otherwise, over and over.
+This happened in different states and different dioceses: Pennsylvania, New England, and the Midwest. The cities, decades, and bishops were different. The result was the same everywhere. Across eighteen years and all those closings, there was not a single exception.
 
-St. Casimir parish in Worcester, Massachusetts had completed nearly a million dollars in repairs and carried no debt when it was closed. St. George in Shenandoah had about a million dollars in savings and more than a thousand donors ready to help preserve one of the oldest Lithuanian churches in America. In Manhattan, the parishioners of Our Lady of Vilnius, known to us as Aušros Vartai — Gate of Dawn — offered to pay for the roof repairs themselves. None of these churches survived.
+The community built it. The community maintained it. But the diocese held the deed. And when the diocese holds the deed, the one who decides is not the one who built.
 
-Shenandoah shows how even a settled financial fact can become contested. The parish hired its own engineer, who estimated the necessary repairs at roughly $360,000. The diocese rejected that estimate and commissioned its own reports, and the projected cost climbed into the millions, eventually approaching nine million dollars. Underneath the numbers is the question that sits under a great many of these closures: who decides whether a church is repairable? The community could raise the money. Only the owner could decide whether the repairs would happen. That distinction decided the outcome.
+#### Money, Loyalty, a Fight—and Closed Anyway
 
-### Neither Was Loyalty
+One might think that money saves a parish. The record shows otherwise.
 
-If money alone could not preserve a parish, maybe devotion could. Nobody can read these histories honestly and conclude that Lithuanian communities simply gave up. They fought, with a persistence that is humbling to read about.
+St. Casimir Parish in Worcester, Massachusetts, had recently completed nearly one million dollars in repairs and carried no debt when it was closed. St. George Church in Shenandoah had accumulated approximately one million dollars and had more than one thousand donors. The parishioners of Our Lady of Vilnius, Aušros Vartai, in New York offered to pay for the church’s roof repairs themselves. All these parishes were closed or demolished.
 
-In New York, nearly four thousand people signed petitions to save Gate of Dawn. Parishioners took their case to the civil courts and to the Vatican. Historic preservation advocates joined them. Lithuania's presidents, Valdas Adamkus and later Gitanas Nausėda, spoke publicly for the preservation of Lithuanian churches, and the 2002 U.S.–Lithuania Cultural Heritage Agreement was invoked on the church's behalf. Parishioners managed to hold off demolition through litigation for nearly four years.
+The Shenandoah case shows how the “repair” justification actually works. An engineer hired by the parish estimated the repairs at roughly one-third of a million dollars. The diocese rejected that figure and hired its own experts. In their reports, the cost rose to several million dollars and then to nine million.
 
-And yet when New York's highest court finally ruled in 2011, it did not decide whether the church should stay open. It decided who had the authority to decide, and that was not the congregation. The church was sold to a developer and torn down. Reading that case changed how I understood every other one. These communities had extraordinary commitment. What they did not have was the authority to make the final decision.
+The number used to justify closing a church is not determined by the community. It is determined by the one who holds the deed. And after the closing, the diocese took the million dollars the Shenandoah parish had saved.
 
-### The Pattern Hidden in Plain Sight
+The same method appears elsewhere. After a fire or minor damage, a diocese may refuse to repair the building. Then “too expensive to repair” becomes the reason for closing it. This happened to Lithuanian parishes in Newark and Elizabeth, New Jersey.
 
-Put all fifty-five closures side by side and the parishes have almost nothing in common: some thriving, some struggling, some carrying debt, some holding substantial savings, some newly renovated, some accepting the end quietly while others fought in the courts for years. The bishops were different, the dioceses were different, the decades were different.
+One might think that a fight saves a parish. But fighting was not enough either.
 
-The one thing they had in common: the parish property belonged to the diocese.
+Communities collected signatures. Nearly four thousand people signed one petition in New York. They appealed to civil courts and to the Vatican. Even Lithuania’s presidents, Valdas Adamkus and Gitanas Nausėda, spoke on behalf of Lithuanian parishes. Churches were placed on state historic registers, but even a registered church could be demolished. The 2002 cultural heritage agreement between the United States and Lithuania proved powerless in these cases. None of these steps reversed a single closing.
 
-I want to be careful here, because this is not an accusation. Bishops face genuinely difficult demographic, pastoral and financial realities, and they are charged with weighing the good of an entire diocese. This is a historical observation, and observations are the business of an archive. When the legal authority to decide a parish's future rests outside the congregation, the choices actually available to that congregation are very different from what most parishioners realize. History suggests we have paid far too little attention to that single fact.
+This is clearest in the case of Aušros Vartai in New York. Parishioners found a legal basis for their case and delayed the demolition of the church for approximately four years. But in 2011, New York’s highest court ruled that the will of the Church hierarchy outweighed the will of the community itself.
 
-### The Exceptions That Explain the Rule
+The court did not decide whether the church should be closed. It decided only who had the right to make that decision—and the answer was not the community. Draugas summarized the ruling briefly: “This court decision is final and cannot be contested.” The church was sold to a development company and demolished.
 
-Historians learn as much from the exceptions as from the pattern, and the exceptions here are the most instructive part of the whole story.
+These parishes had both faith and loyalty. More than one thousand donors supported St. George Church in Shenandoah. Lithuanians had sustained St. Peter Parish in Boston since 1898. The people did not abandon their churches. The communities did everything within their power. And still it was not enough, because one thing was never in their hands: the property itself.
 
-Pennsylvania's anthracite coal region once held thirty-one Lithuanian parishes. Twenty-nine were Roman Catholic, and every one of those twenty-nine has closed. One parish survives: Scranton's Divine Providence Lithuanian National Catholic Church. (This is a different parish from our Divine Providence in Southfield, Michigan; the two share a name but not a diocese, and Scranton's belongs to the Lithuanian National Catholic tradition rather than the Roman Catholic one.) It survived for a reason that has nothing to do with faith or effort. Its ownership followed a different path.
+#### Surviving Once Is Not Yet Safety
 
-Lawrence, Massachusetts offers the comparison in its purest form. In 2002, two Lithuanian parishes in the same city reached the end of their histories in the same year. The Roman Catholic parish was closed by decision of the archdiocese. The independent Lithuanian National Catholic parish also closed, but by decision of its own members, who chose to retain the proceeds to support their cemetery. Same city, same year, same demographic pressures, and two very different kinds of ending, because the ownership and the authority were different.
+Sometimes a parish survives a restructuring. But the record shows what that kind of survival actually means.
 
-Other examples point the same direction. In Montreal, where Quebec law has historically structured parish property differently than most American dioceses, both Lithuanian parishes survived. Even a Lithuanian Lutheran congregation belongs in this account: Tėviškė parish in Chicago's Marquette Park bought its church, a former synagogue, in 1957, and has made every major decision about its own future ever since. None of these cases is a universal blueprint and I do not present them as one. Together, though, they suggest that governance (who holds the deed, and who decides) deserves far more attention than it has received.
+Seven Lithuanian parishes survived one wave of restructuring, only to be reached by another.
 
-### Why This Matters Now
+St. Anthony Parish in Detroit avoided closing in 1989, when Cardinal Edmund Szoka decided to rebuild it after a fire. It closed in 2013.
 
-As I write this, our Divine Providence Lithuanian Catholic parish in Detroit is going through the Archdiocese of Detroit's restructuring process. No closure decree has been issued. No outcome has been decided. And that, precisely, is why this history matters right now.
+St. Anthony Parish in Omaha survived a threat around 2008. It closed in 2014.
 
-Everything I have read these months points to one practical truth: communities have their greatest opportunity to shape their future before decisions become irreversible. Once formal closure proceedings begin, the choices available to parishioners narrow very quickly. History cannot tell Detroit what will happen, and it cannot prescribe a single correct solution. What it can do is tell us which questions deserve to be asked while there is still time to ask them.
+St. Joseph Parish in Waterbury survived a 2002 merger and had even begun a genuine renewal. It closed in 2023.
 
-What governance models are possible? What legal structures already exist, here and elsewhere? Can the institutions that grew up around a parish (the school, the archive, the choir, the language classes) be protected even under difficult circumstances? Can ownership and stewardship be imagined differently while remaining wholly faithful to the Church and its mission? These are not questions of opposition. They are questions of stewardship, and they are best asked early, in a spirit of cooperation, and out loud.
+The same happened to St. Casimir and St. George in Philadelphia and St. Andrew in New Britain. They were closed or lost their Lithuanian identity.
 
-### Why I’m Writing This
+Transfiguration Parish in Maspeth survived a 2019 merger and received a closure letter in 2025. Its fate is still being decided.
 
-This Substack is not about nostalgia and it is not about blame. It is about understanding the institutions our immigrant communities built, while there is still time to learn from them.
+Each of these parishes survived in a different way. One was saved by the decision to rebuild after a fire, another by the intervention of a sympathetic clergyman, and another by successfully resisting a merger. But none of those rescues was final.
 
-Over the coming months I will share the stories behind this research: the rise and fall of Lithuanian parishes across America, the court cases that reshaped whole communities, the governance structures most parishioners never knew existed, the archives that quietly preserve what has been forgotten, and the decisions that determined which churches survived.
+Two clocks are ticking in a parish that remains in diocesan hands.
 
-Most of all, I hope these essays start conversations well beyond the Lithuanian-American community, because every immigrant community eventually arrives at the same question: how do you preserve not only the building, but the world that was built around it?
+One belongs to the community: people grow older, the young move away, and fewer faces appear at Sunday Mass. The community can slow its own clock by welcoming new families, educating children, and renewing the church.
 
-I began this project believing I was documenting fifty-five separate stories. I finished convinced I had been reading one. It is a story about governance, stewardship, memory, and the responsibility each generation inherits from the one before it, and it begins with a question far older and far more important than any single parish:
+The other belongs to the diocese: review after review, restructuring after restructuring. The community cannot stop the diocesan clock.
 
-Who owns the future?
+Some parishes have survived not one review but two or three. But they remain within the diocese. As long as the diocese holds the deed, every new review will reach them sooner or later.
+
+And the two clocks are unequal. The community must win every time. The diocese needs to win only once, because the review always returns. To survive one restructuring is to gain time. But time is not yet safety.
+
+#### The Only Ones No One Closed
+
+The record also contains parishes that no bishop closed. They show the same truth from the other side.
+
+This is clearest in Pennsylvania’s anthracite coal region. According to Draugas, 31 Lithuanian parishes once operated there. Twenty-nine were Roman Catholic, and today all of them are closed. Scranton’s Divine Providence Church survived.
+
+It survived because it had been an independent parish from the beginning, governed not by a Roman Catholic diocese but by the community itself. No bishop can close it because it belongs to no bishop.
+
+Scranton also shows where this difference came from. Early in the last century, when it became clear that the community that had built a church did not govern it, some Pennsylvania Lithuanians did what the Poles had done a little earlier: they separated from Rome.
+
+In 1914, they founded their own Church, the Lithuanian National Catholic Church. It is Catholic in faith and rites, but it does not recognize the authority of the pope and does not belong to the Roman Catholic Church. Its parishes belong to the parishioners themselves.
+
+The difference can be seen in two churches standing beside one another in Scranton. Lithuanians first built a Roman Catholic church there, which the diocese took over through the courts. Some of the Lithuanians then withdrew and built their own church beside it—one that no bishop could close or sell.
+
+One church is closed today. The other still stands. In 2017, Draugas wrote: “And the ‘independent’ Lithuanian Catholics … still gather every Sunday in their own church.”
+
+The same difference can be seen in a single city and a single year.
+
+In 2002, two Lithuanian parishes in Lawrence, Massachusetts, came to the end of their histories. The Roman Catholic church was closed by the archdiocese, which took its property. The independent parish was closed by the community itself, through its own decision, and the proceeds were retained for its cemetery.
+
+The same city, the same year, the same shrinking community. The only difference was whose hands held the decision.
+
+Montreal shows the same thing. Quebec law establishes that the parish itself, rather than the diocese, owns the church. Both Lithuanian parishes in Montreal survived.
+
+The difference can also be seen in an example unrelated to Catholics. The Lithuanian Lutheran parish Tėviškė purchased its church in 1957 and has made every decision about it itself ever since.
+
+What determines the outcome is not the community’s faith. What matters is who governs the building.
+
+Everywhere a parish survived over the long term, the same condition appeared. The church was governed not by the diocese but by the community itself.
+
+#### Detroit—A Step No One Has Yet Taken
+
+Divine Providence Parish in Detroit has not received a closure letter. It is not being closed. It has been included in the Archdiocese of Detroit’s current restructuring.
+
+In March 2026, the archdiocese prepared a separate restructuring workbook for every parish. This matters because the record shows a clear boundary. After receiving a closure letter, no parish within a diocese saved itself through money, the courts, or a fight.
+
+The only window that ever made a difference was the period before that letter. Detroit remains within that window today.
+
+This matters for another reason. Divine Providence is the last Lithuanian Catholic parish in Detroit. The others have already closed.
+
+The record also shows what that window means. There is still time to do the one thing that truly protects a parish: place the deed in the hands of the community.
+
+The Lithuanians of Scranton and Lawrence reached that point through their own path. A century ago, they separated from Rome and established a different Church. But that is their history, not the proposal of this article.
+
+The question here is not how to leave the Catholic Church. It is how a Catholic parish might hold its own home.
+
+One question remains unanswered by the record: can a parish remain within the Catholic Church while holding the deed itself?
+
+The record also shows where the limits lie. Seven Lithuanian parishes survived one wave of restructuring, only to be reached by another. A parish can survive only so many restructurings.
+
+One answer raised by the record is to purchase the church building from the diocese. During the eighteen years studied, no Lithuanian Roman Catholic parish did so.
+
+The idea was raised only once, in 2008, when the Lithuanian Foundation offered to lend parishes money to purchase their buildings. No parish carried out the proposal.
+
+A purchase is possible only if the owner holding the deed agrees to sell. A diocese that is itself shrinking and facing financial difficulties may find it more profitable to sell a half-empty church in a valuable location to a development company than to the Lithuanian community. This is not malice. It is simple property arithmetic.
+
+But what has not yet appeared in the record can still appear in it.
+
+Divine Providence Parish in Detroit remains within the window before a closure letter. It still has something it will not have later: time. Time to ask questions, time to learn from history, and time to decide together.
+
+#### While the Community Still Decides
+
+Eighty-three parishes. Fifty-five closings. Eighteen years.
+
+The entire record says one thing: a parish’s fate was determined not by faith, money, the number of people, or the courage of the fight. It was determined by ownership. The parishes governed by their communities survived. The parishes governed by dioceses were closed sooner or later.
+
+The 2009 lecture presented three examples of hope.
+
+The property of St. Casimir Parish in Brockton went not to the diocese but to a Lithuanian mission.
+
+The parishioners of Aušros Vartai in Manhattan were considering whether they could legally reopen the church.
+
+A court in Spokane had ruled that a bishop was merely the trustee of church property rather than its owner.
+
+Seventeen years later, all three ended the same way. The Lithuanian community in Brockton dispersed. In 2011, the court ruled against the parishioners of Aušros Vartai, and the church was demolished. The legal hope raised by the Spokane decision did not save a single Lithuanian parish.
+
+This is not a sad story about what is inevitable. It is knowledge of what can still be done while it is not too late.
+
+Divine Providence Parish is still alive. The Lithuanian language is still heard there. The Lithuanian school, choir, archive, dance groups, scout troops, ateitininkai, Kovas sports club, Lithuanian Daughters, and Lithuanian Community are still active there.
+
+And as long as the closure letter has not arrived, the community still holds the decision.
+
+In 2025, Lithuania’s Consul General in New York, Dovydas Špokauskas, said something simple in Draugas: “What is built by Lithuanians must legally remain with Lithuanians.”
+
+The churches built by Lithuanian hands already belong to Lithuanians through labor, sacrifice, and memory.
+
+By deed—not yet.
+
+The community must hear the question “Who does the parish belong to?” as a question addressed to itself. And it must answer the question itself while it still can.
 
 ### Sources
 
-This essay draws on the *Draugas* archive, gathered in the series **“Kam priklauso parapijos?” (”Who Do the Parishes Belong To?”)** and compiled in the companion research files and its analysis.
+This essay draws on the Draugas archive, gathered in the series “Kam priklauso parapijos?” (”Who Do the Parishes Belong To?”) and compiled in the companion research files and its analysis.
+
+The spine of the record, by claim (all dates are Draugas issues): the 1884 Baltimore decision as Draugas recalled it — May 30, 2020. The 2009 conference in Boston and its opening lecture “Kam priklauso bažnyčia?” (Dr. Mykolas Ritty), with its three examples of hope — May 5, 2009. The St. Peter (South Boston) interview — July 2, 2022. Scranton’s independent Catholics — Dec. 28, 2017; the court-seizure retrospective — Jan. 20, 2024; the 1914 founding year of the Lithuanian National Catholic Church is the essay’s one claim resting on public historical sources rather than the Draugas archive. Consul General Špokauskas — Aug. 9, 2025. The seven parishes reached by a second wave: Detroit Šv. Antano — June 20 and 29, 2013; Omaha — Sept. 4, 2008, May 29 and June 19, 2014; Waterbury — Aug. 24 and Sept. 2, 2023; Philadelphia Šv. Kazimiero — July 28, 2011; Philadelphia Šv. Jurgio — May 18, 2017; New Britain Šv. Andriejaus — Nov. 30, 2017 and Dec. 9, 2023; Maspeth — Feb. 22, 2025 and Mar. 19, 2026. The Lithuanian Foundation’s 2008 loan offer — June 27, 2008. Newark and Elizabeth — Feb. 15, 2018 and Sept. 22, 2022. Lawrence — May 14, 2015, June 13, 2020 and Dec. 16, 2023. Montreal (Fr. Nerijus Šmerauskas on Quebec law) — Jan. 18, 2020.
 
 **Attribution.** All newspaper sources cited below are from ***Draugas***, the Lithuanian-language newspaper published in Chicago by the Lithuanian Catholic Press Society (Lietuvių katalikų spaudos draugija), which has chronicled Lithuanian life in America since 1908. Every issue linked here is the full scanned edition made publicly available through the **Draugas digital archive** at [draugas.org](https://www.draugas.org). Copyright in the original articles and photographs remains with *Draugas* and its authors; the material is cited here — with gratitude for more than a century of recordkeeping without which this research would not exist — for purposes of research, commentary, and historical documentation.
 
