@@ -3,11 +3,10 @@ title: "The Last Mass at Šv. Juozapo"
 subtitle: "New England’s oldest Lithuanian church held its final Mass on August 2, and a monsignor formally closed the building. The 2023 Vatican appeal still has no published ruling."
 date: 2026-08-08
 substackUrl: https://blog.saveourlithuanianparishes.org/p/the-last-mass-at-sv-juozapo
-archivedAt: 2026-08-08
+archivedAt: 2026-08-11
 ---
 ![](https://substackcdn.com/image/fetch/$s_!31G5!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F16325468-c35a-4557-a627-e7befb3d03fe_675x900.jpeg)
-
-*Šv. Juozapo (St. Joseph’s), 46 Congress Avenue, Waterbury — “First Lithuanian Parish In New England, Est. 1894.” Photo: Consulate General of Lithuania in New York, used with permission.*
+*Šv. Juozapo (St. Joseph’s), 46 Congress Avenue, Waterbury — “First Lithuanian Parish In New England, Est. 1894.” *
 
 The choir sang first. At half past nine on the morning of Sunday, August 2, in the brick church at 46 Congress Avenue in Waterbury, a short concert honored Aleksandras Aleksis, organist and choir director at Šv. Juozapo — St. Joseph’s — from 1924 to 1974 and the composer of the Knights of Lithuania anthem. The Mass followed at ten. The century-old organ played, the readings were in Lithuanian and English, and people wept. It was the last Mass in the church. Afterward, Monsignor Vittorio Guerrera performed [the ceremony that formally closed the building](https://www.primepublishers.com/towntimesnews/news/community_events/final-mass-to-be-held-at-oldest-lithuanian-church-in-new-england-august-2/article_848335ac-44e6-43ec-b0a4-e30b4dfc58ec.html).
 
@@ -19,7 +18,7 @@ What the ceremony did is narrow, and worth keeping straight. The parish was supp
 
 The windows are the open question now. They were installed in 1931 under klebonas Juozas Valantiejus, the parish’s pastor, and they carry Lithuanian inscriptions naming the families and the mutual-aid societies that paid for them — the Šv. Kazimiero and Šv. Juozapo brolijos, the burial-and-benefit societies the immigrants founded before they had a parish. Valantiejus’s own name is on one of them. His niece, Dana Ringienė-Šarkienė, told Draugas that if the closing could not be stopped, she would at least like to save the panel that carries it. Aleksis’s papers are already secure: the Lithuanian Research and Studies Center in Chicago holds his archive.
 
-### What you can do
+#### What you can do
 
 **The canonical case is still running,** and its costs are paid rather than pledged — attorney’s fees, a commercial appraisal, the scanning of the parish’s historical documents. [The GoFundMe is here.](https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church)
 
@@ -31,7 +30,7 @@ The church at 46 Congress Avenue is closed, still standing, and still in Catholi
 
 ---
 
-### Sources
+#### Sources
 
 **The last Mass and the closing ceremony:** [“Lietuvos Vyčių suvažiavimas — atsisveikinant su šventove,” Draugas, August 8, 2026, pp. 8–9](https://www.draugas.org/key/2026_reg/2026-08-08-DRAUGAS.pdf) · [Final Mass to be Held at Oldest Lithuanian Church in New England August 2](https://www.primepublishers.com/towntimesnews/news/community_events/final-mass-to-be-held-at-oldest-lithuanian-church-in-new-england-august-2/article_848335ac-44e6-43ec-b0a4-e30b4dfc58ec.html) — Town Times (Prime Publishers)
 
