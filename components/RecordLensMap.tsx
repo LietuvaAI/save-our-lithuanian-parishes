@@ -3,8 +3,6 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import mapData from "@/data/map.json";
-import type { RecordMarkShape } from "@/lib/record-mark";
-
 export type RecordLensPoint = {
   slug: string;
   name: string;
@@ -14,7 +12,7 @@ export type RecordLensPoint = {
   y: number;
   href?: string | null;
   color: string;
-  shape?: RecordMarkShape;
+  shape?: "circle" | "diamond" | "square" | "triangle";
   hollow?: boolean;
   demolished?: boolean;
   ringColor?: string;
@@ -24,7 +22,7 @@ export type RecordLensPoint = {
 export type RecordLensLegendItem = {
   label: string;
   color: string;
-  shape?: "circle" | "diamond" | "square" | "ring";
+  shape?: "circle" | "diamond" | "square" | "triangle" | "ring";
   hollow?: boolean;
 };
 
@@ -55,7 +53,9 @@ function LegendMark({
           ? "rounded-full"
           : shape === "diamond"
             ? "rotate-45"
-            : "rounded-[1px]"
+            : shape === "triangle"
+              ? "[clip-path:polygon(50%_0,100%_100%,0_100%)]"
+              : "rounded-[1px]"
       }`}
       style={{
         backgroundColor: hollow ? "var(--background)" : color,
@@ -124,6 +124,13 @@ function PointMark({
           width="18"
           height="18"
           rx="1"
+          fill={fill}
+          stroke={stroke}
+          strokeWidth={strokeWidth}
+        />
+      ) : shape === "triangle" ? (
+        <path
+          d={`M ${point.x} ${point.y - 11} L ${point.x + 10} ${point.y + 8} L ${point.x - 10} ${point.y + 8} Z`}
           fill={fill}
           stroke={stroke}
           strokeWidth={strokeWidth}

@@ -1,11 +1,11 @@
 {
   "generatedFrom": {
-    "registryRevision": 26,
-    "registryDate": "2026-08-07",
-    "canonicalPublicationRevision": "canonical-public-census-2026-08-07-terminal-building-research",
-    "canonicalPublicationHash": "sha256:7c2b2308cc538148f2687bd18c60318b92d4b09d625f9cb7c50ee49c43375898",
-    "canonicalInfographicRevision": "canonical-infographic-units-2026-08-07-terminal-building-research",
-    "canonicalInfographicHash": "sha256:fb633d839a549025ffb803ddaf57a09374c21d9f5fe37331fa27b0a07b808b11",
+    "registryRevision": 29,
+    "registryDate": "2026-08-11",
+    "canonicalPublicationRevision": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
+    "canonicalPublicationHash": "sha256:4be15ea4ad10bd769bb7e1f017fbd458fc4f04ac66016ed355f86688104707fa",
+    "canonicalInfographicRevision": "canonical-infographic-units-2026-08-11-wider-catholic-life-geocodes",
+    "canonicalInfographicHash": "sha256:5cb7bd44b5b9593176fe4117f7579686a7df1ff4753dcd34b85e95af33abd98e",
     "networkChecked": "2026-08-03"
   },
   "publicUS": {

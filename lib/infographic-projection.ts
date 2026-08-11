@@ -74,6 +74,49 @@ export type CurrentPastoralDirectoryEntry = {
   sourceRefs: string[];
 };
 
+export type CanonicalGeo = {
+  lat: number;
+  lon: number;
+  precision: "address_geocode";
+  source_artifact_id: string;
+};
+
+export type DocumentedReligiousHouse = {
+  entity_id: string;
+  name_lt: string;
+  name_en: string;
+  city: string;
+  state: string;
+  address: string;
+  community_type: "men_religious_house" | "women_religious_house";
+  current_status: "current";
+  official_site: string;
+  source_artifact_ids: string[];
+  geo: CanonicalGeo;
+};
+
+export type AdditionalPastoralCommunity = {
+  entity_id: string;
+  name_lt: string;
+  name_en: string;
+  city: string;
+  state: string;
+  classification: "occasional_hosted_worship_community";
+  host_name: string;
+  host_address: string;
+  host_site: string;
+  official_community_site: string;
+  latest_documented_lithuanian_mass: string;
+  explanation: string;
+  formal_mission_status_established: false;
+  regular_schedule_established: false;
+  current_sielovada_directory_member: false;
+  counted_in_current_14_place_network: false;
+  counted_in_public_institution_total: false;
+  counted_in_roman_catholic_parish_mission_history: false;
+  geo: CanonicalGeo;
+};
+
 export type InstitutionHistoryRow = {
   culturenet_entity_id: string;
   registry_slug: string;
@@ -248,6 +291,28 @@ type InfographicProjection = {
       source: Record<string, unknown>;
     };
   };
+  wider_catholic_life: {
+    documented_religious_houses: {
+      unit: string;
+      population: number;
+      population_claim: string;
+      observed_at: string;
+      source_assertion_id: string;
+      counted_in_public_institution_total: false;
+      counted_in_roman_catholic_parish_mission_history: false;
+      houses: DocumentedReligiousHouse[];
+    };
+    additional_pastoral_communities: {
+      unit: string;
+      population: number;
+      observed_at: string;
+      source_assertion_id: string;
+      counted_in_current_pastoral_network: false;
+      counted_in_public_institution_total: false;
+      counted_in_roman_catholic_parish_mission_history: false;
+      communities: AdditionalPastoralCommunity[];
+    };
+  };
   regional_views: {
     pennsylvania_coal_region: {
       unit: string;
@@ -303,6 +368,11 @@ export const buildingSiteHistory = canonicalInfographics.building_site_history;
 export const continuityEdges = canonicalInfographics.continuity_edges;
 export const currentPastoralNetwork =
   canonicalInfographics.current_pastoral_network;
+export const widerCatholicLife = canonicalInfographics.wider_catholic_life;
+export const documentedReligiousHouses =
+  widerCatholicLife.documented_religious_houses.houses;
+export const additionalPastoralCommunities =
+  widerCatholicLife.additional_pastoral_communities.communities;
 export const infographicCounts = canonicalInfographics.counts;
 export const conditionResolutionContract =
   canonicalInfographics.condition_resolution_contract;
@@ -412,6 +482,29 @@ if (
 ) {
   throw new Error(
     "Canonical additional hosted-community set must contain Washington Epiphany only.",
+  );
+}
+if (
+  widerCatholicLife.documented_religious_houses.population !== 2 ||
+  documentedReligiousHouses.length !== 2 ||
+  widerCatholicLife.additional_pastoral_communities.population !== 1 ||
+  additionalPastoralCommunities.length !== 1
+) {
+  throw new Error("Canonical wider Catholic-life population drifted.");
+}
+if (
+  [...documentedReligiousHouses, ...additionalPastoralCommunities].some(
+    (record) =>
+      record.geo.lat == null ||
+      record.geo.lon == null ||
+      institutionByEntityId.has(record.entity_id) ||
+      currentPastoralNetwork.members.some(
+        (member) => member.entity_id === record.entity_id,
+      ),
+  )
+) {
+  throw new Error(
+    "Wider Catholic-life records must be geocoded and remain outside institution and regular-worship populations.",
   );
 }
 

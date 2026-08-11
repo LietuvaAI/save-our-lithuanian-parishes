@@ -15431,6 +15431,237 @@
     },
     {
       "adjudication": {
+        "reason": "Current worship is documented, while formal mission status and a regular schedule remain unestablished.",
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:religious-houses-atlanta-23:atlanta-current-classification",
+      "object": {
+        "city": "Marietta",
+        "classification": "occasional_hosted_worship_community",
+        "counted_in_current_14_place_network": false,
+        "counted_in_public_institution_total": false,
+        "counted_in_roman_catholic_parish_mission_history": false,
+        "current_sielovada_directory_member": false,
+        "explanation": "A 2018 donor plaque uses the word mission, and the Atlanta Lithuanian community documents occasional Lithuanian Masses at St. Ann Church. No archdiocesan evidence reviewed here establishes a formally erected Lithuanian mission or a regular current Lithuanian liturgy.",
+        "formal_mission_status_established": false,
+        "geo": {
+          "lat": 33.9995725,
+          "lon": -84.4077564,
+          "precision": "address_geocode",
+          "source_artifact_id": "src:religious-houses-atlanta-23:address-geocodes:2026-08-11"
+        },
+        "host_address": "4905 Roswell Road, Marietta, GA 30062",
+        "host_name": "The Catholic Church of St. Ann",
+        "host_site": "https://st-ann.org/",
+        "latest_documented_lithuanian_mass": "2026-03-28",
+        "name_en": "Atlanta Lithuanian Catholic worship community",
+        "name_lt": "Atlantos lietuvių katalikų bendruomenė",
+        "official_community_site": "https://www.lietuviaiatlantoje.org/",
+        "regular_schedule_established": false,
+        "state": "GA"
+      },
+      "observed_at": "2026-08-10",
+      "predicate": "additional_us_lithuanian_catholic_worship_community",
+      "source_artifact_id": "src:religious-houses-atlanta-23:atlanta-community:2026-03-16",
+      "source_locator": "2026 Lithuanian Easter Mass notice at St. Ann Church, reconciled with the 2018 plaque and the current Archdiocese of Atlanta parish directory",
+      "subject": {
+        "canonical_entity_id": "cn:organization:atlanta-lithuanian-catholic-worship-community"
+      }
+    },
+    {
+      "adjudication": {
+        "reason": "The official directory corroborates the host site but not a formally erected Lithuanian mission.",
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:religious-houses-atlanta-23:atlanta-host-directory",
+      "object": {
+        "host_address": "4905 Roswell Road NE, Marietta, GA 30062",
+        "host_name": "Saint Ann, Marietta",
+        "interpretation": "The host parish is official; the listing does not independently establish a Lithuanian mission or regular Lithuanian-language schedule.",
+        "languages_offered_in_directory": [
+          "English"
+        ]
+      },
+      "observed_at": "2026-08-10",
+      "predicate": "atlanta_host_parish_current_archdiocesan_directory_listing",
+      "source_artifact_id": "src:religious-houses-atlanta-23:atlanta-archdiocese:2026-08-10",
+      "source_locator": "Archdiocese of Atlanta Find a Parish entry for Saint Ann, Marietta",
+      "subject": {
+        "canonical_entity_id": "cn:organization:atlanta-lithuanian-catholic-worship-community"
+      }
+    },
+    {
+      "adjudication": {
+        "reason": "Both houses have current official organizational or diocesan corroboration; neither is a parish or mission institution.",
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:religious-houses-atlanta-23:current-religious-houses",
+      "object": {
+        "counted_in_public_institution_total": false,
+        "counted_in_roman_catholic_parish_mission_history": false,
+        "houses": [
+          {
+            "address": "28 Beach Ave, Kennebunk, ME 04043",
+            "city": "Kennebunk",
+            "community_type": "men_religious_house",
+            "current_status": "current",
+            "entity_id": "cn:organization:kennebunk-lithuanian-franciscan-friary",
+            "geo": {
+              "lat": 43.3545865,
+              "lon": -70.4780363,
+              "precision": "address_geocode",
+              "source_artifact_id": "src:religious-houses-atlanta-23:address-geocodes:2026-08-11"
+            },
+            "name_en": "Lithuanian Franciscan Friary at Kennebunk",
+            "name_lt": "Kennebunko lietuvių pranciškonų vienuolynas",
+            "official_site": "https://ofm.lt/kas-mes-esame/brolijos/brolija-kenebunke/",
+            "source_artifact_ids": [
+              "src:religious-houses-atlanta-23:hill-of-crosses-plaque:2018",
+              "src:religious-houses-atlanta-23:kennebunk-ofm:2026-08-10"
+            ],
+            "state": "ME"
+          },
+          {
+            "address": "600 Liberty Highway, Putnam, CT 06260",
+            "city": "Putnam",
+            "community_type": "women_religious_house",
+            "current_status": "current",
+            "entity_id": "cn:organization:putnam-immaculate-conception-sisters",
+            "geo": {
+              "lat": 41.9283014,
+              "lon": -71.868653,
+              "precision": "address_geocode",
+              "source_artifact_id": "src:religious-houses-atlanta-23:address-geocodes:2026-08-11"
+            },
+            "name_en": "Immaculate Conception Convent and Center",
+            "name_lt": "Putnamo Švč. Mergelės Marijos Nekaltojo Prasidėjimo seserų vienuolynas",
+            "official_site": "https://www.immaculateconceptioncenter.org/",
+            "source_artifact_ids": [
+              "src:religious-houses-atlanta-23:hill-of-crosses-plaque:2018",
+              "src:religious-houses-atlanta-23:putnam-diocese:2026-08-10",
+              "src:religious-houses-atlanta-23:putnam-center:2026-08-10"
+            ],
+            "state": "CT"
+          }
+        ],
+        "population_claim": "documented set, not a complete historical census of every Lithuanian religious house in the United States",
+        "unit": "documented current Lithuanian Catholic religious house"
+      },
+      "observed_at": "2026-08-10",
+      "predicate": "documented_current_us_lithuanian_catholic_religious_houses",
+      "source_artifact_id": "src:religious-houses-atlanta-23:kennebunk-ofm:2026-08-10",
+      "source_locator": "Current official religious-order and diocesan listings, cross-checked against the two religious houses named on the 2018 plaque",
+      "subject": {
+        "canonical_entity_id": "cn:organization:kennebunk-lithuanian-franciscan-friary"
+      }
+    },
+    {
+      "adjudication": {
+        "reason": "Each result resolves the verified street address of the accepted organization or host church.",
+        "state": "accepted"
+      },
+      "assertion_type": "location",
+      "confidence": "high",
+      "id": "assert:religious-houses-atlanta-23:map-coordinates",
+      "object": {
+        "coordinate_system": "WGS84",
+        "method": "exact verified street-address query",
+        "rows": [
+          {
+            "entity_id": "cn:organization:kennebunk-lithuanian-franciscan-friary",
+            "lat": 43.3545865,
+            "lon": -70.4780363
+          },
+          {
+            "entity_id": "cn:organization:putnam-immaculate-conception-sisters",
+            "lat": 41.9283014,
+            "lon": -71.868653
+          },
+          {
+            "entity_id": "cn:organization:atlanta-lithuanian-catholic-worship-community",
+            "lat": 33.9995725,
+            "lon": -84.4077564
+          }
+        ]
+      },
+      "predicate": "wider_catholic_life_address_geocodes",
+      "source_artifact_id": "src:religious-houses-atlanta-23:address-geocodes:2026-08-11",
+      "source_locator": "Nominatim exact-address results for the three accepted wider-Catholic-life records",
+      "subject": {
+        "canonical_entity_id": "cn:organization:atlanta-lithuanian-catholic-worship-community"
+      }
+    },
+    {
+      "adjudication": {
+        "reason": "The inscription is direct evidence for the name used in 2018, but it is not an archdiocesan decree or directory and therefore does not establish formal mission status.",
+        "state": "accepted"
+      },
+      "assertion_type": "historical_status",
+      "confidence": "high",
+      "id": "assert:religious-houses-atlanta-23:plaque-classification",
+      "object": {
+        "date": "2018",
+        "evidence_scope": "donor self-description",
+        "formal_canonical_erection_established": false,
+        "label": "Lietuvių katalikų misija Atlanta, GA"
+      },
+      "predicate": "described_as_lithuanian_catholic_mission_on_2018_donor_plaque",
+      "source_artifact_id": "src:religious-houses-atlanta-23:hill-of-crosses-plaque:2018",
+      "source_locator": "Named donor line: Lietuvių katalikų misija Atlanta, GA",
+      "subject": {
+        "canonical_entity_id": "cn:organization:atlanta-lithuanian-catholic-worship-community"
+      }
+    },
+    {
+      "adjudication": {
+        "reason": "The Sisters' own site describes their continuing Putnam presence and current ministry.",
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:religious-houses-atlanta-23:putnam-current-ministry",
+      "object": {
+        "current_center": "Immaculate Conception Center",
+        "ministry": "retreats, prayer, spiritual direction, and continuing support for the community and Church in Lithuania",
+        "motherhouse": "Putnam"
+      },
+      "observed_at": "2026-08-10",
+      "predicate": "putnam_sisters_current_religious_and_retreat_ministry",
+      "source_artifact_id": "src:religious-houses-atlanta-23:putnam-center:2026-08-10",
+      "source_locator": "Official About page: current Putnam motherhouse and Immaculate Conception Center ministry",
+      "subject": {
+        "canonical_entity_id": "cn:organization:putnam-immaculate-conception-sisters"
+      }
+    },
+    {
+      "adjudication": {
+        "reason": "The current diocesan directory identifies the Putnam convent by name and address.",
+        "state": "accepted"
+      },
+      "assertion_type": "current_status",
+      "confidence": "high",
+      "id": "assert:religious-houses-atlanta-23:putnam-diocesan-listing",
+      "object": {
+        "address": "600 Liberty Highway, Putnam, CT 06260",
+        "directory_authority": "Diocese of Norwich",
+        "name": "Immaculate Conception Convent"
+      },
+      "observed_at": "2026-08-10",
+      "predicate": "putnam_immaculate_conception_convent_current_diocesan_listing",
+      "source_artifact_id": "src:religious-houses-atlanta-23:putnam-diocese:2026-08-10",
+      "source_locator": "Diocese of Norwich full group directory entry for Immaculate Conception Convent",
+      "subject": {
+        "canonical_entity_id": "cn:organization:putnam-immaculate-conception-sisters"
+      }
+    },
+    {
+      "adjudication": {
         "reason": "Official directory transcription reconciled to Brain institution identities and the separately asserted current pastoral network.",
         "state": "accepted"
       },
@@ -15585,6 +15816,7 @@
           },
           {
             "address": "PO Box 980, Kennebunkport, ME 04046",
+            "canonicalEntityId": "cn:organization:kennebunk-lithuanian-franciscan-friary",
             "city": "Kennebunkport",
             "clergy": "Br. Jonas Bacevičius, OFM, superior",
             "directoryType": "religious_house",
@@ -24123,6 +24355,16 @@
       "slug": "archdiocese-of-hartford"
     },
     {
+      "aliases": [
+        "Lietuvių katalikų misija Atlanta, GA",
+        "Atlantos lietuvių katalikų bendruomenė"
+      ],
+      "canonical_name": "Atlanta Lithuanian Catholic worship community",
+      "entity_type": "organization",
+      "id": "cn:organization:atlanta-lithuanian-catholic-worship-community",
+      "slug": "atlanta-lithuanian-catholic-worship-community"
+    },
+    {
       "aliases": [],
       "canonical_name": "CultureNet parish continuation status authority",
       "entity_type": "organization",
@@ -24143,6 +24385,17 @@
       "id": "cn:organization:diocese-of-brooklyn",
       "organization_subtype": "roman_catholic_diocese",
       "slug": "diocese-of-brooklyn"
+    },
+    {
+      "aliases": [
+        "Kennebunkport Šv. Antano vienuolynas",
+        "St. Anthony Friary",
+        "Šv. Antano pranciškonų vienuolynas"
+      ],
+      "canonical_name": "Lithuanian Franciscan Friary at Kennebunk",
+      "entity_type": "organization",
+      "id": "cn:organization:kennebunk-lithuanian-franciscan-friary",
+      "slug": "kennebunk-lithuanian-franciscan-friary"
     },
     {
       "aliases": [],
@@ -24198,6 +24451,17 @@
       "entity_type": "organization",
       "id": "cn:organization:our-lady-of-lourdes-st-anne-cluster-rochester-ny",
       "slug": "our-lady-of-lourdes-st-anne-cluster-rochester-ny"
+    },
+    {
+      "aliases": [
+        "Putnam Immaculate Conception Convent",
+        "Nekaltai Pradėtosios Mergelės Marijos seserų vienuolija",
+        "Švč. Mergelės Marijos Nekaltojo Prasidėjimo Vargdienių seserų vienuolynas"
+      ],
+      "canonical_name": "Sisters of the Immaculate Conception of the Blessed Virgin Mary at Putnam",
+      "entity_type": "organization",
+      "id": "cn:organization:putnam-immaculate-conception-sisters",
+      "slug": "putnam-immaculate-conception-sisters"
     },
     {
       "aliases": [
@@ -24271,7 +24535,7 @@
       "slug": "robert-damyanovich"
     }
   ],
-  "content_hash": "sha256:7c2b2308cc538148f2687bd18c60318b92d4b09d625f9cb7c50ee49c43375898",
+  "content_hash": "sha256:4be15ea4ad10bd769bb7e1f017fbd458fc4f04ac66016ed355f86688104707fa",
   "counts": {
     "by_institution_class": {
       "independent_catholic": 4,
@@ -24288,7 +24552,7 @@
     "protected_campaign_assignments": 4,
     "public_us_institutions": 155
   },
-  "generated": "2026-08-07",
+  "generated": "2026-08-11",
   "linked_context": [
     {
       "aliases": [
@@ -31306,6 +31570,7 @@
       "culturenet-parish-pennsylvania-continuity-sites-6-2026-07-31",
       "culturenet-parish-philadelphia-mount-carmel-lineage-7-2026-07-31",
       "culturenet-parish-protected-campaigns-hartford-waterbury-maspeth-2026-07-31",
+      "culturenet-parish-religious-houses-atlanta-23-2026-08-10",
       "culturenet-parish-reviewed-case-lineage-2-2026-07-31",
       "culturenet-parish-sielovada-directory-20-2026-08-03",
       "culturenet-parish-successor-and-site-lineage-2-2026-07-31",
@@ -56349,7 +56614,7 @@
       }
     }
   ],
-  "revision_id": "canonical-public-census-2026-08-07-terminal-building-research",
+  "revision_id": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
   "schema": "culturenet-parish-publication-projection.v1",
   "scope": {
     "country": "US",
@@ -60924,6 +61189,116 @@
         "status": "public_web"
       },
       "title": "QNS report on the September 2025 Transfiguration decision"
+    },
+    {
+      "artifact_type": "public_geocoder",
+      "id": "src:religious-houses-atlanta-23:address-geocodes:2026-08-11",
+      "locator": {
+        "exact_label": "Exact-address queries for 28 Beach Ave, 600 Liberty Highway, and 4905 Roswell Road",
+        "page": "Nominatim Search API",
+        "section": "One result per verified address"
+      },
+      "rights": {
+        "access": "public web API",
+        "public_url": "https://nominatim.openstreetmap.org/",
+        "quote_policy": "cite coordinates and attribute OpenStreetMap contributors",
+        "status": "public geocoding service"
+      },
+      "title": "OpenStreetMap Nominatim address geocodes"
+    },
+    {
+      "artifact_type": "official_archdiocesan_directory",
+      "id": "src:religious-houses-atlanta-23:atlanta-archdiocese:2026-08-10",
+      "locator": {
+        "exact_label": "Saint Ann, Marietta",
+        "page": "Find a Parish",
+        "section": "Languages offered: English"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://archatl.com/find-a-parish/",
+        "quote_policy": "cite and summarize",
+        "status": "official archdiocesan directory"
+      },
+      "title": "Archdiocese of Atlanta — Find a Parish"
+    },
+    {
+      "artifact_type": "community_website",
+      "id": "src:religious-houses-atlanta-23:atlanta-community:2026-03-16",
+      "locator": {
+        "exact_label": "Atlantos lietuvių Velykos",
+        "page": "Lietuviai Atlantoje",
+        "section": "2026 Lithuanian Easter Mass at St. Ann Church, Marietta"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://www.lietuviaiatlantoje.org/atlantos-lietuviu-velykos-3/",
+        "quote_policy": "cite and summarize",
+        "status": "official local-community notice"
+      },
+      "title": "Atlantos lietuvių Velykos"
+    },
+    {
+      "artifact_type": "inscription_photograph",
+      "id": "src:religious-houses-atlanta-23:hill-of-crosses-plaque:2018",
+      "locator": {
+        "exact_label": "2018 donor plaque; user-supplied photograph IMG_3270.jpeg; SHA-256 a8bf5474373fbdadbb060f8e7b45b3703f4b457a6444e6bc73affdfbdda01477",
+        "section": "Named donors"
+      },
+      "rights": {
+        "access": "user-supplied research photograph",
+        "quote_policy": "transcribe and cite; do not publish the photograph without a separate rights decision",
+        "status": "private research evidence"
+      },
+      "title": "JAV lietuvių katalikų parapijos, vienuolijos ir misijos parėmusios Šimtmečio kryžiaus projektą"
+    },
+    {
+      "artifact_type": "official_religious_order_directory",
+      "id": "src:religious-houses-atlanta-23:kennebunk-ofm:2026-08-10",
+      "locator": {
+        "exact_label": "Brolija Kenebunke",
+        "page": "Kretingos Pranciškonai",
+        "section": "Franciscan Monastery, 28 Beach Ave"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://ofm.lt/kas-mes-esame/brolijos/brolija-kenebunke/",
+        "quote_policy": "cite and summarize",
+        "status": "official religious-order directory"
+      },
+      "title": "Mažesniųjų brolių ordinas — Brolija Kenebunke"
+    },
+    {
+      "artifact_type": "official_organization_website",
+      "id": "src:religious-houses-atlanta-23:putnam-center:2026-08-10",
+      "locator": {
+        "exact_label": "About",
+        "page": "Immaculate Conception Center",
+        "section": "Sisters in Putnam and current motherhouse ministry"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://www.immaculateconceptioncenter.org/About",
+        "quote_policy": "cite and summarize",
+        "status": "official organization website"
+      },
+      "title": "Immaculate Conception Center — About"
+    },
+    {
+      "artifact_type": "official_diocesan_directory",
+      "id": "src:religious-houses-atlanta-23:putnam-diocese:2026-08-10",
+      "locator": {
+        "exact_label": "Immaculate Conception Convent",
+        "page": "Full Group Directory",
+        "section": "600 Liberty Highway, Putnam"
+      },
+      "rights": {
+        "access": "public web",
+        "public_url": "https://www.norwichdiocese.org/Find/Full-Group-Directory/articleType/ArticleView/articleId/272/Immaculate-Conception-Convent",
+        "quote_policy": "cite and summarize",
+        "status": "official diocesan directory"
+      },
+      "title": "Immaculate Conception Convent — Diocese of Norwich"
     },
     {
       "artifact_type": "official_pastoral_directory",
