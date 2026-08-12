@@ -66,6 +66,19 @@
   --text-small-copy--line-height: 1.45;
   --text-ui-label: 11px;
   --text-ui-label--line-height: 1.25;
+
+  /* All Profiles v3 directory ramp. These values come directly from the
+     locked categorized-directory reference. */
+  --text-directory-section: 19px;
+  --text-directory-section--line-height: 1.2;
+  --text-directory-empty: 20px;
+  --text-directory-empty--line-height: 1.2;
+  --text-directory-control: 14px;
+  --text-directory-control--line-height: 1.4;
+  --text-directory-description: 13px;
+  --text-directory-description--line-height: 1.55;
+  --text-directory-footnote: 12px;
+  --text-directory-footnote--line-height: 1.5;
 }
 
 @media (prefers-color-scheme: dark) {

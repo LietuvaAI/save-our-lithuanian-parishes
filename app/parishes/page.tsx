@@ -9,7 +9,7 @@ import {
 } from "@/lib/infographic-projection";
 
 export const metadata: Metadata = {
-  title: "All Parish Profiles",
+  title: "The Record of America’s Lithuanian Parishes",
   description:
     "A searchable directory of every published U.S. Lithuanian parish, mission, and congregation profile, grouped by canonical outcome.",
 };
@@ -46,24 +46,25 @@ export default function ParishProfilesPage() {
   }
 
   return (
-    <div className="mx-auto max-w-7xl px-4 pb-10 pt-[22px]">
-      <p className="text-ui-label font-semibold uppercase tracking-[0.15em] text-muted">
-        All profiles · categorized directory
-      </p>
-      <h1 className="mt-1 font-serif text-page-title font-semibold">
-        Every parish, mission, and congregation
-      </h1>
-      <p className="mt-2 max-w-[90ch] text-body-copy text-muted">
-        Browse all {rows.length} published U.S. parish, mission, and
-        congregation profiles by canonical outcome or alphabetically, then
-        open any record for its full history and sources.
-      </p>
-
-      <div className="mt-4">
-        <AllProfilesDirectory rows={rows} />
+    <div className="mx-auto max-w-[1180px] pb-10 pt-[22px]">
+      <div className="px-4 sm:px-11">
+        <p className="text-ui-label font-semibold uppercase tracking-[0.14em] text-muted">
+          Profile directory
+        </p>
+        <h1 className="mt-1.5 font-serif text-page-title font-semibold leading-[1.15]">
+          The Record of America’s Lithuanian Parishes
+        </h1>
+        <p className="mt-2 max-w-[860px] text-body-copy leading-[1.55] text-[#57534e] dark:text-muted">
+          All {rows.length} parishes, missions, and congregations, grouped by
+          what became of each. Search by name, city, state, or diocese—or
+          switch to the alphabetical view and jump by letter. Every entry
+          opens the full profile.
+        </p>
       </div>
 
-      <p className="mt-8 max-w-3xl border-t border-rule pt-5 text-support-copy text-muted">
+      <AllProfilesDirectory rows={rows} />
+
+      <p className="mx-4 mt-2 max-w-[700px] border-t border-rule pt-[14px] text-directory-footnote text-muted sm:mx-11">
         This directory lists institutions: parishes, missions, and
         congregations. Physical churches are counted separately in the {" "}
         <Link
