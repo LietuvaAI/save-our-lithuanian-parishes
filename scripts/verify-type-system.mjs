@@ -20,6 +20,11 @@ const REQUIRED_THEME_TOKENS = [
   "--text-support-copy: 12.5px",
   "--text-small-copy: 11.5px",
   "--text-ui-label: 11px",
+  "--text-directory-section: 19px",
+  "--text-directory-empty: 20px",
+  "--text-directory-control: 14px",
+  "--text-directory-description: 13px",
+  "--text-directory-footnote: 12px",
   '--font-mono: var(--font-timeline-mono), "IBM Plex Mono"',
   ':where(h1, h2, h3, h4, h5, h6)',
 ];
@@ -108,22 +113,26 @@ const profilesPage = fs.readFileSync(
   path.join(ROOT, "app", "parishes", "page.tsx"),
   "utf8",
 );
-const profilesTimeline = fs.readFileSync(
-  path.join(ROOT, "components", "AllProfilesTimeline.tsx"),
+const profilesDirectory = fs.readFileSync(
+  path.join(ROOT, "components", "AllProfilesDirectory.tsx"),
   "utf8",
 );
 const allProfilesContract = [
   [profilesPage, "pb-10 pt-[22px]", "compact 22px page header"],
+  [profilesPage, "max-w-[1180px]", "approved directory width"],
   [profilesPage, "text-page-title", "28px shared page title"],
   [profilesPage, "text-body-copy", "13.5px one-line description"],
-  [profilesTimeline, "py-[9px]", "compact sticky toolbar"],
-  [profilesTimeline, "text-small-copy text-muted", "11.5px status key"],
-  [profilesTimeline, "font-mono text-small-copy", "IBM Plex Mono A–Z index"],
-  [profilesTimeline, "index * 20", "uncluttered 20-year timeline ticks"],
-  [profilesTimeline, "min-h-11", "compact profile lanes"],
-  [profilesTimeline, "font-serif text-body-copy", "13.5px profile lane names"],
-  [profilesTimeline, "h-1 -translate-y-1/2", "compact four-pixel lifespan bars"],
-  [profilesTimeline, "block truncate", "single-line profile lane titles"],
+  [profilesDirectory, "mt-[14px]", "approved toolbar offset"],
+  [profilesDirectory, "pb-[9px] pt-[10px]", "compact sticky toolbar"],
+  [profilesDirectory, "size-[23px]", "compact A–Z index"],
+  [profilesDirectory, "pb-1.5 pt-[22px]", "compact section rhythm"],
+  [profilesDirectory, "text-directory-section", "19px category headings"],
+  [profilesDirectory, "gap-x-7 pt-1.5", "28px directory grid and six-pixel inset"],
+  [profilesDirectory, "gap-[9px]", "nine-pixel entry gap"],
+  [profilesDirectory, "px-2 py-2", "eight-pixel entry padding"],
+  [profilesDirectory, "text-body-copy font-semibold", "13.5px sans profile names"],
+  [profilesDirectory, "text-small-copy", "11.5px place line"],
+  [profilesDirectory, "font-mono text-ui-label", "11px mono year labels"],
 ];
 for (const [source, fragment, label] of allProfilesContract) {
   if (!source.includes(fragment)) errors.push(`All Profiles: missing ${label}`);

@@ -88,11 +88,11 @@ function DirectoryEntry({ row }: { row: AllProfilesDirectoryRow }) {
     <li>
       <Link
         href={row.profileHref}
-        className="group grid h-full grid-cols-[10px_minmax(0,1fr)] gap-2.5 border-t border-rule py-3 pr-3 hover:bg-band/45"
+        className="group flex h-full items-start gap-[9px] rounded border-b border-[#f4f1ea] px-2 py-2 hover:bg-band/45 dark:border-rule"
       >
         <span
-          className={`mt-[5px] size-2.5 rounded-full ${
-            row.statusGroup === "unverified" ? "border-2 bg-background" : ""
+          className={`mt-[5px] size-2 shrink-0 rounded-full ${
+            row.statusGroup === "unverified" ? "border bg-background" : ""
           }`}
           style={
             row.statusGroup === "unverified"
@@ -101,27 +101,20 @@ function DirectoryEntry({ row }: { row: AllProfilesDirectoryRow }) {
           }
           aria-hidden
         />
-        <span className="min-w-0">
-          <span className="block font-serif text-card-title font-semibold leading-tight group-hover:text-accent">
+        <span className="min-w-0 flex-1">
+          <span className="block text-body-copy font-semibold leading-[1.3] group-hover:text-accent">
             {row.canonicalName}
           </span>
-          {row.lithuanianName !== row.canonicalName && (
-            <span className="mt-0.5 block text-support-copy leading-tight text-muted">
-              {row.lithuanianName}
-            </span>
-          )}
-          <span className="mt-1.5 block text-support-copy leading-snug text-muted">
+          <span className="block text-small-copy leading-[1.4] text-muted">
             {row.city}, {row.state}
             {jurisdiction ? ` · ${jurisdiction}` : ""}
           </span>
-          <span className="mt-1.5 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-            <span className="text-small-copy text-muted">
-              {institutionLabel(row)}
-            </span>
-            <span className="font-mono text-small-copy text-foreground">
-              {yearLabel(row)}
-            </span>
+          <span className="block text-ui-label leading-[1.4] text-muted">
+            {institutionLabel(row)}
           </span>
+        </span>
+        <span className="mt-0.5 shrink-0 whitespace-nowrap font-mono text-ui-label leading-[1.4] text-muted">
+          {yearLabel(row)}
         </span>
       </Link>
     </li>
@@ -201,25 +194,25 @@ export default function AllProfilesDirectory({
   };
 
   const selectClass =
-    "rounded-md border border-rule bg-background px-2.5 py-2 text-support-copy";
+    "h-[37px] rounded-md border border-rule bg-background px-3 text-body-copy font-medium";
 
   return (
     <div>
       <section
-        className="sticky top-0 z-30 border-y border-rule bg-background/95 py-[9px] backdrop-blur"
+        className="sticky top-0 z-30 mt-[14px] border-y border-rule bg-background/95 px-4 pb-[9px] pt-[10px] backdrop-blur sm:px-11"
         aria-label="Profile directory controls"
       >
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap items-center gap-3">
           <input
             type="search"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="Search name, place, state, or diocese…"
+            placeholder="Search parish, city, state, or diocese…"
             aria-label="Search all institution profiles"
-            className={`${selectClass} w-full sm:w-72`}
+            className="w-full rounded-md border border-rule bg-background px-3 py-[9px] text-directory-control sm:w-[280px]"
           />
           <div
-            className="inline-flex rounded-md border border-rule bg-background p-0.5 text-support-copy font-semibold"
+            className="inline-flex overflow-hidden rounded-md border border-rule bg-background text-support-copy font-medium"
             role="group"
             aria-label="Choose directory view"
           >
@@ -227,7 +220,7 @@ export default function AllProfilesDirectory({
               type="button"
               onClick={() => setView("outcome")}
               aria-pressed={view === "outcome"}
-              className={`rounded px-3 py-1.5 ${
+              className={`px-[14px] py-2 ${
                 view === "outcome"
                   ? "bg-foreground text-background"
                   : "text-muted hover:bg-band hover:text-foreground"
@@ -239,7 +232,7 @@ export default function AllProfilesDirectory({
               type="button"
               onClick={() => setView("az")}
               aria-pressed={view === "az"}
-              className={`rounded px-3 py-1.5 ${
+              className={`border-l border-rule px-[14px] py-2 ${
                 view === "az"
                   ? "bg-foreground text-background"
                   : "text-muted hover:bg-band hover:text-foreground"
@@ -274,16 +267,16 @@ export default function AllProfilesDirectory({
               </option>
             ))}
           </select>
-          <span className="ml-auto font-mono text-small-copy text-muted">
+          <span className="font-mono text-directory-description text-muted">
             {filtersActive
               ? `${filtered.length} / ${rows.length}`
-              : `${rows.length}`}
+              : `${rows.length} institutions`}
           </span>
           {filtersActive && (
             <button
               type="button"
               onClick={clearFilters}
-              className="text-support-copy font-semibold underline underline-offset-4 hover:text-accent"
+              className="text-body-copy font-medium underline underline-offset-2 hover:text-accent"
             >
               Clear all
             </button>
@@ -291,19 +284,16 @@ export default function AllProfilesDirectory({
         </div>
 
         <div
-          className="mt-2 flex flex-nowrap items-center gap-1 overflow-x-auto sm:flex-wrap sm:overflow-visible"
+          className="mt-2 flex flex-nowrap items-center gap-0.5 overflow-x-auto sm:flex-wrap sm:overflow-visible"
           aria-label="A to Z quick index"
         >
-          <span className="mr-2 shrink-0 text-ui-label font-semibold uppercase tracking-[0.15em] text-muted">
-            A–Z
-          </span>
           {LETTERS.map((letter) => (
             <button
               key={letter}
               type="button"
               disabled={!availableLetters.has(letter)}
               onClick={() => goToLetter(letter)}
-              className="size-6 shrink-0 rounded font-mono text-small-copy font-semibold enabled:hover:bg-band enabled:hover:text-accent disabled:opacity-25"
+              className="size-[23px] shrink-0 rounded-[5px] font-mono text-directory-footnote enabled:hover:bg-band enabled:hover:text-accent disabled:opacity-25"
               aria-label={`Go to profiles beginning with ${letter}`}
             >
               {letter}
@@ -312,94 +302,98 @@ export default function AllProfilesDirectory({
         </div>
       </section>
 
-      {filtered.length === 0 ? (
-        <section className="border-b border-rule py-12 text-center">
-          <h2 className="font-serif text-subsection-title font-semibold">
-            No matching profiles
-          </h2>
-          <button
-            type="button"
-            onClick={clearFilters}
-            className="mt-2 text-support-copy font-semibold text-accent underline underline-offset-4"
-          >
-            Clear search and filters
-          </button>
-        </section>
-      ) : view === "outcome" ? (
-        <div>
-          {GROUP_ORDER.map((group) => {
-            const sectionRows = filtered.filter(
-              (row) => row.statusGroup === group,
-            );
-            if (sectionRows.length === 0) return null;
-            return (
-              <section
-                key={group}
-                id={`profiles-outcome-${group}`}
-                className="scroll-mt-40 pt-8"
-              >
-                <div className="flex items-baseline gap-2 border-b border-rule pb-2">
-                  <span
-                    className={`size-2.5 rounded-full ${
-                      group === "unverified" ? "border-2 bg-background" : ""
-                    }`}
-                    style={
-                      group === "unverified"
-                        ? { borderColor: END_STATE_COLOR.unverified }
-                        : { background: END_STATE_COLOR[group] }
-                    }
-                    aria-hidden
-                  />
-                  <h2 className="font-serif text-section-title font-semibold">
-                    {GROUP_LABEL[group]}
-                  </h2>
-                  <span className="font-mono text-support-copy text-muted">
-                    {sectionRows.length}
-                  </span>
-                </div>
-                <p className="mt-2 max-w-[88ch] text-body-copy leading-relaxed text-muted">
-                  {DIRECTORY_GROUP_DESCRIPTION[group]}
-                </p>
-                <ol className="mt-3 grid gap-x-5 lg:grid-cols-3">
-                  {sectionRows.map((row) => (
-                    <DirectoryEntry key={row.slug} row={row} />
-                  ))}
-                </ol>
-              </section>
-            );
-          })}
-        </div>
-      ) : (
-        <div>
-          {LETTERS.map((letter) => {
-            const sectionRows = filtered.filter(
-              (row) => rowLetter(row) === letter,
-            );
-            if (sectionRows.length === 0) return null;
-            return (
-              <section
-                key={letter}
-                id={`profiles-letter-${letter}`}
-                className="scroll-mt-40 pt-8"
-              >
-                <div className="flex items-baseline gap-3 border-b border-rule pb-2">
-                  <h2 className="font-serif text-section-title font-semibold">
-                    {letter}
-                  </h2>
-                  <span className="font-mono text-support-copy text-muted">
-                    {sectionRows.length}
-                  </span>
-                </div>
-                <ol className="mt-3 grid gap-x-5 lg:grid-cols-3">
-                  {sectionRows.map((row) => (
-                    <DirectoryEntry key={row.slug} row={row} />
-                  ))}
-                </ol>
-              </section>
-            );
-          })}
-        </div>
-      )}
+      <div className="px-4 pb-3 pt-2 sm:px-11">
+        {filtered.length === 0 ? (
+          <section className="py-11 text-center">
+            <h2 className="font-serif text-directory-empty font-semibold">
+              No matching profiles
+            </h2>
+            <button
+              type="button"
+              onClick={clearFilters}
+              className="mt-2 text-directory-control font-medium text-accent underline underline-offset-2"
+            >
+              Clear search and filters
+            </button>
+          </section>
+        ) : view === "outcome" ? (
+          <div>
+            {GROUP_ORDER.map((group) => {
+              const sectionRows = filtered.filter(
+                (row) => row.statusGroup === group,
+              );
+              if (sectionRows.length === 0) return null;
+              return (
+                <section
+                  key={group}
+                  id={`profiles-outcome-${group}`}
+                  className="scroll-mt-40 pb-1.5 pt-[22px]"
+                >
+                  <div className="flex items-baseline gap-2.5 border-b-2 border-foreground pb-2">
+                    <span
+                      className={`size-2.5 rounded-full ${
+                        group === "unverified"
+                          ? "border-2 bg-background"
+                          : ""
+                      }`}
+                      style={
+                        group === "unverified"
+                          ? { borderColor: END_STATE_COLOR.unverified }
+                          : { background: END_STATE_COLOR[group] }
+                      }
+                      aria-hidden
+                    />
+                    <h2 className="font-serif text-directory-section font-semibold">
+                      {GROUP_LABEL[group]}
+                    </h2>
+                    <span className="font-mono text-support-copy text-muted">
+                      {sectionRows.length}
+                    </span>
+                  </div>
+                  <p className="mt-2 max-w-[760px] text-directory-description text-[#57534e] dark:text-muted">
+                    {DIRECTORY_GROUP_DESCRIPTION[group]}
+                  </p>
+                  <ol className="grid gap-x-7 pt-1.5 lg:grid-cols-3">
+                    {sectionRows.map((row) => (
+                      <DirectoryEntry key={row.slug} row={row} />
+                    ))}
+                  </ol>
+                </section>
+              );
+            })}
+          </div>
+        ) : (
+          <div>
+            {LETTERS.map((letter) => {
+              const sectionRows = filtered.filter(
+                (row) => rowLetter(row) === letter,
+              );
+              if (sectionRows.length === 0) return null;
+              return (
+                <section
+                  key={letter}
+                  id={`profiles-letter-${letter}`}
+                  className="scroll-mt-40 pb-1.5 pt-[22px]"
+                >
+                  <div className="flex items-baseline gap-2.5 border-b-2 border-foreground pb-2">
+                    <h2 className="font-serif text-directory-section font-semibold">
+                      {letter}
+                    </h2>
+                    <span className="font-mono text-support-copy text-muted">
+                      {sectionRows.length}
+                    </span>
+                  </div>
+                  <ol className="grid gap-x-7 pt-1.5 lg:grid-cols-3">
+                    {sectionRows.map((row) => (
+                      <DirectoryEntry key={row.slug} row={row} />
+                    ))}
+                  </ol>
+                </section>
+              );
+            })}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

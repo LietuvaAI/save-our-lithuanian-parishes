@@ -15,14 +15,14 @@ comes from the canonical projection.
 | Reference file | Ships to | This tranche |
 |---|---|---|
 | `Homepage Directions.dc.html` (option **1a "The Atlas"**) | `app/page.tsx` | **YES** |
-| `All Profiles v2.dc.html` ("century census" timeline) | `app/parishes/page.tsx` | **YES** |
+| `All Profiles v3.dc.html` (categorized directory; supersedes v2) | `app/parishes/page.tsx` | **YES** |
 | `Where Every Parish Ended Up.dc.html` | `/where-every-parish-ended-up` | kept as-is (already live) |
 | `Parish Profile v3.dc.html`, `Profile Variants.dc.html`, `Profile Cases.dc.html` | `/parishes/[slug]` | kept as-is (already live) |
 | `Draugas Mentions.dc.html` | Draugas source route (Codex-owned) | kept as-is |
 
 The `.dc.html` files are **layout/behavior references only**, never parish evidence. Build from
 canon; lift spacing, type, color, and interaction from the reference. Both render offline with the
-sibling `support.js`; the timeline reads the sibling `data/all-profiles-155.json` **design fixture**
+sibling `support.js`; the directory reads the sibling `data/all-profiles-155.json` **design fixture**
 (do not ship — see the data mapping below).
 
 ---
@@ -55,39 +55,34 @@ Outcomes band. No nav items added, removed, or relabeled — including the label
 **Removed:** the "The national record — four figures tell the scale of the loss" section
 (`NationalRecordGraphic`). No stat strip replaces it.
 
-## 2. All Profiles — `app/parishes/page.tsx` (replace the table with the timeline)
+## 2. All Profiles — `app/parishes/page.tsx` (categorized directory)
 
-Reframe as the **institution (parish) view**, distinct from the building view and the outcomes
-flow. Replace `RegistryTable` with a new client component (e.g. `AllProfilesTimeline`) that
-renders **all 155 institutions as lifespan lanes on a shared 1880→2026 axis**:
+The v2 timeline is retired. Render all 155 institutions in the v3 directory:
 
-- One lane per institution: left = name + place (+ `· mission` / `· congregation`), right = a
-  bar from `founded.year` to `closed.year`, colored by `status_group`, **open-capped at today**
-  where the institution is still living (`active_parish` / `mass_continues`); hollow marker at
-  far right for records with no `founded.year`.
-- Sticky axis with decade ticks + faint decade gridlines; mono (IBM Plex Mono) year labels.
-- Signal dot on institutions with a current alert/campaign/watch (join `alerts.json`).
-- Controls: search; **State** and **Diocese** dropdowns; **A–Z quick index**; sort
-  **A–Z / Earliest / Latest ending**. Each lane links to `public_profile`.
-- **No aggregate closure analysis here** — that stays in Parish & Mission Outcomes. Quiet total
-  only. Links out to the building view and the outcomes view sit under the intro.
+- Two views: **By outcome** (default), in canonical outcomes-page order, and **A–Z**.
+- Three columns on desktop, alphabetical within each group using Lithuanian collation.
+- Each compact entry carries the status dot, name, place and short diocese, institution class
+  and record type, mono founded–closed years, and a link to `public_profile`.
+- Sticky controls: search, view toggle, State and Diocese filters, A–Z quick index, result count,
+  and Clear all when filtering.
+- The footer carries only the institution-versus-building scope note.
 
 ### Data mapping (build from canon, not the design fixture)
 
 The design used `data/all-profiles-155.json`, generated from the canonical projection. **Do not
-ship that fixture.** The component must read the projection directly. Per-lane fields come from
+ship that fixture.** The component must read the projection directly. Directory fields come from
 `canonical-infographic-projection.json → institution_history` (155 records):
 
-| Lane field | Source |
+| Directory field | Source |
 |---|---|
-| name | `canonical_name` (segment before first comma); `name` = Lithuanian, shown as sub-line |
+| name | `canonical_name` (segment before first comma); `name` = Lithuanian, included in search |
 | city / state | `city`, `state` |
 | diocese | `jurisdiction.canonical_name` |
 | founded / closed | `founded.year`, `closed.year` |
 | status color | `status_group` (`active_parish`,`mass_continues`,`transferred`,`unresolved`,`closed`,`unverified`) |
 | record type | `record_type` (`parish`/`misija`/`congregation`) |
+| institution line | `institution_class` + `record_type` |
 | profile href | `public_profile` |
-| signal dot | join by `parishLink`/`public_profile` to `alerts.json` (alerts kind, campaigns, sustainabilityWatch) |
 
 Status colors are the existing `--es-*` variables; keep `#b3aca2` marker-fill only, never text.
 Preserve the selectors named in the data contract; do not read raw `parishes.json`.
@@ -108,7 +103,7 @@ stay exactly as `app/layout.tsx` defines them.
   buildings at risk) — most likely to have drifted since this commit.
 - St. George, Shenandoah as the earliest-foundation "first parish (1893 church)" caption.
 - No retired alias, research lead, phase, or context record leaks into the public map, the index
-  line, or the timeline — design pulls only from the published projection; please spot-check.
+  line, or the directory — design pulls only from the published projection; please spot-check.
 
 ## Out of scope / next tranche
 
