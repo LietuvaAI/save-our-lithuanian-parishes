@@ -155,6 +155,7 @@ const historyDioceseMap = fs.readFileSync(
   "utf8",
 );
 const historyDesignContract = [
+  [historyPage, "px-4 pb-0 pt-8", "single bottom-spacing rhythm before the global footer"],
   [historyPage, "absolute inset-x-0 top-1/2 border-t border-rule", "centered divider rule"],
   [historyPage, "justify-center", "centered divider label"],
   [historyPage, "tracking-[0.15em]", "approved divider letterspacing"],
