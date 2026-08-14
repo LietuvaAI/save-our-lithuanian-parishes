@@ -157,6 +157,16 @@ const requiredFragments = [
   ],
   [relatedRecordsSource, 'id="related-records"', "related records section id"],
   [ledgerSource, 'id="evidence-sources"', "evidence section id"],
+  [ledgerSource, "GROUP_META", "source-type ledger groups"],
+  [ledgerSource, "<details", "collapsible source-type groups"],
+  [ledgerSource, "sourceDateLabel(source)", "visible source dates"],
+  [
+    ledgerSource,
+    "dateSortKey(right).localeCompare(dateSortKey(left))",
+    "newest-first source ordering",
+  ],
+  [ledgerSource, "sourceDomain(source.url)", "compact source provenance"],
+  [ledgerSource, "href={source.url}", "linked source titles"],
   [
     pageSource,
     "canonicalArtifactProfileSources(",
@@ -322,6 +332,16 @@ if (pageSource.includes("const foundedYear = scoped.founded")) {
 }
 if ((pageSource.match(/<ParishPublishedRecord/g) ?? []).length !== 1) {
   errors.push("profile history must render exactly once");
+}
+
+for (const forbidden of [
+  "Open public source:",
+  "break-all",
+  ">{source.url}</",
+]) {
+  if (ledgerSource.includes(forbidden)) {
+    errors.push(`source ledger exposes raw or blob-style URLs: ${forbidden}`);
+  }
 }
 
 const profileOutputSources = [
