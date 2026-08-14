@@ -147,6 +147,15 @@
         "note": "Held pending permission; staged outside the repo. Original staging filename: rochester-st-george-our-lady-of-lourdes.jpg"
       }
     },
+    "sv-jurgio-rochester-ny-line-drawing": {
+      "src": "/images/parishes/rochester-our-lady-of-lourdes-line-drawing.png",
+      "alt": "Line drawing of Our Lady of Lourdes Church in Rochester, the current host church for the St. George Lithuanian Mission Community.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by public exterior views from the Diocese of Rochester and Our Lady of Lourdes + St. Anne.",
+      "license": "CC BY 4.0",
+      "rights": "own_work",
+      "rightsNote": "Original project illustration created 2026-08-14 from architectural reference views of the current host church at 150 Varinna Drive. It depicts Our Lady of Lourdes, where Lithuanian Mass is celebrated, and not the community's former St. George church on Hudson Avenue.",
+      "evidenceUrl": "https://ps.dor.org/directory/st-george-lithuanian/"
+    },
     "pal-jurgio-matulaicio-misija-lemont-il": {
       "src": "/images/parishes/lemont-matulaitis-mission.jpg",
       "alt": "Exterior of Blessed Jurgis Matulaitis Mission at the Lithuanian World Center in Lemont.",

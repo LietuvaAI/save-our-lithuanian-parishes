@@ -242,12 +242,15 @@ function NetworkEntryRow({ entry }: { entry: NetworkEntry }) {
     entry.networkClass === "active_parish" ||
     entry.networkClass === "active_mission";
   const profileSlug = profileHref?.replace(/^\/parishes\//, "") ?? null;
+  const shouldShowPortrait =
+    Boolean(profileSlug) &&
+    (isActiveInstitution || entry.networkClass === "mass_continues");
   const portrait =
-    isActiveInstitution && profileSlug
+    shouldShowPortrait && profileSlug
       ? getClearedPhoto(`${profileSlug}-line-drawing`)
       : null;
-  if (isActiveInstitution && !portrait) {
-    throw new Error(`Missing active-network line drawing for ${entry.id}`);
+  if (shouldShowPortrait && !portrait) {
+    throw new Error(`Missing current-worship line drawing for ${entry.id}`);
   }
   const sustainability = profileHref
     ? sustainabilityByHref.get(profileHref)
