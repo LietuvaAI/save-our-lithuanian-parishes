@@ -566,7 +566,7 @@
       "governanceDetail": "Within the South Boston Seaport Catholic Collaborative (with St. Monica), formed under Disciples in Mission effective June 2, 2015. Archdiocesan directory continues to list St. Peter as a distinct parish.",
       "survivedThreats": "2004 closure attempt (Hill of Crosses protest at church entrance); 2021-22 merger proposal (not consummated; community refused merger consent February 2022)",
       "financial": null,
-      "situation": "The only Lithuanian church in New England. The parish remains active with weekly Lithuanian Mass and a lay-led Lithuanian Apostolate, but has no Lithuanian-speaking pastor of its own. Its Lithuanian liturgical future depends on securing additional Lithuanian-speaking clergy — the community has formally requested a priest from the Franciscan Fathers in Lithuania, with no indication the request has been filled.",
+      "situation": "St. Peter remains an active parish in the South Boston Seaport Catholic Collaborative. Lithuanian Mass is celebrated weekly and the lay-led Lithuanian Apostolate continues parish life; the community does not currently have a Lithuanian-speaking pastor and has asked for additional Lithuanian-speaking clergy.",
       "sources": [
         {
           "title": "St. Peter Lithuanian Parish in Boston – New Challenges",
@@ -612,7 +612,7 @@
       "governanceDetail": "Current public parish and Sielovada pages present Nativity BVM as a distinct Lithuanian parish/rektoriatas with its own pastor. Prior scout data notes an Archdiocese of Chicago Renew My Church grouping proposal with Blessed Jurgis Matulaitis Mission, but no final merger or closure decree was found in the Tier 1 pass.",
       "survivedThreats": "Survived Chicago-area Lithuanian parish consolidation; local case data records it as the sole surviving Lithuanian Roman Catholic parish in Chicago by 2020.",
       "financial": "Prior scout data flags chronic deficit support through an archdiocesan high-interest loan and notes that the church building is not parish-owned. This Tier 1 web pass did not find a fresh public confirmation of the current loan balance, rate, or building-ownership terms.",
-      "situation": "Nativity BVM is a high-vitality but financially exposed survivor: Sielovada and the parish website confirm a Lithuanian klebonas and frequent Lithuanian liturgy, while local scout data keeps the key sustainability question on finances and diocesan/building control open. Sielovada articles show active parish anniversaries, confirmations, and Chicago Lithuanian community participation rather than liturgical dormancy.",
+      "situation": "Nativity BVM remains an active Lithuanian parish with a Lithuanian pastor and regular Lithuanian liturgy. Parish anniversaries, confirmations, and wider Chicago Lithuanian community events continue. Its longer-term financial position and the terms of diocesan control of the property remain unresolved.",
       "photo": {
         "url": "/images/parishes/chicago-nativity-bvm.jpg",
         "alt": "Exterior of Nativity of the Blessed Virgin Mary Lithuanian church in Chicago.",
@@ -680,7 +680,7 @@
       "governanceDetail": "Current St. Casimir is the surviving consolidated Lithuanian parish formed October 25, 2009 from St. George and Our Lady of Perpetual Help; it remains an active Diocese of Cleveland parish on Neff Road.",
       "survivedThreats": "Survived the 2009 Cleveland Lithuanian parish consolidation and a 2014 financial crisis that scout data ties to a diocesan-approved school-building lease.",
       "financial": "The 2014 school-lease rescue remains the key financial signal, but current occupancy/renewal of that lease was not confirmed in this Tier 1 web pass. Current bulletins in local case data show normal operations and 2027 Mass intentions, not an active closure action.",
-      "situation": "St. Casimir Cleveland remains one of the stronger parish-sustainability profiles: Sielovada names a Lithuanian priest, scout/current case data shows weekly Lithuanian Mass and active parish operations, and the main uncertainty is not present liturgical life but whether the post-2014 school-building financial support remains stable.",
+      "situation": "St. Casimir remains active with a Lithuanian priest, weekly Lithuanian Mass, and ongoing parish organizations. The main unresolved question is whether the financial support once provided by the school-building lease continues after the original lease period.",
       "photo": {
         "url": "/images/parishes/cleveland-st-casimir.jpg",
         "alt": "Exterior of St. Casimir Parish church in Cleveland.",
@@ -742,7 +742,7 @@
       "governanceDetail": "Archdiocese lists St. Andrew (Lithuanian) as an active parish founded in 1924, with the former St. Casimir Lithuanian church as a worship site. Parish administration and correspondence run through the Cathedral Parish Office under Rev. Gerald Dennis Gill.",
       "survivedThreats": "Survived inside the archdiocese after absorbing/holding the former St. Casimir Lithuanian worship site; it remains the only Pennsylvania Lithuanian parish with a listed Lithuanian-language Sunday Mass.",
       "financial": "Scout/local case data reports the former rectory was sold for $1.2 million around 2022-2024 and the proceeds invested for parish operations; the parish website corroborates that former rectory phone lines are no longer in service, but the exact deed date remains unresolved.",
-      "situation": "St. Andrew Philadelphia is active but structurally fragile: the parish and archdiocesan listings show weekly Lithuanian/English Sunday Mass and a living Lithuanian school/parish network, while Sielovada does not list a resident Lithuanian priest and governance depends on the Cathedral rector as parochial administrator. The rectory-sale proceeds appear to support operations, but the exact sale timing and long-term sustainability effect remain open.",
+      "situation": "St. Andrew remains active with weekly Lithuanian-English Sunday Mass, the Vincas Krėvė Lithuanian School, and a continuing parish community. It is administered by the Cathedral rector rather than a resident Lithuanian-speaking pastor; the rectory-sale proceeds support parish operations, but their long-term sustainability effect has not been established.",
       "photo": {
         "url": "/images/parishes/philadelphia-st-andrew.jpg",
         "alt": "Exterior parish-grounds photo showing work on the Lithuanian wayside cross at St. Andrew Lithuanian Parish.",
@@ -1270,7 +1270,7 @@
       "governanceDetail": "Active Lithuanian Catholic mission of the Archdiocese of Chicago operating inside the community-owned Lithuanian World Center at 14911 127th Street, Lemont.",
       "survivedThreats": "Survived an Archdiocese of Chicago Renew My Church grouping discussion with Nativity BVM; both communities remain active in 2026.",
       "financial": "Real-estate exposure differs from diocesan parish churches because the venue is the community-owned Lithuanian World Center rather than a diocesan church property.",
-      "situation": "Lemont is one of the strongest parish-sustainability profiles: dedicated Lithuanian Jesuit clergy, multiple weekly Lithuanian Masses, children and sacramental programming, current bulletins, and a community-owned institutional home. The main sustainability concern is canonical/organizational dependence on mission status and Archdiocese of Chicago grouping decisions, not present activity.",
+      "situation": "Blessed Jurgis Matulaitis Mission remains active at the community-owned Lithuanian World Center, with Lithuanian Jesuit leadership, multiple weekly Lithuanian Masses, and children's and sacramental programs. Its principal structural dependency is its mission status within the Archdiocese of Chicago, not a present lack of activity.",
       "photo": {
         "url": "/images/parishes/lemont-matulaitis-mission.jpg",
         "alt": "Blessed Jurgis Matulaitis Mission chapel interior at the Lithuanian World Center.",
@@ -1312,5 +1312,5 @@
       "canonicalEntityId": "cn:institution:blessed-jurgis-matulaitis-mission-lemont-il"
     }
   ],
-  "content_hash": "sha256:2534367e92300079050a1de3817b1e5a1046d9cccf29238c833456b37e394484"
+  "content_hash": "sha256:b337f359fe710356b75d5db0dbdde97bcf63cfdc227c9dfd4c5e0a8ed8921579"
 }

@@ -3,6 +3,43 @@
   "asOf": "2026-07-16",
   "buildingStatus": "standing",
   "currentUse": "Active Lithuanian Catholic mission of the Archdiocese of Chicago, worshipping inside the community-owned Lithuanian World Center (Pasaulio Lietuvių Centras), 14911 127th St., Lemont, IL 60439",
+  "historicalNarrative": [
+    {
+      "text": "As Lithuanian families moved from Chicago into the southwestern suburbs, they began gathering for Mass near Lemont. Monthly services were established at the Ateitininkai House around 1984, and a church committee formed there on March 29, 1987.",
+      "sources": [
+        {
+          "url": "https://www.matulaitismission.com/misijos-istorija/",
+          "locator": "Official mission history: Ateitininkai House and 1987 organizing committee"
+        }
+      ]
+    },
+    {
+      "text": "Lithuanian community members acquired the former DeAndreis Seminary complex and began using it as the Lithuanian World Center. By fall 1988 Sunday Mass there drew about 195 people and the church community counted 95 families; Lithuanian religious sisters also joined the new pastoral work.",
+      "sources": [
+        {
+          "url": "https://www.matulaitismission.com/misijos-istorija/",
+          "locator": "Official mission history: 1988 worship, membership, and religious sisters"
+        },
+        {
+          "url": "https://www.lcenter.org/about-us/",
+          "locator": "Lithuanian World Center acquisition and early community use"
+        }
+      ]
+    },
+    {
+      "text": "The Archdiocese of Chicago formally established Blessed Jurgis Matulaitis Mission on December 29, 1989, with pastoral and sacramental responsibilities; its finance committee organized in January 1990. A distinctive agreement allows the archdiocesan mission to worship in a church owned by the Lithuanian World Center, keeping the institution and its physical home under separate ownership.",
+      "sources": [
+        {
+          "url": "https://www.matulaitismission.com/misijos-istorija/",
+          "locator": "Mission establishment and January 1990 finance committee"
+        },
+        {
+          "url": "https://www.lcenter.org/about-us/",
+          "locator": "Property and mission-use agreement with the Archdiocese of Chicago"
+        }
+      ]
+    }
+  ],
   "summary": "Blessed Jurgis Matulaitis Lithuanian Catholic Mission is alive and fully operating as of 2026 — one of the healthiest entries in the record set. Its official website (copyright 2026, with announcements dated January through April 2026) lists Fr. Artūras Sederevičius, SJ as director, with Sunday Masses at 9:00 a.m., 11:00 a.m. and 6:00 p.m., weekday Masses Tuesday–Saturday at 8:00 a.m., and a bilingual Mass the last Saturday of each month — all otherwise in Lithuanian. The Lithuanian World Center's own organizations page confirms the mission operates inside the Center at 14911 127th St., Lemont, with Birutė O'Brien as office administrator. A full Holy Week and Easter 2026 schedule was published in March 2026, and in August 2024 the mission co-organized a Community Day at the Center drawing roughly 650 Lithuanians and nearly 40 organizations. The mission's Renew My Church exposure took the form of a grouping with Nativity BVM in Chicago's Marquette Park — the archdiocese's only territorial Lithuanian parish — documented in a June 2023 open letter to then-chaplain Algis Baniulis, SJ; both communities continue to operate. There is no sale, demolition, or conversion to report: the venue was never diocesan property, so the mission's real-estate risk profile differs fundamentally from the closed-parish cases on this site.",
   "developments": [
     {
@@ -106,6 +143,18 @@
       "publisher": "GCatholic.org",
       "date": "2025-12-21",
       "url": "https://gcatholic.org/churches/usa-07/20017.htm"
+    },
+    {
+      "title": "Palaimintojo Jurgio Matulaičio Misija: istorija",
+      "publisher": "Blessed Jurgis Matulaitis Mission",
+      "date": "accessed 2026-08-14",
+      "url": "https://www.matulaitismission.com/misijos-istorija/"
+    },
+    {
+      "title": "About Us",
+      "publisher": "Lithuanian World Center",
+      "date": "accessed 2026-08-14",
+      "url": "https://www.lcenter.org/about-us/"
     }
   ],
   "confidence": "verified",
