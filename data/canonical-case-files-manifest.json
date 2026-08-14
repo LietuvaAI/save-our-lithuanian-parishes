@@ -1045,7 +1045,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-worcester-ma.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-worcester-ma.json",
-      "content_sha256": "2c55f04b9d323a76990ab9cf9952cd509e28bab9a7c4824e982f63a90fa6b302",
+      "content_sha256": "e2a1e1165b62ee61ff5713428ab538a176ae5d6c3eee636a03da223b91d3181b",
       "source_record_slug": "sv-kazimiero-worcester-ma",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1279,7 +1279,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-petro-boston-ma.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-petro-boston-ma.json",
-      "content_sha256": "95322a93823dd330d4dd7bdb5969a8513bc206d3cbc0f3cb4e1678f3c7a7382f",
+      "content_sha256": "72cd8880f5de2ebd0cc8a9ff84f3ac9e7e0719234636e7ec71aa92d2100111e9",
       "source_record_slug": "sv-petro-boston-ma",
       "as_of": "2026-07-16",
       "registry_slugs": [
