@@ -182,11 +182,10 @@ export default function StartHerePage() {
           record for every community to learn from.
         </p>
         <p className="mt-3 leading-relaxed">
-          The pattern in every reversal:{" "}
-          <strong>presence and procedure together</strong>. Cleveland&rsquo;s
-          parishioners prayed outside their locked church for 139 consecutive
-          Sundays <em>and</em> filed a precise canonical appeal in time.
-          Neither alone reopened that church; together they did.
+          The verified reversals share a practical pattern: communities stayed
+          organized while filing precise canonical challenges within the
+          required window. Public presence did not replace procedure, and
+          procedure did not organize a community by itself.
         </p>
         <p className="mt-3 leading-relaxed text-muted">
           In the documented Lithuanian closures, no appeal filed after the decree

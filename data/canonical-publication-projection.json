@@ -3274,8 +3274,8 @@
         "date_text": "2009"
       },
       "predicate": "institution_merged_into_institution",
-      "source_artifact_id": "src:solp-blog:closure-done-wrong:2026-07-31",
-      "source_locator": "Two St. Casimirs section naming St. George and OLPH suppression/merger into new St. Casimir",
+      "source_artifact_id": "src:global-true-lithuania:cleveland:2026-07-31",
+      "source_locator": "Cleveland Lithuanian heritage inventory: St. George and Our Lady of Perpetual Help consolidated into St. Casimir at Neff Road",
       "subject": {
         "canonical_entity_id": "cn:institution:our-lady-perpetual-help-cleveland-oh"
       }
@@ -3331,8 +3331,8 @@
         "date_text": "2009"
       },
       "predicate": "institution_succeeded_by_institution",
-      "source_artifact_id": "src:solp-blog:closure-done-wrong:2026-07-31",
-      "source_locator": "Two St. Casimirs section naming St. George and OLPH suppression/merger into new St. Casimir",
+      "source_artifact_id": "src:global-true-lithuania:cleveland:2026-07-31",
+      "source_locator": "Cleveland Lithuanian heritage inventory: St. George and Our Lady of Perpetual Help consolidated into St. Casimir at Neff Road",
       "subject": {
         "canonical_entity_id": "cn:institution:st-george-cleveland-oh"
       }
@@ -24535,7 +24535,7 @@
       "slug": "robert-damyanovich"
     }
   ],
-  "content_hash": "sha256:4be15ea4ad10bd769bb7e1f017fbd458fc4f04ac66016ed355f86688104707fa",
+  "content_hash": "sha256:b5d41cca3e374bc139673605a40eeb4fa4e3cc6cc86b5bb7cb9f7c9451e33667",
   "counts": {
     "by_institution_class": {
       "independent_catholic": 4,
@@ -32915,8 +32915,7 @@
       "registry_projection_profile": "/parishes/george-cleveland-oh",
       "registry_slug": "george-cleveland-oh",
       "source_artifact_ids": [
-        "src:global-true-lithuania:cleveland:2026-07-31",
-        "src:solp-blog:closure-done-wrong:2026-07-31"
+        "src:global-true-lithuania:cleveland:2026-07-31"
       ],
       "state": "OH"
     },
@@ -33927,8 +33926,7 @@
       "registry_projection_profile": "/parishes/motherofgod-cleveland-oh",
       "registry_slug": "motherofgod-cleveland-oh",
       "source_artifact_ids": [
-        "src:global-true-lithuania:cleveland:2026-07-31",
-        "src:solp-blog:closure-done-wrong:2026-07-31"
+        "src:global-true-lithuania:cleveland:2026-07-31"
       ],
       "state": "OH"
     },
@@ -37226,7 +37224,7 @@
         "slug": "our-lady-perpetual-help-cleveland-oh"
       },
       "source_artifact_ids": [
-        "src:solp-blog:closure-done-wrong:2026-07-31"
+        "src:global-true-lithuania:cleveland:2026-07-31"
       ],
       "target": {
         "display_name": "St. Casimir Lithuanian parish, Cleveland",
@@ -37331,7 +37329,7 @@
         "slug": "st-george-cleveland-oh"
       },
       "source_artifact_ids": [
-        "src:solp-blog:closure-done-wrong:2026-07-31"
+        "src:global-true-lithuania:cleveland:2026-07-31"
       ],
       "target": {
         "display_name": "St. Casimir Lithuanian parish, Cleveland",
@@ -61315,22 +61313,6 @@
         "status": "official_pastoral_directory"
       },
       "title": "Užsienio lietuvių sielovada — Šiaurės Amerika"
-    },
-    {
-      "artifact_type": "public_web_snapshot",
-      "id": "src:solp-blog:closure-done-wrong:2026-07-31",
-      "locator": {
-        "exact_label": "Save Our Lithuanian Parishes blog, Closed by the Diocese, Reopened by Rome, fetched 2026-07-31",
-        "page": "public blog post",
-        "section": "Two St. Casimirs, two very different stories"
-      },
-      "rights": {
-        "access": "public web",
-        "public_url": "https://blog.saveourlithuanianparishes.org/p/a-closure-done-wrong-is-not-a-closure",
-        "quote_policy": "cite and summarize",
-        "status": "public_web"
-      },
-      "title": "Cleveland Lithuanian parish consolidation explainer"
     },
     {
       "artifact_type": "canonical_case_file",

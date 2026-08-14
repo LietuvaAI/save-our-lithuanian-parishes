@@ -4,9 +4,9 @@
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
     "revisionId": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
-    "contentHash": "sha256:4be15ea4ad10bd769bb7e1f017fbd458fc4f04ac66016ed355f86688104707fa"
+    "contentHash": "sha256:b5d41cca3e374bc139673605a40eeb4fa4e3cc6cc86b5bb7cb9f7c9451e33667"
   },
-  "registryRevision": 29,
+  "registryRevision": 30,
   "registryDate": "2026-08-11",
   "claim": "The current documented record contains 155 distinct U.S. Lithuanian religious institutions.",
   "inclusionRule": "Count one canonical U.S. institution when CultureNet publishes it as a parish, mission, or congregation. Buildings, duplicate aliases, historical attempts, hosted worship, research leads, and comparators remain linked context and never increase this total.",
@@ -6833,8 +6833,7 @@
         "assert:cleveland:olph-used-neff-site"
       ],
       "sourceArtifactIds": [
-        "src:global-true-lithuania:cleveland:2026-07-31",
-        "src:solp-blog:closure-done-wrong:2026-07-31"
+        "src:global-true-lithuania:cleveland:2026-07-31"
       ],
       "sourceFamilies": [
         "draugas",
@@ -6880,12 +6879,6 @@
           "label": "Cleveland Lithuanian heritage inventory",
           "locator": "Global True Lithuania, USA page, Cleveland, Ohio sections, fetched 2026-07-31",
           "url": "https://global.truelithuania.com/category/usa/"
-        },
-        {
-          "sourceArtifactId": "src:solp-blog:closure-done-wrong:2026-07-31",
-          "label": "Cleveland Lithuanian parish consolidation explainer",
-          "locator": "Save Our Lithuanian Parishes blog, Closed by the Diocese, Reopened by Rome, fetched 2026-07-31",
-          "url": "https://blog.saveourlithuanianparishes.org/p/a-closure-done-wrong-is-not-a-closure"
         }
       ]
     },
@@ -6911,8 +6904,7 @@
         "assert:cleveland:st-george-used-superior-site"
       ],
       "sourceArtifactIds": [
-        "src:global-true-lithuania:cleveland:2026-07-31",
-        "src:solp-blog:closure-done-wrong:2026-07-31"
+        "src:global-true-lithuania:cleveland:2026-07-31"
       ],
       "sourceFamilies": [
         "draugas",
@@ -6965,12 +6957,6 @@
           "label": "Cleveland Lithuanian heritage inventory",
           "locator": "Global True Lithuania, USA page, Cleveland, Ohio sections, fetched 2026-07-31",
           "url": "https://global.truelithuania.com/category/usa/"
-        },
-        {
-          "sourceArtifactId": "src:solp-blog:closure-done-wrong:2026-07-31",
-          "label": "Cleveland Lithuanian parish consolidation explainer",
-          "locator": "Save Our Lithuanian Parishes blog, Closed by the Diocese, Reopened by Rome, fetched 2026-07-31",
-          "url": "https://blog.saveourlithuanianparishes.org/p/a-closure-done-wrong-is-not-a-closure"
         }
       ]
     },

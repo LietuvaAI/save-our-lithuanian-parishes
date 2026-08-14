@@ -127,7 +127,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/dievo-motinos-nuolatines-pagalbos-cleveland-oh.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/dievo-motinos-nuolatines-pagalbos-cleveland-oh.json",
-      "content_sha256": "b65ce408d22ff398d347d6fc7ec401cdbb37758b34d0a608a6a9ec20b7e7dfcd",
+      "content_sha256": "edcec3394ea3564f8116388bc005f9e45cbba230f2263357fc5c6aa1a4021eb1",
       "source_record_slug": "dievo-motinos-nuolatines-pagalbos-cleveland-oh",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -649,7 +649,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-jurgio-cleveland-oh.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-jurgio-cleveland-oh.json",
-      "content_sha256": "e52331882c602dfe533387e68a5151f44796ca917a6cd8098d7a5e1b7e5f6220",
+      "content_sha256": "50b171ed635812d4041659cb7065180ed74bbf2a23de2d4e4b2202392f180d2b",
       "source_record_slug": "sv-jurgio-cleveland-oh",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -811,7 +811,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-cleveland-oh.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-cleveland-oh.json",
-      "content_sha256": "f9b7c6803d2f655607a82bbf36c4f050c3778a047a2f50b94fe342b5bb44d44d",
+      "content_sha256": "1f9da93b5bc7feaf497e16641d49730fd685805ced1880bf4cf76414e8ade525",
       "source_record_slug": "sv-kazimiero-cleveland-oh",
       "as_of": "2026-07-09",
       "registry_slugs": [

@@ -27,6 +27,35 @@ const sourceRows = parse(
   },
 );
 const errors = [];
+const polishClevelandBoundaryFiles = [
+  "../data/case-records/dievo-motinos-nuolatines-pagalbos-cleveland-oh.json",
+  "../data/case-records/sv-jurgio-cleveland-oh.json",
+  "../data/case-records/sv-kazimiero-cleveland-oh.json",
+  "../data/canonical-current-events-projection.json",
+  "../data/reversal-database.json",
+  "../app/start-here/page.tsx",
+  "../app/what-canon-law-says/page.tsx",
+];
+const forbiddenPolishClevelandPublicTokens = [
+  "sowinski",
+  "parafia św. kazimierza",
+  "st-casimir-polish",
+  "139 consecutive sundays",
+  "139-sunday",
+  "prot. n. 20120457",
+  "closed by the diocese, reopened by rome",
+  "a-closure-done-wrong-is-not-a-closure",
+];
+for (const relativePath of polishClevelandBoundaryFiles) {
+  const contents = readFileSync(new URL(relativePath, import.meta.url), "utf8").toLowerCase();
+  for (const forbiddenToken of forbiddenPolishClevelandPublicTokens) {
+    if (contents.includes(forbiddenToken)) {
+      errors.push(
+        `${relativePath}: Polish Cleveland St. Casimir leaked into the SOLP public record (${forbiddenToken})`,
+      );
+    }
+  }
+}
 
 const LT_MAP = {
   ą: "a",

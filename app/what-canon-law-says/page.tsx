@@ -136,12 +136,7 @@ export default function CanonLawPage() {
           have made closure decrees void — is on{" "}
           <Link href="/start-here">Start Here</Link>, with every precedent
           documented on{" "}
-          <Link href="/reversals">Where Rome said no</Link> and the fuller
-          argument in our essay{" "}
-          <Src href="https://blog.saveourlithuanianparishes.org/p/a-closure-done-wrong-is-not-a-closure">
-            Closed by the Diocese, Reopened by Rome
-          </Src>
-          .
+          <Link href="/reversals">Where Rome said no</Link>.
         </p>
 
         <h2>What we stand for</h2>

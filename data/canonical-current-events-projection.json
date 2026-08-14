@@ -670,12 +670,7 @@
       "diocese": "Diocese of Cleveland",
       "parishLink": "/parishes/sv-kazimiero-cleveland-oh",
       "hearthUrl": null,
-      "dispatches": [
-        {
-          "title": "Closed by the Diocese, Reopened by Rome",
-          "url": "https://blog.saveourlithuanianparishes.org/p/a-closure-done-wrong-is-not-a-closure"
-        }
-      ],
+      "dispatches": [],
       "dateObserved": "2026-07-23",
       "clergy": {
         "arrangement": "lithuanian_klebonas",
@@ -1322,5 +1317,5 @@
       "canonicalEntityId": "cn:institution:blessed-jurgis-matulaitis-mission-lemont-il"
     }
   ],
-  "content_hash": "sha256:56c4488378e89fff85f9f2b94ace34c00c75ce0006e50f55a6f44a4ecc0da016"
+  "content_hash": "sha256:bca859ba3ae44084ef0a90f775d2fc9b7dca144a9588560093a275642368bb38"
 }
