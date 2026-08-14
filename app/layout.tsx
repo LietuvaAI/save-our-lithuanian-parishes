@@ -53,7 +53,7 @@ const NAV: NavItem[] = [
   { href: "/parishes", label: "All Profiles" },
   {
     href: "/where-every-parish-ended-up",
-    label: "Outcomes",
+    label: "Current State",
   },
   { href: "/history", label: "The Rise and the Loss" },
   {

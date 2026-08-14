@@ -61,7 +61,7 @@ if (!layout.includes('href: "/history", label: "The Rise and the Loss"')) {
 const expectedNavOrder = [
   'href: "/parishes", label: "All Profiles"',
   'href: "/where-every-parish-ended-up"',
-  'label: "Outcomes"',
+  'label: "Current State"',
   'href: "/history", label: "The Rise and the Loss"',
   'label: "Guidance"',
   'label: "About"',
