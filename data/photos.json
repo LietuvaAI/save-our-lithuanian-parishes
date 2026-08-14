@@ -156,6 +156,15 @@
       "rightsNote": "Original project illustration created 2026-08-14 from architectural reference views of the current host church at 150 Varinna Drive. It depicts Our Lady of Lourdes, where Lithuanian Mass is celebrated, and not the community's former St. George church on Hudson Avenue.",
       "evidenceUrl": "https://ps.dor.org/directory/st-george-lithuanian/"
     },
+    "washington-epiphany-line-drawing": {
+      "src": "/images/parishes/washington-epiphany-line-drawing.png",
+      "alt": "Line drawing of Epiphany Catholic Church in Georgetown, the Washington host church for monthly Lithuanian Mass.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a photograph by APK, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of APK's 2022 photograph of Epiphany Catholic Church at 2712 Dumbarton Street NW. The source photograph is licensed CC BY-SA 4.0; this line-art adaptation is published under the same license. Created 2026-08-14. This is the Catholic host church in Georgetown, not the Episcopal Church of the Epiphany at 1317 G Street NW.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Epiphany_Catholic_Church.jpg"
+    },
     "pal-jurgio-matulaicio-misija-lemont-il": {
       "src": "/images/parishes/lemont-matulaitis-mission.jpg",
       "alt": "Exterior of Blessed Jurgis Matulaitis Mission at the Lithuanian World Center in Lemont.",

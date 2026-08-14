@@ -243,12 +243,9 @@ function NetworkEntryRow({ entry }: { entry: NetworkEntry }) {
     entry.networkClass === "active_mission";
   const profileSlug = profileHref?.replace(/^\/parishes\//, "") ?? null;
   const shouldShowPortrait =
-    Boolean(profileSlug) &&
-    (isActiveInstitution || entry.networkClass === "mass_continues");
-  const portrait =
-    shouldShowPortrait && profileSlug
-      ? getClearedPhoto(`${profileSlug}-line-drawing`)
-      : null;
+    isActiveInstitution || entry.networkClass === "mass_continues";
+  const portraitKey = `${profileSlug ?? entry.id}-line-drawing`;
+  const portrait = shouldShowPortrait ? getClearedPhoto(portraitKey) : null;
   if (shouldShowPortrait && !portrait) {
     throw new Error(`Missing current-worship line drawing for ${entry.id}`);
   }
@@ -260,21 +257,36 @@ function NetworkEntryRow({ entry }: { entry: NetworkEntry }) {
     <article
       className={`border-t border-rule py-3 ${portrait ? "grid grid-cols-[4.75rem_minmax(0,1fr)] gap-3" : ""}`}
     >
-      {portrait && profileHref ? (
-        <Link
-          href={profileHref}
-          aria-label={`Open the parish profile for ${entry.nameLt}`}
-          className="relative block aspect-square self-start overflow-hidden border border-rule bg-white p-1.5 hover:border-accent"
-          title={portrait.attribution}
-        >
-          <Image
-            src={portrait.src}
-            alt=""
-            fill
-            sizes="76px"
-            className="object-contain mix-blend-multiply"
-          />
-        </Link>
+      {portrait ? (
+        profileHref ? (
+          <Link
+            href={profileHref}
+            aria-label={`Open the parish profile for ${entry.nameLt}`}
+            className="relative block aspect-square self-start overflow-hidden border border-rule bg-white p-1.5 hover:border-accent"
+            title={portrait.attribution}
+          >
+            <Image
+              src={portrait.src}
+              alt=""
+              fill
+              sizes="76px"
+              className="object-contain mix-blend-multiply"
+            />
+          </Link>
+        ) : (
+          <div
+            className="relative aspect-square self-start overflow-hidden border border-rule bg-white p-1.5"
+            title={portrait.attribution}
+          >
+            <Image
+              src={portrait.src}
+              alt=""
+              fill
+              sizes="76px"
+              className="object-contain mix-blend-multiply"
+            />
+          </div>
+        )
       ) : null}
       <div className="min-w-0">
       <div className="flex flex-wrap items-start justify-between gap-3">
