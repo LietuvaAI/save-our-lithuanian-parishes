@@ -55,6 +55,10 @@ const NAV: NavItem[] = [
     href: "/where-every-parish-ended-up",
     label: "Current State",
   },
+  {
+    href: "/lithuanian-catholic-life-today",
+    label: "The Living Network",
+  },
   { href: "/history", label: "The Rise and the Loss" },
   {
     label: "Guidance",
