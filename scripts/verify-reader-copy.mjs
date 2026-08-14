@@ -45,6 +45,16 @@ const layout = readFileSync(new URL("../app/layout.tsx", import.meta.url), "utf8
 if (/label:\s*["']Explore["']/.test(layout)) {
   errors.push("app/layout.tsx: the retired Explore navigation group returned");
 }
+
+const homepage = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
+if (homepage.includes("Still standing")) {
+  errors.push(
+    "app/page.tsx: living institutions must not use the physical-building label Still standing",
+  );
+}
+if (!homepage.includes("Active Lithuanian parishes and missions")) {
+  errors.push("app/page.tsx: canonical living-network terminology drifted");
+}
 if (!layout.includes('href: "/history", label: "The Rise and the Loss"')) {
   errors.push("app/layout.tsx: The Rise and the Loss is not a top-level navigation item");
 }

@@ -280,7 +280,8 @@ export default function Home() {
 
         <div className="mt-5 flex flex-wrap items-baseline justify-between gap-2">
           <h3 className="font-serif text-section-title font-semibold">
-            Still standing <span className="text-muted">· {activeNetwork.length}</span>
+            Active Lithuanian parishes and missions{" "}
+            <span className="text-muted">· {activeNetwork.length}</span>
           </h3>
           <span className="text-body-copy text-muted">
             {currentPastoralNetwork.counts.active_parish} parishes + {" "}
