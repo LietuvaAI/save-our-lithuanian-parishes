@@ -9,6 +9,11 @@ let narrativeParagraphs = 0;
 
 for (const file of readdirSync(caseDirectory).filter((name) => name.endsWith(".json"))) {
   const record = JSON.parse(readFileSync(new URL(file, caseDirectory), "utf8"));
+  if ("historicalSummary" in record) {
+    errors.push(
+      `${file}: legacy historicalSummary is forbidden; use sourced historicalNarrative`,
+    );
+  }
   const narrative = record.historicalNarrative ?? [];
   if (!Array.isArray(narrative)) {
     errors.push(`${file}: historicalNarrative must be an array`);

@@ -35,7 +35,7 @@ const protectedHistory = new Map([
   ["sv-kazimiero-cleveland-oh.json", ["historicalNarrative", 3]],
   ["sv-mykolo-bayonne-nj.json", ["historicalNarrative", 3]],
   ["sv-mykolo-scranton-pa.json", ["historicalNarrative", 3]],
-  ["sv-petro-detroit-mi.json", ["historicalSummary", 2]],
+  ["sv-petro-detroit-mi.json", ["historicalNarrative", 2]],
   ["sv-petro-ir-povilo-elizabeth-nj.json", ["historicalNarrative", 3]],
   ["sv-vincento-de-paul-girardville-pa.json", ["historicalNarrative", 3]],
   ["svc-m-marijos-apreiskimo-brooklyn-ny.json", ["historicalNarrative", 4]],
@@ -71,6 +71,12 @@ for (const filename of caseFiles) {
   const record = JSON.parse(readFileSync(join(caseRoot, filename), "utf8"));
   if (!record.summary?.trim()) {
     errors.push(`case summary is empty: ${filename}`);
+  }
+  if ("historicalSummary" in record) {
+    errors.push(
+      `legacy historicalSummary is forbidden: ${filename}; ` +
+        "use sourced historicalNarrative",
+    );
   }
   const contract = protectedHistory.get(filename);
   if (!contract) continue;
@@ -133,7 +139,6 @@ for (const [source, fragment, label] of [
     "typed historical lead",
   ],
   [pageSource, "caseRecord?.historicalNarrative?.length", "sourced narrative"],
-  [pageSource, "caseRecord?.historicalSummary?.length", "historical summary"],
   [pageSource, "caseRecord?.summary ??", "case summary in current condition"],
   [pageSource, "watchEntry?.situation ??", "canonical watch summary"],
   [pageSource, "situation?.situation ??", "situation in current condition"],
@@ -154,6 +159,7 @@ for (const forbidden of [
   "situationText: isUsProjection ? null",
   "currentUse: isUsProjection ? null",
   "caseSummary: isUsProjection",
+  "historicalSummary",
 ]) {
   if (pageSource.includes(forbidden)) {
     errors.push(`suppressed or superseded narrative path returned: ${forbidden}`);

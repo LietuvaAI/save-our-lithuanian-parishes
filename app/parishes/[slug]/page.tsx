@@ -88,7 +88,6 @@ interface CaseRecord {
   buildingStatus: string;
   currentUse: string;
   historicalNarrative?: HistoricalNarrativeParagraph[];
-  historicalSummary?: string[];
   profile?: {
     institutionalLife?: string;
     currentSite?: {
@@ -845,11 +844,9 @@ export default async function ParishPage({
                 ? caseRecord.historicalNarrative.map(
                     (paragraph) => paragraph.text,
                   )
-                : caseRecord?.historicalSummary?.length
-                  ? caseRecord.historicalSummary
-                  : displayRest
-                    ? [displayRest]
-                    : []
+                : displayRest
+                  ? [displayRest]
+                  : []
             }
             fallbackNarrative={
               historicalLeadNarrative ? [] : profileView.historyFallback

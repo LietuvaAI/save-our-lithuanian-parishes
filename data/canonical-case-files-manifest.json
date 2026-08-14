@@ -1225,7 +1225,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-mykolo-scranton-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-mykolo-scranton-pa.json",
-      "content_sha256": "169e568237289affec9c8c6cd6b4238a5dc05454fd543632244386375379afb6",
+      "content_sha256": "8e2dc9db0baf9657a6b85ef9bce2ba47795b2b6b5d38a6c7cbf5a0ad14b2e313",
       "source_record_slug": "sv-mykolo-scranton-pa",
       "as_of": "2026-08-02",
       "registry_slugs": [
@@ -1315,7 +1315,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-petro-detroit-mi.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-petro-detroit-mi.json",
-      "content_sha256": "ffa799a5e4d5222f47188e1f8a1778746af366a68788aaa1213fef859af07994",
+      "content_sha256": "943d0e59120782d7b06e9b415daf1acc77e50253bad7a9d9110def109f51631a",
       "source_record_slug": "sv-petro-detroit-mi",
       "as_of": "2026-07-16",
       "registry_slugs": [
