@@ -165,6 +165,15 @@
       "rightsNote": "Derivative of APK's 2022 photograph of Epiphany Catholic Church at 2712 Dumbarton Street NW. The source photograph is licensed CC BY-SA 4.0; this line-art adaptation is published under the same license. Created 2026-08-14. This is the Catholic host church in Georgetown, not the Episcopal Church of the Epiphany at 1317 G Street NW.",
       "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Epiphany_Catholic_Church.jpg"
     },
+    "new-philadelphia-holy-cross-line-drawing": {
+      "src": "/images/parishes/new-philadelphia-holy-cross-line-drawing.png",
+      "alt": "Line drawing of Holy Cross Church in New Philadelphia, Pennsylvania.",
+      "attribution": "AI-assisted line-art adaptation by Save Our Lithuanian Parishes from a photograph by Shuvaev, Wikimedia Commons, CC BY-SA 4.0.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Derivative of Shuvaev's 2015 photograph of Holy Cross Roman Catholic Church on Valley Street in New Philadelphia. The source photograph is licensed CC BY-SA 4.0; this line-art adaptation is published under the same license. Created 2026-08-14. The illustration belongs to the Sielovada directory listing and does not resolve its unadjudicated relationship to the historical Sacred Heart registry row.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Holy_Cross_Church,_New_Philadelphia_PA_02.JPG"
+    },
     "pal-jurgio-matulaicio-misija-lemont-il": {
       "src": "/images/parishes/lemont-matulaitis-mission.jpg",
       "alt": "Exterior of Blessed Jurgis Matulaitis Mission at the Lithuanian World Center in Lemont.",
