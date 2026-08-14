@@ -45,7 +45,7 @@ export default function HistoryPage() {
   const pittsburgh = dioceses.find((diocese) => diocese.key === "Pittsburgh")!;
 
   return (
-    <article className="mx-auto max-w-5xl px-4 pb-12 pt-8">
+    <article className="mx-auto max-w-5xl px-4 pb-0 pt-8">
       <header className="max-w-4xl">
         <p className="font-sans text-small-copy uppercase tracking-widest text-muted">
           A chronological view · 1880s to today
