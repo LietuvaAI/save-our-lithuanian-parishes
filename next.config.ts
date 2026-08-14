@@ -8,6 +8,28 @@ const nextConfig: NextConfig = {
       { source: "/data", destination: "/record", permanent: true },
       { source: "/network", destination: "/about", permanent: true },
       { source: "/now", destination: "/under-threat", permanent: true },
+      // Canadian comparator research is no longer a public site surface.
+      // Preserve old inbound links without keeping the retired page alive.
+      {
+        source: "/canadian-comparators",
+        destination: "/parishes",
+        permanent: true,
+      },
+      {
+        source: "/parishes/sv-kazimiero-montreal-qc",
+        destination: "/parishes",
+        permanent: true,
+      },
+      {
+        source: "/parishes/ausros-vartu-montreal-qc",
+        destination: "/parishes",
+        permanent: true,
+      },
+      {
+        source: "/parishes/sv-kazimiero-delhi-on",
+        destination: "/parishes",
+        permanent: true,
+      },
       // The unreviewed Draugas ledger pages were retired on 2026-08-07.
       // Preserve inbound links by returning visitors to the canonical profile.
       {

@@ -215,7 +215,7 @@ export default function ProtestantPage() {
                 shape: "square",
               },
               {
-                label: `Lives on, another community · ${transferredCongregations.length}`,
+                label: `Continues in another form · ${transferredCongregations.length}`,
                 color: recordMarkColor("transferred"),
                 shape: "square",
               },
@@ -276,7 +276,7 @@ export default function ProtestantPage() {
 
       <section className="mt-10 max-w-3xl">
         <h2 className="font-serif text-section-title font-semibold">
-          Lives on, another community · {transferredCongregations.length}
+          Continues in another form · {transferredCongregations.length}
         </h2>
         <p className="mt-1 text-body-copy text-muted">
           The institution continues, but current Lithuanian identity or worship

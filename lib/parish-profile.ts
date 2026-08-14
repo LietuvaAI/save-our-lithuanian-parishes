@@ -136,34 +136,8 @@ const usPublicationProfiles: CanonicalParishProfile[] =
     };
   });
 
-const comparatorProfiles: CanonicalParishProfile[] = parishes
-  .filter((core) => core.comparator)
-  .map((core) => {
-    const entry = registryEntries.find(
-      (candidate) =>
-        candidate.c83_row != null &&
-        core.c83Rows.includes(candidate.c83_row) &&
-        candidate.city === core.city,
-    );
-    if (!entry) {
-      throw new Error(`${core.slug}: Canadian comparator has no site display record.`);
-    }
-    return {
-      slug: core.slug,
-      href: `/parishes/${core.slug}`,
-      registrySlug: entry.slug,
-      registry: entry,
-      core,
-      publication: null,
-      congregationClass: entry.congregation_class ?? null,
-      recordDepth: entry.record_depth ?? "case-filed",
-    };
-  });
-
-export const canonicalParishProfiles: CanonicalParishProfile[] = [
-  ...usPublicationProfiles,
-  ...comparatorProfiles,
-];
+export const canonicalParishProfiles: CanonicalParishProfile[] =
+  usPublicationProfiles;
 
 const profileBySlug = new Map<string, CanonicalParishProfile>();
 const profileByRegistrySlug = new Map<string, CanonicalParishProfile>();
@@ -199,7 +173,7 @@ for (const profile of canonicalParishProfiles) {
   }
 }
 
-for (const core of parishes) {
+for (const core of parishes.filter((candidate) => !candidate.comparator)) {
   if (!profileBySlug.has(core.slug)) {
     throw new Error(
       `Canonical profile missing: ${core.slug} has no registry-backed route.`,
