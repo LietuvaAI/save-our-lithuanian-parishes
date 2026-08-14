@@ -52,7 +52,7 @@ if (homepage.includes("Still standing")) {
     "app/page.tsx: living institutions must not use the physical-building label Still standing",
   );
 }
-if (!homepage.includes("Active Lithuanian parishes and missions")) {
+if (!homepage.includes("Active parishes and missions")) {
   errors.push("app/page.tsx: canonical living-network terminology drifted");
 }
 if (!layout.includes('href: "/history", label: "The Rise and the Loss"')) {

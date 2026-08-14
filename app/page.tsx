@@ -280,7 +280,7 @@ export default function Home() {
 
         <div className="mt-5 flex flex-wrap items-baseline justify-between gap-2">
           <h3 className="font-serif text-section-title font-semibold">
-            Active Lithuanian parishes and missions{" "}
+            Active parishes and missions{" "}
             <span className="text-muted">· {activeNetwork.length}</span>
           </h3>
           <span className="text-body-copy text-muted">
@@ -289,10 +289,12 @@ export default function Home() {
           </span>
         </div>
         <p className="mt-1 max-w-3xl text-body-copy leading-relaxed text-muted">
-          Of the {ROMAN_CATHOLIC_INSTITUTIONS} Lithuanian Catholic institutions
-          ever founded in America, these six parishes and two missions still
-          gather for Lithuanian worship — the living remnant of the whole
-          network.
+          An active parish or mission remains Lithuanian-led, with regular
+          Lithuanian worship and continuing pastoral life. This group includes{" "}
+          {currentPastoralNetwork.counts.active_parish} parishes and{" "}
+          {currentPastoralNetwork.counts.active_mission} missions. It does not
+          include hosted-Mass communities, where Lithuanian Mass continues
+          within a parish that is no longer Lithuanian-led.
         </p>
 
         <div className="mt-4 grid gap-3 md:grid-cols-2">
