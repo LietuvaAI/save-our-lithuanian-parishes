@@ -50,12 +50,12 @@ type NavItem =
     };
 
 const NAV: NavItem[] = [
+  { href: "/parishes", label: "All Profiles" },
   {
     href: "/where-every-parish-ended-up",
-    label: "Parish & Mission Outcomes",
+    label: "Outcomes",
   },
   { href: "/history", label: "The Rise and the Loss" },
-  { href: "/parishes", label: "Parish Profiles" },
   {
     label: "Guidance",
     children: [
@@ -75,7 +75,7 @@ const NAV: NavItem[] = [
       },
     ],
   },
-  { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys (The Hearth)" },
+  { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys" },
 ];
 
 export default function RootLayout({

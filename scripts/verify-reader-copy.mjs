@@ -46,6 +46,24 @@ if (/label:\s*["']Explore["']/.test(layout)) {
 if (!layout.includes('href: "/history", label: "The Rise and the Loss"')) {
   errors.push("app/layout.tsx: The Rise and the Loss is not a top-level navigation item");
 }
+const expectedNavOrder = [
+  'href: "/parishes", label: "All Profiles"',
+  'href: "/where-every-parish-ended-up"',
+  'label: "Outcomes"',
+  'href: "/history", label: "The Rise and the Loss"',
+  'label: "Guidance"',
+  'label: "About"',
+  'href: "https://blog.saveourlithuanianparishes.org", label: "Židinys"',
+];
+let previousNavPosition = -1;
+for (const navFragment of expectedNavOrder) {
+  const position = layout.indexOf(navFragment, previousNavPosition + 1);
+  if (position === -1) {
+    errors.push(`app/layout.tsx: missing or misordered navigation item ${navFragment}`);
+    break;
+  }
+  previousNavPosition = position;
+}
 if (layout.includes("/canadian-comparators")) {
   errors.push("app/layout.tsx: Canadian comparators returned to public navigation");
 }
