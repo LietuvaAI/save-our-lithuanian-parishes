@@ -1105,7 +1105,7 @@
       "license": "Used with permission",
       "archiveUrl": "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
       "rights": "permission_granted",
-      "rightsNote": "Permission to publish this line-art adaptation was confirmed by Vilija on 2026-07-30. The source photograph shows the former Our Lady of Perpetual Help church on Neff Road, which became the worship site of the consolidated St. Casimir Lithuanian Parish in 2009. This is not the unrelated Polish St. Casimir church on Sowinski Avenue. Source © Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9)."
+      "rightsNote": "Permission to publish this line-art adaptation was confirmed by Vilija on 2026-07-30. The source photograph shows the former Our Lady of Perpetual Help church on Neff Road, which became the worship site of the consolidated St. Casimir Lithuanian Parish in 2009. Source © Algis Lukas / Lithuanian American Community Inc., 2009 (ISBN 978-0-615-26575-9)."
     },
     "svc-mergeles-marijos-gimimo-chicago-il-line-drawing": {
       "src": "/images/parishes/chicago-nativity-bvm-line-drawing.png",
@@ -1172,6 +1172,6 @@
     }
   },
   "_registryNotes": {
-    "cleveland-st-casimir-identity": "Cleveland has TWO St. Casimirs. The twin-towered church at 8223 Sowinski Ave (Commons photos by Tim Evanson et al.) is the POLISH parish (closed 2009, reopened 2012 by Rome). Our Lithuanian record sv-kazimiero-cleveland-oh is the parish formed by the 2009 St. George + Our Lady of Perpetual Help merger, worshiping in the Neff Road church. Sowinski Ave images must never attach to sv-kazimiero-cleveland-oh, sv-jurgio-cleveland-oh, or dievo-motinos-nuolatines-pagalbos-cleveland-oh. Adjudicated with the Hearth session 2026-07-26."
+    "cleveland-st-casimir-identity": "The Lithuanian record sv-kazimiero-cleveland-oh is the parish formed by the 2009 St. George and Our Lady of Perpetual Help consolidation, worshiping in the Neff Road church. Only verified Neff Road imagery may attach to this profile or its two predecessor profiles."
   }
 }

@@ -2,7 +2,7 @@
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
-    "publication_projection_hash": "sha256:4be15ea4ad10bd769bb7e1f017fbd458fc4f04ac66016ed355f86688104707fa",
+    "publication_projection_hash": "sha256:b5d41cca3e374bc139673605a40eeb4fa4e3cc6cc86b5bb7cb9f7c9451e33667",
     "publication_projection_revision": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
     "repository": "LietuvaAI/culturenet-brain"
   },
@@ -8399,7 +8399,7 @@
       "building-standing"
     ]
   },
-  "content_hash": "sha256:5cb7bd44b5b9593176fe4117f7579686a7df1ff4753dcd34b85e95af33abd98e",
+  "content_hash": "sha256:0bb61286346c541538572a750ea69d019a5b976a522bae55232f4fd8745697cf",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -8580,7 +8580,7 @@
         "slug": "our-lady-perpetual-help-cleveland-oh"
       },
       "source_artifact_ids": [
-        "src:solp-blog:closure-done-wrong:2026-07-31"
+        "src:global-true-lithuania:cleveland:2026-07-31"
       ],
       "target": {
         "display_name": "St. Casimir Lithuanian parish, Cleveland",
@@ -8615,7 +8615,7 @@
         "slug": "st-george-cleveland-oh"
       },
       "source_artifact_ids": [
-        "src:solp-blog:closure-done-wrong:2026-07-31"
+        "src:global-true-lithuania:cleveland:2026-07-31"
       ],
       "target": {
         "display_name": "St. Casimir Lithuanian parish, Cleveland",

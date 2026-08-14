@@ -8,12 +8,12 @@
     {
       "path": "docs/research/parish-canon/public-display/registry-unified.json",
       "site_path": "data/registry-unified.json",
-      "sha256": "f2f4cb2a2984967eef41ba9af7f6a854a2f6e696a503292b0ab31a84d9931995"
+      "sha256": "c53b2e10f8100254067d639eba84bde7175428eae44e0481f05a9bdd2c467fd6"
     },
     {
       "path": "docs/research/parish-canon/public-display/parish-situation.json",
       "site_path": "data/parish-situation.json",
-      "sha256": "50feeb2934af973b0466bf4cee82c54eda7c93bb22d10c365590157a61fedc34"
+      "sha256": "bb5ce50d9eb94aef71e18638b07a0d8ba76357f6b6f3b22248f236b58ec9ac9c"
     },
     {
       "path": "docs/research/parish-canon/public-display/parish-timelines.json",
@@ -23,7 +23,7 @@
     {
       "path": "docs/research/parish-canon/public-display/photos.json",
       "site_path": "data/photos.json",
-      "sha256": "2e9294cb48f2a0bdde8d1faf6b83749316800d698124d8cce86f8a547518bca0"
+      "sha256": "94fbfab98b810b9b92ae508a0360b37833c8793f47cb924131681582a6e80feb"
     },
     {
       "path": "docs/research/draugas/parishes.csv",
@@ -33,7 +33,7 @@
     {
       "path": "docs/research/parish-preservation-deep-research/phase-2-reversal-database.json",
       "site_path": "data/reversal-database.json",
-      "sha256": "ce0774d07f1ea99c07eec515edc55072f885661f6685abb535be100740a7f785"
+      "sha256": "67614238396c507eea8906153f32b893274fe8585e8acf3e03d1632b07416f4e"
     }
   ]
 }
