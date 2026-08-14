@@ -1,0 +1,67 @@
+{
+ "sv-petro-boston-ma": {
+  "checked": "2026-07-16",
+  "clergyLabel": "Shared pastor (not Lithuanian-speaking)",
+  "mass": "Weekly Lithuanian Mass"
+ },
+ "svc-mergeles-marijos-gimimo-chicago-il": {
+  "checked": "2026-07-23",
+  "clergyLabel": "Lithuanian-speaking klebonas",
+  "mass": "Weekly Lithuanian Mass"
+ },
+ "sv-kazimiero-cleveland-oh": {
+  "checked": "2026-07-23",
+  "clergyLabel": "Lithuanian-speaking klebonas",
+  "mass": "Weekly Lithuanian Mass"
+ },
+ "sv-andriejaus-philadelphia-pa": {
+  "checked": "2026-07-23",
+  "clergyLabel": "Shared pastor (not Lithuanian-speaking)",
+  "mass": "Weekly Lithuanian Mass"
+ },
+ "sv-kryziaus-dayton-oh": {
+  "checked": "2026-07-23",
+  "clergyLabel": "Shared pastor (not Lithuanian-speaking)",
+  "mass": "Lithuanian Mass"
+ },
+ "nekaltojo-prasidejimo-east-st-louis-il": {
+  "checked": "2026-07-23",
+  "clergyLabel": "No Lithuanian clergy",
+  "mass": "No regular Lithuanian Mass"
+ },
+ "sv-antano-cicero-il": {
+  "checked": "2026-07-23",
+  "clergyLabel": "Visiting priest only",
+  "mass": "Weekly Lithuanian Mass"
+ },
+ "sv-jurgio-bridgeport-ct": {
+  "checked": "2026-07-23",
+  "clergyLabel": "No Lithuanian clergy",
+  "mass": "No regular Lithuanian Mass"
+ },
+ "svc-m-marijos-nekalto-prasidejimo-chicago-il": {
+  "checked": "2026-07-23",
+  "clergyLabel": "Visiting priest only",
+  "mass": "Weekly Lithuanian Mass"
+ },
+ "sv-onos-luzerne-pa": {
+  "checked": "2026-07-23",
+  "clergyLabel": "No Lithuanian clergy",
+  "mass": "No regular Lithuanian Mass"
+ },
+ "sv-m-marijos-apsireiskimo-frackville-pa": {
+  "checked": "2026-07-23",
+  "clergyLabel": "No Lithuanian clergy",
+  "mass": "No regular Lithuanian Mass"
+ },
+ "sv-jurgio-rochester-ny": {
+  "checked": "2026-07-23",
+  "clergyLabel": "Not yet established",
+  "mass": "Lithuanian Mass"
+ },
+ "pal-jurgio-matulaicio-misija-lemont-il": {
+  "checked": "2026-07-23",
+  "clergyLabel": "Lithuanian-speaking klebonas",
+  "mass": "Weekly Lithuanian Mass"
+ }
+}

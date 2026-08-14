@@ -1,0 +1,66 @@
+{
+ "dievo-apvaizdos-southfield-mi": {
+  "src": "/images/parishes/southfield-divine-providence-current-line-drawing.png",
+  "alt": "Line drawing of Divine Providence Lithuanian Catholic Church in Southfield."
+ },
+ "sv-juozapo-waterbury-ct": {
+  "src": "/images/parishes/waterbury-st-joseph-line-drawing.png",
+  "alt": "Line drawing of St. Joseph Lithuanian church in Waterbury."
+ },
+ "sv-vincento-de-paul-girardville-pa": {
+  "src": "/images/parishes/girardville-st-vincent-de-paul-line-drawing.png",
+  "alt": "Line drawing of St. Vincent de Paul church in Girardville."
+ },
+ "kristaus-atsimainymo-maspeth-ny": {
+  "src": "/images/parishes/maspeth-transfiguration-line-drawing.png",
+  "alt": "Line drawing of Transfiguration Lithuanian church in Maspeth."
+ },
+ "sv-mykolo-bayonne-nj": {
+  "src": "/images/parishes/bayonne-st-michael-line-drawing.png",
+  "alt": "Line drawing of the former St. Michael Lithuanian church in Bayonne."
+ },
+ "sv-petro-ir-povilo-elizabeth-nj": {
+  "src": "/images/parishes/elizabeth-sts-peter-paul-line-drawing.png",
+  "alt": "Line drawing of Sts. Peter and Paul Lithuanian church in Elizabeth."
+ },
+ "svc-trejybes-hartford-ct": {
+  "src": "/images/parishes/hartford-holy-trinity-line-drawing.png",
+  "alt": "Line drawing of Holy Trinity Lithuanian church in Hartford."
+ },
+ "st-ann-beverly-shores-in": {
+  "src": "/images/parishes/beverly-shores-st-ann-line-drawing.png",
+  "alt": "Line drawing of the sanctuary at St. Ann of the Dunes in Beverly Shores."
+ },
+ "sv-petro-boston-ma": {
+  "src": "/images/parishes/boston-st-peter-line-drawing.png",
+  "alt": "Line drawing of St. Peter Lithuanian church in South Boston."
+ },
+ "sv-antano-cicero-il": {
+  "src": "/images/parishes/cicero-st-anthony-line-drawing.png",
+  "alt": "Line drawing of St. Anthony Lithuanian church in Cicero."
+ },
+ "svc-mergeles-marijos-gimimo-chicago-il": {
+  "src": "/images/parishes/chicago-nativity-bvm-line-drawing.png",
+  "alt": "Line drawing of Nativity of the Blessed Virgin Mary Lithuanian church in Chicago."
+ },
+ "svc-m-marijos-nekalto-prasidejimo-chicago-il": {
+  "src": "/images/parishes/brighton-park-immaculate-conception-line-drawing.png",
+  "alt": "Line drawing of Immaculate Conception Lithuanian church in Brighton Park, Chicago."
+ },
+ "sv-andriejaus-philadelphia-pa": {
+  "src": "/images/parishes/philadelphia-st-andrew-line-drawing.png",
+  "alt": "Line drawing of St. Andrew Lithuanian church in Philadelphia."
+ },
+ "sv-kazimiero-cleveland-oh": {
+  "src": "/images/parishes/cleveland-our-lady-perpetual-help-line-drawing.png",
+  "alt": "Line drawing of the Neff Road church that became the home of St. Casimir Lithuanian Parish in 2009."
+ },
+ "sv-kazimiero-los-angeles-ca": {
+  "src": "/images/parishes/los-angeles-st-casimir-line-drawing.png",
+  "alt": "Line drawing of St. Casimir Lithuanian church in Los Angeles."
+ },
+ "svc-m-marijos-apreiskimo-brooklyn-ny": {
+  "src": "/images/parishes/brooklyn-annunciation-line-drawing.png",
+  "alt": "Line drawing of Annunciation of the Blessed Virgin Mary church in Brooklyn."
+ }
+}
