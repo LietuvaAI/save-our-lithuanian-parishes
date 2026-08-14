@@ -1,0 +1,127 @@
+{
+ "snapshot": "2026-08-02",
+ "items": [
+  {
+   "id": "divine-providence-2026-07",
+   "kind": "active",
+   "level": "red",
+   "entity": "Divine Providence (Dievo Apvaizdos)",
+   "place": "Southfield, Michigan",
+   "diocese": "Archdiocese of Detroit",
+   "href": "/parishes/dievo-apvaizdos-southfield-mi",
+   "what": "Divine Providence, the last Lithuanian Catholic parish in metro Detroit, is part of Planning Area 8 in the Archdiocese of Detroit's new 2025–2027 Archdiocesan Restructuring process. Three draft pastorate models are under consideration. The Archdiocese says the models are starting points and no final decisions have been made; the post-listening-session survey closed July 31, 2026.",
+   "event": "2026",
+   "actionUrl": "https://restructuring.aod.org/planning-area-8",
+   "actionLabel": "Review Planning Area 8",
+   "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/further-down-the-path-what-divine"
+  },
+  {
+   "id": "waterbury-2023-09",
+   "kind": "active",
+   "level": "red",
+   "entity": "St. Joseph's (Šv. Juozapo)",
+   "place": "Waterbury, Connecticut",
+   "diocese": "Archdiocese of Hartford",
+   "href": "/parishes/sv-juozapo-waterbury-ct",
+   "what": "Regular parish operations ended in September 2023. A later archdiocesan decree merged Saint Joseph into Our Lady of Mount Carmel effective May 1, 2024, ending Saint Joseph's separate juridic parish while retaining its Congress Avenue church as a Catholic sacred edifice without regularly scheduled Masses. The community continues to support its canonical appeal, and a special Mass was documented in the church on August 2, 2026.",
+   "event": "2024-05-01",
+   "actionUrl": "https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church",
+   "actionLabel": "Support Waterbury's appeal",
+   "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/closed-not-ended-the-vatican-appeal"
+  },
+  {
+   "id": "girardville-2026-01",
+   "kind": "watch",
+   "level": "red",
+   "entity": "St. Vincent de Paul",
+   "place": "Girardville, Pennsylvania",
+   "diocese": "Diocese of Allentown",
+   "href": "/parishes/sv-vincento-de-paul-girardville-pa",
+   "what": "Closed January 5, 2026 — the final Mass was celebrated, the bells tolled, and the lights went out after more than a century. The diocese cited roughly $250,000 in needed exterior repairs and about $20,000 in annual operating costs; regular Masses had already ended in 2021 after the 2015 merger into St. Charles Borromeo Parish (Ashland).",
+   "event": "2026-01-05"
+  },
+  {
+   "id": "maspeth-2025-09",
+   "kind": "active",
+   "level": "red",
+   "entity": "Transfiguration (Kristaus Atsimainymo)",
+   "place": "Maspeth, Queens, New York",
+   "diocese": "Diocese of Brooklyn",
+   "href": "/parishes/kristaus-atsimainymo-maspeth-ny",
+   "what": "The historical Lithuanian parish merged into Transfiguration–St. Stanislaus Kostka in 2019. The Perry Avenue church remains open on a reduced Sunday schedule under that successor parish, while the Lithuanian Mass moved permanently to Annunciation in Williamsburg on September 1, 2025. The church building is not included in a contemplated partial property sale, but its longer-term use and landmark effort remain active public questions.",
+   "event": "2025-09-12",
+   "actionUrl": "https://www.change.org/p/help-save-a-unique-lithuanian-r-c-church-of-the-transfiguration-in-maspeth-queens",
+   "actionLabel": "Sign the Maspeth petition",
+   "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/still-open-still-undecided-the-fight"
+  },
+  {
+   "id": "freeland-2026-07",
+   "kind": "watch",
+   "level": "red",
+   "entity": "Our Lady of the Immaculate Conception",
+   "place": "Freeland, Pennsylvania",
+   "diocese": "Diocese of Scranton",
+   "href": null,
+   "what": "Consolidated into St. Patrick Parish (White Haven) effective July 1, 2026, under the Diocese of Scranton's Vision 2030 pastoral plan.",
+   "event": "2026-07-01"
+  },
+  {
+   "id": "bayonne-2025-08",
+   "kind": "building",
+   "level": "amber",
+   "entity": "St. Michael (Šv. Mykolo)",
+   "place": "Bayonne, New Jersey",
+   "diocese": "Archdiocese of Newark",
+   "href": "/parishes/sv-mykolo-bayonne-nj",
+   "what": "The vacant former Lithuanian church at 15–21 East 23rd Street went before Bayonne's Planning Board in August 2025 with a proposal to demolish it for a six-story, 114-unit residential building; the city's historical committee raised no objection.",
+   "event": "2025-08-12"
+  },
+  {
+   "id": "scranton-st-michael-2026-05",
+   "kind": "building",
+   "level": "amber",
+   "entity": "St. Michael (Šv. Mykolo)",
+   "place": "Scranton, Pennsylvania",
+   "diocese": "Diocese of Scranton",
+   "href": "/parishes/sv-mykolo-scranton-pa",
+   "what": "The parish relocated to St. Lucy Church in September 2025 and continues there; its original 1942 building at 1703 Jackson Street has been on the commercial market since spring 2026, listed at $350,000.",
+   "event": "2026-05"
+  },
+  {
+   "id": "elizabeth-2026-07",
+   "kind": "watch",
+   "level": "amber",
+   "entity": "Sts. Peter and Paul (Šv. Petro ir Povilo)",
+   "place": "Elizabeth, New Jersey",
+   "diocese": "Archdiocese of Newark",
+   "href": "/parishes/sv-petro-ir-povilo-elizabeth-nj",
+   "what": "Current archdiocesan planning documents (Planning Area K) list it within the combined \"St. Adalbert and Sts. Peter and Paul\" parish, with one Mass remaining at the Lithuanian church. No decree on its future has surfaced; its fate is canonically unresolved.",
+   "event": null
+  },
+  {
+   "id": "hartford-2026-04",
+   "kind": "active",
+   "level": "amber",
+   "entity": "Holy Trinity (Švč. Trejybės)",
+   "place": "Hartford, Connecticut",
+   "diocese": "Archdiocese of Hartford",
+   "href": "/parishes/svc-trejybes-hartford-ct",
+   "what": "Holy Trinity remains listed by the Archdiocese of Hartford as a mission after its regular Mass schedule — including the Sunday Lithuanian/English Mass — ended May 30, 2026. Funerals and baptisms continue, and parishioners are contesting the partial closure while seeking to preserve the church as a Lithuanian cultural center.",
+   "event": "2026-04",
+   "actionUrl": "https://www.gofundme.com/f/protect-holy-trinity-church",
+   "actionLabel": "Support Hartford's legal fund",
+   "hearthUrl": "https://blog.saveourlithuanianparishes.org/p/fifteen-months-the-closing-of-svc"
+  },
+  {
+   "id": "beverly-shores-2026-03",
+   "kind": "watch",
+   "level": "amber",
+   "entity": "St. Ann of the Dunes (Šv. Onos)",
+   "place": "Beverly Shores, Indiana",
+   "diocese": "Diocese of Gary",
+   "href": "/registry/st-ann-beverly-shores-in",
+   "what": "Named in the Diocese of Gary's Porter Planning Area, which is consolidating five parishes down to two worship sites under the diocese's March 2026 pastoral-planning announcement.",
+   "event": "2026-03"
+  }
+ ]
+}
