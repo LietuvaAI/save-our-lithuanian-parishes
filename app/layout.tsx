@@ -70,7 +70,7 @@ const NAV: NavItem[] = [
       },
       { href: "/history#loss-by-diocese", label: "By Diocese" },
       {
-        href: "/history#beginning",
+        href: "/pennsylvania-coal-region",
         label: "Pennsylvania Coal Region",
       },
       {

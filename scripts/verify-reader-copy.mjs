@@ -63,7 +63,7 @@ const expectedNavOrder = [
   'href: "/lithuanian-catholic-life-today"',
   'label: "The Living Network"',
   'href: "/history#loss-by-diocese", label: "By Diocese"',
-  'href: "/history#beginning"',
+  'href: "/pennsylvania-coal-region"',
   'label: "Pennsylvania Coal Region"',
   'href: "/national-catholic"',
   'label: "National & Independent Catholic"',
