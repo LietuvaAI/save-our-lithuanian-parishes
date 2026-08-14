@@ -89,6 +89,24 @@ function statusForLink(link: string): EndState {
   return statusByLink.get(link) ?? "unverified";
 }
 
+function profileStatusForAlert(alert: CurrentAlert): {
+  value: EndState;
+  label?: string;
+} {
+  if (alert.status) {
+    return { value: alert.status, label: alert.statusLabel };
+  }
+
+  const profileLink = alert.parishLink ?? alert.relatedProfileLink;
+  const value = profileLink ? statusByLink.get(profileLink) : undefined;
+  if (!value) {
+    throw new Error(
+      `${alert.id}: watch-list entry has no canonical profile status`,
+    );
+  }
+  return { value };
+}
+
 function profileSlug(link: string) {
   return link.split("/").filter(Boolean).at(-1) ?? "";
 }
@@ -280,7 +298,8 @@ export default function Home() {
 
         <div className="mt-5 flex flex-wrap items-baseline justify-between gap-2">
           <h3 className="font-serif text-section-title font-semibold">
-            Still standing <span className="text-muted">· {activeNetwork.length}</span>
+            Active parishes and missions{" "}
+            <span className="text-muted">· {activeNetwork.length}</span>
           </h3>
           <span className="text-body-copy text-muted">
             {currentPastoralNetwork.counts.active_parish} parishes + {" "}
@@ -288,10 +307,12 @@ export default function Home() {
           </span>
         </div>
         <p className="mt-1 max-w-3xl text-body-copy leading-relaxed text-muted">
-          Of the {ROMAN_CATHOLIC_INSTITUTIONS} Lithuanian Catholic institutions
-          ever founded in America, these six parishes and two missions still
-          gather for Lithuanian worship — the living remnant of the whole
-          network.
+          An active parish or mission remains Lithuanian-led, with regular
+          Lithuanian worship and continuing pastoral life. This group includes{" "}
+          {currentPastoralNetwork.counts.active_parish} parishes and{" "}
+          {currentPastoralNetwork.counts.active_mission} missions. It does not
+          include hosted-Mass communities, where Lithuanian Mass continues
+          within a parish that is no longer Lithuanian-led.
         </p>
 
         <div className="mt-4 grid gap-3 md:grid-cols-2">
@@ -366,9 +387,10 @@ export default function Home() {
               </span>
             </header>
             <p className="bg-[#faf7f0] px-5 py-3 text-body-copy leading-relaxed text-muted">
-              {activeCampaignCountLabel} parishes face decisions about their
-              future right now. Each campaign is led by its own community; this
-              project documents their situations and shows how to support them.
+              {activeCampaignCountLabel} parish communities are organizing as
+              decisions are made about their churches and future. Read what
+              each community is facing, what it is asking for, and how you can
+              help.
             </p>
             <div className="divide-y divide-rule">
               {activeCampaigns.map((campaign) => {
@@ -459,43 +481,50 @@ export default function Home() {
               </span>
             </header>
             <p className="bg-[#faf7f0] px-5 py-3 text-body-copy leading-relaxed text-muted">
-              Situations the project is tracking before they harden into
-              outcomes — planning-area consolidations, buildings on the market,
-              and fates still canonically unresolved.
+              These parishes and churches may face consolidation, sale,
+              closure, or another uncertain future. Their situations are still
+              developing, and no final outcome should be assumed.
             </p>
             <div className="divide-y divide-rule">
-              {monitoredAlerts.map((alert) => (
-                <article key={alert.id} className="px-5 py-3.5">
-                  <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-                    {alert.parishLink ? (
-                      <Link
-                        href={alert.parishLink}
-                        className="font-serif text-card-title font-semibold hover:text-accent"
-                      >
-                        {alert.entity}
-                      </Link>
-                    ) : (
-                      <h4 className="font-serif text-card-title font-semibold">
-                        {alert.entity}
-                      </h4>
-                    )}
-                    <span className="text-support-copy text-muted">
-                      {alert.place}
-                    </span>
-                  </div>
-                  <p className="mt-1 text-body-copy leading-relaxed text-muted">
-                    {alert.whatChanged}
-                  </p>
-                  <div className="mt-2 flex flex-wrap items-center gap-2">
-                    <span className="rounded-full border border-rule px-2 py-0.5 text-ui-label font-semibold">
-                      {alert.kind === "building"
-                        ? "Building at risk"
-                        : "Development to monitor"}
-                    </span>
-                    <DiocesePill name={alert.diocese} />
-                  </div>
-                </article>
-              ))}
+              {monitoredAlerts.map((alert) => {
+                const profileStatus = profileStatusForAlert(alert);
+                return (
+                  <article key={alert.id} className="px-5 py-3.5">
+                    <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                      {alert.parishLink ? (
+                        <Link
+                          href={alert.parishLink}
+                          className="font-serif text-card-title font-semibold hover:text-accent"
+                        >
+                          {alert.entity}
+                        </Link>
+                      ) : (
+                        <h4 className="font-serif text-card-title font-semibold">
+                          {alert.entity}
+                        </h4>
+                      )}
+                      <span className="text-support-copy text-muted">
+                        {alert.place}
+                      </span>
+                    </div>
+                    <p className="mt-1 text-body-copy leading-relaxed text-muted">
+                      {alert.whatChanged}
+                    </p>
+                    <div className="mt-2 flex flex-wrap items-center gap-2">
+                      <EndStatePill
+                        value={profileStatus.value}
+                        label={profileStatus.label}
+                      />
+                      <span className="rounded-full border border-rule px-2 py-0.5 text-ui-label font-semibold">
+                        {alert.kind === "building"
+                          ? "Building at risk"
+                          : "Development to monitor"}
+                      </span>
+                      <DiocesePill name={alert.diocese} />
+                    </div>
+                  </article>
+                );
+              })}
             </div>
           </section>
         </div>
