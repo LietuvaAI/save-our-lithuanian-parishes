@@ -56,10 +56,30 @@ const NAV: NavItem[] = [
     label: "Current State",
   },
   {
-    href: "/lithuanian-catholic-life-today",
-    label: "The Living Network",
+    label: "Explore",
+    menuAlign: "right",
+    children: [
+      { href: "/history", label: "The Rise and the Loss" },
+      {
+        href: "/where-parish-life-continued",
+        label: "Where Parish Life Continued",
+      },
+      {
+        href: "/lithuanian-catholic-life-today",
+        label: "The Living Network",
+      },
+      { href: "/history#loss-by-diocese", label: "By Diocese" },
+      {
+        href: "/history#beginning",
+        label: "Pennsylvania Coal Region",
+      },
+      {
+        href: "/national-catholic",
+        label: "National & Independent Catholic",
+      },
+      { href: "/protestant", label: "Protestant" },
+    ],
   },
-  { href: "/history", label: "The Rise and the Loss" },
   {
     label: "Guidance",
     children: [

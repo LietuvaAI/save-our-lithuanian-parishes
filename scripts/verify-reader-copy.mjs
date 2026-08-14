@@ -42,9 +42,6 @@ for (const file of files) {
 }
 
 const layout = readFileSync(new URL("../app/layout.tsx", import.meta.url), "utf8");
-if (/label:\s*["']Explore["']/.test(layout)) {
-  errors.push("app/layout.tsx: the retired Explore navigation group returned");
-}
 
 const homepage = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
 if (homepage.includes("Still standing")) {
@@ -55,16 +52,22 @@ if (homepage.includes("Still standing")) {
 if (!homepage.includes("Active parishes and missions")) {
   errors.push("app/page.tsx: canonical living-network terminology drifted");
 }
-if (!layout.includes('href: "/history", label: "The Rise and the Loss"')) {
-  errors.push("app/layout.tsx: The Rise and the Loss is not a top-level navigation item");
-}
 const expectedNavOrder = [
   'href: "/parishes", label: "All Profiles"',
   'href: "/where-every-parish-ended-up"',
   'label: "Current State"',
+  'label: "Explore"',
+  'href: "/history", label: "The Rise and the Loss"',
+  'href: "/where-parish-life-continued"',
+  'label: "Where Parish Life Continued"',
   'href: "/lithuanian-catholic-life-today"',
   'label: "The Living Network"',
-  'href: "/history", label: "The Rise and the Loss"',
+  'href: "/history#loss-by-diocese", label: "By Diocese"',
+  'href: "/history#beginning"',
+  'label: "Pennsylvania Coal Region"',
+  'href: "/national-catholic"',
+  'label: "National & Independent Catholic"',
+  'href: "/protestant", label: "Protestant"',
   'label: "Guidance"',
   'label: "About"',
   'href: "https://blog.saveourlithuanianparishes.org", label: "Židinys"',
