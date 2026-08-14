@@ -195,7 +195,7 @@ export default function ParishContinuityPage() {
             href="/where-every-parish-ended-up"
             className="underline underline-offset-2 hover:text-foreground"
           >
-            Current State view
+            Parish &amp; Mission Status view
           </Link>
           .
         </p>

@@ -128,7 +128,7 @@ export default function OutcomeModeExplorer({
         <div
           className="inline-flex overflow-hidden rounded-md border border-rule bg-background p-0.5 text-support-copy font-semibold"
           role="group"
-          aria-label="Choose a Current State view"
+          aria-label="Choose a Parish & Mission Status view"
         >
           <button
             type="button"

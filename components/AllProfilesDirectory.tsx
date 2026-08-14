@@ -42,7 +42,7 @@ const TRADITION_GROUPS: TraditionGroup[] = [
     value: "roman_catholic",
     label: "Roman Catholic parishes and missions",
     description:
-      "Roman Catholic parishes and missions form the historical institution census used by the Current State view.",
+      "Roman Catholic parishes and missions form the historical institution census used by the Parish & Mission Status view.",
   },
   {
     value: "national_catholic_pncc",

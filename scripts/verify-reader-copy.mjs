@@ -55,7 +55,7 @@ if (!homepage.includes("Active parishes and missions")) {
 const expectedNavOrder = [
   'href: "/parishes", label: "All Profiles"',
   'href: "/where-every-parish-ended-up"',
-  'label: "Current State"',
+  'label: "Parish & Mission Status"',
   'label: "Explore"',
   'href: "/history", label: "The Rise and the Loss"',
   'href: "/where-parish-life-continued"',

@@ -184,7 +184,7 @@ export default function HistoryPage() {
           closures have no dated position. The {counts.datedEndingsOutsideCurve} dated
           ending events attached to records without a dated foundation remain visible
           as events but do not change the curve. Current canonical status is shown on
-          parish profiles and the Current State view.
+          parish profiles and the Parish &amp; Mission Status view.
         </p>
       </section>
 
@@ -218,7 +218,7 @@ export default function HistoryPage() {
       <footer className="mt-14 border-t border-rule pt-5 font-sans text-support-copy text-muted">
         <Link href="/about-the-data" className="font-medium text-foreground underline hover:text-accent">Read the methodology and source policy</Link>
         {" · "}
-        <Link href="/where-every-parish-ended-up" className="font-medium text-foreground underline hover:text-accent">Explore the current state</Link>
+        <Link href="/where-every-parish-ended-up" className="font-medium text-foreground underline hover:text-accent">Explore parish and mission status</Link>
         {" · "}
         <Link href="/parishes" className="font-medium text-foreground underline hover:text-accent">Open all profiles</Link>
       </footer>
