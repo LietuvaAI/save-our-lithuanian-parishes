@@ -89,6 +89,24 @@ function statusForLink(link: string): EndState {
   return statusByLink.get(link) ?? "unverified";
 }
 
+function profileStatusForAlert(alert: CurrentAlert): {
+  value: EndState;
+  label?: string;
+} {
+  if (alert.status) {
+    return { value: alert.status, label: alert.statusLabel };
+  }
+
+  const profileLink = alert.parishLink ?? alert.relatedProfileLink;
+  const value = profileLink ? statusByLink.get(profileLink) : undefined;
+  if (!value) {
+    throw new Error(
+      `${alert.id}: watch-list entry has no canonical profile status`,
+    );
+  }
+  return { value };
+}
+
 function profileSlug(link: string) {
   return link.split("/").filter(Boolean).at(-1) ?? "";
 }
@@ -468,38 +486,45 @@ export default function Home() {
               developing, and no final outcome should be assumed.
             </p>
             <div className="divide-y divide-rule">
-              {monitoredAlerts.map((alert) => (
-                <article key={alert.id} className="px-5 py-3.5">
-                  <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-                    {alert.parishLink ? (
-                      <Link
-                        href={alert.parishLink}
-                        className="font-serif text-card-title font-semibold hover:text-accent"
-                      >
-                        {alert.entity}
-                      </Link>
-                    ) : (
-                      <h4 className="font-serif text-card-title font-semibold">
-                        {alert.entity}
-                      </h4>
-                    )}
-                    <span className="text-support-copy text-muted">
-                      {alert.place}
-                    </span>
-                  </div>
-                  <p className="mt-1 text-body-copy leading-relaxed text-muted">
-                    {alert.whatChanged}
-                  </p>
-                  <div className="mt-2 flex flex-wrap items-center gap-2">
-                    <span className="rounded-full border border-rule px-2 py-0.5 text-ui-label font-semibold">
-                      {alert.kind === "building"
-                        ? "Building at risk"
-                        : "Development to monitor"}
-                    </span>
-                    <DiocesePill name={alert.diocese} />
-                  </div>
-                </article>
-              ))}
+              {monitoredAlerts.map((alert) => {
+                const profileStatus = profileStatusForAlert(alert);
+                return (
+                  <article key={alert.id} className="px-5 py-3.5">
+                    <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                      {alert.parishLink ? (
+                        <Link
+                          href={alert.parishLink}
+                          className="font-serif text-card-title font-semibold hover:text-accent"
+                        >
+                          {alert.entity}
+                        </Link>
+                      ) : (
+                        <h4 className="font-serif text-card-title font-semibold">
+                          {alert.entity}
+                        </h4>
+                      )}
+                      <span className="text-support-copy text-muted">
+                        {alert.place}
+                      </span>
+                    </div>
+                    <p className="mt-1 text-body-copy leading-relaxed text-muted">
+                      {alert.whatChanged}
+                    </p>
+                    <div className="mt-2 flex flex-wrap items-center gap-2">
+                      <EndStatePill
+                        value={profileStatus.value}
+                        label={profileStatus.label}
+                      />
+                      <span className="rounded-full border border-rule px-2 py-0.5 text-ui-label font-semibold">
+                        {alert.kind === "building"
+                          ? "Building at risk"
+                          : "Development to monitor"}
+                      </span>
+                      <DiocesePill name={alert.diocese} />
+                    </div>
+                  </article>
+                );
+              })}
             </div>
           </section>
         </div>
