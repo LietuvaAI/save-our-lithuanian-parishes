@@ -1,0 +1,84 @@
+{
+  "slug": "st-ann-beverly-shores-in",
+  "asOf": "2026-08-06",
+  "buildingStatus": "standing",
+  "currentUse": "Active Catholic worship site of St. Patrick Catholic Community at 433 E. Golfwood Road, Beverly Shores. The Diocese of Gary assigns pastoral care for the Lithuanian community and lists a Lithuanian Mass at 1:00 p.m. on the third Sunday of each month.",
+  "historicalNarrative": [
+    {
+      "text": "Saint Ann of the Dunes emerged from the postwar Lithuanian Catholic community in Beverly Shores. The community dates to 1951, when Lithuanian families in northwest Indiana were establishing a regular local center of worship.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/indiana-746/",
+          "locator": "Beverly Shores Lithuanian heritage section: Saint Ann of the Dunes community"
+        }
+      ]
+    },
+    {
+      "text": "The Saint Ann of the Dunes church at 433 East Golfwood Road dates to 1954. It became the physical home of the Beverly Shores Lithuanian Catholic community and remains standing as a Catholic worship site.",
+      "sources": [
+        {
+          "url": "https://dcgary.org/parish/st-ann-dunes-beverly-shores",
+          "locator": "Official diocesan entry: 433 E. Golfwood Road worship site; canonical site record gives building year 1954"
+        }
+      ]
+    },
+    {
+      "text": "Saint Ann later became a worship site of Saint Patrick Catholic Community in Chesterton rather than an independently administered parish. The Diocese of Gary continues to identify pastoral care for the Lithuanian community at the church, preserving Lithuanian worship at the historic site within the successor parish structure.",
+      "sources": [
+        {
+          "url": "https://dcgary.org/parish/st-ann-dunes-beverly-shores",
+          "locator": "Official diocesan entry: worship site of St. Patrick Catholic Community and pastoral care for the Lithuanian community"
+        }
+      ]
+    }
+  ],
+  "summary": "Saint Ann of the Dunes remains open at 433 E. Golfwood Road as a worship site of Saint Patrick Catholic Community. The Diocese of Gary lists Father Gediminas Kersys for pastoral care of the Lithuanian community and a Lithuanian Mass at 1:00 p.m. on the third Sunday of each month. Saint Ann is also part of the diocese's Porter Planning Area. The March 2026 planning material calls for a five-parish model with two additional worship sites; it does not announce that five parishes will be reduced to only two worship sites, and no closure decision for Saint Ann has been published.",
+  "developments": [
+    {
+      "date": "2026-03/2026-08",
+      "headline": "Saint Ann remains active while Porter Planning Area models are considered",
+      "detail": "The Diocese of Gary continues to list Saint Ann of the Dunes as a worship site of Saint Patrick Catholic Community, with Lithuanian pastoral care and monthly Lithuanian Mass. Diocesan planning for the Porter area remains a proposal rather than a final closure decision.",
+      "sources": [
+        {
+          "title": "Pastoral planning",
+          "publisher": "Diocese of Gary",
+          "url": "https://dcgary.org/planning"
+        },
+        {
+          "title": "St. Ann of the Dunes (St. Patrick Parish)",
+          "publisher": "Diocese of Gary",
+          "url": "https://dcgary.org/parish/st-ann-dunes-beverly-shores"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Indiana: Lithuanians and Lithuanian heritage",
+      "publisher": "Global True Lithuania",
+      "date": "accessed 2026-08-14",
+      "url": "https://global.truelithuania.com/indiana-746/"
+    },
+    {
+      "title": "St. Ann of the Dunes (St. Patrick Parish)",
+      "publisher": "Diocese of Gary",
+      "date": "accessed 2026-08-14",
+      "url": "https://dcgary.org/parish/st-ann-dunes-beverly-shores"
+    },
+    {
+      "title": "St. Ann of the Dunes current parish and Mass information",
+      "publisher": "St. Patrick Catholic Community",
+      "date": "accessed 2026-07-25",
+      "url": "https://www.st-ann-of-the-dunes.org/mass-schedule/"
+    },
+    {
+      "title": "Pastoral planning",
+      "publisher": "Diocese of Gary",
+      "date": "accessed 2026-08-06",
+      "url": "https://dcgary.org/planning"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "No conflict with the canonical institution and worship-site records. This case file distinguishes the historic Lithuanian community from its present governance as a worship site of Saint Patrick Catholic Community.",
+  "gaps": "The exact date and canonical act by which Saint Ann became a worship site of Saint Patrick Catholic Community were not established in the reviewed sources. The Porter Planning Area process remains under discernment; no final structural decision for Saint Ann has been published."
+}

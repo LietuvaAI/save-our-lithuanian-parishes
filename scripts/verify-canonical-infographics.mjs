@@ -437,7 +437,7 @@ const campaignByProfile = new Map(
 const campaignLiturgy = [
   ["/parishes/dievo-apvaizdos-southfield-mi", "Weekly"],
   ["/parishes/svc-trejybes-hartford-ct", "Regular Mass ended 30 May 2026"],
-  ["/parishes/sv-juozapo-waterbury-ct", "No regular Mass schedule"],
+  ["/parishes/sv-juozapo-waterbury-ct", "Final Mass held 2 August 2026"],
   ["/parishes/kristaus-atsimainymo-maspeth-ny", "Moved to Annunciation, Brooklyn"],
 ];
 for (const [profile, value] of campaignLiturgy) {

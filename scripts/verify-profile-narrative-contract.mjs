@@ -16,6 +16,9 @@ const manifest = JSON.parse(
 const infographic = JSON.parse(
   readFileSync(join(ROOT, "data", "canonical-infographic-projection.json"), "utf8"),
 );
+const currentEvents = JSON.parse(
+  readFileSync(join(ROOT, "data", "canonical-current-events-projection.json"), "utf8"),
+);
 const caseRoot = join(ROOT, "data", "case-records");
 const caseFiles = readdirSync(caseRoot)
   .filter((name) => name.endsWith(".json"))
@@ -24,13 +27,19 @@ const caseFiles = readdirSync(caseRoot)
 const protectedHistory = new Map([
   ["ausros-vartu-manhattan-ny.json", ["historicalNarrative", 6]],
   ["dievo-apvaizdos-southfield-mi.json", ["historicalNarrative", 3]],
+  ["kristaus-atsimainymo-maspeth-ny.json", ["historicalNarrative", 3]],
+  ["st-ann-beverly-shores-in.json", ["historicalNarrative", 3]],
   ["sv-jurgio-norwood-ma.json", ["historicalNarrative", 2]],
   ["sv-jurgio-shenandoah-pa.json", ["historicalNarrative", 2]],
+  ["sv-juozapo-waterbury-ct.json", ["historicalNarrative", 3]],
   ["sv-kazimiero-cleveland-oh.json", ["historicalNarrative", 3]],
-  ["sv-mykolo-scranton-pa.json", ["historicalSummary", 5]],
+  ["sv-mykolo-bayonne-nj.json", ["historicalNarrative", 3]],
+  ["sv-mykolo-scranton-pa.json", ["historicalNarrative", 3]],
   ["sv-petro-detroit-mi.json", ["historicalSummary", 2]],
+  ["sv-petro-ir-povilo-elizabeth-nj.json", ["historicalNarrative", 3]],
+  ["sv-vincento-de-paul-girardville-pa.json", ["historicalNarrative", 3]],
   ["svc-m-marijos-apreiskimo-brooklyn-ny.json", ["historicalNarrative", 4]],
-  ["svc-trejybes-hartford-ct.json", ["historicalNarrative", 1]],
+  ["svc-trejybes-hartford-ct.json", ["historicalNarrative", 3]],
 ]);
 
 const errors = [];
@@ -42,6 +51,14 @@ const activeCatholicProfiles = infographic.institution_history
   )
   .map((institution) => institution.public_profile.split("/").at(-1))
   .sort();
+const monitoredProfiles = [
+  ...new Set(
+    currentEvents.alerts
+      .map((alert) => alert.parishLink)
+      .filter((href) => href?.startsWith("/parishes/"))
+      .map((href) => href.split("/").at(-1)),
+  ),
+].sort();
 
 if (caseFiles.length !== manifest.counts.case_files) {
   errors.push(
@@ -95,6 +112,20 @@ for (const slug of activeCatholicProfiles) {
   });
 }
 
+for (const slug of monitoredProfiles) {
+  const filename = `${slug}.json`;
+  if (!caseFiles.includes(filename)) {
+    errors.push(`monitored profile lacks a Brain case file: ${filename}`);
+    continue;
+  }
+  const record = JSON.parse(readFileSync(join(caseRoot, filename), "utf8"));
+  if (!Array.isArray(record.historicalNarrative) || record.historicalNarrative.length < 3) {
+    errors.push(
+      `monitored profile needs at least 3 history paragraphs: ${filename}`,
+    );
+  }
+}
+
 for (const [source, fragment, label] of [
   [
     pageSource,
@@ -139,5 +170,6 @@ console.log(
   `OK: profile narrative contract — ${caseFiles.length} Brain-owned case files; ` +
     `${protectedHistory.size} protected historical dossiers; ` +
     `${activeCatholicProfiles.length} active Catholic profiles have sourced histories; ` +
+    `${monitoredProfiles.length} campaign/watch profiles have sourced histories; ` +
     `History precedes current condition.`,
 );

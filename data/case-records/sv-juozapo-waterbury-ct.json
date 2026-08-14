@@ -3,7 +3,40 @@
   "asOf": "2026-08-08",
   "buildingStatus": "standing",
   "currentUse": "Closed church building. The parish was suppressed on September 30, 2023 and absorbed into Our Lady of Mount Carmel Parish (Waterbury); until the summer of 2026 the merged parish listed St. Joseph as “open for weddings & funerals” by arrangement with the parish office. On August 2, 2026 a final Mass was celebrated and the church building was formally closed as a place of worship. The building has not been sold or demolished; the ancillary parish campus on John Street (school, former convent, garage, club building) was put up for sale via a City of Waterbury RFP in October 2025, with the church and its lot excluded.",
-  "summary": "The 1904 brick church at 46 Congress Ave (corner of John Street) is still standing and has not been sold or demolished. After the parish's suppression it was absorbed into Our Lady of Mount Carmel Parish, whose current website lists St. Joseph as \"open for weddings & funerals\" by arrangement with the parish office — so the building remains in Catholic hands with occasional sacramental use, but no regular Mass schedule. In October 2025 the City of Waterbury issued RFP 8610-Wtby (posted Oct 7, responses due Oct 30, 2025) offering for sale the former St. Joseph Parish Corp. properties at 23-47 John Street — the school building, former convent, garage, and \"club\" building — while explicitly excluding the church building and its lot from the sale; no buyer or price has been published. In August 2023 parishioner Christian Allyn, working with a canon lawyer and members of Knights of Lithuania Council 7, filed a Vatican appeal against the closure; no published outcome of that appeal was found. The Knights of Lithuania Council 7, which formerly met in St. Joseph's school, now meets in the basement of Our Lady of Mt. Carmel Church at 785 Highland Ave. The story reached a national audience in April 2025 via \"Little Lithuania,\" an episode of the podcast The Final Service about Allyn's fight for the church.",
+  "historicalNarrative": [
+    {
+      "text": "The Archdiocese of Hartford created Saint Joseph Parish on March 28, 1894, to serve Waterbury's Lithuanian Catholics. The decree governing its later merger records that date as the beginning of the parish's separate canonical life.",
+      "sources": [
+        {
+          "url": "https://archdioceseofhartford.org/wp-content/uploads/2024/03/1-Waterbury-Merger-Decree-OLMC-Saint-Joseph-FINAL1.pdf",
+          "locator": "PDF pp. 1–2: Saint Joseph Parish created March 28, 1894"
+        }
+      ]
+    },
+    {
+      "text": "The Lithuanian community built the brick church at 46 Congress Avenue in 1904. The church's stained-glass windows, installed in 1931, carry Lithuanian inscriptions naming donor families and the Saint Casimir and Saint Joseph mutual-aid societies.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/connecticut-789/",
+          "locator": "Waterbury Lithuanian heritage section: Saint Joseph church built in 1904"
+        },
+        {
+          "url": "https://www.primepublishers.com/towntimesnews/news/community_events/final-mass-to-be-held-at-oldest-lithuanian-church-in-new-england-august-2/article_848335ac-44e6-43ec-b0a4-e30b4dfc58ec.html",
+          "locator": "Final-Mass announcement: Congress Avenue church and Lithuanian parish heritage"
+        }
+      ]
+    },
+    {
+      "text": "Saint Joseph's separate juridic identity ended when it merged into Our Lady of Mount Carmel effective May 1, 2024. The archdiocesan decree retained Saint Joseph Church as a Catholic sacred building but specified that it would no longer have regularly scheduled Masses.",
+      "sources": [
+        {
+          "url": "https://archdioceseofhartford.org/wp-content/uploads/2024/03/1-Waterbury-Merger-Decree-OLMC-Saint-Joseph-FINAL1.pdf",
+          "locator": "PDF pp. 1–2: merger effective May 1, 2024 and church retained without regular Mass"
+        }
+      ]
+    }
+  ],
+  "summary": "The 1904 brick church at 46 Congress Avenue remains standing and has not been sold or demolished. After Saint Joseph merged into Our Lady of Mount Carmel, the church remained available by arrangement for weddings and funerals until a final Mass and formal closing ceremony on August 2, 2026. The ancillary John Street campus — school, former convent, garage, and club building — was offered for sale by the City of Waterbury in October 2025, with the church and its lot explicitly excluded. Parishioners filed a Vatican appeal in 2023; no public ruling on that appeal has been found.",
   "developments": [
     {
       "date": "2023-08-28",
@@ -124,6 +157,12 @@
       "publisher": "Global True Lithuania",
       "date": "2017 (updates through ~2023)",
       "url": "https://global.truelithuania.com/connecticut-789/"
+    },
+    {
+      "title": "Waterbury Saint Joseph and Our Lady of Mount Carmel merger decree",
+      "publisher": "Archdiocese of Hartford",
+      "date": "2024-03-15",
+      "url": "https://archdioceseofhartford.org/wp-content/uploads/2024/03/1-Waterbury-Merger-Decree-OLMC-Saint-Joseph-FINAL1.pdf"
     }
   ],
   "confidence": "probable",

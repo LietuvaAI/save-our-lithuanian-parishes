@@ -3,7 +3,7 @@
   "authority": "LietuvaAI/culturenet-brain",
   "publication_projection_revision": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
   "infographic_projection_revision": "canonical-infographic-units-2026-08-11-wider-catholic-life-geocodes",
-  "current_events_revision": "parish-current-events-2026-08-06",
+  "current_events_revision": "parish-current-events-2026-08-08",
   "files": [
     {
       "path": "docs/research/parish-canon/public-display/registry-unified.json",
@@ -13,7 +13,7 @@
     {
       "path": "docs/research/parish-canon/public-display/parish-situation.json",
       "site_path": "data/parish-situation.json",
-      "sha256": "e79274e478d0e42f7c082550cf7f4e06bb50f5eb43958f2d1a6caa4a7fa8961d"
+      "sha256": "50feeb2934af973b0466bf4cee82c54eda7c93bb22d10c365590157a61fedc34"
     },
     {
       "path": "docs/research/parish-canon/public-display/parish-timelines.json",
