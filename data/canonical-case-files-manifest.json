@@ -12,8 +12,8 @@
     "rule": "the Brain copy is authoritative; frozen imports retain byte equality and later records must map to one reviewed canonical publication identity"
   },
   "counts": {
-    "case_files": 84,
-    "mapped_research_registry_identities": 83
+    "case_files": 85,
+    "mapped_research_registry_identities": 84
   },
   "entries": [
     {
@@ -145,7 +145,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/kristaus-atsimainymo-maspeth-ny.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/kristaus-atsimainymo-maspeth-ny.json",
-      "content_sha256": "83f6ada4d2234b8b8024d0d40e9753f09ea513705cb4990a4aa5e649c9316821",
+      "content_sha256": "059f246a1a127935e50dd1c20ccdae9ac1fe78376aa564f838d766ce47f3c45b",
       "source_record_slug": "kristaus-atsimainymo-maspeth-ny",
       "as_of": "2026-07-09",
       "registry_slugs": [
@@ -395,6 +395,24 @@
       "publication_state": "evidence_input_requires_canonical_adjudication"
     },
     {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-ann-beverly-shores-in.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-ann-beverly-shores-in.json",
+      "content_sha256": "6ca78876541ddaf69fc7534ff7a8d738f3fec8921b937cf09ac3930fc796e646",
+      "source_record_slug": "st-ann-beverly-shores-in",
+      "as_of": "2026-08-06",
+      "registry_slugs": [
+        "st-ann-beverly-shores-in"
+      ],
+      "situation_keys": [
+        "st-ann-beverly-shores-in"
+      ],
+      "source_count": 4,
+      "development_count": 1,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-andriejaus-new-britain-ct.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-andriejaus-new-britain-ct.json",
       "content_sha256": "fbb0057ac9d50335b3826e7dc3cb015c1e8db253adc4de7c5543548df9a23c09",
@@ -559,7 +577,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-juozapo-waterbury-ct.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-juozapo-waterbury-ct.json",
-      "content_sha256": "f01c31bf948709b8e9a1dc4a8cc68534f7837cab694f20097ff28984e7149d26",
+      "content_sha256": "8ca4880acb2b004b47d73b17de53c6362f8dc7cf25211842cd29e1ec6f974996",
       "source_record_slug": "sv-juozapo-waterbury-ct",
       "as_of": "2026-08-08",
       "registry_slugs": [
@@ -721,7 +739,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-jurgio-shenandoah-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-jurgio-shenandoah-pa.json",
-      "content_sha256": "0f9785f808db36772caca16f46986067c28c9a6b50c0d54ece525bb9bf6d06ac",
+      "content_sha256": "c1c3537294da674dfd2ff2041e722dad2dded92bd7c5fa98a2ffead0974e599d",
       "source_record_slug": "sv-jurgio-shenandoah-pa",
       "as_of": "2026-07-09",
       "registry_slugs": [
@@ -1171,7 +1189,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-mykolo-bayonne-nj.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-mykolo-bayonne-nj.json",
-      "content_sha256": "4355e4cf61c24e2b33f702707b6b27b396aaad1fe78c8b6866a72809da398427",
+      "content_sha256": "a042778995a634d0c52f1b52c71137c02fe503597f416a90e9861b986eef1ea7",
       "source_record_slug": "sv-mykolo-bayonne-nj",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1207,7 +1225,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-mykolo-scranton-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-mykolo-scranton-pa.json",
-      "content_sha256": "64e8fbd43a9a2bc3674f22d6ea8a9067647e329ce6dccc4fe45c1f2d38486037",
+      "content_sha256": "8e2dc9db0baf9657a6b85ef9bce2ba47795b2b6b5d38a6c7cbf5a0ad14b2e313",
       "source_record_slug": "sv-mykolo-scranton-pa",
       "as_of": "2026-08-02",
       "registry_slugs": [
@@ -1297,7 +1315,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-petro-detroit-mi.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-petro-detroit-mi.json",
-      "content_sha256": "ffa799a5e4d5222f47188e1f8a1778746af366a68788aaa1213fef859af07994",
+      "content_sha256": "943d0e59120782d7b06e9b415daf1acc77e50253bad7a9d9110def109f51631a",
       "source_record_slug": "sv-petro-detroit-mi",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1315,7 +1333,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-petro-ir-povilo-elizabeth-nj.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-petro-ir-povilo-elizabeth-nj.json",
-      "content_sha256": "fba85ac41381e8999bb768a4a0a3e490b4e0ee7a977fd2de6b0b02af754a9ab5",
+      "content_sha256": "f93358291e21651d69854e2c99c3778bbffd974df42d871b9edd24da1562136c",
       "source_record_slug": "sv-petro-ir-povilo-elizabeth-nj",
       "as_of": "2026-07-09",
       "registry_slugs": [
@@ -1387,7 +1405,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-vincento-de-paul-girardville-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-vincento-de-paul-girardville-pa.json",
-      "content_sha256": "bc2dce03c4f42474db0429d00c952843126da00b98cdb1e0043c46a49ee259bf",
+      "content_sha256": "15fb213dc79f26752e86e877b18af4015c19f4d7300d5c05cb7f48dd1e3e2ed4",
       "source_record_slug": "sv-vincento-de-paul-girardville-pa",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1477,7 +1495,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/svc-trejybes-hartford-ct.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/svc-trejybes-hartford-ct.json",
-      "content_sha256": "be2d1c73a8b97b461369a38cf6f63e5840275d55b91ad4d2e794f27bb7dddfa6",
+      "content_sha256": "b8481628f4adfbe764a09a3c4ae09b499330913948090512752e087bc251786d",
       "source_record_slug": "svc-trejybes-hartford-ct",
       "as_of": "2026-07-16",
       "registry_slugs": [

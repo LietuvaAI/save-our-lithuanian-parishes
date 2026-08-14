@@ -4,9 +4,29 @@
   "buildingStatus": "converted",
   "currentUse": "Community center — the All Saints Neighborhood Center, home base of the nonprofit Urban Neighborhood Initiatives (UNI) at 8300 Longworth St. in Detroit's Springwells neighborhood",
   "summary": "Šv. Petro (St. Peter) was founded in 1920 as a distinct Lithuanian parish for Detroit's growing Delray community; its church opened in 1921. The modest church still stands in southwest Detroit and has been converted to secular community use. The Archdiocese of Detroit's closed-parishes register gives 1921–1995, using the church-opening year rather than the parish's 1920 institutional founding. After the 1995 closure, the church's statues, furniture, and the large Lithuanian wayside cross that stood in front of the building were donated to Lithuania; the brick cladding added in the parish's late Lithuanian era was removed and the original wooden exterior restored (Global True Lithuania). Beginning in 1997, All Saints Catholic Parish and the nonprofit now called Urban Neighborhood Initiatives (founded 1997 as Neighborhood Centers Incorporated) restored the empty church building into the All Saints Neighborhood Center, a hub for youth and adult programs in the Springwells neighborhood. The center holds some historical plaques about the building's Lithuanian past in the first room beyond the entrance, but the building otherwise retains no Lithuanian details. UNI remains active at 8300 Longworth St., Detroit, MI 48209 as of 2026, with annual reports published through 2025.",
-  "historicalSummary": [
-    "Lithuanian families drawn to Detroit's automobile industry established a growing community in Delray before the First World War. They initially traveled across the city to Šv. Jurgio for Lithuanian worship. In 1920, a separate Lithuanian parish was founded for Delray under Father Jurgis Jonaitis; its first services were held at nearby Holy Cross Hungarian Catholic Church.",
-    "The community acquired land at Mullane and Longworth and raised its own church in 1921. The church and the parish therefore have different start dates: Šv. Petro's institutional life begins in 1920, while its church-building history begins in 1921. The parish remained there until its closure in 1995."
+  "historicalNarrative": [
+    {
+      "text": "Lithuanian families drawn to Detroit's automobile industry established a growing community in Delray before the First World War. They initially traveled across the city to Šv. Jurgio for Lithuanian worship. In 1920, a separate Lithuanian parish was founded for Delray under Father Jurgis Jonaitis; its first services were held at nearby Holy Cross Hungarian Catholic Church.",
+      "sources": [
+        {
+          "url": "https://detroit1701.org/St.%20Peter%20Lithuanian.html",
+          "locator": "Parish history: Delray Lithuanian community, 1920 founding under Father Jurgis Jonaitis, and first services at Holy Cross"
+        }
+      ]
+    },
+    {
+      "text": "The community acquired land at Mullane and Longworth and raised its own church in 1921. The church and the parish therefore have different start dates: Šv. Petro's institutional life begins in 1920, while its church-building history begins in 1921. The parish remained there until its closure in 1995.",
+      "sources": [
+        {
+          "url": "https://detroit1701.org/St.%20Peter%20Lithuanian.html",
+          "locator": "Parish history: 1921 church at Mullane and Longworth"
+        },
+        {
+          "url": "https://www.aod.org/closed-parishes",
+          "locator": "Closed Parishes register: St. Peter Lithuanian Parish, Detroit, listed through 1995"
+        }
+      ]
+    }
   ],
   "developments": [
     {

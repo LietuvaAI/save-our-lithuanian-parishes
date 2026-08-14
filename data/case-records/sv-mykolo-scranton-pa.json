@@ -3,6 +3,39 @@
   "asOf": "2026-08-02",
   "buildingStatus": "for-sale",
   "currentUse": "Vacant former church and rectory at 1703 Jackson Street, actively listed for commercial sale; the St. Michael the Archangel parish community (FSSP Latin Mass) that occupied it now worships at St. Lucy's Church, 949 Scranton St.",
+  "historicalNarrative": [
+    {
+      "text": "Saint Michael the Archangel Parish was founded in Scranton's Hyde Park neighborhood in 1914 for Lithuanian Catholics. Father Adomas Lopata served as its first pastor, and the new parish initially worshipped in a modest wooden church.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260802_1785700061361",
+          "locator": "Vladas Būtėnas, Pennsylvanijos angliakasių Lietuva, Šv. Mykolo parapija section: 1914 founding, first pastor, and wooden church"
+        }
+      ]
+    },
+    {
+      "text": "Under Father Jonas Boll-Baltusevičius, the parish replaced the wooden church with the brick church on Jackson Street in 1942. The parish also maintained a school; Būtėnas recorded 205 pupils in six grades in 1961, when the parish counted about 230 families and roughly 700 people.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260802_1785700061361",
+          "locator": "Vladas Būtėnas, Pennsylvanijos angliakasių Lietuva, Šv. Mykolo parapija section and p. 304: 1942 church and 1961 school/parish counts"
+        }
+      ]
+    },
+    {
+      "text": "By 1972 Saint Michael still reported 660 parishioners and 121 pupils, but Lithuanian-language life had declined sharply. In the late 1990s the parish became home to Scranton's Latin Mass community, marking a new institutional chapter while the Lithuanian-founded parish and its Jackson Street church remained in Catholic use.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260802_1785700061361",
+          "locator": "Vladas Būtėnas, Pennsylvanijos angliakasių Lietuva, p. 304: 1972 parish, school, and language conditions"
+        },
+        {
+          "url": "https://fsspscranton.wordpress.com/about-us/",
+          "locator": "About Us: establishment of the Latin Mass community at Saint Michael in the late 1990s"
+        }
+      ]
+    }
+  ],
   "profile": {
     "institutionalLife": "1914-present · parish survives at a new church",
     "institutionalSummary": "Saint Michael the Archangel Parish was established for Scranton's Lithuanian community in 1914. The same parish used an original wooden church, replaced it with the brick church on Jackson Street in 1942, and relocated to Saint Lucy Church in 2025. Regular Lithuanian parish life ended when the Latin Mass community assumed the parish in the late 1990s.",
@@ -24,14 +57,7 @@
       "href": "https://fsspscranton.wordpress.com/mass-devotions/"
     }
   },
-  "historicalSummary": [
-    "Saint Michael's Lithuanian parish was established in Scranton's Hyde Park section in 1914, when the city's Lithuanian population had grown too large to be served by one Roman Catholic parish. Its first pastor was Father Adomas Lopata, and the community built a modest wooden church.",
-    "Father Jonas Boll-Baltusevičius became pastor in 1933. In 1942 the parish replaced the wooden church with the brick church later known at 1703 Jackson Street. Its Lithuanian fabric included Lithuanian-language parish records and stained-glass inscriptions, including a memorial to Petras and Kotryna Baltusevičius donated by their son.",
-    "The parish also built a school with the Sisters of the Crucified Jesus. By spring 1961 it had six grades and 205 pupils; the parish counted 230 families, about 700 people.",
-    "A 1972 visit recorded 660 parishioners and 121 pupils, but also a sharp decline in Lithuanian-language life: only a few parishioners could still read and write Lithuanian, and even a Lithuanian Gospel reading drew objections from people who no longer understood it.",
-    "As the Lithuanian community waned, the Diocese of Scranton assigned the parish to the Latin Mass community in the late 1990s. The same Saint Michael the Archangel parish continued, later as an FSSP apostolate, and on 28 September 2025 relocated from Jackson Street to Saint Lucy Church. The 1942 Lithuanian-built church now stands vacant and is listed for sale."
-  ],
-  "summary": "Saint Michael the Archangel Parish began as a Lithuanian Roman Catholic parish in Scranton's Hyde Park section in 1914. It first worshipped in a modest wooden church, replaced that building with the brick church on Jackson Street in 1942, and built a school that served 205 pupils by 1961. By 1972 the parish still counted 660 people, but Lithuanian-language life had sharply declined. In the late 1990s the same parish became the home of Scranton's Latin Mass community and later an FSSP apostolate. On September 28, 2025, the parish celebrated its final Mass at 1703 Jackson Street and processed to its new home at Saint Lucy Church, where it continues today. The 1942 Lithuanian-built church and rectory remain standing but vacant and were listed for commercial sale at $350,000 as of July 16, 2026. No regular Lithuanian Mass is documented at the continuing parish.",
+  "summary": "Saint Michael the Archangel Parish survives as an FSSP Latin Mass personal parish at Saint Lucy Church, where it relocated on September 28, 2025. The former Lithuanian church and rectory at 1703 Jackson Street remain standing but vacant and were listed for commercial sale at $350,000 as of July 16, 2026. No regular Lithuanian Mass is documented at the continuing parish.",
   "developments": [
     {
       "date": "2025-09-28",
@@ -120,8 +146,9 @@
       "title": "Vladas Būtėnas, Pennsylvanijos angliakasių Lietuva — Šv. Mykolo parapija",
       "publisher": "Lithuanian Library Press",
       "date": "1977",
-      "access": "Vilija-provided page scans",
-      "archiveUrlPending": true,
+      "access": "Vilija-provided page scans and direct Žiburio archive item",
+      "url": "https://archyvas.ziburioltmokykla.org/item/20260802_1785700061361",
+      "archiveUrlPending": false,
       "locator": "Šv. Mykolo parapija section and p. 304; supplied page images document the 1914 founding, original wooden church, 1942 replacement church, school, Lithuanian inscriptions, and 1972 community conditions."
     }
   ],

@@ -1,6 +1,6 @@
 {
   "schema": "culturenet-parish-current-events-projection.v1",
-  "revision_id": "parish-current-events-2026-08-06",
+  "revision_id": "parish-current-events-2026-08-08",
   "authority": {
     "repository": "LietuvaAI/culturenet-brain",
     "source_path": "docs/research/parish-canon/current-events/source.json",
@@ -8,7 +8,7 @@
     "infographic_projection_revision": "canonical-infographic-units-2026-08-11-wider-catholic-life-geocodes"
   },
   "scope": "parish-watch-current-events",
-  "snapshot": "2026-08-06",
+  "snapshot": "2026-08-08",
   "provenance": "Brain-owned reviewed current-event assertions for the public site. Every factual claim is keyed to a canonical institution or site and supported by the cited evidence. The site consumes only the generated public projection.",
   "counts": {
     "alerts": 10,
@@ -54,11 +54,11 @@
       "entity": "St. Joseph's (Šv. Juozapo)",
       "place": "Waterbury, Connecticut",
       "diocese": "Archdiocese of Hartford",
-      "dateObserved": "2026-08-06",
-      "eventDate": "2024-05-01",
+      "dateObserved": "2026-08-08",
+      "eventDate": "2026-08-02",
       "subjectUnit": "institution",
       "canonicalSubjectId": "cn:institution:st-joseph-waterbury-ct",
-      "whatChanged": "Regular parish operations ended in September 2023. An archdiocesan decree merged Saint Joseph into Our Lady of Mount Carmel effective May 1, 2024, ending Saint Joseph's separate juridic parish while retaining its Congress Avenue church as a Catholic sacred edifice without regularly scheduled Masses. Parishioners continue to raise funds for their canonical appeal; no public ruling on that appeal is available as of August 6, 2026.",
+      "whatChanged": "Regular parish operations ended in September 2023, and an archdiocesan decree merged Saint Joseph into Our Lady of Mount Carmel effective May 1, 2024, ending Saint Joseph's separate juridic parish. A final Mass was celebrated at the Congress Avenue church on August 2, 2026, followed by a ceremony formally closing the building as a place of worship. The church remains standing and has not been sold or demolished. Parishioners continue to raise funds for their canonical appeal; no public ruling on that appeal is available as of August 8, 2026.",
       "parishLink": "/parishes/sv-juozapo-waterbury-ct",
       "sources": [
         {
@@ -75,6 +75,11 @@
           "title": "Saint Joseph and Our Lady of Mount Carmel merger decree",
           "publisher": "Archdiocese of Hartford",
           "url": "https://archdioceseofhartford.org/wp-content/uploads/2024/03/1-Waterbury-Merger-Decree-OLMC-Saint-Joseph-FINAL1.pdf"
+        },
+        {
+          "title": "Final Mass to be Held at Oldest Lithuanian Church in New England August 2",
+          "publisher": "Town Times",
+          "url": "https://www.primepublishers.com/towntimesnews/news/community_events/final-mass-to-be-held-at-oldest-lithuanian-church-in-new-england-august-2/article_848335ac-44e6-43ec-b0a4-e30b4dfc58ec.html"
         }
       ]
     },
@@ -452,13 +457,13 @@
       "since": "2023",
       "who": "Parishioners of St. Joseph's Lithuanian Catholic Church, Waterbury",
       "form": "Retained a canon lawyer in 2023 to contest the archdiocese's closure decision; GoFundMe to cover legal expenses",
-      "state": "Regular parish operations ended in September 2023, and a later decree merged Saint Joseph into Our Lady of Mount Carmel effective May 1, 2024. The separate parish institution ended, but Saint Joseph Church remains a Catholic sacred edifice without a regular Mass schedule. Parishioners continue to raise funds for their canonical appeal; no public ruling on that appeal is available as of August 6, 2026.",
+      "state": "Regular parish operations ended in September 2023, and Saint Joseph merged into Our Lady of Mount Carmel effective May 1, 2024. A final Mass was celebrated at the Congress Avenue church on August 2, 2026, followed by a ceremony formally closing the building as a place of worship. The church remains standing and has not been sold or demolished. Parishioners continue to raise funds for their canonical appeal; no public ruling on that appeal is available as of August 8, 2026.",
       "profile": {
-        "institutionalSummary": "Saint Joseph's separate juridic parish ended in its May 1, 2024 merger with Our Lady of Mount Carmel. The Congress Avenue church remains a Catholic sacred edifice that can host special liturgies, but it has no regular Mass schedule.",
-        "siteDetail": "Standing · retained as a Catholic sacred edifice",
+        "institutionalSummary": "Saint Joseph's separate juridic parish ended in its May 1, 2024 merger with Our Lady of Mount Carmel. The Congress Avenue church held its final Mass and was formally closed as a place of worship on August 2, 2026; the building remains standing.",
+        "siteDetail": "Standing · formally closed as a place of worship on 2 August 2026",
         "liturgy": {
-          "value": "No regular Mass schedule",
-          "detail": "The merger decree retains the church as a Catholic sacred edifice without regularly scheduled Masses."
+          "value": "Final Mass held 2 August 2026",
+          "detail": "The building has not been sold or demolished; no regular Mass schedule remains."
         }
       },
       "sources": [
@@ -476,6 +481,11 @@
           "title": "Saint Joseph and Our Lady of Mount Carmel merger decree",
           "publisher": "Archdiocese of Hartford",
           "url": "https://archdioceseofhartford.org/wp-content/uploads/2024/03/1-Waterbury-Merger-Decree-OLMC-Saint-Joseph-FINAL1.pdf"
+        },
+        {
+          "title": "Final Mass to be Held at Oldest Lithuanian Church in New England August 2",
+          "publisher": "Town Times",
+          "url": "https://www.primepublishers.com/towntimesnews/news/community_events/final-mass-to-be-held-at-oldest-lithuanian-church-in-new-england-august-2/article_848335ac-44e6-43ec-b0a4-e30b4dfc58ec.html"
         }
       ],
       "dispatches": [
@@ -1312,5 +1322,5 @@
       "canonicalEntityId": "cn:institution:blessed-jurgis-matulaitis-mission-lemont-il"
     }
   ],
-  "content_hash": "sha256:b337f359fe710356b75d5db0dbdde97bcf63cfdc227c9dfd4c5e0a8ed8921579"
+  "content_hash": "sha256:56c4488378e89fff85f9f2b94ace34c00c75ce0006e50f55a6f44a4ecc0da016"
 }

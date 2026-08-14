@@ -59,7 +59,6 @@ const entries = readdirSync(caseDirectory)
       record.summary,
       record.conflictsWithArchiveRecord,
       record.gaps,
-      ...(record.historicalSummary ?? []),
       ...historicalNarrative,
       ...(record.developments ?? []).flatMap((development) => [
         development.headline,
@@ -76,7 +75,7 @@ const entries = readdirSync(caseDirectory)
       source_count: record.sources?.length ?? 0,
       development_count: record.developments?.length ?? 0,
       has_historical_summary: Boolean(
-        record.historicalSummary?.length || historicalNarrative.length,
+        historicalNarrative.length,
       ),
       site_extraction_candidate: matchedSiteTerms.length > 0,
       lineage_extraction_candidate: matchedLineageTerms.length > 0,

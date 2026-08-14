@@ -25,6 +25,58 @@
           "locator": "Closure and former church-site history"
         }
       ]
+    },
+    {
+      "text": "Approaching the church's centennial, the parish undertook a restoration that lasted more than three years and involved more than fifteen contractors. The work renewed the stained glass, Stations of the Cross, statues, altars, organ, exterior steps, lighting, and church hall. Weekly St. George Bingo and other parish events helped raise money for the renovation; in 1992 a new steel roof, copper steeples, and crosses completed another major phase of the work.",
+      "sources": [
+        {
+          "url": "https://www.lithaz.org/info/action/stgeorge_usalis.html",
+          "locator": "Parish history, centennial renovation and fundraising sections"
+        },
+        {
+          "url": "https://www.traditioninaction.org/HotTopics/a074ht_Demolition.htm",
+          "locator": "Dorothy Setcavage parishioner account, 1992 roof and steeple work and subsequent donor-supported repairs"
+        }
+      ]
+    },
+    {
+      "text": "In 2003 and 2004, structural engineers recommended resetting stone on the towers and facade. After pieces of the facade fell in 2006, the Diocese of Allentown closed the church on May 14. The Friends of St. George publicly argued that the parish could finance necessary work and that parish funds should have been directed to repairs; diocesan estimates later placed the work in the millions. These were disputed assessments, not a case of a community simply walking away from its church.",
+      "sources": [
+        {
+          "url": "https://www.spauda2.org/bridges/archive/2006/2006-nr07-BRIDGES.pdf",
+          "locator": "Bridges, September 2006, p. 11, statement submitted by Dr. Dan Paul for Friends of St. George"
+        },
+        {
+          "url": "https://www.traditioninaction.org/HotTopics/a074ht_Demolition.htm",
+          "locator": "Dorothy Setcavage parishioner account, 2004 repair recommendation, 2006 closure, and disputed estimates"
+        }
+      ]
+    },
+    {
+      "text": "The campaign continued after the doors were locked. Supporters gathered every Wednesday to pray, sought historic protection for the building, and pressed the case through Lithuanian-American organizations. In February 2007, representatives meeting in Chicago adopted resolutions concerning Shenandoah, Niagara Falls, and Manhattan and sent them to church and civic leaders in the United States and Lithuania, asking for help preserving the parishes.",
+      "sources": [
+        {
+          "url": "https://www.spauda2.org/bridges/archive/2006/2006-nr07-BRIDGES.pdf",
+          "locator": "Bridges, September 2006, p. 2, weekly Wednesday prayer outside St. George"
+        },
+        {
+          "url": "https://www.draugas.org/archive/2007_reg/2007-03-03-DRAUGAS.pdf",
+          "locator": "Draugas, 3 March 2007, pp. 1 and 6, preservation campaign and resolutions"
+        }
+      ]
+    },
+    {
+      "text": "Parishioners went to civil court in September 2009 to challenge the Diocese's plan to demolish the church and its assertion that repair costs made preservation impossible. On December 1, the court held that the plaintiffs had no property right allowing them to block the Diocese. Demolition began that month. The loss therefore followed years of repair work, fundraising, organizing, public appeals, and litigation—not abandonment by the people who had maintained St. George.",
+      "sources": [
+        {
+          "url": "https://www.traditioninaction.org/HotTopics/a074ht_Demolition.htm",
+          "locator": "Dorothy Setcavage parishioner account, September 2009 civil suit, 1 December ruling, and demolition"
+        },
+        {
+          "url": "https://www.claimsjournal.com/news/east/2010/02/04/107112.htm",
+          "locator": "Demolition report noting closure for structural problems and delay caused by legal challenges"
+        }
+      ]
     }
   ],
   "summary": "The church was razed in 2009 and its site on South Jardin Street remains a vacant lot. In June 2024 the Diocese of Allentown, through Divine Mercy Parish, listed the lot bundled with the former rectory for $139,900, with proceeds to the parish. A billboard along the Gold Star Highway reminds motorists of the lost landmark, and heritage advocates funded a commemorative plaque for Shenandoah's 'Little Lithuania' after the diocese reneged on a promised symbolic belfry. Salvaged stained glass from St. George's is now displayed at the Lithuanian Heritage Museum, which opened September 7, 2025 at 318 East Centre Street in a former family funeral home, open by appointment. The Lithuanian Days festival, America's oldest continuous ethnic festival, continues at Lakewood Park in Barnesville, with the 2026 edition set for August 15-16 and proceeds benefiting the museum.",
@@ -53,6 +105,41 @@
       "sources": [
         { "title": "St. George lot, rectory to be listed for sale", "publisher": "The Shenandoah Sentinel", "date": "2024-06-17", "url": "https://shensentinel.com/news/st-george-lot-rectory-to-be-listed-for-sale/" }
       ]
+    },
+    {
+      "date": "2009-12-01",
+      "headline": "Civil challenge fails; demolition begins",
+      "detail": "Parishioners filed suit in September to contest the Diocese's repair-cost claims and stop demolition. On December 1 the court held that they lacked a property right in the church; demolition began later that month.",
+      "sources": [
+        { "title": "St. George Church Unreasonably Destroyed", "publisher": "Tradition in Action — parishioner account by Dorothy Setcavage", "date": "2010-05-26", "url": "https://www.traditioninaction.org/HotTopics/a074ht_Demolition.htm" },
+        { "title": "Demolition Worker Dies after Pennsylvania Church Accident", "publisher": "Claims Journal", "date": "2010-02-04", "url": "https://www.claimsjournal.com/news/east/2010/02/04/107112.htm" }
+      ]
+    },
+    {
+      "date": "2007-02-28",
+      "headline": "Lithuanian organizations press the preservation campaign",
+      "detail": "A Chicago meeting of Lithuanian Catholic and community representatives reviewed St. George's contested future and adopted resolutions to church and civic leaders seeking help to preserve Shenandoah and other threatened Lithuanian parishes.",
+      "sources": [
+        { "title": "Sunerimę čikagiškiai reaguos į lietuviškų bažnyčių uždarymą", "publisher": "Draugas", "date": "2007-03-03", "url": "https://www.draugas.org/archive/2007_reg/2007-03-03-DRAUGAS.pdf" }
+      ]
+    },
+    {
+      "date": "2006-05-14",
+      "headline": "Church locked; Friends of St. George organizes to preserve it",
+      "detail": "The Diocese closed the church after facade deterioration raised safety concerns. Friends of St. George disputed the handling and cost of the proposed repairs, stated that parish finances could support the church, and continued a public preservation campaign while supporters gathered weekly for prayer.",
+      "sources": [
+        { "title": "The Closing of St. George Church, Shenandoah, PA", "publisher": "Bridges — statement submitted by Dr. Dan Paul for Friends of St. George", "date": "2006-09", "url": "https://www.spauda2.org/bridges/archive/2006/2006-nr07-BRIDGES.pdf" },
+        { "title": "Sunerimę čikagiškiai reaguos į lietuviškų bažnyčių uždarymą", "publisher": "Draugas", "date": "2007-03-03", "url": "https://www.draugas.org/archive/2007_reg/2007-03-03-DRAUGAS.pdf" }
+      ]
+    },
+    {
+      "date": "1992",
+      "headline": "Parish completes major restoration work",
+      "detail": "A multi-year centennial renovation renewed the interior, organ, stained glass, hall, roof, and steeples. Parish fundraising—including weekly St. George Bingo—helped pay for the work.",
+      "sources": [
+        { "title": "History of St. George Parish in Shenandoah, PA", "publisher": "Lithuanian-American Community history page", "date": "undated", "url": "https://www.lithaz.org/info/action/stgeorge_usalis.html" },
+        { "title": "St. George Church Unreasonably Destroyed", "publisher": "Tradition in Action — parishioner account by Dorothy Setcavage", "date": "2010-05-26", "url": "https://www.traditioninaction.org/HotTopics/a074ht_Demolition.htm" }
+      ]
     }
   ],
   "sources": [
@@ -61,7 +148,12 @@
     { "title": "Shenandoah's Lithuanian heritage on display at new museum", "publisher": "The Shenandoah Sentinel", "date": "2025-09-08", "url": "https://shensentinel.com/news/shenandoahs-lithuanian-heritage-on-display-at-new-museum/" },
     { "title": "A new museum in Pennsylvania preserves 150 years of Lithuanian-American history", "publisher": "LRT English", "date": "2025-10-25", "url": "https://www.lrt.lt/en/news-in-english/19/2721503/a-new-musuem-in-pennsylvania-preserves-150-years-of-lithuanian-american-history" },
     { "title": "Shenandoah and southern Coal Region: Lithuanian heritage", "publisher": "Global True Lithuania", "date": "", "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/" },
-    { "title": "Lithuanian Days", "publisher": "FestivalsInPA", "date": "2026", "url": "https://www.festivalsinpa.com/festival/546/lithuanian-days" }
+    { "title": "Lithuanian Days", "publisher": "FestivalsInPA", "date": "2026", "url": "https://www.festivalsinpa.com/festival/546/lithuanian-days" },
+    { "title": "History of St. George Parish in Shenandoah, PA", "publisher": "Lithuanian-American Community history page", "date": "undated", "url": "https://www.lithaz.org/info/action/stgeorge_usalis.html" },
+    { "title": "The Closing of St. George Church, Shenandoah, PA", "publisher": "Bridges — statement submitted by Dr. Dan Paul for Friends of St. George", "date": "2006-09", "url": "https://www.spauda2.org/bridges/archive/2006/2006-nr07-BRIDGES.pdf" },
+    { "title": "Sunerimę čikagiškiai reaguos į lietuviškų bažnyčių uždarymą", "publisher": "Draugas", "date": "2007-03-03", "url": "https://www.draugas.org/archive/2007_reg/2007-03-03-DRAUGAS.pdf" },
+    { "title": "St. George Church Unreasonably Destroyed", "publisher": "Tradition in Action — parishioner account by Dorothy Setcavage", "date": "2010-05-26", "url": "https://www.traditioninaction.org/HotTopics/a074ht_Demolition.htm" },
+    { "title": "Demolition Worker Dies after Pennsylvania Church Accident", "publisher": "Claims Journal", "date": "2010-02-04", "url": "https://www.claimsjournal.com/news/east/2010/02/04/107112.htm" }
   ],
   "confidence": "verified",
   "conflictsWithArchiveRecord": "LRT states the church was 'closed by the local diocese in 2010,' conflating closure (2006) with demolition (2009). Global True Lithuania corroborates the reneged belfry promise (stones stored at Our Lady of Calvary Cemetery) and notes heritage-listing funds went instead to a commemorative plaque — a memorial element not in the archive record.",

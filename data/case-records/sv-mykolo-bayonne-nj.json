@@ -2,8 +2,41 @@
   "slug": "sv-mykolo-bayonne-nj",
   "asOf": "2026-07-16",
   "buildingStatus": "standing",
-  "currentUse": "Vacant former church complex (church, Madonna Hall, rectory) at 15-21 East 23rd Street, owned by St. John Paul II Church (RC successor parish), under an adopted city redevelopment plan and a 2025 site-plan application to demolish the entire complex for a six-story, 114-unit mixed-use building",
-  "summary": "St. Michael's Lithuanian church complex at 15-21 East 23rd Street, Bayonne still stands but is vacant and slated for demolition. The parish was consolidated by the Archdiocese of Newark (announced 2015) and merged in 2016 with St. Joseph's and Our Lady of Assumption into the new St. John Paul II Parish. The building then served the Syriac Catholic community: St. Joseph Syriac Catholic Cathedral relocated to the East 23rd Street property (gcatholic dates the relocation to 2018) and used it until the eparchy's episcopal seat was moved to Farmington Hills, Michigan on July 1, 2022; city records from August 2024 list both lots as still owned by St. John Paul II Church, not the Syriac eparchy. Bayonne designated the site an area in need of redevelopment (council resolution of September 2023) and adopted the \"15 East 23rd Street Redevelopment Plan\" by ordinance O-24-56 on October 16, 2024, which describes the church as defunct and abandoned and requires the redeveloper to install a commemorative sign recognizing the church's significance to the community. In August 2025, 15 East 23rd St. Urban Renewal LLC, contract purchaser of the property, went before the Planning Board seeking approval to demolish the entire complex and build a six-story building with 114 residential units, 119 parking spaces, and about 2,700 sq ft of retail; a memorializing resolution for the application appeared on the board's September 9, 2025 agenda. No demolition had been reported in sources found through July 2026.",
+  "currentUse": "Vacant former church complex (church, Madonna Hall, rectory) at 15-21 East 23rd Street, owned by St. John Paul II Church (RC successor parish), under an adopted city redevelopment plan and a 2025 application proposing demolition of the complex for a six-story, 114-unit mixed-use building",
+  "historicalNarrative": [
+    {
+      "text": "Bayonne's Lithuanian Catholics established Saint Michael Parish in 1907. The parish built its church complex on East 23rd Street, creating a Lithuanian Catholic center that served the community for more than a century.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/tag/st-michael-lithuanian-church-bayonne/",
+          "locator": "Saint Michael, Bayonne: Lithuanian parish origin and church complex"
+        }
+      ]
+    },
+    {
+      "text": "The parish entered a sequence of consolidations: Saint Michael first joined Saint Joseph in 2009, and the later archdiocesan reorganization combined that lineage with Our Lady of the Assumption to create Saint John Paul II Parish in 2016. The Lithuanian parish therefore ended as an independent institution before the building left regular Roman Catholic parish use.",
+      "sources": [
+        {
+          "url": "https://jerseycatholic.org/mount-carmel-has-been-a-fervent-incubator-of-polish-culture-catholic-faith-in-bayonne-photos-1",
+          "locator": "Archdiocese of Newark account of Bayonne parish consolidations and Saint John Paul II Parish"
+        }
+      ]
+    },
+    {
+      "text": "The East 23rd Street church subsequently served the Syriac Catholic community as Saint Joseph Cathedral, approximately 2018–2022. After the Syriac eparchy moved its episcopal seat to Michigan, the complex became vacant; city planning records still identified Saint John Paul II Church as owner in 2024.",
+      "sources": [
+        {
+          "url": "https://gcatholic.org/churches/northamerica/3639.htm",
+          "locator": "Former Saint Joseph Syriac Cathedral: Bayonne use and 2022 transfer of episcopal seat"
+        },
+        {
+          "url": "https://www.bayonnenj.org/_Content/pdf/P-23-024-15-East-23rd-Street-RDP-Rev1.pdf",
+          "locator": "Redevelopment plan: property ownership and vacant former-church complex"
+        }
+      ]
+    }
+  ],
+  "summary": "St. Michael's Lithuanian church complex at 15-21 East 23rd Street, Bayonne remains standing but vacant. After the Lithuanian parish lineage entered the 2016 merger that created St. John Paul II Parish, the church served the Syriac Catholic community until that eparchy moved its episcopal seat to Michigan in 2022. Bayonne adopted a redevelopment plan for the site in 2024, and a 2025 development application proposed demolishing the complex for a six-story, 114-unit mixed-use building. No demolition date or completed demolition has been verified.",
   "developments": [
     {
       "date": "2015-2016",
