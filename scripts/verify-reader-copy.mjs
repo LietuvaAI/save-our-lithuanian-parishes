@@ -29,6 +29,8 @@ const processFirstPhrases = [
   "accepted present-condition assertion",
   "open research task",
   "registry revision",
+  "situations the project is tracking",
+  "this project documents their situations",
 ];
 
 const errors = [];

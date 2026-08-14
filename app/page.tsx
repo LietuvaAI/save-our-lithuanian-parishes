@@ -366,9 +366,10 @@ export default function Home() {
               </span>
             </header>
             <p className="bg-[#faf7f0] px-5 py-3 text-body-copy leading-relaxed text-muted">
-              {activeCampaignCountLabel} parishes face decisions about their
-              future right now. Each campaign is led by its own community; this
-              project documents their situations and shows how to support them.
+              {activeCampaignCountLabel} parish communities are organizing as
+              decisions are made about their churches and future. Read what
+              each community is facing, what it is asking for, and how you can
+              help.
             </p>
             <div className="divide-y divide-rule">
               {activeCampaigns.map((campaign) => {
@@ -459,9 +460,9 @@ export default function Home() {
               </span>
             </header>
             <p className="bg-[#faf7f0] px-5 py-3 text-body-copy leading-relaxed text-muted">
-              Situations the project is tracking before they harden into
-              outcomes — planning-area consolidations, buildings on the market,
-              and fates still canonically unresolved.
+              These parishes and churches may face consolidation, sale,
+              closure, or another uncertain future. Their situations are still
+              developing, and no final outcome should be assumed.
             </p>
             <div className="divide-y divide-rule">
               {monitoredAlerts.map((alert) => (
