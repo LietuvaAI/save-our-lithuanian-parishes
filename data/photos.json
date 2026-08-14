@@ -174,6 +174,15 @@
       "rightsNote": "Derivative of Shuvaev's 2015 photograph of Holy Cross Roman Catholic Church on Valley Street in New Philadelphia. The source photograph is licensed CC BY-SA 4.0; this line-art adaptation is published under the same license. Created 2026-08-14. The illustration belongs to the Sielovada directory listing and does not resolve its unadjudicated relationship to the historical Sacred Heart registry row.",
       "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Holy_Cross_Church,_New_Philadelphia_PA_02.JPG"
     },
+    "scranton-holy-rosary-line-drawing": {
+      "src": "/images/parishes/scranton-holy-rosary-line-drawing.png",
+      "alt": "Line drawing of Holy Rosary Church in Scranton, Pennsylvania.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, adapted from Ballinger & Perrot's 1912 public-domain rendering in the Catholic Historical Research Center Digital Collections.",
+      "license": "CC BY 4.0",
+      "rights": "own_work",
+      "rightsNote": "Original project illustration created 2026-08-14 from Ballinger & Perrot's 1912 public-domain architectural rendering and checked against the Diocese of Scranton's current exterior photograph of Holy Rosary Church at 316 William Street. The illustration belongs to the Sielovada directory listing and does not establish a distinct historical Lithuanian parish-registry identity.",
+      "evidenceUrl": "https://omeka.chrc-phila.org/items/show/6622"
+    },
     "pal-jurgio-matulaicio-misija-lemont-il": {
       "src": "/images/parishes/lemont-matulaitis-mission.jpg",
       "alt": "Exterior of Blessed Jurgis Matulaitis Mission at the Lithuanian World Center in Lemont.",
