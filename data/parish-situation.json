@@ -5443,13 +5443,14 @@
     },
     "our-lady-of-siluva-mission-mundelein-il": {
       "registry_slug": "our-lady-of-siluva-mission-mundelein-il",
+      "current_record_path": "data/case-records/our-lady-of-siluva-mission-mundelein-il.json",
       "canonical_status": "standing",
       "building_fate": "standing",
       "current_use": "Active Lithuanian Catholic mission celebrating monthly Mass at Santa Maria del Popolo Church, 116 N Lake St., Mundelein",
       "lithuanian_identity": "active_parish",
       "pastoral_status": "visiting_priest",
       "situation": "The Archdiocese of Chicago established Our Lady of Siluva Lithuanian Mission by decree in December 2013. Its first Mass was celebrated on December 15, 2013, and Lithuanian Mass continues monthly at Santa Maria del Popolo Church for the Waukegan and Lake County community.",
-      "current_record_as_of": "2026-08-02",
+      "current_record_as_of": "2026-08-14",
       "sources": [
         {
           "title": "Our Lady of Siluva Lithuanian Mission",

@@ -3,6 +3,47 @@
   "asOf": "2026-07-16",
   "buildingStatus": "standing",
   "currentUse": "Active Roman Catholic parish church of the Archdiocese of Philadelphia; Sunday Mass in Lithuanian and English at 11:00 AM, with the Vincas Krėvė Lithuanian Sunday school operating on parish premises and a second worship site (former St. Casimir Lithuanian Church, 4th & Wharton Sts.) offering a 9:00 AM English Mass.",
+  "historicalNarrative": [
+    {
+      "text": "St. Andrew was founded in February 1924 as Philadelphia's third Lithuanian Catholic parish. The community worshipped in the Fairmount section and, after plans to construct a new church were interrupted by the Depression and war, acquired the neo-Romanesque former Protestant church at 19th and Wallace Streets in 1942.",
+      "sources": [
+        {
+          "url": "https://www.spauda2.org/bridges/archive/2015/2015-nr03-BRIDGES.pdf",
+          "locator": "Bridges, March 2015, p. 28"
+        },
+        {
+          "url": "https://global.truelithuania.com/philadelphia-pennsylvania-1160/",
+          "locator": "St. Andrew church history and 1942 acquisition"
+        }
+      ]
+    },
+    {
+      "text": "The parish adapted the adjoining former Episcopal church as its hall and the home of the Vincas Krėvė Lithuanian School. Lithuanian devotional art, historic figures, and a traditional wooden wayside cross transformed the inherited buildings into a distinctly Lithuanian religious and cultural complex.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/philadelphia-pennsylvania-1160/",
+          "locator": "Parish hall, Lithuanian school, devotional art, and wayside cross"
+        },
+        {
+          "url": "https://saintandrewlithuanianparish.org/",
+          "locator": "Official parish site: Lithuanian school and parish complex"
+        }
+      ]
+    },
+    {
+      "text": "In 2011 the Archdiocese merged Philadelphia's older St. Casimir Lithuanian parish into St. Andrew. St. Casimir's church remained open as a worship site of St. Andrew, so the surviving institution now carries the histories and pastoral responsibilities of both communities.",
+      "sources": [
+        {
+          "url": "https://archphila.org/parish/st-casimir-philadelphia/",
+          "locator": "Official archdiocesan record: St. Casimir, 1893–2011, worship site of St. Andrew"
+        },
+        {
+          "url": "https://catholicphilly.com/2011/07/news/local-news/immaculate-conception-and-st-casimir-close/",
+          "locator": "Contemporary archdiocesan reporting on the 2011 merger"
+        }
+      ]
+    }
+  ],
   "summary": "St. Andrew Lithuanian Parish remains an open, active personal parish of the Archdiocese of Philadelphia, worshipping at its neo-Romanesque church at 19th & Wallace Streets (Fairmount), with Sunday Mass at 11:00 AM in Lithuanian and English and a 9:00 AM English Mass at its worship site, the former St. Casimir Lithuanian Church at 4th & Wharton Streets (merged into St. Andrew in 2011). Rev. Gerald Dennis Gill, rector of the nearby Cathedral Basilica, serves as Parochial Administrator, with parish correspondence routed through the Cathedral Parish Office at 1723 Race Street. The parish celebrated its centennial on April 21, 2024. Its separately standing rectory at 1913-15 Wallace Street was sold for $1.2 million and converted by developer Baker Street Partners into 12 rental apartments, with proceeds invested to sustain parish operations under new Finance and Pastoral committees established by Fr. Gill. A January 2026 Draugas report describes a lively parish: roughly 40 children in the Vincas Krėvė Lithuanian Sunday school, monthly youth Masses celebrated by Fr. Jonas Puodžiūnas from Washington, and a new 700-pound metal cross funded by the community. The same report states the archdiocese under Archbishop Nelson Perez has expressed no desire to close any Philadelphia parish, citing that roughly 40% of parishioners disappear when a parish closes.",
   "developments": [
     {
@@ -93,6 +134,24 @@
       "publisher": "DiscoverMass.com",
       "date": "2026-07-16 (accessed)",
       "url": "https://discovermass.com/church/st-andrew-lithuanian-philadelphia-pa/"
+    },
+    {
+      "title": "St. Andrew Lithuanian Parish centennial history",
+      "publisher": "Bridges",
+      "date": "2015",
+      "url": "https://www.spauda2.org/bridges/archive/2015/2015-nr03-BRIDGES.pdf"
+    },
+    {
+      "title": "St. Casimir (Lithuanian) parish listing",
+      "publisher": "Archdiocese of Philadelphia",
+      "date": "accessed 2026-08-14",
+      "url": "https://archphila.org/parish/st-casimir-philadelphia/"
+    },
+    {
+      "title": "Immaculate Conception and St. Casimir close",
+      "publisher": "CatholicPhilly",
+      "date": "2011-07-14",
+      "url": "https://catholicphilly.com/2011/07/news/local-news/immaculate-conception-and-st-casimir-close/"
     }
   ],
   "confidence": "verified",

@@ -3,7 +3,40 @@
   "asOf": "2026-07-16",
   "buildingStatus": "standing",
   "currentUse": "Active Roman Catholic parish church (Archdiocese of Los Angeles) with a weekly Lithuanian-language Sunday Mass, a Lithuanian pastor, a Saturday Lithuanian heritage school, and the annual Los Angeles Lithuanian Days festival on its grounds",
-  "summary": "St. Casimir Lithuanian Catholic Church at 2718 St. George Street in the Los Feliz district of Los Angeles is standing and fully active as a parish of the Archdiocese of Los Angeles, with weekday Masses and three Sunday Masses including an 11:00 AM Mass in Lithuanian. The pastor is Fr. Tomas Karanauskas, a native of Kaunas, Lithuania, who also serves as spiritual director of the archdiocese's Lithuanian Ethnic Ministry. The church interior was renovated and rededicated in June 2022 with over $215,000 raised by the parish under the archdiocese's Called to Renew campaign, with new Lithuanian-themed sacred art dedicated by Archbishop Gintaras Grušas of Vilnius, a former parishioner. On May 31, 2026 roughly 400 parishioners, joined by Lithuania's Los Angeles consul general, celebrated an Atlaidai marking the parish's 85th founding anniversary and the 75th anniversary of the 1951 church building, with further Jubilee events — including installation of relics of Lithuanian blesseds — planned through November 2026. The parish continues to host Los Angeles Lithuanian Days, described as the largest Lithuanian festival west of Chicago, held October 5-6, 2024 and scheduled for October 11-12, 2025. The congregation has diversified to include Hispanic and Filipino parishioners, and diaspora observers note community concern about preserving the parish's Lithuanian character, but no closure, consolidation, or sale threat was found in any source.",
+  "historicalNarrative": [
+    {
+      "text": "Lithuanian refugees and immigrants in Los Angeles celebrated their first parish Mass in a priest's home on June 1, 1941. The community formed St. Casimir so Lithuanian Catholics displaced by war and Soviet occupation could worship in their own language and preserve their religious traditions.",
+      "sources": [
+        {
+          "url": "https://angelusnews.com/local/la-catholics/st-casimir-atlaidai/",
+          "locator": "Archdiocesan account of the parish's 1941 founding"
+        }
+      ]
+    },
+    {
+      "text": "The parish built its permanent church in Los Feliz, and the Baltic-inspired building was dedicated on November 4, 1951. A Lithuanian heritage school followed, giving children Saturday instruction in language, culture, religion, and sacramental preparation.",
+      "sources": [
+        {
+          "url": "https://angelusnews.com/local/la-catholics/st-casimir-atlaidai/",
+          "locator": "1951 church dedication and Lithuanian heritage school"
+        }
+      ]
+    },
+    {
+      "text": "St. Casimir developed into the principal Lithuanian Catholic center of the American West. The parish has hosted Los Angeles Lithuanian Days on its grounds since 1986, and in 2022 it rededicated a renovated interior filled with Lithuanian sacred imagery, including Blessed Teofilius Matulionis, Our Lady of the Gate of Dawn, and a Hill of Crosses installation.",
+      "sources": [
+        {
+          "url": "https://angelusnews.com/local/la-catholics/st-casimir-renovated-2022/",
+          "locator": "2022 renovation and Lithuanian sacred art"
+        },
+        {
+          "url": "https://global.truelithuania.com/los-angeles-california-99/",
+          "locator": "Lithuanian Days and parish cultural role"
+        }
+      ]
+    }
+  ],
+  "summary": "St. Casimir remains an active parish of the Archdiocese of Los Angeles at 2718 St. George Street, with a Lithuanian pastor and an 11:00 a.m. Lithuanian Sunday Mass. Its Lithuanian heritage school, parish organizations, and Lithuanian Days festival continue to make the parish a religious and cultural center for the West Coast. No closure, consolidation, or property-sale action was found in the current sources.",
   "developments": [
     {
       "date": "2022-06-26",

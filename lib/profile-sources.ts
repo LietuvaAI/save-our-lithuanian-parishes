@@ -13,6 +13,8 @@ export type ProfileSource = {
   id: string;
   group: ProfileSourceGroup;
   title: string;
+  publisher?: string;
+  date?: string;
   citation?: string;
   additionalCitations: string[];
   url: string | null;
@@ -51,27 +53,38 @@ type SourceDraft = Omit<
 
 const BOOKS: Record<
   string,
-  { title: string; citation: string; url: string }
+  { title: string; citation: string; date: string; url: string }
 > = {
   wolkovich: {
     title: "Lithuanian Religious Life in America, Vol. 3",
     citation:
       "William Wolkovich-Valkavičius, Lithuanian Religious Life in America, Vol. 3 (1998)",
+    date: "1998",
     url: "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
   },
   "michelsonas-1961": {
     title: "Lietuvių Išeivija Amerikoje",
     citation:
       "Stasys Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), Keleivis, 1961",
+    date: "1961",
     url: "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje",
   },
   "lukas-2009": {
     title: "Lietuvių kultūrinis paveldas Amerikoje",
     citation:
       "Algis Lukas, Lietuvių kultūrinis paveldas Amerikoje, Lithuanian American Community, 2009",
+    date: "2009",
     url: "https://archyvas.ziburioltmokykla.org/item/20260725_1785004329786",
   },
 };
+
+function firstRecordedDate(...values: (string | null | undefined)[]) {
+  for (const value of values) {
+    const match = value?.match(/\b(18|19|20)\d{2}(?:-\d{2}(?:-\d{2})?)?\b/);
+    if (match) return match[0];
+  }
+  return undefined;
+}
 
 function isAbsoluteWebUrl(url: string | null | undefined): url is string {
   return !!url && /^https?:\/\//i.test(url);
@@ -103,6 +116,10 @@ export function canonicalArtifactProfileSources(
         {
           group: canonicalArtifactGroup(artifact.artifact_type),
           title: artifact.title,
+          date: firstRecordedDate(
+            artifact.locator?.exact_label,
+            artifact.id,
+          ),
           citation: citation || undefined,
           url,
           contexts: ["Canonical CultureNet evidence"],
@@ -144,6 +161,8 @@ function draugasSource(
   return {
     group: "newspaper",
     title,
+    publisher: "Draugas",
+    date,
     citation: `Draugas, ${date}${detail ? `, ${detail}` : ""}`,
     url: issueUrl,
     contexts: [context],
@@ -207,6 +226,7 @@ export function registryProfileSources(
       drafts.push({
         group: "books",
         title: book.title,
+        date: book.date,
         citation: source.pages
           ? `${book.citation}, ${source.pages}`
           : book.citation,
@@ -257,6 +277,10 @@ export function registryProfileSources(
       drafts.push({
         group: "current",
         title: source.work ?? publisher,
+        publisher,
+        date: source.accessed
+          ? `Accessed ${source.accessed}`
+          : firstRecordedDate(source.cites),
         citation: sourceCitation(source, publisher),
         url: isAbsoluteWebUrl(source.sourceUrl) ? source.sourceUrl : null,
         contexts: [context],
@@ -270,6 +294,8 @@ export function registryProfileSources(
       drafts.push({
         group: "field",
         title: "Global True Lithuania field survey",
+        publisher: "Global True Lithuania",
+        date: source.accessed ? `Accessed ${source.accessed}` : undefined,
         citation: source.work,
         url: isAbsoluteWebUrl(source.sourceUrl) ? source.sourceUrl : null,
         contexts: ["Heritage field survey and present-use observations"],
@@ -286,6 +312,7 @@ export function registryProfileSources(
       drafts.push({
         group: "current",
         title: "Diocesan and parish web survey",
+        date: firstRecordedDate(source.work, source.accessed),
         citation: source.work ?? "Automated web survey, 2026",
         url: source.sourceUrl,
         contexts: ["Current-status and ownership check"],
@@ -296,6 +323,10 @@ export function registryProfileSources(
     drafts.push({
       group: "field",
       title: source.work ?? sourceLabel(axis),
+      publisher: source.publisher,
+      date: source.accessed
+        ? `Accessed ${source.accessed}`
+        : firstRecordedDate(source.cites),
       citation: sourceCitation(source),
       url: isAbsoluteWebUrl(source.sourceUrl) ? source.sourceUrl : null,
       contexts: ["Registry source"],
@@ -318,6 +349,8 @@ export function linkedProfileSources(
     sources.map((source) => ({
       group: options.group,
       title: source.title || source.publisher || options.fallbackTitle,
+      publisher: source.publisher,
+      date: source.date,
       citation: [source.publisher, source.date].filter(Boolean).join(", "),
       url: isAbsoluteWebUrl(source.url) ? source.url : null,
       contexts: [options.context],
@@ -398,6 +431,12 @@ export function finalizeProfileSources(
         !existing.additionalCitations.includes(source.citation)
       ) {
         existing.additionalCitations.push(source.citation);
+      }
+      if (!existing.publisher && source.publisher) {
+        existing.publisher = source.publisher;
+      }
+      if (!existing.date && source.date) {
+        existing.date = source.date;
       }
       continue;
     }

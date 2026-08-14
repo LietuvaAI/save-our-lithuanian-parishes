@@ -13,6 +13,9 @@ const historySource = readFileSync(
 const manifest = JSON.parse(
   readFileSync(join(ROOT, "data", "canonical-case-files-manifest.json"), "utf8"),
 );
+const infographic = JSON.parse(
+  readFileSync(join(ROOT, "data", "canonical-infographic-projection.json"), "utf8"),
+);
 const caseRoot = join(ROOT, "data", "case-records");
 const caseFiles = readdirSync(caseRoot)
   .filter((name) => name.endsWith(".json"))
@@ -23,7 +26,7 @@ const protectedHistory = new Map([
   ["dievo-apvaizdos-southfield-mi.json", ["historicalNarrative", 3]],
   ["sv-jurgio-norwood-ma.json", ["historicalNarrative", 2]],
   ["sv-jurgio-shenandoah-pa.json", ["historicalNarrative", 2]],
-  ["sv-kazimiero-cleveland-oh.json", ["historicalSummary", 2]],
+  ["sv-kazimiero-cleveland-oh.json", ["historicalNarrative", 3]],
   ["sv-mykolo-scranton-pa.json", ["historicalSummary", 5]],
   ["sv-petro-detroit-mi.json", ["historicalSummary", 2]],
   ["svc-m-marijos-apreiskimo-brooklyn-ny.json", ["historicalNarrative", 4]],
@@ -31,6 +34,14 @@ const protectedHistory = new Map([
 ]);
 
 const errors = [];
+const activeCatholicProfiles = infographic.institution_history
+  .filter(
+    (institution) =>
+      institution.institution_class === "roman_catholic" &&
+      institution.status_group === "active_parish",
+  )
+  .map((institution) => institution.public_profile.split("/").at(-1))
+  .sort();
 
 if (caseFiles.length !== manifest.counts.case_files) {
   errors.push(
@@ -55,6 +66,35 @@ for (const filename of caseFiles) {
   }
 }
 
+for (const slug of activeCatholicProfiles) {
+  const filename = `${slug}.json`;
+  if (!caseFiles.includes(filename)) {
+    errors.push(`active Catholic profile lacks a Brain case file: ${filename}`);
+    continue;
+  }
+  const record = JSON.parse(readFileSync(join(caseRoot, filename), "utf8"));
+  if (!Array.isArray(record.historicalNarrative) || record.historicalNarrative.length < 3) {
+    errors.push(
+      `active Catholic profile needs at least 3 history paragraphs: ${filename}`,
+    );
+    continue;
+  }
+  record.historicalNarrative.forEach((paragraph, index) => {
+    if (!paragraph.text?.trim()) {
+      errors.push(`active history paragraph is empty: ${filename} #${index + 1}`);
+    }
+    if (
+      !Array.isArray(paragraph.sources) ||
+      paragraph.sources.length === 0 ||
+      paragraph.sources.some((source) => !source.url?.trim())
+    ) {
+      errors.push(
+        `active history paragraph lacks a linked source: ${filename} #${index + 1}`,
+      );
+    }
+  });
+}
+
 for (const [source, fragment, label] of [
   [
     pageSource,
@@ -64,6 +104,7 @@ for (const [source, fragment, label] of [
   [pageSource, "caseRecord?.historicalNarrative?.length", "sourced narrative"],
   [pageSource, "caseRecord?.historicalSummary?.length", "historical summary"],
   [pageSource, "caseRecord?.summary ??", "case summary in current condition"],
+  [pageSource, "watchEntry?.situation ??", "canonical watch summary"],
   [pageSource, "situation?.situation ??", "situation in current condition"],
   [historySource, ">\n        History\n      </h2>", "History heading"],
 ]) {
@@ -96,5 +137,7 @@ if (errors.length) {
 
 console.log(
   `OK: profile narrative contract — ${caseFiles.length} Brain-owned case files; ` +
-    `${protectedHistory.size} protected historical dossiers; History precedes current condition.`,
+    `${protectedHistory.size} protected historical dossiers; ` +
+    `${activeCatholicProfiles.length} active Catholic profiles have sourced histories; ` +
+    `History precedes current condition.`,
 );

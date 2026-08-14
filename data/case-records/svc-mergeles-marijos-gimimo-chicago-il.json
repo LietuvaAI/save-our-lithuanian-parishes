@@ -3,6 +3,39 @@
   "asOf": "2026-07-09",
   "buildingStatus": "standing",
   "currentUse": "Active Roman Catholic parish church with regular Lithuanian- and English-language Masses",
+  "historicalNarrative": [
+    {
+      "text": "Nativity of the Blessed Virgin Mary was established in 1927 as a Lithuanian national parish in Chicago's Marquette Park neighborhood. An archdiocesan history credits a priest and fifteen Lithuanian lay founders with organizing the community.",
+      "sources": [
+        {
+          "url": "https://legacy.chicagocatholic.com/cnw/issue/parishpride_090306.html",
+          "locator": "Catholic New World parish history"
+        }
+      ]
+    },
+    {
+      "text": "After the Second World War, Marquette Park became a major center of Lithuanian immigrant life and Nativity grew into what the archdiocesan account called the largest Lithuanian Catholic parish in the free world. The Sisters of St. Casimir staffed the parish school beginning in 1929; enrollment later reached 870 students.",
+      "sources": [
+        {
+          "url": "https://legacy.chicagocatholic.com/cnw/issue/parishpride_090306.html",
+          "locator": "Postwar parish growth and school history"
+        }
+      ]
+    },
+    {
+      "text": "The present church was completed in 1957 using forms inspired by Lithuanian folk architecture. Its stained glass includes Marian apparitions and Our Lady of Šiluva, while the parish school and convent anchored a broader Lithuanian religious and educational complex through the neighborhood's later demographic changes.",
+      "sources": [
+        {
+          "url": "https://legacy.chicagocatholic.com/cnw/issue/parishpride_090306.html",
+          "locator": "1957 church, Lithuanian architecture, and stained glass"
+        },
+        {
+          "url": "https://ourladyofsiluva.org/our_lady/us_devotion/chicago.php",
+          "locator": "Our Lady of Šiluva devotion at Nativity BVM"
+        }
+      ]
+    }
+  ],
   "summary": "Nativity of the Blessed Virgin Mary at 6812 S Washtenaw Ave remains an open, functioning parish of the Archdiocese of Chicago and is still described as the city's only Lithuanian Catholic parish. Mass-schedule directories current to July 2026 list Sunday Mass at 9:30 a.m. in English and 11:00 a.m. in Lithuanian, daily 8:30 a.m. Lithuanian Mass, and a Saturday 4:00 p.m. Lithuanian Mass, plus a monthly bilingual Our Lady of Šiluva novena and the September Šiluva octave celebration. Under Renew My Church the archdiocese proposed grouping the parish with the Blessed Jurgis Matulaitis Lithuanian Mission in Lemont; as of mid-2023 this was documented as an offered 'opportunity to group together,' and no final unification or closure decree could be located. No published centenary (2027/2028) plans or major 2024-2026 press coverage were found.",
   "developments": [
     {
@@ -28,7 +61,8 @@
     { "title": "Renew My Church... An Open Letter to Algis Baniulis, S.J., Mission Chaplain", "publisher": "PHOTO...NOTES", "date": "2023-06-11", "url": "https://myphotonotes.com/2023/06/11/renew-my-church-an-open-letter-to-algis-baniulis-s-j-mission-chaplain/" },
     { "title": "PHOTO...NOTES blog index (parish coverage)", "publisher": "PHOTO...NOTES", "date": "", "url": "https://myphotonotes.com/" },
     { "title": "Chicago, Illinois: Lithuanians and Lithuanian heritage", "publisher": "Global True Lithuania", "date": "", "url": "https://global.truelithuania.com/chicago-illinois-45/" },
-    { "title": "28 DEC 11 AM. Holy Mass Live, Nativity BVM (in Lithuanian)", "publisher": "Nativity BVM Parish Chicago LIVE (YouTube)", "date": "", "url": "https://www.youtube.com/watch?v=nWG4H8mdke0" }
+    { "title": "28 DEC 11 AM. Holy Mass Live, Nativity BVM (in Lithuanian)", "publisher": "Nativity BVM Parish Chicago LIVE (YouTube)", "date": "", "url": "https://www.youtube.com/watch?v=nWG4H8mdke0" },
+    { "title": "Parish Pride: Nativity BVM Church", "publisher": "Catholic New World, Archdiocese of Chicago", "date": "2006-09-03", "url": "https://legacy.chicagocatholic.com/cnw/issue/parishpride_090306.html" }
   ],
   "confidence": "reported",
   "conflictsWithArchiveRecord": "None found. Archive record matches: parish standing, sole Lithuanian RC parish in Chicago, RMC grouping with Lemont mission was proposed. No source found confirming the grouping was ever finalized, so 'proposed' remains the last documented stage.",

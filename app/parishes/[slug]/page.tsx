@@ -566,7 +566,14 @@ export default async function ParishPage({
       ? `${parishAlert.context} ${parishAlert.whatChanged}`
       : parishAlert?.whatChanged;
   const canonicalCurrentSummary =
-    parishCampaign?.state ?? relatedAlertSummary ?? null;
+    parishCampaign?.state ??
+    relatedAlertSummary ??
+    watchEntry?.situation ??
+    null;
+  const canonicalCurrentAsOf =
+    parishCampaign || relatedAlertSummary
+      ? alertsData.snapshot
+      : (watchEntry?.dateObserved ?? null);
   const historicalLeadNarrative = parishTimeline?.intro ?? null;
   const { dek, rest } = researchOnly
     ? researchRecordStory(recordType)
@@ -665,9 +672,7 @@ export default async function ParishPage({
       situation?.situation ??
       null,
     caseAsOf: isUsProjection
-      ? canonicalCurrentSummary
-        ? alertsData.snapshot
-        : (caseRecord?.asOf ?? null)
+      ? (canonicalCurrentAsOf ?? caseRecord?.asOf ?? null)
       : (caseRecord?.asOf ?? null),
     developments: caseRecord?.developments ?? [],
     timelineEvents: parishTimeline?.events ?? [],
@@ -1010,26 +1015,33 @@ export default async function ParishPage({
           </p>
 
           {watchEntry && (
-            <div className="mt-4 flex flex-col gap-2 text-body-copy leading-relaxed text-muted">
-              <p>
-                <span className="text-foreground">
-                  {CLERGY_LABEL[watchEntry.clergy.arrangement] ??
-                    watchEntry.clergy.arrangement}
-                  .
-                </span>{" "}
-                {watchEntry.clergy.detail}
-              </p>
-              <p>
-                <span className="text-foreground">
-                  {GOVERNANCE_LABEL[watchEntry.governance] ??
-                    watchEntry.governance}
-                  .
-                </span>{" "}
-                {watchEntry.governanceDetail}
-              </p>
-              {watchEntry.survivedThreats && <p>{watchEntry.survivedThreats}</p>}
-              {watchEntry.financial && <p>{watchEntry.financial}</p>}
-            </div>
+            <details className="mt-4 border-t border-rule pt-3 text-body-copy leading-relaxed text-muted">
+              <summary className="cursor-pointer font-medium text-foreground">
+                Pastoral details
+              </summary>
+              <div className="mt-3 flex flex-col gap-2">
+                <p>
+                  <span className="text-foreground">
+                    {CLERGY_LABEL[watchEntry.clergy.arrangement] ??
+                      watchEntry.clergy.arrangement}
+                    .
+                  </span>{" "}
+                  {watchEntry.clergy.detail}
+                </p>
+                <p>
+                  <span className="text-foreground">
+                    {GOVERNANCE_LABEL[watchEntry.governance] ??
+                      watchEntry.governance}
+                    .
+                  </span>{" "}
+                  {watchEntry.governanceDetail}
+                </p>
+                {watchEntry.survivedThreats && (
+                  <p>{watchEntry.survivedThreats}</p>
+                )}
+                {watchEntry.financial && <p>{watchEntry.financial}</p>}
+              </div>
+            </details>
           )}
 
           {institutionDates?.foundedUnresolved && (

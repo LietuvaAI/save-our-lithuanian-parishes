@@ -16,6 +16,8 @@ const registryData = readData("registry-unified.json");
 const registry = registryData.parishes;
 const core = readData("parishes.json");
 const situations = readData("parish-situation.json").parishes;
+const caseManifest = readData("canonical-case-files-manifest.json");
+const publication = readData("canonical-publication-projection.json");
 const sourceRows = parse(
   readFileSync(new URL("../data/parishes.csv", import.meta.url)),
   {
@@ -71,6 +73,15 @@ for (const name of caseFiles) {
   }
   caseBySlug.set(record.slug, record);
 }
+const manifestBySlug = new Map(
+  caseManifest.entries.map((entry) => [
+    entry.case_file.split("/").at(-1).replace(/\.json$/, ""),
+    entry,
+  ]),
+);
+const publicationSlugs = new Set(
+  publication.public_institutions.map((institution) => institution.registry_slug),
+);
 
 const usRows = sourceRows.slice(0, 83);
 if (sourceRows.length !== 86 || usRows.length !== 83) {
@@ -81,17 +92,30 @@ if (sourceRows.length !== 86 || usRows.length !== 83) {
 const expectedCaseSlugs = usRows.map((row) =>
   slugify(row.parish, row.city, row.state),
 );
-if (caseFiles.length !== expectedCaseSlugs.length) {
+if (caseFiles.length !== caseManifest.counts.case_files) {
   errors.push(
-    `case-file count changed: expected ${expectedCaseSlugs.length}, found ${caseFiles.length}`,
+    `case-file count disagrees with Brain manifest: ` +
+      `${caseManifest.counts.case_files} manifested, ${caseFiles.length} imported`,
   );
 }
 for (const slug of expectedCaseSlugs) {
   if (!caseBySlug.has(slug)) errors.push(`${slug}: frozen source row lacks a case file`);
 }
 for (const slug of caseBySlug.keys()) {
-  if (!expectedCaseSlugs.includes(slug)) {
-    errors.push(`${slug}: case file is not attached to a frozen U.S. source row`);
+  const manifestEntry = manifestBySlug.get(slug);
+  if (!manifestEntry) {
+    errors.push(`${slug}: case file is absent from the Brain manifest`);
+    continue;
+  }
+  if (
+    !expectedCaseSlugs.includes(slug) &&
+    (manifestEntry.publication_state !== "canonical_packet_already_projected" ||
+      manifestEntry.registry_slugs.length !== 1 ||
+      !publicationSlugs.has(manifestEntry.registry_slugs[0]))
+  ) {
+    errors.push(
+      `${slug}: later Brain case file lacks one reviewed canonical publication identity`,
+    );
   }
 }
 
@@ -268,5 +292,7 @@ if (errors.length) {
 }
 
 console.log(
-  `OK: 83 frozen source rows -> 83 sourced case files -> 82 canonical identities; 0 unresolved identity exceptions; Registry Revision ${registryData.registryRevision.version}.`,
+  `OK: 83 frozen source rows retained; ${caseFiles.length} Brain-manifested case files; ` +
+    `82 frozen canonical identities; 0 unresolved identity exceptions; ` +
+    `Registry Revision ${registryData.registryRevision.version}.`,
 );

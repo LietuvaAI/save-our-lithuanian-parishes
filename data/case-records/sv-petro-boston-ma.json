@@ -3,6 +3,43 @@
   "asOf": "2026-07-16",
   "buildingStatus": "standing",
   "currentUse": "Active Catholic church — St. Peter Lithuanian Parish, 75 Flaherty Way, South Boston, operating within the South Boston Seaport Catholic Collaborative (with St. Monica); weekly Lithuanian-language Mass continues",
+  "historicalNarrative": [
+    {
+      "text": "Boston's Lithuanian Catholics organized their own parish life in the 1890s. After an earlier chapel burned in 1899, the community built the brick church in South Boston; Fr. Jonas Žilinskas blessed it on January 31, 1904, and Auxiliary Bishop John Brady solemnly dedicated it on September 7, 1908.",
+      "sources": [
+        {
+          "url": "https://www.thebostonpilot.com/article.php?ID=198408",
+          "locator": "Archdiocesan archivist Thomas Lester's parish history, October 18, 2024"
+        }
+      ]
+    },
+    {
+      "text": "The parish expanded with a rectory, Lithuanian summer and Sunday schools, and a grammar school staffed by the Sisters of Jesus Crucified. Lay organizations and successive generations of immigrants made St. Peter the institutional center of Lithuanian Catholic life in New England.",
+      "sources": [
+        {
+          "url": "https://www.thebostonpilot.com/article.php?ID=198408",
+          "locator": "Parish growth, schools, religious sisters, and lay organizations"
+        },
+        {
+          "url": "https://www.thebostonpilot.com/article.php?ID=183990",
+          "locator": "Lithuanian Apostolate history and successive immigration waves"
+        }
+      ]
+    },
+    {
+      "text": "When the Archdiocese of Boston proposed closing St. Peter in 2004, parishioners appealed, formed a support movement, and created a Hill of Crosses at the church entrance. The archbishop ultimately left the parish open without a closure date. In 2015 St. Peter entered a diocesan collaborative while retaining its institutional identity and Lithuanian Mass.",
+      "sources": [
+        {
+          "url": "https://www.draugas.org/archive/2005_reg/2005-07-14-DRAUGAS-i7-8.pdf",
+          "locator": "Draugas report on the indefinite reprieve, July 14, 2005, p. 4"
+        },
+        {
+          "url": "https://www.draugas.org/news/st-peter-lithuanian-parish-in-boston-new-challenges/",
+          "locator": "2015 collaborative and continuation of Lithuanian worship"
+        }
+      ]
+    }
+  ],
   "summary": "St. Peter Lithuanian Parish in South Boston is alive and functioning as of July 2026 — the rare Lithuanian parish in America that survived inside its diocese. The 1904 brick church at 75 Flaherty Way remains in active Catholic use, with Sunday Mass at 9:00 a.m. in English and 10:30 a.m. in Lithuanian followed by a parish-hall brunch. The Archdiocese of Boston's directory still lists Saint Peter as a distinct parish \"in collaborative with Saint Monica\" (the South Boston Seaport Catholic Collaborative, formed under Disciples in Mission effective June 2, 2015), with Rev. William M. Kennedy as pastor. Lithuanian ministry is organized through the Lithuanian Apostolate of the Archdiocese of Boston, which publishes a monthly bilingual bulletin — current through July 2026 — under directors Aldona Lingertat and Gloria Adomkaitis with administrator Daiva Navickas. On October 20, 2024 the parish celebrated its 120th anniversary with a Mass by Bishop Cristiano Barbosa, Vicar General of the archdiocese, attended by former Mayor Raymond Flynn and Councillor Ed Flynn, with written greetings from Cardinal O'Malley. The community survived a 2004 closure threat (protested with a Hill of Crosses at the church entrance) and in 2022 mounted a defense against a proposed merger, and a plaque reading \"St. Peter Church, Built by Lithuanian immigrants 1904\" was added to the facade in 2022. The proposed 2021-22 canonical merger has not visibly been executed: the archdiocesan directory continues to list the parish as its own entity.",
   "developments": [
     {
@@ -149,6 +186,18 @@
       "publisher": "Draugas News",
       "date": "2014-10-15",
       "url": "https://www.draugas.org/news/st-peter-lithuanian-parish-in-boston-new-challenges/"
+    },
+    {
+      "title": "Lithuanian Apostolate welcomes new structure, lay leadership",
+      "publisher": "The Pilot, Archdiocese of Boston",
+      "date": "2018-12-21",
+      "url": "https://www.thebostonpilot.com/article.php?ID=183990"
+    },
+    {
+      "title": "St. Peter parish centennial coverage",
+      "publisher": "Draugas",
+      "date": "2005-07-14",
+      "url": "https://www.draugas.org/archive/2005_reg/2005-07-14-DRAUGAS-i7-8.pdf"
     }
   ],
   "confidence": "verified",

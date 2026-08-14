@@ -1,0 +1,97 @@
+{
+  "slug": "our-lady-of-siluva-mission-mundelein-il",
+  "asOf": "2026-08-02",
+  "buildingStatus": "standing",
+  "currentUse": "Active Lithuanian Catholic mission of the Archdiocese of Chicago celebrating monthly Lithuanian Mass at Santa Maria del Popolo Church, 116 N. Lake St., Mundelein",
+  "historicalNarrative": [
+    {
+      "text": "Lithuanian Catholics in Lake County asked for regular worship in their own language for about a decade. Before a formal mission existed, Lithuanian priests celebrated Mass in the Mundelein area three or four times a year while the local Lithuanian Saturday school taught language, culture, and religion at Santa Maria del Popolo.",
+      "sources": [
+        {
+          "url": "https://www.chicagocatholic.com/chicagoland/-/article/2014/02/09/lithuanians-have-new-option-for-worshipping",
+          "locator": "Chicago Catholic account of the community's request and pre-mission worship"
+        }
+      ]
+    },
+    {
+      "text": "The Archdiocese of Chicago established Our Lady of Šiluva Lithuanian Mission by decree in December 2013. More than 120 people attended its first Mass on December 15, 2013, and the new mission began a monthly Lithuanian Mass at Santa Maria del Popolo Church.",
+      "sources": [
+        {
+          "url": "https://www.chicagocatholic.com/chicagoland/-/article/2014/02/09/lithuanians-have-new-option-for-worshipping",
+          "locator": "Decree, first Mass, attendance, and monthly schedule"
+        }
+      ]
+    },
+    {
+      "text": "The mission serves the Waukegan and Lake County Lithuanian community at a host parish rather than in a church it owns. Its institutional history and Santa Maria del Popolo's building history therefore remain separate records, joined by the continuing worship relationship.",
+      "sources": [
+        {
+          "url": "https://www.archchicago.org/about-us/parish-directory",
+          "locator": "Archdiocesan directory entry for the mission at 116 N. Lake St."
+        },
+        {
+          "url": "https://sielovada.org/siaures-amerika/",
+          "locator": "Lithuanian pastoral directory entry for the Waukegan–Lake County mission"
+        }
+      ]
+    }
+  ],
+  "summary": "Our Lady of Šiluva Lithuanian Mission remains active in Mundelein, where monthly Lithuanian Mass is celebrated at Santa Maria del Popolo Church for the Waukegan and Lake County community. The mission is a distinct Archdiocese of Chicago institution using a host church; it does not represent ownership of a separate Lithuanian church building.",
+  "developments": [
+    {
+      "date": "2024",
+      "headline": "Pastoral visit confirms continuing monthly Lithuanian worship",
+      "detail": "Lithuanian Catholic pastoral reporting describes the active Waukegan–Lake County mission community and its monthly Lithuanian Mass in Mundelein.",
+      "sources": [
+        {
+          "title": "LVK delegato užsienio lietuvių sielovadai viešnagė pas Amerikos lietuvius",
+          "publisher": "Sielovada",
+          "date": "2024",
+          "url": "https://sielovada.org/lvk-delegato-uzsienio-lietuviu-sielovadai-viesnage-pas-amerikos-lietuvius/"
+        }
+      ]
+    },
+    {
+      "date": "2013-12-15",
+      "headline": "First Mass celebrated after the mission's establishment",
+      "detail": "More than 120 people attended the first Mass of the newly established mission at Santa Maria del Popolo; the mission began a monthly Lithuanian worship schedule.",
+      "sources": [
+        {
+          "title": "Lithuanians have new option for worshipping",
+          "publisher": "Chicago Catholic",
+          "date": "2014-02-09",
+          "url": "https://www.chicagocatholic.com/chicagoland/-/article/2014/02/09/lithuanians-have-new-option-for-worshipping"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lithuanians have new option for worshipping",
+      "publisher": "Chicago Catholic",
+      "date": "2014-02-09",
+      "url": "https://www.chicagocatholic.com/chicagoland/-/article/2014/02/09/lithuanians-have-new-option-for-worshipping"
+    },
+    {
+      "title": "Archdiocese of Chicago parish directory",
+      "publisher": "Archdiocese of Chicago",
+      "date": "accessed 2026-08-02",
+      "url": "https://www.archchicago.org/about-us/parish-directory"
+    },
+    {
+      "title": "Lithuanian Catholic pastoral directory for North America",
+      "publisher": "Sielovada",
+      "date": "accessed 2026-08-02",
+      "url": "https://sielovada.org/siaures-amerika/"
+    },
+    {
+      "title": "LVK delegato užsienio lietuvių sielovadai viešnagė pas Amerikos lietuvius",
+      "publisher": "Sielovada",
+      "date": "2024",
+      "url": "https://sielovada.org/lvk-delegato-uzsienio-lietuviu-sielovadai-viesnage-pas-amerikos-lietuvius/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": null,
+  "gaps": "The current public sources confirm monthly worship and the host church, but do not establish a more frequent 2026 Mass schedule or a separately owned mission building."
+}

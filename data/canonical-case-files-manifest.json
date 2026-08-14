@@ -1,19 +1,19 @@
 {
   "schema": "culturenet-parish-case-file-manifest.v1",
-  "generated": "2026-07-31",
+  "generated": "2026-08-14",
   "authority": {
     "repository": "LietuvaAI/culturenet-brain",
     "root": "repo://culturenet-brain/docs/research/parish-canon/case-files/current",
-    "role": "current-record evidence input; canonical facts require a reviewed migration packet"
+    "role": "Brain-owned current-record evidence; publication identity requires a reviewed canonical projection"
   },
   "source_snapshot": {
     "repository": "LietuvaAI/save-our-lithuanian-parishes",
-    "state": "frozen R9 migration input mirrored under the Brain canonical root",
-    "rule": "the Brain copy is authoritative; byte equality is also enforced when a legacy site worktree is supplied"
+    "state": "frozen R9 migration input plus Brain-native canonical case records",
+    "rule": "the Brain copy is authoritative; frozen imports retain byte equality and later records must map to one reviewed canonical publication identity"
   },
   "counts": {
-    "case_files": 83,
-    "mapped_research_registry_identities": 82
+    "case_files": 84,
+    "mapped_research_registry_identities": 83
   },
   "entries": [
     {
@@ -323,9 +323,27 @@
       "publication_state": "evidence_input_requires_canonical_adjudication"
     },
     {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/our-lady-of-siluva-mission-mundelein-il.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/our-lady-of-siluva-mission-mundelein-il.json",
+      "content_sha256": "ebe046c922ddc1410b428cbced9c9ffb93b4d51f550525c6c6bc7ca49fefc40e",
+      "source_record_slug": "our-lady-of-siluva-mission-mundelein-il",
+      "as_of": "2026-08-02",
+      "registry_slugs": [
+        "our-lady-of-siluva-mission-mundelein-il"
+      ],
+      "situation_keys": [
+        "our-lady-of-siluva-mission-mundelein-il"
+      ],
+      "source_count": 4,
+      "development_count": 2,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/pal-jurgio-matulaicio-misija-lemont-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/pal-jurgio-matulaicio-misija-lemont-il.json",
-      "content_sha256": "8fbac48835126ebe83f3202776df909b2c20c72470f9796470ccb4011dfa38e3",
+      "content_sha256": "a5485161f7f47b636d730f9e140ed64cad81c1b4bdffe864ed206220ad9bae27",
       "source_record_slug": "pal-jurgio-matulaicio-misija-lemont-il",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -397,7 +415,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-andriejaus-philadelphia-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-andriejaus-philadelphia-pa.json",
-      "content_sha256": "32a2f553495641f22fa9c425c8ec8219078df2589f5d350ba0de29734fa182ef",
+      "content_sha256": "a12935493c7dbb510ef72151c3a97bcdb7f6b7c34c2aa898d0c25513b1b1780a",
       "source_record_slug": "sv-andriejaus-philadelphia-pa",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -775,7 +793,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-cleveland-oh.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-cleveland-oh.json",
-      "content_sha256": "71adc0709f620e49cb4644c331ddf676e78a178b90e34a31f6fa5a09b53dcd3c",
+      "content_sha256": "f9b7c6803d2f655607a82bbf36c4f050c3778a047a2f50b94fe342b5bb44d44d",
       "source_record_slug": "sv-kazimiero-cleveland-oh",
       "as_of": "2026-07-09",
       "registry_slugs": [
@@ -829,7 +847,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-los-angeles-ca.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-los-angeles-ca.json",
-      "content_sha256": "4be169fea8db59d43b43e136ba293fbb753bd5884420425410d3e5bb6546ea6d",
+      "content_sha256": "5e68f2ea0765ee2e1a35bcd9ed9013d12cd5a55ddbedc7cc0720ddd99dbcf7f2",
       "source_record_slug": "sv-kazimiero-los-angeles-ca",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1243,7 +1261,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-petro-boston-ma.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-petro-boston-ma.json",
-      "content_sha256": "7b7a05d6f0edc8c68c29ab1c7d5711af5370dd5a5d16817c7419dfc14357db92",
+      "content_sha256": "95322a93823dd330d4dd7bdb5969a8513bc206d3cbc0f3cb4e1678f3c7a7382f",
       "source_record_slug": "sv-petro-boston-ma",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1441,7 +1459,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/svc-mergeles-marijos-gimimo-chicago-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/svc-mergeles-marijos-gimimo-chicago-il.json",
-      "content_sha256": "44318133c90ef18c34923c9ae9b9f8d3b7841055c78bfa42fdc2ef6867ad7288",
+      "content_sha256": "038b5389f048d82527d29c823f94b5a72eca91b1938019fab71917d564f4a6bf",
       "source_record_slug": "svc-mergeles-marijos-gimimo-chicago-il",
       "as_of": "2026-07-09",
       "registry_slugs": [
