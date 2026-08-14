@@ -30,7 +30,7 @@ const protectedHistory = new Map([
   ["kristaus-atsimainymo-maspeth-ny.json", ["historicalNarrative", 3]],
   ["st-ann-beverly-shores-in.json", ["historicalNarrative", 3]],
   ["sv-jurgio-norwood-ma.json", ["historicalNarrative", 2]],
-  ["sv-jurgio-shenandoah-pa.json", ["historicalNarrative", 2]],
+  ["sv-jurgio-shenandoah-pa.json", ["historicalNarrative", 6]],
   ["sv-juozapo-waterbury-ct.json", ["historicalNarrative", 3]],
   ["sv-kazimiero-cleveland-oh.json", ["historicalNarrative", 3]],
   ["sv-mykolo-bayonne-nj.json", ["historicalNarrative", 3]],

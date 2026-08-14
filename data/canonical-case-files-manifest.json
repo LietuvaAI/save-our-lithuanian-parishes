@@ -739,7 +739,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-jurgio-shenandoah-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-jurgio-shenandoah-pa.json",
-      "content_sha256": "0f9785f808db36772caca16f46986067c28c9a6b50c0d54ece525bb9bf6d06ac",
+      "content_sha256": "c1c3537294da674dfd2ff2041e722dad2dded92bd7c5fa98a2ffead0974e599d",
       "source_record_slug": "sv-jurgio-shenandoah-pa",
       "as_of": "2026-07-09",
       "registry_slugs": [
