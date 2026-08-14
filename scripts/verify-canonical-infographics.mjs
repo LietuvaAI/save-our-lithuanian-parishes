@@ -92,12 +92,29 @@ const checks = [
     infographic.continuity_edges.length,
     infographic.counts.institution_continuity_edges,
   ],
+  [
+    "records-custody edges",
+    infographic.records_custody_edges.length,
+    infographic.counts.records_custody_edges,
+  ],
   ["coal-region parish institutions", coalRegion.population, infographic.counts.coal_region_parish_institutions],
   ["Canadian comparator parishes", canada.population, infographic.counts.canadian_comparator_parishes],
   ["closed Roman Catholic parishes", closed.length, infographic.counts.closed_roman_catholic_parishes],
 ];
 for (const [label, actual, expected] of checks) {
   if (actual !== expected) errors.push(`${label}: ${actual} != ${expected}`);
+}
+if (infographic.continuity_edges.some((edge) => !edge.taxonomy)) {
+  errors.push("every public continuity edge must carry Brain-owned taxonomy");
+}
+const grandRapidsPlan = infographic.continuity_edges.find(
+  (edge) => edge.id === "rel:nem-2:grand-rapids-future-merger",
+);
+if (
+  grandRapidsPlan?.taxonomy?.dimension !== "future_plan" ||
+  grandRapidsPlan?.taxonomy?.temporal_state !== "planned"
+) {
+  errors.push("Grand Rapids conditional merger must remain a future plan");
 }
 for (const [label, actual, expected] of [
   [
@@ -475,7 +492,6 @@ const aggregatePages = [
   "app/church-buildings-through-time/page.tsx",
   "app/where-parish-life-continued/page.tsx",
   "app/pennsylvania-coal-region/page.tsx",
-  "app/canadian-comparators/page.tsx",
 ];
 for (const relativePath of aggregatePages) {
   const source = readFileSync(

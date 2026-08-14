@@ -112,7 +112,16 @@ const FATE_NOTE: Partial<Record<FateKey, string>> = {
 
 const GROUP_NOTE: Partial<Record<EndStateGroup, string>> = {
   transferred:
-    "The historical Lithuanian parish no longer operates as a current Lithuanian pastoral institution, but its life continues in another form: the same parish may now serve a different community, a successor parish may carry Catholic life forward, or the former church may serve another religious community. This category does not mean that every institution closed or merged. Each card identifies the confirmed form of continuity.",
+    "The historical Lithuanian parish no longer operates as a current Lithuanian pastoral institution, but something connected to it continues: the same parish may serve a different community, a successor parish may remain active, or the former church may serve another religious community. This presentation group does not mean that every institution merged, and it is not the same as the physical-building category Repurposed. Each card identifies the documented form of continuity.",
+};
+
+const CONTINUATION_MODE_LABEL: Record<string, string> = {
+  merged_successor: "Successor parish",
+  same_institution_new_community: "Same parish, different community",
+  former_site_new_community: "Former church, new community",
+  successor_and_site_new_community: "Successor parish and former church",
+  designated_chapel: "Designated chapel",
+  successor_community_relocated: "Successor community relocated",
 };
 
 const FATE_ORDER: FateKey[] = [
@@ -920,6 +929,11 @@ export default function ParishThreads({
                   </span>
                   {m.continuation ? (
                     <span className="mt-1 block text-support-copy leading-relaxed text-muted">
+                      <strong className="font-semibold text-foreground">
+                        {CONTINUATION_MODE_LABEL[m.continuation.mode] ??
+                          "Documented continuation"}
+                        :
+                      </strong>{" "}
                       {m.continuation.summary}
                     </span>
                   ) : null}
@@ -934,6 +948,20 @@ export default function ParishThreads({
                 </li>
               ))}
             </ul>
+            {open === "g:transferred" ? (
+              <p className="mt-4 border-t border-rule pt-3 text-small-copy leading-relaxed text-muted">
+                The separate{" "}
+                <Link
+                  href="/where-parish-life-continued"
+                  className="font-medium text-foreground underline underline-offset-2 hover:text-accent"
+                >
+                  relationship ledger
+                </Link>{" "}
+                distinguishes completed institutional changes, community and
+                worship destinations, records custody, identity history, and
+                future plans.
+              </p>
+            ) : null}
             {open === "g:mass_continues" &&
             additionalHostedCommunities.length > 0 ? (
               <div className="mt-5 border-t border-rule pt-4">

@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 
 const files = [
   "app/page.tsx",
@@ -11,7 +11,6 @@ const files = [
   "app/what-canon-law-says/page.tsx",
   "app/protestant/page.tsx",
   "app/national-catholic/page.tsx",
-  "app/canadian-comparators/page.tsx",
   "components/HistoryDioceseLoss.tsx",
   "components/ParishMap.tsx",
   "components/ParishProfileChronology.tsx",
@@ -37,6 +36,65 @@ for (const file of files) {
   const text = readFileSync(new URL(`../${file}`, import.meta.url), "utf8").toLowerCase();
   for (const phrase of processFirstPhrases) {
     if (text.includes(phrase)) errors.push(`${file}: process-first copy remains: “${phrase}”`);
+  }
+}
+
+const layout = readFileSync(new URL("../app/layout.tsx", import.meta.url), "utf8");
+if (/label:\s*["']Explore["']/.test(layout)) {
+  errors.push("app/layout.tsx: the retired Explore navigation group returned");
+}
+if (!layout.includes('href: "/history", label: "The Rise and the Loss"')) {
+  errors.push("app/layout.tsx: The Rise and the Loss is not a top-level navigation item");
+}
+const expectedNavOrder = [
+  'href: "/parishes", label: "All Profiles"',
+  'href: "/where-every-parish-ended-up"',
+  'label: "Outcomes"',
+  'href: "/history", label: "The Rise and the Loss"',
+  'label: "Guidance"',
+  'label: "About"',
+  'href: "https://blog.saveourlithuanianparishes.org", label: "Židinys"',
+];
+let previousNavPosition = -1;
+for (const navFragment of expectedNavOrder) {
+  const position = layout.indexOf(navFragment, previousNavPosition + 1);
+  if (position === -1) {
+    errors.push(`app/layout.tsx: missing or misordered navigation item ${navFragment}`);
+    break;
+  }
+  previousNavPosition = position;
+}
+if (layout.includes("/canadian-comparators")) {
+  errors.push("app/layout.tsx: Canadian comparators returned to public navigation");
+}
+if (existsSync(new URL("../app/canadian-comparators/page.tsx", import.meta.url))) {
+  errors.push("app/canadian-comparators/page.tsx: retired public route returned");
+}
+const nextConfig = readFileSync(
+  new URL("../next.config.ts", import.meta.url),
+  "utf8",
+);
+if (
+  !nextConfig.includes('source: "/canadian-comparators"') ||
+  !nextConfig.includes('destination: "/parishes"')
+) {
+  errors.push("next.config.ts: retired Canadian route must redirect to U.S. profiles");
+}
+
+const directory = readFileSync(
+  new URL("../components/AllProfilesDirectory.tsx", import.meta.url),
+  "utf8",
+);
+for (const institutionClass of [
+  "roman_catholic",
+  "national_catholic_pncc",
+  "independent_catholic",
+  "non_catholic_christian",
+]) {
+  if (!directory.includes(`value: "${institutionClass}"`)) {
+    errors.push(
+      `components/AllProfilesDirectory.tsx: missing public tradition section ${institutionClass}`,
+    );
   }
 }
 

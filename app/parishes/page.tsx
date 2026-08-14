@@ -9,9 +9,9 @@ import {
 } from "@/lib/infographic-projection";
 
 export const metadata: Metadata = {
-  title: "The Record of America’s Lithuanian Parishes",
+  title: "Parish Profiles",
   description:
-    "A searchable directory of every published U.S. Lithuanian parish, mission, and congregation profile, grouped by canonical outcome.",
+    "A searchable directory of every published U.S. Lithuanian parish, mission, and congregation profile, separated by religious tradition.",
 };
 
 function buildRows(): AllProfilesDirectoryRow[] {
@@ -52,13 +52,13 @@ export default function ParishProfilesPage() {
           Profile directory
         </p>
         <h1 className="mt-1.5 font-serif text-page-title font-semibold leading-[1.15]">
-          The Record of America’s Lithuanian Parishes
+          Every parish, mission, and congregation
         </h1>
         <p className="mt-2 max-w-[860px] text-body-copy leading-[1.55] text-[#57534e] dark:text-muted">
-          All {rows.length} parishes, missions, and congregations, grouped by
-          what became of each. Search by name, city, state, or diocese—or
-          switch to the alphabetical view and jump by letter. Every entry
-          opens the full profile.
+          All {rows.length} published U.S. profiles, separated into Roman
+          Catholic, National Catholic, Independent Catholic, and Protestant
+          traditions. Search by name or place, or regroup the directory by
+          outcome or alphabetically.
         </p>
       </div>
 

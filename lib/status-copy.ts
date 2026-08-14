@@ -22,7 +22,7 @@ export const PARISH_STATUS_LABEL: Record<ParishStatusGroup, string> = {
   active_parish: "Active Lithuanian parish",
   mass_continues: "Lithuanian Mass continues",
   unresolved: "Unresolved",
-  transferred: "Lives on, another community",
+  transferred: "Continues in another form",
   closed: "Closed",
   unverified: "Being verified",
 };
@@ -34,7 +34,7 @@ export const PARISH_STATUS_DESCRIPTION: Record<ParishStatusGroup, string> = {
   unresolved:
     "The church stands and the parish's fate is contested or canonically undecided — the decision is not final.",
   transferred:
-    "The church serves another community today; its life as a Lithuanian parish has ended.",
+    "Lithuanian parish identity has ended, while the same institution, a successor community, or a former worship site continues in another form. This is an institution-status group, not a building-condition claim.",
   closed:
     "The parish was closed — click the Closed filter to see how each ended: parish closed, building sold on, or church demolished (marked ×).",
   unverified:

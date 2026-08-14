@@ -50,32 +50,12 @@ type NavItem =
     };
 
 const NAV: NavItem[] = [
-  {
-    href: "/where-every-parish-ended-up",
-    label: "Parish & Mission Outcomes",
-  },
   { href: "/parishes", label: "All Profiles" },
   {
-    label: "Explore",
-    menuAlign: "right",
-    children: [
-      { href: "/history", label: "The Rise & Loss" },
-      {
-        href: "/where-parish-life-continued",
-        label: "Where Parish Life Continued",
-      },
-      {
-        href: "/lithuanian-catholic-life-today",
-        label: "Lithuanian Catholic Life Today",
-      },
-      { href: "/canadian-comparators", label: "Canadian Comparators" },
-      {
-        href: "/national-catholic",
-        label: "National & Independent Catholic",
-      },
-      { href: "/protestant", label: "Protestant" },
-    ],
+    href: "/where-every-parish-ended-up",
+    label: "Outcomes",
   },
+  { href: "/history", label: "The Rise and the Loss" },
   {
     label: "Guidance",
     children: [
@@ -95,7 +75,7 @@ const NAV: NavItem[] = [
       },
     ],
   },
-  { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys (The Hearth)" },
+  { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys" },
 ];
 
 export default function RootLayout({

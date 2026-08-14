@@ -8399,7 +8399,7 @@
       "building-standing"
     ]
   },
-  "content_hash": "sha256:0bb61286346c541538572a750ea69d019a5b976a522bae55232f4fd8745697cf",
+  "content_hash": "sha256:69d9503faeb419bb18daff24061834ebbb91d871e300d25fd942d24bdcd807f9",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -8447,6 +8447,13 @@
           "start": "1980s, exact year unresolved"
         },
         "slug": "holy-cross-immaculate-heart-of-mary-chicago-il"
+      },
+      "taxonomy": {
+        "certainty": "canonical_form_unresolved",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -8504,6 +8511,13 @@
           "start": "2016-07-01"
         },
         "slug": "st-procopius-providence-of-god-chicago-il"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -8552,6 +8566,13 @@
           "start": null
         },
         "slug": "annunciation-wabansia-chicago-il"
+      },
+      "taxonomy": {
+        "certainty": "canonical_form_unresolved",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -8587,6 +8608,13 @@
         "entity_id": "cn:institution:st-casimir-cleveland-lithuanian-oh",
         "entity_type": "institution",
         "slug": "st-casimir-cleveland-lithuanian-oh"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -8622,6 +8650,13 @@
         "entity_id": "cn:institution:st-casimir-cleveland-lithuanian-oh",
         "entity_type": "institution",
         "slug": "st-casimir-cleveland-lithuanian-oh"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "institutional_successor",
+        "public_label": "Succeeded by another institution",
+        "temporal_state": "completed"
       }
     },
     {
@@ -8663,6 +8698,13 @@
         "entity_id": "cn:institution:our-lady-of-hope-wilkes-barre-pa",
         "entity_type": "institution",
         "slug": "our-lady-of-hope-wilkes-barre-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -8704,6 +8746,13 @@
         "entity_id": "cn:institution:holy-spirit-mocanaqua-pa",
         "entity_type": "institution",
         "slug": "holy-spirit-mocanaqua-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -8752,6 +8801,13 @@
           "start": null
         },
         "slug": "st-john-evangelist-pittston-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -8802,6 +8858,13 @@
           "start": "2019"
         },
         "slug": "immaculate-conception-five-holy-martyrs-chicago-il"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -8836,6 +8899,13 @@
         "entity_id": "cn:institution:ave-maria-bentleyville-pa",
         "entity_type": "institution",
         "slug": "ave-maria-bentleyville-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -8870,6 +8940,13 @@
         "entity_id": "cn:institution:good-shepherd-braddock-pa",
         "entity_type": "institution",
         "slug": "good-shepherd-braddock-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -8904,6 +8981,13 @@
         "entity_id": "cn:institution:holy-child-bridgeville-pa",
         "entity_type": "institution",
         "slug": "holy-child-bridgeville-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -8938,6 +9022,13 @@
         "entity_id": "cn:institution:st-maximilian-kolbe-homestead-pa",
         "entity_type": "institution",
         "slug": "st-maximilian-kolbe-homestead-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -8972,6 +9063,13 @@
         "entity_id": "cn:institution:st-francis-assisi-kewanee-il",
         "entity_type": "institution",
         "slug": "st-francis-assisi-kewanee-il"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9006,6 +9104,13 @@
         "entity_id": "cn:institution:st-robert-bellarmine-wilkes-barre-pa",
         "entity_type": "institution",
         "slug": "st-robert-bellarmine-wilkes-barre-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9040,6 +9145,13 @@
         "entity_id": "cn:institution:mother-cabrini-shamokin-pa",
         "entity_type": "institution",
         "slug": "mother-cabrini-shamokin-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9074,6 +9186,13 @@
         "entity_id": "cn:institution:st-peter-and-st-casimir-westfield-ma",
         "entity_type": "institution",
         "slug": "st-peter-and-st-casimir-westfield-ma"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9127,6 +9246,13 @@
           "start": "1949"
         },
         "slug": "divine-providence-southfield-mi"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "identity_history",
+        "form": "same_institution_rename",
+        "public_label": "Same institution, later name",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9182,6 +9308,13 @@
           "start": "1908"
         },
         "slug": "st-george-detroit-mi"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "identity_history",
+        "form": "origin_relationship",
+        "public_label": "Origin relationship",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9228,6 +9361,13 @@
           "start": "1949"
         },
         "slug": "divine-providence-southfield-mi"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9271,6 +9411,13 @@
           "start": "1896"
         },
         "slug": "st-peter-south-boston-ma"
+      },
+      "taxonomy": {
+        "certainty": "canonical_form_unresolved",
+        "dimension": "identity_history",
+        "form": "institutional_emergence_sequence_unresolved",
+        "public_label": "Historical lineage; exact canonical sequence unresolved",
+        "temporal_state": "historical"
       }
     },
     {
@@ -9317,6 +9464,13 @@
           "start": "1993"
         },
         "slug": "st-john-god-mckees-rocks-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9356,6 +9510,13 @@
         "entity_id": "cn:institution:st-joseph-worker-frackville-pa",
         "entity_type": "institution",
         "slug": "st-joseph-worker-frackville-pa"
+      },
+      "taxonomy": {
+        "certainty": "canonical_form_unresolved",
+        "dimension": "community_continuity",
+        "form": "successor_relationship_unresolved",
+        "public_label": "Later parish identified; exact canonical sequence unresolved",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9391,6 +9552,13 @@
         "entity_id": "cn:institution:our-lady-immaculate-conception-freeland-pa",
         "entity_type": "institution",
         "slug": "our-lady-immaculate-conception-freeland-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9432,6 +9600,13 @@
         "entity_id": "cn:institution:all-saints-haverhill-ma",
         "entity_type": "institution",
         "slug": "all-saints-haverhill-ma"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9489,6 +9664,13 @@
           "start": "2002 selected"
         },
         "slug": "holy-trinity-epiphany-newark-nj"
+      },
+      "taxonomy": {
+        "certainty": "canonical_form_unresolved",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9530,6 +9712,13 @@
         "entity_id": "cn:institution:st-augustine-hippo-east-st-louis-il",
         "entity_type": "institution",
         "slug": "st-augustine-hippo-east-st-louis-il"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "worship_site_continuity",
+        "form": "former_church_designated_chapel",
+        "public_label": "Former church designated as a chapel",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9578,6 +9767,13 @@
           "start": "1953"
         },
         "slug": "holy-family-oglesby-il"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9628,6 +9824,13 @@
           "start": "2019-03-24"
         },
         "slug": "our-lady-mount-carmel-annunciation-williamsburg-ny"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9679,6 +9882,13 @@
           "start": "2019-09-01"
         },
         "slug": "transfiguration-st-stanislaus-maspeth-ny"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9720,6 +9930,13 @@
         "entity_id": "cn:institution:st-michael-avon-ma",
         "entity_type": "institution",
         "slug": "st-michael-avon-ma"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "community_continuity",
+        "form": "parishioners_and_artifacts_directed",
+        "public_label": "Parishioners and artifacts directed to another parish",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9766,6 +9983,13 @@
           "start": "1986"
         },
         "slug": "st-ann-st-george-brooklyn-ny"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9812,6 +10036,13 @@
           "start": "2009-07-01"
         },
         "slug": "st-adalbert-ss-peter-paul-elizabeth-nj"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9851,6 +10082,13 @@
         "entity_id": "cn:institution:st-patrick-nashua-nh",
         "entity_type": "institution",
         "slug": "st-patrick-nashua-nh"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "community_continuity",
+        "form": "community_and_records_destination",
+        "public_label": "Community and records continued at another parish",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9897,6 +10135,13 @@
         "entity_id": "cn:institution:christ-king-archbald-pa",
         "entity_type": "institution",
         "slug": "christ-king-archbald-pa"
+      },
+      "taxonomy": {
+        "certainty": "canonical_form_unresolved",
+        "dimension": "community_continuity",
+        "form": "territorial_successor_sequence_unresolved",
+        "public_label": "Territorial successor identified; exact sequence unresolved",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9943,6 +10188,13 @@
           "start": "2008-07-15"
         },
         "slug": "st-katharine-drexel-lansford-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -9982,6 +10234,13 @@
         "entity_id": "cn:institution:divine-mercy-niagara-falls-ny",
         "entity_type": "institution",
         "slug": "divine-mercy-niagara-falls-ny"
+      },
+      "taxonomy": {
+        "certainty": "canonical_form_unresolved",
+        "dimension": "community_continuity",
+        "form": "community_destination_sequence_unresolved",
+        "public_label": "Later community identified; exact sequence unresolved",
+        "temporal_state": "completed"
       }
     },
     {
@@ -10028,6 +10287,13 @@
           "start": "2004-11-01"
         },
         "slug": "holy-rosary-shrine-lawrence-ma"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "community_continuity",
+        "form": "community_worship_destination",
+        "public_label": "Community worship continued at another Catholic site",
+        "temporal_state": "completed"
       }
     },
     {
@@ -10073,6 +10339,13 @@
         "entity_id": "cn:institution:basilica-st-adalbert-grand-rapids-mi",
         "entity_type": "institution",
         "slug": "basilica-st-adalbert-grand-rapids-mi"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "future_plan",
+        "form": "conditional_future_merger",
+        "public_label": "Conditional future merger — not completed",
+        "temporal_state": "planned"
       }
     },
     {
@@ -10112,6 +10385,13 @@
         "entity_id": "cn:institution:ss-peter-paul-omaha-ne",
         "entity_type": "institution",
         "slug": "ss-peter-paul-omaha-ne"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "community_continuity",
+        "form": "community_worship_destination",
+        "public_label": "Community worship continued at another parish",
+        "temporal_state": "completed"
       }
     },
     {
@@ -10157,6 +10437,13 @@
         "entity_id": "cn:institution:st-charles-borromeo-ashland-pa",
         "entity_type": "institution",
         "slug": "st-charles-borromeo-ashland-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -10196,6 +10483,13 @@
         "entity_id": "cn:institution:st-ignatius-loyola-kingston-pa",
         "entity_type": "institution",
         "slug": "st-ignatius-loyola-kingston-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -10241,6 +10535,13 @@
         "entity_id": "cn:institution:holy-family-luzerne-pa",
         "entity_type": "institution",
         "slug": "holy-family-luzerne-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -10286,6 +10587,13 @@
         "entity_id": "cn:institution:st-teresa-calcutta-mahanoy-city-pa",
         "entity_type": "institution",
         "slug": "st-teresa-calcutta-mahanoy-city-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -10325,6 +10633,13 @@
         "entity_id": "cn:institution:divine-redeemer-mount-carmel-pa",
         "entity_type": "institution",
         "slug": "divine-redeemer-mount-carmel-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -10376,6 +10691,13 @@
           "start": "1924"
         },
         "slug": "st-andrew-lithuanian-philadelphia-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -10421,6 +10743,13 @@
         "entity_id": "cn:institution:st-john-paul-ii-port-richmond-pa",
         "entity_type": "institution",
         "slug": "st-john-paul-ii-port-richmond-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -10469,6 +10798,13 @@
           "start": "2009"
         },
         "slug": "st-joseph-bayonne-nj"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -10517,6 +10853,13 @@
           "start": "1992"
         },
         "slug": "prince-of-peace-pittsburgh-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -10558,6 +10901,13 @@
         "entity_id": "cn:institution:st-john-worcester-ma",
         "entity_type": "institution",
         "slug": "st-john-worcester-ma"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     },
     {
@@ -10601,6 +10951,13 @@
         "entity_id": "cn:institution:our-lady-mount-carmel-waterbury-ct",
         "entity_type": "institution",
         "slug": "our-lady-mount-carmel-waterbury-ct"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
       }
     }
   ],
@@ -10615,6 +10972,7 @@
     "institution_continuity_edges": 51,
     "physical_worship_sites": 131,
     "public_us_institutions": 155,
+    "records_custody_edges": 7,
     "roman_catholic_parish_institutions": 132,
     "roman_catholic_parishes_with_closure_year": 91,
     "roman_catholic_parishes_with_founding_year": 119,
@@ -11099,7 +11457,7 @@
     "source_assertion_id": "assert:pastoral-18:membership",
     "unit": "current Lithuanian Catholic parish, mission, or hosted pastoral community"
   },
-  "generated": "2026-08-11",
+  "generated": "2026-08-14",
   "institution_history": [
     {
       "building_fate": null,
@@ -18779,6 +19137,305 @@
     "site_r10_baseline facts remain visibly provisional until replaced by canonical graph assertions",
     "no public view may substitute one unit for another to fill a missing date"
   ],
+  "records_custody_edges": [
+    {
+      "adjudication_state": "accepted",
+      "confidence": "high",
+      "counting_effect": "records_custody_only",
+      "date": {
+        "certainty": "official diocesan register",
+        "end": null,
+        "label": "sacramental records transferred at closure",
+        "start": "2011-06-05"
+      },
+      "evidence_assertion_ids": [
+        "assert:coal-1:scranton-lifecycle"
+      ],
+      "id": "rel:coal-1:scranton-records",
+      "identity_effect": "administrative_custody_only",
+      "projection_group": "records_custody",
+      "publication_state": "publishable",
+      "relationship_type": "institution-records-held-at-institution",
+      "source": {
+        "display_name": "Saint Joseph Lithuanian Roman Catholic Parish, Scranton",
+        "entity_id": "cn:institution:st-joseph-scranton-pa",
+        "entity_type": "institution",
+        "lifecycle": {
+          "end": "2011-06-05",
+          "source_assertion_ids": [
+            "assert:coal-1:scranton-lifecycle"
+          ],
+          "start": null
+        },
+        "slug": "st-joseph-scranton-pa"
+      },
+      "source_artifact_ids": [
+        "src:coal-1:scranton-consolidated:2024-07-03"
+      ],
+      "target": {
+        "display_name": "Mary, Mother of God Parish, Scranton",
+        "entity_id": "cn:institution:mary-mother-of-god-scranton-pa",
+        "entity_type": "institution",
+        "slug": "mary-mother-of-god-scranton-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "confidence": "high",
+      "counting_effect": "records_custody_only",
+      "date": {
+        "certainty": "official_register",
+        "end": null,
+        "label": "AOD closed-parishes register says St. Anthony records are at Divine Providence; this is records custody, not proof of congregation/canonical-life continuity",
+        "precision": "year",
+        "start": "2013"
+      },
+      "evidence_assertion_ids": [
+        "assert:detroit:st-anthony-aod-records-at-divine-providence"
+      ],
+      "id": "rel:detroit:st-anthony-records-held-at-divine-providence",
+      "identity_effect": "administrative_custody_only",
+      "projection_group": "records_custody",
+      "publication_state": "publishable",
+      "relationship_type": "institution-records-held-at-institution",
+      "source": {
+        "display_name": "St. Anthony Lithuanian parish, Detroit",
+        "entity_id": "cn:institution:st-anthony-detroit-mi",
+        "entity_type": "institution",
+        "slug": "st-anthony-detroit-mi"
+      },
+      "source_artifact_ids": [
+        "src:archdiocese-detroit:closed-parishes:st-anthony-lithuanian:2026-07-31"
+      ],
+      "target": {
+        "display_name": "Divine Providence Lithuanian Catholic Parish, Southfield",
+        "entity_id": "cn:institution:divine-providence-southfield-mi",
+        "entity_type": "institution",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:detroit:divine-providence-originated-from-st-george-1949",
+            "assert:detroit:divine-providence-st-george-origin-book-1973",
+            "assert:detroit:divine-providence-name-1949"
+          ],
+          "start": "1949"
+        },
+        "slug": "divine-providence-southfield-mi"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "confidence": "high",
+      "counting_effect": "records_custody_only",
+      "date": {
+        "certainty": "closure coverage",
+        "start": "2017-07-01"
+      },
+      "evidence_assertion_ids": [
+        "assert:nsp-8:st-casimir-providence-lifecycle"
+      ],
+      "id": "rel:nsp-8:st-casimir-records-st-patrick",
+      "identity_effect": "administrative_custody_only",
+      "projection_group": "records_custody",
+      "publication_state": "publishable",
+      "relationship_type": "institution-records-held-at-institution",
+      "source": {
+        "display_name": "Saint Casimir Lithuanian Roman Catholic Parish, Providence",
+        "entity_id": "cn:institution:st-casimir-providence-ri",
+        "entity_type": "institution",
+        "lifecycle": {
+          "end": "2017-07-01",
+          "source_assertion_ids": [
+            "assert:nsp-8:st-casimir-providence-lifecycle"
+          ],
+          "start": "1904-1919"
+        },
+        "slug": "st-casimir-providence-ri"
+      },
+      "source_artifact_ids": [
+        "src:nsp-8:st-casimir-providence-case:2026-07-16"
+      ],
+      "target": {
+        "display_name": "Saint Patrick Parish, Providence",
+        "entity_id": "cn:institution:st-patrick-providence-ri",
+        "entity_type": "institution",
+        "slug": "st-patrick-providence-ri"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "confidence": "high",
+      "counting_effect": "records_custody_only",
+      "date": {
+        "certainty": "diocesan register",
+        "start": "2009-11-22"
+      },
+      "evidence_assertion_ids": [
+        "assert:pcs-6:kingston-lifecycle"
+      ],
+      "id": "rel:pcs-6:kingston-records-st-ignatius",
+      "identity_effect": "administrative_custody_only",
+      "projection_group": "records_custody",
+      "publication_state": "publishable",
+      "relationship_type": "institution-records-held-at-institution",
+      "source": {
+        "display_name": "Saint Mary of the Annunciation Lithuanian Roman Catholic Parish, Kingston",
+        "entity_id": "cn:institution:st-mary-annunciation-kingston-pa",
+        "entity_type": "institution",
+        "lifecycle": {
+          "end": "2009-11-22",
+          "source_assertion_ids": [
+            "assert:pcs-6:kingston-lifecycle"
+          ],
+          "start": "1902"
+        },
+        "slug": "st-mary-annunciation-kingston-pa"
+      },
+      "source_artifact_ids": [
+        "src:pcs-6:kingston-case:2026-07-16"
+      ],
+      "target": {
+        "display_name": "Saint Ignatius Loyola Parish, Kingston",
+        "entity_id": "cn:institution:st-ignatius-loyola-kingston-pa",
+        "entity_type": "institution",
+        "slug": "st-ignatius-loyola-kingston-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:pmc-7:st-george-lifecycle",
+          "observed_at": "2026-07-16"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "records_custody_only",
+      "date": {
+        "certainty": "archdiocesan record",
+        "start": "2019"
+      },
+      "evidence_assertion_ids": [
+        "assert:pmc-7:st-george-lifecycle"
+      ],
+      "id": "rel:pmc-7:st-george-records-st-john-paul",
+      "identity_effect": "administrative_custody_only",
+      "projection_group": "records_custody",
+      "publication_state": "publishable",
+      "relationship_type": "institution-records-held-at-institution",
+      "source": {
+        "display_name": "Saint George Lithuanian Roman Catholic Parish, Philadelphia",
+        "entity_id": "cn:institution:st-george-lithuanian-philadelphia-pa",
+        "entity_type": "institution",
+        "lifecycle": {
+          "end": "2019-07-01",
+          "source_assertion_ids": [
+            "assert:pmc-7:st-george-lifecycle"
+          ],
+          "start": "1902"
+        },
+        "slug": "st-george-lithuanian-philadelphia-pa"
+      },
+      "source_artifact_ids": [
+        "src:pmc-7:st-george-case:2026-07-16"
+      ],
+      "target": {
+        "display_name": "Saint John Paul II Parish, Port Richmond",
+        "entity_id": "cn:institution:st-john-paul-ii-port-richmond-pa",
+        "entity_type": "institution",
+        "slug": "st-john-paul-ii-port-richmond-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:successor-2:manhattan-site",
+          "observed_at": "2026-07-25"
+        }
+      ],
+      "confidence": "medium",
+      "counting_effect": "records_custody_only",
+      "date": {
+        "certainty": "current-condition case file",
+        "end": null,
+        "label": "sacramental records transferred to Saint Anthony of Padua",
+        "start": "after 2007 closure"
+      },
+      "evidence_assertion_ids": [
+        "assert:successor-2:manhattan-site"
+      ],
+      "id": "rel:successor-2:manhattan-records",
+      "identity_effect": "administrative_custody_only",
+      "projection_group": "records_custody",
+      "publication_state": "publishable",
+      "relationship_type": "institution-records-held-at-institution",
+      "source": {
+        "display_name": "Our Lady of Vilnius Lithuanian Roman Catholic Parish, Manhattan",
+        "entity_id": "cn:institution:our-lady-of-vilnius-manhattan-ny",
+        "entity_type": "institution",
+        "lifecycle": {
+          "end": "2007-02-26 worship access ended",
+          "source_assertion_ids": [
+            "assert:successor-2:manhattan-lifecycle"
+          ],
+          "start": "1905 centennial reading; canonical start unresolved"
+        },
+        "slug": "our-lady-of-vilnius-manhattan-ny"
+      },
+      "source_artifact_ids": [
+        "src:successor-2:manhattan-case:2026-07-25"
+      ],
+      "target": {
+        "display_name": "Saint Anthony of Padua Parish, Sullivan Street",
+        "entity_id": "cn:institution:st-anthony-padua-sullivan-street-ny",
+        "entity_type": "institution",
+        "slug": "st-anthony-padua-sullivan-street-ny"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "confidence": "high",
+      "counting_effect": "records_custody_only",
+      "date": {
+        "certainty": "official_decree",
+        "end": null,
+        "label": "Saint Joseph registers and historical documents preserved at Our Lady of Mount Carmel",
+        "start": "2024-05-01"
+      },
+      "evidence_assertion_ids": [
+        "assert:waterbury:st-joseph-records-at-olmc"
+      ],
+      "id": "rel:waterbury:st-joseph-records-at-olmc",
+      "identity_effect": "administrative_custody_only",
+      "projection_group": "records_custody",
+      "publication_state": "publishable",
+      "relationship_type": "institution-records-held-at-institution",
+      "source": {
+        "display_name": "Saint Joseph Lithuanian Catholic Parish, Waterbury",
+        "entity_id": "cn:institution:st-joseph-waterbury-ct",
+        "entity_type": "institution",
+        "lifecycle": {
+          "end": "2024-05-01",
+          "source_assertion_ids": [
+            "assert:waterbury:st-joseph-created-1894",
+            "assert:waterbury:st-joseph-juridic-end-2024"
+          ],
+          "start": "1894-03-28"
+        },
+        "slug": "st-joseph-waterbury-ct"
+      },
+      "source_artifact_ids": [
+        "src:archdiocese-hartford:waterbury-merger-decree:2024-03-15"
+      ],
+      "target": {
+        "display_name": "Our Lady of Mount Carmel Parish, Waterbury",
+        "entity_id": "cn:institution:our-lady-mount-carmel-waterbury-ct",
+        "entity_type": "institution",
+        "slug": "our-lady-mount-carmel-waterbury-ct"
+      }
+    }
+  ],
   "regional_views": {
     "pennsylvania_coal_region": {
       "counts": {
@@ -18974,7 +19631,7 @@
       "unit": "distinct U.S. Roman Catholic parish institution"
     }
   },
-  "revision_id": "canonical-infographic-units-2026-08-11-wider-catholic-life-geocodes",
+  "revision_id": "canonical-infographic-units-2026-08-14-continuity-taxonomy",
   "schema": "culturenet-parish-infographic-projection.v1",
   "unit_contracts": [
     {
@@ -19017,7 +19674,13 @@
       "counted_in_public_institution_total": false,
       "id": "institution_continuity",
       "population": 51,
-      "unit": "accepted typed relationship between distinct institutions or same-entity phases"
+      "unit": "typed institutional, community, site, identity, or future-plan relationship"
+    },
+    {
+      "counted_in_public_institution_total": false,
+      "id": "records_custody",
+      "population": 7,
+      "unit": "documented custody relationship for sacramental or institutional records"
     }
   ],
   "wider_catholic_life": {

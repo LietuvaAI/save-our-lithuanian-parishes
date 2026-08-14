@@ -29,7 +29,40 @@ export type AllProfilesDirectoryRow = {
   profileHref: string;
 };
 
-type DirectoryView = "outcome" | "az";
+type DirectoryView = "tradition" | "outcome" | "az";
+
+type TraditionGroup = {
+  value: PublicationInstitutionClass;
+  label: string;
+  description: string;
+};
+
+const TRADITION_GROUPS: TraditionGroup[] = [
+  {
+    value: "roman_catholic",
+    label: "Roman Catholic parishes and missions",
+    description:
+      "Roman Catholic parishes and missions form the historical institution census used by the Parish & Mission Outcomes view.",
+  },
+  {
+    value: "national_catholic_pncc",
+    label: "National Catholic (PNCC) communities",
+    description:
+      "Lithuanian communities affiliated with the Polish National Catholic Church are listed separately from Roman Catholic institutions.",
+  },
+  {
+    value: "independent_catholic",
+    label: "Independent Catholic communities",
+    description:
+      "Catholic communities outside the Roman Catholic and PNCC jurisdictions are preserved as their own tradition.",
+  },
+  {
+    value: "non_catholic_christian",
+    label: "Protestant congregations",
+    description:
+      "Lithuanian Protestant congregations are part of the 155-profile public record but not the Roman Catholic outcome population.",
+  },
+];
 
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const collator = new Intl.Collator("lt", {
@@ -126,7 +159,7 @@ export default function AllProfilesDirectory({
 }: {
   rows: AllProfilesDirectoryRow[];
 }) {
-  const [view, setView] = useState<DirectoryView>("outcome");
+  const [view, setView] = useState<DirectoryView>("tradition");
   const [query, setQuery] = useState("");
   const [state, setState] = useState("all");
   const [jurisdiction, setJurisdiction] = useState("all");
@@ -218,9 +251,21 @@ export default function AllProfilesDirectory({
           >
             <button
               type="button"
+              onClick={() => setView("tradition")}
+              aria-pressed={view === "tradition"}
+              className={`px-[14px] py-2 ${
+                view === "tradition"
+                  ? "bg-foreground text-background"
+                  : "text-muted hover:bg-band hover:text-foreground"
+              }`}
+            >
+              By tradition
+            </button>
+            <button
+              type="button"
               onClick={() => setView("outcome")}
               aria-pressed={view === "outcome"}
-              className={`px-[14px] py-2 ${
+              className={`border-l border-rule px-[14px] py-2 ${
                 view === "outcome"
                   ? "bg-foreground text-background"
                   : "text-muted hover:bg-band hover:text-foreground"
@@ -316,6 +361,39 @@ export default function AllProfilesDirectory({
               Clear search and filters
             </button>
           </section>
+        ) : view === "tradition" ? (
+          <div>
+            {TRADITION_GROUPS.map((group) => {
+              const sectionRows = filtered.filter(
+                (row) => row.institutionClass === group.value,
+              );
+              if (sectionRows.length === 0) return null;
+              return (
+                <section
+                  key={group.value}
+                  id={`profiles-tradition-${group.value}`}
+                  className="scroll-mt-40 pb-1.5 pt-[22px]"
+                >
+                  <div className="flex items-baseline gap-2.5 border-b-2 border-foreground pb-2">
+                    <h2 className="font-serif text-directory-section font-semibold">
+                      {group.label}
+                    </h2>
+                    <span className="font-mono text-support-copy text-muted">
+                      {sectionRows.length}
+                    </span>
+                  </div>
+                  <p className="mt-2 max-w-[760px] text-directory-description text-[#57534e] dark:text-muted">
+                    {group.description}
+                  </p>
+                  <ol className="grid gap-x-7 pt-1.5 lg:grid-cols-3">
+                    {sectionRows.map((row) => (
+                      <DirectoryEntry key={row.slug} row={row} />
+                    ))}
+                  </ol>
+                </section>
+              );
+            })}
+          </div>
         ) : view === "outcome" ? (
           <div>
             {GROUP_ORDER.map((group) => {

@@ -172,12 +172,13 @@ export default function AboutTheDataPage() {
               </tr>
               <tr>
                 <th className="py-3 pr-4 font-semibold">
-                  Where Parish Life Continued
+                  How Parish Histories Connect
                 </th>
                 <td className="py-3">
-                  {siteFigures.continuity.relationships} typed continuity
-                  relationships among institutions. A merger or succession
-                  connects records; it does not collapse distinct parishes.
+                  {siteFigures.continuity.relationships} typed relationships,
+                  separated into institutional changes, community or worship
+                  destinations, identity history, and future plans. Records
+                  custody is tracked independently.
                 </td>
               </tr>
               <tr>

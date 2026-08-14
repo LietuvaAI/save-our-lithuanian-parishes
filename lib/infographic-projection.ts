@@ -225,7 +225,21 @@ export type ContinuityEdge = {
   date?: Record<string, unknown> | null;
   evidence_assertion_ids: string[];
   source_artifact_ids: string[];
+  taxonomy: {
+    dimension:
+      | "institutional_transition"
+      | "community_continuity"
+      | "worship_site_continuity"
+      | "identity_history"
+      | "future_plan";
+    form: string;
+    public_label: string;
+    temporal_state: "completed" | "historical" | "planned";
+    certainty: "established" | "canonical_form_unresolved";
+  };
 };
+
+export type RecordsCustodyEdge = Omit<ContinuityEdge, "taxonomy">;
 
 type InfographicProjection = {
   schema: string;
@@ -252,6 +266,7 @@ type InfographicProjection = {
     building_site_entities: number;
     physical_worship_sites: number;
     institution_continuity_edges: number;
+    records_custody_edges: number;
     coal_region_parish_institutions: number;
     canadian_comparator_parishes: number;
     site_r10_founding_fallbacks: number;
@@ -261,6 +276,7 @@ type InfographicProjection = {
   institution_history: InstitutionHistoryRow[];
   building_site_history: BuildingSiteHistoryRow[];
   continuity_edges: ContinuityEdge[];
+  records_custody_edges: RecordsCustodyEdge[];
   current_pastoral_network: {
     unit: string;
     counted_in_public_institution_total: false;
@@ -366,6 +382,8 @@ export const canonicalInfographics = projectionData as InfographicProjection;
 export const institutionHistory = canonicalInfographics.institution_history;
 export const buildingSiteHistory = canonicalInfographics.building_site_history;
 export const continuityEdges = canonicalInfographics.continuity_edges;
+export const recordsCustodyEdges =
+  canonicalInfographics.records_custody_edges;
 export const currentPastoralNetwork =
   canonicalInfographics.current_pastoral_network;
 export const widerCatholicLife = canonicalInfographics.wider_catholic_life;
