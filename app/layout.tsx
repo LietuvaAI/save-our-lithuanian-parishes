@@ -68,12 +68,23 @@ const NAV: NavItem[] = [
         label: "Where Parish Life Continued",
       },
       { section: "History" },
-      { href: "/history", label: "The Rise and the Loss" },
+      { href: "/history", label: "History Overview" },
       {
         href: "/pennsylvania-coal-region",
-        label: "Pennsylvania Coal Region",
+        label: "Pennsylvania Coal Country",
       },
-      { href: "/history/loss-by-diocese", label: "By Diocese" },
+      {
+        href: "/history/two-waves-across-a-century",
+        label: "Two Waves Across a Century",
+      },
+      {
+        href: "/history/parishes-alive-year-by-year",
+        label: "Parishes Alive, Year by Year",
+      },
+      {
+        href: "/history/loss-by-diocese",
+        label: "The Loss, Diocese by Diocese",
+      },
       { section: "Other traditions" },
       {
         href: "/national-catholic",

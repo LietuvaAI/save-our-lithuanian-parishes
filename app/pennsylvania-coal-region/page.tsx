@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { EndStatePill } from "@/components/EndStatePill";
-import HistoryChapterNav from "@/components/HistoryChapterNav";
+import HistoryNav from "@/components/HistoryNav";
 import photosData from "@/data/photos.json";
 import { historyProjection } from "@/lib/history-projection";
 import { pennsylvaniaCoalRegion } from "@/lib/infographic-projection";
@@ -94,18 +94,18 @@ export default function PennsylvaniaCoalRegionPage() {
 
   return (
     <article className="mx-auto max-w-5xl px-4 pb-12 pt-8">
-      <HistoryChapterNav current="/pennsylvania-coal-region" />
+      <HistoryNav current="/pennsylvania-coal-region" />
       <header className="max-w-4xl">
         <p className="text-small-copy uppercase tracking-widest text-muted">
-          Chapter I · The beginning
+          Origins in Pennsylvania
         </p>
         <h1 className="mt-1 font-serif text-outcomes-title font-semibold tracking-tight">
           Pennsylvania Coal Country
         </h1>
         <p className="mt-3 max-w-3xl font-serif text-lead-copy leading-relaxed text-muted">
           America&rsquo;s Lithuanian parish story begins in the coal towns of
-          Pennsylvania. This chapter follows those first foundations and the
-          complete {pennsylvaniaCoalRegion.population}-institution northeastern
+          Pennsylvania. It follows those first foundations and the complete{" "}
+          {pennsylvaniaCoalRegion.population}-institution northeastern
           Pennsylvania regional comparison.
         </p>
       </header>
@@ -278,7 +278,7 @@ export default function PennsylvaniaCoalRegionPage() {
           href="/history/two-waves-across-a-century"
           className="font-medium text-foreground underline hover:text-accent"
         >
-          Next: two waves across a century
+          Two waves across a century
         </Link>
         {" · "}
         <Link
