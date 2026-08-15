@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #fffdf9; color: #1c1917; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #2d6a4f; }
+  a:hover { color: #1c1917; }
+  * { box-sizing: border-box; }
+</style>
+</helmet>
+<div>
+
+  <div style="border-bottom: 3px solid transparent; border-image: linear-gradient(to right, #f5b500 33.4%, #00694d 33.4%, #00694d 66.7%, #a72c2c 66.7%) 1;">
+    <div style="max-width: 1120px; margin: 0 auto; padding: 0 24px;">
+      <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 20px; padding: 14px 0;">
+        <a href="/" style="flex: 0 0 auto; font-family: 'Source Serif 4', Georgia, serif; font-size: 13px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: #1c1917; text-decoration: none; white-space: nowrap;">Save Our Lithuanian Parishes</a>
+        <nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin-left: auto;">
+          <a href="/parishes" style="font-family: 'Source Serif 4', Georgia, serif; font-size: 10.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #1c1917; text-decoration: none; padding: 4px 0; border-bottom: 1px solid transparent; white-space: nowrap;" style-hover="border-bottom-color: #2d6a4f;">All Profiles</a>
+          <a href="/where-every-parish-ended-up" style="font-family: 'Source Serif 4', Georgia, serif; font-size: 10.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #1c1917; text-decoration: none; padding: 4px 0; border-bottom: 1px solid transparent; white-space: nowrap;" style-hover="border-bottom-color: #2d6a4f;">Outcomes</a>
+          <a href="/history" style="font-family: 'Source Serif 4', Georgia, serif; font-size: 10.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #1c1917; text-decoration: none; padding: 4px 0; border-bottom: 1px solid transparent; white-space: nowrap;" style-hover="border-bottom-color: #2d6a4f;">The Rise and the Loss</a>
+          <a href="#guidance" style="font-family: 'Source Serif 4', Georgia, serif; font-size: 10.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #1c1917; text-decoration: none; padding: 4px 0; border-bottom: 1px solid transparent; white-space: nowrap;" style-hover="border-bottom-color: #2d6a4f;">Guidance ▾</a>
+          <a href="/about" style="font-family: 'Source Serif 4', Georgia, serif; font-size: 10.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #1c1917; text-decoration: none; padding: 4px 0; border-bottom: 1px solid transparent; white-space: nowrap;" style-hover="border-bottom-color: #2d6a4f;">About ▾</a>
+          <a href="https://blog.saveourlithuanianparishes.org" style="font-family: 'Source Serif 4', Georgia, serif; font-size: 10.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #2d6a4f; text-decoration: none; padding: 4px 0; border-bottom: 1px solid transparent; white-space: nowrap;" style-hover="border-bottom-color: #2d6a4f;">Židinys ↗</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width: 1120px; margin: 0 auto; padding: 0 24px 88px;">
+
+    <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 8px; margin-top: 20px;">
+      <sc-for list="{{ heroArt }}" as="a" hint-placeholder-count="12">
+        <a href="{{ a.href }}" title="{{ a.title }}" aria-label="{{ a.title }}" style="{{ a.style }}"></a>
+      </sc-for>
+    </div>
+
+    <div style="text-align: center; margin-top: 26px;">
+      <p style="margin: 0; font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase; color: #78716c; font-family: 'Source Serif 4', Georgia, serif;">Amerikos lietuvių parapijos</p>
+      <h1 style="margin: 8px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(24px, 2.8vw, 31px); line-height: 1.2; letter-spacing: 0.12em; text-transform: uppercase;">America's Lithuanian Parishes</h1>
+    </div>
+    <p style="margin: 14px auto 0; max-width: 80ch; text-align: center; font-size: 14.5px; line-height: 1.6; color: #57534e; text-wrap: pretty;">America's Lithuanian parishes have long been the <i>židiniai</i> of our communities — the hearths where faith was lived, language was spoken, memory was preserved, and identity was formed. This project traces their complete history, from the earliest foundations to the communities discerning their future today. <a href="/about">About the project →</a></p>
+
+    <div style="margin-top: 34px; border: 1px dashed #b3aca2; background: #faf7f1; min-height: 380px; display: flex; align-items: center; justify-content: center; padding: 40px 24px;">
+      <p style="margin: 0; max-width: 52ch; text-align: center; font-size: 13.5px; line-height: 1.6; color: #78716c;">Existing census map with its right-hand key and filters — <b style="font-weight: 700; color: #57534e;">unchanged</b>. This redesign touches only what sits above and below it.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px 24px; margin-top: 32px; padding-top: 18px; border-top: 1px solid #e7e5e4;">
+      <sc-for list="{{ tiles }}" as="t" hint-placeholder-count="5">
+        <a href="{{ t.href }}" style="{{ t.style }}">
+          <p style="margin: 0; display: flex; align-items: baseline; gap: 7px;"><span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 26px; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; color: #1c1917;">{{ t.n }}</span><span style="font-size: 11.5px; font-weight: 600; color: #78716c;">{{ t.cta }} →</span></p>
+          <p style="margin: 5px 0 0; font-size: 11.5px; line-height: 1.35; color: #57534e; text-wrap: pretty;">{{ t.label }}</p>
+        </a>
+      </sc-for>
+    </div>
+
+    <div id="happening-now" style="margin-top: 52px; padding-bottom: 9px; border-bottom: 1px solid #1c1917;">
+      <h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 19px; font-weight: 600; line-height: 1.25; letter-spacing: 0.1em; text-transform: uppercase;">Parishes at a crossroads</h2>
+    </div>
+    <p style="margin: 10px 0 0; max-width: 76ch; font-size: 13px; line-height: 1.55; color: #57534e; text-wrap: pretty;">Four parishes face decisions about their future right now, and six more situations are being tracked — planned consolidations, churches on the market, buildings facing demolition. Each entry says what changed, when, and how to help.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 30px; margin-top: 6px;">
+      <sc-for list="{{ now }}" as="w" hint-placeholder-count="10">
+        <div style="padding: 16px 0; border-bottom: 1px solid #efece6;">
+          <div aria-hidden="true" style="{{ w.thumbStyle }}"></div>
+          <div style="min-width: 0; margin-top: 10px;">
+            <sc-if value="{{ w.hasLink }}" hint-placeholder-val="{{ true }}">
+              <a href="{{ w.href }}" style="font-family: 'Source Serif 4', Georgia, serif; font-size: 16px; font-weight: 600; line-height: 1.3; text-decoration: none; color: #1c1917;" style-hover="color: #2d6a4f;">{{ w.entity }}</a>
+            </sc-if>
+            <sc-if value="{{ w.noLink }}" hint-placeholder-val="{{ false }}">
+              <span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 16px; font-weight: 600; line-height: 1.3;">{{ w.entity }}</span>
+            </sc-if>
+            <p style="margin: 3px 0 0; font-size: 12.5px; line-height: 1.4; color: #78716c;">{{ w.place }} · {{ w.diocese }}</p>
+            <div style="{{ w.boxStyle }}">
+              <p style="margin: 0; font-size: 10.5px; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; color: {{ w.tagColor }};">{{ w.tag }}</p>
+              <p style="margin: 4px 0 0; font-size: 12px; line-height: 1.55; color: #57534e; text-wrap: pretty;">{{ w.what }}</p>
+              <p style="margin: 6px 0 0; display: flex; flex-wrap: wrap; gap: 3px 14px; font-size: 12px; font-weight: 600;">
+                <sc-if value="{{ w.hasLink }}" hint-placeholder-val="{{ true }}"><a href="{{ w.href }}">Profile</a></sc-if>
+                <sc-if value="{{ w.hasHearth }}" hint-placeholder-val="{{ false }}"><a href="{{ w.hearthUrl }}">What's happening</a></sc-if>
+                <sc-if value="{{ w.hasAction }}" hint-placeholder-val="{{ false }}"><a href="{{ w.actionUrl }}">{{ w.actionLabel }} →</a></sc-if>
+              </p>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 40px; margin-top: 52px; padding: 22px 0 0; border-top: 1px solid #e7e5e4;">
+      <div style="flex: 1 1 380px; min-width: 0;">
+        <p style="margin: 0; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: #78716c;">Židinys · The Hearth</p>
+        <p style="margin: 7px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 21px; font-weight: 600; line-height: 1.3;">Follow new findings and developments</p>
+        <p style="margin: 6px 0 0; max-width: 60ch; font-size: 13px; line-height: 1.55; color: #57534e;">Židinys (The Hearth) follows the history — and the unfinished story — of America’s Lithuanian parishes. It publishes new findings from the archives, accounts of what happened to individual parishes, and updates from communities working to protect what remains. Subscribe to receive each article by email.</p>
+      </div>
+      <a href="https://blog.saveourlithuanianparishes.org/subscribe" style="flex: 0 0 auto; padding: 11px 22px; background: #2d6a4f; color: #fffdf9; font-size: 13.5px; font-weight: 700; text-decoration: none;" style-hover="background: #1c1917; color: #fffdf9;">Subscribe to Židinys</a>
+    </div>
+
+  </div>
+
+  <div style="border-top: 1px solid #1c1917; background: #faf7f1;">
+    <div style="max-width: 1120px; margin: 0 auto; padding: 22px 24px 22px;">
+      <div>
+        <p style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 12px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase;">Save Our Lithuanian Parishes</p>
+        <p style="margin: 6px 0 0; max-width: 76ch; font-size: 11.5px; line-height: 1.55; color: #57534e; text-wrap: pretty;">The living history of America's Lithuanian parishes, missions, and congregations — how they began, how they changed, and where they stand today. <a href="/about">About the project</a> · <a href="/about-the-data">About the data</a></p>
+      </div>
+      <p style="margin: 14px 0 0; padding-top: 12px; border-top: 1px solid #e7e5e4; font-size: 11.5px; line-height: 1.6; color: #78716c; text-wrap: pretty;">Archive and data foundation: <a href="https://archyvas.ziburioltmokykla.org">Skaitmeniniai Knygnešiai</a>, Žiburio Lithuanian School student interns at <a href="/parishes/dievo-apvaizdos-southfield-mi">Divine Providence Lithuanian Parish</a> in Southfield.</p>
+      <p style="margin: 5px 0 0; font-size: 11.5px; line-height: 1.6; color: #78716c;">© 2026 Save Our Lithuanian Parishes · Powered by <a href="https://lietuva.ai">Lietuva.AI</a> · Documentation, not legal or canonical advice · <a href="/legal">Legal, attribution &amp; data use</a> · <a href="mailto:info@saveourlithuanianparishes.org">Contact</a></p>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const SITE = "https://saveourlithuanianparishes.org";
+const HERO = [
+  ["shenandoah-st-george-line-drawing.png", "/parishes/sv-jurgio-shenandoah-pa", "St. George, Shenandoah"],
+  ["mount-carmel-holy-cross-line-drawing.png", "/parishes/sv-kryziaus-mount-carmel-pa", "Holy Cross, Mount Carmel"],
+  ["wilkes-barre-holy-trinity-line-drawing.png", "/parishes/svc-trejybes-wilkes-barre-pa", "Holy Trinity, Wilkes-Barre"],
+  ["pittsburgh-st-casimir-line-drawing.png", "/parishes/sv-kazimiero-pittsburgh-pa", "St. Casimir, Pittsburgh"],
+  ["chicago-st-george-line-drawing.png", "/parishes/sv-jurgio-chicago-il", "St. George, Chicago"],
+  ["chicago-holy-cross-line-drawing.png", "/parishes/sv-kryziaus-chicago-il", "Holy Cross, Chicago"],
+  ["manhattan-our-lady-of-vilnius-line-drawing.png", "/parishes/ausros-vartu-manhattan-ny", "Our Lady of Vilnius, Manhattan"],
+  ["boston-st-peter-line-drawing.png", "/parishes/sv-petro-boston-ma", "St. Peter, South Boston"],
+  ["waterbury-st-joseph-line-drawing.png", "/parishes/sv-juozapo-waterbury-ct", "St. Joseph, Waterbury"],
+  ["worcester-st-casimir-line-drawing.png", "/parishes/sv-kazimiero-worcester-ma", "St. Casimir, Worcester"],
+  ["baltimore-st-alphonsus-line-drawing.png", "/parishes/sv-alfonso-baltimore-md", "St. Alphonsus, Baltimore"],
+  ["southfield-divine-providence-current-line-drawing.png", "/parishes/dievo-apvaizdos-southfield-mi", "Divine Providence, Southfield"],
+];
+const KIND_TAG = { active: "Active campaign", watch: "Development to monitor", building: "Building at risk" };
+const BOX = { active: "#f8efef", watch: "#f1efeb", building: "#f5edda" };
+
+class Component extends DCLogic {
+  state = { wl: null, ld: null };
+
+  componentDidMount() {
+    fetch("watch-list.json").then((r) => r.json()).then((wl) => this.setState({ wl }));
+    fetch("line-drawings.json").then((r) => r.json()).then((ld) => this.setState({ ld }));
+  }
+
+  // First two sentences, ignoring abbreviation periods (St., Sts., Rev., Kun., Švč. …).
+  brief2(s) {
+    s = String(s || "");
+    const ABBR = /(?:\b(?:St|Sts|Fr|Rev|Kun|Br|Mons|Dr|Šv|Švč)|\b[A-ZŠŽ])$/;
+    const re = /[.!?](?=\s|$)/g;
+    const ends = [];
+    let m;
+    while ((m = re.exec(s))) if (!ABBR.test(s.slice(0, m.index))) ends.push(m.index);
+    return ends.length >= 2 ? s.slice(0, ends[1] + 1) : s;
+  }
+
+  thumbStyle(slug) {
+    const ld = this.state.ld;
+    const e = slug && ld ? ld[slug] : null;
+    return e
+      ? "width: 100%; aspect-ratio: 3 / 2; background-color: #fffdf9; border: 1px solid #efece6; " +
+        'background-image: url("' + SITE + e.src + '"); background-size: contain; ' +
+        "background-position: center; background-repeat: no-repeat; background-blend-mode: multiply;"
+      // No cleared drawing: keep the empty cream frame so titles stay aligned.
+      : "width: 100%; aspect-ratio: 3 / 2; background-color: #fffdf9; border: 1px solid #efece6;";
+  }
+
+  renderVals() {
+    const wl = this.state.wl;
+    const heroArt = HERO.map(([f, href, title]) => ({
+      key: f, href, title,
+      // contain, not cover: every church reads whole at small size
+      style:
+        "display: block; aspect-ratio: 1; background-color: #faf7f1; border: 1px solid #efece6; " +
+        'background-image: url("' + SITE + "/images/parishes/" + f + '"); background-size: contain; ' +
+        "background-position: center; background-repeat: no-repeat; background-blend-mode: multiply;",
+    }));
+
+    const ORDER = { active: 0, watch: 1, building: 2 };
+    const bn = (h) => (h ? h.split("/").pop() : null);
+    const now = wl
+      ? [...wl.items].sort((a, b) => ORDER[a.kind] - ORDER[b.kind] || a.entity.localeCompare(b.entity)).map((x) => ({
+          key: x.id,
+          tag: KIND_TAG[x.kind] || "Development to monitor",
+          tagColor: x.kind === "watch" ? "#78716c" : "#7d1f1f",
+          boxStyle: "margin-top: 7px; padding: 8px 10px; background: " + (BOX[x.kind] || "#f1efeb") + ";",
+          entity: x.entity,
+          thumbStyle: this.thumbStyle(bn(x.href)),
+          href: x.href || "#",
+          hasLink: !!x.href,
+          noLink: !x.href,
+          place: x.place,
+          diocese: x.diocese,
+          what: this.brief2(x.what),
+          hearthUrl: x.hearthUrl || "#",
+          hasHearth: !!x.hearthUrl,
+          actionUrl: x.actionUrl || "#",
+          hasAction: !!x.actionUrl,
+          actionLabel: (x.actionLabel || "").replace(/\s*→\s*$/, ""),
+        }))
+      : [];
+
+    return {
+      heroArt,
+      nNow: wl ? now.length : "…",
+      now,
+      tiles: [
+        { key: "a", n: 155, label: "communities — all public profiles", cta: "Browse", href: "/parishes" },
+        { key: "b", n: 137, label: "RC parishes & missions", cta: "Outcomes", href: "/where-every-parish-ended-up" },
+        { key: "c", n: 131, label: "church buildings", cta: "Buildings", href: "/where-every-parish-ended-up?view=buildings" },
+        { key: "d", n: 14, label: "places of Lithuanian worship today", cta: "Network", href: "/lithuanian-catholic-life-today" },
+      ].map((t) => ({
+        ...t,
+        style: "display: block; text-decoration: none; color: #1c1917;",
+      })),
+    };
+  }
+}
+</script>
+</body>
+</html>
