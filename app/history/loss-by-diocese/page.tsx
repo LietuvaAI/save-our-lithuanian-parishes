@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import HistoryNav from "@/components/HistoryNav";
 import HistoryDioceseLoss from "@/components/HistoryDioceseLoss";
 import { historyProjection } from "@/lib/history-projection";
 
@@ -18,7 +17,6 @@ export default function LossByDiocesePage() {
 
   return (
     <article className="mx-auto max-w-5xl px-4 pb-0 pt-8">
-      <HistoryNav current="/history/loss-by-diocese" />
       <header className="max-w-4xl">
         <p className="font-sans text-small-copy uppercase tracking-widest text-muted">
           Geography of loss
@@ -60,13 +58,6 @@ export default function LossByDiocesePage() {
       </div>
 
       <footer className="mt-10 border-t border-rule pt-5 font-sans text-support-copy text-muted">
-        <Link
-          href="/history"
-          className="font-medium text-foreground underline hover:text-accent"
-        >
-          History overview
-        </Link>
-        {" · "}
         <Link
           href="/where-every-parish-ended-up"
           className="font-medium text-foreground underline hover:text-accent"

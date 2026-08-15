@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import HistoryNav from "@/components/HistoryNav";
 import HistoryTwoWaves from "@/components/HistoryTwoWaves";
 import { historyProjection } from "@/lib/history-projection";
 
@@ -41,7 +39,6 @@ export default function TwoWavesAcrossACenturyPage() {
 
   return (
     <article className="mx-auto max-w-5xl px-4 pb-0 pt-8">
-      <HistoryNav current="/history/two-waves-across-a-century" />
       <header className="max-w-4xl">
         <p className="font-sans text-small-copy uppercase tracking-widest text-muted">
           Foundations and closures
@@ -94,21 +91,6 @@ export default function TwoWavesAcrossACenturyPage() {
         and therefore do not appear as dated squares.
       </p>
 
-      <footer className="mt-10 border-t border-rule pt-5 font-sans text-support-copy text-muted">
-        <Link
-          href="/history"
-          className="font-medium text-foreground underline hover:text-accent"
-        >
-          History overview
-        </Link>
-        {" · "}
-        <Link
-          href="/history/parishes-alive-year-by-year"
-          className="font-medium text-foreground underline hover:text-accent"
-        >
-          Parishes alive, year by year
-        </Link>
-      </footer>
     </article>
   );
 }
