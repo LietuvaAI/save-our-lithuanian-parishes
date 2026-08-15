@@ -72,8 +72,8 @@
   /* Homepage + shared shell values from the 2026-08-15 design reference. */
   --text-site-wordmark: 13px;
   --text-site-wordmark--line-height: 1.2;
-  --text-site-nav: 10.5px;
-  --text-site-nav--line-height: 1.2;
+  --text-site-nav: 12.5px;
+  --text-site-nav--line-height: 1.25;
   --text-site-footer-brand: 12px;
   --text-site-footer-brand--line-height: 1.2;
   --text-home-hero: clamp(24px, 3vw, 31px);
