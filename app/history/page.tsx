@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import HistoryNav from "@/components/HistoryNav";
 import { historyProjection } from "@/lib/history-projection";
 
 export const metadata: Metadata = {
@@ -46,7 +45,6 @@ export default function HistoryPage() {
 
   return (
     <article className="mx-auto max-w-5xl px-4 pb-0 pt-8">
-      <HistoryNav current="/history" />
       <header className="max-w-4xl">
         <p className="font-sans text-small-copy uppercase tracking-widest text-muted">
           History · 1880s to today

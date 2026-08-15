@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { EndStatePill } from "@/components/EndStatePill";
-import HistoryNav from "@/components/HistoryNav";
 import photosData from "@/data/photos.json";
 import { historyProjection } from "@/lib/history-projection";
 import { pennsylvaniaCoalRegion } from "@/lib/infographic-projection";
@@ -94,7 +93,6 @@ export default function PennsylvaniaCoalRegionPage() {
 
   return (
     <article className="mx-auto max-w-5xl px-4 pb-12 pt-8">
-      <HistoryNav current="/pennsylvania-coal-region" />
       <header className="max-w-4xl">
         <p className="text-small-copy uppercase tracking-widest text-muted">
           Origins in Pennsylvania
@@ -274,13 +272,6 @@ export default function PennsylvaniaCoalRegionPage() {
       </section>
 
       <footer className="mt-10 border-t border-rule pt-5 text-support-copy text-muted">
-        <Link
-          href="/history/two-waves-across-a-century"
-          className="font-medium text-foreground underline hover:text-accent"
-        >
-          Two waves across a century
-        </Link>
-        {" · "}
         <Link
           href="/where-every-parish-ended-up"
           className="font-medium text-foreground underline hover:text-accent"
