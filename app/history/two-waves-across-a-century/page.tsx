@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import HistoryChapterNav from "@/components/HistoryChapterNav";
+import HistoryNav from "@/components/HistoryNav";
 import HistoryTwoWaves from "@/components/HistoryTwoWaves";
 import { historyProjection } from "@/lib/history-projection";
 
@@ -41,10 +41,10 @@ export default function TwoWavesAcrossACenturyPage() {
 
   return (
     <article className="mx-auto max-w-5xl px-4 pb-0 pt-8">
-      <HistoryChapterNav current="/history/two-waves-across-a-century" />
+      <HistoryNav current="/history/two-waves-across-a-century" />
       <header className="max-w-4xl">
         <p className="font-sans text-small-copy uppercase tracking-widest text-muted">
-          Chapter II · Growth and closure
+          Foundations and closures
         </p>
         <h1 className="mt-1 font-serif text-outcomes-title font-semibold tracking-tight">
           Two Waves Across a Century
@@ -99,14 +99,14 @@ export default function TwoWavesAcrossACenturyPage() {
           href="/history"
           className="font-medium text-foreground underline hover:text-accent"
         >
-          All four history chapters
+          History overview
         </Link>
         {" · "}
         <Link
           href="/history/parishes-alive-year-by-year"
           className="font-medium text-foreground underline hover:text-accent"
         >
-          Next: parishes alive, year by year
+          Parishes alive, year by year
         </Link>
       </footer>
     </article>

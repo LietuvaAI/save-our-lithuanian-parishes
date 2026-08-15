@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HistoryAliveCurve from "@/components/HistoryAliveCurve";
-import HistoryChapterNav from "@/components/HistoryChapterNav";
+import HistoryNav from "@/components/HistoryNav";
 import { historyProjection } from "@/lib/history-projection";
 
 export const metadata: Metadata = {
@@ -27,10 +27,10 @@ export default function ParishesAliveYearByYearPage() {
 
   return (
     <article className="mx-auto max-w-5xl px-4 pb-0 pt-8">
-      <HistoryChapterNav current="/history/parishes-alive-year-by-year" />
+      <HistoryNav current="/history/parishes-alive-year-by-year" />
       <header className="max-w-4xl">
         <p className="font-sans text-small-copy uppercase tracking-widest text-muted">
-          Chapter III · The century arc
+          Institutional life over time
         </p>
         <h1 className="mt-1 font-serif text-outcomes-title font-semibold tracking-tight">
           Lithuanian Parishes Alive, Year by Year
@@ -107,14 +107,14 @@ export default function ParishesAliveYearByYearPage() {
           href="/history"
           className="font-medium text-foreground underline hover:text-accent"
         >
-          All four history chapters
+          History overview
         </Link>
         {" · "}
         <Link
           href="/history/loss-by-diocese"
           className="font-medium text-foreground underline hover:text-accent"
         >
-          Next: the loss, diocese by diocese
+          The loss, diocese by diocese
         </Link>
       </footer>
     </article>

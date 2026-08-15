@@ -170,6 +170,10 @@ const historyCoalPage = fs.readFileSync(
   path.join(ROOT, "app", "pennsylvania-coal-region", "page.tsx"),
   "utf8",
 );
+const historyNav = fs.readFileSync(
+  path.join(ROOT, "components", "HistoryNav.tsx"),
+  "utf8",
+);
 const historyChart = fs.readFileSync(
   path.join(ROOT, "components", "HistoryTwoWaves.tsx"),
   "utf8",
@@ -184,15 +188,16 @@ const historyDioceseMap = fs.readFileSync(
 );
 const historyDesignContract = [
   [historyPage, "px-4 pb-0 pt-8", "single bottom-spacing rhythm before the global footer"],
-  [historyPage, "A four-part history", "History gateway description"],
-  [historyPage, "Pennsylvania Coal Country", "first History chapter"],
-  [historyPage, "Two Waves Across a Century", "second History chapter"],
-  [historyPage, "Lithuanian Parishes Alive, Year by Year", "third History chapter"],
-  [historyPage, "The Loss, Diocese by Diocese", "fourth History chapter"],
-  [historyCoalPage, "Chapter I", "Coal Country chapter marker"],
-  [historyTwoWavesPage, "Chapter II", "Two Waves chapter marker"],
-  [historyAlivePage, "Chapter III", "year-by-year chapter marker"],
-  [historyDiocesePage, "Chapter IV", "diocese chapter marker"],
+  [historyPage, "History · 1880s to today", "History overview description"],
+  [historyPage, "Pennsylvania Coal Country", "Coal Country history page"],
+  [historyPage, "Two Waves Across a Century", "Two Waves history page"],
+  [historyPage, "Lithuanian Parishes Alive, Year by Year", "year-by-year history page"],
+  [historyPage, "The Loss, Diocese by Diocese", "diocese history page"],
+  [historyCoalPage, "Origins in Pennsylvania", "Coal Country subject marker"],
+  [historyTwoWavesPage, "Foundations and closures", "Two Waves subject marker"],
+  [historyAlivePage, "Institutional life over time", "year-by-year subject marker"],
+  [historyDiocesePage, "Geography of loss", "diocese subject marker"],
+  [historyNav, 'aria-label="History pages"', "History-page navigation"],
   [historyAlivePage, "leading-[1.7]", "15px/1.7 narrative rhythm"],
   [historyDiocesePage, "dioceses have", "approved diocese-loss heading"],
   [historyDiocesePage, "Each diocese below is shaded", "approved diocese-map instruction"],
@@ -213,6 +218,19 @@ const historyDesignContract = [
 ];
 for (const [source, fragment, label] of historyDesignContract) {
   if (!source.includes(fragment)) errors.push(`History: missing ${label}`);
+}
+for (const source of [
+  historyPage,
+  historyCoalPage,
+  historyTwoWavesPage,
+  historyAlivePage,
+  historyDiocesePage,
+  historyNav,
+]) {
+  if (/\bchapter\b/i.test(source)) {
+    errors.push("History: chapter framing returned to a public History page");
+    break;
+  }
 }
 for (const forbiddenHeading of [
   "From expansion to long contraction",

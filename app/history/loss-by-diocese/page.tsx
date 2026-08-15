@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import HistoryChapterNav from "@/components/HistoryChapterNav";
+import HistoryNav from "@/components/HistoryNav";
 import HistoryDioceseLoss from "@/components/HistoryDioceseLoss";
 import { historyProjection } from "@/lib/history-projection";
 
@@ -18,10 +18,10 @@ export default function LossByDiocesePage() {
 
   return (
     <article className="mx-auto max-w-5xl px-4 pb-0 pt-8">
-      <HistoryChapterNav current="/history/loss-by-diocese" />
+      <HistoryNav current="/history/loss-by-diocese" />
       <header className="max-w-4xl">
         <p className="font-sans text-small-copy uppercase tracking-widest text-muted">
-          Chapter IV · The geography of loss
+          Geography of loss
         </p>
         <h1 className="mt-1 font-serif text-outcomes-title font-semibold tracking-tight">
           The Loss, Diocese by Diocese
@@ -64,7 +64,7 @@ export default function LossByDiocesePage() {
           href="/history"
           className="font-medium text-foreground underline hover:text-accent"
         >
-          All four history chapters
+          History overview
         </Link>
         {" · "}
         <Link
