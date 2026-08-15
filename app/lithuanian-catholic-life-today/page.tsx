@@ -245,6 +245,10 @@ function NetworkCard({ card }: { card: LivingNetworkCardType }) {
 }
 
 function WiderCard({ card }: { card: WiderLifeCard }) {
+  if (!getClearedPhoto(card.portraitKey)) {
+    throw new Error(`${card.id}: wider Catholic-life card lacks cleared line art`);
+  }
+
   return (
     <article id={card.anchor} className="min-w-0 scroll-mt-5">
       <DrawingFrame
@@ -449,11 +453,11 @@ export default function LithuanianCatholicLifeTodayPage() {
 
       <section className="mt-12">
         <SectionHeader title="Wider Lithuanian Catholic life" count={view.counts.wider}>
-          Two current religious houses and one occasional-worship community are
-          documented separately. They remain visible without changing the{" "}
-          {view.counts.places}-place regular-worship count, the{" "}
-          {view.counts.directory}-entry Sielovada listing, or the historical
-          institution census.
+          Beyond the parish network, Lithuanian Catholic life continues at the
+          Franciscan friary in Kennebunk, the Immaculate Conception convent and
+          center in Putnam, and through occasional Lithuanian Masses in Atlanta.
+          Together they show forms of Catholic life that remain active outside
+          the regular parish-and-mission network.
         </SectionHeader>
         <div className="mt-4 grid grid-cols-[repeat(auto-fill,minmax(196px,1fr))] gap-x-[18px] gap-y-5">
           {view.widerCards.map((card) => (

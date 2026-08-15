@@ -1223,6 +1223,33 @@
       "rights": "own_work",
       "rightsNote": "Created by Save Our Lithuanian Parishes on 2026-08-14 from the public-facing exterior architecture of the 1942 St. Michael church at 1703 Jackson Street. The illustration records the building form in a new composition without redistributing the source photograph or its watermark.",
       "evidenceUrl": "https://global.truelithuania.com/northern-coal-region-scranton-1614/"
+    },
+    "kennebunk-lithuanian-franciscan-friary-line-drawing": {
+      "src": "/images/parishes/kennebunk-lithuanian-franciscan-friary-line-drawing.png",
+      "alt": "Line drawing of the Lithuanian Franciscan Friary in Kennebunk, Maine.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by the Lithuanian Franciscan order's official exterior photograph.",
+      "license": "CC BY 4.0",
+      "rights": "own_work",
+      "rightsNote": "Original project illustration created 2026-08-15 from the official Lithuanian Franciscan order's exterior view of the friary at 28 Beach Avenue. It preserves the Tudor-revival facade, entrance wing, roof cross, and Saint Francis statue while simplifying the grounds.",
+      "evidenceUrl": "https://ofm.lt/kas-mes-esame/brolijos/brolija-kenebunke/"
+    },
+    "putnam-immaculate-conception-sisters-line-drawing": {
+      "src": "/images/parishes/putnam-immaculate-conception-sisters-line-drawing.png",
+      "alt": "Line drawing of the Immaculate Conception Convent and Center in Putnam, Connecticut.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by the Immaculate Conception Center's official exterior photograph.",
+      "license": "CC BY 4.0",
+      "rights": "own_work",
+      "rightsNote": "Original project illustration created 2026-08-15 from the center's official exterior view at 600 Liberty Highway. It depicts the connected modern wing, stepped brick chapel facade, and older convent wing.",
+      "evidenceUrl": "https://www.immaculateconceptioncenter.org/"
+    },
+    "atlanta-lithuanian-catholic-community-line-drawing": {
+      "src": "/images/parishes/atlanta-lithuanian-catholic-community-line-drawing.png",
+      "alt": "Line drawing of the Catholic Church of St. Ann in Marietta, the host church for occasional Lithuanian Masses in the Atlanta area.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by the Catholic Church of St. Ann's official exterior photograph.",
+      "license": "CC BY 4.0",
+      "rights": "own_work",
+      "rightsNote": "Original project illustration created 2026-08-15 from St. Ann's official exterior view at 4905 Roswell Road. It depicts the host church used for occasional Lithuanian Masses and does not imply a separate Lithuanian-owned church or formally erected mission.",
+      "evidenceUrl": "https://st-ann.org/"
     }
   },
   "_registryNotes": {
