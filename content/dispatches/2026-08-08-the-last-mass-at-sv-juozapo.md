@@ -20,7 +20,7 @@ The question that is open is what happens to the windows. They were installed in
 
 #### What you can do
 
-**The canonical case is still running,** and its costs are paid rather than pledged: attorney’s fees, a commercial appraisal, the scanning of the parish’s historical documents. [The GoFundMe is here.](https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church)
+**The canonical case is still running,** and its costs — attorney’s fees, a commercial appraisal, the scanning of the parish’s historical documents — have been paid. [The GoFundMe is here.](https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church)
 
 **The full story of the closure and the appeal** is told in [Closed, Not Ended](https://blog.saveourlithuanianparishes.org/p/closed-not-ended-the-vatican-appeal). Every active campaign is tracked at [/under-threat](https://saveourlithuanianparishes.org/under-threat).
 

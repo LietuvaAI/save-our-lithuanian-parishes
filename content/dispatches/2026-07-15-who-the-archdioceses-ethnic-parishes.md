@@ -5,15 +5,15 @@ date: 2026-07-15
 substackUrl: https://blog.saveourlithuanianparishes.org/p/who-the-archdioceses-ethnic-parishes
 archivedAt: 2026-08-15
 ---
-Long before Divine Providence, ethnic parishes were the Archdiocese of Detroit. The whole story begins with one: Ste. Anne de Détroit, founded by French colonists on July 26, 1701, the second-oldest continuously operating Catholic parish in the United States, and the cathedral of the diocese when Rome erected it in 1833.
+The Archdiocese of Detroit began as an immigrant church. Ste. Anne de Détroit was founded by French colonists on July 26, 1701, the second-oldest continuously operating Catholic parish in the United States, and the cathedral of the diocese when Rome erected it in 1833.
 
-As wave after wave arrived (Irish, then Germans, then Poles in the 1850s, and later Belgians, Italians, Hungarians, Lithuanians, and more), each community built its own church, in its own language, with its own hands and money. These were “national” parishes: gathered around a people and a rite, not a neighborhood. When Polish immigrants were pushed to the back pews of a German parish, they organized St. Albertus in 1871, the first Polish parish in Detroit and the mother church of its Polonia. The Gospel was preached in Detroit in the languages of all these communities. The Archdiocese’s own register of closed parishes still reads like a roll call: Our Lady of Guadalupe, the Mexican parish, 1920–1957; St. Paul, the Maltese parish, 1920–1961.
+As wave after wave arrived (Irish, then Germans, then Poles in the 1850s, and later Belgians, Italians, Hungarians, Lithuanians, and more), each community built its own church, in its own language, with its own hands and money. These were “national” parishes: gathered around a people and a rite, not a neighborhood. When Polish immigrants were pushed to the back pews of a German parish, they organized St. Albertus in 1871, the first Polish parish in Detroit and the mother church of its Polonia. The Archdiocese’s register of closed parishes records Our Lady of Guadalupe, the Mexican parish, 1920–1957; St. Paul, the Maltese parish, 1920–1961.
 
 As the auto plants turned Detroit into a boomtown (Ford, Dodge, and Packard drawing Poles, Italians, and Hungarians by the tens of thousands), the immigrant church rose at the same pace: in the 1920s alone, forty-six new churches were founded in the city. Their people built the largest churches in the state. Sweetest Heart of Mary, raised by Detroit’s Poles and dedicated in 1893, drew more than 10,000 to its opening and is still the largest Catholic church in Michigan; St. Florian, built for the Poles who came to work at Dodge, was the second-largest parish in Detroit by the 1920s. The schools, charities, and institutions that became the Archdiocese were, in large part, immigrant-built.
 
-The ethnic parishes didn’t appear alongside the Archdiocese of Detroit; they built it. The thirteen that remain are what’s left of that backbone.
+Thirteen of those national parishes remain.
 
-Divine Providence isn’t the only parish in the Archdiocese of Detroit defined by a people rather than a place. Across the Archdiocese, 13 parishes are “ethnic” or “national” parishes, gathered around a language and a rite, drawing their members from across the region rather than from a single neighborhood. They are the Slovak, Korean, Albanian, Polish, Vietnamese, Italian, Hungarian, Croatian, and Lithuanian communities of metro Detroit. Here is who they are, what their books look like, and where Divine Providence sits among them.
+Divine Providence isn’t the only parish in the Archdiocese of Detroit defined by a people rather than a place. Across the Archdiocese, 13 parishes are “ethnic” or “national” parishes, gathered around a language and a rite, drawing their members from across the region rather than from a single neighborhood. They are the Slovak, Korean, Albanian, Polish, Vietnamese, Italian, Hungarian, Croatian, and Lithuanian communities of metro Detroit.
 ![](https://substackcdn.com/image/fetch/$s_!R60A!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5612019e-df01-4aa7-99b6-9121f1825e17_1972x1292.png)
 ### Small, and spread across the Archdiocese
 
@@ -25,35 +25,35 @@ By raw size, Divine Providence sits near the bottom. By what it holds per parish
 ![](https://substackcdn.com/image/fetch/$s_!gs4e!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbcfc4947-f170-4fe9-a848-96dff5bf39cb_1700x1071.png)
 ### The ethnic parishes as a set
 
-As a group, the ethnic parishes are smaller than the rest of the Archdiocese (a median of 386 weekly, against 538 elsewhere) and markedly leaner. Every one of the thirteen is debt-free, against 88% of the rest, and their median reserves per parishioner run higher: $2,240 versus $1,680. These are small, self-reliant communities that have been funding themselves. Divine Providence is the most extreme example of that pattern, but it is a pattern, not an exception.
+As a group, the ethnic parishes are smaller than the rest of the Archdiocese (a median of 386 weekly, against 538 elsewhere) and markedly leaner. Every one of the thirteen is debt-free, against 88% of the rest, and their median reserves per parishioner run higher: $2,240 versus $1,680.
 ![](https://substackcdn.com/image/fetch/$s_!7b4S!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F07d341bd-a016-43ad-9135-539eaa9cb0d2_1870x918.png)
-### A backbone that still holds
+### The thirteen as a group
 
-Taken together, the thirteen still show the founders’ pattern. As a group they hold roughly $14.2 million in unrestricted reserves and, in the most recent year, ran a combined surplus of nearly $1 million, with seven of the thirteen in the black. These are not wards of the Archdiocese; they are among its most self-reliant units.
+As a group the thirteen hold roughly $14.2 million in unrestricted reserves and, in the most recent year, ran a combined surplus of nearly $1 million, with seven of the thirteen in the black.
 
-Nor are they spent. In 2024 the thirteen produced 1,089 life-giving sacraments: 355 baptisms, 335 first communions, 277 confirmations, and 122 marriages, against 188 funerals. That is very nearly six new-life sacraments for every funeral.
+In 2024 the thirteen recorded 1,089 sacraments: 355 baptisms, 335 first communions, 277 confirmations, and 122 marriages, against 188 funerals. Nearly six sacraments for every funeral.
 ![](https://substackcdn.com/image/fetch/$s_!bMxq!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd1eb0ea1-14f1-4786-bbad-853ca48e967e_1700x951.png)
-What has thinned is the crowd inside the walls, not the mission. Most of these are the large historic churches the immigrants built for congregations several times today’s size, so as a set they fill only about a fifth of their seats, a median 21% capacity utilization. Divine Providence is the striking exception: at 48%, it is the fullest ethnic parish in the Archdiocese.
+Most of these churches were built for congregations several times today’s size; as a set they fill a median 21% of their seats. Divine Providence, at 48%, is the fullest ethnic parish in the Archdiocese.
 
 ### Ethnic parishes vs. the rest of the Archdiocese
 
-Set the thirteen beside the other 196 parishes and the split is plain: ethnic parishes lose on the metrics built for a neighborhood, and win on the ones that measure a living church.
+Compared with the other 196 parishes:
 
-Start with the yardstick the Archdiocese leans on. By capacity used (bodies against building size) the ethnic parishes fill a median 21% of their pews, against 30% for everyone else. But these are the grand churches immigrants built for crowds several times today’s size, filled by members who drive in from across the region rather than the block. It measures the building, not the faith.
+By capacity used, the ethnic parishes fill a median 21% of their pews, against 30% for everyone else. Their members drive in from across the region rather than the block, and the buildings were sized for crowds several times today’s.
 ![](https://substackcdn.com/image/fetch/$s_!I7-z!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcb807862-6b53-4b58-967b-9d2e73fdab45_1119x703.png)
 
-Change the test to what happens at the altar and the order reverses. For every funeral, an ethnic parish celebrates six new-life sacraments (baptisms, First Communions, Confirmations, and weddings) against three for the rest of the Archdiocese. They replace those they bury twice as fast.
+For every funeral, an ethnic parish records six sacraments — baptisms, First Communions, Confirmations, and weddings — against three for the rest of the Archdiocese.
 ![](https://substackcdn.com/image/fetch/$s_!l8wy!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F667072a6-4fce-461f-b884-83d910c7d51a_1040x703.png)
 
-They are also the most self-reliant parishes the Archdiocese has: every one of the thirteen is debt-free, while one in eight of the others still carries loans.
+Every one of the thirteen is debt-free, while one in eight of the others still carries loans.
 ![](https://substackcdn.com/image/fetch/$s_!buHA!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9b9ab66c-8677-4052-8543-fbceb0a19d0a_890x703.png)
 
-And per worshipper they hold more in reserve: a median $2,240 in unrestricted savings for every weekly attendee, against $1,680 elsewhere. Smaller congregations, better capitalized per head, funded and kept by the communities themselves.
+And per worshipper they hold more in reserve: a median $2,240 in unrestricted savings for every weekly attendee, against $1,680 elsewhere.
 ![](https://substackcdn.com/image/fetch/$s_!SVWJ!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F42325886-b852-4cf1-9fa5-83201c3e8582_925x703.png)
 
 ### Why it matters
 
-The Archdiocese evaluates every parish on the same scale — attendance, sacramental throughput, priests per worshipper. On those measures the ethnic parishes look marginal. But they were never built to serve a neighborhood; they were built to keep a people’s faith and language together across a diaspora. Measured on their own terms (solvency, reserves, freedom from debt, and the loyalty of members who drive across a metro area to be together), they are among the healthiest small parishes the Archdiocese has. The question is not whether they can survive, but whether the Archdiocese will measure them by a yardstick that can see what they are.
+The Archdiocese evaluates every parish on the same measures: attendance, sacramental throughput, priests per worshipper. The ethnic parishes rank low on those measures. They were founded to serve a language community across a region, not a neighborhood. On solvency, reserves, debt, and support per member, they rank among the highest in the Archdiocese.
 
 ---
 

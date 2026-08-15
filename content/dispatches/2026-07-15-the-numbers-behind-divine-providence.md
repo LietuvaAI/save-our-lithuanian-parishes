@@ -32,7 +32,7 @@ The Archdiocese has other ethnic and national parishes — Slovak, Korean, Alban
 ![](https://substackcdn.com/image/fetch/$s_!lBuA!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5c0baf44-0e7a-4401-a0bd-8b1e229ec032_1700x1122.png)
 ### Rich by every measure of resource depth
 
-Now rank the same parish by what it holds per parishioner, and it climbs to the very top of the Archdiocese:
+By what it holds per parishioner, Divine Providence ranks near the top of the Archdiocese:
 
 - 
 Savings per weekly attendee: #9 of 200 archdiocese-wide, top 5%.
