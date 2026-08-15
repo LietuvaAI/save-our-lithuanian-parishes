@@ -67,4 +67,18 @@ In March 2026, the Archdiocese of Detroit published a restructuring workbook for
 
 #### Sources
 
-The 1968 letter shown here is from the Office of the Vicar for Parishes, Archdiocese of Detroit, to Fr. Michael J. Kundrat, Administrator, Church of Divine Providence, dated December 31, 1968, from the parish’s archives. The account of the 1967 request and the December 2, 1968 meeting, including the request text and Bishop Gumbleton’s words, is drawn from the parish’s anniversary book, *Dievo Apvaizdos Parapija 1908–1973* (Divine Providence Parish, 1908–1973), pp. 48–51. Fr. Kriščiūnevičius’s essay is from the parish’s 1978 five-year anniversary book; the excerpts above are translated from the Lithuanian original. Parish history: the parish’s [profile in the record](https://saveourlithuanianparishes.org/parishes/dievo-apvaizdos-southfield-mi), and [St. Anthony, Detroit](https://saveourlithuanianparishes.org/parishes/sv-antano-detroit-mi). Financial and restructuring figures: the Archdiocese of Detroit’s published parish workbooks (FY24/25) at [restructuring.aod.org/parish-workbooks](https://restructuring.aod.org/parish-workbooks), read in full in [The Numbers Behind Divine Providence](https://blog.saveourlithuanianparishes.org/p/the-numbers-behind-divine-providence).
+**The 1968 letter:** Office of the Vicar for Parishes, Archdiocese of Detroit, to Fr. Michael J. Kundrat, Administrator, Church of Divine Providence, December 31, 1968 — the parish’s archives.
+
+**The request and the meeting:** *Dievo Apvaizdos Parapija 1908–1973*, the parish’s anniversary book, pp. 48–51 — the 1967 request text, the December 2, 1968 vote, and Bishop Gumbleton’s words.
+
+**The 1978 essay:** “The Parish Brings Christ” (*Parapija atneša Kristų*), Fr. Viktoras Kriščiūnevičius, from the parish’s five-year anniversary book; the excerpts are translated from the Lithuanian original.
+
+**The parish record:** [Dievo Apvaizdos parish profile](https://saveourlithuanianparishes.org/parishes/dievo-apvaizdos-southfield-mi) on SaveOurLithuanianParishes.org · [St. Anthony (Šv. Antano), Detroit](https://saveourlithuanianparishes.org/parishes/sv-antano-detroit-mi). The map is drawn from the same registry.
+
+**The parish today:** [Divine Providence’s official website](https://divineprovidencechurch.com/) — Mass times, registration, and the cultural center’s organizations.
+
+**The finances:** the Archdiocese of Detroit’s published [parish workbooks (FY24/25)](https://restructuring.aod.org/parish-workbooks), including the boundary count behind the 65% figure — read in full in [The Numbers Behind Divine Providence](https://blog.saveourlithuanianparishes.org/p/the-numbers-behind-divine-providence).
+
+**The restructuring:** the Archdiocese’s [Planning Area 8](https://restructuring.aod.org/planning-area-8) page — the draft pastorate models and the decision timeline.
+
+**The December 2020 statement:** a parish council member’s letter to a newspaper editor, December 16, 2020, as the Families of Parishes initiative began — from the parish community’s correspondence.
