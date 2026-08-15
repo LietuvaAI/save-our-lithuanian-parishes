@@ -76,6 +76,9 @@ if (
 ) {
   errors.push("Freeland current-parish portrait join is missing or uncleared");
 }
+if (photos["sv-mykolo-scranton-pa-line-drawing"]?.rights !== "own_work") {
+  errors.push("Scranton St. Michael watch portrait is missing or uncleared");
+}
 
 if (errors.length) {
   throw new Error(`Living Network verification failed:\n- ${errors.join("\n- ")}`);
