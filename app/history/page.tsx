@@ -109,10 +109,6 @@ export default function HistoryPage() {
               documented outcomes. The set&rsquo;s one community-owned comparison
               remains standing.
             </p>
-            <p className="font-sans text-support-copy text-muted">
-              This is an institutional and ownership comparison, not a claim
-              that ownership alone caused an outcome.
-            </p>
             <Link href={`/parishes/${shenandoahSlug}`} className="inline-block font-sans text-body-copy font-semibold underline hover:text-accent">
               Read the St. George parish history and its cited evidence
             </Link>
