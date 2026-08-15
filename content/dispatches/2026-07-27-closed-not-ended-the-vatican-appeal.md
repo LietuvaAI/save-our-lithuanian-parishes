@@ -6,35 +6,53 @@ substackUrl: https://blog.saveourlithuanianparishes.org/p/closed-not-ended-the-v
 archivedAt: 2026-08-15
 ---
 ![](https://substackcdn.com/image/fetch/$s_!B1CG!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5a55df0b-dc56-41a4-8938-83b831385f4a_3720x3021.jpeg)Šv. Juozapo (St. Joseph’s), 46 Congress Avenue, Waterbury. Photo: Farragutful, Wikimedia Commons, CC BY-SA 4.0.
-The community organized in 1893 and the parish was established on March 28, 1894 (the first Lithuanian Roman Catholic parish in New England), and the first Lithuanian Mass in Connecticut was celebrated that same year, in a house not far from where the church now stands. The brick church at 46 Congress Avenue went up in 1904 and 1905, the oldest Lithuanian church in the state. [The heritage survey](https://global.truelithuania.com/connecticut-789/) that mapped these buildings notes that two Baroque Revival towers were planned that would have made it, in the survey’s words, the most impressive Lithuanian church in Connecticut. The community built a massive Lithuanian school instead. A traditional wooden chapel-post still stands in front of the church. Inside are stained-glass windows with Lithuanian inscriptions the survey ranks among the most impressive of any East Coast Lithuanian church. At its peak, the survey counts some 10,000 Lithuanians in the Waterbury area, 6,000 of them members of this parish; Waterbury remains the most Lithuanian city in Connecticut.
+### History
 
-The Lithuanian daily *Draugas* [first mentions the parish](https://saveourlithuanianparishes.org/parishes/sv-juozapo-waterbury-ct/draugas) on [September 30, 1909](https://www.draugas.org/archive/1909_reg/1909-09-30-DRAUGASw.pdf). The parish’s last day was September 30, 2023, one hundred and fourteen years, to the day, after it entered the paper of record.
+Waterbury’s Lithuanian community organized in 1893, and St. Joseph Parish was established on March 28, 1894. It was the first Lithuanian Roman Catholic parish in New England. Connecticut’s first Lithuanian Mass was celebrated that same year in a house near the present church.
+
+The present brick church at 46 Congress Avenue was begun in 1904 and completed in 1905. It is the oldest Lithuanian church in Connecticut. According to [a survey of Lithuanian heritage sites](https://global.truelithuania.com/connecticut-789/), the original plans included two Baroque Revival towers that would have made it the most impressive Lithuanian church in the state. The towers were never built; the community built a large Lithuanian school instead.
+
+A traditional Lithuanian wooden chapel-post remains in front of the church. Inside, the stained-glass windows carry Lithuanian inscriptions and are among the finest in any Lithuanian church on the East Coast. At its height, the Waterbury area had about 10,000 Lithuanian residents, including 6,000 parish members.
+
+The earliest mention of the parish found in the Lithuanian newspaper *Draugas* appeared on [September 30, 1909](https://www.draugas.org/archive/1909_reg/1909-09-30-DRAUGASw.pdf). The parish closed on September 30, 2023—exactly 114 years later. [The parish’s](https://saveourlithuanianparishes.org/parishes/sv-juozapo-waterbury-ct/draugas)*[Draugas](https://saveourlithuanianparishes.org/parishes/sv-juozapo-waterbury-ct/draugas)*[record is available here.](https://saveourlithuanianparishes.org/parishes/sv-juozapo-waterbury-ct/draugas)
 
 #### What happened, and when
+![](https://substackcdn.com/image/fetch/$s_!R7hl!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4391db0b-b030-4d86-8abe-e1f8e926dd14_1456x1464.webp)
+**Summer 2023.** St. Joseph had survived the 2002 merger with St. Patrick’s Parish, and parishioners had begun rebuilding the community. The Archdiocese of Hartford’s closure announcement nevertheless came with only a few weeks’ notice.
 
-**Summer 2023.** The parish had survived before. It came through the 2002 St. Patrick’s merger, and there was a genuine grassroots revival in its final years. But under the Archdiocese of Hartford’s restructuring plan, the closure notice came suddenly, with weeks, not years, to respond: “working against the clock,” as parishioner Christian Allyn put it to [WFSB](https://www.wfsb.com/2023/08/28/parishioners-fight-waterbury-church-closure/) that August, calling the announcement “a very sudden shock.” The reasons came in the archbishop’s letter to parishioners: a decrease in parishioners, and a lack of priests. Waterbury “was for a very long time ‘fruitful ground’ for vocations to the priesthood. That, sadly, is no longer the case.” Thirty to forty people were attending the weekly Mass. Lifelong parishioner Mary Gluodenis stood by the church she had known since childhood: “I remember coming to grade school here walking past that statue.”
+Parishioner Christian Allyn told [WFSB](https://www.wfsb.com/2023/08/28/parishioners-fight-waterbury-church-closure/) that the community was “working against the clock” and described the announcement as “a very sudden shock.” The archbishop’s letter cited declining attendance and a shortage of priests. About 30 to 40 people were attending Mass each week.
 
-**Late summer 2023.** With the closure set for the end of September, Allyn, working with a canon lawyer and members of the Knights of Lithuania Council 7, mounted an appeal to the Vatican against the suppression. The archdiocese, for its part, said it planned to sell off the property. The appeal was in motion before the parish’s last day.
+Lifelong parishioner Mary Gluodenis recalled the church’s place in her life: “I remember coming to grade school here walking past that statue.”
 
-**September 30, 2023.** The parish closed by decree and was absorbed into Our Lady of Mount Carmel Parish.
+**Late summer 2023.** Allyn began working with a canon lawyer and members of Knights of Lithuania Council 7 to appeal the suppression of the parish to the Vatican. The archdiocese said that it planned to sell the property. The appeal was filed before the parish closed.
 
-**Since then.** Nearly three years on, no outcome of the Vatican appeal has been published. And while the appeal waits, the church still stands: not sold, not demolished, in Catholic hands, and listed by the merged parish, until the summer of 2026, as open for weddings and funerals. In October 2025, the City of Waterbury posted a request for proposals to sell the former parish campus on John Street (the school building, the former convent, the garage, the club building), and the listing explicitly excluded the church building and its lot from the sale. Whether the pending appeal shaped that exclusion is not public. On August 2, 2026, after a final Mass closing the Knights of Lithuania’s national convention, a monsignor performed the ceremony that [formally closed the building as a place of worship](https://blog.saveourlithuanianparishes.org/p/the-last-mass-at-sv-juozapo). The church has still not been sold or demolished, and the appeal still has no published ruling.
+**September 30, 2023.** St. Joseph Parish closed by decree and was merged into Our Lady of Mount Carmel Parish.
 
-#### What it means
+**Since the closure.** No decision on the Vatican appeal has been made public. The church remained standing, unsold and in Catholic hands. Until the summer of 2026, the merged parish continued to list it as available for weddings and funerals.
 
-Three Lithuanian parishes in the Northeast are at different stages of the same process. Maspeth, told [here](https://blog.saveourlithuanianparishes.org/p/still-open-still-undecided-the-fight), organized before any decision, and the diocese stopped short of closing. Hartford, also told [here](https://blog.saveourlithuanianparishes.org/p/fifteen-months-the-closing-of-svc), went fifteen months from printed assurance to the end of Masses, with no appeal filed in time. In Waterbury, an appeal mounted in the parish’s final weeks has now outlasted the closure by almost three years. The building the archdiocese once said it planned to sell is the one building on the block excluded from sale; no public document connects the two. [The documented reversals](https://saveourlithuanianparishes.org/reversals) across American dioceses, Cleveland’s reopened churches among them, were won by entering the Church’s own process before it finished and staying in it.
-![](https://substackcdn.com/image/fetch/$s_!J26N!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F38ad59e6-bd93-40ce-a3fc-40789bbafe10_3000x3016.png)The Connecticut record at a glance. Classifications and wording follow the site’s canon; every record is on the full interactive map at saveourlithuanianparishes.org.
-[The GoFundMe](https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church) for the canonical fight shows expenses already paid of $9,912.70: canon attorney’s fees, a commercial property appraisal, the scanning of the parish’s historical documents. Hartford’s campaign, opened this May by the same organizer, [names Waterbury as its model](https://www.gofundme.com/f/protect-holy-trinity-church): “The Waterbury Lithuanian community has already retained a Canon attorney and has been successful in so far preventing the complete closure of St. Joseph’s Church.”
+In October 2025, the City of Waterbury issued a request for proposals for the former parish campus on John Street. The proposed sale included the school, former convent, garage, and club building. It specifically excluded the church and the land beneath it. No public record shows whether the pending Vatican appeal was the reason for that exclusion.
+
+On August 2, 2026, following a final Mass for the Knights of Lithuania national convention, a monsignor performed the ceremony that [formally closed the church as a place of worship](https://blog.saveourlithuanianparishes.org/p/the-last-mass-at-sv-juozapo). The building has still not been sold or demolished, and no ruling on the appeal has been published.
+
+#### Why the case matters
+
+Three Lithuanian parishes in the Northeast show how much the timing of a campaign can matter.
+
+In [Maspeth](https://blog.saveourlithuanianparishes.org/p/still-open-still-undecided-the-fight), parishioners organized before a final decision was made, and the diocese stopped short of closing the church. In [Hartford](https://blog.saveourlithuanianparishes.org/p/fifteen-months-the-closing-of-svc), regular Masses ended fifteen months after parishioners received a written assurance about the church’s future, and no appeal was filed in time.
+
+Waterbury falls between those two cases. Parishioners filed an appeal during the final weeks before St. Joseph closed. Nearly three years later, that appeal remains unresolved, and the church remains standing. It is the only building on the former parish campus that was excluded from the proposed sale, although no public document connects that decision to the appeal.
+
+Other parishes have successfully challenged diocesan decisions by entering the Church’s appeals process before it ended and remaining in that process. [The documented reversals](https://saveourlithuanianparishes.org/reversals) include churches in Cleveland that reopened after successful Vatican appeals.
+
+A [GoFundMe campaign](https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church) reports that $9,912.70 has already been spent on the Waterbury case. The expenses include a canon lawyer, a commercial appraisal of the parish property, and the scanning of historical documents.
+
+The organizer of Hartford’s campaign [points to Waterbury as a model](https://www.gofundme.com/f/protect-holy-trinity-church): “The Waterbury Lithuanian community has already retained a Canon attorney and has been successful in so far preventing the complete closure of St. Joseph’s Church.”
 
 #### What you can do today
 
 **Fund the canonical case.** Its costs are attorney’s fees, an appraisal, and document scanning. [The GoFundMe is here](https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church).
 
 **A podcast episode.** *The Final Service*, a podcast on America’s closing churches, devoted an episode to this fight in April 2025: [“Little Lithuania,”](https://podcasts.apple.com/au/podcast/the-final-service/id101215657) Thirty-two minutes.
-
-**Corrections welcome.** If a date or fact in this story needs fixing, the parish’s page is [here](https://saveourlithuanianparishes.org/parishes/sv-juozapo-waterbury-ct); corrections go through [saveourlithuanianparishes.org/report](https://saveourlithuanianparishes.org/report).
-
-**If your parish is still open, learn the one lesson Waterbury teaches.** The appeal that holds was the appeal filed in time. Start at [saveourlithuanianparishes.org/start-here](https://saveourlithuanianparishes.org/start-here). Every active campaign is tracked at [/under-threat](https://saveourlithuanianparishes.org/under-threat).
 
 The building was formally closed on August 2, 2026. The appeal is still pending, and the church is still standing.
 

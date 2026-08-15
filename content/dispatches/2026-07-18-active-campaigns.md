@@ -7,7 +7,7 @@ archivedAt: 2026-08-15
 ---
 ### Four active campaigns
 
-Four campaigns are active.
+Four campaigns are active. These four campaigns are at different stages. One parish is facing restructuring, one is trying to preserve its building, one has appealed to the Vatican, and one has stopped a closure for now.
 
 Jump to: [Divine Providence](https://blog.saveourlithuanianparishes.org/i/207579337/divine-providence-lithuanian-catholic-church-southfield-michigan) | [Holy Trinity](https://blog.saveourlithuanianparishes.org/i/207579337/holy-trinity-church-hartford-connecticut) | [St. Joseph’s](https://blog.saveourlithuanianparishes.org/i/207579337/st-josephs-church-waterbury-connecticut) | [Transfiguration](https://blog.saveourlithuanianparishes.org/i/207579337/church-of-the-transfiguration-maspeth-queens-new-york)
 
@@ -39,7 +39,7 @@ Send written feedback if you have an official channel from the listening session
 Share the parish’s [official website](https://divineprovidencechurch.com/), Mass schedule, registration page, and [donation page](https://divineprovidencechurch.com/donations/) with people who have drifted away.
 
 - 
-Share the research on Divine Providence, including the [1968 national parish letter](https://blog.saveourlithuanianparishes.org/p/in-writing-the-1968-letter-that-made), [parish numbers](https://blog.saveourlithuanianparishes.org/p/the-numbers-behind-divine-providence).
+Share the research on Divine Providence, including the [1968 national parish letter](https://blog.saveourlithuanianparishes.org/p/dievo-apvaizdos-the-last-lithuanian), [parish numbers](https://blog.saveourlithuanianparishes.org/p/the-numbers-behind-divine-providence).
 
 ### Key links
 
@@ -167,11 +167,3 @@ Support respectful outreach to the New York City Landmarks Preservation Commissi
 [LRT Lithuanian report](https://www.lrt.lt/lituanica/aktualijos/751/2514916/tai-gedinga-niujorko-lietuviai-kovoja-pries-planus-uzdaryti-lietuviska-baznycia)
 
 Campaign / advocacy links: [Historic Districts Council advocacy page](https://hdc.org/policy/advocacy-for-the-transfiguration-church/), [Historic Districts Council contact form](https://hdc.org/contact-us/), and [Friends of Transfiguration Change.org petition](https://www.change.org/p/help-save-a-unique-lithuanian-r-c-church-of-the-transfiguration-in-maspeth-queens). The petition was created March 26, 2025. Full story: [Still Open, Still Undecided](https://blog.saveourlithuanianparishes.org/p/still-open-still-undecided-the-fight).
-
-### Tell us what is happening
-
-If your parish faces a closure threat, or a fact in these pages needs correcting, contact us.
-
-Email [info@saveourlithuanianparishes.org](mailto:info@saveourlithuanianparishes.org) or use the [parish report form](https://saveourlithuanianparishes.org/report).
-
-[Report from your parish](https://saveourlithuanianparishes.org/report) · [Main record and parish map](https://saveourlithuanianparishes.org/) · Contact: [info@saveourlithuanianparishes.org](mailto:info@saveourlithuanianparishes.org)
