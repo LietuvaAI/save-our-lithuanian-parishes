@@ -25,6 +25,7 @@ const REQUIRED_THEME_TOKENS = [
   "--text-directory-control: 14px",
   "--text-directory-description: 13px",
   "--text-directory-footnote: 12px",
+  "--text-site-nav: 12.5px",
   '--font-mono: var(--font-timeline-mono), "IBM Plex Mono"',
   ':where(h1, h2, h3, h4, h5, h6)',
 ];
@@ -41,6 +42,18 @@ const errors = [];
 const globals = fs.readFileSync(path.join(ROOT, "app", "globals.css"), "utf8");
 for (const token of REQUIRED_THEME_TOKENS) {
   if (!globals.includes(token)) errors.push(`app/globals.css: missing ${token}`);
+}
+
+const siteLayout = fs.readFileSync(path.join(ROOT, "app", "layout.tsx"), "utf8");
+for (const [fragment, label] of [
+  ["text-site-nav", "shared navigation type token"],
+  ["flex min-h-11 items-center", "44px navigation touch targets"],
+  ["font-sans text-body-copy", "readable dropdown type"],
+  ['label: "History",\n    menuAlign: "right"', "mobile-safe History menu alignment"],
+]) {
+  if (!siteLayout.includes(fragment)) {
+    errors.push(`Site header: missing ${label}`);
+  }
 }
 
 for (const relativeRoot of SOURCE_ROOTS) {

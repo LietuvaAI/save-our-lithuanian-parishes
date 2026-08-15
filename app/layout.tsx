@@ -79,6 +79,7 @@ const NAV: NavItem[] = [
   {
     href: "/history",
     label: "History",
+    menuAlign: "right",
     children: [
       {
         href: "/pennsylvania-coal-region",
@@ -132,7 +133,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <header className="border-b-[3px] border-transparent [border-image:linear-gradient(to_right,#f5b500_33.4%,#00694d_33.4%,#00694d_66.7%,#a72c2c_66.7%)_1]">
-          <div className="mx-auto flex max-w-6xl flex-wrap items-baseline gap-x-5 gap-y-1.5 px-4 py-3.5">
+          <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-5 gap-y-1.5 px-4 py-2">
             <Link href="/" className="shrink-0 whitespace-nowrap font-serif text-site-wordmark font-medium uppercase tracking-[0.09em] text-foreground">
               Save Our Lithuanian Parishes
             </Link>
@@ -140,19 +141,19 @@ export default function RootLayout({
               {NAV.map((item) =>
                 "children" in item ? (
                   <div key={item.label} className="relative group">
-                    <div className="flex items-center whitespace-nowrap border-b border-transparent transition-colors hover:border-[var(--es-active)] hover:text-[var(--es-active)]">
+                    <div className="flex min-h-11 items-center whitespace-nowrap border-b border-transparent transition-colors hover:border-[var(--es-active)] hover:text-[var(--es-active)]">
                       {item.href ? (
-                        <Link href={item.href} className="py-1">
+                        <Link href={item.href} className="flex min-h-11 items-center py-2">
                           {item.label}
                         </Link>
                       ) : (
-                        <span className="py-1">{item.label}</span>
+                        <span className="flex min-h-11 items-center py-2">{item.label}</span>
                       )}
                       <button
                         type="button"
                         aria-haspopup="menu"
                         aria-label={`Open ${item.label} menu`}
-                        className="py-1 pl-1"
+                        className="flex min-h-11 min-w-8 items-center justify-center pl-1"
                       >
                         <span className="text-ui-label opacity-60">▾</span>
                       </button>
@@ -177,7 +178,7 @@ export default function RootLayout({
                             <Link
                               key={child.href}
                               href={child.href}
-                              className="px-4 py-2 font-sans text-support-copy normal-case tracking-normal hover:bg-foreground/5 hover:text-[var(--es-active)] transition-colors whitespace-nowrap"
+                              className="flex min-h-11 items-center px-4 py-2.5 font-sans text-body-copy normal-case tracking-normal hover:bg-foreground/5 hover:text-[var(--es-active)] transition-colors whitespace-nowrap"
                             >
                               {child.label}
                             </Link>
@@ -190,7 +191,7 @@ export default function RootLayout({
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`whitespace-nowrap border-b border-transparent py-1 text-foreground transition-colors hover:border-[var(--es-active)] hover:text-[var(--es-active)] ${
+                    className={`flex min-h-11 items-center whitespace-nowrap border-b border-transparent py-2 text-foreground transition-colors hover:border-[var(--es-active)] hover:text-[var(--es-active)] ${
                       item.label.startsWith("Židinys")
                         ? "font-semibold !text-[var(--es-active)]"
                         : ""
