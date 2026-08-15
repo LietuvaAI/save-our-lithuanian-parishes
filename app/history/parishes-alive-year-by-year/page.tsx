@@ -35,13 +35,36 @@ export default function ParishesAliveYearByYearPage() {
         <h1 className="mt-1 font-serif text-outcomes-title font-semibold tracking-tight">
           Lithuanian Parishes Alive, Year by Year
         </h1>
-        <p className="mt-3 max-w-3xl font-serif text-lead-copy leading-[1.7] text-muted">
-          The dated record reaches a high plateau of {peakYear.alive} living
-          parish institutions from {peakRange.start} through {peakRange.end}. By{" "}
-          {currentYearPoint.year}, {currentYearPoint.alive} have a dated
-          beginning without a dated institutional ending. This is a historical
-          measure, not the count of active Lithuanian-led parishes today.
-        </p>
+        <div className="mt-3 max-w-3xl space-y-3 font-serif text-lead-copy leading-[1.7] text-muted">
+          <p>
+            This chart reconstructs the size of America&rsquo;s Lithuanian Roman
+            Catholic parish network one year at a time. A parish enters the
+            count in its documented founding year and leaves after its dated
+            institutional ending. The line therefore follows parish
+            institutions across time&mdash;not individual church buildings,
+            missions, or the number of places offering Lithuanian Mass today.
+          </p>
+          <p>
+            The rising line shows the creation of a national network as new
+            Lithuanian parishes opened in mining towns, industrial cities, and
+            immigrant neighborhoods. That network reaches its documented high
+            plateau of {peakYear.alive} parish institutions from{" "}
+            {peakRange.start} through {peakRange.end}. The downward arc records
+            the later accumulation of dated institutional endings rather than
+            one sudden moment of disappearance.
+          </p>
+          <p>
+            The endpoint requires special care. In {currentYearPoint.year}, the
+            chart still counts {currentYearPoint.alive} parishes with a dated
+            beginning and no dated institutional ending. That does not mean
+            there are {currentYearPoint.alive} active Lithuanian-led parishes
+            today: some institutions now continue in another community or no
+            longer have Lithuanian leadership, while other records still lack
+            an established ending date. Select any marked year to see its
+            foundations and endings, then open the full list of every parish
+            included in that year&rsquo;s total.
+          </p>
+        </div>
       </header>
 
       <div className="mt-7">
