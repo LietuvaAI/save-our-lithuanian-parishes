@@ -6,6 +6,7 @@ const readJson = (path) => JSON.parse(readText(path));
 
 const projection = readJson("data/canonical-infographic-projection.json");
 const events = readJson("data/canonical-current-events-projection.json");
+const photos = readJson("data/photos.json").parishes;
 const viewSource = readText("lib/living-network-view.ts");
 const pageSource = readText("app/lithuanian-catholic-life-today/page.tsx");
 const mapSource = readText("components/LivingNetworkMap.tsx");
@@ -67,6 +68,13 @@ if (!viewSource.includes('"washington-epiphany": { x: 828, y: 267.5 }')) {
 }
 if (!pageSource.includes("getClearedPhoto")) {
   errors.push("Living Network page no longer enforces cleared image rights");
+}
+if (
+  photos["our-lady-immaculate-conception-freeland-pa-line-drawing"]?.rights !==
+    "own_work" ||
+  !viewSource.includes("canonicalSubjectId")
+) {
+  errors.push("Freeland current-parish portrait join is missing or uncleared");
 }
 
 if (errors.length) {

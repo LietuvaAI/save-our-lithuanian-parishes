@@ -22,6 +22,7 @@ type CurrentAlert = {
   dateObserved: string;
   whatChanged: string;
   parishLink: string | null;
+  canonicalSubjectId?: string;
 };
 
 type CurrentCampaign = {
@@ -322,14 +323,19 @@ const trackedCards: TrackedCard[] = alerts
       actionUrl: campaign?.actionUrl ?? null,
       actionLabel: campaign?.actionLabel ?? null,
     };
-    const slug = alert.parishLink?.replace(/^\/parishes\//, "") ?? null;
+    const profileSlug = alert.parishLink?.replace(/^\/parishes\//, "") ?? null;
+    const subjectSlug = alert.canonicalSubjectId?.replace(
+      /^cn:(?:institution|organization|building_site):/,
+      "",
+    );
+    const portraitSlug = profileSlug ?? subjectSlug ?? null;
     return {
       id: alert.id,
       anchor: `tracked-${alert.id}`,
       name: alert.entity,
       place: alert.place,
       profileHref: alert.parishLink,
-      portraitKey: slug ? `${slug}-line-drawing` : null,
+      portraitKey: portraitSlug ? `${portraitSlug}-line-drawing` : null,
       situation,
     };
   })
