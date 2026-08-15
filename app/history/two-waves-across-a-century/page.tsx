@@ -49,11 +49,25 @@ export default function TwoWavesAcrossACenturyPage() {
         <h1 className="mt-1 font-serif text-outcomes-title font-semibold tracking-tight">
           Two Waves Across a Century
         </h1>
-        <p className="mt-3 max-w-3xl font-serif text-lead-copy leading-[1.7] text-muted">
-          Each square is one parish institution. Black marks record dated
-          foundations; red marks record dated formal closures. Select any mark
-          to open the corresponding parish profile.
-        </p>
+        <div className="mt-3 max-w-3xl space-y-3 font-serif text-lead-copy leading-[1.7] text-muted">
+          <p>
+            This chart places the founding and formal closure of America&rsquo;s
+            Lithuanian Roman Catholic parishes on the same timeline. Read from
+            left to right, the black squares show when parish institutions were
+            founded; the red squares show when formal closures took effect. A
+            parish with both dates appears once in each row, allowing its
+            beginning and ending to be seen within the larger national story.
+          </p>
+          <p>
+            Seeing the two rows together reveals why the history cannot be
+            reduced to a single total. Lithuanian communities built a broad
+            parish network in an early wave, sustained much of it for decades,
+            and then experienced a second, prolonged wave of closures. The
+            chart shows when each movement gathered force and which individual
+            parishes formed it. Select any square to open that parish&rsquo;s full
+            profile.
+          </p>
+        </div>
       </header>
 
       <div className="mt-7 grid grid-cols-2 border-y border-rule sm:grid-cols-4">
