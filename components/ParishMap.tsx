@@ -642,6 +642,13 @@ export default function ParishMap() {
     setLostFate("all");
   }
 
+  function resetFilters() {
+    setSelectedCommunities(new Set(COMMUNITY_FILTERS));
+    setSelectedStatuses(new Set(STATUS_FILTERS));
+    setLostFate("all");
+    setShowWiderCatholicLife(true);
+  }
+
   const markR = 6 / Math.sqrt(zoom);
   const btn = "rounded-md border border-rule bg-background px-2.5 py-1 text-body-copy font-medium hover:border-foreground transition-colors";
 
@@ -661,6 +668,11 @@ export default function ParishMap() {
     selectedCommunities.size === COMMUNITY_FILTERS.length;
   const closedOnly =
     selectedStatuses.size === 1 && selectedStatuses.has("lost");
+  const filtersActive =
+    !allCommunitiesSelected ||
+    !allStatusesSelected ||
+    lostFate !== "all" ||
+    !showWiderCatholicLife;
 
   return (
     <div>
@@ -960,12 +972,23 @@ export default function ParishMap() {
               <p className="text-ui-label font-medium uppercase tracking-widest text-muted">
                 Map key
               </p>
-              <span className="text-ui-label text-muted">
-                {visible.length} census records shown
-                {showWiderCatholicLife
-                  ? ` + ${WIDER_CATHOLIC_LIFE_POINTS.length} wider records`
-                  : ""}
-              </span>
+              <div className="text-right">
+                {filtersActive && (
+                  <button
+                    type="button"
+                    onClick={resetFilters}
+                    className="mb-1 rounded-md border border-rule px-2 py-1 text-ui-label font-medium text-foreground transition-colors hover:border-foreground hover:bg-band"
+                  >
+                    Reset filters
+                  </button>
+                )}
+                <span className="block text-ui-label text-muted" aria-live="polite">
+                  {visible.length} census records shown
+                  {showWiderCatholicLife
+                    ? ` + ${WIDER_CATHOLIC_LIFE_POINTS.length} wider records`
+                    : ""}
+                </span>
+              </div>
             </div>
 
             <div className="mt-2.5 border-t border-rule pt-2.5 text-small-copy">

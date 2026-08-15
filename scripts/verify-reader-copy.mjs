@@ -62,6 +62,12 @@ if (!homepage.includes('id="happening-now"')) {
 if (parishMap.includes("See current campaigns and developments")) {
   errors.push("components/ParishMap.tsx: map instructions still contain a campaign link");
 }
+if (
+  !parishMap.includes("function resetFilters()") ||
+  !parishMap.includes("Reset filters")
+) {
+  errors.push("components/ParishMap.tsx: map key is missing its filter reset");
+}
 const expectedNavOrder = [
   'href: "/parishes", label: "All Profiles"',
   'label: "Explore"',
