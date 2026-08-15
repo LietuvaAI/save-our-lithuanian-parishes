@@ -142,6 +142,34 @@ const historyPage = fs.readFileSync(
   path.join(ROOT, "app", "history", "page.tsx"),
   "utf8",
 );
+const historyTwoWavesPage = fs.readFileSync(
+  path.join(
+    ROOT,
+    "app",
+    "history",
+    "two-waves-across-a-century",
+    "page.tsx",
+  ),
+  "utf8",
+);
+const historyAlivePage = fs.readFileSync(
+  path.join(
+    ROOT,
+    "app",
+    "history",
+    "parishes-alive-year-by-year",
+    "page.tsx",
+  ),
+  "utf8",
+);
+const historyDiocesePage = fs.readFileSync(
+  path.join(ROOT, "app", "history", "loss-by-diocese", "page.tsx"),
+  "utf8",
+);
+const historyCoalPage = fs.readFileSync(
+  path.join(ROOT, "app", "pennsylvania-coal-region", "page.tsx"),
+  "utf8",
+);
 const historyChart = fs.readFileSync(
   path.join(ROOT, "components", "HistoryTwoWaves.tsx"),
   "utf8",
@@ -156,19 +184,24 @@ const historyDioceseMap = fs.readFileSync(
 );
 const historyDesignContract = [
   [historyPage, "px-4 pb-0 pt-8", "single bottom-spacing rhythm before the global footer"],
-  [historyPage, "absolute inset-x-0 top-1/2 border-t border-rule", "centered divider rule"],
-  [historyPage, "justify-center", "centered divider label"],
-  [historyPage, "tracking-[0.15em]", "approved divider letterspacing"],
-  [historyPage, "Lithuanian parishes alive, year by year", "approved century-arc heading"],
-  [historyPage, "dioceses have no active Lithuanian parish left", "approved diocese-loss heading"],
-  [historyPage, "Each diocese below is shaded by how much of its Lithuanian parish", "approved diocese-map instruction"],
-  [historyPage, "text-[var(--es-closed)]", "loss-color diocese heading"],
-  [historyPage, "leading-[1.7]", "15px/1.7 narrative rhythm"],
+  [historyPage, "A four-part history", "History gateway description"],
+  [historyPage, "Pennsylvania Coal Country", "first History chapter"],
+  [historyPage, "Two Waves Across a Century", "second History chapter"],
+  [historyPage, "Lithuanian Parishes Alive, Year by Year", "third History chapter"],
+  [historyPage, "The Loss, Diocese by Diocese", "fourth History chapter"],
+  [historyCoalPage, "Chapter I", "Coal Country chapter marker"],
+  [historyTwoWavesPage, "Chapter II", "Two Waves chapter marker"],
+  [historyAlivePage, "Chapter III", "year-by-year chapter marker"],
+  [historyDiocesePage, "Chapter IV", "diocese chapter marker"],
+  [historyAlivePage, "leading-[1.7]", "15px/1.7 narrative rhythm"],
+  [historyDiocesePage, "dioceses have", "approved diocese-loss heading"],
+  [historyDiocesePage, "Each diocese below is shaded", "approved diocese-map instruction"],
+  [historyDiocesePage, "text-[var(--es-closed)]", "loss-color diocese heading"],
   [historyChart, "size-2 rounded-[1px]", "compact eight-pixel unit marks"],
   [historyChart, "gap-x-[3px]", "compact decade spacing"],
   [historyChart, "min-h-[118px]", "approved founding-wave height"],
   [historyChart, "min-h-[74px]", "approved closure-wave height"],
-  [historyPage, "parishes={historyProjection.parishes}", "canonical parish roster supplied to the curve"],
+  [historyAlivePage, "parishes={historyProjection.parishes}", "canonical parish roster supplied to the curve"],
   [historyCurve, "View the full parish list", "year-roster affordance"],
   [historyCurve, 'role="dialog"', "accessible year-roster dialog"],
   [historyCurve, "aliveRoster.map", "complete selected-year roster"],
@@ -185,7 +218,15 @@ for (const forbiddenHeading of [
   "From expansion to long contraction",
   "The national contraction was administered locally",
 ]) {
-  if (historyPage.includes(forbiddenHeading)) {
+  if (
+    [
+      historyPage,
+      historyTwoWavesPage,
+      historyAlivePage,
+      historyDiocesePage,
+      historyCoalPage,
+    ].some((page) => page.includes(forbiddenHeading))
+  ) {
     errors.push(`History: unapproved replacement heading remains: ${forbiddenHeading}`);
   }
 }

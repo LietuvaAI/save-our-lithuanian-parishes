@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { EndStatePill } from "@/components/EndStatePill";
+import HistoryChapterNav from "@/components/HistoryChapterNav";
+import photosData from "@/data/photos.json";
+import { historyProjection } from "@/lib/history-projection";
 import { pennsylvaniaCoalRegion } from "@/lib/infographic-projection";
 
 export const metadata: Metadata = {
-  title: "The Pennsylvania Coal Region",
+  title: "The Beginning: Pennsylvania Coal Country",
   description:
-    "The 15 Lithuanian parish institutions in the canonical northeastern Pennsylvania coal-region comparison, with their governance and current institutional outcomes.",
+    "How America’s Lithuanian parish network began in Pennsylvania coal country, followed by the complete northeastern Pennsylvania regional record.",
 };
+
+const shenandoahSlug = "sv-jurgio-shenandoah-pa";
+const shenandoahDrawing =
+  photosData.parishes["sv-jurgio-shenandoah-pa-line-drawing"];
 
 type CoalRegionInstitution =
   (typeof pennsylvaniaCoalRegion.institutions)[number];
@@ -82,25 +90,73 @@ function InstitutionRow({
 
 export default function PennsylvaniaCoalRegionPage() {
   const { counts } = pennsylvaniaCoalRegion;
+  const historyCounts = historyProjection.counts;
 
   return (
     <article className="mx-auto max-w-5xl px-4 pb-12 pt-8">
+      <HistoryChapterNav current="/pennsylvania-coal-region" />
       <header className="max-w-4xl">
         <p className="text-small-copy uppercase tracking-widest text-muted">
-          Regional record
+          Chapter I · The beginning
         </p>
         <h1 className="mt-1 font-serif text-outcomes-title font-semibold tracking-tight">
-          The Pennsylvania Coal Region
+          Pennsylvania Coal Country
         </h1>
         <p className="mt-3 max-w-3xl font-serif text-lead-copy leading-relaxed text-muted">
-          Northeastern Pennsylvania held the country&rsquo;s densest early
-          concentration of Lithuanian parish life. This page follows the
-          complete 15-institution regional comparison and links every entry to
-          its individual record.
+          America&rsquo;s Lithuanian parish story begins in the coal towns of
+          Pennsylvania. This chapter follows those first foundations and the
+          complete {pennsylvaniaCoalRegion.population}-institution northeastern
+          Pennsylvania regional comparison.
         </p>
       </header>
 
-      <section className="mt-8 border-y border-rule py-6">
+      <section className="mt-8 grid items-start gap-8 md:grid-cols-[minmax(15rem,0.72fr)_minmax(0,1.28fr)]">
+        <figure>
+          <div className="relative aspect-[4/5] overflow-hidden bg-band">
+            <Image
+              src={shenandoahDrawing.src}
+              alt={shenandoahDrawing.alt}
+              fill
+              className="object-contain p-3"
+              sizes="(min-width: 768px) 34vw, 100vw"
+              priority
+              unoptimized
+            />
+          </div>
+          <figcaption className="mt-2 font-sans text-small-copy leading-relaxed text-muted">
+            St. George Lithuanian church, Shenandoah, Pennsylvania.
+          </figcaption>
+        </figure>
+        <div className="space-y-4 font-serif text-lead-copy leading-[1.7]">
+          <p>
+            Pennsylvania contains {historyCounts.pennsylvania} of the{" "}
+            {historyCounts.total} documented Roman Catholic Lithuanian
+            parishes. The earliest dated foundations in the state appear at
+            Mount Carmel in 1886, Plymouth and Mahanoy City in 1888, and
+            Pittston in 1890.
+          </p>
+          <p>
+            St. George in Shenandoah followed in 1891. Its Lithuanian church
+            was dedicated in 1893, and the parish became a central symbol of
+            the first large Lithuanian settlement in the United States. The
+            parish closed in 2006; the church was demolished in 2009.
+          </p>
+          <p>
+            Northeastern Pennsylvania became the country&rsquo;s densest early
+            concentration of Lithuanian parish life. The complete comparison
+            below shows how those institutions began and where each stands
+            today.
+          </p>
+          <Link
+            href={`/parishes/${shenandoahSlug}`}
+            className="inline-block font-sans text-body-copy font-semibold underline hover:text-accent"
+          >
+            Read the full St. George parish history
+          </Link>
+        </div>
+      </section>
+
+      <section className="mt-10 border-y border-rule py-6">
         <div className="grid gap-7 lg:grid-cols-[minmax(15rem,0.72fr)_minmax(0,1.28fr)]">
           <div>
             <p className="font-mono text-small-copy uppercase tracking-widest text-muted">
@@ -115,8 +171,8 @@ export default function PennsylvaniaCoalRegionPage() {
             <p className="mt-3 text-body-copy leading-relaxed text-muted">
               The bounded comparison contains {counts.diocese_owned} diocesan
               Roman Catholic parishes and one Lithuanian National Catholic
-              comparison. It is a regional analytic set, not a new national
-              denominator.
+              comparison. It is shown separately from the national Roman
+              Catholic parish total.
             </p>
           </div>
 
@@ -145,11 +201,9 @@ export default function PennsylvaniaCoalRegionPage() {
               <span>{diocesanOther.length} in other documented outcomes</span>
             </div>
             <p className="mt-4 text-support-copy leading-relaxed text-muted">
-              This compares institutional governance and outcome. It does not
-              claim that ownership alone caused an outcome, and it does not
-              describe whether a church building still stands. Physical sites
-              are recorded separately in the buildings view of Parish &amp;
-              Mission Status.
+              This chart follows parish institutions, not individual church
+              buildings. A parish and the buildings it used may have different
+              histories.
             </p>
           </div>
         </div>
@@ -164,8 +218,8 @@ export default function PennsylvaniaCoalRegionPage() {
         </h2>
         <p className="mt-2 max-w-3xl text-body-copy leading-relaxed text-muted">
           Each label describes the Lithuanian institution&rsquo;s present
-          recorded institutional status. Open a profile for its history, sources,
-          continuation relationships, and recorded worship sites.
+          recorded institutional status. Open a profile for its history,
+          sources, continuation relationships, and recorded worship sites.
         </p>
         <ul className="mt-5 grid gap-x-8 md:grid-cols-2">
           {diocesanParishes.map((institution) => (
@@ -198,11 +252,10 @@ export default function PennsylvaniaCoalRegionPage() {
 
       <footer className="mt-10 border-t border-rule pt-5 text-support-copy text-muted">
         <Link
-          href="/history#beginning"
+          href="/history/two-waves-across-a-century"
           className="font-medium text-foreground underline hover:text-accent"
         >
-          Read how the national parish network began in Pennsylvania coal
-          country
+          Next: two waves across a century
         </Link>
         {" · "}
         <Link
