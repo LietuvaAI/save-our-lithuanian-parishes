@@ -44,6 +44,10 @@ for (const file of files) {
 const layout = readFileSync(new URL("../app/layout.tsx", import.meta.url), "utf8");
 
 const homepage = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
+const parishMap = readFileSync(
+  new URL("../components/ParishMap.tsx", import.meta.url),
+  "utf8",
+);
 if (homepage.includes("Still standing")) {
   errors.push(
     "app/page.tsx: living institutions must not use the physical-building label Still standing",
@@ -52,10 +56,37 @@ if (homepage.includes("Still standing")) {
 if (!homepage.includes("Parishes at a crossroads")) {
   errors.push("app/page.tsx: approved current-situations heading drifted");
 }
+if (!homepage.includes('id="happening-now"')) {
+  errors.push("app/page.tsx: current-situations anchor is missing");
+}
+if (parishMap.includes("See current campaigns and developments")) {
+  errors.push("components/ParishMap.tsx: map instructions still contain a campaign link");
+}
+if (
+  !parishMap.includes("function resetFilters()") ||
+  !parishMap.includes("Reset filters")
+) {
+  errors.push("components/ParishMap.tsx: map key is missing its filter reset");
+}
 const expectedNavOrder = [
   'href: "/parishes", label: "All Profiles"',
-  'href: "/where-every-parish-ended-up", label: "Outcomes"',
+  'label: "Explore"',
+  'section: "The record"',
+  'href: "/where-every-parish-ended-up"',
+  'label: "Where Every Parish Stands"',
+  'href: "/lithuanian-catholic-life-today"',
+  'label: "The Living Network"',
+  'href: "/where-parish-life-continued"',
+  'label: "Where Parish Life Continued"',
+  'section: "History"',
   'href: "/history", label: "The Rise and the Loss"',
+  'href: "/pennsylvania-coal-region"',
+  'label: "Pennsylvania Coal Region"',
+  'href: "/history#loss-by-diocese", label: "By Diocese"',
+  'section: "Other traditions"',
+  'href: "/national-catholic"',
+  'label: "National & Independent Catholic"',
+  'href: "/protestant", label: "Protestant"',
   'label: "Guidance"',
   'label: "About"',
   'href: "https://blog.saveourlithuanianparishes.org", label: "Židinys ↗"',

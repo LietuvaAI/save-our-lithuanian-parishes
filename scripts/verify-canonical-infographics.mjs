@@ -694,7 +694,7 @@ const retiredDiocesePage = readFileSync(
   new URL("../app/by-diocese/page.tsx", import.meta.url),
   "utf8",
 );
-const retiredCoalPage = readFileSync(
+const coalRegionPage = readFileSync(
   new URL("../app/pennsylvania-coal-region/page.tsx", import.meta.url),
   "utf8",
 );
@@ -725,14 +725,34 @@ if (
 }
 if (
   !/permanentRedirect/.test(retiredDiocesePage) ||
-  !/\/history#loss-by-diocese/.test(retiredDiocesePage) ||
-  !/permanentRedirect/.test(retiredCoalPage) ||
-  !/\/history#beginning/.test(retiredCoalPage)
+  !/\/history#loss-by-diocese/.test(retiredDiocesePage)
 ) {
-  errors.push("retired diocese or coal-region route does not redirect into History");
+  errors.push("retired diocese route does not redirect into History");
 }
-if (/href:\s*["']\/(?:by-diocese|pennsylvania-coal-region)/.test(primaryNavigation)) {
-  errors.push("primary navigation still exposes a retired standalone History view");
+if (
+  !/pennsylvaniaCoalRegion/.test(coalRegionPage) ||
+  !/pennsylvaniaCoalRegion\.population/.test(coalRegionPage) ||
+  !/pennsylvaniaCoalRegion\.institutions/.test(coalRegionPage) ||
+  /permanentRedirect|registry-unified|registry-scope|data\/parishes/.test(
+    coalRegionPage,
+  )
+) {
+  errors.push(
+    "Pennsylvania Coal Region is not a standalone canonical projection view",
+  );
+}
+if (/href:\s*["']\/by-diocese/.test(primaryNavigation)) {
+  errors.push("primary navigation still exposes the retired standalone diocese view");
+}
+if (
+  !/href:\s*["']\/pennsylvania-coal-region/.test(primaryNavigation) ||
+  /href:\s*["']\/history#beginning["'][\s\S]{0,80}Pennsylvania Coal Region/.test(
+    primaryNavigation,
+  )
+) {
+  errors.push(
+    "primary navigation does not expose the standalone Pennsylvania Coal Region view",
+  );
 }
 
 if (errors.length) {
