@@ -3,11 +3,11 @@ title: "The Numbers Behind Divine Providence"
 subtitle: "Across all 209 Archdiocese of Detroit parishes, one small Lithuanian parish inverts every assumption — bottom on scale, top 5% on resource depth, already back in the black."
 date: 2026-07-15
 substackUrl: https://blog.saveourlithuanianparishes.org/p/the-numbers-behind-divine-providence
-archivedAt: 2026-08-11
+archivedAt: 2026-08-15
 ---
-As part of its current restructuring, the Archdiocese of Detroit produced a workbook for each of its parishes. Read Divine Providence’s workbook alone, and the story is grim: a small, aging Lithuanian parish running a deficit. But the Archdiocese produced these workbooks for all 209 of its parishes, across 15 Planning Areas. Read together, they tell a very different story about the same parish.
+As part of its current restructuring, the Archdiocese of Detroit produced a workbook for each of its 209 parishes, across 15 Planning Areas. Divine Providence's own workbook records a small, aging Lithuanian parish running a deficit. The other 208 workbooks put those same figures in a different order.
 
-One truth emerges when you rank Divine Providence against the whole Archdiocese: it is among the smallest parishes by scale, and among the wealthiest by resource per parishioner. The Archdiocese is treating Divine Providence like a poor parish that should be merged. Its own data shows a small parish that is rich on a per-parishioner basis, a category its metrics don't have a slot for. The chart below is the whole argument in one picture.
+Ranked against the whole Archdiocese, Divine Providence is among the smallest parishes by scale and among the wealthiest by resources per parishioner. The restructuring treats it as a small parish that should be merged. The Archdiocese's own figures record a small parish with more savings per weekly attendee than all but eight of the 200 parishes that report the field.
 
 The parish itself is older than any of these metrics. Originally named St. George's Parish, it was established in 1908 in Detroit, at Westminster and Cardoni Streets. In 1948 the parish changed its name to Divine Providence and, due to the changing demographics of its parishioners, relocated to Schaefer and Grand River Streets. Highway construction in the area resulted in the subsequent move in 1973 to the current location in Southfield, near Beech and Nine Mile Roads. It is one of the oldest, if not the oldest, continuously operating Lithuanian ethnic parishes in the United States, and it is not only a church but a cultural center that is the core of Lithuanian life in Detroit.
 ![](https://substackcdn.com/image/fetch/$s_!Whvn!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0bc93192-0b02-4e07-913c-5751f0498600_1700x1088.png)
@@ -24,11 +24,11 @@ By the numbers the Archdiocese leads with, Divine Providence is genuinely small:
 - 
 $260K total revenue: the smallest parish operation in its Planning Area.
 
-On the metrics the Archdiocese prioritizes (attendance, sacramental throughput, priest-to-attendee ratio), this is a hard parish to defend. That is real, and worth stating plainly.
+On attendance, sacraments, and priest-to-attendee ratio, Divine Providence ranks near the bottom of the Archdiocese. Those figures are accurate.
 
 ### Small, but not the smallest
 
-Step outside Divine Providence’s own Planning Area and set it beside the Archdiocese’s other ethnic and national parishes: the Slovak, Korean, Albanian, Polish, Vietnamese, Italian, Hungarian, and Croatian communities that, like ours, are defined by heritage and rite rather than by a neighborhood boundary. Among that peer group, Divine Providence is small, but it is not the smallest: St. Lucy, the Croatian parish, is smaller still. And its deficit is far from the worst: three of these ethnic parishes are running larger operating losses. A small ethnic parish carrying a modest, recoverable shortfall is not an outlier in this company. It is a representative member of it.
+The Archdiocese has other ethnic and national parishes — Slovak, Korean, Albanian, Polish, Vietnamese, Italian, Hungarian and Croatian communities defined by heritage and rite rather than by a neighborhood boundary. Among them Divine Providence is small but not the smallest: St. Lucy, the Croatian parish, is smaller. Three of these parishes are running larger operating losses. A modest deficit is common in this group.
 ![](https://substackcdn.com/image/fetch/$s_!lBuA!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5c0baf44-0e7a-4401-a0bd-8b1e229ec032_1700x1122.png)
 ### Rich by every measure of resource depth
 
@@ -44,14 +44,14 @@ Payable loans: #3 of 207, effectively zero debt.
 Over $1 million in unrestricted cash, net equity above $1 million, and roughly 19 years of runway at the current burn rate.
 
 - 
-The highest capacity utilization in its Planning Area (48% vs. a 37% median); the “underused building” story is false on the data.
+Capacity utilization of 48%, against a 37% median in its Planning Area — the highest in the Planning Area.
 ![](https://substackcdn.com/image/fetch/$s_!9IEf!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F96d90c46-3dac-4105-bb6c-853447ac580d_1700x850.png)
 
 ![](https://substackcdn.com/image/fetch/$s_!nF6L!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2798b6ce-adba-47ed-bd8e-fd39e8f54c40_1700x781.png)![](https://substackcdn.com/image/fetch/$s_!pXJZ!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4c3c923d-1ac5-4680-ad4c-2e14e608b8d4_1700x918.png)![](https://substackcdn.com/image/fetch/$s_!7uP3!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F74c88aa9-4dce-4506-a6f8-dca3eeca03e5_1700x1054.png)
 
 ### The deficit already reversed
 
-There is one more number the workbook misses, because it is looking at last year. The Archdiocese is evaluating Divine Providence on a fiscal year in which it ran a roughly $52,000 deficit. But the parish's own bulletin tells a different story: through the first seven months of the current fiscal year, Divine Providence is running a net surplus of about $8,700, on track for roughly +$15,000 for the year, before any new initiatives. Three years of red gave way to black without a single change the Archdiocese asked for. The turnaround has already happened; the numbers the Archdiocese is using predate it. None of this is new. "Divine Providence has always been fiscally well-managed to ensure that it poses no financial burden to the AOD," a parish council member wrote to the press when the Families of Parishes restructuring began in December 2020, and the workbook's own balance-sheet figures bear that out five years later.
+The workbook reports fiscal year 2024/25, in which the parish ran a deficit of roughly $52,000. The parish bulletin reports the current year: through its first seven months Divine Providence is running a net surplus of about $8,700, on track for roughly $15,000 for the year, before any new initiatives. Three years of deficits ended without any change the Archdiocese had asked for. "Divine Providence has always been fiscally well-managed to ensure that it poses no financial burden to the AOD," a parish council member wrote to the press when the Families of Parishes restructuring began in December 2020, and the workbook's own balance-sheet figures bear that out five years later.
 ![](https://substackcdn.com/image/fetch/$s_!g24S!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa11e36c2-a4f4-4258-bfb1-1d4f7dff994f_1700x1020.png)
 ### The workbook itself understates the parish
 
@@ -74,15 +74,15 @@ The confirmations correction alone moves Divine Providence from near the bottom 
 
 ### A category error
 
-Underneath all of this is a single mismatch. Divine Providence is not a territorial parish; it does not serve a neighborhood. It is a personal parish, defined by language and rite: roughly 65% of its parishioners come from outside the local boundary, many driving nearly an hour, from across Michigan and Canada. Applying territorial-parish metrics (neighborhood demographics, boundary registration, regional capture rate) to a parish built for a dispersed diaspora measures the wrong thing. The parish is functioning exactly as designed. "Because we are an ethnic parish," the same 2020 letter explained, "we strive to preserve our Lithuanian heritage by not only promoting the use of the Lithuanian language in the church liturgy but also by supporting Lithuanian cultural, educational and social activities in the adjacent Cultural Center."
+Divine Providence is a personal parish, not a territorial one. It is defined by language and rite rather than by a boundary: roughly 65% of its parishioners come from outside the local boundary, many driving nearly an hour, from across Michigan and Canada. Territorial metrics — neighborhood demographics, boundary registration, regional capture rate — measure something this parish was not built to do. "Because we are an ethnic parish," the same 2020 letter explained, "we strive to preserve our Lithuanian heritage by not only promoting the use of the Lithuanian language in the church liturgy but also by supporting Lithuanian cultural, educational and social activities in the adjacent Cultural Center."
 
 ### The one hard number
 
-None of this means the Archdiocese is acting in bad faith. It is managing a real and painful shortage of priests across 209 parishes, and by that single measure, a full-time priest assigned to 144 worshippers, Divine Providence is genuinely hard to justify. That is the one metric the parish cannot win by argument alone; it can only be answered by a different staffing model, such as a shared priest. But priest allocation is a question about how the parish is served, not about whether it is viable. The parish put the underlying question to the Archdiocese back in 2020: "If an ethnic parish's time and resources are diverted towards the care and support of other parishes in their family, does this not take away from the mission and focus of the ethnic parish itself?" On viability, the data is not close.
+The Archdiocese is managing a real shortage of priests across 209 parishes. By that measure — one full-time priest for 144 worshippers — Divine Providence is hard to justify, and no financial argument answers it. A shared priest or another staffing arrangement would. Priest allocation is a question about how the parish is served, not about whether it is viable. The parish put that question to the Archdiocese in 2020: "If an ethnic parish's time and resources are diverted towards the care and support of other parishes in their family, does this not take away from the mission and focus of the ethnic parish itself?"
 
-### Which yardstick?
+### Which figures count
 
-None of this relitigates the attendance number. Divine Providence is small, and the priest shortage is real. But small is not the same as failing, and last year’s deficit is not this year’s. The question the data raises is not whether Divine Providence is worth keeping, but which yardstick the Archdiocese should use to measure a small, solvent, growing personal parish its own metrics were never designed to see.
+Divine Providence is small, and the priest shortage is real. Its deficit ended before the review began, its confirmations were undercounted threefold, and it holds more than a million dollars in unrestricted cash with no debt. What the Archdiocese decides depends on which of those figures it measures the parish by.
 
 ---
 

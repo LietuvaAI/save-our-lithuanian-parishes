@@ -3,7 +3,7 @@ title: "The Parish Brings Christ"
 subtitle: "In 1978, the pastor of Divine Providence wrote about what a parish is. Nearly fifty years later, his words read like a letter to the parishes of 2026."
 date: 2026-07-16
 substackUrl: https://blog.saveourlithuanianparishes.org/p/the-parish-brings-christ
-archivedAt: 2026-08-11
+archivedAt: 2026-08-15
 ---
 In 1978, five years after the new church in Southfield was consecrated, Divine Providence parish published its five-year anniversary book. In it, the pastor at the time, the late Fr. Viktoras Kriščiūnevičius, wrote about what a parish is. Nearly fifty years have passed, yet his words sound today as if they were meant for this moment. The Archdiocese of Detroit is now deciding the future of every one of its parishes, including his.
 

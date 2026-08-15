@@ -3,7 +3,7 @@ title: "Active Campaigns"
 subtitle: "What you can do today for Lithuanian Catholic parishes under threat."
 date: 2026-07-18
 substackUrl: https://blog.saveourlithuanianparishes.org/p/active-campaigns
-archivedAt: 2026-08-11
+archivedAt: 2026-08-15
 ---
 ### Four active campaigns
 

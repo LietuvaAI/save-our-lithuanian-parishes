@@ -3,7 +3,7 @@ title: "Still Open, Still Undecided: The Fight for Kristaus Atsimainymo (Transfi
 subtitle: "The Diocese of Brooklyn moved to close it in February 2025. A petition, a landmark push, and a presidential visit later, Sunday Mass continues, on terms the diocese calls temporary."
 date: 2026-07-26
 substackUrl: https://blog.saveourlithuanianparishes.org/p/still-open-still-undecided-the-fight
-archivedAt: 2026-08-11
+archivedAt: 2026-08-15
 ---
 ![](https://substackcdn.com/image/fetch/$s_!vxTE!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F866948a6-f354-4ad4-a301-2471d6cd60a6_3264x2448.jpeg)Kristaus Atsimainymo — the Church of the Transfiguration, 64-25 Perry Avenue, Maspeth, Queens. Photo: Maspetheer, Wikimedia Commons, CC BY-SA 4.0 (2016).
 The church at 64-25 Perry Avenue made the [front page of The New York Times](https://www.newyorkalmanack.com/2025/04/church-of-the-transfiguration-2/) when it opened in 1962, listed among the five best new buildings of the year, beside the TWA Terminal. Its architect was Jonas Mulokas, a Lithuanian. The money that built it came in donations from Lithuanian-Americans. Its interior carries the work of Vytautas Kazimieras Jonynas, whose art also hangs in St. Peter’s Basilica and in the National Shrine in Washington. The New York Almanack describes the design as modern construction carrying Lithuanian folk forms, “along the lines of a country church,” and ranks the building “among the most significant buildings of Lithuanian heritage outside of Lithuania.”
