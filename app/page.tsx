@@ -194,7 +194,7 @@ const STAT_CARDS = [
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-6xl px-4">
+    <div className="home-page mx-auto max-w-6xl px-4">
       <section className="pt-2 sm:pt-3" aria-label="Lithuanian parish portraits">
         <ChurchProcession />
       </section>
@@ -372,7 +372,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-[52px] flex flex-wrap items-center gap-4 border-t border-rule pt-[22px] sm:gap-10">
+      <section className="mt-[52px] flex flex-wrap items-center gap-4 pb-6 sm:gap-10">
         <div className="min-w-0 flex-1 basis-[380px]">
         <p className="text-ui-label font-bold uppercase tracking-[0.08em] text-muted">
           Židinys · The Hearth

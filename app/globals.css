@@ -149,6 +149,12 @@ body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
+/* The homepage ends with its Židinys signup, so the shared footer should form
+   the next visual band without adding the generic inter-page margin. */
+main:has(> .home-page) + footer {
+  margin-top: 0;
+}
+
 @layer components {
   a {
     color: var(--accent);
