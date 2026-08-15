@@ -82,6 +82,7 @@ export type CurrentPastoralDirectoryEntry = {
   note?: string;
   registrySlug?: string | null;
   canonicalEntityId?: string | null;
+  publicProfile: string;
   officialSite?: string | null;
   sourceRefs: string[];
   draugasEvidence: ReviewedDraugasEvidence;

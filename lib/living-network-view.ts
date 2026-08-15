@@ -153,16 +153,20 @@ const NETWORK_ONLY_COORDS: Record<string, { x: number; y: number }> = {
 };
 
 function profileHrefFor(entry: CurrentPastoralDirectoryEntry) {
-  return entry.registrySlug
+  const expected = entry.registrySlug
     ? canonicalProfileHrefForRegistrySlug(entry.registrySlug)
-    : null;
+    : entry.publicProfile;
+  if (entry.publicProfile !== expected) {
+    throw new Error(`${entry.id}: canonical directory profile route drifted`);
+  }
+  return entry.publicProfile;
 }
 
 function portraitKeyFor(
   entry: CurrentPastoralDirectoryEntry,
   profileHref: string | null,
 ) {
-  const slug = profileHref?.replace(/^\/parishes\//, "");
+  const slug = profileHref?.split("/").filter(Boolean).at(-1);
   return `${slug ?? entry.id}-line-drawing`;
 }
 

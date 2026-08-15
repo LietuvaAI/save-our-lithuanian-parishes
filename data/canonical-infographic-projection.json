@@ -2,7 +2,7 @@
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
-    "publication_projection_hash": "sha256:b5d41cca3e374bc139673605a40eeb4fa4e3cc6cc86b5bb7cb9f7c9451e33667",
+    "publication_projection_hash": "sha256:a7db4124a61d79806b74cdcb583a91738b386d049b1e43096107c590513d64e2",
     "publication_projection_revision": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
     "repository": "LietuvaAI/culturenet-brain"
   },
@@ -8399,7 +8399,7 @@
       "building-standing"
     ]
   },
-  "content_hash": "sha256:e2a607445d8bfa5308d85912a2a17f63e1fbc0adef827a0c91ad6eaf865b75fc",
+  "content_hash": "sha256:9716e75e8cff523e12604ff68b01373186c46dc39d5f4475c403a06bb8360015",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -11022,6 +11022,7 @@
           "nameLt": "Beverly Shores misija",
           "networkClass": "mass_continues",
           "officialSite": "https://www.st-ann-of-the-dunes.org",
+          "publicProfile": "/parishes/st-ann-beverly-shores-in",
           "registrySlug": "st-ann-beverly-shores-in",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11048,6 +11049,7 @@
           "nameLt": "Bostono Šv. Petro lietuvių parapija",
           "networkClass": "active_parish",
           "officialSite": "https://www.stpeterlithuanianparish.org",
+          "publicProfile": "/parishes/sv-petro-boston-ma",
           "registrySlug": "peter-boston-ma",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11074,6 +11076,7 @@
           "nameEn": "St. Anthony Parish",
           "nameLt": "Čikagos Šv. Antano parapija (Cicero)",
           "networkClass": "mass_continues",
+          "publicProfile": "/parishes/sv-antano-cicero-il",
           "registrySlug": "anthony-cicero-il",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11101,6 +11104,7 @@
           "nameLt": "Čikagos Švč. Mergelės Marijos Gimimo parapija",
           "networkClass": "active_parish",
           "officialSite": "https://chicagonativitybvm.org",
+          "publicProfile": "/parishes/svc-mergeles-marijos-gimimo-chicago-il",
           "registrySlug": "nativity-chicago-il",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11128,6 +11132,7 @@
           "nameLt": "Čikagos Švč. Mergelės Marijos Nekaltojo Prasidėjimo parapija",
           "networkClass": "mass_continues",
           "officialSite": "https://immaculateconception-fiveholymartyrs.org",
+          "publicProfile": "/parishes/svc-m-marijos-nekalto-prasidejimo-chicago-il",
           "registrySlug": "immaculate-chicago-il",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11154,6 +11159,7 @@
           "nameLt": "Detroito Dievo Apvaizdos parapija",
           "networkClass": "active_parish",
           "officialSite": "https://www.divineprovidencechurch.com",
+          "publicProfile": "/parishes/dievo-apvaizdos-southfield-mi",
           "registrySlug": "providence-southfield-mi",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11180,6 +11186,7 @@
           "nameLt": "Filadelfijos Šv. Andriejaus parapija",
           "networkClass": "active_parish",
           "officialSite": "https://saintandrewlithuanianparish.org",
+          "publicProfile": "/parishes/sv-andriejaus-philadelphia-pa",
           "registrySlug": "andrew-philadelphia-pa",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11207,6 +11214,7 @@
           "networkClass": "directory_conflict",
           "note": "Directory membership is preserved as evidence, but it does not override the newer closure record.",
           "officialSite": "https://holytrinityhartford.org",
+          "publicProfile": "/parishes/svc-trejybes-hartford-ct",
           "registrySlug": "trinity-hartford-ct",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11235,6 +11243,7 @@
           "nameLt": "Kennebunkport Šv. Antano vienuolynas",
           "networkClass": "religious_house",
           "officialSite": "https://www.franciscanguesthouse.com",
+          "publicProfile": "/catholic-life/kennebunk-lithuanian-franciscan-friary",
           "sourceRefs": [
             "sielovada-north-america"
           ],
@@ -11261,6 +11270,7 @@
           "nameLt": "Klivlendo Šv. Kazimiero parapija",
           "networkClass": "active_parish",
           "officialSite": "http://www.saintcasimirparish.org",
+          "publicProfile": "/parishes/sv-kazimiero-cleveland-oh",
           "registrySlug": "casimir-cleveland-oh",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11288,6 +11298,7 @@
           "nameLt": "Lemonto Pal. Jurgio Matulaičio misija",
           "networkClass": "active_mission",
           "officialSite": "https://www.matulaitismission.com",
+          "publicProfile": "/parishes/pal-jurgio-matulaicio-misija-lemont-il",
           "registrySlug": "george-lemont-il",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11315,6 +11326,7 @@
           "nameLt": "Los Andželo Šv. Kazimiero parapija",
           "networkClass": "active_parish",
           "officialSite": "https://stcasimirchurchla.org",
+          "publicProfile": "/parishes/sv-kazimiero-los-angeles-ca",
           "registrySlug": "casimir-los-angeles-ca",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11343,6 +11355,7 @@
           "networkClass": "active_mission",
           "note": "Distinct mission established by Archdiocese of Chicago decree in December 2013; admitted to the canonical registry on 2026-08-02.",
           "officialSite": "https://www.facebook.com/waukeganbendruomene",
+          "publicProfile": "/parishes/our-lady-of-siluva-mission-mundelein-il",
           "registrySlug": "our-lady-of-siluva-mission-mundelein-il",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11369,6 +11382,7 @@
           "nameLt": "Naujosios Filadelfijos Šv. Kryžiaus parapija",
           "networkClass": "no_lithuanian_liturgy",
           "note": "Not joined to the historical Sacred Heart registry row. The names and addresses differ, so the identity requires adjudication.",
+          "publicProfile": "/catholic-life/new-philadelphia-holy-cross",
           "sourceRefs": [
             "sielovada-north-america"
           ],
@@ -11395,6 +11409,7 @@
           "nameLt": "Niujorko Apreiškimo Mergelei Marijai bažnyčia",
           "networkClass": "mass_continues",
           "officialSite": "https://www.katalikai.nyc",
+          "publicProfile": "/parishes/svc-m-marijos-apreiskimo-brooklyn-ny",
           "registrySlug": "annunciation-brooklyn-ny",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11423,6 +11438,7 @@
           "nameEn": "Transfiguration Church",
           "nameLt": "Niujorko Atsimainymo parapija",
           "networkClass": "no_lithuanian_liturgy",
+          "publicProfile": "/parishes/kristaus-atsimainymo-maspeth-ny",
           "registrySlug": "transfiguration-maspeth-ny",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11448,6 +11464,7 @@
           "nameEn": "St. George Lithuanian Mission Community",
           "nameLt": "Ročesterio Šv. Jurgio lietuvių katalikų misijinė bendruomenė",
           "networkClass": "mass_continues",
+          "publicProfile": "/parishes/sv-jurgio-rochester-ny",
           "registrySlug": "george-rochester-ny",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11474,6 +11491,7 @@
           "nameLt": "Skrantono Šv. Mykolo lietuvių parapija",
           "networkClass": "no_lithuanian_liturgy",
           "officialSite": "https://fsspscranton.wordpress.com",
+          "publicProfile": "/parishes/sv-mykolo-scranton-pa",
           "registrySlug": "michael-scranton-pa",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11501,6 +11519,7 @@
           "networkClass": "no_lithuanian_liturgy",
           "note": "Current pastoral-network record; no distinct canonical Lithuanian parish-registry match has been established.",
           "officialSite": "https://marymotherofgodparish.org",
+          "publicProfile": "/catholic-life/scranton-holy-rosary",
           "sourceRefs": [
             "sielovada-north-america"
           ],
@@ -11528,6 +11547,7 @@
           "networkClass": "mass_continues",
           "note": "Host church with Lithuanian ministry; not a Lithuanian ethnic parish.",
           "officialSite": "https://georgetownepiphany.org",
+          "publicProfile": "/catholic-life/washington-epiphany",
           "sourceRefs": [
             "sielovada-north-america"
           ],

@@ -46,10 +46,16 @@ const allowedNetworkClasses = new Set([
 const publicRegistryTypes = new Set(["parish", "misija", "congregation"]);
 const ids = new Set();
 const registrySlugs = new Set();
+const publicProfiles = new Set();
 
 for (const entry of network.entries) {
   if (ids.has(entry.id)) errors.push(`${entry.id}: duplicate network id`);
   ids.add(entry.id);
+
+  if (!entry.publicProfile || publicProfiles.has(entry.publicProfile)) {
+    errors.push(`${entry.id}: missing or duplicate public profile`);
+  }
+  publicProfiles.add(entry.publicProfile);
 
   if (!allowedDirectoryTypes.has(entry.directoryType)) {
     errors.push(`${entry.id}: unsupported directoryType ${entry.directoryType}`);
@@ -85,6 +91,11 @@ for (const entry of network.entries) {
         `${entry.id}: registry match ${entry.registrySlug} is not a public U.S. Roman Catholic institution`,
       );
     }
+    if (entry.publicProfile !== match?.public_census?.canonical_profile) {
+      errors.push(`${entry.id}: historical profile route disagrees with registry`);
+    }
+  } else if (!entry.publicProfile?.startsWith("/catholic-life/")) {
+    errors.push(`${entry.id}: non-census listing lacks a Catholic-life profile`);
   }
 
   if (
@@ -224,5 +235,5 @@ if (errors.length) {
 }
 
 console.log(
-  `OK: Sielovada U.S. network — ${network.counts.listed} listings, ${network.counts.activeParishes} active parishes, ${network.counts.activeMissions} active missions, ${network.counts.registryMatches} canonical profile matches.`,
+  `OK: Sielovada U.S. network — ${network.counts.listed} listings and ${publicProfiles.size} public profiles (${network.counts.registryMatches} historical, ${network.counts.networkOnly} Catholic-life).`,
 );
