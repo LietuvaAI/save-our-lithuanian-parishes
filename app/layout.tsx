@@ -51,35 +51,8 @@ type NavItem =
 
 const NAV: NavItem[] = [
   { href: "/parishes", label: "All Profiles" },
-  {
-    href: "/where-every-parish-ended-up",
-    label: "Parish & Mission Status",
-  },
-  {
-    label: "Explore",
-    menuAlign: "right",
-    children: [
-      { href: "/history", label: "The Rise and the Loss" },
-      {
-        href: "/where-parish-life-continued",
-        label: "Where Parish Life Continued",
-      },
-      {
-        href: "/lithuanian-catholic-life-today",
-        label: "The Living Network",
-      },
-      { href: "/history#loss-by-diocese", label: "By Diocese" },
-      {
-        href: "/history#beginning",
-        label: "Pennsylvania Coal Region",
-      },
-      {
-        href: "/national-catholic",
-        label: "National & Independent Catholic",
-      },
-      { href: "/protestant", label: "Protestant" },
-    ],
-  },
+  { href: "/where-every-parish-ended-up", label: "Outcomes" },
+  { href: "/history", label: "The Rise and the Loss" },
   {
     label: "Guidance",
     children: [
@@ -99,7 +72,7 @@ const NAV: NavItem[] = [
       },
     ],
   },
-  { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys" },
+  { href: "https://blog.saveourlithuanianparishes.org", label: "Židinys ↗" },
 ];
 
 export default function RootLayout({
@@ -113,19 +86,19 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${timelineMono.variable} ${serifDisplay.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <header>
-          <div className="mx-auto max-w-5xl px-4 py-3 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
-            <Link href="/" className="font-serif text-subsection-title font-semibold tracking-tight">
+        <header className="border-b-[3px] border-transparent [border-image:linear-gradient(to_right,#f5b500_33.4%,#00694d_33.4%,#00694d_66.7%,#a72c2c_66.7%)_1]">
+          <div className="mx-auto flex max-w-6xl flex-wrap items-baseline gap-x-5 gap-y-1.5 px-4 py-3.5">
+            <Link href="/" className="shrink-0 whitespace-nowrap font-serif text-site-wordmark font-medium uppercase tracking-[0.09em] text-foreground">
               Save Our Lithuanian Parishes
             </Link>
-            <nav className="flex w-full flex-wrap items-center gap-x-5 gap-y-2 text-body-copy text-muted sm:w-auto sm:justify-end">
+            <nav className="ml-auto flex w-full flex-wrap items-center gap-x-3.5 gap-y-1 font-serif text-site-nav font-medium uppercase tracking-[0.08em] text-foreground sm:w-auto sm:justify-end">
               {NAV.map((item) =>
                 "children" in item ? (
                   <div key={item.label} className="relative group">
                     <button
                       type="button"
                       aria-haspopup="menu"
-                      className="flex items-center gap-1 hover:text-foreground transition-colors"
+                      className="flex items-center gap-1 whitespace-nowrap border-b border-transparent py-1 transition-colors hover:border-[var(--es-active)] hover:text-[var(--es-active)]"
                     >
                       {item.label}
                       <span className="text-ui-label opacity-60">▾</span>
@@ -150,7 +123,7 @@ export default function RootLayout({
                             <Link
                               key={child.href}
                               href={child.href}
-                              className="px-4 py-2 hover:bg-foreground/5 hover:text-foreground transition-colors whitespace-nowrap"
+                              className="px-4 py-2 font-sans text-support-copy normal-case tracking-normal hover:bg-foreground/5 hover:text-[var(--es-active)] transition-colors whitespace-nowrap"
                             >
                               {child.label}
                             </Link>
@@ -163,7 +136,11 @@ export default function RootLayout({
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="hover:text-foreground transition-colors"
+                    className={`whitespace-nowrap border-b border-transparent py-1 text-foreground transition-colors hover:border-[var(--es-active)] hover:text-[var(--es-active)] ${
+                      item.label.startsWith("Židinys")
+                        ? "font-semibold !text-[var(--es-active)]"
+                        : ""
+                    }`}
                   >
                     {item.label}
                   </Link>
@@ -171,54 +148,23 @@ export default function RootLayout({
               )}
             </nav>
           </div>
-          {/* Lithuanian flag stripe */}
-          <div className="flex h-[3px]" aria-hidden>
-            <div className="flex-1" style={{ background: "#FDB913" }} />
-            <div className="flex-1" style={{ background: "#006A44" }} />
-            <div className="flex-1" style={{ background: "#C1272D" }} />
-          </div>
         </header>
         <main className="flex-1">{children}</main>
-        <footer className="mt-10 border-t border-rule">
-          <div className="mx-auto max-w-5xl px-4 py-5 text-body-copy text-muted">
-            <nav
-              aria-label="Footer"
-              className="flex flex-wrap gap-x-4 gap-y-2"
-            >
-              <Link href="/parishes" className="underline hover:text-foreground">
-                All Parish Profiles
-              </Link>
-              <Link href="/about" className="underline hover:text-foreground">
-                About the Project
-              </Link>
-              <Link
-                href="/about-the-data"
-                className="underline hover:text-foreground"
-              >
-                About the Data
-              </Link>
-              <Link
-                href="/about/sources-and-archives"
-                className="underline hover:text-foreground"
-              >
-                Sources &amp; Archives
-              </Link>
-              <Link href="/report" className="underline hover:text-foreground">
-                Report a Current Change
-              </Link>
-              <a
-                href="https://blog.saveourlithuanianparishes.org"
-                className="underline hover:text-foreground"
-              >
-                Židinys (The Hearth)
-              </a>
-            </nav>
-
-            <p className="mt-4 leading-relaxed">
+        <footer className="mt-10 border-t border-foreground bg-[#faf7f1]">
+          <div className="mx-auto max-w-6xl px-4 py-[22px] text-small-copy leading-[1.6] text-muted">
+            <p className="font-serif text-site-footer-brand font-medium uppercase tracking-[0.09em] text-foreground">
+              Save Our Lithuanian Parishes
+            </p>
+            <p className="mt-1.5 max-w-[76ch]">
+              The living history of America&rsquo;s Lithuanian parishes, missions,
+              and congregations — how they began, how they changed, and where
+              they stand today. <Link href="/about">About the project</Link> ·{" "}
+              <Link href="/about-the-data">About the data</Link>
+            </p>
+            <p className="mt-3.5 border-t border-rule pt-3">
               Archive and data foundation:{" "}
               <a
                 href="https://archyvas.ziburioltmokykla.org"
-                className="font-medium text-foreground underline hover:text-accent"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -227,42 +173,19 @@ export default function RootLayout({
               , Žiburio Lithuanian School student interns at{" "}
               <Link
                 href="/parishes/dievo-apvaizdos-southfield-mi"
-                className="font-medium text-foreground underline hover:text-accent"
               >
                 Divine Providence Lithuanian Parish
               </Link>{" "}
               in Southfield.
             </p>
 
-            <div className="mt-3 flex flex-col gap-2 text-small-copy sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
-              <p>
-                © 2026 Save Our Lithuanian Parishes · Powered by{" "}
-                <a
-                  href="https://lietuva.ai"
-                  className="underline hover:text-foreground"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Lietuva.AI
-                </a>
-              </p>
-              <p>
-                Documentation, not legal or canonical advice ·{" "}
-                <Link
-                  href="/legal"
-                  className="underline hover:text-foreground"
-                >
-                  Legal, attribution &amp; data use
-                </Link>{" "}
-                ·{" "}
-                <a
-                  href="mailto:info@saveourlithuanianparishes.org"
-                  className="underline hover:text-foreground"
-                >
-                  Contact
-                </a>
-              </p>
-            </div>
+            <p className="mt-1">
+              © 2026 Save Our Lithuanian Parishes · Powered by{" "}
+              <a href="https://lietuva.ai" target="_blank" rel="noopener noreferrer">Lietuva.AI</a>
+              {" "}· Documentation, not legal or canonical advice ·{" "}
+              <Link href="/legal">Legal, attribution &amp; data use</Link> ·{" "}
+              <a href="mailto:info@saveourlithuanianparishes.org">Contact</a>
+            </p>
           </div>
         </footer>
       </body>

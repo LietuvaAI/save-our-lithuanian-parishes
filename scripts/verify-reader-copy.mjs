@@ -49,28 +49,16 @@ if (homepage.includes("Still standing")) {
     "app/page.tsx: living institutions must not use the physical-building label Still standing",
   );
 }
-if (!homepage.includes("Active parishes and missions")) {
-  errors.push("app/page.tsx: canonical living-network terminology drifted");
+if (!homepage.includes("Parishes at a crossroads")) {
+  errors.push("app/page.tsx: approved current-situations heading drifted");
 }
 const expectedNavOrder = [
   'href: "/parishes", label: "All Profiles"',
-  'href: "/where-every-parish-ended-up"',
-  'label: "Parish & Mission Status"',
-  'label: "Explore"',
+  'href: "/where-every-parish-ended-up", label: "Outcomes"',
   'href: "/history", label: "The Rise and the Loss"',
-  'href: "/where-parish-life-continued"',
-  'label: "Where Parish Life Continued"',
-  'href: "/lithuanian-catholic-life-today"',
-  'label: "The Living Network"',
-  'href: "/history#loss-by-diocese", label: "By Diocese"',
-  'href: "/history#beginning"',
-  'label: "Pennsylvania Coal Region"',
-  'href: "/national-catholic"',
-  'label: "National & Independent Catholic"',
-  'href: "/protestant", label: "Protestant"',
   'label: "Guidance"',
   'label: "About"',
-  'href: "https://blog.saveourlithuanianparishes.org", label: "Židinys"',
+  'href: "https://blog.saveourlithuanianparishes.org", label: "Židinys ↗"',
 ];
 let previousNavPosition = -1;
 for (const navFragment of expectedNavOrder) {
