@@ -238,11 +238,17 @@ export default function NationalRecordGraphic({
       </div>
 
       <p className="mt-4 text-body-copy leading-relaxed text-muted">
-        <Link href="/history" className="underline hover:text-foreground">
+        <Link
+          href="/history/parishes-alive-year-by-year"
+          className="underline hover:text-foreground"
+        >
           Follow the losses over time
         </Link>
         {" · "}
-        <Link href="/history#loss-by-diocese" className="underline hover:text-foreground">
+        <Link
+          href="/history/loss-by-diocese"
+          className="underline hover:text-foreground"
+        >
           Inspect every diocese
         </Link>
       </p>

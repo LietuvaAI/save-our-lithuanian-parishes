@@ -487,6 +487,9 @@ if (
 const aggregatePages = [
   "app/page.tsx",
   "app/history/page.tsx",
+  "app/history/two-waves-across-a-century/page.tsx",
+  "app/history/parishes-alive-year-by-year/page.tsx",
+  "app/history/loss-by-diocese/page.tsx",
   "app/by-diocese/page.tsx",
   "app/where-every-parish-ended-up/page.tsx",
   "app/church-buildings-through-time/page.tsx",
@@ -686,6 +689,30 @@ const historyPage = readFileSync(
   new URL("../app/history/page.tsx", import.meta.url),
   "utf8",
 );
+const historyTwoWavesPage = readFileSync(
+  new URL(
+    "../app/history/two-waves-across-a-century/page.tsx",
+    import.meta.url,
+  ),
+  "utf8",
+);
+const historyAlivePage = readFileSync(
+  new URL(
+    "../app/history/parishes-alive-year-by-year/page.tsx",
+    import.meta.url,
+  ),
+  "utf8",
+);
+const historyDiocesePage = readFileSync(
+  new URL("../app/history/loss-by-diocese/page.tsx", import.meta.url),
+  "utf8",
+);
+const historyPages = [
+  historyPage,
+  historyTwoWavesPage,
+  historyAlivePage,
+  historyDiocesePage,
+];
 const historyAdapter = readFileSync(
   new URL("../lib/history-projection.ts", import.meta.url),
   "utf8",
@@ -698,11 +725,15 @@ const coalRegionPage = readFileSync(
   new URL("../app/pennsylvania-coal-region/page.tsx", import.meta.url),
   "utf8",
 );
+if (historyPages.some((page) => !/historyProjection/.test(page))) {
+  errors.push("A History chapter does not use the shared History adapter");
+}
 if (
-  !/historyProjection/.test(historyPage) ||
-  /site-figures|registry-unified|registry-scope|data\/parishes/.test(historyPage)
+  historyPages.some((page) =>
+    /site-figures|registry-unified|registry-scope|data\/parishes/.test(page),
+  )
 ) {
-  errors.push("History does not render exclusively through its canonical adapter");
+  errors.push("History chapters read data outside the shared History adapter");
 }
 if (
   !/romanCatholicParishHistory/.test(historyAdapter) ||
@@ -725,9 +756,9 @@ if (
 }
 if (
   !/permanentRedirect/.test(retiredDiocesePage) ||
-  !/\/history#loss-by-diocese/.test(retiredDiocesePage)
+  !/\/history\/loss-by-diocese/.test(retiredDiocesePage)
 ) {
-  errors.push("retired diocese route does not redirect into History");
+  errors.push("retired diocese route does not redirect to the diocese chapter");
 }
 if (
   !/pennsylvaniaCoalRegion/.test(coalRegionPage) ||

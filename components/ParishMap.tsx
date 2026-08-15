@@ -954,7 +954,7 @@ export default function ParishMap() {
                 <div className="text-muted text-small-copy mt-0.5">
                   {hovered.deep
                     ? "Detailed profile and sources available"
-                    : "Basic profile — evidence remains limited"}
+                    : "Basic profile — sources are still limited"}
                 </div>
                 {hovered.profile && (
                   <div className="mt-1.5 font-medium">Click the marker to open its profile →</div>

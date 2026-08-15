@@ -6,6 +6,10 @@ const files = [
   "app/parishes/page.tsx",
   "app/parishes/[slug]/page.tsx",
   "app/history/page.tsx",
+  "app/history/two-waves-across-a-century/page.tsx",
+  "app/history/parishes-alive-year-by-year/page.tsx",
+  "app/history/loss-by-diocese/page.tsx",
+  "app/pennsylvania-coal-region/page.tsx",
   "app/by-diocese/page.tsx",
   "app/start-here/page.tsx",
   "app/what-canon-law-says/page.tsx",
@@ -31,6 +35,12 @@ const processFirstPhrases = [
   "registry revision",
   "situations the project is tracking",
   "this project documents their situations",
+  "canonical projection {revision}",
+  "every line and figure derives from the canonical culturenet projection",
+  "every figure below is derived from projection",
+  "compiled {db.generated} from the parish-preservation research record",
+  "basic profile — evidence remains limited",
+  "source image: jonas žilius",
 ];
 
 const errors = [];
@@ -82,7 +92,7 @@ const expectedNavOrder = [
   'href: "/history", label: "The Rise and the Loss"',
   'href: "/pennsylvania-coal-region"',
   'label: "Pennsylvania Coal Region"',
-  'href: "/history#loss-by-diocese", label: "By Diocese"',
+  'href: "/history/loss-by-diocese", label: "By Diocese"',
   'section: "Other traditions"',
   'href: "/national-catholic"',
   'label: "National & Independent Catholic"',

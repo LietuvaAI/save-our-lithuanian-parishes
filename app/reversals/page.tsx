@@ -267,9 +267,9 @@ export default function ReversalsPage() {
       </section>
 
       <p className="mt-10 text-body-copy text-muted border-t border-rule pt-4">
-        Compiled {db.generated} from the parish-preservation research record;
-        every case cites its sources above. This page summarizes public
-        documents and reporting and is not canonical or legal advice.
+        Evidence reviewed through {db.generated}; every case cites its sources
+        above. This page summarizes public documents and reporting and is not
+        legal advice.
       </p>
     </article>
   );

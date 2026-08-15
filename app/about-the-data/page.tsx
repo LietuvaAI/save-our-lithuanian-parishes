@@ -238,7 +238,10 @@ export default function AboutTheDataPage() {
           The maps are built entirely from openly licensed geography. The
           basemap — state and county outlines — is US Census TIGER geometry
           (public domain, via the us-atlas distribution). The{" "}
-          <Link href="/history#loss-by-diocese" className="underline hover:text-accent">
+          <Link
+            href="/history/loss-by-diocese"
+            className="underline hover:text-accent"
+          >
             diocese boundaries
           </Link>{" "}
           are those same public-domain counties merged diocese by diocese

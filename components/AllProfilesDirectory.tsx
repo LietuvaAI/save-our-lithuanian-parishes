@@ -72,7 +72,7 @@ const collator = new Intl.Collator("lt", {
 const DIRECTORY_GROUP_DESCRIPTION: Record<EndStateGroup, string> = {
   ...GROUP_DESCRIPTION,
   active_parish:
-    "The institution remains active in its Lithuanian identity. Roman Catholic parishes and missions, and Protestant congregations, share this canonical status group.",
+    "The institution remains active in its Lithuanian identity. Roman Catholic parishes and missions, and Protestant congregations, share this status group.",
   closed:
     "The Lithuanian institution has closed. Its former church may be standing, repurposed, demolished, or not yet established; physical outcomes are tracked separately in the building record.",
 };
