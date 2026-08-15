@@ -51,8 +51,37 @@ type NavItem =
 
 const NAV: NavItem[] = [
   { href: "/parishes", label: "All Profiles" },
-  { href: "/where-every-parish-ended-up", label: "Outcomes" },
-  { href: "/history", label: "The Rise and the Loss" },
+  {
+    label: "Explore",
+    children: [
+      { section: "The record" },
+      {
+        href: "/where-every-parish-ended-up",
+        label: "Where Every Parish Stands",
+      },
+      {
+        href: "/lithuanian-catholic-life-today",
+        label: "The Living Network",
+      },
+      {
+        href: "/where-parish-life-continued",
+        label: "Where Parish Life Continued",
+      },
+      { section: "History" },
+      { href: "/history", label: "The Rise and the Loss" },
+      {
+        href: "/pennsylvania-coal-region",
+        label: "Pennsylvania Coal Region",
+      },
+      { href: "/history#loss-by-diocese", label: "By Diocese" },
+      { section: "Other traditions" },
+      {
+        href: "/national-catholic",
+        label: "National & Independent Catholic",
+      },
+      { href: "/protestant", label: "Protestant" },
+    ],
+  },
   {
     label: "Guidance",
     children: [
