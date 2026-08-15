@@ -215,6 +215,9 @@ function NetworkCard({ card }: { card: LivingNetworkCardType }) {
           {card.draugasEvidence.page
             ? ` · ${card.draugasEvidence.page}`
             : " · public article"}
+          {card.draugasEvidence.access === "subscriber"
+            ? " · subscriber archive"
+            : ""}
         </summary>
         <p className="mt-1 leading-snug">
           <a

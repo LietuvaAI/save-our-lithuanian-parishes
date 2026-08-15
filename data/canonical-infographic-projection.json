@@ -8399,7 +8399,7 @@
       "building-standing"
     ]
   },
-  "content_hash": "sha256:b47b5ce9756cc73290468a333cbb0954bbb90103b34831497743b130bf83eb98",
+  "content_hash": "sha256:e2a607445d8bfa5308d85912a2a17f63e1fbc0adef827a0c91ad6eaf865b75fc",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -11407,15 +11407,17 @@
           "clergy": "Kun. Valdemaras Lisovski, Lithuanian chaplain",
           "directoryType": "parish",
           "draugasEvidence": {
-            "citation": "Draugas, 2026-06-11, Vol. CXVII Nr. 47; web edition 2026-06-18",
+            "access": "subscriber",
+            "citation": "Draugas, 2026-06-11, Vol. CXVII Nr. 47, p. 3; web edition 2026-06-18",
             "date": "2026-06-11",
             "excerpt": "O Maspeth Kristaus Atsimainymo parapiją, atlaikiusią 2019 metų sujungimą, uždarymo laiškas pasiekė 2025 metais.",
+            "page": "p. 3",
             "publisher": "Draugas",
             "supports": "Reports that Transfiguration survived the 2019 merger, received a closure letter in 2025, and remained the subject of an unresolved dispute.",
             "title": "Kam priklauso parapijos?",
-            "url": "https://www.draugas.org/kam-priklauso-parapijos/"
+            "url": "https://www.draugas.org/key/2026_reg/2026-06-11-DRAUGAS.pdf"
           },
-          "draugasReviewStatus": "public_web_article_verified",
+          "draugasReviewStatus": "page_context_verified",
           "id": "maspeth-transfiguration",
           "ministry": "Lithuanian parish life ended at this church in 2019; its Lithuanian Mass moved to Annunciation Church in Brooklyn.",
           "nameEn": "Transfiguration Church",

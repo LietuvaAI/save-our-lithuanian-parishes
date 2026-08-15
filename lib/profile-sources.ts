@@ -46,6 +46,7 @@ export type LinkedProfileSource = {
   publisher?: string;
   date?: string;
   page?: string;
+  access?: "subscriber";
   excerpt?: string;
   supports?: string;
 };
@@ -370,7 +371,12 @@ export function linkedProfileSources(
         title: source.title || source.publisher || options.fallbackTitle,
         publisher: source.publisher,
         date: source.date,
-        citation: [source.publisher, source.date, source.page]
+        citation: [
+          source.publisher,
+          source.date,
+          source.page,
+          source.access === "subscriber" ? "subscriber archive" : null,
+        ]
           .filter(Boolean)
           .join(", "),
         url:

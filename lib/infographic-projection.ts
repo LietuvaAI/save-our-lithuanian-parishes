@@ -50,6 +50,7 @@ export type ReviewedDraugasEvidence = {
   date: string;
   page?: string;
   citation?: string;
+  access?: "subscriber";
   excerpt?: string;
   supports: string;
   url: string;
