@@ -13332,14 +13332,9 @@
       "sources": [
         {
           "axis": "draugas-2008-2026",
-          "kind": "newspaper-page",
+          "kind": "case-file",
           "ref": "c83 row 46",
-          "work": "Pennsylvanija: lietuviškų vietų paslaptys",
-          "publisher": "Draugas",
-          "cites": "2024-01-20 p. 11",
-          "sourceUrl": "https://draugas.org/key/2024_reg/2024-01-20-DRAUGASo.pdf",
-          "excerpt": "Išgirdęs apie mūsų ekspediciją ir žemėlapį, kunigas pakvietė į zakristiją, parodė šimtametes lietuvių krikštų ir santuokų knygas.",
-          "supports": "Documents the Latin Mass community's 2024 use of the former Lithuanian church and the presence there at that time of historic Lithuanian baptismal and marriage registers."
+          "cites": "2024-01-20"
         },
         {
           "axis": "draugas-registry-1909-2007",
@@ -23667,7 +23662,7 @@
     }
   ],
   "registryRevision": {
-    "version": 31,
+    "version": 32,
     "date": "2026-08-11",
     "changelog": [
       "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
@@ -23722,9 +23717,10 @@
       "Registry Revision 28: synchronized the Brain-owned public-display authority to canonical-public-census-2026-08-10-religious-houses-atlanta; public identity and membership are unchanged.",
       "Registry Revision 29: synchronized the Brain-owned public-display authority to canonical-public-census-2026-08-11-wider-catholic-life-geocodes; public identity and membership are unchanged.",
       "Registry Revision 30: synchronized the Brain-owned public-display authority to canonical-public-census-2026-08-11-wider-catholic-life-geocodes; public identity and membership are unchanged.",
-      "Registry Revision 31: enriched the reviewed 2024 Draugas evidence for Saint Michael the Archangel in Scranton with its article title, page locator, short excerpt, and explicit evidentiary use; public counts and classifications are unchanged."
+      "Registry Revision 31: began the reviewed Draugas source-card work with a page-level Saint Michael Scranton citation; public counts and classifications are unchanged.",
+      "Registry Revision 32: moved that citation into the canonical reviewed Sielovada-20 evidence layer so directory source cards have one Brain-owned authority; public counts and classifications are unchanged."
     ],
-    "contentHash": "9b171ebab0380a5d4c705586a6e24a3e0cead9abf0d155c902db815d8cd19bbc"
+    "contentHash": "b3e46360a73f3845ef36e23f21286cd7feb463d05471b52156c08e65e4b58819"
   },
   "publicationAuthority": {
     "repository": "LietuvaAI/culturenet-brain",

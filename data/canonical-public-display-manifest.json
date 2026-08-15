@@ -2,13 +2,13 @@
   "schema": "culturenet-parish-public-display-manifest.v1",
   "authority": "LietuvaAI/culturenet-brain",
   "publication_projection_revision": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
-  "infographic_projection_revision": "canonical-infographic-units-2026-08-14-continuity-taxonomy",
+  "infographic_projection_revision": "canonical-infographic-units-2026-08-15-reviewed-draugas-sielovada-20",
   "current_events_revision": "parish-current-events-2026-08-14",
   "files": [
     {
       "path": "docs/research/parish-canon/public-display/registry-unified.json",
       "site_path": "data/registry-unified.json",
-      "sha256": "c229b5f8a497ed159afede1ae2870f38bae588fcaf620527292e6889ff981b01"
+      "sha256": "33527e906f4657a10a5a6d32fd0077c9b52e543d7c199b97a464705272c8c176"
     },
     {
       "path": "docs/research/parish-canon/public-display/parish-situation.json",

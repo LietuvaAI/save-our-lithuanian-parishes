@@ -694,11 +694,10 @@ if (JSON.stringify(relationshipTypes) !== JSON.stringify(mappedRelationshipTypes
 const stMichaelScranton = registry.parishes.find(
   (parish) => parish.slug === "michael-scranton-pa",
 );
-const stMichaelDraugas = stMichaelScranton?.sources?.find(
-  (source) =>
-    source.axis === "draugas-2008-2026" &&
-    source.cites?.includes("2024-01-20"),
-);
+const stMichaelDraugas =
+  infographic.current_pastoral_network.directory.entries.find(
+    (entry) => entry.id === "scranton-st-michael",
+  )?.draugasEvidence;
 const stLucyScranton = infographic.building_site_history.find(
   (site) => site.slug === "st-lucy-church-scranton-pa",
 );
@@ -725,12 +724,12 @@ if (
   );
 }
 if (
-  stMichaelDraugas?.work !==
+  stMichaelDraugas?.title !==
     "Pennsylvanija: lietuviškų vietų paslaptys" ||
-  stMichaelDraugas?.cites !== "2024-01-20 p. 11" ||
+  stMichaelDraugas?.page !== "p. 11" ||
   !stMichaelDraugas?.excerpt ||
   !stMichaelDraugas?.supports ||
-  stMichaelDraugas?.sourceUrl !==
+  stMichaelDraugas?.url !==
     "https://draugas.org/key/2024_reg/2024-01-20-DRAUGASo.pdf"
 ) {
   errors.push(

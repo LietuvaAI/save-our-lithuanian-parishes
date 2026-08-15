@@ -9,6 +9,7 @@ const events = readJson("data/canonical-current-events-projection.json");
 const photos = readJson("data/photos.json").parishes;
 const viewSource = readText("lib/living-network-view.ts");
 const pageSource = readText("app/lithuanian-catholic-life-today/page.tsx");
+const profilePageSource = readText("app/parishes/[slug]/page.tsx");
 const mapSource = readText("components/LivingNetworkMap.tsx");
 const errors = [];
 
@@ -33,6 +34,21 @@ if (
   widerCount !== 3
 ) {
   errors.push("canonical Living Network population drifted");
+}
+
+const reviewedDraugas = directory?.entries?.filter(
+  (entry) =>
+    entry.draugasEvidence?.publisher === "Draugas" &&
+    /^https:\/\/(?:www\.)?draugas\.org\//.test(entry.draugasEvidence.url) &&
+    ["page_context_verified", "public_web_article_verified"].includes(
+      entry.draugasReviewStatus,
+    ),
+);
+if (
+  reviewedDraugas?.length !== 20 ||
+  directory?.draugasEvidenceRevision !== "draugas-sielovada-20-2026-08-15"
+) {
+  errors.push("reviewed Draugas evidence is incomplete for the 20 directory entries");
 }
 
 if (events.alerts?.length !== 10 || events.campaigns?.length !== 4) {
@@ -68,6 +84,14 @@ if (!viewSource.includes('"washington-epiphany": { x: 828, y: 267.5 }')) {
 }
 if (!pageSource.includes("getClearedPhoto")) {
   errors.push("Living Network page no longer enforces cleared image rights");
+}
+if (
+  !pageSource.includes("card.draugasEvidence") ||
+  !profilePageSource.includes("pastoralDirectoryEntry?.draugasEvidence") ||
+  !profilePageSource.includes("registrySourcesForProfile") ||
+  !profilePageSource.includes("core && !pastoralDirectoryEntry?.draugasEvidence")
+) {
+  errors.push("reviewed Draugas evidence does not replace weaker date-only sources on both public surfaces");
 }
 if (
   photos["our-lady-immaculate-conception-freeland-pa-line-drawing"]?.rights !==

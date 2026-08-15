@@ -6,6 +6,7 @@ import {
   currentPastoralNetwork,
   romanCatholicInstitutionHistory,
   type CurrentPastoralDirectoryEntry,
+  type ReviewedDraugasEvidence,
 } from "@/lib/infographic-projection";
 import { canonicalProfileHrefForRegistrySlug } from "@/lib/parish-profile";
 import { widerCatholicLifeRecords } from "@/lib/wider-catholic-life";
@@ -73,6 +74,8 @@ export type LivingNetworkCard = {
   checked: string | null;
   profileHref: string | null;
   officialSite: string | null;
+  draugasEvidence: ReviewedDraugasEvidence;
+  draugasReviewStatus: CurrentPastoralDirectoryEntry["draugasReviewStatus"];
   founded: number | null;
   portraitKey: string;
   situation: LivingNetworkSituation | null;
@@ -228,6 +231,8 @@ function cardFor(entry: CurrentPastoralDirectoryEntry): LivingNetworkCard {
     checked: condition?.dateObserved ?? null,
     profileHref,
     officialSite: entry.officialSite ?? null,
+    draugasEvidence: entry.draugasEvidence,
+    draugasReviewStatus: entry.draugasReviewStatus,
     founded: institution?.founded.year ?? null,
     portraitKey: portraitKeyFor(entry, profileHref),
     situation: situationFor(profileHref),

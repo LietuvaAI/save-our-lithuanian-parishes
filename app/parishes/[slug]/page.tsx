@@ -549,9 +549,25 @@ export default async function ParishPage({
       "Current parish pastoral publication",
     ),
   ];
+  const registrySourcesForProfile = pastoralDirectoryEntry?.draugasEvidence
+    ? (entry.sources ?? []).filter(
+        (source) =>
+          source.axis !== "draugas-2008-2026" ||
+          Boolean(source.work && source.sourceUrl && source.supports),
+      )
+    : (entry.sources ?? []);
   const profileSources = finalizeProfileSources([
-    core ? draugasProfileSources(core.citations) : [],
-    registryProfileSources(entry.sources ?? []),
+    core && !pastoralDirectoryEntry?.draugasEvidence
+      ? draugasProfileSources(core.citations)
+      : [],
+    pastoralDirectoryEntry?.draugasEvidence
+      ? linkedProfileSources([pastoralDirectoryEntry.draugasEvidence], {
+          group: "newspaper",
+          context: "Reviewed Draugas evidence for the Sielovada U.S. directory",
+          fallbackTitle: "Reviewed Draugas source",
+        })
+      : [],
+    registryProfileSources(registrySourcesForProfile),
     canonicalArtifactProfileSources(publicationSourceArtifacts),
     caseSources,
     alertSources,
