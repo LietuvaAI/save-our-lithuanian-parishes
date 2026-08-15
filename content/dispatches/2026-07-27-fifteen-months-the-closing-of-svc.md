@@ -6,45 +6,66 @@ substackUrl: https://blog.saveourlithuanianparishes.org/p/fifteen-months-the-clo
 archivedAt: 2026-08-15
 ---
 ![](https://substackcdn.com/image/fetch/$s_!-kL0!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb1c087b0-8cbc-4a0b-83fb-e644e906d2ac_734x750.jpeg)Švč. Trejybės (Holy Trinity), 53 Capitol Avenue, Hartford — May 2000. Photo: Litnet, Wikimedia Commons, CC BY-SA 4.0.
-[The bulletin of February 9, 2025](https://container.parishesonline.com/bulletins/03/0549/20250209B.pdf) lists an ordinary week at Holy Trinity (Švč. Trejybės), the Lithuanian church at 53 Capitol Avenue in Hartford. Mass Times: Saturday vigil at 4:00; Sunday at 9:00 a.m., marked “(Lithuanian/English),” and again at 10:30; weekday Masses at 12:05. A parish of some 300 families, drawn from 47 Connecticut zip codes to a church their forebears raised between 1915 and 1928, on land the community bought in 1900. The Lithuanian daily newspaper *Draugas, published since 1909, the* diaspora’s paper of record, [first mentions Hartford’s Lithuanian parish](https://saveourlithuanianparishes.org/parishes/svc-trejybes-hartford-ct/draugas) in [February 1912](https://www.draugas.org/archive/1912_reg/1912-02-15-DRAUGASw.pdf). The church stands in *Lithuanian Cultural Legacy in America* (2009, p. 105), the compendium’s chapter on the first Lithuanian churches in America, its St. Casimir and Jesus stained glass photographed in color.
+[Holy Trinity’s bulletin for February 9, 2025](https://container.parishesonline.com/bulletins/03/0549/20250209B.pdf) looked routine. It listed Mass at 4:00 p.m. on Saturday, at 9:00 and 10:30 on Sunday, and at 12:05 on weekdays. The 9:00 Sunday Mass was celebrated in Lithuanian and English.
 
-The same February bulletin carries a second document: a letter to parishioners from the administrator. The Archdiocese of Hartford had received information about “possible financial improprieties” by the longtime pastor, Father Charles Jacobs; the letter states that “Father Jacobs has since advised us that he has taken an undisclosed amount of money from the parish for his unauthorized and personal uses,” and that he had been placed on administrative leave. And then it gives three assurances, printed one under the other: “That your church is financially stable; That it is able to pay its bills; and That weekend Masses will continue as usual.”
+About 300 families from 47 Connecticut ZIP codes belonged to Holy Trinity, or Švč. Trejybės, at 53 Capitol Avenue in Hartford. The Lithuanian community bought the land in 1900 and built the church over thirteen years, from 1915 to 1928.
 
-Fifteen months later, none of the three held.
+The church appears in *Lithuanian Cultural Legacy in America* (2009, p. 105), in a chapter about the earliest Lithuanian churches in the United States. The book includes color photographs of its stained-glass windows depicting St. Casimir and Jesus. The Lithuanian newspaper *Draugas*, published since 1909, [first mentioned Hartford’s Lithuanian parish](https://saveourlithuanianparishes.org/parishes/svc-trejybes-hartford-ct/draugas) in its [February 15, 1912, issue](https://www.draugas.org/archive/1912_reg/1912-02-15-DRAUGASw.pdf).
+
+The February 2025 bulletin  contained a letter from the parish administrator. It said the Archdiocese of Hartford had received information about “possible financial improprieties” involving the longtime pastor, Father Charles Jacobs. According to the letter, Father Jacobs had acknowledged taking “an undisclosed amount of money from the parish for his unauthorized and personal uses.” He was placed on administrative leave while the archdiocese investigated the parish’s finances.
+
+The letter then gave parishioners three assurances:
+
+- 
+“That your church is financially stable;”
+
+- 
+“That it is able to pay its bills; and”
+
+- 
+“That weekend Masses will continue as usual.”
+
+Fifteen months later, regular Masses had ended. The parish was losing money and, according to the archdiocese, could not afford its needed repairs.
 
 #### The closing, month by month
 
-**January–February 2025.** Fr. Jacobs is placed on leave, announced to parishioners at the January 26 Mass. The rector of the Cathedral, Very Rev. John Melnick, is appointed administrator. Holy Trinity, the bulletin reminds its readers, is canonically a mission of the Cathedral parish, not an independent one. The Sunday Lithuanian Mass continues.
+**January and February 2025.** Parishioners learned at Mass on January 26 that Father Jacobs had been placed on leave. The rector of the Cathedral, the Very Rev. John Melnick, was appointed administrator. The bulletin explained that Holy Trinity was canonically a mission of the Cathedral parish rather than an independent parish. The Sunday Lithuanian Mass continued.
 
-**August 14, 2025.** [Hartford police close their investigation](https://www.wfsb.com/2025/08/14/case-closed-hartford-police-end-investigation-into-priest-accused-stealing-money/): “insufficient evidence,” no charges. Fr. Jacobs, 73, says he is “grateful the investigation has cleared me of any wrongdoing” and maintains the funds were “used to help the poor, homeless, addicted, and those in need.” The archdiocese answers that he “is still facing a canonical process,” keeps him on leave with salary and benefits, and does not return him to Holy Trinity. His supporters call on Archbishop Christopher Coyne to retract the allegations and apologize. The parish is now more than half a year without its pastor.
+**August 14, 2025.** [Hartford police closed their investigation](https://www.wfsb.com/2025/08/14/case-closed-hartford-police-end-investigation-into-priest-accused-stealing-money/) because they found insufficient evidence to bring charges. Father Jacobs, then 73, said he was “grateful the investigation has cleared me of any wrongdoing.” He maintained that the money had been used to help “the poor, homeless, addicted, and those in need.”
 
-**April 2026.** [Parishioners are told after Mass](https://www.wtnh.com/news/connecticut/hartford/hartford-parishioners-met-with-notice-of-partial-closure-for-holy-trinity-catholic-church/) that Holy Trinity will partially close: regular Masses end as of May 30; funerals and baptisms continue. The reasons given: a loss of more than $74,000 since March 2025 despite reduced expenses, no clergy to assign, repairs the parish cannot afford. One parishioner, Dalia Giedrimienė, asked the question the notice did not answer: “Where will we go? I don’t have any other place to go.”
+The archdiocese said the police decision did not end its separate canonical process. Father Jacobs remained on paid administrative leave and did not return to Holy Trinity. His supporters asked Archbishop Christopher Coyne to retract the allegations and apologize. By then, the parish had been without its pastor for more than six months.
 
-**May 30, 2026.** The last regular Masses are held.
+**April 2026.** [Parishioners were told after Mass](https://www.wtnh.com/news/connecticut/hartford/hartford-parishioners-met-with-notice-of-partial-closure-for-holy-trinity-catholic-church/) that regular Masses would end on May 30. The church would remain available for funerals and baptisms.
 
-#### What it means
+The reasons given were financial losses, a shortage of clergy, and repairs the parish could not afford. The parish had lost more than $74,000 since March 2025, even after reducing expenses.
 
-New Britain is closed. New Haven is closed. Both Ansonia parishes are closed. Waterbury’s Šv. Juozapo closed in 2023, its canonical appeal still running. Bridgeport’s Šv. Jurgio building serves other communities now. With Hartford’s Masses ended, no Lithuanian church in Connecticut holds a regular Lithuanian Mass. Connecticut is a small state, but its roughly 33,000 Lithuanians are nearly one percent of its population (the largest share of any state in America), and they now have nowhere in the state to hear Sunday Mass in Lithuanian.
+Parishioner Dalia Giedrimienė asked the question the announcement did not answer: “Where will we go? I don’t have any other place to go.”
+
+**May 30, 2026.** Holy Trinity held its last regularly scheduled Masses.
+
+#### What the closing means
 ![](https://substackcdn.com/image/fetch/$s_!rpt-!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F94baff2b-f588-4ec2-895d-b778675aa7e5_3000x3016.png)The Connecticut record at a glance. Classifications and wording follow the site’s canon; every record is on the full interactive map at saveourlithuanianparishes.org.
-Maspeth, told [here](https://blog.saveourlithuanianparishes.org/p/still-open-still-undecided-the-fight), the community organized before the decision (petition, landmark filings, a presidential visit) and the diocese stopped short of closing. In Hartford, fifteen months passed from a printed assurance that “weekend Masses will continue as usual” to the end of Masses; the community was told, not consulted. [The documented reversals](https://saveourlithuanianparishes.org/reversals) across American dioceses were won by communities that acted before and during the process.
+Holy Trinity was the last church in Connecticut offering a regular Sunday Mass in Lithuanian.
 
-Waterbury’s community, whose church closed in 2023, retained a canon lawyer and has so far prevented a complete ending. Hartford’s community has begun the same way. What it is defending is the building.
+The Lithuanian churches in New Britain, New Haven, and Ansonia had already closed. St. Joseph in Waterbury closed in 2023, although its Vatican appeal remains unresolved. St. George’s former church building in Bridgeport now serves other communities. Lithuanians now have no church in Connecticut where they can attend a regular Sunday Mass in Lithuanian.
 
 #### The fight for the building
 
-The building is a red Gothic Revival church, raised over thirteen years between 1915 and 1928, with stained-glass windows carrying Lithuanian inscriptions. The Lithuanian neighborhood around it was taken by urban renewal decades ago. Their stated hope, reported when the closure was announced: a Lithuanian cultural center at 53 Capitol Avenue, keeping the church as a home for Hartford’s Lithuanian life.
+Regular Masses have ended, but the Holy Trinity campaign continues. The immediate goal is to preserve the building.
 
-A GoFundMe, [“Protect Holy Trinity Church”](https://www.gofundme.com/f/protect-holy-trinity-church), organized by Christian Allyn of Hartford and opened on May 24, six days before the last Mass, is raising the $5,000 retainer for a canon lawyer to advocate for the church’s preservation with the archdiocese, the same path Waterbury’s community took. As of July 27, it stood at $4,370 of $5,000: **$630 short**.
+Holy Trinity is a red Gothic Revival church with stained-glass windows bearing Lithuanian inscriptions. The community spent thirteen years building it. Although the Lithuanian neighborhood around the church disappeared during Hartford’s urban-renewal period, the church continued to serve Lithuanians from across the state.
+
+When the end of regular Masses was announced, parishioners said they hoped to preserve 53 Capitol Avenue as a Lithuanian cultural center. The building would remain a home for Lithuanian religious, cultural, and community life in Hartford.
+
+Christian Allyn of Hartford opened a GoFundMe campaign, [“Protect Holy Trinity Church,”](https://www.gofundme.com/f/protect-holy-trinity-church) on May 24, six days before the last Mass. The campaign is raising a $5,000 retainer for a canon lawyer who can represent the community in discussions with the archdiocese. It follows the approach taken by the Waterbury community.
+
+As of July 27, the campaign had raised $4,370. It was $630 short of its goal.
 
 #### What you can do today
 
-**Close the gap.** The canon-lawyer retainer needs $630 more. [The GoFundMe is here](https://www.gofundme.com/f/protect-holy-trinity-church).
+**Help close the $630 gap**. Donations can be made through the [Protect Holy Trinity Church campaign](https://www.gofundme.com/f/protect-holy-trinity-church).
 
-**Corrections welcome.** If a date or fact in this story needs fixing, the parish’s page is [here](https://saveourlithuanianparishes.org/parishes/svc-trejybes-hartford-ct); corrections go through [saveourlithuanianparishes.org/report](https://saveourlithuanianparishes.org/report).
-
-**If your parish is still open, read Hartford twice.** The window to act is before the letter, before the notice after Mass. Start at [saveourlithuanianparishes.org/start-here](https://saveourlithuanianparishes.org/start-here). Every active campaign is tracked at [/under-threat](https://saveourlithuanianparishes.org/under-threat).
-
-Fifteen months separated the bulletin that promised an ordinary year from the Sunday the Masses ended. The retainer for a canon lawyer is still being raised, and the cultural-center proposal has not yet taken formal shape. The building still stands on Capitol Avenue, and the community that filled it for a century and a quarter is still here.
+Only fifteen months separated the bulletin promising that weekend Masses would continue from the final regularly scheduled Mass. The effort to hire a canon lawyer is still underway, and the proposal for a Lithuanian cultural center is still only a proposal. But the church remains on Capitol Avenue, and the community that built it is still here.
 
 ---
 

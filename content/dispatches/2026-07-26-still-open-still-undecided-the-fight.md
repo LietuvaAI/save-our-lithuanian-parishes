@@ -6,67 +6,102 @@ substackUrl: https://blog.saveourlithuanianparishes.org/p/still-open-still-undec
 archivedAt: 2026-08-15
 ---
 ![](https://substackcdn.com/image/fetch/$s_!vxTE!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F866948a6-f354-4ad4-a301-2471d6cd60a6_3264x2448.jpeg)Kristaus Atsimainymo — the Church of the Transfiguration, 64-25 Perry Avenue, Maspeth, Queens. Photo: Maspetheer, Wikimedia Commons, CC BY-SA 4.0 (2016).
-The church at 64-25 Perry Avenue made the [front page of The New York Times](https://www.newyorkalmanack.com/2025/04/church-of-the-transfiguration-2/) when it opened in 1962, listed among the five best new buildings of the year, beside the TWA Terminal. Its architect was Jonas Mulokas, a Lithuanian. The money that built it came in donations from Lithuanian-Americans. Its interior carries the work of Vytautas Kazimieras Jonynas, whose art also hangs in St. Peter’s Basilica and in the National Shrine in Washington. The New York Almanack describes the design as modern construction carrying Lithuanian folk forms, “along the lines of a country church,” and ranks the building “among the most significant buildings of Lithuanian heritage outside of Lithuania.”
+When the [Church of the Transfiguration](https://saveourlithuanianparishes.org/parishes/kristaus-atsimainymo-maspeth-ny) opened at 64-25 Perry Avenue in 1962, *The New York Times* featured it on its front page as one of New York City’s five best new buildings of the year. The TWA Terminal at Kennedy Airport appeared on the same list.
 
-The President of Lithuania, Gitanas Nausėda, said it more directly, standing in front of the church [last September](https://qns.com/2025/09/gitanas-nauseda-transfiguration-church/): “Built by Lithuanian Americans in 1962, when faith was suppressed in Soviet-occupied Lithuania, it reminds us of WWII horrors, forced migrations, and also the fight for freedom, in which the U.S. played a vital role.”
+Its architect, [Jonas Mulokas](https://www.vle.lt/straipsnis/jonas-mulokas/), was one of the leading architects of the Lithuanian diaspora. He graduated from Vytautas Magnus University in 1935 and worked in Lithuania until he fled west during the Second World War. While living in displaced-persons camps in Germany, he designed hundreds of Lithuanian crosses, chapel-posts, shrines, and memorials. Those traditional forms later became an important part of his work in the United States.
 
-Kristaus Atsimainymo (the Church of the Transfiguration) belongs to the oldest Lithuanian parish in New York City, established in 1908. The Lithuanian daily newspaper *Draugas, published since 1909, the* diaspora’s paper of record, [first mentions Maspeth’s Lithuanians](https://saveourlithuanianparishes.org/parishes/kristaus-atsimainymo-maspeth-ny/draugas) in [November 1911](https://www.draugas.org/archive/1911_reg/1911-11-23-DRAUGASw.pdf). The church is believed to hold Catholic artifacts smuggled out of Lithuania.
+Before designing Transfiguration, Mulokas worked on Lithuanian churches including the Church of the Immaculate Conception in East St. Louis and the [Church of the Nativity of the Blessed Virgin Mary in Chicago](https://vkpk.lt/u-zemelapis/svc-mergeles-marijos-gimimo-baznycia-cikagoje/). He later redesigned Holy Cross Lithuanian Church in Dayton and designed St. Mary’s Church in Custer, Michigan.
+
+Transfiguration is widely considered the clearest expression of his ideas. Mulokas gave the building the outline of a Lithuanian country church while using the materials and engineering of mid-century modern architecture. The steep roof, wooden forms, and shrine-like tower made the building Lithuanian without turning it into a copy of an older church.
+
+Mulokas worked closely on the interior with [Vytautas Kazimieras Jonynas](https://www.draugas.org/news/vytautas-k-jonynas-in-america/), another major Lithuanian émigré artist. Jonynas designed the altars, stained-glass windows, sculptures, Stations of the Cross, baptismal font, and light fixtures. His work also appears in St. Peter’s Basilica and the National Shrine in Washington. Together, Mulokas and Jonynas created a church in which the architecture and artwork form a single Lithuanian design.
+
+[The](https://www.newyorkalmanack.com/2025/04/church-of-the-transfiguration-2/)*[New York Almanack](https://www.newyorkalmanack.com/2025/04/church-of-the-transfiguration-2/)* describes Transfiguration as a combination of modern construction and Lithuanian folk design, built “along the lines of a country church.” It calls the church one of the most important examples of Lithuanian architecture outside Lithuania.
+
+Lithuanian President Gitanas Nausėda spoke about that history when he [visited the church in September 2025](https://qns.com/2025/09/gitanas-nauseda-transfiguration-church/):
+
+> 
+“Built by Lithuanian Americans in 1962, when faith was suppressed in Soviet-occupied Lithuania, it reminds us of WWII horrors, forced migrations, and also the fight for freedom, in which the U.S. played a vital role.”
+
+Kristaus Atsimainymo, or the Church of the Transfiguration, belongs to the oldest Lithuanian parish in New York City, established in 1908. The Lithuanian newspaper *Draugas* [first mentioned the Maspeth Lithuanian community](https://saveourlithuanianparishes.org/parishes/kristaus-atsimainymo-maspeth-ny/draugas) in November 1911. The church is also believed to contain Catholic artifacts smuggled out of Lithuania during the Soviet occupation.
+
+In 2019, the historic Lithuanian parish merged with St. Stanislaus Kostka to form Transfiguration–St. Stanislaus Kostka Parish. The Perry Avenue church remains open, but with fewer Sunday Masses. Its Lithuanian Mass moved permanently to Annunciation Church in Williamsburg on September 1, 2025.
+
+The diocese has said that the church building will not be included in a possible sale of part of the parish property. Its long-term future, however, remains unsettled, and the campaign for landmark status continues.
 ![](https://substackcdn.com/image/fetch/$s_!muzr!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51e683d3-e6be-4092-9a11-69eb3c6d8498_3000x3200.png)Click to enlarge · map: SaveOurLithuanianParishes.org
 #### The letter
 
-On February 16, 2025, the parish received a closure letter. *Draugas* carried the news that week. Three days later, [QNS reported](https://qns.com/2025/02/transfiguration-church-maspeth-possible-closure/) the reasons under review: “declining parishioner numbers, mounting financial pressures, and critical infrastructure needs” (an estimated $800,000 for the roof, roughly $500,000 more for the rectory), with findings sent through the Vicar General for Bishop Robert Brennan’s decision.
+The parish received a closure letter on February 16, 2025. *[Draugas](https://saveourlithuanianparishes.org/parishes/kristaus-atsimainymo-maspeth-ny/draugas)*[reported the news](https://saveourlithuanianparishes.org/parishes/kristaus-atsimainymo-maspeth-ny/draugas) that week.
 
-#### What Maspeth did
+[QNS later reported](https://qns.com/2025/03/transfiguration-church-future-town-meeting/) that the diocese was reviewing the church because of declining attendance, financial problems, and major repair costs. The roof and structural work were estimated at about $800,000. Repairs to the rectory were expected to cost another $500,000. The findings were sent through the vicar general to Bishop Robert Brennan for a decision.
 
-In March a petition went up, started by the Friends of Transfiguration and carried by Paul-Michael Kazas, president of Council 110 of the Knights of Lithuania, the Lithuanian Catholic fraternal organization; by July 2025 it held [740 signatures](https://qns.com/2025/07/lithuanian-catholic-church-transfiguration/). Two Requests for Evaluation went to the New York City Landmarks Preservation Commission, in February and in April. Council Member Robert Holden sent the Commission a letter of support in March, calling the church “cherished”: “Its unique architecture stands as a testament to our neighborhood’s history and character.” A coalition formed around the parish: the Historic Districts Council, the Newtown Historical Society, DOCOMOMO US, the Lithuanian Alliance of America, the Lithuanian Consulate.
+#### How the community responded
 
-Kazas said: “Once you demolish it, you can’t get it back.”
+The community moved quickly.
 
-#### The diocese answers
+In March, Friends of Transfiguration [started a petition](https://www.change.org/p/help-save-a-unique-lithuanian-r-c-church-of-the-transfiguration-in-maspeth-queens) led by Paul-Michael Kazas, president of Knights of Lithuania Council 110. By July 2025, the petition had collected 740 signatures.
 
-In a letter read at Masses at the end of August 2025, the Diocese of Brooklyn said the church [would not be closed or sold](https://qns.com/2025/09/transfiguration-church-not-closing/). The terms:
+Supporters also asked the New York City Landmarks Preservation Commission to consider the church for landmark status. They submitted two Requests for Evaluation, one in February and another in April.
+
+City Council Member Robert Holden sent the commission a letter of support in March. He called the church “cherished” and wrote: “Its unique architecture stands as a testament to our neighborhood’s history and character.”
+
+A wider coalition joined the campaign. It included the [Historic Districts Council](https://hdc.org/policy/advocacy-for-the-transfiguration-church/), [Newtown Historical Society](https://www.newtownhistorical.org/), [DOCOMOMO US](https://docomomo-us.org/news/church-of-the-transfiguration-a-masterpiece-of-lithuanian-folk-art-modernism), the [Lithuanian Alliance of America](https://www.lithuanian-alliance.org/), and the Lithuanian Consulate.
+
+Kazas explained what was at stake in plain terms: “Once you demolish it, you can’t get it back.”
+
+#### The diocese responds
+
+At Masses on August 23 and 24, 2025, parishioners heard a letter from the Diocese of Brooklyn. It said that Transfiguration would not be closed or sold. But it also reduced the church’s use and left its future open.
+
+[The letter set out the following changes](https://qns.com/2025/09/transfiguration-church-not-closing/):
 
 - 
-Weekday Masses moved to St. Stanislaus Kostka, “on a permanent basis.”
+Weekday Masses moved permanently to St. Stanislaus Kostka.
 
 - 
-The Lithuanian Mass moved to the Annunciation church in Williamsburg, also “on a permanent basis.” Annunciation is a Lithuanian parish, so the Mass remains in Lithuanian hands; it no longer lives in Maspeth.
+The Lithuanian Mass moved permanently to Annunciation Church in Williamsburg. Annunciation is also a Lithuanian parish, so the Mass remains within the Lithuanian Catholic community, but it is no longer celebrated in Maspeth.
 
 - 
-Weekend Masses continue at Transfiguration, “on a temporary basis,” the letter “anticipating that in the future the mass schedule will need to be adjusted.”
+Weekend Masses continued at Transfiguration only “on a temporary basis.” The letter said the diocese expected the schedule to be changed again in the future.
 
 - 
-And the diocese is “exploring the possibility of selling part of the property at Transfiguration, not including the church building.”
+The diocese began exploring the sale of part of the Transfiguration property, although not the church building itself.
 
-Bishop Brennan described a church open “on a limited basis” while the diocese “continues to discuss future pastoral planning in Maspeth.”
+Bishop Brennan said the church would remain open “on a limited basis” while the diocese continued to consider its plans for Maspeth.
 
-A closure was stopped. Nothing was settled. Every operative word in that letter (*permanent* for what leaves, *temporary* for what stays, *exploring*, *anticipating) points to* a decision still to come.
+The immediate closure had been stopped, but the church’s future was not secure. The activities moved elsewhere were described as permanent. The Masses left at Transfiguration were described as temporary.
 
-#### The visits
+### Visits from Lithuania
 
-On September 25, 2025, President Nausėda and First Lady Diana Nausėdienė, in New York for the United Nations General Assembly, came to Perry Avenue, received by Council Member Holden. The president publicly thanked those working to preserve the church. Holden pledged to “fight alongside parishioners and neighbors to keep this church open and thriving for generations to come.”
+On September 25, 2025, [President Nausėda and First Lady Diana Nausėdienė visited the church](https://qns.com/2025/09/gitanas-nauseda-transfiguration-church/) while they were in New York for the United Nations General Assembly. Council Member Holden received them at the church.
 
-On December 16, a delegation of Lithuanian state officials, including Deputy Foreign Minister Taurimas Valys and Consul General Dovydas Spokauskas, came to the church and presented Kazas with [two Lithuanian state decorations](https://qns.com/2025/12/lithuanian-officials-visit-historic-maspeth-church/), the Golden Knight and the Columns of Gediminas medallions, together with a citation for the merits of world Lithuanians to Lithuania. In the same QNS report, Kazas warned that the church “may be sold and potentially demolished in the near future.” The landmark requests remain pending; the diocese, QNS notes, wrote in a letter that the church “may merit” designation.
+The president thanked the people working to preserve Transfiguration. Holden promised to “fight alongside parishioners and neighbors to keep this church open and thriving for generations to come.”
 
-#### Where it stands
+On December 16, Lithuanian Deputy Foreign Minister Taurimas Valys, Consul General Dovydas Špokauskas, and other Lithuanian officials [visited Transfiguration](https://qns.com/2025/12/lithuanian-officials-visit-historic-maspeth-church/). They presented Kazas with the Golden Knight and Columns of Gediminas medallions, along with a citation recognizing his service to Lithuania.
 
-As of July 2026 the church is open on the reduced schedule: Sunday Mass at 9:30 a.m., the Latin Mass at 12:30 p.m. The parish calendar runs normally, and no closure or sale notice is posted. No landmark designation has been announced. No final diocesan decision has been reported. This parish stands where it has stood since September 2025: [unresolved](https://saveourlithuanianparishes.org/parishes/kristaus-atsimainymo-maspeth-ny).
+During that visit, Kazas warned that the church could still be sold and demolished. QNS reported that the landmark requests remained pending. The diocese had written that the church “may merit” landmark status, but no designation had been granted.
 
-Across American dioceses there are now [at least 26 cases](https://saveourlithuanianparishes.org/reversals) in which a parish closure was reversed, in waves: Allentown in 2011, Cleveland in 2012, where twelve of the fourteen parishes that appealed reopened, Buffalo in 2025. The pattern across those wins is consistent: communities that organized early and argued procedure, before and during the canonical process, not after it ended. Maspeth’s process has not ended.
+### Where things stand
 
-What to watch: the Landmarks Preservation Commission’s answer to the two pending Requests for Evaluation (designation would bar demolition); any motion on the partial property sale the diocese says it is exploring; and the weekend Mass schedule the September letter said would “need to be adjusted”. Nothing in Maspeth is settled: the church is open, the petition is open, and the landmark question is pending. The parish is at Mass every Sunday.
+As of July 2026, Transfiguration remained open on a reduced schedule. [The parish listed](https://transtans.org/mass-schedule/) Sunday Mass at 9:30 a.m. and a Latin Mass at 12:30 p.m.
+
+The parish calendar continued as usual. No new closure or sale notice had been posted, but no final decision had been announced either. The Landmarks Preservation Commission had not acted on the two requests.
+
+The church is still in the same position it has occupied since September 2025: open, but with no guarantee about its long-term future.
+
+[At least 26 parish closures have been reversed](https://saveourlithuanianparishes.org/reversals) in American dioceses. These include cases in Allentown in 2011, Cleveland in 2012, and Buffalo in 2025. In Cleveland, twelve of the fourteen parishes that appealed were reopened.
+
+The communities that succeeded organized early. They challenged the process while it was still underway, rather than waiting until every decision had been made. Maspeth still has that opportunity because its case is not over
 
 #### What you can do today
 
-**Sign the petition.** In late July it stood at 875 signatures of a 1,000 goal, and it is [open now](https://www.change.org/p/help-save-a-unique-lithuanian-r-c-church-of-the-transfiguration-in-maspeth-queens).
+[Sign the petition](https://www.change.org/p/help-save-a-unique-lithuanian-r-c-church-of-the-transfiguration-in-maspeth-queens). It has 875 verified signatures toward a goal of 1,000.
 
-**Back the landmark case.** Two Requests for Evaluation are before the Landmarks Preservation Commission, and the case for designation is public: [read it](https://www.newyorkalmanack.com/2025/04/church-of-the-transfiguration-2/), share it, and add your support to the organizations carrying it.
+Support the landmark campaign. [Read the case for designation](https://hdc.org/policy/advocacy-for-the-transfiguration-church/), share it, and add your support to the organizations working to preserve the church.
 
-**Corrections welcome.** If a date or fact in this story needs fixing, the parish’s page is [here](https://saveourlithuanianparishes.org/parishes/kristaus-atsimainymo-maspeth-ny); corrections go through [saveourlithuanianparishes.org/report](https://saveourlithuanianparishes.org/report).
+Go to Mass. [Transfiguration celebrates](https://transtans.org/mass-schedule/) Sunday Mass at 9:30 a.m. and the Latin Mass at 12:30 p.m. at 64-25 Perry Avenue in Maspeth. Declining attendance was one of the reasons given for considering the church’s closure.
 
-**Go to Mass.** Sunday, 9:30 a.m., or the Latin Mass at 12:30 p.m., at 64-25 Perry Avenue, Maspeth. The February case against this church began with “declining parishioner numbers.”
-
-Every campaign like this one is tracked at [/under-threat](https://saveourlithuanianparishes.org/under-threat). And if a parish near you has received the same letter, start at [saveourlithuanianparishes.org/start-here](https://saveourlithuanianparishes.org/start-here): what has worked, where it worked, and the procedure that wins.
+If a fact or date needs to be corrected, use the [Transfiguration parish record](https://saveourlithuanianparishes.org/parishes/kristaus-atsimainymo-maspeth-ny) or submit a correction through [saveourlithuanianparishes.org/report](https://saveourlithuanianparishes.org/report).
 
 ---
 

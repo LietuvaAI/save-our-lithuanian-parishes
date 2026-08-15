@@ -1,6 +1,6 @@
 ---
 title: "The Boston Hill of Crosses: How South Boston Saved Its Lithuanian Parish"
-subtitle: "In 2004, the Archdiocese of Boston moved to close 82 of its 357 parishes. St. Peter Lithuanian in South Boston was one of them. This is how a few hundred people saved it."
+subtitle: "In 2004, the Archdiocese of Boston moved to close 82 of its 357 parishes. St. Peter Lithuanian in South Boston was one of them. It is still open, and still holds a Lithuanian Sunday Mass."
 date: 2026-07-17
 substackUrl: https://blog.saveourlithuanianparishes.org/p/the-boston-hill-of-crosses-how-south
 archivedAt: 2026-08-15
@@ -9,7 +9,7 @@ archivedAt: 2026-08-15
 The notices came at the end of May 2004. The Archdiocese of Boston’s reconfiguration plan slated 82 of its 357 parishes to close, nearly one in four. On May 25, word reached St. Peter Lithuanian Church in South Boston: Archbishop Seán P. O’Malley intended to close its church and school. St. Peter’s had been the spiritual and cultural center of the city’s Lithuanian community for a century: its parish rooted in the 1890s, its church dating to 1904.
 
 In the end, some 60 of those churches were lost. St. Peter’s was not. It is still open, still holds a Lithuanian Sunday Mass, and in October 2024 it celebrated the 120th anniversary of its church.
-
+![](https://substackcdn.com/image/fetch/$s_!ITgA!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F59b092cb-612f-40eb-a6a4-60860215e2ed_3000x3066.png)St. Peter among the Lithuanian parishes of Massachusetts. Map: SaveOurLithuanianParishes.org unified registry.
 ### What they did
 
 By June 1, an appeal was underway through the church’s own formal process. On June 13, hundreds of parishioners surrounded the church and founded a supporters’ movement, the *rėmėjai*, the Friends of St. Peter Lithuanian Parish. Roughly 600 people joined on the first day. The archdiocese now had a single organized body, with a name and standing, to deal with directly.
