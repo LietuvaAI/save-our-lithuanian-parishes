@@ -79,6 +79,8 @@
   --text-directory-description--line-height: 1.55;
   --text-directory-footnote: 12px;
   --text-directory-footnote--line-height: 1.5;
+  --text-network-stat: 46px;
+  --text-network-stat--line-height: 1;
 }
 
 @media (prefers-color-scheme: dark) {

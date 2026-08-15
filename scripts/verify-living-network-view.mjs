@@ -1,0 +1,78 @@
+import { readFileSync } from "node:fs";
+
+const readText = (path) =>
+  readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
+const readJson = (path) => JSON.parse(readText(path));
+
+const projection = readJson("data/canonical-infographic-projection.json");
+const events = readJson("data/canonical-current-events-projection.json");
+const viewSource = readText("lib/living-network-view.ts");
+const pageSource = readText("app/lithuanian-catholic-life-today/page.tsx");
+const mapSource = readText("components/LivingNetworkMap.tsx");
+const errors = [];
+
+const directory = projection.current_pastoral_network?.directory;
+const counts = projection.current_pastoral_network?.counts;
+const wider = projection.wider_catholic_life;
+const regularCount = directory?.entries?.filter((entry) =>
+  ["active_parish", "active_mission", "mass_continues"].includes(
+    entry.networkClass,
+  ),
+).length;
+const widerCount =
+  (wider?.documented_religious_houses?.houses?.length ?? 0) +
+  (wider?.additional_pastoral_communities?.communities?.length ?? 0);
+
+if (
+  directory?.entries?.length !== 20 ||
+  regularCount !== 14 ||
+  counts?.active_parish !== 6 ||
+  counts?.active_mission !== 2 ||
+  counts?.mass_continues !== 6 ||
+  widerCount !== 3
+) {
+  errors.push("canonical Living Network population drifted");
+}
+
+if (events.alerts?.length !== 10 || events.campaigns?.length !== 4) {
+  errors.push("current-event population drifted from 10 alerts / 4 campaigns");
+}
+if (events.alerts?.some((alert) => alert.id === "cleveland-st-casimir-watch")) {
+  errors.push("retired Cleveland St. Casimir watch alert returned");
+}
+
+for (const [label, source] of [
+  ["page", pageSource],
+  ["view model", viewSource],
+  ["map", mapSource],
+]) {
+  if (/design\/handoff\/living-network|today-network\.json|watch-list\.json|pastoral-conditions\.json|line-drawings\.json/.test(source)) {
+    errors.push(`${label} reads a non-production design fixture`);
+  }
+}
+
+for (const required of [
+  "canonical-current-events-projection.json",
+  "currentPastoralNetwork",
+  "romanCatholicInstitutionHistory",
+  "widerCatholicLifeRecords",
+]) {
+  if (!viewSource.includes(required)) {
+    errors.push(`typed Living Network view is missing ${required}`);
+  }
+}
+
+if (!viewSource.includes('"washington-epiphany": { x: 828, y: 267.5 }')) {
+  errors.push("Washington city-level map correction is missing");
+}
+if (!pageSource.includes("getClearedPhoto")) {
+  errors.push("Living Network page no longer enforces cleared image rights");
+}
+
+if (errors.length) {
+  throw new Error(`Living Network verification failed:\n- ${errors.join("\n- ")}`);
+}
+
+console.log(
+  "OK: Living Network reads current canon (14 regular places, 20 directory entries, 3 wider-life records, 10 current situations) and no design snapshots.",
+);

@@ -1,606 +1,469 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { geoAlbersUsa } from "d3-geo";
-import alertsData from "@/data/canonical-current-events-projection.json";
-import contextPointsData from "@/data/context-points.json";
-import {
-  DiocesePill,
-  DiocesanLeaderLink,
-} from "@/components/DiocesePill";
-import { EndStatePill } from "@/components/EndStatePill";
-import RecordLensMap, {
-  type RecordLensPoint,
-} from "@/components/RecordLensMap";
-import CurrentLifeFactSheet from "@/components/CurrentLifeFactSheet";
-import { canonicalProfileHrefForRegistrySlug } from "@/lib/parish-profile";
+import LivingNetworkMap from "@/components/LivingNetworkMap";
 import { getClearedPhoto } from "@/lib/photos";
-import type { EndState, EndStateGroup } from "@/lib/end-state";
 import {
-  isHollowRecordMark,
-  recordMarkColor,
-  SIGNAL_RING_COLOR,
-} from "@/lib/record-mark";
-import {
-  CLERGY_LABEL,
-  FREQUENCY_SHORT,
-  GOVERNANCE_LABEL,
-} from "@/lib/watch-labels";
-import {
-  currentPastoralNetwork,
-  type CurrentPastoralDirectoryEntry,
-} from "@/lib/infographic-projection";
-import {
-  widerCatholicLifeRecords,
-  type WiderCatholicLifeRecord,
-} from "@/lib/wider-catholic-life";
+  livingNetworkView,
+  type LivingNetworkCard as LivingNetworkCardType,
+  type LivingNetworkSituation,
+  type TrackedCard as TrackedCardType,
+  type WiderLifeCard,
+} from "@/lib/living-network-view";
 
 export const metadata: Metadata = {
-  title: "Lithuanian Catholic Life Today",
+  title: "The Living Network",
   description:
-    "Where Lithuanian Catholic life still gathers in the United States: active parishes, missions, and Lithuanian Masses hosted within other churches.",
+    "The current network of Lithuanian Catholic parishes, missions, hosted Masses, religious houses, and other documented communities in the United States.",
 };
 
-type NetworkClass = CurrentPastoralDirectoryEntry["networkClass"];
-type NetworkEntry = CurrentPastoralDirectoryEntry;
-
-type SustainabilityEntry = {
-  id: string;
-  entity: string;
-  place: string;
-  diocese: string;
-  parishLink: string;
-  dateObserved: string;
-  situation: string;
-  clergy: { arrangement: string };
-  liturgy: { frequency: string };
-  governance: string;
-  sources: { title: string; publisher: string; url: string }[];
-};
-
-type ContextPoint = {
-  slug: string;
-  name: string;
-  city: string;
-  state: string;
-  x: number;
-  y: number;
-  group: EndStateGroup;
-  href: string | null;
-};
-
-const networkDirectory = currentPastoralNetwork.directory;
-const pastoralCounts = currentPastoralNetwork.counts;
-const entries = networkDirectory.entries;
-const worshipEntries = entries.filter((entry) =>
-  (
-    ["active_parish", "active_mission", "mass_continues"] as NetworkClass[]
-  ).includes(entry.networkClass),
-);
-const otherEntries = entries.filter(
-  (entry) =>
-    !worshipEntries.includes(entry) && entry.networkClass !== "religious_house",
-);
-const sustainabilityEntries =
-  alertsData.sustainabilityWatch as SustainabilityEntry[];
-
-const CLASS_LABEL: Record<NetworkClass, string> = {
-  active_parish: "Lithuanian parish",
-  active_mission: "Lithuanian mission",
-  mass_continues: "Hosted Lithuanian Mass",
-  unresolved: "Future unresolved",
-  no_lithuanian_liturgy: "No current Lithuanian Mass",
-  directory_conflict: "Regular worship ended",
-  religious_house: "Franciscan friary",
-};
-
-const activeCampaignLinks = new Set(
-  (
-    alertsData.alerts as Array<{
-      kind?: string;
-      parishLink: string;
-    }>
-  )
-    .filter((alert) => alert.kind === "active")
-    .map((alert) => alert.parishLink),
-);
-const contextPoints = contextPointsData.points as ContextPoint[];
-const contextByHref = new Map(
-  contextPoints
-    .filter((point) => point.href)
-    .map((point) => [point.href!, point]),
-);
-const statusByHref = new Map(
-  contextPoints
-    .filter((point) => point.href)
-    .map((point) => [point.href!, point.group as EndState]),
-);
-
-const NETWORK_ONLY_COORDS: Record<string, { x: number; y: number }> = {
-  "mundelein-our-lady-of-siluva-mission": { x: 631.2, y: 217.9 },
-  "washington-epiphany": { x: 826.8, y: 267.4 },
-};
-
-function profileHrefForEntry(entry: NetworkEntry) {
-  return entry.registrySlug
-    ? canonicalProfileHrefForRegistrySlug(entry.registrySlug)
-    : null;
-}
-
-const worshipProfileHrefs = new Set(
-  worshipEntries
-    .map(profileHrefForEntry)
-    .filter((href): href is string => !!href),
-);
-const currentLifeSustainabilityEntries = sustainabilityEntries.filter(
-  (entry) => worshipProfileHrefs.has(entry.parishLink),
-);
-const sustainabilityByHref = new Map(
-  currentLifeSustainabilityEntries.map((entry) => [entry.parishLink, entry]),
-);
-const weeklyProfileCount = currentLifeSustainabilityEntries.filter(
-  (entry) => entry.liturgy.frequency === "weekly",
-).length;
-const lithuanianKlebonasCount = currentLifeSustainabilityEntries.filter(
-  (entry) => entry.clergy.arrangement === "lithuanian_klebonas",
-).length;
-const standaloneProfileCount = currentLifeSustainabilityEntries.filter(
-  (entry) => entry.governance === "standalone",
-).length;
-
-function groupForEntry(entry: NetworkEntry): EndStateGroup {
-  return entry.networkClass === "mass_continues"
-    ? "mass_continues"
-    : "active_parish";
-}
-
-const worshipMapPoints = worshipEntries.flatMap(
-  (entry): RecordLensPoint[] => {
-    const href = profileHrefForEntry(entry);
-    const context = href ? contextByHref.get(href) : null;
-    const coords = context ?? NETWORK_ONLY_COORDS[entry.id];
-    if (!coords) return [];
-    const group = groupForEntry(entry);
-
-    return [
-      {
-        slug: entry.id,
-        name: entry.nameLt,
-        city: entry.city,
-        state: entry.state,
-        x: coords.x,
-        y: coords.y,
-        href,
-        color: recordMarkColor(group),
-        shape: "circle",
-        hollow: isHollowRecordMark({
-          group,
-          networkClass: entry.networkClass,
-        }),
-        ringColor:
-          href && activeCampaignLinks.has(href)
-            ? SIGNAL_RING_COLOR.active
-            : undefined,
-        detail: CLASS_LABEL[entry.networkClass],
-      },
-    ];
-  },
-);
-
-const mapProjection = geoAlbersUsa().scale(1300).translate([487.5, 305]);
-const widerMapPoints = widerCatholicLifeRecords.flatMap(
-  (record): RecordLensPoint[] => {
-    const projected = mapProjection([record.geo.lon, record.geo.lat]);
-    if (!projected) return [];
-    return [
-      {
-        slug: record.slug,
-        name: record.nameLt,
-        city: record.city,
-        state: record.state,
-        x: projected[0],
-        y: projected[1],
-        href: record.href,
-        color:
-          record.classification === "religious_house"
-            ? "var(--foreground)"
-            : "var(--mark-community)",
-        shape: "triangle",
-        hollow: record.classification === "occasional_worship_community",
-        detail: record.classificationLabel,
-      },
-    ];
-  },
-);
-const currentCatholicLifeMapPoints = [
-  ...worshipMapPoints,
-  ...widerMapPoints,
-];
-
-const worshipStateCount = new Set(
-  worshipEntries.map((entry) => entry.state),
-).size;
-
-if (
-  entries.length !== Number(networkDirectory.counts.listed) ||
-  worshipEntries.length !==
-    pastoralCounts.active_parish +
-      pastoralCounts.active_mission +
-      pastoralCounts.mass_continues
-) {
-  throw new Error(
-    "Current Catholic life figures do not match the canonical pastoral projection",
+function SectionHeader({
+  title,
+  count,
+  children,
+}: {
+  title: string;
+  count: string | number;
+  children: React.ReactNode;
+}) {
+  return (
+    <header>
+      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 border-b border-foreground pb-2">
+        <h2 className="font-serif text-directory-empty font-semibold leading-tight">
+          {title}
+        </h2>
+        <span className="font-sans text-directory-control font-semibold tabular-nums text-muted">
+          {count}
+        </span>
+      </div>
+      <p className="mt-2 max-w-[76ch] text-directory-description leading-[1.55] text-[#57534e]">
+        {children}
+      </p>
+    </header>
   );
 }
-if (widerMapPoints.length !== widerCatholicLifeRecords.length) {
-  throw new Error("A wider Catholic-life record could not be projected on the map");
-}
 
-function NetworkEntryRow({ entry }: { entry: NetworkEntry }) {
-  const profileHref = profileHrefForEntry(entry);
-  const isActiveInstitution =
-    entry.networkClass === "active_parish" ||
-    entry.networkClass === "active_mission";
-  const profileSlug = profileHref?.replace(/^\/parishes\//, "") ?? null;
-  const requiresPortrait =
-    isActiveInstitution || entry.networkClass === "mass_continues";
-  const portraitKey = `${profileSlug ?? entry.id}-line-drawing`;
-  const portrait = getClearedPhoto(portraitKey);
-  if (requiresPortrait && !portrait) {
-    throw new Error(`Missing current-worship line drawing for ${entry.id}`);
-  }
-  const sustainability = profileHref
-    ? sustainabilityByHref.get(profileHref)
-    : null;
-
-  return (
-    <article
-      className={`border-t border-rule py-3 ${portrait ? "grid grid-cols-[4.75rem_minmax(0,1fr)] gap-3" : ""}`}
+function DrawingFrame({
+  portraitKey,
+  href,
+  label,
+}: {
+  portraitKey: string | null;
+  href: string | null;
+  label: string;
+}) {
+  const portrait = portraitKey ? getClearedPhoto(portraitKey) : null;
+  const frame = (
+    <span
+      className="relative block aspect-[3/2] overflow-hidden border border-[#efece6] bg-[#faf7f1]"
+      title={portrait?.attribution}
     >
       {portrait ? (
-        profileHref ? (
-          <Link
-            href={profileHref}
-            aria-label={`Open the parish profile for ${entry.nameLt}`}
-            className="relative block aspect-square self-start overflow-hidden border border-rule bg-white p-1.5 hover:border-accent"
-            title={portrait.attribution}
-          >
-            <Image
-              src={portrait.src}
-              alt=""
-              fill
-              sizes="76px"
-              className="object-contain mix-blend-multiply"
-            />
+        <Image
+          src={portrait.src}
+          alt={portrait.alt}
+          fill
+          sizes="(max-width: 640px) 100vw, 240px"
+          className="object-contain mix-blend-multiply"
+        />
+      ) : null}
+    </span>
+  );
+
+  return href ? (
+    <Link href={href} aria-label={`Open ${label}`} className="block">
+      {frame}
+    </Link>
+  ) : (
+    frame
+  );
+}
+
+function SituationFlag({ situation }: { situation: LivingNetworkSituation }) {
+  const box =
+    situation.kind === "active"
+      ? "bg-[#f8efef]"
+      : situation.kind === "building"
+        ? "bg-[#f5edda]"
+        : "bg-[#f1efeb]";
+  const tagColor =
+    situation.kind === "watch" ? "text-muted" : "text-accent";
+
+  return (
+    <aside className={`mt-2 px-2.5 py-2 ${box}`}>
+      <p
+        className={`font-sans text-ui-label font-bold uppercase tracking-[0.07em] ${tagColor}`}
+      >
+        {situation.tag}
+      </p>
+      <p className="mt-1 text-directory-footnote leading-[1.55] text-[#57534e]">
+        {situation.text}
+      </p>
+      {situation.hearthUrl || situation.actionUrl ? (
+        <p className="mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-directory-footnote font-semibold">
+          {situation.hearthUrl ? (
+            <a
+              href={situation.hearthUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent underline underline-offset-2 hover:text-foreground"
+            >
+              What&rsquo;s happening
+            </a>
+          ) : null}
+          {situation.actionUrl ? (
+            <a
+              href={situation.actionUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent underline underline-offset-2 hover:text-foreground"
+            >
+              {situation.actionLabel} →
+            </a>
+          ) : null}
+        </p>
+      ) : null}
+    </aside>
+  );
+}
+
+function NetworkCard({ card }: { card: LivingNetworkCardType }) {
+  const portrait = getClearedPhoto(card.portraitKey);
+  if (
+    ["active_parish", "active_mission", "mass_continues"].includes(
+      card.networkClass,
+    ) &&
+    !portrait
+  ) {
+    throw new Error(`${card.id}: current-worship card lacks cleared line art`);
+  }
+  const tagColor =
+    card.networkClass === "active_parish" ||
+    card.networkClass === "active_mission"
+      ? "text-[#2d6a4f]"
+      : card.networkClass === "mass_continues"
+        ? "text-[#8a7a4e]"
+        : "text-muted";
+
+  return (
+    <article id={card.anchor} className="min-w-0 scroll-mt-5">
+      <DrawingFrame
+        portraitKey={card.portraitKey}
+        href={card.profileHref}
+        label={`${card.nameEn} profile`}
+      />
+      <p
+        className={`mt-2 font-sans text-ui-label font-bold uppercase tracking-[0.06em] ${tagColor}`}
+      >
+        {card.typeLabel}
+      </p>
+      <h3 className="mt-1 font-serif text-card-title font-semibold leading-tight">
+        {card.profileHref ? (
+          <Link href={card.profileHref} className="hover:text-accent">
+            {card.nameEn}
           </Link>
         ) : (
-          <div
-            className="relative aspect-square self-start overflow-hidden border border-rule bg-white p-1.5"
-            title={portrait.attribution}
-          >
-            <Image
-              src={portrait.src}
-              alt=""
-              fill
-              sizes="76px"
-              className="object-contain mix-blend-multiply"
-            />
-          </div>
-        )
+          card.nameEn
+        )}
+      </h3>
+      <p className="mt-0.5 text-directory-footnote italic leading-snug text-muted">
+        {card.nameLt}
+      </p>
+      <p className="mt-1 text-support-copy leading-snug text-muted">
+        {card.city}, {card.state}
+        {card.founded ? ` · est. ${card.founded}` : ""}
+      </p>
+      <p className="mt-1.5 text-support-copy leading-relaxed text-[#57534e]">
+        {card.ministry}
+      </p>
+      {card.clergy ? (
+        <p className="mt-1 text-directory-footnote leading-relaxed text-muted">
+          {card.clergy}
+        </p>
       ) : null}
-      <div className="min-w-0">
-      <div className="flex flex-wrap items-start justify-between gap-3">
-        <div className="min-w-0">
-          <h3 className="font-serif font-semibold leading-snug">
-            {entry.nameLt}
-          </h3>
-          <p className="mt-0.5 text-small-copy text-muted">
-            {entry.city}, {entry.state}
-          </p>
-        </div>
-        <div className="flex shrink-0 flex-col items-end gap-1">
-          <span className="text-small-copy font-medium text-muted">
-            {CLASS_LABEL[entry.networkClass]}
-          </span>
-          {sustainability ? (
-            <div className="flex flex-wrap items-center justify-end gap-1.5">
-              <EndStatePill
-                value={
-                  statusByHref.get(sustainability.parishLink) ?? "unverified"
-                }
-              />
-              <DiocesePill name={sustainability.diocese} />
-            </div>
-          ) : null}
-        </div>
-      </div>
-      {sustainability ? (
-        <>
-          <p className="mt-1">
-            <DiocesanLeaderLink diocese={sustainability.diocese} />
-          </p>
-          <dl className="mt-2 grid gap-x-3 gap-y-1 text-small-copy sm:grid-cols-3">
-            <div>
-              <dt className="inline text-muted">Clergy: </dt>
-              <dd className="inline font-medium">
-                {CLERGY_LABEL[sustainability.clergy.arrangement] ??
-                  sustainability.clergy.arrangement}
-              </dd>
-            </div>
-            <div>
-              <dt className="inline text-muted">Lithuanian Mass: </dt>
-              <dd className="inline font-medium">
-                {FREQUENCY_SHORT[sustainability.liturgy.frequency] ??
-                  sustainability.liturgy.frequency}
-              </dd>
-            </div>
-            <div>
-              <dt className="inline text-muted">Governance: </dt>
-              <dd className="inline font-medium">
-                {GOVERNANCE_LABEL[sustainability.governance] ??
-                  sustainability.governance}
-              </dd>
-            </div>
-          </dl>
-        </>
+      {card.massCadence ? (
+        <p className="text-directory-footnote leading-relaxed text-muted">
+          {card.massCadence}
+        </p>
       ) : null}
-      <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-small-copy">
-        {profileHref ? (
-          <Link
-            href={profileHref}
-            className="font-medium underline underline-offset-2 hover:text-accent"
-          >
-            Parish profile
-          </Link>
-        ) : null}
-        {entry.officialSite ? (
+      {card.checked ? (
+        <p className="mt-1 text-ui-label tabular-nums text-muted">
+          Checked {card.checked}
+        </p>
+      ) : null}
+      {card.officialSite ? (
+        <p className="mt-1 text-directory-footnote">
           <a
-            href={entry.officialSite}
+            href={card.officialSite}
             target="_blank"
             rel="noopener noreferrer"
-            className="underline underline-offset-2 hover:text-accent"
+            className="text-accent underline underline-offset-2 hover:text-foreground"
           >
             Official website
           </a>
-        ) : null}
-        {sustainability ? (
-          <span className="text-muted">
-            Checked {sustainability.dateObserved}
-          </span>
-        ) : null}
-      </div>
-      </div>
+        </p>
+      ) : null}
+      {card.situation ? <SituationFlag situation={card.situation} /> : null}
     </article>
   );
 }
 
-function WiderCatholicLifeRow({
-  record,
-}: {
-  record: WiderCatholicLifeRecord;
-}) {
+function WiderCard({ card }: { card: WiderLifeCard }) {
   return (
-    <article className="border-t border-rule py-4">
-      <div className="flex flex-wrap items-start justify-between gap-3">
-        <div>
-          <h3 className="font-serif text-card-title font-semibold leading-snug">
-            <Link href={record.href} className="hover:text-accent">
-              {record.nameLt}
-            </Link>
-          </h3>
-          <p className="mt-0.5 text-small-copy text-muted">
-            {record.city}, {record.state} · {record.classificationLabel}
-          </p>
-        </div>
-        <span className="text-small-copy font-medium text-muted">
-          {record.currentStatus}
-        </span>
-      </div>
-      <p className="mt-2 text-body-copy leading-relaxed text-muted">
-        {record.explanation}
+    <article id={card.anchor} className="min-w-0 scroll-mt-5">
+      <DrawingFrame
+        portraitKey={card.portraitKey}
+        href={card.profileHref}
+        label={`${card.nameEn} record`}
+      />
+      <p className="mt-2 font-sans text-ui-label font-bold uppercase tracking-[0.06em] text-[#2d6a4f]">
+        {card.typeLabel}
       </p>
-      <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-small-copy">
-        <Link
-          href={record.href}
-          className="font-medium underline underline-offset-2 hover:text-accent"
-        >
-          Record and sources
+      <h3 className="mt-1 font-serif text-card-title font-semibold leading-tight">
+        <Link href={card.profileHref} className="hover:text-accent">
+          {card.nameEn}
         </Link>
+      </h3>
+      <p className="mt-0.5 text-directory-footnote italic leading-snug text-muted">
+        {card.nameLt}
+      </p>
+      <p className="mt-1 text-support-copy text-muted">
+        {card.city}, {card.state}
+      </p>
+      <p className="mt-1.5 text-support-copy leading-relaxed text-[#57534e]">
+        {card.explanation}
+      </p>
+      <p className="mt-1 text-directory-footnote">
         <a
-          href={record.officialSite}
+          href={card.officialSite}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-2 hover:text-accent"
+          className="text-accent underline underline-offset-2 hover:text-foreground"
         >
           Official website
         </a>
-      </div>
+      </p>
     </article>
   );
 }
 
-export default function LithuanianCatholicLifeTodayPage() {
+function TrackedCard({ card }: { card: TrackedCardType }) {
   return (
-    <article className="mx-auto max-w-5xl px-4 pt-12 pb-2">
-      <p className="text-small-copy uppercase text-muted">
-        Current U.S. view
+    <article id={card.anchor} className="min-w-0 scroll-mt-5">
+      <DrawingFrame
+        portraitKey={card.portraitKey}
+        href={card.profileHref}
+        label={`${card.name} profile`}
+      />
+      <h3 className="mt-2 font-serif text-card-title font-semibold leading-tight">
+        {card.profileHref ? (
+          <Link href={card.profileHref} className="hover:text-accent">
+            {card.name}
+          </Link>
+        ) : (
+          card.name
+        )}
+      </h3>
+      <p className="mt-1 text-support-copy leading-snug text-muted">
+        {card.place} · {card.situation.diocese}
       </p>
-      <h1 className="mt-1 font-serif text-page-title font-semibold leading-tight">
-        Lithuanian Catholic life today
+      <SituationFlag situation={card.situation} />
+    </article>
+  );
+}
+
+function StatMark({ kind }: { kind: "parish" | "mission" | "hosted" | "state" }) {
+  const classes =
+    kind === "parish"
+      ? "rounded-full bg-[#2d6a4f]"
+      : kind === "mission"
+        ? "rounded-full border-2 border-[#2d6a4f] bg-background"
+        : kind === "hosted"
+          ? "rounded-full border border-[#8a7a4e] bg-[#d5c28b]"
+          : "rounded-full border border-dashed border-muted";
+  return <span aria-hidden className={`inline-block size-3 ${classes}`} />;
+}
+
+export default function LithuanianCatholicLifeTodayPage() {
+  const view = livingNetworkView;
+
+  return (
+    <article className="mx-auto max-w-[1080px] px-4 pb-20 pt-7 sm:px-6">
+      <p className="font-sans text-ui-label font-semibold uppercase tracking-[0.09em] text-muted">
+        Lithuanian Catholic life today · checked {view.observed}
+      </p>
+      <h1 className="mt-3 max-w-[30ch] font-serif text-outcomes-title font-semibold leading-[1.16] tracking-[-0.015em]">
+        The living network
       </h1>
-      <p className="mt-4 max-w-3xl font-serif text-section-title leading-relaxed sm:text-section-title">
-        Where does Lithuanian Catholic worship still gather in the United
-        States?
+      <p className="mt-2 max-w-[66ch] font-serif text-directory-section leading-[1.4] text-[#57534e]">
+        Of the {view.institutionCount} Lithuanian Catholic parishes and missions
+        ever founded in America, worship still gathers regularly in{" "}
+        <strong className="font-semibold text-foreground">
+          {view.counts.places} places
+        </strong>{" "}
+        across {view.counts.states} states — {view.counts.parishes} parishes,{" "}
+        {view.counts.missions} missions, and {view.counts.hosted} Lithuanian
+        Masses hosted inside other parishes.
       </p>
 
-      <section className="mt-10 border-y border-rule py-8">
-        <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1.5fr)_minmax(16rem,0.7fr)]">
-          <RecordLensMap
-            points={currentCatholicLifeMapPoints}
-            initialSelection="southfield-divine-providence"
-            ariaLabel={`${worshipEntries.length} regular places of current Lithuanian Catholic worship, plus two documented religious houses and one additional occasional-worship community`}
-            legend={[
-              {
-                label:
-                  `Parish · ${pastoralCounts.active_parish}`,
-                color: "var(--es-active)",
-                shape: "circle",
-              },
-              {
-                label:
-                  `Mission · ${pastoralCounts.active_mission}`,
-                color: "var(--es-active)",
-                shape: "circle",
-                hollow: true,
-              },
-              {
-                label:
-                  `Hosted Mass · ${pastoralCounts.mass_continues}`,
-                color: "var(--es-mass)",
-                shape: "circle",
-                hollow: true,
-              },
-              {
-                label: "Current campaign",
-                color: SIGNAL_RING_COLOR.active,
-                shape: "ring",
-              },
-              {
-                label: "Religious house · 2",
-                color: "var(--foreground)",
-                shape: "triangle",
-              },
-              {
-                label: "Occasional community · 1",
-                color: "var(--mark-community)",
-                shape: "triangle",
-                hollow: true,
-              },
-            ]}
-          />
-          <div>
-            <p className="font-serif text-page-title font-semibold leading-none">
-              {worshipEntries.length}
+      <section className="mt-7 border-t border-foreground pt-5">
+        <div className="flex flex-wrap items-start gap-x-8 gap-y-7">
+          <div className="min-w-0 flex-[1.6_1_420px]">
+            <LivingNetworkMap
+              regularPoints={view.regularMapPoints}
+              widerPoints={view.widerMapPoints}
+              placeCount={view.counts.places}
+              stateCount={view.counts.states}
+            />
+          </div>
+          <div className="min-w-0 flex-[1_1_280px]">
+            <div className="grid grid-cols-2 gap-x-5 gap-y-4">
+              <div className="col-span-2 border-b border-rule pb-3">
+                <p className="font-serif text-network-stat font-bold leading-none tabular-nums">
+                  {view.counts.places}
+                </p>
+                <p className="mt-1 text-directory-description leading-snug text-[#57534e]">
+                  places still gather for regular Lithuanian worship
+                </p>
+              </div>
+              {[
+                ["parish", view.counts.parishes, "Lithuanian parishes"],
+                ["mission", view.counts.missions, "Lithuanian missions"],
+                ["hosted", view.counts.hosted, "hosted Lithuanian Masses"],
+                ["state", view.counts.states, "states, coast to coast"],
+              ].map(([kind, number, label]) => (
+                <div key={String(kind)}>
+                  <p className="flex items-baseline gap-2">
+                    <StatMark kind={kind as "parish" | "mission" | "hosted" | "state"} />
+                    <span className="font-serif text-masthead-title font-bold leading-none tabular-nums">
+                      {number}
+                    </span>
+                  </p>
+                  <p className="mt-1 text-directory-footnote leading-snug text-[#57534e]">
+                    {label}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-4 text-directory-footnote leading-[1.6] text-muted">
+              “Lithuanian parish” and “Lithuanian mission” mean a community
+              listed on{" "}
+              <a
+                href={view.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2 hover:text-accent"
+              >
+                Sielovada
+              </a>{" "}
+              — the Lithuanian Bishops&rsquo; Conference directory of Lithuanian
+              pastoral care abroad — with verified current Lithuanian ministry.
+              A parish can remain open without being part of this network.
             </p>
-            <h2 className="mt-3 font-serif text-section-title font-semibold leading-tight">
-              places still gather for Lithuanian Catholic worship
-            </h2>
-            <p className="mt-3 leading-relaxed text-muted">
-              {pastoralCounts.active_parish} are Lithuanian parishes,{" "}
-              {pastoralCounts.active_mission} are missions, and{" "}
-              {pastoralCounts.mass_continues} are
-              Lithuanian Masses hosted
-              by another parish. The surviving network reaches{" "}
-              {worshipStateCount} states.
-            </p>
-            <p className="mt-3 text-small-copy leading-relaxed text-muted">
-              “Lithuanian parish” and “Lithuanian mission” here mean a
-              Sielovada-listed community with verified current Lithuanian
-              pastoral ministry. A Catholic parish may remain juridically open
-              without being counted in this active Lithuanian pastoral network.
+            <p className="mt-2 text-directory-footnote leading-relaxed text-muted">
+              Source:{" "}
+              <a
+                href={view.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2 hover:text-accent"
+              >
+                {view.sourceTitle}
+              </a>{" "}
+              ·{" "}
+              <Link href="/about-the-data" className="underline hover:text-accent">
+                About the data
+              </Link>
             </p>
           </div>
         </div>
-        <p className="mt-5 border-t border-rule pt-3 text-small-copy leading-relaxed text-muted">
-          Scope: {Number(networkDirectory.counts.listed)} official
-          U.S. network listings; map population: {worshipEntries.length} places
-          with regular current worship, plus {widerCatholicLifeRecords.length}
-          {" "}wider Catholic-life records · Checked{" "}
-          {String(networkDirectory.source.checked)} · Source:{" "}
-          <a
-            href={String(networkDirectory.source.url)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline underline-offset-2 hover:text-accent"
-          >
-            Sielovada: North America
-          </a>
-          {" · "}
-          <Link href="/about-the-data" className="underline hover:text-accent">
-            About the data
-          </Link>
-        </p>
       </section>
 
-      <CurrentLifeFactSheet
-        places={worshipEntries.length}
-        parishes={pastoralCounts.active_parish}
-        missions={pastoralCounts.active_mission}
-        hostedMasses={pastoralCounts.mass_continues}
-        states={worshipStateCount}
-        profiledCommunities={currentLifeSustainabilityEntries.length}
-        lithuanianPastors={lithuanianKlebonasCount}
-        weeklyMasses={weeklyProfileCount}
-        standaloneGovernance={standaloneProfileCount}
-        checked={String(networkDirectory.source.checked)}
-      />
-
-      <section className="mt-12" aria-labelledby="worship-network-heading">
-        <h2
-          id="worship-network-heading"
-          className="font-serif text-section-title font-semibold"
+      <section className="mt-12">
+        <SectionHeader
+          title="Active Lithuanian parishes and missions"
+          count={`${view.counts.parishes} parishes + ${view.counts.missions} missions`}
         >
-          Inspect the living network
-        </h2>
-        <div className="mt-4 grid gap-x-8 md:grid-cols-3">
-          {(
-            [
-              ["active_parish", "Parishes"],
-              ["active_mission", "Missions"],
-              ["mass_continues", "Hosted Masses"],
-            ] as const
-          ).map(([networkClass, label]) => {
-            const group = worshipEntries.filter(
-              (entry) => entry.networkClass === networkClass,
-            );
-            return (
-              <div key={networkClass}>
-                <h3 className="font-sans text-card-title font-semibold">
-                  {label} · {group.length}
-                </h3>
-                <div className="mt-2">
-                  {group.map((entry) => (
-                    <NetworkEntryRow key={entry.id} entry={entry} />
-                  ))}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="mt-12" aria-labelledby="wider-life-heading">
-        <h2
-          id="wider-life-heading"
-          className="font-serif text-section-title font-semibold"
-        >
-          Wider Lithuanian Catholic life · {widerCatholicLifeRecords.length}
-        </h2>
-        <p className="mt-2 max-w-3xl text-body-copy leading-relaxed text-muted">
-          Two current religious houses and one additional occasional-worship
-          community are documented separately. They appear on the map and have
-          their own records, but they do not change the 155-institution census,
-          the 137 Roman Catholic parish-and-mission histories, or the 14-place
-          regular worship network.
-        </p>
-        <div className="mt-4 grid gap-x-8 md:grid-cols-2">
-          {widerCatholicLifeRecords.map((record) => (
-            <WiderCatholicLifeRow key={record.entityId} record={record} />
+          These {view.counts.parishes} parishes and {view.counts.missions}{" "}
+          missions are Lithuanian-led and hold regular Lithuanian worship.
+          Missions use a hollow map mark.
+        </SectionHeader>
+        <div className="mt-4 grid grid-cols-[repeat(auto-fill,minmax(196px,1fr))] gap-x-[18px] gap-y-5">
+          {view.activeCards.map((card) => (
+            <NetworkCard key={card.id} card={card} />
           ))}
         </div>
       </section>
 
-      <details className="mt-12 border-y border-rule">
-        <summary className="cursor-pointer py-4 font-medium">
-          Other official network listings · {otherEntries.length}
-        </summary>
-        <div className="grid gap-x-8 border-t border-rule md:grid-cols-2">
-          {otherEntries.map((entry) => (
-            <NetworkEntryRow key={entry.id} entry={entry} />
+      <section className="mt-12">
+        <SectionHeader
+          title="Lithuanian Masses hosted by other parishes"
+          count={view.counts.hosted}
+        >
+          In these places the Lithuanian parish itself is gone, but a Lithuanian
+          Mass continues inside a parish that is no longer Lithuanian-led —
+          never counted as an active Lithuanian parish.
+        </SectionHeader>
+        <div className="mt-4 grid grid-cols-[repeat(auto-fill,minmax(196px,1fr))] gap-x-[18px] gap-y-5">
+          {view.hostedCards.map((card) => (
+            <NetworkCard key={card.id} card={card} />
           ))}
         </div>
-      </details>
+      </section>
 
+      <section className="mt-12">
+        <SectionHeader title="Wider Lithuanian Catholic life" count={view.counts.wider}>
+          Two current religious houses and one occasional-worship community are
+          documented separately. They remain visible without changing the{" "}
+          {view.counts.places}-place regular-worship count, the{" "}
+          {view.counts.directory}-entry Sielovada listing, or the historical
+          institution census.
+        </SectionHeader>
+        <div className="mt-4 grid grid-cols-[repeat(auto-fill,minmax(196px,1fr))] gap-x-[18px] gap-y-5">
+          {view.widerCards.map((card) => (
+            <WiderCard key={card.id} card={card} />
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-12">
+        <SectionHeader
+          title="Listed by Sielovada, without regular Lithuanian worship"
+          count={view.counts.otherDirectory}
+        >
+          Sielovada lists {view.counts.directory} U.S. entries: the{" "}
+          {view.counts.places} regular-worship places above, the Kennebunk
+          Franciscan house shown in the wider-life section, and these{" "}
+          {view.counts.otherDirectory} remaining entries. One is a contested
+          closure; four have no verified regular Lithuanian Mass. Those absences
+          are part of the record too.
+        </SectionHeader>
+        <div className="mt-4 grid grid-cols-[repeat(auto-fill,minmax(196px,1fr))] gap-x-[18px] gap-y-5">
+          {view.otherDirectoryCards.map((card) => (
+            <NetworkCard key={card.id} card={card} />
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-12">
+        <SectionHeader title="Also being tracked" count={view.counts.tracked}>
+          These communities and buildings sit outside the current Sielovada
+          listing, but their futures remain active questions: closure appeals,
+          diocesan planning, buildings on the market, and proposed demolition.
+        </SectionHeader>
+        <div className="mt-4 grid grid-cols-[repeat(auto-fill,minmax(196px,1fr))] gap-x-[18px] gap-y-5">
+          {view.trackedCards.map((card) => (
+            <TrackedCard key={card.id} card={card} />
+          ))}
+        </div>
+      </section>
+
+      <footer className="mt-10 border-t border-rule pt-4 text-directory-footnote leading-relaxed text-muted">
+        Every community name links to its full record where one exists. Map
+        positions come from the project&rsquo;s shared geographic layer;
+        Washington is placed at city level. Network checked {view.observed}.
+        Data revision {view.generated} · {view.revision}.
+      </footer>
     </article>
   );
 }
