@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #fffdf9; color: #1c1917; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #7d1f1f; }
+  a:hover { color: #1c1917; }
+  * { box-sizing: border-box; }
+</style>
+</helmet>
+<div style="max-width: 1080px; margin: 0 auto; padding: 28px 24px 88px;">
+
+  <p style="margin: 0; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: #78716c; font-weight: 600;">Lithuanian Catholic life today · checked {{ observed }}</p>
+
+  <h1 style="margin: 12px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: clamp(27px, 3.3vw, 36px); line-height: 1.16; letter-spacing: -0.015em; max-width: 30ch;">The living network</h1>
+
+  <p style="margin: 10px 0 0; max-width: 66ch; font-family: 'Source Serif 4', Georgia, serif; font-size: 19px; font-weight: 400; line-height: 1.4; color: #57534e; text-wrap: pretty;">Of the 137 Lithuanian Catholic parishes and missions ever founded in America, worship still gathers regularly in <b style="font-weight: 600; color: #1c1917;">{{ nPlaces }} places</b> across {{ nStates }} states — {{ nParish }} parishes, {{ nMission }} missions, and {{ nHosted }} Lithuanian Masses hosted inside other parishes.</p>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 30px 34px; align-items: flex-start; margin-top: 30px; padding-top: 22px; border-top: 1px solid #1c1917;">
+
+    <div style="flex: 1.6 1 420px; min-width: 0;">
+      <h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 18px; font-weight: 600; line-height: 1.25;">The {{ nPlaces }} worship places on the map</h2>
+      <p style="margin: 5px 0 0; max-width: 60ch; font-size: 12.5px; line-height: 1.55; color: #57534e; text-wrap: pretty;">Green and gold dots are the {{ nPlaces }} places with current Lithuanian worship; the shaded states are the {{ nStates }} they stand in. Hover a dot to name it.</p>
+      <svg viewBox="40 120 900 270" role="img" aria-label="Map of the places with current Lithuanian worship, over all documented congregations" style="display: block; width: 100%; height: auto; margin-top: 14px;">
+        <sc-for list="{{ statePaths }}" as="p" hint-placeholder-count="40">
+          <path d="{{ p.d }}" fill="{{ p.fill }}" stroke="{{ p.stroke }}" strokeWidth="0.7"></path>
+        </sc-for>
+        <sc-for list="{{ liveDots }}" as="m" hint-placeholder-count="14">
+          <circle cx="{{ m.x }}" cy="{{ m.y }}" r="{{ m.r }}" fill="{{ m.fill }}" stroke="{{ m.stroke }}" strokeWidth="{{ m.sw }}" style="cursor: pointer;" onMouseEnter="{{ m.onEnter }}" onMouseLeave="{{ m.onLeave }}" onClick="{{ m.onClick }}">
+            <title>{{ m.title }}</title>
+          </circle>
+        </sc-for>
+        <rect x="606" y="200" width="52" height="44" fill="none" stroke="#78716c" strokeWidth="0.8" strokeDasharray="3 2"></rect>
+        <line x1="658" y1="244" x2="712" y2="286" stroke="#78716c" strokeWidth="0.8" strokeDasharray="3 2"></line>
+        <rect x="712" y="266" width="140" height="118" fill="#fffdf9" stroke="#78716c" strokeWidth="0.8"></rect>
+        <sc-for list="{{ insetDots }}" as="m" hint-placeholder-count="5">
+          <circle cx="{{ m.x }}" cy="{{ m.y }}" r="{{ m.r }}" fill="{{ m.fill }}" stroke="{{ m.stroke }}" strokeWidth="{{ m.sw }}" style="cursor: pointer;" onMouseEnter="{{ m.onEnter }}" onMouseLeave="{{ m.onLeave }}" onClick="{{ m.onClick }}">
+            <title>{{ m.title }}</title>
+          </circle>
+        </sc-for>
+      </svg>
+      <div style="display: flex; justify-content: flex-end; margin-top: 2px;"><span style="font-size: 10.5px; color: #78716c;">Inset: the Chicago area, enlarged</span></div>
+      <div aria-live="polite" style="min-height: 20px; margin-top: 6px; font-size: 12.5px; line-height: 1.45; color: #57534e;">{{ readout }}</div>
+    </div>
+
+    <div style="flex: 1 1 280px; min-width: 0;">
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 20px;">
+        <div style="grid-column: 1 / -1; padding-bottom: 13px; border-bottom: 1px solid #e7e5e4;">
+          <p style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 46px; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums;">{{ nPlaces }}</p>
+          <p style="margin: 5px 0 0; font-size: 13px; line-height: 1.4; color: #57534e;">places still gather for regular Lithuanian worship</p>
+        </div>
+        <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+          <div>
+            <p style="margin: 0; display: flex; align-items: baseline; gap: 7px;"><span style="{{ s.swatch }}"></span><span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 26px; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums;">{{ s.n }}</span></p>
+            <p style="margin: 4px 0 0; font-size: 12px; line-height: 1.4; color: #57534e;">{{ s.label }}</p>
+          </div>
+        </sc-for>
+      </div>
+      <p style="margin: 16px 0 0; font-size: 12px; line-height: 1.6; color: #78716c; text-wrap: pretty;">“Lithuanian parish” and “Lithuanian mission” mean a community listed on <a href="https://sielovada.org/siaures-amerika/">Sielovada</a> — the Lithuanian Bishops’ Conference directory of Lithuanian pastoral care abroad — with verified current Lithuanian ministry. A parish can remain open without being part of this network.</p>
+      <p style="margin: 8px 0 0; font-size: 12px; line-height: 1.6; color: #78716c;">Source: <a href="https://sielovada.org/siaures-amerika/">Sielovada: North America</a> · <a href="/about-the-data">About the data</a></p>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; margin-top: 48px; padding-bottom: 9px; border-bottom: 1px solid #1c1917;">
+    <h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 20px; font-weight: 600; line-height: 1.2;">Active Lithuanian parishes and missions</h2>
+    <p style="margin: 0; font-size: 14px; font-weight: 600; color: #78716c; font-variant-numeric: tabular-nums;">{{ nParish }} parishes + {{ nMission }} missions</p>
+  </div>
+  <p style="margin: 10px 0 0; max-width: 76ch; font-size: 13px; line-height: 1.55; color: #57534e; text-wrap: pretty;">These {{ nParish }} parishes and {{ nMission }} missions are Lithuanian-led and hold regular Lithuanian worship. Missions use a hollow map mark.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(196px, 1fr)); gap: 20px 18px; margin-top: 18px;">
+    <sc-for list="{{ standing }}" as="c" hint-placeholder-count="0">
+      <div id="{{ c.anchor }}" style="min-width: 0; scroll-margin-top: 20px;">
+        <a href="{{ c.href }}" aria-label="{{ c.alt }}" style="display: block;"><div role="img" aria-label="{{ c.alt }}" style="aspect-ratio: 3 / 2; background-color: #faf7f1; border: 1px solid #efece6; background-size: contain; background-position: center; background-repeat: no-repeat; background-blend-mode: multiply; background-image: {{ c.bg }};"></div></a>
+        <p style="margin: 9px 0 0; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; color: {{ c.tagColor }};">{{ c.tag }}</p>
+        <p style="margin: 4px 0 0;"><a href="{{ c.href }}" style="font-family: 'Source Serif 4', Georgia, serif; font-size: 16.5px; font-weight: 600; line-height: 1.25; text-decoration: none; color: #1c1917;" style-hover="color: #7d1f1f;">{{ c.en }}</a></p>
+        <p style="margin: 2px 0 0; font-size: 12px; line-height: 1.35; font-style: italic; color: #78716c;">{{ c.lt }}</p>
+        <p style="margin: 3px 0 0; font-size: 12.5px; line-height: 1.4; color: #78716c;">{{ c.meta }}</p>
+        <p style="margin: 6px 0 0; font-size: 12.5px; line-height: 1.5; color: #57534e; text-wrap: pretty;">{{ c.ministry }}</p>
+        <p style="margin: 5px 0 0; font-size: 12px; line-height: 1.45; color: {{ c.clergyColor }};">{{ c.clergy }}</p>
+        <p style="{{ c.checkedStyle }}">{{ c.checked }}</p>
+        <sc-if value="{{ c.hasWatch }}" hint-placeholder-val="{{ false }}">
+          <div style="{{ c.watchBoxStyle }}">
+            <p style="margin: 0; font-size: 10.5px; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; color: {{ c.watchTagColor }};">{{ c.watchTag }}</p>
+            <p style="margin: 4px 0 0; font-size: 12px; line-height: 1.55; color: #57534e; text-wrap: pretty;">{{ c.watchNote }}</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ c.hasCamp }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top: 8px; padding: 8px 10px; background: #f8efef;">
+            <p style="margin: 0; font-size: 10.5px; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; color: #7d1f1f;">Active campaign</p>
+            <p style="margin: 4px 0 0; font-size: 12px; line-height: 1.55; color: #57534e; text-wrap: pretty;">{{ c.campWhat }}</p>
+            <p style="margin: 6px 0 0; display: flex; flex-wrap: wrap; gap: 3px 14px; font-size: 12px; font-weight: 600;">
+              <sc-if value="{{ c.campHasHearth }}" hint-placeholder-val="{{ false }}"><a href="{{ c.campHearth }}">What's happening</a></sc-if>
+              <sc-if value="{{ c.campHasAction }}" hint-placeholder-val="{{ false }}"><a href="{{ c.campAction }}">{{ c.campActionLabel }} →</a></sc-if>
+            </p>
+          </div>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; margin-top: 48px; padding-bottom: 9px; border-bottom: 1px solid #1c1917;">
+    <h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 20px; font-weight: 600; line-height: 1.2;">Lithuanian Masses hosted by other parishes</h2>
+    <p style="margin: 0; font-size: 14px; font-weight: 600; color: #78716c; font-variant-numeric: tabular-nums;">{{ nHosted }}</p>
+  </div>
+  <p style="margin: 10px 0 0; max-width: 76ch; font-size: 13px; line-height: 1.55; color: #57534e; text-wrap: pretty;">In these places the Lithuanian parish itself is gone, but a Lithuanian Mass continues inside a parish that is no longer Lithuanian-led — never counted as an active Lithuanian parish.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(196px, 1fr)); gap: 20px 18px; margin-top: 18px;">
+    <sc-for list="{{ hosted }}" as="h" hint-placeholder-count="6">
+      <div id="{{ h.anchor }}" style="min-width: 0; scroll-margin-top: 20px;">
+        <div aria-hidden="true" style="{{ h.cardImgStyle }}"></div>
+        <p style="margin: 9px 0 0; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; color: #8a7a4e;">Hosted Lithuanian Mass</p>
+        <sc-if value="{{ h.hasLink }}" hint-placeholder-val="{{ true }}">
+          <p style="margin: 4px 0 0;"><a href="{{ h.href }}" style="font-family: 'Source Serif 4', Georgia, serif; font-size: 16.5px; font-weight: 600; line-height: 1.25; text-decoration: none; color: #1c1917;" style-hover="color: #7d1f1f;">{{ h.en }}</a></p>
+        </sc-if>
+        <sc-if value="{{ h.noLink }}" hint-placeholder-val="{{ false }}">
+          <p style="margin: 4px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 16.5px; font-weight: 600; line-height: 1.25;">{{ h.en }}</p>
+        </sc-if>
+        <p style="margin: 2px 0 0; font-size: 12px; line-height: 1.35; font-style: italic; color: #78716c;">{{ h.lt }}</p>
+        <p style="margin: 3px 0 0; font-size: 12.5px; line-height: 1.4; color: #78716c;">{{ h.meta }}</p>
+        <p style="margin: 6px 0 0; font-size: 12.5px; line-height: 1.5; color: #57534e; text-wrap: pretty;">{{ h.ministry }}</p>
+        <p style="{{ h.clergyStyle }}">{{ h.clergy }}</p>
+        <p style="{{ h.checkedStyle }}">{{ h.checked }}</p>
+        <sc-if value="{{ h.hasWatch }}" hint-placeholder-val="{{ false }}">
+          <div style="{{ h.watchBoxStyle }}">
+            <p style="margin: 0; font-size: 10.5px; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; color: {{ h.watchTagColor }};">{{ h.watchTag }}</p>
+            <p style="margin: 4px 0 0; font-size: 12px; line-height: 1.55; color: #57534e; text-wrap: pretty;">{{ h.watchNote }}</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ h.hasCamp }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top: 8px; padding: 8px 10px; background: #f8efef;">
+            <p style="margin: 0; font-size: 10.5px; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; color: #7d1f1f;">Active campaign</p>
+            <p style="margin: 4px 0 0; font-size: 12px; line-height: 1.55; color: #57534e; text-wrap: pretty;">{{ h.campWhat }}</p>
+            <p style="margin: 6px 0 0; display: flex; flex-wrap: wrap; gap: 3px 14px; font-size: 12px; font-weight: 600;">
+              <sc-if value="{{ h.campHasHearth }}" hint-placeholder-val="{{ false }}"><a href="{{ h.campHearth }}">What's happening</a></sc-if>
+              <sc-if value="{{ h.campHasAction }}" hint-placeholder-val="{{ false }}"><a href="{{ h.campAction }}">{{ h.campActionLabel }} →</a></sc-if>
+            </p>
+          </div>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; margin-top: 48px; padding-bottom: 9px; border-bottom: 1px solid #e7e5e4;">
+    <h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 17px; font-weight: 600; line-height: 1.2; color: #57534e;">Listed by Sielovada, without regular Lithuanian worship</h2>
+    <p style="margin: 0; font-size: 13px; font-weight: 600; color: #78716c; font-variant-numeric: tabular-nums;">{{ nOther }}</p>
+  </div>
+  <p style="margin: 10px 0 0; max-width: 76ch; font-size: 13px; line-height: 1.55; color: #57534e; text-wrap: pretty;">Sielovada — the Lithuanian Bishops’ Conference directory of Lithuanian pastoral care abroad — lists {{ nListed }} U.S. entries in all. The {{ nPlaces }} worship places above account for 14 of them; these are the other six: one religious house, one contested closure, and four where no regular Lithuanian Mass could be verified — stated absences, kept as visible as the network itself.</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(196px, 1fr)); gap: 20px 18px; margin-top: 18px;">
+    <sc-for list="{{ others }}" as="o" hint-placeholder-count="5">
+      <div style="min-width: 0;">
+        <div aria-hidden="true" style="{{ o.cardImgStyle }}"></div>
+        <p style="margin: 9px 0 0; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; color: {{ o.tagColor }};">{{ o.tag }}</p>
+        <sc-if value="{{ o.hasLink }}" hint-placeholder-val="{{ true }}">
+          <p style="margin: 4px 0 0;"><a href="{{ o.href }}" style="font-family: 'Source Serif 4', Georgia, serif; font-size: 16.5px; font-weight: 600; line-height: 1.25; text-decoration: none; color: #1c1917;" style-hover="color: #7d1f1f;">{{ o.en }}</a></p>
+        </sc-if>
+        <sc-if value="{{ o.noLink }}" hint-placeholder-val="{{ false }}">
+          <p style="margin: 4px 0 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 16.5px; font-weight: 600; line-height: 1.25;">{{ o.en }}</p>
+        </sc-if>
+        <p style="margin: 2px 0 0; font-size: 12px; line-height: 1.35; font-style: italic; color: #78716c;">{{ o.lt }}</p>
+        <p style="margin: 3px 0 0; font-size: 12.5px; line-height: 1.4; color: #78716c;">{{ o.meta }}</p>
+        <p style="margin: 6px 0 0; font-size: 12.5px; line-height: 1.5; color: {{ o.noteColor }};">{{ o.note }}</p>
+        <sc-if value="{{ o.hasWatch }}" hint-placeholder-val="{{ false }}">
+          <div style="{{ o.watchBoxStyle }}">
+            <p style="margin: 0; font-size: 10.5px; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; color: {{ o.watchTagColor }};">{{ o.watchTag }}</p>
+            <p style="margin: 4px 0 0; font-size: 12px; line-height: 1.55; color: #57534e; text-wrap: pretty;">{{ o.watchNote }}</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ o.hasCamp }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top: 8px; padding: 8px 10px; background: #f8efef;">
+            <p style="margin: 0; font-size: 10.5px; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; color: #7d1f1f;">Active campaign</p>
+            <p style="margin: 4px 0 0; font-size: 12px; line-height: 1.55; color: #57534e; text-wrap: pretty;">{{ o.campWhat }}</p>
+            <p style="margin: 6px 0 0; display: flex; flex-wrap: wrap; gap: 3px 14px; font-size: 12px; font-weight: 600;">
+              <sc-if value="{{ o.campHasHearth }}" hint-placeholder-val="{{ false }}"><a href="{{ o.campHearth }}">What's happening</a></sc-if>
+              <sc-if value="{{ o.campHasAction }}" hint-placeholder-val="{{ false }}"><a href="{{ o.campAction }}">{{ o.campActionLabel }} →</a></sc-if>
+            </p>
+          </div>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+
+  <sc-if value="{{ hasExtraCamps }}" hint-placeholder-val="{{ false }}">
+    <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; margin-top: 48px; padding-bottom: 9px; border-bottom: 1px solid #1c1917;">
+      <h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 20px; font-weight: 600; line-height: 1.2;">Also being tracked</h2>
+      <p style="margin: 0; font-size: 14px; font-weight: 600; color: #78716c; font-variant-numeric: tabular-nums;">{{ nExtra }}</p>
+    </div>
+    <p style="margin: 10px 0 0; max-width: 76ch; font-size: 13px; line-height: 1.55; color: #57534e; text-wrap: pretty;">These five parishes are not on the Sielovada listing because their Lithuanian parish life has already ended — Sielovada lists only communities with current Lithuanian pastoral care. The project tracks them anyway: one community is appealing its closure, and the others face planning-area consolidations, buildings on the market, or proposed demolition. Each note says where things stand.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(196px, 1fr)); gap: 20px 18px; margin-top: 18px;">
+      <sc-for list="{{ extraCamps }}" as="x" hint-placeholder-count="1">
+        <div style="min-width: 0;">
+          <a href="{{ x.href }}" style="display: block;"><div aria-hidden="true" style="{{ x.cardImgStyle }}"></div></a>
+          <p style="margin: 9px 0 0;"><a href="{{ x.href }}" style="font-family: 'Source Serif 4', Georgia, serif; font-size: 16.5px; font-weight: 600; line-height: 1.25; text-decoration: none; color: #1c1917;" style-hover="color: #7d1f1f;">{{ x.entity }}</a></p>
+          <p style="margin: 3px 0 0; font-size: 12.5px; line-height: 1.4; color: #78716c;">{{ x.place }} · {{ x.diocese }}</p>
+          <p style="margin: 5px 0 0; font-size: 12px; line-height: 1.5; font-style: italic; color: #78716c; text-wrap: pretty;">{{ x.whyNotListed }}</p>
+          <div style="{{ x.boxStyle }}">
+            <p style="margin: 0; font-size: 10.5px; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; color: {{ x.tagColor }};">{{ x.tag }}</p>
+            <p style="margin: 4px 0 0; font-size: 12px; line-height: 1.55; color: #57534e; text-wrap: pretty;">{{ x.what }}</p>
+            <p style="margin: 6px 0 0; display: flex; flex-wrap: wrap; gap: 3px 14px; font-size: 12px; font-weight: 600;">
+              <sc-if value="{{ x.hasHearth }}" hint-placeholder-val="{{ false }}"><a href="{{ x.hearthUrl }}">What's happening</a></sc-if>
+              <sc-if value="{{ x.hasAction }}" hint-placeholder-val="{{ false }}"><a href="{{ x.actionUrl }}">{{ x.actionLabel }} →</a></sc-if>
+            </p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </sc-if>
+
+  <p style="margin: 40px 0 0; padding-top: 16px; border-top: 1px solid #e7e5e4; font-size: 12px; line-height: 1.55; color: #78716c;">Every community name links to its full profile where one exists. Map positions come from the project's shared geographic layer; Washington is placed at city level. Network checked {{ observed }} against <a href="https://sielovada.org/siaures-amerika/">Sielovada: North America</a>, the Lithuanian Bishops’ Conference directory. Data revision <span style="font-variant-numeric: tabular-nums;">{{ revisionDate }}</span>.</p>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const IMG = {
+  "sv-petro-boston-ma": "boston-st-peter-line-drawing.png",
+  "sv-andriejaus-philadelphia-pa": "philadelphia-st-andrew-line-drawing.png",
+  "svc-mergeles-marijos-gimimo-chicago-il": "chicago-nativity-bvm-line-drawing.png",
+  "sv-kazimiero-los-angeles-ca": "los-angeles-st-casimir-line-drawing.png",
+  "dievo-apvaizdos-southfield-mi": "southfield-divine-providence-current-line-drawing.png",
+  "pal-jurgio-matulaicio-misija-lemont-il": "lemont-matulaitis-mission-line-drawing.png",
+  "sv-kazimiero-cleveland-oh": "cleveland-our-lady-perpetual-help-line-drawing.png",
+  "our-lady-of-siluva-mission-mundelein-il": "mundelein-santa-maria-del-popolo-line-drawing.png",
+};
+const IMG_BASE = "https://saveourlithuanianparishes.org/images/parishes/";
+// Clergy for parishes Sielovada lists without a name — wording from the published
+// per-parish pastoral conditions (checked 2026-07).
+const CLERGY_NOTE = {
+  "boston-st-peter": "Shared pastor (not Lithuanian-speaking), assigned by the archdiocese",
+  "philadelphia-st-andrew": "Shared pastor (not Lithuanian-speaking), assigned by the archdiocese",
+};
+const C = { active_parish: "#2d6a4f", active_mission: "#2d6a4f", mass_continues: "#d5c28b" };
+// Inset: the Chicago-area window (606,200 52x44) scaled uniformly into the box at (712,266).
+const IN = { x: 606, y: 200, w: 52, h: 44, bx: 712, by: 266, s: 118 / 44 };
+
+class Component extends DCLogic {
+  state = { net: null, pts: null, map: null, hot: null };
+
+  componentDidMount() {
+    fetch("today-network.json").then((r) => r.json()).then((net) => this.setState({ net }));
+    fetch("watch-list.json").then((r) => r.json()).then((wl) => this.setState({ wl }));
+    fetch("line-drawings.json").then((r) => r.json()).then((ld) => this.setState({ ld }));
+    fetch("pastoral-conditions.json").then((r) => r.json()).then((pc) => this.setState({ pc }));
+    fetch("data/diocese-overlay.json").then((r) => r.json()).then((ov) => this.setState({ ov }));
+    fetch("data/context-points.json").then((r) => r.json()).then((pts) => this.setState({ pts }));
+    fetch("data/map.json").then((r) => r.json()).then((map) => this.setState({ map }));
+  }
+
+  slug(e) { return e.href ? e.href.split("/").pop() : null; }
+
+  // Which state shapes contain a current worship place — hit-test the member
+  // coordinates against each path once and cache.
+  hiShapes(entries, members) {
+    if (this._hi) return this._hi;
+    if (!entries || !members.length || typeof document === "undefined") return null;
+    try {
+      const NS = "http://www.w3.org/2000/svg";
+      const svg = document.createElementNS(NS, "svg");
+      const path = document.createElementNS(NS, "path");
+      svg.appendChild(path);
+      document.body.appendChild(svg);
+      const pt = svg.createSVGPoint();
+      const hi = new Set();
+      for (const [k, d] of entries) {
+        path.setAttribute("d", d);
+        for (const e of members) {
+          if (e.x == null) continue;
+          pt.x = e.x; pt.y = e.y;
+          if (path.isPointInFill(pt)) { hi.add(k); break; }
+        }
+      }
+      document.body.removeChild(svg);
+      this._hi = hi;
+      return hi;
+    } catch (err) { return null; }
+  }
+
+  // Card notes carry only the first sentence; the full account lives on the profile.
+  brief(s) {
+    const m = String(s || "").match(/^.*?[.!?](?=\s|$)/);
+    return m ? m[0] : s || "";
+  }
+
+  // Rights-cleared line drawing for a slug (from the photo registry), as a thumb style.
+  drawing(slug) {
+    const ld = this.state.ld;
+    return slug && ld && ld[slug] ? "https://saveourlithuanianparishes.org" + ld[slug].src : null;
+  }
+
+  // Canonical pastoral conditions (clergy arrangement, Mass cadence, check date).
+  conditions(slug) {
+    const pc = this.state.pc;
+    return (slug && pc && pc[slug]) || null;
+  }
+
+  checkedFields(slug) {
+    const c = this.conditions(slug);
+    return {
+      checked: c && c.checked ? "Checked " + c.checked : "",
+      checkedStyle: c && c.checked
+        ? "margin: 5px 0 0; font-size: 11px; line-height: 1.4; color: #78716c; font-variant-numeric: tabular-nums;"
+        : "display: none;",
+    };
+  }
+
+  // Card jump without scrollIntoView (which can break the host app).
+  jumpTo(anchor) {
+    const el = document.getElementById(anchor);
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 20, behavior: "smooth" });
+  }
+
+  brief2(s) {
+    const m = String(s || "").match(/^.*?[.!?](?=\s|$)(\s+.*?[.!?](?=\s|$))?/);
+    return m ? m[0] : s || "";
+  }
+
+  // One shared shape for a non-campaign situation note on any card. Each kind has
+  // its own tinted box: sand for buildings at risk, grey for developments to monitor
+  // (campaigns use the red box).
+  situationNote(a) {
+    const building = a && a.kind === "building";
+    return {
+      hasWatch: !!a,
+      watchNote: a ? this.brief2(a.what) : "",
+      watchTag: a ? (building ? "Building at risk" : "Development to monitor") : "",
+      watchTagColor: building ? "#7d1f1f" : "#78716c",
+      watchBoxStyle: "margin-top: 8px; padding: 8px 10px; background: " + (building ? "#f5edda" : "#f1efeb") + ";",
+    };
+  }
+
+  thumbStyle(url) {
+    return url
+      ? "flex: 0 0 84px; height: 64px; background-color: #faf7f1; border: 1px solid #efece6; " +
+        "background-image: url(\"" + url + "\"); background-size: contain; background-position: center; " +
+        "background-repeat: no-repeat; background-blend-mode: multiply;"
+      : "display: none;";
+  }
+
+  dot(e, x, y, inset) {
+    const mission = e.cls === "active_mission";
+    const hot = this.state.hot === e.id + (inset ? ":i" : "");
+    const base = inset ? 8 : 7;
+    return {
+      key: e.id + (inset ? ":i" : ""),
+      x: x.toFixed(1), y: y.toFixed(1),
+      r: hot ? base + 1.5 : base,
+      fill: mission ? "#fffdf9" : C[e.cls],
+      stroke: mission ? "#2d6a4f" : e.cls === "mass_continues" ? "#8a7a4e" : "#fffdf9",
+      sw: mission ? 2 : 1,
+      title: (e.en || e.lt) + (e.en && e.lt && e.en !== e.lt ? " (" + e.lt + ")" : "") + " — " + e.city + ", " + e.state,
+      onEnter: () => this.setState({ hot: e.id + (inset ? ":i" : "") }),
+      onLeave: () => this.setState({ hot: null }),
+      // Clicking a dot jumps to that place's card on this page.
+      onClick: () => { const a = this.slug(e); if (a) this.jumpTo(a); },
+    };
+  }
+
+  renderVals() {
+    const net = this.state.net, pts = this.state.pts, map = this.state.map;
+    const base = {
+      observed: "…", revisionDate: "…", totalInstitutions: "…",
+      nPlaces: "…", nStates: "…", nParish: "…", nMission: "…", nHosted: "…",
+      nOther: "…", nListed: "…",
+      statePaths: [], dioceses: [], nDioceses: "…", ghostDots: [], liveDots: [], insetDots: [],
+      stats: [], standing: [], hosted: [], others: [], watch: [], nWatch: "…",
+      readout: "Loading the current network…",
+    };
+    if (!net) return base;
+
+    const members = net.entries.filter((e) =>
+      ["active_parish", "active_mission", "mass_continues"].includes(e.cls));
+    const memberSlugs = new Set(members.map((e) => this.slug(e)).filter(Boolean));
+    // A watch situation touching a current worship place is shown ON that place's
+    // entry, not duplicated below — the watch list keeps only places outside the network.
+    // Match on the slug basename: the network uses /parishes/<slug>, alerts /registry/<slug>.
+    const bn = (h) => (h ? h.split("/").pop() : null);
+    const memberSlugSet = new Set(members.map((e) => bn(e.href)).filter(Boolean));
+    const wl = this.state.wl;
+    const watchOnMember = {};
+    if (wl) for (const x of wl.items) { const k = bn(x.href); if (k && memberSlugSet.has(k)) watchOnMember[k] = x; }
+    // Campaign details render under the church's own card, in whichever section it lives.
+    const campBySlug = {};
+    if (wl) for (const x of wl.items) { const k = bn(x.href); if (k && x.kind === "active") campBySlug[k] = x; }
+    const campFields = (slug) => {
+      const x = slug ? campBySlug[slug] : null;
+      return {
+        hasCamp: !!x,
+        // First two sentences at most on a card; the full account stays on the profile.
+        campWhat: x ? this.brief2(x.what) : "",
+        campHearth: x && x.hearthUrl ? x.hearthUrl : "#",
+        campHasHearth: !!(x && x.hearthUrl),
+        campAction: x && x.actionUrl ? x.actionUrl : "#",
+        campHasAction: !!(x && x.actionUrl),
+        campActionLabel: x && x.actionLabel ? x.actionLabel.replace(/\s*→\s*$/, "") : "",
+      };
+    };
+
+    // Shade the states that hold a current worship place (hit-test, cached).
+    const hi = this.hiShapes(map ? Object.entries(map.statePaths) : null, members);
+    const statePaths = map
+      ? Object.entries(map.statePaths).map(([k, d]) => ({
+          key: k, d,
+          fill: hi && hi.has(k) ? "#f1e8d3" : "#faf7f1",
+          stroke: hi && hi.has(k) ? "#dccfae" : "#e7e2d9",
+        }))
+      : [];
+    const dioceses = [];
+    const ghostDots = pts
+      ? pts.points.filter((p) => !memberSlugs.has(p.slug))
+          .map((p) => ({ key: p.slug, x: p.x, y: p.y }))
+      : [];
+
+    const liveDots = [], insetDots = [];
+    for (const e of members) {
+      if (e.x == null) continue;
+      liveDots.push(this.dot(e, e.x, e.y, false));
+      if (e.x >= IN.x && e.x <= IN.x + IN.w && e.y >= IN.y && e.y <= IN.y + IN.h) {
+        insetDots.push(this.dot(e, IN.bx + (e.x - IN.x) * IN.s, IN.by + (e.y - IN.y) * IN.s, true));
+      }
+    }
+
+    const hotId = this.state.hot ? this.state.hot.replace(/:i$/, "") : null;
+    const hotE = hotId ? members.find((e) => e.id === hotId) : null;
+
+    const TAG = { active_parish: "Lithuanian parish", active_mission: "Lithuanian mission" };
+    const standing = members
+      .filter((e) => e.cls !== "mass_continues")
+      .sort((a, b) => (a.founded || 9999) - (b.founded || 9999))
+      .map((e) => {
+        const slug = this.slug(e);
+        const w = slug ? watchOnMember[slug] : null;
+        const camp = campFields(slug);
+        return {
+          ...camp,
+          key: e.id,
+          href: e.href || "#",
+          ...this.situationNote(w && !camp.hasCamp ? w : null),
+          en: e.en || e.lt,
+          // background-image instead of <img src>: the browser preloads a literal
+          // src before the template hydrates, 404ing on the unresolved hole.
+          bg: this.drawing(slug)
+            ? 'url("' + this.drawing(slug) + '")'
+            : IMG[slug] ? 'url("' + IMG_BASE + IMG[slug] + '")' : "none",
+          alt: "Line drawing of " + e.en,
+          tag: TAG[e.cls],
+          tagColor: "#2d6a4f",
+          anchor: slug || e.id,
+          ...this.checkedFields(slug),
+          // Kunigas from the Sielovada directory; otherwise the canonical clergy
+          // arrangement; a stated absence stays visible.
+          clergy: e.clergy ||
+            (this.conditions(slug) && this.conditions(slug).clergyLabel
+              ? this.conditions(slug).clergyLabel + ", assigned by the diocese"
+              : CLERGY_NOTE[e.id] || "No Lithuanian-speaking kunigas listed on Sielovada"),
+          clergyColor: e.clergy ? "#57534e" : "#78716c",
+          lt: e.lt,
+          meta: e.city + ", " + e.state + (e.founded ? " · est. " + e.founded : ""),
+          ministry: e.ministry || "",
+        };
+      });
+
+    const hosted = members
+      .filter((e) => e.cls === "mass_continues")
+      .sort((a, b) => a.lt.localeCompare(b.lt, "lt"))
+      .map((e) => {
+        const w = bn(e.href) ? watchOnMember[bn(e.href)] : null;
+        const camp = campFields(bn(e.href));
+        return {
+          ...camp,
+          ...this.checkedFields(bn(e.href)),
+          anchor: bn(e.href) || e.id,
+          key: e.id,
+          href: e.href || "#",
+          hasLink: !!e.href,
+          noLink: !e.href,
+          lt: e.lt,
+          en: e.en || e.lt,
+          cardImgStyle:
+            "aspect-ratio: 3 / 2; background-color: #faf7f1; border: 1px solid #efece6; " +
+            "background-size: contain; background-position: center; background-repeat: no-repeat; " +
+            "background-blend-mode: multiply; background-image: " +
+            (this.drawing(bn(e.href)) ? 'url("' + this.drawing(bn(e.href)) + '")' : "none") + ";",
+          meta: e.city + ", " + e.state,
+          ministry: e.ministry || "",
+          clergy: e.clergy || "",
+          clergyStyle: e.clergy
+            ? "margin: 4px 0 0; font-size: 12px; line-height: 1.4; color: #78716c;"
+            : "display: none;",
+          ...this.situationNote(w && !camp.hasCamp ? w : null),
+        };
+      });
+
+    const others = net.entries
+      .filter((e) => ["no_lithuanian_liturgy", "directory_conflict", "religious_house"].includes(e.cls))
+      .sort((a, b) => a.lt.localeCompare(b.lt, "lt"))
+      .map((e) => ({
+        ...campFields(bn(e.href)),
+        ...this.situationNote(
+          wl ? wl.items.find((x) => x.kind !== "active" && bn(x.href) && bn(x.href) === bn(e.href)) : null),
+        key: e.id,
+        href: e.href || "#",
+        hasLink: !!e.href,
+        noLink: !e.href,
+        lt: e.lt,
+        en: e.en || e.lt,
+        cardImgStyle:
+          "aspect-ratio: 3 / 2; background-color: #faf7f1; border: 1px solid #efece6; " +
+          "background-size: contain; background-position: center; background-repeat: no-repeat; " +
+          "background-blend-mode: multiply; background-image: " +
+          (this.drawing(bn(e.href)) ? 'url("' + this.drawing(bn(e.href)) + '")' : "none") + ";",
+        meta: e.city + ", " + e.state,
+        // The card tag names the listing status; an active campaign shows as its own
+        // labelled block below, same as on every other card.
+        tag: e.cls === "religious_house" ? "Religious house" : "On the Sielovada listing",
+        tagColor: e.cls === "religious_house" ? "#2d6a4f" : "#78716c",
+        note:
+          e.cls === "directory_conflict"
+            ? "Regular worship ended — the listing and current evidence disagree; the fate is unresolved."
+            : e.ministry || "No current Lithuanian Mass verified.",
+        noteColor: e.cls === "directory_conflict" ? "#7d1f1f" : e.cls === "religious_house" ? "#57534e" : "#78716c",
+      }));
+
+    // Alerts whose parish has no card anywhere on this page (Waterbury, Girardville,
+    // Freeland, Elizabeth, Bayonne) get their own cards below the listing.
+    const onPageSlugs = new Set([
+      ...members.map((e) => bn(e.href)),
+      ...net.entries.filter((e) => ["no_lithuanian_liturgy", "directory_conflict", "religious_house"].includes(e.cls)).map((e) => bn(e.href)),
+    ].filter(Boolean));
+    const KIND_TAG = { active: "Active campaign", watch: "Development to monitor", building: "Building at risk" };
+    // Why each tracked parish is off the Sielovada listing — from the canonical alert record.
+    const WHY = {
+      "sv-juozapo-waterbury-ct": "Merged into Our Lady of Mount Carmel in 2024; no Lithuanian pastoral care remains to list.",
+      "sv-vincento-de-paul-girardville-pa": "The Lithuanian parish ended in a 2015 merger; its church closed in January 2026.",
+      "sv-petro-ir-povilo-elizabeth-nj": "The Lithuanian parish ended in a 2009 merger; only the building's future is in question.",
+      "sv-mykolo-bayonne-nj": "The parish is long closed and its former church stands vacant.",
+    };
+    const ORDER2 = { active: 0, watch: 1, building: 2 };
+    const extraCamps = wl
+      ? wl.items.filter((x) => !onPageSlugs.has(bn(x.href)))
+          .sort((a, b) => ORDER2[a.kind] - ORDER2[b.kind] || a.entity.localeCompare(b.entity))
+          .map((x) => ({
+          key: x.id,
+          tag: KIND_TAG[x.kind] || "Development to monitor",
+          tagColor: x.kind === "watch" ? "#78716c" : "#7d1f1f",
+          boxStyle:
+            "margin-top: 6px; padding: 8px 10px; background: " +
+            (x.kind === "active" ? "#f8efef" : x.kind === "building" ? "#f5edda" : "#f1efeb") + ";",
+          entity: x.entity,
+          href: x.href || "#",
+          place: x.place,
+          diocese: x.diocese,
+          whyNotListed: WHY[bn(x.href)] || "The Lithuanian parish here has already ended, so it is outside Sielovada's scope.",
+          what: this.brief2(x.what),
+          hearthUrl: x.hearthUrl || "#",
+          hasHearth: !!x.hearthUrl,
+          actionUrl: x.actionUrl || "#",
+          hasAction: !!x.actionUrl,
+          actionLabel: (x.actionLabel || "").replace(/\s*→\s*$/, ""),
+          cardImgStyle:
+            "aspect-ratio: 3 / 2; background-color: #faf7f1; border: 1px solid #efece6; " +
+            "background-size: contain; background-position: center; background-repeat: no-repeat; " +
+            "background-blend-mode: multiply; background-image: " +
+            (this.drawing(bn(x.href)) ? 'url("' + this.drawing(bn(x.href)) + '")' : "none") + ";",
+        }))
+      : [];
+
+    const c = net.counts;
+    return {
+      ...base,
+      observed: net.observed,
+      revisionDate: (String(net.revision || "").match(/\d{4}-\d{2}-\d{2}/) || ["—"])[0],
+      totalInstitutions: pts ? pts.counts.points : 155,
+      nPlaces: c.active_parish + c.active_mission + c.mass_continues,
+      nStates: net.figures.states,
+      nParish: c.active_parish,
+      nMission: c.active_mission,
+      nHosted: c.mass_continues,
+      nOther: others.length,
+      nListed: net.directoryCounts.listed,
+      statePaths, dioceses, nDioceses: dioceses.length || "…", ghostDots, liveDots, insetDots,
+      stats: [
+        { key: "p", n: c.active_parish, label: "Lithuanian parishes",
+          swatch: "width: 12px; height: 12px; border-radius: 50%; background: #2d6a4f;" },
+        { key: "m", n: c.active_mission, label: "Lithuanian missions",
+          swatch: "width: 12px; height: 12px; border-radius: 50%; background: #fffdf9; border: 2.5px solid #2d6a4f;" },
+        { key: "h", n: c.mass_continues, label: "hosted Lithuanian Masses",
+          swatch: "width: 12px; height: 12px; border-radius: 50%; background: #d5c28b; border: 1px solid #8a7a4e;" },
+        { key: "s", n: net.figures.states, label: "states, coast to coast",
+          swatch: "width: 12px; height: 12px; border-radius: 50%; border: 1px dashed #78716c;" },
+      ],
+      standing, hosted, others, watch, nWatch: watch.length,
+      extraCamps, hasExtraCamps: extraCamps.length > 0, nExtra: extraCamps.length,
+      readout: hotE
+        ? (hotE.en || hotE.lt) + (hotE.en && hotE.lt && hotE.en !== hotE.lt ? " (" + hotE.lt + ")" : "") +
+          " — " + hotE.city + ", " + hotE.state +
+          (hotE.ministry ? ". " + hotE.ministry : "")
+        : "Hover a coloured dot to name the place.",
+    };
+  }
+}
+</script>
+</body>
+</html>
