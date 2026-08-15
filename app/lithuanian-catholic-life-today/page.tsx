@@ -144,6 +144,12 @@ function NetworkCard({ card }: { card: LivingNetworkCardType }) {
       : card.networkClass === "mass_continues"
         ? "text-[#8a7a4e]"
         : "text-muted";
+  const draugasPage = card.draugasEvidence.page?.match(
+    /\bp(?:p)?\.\s*(\d+)\b/i,
+  )?.[1];
+  const draugasUrl = draugasPage
+    ? `${card.draugasEvidence.url.split("#")[0]}#page=${draugasPage}`
+    : card.draugasEvidence.url;
 
   return (
     <article id={card.anchor} className="min-w-0 scroll-mt-5">
@@ -203,6 +209,36 @@ function NetworkCard({ card }: { card: LivingNetworkCardType }) {
           </a>
         </p>
       ) : null}
+      <details className="mt-2 border-l border-[#d6c8ad] pl-2 text-directory-footnote text-muted">
+        <summary className="cursor-pointer list-none font-semibold text-foreground marker:hidden">
+          Draugas source · {card.draugasEvidence.date}
+          {card.draugasEvidence.page
+            ? ` · ${card.draugasEvidence.page}`
+            : " · public article"}
+          {card.draugasEvidence.access === "subscriber"
+            ? " · subscriber archive"
+            : ""}
+        </summary>
+        <p className="mt-1 leading-snug">
+          <a
+            href={draugasUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-accent underline underline-offset-2 hover:text-foreground"
+          >
+            {card.draugasEvidence.title} ↗
+          </a>
+        </p>
+        {card.draugasEvidence.excerpt ? (
+          <blockquote className="mt-1 border-l border-rule pl-2 italic leading-relaxed text-[#57534e]">
+            “{card.draugasEvidence.excerpt}”
+          </blockquote>
+        ) : null}
+        <p className="mt-1 leading-relaxed">
+          <span className="font-semibold text-foreground">What it supports:</span>{" "}
+          {card.draugasEvidence.supports}
+        </p>
+      </details>
       {card.situation ? <SituationFlag situation={card.situation} /> : null}
     </article>
   );

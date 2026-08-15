@@ -1,11 +1,11 @@
 {
   "generatedFrom": {
-    "registryRevision": 30,
+    "registryRevision": 33,
     "registryDate": "2026-08-11",
     "canonicalPublicationRevision": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
-    "canonicalPublicationHash": "sha256:b5d41cca3e374bc139673605a40eeb4fa4e3cc6cc86b5bb7cb9f7c9451e33667",
-    "canonicalInfographicRevision": "canonical-infographic-units-2026-08-14-continuity-taxonomy",
-    "canonicalInfographicHash": "sha256:69d9503faeb419bb18daff24061834ebbb91d871e300d25fd942d24bdcd807f9",
+    "canonicalPublicationHash": "sha256:a7db4124a61d79806b74cdcb583a91738b386d049b1e43096107c590513d64e2",
+    "canonicalInfographicRevision": "canonical-infographic-units-2026-08-15-reviewed-draugas-sielovada-20",
+    "canonicalInfographicHash": "sha256:9716e75e8cff523e12604ff68b01373186c46dc39d5f4475c403a06bb8360015",
     "networkChecked": "2026-08-03"
   },
   "publicUS": {

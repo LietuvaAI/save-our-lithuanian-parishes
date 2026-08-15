@@ -2,7 +2,7 @@
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
-    "publication_projection_hash": "sha256:b5d41cca3e374bc139673605a40eeb4fa4e3cc6cc86b5bb7cb9f7c9451e33667",
+    "publication_projection_hash": "sha256:a7db4124a61d79806b74cdcb583a91738b386d049b1e43096107c590513d64e2",
     "publication_projection_revision": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
     "repository": "LietuvaAI/culturenet-brain"
   },
@@ -8399,7 +8399,7 @@
       "building-standing"
     ]
   },
-  "content_hash": "sha256:69d9503faeb419bb18daff24061834ebbb91d871e300d25fd942d24bdcd807f9",
+  "content_hash": "sha256:9716e75e8cff523e12604ff68b01373186c46dc39d5f4475c403a06bb8360015",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -10999,18 +10999,30 @@
         "religiousHouse": 1,
         "unresolved": 0
       },
+      "draugasEvidenceRevision": "draugas-sielovada-20-2026-08-15",
       "entries": [
         {
           "address": "PO Box 727, Beverly Shores, IN 46301-0727",
           "city": "Beverly Shores",
           "clergy": "Kun. Gediminas Keršys, Lithuanian chaplain",
           "directoryType": "mission",
+          "draugasEvidence": {
+            "date": "2019-03-30",
+            "excerpt": "Lietuvių Beverly Shores, Indiana, klubo nariai ... Šv. Onos bažnyčioje rinkosi į iškilmingą Lietuvos Nepriklausomybės atkūrimo – Kovo 11-osios – minėjimą.",
+            "page": "p. 5",
+            "publisher": "Draugas",
+            "supports": "Documents a Lithuanian community observance at St. Ann of the Dunes in 2019.",
+            "title": "Klube – Lietuvos Nepriklausomybės atkūrimo minėjimas",
+            "url": "https://draugas.org/key/2019_reg/2019-03-30-DRAUGAS.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "beverly-shores-st-ann",
           "ministry": "Lithuanian Mass continues monthly inside a diocesan worship site.",
           "nameEn": "St. Ann of the Dunes Church",
           "nameLt": "Beverly Shores misija",
           "networkClass": "mass_continues",
           "officialSite": "https://www.st-ann-of-the-dunes.org",
+          "publicProfile": "/parishes/st-ann-beverly-shores-in",
           "registrySlug": "st-ann-beverly-shores-in",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11021,12 +11033,23 @@
           "address": "75 Flaherty Way, Boston, MA 02127",
           "city": "Boston",
           "directoryType": "parish",
+          "draugasEvidence": {
+            "date": "2008-04-22",
+            "excerpt": "Mes Bostone taip pat jau beveik buvome praradę viltį, o paskui kažkokio stebuklo dėka viskas pasisuko kiton pusėn.",
+            "page": "p. 4",
+            "publisher": "Draugas",
+            "supports": "Records Boston parishioners' account of working to preserve St. Peter and their support for the New York parish campaign.",
+            "title": "Bostono dainuojanti valdyba palaiko New York lietuvius",
+            "url": "https://draugas.org/key/2008_reg/2008-04-22-DRAUGASo.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "boston-st-peter",
           "ministry": "Active Lithuanian parish and the living Lithuanian Catholic parish center for New England.",
           "nameEn": "St. Peter Lithuanian Parish",
           "nameLt": "Bostono Šv. Petro lietuvių parapija",
           "networkClass": "active_parish",
           "officialSite": "https://www.stpeterlithuanianparish.org",
+          "publicProfile": "/parishes/sv-petro-boston-ma",
           "registrySlug": "peter-boston-ma",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11038,11 +11061,22 @@
           "city": "Cicero",
           "clergy": "Kun. Gediminas Keršys, Lithuanian chaplain",
           "directoryType": "parish",
+          "draugasEvidence": {
+            "date": "2009-03-25",
+            "excerpt": "Cicero Šv. Antano bažnyčioje Gavėnios susikaupimo vakaras bus ketvirtadienį, kovo 26 d.",
+            "page": "p. 12",
+            "publisher": "Draugas",
+            "supports": "Documents a Lithuanian Lenten gathering at St. Anthony Church in 2009.",
+            "title": "Gavėnios susikaupimo popietės",
+            "url": "https://draugas.org/key/2009_reg/2009-03-25-DRAUGASo.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "cicero-st-anthony",
           "ministry": "Lithuanian Mass continues in a parish that is no longer Lithuanian-led.",
           "nameEn": "St. Anthony Parish",
           "nameLt": "Čikagos Šv. Antano parapija (Cicero)",
           "networkClass": "mass_continues",
+          "publicProfile": "/parishes/sv-antano-cicero-il",
           "registrySlug": "anthony-cicero-il",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11054,12 +11088,23 @@
           "city": "Chicago",
           "clergy": "Kun. Jaunius Kelpšas, pastor",
           "directoryType": "parish",
+          "draugasEvidence": {
+            "date": "2008-09-06",
+            "excerpt": "Cicero tikintieji lietuviai organizuotai vyks į Marijos Apsireiškimo 400 m. jubiliejaus atlaidus ... Švč. Mergelės Marijos Gimimo parapijos bažnyčioje.",
+            "page": "p. 14",
+            "publisher": "Draugas",
+            "supports": "Documents Nativity B.V.M. as the host of Lithuanian Šiluva devotions in 2008.",
+            "title": "Cicero lietuviai ruošiasi Šiluvos atlaidams Čikagoje",
+            "url": "https://draugas.org/key/2008_reg/2008-09-06-DRAUGASo.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "chicago-nativity",
           "ministry": "Active Lithuanian parish with regular Lithuanian worship.",
           "nameEn": "Nativity of the B.V.M. Parish",
           "nameLt": "Čikagos Švč. Mergelės Marijos Gimimo parapija",
           "networkClass": "active_parish",
           "officialSite": "https://chicagonativitybvm.org",
+          "publicProfile": "/parishes/svc-mergeles-marijos-gimimo-chicago-il",
           "registrySlug": "nativity-chicago-il",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11071,12 +11116,23 @@
           "city": "Chicago",
           "clergy": "Kun. Gediminas Keršys, Lithuanian chaplain",
           "directoryType": "parish",
+          "draugasEvidence": {
+            "date": "2009-03-25",
+            "excerpt": "Brighton Park Švč. Mergelės Marijos Nekaltojo Prasidėjimo bažnyčioje sekmadienį, kovo 29 d., 10 val. r. šv. Mišių auką atnašaus...",
+            "page": "p. 12",
+            "publisher": "Draugas",
+            "supports": "Documents a Lithuanian Mass notice at Immaculate Conception in 2009.",
+            "title": "Gavėnios susikaupimo popietės",
+            "url": "https://draugas.org/key/2009_reg/2009-03-25-DRAUGASo.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "chicago-immaculate-conception",
           "ministry": "Lithuanian Mass continues inside the merged Immaculate Conception and Five Holy Martyrs parish.",
           "nameEn": "Immaculate Conception Parish",
           "nameLt": "Čikagos Švč. Mergelės Marijos Nekaltojo Prasidėjimo parapija",
           "networkClass": "mass_continues",
           "officialSite": "https://immaculateconception-fiveholymartyrs.org",
+          "publicProfile": "/parishes/svc-m-marijos-nekalto-prasidejimo-chicago-il",
           "registrySlug": "immaculate-chicago-il",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11087,12 +11143,23 @@
           "address": "25335 W. Nine Mile Rd., Southfield, MI 48033",
           "city": "Southfield",
           "directoryType": "parish",
+          "draugasEvidence": {
+            "date": "2008-04-09",
+            "excerpt": "Galiausiai vieta buvo surasta Schaefer gatvėje, netoli Grand River.",
+            "page": "p. 5",
+            "publisher": "Draugas",
+            "supports": "Provides a historical account of the Detroit Lithuanian Catholic community's move to the former Schaefer Road site.",
+            "title": "Dievo Apvaizdos lietuvių parapijos šimtmetis (II dalis)",
+            "url": "https://draugas.org/key/2008_reg/2008-04-09-DRAUGASo.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "southfield-divine-providence",
           "ministry": "Active Lithuanian parish serving metropolitan Detroit. Fr. Tomas Miliauskas departed in May 2026; no successor has been named, and proposed archdiocesan restructuring could end weekend Mass.",
           "nameEn": "Divine Providence Parish",
           "nameLt": "Detroito Dievo Apvaizdos parapija",
           "networkClass": "active_parish",
           "officialSite": "https://www.divineprovidencechurch.com",
+          "publicProfile": "/parishes/dievo-apvaizdos-southfield-mi",
           "registrySlug": "providence-southfield-mi",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11103,12 +11170,23 @@
           "address": "1913 Wallace St., Philadelphia, PA 19130",
           "city": "Philadelphia",
           "directoryType": "parish",
+          "draugasEvidence": {
+            "date": "2008-02-23",
+            "excerpt": "Jeigu mes norime judėti į priekį, reikalinga, kad parapijiečiai gausiau ir entuziastingiau jungtųsi į parapijos gyvenimą.",
+            "page": "p. 3",
+            "publisher": "Draugas",
+            "supports": "Documents the 2008 community meeting and effort to sustain St. Andrew Parish.",
+            "title": "Rūpinamasi Šv. Andriejaus lietuvių parapijos išlikimu",
+            "url": "https://draugas.org/key/2008_reg/2008-02-23-DRAUGASo.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "philadelphia-st-andrew",
           "ministry": "Active Lithuanian parish; Sielovada lists Lithuanian Mass twice monthly.",
           "nameEn": "St. Andrew Church",
           "nameLt": "Filadelfijos Šv. Andriejaus parapija",
           "networkClass": "active_parish",
           "officialSite": "https://saintandrewlithuanianparish.org",
+          "publicProfile": "/parishes/sv-andriejaus-philadelphia-pa",
           "registrySlug": "andrew-philadelphia-pa",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11119,6 +11197,16 @@
           "address": "53 Capitol Ave., Hartford, CT 06106",
           "city": "Hartford",
           "directoryType": "parish",
+          "draugasEvidence": {
+            "date": "2017-11-30",
+            "excerpt": "Hartforde teaplankėme parapijos salę rūsyje.",
+            "page": "p. 4",
+            "publisher": "Draugas",
+            "supports": "Documents the expedition's direct visit to the Holy Trinity parish hall; it does not establish the community's current status.",
+            "title": "„Tikslas Amerika” stotelė — Connecticuto ir Rhode Island valstijose",
+            "url": "https://draugas.org/key/2017_reg/2017-11-30-DRAUGAS.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "hartford-holy-trinity",
           "ministry": "Regular Masses ended May 30, 2026. The community's preservation campaign continues.",
           "nameEn": "Holy Trinity Church",
@@ -11126,6 +11214,7 @@
           "networkClass": "directory_conflict",
           "note": "Directory membership is preserved as evidence, but it does not override the newer closure record.",
           "officialSite": "https://holytrinityhartford.org",
+          "publicProfile": "/parishes/svc-trejybes-hartford-ct",
           "registrySlug": "trinity-hartford-ct",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11138,12 +11227,23 @@
           "city": "Kennebunkport",
           "clergy": "Br. Jonas Bacevičius, OFM, superior",
           "directoryType": "religious_house",
+          "draugasEvidence": {
+            "date": "2015-10-15",
+            "excerpt": "Maino valstijoje, Kennebunkporto miestelyje ant vandenyno kranto yra įsikūręs lietuvių tėvų pranciškonų Šv. Antano vienuolynas.",
+            "page": "p. 4",
+            "publisher": "Draugas",
+            "supports": "Directly identifies and describes the Lithuanian Franciscan monastery at Kennebunkport.",
+            "title": "Po daugelio metų gimnazistai susitiko Maine",
+            "url": "https://draugas.org/key/2015_reg/2015-10-15-DRAUGAS.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "kennebunkport-st-anthony-friary",
           "ministry": "Lithuanian Franciscan religious house in the pastoral network; not a parish and never counted as one.",
           "nameEn": "St. Anthony Friary",
           "nameLt": "Kennebunkport Šv. Antano vienuolynas",
           "networkClass": "religious_house",
           "officialSite": "https://www.franciscanguesthouse.com",
+          "publicProfile": "/catholic-life/kennebunk-lithuanian-franciscan-friary",
           "sourceRefs": [
             "sielovada-north-america"
           ],
@@ -11154,12 +11254,23 @@
           "city": "Cleveland",
           "clergy": "Rev. Andrius Morkūnas, pastor",
           "directoryType": "parish",
+          "draugasEvidence": {
+            "date": "2010-06-05",
+            "excerpt": "Gegužės 22 d. šeštadienį, Clevelando Šv. Kazimiero parapijos didžiojoje salėje, Clevelando lietuviai atsisveikino...",
+            "page": "p. 14",
+            "publisher": "Draugas",
+            "supports": "Documents use of the newly constituted St. Casimir parish hall in 2010.",
+            "title": "Algirdas Mykolas Bielskus, 1920 IX 29–2010 V 19",
+            "url": "https://draugas.org/key/2010_reg/2010-06-05-DRAUGASo.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "cleveland-st-casimir",
           "ministry": "Active Lithuanian parish with Lithuanian and English worship.",
           "nameEn": "St. Casimir Church",
           "nameLt": "Klivlendo Šv. Kazimiero parapija",
           "networkClass": "active_parish",
           "officialSite": "http://www.saintcasimirparish.org",
+          "publicProfile": "/parishes/sv-kazimiero-cleveland-oh",
           "registrySlug": "casimir-cleveland-oh",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11171,12 +11282,23 @@
           "city": "Lemont",
           "clergy": "Kun. Artūras Sederevičius, SJ, chaplain",
           "directoryType": "mission",
+          "draugasEvidence": {
+            "date": "2015-01-13",
+            "excerpt": "Pasitarus su Čikagos arkivyskupija 1989 m. gruodžio 29 d. buvo nutarta steigti Pal. Jurgio Matulaičio misiją su visomis parapijinėmis teisėmis.",
+            "page": "p. 5",
+            "publisher": "Draugas",
+            "supports": "Provides the mission's establishment history and its relationship to the Archdiocese of Chicago.",
+            "title": "Minint Palaimintojo Jurgio Matulaičio misijos 25-metį",
+            "url": "https://draugas.org/key/2015_reg/2015-01-13-DRAUGAS.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "lemont-matulaitis-mission",
           "ministry": "Active Lithuanian Catholic mission inside the Lithuanian World Center.",
           "nameEn": "Blessed Jurgis Matulaitis Lithuanian Mission",
           "nameLt": "Lemonto Pal. Jurgio Matulaičio misija",
           "networkClass": "active_mission",
           "officialSite": "https://www.matulaitismission.com",
+          "publicProfile": "/parishes/pal-jurgio-matulaicio-misija-lemont-il",
           "registrySlug": "george-lemont-il",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11188,12 +11310,23 @@
           "city": "Los Angeles",
           "clergy": "Kun. Tomas Karanauskas, pastor",
           "directoryType": "parish",
+          "draugasEvidence": {
+            "date": "2008-02-27",
+            "excerpt": "Šv. Kazimiero parapijos vargonininkas, muzikas Viktoras Ralys pradėjo repetuoti su padidėjusiu parapijos choru.",
+            "page": "pp. 4, 8",
+            "publisher": "Draugas",
+            "supports": "Documents parish activity and preparations for the 2008 Šiluva observance.",
+            "title": "Los Angeles Šiluvos komiteto darbai įsibėgėja",
+            "url": "https://draugas.org/key/2008_reg/2008-02-27-DRAUGASo.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "los-angeles-st-casimir",
           "ministry": "Active Lithuanian parish with parish and cultural life.",
           "nameEn": "St. Casimir Parish",
           "nameLt": "Los Andželo Šv. Kazimiero parapija",
           "networkClass": "active_parish",
           "officialSite": "https://stcasimirchurchla.org",
+          "publicProfile": "/parishes/sv-kazimiero-los-angeles-ca",
           "registrySlug": "casimir-los-angeles-ca",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11205,6 +11338,16 @@
           "city": "Mundelein",
           "clergy": "Kun. Gediminas Keršys, Lithuanian chaplain",
           "directoryType": "mission",
+          "draugasEvidence": {
+            "date": "2014-04-15",
+            "excerpt": "2013 metų rudenį ... Čikagos kardinolas Francis George, OMI priėmė sprendimą įkurti Šiluvos Mergelės Marijos katalikų misiją ... Mundelein.",
+            "page": "p. 7",
+            "publisher": "Draugas",
+            "supports": "Documents the 2013 establishment of the mission and its Lithuanian worship in Mundelein.",
+            "title": "Šv. Velykas švęskime kartu",
+            "url": "https://draugas.org/key/2014_reg/2014-04-15-DRAUGAS.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "mundelein-our-lady-of-siluva-mission",
           "ministry": "Active Lithuanian Catholic mission with monthly Lithuanian Mass at Santa Maria del Popolo Church.",
           "nameEn": "Our Lady of Siluva Lithuanian Catholic Mission",
@@ -11212,6 +11355,7 @@
           "networkClass": "active_mission",
           "note": "Distinct mission established by Archdiocese of Chicago decree in December 2013; admitted to the canonical registry on 2026-08-02.",
           "officialSite": "https://www.facebook.com/waukeganbendruomene",
+          "publicProfile": "/parishes/our-lady-of-siluva-mission-mundelein-il",
           "registrySlug": "our-lady-of-siluva-mission-mundelein-il",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11222,12 +11366,23 @@
           "address": "101 Valley St., New Philadelphia, PA 17959",
           "city": "New Philadelphia",
           "directoryType": "parish",
+          "draugasEvidence": {
+            "date": "2013-02-12",
+            "excerpt": "...direktore buvo Holy Cross, New Philadelphia, Pennsylvania mokyklose.",
+            "page": "p. 11",
+            "publisher": "Draugas",
+            "supports": "Documents the historical Holy Cross school association; it does not establish present Lithuanian-language liturgy.",
+            "title": "Sesuo M. Adrian Urbanavicius, SSC — direktorė, mokytoja",
+            "url": "https://draugas.org/key/2013_reg/2013-02-12-DRAUGAS.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "new-philadelphia-holy-cross",
           "ministry": "Sielovada lists Mass only in English.",
           "nameEn": "Holy Cross Church",
           "nameLt": "Naujosios Filadelfijos Šv. Kryžiaus parapija",
           "networkClass": "no_lithuanian_liturgy",
           "note": "Not joined to the historical Sacred Heart registry row. The names and addresses differ, so the identity requires adjudication.",
+          "publicProfile": "/catholic-life/new-philadelphia-holy-cross",
           "sourceRefs": [
             "sielovada-north-america"
           ],
@@ -11238,12 +11393,23 @@
           "city": "Brooklyn",
           "clergy": "Kun. Valdemaras Lisovski, Lithuanian chaplain",
           "directoryType": "church",
+          "draugasEvidence": {
+            "date": "2019-03-30",
+            "excerpt": "Tai priklausys nuo mūsų aktyvumo, dalyvavimo lietuviškose Mišiose, parodymo, kad lietuviams svarbi ši vieta.",
+            "page": "pp. 1, 4",
+            "publisher": "Draugas",
+            "supports": "Documents the 2019 renovation, retained Lithuanian features, and the community's Lithuanian liturgy.",
+            "title": "Iškilmingai pašventinta atnaujinta Apreiškimo bažnyčia",
+            "url": "https://draugas.org/key/2019_reg/2019-03-30-DRAUGAS.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "brooklyn-annunciation",
           "ministry": "The Lithuanian parish institution merged in 2019; weekly Lithuanian Mass continues at Annunciation Church within the successor parish.",
           "nameEn": "Annunciation of the B.V.M. Church",
           "nameLt": "Niujorko Apreiškimo Mergelei Marijai bažnyčia",
           "networkClass": "mass_continues",
           "officialSite": "https://www.katalikai.nyc",
+          "publicProfile": "/parishes/svc-m-marijos-apreiskimo-brooklyn-ny",
           "registrySlug": "annunciation-brooklyn-ny",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11255,11 +11421,24 @@
           "city": "Maspeth",
           "clergy": "Kun. Valdemaras Lisovski, Lithuanian chaplain",
           "directoryType": "parish",
+          "draugasEvidence": {
+            "access": "subscriber",
+            "citation": "Draugas, 2026-06-11, Vol. CXVII Nr. 47, p. 3; web edition 2026-06-18",
+            "date": "2026-06-11",
+            "excerpt": "O Maspeth Kristaus Atsimainymo parapiją, atlaikiusią 2019 metų sujungimą, uždarymo laiškas pasiekė 2025 metais.",
+            "page": "p. 3",
+            "publisher": "Draugas",
+            "supports": "Reports that Transfiguration survived the 2019 merger, received a closure letter in 2025, and remained the subject of an unresolved dispute.",
+            "title": "Kam priklauso parapijos?",
+            "url": "https://www.draugas.org/key/2026_reg/2026-06-11-DRAUGAS.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "maspeth-transfiguration",
           "ministry": "Lithuanian parish life ended at this church in 2019; its Lithuanian Mass moved to Annunciation Church in Brooklyn.",
           "nameEn": "Transfiguration Church",
           "nameLt": "Niujorko Atsimainymo parapija",
           "networkClass": "no_lithuanian_liturgy",
+          "publicProfile": "/parishes/kristaus-atsimainymo-maspeth-ny",
           "registrySlug": "transfiguration-maspeth-ny",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11270,11 +11449,22 @@
           "address": "150 Varinna Dr., Rochester, NY 14618",
           "city": "Rochester",
           "directoryType": "mission_community",
+          "draugasEvidence": {
+            "date": "2011-01-20",
+            "excerpt": "...po šv. Mišių Our Lady of Lourdes bažnyčioje Šv. Jurgio parapijos parapijiečiai bei lietuvių bendruomenės nariai rinkosi...",
+            "page": "p. 2",
+            "publisher": "Draugas",
+            "supports": "Documents the St. George community worshiping at Our Lady of Lourdes by 2010–2011.",
+            "title": "Tradicinės Kūčios",
+            "url": "https://draugas.org/key/2011_reg/2011-01-20-DRAUGASo.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "rochester-st-george-mission",
           "ministry": "Lithuanian Mass continues as a mission community at Our Lady of Lourdes Church.",
           "nameEn": "St. George Lithuanian Mission Community",
           "nameLt": "Ročesterio Šv. Jurgio lietuvių katalikų misijinė bendruomenė",
           "networkClass": "mass_continues",
+          "publicProfile": "/parishes/sv-jurgio-rochester-ny",
           "registrySlug": "george-rochester-ny",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11285,12 +11475,23 @@
           "address": "1703 Jackson St., Scranton, PA 18504",
           "city": "Scranton",
           "directoryType": "parish",
+          "draugasEvidence": {
+            "date": "2024-01-20",
+            "excerpt": "Išgirdęs apie mūsų ekspediciją ir žemėlapį, kunigas pakvietė į zakristiją, parodė šimtametes lietuvių krikštų ir santuokų knygas.",
+            "page": "p. 11",
+            "publisher": "Draugas",
+            "supports": "Documents the Latin Mass community's 2024 use of the former Lithuanian church and the presence there at that time of historic Lithuanian baptismal and marriage registers.",
+            "title": "Pennsylvanija: lietuviškų vietų paslaptys",
+            "url": "https://draugas.org/key/2024_reg/2024-01-20-DRAUGASo.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "scranton-st-michael",
           "ministry": "Sielovada lists Mass in English and Latin, not Lithuanian.",
           "nameEn": "St. Michael's Lithuanian Church",
           "nameLt": "Skrantono Šv. Mykolo lietuvių parapija",
           "networkClass": "no_lithuanian_liturgy",
           "officialSite": "https://fsspscranton.wordpress.com",
+          "publicProfile": "/parishes/sv-mykolo-scranton-pa",
           "registrySlug": "michael-scranton-pa",
           "sourceRefs": [
             "sielovada-north-america"
@@ -11301,6 +11502,16 @@
           "address": "316 William St., Scranton, PA 18508",
           "city": "Scranton",
           "directoryType": "mission_community",
+          "draugasEvidence": {
+            "date": "2011-04-30",
+            "excerpt": "$5,351.77 – St. Joseph-St. Anthony/Holy Rosary Church, Scranton, PA.",
+            "page": "p. 16",
+            "publisher": "Draugas",
+            "supports": "Confirms the institutional name and records a 2011 charitable contribution; it does not establish current Lithuanian-language liturgy.",
+            "title": "Lietuvos Našlaičių Globos komiteto aukų ataskaita",
+            "url": "https://draugas.org/key/2011_reg/2011-04-30-DRAUGASo.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "scranton-holy-rosary",
           "ministry": "Sielovada lists Mass only in English.",
           "nameEn": "Holy Rosary Worship Site",
@@ -11308,6 +11519,7 @@
           "networkClass": "no_lithuanian_liturgy",
           "note": "Current pastoral-network record; no distinct canonical Lithuanian parish-registry match has been established.",
           "officialSite": "https://marymotherofgodparish.org",
+          "publicProfile": "/catholic-life/scranton-holy-rosary",
           "sourceRefs": [
             "sielovada-north-america"
           ],
@@ -11318,6 +11530,16 @@
           "canonicalEntityId": "cn:organization:washington-epiphany-lithuanian-community",
           "city": "Washington",
           "directoryType": "church",
+          "draugasEvidence": {
+            "date": "2008-11-20",
+            "excerpt": "Church of Epiphany bažnyčia, Georgetown, Washington, DC, kurioje vienąkart per mėnesį yra laikomos lietuviškos šv. Mišios.",
+            "page": "p. 2",
+            "publisher": "Draugas",
+            "supports": "Documents hosted monthly Lithuanian Mass at Epiphany Catholic Church in Washington.",
+            "title": "Pirmosios rudens Mišios Lietuvių misijoje",
+            "url": "https://draugas.org/key/2008_reg/2008-11-20-DRAUGASo.pdf"
+          },
+          "draugasReviewStatus": "page_context_verified",
           "id": "washington-epiphany",
           "ministry": "Lithuanian Mass is celebrated on the last Sunday of each month inside a territorial host parish.",
           "nameEn": "Epiphany Catholic Church",
@@ -11325,6 +11547,7 @@
           "networkClass": "mass_continues",
           "note": "Host church with Lithuanian ministry; not a Lithuanian ethnic parish.",
           "officialSite": "https://georgetownepiphany.org",
+          "publicProfile": "/catholic-life/washington-epiphany",
           "sourceRefs": [
             "sielovada-north-america"
           ],
@@ -11457,7 +11680,7 @@
     "source_assertion_id": "assert:pastoral-18:membership",
     "unit": "current Lithuanian Catholic parish, mission, or hosted pastoral community"
   },
-  "generated": "2026-08-14",
+  "generated": "2026-08-15",
   "institution_history": [
     {
       "building_fate": null,
@@ -19631,7 +19854,7 @@
       "unit": "distinct U.S. Roman Catholic parish institution"
     }
   },
-  "revision_id": "canonical-infographic-units-2026-08-14-continuity-taxonomy",
+  "revision_id": "canonical-infographic-units-2026-08-15-reviewed-draugas-sielovada-20",
   "schema": "culturenet-parish-infographic-projection.v1",
   "unit_contracts": [
     {

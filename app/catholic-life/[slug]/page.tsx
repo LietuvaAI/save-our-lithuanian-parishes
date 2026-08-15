@@ -1,23 +1,31 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
-  widerCatholicLifeBySlug,
-  widerCatholicLifeRecords,
-} from "@/lib/wider-catholic-life";
+  catholicLifeProfileBySlug,
+  catholicLifeProfileRecords,
+} from "@/lib/catholic-life-profiles";
 import { getWiderCatholicLifeEvidence } from "@/lib/wider-catholic-life-evidence";
+import { currentPastoralNetwork } from "@/lib/infographic-projection";
+import { getClearedPhoto } from "@/lib/photos";
+import {
+  finalizeProfileSources,
+  linkedProfileSources,
+} from "@/lib/profile-sources";
+import { ProfileSourceLedger } from "@/components/ProfileSourceLedger";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
-  return widerCatholicLifeRecords.map((record) => ({ slug: record.slug }));
+  return catholicLifeProfileRecords.map((record) => ({ slug: record.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const record = widerCatholicLifeBySlug.get(slug);
+  const record = catholicLifeProfileBySlug.get(slug);
   return record
     ? {
         title: record.nameEn,
@@ -28,12 +36,55 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function WiderCatholicLifePage({ params }: PageProps) {
   const { slug } = await params;
-  const record = widerCatholicLifeBySlug.get(slug);
+  const record = catholicLifeProfileBySlug.get(slug);
   if (!record) notFound();
-  const evidence = getWiderCatholicLifeEvidence(record.entityId);
+  const evidence = record.widerRecord
+    ? getWiderCatholicLifeEvidence(record.widerRecord.entityId)
+    : { sources: [], ministry: null };
   const currentExplanation = evidence.ministry
     ? `The sisters’ Putnam motherhouse and Immaculate Conception Center continue a ministry of ${evidence.ministry}.`
     : record.explanation;
+  const portrait = getClearedPhoto(record.portraitKey);
+  const directorySource = currentPastoralNetwork.directory.source;
+  const sources = finalizeProfileSources([
+    record.directoryEntry
+      ? linkedProfileSources(
+          [
+            {
+              title: String(directorySource.title),
+              publisher: String(directorySource.publisher),
+              date: String(directorySource.checked),
+              url: String(directorySource.url),
+              supports:
+                "Official Sielovada directory membership, name, address, and listed ministry",
+            },
+          ],
+          {
+            group: "current",
+            context: "Current pastoral-directory record",
+            fallbackTitle: "Sielovada directory",
+          },
+        )
+      : [],
+    record.directoryEntry
+      ? linkedProfileSources([record.directoryEntry.draugasEvidence], {
+          group: "newspaper",
+          context: "Reviewed Draugas evidence",
+          fallbackTitle: "Reviewed Draugas source",
+        })
+      : [],
+    linkedProfileSources(
+      evidence.sources.map((source) => ({
+        title: source.title,
+        url: source.url,
+      })),
+      {
+        group: "current",
+        context: "Canonical current-status evidence",
+        fallbackTitle: "Canonical source",
+      },
+    ),
+  ]);
 
   return (
     <article className="mx-auto max-w-3xl px-4 pb-16 pt-10">
@@ -46,6 +97,22 @@ export default async function WiderCatholicLifePage({ params }: PageProps) {
       <p className="mt-2 font-serif text-card-title text-muted">
         {record.nameEn}
       </p>
+
+      {portrait ? (
+        <figure className="mt-7 overflow-hidden border border-rule bg-band">
+          <Image
+            src={portrait.src}
+            alt={portrait.alt}
+            width={1200}
+            height={720}
+            className="h-auto w-full object-cover"
+            priority
+          />
+          <figcaption className="border-t border-rule px-3 py-2 text-ui-label text-muted">
+            {portrait.attribution}
+          </figcaption>
+        </figure>
+      ) : null}
 
       <dl className="mt-7 grid gap-4 border-y border-rule py-5 text-body-copy sm:grid-cols-2">
         <div>
@@ -101,6 +168,11 @@ export default async function WiderCatholicLifePage({ params }: PageProps) {
           Where it stands today
         </h2>
         <p className="mt-3 leading-relaxed">{currentExplanation}</p>
+        {record.identityNote ? (
+          <p className="mt-3 border-l-2 border-rule pl-4 text-small-copy leading-relaxed text-muted">
+            {record.identityNote}
+          </p>
+        ) : null}
         {record.latestDocumentedMass ? (
           <p className="mt-3 leading-relaxed">
             Latest Lithuanian Mass documented in the reviewed evidence: {" "}
@@ -110,38 +182,13 @@ export default async function WiderCatholicLifePage({ params }: PageProps) {
       </section>
 
       <aside className="mt-9 border-l-2 border-rule pl-4 text-small-copy leading-relaxed text-muted">
-        This record sits outside the 155-institution public census, the 137
-        Roman Catholic parish-and-mission histories, and the 14-place regular
-        current-worship network. It broadens the view of Lithuanian Catholic
-        life without changing those populations.
+        {record.populationNote}
       </aside>
 
-      <section className="mt-10" aria-labelledby="sources-heading">
-        <h2
-          id="sources-heading"
-          className="font-serif text-section-title font-semibold"
-        >
-          Sources
-        </h2>
-        <ul className="mt-3 divide-y divide-rule border-y border-rule">
-          {evidence.sources.map((source) => (
-            <li key={source.id} className="py-3">
-              <a
-                href={source.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium underline underline-offset-2 hover:text-accent"
-              >
-                {source.title} ↗
-              </a>
-            </li>
-          ))}
-        </ul>
-        <p className="mt-3 text-small-copy text-muted">
-          Current classification as of {record.observedAt}. The map marker uses
-          the verified street address.
-        </p>
-      </section>
+      <ProfileSourceLedger sources={sources} />
+      <p className="mt-3 text-small-copy text-muted">
+        Current classification as of {record.observedAt}.
+      </p>
 
       <nav className="mt-10 flex flex-wrap gap-x-5 gap-y-2 text-small-copy">
         <Link
@@ -150,6 +197,16 @@ export default async function WiderCatholicLifePage({ params }: PageProps) {
         >
           Lithuanian Catholic life today
         </Link>
+        {record.officialSite ? (
+          <a
+            href={record.officialSite}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 hover:text-accent"
+          >
+            Official website
+          </a>
+        ) : null}
         <Link
           href="/parishes"
           className="underline underline-offset-2 hover:text-accent"

@@ -245,6 +245,12 @@ export function ProfileSourceLedger({
                             </p>
                           )}
 
+                          {source.excerpt && (
+                            <blockquote className="mt-3 max-w-[48em] border-l-2 border-rule pl-3 font-serif text-body-copy leading-relaxed text-foreground">
+                              “{source.excerpt}”
+                            </blockquote>
+                          )}
+
                           {!source.url && (
                             <p className="mt-2 text-small-copy font-medium text-amber-700 dark:text-amber-400">
                               Public link not recorded:{" "}

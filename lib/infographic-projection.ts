@@ -44,6 +44,18 @@ export type InstitutionContinuationSummary = {
   source_assertion_id: string;
 };
 
+export type ReviewedDraugasEvidence = {
+  title: string;
+  publisher: "Draugas";
+  date: string;
+  page?: string;
+  citation?: string;
+  access?: "subscriber";
+  excerpt?: string;
+  supports: string;
+  url: string;
+};
+
 export type CurrentPastoralDirectoryEntry = {
   id: string;
   nameLt: string;
@@ -70,8 +82,13 @@ export type CurrentPastoralDirectoryEntry = {
   note?: string;
   registrySlug?: string | null;
   canonicalEntityId?: string | null;
+  publicProfile: string;
   officialSite?: string | null;
   sourceRefs: string[];
+  draugasEvidence: ReviewedDraugasEvidence;
+  draugasReviewStatus:
+    | "page_context_verified"
+    | "public_web_article_verified";
 };
 
 export type CanonicalGeo = {
@@ -305,6 +322,7 @@ type InfographicProjection = {
       counts: Record<string, number>;
       networkRevision: Record<string, unknown>;
       source: Record<string, unknown>;
+      draugasEvidenceRevision: string;
     };
   };
   wider_catholic_life: {

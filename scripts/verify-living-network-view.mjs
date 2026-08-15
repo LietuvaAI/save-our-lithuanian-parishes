@@ -9,6 +9,9 @@ const events = readJson("data/canonical-current-events-projection.json");
 const photos = readJson("data/photos.json").parishes;
 const viewSource = readText("lib/living-network-view.ts");
 const pageSource = readText("app/lithuanian-catholic-life-today/page.tsx");
+const profilePageSource = readText("app/parishes/[slug]/page.tsx");
+const catholicLifeProfileSource = readText("app/catholic-life/[slug]/page.tsx");
+const catholicLifeProjectionSource = readText("lib/catholic-life-profiles.ts");
 const mapSource = readText("components/LivingNetworkMap.tsx");
 const errors = [];
 
@@ -33,6 +36,30 @@ if (
   widerCount !== 3
 ) {
   errors.push("canonical Living Network population drifted");
+}
+
+const directoryProfiles = directory?.entries?.map((entry) => entry.publicProfile);
+if (
+  new Set(directoryProfiles).size !== 20 ||
+  directoryProfiles.filter((path) => path?.startsWith("/parishes/")).length !== 16 ||
+  directoryProfiles.filter((path) => path?.startsWith("/catholic-life/")).length !== 4
+) {
+  errors.push("all 20 Sielovada entries must resolve to 16 historical and 4 Catholic-life profiles");
+}
+
+const reviewedDraugas = directory?.entries?.filter(
+  (entry) =>
+    entry.draugasEvidence?.publisher === "Draugas" &&
+    /^https:\/\/(?:www\.)?draugas\.org\//.test(entry.draugasEvidence.url) &&
+    ["page_context_verified", "public_web_article_verified"].includes(
+      entry.draugasReviewStatus,
+    ),
+);
+if (
+  reviewedDraugas?.length !== 20 ||
+  directory?.draugasEvidenceRevision !== "draugas-sielovada-20-2026-08-15"
+) {
+  errors.push("reviewed Draugas evidence is incomplete for the 20 directory entries");
 }
 
 if (events.alerts?.length !== 10 || events.campaigns?.length !== 4) {
@@ -70,6 +97,22 @@ if (!pageSource.includes("getClearedPhoto")) {
   errors.push("Living Network page no longer enforces cleared image rights");
 }
 if (
+  !pageSource.includes("card.draugasEvidence") ||
+  !profilePageSource.includes("pastoralDirectoryEntry?.draugasEvidence") ||
+  !profilePageSource.includes("registrySourcesForProfile") ||
+  !profilePageSource.includes("core && !pastoralDirectoryEntry?.draugasEvidence")
+) {
+  errors.push("reviewed Draugas evidence does not replace weaker date-only sources on both public surfaces");
+}
+if (
+  !viewSource.includes("entry.publicProfile") ||
+  !catholicLifeProjectionSource.includes("directoryProfiles.length !== 4") ||
+  !catholicLifeProfileSource.includes("record.directoryEntry.draugasEvidence") ||
+  !catholicLifeProfileSource.includes("ProfileSourceLedger")
+) {
+  errors.push("the four non-census Sielovada profiles are not fully published from canon");
+}
+if (
   photos["our-lady-immaculate-conception-freeland-pa-line-drawing"]?.rights !==
     "own_work" ||
   !viewSource.includes("canonicalSubjectId")
@@ -85,5 +128,5 @@ if (errors.length) {
 }
 
 console.log(
-  "OK: Living Network reads current canon (14 regular places, 20 directory entries, 3 wider-life records, 10 current situations) and no design snapshots.",
+  "OK: Living Network reads current canon (14 regular places, 20 directory entries with 20 profiles, 3 wider-life records, 10 current situations) and no design snapshots.",
 );

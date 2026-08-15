@@ -19,6 +19,7 @@ export type ProfileSource = {
   additionalCitations: string[];
   url: string | null;
   contexts: string[];
+  excerpt?: string;
   missingLinkNote?: string;
 };
 
@@ -35,6 +36,8 @@ export type RegistryProfileSource = {
   last_mention?: string;
   total_mentions?: number;
   sourceUrl?: string;
+  excerpt?: string;
+  supports?: string;
 };
 
 export type LinkedProfileSource = {
@@ -42,6 +45,10 @@ export type LinkedProfileSource = {
   title?: string;
   publisher?: string;
   date?: string;
+  page?: string;
+  access?: "subscriber";
+  excerpt?: string;
+  supports?: string;
 };
 
 type SourceDraft = Omit<
@@ -153,11 +160,16 @@ function draugasSource(
   title = `Draugas issue, ${date}`,
   detail?: string,
   sourceUrl?: string,
+  excerpt?: string,
 ): SourceDraft {
-  const issueUrl =
+  const issueUrlBase =
     isAbsoluteWebUrl(sourceUrl) && sourceUrl.includes(date)
       ? sourceUrl
       : draugasCitationUrl(date);
+  const page = detail?.match(/\bp(?:p)?\.\s*(\d+)\b/i)?.[1];
+  const issueUrl = page
+    ? `${issueUrlBase.split("#")[0]}#page=${page}`
+    : issueUrlBase;
   return {
     group: "newspaper",
     title,
@@ -166,6 +178,7 @@ function draugasSource(
     citation: `Draugas, ${date}${detail ? `, ${detail}` : ""}`,
     url: issueUrl,
     contexts: [context],
+    excerpt,
   };
 }
 
@@ -241,10 +254,11 @@ export function registryProfileSources(
         drafts.push(
           draugasSource(
             citation.date,
-            "Modern Draugas case-file evidence",
-            undefined,
+            source.supports ?? "Modern Draugas case-file evidence",
+            source.work,
             citation.detail,
             source.sourceUrl,
+            source.excerpt,
           ),
         );
       }
@@ -346,16 +360,34 @@ export function linkedProfileSources(
   },
 ): ProfileSource[] {
   return finalizeProfileSources(
-    sources.map((source) => ({
-      group: options.group,
-      title: source.title || source.publisher || options.fallbackTitle,
-      publisher: source.publisher,
-      date: source.date,
-      citation: [source.publisher, source.date].filter(Boolean).join(", "),
-      url: isAbsoluteWebUrl(source.url) ? source.url : null,
-      contexts: [options.context],
-      missingLinkNote: "The source record does not include a public URL.",
-    })),
+    sources.map((source) => {
+      const isDraugas =
+        source.publisher?.toLowerCase() === "draugas" ||
+        /draugas\.org/i.test(source.url ?? "");
+      const page = source.page?.match(/\bp(?:p)?\.\s*(\d+)\b/i)?.[1];
+      const sourceUrl = isAbsoluteWebUrl(source.url) ? source.url : null;
+      return {
+        group: isDraugas ? "newspaper" : options.group,
+        title: source.title || source.publisher || options.fallbackTitle,
+        publisher: source.publisher,
+        date: source.date,
+        citation: [
+          source.publisher,
+          source.date,
+          source.page,
+          source.access === "subscriber" ? "subscriber archive" : null,
+        ]
+          .filter(Boolean)
+          .join(", "),
+        url:
+          isDraugas && sourceUrl && page
+            ? `${sourceUrl.split("#")[0]}#page=${page}`
+            : sourceUrl,
+        contexts: [source.supports ?? options.context],
+        excerpt: source.excerpt,
+        missingLinkNote: "The source record does not include a public URL.",
+      };
+    }),
   );
 }
 
@@ -406,9 +438,24 @@ export function projectProfileSource(
 export function finalizeProfileSources(
   groups: (ProfileSource | SourceDraft)[][] | (ProfileSource | SourceDraft)[],
 ): ProfileSource[] {
-  const flat = Array.isArray(groups[0])
+  const allSources = Array.isArray(groups[0])
     ? (groups as (ProfileSource | SourceDraft)[][]).flat()
     : (groups as (ProfileSource | SourceDraft)[]);
+  const flat = allSources.filter((source) => {
+    const isGenericDraugasIssue =
+      source.group === "newspaper" &&
+      source.publisher === "Draugas" &&
+      /^Draugas issue, /.test(source.title);
+    if (!isGenericDraugasIssue || !source.date) return true;
+    return !allSources.some(
+      (candidate) =>
+        candidate !== source &&
+        candidate.group === "newspaper" &&
+        candidate.publisher === "Draugas" &&
+        candidate.date === source.date &&
+        !/^Draugas issue, /.test(candidate.title),
+    );
+  });
   const merged = new Map<string, ProfileSource>();
 
   for (const [index, source] of flat.entries()) {
@@ -437,6 +484,9 @@ export function finalizeProfileSources(
       }
       if (!existing.date && source.date) {
         existing.date = source.date;
+      }
+      if (!existing.excerpt && source.excerpt) {
+        existing.excerpt = source.excerpt;
       }
       continue;
     }

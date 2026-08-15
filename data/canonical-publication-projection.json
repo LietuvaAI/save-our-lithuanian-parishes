@@ -15826,6 +15826,7 @@
             "nameLt": "Kennebunkport Šv. Antano vienuolynas",
             "networkClass": "religious_house",
             "officialSite": "https://www.franciscanguesthouse.com",
+            "publicProfile": "/catholic-life/kennebunk-lithuanian-franciscan-friary",
             "sourceRefs": [
               "sielovada-north-america"
             ],
@@ -15910,6 +15911,7 @@
             "nameLt": "Naujosios Filadelfijos Šv. Kryžiaus parapija",
             "networkClass": "no_lithuanian_liturgy",
             "note": "Not joined to the historical Sacred Heart registry row. The names and addresses differ, so the identity requires adjudication.",
+            "publicProfile": "/catholic-life/new-philadelphia-holy-cross",
             "sourceRefs": [
               "sielovada-north-america"
             ],
@@ -15990,6 +15992,7 @@
             "networkClass": "no_lithuanian_liturgy",
             "note": "Current pastoral-network record; no distinct canonical Lithuanian parish-registry match has been established.",
             "officialSite": "https://marymotherofgodparish.org",
+            "publicProfile": "/catholic-life/scranton-holy-rosary",
             "sourceRefs": [
               "sielovada-north-america"
             ],
@@ -16007,6 +16010,7 @@
             "networkClass": "mass_continues",
             "note": "Host church with Lithuanian ministry; not a Lithuanian ethnic parish.",
             "officialSite": "https://georgetownepiphany.org",
+            "publicProfile": "/catholic-life/washington-epiphany",
             "sourceRefs": [
               "sielovada-north-america"
             ],
@@ -24535,7 +24539,7 @@
       "slug": "robert-damyanovich"
     }
   ],
-  "content_hash": "sha256:b5d41cca3e374bc139673605a40eeb4fa4e3cc6cc86b5bb7cb9f7c9451e33667",
+  "content_hash": "sha256:a7db4124a61d79806b74cdcb583a91738b386d049b1e43096107c590513d64e2",
   "counts": {
     "by_institution_class": {
       "independent_catholic": 4,
