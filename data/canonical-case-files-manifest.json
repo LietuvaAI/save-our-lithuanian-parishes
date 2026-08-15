@@ -1225,9 +1225,9 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-mykolo-scranton-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-mykolo-scranton-pa.json",
-      "content_sha256": "8e2dc9db0baf9657a6b85ef9bce2ba47795b2b6b5d38a6c7cbf5a0ad14b2e313",
+      "content_sha256": "30347ffee8b1bc15826368754b6f29355a51f90794e51f634914fefe7a60c054",
       "source_record_slug": "sv-mykolo-scranton-pa",
-      "as_of": "2026-08-02",
+      "as_of": "2026-08-14",
       "registry_slugs": [
         "michael-scranton-pa"
       ],

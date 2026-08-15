@@ -1,6 +1,6 @@
 {
   "schema": "culturenet-parish-current-events-projection.v1",
-  "revision_id": "parish-current-events-2026-08-08",
+  "revision_id": "parish-current-events-2026-08-14",
   "authority": {
     "repository": "LietuvaAI/culturenet-brain",
     "source_path": "docs/research/parish-canon/current-events/source.json",
@@ -8,7 +8,7 @@
     "infographic_projection_revision": "canonical-infographic-units-2026-08-14-continuity-taxonomy"
   },
   "scope": "parish-watch-current-events",
-  "snapshot": "2026-08-08",
+  "snapshot": "2026-08-14",
   "provenance": "Brain-owned reviewed current-event assertions for the public site. Every factual claim is keyed to a canonical institution or site and supported by the cited evidence. The site consumes only the generated public projection.",
   "counts": {
     "alerts": 10,
@@ -216,12 +216,12 @@
       "entity": "St. Michael (Šv. Mykolo)",
       "place": "Scranton, Pennsylvania",
       "diocese": "Diocese of Scranton",
-      "dateObserved": "2026-08-06",
-      "eventDate": "2026-05",
+      "dateObserved": "2026-08-14",
+      "eventDate": "2026-08-11",
       "subjectUnit": "building_site",
       "canonicalSubjectId": "cn:building_site:st-michael-jackson-street-scranton-pa",
       "relatedInstitutionId": "cn:institution:st-michael-archangel-scranton-pa",
-      "whatChanged": "The parish relocated to St. Lucy Church in September 2025 and continues there; its original 1942 building at 1703 Jackson Street has been on the commercial market since spring 2026, listed at $350,000.",
+      "whatChanged": "The parish relocated to Saint Lucy Church in September 2025 and continues there. The $350,000 commercial listing for its original 1942 building at 1703 Jackson Street was marked Pending as of August 11, 2026; a completed sale, buyer, and closing price are not yet established.",
       "parishLink": "/parishes/sv-mykolo-scranton-pa",
       "sources": [
         {
@@ -1317,5 +1317,5 @@
       "canonicalEntityId": "cn:institution:blessed-jurgis-matulaitis-mission-lemont-il"
     }
   ],
-  "content_hash": "sha256:56b4ebd972e71352bdeb1e822144ba67a85ae895304704450e75ac665ebb5cc5"
+  "content_hash": "sha256:ca7d3592a6d015a3cba3a2e31c2fd48a9ebeec7fb3b607bb5deeea076905f3ff"
 }

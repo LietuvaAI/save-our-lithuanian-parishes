@@ -1,8 +1,8 @@
 {
   "slug": "sv-mykolo-scranton-pa",
-  "asOf": "2026-08-02",
+  "asOf": "2026-08-14",
   "buildingStatus": "for-sale",
-  "currentUse": "Vacant former church and rectory at 1703 Jackson Street, actively listed for commercial sale; the St. Michael the Archangel parish community (FSSP Latin Mass) that occupied it now worships at St. Lucy's Church, 949 Scranton St.",
+  "currentUse": "Vacant former church and rectory at 1703 Jackson Street; the $350,000 commercial listing was marked pending as of August 11, 2026. The St. Michael the Archangel parish community (FSSP Latin Mass) that occupied it now worships at St. Lucy's Church, 949 Scranton St.",
   "historicalNarrative": [
     {
       "text": "Saint Michael the Archangel Parish was founded in Scranton's Hyde Park neighborhood in 1914 for Lithuanian Catholics. Father Adomas Lopata served as its first pastor, and the new parish initially worshipped in a modest wooden church.",
@@ -48,7 +48,7 @@
     "formerSite": {
       "label": "Former Lithuanian church",
       "value": "Saint Michael Church, 1703 Jackson Street",
-      "detail": "Brick replacement church built in 1942 · standing, vacant, and listed for sale after the final Mass on 28 Sep 2025",
+      "detail": "Brick replacement church built in 1942 · standing and vacant; $350,000 commercial listing marked pending as of 11 Aug 2026",
       "href": "https://www.lewith-freeman.com/p/1703-Jackson-Street-Scranton-PA-18504/dmgid_186324175"
     },
     "liturgy": {
@@ -57,7 +57,7 @@
       "href": "https://fsspscranton.wordpress.com/mass-devotions/"
     }
   },
-  "summary": "Saint Michael the Archangel Parish survives as an FSSP Latin Mass personal parish at Saint Lucy Church, where it relocated on September 28, 2025. The former Lithuanian church and rectory at 1703 Jackson Street remain standing but vacant and were listed for commercial sale at $350,000 as of July 16, 2026. No regular Lithuanian Mass is documented at the continuing parish.",
+  "summary": "Saint Michael the Archangel Parish survives as an FSSP Latin Mass personal parish at Saint Lucy Church, where it relocated on September 28, 2025. The former Lithuanian church and rectory at 1703 Jackson Street remain standing and vacant; their $350,000 commercial listing was marked pending as of August 11, 2026. No completed sale, buyer, or closing price is yet established. No regular Lithuanian Mass is documented at the continuing parish.",
   "developments": [
     {
       "date": "2025-09-28",
@@ -80,13 +80,13 @@
     },
     {
       "date": "2026",
-      "headline": "Former church and rectory at 1703 Jackson Street listed for sale at $350,000",
-      "detail": "The vacated property is an active commercial listing (MLS SC261850): a 4,468 sq ft brick church described as having 'a stunning sanctuary' and built in 1942, a 2,069 sq ft rectory, and a private parking lot across the street, totaling 6,537 sq ft on 0.43 acres. It is marketed as an opportunity for religious organizations, non-profits, businesses, or developers. Listing shown by Lewith & Freeman; 78 days on site as of the July 16, 2026 update, implying a spring 2026 listing date.",
+      "headline": "Commercial listing for former church and rectory marked pending at $350,000",
+      "detail": "The vacated property is listed as MLS SC261850: a 4,468 sq ft brick church built in 1942, a 2,069 sq ft rectory, and a private parking lot across the street, totaling 6,537 sq ft on 0.43 acres. The listing was marked Pending at the unchanged $350,000 asking price and showed 104 days on site when its page was last changed on August 11, 2026. Pending status does not establish a completed sale; no buyer or closing price is publicly confirmed.",
       "sources": [
         {
           "title": "1703 Jackson Street, Scranton, PA 18504 — Commercial listing",
           "publisher": "Lewith & Freeman Real Estate",
-          "date": "2026-07-16 (listing update)",
+          "date": "2026-08-11 (listing last changed; accessed 2026-08-14)",
           "url": "https://www.lewith-freeman.com/p/1703-Jackson-Street-Scranton-PA-18504/dmgid_186324175"
         }
       ]
@@ -131,9 +131,9 @@
       "url": "https://fsspscranton.wordpress.com/mass-devotions/"
     },
     {
-      "title": "1703 Jackson Street, Scranton, PA 18504 — Commercial listing (MLS SC261850)",
+      "title": "1703 Jackson Street, Scranton, PA 18504 — Pending commercial listing (MLS SC261850)",
       "publisher": "Lewith & Freeman Real Estate",
-      "date": "2026-07-16 (listing update)",
+      "date": "2026-08-11 (listing last changed; accessed 2026-08-14)",
       "url": "https://www.lewith-freeman.com/p/1703-Jackson-Street-Scranton-PA-18504/dmgid_186324175"
     },
     {
@@ -153,6 +153,6 @@
     }
   ],
   "confidence": "verified",
-  "conflictsWithArchiveRecord": "The 1977 published parish history resolves the earlier conflict: Saint Michael's Lithuanian parish was established in 1914, first used a modest wooden church, and replaced it with the brick church in 1942. The parish institution later survived the end of regular Lithuanian parish life, became the home of the Latin Mass community in the late 1990s, and relocated to Saint Lucy Church in 2025. The institution therefore survives, while the 1942 Lithuanian-built church is vacant and for sale.",
-  "gaps": "The later physical disposition of the original wooden church is not established by the supplied pages. The precise date when regular Lithuanian parish life ended and the Latin Mass community assumed the parish remains bounded to the late 1990s. No sale of the 1942 Jackson Street church has closed, so there is no confirmed buyer or sale price beyond the active $350,000 asking price. The fate of its Lithuanian-inscribed stained glass in any future sale is unknown. The public Žiburio archive item URL for the 1977 book scans remains to be added when supplied by Vilija."
+  "conflictsWithArchiveRecord": "The 1977 published parish history resolves the earlier conflict: Saint Michael's Lithuanian parish was established in 1914, first used a modest wooden church, and replaced it with the brick church in 1942. The parish institution later survived the end of regular Lithuanian parish life, became the home of the Latin Mass community in the late 1990s, and relocated to Saint Lucy Church in 2025. The institution therefore survives, while the 1942 Lithuanian-built church is vacant and its commercial listing is pending.",
+  "gaps": "The later physical disposition of the original wooden church is not established by the supplied pages. The precise date when regular Lithuanian parish life ended and the Latin Mass community assumed the parish remains bounded to the late 1990s. The $350,000 commercial listing for the 1942 Jackson Street church is marked Pending, but no completed sale, buyer, or closing price is publicly confirmed. The fate of its Lithuanian-inscribed stained glass in any future sale is unknown."
 }
