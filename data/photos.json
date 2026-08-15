@@ -1205,6 +1205,24 @@
       "rights": "public_domain",
       "rightsNote": "Vilija confirmed the source image's public-domain provenance on 2026-08-02. Newark Religion identifies the online copy as 'Photo from Alberto Valdes' but does not provide the underlying postcard date or an open license; the public-domain determination rests on the separately confirmed provenance. This line-art adaptation is published under CC BY 4.0.",
       "evidenceUrl": "https://newarkreligion.com/photos/displayimage.php?album=202&pid=2287"
+    },
+    "our-lady-immaculate-conception-freeland-pa-line-drawing": {
+      "src": "/images/parishes/freeland-our-lady-immaculate-conception-line-drawing.png",
+      "alt": "Line drawing of Our Lady of the Immaculate Conception church in Freeland, Pennsylvania.",
+      "attribution": "AI-assisted original architectural line drawing by Save Our Lithuanian Parishes, based on the current church exterior documented by the History of Freeland project.",
+      "license": "Save Our Lithuanian Parishes original illustration",
+      "rights": "own_work",
+      "rightsNote": "Created by Save Our Lithuanian Parishes on 2026-08-14 from the public-facing exterior architecture of the 1967 former St. Ann church at 820 Centre Street, now Our Lady of the Immaculate Conception. The illustration records the building form without redistributing the source photograph.",
+      "evidenceUrl": "https://www.contrib.andrew.cmu.edu/~ct0u/stanns.html"
+    },
+    "sv-mykolo-scranton-pa-line-drawing": {
+      "src": "/images/parishes/scranton-st-michael-jackson-street-line-drawing.png",
+      "alt": "Line drawing of the former St. Michael Lithuanian church on Jackson Street in Scranton, Pennsylvania.",
+      "attribution": "AI-assisted original architectural line drawing by Save Our Lithuanian Parishes, based on the Jackson Street church exterior documented by Global True Lithuania.",
+      "license": "Save Our Lithuanian Parishes original illustration",
+      "rights": "own_work",
+      "rightsNote": "Created by Save Our Lithuanian Parishes on 2026-08-14 from the public-facing exterior architecture of the 1942 St. Michael church at 1703 Jackson Street. The illustration records the building form in a new composition without redistributing the source photograph or its watermark.",
+      "evidenceUrl": "https://global.truelithuania.com/northern-coal-region-scranton-1614/"
     }
   },
   "_registryNotes": {
