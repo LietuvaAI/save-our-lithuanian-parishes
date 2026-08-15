@@ -60,6 +60,30 @@ sentence.
 - Reader-friendly language never authorizes changing canonical counts,
   classifications, or protected campaign facts.
 
+## Cut, don't restyle — and let sources carry the text
+
+Vilija's rule (2026-08-15), for The Hearth and this site, everything except her
+signed essays: the record speaks on its own. Facts, sources, links —
+administrative prose. No color, no editorial verdicts, no reader instruction
+("read together, and…"), no rhetorical setups ("One might think…"), no
+metaphor carrying an argument, no closing flourish.
+
+Two practices follow, and both are measured, not stylistic preference:
+
+1. **Delete framing rather than rewriting it.** Re-voicing machine prose in a
+   plainer style produces different machine prose. Deleting the framing
+   sentence outright and letting the dated fact stand is what changes a text.
+2. **Prefer the source's own words to a summary.** The strongest paragraphs
+   are quotation, date, figure, and named source. When a status or summary
+   paragraph is needed, build it from the documents themselves — the
+   bulletin's printed assurances, the bishop's letter, the council member's
+   statement — rather than paraphrase.
+
+Measured effect (Pangram 4.0, 2026-08-15): dispatches edited by deletion moved
+from 88% to 50% machine-attributed, and two others to 29% and 28%; a page left
+in plain administrative summary but not rebuilt from sources stayed at 93%.
+Plain tone alone changes nothing; provenance density does.
+
 ## Where process language belongs
 
 Research methods, source depth, canonical projections, registry revisions, and
