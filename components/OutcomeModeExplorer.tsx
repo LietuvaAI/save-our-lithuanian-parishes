@@ -18,8 +18,6 @@ export default function OutcomeModeExplorer({
   standingSiteCount,
   listedSiteCount,
   unestablishedSiteCount,
-  revision,
-  generated,
   initialMode,
   institutionView,
   buildingView,
@@ -36,8 +34,6 @@ export default function OutcomeModeExplorer({
   standingSiteCount: number;
   listedSiteCount: number;
   unestablishedSiteCount: number;
-  revision: string;
-  generated: string;
   initialMode: Mode;
   institutionView: ReactNode;
   buildingView: ReactNode;
@@ -111,14 +107,11 @@ export default function OutcomeModeExplorer({
             Every row is one physical church or worship site. A parish or
             mission may have used several buildings, and one building may have
             served more than one congregation. Building conditions come only
-            from canonical site assertions; &ldquo;not yet established&rdquo; is
+            from documented site evidence; &ldquo;not yet established&rdquo; is
             a research gap, not an outcome. Switch to Parishes &amp; missions
             to follow each institution once.
           </p>
         )}
-        <p className="mt-1.5 max-w-[90ch] text-support-copy leading-relaxed text-muted">
-          Canonical projection {revision}, generated {generated}.
-        </p>
       </section>
 
       <div className="mt-5 flex flex-wrap items-end justify-between gap-3">

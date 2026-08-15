@@ -164,7 +164,7 @@ export default function PennsylvaniaCoalRegionPage() {
         </h2>
         <p className="mt-2 max-w-3xl text-body-copy leading-relaxed text-muted">
           Each label describes the Lithuanian institution&rsquo;s present
-          canonical status. Open a profile for its history, sources,
+          recorded institutional status. Open a profile for its history, sources,
           continuation relationships, and recorded worship sites.
         </p>
         <ul className="mt-5 grid gap-x-8 md:grid-cols-2">

@@ -60,9 +60,8 @@ export default function HistoryPage() {
           reached its height, and contracted.
         </p>
         <p className="mt-3 font-sans text-support-copy text-muted">
-          Parish-only history: missions and physical church sites are counted
-          in their own canonical populations. Every figure below is derived
-          from projection <span className="font-mono">{historyProjection.revision}</span>.
+          This history follows {counts.total} Roman Catholic parishes. Missions
+          and individual church buildings are presented separately.
         </p>
       </header>
 
@@ -104,18 +103,14 @@ export default function HistoryPage() {
             <p>
               The regional comparison makes the later pattern visible. Of the
               {` ${counts.coalRegion.diocese_owned} `}diocese-owned parish
-              institutions in the canonical northeastern Pennsylvania coal-region
-              set, {counts.coalRegion.diocese_ended} ended; three remain in other
-              documented outcomes. The set&rsquo;s one community-owned comparison
-              remains standing.
+              institutions in this northeastern Pennsylvania coal-region
+              comparison, {counts.coalRegion.diocese_ended} ended; three remain
+              in other documented outcomes. The set&rsquo;s one community-owned
+              comparison remains standing.
             </p>
             <Link href={`/parishes/${shenandoahSlug}`} className="inline-block font-sans text-body-copy font-semibold underline hover:text-accent">
               Read the St. George parish history and its cited evidence
             </Link>
-            <p className="border-t border-rule pt-3 font-sans text-small-copy text-muted">
-              Source image: Jonas Žilius, <em>Lietuviai Amerikoj</em> (1899),
-              public domain.
-            </p>
           </div>
         </div>
       </section>
@@ -177,8 +172,9 @@ export default function HistoryPage() {
           founding years cannot enter the curve; {counts.formalClosureUndated} formal
           closures have no dated position. The {counts.datedEndingsOutsideCurve} dated
           ending events attached to records without a dated foundation remain visible
-          as events but do not change the curve. Current canonical status is shown on
-          parish profiles and the Parish &amp; Mission Status view.
+          as events but do not change the curve. Each parish&rsquo;s current
+          status is shown on parish profiles and the Parish &amp; Mission Status
+          view.
         </p>
       </section>
 

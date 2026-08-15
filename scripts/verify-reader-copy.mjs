@@ -31,6 +31,12 @@ const processFirstPhrases = [
   "registry revision",
   "situations the project is tracking",
   "this project documents their situations",
+  "canonical projection {revision}",
+  "every line and figure derives from the canonical culturenet projection",
+  "every figure below is derived from projection",
+  "compiled {db.generated} from the parish-preservation research record",
+  "basic profile — evidence remains limited",
+  "source image: jonas žilius",
 ];
 
 const errors = [];

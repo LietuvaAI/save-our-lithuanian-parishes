@@ -118,7 +118,7 @@ export default function SourcesAndArchivesPage() {
               Books, heritage surveys, encyclopedias, and community histories
               supply context, identity leads, architectural detail, and
               competing readings. Important claims are cross-checked before
-              they become canonical data.
+              they enter the published record.
             </p>
           </div>
           <div className="py-4">
@@ -127,7 +127,7 @@ export default function SourcesAndArchivesPage() {
               Directories help locate parishes, clergy, organizations, and
               possible continuities. They are excellent discovery
               infrastructure, but an identity match is verified before it
-              changes the registry.
+              changes a published parish record.
             </p>
           </div>
         </div>

@@ -8,7 +8,6 @@ import ParishThreads, {
 } from "@/components/ParishThreads";
 import {
   additionalCurrentHostedCommunities,
-  canonicalInfographics,
   currentPastoralNetwork,
   infographicCounts,
   romanCatholicInstitutionHistory,
@@ -91,15 +90,6 @@ export default async function ParishOutcomeFlowPage({
   // population, so the two figures never agree and must not be summed from the
   // bands on this page.
   const currentWorshipPlaces = currentPastoralNetwork.members.length;
-  const generated = new Date(
-    `${canonicalInfographics.generated}T00:00:00Z`,
-  ).toLocaleDateString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-    timeZone: "UTC",
-  });
-
   if (
     threads.length !==
     romanCatholicParishHistory.length + romanCatholicMissionHistory.length
@@ -132,8 +122,6 @@ export default async function ParishOutcomeFlowPage({
         unestablishedSiteCount={
           physicalSiteOutcomeProjection.stateCounts.not_established ?? 0
         }
-        revision={canonicalInfographics.revision_id}
-        generated={generated}
         initialMode={initialMode}
         institutionView={
           <ParishThreads
@@ -156,7 +144,6 @@ export default async function ParishOutcomeFlowPage({
       />
 
       <p className="mt-8 border-t border-rule pt-4 text-small-copy leading-relaxed text-muted">
-        Every line and figure derives from the canonical CultureNet projection.
         Institution lines begin at the institution&rsquo;s own founding year;
         building rows begin with the first documented use of the physical site.
         Open a line or row for the related profile and its evidence. See{" "}
