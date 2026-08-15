@@ -115,7 +115,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${timelineMono.variable} ${serifDisplay.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <header className="border-b-[3px] border-transparent [border-image:linear-gradient(to_right,#f5b500_33.4%,#00694d_33.4%,#00694d_66.7%,#a72c2c_66.7%)_1]">
+        <header className="border-b-[3px] border-transparent bg-[var(--site-shell-background)] [border-image:linear-gradient(to_right,#f5b500_33.4%,#00694d_33.4%,#00694d_66.7%,#a72c2c_66.7%)_1]">
           <div className="mx-auto flex max-w-6xl flex-wrap items-baseline gap-x-5 gap-y-1.5 px-4 py-3.5">
             <Link href="/" className="shrink-0 whitespace-nowrap font-serif text-site-wordmark font-medium uppercase tracking-[0.09em] text-foreground">
               Save Our Lithuanian Parishes
@@ -179,7 +179,7 @@ export default function RootLayout({
           </div>
         </header>
         <main className="flex-1">{children}</main>
-        <footer className="mt-10 border-t border-foreground bg-[#faf7f1]">
+        <footer className="mt-10 border-t border-foreground bg-[var(--site-shell-background)]">
           <div className="mx-auto max-w-6xl px-4 py-[22px] text-small-copy leading-[1.6] text-muted">
             <p className="font-serif text-site-footer-brand font-medium uppercase tracking-[0.09em] text-foreground">
               Save Our Lithuanian Parishes

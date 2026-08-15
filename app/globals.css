@@ -3,8 +3,11 @@
 
 :root {
   --background: #fffdf9;
+  --site-shell-background: #faf7f1;
   --foreground: #1c1917;
-  --muted: #78716c;
+  /* Secondary editorial copy. Dark enough to remain comfortably readable on
+     the warm paper background without competing with the primary ink. */
+  --muted: #68615c;
   --rule: #e7e5e4;
   --band: #f3eee2;
   /* Editorial links and interactive emphasis. Red remains reserved for loss,
@@ -70,7 +73,7 @@
   --text-ui-label--line-height: 1.25;
 
   /* Homepage + shared shell values from the 2026-08-15 design reference. */
-  --text-site-wordmark: 13px;
+  --text-site-wordmark: 15px;
   --text-site-wordmark--line-height: 1.2;
   --text-site-nav: 10.5px;
   --text-site-nav--line-height: 1.2;
@@ -106,6 +109,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #131110;
+    --site-shell-background: #1a1715;
     --foreground: #e7e5e4;
     --muted: #a8a29e;
     --rule: #292524;
@@ -126,10 +130,29 @@
   }
 }
 
+/* The homepage map key carries a large amount of compact explanatory copy.
+   Give that panel a slightly stronger secondary ink while leaving the
+   canonical unverified-status swatch on --es-unverified. */
+.map-key {
+  --muted: #57534e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .map-key {
+    --muted: #b8b2ae;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* The homepage ends with its Židinys signup, so the shared footer should form
+   the next visual band without adding the generic inter-page margin. */
+main:has(> .home-page) + footer {
+  margin-top: 0;
 }
 
 @layer components {

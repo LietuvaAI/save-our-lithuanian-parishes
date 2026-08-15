@@ -965,7 +965,7 @@ export default function ParishMap() {
           </div>
 
           <aside
-            className="order-1 border-b border-rule px-3 py-3 sm:px-4 lg:order-2 lg:border-b-0 lg:border-l"
+            className="map-key order-1 border-b border-rule px-3 py-3 sm:px-4 lg:order-2 lg:border-b-0 lg:border-l"
             aria-label="Map key and filters"
           >
             <div className="flex items-center justify-between gap-2">
@@ -1191,7 +1191,7 @@ export default function ParishMap() {
                     mode: "unknown",
                     label: GROUP_LABEL.unverified,
                     description: GROUP_DESCRIPTION.unverified,
-                    fill: "var(--muted)",
+                    fill: "var(--es-unverified)",
                     count: statusCounts.unknown,
                   },
                 ] satisfies {
