@@ -114,9 +114,7 @@ export default function HistoryPage() {
             </Link>
             <p className="border-t border-rule pt-3 font-sans text-small-copy text-muted">
               Source image: Jonas Žilius, <em>Lietuviai Amerikoj</em> (1899),
-              public domain. Regional figures and parish dates follow the
-              canonical projection; detailed evidence remains attached to each
-              parish profile.
+              public domain.
             </p>
           </div>
         </div>
