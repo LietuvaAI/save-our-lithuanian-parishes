@@ -1,6 +1,6 @@
 ---
 title: "The Numbers Behind Divine Providence"
-subtitle: "Across all 209 Archdiocese of Detroit parishes, one small Lithuanian parish inverts every assumption — bottom on scale, top 5% on resource depth, already back in the black."
+subtitle: "Across all 209 Archdiocese of Detroit parishes: near the bottom by scale, in the top 5% by savings per attendee, and back in surplus this year."
 date: 2026-07-15
 substackUrl: https://blog.saveourlithuanianparishes.org/p/the-numbers-behind-divine-providence
 archivedAt: 2026-08-15

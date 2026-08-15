@@ -1,6 +1,6 @@
 ---
 title: "Fifteen Months: The Closing of Švč. Trejybės (Holy Trinity) in Hartford"
-subtitle: "In February 2025 the parish bulletin printed an assurance that Masses would continue as usual. On May 30, 2026, they ended for good. The fight now is for the building."
+subtitle: "In February 2025 the parish bulletin printed an assurance that Masses would continue as usual. On May 30, 2026, the regular Masses ended. The fight now is for the building."
 date: 2026-07-27
 substackUrl: https://blog.saveourlithuanianparishes.org/p/fifteen-months-the-closing-of-svc
 archivedAt: 2026-08-15

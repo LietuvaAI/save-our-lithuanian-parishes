@@ -1,6 +1,6 @@
 ---
 title: "The Parish Brings Christ"
-subtitle: "In 1978, the pastor of Divine Providence wrote about what a parish is. Nearly fifty years later, his words read like a letter to the parishes of 2026."
+subtitle: "In 1978, the pastor of Divine Providence wrote about what a parish is. Excerpts from the parish’s five-year anniversary book."
 date: 2026-07-16
 substackUrl: https://blog.saveourlithuanianparishes.org/p/the-parish-brings-christ
 archivedAt: 2026-08-15
