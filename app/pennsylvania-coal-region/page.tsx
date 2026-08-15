@@ -129,23 +129,46 @@ export default function PennsylvaniaCoalRegionPage() {
         </figure>
         <div className="space-y-4 font-serif text-lead-copy leading-[1.7]">
           <p>
-            Pennsylvania contains {historyCounts.pennsylvania} of the{" "}
-            {historyCounts.total} documented Roman Catholic Lithuanian
-            parishes. The earliest dated foundations in the state appear at
-            Mount Carmel in 1886, Plymouth and Mahanoy City in 1888, and
-            Pittston in 1890.
+            Pennsylvania stands at the beginning of America&rsquo;s Lithuanian
+            parish history. Of the {historyCounts.total} documented Roman
+            Catholic Lithuanian parishes founded across the United States,{" "}
+            {historyCounts.pennsylvania} were in Pennsylvania&mdash;more than
+            one out of every three.
+          </p>
+          <p>
+            The first dated Pennsylvania foundations appeared in the coal
+            region during the late nineteenth century: Holy Cross in Mount
+            Carmel in 1886, St. Casimir in Plymouth and St. Joseph in Mahanoy
+            City in 1888, and St. Casimir in Pittston in 1890. Together, these
+            parishes show how quickly Lithuanian Catholic life took root across
+            a chain of mining towns rather than in a single city.
           </p>
           <p>
             St. George in Shenandoah followed in 1891. Its Lithuanian church
-            was dedicated in 1893, and the parish became a central symbol of
-            the first large Lithuanian settlement in the United States. The
-            parish closed in 2006; the church was demolished in 2009.
+            was dedicated two years later, in 1893. The parish became a central
+            institution in Shenandoah, one of the first major Lithuanian
+            settlements in the United States, and its twin-spired church gave
+            the community a prominent landmark.
           </p>
           <p>
-            Northeastern Pennsylvania became the country&rsquo;s densest early
-            concentration of Lithuanian parish life. The complete comparison
-            below shows how those institutions began and where each stands
-            today.
+            That history did not end because the building simply outlived its
+            congregation. St. George parish closed in 2006, after parishioners
+            had worked to preserve it; the church itself was demolished in
+            2009. Its story introduces the larger pattern seen throughout the
+            region: long-established Lithuanian parishes closed, continued in
+            another form, or left church buildings with histories distinct from
+            the institutions that created them.
+          </p>
+          <p>
+            The complete regional view below follows {counts.diocese_owned}
+            diocesan Roman Catholic parishes and one Lithuanian National
+            Catholic comparison. Of the {counts.diocese_owned} diocesan
+            parishes, {counts.diocese_ended} ended through diocesan decisions;
+            the other {diocesanOther.length}&mdash;Annunciation in Frackville,
+            St. Michael in Scranton, and St. Ann in Luzerne&mdash;continue in
+            another form, and their churches stand. The National Catholic
+            comparison, Divine Providence in Scranton, is shown separately;
+            its community-owned church also remains standing.
           </p>
           <Link
             href={`/parishes/${shenandoahSlug}`}
