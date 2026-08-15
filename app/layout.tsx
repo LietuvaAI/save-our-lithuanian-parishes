@@ -42,6 +42,7 @@ type NavItem =
   | { href: string; label: string }
   | {
       label: string;
+      href?: string;
       menuAlign?: "left" | "right";
       children: (
         | { href: string; label: string }
@@ -67,8 +68,18 @@ const NAV: NavItem[] = [
         href: "/where-parish-life-continued",
         label: "Where Parish Life Continued",
       },
-      { section: "History" },
-      { href: "/history", label: "History Overview" },
+      { section: "Other traditions" },
+      {
+        href: "/national-catholic",
+        label: "National & Independent Catholic",
+      },
+      { href: "/protestant", label: "Protestant" },
+    ],
+  },
+  {
+    href: "/history",
+    label: "History",
+    children: [
       {
         href: "/pennsylvania-coal-region",
         label: "Pennsylvania Coal Country",
@@ -79,18 +90,12 @@ const NAV: NavItem[] = [
       },
       {
         href: "/history/parishes-alive-year-by-year",
-        label: "Parishes Alive, Year by Year",
+        label: "Lithuanian Parishes Alive, Year by Year",
       },
       {
         href: "/history/loss-by-diocese",
         label: "The Loss, Diocese by Diocese",
       },
-      { section: "Other traditions" },
-      {
-        href: "/national-catholic",
-        label: "National & Independent Catholic",
-      },
-      { href: "/protestant", label: "Protestant" },
     ],
   },
   {
@@ -135,14 +140,23 @@ export default function RootLayout({
               {NAV.map((item) =>
                 "children" in item ? (
                   <div key={item.label} className="relative group">
-                    <button
-                      type="button"
-                      aria-haspopup="menu"
-                      className="flex items-center gap-1 whitespace-nowrap border-b border-transparent py-1 transition-colors hover:border-[var(--es-active)] hover:text-[var(--es-active)]"
-                    >
-                      {item.label}
-                      <span className="text-ui-label opacity-60">▾</span>
-                    </button>
+                    <div className="flex items-center whitespace-nowrap border-b border-transparent transition-colors hover:border-[var(--es-active)] hover:text-[var(--es-active)]">
+                      {item.href ? (
+                        <Link href={item.href} className="py-1">
+                          {item.label}
+                        </Link>
+                      ) : (
+                        <span className="py-1">{item.label}</span>
+                      )}
+                      <button
+                        type="button"
+                        aria-haspopup="menu"
+                        aria-label={`Open ${item.label} menu`}
+                        className="py-1 pl-1"
+                      >
+                        <span className="text-ui-label opacity-60">▾</span>
+                      </button>
+                    </div>
                     <div
                       className={`absolute top-full hidden min-w-max flex-col pt-2 z-50 group-hover:flex group-focus-within:flex ${
                         item.menuAlign === "right"
