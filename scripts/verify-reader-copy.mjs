@@ -44,6 +44,10 @@ for (const file of files) {
 const layout = readFileSync(new URL("../app/layout.tsx", import.meta.url), "utf8");
 
 const homepage = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
+const parishMap = readFileSync(
+  new URL("../components/ParishMap.tsx", import.meta.url),
+  "utf8",
+);
 if (homepage.includes("Still standing")) {
   errors.push(
     "app/page.tsx: living institutions must not use the physical-building label Still standing",
@@ -51,6 +55,12 @@ if (homepage.includes("Still standing")) {
 }
 if (!homepage.includes("Parishes at a crossroads")) {
   errors.push("app/page.tsx: approved current-situations heading drifted");
+}
+if (!homepage.includes('id="happening-now"')) {
+  errors.push("app/page.tsx: current-situations anchor is missing");
+}
+if (parishMap.includes("See current campaigns and developments")) {
+  errors.push("components/ParishMap.tsx: map instructions still contain a campaign link");
 }
 const expectedNavOrder = [
   'href: "/parishes", label: "All Profiles"',

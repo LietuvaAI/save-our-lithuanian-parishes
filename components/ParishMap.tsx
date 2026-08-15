@@ -1317,10 +1317,7 @@ export default function ParishMap() {
         ) : (
           <span className="text-muted">
             One map — every published parish, mission, and congregation. Hover
-            any mark; click to open its profile.{" "}
-            <Link href="/#happening-now" className="font-medium underline hover:text-foreground">
-              See current campaigns and developments →
-            </Link>
+            any mark; click to open its profile.
           </span>
         )}
       </div>

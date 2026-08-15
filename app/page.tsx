@@ -254,7 +254,11 @@ export default function Home() {
         ))}
       </nav>
 
-      <section className="mt-[52px]" aria-labelledby="crossroads-heading">
+      <section
+        id="happening-now"
+        className="mt-[52px] scroll-mt-6"
+        aria-labelledby="crossroads-heading"
+      >
         <div className="border-b border-foreground pb-[9px]">
           <h2 id="crossroads-heading" className="font-serif text-home-section font-semibold uppercase tracking-[0.1em]">
             Parishes at a crossroads
