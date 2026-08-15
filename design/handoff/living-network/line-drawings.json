@@ -1,4 +1,9 @@
 {
+ "_reference": {
+  "production": false,
+  "snapshotOnly": true,
+  "authority": "Design fixture only. Production must resolve every image through lib/photos.ts."
+ },
  "dievo-apvaizdos-southfield-mi": {
   "src": "/images/parishes/southfield-divine-providence-current-line-drawing.png",
   "alt": "Line drawing of Divine Providence Lithuanian Catholic Church in Southfield."
@@ -62,5 +67,21 @@
  "svc-m-marijos-apreiskimo-brooklyn-ny": {
   "src": "/images/parishes/brooklyn-annunciation-line-drawing.png",
   "alt": "Line drawing of Annunciation of the Blessed Virgin Mary church in Brooklyn."
+ },
+ "sv-jurgio-rochester-ny": {
+  "src": "/images/parishes/rochester-our-lady-of-lourdes-line-drawing.png",
+  "alt": "Line drawing of Our Lady of Lourdes Church in Rochester, the current host church for the St. George Lithuanian Mission Community."
+ },
+ "washington-epiphany": {
+  "src": "/images/parishes/washington-epiphany-line-drawing.png",
+  "alt": "Line drawing of Epiphany Catholic Church in Georgetown, the Washington host church for monthly Lithuanian Mass."
+ },
+ "new-philadelphia-holy-cross": {
+  "src": "/images/parishes/new-philadelphia-holy-cross-line-drawing.png",
+  "alt": "Line drawing of Holy Cross Church in New Philadelphia, Pennsylvania."
+ },
+ "scranton-holy-rosary": {
+  "src": "/images/parishes/scranton-holy-rosary-line-drawing.png",
+  "alt": "Line drawing of Holy Rosary Church in Scranton, Pennsylvania."
  }
 }

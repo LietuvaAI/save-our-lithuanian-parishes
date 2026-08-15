@@ -1,4 +1,14 @@
 {
+ "_reference": {
+  "production": false,
+  "snapshotOnly": true,
+  "authority": "Design fixture only. Production must use canonical-current-events-projection.json.",
+  "knownStaleExamples": [
+   "beverly-shores-2026-03",
+   "freeland-2026-07",
+   "waterbury-2023-09"
+  ]
+ },
  "snapshot": "2026-08-02",
  "items": [
   {

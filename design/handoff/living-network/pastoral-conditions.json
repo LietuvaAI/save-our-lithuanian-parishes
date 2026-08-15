@@ -1,4 +1,9 @@
 {
+ "_reference": {
+  "production": false,
+  "snapshotOnly": true,
+  "authority": "Design fixture only. Production must use current sustainabilityWatch records."
+ },
  "sv-petro-boston-ma": {
   "checked": "2026-07-16",
   "clergyLabel": "Shared pastor (not Lithuanian-speaking)",

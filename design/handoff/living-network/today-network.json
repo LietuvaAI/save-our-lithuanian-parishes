@@ -1,4 +1,9 @@
 {
+ "_reference": {
+  "production": false,
+  "snapshotOnly": true,
+  "authority": "Design fixture only. Production must regenerate from the current canonical infographic projection."
+ },
  "observed": "2026-08-03",
  "revision": "canonical-infographic-units-2026-08-03-building-condition-reconciliation",
  "unit": "current Lithuanian Catholic parish, mission, or hosted pastoral community",
