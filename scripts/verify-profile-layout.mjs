@@ -167,6 +167,13 @@ const requiredFragments = [
   ],
   [ledgerSource, "sourceDomain(source.url)", "compact source provenance"],
   [ledgerSource, "href={source.url}", "linked source titles"],
+  [ledgerSource, "{source.excerpt}", "source excerpt rendering"],
+  [profileSourcesSource, 'split("#")[0]}#page=${page}', "PDF page links"],
+  [
+    profileSourcesSource,
+    "isGenericDraugasIssue",
+    "reviewed Draugas article supersedes issue-only fallback",
+  ],
   [
     pageSource,
     "canonicalArtifactProfileSources(",
@@ -687,6 +694,11 @@ if (JSON.stringify(relationshipTypes) !== JSON.stringify(mappedRelationshipTypes
 const stMichaelScranton = registry.parishes.find(
   (parish) => parish.slug === "michael-scranton-pa",
 );
+const stMichaelDraugas = stMichaelScranton?.sources?.find(
+  (source) =>
+    source.axis === "draugas-2008-2026" &&
+    source.cites?.includes("2024-01-20"),
+);
 const stLucyScranton = infographic.building_site_history.find(
   (site) => site.slug === "st-lucy-church-scranton-pa",
 );
@@ -710,6 +722,19 @@ if (
 ) {
   errors.push(
     "Saint Michael Scranton must distinguish its surviving parish, current Saint Lucy home, former Jackson Street church, and current non-Lithuanian liturgy",
+  );
+}
+if (
+  stMichaelDraugas?.work !==
+    "Pennsylvanija: lietuviškų vietų paslaptys" ||
+  stMichaelDraugas?.cites !== "2024-01-20 p. 11" ||
+  !stMichaelDraugas?.excerpt ||
+  !stMichaelDraugas?.supports ||
+  stMichaelDraugas?.sourceUrl !==
+    "https://draugas.org/key/2024_reg/2024-01-20-DRAUGASo.pdf"
+) {
+  errors.push(
+    "Saint Michael Scranton Draugas evidence must retain its reviewed article title, page, excerpt, support statement, and issue URL",
   );
 }
 if (

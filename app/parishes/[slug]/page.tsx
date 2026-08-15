@@ -72,6 +72,9 @@ interface CaseSource {
   title: string;
   publisher: string;
   date: string;
+  page?: string;
+  excerpt?: string;
+  supports?: string;
   url: string;
 }
 
