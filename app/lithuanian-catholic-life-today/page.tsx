@@ -328,7 +328,7 @@ export default function LithuanianCatholicLifeTodayPage() {
   const view = livingNetworkView;
 
   return (
-    <article className="mx-auto max-w-[1080px] px-4 pb-20 pt-7 sm:px-6">
+    <article className="mx-auto max-w-[1080px] px-4 pb-0 pt-7 sm:px-6">
       <p className="font-sans text-ui-label font-semibold uppercase tracking-[0.09em] text-muted">
         Lithuanian Catholic life today · checked {view.observed}
       </p>
