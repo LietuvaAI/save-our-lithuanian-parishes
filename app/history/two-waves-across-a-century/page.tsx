@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import HistoryTopicNav from "@/components/HistoryTopicNav";
 import HistoryTwoWaves from "@/components/HistoryTwoWaves";
 import { historyProjection } from "@/lib/history-projection";
 
@@ -39,6 +40,7 @@ export default function TwoWavesAcrossACenturyPage() {
 
   return (
     <article className="mx-auto max-w-5xl px-4 pb-0 pt-8">
+      <HistoryTopicNav current="/history/two-waves-across-a-century" />
       <header className="max-w-4xl">
         <p className="font-sans text-small-copy uppercase tracking-widest text-muted">
           Foundations and closures
