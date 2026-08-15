@@ -3,6 +3,7 @@
 
 :root {
   --background: #fffdf9;
+  --site-shell-background: #faf7f1;
   --foreground: #1c1917;
   --muted: #78716c;
   --rule: #e7e5e4;
@@ -70,7 +71,7 @@
   --text-ui-label--line-height: 1.25;
 
   /* Homepage + shared shell values from the 2026-08-15 design reference. */
-  --text-site-wordmark: 13px;
+  --text-site-wordmark: 15px;
   --text-site-wordmark--line-height: 1.2;
   --text-site-nav: 10.5px;
   --text-site-nav--line-height: 1.2;
@@ -106,6 +107,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #131110;
+    --site-shell-background: #1a1715;
     --foreground: #e7e5e4;
     --muted: #a8a29e;
     --rule: #292524;
