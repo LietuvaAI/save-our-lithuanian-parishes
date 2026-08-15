@@ -5,7 +5,9 @@
   --background: #fffdf9;
   --site-shell-background: #faf7f1;
   --foreground: #1c1917;
-  --muted: #78716c;
+  /* Secondary editorial copy. Dark enough to remain comfortably readable on
+     the warm paper background without competing with the primary ink. */
+  --muted: #68615c;
   --rule: #e7e5e4;
   --band: #f3eee2;
   /* Editorial links and interactive emphasis. Red remains reserved for loss,
@@ -125,6 +127,19 @@
     --es-transferred: #d5c28b;
     --es-closed: #c96a6a;
     --es-unverified: #57534e;
+  }
+}
+
+/* The homepage map key carries a large amount of compact explanatory copy.
+   Give that panel a slightly stronger secondary ink while leaving the
+   canonical unverified-status swatch on --es-unverified. */
+.map-key {
+  --muted: #57534e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .map-key {
+    --muted: #b8b2ae;
   }
 }
 
