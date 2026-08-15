@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HistoryDioceseLoss from "@/components/HistoryDioceseLoss";
+import HistoryTopicNav from "@/components/HistoryTopicNav";
 import { historyProjection } from "@/lib/history-projection";
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export default function LossByDiocesePage() {
 
   return (
     <article className="mx-auto max-w-5xl px-4 pb-0 pt-8">
+      <HistoryTopicNav current="/history/loss-by-diocese" />
       <header className="max-w-4xl">
         <p className="font-sans text-small-copy uppercase tracking-widest text-muted">
           Geography of loss

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { EndStatePill } from "@/components/EndStatePill";
+import HistoryTopicNav from "@/components/HistoryTopicNav";
 import photosData from "@/data/photos.json";
 import { historyProjection } from "@/lib/history-projection";
 import { pennsylvaniaCoalRegion } from "@/lib/infographic-projection";
@@ -93,6 +94,7 @@ export default function PennsylvaniaCoalRegionPage() {
 
   return (
     <article className="mx-auto max-w-5xl px-4 pb-12 pt-8">
+      <HistoryTopicNav current="/pennsylvania-coal-region" />
       <header className="max-w-4xl">
         <p className="text-small-copy uppercase tracking-widest text-muted">
           Origins in Pennsylvania

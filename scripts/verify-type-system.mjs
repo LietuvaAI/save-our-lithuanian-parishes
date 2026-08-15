@@ -183,6 +183,10 @@ const historyCoalPage = fs.readFileSync(
   path.join(ROOT, "app", "pennsylvania-coal-region", "page.tsx"),
   "utf8",
 );
+const historyTopicNav = fs.readFileSync(
+  path.join(ROOT, "components", "HistoryTopicNav.tsx"),
+  "utf8",
+);
 const historyChart = fs.readFileSync(
   path.join(ROOT, "components", "HistoryTwoWaves.tsx"),
   "utf8",
@@ -206,6 +210,9 @@ const historyDesignContract = [
   [historyTwoWavesPage, "Foundations and closures", "Two Waves subject marker"],
   [historyAlivePage, "Institutional life over time", "year-by-year subject marker"],
   [historyDiocesePage, "Geography of loss", "diocese subject marker"],
+  [historyTopicNav, 'aria-label="History topics"', "compact History-topic navigation"],
+  [historyTopicNav, 'numeral: "I"', "Coal Country sequence marker"],
+  [historyTopicNav, 'numeral: "IV"', "diocese sequence marker"],
   [historyAlivePage, "leading-[1.7]", "15px/1.7 narrative rhythm"],
   [historyDiocesePage, "dioceses have", "approved diocese-loss heading"],
   [historyDiocesePage, "Each diocese below is shaded", "approved diocese-map instruction"],
@@ -233,21 +240,16 @@ for (const source of [
   historyTwoWavesPage,
   historyAlivePage,
   historyDiocesePage,
+  historyTopicNav,
 ]) {
   if (/\bchapter\b/i.test(source)) {
     errors.push("History: chapter framing returned to a public History page");
     break;
   }
 }
-for (const source of [
-  historyPage,
-  historyCoalPage,
-  historyTwoWavesPage,
-  historyAlivePage,
-  historyDiocesePage,
-]) {
-  if (source.includes("HistoryNav")) {
-    errors.push("History: chapter-style navigation returned to a standalone page");
+for (const source of [historyCoalPage, historyTwoWavesPage, historyAlivePage, historyDiocesePage]) {
+  if (!source.includes("HistoryTopicNav")) {
+    errors.push("History: compact topic navigation is missing from a standalone page");
     break;
   }
 }
