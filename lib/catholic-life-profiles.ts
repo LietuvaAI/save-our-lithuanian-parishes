@@ -56,7 +56,7 @@ function populationNote(entry: CurrentPastoralDirectoryEntry) {
     return "This hosted community is one of the 14 current places of regular Lithuanian Catholic worship. It is not a separate historical Lithuanian parish or mission, so it does not increase the 155-institution census or the 137 Roman Catholic histories.";
   }
   if (entry.networkClass === "religious_house") {
-    return "This religious house belongs to the wider record of Lithuanian Catholic life. It is not a parish or mission and is therefore outside the 155-institution census, the 137 Roman Catholic histories, and the 14-place regular worship network.";
+    return "This is a religious house rather than a parish or mission. Its community and ministry form part of the wider living network of Lithuanian Catholic life in the United States.";
   }
   return "This is one of the 20 places in Sielovada’s U.S. directory, but it is not part of the 14-place regular Lithuanian-worship network. It has not been joined to a distinct row in the 155-institution historical census, so publishing this directory profile does not change the historical totals.";
 }
@@ -87,7 +87,9 @@ const directoryProfiles: CatholicLifeProfileRecord[] = directoryProfileEntries.m
       hostSite: wider?.hostSite,
       latestDocumentedMass: wider?.latestDocumentedMass,
       observedAt: String(currentPastoralNetwork.directory.source.checked),
-      portraitKey: `${entry.id}-line-drawing`,
+      portraitKey: wider
+        ? `${wider.slug}-line-drawing`
+        : `${entry.id}-line-drawing`,
       directoryEntry: entry,
       widerRecord: wider,
     };
@@ -110,7 +112,9 @@ const widerOnlyProfiles: CatholicLifeProfileRecord[] = widerCatholicLifeRecords
     explanation: record.explanation,
     identityNote: null,
     populationNote:
-      "This record broadens the documented view of Lithuanian Catholic life without changing the 155-institution census, the 137 Roman Catholic histories, or the 14-place regular worship network.",
+      record.classification === "religious_house"
+        ? "This is a religious house rather than a parish or mission. Its community and ministry form part of the wider living network of Lithuanian Catholic life in the United States."
+        : "Lithuanian Catholics gather here for occasional Masses at a host church. The community belongs to Lithuanian Catholic life in the United States, but it is not a formally established Lithuanian parish or mission.",
     officialSite: record.officialSite,
     hostName: record.hostName,
     hostSite: record.hostSite,
