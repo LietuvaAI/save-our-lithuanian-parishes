@@ -3,11 +3,11 @@ title: "In Writing: The 1968 Letter That Made Divine Providence a National Paris
 subtitle: "In 1968 the Archdiocese of Detroit formally established Divine Providence as a national parish under canon law: only Lithuanians could join, and Lithuanians would fund it."
 date: 2026-07-16
 substackUrl: https://blog.saveourlithuanianparishes.org/p/in-writing-the-1968-letter-that-made
-archivedAt: 2026-08-11
+archivedAt: 2026-08-15
 ---
-Whenever anyone asks whether Divine Providence is “really” a Lithuanian parish or just a church that happens to have Lithuanians in it, there is a document that settles the question. On December 31, 1968, the Archdiocese of Detroit put it in writing.
+On December 31, 1968, the Archdiocese of Detroit put Divine Providence’s status as a Lithuanian parish in writing.
 
-**The Archdiocese of Detroit formally established Divine Providence as a national parish under canon law: a deliberate decision, with a promise attached. It was a canonical status the community asked for and the Archbishop granted, in writing.**
+**The Archdiocese of Detroit formally established Divine Providence as a national parish under canon law — a status the community asked for and the Archbishop granted in writing.**
 
 ### A parish that had to move twice
 
@@ -20,8 +20,6 @@ On August 18, 1967, the parish committee formalized its request and sent it to t
 > 
 *“We request that our church be legally called Lithuanian, with the canonical and ecclesiastical status, title, rights and privileges of a Lithuanian Roman Catholic Church, as now enjoyed by the Divine Providence Lithuanian R. Catholic Church, with no territorial boundaries for the Lithuanians.”*
 
-They were not asking for a favor. They were asking the Archdiocese to recognize, in canon law, what the community already was: a parish of a people, gathered from across the region, not a parish of a place.
-
 ### The meeting (December 2, 1968)
 
 On December 2, 1968, a large gathering of parishioners met with the newly consecrated auxiliary bishop of Detroit, Thomas J. Gumbleton (ordained that May by Archbishop John Dearden), at the invitation of the pastor, Fr. Michael Kundrat (Mykolas Kundrotas). The parish’s account is candid: the bishop began by trying to persuade them to accept an ordinary territorial parish and give up Lithuanian status. The younger generation and the Knights of Lithuania answered him with careful arguments for a non-territorial Lithuanian parish. The committee chair, Antanas Dainius, called for a vote. It was unanimous. Closing the meeting, the bishop said simply:
@@ -31,26 +29,26 @@ On December 2, 1968, a large gathering of parishioners met with the newly consec
 
 ### The letter (December 31, 1968)
 
-Weeks later, the promise arrived on Archdiocese of Detroit letterhead, from the Office of the Vicar for Parishes and initialed T.J.G. It reads, in the paragraph that matters most:
+The letter arrived on Archdiocese of Detroit letterhead, from the Office of the Vicar for Parishes, initialed T.J.G. The key paragraph reads:
 
 > 
 *“He has agreed with the selection of the site at Beech Daly and Nine Mile Road. He also has accepted the decision of the parishioners to make this parish a national parish, with the rights and limitations that are canonically imposed on such a parish. In effect this means that only people of Lithuanian Nationality can become registered parishioners, and the support of the parish must be provided by them.”*
 
 ![](https://substackcdn.com/image/fetch/$s_!_gbs!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2fe3f2a5-43b4-4fe5-b7e1-890fae6c3971_1500x1386.jpeg)
 
-This is the Archdiocese of Detroit, on behalf of Archbishop Dearden, invoking canon law by name (“the rights and limitations that are canonically imposed on such a parish”) and setting out the exact terms: only Lithuanians may register, and the Lithuanians themselves must fund it. That is not an informal ethnic flavor but a national parish, established by decision of the Archbishop and put in writing.
+The letter, written on behalf of Archbishop Dearden, invokes canon law by name — “the rights and limitations that are canonically imposed on such a parish” — and sets out the terms: only Lithuanians may register, and the Lithuanians themselves must fund the parish.
 
-### They kept their word
+### The conditions were met
 
-The community met every condition the letter named. Lithuanians funded the parish themselves and built it with their own hands (church, rectory, and cultural center), consecrating the new church in Southfield on September 8, 1973, the same year the Soviet regime was bulldozing the Hill of Crosses in occupied Lithuania. The one obligation the Archdiocese attached in 1968 (“the support of the parish must be provided by them”) has been honored for more than half a century. To this day, Divine Providence carries zero debt and funds itself.
+Lithuanians funded and built the church, rectory, and cultural center, consecrating the new church in Southfield on September 8, 1973, the same year the Soviet regime was bulldozing the Hill of Crosses in occupied Lithuania. The obligation the letter attached — “the support of the parish must be provided by them” — has been met ever since. Divine Providence carries zero debt and funds itself.
 
 ### Why this is different
 
-Every argument in this publication about metrics and yardsticks rests, in the end, on this letter. Divine Providence is a personal (national) parish under canon law, a category the Church’s own law provides for, defined by a people rather than a territory. The Archdiocese did not stumble into that status; it granted it, deliberately, in writing, in 1968.
+Divine Providence is a personal (national) parish under canon law — a category the Church’s law provides for, defined by a people rather than a territory. The Archdiocese granted that status in writing in 1968.
 
-Which means that measuring Divine Providence today by territorial metrics (the size of the surrounding neighborhood, whether another church sits nearby, how the local population has shifted) is not only the wrong test; it contradicts the Archdiocese’s own written decision that this parish would never be territorial in the first place. And the single condition attached to that decision, that the community fund itself, has been kept in full.
+Territorial measures — the surrounding neighborhood, nearby churches, local population shifts — contradict the Archdiocese’s own 1968 decision that this parish would not be territorial. The condition attached to that decision, that the community fund itself, has been kept in full.
 
-*A promise was made, in writing, by the Archbishop’s own office. The community has kept its half for fifty-seven years. The only open question is whether the Archdiocese will keep its own word.*
+*The letter is in the parish’s archives. The condition it set has been met for fifty-seven years.*
 
 ---
 

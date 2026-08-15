@@ -3,7 +3,7 @@ title: "The Last Mass at Šv. Juozapo"
 subtitle: "New England’s oldest Lithuanian church held its final Mass on August 2, and a monsignor formally closed the building. The 2023 Vatican appeal still has no published ruling."
 date: 2026-08-08
 substackUrl: https://blog.saveourlithuanianparishes.org/p/the-last-mass-at-sv-juozapo
-archivedAt: 2026-08-11
+archivedAt: 2026-08-15
 ---
 ![](https://substackcdn.com/image/fetch/$s_!31G5!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F16325468-c35a-4557-a627-e7befb3d03fe_675x900.jpeg)
 *Šv. Juozapo (St. Joseph’s), 46 Congress Avenue, Waterbury — “First Lithuanian Parish In New England, Est. 1894.” Photo: Consulate General of Lithuania in New York, used with permission.*
@@ -20,7 +20,7 @@ The question that is open is what happens to the windows. They were installed in
 
 #### What you can do
 
-**The canonical case is still running,** and its costs are paid rather than pledged: attorney’s fees, a commercial appraisal, the scanning of the parish’s historical documents. [The GoFundMe is here.](https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church)
+**The canonical case is still running,** and its costs — attorney’s fees, a commercial appraisal, the scanning of the parish’s historical documents — have been paid. [The GoFundMe is here.](https://www.gofundme.com/f/save-st-josephs-lithuanian-catholic-church)
 
 **The full story of the closure and the appeal** is told in [Closed, Not Ended](https://blog.saveourlithuanianparishes.org/p/closed-not-ended-the-vatican-appeal). Every active campaign is tracked at [/under-threat](https://saveourlithuanianparishes.org/under-threat).
 

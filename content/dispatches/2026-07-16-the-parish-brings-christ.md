@@ -3,11 +3,9 @@ title: "The Parish Brings Christ"
 subtitle: "In 1978, the pastor of Divine Providence wrote about what a parish is. Nearly fifty years later, his words read like a letter to the parishes of 2026."
 date: 2026-07-16
 substackUrl: https://blog.saveourlithuanianparishes.org/p/the-parish-brings-christ
-archivedAt: 2026-08-11
+archivedAt: 2026-08-15
 ---
-In 1978, five years after the new church in Southfield was consecrated, Divine Providence parish published its five-year anniversary book. In it, the pastor at the time, the late Fr. Viktoras Kriščiūnevičius, wrote about what a parish is. Nearly fifty years have passed, yet his words sound today as if they were meant for this moment. The Archdiocese of Detroit is now deciding the future of every one of its parishes, including his.
-
-A parish is alive only as long as its people keep it alive: as long as they come, take part, and carry it forward. It is not enough to be on the parish rolls. A parish needs presence, work, prayer.
+In 1978, five years after the new church in Southfield was consecrated, Divine Providence parish published its five-year anniversary book. In it, the pastor at the time, the late Fr. Viktoras Kriščiūnevičius, wrote about what a parish is. Nearly fifty years later, the Archdiocese of Detroit is deciding the future of every one of its parishes, including his.
 ![](https://substackcdn.com/image/fetch/$s_!QOnq!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa1feb466-5f5e-4146-86ea-edd849da0673_1400x1866.jpeg)
 *And so, what is essential in a parish? I answer: the life of God’s grace, which flows from the head into the body, and is given to the members only when they are joined to the Body of Christ. This divine life of grace is the essence of the parish. Its primary task is to give this life to its members, to sustain it, and to lead them toward maturity. This is why it is so important that we rightly understand, value, and support our parish.*
 
