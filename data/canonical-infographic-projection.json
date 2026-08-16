@@ -1,4 +1,12 @@
 {
+  "address_resolution_contract": {
+    "conflict_rule": "conflict-preserved address assertions remain reported_unresolved and retain their exact recorded wording",
+    "gap_rule": "when no address assertion or address-bearing canonical identity label exists, the address is not_established",
+    "institution_rule": "a profile may summarize only the address of its Brain-selected terminal worship site; it may not maintain a separate institution address",
+    "recorded_rule": "a canonical entity name or alias may supply a recorded location but never accepted-assertion authority",
+    "unit": "physical building or worship site",
+    "verified_rule": "an accepted address assertion attached directly to the site or through its typed institution-site relationship"
+  },
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
@@ -8,6 +16,14 @@
   },
   "building_site_history": [
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_name",
+        "display": "109 Gold Street apartments, Brooklyn",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:109-gold-street-brooklyn-ny",
@@ -34,6 +50,14 @@
       "slug": "109-gold-street-brooklyn-ny"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -94,6 +118,14 @@
       "slug": "annunciation-bvm-church-frackville-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:annunciation-cemetery-frackville-pa",
@@ -141,6 +173,14 @@
       "slug": "annunciation-cemetery-frackville-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "27 South Broad Mountain Avenue",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -190,6 +230,14 @@
       "slug": "annunciation-chapel-youth-center-frackville-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:annunciation-parish-hall-frackville-pa",
@@ -228,6 +276,14 @@
       "slug": "annunciation-parish-hall-frackville-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "7 South Broad Mountain Avenue",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:annunciation-rectory-frackville-pa",
@@ -275,6 +331,18 @@
       "slug": "annunciation-rectory-frackville-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:lineage-1:annunciation-used-north-fifth-site"
+        ],
+        "authority": "accepted_assertion",
+        "display": "259 North 5th Street, Brooklyn, New York 11211",
+        "source_artifact_ids": [
+          "src:lineage-1:sielovada-brooklyn:2026-07-31"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -332,6 +400,16 @@
       "slug": "annunciation-williamsburg-north-fifth-street"
     },
     {
+      "address": {
+        "alternate_displays": [
+          "Schaefer and Grand River church"
+        ],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Divine Providence on Schaefer Road",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -414,6 +492,16 @@
       "slug": "divine-providence-detroit-schaefer-site"
     },
     {
+      "address": {
+        "alternate_displays": [
+          "Divine Providence Church, 25335 West Nine Mile Road"
+        ],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "9 Mile Road and Beech Daly site",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -462,6 +550,14 @@
       "slug": "divine-providence-southfield-site"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_name",
+        "display": "East Seventh Street Lithuanian chapel site",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:east-seventh-street-chapel-boston-ma",
@@ -496,6 +592,14 @@
       "slug": "east-seventh-street-chapel-boston-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "331 Reed Street townhouse",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:enclaves-townhouse-331-reed-philadelphia-pa",
@@ -522,6 +626,14 @@
       "slug": "enclaves-townhouse-331-reed-philadelphia-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "2712 Dumbarton Street NW",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -550,6 +662,16 @@
       "slug": "epiphany-catholic-church-georgetown-dc"
     },
     {
+      "address": {
+        "alternate_displays": [
+          "329 Greene Street"
+        ],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "339 Greene Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -612,6 +734,18 @@
       "slug": "former-st-casimir-greene-street-new-haven-ct"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:chicago-1:holy-cross-current-site"
+        ],
+        "authority": "accepted_assertion",
+        "display": "1740 W 46th Street, Chicago",
+        "source_artifact_ids": [
+          "src:chicago-1:st-oscar-romero:2026-07-31"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -688,6 +822,14 @@
       "slug": "holy-cross-46th-street-chicago-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Ledge Road cemetery",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:holy-cross-cemetery-hudson-nh",
@@ -725,6 +867,18 @@
       "slug": "holy-cross-cemetery-hudson-nh"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:current-1:dayton-active-2026"
+        ],
+        "authority": "accepted_assertion",
+        "display": "1922 Leo Street, Dayton, OH 45404",
+        "source_artifact_ids": [
+          "src:current-1:dayton-holy-cross:2026-07-31"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -777,6 +931,18 @@
       "slug": "holy-cross-leo-street-dayton-oh"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:mne-1:westville-site"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "Main Street, exact address unresolved",
+        "source_artifact_ids": [
+          "src:mne-1:westville-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -828,6 +994,14 @@
       "slug": "holy-cross-main-street-westville-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "320 West Sixth Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:holy-cross-school-mount-carmel-pa",
@@ -865,6 +1039,14 @@
       "slug": "holy-cross-school-mount-carmel-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Sixth and Poplar Streets church",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -925,6 +1107,14 @@
       "slug": "holy-cross-sixth-poplar-mount-carmel-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -970,6 +1160,14 @@
       "slug": "holy-trinity-hartford-1903-building"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Holy Trinity Church at 53 Capitol Avenue",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -1015,6 +1213,14 @@
       "slug": "holy-trinity-hartford-capitol-avenue-church"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Adams Street original church",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -1066,6 +1272,18 @@
       "slug": "holy-trinity-original-church-adams-newark-nj"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:identity-1:newark-current"
+        ],
+        "authority": "accepted_assertion",
+        "display": "207 Adams Street, Newark",
+        "source_artifact_ids": [
+          "src:identity-1:newark-directory:2026-07-31"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -1129,6 +1347,18 @@
       "slug": "holy-trinity-parish-hall-adams-newark-nj"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:coal-1:holy-trinity-site"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "416 E South Street",
+        "source_artifact_ids": [
+          "src:coal-1:holy-trinity-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -1180,6 +1410,18 @@
       "slug": "holy-trinity-south-street-wilkes-barre-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:current-1:immaculate-site-lithuanian-mass-2026"
+        ],
+        "authority": "accepted_assertion",
+        "display": "2745 W. 44th Street, Chicago, IL 60632",
+        "source_artifact_ids": [
+          "src:current-1:immaculate-mass-schedule:2026-07-31"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -1243,6 +1485,18 @@
       "slug": "immaculate-conception-44th-street-chicago-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:illinois-1:east-st-louis-site"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "1509 Baugh Avenue",
+        "source_artifact_ids": [
+          "src:illinois-1:east-st-louis-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -1306,6 +1560,14 @@
       "slug": "immaculate-conception-baugh-avenue-east-st-louis-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "430-432 Windsor Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -1357,6 +1619,14 @@
       "slug": "immaculate-conception-church-windsor-street-cambridge-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "424-430 Windsor Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -1408,6 +1678,18 @@
       "slug": "immaculate-conception-rectory-windsor-street-cambridge-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:illinois-1:collinsville-building"
+        ],
+        "authority": "accepted_assertion",
+        "display": "305 Collinsville Avenue",
+        "source_artifact_ids": [
+          "src:illinois-1:collinsville-case:2026-07-16"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -1459,6 +1741,14 @@
       "slug": "jerusalem-lutheran-collinsville-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:lietuva-colony-chapel-grand-prairie-ar",
@@ -1493,6 +1783,14 @@
       "slug": "lietuva-colony-chapel-grand-prairie-ar"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "143 North Lowell Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:lithuanian-national-catholic-cemetery-methuen-ma",
@@ -1530,6 +1828,18 @@
       "slug": "lithuanian-national-catholic-cemetery-methuen-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:count-risk-13:chicago-reformed-spaulding-site"
+        ],
+        "authority": "accepted_assertion",
+        "display": "1942 N. Spaulding Avenue, Chicago",
+        "source_artifact_ids": [
+          "src:count-risk-13:draugas-reformed-1965"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:lithuanian-reformed-1942-spaulding-chicago-il",
@@ -1563,6 +1873,14 @@
       "slug": "lithuanian-reformed-1942-spaulding-chicago-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -1608,6 +1926,18 @@
       "slug": "lithuanian-world-center-mission-church-lemont-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:living-1:nativity-uses-washtenaw-site"
+        ],
+        "authority": "accepted_assertion",
+        "display": "6812 South Washtenaw Avenue",
+        "source_artifact_ids": [
+          "src:living-1:archchicago-directory:2026-07"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -1653,6 +1983,18 @@
       "slug": "nativity-bvm-washtenaw-chicago-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:current-1:rochester-directory-2026"
+        ],
+        "authority": "accepted_assertion",
+        "display": "150 Varinna Drive, Rochester, NY 14618",
+        "source_artifact_ids": [
+          "src:current-1:rochester-directory:2026-07-31"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -1705,6 +2047,18 @@
       "slug": "our-lady-of-lourdes-varinna-drive-rochester-ny"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:identity-1:kearny-current"
+        ],
+        "authority": "accepted_assertion",
+        "display": "136 Davis Avenue, Kearny",
+        "source_artifact_ids": [
+          "src:identity-1:newark-directory:2026-07-31"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -1757,6 +2111,14 @@
       "slug": "our-lady-of-sorrows-davis-avenue-kearny-nj"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:our-lady-of-sorrows-harrison-nj",
@@ -1797,6 +2159,16 @@
       "slug": "our-lady-of-sorrows-harrison-nj"
     },
     {
+      "address": {
+        "alternate_displays": [
+          "2337 W. 23rd Place"
+        ],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "2327 W. 23rd Place",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -1848,6 +2220,18 @@
       "slug": "our-lady-of-vilna-23rd-place-chicago-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:successor-2:worcester-vilna-site"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "151/153 Sterling Street",
+        "source_artifact_ids": [
+          "src:successor-2:worcester-vilna-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -1899,6 +2283,14 @@
       "slug": "our-lady-of-vilna-sterling-street-worcester-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "568-570 Broome Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -1950,6 +2342,14 @@
       "slug": "our-lady-of-vilnius-broome-street-ny"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Our Lady of Perpetual Help church, 18022 Neff Road",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -2013,6 +2413,14 @@
       "slug": "our-lady-perpetual-help-cleveland-neff-site"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_name",
+        "display": "Our Lady of Siluva church at 35th and Union, Chicago",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:our-lady-siluva-35th-union-chicago-il",
@@ -2046,6 +2454,14 @@
       "slug": "our-lady-siluva-35th-union-chicago-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "1967 Main Street church",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -2096,6 +2512,14 @@
       "slug": "our-lady-siluva-main-street-maizeville-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:our-lady-vilna-cemetery-eynon-pa",
@@ -2143,6 +2567,14 @@
       "slug": "our-lady-vilna-cemetery-eynon-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Third Street cemetery-access lot",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:our-lady-vilna-cleared-lot-eynon-pa",
@@ -2180,6 +2612,14 @@
       "slug": "our-lady-vilna-cleared-lot-eynon-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -2229,6 +2669,14 @@
       "slug": "our-lady-vilna-first-church-eynon-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Third Street church",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -2278,6 +2726,16 @@
       "slug": "our-lady-vilna-third-street-eynon-pa"
     },
     {
+      "address": {
+        "alternate_displays": [
+          "717 W 18th Street"
+        ],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "1814 S Union Avenue",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -2352,6 +2810,14 @@
       "slug": "providence-of-god-18th-street-chicago-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Sumner Avenue church",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -2401,6 +2867,14 @@
       "slug": "providence-of-god-sumner-scranton-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Charles Street church",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -2443,6 +2917,16 @@
       "slug": "sacred-heart-church-luzerne-pa"
     },
     {
+      "address": {
+        "alternate_displays": [
+          "Garden Street Methodist Episcopal Church"
+        ],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "150 Garden Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -2501,6 +2985,18 @@
       "slug": "sacred-heart-garden-street-lawrence-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:count-risk-13:chicago-reformed-salem-site"
+        ],
+        "authority": "accepted_assertion",
+        "display": "6824 S. Emerald Avenue, Chicago",
+        "source_artifact_ids": [
+          "src:count-risk-13:musu-sparnai-1975"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:salem-6824-emerald-chicago-il",
@@ -2534,6 +3030,14 @@
       "slug": "salem-6824-emerald-chicago-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:sandara-hall-south-boston-ma",
@@ -2567,6 +3071,18 @@
       "slug": "sandara-hall-south-boston-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:mundelein-15:host-site"
+        ],
+        "authority": "accepted_assertion",
+        "display": "116 N Lake St, Mundelein, IL 60060",
+        "source_artifact_ids": [
+          "src:mundelein-15:archdiocese-directory"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -2613,6 +3129,14 @@
       "slug": "santa-maria-del-popolo-mundelein-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "2000 Walker Avenue NW",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:ss-peter-paul-cemetery-grand-rapids-mi",
@@ -2650,6 +3174,14 @@
       "slug": "ss-peter-paul-cemetery-grand-rapids-mi"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_name",
+        "display": "Former Saints Peter and Paul convent, Grand Rapids",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:ss-peter-paul-convent-grand-rapids-mi",
@@ -2687,6 +3219,14 @@
       "slug": "ss-peter-paul-convent-grand-rapids-mi"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_name",
+        "display": "Ss. Peter and Paul first church, Homestead",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:ss-peter-paul-first-church-homestead-pa",
@@ -2720,6 +3260,18 @@
       "slug": "ss-peter-paul-first-church-homestead-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:deep-case-14:homestead-second-site-reuse"
+        ],
+        "authority": "accepted_assertion",
+        "display": "1321 Mifflin Street",
+        "source_artifact_ids": [
+          "src:deep-case-14:pittsburgh-field-survey"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -2765,6 +3317,14 @@
       "slug": "ss-peter-paul-mifflin-church-homestead-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "520 Myrtle Street NW",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -2814,6 +3374,16 @@
       "slug": "ss-peter-paul-myrtle-street-grand-rapids-mi"
     },
     {
+      "address": {
+        "alternate_displays": [
+          "216 Ripley Place legacy address"
+        ],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "211 Ripley Place",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -2874,6 +3444,14 @@
       "slug": "ss-peter-paul-ripley-place-elizabeth-nj"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_name",
+        "display": "Saints Peter and Paul school facility, Grand Rapids",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:ss-peter-paul-school-grand-rapids-mi",
@@ -2911,6 +3489,18 @@
       "slug": "ss-peter-paul-school-grand-rapids-mi"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:identity-1:baltimore-current"
+        ],
+        "authority": "accepted_assertion",
+        "display": "114 West Saratoga Street, Baltimore",
+        "source_artifact_ids": [
+          "src:identity-1:baltimore-current:2026-07-31"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -2962,6 +3552,18 @@
       "slug": "st-alphonsus-saratoga-baltimore-md"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:case-2:new-britain-site-2026"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "396 Church Street, New Britain, CT",
+        "source_artifact_ids": [
+          "src:case-2:new-britain-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -3014,6 +3616,14 @@
       "slug": "st-andrew-church-street-new-britain-ct"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Nineteenth and Wallace Streets church",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -3064,6 +3674,14 @@
       "slug": "st-andrew-nineteenth-wallace-philadelphia-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "1913-15 Wallace Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-andrew-rectory-wallace-philadelphia-pa",
@@ -3102,6 +3720,14 @@
       "slug": "st-andrew-rectory-wallace-philadelphia-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "574 Bennett Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -3162,6 +3788,19 @@
       "slug": "st-ann-bennett-street-luzerne-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:living-sites-16:st-ann-current-community",
+          "assert:living-sites-16:st-ann-site"
+        ],
+        "authority": "accepted_assertion",
+        "display": "433 E. Golfwood Road, Beverly Shores, IN",
+        "source_artifact_ids": [
+          "src:living-sites-16:st-ann-diocese"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -3214,6 +3853,18 @@
       "slug": "st-ann-of-the-dunes-golfwood-beverly-shores-in"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:illinois-1:spring-valley-site"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "100 East 4th Street",
+        "source_artifact_ids": [
+          "src:illinois-1:spring-valley-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -3277,6 +3928,18 @@
       "slug": "st-anne-fourth-street-spring-valley-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:current-1:cicero-active-2026"
+        ],
+        "authority": "accepted_assertion",
+        "display": "1510 S. 49th Court, Cicero, IL 60804",
+        "source_artifact_ids": [
+          "src:current-1:archchicago-directory:2026-07"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -3328,6 +3991,14 @@
       "slug": "st-anthony-49th-court-cicero-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -3373,6 +4044,14 @@
       "slug": "st-anthony-church-kewanee-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "St. Anthony Lithuanian Church, 1750 25th Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -3444,6 +4123,14 @@
       "slug": "st-anthony-detroit-25th-street-site"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-anthony-first-church-omaha-ne",
@@ -3482,6 +4169,18 @@
       "slug": "st-anthony-first-church-omaha-ne"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:count-risk-13:philadelphia-site"
+        ],
+        "authority": "unresolved_assertion",
+        "display": null,
+        "source_artifact_ids": [
+          "src:count-risk-13:michelsonas"
+        ],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-anthony-first-church-philadelphia-pa",
@@ -3515,6 +4214,14 @@
       "slug": "st-anthony-first-church-philadelphia-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_name",
+        "display": "St. Anthony church on Millers Run Road, Bridgeville",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -3572,6 +4279,18 @@
       "slug": "st-anthony-millers-run-bridgeville-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:case-2:ansonia-current-use-2026"
+        ],
+        "authority": "accepted_assertion",
+        "display": "195-199 North Main Street, Ansonia, CT",
+        "source_artifact_ids": [
+          "src:case-2:ansonia-abundant-life:2026-07-31"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -3646,6 +4365,14 @@
       "slug": "st-anthony-north-main-ansonia-ct"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-anthony-school-omaha-ne",
@@ -3684,6 +4411,16 @@
       "slug": "st-anthony-school-omaha-ne"
     },
     {
+      "address": {
+        "alternate_displays": [
+          "5408 South 32nd Street current-user address"
+        ],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "5402 South 32nd Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -3745,6 +4482,18 @@
       "slug": "st-anthony-thirty-second-street-omaha-ne"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:chicago-1:st-casimir-lifecycle-site"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "283 E 14th Street, Chicago Heights",
+        "source_artifact_ids": [
+          "src:chicago-1:st-casimir-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -3807,6 +4556,18 @@
       "slug": "st-casimir-14th-street-chicago-heights-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:mne-1:brockton-site"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "214 Ames Street",
+        "source_artifact_ids": [
+          "src:mne-1:brockton-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -3870,6 +4631,14 @@
       "slug": "st-casimir-ames-street-brockton-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Broadview and Ridge Avenue",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -3921,6 +4690,18 @@
       "slug": "st-casimir-broadview-ridge-kansas-city-ks"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:ne-3:amsterdam-site"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "262 East Main Street",
+        "source_artifact_ids": [
+          "src:ne-3:amsterdam-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -3990,6 +4771,16 @@
       "slug": "st-casimir-east-main-street-amsterdam-ny"
     },
     {
+      "address": {
+        "alternate_displays": [
+          "1351 Lincoln Street current-user address"
+        ],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "1368 West 15th Avenue",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -4053,6 +4844,14 @@
       "slug": "st-casimir-fifteenth-avenue-gary-in"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -4101,6 +4900,14 @@
       "slug": "st-casimir-first-church-paterson-nj"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_name",
+        "display": "St. Casimir first church and rectory, Plymouth",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-casimir-first-church-plymouth-pa",
@@ -4134,6 +4941,14 @@
       "slug": "st-casimir-first-church-plymouth-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Fourth and Wharton Streets church",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -4194,6 +5009,14 @@
       "slug": "st-casimir-fourth-wharton-philadelphia-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "2524 Leech Avenue",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -4246,6 +5069,14 @@
       "slug": "st-casimir-leech-avenue-sioux-city-ia"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-casimir-lithuanian-monument-providence-ri",
@@ -4282,6 +5113,18 @@
       "slug": "st-casimir-lithuanian-monument-providence-ri"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:living-1:la-uses-current-site"
+        ],
+        "authority": "accepted_assertion",
+        "display": "2718 Saint George Street",
+        "source_artifact_ids": [
+          "src:living-1:la-st-casimir-directory:2026-07-31"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -4327,6 +5170,14 @@
       "slug": "st-casimir-los-angeles-st-george-street"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-casimir-lynwood-church-hanover-township-pa",
@@ -4360,6 +5211,14 @@
       "slug": "st-casimir-lynwood-church-hanover-township-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "147 Montgomery Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -4418,6 +5277,18 @@
       "slug": "st-casimir-montgomery-street-paterson-nj"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:deep-case-14:westfield-casimir-site"
+        ],
+        "authority": "accepted_assertion",
+        "display": "38 Parkside Avenue",
+        "source_artifact_ids": [
+          "src:deep-case-14:westfield-municipal"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -4463,6 +5334,14 @@
       "slug": "st-casimir-parkside-westfield-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -4525,6 +5404,18 @@
       "slug": "st-casimir-pittston-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:successor-2:worcester-casimir-church"
+        ],
+        "authority": "accepted_assertion",
+        "display": "41 Providence Street",
+        "source_artifact_ids": [
+          "src:successor-2:worcester-casimir-case:2026-07-16"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -4588,6 +5479,14 @@
       "slug": "st-casimir-providence-street-worcester-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "324 Wharton Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-casimir-rectory-wharton-philadelphia-pa",
@@ -4625,6 +5524,18 @@
       "slug": "st-casimir-rectory-wharton-philadelphia-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:successor-2:pittsburgh-casimir-church"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "2132 Sarah Street",
+        "source_artifact_ids": [
+          "src:successor-2:pittsburgh-casimir-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -4676,6 +5587,14 @@
       "slug": "st-casimir-sarah-street-pittsburgh-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_name",
+        "display": "Former Saint Casimir school and first church, Gary",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -4738,6 +5657,14 @@
       "slug": "st-casimir-school-first-church-gary-in"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-casimir-school-philadelphia-pa",
@@ -4774,6 +5701,14 @@
       "slug": "st-casimir-school-philadelphia-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -4825,6 +5760,18 @@
       "slug": "st-casimir-school-pittsburgh-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:successor-2:worcester-casimir-school"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "22 Waverly Street",
+        "source_artifact_ids": [
+          "src:successor-2:worcester-casimir-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -4876,6 +5823,14 @@
       "slug": "st-casimir-school-waverly-street-worcester-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-casimir-second-church-plymouth-pa",
@@ -4909,6 +5864,14 @@
       "slug": "st-casimir-second-church-plymouth-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "348 Smith Street church",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -4980,6 +5943,16 @@
       "slug": "st-casimir-smith-street-providence-ri"
     },
     {
+      "address": {
+        "alternate_displays": [
+          "Casimir Place"
+        ],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "119 Temple Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -5028,6 +6001,18 @@
       "slug": "st-casimir-temple-street-nashua-nh"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:illinois-1:oglesby-site"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "307 East Florence Street",
+        "source_artifact_ids": [
+          "src:illinois-1:oglesby-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -5079,6 +6064,14 @@
       "slug": "st-constantine-florence-street-oglesby-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "94 Bradford Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -5137,6 +6130,16 @@
       "slug": "st-francis-bradford-street-lawrence-ma"
     },
     {
+      "address": {
+        "alternate_displays": [
+          "3903 Main Street alternate"
+        ],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "3803 Fir Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -5188,6 +6191,14 @@
       "slug": "st-francis-fir-street-east-chicago-in"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-francis-forest-lake-estate-methuen-ma",
@@ -5225,6 +6236,14 @@
       "slug": "st-francis-forest-lake-estate-methuen-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-francis-minersville-pa",
@@ -5265,6 +6284,14 @@
       "slug": "st-francis-minersville-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -5310,6 +6337,14 @@
       "slug": "st-george-1967-church-utica-ny"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-george-cemetery-utica-ny",
@@ -5343,6 +6378,14 @@
       "slug": "st-george-cemetery-utica-ny"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "St. George Cleveland church building, 6527 Superior Avenue",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -5400,6 +6443,14 @@
       "slug": "st-george-cleveland-superior-site"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-george-convent-norwood-ma",
@@ -5438,6 +6489,14 @@
       "slug": "st-george-convent-norwood-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "St. George Lithuanian church site at Westminster and Cardoni",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -5529,6 +6588,14 @@
       "slug": "st-george-detroit-westminster-cardoni-site"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "1910 Falls Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -5599,6 +6666,14 @@
       "slug": "st-george-falls-street-niagara-falls-ny"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-george-first-church-niagara-falls-ny",
@@ -5637,6 +6712,14 @@
       "slug": "st-george-first-church-niagara-falls-ny"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "545 Hudson Avenue",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -5700,6 +6783,14 @@
       "slug": "st-george-hudson-avenue-rochester-ny"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-george-lithuanian-cemetery-pittsburgh-pa",
@@ -5733,6 +6824,16 @@
       "slug": "st-george-lithuanian-cemetery-pittsburgh-pa"
     },
     {
+      "address": {
+        "alternate_displays": [
+          "33rd Street and Lituanica Avenue"
+        ],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "3230 S Lituanica Avenue",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -5784,6 +6885,14 @@
       "slug": "st-george-lituanica-church-chicago-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -5832,6 +6941,14 @@
       "slug": "st-george-parish-hall-brooklyn-ny"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-george-parish-school-chicago-il",
@@ -5871,6 +6988,14 @@
       "slug": "st-george-parish-school-chicago-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "443 Park Avenue",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -5922,6 +7047,14 @@
       "slug": "st-george-park-avenue-bridgeport-ct"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Falls and 19th Streets rectory",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-george-rectory-niagara-falls-ny",
@@ -5969,6 +7102,14 @@
       "slug": "st-george-rectory-niagara-falls-ny"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "35 St James Avenue",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-george-rectory-norwood-ma",
@@ -6007,6 +7148,14 @@
       "slug": "st-george-rectory-norwood-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-george-school-norwood-ma",
@@ -6045,6 +7194,14 @@
       "slug": "st-george-school-norwood-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Saint George church on South Jardin Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -6090,6 +7247,16 @@
       "slug": "st-george-shenandoah-south-jardin-site"
     },
     {
+      "address": {
+        "alternate_displays": [
+          "27-35 St James Avenue current listings"
+        ],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "37 St James Avenue",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -6150,6 +7317,18 @@
       "slug": "st-george-st-james-avenue-norwood-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:pmc-7:st-george-site"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "2700 East Venango Street; 3580 Salmon Street alternate corner reading unconfirmed",
+        "source_artifact_ids": [
+          "src:pmc-7:st-george-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -6210,6 +7389,14 @@
       "slug": "st-george-venango-philadelphia-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-george-veterans-monument-highland-cemetery-norwood-ma",
@@ -6248,6 +7435,14 @@
       "slug": "st-george-veterans-monument-highland-cemetery-norwood-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Washington Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -6299,6 +7494,14 @@
       "slug": "st-george-washington-street-haverhill-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "203 York Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -6358,6 +7561,14 @@
       "slug": "st-george-york-street-brooklyn-ny"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_name",
+        "display": "St. Isidore church on Talbot Street, Braddock",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -6403,6 +7614,18 @@
       "slug": "st-isidore-talbot-street-braddock-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:nec-4:coaldale-sites"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "229 West Phillips Street snippet; not verified",
+        "source_artifact_ids": [
+          "src:nec-4:coaldale-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -6453,6 +7676,14 @@
       "slug": "st-john-baptist-coaldale-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -6502,6 +7733,18 @@
       "slug": "st-john-first-church-coaldale-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:count-risk-13:new-york-st-john-site"
+        ],
+        "authority": "unresolved_assertion",
+        "display": null,
+        "source_artifact_ids": [
+          "src:count-risk-13:wolkovich-v3"
+        ],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-john-host-church-new-york-ny",
@@ -6535,6 +7778,18 @@
       "slug": "st-john-host-church-new-york-ny"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:living-1:st-john-host-active-2026"
+        ],
+        "authority": "accepted_assertion",
+        "display": "7214 South Cass Avenue, Darien, IL 60561",
+        "source_artifact_ids": [
+          "src:living-1:st-john-darien:2026-07-31"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -6592,6 +7847,14 @@
       "slug": "st-john-lutheran-cass-avenue-darien-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Miller Street church",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-john-nepomucene-church-luzerne-pa",
@@ -6624,6 +7887,14 @@
       "slug": "st-john-nepomucene-church-luzerne-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Miller Street rectory",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-john-nepomucene-rectory-luzerne-pa",
@@ -6656,6 +7927,18 @@
       "slug": "st-john-nepomucene-rectory-luzerne-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:nec-4:coaldale-sites"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "229 West Phillips Street snippet; not verified",
+        "source_artifact_ids": [
+          "src:nec-4:coaldale-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-john-rectory-coaldale-pa",
@@ -6693,6 +7976,18 @@
       "slug": "st-john-rectory-coaldale-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:evidence-t1:dubois-building-orthodox-use-2020"
+        ],
+        "authority": "accepted_assertion",
+        "display": "301 South State Street, DuBois, Pennsylvania",
+        "source_artifact_ids": [
+          "src:evidence-t1:st-nicholas-dubois:2026-07-28"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -6738,6 +8033,14 @@
       "slug": "st-joseph-dubois-south-state-street-church"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-joseph-former-presbyterian-donora-pa",
@@ -6771,6 +8074,18 @@
       "slug": "st-joseph-former-presbyterian-donora-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:coal-1:scranton-site"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "1625 N Main Avenue / 116 Theodore Street",
+        "source_artifact_ids": [
+          "src:coal-1:scranton-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -6845,6 +8160,14 @@
       "slug": "st-joseph-main-avenue-scranton-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "8812 South Marquette Avenue",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -6907,6 +8230,18 @@
       "slug": "st-joseph-marquette-avenue-south-chicago-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:coal-1:nanticoke-site"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "316 Pine Street",
+        "source_artifact_ids": [
+          "src:coal-1:nanticoke-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -6969,6 +8304,14 @@
       "slug": "st-joseph-pine-street-nanticoke-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "8801 South Saginaw Avenue",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-joseph-rectory-saginaw-avenue-south-chicago-il",
@@ -7008,6 +8351,14 @@
       "slug": "st-joseph-rectory-saginaw-avenue-south-chicago-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "St. Joseph Church, 46 Congress Avenue",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -7065,6 +8416,14 @@
       "slug": "st-joseph-waterbury-congress-avenue-church"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -7110,6 +8469,14 @@
       "slug": "st-joseph-waterbury-original-1894-church"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "949 Scranton Street",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -7158,6 +8525,14 @@
       "slug": "st-lucy-church-scranton-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -7215,6 +8590,14 @@
       "slug": "st-luke-1909-church-bentleyville-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-mary-annunciation-cemetery-pringle-pa",
@@ -7252,6 +8635,14 @@
       "slug": "st-mary-annunciation-cemetery-pringle-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Zerbey Avenue church",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -7302,6 +8693,14 @@
       "slug": "st-mary-annunciation-church-kingston-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "258 Zerbey Avenue, lower-confidence address",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-mary-annunciation-former-lot-kingston-pa",
@@ -7328,6 +8727,14 @@
       "slug": "st-mary-annunciation-former-lot-kingston-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Galloway Road cemetery",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-mary-lithuanian-national-cemetery-bensalem-pa",
@@ -7365,6 +8772,14 @@
       "slug": "st-mary-lithuanian-national-cemetery-bensalem-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "331 Reed Street church",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -7411,6 +8826,14 @@
       "slug": "st-mary-national-church-reed-philadelphia-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "331 Reed Street vacant lot",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-mary-national-vacant-lot-reed-philadelphia-pa",
@@ -7436,6 +8859,14 @@
       "slug": "st-mary-national-vacant-lot-reed-philadelphia-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -7481,6 +8912,18 @@
       "slug": "st-michael-church-shamokin-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:successor-2:bayonne-site"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "15-21 East 23rd Street",
+        "source_artifact_ids": [
+          "src:successor-2:bayonne-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -7544,6 +8987,14 @@
       "slug": "st-michael-east-23rd-bayonne-nj"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "1703 Jackson Street church",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -7606,6 +9057,14 @@
       "slug": "st-michael-jackson-street-scranton-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-michael-original-wooden-church-scranton-pa",
@@ -7644,6 +9103,14 @@
       "slug": "st-michael-original-wooden-church-scranton-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Jackson Street rectory",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-michael-rectory-jackson-scranton-pa",
@@ -7680,6 +9147,14 @@
       "slug": "st-michael-rectory-jackson-scranton-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "1644 W Wabansia Avenue",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -7731,6 +9206,14 @@
       "slug": "st-michael-wabansia-chicago-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -7778,6 +9261,18 @@
       "slug": "st-peter-detroit-site"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:living-1:boston-uses-flaherty-site"
+        ],
+        "authority": "accepted_assertion",
+        "display": "75 Flaherty Way",
+        "source_artifact_ids": [
+          "src:living-1:boston-st-peter-bulletin:2026-07"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -7825,6 +9320,18 @@
       "slug": "st-peter-flaherty-way-south-boston-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:deep-case-14:westfield-peter-site"
+        ],
+        "authority": "accepted_assertion",
+        "display": "24 State Street",
+        "source_artifact_ids": [
+          "src:deep-case-14:westfield-diocesan-news"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -7870,6 +9377,18 @@
       "slug": "st-peter-state-street-westfield-ma"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:pcs-6:girardville-sites"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "Second and C Streets",
+        "source_artifact_ids": [
+          "src:pcs-6:girardville-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-vincent-armory-church-girardville-pa",
@@ -7908,6 +9427,18 @@
       "slug": "st-vincent-armory-church-girardville-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:pcs-6:girardville-sites"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "Second and C Streets",
+        "source_artifact_ids": [
+          "src:pcs-6:girardville-case:2026-07-16"
+        ],
+        "state": "reported_unresolved"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -7969,6 +9500,14 @@
       "slug": "st-vincent-de-paul-second-c-street-girardville-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_name",
+        "display": "St. Vincent de Paul church at Eighth and Enos, Springfield",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -8014,6 +9553,14 @@
       "slug": "st-vincent-eighth-enos-springfield-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [
         {
           "confidence": "medium",
@@ -8062,6 +9609,14 @@
       "slug": "st-vincent-original-church-esplen-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "none",
+        "display": null,
+        "source_artifact_ids": [],
+        "state": "not_established"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:st-vincent-replacement-structure-esplen-pa",
@@ -8088,6 +9643,14 @@
       "slug": "st-vincent-replacement-structure-esplen-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Tabor Street school",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -8147,6 +9710,18 @@
       "slug": "st-vincent-school-church-esplen-pa"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
+          "assert:living-1:teviske-former-troy-site"
+        ],
+        "authority": "accepted_assertion",
+        "display": "6641-45 South Troy Street, Chicago",
+        "source_artifact_ids": [
+          "src:living-1:teviske-former-church:2015-07-02"
+        ],
+        "state": "established"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -8192,6 +9767,14 @@
       "slug": "teviske-former-troy-street-chicago-il"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Transfiguration Church at 64-25 Perry Avenue",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -8249,6 +9832,14 @@
       "slug": "transfiguration-maspeth-current-church"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_alias",
+        "display": "Transfiguration Hull Avenue church",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [
         {
           "confidence": "high",
@@ -8294,6 +9885,14 @@
       "slug": "transfiguration-maspeth-hull-avenue-church"
     },
     {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [],
+        "authority": "canonical_entity_name",
+        "display": "Transfiguration predecessor church building on Perry Avenue, Maspeth",
+        "source_artifact_ids": [],
+        "state": "recorded"
+      },
       "condition_relationships": [],
       "counted_in_public_institution_total": false,
       "culturenet_entity_id": "cn:building_site:transfiguration-maspeth-perry-predecessor-church",
@@ -8399,7 +9998,7 @@
       "building-standing"
     ]
   },
-  "content_hash": "sha256:7a6000a03246960c63a38bd8c3ef80c3664655fa10ed2c56bca972d01a4870a7",
+  "content_hash": "sha256:77118195dea3f0aedaa006b63b6fed689c493c4fbef66311f39228df230f700d",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -10970,7 +12569,14 @@
     "closed_roman_catholic_parishes_with_dated_year": 78,
     "coal_region_parish_institutions": 15,
     "institution_continuity_edges": 51,
+    "physical_worship_site_address_states": {
+      "established": 25,
+      "not_established": 25,
+      "recorded": 63,
+      "reported_unresolved": 18
+    },
     "physical_worship_sites": 131,
+    "physical_worship_sites_with_address_display": 106,
     "public_us_institutions": 155,
     "records_custody_edges": 7,
     "roman_catholic_parish_institutions": 132,
@@ -11680,7 +13286,7 @@
     "source_assertion_id": "assert:pastoral-18:membership",
     "unit": "current Lithuanian Catholic parish, mission, or hosted pastoral community"
   },
-  "generated": "2026-08-15",
+  "generated": "2026-08-16",
   "institution_history": [
     {
       "building_fate": null,
@@ -19357,6 +20963,7 @@
     "an institution timeline uses institution dates only",
     "a building timeline uses physical sites only and never changes the institution count",
     "a continuity view uses typed relationships and never collapses predecessor or successor institutions",
+    "a parish profile address is derived only from its terminal worship-site record",
     "site_r10_baseline facts remain visibly provisional until replaced by canonical graph assertions",
     "no public view may substitute one unit for another to fill a missing date"
   ],
@@ -19854,7 +21461,7 @@
       "unit": "distinct U.S. Roman Catholic parish institution"
     }
   },
-  "revision_id": "canonical-infographic-units-2026-08-15-reviewed-draugas-sielovada-20",
+  "revision_id": "canonical-infographic-units-2026-08-16-worship-site-addresses",
   "schema": "culturenet-parish-infographic-projection.v1",
   "unit_contracts": [
     {

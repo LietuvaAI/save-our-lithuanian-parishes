@@ -2,7 +2,7 @@
   "schema": "culturenet-parish-public-display-manifest.v1",
   "authority": "LietuvaAI/culturenet-brain",
   "publication_projection_revision": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
-  "infographic_projection_revision": "canonical-infographic-units-2026-08-15-reviewed-draugas-sielovada-20",
+  "infographic_projection_revision": "canonical-infographic-units-2026-08-16-worship-site-addresses",
   "current_events_revision": "parish-current-events-2026-08-14",
   "files": [
     {

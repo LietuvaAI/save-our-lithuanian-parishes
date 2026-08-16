@@ -98,6 +98,11 @@ The single hardest rule on the page, and the one the old design broke silently.
   strip carry, and what the History view counts (132).
 - A **worship site** has a dedication, replacement, demolition, sale, or reuse. Those are
   building events (131 sites site-wide) and never appear as a founding or ending date.
+- A street address also belongs to the **worship site**, not to the parish institution. The
+  profile may summarize only its Brain-selected terminal site's address. Every site row must
+  retain Brain's certainty label: established address, recorded location, reported but
+  unresolved address, or address not established. The site never maintains a second address
+  lookup or upgrades a recorded location to an established fact.
 - A **continuation** is a typed relationship (51 site-wide), not a merge of records.
 
 Design consequences:
