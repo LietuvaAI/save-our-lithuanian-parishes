@@ -200,7 +200,7 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-4xl py-6 text-center sm:py-8">
-        <p className="font-serif text-small-copy font-medium uppercase tracking-[0.22em] text-muted">
+        <p className="font-serif text-home-kicker font-medium uppercase tracking-[0.22em] text-muted">
           Amerikos lietuvių parapijos
         </p>
         <h1 className="mt-2 font-serif text-home-hero font-semibold uppercase tracking-[0.12em]">
@@ -215,7 +215,7 @@ export default function Home() {
           history of America&rsquo;s Lithuanian parishes&mdash;from their earliest
           foundations to the communities discerning their future today.
         </p>
-        <p className="mt-3 text-body-copy">
+        <p className="mt-3 text-home-action">
           <Link
             href="/about"
             className="font-semibold text-accent underline decoration-rule underline-offset-4 hover:text-foreground"
@@ -243,11 +243,11 @@ export default function Home() {
               <span className="font-serif text-masthead-title font-semibold leading-none tabular-nums">
                 {stat.value}
               </span>
-              <span className="text-small-copy font-semibold text-accent">
+              <span className="text-home-stat-copy font-semibold text-accent">
                 {stat.detail} →
               </span>
             </span>
-            <span className="mt-1 block text-left text-small-copy leading-[1.35] text-muted">
+            <span className="mt-1 block text-left text-home-stat-copy text-muted">
               {stat.label}
             </span>
           </Link>
@@ -264,7 +264,7 @@ export default function Home() {
             Parishes at a crossroads
           </h2>
         </div>
-        <p className="mt-2.5 max-w-[76ch] text-directory-description text-muted">
+        <p className="mt-2.5 max-w-[76ch] text-home-section-copy text-muted">
           {activeCampaignCountLabel} parishes face decisions about their future
           right now, and {monitoredAlerts.length} more situations are being
           followed — planned consolidations, churches on the market, and
@@ -327,15 +327,15 @@ export default function Home() {
                 )}
                 <div className="mt-2.5 min-w-0">
                   {href ? (
-                    <Link href={href} className="font-serif text-compact-heading font-semibold leading-[1.3] text-foreground hover:text-accent">
+                    <Link href={href} className="font-serif text-home-card-title font-semibold text-foreground hover:text-accent">
                       {alert.entity}
                     </Link>
                   ) : (
-                    <h3 className="font-serif text-compact-heading font-semibold leading-[1.3]">
+                    <h3 className="font-serif text-home-card-title font-semibold">
                       {alert.entity}
                     </h3>
                   )}
-                  <p className="mt-1 text-support-copy leading-[1.5] text-muted">
+                  <p className="mt-1 text-home-card-meta text-muted">
                     {alert.place} ·{" "}
                     {dioceseHref ? (
                       <a href={dioceseHref} target="_blank" rel="noopener noreferrer" className="font-semibold text-accent hover:text-foreground">
@@ -346,10 +346,10 @@ export default function Home() {
                     )}
                   </p>
                   <p className="mt-2">
-                    <EndStatePill value={status.value} label={status.label} />
+                    <EndStatePill value={status.value} label={status.label} size="lg" />
                   </p>
                   <div className={`mt-2.5 p-3 ${situationClass}`}>
-                    <p className="text-site-nav font-bold uppercase tracking-[0.07em] text-foreground">
+                    <p className="text-home-card-label font-bold uppercase tracking-[0.07em] text-foreground">
                       {tag}
                     </p>
                     <p className="mt-1 text-home-card-copy text-muted">

@@ -26,6 +26,12 @@ const REQUIRED_THEME_TOKENS = [
   "--text-directory-description: 13px",
   "--text-directory-footnote: 12px",
   "--text-site-nav: 12.5px",
+  "--text-home-intro: 16px",
+  "--text-home-section-copy: 14.5px",
+  "--text-home-card-title: 17px",
+  "--text-home-card-meta: 13.5px",
+  "--text-home-card-label: 13px",
+  "--text-home-card-copy: 14px",
   "--accent: var(--foreground)",
   '--font-mono: var(--font-timeline-mono), "IBM Plex Mono"',
   ':where(h1, h2, h3, h4, h5, h6)',
@@ -57,6 +63,21 @@ for (const [fragment, label] of [
 ]) {
   if (!siteLayout.includes(fragment)) {
     errors.push(`Site header: missing ${label}`);
+  }
+}
+
+const homepage = fs.readFileSync(path.join(ROOT, "app", "page.tsx"), "utf8");
+for (const [fragment, label] of [
+  ["text-home-intro", "readable homepage introduction"],
+  ["text-home-section-copy", "readable crossroads introduction"],
+  ["text-home-card-title", "readable crossroads card titles"],
+  ["text-home-card-meta", "readable crossroads card metadata"],
+  ["text-home-card-label", "readable crossroads card labels"],
+  ["text-home-card-copy", "readable crossroads card copy"],
+  ['size="lg"', "readable crossroads status pills"],
+]) {
+  if (!homepage.includes(fragment)) {
+    errors.push(`Homepage: missing ${label}`);
   }
 }
 
