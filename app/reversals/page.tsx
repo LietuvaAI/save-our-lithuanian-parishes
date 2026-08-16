@@ -6,6 +6,7 @@ import db from "@/data/reversal-database.json";
 export const metadata: Metadata = {
   title: "Where Rome Said No — parish closure reversals",
   description: `A verified database of U.S. Catholic parish-closure reversals: ${db.stats.reversals} documented cases across three diocesan waves where the Church's own law reopened churches or kept them open.`,
+  robots: { index: false, follow: false },
 };
 
 type Case = (typeof db.database)[number];

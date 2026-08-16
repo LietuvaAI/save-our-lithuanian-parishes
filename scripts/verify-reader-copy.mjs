@@ -102,7 +102,6 @@ const expectedNavOrder = [
   'label: "Lithuanian Parishes Alive, Year by Year"',
   'href: "/history/loss-by-diocese"',
   'label: "The Loss, Diocese by Diocese"',
-  'label: "Guidance"',
   'label: "About"',
   'href: "https://blog.saveourlithuanianparishes.org", label: "Židinys ↗"',
 ];
@@ -117,6 +116,18 @@ for (const navFragment of expectedNavOrder) {
 }
 if (layout.includes("/canadian-comparators")) {
   errors.push("app/layout.tsx: Canadian comparators returned to public navigation");
+}
+for (const retiredGuidanceFragment of [
+  'label: "Guidance"',
+  'href: "/start-here"',
+  'href: "/reversals"',
+  'href: "/what-canon-law-says"',
+]) {
+  if (layout.includes(retiredGuidanceFragment)) {
+    errors.push(
+      `app/layout.tsx: retired Guidance navigation returned: ${retiredGuidanceFragment}`,
+    );
+  }
 }
 if (existsSync(new URL("../app/canadian-comparators/page.tsx", import.meta.url))) {
   errors.push("app/canadian-comparators/page.tsx: retired public route returned");

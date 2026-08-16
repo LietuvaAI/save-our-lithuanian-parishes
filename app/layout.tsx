@@ -100,14 +100,6 @@ const NAV: NavItem[] = [
     ],
   },
   {
-    label: "Guidance",
-    children: [
-      { href: "/start-here", label: "Facing a Closure" },
-      { href: "/reversals", label: "Reversals" },
-      { href: "/what-canon-law-says", label: "What Canon Law Says" },
-    ],
-  },
-  {
     label: "About",
     children: [
       { href: "/about", label: "About the Project" },
