@@ -750,7 +750,7 @@ export default async function ParishPage({
 
   return (
     <article
-      className="mx-auto max-w-[1060px] px-4 py-10"
+      className="parish-profile mx-auto max-w-[1060px] px-4 py-10"
       data-profile-layout="canonical-v2"
       data-profile-image-state={imageState}
       data-record-depth={profile.recordDepth}
