@@ -3,7 +3,7 @@ title: "Who Owns an Ethnic Parish?"
 subtitle: "What the fate of 83 Lithuanian parishes reveals about ownership—and who decides whether a church survives."
 date: 2026-07-09
 substackUrl: https://blog.saveourlithuanianparishes.org/p/who-does-the-parish-belong-to
-archivedAt: 2026-08-15
+archivedAt: 2026-08-16
 ---
 ![](https://substackcdn.com/image/fetch/$s_!yWEH!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6c535108-4bf3-4f2a-94fd-8d33871a8535_1600x1067.jpeg)
 **A community at a crossroads: Parishioners gather outside Divine Providence Lithuanian Catholic Church following the Archdiocese of Detroit’s May 30, 2026 listening session on parish restructuring.**

@@ -3,7 +3,7 @@ title: "By the Numbers: The Archdiocese of Detroit's 13 Ethnic Parishes"
 subtitle: "The 13 parishes in the Archdiocese of Detroit defined by heritage rather than neighborhood — who they are, what their books look like, and where Divine Providence sits among them."
 date: 2026-07-15
 substackUrl: https://blog.saveourlithuanianparishes.org/p/who-the-archdioceses-ethnic-parishes
-archivedAt: 2026-08-15
+archivedAt: 2026-08-16
 ---
 The Archdiocese of Detroit began as an immigrant church. Ste. Anne de Détroit was founded by French colonists on July 26, 1701, the second-oldest continuously operating Catholic parish in the United States, and the cathedral of the diocese when Rome erected it in 1833.
 

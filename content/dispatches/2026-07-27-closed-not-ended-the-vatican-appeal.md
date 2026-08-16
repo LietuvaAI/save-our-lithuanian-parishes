@@ -3,7 +3,7 @@ title: "Closed, Not Ended: The Vatican Appeal for Šv. Juozapo (St. Joseph's) in
 subtitle: "New England's first Lithuanian parish closed September 30, 2023, with a Vatican appeal mounted in its final weeks. Almost three years later, the church is still standing, still Catholic, not sold."
 date: 2026-07-27
 substackUrl: https://blog.saveourlithuanianparishes.org/p/closed-not-ended-the-vatican-appeal
-archivedAt: 2026-08-15
+archivedAt: 2026-08-16
 ---
 ![](https://substackcdn.com/image/fetch/$s_!B1CG!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5a55df0b-dc56-41a4-8938-83b831385f4a_3720x3021.jpeg)Šv. Juozapo (St. Joseph’s), 46 Congress Avenue, Waterbury. Photo: Farragutful, Wikimedia Commons, CC BY-SA 4.0.
 ### History

@@ -3,7 +3,7 @@ title: "The Last Mass at Šv. Juozapo"
 subtitle: "New England’s oldest Lithuanian church held its final Mass on August 2, and a monsignor formally closed the building. The 2023 Vatican appeal still has no published ruling."
 date: 2026-08-08
 substackUrl: https://blog.saveourlithuanianparishes.org/p/the-last-mass-at-sv-juozapo
-archivedAt: 2026-08-15
+archivedAt: 2026-08-16
 ---
 ![](https://substackcdn.com/image/fetch/$s_!31G5!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F16325468-c35a-4557-a627-e7befb3d03fe_675x900.jpeg)
 *Šv. Juozapo (St. Joseph’s), 46 Congress Avenue, Waterbury — “First Lithuanian Parish In New England, Est. 1894.” Photo: Consulate General of Lithuania in New York*

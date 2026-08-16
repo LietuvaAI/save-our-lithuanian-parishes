@@ -3,7 +3,7 @@ title: "The Boston Hill of Crosses: How South Boston Saved Its Lithuanian Parish
 subtitle: "In 2004, the Archdiocese of Boston moved to close 82 of its 357 parishes. St. Peter Lithuanian in South Boston was one of them. It is still open, and still holds a Lithuanian Sunday Mass."
 date: 2026-07-17
 substackUrl: https://blog.saveourlithuanianparishes.org/p/the-boston-hill-of-crosses-how-south
-archivedAt: 2026-08-15
+archivedAt: 2026-08-16
 ---
 ![](https://substackcdn.com/image/fetch/$s_!mJpl!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F29ffe8ea-7540-451a-b1a8-6e7f98ef636a_680x450.jpeg)
 The notices came at the end of May 2004. The Archdiocese of Boston’s reconfiguration plan slated 82 of its 357 parishes to close, nearly one in four. On May 25, word reached St. Peter Lithuanian Church in South Boston: Archbishop Seán P. O’Malley intended to close its church and school. St. Peter’s had been the spiritual and cultural center of the city’s Lithuanian community for a century: its parish rooted in the 1890s, its church dating to 1904.
