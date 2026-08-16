@@ -108,11 +108,6 @@ const orderedMarkers = [
     source: pageSource,
   },
   {
-    id: "press-archive",
-    marker: "<ProfileDraugasReferences",
-    source: pageSource,
-  },
-  {
     id: "record-readings",
     marker: "<ParishRecordReadings",
     source: pageSource,

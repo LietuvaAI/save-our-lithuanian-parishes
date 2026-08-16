@@ -1,0 +1,278 @@
+{
+  "schema_version": "culturenet-solp-draugas-newspaper-projection-v1",
+  "projection_id": "projection:solp:draugas-newspaper-records:tranche1-2026-08-16",
+  "source_record_set_ref": "docs/research/parish-canon/public-display/draugas-newspaper-reconciliation-tranche1-2026-08-16/record-set.json",
+  "source_record_set_content_hash_sha256": "3ea52a9ac826451b9fa51f9f8d85abfd6edb58fd48531ed437eaa0881a14b394",
+  "source_held_dispositions_ref": "docs/research/parish-canon/public-display/draugas-newspaper-reconciliation-tranche1-2026-08-16/held-dispositions.json",
+  "source_held_dispositions_content_hash_sha256": "874b514e34182fd8743406440c77669a84dafc2bdf5b15ed1fadbc23d97844df",
+  "publication_state": "reviewed_public_newspaper_metadata_projection",
+  "review_authority": "Vilija/Framework projection review",
+  "reviewed_at": "2026-08-16",
+  "controls": {
+    "publication_allowed": true,
+    "solp_consumer_projection": true,
+    "solp_newspaper_display_allowed": true,
+    "solp_mutation_performed": false,
+    "canonical_evidence": false,
+    "assertion_admission_allowed": false,
+    "relationship_promotion_allowed": false,
+    "historical_claim_admission_allowed": false,
+    "sacred_core_write_allowed": false,
+    "contains_ocr_text": false,
+    "contains_page_text": false,
+    "contains_source_prose": false,
+    "contains_contextual_excerpts": false,
+    "contains_model_output": false,
+    "contains_raw_extraction_rows": false
+  },
+  "records": [
+    {
+      "source_record_id": "solp:draugas-newspaper-record:draugas-1932-04-09-p2-st-george-chicago-il",
+      "canonical_entity_id": "cn:institution:st-george-bridgeport-chicago-il",
+      "public_profile": "/parishes/sv-jurgio-chicago-il",
+      "issue_date": "1932-04-09",
+      "pdf_page": 2,
+      "page_url": "https://www.draugas.org/archive/1932_reg/1932-04-09-DRAUGASw.pdf#page=2",
+      "display_title": "Šv. Jurgio par. Chicagoj 40 m. gyvavimo sukaktį minint",
+      "title_state": "exact_printed_headline",
+      "citation_label": "Draugas, 1932-04-09, p. 2",
+      "rights": {
+        "rights_class": "public_periodical_archive_link",
+        "source_access": "public_web_archive",
+        "public_release_allowed": true,
+        "quote_policy": "citation_metadata_only",
+        "raw_text_allowed_in_git": false,
+        "model_processing_allowed": false,
+        "publication_notes": "Citation metadata only; no OCR, excerpts, source prose, or historical claim admission."
+      },
+      "provenance_hashes": {
+        "source_record_sha256": "05e0105a3baf1b09b718b168e78597d3566a88aaee97aa79f42aee5e9342beed",
+        "source_record_set_content_hash_sha256": "3ea52a9ac826451b9fa51f9f8d85abfd6edb58fd48531ed437eaa0881a14b394",
+        "source_sha256": "b31cf7efec29fb6a350711c1258c637afca234f5b8aabbfe3c0649acc0af010e",
+        "visual_review_render_sha256": "f1d16e94fb54db0048c434cf02808b4e9783f8371babb99521c02b65ff539d21",
+        "source_fixture_content_hash_sha256": "5ebb6669f6d20ba2f11179788ec98704f89f64a0544a05bebbbd006d217c8d57"
+      },
+      "historical_claim_adjudication_state": "not_admitted_in_this_record"
+    },
+    {
+      "source_record_id": "solp:draugas-newspaper-record:draugas-1987-04-24-p4-st-george-norwood-ma",
+      "canonical_entity_id": "cn:institution:st-george-norwood-ma",
+      "public_profile": "/parishes/sv-jurgio-norwood-ma",
+      "issue_date": "1987-04-24",
+      "pdf_page": 4,
+      "page_url": "https://www.draugas.org/archive/1987_reg/1987-04-24-DRAUGAS-i7-8.pdf#page=4",
+      "display_title": "DAIVOS MONGIRDAITĖS KONCERTAS",
+      "title_state": "exact_printed_headline",
+      "citation_label": "Draugas, 1987-04-24, p. 4",
+      "rights": {
+        "rights_class": "public_periodical_archive_link",
+        "source_access": "public_web_archive",
+        "public_release_allowed": true,
+        "quote_policy": "citation_metadata_only",
+        "raw_text_allowed_in_git": false,
+        "model_processing_allowed": false,
+        "publication_notes": "Citation metadata only; no OCR, excerpts, source prose, or historical claim admission."
+      },
+      "provenance_hashes": {
+        "source_record_sha256": "6e4bf56db04ee6329751a99161a38734b6ad1e32223071c197b9e4266966ff2c",
+        "source_record_set_content_hash_sha256": "3ea52a9ac826451b9fa51f9f8d85abfd6edb58fd48531ed437eaa0881a14b394",
+        "source_sha256": "a4a4602beb58746536c4232a59ac844ba292bd7cc83f4ee44a492eb551cb5ea0",
+        "visual_review_render_sha256": "9354279fc01e598f3cc3e1e6d4c9db8ff2ba921a29342a176cd5be10092783f1",
+        "source_fixture_content_hash_sha256": "5ebb6669f6d20ba2f11179788ec98704f89f64a0544a05bebbbd006d217c8d57"
+      },
+      "historical_claim_adjudication_state": "not_admitted_in_this_record"
+    },
+    {
+      "source_record_id": "solp:draugas-newspaper-record:draugas-1941-10-28-p2-st-george-rochester-ny",
+      "canonical_entity_id": "cn:institution:st-george-lithuanian-rochester-ny",
+      "public_profile": "/parishes/sv-jurgio-rochester-ny",
+      "issue_date": "1941-10-28",
+      "pdf_page": 2,
+      "page_url": "https://www.draugas.org/archive/1941_reg/1941-10-28-DRAUGASw.pdf#page=2",
+      "display_title": "Paminėta Parapijos 35 Metų Sukaktis",
+      "title_state": "exact_printed_headline",
+      "citation_label": "Draugas, 1941-10-28, p. 2",
+      "rights": {
+        "rights_class": "public_periodical_archive_link",
+        "source_access": "public_web_archive",
+        "public_release_allowed": true,
+        "quote_policy": "citation_metadata_only",
+        "raw_text_allowed_in_git": false,
+        "model_processing_allowed": false,
+        "publication_notes": "Citation metadata only; no OCR, excerpts, source prose, or historical claim admission."
+      },
+      "provenance_hashes": {
+        "source_record_sha256": "4ffff0c33e16bfa1b3ed128c1fb8449e633c3874d9c080d9a3e01f9938c6d0db",
+        "source_record_set_content_hash_sha256": "3ea52a9ac826451b9fa51f9f8d85abfd6edb58fd48531ed437eaa0881a14b394",
+        "source_sha256": "3c3ab2719f66dca5945a83bd5402de6ccf27d95fdc84a5c981daeea7123c98fe",
+        "visual_review_render_sha256": "4a08b4d6f7db85b5732aec89619b914b513acbc1a9d2795cc9c72445d15ae1c7",
+        "source_fixture_content_hash_sha256": "5ebb6669f6d20ba2f11179788ec98704f89f64a0544a05bebbbd006d217c8d57"
+      },
+      "historical_claim_adjudication_state": "not_admitted_in_this_record"
+    },
+    {
+      "source_record_id": "solp:draugas-newspaper-record:draugas-2007-10-25-p5-st-george-shenandoah-pa-correction",
+      "canonical_entity_id": "cn:institution:st-george-shenandoah-pa",
+      "public_profile": "/parishes/sv-jurgio-shenandoah-pa",
+      "issue_date": "2007-10-25",
+      "pdf_page": 5,
+      "page_url": "https://www.draugas.org/archive/2007_reg/2007-10-25-DRAUGAS-i13-16.pdf#page=5",
+      "display_title": "KLAIDŲ ATITAISYMAS",
+      "title_state": "reviewed_section_heading",
+      "citation_label": "Draugas, 2007-10-25, p. 5",
+      "rights": {
+        "rights_class": "public_periodical_archive_link",
+        "source_access": "public_web_archive",
+        "public_release_allowed": true,
+        "quote_policy": "citation_metadata_only",
+        "raw_text_allowed_in_git": false,
+        "model_processing_allowed": false,
+        "publication_notes": "Citation metadata only; no OCR, excerpts, source prose, or historical claim admission."
+      },
+      "provenance_hashes": {
+        "source_record_sha256": "f462afd9007e12d3d8a301ab1953b1b0563ee3b17afdc52d9ea3a4a1da3fb738",
+        "source_record_set_content_hash_sha256": "3ea52a9ac826451b9fa51f9f8d85abfd6edb58fd48531ed437eaa0881a14b394",
+        "source_sha256": "caf5d79947ab0f0fcb31fbd37b167d636fd877a70e40c3476c48ecc25ceb105f",
+        "visual_review_render_sha256": "7f06feaa0ac2f223a561a4ee4975a1212534da989540a4c774bf683573a7314f",
+        "source_fixture_content_hash_sha256": "5ebb6669f6d20ba2f11179788ec98704f89f64a0544a05bebbbd006d217c8d57"
+      },
+      "historical_claim_adjudication_state": "not_admitted_in_this_record"
+    },
+    {
+      "source_record_id": "solp:draugas-newspaper-record:draugas-1941-11-03-p2-st-george-shenandoah-pa",
+      "canonical_entity_id": "cn:institution:st-george-shenandoah-pa",
+      "public_profile": "/parishes/sv-jurgio-shenandoah-pa",
+      "issue_date": "1941-11-03",
+      "pdf_page": 2,
+      "page_url": "https://www.draugas.org/archive/1941_reg/1941-11-03-DRAUGASw.pdf#page=2",
+      "display_title": "Šv. Jurgio Parapija, Shenandoah, Pa., Iškilmingai Atšventė Auksinį Jubiliejų",
+      "title_state": "exact_printed_headline",
+      "citation_label": "Draugas, 1941-11-03, p. 2",
+      "rights": {
+        "rights_class": "public_periodical_archive_link",
+        "source_access": "public_web_archive",
+        "public_release_allowed": true,
+        "quote_policy": "citation_metadata_only",
+        "raw_text_allowed_in_git": false,
+        "model_processing_allowed": false,
+        "publication_notes": "Citation metadata only; no OCR, excerpts, source prose, or historical claim admission."
+      },
+      "provenance_hashes": {
+        "source_record_sha256": "4079758fcc24c16b3a380e59f11488b51bb3d24ad6dbaf7658d2337a2540939b",
+        "source_record_set_content_hash_sha256": "3ea52a9ac826451b9fa51f9f8d85abfd6edb58fd48531ed437eaa0881a14b394",
+        "source_sha256": "8b9183ac898f45d6fd9633bcc11beba2b5ab08e19ae359aab0a3b0b82ce7da74",
+        "visual_review_render_sha256": "bba6c3b20af17bf9eeb6383125984207c074b3486d42cd5424b2025ee3215ecb"
+      },
+      "historical_claim_adjudication_state": "separate_case_record_claim"
+    },
+    {
+      "source_record_id": "solp:draugas-newspaper-record:draugas-2007-03-03-p1-st-george-shenandoah-pa",
+      "canonical_entity_id": "cn:institution:st-george-shenandoah-pa",
+      "public_profile": "/parishes/sv-jurgio-shenandoah-pa",
+      "issue_date": "2007-03-03",
+      "pdf_page": 1,
+      "page_url": "https://www.draugas.org/archive/2007_reg/2007-03-03-DRAUGAS.pdf#page=1",
+      "display_title": "Sunerimę čikagiškiai reaguos į lietuviškų bažnyčių uždarymą",
+      "title_state": "exact_printed_headline",
+      "citation_label": "Draugas, 2007-03-03, p. 1",
+      "rights": {
+        "rights_class": "public_periodical_archive_link",
+        "source_access": "public_web_archive",
+        "public_release_allowed": true,
+        "quote_policy": "citation_metadata_only",
+        "raw_text_allowed_in_git": false,
+        "model_processing_allowed": false,
+        "publication_notes": "Citation metadata only; no OCR, excerpts, source prose, or historical claim admission."
+      },
+      "provenance_hashes": {
+        "source_record_sha256": "151e4940afc4914b5056ff79ea111e2abde37d20e371413b168955241fd4acc1",
+        "source_record_set_content_hash_sha256": "3ea52a9ac826451b9fa51f9f8d85abfd6edb58fd48531ed437eaa0881a14b394",
+        "source_sha256": "2db615a597425d2337254be88aa199f8e26e7a741d9ccc7e39c5206ed18d3a20",
+        "visual_review_render_sha256": "41160a1af792f0f0571cba8d78a32862a8d5e162ad649e185695b7ce5d6ab36e"
+      },
+      "historical_claim_adjudication_state": "requires_claim_audit"
+    },
+    {
+      "source_record_id": "solp:draugas-newspaper-record:draugas-2007-03-03-p6-st-george-shenandoah-pa-resolutions",
+      "canonical_entity_id": "cn:institution:st-george-shenandoah-pa",
+      "public_profile": "/parishes/sv-jurgio-shenandoah-pa",
+      "issue_date": "2007-03-03",
+      "pdf_page": 6,
+      "page_url": "https://www.draugas.org/archive/2007_reg/2007-03-03-DRAUGAS.pdf#page=6",
+      "display_title": "Lietuviškų organizacijų atstovų posėdyje priimtos rezoliucijos",
+      "title_state": "exact_printed_headline",
+      "citation_label": "Draugas, 2007-03-03, p. 6",
+      "rights": {
+        "rights_class": "public_periodical_archive_link",
+        "source_access": "public_web_archive",
+        "public_release_allowed": true,
+        "quote_policy": "citation_metadata_only",
+        "raw_text_allowed_in_git": false,
+        "model_processing_allowed": false,
+        "publication_notes": "Citation metadata only; no OCR, excerpts, source prose, or historical claim admission."
+      },
+      "provenance_hashes": {
+        "source_record_sha256": "d07581847d9059e4bd1d1b92897c4407f1a4a20f08552b2e080483f9283b8fac",
+        "source_record_set_content_hash_sha256": "3ea52a9ac826451b9fa51f9f8d85abfd6edb58fd48531ed437eaa0881a14b394",
+        "source_sha256": "2db615a597425d2337254be88aa199f8e26e7a741d9ccc7e39c5206ed18d3a20",
+        "visual_review_render_sha256": "460d4113c2b5344a54fee68fd8dc6aef704e274ccf252d2b7baf6330e44395a1"
+      },
+      "historical_claim_adjudication_state": "requires_claim_audit"
+    },
+    {
+      "source_record_id": "solp:draugas-newspaper-record:draugas-2008-03-27-p4-st-george-shenandoah-pa",
+      "canonical_entity_id": "cn:institution:st-george-shenandoah-pa",
+      "public_profile": "/parishes/sv-jurgio-shenandoah-pa",
+      "issue_date": "2008-03-27",
+      "pdf_page": 4,
+      "page_url": "https://draugas.org/key/2008_reg/2008-03-27-DRAUGASo.pdf#page=4",
+      "display_title": "Ar bus uždaryta dar viena lietuviška bažnyčia JAV?",
+      "title_state": "exact_printed_headline",
+      "citation_label": "Draugas, 2008-03-27, p. 4",
+      "rights": {
+        "rights_class": "public_periodical_archive_link",
+        "source_access": "public_web_archive",
+        "public_release_allowed": true,
+        "quote_policy": "citation_metadata_only",
+        "raw_text_allowed_in_git": false,
+        "model_processing_allowed": false,
+        "publication_notes": "Citation metadata only; no OCR, excerpts, source prose, or historical claim admission."
+      },
+      "provenance_hashes": {
+        "source_record_sha256": "c63965834c271158508c395031002981ea2e74b957ace50e0eb4f1e3eae49092",
+        "source_record_set_content_hash_sha256": "3ea52a9ac826451b9fa51f9f8d85abfd6edb58fd48531ed437eaa0881a14b394",
+        "source_sha256": "304a8ff3e49c49f58887514aaaed619b655d87f325b4aedde2de3f7b84147dcc",
+        "visual_review_render_sha256": "777e893c51319c638376d834f2f38b0de6850303e229a8e9bba6e84c224dad13"
+      },
+      "historical_claim_adjudication_state": "separate_case_record_claim"
+    },
+    {
+      "source_record_id": "solp:draugas-newspaper-record:draugas-2009-10-27-p6-st-george-shenandoah-pa",
+      "canonical_entity_id": "cn:institution:st-george-shenandoah-pa",
+      "public_profile": "/parishes/sv-jurgio-shenandoah-pa",
+      "issue_date": "2009-10-27",
+      "pdf_page": 6,
+      "page_url": "https://draugas.org/key/2009_reg/2009-10-27-DRAUGASo.pdf#page=6",
+      "display_title": "Išeiviai aprauda bažnyčias",
+      "title_state": "exact_printed_headline",
+      "citation_label": "Draugas, 2009-10-27, p. 6",
+      "rights": {
+        "rights_class": "public_periodical_archive_link",
+        "source_access": "public_web_archive",
+        "public_release_allowed": true,
+        "quote_policy": "citation_metadata_only",
+        "raw_text_allowed_in_git": false,
+        "model_processing_allowed": false,
+        "publication_notes": "Citation metadata only; no OCR, excerpts, source prose, or historical claim admission."
+      },
+      "provenance_hashes": {
+        "source_record_sha256": "01c97edb02e4ce10c5b877a94d74df914ce54442efa58f49212be446d5695e62",
+        "source_record_set_content_hash_sha256": "3ea52a9ac826451b9fa51f9f8d85abfd6edb58fd48531ed437eaa0881a14b394",
+        "source_sha256": "941cd9133a45edaafc365add4e4fd1b79162cf8a4e8952a333db866c75dadcc4",
+        "visual_review_render_sha256": "2b21c6280eadf60601808df771dca15c3a053b3181b6d30173f51cc5f6e778e8"
+      },
+      "historical_claim_adjudication_state": "separate_case_record_claim"
+    }
+  ],
+  "content_hash_sha256": "143118db45388cb94c1421623e0139428751b6606626d5b51d5ea7b4a3b4e742"
+}
