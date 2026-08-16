@@ -1089,26 +1089,21 @@ export default async function ParishPage({
 
       <div
         id="profile-corrections"
-        className="mt-8 grid gap-x-10 border-t border-rule pt-6 md:grid-cols-[158px_minmax(0,1fr)]"
+        className="mt-5 max-w-[38em] bg-band px-5 py-4"
       >
-        <div />
-        <div className="max-w-[38em] bg-band px-6 py-5">
-          <p className="font-serif text-subsection-title font-semibold leading-snug">
-            Do you know this {recordType === "misija" ? "mission" : "parish"}?
-            Is something happening there now?
-          </p>
-          <p className="mt-2 text-body-copy leading-relaxed text-muted">
-            People who were there can help complete this history. Corrections,
-            documents, photographs, and current news are all welcome.
-          </p>
-          <Link
-            href="/report"
-            className="mt-4 inline-block px-4 py-2.5 text-body-copy font-medium text-background"
-            style={{ background: "var(--accent)" }}
-          >
-            Report it &rarr;
-          </Link>
-        </div>
+        <p className="font-serif text-section-title font-semibold leading-snug">
+          Do you know this {recordType === "misija" ? "mission" : "parish"}?
+        </p>
+        <p className="mt-1 text-small-copy leading-relaxed text-muted">
+          People who were there can help complete this history. Corrections,
+          documents, photographs, and current news are all welcome.
+        </p>
+        <Link
+          href="/report"
+          className="mt-2 inline-block text-small-copy font-semibold underline underline-offset-4"
+        >
+          Report it &rarr;
+        </Link>
       </div>
     </article>
   );
