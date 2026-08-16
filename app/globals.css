@@ -7,9 +7,9 @@
   --muted: #78716c;
   --rule: #e7e5e4;
   --band: #f3eee2;
-  /* Editorial links and interactive emphasis. Red remains reserved for loss,
-     campaigns, and risk through --es-closed / --mark-closed. */
-  --accent: #2d6a4f;
+  /* Reader-facing links and interactive emphasis use the editorial ink color.
+     Green remains reserved for active-status data through --es-active. */
+  --accent: var(--foreground);
 
   /* Mark encoding from the „Kam priklauso bažnyčia?" infographic:
      shape + fill carry the meaning (grayscale-safe), one deep red for "lost". */
@@ -110,7 +110,7 @@
     --muted: #a8a29e;
     --rule: #292524;
     --band: #1e1b19;
-    --accent: #52b788;
+    --accent: var(--foreground);
 
     --mark-closed: #c96a6a;
     --mark-community: #d5c28b;

@@ -26,6 +26,7 @@ const REQUIRED_THEME_TOKENS = [
   "--text-directory-description: 13px",
   "--text-directory-footnote: 12px",
   "--text-site-nav: 12.5px",
+  "--accent: var(--foreground)",
   '--font-mono: var(--font-timeline-mono), "IBM Plex Mono"',
   ':where(h1, h2, h3, h4, h5, h6)',
 ];
@@ -49,6 +50,9 @@ for (const [fragment, label] of [
   ["text-site-nav", "shared navigation type token"],
   ["flex min-h-11 items-center", "44px navigation touch targets"],
   ["font-sans text-body-copy", "readable dropdown type"],
+  ["gap-x-5 gap-y-1.5", "comfortable navigation spacing"],
+  ["bg-[#faf7f1]", "header and footer shared background"],
+  ["hover:border-foreground hover:text-foreground", "black navigation interaction color"],
   ['label: "History",\n    menuAlign: "right"', "mobile-safe History menu alignment"],
 ]) {
   if (!siteLayout.includes(fragment)) {
