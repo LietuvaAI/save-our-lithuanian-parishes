@@ -163,7 +163,11 @@ export function ProfileSourceLedger({
           {groupedSources.map(({ group, entries }) => {
             const meta = GROUP_META[group];
             return (
-              <details key={group} className="group border-b border-rule">
+              <details
+                key={group}
+                open={entries.some((source) => source.reviewedPublicReference)}
+                className="group border-b border-rule"
+              >
                 <summary className="grid cursor-pointer list-none gap-3 px-4 py-4 marker:content-none md:grid-cols-[minmax(0,1fr)_auto] md:items-center [&::-webkit-details-marker]:hidden">
                   <div>
                     <h3 className="font-serif text-card-title font-semibold">

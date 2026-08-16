@@ -10,7 +10,6 @@ import { EndStateDot } from "@/components/EndStatePill";
 import ParishContextMap from "@/components/ParishContextMap";
 import ParishNationalLocator from "@/components/ParishNationalLocator";
 import { ParishProfileChronology } from "@/components/ParishProfileChronology";
-import { ProfileDraugasReferences } from "@/components/ProfileDraugasReferences";
 import {
   CONGREGATION_CLASS_LABEL,
   ParishPublishedRecord,
@@ -24,7 +23,10 @@ import { ProfileSection } from "@/components/ProfileSection";
 import { ProfileSourceLedger } from "@/components/ProfileSourceLedger";
 import { ProfileWorshipSites } from "@/components/ProfileWorshipSites";
 import { END_STATE_LABEL } from "@/lib/end-state";
-import { getDraugasReferencesForProfile } from "@/lib/draugas-references";
+import {
+  draugasReferenceProfileSources,
+  getDraugasReferencesForProfile,
+} from "@/lib/draugas-references";
 import { getCurrentPastoralDirectoryEntry } from "@/lib/infographic-projection";
 import {
   canonicalParishProfiles,
@@ -563,6 +565,7 @@ export default async function ParishPage({
       )
     : (entry.sources ?? []);
   const profileSources = finalizeProfileSources([
+    draugasReferenceProfileSources(draugasReferences),
     core && !pastoralDirectoryEntry?.draugasEvidence
       ? draugasProfileSources(core.citations)
       : [],
@@ -1080,8 +1083,6 @@ export default async function ParishPage({
       <ProfileWorshipSites sites={renderedWorshipSites} />
 
       <ProfileRelatedRecords records={renderedRelatedRecords} />
-
-      <ProfileDraugasReferences references={draugasReferences} />
 
       <ParishRecordReadings profile={profile} />
 

@@ -21,6 +21,7 @@ export type ProfileSource = {
   contexts: string[];
   excerpt?: string;
   missingLinkNote?: string;
+  reviewedPublicReference?: boolean;
 };
 
 export type RegistryProfileSource = {
@@ -98,8 +99,13 @@ function isAbsoluteWebUrl(url: string | null | undefined): url is string {
 }
 
 function canonicalArtifactGroup(
-  artifactType: string,
+  artifact: PublicationSourceArtifact,
 ): ProfileSourceGroup {
+  const artifactType = artifact.artifact_type.toLowerCase();
+  const publicUrl = artifact.rights?.public_url ?? "";
+  if (/^https?:\/\/(?:www\.)?draugas\.org\//i.test(publicUrl)) {
+    return "newspaper";
+  }
   if (/newspaper|periodical|news|report/.test(artifactType)) {
     return "newspaper";
   }
@@ -121,7 +127,7 @@ export function canonicalArtifactProfileSources(
       const citation = artifact.locator?.page;
       return [
         {
-          group: canonicalArtifactGroup(artifact.artifact_type),
+          group: canonicalArtifactGroup(artifact),
           title: artifact.title,
           date: firstRecordedDate(
             artifact.locator?.exact_label,

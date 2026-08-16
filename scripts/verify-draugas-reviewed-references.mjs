@@ -192,20 +192,31 @@ walk(projection);
 
 const importer = readFileSync(join(root, "scripts/import-brain-projections.mjs"), "utf8");
 const loader = readFileSync(join(root, "lib/draugas-references.ts"), "utf8");
-const component = readFileSync(join(root, "components/ProfileDraugasReferences.tsx"), "utf8");
 const profile = readFileSync(join(root, "app/parishes/[slug]/page.tsx"), "utf8");
+const sourceLedger = readFileSync(join(root, "components/ProfileSourceLedger.tsx"), "utf8");
+const profileSources = readFileSync(join(root, "lib/profile-sources.ts"), "utf8");
 for (const [source, token, label] of [
   [importer, "docs/research/parish-canon/public-display/draugas-references.json", "Brain import"],
   [loader, "getDraugasReferencesForProfile", "canonical loader"],
-  [component, 'id="press-archive"', "profile section"],
-  [profile, "<ProfileDraugasReferences", "profile render"],
+  [loader, "draugasReferenceProfileSources", "source-ledger adapter"],
+  [loader, 'group: "newspaper"', "newspaper source group"],
+  [loader, "title: reference.display_label", "reviewed source title"],
+  [loader, "citation: reference.citation_label", "reviewed citation"],
+  [loader, "url: reference.page_url", "reviewed page link"],
+  [loader, "reviewedPublicReference: true", "reviewed-reference marker"],
+  [profile, "draugasReferenceProfileSources(draugasReferences)", "source-ledger render"],
+  [sourceLedger, "source.reviewedPublicReference", "reviewed newspaper auto-open"],
+  [profileSources, "draugas\\.org", "Draugas artifact classification"],
 ]) {
   if (!source.includes(token)) errors.push(`${label} is missing ${token}`);
 }
 for (const forbidden of ["getDraugasProfileLedger", "canonical-draugas-mention-projection"] ) {
-  if (loader.includes(forbidden) || component.includes(forbidden)) {
+  if (loader.includes(forbidden)) {
     errors.push(`retired/unreviewed Draugas surface token returned: ${forbidden}`);
   }
+}
+if (profile.includes("ProfileDraugasReferences")) {
+  errors.push("reviewed Draugas references must render in the existing source ledger, not a standalone section.");
 }
 
 if (errors.length) {

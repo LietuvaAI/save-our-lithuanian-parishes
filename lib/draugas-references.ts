@@ -1,4 +1,8 @@
 import projectionData from "@/data/canonical-draugas-references.json";
+import {
+  finalizeProfileSources,
+  type ProfileSource,
+} from "@/lib/profile-sources";
 import { publicInstitutions } from "@/lib/publication-projection";
 
 export type DraugasReferenceRights = {
@@ -135,5 +139,22 @@ export function getDraugasReferencesForProfile(
   if (!canonicalEntityId) return [];
   return (referencesByProfile.get(publicProfile) ?? []).filter(
     (reference) => reference.canonical_entity_id === canonicalEntityId,
+  );
+}
+
+export function draugasReferenceProfileSources(
+  references: DraugasReference[],
+): ProfileSource[] {
+  return finalizeProfileSources(
+    references.map((reference) => ({
+      group: "newspaper" as const,
+      title: reference.display_label,
+      publisher: reference.source_publication,
+      date: reference.issue_date,
+      citation: reference.citation_label,
+      url: reference.page_url,
+      contexts: [reference.description],
+      reviewedPublicReference: true,
+    })),
   );
 }
