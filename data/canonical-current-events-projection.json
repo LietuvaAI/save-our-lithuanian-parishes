@@ -5,7 +5,7 @@
     "repository": "LietuvaAI/culturenet-brain",
     "source_path": "docs/research/parish-canon/current-events/source.json",
     "publication_projection_revision": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
-    "infographic_projection_revision": "canonical-infographic-units-2026-08-15-reviewed-draugas-sielovada-20"
+    "infographic_projection_revision": "canonical-infographic-units-2026-08-16-worship-site-addresses"
   },
   "scope": "parish-watch-current-events",
   "snapshot": "2026-08-14",
@@ -1317,5 +1317,5 @@
       "canonicalEntityId": "cn:institution:blessed-jurgis-matulaitis-mission-lemont-il"
     }
   ],
-  "content_hash": "sha256:c71b7e259de9efe30b6329395675f79c5c8676ddd7bdb1de86da68dfaa25c1d2"
+  "content_hash": "sha256:f084ad2ca4cd2ea9cc2492e9fc9ed8e6d1b16925cd434dfe704e7b96f6053e60"
 }

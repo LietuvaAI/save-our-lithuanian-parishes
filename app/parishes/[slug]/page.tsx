@@ -37,6 +37,7 @@ import {
   getInstitutionTransition,
   getRelatedRecordsForInstitution,
   getWorshipSitesForInstitution,
+  worshipSiteAddressDetail,
 } from "@/lib/parish-record-graph";
 import {
   getParishTimeline,
@@ -414,7 +415,7 @@ export default async function ParishPage({
     parishCampaign?.profile?.siteDetail ??
     (!isUsProjection ? caseRecord?.profile?.currentSite?.detail : null) ??
     null;
-  const currentChurchDetail =
+  const normalizedCurrentChurchDetail =
     rawCurrentChurchDetail &&
     buildingOutcome &&
     rawCurrentChurchDetail
@@ -425,6 +426,16 @@ export default async function ParishPage({
           .replace(/^\s*[\u00b7:;,-]\s*/, "")
           .replace(/^./, (character) => character.toUpperCase())
       : rawCurrentChurchDetail;
+  const currentChurchDetail = isUsProjection
+    ? [
+        selectedWorshipSite
+          ? worshipSiteAddressDetail(selectedWorshipSite.address)
+          : "Address not established",
+        normalizedCurrentChurchDetail,
+      ]
+        .filter(Boolean)
+        .join(" \u00b7 ")
+    : normalizedCurrentChurchDetail;
   const renderedWorshipSites =
     recordType === "misija" || !isUsProjection ? [] : worshipSites;
   const renderedRelatedRecords = !isUsProjection ? [] : relatedRecords;

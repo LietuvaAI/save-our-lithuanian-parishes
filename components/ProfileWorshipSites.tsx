@@ -1,5 +1,8 @@
 import { ProfileSection } from "@/components/ProfileSection";
-import type { WorshipSiteRow } from "@/lib/parish-record-graph";
+import {
+  worshipSiteAddressDetail,
+  type WorshipSiteRow,
+} from "@/lib/parish-record-graph";
 
 /**
  * Buildings, not institutions. A site's dedication, replacement, demolition,
@@ -29,6 +32,9 @@ export function ProfileWorshipSites({ sites }: { sites: WorshipSiteRow[] }) {
               <p className="mt-1.5 font-mono text-ui-label font-medium uppercase tracking-wider text-muted">
                 Outcome &middot;{" "}
                 <span className="text-foreground">{site.outcome}</span>
+              </p>
+              <p className="mt-1.5 text-small-copy leading-relaxed text-muted">
+                {worshipSiteAddressDetail(site.address)}
               </p>
               {site.milestones.length > 0 && (
                 <ol className="mt-3 space-y-1.5 border-t border-border pt-3">

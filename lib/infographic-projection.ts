@@ -175,6 +175,25 @@ export type InstitutionUsePeriod = {
   } | null;
 };
 
+export type BuildingSiteAddress = {
+  state:
+    | "established"
+    | "recorded"
+    | "reported_unresolved"
+    | "not_established";
+  display: string | null;
+  alternate_displays: string[];
+  authority:
+    | "accepted_assertion"
+    | "conflict_preserved_assertion"
+    | "canonical_entity_alias"
+    | "canonical_entity_name"
+    | "unresolved_assertion"
+    | "none";
+  assertion_ids: string[];
+  source_artifact_ids: string[];
+};
+
 export type BuildingSiteHistoryRow = {
   culturenet_entity_id: string;
   slug: string;
@@ -187,6 +206,7 @@ export type BuildingSiteHistoryRow = {
   first_documented_year: number | null;
   lifecycle_text: Record<string, unknown> | null;
   demolished_year: number | null;
+  address: BuildingSiteAddress;
   milestones: Array<{
     assertion_id: string;
     event: string;
@@ -271,6 +291,14 @@ type InfographicProjection = {
     institution_summary_rule: string;
     legacy_rule: string;
   };
+  address_resolution_contract: {
+    unit: string;
+    verified_rule: string;
+    conflict_rule: string;
+    recorded_rule: string;
+    gap_rule: string;
+    institution_rule: string;
+  };
   counts: {
     public_us_institutions: number;
     roman_catholic_parish_institutions: number;
@@ -282,6 +310,11 @@ type InfographicProjection = {
     closed_roman_catholic_parishes_since_2020: number;
     building_site_entities: number;
     physical_worship_sites: number;
+    physical_worship_sites_with_address_display: number;
+    physical_worship_site_address_states: Record<
+      BuildingSiteAddress["state"],
+      number
+    >;
     institution_continuity_edges: number;
     records_custody_edges: number;
     coal_region_parish_institutions: number;
@@ -412,6 +445,8 @@ export const additionalPastoralCommunities =
 export const infographicCounts = canonicalInfographics.counts;
 export const conditionResolutionContract =
   canonicalInfographics.condition_resolution_contract;
+export const addressResolutionContract =
+  canonicalInfographics.address_resolution_contract;
 export const pennsylvaniaCoalRegion =
   canonicalInfographics.regional_views.pennsylvania_coal_region;
 export const canadianComparators = canonicalInfographics.comparators.canada;
@@ -510,6 +545,48 @@ if (
 }
 if (physicalWorshipSiteHistory.length !== infographicCounts.physical_worship_sites) {
   throw new Error("Canonical physical worship-site count drifted.");
+}
+const physicalWorshipSiteAddressCounts = physicalWorshipSiteHistory.reduce(
+  (counts, site) => {
+    counts[site.address.state] += 1;
+    return counts;
+  },
+  {
+    established: 0,
+    recorded: 0,
+    reported_unresolved: 0,
+    not_established: 0,
+  } satisfies Record<BuildingSiteAddress["state"], number>,
+);
+for (const state of Object.keys(
+  physicalWorshipSiteAddressCounts,
+) as BuildingSiteAddress["state"][]) {
+  if (
+    physicalWorshipSiteAddressCounts[state] !==
+    infographicCounts.physical_worship_site_address_states[state]
+  ) {
+    throw new Error(`Canonical physical-site address count drifted: ${state}.`);
+  }
+}
+if (
+  physicalWorshipSiteHistory.filter((site) => site.address.display).length !==
+  infographicCounts.physical_worship_sites_with_address_display
+) {
+  throw new Error("Canonical physical-site address-display count drifted.");
+}
+const chicagoStGeorgeSite = physicalWorshipSiteHistory.find(
+  (site) =>
+    site.culturenet_entity_id ===
+    "cn:building_site:st-george-lituanica-church-chicago-il",
+);
+if (
+  chicagoStGeorgeSite?.address.state !== "recorded" ||
+  chicagoStGeorgeSite.address.display !== "3230 S Lituanica Avenue" ||
+  !chicagoStGeorgeSite.address.alternate_displays.includes(
+    "33rd Street and Lituanica Avenue",
+  )
+) {
+  throw new Error("Chicago St. George worship-site address drifted.");
 }
 if (
   additionalCurrentHostedCommunities.length !== 1 ||

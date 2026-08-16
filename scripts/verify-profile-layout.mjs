@@ -169,6 +169,11 @@ const requiredFragments = [
   [worshipSitesSource, "site.milestones.map", "worship-site milestone list"],
   [
     worshipSitesSource,
+    "worshipSiteAddressDetail(site.address)",
+    "worship-site address state rendering",
+  ],
+  [
+    worshipSitesSource,
     "if (sites.length === 0) return null;",
     "empty worship-site section omission",
   ],
@@ -224,6 +229,11 @@ const requiredFragments = [
   [profileViewSource, "Building status", "explicit building outcome"],
   [pageSource, "survivedReviewThenClosed", "survived-review warning"],
   [pageSource, "currentChurchDetail", "worship-site status detail"],
+  [
+    pageSource,
+    "worshipSiteAddressDetail(selectedWorshipSite.address)",
+    "terminal-site address summary",
+  ],
   [pageSource, "data-profile-building-status", "headline building status"],
   [pageSource, "campaignLiturgy?.detail", "campaign liturgy qualification"],
   [pageSource, "campaignLiturgy?.href", "campaign liturgy destination link"],
@@ -485,6 +495,35 @@ const siteByEntityId = new Map(
     site,
   ]),
 );
+const worshipSitesWithAddresses = infographic.building_site_history.filter(
+  (site) => site.site_class === "worship_site",
+);
+const addressStateCounts = Object.fromEntries(
+  ["established", "recorded", "reported_unresolved", "not_established"].map(
+    (state) => [
+      state,
+      worshipSitesWithAddresses.filter((site) => site.address?.state === state)
+        .length,
+    ],
+  ),
+);
+for (const [state, count] of Object.entries(addressStateCounts)) {
+  if (infographic.counts.physical_worship_site_address_states?.[state] !== count) {
+    errors.push(`profile worship-site address-state partition drifted: ${state}`);
+  }
+}
+const chicagoStGeorgeAddress = siteByEntityId.get(
+  "cn:building_site:st-george-lituanica-church-chicago-il",
+)?.address;
+if (
+  chicagoStGeorgeAddress?.state !== "recorded" ||
+  chicagoStGeorgeAddress.display !== "3230 S Lituanica Avenue" ||
+  !chicagoStGeorgeAddress.alternate_displays?.includes(
+    "33rd Street and Lituanica Avenue",
+  )
+) {
+  errors.push("Chicago St. George profile address regression drifted");
+}
 
 // The visual cases are also semantic regression cases. These assertions protect
 // the current canon where the design reference still reflects an older packet.

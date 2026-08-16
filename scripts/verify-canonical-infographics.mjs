@@ -150,6 +150,64 @@ if (sites.some((row) => row.counted_in_public_institution_total !== false)) {
 if (sites.some((row) => row.site_class === "unclassified")) {
   errors.push("an unclassified physical site remains in the projection");
 }
+const addressStates = [
+  "established",
+  "recorded",
+  "reported_unresolved",
+  "not_established",
+];
+const addressStateCounts = Object.fromEntries(
+  addressStates.map((state) => [
+    state,
+    worshipSites.filter((site) => site.address?.state === state).length,
+  ]),
+);
+for (const state of addressStates) {
+  if (
+    addressStateCounts[state] !==
+    infographic.counts.physical_worship_site_address_states?.[state]
+  ) {
+    errors.push(
+      `physical worship-site address state ${state}: ${addressStateCounts[state]} != ${infographic.counts.physical_worship_site_address_states?.[state]}`,
+    );
+  }
+}
+const addressDisplayCount = worshipSites.filter(
+  (site) => site.address?.display,
+).length;
+if (
+  addressDisplayCount !==
+  infographic.counts.physical_worship_sites_with_address_display
+) {
+  errors.push(
+    `physical worship-site address displays: ${addressDisplayCount} != ${infographic.counts.physical_worship_sites_with_address_display}`,
+  );
+}
+if (
+  worshipSites.some(
+    (site) =>
+      !site.address ||
+      !addressStates.includes(site.address.state) ||
+      (site.address.state === "not_established" && site.address.display !== null) ||
+      (site.address.state !== "not_established" && !site.address.display),
+  )
+) {
+  errors.push("a physical worship site lacks an explicit canonical address state");
+}
+const chicagoStGeorgeAddress = worshipSites.find(
+  (site) =>
+    site.culturenet_entity_id ===
+    "cn:building_site:st-george-lituanica-church-chicago-il",
+)?.address;
+if (
+  chicagoStGeorgeAddress?.state !== "recorded" ||
+  chicagoStGeorgeAddress.display !== "3230 S Lituanica Avenue" ||
+  !chicagoStGeorgeAddress.alternate_displays?.includes(
+    "33rd Street and Lituanica Avenue",
+  )
+) {
+  errors.push("Chicago St. George canonical worship-site address drifted");
+}
 const currentWorshipSiteIds = new Set(
   retainingLithuanianWorship.flatMap(
     (institution) => institution.terminal_worship_site_ids ?? [],

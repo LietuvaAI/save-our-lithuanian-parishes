@@ -5,6 +5,7 @@ import {
   getInfographicInstitutionByEntityId,
   getInfographicInstitutionByProfile,
   resolvePhysicalSiteCondition,
+  type BuildingSiteAddress,
   type BuildingSiteHistoryRow,
   type ContinuityEdge,
   type ContinuityEndpoint,
@@ -31,12 +32,40 @@ export type WorshipSiteRow = {
   condition: PhysicalSiteCondition;
   outcome: string;
   demolishedYear: number | null;
+  /** Brain-owned location state for this physical worship site. */
+  address: BuildingSiteAddress;
   milestones: Array<{
     id: string;
     date: string;
     label: string;
   }>;
 };
+
+export function worshipSiteAddressDetail(address: BuildingSiteAddress): string {
+  const primary =
+    address.state === "established" && address.display
+      ? `Address \u00b7 ${address.display}`
+      : address.state === "recorded" && address.display
+        ? `Recorded location \u00b7 ${address.display}`
+        : address.state === "reported_unresolved" && address.display
+          ? `Reported address \u2014 unresolved \u00b7 ${address.display}`
+          : "Address not established";
+  const alternates = address.alternate_displays.filter(
+    (display) => display !== address.display,
+  );
+  return [
+    primary,
+    alternates.length > 0
+      ? `${
+          address.state === "reported_unresolved"
+            ? "Other reported location"
+            : "Alternate recorded location"
+        } \u00b7 ${alternates.join("; ")}`
+      : null,
+  ]
+    .filter(Boolean)
+    .join(" \u00b7 ");
+}
 
 export type RelatedRecordRow = {
   id: string;
@@ -163,6 +192,7 @@ export function getWorshipSitesForInstitution(
         condition: resolvePhysicalSiteCondition(site.condition_relationships),
         outcome: siteOutcome(site),
         demolishedYear: siteDemolishedYear(site),
+        address: site.address,
         milestones: site.milestones.map((milestone) => ({
           id: `${milestone.assertion_id}:${milestone.event}`,
           date: milestone.date,
