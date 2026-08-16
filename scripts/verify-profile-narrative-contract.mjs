@@ -30,6 +30,7 @@ const protectedHistory = new Map([
   ["kristaus-atsimainymo-maspeth-ny.json", ["historicalNarrative", 3]],
   ["st-ann-beverly-shores-in.json", ["historicalNarrative", 3]],
   ["sv-jurgio-norwood-ma.json", ["historicalNarrative", 2]],
+  ["sv-jurgio-rochester-ny.json", ["historicalNarrative", 4]],
   ["sv-jurgio-shenandoah-pa.json", ["historicalNarrative", 6]],
   ["sv-kazimiero-worcester-ma.json", ["historicalNarrative", 6]],
   ["sv-juozapo-waterbury-ct.json", ["historicalNarrative", 3]],
@@ -83,6 +84,14 @@ for (const filename of caseFiles) {
         "use sourced historicalNarrative",
     );
   }
+  (record.developments ?? []).forEach((development, index) => {
+    const date = String(development?.date ?? "").trim().toLowerCase();
+    if (!date || date === "undefined" || date === "null") {
+      errors.push(
+        `case development has no public date label: ${filename} #${index + 1}`,
+      );
+    }
+  });
   const contract = protectedHistory.get(filename);
   if (!contract) continue;
   const [field, minimum] = contract;
