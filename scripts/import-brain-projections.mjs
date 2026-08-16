@@ -55,6 +55,14 @@ const jsonPairs = [
     "../data/canonical-draugas-newspaper-records.json",
   ],
   [
+    "docs/research/parish-canon/public-display/draugas-parish-centered-title-focus-tranche1-2026-08-16/record-set.json",
+    "../data/canonical-draugas-parish-centered-title-focus-tranche1.json",
+  ],
+  [
+    "docs/research/parish-canon/public-display/draugas-parish-centered-title-focus-tranche1-2026-08-16/held-dispositions.json",
+    "../data/canonical-draugas-parish-centered-title-focus-tranche1-held.json",
+  ],
+  [
     "docs/research/parish-preservation-deep-research/phase-2-reversal-database.json",
     "../data/reversal-database.json",
   ],

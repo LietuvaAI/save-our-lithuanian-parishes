@@ -126,6 +126,10 @@ export function ProfileSourceLedger({
     const entries = publicSources
       .filter((source) => source.group === group)
       .sort((left, right) => {
+        const classDelta =
+          Number(left.referenceClass === "supplemental_reference") -
+          Number(right.referenceClass === "supplemental_reference");
+        if (classDelta) return classDelta;
         const dateDelta = dateSortKey(right).localeCompare(dateSortKey(left));
         return dateDelta || left.title.localeCompare(right.title);
       });
@@ -212,20 +216,27 @@ export function ProfileSourceLedger({
                           {sourceDateLabel(source)}
                         </p>
                         <div className="min-w-0">
-                          {source.url ? (
-                            <a
-                              href={source.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="font-serif text-card-title font-semibold leading-snug underline decoration-1 underline-offset-4 hover:text-accent"
-                            >
-                              {source.title} <span aria-hidden="true">↗</span>
-                            </a>
-                          ) : (
-                            <p className="font-serif text-card-title font-semibold leading-snug">
-                              {source.title}
-                            </p>
-                          )}
+                          <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                            {source.url ? (
+                              <a
+                                href={source.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-serif text-card-title font-semibold leading-snug underline decoration-1 underline-offset-4 hover:text-accent"
+                              >
+                                {source.title} <span aria-hidden="true">↗</span>
+                              </a>
+                            ) : (
+                              <p className="font-serif text-card-title font-semibold leading-snug">
+                                {source.title}
+                              </p>
+                            )}
+                            {source.badgeLabel && (
+                              <span className="rounded-full border border-rule bg-band px-2 py-0.5 text-ui-label font-semibold tracking-[0.04em] text-foreground">
+                                {source.badgeLabel}
+                              </span>
+                            )}
+                          </div>
 
                           {(source.publisher || domain) && (
                             <p className="mt-1 text-small-copy text-muted">
