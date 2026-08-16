@@ -376,9 +376,12 @@ export default function LithuanianCatholicLifeTodayPage() {
           title="Lithuanian Masses hosted by other parishes"
           count={view.counts.hosted}
         >
-          In these places the Lithuanian parish itself is gone, but a Lithuanian
-          Mass continues inside a parish that is no longer Lithuanian-led —
-          never counted as an active Lithuanian parish.
+          Five of these communities continue from Lithuanian parish institutions
+          that later merged or now worship within host settings. Washington
+          Epiphany is different: it was never a Lithuanian parish or mission;
+          Lithuanian Mass is hosted inside a territorial parish. None of the six
+          is counted among the six active Lithuanian-led parishes or two active
+          missions.
         </SectionHeader>
         <div className="mt-4 grid grid-cols-[repeat(auto-fill,minmax(196px,1fr))] gap-x-[18px] gap-y-5">
           {view.hostedCards.map((card) => (

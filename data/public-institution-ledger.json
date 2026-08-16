@@ -4,9 +4,9 @@
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
     "revisionId": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
-    "contentHash": "sha256:a7db4124a61d79806b74cdcb583a91738b386d049b1e43096107c590513d64e2"
+    "contentHash": "sha256:ba6eb479c426644160bb976d2b31c5be73331f3859472d9cf788faa8f047f799"
   },
-  "registryRevision": 33,
+  "registryRevision": 34,
   "registryDate": "2026-08-11",
   "claim": "The current documented record contains 155 distinct U.S. Lithuanian religious institutions.",
   "inclusionRule": "Count one canonical U.S. institution when CultureNet publishes it as a parish, mission, or congregation. Buildings, duplicate aliases, historical attempts, hosted worship, research leads, and comparators remain linked context and never increase this total.",
