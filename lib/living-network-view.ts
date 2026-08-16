@@ -293,6 +293,11 @@ for (const entityId of directoryReligiousIds) {
   }
 }
 
+const OTHER_DIRECTORY_CARD_PRIORITY: Record<string, number> = {
+  "maspeth-transfiguration": 0,
+  "new-philadelphia-holy-cross": 2,
+};
+
 const otherDirectoryCards = entries
   .filter(
     (entry) =>
@@ -300,7 +305,12 @@ const otherDirectoryCards = entries
       entry.networkClass !== "religious_house",
   )
   .map(cardFor)
-  .sort((a, b) => a.nameEn.localeCompare(b.nameEn));
+  .sort(
+    (a, b) =>
+      (OTHER_DIRECTORY_CARD_PRIORITY[a.id] ?? 1) -
+        (OTHER_DIRECTORY_CARD_PRIORITY[b.id] ?? 1) ||
+      a.nameEn.localeCompare(b.nameEn),
+  );
 
 const directoryProfileHrefs = new Set(
   entries
@@ -408,6 +418,8 @@ if (
   entries.length !== 20 ||
   widerCards.length !== 3 ||
   otherDirectoryCards.length !== 5 ||
+  otherDirectoryCards[0]?.id !== "maspeth-transfiguration" ||
+  otherDirectoryCards.at(-1)?.id !== "new-philadelphia-holy-cross" ||
   trackedCards.length !== 5 ||
   regularMapPoints.length !== regularEntries.length ||
   widerMapPoints.length !== widerCards.length ||
