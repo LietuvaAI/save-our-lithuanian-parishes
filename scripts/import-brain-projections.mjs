@@ -51,6 +51,10 @@ const jsonPairs = [
     "../data/canonical-public-display-manifest.json",
   ],
   [
+    "docs/research/parish-canon/public-display/draugas-references.json",
+    "../data/canonical-draugas-references.json",
+  ],
+  [
     "docs/research/parish-preservation-deep-research/phase-2-reversal-database.json",
     "../data/reversal-database.json",
   ],

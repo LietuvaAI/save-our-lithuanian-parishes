@@ -24,11 +24,16 @@ for (const relativePath of [
     "canonical-draugas-mention-projection",
     "getDraugasProfileLedger",
     "draugasLedger",
-    "/draugas",
   ]) {
     if (source.includes(forbidden)) {
       errors.push(`${relativePath}: forbidden public ledger token ${forbidden}`);
     }
+  }
+  if (
+    /["'`]\/draugas["'`]/.test(source) ||
+    /\/parishes\/[^{"'`\s]+\/draugas/.test(source)
+  ) {
+    errors.push(`${relativePath}: retired public Draugas ledger route returned`);
   }
 }
 
