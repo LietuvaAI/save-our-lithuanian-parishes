@@ -23,6 +23,8 @@ export type ProfileSource = {
   excerpt?: string;
   missingLinkNote?: string;
   reviewedPublicReference?: boolean;
+  referenceClass?: "core_parish_reference" | "supplemental_reference";
+  badgeLabel?: string;
 };
 
 export type RegistryProfileSource = {
@@ -505,6 +507,12 @@ export function finalizeProfileSources(
       }
       if (!existing.excerpt && source.excerpt) {
         existing.excerpt = source.excerpt;
+      }
+      if (!existing.referenceClass && source.referenceClass) {
+        existing.referenceClass = source.referenceClass;
+      }
+      if (!existing.badgeLabel && source.badgeLabel) {
+        existing.badgeLabel = source.badgeLabel;
       }
       continue;
     }

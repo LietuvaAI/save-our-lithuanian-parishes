@@ -1,4 +1,6 @@
 import projectionData from "@/data/canonical-draugas-newspaper-records.json";
+import titleFocusData from "@/data/canonical-draugas-parish-centered-title-focus-tranche1.json";
+import titleFocusHeldData from "@/data/canonical-draugas-parish-centered-title-focus-tranche1-held.json";
 import { publicInstitutions } from "@/lib/publication-projection";
 import {
   finalizeProfileSources,
@@ -57,9 +59,75 @@ type DraugasNewspaperProjection = {
   content_hash_sha256: string;
 };
 
+type TitleFocusRecord = {
+  record_id: string;
+  candidate_page_id: string;
+  canonical_entity_id: string;
+  public_profile: string;
+  issue_date: string;
+  pdf_page: number;
+  page_url: string;
+  display_title: string;
+  title_state: "exact_printed_headline" | "reviewed_section_heading";
+  citation_label: string;
+  public_display_class: "core_parish_reference" | "supplemental_reference";
+  badge_label: "Supplemental" | null;
+  rights: DraugasNewspaperRights;
+  provenance_hashes: Record<string, string>;
+  historical_claim_adjudication_state: "not_adjudicated";
+};
+
+type TitleFocusProjection = {
+  schema_version: "culturenet-solp-draugas-parish-centered-title-focus-public-record-set-v1";
+  record_set_id: string;
+  controls: Record<string, boolean>;
+  held_candidate_page_ids: string[];
+  record_counts: {
+    public_record_count: 11;
+    held_disposition_count: 3;
+    core_parish_reference: 6;
+    supplemental_reference: 5;
+    by_public_profile: Record<string, number>;
+  };
+  records: TitleFocusRecord[];
+  content_hash_sha256: string;
+};
+
+type TitleFocusHeldProjection = {
+  schema_version: "culturenet-draugas-parish-centered-title-focus-held-dispositions-v1";
+  held_candidate_page_ids: string[];
+  held_dispositions: Array<{
+    candidate_page_id: string;
+    public_record_created: false;
+    disposition_state: "held_collision_or_focus_uncertain";
+  }>;
+  content_hash_sha256: string;
+};
+
+type GovernedDraugasRecord = {
+  sourceRecordId: string;
+  candidatePageId?: string;
+  canonicalEntityId: string;
+  publicProfile: string;
+  issueDate: string;
+  pdfPage: number;
+  pageUrl: string;
+  displayTitle: string;
+  citationLabel: string;
+  rights: DraugasNewspaperRights;
+  referenceClass?: "core_parish_reference" | "supplemental_reference";
+  badgeLabel?: string;
+};
+
 const projection = projectionData as DraugasNewspaperProjection;
+const titleFocus = titleFocusData as TitleFocusProjection;
+const titleFocusHeld = titleFocusHeldData as TitleFocusHeldProjection;
 const EXPECTED_CONTENT_HASH =
   "143118db45388cb94c1421623e0139428751b6606626d5b51d5ea7b4a3b4e742";
+const EXPECTED_TITLE_FOCUS_HASH =
+  "b424efefe2131d8c940a9dfb4b795c1d203d0decb9aaf233e404fbd664e8e577";
+const EXPECTED_TITLE_FOCUS_HELD_HASH =
+  "b44a20a754ba8dee8266557d74d76efed81324c39d7651840476d13c241f9101";
 const EXPECTED_CONTROLS: DraugasNewspaperProjection["controls"] = {
   publication_allowed: true,
   solp_consumer_projection: true,
@@ -92,47 +160,136 @@ if (
   );
 }
 
+const expectedTitleFocusProfileCounts = {
+  "/parishes/sv-jurgio-norwood-ma": 4,
+  "/parishes/sv-jurgio-chicago-il": 3,
+  "/parishes/sv-jurgio-rochester-ny": 3,
+  "/parishes/sv-jurgio-shenandoah-pa": 1,
+};
+const titleFocusCoreCount = titleFocus.records.filter(
+  (record) => record.public_display_class === "core_parish_reference",
+).length;
+const titleFocusSupplementalCount = titleFocus.records.filter(
+  (record) => record.public_display_class === "supplemental_reference",
+).length;
+if (
+  titleFocus.schema_version !==
+    "culturenet-solp-draugas-parish-centered-title-focus-public-record-set-v1" ||
+  titleFocus.content_hash_sha256 !== EXPECTED_TITLE_FOCUS_HASH ||
+  titleFocus.records.length !== 11 ||
+  titleFocus.record_counts.public_record_count !== 11 ||
+  titleFocus.record_counts.held_disposition_count !== 3 ||
+  titleFocus.record_counts.core_parish_reference !== 6 ||
+  titleFocus.record_counts.supplemental_reference !== 5 ||
+  titleFocusCoreCount !== 6 ||
+  titleFocusSupplementalCount !== 5 ||
+  JSON.stringify(titleFocus.record_counts.by_public_profile) !==
+    JSON.stringify(expectedTitleFocusProfileCounts) ||
+  titleFocus.controls.solp_profile_display_allowed !== true ||
+  titleFocus.controls.homepage_update_allowed !== false ||
+  titleFocus.controls.directory_cards_update_allowed !== false ||
+  titleFocus.controls.books_grouping_allowed !== false ||
+  titleFocus.controls.standalone_press_section_allowed !== false ||
+  titleFocus.controls.comprehensive_spauda_page_allowed !== false ||
+  titleFocus.controls.contains_excerpts !== false ||
+  titleFocus.controls.contains_quotes !== false ||
+  titleFocus.controls.contains_source_prose !== false
+) {
+  throw new Error(
+    "Draugas title-focus records are not the pinned eleven-row reviewed metadata projection.",
+  );
+}
+
+const heldCandidateIds = new Set(titleFocus.held_candidate_page_ids);
+if (
+  titleFocusHeld.schema_version !==
+    "culturenet-draugas-parish-centered-title-focus-held-dispositions-v1" ||
+  titleFocusHeld.content_hash_sha256 !== EXPECTED_TITLE_FOCUS_HELD_HASH ||
+  titleFocusHeld.held_dispositions.length !== 3 ||
+  titleFocusHeld.held_candidate_page_ids.length !== 3 ||
+  titleFocusHeld.held_dispositions.some(
+    (record) =>
+      record.public_record_created !== false ||
+      record.disposition_state !== "held_collision_or_focus_uncertain" ||
+      !heldCandidateIds.has(record.candidate_page_id),
+  ) ||
+  titleFocus.records.some((record) => heldCandidateIds.has(record.candidate_page_id))
+) {
+  throw new Error("Held Draugas title-focus candidates entered the public record set.");
+}
+
 const publicationByEntity = new Map(
   publicInstitutions.map((institution) => [
     institution.culturenet_entity_id,
     institution,
   ]),
 );
-const recordsByIdentity = new Map<string, DraugasNewspaperRecord[]>();
+const recordsByIdentity = new Map<string, GovernedDraugasRecord[]>();
 const seenRecordIds = new Set<string>();
 
 function identityKey(canonicalEntityId: string, publicProfile: string) {
   return `${canonicalEntityId}\u0000${publicProfile}`;
 }
 
-for (const record of projection.records) {
-  if (seenRecordIds.has(record.source_record_id)) {
-    throw new Error(`Duplicate Draugas newspaper record: ${record.source_record_id}`);
-  }
-  seenRecordIds.add(record.source_record_id);
+const governedRecords: GovernedDraugasRecord[] = [
+  ...projection.records.map((record) => ({
+    sourceRecordId: record.source_record_id,
+    canonicalEntityId: record.canonical_entity_id,
+    publicProfile: record.public_profile,
+    issueDate: record.issue_date,
+    pdfPage: record.pdf_page,
+    pageUrl: record.page_url,
+    displayTitle: record.display_title,
+    citationLabel: record.citation_label,
+    rights: record.rights,
+  })),
+  ...titleFocus.records.map((record) => ({
+    sourceRecordId: record.record_id,
+    candidatePageId: record.candidate_page_id,
+    canonicalEntityId: record.canonical_entity_id,
+    publicProfile: record.public_profile,
+    issueDate: record.issue_date,
+    pdfPage: record.pdf_page,
+    pageUrl: record.page_url,
+    displayTitle: record.display_title,
+    citationLabel: record.citation_label,
+    rights: record.rights,
+    referenceClass: record.public_display_class,
+    badgeLabel: record.badge_label ?? undefined,
+  })),
+];
 
-  const institution = publicationByEntity.get(record.canonical_entity_id);
-  if (!institution || institution.public_profile !== record.public_profile) {
+for (const record of governedRecords) {
+  if (seenRecordIds.has(record.sourceRecordId)) {
+    throw new Error(`Duplicate Draugas newspaper record: ${record.sourceRecordId}`);
+  }
+  seenRecordIds.add(record.sourceRecordId);
+
+  const institution = publicationByEntity.get(record.canonicalEntityId);
+  if (!institution || institution.public_profile !== record.publicProfile) {
     throw new Error(
-      `${record.source_record_id}: canonical entity and public profile do not match the Brain publication projection.`,
+      `${record.sourceRecordId}: canonical entity and public profile do not match the Brain publication projection.`,
     );
   }
 
-  const pageUrl = new URL(record.page_url);
+  const pageUrl = new URL(record.pageUrl);
   if (
     pageUrl.protocol !== "https:" ||
     pageUrl.hostname.replace(/^www\./, "") !== "draugas.org" ||
-    pageUrl.hash !== `#page=${record.pdf_page}` ||
+    pageUrl.hash !== `#page=${record.pdfPage}` ||
     record.rights.public_release_allowed !== true ||
     record.rights.quote_policy !== "citation_metadata_only" ||
     record.rights.raw_text_allowed_in_git !== false ||
-    !record.display_title.trim() ||
-    !record.citation_label.trim()
+    !record.displayTitle.trim() ||
+    !record.citationLabel.trim() ||
+    (record.referenceClass === "supplemental_reference" &&
+      record.badgeLabel !== "Supplemental") ||
+    (record.referenceClass === "core_parish_reference" && record.badgeLabel)
   ) {
-    throw new Error(`${record.source_record_id}: public newspaper metadata is invalid.`);
+    throw new Error(`${record.sourceRecordId}: public newspaper metadata is invalid.`);
   }
 
-  const key = identityKey(record.canonical_entity_id, record.public_profile);
+  const key = identityKey(record.canonicalEntityId, record.publicProfile);
   const existing = recordsByIdentity.get(key) ?? [];
   existing.push(record);
   recordsByIdentity.set(key, existing);
@@ -147,16 +304,18 @@ export function draugasNewspaperProfileSources(
     recordsByIdentity.get(identityKey(canonicalEntityId, publicProfile)) ?? [];
   return finalizeProfileSources(
     records.map((record) => ({
-      id: record.source_record_id,
+      id: record.sourceRecordId,
       group: "newspaper" as const,
-      title: record.display_title,
+      title: record.displayTitle,
       publisher: "Draugas",
-      date: record.issue_date,
-      citation: record.citation_label,
-      url: record.page_url,
+      date: record.issueDate,
+      citation: record.citationLabel,
+      url: record.pageUrl,
       contexts: [],
       additionalCitations: [],
       reviewedPublicReference: true,
+      referenceClass: record.referenceClass,
+      badgeLabel: record.badgeLabel,
     })),
   );
 }
