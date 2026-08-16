@@ -97,12 +97,21 @@ if (!pageSource.includes("getClearedPhoto")) {
   errors.push("Living Network page no longer enforces cleared image rights");
 }
 if (
-  !pageSource.includes("card.draugasEvidence") ||
   !profilePageSource.includes("pastoralDirectoryEntry?.draugasEvidence") ||
   !profilePageSource.includes("registrySourcesForProfile") ||
   !profilePageSource.includes("core && !pastoralDirectoryEntry?.draugasEvidence")
 ) {
-  errors.push("reviewed Draugas evidence does not replace weaker date-only sources on both public surfaces");
+  errors.push("reviewed Draugas evidence does not replace weaker date-only sources on profile surfaces");
+}
+if (
+  pageSource.includes("card.draugasEvidence") ||
+  pageSource.includes("Checked {card.checked}") ||
+  pageSource.includes(">Official website<") ||
+  pageSource.includes("view.observed") ||
+  pageSource.includes("view.generated") ||
+  pageSource.includes("view.revision")
+) {
+  errors.push("Living Network overview leaks profile-level provenance or internal revision metadata");
 }
 if (
   !viewSource.includes("entry.publicProfile") ||
