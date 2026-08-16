@@ -1,7 +1,7 @@
 # Public institution count audit
 
 **Audit date:** 2026-08-11
-**Registry revision:** 33
+**Registry revision:** 34
 **Canonical authority:** CultureNet canonical-public-census-2026-08-11-wider-catholic-life-geocodes
 
 ## Press-safe claim

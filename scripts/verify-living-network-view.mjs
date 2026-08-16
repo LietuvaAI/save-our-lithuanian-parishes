@@ -97,6 +97,30 @@ if (!pageSource.includes("getClearedPhoto")) {
   errors.push("Living Network page no longer enforces cleared image rights");
 }
 if (
+  !pageSource.includes("Five of these communities continue") ||
+  !pageSource.includes("Washington") ||
+  !pageSource.includes("never a Lithuanian parish or mission") ||
+  !pageSource.includes("six active Lithuanian-led parishes or two active")
+) {
+  errors.push("hosted-Mass section no longer explains its two source populations");
+}
+const hostedMinistryGuards = {
+  "beverly-shores-st-ann": ["hosted worship", "not one of the two active Lithuanian missions"],
+  "cicero-st-anthony": ["founded as a Lithuanian parish in 1911", "no longer Lithuanian-led"],
+  "chicago-immaculate-conception": ["founded as a Lithuanian parish in 1914", "not as a mission", "merged with Five Holy Martyrs in 2019"],
+  "brooklyn-annunciation": ["founded as a Lithuanian parish in 1914", "merged into a successor parish in 2019"],
+  "rochester-st-george-mission": ["hosted mission community", "not one of the two active Lithuanian missions"],
+  "washington-epiphany": ["territorial host parish", "never a Lithuanian parish or mission"],
+};
+for (const [entryId, requiredFragments] of Object.entries(hostedMinistryGuards)) {
+  const entry = directory.entries.find((candidate) => candidate.id === entryId);
+  for (const fragment of requiredFragments) {
+    if (!entry?.ministry?.includes(fragment)) {
+      errors.push(`${entryId}: hosted-Mass card lost required meaning: ${fragment}`);
+    }
+  }
+}
+if (
   !profilePageSource.includes("pastoralDirectoryEntry?.draugasEvidence") ||
   !profilePageSource.includes("registrySourcesForProfile") ||
   !profilePageSource.includes("core && !pastoralDirectoryEntry?.draugasEvidence")
