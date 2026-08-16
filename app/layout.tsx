@@ -137,7 +137,7 @@ export default function RootLayout({
             <Link href="/" className="shrink-0 whitespace-nowrap font-serif text-site-wordmark font-medium uppercase tracking-[0.09em] text-foreground">
               Save Our Lithuanian Parishes
             </Link>
-            <nav className="ml-auto flex w-full flex-wrap items-center gap-x-5 gap-y-1.5 font-serif text-site-nav font-medium uppercase tracking-[0.08em] text-foreground sm:w-auto sm:justify-end">
+            <nav className="ml-auto mt-2 flex w-full flex-wrap items-center gap-x-3.5 gap-y-1.5 font-serif text-site-nav font-medium uppercase tracking-[0.08em] text-foreground sm:mt-0 sm:w-auto sm:justify-end">
               {NAV.map((item) =>
                 "children" in item ? (
                   <div key={item.label} className="relative group">

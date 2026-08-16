@@ -56,7 +56,7 @@ for (const [fragment, label] of [
   ["text-site-nav", "shared navigation type token"],
   ["flex min-h-11 items-center", "44px navigation touch targets"],
   ["font-sans text-body-copy", "readable dropdown type"],
-  ["gap-x-5 gap-y-1.5", "comfortable navigation spacing"],
+  ["mt-2 flex w-full flex-wrap items-center gap-x-3.5 gap-y-1.5", "balanced mobile and horizontal navigation spacing"],
   ["bg-[#faf7f1]", "header and footer shared background"],
   ["hover:border-foreground hover:text-foreground", "black navigation interaction color"],
   ['label: "History",\n    menuAlign: "right"', "mobile-safe History menu alignment"],
