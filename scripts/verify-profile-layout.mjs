@@ -6,6 +6,10 @@ const pageSource = fs.readFileSync(
   path.join(ROOT, "app", "parishes", "[slug]", "page.tsx"),
   "utf8",
 );
+const globalStylesSource = fs.readFileSync(
+  path.join(ROOT, "app", "globals.css"),
+  "utf8",
+);
 const historySource = fs.readFileSync(
   path.join(ROOT, "components", "ParishResearchRecord.tsx"),
   "utf8",
@@ -136,6 +140,9 @@ for (const section of orderedMarkers) {
 
 const requiredFragments = [
   [pageSource, 'data-profile-layout="canonical-v2"', "layout version"],
+  [pageSource, "parish-profile", "profile contrast scope"],
+  [globalStylesSource, ".parish-profile", "profile contrast style"],
+  [globalStylesSource, "--muted: #44403c", "readable profile secondary ink"],
   [pageSource, "embedded", "history embedded in the profile identity area"],
   [historySource, ">\n        History\n      </h2>", "top History heading"],
   [

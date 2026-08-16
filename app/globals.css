@@ -146,6 +146,19 @@ body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
+/* Parish profiles carry long-form history, current-status detail, and source
+   notes. Keep their secondary copy dark enough to read and use one consistent
+   neutral instead of several faint gray levels. */
+.parish-profile {
+  --muted: #44403c;
+}
+
+@media (prefers-color-scheme: dark) {
+  .parish-profile {
+    --muted: #d6d3d1;
+  }
+}
+
 @layer components {
   a {
     color: var(--accent);
