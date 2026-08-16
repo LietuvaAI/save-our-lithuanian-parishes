@@ -2,6 +2,10 @@ import type {
   ProfileSource,
   ProfileSourceGroup,
 } from "@/lib/profile-sources";
+import {
+  isDraugasProfileSource,
+  isPublicProfileSourceEligible,
+} from "@/lib/public-source-eligibility";
 
 const GROUP_ORDER: ProfileSourceGroup[] = [
   "current",
@@ -115,10 +119,11 @@ export function ProfileSourceLedger({
 }: {
   sources: ProfileSource[];
 }) {
-  const linkedCount = sources.filter((source) => source.url).length;
-  const missingCount = sources.length - linkedCount;
+  const publicSources = sources.filter(isPublicProfileSourceEligible);
+  const linkedCount = publicSources.filter((source) => source.url).length;
+  const missingCount = publicSources.length - linkedCount;
   const groupedSources = GROUP_ORDER.flatMap((group) => {
-    const entries = sources
+    const entries = publicSources
       .filter((source) => source.group === group)
       .sort((left, right) => {
         const dateDelta = dateSortKey(right).localeCompare(dateSortKey(left));
@@ -141,7 +146,7 @@ export function ProfileSourceLedger({
         shown when the source records them.
       </p>
 
-      {sources.length === 0 ? (
+      {publicSources.length === 0 ? (
         <p className="mt-5 border-y border-rule py-4 text-body-copy text-muted">
           No public source link has been attached to this profile yet.
         </p>
@@ -149,12 +154,13 @@ export function ProfileSourceLedger({
         <div id="profile-source-list" className="mt-6 border-t border-rule">
           <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-rule bg-band px-4 py-3">
             <p className="font-serif text-card-title font-semibold">
-              {sources.length} {sources.length === 1 ? "source" : "sources"}
+              {publicSources.length}{" "}
+              {publicSources.length === 1 ? "source" : "sources"}
             </p>
             <p className="text-small-copy text-muted">
               {groupedSources.length} source{" "}
               {groupedSources.length === 1 ? "type" : "types"} ·{" "}
-              {dateRange(sources)} · {linkedCount} public{" "}
+              {dateRange(publicSources)} · {linkedCount} public{" "}
               {linkedCount === 1 ? "link" : "links"}
               {missingCount > 0 ? ` · ${missingCount} without links` : ""}
             </p>
@@ -163,7 +169,11 @@ export function ProfileSourceLedger({
           {groupedSources.map(({ group, entries }) => {
             const meta = GROUP_META[group];
             return (
-              <details key={group} className="group border-b border-rule">
+              <details
+                key={group}
+                open={entries.some((source) => source.reviewedPublicReference)}
+                className="group border-b border-rule"
+              >
                 <summary className="grid cursor-pointer list-none gap-3 px-4 py-4 marker:content-none md:grid-cols-[minmax(0,1fr)_auto] md:items-center [&::-webkit-details-marker]:hidden">
                   <div>
                     <h3 className="font-serif text-card-title font-semibold">
@@ -191,6 +201,8 @@ export function ProfileSourceLedger({
                   {entries.map((source) => {
                     const domain = sourceDomain(source.url);
                     const citations = sourceCitations(source);
+                    const showExcerpt =
+                      !!source.excerpt && !isDraugasProfileSource(source);
                     return (
                       <li
                         key={source.id}
@@ -245,7 +257,7 @@ export function ProfileSourceLedger({
                             </p>
                           )}
 
-                          {source.excerpt && (
+                          {showExcerpt && (
                             <blockquote className="mt-3 max-w-[48em] border-l-2 border-rule pl-3 font-serif text-body-copy leading-relaxed text-foreground">
                               “{source.excerpt}”
                             </blockquote>

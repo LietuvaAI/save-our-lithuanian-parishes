@@ -46,6 +46,20 @@ if (importer.includes("canonical-draugas-mention-projection")) {
     "scripts/import-brain-projections.mjs: unreviewed Draugas ledger projection is imported",
   );
 }
+if (
+  !importer.includes(
+    "docs/research/parish-canon/public-display/draugas-newspaper-records.json",
+  )
+) {
+  errors.push(
+    "scripts/import-brain-projections.mjs: reviewed Draugas newspaper projection is not imported",
+  );
+}
+if (importer.includes("public-display/draugas-references.json")) {
+  errors.push(
+    "scripts/import-brain-projections.mjs: superseded four-row Draugas display projection is still imported",
+  );
+}
 
 const nextConfig = readFileSync(join(root, "next.config.ts"), "utf8");
 for (const required of [

@@ -1,5 +1,6 @@
 import { draugasArchiveUrl, draugasCitationUrl } from "@/lib/parishes";
 import type { PublicationSourceArtifact } from "@/lib/publication-projection";
+import { isPublicProfileSourceEligible } from "@/lib/public-source-eligibility";
 
 export type ProfileSourceGroup =
   | "newspaper"
@@ -21,6 +22,7 @@ export type ProfileSource = {
   contexts: string[];
   excerpt?: string;
   missingLinkNote?: string;
+  reviewedPublicReference?: boolean;
 };
 
 export type RegistryProfileSource = {
@@ -441,20 +443,36 @@ export function finalizeProfileSources(
   const allSources = Array.isArray(groups[0])
     ? (groups as (ProfileSource | SourceDraft)[][]).flat()
     : (groups as (ProfileSource | SourceDraft)[]);
+  const reviewedDraugasByDate = new Map<
+    string,
+    (ProfileSource | SourceDraft)[]
+  >();
+  for (const source of allSources) {
+    if (!source.reviewedPublicReference || !source.date) continue;
+    const existing = reviewedDraugasByDate.get(source.date) ?? [];
+    existing.push(source);
+    reviewedDraugasByDate.set(source.date, existing);
+  }
+  const draugasPage = (source: ProfileSource | SourceDraft) =>
+    source.url?.match(/#page=(\d+)\b/i)?.[1] ??
+    source.citation?.match(/\bp(?:p)?\.\s*(\d+)\b/i)?.[1] ??
+    null;
+  const isDraugas = (source: ProfileSource | SourceDraft) =>
+    source.publisher === "Draugas" || /(?:www\.)?draugas\.org/i.test(source.url ?? "");
   const flat = allSources.filter((source) => {
-    const isGenericDraugasIssue =
-      source.group === "newspaper" &&
-      source.publisher === "Draugas" &&
-      /^Draugas issue, /.test(source.title);
-    if (!isGenericDraugasIssue || !source.date) return true;
-    return !allSources.some(
-      (candidate) =>
-        candidate !== source &&
-        candidate.group === "newspaper" &&
-        candidate.publisher === "Draugas" &&
-        candidate.date === source.date &&
-        !/^Draugas issue, /.test(candidate.title),
-    );
+    if (source.reviewedPublicReference) return true;
+    if (!isPublicProfileSourceEligible(source)) return false;
+    const reviewedOnDate = source.date
+      ? reviewedDraugasByDate.get(source.date) ?? []
+      : [];
+    if (reviewedOnDate.length > 0 && isDraugas(source)) {
+      const page = draugasPage(source);
+      if (!page) return false;
+      if (reviewedOnDate.some((reviewed) => draugasPage(reviewed) === page)) {
+        return false;
+      }
+    }
+    return true;
   });
   const merged = new Map<string, ProfileSource>();
 
