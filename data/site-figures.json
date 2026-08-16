@@ -33,7 +33,7 @@
     "protestantCommunities": 8,
     "protestantParishes": 3,
     "protestantCongregations": 5,
-    "status": {
+    "institutionStatus": {
       "active_parish": 10,
       "closed": 98,
       "mass_continues": 5,
@@ -44,7 +44,7 @@
   },
   "history": {
     "parishes": 132,
-    "status": {
+    "institutionStatus": {
       "active_parish": 6,
       "closed": 87,
       "mass_continues": 5,
@@ -71,7 +71,7 @@
     "institutions": 137,
     "parishes": 132,
     "missions": 5,
-    "status": {
+    "institutionStatus": {
       "active_parish": 8,
       "closed": 90,
       "mass_continues": 5,

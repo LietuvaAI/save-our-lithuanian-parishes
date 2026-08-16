@@ -388,14 +388,21 @@ if (
   mapCommunityCounts.nationalIndependent !==
     siteFigures.publicUS.nationalIndependentCatholicCommunities ||
   mapCommunityCounts.protestant !== siteFigures.publicUS.protestantCommunities ||
-  mapStatusCounts.active_parish !== siteFigures.publicUS.status.active_parish ||
-  mapStatusCounts.mass_continues !== siteFigures.publicUS.status.mass_continues ||
-  mapStatusCounts.unresolved !== siteFigures.publicUS.status.unresolved ||
-  mapStatusCounts.transferred !== siteFigures.publicUS.status.transferred ||
-  mapStatusCounts.closed !== siteFigures.publicUS.status.closed ||
-  mapStatusCounts.unverified !== siteFigures.publicUS.status.unverified
+  mapStatusCounts.active_parish !==
+    siteFigures.publicUS.institutionStatus.active_parish ||
+  mapStatusCounts.mass_continues !==
+    siteFigures.publicUS.institutionStatus.mass_continues ||
+  mapStatusCounts.unresolved !==
+    siteFigures.publicUS.institutionStatus.unresolved ||
+  mapStatusCounts.transferred !==
+    siteFigures.publicUS.institutionStatus.transferred ||
+  mapStatusCounts.closed !== siteFigures.publicUS.institutionStatus.closed ||
+  mapStatusCounts.unverified !==
+    siteFigures.publicUS.institutionStatus.unverified
 ) {
-  throw new Error("Homepage map populations do not match site-figures.json");
+  throw new Error(
+    "Homepage institution-map populations do not match site-figures.json",
+  );
 }
 if (WIDER_CATHOLIC_LIFE_POINTS.length !== 3) {
   throw new Error("Homepage wider Catholic-life map layer must contain three records");
@@ -1153,8 +1160,9 @@ export default function ParishMap() {
                   {
                     key: "mass_continues",
                     mode: "mass",
-                    label: GROUP_LABEL.mass_continues,
-                    description: GROUP_DESCRIPTION.mass_continues,
+                    label: "Institution histories with Lithuanian Mass",
+                    description:
+                      "Five of the 137 Lithuanian Catholic institutions now hold Lithuanian Mass within a merged or host parish. The current network also includes Washington Epiphany, which was never a Lithuanian parish or mission.",
                     fill: "var(--es-mass)",
                     count: statusCounts.mass,
                   },
@@ -1313,7 +1321,25 @@ export default function ParishMap() {
       {/* Caption */}
       <div className="mt-2 min-h-9 border-t border-rule pt-2.5 text-body-copy">
         {selectedStatuses.size === 1 &&
-        selectedStatuses.has("unresolved") ? (
+        selectedStatuses.has("mass") ? (
+          <span className="text-muted">
+            {statusCounts.mass} of the institutions shown on this map now hold
+            Lithuanian Mass within a merged or host parish. Immaculate
+            Conception in Chicago, for example, was founded as a Lithuanian
+            parish in 1914 and merged into a multiethnic parish in 2019; its
+            church still hosts weekly Lithuanian Mass. The current network has
+            a sixth hosted-Mass community at Washington Epiphany, which was
+            never a Lithuanian parish or mission and is therefore not one of
+            the 155 institution marks. {" "}
+            <Link
+              href="/lithuanian-catholic-life-today"
+              className="font-medium text-foreground underline underline-offset-2"
+            >
+              See the full living network →
+            </Link>
+          </span>
+        ) : selectedStatuses.size === 1 &&
+          selectedStatuses.has("unresolved") ? (
           <span className="text-muted">
             {statusCounts.unresolved} institutions whose outcome remains contested
             or canonically undecided. Open a mark for details and sources.

@@ -61,6 +61,9 @@ const monitoredProfiles = [
       .map((href) => href.split("/").at(-1)),
   ),
 ].sort();
+const immaculateConceptionWatch = currentEvents.sustainabilityWatch.find(
+  (entry) => entry.id === "brighton-park-immaculate-conception-watch",
+);
 
 if (caseFiles.length !== manifest.counts.case_files) {
   errors.push(
@@ -131,6 +134,24 @@ for (const slug of monitoredProfiles) {
     errors.push(
       `monitored profile needs at least 3 history paragraphs: ${filename}`,
     );
+  }
+}
+
+if (!immaculateConceptionWatch) {
+  errors.push("Immaculate Conception current canonical summary is missing");
+} else {
+  for (const required of [
+    "established by Lithuanian immigrants in 1914 as a Lithuanian parish",
+    "not a mission",
+    "merged with Five Holy Martyrs to form the multiethnic",
+    "weekly Lithuanian Mass with a Lithuanian chaplain",
+    "not one of the six active Lithuanian-led parishes or two active missions",
+  ]) {
+    if (!immaculateConceptionWatch.situation?.includes(required)) {
+      errors.push(
+        `Immaculate Conception current summary lost required meaning: ${required}`,
+      );
+    }
   }
 }
 
