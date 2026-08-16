@@ -1037,7 +1037,7 @@
       "governanceDetail": "Immaculate Conception joined Five Holy Martyrs in 2019 as Immaculate Conception-Five Holy Martyrs Parish under Renew My Church; both worship sites remain open.",
       "survivedThreats": "Survived the 2019 Renew My Church merger with Lithuanian liturgy still explicitly scheduled at the Immaculate Conception site.",
       "financial": null,
-      "situation": "Brighton Park Immaculate Conception is a comparatively strong mass-continues case inside a merged, multiethnic parish. The community is predominantly Hispanic, but the official parish schedule still names a weekly Lithuanian Mass and Sielovada still assigns a Lithuanian chaplain, while the church retains a distinct Lithuanian architectural and devotional fabric.",
+      "situation": "Immaculate Conception was established by Lithuanian immigrants in 1914 as a Lithuanian parish, not a mission. In 2019 it merged with Five Holy Martyrs to form the multiethnic Immaculate Conception–Five Holy Martyrs Parish. Both churches remain open, and the Immaculate Conception site continues to offer a weekly Lithuanian Mass with a Lithuanian chaplain. It therefore belongs to the current hosted-Mass network, but it is not one of the six active Lithuanian-led parishes or two active missions.",
       "photo": {
         "url": "/images/parishes/brighton-park-immaculate-conception.jpg",
         "alt": "Exterior of the Brighton Park Immaculate Conception Lithuanian church in Chicago.",
@@ -1317,5 +1317,5 @@
       "canonicalEntityId": "cn:institution:blessed-jurgis-matulaitis-mission-lemont-il"
     }
   ],
-  "content_hash": "sha256:a675dcfd6e85ae9690d54a12bd5d3d631e28acf94f186255204451d0c80d6a18"
+  "content_hash": "sha256:c71b7e259de9efe30b6329395675f79c5c8676ddd7bdb1de86da68dfaa25c1d2"
 }
