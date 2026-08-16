@@ -159,15 +159,17 @@ in the design layer.
 
 ## Design-facing count contract
 
-Design and page code consume `data/site-figures.json`; they do not count routes,
-profiles, search results, map points, or raw registry rows. The public scopes are:
+Design and page code consume `data/site-figures.json` for historical institution
+aggregates and the canonical `current_pastoral_network` projection for current
+pastoral membership. They do not count routes, profiles, search results, map
+points, or raw registry rows. The public scopes are:
 
 - `publicUS.records`: all approved U.S. parish, mission, and congregation
   institutions in the current revision;
 - `publicUS.romanCatholicParishes`: distinct historical U.S. Roman Catholic
   parish institutions only;
-- `currentCatholicLife`: the separate current pastoral network reconciled to
-  the Sielovada directory; and
+- `data/canonical-infographic-projection.json#current_pastoral_network`: the
+  separate current pastoral network reconciled to the Sielovada directory; and
 - `history.parishes`: the Roman Catholic parish population used by the
   historical comparison; missions and other traditions remain outside that
   view.
@@ -176,6 +178,21 @@ profiles, search results, map points, or raw registry rows. The public scopes ar
 public U.S. count. Internal research-profile totals never appear on public
 surfaces. The design layer may label and visualize these values, but may not
 combine populations or derive replacement counts.
+
+`site-figures.json` deliberately does not duplicate the current pastoral
+network. Its `publicUS.institutionStatus`, `history.institutionStatus`, and
+`catholicInstitutionFlow.institutionStatus` partitions describe historical
+institution populations only. Current pastoral counts and membership are read
+directly from the Brain projection above. In particular, five of the 137
+Lithuanian Catholic institution histories now hold Lithuanian Mass within a
+merged or host parish. Immaculate Conception in Chicago is one of those five:
+it was founded as a Lithuanian parish in 1914, merged into the multiethnic
+Immaculate Conception–Five Holy Martyrs Parish in 2019, and still hosts weekly
+Lithuanian Mass at the Immaculate Conception church. The current network has a
+sixth hosted-Mass community at Washington Epiphany, which was never a
+Lithuanian parish or mission. Washington has a `/catholic-life/` profile but is
+not a registry institution and must not be added to the 155/137 census to make
+the totals look alike.
 
 ## Profile and infographic projection
 

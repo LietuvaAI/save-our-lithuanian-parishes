@@ -127,6 +127,18 @@ const currentWorshipClasses = new Set([
 const currentWorship = network.entries.filter((entry) =>
   currentWorshipClasses.has(entry.networkClass),
 );
+const currentWorshipStates = new Set(
+  currentWorship.map((entry) => entry.state),
+).size;
+const networkOnlyEntries = network.entries.filter(
+  (entry) => !entry.registrySlug,
+);
+const registryMatchedEntries = network.entries.filter(
+  (entry) => entry.registrySlug,
+);
+const washingtonEpiphany = network.entries.find(
+  (entry) => entry.id === "washington-epiphany",
+);
 const registryMapUS = registryMap.points.filter(
   (point) => point.country === "US",
 ).length;
@@ -206,6 +218,67 @@ expect(
     network.counts.activeMissions +
     network.counts.massContinues,
 );
+expect(
+  "current network active parishes",
+  count(network.entries, (entry) => entry.networkClass === "active_parish"),
+  network.counts.activeParishes,
+);
+expect(
+  "current network active missions",
+  count(network.entries, (entry) => entry.networkClass === "active_mission"),
+  network.counts.activeMissions,
+);
+expect(
+  "current network hosted-Mass communities",
+  count(network.entries, (entry) => entry.networkClass === "mass_continues"),
+  network.counts.massContinues,
+);
+expect(
+  "current network no-Lithuanian-liturgy entries",
+  count(
+    network.entries,
+    (entry) => entry.networkClass === "no_lithuanian_liturgy",
+  ),
+  network.counts.noLithuanianLiturgy,
+);
+expect(
+  "current network directory conflicts",
+  count(
+    network.entries,
+    (entry) => entry.networkClass === "directory_conflict",
+  ),
+  network.counts.directoryConflict,
+);
+expect(
+  "current network religious houses",
+  count(network.entries, (entry) => entry.networkClass === "religious_house"),
+  network.counts.religiousHouse,
+);
+expect(
+  "current network registry matches",
+  registryMatchedEntries.length,
+  network.counts.registryMatches,
+);
+expect(
+  "current network-only entries",
+  networkOnlyEntries.length,
+  network.counts.networkOnly,
+);
+expect(
+  "Washington Epiphany current class",
+  washingtonEpiphany?.networkClass,
+  "mass_continues",
+);
+expect(
+  "Washington Epiphany remains outside the institution registry",
+  washingtonEpiphany?.registrySlug ?? null,
+  null,
+);
+expect(
+  "Washington Epiphany public Catholic-life profile",
+  washingtonEpiphany?.publicProfile,
+  "/catholic-life/washington-epiphany",
+);
 expect("Sielovada listing count", network.entries.length, network.counts.listed);
 expect(
   "reversal database count",
@@ -258,11 +331,11 @@ const figures = {
       usProtestant,
       (record) => record.record_type === "congregation",
     ),
-    status: publicStatus,
+    institutionStatus: publicStatus,
   },
   history: {
     parishes: usRomanCatholicParishes.length,
-    status: historyStatus,
+    institutionStatus: historyStatus,
     closed: closedParishes.length,
     closedWithDatedYear: count(closedParishes, (row) => row.closed.year != null),
     closedSince1990: count(
@@ -279,7 +352,7 @@ const figures = {
     institutions: romanCatholicInstitutionHistory.length,
     parishes: romanCatholicParishHistory.length,
     missions: romanCatholicMissionHistory.length,
-    status: romanCatholicInstitutionStatus,
+    institutionStatus: romanCatholicInstitutionStatus,
     closed: count(
       romanCatholicInstitutionHistory,
       (row) => row.status_group === "closed",
@@ -326,5 +399,7 @@ console.log(
   `OK: public figure contract — ${figures.publicUS.records} U.S. records, ` +
     `${figures.publicUS.independentlySupported} independently supported, ` +
     `${figures.history.parishes} Roman Catholic parishes, ` +
-    `${currentWorship.length} current worship places.`,
+    `${currentWorship.length} current worship places in ${currentWorshipStates} states ` +
+    `(${network.counts.massContinues} hosted-Mass communities, ` +
+    `${network.counts.networkOnly} network-only directory entries).`,
 );
