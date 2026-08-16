@@ -179,12 +179,13 @@ const requiredFragments = [
   ],
   [ledgerSource, "sourceDomain(source.url)", "compact source provenance"],
   [ledgerSource, "href={source.url}", "linked source titles"],
-  [ledgerSource, "{source.excerpt}", "source excerpt rendering"],
+  [ledgerSource, "!isDraugasProfileSource(source)", "Draugas excerpt suppression"],
+  [ledgerSource, "{showExcerpt &&", "eligible non-Draugas excerpt rendering"],
   [profileSourcesSource, 'split("#")[0]}#page=${page}', "PDF page links"],
   [
     profileSourcesSource,
-    "isGenericDraugasIssue",
-    "reviewed Draugas article supersedes issue-only fallback",
+    "isPublicProfileSourceEligible(source)",
+    "generic Draugas issue rows held from public rendering",
   ],
   [
     pageSource,

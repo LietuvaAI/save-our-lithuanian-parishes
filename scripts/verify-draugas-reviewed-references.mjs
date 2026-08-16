@@ -311,6 +311,10 @@ const loader = readFileSync(
   "utf8",
 );
 const profileSources = readFileSync(join(root, "lib/profile-sources.ts"), "utf8");
+const publicEligibility = readFileSync(
+  join(root, "lib/public-source-eligibility.ts"),
+  "utf8",
+);
 const ledger = readFileSync(join(root, "components/ProfileSourceLedger.tsx"), "utf8");
 const profile = readFileSync(join(root, "app/parishes/[slug]/page.tsx"), "utf8");
 
@@ -330,8 +334,80 @@ for (const [source, token, label] of [
   [ledger, 'label: "Newspapers and periodicals"', "newspaper source group"],
   [ledger, "source.reviewedPublicReference", "reviewed group expansion"],
   [profileSources, "reviewedDraugasByDate", "governed-row dedupe"],
+  [profileSources, "if (!page) return false", "issue-level duplicate suppression"],
+  [
+    profileSources,
+    "reviewedOnDate.some((reviewed) => draugasPage(reviewed) === page)",
+    "same-page duplicate suppression",
+  ],
+  [
+    profileSources,
+    'isDraugas ? "newspaper" : options.group',
+    "Draugas newspaper-only grouping",
+  ],
+  [
+    profileSources,
+    "isPublicProfileSourceEligible(source)",
+    "raw aggregate source suppression",
+  ],
+  [
+    ledger,
+    "sources.filter(isPublicProfileSourceEligible)",
+    "render-boundary source suppression",
+  ],
+  [
+    publicEligibility,
+    "GENERIC_DRAUGAS_ISSUE_TITLE",
+    "generic Draugas title gate",
+  ],
+  [
+    publicEligibility,
+    "isDraugasProfileSource",
+    "Draugas source classifier",
+  ],
+  [
+    ledger,
+    "!isDraugasProfileSource(source)",
+    "Draugas excerpt suppression",
+  ],
 ]) {
   if (!source.includes(token)) errors.push(`${label} is missing ${token}`);
+}
+
+if (
+  !ledger.includes("const showExcerpt") ||
+  !ledger.includes("{showExcerpt &&") ||
+  ledger.includes("{source.excerpt &&")
+) {
+  errors.push(
+    "Draugas source cards must suppress excerpts while retaining eligible non-Draugas excerpts",
+  );
+}
+
+const genericTitlePattern =
+  /^Draugas(?: issue)?(?:\s*[·—-]\s*|,\s*)\d{4}-\d{2}-\d{2}(?:\s*[,·—-]\s*p(?:p)?\.\s*\d+(?:\s*[-–]\s*\d+)?)?$/i;
+for (const title of [
+  "Draugas issue, 2023-07-15",
+  "Draugas issue, 2020-05-30",
+  "Draugas issue, 2015-01-13",
+  "Draugas issue, 2009-09-29",
+  "Draugas issue, 2014-11-13",
+  "Draugas issue, 2023-12-14",
+  "Draugas issue, 2025-11-01",
+  "Draugas issue, 2020-05-30",
+  "Draugas issue, 2009-10-27",
+  "Draugas issue, 2008-03-27",
+  "Draugas, 2023-07-15",
+  "Draugas · 2023-07-15 · p. 4",
+]) {
+  if (!genericTitlePattern.test(title)) {
+    errors.push(`generic Draugas display-title regression is not held: ${title}`);
+  }
+}
+for (const title of expected.map((row) => row.display_title)) {
+  if (genericTitlePattern.test(title)) {
+    errors.push(`governed exact title was mistaken for a generic issue row: ${title}`);
+  }
 }
 
 for (const forbidden of [

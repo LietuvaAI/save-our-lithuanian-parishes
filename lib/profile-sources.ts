@@ -1,5 +1,6 @@
 import { draugasArchiveUrl, draugasCitationUrl } from "@/lib/parishes";
 import type { PublicationSourceArtifact } from "@/lib/publication-projection";
+import { isPublicProfileSourceEligible } from "@/lib/public-source-eligibility";
 
 export type ProfileSourceGroup =
   | "newspaper"
@@ -460,6 +461,7 @@ export function finalizeProfileSources(
     source.publisher === "Draugas" || /(?:www\.)?draugas\.org/i.test(source.url ?? "");
   const flat = allSources.filter((source) => {
     if (source.reviewedPublicReference) return true;
+    if (!isPublicProfileSourceEligible(source)) return false;
     const reviewedOnDate = source.date
       ? reviewedDraugasByDate.get(source.date) ?? []
       : [];
@@ -470,19 +472,7 @@ export function finalizeProfileSources(
         return false;
       }
     }
-    const isGenericDraugasIssue =
-      source.group === "newspaper" &&
-      source.publisher === "Draugas" &&
-      /^Draugas issue, /.test(source.title);
-    if (!isGenericDraugasIssue || !source.date) return true;
-    return !allSources.some(
-      (candidate) =>
-        candidate !== source &&
-        candidate.group === "newspaper" &&
-        candidate.publisher === "Draugas" &&
-        candidate.date === source.date &&
-        !/^Draugas issue, /.test(candidate.title),
-    );
+    return true;
   });
   const merged = new Map<string, ProfileSource>();
 
