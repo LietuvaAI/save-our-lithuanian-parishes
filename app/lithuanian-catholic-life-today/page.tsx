@@ -144,13 +144,6 @@ function NetworkCard({ card }: { card: LivingNetworkCardType }) {
       : card.networkClass === "mass_continues"
         ? "text-[#8a7a4e]"
         : "text-muted";
-  const draugasPage = card.draugasEvidence.page?.match(
-    /\bp(?:p)?\.\s*(\d+)\b/i,
-  )?.[1];
-  const draugasUrl = draugasPage
-    ? `${card.draugasEvidence.url.split("#")[0]}#page=${draugasPage}`
-    : card.draugasEvidence.url;
-
   return (
     <article id={card.anchor} className="min-w-0 scroll-mt-5">
       <DrawingFrame
@@ -192,53 +185,6 @@ function NetworkCard({ card }: { card: LivingNetworkCardType }) {
           {card.massCadence}
         </p>
       ) : null}
-      {card.checked ? (
-        <p className="mt-1 text-ui-label tabular-nums text-muted">
-          Checked {card.checked}
-        </p>
-      ) : null}
-      {card.officialSite ? (
-        <p className="mt-1 text-directory-footnote">
-          <a
-            href={card.officialSite}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent underline underline-offset-2 hover:text-foreground"
-          >
-            Official website
-          </a>
-        </p>
-      ) : null}
-      <details className="mt-2 border-l border-[#d6c8ad] pl-2 text-directory-footnote text-muted">
-        <summary className="cursor-pointer list-none font-semibold text-foreground marker:hidden">
-          Draugas source · {card.draugasEvidence.date}
-          {card.draugasEvidence.page
-            ? ` · ${card.draugasEvidence.page}`
-            : " · public article"}
-          {card.draugasEvidence.access === "subscriber"
-            ? " · subscriber archive"
-            : ""}
-        </summary>
-        <p className="mt-1 leading-snug">
-          <a
-            href={draugasUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent underline underline-offset-2 hover:text-foreground"
-          >
-            {card.draugasEvidence.title} ↗
-          </a>
-        </p>
-        {card.draugasEvidence.excerpt ? (
-          <blockquote className="mt-1 border-l border-rule pl-2 italic leading-relaxed text-[#57534e]">
-            “{card.draugasEvidence.excerpt}”
-          </blockquote>
-        ) : null}
-        <p className="mt-1 leading-relaxed">
-          <span className="font-semibold text-foreground">What it supports:</span>{" "}
-          {card.draugasEvidence.supports}
-        </p>
-      </details>
       {card.situation ? <SituationFlag situation={card.situation} /> : null}
     </article>
   );
@@ -272,16 +218,6 @@ function WiderCard({ card }: { card: WiderLifeCard }) {
       </p>
       <p className="mt-1.5 text-support-copy leading-relaxed text-[#57534e]">
         {card.explanation}
-      </p>
-      <p className="mt-1 text-directory-footnote">
-        <a
-          href={card.officialSite}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-accent underline underline-offset-2 hover:text-foreground"
-        >
-          Official website
-        </a>
       </p>
     </article>
   );
@@ -330,7 +266,7 @@ export default function LithuanianCatholicLifeTodayPage() {
   return (
     <article className="mx-auto max-w-[1080px] px-4 pb-0 pt-7 sm:px-6">
       <p className="font-sans text-ui-label font-semibold uppercase tracking-[0.09em] text-muted">
-        Lithuanian Catholic life today · checked {view.observed}
+        Lithuanian Catholic life today
       </p>
       <h1 className="mt-3 max-w-[30ch] font-serif text-outcomes-title font-semibold leading-[1.16] tracking-[-0.015em]">
         The living network
@@ -499,10 +435,9 @@ export default function LithuanianCatholicLifeTodayPage() {
       </section>
 
       <footer className="mt-10 border-t border-rule pt-4 text-directory-footnote leading-relaxed text-muted">
-        Every community name links to its full record where one exists. Map
-        positions come from the project&rsquo;s shared geographic layer;
-        Washington is placed at city level. Network checked {view.observed}.
-        Data revision {view.generated} · {view.revision}.
+        Every community name links to its full profile where one exists. Current
+        ministry details, official websites, and reviewed historical sources are
+        documented on those profile pages.
       </footer>
     </article>
   );
