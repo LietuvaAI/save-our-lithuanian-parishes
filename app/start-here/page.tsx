@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Facing a parish closure? Start here",
   description:
     "A plain-language guide for parishioners facing a closure or merger: the deadlines, the seven reasons that don't count under canon law, the procedural rights that have reversed closures, and the precedents.",
+  robots: { index: false, follow: false },
 };
 
 const SEVEN_REASONS = [

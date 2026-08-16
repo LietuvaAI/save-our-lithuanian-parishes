@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "What canon law actually says",
   description:
     "Under the Church's own law, a parish's property belongs to the parish — canons 515 §3 and 1256. The deed problem is a civil-law arrangement, and fixing it is not separation.",
+  robots: { index: false, follow: false },
 };
 
 function Src({ href, children }: { href: string; children: React.ReactNode }) {
