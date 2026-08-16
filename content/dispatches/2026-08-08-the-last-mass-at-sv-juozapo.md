@@ -3,12 +3,12 @@ title: "The Last Mass at Šv. Juozapo"
 subtitle: "New England’s oldest Lithuanian church held its final Mass on August 2, and a monsignor formally closed the building. The 2023 Vatican appeal still has no published ruling."
 date: 2026-08-08
 substackUrl: https://blog.saveourlithuanianparishes.org/p/the-last-mass-at-sv-juozapo
-archivedAt: 2026-08-15
+archivedAt: 2026-08-16
 ---
 ![](https://substackcdn.com/image/fetch/$s_!31G5!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F16325468-c35a-4557-a627-e7befb3d03fe_675x900.jpeg)
 *Šv. Juozapo (St. Joseph’s), 46 Congress Avenue, Waterbury — “First Lithuanian Parish In New England, Est. 1894.” Photo: Consulate General of Lithuania in New York*
 
-On Sunday, August 2, at half past nine in the morning, a short concert in the brick church at 46 Congress Avenue in Waterbury honored Aleksandras Aleksis, the organist and choir director of Šv. Juozapo (St. Joseph's) from 1924 to 1974. He was also the composer of the Knights of Lithuania anthem. Following the choir performance, the last Mass was held at ten. The readings were in both Lithuanian and English. The century-old organ played. Some people wept. Afterwards, Monsignor Vittorio Guerrera performed the final closing ceremony for the building.
+On Sunday, August 2, at half past nine in the morning, a short concert in the brick church at 46 Congress Avenue in Waterbury honored Aleksandras Aleksis, the organist and choir director of Šv. Juozapo (St. Joseph's) from 1924 to 1974. He was also the composer of the Knights of Lithuania anthem. Following the choir performance, the last Mass was held at ten. The readings were in both Lithuanian and English. The century-old organ played. Some people wept. It was like a funeral for a church. Afterwards, Monsignor Vittorio Guerrera performed the final closing ceremony for the building.
 
 Šv. Juozapo is the oldest Lithuanian parish in New England, in a city the brass industry had made one of the densest Lithuanian settlements in America. At its height the parish counted more than six thousand members, with a Lithuanian school beside the church and a choir known across the region. The Archdiocese of Hartford suppressed the parish on September 30, 2023, citing falling attendance and a shortage of priests. In its final weeks a parishioner, working with a canon lawyer, appealed the suppression to the Vatican. Almost three years later that appeal has no published ruling, and that was still true on the morning of the last Mass.
 

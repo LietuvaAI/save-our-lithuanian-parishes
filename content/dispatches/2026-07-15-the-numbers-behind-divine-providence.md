@@ -3,7 +3,7 @@ title: "The Numbers Behind Divine Providence"
 subtitle: "Across all 209 Archdiocese of Detroit parishes: near the bottom by scale, in the top 5% by savings per attendee, and back in surplus this year."
 date: 2026-07-15
 substackUrl: https://blog.saveourlithuanianparishes.org/p/the-numbers-behind-divine-providence
-archivedAt: 2026-08-15
+archivedAt: 2026-08-16
 ---
 As part of its current restructuring, the Archdiocese of Detroit produced a workbook for each of its 209 parishes, across 15 Planning Areas. Divine Providence's own workbook records a small, aging Lithuanian parish running a deficit. The other 208 workbooks put those same figures in a different order.
 

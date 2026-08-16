@@ -3,7 +3,7 @@ title: "Fifteen Months: The Closing of Švč. Trejybės (Holy Trinity) in Hartfo
 subtitle: "In February 2025 the parish bulletin printed an assurance that Masses would continue as usual. On May 30, 2026, the regular Masses ended. The fight now is for the building."
 date: 2026-07-27
 substackUrl: https://blog.saveourlithuanianparishes.org/p/fifteen-months-the-closing-of-svc
-archivedAt: 2026-08-15
+archivedAt: 2026-08-16
 ---
 ![](https://substackcdn.com/image/fetch/$s_!-kL0!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb1c087b0-8cbc-4a0b-83fb-e644e906d2ac_734x750.jpeg)Švč. Trejybės (Holy Trinity), 53 Capitol Avenue, Hartford — May 2000. Photo: Litnet, Wikimedia Commons, CC BY-SA 4.0.
 [Holy Trinity’s bulletin for February 9, 2025](https://container.parishesonline.com/bulletins/03/0549/20250209B.pdf) looked routine. It listed Mass at 4:00 p.m. on Saturday, at 9:00 and 10:30 on Sunday, and at 12:05 on weekdays. The 9:00 Sunday Mass was celebrated in Lithuanian and English.

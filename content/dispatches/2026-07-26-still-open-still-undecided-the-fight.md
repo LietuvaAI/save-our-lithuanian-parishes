@@ -3,7 +3,7 @@ title: "Still Open, Still Undecided: The Fight for Kristaus Atsimainymo (Transfi
 subtitle: "The Diocese of Brooklyn moved to close it in February 2025. A petition, a landmark push, and a presidential visit later, Sunday Mass continues, on terms the diocese calls temporary."
 date: 2026-07-26
 substackUrl: https://blog.saveourlithuanianparishes.org/p/still-open-still-undecided-the-fight
-archivedAt: 2026-08-15
+archivedAt: 2026-08-16
 ---
 ![](https://substackcdn.com/image/fetch/$s_!vxTE!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F866948a6-f354-4ad4-a301-2471d6cd60a6_3264x2448.jpeg)Kristaus Atsimainymo — the Church of the Transfiguration, 64-25 Perry Avenue, Maspeth, Queens. Photo: Maspetheer, Wikimedia Commons, CC BY-SA 4.0 (2016).
 When the [Church of the Transfiguration](https://saveourlithuanianparishes.org/parishes/kristaus-atsimainymo-maspeth-ny) opened at 64-25 Perry Avenue in 1962, *The New York Times* featured it on its front page as one of New York City’s five best new buildings of the year. The TWA Terminal at Kennedy Airport appeared on the same list.
