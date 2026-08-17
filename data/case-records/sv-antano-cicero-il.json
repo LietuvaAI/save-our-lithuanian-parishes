@@ -3,6 +3,69 @@
   "asOf": "2026-07-16",
   "buildingStatus": "standing",
   "currentUse": "Active Roman Catholic parish church of the Archdiocese of Chicago, operating publicly as St. Anthony / San Antonio de Padua Parish, 1510 S. 49th Court, Cicero, IL 60804 — a predominantly Spanish-language congregation, with a Sunday-morning Lithuanian Mass still listed in Mass-time directories",
+  "historicalNarrative": [
+    {
+      "text": "Lithuanian Catholics in Cicero organized St. Anthony Parish in 1911 as the industrial suburb's Lithuanian population expanded. The parish became the principal Catholic institution for families living west of Chicago, joining worship with societies, schooling, and community events. Its history is institutional as well as architectural: the parish began before the large church that now defines the site.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/chicago-illinois-45/",
+          "locator": "Chicago-area heritage survey: Cicero Lithuanian community, parish chronology, and church complex"
+        },
+        {
+          "url": "https://www.sanantoniocicero.net/",
+          "locator": "Current parish identity and continuing operations at 1510 South 49th Court"
+        }
+      ]
+    },
+    {
+      "text": "The community built the monumental Romanesque Revival church on 49th Court in the 1920s; its cornerstone is dated 1925. Lithuanian devotional and national symbols were worked into the building, including a side altar associated with Blessed Jurgis Matulaitis, a Vytis stained-glass window, Lithuanian inscriptions, and a traditional chapel-post. The adjacent former parish school still carries its Lithuanian name in stone.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/chicago-illinois-45/",
+          "locator": "Heritage survey: 1925 church, Blessed Jurgis Matulaitis altar, Vytis window, inscriptions, chapel-post, and school facade"
+        }
+      ]
+    },
+    {
+      "text": "Cicero's demographic center shifted during the later twentieth century, and St. Anthony increasingly served a Spanish-speaking Catholic population. The parish now also presents itself as San Antonio de Padua. That transition changed the language and makeup of most parish life, but the institution and its church remained open, while Lithuanian worship and the inherited sacred fabric continued inside a predominantly Hispanic parish.",
+      "sources": [
+        {
+          "url": "https://www.sanantoniocicero.net/",
+          "locator": "Current Spanish-language parish identity and bulletins"
+        },
+        {
+          "url": "https://global.truelithuania.com/chicago-illinois-45/",
+          "locator": "Heritage survey: demographic transition and continuing Lithuanian presence"
+        }
+      ]
+    },
+    {
+      "text": "St. Anthony entered the Archdiocese of Chicago's North Berwyn–Cicero Renew My Church review with Mary Queen of Heaven, St. Odilo, and Our Lady of the Mount. The November 2021 outcome merged the latter two communities but left St. Anthony structurally independent. Surviving a formal restructuring review distinguishes its history from nearby ethnic parishes that lost separate administration.",
+      "sources": [
+        {
+          "url": "https://www.olmrparish.org/history",
+          "locator": "Neighboring parish history: North Berwyn–Cicero Renew My Church grouping and November 2021 outcome"
+        }
+      ]
+    },
+    {
+      "text": "Current directories still list a Sunday-morning Lithuanian Mass, although they disagree whether it begins at 8:45 or 9:00 and the parish's own dated bulletin has not been independently extracted. The responsible reading is therefore that Lithuanian Mass continues to be publicly listed, not that every recent celebration has been verified. The active parish and standing church are certain; the precise current Lithuanian schedule remains a research check.",
+      "sources": [
+        {
+          "url": "https://discovermass.com/church/st-anthony-cicero-il/",
+          "locator": "Current directory listing for Sunday Lithuanian Mass"
+        },
+        {
+          "url": "https://catholicmasstime.org/church/st-anthonys-church/3525/",
+          "locator": "Current directory listing for Sunday Lithuanian Mass; time differs from another directory"
+        },
+        {
+          "url": "https://catholicchurch.directory/mass-times/il_cicero_st-anthony-parish",
+          "locator": "Current directory listing for Lithuanian Mass at 9:00 a.m."
+        }
+      ]
+    }
+  ],
   "summary": "St. Anthony's (Šv. Antano) in Cicero is one of the survival stories: the 1925 Romanesque Revival church still stands at 1510 S. 49th Court and remains an active, structurally independent parish of the Archdiocese of Chicago — the property was never sold or closed. Today it operates as St. Anthony / San Antonio de Padua, serving an overwhelmingly Spanish-speaking congregation with roughly six Spanish Masses each Sunday alongside one English and one Lithuanian Mass; Mass-time directories list the Lithuanian Mass at 8:45 or 9:00 a.m. Sunday. The parish went through the Archdiocese's Renew My Church restructuring in its North Berwyn-Cicero grouping (with Mary Queen of Heaven, St. Odilo, and Our Lady of the Mount) in November 2021 and emerged untouched: St. Anthony was left structurally independent while the two neighboring Cicero parishes were merged effective July 1, 2022. The Archdiocese of Chicago parish directory (August 2025 and March 2026 editions) lists Rev. Ismael Sandoval as pastor. The building's Lithuanian fabric survives in place: a side altar to Blessed Jurgis Matulaitis, a Vytis stained-glass window, a traditional Lithuanian chapel-post, Lithuanian inscriptions under the Stations of the Cross, and the adjacent former Lithuanian school building with its Lithuanian name carved above the entrance; some Lithuanians reportedly still live in the area and attend. The parish maintains a live website (sanantoniocicero.net) publishing weekly Spanish-language bulletins.",
   "developments": [
     {
