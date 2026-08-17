@@ -2,9 +2,108 @@
   "slug": "sv-andriejaus-new-britain-ct",
   "asOf": "2026-07-16",
   "buildingStatus": "standing",
-  "currentUse": "Former church at 396 Church Street sold by the Archdiocese of Hartford after closure; interior gutted, nothing Lithuanian remains. Current occupant not verifiable from opened sources.",
-  "summary": "The 1911 Romance Revival church of Šv. Andriejaus (St. Andrew Lithuanian) at 396 Church Street, New Britain, still stands but is no longer Catholic or Lithuanian in any respect. The parish appears under \"Closed churches\" in the Archdiocese of Hartford parish list with a 2017 closure — the year of the archdiocese-wide restructuring that cut 212 parishes to 127 — while directory records tie St. Andrew's phone and website to St. Francis of Assisi parish, whose current website lists only St. Francis, St. Jerome, and St. Maurice as worship sites, with no mention of St. Andrew. According to Global True Lithuania, the church was closed in the early 2020s, its interior was gutted, and the diocese sold the building together with the adjacent smaller former church building that had served as the John Rikteraitis Friendship Center for secular Lithuanian events; \"nothing Lithuanian remains inside.\" The parish's most prominent recent association is with partisan commander Adolfas Ramanauskas-Vanagas, who was baptized there: a 3.5-meter monument planned for New Britain in 2017-2018 was never built, and a commemorative plaque unveiled inside the church in 2021 was removed soon after the church closed. A June 2026 Draugas article counts New Britain's Šv. Andriejaus among the Lithuanian parishes that \"were closed or lost their Lithuanian face.\"",
+  "currentUse": "St. Andrew's 1911 church remains at 396 Church Street. Catholic worship ended in the early 2020s, and the Archdiocese of Hartford sold the church and the former John Rikteraitis Friendship Center. The Lithuanian interiors were reported removed; the present occupant has not been established.",
+  "summary": "The 1911 church of Šv. Andriejaus (St. Andrew Lithuanian) at 396 Church Street, New Britain, still stands, but the Catholic parish no longer uses it and its Lithuanian interior features were reported removed. The parish appears under \"Closed churches\" in the Archdiocese of Hartford parish list with a 2017 closure — the year of the archdiocese-wide restructuring that cut 212 parishes to 127 — while directory records tie St. Andrew's phone and website to St. Francis of Assisi parish, whose current website lists only St. Francis, St. Jerome, and St. Maurice as worship sites. Global True Lithuania reports that worship continued in the church into the early 2020s, after which the archdiocese sold it together with the adjacent smaller former church building that had served as the John Rikteraitis Friendship Center for secular Lithuanian events. The parish's most prominent recent association is with partisan commander Adolfas Ramanauskas-Vanagas, who was baptized there: a monument planned for New Britain in 2017-2018 was never built, and a commemorative plaque unveiled inside the church in 2021 was removed after the church closed. A June 2026 Draugas article counts New Britain's Šv. Andriejaus among the Lithuanian parishes that \"were closed or lost their Lithuanian face.\"",
+  "historicalNarrative": [
+    {
+      "text": "Lithuanian Catholics established St. Andrew Parish in New Britain in 1896. An earlier, smaller church stood beside the later sanctuary and eventually became the John Rikteraitis Friendship Center, where the community held secular Lithuanian gatherings.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_parishes_in_the_Archdiocese_of_Hartford",
+          "locator": "St. Andrew Church, New Britain: Lithuanian immigrant parish established in 1896"
+        },
+        {
+          "url": "https://global.truelithuania.com/connecticut-789/",
+          "locator": "New Britain section: earlier church and later John Rikteraitis Friendship Center"
+        }
+      ]
+    },
+    {
+      "text": "The community completed the church that still stands at 396 Church Street in 1911. The building directory identifies Reiley & Steinback as its architects, the St. Andrew Lithuanian Society as owner, and Father Joseph Zebris as pastor. Its interior used images and ornament to teach the Catholic faith to an immigrant congregation whose members did not all read English.",
+      "sources": [
+        {
+          "url": "https://noveltytheater.net/buildings/st-andrews-r-c-church-lithuanian",
+          "locator": "1911 building record, 396 Church Street, Reiley & Steinback, St. Andrew Lithuanian Society, and Rev. Joseph Zebris"
+        },
+        {
+          "url": "https://global.truelithuania.com/connecticut-789/",
+          "locator": "New Britain section: church date, architecture, and original interior as visual catechesis"
+        }
+      ]
+    },
+    {
+      "text": "The Church Street complex carried both religious and community memory. In 1995, a traditional Lithuanian wooden chapel-post was erected on the grounds for the parish centennial; Global True Lithuania credits its design to Gertrūda and Joseph Ambrozaitis. The chapel-post and the neighboring Friendship Center remained visible signs of Lithuanian presence even as the parish's institutional future narrowed.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/connecticut-789/",
+          "locator": "New Britain section: 1995 centennial chapel-post and Gertrūda and Joseph Ambrozaitis"
+        }
+      ]
+    },
+    {
+      "text": "St. Andrew is also connected to Adolfas Ramanauskas-Vanagas, the Lithuanian partisan commander who was born in New Britain and baptized in the parish. A monument proposed for New Britain in 2017–2018 was never built. In 2021, a commemorative plaque was installed inside St. Andrew's church, but it was removed after the church closed.",
+      "sources": [
+        {
+          "url": "https://lithuaniatribune.com/monument-to-lithuanian-guerrilla-commander-vanagas-planned-in-us/",
+          "locator": "Vanagas's New Britain birth and baptism at St. Andrew, and the proposed monument"
+        },
+        {
+          "url": "https://global.truelithuania.com/connecticut-789/",
+          "locator": "New Britain section: 2021 Vanagas plaque and its removal after closure"
+        }
+      ]
+    },
+    {
+      "text": "Two different endings must be kept separate. The parish ended canonically in the Archdiocese of Hartford's 2017 restructuring, but Catholic worship continued in the St. Andrew church into the early 2020s. The archdiocese later sold both the 1911 church and the former Friendship Center. Their Lithuanian interiors were removed, while the church building itself remains standing; the present occupant has not been established from the available sources.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_parishes_in_the_Archdiocese_of_Hartford",
+          "locator": "St. Andrew listed among closed churches with a 2017 parish closure"
+        },
+        {
+          "url": "https://global.truelithuania.com/connecticut-789/",
+          "locator": "New Britain section: early-2020s church closure, sale, and removal of Lithuanian interiors"
+        },
+        {
+          "url": "https://stfranciscatholic.org/",
+          "locator": "Current New Britain Catholic worship sites; St. Andrew is no longer listed"
+        }
+      ]
+    }
+  ],
   "developments": [
+    {
+      "date": "1911",
+      "headline": "The present St. Andrew church is completed at 396 Church Street",
+      "detail": "The New Britain buildings directory dates the church to 1911 and identifies Reiley & Steinback as architects, the St. Andrew Lithuanian Society as owner, and Father Joseph Zebris as pastor. The earlier, smaller church beside it later became the John Rikteraitis Friendship Center for secular Lithuanian events.",
+      "sources": [
+        {
+          "title": "St. Andrew's R. C. Church (Lithuanian)",
+          "publisher": "Novelty Theater (New Britain buildings directory)",
+          "date": "accessed 2026-07-16",
+          "url": "https://noveltytheater.net/buildings/st-andrews-r-c-church-lithuanian"
+        },
+        {
+          "title": "Connecticut: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "accessed 2026-07-16",
+          "url": "https://global.truelithuania.com/connecticut-789/"
+        }
+      ]
+    },
+    {
+      "date": "1995",
+      "headline": "Lithuanian chapel-post erected on the parish grounds",
+      "detail": "A traditional wooden Lithuanian chapel-post was erected on the St. Andrew grounds for a parish centennial observance. Global True Lithuania credits the design to Gertrūda and Joseph Ambrozaitis; the monument was later removed after the property was sold.",
+      "sources": [
+        {
+          "title": "Connecticut: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "accessed 2026-07-16",
+          "url": "https://global.truelithuania.com/connecticut-789/"
+        }
+      ]
+    },
     {
       "date": "2017-06-29",
       "headline": "Parish listed as closed in the Archdiocese of Hartford's 2017 restructuring",
@@ -51,7 +150,7 @@
       ]
     },
     {
-      "date": "early 2020s (~2021-2022)",
+      "date": "early 2020s",
       "headline": "Church closed, interior gutted, building sold by the diocese along with the Rikteraitis Friendship Center",
       "detail": "Global True Lithuania reports the church 'was closed in the early 2020s, and the interior gutted,' and that the adjacent smaller former church building — the John Rikteraitis Friendship Center used for secular Lithuanian events — 'was by the diocese sold together with the church and nothing Lithuanian remains inside.' The buyer and sale price are not named in any source opened. The current St. Francis of Assisi parish website (stfranciscatholic.org) lists only St. Francis, St. Jerome, and St. Maurice as worship sites, confirming St. Andrew is no longer in Catholic use.",
       "sources": [

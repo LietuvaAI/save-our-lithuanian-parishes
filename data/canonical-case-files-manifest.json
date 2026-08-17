@@ -415,7 +415,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-andriejaus-new-britain-ct.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-andriejaus-new-britain-ct.json",
-      "content_sha256": "fbb0057ac9d50335b3826e7dc3cb015c1e8db253adc4de7c5543548df9a23c09",
+      "content_sha256": "242eedbc758d4bd312eefee49657f66dca6bb7ffd279f3d1f8042f29ca10c85e",
       "source_record_slug": "sv-andriejaus-new-britain-ct",
       "as_of": "2026-07-16",
       "registry_slugs": [
