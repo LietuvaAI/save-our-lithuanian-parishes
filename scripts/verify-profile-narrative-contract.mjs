@@ -28,6 +28,10 @@ const protectedHistory = new Map([
   ["ausros-vartu-manhattan-ny.json", ["historicalNarrative", 6]],
   ["dievo-apvaizdos-southfield-mi.json", ["historicalNarrative", 3]],
   ["kristaus-atsimainymo-maspeth-ny.json", ["historicalNarrative", 3]],
+  [
+    "lithuanian-national-catholic-parish-waterbury-ct.json",
+    ["historicalNarrative", 5],
+  ],
   ["st-ann-beverly-shores-in.json", ["historicalNarrative", 3]],
   ["sv-andriejaus-new-britain-ct.json", ["historicalNarrative", 5]],
   ["sv-jurgio-norwood-ma.json", ["historicalNarrative", 2]],
@@ -172,10 +176,16 @@ for (const [source, fragment, label] of [
     "typed historical lead",
   ],
   [pageSource, "caseRecord?.historicalNarrative?.length", "sourced narrative"],
+  [pageSource, "caseRecord?.formationLabel", "case-specific formation label"],
   [pageSource, "caseRecord?.summary ??", "case summary in current condition"],
   [pageSource, "watchEntry?.situation ??", "canonical watch summary"],
   [pageSource, "situation?.situation ??", "situation in current condition"],
   [historySource, ">\n        History\n      </h2>", "History heading"],
+  [
+    historySource,
+    "const renderedGroups = supplemental.length > 0 ? [] : groups;",
+    "case history supersedes raw registry fact prose",
+  ],
 ]) {
   if (!source.includes(fragment)) errors.push(`missing ${label}`);
 }

@@ -90,6 +90,7 @@ interface HistoricalNarrativeParagraph {
 
 interface CaseRecord {
   asOf: string;
+  formationLabel?: string;
   buildingStatus: string;
   currentUse: string;
   historicalNarrative?: HistoricalNarrativeParagraph[];
@@ -263,6 +264,12 @@ function ownershipLabel(profile: CanonicalParishProfile) {
 function institutionLabel(profile: CanonicalParishProfile, community: boolean) {
   if (community) return "Lithuanian worshipping community";
   if (profile.core) return INSTITUTION_TYPE_LABEL[profile.core.institutionType];
+  if (
+    profile.congregationClass &&
+    profile.congregationClass !== "roman_catholic"
+  ) {
+    return CONGREGATION_CLASS_LABEL[profile.congregationClass];
+  }
   return (
     RECORD_TYPE_LABEL[profile.registry.record_type ?? ""] ??
     CONGREGATION_CLASS_LABEL[profile.congregationClass ?? ""] ??
@@ -349,6 +356,9 @@ export default async function ParishPage({
     ? getParishSituation(profile.slug)
     : getSituationByRegistrySlug(profile.registrySlug);
   const caseRecord = loadCaseRecord(profile);
+  const formationLabel =
+    caseRecord?.formationLabel ??
+    (establishedYear ? `Established ${establishedYear}` : "Founding year unresolved");
   const parishTimeline = getParishTimeline(profileLinks(profile));
   const { alert: parishAlert, campaign: parishCampaign } = getParishAlert(profile);
   const watchEntry = getSustainabilityWatch(profile);
@@ -615,7 +625,7 @@ export default async function ParishPage({
     : profileStory({
         situationText: historicalLeadNarrative,
         endState,
-        founded: establishedYear,
+        founded: caseRecord?.formationLabel ? null : establishedYear,
         closed: closedYear,
         community,
         name,
@@ -818,9 +828,7 @@ export default async function ParishPage({
                   {entry.state ? `, ${entry.state}` : ""}
                 </p>
                 <p className="mt-5 font-mono text-ui-label text-muted">
-                  {establishedYear
-                    ? `Established ${establishedYear}`
-                    : statusLabel}
+                  {formationLabel}
                 </p>
               </div>
               <figcaption className="mt-1.5 font-mono text-ui-label leading-normal text-muted">
@@ -857,7 +865,9 @@ export default async function ParishPage({
                 {buildingStatusLabel}
               </span>
             )}
-            {recordType !== "misija" && institutionDates?.foundedUnresolved ? (
+            {caseRecord?.formationLabel ? (
+              <span className="text-muted">{caseRecord.formationLabel}</span>
+            ) : recordType !== "misija" && institutionDates?.foundedUnresolved ? (
               <span className="text-muted">Founding year unresolved</span>
             ) : recordType !== "misija" && institutionDates?.foundedYear ? (
               <span className="text-muted">

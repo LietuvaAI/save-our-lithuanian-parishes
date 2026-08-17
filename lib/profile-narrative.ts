@@ -164,7 +164,8 @@ export function profileStory({
     endState === "closed";
   const institutionCopy =
     institution === "Parish record" ? "parish record" : institution;
-  const intro = `${name} ${historical ? "was" : "is"} ${community ? "a Lithuanian worshipping community" : `a ${institutionCopy}`} in ${location}${founded ? `, founded in ${founded}` : ""}.`;
+  const institutionWithArticle = `${/^[aeiou]/i.test(institutionCopy) ? "an" : "a"} ${institutionCopy}`;
+  const intro = `${name} ${historical ? "was" : "is"} ${community ? "a Lithuanian worshipping community" : institutionWithArticle} in ${location}${founded ? `, founded in ${founded}` : ""}.`;
   const researched =
     situationText &&
     !internalStatusCopy.test(situationText)

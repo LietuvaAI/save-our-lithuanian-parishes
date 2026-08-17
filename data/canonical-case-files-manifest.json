@@ -12,8 +12,8 @@
     "rule": "the Brain copy is authoritative; frozen imports retain byte equality and later records must map to one reviewed canonical publication identity"
   },
   "counts": {
-    "case_files": 85,
-    "mapped_research_registry_identities": 84
+    "case_files": 86,
+    "mapped_research_registry_identities": 85
   },
   "entries": [
     {
@@ -267,6 +267,24 @@
       "site_extraction_candidate": false,
       "lineage_extraction_candidate": false,
       "publication_state": "evidence_input_requires_canonical_adjudication"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/lithuanian-national-catholic-parish-waterbury-ct.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/lithuanian-national-catholic-parish-waterbury-ct.json",
+      "content_sha256": "12c29490535b53a062f33ae7e8c428d213197906478e098a293f723583f81069",
+      "source_record_slug": "lithuanian-national-catholic-parish-waterbury-ct",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "lithuanian-national-catholic-parish-waterbury-ct"
+      ],
+      "situation_keys": [
+        "lithuanian-national-catholic-parish-waterbury-ct"
+      ],
+      "source_count": 5,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
     },
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/lncc-congregation-westville-il.json",

@@ -5034,10 +5034,46 @@
       "registry_slug": "lithuanian-national-catholic-parish-waterbury-ct",
       "canonical_status": "unknown",
       "building_fate": "unknown",
-      "current_use": "No current successor or building disposition established",
+      "current_use": "No surviving congregation, worship site, or successor has been established for Waterbury's historical All Saints Lithuanian independent/national Catholic effort. No church address, property record, building, or exact institutional end has yet been identified.",
       "lithuanian_identity": "lost",
       "pastoral_status": "unknown",
-      "situation": "Draugas identifies a distinct All Saints Lithuanian independent/national church in Waterbury. It was not Roman Catholic St. Joseph, the disputed St. Casimir record, or today's Roman Catholic All Saints/Todos los Santos. No current PNCC successor, exact end date, address, property record, or building fate has been established; the 1902 start remains a provisional baseline."
+      "situation": "A scholarly history dates an attempt to organize Waterbury's Visų Šventųjų (All Saints) Lithuanian National Catholic parish to November 1902 and concludes that it did not take root. It was separate from Roman Catholic St. Joseph and from today's Roman Catholic All Saints/Todos los Santos. No exact ending, address, property, building, or surviving successor has been established.",
+      "current_record_as_of": "2026-08-17",
+      "current_record_path": "data/case-records/lithuanian-national-catholic-parish-waterbury-ct.json",
+      "sources": [
+        {
+          "title": "Lietuvių tautinė katalikų bažnyčia Amerikoje",
+          "publisher": "Ilona Strumickienė, Oikos",
+          "date": "2015",
+          "page": "pp. 54–59",
+          "url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf"
+        },
+        {
+          "title": "Lithuanian Americans and Their Communities of Cleveland: Mass Immigration",
+          "publisher": "Cleveland State University Michael Schwartz Library",
+          "date": "1978; digital edition accessed 2026-08-17",
+          "url": "https://pressbooks.ulib.csuohio.edu/lithuanian-americans-and-their-communities-of-cleveland/chapter/mass-immigration/"
+        },
+        {
+          "title": "TAUTINĖ LIETUVIŲ BAŽNYČIA AMERIKOJE",
+          "publisher": "Draugas",
+          "date": "1984-07-06",
+          "page": "p. 5",
+          "url": "https://www.draugas.org/archive/1984_reg/1984-07-06-DRAUGAS-i6-8.pdf#page=5"
+        },
+        {
+          "title": "Our Parishes",
+          "publisher": "Eastern Diocese, Polish National Catholic Church",
+          "date": "accessed 2026-08-17",
+          "url": "https://www.easterndiocesepncc.org/our-parishes/"
+        },
+        {
+          "title": "All Saints-Todos Los Santos Parish",
+          "publisher": "All Saints Parish, Waterbury",
+          "date": "accessed 2026-08-17",
+          "url": "https://allsaintswtby.org/"
+        }
+      ]
     },
     "paul-naugatuck-ct": {
       "registry_slug": "paul-naugatuck-ct",
