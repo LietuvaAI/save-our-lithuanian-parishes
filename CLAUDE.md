@@ -81,4 +81,4 @@ Two tiers of living parishes: `/under-threat` (active diocesan action, clock tic
 
 ## Deploy
 
-Vercel Git integration (LietuvaAI team): branch push → preview URL; merge to `main` → production. Same model as ziburio-archive.
+Vercel Git integration (LietuvaAI team): branch pushes do not build automatically; merge to `main` → production when deployable files changed. Use local builds/screenshots for PR verification. This main-only policy prevents duplicate preview + production spend.

@@ -37,7 +37,7 @@ as part of `npm run data`.
 
 ## Deployment
 
-Deployed on Vercel via Git integration: pushes to a branch get a preview URL; merges to `main` deploy production. All changes land through branch + PR.
+Deployed on Vercel via Git integration: branch pushes are verified locally and in GitHub without an automatic paid preview build; deployable merges to `main` publish production. All changes land through branch + PR.
 
 ## Provenance
 
