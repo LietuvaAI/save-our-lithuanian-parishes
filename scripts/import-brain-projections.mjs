@@ -75,6 +75,10 @@ const jsonPairs = [
     "../data/canonical-draugas-parish-centered-title-focus-tranche4.json",
   ],
   [
+    "docs/research/parish-canon/public-display/draugas-parish-centered-title-focus-tranche5-2026-08-17/record-set.json",
+    "../data/canonical-draugas-parish-centered-title-focus-tranche5.json",
+  ],
+  [
     "docs/research/parish-preservation-deep-research/phase-2-reversal-database.json",
     "../data/reversal-database.json",
   ],
