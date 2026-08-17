@@ -64,13 +64,17 @@ records in the Vercel DNS panel (e.g. for a forwarding service) — don't set it
 | Project | **`save-our-lithuanian-parishes`** |
 | Source | GitHub `LietuvaAI/save-our-lithuanian-parishes` (Git integration) |
 | Production | merge to `main` → auto-deploys to `saveourlithuanianparishes.org` |
-| Previews | every branch push → unique preview URL, linked on the PR |
+| Previews | disabled by default; branch pushes use local/GitHub verification instead of paid Vercel builds |
 | Canonical host | apex (`saveourlithuanianparishes.org`); no `www` configured |
 | Fallback URL | `save-our-lithuanian-parishes.vercel.app` (always works, independent of DNS) |
 
 The site is fully static (Next.js SSG). `npm run data` (runs as `prebuild`) re-derives all figures
 from `data/parishes.csv` and **fails the build** if they drift from the locked figure set —
 a broken data change can never silently deploy.
+
+`scripts/vercel-ignore-build.mjs` permits automatic builds only on `main`, and still skips
+documentation-only `main` commits. This prevents the former branch-preview + production double build
+for every merged change. Run `npm run build` locally when a PR needs full visual verification.
 
 ## Blog (Dispatches)
 

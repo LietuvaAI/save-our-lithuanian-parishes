@@ -26,6 +26,7 @@
     "verify:draugas-links": "node scripts/verify-draugas-links.mjs",
     "verify:dispatch-mirror": "node scripts/verify-dispatch-mirror.mjs",
     "verify:dispatch-mirror:live": "node scripts/verify-dispatch-mirror.mjs --live",
+    "test:vercel-ignore": "node scripts/test-vercel-ignore-build.mjs",
     "audit:case-site-lineage": "node scripts/audit-case-file-site-lineage.mjs",
     "prebuild": "npm run data",
     "build": "next build",
