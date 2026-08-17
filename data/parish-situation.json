@@ -4559,7 +4559,9 @@
       "current_use": "Closed historical site; present use and building fate unresolved",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "All Saints is the canonical Wilkes-Barre national/independent Catholic record; the generic Wilkes-Barre row was a duplicate. Sources disagree between 1929 and 1932. No living congregation is established by the 2024–2026 evidence, but the exact end, ownership, current use, and building disposition remain unresolved; demolition is not claimed."
+      "situation": "All Saints is the canonical Wilkes-Barre national/independent Catholic record; the generic Wilkes-Barre row was a duplicate. Sources disagree between 1929 and 1932. No living congregation is established by the 2024–2026 evidence, but the exact end, ownership, current use, and building disposition remain unresolved; demolition is not claimed.",
+      "current_record_as_of": "2026-08-17",
+      "current_record_path": "data/case-records/all-saints-wilkes-barre-pa.json"
     },
     "st-casimir-wilkes-barre-pa": {
       "registry_slug": "st-casimir-wilkes-barre-pa",
@@ -4851,12 +4853,14 @@
     },
     "st-george-detroit-mi": {
       "registry_slug": "st-george-detroit-mi",
-      "canonical_status": "unknown",
-      "building_fate": "unknown",
-      "current_use": "Unknown",
-      "lithuanian_identity": "unknown",
-      "pastoral_status": "unknown",
-      "situation": "Documented in registry but minimal research details available. Status not yet verified."
+      "canonical_status": "closed",
+      "building_fate": "demolished",
+      "current_use": "The St. George church at Westminster and Cardoni Streets was demolished on February 4, 1966. Divine Providence in Southfield originated from part of the St. George community but is a distinct parish institution.",
+      "lithuanian_identity": "lost",
+      "pastoral_status": "not_applicable",
+      "situation": "St. George was Detroit's first Lithuanian Roman Catholic parish, established in 1908. A wooden church was followed by a brick church blessed in 1917. The parish remained a distinct institution after Divine Providence formed from part of its membership in 1948–1949, closed in 1965, and its Westminster/Cardoni church was demolished on February 4, 1966.",
+      "current_record_as_of": "2026-08-17",
+      "current_record_path": "data/case-records/st-george-detroit-mi.json"
     },
     "st-george-saginaw-mi": {
       "registry_slug": "st-george-saginaw-mi",
@@ -5034,10 +5038,46 @@
       "registry_slug": "lithuanian-national-catholic-parish-waterbury-ct",
       "canonical_status": "unknown",
       "building_fate": "unknown",
-      "current_use": "No current successor or building disposition established",
+      "current_use": "No surviving congregation, worship site, or successor has been established for Waterbury's historical All Saints Lithuanian independent/national Catholic effort. No church address, property record, building, or exact institutional end has yet been identified.",
       "lithuanian_identity": "lost",
       "pastoral_status": "unknown",
-      "situation": "Draugas identifies a distinct All Saints Lithuanian independent/national church in Waterbury. It was not Roman Catholic St. Joseph, the disputed St. Casimir record, or today's Roman Catholic All Saints/Todos los Santos. No current PNCC successor, exact end date, address, property record, or building fate has been established; the 1902 start remains a provisional baseline."
+      "situation": "A scholarly history dates an attempt to organize Waterbury's Visų Šventųjų (All Saints) Lithuanian National Catholic parish to November 1902 and concludes that it did not take root. It was separate from Roman Catholic St. Joseph and from today's Roman Catholic All Saints/Todos los Santos. No exact ending, address, property, building, or surviving successor has been established.",
+      "current_record_as_of": "2026-08-17",
+      "current_record_path": "data/case-records/lithuanian-national-catholic-parish-waterbury-ct.json",
+      "sources": [
+        {
+          "title": "Lietuvių tautinė katalikų bažnyčia Amerikoje",
+          "publisher": "Ilona Strumickienė, Oikos",
+          "date": "2015",
+          "page": "pp. 54–59",
+          "url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf"
+        },
+        {
+          "title": "Lithuanian Americans and Their Communities of Cleveland: Mass Immigration",
+          "publisher": "Cleveland State University Michael Schwartz Library",
+          "date": "1978; digital edition accessed 2026-08-17",
+          "url": "https://pressbooks.ulib.csuohio.edu/lithuanian-americans-and-their-communities-of-cleveland/chapter/mass-immigration/"
+        },
+        {
+          "title": "TAUTINĖ LIETUVIŲ BAŽNYČIA AMERIKOJE",
+          "publisher": "Draugas",
+          "date": "1984-07-06",
+          "page": "p. 5",
+          "url": "https://www.draugas.org/archive/1984_reg/1984-07-06-DRAUGAS-i6-8.pdf#page=5"
+        },
+        {
+          "title": "Our Parishes",
+          "publisher": "Eastern Diocese, Polish National Catholic Church",
+          "date": "accessed 2026-08-17",
+          "url": "https://www.easterndiocesepncc.org/our-parishes/"
+        },
+        {
+          "title": "All Saints-Todos Los Santos Parish",
+          "publisher": "All Saints Parish, Waterbury",
+          "date": "accessed 2026-08-17",
+          "url": "https://allsaintswtby.org/"
+        }
+      ]
     },
     "paul-naugatuck-ct": {
       "registry_slug": "paul-naugatuck-ct",
@@ -5326,7 +5366,9 @@
       "current_use": "No current All Saints successor established",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "All Saints was a real, Rome-independent Lithuanian parish that split from St. Casimir and is directly attested in 1909–1910. A secondary history gives 1913, while Draugas reports decline by 1910 and return by 1919; the exact end remains unresolved. No current All Saints independent/national successor or building disposition has been established."
+      "situation": "All Saints was a real, Rome-independent Lithuanian parish that split from St. Casimir and is directly attested in 1909–1910. A secondary history gives 1913, while Draugas reports decline by 1910 and return by 1919; the exact end remains unresolved. No current All Saints independent/national successor or building disposition has been established.",
+      "current_record_as_of": "2026-08-17",
+      "current_record_path": "data/case-records/allsaints-worcester-ma.json"
     },
     "parish-baltimore-md": {
       "registry_slug": "parish-baltimore-md",
@@ -5344,7 +5386,9 @@
       "current_use": "St. Nicholas Orthodox Church, 301 South State Street, since 2020",
       "lithuanian_identity": "lost",
       "pastoral_status": "not_applicable",
-      "situation": "Saint Joseph was a Lithuanian Roman Catholic parish active by 1912 and is no longer listed as a standalone Diocese of Erie parish. Saint Nicholas Orthodox reports purchasing the former church in April 2020 and using it for Orthodox worship. A 1903 source also describes a separate Lithuanian independent or national Catholic attempt in DuBois, but its name, property, and later history remain unresolved; it is not counted as a separate parish."
+      "situation": "Saint Joseph was a Lithuanian Roman Catholic parish active by 1912 and is no longer listed as a standalone Diocese of Erie parish. Saint Nicholas Orthodox reports purchasing the former church in April 2020 and using it for Orthodox worship. A 1903 source also describes a separate Lithuanian independent or national Catholic attempt in DuBois, but its name, property, and later history remain unresolved; it is not counted as a separate parish.",
+      "current_record_as_of": "2026-08-17",
+      "current_record_path": "data/case-records/joseph-dubois-pa.json"
     },
     "parish-chicago-il-2": {
       "registry_slug": "parish-chicago-il-2",

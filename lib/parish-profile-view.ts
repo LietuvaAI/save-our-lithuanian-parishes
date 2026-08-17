@@ -187,6 +187,17 @@ function classify(title: string, detail: string) {
 function chronology(input: ParishProfileViewInput) {
   const items: ParishProfileChronologyItem[] = [];
   const institutionNoun = input.recordType === "misija" ? "Mission" : "Parish";
+  const hasSourcedFormationEvent =
+    input.founded !== null &&
+    input.developments.some((development) => {
+      const year = Number.parseInt(development.date.slice(0, 4), 10);
+      return (
+        year === input.founded &&
+        /\b(attempt|begin|establish|form|found|organize|start)\w*\b/i.test(
+          `${development.headline} ${development.detail}`,
+        )
+      );
+    });
 
   function push(
     item: Omit<ParishProfileChronologyItem, "kind" | "loss">,
@@ -204,7 +215,7 @@ function chronology(input: ParishProfileViewInput) {
         sortYear: event.sortYear,
       });
     }
-  } else if (input.founded) {
+  } else if (input.founded && !hasSourcedFormationEvent) {
     push({
       date: String(input.founded),
       title: `${institutionNoun} established`,

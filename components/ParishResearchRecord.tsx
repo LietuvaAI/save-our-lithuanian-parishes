@@ -1057,6 +1057,7 @@ export function ParishPublishedRecord({
     )
     .filter((group) => group.length > 0);
   const supplemental = (supplementalNarrative ?? []).filter(Boolean);
+  const renderedGroups = supplemental.length > 0 ? [] : groups;
   const narrative =
     supplemental.length > 0 || groups.length > 0
       ? supplemental
@@ -1093,7 +1094,7 @@ export function ParishPublishedRecord({
             {paragraph}
           </p>
         ))}
-        {groups.map((group, index) => (
+        {renderedGroups.map((group, index) => (
           <p key={index} className="text-card-title leading-relaxed text-muted">
             {group.join(" ")}
           </p>
