@@ -3,6 +3,7 @@ import titleFocusData from "@/data/canonical-draugas-parish-centered-title-focus
 import titleFocusHeldData from "@/data/canonical-draugas-parish-centered-title-focus-tranche1-held.json";
 import titleFocusTranche2Data from "@/data/canonical-draugas-parish-centered-title-focus-tranche2.json";
 import titleFocusTranche3Data from "@/data/canonical-draugas-parish-centered-title-focus-tranche3.json";
+import titleFocusTranche4Data from "@/data/canonical-draugas-parish-centered-title-focus-tranche4.json";
 import { publicInstitutions } from "@/lib/publication-projection";
 import {
   finalizeProfileSources,
@@ -133,6 +134,23 @@ type TitleFocusTranche3Projection = Omit<
   scope_candidate_page_ids: string[];
 };
 
+type TitleFocusTranche4Projection = Omit<
+  TitleFocusProjection,
+  "schema_version" | "held_candidate_page_ids"
+> & {
+  schema_version: "culturenet-solp-draugas-parish-centered-title-focus-public-record-set-tranche4-v1";
+  controlling_record_schema_version: "culturenet-solp-draugas-parish-centered-title-focus-public-record-tranche4-v1";
+  duplicate_guard_refs: Array<{
+    artifact_role: string;
+    ref: string;
+    hash_kind: string;
+    sha256: string;
+  }>;
+  source_overlay_content_hash_sha256: string;
+  source_selection_packet_content_hash_sha256: string;
+  scope_candidate_page_ids: string[];
+};
+
 type TitleFocusHeldProjection = {
   schema_version: "culturenet-draugas-parish-centered-title-focus-held-dispositions-v1";
   held_candidate_page_ids: string[];
@@ -164,6 +182,7 @@ const titleFocus = titleFocusData as TitleFocusProjection;
 const titleFocusHeld = titleFocusHeldData as TitleFocusHeldProjection;
 const titleFocusTranche2 = titleFocusTranche2Data as TitleFocusTranche2Projection;
 const titleFocusTranche3 = titleFocusTranche3Data as TitleFocusTranche3Projection;
+const titleFocusTranche4 = titleFocusTranche4Data as TitleFocusTranche4Projection;
 const EXPECTED_CONTENT_HASH =
   "143118db45388cb94c1421623e0139428751b6606626d5b51d5ea7b4a3b4e742";
 const EXPECTED_TITLE_FOCUS_HASH =
@@ -182,6 +201,12 @@ const EXPECTED_TITLE_FOCUS_TRANCHE3_PACKET_HASH =
   "36b82172cc95f97de0588e33bfccb934e696b3a7dd4b607c6b38ec5811c49fd1";
 const EXPECTED_TITLE_FOCUS_TRANCHE3_OVERLAY_HASH =
   "2751bd7385ff82d145a8517df14d5ffc40800bb641f00de12e6b9c6f12131b8a";
+const EXPECTED_TITLE_FOCUS_TRANCHE4_HASH =
+  "47f1cce4d627f02fbead779ddbfa5d58dc4fe1615160f75a8d8a686cd4d50cc8";
+const EXPECTED_TITLE_FOCUS_TRANCHE4_PACKET_HASH =
+  "f5665457f7a455ba097ea20eb57d1293d0a3d078c0a6fae4cd06eea86a9b8d7f";
+const EXPECTED_TITLE_FOCUS_TRANCHE4_OVERLAY_HASH =
+  "5986cfc4a931be1fce66ca776db2b9f2bda895f65dbd356b465a8a1595b6ae85";
 const EXPECTED_CONTROLS: DraugasNewspaperProjection["controls"] = {
   publication_allowed: true,
   solp_consumer_projection: true,
@@ -381,6 +406,78 @@ if (
   );
 }
 
+const expectedTitleFocusTranche4ProfileCounts = {
+  "/parishes/ausros-vartu-chicago-il": 1,
+  "/parishes/dievo-motinos-nuolatines-pagalbos-cleveland-oh": 3,
+  "/parishes/ss-peter-and-paul-chicago-il": 1,
+  "/parishes/st-francis-minersville-pa": 1,
+  "/parishes/sv-juozapo-nanticoke-pa": 1,
+  "/parishes/sv-jurgio-cleveland-oh": 3,
+  "/parishes/sv-kazimiero-chicago-il": 1,
+  "/parishes/sv-kazimiero-cleveland-oh": 4,
+  "/parishes/sv-kazimiero-gary-in": 1,
+  "/parishes/sv-kazimiero-kansas-city-mo": 1,
+  "/parishes/sv-kazimiero-new-haven-ct": 1,
+  "/parishes/sv-kazimiero-pittsburgh-pa": 1,
+  "/parishes/sv-petro-boston-ma": 4,
+  "/parishes/sv-petro-detroit-mi": 1,
+};
+const titleFocusTranche4CoreCount = titleFocusTranche4.records.filter(
+  (record) => record.public_display_class === "core_parish_reference",
+).length;
+const titleFocusTranche4SupplementalCount = titleFocusTranche4.records.filter(
+  (record) => record.public_display_class === "supplemental_reference",
+).length;
+const titleFocusTranche4SupplementalIds = new Set(
+  titleFocusTranche4.records
+    .filter((record) => record.public_display_class === "supplemental_reference")
+    .map((record) => record.source_record_id ?? record.record_id ?? ""),
+);
+if (
+  titleFocusTranche4.schema_version !==
+    "culturenet-solp-draugas-parish-centered-title-focus-public-record-set-tranche4-v1" ||
+  titleFocusTranche4.controlling_record_schema_version !==
+    "culturenet-solp-draugas-parish-centered-title-focus-public-record-tranche4-v1" ||
+  titleFocusTranche4.content_hash_sha256 !==
+    EXPECTED_TITLE_FOCUS_TRANCHE4_HASH ||
+  titleFocusTranche4.source_selection_packet_content_hash_sha256 !==
+    EXPECTED_TITLE_FOCUS_TRANCHE4_PACKET_HASH ||
+  titleFocusTranche4.source_overlay_content_hash_sha256 !==
+    EXPECTED_TITLE_FOCUS_TRANCHE4_OVERLAY_HASH ||
+  titleFocusTranche4.records.length !== 24 ||
+  titleFocusTranche4.record_counts.public_record_count !== 24 ||
+  titleFocusTranche4.record_counts.core_parish_reference !== 23 ||
+  titleFocusTranche4.record_counts.supplemental_reference !== 1 ||
+  titleFocusTranche4CoreCount !== 23 ||
+  titleFocusTranche4SupplementalCount !== 1 ||
+  JSON.stringify(titleFocusTranche4.record_counts.by_public_profile) !==
+    JSON.stringify(expectedTitleFocusTranche4ProfileCounts) ||
+  titleFocusTranche4SupplementalIds.size !== 1 ||
+  !titleFocusTranche4SupplementalIds.has(
+    "solp:draugas-newspaper-record:draugas-2007-12-01-p14-st-francis-minersville-pa",
+  ) ||
+  titleFocusTranche4.controls.solp_profile_display_allowed !== true ||
+  titleFocusTranche4.controls.homepage_update_allowed !== false ||
+  titleFocusTranche4.controls.directory_cards_update_allowed !== false ||
+  titleFocusTranche4.controls.books_grouping_allowed !== false ||
+  titleFocusTranche4.controls.standalone_press_section_allowed !== false ||
+  titleFocusTranche4.controls.comprehensive_spauda_page_allowed !== false ||
+  titleFocusTranche4.controls.historical_claim_admission_allowed !== false ||
+  titleFocusTranche4.controls.canonical_write_allowed !== false ||
+  titleFocusTranche4.controls.sacred_core_write_allowed !== false ||
+  titleFocusTranche4.controls.solp_ingestion_allowed !== false ||
+  titleFocusTranche4.controls.contains_ocr_text !== false ||
+  titleFocusTranche4.controls.contains_page_text !== false ||
+  titleFocusTranche4.controls.contains_source_text !== false ||
+  titleFocusTranche4.controls.contains_source_prose !== false ||
+  titleFocusTranche4.controls.contains_excerpts !== false ||
+  titleFocusTranche4.controls.contains_quotes !== false
+) {
+  throw new Error(
+    "Draugas title-focus tranche 4 records are not the pinned twenty-four-row reviewed metadata projection.",
+  );
+}
+
 const heldCandidateIds = new Set(titleFocus.held_candidate_page_ids);
 if (
   titleFocusHeld.schema_version !==
@@ -474,11 +571,25 @@ const governedRecords: GovernedDraugasRecord[] = [
     referenceClass: record.public_display_class,
     badgeLabel: record.badge_label ?? undefined,
   })),
+  ...titleFocusTranche4.records.map((record) => ({
+    sourceRecordId: titleFocusRecordId(record),
+    candidatePageId: record.candidate_page_id,
+    canonicalEntityId: record.canonical_entity_id,
+    publicProfile: record.public_profile,
+    issueDate: record.issue_date,
+    pdfPage: record.pdf_page,
+    pageUrl: record.page_url,
+    displayTitle: record.display_title,
+    citationLabel: record.citation_label,
+    rights: record.rights,
+    referenceClass: record.public_display_class,
+    badgeLabel: record.badge_label ?? undefined,
+  })),
 ];
 
-if (governedRecords.length !== 59) {
+if (governedRecords.length !== 83) {
   throw new Error(
-    `Expected 59 governed Draugas newspaper records; got ${governedRecords.length}.`,
+    `Expected 83 governed Draugas newspaper records; got ${governedRecords.length}.`,
   );
 }
 
