@@ -2,6 +2,7 @@ import projectionData from "@/data/canonical-draugas-newspaper-records.json";
 import titleFocusData from "@/data/canonical-draugas-parish-centered-title-focus-tranche1.json";
 import titleFocusHeldData from "@/data/canonical-draugas-parish-centered-title-focus-tranche1-held.json";
 import titleFocusTranche2Data from "@/data/canonical-draugas-parish-centered-title-focus-tranche2.json";
+import titleFocusTranche3Data from "@/data/canonical-draugas-parish-centered-title-focus-tranche3.json";
 import { publicInstitutions } from "@/lib/publication-projection";
 import {
   finalizeProfileSources,
@@ -115,6 +116,23 @@ type TitleFocusTranche2Projection = Omit<
   scope_candidate_page_ids: string[];
 };
 
+type TitleFocusTranche3Projection = Omit<
+  TitleFocusProjection,
+  "schema_version" | "held_candidate_page_ids"
+> & {
+  schema_version: "culturenet-solp-draugas-parish-centered-title-focus-public-record-set-tranche3-v1";
+  controlling_record_schema_version: "culturenet-solp-draugas-parish-centered-title-focus-public-record-tranche3-v1";
+  duplicate_guard_refs: Array<{
+    artifact_role: string;
+    ref: string;
+    hash_kind: string;
+    sha256: string;
+  }>;
+  source_overlay_content_hash_sha256: string;
+  source_selection_packet_content_hash_sha256: string;
+  scope_candidate_page_ids: string[];
+};
+
 type TitleFocusHeldProjection = {
   schema_version: "culturenet-draugas-parish-centered-title-focus-held-dispositions-v1";
   held_candidate_page_ids: string[];
@@ -145,6 +163,7 @@ const projection = projectionData as DraugasNewspaperProjection;
 const titleFocus = titleFocusData as TitleFocusProjection;
 const titleFocusHeld = titleFocusHeldData as TitleFocusHeldProjection;
 const titleFocusTranche2 = titleFocusTranche2Data as TitleFocusTranche2Projection;
+const titleFocusTranche3 = titleFocusTranche3Data as TitleFocusTranche3Projection;
 const EXPECTED_CONTENT_HASH =
   "143118db45388cb94c1421623e0139428751b6606626d5b51d5ea7b4a3b4e742";
 const EXPECTED_TITLE_FOCUS_HASH =
@@ -157,6 +176,12 @@ const EXPECTED_TITLE_FOCUS_TRANCHE2_PACKET_HASH =
   "f88510e06ca955703501d45db7ef5c707b351ccdf4d6856d0866adaf100a6624";
 const EXPECTED_TITLE_FOCUS_TRANCHE2_OVERLAY_HASH =
   "38c3b91c2665c185ef8f574c27490354a1ee3db86f42c5f8e0dc8c29deae8c62";
+const EXPECTED_TITLE_FOCUS_TRANCHE3_HASH =
+  "a6439fd0f25bff4c24b07896c592db37e190ca629d1282c4adb33b3395da1ae8";
+const EXPECTED_TITLE_FOCUS_TRANCHE3_PACKET_HASH =
+  "36b82172cc95f97de0588e33bfccb934e696b3a7dd4b607c6b38ec5811c49fd1";
+const EXPECTED_TITLE_FOCUS_TRANCHE3_OVERLAY_HASH =
+  "2751bd7385ff82d145a8517df14d5ffc40800bb641f00de12e6b9c6f12131b8a";
 const EXPECTED_CONTROLS: DraugasNewspaperProjection["controls"] = {
   publication_allowed: true,
   solp_consumer_projection: true,
@@ -290,6 +315,72 @@ if (
   );
 }
 
+const expectedTitleFocusTranche3ProfileCounts = {
+  "/parishes/ausros-vartu-manhattan-ny": 5,
+  "/parishes/joseph-dubois-pa": 1,
+  "/parishes/lithuanian-national-catholic-parish-waterbury-ct": 1,
+  "/parishes/our-lady-of-siluva-mission-mundelein-il": 1,
+  "/parishes/st-ann-beverly-shores-in": 1,
+  "/parishes/sv-antano-cicero-il": 1,
+  "/parishes/sv-kazimiero-cleveland-oh": 1,
+  "/parishes/sv-kazimiero-los-angeles-ca": 1,
+  "/parishes/sv-petro-boston-ma": 2,
+  "/parishes/svc-m-marijos-nekalto-prasidejimo-chicago-il": 1,
+  "/parishes/svc-mergeles-marijos-gimimo-chicago-il": 1,
+};
+const titleFocusTranche3CoreCount = titleFocusTranche3.records.filter(
+  (record) => record.public_display_class === "core_parish_reference",
+).length;
+const titleFocusTranche3SupplementalCount = titleFocusTranche3.records.filter(
+  (record) => record.public_display_class === "supplemental_reference",
+).length;
+if (
+  titleFocusTranche3.schema_version !==
+    "culturenet-solp-draugas-parish-centered-title-focus-public-record-set-tranche3-v1" ||
+  titleFocusTranche3.controlling_record_schema_version !==
+    "culturenet-solp-draugas-parish-centered-title-focus-public-record-tranche3-v1" ||
+  titleFocusTranche3.content_hash_sha256 !==
+    EXPECTED_TITLE_FOCUS_TRANCHE3_HASH ||
+  titleFocusTranche3.source_selection_packet_content_hash_sha256 !==
+    EXPECTED_TITLE_FOCUS_TRANCHE3_PACKET_HASH ||
+  titleFocusTranche3.source_overlay_content_hash_sha256 !==
+    EXPECTED_TITLE_FOCUS_TRANCHE3_OVERLAY_HASH ||
+  titleFocusTranche3.records.length !== 16 ||
+  titleFocusTranche3.record_counts.public_record_count !== 16 ||
+  titleFocusTranche3.record_counts.core_parish_reference !== 10 ||
+  titleFocusTranche3.record_counts.supplemental_reference !== 6 ||
+  titleFocusTranche3CoreCount !== 10 ||
+  titleFocusTranche3SupplementalCount !== 6 ||
+  JSON.stringify(titleFocusTranche3.record_counts.by_public_profile) !==
+    JSON.stringify(expectedTitleFocusTranche3ProfileCounts) ||
+  titleFocusTranche3.scope_candidate_page_ids.some((id) =>
+    id.includes("allsaints-worcester-ma"),
+  ) ||
+  titleFocusTranche3.records.some((record) =>
+    record.candidate_page_id.includes("allsaints-worcester-ma"),
+  ) ||
+  titleFocusTranche3.controls.solp_profile_display_allowed !== true ||
+  titleFocusTranche3.controls.homepage_update_allowed !== false ||
+  titleFocusTranche3.controls.directory_cards_update_allowed !== false ||
+  titleFocusTranche3.controls.books_grouping_allowed !== false ||
+  titleFocusTranche3.controls.standalone_press_section_allowed !== false ||
+  titleFocusTranche3.controls.comprehensive_spauda_page_allowed !== false ||
+  titleFocusTranche3.controls.historical_claim_admission_allowed !== false ||
+  titleFocusTranche3.controls.canonical_write_allowed !== false ||
+  titleFocusTranche3.controls.sacred_core_write_allowed !== false ||
+  titleFocusTranche3.controls.solp_ingestion_allowed !== false ||
+  titleFocusTranche3.controls.contains_ocr_text !== false ||
+  titleFocusTranche3.controls.contains_page_text !== false ||
+  titleFocusTranche3.controls.contains_source_text !== false ||
+  titleFocusTranche3.controls.contains_source_prose !== false ||
+  titleFocusTranche3.controls.contains_excerpts !== false ||
+  titleFocusTranche3.controls.contains_quotes !== false
+) {
+  throw new Error(
+    "Draugas title-focus tranche 3 records are not the pinned sixteen-row reviewed metadata projection.",
+  );
+}
+
 const heldCandidateIds = new Set(titleFocus.held_candidate_page_ids);
 if (
   titleFocusHeld.schema_version !==
@@ -369,7 +460,27 @@ const governedRecords: GovernedDraugasRecord[] = [
     referenceClass: record.public_display_class,
     badgeLabel: record.badge_label ?? undefined,
   })),
+  ...titleFocusTranche3.records.map((record) => ({
+    sourceRecordId: titleFocusRecordId(record),
+    candidatePageId: record.candidate_page_id,
+    canonicalEntityId: record.canonical_entity_id,
+    publicProfile: record.public_profile,
+    issueDate: record.issue_date,
+    pdfPage: record.pdf_page,
+    pageUrl: record.page_url,
+    displayTitle: record.display_title,
+    citationLabel: record.citation_label,
+    rights: record.rights,
+    referenceClass: record.public_display_class,
+    badgeLabel: record.badge_label ?? undefined,
+  })),
 ];
+
+if (governedRecords.length !== 59) {
+  throw new Error(
+    `Expected 59 governed Draugas newspaper records; got ${governedRecords.length}.`,
+  );
+}
 
 for (const record of governedRecords) {
   if (seenRecordIds.has(record.sourceRecordId)) {
