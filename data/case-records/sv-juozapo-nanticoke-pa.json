@@ -4,6 +4,34 @@
   "buildingStatus": "converted",
   "currentUse": "Private single-family residence at 316 Pine St (Hanover section), Nanticoke, PA 18634 — a 3-bedroom, 4-bath, ~4,300 sq ft home retaining the original stained-glass windows, hardwood floors, and bell tower",
   "summary": "The former St. Joseph's Lithuanian church building in the Hanover section of Nanticoke is standing and has been a private single-family home for two decades. The large wooden church closed in 2004 and was bought by Nanticoke residents Bernie and Toni Norieka, who sold their house to fund converting it into their home, keeping the original 9-foot stained-glass windows. Global True Lithuania documents that the stained glass, decor, some furniture, the Lithuanian inscriptions, and a Lithuanian priest memorial in the churchyard all survive, calling it arguably the most authentic Lithuanian church building among those converted to other uses; the bell tower was made into a room with valley views. The aging owners later listed the renovated home (WNEP reported they planned to stay at their Florida residence), and property records show 316 Pine St — a former church built in 1915 — last sold on May 18, 2022 for $340,000. The buyer's identity has not been published, so whether the current owner is of Lithuanian descent is unknown. Note that a different St. Joseph's in Nanticoke — the Slovak parish, closed 2010 into St. Faustina Parish — was demolished by the Diocese of Scranton in February 2019 and is frequently confused with the Lithuanian church in news coverage.",
+  "historicalNarrative": [
+    {
+      "text": "The Lithuanian St. Joseph worship site stood in Nanticoke's Hanover section. Field documentation says it was served by the Lithuanian priest from Wanamie and may never have been a separately erected parish. Because no diocesan instrument has been located, its independent-parish status, founding date, and earliest exact address remain unresolved rather than inferred from the church building alone.",
+      "sources": [
+        { "url": "https://global.truelithuania.com/northern-coal-region-scranton-1614/", "locator": "Nanticoke Lithuanian St. Joseph section: Wanamie priest and institutional-status account" }
+      ]
+    },
+    {
+      "text": "The Lithuanian church closed in 2004. Contemporary local reporting describes Bernie and Toni Norieka buying the building and converting it into their home, while retaining the nine-foot stained-glass windows. The available sources do not identify a merger decree, successor parish, or sacramental-record custodian, so the institutional end cannot be modeled more precisely than the documented closure.",
+      "sources": [
+        { "url": "https://archive.timesleader.com/article/1059584/buildings-saving-grace-couple-converting-church-into-place-theyll-call-home", "locator": "May 8, 2004 report on the Norieka purchase and church-to-home conversion" },
+        { "url": "https://global.truelithuania.com/northern-coal-region-scranton-1614/", "locator": "Nanticoke section: 2004 closure and Norieka residential conversion" }
+      ]
+    },
+    {
+      "text": "The conversion preserved unusually extensive church fabric. Field documentation records Lithuanian inscriptions, stained glass, furnishings, a Lithuanian priest memorial in the churchyard, and a room made within the bell tower. Those observations establish the building's residential reuse and the survival of heritage features at the time documented, but not their condition after the property's later sale.",
+      "sources": [
+        { "url": "https://global.truelithuania.com/northern-coal-region-scranton-1614/", "locator": "Nanticoke former church interior, inscriptions, memorial, and bell-tower description" }
+      ]
+    },
+    {
+      "text": "This building must not be confused with the separate Slovak St. Joseph Church in Nanticoke. News coverage of a February 2019 demolition concerns that Slovak parish, which closed into St. Faustina Parish, not the Lithuanian church converted to a residence. Later ownership and the present interior condition of the Lithuanian building remain unverified.",
+      "sources": [
+        { "url": "https://fox56.com/news/local/saint-josephs-church-demolished-in-nanticoke", "locator": "February 11, 2019 report identifying the demolished Slovak St. Joseph Church" },
+        { "url": "https://www.huffpost.com/entry/pennsylvania-catholic-church-demolished_n_5c65845ce4b0bcddd40f5b30", "locator": "2019 demolition account and Slovak-parish history" }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2004",

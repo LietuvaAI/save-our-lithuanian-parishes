@@ -1,0 +1,91 @@
+{
+  "slug": "first-lutheran-boston",
+  "culturenetEntityId": "cn:institution:lithuanian-lutheran-congregation-boston-ma",
+  "asOf": "2026-08-17",
+  "formationLabel": "Early Lithuanian Evangelical congregation active before 1913 · independent activity ceased about 1913 · revived 14 January 1951 · historical end unresolved",
+  "institutionClass": "non_catholic_christian",
+  "institutionStatus": "historical_end_unresolved",
+  "buildingStatus": "unknown",
+  "currentUse": "No current Lithuanian Lutheran congregation, worship schedule, owned building, successor, records custodian, or cemetery has been verified in Boston. The postwar congregation used host spaces, including Sandara Hall and First Lutheran Church. First Lutheran's former 38 West Newton Street building was demolished in 2021; its present congregation at 299 Berkeley Street is a separate host institution, not a Lithuanian successor.",
+  "summary": "Boston's Lithuanian Lutheran record contains an early congregation and a postwar revival, not one securely uninterrupted institution. A visually verified 1954 history says Lithuanian Evangelicals organized in the late nineteenth century, were served by Revs. Macaitis, Drignaitis, and Brustaitis, and ceased independent activity about 1913 as members entered local American parishes. New immigrants revived the congregation at Boston's Sandara Hall on January 14, 1951; Rev. Petras Dagys served it, and Lithuanian services moved to First Lutheran Church on June 29, 1952. The same source reported nearly 200 people in 1954. A 1995 survey did not include Boston among the regularly active North American Lithuanian Lutheran congregations, but no final service, dissolution, merger, or records transfer was found. The exact Sandara Hall address and any other early sites remain unresolved, while the 1952 First Lutheran host is identified with the historic 38 West Newton Street church, demolished in 2021.",
+  "institutionLifecycle": {
+    "formation": "An early Lithuanian Evangelical congregation operated in the late nineteenth and early twentieth centuries; independent activity ceased about 1913. A revival meeting on 14 January 1951 reorganized Lithuanian congregational life. Whether the revival was the same legal body is unresolved.",
+    "jurisdiction": "Lithuanian Evangelical/Lutheran congregation. The sources call the revived parish independent and place it in the Lithuanian Lutheran diaspora network; no formal American synod membership has been verified.",
+    "lastVerifiedActivity": "The visually verified 1954 source documents an independent, self-supporting congregation of nearly 200; later survey evidence indicates it was no longer regularly active by 1995, without an exact end date.",
+    "terminalStatus": "historical_end_unresolved",
+    "currentVerification": "No current official Lithuanian congregation listing was found. Current First Lutheran Church is a separate Boston congregation and does not establish Lithuanian institutional survival."
+  },
+  "worshipSites": [
+    {
+      "siteType": "meeting_hall",
+      "culturenetEntityId": "cn:building_site:sandara-hall-boston-ma",
+      "name": "Boston Sandara Hall",
+      "address": "Boston, MA; exact address unresolved",
+      "usePeriod": "revival meeting on 14 January 1951",
+      "buildingCondition": "unknown",
+      "currentUse": "No present site identification or condition is asserted.",
+      "evidence": [{"url": "https://www.spauda.org/naujienos/archive/1954/1954-03-31-NAUJIENOS.pdf#page=3", "locator": "Naujienos, 1954-03-31, PDF/printed p. 3, visually verified: revival meeting at Sandara Hall on 1951-01-14"}]
+    },
+    {
+      "siteType": "host_church",
+      "culturenetEntityId": "cn:building_site:first-lutheran-38-west-newton-boston-ma",
+      "name": "First Lutheran Church",
+      "address": "38 W. Newton St., Boston, MA",
+      "usePeriod": "Lithuanian services documented from 29 June 1952; later end unresolved; host moved in 1959",
+      "buildingCondition": "demolished",
+      "currentUse": "The host congregation moved to Berkeley Street in 1959; the West Newton Street building was demolished in 2021. No evidence shows that the Lithuanian congregation owned it or followed the host to Berkeley Street.",
+      "evidence": [
+        {"url": "https://www.spauda.org/naujienos/archive/1954/1954-03-31-NAUJIENOS.pdf#page=3", "locator": "Naujienos, 1954-03-31, PDF/printed p. 3, visually verified: Lithuanian services at First Lutheran Church from 1952-06-29"},
+        {"url": "https://www.boston.com/news/local-news/2021/07/14/time-capsule-south-end-123-years/", "locator": "Boston.com, 2021-07-14: First Lutheran moved from 38 W. Newton in 1959 and old church demolished in 2021"}
+      ]
+    }
+  ],
+  "relationships": [
+    {"type": "institution-used-host-site", "source": "cn:institution:lithuanian-lutheran-congregation-boston-ma", "target": "cn:building_site:sandara-hall-boston-ma", "date": "1951-01-14", "status": "accepted", "note": "Formation/revival meeting; no ownership asserted."},
+    {"type": "institution-used-host-site", "source": "cn:institution:lithuanian-lutheran-congregation-boston-ma", "target": "cn:building_site:first-lutheran-38-west-newton-boston-ma", "date": "from 1952-06-29; end unresolved", "status": "accepted", "note": "Hosted services, not ownership or institutional merger."}
+  ],
+  "historicalNarrative": [
+    {
+      "text": "Boston's case is a Lithuanian Evangelical/Lutheran congregation, not First Lutheran Church itself and not a generic Boston Protestant parish. A visually verified 1954 Lithuanian history says organized Lithuanian Evangelical activity existed in the late nineteenth century and names Revs. Macaitis, Drignaitis, and Brustaitis among its ministers. VLE's Boston Lithuanian overview independently places a Lithuanian Evangelical parish in the city's late-nineteenth-century community.",
+      "sources": [
+        {"url": "https://www.spauda.org/naujienos/archive/1954/1954-03-31-NAUJIENOS.pdf#page=3", "locator": "Naujienos, 1954-03-31, PDF/printed p. 3, visually verified, 'Bostono lietuvių evangelikų parapija'"},
+        {"url": "https://www.vle.lt/straipsnis/bostono-lietuviai/", "locator": "Visuotinė lietuvių enciklopedija, 'Bostono lietuviai,' accessed 2026-08-17: late-nineteenth-century Evangelical parish"}
+      ]
+    },
+    {
+      "text": "The early congregation did not remain independently active without interruption. The 1954 account says that after ministers died or moved and replacements did not appear, the parish declined and members partly entered local American congregations. It dates the end of independent activity to about 1913. That wording describes the institutional phase; it does not identify a church sale, legal dissolution, record transfer, or cemetery.",
+      "sources": [{"url": "https://www.spauda.org/naujienos/archive/1954/1954-03-31-NAUJIENOS.pdf#page=3", "locator": "Naujienos, 1954-03-31, PDF/printed p. 3, visually verified: decline and cessation of independent activity about 1913"}]
+    },
+    {
+      "text": "Postwar Lithuanian immigrants revived congregational life. The founding/revival meeting occurred at Boston's Sandara Hall on January 14, 1951, with Rev. Petras Dagys participating and a ten-person parish council elected. The source explicitly calls the event both establishment and revival, which supports historical continuity in community memory but does not prove the same legal corporation survived from the pre-1913 body. Sandara Hall's exact address remains unresolved.",
+      "sources": [{"url": "https://www.spauda.org/naujienos/archive/1954/1954-03-31-NAUJIENOS.pdf#page=3", "locator": "Naujienos, 1954-03-31, PDF/printed p. 3, visually verified: 1951-01-14 Sandara Hall revival, Dagys, and parish council"}]
+    },
+    {
+      "text": "Beginning June 29, 1952, the revived congregation held Lithuanian services at First Lutheran Church. In 1954 it reported nearly two hundred people and described itself as independent and supported by member contributions. The host was First Lutheran's historic church at 38 West Newton Street; the Lithuanian congregation's use is not evidence of ownership. First Lutheran moved to its present Berkeley Street building in 1959, and the West Newton structure was demolished in 2021.",
+      "sources": [
+        {"url": "https://www.spauda.org/naujienos/archive/1954/1954-03-31-NAUJIENOS.pdf#page=3", "locator": "Naujienos, 1954-03-31, PDF/printed p. 3, visually verified: First Lutheran services from 1952-06-29 and nearly 200 members"},
+        {"url": "https://www.boston.com/news/local-news/2021/07/14/time-capsule-south-end-123-years/", "locator": "Boston.com, 2021-07-14: 38 W. Newton history, 1959 move, and 2021 demolition"},
+        {"url": "https://flc-boston.org/", "locator": "Current First Lutheran Church website, accessed 2026-08-17: separate host congregation at 299 Berkeley Street"}
+      ]
+    },
+    {
+      "text": "Lituanus's 1995 survey discusses Boston among the early and postwar Lithuanian Lutheran congregations but names only Zion, Tėviškės, and Toronto as regularly active in North America at that time. This supports a later lapse in regular Boston activity, not a specific closure year. No final service, legal dissolution, merger, successor, records-custody notice, dedicated cemetery, or evidence that the Lithuanian congregation ever owned a building has been found; its terminal date therefore remains unresolved.",
+      "sources": [{"url": "https://old.lituanus.org/1995_2/95_2_01.htm", "locator": "Lituanus 41:2 (1995), 'Lithuanian Lutheranism in the United States': Boston history and regularly active North American congregations"}]
+    }
+  ],
+  "developments": [
+    {"date": "about 1913", "headline": "Early congregation ceases independent activity", "detail": "The source describes members entering American congregations but provides no legal dissolution.", "sources": [{"title": "Bostono lietuvių evangelikų parapija", "publisher": "Naujienos", "date": "1954-03-31", "page": "PDF/printed p. 3", "url": "https://www.spauda.org/naujienos/archive/1954/1954-03-31-NAUJIENOS.pdf#page=3"}]},
+    {"date": "1951-01-14", "headline": "Postwar congregation revived at Sandara Hall", "detail": "Rev. Petras Dagys participated and a parish council was elected.", "sources": [{"title": "Bostono lietuvių evangelikų parapija", "publisher": "Naujienos", "date": "1954-03-31", "page": "PDF/printed p. 3", "url": "https://www.spauda.org/naujienos/archive/1954/1954-03-31-NAUJIENOS.pdf#page=3"}]},
+    {"date": "1952-06-29", "headline": "Lithuanian services begin at First Lutheran Church", "detail": "The congregation used a host church and did not establish ownership.", "sources": [{"title": "Bostono lietuvių evangelikų parapija", "publisher": "Naujienos", "date": "1954-03-31", "page": "PDF/printed p. 3", "url": "https://www.spauda.org/naujienos/archive/1954/1954-03-31-NAUJIENOS.pdf#page=3"}]}
+  ],
+  "sources": [
+    {"title": "Bostono lietuvių evangelikų parapija", "publisher": "Naujienos", "date": "1954-03-31", "page": "PDF/printed p. 3", "url": "https://www.spauda.org/naujienos/archive/1954/1954-03-31-NAUJIENOS.pdf#page=3"},
+    {"title": "Bostono lietuviai", "publisher": "Visuotinė lietuvių enciklopedija", "date": "accessed 2026-08-17", "url": "https://www.vle.lt/straipsnis/bostono-lietuviai/"},
+    {"title": "Time capsule found as 123-year-old South End church is demolished", "publisher": "Boston.com", "date": "2021-07-14", "url": "https://www.boston.com/news/local-news/2021/07/14/time-capsule-south-end-123-years/"},
+    {"title": "First Lutheran Church of Boston", "publisher": "First Lutheran Church", "date": "accessed 2026-08-17", "url": "https://flc-boston.org/"},
+    {"title": "Lithuanian Lutheranism in the United States", "publisher": "Lituanus", "date": "1995", "url": "https://old.lituanus.org/1995_2/95_2_01.htm"}
+  ],
+  "confidence": "probable",
+  "conflictsWithArchiveRecord": "The evidence distinguishes an early congregation that ceased independent activity about 1913 from a 1951 revival. The revival may represent community continuity, but uninterrupted legal identity is unproved. Omission from the 1995 regularly active list cannot supply a closure date. First Lutheran's building history belongs to a host institution, not to a Lithuanian-owned church.",
+  "gaps": "Exact founding date and legal name of the early body, legal continuity into the 1951 revival, incorporation and denominational affiliation, exact Sandara Hall address, all other early and temporary sites, final service, dissolution or merger, successor, records custody, cemetery, and any Lithuanian-owned property remain unresolved."
+}

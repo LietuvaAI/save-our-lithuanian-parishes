@@ -1,0 +1,68 @@
+{
+  "slug": "st-casimir-racine-wi",
+  "culturenetEntityId": "cn:institution:st-casimir-racine-wi",
+  "asOf": "2026-08-17",
+  "formationLabel": "St. Casimir Society formed January 3, 1903 · parish incorporated November 23, 1910 · acquired and blessed church in 1913 · merged into St. Richard Parish in 1998",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "merged",
+  "buildingStatus": "unknown",
+  "currentUse": "St. Casimir Parish ended through a 1998 merger into St. Richard Parish. The City of Racine's 2021 assessment roll associates Christ Chapel Missionary Baptist Church with ownership of the property/site at 815 Park Avenue. That record does not establish the historic church structure's survival, current physical condition, current worship use, Christ Chapel as St. Casimir's institutional successor, or St. Richard worship at the site.",
+  "summary": "St. Casimir was Racine's Lithuanian Roman Catholic parish. A beneficial society formed January 3, 1903, and the parish was incorporated November 23, 1910. After buying and selling an initial parcel in 1911, the community purchased a vacant former Welsh Congregational church in 1913; it was refitted for Catholic worship and blessed August 24. The parish survived a 1981 probation, celebrated a diamond jubilee in 1988, and remained listed in 1995. Official Archdiocese and St. Richard sources establish that St. Casimir joined four other south-side Racine parishes to form St. Richard in 1998. Archdiocesan archives hold St. Casimir records dated 1910–1998. The 2021 city assessment roll associates Christ Chapel Missionary Baptist Church with ownership of the property/site at 815 Park Avenue; physical condition and current use remain unresolved.",
+  "institutionLifecycle": {
+    "formation": "St. Casimir Society formed January 3, 1903. The Roman Catholic parish was incorporated November 23, 1910.",
+    "institutionalForm": "Lithuanian Roman Catholic national parish in the Archdiocese of Milwaukee; Marian Fathers assumed pastoral responsibility in 1942.",
+    "terminalStatus": "Merged with Holy Name, St. Rose, St. Stanislaus, and Holy Trinity to form St. Richard Parish in 1998.",
+    "recordsCustody": "Archdiocese of Milwaukee Archives, St. Casimir Racine collection MC 107, 1910–1998.",
+    "currentVerification": "Official Archdiocese closed/merged and archives pages identify the closed institution and records; St. Richard's history and the Archdiocese handbook identify the 1998 successor."
+  },
+  "worshipSites": [
+    {
+      "siteType": "proposed_site",
+      "name": "Initial 1911 St. Casimir land",
+      "address": "Racine, WI; exact parcel unresolved",
+      "usePeriod": "purchased July 5, 1911 and sold soon afterward",
+      "buildingCondition": "no accepted evidence that a church was built",
+      "currentUse": "Unknown; not conflated with the later church.",
+      "evidence": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 43 / printed p. 35; first land purchase and resale"}]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-casimir-815-park-racine-wi",
+      "name": "St. Casimir Church",
+      "address": "815 Park Avenue, Racine, WI",
+      "usePeriod": "former Welsh Congregational church purchased and blessed in 1913; St. Casimir use through 1998",
+      "buildingCondition": "unknown; the 2021 assessment roll proves property owner/address association, not survival or physical condition of the historic church",
+      "currentUse": "Christ Chapel Missionary Baptist Church is associated with ownership of the property/site in 2021; current physical and worship use unresolved.",
+      "evidence": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 43 / printed p. 35; 1913 former Welsh Congregational church and August 24 blessing"}, {"url": "https://cityofracinewi.gov/uploadedFiles/_MainSiteContent/Departments/Assessor/_Documents/2021%20RE%20Assessment%20Roll.pdf", "locator": "2021 Real Estate Assessment Roll, p. 155, parcel 00967001 / record 1210, 815 Park Ave; owner Christ Chapel Missionary Baptist Church"}]
+    }
+  ],
+  "relationships": [
+    {"type": "institution-used-site", "source": "cn:institution:st-casimir-racine-wi", "target": "cn:building_site:st-casimir-815-park-racine-wi", "date": "1913–1998", "status": "accepted", "note": "Institutional merger and later property/site ownership association are separate; physical condition and current use remain unresolved."},
+    {"type": "institution-merged-into-institution", "source": "cn:institution:st-casimir-racine-wi", "target": "cn:institution:st-richard-racine-wi", "date": "1998", "status": "accepted", "note": "Official Archdiocese handbook and St. Richard history identify the five-parish formation."},
+    {"type": "records-custody", "source": "cn:institution:st-casimir-racine-wi", "target": "cn:archive:archdiocese-milwaukee-archives", "date": "after 1998", "status": "accepted", "note": "MC 107 covers St. Casimir Racine records, 1910–1998."}
+  ],
+  "historicalNarrative": [
+    {"text": "Racine Lithuanian Catholics formed the beneficial society of St. Casimir on January 3, 1903. With assistance from the pastor of German St. Mary Parish, they incorporated St. Casimir Parish on November 23, 1910. The society date and parish incorporation are distinct formation milestones, and the German parish's assistance does not create an identity or successor relationship.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 43 / printed p. 35; society and parish incorporation"}]},
+    {"text": "The community purchased land on July 5, 1911 but sold it soon afterward. In 1913 it instead acquired a vacant former Welsh Congregational church, refitted it for Catholic worship, and had it blessed August 24. This sequence is modeled as an unused or unproved first parcel followed by the actual church site, rather than treating the 1911 land as the completed parish church.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 43 / printed p. 35; 1911 land and 1913 church acquisition/blessing"}]},
+    {"text": "Pastoral instability marked early decades, including periods when clergy based at St. Gabriel in Milwaukee or St. Peter in Kenosha served Racine. The Marian Fathers assumed responsibility in 1942 and built a rectory in 1955. These clergy arrangements document pastoral service, not a reduction of St. Casimir to a mission or a merger with the serving parishes.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF pp. 44–45 / printed pp. 36–37; visiting clergy, Marian administration, and 1955 rectory"}]},
+    {"text": "The parish's later institutional life remained distinct from demographic decline. Archbishop Albert Meyer placed St. Casimir on a three-year probation in 1981, when 163 families were registered. The parish nevertheless celebrated its diamond jubilee in 1988 and was still listed as a Lithuanian parish in the 1995 Official Catholic Directory. None of those milestones by itself proves the later terminal mechanism.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 45 / printed p. 37; 1981 probation, 1988 jubilee, and 1995 listing"}]},
+    {"text": "Official and first-party evidence resolves the terminal event. The Archdiocese handbook lists St. Richard Parish as the 1998 merger of former St. Casimir, Holy Name, St. Rose, St. Stanislaus, and Holy Trinity parishes; St. Richard's own history says the parish began in 1998 from five south-side Racine parishes. The Archdiocese archives holds St. Casimir records through 1998. This supports a typed merger and records-custody chain without implying that St. Richard continued at the St. Casimir building.", "sources": [{"url": "https://www.archmil.org/ArchMil/Resources/COMM/B_Handbook2020Milwaukee.pdf", "locator": "Official Archdiocese handbook, p. B-67; St. Richard merger lineage"}, {"url": "https://strichard-parish.org/our-story-1", "locator": "St. Richard Parish history: parish began in 1998 from five south-side Racine parishes"}, {"url": "https://www.archmil.org/collections-in-the-archives", "locator": "Archdiocese archives collections: St. Casimir Congregation, Racine, MC 107, 1910–1998"}]},
+    {"text": "The 815 Park Avenue property's later ownership is separate from parish succession. The City of Racine's 2021 assessment roll associates Christ Chapel Missionary Baptist Church with ownership at that address. It does not establish that the historic church structure survives, prove current worship or physical condition, identify Christ Chapel as the Catholic parish's successor, or locate St. Richard's worship site.", "sources": [{"url": "https://cityofracinewi.gov/uploadedFiles/_MainSiteContent/Departments/Assessor/_Documents/2021%20RE%20Assessment%20Roll.pdf", "locator": "2021 Real Estate Assessment Roll, p. 155, parcel 00967001 / record 1210, 815 Park Ave"}]}
+  ],
+  "developments": [
+    {"date": "1903–1913", "headline": "Society, incorporation, and church milestones", "detail": "Formation and building dates remain separate.", "sources": [{"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "PDF p. 43 / printed p. 35", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"}]},
+    {"date": "1998", "headline": "St. Casimir merges into St. Richard", "detail": "Five former south-side Racine parishes formed St. Richard.", "sources": [{"title": "Archdiocese of Milwaukee Handbook", "publisher": "Archdiocese of Milwaukee", "date": "2020", "page": "p. B-67", "url": "https://www.archmil.org/ArchMil/Resources/COMM/B_Handbook2020Milwaukee.pdf"}, {"title": "Our Story", "publisher": "St. Richard Parish", "date": "accessed 2026-08-17", "url": "https://strichard-parish.org/our-story-1"}]},
+    {"date": "2021", "headline": "Baptist ownership association at 815 Park Avenue", "detail": "Property/site ownership is distinct from Catholic institutional succession; physical condition and current use remain unresolved.", "sources": [{"title": "2021 Real Estate Assessment Roll", "publisher": "City of Racine", "date": "2021", "url": "https://cityofracinewi.gov/uploadedFiles/_MainSiteContent/Departments/Assessor/_Documents/2021%20RE%20Assessment%20Roll.pdf"}]}
+  ],
+  "sources": [
+    {"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "PDF pp. 43–45 / printed pp. 35–37", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"},
+    {"title": "Closed and Merged Parishes", "publisher": "Archdiocese of Milwaukee", "date": "accessed 2026-08-17", "url": "https://www.archmil.org/closed-and-merged-parishes"},
+    {"title": "Collections in the Archives", "publisher": "Archdiocese of Milwaukee", "date": "accessed 2026-08-17", "url": "https://www.archmil.org/collections-in-the-archives"},
+    {"title": "Archdiocese of Milwaukee Handbook", "publisher": "Archdiocese of Milwaukee", "date": "2020", "page": "p. B-67", "url": "https://www.archmil.org/ArchMil/Resources/COMM/B_Handbook2020Milwaukee.pdf"},
+    {"title": "Our Story", "publisher": "St. Richard Parish", "date": "accessed 2026-08-17", "url": "https://strichard-parish.org/our-story-1"},
+    {"title": "2021 Real Estate Assessment Roll", "publisher": "City of Racine", "date": "2021", "url": "https://cityofracinewi.gov/uploadedFiles/_MainSiteContent/Departments/Assessor/_Documents/2021%20RE%20Assessment%20Roll.pdf"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The former unknown institutional status is resolved: official and first-party evidence supports a 1998 merger into St. Richard and Archdiocesan custody of records through 1998. The later Baptist property/site ownership association is not the successor relationship and does not resolve building condition or current use.",
+  "gaps": "Original incorporation and merger decrees, exact 1911 parcel, complete 815 Park deed chain, final Mass date, current Christ Chapel worship schedule and interior/structural condition, St. Richard's exact reception of assets, cemetery, and series-level sacramental-record inventory remain unresolved."
+}

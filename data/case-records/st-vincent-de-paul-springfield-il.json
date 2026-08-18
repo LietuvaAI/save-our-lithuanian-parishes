@@ -1,0 +1,99 @@
+{
+  "slug": "st-vincent-de-paul-springfield-il",
+  "culturenetEntityId": "cn:institution:st-vincent-de-paul-springfield-il",
+  "asOf": "2026-08-17",
+  "formationLabel": "St. Joseph Society organizing in 1902 · land acquired in 1903 · parish formation commemorated as 1906 · episcopal approval in 1907 · cornerstone blessed in 1908 · church dedicated in 1911 · closed at the end of 1971",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "closed",
+  "buildingStatus": "demolished",
+  "currentUse": "The Lithuanian Roman Catholic parish closed at the end of 1971, with local histories placing the last day on December 31 and the effective closure on January 1, 1972. Its church and rectory at Eighth and Enos were demolished; the selected local-heritage reading dates demolition to 1976, while an Illinois Times retrospective says 1975. The former site is reported as a parking lot. A state historical marker dedicated in 2012 stands at Seventh Street and Enterprise Avenue and commemorates the community; it is not evidence that the church building or worship use survived.",
+  "summary": "St. Vincent de Paul was Springfield's Lithuanian Roman Catholic parish. Its formation cannot safely be reduced to the inherited 1909 date: Wolkovich separates a St. Joseph Society organized in 1902, land acquired in 1903, a 1906 golden-jubilee formation reading, episcopal approval in 1907, the 1908 cornerstone, and the church's 1911 dedication. The Diocese of Springfield archives lists the closed parish's sacramental records through 1971, while local histories place the parish's terminal worship at December 31, 1971 and closure at January 1, 1972. The church and rectory at Eighth and Enos were later demolished, with a selected 1976 date and a published 1975 conflict preserved separately. The parcel is reported as a parking lot, and a 2012 marker commemorates the Lithuanian community at a different location. No founding or closure decree, exact street number, cemetery, or demolition instrument has been located.",
+  "institutionLifecycle": {
+    "formation": "The accepted chronology distinguishes St. Joseph Society organizing in 1902, a 1903 land purchase, a 1906 parish/jubilee reading, episcopal permission in July 1907, the March 4, 1908 cornerstone blessing, and the May 14, 1911 church dedication. No canonical erection decree was located.",
+    "jurisdiction": "Lithuanian Roman Catholic parish of the Diocese of Springfield in Illinois. It is distinct from the separate independent Lithuanian church reported in Springfield around 1948.",
+    "terminalStatus": "The diocesan archives lists St. Vincent de Paul as closed with sacramental records ending in 1971. Community and neighborhood histories place the last parish day on December 31, 1971 and effective closure on January 1, 1972; the closure decree was not located.",
+    "currentVerification": "The Diocese of Springfield Office for Archives and Records Management is the official repository named for the closed parish's sacramental records. Local heritage sources document demolition and commemoration, not institutional survival."
+  },
+  "worshipSites": [
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-vincent-eighth-enos-springfield-il",
+      "name": "St. Vincent de Paul Church and rectory",
+      "address": "Corner of Eighth Street and Enos Avenue, Springfield, IL; exact street number unresolved",
+      "usePeriod": "land acquired 1903; cornerstone blessed 1908; church dedicated 1911; parish use through December 31, 1971",
+      "buildingCondition": "demolished; selected local-heritage date 1976, with a 1975 published conflict",
+      "currentUse": "Former church and rectory site reported as a parking lot; current parcel ownership and exact boundaries unverified.",
+      "evidence": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, Lithuanian Religious Life in America, vol. 3, PDF pp. 119–120 / printed pp. 112–113"},
+        {"url": "https://epnia.com/history-and-development-of-the-enos-park-area/st-vincent-de-paul-lithuanian-catholic-church/", "locator": "EPNIA church history: Eighth and Enos site, 1908 cornerstone, 1971 terminal worship, and 1976 demolition"},
+        {"url": "https://www.illinoistimes.com/arts-culture/lithuanians-in-springfield-11446146/", "locator": "Illinois Times retrospective: 1972 closure, alternate 1975 demolition date, and parking-lot site"}
+      ]
+    }
+  ],
+  "relationships": [
+    {"type": "institution-used-site", "source": "cn:institution:st-vincent-de-paul-springfield-il", "target": "cn:building_site:st-vincent-eighth-enos-springfield-il", "date": "1908–1971-12-31", "status": "accepted", "note": "The cornerstone and terminal-use dates are documented; the exact street number and parcel boundaries remain unresolved."},
+    {"type": "records-custody", "source": "cn:institution:st-vincent-de-paul-springfield-il", "target": "cn:archive:diocese-springfield-archives-records-management", "date": "after 1971", "status": "accepted", "note": "The diocesan archives lists St. Vincent de Paul records through 1971; completeness and series-level coverage were not independently inventoried."}
+  ],
+  "historicalNarrative": [
+    {
+      "text": "St. Vincent de Paul was Springfield's Lithuanian Roman Catholic parish, distinct from the separate independent Lithuanian church reported in the city around 1948. Its beginnings were a sequence rather than a single uncontested founding date. Wolkovich describes the St. Joseph Society organizing in 1902 and purchasing land in 1903; his source list identifies both the Diocese of Springfield archives and a Golden Jubilee 1906–1956 parish history. The same account says episcopal permission to take charge of the Lithuanian community came in July 1907. Without an erection decree, the dossier preserves those milestones instead of promoting the inherited 1909 date to institutional fact.",
+      "sources": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, Lithuanian Religious Life in America, vol. 3, PDF pp. 119–120 / printed pp. 112–113; formation chronology and cited-source list"}
+      ]
+    },
+    {
+      "text": "The church-building chronology is better defined. Wolkovich records the cornerstone blessing on March 4, 1908, while the Springfield Lithuanian community history places the church at Eighth and Enos and gives a May 14, 1911 dedication. These are construction and dedication events, not alternate parish-founding dates. The accepted evidence identifies the corner but not an exact street number or parcel-complete address.",
+      "sources": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 119 / printed p. 112; March 4, 1908 cornerstone blessing"},
+        {"url": "https://lithspringfield.com/st-vincent-de-paul-lithuanian-catholic-church/", "locator": "Community church history: Eighth and Enos location, 1908 cornerstone, and May 14, 1911 dedication"}
+      ]
+    },
+    {
+      "text": "St. Vincent remained a specifically Lithuanian parish for much of its life. Wolkovich says a 1924 episcopal rule restricted membership to people of Lithuanian descent and records the ordination of three men from the parish on April 19, 1936. The community history likewise treats the 1936 ordinations and the 1956 golden jubilee as major institutional milestones. These details establish sustained parish life but do not resolve which early year the diocese regarded as canonical erection.",
+      "sources": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 120 / printed p. 113; 1924 membership rule and 1936 ordinations"},
+        {"url": "https://lithspringfield.com/st-vincent-de-paul-lithuanian-catholic-church/", "locator": "Community church history: 1936 ordinations and 1956 jubilee"}
+      ]
+    },
+    {
+      "text": "The terminal institutional event must also be separated from the building's later demolition. The Diocese of Springfield archives lists St. Vincent de Paul among closed parishes and gives 1971 as the terminal record year. Local histories say pastor Stanley O. Yunker suffered a stroke and retired, parishioners resisted closure, and the parish's last day was December 31, 1971, with closure effective January 1, 1972. No decree was found, so the exact canonical mechanism is left unresolved even though the official closed-parish and records-custody status is secure.",
+      "sources": [
+        {"url": "https://dio.org/archives/services/", "locator": "Office for Archives and Records Management, sacramental-record locations: Springfield, St. Vincent de Paul, 1971, held by the diocesan archives"},
+        {"url": "https://epnia.com/history-and-development-of-the-enos-park-area/st-vincent-de-paul-lithuanian-catholic-church/", "locator": "EPNIA history: Yunker retirement context, parishioner campaign, and December 31, 1971 terminal use"},
+        {"url": "https://lithspringfield.com/st-vincent-de-paul-lithuanian-catholic-church/", "locator": "Community church history: closure effective January 1, 1972"}
+      ]
+    },
+    {
+      "text": "The church and rectory did not survive the parish. EPNIA dates their demolition to 1976, consistent with a SangamonLink account that the building was torn down five years after the December 1971 closure. Illinois Times instead says the building was demolished in 1975 and reports the former site as a parking lot. The dossier selects 1976 as the local-heritage chronology but records 1975 as a real published conflict; it does not imply that either date is a diocesan demolition instrument.",
+      "sources": [
+        {"url": "https://epnia.com/history-and-development-of-the-enos-park-area/st-vincent-de-paul-lithuanian-catholic-church/", "locator": "EPNIA history: church and rectory demolished in 1976"},
+        {"url": "https://sangamoncountyhistory.org/lithuanian-american-war-casualties-ww-iii/", "locator": "SangamonLink history: closed December 31, 1971 and building torn down five years later"},
+        {"url": "https://www.illinoistimes.com/arts-culture/lithuanians-in-springfield-11446146/", "locator": "Illinois Times retrospective: alternate 1975 demolition date and parking-lot site"}
+      ]
+    },
+    {
+      "text": "A historical marker dedicated May 19, 2012 commemorates the Lithuanian community at Seventh Street and Enterprise Avenue, several blocks from the former church corner. It records memory and community history, not continuation of the parish, building, or hosted worship. The accepted record still lacks a founding decree, closure decree, exact church street number, demolition permit, parcel history, verified cemetery, and a series-level inventory of the sacramental records.",
+      "sources": [
+        {"url": "https://epnia.com/history-and-development-of-the-enos-park-area/st-vincent-de-paul-lithuanian-catholic-church/", "locator": "EPNIA history: May 19, 2012 Illinois State Historical Society marker dedication"},
+        {"url": "https://lithspringfield.com/an-indelible-role-in-our-history/lithuanian-historical-marker-dedication/lithuanians-in-springfield-historical-marker/", "locator": "Historical-marker page: marker location at Seventh Street and Enterprise Avenue and its commemorative text"}
+      ]
+    }
+  ],
+  "developments": [
+    {"date": "1902–1911", "headline": "Society, parish, and church milestones separated", "detail": "The evidence distinguishes 1902 society organizing, 1903 land, a 1906 jubilee reading, 1907 episcopal approval, the 1908 cornerstone, and 1911 dedication.", "sources": [{"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "PDF pp. 119–120 / printed pp. 112–113", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"}, {"title": "St. Vincent de Paul Lithuanian Catholic Church", "publisher": "Lithuanian-American Club of Central Illinois", "date": "accessed 2026-08-17", "url": "https://lithspringfield.com/st-vincent-de-paul-lithuanian-catholic-church/"}]},
+    {"date": "1971-12-31 / 1972-01-01", "headline": "Parish closes and records pass to diocesan custody", "detail": "The diocesan archives gives a 1971 terminal record year; local histories place the last day at December 31 and effective closure at January 1.", "sources": [{"title": "Sacramental Record Locations", "publisher": "Diocese of Springfield in Illinois, Office for Archives and Records Management", "date": "accessed 2026-08-17", "url": "https://dio.org/archives/services/"}, {"title": "St. Vincent de Paul Lithuanian Catholic Church", "publisher": "Enos Park Neighborhood Improvement Association", "date": "accessed 2026-08-17", "url": "https://epnia.com/history-and-development-of-the-enos-park-area/st-vincent-de-paul-lithuanian-catholic-church/"}]},
+    {"date": "1975/1976", "headline": "Church and rectory demolished", "detail": "The selected local-heritage date is 1976; Illinois Times gives 1975 and the conflict is retained.", "sources": [{"title": "St. Vincent de Paul Lithuanian Catholic Church", "publisher": "Enos Park Neighborhood Improvement Association", "date": "accessed 2026-08-17", "url": "https://epnia.com/history-and-development-of-the-enos-park-area/st-vincent-de-paul-lithuanian-catholic-church/"}, {"title": "Lithuanians in Springfield", "publisher": "Illinois Times", "date": "2012-05-17", "url": "https://www.illinoistimes.com/arts-culture/lithuanians-in-springfield-11446146/"}]}
+  ],
+  "sources": [
+    {"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "PDF pp. 119–120 / printed pp. 112–113", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"},
+    {"title": "St. Vincent de Paul Lithuanian Catholic Church", "publisher": "Lithuanian-American Club of Central Illinois", "date": "accessed 2026-08-17", "url": "https://lithspringfield.com/st-vincent-de-paul-lithuanian-catholic-church/"},
+    {"title": "Sacramental Record Locations", "publisher": "Diocese of Springfield in Illinois, Office for Archives and Records Management", "date": "accessed 2026-08-17", "url": "https://dio.org/archives/services/"},
+    {"title": "St. Vincent de Paul Lithuanian Catholic Church", "publisher": "Enos Park Neighborhood Improvement Association", "date": "accessed 2026-08-17", "url": "https://epnia.com/history-and-development-of-the-enos-park-area/st-vincent-de-paul-lithuanian-catholic-church/"},
+    {"title": "Lithuanians in Springfield", "publisher": "Illinois Times", "date": "2012-05-17", "url": "https://www.illinoistimes.com/arts-culture/lithuanians-in-springfield-11446146/"},
+    {"title": "Lithuanian-American war casualties, WW I–II", "publisher": "SangamonLink, Sangamon County Historical Society", "date": "2015-12-04", "url": "https://sangamoncountyhistory.org/lithuanian-american-war-casualties-ww-iii/"},
+    {"title": "Lithuanians in Springfield Historical Marker", "publisher": "Lithuanian-American Club of Central Illinois", "date": "accessed 2026-08-17", "url": "https://lithspringfield.com/an-indelible-role-in-our-history/lithuanian-historical-marker-dedication/lithuanians-in-springfield-historical-marker/"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The inherited 1909 founding label is not supported by an identified erection instrument and compresses several distinct milestones: 1902 society organizing, 1903 land purchase, a 1906 jubilee/parish reading, 1907 episcopal permission, the 1908 cornerstone, and 1911 dedication. The selected demolition year is 1976 from EPNIA and the five-years-after-closure SangamonLink chronology; Illinois Times gives 1975. The latter remains an explicit alternate-year conflict. The late Roman Catholic parish is not the separate Springfield independent Lithuanian church reported around 1948.",
+  "gaps": "Canonical erection and suppression decrees, an exact church/rectory street number and parcel description, original deed, demolition permit or diocesan property instrument, current parcel ownership, full sacramental-record series inventory, and any parish cemetery remain unverified. The exact relationship between the 1906 jubilee title and canonical parish formation remains unresolved."
+}

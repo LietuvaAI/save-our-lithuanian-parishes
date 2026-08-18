@@ -4,6 +4,41 @@
   "buildingStatus": "standing",
   "currentUse": "Active Catholic worship site (\"Holy Cross Church,\" 1740 W. 46th St.) of St. Oscar Romero Parish, Archdiocese of Chicago, with one Sunday Spanish-language Mass at 10:30 a.m.; the surrounding congregation is now predominantly Latino/Mexican-American.",
   "summary": "Holy Cross Church still stands at 46th and Wood/Hermitage in Back of the Yards and remains in weekly religious use. Following the November 9, 2020 Renew My Church announcement, the Holy Cross/Immaculate Heart of Mary parish was united with St. Joseph and St. Michael the Archangel effective July 1, 2021, with St. Joseph designated the parish church; the combined parish now operates as St. Oscar Romero Parish (office at 4821 S. Hermitage Ave.), led by pastor Rev. Jose Del Carmen Mendez. Holy Cross is one of the parish's four worship sites, hosting a single Sunday Spanish Mass at 10:30 a.m. The building was never sold or demolished — Preservation Chicago flagged it in its 2021 \"Most Endangered\" listing of Chicago's Roman Catholic churches, warning that the reduction to a \"Sunday worship center\" left it with \"an uncertain future,\" but no demolition plan has surfaced in the record found. Lithuanian heritage survives in the fabric (Columns of Gediminas on the pediment, the \"Lietuvių Rymo katalikų bažnyčia\" inscription, Hill of Crosses and Gates of Dawn imagery inside), though Lithuanian Masses ended in the early 2000s per Global True Lithuania. As of December 2025–April 2026 reporting, the St. Oscar Romero parish community was actively organizing to support parishioners affected by federal immigration enforcement, confirming the parish and its worship sites remain a living community anchor.",
+  "historicalNarrative": [
+    {
+      "text": "Holy Cross was the Lithuanian Roman Catholic parish in Chicago's Back of the Yards area, distinct from unrelated Episcopal and same-name Catholic institutions. Its monumental church was erected in 1913–1915 to designs attributed to Joseph Molitor. Lithuanian identity remains legible in the building through the exterior Lithuanian inscription and national symbols and through religious imagery connected with the Hill of Crosses and the Gates of Dawn.",
+      "sources": [
+        {"url": "https://www.preservationchicago.org/roman-catholic-churches/", "locator": "Roman Catholic Churches – 2021 Most Endangered, Holy Cross entry, architectural date, architect, and building description"},
+        {"url": "https://global.truelithuania.com/chicago-illinois-45/", "locator": "Chicago heritage survey, Back of the Yards Holy Cross section, Lithuanian inscription, Columns of Gediminas, and interior heritage imagery"}
+      ]
+    },
+    {
+      "text": "The institution's Lithuanian pastoral character changed before its final juridic reorganization. The heritage survey reports an earlier parish combination with Immaculate Heart of Mary and says regular Lithuanian-language Masses ended in the early 2000s. Those ethnic and administrative transitions did not demolish the church or end Catholic worship there, and they must be distinguished from the later 2021 union.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/chicago-illinois-45/", "locator": "Chicago heritage survey, Holy Cross section, Immaculate Heart of Mary combination and end of Lithuanian Masses"}
+      ]
+    },
+    {
+      "text": "The Archdiocese announced in November 2020 that Holy Cross/Immaculate Heart of Mary, St. Joseph, and St. Michael the Archangel would unite as one parish effective July 1, 2021, with St. Joseph designated as the parish church. The announcement treated Holy Cross as a continuing worship center within the combined community rather than as a building scheduled for immediate sale or demolition. The juridic parish transition and the physical church's continued use therefore followed different timelines.",
+      "sources": [
+        {"url": "https://blockclubchicago.org/2020/11/10/3-back-of-the-yards-churches-will-become-1-parish-as-archdiocese-announces-closures/", "locator": "Block Club Chicago, announcement summary and bullet points for the July 1 union, St. Joseph parish-church designation, and Holy Cross worship use"}
+      ]
+    },
+    {
+      "text": "The united community now operates as St. Oscar Romero Parish and describes itself as one community with four worship sites. Its current schedule lists Holy Cross Church at 1740 West 46th Street for a Sunday Spanish-language Mass. This is evidence that the historic building remains a standing Catholic worship site; it is not evidence that the former Lithuanian Holy Cross parish continues as a separate juridic institution.",
+      "sources": [
+        {"url": "https://www.stoscarromerochicago.org/", "locator": "St. Oscar Romero Parish home page, “One Community, four worship sites” identification"},
+        {"url": "https://www.stoscarromerochicago.org/mass-schedule.html", "locator": "Current Mass Schedule, Holy Cross Church address and Sunday 10:30 a.m. Spanish Mass entry"}
+      ]
+    },
+    {
+      "text": "Preservation Chicago placed Holy Cross among its 2021 most endangered Roman Catholic churches, warning that use as a Sunday worship center left the large building with an uncertain future. That designation documented risk, not an approved demolition plan. Later reporting on St. Oscar Romero Parish describes an active faith community organizing support for parishioners during immigration enforcement in 2025–2026, confirming continuing community life while leaving long-term building stewardship unresolved.",
+      "sources": [
+        {"url": "https://www.preservationchicago.org/roman-catholic-churches/", "locator": "2021 Most Endangered, Holy Cross entry, Sunday-worship-center and uncertain-future discussion"},
+        {"url": "https://blockclubchicago.org/2026/04/05/1-church-2-realities-how-back-of-the-yards-parishioners-found-faith-in-the-face-of-ice/", "locator": "Block Club Chicago / City Bureau, sections describing St. Oscar Romero Parish community support during 2025 immigration enforcement"}
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2020-11-09",

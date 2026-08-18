@@ -4,6 +4,41 @@
   "buildingStatus": "demolished",
   "currentUse": "A private residential home now occupies the former church lot on Main Street in Westville; the only trace on-site is the stone path that once led to the church. The parish's memory is carried by the Westville Lithuanian (National) Cemetery in south Westville, where a 2004 memorial incorporates the church's recovered bell and cornerstone.",
   "summary": "The congregation is Holy Cross Lithuanian National Catholic Church, founded in 1914 when dissident parishioners of Sts. Peter and Paul Lithuanian parish bought a former Presbyterian church building on Main Street and brought in Old Catholic clergy who rejected papal authority. The church closed around 1960-61 — shortly after the death of Bishop Zigmantis Vipartas, who had led it for 28 years — and the building was later demolished; a residential home now stands on the site, with only the old stone walkway remaining. In 2004, caretakers of the associated Westville Lithuanian Cemetery (established 1909 by the same breakaway community) built a memorial there using the church bell they recovered and the building's cornerstone. The cemetery remains active and volunteer-maintained, with roughly 1,000 total burials and about five new burials per year. In 2018 the Lithuanian-government-supported \"Destination Lithuanian America\" project recognized eight Westville locations, including the Lithuanian National Cemetery, as first-order Lithuanian-American heritage sites — possibly the highest per-capita concentration of such sites in the US. In 2014, Peoria diocesan priest Fr. John Flattery published \"A Short History of a Big Lithuanian Row in Westville, Illinois,\" a 43-page booklet on the schism whose first printing of 250 copies sold out. The rival Roman Catholic parish, Sts. Peter and Paul, was itself closed circa 1989-90 and demolished, leaving an empty lot.",
+  "historicalNarrative": [
+    {
+      "text": "Holy Cross was Westville's Lithuanian National Catholic congregation, institutionally distinct from the Roman Catholic Ss. Peter and Paul parish in the same town. The Catholic Post's account of Fr. John Flattery's local history describes the 1914 break in which dissident Lithuanian parishioners acquired a former Presbyterian church and brought in Old Catholic clergy who rejected papal authority. Shared ethnicity and proximity did not make the two congregations one institution.",
+      "sources": [
+        {"url": "https://thecatholicpost.com/2014/12/17/westvilles-lithuanian-catholic-history-focus-of-new-book/", "locator": "Catholic Post article, opening and history-summary paragraphs on the 1914 split, former Presbyterian church, and Old Catholic clergy"}
+      ]
+    },
+    {
+      "text": "Bishop Zigmantis Vipartas led the national Catholic congregation for twenty-eight years. The Catholic Post says the church closed shortly after his death in 1961, while the Lithuanian heritage survey gives 1960. An inherited 1969 reading is therefore not treated as the parish's proven terminal year. The exact last service, canonical mechanism, and property-disposition date remain unresolved within a source-bounded 1960–1961 end reading.",
+      "sources": [
+        {"url": "https://thecatholicpost.com/2014/12/17/westvilles-lithuanian-catholic-history-focus-of-new-book/", "locator": "Catholic Post article, paragraphs describing Vipartas's 28-year leadership, 1961 death, and closure shortly afterward"},
+        {"url": "https://global.truelithuania.com/westville-illinois-2282/", "locator": "Westville heritage survey, Holy Cross Lithuanian National Catholic Church section, reported 1960 closure"}
+      ]
+    },
+    {
+      "text": "The Main Street church building was later demolished, and the heritage survey reports that a private residence now occupies the former lot with the old stone walkway still visible. No exact street number, deed, sale price, buyer, or demolition date has been located. The residential replacement documents the building site's afterlife; it does not describe what happened juridically to the congregation in 1960–1961.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/westville-illinois-2282/", "locator": "Westville heritage survey, Holy Cross former-site paragraph describing the house and surviving stone path"}
+      ]
+    },
+    {
+      "text": "The Westville Lithuanian Cemetery is a separate cemetery associated with the breakaway community, not the demolished church building and not the Roman Catholic Ss. Peter and Paul Cemetery. The heritage survey dates its establishment to 1909 and says caretakers built a memorial there in 2004 using Holy Cross's recovered bell and cornerstone. The cemetery and memorial preserve community and object continuity without proving that the national Catholic institution survived after its church closed.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/westville-illinois-2282/", "locator": "Westville heritage survey, Lithuanian National Cemetery section, 1909 establishment and 2004 bell-and-cornerstone memorial"},
+        {"url": "https://graveyards.com/Illinois/Vermilion/Westville-Lithuanian-Cemetery", "locator": "Graveyards.com cemetery record, Westville Lithuanian Cemetery identity and location"}
+      ]
+    },
+    {
+      "text": "Public memory of the schism continued long after the church disappeared. In 2014 the Catholic Post reported publication of Flattery's forty-three-page history and the sale of its first 250-copy printing. A 2018 heritage-mapping report counted the Lithuanian National Cemetery among eight significant Westville sites. These commemorative activities document historical attention, not a revived congregation or a successor church.",
+      "sources": [
+        {"url": "https://thecatholicpost.com/2014/12/17/westvilles-lithuanian-catholic-history-focus-of-new-book/", "locator": "Catholic Post article, publication-length, first-printing, and sold-out-copy paragraphs"},
+        {"url": "https://www.commercial-news.com/news/local_news/mapper-westville-a-leader-in-lithuanian-heritage/article_390b80df-13ff-59d6-8f5b-05b63fd90a89.html", "locator": "Commercial-News article, Westville mapping-project section identifying eight first-order heritage sites and the Lithuanian National Cemetery"}
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2004",

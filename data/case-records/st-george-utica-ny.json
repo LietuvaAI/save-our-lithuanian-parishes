@@ -1,0 +1,259 @@
+{
+  "slug": "st-george-utica-ny",
+  "culturenetEntityId": "cn:institution:st-george-utica-ny",
+  "asOf": "2026-08-17",
+  "formationLabel": "Distinct Lithuanian Roman Catholic parish listed from 1911 · replacement church reported in 1967 · institution closed, exact terminal date unresolved",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "closed",
+  "buildingStatus": "unknown",
+  "currentUse": "The Diocese of Syracuse lists St. George Roman Catholic Church in Utica as closed and directs its sacramental records to St. Joseph-St. Patrick. Secondary field documentation reports that a small 1967 replacement church stood empty after a 2007 closure. A 2011 public notice associated John Bosco House with 425 Lafayette Street, the later parish address. These sources establish later occupancy at the site but do not resolve the building's present use, structural condition, or interior.",
+  "summary": "St. George was Utica's Lithuanian Roman Catholic parish, distinct from Albany's St. George. A regional Catholic directory lists the parish from 1911 and places it at 425 Lafayette Street. Secondary field documentation says a small church built in 1967 replaced an older church and reports closure in 2007; the Diocese of Syracuse confirms closed status but does not date it. The diocese directs sacramental records to St. Joseph-St. Patrick. St. George Lithuanian Cemetery is separately documented, but its exact address and current governance remain unresolved.",
+  "institutionLifecycle": {
+    "formation": "A regional Catholic research directory lists St. George in Utica from 1911. No reviewed public source supplies the canonical erection instrument or separates initial organization, first Mass, and parish erection.",
+    "institutionalForm": "Lithuanian Roman Catholic parish in Utica; distinct from Albany St. George and from same-named Episcopal or Orthodox institutions.",
+    "jurisdiction": "Roman Catholic Diocese of Syracuse.",
+    "terminalStatus": "Closed. Global True Lithuania reports 2007, while the official diocesan parish finder confirms closure without an effective date or decree. The exact terminal date and mechanism remain unresolved.",
+    "currentVerification": "The Diocese of Syracuse directs St. George sacramental records to St. Joseph-St. Patrick in Utica. Later address-level evidence does not establish the current condition of the former church."
+  },
+  "worshipSites": [
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-george-earlier-church-utica-ny",
+      "name": "Earlier St. George Lithuanian church",
+      "address": "Utica, NY; exact address unresolved",
+      "usePeriod": "before the reported 1967 replacement",
+      "buildingCondition": "unknown",
+      "currentUse": "Replaced by a later church according to secondary field documentation; demolition, sale, and parcel history remain unresolved.",
+      "evidence": [
+        {
+          "url": "https://global.truelithuania.com/upstate-new-york-831/",
+          "locator": "Utica Lithuanian church and cemetery section: 1967 church replaced an older church"
+        }
+      ]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-george-1967-church-utica-ny",
+      "name": "St. George Lithuanian Roman Catholic Church",
+      "address": "425 Lafayette Street, Utica, NY 13502",
+      "usePeriod": "replacement church reported from 1967; parish closure reported in 2007",
+      "buildingCondition": "unknown",
+      "currentUse": "An undated field survey described the church as standing empty after closure, while a 2011 notice associated John Bosco House with 425 Lafayette Street. Present use, structural condition, and interior condition remain unresolved.",
+      "evidence": [
+        {
+          "url": "https://oneida.nygenweb.net/misc/catholic.html",
+          "locator": "Utica Catholic directory row: St. George, 1911, 425 Lafayette Street"
+        },
+        {
+          "url": "https://global.truelithuania.com/upstate-new-york-831/",
+          "locator": "Utica Lithuanian church and cemetery section: 1967 replacement, reported 2007 closure, standing empty at undated survey"
+        },
+        {
+          "url": "https://www.legacy.com/us/obituaries/uticaod/name/timothy-fitzgerald-obituary?id=26196739",
+          "locator": "2011 obituary: John Bosco House, 425 Lafayette Street"
+        }
+      ]
+    },
+    {
+      "siteType": "cemetery",
+      "culturenetEntityId": "cn:cemetery:st-george-utica-ny",
+      "name": "St. George Lithuanian Cemetery",
+      "address": "Utica area, NY; exact road and street address unresolved",
+      "usePeriod": "historical parish cemetery; acquisition and operating dates unresolved",
+      "buildingCondition": "not applicable; cemetery condition unresolved",
+      "currentUse": "Secondary field documentation records Lithuanian graves and a cemetery gate. Current ownership, administration, burial availability, and records custody remain unresolved.",
+      "evidence": [
+        {
+          "url": "https://global.truelithuania.com/upstate-new-york-831/",
+          "locator": "Utica Lithuanian church and cemetery section: cemetery, graves, and gate"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-george-utica-ny",
+      "target": "cn:building_site:st-george-earlier-church-utica-ny",
+      "date": "before 1967",
+      "status": "source-bounded",
+      "note": "The older church is known only through the attributed replacement history; its exact location and fate remain unresolved."
+    },
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-george-utica-ny",
+      "target": "cn:building_site:st-george-1967-church-utica-ny",
+      "date": "reported 1967-2007",
+      "status": "source-bounded",
+      "note": "The 1967 replacement and 2007 closure dates come from secondary field documentation; official diocesan evidence confirms only closed status and records routing."
+    },
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-george-utica-ny",
+      "target": "cn:cemetery:st-george-utica-ny",
+      "date": "historical; dates unresolved",
+      "status": "source-bounded",
+      "note": "Field documentation identifies parish members' burials; acquisition, governance, and current administration remain unresolved."
+    },
+    {
+      "type": "records-custody",
+      "source": "cn:institution:st-george-utica-ny",
+      "target": "St. Joseph-St. Patrick, Utica",
+      "date": "current directory routing as of 2026-08-17",
+      "status": "accepted",
+      "note": "The Diocese of Syracuse parish finder directs St. George sacramental records to St. Joseph-St. Patrick."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "Utica's St. George was a distinct Lithuanian Roman Catholic parish, not Albany's same-named Lithuanian parish and not any local Episcopal, Orthodox, or Eastern Catholic St. George. A regional Catholic research directory lists the Utica parish from 1911. That date supports institutional presence but does not identify whether it marks organization, canonical erection, or the first church.",
+      "sources": [
+        {
+          "url": "https://oneida.nygenweb.net/misc/catholic.html",
+          "locator": "Utica Catholic directory row: St. George, 1911"
+        }
+      ]
+    },
+    {
+      "text": "The same directory places St. George at 425 Lafayette Street. It does not explain whether that address belonged to the first church or only to the later replacement. The earlier church therefore remains a separate historical site whose address, construction, and disposition have not been proved by reviewed public sources.",
+      "sources": [
+        {
+          "url": "https://oneida.nygenweb.net/misc/catholic.html",
+          "locator": "Utica Catholic directory row: 425 Lafayette Street"
+        },
+        {
+          "url": "https://global.truelithuania.com/upstate-new-york-831/",
+          "locator": "Utica Lithuanian church and cemetery section: later church replaced an older church"
+        }
+      ]
+    },
+    {
+      "text": "Global True Lithuania reports that a small church built in 1967 replaced the older St. George church. The existing case lineage already treats that report as medium-confidence, conflict-preserved evidence rather than an official construction record. The 1967 date is therefore retained as an attributed building milestone, not a parish founding date.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/upstate-new-york-831/",
+          "locator": "Utica Lithuanian church and cemetery section: 1967 replacement church"
+        }
+      ]
+    },
+    {
+      "text": "The Diocese of Syracuse currently lists St. George Roman Catholic Church in Utica as closed and directs all sacramental records to St. Joseph-St. Patrick. The official listing provides neither a closure date nor a merger or suppression instrument. Global True Lithuania reports 2007, so that year remains an attributed terminal reading rather than an official date.",
+      "sources": [
+        {
+          "url": "https://syracusediocese.org/parishfinder/",
+          "locator": "St. George Roman Catholic Church (Closed), Utica; records at St. Joseph-St. Patrick"
+        },
+        {
+          "url": "https://global.truelithuania.com/upstate-new-york-831/",
+          "locator": "Utica Lithuanian church and cemetery section: reported 2007 closure"
+        }
+      ]
+    },
+    {
+      "text": "The former church site's later use is not fully resolved. The field survey described the 1967 building as standing empty, but did not state its observation date. A 2011 obituary directed memorial gifts to John Bosco House at 425 Lafayette Street, documenting a charitable organization at the parish address after closure. Neither source establishes the building's current structural or interior condition as of 2026.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/upstate-new-york-831/",
+          "locator": "Utica Lithuanian church and cemetery section: standing-empty observation without date"
+        },
+        {
+          "url": "https://www.legacy.com/us/obituaries/uticaod/name/timothy-fitzgerald-obituary?id=26196739",
+          "locator": "2011 obituary: John Bosco House at 425 Lafayette Street"
+        }
+      ]
+    },
+    {
+      "text": "St. George Lithuanian Cemetery is a separate site from the parish church. Field documentation records Lithuanian graves, an English-language gate inscription, and a Balutis-family dedication, and says parish members were buried there. Its exact street address, establishment date, ownership, current administrator, records custody, and burial status remain unresolved; no church address is inferred from cemetery evidence.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/upstate-new-york-831/",
+          "locator": "Utica Lithuanian church and cemetery section: cemetery description, graves, and gate"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1911",
+      "headline": "Distinct Utica parish documented",
+      "detail": "A regional Catholic directory lists St. George in Utica from 1911 and later places it at 425 Lafayette Street; the canonical erection milestone remains unresolved.",
+      "sources": [
+        {
+          "title": "Catholic Research",
+          "publisher": "Oneida County NYGenWeb",
+          "date": "accessed 2026-08-17",
+          "page": "Utica parish table, St. George row",
+          "url": "https://oneida.nygenweb.net/misc/catholic.html"
+        }
+      ]
+    },
+    {
+      "date": "1967",
+      "headline": "Replacement church reported",
+      "detail": "Secondary field documentation reports that the small later church replaced an older St. George building in 1967.",
+      "sources": [
+        {
+          "title": "Upstate New York: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "accessed 2026-08-17",
+          "page": "Utica Lithuanian church and cemetery section",
+          "url": "https://global.truelithuania.com/upstate-new-york-831/"
+        }
+      ]
+    },
+    {
+      "date": "reported 2007",
+      "headline": "Parish closes; official date unresolved",
+      "detail": "Global True Lithuania reports closure in 2007. The Diocese of Syracuse confirms closed status and records custody but does not publish the effective date or mechanism.",
+      "sources": [
+        {
+          "title": "Upstate New York: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "accessed 2026-08-17",
+          "page": "Utica Lithuanian church and cemetery section",
+          "url": "https://global.truelithuania.com/upstate-new-york-831/"
+        },
+        {
+          "title": "Parish Finder",
+          "publisher": "Roman Catholic Diocese of Syracuse",
+          "date": "accessed 2026-08-17",
+          "page": "St. George Roman Catholic Church (Closed), Utica",
+          "url": "https://syracusediocese.org/parishfinder/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Catholic Research",
+      "publisher": "Oneida County NYGenWeb",
+      "date": "accessed 2026-08-17",
+      "page": "Utica parish table, St. George row",
+      "url": "https://oneida.nygenweb.net/misc/catholic.html"
+    },
+    {
+      "title": "Upstate New York: Lithuanians and Lithuanian heritage",
+      "publisher": "Global True Lithuania",
+      "date": "accessed 2026-08-17",
+      "page": "Utica Lithuanian church and cemetery section",
+      "url": "https://global.truelithuania.com/upstate-new-york-831/"
+    },
+    {
+      "title": "Parish Finder",
+      "publisher": "Roman Catholic Diocese of Syracuse",
+      "date": "accessed 2026-08-17",
+      "page": "St. George Roman Catholic Church (Closed), Utica; St. Joseph-St. Patrick records routing",
+      "url": "https://syracusediocese.org/parishfinder/"
+    },
+    {
+      "title": "Timothy Fitzgerald obituary",
+      "publisher": "Observer-Dispatch / Legacy.com",
+      "date": "2011-10-25",
+      "page": "memorial-gifts notice",
+      "url": "https://www.legacy.com/us/obituaries/uticaod/name/timothy-fitzgerald-obituary?id=26196739"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The 1911 value establishes a documented Utica St. George listing but not the exact canonical formation act. The 1967 value is a replacement-building milestone. The official Diocese of Syracuse directory confirms closure without a date, while 2007 remains an attributed secondary reading. Albany and Utica St. George are distinct institutions and sites.",
+  "gaps": "The canonical erection instrument and exact formation milestones; clergy and jurisdictional chronology; the earlier church's address and fate; direct construction or dedication evidence for the 1967 replacement; the closure decree, effective date, final Mass, and property disposition; current ownership, use, structure, and interior condition at 425 Lafayette Street; and the cemetery's exact address, dates, ownership, governance, records, and burial status remain unresolved."
+}

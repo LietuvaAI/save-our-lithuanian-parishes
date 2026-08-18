@@ -1,0 +1,203 @@
+{
+  "slug": "st-mary-of-the-angels-brooklyn-ny",
+  "culturenetEntityId": "cn:institution:st-mary-of-the-angels-brooklyn-ny",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian Roman Catholic parish established in Williamsburg in 1896 · closed in 1981",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "closed",
+  "buildingStatus": "converted",
+  "currentUse": "The former St. Mary of the Angels church at 211 South 4th Street, at Roebling Street, survives as El Puente's Williamsburg Leadership Center. El Puente describes the property as its renovated former Catholic church headquarters and community arts center. This building reuse is separate from St. Mary of the Angels parish life, which the Diocese of Brooklyn says ended in 1981.",
+  "summary": "St. Mary of the Angels was a Lithuanian Roman Catholic parish in Williamsburg, Brooklyn, established in 1896 and distinct from Annunciation and Brooklyn's other Lithuanian parishes. By the early 1960s it remained one of the Lithuanian national parishes of the New York and Brooklyn area and maintained its own choir. The Diocese of Brooklyn records that it closed in 1981 and that its records are held by the diocesan archives. Its former church at 211 South 4th Street survives in converted community use as El Puente's Williamsburg Leadership Center.",
+  "institutionLifecycle": {
+    "formation": "The Diocese of Brooklyn Archives dates St. Mary of the Angels in Williamsburg to 1896 and identifies it as having started as a Lithuanian parish. The available sources do not supply the canonical erection decree or the date when the South 4th Street church opened.",
+    "institutionalForm": "Lithuanian Roman Catholic national parish; distinct from Annunciation of the BVM and every other Brooklyn parish with a Marian dedication.",
+    "jurisdiction": "Roman Catholic Diocese of Brooklyn.",
+    "terminalStatus": "Closed in 1981 according to the Diocese of Brooklyn Archives. The exact decree, effective date, final Mass, and disposition of parish assets remain unresolved.",
+    "currentVerification": "The Diocese of Brooklyn identifies its Archives as records custodian. El Puente currently identifies 211 South 4th Street as its Williamsburg Leadership Center in a renovated former Catholic church building."
+  },
+  "worshipSites": [
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-mary-angels-south-fourth-brooklyn-ny",
+      "name": "St. Mary of the Angels Lithuanian Roman Catholic Church",
+      "address": "211 South 4th Street at Roebling Street, Brooklyn, NY 11211",
+      "usePeriod": "opening date unresolved; parish use ended in 1981",
+      "buildingCondition": "converted",
+      "currentUse": "El Puente Williamsburg Leadership Center, a youth, community-development, arts, and cultural center. El Puente says it operates from a renovated former Catholic church; current use does not imply parish continuity.",
+      "evidence": [
+        {
+          "url": "https://global.truelithuania.com/tag/atminimo-lenta-kursiui-niujorke/",
+          "locator": "Brooklyn section, St. Mary of the Angels at South 4th and Roebling and later El Puente use"
+        },
+        {
+          "url": "https://www.elpuente.org/leadership-centers",
+          "locator": "Williamsburg Leadership Center section: 211 South 4th Street and renovated former Catholic church"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-mary-of-the-angels-brooklyn-ny",
+      "target": "cn:building_site:st-mary-angels-south-fourth-brooklyn-ny",
+      "date": "opening date unresolved-1981",
+      "status": "accepted",
+      "note": "The South 4th Street church was the parish worship site; the building's later El Puente use is not institutional continuation."
+    },
+    {
+      "type": "records-custody",
+      "source": "cn:institution:st-mary-of-the-angels-brooklyn-ny",
+      "target": "Diocese of Brooklyn Archives",
+      "date": "current directory as of 2026-08-17",
+      "status": "accepted",
+      "note": "The Diocese of Brooklyn's historic-parish list places St. Mary of the Angels records at its Archives; it does not identify a merger or successor parish."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "The Diocese of Brooklyn dates St. Mary of the Angels in Williamsburg to 1896 and says it started as a Lithuanian parish. This official entry establishes the institution's formation year, ethnic purpose, and diocesan identity. The available sources do not expose the erection decree or distinguish preliminary organizing from canonical erection within that year.",
+      "sources": [
+        {
+          "url": "https://dioceseofbrooklyn.org/offices/diocesan-archives/parishes/",
+          "locator": "Brooklyn Parishes list, St. Mary of the Angels, Williamsburg"
+        }
+      ]
+    },
+    {
+      "text": "St. Mary of the Angels was not Annunciation of the BVM. The diocesan archive list carries the two as separate historic parishes: Annunciation began as a German parish and became Lithuanian by 1914, while St. Mary of the Angels is separately dated to 1896 as Lithuanian from its start. This separate institutional identity also prevents a shared Marian dedication from becoming an unsupported identity or successor join.",
+      "sources": [
+        {
+          "url": "https://dioceseofbrooklyn.org/offices/diocesan-archives/parishes/",
+          "locator": "Brooklyn Parishes list, separate entries for Annunciation of the BVM and St. Mary of the Angels"
+        }
+      ]
+    },
+    {
+      "text": "A Lithuanian-American survey published in 1961 names Queen of Angels among five Lithuanian national parishes in the New York and Brooklyn area and notes that it had its own parish choir. That evidence supports continued Lithuanian institutional and cultural life in the mid-twentieth century, without supplying a building chronology or later terminal event.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje",
+          "locator": "Michelsonas, Lietuviu Iseivija Amerikoje, printed pp. 333-334, Queen of Angels parish and choir"
+        }
+      ]
+    },
+    {
+      "text": "The parish church stood at South 4th and Roebling Streets, corresponding to the present 211 South 4th Street address. Field documentation identifies the former St. Mary of the Angels building at that corner, while El Puente's first-party history describes its Williamsburg center as a renovated former Catholic church and gives the same street address. Together these sources establish physical continuity of the church building into its present community use.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/tag/atminimo-lenta-kursiui-niujorke/",
+          "locator": "Brooklyn section, former St. Mary of the Angels at South 4th and Roebling"
+        },
+        {
+          "url": "https://www.elpuente.org/leadership-centers",
+          "locator": "Williamsburg Leadership Center section"
+        }
+      ]
+    },
+    {
+      "text": "The Diocese of Brooklyn says St. Mary of the Angels closed in 1981 and directs its records to the diocesan Archives. The listing does not characterize the end as a merger or name a canonical successor. The former building later housed El Puente Academy for thirteen years and remains El Puente's Williamsburg Leadership Center, so parish closure, school tenancy, and present community-center use are three separate events.",
+      "sources": [
+        {
+          "url": "https://dioceseofbrooklyn.org/offices/diocesan-archives/parishes/",
+          "locator": "Brooklyn Parishes list, St. Mary of the Angels closure and records custody"
+        },
+        {
+          "url": "https://www.elpuente.org/leadership-centers",
+          "locator": "Williamsburg Leadership Center section, former church and Academy history"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1896",
+      "headline": "Lithuanian parish established in Williamsburg",
+      "detail": "The Diocese of Brooklyn identifies St. Mary of the Angels as an 1896 parish that began as Lithuanian.",
+      "sources": [
+        {
+          "title": "List of Parishes: A Chronicle of Faith Across the Diocese",
+          "publisher": "Diocese of Brooklyn, Office of Diocesan Archives",
+          "date": "accessed 2026-08-17",
+          "page": "Brooklyn Parishes, St. Mary of the Angels",
+          "url": "https://dioceseofbrooklyn.org/offices/diocesan-archives/parishes/"
+        }
+      ]
+    },
+    {
+      "date": "1961",
+      "headline": "Parish documented with its own choir",
+      "detail": "Michelsonas counted Queen of Angels among the New York-Brooklyn Lithuanian national parishes and noted its parish choir.",
+      "sources": [
+        {
+          "title": "Lietuviu Iseivija Amerikoje (1868-1961)",
+          "publisher": "Keleivis",
+          "date": "1961",
+          "page": "printed pp. 333-334",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
+        }
+      ]
+    },
+    {
+      "date": "1981",
+      "headline": "Parish closes and records move to diocesan custody",
+      "detail": "The Diocese of Brooklyn records the parish as closed in 1981 and places its records at the Archives; no merger or successor is stated.",
+      "sources": [
+        {
+          "title": "List of Parishes: A Chronicle of Faith Across the Diocese",
+          "publisher": "Diocese of Brooklyn, Office of Diocesan Archives",
+          "date": "accessed 2026-08-17",
+          "page": "Brooklyn Parishes, St. Mary of the Angels",
+          "url": "https://dioceseofbrooklyn.org/offices/diocesan-archives/parishes/"
+        }
+      ]
+    },
+    {
+      "date": "current as of 2026-08-17",
+      "headline": "Former church serves as El Puente community center",
+      "detail": "El Puente identifies 211 South 4th Street as its Williamsburg Leadership Center in a renovated former Catholic church.",
+      "sources": [
+        {
+          "title": "Leadership Centers",
+          "publisher": "El Puente",
+          "date": "accessed 2026-08-17",
+          "page": "Williamsburg Leadership Center section",
+          "url": "https://www.elpuente.org/leadership-centers"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "List of Parishes: A Chronicle of Faith Across the Diocese",
+      "publisher": "Diocese of Brooklyn, Office of Diocesan Archives",
+      "date": "accessed 2026-08-17",
+      "page": "Brooklyn Parishes, St. Mary of the Angels and Annunciation entries",
+      "url": "https://dioceseofbrooklyn.org/offices/diocesan-archives/parishes/"
+    },
+    {
+      "title": "Lietuviu Iseivija Amerikoje (1868-1961)",
+      "publisher": "Keleivis",
+      "date": "1961",
+      "page": "printed pp. 333-334",
+      "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
+    },
+    {
+      "title": "Lithuanian heritage sites in New York",
+      "publisher": "Global True Lithuania",
+      "date": "accessed 2026-08-17",
+      "page": "Brooklyn section, St. Mary of the Angels",
+      "url": "https://global.truelithuania.com/tag/atminimo-lenta-kursiui-niujorke/"
+    },
+    {
+      "title": "Leadership Centers",
+      "publisher": "El Puente",
+      "date": "accessed 2026-08-17",
+      "page": "Williamsburg Leadership Center section",
+      "url": "https://www.elpuente.org/leadership-centers"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The official Diocese of Brooklyn chronology establishes 1896 formation and 1981 closure. St. Mary of the Angels remains distinct from Annunciation of the BVM, which the same official list treats as a separate institution with a different origin and records route. A secondary genealogy page's suggestion to contact Annunciation is not used as merger, successor, or custody evidence because the current diocesan directory places St. Mary of the Angels records at the Archives.",
+  "gaps": "The organizing and canonical erection instruments within 1896; any worship site before South 4th Street; the church's acquisition, construction, alteration, and dedication dates; the exact closure decree and final Mass; disposition of parish assets and Jonynas windows; any cemetery; complete records coverage; and interior preservation in the converted building remain unresolved."
+}

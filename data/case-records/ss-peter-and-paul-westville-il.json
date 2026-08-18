@@ -1,0 +1,115 @@
+{
+  "slug": "ss-peter-and-paul-westville-il",
+  "culturenetEntityId": "cn:institution:ss-peter-and-paul-westville-il",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian Roman Catholic parish with cornerstone blessed June 27, 1897 · institutional end reported October 23, 1989 or in 1990 · members received by St. Mary Parish in 1990",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "closed",
+  "buildingStatus": "demolished",
+  "currentUse": "The Roman Catholic Ss. Peter and Paul church has been demolished. A reviewed field survey reports an empty lot at the former church site; 502 W. Main Street is supported by 2014 photographic metadata but remains a qualified address rather than a deed-verified join. The parish's cornerstone and former churchyard statues are reported at the separate Ss. Peter and Paul Cemetery, which St. Mary Parish currently administers. These facts must not be confused with the former Holy Cross independent church site or the Holy Cross memorial in the Lithuanian National Cemetery.",
+  "summary": "Ss. Peter and Paul was Westville's Lithuanian Roman Catholic parish, distinct from the city's Holy Cross independent congregation. Wolkovich documents a June 27, 1897 cornerstone blessing and reports parish closure on October 23, 1989. The Diocese of Peoria newspaper instead says the parish closed in 1990, and St. Mary Parish's history says Ss. Peter and Paul members were received into St. Mary in 1990. No decree was found to resolve the exact canonical date or mechanism, so the dossier records member reception without inventing a merger. The church, qualified at 502 W. Main Street, was demolished and its site is reported as an empty lot. Its cornerstone and churchyard statues were moved to the separate Ss. Peter and Paul Cemetery, established about 1904 and now administered by St. Mary. The founding jurisdiction, exact closure instrument, sacramental-record custody, demolition date, and current parcel condition remain unresolved.",
+  "institutionLifecycle": {
+    "formation": "A June 27, 1897 cornerstone blessing is documented, but no canonical erection decree or separate organization date was located.",
+    "jurisdiction": "Lithuanian Roman Catholic parish in Westville. A current Diocese of Peoria newspaper treats the parish within Peoria diocesan history, while Wolkovich's compiled jurisdiction note is internally uncertain between Chicago and Peoria; the original jurisdiction instrument was not located.",
+    "terminalStatus": "Wolkovich reports closure on October 23, 1989. The Catholic Post and St. Mary history use 1990, with St. Mary specifically saying the former parish's members were received that year. The canonical mechanism and effective date remain unresolved.",
+    "currentVerification": "St. Mary Parish remains an active Diocese of Peoria parish and currently administers Ss. Peter and Paul Cemetery. No official current source was found that identifies St. Mary or another body as custodian of the closed parish's sacramental records."
+  },
+  "worshipSites": [
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:ss-peter-and-paul-502-west-main-westville-il",
+      "name": "Ss. Peter and Paul Church",
+      "address": "502 W. Main Street, Westville, IL; qualified by 2014 photographic metadata, not deed-verified",
+      "usePeriod": "cornerstone blessed June 27, 1897; parish use until 1989/1990",
+      "buildingCondition": "demolished; demolition date unresolved",
+      "currentUse": "Field survey reports an empty lot; present parcel condition and ownership are unverified.",
+      "evidence": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, Lithuanian Religious Life in America, vol. 3, PDF pp. 115–117 / printed pp. 108–110"},
+        {"url": "https://www.flickr.com/photos/119124838%40N03/12996924604/", "locator": "Vermco SavingGraves photograph metadata, taken March 7, 2014: 502 W. Main St. and Lithuanian parish identification"},
+        {"url": "https://global.truelithuania.com/westville-illinois-2282/", "locator": "Attributed Westville field survey: Roman Catholic Ss. Peter and Paul church demolished and site described as an empty lot"}
+      ]
+    },
+    {
+      "siteType": "cemetery",
+      "culturenetEntityId": "cn:cemetery:ss-peter-and-paul-westville-il",
+      "name": "Ss. Peter and Paul Cemetery",
+      "address": "Westville, IL; exact parcel address unresolved",
+      "usePeriod": "established about 1904; currently administered by St. Mary Parish",
+      "buildingCondition": "not applicable; cemetery reported active under St. Mary administration",
+      "currentUse": "Cemetery administered by St. Mary Parish; reported location of the former Roman parish cornerstone and churchyard statues.",
+      "evidence": [
+        {"url": "https://www.catholic-church.org/~westvillestmarys/cemetery.htm", "locator": "St. Mary cemetery page: Saints Peter & Paul Cemetery and current parish administration"},
+        {"url": "https://global.truelithuania.com/westville-illinois-2282/", "locator": "Attributed field survey: cemetery established in 1904 and relocation of the Roman parish cornerstone and statues"}
+      ]
+    }
+  ],
+  "relationships": [
+    {"type": "institution-used-site", "source": "cn:institution:ss-peter-and-paul-westville-il", "target": "cn:building_site:ss-peter-and-paul-502-west-main-westville-il", "date": "1897–1989/1990", "status": "accepted", "note": "The address is qualified by photographic metadata; the exact terminal date remains conflicted."},
+    {"type": "institution-members-received-by-institution", "source": "cn:institution:ss-peter-and-paul-westville-il", "target": "cn:institution:st-mary-westville-il", "date": "1990", "status": "accepted", "note": "St. Mary's parish history says Ss. Peter and Paul members were received into the parish family. This does not assert a merger, suppression mechanism, property transfer, or records custody."},
+    {"type": "institution-established-cemetery", "source": "cn:institution:ss-peter-and-paul-westville-il", "target": "cn:cemetery:ss-peter-and-paul-westville-il", "date": "about 1904", "status": "probable", "note": "The establishment date and association are attributed to reviewed field documentation; an original cemetery instrument was not located."},
+    {"type": "cemetery-administered-by-institution", "source": "cn:cemetery:ss-peter-and-paul-westville-il", "target": "cn:institution:st-mary-westville-il", "date": "current as of 2026-08-17", "status": "accepted", "note": "St. Mary's current cemetery page identifies Saints Peter & Paul Cemetery under its administration."},
+    {"type": "same-city-nonidentity", "source": "cn:institution:ss-peter-and-paul-westville-il", "target": "cn:institution:holy-cross-national-catholic-westville-il", "date": "historical", "status": "accepted", "note": "Wolkovich and the Diocese of Peoria newspaper describe Holy Cross as a separate independent congregation; no Holy Cross building, cemetery, or memorial fact is assigned to Ss. Peter and Paul."}
+  ],
+  "historicalNarrative": [
+    {
+      "text": "Ss. Peter and Paul was Westville's Lithuanian Roman Catholic parish. Wolkovich records the blessing of its cornerstone on June 27, 1897, but no canonical erection decree or distinct organization date has been located. His compiled jurisdiction note is uncertain between Chicago and Peoria, while the Diocese of Peoria newspaper treats the parish as part of Westville's Peoria diocesan history. The dossier therefore fixes the Roman Catholic class and the cornerstone event but leaves the founding jurisdiction instrument unresolved.",
+      "sources": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, Lithuanian Religious Life in America, vol. 3, PDF pp. 115–117 / printed pp. 108–110; cornerstone and jurisdiction note"},
+        {"url": "https://thecatholicpost.com/2014/12/17/westvilles-lithuanian-catholic-history-focus-of-new-book/", "locator": "Diocese of Peoria newspaper history: Roman Catholic Ss. Peter and Paul within Westville's Peoria diocesan history"}
+      ]
+    },
+    {
+      "text": "The parish church is qualified at 502 W. Main Street. That number is supported by dated 2014 photographic metadata identifying the Lithuanian parish, while Wolkovich supplies the 1897 cornerstone date. Because no deed, diocesan property schedule, or parcel record was found, the address is not presented as a fully adjudicated title-history join. The parish institution, its church site, and its separately located cemetery remain distinct canonical objects.",
+      "sources": [
+        {"url": "https://www.flickr.com/photos/119124838%40N03/12996924604/", "locator": "Vermco SavingGraves photograph metadata, taken March 7, 2014: 502 W. Main St., Westville, Lithuanian parish"},
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 115 / printed p. 108; June 27, 1897 cornerstone blessing"}
+      ]
+    },
+    {
+      "text": "Westville also had a separate Holy Cross independent congregation. Wolkovich describes the conflict that produced the independent body and later names its own clergy and terminal history; the Catholic Post likewise distinguishes Holy Cross from Roman Catholic Ss. Peter and Paul. Rev. John Paukštis's long service belongs to Ss. Peter and Paul, although Wolkovich gives 1932–1974 and the Catholic Post gives 1932–1973. Neither the Holy Cross church site nor its house/path outcome, bell-and-cornerstone memorial, or Lithuanian National Cemetery association is evidence about the Roman parish.",
+      "sources": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF pp. 116–117 / printed pp. 109–110; separate Holy Cross history and Paukštis service through 1974"},
+        {"url": "https://thecatholicpost.com/2014/12/17/westvilles-lithuanian-catholic-history-focus-of-new-book/", "locator": "Catholic Post history: separate Holy Cross congregation and Paukštis service stated as 1932–1973"}
+      ]
+    },
+    {
+      "text": "The institution's end has a genuine one-year conflict. Wolkovich reports that the parish closed on October 23, 1989. The Diocese of Peoria newspaper says it closed in 1990, and St. Mary Parish's own history says that members of Ss. Peter and Paul were received into St. Mary's parish family in 1990. No decree or diocesan archive instrument was found to prove whether 1989 marks the last worship, a closure decision, or another event preceding the 1990 reception. The graph therefore records member reception in 1990 without inventing a merger or records transfer.",
+      "sources": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 117 / printed p. 110; closure October 23, 1989"},
+        {"url": "https://thecatholicpost.com/2014/12/17/westvilles-lithuanian-catholic-history-focus-of-new-book/", "locator": "Catholic Post history: Ss. Peter and Paul closed in 1990"},
+        {"url": "https://www.catholic-church.org/~westvillestmarys/parishhistory.htm", "locator": "St. Mary parish history: members of Ss. Peter and Paul received into the parish family in 1990"}
+      ]
+    },
+    {
+      "text": "The Roman parish's building life ended separately from the institutional transition. A reviewed field survey says Ss. Peter and Paul church was demolished and left an empty lot; it also reports that the Roman parish's cornerstone and former churchyard statues were moved to Ss. Peter and Paul Cemetery. No demolition date, permit, current parcel record, or official property disposition has been found. The empty-lot reading is therefore attributed and dated only to the available field documentation, not promoted into a verified present-tense parcel condition.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/westville-illinois-2282/", "locator": "Attributed Westville field survey: Roman Ss. Peter and Paul demolition, empty-lot site, and relocation of cornerstone and statues to its cemetery"}
+      ]
+    },
+    {
+      "text": "Ss. Peter and Paul Cemetery is a separate place from the church parcel and from Westville's Lithuanian National Cemetery. The field survey dates it to 1904 and identifies the relocated Roman parish artifacts there. St. Mary's current cemetery page identifies Saints Peter & Paul Cemetery as a cemetery administered by the active parish under Diocese of Peoria rules. That current cemetery stewardship does not itself prove custody of the closed parish's sacramental records, and no such records-custody source was found.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/westville-illinois-2282/", "locator": "Attributed field survey: Ss. Peter and Paul Cemetery established in 1904 and distinct from the Lithuanian National Cemetery"},
+        {"url": "https://www.catholic-church.org/~westvillestmarys/cemetery.htm", "locator": "St. Mary cemetery page: Saints Peter & Paul Cemetery and current parish administration"},
+        {"url": "https://www.cdop.org/parishes/st-mary-westville", "locator": "Current Diocese of Peoria parish directory: active St. Mary Parish, Westville"}
+      ]
+    }
+  ],
+  "developments": [
+    {"date": "1897-06-27", "headline": "Cornerstone blessed", "detail": "The church milestone is documented; canonical erection and founding jurisdiction remain unresolved.", "sources": [{"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "PDF pp. 115–117 / printed pp. 108–110", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"}]},
+    {"date": "1989-10-23 / 1990", "headline": "Parish ends; members received into St. Mary", "detail": "Wolkovich gives October 23, 1989; church-affiliated sources give 1990. The canonical mechanism remains unresolved.", "sources": [{"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "PDF p. 117 / printed p. 110", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"}, {"title": "Parish History", "publisher": "St. Mary Parish, Westville", "date": "accessed 2026-08-17", "url": "https://www.catholic-church.org/~westvillestmarys/parishhistory.htm"}]},
+    {"date": "current as of 2026-08-17", "headline": "St. Mary administers Ss. Peter and Paul Cemetery", "detail": "Current cemetery stewardship is verified separately from closed-parish records custody.", "sources": [{"title": "Cemeteries", "publisher": "St. Mary Parish, Westville", "date": "accessed 2026-08-17", "url": "https://www.catholic-church.org/~westvillestmarys/cemetery.htm"}, {"title": "St. Mary, Westville", "publisher": "Catholic Diocese of Peoria", "date": "accessed 2026-08-17", "url": "https://www.cdop.org/parishes/st-mary-westville"}]}
+  ],
+  "sources": [
+    {"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "PDF pp. 115–117 / printed pp. 108–110", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"},
+    {"title": "Westville's Lithuanian Catholic history focus of new book", "publisher": "The Catholic Post, Diocese of Peoria", "date": "2014-12-17", "url": "https://thecatholicpost.com/2014/12/17/westvilles-lithuanian-catholic-history-focus-of-new-book/"},
+    {"title": "Parish History", "publisher": "St. Mary Parish, Westville", "date": "accessed 2026-08-17", "url": "https://www.catholic-church.org/~westvillestmarys/parishhistory.htm"},
+    {"title": "St. Mary, Westville", "publisher": "Catholic Diocese of Peoria", "date": "accessed 2026-08-17", "url": "https://www.cdop.org/parishes/st-mary-westville"},
+    {"title": "Cemeteries", "publisher": "St. Mary Parish, Westville", "date": "accessed 2026-08-17", "url": "https://www.catholic-church.org/~westvillestmarys/cemetery.htm"},
+    {"title": "Westville, Illinois Lithuanian heritage field survey", "publisher": "Global True Lithuania", "date": "accessed 2026-08-17; observation date unstated", "url": "https://global.truelithuania.com/westville-illinois-2282/"},
+    {"title": "Ss. Peter and Paul Church photograph", "publisher": "Vermco SavingGraves on Flickr", "date": "2014-03-07", "url": "https://www.flickr.com/photos/119124838%40N03/12996924604/"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The inherited 1989/1990 terminal readings describe a real unresolved conflict: Wolkovich gives October 23, 1989, while the Diocese of Peoria newspaper says closure occurred in 1990 and St. Mary records receiving the parish's members in 1990. No canonical instrument was found to resolve date or mechanism. Wolkovich's jurisdiction note is uncertain between Chicago and Peoria; current Peoria sources establish the modern diocesan context but not the original jurisdiction instrument. Paukštis's service ends in 1974 in Wolkovich and 1973 in the Catholic Post. Holy Cross was a separate independent congregation and none of its site, memorial, or cemetery facts belongs to this case.",
+  "gaps": "Canonical erection and closure/suppression decrees, founding jurisdiction instrument, exact organization date, deed-verified church address and parcel, final Mass, demolition date and permit, property disposition, present parcel condition, sacramental-record custody, cemetery deed and exact parcel address, and the canonical nature of the 1990 member reception remain unresolved."
+}

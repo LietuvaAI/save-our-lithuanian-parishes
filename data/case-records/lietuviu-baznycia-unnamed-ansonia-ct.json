@@ -4,6 +4,56 @@
   "buildingStatus": "converted",
   "currentUse": "Home of The Abundant Life Fellowship Ministries, Inc., a non-Catholic Christian congregation (Pastor Ulysses J. Youngblood, Sr.), at 195-199 North Main Street, Ansonia, CT; Sunday service 12:30 pm",
   "summary": "The \"unnamed\" Lithuanian church of the archive record is identifiable as St. Anthony's (Sv. Antano) Lithuanian parish at 199 North Main Street, Ansonia, CT — founded by Lithuanians who incorporated a Lithuanian Society of St. Anthony lodge in 1907, began building without episcopal approval in 1912 after Bishop John J. Nilan refused a parish, won papal sanction on appeal to Rome in 1915, and dedicated the church on Thanksgiving Day 1915. The parish celebrated its 100th anniversary Mass on November 22, 2015 and closed, with a final Mass reported on November 29, 2015. The building still stands and remains in religious use: it is now occupied by The Abundant Life Fellowship Ministries, Inc., a non-Catholic Christian congregation (originally founded in Bridgeport in 1979 as House of Prayer and Deliverance, re-established under Pastor Ulysses J. Youngblood, Sr. in 2010), which states it purchased the two-corner-lot property at 195-199 North Main Street and holds Sunday services there at 12:30 pm. A Lithuanian monument bearing the Columns of Gediminas — the remnant of a large chapel-post by Kestutis Svelnys whose top was destroyed by termites — still stands in the former churchyard, surrounded by a fence with Lithuanian ethnic motifs and dedicated to the parish founders, benefactors, the persecuted church in Soviet-occupied Lithuania, and the Lithuanian nation. No published sale price, buyer transaction record, or recent press coverage, preservation effort, or reunion activity was found.",
+  "historicalNarrative": [
+    {
+      "text": "Ansonia's previously unnamed Lithuanian record is identified as St. Anthony, a distinct Lithuanian Roman Catholic community at North Main Street. Local histories place the St. Anthony society's incorporation in 1907, construction activity beginning in 1912, and the church's dedication in 1915 after the community appealed for recognition. The society, parish recognition, and church dedication are separate milestones rather than one interchangeable founding date.",
+      "sources": [
+        {
+          "url": "https://historicbuildingsct.com/st-anthony-church-ansonia-1915/",
+          "locator": "St. Anthony Church history: 1907 society, 1912 construction, 1915 sanction and dedication"
+        },
+        {
+          "url": "https://global.truelithuania.com/connecticut-789/",
+          "locator": "Ansonia Lithuanian church section identifying St. Anthony and its Lithuanian community"
+        }
+      ]
+    },
+    {
+      "text": "St. Anthony marked its centennial in November 2015 and then ended as a Catholic parish. A local church history reports the anniversary observance and a final Mass later that month, while field documentation independently places the closure in 2015. The precise canonical decree and property-transfer date have not been located, so the final liturgy and juridic suppression should not be treated as proven to be the same event.",
+      "sources": [
+        {
+          "url": "https://historicbuildingsct.com/st-anthony-church-ansonia-1915/",
+          "locator": "Centennial and reported final Mass in November 2015"
+        },
+        {
+          "url": "https://global.truelithuania.com/connecticut-789/",
+          "locator": "Ansonia section recording the church as closed in 2015"
+        }
+      ]
+    },
+    {
+      "text": "The parish's institutional end did not end the building's religious use. Abundant Life Fellowship Ministries states that it purchased and relocated to the two-corner property at 195-199 North Main Street, matching the former St. Anthony site. The congregation's own history supports its occupancy, but no open deed source establishes the exact purchase date or price.",
+      "sources": [
+        {
+          "url": "https://www.abundantlfm.org/history",
+          "locator": "Congregation history describing purchase and relocation to 195-199 North Main Street"
+        },
+        {
+          "url": "https://gcatholic.org/churches/usa-01/22034",
+          "locator": "Former St. Anthony church listing at North Main Street"
+        }
+      ]
+    },
+    {
+      "text": "Lithuanian material heritage also survived separately from the parish. Field documentation describes a monument with the Columns of Gediminas in the former churchyard, the surviving lower portion of a chapel-post by Kestutis Svelnys. Its recent physical condition has not been independently verified, and the available sources do not establish any continuing Lithuanian institutional role at the site.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/connecticut-789/",
+          "locator": "Ansonia section describing the surviving Gediminas-columns monument and chapel-post remnant"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2015-11-29",

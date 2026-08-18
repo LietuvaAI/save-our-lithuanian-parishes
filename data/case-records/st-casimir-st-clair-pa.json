@@ -1,0 +1,51 @@
+{
+  "slug": "st-casimir-st-clair-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "unknown",
+  "currentUse": "St. Casimir ended as a distinct Lithuanian Roman Catholic parish when five Saint Clair parishes formed St. Clare of Assisi Parish on July 15, 2008. The successor worships in the former St. Mary building, not the former St. Casimir church. Field documentation places the St. Casimir church at 441 South Nicholas Street and observed it abandoned, but no dated official, property, or structural source establishes that building's condition or use as of 2026-08-17. St. Clare of Assisi is the official host for St. Casimir Cemetery.",
+  "summary": "St. Casimir was Saint Clair's Lithuanian Roman Catholic parish. The current successor history dates the parish to 1912, while field documentation dates construction of its church at 441 South Nicholas Street to 1917. On July 15, 2008, St. Casimir merged with St. Mary, Immaculate Conception, Ss. Peter and Paul, and St. Boniface to form St. Clare of Assisi Parish, which uses the former St. Mary church. This corrects the legacy 2010 terminal projection. The former St. Casimir church was observed abandoned in field documentation, but its current ownership, use, and physical condition remain unverified; the separate St. Casimir Cemetery is hosted by St. Clare of Assisi.",
+  "historicalNarrative": [
+    {
+      "text": "The current St. Clare of Assisi parish history identifies St. Casimir as one of its predecessor parishes and gives 1912 as St. Casimir's founding year. Field documentation identifies St. Casimir as the Lithuanian Roman Catholic church in Saint Clair. Together these sources establish the institution's identity and distinguish its 1912 parish origin from the later church-building date.",
+      "sources": [
+        {"url": "https://stclareassisi.weebly.com/about.html", "locator": "About the Parish: St. Casimir listed among predecessor parishes with founding year 1912"},
+        {"url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/", "locator": "Saint Clair field-survey section: St. Casimir identified as the Lithuanian church"}
+      ]
+    },
+    {
+      "text": "The field survey places the St. Casimir church at 441 South Nicholas Street and dates its construction to 1917. That date belongs to the known worship building, not the institution's founding. The same survey reports a St. Casimir Lithuanian cemetery established in 1929. The cemetery is a related but distinct site and is not treated as a second institution.",
+      "sources": [{"url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/", "locator": "Saint Clair field-survey section: 441 South Nicholas Street, 1917 church construction, and 1929 St. Casimir cemetery"}]
+    },
+    {
+      "text": "St. Clare of Assisi Parish says it was founded July 15, 2008 from St. Boniface, St. Mary, Immaculate Conception, St. Casimir, and Ss. Peter and Paul. The Diocese of Allentown's official directory repeats the five-parish formation, while contemporary reporting says the combined parish would use the former St. Mary building. The typed relationship is St. Casimir merged into the new St. Clare of Assisi institution; the successor-site relationship points to former St. Mary, not to St. Casimir's building.",
+      "sources": [
+        {"url": "https://stclareassisi.weebly.com/about.html", "locator": "About the Parish: St. Clare founded 2008-07-15 from five named predecessor parishes"},
+        {"url": "https://www.allentowndiocese.org/sites/default/files/2025-01/Allentown%20Diocese%20Directory%202024-2025-compressed.pdf", "locator": "Official directory p. 64: St. Clare of Assisi formed in 2008 from St. Mary, Immaculate Conception, St. Casimir, SS. Peter and Paul, and St. Boniface"},
+        {"url": "https://www.bishop-accountability.org/news2008/05_06/2008_06_01_NewsItem_SomeSchuylkill.htm", "locator": "News-Item report, 2008-06-01, Saint Clair section: five parishes combine as St. Clare at former St. Mary building"}
+      ]
+    },
+    {
+      "text": "Field documentation observed the former 441 South Nicholas Street church abandoned and noted a plaque associated with its final pastor. That observation does not establish 2026 ownership, occupancy, structural condition, or whether the building still stands, so the top-level building status remains unknown. An official diocesan cemetery directory lists St. Casimir Cemetery in East Norwegian Township under St. Clare of Assisi, establishing cemetery-host continuity separately from church-building continuity.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/", "locator": "Saint Clair field-survey section: former church observed abandoned; final-pastor plaque noted"},
+        {"url": "https://www.allentowndiocese.org/sites/default/files/Parish%20Cemetery%202020.pdf", "locator": "Parish Cemeteries and Host Parishes: St. Casimir Cemetery, East Norwegian Township, c/o St. Clare of Assisi, 250 E. Hancock Street"}
+      ]
+    }
+  ],
+  "developments": [
+    {"date": "1912", "headline": "St. Casimir Parish is founded", "detail": "The current successor history identifies it as one of Saint Clair's predecessor parishes.", "sources": [{"title": "About the Parish", "publisher": "St. Clare of Assisi Parish", "date": "accessed 2026-08-17", "url": "https://stclareassisi.weebly.com/about.html"}]},
+    {"date": "1917", "headline": "St. Casimir church is constructed", "detail": "Field documentation places the building at 441 South Nicholas Street.", "sources": [{"title": "Shenandoah and southern Coal Region Lithuanian heritage field survey", "publisher": "Global True Lithuania", "date": "accessed 2026-08-17", "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/"}]},
+    {"date": "1929", "headline": "St. Casimir Cemetery is established", "detail": "The cemetery is a separate parish-related site now hosted by St. Clare of Assisi.", "sources": [{"title": "Shenandoah and southern Coal Region Lithuanian heritage field survey", "publisher": "Global True Lithuania", "date": "accessed 2026-08-17", "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/"}, {"title": "Parish Cemeteries and Host Parishes", "publisher": "Roman Catholic Diocese of Allentown", "date": "2020 directory; accessed 2026-08-17", "url": "https://www.allentowndiocese.org/sites/default/files/Parish%20Cemetery%202020.pdf"}]},
+    {"date": "2008-07-15", "headline": "St. Casimir merges into St. Clare of Assisi", "detail": "The successor formed from five parishes and uses the former St. Mary church.", "sources": [{"title": "About the Parish", "publisher": "St. Clare of Assisi Parish", "date": "accessed 2026-08-17", "url": "https://stclareassisi.weebly.com/about.html"}, {"title": "Official Directory 2024-2025", "publisher": "Roman Catholic Diocese of Allentown", "date": "2024-2025", "page": "p. 64", "url": "https://www.allentowndiocese.org/sites/default/files/2025-01/Allentown%20Diocese%20Directory%202024-2025-compressed.pdf"}]}
+  ],
+  "sources": [
+    {"title": "About the Parish", "publisher": "St. Clare of Assisi Parish", "date": "accessed 2026-08-17", "url": "https://stclareassisi.weebly.com/about.html"},
+    {"title": "Official Directory 2024-2025", "publisher": "Roman Catholic Diocese of Allentown", "date": "2024-2025", "page": "p. 64", "url": "https://www.allentowndiocese.org/sites/default/files/2025-01/Allentown%20Diocese%20Directory%202024-2025-compressed.pdf"},
+    {"title": "Some Schuylkill County Churches Learn Their Fates", "publisher": "The News-Item (archived copy)", "date": "2008-06-01", "url": "https://www.bishop-accountability.org/news2008/05_06/2008_06_01_NewsItem_SomeSchuylkill.htm"},
+    {"title": "Parish Cemeteries and Host Parishes", "publisher": "Roman Catholic Diocese of Allentown", "date": "2020 directory; accessed 2026-08-17", "url": "https://www.allentowndiocese.org/sites/default/files/Parish%20Cemetery%202020.pdf"},
+    {"title": "Shenandoah and southern Coal Region Lithuanian heritage field survey", "publisher": "Global True Lithuania", "date": "accessed 2026-08-17", "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The supported terminal event is the July 15, 2008 five-parish formation of St. Clare of Assisi, not the legacy projected 2010 closure year. The 1912 date is the institution's founding, while 1917 is the field-documented construction year of the known 441 South Nicholas Street church. St. Clare's use of the former St. Mary building does not establish the fate of the former St. Casimir church. A field observation of abandonment is preserved but is insufficient for a current top-level standing, converted, or demolished label.",
+  "gaps": "The canonical erection and 2008 merger/suppression decrees; organizers, founding pastor, and pre-1917 worship place; deed, parcel, architect, cornerstone and dedication details for 441 South Nicholas Street; final Mass and closing date; post-2008 owner and deed chain; current existence, use, interior, and structural condition of the church; cemetery's exact parcel and 1929 primary record; sacramental-record custody; and disposition of church furnishings remain unresolved."
+}

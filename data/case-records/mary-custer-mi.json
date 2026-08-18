@@ -1,0 +1,234 @@
+{
+  "slug": "mary-custer-mi",
+  "culturenetEntityId": "cn:institution:mary-custer-mi",
+  "asOf": "2026-08-17",
+  "formationLabel": "Catholic mission worship documented from 1889 · separate territorial parish established 1933 · merged and reestablished as Saint Mary-Saint Jerome Parish in 2012",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "merged",
+  "buildingStatus": "standing",
+  "currentUse": "Regular Roman Catholic worship continues at St. Mary Church, 85 South Madison Street, as a worship site of Saint Mary-Saint Jerome Parish. The current diocesan page does not establish current Lithuanian-language ministry. Lithuanian devotional art remains documented in the church by attributed field history.",
+  "summary": "St. Mary in Custer developed from Catholic mission worship begun in 1889 into a separate territorial parish in 1933. Contemporary diocesan descriptions cited by Wolkovich show that Lithuanians formed a large share of the parish, but the institution was not a Lithuanian national parish. A 1958 fire destroyed the church then in use, and the later church preserves Lithuanian devotional art. St. Mary merged with St. Jerome of Scottville in 2012 to form Saint Mary-Saint Jerome Parish; Catholic worship continues at 85 South Madison Street, while current Lithuanian ministry is not established.",
+  "institutionLifecycle": {
+    "formation": "Mission attendance under pastoral care from Ludington began July 14, 1889. St. Mary became a separate territorial parish in 1933.",
+    "institutionalForm": "Roman Catholic territorial parish with substantial Lithuanian membership and pastoral influence; not established as a canonical Lithuanian national or ethnic parish.",
+    "jurisdiction": "Roman Catholic Diocese of Grand Rapids.",
+    "terminalStatus": "St. Mary and St. Jerome were merged in 2012, ending St. Mary as a separate institution and reestablishing the combined Saint Mary-Saint Jerome Parish.",
+    "currentVerification": "The Diocese of Grand Rapids lists active Masses at St. Mary Church, 85 South Madison Street, as a worship site of Saint Mary-Saint Jerome Parish. This verifies continuing Catholic worship at the site, not survival of the former St. Mary juridic person or current Lithuanian-led ministry."
+  },
+  "worshipSites": [
+    {
+      "siteType": "host_church",
+      "name": "Custer mission worship site",
+      "address": "Custer, Michigan; exact mission host and address unresolved",
+      "usePeriod": "1889-1933",
+      "buildingCondition": "unknown",
+      "currentUse": "The mission phase is documented, but the exact host building, address, and physical outcome have not been established.",
+      "evidence": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed pp. 82-83, mission attendance and 1933 parish formation"
+        }
+      ]
+    },
+    {
+      "siteType": "church",
+      "name": "St. Mary church destroyed by fire",
+      "address": "Custer, Michigan; exact street address unresolved",
+      "usePeriod": "opening date unresolved-1958-02-02",
+      "buildingCondition": "demolished by fire",
+      "currentUse": "The church then in use was destroyed by fire on February 2, 1958. Its precise address and footprint relative to the present church remain unresolved.",
+      "evidence": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed p. 83, 1958 fire and rebuilding"
+        }
+      ]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-mary-custer-mi",
+      "name": "St. Mary Church",
+      "address": "85 South Madison Street, Custer, MI 49405",
+      "usePeriod": "post-1958 rebuilding phase; present Catholic worship site",
+      "buildingCondition": "standing",
+      "currentUse": "Active worship site of Saint Mary-Saint Jerome Parish. Attributed field history dates the present design to the late 1960s and documents Lithuanian Marian art; the exact relationship between the immediate post-fire rebuilding and the present structure remains unresolved.",
+      "evidence": [
+        {
+          "url": "https://grdiocese.org/parishes-location/saint-mary-saint-james-parish-custer/",
+          "locator": "Location and Information and Worship Site sections, active Masses at St. Mary Church, 85 S. Madison St."
+        },
+        {
+          "url": "https://global.truelithuania.com/custer-ludington-michigan-3901/",
+          "locator": "Custer section, attributed field documentation of late-1960s design and Lithuanian devotional art"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:mary-custer-mi",
+      "target": "cn:building_site:st-mary-custer-mi",
+      "date": "post-1958-2012",
+      "status": "accepted",
+      "note": "St. Mary used the later South Madison Street church before the 2012 merger; the same church continues under the successor parish."
+    },
+    {
+      "type": "institution-merged-into-institution",
+      "source": "cn:institution:mary-custer-mi",
+      "target": "cn:institution:saint-mary-saint-jerome-custer-mi",
+      "date": "2012",
+      "status": "accepted",
+      "note": "The Diocese of Grand Rapids identifies the combined parish as reestablished in 2012, and its planning summary directs St. Jerome of Scottville to merge with St. Mary of Custer while maintaining the church."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "Catholic worship in Custer began as a mission rather than a Lithuanian national parish. Wolkovich dates mission attendance under the Ludington pastor to July 14, 1889. The exact host church and address during this phase have not been established.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed pp. 82-83"
+        }
+      ]
+    },
+    {
+      "text": "St. Mary became a separate territorial parish in 1933. Wolkovich reports about 200 families at that point, roughly half Lithuanian. Later diocesan descriptions varied from predominantly American Lithuanian to no stated ethnic composition, confirming that Lithuanian community influence and canonical parish form were separate dimensions.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed pp. 82-83, 1933 and later diocesan descriptions"
+        }
+      ]
+    },
+    {
+      "text": "The church then serving St. Mary burned on February 2, 1958 and was rebuilt. The available account does not identify the destroyed building's street address or establish whether the rebuilding immediately produced the same physical structure now standing at South Madison Street.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed p. 83"
+        }
+      ]
+    },
+    {
+      "text": "Lithuanian heritage remained visible in the later church even though St. Mary was territorial. Field documentation attributes the late-1960s church design to Jonas Mulokas and identifies an Our Lady of Vilnius relief with a Lithuanian inscription and a statue of Our Lady of Šiluva. The same account explicitly states that the region's Lithuanian settlers generally attended and influenced local Catholic churches instead of erecting canonical ethnic parishes.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/custer-ludington-michigan-3901/",
+          "locator": "Custer and New Lithuania sections, attributed field history and identity boundary"
+        }
+      ]
+    },
+    {
+      "text": "In 2012 St. Mary and St. Jerome of Scottville were merged, creating the reestablished Saint Mary-Saint Jerome Parish. The Diocese of Grand Rapids continues to list St. Mary Church at 85 South Madison Street with regular Masses. This is continuing site and successor-parish life, not uninterrupted survival of St. Mary as the former separate institution, and the current sources do not establish Lithuanian-language worship.",
+      "sources": [
+        {
+          "url": "https://grdiocese.org/wp-content/uploads/2018/12/our-faith-our-future-summary-highlights.pdf#page=1",
+          "locator": "PDF/printed p. 1, Northwest Deanery line for St. Jerome, Scottville and St. Mary, Custer: merge/maintain church"
+        },
+        {
+          "url": "https://grdiocese.org/parishes-location/saint-mary-saint-james-parish-custer/",
+          "locator": "Established/Reestablished, Worship Site, and Mass Times sections"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1889-07-14",
+      "headline": "Mission worship begins",
+      "detail": "Catholics in Custer began receiving mission care from the Ludington pastor; the exact host site remains unresolved.",
+      "sources": [
+        {
+          "title": "Lithuanian Religious Life in America, Vol. 3",
+          "publisher": "Norwood Press",
+          "date": "1998",
+          "page": "printed pp. 82-83",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+        }
+      ]
+    },
+    {
+      "date": "1933",
+      "headline": "St. Mary becomes a separate territorial parish",
+      "detail": "The new parish served a mixed congregation in which Lithuanian families formed about half of the reported membership.",
+      "sources": [
+        {
+          "title": "Lithuanian Religious Life in America, Vol. 3",
+          "publisher": "Norwood Press",
+          "date": "1998",
+          "page": "printed pp. 82-83",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+        }
+      ]
+    },
+    {
+      "date": "1958-02-02",
+      "headline": "Church destroyed by fire and rebuilt",
+      "detail": "Fire destroyed the church then in use; the precise sequence from rebuilding to the present church remains unresolved.",
+      "sources": [
+        {
+          "title": "Lithuanian Religious Life in America, Vol. 3",
+          "publisher": "Norwood Press",
+          "date": "1998",
+          "page": "printed p. 83",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+        }
+      ]
+    },
+    {
+      "date": "2012",
+      "headline": "St. Mary merges into Saint Mary-Saint Jerome Parish",
+      "detail": "The former St. Mary institution joined St. Jerome while St. Mary Church remained an active Catholic worship site.",
+      "sources": [
+        {
+          "title": "Our Faith, Our Future Summary Highlights",
+          "publisher": "Diocese of Grand Rapids",
+          "date": "2012",
+          "page": "PDF/printed p. 1, Northwest Deanery",
+          "url": "https://grdiocese.org/wp-content/uploads/2018/12/our-faith-our-future-summary-highlights.pdf#page=1"
+        },
+        {
+          "title": "Saint Mary-Saint Jerome Parish, Custer",
+          "publisher": "Diocese of Grand Rapids",
+          "date": "current page accessed 2026-08-17",
+          "page": "Established, Reestablished, Worship Site, and Mass Times",
+          "url": "https://grdiocese.org/parishes-location/saint-mary-saint-james-parish-custer/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lithuanian Religious Life in America, Vol. 3",
+      "publisher": "Norwood Press",
+      "date": "1998",
+      "page": "printed pp. 82-83",
+      "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+    },
+    {
+      "title": "Saint Mary-Saint Jerome Parish, Custer",
+      "publisher": "Diocese of Grand Rapids",
+      "date": "current page accessed 2026-08-17",
+      "page": "Established, Reestablished, Worship Site, and Mass Times",
+      "url": "https://grdiocese.org/parishes-location/saint-mary-saint-james-parish-custer/"
+    },
+    {
+      "title": "Our Faith, Our Future Summary Highlights",
+      "publisher": "Diocese of Grand Rapids",
+      "date": "2012",
+      "page": "PDF/printed p. 1, Northwest Deanery",
+      "url": "https://grdiocese.org/wp-content/uploads/2018/12/our-faith-our-future-summary-highlights.pdf#page=1"
+    },
+    {
+      "title": "Lithuanian heritage in Custer and Ludington, Michigan",
+      "publisher": "Global True Lithuania",
+      "date": "accessed 2026-08-17",
+      "page": "Custer and New Lithuania sections",
+      "url": "https://global.truelithuania.com/custer-ludington-michigan-3901/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The 1889 date belongs to mission worship, while 1933 is the formation of a separate territorial parish. Descriptions of Lithuanian predominance document community composition and heritage, not canonical national-parish status. The 1958 fire and rebuilding are established, but the available evidence does not fully reconcile that sequence with the secondary late-1960s date attributed to the present church.",
+  "gaps": "The exact mission host and address; the address and footprint of the pre-1958 church; the complete post-fire building sequence and dedication dates; the merger instrument and exact effective date within 2012; sacramental-record custody; any parish cemetery; and evidence of current Lithuanian-language ministry remain unresolved."
+}

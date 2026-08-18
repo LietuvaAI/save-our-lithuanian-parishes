@@ -4,6 +4,35 @@
   "buildingStatus": "demolished",
   "currentUse": "Church site at 331 Reed Street, Pennsport, Philadelphia — long a vacant lot — has been redeveloped as a new-construction luxury townhouse (\"The Enclaves\" development), listed at $1,100,000 with a 2026 build year. The parish cemetery in Bensalem PA survives but is abandoned, with township/volunteer upkeep.",
   "summary": "St. Mary's Lithuanian National Catholic Church stood at 331 Reed Street in Philadelphia's Pennsport neighborhood; the building is long gone and the address was documented as a vacant lot by both Global True Lithuania and the Lithuanian Genealogy cemetery database. As of July 2026 that vacancy has ended: 331 Reed St (19147) is an active listing for a new-construction 3-bed/3-bath townhouse in \"The Enclaves\" development, priced at $1,100,000 with a 2026 build year and expected Q3 2026 delivery — the former church footprint is now upscale residential real estate. The parish itself was organized in 1926 and, per Global True Lithuania, functioned roughly 1926-1957 with about 400 members at its start. Its most tangible surviving legacy is St. Mary's Lithuanian National Catholic Cemetery on Galloway Road in Bensalem, Bucks County — abandoned, repeatedly vandalized, and heavily overgrown, but kept minimally alive since 1993 by municipal worker Chris Schrier (who won $500/year in township landscaping funds) with support from Rev. Peter Burkauskas of Philadelphia's St. Andrew's Lithuanian (Roman Catholic) parish. Cemetery ownership remains murky — a 2000 Baltimore Sun investigation suggested title may rest with the Polish National Catholic Church in Scranton — and as of 2015 the township was still seeking a Lithuanian organization to assume upkeep, with the Lithuanian American Community of Philadelphia having expressed interest after storm damage toppled trees onto tombstones. Only about 22 graves are recorded in the genealogy database.",
+  "historicalNarrative": [
+    {
+      "text": "St. Mary's was a Lithuanian National Catholic congregation, not a Roman Catholic parish of the Archdiocese of Philadelphia. Public histories place its organized Philadelphia life in 1926, while broader accounts assign different dates to the Lithuanian national-Catholic break from Rome. No incorporation record or jurisdictional instrument has been located to resolve whether earlier dates describe the movement generally or this particular congregation.",
+      "sources": [
+        { "url": "https://global.truelithuania.com/philadelphia-pennsylvania-1160/", "locator": "St. Mary's Lithuanian National Catholic parish section: 1926 organization and later history" },
+        { "url": "https://www.baltimoresun.com/news/bs-xpm-2000-06-29-0006290202-story.html", "locator": "Pair tracks last resting place of lost sect: national-Catholic movement and Philadelphia cemetery context" }
+      ]
+    },
+    {
+      "text": "The congregation worshiped at 331 Reed Street in Philadelphia's Pennsport neighborhood. Heritage and cemetery sources identify that address as the former church site and later a vacant lot, establishing that the church building was gone. They do not establish the exact final service, institutional closure, property-sale date, buyer, or demolition year, so the inherited 1957 and 1970s readings remain unresolved rather than silently combined.",
+      "sources": [
+        { "url": "https://global.truelithuania.com/philadelphia-pennsylvania-1160/", "locator": "St. Mary's National Catholic church site at 331 Reed Street and reported 1926-1957 span" },
+        { "url": "http://lithuaniangenealogy.org/static_db/PA-stmarys.php", "locator": "St. Mary's Lithuanian National Catholic Cemetery page: church address and former-site note" }
+      ]
+    },
+    {
+      "text": "St. Mary's cemetery on Galloway Road in Bensalem survived separately from the vanished church. The Baltimore Sun documented abandonment, vandalism, uncertain ownership, and volunteer care beginning in 1993; the genealogy inventory later recorded township maintenance and interest from the Lithuanian American Community of Philadelphia. Cemetery survival is not proof that the parish or church survived, and present ownership remains unresolved.",
+      "sources": [
+        { "url": "https://www.baltimoresun.com/news/bs-xpm-2000-06-29-0006290202-story.html", "locator": "June 29, 2000 cemetery investigation: caretaker, vandalism, funding, and ownership uncertainty" },
+        { "url": "http://lithuaniangenealogy.org/static_db/PA-stmarys.php", "locator": "Bensalem cemetery inventory: township upkeep, 2015 ownership interest, and recorded graves" }
+      ]
+    },
+    {
+      "text": "The Reed Street site has now entered a new building phase unrelated to the church institution. A 2026 real-estate listing markets 331 Reed Street as a new-construction townhouse within The Enclaves development. This confirms residential redevelopment of the former footprint, but the new house has no institutional continuity with St. Mary's and supplies no missing evidence about the congregation's closure or the church's demolition date.",
+      "sources": [
+        { "url": "https://heatherbrummellrealestate.com/listing/bright/PAPH2558178/PHILADELPHIA/331-REED-STREET/", "locator": "MLS PAPH2558178: 2026 new-construction townhouse at 331 Reed Street" }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2000-06-29",

@@ -1,0 +1,219 @@
+{
+  "slug": "st-george-albany-ny",
+  "culturenetEntityId": "cn:institution:st-george-albany-ny",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian Catholic society organized in 1916 · parish formed March 17, 1917 · later closed, exact terminal date unresolved",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "closed",
+  "buildingStatus": "converted",
+  "currentUse": "The former St. George church at 369 Livingston Avenue survives as the Sister Maureen Joyce Center. A 2011 report identified the conversion and dedication, Lithuania's official 2024 U.S. heritage list identifies the former church and current center at the same address, and a 2024 All Saints bulletin documents continuing soup-kitchen service there. This is building continuity and charitable reuse, not continued parish life.",
+  "summary": "St. George was Albany's Lithuanian Roman Catholic parish, formed from a Lithuanian Catholic society in 1917 and distinct from Utica's same-named Lithuanian parish. The parish worshiped at 369 Livingston Avenue and remained open at least into 1993, when a Black Apostolate helped sustain the church. It later closed on an unresolved date. The Diocese of Albany now directs St. George institutional records inquiries to St. Joan of Arc Church, while the former Livingston Avenue church serves as the Sister Maureen Joyce Center.",
+  "institutionLifecycle": {
+    "formation": "A documented local history says Albany Lithuanians organized St. George's Society in 1916 and that the society became St. George Parish on March 17, 1917. The exact diocesan erection instrument remains unresolved.",
+    "institutionalForm": "Lithuanian Roman Catholic parish; an African-American apostolate later shared and helped sustain parish worship without creating a second St. George institution.",
+    "jurisdiction": "Roman Catholic Diocese of Albany.",
+    "terminalStatus": "Closed after 1993 and before the former church's 2011 conversion dedication. The exact closure date and canonical mechanism remain unresolved; the inherited 1986 date is not accepted.",
+    "currentVerification": "The Diocese of Albany directs St. George's institutional-record inquiries to St. Joan of Arc Church. Current Catholic and Lithuanian-government sources identify the former church at 369 Livingston Avenue as the Sister Maureen Joyce Center."
+  },
+  "worshipSites": [
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-george-livingston-albany-ny",
+      "name": "St. George Lithuanian Catholic Church",
+      "address": "369 Livingston Avenue, Albany, NY 12206",
+      "usePeriod": "built after parish formation in 1917; parish use continued at least through 1993; terminal worship date unresolved",
+      "buildingCondition": "converted",
+      "currentUse": "Sister Maureen Joyce Center and soup kitchen. Current charitable use does not imply continuing parish worship or a canonical successor at the site.",
+      "evidence": [
+        {
+          "url": "https://findingyourpast.blogspot.com/2017/04/brief-history-of-catholic-immigrant.html",
+          "locator": "St. George history, paragraphs 65-66 and note 17"
+        },
+        {
+          "url": "https://www.timesunion.com/local/article/Soup-services-and-solutions-2238097.php",
+          "locator": "October 26, 2011 report on conversion and dedication of the former St. George church"
+        },
+        {
+          "url": "https://usa.mfa.lt/storage/usa/public/uploads/2025/09/list-of-immovable-cultural-heritage-significant-to-lithuania-within-the-territory-of-the-usa.pdf#page=8",
+          "locator": "PDF p. 8 / printed p. 8, NY 84: St. George church, Sister Maureen Joyce Center, 369 Livingston Avenue"
+        },
+        {
+          "url": "https://container.parishesonline.com/bulletins/03/0358/20241208B.pdf#page=4",
+          "locator": "PDF p. 4, Sister Maureen Joyce Center Soup Kitchen at 369 Livingston Avenue"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-george-albany-ny",
+      "target": "cn:building_site:st-george-livingston-albany-ny",
+      "date": "after 1917; terminal date unresolved",
+      "status": "accepted",
+      "note": "The Livingston Avenue church was the parish worship site; the building's later charitable use is separate from institutional life."
+    },
+    {
+      "type": "records-custody",
+      "source": "cn:institution:st-george-albany-ny",
+      "target": "St. Joan of Arc Church, Albany",
+      "date": "current directory routing as of 2026-08-17",
+      "status": "accepted",
+      "note": "The Diocese of Albany institutional-records directory routes St. George inquiries to St. Joan of Arc; this does not prove merger or canonical succession."
+    },
+    {
+      "type": "same-name-nonidentity",
+      "source": "cn:institution:st-george-albany-ny",
+      "target": "cn:institution:st-george-utica-ny",
+      "date": "historical",
+      "status": "accepted",
+      "note": "Albany and Utica maintained distinct St. George Lithuanian Roman Catholic institutions and sites."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "Albany's St. George grew from the Capital District's Lithuanian immigrant community, not from any St. George institution elsewhere in New York. A documented local history says Lithuanians formed St. George's Society in 1916 so they could receive Catholic ministry in their own language. The same source names Father Constantine F. Szatkus as the priest permitted to care for the community.",
+      "sources": [
+        {
+          "url": "https://findingyourpast.blogspot.com/2017/04/brief-history-of-catholic-immigrant.html",
+          "locator": "paragraphs 65-66 and note 17"
+        }
+      ]
+    },
+    {
+      "text": "The local history dates the change from society to parish to March 17, 1917 and says a church was soon built on Livingston Avenue. This separates community organization in 1916 from parish formation in 1917. No reviewed public source in this tranche supplies the diocesan erection decree or a dedication date for the building.",
+      "sources": [
+        {
+          "url": "https://findingyourpast.blogspot.com/2017/04/brief-history-of-catholic-immigrant.html",
+          "locator": "paragraph 66"
+        }
+      ]
+    },
+    {
+      "text": "The Livingston Avenue parish survived well beyond the inherited 1986 closure reading. The local history reports that only about twenty members remained in 1993, but Father Kofi Amissah persuaded Bishop Howard Hubbard to retain the church for an African-American apostolate. That pastoral broadening is not a new parish identity and does not establish the later terminal date.",
+      "sources": [
+        {
+          "url": "https://findingyourpast.blogspot.com/2017/04/brief-history-of-catholic-immigrant.html",
+          "locator": "paragraph 66"
+        }
+      ]
+    },
+    {
+      "text": "The parish later closed, but the effective date and canonical mechanism remain unresolved. By October 2011 the former St. George church had been converted and dedicated as the Sister Maureen Joyce Center. The Diocese of Albany's current institutional-records directory separately routes St. George inquiries to St. Joan of Arc Church; that routing establishes records custody, not a merger or successor identity.",
+      "sources": [
+        {
+          "url": "https://www.timesunion.com/local/article/Soup-services-and-solutions-2238097.php",
+          "locator": "October 26, 2011 report on the former St. George church"
+        },
+        {
+          "url": "https://www.rcda.org/parishes/institutional-records",
+          "locator": "Albany section: St. George's routed to St. Joan of Arc Church"
+        }
+      ]
+    },
+    {
+      "text": "The building has a documented life separate from the closed institution. Lithuania's official 2024 list identifies St. George's former church, the Sister Maureen Joyce Center, and 369 Livingston Avenue as one heritage site. A December 2024 All Saints bulletin confirms continuing soup-kitchen service at that address. These sources support a standing converted building in charitable use, not surviving St. George parish worship.",
+      "sources": [
+        {
+          "url": "https://usa.mfa.lt/storage/usa/public/uploads/2025/09/list-of-immovable-cultural-heritage-significant-to-lithuania-within-the-territory-of-the-usa.pdf#page=8",
+          "locator": "PDF p. 8 / printed p. 8, NY 84"
+        },
+        {
+          "url": "https://container.parishesonline.com/bulletins/03/0358/20241208B.pdf#page=4",
+          "locator": "PDF p. 4, soup-kitchen location and service"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1916-1917",
+      "headline": "Lithuanian society becomes St. George Parish",
+      "detail": "St. George's Society formed in 1916 and became St. George Parish on March 17, 1917; a Livingston Avenue church followed.",
+      "sources": [
+        {
+          "title": "Brief History of Catholic Immigrant Churches in Albany",
+          "publisher": "Finding Your Past: Genealogical Gleanings with the Albany Grave Digger",
+          "date": "2017-04-02",
+          "page": "paragraphs 65-66 and note 17",
+          "url": "https://findingyourpast.blogspot.com/2017/04/brief-history-of-catholic-immigrant.html"
+        }
+      ]
+    },
+    {
+      "date": "1993",
+      "headline": "Parish remains open through a broader apostolate",
+      "detail": "A Black Apostolate helped keep the church open despite a sharply diminished historical membership, contradicting the inherited 1986 closure reading.",
+      "sources": [
+        {
+          "title": "Brief History of Catholic Immigrant Churches in Albany",
+          "publisher": "Finding Your Past: Genealogical Gleanings with the Albany Grave Digger",
+          "date": "2017-04-02",
+          "page": "paragraph 66",
+          "url": "https://findingyourpast.blogspot.com/2017/04/brief-history-of-catholic-immigrant.html"
+        }
+      ]
+    },
+    {
+      "date": "2011-10-26",
+      "headline": "Former church dedicated for charitable service",
+      "detail": "The former St. George church was converted into the Sister Maureen Joyce Center; current Catholic sources continue to document soup-kitchen service there.",
+      "sources": [
+        {
+          "title": "Soup, services and solutions",
+          "publisher": "Times Union",
+          "date": "2011-10-26",
+          "page": "article and photo captions",
+          "url": "https://www.timesunion.com/local/article/Soup-services-and-solutions-2238097.php"
+        },
+        {
+          "title": "All Saints Catholic Church Bulletin",
+          "publisher": "All Saints Catholic Church, Albany",
+          "date": "2024-12-08",
+          "page": "PDF p. 4",
+          "url": "https://container.parishesonline.com/bulletins/03/0358/20241208B.pdf#page=4"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Brief History of Catholic Immigrant Churches in Albany",
+      "publisher": "Finding Your Past: Genealogical Gleanings with the Albany Grave Digger",
+      "date": "2017-04-02",
+      "page": "paragraphs 65-66 and note 17",
+      "url": "https://findingyourpast.blogspot.com/2017/04/brief-history-of-catholic-immigrant.html"
+    },
+    {
+      "title": "Institutional Records",
+      "publisher": "Roman Catholic Diocese of Albany",
+      "date": "accessed 2026-08-17",
+      "page": "Albany section, St. George's",
+      "url": "https://www.rcda.org/parishes/institutional-records"
+    },
+    {
+      "title": "Soup, services and solutions",
+      "publisher": "Times Union",
+      "date": "2011-10-26",
+      "page": "article and photo captions",
+      "url": "https://www.timesunion.com/local/article/Soup-services-and-solutions-2238097.php"
+    },
+    {
+      "title": "List of Immovable Cultural Heritage Significant to Lithuania Within the Territory of the U.S.A.",
+      "publisher": "Ministry of Foreign Affairs of the Republic of Lithuania",
+      "date": "2024-03-19",
+      "page": "PDF p. 8 / printed p. 8, NY 84",
+      "url": "https://usa.mfa.lt/storage/usa/public/uploads/2025/09/list-of-immovable-cultural-heritage-significant-to-lithuania-within-the-territory-of-the-usa.pdf#page=8"
+    },
+    {
+      "title": "All Saints Catholic Church Bulletin",
+      "publisher": "All Saints Catholic Church, Albany",
+      "date": "2024-12-08",
+      "page": "PDF p. 4",
+      "url": "https://container.parishesonline.com/bulletins/03/0358/20241208B.pdf#page=4"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The inherited 1986 terminal year is contradicted by the sourced account that St. George remained open in 1993 through an African-American apostolate. The reviewed evidence proves closure only within the wider interval after 1993 and before the former church's 2011 conversion dedication. Albany St. George is distinct from Utica St. George despite the shared patron and state.",
+  "gaps": "The parish's exact canonical erection instrument; the church's construction and dedication dates; every possible earlier hosted-worship location; the effective closure date and decree; the relationship between parish closure and the Black Apostolate; completeness of records custody; any parish cemetery; and interior preservation after conversion remain unresolved."
+}

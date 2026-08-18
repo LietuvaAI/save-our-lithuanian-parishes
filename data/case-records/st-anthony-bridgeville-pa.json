@@ -1,0 +1,52 @@
+{
+  "slug": "st-anthony-bridgeville-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "demolished",
+  "currentUse": "St. Anthony ended as a distinct Lithuanian Roman Catholic parish in the 1994 merger with St. Agatha that formed Holy Child Parish. The former St. Anthony church on Millers Run Road continued temporarily as a Holy Child worship site, closed on September 8, 2007, and is reported by field documentation as demolished in 2012. Holy Child entered Corpus Christi Parish in 2020. Corpus Christi's current Holy Child Church at 212 Station Street is the former St. Agatha building, not the demolished St. Anthony site.",
+  "summary": "St. Anthony was Bridgeville's Lithuanian Roman Catholic parish, founded in 1915. It acquired a former Methodist Episcopal building on Millers Run Road, enlarged it, and used it as its church; the remodeled church was rededicated on June 20, 1972. A manually reviewed 1932 Lithuanian report names St. Anthony and its former first pastor, directly corroborating the parish identity. St. Anthony merged with St. Agatha in 1994 to form Holy Child Parish, but its building remained a secondary worship site until closing September 8, 2007. Field research reports demolition in 2012. Holy Child entered Corpus Christi Parish in 2020, whose current Bridgeville church is the former St. Agatha site at 212 Station Street.",
+  "historicalNarrative": [
+    {
+      "text": "The Diocese of Pittsburgh dates St. Anthony Lithuanian Parish to 1915. A manually reviewed Draugas report of September 8, 1932 names St. Anthony in Bridgeville and identifies V. Abromaitis as its former first pastor, independently corroborating the titular identity and Lithuanian parish community. The canonical erection instrument and exact opening date remain unavailable.",
+      "sources": [
+        {"url": "https://diopitt.org/saint-anthony-bridgeville", "locator": "Diocesan parish history, lines 1045-1048 in the canonical deep-case-backfill-14 capture: Lithuanian parish founded in 1915"},
+        {"url": "https://www.spauda.org/draugas/archive/1932/1932-09-08-DRAUGAS.pdf", "locator": "Draugas, 1932-09-08, p. 3, Pittsburgh Lithuanian news naming St. Anthony in Bridgeville and former first pastor V. Abromaitis"}
+      ]
+    },
+    {
+      "text": "The parish acquired a former Methodist Episcopal church on Millers Run Road in 1915 rather than constructing a wholly new first building. It enlarged and remodeled that structure, which was rededicated on June 20, 1972. The diocesan history does not supply a street number, and no parcel-level source was found to establish one without inference.",
+      "sources": [
+        {"url": "https://diopitt.org/saint-anthony-bridgeville", "locator": "Diocesan parish history, canonical capture lines 1045-1048: former Methodist Episcopal building, enlargement, and 1972-06-20 rededication"}
+      ]
+    },
+    {
+      "text": "St. Anthony and St. Agatha merged in 1994 to form the distinct Holy Child Parish. St. Agatha Church was renamed Holy Child Church, while the former St. Anthony building continued as an additional Holy Child worship site. The Diocese records closure of that former St. Anthony site on September 8, 2007. Field documentation reports that the building was demolished in 2012; the demolition label is tied to that report and does not derive merely from the parish merger or church closure.",
+      "sources": [
+        {"url": "https://diopitt.org/holy-child", "locator": "Diocesan Holy Child history: 1994 merger, site distinction, and former St. Anthony church closure on 2007-09-08"},
+        {"url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/", "locator": "Pittsburgh-area field survey, Bridgeville section: former St. Anthony church closed in 2007 and demolished in 2012"}
+      ]
+    },
+    {
+      "text": "Holy Child joined St. Barbara and St. Mary in Cecil on January 6, 2020 to form Corpus Christi Parish. The current diocesan directory lists Holy Child Church at 212 Station Street, Bridgeville, together with St. Barbara and St. Mary sites. The Station Street church descends from St. Agatha and must not be presented as the former Lithuanian St. Anthony building or as evidence that the St. Anthony structure survives.",
+      "sources": [
+        {"url": "https://diopitt.org/corpus-christi-bridgeville", "locator": "Diocesan predecessor history: Corpus Christi formed from Holy Child, St. Barbara, and St. Mary on 2020-01-06"},
+        {"url": "https://diopitt.org/corpus-christi-parish", "locator": "Current diocesan directory, accessed 2026-08-17: Holy Child Church, 212 Station Street, plus current Corpus Christi worship sites"}
+      ]
+    }
+  ],
+  "developments": [
+    {"date": "1915", "headline": "St. Anthony Lithuanian Parish is founded", "detail": "The congregation acquired a former Methodist Episcopal church on Millers Run Road.", "sources": [{"title": "Saint Anthony, Bridgeville", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/saint-anthony-bridgeville"}]},
+    {"date": "1994", "headline": "St. Anthony enters Holy Child Parish", "detail": "The institution ended, while its church continued for a time as a Holy Child worship site.", "sources": [{"title": "Holy Child", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/holy-child"}]},
+    {"date": "2007-09-08", "headline": "Former St. Anthony worship site closes", "detail": "Field documentation later reports demolition of the building in 2012.", "sources": [{"title": "Holy Child", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/holy-child"}, {"title": "Pittsburgh Lithuanian heritage field survey", "publisher": "True Lithuania", "date": "accessed 2026-08-17", "url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/"}]}
+  ],
+  "sources": [
+    {"title": "Saint Anthony, Bridgeville", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/saint-anthony-bridgeville"},
+    {"title": "Bridgeville parish report", "publisher": "Draugas", "date": "1932-09-08", "page": "p. 3", "url": "https://www.spauda.org/draugas/archive/1932/1932-09-08-DRAUGAS.pdf"},
+    {"title": "Holy Child", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/holy-child"},
+    {"title": "Corpus Christi predecessor history", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/corpus-christi-bridgeville"},
+    {"title": "Corpus Christi Parish", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/corpus-christi-parish"},
+    {"title": "Pittsburgh Lithuanian heritage field survey", "publisher": "True Lithuania", "date": "accessed 2026-08-17", "url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The former St. Anthony building and the present Holy Child Church are separate structures. The current Holy Child site at 212 Station Street is the former St. Agatha church; it is not evidence of survival of St. Anthony's Millers Run Road building. The 1994 parish merger, continued hosted worship through 2007, and reported 2012 building demolition are separate lifecycle events.",
+  "gaps": "The canonical erection and merger decrees, exact street number and parcel for the Millers Run Road church, identity of the Methodist Episcopal seller, deed and demolition records, exact 1972 remodeling scope, cemetery relationships, sacramental-record custody, and disposition of furnishings remain unresolved. The 2012 demolition date presently rests on field documentation rather than a municipal permit or parcel record."
+}

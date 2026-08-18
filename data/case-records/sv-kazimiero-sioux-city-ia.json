@@ -4,6 +4,56 @@
   "buildingStatus": "demolished",
   "currentUse": "Church demolished July 2007; per Global True Lithuania, the church footprint at 2524 Leech Ave. was replaced by a modern single-family home and only the old priest's residence remains from the parish complex (Wikipedia describes the immediate church site as an empty field). The salvaged bell-cast dome sits in storage at the State Steel yard in Sioux City.",
   "summary": "St. Casimir Lithuanian Roman Catholic Church (built 1915, designed by Prairie School architect William L. Steele) no longer stands: after the Diocese of Sioux City barred new members in the 1990s and dissolved the parish in 1998 — appropriating its holdings despite the parish reportedly remaining solvent — the building sat vacant and unmaintained until the diocese announced in May 2007 that it would be razed for safety reasons, and demolition was completed on July 17, 2007. The site at 2524 Leech Ave. is now residential; Global True Lithuania reports only the former priest's residence survives, with a modern single-family home replacing the church. Private interests arranged for the church's distinctive bell-cast dome to be salvaged, and it is stored at the State Steel yard in Sioux City, visible from Virginia Street. Key interior artwork by Lithuanian artist Adolfas Valeška — the Our Lady of Fatima and Good Shepherd paintings and a European bisque statue of St. Casimir, bought back from an antiques dealer after being salvaged — is displayed at the St. Joseph Center at Trinity Heights Marian shrine in Sioux City, with other artifacts placed in the Cathedral of the Epiphany and Mater Dei grade school; stained-glass windows are stored at Nativity Parish and the church's nameplate stones sit on a private Lithuanian-owned farm. The aging local Lithuanian community reportedly hopes to consolidate the surviving elements at Trinity Heights as a commemorative installation, but no formal preservation project or recent (2020s) press coverage was found.",
+  "historicalNarrative": [
+    {
+      "text": "St. Casimir was Sioux City's Lithuanian Roman Catholic parish. Its church at 2524 Leech Avenue was built in 1915 to a design associated with architect William L. Steele, but the available sources do not provide the canonical erection instrument or a complete early site chronology.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/St._Casimir_Lithuanian_Roman_Catholic_Church",
+          "locator": "St. Casimir Lithuanian Roman Catholic Church, history and architecture sections"
+        }
+      ]
+    },
+    {
+      "text": "The Diocese of Sioux City dissolved the parish in 1998 after restricting new membership during the 1990s. The church then remained vacant and unmaintained for nine years; the institutional end in 1998 is therefore distinct from the later demolition of the building.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/St._Casimir_Lithuanian_Roman_Catholic_Church",
+          "locator": "History section, 1998 parish dissolution and vacancy"
+        },
+        {
+          "url": "https://global.truelithuania.com/category/usa/iowa/",
+          "locator": "Iowa heritage account, membership restriction, final service, and closure"
+        }
+      ]
+    },
+    {
+      "text": "The diocese announced demolition in May 2007 and the church was razed on July 17, 2007. This resolves the inherited 2001 demolition reading in favor of 2007, while the building's National Register status remains disputed: one source says it was formally inscribed and another says only deemed eligible.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/St._Casimir_Lithuanian_Roman_Catholic_Church",
+          "locator": "History section, May 2007 announcement, July 17 demolition, and eligibility wording"
+        },
+        {
+          "url": "https://global.truelithuania.com/category/usa/iowa/",
+          "locator": "Iowa heritage account, 2007 demolition and National Register claim"
+        }
+      ]
+    },
+    {
+      "text": "Parts of the church survived away from the demolished site. The bell-cast dome was salvaged and stored at State Steel, while paintings, a St. Casimir statue, stained glass, and other objects went to Trinity Heights, the Cathedral of the Epiphany, Mater Dei, and private custody. Reports disagree over whether the church footprint is now a house or an empty field, so the present parcel condition remains unresolved.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/St._Casimir_Lithuanian_Roman_Catholic_Church",
+          "locator": "Demolition and artifact-disposition passages"
+        },
+        {
+          "url": "https://global.truelithuania.com/category/usa/iowa/",
+          "locator": "Iowa heritage account, dome, artwork, rectory, and present-site description"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "1998",

@@ -1,0 +1,296 @@
+{
+  "slug": "st-george-saginaw-mi",
+  "culturenetEntityId": "cn:institution:st-george-saginaw-mi",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian congregation established August 24, 1918 · changed from personal to territorial parish April 8, 1959 · merged into St. Francis of Assisi Parish July 1, 2013",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "merged",
+  "buildingStatus": "standing",
+  "currentUse": "The former St. George church at 3121 Sheridan Avenue is standing and used by New Birth Missionary Baptist Church. St. George's Roman Catholic institutional life ended in the July 1, 2013 merger that formed St. Francis of Assisi Parish; the later building sale and reuse are separate events.",
+  "summary": "St. George was Saginaw's Lithuanian Roman Catholic parish, established as a separate congregation on August 24, 1918 after Lithuanian Catholics had worshiped at Polish St. Casimir. A canonical decree converted it from an ethnic personal parish to a territorial parish on April 8, 1959. Its later church at 3121 Sheridan Avenue was completed in 1964. St. George merged with St. Anthony and St. Casimir on July 1, 2013 to form St. Francis of Assisi Parish; the former church was subsequently sold and remains in use by New Birth Missionary Baptist Church.",
+  "institutionLifecycle": {
+    "formation": "Lithuanian Catholics first worshiped at St. Casimir Polish Parish. A separate St. George congregation of sixty families was established on August 24, 1918.",
+    "institutionalForm": "Lithuanian Roman Catholic personal or ethnic parish from 1918; converted by canonical decree into a territorial parish on April 8, 1959 without creating a new institution.",
+    "jurisdiction": "Roman Catholic Diocese of Saginaw.",
+    "terminalStatus": "St. George, St. Anthony, and St. Casimir merged on July 1, 2013 to establish the distinct St. Francis of Assisi Parish. A later 2015 date belongs to the former church's sale or end of Catholic site use, not the parish merger.",
+    "currentVerification": "The successor parish's history establishes the 2013 merger. Saginaw municipal records from 2018 and a 2026 Saginaw County election notice identify New Birth Missionary Baptist Church at 3121 Sheridan Avenue, verifying later non-Catholic use of the standing building."
+  },
+  "worshipSites": [
+    {
+      "siteType": "host_church",
+      "name": "St. Casimir Polish Parish",
+      "address": "Saginaw, Michigan; exact host address unresolved",
+      "usePeriod": "before 1918-08-24",
+      "buildingCondition": "unknown",
+      "currentUse": "Lithuanian Catholics worshiped at the distinct Polish St. Casimir parish before establishing St. George; the host's site history is not assigned to St. George.",
+      "evidence": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed pp. 96-97, worship at St. Casimir before separate formation"
+        }
+      ]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-george-early-saginaw-mi",
+      "name": "First St. George Church",
+      "address": "near South Jefferson and Wisner streets, Saginaw, Michigan; exact parcel unresolved",
+      "usePeriod": "about 1920-1964",
+      "buildingCondition": "demolished",
+      "currentUse": "Attributed field history states that the early church no longer stands; the exact demolition date and parcel have not been independently established.",
+      "evidence": [
+        {
+          "url": "https://global.truelithuania.com/saginaw-michigan-7809/",
+          "locator": "Saginaw St. George section, attributed location and building outcome of the early church"
+        }
+      ]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-george-sheridan-saginaw-mi",
+      "name": "St. George Church",
+      "address": "3121 Sheridan Avenue, Saginaw, MI 48601",
+      "usePeriod": "completed Ash Wednesday 1964; Catholic use through 2013 merger and attributed 2015 sale phase",
+      "buildingCondition": "standing",
+      "currentUse": "New Birth Missionary Baptist Church; exterior survival and congregational use are documented, while interior and structural condition remain unverified.",
+      "evidence": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed p. 98, 1963 groundbreaking and 1964 completion"
+        },
+        {
+          "url": "https://cms5.revize.com/revize/cityofsaginawmi/Documents%20Center/Government/City%20Council/City%20Council%20Agendas%20%26%20Minutes/2009/Agendas/07-27-2009.pdf#page=7",
+          "locator": "PDF p. 7, council communication 7-27-2, St. George Church at 3121 Sheridan Avenue"
+        },
+        {
+          "url": "https://cms5.revize.com/revize/cityofsaginawmi/Documents%20Center/Government/City%20Council/City%20Council%20Agendas%20%26%20Minutes/2018/Agendas/01-08-2018.pdf#page=33",
+          "locator": "PDF p. 33, City of Saginaw polling-location table, New Birth Missionary Baptist Church at 3121 Sheridan"
+        },
+        {
+          "url": "https://www.saginawcountymi.gov/media/x3apffbh/may-5-2026-saginaw-county-notice-of-election.pdf#page=1",
+          "locator": "PDF p. 1, City of Saginaw Precinct 7, New Birth Missionary Baptist Church at 3121 Sheridan Ave."
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-george-saginaw-mi",
+      "target": "cn:building_site:st-george-early-saginaw-mi",
+      "date": "about 1920-1964",
+      "status": "accepted",
+      "note": "The early church preceded the Sheridan Avenue replacement; its exact parcel and demolition date remain unresolved."
+    },
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-george-saginaw-mi",
+      "target": "cn:building_site:st-george-sheridan-saginaw-mi",
+      "date": "1964-2013",
+      "status": "accepted",
+      "note": "St. George used the Sheridan Avenue church until its institutional merger; later sale and Baptist use belong to the building history."
+    },
+    {
+      "type": "institution-merged-into-institution",
+      "source": "cn:institution:st-george-saginaw-mi",
+      "target": "cn:institution:st-francis-assisi-saginaw-mi",
+      "date": "2013-07-01",
+      "status": "accepted",
+      "note": "St. George joined St. Anthony and St. Casimir in the new St. Francis of Assisi Parish."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "Lithuanian Catholics in Saginaw initially worshiped at the distinct Polish St. Casimir Parish. On August 24, 1918, a separate St. George congregation was established with sixty families. The shared early host does not make the two parishes the same institution.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed pp. 96-97"
+        }
+      ]
+    },
+    {
+      "text": "St. George began as a Lithuanian personal or ethnic parish. As enrollment remained small, the Diocese of Saginaw converted it by canonical decree into a territorial parish on April 8, 1959. This was a change in canonical and pastoral form within the same institution, not closure or replacement.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed pp. 97-98, April 8, 1959 decree"
+        }
+      ]
+    },
+    {
+      "text": "The parish's first church stood near South Jefferson and Wisner streets according to attributed field history and no longer survives. Because the exact parcel and demolition date are unresolved, this site is kept separate from the later Sheridan Avenue church.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/saginaw-michigan-7809/",
+          "locator": "Saginaw St. George section, attributed first-site location and outcome"
+        }
+      ]
+    },
+    {
+      "text": "Ground was broken for a replacement church on May 5, 1963, and the building was completed on Ash Wednesday 1964. A 2009 Saginaw polling-place list identifies the active St. George Church at 3121 Sheridan Avenue, independently anchoring the later worship site and address.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed p. 98"
+        },
+        {
+          "url": "https://cms5.revize.com/revize/cityofsaginawmi/Documents%20Center/Government/City%20Council/City%20Council%20Agendas%20%26%20Minutes/2009/Agendas/07-27-2009.pdf#page=7",
+          "locator": "PDF p. 7, council communication 7-27-2, St. George Church at 3121 Sheridan Avenue"
+        }
+      ]
+    },
+    {
+      "text": "St. George's institutional life ended on July 1, 2013 when it merged with St. Anthony and St. Casimir to establish St. Francis of Assisi Parish. The successor parish's own history supplies that date and named three predecessor institutions. A secondary 2015 closure reading instead corresponds to the former building's later sale or end of Catholic use and is not used as the parish's terminal date.",
+      "sources": [
+        {
+          "url": "https://stfrancissaginaw.org/history",
+          "locator": "History section, St. Francis of Assisi established July 1, 2013 from St. George, St. Anthony, and St. Casimir"
+        },
+        {
+          "url": "https://global.truelithuania.com/saginaw-michigan-7809/",
+          "locator": "Saginaw St. George section, attributed 2015 building sale/closure reading"
+        }
+      ]
+    },
+    {
+      "text": "The Sheridan Avenue church remains standing in non-Catholic religious use. A 2018 city agenda and a 2026 Saginaw County election notice both place New Birth Missionary Baptist Church at 3121 Sheridan Avenue. This later building use is not a canonical successor relationship to St. George, and no claim is made about the interior or structural condition.",
+      "sources": [
+        {
+          "url": "https://cms5.revize.com/revize/cityofsaginawmi/Documents%20Center/Government/City%20Council/City%20Council%20Agendas%20%26%20Minutes/2018/Agendas/01-08-2018.pdf#page=33",
+          "locator": "PDF p. 33, City of Saginaw polling-location table, New Birth Missionary Baptist Church at 3121 Sheridan"
+        },
+        {
+          "url": "https://www.saginawcountymi.gov/media/x3apffbh/may-5-2026-saginaw-county-notice-of-election.pdf#page=1",
+          "locator": "PDF p. 1, City of Saginaw Precinct 7, New Birth Missionary Baptist Church at 3121 Sheridan Ave."
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1918-08-24",
+      "headline": "Separate Lithuanian congregation established",
+      "detail": "Sixty families formed St. George after worshiping at the distinct Polish St. Casimir Parish.",
+      "sources": [
+        {
+          "title": "Lithuanian Religious Life in America, Vol. 3",
+          "publisher": "Norwood Press",
+          "date": "1998",
+          "page": "printed pp. 96-97",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+        }
+      ]
+    },
+    {
+      "date": "1959-04-08",
+      "headline": "Personal parish becomes territorial",
+      "detail": "A canonical decree changed St. George's ethnic personal-parish form to territorial status without ending the institution.",
+      "sources": [
+        {
+          "title": "Lithuanian Religious Life in America, Vol. 3",
+          "publisher": "Norwood Press",
+          "date": "1998",
+          "page": "printed pp. 97-98",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+        }
+      ]
+    },
+    {
+      "date": "1963-05-05-1964",
+      "headline": "Sheridan Avenue church built",
+      "detail": "Groundbreaking occurred May 5, 1963 and the replacement church was completed on Ash Wednesday 1964.",
+      "sources": [
+        {
+          "title": "Lithuanian Religious Life in America, Vol. 3",
+          "publisher": "Norwood Press",
+          "date": "1998",
+          "page": "printed p. 98",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+        }
+      ]
+    },
+    {
+      "date": "2013-07-01",
+      "headline": "St. George merges into St. Francis of Assisi Parish",
+      "detail": "St. George, St. Anthony, and St. Casimir became the new St. Francis of Assisi Parish.",
+      "sources": [
+        {
+          "title": "History of St. Francis of Assisi Parish",
+          "publisher": "St. Francis of Assisi Catholic Church, Saginaw",
+          "date": "current page accessed 2026-08-17",
+          "page": "parish establishment section",
+          "url": "https://stfrancissaginaw.org/history"
+        }
+      ]
+    },
+    {
+      "date": "2018-2026",
+      "headline": "Former church documented in Baptist use",
+      "detail": "City and county election documents identify New Birth Missionary Baptist Church at the former St. George address.",
+      "sources": [
+        {
+          "title": "Saginaw City Council Agenda",
+          "publisher": "City of Saginaw",
+          "date": "2018-01-08",
+          "page": "PDF p. 33, City of Saginaw polling-location table",
+          "url": "https://cms5.revize.com/revize/cityofsaginawmi/Documents%20Center/Government/City%20Council/City%20Council%20Agendas%20%26%20Minutes/2018/Agendas/01-08-2018.pdf#page=33"
+        },
+        {
+          "title": "Notice of Election",
+          "publisher": "Saginaw County, Michigan",
+          "date": "2026-05-05 election notice",
+          "page": "PDF p. 1, City of Saginaw Precinct 7",
+          "url": "https://www.saginawcountymi.gov/media/x3apffbh/may-5-2026-saginaw-county-notice-of-election.pdf#page=1"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lithuanian Religious Life in America, Vol. 3",
+      "publisher": "Norwood Press",
+      "date": "1998",
+      "page": "printed pp. 96-98",
+      "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+    },
+    {
+      "title": "History of St. Francis of Assisi Parish",
+      "publisher": "St. Francis of Assisi Catholic Church, Saginaw",
+      "date": "current page accessed 2026-08-17",
+      "page": "parish establishment section",
+      "url": "https://stfrancissaginaw.org/history"
+    },
+    {
+      "title": "Lithuanian heritage in Saginaw, Michigan",
+      "publisher": "Global True Lithuania",
+      "date": "accessed 2026-08-17",
+      "page": "St. George section",
+      "url": "https://global.truelithuania.com/saginaw-michigan-7809/"
+    },
+    {
+      "title": "Saginaw City Council Agenda",
+      "publisher": "City of Saginaw",
+      "date": "2009-07-27",
+      "page": "PDF p. 7, council communication 7-27-2",
+      "url": "https://cms5.revize.com/revize/cityofsaginawmi/Documents%20Center/Government/City%20Council/City%20Council%20Agendas%20%26%20Minutes/2009/Agendas/07-27-2009.pdf#page=7"
+    },
+    {
+      "title": "Saginaw City Council Agenda",
+      "publisher": "City of Saginaw",
+      "date": "2018-01-08",
+      "page": "PDF p. 33, City of Saginaw polling-location table",
+      "url": "https://cms5.revize.com/revize/cityofsaginawmi/Documents%20Center/Government/City%20Council/City%20Council%20Agendas%20%26%20Minutes/2018/Agendas/01-08-2018.pdf#page=33"
+    },
+    {
+      "title": "Notice of Election",
+      "publisher": "Saginaw County, Michigan",
+      "date": "2026-05-05 election notice",
+      "page": "PDF p. 1, City of Saginaw Precinct 7",
+      "url": "https://www.saginawcountymi.gov/media/x3apffbh/may-5-2026-saginaw-county-notice-of-election.pdf#page=1"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The 1959 date is a canonical transition from personal to territorial parish, not closure. The parish's institutional end occurred in the July 1, 2013 merger that formed St. Francis of Assisi. The attributed 2015 reading belongs to the later building sale or end of Catholic site use and must not replace the 2013 institutional event.",
+  "gaps": "The exact address and parcel of the early church; its construction and demolition dates; the Sheridan Avenue church's dedication date; the 2013 merger decree and exact records custody; the precise 2015 sale instrument and date; any cemetery; and the former church's interior and structural condition remain unresolved."
+}

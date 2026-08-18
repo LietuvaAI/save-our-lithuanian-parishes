@@ -5,20 +5,71 @@
   "currentUse": "Private residential condominiums (reported as 15 units, including three affordable) on St. James Avenue in South Norwood; no Lithuanian signage or markers remain on the building",
   "historicalNarrative": [
     {
-      "text": "Norwood's Lithuanian Catholics organized the St. George Society in 1912 and built their church at 37 St. James Avenue in 1915. The church was dedicated in September 1916, becoming the institutional center of the Lithuanian community in South Norwood.",
+      "text": "Norwood's Lithuanian Catholics organized the St. George Society in 1912 to create a parish of their own in South Norwood. The group acquired land, transferred title to the Archdiocese of Boston in 1913, and built the church at 37 St. James Avenue in 1915. Its September 1916 dedication gave the town's Lithuanian immigrants a permanent religious and communal center.",
       "sources": [
         {
           "url": "https://norwoodhistoricalsociety.org/st-james-avenue-to-st-george-avenue/",
-          "locator": "Parish founding, construction, and September 1916 dedication"
+          "locator": "St. George Society, land transfer, construction, and September 1916 dedication"
         }
       ]
     },
     {
-      "text": "The parish added a rectory in 1926 and later operated a school, which closed by 1985. Its final pastor was Father William Wolkovich, whose historical work preserved much of the record of Lithuanian religious life in Norwood.",
+      "text": "The parish expanded beyond the church. It added a rectory in 1926, a convent in 1950, and a school that educated generations of parish children before closing by 1985. St. George also anchored clubs, commemorations, and Lithuanian-language life in a neighborhood where religion and ethnic community were closely intertwined.",
       "sources": [
         {
           "url": "https://norwoodhistoricalsociety.org/st-james-avenue-to-st-george-avenue/",
-          "locator": "Rectory, school, and final-pastor history"
+          "locator": "Rectory, convent, school, and community history"
+        },
+        {
+          "url": "https://global.truelithuania.com/boston-massachusetts-308/",
+          "locator": "Norwood Lithuanian parish and community heritage"
+        }
+      ]
+    },
+    {
+      "text": "In 1949 parishioners erected a monument in front of the church honoring 152 Lithuanian-American members of St. George who served in the Second World War, including eight killed in action. The monument joined national memory to parish identity. After the church closed, it was moved to Highland Cemetery, where it survives as Norwood's principal public Lithuanian marker.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/boston-massachusetts-308/",
+          "locator": "1949 Lithuanian-American veterans monument, names, and relocation to Highland Cemetery"
+        },
+        {
+          "url": "https://norwoodhistoricalsociety.org/st-james-avenue-to-st-george-avenue/",
+          "locator": "Parish monument and post-closure community memory"
+        }
+      ]
+    },
+    {
+      "text": "St. George was among the parishes selected for closure in the Archdiocese of Boston's 2004 reconfiguration. The church celebrated its final formal Mass that year, ending almost nine decades of parish life. Its last pastor, Father William Wolkovich, was also a historian whose work helped preserve the record of Norwood's Lithuanians even as the institution itself closed.",
+      "sources": [
+        {
+          "url": "http://archive.boston.com/news/specials/parishes/report/",
+          "locator": "Boston.com 2004 reconfiguration report: St. George, Norwood listed among South Region closings"
+        },
+        {
+          "url": "https://norwoodhistoricalsociety.org/st-james-avenue-to-st-george-avenue/",
+          "locator": "Last Mass, Father William Wolkovich, and parish closing history"
+        },
+        {
+          "url": "https://www.thebostonpilot.com/article.php?ID=1567",
+          "locator": "Boston Pilot overview of the 2004 archdiocesan closure wave"
+        }
+      ]
+    },
+    {
+      "text": "The church building survived but lost its religious use. A developer bought the property in 2005, and the former church was converted between 2008 and 2010 into a condominium project reported as fifteen units, three of them affordable. Lithuanian signs were removed from the building, while the veterans monument and historical accounts became the principal ways the parish remained visible in Norwood's public memory.",
+      "sources": [
+        {
+          "url": "https://www.bostonglobe.com/metro/regionals/north/2014/08/20/decade-after-closing-new-life-condos-and-apartments-for-historic-catholic-parishes/A8x7TTxImzABAOv6hffDDJ/picture.html",
+          "locator": "Boston Globe retrospective: 2005 purchase and 15-unit condominium conversion, details available through indexed excerpts"
+        },
+        {
+          "url": "https://norwoodhistoricalsociety.org/st-james-avenue-to-st-george-avenue/",
+          "locator": "Confirmation that the church was converted to condominiums"
+        },
+        {
+          "url": "https://global.truelithuania.com/boston-massachusetts-308/",
+          "locator": "Residential use and absence of visible Lithuanian elements"
         }
       ]
     }

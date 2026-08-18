@@ -1,0 +1,86 @@
+{
+  "slug": "protestant-parish-nyc",
+  "culturenetEntityId": "cn:institution:lithuanian-protestant-parish-new-york-ny",
+  "asOf": "2026-08-17",
+  "formationLabel": "Early Lithuanian Protestant congregation active before World War I · interdenominational revival in 1951 · ended in 1977",
+  "institutionClass": "non_catholic_christian",
+  "institutionStatus": "historical_closed_1977",
+  "buildingStatus": "unknown",
+  "currentUse": "The Lithuanian Protestant Parish ended in 1977. Its documented postwar host, St. John the Evangelist Lutheran Church, remains an active LCMS congregation at 195 Maujer Street, Brooklyn, with a current Sunday schedule. The standing host church is a separate institution; its survival does not mean that the Lithuanian parish survives or that St. John holds the Lithuanian parish's records.",
+  "summary": "New York's Lithuanian Protestant Parish was an interdenominational Lithuanian congregation, not simply a Lutheran or Reformed parish and not St. John the Evangelist Lutheran Church itself. An early congregation operated from the late nineteenth century into the World War I era under ministers including Jonas Drignaitis and Martynas Macaitis. Postwar immigrants revived a Lithuanian Protestant body in 1951 under Rev. Petras Dagys, bringing together Lutheran and Reformed members and some other Christians. Sources conflict between January 21 and October 21 for the founding/revival milestone; a contemporary account and the Mažosios Lietuvos encyclopedia place the first service at St. John on October 21, 1951. The host church is now verified at 195 Maujer Street and remains active, while the Lithuanian parish ended in 1977. No owned building, successor, records-custody transfer, or cemetery has been verified.",
+  "institutionLifecycle": {
+    "formation": "An early Lithuanian Protestant congregation existed before World War I and later lapsed. The postwar interdenominational parish was revived in 1951; sources conflict between 21 January and 21 October, with the October date tied to a documented first service at St. John.",
+    "jurisdiction": "Interdenominational Lithuanian Protestant congregation including Lutheran and Reformed members. It is not reclassified as exclusively Lutheran or Reformed, and no LCMS membership is asserted for the Lithuanian institution.",
+    "terminalStatus": "historical_closed_1977",
+    "terminalEvidence": "Mažosios Lietuvos enciklopedija gives 1977 as the parish's end. The exact final service, dissolution instrument, and record transfer remain unfound.",
+    "currentVerification": "Official LCMS and host-church sources confirm that St. John at 195 Maujer Street remains active; this verifies the host building only, not survival of the Lithuanian parish."
+  },
+  "worshipSites": [
+    {
+      "siteType": "host_church",
+      "culturenetEntityId": "cn:building_site:st-john-195-maujer-brooklyn-ny",
+      "name": "St. John the Evangelist Lutheran Church",
+      "address": "195 Maujer St., Brooklyn, NY 11206",
+      "usePeriod": "Lithuanian postwar first service documented 21 October 1951; later Lithuanian use end unresolved",
+      "buildingCondition": "standing",
+      "currentUse": "Active LCMS host congregation with current Sunday worship. Lithuanian ownership, merger, succession, and record custody are not asserted.",
+      "evidence": [
+        {"url": "https://www.mle.lt/straipsniai/new-yorko-lietuviu-protestantu-parapija", "locator": "Mažosios Lietuvos enciklopedija: 1951-10-21 revival service at St. John, Brooklyn, and 1977 end"},
+        {"url": "https://partizanai.org/index.php/karys-12-1951m-4/4218-lietuviai-didziajam-new-yorke", "locator": "Karys 12 (1951), 'Lietuviai didžiajam New Yorke': Lithuanian Protestant services at St. John on Maujer Street"},
+        {"url": "https://sjebrooklyn.org/", "locator": "Current St. John official website, accessed 2026-08-17: 195 Maujer Street and active Sunday worship"},
+        {"url": "https://locator.lcms.org/church/C/109753", "locator": "Official LCMS locator, accessed 2026-08-17: St. John the Evangelist Lutheran Church at 195 Maujer Street"}
+      ]
+    }
+  ],
+  "relationships": [
+    {"type": "institution-used-host-site", "source": "cn:institution:lithuanian-protestant-parish-new-york-ny", "target": "cn:building_site:st-john-195-maujer-brooklyn-ny", "date": "from 1951-10-21; end unresolved", "status": "accepted", "note": "Hosted services; the LCMS host is not a successor or evidence of Lithuanian ownership."},
+    {"type": "pastoral-service", "source": "cn:person:petras-dagys", "target": "cn:institution:lithuanian-protestant-parish-new-york-ny", "date": "1951–until Dagys's death", "status": "accepted", "note": "Sources identify Dagys as organizer/administrator; the exact legal title and service-end date remain source-dependent."}
+  ],
+  "historicalNarrative": [
+    {
+      "text": "New York's Lithuanian Protestant Parish must be kept interdenominational. The postwar body brought together Lithuanian Lutherans and Reformed Christians and also included some people from other Christian backgrounds; it was not St. John Lutheran Church, a generic Protestant club, or an exclusively Reformed congregation. Mažosios Lietuvos enciklopedija uses several related names for the revived body and identifies Rev. Petras Dagys as its administrator.",
+      "sources": [
+        {"url": "https://www.mle.lt/straipsniai/new-yorko-lietuviu-protestantu-parapija", "locator": "Mažosios Lietuvos enciklopedija, 'New Yorko lietuvių protestantų parapija': interdenominational membership, names, and Dagys administration"},
+        {"url": "https://reformacija.lt/wordpress/bendrystes-skatintojas-kunigas-petras-dagys/", "locator": "Lithuanian Reformed Church history, Dagys biography: Protestant Union and ecumenical New York ministry"}
+      ]
+    },
+    {
+      "text": "An earlier Lithuanian Protestant congregation operated in New York from the late nineteenth century into the World War I era. The encyclopedia identifies Jonas Drignaitis among its early ministers and Martynas Macaitis from 1914. The reviewed evidence does not provide an incorporation file, exact early worship address, owned building, final early service, or formal dissolution. The later use of revival language therefore supports community lineage but not automatically the same legal corporation.",
+      "sources": [{"url": "https://www.mle.lt/straipsniai/new-yorko-lietuviu-protestantu-parapija", "locator": "Mažosios Lietuvos enciklopedija: early New York Lithuanian Protestant congregation, Drignaitis, Macaitis, and prewar phase"}]
+    },
+    {
+      "text": "Postwar Lithuanian refugees reorganized Protestant congregational life in 1951, but the exact date conflicts. A Dagys biography gives January 21, 1951. The encyclopedia gives October 21 and identifies that date with a service at St. John Evangelical Lutheran Church in Brooklyn; a contemporary 1951 Karys account likewise places Lithuanian Protestant services at St. John on Maujer Street. The dossier retains both readings and treats October 21 as the directly site-linked first-service milestone.",
+      "sources": [
+        {"url": "https://reformacija.lt/wordpress/bendrystes-skatintojas-kunigas-petras-dagys/", "locator": "Dagys biography: 1951-01-21 New York Lithuanian Evangelical Lutheran parish founding reading"},
+        {"url": "https://www.mle.lt/straipsniai/new-yorko-lietuviu-protestantu-parapija", "locator": "Mažosios Lietuvos enciklopedija: 1951-10-21 revival service at St. John"},
+        {"url": "https://partizanai.org/index.php/karys-12-1951m-4/4218-lietuviai-didziajam-new-yorke", "locator": "Karys 12 (1951), contemporary New York overview: Lithuanian Protestant worship at St. John, Maujer Street"}
+      ]
+    },
+    {
+      "text": "St. John was a host church rather than the Lithuanian parish's owned property or denominational identity. Its exact current address is 195 Maujer Street. The official LCMS locator and St. John's current website show that the host congregation and building remain active, with present Sunday worship. Those current facts establish the host site's standing condition, but they do not turn St. John into the Lithuanian institution's successor or prove that it holds Lithuanian sacramental and corporate records.",
+      "sources": [
+        {"url": "https://sjebrooklyn.org/", "locator": "St. John the Evangelist Lutheran Church official website, accessed 2026-08-17: 195 Maujer Street and current Sunday worship"},
+        {"url": "https://locator.lcms.org/church/C/109753", "locator": "Official LCMS locator, accessed 2026-08-17: active St. John at 195 Maujer Street"}
+      ]
+    },
+    {
+      "text": "Mažosios Lietuvos enciklopedija dates the end of the Lithuanian Protestant Parish to 1977. This provides a stronger terminal reading than later directory absence or the death of a pastor, although no closing minutes, corporate dissolution, final-service announcement, merger, or records transfer has been found. The host building survives, while the Lithuanian institution is historical and closed. No separate Lithuanian-owned church, successor congregation, record custodian, or cemetery relationship has been verified.",
+      "sources": [{"url": "https://www.mle.lt/straipsniai/new-yorko-lietuviu-protestantu-parapija", "locator": "Mažosios Lietuvos enciklopedija: parish active until 1977"}]
+    }
+  ],
+  "developments": [
+    {"date": "1951", "headline": "Interdenominational Lithuanian Protestant parish revived", "detail": "Sources conflict between January 21 and October 21; the October date is linked to the St. John service.", "sources": [{"title": "New Yorko lietuvių protestantų parapija", "publisher": "Mažosios Lietuvos enciklopedija", "date": "accessed 2026-08-17", "url": "https://www.mle.lt/straipsniai/new-yorko-lietuviu-protestantu-parapija"}, {"title": "Bendrystės skatintojas kunigas Petras Dagys", "publisher": "Lithuanian Evangelical Reformed Church", "date": "accessed 2026-08-17", "url": "https://reformacija.lt/wordpress/bendrystes-skatintojas-kunigas-petras-dagys/"}]},
+    {"date": "1977", "headline": "Lithuanian Protestant Parish ends", "detail": "The encyclopedia supplies the terminal year; no dissolution or record-transfer instrument has been located.", "sources": [{"title": "New Yorko lietuvių protestantų parapija", "publisher": "Mažosios Lietuvos enciklopedija", "date": "accessed 2026-08-17", "url": "https://www.mle.lt/straipsniai/new-yorko-lietuviu-protestantu-parapija"}]},
+    {"date": "2026-08-17", "headline": "Former host church confirmed active", "detail": "St. John at 195 Maujer Street survives as a separate active LCMS congregation.", "sources": [{"title": "St. John the Evangelist Lutheran Church", "publisher": "St. John the Evangelist Lutheran Church", "date": "accessed 2026-08-17", "url": "https://sjebrooklyn.org/"}]}
+  ],
+  "sources": [
+    {"title": "New Yorko lietuvių protestantų parapija", "publisher": "Mažosios Lietuvos enciklopedija", "date": "accessed 2026-08-17", "url": "https://www.mle.lt/straipsniai/new-yorko-lietuviu-protestantu-parapija"},
+    {"title": "Bendrystės skatintojas kunigas Petras Dagys", "publisher": "Lithuanian Evangelical Reformed Church", "date": "accessed 2026-08-17", "url": "https://reformacija.lt/wordpress/bendrystes-skatintojas-kunigas-petras-dagys/"},
+    {"title": "Lietuviai didžiajam New Yorke", "publisher": "Karys", "date": "1951", "url": "https://partizanai.org/index.php/karys-12-1951m-4/4218-lietuviai-didziajam-new-yorke"},
+    {"title": "St. John the Evangelist Lutheran Church", "publisher": "St. John the Evangelist Lutheran Church", "date": "accessed 2026-08-17", "url": "https://sjebrooklyn.org/"},
+    {"title": "St. John the Evangelist Lutheran Church locator", "publisher": "The Lutheran Church—Missouri Synod", "date": "accessed 2026-08-17", "url": "https://locator.lcms.org/church/C/109753"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The 1951 revival date is reported as January 21 in the Dagys biography and October 21 in the encyclopedia; October is tied to the documented St. John first service. The parish was interdenominational and must not be flattened into Lutheran identity based on its host or into Reformed identity based on Dagys. The 1977 institutional end is distinct from the continuing life of the host church. Because no evidence proves that St. John remained the Lithuanian parish's terminal worship site through 1977, the route-level building status is unknown even though the host site's own current condition is standing.",
+  "gaps": "Early founding date, legal name and incorporation, early sites and addresses, legal continuity into the 1951 revival, exact affiliation agreements, full clergy list, complete postwar worship chronology, final 1977 service, dissolution, successor, records custody, Lithuanian-owned property, and cemetery remain unresolved."
+}

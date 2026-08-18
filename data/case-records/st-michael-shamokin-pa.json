@@ -1,0 +1,49 @@
+{
+  "slug": "st-michael-shamokin-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "demolished",
+  "currentUse": "St. Michael the Archangel ended as a distinct Lithuanian Roman Catholic parish in the Diocese of Harrisburg's 1995 Shamokin consolidation and entered Mother Cabrini Parish. The former St. Michael church on Cherry Street was not the worship site retained for the successor; dated field documentation reports that its superstructure was demolished in 2015 and that only the basement remained. The current use, ownership, and physical condition of that remnant are not verified. Mother Cabrini remains active at the distinct former St. Edward site, 214 North Shamokin Street, and holds St. Michael's sacramental records.",
+  "summary": "St. Michael the Archangel was Shamokin's Lithuanian Roman Catholic parish, founded in 1894 according to multiple Diocese of Harrisburg histories. In the 1995 diocesan consolidation, it joined Assumption BVM, St. Edward the Confessor, St. Stanislaus Kostka, and St. Anthony of Padua in the newly formed Mother Cabrini Parish; only the St. Edward site was designated as the successor's worship site. Field documentation locates the former St. Michael church on Cherry Street and reports its demolition in 2015, with a basement remnant surviving. Mother Cabrini remains active at 214 North Shamokin Street and is the official custodian of St. Michael's sacramental records.",
+  "historicalNarrative": [
+    {
+      "text": "The Diocese of Harrisburg dates St. Michael the Archangel to 1894 and identifies it as the Shamokin parish founded for Lithuanians. A separate diocesan ethnic-history page likewise names St. Michael in Shamokin among the diocese's Lithuanian parishes. These official sources establish the exact institution, Roman Catholic class, ethnic identity, and founding year without relying on a saint-name match.",
+      "sources": [
+        {"url": "https://www.hbgdiocese.org/about/growth-of-catholicism/", "locator": "Shamokin Area history: Saint Michael for Lithuanians in 1894"},
+        {"url": "https://www.hbgdiocese.org/ethnic-groups-within-diocese-harrisburg/", "locator": "Lithuanians section: Holy Cross in Mount Carmel and Saint Michael in Shamokin identified as Lithuanian parishes"}
+      ]
+    },
+    {
+      "text": "The reviewed official histories do not provide St. Michael's original worship arrangements, construction date, or numbered address. A Pennsylvania field survey identifies the church as being on Cherry Street. Because no deed or official site directory was found, the case preserves Cherry Street without inventing a street number or conflating it with Mother Cabrini's later address.",
+      "sources": [{"url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/", "locator": "Shamokin field-survey section: St. Michael Lithuanian church on Cherry Street"}]
+    },
+    {
+      "text": "In 1995 the Diocese formed Mother Cabrini Parish from five named Shamokin-area parishes: Assumption BVM, St. Edward the Confessor, St. Stanislaus Kostka, St. Michael the Archangel, and St. Anthony of Padua in Ranshaw. The diocesan merger list marks St. Edward with the asterisk denoting the successor worship site. The typed relationship is St. Michael merged into Mother Cabrini; the successor's retained church is the former St. Edward site, not St. Michael's Cherry Street building.",
+      "sources": [{"url": "https://www.hbgdiocese.org/parish-mergers-1995/", "locator": "Mother Cabrini Parish entry: five predecessor parishes; St. Edward marked as the worship site; St. Michael listed as Lithuanian, founded 1894"}]
+    },
+    {
+      "text": "Dated field documentation reports that the former St. Michael church was demolished in 2015 and that its basement remained. That building event is separate from the 1995 institutional merger. The current Diocese directory lists active Mother Cabrini Parish at 214 North Shamokin Street with a current Mass schedule, and the diocesan closed-parish directory lists St. Michael beneath Mother Cabrini, establishing current sacramental-record custody but not the present condition or use of the Cherry Street remnant.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/", "locator": "Shamokin field-survey section and dated image caption: church demolished in 2015; basement remains"},
+        {"url": "https://www.hbgdiocese.org/parishes/mother-cabrini-shamokin/", "locator": "Current diocesan parish page, accessed 2026-08-17: Mother Cabrini at 214 N Shamokin St with active Mass schedule"},
+        {"url": "https://www.hbgdiocese.org/parishes/closed-parishes-and-records-locations/", "locator": "As of 2024-11-21: Saint Michael the Archangel, Shamokin listed under Mother Cabrini Parish as records custodian"}
+      ]
+    }
+  ],
+  "developments": [
+    {"date": "1894", "headline": "St. Michael is founded for Lithuanian Catholics", "detail": "Official Diocese histories identify the Shamokin institution and its ethnic Roman Catholic class.", "sources": [{"title": "Growth of Catholicism", "publisher": "Roman Catholic Diocese of Harrisburg", "date": "accessed 2026-08-17", "url": "https://www.hbgdiocese.org/about/growth-of-catholicism/"}]},
+    {"date": "1995", "headline": "St. Michael merges into Mother Cabrini Parish", "detail": "Mother Cabrini was formed from five predecessors and retained the former St. Edward worship site.", "sources": [{"title": "The Parish Mergers of 1995", "publisher": "Roman Catholic Diocese of Harrisburg", "date": "published 2018-02-12; accessed 2026-08-17", "url": "https://www.hbgdiocese.org/parish-mergers-1995/"}]},
+    {"date": "2015", "headline": "Former St. Michael church is demolished", "detail": "Field documentation reports that the superstructure was removed while the basement remained.", "sources": [{"title": "Shenandoah and southern Coal Region Lithuanian heritage field survey", "publisher": "Global True Lithuania", "date": "accessed 2026-08-17", "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/"}]},
+    {"date": "2026-08-17", "headline": "Mother Cabrini remains active and holds St. Michael records", "detail": "The current successor operates at the distinct former St. Edward site.", "sources": [{"title": "Mother Cabrini", "publisher": "Roman Catholic Diocese of Harrisburg", "date": "accessed 2026-08-17", "url": "https://www.hbgdiocese.org/parishes/mother-cabrini-shamokin/"}, {"title": "Closed Parishes and Records Locations", "publisher": "Roman Catholic Diocese of Harrisburg", "date": "as of 2024-11-21; accessed 2026-08-17", "url": "https://www.hbgdiocese.org/parishes/closed-parishes-and-records-locations/"}]}
+  ],
+  "sources": [
+    {"title": "Growth of Catholicism", "publisher": "Roman Catholic Diocese of Harrisburg", "date": "accessed 2026-08-17", "url": "https://www.hbgdiocese.org/about/growth-of-catholicism/"},
+    {"title": "Ethnic Groups within the Diocese of Harrisburg", "publisher": "Roman Catholic Diocese of Harrisburg", "date": "published 2018-02-01; accessed 2026-08-17", "url": "https://www.hbgdiocese.org/ethnic-groups-within-diocese-harrisburg/"},
+    {"title": "The Parish Mergers of 1995", "publisher": "Roman Catholic Diocese of Harrisburg", "date": "published 2018-02-12; accessed 2026-08-17", "url": "https://www.hbgdiocese.org/parish-mergers-1995/"},
+    {"title": "Mother Cabrini", "publisher": "Roman Catholic Diocese of Harrisburg", "date": "accessed 2026-08-17", "url": "https://www.hbgdiocese.org/parishes/mother-cabrini-shamokin/"},
+    {"title": "Closed Parishes and Records Locations", "publisher": "Roman Catholic Diocese of Harrisburg", "date": "as of 2024-11-21; accessed 2026-08-17", "url": "https://www.hbgdiocese.org/parishes/closed-parishes-and-records-locations/"},
+    {"title": "Shenandoah and southern Coal Region Lithuanian heritage field survey", "publisher": "Global True Lithuania", "date": "accessed 2026-08-17", "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The case separates four claims that legacy summaries can blur: St. Michael was the Lithuanian parish founded in 1894; it merged institutionally into Mother Cabrini in 1995; Mother Cabrini retained the former St. Edward site at 214 North Shamokin Street; and field documentation reports demolition of the separate Cherry Street St. Michael superstructure in 2015. The basement-remains statement is attributed to the field survey, not to the Diocese. Mother Cabrini's current address and record custody do not prove any present use or condition of the St. Michael parcel.",
+  "gaps": "The canonical erection and 1995 merger decrees; founding organizers and pastor; original and later worship-site chronology; exact Cherry Street number, parcel, deed, construction and dedication dates; school and rectory history; precise final Mass and closure dates; demolition permit and exact date; current owner, use, and structural condition of the basement remnant; disposition of furnishings; cemetery relationship and address; and record-transfer date remain unresolved."
+}

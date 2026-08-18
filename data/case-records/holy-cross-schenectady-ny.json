@@ -1,0 +1,287 @@
+{
+  "slug": "holy-cross-schenectady-ny",
+  "culturenetEntityId": "cn:institution:holy-cross-schenectady-ny",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian Roman Catholic parish using the North College Street church from 1920 · closure approved December 2006",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "closed",
+  "buildingStatus": "converted",
+  "currentUse": "Holy Cross Parish is closed. Its former church at 18 North College Street survives in commercial use associated with Cohoes Design Glass Associates; a historical directory also preserves the address as 19 North College Street. The Diocese of Albany directs Holy Cross institutional-record inquiries to St. John the Evangelist Church. The official routing proves records custody, not merger or canonical succession.",
+  "summary": "Holy Cross was Schenectady's Lithuanian Roman Catholic parish. In 1920 the community acquired a former synagogue on North College Street, and surviving church-record surveys begin its registers in 1921. Diocesan closure was approved in December 2006. The former church remains standing in stained-glass business use, while the Diocese of Albany directs parish-record inquiries to St. John the Evangelist. Holy Cross Cemetery at 1456 Dunnsville Road in Rotterdam remains a separate memorial site linked to the Lithuanian community.",
+  "institutionLifecycle": {
+    "formation": "Church-record surveys date Holy Cross at the North College Street site from 1920 and its registers from 1921. The exact parish erection or incorporation instrument remains unresolved.",
+    "institutionalForm": "Lithuanian Roman Catholic parish in Schenectady; distinct from the city's Polish National Catholic Holy Name of Jesus and from other Holy Cross institutions.",
+    "jurisdiction": "Roman Catholic Diocese of Albany.",
+    "terminalStatus": "Closure approved by Bishop Howard Hubbard in December 2006 on parish-council and Presbyteral Council recommendations. The effective date and decree text remain unresolved.",
+    "currentVerification": "The Diocese of Albany directs Holy Cross institutional-record inquiries to St. John the Evangelist Church. Local historical sources identify the former North College Street church as a standing stained-glass business site."
+  },
+  "worshipSites": [
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:holy-cross-north-college-schenectady-ny",
+      "name": "Holy Cross Roman Catholic Church",
+      "address": "18 North College Street, Schenectady, NY 12305; a later directory lists 19 North College Street",
+      "usePeriod": "from 1920; closure approved December 2006",
+      "buildingCondition": "converted",
+      "currentUse": "Commercial stained-glass business use. The 18/19 street-number difference is preserved rather than silently normalized.",
+      "evidence": [
+        {
+          "url": "https://www.schenectadyhistory.org/churches/churchvs.html",
+          "locator": "Holy Cross Church, 18 North College Street, 1920-; registers from 1921"
+        },
+        {
+          "url": "https://www.schenectadyhistory.org/churches/directory.html",
+          "locator": "Holy Cross Roman Catholic Church, 19 North College Street"
+        },
+        {
+          "url": "https://schenectadyhistorical.org/wp-content/uploads/2013/08/Nov-Dec-2010.pdf#page=4",
+          "locator": "PDF p. 4 / printed pp. 4-5, North College Street synagogue-to-Holy Cross-to-stained-glass sequence"
+        },
+        {
+          "url": "https://www.explorethestockade.com/historic-schenectady-home/18-north-college-street/",
+          "locator": "18 North College Street: Cohoes Design Glass Associates, former Holy Cross site"
+        }
+      ]
+    },
+    {
+      "siteType": "cemetery",
+      "culturenetEntityId": "cn:cemetery:holy-cross-schenectady-ny",
+      "name": "Holy Cross Cemetery",
+      "address": "1456 Dunnsville Road, Rotterdam, NY 12306",
+      "usePeriod": "reported established in 1930; current heritage listing as of 2024",
+      "buildingCondition": "not applicable; cemetery condition unresolved",
+      "currentUse": "Cemetery and Lithuanian memorial site. Current governance, burial availability, and records custody remain unresolved.",
+      "evidence": [
+        {
+          "url": "https://usa.mfa.lt/storage/usa/public/uploads/2025/09/list-of-immovable-cultural-heritage-significant-to-lithuania-within-the-territory-of-the-usa.pdf#page=9",
+          "locator": "PDF p. 9 / printed p. 9, NY 109: Holy Cross Cemetery, 1456 Dunnsville Road"
+        },
+        {
+          "url": "https://global.truelithuania.com/upstate-new-york-831/",
+          "locator": "Schenectady section: Lithuanian Holy Cross cemetery reported established in 1930"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:holy-cross-schenectady-ny",
+      "target": "cn:building_site:holy-cross-north-college-schenectady-ny",
+      "date": "1920-2006",
+      "status": "accepted",
+      "note": "The parish used the former synagogue as its church; later commercial reuse belongs to the building's separate history."
+    },
+    {
+      "type": "institution-established-cemetery",
+      "source": "cn:institution:holy-cross-schenectady-ny",
+      "target": "cn:cemetery:holy-cross-schenectady-ny",
+      "date": "reported 1930",
+      "status": "source-bounded",
+      "note": "Secondary field documentation supplies the 1930 establishment reading; Lithuania's official heritage list confirms the cemetery name and current address."
+    },
+    {
+      "type": "records-custody",
+      "source": "cn:institution:holy-cross-schenectady-ny",
+      "target": "St. John the Evangelist Church, Schenectady",
+      "date": "current directory routing as of 2026-08-17",
+      "status": "accepted",
+      "note": "The Diocese of Albany institutional-records directory routes Holy Cross inquiries to St. John the Evangelist; no merger or successor identity is inferred."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "Holy Cross was Schenectady's Lithuanian Roman Catholic parish, distinct from the city's Polish and Polish National Catholic institutions. A state church-record survey places Holy Cross at 18 North College Street from 1920 and dates its surviving registers from 1921. Those dates establish a functioning parish and record series, while the exact erection or incorporation instrument remains unresolved.",
+      "sources": [
+        {
+          "url": "https://www.schenectadyhistory.org/churches/churchvs.html",
+          "locator": "Holy Cross Church entry: 18 North College Street, 1920-; registers from 1921"
+        }
+      ]
+    },
+    {
+      "text": "The parish church reused an earlier Jewish worship building rather than beginning with new construction. The Schenectady County Historical Society says a synagogue built on North College Street in 1891 became Holy Cross after 1920 and served a Lithuanian Catholic community. The prior synagogue and later parish are consecutive occupants, not one institution.",
+      "sources": [
+        {
+          "url": "https://schenectadyhistorical.org/wp-content/uploads/2013/08/Nov-Dec-2010.pdf#page=4",
+          "locator": "PDF p. 4 / printed pp. 4-5, North College Street site history"
+        }
+      ]
+    },
+    {
+      "text": "Historical address sources preserve a small but material street-number conflict. The church-record survey uses 18 North College Street, while the Schenectady Digital History Archive directory lists Holy Cross at 19 North College Street. Current local site documentation again uses 18 North College Street. The evidence supports one North College Street church but does not justify silently discarding the alternate number.",
+      "sources": [
+        {
+          "url": "https://www.schenectadyhistory.org/churches/churchvs.html",
+          "locator": "Holy Cross Church entry at 18 North College Street"
+        },
+        {
+          "url": "https://www.schenectadyhistory.org/churches/directory.html",
+          "locator": "Holy Cross Roman Catholic Church entry at 19 North College Street"
+        },
+        {
+          "url": "https://www.explorethestockade.com/historic-schenectady-home/18-north-college-street/",
+          "locator": "18 North College Street former-site identification"
+        }
+      ]
+    },
+    {
+      "text": "Contemporary reporting says Bishop Howard Hubbard approved Holy Cross's closing in December 2006 after recommendations from the parish council and the diocesan Presbyteral Council. The report distinguishes the approval from Father Richard Carlino's October announcement that closure was likely. The exact decree, effective date, final Mass, and disposition of parish assets were not located.",
+      "sources": [
+        {
+          "url": "https://www.bishop-accountability.org/news2008/01_02/2008_02_21_Bryce_ChurchClosure.htm",
+          "locator": "Daily Gazette report reproduced February 21, 2008: October 2006 announcement and December 2006 closure approval"
+        }
+      ]
+    },
+    {
+      "text": "The former church building followed a separate life after parish closure. A 2010 historical-society account identified the North College Street structure as a stained-glass manufacturing facility, and current local documentation names Cohoes Design Glass Associates at 18 North College Street. These sources support a standing converted building, not continued Catholic worship.",
+      "sources": [
+        {
+          "url": "https://schenectadyhistorical.org/wp-content/uploads/2013/08/Nov-Dec-2010.pdf#page=4",
+          "locator": "PDF p. 4 / printed pp. 4-5, stained-glass manufacturing use"
+        },
+        {
+          "url": "https://www.explorethestockade.com/historic-schenectady-home/18-north-college-street/",
+          "locator": "Cohoes Design Glass Associates and former Holy Cross identification"
+        }
+      ]
+    },
+    {
+      "text": "Two other continuities remain separate from the building. The Diocese of Albany directs Holy Cross records inquiries to St. John the Evangelist, which establishes records routing but not merger. Lithuania's official 2024 U.S. heritage list identifies Holy Cross Cemetery at 1456 Dunnsville Road in Rotterdam; secondary field documentation associates that cemetery with the Lithuanian parish and reports a 1930 establishment date.",
+      "sources": [
+        {
+          "url": "https://www.rcda.org/parishes/institutional-records",
+          "locator": "Schenectady section: Holy Cross routed to St. John the Evangelist Church"
+        },
+        {
+          "url": "https://usa.mfa.lt/storage/usa/public/uploads/2025/09/list-of-immovable-cultural-heritage-significant-to-lithuania-within-the-territory-of-the-usa.pdf#page=9",
+          "locator": "PDF p. 9 / printed p. 9, NY 109"
+        },
+        {
+          "url": "https://global.truelithuania.com/upstate-new-york-831/",
+          "locator": "Schenectady section: Holy Cross cemetery and reported 1930 establishment"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1920-1921",
+      "headline": "Lithuanian parish takes the North College Street site",
+      "detail": "Holy Cross began using the former synagogue in 1920, and its surveyed registers begin in 1921.",
+      "sources": [
+        {
+          "title": "Survey of Schenectady County, New York Church Records",
+          "publisher": "Schenectady Digital History Archive",
+          "date": "updated 2024-08-25",
+          "page": "Holy Cross Church entry",
+          "url": "https://www.schenectadyhistory.org/churches/churchvs.html"
+        },
+        {
+          "title": "(In)spiring Churches - buildings, ethnic groups, and the passing of time",
+          "publisher": "Schenectady County Historical Society Newsletter",
+          "date": "2010-11/12",
+          "page": "PDF p. 4 / printed pp. 4-5",
+          "url": "https://schenectadyhistorical.org/wp-content/uploads/2013/08/Nov-Dec-2010.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "date": "2006-12",
+      "headline": "Parish closure approved",
+      "detail": "Bishop Howard Hubbard approved closure after parish-council and Presbyteral Council recommendations; the effective instrument remains unresolved.",
+      "sources": [
+        {
+          "title": "Church Closure Decisions Coming Next Year",
+          "publisher": "Daily Gazette, reproduced by BishopAccountability.org",
+          "date": "2008-02-21",
+          "page": "Holy Cross closure paragraphs",
+          "url": "https://www.bishop-accountability.org/news2008/01_02/2008_02_21_Bryce_ChurchClosure.htm"
+        }
+      ]
+    },
+    {
+      "date": "2010-present",
+      "headline": "Former church documented in stained-glass business use",
+      "detail": "Historical and current local sources identify the former North College Street church as a standing commercial stained-glass site.",
+      "sources": [
+        {
+          "title": "(In)spiring Churches - buildings, ethnic groups, and the passing of time",
+          "publisher": "Schenectady County Historical Society Newsletter",
+          "date": "2010-11/12",
+          "page": "PDF p. 4 / printed pp. 4-5",
+          "url": "https://schenectadyhistorical.org/wp-content/uploads/2013/08/Nov-Dec-2010.pdf#page=4"
+        },
+        {
+          "title": "18 North College Street",
+          "publisher": "Explore the Stockade",
+          "date": "accessed 2026-08-17",
+          "page": "property profile",
+          "url": "https://www.explorethestockade.com/historic-schenectady-home/18-north-college-street/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Survey of Schenectady County, New York Church Records",
+      "publisher": "Schenectady Digital History Archive",
+      "date": "updated 2024-08-25",
+      "page": "Holy Cross Church entry",
+      "url": "https://www.schenectadyhistory.org/churches/churchvs.html"
+    },
+    {
+      "title": "Churches, Synagogues and Mosques in Schenectady County",
+      "publisher": "Schenectady Digital History Archive",
+      "date": "updated 2026-03-05",
+      "page": "Holy Cross Roman Catholic Church entry",
+      "url": "https://www.schenectadyhistory.org/churches/directory.html"
+    },
+    {
+      "title": "(In)spiring Churches - buildings, ethnic groups, and the passing of time",
+      "publisher": "Schenectady County Historical Society Newsletter",
+      "date": "2010-11/12",
+      "page": "PDF p. 4 / printed pp. 4-5",
+      "url": "https://schenectadyhistorical.org/wp-content/uploads/2013/08/Nov-Dec-2010.pdf#page=4"
+    },
+    {
+      "title": "Church Closure Decisions Coming Next Year",
+      "publisher": "Daily Gazette, reproduced by BishopAccountability.org",
+      "date": "2008-02-21",
+      "page": "Holy Cross closure paragraphs",
+      "url": "https://www.bishop-accountability.org/news2008/01_02/2008_02_21_Bryce_ChurchClosure.htm"
+    },
+    {
+      "title": "Institutional Records",
+      "publisher": "Roman Catholic Diocese of Albany",
+      "date": "accessed 2026-08-17",
+      "page": "Schenectady section, Holy Cross",
+      "url": "https://www.rcda.org/parishes/institutional-records"
+    },
+    {
+      "title": "18 North College Street",
+      "publisher": "Explore the Stockade",
+      "date": "accessed 2026-08-17",
+      "page": "property profile",
+      "url": "https://www.explorethestockade.com/historic-schenectady-home/18-north-college-street/"
+    },
+    {
+      "title": "List of Immovable Cultural Heritage Significant to Lithuania Within the Territory of the U.S.A.",
+      "publisher": "Ministry of Foreign Affairs of the Republic of Lithuania",
+      "date": "2024-03-19",
+      "page": "PDF p. 9 / printed p. 9, NY 109",
+      "url": "https://usa.mfa.lt/storage/usa/public/uploads/2025/09/list-of-immovable-cultural-heritage-significant-to-lithuania-within-the-territory-of-the-usa.pdf#page=9"
+    },
+    {
+      "title": "Upstate New York: Lithuanians and Lithuanian heritage",
+      "publisher": "Global True Lithuania",
+      "date": "accessed 2026-08-17",
+      "page": "Schenectady section",
+      "url": "https://global.truelithuania.com/upstate-new-york-831/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The 1920 value is a North College Street acquisition/use milestone and the 1921 value begins the surveyed register series; neither is treated as a fully proved canonical erection date. Sources alternate between 18 and 19 North College Street for the same church. December 2006 is a reported closure-approval month, while the effective decree date and final Mass remain unresolved.",
+  "gaps": "The parish's erection or incorporation instrument; any earlier hosted-worship sites; exact blessing and dedication dates; the reason for the 18/19 address discrepancy; the closure decree, effective date, final Mass, and asset disposition; the nature of any institutional continuity beyond records custody; cemetery ownership, governance, record custody, and current burial status; and the former church's interior condition remain unresolved."
+}

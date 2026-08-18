@@ -1,0 +1,195 @@
+{
+  "slug": "st-joseph-lowell-ma",
+  "culturenetEntityId": "cn:institution:st-joseph-lowell-ma",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian Roman Catholic parish established in 1908 · Rogers Street church phase documented from 1911 · exact terminal instrument unresolved",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "historical_end_unresolved",
+  "buildingStatus": "converted",
+  "currentUse": "The Lithuanian St. Joseph parish is historical. The Archdiocese of Boston identifies it as a Lithuanian ethnic parish established in 1908, distinct from Lowell's French Saint Jean Baptiste/Saint Joseph lineage. A later field survey identifies the former church at 151 Rogers Street and reports conversion to apartments after parish closure. That survey supports a converted-building reading, but no canonical closure decree, exact effective terminal date, current property record, or records-custody notice has been located.",
+  "summary": "St. Joseph was Lowell's Lithuanian Roman Catholic parish, established in 1908 according to the Archdiocese of Boston. It is not the French Saint Jean Baptiste/Saint Joseph parish established in Lowell in 1868. Local and field histories describe an early hosted phase associated with a Polish St. Casimir church, followed by a Lithuanian church at 151 Rogers Street in 1911. A field survey reports that the parish closed in 2003 and the church was converted to apartments, but the exact canonical terminal act and effective date remain unresolved.",
+  "institutionLifecycle": {
+    "formation": "The Archdiocese of Boston's ethnic-parish list gives 1908 for Lowell's Lithuanian St. Joseph parish. A Lowell Historical Society timeline gives 1909, creating a one-year formation-date conflict that may distinguish canonical establishment from local organization.",
+    "institutionalForm": "Lithuanian Roman Catholic ethnic parish within the Archdiocese of Boston.",
+    "jurisdiction": "Archdiocese of Boston.",
+    "terminalStatus": "Historical. A secondary field survey reports closure in 2003, but the exact canonical decree, effective date, and mechanism have not been located.",
+    "currentVerification": "The Archdiocese's current research page identifies the historical Lithuanian parish and separately identifies the older French Saint Jean Baptiste/Saint Joseph parish. No current parish listing has been used to imply survival."
+  },
+  "worshipSites": [
+    {
+      "siteType": "host_church",
+      "name": "Polish St. Casimir host church",
+      "address": "Lowell, MA; exact site and address unresolved",
+      "usePeriod": "before the Lithuanian parish's own church phase; exact dates unresolved",
+      "buildingCondition": "unknown",
+      "currentUse": "Historical hosted worship only. No identity or property relationship with the Lithuanian parish is asserted.",
+      "evidence": [
+        {
+          "url": "https://www.lowellhistoricalsociety.org/timeline/",
+          "locator": "1909 entry"
+        }
+      ]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-joseph-rogers-street-lowell-ma",
+      "name": "St. Joseph Lithuanian Church",
+      "address": "151 Rogers Street, Lowell, MA",
+      "usePeriod": "church built in 1911 according to field documentation; parish use reportedly ended in 2003, exact canonical endpoint unresolved",
+      "buildingCondition": "converted",
+      "currentUse": "A field survey reports conversion of the former church to apartments. The date of conversion, current ownership, interior condition, and current occupancy are not independently established.",
+      "evidence": [
+        {
+          "url": "https://global.truelithuania.com/category/usa/massachusetts/",
+          "locator": "Lowell section"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-joseph-lowell-ma",
+      "target": "cn:building_site:st-joseph-rogers-street-lowell-ma",
+      "date": "from 1911; terminal date unresolved",
+      "status": "source_bounded",
+      "note": "The field documentation associates the Lithuanian parish with the Rogers Street church; its reported 2003 closure date lacks a located canonical instrument."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "Lowell contained more than one Catholic institution using the St. Joseph name. The Archdiocese of Boston lists Saint Jean Baptiste/Saint Joseph as a French parish established in 1868 and separately lists Lithuanian St. Joseph as an ethnic parish established in 1908. The two lineages are distinct and are not joined by their shared saint name or city.",
+      "sources": [
+        {
+          "url": "https://www.bostoncatholic.org/researcher-resources",
+          "locator": "Parish Establishment Dates and Ethnic Parishes sections"
+        }
+      ]
+    },
+    {
+      "text": "The Archdiocese dates the Lithuanian parish to 1908. The Lowell Historical Society timeline gives 1909 and says the Lithuanian community had previously used a Polish St. Casimir church. Without the canonical erection instrument, the one-year difference remains unresolved and may reflect different organizing and establishment milestones.",
+      "sources": [
+        {
+          "url": "https://www.bostoncatholic.org/researcher-resources",
+          "locator": "Ethnic Parishes: Lithuanian — Lowell"
+        },
+        {
+          "url": "https://www.lowellhistoricalsociety.org/timeline/",
+          "locator": "1909 entry"
+        }
+      ]
+    },
+    {
+      "text": "Field documentation identifies the Lithuanian parish church at 151 Rogers Street and dates its construction to 1911. The exact address of the earlier Polish host church and the duration of hosted worship remain unresolved, so the host is recorded separately and is not assigned the Rogers Street site identity.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/category/usa/massachusetts/",
+          "locator": "Lowell section"
+        },
+        {
+          "url": "https://www.lowellhistoricalsociety.org/timeline/",
+          "locator": "1909 entry"
+        }
+      ]
+    },
+    {
+      "text": "The field survey reports that St. Joseph closed in 2003 and that its Rogers Street church was converted to apartments. No archdiocesan decree or official closure notice has been located, so 2003 remains an attributed terminal reading rather than a fully resolved canonical date. The reported conversion concerns the building and does not itself identify the parish's terminal mechanism.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/category/usa/massachusetts/",
+          "locator": "Lowell section"
+        }
+      ]
+    },
+    {
+      "text": "The converted-building reading rests on field documentation rather than a current property or occupancy record. The former church's present ownership, apartment configuration, interior condition, and the location of sacramental records remain unresolved. No cemetery or successor-parish relationship is asserted without direct evidence.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/category/usa/massachusetts/",
+          "locator": "Lowell section"
+        },
+        {
+          "url": "https://www.bostoncatholic.org/researcher-resources",
+          "locator": "Sacramental Records and Ethnic Parishes sections"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1908–1909",
+      "headline": "Lithuanian parish established",
+      "detail": "The Archdiocese gives 1908; the Lowell Historical Society gives 1909. The exact distinction between these milestones remains unresolved.",
+      "sources": [
+        {
+          "title": "Researcher Access and Resources — Parish Establishment Dates and Ethnic Parishes",
+          "publisher": "Archdiocese of Boston",
+          "date": "accessed 2026-08-17",
+          "page": "Ethnic Parishes: Lithuanian — Lowell",
+          "url": "https://www.bostoncatholic.org/researcher-resources"
+        },
+        {
+          "title": "Timeline",
+          "publisher": "Lowell Historical Society",
+          "date": "accessed 2026-08-17",
+          "page": "1909 entry",
+          "url": "https://www.lowellhistoricalsociety.org/timeline/"
+        }
+      ]
+    },
+    {
+      "date": "1911",
+      "headline": "Rogers Street church built",
+      "detail": "Field documentation dates the Lithuanian church at 151 Rogers Street to 1911.",
+      "sources": [
+        {
+          "title": "Lithuanian sites in Massachusetts",
+          "publisher": "Global True Lithuania",
+          "date": "accessed 2026-08-17",
+          "page": "Lowell section",
+          "url": "https://global.truelithuania.com/category/usa/massachusetts/"
+        }
+      ]
+    },
+    {
+      "date": "2003 (attributed)",
+      "headline": "Reported parish closure",
+      "detail": "A field survey reports closure in 2003; the canonical instrument and exact effective date remain unresolved.",
+      "sources": [
+        {
+          "title": "Lithuanian sites in Massachusetts",
+          "publisher": "Global True Lithuania",
+          "date": "accessed 2026-08-17",
+          "page": "Lowell section",
+          "url": "https://global.truelithuania.com/category/usa/massachusetts/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Researcher Access and Resources — Parish Establishment Dates and Ethnic Parishes",
+      "publisher": "Archdiocese of Boston",
+      "date": "accessed 2026-08-17",
+      "page": "Parish Establishment Dates, Ethnic Parishes, and Sacramental Records sections",
+      "url": "https://www.bostoncatholic.org/researcher-resources"
+    },
+    {
+      "title": "Timeline",
+      "publisher": "Lowell Historical Society",
+      "date": "accessed 2026-08-17",
+      "page": "1909 entry",
+      "url": "https://www.lowellhistoricalsociety.org/timeline/"
+    },
+    {
+      "title": "Lithuanian sites in Massachusetts",
+      "publisher": "Global True Lithuania",
+      "date": "accessed 2026-08-17",
+      "page": "Lowell section",
+      "url": "https://global.truelithuania.com/category/usa/massachusetts/"
+    }
+  ],
+  "confidence": "source-bounded",
+  "conflictsWithArchiveRecord": "The Archdiocese of Boston dates the Lithuanian St. Joseph parish to 1908, while the Lowell Historical Society timeline gives 1909. The older French Saint Jean Baptiste/Saint Joseph parish, established in 1868, is a separate Lowell institution. A 2003 terminal year is reported by field documentation but lacks a located canonical instrument.",
+  "gaps": "The canonical erection and terminal instruments; the exact meaning of the 1908/1909 difference; the identity and address of the Polish host church; the precise opening and closing dates of the Rogers Street site; any named merger or successor; records custody; cemetery relationships; current property ownership, occupancy, and interior condition; and independent confirmation of the apartment conversion remain unresolved."
+}

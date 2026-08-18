@@ -1,0 +1,161 @@
+{
+  "slug": "george-pittsburgh-pa",
+  "culturenetEntityId": "cn:institution:st-george-lithuanian-national-pittsburgh-pa",
+  "asOf": "2026-08-17",
+  "formationLabel": "Contemporary account: 4 March 1923 · active June 1933 · historical end unresolved",
+  "institutionClass": "national_catholic_pncc",
+  "institutionStatus": "historical_end_unresolved",
+  "buildingStatus": "unknown",
+  "currentUse": "St. George is not listed in the current Buffalo-Pittsburgh Diocese directory of the Polish National Catholic Church. The latest directly verified parish activity is a June 1933 tenth-anniversary celebration; Rev. Zigmantas K. Vipartas was reported serving Westville by October 1933. Neither fact supplies a closure date. A historical source places the Pittsburgh church site on 19th Street, but no street number, parcel, present owner, current use, or physical condition has been verified. The institution's terminal status and the church building's outcome therefore remain unresolved.",
+  "summary": "St. George was a distinct Lithuanian National Catholic parish in Pittsburgh, later documented under Polish National Catholic Church jurisdiction rather than Roman Catholic diocesan authority. Its formation chronology conflicts: Wolkovich preserves readings of about 1913 and 1927, Oikos identifies St. George with Rev. Zigmantas K. Vipartas in 1922, and a visually verified contemporary report says Rev. K. Petrošius founded the independent parish on March 4, 1923. That same 1933 report proves the parish and its church remained active ten years later, with Lithuanian Mass, a parish choir, a $10,000 organ, and a decorated church. The inherited public claim that the parish closed in 1923 is therefore false: mid-1923 marks a PNCC jurisdictional transition, not institutional termination. The church is located only to 19th Street in Pittsburgh's South Side, and the later fate of both parish and building is unresolved. Wolkovich separately attributes a cemetery acquisition around 1919 to the congregation, but its location is unresolved and it cannot be identified with the West View Lithuanian Cemetery Association without further evidence.",
+  "institutionLifecycle": {
+    "formation": "Conflicting readings: about 1913, 1922, 4 March 1923, and 1927; the 1933 contemporary anniversary account directly states 4 March 1923.",
+    "jurisdiction": "Wolkovich reports that the parish came under Polish National Catholic Church jurisdiction in mid-1923.",
+    "lastVerifiedActivity": "A contemporary June 6, 1933 report announced the parish's tenth-anniversary Mass and concert for June 11, 1933.",
+    "terminalStatus": "historical_end_unresolved",
+    "currentVerification": "The parish is absent from the current official Buffalo-Pittsburgh Diocese PNCC directory; directory absence does not establish a closure date or successor."
+  },
+  "worshipSites": [
+    {
+      "siteType": "church",
+      "name": "St. George Lithuanian National Catholic Church",
+      "address": "19th Street, Pittsburgh, PA; street number and parcel unresolved",
+      "usePeriod": "documented by June 1933; full opening and terminal dates unresolved",
+      "buildingCondition": "unknown",
+      "currentUse": "unknown",
+      "evidence": [
+        {"url": "https://www.spauda2.org/vienybe/archive/1933/1933-06-06-VIENYBE.pdf#page=4", "locator": "Vienybė, 1933-06-06, p. 4, Pittsburgh column: active church, Mass, choir, organ, and interior decoration"},
+        {"url": "https://www.spauda2.org/vytis/archive/1995/1995-nr09-VYTIS.pdf#page=24", "locator": "Vytis, vol. 81 no. 9, November 1995, PDF p. 24 / printed p. 22: 19th Street site and more than a decade of worship use"}
+      ]
+    },
+    {
+      "siteType": "cemetery",
+      "culturenetEntityId": "cn:building_site:st-george-lithuanian-cemetery-pittsburgh-pa",
+      "name": "St. George Lithuanian National Catholic cemetery, Pittsburgh",
+      "address": "unresolved",
+      "usePeriod": "Wolkovich attributes acquisition around 1919; later duration unresolved",
+      "buildingCondition": "not applicable; cemetery condition unresolved",
+      "currentUse": "unresolved",
+      "evidence": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "William Wolkovich-Valkavičius, Lithuanian Religious Life in America, vol. 3, pp. 223 and 226: congregation cemetery acquisition around 1919 under Rev. Vipartas"}
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-under-jurisdiction",
+      "source": "cn:institution:st-george-lithuanian-national-pittsburgh-pa",
+      "target": "Polish National Catholic Church",
+      "date": "mid-1923",
+      "status": "source-bounded",
+      "note": "Jurisdictional transition; not a closure, merger, or Roman Catholic succession."
+    },
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-george-lithuanian-national-pittsburgh-pa",
+      "target": "St. George church site on 19th Street, Pittsburgh",
+      "date": "documented by June 1933",
+      "status": "accepted",
+      "note": "Exact street number, parcel, opening date, and terminal building outcome unresolved."
+    },
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-george-lithuanian-national-pittsburgh-pa",
+      "target": "cn:building_site:st-george-lithuanian-cemetery-pittsburgh-pa",
+      "date": "approximately 1919",
+      "status": "source-bounded",
+      "note": "Wolkovich attribution retained; cemetery location and any identity with the West View Lithuanian Cemetery Association remain unresolved."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "St. George was a Lithuanian National Catholic parish, not a Roman Catholic parish of the Diocese of Pittsburgh. Oikos identifies a Pittsburgh St. George parish in the Lithuanian National Catholic movement and names Rev. Zigmantas K. Vipartas; the Count-Risk-13 adjudication consequently classifies the institution as national_catholic_pncc. Shared dedication to St. George does not connect this parish to Pittsburgh's Roman Catholic, Orthodox, or other same-name churches.",
+      "sources": [
+        {"url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf", "locator": "Kristina Vaitkevičienė, “The Lithuanian National Catholic Church in America,” article p. 60 and parish table p. 63: Pittsburgh St. George, Rev. Zigmantas K. Vipartas, 1922"}
+      ]
+    },
+    {
+      "text": "The formation date is disputed. Wolkovich preserves about 1913 and 1927 readings, while Oikos gives 1922. A contemporary Vienybė report announcing the parish's tenth anniversary says Rev. K. Petrošius created the independent parish on March 4, 1923 and that J. Brazys later served. The contemporary statement is the strongest evidence for the 1923 institutional milestone, but the conflicting earlier and later readings remain visible until a charter, incorporation filing, or founding minutes explain what each date represents.",
+      "sources": [
+        {"url": "https://www.spauda2.org/vienybe/archive/1933/1933-06-06-VIENYBE.pdf#page=4", "locator": "Vienybė, 1933-06-06, p. 4, “Nepriklausomoji parapija rengia sukaktuves”: parish founded 1923-03-04; later pastor J. Brazys"},
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, Lithuanian Religious Life in America, vol. 3, pp. 223 and 226: about 1913 and 1927 readings"},
+        {"url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf", "locator": "Vaitkevičienė, article pp. 60, 63: Pittsburgh St. George and 1922 reading"}
+      ]
+    },
+    {
+      "text": "Wolkovich reports that St. George came under Polish National Catholic Church jurisdiction in mid-1923. That event changed or formalized ecclesiastical jurisdiction; it did not end the parish. The canonical entity already records historical_end_unresolved, so the inherited public display of 1923 as a closure conflates a jurisdictional transition with institutional termination.",
+      "sources": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, pp. 223 and 226: PNCC jurisdiction in mid-1923"},
+        {"url": "https://www.spauda2.org/vienybe/archive/1933/1933-06-06-VIENYBE.pdf#page=4", "locator": "Vienybė, 1933-06-06, p. 4: direct evidence of parish activity ten years after the 1923 milestone"}
+      ]
+    },
+    {
+      "text": "The parish and a functioning church are directly documented in June 1933. Vienybė announced a tenth-anniversary celebration with solemn Lithuanian Mass, a concert, the parish choir, and other performers. It named Rev. Vipartas as the current pastor and credited his efforts with obtaining a $10,000 organ and decorating the church. The report proves active institutional worship and a fitted church at that date, but it gives no street address and does not establish the building's later condition.",
+      "sources": [
+        {"url": "https://www.spauda2.org/vienybe/archive/1933/1933-06-06-VIENYBE.pdf#page=4", "locator": "Vienybė, 1933-06-06, p. 4, Pittsburgh column, visually verified page: tenth anniversary, Lithuanian Mass, choir, Rev. Vipartas, organ, and decorated church"}
+      ]
+    },
+    {
+      "text": "Rev. Vipartas's Pittsburgh service ended later in 1933: a contemporary Catholic report states that he had charge of the Lithuanian national parish in Westville from October 1933. This establishes a pastoral move, not the closure of St. George. A 1995 Knights of Lithuania heritage account places St. George's worship site on 19th Street in Pittsburgh's South Side and says it was used for more than a decade, but supplies no street number, property chain, demolition date, or surviving-building evidence.",
+      "sources": [
+        {"url": "https://www.draugas.org/archive/1934_reg/1934-08-14-DRAUGASw-i7-8.pdf#page=3", "locator": "Draugas, 1934-08-14, PDF/printed p. 3, visually verified: report that Rev. Vipartas had served the Westville parish since October 1933"},
+        {"url": "https://www.spauda2.org/vytis/archive/1995/1995-nr09-VYTIS.pdf#page=24", "locator": "Vytis, vol. 81 no. 9, November 1995, PDF p. 24 / printed p. 22: 19th Street site used for worship for more than a decade"}
+      ]
+    },
+    {
+      "text": "The institution's terminal history, the church building's fate, and the cemetery's identity remain separate unresolved questions. The current official Buffalo-Pittsburgh Diocese PNCC directory does not list St. George, but roster absence cannot provide a closure date or successor. Wolkovich attributes a cemetery acquisition around 1919 to the congregation under Rev. Vipartas; a separate field source describes a West View Lithuanian Cemetery Association incorporated in 1919 as ethnic and nonsectarian. The matching year is insufficient to join those sites, so the parish cemetery retains no address and no current-condition claim.",
+      "sources": [
+        {"url": "https://www.holymotheroftherosary.org/diocese/", "locator": "Current Buffalo-Pittsburgh Diocese PNCC parish directory, accessed 2026-08-17: no St. George Pittsburgh listing"},
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, pp. 223 and 226: congregation cemetery acquisition around 1919"},
+        {"url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/", "locator": "Pittsburgh field-survey cemetery section: West View Lithuanian Cemetery Association incorporated 1919 and described as ethnic rather than Catholic"}
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "approximately 1919",
+      "headline": "Wolkovich attributes a cemetery acquisition to the congregation",
+      "detail": "The cemetery relationship is retained as source-bounded. Its location and any identity with the separate West View Lithuanian Cemetery Association remain unresolved.",
+      "sources": [{"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "pp. 223, 226", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"}]
+    },
+    {
+      "date": "1923-03-04 / mid-1923",
+      "headline": "Contemporary founding date and PNCC jurisdictional transition",
+      "detail": "Vienybė retrospectively gives March 4 for the parish's 1923 founding; Wolkovich records PNCC jurisdiction in mid-1923. Neither source makes 1923 a closure year.",
+      "sources": [
+        {"title": "Nepriklausomoji parapija rengia sukaktuves", "publisher": "Vienybė", "date": "1933-06-06", "page": "p. 4", "url": "https://www.spauda2.org/vienybe/archive/1933/1933-06-06-VIENYBE.pdf#page=4"},
+        {"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "pp. 223, 226", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"}
+      ]
+    },
+    {
+      "date": "1933-06-11",
+      "headline": "St. George celebrates its tenth anniversary",
+      "detail": "The announced Lithuanian Mass, concert, choir, organ, and decorated church directly establish an active parish and worship site in June 1933.",
+      "sources": [{"title": "Nepriklausomoji parapija rengia sukaktuves", "publisher": "Vienybė", "date": "1933-06-06", "page": "p. 4", "url": "https://www.spauda2.org/vienybe/archive/1933/1933-06-06-VIENYBE.pdf#page=4"}]
+    },
+    {
+      "date": "1933-10",
+      "headline": "Rev. Vipartas begins serving Westville",
+      "detail": "A contemporary report places him at Westville from October 1933. The clergy transition is not treated as a St. George closure.",
+      "sources": [{"title": "Schizmatikas Zygmas K. Vipartas", "publisher": "Draugas", "date": "1934-08-14", "page": "PDF/printed p. 3", "url": "https://www.draugas.org/archive/1934_reg/1934-08-14-DRAUGASw-i7-8.pdf#page=3"}]
+    },
+    {
+      "date": "2026-08-17",
+      "headline": "Terminal institution and building outcomes remain unresolved",
+      "detail": "The current PNCC diocesan roster does not list St. George, but no closure act, successor instrument, deed, or present building record has been found.",
+      "sources": [{"title": "Buffalo-Pittsburgh Diocese parish directory", "publisher": "Holy Mother of the Rosary Cathedral / Buffalo-Pittsburgh Diocese PNCC", "date": "accessed 2026-08-17", "url": "https://www.holymotheroftherosary.org/diocese/"}]
+    }
+  ],
+  "sources": [
+    {"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "pp. 223, 226", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"},
+    {"title": "The Lithuanian National Catholic Church in America: some historical features", "publisher": "Oikos: Lithuanian Migration and Diaspora Studies", "date": "2015", "page": "article pp. 60, 63", "url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf"},
+    {"title": "Nepriklausomoji parapija rengia sukaktuves", "publisher": "Vienybė", "date": "1933-06-06", "page": "p. 4", "url": "https://www.spauda2.org/vienybe/archive/1933/1933-06-06-VIENYBE.pdf#page=4"},
+    {"title": "Schizmatikas Zygmas K. Vipartas", "publisher": "Draugas", "date": "1934-08-14", "page": "PDF/printed p. 3", "url": "https://www.draugas.org/archive/1934_reg/1934-08-14-DRAUGASw-i7-8.pdf#page=3"},
+    {"title": "Pittsburgh Lithuanian heritage tour", "publisher": "Vytis / Knights of Lithuania", "date": "1995-11", "page": "vol. 81 no. 9, PDF p. 24 / printed p. 22", "url": "https://www.spauda2.org/vytis/archive/1995/1995-nr09-VYTIS.pdf#page=24"},
+    {"title": "Buffalo-Pittsburgh Diocese parish directory", "publisher": "Holy Mother of the Rosary Cathedral / Buffalo-Pittsburgh Diocese PNCC", "date": "accessed 2026-08-17", "url": "https://www.holymotheroftherosary.org/diocese/"},
+    {"title": "Pittsburgh-area Lithuanian heritage field survey", "publisher": "Global True Lithuania", "date": "accessed 2026-08-17", "url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/"}
+  ],
+  "confidence": "probable",
+  "conflictsWithArchiveRecord": "The inherited public projection labels St. George closed in 1923, but its own parenthetical describes PNCC jurisdiction and the adjudicated entity says historical_end_unresolved. The visually verified June 1933 Vienybė report proves the parish and church were active ten years after 1923, making that closure reading untenable. Formation evidence also conflicts among about 1913, 1922, March 4, 1923, and 1927. Rev. Vipartas's move to Westville by October 1933 is a pastoral transition, not proof of institutional closure. Wolkovich's approximately 1919 parish-cemetery attribution is not enough to identify the cemetery with West View's separately described ethnic/nonsectarian Lithuanian Cemetery Association.",
+  "gaps": "No charter, incorporation filing, founding minutes, PNCC reception instrument, canonical roster, complete clergy list, parish register, exact church street number, deed, parcel, construction or dedication record, closure act, merger or successor instrument, record-custody notice, demolition record, present ownership/current-use source, or structural/interior assessment has been found. The reason for the about-1913, 1922, 1923, and 1927 formation readings is unresolved. The parish's activity after June 1933, the effect of Rev. Vipartas's move, the church's later fate, and the cemetery's address, legal owner, duration, condition, and possible relationship to the West View association all require further archival or property research."
+}

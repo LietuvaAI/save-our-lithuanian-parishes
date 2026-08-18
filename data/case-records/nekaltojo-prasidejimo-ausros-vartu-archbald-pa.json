@@ -4,6 +4,36 @@
   "buildingStatus": "demolished",
   "currentUse": "Vacant grassed lot on Third Street in Eynon (a village within Archbald borough), retained by the territorial successor Christ the King Parish (Diocese of Scranton) to provide improved access to the adjoining cemetery; no sale of the property has been reported.",
   "summary": "The church, known in English-language sources as Saint Mary of Vilna / Our Lady of Vilna, stood on Third Street in Eynon, a village within Archbald borough. It permanently closed in spring 2001 because of toxic mold caused by chronic moisture and drainage problems, with the closure made permanent around 2002, and the building then stood abandoned for over two decades. On March 13, 2024, demolition crews took the building down at the direction of Christ the King Parish, whose pastor Father Ryan Glenn described the demolition as \"an act of being a good neighbor\" to prevent harm from the deteriorating structure. During demolition, workers removing the cornerstone found a tin time capsule containing a letter dated November 17, 1915, written in Lithuanian, and a photograph believed to be of the pastor at the time; the parish said it was having the letter translated to share with the community. The land is being retained by the parish, planted with grass, and used to improve visitor access to the cemetery — the Our Lady of Vilna cemetery, where the community's Lithuanians were buried, shares fenced grounds with the Polish Our Lady of Czestochowa cemetery. The successor parish itself continues to consolidate: Christ the King Parish (worship sites Saint Thomas Aquinas, Archbald, and Saint Mary of Czestochowa, Eynon) absorbed Sacred Heart of Mary Church in Jermyn effective July 1, 2024. No published follow-up on the translated contents of the 1915 letter was found through mid-2026.",
+  "historicalNarrative": [
+    {
+      "text": "The Lithuanian congregation at Eynon, within Archbald borough, is identified in English-language sources as Saint Mary of Vilna or Our Lady of Vilna. LRT's account distinguishes the early church, a 1914 fire, and the rebuilt 1915 structure; the Lithuanian letter later recovered from the cornerstone confirms the community's Lithuanian identity even though a diocesan consolidation table incorrectly labels the church Polish.",
+      "sources": [
+        { "url": "https://www.lrt.lt/en/news-in-english/19/2231327/demolished-lithuanian-church-in-us-unveils-1915-letter-to-future-generations", "locator": "Account of the 1901 church, 1914 fire, 1915 rebuilding, and Lithuanian cornerstone letter" },
+        { "url": "https://www.dioceseofscranton.org/wp-content/uploads/2024/07/Consolidated-Parishes-updated-7-3-24.pdf", "locator": "Eynon entry: Our Lady Vilna, closed 2002; ethnic-label conflict" }
+      ]
+    },
+    {
+      "text": "Chronic moisture and drainage problems led to a mold crisis and the end of worship in the building. The Diocese of Scranton describes a spring 2001 closure, while LRT and the diocesan consolidation list place permanent closure in 2002. No canonical suppression decree or earlier merger instrument has been located, so those dates describe the church's closure rather than a fully reconstructed juridic history.",
+      "sources": [
+        { "url": "https://www.dioceseofscranton.org/letter-and-photo-from-1915-recovered-from-former-saint-mary-of-vilna-church/", "locator": "Closure and chronic moisture discussion" },
+        { "url": "https://www.lrt.lt/en/news-in-english/19/2231327/demolished-lithuanian-church-in-us-unveils-1915-letter-to-future-generations", "locator": "Permanent 2002 closure and mold account" }
+      ]
+    },
+    {
+      "text": "After more than two decades of vacancy, Christ the King Parish had the deteriorated church demolished on March 13, 2024. Workers removing the cornerstone recovered a tin capsule containing a Lithuanian letter dated November 17, 1915 and a photograph believed to show the pastor. The discovery documents the building's Lithuanian history but does not change the separation between the closed institution and the demolished structure.",
+      "sources": [
+        { "url": "https://www.dioceseofscranton.org/letter-and-photo-from-1915-recovered-from-former-saint-mary-of-vilna-church/", "locator": "March 13, 2024 demolition and cornerstone time-capsule account" },
+        { "url": "https://www.lrt.lt/en/news-in-english/19/2231327/demolished-lithuanian-church-in-us-unveils-1915-letter-to-future-generations", "locator": "1915 Lithuanian letter and photograph recovered during demolition" }
+      ]
+    },
+    {
+      "text": "The Diocese of Scranton states that the cleared land will remain with the parish, be planted with grass, and improve access to the adjoining cemetery. Field documentation identifies the Lithuanian Our Lady of Vilna cemetery beside the separate Polish Our Lady of Czestochowa cemetery. The land and cemetery therefore continue after the church's demolition, while publication of the promised translation of the 1915 letter remains unresolved.",
+      "sources": [
+        { "url": "https://www.dioceseofscranton.org/letter-and-photo-from-1915-recovered-from-former-saint-mary-of-vilna-church/", "locator": "Post-demolition land retention and cemetery-access plan" },
+        { "url": "https://global.truelithuania.com/northern-coal-region-scranton-1614/", "locator": "Eynon Our Lady of Vilna church and cemetery section" }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2001",

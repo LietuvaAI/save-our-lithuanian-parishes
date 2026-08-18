@@ -1,0 +1,58 @@
+{
+  "slug": "ss-peter-and-paul-homestead-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "converted",
+  "currentUse": "Ss. Peter and Paul ended as a distinct Lithuanian Roman Catholic parish in the 1992 merger that created St. Maximilian Kolbe Parish. Its second church, the former First Evangelical Reformed building at 1321 Mifflin Street, was sold after the merger and has had successive non-Catholic religious occupants. A current nonprofit directory associates The Life Churches with 1321 Mifflin Street as of the case date, but that directory does not establish current occupancy, a current worship schedule, or the building's interior or structural condition. St. Maximilian Kolbe entered Saint Thomas the Apostle Parish in 2020; that successor's current St. Maximilian Kolbe Church at 363 West 11th Avenue Extension is a different building, formerly St. Anne.",
+  "summary": "Ss. Peter and Paul was Homestead's Lithuanian Roman Catholic parish, established in 1900. Its first church was begun that year and dedicated June 9, 1901. That site was sold to Carnegie-Illinois Steel and demolished in 1941. The same parish then acquired the 1929 First Evangelical Reformed Church at 1321 Mifflin Street, remodeled it, and dedicated it for Catholic use on October 19, 1941. Ss. Peter and Paul merged into St. Maximilian Kolbe Parish in 1992, and the Mifflin Street church was sold for later non-Catholic church use. A current nonprofit directory associates The Life Churches with 1321 Mifflin Street, but current occupancy, worship, and physical condition are unverified. St. Maximilian Kolbe entered Saint Thomas the Apostle Parish in 2020, whose current Homestead church is a separate former St. Anne site.",
+  "historicalNarrative": [
+    {
+      "text": "The Diocese of Pittsburgh dates Ss. Peter and Paul Lithuanian Parish to 1900 and records a resident pastor by August. A manually reviewed Draugas report of November 30, 1910 says Braddock Lithuanians belonged to the Homestead parish and were guided by its pastor. That report corroborates the Homestead parish's regional ministry, but because it does not print the titular name, the diocesan history remains the direct source for identifying the institution as Ss. Peter and Paul.",
+      "sources": [
+        {"url": "https://www.diopitt.org/saints-peter-and-paul-homestead", "locator": "Diocesan parish history, lines 1053-1056 in the canonical deep-case-backfill-14 capture: 1900 establishment and resident pastor"},
+        {"url": "https://www.spauda.org/draugas/archive/1910/1910-11-30-DRAUGAS.pdf", "locator": "Draugas, 1910-11-30, p. 5, Braddock report describing dependence on the Homestead parish and its pastor; regional ministry evidence, not titular identification"}
+      ]
+    },
+    {
+      "text": "The first parish church had its cornerstone laid on December 22, 1900 and was dedicated June 9, 1901. Carnegie-Illinois Steel acquired that site, and the church was demolished in 1941. The Diocese does not give the first site's street address, so its parcel is not conflated with the later Mifflin Street church.",
+      "sources": [
+        {"url": "https://www.diopitt.org/saints-peter-and-paul-homestead", "locator": "Diocesan parish history, canonical capture lines 1053-1056: first cornerstone, 1901-06-09 dedication, sale, and 1941 demolition"},
+        {"url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/", "locator": "Pittsburgh-area field survey, Homestead section: first church built in 1901 and demolished around 1941"}
+      ]
+    },
+    {
+      "text": "The parish relocated to the former First Evangelical Reformed Church, a 1929 building at 1321 Mifflin Street. After remodeling, Ss. Peter and Paul dedicated it for Catholic use on October 19, 1941. In 1992 the parish joined five others to form the distinct St. Maximilian Kolbe Parish; the Mifflin Street church then closed and was sold. Field documentation records successive Apostolic Faith Assembly and later Higher Call/The Life Churches use. The reused building belongs to the same Ss. Peter and Paul institution's second site, not a second parish.",
+      "sources": [
+        {"url": "https://www.diopitt.org/saints-peter-and-paul-homestead", "locator": "Diocesan parish history: 1929 predecessor building, 1941-10-19 Catholic dedication, 1992 merger, closure, sale, and conflicting statement that Ss. Peter and Paul merged with seven other parishes"},
+        {"url": "https://diopitt.org/saint-maximilian-kolbe", "locator": "Diocesan successor history: St. Maximilian Kolbe formed in 1992 from six named parishes total, making Ss. Peter and Paul one of six"},
+        {"url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/", "locator": "Field survey, Homestead section: 1321 Mifflin Street and successive non-Catholic church occupants"},
+        {"url": "https://www.charitynavigator.org/ein/251817717", "locator": "Current nonprofit profile, accessed 2026-08-17: The Life Churches associated with 1321 Mifflin Street, Homestead"}
+      ]
+    },
+    {
+      "text": "St. Maximilian Kolbe joined seven other parishes on July 1, 2020 to form Saint Thomas the Apostle Parish. The current diocesan directory lists St. Maximilian Kolbe Church at 363 West 11th Avenue Extension, Homestead. Diocesan history identifies that current church as the former St. Anne building, renamed in 2009; it is not either Ss. Peter and Paul structure. The merger chain is institutional, while 1321 Mifflin Street has an independent post-Catholic building history.",
+      "sources": [
+        {"url": "https://diopitt.org/saint-maximilian-kolbe", "locator": "Diocesan predecessor history: former St. Anne church renamed St. Maximilian Kolbe and later successor formation"},
+        {"url": "https://diopitt.org/saint-thomas-the-apostle-homestead", "locator": "Diocesan history: Saint Thomas the Apostle formed from St. Maximilian Kolbe and seven other parishes on 2020-07-01"},
+        {"url": "https://diopitt.org/saint-thomas-the-apostle-parish", "locator": "Current diocesan directory, accessed 2026-08-17: St. Maximilian Kolbe Church, 363 West 11th Avenue Extension, Homestead"}
+      ]
+    }
+  ],
+  "developments": [
+    {"date": "1901-06-09", "headline": "First Ss. Peter and Paul church is dedicated", "detail": "That first site was acquired by Carnegie-Illinois Steel and demolished in 1941.", "sources": [{"title": "Saints Peter and Paul, Homestead", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://www.diopitt.org/saints-peter-and-paul-homestead"}]},
+    {"date": "1941-10-19", "headline": "Parish dedicates its Mifflin Street church", "detail": "The parish remodeled the former First Evangelical Reformed Church at 1321 Mifflin Street.", "sources": [{"title": "Saints Peter and Paul, Homestead", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://www.diopitt.org/saints-peter-and-paul-homestead"}]},
+    {"date": "1992", "headline": "Ss. Peter and Paul enters St. Maximilian Kolbe Parish", "detail": "The parish ended and its second church was sold for later non-Catholic religious use.", "sources": [{"title": "Saints Peter and Paul, Homestead", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://www.diopitt.org/saints-peter-and-paul-homestead"}]},
+    {"date": "2020-07-01", "headline": "St. Maximilian Kolbe enters Saint Thomas the Apostle Parish", "detail": "The successor parish's current Homestead church is a separate former St. Anne building.", "sources": [{"title": "Saint Thomas the Apostle, Homestead", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/saint-thomas-the-apostle-homestead"}]}
+  ],
+  "sources": [
+    {"title": "Saints Peter and Paul, Homestead", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://www.diopitt.org/saints-peter-and-paul-homestead"},
+    {"title": "Braddock dependence on Homestead parish", "publisher": "Draugas", "date": "1910-11-30", "page": "p. 5", "url": "https://www.spauda.org/draugas/archive/1910/1910-11-30-DRAUGAS.pdf"},
+    {"title": "Pittsburgh Lithuanian heritage field survey", "publisher": "True Lithuania", "date": "accessed 2026-08-17", "url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/"},
+    {"title": "The Life Churches nonprofit profile", "publisher": "Charity Navigator", "date": "accessed 2026-08-17", "url": "https://www.charitynavigator.org/ein/251817717"},
+    {"title": "Saint Maximilian Kolbe predecessor history", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/saint-maximilian-kolbe"},
+    {"title": "Saint Thomas the Apostle predecessor history", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/saint-thomas-the-apostle-homestead"},
+    {"title": "Saint Thomas the Apostle Parish", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/saint-thomas-the-apostle-parish"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The parish had two sequential church buildings. The 1901 first church was demolished in 1941; field documentation reports the 1929 structure acquired and dedicated in 1941 at 1321 Mifflin Street in converted religious use, while its current physical condition remains unverified. The current St. Maximilian Kolbe Church at 363 West 11th Avenue Extension is the former St. Anne site and must not be conflated with either Lithuanian parish building. Two official Diocese histories conflict on the 1992 merger count: the Ss. Peter and Paul page says it merged with seven other parishes, while the St. Maximilian Kolbe page enumerates six parishes total—St. Anne, St. Anthony, St. Mary Magdalene, Ss. Peter and Paul, St. Michael, and St. Margaret. The narrative preserves the specific six-parish enumeration, meaning Ss. Peter and Paul joined five others, but the contradictory official count remains unresolved. The 1910 Draugas report demonstrates Homestead-parish ministry but does not itself print the Ss. Peter and Paul title.",
+  "gaps": "The canonical erection and 1992 merger decrees, resolution of the two diocesan histories' contradictory 1992 merger counts, exact address and parcel of the first church, sale price and deed to Carnegie-Illinois Steel, demolition date within 1941, full deed chain for 1321 Mifflin Street, dates of each non-Catholic occupant, current occupancy and worship schedule, current interior and structural condition, cemetery relationships, sacramental-record custody, and disposition of furnishings remain unresolved."
+}

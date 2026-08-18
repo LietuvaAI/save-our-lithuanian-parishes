@@ -1,0 +1,92 @@
+{
+  "slug": "st-luke-bentleyville-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "standing",
+  "currentUse": "St. Luke Parish ended as a distinct institution in the Diocese of Pittsburgh's 1994 merger that created Ave Maria Parish. The former St. Luke church at 126 Church Street was retained and renamed Ave Maria Church. Ave Maria Parish then entered the distinct Saint Katharine Drexel Parish in 2017. The Diocese currently lists Ave Maria Church at that address as an active Saint Katharine Drexel worship site, with a Saturday Mass. This is building and worship-site continuity, not survival of St. Luke as a parish.",
+  "summary": "St. Luke was a mixed Roman Catholic parish founded in Bentleyville in 1903 to serve Polish, Lithuanian, and other local Catholics. Diocesan history records Polish, Lithuanian, and English worship through 1935. A contemporary 1914 Lithuanian report says local Lithuanians lacked their own national parish and priest, so the record is classified as a mixed parish with documented Lithuanian ministry rather than an exclusively Lithuanian national parish. After two unsuccessful worship sites, a brick church was begun in 1908 and dedicated on February 15, 1909. St. Luke merged into Ave Maria Parish in 1994; Ave Maria merged into Saint Katharine Drexel Parish in 2017. The former St. Luke building survives as the active Ave Maria Church at 126 Church Street.",
+  "historicalNarrative": [
+    {
+      "text": "The Diocese of Pittsburgh dates St. Luke Parish to 1903 and describes a mixed congregation in Bentleyville. Its history says worship was conducted in Polish, Lithuanian, and English until 1935. A manually reviewed Draugas report from August 6, 1914 adds an important class boundary: it says Lithuanians in Bentleyville and Ellsworth had neither a priest of their nationality nor a Lithuanian parish. Together, the sources establish a Roman Catholic parish with Lithuanian participation and language ministry, but not a separately erected Lithuanian national parish.",
+      "sources": [
+        {
+          "url": "https://diopitt.org/saint-luke-bentleyville",
+          "locator": "Diocesan parish history, lines 781-783 in the canonical deep-case-backfill-14 capture: 1903 foundation and Polish/Lithuanian/English worship"
+        },
+        {
+          "url": "https://www.spauda.org/draugas/archive/1914/1914-08-06-DRAUGAS.pdf",
+          "locator": "Draugas, 1914-08-06, p. 2, Bentleyville and Ellsworth report stating that local Lithuanians had no Lithuanian parish or priest of their nationality"
+        }
+      ]
+    },
+    {
+      "text": "The parish used two early sites unsuccessfully before building the durable brick church. The diocesan account records the cornerstone in 1908 and dedication on February 15, 1909. The current diocesan directory identifies the surviving site as Ave Maria Church, 126 Church Street, Bentleyville. No separate street address for either temporary predecessor site has been established.",
+      "sources": [
+        {
+          "url": "https://diopitt.org/saint-luke-bentleyville",
+          "locator": "Diocesan parish history, canonical capture lines 781-783: early sites, 1908 cornerstone, and 1909-02-15 dedication"
+        },
+        {
+          "url": "https://diopitt.org/ave-maria",
+          "locator": "Diocesan predecessor history: former St. Luke church retained as Ave Maria Church"
+        }
+      ]
+    },
+    {
+      "text": "On February 12, 1994, St. Luke joined St. Clement in Ellsworth and St. Joseph in Cokeburg to form the distinct Ave Maria Parish. The merger ended St. Luke's separate institutional life, while its church continued as Ave Maria's Bentleyville worship site. This is a typed merger relationship and a retained-site relationship; it must not be described as an uninterrupted St. Luke parish.",
+      "sources": [
+        {
+          "url": "https://diopitt.org/ave-maria",
+          "locator": "Diocesan Ave Maria history: 1994-02-12 merger and retained Bentleyville church"
+        },
+        {
+          "url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/",
+          "locator": "Pittsburgh-area field survey, Bentleyville section: St. Luke to Ave Maria institutional and building sequence"
+        }
+      ]
+    },
+    {
+      "text": "Ave Maria merged with four other parishes on January 8, 2017 to form Saint Katharine Drexel Parish. The Diocese's current directory lists Ave Maria Church at 126 Church Street as an active Saint Katharine Drexel site and publishes a Saturday Mass there. That dated official listing directly supports the top-level standing label as of the case date. It establishes present Catholic use of the former St. Luke structure, not institutional survival of either St. Luke or Ave Maria Parish.",
+      "sources": [
+        {
+          "url": "https://diopitt.org/saint-katharine-drexel",
+          "locator": "Diocesan predecessor history: 2017-01-08 formation from Ave Maria and four other parishes"
+        },
+        {
+          "url": "https://diopitt.org/saintkatharinedrexelparish",
+          "locator": "Current diocesan parish directory, accessed 2026-08-17: Ave Maria Church, 126 Church Street, Bentleyville, and current Saturday Mass"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1909-02-15",
+      "headline": "Brick St. Luke church is dedicated",
+      "detail": "The durable Bentleyville church followed two earlier parish sites and later became Ave Maria Church.",
+      "sources": [{"title": "Saint Luke, Bentleyville", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/saint-luke-bentleyville"}]
+    },
+    {
+      "date": "1994-02-12",
+      "headline": "St. Luke merges into Ave Maria Parish",
+      "detail": "The separate St. Luke institution ended, while its church was retained and renamed Ave Maria Church.",
+      "sources": [{"title": "Ave Maria", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/ave-maria"}]
+    },
+    {
+      "date": "2017-01-08",
+      "headline": "Ave Maria enters Saint Katharine Drexel Parish",
+      "detail": "The former St. Luke building remains an active worship site at 126 Church Street.",
+      "sources": [{"title": "Saint Katharine Drexel Parish", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/saintkatharinedrexelparish"}]
+    }
+  ],
+  "sources": [
+    {"title": "Saint Luke, Bentleyville", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/saint-luke-bentleyville"},
+    {"title": "Bentleyville and Ellsworth Lithuanian report", "publisher": "Draugas", "date": "1914-08-06", "page": "p. 2", "url": "https://www.spauda.org/draugas/archive/1914/1914-08-06-DRAUGAS.pdf"},
+    {"title": "Ave Maria", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/ave-maria"},
+    {"title": "Saint Katharine Drexel predecessor history", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/saint-katharine-drexel"},
+    {"title": "Saint Katharine Drexel Parish", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/saintkatharinedrexelparish"},
+    {"title": "Pittsburgh Lithuanian heritage field survey", "publisher": "True Lithuania", "date": "accessed 2026-08-17", "url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The public registry's Lithuanian association is retained but narrowed: a contemporary 1914 report explicitly says Bentleyville and Ellsworth Lithuanians did not have a Lithuanian parish, while the Diocese documents Lithuanian-language worship inside mixed St. Luke. St. Luke, Ave Maria, and Saint Katharine Drexel are three distinct institutions; continuity at 126 Church Street does not collapse their merger chain.",
+  "gaps": "The canonical erection instrument, identities and addresses of the two earliest worship sites, full construction contract and deed history, Lithuanian-language schedule after 1935, sacramental-record custody, and any cemetery relationship remain unresolved. Current official use establishes that the 1908-1909 structure stands, but a structural survey and parcel-level ownership history were not located."
+}

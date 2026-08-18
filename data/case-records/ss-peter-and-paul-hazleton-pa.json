@@ -1,0 +1,160 @@
+{
+  "slug": "ss-peter-and-paul-hazleton-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "unknown",
+  "currentUse": "Ss. Peter and Paul closed on July 15, 2009 and the Diocese identifies Holy Name of Jesus Parish in West Hazleton as successor. Holy Name and Annunciation were then suppressed by extinctive union effective July 1, 2025 to form the distinct Saint Pius of Pietrelcina Parish, which currently worships at St. Gabriel Church, 122 South Wyoming Street, and Transfiguration Church, 213 West Green Street. A current nonprofit directory places Iglesia Pentecostal La Gran Comision at 837 West Diamond Avenue, the former Ss. Peter and Paul mailing address, suggesting possible religious reuse of the old property. That co-located registration does not establish that the former church structure itself remains or hosts worship, and sources do not resolve whether 829 and 837 West Diamond describe different frontage and mailing numbers.",
+  "summary": "Hazleton's Lithuanian Roman Catholic community grew from a mixed Lithuanian-Polish parish organized before November 1892. Michelsonas records conflict over deed language and control, followed by a Polish separation. The reviewed record does not establish when the surviving Lithuanian institution formally took the title Ss. Peter and Paul; an inherited 1896 date may describe later reorganization or a building stage and is not accepted as the community's founding year. Direct Lithuanian newspaper evidence identifies an active Lithuanian parish in 1911, and later records name Ss. Peter and Paul on Diamond Avenue. The parish closed July 15, 2009 into Holy Name of Jesus. Its successor chain now reaches Saint Pius of Pietrelcina, whose two current sites are distinct. A Pentecostal religious organization is registered at the former parish's 837 West Diamond mailing address, but the old church's survival, use, and 829/837 address relationship remain unverified.",
+  "historicalNarrative": [
+    {
+      "text": "Michelsonas places a mixed Lithuanian-Polish Roman Catholic parish in Hazleton before November 2, 1892 under Father Abromaitis. He records a riot after Polish parishioners attempted to remove the word Lithuanian from deed language describing a Lithuanian-Polish church; Polish parishioners later separated. This establishes the early community and its mixed origin, but the source does not say when the resulting Lithuanian institution adopted the title Ss. Peter and Paul. The title therefore is not projected backward solely from later evidence.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje",
+          "locator": "Michelsonas, Lietuvių Išeivija Amerikoje, pp. 21, 32-33: pre-1892 Hazleton parish, deed language, conflict, and Polish separation"
+        }
+      ]
+    },
+    {
+      "text": "A manually reviewed 1911 Draugas obituary identifies Father Joseph Dielininkaitis as pastor of Hazleton's Lithuanian parish, proving that the Lithuanian institution was active by then without relying on a raw mention match. Later Lithuanian-American records explicitly name Ss. Peter and Paul Roman Catholic Church on Diamond Avenue. The inherited 1896 founded year conflicts with the pre-1892 institutional evidence and may refer to a later erection, reorganization, or building event; no instrument has been located to decide among those possibilities.",
+      "sources": [
+        {
+          "url": "https://www.draugas.org/archive/1911_reg/1911-11-30-DRAUGASo.pdf",
+          "locator": "Draugas, 1911-11-30, p. 1, obituary identifying Father Joseph Dielininkaitis as Hazleton Lithuanian parish pastor"
+        },
+        {
+          "url": "https://www.spauda2.org/garsas/archive/1983/1983-09-GARSAS.pdf",
+          "locator": "Garsas, September 1983, Hazleton notice naming Ss. Peter and Paul Roman Catholic Church on Diamond Avenue"
+        }
+      ]
+    },
+    {
+      "text": "The Diocese of Scranton's consolidated register records Ss. Peter and Paul as closed on July 15, 2009 and gives Holy Name of Jesus Parish in West Hazleton as successor. A later diocesan decree suppressed Holy Name and Annunciation Parish by extinctive union effective July 1, 2025, forming the new Saint Pius of Pietrelcina Parish. Saint Pius uses St. Gabriel Church at 122 South Wyoming Street as principal church and Transfiguration Church at 213 West Green Street as a secondary site. This is institutional succession, not continued Catholic worship in the old Diamond Avenue church.",
+      "sources": [
+        {
+          "url": "https://www.dioceseofscranton.org/wp-content/uploads/2025/07/Consolidated-Parishes-updated-7-2-25.pdf",
+          "locator": "Consolidated Parishes, Hazleton: Ss. Peter and Paul, closed 2009-07-15, successor Holy Name of Jesus"
+        },
+        {
+          "url": "https://cdn.diocesanweb.org/crossroads/scranton/wp-content/uploads/2025/05/Annunciation-Hazleton-Holy-Name-W-Hazleton-mergre-St-Pius-of-Pietrelcina-decree.pdf",
+          "locator": "Decree effective 2025-07-01: Annunciation and Holy Name extinctive union into Saint Pius and designation of current sites"
+        }
+      ]
+    },
+    {
+      "text": "Field documentation places the former Lithuanian church at 837 West Diamond Avenue, while some current directories use 829 West Diamond for the church frontage. Charity Navigator's current IRS-derived profile lists Iglesia Pentecostal La Gran Comision, a religious nonprofit, at 837 West Diamond Avenue. The co-located address suggests possible religious reuse of the parcel but does not establish survival or use of the former church structure; neither a current worship schedule nor the relationship between the 829 and 837 numbers has been independently verified. Saint Pius's current diocesan directory confirms that its Catholic worship occurs at the separate St. Gabriel and Transfiguration sites.",
+      "sources": [
+        {
+          "url": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+          "locator": "Southern Coal Region field survey: former Hazleton Lithuanian church and West Diamond Avenue location"
+        },
+        {
+          "url": "https://www.charitynavigator.org/ein/264282422",
+          "locator": "Current IRS-derived profile for Iglesia Pentecostal La Gran Comision at 837 W. Diamond Ave.; accessed 2026-08-17"
+        },
+        {
+          "url": "https://www.dioceseofscranton.org/find-a-parish/saint-pius-of-pietrelcina-parish-hazleton/",
+          "locator": "Current diocesan directory: Saint Pius worship sites; accessed 2026-08-17"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1892-11-02",
+      "headline": "Mixed Hazleton parish conflict precedes Polish separation",
+      "detail": "Michelsonas documents a Lithuanian-Polish parish, deed dispute, and conflict before the later Lithuanian parish title is directly established.",
+      "sources": [
+        {
+          "title": "Lietuvių Išeivija Amerikoje (1868-1961)",
+          "publisher": "Keleivis",
+          "date": "1961",
+          "page": "pp. 21, 32-33",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
+        }
+      ]
+    },
+    {
+      "date": "2009-07-15",
+      "headline": "Ss. Peter and Paul closes into Holy Name",
+      "detail": "The Diocese records the parish's closure and Holy Name of Jesus as successor.",
+      "sources": [
+        {
+          "title": "Consolidated Parishes",
+          "publisher": "Diocese of Scranton",
+          "date": "updated 2025-07-02",
+          "page": "Hazleton entry",
+          "url": "https://www.dioceseofscranton.org/wp-content/uploads/2025/07/Consolidated-Parishes-updated-7-2-25.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2025-07-01",
+      "headline": "Successor chain enters new Saint Pius parish",
+      "detail": "Holy Name and Annunciation were suppressed by extinctive union to form Saint Pius of Pietrelcina Parish at two different Hazleton worship sites.",
+      "sources": [
+        {
+          "title": "Annunciation-Holy Name-Saint Pius decree",
+          "publisher": "Diocese of Scranton",
+          "date": "2025",
+          "url": "https://cdn.diocesanweb.org/crossroads/scranton/wp-content/uploads/2025/05/Annunciation-Hazleton-Holy-Name-W-Hazleton-mergre-St-Pius-of-Pietrelcina-decree.pdf"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lietuvių Išeivija Amerikoje (1868-1961)",
+      "publisher": "Keleivis",
+      "date": "1961",
+      "page": "pp. 21, 32-33",
+      "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
+    },
+    {
+      "title": "Hazleton priest obituary",
+      "publisher": "Draugas",
+      "date": "1911-11-30",
+      "page": "p. 1",
+      "url": "https://www.draugas.org/archive/1911_reg/1911-11-30-DRAUGASo.pdf"
+    },
+    {
+      "title": "Hazleton church notice",
+      "publisher": "Garsas",
+      "date": "1983-09",
+      "url": "https://www.spauda2.org/garsas/archive/1983/1983-09-GARSAS.pdf"
+    },
+    {
+      "title": "Consolidated Parishes",
+      "publisher": "Diocese of Scranton",
+      "date": "updated 2025-07-02",
+      "page": "Hazleton entry",
+      "url": "https://www.dioceseofscranton.org/wp-content/uploads/2025/07/Consolidated-Parishes-updated-7-2-25.pdf"
+    },
+    {
+      "title": "Annunciation-Holy Name-Saint Pius decree",
+      "publisher": "Diocese of Scranton",
+      "date": "2025",
+      "url": "https://cdn.diocesanweb.org/crossroads/scranton/wp-content/uploads/2025/05/Annunciation-Hazleton-Holy-Name-W-Hazleton-mergre-St-Pius-of-Pietrelcina-decree.pdf"
+    },
+    {
+      "title": "Southern Coal Region field survey",
+      "publisher": "True Lithuania",
+      "date": "accessed 2026-08-17",
+      "url": "http://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/"
+    },
+    {
+      "title": "Iglesia Pentecostal La Gran Comision profile",
+      "publisher": "Charity Navigator",
+      "date": "accessed 2026-08-17",
+      "url": "https://www.charitynavigator.org/ein/264282422"
+    },
+    {
+      "title": "Saint Pius of Pietrelcina Parish, Hazleton",
+      "publisher": "Diocese of Scranton",
+      "date": "accessed 2026-08-17",
+      "url": "https://www.dioceseofscranton.org/find-a-parish/saint-pius-of-pietrelcina-parish-hazleton/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The inherited 1896 founded year is not accepted as the formation date because Michelsonas documents the mixed Lithuanian-Polish institution before November 1892. The year may represent canonical reorganization, adoption of the Ss. Peter and Paul title, incorporation, or a building event, but no instrument currently decides among them. Current address sources vary between 829 and 837 West Diamond Avenue; 837 is retained as the former parish and current nonprofit mailing address, with the frontage question unresolved.",
+  "gaps": "The exact canonical erection and title-adoption dates, the event represented by 1896, complete sequence of early worship sites, building construction and dedication dates, deed and frontage relationship between 829 and 837 West Diamond, exact 2009 suppression instrument, sacramental-record and cemetery custody, current property ownership, and direct confirmation of present worship and physical condition at the converted building remain unresolved."
+}

@@ -1,0 +1,47 @@
+{
+  "slug": "st-joseph-donora-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "demolished",
+  "currentUse": "St. Joseph was reduced to a mission of St. Charles in 1955 and closed on April 14, 1963, when only thirteen families remained. Its former Presbyterian church building was sold shortly after closure and is reported by field documentation as demolished. No merger or current institutional successor has been established, and the existence of present Catholic parishes in Donora does not by itself create a typed successor relationship.",
+  "summary": "St. Joseph was Donora's Lithuanian Roman Catholic parish, founded in 1906. The congregation acquired a former Presbyterian church that year. A manually reviewed 1912 Draugas report explicitly names St. Joseph Lithuanian Church in Donora, directly confirming its title and class. The parish became a mission of St. Charles in 1955 and closed April 14, 1963 with thirteen families. The building was sold shortly afterward and field research reports it demolished, but the exact address, sale record, demolition date, and current parcel remain unresolved. No institutional merger successor is asserted.",
+  "historicalNarrative": [
+    {
+      "text": "The Diocese of Pittsburgh dates St. Joseph Lithuanian Parish in Donora to 1906. A manually reviewed Draugas report of July 25, 1912 explicitly refers to St. Joseph Lithuanian Church in Donora while describing parish devotions and activity. That contemporary title-level evidence establishes a distinct Lithuanian Roman Catholic institution and is stronger than an unreviewed town-name mention.",
+      "sources": [
+        {"url": "https://diopitt.org/saint-joseph-donora", "locator": "Diocesan parish history, lines 781-782 in the canonical deep-case-backfill-14 capture: Lithuanian parish founded in 1906"},
+        {"url": "https://www.spauda.org/draugas/archive/1912/1912-07-25-DRAUGAS.pdf", "locator": "Draugas, 1912-07-25, p. 3, Donora report explicitly naming St. Joseph Lithuanian Church and parish activity"}
+      ]
+    },
+    {
+      "text": "St. Joseph acquired a former Presbyterian church in 1906 and used it as its worship site. The diocesan history does not supply a street address, construction date, former congregation name, or dedication date. Those details are left unresolved rather than inferred from similarly named Donora churches or later Catholic sites.",
+      "sources": [
+        {"url": "https://diopitt.org/saint-joseph-donora", "locator": "Diocesan parish history, canonical capture lines 781-782: acquisition of a former Presbyterian church in 1906"}
+      ]
+    },
+    {
+      "text": "The parish became a mission of St. Charles in 1955. This is a dependent mission relationship, not a merger and not simply a change of name. The Diocese records St. Joseph's closure on April 14, 1963 with thirteen families remaining and says the church was sold shortly afterward. No source reviewed here establishes a later canonical merger or territorial successor.",
+      "sources": [
+        {"url": "https://diopitt.org/saint-joseph-donora", "locator": "Diocesan parish history: 1955 mission dependency, 1963-04-14 closure with thirteen families, and subsequent sale"}
+      ]
+    },
+    {
+      "text": "A Pittsburgh-area Lithuanian heritage field survey reports that the former church building was demolished. The top-level demolition label is scoped to that documented observation; the exact demolition date, permit, parcel, and intervening use have not been recovered. Institutional closure in 1963 and later building demolition are therefore recorded as separate events.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/", "locator": "Pittsburgh-area field survey, Donora section: former Lithuanian church reported demolished"}
+      ]
+    }
+  ],
+  "developments": [
+    {"date": "1906", "headline": "St. Joseph Lithuanian Parish is founded", "detail": "The congregation acquired a former Presbyterian church in Donora.", "sources": [{"title": "Saint Joseph, Donora", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/saint-joseph-donora"}]},
+    {"date": "1955", "headline": "St. Joseph becomes a mission of St. Charles", "detail": "The parish entered a dependent mission relationship before closing.", "sources": [{"title": "Saint Joseph, Donora", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/saint-joseph-donora"}]},
+    {"date": "1963-04-14", "headline": "St. Joseph closes", "detail": "The Diocese records thirteen remaining families and sale of the church shortly afterward.", "sources": [{"title": "Saint Joseph, Donora", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/saint-joseph-donora"}]}
+  ],
+  "sources": [
+    {"title": "Saint Joseph, Donora", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/saint-joseph-donora"},
+    {"title": "Donora parish report", "publisher": "Draugas", "date": "1912-07-25", "page": "p. 3", "url": "https://www.spauda.org/draugas/archive/1912/1912-07-25-DRAUGAS.pdf"},
+    {"title": "Pittsburgh Lithuanian heritage field survey", "publisher": "True Lithuania", "date": "accessed 2026-08-17", "url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The record distinguishes St. Joseph's institutional founding, its 1955 dependent mission status, its 1963 closure and sale, and later building demolition. It does not treat St. Charles or a present Donora parish as a merger successor without a source establishing that typed relationship. The manually reviewed 1912 article, not a raw mention index, supplies direct title and class evidence.",
+  "gaps": "The canonical erection and closure instruments, exact church street address and parcel, Presbyterian predecessor identity and construction history, dedication date, mission decree, buyer and sale date, post-sale use, demolition date and permit, cemetery relationships, sacramental-record custody, and any territorial reassignment after closure remain unresolved."
+}

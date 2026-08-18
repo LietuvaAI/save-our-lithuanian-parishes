@@ -13,6 +13,9 @@ const historySource = readFileSync(
 const manifest = JSON.parse(
   readFileSync(join(ROOT, "data", "canonical-case-files-manifest.json"), "utf8"),
 );
+const publication = JSON.parse(
+  readFileSync(join(ROOT, "data", "canonical-publication-projection.json"), "utf8"),
+);
 const infographic = JSON.parse(
   readFileSync(join(ROOT, "data", "canonical-infographic-projection.json"), "utf8"),
 );
@@ -24,26 +27,14 @@ const caseFiles = readdirSync(caseRoot)
   .filter((name) => name.endsWith(".json"))
   .sort();
 
-const protectedHistory = new Map([
+const protectedExtendedHistory = new Map([
   ["ausros-vartu-manhattan-ny.json", ["historicalNarrative", 6]],
-  ["dievo-apvaizdos-southfield-mi.json", ["historicalNarrative", 3]],
-  ["kristaus-atsimainymo-maspeth-ny.json", ["historicalNarrative", 3]],
-  ["st-ann-beverly-shores-in.json", ["historicalNarrative", 3]],
   ["sv-andriejaus-new-britain-ct.json", ["historicalNarrative", 5]],
-  ["sv-jurgio-norwood-ma.json", ["historicalNarrative", 2]],
   ["sv-jurgio-rochester-ny.json", ["historicalNarrative", 4]],
   ["sv-jurgio-shenandoah-pa.json", ["historicalNarrative", 6]],
   ["sv-kazimiero-worcester-ma.json", ["historicalNarrative", 6]],
-  ["sv-juozapo-waterbury-ct.json", ["historicalNarrative", 3]],
-  ["sv-kazimiero-cleveland-oh.json", ["historicalNarrative", 3]],
-  ["sv-mykolo-bayonne-nj.json", ["historicalNarrative", 3]],
-  ["sv-mykolo-scranton-pa.json", ["historicalNarrative", 3]],
-  ["sv-petro-detroit-mi.json", ["historicalNarrative", 2]],
   ["sv-petro-boston-ma.json", ["historicalNarrative", 7]],
-  ["sv-petro-ir-povilo-elizabeth-nj.json", ["historicalNarrative", 3]],
-  ["sv-vincento-de-paul-girardville-pa.json", ["historicalNarrative", 3]],
   ["svc-m-marijos-apreiskimo-brooklyn-ny.json", ["historicalNarrative", 4]],
-  ["svc-trejybes-hartford-ct.json", ["historicalNarrative", 3]],
 ]);
 
 const errors = [];
@@ -85,6 +76,15 @@ for (const filename of caseFiles) {
         "use sourced historicalNarrative",
     );
   }
+  if (
+    !Array.isArray(record.historicalNarrative) ||
+    record.historicalNarrative.length < 3
+  ) {
+    errors.push(
+      `universal history contract failed: ${filename} requires at least 3 ` +
+        "source-linked historicalNarrative paragraphs",
+    );
+  }
   (record.developments ?? []).forEach((development, index) => {
     const date = String(development?.date ?? "").trim().toLowerCase();
     if (!date || date === "undefined" || date === "null") {
@@ -93,7 +93,7 @@ for (const filename of caseFiles) {
       );
     }
   });
-  const contract = protectedHistory.get(filename);
+  const contract = protectedExtendedHistory.get(filename);
   if (!contract) continue;
   const [field, minimum] = contract;
   if (!Array.isArray(record[field]) || record[field].length < minimum) {
@@ -102,6 +102,40 @@ for (const filename of caseFiles) {
         `${minimum} ${field} paragraphs`,
     );
   }
+}
+
+const caseFileSet = new Set(caseFiles);
+for (const institution of publication.public_institutions) {
+  const routeSlug = institution.public_profile.split("/").filter(Boolean).at(-1);
+  const loaderCandidates = new Set([routeSlug, institution.registry_slug]);
+  const mappedFiles = manifest.entries
+    .filter(
+      (entry) =>
+        entry.registry_slugs?.includes(institution.registry_slug) ||
+        entry.registry_slugs?.includes(routeSlug) ||
+        entry.source_record_slug === institution.registry_slug ||
+        entry.source_record_slug === routeSlug,
+    )
+    .map((entry) => entry.case_file.split("/").at(-1));
+  const loadable = mappedFiles.some(
+    (filename) =>
+      caseFileSet.has(filename) &&
+      loaderCandidates.has(filename.replace(/\.json$/, "")),
+  );
+  if (!loadable) {
+    errors.push(
+      `public profile cannot load its Brain dossier: ${institution.public_profile}`,
+    );
+  }
+}
+
+if (
+  manifest.counts.mapped_research_registry_identities !==
+  publication.counts.public_us_institutions
+) {
+  errors.push(
+    "Brain case-file manifest does not cover every public U.S. institution",
+  );
 }
 
 for (const slug of activeCatholicProfiles) {
@@ -207,7 +241,8 @@ if (errors.length) {
 
 console.log(
   `OK: profile narrative contract — ${caseFiles.length} Brain-owned case files; ` +
-    `${protectedHistory.size} protected historical dossiers; ` +
+    `${publication.counts.public_us_institutions} public identities have loadable dossiers; ` +
+    `${protectedExtendedHistory.size} extended histories retain higher minimums; ` +
     `${activeCatholicProfiles.length} active Catholic profiles have sourced histories; ` +
     `${monitoredProfiles.length} campaign/watch profiles have sourced histories; ` +
     `History precedes current condition.`,

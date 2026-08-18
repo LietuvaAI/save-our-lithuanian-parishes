@@ -4,6 +4,34 @@
   "buildingStatus": "demolished",
   "currentUse": "Vacant lot at the former church site on Zerbey (Zerby) Avenue, Kingston; the parish's St. Mary's Annunciation cemetery in nearby Pringle survives and still bears the name \"Lithuanian\" at its entrance.",
   "summary": "St. Mary of the Annunciation, the Lithuanian parish of Kingston, PA, founded in 1902 with its church on Zerby Avenue (basement church blessed 1903, upper church blessed by Bishop Hoban in 1908), was closed by the Diocese of Scranton on November 22, 2009 and consolidated with St. Hedwig's and St. Ignatius into the new St. Ignatius Loyola Parish, Kingston, during the diocese's \"Called to Holiness and Mission\" restructuring. According to the Global True Lithuania heritage survey, the diocese was unable to sell the closed church and demolished it in 2016; an empty lot now marks the site, which stood at 258 Zerbey Ave. The only surviving physical remnant of the parish is its cemetery in Pringle (established 1906), which retains the word \"Lithuanian\" at the entrance and many Lithuanian graves. No sale, redevelopment, preservation effort, or parishioner reunion activity was found in searches of local and diocesan sources. St. Ignatius Loyola Parish in Kingston remains the canonical successor and holds the parish's records.",
+  "historicalNarrative": [
+    {
+      "text": "St. Mary of the Annunciation was Kingston's Lithuanian Roman Catholic parish. The successor parish's history dates its foundation to 1902, the blessing of a basement church on Zerby Avenue to 1903, and completion of the upper church to 1908. These milestones distinguish the parish's formation from successive phases of the church building.",
+      "sources": [
+        { "url": "https://www.stignatiuspa.com/about-us", "locator": "History & Mission: St. Mary of the Annunciation founding and 1903/1908 church phases" }
+      ]
+    },
+    {
+      "text": "The Diocese of Scranton closed St. Mary's Annunciation Church on November 22, 2009. The diocesan register identifies it as Lithuanian and routes its records to St. Ignatius Loyola Parish; St. Ignatius's own history explains that St. Mary, St. Hedwig, and St. Ignatius were blended during the 2007-2009 restructuring. The records routing and consolidation establish continuity without making the predecessor and successor identical.",
+      "sources": [
+        { "url": "https://www.dioceseofscranton.org/wp-content/uploads/2021/03/Consolidated-Parishes-3-24-21.pdf", "locator": "Kingston entry: St. Mary's Annunciation (Lithuanian), closed 11/22/2009, records at St. Ignatius Loyola" },
+        { "url": "https://www.stignatiuspa.com/about-us", "locator": "History & Mission: 2007-2009 consolidation of St. Hedwig, St. Mary, and St. Ignatius" }
+      ]
+    },
+    {
+      "text": "The church building's later fate is documented less strongly than the institutional closure. Global True Lithuania reports that the diocese could not sell the building and demolished it in 2016, leaving an empty lot. No local demolition report, contractor record, sale record, or current property record has been located, so the 2016 date remains attributed field-history evidence rather than an independently corroborated official date.",
+      "sources": [
+        { "url": "https://global.truelithuania.com/northern-coal-region-scranton-1614/", "locator": "Kingston St. Mary of the Annunciation section: failed sale, 2016 demolition, and empty lot" }
+      ]
+    },
+    {
+      "text": "The parish cemetery in Pringle survives separately from the demolished church. The successor history dates the cemetery to 1906, while field documentation records the word 'Lithuanian' at its entrance and Lithuanian graves. St. Ignatius Loyola remains the records custodian and canonical successor, but current cemetery ownership, governance, and condition have not been separately verified.",
+      "sources": [
+        { "url": "https://www.stignatiuspa.com/about-us", "locator": "History & Mission: St. Mary cemetery established in Pringle in 1906" },
+        { "url": "https://global.truelithuania.com/northern-coal-region-scranton-1614/", "locator": "Kingston parish cemetery section: Lithuanian entrance name and graves" }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2009-11-22",

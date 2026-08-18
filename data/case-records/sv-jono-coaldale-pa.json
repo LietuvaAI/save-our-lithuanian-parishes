@@ -4,6 +4,34 @@
   "buildingStatus": "standing",
   "currentUse": "Privately owned former church, kept largely intact as a church interior by owner Robert Damyanovich, who lives in the adjacent former rectory; not in religious or commercial use as far as sources show",
   "summary": "St. John the Baptist (Šv. Jono) Lithuanian parish in Coaldale closed on July 15, 2008, when it was merged with five other Panther Valley parishes into the new Saint Katharine Drexel Parish in Lansford, per the successor parish's own history page. After the closure the diocese sold the church to a local man, Robert Damyanovich, who had married his Lithuanian wife there and baptized his children there; he lives in the rectory and has left the church mostly as it was, according to Global True Lithuania's coal-region heritage survey. The same source reports that after the sale the diocese tried to remove the stained-glass windows and the 1914 cornerstone, but the new owner and former parishioners fought this off — though the diocese did strip the Lithuanian donors' names from the windows. Damyanovich was interviewed in June 2023 for the Destination Lithuanian America project (TrueLithuania YouTube channel), which presents him as having saved the church by purchasing it. The canonical successor chain continued: St. Katharine Drexel Parish itself closed in June 2016 and its people were absorbed into St. Joseph Parish of the Panther Valley in Summit Hill, which an August 2025 Times News article describes as the last standing Catholic church in the four Panther Valley towns. The parish history also records that the original 1914 wooden church burned during Easter Mass on April 1, 1920, and the present building was dedicated July 4, 1921.",
+  "historicalNarrative": [
+    {
+      "text": "St. John the Baptist was established in 1914 for Coaldale's Lithuanian Roman Catholics. The successor parish's history separates the first wooden church from the surviving structure: the 1914 church burned during Easter Mass on April 1, 1920, and its replacement was dedicated July 4, 1921. The parish's founding date therefore must not be treated as the construction date of the present former church.",
+      "sources": [
+        { "url": "https://stjscatholicchurch.org/saint-katharine/", "locator": "St. John the Baptist history: 1914 establishment, April 1, 1920 fire, and July 4, 1921 dedication" }
+      ]
+    },
+    {
+      "text": "St. John the Baptist ceased as an independent parish on July 15, 2008. The official successor history places it among six Panther Valley parishes merged into the newly formed Saint Katharine Drexel Parish in Lansford. This institutional merger is distinct from the later private sale and preservation of the Coaldale church building.",
+      "sources": [
+        { "url": "https://stjscatholicchurch.org/saint-katharine/", "locator": "July 15, 2008 formation of Saint Katharine Drexel Parish from six predecessor parishes" }
+      ]
+    },
+    {
+      "text": "After closure, Robert Damyanovich purchased the former church and lived in the adjacent rectory. Field documentation reports that he retained the church largely as he received it and that he and former parishioners resisted removal of the stained glass and cornerstone, although Lithuanian donor names were removed from the windows. The exact sale year, price, current ownership, and verified street number remain unresolved.",
+      "sources": [
+        { "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/", "locator": "Coaldale St. John the Baptist section: Damyanovich purchase and preservation of the church" }
+      ]
+    },
+    {
+      "text": "The successor chain continued after the Coaldale merger. Saint Katharine Drexel Parish closed in June 2016 and its people were absorbed into Saint Joseph Parish of the Panther Valley in Summit Hill. A June 2023 interview with Damyanovich supplies later direct evidence that the former Coaldale church remained preserved, while a 2025 regional history identifies Saint Joseph as the continuing Panther Valley Catholic parish; neither source turns the privately owned church back into an active parish.",
+      "sources": [
+        { "url": "https://stjscatholicchurch.org/saint-katharine/", "locator": "June 2016 closure of Saint Katharine Drexel and absorption into Saint Joseph Parish" },
+        { "url": "https://www.youtube.com/watch?v=DFoiJZwx-_4", "locator": "Video interview with Robert Damyanovich, published June 30, 2023" },
+        { "url": "https://www.tnonline.com/20250819/panther-vy-catholics-celebrate-175-years/", "locator": "Panther Valley Catholic history and St. John the Baptist legacy" }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2008-07-15",

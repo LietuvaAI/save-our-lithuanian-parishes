@@ -4,6 +4,41 @@
   "buildingStatus": "demolished",
   "currentUse": "Site redeveloped as private residential housing in Chicago's Bucktown/West Town neighborhood; the parcel at the parish's recorded address (1644 W. Wabansia Ave.) now holds a 1991-built single-family home",
   "summary": "St. Michael the Archangel (Šv. Mykolo) Lithuanian parish stood at 1644 W. Wabansia Avenue on Chicago's near-northwest \"North Side,\" the city's oldest Lithuanian colony, centered at Paulina and Wabansia. The parish was organized in 1903, its church was built in 1904 to serve 2,000-2,500 Lithuanians each Sunday, and its sacramental registers (1903-1925) survive on FamilySearch. In 1970 the parish was merged into neighboring Annunciation parish and the church was torn down; Annunciation itself was closed and razed in 1978, erasing the entire Catholic complex at that corner. No trace of the church remains today: the block sits in the heavily gentrified Bucktown section of West Town, and the parcel at the parish's recorded address is occupied by a single-family house built in 1991 that sold for $950,000 in June 2021. No preservation effort, commemoration, marker, reunion activity, or recent press about the parish was found.",
+  "historicalNarrative": [
+    {
+      "text": "St. Michael the Archangel was the Lithuanian Roman Catholic parish in Chicago's historic North Side Lithuanian colony near Paulina and Wabansia, not a parish in the separate municipality of North Chicago in Lake County. A 1909 Lithuanian newspaper account preserved by the Newberry Library identifies this North Side settlement as Chicago's earliest Lithuanian colony. The parish register guide independently places St. Michael on Wabansia Avenue, supporting the Chicago identity and excluding same-name institutions elsewhere.",
+      "sources": [
+        {"url": "https://flps.newberry.org/id/5423970_3_0592", "locator": "Foreign Language Press Survey translation, paragraphs identifying the first North Side Lithuanian colony at Paulina and Wabansia"},
+        {"url": "https://www.lithuaniancatholicancestorsearch.com/st.-michael--lith--parish.html", "locator": "St. Michael (Lith.) parish guide, title, Chicago location, and church-address sections"}
+      ]
+    },
+    {
+      "text": "The parish was organized in 1903 and its church was built in 1904. Contemporary reporting described the North Side church as serving roughly 2,000 to 2,500 Lithuanians on Sundays, illustrating the scale of the early community. These formation and building milestones belong to one distinct Lithuanian parish; the 1904 construction date is not a second institutional founding.",
+      "sources": [
+        {"url": "https://flps.newberry.org/id/5423970_3_0592", "locator": "Foreign Language Press Survey translation, St. Michael paragraph stating 1903 organization, 1904 church construction, and Sunday attendance"},
+        {"url": "https://www.lithuaniancatholicancestorsearch.com/st.-michael--lith--parish.html", "locator": "Parish guide, Parish History section for 1903 organization and 1904 church"}
+      ]
+    },
+    {
+      "text": "The register guide associates the parish with 1644 West Wabansia Avenue and documents online baptism, marriage, and death registers for 1903–1925. It also flags uncertainty about whether the street number refers precisely to the church or another parish structure. The address is therefore useful for locating the parish complex but should not be treated as a parcel-perfect church-site identification without deed or map evidence.",
+      "sources": [
+        {"url": "https://www.lithuaniancatholicancestorsearch.com/st.-michael--lith--parish.html", "locator": "Parish guide, Church Location and Registers Online (1903–1925) sections, including the address qualification"}
+      ]
+    },
+    {
+      "text": "In 1970 St. Michael was merged into neighboring Annunciation parish and its church was torn down. Annunciation itself closed and was razed in 1978. A current history of the neighboring Polish parish records these events together, establishing both the institutional transfer and the separate demolition of the Lithuanian church rather than inferring closure merely from later directory absence.",
+      "sources": [
+        {"url": "https://www.sma.family/polish-immigrants-to-chicago/", "locator": "St. Mary of the Angels history, North Side churches section describing St. Michael's 1970 merger/demolition and Annunciation's 1978 closure/razing"}
+      ]
+    },
+    {
+      "text": "The recorded Wabansia address is now residential. Real-estate records describe a single-family house built in 1991 at 1644 West Wabansia and record a $950,000 sale on June 8, 2021. This confirms substantial later redevelopment at the address, although the unresolved church-versus-rectory address question prevents claiming that the present house occupies the exact former church footprint.",
+      "sources": [
+        {"url": "https://www.compass.com/listing/1644-west-wabansia-avenue-chicago-il-60622/739878238146203345/", "locator": "Compass closed listing, property type, 1991 construction year, and June 8 2021 sale fields"},
+        {"url": "https://www.atproperties.com/11024047/1644-w-wabansia-avenue-chicago-illinois-60622-nei", "locator": "@properties MLS 11024047, 1644 W. Wabansia address, building facts, and sale history"}
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "1970",

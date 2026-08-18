@@ -3,9 +3,9 @@
   "record_set_id": "packet:draugas-parish-centered-title-focus-public-projection:tranche5-2026-08-17",
   "controlling_record_schema_version": "culturenet-solp-draugas-parish-centered-title-focus-public-record-tranche5-v1",
   "source_overlay_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/title-focus-adjudication-overlay.json",
-  "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495",
+  "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a",
   "source_selection_packet_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/candidate-selection-packet.json",
-  "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
+  "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
   "duplicate_guard_refs": [
     {
       "artifact_role": "existing_nine_record_live_projection_duplicate_guard",
@@ -125,9 +125,9 @@
       "source_anchor_id": "events-curated:holy-trinity-wilkes-barre-pa:founded:1943-12-10:p4",
       "source_review_basis": "committed_verified_events_curated_row",
       "source_overlay_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/title-focus-adjudication-overlay.json",
-      "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495",
+      "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a",
       "source_selection_packet_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/candidate-selection-packet.json",
-      "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
+      "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
       "canonical_entity_id": "cn:institution:holy-trinity-wilkes-barre-pa",
       "canonical_slug": "holy-trinity-wilkes-barre-pa",
       "public_profile": "/parishes/svc-trejybes-wilkes-barre-pa",
@@ -167,8 +167,8 @@
         "source_candidate_snapshot_sha256": "8f2b7c45446058b5f903547dd0421887c4c5d5b1ed53c5e270547988dd26a6aa",
         "source_anchor_sha256": "9822b3e565b9f350e5da77ca49c1abe6b5f3779d6979042fa1f17221acd3ff72",
         "visual_review_source_anchor_sha256": "9822b3e565b9f350e5da77ca49c1abe6b5f3779d6979042fa1f17221acd3ff72",
-        "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
-        "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495"
+        "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
+        "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a"
       },
       "controls": {
         "historical_claim_gate_open": false,
@@ -205,9 +205,9 @@
       "source_anchor_id": "events-curated:st-peter-kenosha-wi:founded:1917-12-04:p3",
       "source_review_basis": "committed_verified_events_curated_row",
       "source_overlay_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/title-focus-adjudication-overlay.json",
-      "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495",
+      "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a",
       "source_selection_packet_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/candidate-selection-packet.json",
-      "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
+      "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
       "canonical_entity_id": "cn:institution:st-peter-kenosha-wi",
       "canonical_slug": "st-peter-kenosha-wi",
       "public_profile": "/parishes/st-peter-kenosha-wi",
@@ -247,8 +247,8 @@
         "source_candidate_snapshot_sha256": "5250dbb023b00a4ad7d84a85c944d0fc7299b42f7f453eeab38793e439437d80",
         "source_anchor_sha256": "23df7867c9a889c302df8e3b1d07c5976833d34ccb8e76737140f43cf5e8c189",
         "visual_review_source_anchor_sha256": "23df7867c9a889c302df8e3b1d07c5976833d34ccb8e76737140f43cf5e8c189",
-        "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
-        "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495"
+        "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
+        "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a"
       },
       "controls": {
         "historical_claim_gate_open": false,
@@ -285,9 +285,9 @@
       "source_anchor_id": "events-curated:st-casimir-amsterdam-ny:founded:1994-05-19:p6",
       "source_review_basis": "committed_verified_events_curated_row",
       "source_overlay_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/title-focus-adjudication-overlay.json",
-      "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495",
+      "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a",
       "source_selection_packet_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/candidate-selection-packet.json",
-      "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
+      "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
       "canonical_entity_id": "cn:institution:st-casimir-amsterdam-ny",
       "canonical_slug": "st-casimir-amsterdam-ny",
       "public_profile": "/parishes/sv-kazimiero-amsterdam-ny",
@@ -327,8 +327,8 @@
         "source_candidate_snapshot_sha256": "38928c167a72506ee09b002d5dc84ae673a0b9722f1408135abc6938eada925f",
         "source_anchor_sha256": "1c43d5f9523986a6323fe1f72b8f53590d0fb802e29116dae7f5bd74cae71031",
         "visual_review_source_anchor_sha256": "1c43d5f9523986a6323fe1f72b8f53590d0fb802e29116dae7f5bd74cae71031",
-        "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
-        "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495"
+        "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
+        "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a"
       },
       "controls": {
         "historical_claim_gate_open": false,
@@ -365,9 +365,9 @@
       "source_anchor_id": "events-curated:st-andrew-new-britain-ct:founded:1994-05-19:p6",
       "source_review_basis": "committed_verified_events_curated_row",
       "source_overlay_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/title-focus-adjudication-overlay.json",
-      "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495",
+      "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a",
       "source_selection_packet_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/candidate-selection-packet.json",
-      "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
+      "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
       "canonical_entity_id": "cn:institution:st-andrew-new-britain-ct",
       "canonical_slug": "st-andrew-new-britain-ct",
       "public_profile": "/parishes/sv-andriejaus-new-britain-ct",
@@ -407,8 +407,8 @@
         "source_candidate_snapshot_sha256": "43bbd002132677d63be3795e8e71fc161e874c9de20f727dc9ffdbb834df61e9",
         "source_anchor_sha256": "726f6b4b27da7174a224c9b131b81b4d1916724f0b1fc91613fb7780f63c0942",
         "visual_review_source_anchor_sha256": "726f6b4b27da7174a224c9b131b81b4d1916724f0b1fc91613fb7780f63c0942",
-        "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
-        "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495"
+        "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
+        "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a"
       },
       "controls": {
         "historical_claim_gate_open": false,
@@ -445,9 +445,9 @@
       "source_anchor_id": "events-curated:st-casimir-worcester-ma:founded:1994-05-19:p6",
       "source_review_basis": "committed_verified_events_curated_row",
       "source_overlay_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/title-focus-adjudication-overlay.json",
-      "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495",
+      "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a",
       "source_selection_packet_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/candidate-selection-packet.json",
-      "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
+      "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
       "canonical_entity_id": "cn:institution:st-casimir-worcester-ma",
       "canonical_slug": "st-casimir-worcester-ma",
       "public_profile": "/parishes/sv-kazimiero-worcester-ma",
@@ -487,8 +487,8 @@
         "source_candidate_snapshot_sha256": "51ef8af7936162638b3cc8823dcf206ebecb02efbe67882bad8b486a5924348d",
         "source_anchor_sha256": "c957c2631da24e016adad6175753b43ff31deabf5e9dcc14835c308e2813c82f",
         "visual_review_source_anchor_sha256": "c957c2631da24e016adad6175753b43ff31deabf5e9dcc14835c308e2813c82f",
-        "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
-        "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495"
+        "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
+        "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a"
       },
       "controls": {
         "historical_claim_gate_open": false,
@@ -525,9 +525,9 @@
       "source_anchor_id": "events-curated:st-casimir-providence-ri:founded:1994-05-19:p6",
       "source_review_basis": "committed_verified_events_curated_row",
       "source_overlay_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/title-focus-adjudication-overlay.json",
-      "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495",
+      "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a",
       "source_selection_packet_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/candidate-selection-packet.json",
-      "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
+      "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
       "canonical_entity_id": "cn:institution:st-casimir-providence-ri",
       "canonical_slug": "st-casimir-providence-ri",
       "public_profile": "/parishes/sv-kazimiero-providence-ri",
@@ -567,8 +567,8 @@
         "source_candidate_snapshot_sha256": "cf70c86d6888e63cf83b47dac82493f851355efa4625416b6feb366d46830c0f",
         "source_anchor_sha256": "4e2bcb32f126f3b67051f4c9847cb43bf22a97d9b67ef9e63e6d9e64206e9966",
         "visual_review_source_anchor_sha256": "4e2bcb32f126f3b67051f4c9847cb43bf22a97d9b67ef9e63e6d9e64206e9966",
-        "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
-        "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495"
+        "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
+        "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a"
       },
       "controls": {
         "historical_claim_gate_open": false,
@@ -605,9 +605,9 @@
       "source_anchor_id": "events-curated:annunciation-brooklyn-ny:founded:1994-05-19:p6",
       "source_review_basis": "committed_verified_events_curated_row",
       "source_overlay_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/title-focus-adjudication-overlay.json",
-      "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495",
+      "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a",
       "source_selection_packet_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/candidate-selection-packet.json",
-      "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
+      "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
       "canonical_entity_id": "cn:institution:annunciation-bvm-williamsburg-ny",
       "canonical_slug": "annunciation-bvm-williamsburg-ny",
       "public_profile": "/parishes/svc-m-marijos-apreiskimo-brooklyn-ny",
@@ -647,8 +647,8 @@
         "source_candidate_snapshot_sha256": "513f80198441480846b4da5312d0f4e5fd1ea074c3a20dd2542559abab73e67a",
         "source_anchor_sha256": "53ad319912ddfedcf7f85e3b0955bb9ad986e61096e3ec7cb14167617c2b9848",
         "visual_review_source_anchor_sha256": "53ad319912ddfedcf7f85e3b0955bb9ad986e61096e3ec7cb14167617c2b9848",
-        "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
-        "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495"
+        "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
+        "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a"
       },
       "controls": {
         "historical_claim_gate_open": false,
@@ -685,9 +685,9 @@
       "source_anchor_id": "events-curated:st-peter-cambridge-ma:founded:1994-05-19:p6",
       "source_review_basis": "committed_verified_events_curated_row",
       "source_overlay_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/title-focus-adjudication-overlay.json",
-      "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495",
+      "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a",
       "source_selection_packet_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/candidate-selection-packet.json",
-      "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
+      "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
       "canonical_entity_id": "cn:institution:immaculate-conception-cambridge-ma",
       "canonical_slug": "immaculate-conception-cambridge-ma",
       "public_profile": "/parishes/sv-petro-cambridge-ma",
@@ -727,8 +727,8 @@
         "source_candidate_snapshot_sha256": "8c008a4dcfea3bcc46edae344a6dfb8ede2cad5a81df9d688d99c5cf3a89ce20",
         "source_anchor_sha256": "35fa31f95f40cceb347064a87c3195a742c21da7f1a0d0a6f2e7f392980027b6",
         "visual_review_source_anchor_sha256": "35fa31f95f40cceb347064a87c3195a742c21da7f1a0d0a6f2e7f392980027b6",
-        "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
-        "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495"
+        "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
+        "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a"
       },
       "controls": {
         "historical_claim_gate_open": false,
@@ -765,9 +765,9 @@
       "source_anchor_id": "events-curated:st-peter-cambridge-ma:founded:1910-04-21:p6",
       "source_review_basis": "committed_verified_events_curated_row",
       "source_overlay_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/title-focus-adjudication-overlay.json",
-      "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495",
+      "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a",
       "source_selection_packet_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/candidate-selection-packet.json",
-      "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
+      "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
       "canonical_entity_id": "cn:institution:immaculate-conception-cambridge-ma",
       "canonical_slug": "immaculate-conception-cambridge-ma",
       "public_profile": "/parishes/sv-petro-cambridge-ma",
@@ -807,8 +807,8 @@
         "source_candidate_snapshot_sha256": "66ebc1df0faaeb7b17602651a930d783b36b0ab42d4590efbf9c502eeec23b4e",
         "source_anchor_sha256": "ac5badb1001ea11b0a18c19ccfcdd64e81a0c6433625f03cea573f4a7167624c",
         "visual_review_source_anchor_sha256": "ac5badb1001ea11b0a18c19ccfcdd64e81a0c6433625f03cea573f4a7167624c",
-        "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
-        "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495"
+        "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
+        "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a"
       },
       "controls": {
         "historical_claim_gate_open": false,
@@ -845,9 +845,9 @@
       "source_anchor_id": "events-curated:annunciation-kingston-pa:founded:1942-11-24:p4",
       "source_review_basis": "committed_verified_events_curated_row",
       "source_overlay_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/title-focus-adjudication-overlay.json",
-      "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495",
+      "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a",
       "source_selection_packet_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/candidate-selection-packet.json",
-      "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
+      "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
       "canonical_entity_id": "cn:institution:st-mary-annunciation-kingston-pa",
       "canonical_slug": "st-mary-annunciation-kingston-pa",
       "public_profile": "/parishes/sv-marijos-apreiskimo-kingston-pa",
@@ -887,8 +887,8 @@
         "source_candidate_snapshot_sha256": "d8201caa8662c0f4959b5015ac00fa8e2d69cd7c4a1d3c1dc987b11f59ad6f56",
         "source_anchor_sha256": "0478d30b6a07a1827a7076752e2ec429e1825d2a649d670790063d260fcc6f47",
         "visual_review_source_anchor_sha256": "0478d30b6a07a1827a7076752e2ec429e1825d2a649d670790063d260fcc6f47",
-        "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
-        "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495"
+        "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
+        "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a"
       },
       "controls": {
         "historical_claim_gate_open": false,
@@ -925,9 +925,9 @@
       "source_anchor_id": "events-curated:st-peter-detroit-mi:closed:1995-07-06:p2",
       "source_review_basis": "committed_verified_events_curated_row",
       "source_overlay_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/title-focus-adjudication-overlay.json",
-      "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495",
+      "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a",
       "source_selection_packet_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/candidate-selection-packet.json",
-      "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
+      "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
       "canonical_entity_id": "cn:institution:st-peter-detroit-mi",
       "canonical_slug": "st-peter-detroit-mi",
       "public_profile": "/parishes/sv-petro-detroit-mi",
@@ -967,8 +967,8 @@
         "source_candidate_snapshot_sha256": "161b1a7f6fccdd559f563d1c1969869a9b2572e5ca60bc9e540c8c7c7c5194f4",
         "source_anchor_sha256": "22f1b89bd3ca90e6929e36edf6d9dd4dc741252068af59e8f6e5006136b69e90",
         "visual_review_source_anchor_sha256": "22f1b89bd3ca90e6929e36edf6d9dd4dc741252068af59e8f6e5006136b69e90",
-        "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
-        "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495"
+        "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
+        "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a"
       },
       "controls": {
         "historical_claim_gate_open": false,
@@ -1005,9 +1005,9 @@
       "source_anchor_id": "events-curated:st-francis-lawrence-ma:closed:2003-09-09:p2",
       "source_review_basis": "committed_verified_events_curated_row",
       "source_overlay_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/title-focus-adjudication-overlay.json",
-      "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495",
+      "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a",
       "source_selection_packet_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/candidate-selection-packet.json",
-      "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
+      "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
       "canonical_entity_id": "cn:institution:st-francis-lawrence-ma",
       "canonical_slug": "st-francis-lawrence-ma",
       "public_profile": "/parishes/sv-pranciskaus-lawrence-ma",
@@ -1046,8 +1046,8 @@
         "source_candidate_snapshot_sha256": "9b8cbc05aa2d4206aaa333adb8ac8f8881273a610643b3d82de200a55d86855d",
         "source_anchor_sha256": "2786d741b93dbbb2a93edc7b8a7ceb4b3219ebc8ad2fe288648f730bd793383b",
         "visual_review_source_anchor_sha256": "2786d741b93dbbb2a93edc7b8a7ceb4b3219ebc8ad2fe288648f730bd793383b",
-        "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
-        "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495"
+        "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
+        "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a"
       },
       "controls": {
         "historical_claim_gate_open": false,
@@ -1084,9 +1084,9 @@
       "source_anchor_id": "events-curated:st-casimir-gary-in:closed:1998-06-10:p6",
       "source_review_basis": "committed_verified_events_curated_row",
       "source_overlay_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/title-focus-adjudication-overlay.json",
-      "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495",
+      "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a",
       "source_selection_packet_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/candidate-selection-packet.json",
-      "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
+      "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
       "canonical_entity_id": "cn:institution:st-casimir-gary-in",
       "canonical_slug": "st-casimir-gary-in",
       "public_profile": "/parishes/sv-kazimiero-gary-in",
@@ -1126,8 +1126,8 @@
         "source_candidate_snapshot_sha256": "fb4c1f2825d81546716ae601742805e1fed7d0196818c0f2f794349cb9926cd8",
         "source_anchor_sha256": "22bb1960893e317ef7d1a8002912e4a46424f8efeffd79249652bb51ffabf6b6",
         "visual_review_source_anchor_sha256": "22bb1960893e317ef7d1a8002912e4a46424f8efeffd79249652bb51ffabf6b6",
-        "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
-        "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495"
+        "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
+        "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a"
       },
       "controls": {
         "historical_claim_gate_open": false,
@@ -1164,9 +1164,9 @@
       "source_anchor_id": "events-curated:st-casimir-kansas-city-mo:closed:1947-12-31:p4",
       "source_review_basis": "committed_verified_events_curated_row",
       "source_overlay_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/title-focus-adjudication-overlay.json",
-      "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495",
+      "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a",
       "source_selection_packet_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/candidate-selection-packet.json",
-      "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
+      "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
       "canonical_entity_id": "cn:institution:st-casimir-kansas-city-ks",
       "canonical_slug": "st-casimir-kansas-city-ks",
       "public_profile": "/parishes/sv-kazimiero-kansas-city-mo",
@@ -1205,8 +1205,8 @@
         "source_candidate_snapshot_sha256": "1ae9eb5651609dab05aa8c05f7fab06cf261818b82c94cb594154317e902c7d4",
         "source_anchor_sha256": "f8cd7a076e3196e355efd791f9ac6362c4c04e674dffce5efbddf48b11cc93a0",
         "visual_review_source_anchor_sha256": "f8cd7a076e3196e355efd791f9ac6362c4c04e674dffce5efbddf48b11cc93a0",
-        "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
-        "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495"
+        "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
+        "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a"
       },
       "controls": {
         "historical_claim_gate_open": false,
@@ -1243,9 +1243,9 @@
       "source_anchor_id": "events-curated:st-francis-east-chicago-in:closed:1987-09-19:p6",
       "source_review_basis": "committed_verified_events_curated_row",
       "source_overlay_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/title-focus-adjudication-overlay.json",
-      "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495",
+      "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a",
       "source_selection_packet_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/candidate-selection-packet.json",
-      "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
+      "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
       "canonical_entity_id": "cn:institution:st-francis-east-chicago-in",
       "canonical_slug": "st-francis-east-chicago-in",
       "public_profile": "/parishes/sv-pranciskaus-east-chicago-in",
@@ -1285,8 +1285,8 @@
         "source_candidate_snapshot_sha256": "a558086973d09eaa16e309166fcc854c29b098d556822ae822518d7229204b8f",
         "source_anchor_sha256": "5cede42dbaf663279f585e8363891691e51985aca1cdf557ea0f39af1e035235",
         "visual_review_source_anchor_sha256": "5cede42dbaf663279f585e8363891691e51985aca1cdf557ea0f39af1e035235",
-        "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
-        "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495"
+        "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
+        "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a"
       },
       "controls": {
         "historical_claim_gate_open": false,
@@ -1323,9 +1323,9 @@
       "source_anchor_id": "events-curated:all-saints-chicago-il:founded:1910-07-07:p5",
       "source_review_basis": "committed_verified_events_curated_row",
       "source_overlay_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/title-focus-adjudication-overlay.json",
-      "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495",
+      "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a",
       "source_selection_packet_ref": "docs/research/parish-canon/review-queues/draugas-parish-centered-tranche5-2026-08-17/candidate-selection-packet.json",
-      "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
+      "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
       "canonical_entity_id": "cn:institution:all-saints-chicago-il",
       "canonical_slug": "all-saints-chicago-il",
       "public_profile": "/parishes/all-saints-chicago-il",
@@ -1365,8 +1365,8 @@
         "source_candidate_snapshot_sha256": "a5cf1c87a75814c178c14e76f183646b560e88ddd5e8311a90ba9fa7684ebb1d",
         "source_anchor_sha256": "fe9eec30fdaf271ee2d97c68a72a794ff11aa889547aac21d7e8a06c9753d325",
         "visual_review_source_anchor_sha256": "fe9eec30fdaf271ee2d97c68a72a794ff11aa889547aac21d7e8a06c9753d325",
-        "source_selection_packet_content_hash_sha256": "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83",
-        "source_overlay_content_hash_sha256": "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495"
+        "source_selection_packet_content_hash_sha256": "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd",
+        "source_overlay_content_hash_sha256": "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a"
       },
       "controls": {
         "historical_claim_gate_open": false,
@@ -1396,5 +1396,5 @@
       }
     }
   ],
-  "content_hash_sha256": "ba0d82f2f2cd0e024844fc58a6cbe0396de4aa0548cfac3b1bcb376edeb19ae4"
+  "content_hash_sha256": "ef45a541d7a31f02d19ca48e506ae499235695c393c1a44d47a361f8fb6d14a7"
 }

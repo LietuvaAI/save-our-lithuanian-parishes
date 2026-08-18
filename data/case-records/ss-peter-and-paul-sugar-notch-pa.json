@@ -1,0 +1,133 @@
+{
+  "slug": "ss-peter-and-paul-sugar-notch-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "unknown",
+  "currentUse": "Ss. Peter and Paul no longer operates as a Lithuanian Roman Catholic parish. The Diocese of Scranton says the church closed in 1995 during restructuring around Holy Family Parish. Holy Family later closed in 2021, and its territorial community entered Saint Leo the Great Parish in Ashley, which remains active at 33 Manhattan Street. The reviewed evidence does not establish the Lithuanian church's street address, whether its building survived, or any current use. Continuity through Holy Family and Saint Leo is institutional and territorial, not proof that either successor worshipped in the former Ss. Peter and Paul building.",
+  "summary": "Ss. Peter and Paul was Sugar Notch's Lithuanian Roman Catholic parish, distinct from the town's Polish Holy Family Parish and Saint Charles Borromeo. A manually reviewed 1917 Draugas report identifies a Lithuanian parish in Sugar Notch, and a 1966 clergy notice explicitly names Ss. Peter and Paul and its pastor. The exact formation date remains unresolved. The inherited 1913 date is not accepted because the Diocese assigns the 1913 brick church dedication to Polish Holy Family; likewise, a 1910 church fire in Sugar Notch belongs to Holy Family's first wooden church. Ss. Peter and Paul remained active into the 1980s and closed in 1995. Holy Family later closed on September 19, 2021, transferring territorial continuity to Saint Leo the Great Parish in Ashley. The Lithuanian church's address and building fate remain unverified.",
+  "historicalNarrative": [
+    {
+      "text": "The first reviewed contemporary evidence places a Lithuanian Roman Catholic parish in Sugar Notch by May 1917. Draugas reported that Father P. Vaitonis had been pastor of the town's Lithuanian parish and that parishioners objected when he was transferred and replaced by a German priest. The passage establishes a functioning Lithuanian parish but does not name its titular or give an erection date. The title is closed by later direct evidence rather than inferred from this town reference alone.",
+      "sources": [
+        {
+          "url": "https://www.draugas.org/archive/1917_reg/1917-05-22-DRAUGASw-i5-8.pdf",
+          "locator": "Draugas, 1917-05-22, p. 3, Sugar Notch report naming the local Lithuanian parish and former pastor Father P. Vaitonis"
+        }
+      ]
+    },
+    {
+      "text": "A 1966 Draugas clergy notice explicitly identifies Father Jonas Kazlauskas as former pastor of Ss. Peter and Paul Parish in Sugar Notch, establishing the title and Roman Catholic parish class. A 1986 death notice records burial rites from Ss. Peter and Paul parish church in Sugar Notch, showing the worship site remained in use late in the parish's life. Neither item supplies a street address or founding year.",
+      "sources": [
+        {
+          "url": "https://www.draugas.org/archive/1966_reg/1966-09-17-DRAUGAS.pdf",
+          "locator": "Draugas, 1966-09-17, p. 1, Diocese of Scranton clergy appointments naming Ss. Peter and Paul Parish, Sugar Notch"
+        },
+        {
+          "url": "https://www.draugas.org/archive/1986_reg/1986-06-10-DRAUGAS-i7-8.pdf",
+          "locator": "Draugas, 1986-06-10, p. 6, funeral from Ss. Peter and Paul parish church, Sugar Notch"
+        }
+      ]
+    },
+    {
+      "text": "The Diocese's Holy Family history says Sugar Notch experienced the closure of Ss. Peter and Paul Church in 1995. It separately identifies Holy Family as a Polish parish founded in 1903, whose first wooden church burned in June 1910 and whose brick church was dedicated September 13, 1913. Those Holy Family dates cannot be assigned to the Lithuanian Ss. Peter and Paul route. The safe typed relationship is Ss. Peter and Paul closed during Holy Family-era restructuring; the exact merger instrument and effective day within 1995 remain unlocated.",
+      "sources": [
+        {
+          "url": "https://www.dioceseofscranton.org/holy-family-parish-holds-closing-mass/",
+          "locator": "Holy Family Parish Holds Closing Mass: distinct Polish Holy Family chronology and Ss. Peter and Paul closure in 1995"
+        }
+      ]
+    },
+    {
+      "text": "Holy Family itself held its closing Mass on September 19, 2021. The Diocese transferred its parishioners and territorial boundaries to Saint Leo the Great Parish in Ashley. Saint Leo's current diocesan directory shows active Masses at 33 Manhattan Street. This establishes later territorial succession but no building continuity: the former Ss. Peter and Paul site has not been identified by street address, and its survival or reuse remains unknown.",
+      "sources": [
+        {
+          "url": "https://www.dioceseofscranton.org/holy-family-parish-holds-closing-mass/",
+          "locator": "Holy Family Parish Holds Closing Mass: 2021-09-19 closure and transfer to Saint Leo the Great"
+        },
+        {
+          "url": "https://www.dioceseofscranton.org/find-a-parish/saint-leo-the-great-parish-ashley/",
+          "locator": "Current diocesan directory: Saint Leo the Great Parish and Masses at 33 Manhattan Street; accessed 2026-08-17"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1917-05-22",
+      "headline": "Contemporary report documents Sugar Notch's Lithuanian parish",
+      "detail": "Draugas records a pastor transfer and parishioner response in the town's Lithuanian parish.",
+      "sources": [
+        {
+          "title": "Sugar Notch parish report",
+          "publisher": "Draugas",
+          "date": "1917-05-22",
+          "page": "p. 3",
+          "url": "https://www.draugas.org/archive/1917_reg/1917-05-22-DRAUGASw-i5-8.pdf"
+        }
+      ]
+    },
+    {
+      "date": "1995",
+      "headline": "Ss. Peter and Paul Church closes",
+      "detail": "The Diocese places the Lithuanian church's closure in the restructuring history of Holy Family Parish.",
+      "sources": [
+        {
+          "title": "Holy Family Parish Holds Closing Mass",
+          "publisher": "Diocese of Scranton",
+          "date": "2021",
+          "url": "https://www.dioceseofscranton.org/holy-family-parish-holds-closing-mass/"
+        }
+      ]
+    },
+    {
+      "date": "2021-09-19",
+      "headline": "Holy Family closes and territory enters Saint Leo",
+      "detail": "The later Sugar Notch successor closed, and parishioners and territory transferred to Saint Leo the Great in Ashley.",
+      "sources": [
+        {
+          "title": "Holy Family Parish Holds Closing Mass",
+          "publisher": "Diocese of Scranton",
+          "date": "2021",
+          "url": "https://www.dioceseofscranton.org/holy-family-parish-holds-closing-mass/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sugar Notch parish report",
+      "publisher": "Draugas",
+      "date": "1917-05-22",
+      "page": "p. 3",
+      "url": "https://www.draugas.org/archive/1917_reg/1917-05-22-DRAUGASw-i5-8.pdf"
+    },
+    {
+      "title": "Diocese of Scranton clergy appointments",
+      "publisher": "Draugas",
+      "date": "1966-09-17",
+      "page": "p. 1",
+      "url": "https://www.draugas.org/archive/1966_reg/1966-09-17-DRAUGAS.pdf"
+    },
+    {
+      "title": "Sugar Notch death notice",
+      "publisher": "Draugas",
+      "date": "1986-06-10",
+      "page": "p. 6",
+      "url": "https://www.draugas.org/archive/1986_reg/1986-06-10-DRAUGAS-i7-8.pdf"
+    },
+    {
+      "title": "Holy Family Parish Holds Closing Mass",
+      "publisher": "Diocese of Scranton",
+      "date": "2021",
+      "url": "https://www.dioceseofscranton.org/holy-family-parish-holds-closing-mass/"
+    },
+    {
+      "title": "Saint Leo the Great Parish",
+      "publisher": "Diocese of Scranton",
+      "date": "accessed 2026-08-17",
+      "url": "https://www.dioceseofscranton.org/find-a-parish/saint-leo-the-great-parish-ashley/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The inherited 1913 founded year is not accepted for Ss. Peter and Paul. The Diocese assigns the 1913 brick-church dedication to the distinct Polish Holy Family Parish, and its June 1910 fire likewise belongs to Holy Family's first wooden church. Raw event extraction had attached that fire and other founding-language snippets to Ss. Peter and Paul; those are rejected as town-level conflations. The Lithuanian parish is securely operating by 1917, explicitly titled by 1966, active through at least 1986, and closed in 1995. Its exact formation date remains unresolved.",
+  "gaps": "The canonical erection and founding date, first pastor, complete worship-site chronology, street address and deed, relationship to Holy Family before 1995, exact 1995 closure or merger instrument and date, sacramental-record custody, cemetery relationship, and the former building's survival, ownership, condition, and current use remain unlocated."
+}

@@ -4,6 +4,60 @@
   "buildingStatus": "demolished",
   "currentUse": "Vacant lot at the former church site (Broadview and Ridge Ave.); the parish bell is preserved and displayed at the Wyandotte County Museum in Bonner Springs, Kansas",
   "summary": "St. Casimir Lithuanian church — opened after Lithuanians acquired a small Baptist church building in 1912, with a parish school added in the early 1920s — served a stockyards-era Lithuanian colony that all located sources place in Kansas City, Kansas (Armourdale area, Wyandotte County), not Missouri. After a bishop who disapproved of ethnic parishes merged the Lithuanian and Slovak congregations in 1947, the church was closed and subsequently demolished; per Global True Lithuania, only an empty lot remains at Broadview and Ridge Ave. The parish bell, donated by Lithuanian parishioners, was shipped to Christ the King Catholic Church at the 1947 closing and was later removed, restored, and placed on display at the Wyandotte County Museum in Bonner Springs — the Kansas City Lithuanian Community, including former St. Casimir parishioners, contributed more than $10,000 for the removal and restoration, and donor names are cast on the bell itself. The dispersal of the congregation and loss of its building meant the community was not replenished by post-WWII refugees, but descendants reestablished a Lithuanian club in 1980, and the Kansas City Lithuanian Community remains active today as a chapter of the Lithuanian American Community, with annual events, membership dues, and the Aidas folk dance group.",
+  "historicalNarrative": [
+    {
+      "text": "St. Casimir served a Lithuanian Catholic community in the Kansas City stockyards district. Although the route inherited a Missouri label, the available histories place the parish in Armourdale, Kansas City, Kansas, at Broadview and Ridge Avenue; no evidence has established a separate Missouri-side Lithuanian St. Casimir parish.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/kansas-6612/",
+          "locator": "Kansas heritage account, Kansas City St. Casimir location and parish history"
+        },
+        {
+          "url": "https://kchistory.org/islandora/object/kchistory:68840",
+          "locator": "History Reverberates For Ethnic Community, Kansas City, Kansas community identification"
+        }
+      ]
+    },
+    {
+      "text": "Lithuanian parishioners acquired a small Baptist church in 1912 and later added a parish school. The congregation remained small, and exact canonical erection and site-address details beyond Broadview and Ridge Avenue are not established by the available public sources.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/kansas-6612/",
+          "locator": "Kansas heritage account, 1912 church acquisition and parish school"
+        }
+      ]
+    },
+    {
+      "text": "In 1947 the Lithuanian parish was merged with a Slovak congregation and St. Casimir closed. The church was later demolished, leaving an empty lot; the exact demolition date, property disposition, and canonical merger instrument remain unavailable.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/kansas-6612/",
+          "locator": "Kansas heritage account, 1947 closure, merger, demolition, and vacant site"
+        },
+        {
+          "url": "https://kchistory.org/islandora/object/kchistory:68840",
+          "locator": "History Reverberates For Ethnic Community, 1947 parish closing context"
+        }
+      ]
+    },
+    {
+      "text": "The parish bell was sent to Christ the King Church at closure and later restored for display at the Wyandotte County Museum in Bonner Springs. Former parishioners and the Kansas City Lithuanian Community supported that preservation, while the present community organization continues cultural activity without reviving the former parish institution.",
+      "sources": [
+        {
+          "url": "https://kchistory.org/islandora/object/kchistory:68840",
+          "locator": "History Reverberates For Ethnic Community, bell transfer, restoration, and museum display"
+        },
+        {
+          "url": "https://kclith.org/",
+          "locator": "Kansas City Lithuanian Community home page, current organization and activities"
+        },
+        {
+          "url": "https://kclith.org/membership/",
+          "locator": "Membership page, chapter status and current community program"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "1947",

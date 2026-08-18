@@ -4,6 +4,60 @@
   "buildingStatus": "standing",
   "currentUse": "Active Roman Catholic parish church (Archdiocese of Cincinnati), worshiping as part of the five-church St. Gabriel the Archangel Family of Parishes; Sunday Mass at 10:30am",
   "summary": "Holy Cross (Šv. Kryžiaus) at 1924 Leo St in Old North Dayton is standing and remains an active Catholic parish church — it was never closed or sold. It has been listed on the National Register of Historic Places since November 5, 1991 (ref. #91001582), recognized for its 1960s \"modern Lithuanian style\" redesign by architect Jonas Mulokas honoring churches shuttered by the Soviet regime in Lithuania. Under the Archdiocese of Cincinnati's Beacons of Light restructuring, Holy Cross was grouped effective July 1, 2022 into the St. Gabriel the Archangel Family of Parishes alongside Our Lady of the Rosary (Dayton), St. Christopher (Vandalia), St. John the Baptist (Tipp City), and St. Peter (Huber Heights), led by pastor Fr. Kyle E. Schnippel with three parochial vicars; the parish office is housed at St. Peter in Huber Heights. Holy Cross's own listed schedule is a single Sunday 10:30am Mass. Restructuring pressure inside the family is real: the family's website currently announces that sister church St. Christopher in Vandalia \"Closed in August 2026,\" though no closure of Holy Cross itself is announced. As of a 2021 archdiocesan profile, Holy Cross was the only Lithuanian parish in southern Ohio, still proclaimed two readings in Lithuanian at every Mass, and runs its signature turtle soup and kugelis fundraiser each November; Global True Lithuania describes it as a de facto Lithuanian community hub hosting Kūčios and other gatherings.",
+  "historicalNarrative": [
+    {
+      "text": "Holy Cross is Dayton's Lithuanian Roman Catholic parish at 1924 Leo Street. Its standing church was reshaped in 1963–1964 by Lithuanian architect Jonas Mulokas in a modern Lithuanian style, and the Shrine of the Three Crosses was added in 1965 to commemorate martyrs under Soviet rule.",
+      "sources": [
+        {
+          "url": "https://www.thecatholictelegraph.com/did-you-know-holy-cross-dayton/77781",
+          "locator": "Did you know? Holy Cross Dayton, parish identity, Mulokas redesign, and shrine"
+        },
+        {
+          "url": "https://global.truelithuania.com/dayton-ohio-3879/",
+          "locator": "Dayton heritage account, Holy Cross church and Lithuanian design"
+        }
+      ]
+    },
+    {
+      "text": "The church was listed on the National Register of Historic Places on November 5, 1991. That recognition concerns the building and its architecture; it does not by itself establish the parish's canonical status or guarantee future institutional survival.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Holy_Cross_Lithuanian_Roman_Catholic_Church",
+          "locator": "Holy Cross Lithuanian Roman Catholic Church, National Register listing date and reference number"
+        }
+      ]
+    },
+    {
+      "text": "Effective July 1, 2022, the Archdiocese of Cincinnati placed Holy Cross in the St. Gabriel the Archangel Family of Parishes with four other churches. The shared pastor, clergy, and office are an administrative grouping under Beacons of Light, not evidence that Holy Cross itself closed or merged.",
+      "sources": [
+        {
+          "url": "https://catholicaoc.org/beacons-of-light/parish-families/northeast-deanery-family-10-updated",
+          "locator": "Northeast Deanery Family 10, member parishes, clergy, and July 1, 2022 effective date"
+        },
+        {
+          "url": "https://www.sgfp.org/holy-cross",
+          "locator": "Holy Cross parish page, family administration and parish office"
+        }
+      ]
+    },
+    {
+      "text": "Holy Cross remains an active worship site with a Sunday 10:30 a.m. Mass. A 2021 archdiocesan profile documented Lithuanian readings and identity, but the current family schedule does not identify a Lithuanian-language Mass; sister church St. Christopher's 2026 closure signals restructuring pressure without proving any closure decision for Holy Cross.",
+      "sources": [
+        {
+          "url": "https://www.sgfp.org/mass-schedule",
+          "locator": "Current family Mass schedule, Holy Cross Sunday Mass"
+        },
+        {
+          "url": "https://www.thecatholictelegraph.com/did-you-know-holy-cross-dayton/77781",
+          "locator": "2021 profile, Lithuanian readings and parish identity"
+        },
+        {
+          "url": "https://www.sgfp.org/",
+          "locator": "Family home page, St. Christopher closure notice and current Holy Cross link"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2021-10-20",

@@ -38,6 +38,23 @@
           "locator": "2022 account of parish and Lithuanian community life"
         }
       ]
+    },
+    {
+      "text": "The successor parish continued to make the Neff Road complex a Lithuanian religious and cultural center rather than merely inheriting an older building. A Lithuanian Sunday Mass, language instruction, scouts, dance groups, and parish events carried forward elements of both predecessor communities. Leadership changed in 2025 when longtime pastor Joseph Bacevice retired and Andrew Morkunas became administrator, but current bulletins and future Mass intentions show normal parish operations continuing.",
+      "sources": [
+        {
+          "url": "https://www.theeuclidobserver.com/articles/st-casimir-parish-thriving-in-clevelands-colllinwood-neighborhood/",
+          "locator": "Community reporting: Lithuanian education, scouts, dance, renovation, and parish activity"
+        },
+        {
+          "url": "https://www.dioceseofcleveland.org/parishes/directory/st-casimir",
+          "locator": "Current diocesan parish listing and assigned administration"
+        },
+        {
+          "url": "http://saintcasimirparish.org/main-en/index-en.html",
+          "locator": "Current parish bulletins, schedule, and continuing operations"
+        }
+      ]
     }
   ],
   "summary": "St. Casimir Parish at 18022 Neff Rd remains an active parish of the Diocese of Cleveland, listed in the diocesan directory with assigned clergy and no announced restructuring. Its bulletin is current (July 4-5, 2026 issue) and the parish is already booking 2027 Mass intentions; the 11:00 am Sunday Mass is in Lithuanian. Longtime pastor Fr. Joseph A. Bacevice retired April 30, 2025, and Fr. Andrew M. Morkunas was appointed administrator the same day, serving alongside his chaplaincy at University Hospitals; the bulletin indicates a one-priest schedule (no Thursday Mass).",
@@ -73,6 +90,7 @@
   "sources": [
     { "title": "St. Casimir (parish directory, Neff Rd)", "publisher": "Diocese of Cleveland", "date": "2026", "url": "https://www.dioceseofcleveland.org/parishes/directory/st-casimir" },
     { "title": "Saint Casimir Parish homepage", "publisher": "Saint Casimir Parish", "date": "2026", "url": "http://saintcasimirparish.org/main-en/index-en.html" },
+    { "title": "New Lakeshore Intergenerational School to open in Collinwood!", "publisher": "Breakthrough Public Schools", "date": "2014-03-04", "url": "https://breakthroughschools.org/new-lakeshore-intergenerational-school-to-open-in-collinwood/" },
     { "title": "Lithuanian Mass listing", "publisher": "Lithuanians of Cleveland (ltcle.org)", "date": "2026-05-17", "url": "https://ltcle.org/event/lithuanian-mass-80/" },
     { "title": "St. Casimir Mass times", "publisher": "DiscoverMass", "date": "2026", "url": "https://discovermass.com/church/st-casimir-cleveland-oh/" },
     { "title": "St. Casimir Parish Thriving in Cleveland's Collinwood Neighborhood", "publisher": "Euclid Observer", "date": "2022-03-01", "url": "https://www.theeuclidobserver.com/articles/st-casimir-parish-thriving-in-clevelands-colllinwood-neighborhood/" },

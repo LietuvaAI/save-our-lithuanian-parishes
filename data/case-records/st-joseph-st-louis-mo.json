@@ -1,0 +1,278 @@
+{
+  "slug": "st-joseph-st-louis-mo",
+  "culturenetEntityId": "cn:institution:st-joseph-st-louis-mo",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian parish effort documented in 1896 · St. Joseph formally organized January 9, 1915 · suppressed and merged into St. Henry April 1, 1970",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "merged",
+  "buildingStatus": "converted",
+  "currentUse": "The former St. Joseph church at 2123 Park Avenue, at MacKay Place, was standing in a geolocated 2023 photograph and described there as rehabilitated for residential use. The exterior is documented; present occupancy and interior or structural condition remain unverified. Sacramental records are held by the Archdiocese of St. Louis Archives.",
+  "summary": "St. Joseph was St. Louis's Lithuanian Roman Catholic national parish. A Lithuanian parish fundraiser was documented in 1896, but the St. Joseph institution was formally organized on January 9, 1915. It acquired the former Protestant Church of Unity in 1916, celebrated its first Mass there on August 13, and had the church blessed on September 10. St. Joseph was suppressed and merged into St. Henry on April 1, 1970. Its Park Avenue church survives in converted use, while the archdiocesan location wording conflicts with the address and corner documented by local and visual sources.",
+  "institutionLifecycle": {
+    "formation": "A November 1896 fundraiser sought to establish a Lithuanian parish under a Virgin Mary title. The distinct St. Joseph parish was formally organized when Father Mykolas Vitkus was appointed on January 9, 1915.",
+    "institutionalForm": "Lithuanian Roman Catholic national parish in the Archdiocese of St. Louis.",
+    "jurisdiction": "Roman Catholic Archdiocese of St. Louis.",
+    "terminalStatus": "Suppressed and merged into St. Henry Parish on April 1, 1970 according to Wolkovich's history. The current archdiocesan directory independently lists St. Joseph National Lithuanian as a closed institution with a 1915-1970 range, but does not define the exact canonical mechanism.",
+    "currentVerification": "The Archdiocese of St. Louis Archives holds the sacramental records. A geolocated 2023 photograph documents the former Park Avenue church standing and describes residential rehabilitation; this is building reuse, not parish survival or institutional succession."
+  },
+  "worshipSites": [
+    {
+      "siteType": "host_church",
+      "name": "Pre-parish Lithuanian Catholic worship in St. Louis",
+      "address": "St. Louis, Missouri; exact host church and address unresolved",
+      "usePeriod": "before 1916-08-13",
+      "buildingCondition": "unknown",
+      "currentUse": "The available sources document organizing before acquisition of the Church of Unity building but do not identify every host worship site.",
+      "evidence": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed pp. 157-158, 1896 effort and 1915 organization"
+        }
+      ]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-joseph-park-st-louis-mo",
+      "name": "St. Joseph Lithuanian Church, former Church of Unity",
+      "address": "2123 Park Avenue at MacKay Place, St. Louis, MO; archdiocesan directory instead says Park and Anderson",
+      "usePeriod": "1916-08-13-1970-04-01",
+      "buildingCondition": "standing and converted",
+      "currentUse": "A 2023 geolocated photograph documents the exterior standing and describes the former church as rehabilitated for a single-family residence. Current occupancy and interior condition remain unresolved.",
+      "evidence": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed pp. 158-159, purchase, first Mass, blessing, and 1970 end"
+        },
+        {
+          "url": "https://stlgs.org/research-2/congregations/catholic/catholic-churches",
+          "locator": "Saint Joseph Lithuanian entry, 2123 Park Ave., 1915-1970"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Former_St._Joseph_Church,_MacKay_Place_and_Park_Avenue,_Lafayette_Square,_St._Louis,_MO_-_53280157106.jpg",
+          "locator": "Geolocated photograph taken October 5, 2023, former St. Joseph Church at MacKay Place and Park Avenue"
+        },
+        {
+          "url": "https://public.files.capacity.com/b74c60b2-5d6b-4369-ae6a-8eed6e9bbb22/09dac8fb-8710-4c74-96a7-fe9c940e9898?FU=1726846863#page=11",
+          "locator": "PDF p. 11, St. Joseph National Lithuanian, St. Louis City, 1915-1970, Park and Anderson"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-joseph-st-louis-mo",
+      "target": "cn:building_site:st-joseph-park-st-louis-mo",
+      "date": "1916-08-13-1970-04-01",
+      "status": "accepted",
+      "note": "St. Joseph used the former Church of Unity from its first Mass there through the parish's 1970 suppression; later residential conversion belongs to the building history."
+    },
+    {
+      "type": "institution-merged-into-institution",
+      "source": "cn:institution:st-joseph-st-louis-mo",
+      "target": "cn:institution:st-henry-st-louis-mo",
+      "date": "1970-04-01",
+      "status": "accepted",
+      "note": "Wolkovich dates St. Joseph's suppression and merger into the distinct St. Henry Parish to April 1, 1970."
+    },
+    {
+      "type": "records-custody",
+      "source": "cn:institution:st-joseph-st-louis-mo",
+      "target": "Archdiocese of St. Louis Archives",
+      "date": "current directory as of 2026-08-17",
+      "status": "accepted",
+      "note": "The current closed-parish directory states that sacramental records are in the archdiocesan archives unless otherwise noted; the St. Joseph National Lithuanian row has no exception."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "Lithuanian Catholics in St. Louis pursued a parish before St. Joseph existed. Wolkovich records a November 1896 fundraiser for an intended parish under a Virgin Mary title. That effort is a precursor milestone, not the founding date or former name of the later St. Joseph institution.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed p. 157"
+        }
+      ]
+    },
+    {
+      "text": "St. Joseph was formally organized on January 9, 1915 when Father Mykolas Vitkus was appointed. The Archdiocese of St. Louis's current closed-parish directory gives the institution a 1915-1970 range and explicitly names it St. Joseph National Lithuanian, independently confirming identity, class, and closed context without defining the exact canonical erection act.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed p. 158"
+        },
+        {
+          "url": "https://public.files.capacity.com/b74c60b2-5d6b-4369-ae6a-8eed6e9bbb22/09dac8fb-8710-4c74-96a7-fe9c940e9898?FU=1726846863#page=11",
+          "locator": "PDF p. 11, St. Joseph National Lithuanian row"
+        }
+      ]
+    },
+    {
+      "text": "On August 2, 1916 the parish purchased the former Protestant Church of Unity for $9,000. St. Joseph celebrated its first Mass there on August 13, and Archbishop John Glennon blessed the church on September 10. These are property, first-worship, and blessing milestones, distinct from the 1915 institutional organization.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed p. 158"
+        }
+      ]
+    },
+    {
+      "text": "The church is documented locally as 2123 Park Avenue at MacKay Place. The current archdiocesan directory instead says Park and Anderson. Because the two locators conflict, the Park Avenue street number and MacKay corner are retained from the local church list and geolocated photograph, while the official wording remains visible rather than being silently reconciled.",
+      "sources": [
+        {
+          "url": "https://stlgs.org/research-2/congregations/catholic/catholic-churches",
+          "locator": "Saint Joseph Lithuanian entry, 2123 Park Ave."
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Former_St._Joseph_Church,_MacKay_Place_and_Park_Avenue,_Lafayette_Square,_St._Louis,_MO_-_53280157106.jpg",
+          "locator": "Geolocated October 5, 2023 photograph at MacKay Place and Park Avenue"
+        },
+        {
+          "url": "https://public.files.capacity.com/b74c60b2-5d6b-4369-ae6a-8eed6e9bbb22/09dac8fb-8710-4c74-96a7-fe9c940e9898?FU=1726846863#page=11",
+          "locator": "PDF p. 11, official location wording Park and Anderson"
+        }
+      ]
+    },
+    {
+      "text": "Wolkovich dates St. Joseph's suppression and merger into St. Henry Parish to April 1, 1970. The archdiocesan directory independently ends the closed institution's range in 1970 and routes its sacramental records to the Archdiocese of St. Louis Archives. The directory does not itself supply the suppression decree or merger mechanism, so the exact act rests on the historical account.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed p. 159"
+        },
+        {
+          "url": "https://public.files.capacity.com/b74c60b2-5d6b-4369-ae6a-8eed6e9bbb22/09dac8fb-8710-4c74-96a7-fe9c940e9898?FU=1726846863#page=11",
+          "locator": "PDF pp. 1 and 11, archives-custody rule and 1915-1970 St. Joseph National Lithuanian row"
+        }
+      ]
+    },
+    {
+      "text": "The former church survived the parish. A geolocated photograph taken October 5, 2023 shows the exterior standing and describes the building as rehabilitated into a single-family residence. That evidence supports standing and converted status at the photographed date, but not current occupancy, interior condition, or institutional continuity with either St. Henry or another congregation.",
+      "sources": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Former_St._Joseph_Church,_MacKay_Place_and_Park_Avenue,_Lafayette_Square,_St._Louis,_MO_-_53280157106.jpg",
+          "locator": "Geolocated photograph and description, October 5, 2023"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1896-11",
+      "headline": "Early Lithuanian parish effort documented",
+      "detail": "A fundraiser sought a Lithuanian parish under a Virgin Mary title; it preceded the distinct St. Joseph institution.",
+      "sources": [
+        {
+          "title": "Lithuanian Religious Life in America, Vol. 3",
+          "publisher": "Norwood Press",
+          "date": "1998",
+          "page": "printed p. 157",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+        }
+      ]
+    },
+    {
+      "date": "1915-01-09",
+      "headline": "St. Joseph formally organized",
+      "detail": "Father Mykolas Vitkus was appointed to organize the Lithuanian national parish.",
+      "sources": [
+        {
+          "title": "Lithuanian Religious Life in America, Vol. 3",
+          "publisher": "Norwood Press",
+          "date": "1998",
+          "page": "printed p. 158",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+        },
+        {
+          "title": "Closed and Merged Parishes",
+          "publisher": "Archdiocese of St. Louis",
+          "date": "current directory accessed 2026-08-17",
+          "page": "PDF p. 11, St. Joseph National Lithuanian",
+          "url": "https://public.files.capacity.com/b74c60b2-5d6b-4369-ae6a-8eed6e9bbb22/09dac8fb-8710-4c74-96a7-fe9c940e9898?FU=1726846863#page=11"
+        }
+      ]
+    },
+    {
+      "date": "1916-08-02-1916-09-10",
+      "headline": "Parish acquires and blesses former Church of Unity",
+      "detail": "The building was purchased August 2, first used for Mass August 13, and blessed September 10, 1916.",
+      "sources": [
+        {
+          "title": "Lithuanian Religious Life in America, Vol. 3",
+          "publisher": "Norwood Press",
+          "date": "1998",
+          "page": "printed p. 158",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+        }
+      ]
+    },
+    {
+      "date": "1970-04-01",
+      "headline": "St. Joseph suppressed and merged into St. Henry",
+      "detail": "The national parish ended as an institution; the archdiocesan directory independently gives a 1970 terminal record range and archival custody.",
+      "sources": [
+        {
+          "title": "Lithuanian Religious Life in America, Vol. 3",
+          "publisher": "Norwood Press",
+          "date": "1998",
+          "page": "printed p. 159",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+        },
+        {
+          "title": "Closed and Merged Parishes",
+          "publisher": "Archdiocese of St. Louis",
+          "date": "current directory accessed 2026-08-17",
+          "page": "PDF pp. 1 and 11",
+          "url": "https://public.files.capacity.com/b74c60b2-5d6b-4369-ae6a-8eed6e9bbb22/09dac8fb-8710-4c74-96a7-fe9c940e9898?FU=1726846863#page=11"
+        }
+      ]
+    },
+    {
+      "date": "2023-10-05",
+      "headline": "Former church photographed standing in converted use",
+      "detail": "A geolocated photograph documents the former Park Avenue church exterior and describes residential rehabilitation.",
+      "sources": [
+        {
+          "title": "Former St. Joseph Church, MacKay Place and Park Avenue",
+          "publisher": "Wikimedia Commons",
+          "date": "2023-10-05",
+          "page": "geolocated photograph and file description",
+          "url": "https://commons.wikimedia.org/wiki/File:Former_St._Joseph_Church,_MacKay_Place_and_Park_Avenue,_Lafayette_Square,_St._Louis,_MO_-_53280157106.jpg"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lithuanian Religious Life in America, Vol. 3",
+      "publisher": "Norwood Press",
+      "date": "1998",
+      "page": "printed pp. 157-159",
+      "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+    },
+    {
+      "title": "Closed and Merged Parishes",
+      "publisher": "Archdiocese of St. Louis",
+      "date": "current directory accessed 2026-08-17",
+      "page": "PDF pp. 1 and 11, custody rule and St. Joseph National Lithuanian row",
+      "url": "https://public.files.capacity.com/b74c60b2-5d6b-4369-ae6a-8eed6e9bbb22/09dac8fb-8710-4c74-96a7-fe9c940e9898?FU=1726846863#page=11"
+    },
+    {
+      "title": "Catholic Churches in St. Louis",
+      "publisher": "St. Louis Genealogical Society",
+      "date": "accessed 2026-08-17",
+      "page": "Saint Joseph Lithuanian entry",
+      "url": "https://stlgs.org/research-2/congregations/catholic/catholic-churches"
+    },
+    {
+      "title": "Former St. Joseph Church, MacKay Place and Park Avenue",
+      "publisher": "Wikimedia Commons",
+      "date": "2023-10-05",
+      "page": "geolocated photograph and file description",
+      "url": "https://commons.wikimedia.org/wiki/File:Former_St._Joseph_Church,_MacKay_Place_and_Park_Avenue,_Lafayette_Square,_St._Louis,_MO_-_53280157106.jpg"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The 1896 Virgin Mary parish effort is a precursor, while St. Joseph was organized in 1915. The archdiocesan closed-parish directory says Park and Anderson, whereas the local church list and geolocated visual evidence place the former church at 2123 Park Avenue and MacKay Place. The directory's 1915-1970 range supports identity and closed context but does not itself define the exact erection or suppression acts.",
+  "gaps": "The exact pre-1916 host worship sites; the canonical erection instrument; resolution of the Anderson-versus-MacKay location wording; the 1970 suppression and merger decree; St. Henry's precise reception of parishioners and records; any cemetery; the conversion date; and current occupancy, interior, and structural condition of the former church remain unresolved."
+}

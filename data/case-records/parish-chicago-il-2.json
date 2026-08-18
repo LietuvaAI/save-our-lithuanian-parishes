@@ -1,0 +1,157 @@
+{
+  "slug": "parish-chicago-il-2",
+  "culturenetEntityId": "cn:institution:parish-chicago-il-2",
+  "asOf": "2026-08-17",
+  "formationLabel": "1913 Urbonas parish/attempt and 1914 St. Peter lineage conflict · activity through 1919 and later relocation · terminal date unresolved",
+  "institutionClass": "national_catholic_pncc",
+  "institutionStatus": "historical_closed_date_unresolved",
+  "buildingStatus": "unknown",
+  "currentUse": "The canonical route currently gathers conflicting evidence for one or possibly two Lithuanian independent or national Catholic efforts in Chicago's Town of Lake area. Michelsonas describes a parish founded by Rev. P. B. Urbonas in 1913 and lapsed after about two years. Wolkovich describes St. Peter the Apostle, founded by Rev. Zigmas Jankauskas in 1914 and served through 1919; Oikos says the 1913 attempt was unsuccessful and treats the 1914 St. Peter entry separately before reporting a later move to 1957 Canal Street and dissolution after several years. The original Town of Lake worship address, the directional prefix and parcel for 1957 Canal Street, all building outcomes, successor, and record custody remain unknown. No current congregation is asserted.",
+  "summary": "This record represents a Lithuanian independent or national Catholic Town of Lake history that cannot yet be reduced to one certain founder, formation date, or end date. Michelsonas reports that Rev. P. B. Urbonas founded an independent parish in 1913 and that it lasted about two years. Wolkovich instead identifies St. Peter Parish, founded by Rev. Zigmas Jankauskas in 1914 and lasting through 1919. Oikos preserves both entries: its narrative calls Urbonas's 1913 effort unsuccessful, then says Jankauskas founded St. Peter the next year, served through 1919, and that the parish later moved to 1957 Canal Street in Chicago's 18th Lithuanian colony before dissolving after a few years. The existing crosswalk says the two readings are likely the same congregation but explicitly retains both; no charter, address, clergy succession, or continuity instrument resolves whether they were one congregation, successive phases, or distinct attempts. The inherited public closure of about 1915 is therefore too definite for the full canonical cluster. Both source lines describe historical cessation, but the exact identity, terminal date, formal PNCC relationship, sites, successor, records, and building fates remain unresolved.",
+  "institutionLifecycle": {
+    "formation": "Conflicting readings: Michelsonas says Rev. P. B. Urbonas founded an independent/national parish in 1913; Wolkovich says Rev. Zigmas Jankauskas founded St. Peter Parish in 1914. Oikos calls the Urbonas effort unsuccessful and presents Jankauskas's St. Peter as a separate following entry. Their identity relationship is unresolved.",
+    "jurisdiction": "Lithuanian independent/separatist or national Catholic. The protected canonical class is national_catholic_pncc, but no parish-specific PNCC reception, diocesan assignment, or synod record has been found; formal PNCC jurisdiction remains unverified.",
+    "lastVerifiedActivity": "Wolkovich reports Jankauskas's St. Peter phase through 1919. Oikos reports a later relocation to 1957 Canal Street and dissolution after several years but supplies no exact transfer or terminal year.",
+    "terminalStatus": "Both source lines describe lapse or dissolution, but the date and whether the claims concern one institution or two are unresolved.",
+    "currentVerification": "No current Town of Lake or 1957 Canal congregation, successor, parish archive, or record custodian was found. The accessible current Western Diocese PNCC site identifies its Chicago diocesan office and All Saints Cathedral but supplies no evidence connecting this historical record to a current parish. Directory absence is not used as a closure date."
+  },
+  "worshipSites": [
+    {
+      "siteType": "worship_site",
+      "name": "Town of Lake independent/national Catholic worship site",
+      "address": "Chicago (Town of Lake); exact street address unresolved",
+      "usePeriod": "1913 Urbonas reading and/or 1914–1919 St. Peter reading; identity and continuity unresolved",
+      "buildingCondition": "unknown",
+      "currentUse": "unknown",
+      "evidence": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje", "locator": "Stasys Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), p. 130: 1913 Urbonas parish and approximately two-year duration; no address"},
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "William Wolkovich-Valkavičius, Lithuanian Religious Life in America, vol. 3, p. 223: St. Peter, Town of Lake, Rev. Zigmas Jankauskas, 1914–1919; no address"},
+        {"url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf", "locator": "Kristina Vaitkevičienė, PDF p. 30 / printed pp. 58–59 and table PDF p. 32 / printed p. 62: separate 1913 Town of Lake and 1914 St. Peter entries"}
+      ]
+    },
+    {
+      "siteType": "worship_site",
+      "name": "Relocated St. Peter / national parish site",
+      "address": "1957 Canal St., Chicago, IL; source does not supply a directional prefix or parcel",
+      "usePeriod": "after the Town of Lake phase; transfer date and terminal year unresolved; source says the parish dissolved after several years",
+      "buildingCondition": "unknown",
+      "currentUse": "unknown",
+      "evidence": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, p. 223, as preserved in the canonical compendium and cited by Oikos: move from Town of Lake to 1957 Canal St. and later dissolution"},
+        {"url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf", "locator": "Vaitkevičienė, PDF p. 30 / printed pp. 58–59 and table PDF p. 32 / printed p. 62: relocation to the 18th Lithuanian colony at 1957 Canal St.; dissolution after several years"}
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-identity-relation-unresolved",
+      "source": "1913 Rev. P. B. Urbonas Town of Lake parish or attempt",
+      "target": "1914 St. Peter Parish founded by Rev. Zigmas Jankauskas",
+      "date": "1913–1914",
+      "status": "conflict_preserved",
+      "note": "The repository crosswalk says likely same congregation but keeps both readings. Oikos presents the Urbonas effort as unsuccessful and the Jankauskas St. Peter as a following foundation. No charter, address match, member continuity, or transfer instrument resolves the relationship."
+    },
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:parish-chicago-il-2",
+      "target": "Town of Lake worship site, exact address unresolved",
+      "date": "1913 and/or 1914–1919",
+      "status": "conflict_preserved",
+      "note": "The site cannot be assigned to one combined timeline until the identity conflict is resolved."
+    },
+    {
+      "type": "institution-relocated-to-site",
+      "source": "St. Peter Parish, Town of Lake lineage",
+      "target": "1957 Canal St., Chicago",
+      "date": "after the Town of Lake phase; exact year unresolved",
+      "status": "source-bounded",
+      "note": "Oikos and its Wolkovich/Ambrose source chain report the relocation and later dissolution. No deed, lease, directional prefix, or parcel has been verified."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "The canonical route concerns a Lithuanian independent or national Catholic effort in Chicago's Town of Lake area, not Holy Cross, St. George, Saints Peter and Paul, or another Roman Catholic Lithuanian parish. Michelsonas calls the institution Lithuanian National Catholic; Wolkovich calls St. Peter an independent/separatist Lithuanian Catholic congregation. The current canonical class is national_catholic_pncc, but the reviewed parish-specific sources do not supply a PNCC reception act or diocesan roster entry, so formal jurisdiction remains an explicit gap rather than an inferred fact.",
+      "sources": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje", "locator": "Michelsonas, Lietuvių Išeivija Amerikoje (1868–1961), p. 130: independent/national Town of Lake parish"},
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, Lithuanian Religious Life in America, vol. 3, p. 223: St. Peter independent/separatist Town of Lake congregation"}
+      ]
+    },
+    {
+      "text": "Michelsonas reports that Rev. P. B. Urbonas founded an independent parish in Town of Lake in 1913 after earlier national-church work elsewhere and that the Chicago parish lasted only about two years. On that reading the institution lapsed around 1915. Michelsonas supplies no church name, street address, property, successor, or closure instrument, so the approximate end cannot be projected beyond the specific Urbonas account.",
+      "sources": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje", "locator": "Michelsonas, p. 130: Rev. P. B. Urbonas, 1913 foundation, approximately two-year duration"}
+      ]
+    },
+    {
+      "text": "Wolkovich gives a different lineage: St. Peter Parish in the Town of Lake section was founded by Rev. Zigmas Jankauskas in 1914 and lasted through 1919. The Brain crosswalk labels the 1913/1914 difference a divergence, says the accounts are likely the same congregation, and instructs researchers to keep both. That crosswalk is a hypothesis, not evidence that Urbonas and Jankauskas led one legally continuous institution, and the later 1919 boundary directly conflicts with using about 1915 as the route's certain closure.",
+      "sources": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, p. 223: St. Peter Parish, Town of Lake, founded by Rev. Zigmas Jankauskas, 1914–1919"},
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje", "locator": "Brain Michelsonas/Wolkovich source package crosswalk for Town of Lake: 1913/1914 divergence, likely same congregation, keep both"}
+      ]
+    },
+    {
+      "text": "Oikos preserves the distinction more sharply. Its narrative says Urbonas tried to organize another national parish in Town of Lake in 1913 but that the attempt was unsuccessful; it then says Jankauskas arrived the next year, founded St. Peter the Apostle, and worked there through 1919. The accompanying parish table gives separate 1913 Urbonas and 1914 St. Peter/Jankauskas rows. This evidence does not prove two census institutions, but it prevents the dossier from silently treating one founder/date/end sequence as settled.",
+      "sources": [
+        {"url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf", "locator": "Vaitkevičienė, visually verified PDF p. 30 / printed pp. 58–59: unsuccessful Urbonas attempt followed by Jankauskas foundation and service through 1919"},
+        {"url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf", "locator": "Vaitkevičienė, visually verified table, PDF p. 32 / printed p. 62: separate Chicago 1913 Urbonas and 1914 St. Peter rows"}
+      ]
+    },
+    {
+      "text": "The St. Peter lineage later moved from Town of Lake to Chicago's 18th Lithuanian colony at 1957 Canal Street and dissolved after several years. The source supplies neither the transfer year nor a directional prefix, parcel, building description, or exact terminal year. The move is therefore recorded as a typed relocation relationship, not as proof that the 1913 Urbonas account continued to the Canal Street site or that a building transaction itself ended the parish.",
+      "sources": [
+        {"url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf", "locator": "Vaitkevičienė, PDF p. 30 / printed pp. 58–59 and table PDF p. 32 / printed p. 62: relocation to 1957 Canal St. and dissolution after several years; cites Wolkovich vol. 3 p. 223 and Ambrose p. 139"},
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, p. 223: St. Peter Town of Lake lineage and later relocation as preserved in the canonical source package"}
+      ]
+    },
+    {
+      "text": "No current congregation, successor, cemetery, record custodian, original Town of Lake address, or surviving worship building has been verified. The official Western Diocese PNCC site identifies the present diocese and its Chicago office at All Saints Cathedral but does not establish a connection to this historical route. The inherited public projection of founded 1913 and closed about 1915 captures only the Michelsonas reading; it must remain flagged until a separate identity and status adjudication determines whether the route represents one congregation, successive phases, or a conflated pair.",
+      "sources": [
+        {"url": "https://www.westerndiocese.org/", "locator": "Western Diocese PNCC official site, accessed 2026-08-17: current diocesan identity and Chicago office at All Saints Cathedral; no Town of Lake continuity evidence"},
+        {"url": "https://www.westerndiocese.org/history/", "locator": "Western Diocese PNCC official history, accessed 2026-08-17: jurisdictional background; no parish-specific Town of Lake reception, successor, or closure record"},
+        {"url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf", "locator": "Vaitkevičienė, PDF pp. 30, 32 / printed pp. 58–59, 62: conflicting 1913 and 1914 lineages and later relocation"}
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1913",
+      "headline": "Urbonas Town of Lake parish or attempt",
+      "detail": "Michelsonas calls it a parish that lasted about two years; Oikos calls the effort unsuccessful. Its relation to St. Peter is unresolved.",
+      "sources": [
+        {"title": "Lietuvių Išeivija Amerikoje (1868–1961)", "publisher": "Stasys Michelsonas / Keleivis", "date": "1961", "page": "p. 130", "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"},
+        {"title": "The Lithuanian National Catholic Church in America: some historical features", "publisher": "Oikos", "date": "2015", "page": "PDF p. 30 / printed pp. 58–59", "url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf"}
+      ]
+    },
+    {
+      "date": "1914–1919",
+      "headline": "Jankauskas leads St. Peter Parish in Town of Lake",
+      "detail": "Wolkovich and Oikos support the St. Peter name, 1914 formation, Jankauskas leadership, and activity through 1919.",
+      "sources": [{"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "p. 223", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"}]
+    },
+    {
+      "date": "after the Town of Lake phase",
+      "headline": "St. Peter lineage relocates to 1957 Canal Street",
+      "detail": "The move and later dissolution are source-reported, but exact dates and the site's property history remain unresolved.",
+      "sources": [{"title": "The Lithuanian National Catholic Church in America: some historical features", "publisher": "Oikos", "date": "2015", "page": "PDF pp. 30, 32 / printed pp. 58–59, 62", "url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf"}]
+    },
+    {
+      "date": "2026-08-17",
+      "headline": "Inherited 1913–about 1915 projection remains a bounded risk",
+      "detail": "The dossier preserves both lineages and changes no census, class, or public-status count; a separate adjudication is required before projection correction or entity splitting.",
+      "sources": [
+        {"title": "Lietuvių Išeivija Amerikoje (1868–1961)", "publisher": "Stasys Michelsonas / Keleivis", "date": "1961", "page": "p. 130", "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"},
+        {"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "p. 223", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"}
+      ]
+    }
+  ],
+  "sources": [
+    {"title": "Lietuvių Išeivija Amerikoje (1868–1961)", "publisher": "Stasys Michelsonas / Keleivis", "date": "1961", "page": "p. 130", "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"},
+    {"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "p. 223", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"},
+    {"title": "The Lithuanian National Catholic Church in America: some historical features", "publisher": "Oikos: Lithuanian Migration and Diaspora Studies", "date": "2015", "page": "PDF pp. 30, 32 / printed pp. 58–59, 62", "url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf"},
+    {"title": "Western Diocese PNCC official site", "publisher": "Western Diocese, Polish National Catholic Church", "date": "accessed 2026-08-17", "url": "https://www.westerndiocese.org/"},
+    {"title": "A brief history of the Western Diocese", "publisher": "Western Diocese, Polish National Catholic Church", "date": "accessed 2026-08-17", "url": "https://www.westerndiocese.org/history/"}
+  ],
+  "confidence": "probable",
+  "conflictsWithArchiveRecord": "Michelsonas says Rev. P. B. Urbonas founded a Town of Lake parish in 1913 that lapsed after about two years. Wolkovich says Rev. Zigmas Jankauskas founded St. Peter in 1914 and served it through 1919. Oikos calls the Urbonas attempt unsuccessful, treats the 1914 St. Peter foundation separately, and records later relocation to 1957 Canal Street followed by dissolution after several years. Brain's crosswalk says likely same congregation but keep both; no direct evidence resolves whether these are one institution, successive phases, or distinct attempts. The inherited founded-1913/closed-about-1915 projection therefore overstates a single reading and cannot cover the 1914–1919 and post-relocation lineage. The national_catholic_pncc class is retained as protected canon, while formal parish-specific PNCC jurisdiction remains unverified.",
+  "gaps": "No charter, incorporation filing, founding minutes, PNCC reception or assignment instrument, member or trustee list, complete clergy succession, original Town of Lake street address, church name for the Urbonas reading, deed, lease, directional prefix or parcel for 1957 Canal Street, dedication record, worship schedule, cemetery, sacramental register, exact relocation or dissolution year, closure act, successor, record-custody notice, demolition record, present ownership/current use, or structural/interior assessment has been found. The entity boundary between the 1913 Urbonas effort and 1914 St. Peter, the meaning of the 1919 endpoint, and the timing and duration of the Canal Street phase require separate adjudication."
+}

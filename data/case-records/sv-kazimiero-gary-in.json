@@ -4,6 +4,39 @@
   "buildingStatus": "converted",
   "currentUse": "Protestant church — the former St. Casimir church and school buildings at 1368 West 15th Avenue are used by the Black-majority Power and Light Church of Gary, an independent congregation led by Apostle Benny L. Dozier Sr. and Prophetess Geraldine Dozier",
   "summary": "The 1927 St. Casimir Lithuanian church building in Gary still stands and remains in religious use: per the Global True Lithuania heritage survey, both the church and the adjacent former school building (built 1918 as the first church) at 1368 West 15th Avenue are now used \"for the same purposes\" by the Black-majority Power and Light church. The Power & Light Church of Gary is an active congregation as of mid-2026, with its own website listing an 11 AM Sunday service and leadership by Apostle Benny L. Dozier Sr. and Prophetess Geraldine Dozier; its official address is given as 1351 Lincoln St, Gary, IN (zip 46407, the same zip as the old St. Casimir parish listing). Global True Lithuania records that after the sale the newer decorative elements — post-1970-fire stained glass by designer A. Valeška and Lithuanian folk-inspired wooden artwork — were removed, but that two original Lithuanian stained-glass windows inscribed \"Moterų dovana\" and \"Vyrų dovana\" survived the April 12, 1970 fire and remained in the building. The same source confirms the closure trajectory in the archive record: after most Lithuanians left Gary and the 1970 fire, parishioners sought to relocate the parish to the suburbs and had found a buyer for the church, but the diocese forbade the relocation, effectively condemning the parish, which closed in 1998. A 2016 Hoosier History Live newsletter photo caption gives the closure as 2000 — a minor discrepancy among secondary sources. No sale price, buyer transaction details, recent press, preservation campaign, or reunion activity was found.",
+  "historicalNarrative": [
+    {
+      "text": "St. Casimir was Gary's Lithuanian Roman Catholic parish, distinct from same-name churches elsewhere in Indiana and Illinois. The Lithuanian heritage survey identifies a 1918 building that served first as the church and later as the parish school, followed by the principal church built in 1927 at 1368 West 15th Avenue. These are successive building milestones; the accepted sources do not establish the parish's precise canonical erection date.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/indiana-746/", "locator": "Indiana heritage survey, Gary St. Casimir section, 1918 first-church/school and 1927 church-building paragraphs"}
+      ]
+    },
+    {
+      "text": "A fire on April 12, 1970 severely affected the church and its artistic fabric. The heritage survey says two original stained-glass windows with Lithuanian donor inscriptions survived, while later windows and Lithuanian folk-inspired woodwork were installed during the post-fire restoration. The fire and rebuilding belong to the physical church's lifecycle and did not themselves close the parish.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/indiana-746/", "locator": "Indiana heritage survey, St. Casimir fire, surviving donor windows, and post-fire restoration paragraphs"}
+      ]
+    },
+    {
+      "text": "As Lithuanian membership declined, parishioners sought to relocate St. Casimir to the suburbs and reportedly found a buyer for the Gary property. The heritage survey says the diocese refused the relocation and gives 1998 as the parish's closure year. A Hoosier History Live caption instead says the church closed in 2000. Without a diocesan decree or final-Mass record, 1998 remains the stronger attributed reading while the 1998–2000 discrepancy is preserved.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/indiana-746/", "locator": "Indiana heritage survey, Gary St. Casimir relocation effort, diocesan refusal, and reported 1998 closure"},
+        {"url": "https://hoosierhistorylive.org/mail/2016-07-09.html", "locator": "Hoosier History Live newsletter, St. Casimir Gary photograph caption giving a 2000 closure reading"}
+      ]
+    },
+    {
+      "text": "The former church and school were later used by Power and Light Church of Gary, according to the heritage survey. It says some post-fire Lithuanian artwork was removed after the sale while the two older donor windows remained. No deed, sale date, price, or buyer instrument has been located, so the building reuse is source-bounded and does not establish institutional succession from the Roman Catholic parish.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/indiana-746/", "locator": "Indiana heritage survey, former St. Casimir church-and-school reuse and post-sale artwork paragraphs"}
+      ]
+    },
+    {
+      "text": "Power & Light Church's own current website presents an active independent congregation with an 11:00 a.m. Sunday service and lists 1351 Lincoln Street as its address. That address differs from the former parish's 1368 West 15th Avenue address, although both may describe the same corner complex. The current source confirms the later congregation's activity, but exact parcel continuity and the physical condition of the former St. Casimir buildings remain unverified.",
+      "sources": [
+        {"url": "https://plcgi.org/our-church/", "locator": "Power & Light Church Our Church page, leadership, Sunday service, and 1351 Lincoln Street contact fields"}
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "1998",

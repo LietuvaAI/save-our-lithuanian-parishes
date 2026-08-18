@@ -4,6 +4,40 @@
   "buildingStatus": "converted",
   "currentUse": "Probable identification: the former St. Casimir Lithuanian church building at 283 E 14th Street, Chicago Heights, IL is standing and used by a non-Catholic congregation; International Pentecostal Assemblies Ecumenical lists that address as its office (site copyright 2020), and Global True Lithuania reports a non-Catholic church operating inside a building surrounded by empty lots, with the Lithuanian name still carved in the cornerstone.",
   "summary": "Research indicates the only Lithuanian parish dedicated to St. Casimir (Šv. Kazimiero) in the Chicago area was in Chicago Heights, a south suburb — not in Marquette Park or Brighton Park as the archive record guessed; genealogical registers of Chicago-area Lithuanian parishes list St. Casimir only at Chicago Heights (genmetrika.eu), with the church/school building at 283 E 14th Street. Global True Lithuania reports the Lithuanian parish closed in 1987, that the two-story building (which housed both church and school and never gained a purpose-built second church) still stands surrounded by empty lots, that a non-Catholic church now operates inside, and that the Lithuanian name remains carved in the cornerstone. International Pentecostal Assemblies Ecumenical gives 283 E 14th Street, Chicago Heights as its address (site copyright 2020), consistent with the non-Catholic reuse. The stained-glass repatriation in the archive record is corroborated by a Bernardinai.lt article of 2013-08-14: ten roughly 90-year-old windows from a closed Chicago Lithuanian church bearing the name of Lithuania's patron saint, each originally donated by a Lithuanian family, arrived at the Vilnius Archdiocese restoration and construction trust around 2008, were cleaned, soldered and reinforced, were tentatively (but without signature or documentation) attributed to Adolfas Valeška by the Church Heritage Museum director, and as of 2013 were still awaiting a permanent home, with plans to adapt them to a newly built church. No later source documenting their final installation was found, and no sale price, buyer, diocesan closure decree, preservation campaign, or reunion activity for the parish property was found.",
+  "historicalNarrative": [
+    {
+      "text": "The Lithuanian St. Casimir institution represented by this public profile was in Chicago Heights, not within the City of Chicago and not in Marquette Park or Brighton Park. Two genealogical research guides independently place the Lithuanian parish in Chicago Heights, and the Chicago-area church index lists no second Lithuanian St. Casimir parish in the city. This geographic adjudication keeps the institution distinct from Polish and other same-name Catholic parishes.",
+      "sources": [
+        {"url": "https://www.genmetrika.eu/cikagos_baznycios.html", "locator": "Chicago church-register index, St. Casimir entry identifying Chicago Heights"},
+        {"url": "https://www.lithuaniancatholicancestorsearch.com/st-casimir--lith--parish--chicago-heights-.html", "locator": "St. Casimir (Lith.) parish guide, title and Chicago Heights location fields"}
+      ]
+    },
+    {
+      "text": "The parish register guide identifies St. Casimir as a Lithuanian Roman Catholic parish and preserves online register coverage for 1911–1915. Its history places the church-and-school complex at 283 East 14th Street. These records establish early twentieth-century institutional activity and the Chicago Heights site without relying on a similarly named parish elsewhere.",
+      "sources": [
+        {"url": "https://www.lithuaniancatholicancestorsearch.com/st-casimir--lith--parish--chicago-heights-.html", "locator": "Parish guide, Parish History, Church Location, and Registers Online (1911–1915) sections"}
+      ]
+    },
+    {
+      "text": "The Lithuanian heritage survey describes the 14th Street property as a two-story structure that combined church and school functions; it says the parish never completed a separate purpose-built second church. The same field account reports that the Lithuanian parish closed in 1987. Because no diocesan decree or final-worship record has been located, that date remains an attributed closure reading rather than proof of the exact canonical mechanism.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/chicago-illinois-45/", "locator": "Chicago heritage survey, Chicago Heights St. Casimir section, combined church-school building and reported 1987 closure"}
+      ]
+    },
+    {
+      "text": "Ten stained-glass windows associated in Lithuanian reporting with a closed Chicago-area Lithuanian St. Casimir church reached a Vilnius Archdiocesan restoration trust around 2008. Bernardinai reported in 2013 that the windows had been cleaned, soldered, and reinforced but still lacked a permanent home. Their attribution to artist Adolfas Valeška was explicitly tentative because the windows were unsigned and undocumented, and the source church was not identified by a full name-and-address statement. The object history is therefore preserved with that residual provenance uncertainty.",
+      "sources": [
+        {"url": "https://www.bernardinai.lt/2013-08-14-ieskoma-vietos-is-cikagos-lietuviu-baznycios-atkeliavusiems-vitrazams/", "locator": "Bernardinai.lt article, paragraphs on the ten windows' arrival, restoration, donor inscriptions, tentative Valeška attribution, and unplaced status in 2013"}
+      ]
+    },
+    {
+      "text": "The former parish institution and the later use of its building are separate. International Pentecostal Assemblies Ecumenical lists 283 East 14th Street as an organizational address, while the heritage survey reports a non-Catholic congregation using the standing former church-and-school building and notes that the Lithuanian name remains on the cornerstone. This supports probable religious reuse of the historic property, not institutional succession from the Roman Catholic Lithuanian parish, and it does not establish the building's interior or structural condition.",
+      "sources": [
+        {"url": "https://ipaenetwork.net/southern-region", "locator": "IPAE Southern Region page, contact entry for 283 E. 14th Street, Chicago Heights"},
+        {"url": "https://global.truelithuania.com/lt/chicago-illinois-45/", "locator": "Lithuanian-language Chicago heritage survey, Chicago Heights St. Casimir section, standing building, non-Catholic use, and Lithuanian cornerstone description"}
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "1987",

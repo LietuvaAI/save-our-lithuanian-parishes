@@ -1,0 +1,150 @@
+{
+  "slug": "st-mary-wanamie-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "unknown",
+  "currentUse": "St. Mary no longer operates as a Lithuanian Roman Catholic parish. The Diocese records its closure on June 27, 2010 into Holy Spirit Parish. Holy Spirit was suppressed effective January 12, 2026; Newport Township, including Wanamie, entered Saint Faustina Kowalska Parish. Saint Faustina currently worships at Holy Trinity Church, 520 South Hanover Street in Nanticoke, and at St. Mary, Our Lady of Perpetual Help Church, 130 Rectory Road in Mocanaqua. The Mocanaqua St. Mary site is a different church and must not be conflated with Wanamie. A 2024 emergency-planning guide still lists St. Mary's Church at 203 Bellas Road, while earlier field research reports the closed church standing but abandoned. Those dated sources do not establish the structure's condition or occupancy on the 2026 case date.",
+  "summary": "St. Mary was Wanamie's Lithuanian Roman Catholic parish and was active by August 1920, when a Lithuanian newspaper advertisement addressed an organist search to its pastor and named St. Mary's Church directly. Field research says construction of the known church began in 1925, so 1925 is treated as a building date rather than the parish's founding year. The Diocese records St. Mary as closed June 27, 2010 into Holy Spirit Parish. Holy Spirit was suppressed in January 2026, transferring Newport Township territory to Saint Faustina Kowalska Parish. Saint Faustina's current St. Mary church is in Mocanaqua and is not the former Wanamie building. The Wanamie site at 203 Bellas Road was still listed in a 2024 emergency guide and earlier field research reported the church standing but abandoned; survival, occupancy, and condition on the 2026 case date remain unresolved.",
+  "historicalNarrative": [
+    {
+      "text": "A manually reviewed Darbininkas advertisement of August 17, 1920 names Reverend J. Miliauskas and St. Mary's Church in Wanamie while seeking an organist. This directly establishes a functioning named parish by 1920. It supersedes reliance on the inherited 1911 Draugas town mention, which is only a donor-location lead and does not name the parish or adjudicate identity. The canonical erection and earliest worship location remain unknown.",
+      "sources": [
+        {
+          "url": "https://www.spauda.org/darbininkas/archive/1920/1920-08-17-DARBININKAS-i5-8.pdf",
+          "locator": "Darbininkas, 1920-08-17, p. 4, organist advertisement naming Rev. J. Miliauskas and St. Mary's Church, Wanamie"
+        }
+      ]
+    },
+    {
+      "text": "A Pennsylvania Lithuanian-heritage field survey says construction of the Wanamie Lithuanian church began in 1925 and documents old and new Lithuanian cemetery sites associated with the community. Because St. Mary's is directly attested in 1920, 1925 cannot safely serve as the institutional founding date; it marks construction of the known church. The field survey later reported the closed building standing but abandoned.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/category/usa/pennsylvania/",
+          "locator": "Pennsylvania field survey, Wanamie: church construction beginning in 1925, reported abandoned condition, and cemetery descriptions"
+        }
+      ]
+    },
+    {
+      "text": "The Diocese of Scranton's consolidated register records St. Mary, Wanamie, as closed June 27, 2010 with Holy Spirit Parish as successor. The typed relationship is institutional and territorial succession. A 2024 emergency-preparedness guide lists St. Mary's Church at 203 Bellas Road as a local emergency-planning location, confirming that the named site remained in official local use as an address in 2024. The listing does not independently establish that the former church structure was then standing, occupied, or used for Catholic worship.",
+      "sources": [
+        {
+          "url": "https://www.dioceseofscranton.org/wp-content/uploads/2025/07/Consolidated-Parishes-updated-7-2-25.pdf",
+          "locator": "Consolidated Parishes, Wanamie: St. Mary closed 2010-06-27, successor Holy Spirit Parish"
+        },
+        {
+          "url": "https://susquehannanuclear.com/wp-content/uploads/2024/01/Talen-Emergency-Prep-Brochure-2024-Compressed.pdf",
+          "locator": "2024 emergency-preparedness guide: St. Mary's Church, 203 Bellas Road, Wanamie"
+        }
+      ]
+    },
+    {
+      "text": "Holy Spirit Parish was suppressed effective January 12, 2026. The diocesan decree transferred Newport Township to Saint Faustina Kowalska Parish and designated Holy Trinity Church at 520 South Hanover Street, Nanticoke, as principal church and St. Mary, Our Lady of Perpetual Help Church at 130 Rectory Road, Mocanaqua, as secondary church. The Mocanaqua church is a separate St. Mary institution and building; its hosted worship does not describe the former Lithuanian St. Mary site in Wanamie.",
+      "sources": [
+        {
+          "url": "https://cdn.diocesanweb.org/crossroads/scranton/wp-content/uploads/2025/12/Decree-of-suppression-Holy-Spirit-Parish.pdf",
+          "locator": "Holy Spirit suppression decree: effective 2026-01-12 and transfer of Newport Township"
+        },
+        {
+          "url": "https://cdn.diocesanweb.org/crossroads/scranton/wp-content/uploads/2025/12/Decree-of-modification-of-Saint-Faustina-Parish-Nov-2025.pdf",
+          "locator": "Saint Faustina modification decree: territorial scope and distinct Nanticoke and Mocanaqua worship sites"
+        },
+        {
+          "url": "https://www.dioceseofscranton.org/find-a-parish/saint-faustina-kowalska-parish-nanticoke/",
+          "locator": "Current diocesan directory: Saint Faustina principal and secondary churches; accessed 2026-08-17"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1920-08-17",
+      "headline": "Named St. Mary parish is active in Wanamie",
+      "detail": "A contemporary organist advertisement directly names St. Mary's Church and its priest.",
+      "sources": [
+        {
+          "title": "Wanamie organist advertisement",
+          "publisher": "Darbininkas",
+          "date": "1920-08-17",
+          "page": "p. 4",
+          "url": "https://www.spauda.org/darbininkas/archive/1920/1920-08-17-DARBININKAS-i5-8.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2010-06-27",
+      "headline": "St. Mary closes into Holy Spirit",
+      "detail": "The Diocese records the Wanamie parish's closure and Holy Spirit Parish as successor.",
+      "sources": [
+        {
+          "title": "Consolidated Parishes",
+          "publisher": "Diocese of Scranton",
+          "date": "updated 2025-07-02",
+          "page": "Wanamie entry",
+          "url": "https://www.dioceseofscranton.org/wp-content/uploads/2025/07/Consolidated-Parishes-updated-7-2-25.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2026-01-12",
+      "headline": "Holy Spirit suppression transfers territory to Saint Faustina",
+      "detail": "Newport Township entered Saint Faustina; its current Nanticoke and Mocanaqua churches are separate from the Wanamie building.",
+      "sources": [
+        {
+          "title": "Decree of suppression of Holy Spirit Parish",
+          "publisher": "Diocese of Scranton",
+          "date": "2025",
+          "url": "https://cdn.diocesanweb.org/crossroads/scranton/wp-content/uploads/2025/12/Decree-of-suppression-Holy-Spirit-Parish.pdf"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wanamie organist advertisement",
+      "publisher": "Darbininkas",
+      "date": "1920-08-17",
+      "page": "p. 4",
+      "url": "https://www.spauda.org/darbininkas/archive/1920/1920-08-17-DARBININKAS-i5-8.pdf"
+    },
+    {
+      "title": "Pennsylvania Lithuanian heritage field survey",
+      "publisher": "True Lithuania",
+      "date": "accessed 2026-08-17",
+      "url": "https://global.truelithuania.com/category/usa/pennsylvania/"
+    },
+    {
+      "title": "Consolidated Parishes",
+      "publisher": "Diocese of Scranton",
+      "date": "updated 2025-07-02",
+      "page": "Wanamie entry",
+      "url": "https://www.dioceseofscranton.org/wp-content/uploads/2025/07/Consolidated-Parishes-updated-7-2-25.pdf"
+    },
+    {
+      "title": "2024 emergency-preparedness guide",
+      "publisher": "Susquehanna Nuclear",
+      "date": "2024",
+      "page": "Wanamie emergency-location listing",
+      "url": "https://susquehannanuclear.com/wp-content/uploads/2024/01/Talen-Emergency-Prep-Brochure-2024-Compressed.pdf"
+    },
+    {
+      "title": "Decree of suppression of Holy Spirit Parish",
+      "publisher": "Diocese of Scranton",
+      "date": "2025",
+      "url": "https://cdn.diocesanweb.org/crossroads/scranton/wp-content/uploads/2025/12/Decree-of-suppression-Holy-Spirit-Parish.pdf"
+    },
+    {
+      "title": "Decree modifying Saint Faustina Parish",
+      "publisher": "Diocese of Scranton",
+      "date": "2025",
+      "url": "https://cdn.diocesanweb.org/crossroads/scranton/wp-content/uploads/2025/12/Decree-of-modification-of-Saint-Faustina-Parish-Nov-2025.pdf"
+    },
+    {
+      "title": "Saint Faustina Kowalska Parish, Nanticoke",
+      "publisher": "Diocese of Scranton",
+      "date": "accessed 2026-08-17",
+      "url": "https://www.dioceseofscranton.org/find-a-parish/saint-faustina-kowalska-parish-nanticoke/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The inherited 1925 founded year is rejected as the institutional formation date because a manually reviewed 1920 advertisement directly names St. Mary's Church and its priest. Field research identifies 1925 as the beginning of construction of the known church. The inherited 1911 Draugas item is a location-tagged donor mention, not adjudicated parish evidence, and is not used to establish identity. A typographical truncation of the 2010 closure year in an older consolidated table is resolved by the corrected diocesan register and successor chronology.",
+  "gaps": "The exact formation and canonical erection dates, first worship location, church completion and dedication dates, deed and parcel history, full cemetery addresses and present custody, suppression instrument for the 2010 closure, sacramental-record custody, present owner and occupancy, structural condition, and whether any activity now occurs at 203 Bellas Road remain unresolved."
+}

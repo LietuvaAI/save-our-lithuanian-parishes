@@ -923,30 +923,40 @@
         "name": "Lithuanian church (unnamed)",
         "public_evidence": [
           {
-            "label": "Draugas archive",
-            "locator": "1970-06-10",
-            "sourceFamily": "draugas-registry-1909-2007",
-            "url": "https://www.draugas.org/archive/1970_reg/1970-06-10-DRAUGAS.pdf"
+            "label": "Cardinal Dougherty Correspondence",
+            "locator": "PDF p. 192, entry 80.4010",
+            "sourceFamily": "reviewed-case-source",
+            "url": "https://chrc-phila.org/wp-content/uploads/2009/03/cardinal-dougherty-correspondenc1.pdf#page=192"
           },
           {
-            "label": "web-historical",
-            "locator": null,
-            "sourceFamily": "web-historical",
-            "url": null
+            "label": "Schuylkill County, PA Churches",
+            "locator": "Missions and closed churches, lines 69-85",
+            "sourceFamily": "reviewed-case-source",
+            "url": "https://pagenweb.org/~schuylkill/rcch2.htm"
           },
           {
-            "label": "web-historical",
-            "locator": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
-            "sourceFamily": "web-historical",
+            "label": "Shenandoah and southern Coal Region: Lithuanian heritage",
+            "locator": "Further south: Lithuanian heritage at 209 road, Middleport passage",
+            "sourceFamily": "reviewed-case-source",
             "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/"
+          },
+          {
+            "label": "All Saints Chapel",
+            "locator": "lines 55-65",
+            "sourceFamily": "reviewed-case-source",
+            "url": "https://www.stjwchurch.org/all-saints-chapel"
+          },
+          {
+            "label": "High spires, gothic look, for Mother Teresa church",
+            "locator": "lines 18-24 and 29-51",
+            "sourceFamily": "reviewed-case-source",
+            "url": "https://therecord.com.au/news/international/high-spires-gothic-look-for-mother-teresa-church/"
           }
         ],
         "record_depth": "multi-source",
-        "record_type": "parish",
+        "record_type": "misija",
         "research_collection_refs": [
-          "repo://culturenet-brain/docs/research/draugas",
-          "repo://culturenet-brain/docs/research/draugas-parish-registry-1909-2007",
-          "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r9/data/candidates/web-historical-2026-07-15.json"
+          "repo://culturenet-brain/docs/research/parish-canon/case-files/current/lithuanian-church-middleport-pa.json"
         ],
         "source_families": [
           "draugas",
@@ -955,8 +965,8 @@
         "state": "PA"
       },
       "predicate": "multi_source_corroborated_public_institution_identity",
-      "source_artifact_id": "src:cib-9:lithuanian-church-middleport-pa:research-index-2026-07-31",
-      "source_locator": "research-index record lithuanian-church-middleport-pa",
+      "source_artifact_id": "src:cib-9:lithuanian-church-middleport-pa:reviewed-case-2026-08-17",
+      "source_locator": "reviewed case file institutionalForm and cited sources",
       "subject": {
         "canonical_entity_id": "cn:institution:lithuanian-church-middleport-pa"
       }
@@ -11740,6 +11750,72 @@
         "conflict_preserved": false,
         "state": "accepted"
       },
+      "assertion_type": "identity",
+      "confidence": "high",
+      "id": "assert:final-sites-16:baltimore-lloyd:site",
+      "object": {
+        "address": "11 Lloyd Street, Baltimore, MD",
+        "institution": "cn:institution:st-john-the-baptist-baltimore-md",
+        "name": "Lloyd Street Synagogue used by Saint John the Baptist",
+        "use_end": "1905",
+        "use_start": "1889-02-20"
+      },
+      "predicate": "reviewed_case_establishes_distinct_worship_site",
+      "source_artifact_id": "src:final-sites-16:baltimore-lloyd:case",
+      "source_locator": "worshipSites and corresponding institution-used-site relationship",
+      "subject": {
+        "canonical_entity_id": "cn:building_site:lloyd-street-synagogue-baltimore-md"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "identity",
+      "confidence": "high",
+      "id": "assert:final-sites-16:baltimore-paca:site",
+      "object": {
+        "address": "308 North Paca Street, Baltimore, MD 21201; corner of Saratoga and Paca Streets",
+        "institution": "cn:institution:st-john-the-baptist-baltimore-md",
+        "name": "Saint John the Baptist church at Saratoga and Paca Streets",
+        "use_end": "1917",
+        "use_start": "by 1905"
+      },
+      "predicate": "reviewed_case_establishes_distinct_worship_site",
+      "source_artifact_id": "src:final-sites-16:baltimore-lloyd:case",
+      "source_locator": "worshipSites and corresponding institution-used-site relationship",
+      "subject": {
+        "canonical_entity_id": "cn:building_site:st-john-paca-baltimore-md"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
+      "assertion_type": "identity",
+      "confidence": "high",
+      "id": "assert:final-sites-16:middleport-chapel:site",
+      "object": {
+        "address": "Middleport, Pennsylvania; exact street address and parcel unresolved",
+        "institution": "cn:institution:lithuanian-church-middleport-pa",
+        "name": "Immaculate Heart of Mary mission chapel, Middleport",
+        "use_end": null,
+        "use_start": "1948"
+      },
+      "predicate": "reviewed_case_establishes_distinct_worship_site",
+      "source_artifact_id": "src:final-sites-16:middleport-chapel:case",
+      "source_locator": "worshipSites and corresponding institution-used-site relationship",
+      "subject": {
+        "canonical_entity_id": "cn:building_site:immaculate-heart-of-mary-middleport-pa"
+      }
+    },
+    {
+      "adjudication": {
+        "conflict_preserved": false,
+        "state": "accepted"
+      },
       "assertion_type": "successor_relationship",
       "confidence": "high",
       "id": "assert:freeland-10:olic-successor",
@@ -17180,6 +17256,21 @@
       "slug": "immaculate-conception-rectory-windsor-street-cambridge-ma"
     },
     {
+      "aliases": [],
+      "canonical_name": "Immaculate Heart of Mary mission chapel, Middleport",
+      "entity_type": "building_site",
+      "id": "cn:building_site:immaculate-heart-of-mary-middleport-pa",
+      "lifecycle": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:final-sites-16:middleport-chapel:site"
+        ],
+        "start": "1948"
+      },
+      "site_subtype": "mission_chapel",
+      "slug": "immaculate-heart-of-mary-middleport-pa"
+    },
+    {
       "aliases": [
         "305 Collinsville Avenue"
       ],
@@ -17240,6 +17331,23 @@
       "id": "cn:building_site:lithuanian-world-center-mission-church-lemont-il",
       "site_subtype": "community_owned_host_church",
       "slug": "lithuanian-world-center-mission-church-lemont-il"
+    },
+    {
+      "aliases": [
+        "11 Lloyd Street, Baltimore, MD"
+      ],
+      "canonical_name": "Lloyd Street Synagogue used by Saint John the Baptist",
+      "entity_type": "building_site",
+      "id": "cn:building_site:lloyd-street-synagogue-baltimore-md",
+      "lifecycle": {
+        "end": "1905",
+        "source_assertion_ids": [
+          "assert:final-sites-16:baltimore-lloyd:site"
+        ],
+        "start": "1889-02-20"
+      },
+      "site_subtype": "church",
+      "slug": "lloyd-street-synagogue-baltimore-md"
     },
     {
       "aliases": [
@@ -18719,6 +18827,23 @@
         ]
       },
       "slug": "st-john-nepomucene-rectory-luzerne-pa"
+    },
+    {
+      "aliases": [
+        "308 North Paca Street, Baltimore, MD 21201"
+      ],
+      "canonical_name": "Saint John the Baptist church at Saratoga and Paca Streets",
+      "entity_type": "building_site",
+      "id": "cn:building_site:st-john-paca-baltimore-md",
+      "lifecycle": {
+        "end": "1917",
+        "source_assertion_ids": [
+          "assert:final-sites-16:baltimore-paca:site"
+        ],
+        "start": "by 1905"
+      },
+      "site_subtype": "church",
+      "slug": "st-john-paca-baltimore-md"
     },
     {
       "aliases": [],
@@ -21658,7 +21783,7 @@
       "evidence_depth": "multi-source identity; deep case file missing",
       "formation_basis": "multi_source_corroborated_public_identity",
       "id": "cn:institution:lithuanian-church-middleport-pa",
-      "institution_subtype": "parish",
+      "institution_subtype": "misija",
       "lifecycle_status": "pending_deep_case",
       "slug": "lithuanian-church-middleport-pa"
     },
@@ -24539,7 +24664,7 @@
       "slug": "robert-damyanovich"
     }
   ],
-  "content_hash": "sha256:ba6eb479c426644160bb976d2b31c5be73331f3859472d9cf788faa8f047f799",
+  "content_hash": "sha256:bef6ab8831eb78727fe908039da9a84b1eab9d281d761de86fd58a8f222541e6",
   "counts": {
     "by_institution_class": {
       "independent_catholic": 4,
@@ -24549,8 +24674,8 @@
     },
     "by_record_type": {
       "congregation": 6,
-      "misija": 5,
-      "parish": 144
+      "misija": 6,
+      "parish": 143
     },
     "profiles_pending_deep_case": 44,
     "protected_campaign_assignments": 4,
@@ -26721,6 +26846,94 @@
       "slug": "st-joseph-dubois-south-state-street-church",
       "source_artifact_ids": [
         "src:evidence-t1:st-nicholas-dubois:2026-07-28"
+      ]
+    },
+    {
+      "aliases": [
+        "11 Lloyd Street, Baltimore, MD"
+      ],
+      "canonical_entity_id": "cn:building_site:lloyd-street-synagogue-baltimore-md",
+      "counts": {
+        "active_institution_census": false,
+        "building_site_census": true,
+        "historical_institution_census": false
+      },
+      "decision": "publish_linked_context_only",
+      "display_name": "Lloyd Street Synagogue used by Saint John the Baptist",
+      "entity_type": "building_site",
+      "evidence_assertion_ids": [
+        "assert:final-sites-16:baltimore-lloyd:site"
+      ],
+      "id": "proj:final-sites-16:baltimore-lloyd",
+      "lifecycle": {
+        "end": "1905",
+        "source_assertion_ids": [
+          "assert:final-sites-16:baltimore-lloyd:site"
+        ],
+        "start": "1889-02-20"
+      },
+      "reason": "The former synagogue was one historical worship site of Saint John and remains distinct from the later Paca Street church.",
+      "slug": "lloyd-street-synagogue-baltimore-md",
+      "source_artifact_ids": [
+        "src:final-sites-16:baltimore-lloyd:case"
+      ]
+    },
+    {
+      "aliases": [
+        "308 North Paca Street, Baltimore, MD 21201"
+      ],
+      "canonical_entity_id": "cn:building_site:st-john-paca-baltimore-md",
+      "counts": {
+        "active_institution_census": false,
+        "building_site_census": true,
+        "historical_institution_census": false
+      },
+      "decision": "publish_linked_context_only",
+      "display_name": "Saint John the Baptist church at Saratoga and Paca Streets",
+      "entity_type": "building_site",
+      "evidence_assertion_ids": [
+        "assert:final-sites-16:baltimore-paca:site"
+      ],
+      "id": "proj:final-sites-16:baltimore-paca",
+      "lifecycle": {
+        "end": "1917",
+        "source_assertion_ids": [
+          "assert:final-sites-16:baltimore-paca:site"
+        ],
+        "start": "by 1905"
+      },
+      "reason": "The terminal Saint John church is a separate site from Lloyd Street and from the successor Saint Alphonsus church.",
+      "slug": "st-john-paca-baltimore-md",
+      "source_artifact_ids": [
+        "src:final-sites-16:baltimore-lloyd:case"
+      ]
+    },
+    {
+      "aliases": [],
+      "canonical_entity_id": "cn:building_site:immaculate-heart-of-mary-middleport-pa",
+      "counts": {
+        "active_institution_census": false,
+        "building_site_census": true,
+        "historical_institution_census": false
+      },
+      "decision": "publish_linked_context_only",
+      "display_name": "Immaculate Heart of Mary mission chapel, Middleport",
+      "entity_type": "building_site",
+      "evidence_assertion_ids": [
+        "assert:final-sites-16:middleport-chapel:site"
+      ],
+      "id": "proj:final-sites-16:middleport-chapel",
+      "lifecycle": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:final-sites-16:middleport-chapel:site"
+        ],
+        "start": "1948"
+      },
+      "reason": "The chapel is a physical worship site of the dependent mission, not another institution or an independently erected parish.",
+      "slug": "immaculate-heart-of-mary-middleport-pa",
+      "source_artifact_ids": [
+        "src:final-sites-16:middleport-chapel:case"
       ]
     },
     {
@@ -31558,6 +31771,7 @@
       "culturenet-parish-early-institutions-12-2026-07-31",
       "culturenet-parish-esplen-frackville-lineage-5-2026-07-31",
       "culturenet-parish-evidence-tranche-1-canonical-migration-2026-07-31",
+      "culturenet-parish-final-four-dossier-sites-16-2026-08-17",
       "culturenet-parish-freeland-successor-10-2026-07-31",
       "culturenet-parish-identity-and-site-corrections-1-2026-07-31",
       "culturenet-parish-illinois-continuity-1-2026-07-31",
@@ -33670,10 +33884,10 @@
       "projection_record_id": "proj:cib-9:lithuanian-church-middleport-pa",
       "protected_campaign": false,
       "public_profile": "/parishes/lithuanian-church-middleport-pa",
-      "record_type": "parish",
+      "record_type": "misija",
       "registry_slug": "lithuanian-church-middleport-pa",
       "source_artifact_ids": [
-        "src:cib-9:lithuanian-church-middleport-pa:research-index-2026-07-31"
+        "src:cib-9:lithuanian-church-middleport-pa:reviewed-case-2026-08-17"
       ],
       "state": "PA"
     },
@@ -44713,6 +44927,129 @@
         "entity_id": "cn:building_site:st-joseph-dubois-south-state-street-church",
         "entity_type": "building_site",
         "slug": "st-joseph-dubois-south-state-street-church"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "confidence": "high",
+      "counting_effect": "site_count_only",
+      "date": {
+        "certainty": "exact purchase date and sale year established",
+        "end": "1905",
+        "label": "Saint John used the Lloyd Street building from its 1889 purchase until its 1905 sale",
+        "start": "1889-02-20"
+      },
+      "evidence_assertion_ids": [
+        "assert:final-sites-16:baltimore-lloyd:site"
+      ],
+      "id": "rel:final-sites-16:baltimore-lloyd:used-site",
+      "identity_effect": "site_context_only",
+      "projection_group": "institution_site",
+      "publication_state": "publishable",
+      "relationship_type": "institution-used-site",
+      "source": {
+        "display_name": "St. John the Baptist (Lithuanian 1905-1916), Baltimore, MD",
+        "entity_id": "cn:institution:st-john-the-baptist-baltimore-md",
+        "entity_type": "institution",
+        "slug": "st-john-the-baptist-baltimore-md"
+      },
+      "source_artifact_ids": [
+        "src:final-sites-16:baltimore-lloyd:case"
+      ],
+      "target": {
+        "display_name": "Lloyd Street Synagogue used by Saint John the Baptist",
+        "entity_id": "cn:building_site:lloyd-street-synagogue-baltimore-md",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": "1905",
+          "source_assertion_ids": [
+            "assert:final-sites-16:baltimore-lloyd:site"
+          ],
+          "start": "1889-02-20"
+        },
+        "slug": "lloyd-street-synagogue-baltimore-md"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "confidence": "high",
+      "counting_effect": "site_count_only",
+      "date": {
+        "certainty": "new church planned in 1902 and occupied by 1905; exact opening date unresolved",
+        "end": "1917",
+        "label": "Saint John used the Paca Street church until the 1917 community transfer",
+        "start": "by 1905"
+      },
+      "evidence_assertion_ids": [
+        "assert:final-sites-16:baltimore-paca:site"
+      ],
+      "id": "rel:final-sites-16:baltimore-paca:used-site",
+      "identity_effect": "site_context_only",
+      "projection_group": "institution_site",
+      "publication_state": "publishable",
+      "relationship_type": "institution-used-site",
+      "source": {
+        "display_name": "St. John the Baptist (Lithuanian 1905-1916), Baltimore, MD",
+        "entity_id": "cn:institution:st-john-the-baptist-baltimore-md",
+        "entity_type": "institution",
+        "slug": "st-john-the-baptist-baltimore-md"
+      },
+      "source_artifact_ids": [
+        "src:final-sites-16:baltimore-lloyd:case"
+      ],
+      "target": {
+        "display_name": "Saint John the Baptist church at Saratoga and Paca Streets",
+        "entity_id": "cn:building_site:st-john-paca-baltimore-md",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": "1917",
+          "source_assertion_ids": [
+            "assert:final-sites-16:baltimore-paca:site"
+          ],
+          "start": "by 1905"
+        },
+        "slug": "st-john-paca-baltimore-md"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "confidence": "high",
+      "counting_effect": "site_count_only",
+      "date": {
+        "certainty": "1948 mission/church date established; closure date unresolved",
+        "end": null,
+        "label": "The dependent Middleport mission used the Immaculate Heart of Mary chapel",
+        "start": "1948"
+      },
+      "evidence_assertion_ids": [
+        "assert:final-sites-16:middleport-chapel:site"
+      ],
+      "id": "rel:final-sites-16:middleport-chapel:used-site",
+      "identity_effect": "site_context_only",
+      "projection_group": "institution_site",
+      "publication_state": "publishable",
+      "relationship_type": "institution-used-site",
+      "source": {
+        "display_name": "Lithuanian church (unnamed), Middleport, PA",
+        "entity_id": "cn:institution:lithuanian-church-middleport-pa",
+        "entity_type": "institution",
+        "slug": "lithuanian-church-middleport-pa"
+      },
+      "source_artifact_ids": [
+        "src:final-sites-16:middleport-chapel:case"
+      ],
+      "target": {
+        "display_name": "Immaculate Heart of Mary mission chapel, Middleport",
+        "entity_id": "cn:building_site:immaculate-heart-of-mary-middleport-pa",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:final-sites-16:middleport-chapel:site"
+          ],
+          "start": "1948"
+        },
+        "slug": "immaculate-heart-of-mary-middleport-pa"
       }
     },
     {
@@ -57135,20 +57472,20 @@
       "title": "Corroborated identity evidence for Immaculate Conception, Sheboygan"
     },
     {
-      "artifact_type": "canonical_research_index_entry",
-      "id": "src:cib-9:lithuanian-church-middleport-pa:research-index-2026-07-31",
+      "artifact_type": "canonical_case_file",
+      "id": "src:cib-9:lithuanian-church-middleport-pa:reviewed-case-2026-08-17",
       "locator": {
-        "exact_label": "research-index public_registry_slug: lithuanian-church-middleport-pa",
+        "exact_label": "Current case file: lithuanian-church-middleport-pa",
         "page": "JSON record",
-        "section": "identity, public census scope, source families, public evidence, and research depth"
+        "section": "institutionalForm, summary, historicalNarrative, worshipSites, sources, conflicts, and gaps"
       },
       "rights": {
         "access": "repository",
-        "public_url": "repo://culturenet-brain/docs/research/parish-canon/research-index.json",
-        "quote_policy": "cite the underlying public evidence; this packet adjudicates identity only",
+        "public_url": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/lithuanian-church-middleport-pa.json",
+        "quote_policy": "cite the underlying public evidence",
         "status": "brain_canonical_evidence"
       },
-      "title": "Corroborated identity evidence for Lithuanian church (unnamed), Middleport"
+      "title": "Reviewed classification case for Lithuanian church (unnamed), Middleport"
     },
     {
       "artifact_type": "canonical_research_index_entry",
@@ -59789,6 +60126,38 @@
         "status": "public_web"
       },
       "title": "Modern Roman Catholic All Saints Waterbury parish site"
+    },
+    {
+      "artifact_type": "canonical_case_file",
+      "id": "src:final-sites-16:baltimore-lloyd:case",
+      "locator": {
+        "exact_label": "Current case file: st-john-the-baptist-baltimore-md",
+        "page": "JSON record",
+        "section": "worshipSites, relationships, historicalNarrative, sources, conflicts, and gaps"
+      },
+      "rights": {
+        "access": "repository",
+        "public_url": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-john-the-baptist-baltimore-md.json",
+        "quote_policy": "cite the underlying public evidence and exact locators",
+        "status": "brain_canonical_evidence"
+      },
+      "title": "Reviewed case file supporting Lloyd Street Synagogue used by Saint John the Baptist"
+    },
+    {
+      "artifact_type": "canonical_case_file",
+      "id": "src:final-sites-16:middleport-chapel:case",
+      "locator": {
+        "exact_label": "Current case file: lithuanian-church-middleport-pa",
+        "page": "JSON record",
+        "section": "worshipSites, relationships, historicalNarrative, sources, conflicts, and gaps"
+      },
+      "rights": {
+        "access": "repository",
+        "public_url": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/lithuanian-church-middleport-pa.json",
+        "quote_policy": "cite the underlying public evidence and exact locators",
+        "status": "brain_canonical_evidence"
+      },
+      "title": "Reviewed case file supporting Immaculate Heart of Mary mission chapel, Middleport"
     },
     {
       "artifact_type": "reviewed_adjudication",

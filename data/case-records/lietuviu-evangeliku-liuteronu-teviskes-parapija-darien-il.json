@@ -4,6 +4,42 @@
   "buildingStatus": "standing",
   "currentUse": "Active Lithuanian Evangelical Lutheran congregation worshiping as \"St. John-Tėviškės Church\" in the building of St. John Lutheran Church, 7214 S. Cass Ave., Darien, IL; Lithuanian-language services with Communion every Sunday 11:30 AM and Thursday 7 PM",
   "summary": "Tėviškės parapija is alive and worshiping in Darien, IL. The official website of the Lithuanian Evangelical Lutheran Church (liuteronai.lt), current as of July 2026, lists the parish as active at \"St. John-Tėviškės Church,\" 7214 S. Cass Ave., Darien, with Pastor Liudas Miliauskas and Lithuanian services with Holy Communion every Sunday at 11:30 AM and every Thursday at 7 PM; the parish's own site (teviske.org) gives the same schedule and contact (teviskes.parapija@gmail.com, 708-567-9044). A Draugas article of January 4, 2020 documented the move into St. John Lutheran Church in Darien after the Western Springs period, reporting overflow attendance at the first services and a congregation that had grown from near-decline in 2005 under Miliauskas, who by then had served 14 years. The host building belongs to St. John Lutheran Church, itself an active congregation (Sunday 9 AM services, own pastor, events scheduled into August 2026), so the Lithuanian parish now shares rather than owns its home. The parish's original self-owned building — a former synagogue at 6641-45 S. Troy St. in Marquette Park, consecrated as Tėviškės on December 15, 1957 — was sold to a Black religious congregation after the neighborhood's demographics changed, per Draugas's 2015 Lithuanian cultural heritage guide; the address today houses From the Heart Church Ministries of Chicago. As of July 15, 2026, a 9,935 sq ft church building at 6645 S. Troy St. (built 1925, adjacent to Marquette Park) is actively listed for sale at $361,000, sold as-is and needing brickwork and boiler repairs — very likely the former Tėviškės building, though the listing does not name its Lithuanian history. As a congregationally governed Lutheran parish, it faces no Catholic diocesan restructuring exposure.",
+  "historicalNarrative": [
+    {
+      "text": "Tėviškės is a Lithuanian Evangelical Lutheran congregation, not a Roman Catholic parish and not an undifferentiated Protestant body. Its own website and the official Lithuanian Evangelical Lutheran Church diaspora directory present it as a continuing Lithuanian congregation. The denominational listing identifies Pastor Liudas Miliauskas and places the congregation within the Lithuanian Lutheran church's overseas parish network.",
+      "sources": [
+        {"url": "https://www.liuteronai.lt/lietuviu-evangeliku-liuteronu-teviskes-parapija/", "locator": "Official diaspora parish entry, title, pastor, address, and service-schedule fields"},
+        {"url": "http://teviske.org/", "locator": "Tėviškės parish home page, congregation heading and Lithuanian service information"}
+      ]
+    },
+    {
+      "text": "The congregation once maintained its own home in Chicago's Marquette Park area. A Lithuanian cultural-heritage account identifies a former synagogue at 6641–45 South Troy Street that was consecrated as the Tėviškės prayer house on December 15, 1957. The same account says the property was later sold to another religious community as neighborhood demographics changed. The building's sale and the congregation's later relocations concern its worship sites; they did not end the Lutheran institution.",
+      "sources": [
+        {"url": "https://www.draugas.org/lietuvisko-kulturinio-paveldo-gidas/", "locator": "Lithuanian cultural heritage guide, Tėviškės paragraph identifying 6641–45 S. Troy, former-synagogue origin, 15 December 1957 consecration, and later sale"}
+      ]
+    },
+    {
+      "text": "After leaving Marquette Park, Tėviškės worshiped at 5129 Wolf Road in Western Springs before moving to Darien. Contemporary reporting on the Darien move describes the Western Springs location as a church used by the congregation, but it does not establish that Tėviškės owned and sold that property. The Western Springs phase is therefore treated as hosted worship rather than a documented second self-owned church.",
+      "sources": [
+        {"url": "https://www.draugas.org/kunigo-dziaugsmas-nauja-baznycia-gausiai-lankoma/", "locator": "Article paragraphs describing the move from the Western Springs church at 5129 Wolf Road into St. John Lutheran Church in Darien"}
+      ]
+    },
+    {
+      "text": "By early 2020 the congregation had relocated to St. John Lutheran Church at 7214 South Cass Avenue in Darien. Reporting on the first services described attendance exceeding the parking capacity and a congregation that had recovered from decline. Current official and parish sources list Lithuanian services with Holy Communion on Sundays and Thursdays. St. John's own site identifies an active host congregation at the same address, so Tėviškės shares the building; the evidence does not establish a merger or transfer of ownership.",
+      "sources": [
+        {"url": "https://www.draugas.org/kunigo-dziaugsmas-nauja-baznycia-gausiai-lankoma/", "locator": "Article opening and service-life sections describing the Darien move, first-service attendance, and congregation growth"},
+        {"url": "https://www.liuteronai.lt/lietuviu-evangeliku-liuteronu-teviskes-parapija/", "locator": "Official diaspora parish entry, 7214 S. Cass address and Sunday/Thursday Lithuanian service schedule"},
+        {"url": "https://stjohndarienil.org/", "locator": "St. John Lutheran Church home page, Darien address, host-congregation identity, and current worship information"}
+      ]
+    },
+    {
+      "text": "The former Marquette Park building has a separate property history. A July 2026 listing offered a 9,935-square-foot church at 6645 South Troy Street, built in 1925, for $361,000 and described significant cosmetic, masonry, and boiler needs. The address and building type make identification with the former Tėviškės property probable, but the listing does not name the Lithuanian congregation. Its condition and sale status therefore cannot be projected onto Tėviškės's active institution or its current Darien host site.",
+      "sources": [
+        {"url": "https://www.xome.com/commercial-for-sale/6645-S-Troy-Street-Chicago-IL-60629-418906723", "locator": "MLS 12619205 listing, property facts, July 15 2026 update, asking price, and condition remarks"},
+        {"url": "https://www.atproperties.com/6434461/6641-s-troy-street-chicago-illinois-60629-nei", "locator": "Closed listing for 6641 S. Troy, address and 9,935-square-foot church-property fields"}
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2026-07-15",

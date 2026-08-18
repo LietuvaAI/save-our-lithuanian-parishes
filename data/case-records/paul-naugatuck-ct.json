@@ -1,0 +1,102 @@
+{
+  "slug": "paul-naugatuck-ct",
+  "culturenetEntityId": "cn:institution:paul-naugatuck-ct",
+  "asOf": "2026-08-17",
+  "formationLabel": "Organized and joined the LCMS 31 December 1903 · first church built 1907 · rebuilt after 1955 flood · active at 350 Millville Avenue",
+  "institutionClass": "non_catholic_christian",
+  "institutionStatus": "active",
+  "buildingStatus": "standing",
+  "currentUse": "Active Lutheran Church—Missouri Synod congregation worshiping at 350 Millville Avenue, Naugatuck, Connecticut. The official LCMS locator lists Sunday worship at 9:15 a.m. year-round and reports 2022 average attendance of 15 and baptized membership of 40; the LCMS New England District gives the same church and address.",
+  "summary": "St. Paul Lutheran Church in Naugatuck is the continuing Lithuanian-founded Lutheran congregation organized on December 31, 1903 and received into the Lutheran Church—Missouri Synod that same day. Lithuanian Lutherans in Union City built their first church in 1907. The Naugatuck Historical Society records that the Flood of 1955 destroyed St. Paul and that the congregation rebuilt at Millville and Hoadley; Lithuanian heritage field documentation dates the replacement to 1957 and reports reuse of the old cornerstone. The present church at 350 Millville Avenue remains an active LCMS congregation with a current worship schedule. Institution life and building life are therefore separate: the 1903 congregation continued through the destruction of its earlier church into the replacement building. The exact address and parcel of the first church, the deed history, dedicated Lithuanian cemetery, and complete records-custody history remain unresolved.",
+  "institutionLifecycle": {
+    "formation": "The official LCMS locator records both organization and LCMS membership on 31 December 1903. A 1907 construction date belongs to the first church building, not the institution's founding.",
+    "jurisdiction": "Lutheran Church—Missouri Synod; current congregation in the LCMS New England District.",
+    "destructionAndContinuity": "The 1955 flood destroyed the earlier church. The same congregation rebuilt at Millville and Hoadley; no institutional closure or successor congregation is inferred from the building loss.",
+    "terminalStatus": "active",
+    "currentVerification": "Official LCMS and district listings, accessed 17 August 2026, identify St. Paul at 350 Millville Avenue with current Sunday worship."
+  },
+  "worshipSites": [
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-paul-lutheran-first-naugatuck-ct",
+      "name": "First St. Paul Lithuanian Lutheran church",
+      "address": "Union City, Naugatuck, CT; exact street address unresolved",
+      "usePeriod": "built 1907; destroyed in the Flood of 1955",
+      "buildingCondition": "destroyed",
+      "currentUse": "The historic structure was destroyed by flood. No present parcel use is asserted because its exact address has not been verified.",
+      "evidence": [
+        {"url": "https://www.naugatuckhistory.org/unioncity", "locator": "Naugatuck Historical Society, Union City history: Lithuanian Lutheran community, St. Paul destroyed by the Flood of 1955 and rebuilt at Millville and Hoadley"},
+        {"url": "https://global.truelithuania.com/connecticut-426/", "locator": "Global True Lithuania Connecticut field documentation, accessed 2026-08-17: first church built in 1907 and flood-loss/rebuilding account"}
+      ]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-paul-lutheran-350-millville-naugatuck-ct",
+      "name": "St. Paul Lutheran Church",
+      "address": "350 Millville Ave., Naugatuck, CT 06770",
+      "usePeriod": "replacement church after the 1955 flood; documented as active in 2026",
+      "buildingCondition": "standing",
+      "currentUse": "Active LCMS worship site; official locator lists Sunday worship at 9:15 a.m. year-round.",
+      "evidence": [
+        {"url": "https://locator.lcms.org/church/C/626126", "locator": "Official LCMS congregation locator, accessed 2026-08-17: address, service schedule, organization and synod dates, 2022 statistics"},
+        {"url": "https://ned-lcms.org/church/st-paul-lutheran-church-naugatuck", "locator": "LCMS New England District directory, accessed 2026-08-17: St. Paul Lutheran Church, 350 Millville Avenue"}
+      ]
+    }
+  ],
+  "relationships": [
+    {"type": "institution-used-site", "source": "cn:institution:paul-naugatuck-ct", "target": "cn:building_site:st-paul-lutheran-first-naugatuck-ct", "date": "1907–1955", "status": "accepted", "note": "The congregation's first church was destroyed in the 1955 flood; exact address remains unresolved."},
+    {"type": "institution-used-site", "source": "cn:institution:paul-naugatuck-ct", "target": "cn:building_site:st-paul-lutheran-350-millville-naugatuck-ct", "date": "after 1955–present", "status": "accepted", "note": "Replacement and present active church site."},
+    {"type": "building-replaced-by", "source": "cn:building_site:st-paul-lutheran-first-naugatuck-ct", "target": "cn:building_site:st-paul-lutheran-350-millville-naugatuck-ct", "date": "1955–1957", "status": "accepted", "note": "Site-to-site building replacement within the continuing congregation, not a parish merger or successor creation."}
+  ],
+  "historicalNarrative": [
+    {
+      "text": "St. Paul is a Lithuanian-founded Lutheran congregation in Naugatuck's Union City community, not a same-name Roman Catholic parish or another St. Paul Lutheran church. The Naugatuck Historical Society describes the Lithuanian Lutheran population that established it, while the official LCMS locator fixes the institutional milestone: St. Paul was organized and joined the Lutheran Church—Missouri Synod on December 31, 1903.",
+      "sources": [
+        {"url": "https://locator.lcms.org/church/C/626126", "locator": "Official LCMS locator, accessed 2026-08-17: organized 1903-12-31 and joined synod 1903-12-31"},
+        {"url": "https://www.naugatuckhistory.org/unioncity", "locator": "Naugatuck Historical Society, Union City history: Lithuanian Lutheran community and St. Paul"}
+      ]
+    },
+    {
+      "text": "The first church building followed the congregation's organization. Global True Lithuania's field account dates construction to 1907. Because the source does not establish a verified street number or deed parcel and the local historical account identifies the church within Union City without a precise first-site address, this dossier does not import a guessed modern address into the 1907 phase.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/connecticut-426/", "locator": "Global True Lithuania Connecticut field documentation, accessed 2026-08-17: 1907 first church and later rebuilding; attributed field source"},
+        {"url": "https://www.naugatuckhistory.org/unioncity", "locator": "Naugatuck Historical Society, Union City history: St. Paul in the Lithuanian Lutheran community"}
+      ]
+    },
+    {
+      "text": "The Flood of 1955 ended the first building's life but not the congregation's life. The Naugatuck Historical Society says the flood destroyed St. Paul and that it was rebuilt at the corner of Millville and Hoadley. Field documentation dates the replacement to 1957 and reports that the old cornerstone was incorporated. That account is treated as building-continuity documentation; it does not create a new parish or imply that every physical component survived.",
+      "sources": [
+        {"url": "https://www.naugatuckhistory.org/unioncity", "locator": "Naugatuck Historical Society: 1955 flood destruction and rebuilding at Millville and Hoadley"},
+        {"url": "https://global.truelithuania.com/connecticut-426/", "locator": "Global True Lithuania field documentation: 1957 replacement and reported cornerstone reuse"}
+      ]
+    },
+    {
+      "text": "The replacement church is the congregation's current home at 350 Millville Avenue. The official LCMS locator lists a year-round Sunday service at 9:15 a.m. and reports 2022 average attendance of 15 with baptized membership of 40. The LCMS New England District independently lists the same congregation and address. These official current sources directly establish both the institution's active status and the building's standing worship use as of the dossier date.",
+      "sources": [
+        {"url": "https://locator.lcms.org/church/C/626126", "locator": "Official LCMS locator, accessed 2026-08-17: 350 Millville Ave., Sunday 9:15 a.m., 2022 attendance and membership"},
+        {"url": "https://ned-lcms.org/church/st-paul-lutheran-church-naugatuck", "locator": "LCMS New England District directory, accessed 2026-08-17: current St. Paul listing and address"}
+      ]
+    },
+    {
+      "text": "No merger or successor congregation is needed to explain St. Paul's history: the evidence instead shows institutional continuity through the loss and replacement of a church building. The exact first-site address and title chain, the replacement construction and dedication records, the full congregational register, off-site archival custody, and any dedicated cemetery remain unverified. Active-congregation status does not by itself establish where all historical records are held.",
+      "sources": [
+        {"url": "https://locator.lcms.org/church/C/626126", "locator": "Official LCMS locator, accessed 2026-08-17: continuing congregation identity"},
+        {"url": "https://www.naugatuckhistory.org/unioncity", "locator": "Naugatuck Historical Society: same St. Paul congregation rebuilt after flood destruction"}
+      ]
+    }
+  ],
+  "developments": [
+    {"date": "1903-12-31", "headline": "Congregation organized and joins the LCMS", "detail": "Official LCMS history distinguishes the institution's founding from later church construction.", "sources": [{"title": "St Paul Lutheran Church locator", "publisher": "The Lutheran Church—Missouri Synod", "date": "accessed 2026-08-17", "url": "https://locator.lcms.org/church/C/626126"}]},
+    {"date": "1955–1957", "headline": "Flood destroys first church; congregation rebuilds", "detail": "The first structure ended, while the institution continued at Millville and Hoadley.", "sources": [{"title": "Union City", "publisher": "Naugatuck Historical Society", "date": "accessed 2026-08-17", "url": "https://www.naugatuckhistory.org/unioncity"}]},
+    {"date": "2026-08-17", "headline": "Official directories confirm active worship", "detail": "Current LCMS sources list the congregation at 350 Millville Avenue with Sunday worship.", "sources": [{"title": "St Paul Lutheran Church locator", "publisher": "The Lutheran Church—Missouri Synod", "date": "accessed 2026-08-17", "url": "https://locator.lcms.org/church/C/626126"}]}
+  ],
+  "sources": [
+    {"title": "St Paul Lutheran Church locator", "publisher": "The Lutheran Church—Missouri Synod", "date": "accessed 2026-08-17", "url": "https://locator.lcms.org/church/C/626126"},
+    {"title": "St. Paul Lutheran Church – Naugatuck", "publisher": "LCMS New England District", "date": "accessed 2026-08-17", "url": "https://ned-lcms.org/church/st-paul-lutheran-church-naugatuck"},
+    {"title": "Union City", "publisher": "Naugatuck Historical Society", "date": "accessed 2026-08-17", "url": "https://www.naugatuckhistory.org/unioncity"},
+    {"title": "Connecticut Lithuanian heritage sites", "publisher": "Global True Lithuania", "date": "accessed 2026-08-17", "url": "https://global.truelithuania.com/connecticut-426/"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The 1903 date is the congregation's official organization and LCMS-reception date; 1907 is a first-building date and must not replace it. The 1955 destruction concerns the earlier church, not the institution, which rebuilt and remains active.",
+  "gaps": "The first church's exact address and parcel, deed and construction records for both sites, exact replacement dedication date, complete clergy chronology, full records inventory and external custody, and any cemetery relationship remain unverified."
+}

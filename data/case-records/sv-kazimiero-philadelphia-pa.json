@@ -5,6 +5,37 @@
   "currentUse": "Active Catholic worship site (St. Casimir Worship Site) of Saint Andrew Lithuanian Parish, Philadelphia; Sunday 9:00 AM Mass in English. The adjacent former rectory at 324 Wharton St is on the market.",
   "confidence": "verified",
   "summary": "St. Casimir's church at 4th & Wharton Streets in Pennsport, South Philadelphia, is still standing and still in Catholic use: since the parish's suppression on July 1, 2011 it has operated as a worship site of Saint Andrew Lithuanian Parish, and the parish's current website lists a Sunday 9:00 AM Mass in English at the St. Casimir site, with the 11:00 AM Lithuanian-and-English Mass held at St. Andrew church at 19th & Wallace. Longtime pastor Fr. Peter (Petras) Burkauskas became Pastor Emeritus effective August 24, 2021, and Rev. G. Dennis Gill, rector of the Cathedral Basilica of SS. Peter and Paul, was named Parochial Administrator pro tem effective September 10, 2021; both former rectories' phone lines are out of service and parish correspondence now runs through the Cathedral Parish Office. A January 2026 Draugas feature reports active parish life (a roughly 40-student Vincas Krėvė Lithuanian school, visiting Lithuanian priests, a 2024 parish centennial) and says Archbishop Nelson Perez has declined to close the parish, citing that closures scatter about 40% of parishioners; it also reports the St. Andrew rectory sold for about $1.2 million. Meanwhile the former St. Casimir rectory at 324 Wharton St (built 1918, 5,400 sq ft) is actively listed for sale at $799,900 through BHHS Fox & Roach, at 107 days on market as of mid-July 2026. The church building itself has not been sold and no demolition, redevelopment, or formal preservation proceedings were found.",
+  "historicalNarrative": [
+    {
+      "text": "St. Casimir was Philadelphia's Lithuanian Roman Catholic personal parish in the Pennsport area. The Archdiocese of Philadelphia dates the parish from 1893 to 2011 and places its property on Wharton Street. The institutional founding, later church, rectory, and parish school are separate milestones and properties; current address listings distinguish the church near Fourth and Wharton from the former rectory at 324 Wharton Street.",
+      "sources": [
+        { "url": "https://archphila.org/parish/st-casimir-philadelphia/", "locator": "Parish record: Casimir (Lithuanian), 1893-2011, Wharton Street" },
+        { "url": "https://global.truelithuania.com/philadelphia-pennsylvania-1160/", "locator": "Philadelphia St. Casimir Lithuanian parish and church section" }
+      ]
+    },
+    {
+      "text": "St. Casimir was suppressed as an independent parish effective July 1, 2011 after sixteen years of being twinned with St. Andrew Lithuanian Parish. Contemporary archdiocesan reporting describes the merger, falling registration, school closure, debt, and church repair needs. The merger ended the parish institution but retained St. Casimir Church as a secondary worship site of St. Andrew.",
+      "sources": [
+        { "url": "https://catholicphilly.com/2011/07/news/local-news/immaculate-conception-and-st-casimir-close/", "locator": "July 14, 2011 report: St. Casimir merger into St. Andrew effective July 1 and retained worship site" },
+        { "url": "https://medium.com/south-philly-review/changing-times-at-st-casimir-307ae3a8cb", "locator": "Changing times at St. Casimir: twinning, parish statistics, school closure, debt, and repairs" }
+      ]
+    },
+    {
+      "text": "The former parish church continues in Catholic use. St. Andrew's current site lists a Sunday 9:00 a.m. English Mass at St. Casimir, while Lithuanian-and-English worship is scheduled at St. Andrew Church at 19th and Wallace. Continued Mass at St. Casimir therefore establishes a surviving worship site, not continued Lithuanian-language ministry at that building or restoration of the former parish.",
+      "sources": [
+        { "url": "https://saintandrewlithuanianparish.org/", "locator": "Current Mass schedule and worship-site information for St. Casimir and St. Andrew" },
+        { "url": "https://catholicmasstime.org/church/st-casimir/14500/", "locator": "St. Casimir worship-site listing and Sunday Mass" }
+      ]
+    },
+    {
+      "text": "Administration changed again in 2021 when longtime pastor Peter Burkauskas became pastor emeritus and Cathedral rector G. Dennis Gill was appointed parochial administrator pro tem. The former St. Casimir rectory was separately listed for sale in 2026; that listing concerns the rectory parcel, not the active church. No source establishes a sale, relegation, demolition plan, or closure of the St. Casimir worship site.",
+      "sources": [
+        { "url": "https://archphila.org/clerical-appointments-2021/", "locator": "2021 appointments: Burkauskas emeritus and Gill administrator pro tem" },
+        { "url": "https://www.dalyluxuryhomes.com/idx/mls-paph2601680-324_wharton_street_philadelphia_pa_19147", "locator": "MLS PAPH2601680: former rectory at 324 Wharton Street" },
+        { "url": "https://saintandrewlithuanianparish.org/", "locator": "Current administration and rectory-contact notice" }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2011-07-01",

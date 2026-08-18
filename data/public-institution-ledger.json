@@ -4,9 +4,9 @@
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
     "revisionId": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
-    "contentHash": "sha256:ba6eb479c426644160bb976d2b31c5be73331f3859472d9cf788faa8f047f799"
+    "contentHash": "sha256:bef6ab8831eb78727fe908039da9a84b1eab9d281d761de86fd58a8f222541e6"
   },
-  "registryRevision": 34,
+  "registryRevision": 37,
   "registryDate": "2026-08-11",
   "claim": "The current documented record contains 155 distinct U.S. Lithuanian religious institutions.",
   "inclusionRule": "Count one canonical U.S. institution when CultureNet publishes it as a parish, mission, or congregation. Buildings, duplicate aliases, historical attempts, hosted worship, research leads, and comparators remain linked context and never increase this total.",
@@ -17,8 +17,8 @@
     "profilesPendingDeepCase": 44,
     "byRecordType": {
       "congregation": 6,
-      "misija": 5,
-      "parish": 144
+      "misija": 6,
+      "parish": 143
     },
     "byInstitutionClass": {
       "independent_catholic": 4,
@@ -8523,7 +8523,7 @@
       ],
       "city": "Middleport",
       "state": "PA",
-      "recordType": "parish",
+      "recordType": "misija",
       "institutionClass": "roman_catholic",
       "identitySupport": "multi_source_corroborated",
       "canonicalDetailStatus": "pending_deep_case",
@@ -8532,7 +8532,7 @@
         "assert:cib-9:lithuanian-church-middleport-pa:identity"
       ],
       "sourceArtifactIds": [
-        "src:cib-9:lithuanian-church-middleport-pa:research-index-2026-07-31"
+        "src:cib-9:lithuanian-church-middleport-pa:reviewed-case-2026-08-17"
       ],
       "sourceFamilies": [
         "draugas",
@@ -8560,10 +8560,10 @@
       ],
       "canonicalSources": [
         {
-          "sourceArtifactId": "src:cib-9:lithuanian-church-middleport-pa:research-index-2026-07-31",
-          "label": "Corroborated identity evidence for Lithuanian church (unnamed), Middleport",
-          "locator": "research-index public_registry_slug: lithuanian-church-middleport-pa",
-          "url": "repo://culturenet-brain/docs/research/parish-canon/research-index.json"
+          "sourceArtifactId": "src:cib-9:lithuanian-church-middleport-pa:reviewed-case-2026-08-17",
+          "label": "Reviewed classification case for Lithuanian church (unnamed), Middleport",
+          "locator": "Current case file: lithuanian-church-middleport-pa",
+          "url": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/lithuanian-church-middleport-pa.json"
         }
       ]
     },

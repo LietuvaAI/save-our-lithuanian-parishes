@@ -4,6 +4,65 @@
   "buildingStatus": "demolished",
   "currentUse": "Original Lithuanian church building is gone; the parish survives as Holy Trinity–Epiphany Parish, worshipping in the basement of the 1963-built parish-hall building at 207 Adams St, Newark (Ironbound), now serving a Portuguese-speaking congregation with Mass no longer offered in Lithuanian.",
   "summary": "The \"unnamed\" Lithuanian parish in the archive record is identifiable as Holy Trinity (Švč. Trejybės) Lithuanian parish, founded in 1902 on Adams Street in Newark's Ironbound section. After the 1981 fire, the Archdiocese refused to permit repairs to the Romance Revival church, and the congregation relocated into the basement hall of the two-story parish hall it had built in 1963; the original church no longer stands. The parish itself was never suppressed: in 2002 it merged with neighboring Epiphany Parish to form Holy Trinity–Epiphany Parish, which the Archdiocese of Newark still lists as an active parish at 207 Adams St, Newark, NJ 07105. Mass is now Portuguese-only, the Portuguese-speaking (Ironbound) community having gradually displaced the Lithuanian one, though Lithuanian traces remain on site — a Vytis in the door glass, a Lithuanian folk-art frame around the Mass schedule, and a Lithuanian sun-cross near the entrance that dates to 1962 and was relocated from the old church. No press coverage of a property sale was found, consistent with the property remaining in diocesan/parish hands throughout. No recent preservation efforts, reunions, or Lithuanian community activity at the site were found in searches through July 2026.",
+  "historicalNarrative": [
+    {
+      "text": "The formerly unnamed Newark record is Holy Trinity, the Lithuanian Roman Catholic parish founded in 1902 on Adams Street in the Ironbound. Its Lithuanian identity and address distinguish it from other Holy Trinity churches in the region.",
+      "sources": [
+        {
+          "url": "http://newarkreligion.com/rcatholic/holytrinityrc.php",
+          "locator": "Holy Trinity (Lithuanian) Roman Catholic Church, opening history and dates"
+        },
+        {
+          "url": "https://global.truelithuania.com/new-jersey-613/",
+          "locator": "Newark, Holy Trinity Lithuanian parish entry"
+        }
+      ]
+    },
+    {
+      "text": "A two-story parish hall was built in 1963. After a 1981 fire damaged the older church, the archdiocese did not permit repairs and the congregation moved into the hall's basement; the church was later demolished. The 1981 event therefore marks the loss of one building, not the immediate extinction of the parish institution.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/new-jersey-613/",
+          "locator": "Newark entry, 1963 hall, 1981 fire, demolition, and basement worship"
+        }
+      ]
+    },
+    {
+      "text": "Holy Trinity merged with neighboring Epiphany Parish in 2002 to form Holy Trinity–Epiphany. A local history instead gives 2014 as the end of the Lithuanian parish's span, so the distinction between the 2002 juridic merger and the later end of a separate Lithuanian identity remains unresolved without a diocesan instrument.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_churches_in_the_Archdiocese_of_Newark",
+          "locator": "Newark churches table, Holy Trinity–Epiphany entry"
+        },
+        {
+          "url": "http://newarkreligion.com/rcatholic/holytrinityrc.php",
+          "locator": "Holy Trinity history, 1902–2014 date span"
+        }
+      ]
+    },
+    {
+      "text": "The Archdiocese of Newark currently lists Holy Trinity–Epiphany as an active parish at 207 Adams Street. That current institutional life belongs to the merged parish; it does not mean that the original Lithuanian national-parish form or its demolished church survived unchanged.",
+      "sources": [
+        {
+          "url": "https://rcan.org/parishes/",
+          "locator": "Parish directory, Holy Trinity–Epiphany, Newark entry"
+        }
+      ]
+    },
+    {
+      "text": "Field documentation describes present worship in the former hall as Portuguese-speaking and records surviving Lithuanian details, including a Vytis, folk-art framing, and a relocated Lithuanian sun-cross. A current Lithuanian Mass, organization, or preservation program has not been established, and directory language fields that still say Lithuanian appear stale beside the on-site account.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/new-jersey-613/",
+          "locator": "Newark entry, present Portuguese worship and surviving Lithuanian details"
+        },
+        {
+          "url": "https://gcatholic.org/churches/usa-03/18490",
+          "locator": "Holy Trinity–Epiphany directory entry, address and language listing"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2002",

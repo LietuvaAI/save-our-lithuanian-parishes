@@ -1,0 +1,240 @@
+{
+  "slug": "st-peter-akron-oh",
+  "culturenetEntityId": "cn:institution:st-peter-akron-oh",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian Catholic mission care documented from 1917 · parish organized about 1919 · territorial by 1926 · closed December 30, 1989",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "closed",
+  "buildingStatus": "demolished",
+  "currentUse": "The former St. Peter church at 795 Russell Avenue was demolished after the parish closed. The Diocese of Cleveland's current directory places its Social Action Office at 795 Russell Avenue, documenting Catholic institutional use of the site but not survival of the parish or former church structure. St. Peter's sacramental records are now held by the Diocesan Archives.",
+  "summary": "St. Peter was Akron's Lithuanian Roman Catholic parish. Lithuanian mission care is documented from 1917, the parish was organized about 1919, and it became a territorial parish open beyond the Lithuanian community by 1926. It continued at 795 Russell Avenue until closing on December 30, 1989; the Diocese of Cleveland's records directory gives a 1917-1989 sacramental-record span and current archival custody. The former church was demolished, while the Russell Avenue site now houses diocesan social-action offices.",
+  "institutionLifecycle": {
+    "formation": "Wolkovich's Volume 3 history distinguishes Lithuanian mission care beginning in 1917 from parish organization under Father Janusas about 1919. The Diocese of Cleveland records table begins St. Peter's sacramental series in 1917 but does not define that date as canonical erection.",
+    "institutionalForm": "Lithuanian Roman Catholic national parish at organization; transitioned to a territorial parish open to all Catholics by 1926 without creating a second institution.",
+    "jurisdiction": "Roman Catholic Diocese of Cleveland.",
+    "terminalStatus": "Closed December 30, 1989 according to Wolkovich's Volume 3 history. The current official diocesan table places St. Peter among closed and merged institutions and gives a 1917-1989 record span, but it does not itself define the exact canonical act or final Mass.",
+    "currentVerification": "The Diocese of Cleveland currently holds the sacramental records and lists its Social Action Office at 795 Russell Avenue. Those facts establish custody and current site use, not parish survival or succession."
+  },
+  "worshipSites": [
+    {
+      "siteType": "host_church",
+      "name": "Early Akron Catholic host worship",
+      "address": "Akron, Ohio; exact host church and address unresolved",
+      "usePeriod": "Lithuanian mission phase beginning in 1917; terminal host date unresolved",
+      "buildingCondition": "unknown",
+      "currentUse": "Wolkovich's history establishes mission care before parish organization but does not identify an exact host-building entity.",
+      "evidence": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed pp. 43-44, mission and organization sequence"
+        }
+      ]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-peter-russell-akron-oh",
+      "name": "St. Peter Roman Catholic Church",
+      "address": "795 Russell Avenue, Akron, OH 44307",
+      "usePeriod": "opening date unresolved; documented active at this address in 1984; parish use ended December 30, 1989",
+      "buildingCondition": "demolished",
+      "currentUse": "The former church was demolished. The site now houses Diocese of Cleveland social-action offices; the current structures are not treated as the former church building.",
+      "evidence": [
+        {
+          "url": "https://ohiomemory.org/digital/collection/p16007coll68/id/9164/",
+          "locator": "1984 Reporter item, St. Peter Catholic Church at 795 Russell Avenue and parish meal service"
+        },
+        {
+          "url": "https://global.truelithuania.com/lt/category/usa/ohio/",
+          "locator": "Akron section, attributed field history of the demolished St. Peter church and Biruta Street site association"
+        },
+        {
+          "url": "https://www.dioceseofcleveland.org/files/assets/2025-catholic-diocese-of-cleveland-directory-2025-05-05.pdf",
+          "locator": "2025 diocesan directory, Social Action Office at 795 Russell Avenue"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-peter-akron-oh",
+      "target": "cn:building_site:st-peter-russell-akron-oh",
+      "date": "opening date unresolved-1989-12-30",
+      "status": "accepted",
+      "note": "St. Peter worshiped at 795 Russell Avenue; the former church's demolition and later diocesan office use belong to the building/site history, not institutional continuation."
+    },
+    {
+      "type": "records-custody",
+      "source": "cn:institution:st-peter-akron-oh",
+      "target": "Diocese of Cleveland Archives",
+      "date": "current directory as of 2026-08-17",
+      "status": "accepted",
+      "note": "The current diocesan closed-and-merged-institutions table places the 1917-1989 St. Peter record series in the Diocesan Archives."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "Akron's St. Peter began as ministry for Lithuanian Catholics. Wolkovich's Volume 3 history places mission care in 1917 and parish organization under Father Janusas about 1919. These are distinct milestones: 1917 marks the documented mission and sacramental-record phase, while about 1919 is the attributed parish-organization date. The exact canonical erection instrument remains unresolved.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed pp. 43-44"
+        },
+        {
+          "url": "https://www.dioceseofcleveland.org/files/assets/locationofsacramentalrecords.pdf#page=4",
+          "locator": "PDF p. 4, St. Peter, Akron record span 1917-1989"
+        }
+      ]
+    },
+    {
+      "text": "By 1926 St. Peter had become a territorial parish open to Catholics beyond its Lithuanian founders. That pastoral and ethnic-status transition did not close or replace the parish; it describes the same Roman Catholic institution serving a broader local population. No decree for the transition has been located.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed pp. 45-46"
+        },
+        {
+          "url": "https://global.truelithuania.com/lt/category/usa/ohio/",
+          "locator": "Akron section, attributed national-to-territorial transition"
+        }
+      ]
+    },
+    {
+      "text": "The parish's later church was at 795 Russell Avenue. A 1984 Akron Reporter item identifies St. Peter Catholic Church at that address and describes its Saturday meal service, proving active parish and site use near the end of the institution's life. The available sources do not establish the church's construction or dedication date or every earlier worship location.",
+      "sources": [
+        {
+          "url": "https://ohiomemory.org/digital/collection/p16007coll68/id/9164/",
+          "locator": "1984 Reporter item, St. Peter Catholic Church, 795 Russell Avenue"
+        }
+      ]
+    },
+    {
+      "text": "Wolkovich's Volume 3 history dates St. Peter's closure to December 30, 1989 and describes it as Akron's first Catholic church to close. The Diocese of Cleveland's current table independently places St. Peter among closed and merged institutions and gives its records as 1917-1989. Because that official table labels the dates as a record span, it corroborates the closed context and terminal year but does not by itself prove the exact closing day or canonical mechanism.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed p. 47"
+        },
+        {
+          "url": "https://www.dioceseofcleveland.org/files/assets/locationofsacramentalrecords.pdf#page=4",
+          "locator": "PDF p. 4, St. Peter, Akron row"
+        }
+      ]
+    },
+    {
+      "text": "The former St. Peter church was later demolished, while 795 Russell Avenue remained in Catholic institutional use. The Diocese of Cleveland's 2025 directory lists its Social Action Office at that address. This is site reuse after parish closure, not evidence that the church building survived or that St. Peter continued under another name; the Diocesan Archives separately hold the sacramental records.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/lt/category/usa/ohio/",
+          "locator": "Akron section, attributed former-church demolition"
+        },
+        {
+          "url": "https://www.dioceseofcleveland.org/files/assets/2025-catholic-diocese-of-cleveland-directory-2025-05-05.pdf",
+          "locator": "2025 diocesan directory, Diocesan Social Action Office at 795 Russell Avenue"
+        },
+        {
+          "url": "https://www.dioceseofcleveland.org/files/assets/locationofsacramentalrecords.pdf#page=4",
+          "locator": "PDF p. 4, current records custody"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1917-c.1919",
+      "headline": "Lithuanian mission develops into St. Peter Parish",
+      "detail": "Lithuanian mission care is documented from 1917, with parish organization attributed to about 1919; the diocesan table begins the sacramental record series in 1917.",
+      "sources": [
+        {
+          "title": "Lithuanian Religious Life in America, Vol. 3",
+          "publisher": "Norwood Press",
+          "date": "1998",
+          "page": "printed pp. 43-44",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+        },
+        {
+          "title": "Location of Sacramental Records of Closed and Merged Institutions",
+          "publisher": "Catholic Diocese of Cleveland",
+          "date": "current edition accessed 2026-08-17",
+          "page": "PDF p. 4, St. Peter, Akron",
+          "url": "https://www.dioceseofcleveland.org/files/assets/locationofsacramentalrecords.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "date": "1926",
+      "headline": "Parish becomes territorial",
+      "detail": "The Lithuanian national parish broadened into a territorial Catholic parish without becoming a second institution.",
+      "sources": [
+        {
+          "title": "Lithuanian Religious Life in America, Vol. 3",
+          "publisher": "Norwood Press",
+          "date": "1998",
+          "page": "printed pp. 45-46",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+        }
+      ]
+    },
+    {
+      "date": "1989-12-30",
+      "headline": "St. Peter closes",
+      "detail": "Wolkovich's history gives December 30, 1989 as the closure date; the official diocesan record table independently ends the record series in 1989 and places it in archival custody.",
+      "sources": [
+        {
+          "title": "Lithuanian Religious Life in America, Vol. 3",
+          "publisher": "Norwood Press",
+          "date": "1998",
+          "page": "printed p. 47",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+        },
+        {
+          "title": "Location of Sacramental Records of Closed and Merged Institutions",
+          "publisher": "Catholic Diocese of Cleveland",
+          "date": "current edition accessed 2026-08-17",
+          "page": "PDF p. 4, St. Peter, Akron",
+          "url": "https://www.dioceseofcleveland.org/files/assets/locationofsacramentalrecords.pdf#page=4"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lithuanian Religious Life in America, Vol. 3",
+      "publisher": "Norwood Press",
+      "date": "1998",
+      "page": "printed pp. 43-47",
+      "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+    },
+    {
+      "title": "Location of Sacramental Records of Closed and Merged Institutions",
+      "publisher": "Catholic Diocese of Cleveland",
+      "date": "current edition accessed 2026-08-17",
+      "page": "PDF p. 4, St. Peter, Akron",
+      "url": "https://www.dioceseofcleveland.org/files/assets/locationofsacramentalrecords.pdf#page=4"
+    },
+    {
+      "title": "Reporter page documenting St. Peter Catholic Church",
+      "publisher": "Akron-Summit County Public Library; Ohio Memory",
+      "date": "1984",
+      "page": "digital item 9164",
+      "url": "https://ohiomemory.org/digital/collection/p16007coll68/id/9164/"
+    },
+    {
+      "title": "Lithuanian heritage sites in Ohio",
+      "publisher": "Global True Lithuania",
+      "date": "accessed 2026-08-17",
+      "page": "Akron section",
+      "url": "https://global.truelithuania.com/lt/category/usa/ohio/"
+    },
+    {
+      "title": "Catholic Diocese of Cleveland Directory 2025",
+      "publisher": "Catholic Diocese of Cleveland",
+      "date": "2025",
+      "page": "Diocesan Social Action Office, 795 Russell Avenue",
+      "url": "https://www.dioceseofcleveland.org/files/assets/2025-catholic-diocese-of-cleveland-directory-2025-05-05.pdf"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The official diocesan table labels 1917-1989 as dates of records, not explicit canonical erection and suppression dates. Wolkovich's Volume 3 history distinguishes 1917 mission care from parish organization about 1919 and supplies December 30, 1989 as the exact closure reading. The former Lithuanian national parish's territorial transition by 1926 was a pastoral-status change, not closure or replacement.",
+  "gaps": "The exact host church during the mission phase; the canonical erection instrument and precise formation date; the Russell Avenue church's construction, dedication, and demolition dates; the closure decree and final-Mass documentation; the relationship of highway acquisition to the terminal event; complete records coverage; any cemetery; and the precise footprint of current buildings on the former church parcel remain unresolved."
+}

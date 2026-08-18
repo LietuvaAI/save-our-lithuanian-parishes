@@ -4,6 +4,64 @@
   "buildingStatus": "standing",
   "currentUse": "Active Catholic church — the National Shrine of St. Alphonsus Liguori, a personal parish of the Archdiocese of Baltimore administered by the Priestly Fraternity of St. Peter (FSSP) as the archdiocese's sole Traditional Latin Mass site; no Lithuanian-language Mass is offered — all three Sunday Masses Traditional Latin (verified July 2026).",
   "summary": "Baltimore's Lithuanian parish was St. Alphonsus at 114 W. Saratoga Street, a Gothic Revival church built 1842-1845 for the German community and taken over by Lithuanians in 1917; the surrounding neighborhood became known as \"Little Lithuania.\" The building stands and was never sold: it remains an archdiocesan church, listed on the National Register of Historic Places since 1973 and designated a shrine in the 1990s. Its life as a Lithuanian parish effectively ended in 2017, when longtime pastor Msgr. Arthur Bastress retired and Archbishop William Lori entrusted the shrine to the Priestly Fraternity of St. Peter (administrator installed August 1, 2017); at that point the remaining 8:30 a.m. Sunday Mass for the Lithuanian community was celebrated by a non-Lithuanian archdiocesan priest, and the Lithuanian heritage site Global True Lithuania records the Lithuanian Mass as ended in 2017. In the archdiocese's 2024 \"Seek the City to Come\" restructuring — which cut Baltimore's city parishes by roughly two-thirds — St. Alphonsus survived and was strengthened: effective August 1, 2024 it was designated a personal parish without territorial boundaries and became the only site in the Archdiocese of Baltimore where the 1962 Missal Latin Mass is celebrated, under the FSSP. As of mid-2026 the parish website lists Fr. Ian Bozant, FSSP as pastor with three Sunday Latin Masses (7:30, 9:30, 11:30 a.m.) and daily Mass, but no Lithuanian liturgy. Lithuanian traces remain inside the church, including a \"Siberian rosary\" made by Lithuanian deportees, a Lithuanian stained-glass window, the tricolor flag, and a WWII memorial to Baltimore Lithuanian servicemen.",
+  "historicalNarrative": [
+    {
+      "text": "The unnamed later Baltimore Lithuanian parish record is identified with St. Alphonsus at 114 West Saratoga Street. Lithuanians acquired the nineteenth-century German church in 1917, and the surrounding district became known as Little Lithuania; this institution and site are distinct from the earlier Lithuanian St. John the Baptist parish and its worship sites.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/National_Shrine_of_St._Alphonsus_Liguori",
+          "locator": "History section, church construction and Lithuanian acquisition in 1917"
+        },
+        {
+          "url": "https://global.truelithuania.com/baltimore-maryland-497/",
+          "locator": "Baltimore heritage account, St. Alphonsus and Little Lithuania"
+        }
+      ]
+    },
+    {
+      "text": "The Gothic Revival building remained in archdiocesan ownership and became a national shrine rather than being sold or demolished. Its Lithuanian parish character gradually contracted, leaving a single Sunday Lithuanian Mass celebrated by a non-Lithuanian archdiocesan priest when longtime pastor Arthur Bastress retired in 2017.",
+      "sources": [
+        {
+          "url": "https://catholicreview.org/st-alphonsus-shrine-entrusted-priestly-fraternity-st-peter/",
+          "locator": "2017 report, shrine status, Bastress retirement, and Lithuanian community Mass"
+        },
+        {
+          "url": "https://global.truelithuania.com/baltimore-maryland-497/",
+          "locator": "Baltimore heritage account, Lithuanian Mass ending in 2017"
+        }
+      ]
+    },
+    {
+      "text": "Archbishop William Lori entrusted St. Alphonsus to the Priestly Fraternity of St. Peter effective August 1, 2017. The Lithuanian Mass survived briefly after that handover but disappeared from the published schedule between December 17, 2017 and January 30, 2018; the end of Lithuanian worship is therefore separate from the continuing Catholic institution and building.",
+      "sources": [
+        {
+          "url": "https://catholicreview.org/st-alphonsus-shrine-entrusted-priestly-fraternity-st-peter/",
+          "locator": "St. Alphonsus entrusted to FSSP, administrator effective August 1, 2017"
+        },
+        {
+          "url": "https://www.stalphonsusbalt.org/",
+          "locator": "Parish site and archived schedule sequence, October–December 2017 Lithuanian Mass and January 2018 replacement schedule"
+        }
+      ]
+    },
+    {
+      "text": "St. Alphonsus survived Baltimore's 2024 Seek the City restructuring and became the archdiocese's personal parish for the Traditional Latin Mass. It remains an active FSSP shrine with current Sunday and weekday worship, but no Lithuanian liturgy appears on the schedule; present institutional life is thus continuous Catholic use without continuation of the Lithuanian national-parish ministry.",
+      "sources": [
+        {
+          "url": "https://catholicreview.org/latin-mass-to-have-permanent-home-at-st-alphonsus-will-end-at-hagerstown-parish-in-august/",
+          "locator": "2024 report, personal-parish designation and permanent Latin Mass site"
+        },
+        {
+          "url": "https://www.stalphonsusbalt.org/",
+          "locator": "Current parish home page, FSSP clergy and Mass schedule"
+        },
+        {
+          "url": "https://www.americamagazine.org/faith/2024/04/17/baltimore-archdiocese-parish-closures-247731/",
+          "locator": "2024-04-17 report, Seek the City restructuring context"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2017-08-01",

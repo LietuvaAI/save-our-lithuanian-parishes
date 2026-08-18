@@ -1,0 +1,240 @@
+{
+  "slug": "st-ann-jersey-city-nj",
+  "culturenetEntityId": "cn:institution:st-ann-jersey-city-nj",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian Roman Catholic parish incorporated March 19, 1910 · permanent church opened in 1913 · final Masses December 1, 1974",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "closed",
+  "buildingStatus": "demolished",
+  "currentUse": "St. Ann parish ended in December 1974. Its Grand Street and Manning Avenue church was sold to a Christian Methodist Episcopal congregation immediately after the final Masses and was later destroyed by fire and demolished, according to an attributed field history. The former church site's present use and the custody of St. Ann's sacramental records remain unresolved. The house at 337 Woodward Street was the parish rectory, not the church address.",
+  "summary": "St. Ann was Jersey City's Lithuanian Roman Catholic parish. Bishop John J. O'Connor permitted incorporation on March 19, 1910; the community initially worshiped at St. Boniface and Holy Rosary before converting a theater at Grand Street and Manning Avenue into its own church in 1913. The final two Masses were celebrated December 1, 1974, and the church and rectory were sold two days later. The church subsequently served a Christian Methodist Episcopal congregation, then was destroyed by fire and demolished; the current site use and sacramental-record custody remain unresolved.",
+  "institutionLifecycle": {
+    "formation": "A 1975 parish retrospective says Jersey City Lithuanians organized to form their own church, obtained Bishop John J. O'Connor's permission, and incorporated St. Ann Parish on March 19, 1910. It distinguishes that institutional milestone from the assignment of a resident organizing pastor in 1912 and opening of the permanent church in 1913.",
+    "institutionalForm": "Lithuanian Roman Catholic parish in the Diocese of Newark, later Archdiocese of Newark.",
+    "jurisdiction": "Roman Catholic Diocese of Newark at incorporation; later Archdiocese of Newark.",
+    "terminalStatus": "Closed after final Masses on December 1, 1974. A contemporaneous retrospective says the church and rectory were sold on December 3, 1974; no canonical decree or effective-date instrument has been located.",
+    "currentVerification": "The 1975 retrospective documents immediate Methodist reuse. A later field history reports that the former church was destroyed by fire and demolished in the 1980s. Current parcel use, records custody, and interior-object survival beyond the documented transfer of furnishings to a Philippine mission remain unresolved."
+  },
+  "worshipSites": [
+    {
+      "siteType": "host_church",
+      "name": "St. Boniface Church",
+      "address": "Jersey City, New Jersey; exact address and building identity unresolved",
+      "usePeriod": "one of two temporary host churches before the 1913 St. Ann church opened",
+      "buildingCondition": "unknown",
+      "currentUse": "Temporary hosted worship only; St. Ann did not own this site, and the available sources do not establish its present condition.",
+      "evidence": [
+        {
+          "url": "https://www.spauda2.org/vytis/archive/1975/1975-nr04-VYTIS.pdf#page=8",
+          "locator": "PDF p. 8 / printed p. 8, 'A Lithuanian Church Is Closed'"
+        }
+      ]
+    },
+    {
+      "siteType": "host_church",
+      "name": "Holy Rosary Church",
+      "address": "Jersey City, New Jersey; exact address and building identity unresolved",
+      "usePeriod": "one of two temporary host churches before the 1913 St. Ann church opened",
+      "buildingCondition": "unknown",
+      "currentUse": "Temporary hosted worship only; St. Ann did not own this site, and the available sources do not establish its present condition.",
+      "evidence": [
+        {
+          "url": "https://www.spauda2.org/vytis/archive/1975/1975-nr04-VYTIS.pdf#page=8",
+          "locator": "PDF p. 8 / printed p. 8, temporary services at St. Boniface and Holy Rosary"
+        }
+      ]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-ann-grand-manning-jersey-city-nj",
+      "name": "St. Ann Lithuanian Roman Catholic Church",
+      "address": "Grand Street and Manning Avenue, Jersey City, NJ; street number unresolved",
+      "usePeriod": "Thanksgiving Day 1913 through final Masses on December 1, 1974",
+      "buildingCondition": "demolished",
+      "currentUse": "Sold December 3, 1974 and used by a Christian Methodist Episcopal congregation. A later field history reports destruction by fire and demolition in the 1980s; the site's present use is unresolved.",
+      "evidence": [
+        {
+          "url": "https://www.spauda2.org/vytis/archive/1975/1975-nr04-VYTIS.pdf#page=9",
+          "locator": "PDF p. 9 / printed p. 9, Grand Street and Manning Avenue church, final Masses, sale, and Methodist use"
+        },
+        {
+          "url": "https://global.truelithuania.com/new-jersey-613/",
+          "locator": "Jersey City section, attributed field account of the former St. Ann church and later demolition"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-host-site",
+      "source": "cn:institution:st-ann-jersey-city-nj",
+      "target": "St. Boniface Church, Jersey City; exact site identity unresolved",
+      "date": "before 1913",
+      "status": "accepted",
+      "note": "St. Ann worshiped temporarily at St. Boniface; no identity, ownership, or succession relationship is implied."
+    },
+    {
+      "type": "institution-used-host-site",
+      "source": "cn:institution:st-ann-jersey-city-nj",
+      "target": "Holy Rosary Church, Jersey City; exact site identity unresolved",
+      "date": "before 1913",
+      "status": "accepted",
+      "note": "St. Ann worshiped temporarily at Holy Rosary; no identity, ownership, or succession relationship is implied."
+    },
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-ann-jersey-city-nj",
+      "target": "cn:building_site:st-ann-grand-manning-jersey-city-nj",
+      "date": "1913-1974",
+      "status": "accepted",
+      "note": "The converted theater at Grand Street and Manning Avenue was St. Ann's permanent church from 1913 until the parish's final Masses in 1974."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "Jersey City's Lithuanian Catholics organized St. Ann as a distinct Roman Catholic parish rather than as another same-named Jersey City congregation. A parish retrospective says local Lithuanians selected St. Ann as patron, formed a committee, and obtained Bishop John J. O'Connor's permission to incorporate on March 19, 1910. That date is the institutional milestone; it is not the opening date of the permanent church.",
+      "sources": [
+        {
+          "url": "https://www.spauda2.org/vytis/archive/1975/1975-nr04-VYTIS.pdf#page=8",
+          "locator": "PDF p. 8 / printed p. 8"
+        }
+      ]
+    },
+    {
+      "text": "Before a resident Lithuanian pastor and permanent site were secured, the community worshiped at St. Boniface and Holy Rosary in Jersey City. Bishop O'Connor then designated Father Joseph Rastutis in 1912 to organize a permanent parish. The two host churches remain separate institutions and physical sites; the parish account does not establish their exact addresses.",
+      "sources": [
+        {
+          "url": "https://www.spauda2.org/vytis/archive/1975/1975-nr04-VYTIS.pdf#page=8",
+          "locator": "PDF p. 8 / printed p. 8, temporary worship and organizing pastor"
+        },
+        {
+          "url": "https://www.spauda2.org/vytis/archive/1975/1975-nr04-VYTIS.pdf#page=9",
+          "locator": "PDF p. 9 / printed p. 9, Father Rastutis and permanent-parish work"
+        }
+      ]
+    },
+    {
+      "text": "The parish acquired a theater at Grand Street and Manning Avenue, renovated it as a church, and celebrated its first Mass there on Thanksgiving Day 1913. The deed was recorded January 7, 1914. The house at 337 Woodward Street was acquired later as the rectory; city-directory evidence also associates the pastor and parish with that address, but it must not be mistaken for the church building.",
+      "sources": [
+        {
+          "url": "https://www.spauda2.org/vytis/archive/1975/1975-nr04-VYTIS.pdf#page=9",
+          "locator": "PDF p. 9 / printed p. 9, theater conversion, first Mass, deed, and rectory"
+        },
+        {
+          "url": "https://www.digifind-it.com/hoboken/data/city-directories/1925-1926%20part%201%20Part_0007.pdf",
+          "locator": "1925-1926 Jersey City Directory, printed p. 607, Joseph Kransnitskas entry"
+        }
+      ]
+    },
+    {
+      "text": "Monsignor John J. Scharnus served St. Ann from 1941 to 1964. Father Dominic Pocius followed, and Father Vladas Karalevičius became the final pastor. A 1988 memoir confirms that Karalevičius remained until the parish closed in 1974, while the longer 1975 account attributes the end to dwindling membership, vandalism, and financial strain.",
+      "sources": [
+        {
+          "url": "https://www.spauda2.org/vytis/archive/1988/1988-nr09-VYTIS.pdf#page=13",
+          "locator": "PDF p. 13 / printed p. 11, 'My Memories of Msgr. John J. Scharnus'"
+        },
+        {
+          "url": "https://www.spauda2.org/vytis/archive/1975/1975-nr04-VYTIS.pdf#page=9",
+          "locator": "PDF p. 9 / printed p. 9, decline and final pastor"
+        }
+      ]
+    },
+    {
+      "text": "Father Karalevičius celebrated the final two Masses on December 1, 1974. The church and rectory were sold on December 3 to a Christian Methodist Episcopal congregation, and the Catholic furnishings were sent for use in a Franciscan mission chapel in the Philippines. A later field history reports that the former church was destroyed by fire and demolished in the 1980s; the exact demolition date, current site use, and St. Ann records custody remain unresolved.",
+      "sources": [
+        {
+          "url": "https://www.spauda2.org/vytis/archive/1975/1975-nr04-VYTIS.pdf#page=9",
+          "locator": "PDF p. 9 / printed p. 9, final Masses, sale, reuse, and transferred furnishings"
+        },
+        {
+          "url": "https://global.truelithuania.com/new-jersey-613/",
+          "locator": "Jersey City section, attributed later building outcome"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1910-03-19",
+      "headline": "St. Ann Parish incorporated",
+      "detail": "Bishop John J. O'Connor permitted Jersey City's Lithuanian Catholics to incorporate St. Ann Parish.",
+      "sources": [
+        {
+          "title": "A Lithuanian Church Is Closed: St. Ann's Lithuanian Church, Jersey City, New Jersey 1913-1974",
+          "publisher": "Vytis / The Knight",
+          "date": "1975, no. 4",
+          "page": "PDF p. 8 / printed p. 8",
+          "url": "https://www.spauda2.org/vytis/archive/1975/1975-nr04-VYTIS.pdf#page=8"
+        }
+      ]
+    },
+    {
+      "date": "1913-11",
+      "headline": "Permanent church opens at Grand and Manning",
+      "detail": "The parish converted a theater into its church and celebrated its first Mass there on Thanksgiving Day 1913.",
+      "sources": [
+        {
+          "title": "A Lithuanian Church Is Closed: St. Ann's Lithuanian Church, Jersey City, New Jersey 1913-1974",
+          "publisher": "Vytis / The Knight",
+          "date": "1975, no. 4",
+          "page": "PDF p. 9 / printed p. 9",
+          "url": "https://www.spauda2.org/vytis/archive/1975/1975-nr04-VYTIS.pdf#page=9"
+        }
+      ]
+    },
+    {
+      "date": "1974-12-01",
+      "headline": "Final parish Masses celebrated",
+      "detail": "St. Ann's final two Masses were celebrated December 1; the church and rectory were sold December 3 for Methodist use.",
+      "sources": [
+        {
+          "title": "A Lithuanian Church Is Closed: St. Ann's Lithuanian Church, Jersey City, New Jersey 1913-1974",
+          "publisher": "Vytis / The Knight",
+          "date": "1975, no. 4",
+          "page": "PDF p. 9 / printed p. 9",
+          "url": "https://www.spauda2.org/vytis/archive/1975/1975-nr04-VYTIS.pdf#page=9"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "A Lithuanian Church Is Closed: St. Ann's Lithuanian Church, Jersey City, New Jersey 1913-1974",
+      "publisher": "Vytis / The Knight",
+      "date": "1975, no. 4",
+      "page": "PDF p. 8 / printed p. 8",
+      "url": "https://www.spauda2.org/vytis/archive/1975/1975-nr04-VYTIS.pdf#page=8"
+    },
+    {
+      "title": "A Lithuanian Church Is Closed: St. Ann's Lithuanian Church, Jersey City, New Jersey 1913-1974",
+      "publisher": "Vytis / The Knight",
+      "date": "1975, no. 4",
+      "page": "PDF p. 9 / printed p. 9",
+      "url": "https://www.spauda2.org/vytis/archive/1975/1975-nr04-VYTIS.pdf#page=9"
+    },
+    {
+      "title": "My Memories of Msgr. John J. Scharnus",
+      "publisher": "Vytis / The Knight",
+      "date": "1988-11",
+      "page": "PDF p. 13 / printed p. 11",
+      "url": "https://www.spauda2.org/vytis/archive/1988/1988-nr09-VYTIS.pdf#page=13"
+    },
+    {
+      "title": "Jersey City Directory, 1925-1926",
+      "publisher": "Jersey City Directory Company; digitized by Hoboken Public Library",
+      "date": "1925-1926",
+      "page": "printed p. 607, Joseph Kransnitskas entry",
+      "url": "https://www.digifind-it.com/hoboken/data/city-directories/1925-1926%20part%201%20Part_0007.pdf"
+    },
+    {
+      "title": "Lithuanian sites in New Jersey",
+      "publisher": "Global True Lithuania",
+      "date": "accessed 2026-08-17",
+      "page": "Jersey City section",
+      "url": "https://global.truelithuania.com/new-jersey-613/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The recurring 337 Woodward Street address belongs to the parish rectory, while the church stood at Grand Street and Manning Avenue. The 1910 incorporation, 1912 resident-pastor assignment, and 1913 church opening are distinct formation and site milestones. No same-name St. Ann parish in Jersey City is joined to this Lithuanian institution by name alone.",
+  "gaps": "The exact addresses and physical identities of the temporary St. Boniface and Holy Rosary host churches; the canonical erection and closure instruments; the current custodian and completeness of sacramental records; the exact demolition date and instrument; the present parcel use; any cemetery relationship; and survival of furnishings beyond the documented 1974 transfer remain unresolved."
+}

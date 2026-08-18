@@ -4,6 +4,60 @@
   "buildingStatus": "for-sale",
   "currentUse": "Former community/nonprofit center (Southwest Housing Solutions' Vista Partnership); listed for sale September 2024 at $825,000 as an 11,282 sq ft office/specialty building; outcome of the listing unverified",
   "summary": "The Šv. Antano (St. Anthony's Lithuanian) church building at the corner of West Vernor Highway and 25th Street in Southwest Detroit (addressed both as 1750 25th St and 3553 W Vernor Hwy) is still standing and was never demolished. After the parish's 2013 closure it was redeveloped by Southwest Housing Solutions' Vista Partnership as a community center for fitness, recreation, and meetings, with the organization itself based in the church; religious items and pews were removed, the ground floor hosted a charity teaching free English classes to recent immigrants, and the premises were rented for events and exercise classes. Southwest Solutions merged with Development Centers in 2023 to form MiSide. In September 2024 the building was put on the market through O'Connor Real Estate at an asking price of $825,000, marketed as an 11,282 sq ft \"office/specialty\" property in an opportunity zone a few blocks from Ford's Michigan Central Station, featuring \"an impressive, light-flooded event hall with original hardwood floor, chandeliers and arched windows,\" private offices, former living spaces, and a 16-car lot. Whether that sale has closed could not be verified; listing pages remained live on aggregators as of July 2026. The Archdiocese of Detroit's official closed-parishes register confirms the parish operated 1920-2013 with records held at Divine Providence Parish (Lithuanian), Southfield. The building sits within the West Vernor-Junction Historic District, listed on the National Register of Historic Places in 2002.",
+  "historicalNarrative": [
+    {
+      "text": "St. Anthony was the Lithuanian Roman Catholic parish founded in Detroit in 1920, distinct from the unrelated Cathedral of St. Anthony on Sheridan Street. Its church at West Vernor Highway and 25th Street was built in 1923; the parish's institutional founding and the building's construction are therefore separate milestones.",
+      "sources": [
+        {
+          "url": "https://www.aod.org/closed-parishes",
+          "locator": "Closed Parishes register, St. Anthony (Lithuanian) Parish, Detroit"
+        },
+        {
+          "url": "https://www.oconnordetroit.com/wp-content/uploads/2024/09/Southwest-3553-W-Vernor-OM.pdf",
+          "locator": "Offering memorandum, former St. Anthony identification, construction date, and property description"
+        }
+      ]
+    },
+    {
+      "text": "The parish declined after the retirement of its priest in 2009 and closed in 2013. The Archdiocese of Detroit records its sacramental records at Divine Providence Parish in Southfield; that custody relationship does not make the former Vernor building part of the successor institution.",
+      "sources": [
+        {
+          "url": "https://www.aod.org/closed-parishes",
+          "locator": "Closed Parishes register, 1920–2013 span and records at Divine Providence"
+        },
+        {
+          "url": "https://global.truelithuania.com/detroit-michigan-10/",
+          "locator": "Detroit heritage account, late parish decline and 2013 closure"
+        }
+      ]
+    },
+    {
+      "text": "Southwest Housing Solutions redeveloped the former church in 2013 as a community center for fitness, meetings, immigrant English classes, and other neighborhood programs. Religious furnishings were removed, while the standing church building remained identifiable at the corner under the commercial address 3553 West Vernor and the former parish address 1750 25th Street.",
+      "sources": [
+        {
+          "url": "https://www.nailhed.com/2017/05/southwest-pride.html",
+          "locator": "Southwest Pride, St. Anthony redevelopment and community-center use"
+        },
+        {
+          "url": "https://global.truelithuania.com/detroit-michigan-10/",
+          "locator": "Detroit heritage account, former church reuse and removal of furnishings"
+        }
+      ]
+    },
+    {
+      "text": "After Southwest Solutions joined Development Centers to form MiSide in 2023, the former church was offered for sale in September 2024 for $825,000. The offering memorandum documents an 11,282-square-foot standing building with an event hall, offices, former living spaces, and parking, but no completed sale or current post-listing occupant has been verified.",
+      "sources": [
+        {
+          "url": "https://miside.org/about-us",
+          "locator": "About Us, 2023 formation of MiSide from Southwest Solutions and Development Centers"
+        },
+        {
+          "url": "https://www.oconnordetroit.com/wp-content/uploads/2024/09/Southwest-3553-W-Vernor-OM.pdf",
+          "locator": "September 2024 offering memorandum, asking price and building details"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2013",

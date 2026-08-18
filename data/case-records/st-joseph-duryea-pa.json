@@ -1,0 +1,140 @@
+{
+  "slug": "st-joseph-duryea-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "demolished",
+  "currentUse": "St. Joseph's Lithuanian Roman Catholic church on Lackawanna Avenue is gone. The Diocese of Scranton closed the church on March 21, 2010, and a 2013 Lithuanian-American report records demolition on April 16, 2013. Nativity of Our Lord Parish is the current Catholic successor in Duryea and worships at the former Holy Rosary site, 127 Stephenson Street. That active successor and address must not be mistaken for survival of St. Joseph's institution or building. The precise street number of the demolished St. Joseph church and the present use of its parcel remain unresolved.",
+  "summary": "St. Joseph was Duryea's Lithuanian Roman Catholic parish. Contemporary Draugas notices identify a newly built Lithuanian St. Joseph church and document its blessing on Labor Day, September 5, 1910. The exact canonical erection date and any worship site before that church remain unlocated. A later account says St. Joseph merged with Sacred Heart of Jesus in the early 1990s, that those communities joined Holy Rosary in 2003, and that the Diocese created Nativity of Our Lord Parish at the Holy Rosary site in 2010. The diocesan register gives March 21, 2010 as the closure date for St. Joseph Church. Its Lackawanna Avenue building stood vacant after the final Mass and was demolished on April 16, 2013. Nativity of Our Lord remains active at 127 Stephenson Street, preserving institutional continuity in a distinct successor at a different worship site.",
+  "historicalNarrative": [
+    {
+      "text": "Duryea's Lithuanian Catholics had completed a church of their own by September 1910. Draugas announced that the town's Lithuanians would celebrate the blessing of their Lithuanian St. Joseph church on September 5. Its report one week later called the structure new and identified the clergy who took part, including temporary pastor Father A. Kaupas. These contemporary notices securely establish the church's Lithuanian Roman Catholic identity and opening, although they do not give a canonical parish-erection date or describe an earlier worship site.",
+      "sources": [
+        {
+          "url": "https://www.draugas.org/archive/1910_reg/1910-09-01-DRAUGASw.pdf",
+          "locator": "Draugas, 1910-09-01, p. 4, Duryea notice announcing the September 5 blessing of the Lithuanian St. Joseph church"
+        },
+        {
+          "url": "https://www.draugas.org/archive/1910_reg/1910-09-08-DRAUGASo.pdf",
+          "locator": "Draugas, 1910-09-08, p. 4, report of the September 5 blessing of the new Lithuanian St. Joseph church"
+        }
+      ]
+    },
+    {
+      "text": "The reviewed later history separates several stages of institutional consolidation. St. Joseph first merged with Duryea's historically German Sacred Heart of Jesus parish in the early 1990s. In 2003 those communities joined Holy Rosary, a historically Polish parish. These are changes in institutional administration; they do not prove that worship at St. Joseph's building ended at either earlier merger date.",
+      "sources": [
+        {
+          "url": "https://www.spauda2.org/bridges/archive/2013/2013-nr06-BRIDGES.pdf",
+          "locator": "Bridges, June 2013, p. 19, Pennsylvania Loses Another Lithuanian Church: early-1990s and 2003 merger sequence"
+        }
+      ]
+    },
+    {
+      "text": "The Diocese of Scranton's consolidated-parishes register closes St. Joseph Church on March 21, 2010 and places Holy Rosary, Sacred Heart of Jesus, and St. Joseph under the new Nativity of Our Lord Parish in Duryea. Bridges reports that the final Mass at St. Joseph occurred in 2010 and that the church then stood vacant. The typed continuity is therefore institution-merged-into-institution and worship-site-closed, not uninterrupted survival under the old St. Joseph name.",
+      "sources": [
+        {
+          "url": "https://www.dioceseofscranton.org/wp-content/uploads/2024/11/Consolidated-Parishes-updated-11-19-24.pdf",
+          "locator": "PDF p. 2, Duryea row: St. Joseph Church closed 2010-03-21; Nativity of Our Lord Parish successor"
+        },
+        {
+          "url": "https://www.spauda2.org/bridges/archive/2013/2013-nr06-BRIDGES.pdf",
+          "locator": "Bridges, June 2013, p. 19, final Mass, vacancy, and Nativity of Our Lord consolidation"
+        }
+      ]
+    },
+    {
+      "text": "On April 16, 2013, the Lackawanna Avenue church was dismantled. The altar and pews had been donated to Holy Redeemer High School, and the St. Joseph statue was moved to the successor parish. As of August 2026 Nativity of Our Lord publishes current worship and contact information at 127 Stephenson Street. Those transferred objects and active parish life are material and institutional continuities; the Lithuanian church building itself was demolished, and the old parcel's current use has not been verified.",
+      "sources": [
+        {
+          "url": "https://www.spauda2.org/bridges/archive/2013/2013-nr06-BRIDGES.pdf",
+          "locator": "Bridges, June 2013, p. 19, April 16 demolition and disposition of statue, altar, and pews"
+        },
+        {
+          "url": "https://www.nativityduryea.org/",
+          "locator": "Nativity of Our Lord Parish home page: current parish identity, worship invitation, and 127 Stephenson Street address; accessed 2026-08-17"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1910-09-05",
+      "headline": "New Lithuanian St. Joseph church is blessed",
+      "detail": "Contemporary notices announce and report the blessing of Duryea's new Lithuanian church on Labor Day.",
+      "sources": [
+        {
+          "title": "Duryea church-blessing report",
+          "publisher": "Draugas",
+          "date": "1910-09-08",
+          "page": "p. 4",
+          "url": "https://www.draugas.org/archive/1910_reg/1910-09-08-DRAUGASo.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2010-03-21",
+      "headline": "St. Joseph Church closes in Duryea consolidation",
+      "detail": "The diocesan register closes the St. Joseph worship site and identifies Nativity of Our Lord Parish as successor.",
+      "sources": [
+        {
+          "title": "Consolidated Parishes",
+          "publisher": "Diocese of Scranton",
+          "date": "updated 2024-11-19",
+          "page": "PDF p. 2",
+          "url": "https://www.dioceseofscranton.org/wp-content/uploads/2024/11/Consolidated-Parishes-updated-11-19-24.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2013-04-16",
+      "headline": "Lackawanna Avenue church is demolished",
+      "detail": "The former congregation watched as the vacant Lithuanian church was dismantled; selected furnishings and the St. Joseph statue had been transferred.",
+      "sources": [
+        {
+          "title": "Pennsylvania Loses Another Lithuanian Church",
+          "publisher": "Bridges",
+          "date": "June 2013",
+          "page": "p. 19",
+          "url": "https://www.spauda2.org/bridges/archive/2013/2013-nr06-BRIDGES.pdf"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Duryea church-blessing announcement",
+      "publisher": "Draugas",
+      "date": "1910-09-01",
+      "page": "p. 4",
+      "url": "https://www.draugas.org/archive/1910_reg/1910-09-01-DRAUGASw.pdf"
+    },
+    {
+      "title": "Duryea church-blessing report",
+      "publisher": "Draugas",
+      "date": "1910-09-08",
+      "page": "p. 4",
+      "url": "https://www.draugas.org/archive/1910_reg/1910-09-08-DRAUGASo.pdf"
+    },
+    {
+      "title": "Consolidated Parishes",
+      "publisher": "Diocese of Scranton",
+      "date": "updated 2024-11-19",
+      "page": "PDF p. 2",
+      "url": "https://www.dioceseofscranton.org/wp-content/uploads/2024/11/Consolidated-Parishes-updated-11-19-24.pdf"
+    },
+    {
+      "title": "Pennsylvania Loses Another Lithuanian Church",
+      "publisher": "Bridges",
+      "date": "June 2013",
+      "page": "p. 19",
+      "url": "https://www.spauda2.org/bridges/archive/2013/2013-nr06-BRIDGES.pdf"
+    },
+    {
+      "title": "Nativity of Our Lord Parish home page",
+      "publisher": "Nativity of Our Lord Parish",
+      "date": "accessed 2026-08-17",
+      "url": "https://www.nativityduryea.org/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The raw registry's first indexed mention in November 1910 is superseded by the manually reviewed September 1 announcement and September 8 report of the September 5 church blessing. The church was closed on 2010-03-21 and demolished in 2013; those are separate building events. Current directories sometimes attach 127 Stephenson Street to St. Joseph, but that is the active Nativity of Our Lord/Holy Rosary successor site. The demolished St. Joseph church is securely placed on Lackawanna Avenue, while its exact street number remains unverified.",
+  "gaps": "The canonical erection instrument and exact founding date, worship location before September 1910, original deed and exact Lackawanna Avenue street number, exact juridic terms and dates of the early-1990s and 2003 mergers, sacramental-record custody, closure or relegation decree, demolition permit, and present parcel use remain to be located."
+}

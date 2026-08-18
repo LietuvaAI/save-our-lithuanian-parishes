@@ -25,13 +25,13 @@ const publication = readJson("data/canonical-publication-projection.json");
 const errors = [];
 
 const EXPECTED_BRAIN_MERGE_COMMIT =
-  "97d6ecfe746e35a2dc3f2a90e741e993608cd2cf";
+  "92566d649be154f64e8ca9c0d67bf724535769c0";
 const EXPECTED_CONTENT_HASH =
-  "ba0d82f2f2cd0e024844fc58a6cbe0396de4aa0548cfac3b1bcb376edeb19ae4";
+  "ef45a541d7a31f02d19ca48e506ae499235695c393c1a44d47a361f8fb6d14a7";
 const EXPECTED_SOURCE_PACKET_HASH =
-  "17c2dfba56738fcd005272dc64f419fbe9b3f14d3fbd515b485eeb55b01deb83";
+  "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd";
 const EXPECTED_SOURCE_OVERLAY_HASH =
-  "e57f0647d2fe36f7aa793429463cb2c3c2c9d238767650a208ee52b5dabd5495";
+  "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a";
 const EXPECTED_EXISTING_NINE_HASH =
   "143118db45388cb94c1421623e0139428751b6606626d5b51d5ea7b4a3b4e742";
 const EXPECTED_EXISTING_ELEVEN_HASH =
@@ -136,7 +136,7 @@ if (
   projection.content_hash_sha256 !== EXPECTED_CONTENT_HASH ||
   projection.content_hash_sha256 !== contentHash(projection)
 ) {
-  errors.push("tranche 5 record-set hash does not match merged Brain #552");
+  errors.push("tranche 5 record-set hash does not match the pinned Brain projection");
 }
 if (
   projection.schema_version !==

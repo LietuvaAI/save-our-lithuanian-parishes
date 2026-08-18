@@ -521,6 +521,10 @@
       "status": "verified",
       "url": "https://www.draugas.org/archive/1954_reg/1954-03-05-DRAUGAS.pdf"
     },
+    "1954-03-13": {
+      "status": "verified",
+      "url": "https://www.draugas.org/archive/1954_reg/1954-03-13-DRAUGAS-i7-8.pdf"
+    },
     "1954-11-06": {
       "status": "verified",
       "url": "https://www.draugas.org/archive/1954_reg/1954-11-06-DRAUGAS-i7-8.pdf"
@@ -573,6 +577,10 @@
       "status": "verified",
       "url": "https://www.draugas.org/archive/1965_reg/1965-11-03-DRAUGAS.pdf"
     },
+    "1966-09-17": {
+      "status": "verified",
+      "url": "https://www.draugas.org/archive/1966_reg/1966-09-17-DRAUGAS.pdf"
+    },
     "1967-02-11": {
       "status": "verified",
       "url": "https://www.draugas.org/archive/1967_reg/1967-02-11-DRAUGAS.pdf"
@@ -624,6 +632,10 @@
     "1986-03-21": {
       "status": "verified",
       "url": "https://www.draugas.org/archive/1986_reg/1986-03-21-DRAUGAS-i7-8.pdf"
+    },
+    "1986-06-10": {
+      "status": "verified",
+      "url": "https://www.draugas.org/archive/1986_reg/1986-06-10-DRAUGAS-i7-8.pdf"
     },
     "1989-03-22": {
       "status": "verified",
@@ -693,6 +705,10 @@
       "status": "verified",
       "url": "https://www.draugas.org/archive/1995_reg/1995-02-07-DRAUGASw-i7-8.pdf"
     },
+    "1995-02-10": {
+      "status": "verified",
+      "url": "https://www.draugas.org/archive/1995_reg/1995-02-10-DRAUGASw-i7-8.pdf"
+    },
     "1996-03-28": {
       "status": "verified",
       "url": "https://www.draugas.org/archive/1996_reg/1996-03-28-DRAUGAS-i7-8.pdf"
@@ -704,6 +720,10 @@
     "1996-11-26": {
       "status": "verified",
       "url": "https://www.draugas.org/archive/1996_reg/1996-11-26-DRAUGAS-i7-8.pdf"
+    },
+    "1996-12-04": {
+      "status": "verified",
+      "url": "https://www.draugas.org/archive/1996_reg/1996-12-04-DRAUGAS-i7-8.pdf"
     },
     "1997-07-29": {
       "status": "verified",
@@ -1161,6 +1181,10 @@
       "status": "verified",
       "url": "https://draugas.org/key/2009_reg/2009-09-16-DRAUGASo.pdf"
     },
+    "2009-08-26": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2009_reg/2009-08-26-DRAUGASo.pdf"
+    },
     "2009-09-29": {
       "status": "verified",
       "url": "https://draugas.org/key/2009_reg/2009-09-29-DRAUGASo.pdf"
@@ -1204,6 +1228,10 @@
     "2011-02-05": {
       "status": "verified",
       "url": "https://draugas.org/key/2011_reg/2011-02-05-DRAUGASo.pdf"
+    },
+    "2011-04-09": {
+      "status": "verified",
+      "url": "https://draugas.org/key/2011_reg/2011-04-09-DRAUGASo.pdf"
     },
     "2011-04-23": {
       "status": "verified",

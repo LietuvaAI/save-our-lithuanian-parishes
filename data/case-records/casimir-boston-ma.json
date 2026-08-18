@@ -1,0 +1,199 @@
+{
+  "slug": "casimir-boston-ma",
+  "culturenetEntityId": "cn:institution:st-joseph-st-casimir-boston-ma",
+  "asOf": "2026-08-17",
+  "formationLabel": "Early South Boston Lithuanian Roman Catholic parish formed in 1895 under St. Joseph and later St. Casimir names · division and relationship to St. Peter disputed · terminal date unresolved",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "historical_end_unresolved",
+  "buildingStatus": "unknown",
+  "currentUse": "The early St. Joseph/St. Casimir institution is historical, but its exact terminal event and the fate of its East Seventh Street chapel property are unresolved. The current St. Peter Lithuanian Parish is a separate canonical institution connected by a conflict-preserving lineage relationship; its survival cannot be used as proof that the early institution or chapel survived unchanged.",
+  "summary": "South Boston's first named Lithuanian Roman Catholic parish was initially called St. Joseph and later St. Casimir. A St. Peter-authored history places its East Seventh Street property and pastoral formation in 1895, with two houses adapted as rectory and chapel, and describes a fire, rebuilding, and a serious division. The early St. Joseph/St. Casimir parish and St. Peter are treated as distinct institutions connected by disputed continuation. Michelsonas describes the early body as abandoned and superseded by a rival St. Peter body; the St. Peter-authored account instead dates St. Peter's history to 1896 under the same priest. The early parish's exact terminal date, canonical mechanism, chapel address, and building outcome remain unresolved.",
+  "institutionLifecycle": {
+    "formation": "The first-party parish history dates formation to 1895, when East Seventh Street property was acquired and Archbishop John J. Williams appointed Father Joseph Gricius to administer it as pastor for Boston's Lithuanians.",
+    "institutionalForm": "Lithuanian Roman Catholic parish known first as St. Joseph and later as St. Casimir; one early institution, not two same-name institutions.",
+    "jurisdiction": "Archdiocese of Boston.",
+    "terminalStatus": "Historical end unresolved. The division that produced or redirected canonical life toward St. Peter is documented, but the accepted sources conflict on whether this was abandonment/supersession or continuity under a new institutional expression.",
+    "currentVerification": "No evidence establishes current survival of the early institution. A 2020 St. Peter bulletin provides a first-party historical account but does not prove unchanged institutional identity."
+  },
+  "worshipSites": [
+    {
+      "siteType": "host_church",
+      "name": "Holy Trinity Church",
+      "address": "Boston; exact host identity and address unresolved",
+      "usePeriod": "before the East Seventh Street chapel phase",
+      "buildingCondition": "unknown",
+      "currentUse": "Historical host only; no identity relationship asserted.",
+      "evidence": [
+        {
+          "url": "https://www.stpeterlithuanianparish.org/pdf_files/rugsejis_2020.pdf#page=2",
+          "locator": "PDF p. 2"
+        }
+      ]
+    },
+    {
+      "siteType": "chapel",
+      "culturenetEntityId": "cn:building_site:east-seventh-street-chapel-boston-ma",
+      "name": "East Seventh Street Lithuanian chapel",
+      "address": "East Seventh Street, South Boston, MA; street number unresolved",
+      "usePeriod": "from 1895; terminal use date unresolved",
+      "buildingCondition": "unknown",
+      "currentUse": "Unknown. The source reports a historical fire and rebuilding, but not the site's terminal disposition.",
+      "evidence": [
+        {
+          "url": "https://www.stpeterlithuanianparish.org/pdf_files/rugsejis_2020.pdf#page=2",
+          "locator": "PDF p. 2"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-joseph-st-casimir-boston-ma",
+      "target": "cn:building_site:east-seventh-street-chapel-boston-ma",
+      "date": "from 1895; terminal date unresolved",
+      "status": "accepted",
+      "note": "The chapel is a site of the early institution, not an independent institution."
+    },
+    {
+      "type": "congregation/canonical-life-continued-in",
+      "source": "cn:institution:st-joseph-st-casimir-boston-ma",
+      "target": "cn:institution:st-peter-south-boston-ma",
+      "date": "1896–1904",
+      "status": "conflict_preserved",
+      "note": "The relationship records disputed lineage between distinct institutions. Michelsonas describes abandonment and supersession; the St. Peter-authored history dates St. Peter's own beginning to 1896 under Father Gricius. It is not an identity edge."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "Boston Lithuanians first worshipped under Father Joseph Gricius at Holy Trinity while leaders sought property for their own religious life. The St. Peter-authored history says Peter Chaplikas acquired East Seventh Street property in 1895 and later transferred it to Archbishop John J. Williams, who appointed Gricius to administer it for Boston's Lithuanian Catholics.",
+      "sources": [
+        {
+          "url": "https://www.stpeterlithuanianparish.org/pdf_files/rugsejis_2020.pdf#page=2",
+          "locator": "PDF p. 2"
+        }
+      ]
+    },
+    {
+      "text": "The early parish was first called St. Joseph and later St. Casimir. The East Seventh Street property contained two houses: one became a rectory and the other a chapel. The 2020 bulletin gives the fire date as 1897 or 1888 and says Father Gricius rebuilt the chapel; the correct year remains unresolved.",
+      "sources": [
+        {
+          "url": "https://www.stpeterlithuanianparish.org/pdf_files/rugsejis_2020.pdf#page=2",
+          "locator": "PDF p. 2"
+        }
+      ]
+    },
+    {
+      "text": "The parish then divided over how to obtain an adequate church. The St. Peter-authored account describes a dissatisfied group raising funds, acquiring a new site, erecting a church, and seeking another priest. The early St. Joseph/St. Casimir parish and St. Peter remain distinct institutions despite overlapping clergy and community origins.",
+      "sources": [
+        {
+          "url": "https://www.stpeterlithuanianparish.org/pdf_files/rugsejis_2020.pdf#page=2",
+          "locator": "PDF p. 2"
+        }
+      ]
+    },
+    {
+      "text": "The sources disagree about the resulting lineage. Michelsonas describes St. Joseph/St. Casimir as abandoned and superseded by the rival St. Peter body. The St. Peter-authored history, by contrast, dates St. Peter's own history to 1896 under Father Gricius. The early St. Joseph/St. Casimir parish and St. Peter are therefore treated as distinct institutions linked by a disputed continuation of canonical life.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje",
+          "locator": "pp. 283–284"
+        },
+        {
+          "url": "https://www.stpeterlithuanianparish.org/pdf_files/rugsejis_2020.pdf#page=2",
+          "locator": "PDF p. 2"
+        }
+      ]
+    },
+    {
+      "text": "No source supplies a suppression decree, exact terminal date, or terminal property disposition for the early institution. St. Peter's current life cannot fill those gaps because the institutions are distinct. The early parish's historical end remains unresolved, and St. Peter's later dates, address, and building condition do not apply to St. Joseph/St. Casimir.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje",
+          "locator": "pp. 283–284"
+        },
+        {
+          "url": "https://www.stpeterlithuanianparish.org/pdf_files/rugsejis_2020.pdf#page=2",
+          "locator": "PDF p. 2"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1895",
+      "headline": "Early Lithuanian parish and chapel property",
+      "detail": "East Seventh Street property was placed under Father Joseph Gricius for Boston's Lithuanian Catholics; the parish used St. Joseph and later St. Casimir names.",
+      "sources": [
+        {
+          "title": "Lithuanian Apostolate bulletin — Getting to know the history of St. Peter Lithuanian Parish",
+          "publisher": "St. Peter Lithuanian Parish, South Boston",
+          "date": "2020-09",
+          "page": "PDF p. 2",
+          "url": "https://www.stpeterlithuanianparish.org/pdf_files/rugsejis_2020.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "date": "1896–1904",
+      "headline": "Disputed division and St. Peter lineage",
+      "detail": "The sources support a lineage connection but conflict on abandonment, supersession, and continuity; St. Peter remains a separate institution.",
+      "sources": [
+        {
+          "title": "Lietuvių išeivija Amerikoje",
+          "publisher": "Stasys Michelsonas",
+          "date": "1961",
+          "page": "pp. 283–284",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
+        },
+        {
+          "title": "Lithuanian Apostolate bulletin — Getting to know the history of St. Peter Lithuanian Parish",
+          "publisher": "St. Peter Lithuanian Parish, South Boston",
+          "date": "2020-09",
+          "page": "PDF p. 2",
+          "url": "https://www.stpeterlithuanianparish.org/pdf_files/rugsejis_2020.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "headline": "Historical end and site outcome unresolved",
+      "detail": "No accepted terminal instrument or present property evidence has been found for the early parish or chapel.",
+      "sources": [
+        {
+          "title": "Lietuvių išeivija Amerikoje",
+          "publisher": "Stasys Michelsonas",
+          "date": "1961",
+          "page": "pp. 283–284",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
+        },
+        {
+          "title": "Lithuanian Apostolate bulletin — Getting to know the history of St. Peter Lithuanian Parish",
+          "publisher": "St. Peter Lithuanian Parish, South Boston",
+          "date": "2020-09",
+          "page": "PDF p. 2",
+          "url": "https://www.stpeterlithuanianparish.org/pdf_files/rugsejis_2020.pdf#page=2"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lithuanian Apostolate bulletin — Getting to know the history of St. Peter Lithuanian Parish",
+      "publisher": "St. Peter Lithuanian Parish, South Boston",
+      "date": "2020-09",
+      "page": "PDF p. 2",
+      "url": "https://www.stpeterlithuanianparish.org/pdf_files/rugsejis_2020.pdf#page=2"
+    },
+    {
+      "title": "Lietuvių išeivija Amerikoje",
+      "publisher": "Stasys Michelsonas",
+      "date": "1961",
+      "page": "pp. 283–284",
+      "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
+    }
+  ],
+  "confidence": "source-bounded",
+  "conflictsWithArchiveRecord": "The central conflict concerns lineage, not identity. Michelsonas describes the early St. Joseph/St. Casimir body as abandoned and superseded by a rival St. Peter body, while the St. Peter-authored account dates St. Peter's history to 1896 under Father Gricius. The bulletin also gives the chapel fire as 1897 or 1888, an impossible unresolved alternative. The evidence supports one early parish known first as St. Joseph and later as St. Casimir, with St. Peter treated as a distinct institution connected by disputed continuation.",
+  "gaps": "Exact canonical erection and suppression instruments; exact institutional terminal date and mechanism; full street number and parcel history for the East Seventh Street property; correct chapel-fire date; terminal building condition/current use; records custody; cemetery relationships; and the precise legal/canonical division of property and parish life between the early body and St. Peter remain unresolved."
+}

@@ -1,0 +1,234 @@
+{
+  "slug": "lithuanian-church-middleport-pa",
+  "culturenetEntityId": "cn:institution:lithuanian-church-middleport-pa",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian Catholics petitioned to break ground for a chapel June 21, 1947 · Immaculate Heart of Mary mission church established in 1948 · dependent on Sacred Heart, New Philadelphia · closure date unresolved",
+  "institutionClass": "roman_catholic",
+  "institutionalForm": "mission",
+  "institutionStatus": "closed",
+  "buildingStatus": "unknown",
+  "currentUse": "Immaculate Heart of Mary was a Lithuanian Catholic mission and chapel in Middleport, dependent on Sacred Heart in New Philadelphia; it was not a separately erected Lithuanian parish. The mission is closed, but its exact terminal date and the chapel building's present condition or use remain unresolved. Four stained-glass windows are now in All Saints Chapel at St. Joseph the Worker in Orefield, and the former sanctuary's main altar and pulpit were installed in Blessed Teresa of Calcutta Church in Limerick. No exact Middleport street address has been established.",
+  "summary": "Middleport's Lithuanian Catholic record represents Immaculate Heart of Mary mission and its chapel, not an independent parish. A June 21, 1947 archival index entry records the Lithuanian Catholic people of Middleport asking Cardinal Dennis Dougherty for permission to break ground for a chapel. A Schuylkill County Catholic church list dates Immaculate Heart of Mary to 1948 and identifies it as a mission of Sacred Heart, New Philadelphia. Field documentation likewise says Lithuanians built the church in 1948 but no new Lithuanian parish was created and priests came from New Philadelphia. The mission later closed; its exact end date, sacramental-record custody, street address, and building fate remain unresolved, although windows, altar, and pulpit from the church have documented later homes.",
+  "institutionLifecycle": {
+    "formation": "The Lithuanian Catholic people of Middleport petitioned Cardinal Dennis Dougherty on June 21, 1947 for permission to break ground for a chapel. Immaculate Heart of Mary is dated to 1948 in the Schuylkill County Catholic church list.",
+    "institutionalForm": "Dependent Roman Catholic mission with a local chapel, served from Sacred Heart in New Philadelphia. No independent parish erection is established.",
+    "jurisdiction": "Roman Catholic mission in the present Diocese of Allentown area; dependent on Sacred Heart, New Philadelphia. The 1947 petition was addressed to the Archbishop of Philadelphia before the Diocese of Allentown was established.",
+    "terminalStatus": "The mission and church are described as closed, but no canonical closure decree, exact last Mass, or terminal year has been located.",
+    "currentVerification": "Current first-party Catholic evidence identifies four Middleport stained-glass windows in St. Joseph the Worker's All Saints Chapel. A 2012 Catholic news report places the former Immaculate Heart of Mary altar and pulpit in Blessed Teresa of Calcutta Church. These artifact transfers do not establish the present condition of the Middleport chapel."
+  },
+  "worshipSites": [
+    {
+      "siteType": "mission_chapel",
+      "culturenetEntityId": "cn:building_site:immaculate-heart-of-mary-middleport-pa",
+      "name": "Immaculate Heart of Mary mission chapel",
+      "address": "Middleport, Pennsylvania; exact street address and parcel unresolved",
+      "usePeriod": "chapel petition in 1947; church dated 1948; closure date unresolved",
+      "buildingCondition": "unknown",
+      "currentUse": "The mission church is closed. Its exact physical condition and current use are unresolved; removal of windows, altar, and pulpit establishes furnishing dispersal but not demolition or reuse of the structure.",
+      "evidence": [
+        {
+          "url": "https://chrc-phila.org/wp-content/uploads/2009/03/cardinal-dougherty-correspondenc1.pdf#page=192",
+          "locator": "PDF p. 192, entry 80.4010; June 21, 1947 request by Middleport Lithuanian Catholics for permission to break ground for a chapel"
+        },
+        {
+          "url": "https://pagenweb.org/~schuylkill/rcch2.htm",
+          "locator": "Missions and closed churches, lines 69-85; Middleport Immaculate Heart of Mary, 1948, mission of Sacred Heart in New Philadelphia"
+        },
+        {
+          "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+          "locator": "Further south: Lithuanian heritage at 209 road, Middleport passage; 1948 church, no new parish, priests from New Philadelphia, and closed church"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:lithuanian-church-middleport-pa",
+      "target": "cn:building_site:immaculate-heart-of-mary-middleport-pa",
+      "date": "1948-closure date unresolved",
+      "status": "accepted",
+      "note": "The dependent mission used the Immaculate Heart of Mary chapel; institution closure and the building's physical fate remain separate unresolved questions."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "A Lithuanian Catholic worshipping community existed in Middleport before the church was built. The Cardinal Dougherty correspondence index records a June 21, 1947 letter from the Lithuanian Catholic people of Middleport asking permission to break ground for a chapel. The entry proves a community and chapel petition, not an independently erected parish.",
+      "sources": [
+        {
+          "url": "https://chrc-phila.org/wp-content/uploads/2009/03/cardinal-dougherty-correspondenc1.pdf#page=192",
+          "locator": "PDF p. 192, entry 80.4010; Lithuanian Catholic people of Middleport request permission to break ground for a chapel, June 21, 1947"
+        }
+      ]
+    },
+    {
+      "text": "Immaculate Heart of Mary is dated to 1948 in a Schuylkill County Catholic church compilation. The entry appears under Missions and closed churches and expressly calls Middleport a mission of Sacred Heart in New Philadelphia. This directly contradicts treating the Middleport body as a separately countable parish.",
+      "sources": [
+        {
+          "url": "https://pagenweb.org/~schuylkill/rcch2.htm",
+          "locator": "Missions and closed churches, lines 69-85; Middleport Immaculate Heart of Mary, 1948, mission of Sacred Heart, New Philadelphia"
+        }
+      ]
+    },
+    {
+      "text": "Field documentation supplies the same institutional boundary from a different source. It says Middleport Lithuanians built an entirely new church in 1948, but that no new Lithuanian parish was created; priests came from New Philadelphia to celebrate Mass. The local institution is therefore described as a dependent mission with a chapel, while Sacred Heart remains a distinct institution.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+          "locator": "Further south: Lithuanian heritage at 209 road, Middleport passage; church construction and service from New Philadelphia"
+        }
+      ]
+    },
+    {
+      "text": "The Middleport mission later closed, but the available sources do not supply a final Mass, suppression decree, or terminal year. Field documentation calls the church closed; a current Catholic chapel history says stained-glass windows from Immaculate Heart of Mary were received among artifacts from diocesan churches undergoing mergers or closings. Neither source establishes the former building's present condition.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+          "locator": "Further south: Lithuanian heritage at 209 road, Middleport passage; closed church"
+        },
+        {
+          "url": "https://www.stjwchurch.org/all-saints-chapel",
+          "locator": "All Saints Chapel, lines 55-65; four main stained-glass windows from Immaculate Heart of Mary in Middleport"
+        }
+      ]
+    },
+    {
+      "text": "Several sacred furnishings survived outside Middleport. St. Joseph the Worker identifies four Middleport stained-glass windows in its All Saints Chapel in Orefield. A 2012 Catholic news report says the main altar and pulpit from Immaculate Heart of Mary were installed in the new Blessed Teresa of Calcutta Church in Limerick. These transfers document artifact continuity, not institutional succession and not the fate of the chapel structure.",
+      "sources": [
+        {
+          "url": "https://www.stjwchurch.org/all-saints-chapel",
+          "locator": "All Saints Chapel, lines 55-65; Middleport stained-glass windows"
+        },
+        {
+          "url": "https://therecord.com.au/news/international/high-spires-gothic-look-for-mother-teresa-church/",
+          "locator": "High spires, gothic look, for Mother Teresa church, lines 18-24 and 29-51; former Middleport altar and pulpit in the Limerick church"
+        }
+      ]
+    },
+    {
+      "text": "No accepted source supplies an exact Middleport street address. A questionable older address points instead to New Philadelphia, and Nativity of the Blessed Virgin Mary on Kaska Street is a distinct Ukrainian Catholic institution with a different history. Neither location is assigned to Immaculate Heart of Mary without direct site evidence.",
+      "sources": [
+        {
+          "url": "https://pagenweb.org/~schuylkill/rcch2.htm",
+          "locator": "Missions and closed churches, lines 69-85; Middleport mission and distinct Sacred Heart dependency without a street address"
+        },
+        {
+          "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+          "locator": "Further south: Lithuanian heritage at 209 road, Middleport passage; Middleport church account without an exact address"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1947-06-21",
+      "headline": "Middleport Lithuanian Catholics petition for a chapel",
+      "detail": "The correspondence index records a request for permission to break ground; it does not identify a parish erection.",
+      "sources": [
+        {
+          "title": "Cardinal Dougherty Correspondence",
+          "publisher": "Catholic Historical Research Center of the Archdiocese of Philadelphia",
+          "date": "index accessed 2026-08-17",
+          "page": "PDF p. 192, entry 80.4010",
+          "url": "https://chrc-phila.org/wp-content/uploads/2009/03/cardinal-dougherty-correspondenc1.pdf#page=192"
+        }
+      ]
+    },
+    {
+      "date": "1948",
+      "headline": "Immaculate Heart of Mary mission church established",
+      "detail": "The local church list and field history support a dependent Middleport mission served from Sacred Heart, New Philadelphia, not a new parish.",
+      "sources": [
+        {
+          "title": "Schuylkill County, PA Churches",
+          "publisher": "PAGenWeb, compiled by Jean Dellock",
+          "date": "accessed 2026-08-17",
+          "page": "Missions and closed churches, lines 69-85",
+          "url": "https://pagenweb.org/~schuylkill/rcch2.htm"
+        },
+        {
+          "title": "Shenandoah and southern Coal Region: Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "accessed 2026-08-17",
+          "page": "Further south: Lithuanian heritage at 209 road, Middleport passage",
+          "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/"
+        }
+      ]
+    },
+    {
+      "date": "date unresolved",
+      "headline": "Mission closes",
+      "detail": "The mission and church are described as closed, but no terminal year, final Mass, or canonical instrument has been located.",
+      "sources": [
+        {
+          "title": "Shenandoah and southern Coal Region: Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "accessed 2026-08-17",
+          "page": "Further south: Lithuanian heritage at 209 road, Middleport passage",
+          "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/"
+        }
+      ]
+    },
+    {
+      "date": "2012-2025",
+      "headline": "Former church furnishings find later Catholic homes",
+      "detail": "The altar and pulpit were documented in Limerick in 2012, and a current chapel history identifies Middleport stained-glass windows among artifacts installed by 2025; the former chapel building condition remains unknown.",
+      "sources": [
+        {
+          "title": "High spires, gothic look, for Mother Teresa church",
+          "publisher": "The Record",
+          "date": "2012-11-13",
+          "page": "lines 18-24 and 29-51",
+          "url": "https://therecord.com.au/news/international/high-spires-gothic-look-for-mother-teresa-church/"
+        },
+        {
+          "title": "All Saints Chapel",
+          "publisher": "St. Joseph the Worker Church, Orefield",
+          "date": "current page accessed 2026-08-17",
+          "page": "lines 55-65",
+          "url": "https://www.stjwchurch.org/all-saints-chapel"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cardinal Dougherty Correspondence",
+      "publisher": "Catholic Historical Research Center of the Archdiocese of Philadelphia",
+      "date": "index accessed 2026-08-17",
+      "page": "PDF p. 192, entry 80.4010",
+      "url": "https://chrc-phila.org/wp-content/uploads/2009/03/cardinal-dougherty-correspondenc1.pdf#page=192"
+    },
+    {
+      "title": "Schuylkill County, PA Churches",
+      "publisher": "PAGenWeb, compiled by Jean Dellock",
+      "date": "accessed 2026-08-17",
+      "page": "Missions and closed churches, lines 69-85",
+      "url": "https://pagenweb.org/~schuylkill/rcch2.htm"
+    },
+    {
+      "title": "Shenandoah and southern Coal Region: Lithuanian heritage",
+      "publisher": "Global True Lithuania",
+      "date": "accessed 2026-08-17",
+      "page": "Further south: Lithuanian heritage at 209 road, Middleport passage",
+      "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/"
+    },
+    {
+      "title": "All Saints Chapel",
+      "publisher": "St. Joseph the Worker Church, Orefield",
+      "date": "current page accessed 2026-08-17",
+      "page": "lines 55-65",
+      "url": "https://www.stjwchurch.org/all-saints-chapel"
+    },
+    {
+      "title": "High spires, gothic look, for Mother Teresa church",
+      "publisher": "The Record",
+      "date": "2012-11-13",
+      "page": "lines 18-24 and 29-51",
+      "url": "https://therecord.com.au/news/international/high-spires-gothic-look-for-mother-teresa-church/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The inherited `parish` classification conflicts with the 1947 chapel petition, the 1948 mission listing, and the field account stating that no new Lithuanian parish was created and priests came from New Philadelphia. The evidence supports reclassification to a Roman Catholic mission while retaining the same public route and canonical institution identity. The uncertain New Philadelphia address and Kaska Street Ukrainian Catholic church are excluded from the Middleport site record.",
+  "gaps": "A mission-establishment or chapel-approval document beyond the correspondence index, exact canonical dependency instrument, exact street address and parcel, blessing or first-Mass date, last Mass and closure decree, sacramental-record custody, complete clergy history, cemetery, building ownership and present physical condition or use, and dates of furnishing removal remain unresolved."
+}

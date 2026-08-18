@@ -4,6 +4,32 @@
   "buildingStatus": "standing",
   "currentUse": "Active parish church of the PNCC Central Diocese, listed under supply clergy (Rev. Thomas Basta) as of the diocese's June 2026 directory.",
   "summary": "Providence of God remains an active parish, listed in the Polish National Catholic Church Central Diocese's parish directory (page last updated June 5, 2026) as 'Providence of God Parish (Lithuanian),' served by Rev. Thomas Basta as supply clergy rather than a resident pastor. It is the sole surviving parish of the Lithuanian National Catholic Church, which merged into the PNCC; it was once the cathedral of the Lithuanian branch of the National Catholic movement. The 1915-1930 church building stands with its Lithuanian cornerstone inscription, Lithuanian stained glass, and a Rūpintojėlis image, and holds Sunday morning Mass — now conducted in English rather than Lithuanian — funding itself in part through annual summer picnics. No 2023-2026 local news coverage of the parish was found.",
+  "historicalNarrative": [
+    {
+      "text": "Providence of God belongs to the Lithuanian National Catholic movement rather than the Roman Catholic Diocese of Scranton. The Lithuanian National Catholic Church's own history describes Providence of God as the movement's surviving Scranton parish and former cathedral; the exact dates and instruments by which that Lithuanian body entered the Polish National Catholic Church remain unresolved in the available public record.",
+      "sources": [
+        { "url": "https://www.lktb.org/home/about", "locator": "About page: Providence of God, Scranton, and Lithuanian National Catholic Church history" }
+      ]
+    },
+    {
+      "text": "The parish's church remains a distinct physical record of Lithuanian religious life. Field documentation places the standing church on Sumner Avenue and records its Lithuanian cornerstone inscription, Lithuanian stained glass, and Rūpintojėlis image. Those observations establish surviving fabric, but they do not resolve the directory conflict between 1734 South Sumner Avenue and other sources using 1743 North Sumner Avenue.",
+      "sources": [
+        { "url": "https://global.truelithuania.com/northern-coal-region-scranton-1614/", "locator": "Providence of God Lithuanian National Catholic parish section" }
+      ]
+    },
+    {
+      "text": "The PNCC Central Diocese continues to list Providence of God as an active Lithuanian parish. Its June 2026 directory names Rev. Thomas Basta as supply clergy and gives 1734 South Sumner Avenue, showing continuing institutional life within the PNCC while also indicating that the parish does not currently have its own resident pastor.",
+      "sources": [
+        { "url": "https://www.centraldiocesepncc.org/about/our-parishes/", "locator": "Our Parishes entry: Providence of God Parish (Lithuanian), Scranton" }
+      ]
+    },
+    {
+      "text": "Weekly worship is independently documented by a November 2022 organist notice that listed Sunday Mass, Christmas liturgies, a pipe organ, and a small choir. The evidence supports an active worshiping congregation and a standing church, but current membership, the present condition of individual Lithuanian features, and the end of the last resident pastorate remain unverified.",
+      "sources": [
+        { "url": "https://agopane.org/2022/11/21/job-opportunity-providence-of-god-lithuanian-national-catholic-church-scranton/", "locator": "Job notice: Sunday and Christmas Mass schedule, organ, and choir" }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2026-06-05",

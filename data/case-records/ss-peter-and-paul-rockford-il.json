@@ -1,0 +1,75 @@
+{
+  "slug": "ss-peter-and-paul-rockford-il",
+  "culturenetEntityId": "cn:institution:ss-peter-and-paul-rockford-il",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian Catholic community took shape before the Diocese's 1908 establishment · Lithuanian parish and first pastor established in 1911 · present church built in 1929 · active territorial parish",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "active",
+  "buildingStatus": "standing",
+  "currentUse": "Active Roman Catholic parish and church at 617 Lincoln Avenue, Rockford, Illinois. The official parish website lists current weekend and daily Masses, and its history identifies the 1929 church as the present building. The same institution broadened from Lithuanian national-parish ministry to Black Catholic ministry in 1985 and designation as a home parish for Spanish-speaking Catholics in 1992; those are pastoral transitions, not closure or merger.",
+  "summary": "Ss. Peter and Paul is the continuing Roman Catholic parish at 617 Lincoln Avenue in Rockford. A Lithuanian Catholic community was already gathering for special Masses at St. James Pro-Cathedral when the Diocese of Rockford was established in 1908. In 1911 the bishop appointed Lithuanian priest Rev. John Malinauskas as first pastor, purchased property at South West Street and Lincoln Avenue, and dedicated a frame church on July 2. The present church and school were built in 1929 on the parish campus. Lithuanian pastoral leadership receded after 1972, but the institution did not close: the Diocese established Black Catholic Ministry there in 1985 and designated it a home parish for Spanish-speaking Catholics in 1992. The current official parish site lists Masses and the 617 Lincoln address. The exact legal founding instrument, fate of the 1911 frame building, records custody beyond the active parish, and any dedicated cemetery remain unresolved.",
+  "institutionLifecycle": {
+    "formation": "A Lithuanian Catholic community took shape before 1908 and received special Masses at St. James; in 1911 Rev. John Malinauskas became first pastor and the first parish church was dedicated.",
+    "jurisdiction": "Roman Catholic Diocese of Rockford; originally a Lithuanian ethnic parish and now an active territorial/multilingual parish.",
+    "ethnicStatusTransition": "Lithuanian clergy chronology ended after Rev. Bruno Daukas's 1972 transfer; Black Catholic Ministry was established in 1985 and the parish was designated for Spanish-speaking Catholics in 1992.",
+    "terminalStatus": "active",
+    "currentVerification": "The official parish website lists current Masses, events, clergy context, and 617 Lincoln Avenue."
+  },
+  "worshipSites": [
+    {
+      "siteType": "host_church",
+      "name": "St. James Pro-Cathedral",
+      "address": "Rockford, IL; exact host address not adjudicated in this dossier",
+      "usePeriod": "before 1911",
+      "buildingCondition": "not assessed",
+      "currentUse": "Separate host institution; no ownership or successor identity asserted.",
+      "evidence": [{"url": "https://sspeterandpaul-rockford.org/about/ss-historia-de-pedro-y-pablo", "locator": "Official parish history: special Sunday Masses arranged at St. James before the Lithuanian parish church"}]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:ss-peter-paul-frame-rockford-il",
+      "name": "First Ss. Peter and Paul frame church",
+      "address": "corner of South West Street and Lincoln Avenue, Rockford, IL",
+      "usePeriod": "dedicated 2 July 1911–replaced by the 1929 church",
+      "buildingCondition": "unknown",
+      "currentUse": "The building was replaced; demolition, relocation, or reuse was not established.",
+      "evidence": [{"url": "https://sspeterandpaul-rockford.org/about/ss-historia-de-pedro-y-pablo", "locator": "Official parish history: property purchase, frame church, and 1911-07-02 dedication"}]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:ss-peter-paul-617-lincoln-rockford-il",
+      "name": "Ss. Peter and Paul Church",
+      "address": "617 Lincoln Ave., Rockford, IL 61102",
+      "usePeriod": "built 1929–present",
+      "buildingCondition": "standing",
+      "currentUse": "Active Roman Catholic parish church with current weekend and daily Masses.",
+      "evidence": [{"url": "https://sspeterandpaul-rockford.org/about/ss-historia-de-pedro-y-pablo", "locator": "Official parish history: present church and school built in 1929"}, {"url": "https://sspeterandpaul-rockford.org/", "locator": "Official current parish site, accessed 2026-08-17: Mass schedule and 617 Lincoln Ave."}]
+    }
+  ],
+  "relationships": [
+    {"type": "institution-used-host-site", "source": "cn:institution:ss-peter-and-paul-rockford-il", "target": "St. James Pro-Cathedral", "date": "before 1911", "status": "accepted", "note": "Temporary special Sunday Masses before the parish church."},
+    {"type": "institution-used-site", "source": "cn:institution:ss-peter-and-paul-rockford-il", "target": "cn:building_site:ss-peter-paul-frame-rockford-il", "date": "1911–1929", "status": "accepted", "note": "First parish church at South West and Lincoln."},
+    {"type": "building-replaced-by", "source": "cn:building_site:ss-peter-paul-frame-rockford-il", "target": "cn:building_site:ss-peter-paul-617-lincoln-rockford-il", "date": "1929", "status": "accepted", "note": "Building succession within the continuing parish."},
+    {"type": "institution-used-site", "source": "cn:institution:ss-peter-and-paul-rockford-il", "target": "cn:building_site:ss-peter-paul-617-lincoln-rockford-il", "date": "1929–present", "status": "accepted", "note": "Current active church."}
+  ],
+  "historicalNarrative": [
+    {"text": "Ss. Peter and Paul is the Lithuanian-founded Roman Catholic parish in Rockford, not a same-name Chicago or Pennsylvania institution. Its official history says a growing Lithuanian Catholic colony existed on Rockford's southwest side by the time the Diocese was established in 1908 and received specially arranged Sunday Masses at St. James Pro-Cathedral. Wolkovich's description that the parish 'took shape' in 1907 is retained as a community-organizing milestone, not silently equated with canonical erection.", "sources": [{"url": "https://sspeterandpaul-rockford.org/about/ss-historia-de-pedro-y-pablo", "locator": "Official parish history, opening paragraphs: Lithuanian colony and St. James hosted Masses"}, {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, Lithuanian Religious Life in America, vol. 3, pp. 116–117: 1907 organizing reading"}]},
+    {"text": "The institutional and building milestones become concrete in 1911. Bishop Peter J. Muldoon secured the service of Lithuanian priest Rev. John Malinauskas, appointed him first pastor, purchased property at South West Street and Lincoln Avenue, and dedicated a frame church on July 2, 1911. The dossier therefore uses 1911 for the first pastor and church while preserving the earlier community phase; it does not claim that every source's 'founded' wording refers to the same canonical act.", "sources": [{"url": "https://sspeterandpaul-rockford.org/about/ss-historia-de-pedro-y-pablo", "locator": "Official parish history: Malinauskas, property purchase, first pastor, and 1911-07-02 dedication"}, {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, pp. 116–117"}]},
+    {"text": "The current church and school were built in 1929 under Rev. V. Kulikauskas, M.I.C., and the school was staffed by the Sisters of St. Casimir. The official history calls the 1929 structure the present church and later records major interior renovations in 1965, 1997–2005, and 2006. These are building milestones within the same parish, not refoundings or evidence that the institution ended.", "sources": [{"url": "https://sspeterandpaul-rockford.org/about/ss-historia-de-pedro-y-pablo", "locator": "Official parish history: 1929 present church and school; 1965, 1997–2005, and 2006 renovations"}]},
+    {"text": "Lithuanian pastoral identity changed after Rev. Bruno Daukas's 1972 transfer, but the parish continued. In August 1985 the Diocese established the Office of Black Catholic Ministry at Ss. Peter and Paul, and in May 1992 designated it the home parish for Spanish-speaking Catholics in the Rockford area. These events document widening pastoral mission and ethnic transfer; they do not constitute closure, suppression, or merger.", "sources": [{"url": "https://sspeterandpaul-rockford.org/about/ss-historia-de-pedro-y-pablo", "locator": "Official parish history: Daukas transfer, 1985 Black Catholic Ministry, and 1992 Spanish-speaking home-parish designation"}, {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, pp. 116–117: Lithuanian pastoral chronology through 1972"}]},
+    {"text": "The institution and its 1929 church are active. The official parish website lists weekend Masses, daily Masses, reconciliation, current events, and the address 617 Lincoln Avenue. This current evidence directly contradicts any reading that loss of Lithuanian dominance closed the parish. No separate parish cemetery, external records custodian, canonical erection decree, or complete disposition of the 1911 frame church has been verified.", "sources": [{"url": "https://sspeterandpaul-rockford.org/", "locator": "Official current parish site, accessed 2026-08-17: Mass schedule and 617 Lincoln Ave."}, {"url": "https://sspeterandpaul-rockford.org/about/ss-historia-de-pedro-y-pablo", "locator": "Official history: present church and continuing parish events"}]}
+  ],
+  "developments": [
+    {"date": "1907–1911", "headline": "Community organizing leads to first pastor and church", "detail": "The evidence distinguishes community formation from the 1911 parish and building milestones.", "sources": [{"title": "SS. Peter and Paul History", "publisher": "Ss. Peter and Paul Parish", "date": "accessed 2026-08-17", "url": "https://sspeterandpaul-rockford.org/about/ss-historia-de-pedro-y-pablo"}]},
+    {"date": "1929", "headline": "Present church and school built", "detail": "The 1929 church replaced the frame building while the parish continued.", "sources": [{"title": "SS. Peter and Paul History", "publisher": "Ss. Peter and Paul Parish", "date": "accessed 2026-08-17", "url": "https://sspeterandpaul-rockford.org/about/ss-historia-de-pedro-y-pablo"}]},
+    {"date": "1985–1992", "headline": "Pastoral mission broadens", "detail": "Black Catholic and Spanish-speaking ministries mark ethnic transition, not closure.", "sources": [{"title": "SS. Peter and Paul History", "publisher": "Ss. Peter and Paul Parish", "date": "accessed 2026-08-17", "url": "https://sspeterandpaul-rockford.org/about/ss-historia-de-pedro-y-pablo"}]}
+  ],
+  "sources": [
+    {"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "pp. 116–117", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"},
+    {"title": "SS. Peter and Paul History", "publisher": "Ss. Peter and Paul Parish, Rockford", "date": "accessed 2026-08-17", "url": "https://sspeterandpaul-rockford.org/about/ss-historia-de-pedro-y-pablo"},
+    {"title": "Ss. Peter and Paul Parish", "publisher": "Ss. Peter and Paul Parish, Rockford", "date": "accessed 2026-08-17", "url": "https://sspeterandpaul-rockford.org/"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The inherited record's 1907 'took shape' and 1911 founding readings describe different formation milestones and are not flattened. The parish is active; loss of Lithuanian pastoral dominance after 1972 and later Black Catholic and Spanish-language ministry are ethnic-pastoral transitions, not closure. No terminal year is supplied or inferred from directory omission.",
+  "gaps": "Canonical erection instrument, exact start date of the pre-1911 Lithuanian Mass community, exact St. James host address used by the group, deed and parcel history, fate of the 1911 frame church, full ethnic-status instrument, comprehensive records inventory, and any dedicated cemetery remain unverified."
+}

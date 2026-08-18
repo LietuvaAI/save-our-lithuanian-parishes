@@ -1,0 +1,185 @@
+{
+  "slug": "ignatius-luther-mi",
+  "culturenetEntityId": "cn:institution:ignatius-luther-mi",
+  "asOf": "2026-08-17",
+  "formationLabel": "Formation date unresolved · Lithuanian community association documented by 1970 · merged into Saint Ann-Saint Ignatius Parish in 2011",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "merged",
+  "buildingStatus": "standing",
+  "currentUse": "The former St. Ignatius parish church at 701 State Street remains an active Roman Catholic chapel and worship site of Saint Ann-Saint Ignatius Parish, with current Sunday and Thursday Masses. No current Lithuanian-language ministry is established.",
+  "summary": "St. Ignatius was a Roman Catholic institution in Luther with documented Lithuanian community association by 1970, but its formation date and early canonical form remain unresolved. It merged with St. Ann of Baldwin in 2011 to form the distinct Saint Ann-Saint Ignatius Parish. The Luther church survives as St. Ignatius Chapel at 701 State Street with regular Catholic worship. The evidence does not support treating the active chapel as survival of the former parish juridic person or assuming that nearby Custer and Irons followed the same institutional history.",
+  "institutionLifecycle": {
+    "formation": "The exact mission or parish formation date has not been established. The diocese's 1916 establishment date belongs to the current combined listing and cannot safely be assigned to St. Ignatius without a separate instrument.",
+    "institutionalForm": "Roman Catholic parish or mission with documented Lithuanian community association by 1970; the precise early institutional form and any national-parish designation remain unresolved.",
+    "jurisdiction": "Roman Catholic Diocese of Grand Rapids.",
+    "terminalStatus": "St. Ignatius merged with St. Ann of Baldwin in 2011, ending its separate institutional life and forming the reestablished Saint Ann-Saint Ignatius Parish.",
+    "currentVerification": "The Diocese of Grand Rapids lists St. Ignatius Chapel at 701 State Street as an active worship site of Saint Ann-Saint Ignatius Parish. This verifies building and hosted-worship continuity, not survival of St. Ignatius as a separate parish."
+  },
+  "worshipSites": [
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-ignatius-luther-mi",
+      "name": "St. Ignatius Church, now St. Ignatius Chapel",
+      "address": "701 State Street, Luther, MI 49656",
+      "usePeriod": "opening date unresolved-2011 as separate St. Ignatius institution; 2011-current as successor-parish chapel",
+      "buildingCondition": "standing",
+      "currentUse": "Active chapel of Saint Ann-Saint Ignatius Parish with Sunday and Thursday Masses.",
+      "evidence": [
+        {
+          "url": "https://grdiocese.org/parishes-location/saint-ann-saint-ignatius-parish-baldwin/",
+          "locator": "Worship Sites and Mass Times sections, St. Ignatius Chapel at 701 State St."
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:ignatius-luther-mi",
+      "target": "cn:building_site:st-ignatius-luther-mi",
+      "date": "opening date unresolved-2011",
+      "status": "accepted",
+      "note": "The former institution used the Luther church; after the merger the building continued as a chapel of the successor parish."
+    },
+    {
+      "type": "institution-merged-into-institution",
+      "source": "cn:institution:ignatius-luther-mi",
+      "target": "cn:institution:saint-ann-saint-ignatius-baldwin-mi",
+      "date": "2011",
+      "status": "accepted",
+      "note": "The diocesan planning summary directs St. Ann, Baldwin and St. Ignatius, Luther to merge while maintaining the church; the current diocesan page identifies the combined parish as reestablished in 2011."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "The formation of St. Ignatius in Luther remains unresolved. Wolkovich's brief entry supplies no founding date, and the current diocesan page's 1916 establishment date is presented for the combined Saint Ann-Saint Ignatius listing rather than specifically for the former Luther institution. No date is assigned to St. Ignatius without a separate canonical or parish history source.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed p. 83, St. Ignatius entry"
+        },
+        {
+          "url": "https://grdiocese.org/parishes-location/saint-ann-saint-ignatius-parish-baldwin/",
+          "locator": "Location and Information section, combined listing marked Established 1916 and Reestablished 2011"
+        }
+      ]
+    },
+    {
+      "text": "A 1970 diocesan response cited by Wolkovich identified St. Ignatius as Lithuanian in community composition. That single description establishes a Lithuanian association at that date, but it does not define the parish's founding class, prove continuous Lithuanian leadership, or make it identical to the separate churches in Custer or Irons.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed p. 83, 1970 diocesan ethnic-composition response"
+        }
+      ]
+    },
+    {
+      "text": "St. Ignatius worshiped at the church now identified as St. Ignatius Chapel, 701 State Street in Luther. The current diocesan listing verifies the exact address and surviving structure, but it does not provide the church's construction or dedication date or identify every earlier worship site.",
+      "sources": [
+        {
+          "url": "https://grdiocese.org/parishes-location/saint-ann-saint-ignatius-parish-baldwin/",
+          "locator": "Worship Sites section, St. Ignatius Chapel, 701 State St., Luther"
+        }
+      ]
+    },
+    {
+      "text": "The Diocese of Grand Rapids's parish plan paired St. Ann of Baldwin and St. Ignatius of Luther for merger while maintaining a church, and the current parish listing gives 2011 as the reestablishment year. The result was the distinct Saint Ann-Saint Ignatius Parish, not a simple renaming of St. Ignatius and not evidence that either former institution absorbed the other unchanged.",
+      "sources": [
+        {
+          "url": "https://grdiocese.org/wp-content/uploads/2018/12/our-faith-our-future-summary-highlights.pdf#page=1",
+          "locator": "PDF/printed p. 1, Northwest Deanery line for St. Ann, Baldwin and St. Ignatius, Luther: merge/maintain church"
+        },
+        {
+          "url": "https://grdiocese.org/parishes-location/saint-ann-saint-ignatius-parish-baldwin/",
+          "locator": "Location and Information section, Reestablished: 2011"
+        }
+      ]
+    },
+    {
+      "text": "Catholic worship continues at the Luther building as a chapel of the successor parish. The diocese publishes Sunday and Thursday Masses at St. Ignatius Chapel. This is active hosted worship and building continuity after the 2011 merger; it does not establish present Lithuanian-language ministry or revive St. Ignatius as a separate parish.",
+      "sources": [
+        {
+          "url": "https://grdiocese.org/parishes-location/saint-ann-saint-ignatius-parish-baldwin/",
+          "locator": "Worship Sites and Mass Times sections"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1970",
+      "headline": "Lithuanian community association documented",
+      "detail": "A diocesan ethnic-composition response identified St. Ignatius as Lithuanian; the parish's earlier canonical form remains unresolved.",
+      "sources": [
+        {
+          "title": "Lithuanian Religious Life in America, Vol. 3",
+          "publisher": "Norwood Press",
+          "date": "1998",
+          "page": "printed p. 83",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+        }
+      ]
+    },
+    {
+      "date": "2011",
+      "headline": "St. Ignatius merges into Saint Ann-Saint Ignatius Parish",
+      "detail": "The former Luther institution joined St. Ann of Baldwin in a new combined parish while its church remained a worship site.",
+      "sources": [
+        {
+          "title": "Our Faith, Our Future Summary Highlights",
+          "publisher": "Diocese of Grand Rapids",
+          "date": "2012",
+          "page": "PDF/printed p. 1, Northwest Deanery",
+          "url": "https://grdiocese.org/wp-content/uploads/2018/12/our-faith-our-future-summary-highlights.pdf#page=1"
+        },
+        {
+          "title": "Saint Ann-Saint Ignatius Parish, Baldwin",
+          "publisher": "Diocese of Grand Rapids",
+          "date": "current page accessed 2026-08-17",
+          "page": "Location and Information section",
+          "url": "https://grdiocese.org/parishes-location/saint-ann-saint-ignatius-parish-baldwin/"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "headline": "St. Ignatius Chapel remains active",
+      "detail": "Regular Catholic Masses continue at the standing chapel at 701 State Street under the successor parish.",
+      "sources": [
+        {
+          "title": "Saint Ann-Saint Ignatius Parish, Baldwin",
+          "publisher": "Diocese of Grand Rapids",
+          "date": "current page accessed 2026-08-17",
+          "page": "Worship Sites and Mass Times sections",
+          "url": "https://grdiocese.org/parishes-location/saint-ann-saint-ignatius-parish-baldwin/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lithuanian Religious Life in America, Vol. 3",
+      "publisher": "Norwood Press",
+      "date": "1998",
+      "page": "printed p. 83",
+      "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+    },
+    {
+      "title": "Saint Ann-Saint Ignatius Parish, Baldwin",
+      "publisher": "Diocese of Grand Rapids",
+      "date": "current page accessed 2026-08-17",
+      "page": "Location and Information, Worship Sites, and Mass Times",
+      "url": "https://grdiocese.org/parishes-location/saint-ann-saint-ignatius-parish-baldwin/"
+    },
+    {
+      "title": "Our Faith, Our Future Summary Highlights",
+      "publisher": "Diocese of Grand Rapids",
+      "date": "2012",
+      "page": "PDF/printed p. 1, Northwest Deanery",
+      "url": "https://grdiocese.org/wp-content/uploads/2018/12/our-faith-our-future-summary-highlights.pdf#page=1"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "No reliable formation date is established for the former St. Ignatius institution. The current diocesan listing's 1916 establishment date applies to the combined Saint Ann-Saint Ignatius entry and is not assigned to St. Ignatius alone. The 1970 Lithuanian description records community composition, not a proven national-parish classification.",
+  "gaps": "The original formation instrument and date; mission-versus-parish form; all earlier worship sites; the State Street building's construction and dedication dates; the exact 2011 merger instrument and effective date; records custody; any cemetery; and evidence of current Lithuanian-language ministry remain unresolved."
+}

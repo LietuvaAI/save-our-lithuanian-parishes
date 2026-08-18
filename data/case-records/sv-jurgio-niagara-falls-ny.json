@@ -4,6 +4,65 @@
   "buildingStatus": "converted",
   "currentUse": "St. George's Pro-Cathedral of the Independent Anglican Church, Canada Synod, at 1910 Falls St, Niagara Falls, NY 14303; also historically host to the Magdalene Project street-outreach ministry and its basement Rose Cafe",
   "summary": "The 1927 church building of St. George's (Šv. Jurgio), the only historically Lithuanian parish in Western New York, still stands at Falls and 19th Streets in Niagara Falls and is in use as a place of worship. The Roman Catholic parish was closed in the Diocese of Buffalo's \"Journey in Faith and Grace\" reorganization (sources give 2008 as its last year of operation as a debt-free parish; the Niagara Gazette dates the closure to 2009), with the Niagara Falls parishes merged into Divine Mercy Parish. In 2010 the Independent Anglican Church of Canada, led by Archbishop Peter Goodrich, purchased the church and rectory for $45,000, with proceeds directed to Divine Mercy Parish, and rededicated the building as St. George the Martyr on August 8, 2010; it became the synod's provisional episcopal seat (pro-cathedral) after the sale of its former cathedral in Cambridge, Ontario. The terms of the sale prevent Roman Catholic worship in the building. Lithuanian heritage markers survive: the neoclassical building is modeled after Vilnius Cathedral, and its stained glass windows depict St. George, St. Casimir and other saints with inscriptions in Lithuanian; the building is described as a designated historic landmark. The new owners based the Magdalene Project community outreach (Bibles, toiletries, food distribution) and a basement cafe for the homeless at the church. The Independent Anglican Church, Canada Synod's website continues to list St. George's Pro-Cathedral at 1910 Falls St, though no 2024-2026 press or dated service schedule for the Niagara Falls site was found.",
+  "historicalNarrative": [
+    {
+      "text": "St. George was Niagara Falls's Lithuanian Roman Catholic parish, distinct from Orthodox congregations in the city that share the saint's name. A Lithuanian benefit society formed in 1902, the community had a first church by 1915, and the surviving church at Falls and 19th Streets dates to 1927.",
+      "sources": [
+        {
+          "url": "https://nfhpc.weebly.com/st-georges-roman-catholic-church.html",
+          "locator": "St George's Roman Catholic Church history, society and church chronology"
+        }
+      ]
+    },
+    {
+      "text": "The 1927 church was designed in a neoclassical form associated with Vilnius Cathedral. Its stained glass depicts St. George, St. Casimir, and other saints with Lithuanian inscriptions, preserving the congregation's heritage in the building even after Lithuanian Catholic parish life ended.",
+      "sources": [
+        {
+          "url": "https://shipoffools.com/mystery-worshipper/st-george-the-martyr-niagara-falls-new-york-usa/",
+          "locator": "Mystery Worshipper report, building model and Lithuanian-inscribed stained glass"
+        }
+      ]
+    },
+    {
+      "text": "The Roman Catholic parish closed during the Diocese of Buffalo's Journey in Faith and Grace reorganization and its community was gathered into Divine Mercy Parish. The preservation history says St. George remained open through 2008, while the Niagara Gazette calls it a 2009 closure; without a decree or final-Mass record, that one-year conflict remains unresolved.",
+      "sources": [
+        {
+          "url": "https://nfhpc.weebly.com/st-georges-roman-catholic-church.html",
+          "locator": "Historical account, remained open until 2008"
+        },
+        {
+          "url": "https://www.niagara-gazette.com/news/local_news/a-rebirth-for-st-georges-church/article_132b51c5-4237-52b5-91c3-06c527e2d216.html",
+          "locator": "A rebirth for St. George's Church, 2009 closure and Divine Mercy context"
+        }
+      ]
+    },
+    {
+      "text": "In 2010 the Independent Anglican Church of Canada purchased the church and rectory for $45,000 and rededicated the building as St. George the Martyr on August 8. It became the synod's provisional pro-cathedral, and the sale terms barred Roman Catholic worship; the Anglican use is therefore building reuse, not continuation of the former Catholic parish.",
+      "sources": [
+        {
+          "url": "https://www.niagara-gazette.com/news/local_news/a-rebirth-for-st-georges-church/article_132b51c5-4237-52b5-91c3-06c527e2d216.html",
+          "locator": "A rebirth for St. George's Church, purchase price, buyer, and outreach plans"
+        },
+        {
+          "url": "https://shipoffools.com/mystery-worshipper/st-george-the-martyr-niagara-falls-new-york-usa/",
+          "locator": "2010-08-08 dedication report and provisional episcopal-seat description"
+        }
+      ]
+    },
+    {
+      "text": "The Independent Anglican Church's website continues to list St. George's Pro-Cathedral at 1910 Falls Street. Because the site publishes no dated Niagara Falls service schedule, the building is documented as standing and associated with the denomination, while its current frequency of worship and outreach activity remains unresolved.",
+      "sources": [
+        {
+          "url": "http://www.independentanglicanchurch.com/diocese-of-st-george",
+          "locator": "Diocese of St. George page, St. George's Pro-Cathedral address listing"
+        },
+        {
+          "url": "http://www.independentanglicanchurch.com/an-outline-of-our-church",
+          "locator": "An Outline of our Church, denominational structure and locations"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2008",

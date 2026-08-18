@@ -1,0 +1,169 @@
+{
+  "slug": "allsaints-worcester-ma",
+  "asOf": "2026-08-17",
+  "formationLabel": "Organized c. 1908 · active by 1909",
+  "buildingStatus": "unknown",
+  "currentUse": "No surviving All Saints congregation, worship site, or successor has been established. The historical independent parish was separate from Worcester's Roman Catholic St. Casimir and Our Lady of Vilna parishes; no All Saints property or building disposition is documented.",
+  "summary": "Worcester's Visų Šventųjų (All Saints) was a Lithuanian independent Catholic parish formed by people who separated from the Roman Catholic St. Casimir community around 1908. Contemporary Draugas reporting documents a functioning organization in 1909, including officers, a treasury, meetings on Bartlett Street, and a vote to engage a priest. By April 1910, however, Draugas reported that most of those who had left had returned to St. Casimir and that the remaining All Saints group was small and still seeking stable clergy. Later sources remembered the Rome-independent parish, but they do not establish its precise juridic affiliation, an owned church building, or an exact ending. The traditional 1913 closure year remains secondary; the directly reviewed record establishes decline by 1910 and no surviving congregation by 1919. This institution must not be conflated with Roman Catholic St. Casimir or Our Lady of Vilna, whose later histories and church buildings belong to separate records.",
+  "historicalNarrative": [
+    {
+      "text": "All Saints arose during a period when some Lithuanian Catholics challenged episcopal control of parish property and administration. Worcester's group separated from the established Roman Catholic St. Casimir parish around 1908 and organized a community described in Lithuanian sources as independent of Rome. The All Saints identity is therefore a distinct institutional record, not another name for St. Casimir or Our Lady of Vilna.",
+      "sources": [
+        {
+          "url": "https://www.draugas.org/archive/1994_reg/1994-09-09-DRAUGAS-i7-8.pdf#page=3",
+          "locator": "St. Casimir centennial history, p. 3: the separation and formation of a Rome-independent All Saints parish"
+        },
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje",
+          "locator": "Stasys Michelsonas, Lietuvių Išeivija Amerikoje, pp. 130 and 344–345: Worcester parish context and c. 1908 baseline"
+        }
+      ]
+    },
+    {
+      "text": "A contemporary Worcester report in August 1909 shows that the new parish had moved beyond a name alone. Members met on Bartlett Street, elected officers, reported money in the treasury, and voted to invite Mickevičius from Providence to serve them. The source proves organized parish activity, but it does not show that the group owned the Bartlett Street meeting place or had completed a permanent church.",
+      "sources": [
+        {
+          "url": "https://www.draugas.org/archive/1909_reg/1909-08-12-DRAUGASw.pdf#page=11",
+          "locator": "“WORCESTER, MASS.,” Draugas, 1909-08-12, p. 11: meeting, officers, treasury, and priest discussion"
+        }
+      ]
+    },
+    {
+      "text": "The effort soon weakened. In April 1910, Draugas reported that most people who had separated had returned to St. Casimir, while a much smaller All Saints group remained and continued looking for a priest. A 1919 polemical account likewise described Worcester Lithuanians as having returned to their churches. These reports establish decline and disappearance from the living parish landscape, but neither is a closure decree.",
+      "sources": [
+        {
+          "url": "https://www.draugas.org/archive/1910_reg/1910-04-14-DRAUGASw.pdf#page=4",
+          "locator": "“WORCESTER, MASS.,” Draugas, 1910-04-14, p. 4: return to St. Casimir and the reduced All Saints group"
+        },
+        {
+          "url": "https://www.draugas.org/archive/1919_reg/1919-07-30-DRAUGASw_2nd_ed_i5-8.pdf#page=3",
+          "locator": "“Nezaležninkai Chicagoje.,” Draugas, 1919-07-30, p. 3: later retrospective end-state evidence"
+        }
+      ]
+    },
+    {
+      "text": "No current Worcester All Saints independent or national Catholic parish appears in the relevant present-day denominational directories. No charter, deed, church address, sacramental-record repository, formal Polish National Catholic Church affiliation, or successor has yet been found. The exact end date and physical history therefore remain open; facts about the later sale of St. Casimir's church cannot be transferred to this separate All Saints record.",
+      "sources": [
+        {
+          "url": "https://www.easterndiocesepncc.org/our-parishes/",
+          "locator": "Current Eastern Diocese PNCC directory: no Worcester All Saints parish listed"
+        },
+        {
+          "url": "https://worcesterdiocese.org/parishfinder",
+          "locator": "Current Diocese of Worcester parish finder, checked to keep the independent parish separate from Roman Catholic institutions"
+        },
+        {
+          "url": "https://catholicfreepress.org/news/st-casimirs-church-sold",
+          "locator": "Catholic Free Press, 2011-09-16: St. Casimir's separate Roman Catholic merger and building sale"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1909-08-12",
+      "headline": "Contemporary report documents an organized All Saints parish",
+      "detail": "Draugas reported a Worcester All Saints independent Lithuanian parish meeting on Bartlett Street, with officers, a treasury, and a vote concerning a priest from Providence. The meeting place is documented, but ownership of a church or hall is not.",
+      "sources": [
+        {
+          "title": "WORCESTER, MASS.",
+          "publisher": "Draugas",
+          "date": "1909-08-12",
+          "page": "p. 11",
+          "url": "https://www.draugas.org/archive/1909_reg/1909-08-12-DRAUGASw.pdf#page=11"
+        }
+      ]
+    },
+    {
+      "date": "1910-04-14",
+      "headline": "Most members reported returning to St. Casimir",
+      "detail": "A follow-up report said most people who had separated had returned to the Roman Catholic parish. The reduced All Saints group remained without stable clergy, demonstrating decline without supplying a formal closure date.",
+      "sources": [
+        {
+          "title": "WORCESTER, MASS.",
+          "publisher": "Draugas",
+          "date": "1910-04-14",
+          "page": "p. 4",
+          "url": "https://www.draugas.org/archive/1910_reg/1910-04-14-DRAUGASw.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "headline": "No surviving congregation or building record established",
+      "detail": "Current denominational directories contain no Worcester All Saints successor. The exact institutional end, juridic affiliation, property, worship site, and records repository remain unresolved.",
+      "sources": [
+        {
+          "title": "Our Parishes",
+          "publisher": "Eastern Diocese, Polish National Catholic Church",
+          "date": "accessed 2026-08-17",
+          "url": "https://www.easterndiocesepncc.org/our-parishes/"
+        },
+        {
+          "title": "Parish Finder",
+          "publisher": "Diocese of Worcester",
+          "date": "accessed 2026-08-17",
+          "url": "https://worcesterdiocese.org/parishfinder"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "WORCESTER, MASS.",
+      "publisher": "Draugas",
+      "date": "1909-08-12",
+      "page": "p. 11",
+      "url": "https://www.draugas.org/archive/1909_reg/1909-08-12-DRAUGASw.pdf#page=11"
+    },
+    {
+      "title": "WORCESTER, MASS.",
+      "publisher": "Draugas",
+      "date": "1910-04-14",
+      "page": "p. 4",
+      "url": "https://www.draugas.org/archive/1910_reg/1910-04-14-DRAUGASw.pdf#page=4"
+    },
+    {
+      "title": "Nezaležninkai Chicagoje.",
+      "publisher": "Draugas",
+      "date": "1919-07-30",
+      "page": "p. 3",
+      "url": "https://www.draugas.org/archive/1919_reg/1919-07-30-DRAUGASw_2nd_ed_i5-8.pdf#page=3"
+    },
+    {
+      "title": "St. Casimir centennial history",
+      "publisher": "Draugas",
+      "date": "1994-09-09",
+      "page": "p. 3",
+      "url": "https://www.draugas.org/archive/1994_reg/1994-09-09-DRAUGAS-i7-8.pdf#page=3"
+    },
+    {
+      "title": "Lietuvių Išeivija Amerikoje",
+      "publisher": "Stasys Michelsonas / Keleivis",
+      "date": "1961",
+      "page": "pp. 130, 344–345",
+      "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
+    },
+    {
+      "title": "Our Parishes",
+      "publisher": "Eastern Diocese, Polish National Catholic Church",
+      "date": "accessed 2026-08-17",
+      "url": "https://www.easterndiocesepncc.org/our-parishes/"
+    },
+    {
+      "title": "Parish Finder",
+      "publisher": "Diocese of Worcester",
+      "date": "accessed 2026-08-17",
+      "url": "https://worcesterdiocese.org/parishfinder"
+    },
+    {
+      "title": "St. Casimir's Church sold",
+      "publisher": "Catholic Free Press",
+      "date": "2011-09-16",
+      "url": "https://catholicfreepress.org/news/st-casimirs-church-sold"
+    }
+  ],
+  "confidence": "probable",
+  "conflictsWithArchiveRecord": "The All Saints identity and its separation from Roman Catholic St. Casimir are directly supported. The traditional c. 1908 formation and 1913 ending remain secondary readings: contemporary reporting proves organized life in 1909, severe decline by 1910, and no durable independent community by 1919, but no closure decree has been found. Bartlett Street is documented as a meeting location, not as a parish-owned church. This record must remain separate from both St. Casimir and Our Lady of Vilna.",
+  "gaps": "No incorporation record, charter, deed, owned-church address, building history, sacramental register, formal Polish National Catholic Church affiliation, closure act, or exact end date has been found. Property and city-directory research is needed to determine whether the parish ever owned or continuously occupied a worship site and where its records went."
+}

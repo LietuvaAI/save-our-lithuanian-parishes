@@ -4,6 +4,41 @@
   "buildingStatus": "standing",
   "currentUse": "Active worship as Jerusalem Lutheran Church (LCMS), 305 Collinsville Ave — weekly Sunday service at 10:00 AM",
   "summary": "The parish survives as Jerusalem Lutheran Church at 305 Collinsville Ave, Collinsville, IL — the small wooden church the Lithuanian Lutheran congregation built in 1903 still stands and still holds weekly worship. The congregation was organized January 25, 1903 by Lithuanian immigrants who came to work Collinsville's coal mines, with the knygnešys pastor Martynas Keturakaitis (who had served a prison term for smuggling Lithuanian books under the Russian ban) as its first pastor. It is one of only three Lithuanian Lutheran churches in the USA, and its stained glass windows still carry the Lithuanian names of the original sponsors, including the surname Shimkus — U.S. Rep. John Shimkus's grandparents were members, and for the 2003 centennial he arranged a visit from Lithuania's ambassador Vygaudas Usackas. The congregation today is a member of the Lutheran Church–Missouri Synod (Southern Illinois District, V-Circuit): the 2025 LCMS locator lists Rev. Dr. Douglas A. Nicely as sole pastor, Sunday worship at 10:00 AM with Sunday School and Bible class at 9:00 AM, average weekly attendance of 21, and 27 baptized / 26 confirmed members. In 2017 the congregation installed a new Rodgers Classic Series 559 organ, dedicated November 19, 2017 with music reflecting its Lithuanian Lutheran heritage. The congregation's Facebook page showed activity as recently as February 2025. It remains a very small, aging congregation, but there has been no closure, sale, or demolition — the building has never left the congregation's hands.",
+  "historicalNarrative": [
+    {
+      "text": "Jerusalem Lutheran Church is the Lithuanian Lutheran congregation in Collinsville, not a Roman Catholic parish and not a generic independent church. Lithuanian immigrants employed in the area's coal mines organized the congregation in 1903. The heritage account identifies Martynas Keturakaitis, a Lithuanian book smuggler and Lutheran pastor, as its founding minister. The institution's proper continuing name is Jerusalem Lutheran Church, while “Lithuanian Lutheran Church” describes its origin and community character.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/category/usa/missouri/", "locator": "St. Louis-area heritage page, Collinsville Jerusalem Lutheran Church section, founding community and Martynas Keturakaitis paragraphs"},
+        {"url": "https://locator.lcms.org/church/C/191549", "locator": "LCMS congregation locator, Jerusalem Lutheran Church identity and Collinsville address fields"}
+      ]
+    },
+    {
+      "text": "The congregation affiliated with the Lutheran Church–Missouri Synod rather than remaining unaffiliated. The official LCMS locator places Jerusalem in the Southern Illinois District and records its synod relationship. A Lithuanian heritage history describes a postwar disagreement between established members who favored Missouri Synod affiliation and newer refugee members who favored the Lithuanian Lutheran church in exile. The Missouri Synod alignment prevailed, so congregational self-government must not be mistaken for denominational independence.",
+      "sources": [
+        {"url": "https://locator.lcms.org/church/C/191549", "locator": "LCMS locator, denomination, Southern Illinois District, and circuit fields"},
+        {"url": "https://global.truelithuania.com/category/usa/illinois/", "locator": "Illinois heritage page, Collinsville Jerusalem Lutheran section, post-World War II affiliation dispute and outcome"}
+      ]
+    },
+    {
+      "text": "The small wooden church at 305 Collinsville Avenue dates to the congregation's 1903 founding era and remains its worship site. The heritage survey notes that stained-glass windows retain Lithuanian donor names, preserving material evidence of the founding community. The current LCMS listing uses the same address, joining the historic building to the active congregation without requiring a relocation or successor inference.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/category/usa/missouri/", "locator": "St. Louis-area heritage page, Collinsville church-building and Lithuanian stained-glass discussion"},
+        {"url": "https://locator.lcms.org/church/C/191549", "locator": "LCMS locator, 305 Collinsville Avenue address and active-congregation entry"}
+      ]
+    },
+    {
+      "text": "In 2017 the congregation installed a Rodgers Classic Series 559 organ. The instrument was installed and voiced in August, first used in worship on August 27, and dedicated on November 19 with music chosen to reflect the congregation's Lithuanian Lutheran heritage. This was a documented investment in the continuing worship site, not evidence of a new institution or replacement church.",
+      "sources": [
+        {"url": "https://www.rodgersinstruments.com/news/musical-blessings-at-jerusalem-lutheran-church-with-a-new-classic-series-559-organ", "locator": "Rodgers Instruments article, installation, first-use, dedication, and Lithuanian-heritage program paragraphs"}
+      ]
+    },
+    {
+      "text": "The official 2025 LCMS statistics identify Rev. Dr. Douglas A. Nicely as pastor, list Sunday worship at 10:00 a.m., and report 27 baptized members, 26 confirmed members, and average weekly attendance of 21. Those figures establish a small but active congregation. They do not by themselves establish current Lithuanian-language worship, which is not advertised in the official schedule.",
+      "sources": [
+        {"url": "https://locator.lcms.org/church/C/191549", "locator": "LCMS locator, 2025 pastor, worship schedule, attendance, baptized-membership, and confirmed-membership fields"}
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2003-04",

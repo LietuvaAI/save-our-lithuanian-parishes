@@ -4,6 +4,69 @@
   "buildingStatus": "converted",
   "currentUse": "Bellesini Academy — a tuition-free, independent Catholic middle school (grades 5-8, about 120 students) operating at 94 Bradford St, Lawrence, MA 01840; actively running as of its 2026 graduation ceremonies.",
   "summary": "The 1921 stone church of St. Francis (Šv. Pranciškaus) Lithuanian parish at 94 Bradford Street, Lawrence, is standing and in active use: since the parish's last service in 2002 it has housed Bellesini Academy, a tuition-free independent Catholic middle school founded that same year, which currently enrolls about 120 students in grades 5-8 and held graduation ceremonies in 2026. Canonically, St. Francis was merged with Lawrence's other national parishes — Holy Rosary (Italian), Holy Trinity (Polish), and Saints Peter & Paul (Portuguese) — into the territorial Corpus Christi Parish, formally established by the Archdiocese of Boston on November 1, 2004; on December 1, 2021 that parish became Holy Rosary Shrine, administered by the Franciscans of the Poor Christ. The parish's roughly 13-acre lakeside summer estate at Forest Lake in Methuen was sold for residential development after the parish was disestablished; a district of Lithuanian-named streets (Palanga, Varniai, Kaunas, Luoke, Birute, Vytis) remains there. Traces of the Lithuanian heritage survive: one stained-glass window was moved to the Central Catholic High School chapel with an explanatory plaque, and a replica of the Our Lady of Vilnius painting — one that toured Lithuanian DP camps after 1944 — hangs at the successor parish at 35 Essex Street, where the community celebrated Lithuania's independence centennial with a Lithuanian-language Mass in February 2018. The school building shows no outward signs of its Lithuanian past.",
+  "historicalNarrative": [
+    {
+      "text": "St. Francis was Lawrence's Lithuanian Roman Catholic national parish, founded in 1903. Its stone church at 94 Bradford Street was completed in the early 1920s and served the Lithuanian congregation until the parish's final service in 2002.",
+      "sources": [
+        {
+          "url": "https://www.hrslawrence.org/about-us/",
+          "locator": "About Us, Lawrence national parishes and St. Francis founding passage"
+        },
+        {
+          "url": "https://queencityma.wordpress.com/2019/05/31/st-francis-church-lawrence-ma/",
+          "locator": "St. Francis Roman Catholic Church entry, construction and address discussion"
+        }
+      ]
+    },
+    {
+      "text": "The last service at the Bradford Street church took place in 2002, when the altar was removed. The closing of that worship site preceded the formal 2004 creation of Corpus Christi Parish from St. Francis and Lawrence's Italian, Polish, and Portuguese national parishes, so the building's last service and the later canonical consolidation are separate milestones.",
+      "sources": [
+        {
+          "url": "https://www.eagletribune.com/news/merrimack_valley/church-hosts-lithuanian-independence-celebration/article_6740553b-4233-581f-8bd4-d87fa9169664.html",
+          "locator": "Article text and file-photo caption describing the 2002 last service"
+        },
+        {
+          "url": "https://www.hrslawrence.org/about-us/",
+          "locator": "About Us, Corpus Christi establishment on November 1, 2004"
+        }
+      ]
+    },
+    {
+      "text": "The former church was not demolished. Bellesini Academy, a tuition-free independent Catholic middle school founded in 2002, occupies 94 Bradford Street and continues to operate there; this is a building conversion within Catholic educational use, not continuation of St. Francis as a parish.",
+      "sources": [
+        {
+          "url": "https://www.bellesiniacademy.org/",
+          "locator": "Official site, mission, grades served, and 94 Bradford Street contact information"
+        },
+        {
+          "url": "https://www.eagletribune.com/news/merrimack_valley/church-hosts-lithuanian-independence-celebration/article_6740553b-4233-581f-8bd4-d87fa9169664.html",
+          "locator": "Article passage identifying Bellesini Academy in the former church"
+        }
+      ]
+    },
+    {
+      "text": "St. Francis also maintained a summer retreat at Forest Lake in Methuen. After the parish ended, the property was sold for residential development; Lithuanian street names such as Palanga, Varniai, Kaunas, Luoke, Birute, and Vytis preserve the association, although the deed date and precise disposition are not established by the available account.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/lawrence-and-lowell-massachusetts-1682/",
+          "locator": "Lawrence section, St. Francis Forest Lake estate and Lithuanian street names"
+        }
+      ]
+    },
+    {
+      "text": "Lithuanian continuity persisted outside the closed Bradford Street institution. A stained-glass window was transferred to Central Catholic High School, a replica of Our Lady of Vilnius was retained at the successor worship site, and a Lithuanian-language Mass marked Lithuania's independence centennial there in 2018. Corpus Christi became Holy Rosary Shrine in 2021, but the current frequency of Lithuanian worship is not established.",
+      "sources": [
+        {
+          "url": "https://www.eagletribune.com/news/merrimack_valley/church-hosts-lithuanian-independence-celebration/article_6740553b-4233-581f-8bd4-d87fa9169664.html",
+          "locator": "Article passages on transferred stained glass, Our Lady of Vilnius image, and 2018 centennial Mass"
+        },
+        {
+          "url": "https://www.hrslawrence.org/about-us/",
+          "locator": "About Us, December 1, 2021 Holy Rosary Shrine transition"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2002",

@@ -4,6 +4,65 @@
   "buildingStatus": "standing",
   "currentUse": "Active Roman Catholic worship site — St. George Church, 443 Park Ave., Bridgeport CT, now operated jointly with (merged into) St. Charles Borromeo Parish, serving a predominantly Spanish-speaking congregation with Masses in Spanish and English",
   "summary": "St. George Church at 443 Park Avenue, Bridgeport — the 1907 Romanesque Revival church built for a Lithuanian congregation — is standing and remains an active Catholic worship site in the Diocese of Bridgeport, with a congregation Wikipedia describes as roughly 80 percent Spanish-speaking. It no longer functions as an independent parish: it is now operated jointly with St. Charles Borromeo Parish on Bridgeport's East Side, whose website presents the two as a single \"Saint Charles & Saint George\" parish serving over 4,500 immigrant families with Masses in Spanish, English, Brazilian Portuguese, and Haitian Creole. The current published Mass schedule at St. George is weekday Masses Monday, Tuesday, and Friday at 7:00 pm, a Saturday 6:30 pm Spanish vigil, and Sunday Masses at 8:30 am (English) and 10:30 am (Spanish) — no Lithuanian Mass appears on the official schedule. The pastor of the joint parish is Rev. J. Abelardo Vasquez, in office since January 2021, assisted by three parochial vicars; no clergy or staff member is identified with a Lithuanian ministry. The building's interior retains exceptionally rich Lithuanian fabric — Lithuanian donor inscriptions in the stained glass, a Lithuanian chapel-post, a 1913 Lithuanian-inscribed altar cross, and an Our Lady of Vilnius painting — per the Global True Lithuania heritage survey, which reports the church \"still operating and, in fact, open most of the time.\" The Diocese of Bridgeport's own Mass-times directory no longer lists St. George as a separate Bridgeport parish entry (only St. Charles Borromeo appears), and third-party directories now point St. George's website to stcharlesbridgeport.org, consistent with the consolidation.",
+  "historicalNarrative": [
+    {
+      "text": "St. George at 443 Park Avenue was built in 1907 for Bridgeport, Connecticut's Lithuanian Roman Catholic congregation. It is a different institution from the Lithuanian St. George once located in Chicago's Bridgeport neighborhood; the city, address, and diocesan context establish the separation.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Saint_George_Parish_(Bridgeport,_Connecticut)",
+          "locator": "Saint George Parish history, 1907 church and Lithuanian congregation"
+        }
+      ]
+    },
+    {
+      "text": "The Romanesque Revival church preserves extensive Lithuanian material: stained glass with donor inscriptions, a chapel-post, a 1913 Lithuanian-inscribed altar cross, and an Our Lady of Vilnius image. Those physical markers survive independently of later changes in the parish's language and administration.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/connecticut-789/",
+          "locator": "Bridgeport St. George entry, interior Lithuanian features"
+        }
+      ]
+    },
+    {
+      "text": "The current parish website presents St. Charles and St. George together and describes ministry to immigrant communities in Spanish, English, Brazilian Portuguese, and Haitian Creole. Its published St. George schedule includes weekday and weekend Masses in English and Spanish, but no Lithuanian-language liturgy.",
+      "sources": [
+        {
+          "url": "https://www.stcharlesbridgeport.org/about-4",
+          "locator": "About page, combined Saint Charles and Saint George community description"
+        },
+        {
+          "url": "https://www.stcharlesbridgeport.org/mass-schedule",
+          "locator": "Mass Schedule, St. George Church services"
+        }
+      ]
+    },
+    {
+      "text": "Sources indicate that St. George and St. Charles were combined administratively by 2023, but the exact canonical instrument and whether the juridic act was a merger or another form of linkage have not been located. The shared parish presentation and clergy establish current joint operation without resolving those legal mechanics.",
+      "sources": [
+        {
+          "url": "https://www.stcharlesbridgeport.org/clergy-and-staff-directory",
+          "locator": "Clergy and Staff Directory, joint parish leadership"
+        },
+        {
+          "url": "https://www.stcharlesbridgeport.org/parish-information",
+          "locator": "Parish Information, Saint Charles and Saint George contact details"
+        }
+      ]
+    },
+    {
+      "text": "The Park Avenue church remains a standing active Catholic worship site. The diocesan directory's omission of a separate St. George parish entry is consistent with consolidation, but it is not evidence that the building closed; current parish schedules directly document continued worship there.",
+      "sources": [
+        {
+          "url": "https://www.bridgeportdiocese.org/parishes/",
+          "locator": "Diocesan parish directory, Bridgeport entries"
+        },
+        {
+          "url": "https://www.stcharlesbridgeport.org/mass-schedule",
+          "locator": "Mass Schedule, St. George Church weekday and Sunday services"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2023-07",

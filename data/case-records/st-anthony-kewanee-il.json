@@ -1,0 +1,73 @@
+{
+  "slug": "st-anthony-kewanee-il",
+  "culturenetEntityId": "cn:institution:st-anthony-kewanee-il",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian parish organized in 1912 · St. Anthony church built in 1913 · merged with St. Stanislaus into St. Francis of Assisi Parish in 1982 · lineage continued into Saint John Paul II Parish in 2013",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "merged",
+  "buildingStatus": "unknown",
+  "currentUse": "St. Anthony Parish ended through merger in 1982. Official successor history states that St. Francis of Assisi used St. Stanislaus Church, not the former St. Anthony building, and that the 2013 successor Saint John Paul II Parish uses Visitation Church. A field survey reports that the St. Anthony building later served a Church of God in Christ congregation and was subsequently vacant and offered for sale, but gives no observation date or exact address; present ownership, use, and physical condition therefore remain unknown.",
+  "summary": "St. Anthony was Kewanee's Lithuanian Roman Catholic parish, organized in 1912 with its church built in 1913. The current Saint John Paul II Parish history confirms the Lithuanian identity and resolves the inherited 1982 claim: St. Anthony and the Polish St. Stanislaus parish merged that year to create St. Francis of Assisi Parish, which worshiped at St. Stanislaus Church. In 2013 St. Francis and St. Mary merged into Saint John Paul II Parish, which uses Visitation Church. These are two typed institutional lineage steps, not survival of St. Anthony at its original building. The former St. Anthony church's exact address has not been established in the accepted canon; an undated field survey describes later non-Catholic reuse followed by vacancy and a sale offering, so its current condition remains unresolved. No dedicated cemetery or complete records-custody chain has been verified.",
+  "institutionLifecycle": {
+    "formation": "Wolkovich dates parish formation to 1912; the official successor history identifies St. Anthony Church as built in 1913 for Lithuanians.",
+    "jurisdiction": "Roman Catholic parish in Kewanee; diocesan jurisdiction is presumed from the official successor history but the founding decree was not located.",
+    "terminalStatus": "Merged with St. Stanislaus Parish into the new St. Francis of Assisi Parish in 1982.",
+    "laterLineage": "St. Francis of Assisi and St. Mary merged into Saint John Paul II Parish in 2013.",
+    "currentVerification": "The current official Saint John Paul II Parish history documents both mergers and identifies Visitation Church as the present successor worship site."
+  },
+  "worshipSites": [
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-anthony-church-kewanee-il",
+      "name": "St. Anthony Church",
+      "address": "Kewanee, IL; exact street address unresolved",
+      "usePeriod": "built 1913; used by St. Anthony Parish until the 1982 merger",
+      "buildingCondition": "unknown; an undated field survey reported later reuse and subsequent vacancy",
+      "currentUse": "Unknown. St. Anthony's Catholic successor did not continue worship here.",
+      "evidence": [{"url": "https://saintjohnpaulii-kewanee.org/our-history", "locator": "Official parish history: St. Anthony Church built in 1913 for Lithuanians; 1982 successor used St. Stanislaus Church"}, {"url": "https://global.truelithuania.com/kewanee-illinois-4005/", "locator": "St. Anthony church section: attributed field observations of later Church of God in Christ use, vacancy, and sale offering; observation date and exact address absent"}]
+    },
+    {
+      "siteType": "successor_church",
+      "name": "St. Stanislaus Church",
+      "address": "Kewanee, IL; exact address not adjudicated in this dossier",
+      "usePeriod": "used by St. Francis of Assisi Parish from the 1982 merger",
+      "buildingCondition": "not assessed",
+      "currentUse": "Historical successor worship site; not a St. Anthony worship site after St. Anthony ceased as a juridic parish.",
+      "evidence": [{"url": "https://saintjohnpaulii-kewanee.org/our-history", "locator": "Official parish history: St. Francis continued to use St. Stanislaus Church"}]
+    },
+    {
+      "siteType": "successor_church",
+      "name": "Visitation Church",
+      "address": "Kewanee, IL; exact address not adjudicated in this dossier",
+      "usePeriod": "current Saint John Paul II Parish worship site after the 2013 merger",
+      "buildingCondition": "standing in active worship use",
+      "currentUse": "Active worship site of Saint John Paul II Parish; separate from the former St. Anthony building.",
+      "evidence": [{"url": "https://saintjohnpaulii-kewanee.org/our-history", "locator": "Official parish history: Saint John Paul II Parish uses Visitation Church"}]
+    }
+  ],
+  "relationships": [
+    {"type": "institution-used-site", "source": "cn:institution:st-anthony-kewanee-il", "target": "cn:building_site:st-anthony-church-kewanee-il", "date": "1913–1982", "status": "accepted", "note": "Exact address and present condition unresolved."},
+    {"type": "institution-merged-into-institution", "source": "cn:institution:st-anthony-kewanee-il", "target": "cn:institution:st-francis-assisi-kewanee-il", "date": "1982", "status": "accepted", "note": "St. Anthony and St. Stanislaus formed St. Francis of Assisi; the successor used St. Stanislaus Church."},
+    {"type": "institution-merged-into-institution", "source": "cn:institution:st-francis-assisi-kewanee-il", "target": "cn:institution:saint-john-paul-ii-kewanee-il", "date": "2013", "status": "accepted", "note": "St. Francis and St. Mary formed Saint John Paul II Parish, which uses Visitation Church."}
+  ],
+  "historicalNarrative": [
+    {"text": "St. Anthony was a distinct Lithuanian Roman Catholic parish in Kewanee, not the Cicero, Chicago, or other same-name St. Anthony institutions. Wolkovich dates the parish's formation to 1912 and the church to 1913–1914. The current successor parish independently identifies St. Anthony Church as built in 1913 to serve Lithuanians. The dossier therefore separates 1912 parish organization from the 1913 building milestone.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, Lithuanian Religious Life in America, vol. 3, pp. 107–108"}, {"url": "https://saintjohnpaulii-kewanee.org/our-history", "locator": "Official Saint John Paul II Parish history: St. Anthony Church, 1913, serving Lithuanians"}]},
+    {"text": "The official history resolves the previously thin 1982 terminal reading. It says Kewanee's four ethnic Catholic churches were reorganized into two parishes in 1982: St. Stanislaus and St. Anthony became St. Francis of Assisi Parish. This was an institutional merger, not merely a property sale or the end of Lithuanian-language ministry. The new parish continued worship at St. Stanislaus Church, so the former St. Anthony building did not become the successor's Catholic worship site.", "sources": [{"url": "https://saintjohnpaulii-kewanee.org/our-history", "locator": "Official parish history, 1982 merger paragraph: St. Stanislaus and St. Anthony formed St. Francis and used St. Stanislaus Church"}]},
+    {"text": "A second institutional step occurred in 2013. St. Francis of Assisi and St. Mary merged to form Saint John Paul II Parish, which the official history says uses Visitation Church. The dossier models both mergers rather than collapsing St. Anthony directly into the current institution, and it keeps the successor churches distinct from St. Anthony's own building.", "sources": [{"url": "https://saintjohnpaulii-kewanee.org/our-history", "locator": "Official parish history, 2013 merger paragraph: St. Francis and St. Mary formed Saint John Paul II Parish using Visitation Church"}]},
+    {"text": "The former St. Anthony church's later life is less certain than the institutional lineage. A reviewed field survey says the church later served a Church of God in Christ congregation and was subsequently vacant and offered for sale. The source does not give an observation date or exact street address, so the dossier does not elevate that account into a present-tense building label. It records the attributed sequence while leaving ownership, current use, structural condition, and interior condition unknown.", "sources": [{"url": "https://global.truelithuania.com/kewanee-illinois-4005/", "locator": "Kewanee field survey, St. Anthony church section: later reuse, vacancy, and sale observation; exact date absent"}]},
+    {"text": "No accepted source establishes a dedicated St. Anthony cemetery, a parcel-complete church address, a final Mass date, the disposition of parish records, or the present fate of the church. The official successor history proves current institutional continuity at Saint John Paul II and Visitation Church, but it does not prove that all St. Anthony records are held there or that the former building survives today. Those questions remain explicit gaps.", "sources": [{"url": "https://saintjohnpaulii-kewanee.org/our-history", "locator": "Official current successor history: institutional lineage and present Visitation worship site only"}]}
+  ],
+  "developments": [
+    {"date": "1912–1913", "headline": "Parish organized and Lithuanian church built", "detail": "Institution and building dates are separate.", "sources": [{"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "pp. 107–108", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"}]},
+    {"date": "1982", "headline": "St. Anthony and St. Stanislaus form St. Francis", "detail": "The successor worshiped at St. Stanislaus Church.", "sources": [{"title": "Our History", "publisher": "Saint John Paul II Parish", "date": "accessed 2026-08-17", "url": "https://saintjohnpaulii-kewanee.org/our-history"}]},
+    {"date": "2013", "headline": "Lineage continues into Saint John Paul II Parish", "detail": "The current successor uses Visitation Church.", "sources": [{"title": "Our History", "publisher": "Saint John Paul II Parish", "date": "accessed 2026-08-17", "url": "https://saintjohnpaulii-kewanee.org/our-history"}]}
+  ],
+  "sources": [
+    {"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "pp. 107–108", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"},
+    {"title": "Our History", "publisher": "Saint John Paul II Parish, Kewanee", "date": "accessed 2026-08-17", "url": "https://saintjohnpaulii-kewanee.org/our-history"},
+    {"title": "Kewanee, Illinois Lithuanian heritage field survey", "publisher": "Global True Lithuania", "date": "accessed 2026-08-17; observation date unstated", "url": "https://global.truelithuania.com/kewanee-illinois-4005/"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The inherited 'merged 1982' status is confirmed and now typed as the formation of St. Francis of Assisi from St. Anthony and St. Stanislaus. The official history also proves the later 2013 step into Saint John Paul II. The field-survey building account is undated and cannot support a present-tense standing, vacant, or sale status.",
+  "gaps": "Founding and merger decrees, exact St. Anthony church address and parcel, construction/dedication details beyond 1913, final Mass date, deed and ownership chain, date and duration of Church of God in Christ use, sale outcome, present building and interior condition, complete sacramental-record custody, and any cemetery remain unverified."
+}

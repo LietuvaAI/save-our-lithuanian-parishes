@@ -1,0 +1,44 @@
+{
+  "slug": "ascension-pittsburgh-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "demolished",
+  "currentUse": "Ascension ended as a Lithuanian Roman Catholic parish after its final Mass on July 29, 1962. The Urban Redevelopment Authority acquired the property for an industrial park, and the church was demolished shortly afterward. No successor parish, surviving worship site, or current religious use is established in the reviewed sources; the exact former street address and parcel remain unresolved.",
+  "summary": "Ascension was a Lithuanian Roman Catholic parish in Pittsburgh's Manchester/North Side area, created in January 1906. Rather than erect a new building, the parish acquired and renovated a former Presbyterian church and dedicated it on September 8, 1906. It remained small, had no parish school, and counted only about thirty families by 1962. Urban renewal, rather than a documented parish merger, ended the institution: the public authority bought the property for an industrial park, the last Mass was held July 29, 1962, and the church was demolished soon afterward.",
+  "historicalNarrative": [
+    {
+      "text": "The Diocese of Pittsburgh identifies Ascension as a Lithuanian Roman Catholic parish created in January 1906 after Lithuanian immigration to Pittsburgh's Manchester area. The official history establishes the institution's class and origin but says little else about its organization; a canonical erection instrument, organizers, founding pastor, and temporary worship place have not been located.",
+      "sources": [{"url": "https://diopitt.org/ascension-north-side", "locator": "Parish History: Lithuanian parish created in January 1906 after immigration to Manchester"}]
+    },
+    {
+      "text": "Ascension purchased an existing Presbyterian church, renovated it, and dedicated it for Catholic use on September 8, 1906. This is a predecessor-building-to-parish-site relationship, not evidence that the Presbyterian congregation became part of Ascension. Neither the official history nor the corroborating field survey identifies the former Presbyterian congregation, street number, deed, or parcel.",
+      "sources": [
+        {"url": "https://diopitt.org/ascension-north-side", "locator": "Parish History: purchase and renovation of Presbyterian church; dedication 1906-09-08"},
+        {"url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/", "locator": "Pittsburgh field-survey section: Ascension used a purchased Presbyterian church"}
+      ]
+    },
+    {
+      "text": "The parish remained small and never supported a school. The Diocese records about thirty families by 1962. That decline is part of the institutional history, but the Diocese specifically attributes the terminal event to urban renewal rather than simply to membership loss.",
+      "sources": [{"url": "https://diopitt.org/ascension-north-side", "locator": "Parish History: no school, small parish, and thirty families by 1962"}]
+    },
+    {
+      "text": "In 1962 the Urban Redevelopment Authority purchased the Ascension property for an industrial park. The last Mass was celebrated July 29, 1962, and the church was torn down shortly afterward. The reviewed evidence supports institutional closure and separate building demolition, but it does not establish a merger successor or the later chain of title and use of the parcel.",
+      "sources": [
+        {"url": "https://diopitt.org/ascension-north-side", "locator": "Parish History: authority purchase, final Mass 1962-07-29, and demolition shortly afterward"},
+        {"url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/", "locator": "Pittsburgh field-survey section: church demolished in 1962 for an industrial zone"}
+      ]
+    }
+  ],
+  "developments": [
+    {"date": "1906-01", "headline": "Ascension Parish is created", "detail": "The Diocese identifies it as a Lithuanian parish serving the Manchester area.", "sources": [{"title": "Ascension, North Side", "publisher": "Catholic Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/ascension-north-side"}]},
+    {"date": "1906-09-08", "headline": "Converted church is dedicated", "detail": "Ascension renovated a purchased Presbyterian church for Roman Catholic worship.", "sources": [{"title": "Ascension, North Side", "publisher": "Catholic Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/ascension-north-side"}]},
+    {"date": "1962-07-29", "headline": "Ascension celebrates its final Mass", "detail": "Urban-renewal acquisition ended use of the parish property.", "sources": [{"title": "Ascension, North Side", "publisher": "Catholic Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/ascension-north-side"}]},
+    {"date": "shortly after 1962-07-29", "headline": "Ascension church is demolished", "detail": "The former church site was cleared for an industrial park.", "sources": [{"title": "Ascension, North Side", "publisher": "Catholic Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/ascension-north-side"}]}
+  ],
+  "sources": [
+    {"title": "Ascension, North Side", "publisher": "Catholic Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/ascension-north-side"},
+    {"title": "Pittsburgh Lithuanian heritage field survey", "publisher": "Global True Lithuania", "date": "accessed 2026-08-17", "url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The dossier confirms Ascension as a distinct Lithuanian Roman Catholic parish and separates its January 1906 institutional creation, acquisition of a former Presbyterian building, July 29, 1962 final Mass, and subsequent demolition. It does not use an unreviewed newspaper/OCR address lead and does not invent a merger successor. The official Diocese history is direct evidence for demolition; the field survey is corroborative.",
+  "gaps": "The canonical erection and closure instruments; organizers and founding pastor; pre-dedication worship site; exact street address and parcel; identity and address of the Presbyterian predecessor; deed and purchase terms; architectural/construction history; school decision records; Urban Redevelopment Authority instrument; precise demolition date and permit; parcel's later use; cemetery relationships; sacramental-record custody; and any territorial reassignment remain unresolved."
+}

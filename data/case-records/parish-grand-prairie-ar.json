@@ -1,0 +1,168 @@
+{
+  "slug": "parish-grand-prairie-ar",
+  "culturenetEntityId": "cn:institution:lietuva-colony-mission-grand-prairie-ar",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian farm-colony promotion began in 1893 · settled Catholic mission community and chapel documented in 1895 · colony dwindled to only a few families by 1899",
+  "institutionClass": "roman_catholic",
+  "institutionalForm": "mission",
+  "institutionStatus": "closed",
+  "buildingStatus": "unknown",
+  "currentUse": "The Lietuva Colony dwindled to only a few families by 1899, and no continuing Catholic mission after that year has been established. Its small chapel was built near Hazen on the priest's farm in 1895, but no precise address, parcel, surviving structure, later use, or current condition has been established. The public coordinates identify Grand Prairie generally and must not be read as a chapel location.",
+  "summary": "Lietuva Colony was a short-lived Lithuanian Roman Catholic mission community in the Grand Prairie area near Hazen, Arkansas, not an independently erected parish. Lithuanian farm-colony promotion began in 1893; by June 1895 ten of twenty-four land-buying families were living there and Father J. Baloewiczius, also identified as Jonas Balcevicius, was building a small church on his farm with settler labor. Wolkovich's history describes the colony and mission as established in 1895 and reports that only a few families remained by 1899. The 1893 and 1895 dates therefore describe promotion and settled mission formation respectively. The chapel's exact location and physical fate remain unresolved.",
+  "institutionLifecycle": {
+    "formation": "Newspaper promotion for a Lithuanian agricultural colony began in 1893. A settled Catholic community with a chapel under construction is directly documented in June 1895.",
+    "institutionalForm": "Lithuanian Roman Catholic settler mission community with a small chapel; no independent parish erection is established.",
+    "jurisdiction": "Roman Catholic mission in Arkansas; the governing diocese, canonical dependency, and mission instrument have not been established from the available sources.",
+    "terminalStatus": "Wolkovich reports that only a few families remained by 1899, and the accepted canonical adjudication treats the mission as ended by that year. No exact last Mass, canonical closure instrument, or evidence of a continuing mission after 1899 has been located.",
+    "currentVerification": "No precise site, surviving institution, successor, records custodian, cemetery, or current building condition has been verified. Grand Prairie city-centroid coordinates do not locate the chapel."
+  },
+  "worshipSites": [
+    {
+      "siteType": "mission_chapel",
+      "culturenetEntityId": "cn:building_site:lietuva-colony-chapel-grand-prairie-ar",
+      "name": "Lietuva Colony chapel near Hazen",
+      "address": "Grand Prairie near Hazen, Arkansas; exact address, parcel, and coordinates unresolved",
+      "usePeriod": "under construction by 1895-06-22; no continuing mission use after 1899 has been established",
+      "buildingCondition": "unknown",
+      "currentUse": "Unknown. The chapel was on Father J. Baloewiczius's farm, but the farm and chapel site have not been precisely located.",
+      "evidence": [
+        {
+          "url": "https://flps.newberry.org/id/5423970_1_0654",
+          "locator": "Lietuva, June 22, 1895, Foreign Language Press Survey item 5423970_1_0654; families, priest's farm, and church construction near Hazen"
+        },
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed pp. 156-157; Lietuva Colony, chapel, and decline to only a few families"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:lietuva-colony-mission-grand-prairie-ar",
+      "target": "cn:building_site:lietuva-colony-chapel-grand-prairie-ar",
+      "date": "1895-1899",
+      "status": "accepted",
+      "note": "The settled mission community used the chapel built near Hazen; the 1899 bound reflects decline to only a few families and the absence of established later mission use, not a chapel-closing instrument."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "The Grand Prairie record began as a plan for a Lithuanian agricultural colony, not as a parish decree. Lithuanian-language newspaper promotion started in 1893 as organizers sought land for immigrant families. This is the origin of the inherited 1893 date; it marks colony promotion rather than the existence of a settled congregation or completed chapel.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed p. 156; 1893 colony promotion"
+        }
+      ]
+    },
+    {
+      "text": "A contemporary report dated June 22, 1895 documents the settlement in operation. Twenty-four Lithuanian families had purchased farms and ten families were already living there. The report called it the first Lithuanian colony under the name Lietuva and placed it in Grand Prairie, Arkansas, near Hazen.",
+      "sources": [
+        {
+          "url": "https://flps.newberry.org/id/5423970_1_0654",
+          "locator": "Lietuva, June 22, 1895, Foreign Language Press Survey item 5423970_1_0654; colony name, family counts, and location"
+        }
+      ]
+    },
+    {
+      "text": "The same 1895 report says Father J. Baloewiczius had begun building a church on his own farm and that settlers supplied labor. Wolkovich identifies the priest as Jonas Balcevicius and describes a small Catholic chapel. These facts establish a local mission community and worship site, but not an independently erected parish.",
+      "sources": [
+        {
+          "url": "https://flps.newberry.org/id/5423970_1_0654",
+          "locator": "Lietuva, June 22, 1895, Foreign Language Press Survey item 5423970_1_0654; church construction on the priest's farm"
+        },
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed pp. 156-157; priest and chapel account"
+        }
+      ]
+    },
+    {
+      "text": "The 1893 and 1895 formation readings describe different stages. Promotion and recruitment began in 1893, while the settled community and chapel construction are documented in 1895. The institution is therefore classified as a mission formed through the settled worshipping community, with both milestones retained rather than reduced to one unsupported founding date.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed pp. 156-157; promotion, settlement, and mission chronology"
+        },
+        {
+          "url": "https://flps.newberry.org/id/5423970_1_0654",
+          "locator": "Lietuva, June 22, 1895, Foreign Language Press Survey item 5423970_1_0654; settled colony and chapel evidence"
+        }
+      ]
+    },
+    {
+      "text": "The colony dwindled sharply. Wolkovich reports that by 1899 only a few families remained, and no continuing mission after that year has been established. The exact last Mass and canonical end remain unknown, as do any institutional successor, records custodian, cemetery, or later use of the chapel.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed p. 157; only a few families remained by 1899"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1893",
+      "headline": "Lithuanian farm-colony promotion begins",
+      "detail": "Promotion and recruitment preceded the settled Catholic mission and must not be treated as a parish-erection date.",
+      "sources": [
+        {
+          "title": "Lithuanian Religious Life in America, Volume 3",
+          "publisher": "William Wolkovich-Valkavičius",
+          "date": "1998",
+          "page": "printed p. 156",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+        }
+      ]
+    },
+    {
+      "date": "1895-06-22",
+      "headline": "Settled colony and chapel construction documented",
+      "detail": "A contemporary report records resident families and a church being built on the priest's farm near Hazen.",
+      "sources": [
+        {
+          "title": "The First Lithuanian Colony under the Name of Lietuva, Grand Prairie, Arkansas",
+          "publisher": "Foreign Language Press Survey, translated from Lietuva",
+          "date": "1895-06-22",
+          "page": "item 5423970_1_0654",
+          "url": "https://flps.newberry.org/id/5423970_1_0654"
+        }
+      ]
+    },
+    {
+      "date": "1899",
+      "headline": "Colony dwindles to only a few families",
+      "detail": "Only a few families remained by 1899; no continuing mission after that year is established, while exact canonical and worship-ending events remain unresolved.",
+      "sources": [
+        {
+          "title": "Lithuanian Religious Life in America, Volume 3",
+          "publisher": "William Wolkovich-Valkavičius",
+          "date": "1998",
+          "page": "printed p. 157",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lithuanian Religious Life in America, Volume 3",
+      "publisher": "William Wolkovich-Valkavičius",
+      "date": "1998",
+      "page": "printed pp. 156-157",
+      "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+    },
+    {
+      "title": "The First Lithuanian Colony under the Name of Lietuva, Grand Prairie, Arkansas",
+      "publisher": "Foreign Language Press Survey, translated from Lietuva",
+      "date": "1895-06-22",
+      "page": "item 5423970_1_0654",
+      "url": "https://flps.newberry.org/id/5423970_1_0654"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The inherited 1893 and 1895 formation readings are both retained but assigned to different events: colony promotion began in 1893, while a settled mission community and chapel construction are documented in 1895. The record is a mission, not a parish, and Grand Prairie coordinates do not establish the chapel site.",
+  "gaps": "The mission's canonical establishment and dependency, complete clergy history, exact chapel address and parcel, precise worship period, last Mass and closure instrument, chapel fate, successor, sacramental-record custody, cemetery, and present site condition remain unresolved."
+}
