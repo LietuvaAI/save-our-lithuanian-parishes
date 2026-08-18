@@ -4,6 +4,60 @@
   "buildingStatus": "converted",
   "currentUse": "First Haitian Baptist Church of Lawrence — an active Créole-language Baptist congregation occupying the former Lithuanian National Catholic church building at 150 Garden Street, Lawrence, MA",
   "summary": "The former Sacred Heart of Jesus (Saldžiausios Jėzaus Širdies) Lithuanian National Catholic church building on Garden Street in Lawrence still stands and is in active religious use: it was sold to a Haitian Baptist congregation and today houses the First Haitian Baptist Church of Lawrence, a Créole-speaking congregation. The brick building predates the parish — it was originally the Garden Street Methodist Episcopal Church, acquired by the Lithuanian National Catholic parish in 1917 after the parish's 1916 founding by Stasys B. Mickevičius. Global True Lithuania reports the building was sold in 2001 to the \"Haiti Baptists,\" while Wikipedia and the LNCC's own historical site (lktb.org) state the parish functioned until 2002; the stone plaque reading \"Lithuanian National Catholic Church\" reportedly still remains near the top of the facade, sun-bleached and barely legible. The community's most durable legacy is the Lithuanian National Catholic Cemetery in neighboring Methuen, founded in 1917, which remains maintained and active: it received a decorative entrance arch around 1997 and a bilingual memorial to Lithuanian-American veterans in 2016, holds roughly 100 graves of Lithuanian US-forces veterans, and is supported by funds from the church sale — matching the archive record that sale proceeds went to the community's cemetery fund. No diocesan involvement exists or existed (the parish was community-owned and independent of Rome), and no recent press, preservation campaigns, or reunion activity was found.",
+  "historicalNarrative": [
+    {
+      "text": "Sacred Heart of Jesus in Lawrence was a Lithuanian National Catholic institution, not a Roman Catholic diocesan parish. Community histories attribute its organization in 1916 to Stasys B. Mickevičius. In 1917 the congregation acquired the former Garden Street Methodist Episcopal church, so the building predates its Lithuanian National Catholic use and must be distinguished from the institution's formation.",
+      "sources": [
+        {
+          "url": "https://www.lktb.org/home/about",
+          "locator": "Lithuanian National Catholic Church history: Lawrence congregation and lifecycle"
+        },
+        {
+          "url": "https://queencityma.wordpress.com/2019/06/21/lithuanian-national-catholic-church-lawrence-ma/",
+          "locator": "Building history from Garden Street Methodist Episcopal Church to Lithuanian National Catholic use"
+        }
+      ]
+    },
+    {
+      "text": "The Lawrence congregation's terminal chronology is source-conflicted. Field documentation dates the building sale to a Haitian Baptist congregation to 2001, while institutional histories say the Lithuanian National Catholic parish functioned until 2002. The evidence therefore supports a 2001-2002 transition window rather than treating sale, final worship, and institutional end as one proven event.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/lawrence-and-lowell-massachusetts-1682/",
+          "locator": "Lawrence national church section: reported 2001 sale and later use"
+        },
+        {
+          "url": "https://www.lktb.org/home/about",
+          "locator": "Institutional history giving parish activity through 2002"
+        }
+      ]
+    },
+    {
+      "text": "The Garden Street building remained a worship site after the Lithuanian institution ended. Later documentation identifies it as a Haitian Baptist church and records the former Lithuanian National Catholic wording on the facade. This reuse does not create institutional continuity between the independent Lithuanian parish and the Baptist congregation; it establishes only the later life of the same former church property.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/lawrence-and-lowell-massachusetts-1682/",
+          "locator": "Description of the former church's Baptist reuse and surviving facade plaque"
+        },
+        {
+          "url": "https://queencityma.wordpress.com/2019/06/21/lithuanian-national-catholic-church-lawrence-ma/",
+          "locator": "2019 local-history documentation of the standing former church"
+        }
+      ]
+    },
+    {
+      "text": "The community also established a separate Lithuanian National Catholic Cemetery in Methuen in 1917. Field documentation records later improvements, a Lithuanian-American veterans memorial, and cemetery support from church-sale proceeds. The cemetery's continuing physical presence is separate from the closed Lawrence parish, and its present governing body and fund administration remain unresolved.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/lawrence-and-lowell-massachusetts-1682/",
+          "locator": "Methuen Lithuanian National Catholic Cemetery history, memorials, and church-sale funding"
+        },
+        {
+          "url": "https://www.findagrave.com/cemetery/91180/lithuanian-national-catholic-cemetery",
+          "locator": "Cemetery directory entry for the Lithuanian National Catholic Cemetery in Methuen"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2001",

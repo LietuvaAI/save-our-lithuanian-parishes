@@ -4,6 +4,60 @@
   "buildingStatus": "standing",
   "currentUse": "Active Roman Catholic parish church (Diocese of Grand Rapids) with weekly Masses — but designated in the diocese's June 2025 pastoral plan for merger into the Basilica of St. Adalbert and eventual sale of the property upon the current pastor's retirement",
   "summary": "SS. Peter and Paul Parish at 520 Myrtle Street NW, Grand Rapids, remains a standing, functioning Catholic parish as of mid-2026: its website posts weekly bulletins through July 19, 2026, lists a full Mass schedule (Sunday 9:30 a.m., Saturday 4:00 p.m. vigil, daily Masses Tuesday–Saturday), and names Father Mark Bauer as pastor, with a parish office, school facility, and its own cemetery on Walker Avenue NW. However, the parish's long-term survival is now formally in question: the Diocese of Grand Rapids' \"Rooted in Christ\" pastoral plan, promulgated June 29, 2025 amid a priest shortage (one ordination in 2024, none in 2025; 21 parishes merging, 14 clustering), directs that \"upon the retirement of the pastor, the parish of Ss. Peter and Paul in Grand Rapids will merge with the Basilica of St. Adalbert,\" and that the church \"will continue to be used for religious purposes until the merger is complete and the property is sold.\" The plan's own consultation appendix records parishioner resistance — \"No one affirmed the current proposed plan\" — with the parish asking the diocese to re-evaluate at the time of the retirement rather than commit now to merger and sale, citing its neighborhood outreach (food pantry partnerships, utility/rental assistance, a women's transitional home in the former convent) and its presence on the West Side \"for over 120 years.\" Crain's Grand Rapids Business covered the plan on July 17, 2025 under the headline that the diocese would close four churches and free their sites for reuse, featuring a photo of SS. Peter and Paul. The surrounding Lithuanian heritage ecosystem described in the archive record still exists: the Global True Lithuania encyclopedia describes the 1920s-built church as operating alongside three century-old Lithuanian clubs and two Lithuanian cemeteries, a combination it calls unique among American cities of comparable size. No merger date, sale price, or buyer exists yet, because the trigger — the pastor's retirement — has not occurred.",
+  "historicalNarrative": [
+    {
+      "text": "Ss. Peter and Paul is Grand Rapids's historic Lithuanian Roman Catholic parish at 520 Myrtle Street NW. The parish has served the west-side neighborhood for more than 120 years and remains part of a broader Lithuanian landscape that includes clubs and cemeteries; current parish life and inherited ethnic history are related but not identical.",
+      "sources": [
+        {
+          "url": "https://grdiocese.org/wp-content/uploads/2025/07/rooted-in-christ-pastoral-plan-final-june-2025.pdf",
+          "locator": "Rooted in Christ consultation appendix, Ss. Peter and Paul service to the neighborhood for over 120 years"
+        },
+        {
+          "url": "https://global.truelithuania.com/grand-rapids-michigan-3897/",
+          "locator": "Grand Rapids heritage account, parish, clubs, and Lithuanian cemeteries"
+        }
+      ]
+    },
+    {
+      "text": "The church remains open under pastor Mark Bauer, with Saturday, Sunday, and weekday Masses and current bulletins through July 2026. The parish also maintains Ss. Peter and Paul Cemetery on Walker Avenue; neither current operation nor cemetery association proves that Lithuanian-language worship continues, which is not shown on the published schedule.",
+      "sources": [
+        {
+          "url": "https://ssppgr.com/bulletins",
+          "locator": "Bulletins page, issues through July 19, 2026"
+        },
+        {
+          "url": "https://ssppgr.com/calendars-and-schedules/mass-hours",
+          "locator": "Mass Schedule, current weekend and weekday liturgies"
+        },
+        {
+          "url": "https://ssppgr.com/staff-2",
+          "locator": "Staff page, pastor and parish administration"
+        }
+      ]
+    },
+    {
+      "text": "The Diocese of Grand Rapids promulgated its Rooted in Christ plan on June 29, 2025. It directs Ss. Peter and Paul to merge into the Basilica of St. Adalbert upon the current pastor's retirement and states that the Myrtle Street church will remain in religious use until the merger is complete and the property is sold; no effective merger date exists because the trigger has not occurred.",
+      "sources": [
+        {
+          "url": "https://grdiocese.org/wp-content/uploads/2025/07/rooted-in-christ-pastoral-plan-final-june-2025.pdf",
+          "locator": "Final pastoral plan, Ss. Peter and Paul merger and property-sale directive"
+        }
+      ]
+    },
+    {
+      "text": "Parishioners rejected the proposed merger-and-sale course during consultation and asked the diocese to reassess conditions when the pastor retires, citing active neighborhood ministries. That objection does not cancel the promulgated plan, but it records an unresolved implementation dispute while the parish and building remain active.",
+      "sources": [
+        {
+          "url": "https://grdiocese.org/wp-content/uploads/2025/07/rooted-in-christ-pastoral-plan-final-june-2025.pdf",
+          "locator": "Consultation appendix, Ss. Peter and Paul response and ministry list"
+        },
+        {
+          "url": "https://wnycatholic.org/2025/07/15/crippling-priest-shortage-leads-to-restructuring-of-grand-rapids-diocese/",
+          "locator": "2025-07-15 diocesan restructuring report, priest shortage and plan context"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2025-06-29",

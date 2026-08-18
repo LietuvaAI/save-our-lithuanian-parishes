@@ -4,6 +4,35 @@
   "buildingStatus": "converted",
   "currentUse": "Private residential building; the authentic church interior reportedly remains, though the cornerstone has been removed",
   "summary": "St. Casimir's church building in Pittston still stands and is now used as a residential building; per the Global True Lithuania heritage survey, the authentic interior remains but the cornerstone was removed and nothing outside marks its 99 years (1909-2008) as the hub of Pittston Lithuanians. After the Diocese of Scranton closed the parish in April 2008 and merged it into St. John the Evangelist, the church was sold to a private buyer who planned an arts venue; after the building was vandalized she resold it, and it passed into residential use. Regional press (Pittston Progress) reported the owner as Gina Malsky, who bought the building in 2011 intending a multi-use arts center and put it up for sale after teenage vandals damaged it, though that article is no longer retrievable online. Lithuanian community life persists nearby: Knights of Lithuania Council 143 of Pittston celebrated the Feast of St. Casimir with Mass at St. John the Evangelist Church on March 3, 2024. The successor parish itself has now been dissolved: effective July 1, 2026, St. John the Evangelist, Our Lady of the Eucharist, and St. Joseph Marello parishes were consolidated into the new Communion of Saints Parish, Pittston, under Rev. Joseph P. Elston, as part of the diocese's Vision 2030 restructuring. No sale prices for the church property were found in any published source.",
+  "historicalNarrative": [
+    {
+      "text": "St. Casimir served Pittston's Lithuanian Roman Catholics for nearly a century. Field documentation dates the church's community role from 1909 to 2008, while the inherited 1890 date appears to refer to an earlier organizing or parish milestone rather than the standing building. No founding decree or early-site record has been located to resolve that distinction.",
+      "sources": [
+        { "url": "https://global.truelithuania.com/northern-coal-region-scranton-1614/", "locator": "Pittston St. Casimir section: 1909-2008 church and community history" }
+      ]
+    },
+    {
+      "text": "The parish closed in April 2008 and was merged into St. John the Evangelist Parish. The dated Times Leader archive records the end-of-an-era coverage, and the Catholic Directory identifies the closed Pittston church; the precise canonical decree and the relationship between the parish's earlier founding and the later church structure remain outside the available sources.",
+      "sources": [
+        { "url": "https://archive.timesleader.com/article/1173062/end-of-an-era-for-church-parishioners", "locator": "April 7, 2008 End Of An Era For Church, Parishioners entry" },
+        { "url": "https://www.catholicdirectory.com/pittston/church/st-casimir-closed", "locator": "St. Casimir-Closed directory entry for Pittston" },
+        { "url": "https://global.truelithuania.com/northern-coal-region-scranton-1614/", "locator": "Pittston St. Casimir section: 2008 closure" }
+      ]
+    },
+    {
+      "text": "The former church's building history continued separately. Field documentation reports a private sale, an unrealized plan to use the church as an arts venue, vandalism, another sale, and eventual residential use with much of the authentic interior still present but the cornerstone removed. Sale prices, the current owner, the conversion date, and an independently verified street address remain unknown.",
+      "sources": [
+        { "url": "https://global.truelithuania.com/northern-coal-region-scranton-1614/", "locator": "Pittston former church section: arts plan, vandalism, resale, residential use, and interior condition" }
+      ]
+    },
+    {
+      "text": "Lithuanian Catholic community activity outlasted the parish. In March 2024 Knights of Lithuania Council 143 celebrated St. Casimir's feast at St. John the Evangelist. The institutional successor chain then changed again: effective July 1, 2026, the Diocese of Scranton consolidated St. John the Evangelist with two other Pittston parishes into the new Communion of Saints Parish. That later merger updates the canonical lineage without changing the private status of the former St. Casimir building.",
+      "sources": [
+        { "url": "https://www.dioceseofscranton.org/knights-of-lithuania-council-143-pittston-celebrated-the-feast-of-saint-casimir/", "locator": "March 2024 Council 143 St. Casimir feast report" },
+        { "url": "https://www.dioceseofscranton.org/bishop-bambera-announces-clergy-appointments-67/", "locator": "Communion of Saints Parish consolidation effective July 1, 2026" }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2008-04-06",

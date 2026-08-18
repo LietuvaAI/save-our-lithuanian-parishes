@@ -4,6 +4,38 @@
   "buildingStatus": "standing",
   "currentUse": "Closed former combined church-and-school building (a modest two-story, residential-looking structure that held the church on the main floor and the parish school above); the True Lithuania heritage guide describes it as still standing but \"now closed.\" No current occupant, owner, or commercial use could be verified.",
   "summary": "Aušros Vartų (Our Lady of Vilna), Pilsen's second and more modest Lithuanian parish at 2327 W 23rd Place (the heritage guide gives 2337 W 23 Place), was closed by the Archdiocese of Chicago in 1987, and its people and students were absorbed into neighboring St. Paul parish — St. Paul's own parish history states the two parishes' schools had already been combined in 1970 and that \"When Our Lady of Vilna closed in 1987, the students were moved to St. Paul.\" The two-story church-and-school building is described by the True Lithuania Lithuanian-heritage guide as still standing but closed; no sale record, buyer, or current occupant could be verified. The parish name survived only in the merged St. Paul–Our Lady of Vilna school until that school closed in 2013. The parish's bells vanished after closure, but a scrap-metal worker spotted the Lithuanian inscription on one bell awaiting melting and alerted the diocese, which reacquired it; since 2013, after a 15-year silence, the bell rings at a Tinley Park church — St. Julie's, per the heritage guide — its inscription invoking the \"Miraculous Madonna of the Gate of Dawn.\" The parish's story, including the bell rescue, was retold in Draugas in July 2026 in a feature on the Lithuanian cultural heritage guide, indicating the site remains part of active diaspora memory. This Chicago parish is distinct from Manhattan's Aušros Vartų, whose building was sold and demolished in 2015.",
+  "historicalNarrative": [
+    {
+      "text": "Our Lady of Vilna was a Lithuanian Roman Catholic parish in Chicago's Pilsen district, distinct from the Manhattan parish that bore the same Lithuanian title. The surviving register guide identifies the Chicago institution and documents baptism, marriage, and death registers beginning in the early twentieth century. The available sources do not establish a precise canonical erection date, so the register span is evidence of parish activity rather than a substitute for a founding decree.",
+      "sources": [
+        {"url": "https://www.lithuaniancatholicancestorsearch.com/our-lady-of-vilna--lith--parish.html", "locator": "Our Lady of Vilna (Lith.) parish register guide, title and Registers Online (1906–1925) sections"}
+      ]
+    },
+    {
+      "text": "The parish used a modest two-story combination church-and-school building in Pilsen. The Lithuanian heritage survey locates the former church on West 23rd Place and describes the worship space on the main floor with the school above it. Published address readings differ between 2327 and 2337 West 23rd Place, and no parcel record has been located to resolve that discrepancy or document the property's later ownership.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/chicago-illinois-45/", "locator": "Chicago heritage survey, Pilsen section, paragraph beginning “The more modest Our Lady of Vilna church”"}
+      ]
+    },
+    {
+      "text": "Institutional consolidation preceded the parish's end. St. Paul's own history says the schools of St. Paul and Our Lady of Vilna were combined in 1970, while the parishes remained distinguishable. It then records that Our Lady of Vilna closed in 1987 and its students moved to St. Paul. The evidence therefore treats 1970 as a school consolidation and 1987 as the parish closure, not as one undifferentiated event.",
+      "sources": [
+        {"url": "https://stpaulchgo.org/the-history-of-st-paul/", "locator": "The History of St. Paul, paragraphs covering the 1970 school combination and the 1987 closure of Our Lady of Vilna"}
+      ]
+    },
+    {
+      "text": "After the parish closed, its name continued in the combined St. Paul–Our Lady of Vilna school until that school closed in 2013. The heritage survey describes the former church-and-school structure as still standing but closed. That field account supports survival at the time of observation, but it does not establish a current occupant, ownership chain, interior condition, or a dated twenty-first-century structural assessment.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/chicago-illinois-45/", "locator": "Chicago heritage survey, Our Lady of Vilna section, paragraphs on the combined school name, 2013 school closure, and standing closed building"}
+      ]
+    },
+    {
+      "text": "A parish bell followed a separate afterlife from the institution and building. The heritage survey recounts that a worker recognized its Lithuanian inscription before the bell was melted for scrap, after which the diocese recovered it. The same account places the bell at St. Julie's in Tinley Park, ringing again from 2013 after a long silence. This object continuity preserves part of the parish's material history but does not constitute institutional continuation of Our Lady of Vilna.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/chicago-illinois-45/", "locator": "Chicago heritage survey, Our Lady of Vilna section, bell-rescue and Tinley Park paragraphs"}
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "1987",

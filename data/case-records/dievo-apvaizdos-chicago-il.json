@@ -4,6 +4,46 @@
   "buildingStatus": "standing",
   "currentUse": "Church and school campus sold by the Archdiocese of Chicago in September 2025 to an expanding church congregation (identified as \"The Chicago Church\" in the Traded deal headline), which is preserving the property's use as a community/worship institution. Prior to sale it was a shuttered secondary worship site of St. Procopius Parish, used occasionally for weddings, funerals and wakes.",
   "summary": "Providence of God (Dievo Apvaizdos), 717 W. 18th St. in Pilsen, still stands. The parish was canonically suppressed and united to St. Procopius Parish by decree of Archbishop Blase Cupich given May 23, 2016, effective July 1, 2016, as part of the consolidation of Pilsen's six parishes into three, citing demographic change, a 29% ten-year decline in Sunday Mass attendance, fewer priests and unpaid parish debts. The church continued as a worship site until regular services ended in summer 2017 despite parishioner opposition; St. Procopius thereafter allowed the building to be used for weddings, funerals and wakes. In September 2025 the Archdiocese of Chicago sold the two-building campus (26,365 sq ft church plus 14,259 sq ft school at 1814 S. Union Ave. and 717 W. 18th St., 40,623 sq ft total) for $1,850,000 through SVN Chicago Commercial to an expanding church congregation described as preserving the property's institutional use; the Traded deal headline names the buyer as The Chicago Church. The building itself, a 1927 twin-steeple Romanesque church, had by the 1960s become home to a largely Mexican-American congregation that hosted one of the city's largest Via Crucis processions, and its loss was described by displaced parishioners as devastating. St. Procopius still styles itself \"St. Procopius/Providence of God,\" carrying the suppressed parish's name forward.",
+  "historicalNarrative": [
+    {
+      "text": "Providence of God began as a Lithuanian Roman Catholic institution in Pilsen, but the surviving public sources assign two different dates to its formation. South Side Weekly describes it as established in 1900 as Chicago's second Lithuanian parish. The Archdiocese's later suppression decree says the personal parish for Lithuanian-speaking Catholics was established in 1903. Without the original erection instrument, the 1900 organizing history and the 1903 canonical reading remain separate rather than being collapsed into one date.",
+      "sources": [
+        {"url": "https://southsideweekly.com/churches-in-pilsen/", "locator": "Churches in Pilsen, Providence of God section, paragraph identifying the parish as established in 1900"},
+        {"url": "https://www.archchicago.org/documents/20342/21370/News-Release-Suppression+Providence+of+God.pdf/9efa7078-8a74-4876-803b-edf1880f2eeb", "locator": "Suppression decree, PDF p. 1, recital stating that Providence of God was established in 1903 as a Lithuanian personal parish"}
+      ]
+    },
+    {
+      "text": "The parish's later church at 717 West 18th Street was a twin-steepled Romanesque building completed in 1927. Over the following decades the congregation's pastoral identity broadened with neighborhood change, and by the later twentieth century it served a predominantly Mexican-American community. Reporting on the closure period describes a parish life extending well beyond Sunday Mass, including devotional groups and a major Via Crucis procession.",
+      "sources": [
+        {"url": "https://blockclubchicago.org/2018/06/08/in-pilsen-churches-mean-more-than-sunday-mass-and-their-closures-are-devastating/", "locator": "Block Club Chicago, Providence of God sections describing the 1927 church, Mexican-American congregation, parish groups, and Via Crucis"}
+      ]
+    },
+    {
+      "text": "Archbishop Blase Cupich issued a decree on May 23, 2016 suppressing Providence of God Parish and uniting it with St. Procopius Parish effective July 1, 2016. The decree distinguished the juridic parish from its church building: the institution was suppressed, while the church remained a sacred building available for divine worship, including baptisms and marriages. It also directed the parish's sacramental records to the Archdiocesan archives. These were separate institutional, building-use, and records-custody consequences of the same reorganization.",
+      "sources": [
+        {"url": "https://www.archchicago.org/documents/20342/21370/News-Release-Suppression+Providence+of+God.pdf/9efa7078-8a74-4876-803b-edf1880f2eeb", "locator": "Suppression decree, PDF pp. 1–3, effective-date, union, church-retention, and records clauses"}
+      ]
+    },
+    {
+      "text": "Regular services at Providence of God continued beyond the 2016 juridic suppression and ended in summer 2017. St. Procopius then permitted the former parish church to host weddings, funerals, and wakes. Parishioner testimony described the dispersal of established devotional groups and the difficulty some older members experienced relocating, showing why the end of ordinary worship at the building must not be dated automatically to the earlier canonical suppression.",
+      "sources": [
+        {"url": "https://blockclubchicago.org/2018/06/08/in-pilsen-churches-mean-more-than-sunday-mass-and-their-closures-are-devastating/", "locator": "Block Club Chicago, Providence of God closure section and quotations on summer 2017 services, occasional rites, and displaced groups"}
+      ]
+    },
+    {
+      "text": "In September 2025 the Archdiocese sold the former Providence of God church-and-school campus for $1.85 million. The brokerage report describes a 40,623-square-foot two-building property at 1814 South Union Avenue and 717 West 18th Street sold to an expanding church congregation, preserving an institutional form of use. A separate transaction headline identifies the purchaser as The Chicago Church. The sale establishes continued standing reuse of the church campus, but it does not by itself establish a canonical successor to Providence of God or resolve the fate of the former convent and rectory.",
+      "sources": [
+        {"url": "https://rejournals.com/svn-chicago-commercial-brokers-sale-of-former-providence-of-god-church-campus-in-chicagos-pilsen-neighborhood/", "locator": "REJournals, paragraphs reporting the September 2025 $1.85 million sale, addresses, building areas, and institutional-use purchaser"},
+        {"url": "https://traded.co/deals/illinois/mixed-use/sale/1814-south-union-avenue/", "locator": "Traded deal record, headline and transaction summary naming The Chicago Church and the Archdiocese of Chicago"}
+      ]
+    },
+    {
+      "text": "The suppressed parish's name remains present in the successor community's public identity: St. Procopius describes itself as St. Procopius/Providence of God. That naming continuity reflects memory and pastoral reception within the surviving parish, not the continued juridic existence of Providence of God after July 1, 2016.",
+      "sources": [
+        {"url": "https://stprocopius.org/about/", "locator": "St. Procopius parish About page, heading and introductory identification as St. Procopius/Providence of God"}
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2016-05-23",

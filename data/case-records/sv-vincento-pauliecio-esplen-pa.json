@@ -4,6 +4,36 @@
   "buildingStatus": "demolished",
   "currentUse": "The 1903 church is gone — demolished after repeated arsons following its 1970 sale; its Latin-inscribed cornerstone survives embedded in a small warehouse-like basement-only building on the site. The former parish school on Tabor Street (which served as the worship space 1962-1993 and pastoral center until 1997) still stands; it was sold to the Sons of God church in 1997 and, per a November 2023 account, still shows remnants of the \"St. Vincent De Paul\" name but appears inactive as a congregation.",
   "summary": "St. Vincent de Paul, the Lithuanian parish of Pittsburgh's Esplen neighborhood, no longer exists in any form: its original 1903 church was closed for worship in 1962, sold out of diocesan hands in 1970, and later demolished after numerous arsons, with only its Latin-inscribed cornerstone surviving on a small warehouse-like replacement structure. Worship had moved in 1962 into a remodeled hall in the parish school on Tabor Street, and the parish itself was suppressed in 1993, when population loss led the Diocese of Pittsburgh to merge it with six McKees Rocks parishes into the new St. John of God Parish. The school-church became a pastoral center, which was closed in 1997 and sold shortly afterward to the Sons of God church; that building still stood as of November 2023, one of the few substantial structures left in a neighborhood of frame houses and vacant lots, with traces of the St. Vincent de Paul name but no Lithuanian inscriptions remaining. The canonical successor chain has since consolidated further: St. John of God was merged on January 6, 2020 into Archangel Gabriel Parish (with Holy Trinity, Robinson Township and St. Malachy, Kennedy Township) under the diocese's On Mission for The Church Alive! restructuring, and that parish closed Mother of Sorrows Church in McKees Rocks on July 1, 2022. No Lithuanian community activity, preservation effort, or reunion connected to the Esplen parish was found in recent press.",
+  "historicalNarrative": [
+    {
+      "text": "St. Vincent de Paul was founded for Lithuanian immigrants in Pittsburgh's Esplen neighborhood, many of whom had previously attended St. Casimir on the South Side. The original parish church dated to 1903. In 1962 worship moved from that church into a remodeled hall in the parish school on Tabor Street, creating two distinct former worship buildings with different later outcomes.",
+      "sources": [
+        { "url": "https://diopitt.org/saint-vincent-de-paul-esplen", "locator": "Parish History: Lithuanian founders, 1903 church, and 1962 move into the school hall" },
+        { "url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/", "locator": "Esplen St. Vincent de Paul section: church and Tabor Street school/worship history" }
+      ]
+    },
+    {
+      "text": "The original church closed for worship in 1962 and was sold out of diocesan ownership in 1970. Field documentation reports that repeated arsons preceded its later demolition and that its Latin-inscribed cornerstone survives on a small replacement structure. The sale buyer, price, demolition year, and exact church address remain unresolved, and the demolished church must not be confused with the surviving school building.",
+      "sources": [
+        { "url": "https://diopitt.org/saint-vincent-de-paul-esplen", "locator": "Parish History: 1962 closure of the original church and 1970 sale" },
+        { "url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/", "locator": "Esplen original church: arsons, demolition, and surviving cornerstone" }
+      ]
+    },
+    {
+      "text": "The parish institution continued at the school-church until 1993, when the Diocese of Pittsburgh merged it with six McKees Rocks-area parishes into St. John of God Parish. The former school then served as a pastoral center until 1997 and was sold to the Sons of God church. These events separate the 1962 church move, the 1993 canonical merger, and the 1997 disposition of the later worship building.",
+      "sources": [
+        { "url": "https://diopitt.org/saint-vincent-de-paul-esplen", "locator": "Parish History: 1993 St. John of God merger and 1997 pastoral-center closure and sale" },
+        { "url": "https://diopitt.org/saint-john-of-god", "locator": "St. John of God history: 1993 formation from McKees Rocks-area parishes" }
+      ]
+    },
+    {
+      "text": "The successor chain changed again in January 2020 when St. John of God joined Holy Trinity and St. Malachy to form Archangel Gabriel Parish. A November 2023 photographic account found the former St. Vincent school still standing, although its later non-denominational church use appeared inactive. Current ownership and use remain unverified; the standing school does not alter the demolition of the original church or the 1993 end of St. Vincent parish.",
+      "sources": [
+        { "url": "https://diopitt.org/archangel-gabriel-mckees-rocks", "locator": "Parish History: January 6, 2020 formation of Archangel Gabriel Parish" },
+        { "url": "https://fatherpitt.com/2023/11/27/st-vincent-de-paul-school-esplen/", "locator": "November 27, 2023 photographic account of the standing former school" }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "1993",

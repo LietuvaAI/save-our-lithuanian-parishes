@@ -4,6 +4,40 @@
   "buildingStatus": "converted",
   "currentUse": "Active Protestant church — Templo Cristiano Asambleas de Dios, a Spanish-language Assemblies of God congregation, worships in the former St. Anne building at 100 E 4th St, Spring Valley, IL 61362",
   "summary": "The 1897 St. Anne (Šv. Onos) Lithuanian church building at 100 E 4th St, Spring Valley, IL is still standing and remains in active religious use, but no longer as a Catholic church: it is now home to Templo Cristiano Asambleas de Dios, a Spanish-language Assemblies of God (Pentecostal) congregation founded March 21, 1982 and pastored since then by Eliezar (Eli) and Alicia Esquivel, with Sunday services 10:00-11:30. The heritage survey site Global True Lithuania reports the Lithuanian parish was closed in the early 1990s \"to the dismay of local Lithuanians,\" some of whom stopped attending Catholic churches altogether, and that stained-glass windows bearing Lithuanian sponsors' names remained inside, along with a cornerstone carrying a pre-standardized Lithuanian inscription dating the church to June 26, 1897. Lithuanian memory persists at the separate St. Anne Lithuanian Catholic cemetery (established 1912, still well-maintained), where a 1992 memorial incorporates a sculpture salvaged from the church, an image of the building, and the names of its seven Lithuanian priests. The Diocese of Peoria's successor parish in town, Nativity of Our Lord (formed July 1, 2013 by merging Immaculate Conception, Sts. Peter and Paul, and St. Anthony), documents St. Anne's founding-era history but records nothing about its closure — St. Anne was not part of that merger, consistent with the parish having ended decades earlier. No sale price, buyer identity at time of sale, or diocesan closure announcement was found in any opened source.",
+  "historicalNarrative": [
+    {
+      "text": "St. Anne was the Lithuanian Roman Catholic parish established by immigrant miners in Spring Valley's 1890s growth period. The current Nativity of Our Lord parish history treats St. Anne as a distinct Lithuanian predecessor community and locates its church at Spalding and Fourth Streets. The inherited 1895 formation reading and the 1897 church date describe different possible milestones rather than interchangeable founding dates.",
+      "sources": [
+        {"url": "https://www.nativitysv.org/history", "locator": "Nativity of Our Lord History page, Spring Valley ethnic-parish section describing Lithuanian St. Anne at Spalding and Fourth Streets"}
+      ]
+    },
+    {
+      "text": "The church at today's 100 East Fourth Street carries a Lithuanian cornerstone inscription dated June 26, 1897. The heritage survey also reports stained-glass windows bearing Lithuanian sponsors' names. These features identify the standing building with St. Anne's Lithuanian congregation, while the 1897 inscription marks the church-building phase rather than independently proving the parish's canonical erection date.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/spring-valley-illinois-2284/", "locator": "Spring Valley heritage page, St. Anne church section, address, Lithuanian cornerstone inscription, 26 June 1897 date, and donor windows"}
+      ]
+    },
+    {
+      "text": "The heritage survey says the Lithuanian parish closed in the early 1990s. An inherited reading places a diocesan sale around 1987, but no deed, decree, or final-service source has been located to establish how those events relate. Closure, sale, and later reuse therefore remain separate events: the institution ended by the early 1990s, while the precise terminal date and property-transfer sequence are unresolved.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/spring-valley-illinois-2284/", "locator": "Spring Valley heritage page, St. Anne paragraph reporting closure in the early 1990s and later Hispanic-congregation use"}
+      ]
+    },
+    {
+      "text": "St. Anne Lithuanian Catholic Cemetery is a separate cemetery rather than the church building or a surviving parish. The heritage survey dates the cemetery to 1912 and describes a 1992 memorial incorporating a sculpture salvaged from the church, an image of the building, and the names of seven Lithuanian priests. Cemetery maintenance and material commemoration preserve community history without continuing St. Anne as a juridic parish.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/spring-valley-illinois-2284/", "locator": "Spring Valley heritage page, St. Anne Cemetery and 1992 church-sculpture memorial section"},
+        {"url": "https://www.findagrave.com/cemetery/107830/saint-annes-cemetery", "locator": "Find a Grave cemetery page, Saint Annes Cemetery identity and Spring Valley location"}
+      ]
+    },
+    {
+      "text": "Templo Cristiano Asambleas de Dios now worships at 100 East Fourth Street. Its own history identifies a Spanish-language Assemblies of God congregation founded on March 21, 1982 and led by Eliezar and Alicia Esquivel, while a directory confirms the former church's address. This is active Protestant reuse of the standing building, not a Catholic or juridic successor to St. Anne. The date on which Templo Cristiano acquired or began using the property remains unknown.",
+      "sources": [
+        {"url": "https://www.tcspringvalley.org/about", "locator": "Templo Cristiano About page, March 21 1982 founding, pastoral leadership, and service information"},
+        {"url": "https://www.churchadvise.com/directory/IL/Spring-Valley", "locator": "Spring Valley church directory, Templo Cristiano entry at 100 E. 4th Street"}
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "early 1990s",

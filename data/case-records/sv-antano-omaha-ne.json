@@ -4,6 +4,64 @@
   "buildingStatus": "converted",
   "currentUse": "Spanish-language Protestant congregation — Iglesia Cristiana Pacto de Fe Inc., listed at 5408 S 32nd St, Omaha, NE 68107, on the former St. Anthony parish property (probable; see gaps on the 5402 vs 5408 address point)",
   "summary": "St. Anthony (Šv. Antano) Lithuanian parish at 5402 S. 32nd Street in South Omaha closed in June 2014 as part of an Archdiocese of Omaha restructuring: Archbishop George J. Lucas presided at a June 14 Mass, followed on June 15 by a Eucharistic procession to Ss. Peter and Paul Church, the parish it was merged into, with the building to remain available for funerals and weddings \"until another use is made of the properties.\" A widely cited photo caption records that the church was subsequently sold to an Omaha-based investor group for potential sale or lease to a Christian denomination. Today the 1936 red-brick church property is occupied by Iglesia Cristiana Pacto de Fe Inc., a Spanish-language Protestant congregation (pastors Marco Tulio Ortiz and Sayra Ortiz) listed at 5408 S 32nd St — the church-type parcel on that block — with an active Google Maps presence and directory listings updated as recently as June 2026, so the building stands and is in weekly religious use. The former parish school closed in 1980 and its building has been described as abandoned, while the church cornerstone retains its Lithuanian inscription. The successor parish, Sts. Peter and Paul, still describes itself as celebrating Lithuanian, Croatian, Slovenian and Hungarian heritage. Omaha's Lithuanian community remains visible outside the parish through the Lithuanian Bakery (since 1963) and the Lithuanian \"Path of the Sun\" sculpture garden at Lauritzen Gardens (2015-2017), and the Douglas County Historical Society mounted a feature on the community in November 2021.",
+  "historicalNarrative": [
+    {
+      "text": "Omaha's Lithuanian community organized around St. Anthony society at the start of the twentieth century. Sources distinguish a 1900–1901 organizing phase, parish formation in 1906 or 1907, and consecration in 1907; those dates describe different milestones and are not collapsed into one certain founding event.",
+      "sources": [
+        {
+          "url": "https://douglascohistory.org/omahas-lithuanian-community/",
+          "locator": "Omaha's Lithuanian Community, society and 1906–1907 parish chronology"
+        },
+        {
+          "url": "https://catholicvoiceomaha.com/three-omaha-churches-prepare-for-last-liturgies/",
+          "locator": "Three Omaha churches prepare for last liturgies, St. Anthony founded 1907"
+        }
+      ]
+    },
+    {
+      "text": "The original church burned, and the surviving red-brick church was built in 1936 at South 32nd Street. The parish later sponsored postwar Lithuanian refugees, using its basement for temporary housing and helping newcomers find work, extending the church's role beyond worship.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/omaha-nebraska-719/",
+          "locator": "Omaha heritage account, original fire and 1936 replacement church"
+        },
+        {
+          "url": "https://douglascohistory.org/omahas-lithuanian-community/",
+          "locator": "Omaha's Lithuanian Community, postwar refugee sponsorship"
+        }
+      ]
+    },
+    {
+      "text": "St. Anthony merged into Ss. Peter and Paul Parish in June 2014. Archbishop George Lucas celebrated a June 14 Mass, followed by a June 15 Eucharistic procession to the successor parish; the church initially remained available for funerals and weddings, so the institutional merger did not immediately settle the building's disposition.",
+      "sources": [
+        {
+          "url": "https://catholicvoiceomaha.com/three-omaha-churches-prepare-for-last-liturgies/",
+          "locator": "Archdiocesan report, June 14–15 liturgies, merger, and interim building use"
+        },
+        {
+          "url": "https://stspeterpaulomaha.org/welcome/",
+          "locator": "Successor parish welcome page, St. Anthony community reception"
+        }
+      ]
+    },
+    {
+      "text": "A later caption reports an intermediate sale to an Omaha investor group, and Iglesia Cristiana Pacto de Fe now identifies its Spanish-language Protestant congregation at 5408 South 32nd Street. The historic Catholic address is 5402, so use of the exact former sanctuary is probable from the same property and matching building imagery but not established by a deed; the sale date, price, and fate of Lithuanian furnishings remain unknown.",
+      "sources": [
+        {
+          "url": "https://www.flickr.com/photos/thebouncingczech/6783041344",
+          "locator": "St. Anthony church photograph caption, investor-group sale statement"
+        },
+        {
+          "url": "https://iglesiacristianapa4.wixsite.com/pactodefeomaha",
+          "locator": "Congregation website, identity and Omaha location"
+        },
+        {
+          "url": "https://www.google.com/maps/search/Iglesia+Cristiana+Pacto+de+Fe+Omaha",
+          "locator": "Place listing, 5408 South 32nd Street and building imagery"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2014-05-15",

@@ -1,0 +1,150 @@
+{
+  "slug": "mary-chicago-il",
+  "culturenetEntityId": "cn:institution:our-lady-siluva-national-chicago-il",
+  "asOf": "2026-08-17",
+  "formationLabel": "Incorporated 17 May 1916 · Our Lady of Šiluva church established 1921 · documented active July 1933 · historical end unresolved",
+  "institutionClass": "independent_catholic",
+  "institutionStatus": "historical_end_unresolved",
+  "buildingStatus": "unknown",
+  "currentUse": "The historical independent Catholic parish is not the present Roman Catholic Our Lady of Šiluva Lithuanian Mission. The current Lithuanian Catholic pastoral directory lists that distinct mission at 116 North Lake Street in Mundelein; a 2014 Archdiocese of Chicago report documents its separate formation there. The historical national parish used a former German church at 35th and Union, documented as 3501 South Union Avenue and represented in the Wolkovich source package as 3501–3509 South Union Avenue. A 2024 field inventory reports recent multifamily construction at 3501, but the full historic address range, parcel chain, demolition history, and present conditions have not been verified through property records. The former church's terminal condition therefore remains unknown.",
+  "summary": "Our Lady of Šiluva was a distinct Lithuanian independent or national Catholic parish in Chicago's Bridgeport area, not a Roman Catholic parish of the Archdiocese of Chicago. Wolkovich reports incorporation by Rev. Stasys B. Mickevičius on May 17, 1916; Oikos and Wolkovich place the acquisition of a former German church at 35th and Union and the establishment of the named Our Lady of Šiluva parish in 1921. The sources describe institutional disruption after Mickevičius's death in 1923 and disagree on whether the church closed during the ensuing clergy turnover. A 1928 contemporary directory still places Lithuanian National Parish hall activity at 3501 South Union, and a visually verified July 1933 announcement directly identifies the National Parish hall at that address under pastor S. A. Linkus. Those records establish survival or revival through 1933 but do not establish a terminal year, successor, record custodian, or the fate of the church building. The present Roman Catholic Our Lady of Šiluva Lithuanian Mission is a separate, much later institution and is not a continuation asserted by this dossier.",
+  "institutionLifecycle": {
+    "formation": "Wolkovich reports incorporation on 17 May 1916 by Rev. Stasys B. Mickevičius. The named Our Lady of Šiluva parish and its church site are documented from 1921; the legal relationship between the 1916 corporation and the 1921 named parish has not been independently verified from the incorporation file.",
+    "jurisdiction": "Lithuanian independent/separatist or national Catholic; no Roman Catholic Archdiocese of Chicago jurisdiction is asserted, and no instrument proving formal PNCC reception has been found.",
+    "interruptionOrTurnover": "After Mickevičius's death in 1923, sources describe rapid clergy turnover. Oikos reports that the church closed before parishioners invited Rev. S. A. Linkus in 1931; Wolkovich describes the 1931 St. Mary entry as an apparent continuation. Whether this was legal continuity, temporary closure and revival, or reorganization is unresolved.",
+    "lastVerifiedActivity": "Naujienos, 15 July 1933, printed p. 5, announces singing and dancing lessons in the National Parish hall at 3501 South Union Avenue and names pastor S. Linkus and the committee.",
+    "terminalStatus": "historical_end_unresolved",
+    "currentVerification": "No current independent Our Lady of Šiluva parish or successor was verified. The current Lithuanian Catholic pastoral directory lists a separate Roman Catholic mission at 116 North Lake Street, Mundelein, whose 2013 formation was reported by the Archdiocese of Chicago in 2014. Same-name evidence is not treated as continuity."
+  },
+  "worshipSites": [
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:our-lady-siluva-35th-union-chicago-il",
+      "name": "Our Lady of Šiluva Lithuanian National Catholic church",
+      "address": "35th Street and Union Avenue; documented as 3501 S. Union Ave.; Wolkovich source package gives 3501–3509 S. Union Ave., Chicago, IL",
+      "usePeriod": "former German church acquired in 1921; parish-hall use documented in 1928 and 1933; terminal date unresolved",
+      "buildingCondition": "unknown",
+      "currentUse": "A 2024 field inventory reports recent multifamily construction at 3501 S. Union, but no parcel-complete property or demolition record has been verified for the 3501–3509 range. No present structural or interior condition is asserted.",
+      "evidence": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "William Wolkovich-Valkavičius, Lithuanian Religious Life in America, vol. 3, pp. 223–224, 226: 35th and Union / 3501–3509 S. Union site, 1921 acquisition, and 1931 St. Mary continuation reading"},
+        {"url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf", "locator": "Kristina Vaitkevičienė, article PDF p. 31 / printed pp. 60–61 and table PDF p. 32 / printed pp. 62–63: former German church at 35th and Union, named parish, and 1931 Linkus revival"},
+        {"url": "https://www.spauda.org/naujienos/archive/1928/1928-07-12-NAUJIENOS.pdf#page=6", "locator": "Naujienos, 1928-07-12, PDF/printed p. 6, visually verified: Lithuanian National Parish hall at 3501 S. Union Ave.; evidence of site use, not by itself a worship schedule"},
+        {"url": "https://www.spauda.org/naujienos/archive/1933/1933-07-15-NAUJIENOS.pdf#page=5", "locator": "Naujienos, 1933-07-15, PDF/printed p. 5, visually verified announcement: National Parish hall, 3501 S. Union Ave., pastor S. Linkus"}
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:our-lady-siluva-national-chicago-il",
+      "target": "cn:building_site:our-lady-siluva-35th-union-chicago-il",
+      "date": "1921–at least 1933; continuity within that span disputed",
+      "status": "conflict_preserved",
+      "note": "The church was acquired in 1921; contemporary hall activity is documented in 1928 and 1933. Oikos reports an interim closure after 1923, so uninterrupted institutional or worship use is not inferred."
+    },
+    {
+      "type": "same-name-nonidentity",
+      "source": "cn:institution:our-lady-siluva-national-chicago-il",
+      "target": "cn:institution:our-lady-of-siluva-mission-mundelein-il",
+      "date": "2014–present mission context",
+      "status": "accepted",
+      "note": "The later Roman Catholic mission is a distinct institution; no successor or continuity relationship is asserted."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "This case concerns a Lithuanian independent or national Catholic parish in Bridgeport, not a Roman Catholic parish under the Archdiocese of Chicago. Wolkovich identifies the congregation as independent/separatist, while the Count-Risk-13 entity classifies it as independent_catholic. The shared Our Lady of Šiluva title does not connect it to the later Roman Catholic Lithuanian mission, Nativity of the Blessed Virgin Mary, the Maizeville church, or another St. Mary institution.",
+      "sources": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, Lithuanian Religious Life in America, vol. 3, pp. 223–224, 226: independent/separatist St. Mary / Our Lady of Šiluva entry"},
+        {"url": "https://www.chicagocatholic.com/chicagoland/-/article/2014/02/09/lithuanians-have-new-option-for-worshipping", "locator": "Chicago Catholic, 2014-02-09: separate new Roman Catholic Our Lady of Šiluva Mission in Mundelein"}
+      ]
+    },
+    {
+      "text": "Wolkovich reports that Rev. Stasys B. Mickevičius incorporated a St. Mary congregation on May 17, 1916. Oikos's Chicago table also assigns Mickevičius a 1916 Bridgeport phase, but the reviewed sources do not reproduce the Illinois corporate filing, its legal name, officers, registered address, or later amendments. The dossier therefore treats 1916 as a sourced incorporation milestone rather than assuming that every later name and property detail was fixed on that date.",
+      "sources": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, pp. 223–224, 226: incorporation on 1916-05-17 by Rev. Stasys B. Mickevičius"},
+        {"url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf", "locator": "Vaitkevičienė, parish table, PDF p. 32 / printed p. 62: Chicago Bridgeport Mickevičius phase in 1916 and 1921–1923"}
+      ]
+    },
+    {
+      "text": "In 1921 Mickevičius acquired a former German church at the corner of 35th Street and Union Avenue and established the named Our Lady of Šiluva national parish. The Wolkovich extraction preserves the fuller 3501–3509 South Union address range; contemporary newspaper entries identify 3501 South Union as the Lithuanian National Parish hall. These locators establish the parish site but do not identify the German predecessor, the deeded parcels, or whether the entire range was held under one title.",
+      "sources": [
+        {"url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf", "locator": "Vaitkevičienė, PDF p. 31 / printed pp. 60–61 and table PDF p. 32 / printed p. 62: former German church at 35th and Union acquired in 1921"},
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, pp. 223–224, 226: 35th and Union / 3501–3509 S. Union address lineage"}
+      ]
+    },
+    {
+      "text": "Mickevičius died in 1923, but the exact date evidence conflicts. Wolkovich gives June 29; Oikos's narrative says April. Both describe severe clergy turnover afterward. Oikos says the parish passed from hand to hand and the church closed, whereas Wolkovich summarizes the later 1931 St. Mary listing as an apparent continuation. No closure decree, corporate dissolution, deed transfer, or reorganization instrument has been found to determine whether the interruption ended the institution or only suspended stable pastoral and worship life.",
+      "sources": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, pp. 223–224: death on 1923-06-29, subsequent clergy turnover, and apparent continuation under the St. Mary name"},
+        {"url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf", "locator": "Vaitkevičienė, PDF p. 31 / printed pp. 60–61: April 1923 death reading, clergy turnover, reported closure, and 1931 invitation to S. A. Linkus"}
+      ]
+    },
+    {
+      "text": "Contemporary evidence shows that the Union Avenue site remained in Lithuanian national-parish use after 1923 and that a parish under Rev. S. A. Linkus was active in 1933. A 1928 Naujienos directory places several organizations' meetings in the Lithuanian National Parish hall at 3501 South Union; that proves site use but not a worship schedule. A visually verified July 1933 announcement for singing and dancing lessons in the National Parish hall names the same address, pastor S. Linkus, and the committee, extending direct institutional activity beyond the 1931 brochure summarized by Wolkovich.",
+      "sources": [
+        {"url": "https://www.spauda.org/naujienos/archive/1928/1928-07-12-NAUJIENOS.pdf#page=6", "locator": "Naujienos, 1928-07-12, PDF/printed p. 6, visually verified: organization meetings at Lithuanian National Parish hall, 3501 S. Union Ave."},
+        {"url": "https://www.spauda.org/naujienos/archive/1933/1933-07-15-NAUJIENOS.pdf#page=5", "locator": "Naujienos, 1933-07-15, PDF/printed p. 5, visually verified: National Parish hall at 3501 S. Union, pastor S. Linkus and committee"},
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, pp. 224, 226: 1931 St. Mary listing at the same address under S. A. Linkus"}
+      ]
+    },
+    {
+      "text": "No source reviewed establishes when the revived parish ended, where its sacramental or corporate records went, or what happened to the whole historic church property. A 2024 Chicago sacred-spaces field inventory reports a recently constructed multifamily building at 3501 South Union, but that observation does not resolve the complete 3501–3509 range or supply a demolition and title chain. The current Lithuanian Catholic pastoral directory separately lists Our Lady of Šiluva Lithuanian Mission at 116 North Lake Street in Mundelein. That current listing is evidence for a different Roman Catholic mission, not for survival, merger, or succession of the historic independent parish.",
+      "sources": [
+        {"url": "https://rolfachilles.com/id16.html", "locator": "Lithuanian Sacred Spaces Art Chicago field inventory, accessed 2026-08-17: 2024 observation of recent multifamily construction at 3501 S. Union; treated as address-bounded field documentation"},
+        {"url": "https://sielovada.org/siaures-amerika/", "locator": "Lithuanian Catholic pastoral directory, accessed 2026-08-17, North America listing: Our Lady of Šiluva Lithuanian Catholic Mission, 116 North Lake Street, Mundelein; separate Roman Catholic identity"},
+        {"url": "https://www.chicagocatholic.com/chicagoland/-/article/2014/02/09/lithuanians-have-new-option-for-worshipping", "locator": "Chicago Catholic, 2014-02-09: formation of the separate Roman Catholic mission in Mundelein"}
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1916-05-17",
+      "headline": "Mickevičius incorporates the St. Mary congregation",
+      "detail": "The incorporation is source-reported; the underlying corporate filing and its exact legal terms remain unfound.",
+      "sources": [{"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "pp. 223–224, 226", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"}]
+    },
+    {
+      "date": "1921",
+      "headline": "Former German church becomes the Our Lady of Šiluva parish site",
+      "detail": "The church stood at 35th and Union, later documented as 3501 S. Union and represented as the 3501–3509 range.",
+      "sources": [{"title": "The Lithuanian National Catholic Church in America: some historical features", "publisher": "Oikos: Lithuanian Migration and Diaspora Studies", "date": "2015", "page": "PDF pp. 31–32 / printed pp. 60–63", "url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf"}]
+    },
+    {
+      "date": "1923",
+      "headline": "Founder dies and clergy turnover destabilizes the parish",
+      "detail": "Sources disagree between April and June 29 and on the legal or institutional effect of the ensuing reported closure.",
+      "sources": [
+        {"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "pp. 223–224", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"},
+        {"title": "The Lithuanian National Catholic Church in America: some historical features", "publisher": "Oikos: Lithuanian Migration and Diaspora Studies", "date": "2015", "page": "PDF p. 31 / printed pp. 60–61", "url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf"}
+      ]
+    },
+    {
+      "date": "1933-07-15",
+      "headline": "National Parish activity continues at 3501 South Union",
+      "detail": "A visually verified announcement names pastor S. Linkus and the parish committee at the same address.",
+      "sources": [{"title": "National Parish hall announcement", "publisher": "Naujienos", "date": "1933-07-15", "page": "PDF/printed p. 5", "url": "https://www.spauda.org/naujienos/archive/1933/1933-07-15-NAUJIENOS.pdf#page=5"}]
+    },
+    {
+      "date": "2026-08-17",
+      "headline": "Institutional end and whole-site building outcome remain unresolved",
+      "detail": "Current same-name Roman Catholic mission records are explicitly excluded from the historical independent parish identity.",
+      "sources": [
+        {"title": "North America Lithuanian Catholic pastoral directory", "publisher": "Lithuanian Catholic pastoral ministry abroad", "date": "accessed 2026-08-17", "url": "https://sielovada.org/siaures-amerika/"},
+        {"title": "Lithuanian Sacred Spaces Art Chicago", "publisher": "Rolf Achilles", "date": "accessed 2026-08-17", "url": "https://rolfachilles.com/id16.html"}
+      ]
+    }
+  ],
+  "sources": [
+    {"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "pp. 223–224, 226", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"},
+    {"title": "The Lithuanian National Catholic Church in America: some historical features", "publisher": "Oikos: Lithuanian Migration and Diaspora Studies", "date": "2015", "page": "PDF pp. 31–32 / printed pp. 60–63", "url": "https://iseivijosinstitutas.lt/wp-content/uploads/2021/02/Oikos-19.pdf"},
+    {"title": "Chicago organizations directory", "publisher": "Naujienos", "date": "1928-07-12", "page": "PDF/printed p. 6", "url": "https://www.spauda.org/naujienos/archive/1928/1928-07-12-NAUJIENOS.pdf#page=6"},
+    {"title": "National Parish hall announcement", "publisher": "Naujienos", "date": "1933-07-15", "page": "PDF/printed p. 5", "url": "https://www.spauda.org/naujienos/archive/1933/1933-07-15-NAUJIENOS.pdf#page=5"},
+    {"title": "Lithuanians have new option for worshipping", "publisher": "Chicago Catholic / Archdiocese of Chicago", "date": "2014-02-09", "url": "https://www.chicagocatholic.com/chicagoland/-/article/2014/02/09/lithuanians-have-new-option-for-worshipping"},
+    {"title": "North America Lithuanian Catholic pastoral directory", "publisher": "Lithuanian Catholic pastoral ministry abroad", "date": "accessed 2026-08-17", "url": "https://sielovada.org/siaures-amerika/"},
+    {"title": "Lithuanian Sacred Spaces Art Chicago", "publisher": "Rolf Achilles", "date": "accessed 2026-08-17", "url": "https://rolfachilles.com/id16.html"}
+  ],
+  "confidence": "probable",
+  "conflictsWithArchiveRecord": "The 1916 date is a reported incorporation milestone, while the named Our Lady of Šiluva parish and former German church are documented from 1921; they should not be flattened into one undifferentiated founding event. Wolkovich gives Mickevičius's death as June 29, 1923, while Oikos says April 1923. Oikos reports that clergy turnover led to church closure before a 1931 revival; Wolkovich calls the 1931 St. Mary listing an apparent continuation, and contemporary sources show parish-hall use in 1928 and National Parish activity under Linkus in 1933. Those facts leave legal and institutional continuity unresolved. The modern Roman Catholic Our Lady of Šiluva Lithuanian Mission is a same-name nonidentity, not a successor established by evidence.",
+  "gaps": "No copy of the 1916 incorporation filing, complete corporate name and amendments, founding minutes, jurisdiction or ordination instruments, identification of the former German congregation, deed, parcel-complete 3501–3509 property chain, stable clergy list, sacramental register, verified worship schedule after 1933, closure or dissolution instrument, merger or successor record, record-custody notice, demolition permit, or parcel-complete present-use and structural/interior assessment has been found. The April-versus-June 1923 death date, whether the parish legally survived the reported closure, the precise relation of the St. Mary and Our Lady of Šiluva names, and the final institution and building outcomes remain unresolved."
+}

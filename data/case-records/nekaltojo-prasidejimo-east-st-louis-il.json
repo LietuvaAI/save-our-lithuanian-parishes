@@ -4,6 +4,42 @@
   "buildingStatus": "standing",
   "currentUse": "Active Roman Catholic worship site: since May 26, 2014 it operates as the Chapel of Immaculate Conception, a chapel of St. Augustine of Hippo Parish (Diocese of Belleville), with Sunday Mass at 11:00 a.m.",
   "summary": "The 1956 Jonas Mulokas-designed church at 1509 Baugh Avenue still stands and still holds weekly Catholic worship, but it is no longer an independent parish: on May 26, 2014 the Diocese of Belleville designated it a chapel of St. Augustine of Hippo Parish in East St. Louis, and the diocese's own list of closed parishes records it as \"Immaculate Conception, East St. Louis, IL (1895-2014) Designated Chapel.\" The diocesan directory lists a Sunday 11:00 a.m. Mass at the chapel, with Rev. Carroll Mizicko, OFM as pastor of the partnered St. Augustine of Hippo Parish, whose office handles the chapel's affairs. The building — with 55 stained-glass windows by Vytautas Kazimieras Jonynas and an Our Lady of Šiluva statue (1951) still standing on the grounds — remains one of the best-known examples of Lithuanian-American national romantic architecture, and a 2017 St. Louis Patina article described it as still a gathering place for people of Lithuanian descent in the St. Louis area. Global True Lithuania notes the parish survived while 11 of East St. Louis's 13 Catholic churches closed by 2018, amid the city's population collapse from roughly 80,000 to 20,000; the adjacent Lithuanian school (opened 1934, closed 1968) burned in 1976, suspected arson. There has been no diocesan property sale — the site remains in Catholic use under the Diocese of Belleville.",
+  "historicalNarrative": [
+    {
+      "text": "Immaculate Conception was the Lithuanian Roman Catholic parish in East St. Louis. The Diocese of Belleville's closed-parish list gives its institutional span as 1895–2014, while the current diocesan directory identifies the same name and city as a chapel. These official records establish the identity and the nineteenth-century parish origin without conflating it with other Immaculate Conception institutions in Illinois.",
+      "sources": [
+        {"url": "https://www.diobelle.org/canonical-affairs/archives/list-of-closed-parishes", "locator": "Diocese of Belleville List of Closed Parishes, Immaculate Conception, East St. Louis entry showing 1895–2014 and designated-chapel status"},
+        {"url": "https://www.diobelle.org/directory/parishes/immaculate-conception-chapel-east-st-louis", "locator": "Diocesan directory, Immaculate Conception (Chapel), East St. Louis heading and address fields"}
+      ]
+    },
+    {
+      "text": "The current church at 1509 Baugh Avenue was built in 1956 to a design by Lithuanian-American architect Jonas Mulokas. Its Lithuanian national-romantic program includes stained glass by Vytautas Kazimieras Jonynas and an Our Lady of Šiluva statue on the grounds. These artistic features belong to the building's heritage and survive independently of the parish's later loss of separate juridic status.",
+      "sources": [
+        {"url": "https://stlouispatina.com/churches-of-east-st-louis-part-8/", "locator": "St. Louis Patina, church-history and architecture sections describing the 1956 Mulokas building and Lithuanian design"},
+        {"url": "https://global.truelithuania.com/st-louis-missouri-illinois-1719/", "locator": "St. Louis-area heritage page, Immaculate Conception section, Jonynas windows and Our Lady of Šiluva statue"}
+      ]
+    },
+    {
+      "text": "The parish school followed a separate lifecycle from the church. The heritage survey says the Lithuanian school opened in 1934, closed in 1968, and burned in 1976 in a suspected arson. Those dates describe the school building and cannot be used as parish-closure or church-destruction dates; the 1956 church continued standing and in Catholic use.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/st-louis-missouri-illinois-1719/", "locator": "St. Louis-area heritage page, Immaculate Conception school paragraph giving 1934 opening, 1968 closure, and 1976 fire"}
+      ]
+    },
+    {
+      "text": "On May 26, 2014 the Diocese designated Immaculate Conception as a chapel of St. Augustine of Hippo Parish. The diocesan closed-parish list records 2014 as the end of the independent parish, while the directory identifies St. Augustine as the parish responsible for the chapel. This is a transition from parish to dependent worship site, not the closure or sale of the church building.",
+      "sources": [
+        {"url": "https://www.diobelle.org/canonical-affairs/archives/list-of-closed-parishes", "locator": "Diocese closed-parish list, Immaculate Conception entry showing 1895–2014 and “Designated Chapel”"},
+        {"url": "https://www.diobelle.org/directory/parishes/immaculate-conception-chapel-east-st-louis", "locator": "Diocesan chapel directory, May 26 2014 designation and St. Augustine of Hippo parish-association fields"}
+      ]
+    },
+    {
+      "text": "The Diocese's current directory lists the Baugh Avenue chapel and a Sunday 11:00 a.m. Mass, establishing continued Roman Catholic worship at the standing church. A 2017 architectural account also described the site as a gathering place for people of Lithuanian descent. Current canonical life as a chapel, however, does not prove present Lithuanian-language ministry or restore the former parish as a separate institution.",
+      "sources": [
+        {"url": "https://www.diobelle.org/directory/parishes/immaculate-conception-chapel-east-st-louis", "locator": "Diocesan directory, chapel address, parish association, and Sunday Mass schedule"},
+        {"url": "https://stlouispatina.com/churches-of-east-st-louis-part-8/", "locator": "St. Louis Patina, concluding paragraph on continued use and Lithuanian-descended community gathering"}
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2014-05-26",

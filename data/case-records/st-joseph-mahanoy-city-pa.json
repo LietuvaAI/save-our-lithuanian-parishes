@@ -1,0 +1,138 @@
+{
+  "slug": "st-joseph-mahanoy-city-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "standing",
+  "currentUse": "The 1888–1893 St. Joseph church at West Mahanoy Avenue and Catawissa Street remains an active Roman Catholic worship site. In 2008 St. Joseph and six other area parishes were joined in the newly formed Blessed Teresa of Calcutta Parish, later renamed St. Teresa of Calcutta after Mother Teresa's canonization. The successor parish worships in the former St. Joseph building. This is a merger-and-host-site relationship: St. Teresa is a distinct successor institution, while the standing church belongs to St. Joseph's building history.",
+  "summary": "St. Joseph was Mahanoy City's Lithuanian Roman Catholic parish. Lithuanian organizing and fundraising were underway by 1874, immigration expanded from about 1876, and parish organization culminated in 1888 when Father Petras Abromaitis was appointed and land was acquired at West Mahanoy Avenue and Catawissa Street. The cornerstone of the Gothic brick church was blessed September 30, 1888, and Archbishop Patrick J. Ryan dedicated the completed church June 9, 1893. A brick rectory and, in 1907, a parish school expanded the complex; the school opened in 1925 after a long property-governance conflict and later closed in 1972. Mother Teresa visited St. Joseph in 1995. In 2008 St. Joseph merged with six other area parishes to form Blessed Teresa of Calcutta, now St. Teresa of Calcutta. The successor parish remains active in the former St. Joseph church, but it is not merely a renamed continuation of the Lithuanian parish.",
+  "historicalNarrative": [
+    {
+      "text": "Mahanoy City's Lithuanian Catholics organized before they possessed a parish or church. Michelsonas records fundraising and collective action by 1874, while a 1954 St. Joseph anniversary history says Lithuanians began settling in larger numbers about 1876 and were seeking a Lithuanian priest and church by 1884. These are stages of one St. Joseph formation story, not evidence for a separate St. George parish with the same community.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje",
+          "locator": "Stasys Michelsonas, Lietuvių Išeivija Amerikoje, pp. 21–22: early Mahanoy City Lithuanian organizing and fundraising"
+        },
+        {
+          "url": "https://www.draugas.org/archive/1954_reg/1954-03-13-DRAUGAS-i7-8.pdf",
+          "locator": "Draugas, 1954-03-13, p. 2: St. Joseph 65th-anniversary history, settlement and organizing sequence"
+        }
+      ]
+    },
+    {
+      "text": "In August 1888 Archbishop Patrick J. Ryan appointed Father Petras Abromaitis as pastor. The community bought four lots for $3,600 at West Mahanoy Avenue and Catawissa Street and contracted for a brick Gothic church. Its cornerstone was blessed September 30, 1888. Archbishop Ryan dedicated the completed church June 9, 1893; parishioners had financed much of the approximately $40,000 work through interest-free loans to the parish.",
+      "sources": [
+        {
+          "url": "https://www.draugas.org/archive/1954_reg/1954-03-13-DRAUGAS-i7-8.pdf",
+          "locator": "Draugas, 1954-03-13, p. 2: appointment of Father Abromaitis, four-lot purchase, cornerstone date, church form, cost, and 1893 dedication"
+        }
+      ]
+    },
+    {
+      "text": "The parish added a brick rectory beside the church and built a brick school in 1907. The school did not open until 1925 because parishioners and clergy had been divided over control of parish property; the Sisters' convent was then built for roughly $30,000. The school closed in 1972 and was demolished in 2010 for the merged parish's parking lot, while the convent continued to stand. The church itself was renovated repeatedly but remained the anchor of the complex.",
+      "sources": [
+        {
+          "url": "https://www.draugas.org/archive/1954_reg/1954-03-13-DRAUGAS-i7-8.pdf",
+          "locator": "Draugas, 1954-03-13, p. 2: rectory, 1907 school, 1925 opening, convent, cemeteries, and church renovation"
+        },
+        {
+          "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+          "locator": "Mahanoy City section: St. Joseph church, school closure and 2010 demolition, standing convent, and cemetery conditions; accessed 2026-08-17"
+        }
+      ]
+    },
+    {
+      "text": "Mother Teresa visited St. Joseph on June 17, 1995, and Bishop Thomas Welsh celebrated a televised Mass there. In 2008 St. Joseph merged with six other parishes to form Blessed Teresa of Calcutta Parish, renamed St. Teresa of Calcutta after her canonization. The former St. Joseph church remains the active worship site of that successor. The continuity is therefore typed as a 2008 institutional merger with St. Joseph's building retained as the host site, not as an uninterrupted St. Joseph institution under a new label.",
+      "sources": [
+        {
+          "url": "https://www.ad-today.com/local/65th-anniversary-mother-teresa-visited-the-diocese-twice-in-1976-and-1995",
+          "locator": "Diocese of Allentown, 2026-07-17: 1995 visit, Mass at St. Joseph, and 2008 formation and later renaming of the successor parish"
+        },
+        {
+          "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+          "locator": "Mahanoy City section: former St. Joseph church retained as the open church of the merged parish; accessed 2026-08-17"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1874–1888",
+      "headline": "Lithuanian organization develops into St. Joseph Parish",
+      "detail": "Fundraising and lay organization preceded formal parish organization. Father Petras Abromaitis was appointed in 1888, after which land was bought and church construction began.",
+      "sources": [
+        {
+          "title": "Lietuvių Išeivija Amerikoje",
+          "publisher": "Stasys Michelsonas / Keleivis",
+          "date": "1961",
+          "page": "pp. 21–22",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
+        },
+        {
+          "title": "Švento Juozapo parapijos 65 m. sukaktis",
+          "publisher": "Draugas",
+          "date": "1954-03-13",
+          "page": "p. 2",
+          "url": "https://www.draugas.org/archive/1954_reg/1954-03-13-DRAUGAS-i7-8.pdf"
+        }
+      ]
+    },
+    {
+      "date": "1888-09-30–1893-06-09",
+      "headline": "St. Joseph church rises at West Mahanoy and Catawissa",
+      "detail": "The cornerstone was blessed September 30, 1888, and Archbishop Patrick J. Ryan dedicated the completed Gothic brick church June 9, 1893.",
+      "sources": [
+        {
+          "title": "Švento Juozapo parapijos 65 m. sukaktis",
+          "publisher": "Draugas",
+          "date": "1954-03-13",
+          "page": "p. 2",
+          "url": "https://www.draugas.org/archive/1954_reg/1954-03-13-DRAUGAS-i7-8.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2008",
+      "headline": "St. Joseph enters a seven-parish merger",
+      "detail": "St. Joseph and six other area parishes formed Blessed Teresa of Calcutta Parish, now St. Teresa of Calcutta; the former St. Joseph church became the successor's worship site.",
+      "sources": [
+        {
+          "title": "65th Anniversary: Mother Teresa Visited the Diocese Twice",
+          "publisher": "Diocese of Allentown / AD Today",
+          "date": "2026-07-17",
+          "url": "https://www.ad-today.com/local/65th-anniversary-mother-teresa-visited-the-diocese-twice-in-1976-and-1995"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Švento Juozapo parapijos 65 m. sukaktis",
+      "publisher": "Draugas",
+      "date": "1954-03-13",
+      "page": "p. 2",
+      "url": "https://www.draugas.org/archive/1954_reg/1954-03-13-DRAUGAS-i7-8.pdf"
+    },
+    {
+      "title": "Lietuvių Išeivija Amerikoje",
+      "publisher": "Stasys Michelsonas / Keleivis",
+      "date": "1961",
+      "page": "pp. 21–22",
+      "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
+    },
+    {
+      "title": "65th Anniversary: Mother Teresa Visited the Diocese Twice",
+      "publisher": "Diocese of Allentown / AD Today",
+      "date": "2026-07-17",
+      "url": "https://www.ad-today.com/local/65th-anniversary-mother-teresa-visited-the-diocese-twice-in-1976-and-1995"
+    },
+    {
+      "title": "Shenandoah and Southern Coal Region, Pennsylvania",
+      "publisher": "Global True Lithuania",
+      "date": "accessed 2026-08-17",
+      "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The former extracted george-mahanoy-city-pa shell was a source-to-entity join error. The early organizing evidence belongs to St. Joseph and does not establish a separate St. George institution or a 1911 closure. The 1874 evidence describes an organizing phase; the selected parish-formation year remains 1888. St. Teresa of Calcutta is a distinct 2008 merger successor hosted in the former St. Joseph church, not merely a renamed St. Joseph parish.",
+  "gaps": "The exact canonical decree and effective date for St. Joseph's 2008 merger, complete sacramental-record custody, the church and rectory's current numbered postal addresses, and a parcel-level chronology of the two St. Joseph cemeteries remain to be retrieved. The church is securely identified historically at West Mahanoy Avenue and Catawissa Street, but any later civic renumbering has not been documented."
+}

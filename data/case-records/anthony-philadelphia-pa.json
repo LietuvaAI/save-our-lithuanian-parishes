@@ -1,0 +1,40 @@
+{
+  "slug": "anthony-philadelphia-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "unknown",
+  "currentUse": "St. Anthony no longer exists as a Lithuanian Roman Catholic parish. Its church property was sold around 1901-1902 after a prolonged dispute, but the exact address, buyer, later use, and building fate remain unresolved. No merger successor or surviving St. Anthony worship site is established by the reviewed evidence.",
+  "summary": "Philadelphia's first St. Anthony Lithuanian Catholic organization began with a society formed in 1890 and developed into a distinct Lithuanian Roman Catholic congregation. A contemporaneous 1895 Catholic history identifies St. Anthony's as a Lithuanian congregation founded in 1894 whose members sought their own church and priest. Published Lithuanian history records church-property acquisition and an assigned priest in 1894, followed by a seven-to-eight-year property dispute. The church was sold and the proceeds divided around 1901-1902, ending the institution; its address, later building history, records, and any successor relationship remain unknown.",
+  "historicalNarrative": [
+    {
+      "text": "Stasys Michelsonas dates the organizing society behind Philadelphia's St. Anthony Lithuanian Catholic institution to 1890. This society is treated as the institution's organizational origin rather than counted as a second parish. The source does not supply an incorporation document, exact society title, meeting place, officers, or relationship to other Philadelphia Lithuanian societies.",
+      "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje", "locator": "Stasys Michelsonas, Lietuviu Iseivija Amerikoje, pp. 34 and 338-339: 1890 society origin and Philadelphia St. Anthony history"}]
+    },
+    {
+      "text": "The evidence supports a distinct St. Anthony Lithuanian Roman Catholic congregation by 1894. Michelsonas records the acquisition of church property and an assigned priest that year. Independently, a Philadelphia Historical Commission nomination cites the 1895 Historical Sketches of the Catholic Churches and Institutions of Philadelphia, p. 139, for a Lithuanian congregation founded as St. Anthony's in 1894 after Lithuanians requested their own church and priest.",
+      "sources": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje", "locator": "Stasys Michelsonas, Lietuviu Iseivija Amerikoje, pp. 34, 128, and 338-339: property, priest, and parish identity"},
+        {"url": "https://keepingphiladelphia.org/wp-content/uploads/2020/11/StLaurentiusNomination4-14-2015-1.pdf", "locator": "Philadelphia Historical Commission nomination, PDF p. 34 (document p. 33), lines citing Historical Sketches (1895), p. 139: St. Anthony Lithuanian congregation founded 1894"}
+      ]
+    },
+    {
+      "text": "Michelsonas describes a seven-to-eight-year dispute over the church property. That evidence establishes a contested property phase in the same institution's history, but the reviewed source packet does not identify the deed holders, litigants, court, exact dates, priest, or street address. The physical church is therefore preserved as a site used by St. Anthony without assigning it to another Philadelphia parish or similarly named institution.",
+      "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje", "locator": "Stasys Michelsonas, Lietuviu Iseivija Amerikoje, pp. 128 and 338-339: seven-to-eight-year property dispute"}]
+    },
+    {
+      "text": "The church property was sold and its proceeds divided around 1901-1902, ending St. Anthony as a distinct parish. The reviewed evidence supports sale and institutional termination but not demolition, conversion, a buyer, or a merger. The institution-used-site relationship ends with the sale; the building's later physical life and any pastoral reassignment remain unproved.",
+      "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje", "locator": "Stasys Michelsonas, Lietuviu Iseivija Amerikoje, pp. 34, 128, and 338-339: sale, proceeds divided, and approximate 1901-1902 end"}]
+    }
+  ],
+  "developments": [
+    {"date": "1890", "headline": "Lithuanian Catholic society is organized", "detail": "The society forms the organizational origin of the later St. Anthony congregation.", "sources": [{"title": "Lietuviu Iseivija Amerikoje", "publisher": "Stasys Michelsonas", "date": "published history; accessed 2026-08-17", "page": "pp. 34, 338-339", "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"}]},
+    {"date": "1894", "headline": "St. Anthony congregation and church property are established", "detail": "Two published source lines support a Lithuanian congregation with its own church and priest.", "sources": [{"title": "Lietuviu Iseivija Amerikoje", "publisher": "Stasys Michelsonas", "date": "published history; accessed 2026-08-17", "page": "pp. 34, 128, 338-339", "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"}, {"title": "St. Laurentius Roman Catholic Church historic nomination", "publisher": "Philadelphia Historical Commission nomination", "date": "Spring 2015", "page": "PDF p. 34 (document p. 33)", "url": "https://keepingphiladelphia.org/wp-content/uploads/2020/11/StLaurentiusNomination4-14-2015-1.pdf"}]},
+    {"date": "approximately 1901-1902", "headline": "Church is sold and St. Anthony ends", "detail": "After a lengthy property dispute, the proceeds were divided and no successor is established.", "sources": [{"title": "Lietuviu Iseivija Amerikoje", "publisher": "Stasys Michelsonas", "date": "published history; accessed 2026-08-17", "page": "pp. 34, 128, 338-339", "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"}]}
+  ],
+  "sources": [
+    {"title": "Lietuviu Iseivija Amerikoje", "publisher": "Stasys Michelsonas", "date": "published history; accessed 2026-08-17", "page": "pp. 34, 128, 338-339", "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"},
+    {"title": "St. Laurentius Roman Catholic Church historic nomination", "publisher": "Philadelphia Historical Commission nomination", "date": "Spring 2015", "page": "PDF p. 34 (document p. 33)", "url": "https://keepingphiladelphia.org/wp-content/uploads/2020/11/StLaurentiusNomination4-14-2015-1.pdf"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The dossier confirms that this was a distinct Lithuanian Roman Catholic St. Anthony congregation, not a saint-name match to a later Philadelphia parish. The 1890 society is treated as organizational origin, the 1894 congregation/property as the parish phase, and the approximate 1901-1902 sale as the terminal event. No address, demolition, conversion, or successor is inferred. The exact end remains a range because the source describes a seven-to-eight-year dispute rather than giving a decree date.",
+  "gaps": "The society's exact legal title and records; canonical erection and suppression instruments; assigned priest's identity; temporary worship place; church street address, parcel, deed, and dedication; litigants, court file, and exact property-dispute chronology; sale date, buyer, price, later use, and building fate; membership; school and cemetery relationships; sacramental-record custody; and any territorial reassignment remain unresolved."
+}

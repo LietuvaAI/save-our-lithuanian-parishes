@@ -26,6 +26,45 @@
           "locator": "Closed Parishes register: St. Peter Lithuanian Parish, Detroit, listed through 1995"
         }
       ]
+    },
+    {
+      "text": "The Archdiocese of Detroit closed St. Peter in 1995. Statues, furniture, and the Lithuanian wayside cross were sent to Lithuania, while the church building remained in Detroit; the transfer of sacred objects did not carry the parish institution forward at the site.",
+      "sources": [
+        {
+          "url": "https://www.aod.org/closed-parishes",
+          "locator": "Closed Parishes register, St. Peter Lithuanian Parish through 1995"
+        },
+        {
+          "url": "https://global.truelithuania.com/detroit-michigan-10/",
+          "locator": "Detroit heritage account, closure and transfer of statues, furniture, and wayside cross"
+        }
+      ]
+    },
+    {
+      "text": "Beginning in 1997, All Saints Catholic Parish and the organization now known as Urban Neighborhood Initiatives restored the empty church as the All Saints Neighborhood Center. The conversion returned the building to neighborhood use and restored its earlier wooden exterior, but it did not revive St. Peter Parish.",
+      "sources": [
+        {
+          "url": "https://www.unidetroit.org/our-mission--history.html",
+          "locator": "Our Mission & History, 1997 founding and All Saints Neighborhood Center restoration"
+        },
+        {
+          "url": "https://global.truelithuania.com/detroit-michigan-10/",
+          "locator": "Detroit heritage account, community-center conversion, plaques, and exterior restoration"
+        }
+      ]
+    },
+    {
+      "text": "Urban Neighborhood Initiatives continues to operate from 8300 Longworth Street as a Springwells community organization. Historical plaques near the entrance preserve limited memory of the Lithuanian church, while the active youth and neighborhood programs document the building's present secular community use.",
+      "sources": [
+        {
+          "url": "https://www.unidetroit.org/",
+          "locator": "Urban Neighborhood Initiatives home page, address and current programs"
+        },
+        {
+          "url": "https://global.truelithuania.com/detroit-michigan-10/",
+          "locator": "Detroit heritage account, surviving historical plaques and current building use"
+        }
+      ]
     }
   ],
   "developments": [

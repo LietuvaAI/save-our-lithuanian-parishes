@@ -1,0 +1,135 @@
+{
+  "slug": "st-francis-wilkes-barre-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "unknown",
+  "currentUse": "St. Francis of Assisi no longer operates as a Lithuanian Roman Catholic parish or worship site in the Miners Mills section of Wilkes-Barre. The Diocese of Scranton closed the church on June 26, 2011 and identifies Saints Peter and Paul Parish in Plains as successor. That successor remains active at 13 Hudson Road. No reviewed official source establishes the former St. Francis church's exact street address, present ownership, physical condition, reuse, or hosted worship, so those building questions remain unresolved rather than being inferred from directory listings.",
+  "summary": "St. Francis of Assisi was the Lithuanian Roman Catholic parish serving Miners Mills, now within Wilkes-Barre. The inherited registry reports a 1918 founding, but no reviewed primary or official source yet verifies that year. A Garsas priest biography securely places Father Vincent Nanorta's first pastorate at St. Francis in Miners Mills beginning May 26, 1923. Lithuanian Catholic newspapers document parish activity and clergy into the late twentieth century. The Diocese of Scranton's official register gives June 26, 2011 as the church closure date and Saints Peter and Paul Parish in Plains as successor. This corrects an older 2008 closure reading. Institution, building, and successor are separate: the parish is closed, the successor is active at another site, and the Miners Mills building's current condition remains unverified.",
+  "historicalNarrative": [
+    {
+      "text": "St. Francis served Lithuanian Catholics in the Miners Mills section of Wilkes-Barre. The inherited registry reports a 1918 founding, but that value has not been confirmed by a canonical erection instrument or contemporary founding notice. The earliest reviewed firm lifecycle point is May 26, 1923, when Father Vincent Nanorta received his first pastoral appointment to St. Francis, Miners Mills. The parish therefore existed by that date, while 1918 remains a reported formation reading rather than a verified fact.",
+      "sources": [
+        {
+          "url": "https://www.spauda2.org/garsas/archive/1980/1980-08-GARSAS.pdf",
+          "locator": "Garsas, October 1980, p. 8, Father Vincent Nanorta biography: appointed to St. Francis, Miners Mills, on 1923-05-26"
+        }
+      ]
+    },
+    {
+      "text": "The parish maintained an identifiable Lithuanian Catholic life through the twentieth century. A 1930 Draugas community item records a program in St. Francis parish hall. In 1966 a Diocese of Scranton clergy notice names St. Francis Parish in Wilkes-Barre in the same regional appointment list as the Lithuanian St. Casimir and Ss. Peter and Paul parishes. A 1980 Garsas obituary identifies a Plains Township resident as a member of St. Francis Church, Miners Mills, with burial in the parish cemetery in Plains.",
+      "sources": [
+        {
+          "url": "https://www.draugas.org/archive/1930_reg/1930-10-27-DRAUGASw-i7-8.pdf",
+          "locator": "Draugas, 1930-10-27, p. 4, event in St. Francis parish hall"
+        },
+        {
+          "url": "https://www.draugas.org/archive/1966_reg/1966-09-17-DRAUGAS.pdf",
+          "locator": "Draugas, 1966-09-17, p. 1, Diocese of Scranton clergy appointments naming St. Francis Parish, Wilkes-Barre"
+        },
+        {
+          "url": "https://www.spauda2.org/garsas/archive/1980/1980-08-GARSAS.pdf",
+          "locator": "Garsas, October 1980, p. 8, member of St. Francis Church, Miners Mills, and parish cemetery in Plains"
+        }
+      ]
+    },
+    {
+      "text": "The Diocese of Scranton's consolidated-parishes register explicitly labels St. Francis of Assisi in Miners Mills as Lithuanian, closes the church on June 26, 2011, and assigns continuity to Saints Peter and Paul Parish in Plains. The official date supersedes the registry's older 2008 reading. The source establishes a closed worship site and successor relationship; it does not establish when the parish was canonically suppressed or what happened to the building afterward.",
+      "sources": [
+        {
+          "url": "https://www.dioceseofscranton.org/wp-content/uploads/2024/11/Consolidated-Parishes-updated-11-19-24.pdf",
+          "locator": "PDF p. 11, Wilkes-Barre row: St. Francis of Assisi (Lithuanian), Miners Mills, closed 2011-06-26; Saints Peter and Paul, Plains, successor"
+        }
+      ]
+    },
+    {
+      "text": "Saints Peter and Paul Parish is a distinct successor founded in 2009, not a continuation of St. Francis under the old name. The Diocese's current directory lists active Masses at 13 Hudson Road in Plains. No current diocesan directory entry uses the former St. Francis site. Conflicting third-party address records have not been tied securely to the Lithuanian church, so the Miners Mills building's address, survival, reuse, and any hosted worship remain open questions.",
+      "sources": [
+        {
+          "url": "https://www.dioceseofscranton.org/find-a-parish/saints-peter-paul-parish-plains/",
+          "locator": "Current diocesan directory: Saints Peter and Paul Parish founded 2009, active at 13 Hudson Road; accessed 2026-08-17"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1923-05-26",
+      "headline": "St. Francis receives Father Vincent Nanorta as pastor",
+      "detail": "A later priest biography securely places the Lithuanian Miners Mills parish in operation by 1923.",
+      "sources": [
+        {
+          "title": "Father Vincent Nanorta diamond-jubilee biography",
+          "publisher": "Garsas",
+          "date": "October 1980",
+          "page": "p. 8",
+          "url": "https://www.spauda2.org/garsas/archive/1980/1980-08-GARSAS.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2011-06-26",
+      "headline": "St. Francis church closes",
+      "detail": "The diocesan register closes the Lithuanian Miners Mills church and names Saints Peter and Paul Parish in Plains as successor.",
+      "sources": [
+        {
+          "title": "Consolidated Parishes",
+          "publisher": "Diocese of Scranton",
+          "date": "updated 2024-11-19",
+          "page": "PDF p. 11",
+          "url": "https://www.dioceseofscranton.org/wp-content/uploads/2024/11/Consolidated-Parishes-updated-11-19-24.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-17 verification",
+      "headline": "Successor remains active in Plains",
+      "detail": "The current diocesan directory lists Saints Peter and Paul Parish and regular Masses at its own 13 Hudson Road worship site.",
+      "sources": [
+        {
+          "title": "Saints Peter & Paul Parish",
+          "publisher": "Diocese of Scranton",
+          "date": "accessed 2026-08-17",
+          "url": "https://www.dioceseofscranton.org/find-a-parish/saints-peter-paul-parish-plains/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Father Vincent Nanorta diamond-jubilee biography and Wyoming Valley obituaries",
+      "publisher": "Garsas",
+      "date": "October 1980",
+      "page": "p. 8",
+      "url": "https://www.spauda2.org/garsas/archive/1980/1980-08-GARSAS.pdf"
+    },
+    {
+      "title": "St. Francis parish-hall report",
+      "publisher": "Draugas",
+      "date": "1930-10-27",
+      "page": "p. 4",
+      "url": "https://www.draugas.org/archive/1930_reg/1930-10-27-DRAUGASw-i7-8.pdf"
+    },
+    {
+      "title": "Diocese of Scranton clergy appointments",
+      "publisher": "Draugas",
+      "date": "1966-09-17",
+      "page": "p. 1",
+      "url": "https://www.draugas.org/archive/1966_reg/1966-09-17-DRAUGAS.pdf"
+    },
+    {
+      "title": "Consolidated Parishes",
+      "publisher": "Diocese of Scranton",
+      "date": "updated 2024-11-19",
+      "page": "PDF p. 11",
+      "url": "https://www.dioceseofscranton.org/wp-content/uploads/2024/11/Consolidated-Parishes-updated-11-19-24.pdf"
+    },
+    {
+      "title": "Saints Peter & Paul Parish",
+      "publisher": "Diocese of Scranton",
+      "date": "accessed 2026-08-17",
+      "url": "https://www.dioceseofscranton.org/find-a-parish/saints-peter-paul-parish-plains/"
+    }
+  ],
+  "confidence": "reported",
+  "conflictsWithArchiveRecord": "The official diocesan closure date is 2011-06-26; the inherited 2008 reading is superseded. The 1918 founding year remains reported because the reviewed sources establish operation by 1923 but do not provide a canonical erection or contemporary founding record. Watch and third-party directory material conflict on addresses and may point to other Wilkes-Barre churches; none is accepted as the exact Lithuanian St. Francis site without a direct locator. Building survival or conversion therefore remains unverified.",
+  "gaps": "The canonical erection instrument and verified founding date, founding pastor, complete site chronology and street address, church construction and dedication records, cemetery address and current custodian, parish-suppression and building-relegation decrees, sacramental-record custody, title transfer, and present building condition, use, or hosted worship remain unlocated."
+}

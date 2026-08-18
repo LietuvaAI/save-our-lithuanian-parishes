@@ -1,0 +1,75 @@
+{
+  "slug": "immaculate-conception-sheboygan-wi",
+  "culturenetEntityId": "cn:institution:immaculate-conception-sheboygan-wi",
+  "asOf": "2026-08-17",
+  "formationLabel": "St. Joseph Society formed November 11, 1900 · Immaculate Conception Parish organized July 2, 1903 · relocated to present worship phase in 1960 · active in a south-side Sheboygan tri-parish administration",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "active",
+  "buildingStatus": "standing",
+  "currentUse": "Immaculate Conception remains an active Roman Catholic parish worshiping at 1305 Humboldt Avenue, Sheboygan, WI 53081. The Archdiocese's Love One Another campaign documents the current worship space, accessibility and interior renovation plans, bell-tower repair, and a 2012 tri-parish administrative arrangement; first-party parish material confirms Mass at the physical address. This proves present canonical and building life, but not current Lithuanian-language worship or Lithuanian-led ministry.",
+  "summary": "Immaculate Conception is Sheboygan's continuing Roman Catholic parish founded by Lithuanian immigrants. St. Joseph Society formed November 11, 1900; roughly 200 members organized the parish July 2, 1903 and acquired a former Christian Scientist building. Cemetery land was purchased in 1929. A new church-and-school phase began with groundbreaking at Easter 1959, first Mass on February 2, 1960, and school opening September 7, 1960. The school later combined with St. Peter Claver in 1986, and the parish entered shared south-side Sheboygan administration in 2012. Current Archdiocese and first-party parish evidence establishes an active parish and standing worship space at 1305 Humboldt Avenue. The original church address, cemetery parcel and status, records custody, and current Lithuanian ministry remain unverified.",
+  "institutionLifecycle": {
+    "formation": "St. Joseph Society originated November 11, 1900. Approximately 200 members organized Immaculate Conception Parish on July 2, 1903.",
+    "institutionalForm": "Lithuanian Roman Catholic national parish in the Archdiocese of Milwaukee; later current ethnic form is not established by the reviewed sources.",
+    "jurisdiction": "Archdiocese of Milwaukee. Marian Fathers and Sisters of St. Casimir contributed to later pastoral and school life.",
+    "terminalStatus": "No terminal event. The parish remains active and has shared administration with two other south-side Sheboygan parishes since 2012.",
+    "currentVerification": "The official Love One Another campaign documents the active worship community and current capital projects."
+  },
+  "worshipSites": [
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:immaculate-conception-first-church-sheboygan-wi",
+      "name": "First Immaculate Conception church, former Christian Scientist building",
+      "address": "Sheboygan, WI; exact street address unresolved",
+      "usePeriod": "acquired in 1903; used until the 1959–1960 relocation",
+      "buildingCondition": "unknown",
+      "currentUse": "Unknown; not assumed to be the present church.",
+      "evidence": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 35 / printed p. 27; parish organization and purchase of former Christian Scientist building"}]
+    },
+    {
+      "siteType": "church_campus",
+      "culturenetEntityId": "cn:building_site:immaculate-conception-current-campus-sheboygan-wi",
+      "name": "Immaculate Conception current church and former school campus",
+      "address": "1305 Humboldt Avenue, Sheboygan, WI 53081",
+      "usePeriod": "groundbreaking Easter 1959; first Mass February 2, 1960; active current worship space",
+      "buildingCondition": "standing; accessibility, flooring, paint, sanctuary, reconciliation-room, and bell-tower work proposed in current campaign",
+      "currentUse": "Active Roman Catholic worship space in the south-side Sheboygan tri-parish community.",
+      "evidence": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 38 / printed p. 30; 1959 groundbreaking, 1960 church/school opening, and later campus activity"}, {"url": "https://www.loveoneanothermke.org/Campaign/Parish-Campaigns/Parish-Campaigns-2022-08-12T152056160/Immaculate-conception-sheboygan.htm", "locator": "Official campaign page: February 2 and September 7, 1960 milestones, 2012 tri-parish administration, and current worship-space renovations"}, {"url": "https://www.sscparishes.org/parishes/192-immaculate-conception", "locator": "First-party Sheboygan South Catholic Parishes page: Immaculate Conception at 1305 Humboldt Avenue and current worship"}]
+    },
+    {
+      "siteType": "cemetery",
+      "culturenetEntityId": "cn:cemetery:immaculate-conception-sheboygan-wi",
+      "name": "Immaculate Conception cemetery land",
+      "address": "Sheboygan area; exact address and parcel unresolved",
+      "usePeriod": "land purchased in 1929; later cemetery operation not adjudicated",
+      "buildingCondition": "not applicable",
+      "currentUse": "Unknown; current cemetery status and administration unverified.",
+      "evidence": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 38 / printed p. 30; cemetery land purchased in 1929"}]
+    }
+  ],
+  "relationships": [
+    {"type": "institution-used-site", "source": "cn:institution:immaculate-conception-sheboygan-wi", "target": "cn:building_site:immaculate-conception-first-church-sheboygan-wi", "date": "1903–1959/1960", "status": "accepted", "note": "Exact address and later building outcome unresolved."},
+    {"type": "institution-relocated-to-site", "source": "cn:institution:immaculate-conception-sheboygan-wi", "target": "cn:building_site:immaculate-conception-current-campus-sheboygan-wi", "date": "1959–1960", "status": "accepted", "note": "Groundbreaking and first-Mass dates establish the new worship phase."},
+    {"type": "institution-established-cemetery", "source": "cn:institution:immaculate-conception-sheboygan-wi", "target": "cn:cemetery:immaculate-conception-sheboygan-wi", "date": "1929", "status": "probable", "note": "Land purchase is documented; current operation and administration are not."}
+  ],
+  "historicalNarrative": [
+    {"text": "Sheboygan Lithuanians formed St. Joseph Society on November 11, 1900. On July 2, 1903, roughly 200 members organized Immaculate Conception Parish and acquired an available former Christian Scientist building rather than construct immediately. The official current campaign independently gives July 1903 as parish organization, so the society, parish, and first-building milestones remain separate.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 35 / printed p. 27; society, parish organization, and first building"}, {"url": "https://www.loveoneanothermke.org/Campaign/Parish-Campaigns/Parish-Campaigns-2022-08-12T152056160/Immaculate-conception-sheboygan.htm", "locator": "Official campaign history: parish organized July 1903"}]},
+    {"text": "Early decades brought rapid pastoral turnover and recurring trustee disputes, yet the parish developed durable societies and regional responsibilities. The Sheboygan pastor also served the dependent St. Ambrose mission at Port Washington. By 1916 Immaculate Conception had seven affiliated societies, while St. Ambrose counted about fifty mission families. The relationship is pastoral and mission-based, not an identity merger.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF pp. 36–37 / printed pp. 28–29; pastoral history, parish societies, and St. Ambrose mission"}]},
+    {"text": "The parish purchased cemetery land in 1929 and later expanded religious education with the Sisters of St. Casimir. Those sisters began summer instruction in 1938 and later received permanent housing; the dossier records the cemetery land while leaving its exact location and current administration unresolved. A land purchase alone is not treated as proof of an active current cemetery.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 38 / printed p. 30; cemetery land and Sisters of St. Casimir"}]},
+    {"text": "The parish entered a new church-and-school phase in 1959–1960. Groundbreaking occurred at Easter 1959; the official campaign dates the first Mass to February 2, 1960 and the school opening to September 7, 1960. The Sisters withdrew from the school in June 1977, and the parish broke ground for an activity center in 1979. These are site, school, and campus milestones, not parish re-founding.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 38 / printed p. 30; 1959–1979 campus chronology"}, {"url": "https://www.loveoneanothermke.org/Campaign/Parish-Campaigns/Parish-Campaigns-2022-08-12T152056160/Immaculate-conception-sheboygan.htm", "locator": "Official campaign history: February 2 and September 7, 1960 milestones"}]},
+    {"text": "In 1986 Immaculate Conception and St. Peter Claver combined their schools as Christ Child Academy, later joined by Ss. Cyril and Methodius. In January 2012 a single administrator began serving all three south-side Sheboygan parishes and later became pastor of the tri-parish communities. The official campaign still speaks of Immaculate Conception as its own parish and proposes substantial worship-space improvements, establishing active institution and standing building while not proving current Lithuanian-language or Lithuanian-led ministry.", "sources": [{"url": "https://www.loveoneanothermke.org/Campaign/Parish-Campaigns/Parish-Campaigns-2022-08-12T152056160/Immaculate-conception-sheboygan.htm", "locator": "Official current campaign page: 1986 school combination, 2012 shared administration, and present capital projects"}]}
+  ],
+  "developments": [
+    {"date": "1900–1903", "headline": "Society precedes parish organization", "detail": "St. Joseph Society formed before the July 1903 parish and first church acquisition.", "sources": [{"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "PDF p. 35 / printed p. 27", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"}]},
+    {"date": "1959–1960", "headline": "Parish relocates to new church-and-school phase", "detail": "First Mass and school opening occurred in 1960.", "sources": [{"title": "Immaculate Conception Parish Campaign", "publisher": "Archdiocese of Milwaukee, Love One Another", "date": "accessed 2026-08-17", "url": "https://www.loveoneanothermke.org/Campaign/Parish-Campaigns/Parish-Campaigns-2022-08-12T152056160/Immaculate-conception-sheboygan.htm"}]},
+    {"date": "2012–current", "headline": "Active parish shares administration", "detail": "Shared tri-parish administration is not a merger or closure.", "sources": [{"title": "Immaculate Conception Parish Campaign", "publisher": "Archdiocese of Milwaukee, Love One Another", "date": "accessed 2026-08-17", "url": "https://www.loveoneanothermke.org/Campaign/Parish-Campaigns/Parish-Campaigns-2022-08-12T152056160/Immaculate-conception-sheboygan.htm"}]}
+  ],
+  "sources": [
+    {"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "PDF pp. 35–38 / printed pp. 27–30", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"},
+    {"title": "Immaculate Conception Parish Campaign", "publisher": "Archdiocese of Milwaukee, Love One Another", "date": "accessed 2026-08-17", "url": "https://www.loveoneanothermke.org/Campaign/Parish-Campaigns/Parish-Campaigns-2022-08-12T152056160/Immaculate-conception-sheboygan.htm"},
+    {"title": "Immaculate Conception", "publisher": "Sheboygan South Catholic Parishes", "date": "accessed 2026-08-17", "url": "https://www.sscparishes.org/parishes/192-immaculate-conception"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The current official source confirms active parish life and the July 1903 organization date. The 1900 society, 1903 first building, and 1959–1960 relocation are separate milestones. Shared administration from 2012 is not treated as merger or closure, and current canonical activity is not treated as proof of current Lithuanian-led ministry.",
+  "gaps": "Exact address and parcel history for the first church, complete deed history for the current 1305 Humboldt Avenue campus, original erection instrument, current canonical form of the historic national-parish identity, present Lithuanian-language or Lithuanian-led ministry, cemetery parcel and administration, sacramental-record custody, and complete school-property disposition remain unresolved."
+}

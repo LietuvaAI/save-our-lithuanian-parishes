@@ -4,6 +4,56 @@
   "buildingStatus": "converted",
   "currentUse": "Protestant church — Greater Generations Tabernacle, 214 Ames St, Brockton MA 02302",
   "summary": "St. Casimir's church building at 214 Ames St, Brockton still stands and is in active religious use: business and church directories list Greater Generations Tabernacle (508-587-8510) at the address, and Global True Lithuania reports the building was acquired by a Black-majority congregation for roughly $1 million after the 2008 closure, well below its reported $3 million valuation. The main church, built in 1957 over an older basement church, sits between Ames Street and St. Casimir Avenue in what was once Brockton's \"Lithuanian Village.\" The Lithuanian freedom memorial erected beside the church around 1990 still stands but is damaged and no longer flies the Lithuanian flag; the community removed its metal sword and incorporated it into a new memorial at St. Michael Church in Avon, and built a second protected memorial at the convent cemetery in Brockton, since Massachusetts law prevents demolition of cemetery structures. Lithuanian sacred objects from St. Casimir — including a stained glass window and sculptures — were transferred to St. Michael in Avon, the successor parish, while pews were donated to a church in Tanzania. The successor parish, St. Michael in Avon, remains open with an administrator (Rev. Robert J. Cullen) rather than a pastor, operating in a collaborative with a Saint Joseph parish, with English-only Masses and no Lithuanian liturgy. The Greater Brockton Lithuanian-American community was still holding an annual Lithuanian Heritage Day at St. Michael Avon as of March 2020, organized by John Drusinskas.",
+  "historicalNarrative": [
+    {
+      "text": "St. Casimir was the Lithuanian Roman Catholic parish associated with Brockton's former Lithuanian Village. Field history places the later church at 214 Ames Street between Ames Street and St. Casimir Avenue, built in 1957 over an earlier basement church. The available sources do not supply the original canonical erection instrument, so the community's founding and the 1957 building milestone remain distinct.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/brockton-massachusetts-312/",
+          "locator": "St. Casimir section: Lithuanian Village, Ames Street site, and 1957 church"
+        }
+      ]
+    },
+    {
+      "text": "St. Casimir held its final service in late June 2008 during the Archdiocese of Boston's Brockton reconfiguration. Contemporary reporting describes the 110-year-old Lithuanian parish as one of several local Catholic communities closed or merged and records parishioners' efforts to save it. The parish's institutional end is separate from the continued survival of its church building.",
+      "sources": [
+        {
+          "url": "http://archive.boston.com/news/local/articles/2008/07/03/closings_reflect_citys_change/",
+          "locator": "Boston Globe report on the late-June 2008 final service and Brockton parish reconfiguration"
+        }
+      ]
+    },
+    {
+      "text": "After closure, the Ames Street building passed into non-Catholic religious use and directories place Greater Generations Tabernacle at 214 Ames Street. Field documentation reports a sale near $1 million, but no deed, exact transaction date, or proof that the present congregation was the original purchaser has been located. The building is therefore documented as standing and reused without asserting canonical succession or a fully verified sale chain.",
+      "sources": [
+        {
+          "url": "https://religious-organizations.cmac.ws/greater-generations-tabernacle/73635/",
+          "locator": "Directory association of Greater Generations Tabernacle with 214 Ames Street"
+        },
+        {
+          "url": "https://global.truelithuania.com/brockton-massachusetts-312/",
+          "locator": "Attributed field account of the former church's sale and later congregation"
+        }
+      ]
+    },
+    {
+      "text": "Lithuanian continuity continued through transferred objects and community observance rather than survival of St. Casimir as a parish. Field documentation says stained glass, sculptures, and part of a Lithuanian freedom memorial went to St. Michael in Avon, while a second memorial was placed at a Brockton cemetery. Brockton's official calendar documented a Lithuanian Heritage Day at St. Michael in March 2020; later editions and current Lithuanian liturgy have not been established.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/brockton-massachusetts-312/",
+          "locator": "Transferred sacred objects and Lithuanian memorial history"
+        },
+        {
+          "url": "https://brockton.ma.us/event/lithuanian-heritage-day-2/",
+          "locator": "City calendar entry for Lithuanian Heritage Day at St. Michael, Avon, on 2020-03-07"
+        },
+        {
+          "url": "https://thebostonpilot.com/bcd/web_parish.asp?ektronid=4418",
+          "locator": "Archdiocesan directory entry for continuing St. Michael Parish in Avon"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2008-07-03",

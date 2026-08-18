@@ -4,6 +4,60 @@
   "buildingStatus": "standing",
   "currentUse": "Active Roman Catholic church — home of St. Casimir Parish (Švento Kazimiero Parapija), the Lithuanian successor parish of the Diocese of Cleveland, at 18022 Neff Rd, Cleveland, OH 44119",
   "summary": "The former Dievo Motinos Nuolatinės Pagalbos (Our Lady of Perpetual Help) church at 18022 Neff Road in Cleveland's Collinwood neighborhood is standing and remains a fully active Catholic church: it is the worship site of St. Casimir Parish, the successor parish created in October 2009 from the suppressed Our Lady of Perpetual Help and St. George Lithuanian parishes. The property was never sold — it stayed in diocesan hands and passed directly to the new parish, though True Lithuania reports the associated school and convent buildings (both 1962) have been rented out with most Lithuanian interior details removed. The parish is demonstrably alive as of July 2026: its own website posts a bulletin for July 11-12, 2026, lists Mass offerings through July 19, 2026, and announces an annual meeting of parishioners for July 29, 2026, with Masses on Saturday 5:00 PM (English), Sunday 8:30 AM (English) and 11:00 AM (Lithuanian), and 7:30 AM weekdays. Rev. Andrew M. Morkunas was appointed administrator effective April 30, 2025, an assignment he holds in addition to his chaplaincy at University Hospitals — a shared-clergy arrangement worth watching, though no diocesan restructuring threat to the parish was found. The church, hall and rectory carry a City of Cleveland designated-landmark listing under the name \"Our Lady of Perpetual Help Church, Hall and Rectory (St. Casimir Parish).\" A March 2022 Euclid Observer profile described the parish as thriving, with Lithuanian language classes, scout troops, dance groups, and an interior renovation then underway.",
+  "historicalNarrative": [
+    {
+      "text": "Our Lady of Perpetual Help was one of Cleveland's Lithuanian Roman Catholic parishes. The available heritage account dates its establishment to 1928, while the inherited chronology gives 1929; without the parish-erection instrument, the one-year formation difference remains unresolved.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/cleveland-ohio-36/",
+          "locator": "Cleveland heritage account, Our Lady of Perpetual Help parish history"
+        }
+      ]
+    },
+    {
+      "text": "The parish's surviving church, hall, and rectory stand at 18022 Neff Road. Cleveland's landmark inventory dates the complex to 1952 and names Michael Boccia as architect, while the Lithuanian heritage account attributes the design to Stasys Kudokas; that authorship conflict is preserved rather than resolved by inference.",
+      "sources": [
+        {
+          "url": "https://www.clevelandohio.gov/explore/about-cleveland/designated-landmarks/our-lady-perpetual-help-church-hall-and-rectory-st",
+          "locator": "Designated Landmarks entry, address, construction date, and architect"
+        },
+        {
+          "url": "https://global.truelithuania.com/cleveland-ohio-36/",
+          "locator": "Cleveland heritage account, Neff Road church design discussion"
+        }
+      ]
+    },
+    {
+      "text": "Our Lady of Perpetual Help was suppressed in October 2009 together with St. George, and their communities formed the new St. Casimir Parish. St. Casimir opened at the former Our Lady of Perpetual Help church on October 25, 2009, so the predecessor institution ended while its Neff Road building continued in Catholic worship under a distinct successor parish.",
+      "sources": [
+        {
+          "url": "http://saintcasimirparish.org/main-en/index-en.html",
+          "locator": "Official parish history, October 25, 2009 opening and predecessor communities"
+        },
+        {
+          "url": "https://www.dioceseofcleveland.org/parishes/directory/st-casimir",
+          "locator": "Diocesan directory, St. Casimir establishment and Neff Road address"
+        }
+      ]
+    },
+    {
+      "text": "The Neff Road church remains active as St. Casimir Parish and continues both English and Lithuanian Sunday worship. Current bulletins and diocesan appointments document ongoing parish administration through 2026; this current life belongs to the successor, while the landmark designation protects the earlier parish complex as a physical site.",
+      "sources": [
+        {
+          "url": "http://saintcasimirparish.org/main-en/masses-en.html",
+          "locator": "Mass schedule, English and Lithuanian Sunday liturgies"
+        },
+        {
+          "url": "http://saintcasimirparish.org/main-en/bulletin-en.html",
+          "locator": "Bulletin dated July 11–12, 2026"
+        },
+        {
+          "url": "https://www.dioceseofcleveland.org/news/2025/01/23/clergy-assignment-changes-january-2025",
+          "locator": "Clergy assignment changes, Andrew Morkunas appointment effective April 30, 2025"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2009-10",

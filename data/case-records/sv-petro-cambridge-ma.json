@@ -4,6 +4,60 @@
   "buildingStatus": "converted",
   "currentUse": "Affordable ownership housing — the former Cambridge Lithuanian church and rectory at 424-430/432 Windsor Street were converted by Just A Start Corporation into the 14-unit Windsor Street Condominiums (completed Fall 2012, all units sold and occupied), with the Lithuanian-inscribed Virgin Mary relief preserved on the facade of the city-landmarked building.",
   "summary": "No Lithuanian parish named St. Peter (Šv. Petro) appears to have existed in Cambridge, MA: the litua.com directory of Lithuanian churches in the USA lists Šv. Petro only in South Boston (75 Flaherty Way, still active), and the St. Peter Parish that does exist in Cambridge (100 Concord Ave) is a territorial parish founded in 1848 with no Lithuanian heritage, still open today. The Lithuanian parish of Cambridge — and the one whose fate matches this archive record's notes exactly — was Immaculate Conception Lithuanian Church at 430-432 Windsor Street, built circa 1910-1913 in Mission Style with traditional Lithuanian architectural elements. That parish closed in 2004 during the Archdiocese of Boston's mass reconfiguration; the archdiocese sold the property in 2007 to the nonprofit Just A Start Corporation. The church and rectory were designated a Cambridge protected landmark (they appear on the city's official Designated Cambridge Landmarks list), and the adaptive reuse into 14 affordable ownership condominiums was completed in Fall 2012 with historic details retained; all units were sold to income-eligible first-time homebuyers and are occupied. The principal surviving Lithuanian element is the Virgin Mary relief over the entrance bearing the pre-modern Lithuanian inscription \"Lietuviu Rymo Kataliku Bažnyčia Nekalto Panos Marijos prasidejimo,\" and the 1972 rectory by Lithuanian architect Eugenijus Manomaitis also incorporates Lithuanian design motifs. No recent press, preservation campaigns, or Lithuanian community reunions tied to the Cambridge building were found.",
+  "historicalNarrative": [
+    {
+      "text": "The Cambridge record inherited the wrong titular. Cambridge's Lithuanian Roman Catholic institution was Immaculate Conception at Windsor Street, not the active territorial St. Peter Parish on Concord Avenue and not the Lithuanian St. Peter parish in South Boston. Cambridge Historical Commission material directly calls the Windsor Street building the Immaculate Conception Lithuanian Church; shared city or saint names do not justify merging these separate institutions.",
+      "sources": [
+        {
+          "url": "https://www.cambridgema.gov/-/media/files/historicalcommission/pdf/chcmeetingfiles/d1432_memo.pdf",
+          "locator": "Cambridge Historical Commission staff memo identifying Immaculate Conception Lithuanian Church on Windsor Street, built in 1910"
+        },
+        {
+          "url": "https://www.litua.com/lt/zinynas/baznycios",
+          "locator": "Lithuanian church directory distinguishing South Boston St. Peter from Cambridge"
+        },
+        {
+          "url": "https://saintpetercambridge.org/",
+          "locator": "Current territorial Saint Peter Parish in Cambridge at 100 Concord Avenue"
+        }
+      ]
+    },
+    {
+      "text": "The Lithuanian church and rectory occupied 430-432 Windsor Street. Sources differ on whether the church was built in 1910 or 1913, so the construction year remains a bounded conflict rather than a single normalized date. Field documentation places the parish's closure in 2004; the precise suppression instrument and final-Mass date have not been located.",
+      "sources": [
+        {
+          "url": "https://www.cambridgema.gov/-/media/files/historicalcommission/pdf/chcmeetingfiles/d1432_memo.pdf",
+          "locator": "City historical memo giving the church's 1910 construction reading"
+        },
+        {
+          "url": "https://global.truelithuania.com/boston-massachusetts-308/",
+          "locator": "Cambridge Lithuanian church section: 1913 building reading and 2004 closure"
+        }
+      ]
+    },
+    {
+      "text": "The Archdiocese of Boston sold the former church and rectory to Just A Start Corporation in 2007. Cambridge's housing department records the adaptive reuse as fourteen affordable ownership condominiums completed and occupied in fall 2012, with historic details retained. The condominium development is the later use of the former parish property, not a continuation of the Catholic institution.",
+      "sources": [
+        {
+          "url": "https://www.cambridgema.gov/CDD/Projects/Housing/424430windsorstreet",
+          "locator": "City housing project page: 2007 acquisition, 14 ownership units, and fall 2012 completion"
+        }
+      ]
+    },
+    {
+      "text": "Cambridge designated the church and rectory as protected landmarks before the conversion. The city's landmark list confirms the designation, while field documentation records the surviving Virgin Mary relief and Lithuanian inscription on the facade. The building is therefore standing and converted with documented exterior heritage; no current Lithuanian congregation or ongoing parish life is asserted.",
+      "sources": [
+        {
+          "url": "https://www.cambridgema.gov/-/media/Files/historicalcommission/pdf/Landmark_reports/designatedcambridgelandmarks.pdf",
+          "locator": "Official designated-landmarks list entry for Immaculate Conception Church and Rectory, 430-432 Windsor Street"
+        },
+        {
+          "url": "https://global.truelithuania.com/boston-massachusetts-308/",
+          "locator": "Description of the surviving Lithuanian facade relief and inscription"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2004",

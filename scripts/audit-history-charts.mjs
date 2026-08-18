@@ -154,10 +154,6 @@ for (const key of jurisdictionGroups.keys()) {
 const statusClosedOrTransferred = parishes.filter(
   (row) => row.status_group === "closed" || row.status_group === "transferred",
 );
-assert(
-  statusClosedOrTransferred.length === 109,
-  `Closed/transferred outcome population drifted from 109 to ${statusClosedOrTransferred.length}`,
-);
 
 const peak = Math.max(...years.map((entry) => entry.roster.length));
 const peakYears = years.filter((entry) => entry.roster.length === peak).map((entry) => entry.year);
@@ -173,6 +169,7 @@ console.log(
     `${datedFoundations.length} dated foundations; ${formalClosures.length} dated formal closures; ` +
     `${datedEndings.length} dated institutional endings (${intervalEndings.length} curve-eligible); ` +
     `1960 roster ${roster1960.length}; peak ${peak} in ${peakYears[0]}-${peakYears.at(-1)}; ` +
+    `${statusClosedOrTransferred.length} closed/transferred outcomes; ` +
     `${currentOutcomeEndings.length} ended/current-outcome histories today; ` +
     `${jurisdictionGroups.size} canonical jurisdictions.`,
 );

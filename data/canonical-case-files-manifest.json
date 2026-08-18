@@ -12,14 +12,104 @@
     "rule": "the Brain copy is authoritative; frozen imports retain byte equality and later records must map to one reviewed canonical publication identity"
   },
   "counts": {
-    "case_files": 85,
-    "mapped_research_registry_identities": 84
+    "case_files": 155,
+    "mapped_research_registry_identities": 155
   },
   "entries": [
     {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/all-saints-chicago-il.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/all-saints-chicago-il.json",
+      "content_sha256": "3b7b6a7b552db5357759f97908e132691513f8ce86ee7ed755913c4942e40b76",
+      "source_record_slug": "all-saints-chicago-il",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "all-saints-chicago-il"
+      ],
+      "situation_keys": [
+        "all-saints-chicago-il"
+      ],
+      "source_count": 9,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/all-saints-wilkes-barre-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/all-saints-wilkes-barre-pa.json",
+      "content_sha256": "9aa171322b03c4460647a5ff90a4336a26d3e3ee1fe2513e37e17df7966b0e2b",
+      "source_record_slug": "all-saints-wilkes-barre-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "all-saints-wilkes-barre-pa"
+      ],
+      "situation_keys": [
+        "all-saints-wilkes-barre-pa"
+      ],
+      "source_count": 7,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/allsaints-worcester-ma.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/allsaints-worcester-ma.json",
+      "content_sha256": "c7c41666c1d148d6bafe6ca3ae82ee4fdba8c055f182f85c62dabfeb5a36f532",
+      "source_record_slug": "allsaints-worcester-ma",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "allsaints-worcester-ma"
+      ],
+      "situation_keys": [
+        "allsaints-worcester-ma"
+      ],
+      "source_count": 8,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/anthony-philadelphia-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/anthony-philadelphia-pa.json",
+      "content_sha256": "e7f5e0d7f3a04227d205bbc5bcfa266d28901de8ddd30cd77218a31c6322f6e2",
+      "source_record_slug": "anthony-philadelphia-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "anthony-philadelphia-pa"
+      ],
+      "situation_keys": [
+        "anthony-philadelphia-pa"
+      ],
+      "source_count": 2,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/ascension-pittsburgh-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/ascension-pittsburgh-pa.json",
+      "content_sha256": "993d13a702df60963de667aadf54b69a5d2e870a6578e9d1f382667b6225d162",
+      "source_record_slug": "ascension-pittsburgh-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "ascension-pittsburgh-pa"
+      ],
+      "situation_keys": [
+        "ascension-pittsburgh-pa"
+      ],
+      "source_count": 2,
+      "development_count": 4,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/ausros-vartu-chicago-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/ausros-vartu-chicago-il.json",
-      "content_sha256": "b868d13aa320f8be2ab4ba14dd8c5f9e6560235d2b004010211990930f646e98",
+      "content_sha256": "32c2d50d8d8e6c8d8d0a7d68e89fbedcda2cb332ac63df8c9f305184b073f02d",
       "source_record_slug": "ausros-vartu-chicago-il",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -37,7 +127,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/ausros-vartu-manhattan-ny.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/ausros-vartu-manhattan-ny.json",
-      "content_sha256": "c7e7a6aec7999e3f6f691a25671f847bbf41f619ae419149b37abaa91bfa4d97",
+      "content_sha256": "ed01625225921a09b942de5c00d1709de90e167c8cb0e610c54eb0af25edf07b",
       "source_record_slug": "ausros-vartu-manhattan-ny",
       "as_of": "2026-07-25",
       "registry_slugs": [
@@ -55,7 +145,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/ausros-vartu-worcester-ma.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/ausros-vartu-worcester-ma.json",
-      "content_sha256": "05fe52e0ef57208fdcce1c0dce6542f4ffe5613249bc96f945e5a8c865cb3270",
+      "content_sha256": "f3abbaaf19b1647bd4d178a2530f63b695e9831aa9a7a7d6c718456161505f90",
       "source_record_slug": "ausros-vartu-worcester-ma",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -71,9 +161,81 @@
       "publication_state": "evidence_input_requires_canonical_adjudication"
     },
     {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/bernard-irons-mi.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/bernard-irons-mi.json",
+      "content_sha256": "2560289da935ef7d102baebe7be37ce1883d605fc174538ddd41f58726ec5030",
+      "source_record_slug": "bernard-irons-mi",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "bernard-irons-mi"
+      ],
+      "situation_keys": [
+        "bernard-irons-mi"
+      ],
+      "source_count": 3,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/casimir-boston-ma.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/casimir-boston-ma.json",
+      "content_sha256": "b945e282b92b0293b7722c7b444ed270625428b338bc1938daab266de7b302a2",
+      "source_record_slug": "casimir-boston-ma",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "casimir-boston-ma"
+      ],
+      "situation_keys": [
+        "casimir-boston-ma"
+      ],
+      "source_count": 2,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/casimir-freeland-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/casimir-freeland-pa.json",
+      "content_sha256": "6f446ec8f704dad11e7d2e54dab35ba09f0213cd1b813497c0695f5d5acf47e9",
+      "source_record_slug": "casimir-freeland-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "casimir-freeland-pa"
+      ],
+      "situation_keys": [
+        "casimir-freeland-pa"
+      ],
+      "source_count": 7,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/cong-lithuanian-evangelical-parish.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/cong-lithuanian-evangelical-parish.json",
+      "content_sha256": "90e26d90db085923136f8df78e27b5330a92f8b86c5e0607891c7ed242cd77fd",
+      "source_record_slug": "cong-lithuanian-evangelical-parish",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "cong-lithuanian-evangelical-parish"
+      ],
+      "situation_keys": [
+        "cong-lithuanian-evangelical-parish"
+      ],
+      "source_count": 6,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/dievo-apvaizdos-chicago-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/dievo-apvaizdos-chicago-il.json",
-      "content_sha256": "e0e485dbf8c198245902c3b79763fd246d29b8e52685ff9431d0d17c2a95dff3",
+      "content_sha256": "b315d6fb9a7be64c5d654b68363d0779bd8d12a11f37ab2446c29c09867e7abe",
       "source_record_slug": "dievo-apvaizdos-chicago-il",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -91,7 +253,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/dievo-apvaizdos-scranton-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/dievo-apvaizdos-scranton-pa.json",
-      "content_sha256": "e8040ac0d25cd9ad24c0b8f203160beb4e0c043d047b5eaa316864b61b09a067",
+      "content_sha256": "67d3fae346fc772dadf88c419d23753c56609014777032594bcca00ad33b1fde",
       "source_record_slug": "dievo-apvaizdos-scranton-pa",
       "as_of": "2026-07-09",
       "registry_slugs": [
@@ -109,7 +271,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/dievo-apvaizdos-southfield-mi.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/dievo-apvaizdos-southfield-mi.json",
-      "content_sha256": "11e1de5a4aec8782c9d9007ed6b82efe06c27e527d06a244e25e1298455d42a8",
+      "content_sha256": "4b8ab934a3b4cc35419baf5baa306995629a26de585645978ecad93f590852b9",
       "source_record_slug": "dievo-apvaizdos-southfield-mi",
       "as_of": "2026-07-25",
       "registry_slugs": [
@@ -127,7 +289,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/dievo-motinos-nuolatines-pagalbos-cleveland-oh.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/dievo-motinos-nuolatines-pagalbos-cleveland-oh.json",
-      "content_sha256": "edcec3394ea3564f8116388bc005f9e45cbba230f2263357fc5c6aa1a4021eb1",
+      "content_sha256": "dd13a3d4c0b86042893e178b583e46b75b228347c09b150d692bde4f152b41a8",
       "source_record_slug": "dievo-motinos-nuolatines-pagalbos-cleveland-oh",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -143,9 +305,135 @@
       "publication_state": "evidence_input_requires_canonical_adjudication"
     },
     {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/evangelical-reformed-chicago.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/evangelical-reformed-chicago.json",
+      "content_sha256": "ce514d2397089ece567987dd13a3e9e28ebcb424260e13913c5a176265adc219",
+      "source_record_slug": "evangelical-reformed-chicago",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "evangelical-reformed-chicago"
+      ],
+      "situation_keys": [
+        "evangelical-reformed-chicago"
+      ],
+      "source_count": 6,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/first-lutheran-boston.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/first-lutheran-boston.json",
+      "content_sha256": "aca99cef769dcf4d48051242c8d35672909266d82ac87d22ac89b85fd1fc2317",
+      "source_record_slug": "first-lutheran-boston",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "first-lutheran-boston"
+      ],
+      "situation_keys": [
+        "first-lutheran-boston"
+      ],
+      "source_count": 5,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/george-pittsburgh-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/george-pittsburgh-pa.json",
+      "content_sha256": "85a97849a9e9186b1be225b68d74841d694725189919d166b28a156a684c6f35",
+      "source_record_slug": "george-pittsburgh-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "george-pittsburgh-pa"
+      ],
+      "situation_keys": [
+        "george-pittsburgh-pa"
+      ],
+      "source_count": 7,
+      "development_count": 5,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/holy-cross-schenectady-ny.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/holy-cross-schenectady-ny.json",
+      "content_sha256": "723fa474ac580c2af2ee04fa59276baa082b5d3b1f4b52661ee7eba013a83fdf",
+      "source_record_slug": "holy-cross-schenectady-ny",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "holy-cross-schenectady-ny"
+      ],
+      "situation_keys": [
+        "holy-cross-schenectady-ny"
+      ],
+      "source_count": 8,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/ignatius-luther-mi.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/ignatius-luther-mi.json",
+      "content_sha256": "2b24e0d17d2e2660308b48d26dcbbc5f93011e8d4ef1d5ec60db33212d3151cd",
+      "source_record_slug": "ignatius-luther-mi",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "ignatius-luther-mi"
+      ],
+      "situation_keys": [
+        "ignatius-luther-mi"
+      ],
+      "source_count": 3,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/immaculate-conception-sheboygan-wi.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/immaculate-conception-sheboygan-wi.json",
+      "content_sha256": "a0743ee22a70bcb7198c3d60130ba784de7a12f26454b5a3c9bc26ce3df5f295",
+      "source_record_slug": "immaculate-conception-sheboygan-wi",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "immaculate-conception-sheboygan-wi"
+      ],
+      "situation_keys": [
+        "immaculate-conception-sheboygan-wi"
+      ],
+      "source_count": 3,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/joseph-dubois-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/joseph-dubois-pa.json",
+      "content_sha256": "1217f02ba2be258a0715b233fbc0f3cbf822be3a6c69a5ef660b3ab5c8a58fe3",
+      "source_record_slug": "joseph-dubois-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "joseph-dubois-pa"
+      ],
+      "situation_keys": [
+        "joseph-dubois-pa"
+      ],
+      "source_count": 7,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/kristaus-atsimainymo-maspeth-ny.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/kristaus-atsimainymo-maspeth-ny.json",
-      "content_sha256": "059f246a1a127935e50dd1c20ccdae9ac1fe78376aa564f838d766ce47f3c45b",
+      "content_sha256": "47e9d8ad9a206320de9a4b1788567c7e560efa77d8a39b644dc44f48aaacceb5",
       "source_record_slug": "kristaus-atsimainymo-maspeth-ny",
       "as_of": "2026-07-09",
       "registry_slugs": [
@@ -163,7 +451,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/lietuviu-baznycia-kearny-kearny-nj.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/lietuviu-baznycia-kearny-kearny-nj.json",
-      "content_sha256": "93ce7468b59275a9af541657cb47585ffb3e0345a2768022c84d6823905cb69e",
+      "content_sha256": "691270ed659f78504d36a76fdf705fc5ebcaa582bd892c8c079c101ae7377b2d",
       "source_record_slug": "lietuviu-baznycia-kearny-kearny-nj",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -181,7 +469,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/lietuviu-baznycia-unnamed-ansonia-ct.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/lietuviu-baznycia-unnamed-ansonia-ct.json",
-      "content_sha256": "aeccd7dceaed960593fc9a1eab4a8f2b65a049604add8d8d3d49f13b3539e9c0",
+      "content_sha256": "257412c7f60b7bfdd10526ca2632072a24b525e9ebf84558b54fbadb408c30b1",
       "source_record_slug": "lietuviu-baznycia-unnamed-ansonia-ct",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -199,7 +487,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/lietuviu-baznycia-unnamed-haverhill-ma.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/lietuviu-baznycia-unnamed-haverhill-ma.json",
-      "content_sha256": "69bb5cb417d609adc309aa021bb4224c88f1b7c4711d46772e5d2bdf530ae7ff",
+      "content_sha256": "92ec3dbc7af49b06b0118b4e1d2f27e3780522867597fd48d2a36bb11dfde34d",
       "source_record_slug": "lietuviu-baznycia-unnamed-haverhill-ma",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -217,7 +505,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/lietuviu-baznycia-unnamed-newark-nj.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/lietuviu-baznycia-unnamed-newark-nj.json",
-      "content_sha256": "af25c1f4e21ec0479b6f53e25867ec1bbb73eff3798da631502104f9e0667b10",
+      "content_sha256": "79772d2cf8676f056666c2727ccefd9a2680a039c185f1165ad460a3acc51c8e",
       "source_record_slug": "lietuviu-baznycia-unnamed-newark-nj",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -235,7 +523,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/lietuviu-evangeliku-liuteronu-teviskes-parapija-darien-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/lietuviu-evangeliku-liuteronu-teviskes-parapija-darien-il.json",
-      "content_sha256": "2820c619bb7e7d48cc6006297f3944acb26d1dd1bb8c820b9a150fb2f8a5187d",
+      "content_sha256": "d61015ab33cf1f7f8aa02c796ded85992e8203a136046488fdada7320a912c2c",
       "source_record_slug": "lietuviu-evangeliku-liuteronu-teviskes-parapija-darien-il",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -251,9 +539,27 @@
       "publication_state": "evidence_input_requires_canonical_adjudication"
     },
     {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/lithuanian-church-middleport-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/lithuanian-church-middleport-pa.json",
+      "content_sha256": "574590d08be430da59cc00930523273ff2e5c04a952646c16cf46f8f235f0436",
+      "source_record_slug": "lithuanian-church-middleport-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "lithuanian-church-middleport-pa"
+      ],
+      "situation_keys": [
+        "lithuanian-church-middleport-pa"
+      ],
+      "source_count": 5,
+      "development_count": 4,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/lithuanian-lutheran-church-collinsville-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/lithuanian-lutheran-church-collinsville-il.json",
-      "content_sha256": "3b9a45f58407e73f041d22920ec8ea112ce9dd7a285f453618869f881500c382",
+      "content_sha256": "864be2e69faf9bde7ace6f781fb2d95d06910b6e57abfcef8da2ec78dc89b62b",
       "source_record_slug": "lithuanian-lutheran-church-collinsville-il",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -269,9 +575,27 @@
       "publication_state": "evidence_input_requires_canonical_adjudication"
     },
     {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/lithuanian-national-catholic-parish-waterbury-ct.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/lithuanian-national-catholic-parish-waterbury-ct.json",
+      "content_sha256": "12c29490535b53a062f33ae7e8c428d213197906478e098a293f723583f81069",
+      "source_record_slug": "lithuanian-national-catholic-parish-waterbury-ct",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "lithuanian-national-catholic-parish-waterbury-ct"
+      ],
+      "situation_keys": [
+        "lithuanian-national-catholic-parish-waterbury-ct"
+      ],
+      "source_count": 5,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/lncc-congregation-westville-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/lncc-congregation-westville-il.json",
-      "content_sha256": "db370359689090547445ec2857baf521670413e7117679ee6a68c0a0972ead8c",
+      "content_sha256": "cb578c90f91ab402bddc30e56ea296146e299dc964d8d447ea05348b2295d2e7",
       "source_record_slug": "lncc-congregation-westville-il",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -287,9 +611,45 @@
       "publication_state": "evidence_input_requires_canonical_adjudication"
     },
     {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/mary-chicago-il.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/mary-chicago-il.json",
+      "content_sha256": "713bddb9a287c9315b7fa06f7edb184d2a6ee379e2d5e9e83cb302b65627a84d",
+      "source_record_slug": "mary-chicago-il",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "mary-chicago-il"
+      ],
+      "situation_keys": [
+        "mary-chicago-il"
+      ],
+      "source_count": 7,
+      "development_count": 5,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/mary-custer-mi.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/mary-custer-mi.json",
+      "content_sha256": "83fa3554e9a5702f439d8df24ecd99ca7bb762bacec9e4b1d212513339c53e20",
+      "source_record_slug": "mary-custer-mi",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "mary-custer-mi"
+      ],
+      "situation_keys": [
+        "mary-custer-mi"
+      ],
+      "source_count": 4,
+      "development_count": 4,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/nekaltojo-prasidejimo-ausros-vartu-archbald-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/nekaltojo-prasidejimo-ausros-vartu-archbald-pa.json",
-      "content_sha256": "43cbaaea960e3bd0d45161d5449d61ed5f97982aee18af3d085ea1a2d690ec2f",
+      "content_sha256": "c1c28b80b71d6d2d60a527effbecf42550a1d275dbf88869ded0bec30d8936e6",
       "source_record_slug": "nekaltojo-prasidejimo-ausros-vartu-archbald-pa",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -307,7 +667,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/nekaltojo-prasidejimo-east-st-louis-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/nekaltojo-prasidejimo-east-st-louis-il.json",
-      "content_sha256": "44af2d030403c53d328ebb21a6be7f8163b30c1ddd67d042b4747af5a6f77b14",
+      "content_sha256": "2885bd601035df9a6eb27b4fc7046e1fda11ea935c484407bf2fa2e8a7fb9b2f",
       "source_record_slug": "nekaltojo-prasidejimo-east-st-louis-il",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -325,7 +685,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/our-lady-of-siluva-mission-mundelein-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/our-lady-of-siluva-mission-mundelein-il.json",
-      "content_sha256": "ebe046c922ddc1410b428cbced9c9ffb93b4d51f550525c6c6bc7ca49fefc40e",
+      "content_sha256": "b628725c8b000529776015206e9a542dcfdeb777d5d407c7889f7f5e365bb727",
       "source_record_slug": "our-lady-of-siluva-mission-mundelein-il",
       "as_of": "2026-08-02",
       "registry_slugs": [
@@ -343,7 +703,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/pal-jurgio-matulaicio-misija-lemont-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/pal-jurgio-matulaicio-misija-lemont-il.json",
-      "content_sha256": "a5485161f7f47b636d730f9e140ed64cad81c1b4bdffe864ed206220ad9bae27",
+      "content_sha256": "9c523a187407bd33ff85ead4297ee2228790bba0c571bf8faa5f79eb0022fab1",
       "source_record_slug": "pal-jurgio-matulaicio-misija-lemont-il",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -359,9 +719,99 @@
       "publication_state": "evidence_input_requires_canonical_adjudication"
     },
     {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/parish-chicago-il-2.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/parish-chicago-il-2.json",
+      "content_sha256": "04370ac4cd29ce0d4968a03a2cb6d1627356cb746a11cf6fabc513fb3d21ab42",
+      "source_record_slug": "parish-chicago-il-2",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "parish-chicago-il-2"
+      ],
+      "situation_keys": [
+        "parish-chicago-il-2"
+      ],
+      "source_count": 5,
+      "development_count": 4,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/parish-grand-prairie-ar.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/parish-grand-prairie-ar.json",
+      "content_sha256": "86260ad7c4a558725bc04fce58ec47b6662e1e735456600a7f8c13cb8a9b4e7c",
+      "source_record_slug": "parish-grand-prairie-ar",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "parish-grand-prairie-ar"
+      ],
+      "situation_keys": [
+        "parish-grand-prairie-ar"
+      ],
+      "source_count": 2,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/paul-naugatuck-ct.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/paul-naugatuck-ct.json",
+      "content_sha256": "3d9c3f490a4a4140932f36226aab66e053b195c4b57cf2b2cbf431d3d8ac760b",
+      "source_record_slug": "paul-naugatuck-ct",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "paul-naugatuck-ct"
+      ],
+      "situation_keys": [
+        "paul-naugatuck-ct"
+      ],
+      "source_count": 4,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/protestant-parish-nyc.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/protestant-parish-nyc.json",
+      "content_sha256": "b35f8b92a650ec8a62e11a6ccac62420d00d5665d7078bb26446354294bc90a7",
+      "source_record_slug": "protestant-parish-nyc",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "protestant-parish-nyc"
+      ],
+      "situation_keys": [
+        "protestant-parish-nyc"
+      ],
+      "source_count": 5,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sacred-heart-new-philadelphia-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sacred-heart-new-philadelphia-pa.json",
+      "content_sha256": "6e724a5b581d444f1d53daa25eafd8f8098f0f73d3ab03adbd2363dd9d01c6d0",
+      "source_record_slug": "sacred-heart-new-philadelphia-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "sacred-heart-new-philadelphia-pa"
+      ],
+      "situation_keys": [
+        "sacred-heart-new-philadelphia-pa"
+      ],
+      "source_count": 5,
+      "development_count": 4,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/saldziausios-jezaus-sirdies-lawrence-ma.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/saldziausios-jezaus-sirdies-lawrence-ma.json",
-      "content_sha256": "2715c018e426ec149701dad0b5c6dccb16cb002e2fd5c9ac2dd232a92a35785d",
+      "content_sha256": "8d16b5db5dd5e4c00613cec697a5d99963662351dbe39c6b935085830dc83f0a",
       "source_record_slug": "saldziausios-jezaus-sirdies-lawrence-ma",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -379,7 +829,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/siluvos-dievo-motinos-maizeville-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/siluvos-dievo-motinos-maizeville-pa.json",
-      "content_sha256": "21c6a7d345e32de4d546d1dd5ff997bb39868406652fbc691c781303e2e76bfc",
+      "content_sha256": "5fcb3ddfbda0ef22090aed604a7806313e07b2a9a1dfdd614de3ca9b0de2a7ea",
       "source_record_slug": "siluvos-dievo-motinos-maizeville-pa",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -395,9 +845,153 @@
       "publication_state": "evidence_input_requires_canonical_adjudication"
     },
     {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/ss-peter-and-paul-chicago-il.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/ss-peter-and-paul-chicago-il.json",
+      "content_sha256": "e44943bc3f567b1b52774774dc3058d6ac9eb9274e3b705a3f14c528dedfc6a2",
+      "source_record_slug": "ss-peter-and-paul-chicago-il",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "ss-peter-and-paul-chicago-il"
+      ],
+      "situation_keys": [
+        "ss-peter-and-paul-chicago-il"
+      ],
+      "source_count": 7,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/ss-peter-and-paul-hazleton-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/ss-peter-and-paul-hazleton-pa.json",
+      "content_sha256": "20e54340197d8319c7e028b5bf1199b7e3b607f517a01a423d74c43032c39583",
+      "source_record_slug": "ss-peter-and-paul-hazleton-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "ss-peter-and-paul-hazleton-pa"
+      ],
+      "situation_keys": [
+        "ss-peter-and-paul-hazleton-pa"
+      ],
+      "source_count": 8,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/ss-peter-and-paul-homestead-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/ss-peter-and-paul-homestead-pa.json",
+      "content_sha256": "4ae9fb17cbc301d307750ffcbbb675a0fbd667cfe72e5d96b5e32c82e83d336d",
+      "source_record_slug": "ss-peter-and-paul-homestead-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "ss-peter-and-paul-homestead-pa"
+      ],
+      "situation_keys": [
+        "ss-peter-and-paul-homestead-pa"
+      ],
+      "source_count": 7,
+      "development_count": 4,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/ss-peter-and-paul-rockford-il.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/ss-peter-and-paul-rockford-il.json",
+      "content_sha256": "e85fc6f07bd13d6eca69077e648a2f7ed9574a20bae3eb1ecda1f96e10580f14",
+      "source_record_slug": "ss-peter-and-paul-rockford-il",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "ss-peter-and-paul-rockford-il"
+      ],
+      "situation_keys": [
+        "ss-peter-and-paul-rockford-il"
+      ],
+      "source_count": 3,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/ss-peter-and-paul-sugar-notch-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/ss-peter-and-paul-sugar-notch-pa.json",
+      "content_sha256": "45f9336b0df7c04ce63a043a8c837a5d3d1e30db04864bcd7bb450629e3b0338",
+      "source_record_slug": "ss-peter-and-paul-sugar-notch-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "ss-peter-and-paul-sugar-notch-pa"
+      ],
+      "situation_keys": [
+        "ss-peter-and-paul-sugar-notch-pa"
+      ],
+      "source_count": 5,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/ss-peter-and-paul-tamaqua-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/ss-peter-and-paul-tamaqua-pa.json",
+      "content_sha256": "bb3fafb04b94712e2583df1235a48089a295c386f6434138d6b462310ef64cba",
+      "source_record_slug": "ss-peter-and-paul-tamaqua-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "ss-peter-and-paul-tamaqua-pa"
+      ],
+      "situation_keys": [
+        "ss-peter-and-paul-tamaqua-pa"
+      ],
+      "source_count": 4,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/ss-peter-and-paul-westville-il.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/ss-peter-and-paul-westville-il.json",
+      "content_sha256": "68f2bac28f66460da918a24387e72ff305f97fee96c99c93c63ee8368efeaac7",
+      "source_record_slug": "ss-peter-and-paul-westville-il",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "ss-peter-and-paul-westville-il"
+      ],
+      "situation_keys": [
+        "ss-peter-and-paul-westville-il"
+      ],
+      "source_count": 7,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-ambrose-port-washington-wi.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-ambrose-port-washington-wi.json",
+      "content_sha256": "4223b26fccdc5bc0708261cc69e1a7e95db9444c30340ff1f64621ec2e1fda7d",
+      "source_record_slug": "st-ambrose-port-washington-wi",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-ambrose-port-washington-wi"
+      ],
+      "situation_keys": [
+        "st-ambrose-port-washington-wi"
+      ],
+      "source_count": 2,
+      "development_count": 2,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-ann-beverly-shores-in.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-ann-beverly-shores-in.json",
-      "content_sha256": "6ca78876541ddaf69fc7534ff7a8d738f3fec8921b937cf09ac3930fc796e646",
+      "content_sha256": "4c8e3065e1fb3801c9cf090e5f7505f20afd14e63610f596a23b9179d0109b62",
       "source_record_slug": "st-ann-beverly-shores-in",
       "as_of": "2026-08-06",
       "registry_slugs": [
@@ -408,6 +1002,672 @@
       ],
       "source_count": 4,
       "development_count": 1,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-ann-jersey-city-nj.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-ann-jersey-city-nj.json",
+      "content_sha256": "2a3cf2d0df23c573e01c20d5831081c313eeb757dd4a00696c7464631a142c10",
+      "source_record_slug": "st-ann-jersey-city-nj",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-ann-jersey-city-nj"
+      ],
+      "situation_keys": [
+        "st-ann-jersey-city-nj"
+      ],
+      "source_count": 5,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-anthony-bridgeville-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-anthony-bridgeville-pa.json",
+      "content_sha256": "d16860a3ca95e00becd4805e97a11f79fd0c74f2df08f331a59cb937160eb95a",
+      "source_record_slug": "st-anthony-bridgeville-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-anthony-bridgeville-pa"
+      ],
+      "situation_keys": [
+        "st-anthony-bridgeville-pa"
+      ],
+      "source_count": 6,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-anthony-forest-city-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-anthony-forest-city-pa.json",
+      "content_sha256": "e4cdd67f3708d6e73a0bbd67c551c0c9adcc95fb643f6efc9765a2bad292bdd9",
+      "source_record_slug": "st-anthony-forest-city-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-anthony-forest-city-pa"
+      ],
+      "situation_keys": [
+        "st-anthony-forest-city-pa"
+      ],
+      "source_count": 4,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-anthony-kewanee-il.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-anthony-kewanee-il.json",
+      "content_sha256": "69f3ff994b6eb63300e11cffb0775ced19492d1e303dc07e48b98011e9649ffc",
+      "source_record_slug": "st-anthony-kewanee-il",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-anthony-kewanee-il"
+      ],
+      "situation_keys": [
+        "st-anthony-kewanee-il"
+      ],
+      "source_count": 3,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-bartholomew-waukegan-il.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-bartholomew-waukegan-il.json",
+      "content_sha256": "becde0761133a987b7224cb2e2a4d65c323622816569d9cfee1d8eaf8e5024cd",
+      "source_record_slug": "st-bartholomew-waukegan-il",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-bartholomew-waukegan-il"
+      ],
+      "situation_keys": [
+        "st-bartholomew-waukegan-il"
+      ],
+      "source_count": 7,
+      "development_count": 4,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-casimir-east-vandergrift-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-casimir-east-vandergrift-pa.json",
+      "content_sha256": "4b9c2c50b2e476108cc21264403d3011baa90e9649378046fcd5e4d224acb3c3",
+      "source_record_slug": "st-casimir-east-vandergrift-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-casimir-east-vandergrift-pa"
+      ],
+      "situation_keys": [
+        "st-casimir-east-vandergrift-pa"
+      ],
+      "source_count": 5,
+      "development_count": 4,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-casimir-mcadoo-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-casimir-mcadoo-pa.json",
+      "content_sha256": "de5cdda158b4386082f4939907799e467c25fd0e2b83282b5ad13e393056bd04",
+      "source_record_slug": "st-casimir-mcadoo-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-casimir-mcadoo-pa"
+      ],
+      "situation_keys": [
+        "st-casimir-mcadoo-pa"
+      ],
+      "source_count": 5,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-casimir-plymouth-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-casimir-plymouth-pa.json",
+      "content_sha256": "f6fc7463604a26dc5d95959c37a09b13d7e16a5715cce83e2dddac24ebfa83e1",
+      "source_record_slug": "st-casimir-plymouth-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-casimir-plymouth-pa"
+      ],
+      "situation_keys": [
+        "st-casimir-plymouth-pa"
+      ],
+      "source_count": 5,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-casimir-racine-wi.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-casimir-racine-wi.json",
+      "content_sha256": "b933b7a421ca2e2488b83d198727a81397d776777f661a82e6bc37d7a0be1282",
+      "source_record_slug": "st-casimir-racine-wi",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-casimir-racine-wi"
+      ],
+      "situation_keys": [
+        "st-casimir-racine-wi"
+      ],
+      "source_count": 6,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-casimir-st-clair-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-casimir-st-clair-pa.json",
+      "content_sha256": "3970cac6f0a676067b6809bfc970d329e1d558c1bd6479edd2be1c1967f90d17",
+      "source_record_slug": "st-casimir-st-clair-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-casimir-st-clair-pa"
+      ],
+      "situation_keys": [
+        "st-casimir-st-clair-pa"
+      ],
+      "source_count": 5,
+      "development_count": 4,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-casimir-st-pete-beach-fl.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-casimir-st-pete-beach-fl.json",
+      "content_sha256": "1c90b043757e279f00c5458b235c2f69baff392fd3a136ea27bca08a1a14c56a",
+      "source_record_slug": "st-casimir-st-pete-beach-fl",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-casimir-st-pete-beach-fl"
+      ],
+      "situation_keys": [
+        "st-casimir-st-pete-beach-fl"
+      ],
+      "source_count": 2,
+      "development_count": 2,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-casimir-westfield-ma.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-casimir-westfield-ma.json",
+      "content_sha256": "6d53cfd01d5796f65042eb472d59d0a8b3801982b3e8df41eef3bde74b123974",
+      "source_record_slug": "st-casimir-westfield-ma",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-casimir-westfield-ma"
+      ],
+      "situation_keys": [
+        "st-casimir-westfield-ma"
+      ],
+      "source_count": 5,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-casimir-wilkes-barre-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-casimir-wilkes-barre-pa.json",
+      "content_sha256": "58eaf1d16c2ca48c508f50720a1a40a1702f4044656a3b9fdf4696fc9b0bc8cc",
+      "source_record_slug": "st-casimir-wilkes-barre-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-casimir-wilkes-barre-pa"
+      ],
+      "situation_keys": [
+        "st-casimir-wilkes-barre-pa"
+      ],
+      "source_count": 5,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-francis-athol-ma.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-francis-athol-ma.json",
+      "content_sha256": "d893029619859b2c6c6022b9898bd7aaf359f3c5c48abfab6a6b88779d458cf4",
+      "source_record_slug": "st-francis-athol-ma",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-francis-athol-ma"
+      ],
+      "situation_keys": [
+        "st-francis-athol-ma"
+      ],
+      "source_count": 4,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-francis-minersville-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-francis-minersville-pa.json",
+      "content_sha256": "7ad87b52c922540dac181135fef125d4b2fbd85b4e7dd66a6e115851e512ea46",
+      "source_record_slug": "st-francis-minersville-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-francis-minersville-pa"
+      ],
+      "situation_keys": [
+        "st-francis-minersville-pa"
+      ],
+      "source_count": 10,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-francis-wilkes-barre-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-francis-wilkes-barre-pa.json",
+      "content_sha256": "3a257d7b6001a37e5db01f99f9d9db6332c443fd8456632122b86f225d3a5782",
+      "source_record_slug": "st-francis-wilkes-barre-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-francis-wilkes-barre-pa"
+      ],
+      "situation_keys": [
+        "st-francis-wilkes-barre-pa"
+      ],
+      "source_count": 5,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-francis-youngstown-oh.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-francis-youngstown-oh.json",
+      "content_sha256": "e352ef0e23da4a6765de2b61ea8bd495a6027d6236d7d536f96130c6bedd42e7",
+      "source_record_slug": "st-francis-youngstown-oh",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-francis-youngstown-oh"
+      ],
+      "situation_keys": [
+        "st-francis-youngstown-oh"
+      ],
+      "source_count": 6,
+      "development_count": 4,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-gabriel-milwaukee-wi.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-gabriel-milwaukee-wi.json",
+      "content_sha256": "dd8d235471a194f12fa91fa22e73478ae4c62a1ca6e30e462f90650663bda5c4",
+      "source_record_slug": "st-gabriel-milwaukee-wi",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-gabriel-milwaukee-wi"
+      ],
+      "situation_keys": [
+        "st-gabriel-milwaukee-wi"
+      ],
+      "source_count": 6,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-george-albany-ny.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-george-albany-ny.json",
+      "content_sha256": "3de486d31f2076954aa327a775a87c3ab9d3762b97b94373b3db2205a04d2a10",
+      "source_record_slug": "st-george-albany-ny",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-george-albany-ny"
+      ],
+      "situation_keys": [
+        "st-george-albany-ny"
+      ],
+      "source_count": 5,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-george-detroit-mi.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-george-detroit-mi.json",
+      "content_sha256": "a9a1fbb2dc72610b3b44fc4c514b77c108e65e33cf4bfb455e08945541777475",
+      "source_record_slug": "st-george-detroit-mi",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-george-detroit-mi"
+      ],
+      "situation_keys": [
+        "st-george-detroit-mi"
+      ],
+      "source_count": 4,
+      "development_count": 4,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-george-saginaw-mi.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-george-saginaw-mi.json",
+      "content_sha256": "7cd2352217e4936c83ab951d829e23a18ba2b7dbbd0e4df43e20ff7330aa1d36",
+      "source_record_slug": "st-george-saginaw-mi",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-george-saginaw-mi"
+      ],
+      "situation_keys": [
+        "st-george-saginaw-mi"
+      ],
+      "source_count": 6,
+      "development_count": 5,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-george-utica-ny.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-george-utica-ny.json",
+      "content_sha256": "ca3bdb020f156432e8297575dc97396d3775276e8524e6cb6b8c3d8f85b2b5a0",
+      "source_record_slug": "st-george-utica-ny",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-george-utica-ny"
+      ],
+      "situation_keys": [
+        "st-george-utica-ny"
+      ],
+      "source_count": 4,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-isidore-braddock-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-isidore-braddock-pa.json",
+      "content_sha256": "95097d4219701079e999bbb9c25e8e25f10d5e04ef7f71ae6257697a53697280",
+      "source_record_slug": "st-isidore-braddock-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-isidore-braddock-pa"
+      ],
+      "situation_keys": [
+        "st-isidore-braddock-pa"
+      ],
+      "source_count": 5,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-john-the-baptist-baltimore-md.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-john-the-baptist-baltimore-md.json",
+      "content_sha256": "383974ef0486bbceda6fe22957840cffe1698193edcafe1696451962a50b0cc1",
+      "source_record_slug": "st-john-the-baptist-baltimore-md",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-john-the-baptist-baltimore-md"
+      ],
+      "situation_keys": [
+        "st-john-the-baptist-baltimore-md"
+      ],
+      "source_count": 7,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-joseph-binghamton-ny.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-joseph-binghamton-ny.json",
+      "content_sha256": "a408d315e8febd5c2827dfd541eedd4db8e81a596b03e17b4e66fa4e1afcbb76",
+      "source_record_slug": "st-joseph-binghamton-ny",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-joseph-binghamton-ny"
+      ],
+      "situation_keys": [
+        "st-joseph-binghamton-ny"
+      ],
+      "source_count": 7,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-joseph-donora-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-joseph-donora-pa.json",
+      "content_sha256": "4de336ef46d446271328e2cb03cffcccee885fb6472ee6d2179b494b5cdd8dd0",
+      "source_record_slug": "st-joseph-donora-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-joseph-donora-pa"
+      ],
+      "situation_keys": [
+        "st-joseph-donora-pa"
+      ],
+      "source_count": 3,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-joseph-duryea-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-joseph-duryea-pa.json",
+      "content_sha256": "ab39b6efb19bede001fb4fd14e973ce6c24a6a0ebbb3fdd80805954abc3ff236",
+      "source_record_slug": "st-joseph-duryea-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-joseph-duryea-pa"
+      ],
+      "situation_keys": [
+        "st-joseph-duryea-pa"
+      ],
+      "source_count": 5,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-joseph-lowell-ma.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-joseph-lowell-ma.json",
+      "content_sha256": "6632097c64c97126a15a0ea94b355a1f2a25f8ee29e52144e43017cfc722f868",
+      "source_record_slug": "st-joseph-lowell-ma",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-joseph-lowell-ma"
+      ],
+      "situation_keys": [
+        "st-joseph-lowell-ma"
+      ],
+      "source_count": 3,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-joseph-mahanoy-city-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-joseph-mahanoy-city-pa.json",
+      "content_sha256": "3527f21c236c0052edab441e625eee28513d43153328514fdd773c56985ae0a7",
+      "source_record_slug": "st-joseph-mahanoy-city-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-joseph-mahanoy-city-pa"
+      ],
+      "situation_keys": [
+        "st-joseph-mahanoy-city-pa"
+      ],
+      "source_count": 4,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-joseph-st-louis-mo.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-joseph-st-louis-mo.json",
+      "content_sha256": "049c582c64f8c9682b18e0d58697a647f1d64eb9b46476ffb1ab03fbf0b5bb93",
+      "source_record_slug": "st-joseph-st-louis-mo",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-joseph-st-louis-mo"
+      ],
+      "situation_keys": [
+        "st-joseph-st-louis-mo"
+      ],
+      "source_count": 4,
+      "development_count": 5,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-luke-bentleyville-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-luke-bentleyville-pa.json",
+      "content_sha256": "a225712d993d5f30ce368ddb98e1651b9e5b45305a61ad78fb1922c80f6178cd",
+      "source_record_slug": "st-luke-bentleyville-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-luke-bentleyville-pa"
+      ],
+      "situation_keys": [
+        "st-luke-bentleyville-pa"
+      ],
+      "source_count": 6,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-mary-of-the-angels-brooklyn-ny.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-mary-of-the-angels-brooklyn-ny.json",
+      "content_sha256": "275618554882f752fdd64b4108ca72efb8586452c84a2080cc194f119ad60715",
+      "source_record_slug": "st-mary-of-the-angels-brooklyn-ny",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-mary-of-the-angels-brooklyn-ny"
+      ],
+      "situation_keys": [
+        "st-mary-of-the-angels-brooklyn-ny"
+      ],
+      "source_count": 4,
+      "development_count": 4,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-mary-wanamie-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-mary-wanamie-pa.json",
+      "content_sha256": "c614fca6e975a032c45031cdbf8dce611a0a621527b6e78eaac6748c8e4d3aa1",
+      "source_record_slug": "st-mary-wanamie-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-mary-wanamie-pa"
+      ],
+      "situation_keys": [
+        "st-mary-wanamie-pa"
+      ],
+      "source_count": 7,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-michael-shamokin-pa.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-michael-shamokin-pa.json",
+      "content_sha256": "dd34116b0426227b24ecd89215d2a5d61879d7ad162ad5e90d86e423b2f448fd",
+      "source_record_slug": "st-michael-shamokin-pa",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-michael-shamokin-pa"
+      ],
+      "situation_keys": [
+        "st-michael-shamokin-pa"
+      ],
+      "source_count": 6,
+      "development_count": 4,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-peter-akron-oh.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-peter-akron-oh.json",
+      "content_sha256": "0b0787b1ef92cce4813a630bb869433900cfce82912c220c11f4eeac82765d89",
+      "source_record_slug": "st-peter-akron-oh",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-peter-akron-oh"
+      ],
+      "situation_keys": [
+        "st-peter-akron-oh"
+      ],
+      "source_count": 5,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-peter-kenosha-wi.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-peter-kenosha-wi.json",
+      "content_sha256": "adb06ea8d77418575f7495f39be2c167cb33815fe0da435d3bf19551670873f8",
+      "source_record_slug": "st-peter-kenosha-wi",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-peter-kenosha-wi"
+      ],
+      "situation_keys": [
+        "st-peter-kenosha-wi"
+      ],
+      "source_count": 3,
+      "development_count": 3,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/st-vincent-de-paul-springfield-il.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/st-vincent-de-paul-springfield-il.json",
+      "content_sha256": "d4125a8280abd1be3ef8dd040b8325c4d6d1a3ed86cc65281b968d20c63f00b1",
+      "source_record_slug": "st-vincent-de-paul-springfield-il",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "st-vincent-de-paul-springfield-il"
+      ],
+      "situation_keys": [
+        "st-vincent-de-paul-springfield-il"
+      ],
+      "source_count": 7,
+      "development_count": 3,
       "site_extraction_candidate": false,
       "lineage_extraction_candidate": false,
       "publication_state": "canonical_packet_already_projected"
@@ -433,7 +1693,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-andriejaus-philadelphia-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-andriejaus-philadelphia-pa.json",
-      "content_sha256": "a12935493c7dbb510ef72151c3a97bcdb7f6b7c34c2aa898d0c25513b1b1780a",
+      "content_sha256": "d6dd3eef1877b3b00d03a677bdccfa08a0ba7ec2c226fa30771038549465cf81",
       "source_record_slug": "sv-andriejaus-philadelphia-pa",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -451,7 +1711,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-antano-cicero-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-antano-cicero-il.json",
-      "content_sha256": "0db88764cdf9f8b6ecd82654f0bf78ac2095b858c01a0de851e27456a2a981a3",
+      "content_sha256": "bc8c2f70eccab2587442bfb0285627b49fd14b90f96dfbd8062177d3b7790d6d",
       "source_record_slug": "sv-antano-cicero-il",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -469,7 +1729,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-antano-detroit-mi.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-antano-detroit-mi.json",
-      "content_sha256": "613b6b8c7fdba48c71139e30a8704299fe5bc1d65d59b659bfe6140c166467c5",
+      "content_sha256": "dec93a9838b94eaaa275fc1ebd72d1cf02002df5b179a738639c34a68074dce8",
       "source_record_slug": "sv-antano-detroit-mi",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -487,7 +1747,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-antano-omaha-ne.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-antano-omaha-ne.json",
-      "content_sha256": "206fcb1491d446af03cd848ccbcf49922882bc7bedaf98ad84fd917e1d08f4d5",
+      "content_sha256": "e99e4c32ac915a5c0b73f1428cb4a0c48249aefb3f73d2fa937d0153b76a6836",
       "source_record_slug": "sv-antano-omaha-ne",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -505,7 +1765,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-jono-coaldale-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-jono-coaldale-pa.json",
-      "content_sha256": "6cd4935dcb449dac9256543e40accfc81c5bb5f8b82b1d4946ee16e092658516",
+      "content_sha256": "2dd60a55caf1fe8c6b41be2f07340d06004e4c3ec35934f496815c55da473e03",
       "source_record_slug": "sv-jono-coaldale-pa",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -523,7 +1783,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-juozapo-nanticoke-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-juozapo-nanticoke-pa.json",
-      "content_sha256": "41d6b3a304d3af60acae1aff25ee0cc1ba11cb9f56674dc400969c9410f54b6f",
+      "content_sha256": "c98271e6a8889fc0815c756658fe20f5b79aed2c37dee9e499ae1e580fca5bc5",
       "source_record_slug": "sv-juozapo-nanticoke-pa",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -541,7 +1801,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-juozapo-scranton-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-juozapo-scranton-pa.json",
-      "content_sha256": "63c391c806e190c21e6585de27b49c8c148b0243e1134d1786648cb08f8701b9",
+      "content_sha256": "0003924cf08dbfe8a7f88c0f9b448fd12e104541ea18386a19a43d6f1271b14e",
       "source_record_slug": "sv-juozapo-scranton-pa",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -559,7 +1819,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-juozapo-south-chicago-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-juozapo-south-chicago-il.json",
-      "content_sha256": "4e8b2723b4bfdbec92d79e324d9ad7d9c11a9402a01c4de79c8bbf773f8acc9a",
+      "content_sha256": "719cd3d7a66cc4936235a86fe39b70ec6216365e711e79e5018035e2c645b6aa",
       "source_record_slug": "sv-juozapo-south-chicago-il",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -577,7 +1837,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-juozapo-waterbury-ct.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-juozapo-waterbury-ct.json",
-      "content_sha256": "8ca4880acb2b004b47d73b17de53c6362f8dc7cf25211842cd29e1ec6f974996",
+      "content_sha256": "2efdc43b1170adf93b2e35dcc798c90a0f0a672da490d9f52f13cba3b1f839aa",
       "source_record_slug": "sv-juozapo-waterbury-ct",
       "as_of": "2026-08-08",
       "registry_slugs": [
@@ -595,7 +1855,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-jurgio-bridgeport-ct.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-jurgio-bridgeport-ct.json",
-      "content_sha256": "ad9c3b77963fc8d9ebec286ae4b88649edd0acef4e73624f138701d60dec3385",
+      "content_sha256": "f3af8a53e28492a8d51a4c0ac09877b500b360938e9c93630e3fec7a74b4bdbe",
       "source_record_slug": "sv-jurgio-bridgeport-ct",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -613,7 +1873,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-jurgio-brooklyn-ny.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-jurgio-brooklyn-ny.json",
-      "content_sha256": "d8dfcd945e0bf616971392336d3aa6d4e31f26c37933b9b9f3e8579fb54509f4",
+      "content_sha256": "59ccc4557bc7c5af50c26b65ba418f5a20e58597c1b176cbced991449429b0ea",
       "source_record_slug": "sv-jurgio-brooklyn-ny",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -631,7 +1891,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-jurgio-chicago-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-jurgio-chicago-il.json",
-      "content_sha256": "8a2d21ba2c630b78d1ab2100965d043748bf252b581ff203146395b936e6c7bc",
+      "content_sha256": "2878547685c4cbde044a7db835f1c74886d50c532f46ed4e3389c3cba088198c",
       "source_record_slug": "sv-jurgio-chicago-il",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -649,7 +1909,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-jurgio-cleveland-oh.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-jurgio-cleveland-oh.json",
-      "content_sha256": "50b171ed635812d4041659cb7065180ed74bbf2a23de2d4e4b2202392f180d2b",
+      "content_sha256": "9891c9826920547d7cfa87f0d8ecc02babcdab400a4fd0d1de7a91f1d8e7d0e4",
       "source_record_slug": "sv-jurgio-cleveland-oh",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -667,7 +1927,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-jurgio-niagara-falls-ny.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-jurgio-niagara-falls-ny.json",
-      "content_sha256": "01b83786e69eed7587b42d47f8eccd46d2d5ff2ee539973ccb884e74aa54843b",
+      "content_sha256": "c19af01976884ad8d629c6a48c9f1fc3fe04e6995d9d702590da415ea8b603a1",
       "source_record_slug": "sv-jurgio-niagara-falls-ny",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -685,7 +1945,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-jurgio-norwood-ma.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-jurgio-norwood-ma.json",
-      "content_sha256": "acc276dabc5a5d101800e1bdcb4f902e206dbb1f5aa8ebc1d0c8f93aa41e6b99",
+      "content_sha256": "b69fb0ba42cb0ade30ec5c43acd180089328c989c1efba307e4fdb24946d36b0",
       "source_record_slug": "sv-jurgio-norwood-ma",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -703,7 +1963,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-jurgio-philadelphia-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-jurgio-philadelphia-pa.json",
-      "content_sha256": "2cb03c79ff64263afe8cec16682c061aa6ec79d0c6133f4bb6fac128c85a9c78",
+      "content_sha256": "ef6583ff145d4d4bf1a5648c664a47dad5edf45caa6dcaf5305b48a60ffe93de",
       "source_record_slug": "sv-jurgio-philadelphia-pa",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -757,7 +2017,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-amsterdam-ny.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-amsterdam-ny.json",
-      "content_sha256": "3f894c131c4c64cfcaaec17c4ed5671a76dde6104a97feeb6061facac0400fe0",
+      "content_sha256": "9de020eabed480d531ce605228188e0c4df72d7cf0cc3f982b02e6ab57595faa",
       "source_record_slug": "sv-kazimiero-amsterdam-ny",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -775,7 +2035,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-brockton-ma.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-brockton-ma.json",
-      "content_sha256": "4bf10610de3d9ac06cacd20f612adaa8d4f428e85c1bd9edebb7fd4673c909ca",
+      "content_sha256": "41a06209513280aa85fcb14fce013851c07d5dbc3afbb95dea8357cc1c5d05bb",
       "source_record_slug": "sv-kazimiero-brockton-ma",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -793,7 +2053,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-chicago-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-chicago-il.json",
-      "content_sha256": "475db092297d506e68f751f787c4fc0265069cb11e91e6daefa2c734c1a33a60",
+      "content_sha256": "cd3c6bfe41aefbeb0dd446cc60f094711bfc49910a05034dd3321031e0301920",
       "source_record_slug": "sv-kazimiero-chicago-il",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -811,7 +2071,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-cleveland-oh.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-cleveland-oh.json",
-      "content_sha256": "1f9da93b5bc7feaf497e16641d49730fd685805ced1880bf4cf76414e8ade525",
+      "content_sha256": "410160940a0539962570f655aec8d915c418fa31abaa3e65bc03632026066f8a",
       "source_record_slug": "sv-kazimiero-cleveland-oh",
       "as_of": "2026-07-09",
       "registry_slugs": [
@@ -829,7 +2089,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-gary-in.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-gary-in.json",
-      "content_sha256": "2f116437c002895ae9d52c2edb4c6dd8c7c3f0abd114adb3502b85eb0f19c64c",
+      "content_sha256": "d82d580a2bf180381102dcef536d80f1affffcb9aecbaa00bf29a927d155523d",
       "source_record_slug": "sv-kazimiero-gary-in",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -847,7 +2107,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-kansas-city-mo.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-kansas-city-mo.json",
-      "content_sha256": "6632d63bdb5c5aee578bd41e66973abf702677b274f8616051c9e926e9e3afeb",
+      "content_sha256": "72ae3513ce66c37fa900dcdf76382e8d8b2728ed5aa7d460bfbe9e731a074132",
       "source_record_slug": "sv-kazimiero-kansas-city-mo",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -865,7 +2125,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-los-angeles-ca.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-los-angeles-ca.json",
-      "content_sha256": "5e68f2ea0765ee2e1a35bcd9ed9013d12cd5a55ddbedc7cc0720ddd99dbcf7f2",
+      "content_sha256": "19252231706aab0403a37ce5d2639ed1ce0d726362adf387512aabf12189d9d9",
       "source_record_slug": "sv-kazimiero-los-angeles-ca",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -883,7 +2143,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-nashua-nh.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-nashua-nh.json",
-      "content_sha256": "a23cf7347f330723759554218b588618b60d17a31adfcf2ee57c507910981c74",
+      "content_sha256": "aa609dd268c4a004669fcae74298d852908c60b6c2ee1c373c43d37dbbf07e97",
       "source_record_slug": "sv-kazimiero-nashua-nh",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -901,7 +2161,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-new-haven-ct.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-new-haven-ct.json",
-      "content_sha256": "ac46768bd05a629e6de0733c32a7e22a233f15d7fdd2d595d0abbecfae450f5a",
+      "content_sha256": "2c4d131a9000963a69615d8e712995ebc68318cf83db50e13719e88080340894",
       "source_record_slug": "sv-kazimiero-new-haven-ct",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -919,7 +2179,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-paterson-nj.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-paterson-nj.json",
-      "content_sha256": "ee3745b582390a00b5c1b36a06e9f6585234e59b4efc1367aa727b6adf0200f8",
+      "content_sha256": "0e64880bdae809eb31e95aef7ed69e3f8681a4d2b8f5b9bb67a9b9d35ba64ce4",
       "source_record_slug": "sv-kazimiero-paterson-nj",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -937,7 +2197,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-philadelphia-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-philadelphia-pa.json",
-      "content_sha256": "89e054e0b47909046d9e08fda50fc82c6b4a5dd0d04e62eaeb967b422637a778",
+      "content_sha256": "6d63e6ec8d4645e2d6a1bf4e30cc023801193926b63b8d250ee0d9b40f62b6e3",
       "source_record_slug": "sv-kazimiero-philadelphia-pa",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -955,7 +2215,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-pittsburgh-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-pittsburgh-pa.json",
-      "content_sha256": "a2df3cce4ac4ef2931e8bd67c43263f678effb52211f94773cf1175965c806d4",
+      "content_sha256": "ae40723b2d22eca5dfdc0bb0ff8f75fa76fbb79a64fcfeaa13d04f7486bb2b49",
       "source_record_slug": "sv-kazimiero-pittsburgh-pa",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -973,7 +2233,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-pittston-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-pittston-pa.json",
-      "content_sha256": "f1e8e99b1d9c43403b4d9ebd89ea3bcf258c170dde2aef68b5da3ebb8d01e6df",
+      "content_sha256": "2494ef3d3cc86dfe7da17ac6bbd93707fe8332369d6b73a4a52cfbd2113b4074",
       "source_record_slug": "sv-kazimiero-pittston-pa",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -991,7 +2251,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-providence-ri.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-providence-ri.json",
-      "content_sha256": "c4f3c58032b00ae05cb652a9447fb133ce647e10f9a1b5f53358460959904c84",
+      "content_sha256": "229f426cc9c17868b9f07e5936c1f6e5e7b48de94722622c811e9995ec8a701c",
       "source_record_slug": "sv-kazimiero-providence-ri",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1009,7 +2269,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-sioux-city-ia.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-sioux-city-ia.json",
-      "content_sha256": "51d38cf7d768721013a86ad982ab2f9d17109d13f0419d4ba70d8876ea5f6f98",
+      "content_sha256": "61d1cdbcbbec6207ddab15cae72a6602dd40376cf25a946543a6b1a5aa25c95c",
       "source_record_slug": "sv-kazimiero-sioux-city-ia",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1022,24 +2282,6 @@
       "development_count": 4,
       "site_extraction_candidate": true,
       "lineage_extraction_candidate": false,
-      "publication_state": "evidence_input_requires_canonical_adjudication"
-    },
-    {
-      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kazimiero-waterbury-ct.json",
-      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kazimiero-waterbury-ct.json",
-      "content_sha256": "c1fbd26447052033eeecdb09f859aef0c4ae89757f15ce24660737dc7f36f3e0",
-      "source_record_slug": "sv-kazimiero-waterbury-ct",
-      "as_of": "2026-07-16",
-      "registry_slugs": [
-        "joseph-waterbury-ct"
-      ],
-      "situation_keys": [
-        "sv-kazimiero-waterbury-ct"
-      ],
-      "source_count": 5,
-      "development_count": 0,
-      "site_extraction_candidate": false,
-      "lineage_extraction_candidate": true,
       "publication_state": "evidence_input_requires_canonical_adjudication"
     },
     {
@@ -1063,7 +2305,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-konstantino-oglesby-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-konstantino-oglesby-il.json",
-      "content_sha256": "5cecc093237f3d960753624a361e055560807d0e756edbcb361f08fe2c015b5d",
+      "content_sha256": "3db213cb3acfc45cc159448d1e60af6f7baa0535b15a34839ed57394a58cee9b",
       "source_record_slug": "sv-konstantino-oglesby-il",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1081,7 +2323,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kryziaus-chicago-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kryziaus-chicago-il.json",
-      "content_sha256": "3279a0b7afdff80dabb6ccfca35007b5a984be3b546a4b53edf63f15e8a93593",
+      "content_sha256": "7fc7cfb6bb2a6fe27e858d73bcb11482f817bb60f72007155b2782a37a5dcac1",
       "source_record_slug": "sv-kryziaus-chicago-il",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1099,7 +2341,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kryziaus-dayton-oh.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kryziaus-dayton-oh.json",
-      "content_sha256": "da71ff7805b90c4b7833e7c8ebd5e30bc4866d0145666cb01cf604def4a5bbeb",
+      "content_sha256": "b945ff6a04b7b058bd66fd039b5990562e39e26a476d5fa2c277e30db4b86aaa",
       "source_record_slug": "sv-kryziaus-dayton-oh",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1117,7 +2359,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-kryziaus-mount-carmel-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-kryziaus-mount-carmel-pa.json",
-      "content_sha256": "54f34ef71a47e4e48875002da72c0e956d9f8f33df460e86d66cc83183895cf6",
+      "content_sha256": "a0118a6febdab44a4c91b04acd5fd58b25c37acd524e9db56fd232d7c8facbb9",
       "source_record_slug": "sv-kryziaus-mount-carmel-pa",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1135,7 +2377,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-m-marijos-apsireiskimo-frackville-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-m-marijos-apsireiskimo-frackville-pa.json",
-      "content_sha256": "7666cc71f601b98a9c99f8a130e8f706c3b690d3fac8c215ec7e5a0dc13ec471",
+      "content_sha256": "c65d9fc4d1dacb66aca82cafc6aa9a1f130ef5b0b6c95cf2e1b441b9994f7e70",
       "source_record_slug": "sv-m-marijos-apsireiskimo-frackville-pa",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1153,7 +2395,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-marijos-apreiskimo-kingston-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-marijos-apreiskimo-kingston-pa.json",
-      "content_sha256": "1fc386bd4f983a1c776e2ebf5866a9d730aa88671d24405a4495f99d10322585",
+      "content_sha256": "239f16fd9119c7eaea645771bcb7f6bb2f6e563d2530f01329dfc5ba7259246d",
       "source_record_slug": "sv-marijos-apreiskimo-kingston-pa",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1171,7 +2413,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-marijos-tautine-kataliku-parapija-philadelphia-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-marijos-tautine-kataliku-parapija-philadelphia-pa.json",
-      "content_sha256": "f12995acb8435b2ea8a90beb64926f636b41c3d7ddcb6e022a39f9a650b1bcba",
+      "content_sha256": "9e45b6d9875ea3a2c4d8f2fd671632a080a6e07d1ae2b787e19f23eef00eb51d",
       "source_record_slug": "sv-marijos-tautine-kataliku-parapija-philadelphia-pa",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1207,7 +2449,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-mykolo-north-chicago-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-mykolo-north-chicago-il.json",
-      "content_sha256": "bd94d9acec1a943792fbb38e967fccfb474b41dba78816c7bdac8c46e8a9b275",
+      "content_sha256": "172f25d026d6dfd8928fe0238693c0dee714606ab07a9401c09d12e9dad5d6ce",
       "source_record_slug": "sv-mykolo-north-chicago-il",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1225,7 +2467,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-mykolo-scranton-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-mykolo-scranton-pa.json",
-      "content_sha256": "30347ffee8b1bc15826368754b6f29355a51f90794e51f634914fefe7a60c054",
+      "content_sha256": "f4b02e5e1d58ef9383fa8107264cd4352db802bf9ed185654de0361e34c8c7d1",
       "source_record_slug": "sv-mykolo-scranton-pa",
       "as_of": "2026-08-14",
       "registry_slugs": [
@@ -1243,7 +2485,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-onos-luzerne-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-onos-luzerne-pa.json",
-      "content_sha256": "85fd552d1370fc1a367f1106b120c4be637d44229215308629591a71036cae50",
+      "content_sha256": "03b8c20fe446655c24c3fd4227865301ca18116fddcdc0a348fee559c6748421",
       "source_record_slug": "sv-onos-luzerne-pa",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1261,7 +2503,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-onos-spring-valley-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-onos-spring-valley-il.json",
-      "content_sha256": "169b733a6e6d36bfa26e02ea09c62fca2aeee357ad09d69c2133ef22d0176b9e",
+      "content_sha256": "25a8792f93f9ea8ccde6dbd04296b76c7daeb460940cdedfa8def6a20f83ac0c",
       "source_record_slug": "sv-onos-spring-valley-il",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1279,7 +2521,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-petro-boston-ma.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-petro-boston-ma.json",
-      "content_sha256": "72cd8880f5de2ebd0cc8a9ff84f3ac9e7e0719234636e7ec71aa92d2100111e9",
+      "content_sha256": "74f568c12aad7b51c1d6b243b8ef284ae734157d6cd2a15a8bc36e96b8286dc2",
       "source_record_slug": "sv-petro-boston-ma",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1297,7 +2539,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-petro-cambridge-ma.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-petro-cambridge-ma.json",
-      "content_sha256": "bcabc1a81f8ef04ef38692b3c7c18475c1ab1a10c887e6c4f1be1162ec0ab924",
+      "content_sha256": "8abc779e5c79ec4b175f026f426d5d9550fd40261d3e3a93ccc93d90034ca347",
       "source_record_slug": "sv-petro-cambridge-ma",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1315,7 +2557,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-petro-detroit-mi.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-petro-detroit-mi.json",
-      "content_sha256": "943d0e59120782d7b06e9b415daf1acc77e50253bad7a9d9110def109f51631a",
+      "content_sha256": "050680190ed207eacb3eaeaaa9e7a48e505ae13be7011f8f5ac9d9ef586ea39a",
       "source_record_slug": "sv-petro-detroit-mi",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1351,7 +2593,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-petro-ir-povilo-grand-rapids-mi.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-petro-ir-povilo-grand-rapids-mi.json",
-      "content_sha256": "c8db6e3a86de5c70e15d84317b16bafdd386e1db644c608dc97c44110af1cc73",
+      "content_sha256": "1de8e0d5644bd200953c7891f5c3a841c59a0aca8d645e0c21953f4b674da318",
       "source_record_slug": "sv-petro-ir-povilo-grand-rapids-mi",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1369,7 +2611,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-pranciskaus-east-chicago-in.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-pranciskaus-east-chicago-in.json",
-      "content_sha256": "adaf6c60b3a82fb72907659a6c47579ed2a4cae4e91632644425cf827b429fc0",
+      "content_sha256": "7bd0ff8dc4a9c054c4a61218f9393fdc8d1e78d931c43557007565d19bb2a14e",
       "source_record_slug": "sv-pranciskaus-east-chicago-in",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1387,7 +2629,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-pranciskaus-lawrence-ma.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-pranciskaus-lawrence-ma.json",
-      "content_sha256": "654cf20552a591403b2ec013572eb3838e91f0e38041ccc11a3563e628662dc1",
+      "content_sha256": "6c672e74804cabb985fd773487676771aba3f68f78ebedd335586b5669e1de84",
       "source_record_slug": "sv-pranciskaus-lawrence-ma",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1423,7 +2665,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/sv-vincento-pauliecio-esplen-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/sv-vincento-pauliecio-esplen-pa.json",
-      "content_sha256": "ad5e0b27931e03adbed6a211fdbeacdd66a181abd41041abc9dfb84d2032f60b",
+      "content_sha256": "3213c33df0a232ede4901ac43ca39415362e5cd510389152eace9181919e62b0",
       "source_record_slug": "sv-vincento-pauliecio-esplen-pa",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1459,7 +2701,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/svc-m-marijos-nekalto-prasidejimo-chicago-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/svc-m-marijos-nekalto-prasidejimo-chicago-il.json",
-      "content_sha256": "351c94f9b5b87456a326023001dbdd7a7c570bbc5760c136b1b915fab662021b",
+      "content_sha256": "e0bd32877dd4614f76617b87680bb68fe8936fedd6e47eac986f6aeaedddc895",
       "source_record_slug": "svc-m-marijos-nekalto-prasidejimo-chicago-il",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1477,7 +2719,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/svc-mergeles-marijos-gimimo-chicago-il.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/svc-mergeles-marijos-gimimo-chicago-il.json",
-      "content_sha256": "038b5389f048d82527d29c823f94b5a72eca91b1938019fab71917d564f4a6bf",
+      "content_sha256": "96da5af598d3a21af85a86e84b54cf6cfa3e57bef72c9cced2ad68808107177b",
       "source_record_slug": "svc-mergeles-marijos-gimimo-chicago-il",
       "as_of": "2026-07-09",
       "registry_slugs": [
@@ -1495,7 +2737,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/svc-trejybes-hartford-ct.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/svc-trejybes-hartford-ct.json",
-      "content_sha256": "b8481628f4adfbe764a09a3c4ae09b499330913948090512752e087bc251786d",
+      "content_sha256": "172352aca2adc0ce84eee9e362727b28ea993ad2cd43066d9454834a9b167171",
       "source_record_slug": "svc-trejybes-hartford-ct",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1513,7 +2755,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/svc-trejybes-wilkes-barre-pa.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/svc-trejybes-wilkes-barre-pa.json",
-      "content_sha256": "dd2936301d913b6f37dba21535bacbbf26d7520b550426d96e47c9217bb50756",
+      "content_sha256": "2cfcf1139b20aa44b9034f99abb9ecd4a1b5922f42fbbc136886f348600608fc",
       "source_record_slug": "svc-trejybes-wilkes-barre-pa",
       "as_of": "2026-07-16",
       "registry_slugs": [
@@ -1531,7 +2773,7 @@
     {
       "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/unnamed-lithuanian-parish-baltimore-md.json",
       "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/unnamed-lithuanian-parish-baltimore-md.json",
-      "content_sha256": "148acd14c36739b0e793888d3a62882694ff9e5d25dd6007598c5d94278fa370",
+      "content_sha256": "493ed849ff4ba0a50916b10c87b754c82344dbc0e41a35b91db0bf74f596ffbc",
       "source_record_slug": "unnamed-lithuanian-parish-baltimore-md",
       "as_of": "2026-07-26",
       "registry_slugs": [
@@ -1545,6 +2787,24 @@
       "site_extraction_candidate": true,
       "lineage_extraction_candidate": true,
       "publication_state": "evidence_input_requires_canonical_adjudication"
+    },
+    {
+      "case_file": "repo://culturenet-brain/docs/research/parish-canon/case-files/current/zion-lithuanian-lutheran-oak-lawn-il.json",
+      "legacy_site_path": "repo://save-our-lithuanian-parishes/data/case-records/zion-lithuanian-lutheran-oak-lawn-il.json",
+      "content_sha256": "978b8d6650d4cea1347b740fcc2ef71fe6b7d41c00266f4fefe4b2cc3425e95a",
+      "source_record_slug": "zion-lithuanian-lutheran-oak-lawn-il",
+      "as_of": "2026-08-17",
+      "registry_slugs": [
+        "zion-lithuanian-lutheran-oak-lawn-il"
+      ],
+      "situation_keys": [
+        "zion-lithuanian-lutheran-oak-lawn-il"
+      ],
+      "source_count": 8,
+      "development_count": 4,
+      "site_extraction_candidate": false,
+      "lineage_extraction_candidate": false,
+      "publication_state": "canonical_packet_already_projected"
     }
   ]
 }

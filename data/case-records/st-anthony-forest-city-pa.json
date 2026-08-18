@@ -1,0 +1,130 @@
+{
+  "slug": "st-anthony-forest-city-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "demolished",
+  "currentUse": "St. Anthony no longer operates as a Lithuanian Roman Catholic parish, and the reviewed local history reports that its replacement church was razed around the turn of the twenty-first century after damage associated with mine subsidence. The Diocese of Scranton records St. Anthony as closed in 1975 and names Ascension Parish as successor. Ascension, founded in 2010, currently worships at the distinct St. Joseph Church site at 741 Delaware Street in Forest City; that active site is not the former St. Anthony building.",
+  "summary": "St. Anthony of Padua was Forest City's Lithuanian Roman Catholic parish. A detailed local history places parish organization on August 16, 1894, groundbreaking on September 3, and the loss of its first church to fire on February 21, 1899. A replacement church begun that June was dedicated on October 8, 1905. The Diocese records St. Anthony as closed in 1975 and identifies Ascension Parish as its successor, while the local history describes a 1977 community merger with St. Agnes and St. Michael into Sacred Heart; the two closure descriptions are preserved as a conflict rather than collapsed into one date. The former St. Anthony building was later demolished. Ascension remains active at the separate St. Joseph Church site.",
+  "historicalNarrative": [
+    {
+      "text": "Forest City's Lithuanian Catholics organized St. Anthony of Padua Parish on August 16, 1894, according to a detailed local parish history. Ground was broken on September 3, 1894. The source identifies the community and titular directly, so the identity does not depend on a same-name inference or on the raw 1910 Draugas mention index.",
+      "sources": [
+        {
+          "url": "https://www.kosciuskahealinggarden.com/forest-city.html",
+          "locator": "Forest City church histories, St. Anthony of Padua section: organization and 1894 groundbreaking"
+        }
+      ]
+    },
+    {
+      "text": "The first St. Anthony church burned on February 21, 1899. Work on a replacement began June 22, 1899; the cornerstone and bells were blessed November 22, and the completed church was dedicated October 8, 1905. Later mine subsidence damaged the site. A 1934 Lithuanian newspaper notice gives 517 Lackawanna Street for the St. Anthony rectory, but the reviewed evidence does not prove that number was the church entrance rather than the parish house.",
+      "sources": [
+        {
+          "url": "https://www.kosciuskahealinggarden.com/forest-city.html",
+          "locator": "St. Anthony of Padua section: 1899 fire, replacement construction, 1905 dedication, mine damage"
+        },
+        {
+          "url": "https://www.spauda.org/darbininkas/archive/1934/1934-09-07-DARBININKAS.pdf",
+          "locator": "Darbininkas, 1934-09-07, parish notice giving St. Anthony rectory, 517 Lackawanna Street, Forest City"
+        }
+      ]
+    },
+    {
+      "text": "The Diocese of Scranton's consolidated register lists St. Anthony, Forest City, as closed in 1975 and assigns Ascension Parish as successor. The local history instead says St. Anthony merged with St. Agnes and St. Michael in 1977 to form Sacred Heart. These accounts may describe different canonical and pastoral stages, but the instruments needed to reconcile the dates and intermediate Sacred Heart relationship were not located. The official 1975 closure date is retained while the 1977 account remains an explicit conflict.",
+      "sources": [
+        {
+          "url": "https://www.dioceseofscranton.org/wp-content/uploads/2024/11/Consolidated-Parishes-updated-11-19-24.pdf",
+          "locator": "Consolidated Parishes, Forest City: St. Anthony, closed 1975, successor Ascension Parish"
+        },
+        {
+          "url": "https://www.kosciuskahealinggarden.com/forest-city.html",
+          "locator": "Forest City church histories: reported 1977 merger into Sacred Heart and later demolition"
+        }
+      ]
+    },
+    {
+      "text": "The local history reports that the former St. Anthony church was razed around the turn of the twenty-first century. Ascension Parish's diocesan directory identifies that successor as founded in 2010, with its office at 612 Hudson Street and worship at St. Joseph Church, 741 Delaware Street. The typed continuity is institutional succession; the current St. Joseph worship site is separate and does not establish building continuity with St. Anthony.",
+      "sources": [
+        {
+          "url": "https://www.kosciuskahealinggarden.com/forest-city.html",
+          "locator": "St. Anthony of Padua section: former church razed around the turn of the twenty-first century"
+        },
+        {
+          "url": "https://www.dioceseofscranton.org/find-a-parish/ascension-parish-forest-city/",
+          "locator": "Current diocesan directory: Ascension Parish office and St. Joseph Church worship site; accessed 2026-08-17"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1894-08-16",
+      "headline": "Lithuanian Catholics organize St. Anthony",
+      "detail": "A local parish history dates organization to August 16 and groundbreaking to September 3, 1894.",
+      "sources": [
+        {
+          "title": "Forest City church histories",
+          "publisher": "Kosciuska Healing Garden",
+          "date": "accessed 2026-08-17",
+          "url": "https://www.kosciuskahealinggarden.com/forest-city.html"
+        }
+      ]
+    },
+    {
+      "date": "1899-02-21",
+      "headline": "First church burns; replacement follows",
+      "detail": "The first building burned in February 1899, and a replacement begun that June was dedicated in 1905.",
+      "sources": [
+        {
+          "title": "Forest City church histories",
+          "publisher": "Kosciuska Healing Garden",
+          "date": "accessed 2026-08-17",
+          "url": "https://www.kosciuskahealinggarden.com/forest-city.html"
+        }
+      ]
+    },
+    {
+      "date": "1975",
+      "headline": "Diocese records St. Anthony as closed",
+      "detail": "The consolidated diocesan register gives 1975 as the closure year and Ascension Parish as successor.",
+      "sources": [
+        {
+          "title": "Consolidated Parishes",
+          "publisher": "Diocese of Scranton",
+          "date": "updated 2024-11-19",
+          "page": "Forest City entry",
+          "url": "https://www.dioceseofscranton.org/wp-content/uploads/2024/11/Consolidated-Parishes-updated-11-19-24.pdf"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Forest City church histories",
+      "publisher": "Kosciuska Healing Garden",
+      "date": "accessed 2026-08-17",
+      "url": "https://www.kosciuskahealinggarden.com/forest-city.html"
+    },
+    {
+      "title": "St. Anthony rectory notice",
+      "publisher": "Darbininkas",
+      "date": "1934-09-07",
+      "page": "parish notice",
+      "url": "https://www.spauda.org/darbininkas/archive/1934/1934-09-07-DARBININKAS.pdf"
+    },
+    {
+      "title": "Consolidated Parishes",
+      "publisher": "Diocese of Scranton",
+      "date": "updated 2024-11-19",
+      "page": "Forest City entry",
+      "url": "https://www.dioceseofscranton.org/wp-content/uploads/2024/11/Consolidated-Parishes-updated-11-19-24.pdf"
+    },
+    {
+      "title": "Ascension Parish, Forest City",
+      "publisher": "Diocese of Scranton",
+      "date": "accessed 2026-08-17",
+      "url": "https://www.dioceseofscranton.org/find-a-parish/ascension-parish-forest-city/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The Diocese records St. Anthony as closed in 1975 and names Ascension Parish as successor. A detailed local history describes a 1977 merger with St. Agnes and St. Michael into Sacred Heart. The official 1975 date is selected for closure, while the 1977 report is retained as a possible later pastoral reorganization whose canonical instrument has not been found. The 1910 Draugas item in the inherited mention index records a Forest City contribution sent by a priest; it is only a lead and is not used to establish parish identity or lifecycle.",
+  "gaps": "The canonical erection instrument; legal incorporation and deed; whether 517 Lackawanna Street was only the rectory or also the church parcel; the precise relationship among the 1975 closure, reported 1977 Sacred Heart merger, and later Ascension succession; sacramental-record and cemetery custody; demolition date and order; and the former parcel's present ownership and use remain unresolved."
+}

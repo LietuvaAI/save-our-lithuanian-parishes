@@ -4,6 +4,60 @@
   "buildingStatus": "demolished",
   "currentUse": "Site redeveloped: seven affordable owner-occupied homes (three duplexes and one single-family house) built by nonprofit Bread & Roses Housing on the former church lot on Washington Street, completed by June 2021",
   "summary": "The \"unnamed\" Lithuanian church of Haverhill can now be identified: it was St. George's, the Lithuanian parish on Washington Street in the Mount Washington neighborhood, one of four ethnic parishes (with Polish St. Michael's, Italian St. Rita's, and French St. Joseph's) that the Archdiocese of Boston consolidated into All Saints Parish in 1998. The 1892-built brick church, acquired by Lithuanians around 1910, then sat unoccupied for two decades — briefly serving as a police precinct before falling derelict, its stained glass still visible through broken windows in 2017. In October 2018 the Haverhill City Council unanimously granted Lawrence-based nonprofit Bread & Roses Housing a special permit to demolish it for affordable owner-occupied townhouses, and the 127-year-old building was torn down in mid-November 2019, with a former parishioner salvaging bricks as mementos of the church where she was married and her children baptized. The plan was scaled back from ten units to seven, and in June 2021 Governor Charlie Baker and Lt. Governor Karyn Polito visited the site to celebrate the seven completed affordable homes. No trace of the church remains on site, and no Lithuanian preservation effort, memorial, or reunion activity connected to the parish was found in recent press.",
+  "historicalNarrative": [
+    {
+      "text": "Haverhill's unnamed Lithuanian record is identifiable as St. George, the Lithuanian Roman Catholic parish in the Mount Washington neighborhood. Community history places the congregation in a brick church built in 1892 and acquired by Lithuanians around 1910. The exact canonical erection date and the precise Washington Street number remain unresolved, so the building's construction and the Lithuanian parish's institutional beginning should not be conflated.",
+      "sources": [
+        {
+          "url": "https://www.merrimackvalleylife.com/articles/memories-of-haverhill-40/",
+          "locator": "Haverhill parish-history section identifying St. George as the Lithuanian parish"
+        },
+        {
+          "url": "https://global.truelithuania.com/lawrence-and-lowell-massachusetts-1682/",
+          "locator": "Haverhill Lithuanian church section: 1892 building and Lithuanian acquisition around 1910"
+        }
+      ]
+    },
+    {
+      "text": "In 1998 St. George ceased as a separate parish when four Haverhill ethnic parishes were consolidated into All Saints. The church building then had a separate afterlife: it was used briefly as a police precinct and later stood vacant for roughly two decades. Parish consolidation establishes the institutional outcome, while vacancy describes only the former worship site.",
+      "sources": [
+        {
+          "url": "https://www.merrimackvalleylife.com/articles/memories-of-haverhill-40/",
+          "locator": "Account of the 1998 consolidation of St. George and three other ethnic parishes into All Saints"
+        },
+        {
+          "url": "https://www.eagletribune.com/news/haverhill/church-to-be-replaced-with-affordable-homes/article_92318b15-38dc-5551-9e91-c43b58822d0c.html",
+          "locator": "2018 report describing the former church's long vacancy and redevelopment proposal"
+        }
+      ]
+    },
+    {
+      "text": "Haverhill approved demolition and affordable-housing redevelopment in October 2018. After the proposal was revised, crews demolished the 127-year-old church in November 2019. Contemporary coverage recorded a former parishioner salvaging bricks as personal mementos, but no source located for this case establishes that the cornerstone or another formal parish monument was preserved.",
+      "sources": [
+        {
+          "url": "https://www.eagletribune.com/news/haverhill/church-to-be-replaced-with-affordable-homes/article_92318b15-38dc-5551-9e91-c43b58822d0c.html",
+          "locator": "October 2018 City Council approval for demolition and housing"
+        },
+        {
+          "url": "https://www.eagletribune.com/news/haverhill/haverhill-says-goodbye-to-st-george-s-church-beloved-building/article_52c9563e-9ef4-5c0f-8abb-edca17cd8605.html",
+          "locator": "November 2019 demolition report and parishioner recollections"
+        },
+        {
+          "url": "https://www.hgazette.com/news/local_news/saying-goodbye-to-st-george-s-church/article_21d78af8-e5bf-55f1-a732-5f841d8d0855.html",
+          "locator": "Contemporary local coverage of the church's demolition"
+        }
+      ]
+    },
+    {
+      "text": "By June 2021 Bread & Roses Housing had completed seven affordable owner-occupied homes on the former church lot. That residential redevelopment is the present site condition; it is not a successor religious institution. The available reporting does not provide the archdiocese-to-developer transfer price or establish a surviving Lithuanian memorial on the redeveloped parcel.",
+      "sources": [
+        {
+          "url": "https://www.eagletribune.com/news/haverhill/baker-celebrates-new-bread-roses-housing-in-haverhill/article_e48fd78f-f6c3-56cf-aeb7-67a4d57dfb83.html",
+          "locator": "June 2021 report on seven completed Bread & Roses homes at the former St. George site"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2018-10-02",

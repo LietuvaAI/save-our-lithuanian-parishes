@@ -1,0 +1,299 @@
+{
+  "slug": "st-joseph-binghamton-ny",
+  "culturenetEntityId": "cn:institution:st-joseph-binghamton-ny",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian Catholic society linked to a church project by 1911 · first completed church reported in 1916 · institution closed, exact canonical formation and terminal mechanics unresolved",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "closed",
+  "buildingStatus": "unknown",
+  "currentUse": "The Diocese of Syracuse lists St. Joseph in Binghamton as closed and directs its sacramental records to the Church of the Holy Trinity. Secondary histories report a final Mass in 2003 and sale of the 1 Judson Avenue church in 2008. Later public records place Grace Tabernacle and then a New York State residential program at 1 Judson Avenue, but the reviewed evidence does not prove how much of the 1949-1950 church fabric survives or its current interior condition.",
+  "summary": "St. Joseph was Binghamton's Lithuanian Roman Catholic parish. A Lithuanian society bought 315 Clinton Street for a church project in 1911, but that project was abandoned and the property became a separate association hall rather than the parish church. A first completed church is reported in 1916, followed by a new church at 1 Judson Avenue in 1949-1950. The parish is officially closed and its records are held by Holy Trinity; sources distinguish a 2003 final Mass from the 2008 sale of the Judson property. The former church site's present physical condition remains unresolved.",
+  "institutionLifecycle": {
+    "formation": "The National Register nomination documents a St. Joseph Lithuanian Society church project by 1911 and identifies the society as a parent organization of the Roman Catholic parish. Secondary field documentation reports a completed first church in 1916. The exact parish erection date and instrument remain unresolved.",
+    "institutionalForm": "Lithuanian Roman Catholic parish in the Diocese of Syracuse.",
+    "jurisdiction": "Roman Catholic Diocese of Syracuse.",
+    "terminalStatus": "Closed. A secondary site history reports a final Mass on November 16, 2003, while field documentation associates 2008 with sale to Grace Tabernacle. The official diocesan directory confirms closure but supplies no effective date or merger decree.",
+    "currentVerification": "The Diocese of Syracuse directs St. Joseph sacramental records to the Church of the Holy Trinity in Binghamton. A current New York State procurement page lists 1 Judson Avenue as a Broome DDSOO residential-program site; this does not establish the former church's structural or interior condition."
+  },
+  "worshipSites": [
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-joseph-first-church-binghamton-ny",
+      "name": "First St. Joseph Lithuanian church",
+      "address": "Judson Avenue area, Binghamton, NY; exact street number unresolved",
+      "usePeriod": "reported built in 1916; converted to parish hall in 1952 according to a secondary site history",
+      "buildingCondition": "unknown",
+      "currentUse": "Later parish-hall phase is reported, but the building's terminal fate and exact address are unresolved.",
+      "evidence": [
+        {
+          "url": "https://global.truelithuania.com/upstate-new-york-831/",
+          "locator": "Binghamton Lithuanian heritage section: 1916 old church across from the later church"
+        },
+        {
+          "url": "https://www.waymarking.com/waymarks/wmTNP7_St_Josephs_Church_Binghamton_NY",
+          "locator": "secondary site history: old church converted to parish hall in 1952"
+        }
+      ]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-joseph-judson-binghamton-ny",
+      "name": "St. Joseph Lithuanian Church",
+      "address": "1 Judson Avenue, Binghamton, NY 13905",
+      "usePeriod": "constructed 1949-1950; final Mass reported November 16, 2003; property sale reported in 2008",
+      "buildingCondition": "unknown",
+      "currentUse": "Grace Tabernacle was documented at the address in 2009, and New York State later listed 1 Judson Avenue as a residential-program site. Exact continuity of the former church structure and current interior condition remain unresolved.",
+      "evidence": [
+        {
+          "url": "https://global.truelithuania.com/upstate-new-york-831/",
+          "locator": "Binghamton Lithuanian heritage section: 1 Judson Avenue, 1949-1950 church, 2008 sale"
+        },
+        {
+          "url": "https://www.waymarking.com/waymarks/wmTNP7_St_Josephs_Church_Binghamton_NY",
+          "locator": "secondary site history: 1950 dedication and November 16, 2003 final Mass"
+        },
+        {
+          "url": "https://www.legacy.com/us/obituaries/legacyremembers/donald-shaw-obituary?id=28737016",
+          "locator": "2009 memorial service at Grace Tabernacle, 1 Judson Avenue"
+        },
+        {
+          "url": "https://opwdd.ny.gov/procurement-opportunities/rfq-opd-050724",
+          "locator": "Broome DDSOO site listing for 1 Judson Avenue"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-joseph-binghamton-ny",
+      "target": "cn:building_site:st-joseph-first-church-binghamton-ny",
+      "date": "reported 1916-1952 church phase; later hall phase",
+      "status": "source-bounded",
+      "note": "The first church and its later hall use are secondary-source readings; exact address and terminal fate remain unresolved."
+    },
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-joseph-binghamton-ny",
+      "target": "cn:building_site:st-joseph-judson-binghamton-ny",
+      "date": "1950-2003/2008",
+      "status": "conflict_preserved",
+      "note": "The 2003 date marks a reported final Mass; 2008 marks reported sale of the property, not a second parish closure."
+    },
+    {
+      "type": "institution-consolidated-into-institution",
+      "source": "cn:institution:st-joseph-binghamton-ny",
+      "target": "Church of the Holy Trinity, Binghamton",
+      "date": "after parish worship ended; exact date and canonical mechanism unresolved",
+      "status": "source-bounded",
+      "note": "The National Register nomination and field history describe incorporation or consolidation into Holy Trinity; no decree was reviewed."
+    },
+    {
+      "type": "records-custody",
+      "source": "cn:institution:st-joseph-binghamton-ny",
+      "target": "Church of the Holy Trinity, Binghamton",
+      "date": "current directory routing as of 2026-08-17",
+      "status": "accepted",
+      "note": "The Diocese of Syracuse parish finder directs St. Joseph sacramental records to Holy Trinity."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "Binghamton's Lithuanian Catholics organized through the St. Joseph Lithuanian Society before the parish had a completed church. A National Register nomination identifies the society as a parent organization of St. Joseph Lithuanian Church and says it bought 315 Clinton Street in 1911 to construct a church. This establishes a parish-linked project, not a completed worship site or a canonical erection date.",
+      "sources": [
+        {
+          "url": "https://npgallery.nps.gov/GetAsset/6fb15745-04d9-48cb-85f2-dcec28f44a13/",
+          "locator": "National Register nomination, section 8, p. 7"
+        }
+      ]
+    },
+    {
+      "text": "The Clinton Street church project was abandoned in 1917 and the unfinished property was sold. The Lithuanian National Association then completed its own hall at 315 Clinton Street, a separate civic and cultural building that served Lithuanian organizations until its 1964 sale to Tri-Cities Opera. The hall's relationship to the society does not make it a St. Joseph worship site.",
+      "sources": [
+        {
+          "url": "https://npgallery.nps.gov/GetAsset/6fb15745-04d9-48cb-85f2-dcec28f44a13/",
+          "locator": "National Register nomination, section 8, pp. 1 and 7"
+        },
+        {
+          "url": "https://usa.mfa.lt/storage/usa/public/uploads/2025/09/list-of-immovable-cultural-heritage-significant-to-lithuania-within-the-territory-of-the-usa.pdf#page=8",
+          "locator": "PDF p. 8 / printed p. 8, NY 76: Lithuanian National Association Hall and Tri-Cities Opera at 315 Clinton Street"
+        }
+      ]
+    },
+    {
+      "text": "Secondary field documentation reports that a completed first St. Joseph church was built in 1916 on the opposite side of the later Judson Avenue site. A separate site history says this older church became the parish hall in 1952. Because the accepted public sources do not give a precise street number or deed, the first church remains a distinct but incompletely located site.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/upstate-new-york-831/",
+          "locator": "Binghamton Lithuanian heritage section: old 1916 church and later hall"
+        },
+        {
+          "url": "https://www.waymarking.com/waymarks/wmTNP7_St_Josephs_Church_Binghamton_NY",
+          "locator": "secondary site history: old church converted to parish hall in 1952"
+        }
+      ]
+    },
+    {
+      "text": "The later church at 1 Judson Avenue was built in 1949-1950. Field documentation records Lithuanian inscriptions and religious art on the modern facade, while the secondary site history dates the dedication to February 5, 1950. These are building milestones, not evidence that the parish itself began in 1950.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/upstate-new-york-831/",
+          "locator": "Binghamton Lithuanian heritage section: 1 Judson Avenue church and facade"
+        },
+        {
+          "url": "https://www.waymarking.com/waymarks/wmTNP7_St_Josephs_Church_Binghamton_NY",
+          "locator": "secondary site history: February 5, 1950 dedication"
+        }
+      ]
+    },
+    {
+      "text": "The end of separate parish worship and the disposition of the building are different events. A secondary site history reports a final Mass on November 16, 2003; field documentation says the church was closed and sold to Grace Tabernacle in 2008. The Diocese of Syracuse now lists St. Joseph as closed and directs its sacramental records to Holy Trinity, but it does not publish an effective closure date or merger instrument.",
+      "sources": [
+        {
+          "url": "https://www.waymarking.com/waymarks/wmTNP7_St_Josephs_Church_Binghamton_NY",
+          "locator": "secondary site history: November 16, 2003 closing Mass"
+        },
+        {
+          "url": "https://global.truelithuania.com/upstate-new-york-831/",
+          "locator": "Binghamton Lithuanian heritage section: 2008 sale and consolidation description"
+        },
+        {
+          "url": "https://syracusediocese.org/parishfinder/",
+          "locator": "St. Joseph (Closed), Binghamton; records at Church of the Holy Trinity"
+        }
+      ]
+    },
+    {
+      "text": "The 1 Judson Avenue property continued through later uses. A 2009 obituary placed a memorial service at Grace Tabernacle there, and a current New York State procurement page lists the address as a Broome DDSOO residential-program site. These address-level records show post-parish occupancy but do not establish the present condition of the 1949-1950 church fabric or its interior.",
+      "sources": [
+        {
+          "url": "https://www.legacy.com/us/obituaries/legacyremembers/donald-shaw-obituary?id=28737016",
+          "locator": "2009 memorial-service notice for Grace Tabernacle at 1 Judson Avenue"
+        },
+        {
+          "url": "https://opwdd.ny.gov/procurement-opportunities/rfq-opd-050724",
+          "locator": "Broome DDSOO 1 Judson Avenue site listing"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1911-1917",
+      "headline": "Clinton Street church project is attempted and abandoned",
+      "detail": "The St. Joseph Lithuanian Society bought 315 Clinton Street for a church project, but the unfinished project was abandoned and the property followed a separate association-hall history.",
+      "sources": [
+        {
+          "title": "Lithuanian National Association Hall National Register Nomination",
+          "publisher": "National Park Service / New York State Historic Preservation Office",
+          "date": "2013-04",
+          "page": "section 8, pp. 1 and 7",
+          "url": "https://npgallery.nps.gov/GetAsset/6fb15745-04d9-48cb-85f2-dcec28f44a13/"
+        }
+      ]
+    },
+    {
+      "date": "1949-1950",
+      "headline": "Later Judson Avenue church built",
+      "detail": "A new St. Joseph church was constructed at 1 Judson Avenue; the exact dedication date is preserved as a secondary reading.",
+      "sources": [
+        {
+          "title": "Upstate New York: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "accessed 2026-08-17",
+          "page": "Binghamton Lithuanian heritage section",
+          "url": "https://global.truelithuania.com/upstate-new-york-831/"
+        },
+        {
+          "title": "St. Joseph's Church - Binghamton, NY",
+          "publisher": "Waymarking.com",
+          "date": "2016-11-13",
+          "page": "secondary site history",
+          "url": "https://www.waymarking.com/waymarks/wmTNP7_St_Josephs_Church_Binghamton_NY"
+        }
+      ]
+    },
+    {
+      "date": "2003-2008",
+      "headline": "Final worship and property sale remain distinct",
+      "detail": "A secondary history reports the final Mass in 2003; field documentation reports closure and sale to Grace Tabernacle in 2008. The diocese confirms closed status without publishing the effective date.",
+      "sources": [
+        {
+          "title": "St. Joseph's Church - Binghamton, NY",
+          "publisher": "Waymarking.com",
+          "date": "2016-11-13",
+          "page": "secondary site history",
+          "url": "https://www.waymarking.com/waymarks/wmTNP7_St_Josephs_Church_Binghamton_NY"
+        },
+        {
+          "title": "Upstate New York: Lithuanians and Lithuanian heritage",
+          "publisher": "Global True Lithuania",
+          "date": "accessed 2026-08-17",
+          "page": "Binghamton Lithuanian heritage section",
+          "url": "https://global.truelithuania.com/upstate-new-york-831/"
+        },
+        {
+          "title": "Parish Finder",
+          "publisher": "Roman Catholic Diocese of Syracuse",
+          "date": "accessed 2026-08-17",
+          "page": "St. Joseph (Closed), Binghamton",
+          "url": "https://syracusediocese.org/parishfinder/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lithuanian National Association Hall National Register Nomination",
+      "publisher": "National Park Service / New York State Historic Preservation Office",
+      "date": "2013-04",
+      "page": "section 8, pp. 1 and 7",
+      "url": "https://npgallery.nps.gov/GetAsset/6fb15745-04d9-48cb-85f2-dcec28f44a13/"
+    },
+    {
+      "title": "List of Immovable Cultural Heritage Significant to Lithuania Within the Territory of the U.S.A.",
+      "publisher": "Ministry of Foreign Affairs of the Republic of Lithuania",
+      "date": "2024-03-19",
+      "page": "PDF p. 8 / printed p. 8, NY 76",
+      "url": "https://usa.mfa.lt/storage/usa/public/uploads/2025/09/list-of-immovable-cultural-heritage-significant-to-lithuania-within-the-territory-of-the-usa.pdf#page=8"
+    },
+    {
+      "title": "Upstate New York: Lithuanians and Lithuanian heritage",
+      "publisher": "Global True Lithuania",
+      "date": "accessed 2026-08-17",
+      "page": "Binghamton Lithuanian heritage section",
+      "url": "https://global.truelithuania.com/upstate-new-york-831/"
+    },
+    {
+      "title": "St. Joseph's Church - Binghamton, NY",
+      "publisher": "Waymarking.com",
+      "date": "2016-11-13",
+      "page": "secondary site history",
+      "url": "https://www.waymarking.com/waymarks/wmTNP7_St_Josephs_Church_Binghamton_NY"
+    },
+    {
+      "title": "Parish Finder",
+      "publisher": "Roman Catholic Diocese of Syracuse",
+      "date": "accessed 2026-08-17",
+      "page": "St. Joseph (Closed), Binghamton; Holy Trinity records routing",
+      "url": "https://syracusediocese.org/parishfinder/"
+    },
+    {
+      "title": "Donald Shaw obituary",
+      "publisher": "Legacy Remembers",
+      "date": "2009-04-28",
+      "page": "memorial-service notice",
+      "url": "https://www.legacy.com/us/obituaries/legacyremembers/donald-shaw-obituary?id=28737016"
+    },
+    {
+      "title": "RFQ OPD-050724",
+      "publisher": "New York State Office for People With Developmental Disabilities",
+      "date": "accessed 2026-08-17",
+      "page": "Broome DDSOO site listing, 1 Judson Avenue",
+      "url": "https://opwdd.ny.gov/procurement-opportunities/rfq-opd-050724"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The inherited 1916 formation value is supportable only as the reported first completed church, not yet as a canonical parish-erection date. The 2003 final Mass and 2008 sale describe different events. The official diocesan directory confirms closure but does not resolve the exact terminal date or mechanism. The Lithuanian National Association Hall at 315 Clinton Street is a separate civic property, not the completed St. Joseph parish church.",
+  "gaps": "The exact parish erection instrument and date; the exact address and fate of the 1916 church; whether any portion of the abandoned 315 Clinton Street church project was used for worship; the closure or consolidation decree; the interval between the 2003 final Mass and 2008 sale; the canonical status of Holy Trinity continuity beyond records custody and secondary descriptions; the current physical and interior condition of the 1 Judson church fabric; and any parish cemetery remain unresolved."
+}

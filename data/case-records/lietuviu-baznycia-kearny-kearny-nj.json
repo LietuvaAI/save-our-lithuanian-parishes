@@ -4,6 +4,73 @@
   "buildingStatus": "standing",
   "currentUse": "Active Roman Catholic parish church — Our Lady of Sorrows, 136 Davis Ave., Kearny, NJ (Archdiocese of Newark), founded 1915 as Our Lady of Sorrows Lithuanian R.C. Church; still holding daily and Sunday Masses",
   "summary": "Our Lady of Sorrows at 136 Davis Ave., Kearny — founded in 1915 as \"Our Lady of Sorrows Lithuanian R.C. Church\" to serve roughly 700 Lithuanians in Harrison and 400 in Kearny — is standing and operating as an active Archdiocese of Newark parish, with daily Mass Monday–Friday at 7:00 AM, a 5:00 PM Saturday vigil, and 9:00 AM Sunday Mass. The building retains its Lithuanian fabric: a plaque marking it as officially Lithuanian, a 1962 Knights of Lithuania sun-cross at the entrance, stained glass of Our Lady of Vilna and Our Lady of Šiluva, Lithuanian-inscribed Stations of the Cross, and pews bearing donor Lithuanian family names. The parish is small and shrinking: archdiocesan planning data records Mass attendance of 178 in 2019 falling to 164 in 2024, with 2 baptisms against 11 funerals in 2024, and weekly collections in the $800–1,000 range per the August 2025 bulletin. Since July 1, 2024 it has shared its pastor, Fr. Cesar J. Quinones, with neighboring St. Cecilia, Kearny (appointment runs to June 30, 2030), and its deacon is John Sarnas with parish council coordinator Linda Mackalonis — Lithuanian surnames still visible in parish leadership and Mass intentions. The parish is exposed to the archdiocese's \"We Are His Witnesses\" restructuring: it sits in Planning Area I (Southeast Essex), and both Round 1 draft pastorate models published in September 2025 group Our Lady of Sorrows with St. Cecilia (one option adds the two Harrison parishes); the archdiocese states the process \"is not a plan to close or merge parishes\" but draft models were in parish listening sessions as of late 2025. As of mid-July 2026 the parish website carried a notice that the July 11–12 weekend Masses would be celebrated at St. Cecilia instead of Our Lady of Sorrows \"due to unforeseen circumstances,\" with no reason given. No Lithuanian-language Mass appears on the published schedule, and the parish today describes itself as \"comprised of many families from different cultures and backgrounds.\"",
+  "historicalNarrative": [
+    {
+      "text": "Our Lady of Sorrows is the Lithuanian Roman Catholic parish founded for the Kearny–Harrison community in 1914–1915. Its own history says the first congregation worshipped in St. Cecilia's parish hall, establishing hosted worship before the Lithuanian community obtained a church of its own.",
+      "sources": [
+        {
+          "url": "https://olskearny.org/olsweb/?page_id=110",
+          "locator": "Parish History, founding and first worship at St. Cecilia's hall"
+        }
+      ]
+    },
+    {
+      "text": "The parish next used a modest half-basement church in Harrison before moving to its present church at 136 Davis Avenue in Kearny in the mid-1950s. These were successive worship sites of one parish; they are not evidence for a separate St. Michael institution, a same-name confusion associated with Bayonne.",
+      "sources": [
+        {
+          "url": "https://olskearny.org/olsweb/?page_id=110",
+          "locator": "Parish History, Harrison church and Kearny construction sequence"
+        },
+        {
+          "url": "https://global.truelithuania.com/new-jersey-613/",
+          "locator": "Kearny–Harrison, Our Lady of Sorrows site history"
+        }
+      ]
+    },
+    {
+      "text": "The Kearny church retains visible Lithuanian fabric, including a Lithuanian designation plaque, a Knights of Lithuania sun-cross, Marian stained glass, Lithuanian-inscribed Stations of the Cross, and pews bearing donor names. The building's ethnic features survive even though the parish now describes a congregation drawn from multiple cultures.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/tag/lithuanians-in-kearny-new-jersey/",
+          "locator": "Our Lady of Sorrows entry, Lithuanian architectural and devotional details"
+        },
+        {
+          "url": "https://olskearny.org/",
+          "locator": "Home page, current parish description and Mass schedule"
+        }
+      ]
+    },
+    {
+      "text": "Our Lady of Sorrows remains an active parish with daily and weekend Masses. Since July 1, 2024 it has shared a pastor with St. Cecilia, Kearny; that shared appointment is an administrative relationship, not evidence that the two parish institutions merged.",
+      "sources": [
+        {
+          "url": "https://rcan.org/clergy-appointments-may-2024/",
+          "locator": "May 2024 clergy appointments, Father Cesar J. Quinones appointment"
+        },
+        {
+          "url": "https://olskearny.org/olsweb/?page_id=19",
+          "locator": "Mass Schedule page, current daily and weekend liturgies"
+        }
+      ]
+    },
+    {
+      "text": "The archdiocese's 2025 planning models group Our Lady of Sorrows with St. Cecilia and document a small, declining Mass-attendance base, but the planning materials expressly do not constitute a closure or merger decision. No Lithuanian-language Mass appears on the current published schedule, so active parish life and present Lithuanian-language ministry must remain separate questions.",
+      "sources": [
+        {
+          "url": "https://rcan.org/wp-content/uploads/2025/09/Essex-County-Southeast.pdf",
+          "locator": "Planning Area I, Our Lady of Sorrows data and Options A–B"
+        },
+        {
+          "url": "https://rcan.org/parish-planning-process/",
+          "locator": "Planning Process, statement that the process is not a closure or merger plan"
+        },
+        {
+          "url": "https://container.parishesonline.com/bulletins/03/4021/20250803B.pdf",
+          "locator": "2025-08-03 bulletin, Mass schedule and parish activity"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2024-07-01",

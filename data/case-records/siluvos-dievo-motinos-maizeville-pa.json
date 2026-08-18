@@ -4,6 +4,34 @@
   "buildingStatus": "standing",
   "currentUse": "Unknown — the church was sold after the 2008 closure (confirmed as \"closed and sold\" by Draugas, May 2026), but no source found identifies the buyer or the building's present occupant or use. Last visual confirmation of the building standing is an August 2015 photograph; no demolition reports were found.",
   "summary": "Our Lady of Šiluva (Lithuanian, est. 1907, formerly St. Louis; the current building dates to 1967 after fires destroyed earlier structures) stands on Main St. in the village of Maizeville, Gilberton borough, Schuylkill County. Under the Diocese of Allentown's restructuring plan announced May 31, 2008, it was one of seven parishes merged into St. Joseph in Mahanoy City, renamed Blessed Teresa of Calcutta effective July 15, 2008, with Rev. Kevin Gallagher as pastor. Šiluva parishioners were among four parish groups who filed appeals asking the bishop to reconsider the closings. The building was photographed still standing in August 2015, and Global True Lithuania records that its Lithuanian-detail interior and stained-glass windows were slated for removal after closure. A May 2026 Draugas article confirms the church was subsequently sold and that its large Vytautas Kazimieras Jonynas stained-glass window was rescued and now adorns the stage of the Lithuanian Youth Center (Jaunimo centras) in Chicago. The successor parish, St. Teresa of Calcutta in Mahanoy City, remains active. No source found identifies the building's buyer, sale price, or present-day use.",
+  "historicalNarrative": [
+    {
+      "text": "Maizeville's Lithuanian Roman Catholic institution began as St. Louis and is documented as established in 1907. Later fires destroyed earlier structures, and the church represented in modern sources dates to 1967 under the dedication Our Lady of Šiluva. These are separate institutional and building milestones; the Ukrainian Catholic parish elsewhere in Maizeville is a different institution.",
+      "sources": [
+        { "url": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Siluva_RC_Church,_Maizeville_PA_01.JPG", "locator": "File description: Lithuanian parish, established 1907, formerly St. Louis, Main Street" },
+        { "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/", "locator": "Maizeville Our Lady of Šiluva section: fires and 1967 church" }
+      ]
+    },
+    {
+      "text": "The Diocese of Allentown restructuring announced in May 2008 ended Our Lady of Šiluva as an independent parish. Contemporary reporting identifies it among the communities united with St. Joseph in Mahanoy City, with the combined parish renamed Blessed Teresa of Calcutta effective July 15, 2008. That was an institutional merger, not proof that the Maizeville building was demolished or immediately sold.",
+      "sources": [
+        { "url": "https://www.bishop-accountability.org/news2008/05_06/2008_06_01_NewsItem_SomeSchuylkill.htm", "locator": "Schuylkill County restructuring list and July 15, 2008 Blessed Teresa of Calcutta merger" }
+      ]
+    },
+    {
+      "text": "Parishioners did not accept the restructuring without challenge. Associated Press coverage of the inaugural combined-parish celebration records Our Lady of Šiluva among four groups that asked the bishop to reconsider their closings. No source located for this case establishes the appeal's outcome, so the documented merger remains the terminal institutional event while the appeal remains part of the community history.",
+      "sources": [
+        { "url": "https://www.bishop-accountability.org/news2008/07_08/2008_07_21_AP_7Churches.htm", "locator": "Report on the seven-parish union and Our Lady of Šiluva parishioners' appeal" }
+      ]
+    },
+    {
+      "text": "The former church survived the merger for at least several years: an August 15, 2015 photograph shows it standing on Main Street. A 2026 Lithuanian newspaper article describes the church as closed and sold and reports that its large Vytautas Kazimieras Jonynas window was rescued for the Lithuanian Youth Center in Chicago. The buyer, sale date, current use, and present physical condition of the Maizeville building remain unknown.",
+      "sources": [
+        { "url": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Siluva_RC_Church,_Maizeville_PA_01.JPG", "locator": "August 15, 2015 photograph and file description" },
+        { "url": "https://www.draugas.org/jaunimo-centras-siandien-gyvuosime/", "locator": "Section describing the rescued Maizeville Šiluva church window at Jaunimo centras" }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2008-05-31",

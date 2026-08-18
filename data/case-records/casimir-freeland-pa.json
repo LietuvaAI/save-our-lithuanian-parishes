@@ -1,0 +1,153 @@
+{
+  "slug": "casimir-freeland-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "demolished",
+  "currentUse": "St. Casimir Parish closed in 2008 and its South Ridge Street church is no longer standing. The Diocese identifies Our Lady of the Immaculate Conception Parish, founded in 2008 from St. Casimir and three other Freeland parishes, as the successor. OLIC is a distinct multi-parish institution, not a renamed continuation of St. Casimir alone. Effective July 1, 2026, St. Patrick Parish in White Haven entered OLIC by extinctive union; OLIC retained its name, with St. Ann Church at 898 Centre Street as principal church and St. Patrick Church at 411 Allegheny Street as a secondary site. Neither current site is the former St. Casimir building.",
+  "summary": "St. Casimir was a mixed Roman Catholic parish organized in Freeland before June 1894 for Lithuanian, Polish, Slovak, and Rusyn immigrants. Michelsonas describes its deed as Polish-Lithuanian and documents a Lithuanian-Polish conflict in 1894; local research likewise treats St. Casimir as the shared parent from which Polish parishioners separated. Around 1925 many Lithuanians left St. Casimir and joined St. Anthony or other parishes, but St. Casimir continued as an institution and was later identified by the Diocese as Polish. It closed in 2008 with three other Freeland parishes to form the distinct Our Lady of the Immaculate Conception Parish. The former South Ridge Street church has been demolished. OLIC remains active and was enlarged by a separate 2026 union with St. Patrick, White Haven.",
+  "historicalNarrative": [
+    {
+      "text": "St. Casimir was organized before June 1894 under Father Varnagiris as a shared Roman Catholic parish for Lithuanian, Polish, Slovak, and Rusyn immigrants. Michelsonas calls it a joint Lithuanian-Polish-Slovak-Rusyn parish and says its property was deeded as a Polish-Lithuanian church. Local Freeland research independently describes St. Casimir as the common parish from which Polish parishioners separated. Its Lithuanian relevance is therefore direct but non-exclusive; the institution must not be recast as an exclusively Lithuanian parish.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje",
+          "locator": "Michelsonas, Lietuvių Išeivija Amerikoje, pp. 21, 32-33: Freeland joint parish, deed language, and 1894 conflict"
+        },
+        {
+          "url": "https://www.contrib.andrew.cmu.edu/~ct0u/polishindependent.html",
+          "locator": "Freeland Polish independent parish history: 1894 separation from St. Casimir"
+        }
+      ]
+    },
+    {
+      "text": "The 1894 conflict centered on language, control, and the attempted exclusion of Lithuanians from the church. Around 1925, local history says the remaining Lithuanian group left St. Casimir, temporarily worshipped in St. Anthony's basement, considered an independent St. Mary Lithuanian parish, and then largely joined St. Anthony, with some families going to Ss. Peter and Paul in Hazleton. That ethnic departure did not terminate St. Casimir itself. The exact canonical erection date and the precise South Ridge Street parcel remain unverified.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje",
+          "locator": "Michelsonas, pp. 32-33: June 1894 Lithuanian-Polish dispute"
+        },
+        {
+          "url": "https://www.contrib.andrew.cmu.edu/~ct0u/stanthonys.html",
+          "locator": "St. Anthony history: Lithuanian departure from St. Casimir around 1925 and subsequent affiliations"
+        }
+      ]
+    },
+    {
+      "text": "The Diocese of Scranton records St. Casimir as closed in 2008, together with St. Ann, St. Anthony, and St. John Nepomucene, to form Our Lady of the Immaculate Conception Parish. Local Freeland research places St. Casimir on South Ridge Street and reports that its building is gone. The successor relationship is an origin and merger relationship shared with three other parishes; OLIC is not identical to St. Casimir, and its later St. Ann worship site does not imply survival or reuse of the St. Casimir church.",
+      "sources": [
+        {
+          "url": "https://www.dioceseofscranton.org/wp-content/uploads/2024/11/Consolidated-Parishes-updated-11-19-24.pdf",
+          "locator": "Consolidated Parishes, Freeland entries: four 2008 closures and OLIC successor"
+        },
+        {
+          "url": "https://www.contrib.andrew.cmu.edu/~ct0u/frldreligion.html",
+          "locator": "Freeland religious institutions: St. Casimir on South Ridge Street, closed and building gone"
+        }
+      ]
+    },
+    {
+      "text": "A diocesan decree effective July 1, 2026 suppressed St. Patrick Parish in White Haven by extinctive union into OLIC. OLIC retained its name and now uses St. Ann Church, 898 Centre Street, as principal church and St. Patrick Church, 411 Allegheny Street, as a secondary site. This is a later modification of the successor parish, not a reopening of St. Casimir and not evidence that the demolished St. Casimir building hosts worship.",
+      "sources": [
+        {
+          "url": "https://cdn.diocesanweb.org/crossroads/scranton/wp-content/uploads/2026/06/FINAL-Bishop-Bambera-Decree-for-White-Haven-Freeland-Consolidation.pdf",
+          "locator": "Decree for White Haven-Freeland consolidation: effective 2026-07-01, extinctive union, retained OLIC name and two worship sites"
+        },
+        {
+          "url": "https://www.dioceseofscranton.org/find-a-parish/our-lady-of-the-immaculate-conception-parish-freeland/",
+          "locator": "Current diocesan directory: OLIC founded 2008 and current principal and secondary churches; accessed 2026-08-17"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1894",
+      "headline": "Shared immigrant parish documented in Freeland",
+      "detail": "Michelsonas documents a joint Lithuanian-Polish-Slovak-Rusyn St. Casimir parish and a Lithuanian-Polish conflict by June 1894.",
+      "sources": [
+        {
+          "title": "Lietuvių Išeivija Amerikoje (1868-1961)",
+          "publisher": "Keleivis",
+          "date": "1961",
+          "page": "pp. 21, 32-33",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
+        }
+      ]
+    },
+    {
+      "date": "2008",
+      "headline": "St. Casimir closes into a four-parish successor",
+      "detail": "St. Casimir and three other Freeland parishes closed to form Our Lady of the Immaculate Conception Parish.",
+      "sources": [
+        {
+          "title": "Consolidated Parishes",
+          "publisher": "Diocese of Scranton",
+          "date": "updated 2024-11-19",
+          "page": "Freeland entries",
+          "url": "https://www.dioceseofscranton.org/wp-content/uploads/2024/11/Consolidated-Parishes-updated-11-19-24.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-01",
+      "headline": "OLIC expands through White Haven union",
+      "detail": "St. Patrick Parish entered OLIC by extinctive union; St. Ann became principal church and St. Patrick a secondary church.",
+      "sources": [
+        {
+          "title": "Decree for White Haven-Freeland consolidation",
+          "publisher": "Diocese of Scranton",
+          "date": "2026",
+          "url": "https://cdn.diocesanweb.org/crossroads/scranton/wp-content/uploads/2026/06/FINAL-Bishop-Bambera-Decree-for-White-Haven-Freeland-Consolidation.pdf"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lietuvių Išeivija Amerikoje (1868-1961)",
+      "publisher": "Keleivis",
+      "date": "1961",
+      "page": "pp. 21, 32-33",
+      "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"
+    },
+    {
+      "title": "Polish independent parish history",
+      "publisher": "Freeland history project",
+      "date": "accessed 2026-08-17",
+      "url": "https://www.contrib.andrew.cmu.edu/~ct0u/polishindependent.html"
+    },
+    {
+      "title": "St. Anthony parish history",
+      "publisher": "Freeland history project",
+      "date": "accessed 2026-08-17",
+      "url": "https://www.contrib.andrew.cmu.edu/~ct0u/stanthonys.html"
+    },
+    {
+      "title": "Freeland religious institutions",
+      "publisher": "Freeland history project",
+      "date": "accessed 2026-08-17",
+      "url": "https://www.contrib.andrew.cmu.edu/~ct0u/frldreligion.html"
+    },
+    {
+      "title": "Consolidated Parishes",
+      "publisher": "Diocese of Scranton",
+      "date": "updated 2024-11-19",
+      "page": "Freeland entries",
+      "url": "https://www.dioceseofscranton.org/wp-content/uploads/2024/11/Consolidated-Parishes-updated-11-19-24.pdf"
+    },
+    {
+      "title": "Decree for White Haven-Freeland consolidation",
+      "publisher": "Diocese of Scranton",
+      "date": "2026",
+      "url": "https://cdn.diocesanweb.org/crossroads/scranton/wp-content/uploads/2026/06/FINAL-Bishop-Bambera-Decree-for-White-Haven-Freeland-Consolidation.pdf"
+    },
+    {
+      "title": "Our Lady of the Immaculate Conception Parish, Freeland",
+      "publisher": "Diocese of Scranton",
+      "date": "accessed 2026-08-17",
+      "url": "https://www.dioceseofscranton.org/find-a-parish/our-lady-of-the-immaculate-conception-parish-freeland/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "St. Casimir is not adjudicated as an exclusively Lithuanian parish. Michelsonas and local research establish a mixed Lithuanian-Polish-Slovak-Rusyn institution whose Polish-Lithuanian conflict produced separate affiliations. The Diocese later classifies St. Casimir as Polish. OLIC, founded in 2008 from four parishes, is a distinct successor rather than a rename of St. Casimir, and the 2026 White Haven union modified OLIC without reviving St. Casimir.",
+  "gaps": "The exact organization and canonical erection dates, complete founding instrument, first worship location, street number and deed for the South Ridge Street church, full site chronology, the canonical status of the contemplated St. Mary Lithuanian parish around 1925, exact St. Casimir closure instrument and sacramental-record custody, cemetery relationships, demolition date, and present parcel use remain unresolved."
+}

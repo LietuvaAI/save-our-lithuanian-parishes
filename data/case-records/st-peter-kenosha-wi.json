@@ -1,0 +1,93 @@
+{
+  "slug": "st-peter-kenosha-wi",
+  "culturenetEntityId": "cn:institution:st-peter-kenosha-wi",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian St. Peter Society formed March 8, 1900 · parish organized July 30, 1903 as Assumption and renamed St. Peter within a year · territorial parish from September 1, 1965 · active in the current Archdiocese of Milwaukee",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "active",
+  "buildingStatus": "standing",
+  "currentUse": "St. Peter remains an active Roman Catholic parish at 2224 30th Avenue and maintains an active worship campus. The Archdiocese's Love One Another campaign documents current parish life plus repair needs and planned capital improvements for the rectory, windows, parking area, and grounds. This proves continuing parish and building use, but not completion of the planned work, identity with the 1913 church, or current Lithuanian-language worship or Lithuanian-led ministry.",
+  "summary": "St. Peter is the continuing Roman Catholic parish founded by Kenosha Lithuanians. The evidence separates the March 8, 1900 St. Peter mutual-aid society from the parish's July 30, 1903 organization as Assumption Parish and its renaming to St. Peter within a year. The community acquired a former Frieden Lutheran church in 1908, blessed a new church cornerstone in 1913, and opened a school in 1915. An archiepiscopal decree converted the Lithuanian national parish into a territorial parish effective September 1, 1965; this was an ethnic and canonical-status transition, not closure. Current first-party and Archdiocese sources identify an active parish and standing campus with planned campaign-funded repairs. The accepted sources do not establish completion of those projects, current Lithuanian-language worship, cemetery ownership, or a complete address history for every site.",
+  "institutionLifecycle": {
+    "formation": "Lithuanians formed the St. Peter Society on March 8, 1900. A July 30, 1903 organizational meeting formed Assumption Parish, renamed St. Peter within a year. The official current campaign also gives July 30, 1903 as parish establishment.",
+    "institutionalForm": "Lithuanian Roman Catholic national parish until an archiepiscopal decree converted it to a territorial parish effective September 1, 1965.",
+    "jurisdiction": "Archdiocese of Milwaukee; Marian Fathers began sustained pastoral responsibility in 1927 and remained important to the parish's later history.",
+    "terminalStatus": "No terminal event. The parish remains active.",
+    "currentVerification": "The parish contact page confirms the active address and Mass schedule; the Archdiocese Love One Another campaign describes the active community and planned campus improvements."
+  },
+  "worshipSites": [
+    {
+      "siteType": "hosted_worship",
+      "name": "St. George German Parish host church",
+      "address": "Kenosha, WI; exact address unresolved",
+      "usePeriod": "before St. Peter acquired its own church in 1908",
+      "buildingCondition": "not assessed; host institution is not St. Peter",
+      "currentUse": "Historical host site only.",
+      "evidence": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 39 / printed p. 31; early meetings and visiting clergy at St. George German Parish"}]
+    },
+    {
+      "siteType": "hosted_worship",
+      "name": "St. Casimir Polish Parish host church",
+      "address": "Kenosha, WI; exact address unresolved",
+      "usePeriod": "before St. Peter acquired its own church in 1908",
+      "buildingCondition": "not assessed; host institution is not St. Peter",
+      "currentUse": "Historical host site only.",
+      "evidence": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 39 / printed p. 31; early meetings and visiting clergy at St. Casimir Polish Parish"}]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-peter-frieden-church-kenosha-wi",
+      "name": "Former Frieden Lutheran church acquired by St. Peter",
+      "address": "Kenosha, WI; exact street address unresolved",
+      "usePeriod": "purchased April 21, 1908; first Mass April 26, 1908; later replacement date unresolved",
+      "buildingCondition": "unknown",
+      "currentUse": "Unknown; this site is not assumed to be the current parish church.",
+      "evidence": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 39 / printed p. 31; purchase and first Mass"}]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-peter-1913-church-kenosha-wi",
+      "name": "St. Peter church with 1913 cornerstone",
+      "address": "Kenosha, WI; exact street address and parcel unresolved",
+      "usePeriod": "cornerstone blessed June 29, 1913; terminal building date and outcome unresolved",
+      "buildingCondition": "unknown",
+      "currentUse": "Unknown; this historical structure is not assumed to be the present church.",
+      "evidence": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 40 / printed p. 32; June 29, 1913 cornerstone"}]
+    },
+    {
+      "siteType": "church_campus",
+      "culturenetEntityId": "cn:building_site:st-peter-current-campus-kenosha-wi",
+      "name": "Current St. Peter Parish church campus",
+      "address": "2224 30th Avenue, Kenosha, WI",
+      "usePeriod": "current; exact construction and dedication dates unresolved in accepted primary evidence",
+      "buildingCondition": "standing; repair needs and planned capital improvements documented, completion not established",
+      "currentUse": "Active Roman Catholic parish worship campus.",
+      "evidence": [{"url": "https://www.stpeterskenosha.com/contact-us/", "locator": "First-party parish contact page: 2224 30th Avenue and current Mass schedule"}, {"url": "https://www.loveoneanothermke.org/Campaign/Parish-Campaigns/Parish-Campaigns-2022-08-12T152056160/St.Peter.htm", "locator": "Official Archdiocese campaign page: active parish community, repair needs, and planned capital improvements"}]
+    }
+  ],
+  "relationships": [
+    {"type": "institution-used-site", "source": "cn:institution:st-peter-kenosha-wi", "target": "cn:building_site:st-peter-frieden-church-kenosha-wi", "date": "from 1908", "status": "accepted", "note": "Exact address and terminal building outcome unresolved."},
+    {"type": "institution-used-site", "source": "cn:institution:st-peter-kenosha-wi", "target": "cn:building_site:st-peter-1913-church-kenosha-wi", "date": "from 1913; terminal date unresolved", "status": "accepted", "note": "Historical church phase; no physical-identity join to the current campus is asserted."},
+    {"type": "institution-used-site", "source": "cn:institution:st-peter-kenosha-wi", "target": "cn:building_site:st-peter-current-campus-kenosha-wi", "date": "current; start date unresolved", "status": "accepted", "note": "Official current address and active campus use; construction date not established by accepted primary evidence."}
+  ],
+  "historicalNarrative": [
+    {"text": "Kenosha Lithuanians first shared a St. Casimir benevolent society with Polish immigrants in 1898, then formed their separate St. Peter Society on March 8, 1900. This society was an organizational precursor, not yet the parish. The parish organization meeting occurred July 30, 1903 under the name Assumption Parish, with St. Peter adopted within a year. The current Archdiocese campaign independently identifies July 30, 1903 as the parish's establishment by Lithuanian immigrants, resolving the inherited 1907 label as a non-founding date.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 39 / printed p. 31; society and parish organization chronology"}, {"url": "https://www.loveoneanothermke.org/Campaign/Parish-Campaigns/Parish-Campaigns-2022-08-12T152056160/St.Peter.htm", "locator": "Official campaign history: parish established July 30, 1903 by Lithuanian forebears"}]},
+    {"text": "Before possessing its own church, the community used German St. George and Polish St. Casimir churches for meetings, devotions, and visiting clergy. On April 21, 1908 it purchased the former Frieden Lutheran church, where the first Mass was celebrated April 26. The dossier treats these as hosted and acquired worship-site milestones rather than identities with the German, Polish, or Lutheran institutions.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 39 / printed p. 31; hosted worship, purchase, and first Mass"}]},
+    {"text": "A new St. Peter church cornerstone was blessed June 29, 1913. The parish opened the first six grades of its school in September 1915 under the School Sisters of Notre Dame; the Sisters of St. Casimir succeeded them in 1924. The official campaign confirms the 1915 school milestone, while Wolkovich documents continued Lithuanian religious and cultural instruction into the mid-twentieth century.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 40 / printed p. 32; 1913 cornerstone and 1915 school"}, {"url": "https://www.loveoneanothermke.org/Campaign/Parish-Campaigns/Parish-Campaigns-2022-08-12T152056160/St.Peter.htm", "locator": "Official campaign history: school opened in 1915"}]},
+    {"text": "The Marian Fathers assumed sustained responsibility for St. Peter in 1927 after years of pastoral turnover. By the early 1960s the surrounding population and parish membership had changed, and a proposed relocation divided parishioners. The move did not occur. Instead, an archiepiscopal decree converted St. Peter into a territorial parish effective September 1, 1965, allowing Lithuanian members to continue while ending the institution's exclusive national-parish form. This was continuity through status transition, not closure or merger.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF pp. 40–42 / printed pp. 32–34; Marian administration, proposed relocation, and 1965 decree"}]},
+    {"text": "St. Peter remains an active Roman Catholic parish. The Archdiocese campaign describes a present community of baptized Catholics and planned repairs to its rectory, windows, parking area, and exterior grounds, establishing continued institutional and building life. The same evidence does not establish current Lithuanian-language Mass, Lithuanian clergy, or membership in the contemporary Lithuanian worship network; Lithuanian founding identity and current canonical activity are therefore recorded as separate dimensions.", "sources": [{"url": "https://www.loveoneanothermke.org/Campaign/Parish-Campaigns/Parish-Campaigns-2022-08-12T152056160/St.Peter.htm", "locator": "Official current campaign page: active parish community and campus capital improvements"}]}
+  ],
+  "developments": [
+    {"date": "1900–1903", "headline": "Society and parish formation separated", "detail": "The 1900 society preceded the July 30, 1903 parish organization.", "sources": [{"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "PDF p. 39 / printed p. 31", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"}]},
+    {"date": "1965-09-01", "headline": "National parish becomes territorial", "detail": "Juridic parish life continued through the ethnic-status transition.", "sources": [{"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "PDF p. 42 / printed p. 34", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"}]},
+    {"date": "2022–2024 campaign period", "headline": "Active parish invests in standing campus", "detail": "Official campaign evidence documents current institutional and building use.", "sources": [{"title": "St. Peter Parish Campaign", "publisher": "Archdiocese of Milwaukee, Love One Another", "date": "accessed 2026-08-17", "url": "https://www.loveoneanothermke.org/Campaign/Parish-Campaigns/Parish-Campaigns-2022-08-12T152056160/St.Peter.htm"}]}
+  ],
+  "sources": [
+    {"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "PDF pp. 39–43 / printed pp. 31–35", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"},
+    {"title": "St. Peter Parish Campaign", "publisher": "Archdiocese of Milwaukee, Love One Another", "date": "accessed 2026-08-17", "url": "https://www.loveoneanothermke.org/Campaign/Parish-Campaigns/Parish-Campaigns-2022-08-12T152056160/St.Peter.htm"},
+    {"title": "Contact Us", "publisher": "St. Peter Parish, Kenosha", "date": "accessed 2026-08-17", "url": "https://www.stpeterskenosha.com/contact-us/"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The inherited 1907 founding label is superseded by the official July 30, 1903 parish-establishment date and Wolkovich's matching organization chronology. The 1900 society, 1908 first owned church, 1913 cornerstone, and 1915 school are separate milestones. The 1965 territorial conversion ended exclusive Lithuanian national-parish form but did not close the parish.",
+  "gaps": "Exact addresses for early host churches, the 1908 former Frieden Lutheran church, and the 1913 church; deed and parcel history; terminal outcome of the 1913 structure; construction/dedication date of the current 2224 30th Avenue campus; physical relationship between the historical and current sites; cemetery ownership; detailed records custody; and current Lithuanian-language or Lithuanian-led ministry remain unresolved."
+}

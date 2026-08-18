@@ -1,0 +1,142 @@
+{
+  "slug": "st-casimir-mcadoo-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "converted",
+  "currentUse": "The small wooden St. Casimir church stood near the corner of Cleveland and Adams Streets in McAdoo. A current field survey reports that the structure has been converted into a detached residence. No current Catholic institution or hosted worship at the site was found. The exact end of worship, title transfer, and canonical disposition remain unresolved.",
+  "summary": "St. Casimir served McAdoo's small Lithuanian Roman Catholic community, but the reviewed evidence does not justify treating it as a continuously independent parish. A field survey dates construction activity to 1928 and reports that the builders first contemplated an independent church before returning to Roman Catholic jurisdiction. A 1936 Lithuanian newspaper described more than fifty Lithuanian families who had built a small church. Diocesan-area schedules and reports in the 1950s alternately called St. Casimir a chapel and a church; a 1955 report says it had been built by Father K. Klevinskas and was then served by Lithuanian priests from Tamaqua. Worship and regional devotions continued at least through 1957. The wooden building near Cleveland and Adams Streets is now a detached residence. Formation date, exact juridic class, terminal date, and administrative parent remain unresolved.",
+  "historicalNarrative": [
+    {
+      "text": "McAdoo's Lithuanian Catholics were a small community rather than a securely documented standalone parish. A later field survey reports that church construction began in 1928 under an independent impulse, but that internal disagreement and lack of money led the builders back into Roman Catholic jurisdiction. Because this account is retrospective and the raw Draugas index contains earlier McAdoo mentions vulnerable to town and saint-name confusion, 1928 is retained as a reported building phase, not adopted as a verified parish-founding year.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+          "locator": "McAdoo section: wooden St. Casimir church, reported 1928 independent-to-Roman-Catholic formation sequence, small congregation, and residential conversion; accessed 2026-08-17"
+        }
+      ]
+    },
+    {
+      "text": "By August 1936 the institution was visibly operating. Garsas described McAdoo as a small Schuylkill County town with more than fifty Lithuanian families who had built a small church. The report supports the identity of St. Casimir as McAdoo's Lithuanian Catholic worship site, but it does not supply a canonical erection date or prove that the community could support an independent parish.",
+      "sources": [
+        {
+          "url": "https://www.spauda2.org/garsas/archive/1936/1936-08-20-GARSAS.pdf",
+          "locator": "Garsas, 1936-08-20, p. 8: McAdoo Lithuanian families and their small church"
+        }
+      ]
+    },
+    {
+      "text": "Mid-century sources expose the class ambiguity directly. A 1954 traveling-devotion schedule labeled the site St. Casimir chapel in McAdoo. In 1955 Darbininkas called it both a church and a small church, credited Father K. Klevinskas with building it, and said Lithuanian priests from Tamaqua cared for it; Father E. Wassel was identified as its latest administrator before Father Stasys Raila came to celebrate services. This is evidence of a Roman Catholic mission or chapel served from another parish, while the exact administrative parent at every date remains unproven.",
+      "sources": [
+        {
+          "url": "https://www.spauda.org/darbininkas/archive/1954/1954-nr50-DARBININKAS.pdf",
+          "locator": "Darbininkas, 1954 issue no. 50, p. 6: Marian-image itinerary labels St. Casimir in McAdoo a chapel"
+        },
+        {
+          "url": "https://www.spauda.org/darbininkas/archive/1955/1955-nr67-DARBININKAS.pdf",
+          "locator": "Darbininkas, 1955 issue no. 67, p. 6: St. Casimir services, Father K. Klevinskas, renovation, and service by Tamaqua Lithuanian priests"
+        }
+      ]
+    },
+    {
+      "text": "St. Casimir still hosted a special Lithuanian Marian observance in September 1957. No reviewed official source establishes when regular worship ended or how the chapel was canonically closed. The surviving building evidence is separate: the wooden church near Cleveland and Adams Streets was later converted into a detached residence. Building survival and residential reuse therefore do not imply survival of the institution or of hosted Catholic worship.",
+      "sources": [
+        {
+          "url": "https://www.spauda.org/darbininkas/archive/1957/1957-nr66-DARBININKAS.pdf",
+          "locator": "Darbininkas, 1957 issue no. 66, p. 5: Lithuanian Marian observance at St. Casimir church, McAdoo"
+        },
+        {
+          "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/",
+          "locator": "McAdoo section: former wooden church near Cleveland and Adams Streets converted to a residence; accessed 2026-08-17"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1928 (reported)",
+      "headline": "Small McAdoo congregation begins a wooden church",
+      "detail": "A later field survey reports an initially independent building effort that returned to Roman Catholic jurisdiction. This is a reported building phase, not a verified canonical founding date.",
+      "sources": [
+        {
+          "title": "Shenandoah and Southern Coal Region, Pennsylvania",
+          "publisher": "Global True Lithuania",
+          "date": "accessed 2026-08-17",
+          "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/"
+        }
+      ]
+    },
+    {
+      "date": "1936-08-20",
+      "headline": "Garsas records the operating McAdoo church",
+      "detail": "The newspaper reported more than fifty Lithuanian families in McAdoo and said they had built a small church.",
+      "sources": [
+        {
+          "title": "McAdoo community report",
+          "publisher": "Garsas",
+          "date": "1936-08-20",
+          "page": "p. 8",
+          "url": "https://www.spauda2.org/garsas/archive/1936/1936-08-20-GARSAS.pdf"
+        }
+      ]
+    },
+    {
+      "date": "1954–1957",
+      "headline": "Sources alternate between chapel and church",
+      "detail": "Lithuanian Catholic reports identify St. Casimir as a chapel or small church served by priests from Tamaqua and document continuing devotions through 1957.",
+      "sources": [
+        {
+          "title": "Marian-image visitation schedule",
+          "publisher": "Darbininkas",
+          "date": "1954, issue no. 50",
+          "page": "p. 6",
+          "url": "https://www.spauda.org/darbininkas/archive/1954/1954-nr50-DARBININKAS.pdf"
+        },
+        {
+          "title": "Pagražino McAdoo bažnytėlę",
+          "publisher": "Darbininkas",
+          "date": "1955, issue no. 67",
+          "page": "p. 6",
+          "url": "https://www.spauda.org/darbininkas/archive/1955/1955-nr67-DARBININKAS.pdf"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "McAdoo community report",
+      "publisher": "Garsas",
+      "date": "1936-08-20",
+      "page": "p. 8",
+      "url": "https://www.spauda2.org/garsas/archive/1936/1936-08-20-GARSAS.pdf"
+    },
+    {
+      "title": "Marian-image visitation schedule",
+      "publisher": "Darbininkas",
+      "date": "1954, issue no. 50",
+      "page": "p. 6",
+      "url": "https://www.spauda.org/darbininkas/archive/1954/1954-nr50-DARBININKAS.pdf"
+    },
+    {
+      "title": "Pagražino McAdoo bažnytėlę",
+      "publisher": "Darbininkas",
+      "date": "1955, issue no. 67",
+      "page": "p. 6",
+      "url": "https://www.spauda.org/darbininkas/archive/1955/1955-nr67-DARBININKAS.pdf"
+    },
+    {
+      "title": "Schuylkill-area Marian observance report",
+      "publisher": "Darbininkas",
+      "date": "1957, issue no. 66",
+      "page": "p. 5",
+      "url": "https://www.spauda.org/darbininkas/archive/1957/1957-nr66-DARBININKAS.pdf"
+    },
+    {
+      "title": "Shenandoah and Southern Coal Region, Pennsylvania",
+      "publisher": "Global True Lithuania",
+      "date": "accessed 2026-08-17",
+      "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/"
+    }
+  ],
+  "confidence": "reported",
+  "conflictsWithArchiveRecord": "The registry's 1928 founding year is not accepted as a verified parish-founding year. It is a reported church-construction phase, while 1954–1955 sources explicitly describe a chapel or small church served from elsewhere. Earlier raw Draugas mentions are research leads and cannot establish identity by shared St. Casimir naming. The present canonical class is therefore Roman Catholic Lithuanian worship institution, with independent-parish versus mission/chapel status unresolved.",
+  "gaps": "The canonical erection or blessing instrument, exact opening date, street number, original title holder, administrative parent parish at each date, sacramental-record custody, last regular Mass, closure or relegation decree, transfer date, and terms of conversion to a residence remain unlocated. The former site can presently be placed only near Cleveland and Adams Streets."
+}

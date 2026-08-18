@@ -4,6 +4,36 @@
   "buildingStatus": "converted",
   "currentUse": "Church building (Sixth & Poplar Sts.) last documented in secular use as a warehouse, partly derelict with broken windows; the former Holy Cross school at 320 W. Sixth St. is a collapsed ruin slated for borough demolition; the parish community was absorbed into Divine Redeemer Parish (Diocese of Harrisburg), which remains active.",
   "summary": "Holy Cross (Šv. Kryžiaus) church still stands at Sixth and Poplar Streets in Mount Carmel, but the Global True Lithuania heritage survey documents it as closed in 1992 and since used as a warehouse, partly derelict with many broken windows, its 1892 Lithuanian cornerstone still in place. The parish itself was merged with four other ethnic parishes in 1995 to form Divine Redeemer Parish, which remains an active Diocese of Harrisburg parish in Mount Carmel under Rev. Bernard Wamayose, AJ. The former Holy Cross school — successor building to the first Lithuanian Catholic school in the U.S. (opened January 6, 1908), its facade still bearing the Vytis — is in far worse shape: per a September 18, 2025 News-Item report, its roof and several floors have collapsed, and it was sold at a Northumberland County Tax Claims Bureau judicial sale on June 24, 2022 for $2,474.74 to Tamika Pressley, with the owner of record now Chocolate Nonprofits LLC of Montgomery County. On September 18, 2025 Mount Carmel Borough council voted to seize the school by eminent domain and plans to raze it using Community Development Block Grant funds. The parish's Sisters of St. Casimir legacy is actively commemorated: the Mother Maria Kaupas Center, a Divine Redeemer Parish ministry housed in the former St. Peter's Convent on West Avenue, marked its 10th anniversary with a Mass celebrated by Harrisburg Bishop Timothy Senior on May 18, 2025, and foundress Mother Maria Kaupas (whose congregation began its teaching mission at Holy Cross School in 1908) was declared Venerable in 2010, with her canonization cause ongoing.",
+  "historicalNarrative": [
+    {
+      "text": "Holy Cross was Mount Carmel's Lithuanian Roman Catholic parish and became closely associated with the early Sisters of St. Casimir. The sisters' history places the congregation's founding in Scranton in 1907, while Mount Carmel was their first mission: sisters arrived at Holy Cross and opened the parish school in January 1908. This corrects the shorthand that the religious congregation itself was founded at Holy Cross.",
+      "sources": [
+        { "url": "https://www.sistersofstcasimir.org/who-we-are/", "locator": "Our Foundress and early congregation history" },
+        { "url": "https://mothermariakaupascenter.wordpress.com/who-we-are/", "locator": "Holy Cross mission, convent, and school history" }
+      ]
+    },
+    {
+      "text": "The church building and the parish did not end on the same date. Field documentation places the end of worship in the Holy Cross church in 1992, while the parish was one of five ethnic communities merged in 1995 to form Divine Redeemer Parish. Divine Redeemer remains the current Roman Catholic institution; it is not identical with the former Lithuanian parish even though it carries Holy Cross's canonical lineage.",
+      "sources": [
+        { "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/", "locator": "Mount Carmel Holy Cross section: 1992 church closure and later use" },
+        { "url": "https://mothermariakaupascenter.wordpress.com/who-we-are/", "locator": "1995 formation of Divine Redeemer from five Mount Carmel parishes" },
+        { "url": "https://www.hbgdiocese.org/parishes/divine-redeemer-mount-carmel/", "locator": "Current Diocese of Harrisburg listing for Divine Redeemer Parish" }
+      ]
+    },
+    {
+      "text": "The former Holy Cross church reportedly remained standing at Sixth and Poplar Streets in warehouse use, with its Lithuanian cornerstone still visible and the structure partly derelict. That description comes from an undated field survey, so it does not establish the building's physical condition or ownership in 2026. The separate former school must not be used as evidence for the church building's condition.",
+      "sources": [
+        { "url": "https://global.truelithuania.com/shenandoah-and-southern-coal-region-pennsylvania-1111/", "locator": "Mount Carmel Holy Cross church: warehouse use, broken windows, and Lithuanian cornerstone" }
+      ]
+    },
+    {
+      "text": "The former Holy Cross school has its own terminal history. The News-Item records a June 24, 2022 tax sale and severe collapse, followed by Mount Carmel Borough's September 2025 vote to acquire the school for demolition. Separately, the Mother Maria Kaupas Center, a Divine Redeemer ministry, marked its tenth anniversary in May 2025, showing that the Lithuanian religious legacy continues institutionally even as the school faces removal.",
+      "sources": [
+        { "url": "https://www.newsitem.com/news/local/mount-carmel-borough-to-invoke-eminent-domain-to-acquire-former-school-building/article_9637da6b-6023-4fd0-862e-09c97e89e742.html", "locator": "Tax-sale history, structural collapse, and September 18, 2025 eminent-domain vote" },
+        { "url": "https://www.hbgdiocese.org/event/10th-anniversary-of-the-mother-maria-kaupas-center-in-mount-carmel/", "locator": "May 18, 2025 Mother Maria Kaupas Center anniversary notice" }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "1995",

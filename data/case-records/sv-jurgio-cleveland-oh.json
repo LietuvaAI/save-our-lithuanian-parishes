@@ -4,6 +4,77 @@
   "buildingStatus": "standing",
   "currentUse": "Part of \"Superior Farm,\" a ~3-acre urban-farm and community-hub campus at 6527 Superior Ave. owned by the food-justice nonprofit Food Strong; the 20,000 sq ft former church building stands and is slated for rehabilitation into a community gathering, event, and food-education space, with the former rectory/farmhouse becoming Food Strong's headquarters.",
   "summary": "The former Šv. Jurgio (St. George's Lithuanian) church at 6527 Superior Avenue (E. 67th St.) in Cleveland is still standing. After the parish's October 2009 suppression, the Diocese of Cleveland sold the ~2.7-3 acre property to the nonprofit Community Greenhouse Partners, whose purchase agreement was publicly confirmed by a diocesan spokesman in October 2010, for use as an urban farm; the church interior was stripped of its Lithuanian memorials, with artifacts moved to the successor Lithuanian parish and one side altar sold to an Anglican church near Woodinville, WA, and the building spent years largely idle apart from serving as a filming location for the horror film \"Little Evil.\" In September 2024 Community Greenhouse Partners donated the entire property — a 7,000 sq ft farmhouse (the former rectory), the 20,000 sq ft church, gardens, and hoop houses — to fellow Cleveland nonprofit Food Strong, which held a groundbreaking and ribbon-cutting for its \"Superior Farm\" on May 30, 2025. Food Strong's five-year plan turns the campus into an urban farm and community hub, reimagining the church as an event, gathering, and food-education space with a year-round farmers market and a restored commercial kitchen as an incubator for food entrepreneurs. The parish community itself was merged in October 2009 with the suppressed Our Lady of Perpetual Help parish into a new consolidated St. Casimir (Šv. Kazimiero) parish at 18022 Neff Rd., which remains open in the diocesan directory with administrator Andrew Morkunas.",
+  "historicalNarrative": [
+    {
+      "text": "St. George was Cleveland's Lithuanian Roman Catholic parish founded in 1895. Its later church and parish campus stood at 6527 Superior Avenue near East 67th Street, a distinct institution and site from Cleveland's Our Lady of Perpetual Help and the successor St. Casimir Parish.",
+      "sources": [
+        {
+          "url": "https://www.thesanctuarymuseum.org/saintgeorge",
+          "locator": "St. George Parish, Cleveland entry, parish identity and founding"
+        },
+        {
+          "url": "https://global.truelithuania.com/cleveland-ohio-36/",
+          "locator": "Cleveland heritage account, St. George site and Lithuanian history"
+        }
+      ]
+    },
+    {
+      "text": "The diocese suppressed St. George in October 2009 and joined its community with Our Lady of Perpetual Help in the new St. Casimir Parish at Neff Road. Artifacts moved to the successor or storage, and one side altar was sold elsewhere; the transfer of people and objects is separate from the later sale of the Superior Avenue property.",
+      "sources": [
+        {
+          "url": "https://www.dioceseofcleveland.org/parishes/directory/st-casimir",
+          "locator": "Diocesan directory, St. Casimir established 2009 from predecessor communities"
+        },
+        {
+          "url": "https://global.truelithuania.com/cleveland-ohio-36/",
+          "locator": "Cleveland heritage account, St. George closure and artifact disposition"
+        }
+      ]
+    },
+    {
+      "text": "In 2010 the diocese agreed to sell the former campus to Community Greenhouse Partners for an urban-agriculture project. Contemporaneous reports identify that nonprofit as the buyer and confirm diocesan approval, resolving earlier uncertainty about the purchaser, but neither report supplies a final sale price.",
+      "sources": [
+        {
+          "url": "https://www.clevescene.com/scene-and-heard/archives/2010/10/06/dead-catholic-churches-becoming-greenhouses",
+          "locator": "2010-10-06 report, St. George property buyer and diocesan confirmation"
+        },
+        {
+          "url": "https://www.freshwatercleveland.com/street-level/communitygreenhouse101410.aspx",
+          "locator": "2010-10-14 report, Community Greenhouse Partners project at the former parish"
+        }
+      ]
+    },
+    {
+      "text": "Community Greenhouse Partners donated the nearly three-acre campus to Food Strong in September 2024. Food Strong broke ground on Superior Farm in May 2025, bringing the property back into active nonprofit use after a period when the standing church had been largely idle.",
+      "sources": [
+        {
+          "url": "https://foodstrong.org/farm-2/",
+          "locator": "Superior Farm page, September 2024 donation and campus description"
+        },
+        {
+          "url": "https://www.theeuclidobserver.com/articles/one-local-nonprofit-gives-an-entire-farm-to-another-right-here-in-cleveland/",
+          "locator": "2024 account of Community Greenhouse Partners donation to Food Strong"
+        },
+        {
+          "url": "https://coolcleveland.com/2025/05/news-food-justice-nonprofit-food-strong-breaks-ground-on-its-new-farm-property/",
+          "locator": "2025-05 groundbreaking announcement for Superior Farm"
+        }
+      ]
+    },
+    {
+      "text": "The 20,000-square-foot former church still stands within Superior Farm. Food Strong plans to rehabilitate it as a gathering, event, market, and food-education space, while the former rectory becomes organizational offices; these plans document a new building use but do not constitute continuation of St. George Parish, which ended in 2009.",
+      "sources": [
+        {
+          "url": "https://thelandcle.org/stories/food-strong-reactivates-historic-spaces-to-cultivate-food-justice-for-st-clair-superior/",
+          "locator": "2025-10-16 report, former church rehabilitation and planned community uses"
+        },
+        {
+          "url": "https://foodstrong.org/farm-2/",
+          "locator": "Superior Farm page, church, farmhouse, gardens, and hoop houses"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2009-10",

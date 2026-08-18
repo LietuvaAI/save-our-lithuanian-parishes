@@ -4,6 +4,64 @@
   "buildingStatus": "converted",
   "currentUse": "Private residential condominiums — an 11-unit complex marketed as \"The Gables\" (The Gables at Wooster Square) at 329 Greene Street, facing Wooster Square Park, New Haven, CT 06511, with underground parking and elevator; units trade regularly on the open market.",
   "summary": "The former Šv. Kazimiero (St. Casimir's) Lithuanian church building on Greene Street in New Haven's Wooster Square is standing and fully converted to residential condominiums. The 1872 Victorian Gothic edifice was built as the Davenport Congregational Church (architect Rufus G. Russell), later housed an Italian Baptist congregation, and was purchased in 1927 by the local Lithuanian congregation, which re-established it as St. Casimir Catholic Church at 339 Greene Street. The Organ Historical Society's Pipe Organ Database records that the church closed in 2002 and its 1874 Hook & Hastings organ (Opus 750) was moved in 2003 to St. Francis Roman Catholic Church in New Haven. The building was converted into an 11-unit condominium complex known as \"The Gables\" — public records give a condo year-built of 2006, units were on the MLS by September 2006, and the New Haven Independent (2018) credits local architect George Buchanan with the conversion, which Wooster Square neighbors repeatedly praised as a model of sensitive historic reuse. Global True Lithuania notes the reconstruction preserved the front facade, including the crosses, but reports that nothing visibly Lithuanian remains. The condos now sell at premium prices: unit 8 sold for $720,000 in July 2024 and unit 6 for $695,000, and a March 2026 architectural-history profile confirms the building remains residential within a local historic district. No Lithuanian community activity, reunions, or preservation campaigns connected to the New Haven parish were found in recent coverage.",
+  "historicalNarrative": [
+    {
+      "text": "New Haven's St. Casimir occupied a church on Greene Street in Wooster Square, but the building predated the Lithuanian parish. It was erected in 1872 for Davenport Congregational Church, later served an Italian Baptist congregation, and was acquired by the Lithuanian Catholic community in 1927. The building's 1872 origin and the Lithuanian congregation's formation are therefore separate historical questions; the exact parish erection date remains unresolved.",
+      "sources": [
+        {
+          "url": "https://buildingsofnewengland.com/2026/03/08/former-st-casimirs-church-1872/",
+          "locator": "Building chronology from Davenport Congregational Church through the 1927 Lithuanian acquisition"
+        },
+        {
+          "url": "https://global.truelithuania.com/connecticut-789/",
+          "locator": "New Haven St. Casimir section identifying the Lithuanian Catholic use"
+        }
+      ]
+    },
+    {
+      "text": "The Organ Historical Society records that St. Casimir closed in 2002 and that its 1874 Hook & Hastings organ moved to St. Francis Roman Catholic Church in 2003. This provides a specific institutional and furnishing chronology, but not the canonical suppression decree or final-Mass date. A later secondary account's 2005 closing date remains in conflict with the organ record.",
+      "sources": [
+        {
+          "url": "https://pipeorgandatabase.org/organ/7163",
+          "locator": "Organ history note: church closed in 2002 and organ moved in 2003"
+        },
+        {
+          "url": "https://global.truelithuania.com/connecticut-789/",
+          "locator": "Secondary field account giving a later closure reading"
+        }
+      ]
+    },
+    {
+      "text": "By 2006 the former church had become The Gables, an eleven-unit condominium complex addressed as 329 Greene Street. Property histories and later neighborhood reporting describe retained stained glass, structural details, and a conversion that neighbors cited as sensitive reuse. The residential association is the building's later use, not a religious or institutional successor to St. Casimir Parish.",
+      "sources": [
+        {
+          "url": "https://www.redfin.com/CT/New-Haven/329-Greene-St-06511/unit-8/home/54275779",
+          "locator": "Property and sale history identifying The Gables conversion and 2006 unit history"
+        },
+        {
+          "url": "https://www.newhavenindependent.org/article/st_michaels_school_development",
+          "locator": "2018 neighborhood report praising the former St. Casimir conversion"
+        }
+      ]
+    },
+    {
+      "text": "The former church remains standing as residences within the historic neighborhood. Later property listings document active condominium sales and surviving architectural features, while field documentation reports that the facade survived but visible Lithuanian markers did not. The change from the church's former 339 Greene Street address to the condominium's 329 Greene Street address is evident across sources, though no source directly explains the renumbering.",
+      "sources": [
+        {
+          "url": "https://landvest.com/listing/24019232/329-greene-street-new-haven-ct-06511/",
+          "locator": "Residential listing describing surviving stained glass and arched beams"
+        },
+        {
+          "url": "https://buildingsofnewengland.com/2026/03/08/former-st-casimirs-church-1872/",
+          "locator": "2026 architectural-history profile confirming continued residential use"
+        },
+        {
+          "url": "https://global.truelithuania.com/connecticut-789/",
+          "locator": "Field account of preserved facade and loss of visible Lithuanian features"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2002",

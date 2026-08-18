@@ -4,6 +4,36 @@
   "buildingStatus": "standing",
   "currentUse": "Active Roman Catholic worship site — the sole church of Holy Family Parish (Diocese of Scranton), 574 Bennett Street, Luzerne, PA 18709; weekend and daily Masses held in the former St. Ann's (Lithuanian) church building",
   "summary": "The former Šv. Onos / St. Ann's Lithuanian church on Bennett Street in Luzerne, PA is standing and in active Catholic use as the sole worship site of Holy Family Parish, Diocese of Scranton. St. Ann's, founded August 3, 1924 as one of the diocese's last ethnic parishes, was yoked in 1995 with the German Sacred Heart of Jesus and Slovak St. John Nepomucene parishes as the \"Catholic Community of Luzerne\" and formally consolidated into Holy Family Parish on December 26, 1999. Of the three churches, Sacred Heart was demolished (its furnishings distributed to poor parishes) and the St. John Nepomucene church and rectory on Miller Street were sold in 2008, leaving the former St. Ann's at 574 Bennett Street as the parish's one worship site — the building survived because it was chosen as the consolidated parish's home. The church built in 1924 as a below-ground \"basement church\" received its upper worship level in 1960 and later a major renovation of the Bennett Street worship space under Fr. David Cappelloni. Masses run Saturday 5:15 PM, Sunday 9:00 AM, and weekdays 12:10 PM; the pastor is Monsignor David L. Tressler, appointed effective July 1, 2022 while continuing as pastor of Saint Ignatius Loyola Parish in Kingston — a shared-clergy arrangement of the kind the diocese's ongoing Vision 2030 planning process uses ahead of possible further restructuring. Parish life is active: the two linked parishes ran a joint \"40 Days of Service\" campaign September 15–October 24, 2025, and the parish website carried current announcements as of July 2026. No Lithuanian-language liturgy or heritage programming was found; the Lithuanian identity survives as the parish's documented \"roots\" history.",
+  "historicalNarrative": [
+    {
+      "text": "St. Ann was founded on August 3, 1924 as Luzerne's Lithuanian Roman Catholic parish. The parish's own history describes a below-ground basement church built that year and an upper worship level added in 1960. Those construction phases belong to the Bennett Street church and are distinct from the later end of St. Ann as an independent institution.",
+      "sources": [
+        { "url": "https://www.holyfamilyluzerne.org/St--Ann-Parish", "locator": "St. Ann Parish history: August 3, 1924 foundation, basement church, and 1960 upper church" }
+      ]
+    },
+    {
+      "text": "In 1995 St. Ann was yoked with the German Sacred Heart of Jesus and Slovak St. John Nepomucene parishes under one pastor as the Catholic Community of Luzerne. After parish consultation, the three institutions consolidated into Holy Family Parish on December 26, 1999. The 1995 shared-pastor arrangement and the 1999 canonical consolidation are separate milestones rather than interchangeable closure dates.",
+      "sources": [
+        { "url": "https://www.holyfamilyluzerne.org/catholic-community-of-luzerne", "locator": "Catholic Community of Luzerne history: 1995 yoking and December 26, 1999 consolidation" },
+        { "url": "https://www.holyfamilyluzerne.org/Parish-History", "locator": "Parish History: formation of Holy Family Parish from three ethnic parishes" }
+      ]
+    },
+    {
+      "text": "The former St. Ann church survived because Holy Family selected the Bennett Street site as its sole worship location. The parish history records the sale or demolition of the other two parish properties by 2008 and states that one worship site remained on Bennett Street. Current parish and diocesan listings confirm active Catholic worship there; this is continued building use by Holy Family, not survival of St. Ann as a Lithuanian juridic parish.",
+      "sources": [
+        { "url": "https://www.holyfamilyluzerne.org/catholic-community-of-luzerne", "locator": "Disposition of Sacred Heart and St. John properties and one remaining Bennett Street worship site" },
+        { "url": "https://www.holyfamilyluzerne.org/mass-schedule", "locator": "Current Holy Family Mass schedule" },
+        { "url": "https://www.dioceseofscranton.org/find-a-parish/holy-family-parish-luzerne-luzerne/", "locator": "Diocese of Scranton current Holy Family Parish listing" }
+      ]
+    },
+    {
+      "text": "Holy Family's present life is territorial rather than documented Lithuanian ministry. The Diocese of Scranton appointed Monsignor David Tressler in 2022 while he continued as pastor of St. Ignatius Loyola in Kingston, and the linked parishes conducted a joint service campaign in 2025. These sources show continuing parish activity and shared clergy but do not establish current Lithuanian-language worship, Lithuanian membership, or a published future consolidation plan for Holy Family.",
+      "sources": [
+        { "url": "https://www.dioceseofscranton.org/bishop-announces-clergy-appointments-june-14-2022/", "locator": "July 1, 2022 appointment of Msgr. David Tressler to Holy Family while continuing at St. Ignatius" },
+        { "url": "https://www.dioceseofscranton.org/parishioners-turn-gratitude-into-action-during-40-days-of-service-to-honor-pastor/", "locator": "2025 joint Holy Family and St. Ignatius 40 Days of Service report" }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "1995",

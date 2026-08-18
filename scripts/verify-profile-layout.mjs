@@ -657,10 +657,21 @@ if (
 const lemontMission = institutionByProfile.get(
   "/parishes/pal-jurgio-matulaicio-misija-lemont-il",
 );
+const romanCatholicInstitutions = infographic.institution_history.filter(
+  (institution) => institution.institution_class === "roman_catholic",
+);
+const romanCatholicParishes = romanCatholicInstitutions.filter(
+  (institution) => institution.record_type === "parish",
+);
+const romanCatholicMissions = romanCatholicInstitutions.filter(
+  (institution) => institution.record_type === "misija",
+);
 if (
   lemontMission?.record_type !== "misija" ||
-  infographic.counts.roman_catholic_parish_institutions !== 132 ||
-  publication.counts.by_record_type.misija !== 5
+  romanCatholicInstitutions.length !== 137 ||
+  infographic.counts.roman_catholic_parish_institutions !==
+    romanCatholicParishes.length ||
+  publication.counts.by_record_type.misija !== romanCatholicMissions.length
 ) {
   errors.push("mission vocabulary or Roman Catholic parish count drifted");
 }

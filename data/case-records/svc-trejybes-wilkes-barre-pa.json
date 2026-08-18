@@ -4,6 +4,36 @@
   "buildingStatus": "demolished",
   "currentUse": "Vacant lot at 416 E. South Street in the Heights section of Wilkes-Barre; a small memorial cross, likely erected by Lithuanians, stands on the empty site per Global True Lithuania's post-demolition observation. No sale of the lot, buyer, or redevelopment has been verified.",
   "summary": "Holy Trinity (Švč. Trejybės) Lithuanian Church at 416 E. South Street, Wilkes-Barre — the Gothic-revival \"gem on the hill\" whose twin steeples dominated the Heights section — was closed by the Diocese of Scranton on May 30, 2010 in the Bishop Martino-era consolidation, with the congregation merged into Our Lady of Hope Parish, Wilkes-Barre. A final Mass in Lithuanian, the first there in roughly half a century, was celebrated in May 2010 by Rev. Vytautas Volertas of New York before about 40 people. Demolition began in mid-January 2015; the diocese stated the lot would be put up for sale once the church was leveled. Its furnishings were dispersed: 14-16 hand-painted 1930s-40s stained-glass windows were salvaged by King Richards Liturgical Design (a crucifixion pair listed at $70,000), the marble altar went to St. Mary's in David City, Nebraska, pews to a Forest City, PA church, and angel statues to nearby parishes and Little Flower Manor. Today the site is an empty lot where a small cross stands, likely erected by Lithuanians. The successor parish, Our Lady of Hope (40 Park Avenue), remains open in the diocese's directory, and Holy Trinity Lithuanian Catholic Cemetery still exists in the Georgetown area near Wilkes-Barre.",
+  "historicalNarrative": [
+    {
+      "text": "Holy Trinity was the Lithuanian Roman Catholic parish in Wilkes-Barre's Heights section, with its church at 416 East South Street. Later press describes the Gothic Revival building and its twin steeples as a neighborhood landmark. The available opened sources do not establish the original parish decree or a fully verified construction chronology, so the inherited 1893 congregation and 1911 building dates remain secondary rather than controlling milestones here.",
+      "sources": [
+        { "url": "https://www.wnep.com/article/news/local/luzerne-county/goodbye-to-a-century-old-church/523-d2568a90-19f5-4474-b24a-c6ffea048df4", "locator": "January 2015 account of Holy Trinity Lithuanian Church on East South Street" },
+        { "url": "https://kingrichards.com/The-Citizens-Voice---Scranton-PA/", "locator": "Citizens' Voice reprint: Holy Trinity building and artifact history" }
+      ]
+    },
+    {
+      "text": "The Diocese of Scranton closed Holy Trinity on May 30, 2010 and directed its community to Our Lady of Hope Parish. A final Lithuanian liturgy was celebrated earlier that month by Rev. Vytautas Volertas before about forty people. The 2010 institutional closure must be kept separate from the 2015 demolition date that older summaries sometimes presented as the parish's end.",
+      "sources": [
+        { "url": "https://www.dioceseofscranton.org/wp-content/uploads/2021/03/Consolidated-Parishes-3-24-21.pdf", "locator": "Wilkes-Barre entry: Holy Trinity (Lithuanian), closed 5/30/2010, Our Lady of Hope records routing" },
+        { "url": "https://archive.timesleader.com/article/1298079/celebrating-last-lithuanian-liturgy", "locator": "May 8, 2010 Celebrating Last Lithuanian Liturgy report" }
+      ]
+    },
+    {
+      "text": "Demolition began in January 2015, nearly five years after the parish closed. Subsequent reporting records the dispersal of stained glass, the marble altar, pews, and statues to other churches and institutions, while the pipe organ could not be placed. These are building and furnishing outcomes; they do not alter the earlier merger into Our Lady of Hope.",
+      "sources": [
+        { "url": "https://www.wnep.com/article/news/local/luzerne-county/goodbye-to-a-century-old-church/523-d2568a90-19f5-4474-b24a-c6ffea048df4", "locator": "January 14, 2015 demolition report" },
+        { "url": "https://kingrichards.com/The-Citizens-Voice---Scranton-PA/", "locator": "March 8, 2015 reprint: stained glass, altar, pew, statue, and organ disposition" }
+      ]
+    },
+    {
+      "text": "Field documentation later found an empty lot marked by a small cross and separately recorded Holy Trinity's Lithuanian cemetery, including Lithuanian inscriptions and a memorial to Lithuanians who died in World War II. The Diocese of Scranton continued to list Our Lady of Hope as an active parish. The current lot ownership and physical condition of the memorial cross remain unverified, and the cemetery is not evidence that the demolished church still stands.",
+      "sources": [
+        { "url": "https://global.truelithuania.com/northern-coal-region-scranton-1614/", "locator": "Wilkes-Barre Holy Trinity site and cemetery sections" },
+        { "url": "https://www.dioceseofscranton.org/find-a-parish/", "locator": "Find a Parish directory entry for Our Lady of Hope, Wilkes-Barre" }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2010-05-30",

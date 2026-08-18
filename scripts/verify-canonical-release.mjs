@@ -57,25 +57,6 @@ for (const relativePath of polishClevelandBoundaryFiles) {
   }
 }
 
-const LT_MAP = {
-  ą: "a",
-  č: "c",
-  ę: "e",
-  ė: "e",
-  į: "i",
-  š: "s",
-  ų: "u",
-  ū: "u",
-  ž: "z",
-};
-const slugify = (...parts) =>
-  parts
-    .join(" ")
-    .toLowerCase()
-    .replace(/[ąčęėįšųūž]/g, (character) => LT_MAP[character])
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-
 const registryBySlug = new Map(
   registry.map((record) => [record.slug, record]),
 );
@@ -111,6 +92,9 @@ const manifestBySlug = new Map(
 const publicationSlugs = new Set(
   publication.public_institutions.map((institution) => institution.registry_slug),
 );
+const canonicalCore = core.filter(
+  (parish) => parish.country === "US" && !parish.mergedInto,
+);
 
 const usRows = sourceRows.slice(0, 83);
 if (sourceRows.length !== 86 || usRows.length !== 83) {
@@ -118,9 +102,11 @@ if (sourceRows.length !== 86 || usRows.length !== 83) {
     `frozen source snapshot must contain 83 U.S. rows plus 3 comparators; found ${sourceRows.length}`,
   );
 }
-const expectedCaseSlugs = usRows.map((row) =>
-  slugify(row.parish, row.city, row.state),
-);
+// The frozen 83 rows resolve to 82 canonical identities because the rejected
+// St. Casimir Waterbury row is retained as source lineage under St. Joseph.
+// Require one current dossier per canonical identity, then verify below that
+// their c83Rows cover all 83 frozen rows exactly.
+const expectedCaseSlugs = canonicalCore.map((identity) => identity.slug);
 if (caseFiles.length !== caseManifest.counts.case_files) {
   errors.push(
     `case-file count disagrees with Brain manifest: ` +
@@ -148,9 +134,6 @@ for (const slug of caseBySlug.keys()) {
   }
 }
 
-const canonicalCore = core.filter(
-  (parish) => parish.country === "US" && !parish.mergedInto,
-);
 if (canonicalCore.length !== 82) {
   errors.push(`expected 82 canonical U.S. profiles, found ${canonicalCore.length}`);
 }

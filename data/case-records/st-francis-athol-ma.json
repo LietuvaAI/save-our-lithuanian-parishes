@@ -1,0 +1,206 @@
+{
+  "slug": "st-francis-athol-ma",
+  "culturenetEntityId": "cn:institution:st-francis-athol-ma",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian parish founded in 1913 · present church dedicated October 23, 1921 · active Roman Catholic parish",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "active",
+  "buildingStatus": "standing",
+  "currentUse": "The Diocese of Worcester currently lists St. Francis of Assisi at 101 Main Street with a recurring Mass schedule, and its diocesan newspaper documented the church's centennial worship in 2021. This proves an active Roman Catholic parish and standing worship site. It does not establish uninterrupted Lithuanian national-parish form or current Lithuanian-language ministry.",
+  "summary": "St. Francis of Assisi is the Roman Catholic parish founded in 1913 for Athol's Lithuanian community. The accepted public evidence separates years of hosted and improvised worship from parish formation. After the society hall used for worship burned, the congregation returned temporarily to Our Lady Immaculate. The present church was dedicated October 23, 1921. Current diocesan sources list St. Francis as active at 101 Main Street, but they do not prove uninterrupted Lithuanian national-parish form or present Lithuanian-led ministry.",
+  "institutionLifecycle": {
+    "formation": "The Diocese of Worcester's newspaper identifies 1913 as the founding year of the Lithuanian parish and names Father Francis Meškauskas as its first pastor. The exact canonical erection instrument remains unresolved.",
+    "institutionalForm": "Lithuanian Roman Catholic parish at formation; current diocesan sources establish continuing parish life but do not characterize it as a present Lithuanian national parish.",
+    "jurisdiction": "Originally within the Diocese of Springfield; now within the Diocese of Worcester.",
+    "terminalStatus": "No terminal event. The parish remains active.",
+    "currentVerification": "The Diocese of Worcester parish finder lists St. Francis at 101 Main Street with current Mass times; the diocesan Catholic Free Press documented the church's 100th anniversary in 2021."
+  },
+  "worshipSites": [
+    {
+      "siteType": "host_church",
+      "name": "Historical Our Lady Immaculate host church",
+      "address": "Athol, MA; exact historical address and physical continuity with the current 192 School Street church unresolved",
+      "usePeriod": "before resident parish formation and again after the society-hall fire",
+      "buildingCondition": "unknown",
+      "currentUse": "Historical host identity only. The current diocesan finder separately lists an active Our Lady Immaculate at 192 School Street, but the accepted evidence does not prove it is the same physical building used before 1913.",
+      "evidence": [
+        {
+          "url": "https://catholicfreepress.org/news/athol-church-reaches-100",
+          "locator": "Athol church reaches 100"
+        },
+        {
+          "url": "https://www.worcesterdiocese.org/parishfinder",
+          "locator": "Parish Finder"
+        }
+      ]
+    },
+    {
+      "siteType": "hall",
+      "name": "Gate of Dawn / Our Lady of Vilna Society Hall",
+      "address": "Jones Street, Athol, MA; street number unresolved",
+      "usePeriod": "Lithuanian worship before the permanent church; damaged by fire in 1918 according to the diocesan centennial account",
+      "buildingCondition": "unknown",
+      "currentUse": "Historical improvised worship site; its physical fate after the 1918 fire remains unresolved.",
+      "evidence": [
+        {
+          "url": "https://catholicfreepress.org/news/athol-church-reaches-100",
+          "locator": "Athol church reaches 100"
+        }
+      ]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-francis-main-street-athol-ma",
+      "name": "St. Francis of Assisi Church",
+      "address": "101 Main Street, Athol, MA 01331",
+      "usePeriod": "groundbreaking July 28, 1919; dedicated October 23, 1921; active as of 2026-08-17",
+      "buildingCondition": "standing",
+      "currentUse": "Active Roman Catholic worship site.",
+      "evidence": [
+        {
+          "url": "https://catholicfreepress.org/news/athol-church-reaches-100",
+          "locator": "Athol church reaches 100"
+        },
+        {
+          "url": "https://www.worcesterdiocese.org/parishfinder",
+          "locator": "Parish Finder"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-francis-athol-ma",
+      "target": "cn:building_site:st-francis-main-street-athol-ma",
+      "date": "1921–present",
+      "status": "accepted",
+      "note": "The current diocesan listing and anniversary account establish continuing use."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "Athol's Lithuanian Catholics first depended on existing local Catholic infrastructure. The diocesan centennial account says they attended Our Lady Immaculate, later received Lithuanian Masses from Father John Jakaitis in a society hall, and continued seeking a local priest and parish. The accepted evidence does not prove that the historical host building is physically identical to the current Our Lady Immaculate site.",
+      "sources": [
+        {
+          "url": "https://catholicfreepress.org/news/athol-church-reaches-100",
+          "locator": "Athol church reaches 100"
+        }
+      ]
+    },
+    {
+      "text": "The diocesan centennial account identifies 1913 as the parish's founding year and Father Francis Meškauskas as its first pastor. It also explains that a priest originally expected to found the parish, Father Juozas Montvilas, died aboard Titanic. Parish formation is therefore dated to 1913, while the exact canonical erection instrument remains unresolved.",
+      "sources": [
+        {
+          "url": "https://catholicfreepress.org/news/athol-church-reaches-100",
+          "locator": "Athol church reaches 100"
+        }
+      ]
+    },
+    {
+      "text": "Before it had a permanent church, the community adapted a Lithuanian society hall for worship. Fire damaged that hall in 1918, after which parishioners again used Our Lady Immaculate; the hall's ultimate physical fate is unresolved. The centennial account reports a 1920 cornerstone and the church's dedication on October 23, 1921. These are building milestones, not parish formation.",
+      "sources": [
+        {
+          "url": "https://catholicfreepress.org/news/athol-church-reaches-100",
+          "locator": "Athol church reaches 100"
+        }
+      ]
+    },
+    {
+      "text": "The Diocese of Worcester celebrated the parish's centennial in 2013 and the church building's centennial in 2021, preserving the distinction between institution and structure. The 2021 account documents parishioners, worship, artwork, and continuing community life rather than a terminal event.",
+      "sources": [
+        {
+          "url": "https://catholicfreepress.org/news/athol-parish-marks-100-years",
+          "locator": "Athol parish marks 100 years"
+        },
+        {
+          "url": "https://catholicfreepress.org/news/athol-church-reaches-100",
+          "locator": "Athol church reaches 100"
+        }
+      ]
+    },
+    {
+      "text": "Current diocesan evidence establishes that the Roman Catholic parish and its church survive. The Diocese of Worcester lists St. Francis at 101 Main Street with a recurring Mass schedule, and the Catholic Free Press reported a centennial Mass in 2021. These sources support current institutional and building use, but not uninterrupted Lithuanian national-parish status or present Lithuanian-language ministry.",
+      "sources": [
+        {
+          "url": "https://www.worcesterdiocese.org/parishfinder",
+          "locator": "Parish Finder"
+        },
+        {
+          "url": "https://catholicfreepress.org/news/athol-church-reaches-100",
+          "locator": "Athol church reaches 100"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1913",
+      "headline": "Resident-pastor parish life begins",
+      "detail": "The Diocese of Worcester's centennial account identifies 1913 as the parish's founding year and Father Francis Meškauskas as its first pastor.",
+      "sources": [
+        {
+          "title": "Athol church reaches 100",
+          "publisher": "The Catholic Free Press, Diocese of Worcester",
+          "date": "2021-10-14",
+          "url": "https://catholicfreepress.org/news/athol-church-reaches-100"
+        }
+      ]
+    },
+    {
+      "date": "1921-10-23",
+      "headline": "Permanent church dedicated",
+      "detail": "The St. Francis church was dedicated after the community's temporary worship phases.",
+      "sources": [
+        {
+          "title": "Athol church reaches 100",
+          "publisher": "The Catholic Free Press, Diocese of Worcester",
+          "date": "2021-10-14",
+          "url": "https://catholicfreepress.org/news/athol-church-reaches-100"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "headline": "Active parish and worship site",
+      "detail": "The Diocese of Worcester currently lists St. Francis at 101 Main Street with scheduled worship.",
+      "sources": [
+        {
+          "title": "Parish Finder",
+          "publisher": "Diocese of Worcester",
+          "date": "accessed 2026-08-17",
+          "url": "https://www.worcesterdiocese.org/parishfinder"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Athol church reaches 100",
+      "publisher": "The Catholic Free Press, Diocese of Worcester",
+      "date": "2021-10-14",
+      "url": "https://catholicfreepress.org/news/athol-church-reaches-100"
+    },
+    {
+      "title": "Athol parish marks 100 years",
+      "publisher": "The Catholic Free Press, Diocese of Worcester",
+      "date": "2013-11-04",
+      "url": "https://catholicfreepress.org/news/athol-parish-marks-100-years"
+    },
+    {
+      "title": "Parish Finder",
+      "publisher": "Diocese of Worcester",
+      "date": "accessed 2026-08-17",
+      "url": "https://www.worcesterdiocese.org/parishfinder"
+    },
+    {
+      "title": "Parish Goals",
+      "publisher": "Diocese of Worcester, Legacy of Hope",
+      "date": "accessed 2026-08-17",
+      "url": "https://legacyofhope.worcesterdiocese.org/receptions-parish-goals"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The 1920 cornerstone and 1921 dedication are building milestones, not competing parish-foundation dates; the Diocese of Worcester's public history dates parish formation to 1913.",
+  "gaps": "The exact address of early hosted worship, the street number and terminal physical fate of the Jones Street society hall, the exact canonical erection instrument, deed and parcel history, records custody, cemetery relationships, and the date and mechanism by which the parish ceased to function as a specifically Lithuanian national parish remain unresolved. Current sources do not establish Lithuanian-language worship or Lithuanian-led ministry."
+}

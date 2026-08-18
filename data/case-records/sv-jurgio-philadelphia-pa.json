@@ -4,6 +4,36 @@
   "buildingStatus": "standing",
   "currentUse": "Active Roman Catholic worship site of the merged St. John Paul II Parish (one Sunday Mass at 8:30 a.m.), with St. George Independent Catholic School operating on the same campus at 2700 E. Venango St., Port Richmond",
   "summary": "St. George (Šv. Jurgio) Lithuanian church in Philadelphia's Port Richmond neighborhood is still standing and still in Catholic use. The parish, founded in 1902 as a personal parish for Lithuanian speakers, was merged effective July 1, 2019 with three other ethnic Port Richmond parishes — St. Adalbert (Polish), Mother of Divine Grace (Italian), and Nativity B.V.M. — into a single parish, renamed St. John Paul II Parish effective October 22, 2019, with St. Adalbert as the primary worship site. All four church buildings were kept open as worship sites, and as of July 2026 the parish website still lists St. George Church (2700 E. Venango St.) with a Sunday 8:30 a.m. Mass under pastor Rev. James P. Olson. The building, erected in 1920 with the school built into its first floor, retains its Lithuanian fabric: the Vytis (Lithuanian coat of arms) over the entrance, Stations of the Cross with Lithuanian inscriptions, and Lithuanian donor names beneath the stained glass. Sacramental records of the former parish are kept at St. John Paul II Parish, and the attached school continues as the independent St. George Independent Catholic School. No sale, demolition, or relegation of the building has been reported; its main exposure is its reduced status as a one-Mass secondary worship site within a four-church merged parish.",
+  "historicalNarrative": [
+    {
+      "text": "St. George was founded in 1902 as a personal Roman Catholic parish for Philadelphia's Lithuanian-speaking community. The Archdiocese of Philadelphia identifies the institution as Lithuanian and dates its independent life to 1902-2019. Field documentation distinguishes the parish's founding from the surviving Port Richmond church, erected in 1920 with the school incorporated into its first floor.",
+      "sources": [
+        { "url": "https://archphila.org/parish/st-george-philadelphia/", "locator": "Parish record: George (Lithuanian), 1902-2019" },
+        { "url": "https://global.truelithuania.com/philadelphia-pennsylvania-1160/", "locator": "St. George Lithuanian church section: 1920 building and school arrangement" }
+      ]
+    },
+    {
+      "text": "St. George ceased as a separate parish effective July 1, 2019. CatholicPhilly documents its merger with St. Adalbert, Mother of Divine Grace, and Nativity B.V.M. into one Port Richmond parish, with St. Adalbert designated the primary worship site. The same announcement kept all four church buildings open, so the parish's juridic end did not close or sell the St. George church.",
+      "sources": [
+        { "url": "https://catholicphilly.com/2019/05/news/local-news/merger-of-4-city-parishes-into-one-akin-to-emmaus-journey/", "locator": "May 21, 2019 merger report: four Port Richmond parishes, July 1 effective date, and retained churches" },
+        { "url": "https://archphila.org/parish/st-george-philadelphia/", "locator": "Parish record: merger into Nativity B.V.M. effective July 1, 2019" }
+      ]
+    },
+    {
+      "text": "The consolidated parish was renamed St. John Paul II Parish effective October 22, 2019. That renaming belongs to the successor institution and does not revive St. George as an independent parish. Sacramental records and current administration are held through St. John Paul II, while St. George remains one of its worship locations.",
+      "sources": [
+        { "url": "https://catholicphilly.com/2019/10/news/local-news/merged-port-richmond-parish-adopts-new-name-st-john-paul-ii/", "locator": "October 2019 report: St. John Paul II Parish name effective October 22" },
+        { "url": "https://archphila.org/parish/st-george-philadelphia/", "locator": "Records-location and successor-parish entry" }
+      ]
+    },
+    {
+      "text": "The St. George church remains an active Catholic worship site. St. John Paul II Parish lists the church at 2700 East Venango Street with a Sunday 8:30 a.m. Mass, while field documentation records a Vytis above the entrance, Lithuanian inscriptions on the Stations of the Cross, and Lithuanian donor names beneath the stained glass. No current Lithuanian-language Mass is listed, so active building use and surviving heritage should not be confused with continued Lithuanian national-parish status.",
+      "sources": [
+        { "url": "https://www.jpiiphila.org/", "locator": "Current worship-sites and Mass schedule: St. George Church, 2700 E. Venango Street" },
+        { "url": "https://global.truelithuania.com/philadelphia-pennsylvania-1160/", "locator": "St. George church section: Vytis, Lithuanian Stations, and stained-glass donor names" }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2019-05-21",

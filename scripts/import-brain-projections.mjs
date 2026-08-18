@@ -1,7 +1,7 @@
 // Import generated canonical projections from the sibling CultureNet Brain
 // checkout. These files are committed build caches for deployments; they are
 // never authored or adjudicated in the site repository.
-import { readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const brainRoot = resolve(
@@ -104,7 +104,20 @@ const caseSource = resolve(
   "docs/research/parish-canon/case-files/current",
 );
 const caseTarget = new URL("../data/case-records/", import.meta.url);
-for (const filename of readdirSync(caseSource).filter((name) => name.endsWith(".json"))) {
+const caseFilenames = new Set(
+  readdirSync(caseSource).filter((name) => name.endsWith(".json")),
+);
+
+// This directory is a deployment cache, not a second research ledger. Remove
+// files that no longer exist in the merged Brain release before copying the
+// authoritative set.
+for (const filename of readdirSync(caseTarget).filter((name) => name.endsWith(".json"))) {
+  if (!caseFilenames.has(filename)) {
+    rmSync(new URL(filename, caseTarget));
+  }
+}
+
+for (const filename of [...caseFilenames].sort()) {
   const contents = readFileSync(resolve(caseSource, filename), "utf8");
   JSON.parse(contents);
   writeFileSync(new URL(filename, caseTarget), contents);

@@ -1,0 +1,117 @@
+{
+  "slug": "st-casimir-st-pete-beach-fl",
+  "culturenetEntityId": "cn:institution:st-casimir-st-pete-beach-fl",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian Roman Catholic mission documented by the Diocese of St. Petersburg as dating to 1963 · regular liturgies ceased in June 2018",
+  "institutionClass": "roman_catholic",
+  "institutionalForm": "mission",
+  "institutionStatus": "closed",
+  "buildingStatus": "unknown",
+  "currentUse": "Regular liturgies at St. Casimir Lithuanian Mission ceased in June 2018 when its administrator returned to Lithuania. No accepted source identifies a dedicated church, host parish, street address, later worship schedule, surviving mission organization, or current building condition. The end of regular liturgies is an institutional and worship milestone, not evidence about an unidentified building.",
+  "summary": "St. Casimir was a Lithuanian Roman Catholic mission in St. Pete Beach. The Diocese of St. Petersburg's fiftieth-anniversary history dates the mission to 1963 and states that it existed before the diocese was established in 1968, replacing the weaker inherited 1975 formation reading. In May 2018 the bishop relieved Father Bernardas Talaisis as administrator after fourteen years of ministry and announced that regular liturgies would cease in June when he returned to Lithuania. That official notice replaces the inherited 2017 terminal reading, but it does not identify a formal suppression decree, exact final liturgy, worship-site address, host relationship, building outcome, successor, or records custodian.",
+  "institutionLifecycle": {
+    "formation": "The Diocese of St. Petersburg identifies St. Casimir Lithuanian Mission with the year 1963 and states that it already existed before the diocese was established in 1968.",
+    "institutionalForm": "Lithuanian Roman Catholic ethnic mission, not an independently proven parish.",
+    "jurisdiction": "Roman Catholic Diocese of St. Petersburg by 1968; the mission's pre-1968 diocesan jurisdiction and original establishment instrument remain unresolved.",
+    "terminalStatus": "Regular liturgies ceased in June 2018 after Father Bernardas Talaisis was relieved as administrator and returned to Lithuania. No formal suppression decree or exact final-Mass date has been located.",
+    "currentVerification": "The 2018 diocesan clergy notice is the terminal official evidence. No later official mission listing, worship schedule, host site, successor, records custodian, or surviving organization has been established."
+  },
+  "worshipSites": [],
+  "relationships": [],
+  "historicalNarrative": [
+    {
+      "text": "St. Casimir was a Lithuanian Roman Catholic mission rather than a parish. The Diocese of St. Petersburg's historical account identifies it as St. Casimir Lithuanian Mission and assigns the year 1963, providing official evidence for both its ethnic purpose and institutional form.",
+      "sources": [
+        {
+          "url": "https://www.dosp.org/diocese-documents-50-year-impact-on-the-community/",
+          "locator": "Facts About the Present and the Past, lines 122-136; St. Casimir Lithuanian Mission (1963)"
+        }
+      ]
+    },
+    {
+      "text": "The mission predated the Diocese of St. Petersburg. The diocesan history says St. Casimir and the Catholic Student Center at the University of South Florida already existed before the diocese was established in 1968. The source does not identify the mission's founding instrument or its prior diocesan jurisdiction.",
+      "sources": [
+        {
+          "url": "https://www.dosp.org/diocese-documents-50-year-impact-on-the-community/",
+          "locator": "Facts About the Present and the Past, lines 125-136; diocesan establishment and pre-existing mission"
+        }
+      ]
+    },
+    {
+      "text": "The official 1963 history corrects the inherited 1975 formation reading. It does not show whether 1963 was the canonical establishment date, the beginning of regular Lithuanian liturgies, or another institutional milestone, so the year is retained as the diocese's dated mission reading without inventing a decree.",
+      "sources": [
+        {
+          "url": "https://www.dosp.org/diocese-documents-50-year-impact-on-the-community/",
+          "locator": "Facts About the Present and the Past, lines 132-136; mission year and pre-diocese context"
+        }
+      ]
+    },
+    {
+      "text": "In a May 21, 2018 clergy notice, Bishop Gregory Parkes relieved Father Bernardas Talaisis as administrator of St. Casimir. The notice says he had ministered to the diocese's Lithuanian population for fourteen years and would return to Lithuania. That priestly assignment confirms active mission ministry through the 2018 transition but does not identify a host church or dedicated property.",
+      "sources": [
+        {
+          "url": "https://www.dosp.org/clergy-changes-may-21-2018/",
+          "locator": "Relieving, lines 62-73; Father Bernardas Talaisis and fourteen years of Lithuanian ministry"
+        }
+      ]
+    },
+    {
+      "text": "The same notice states that regular liturgies at St. Casimir Lithuanian Mission would cease in June 2018. This is the strongest available terminal evidence and supersedes the inherited 2017 reading. It establishes the end of regular worship and the closed mission context, while the formal suppression date, exact final liturgy, building history, records custody, and any occasional later gathering remain unresolved.",
+      "sources": [
+        {
+          "url": "https://www.dosp.org/clergy-changes-may-21-2018/",
+          "locator": "Relieving, line 72; regular liturgies to cease in June 2018"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1963",
+      "headline": "Lithuanian mission predates the Diocese of St. Petersburg",
+      "detail": "The diocesan history identifies St. Casimir Lithuanian Mission with 1963 and says it existed before the diocese's 1968 establishment.",
+      "sources": [
+        {
+          "title": "Diocese Documents 50 Year Impact on the Community",
+          "publisher": "Diocese of St. Petersburg",
+          "date": "2018-06-04",
+          "page": "Facts About the Present and the Past, lines 122-136",
+          "url": "https://www.dosp.org/diocese-documents-50-year-impact-on-the-community/"
+        }
+      ]
+    },
+    {
+      "date": "2018-06",
+      "headline": "Regular liturgies cease",
+      "detail": "The bishop's clergy notice ended Father Talaisis's administrator assignment and announced that regular mission liturgies would cease in June.",
+      "sources": [
+        {
+          "title": "Clergy Changes ~ May 21, 2018",
+          "publisher": "Diocese of St. Petersburg",
+          "date": "2018-05-21",
+          "page": "Relieving, lines 62-73",
+          "url": "https://www.dosp.org/clergy-changes-may-21-2018/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Diocese Documents 50 Year Impact on the Community",
+      "publisher": "Diocese of St. Petersburg",
+      "date": "2018-06-04",
+      "page": "Facts About the Present and the Past, lines 122-136",
+      "url": "https://www.dosp.org/diocese-documents-50-year-impact-on-the-community/"
+    },
+    {
+      "title": "Clergy Changes ~ May 21, 2018",
+      "publisher": "Diocese of St. Petersburg",
+      "date": "2018-05-21",
+      "page": "Relieving, lines 62-73",
+      "url": "https://www.dosp.org/clergy-changes-may-21-2018/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The official diocesan history dates the Lithuanian mission to 1963, not the inherited 1975 reading. The official clergy notice places cessation of regular liturgies in June 2018, not the inherited 2017 terminal year. Neither official source supplies a canonical establishment or suppression decree.",
+  "gaps": "The 1963 establishment instrument and exact meaning of that date, pre-1968 jurisdiction, all worship-site and host-parish identities and addresses, sacramental-record custody, exact final liturgy, canonical suppression mechanism, successor, any occasional worship after June 2018, and every building condition or current-use question remain unresolved."
+}

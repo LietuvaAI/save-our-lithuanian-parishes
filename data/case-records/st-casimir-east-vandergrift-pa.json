@@ -1,0 +1,53 @@
+{
+  "slug": "st-casimir-east-vandergrift-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "standing",
+  "currentUse": "St. Casimir no longer exists as a distinct Lithuanian Roman Catholic parish. The former St. Casimir church was retained, renovated, and rededicated in 1992 for Our Lady, Queen of Peace Parish. The current Diocese of Greensburg directory lists that active successor at 420 McKinley Avenue, East Vandergrift. The official parish history thereby supports the site continuity between the former St. Casimir church and the current address; it does not eliminate an unresolved official conflict over whether St. Casimir closed in 1985 or entered the successor merger in 1989.",
+  "summary": "St. Casimir was East Vandergrift's Lithuanian Roman Catholic parish, founded in 1922 according to the Diocese of Greensburg. Field documentation says its first church opened in 1924, was lost amid a 1936 fire and flood, and was rebuilt in 1937. Official diocesan and parish sources agree that Our Lady, Queen of Peace is the successor and that the former St. Casimir church became the successor's worship site, but they conflict on the institutional transition: the diocesan former-church directory dates St. Casimir's closure to 1985, while the current parish history says three parishes merged into Our Lady, Queen of Peace in 1989 and the St. Casimir church was renovated and rededicated in 1992. The successor remains active at 420 McKinley Avenue.",
+  "historicalNarrative": [
+    {
+      "text": "The Diocese of Greensburg identifies St. Casimir as an East Vandergrift Roman Catholic parish founded in 1922, and the current successor parish history identifies it specifically as the Lithuanian church. Those official records establish a distinct Lithuanian parish identity; they do not supply the canonical erection decree, the founding pastor, or a pre-church worship address.",
+      "sources": [
+        {"url": "https://www.dioceseofgreensburg.org/parishes/former-churches-directory/", "locator": "East Vandergrift table row: St. Casimir Parish, founded 1922, successor Our Lady, Queen of Peace"},
+        {"url": "https://www.evcatholic.org/olqp-about-us", "locator": "History section: Saint Casimir Lithuanian Church, founded 1922"}
+      ]
+    },
+    {
+      "text": "A Pennsylvania field survey reports that the first Lithuanian church opened in 1924, was destroyed after a fire and the St. Patrick's Day flood in 1936, and was rebuilt in 1937. These details are preserved as attributed field documentation rather than treated as an official diocesan chronology. The exact first-building address, disaster sequence, cornerstone and dedication dates, and proof that the 1937 structure occupies precisely the same parcel remain unresolved.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/", "locator": "East Vandergrift field-survey section: first church opened 1924, 1936 fire/flood loss, and 1937 rebuilding"}
+      ]
+    },
+    {
+      "text": "The two current official histories disagree on the terminal date. The Diocese's former-church directory lists St. Casimir as closed in 1985 with Our Lady, Queen of Peace as successor. The current parish history instead says Our Lady, Queen of Peace was established June 4, 1989 from Holy Trinity, All Saints, and St. Casimir, then says a task force was formed September 11, 1989. The typed institutional relationship is St. Casimir merged into or was succeeded by Our Lady, Queen of Peace, but the canonical effective date and instrument cannot be chosen from these conflicting summaries.",
+      "sources": [
+        {"url": "https://www.dioceseofgreensburg.org/parishes/former-churches-directory/", "locator": "East Vandergrift table row: St. Casimir Parish, 1922-1985, successor Our Lady, Queen of Peace"},
+        {"url": "https://www.evcatholic.org/olqp-about-us", "locator": "History section: 1989 establishment/merger account and September 11 task-force date"}
+      ]
+    },
+    {
+      "text": "The current parish history says the St. Casimir church was renovated and rededicated in 1992 to receive Our Lady, Queen of Peace, while Holy Trinity was razed for a social hall. The current diocesan directory lists Our Lady, Queen of Peace at 420 McKinley Avenue and the diocesan parish directory continues to list the parish as active. This establishes an institution-used-site relationship followed by successor-institution-used-same-site; it does not prove that 420 McKinley was the postal address used throughout St. Casimir's full history.",
+      "sources": [
+        {"url": "https://www.evcatholic.org/olqp-about-us", "locator": "History section: St. Casimir Church renovated and rededicated in 1992 for the successor parish"},
+        {"url": "https://www.dioceseofgreensburg.org/mc-locations/our-lady-queen-of-peace-parish-east-vandergrift/", "locator": "Current diocesan location page, accessed 2026-08-17: 420 McKinley Ave, East Vandergrift, PA 15629"},
+        {"url": "https://www.dioceseofgreensburg.org/parishes/parish-directory/", "locator": "Current parish directory: Our Lady, Queen of Peace Parish, East Vandergrift"}
+      ]
+    }
+  ],
+  "developments": [
+    {"date": "1922", "headline": "St. Casimir Parish is founded", "detail": "Official sources identify the East Vandergrift institution as a Lithuanian Roman Catholic parish.", "sources": [{"title": "Former Churches Directory", "publisher": "Roman Catholic Diocese of Greensburg", "date": "accessed 2026-08-17", "url": "https://www.dioceseofgreensburg.org/parishes/former-churches-directory/"}]},
+    {"date": "1937", "headline": "Lithuanian church is rebuilt", "detail": "Field documentation reports that the 1924 church was lost in 1936 and rebuilt the following year.", "sources": [{"title": "Pittsburgh-area Lithuanian heritage field survey", "publisher": "Global True Lithuania", "date": "accessed 2026-08-17", "url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/"}]},
+    {"date": "1985/1989", "headline": "St. Casimir enters successor lineage", "detail": "Official sources conflict between a 1985 closure and a 1989 three-parish merger into Our Lady, Queen of Peace.", "sources": [{"title": "Former Churches Directory", "publisher": "Roman Catholic Diocese of Greensburg", "date": "accessed 2026-08-17", "url": "https://www.dioceseofgreensburg.org/parishes/former-churches-directory/"}, {"title": "Our Lady, Queen of Peace history", "publisher": "Our Lady, Queen of Peace Parish", "date": "accessed 2026-08-17", "url": "https://www.evcatholic.org/olqp-about-us"}]},
+    {"date": "1992", "headline": "Former St. Casimir church is rededicated", "detail": "The retained church became the worship site of Our Lady, Queen of Peace, now listed at 420 McKinley Avenue.", "sources": [{"title": "Our Lady, Queen of Peace history", "publisher": "Our Lady, Queen of Peace Parish", "date": "accessed 2026-08-17", "url": "https://www.evcatholic.org/olqp-about-us"}]}
+  ],
+  "sources": [
+    {"title": "Former Churches Directory", "publisher": "Roman Catholic Diocese of Greensburg", "date": "accessed 2026-08-17", "url": "https://www.dioceseofgreensburg.org/parishes/former-churches-directory/"},
+    {"title": "Our Lady, Queen of Peace history", "publisher": "Our Lady, Queen of Peace Parish", "date": "accessed 2026-08-17", "url": "https://www.evcatholic.org/olqp-about-us"},
+    {"title": "Our Lady, Queen of Peace current location", "publisher": "Roman Catholic Diocese of Greensburg", "date": "accessed 2026-08-17", "url": "https://www.dioceseofgreensburg.org/mc-locations/our-lady-queen-of-peace-parish-east-vandergrift/"},
+    {"title": "Parish Directory", "publisher": "Roman Catholic Diocese of Greensburg", "date": "accessed 2026-08-17", "url": "https://www.dioceseofgreensburg.org/parishes/parish-directory/"},
+    {"title": "Pittsburgh-area Lithuanian heritage field survey", "publisher": "Global True Lithuania", "date": "accessed 2026-08-17", "url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The legacy lifecycle cannot be normalized to one terminal year. The Diocese of Greensburg former-church directory says St. Casimir closed in 1985, while the current Our Lady, Queen of Peace history describes a 1989 merger of St. Casimir, Holy Trinity, and All Saints and also gives internally awkward June 4 and September 11 milestones. The dossier preserves that official-source conflict. It treats the 1924, 1936, and 1937 building chronology as attributed field documentation. The 1992 official parish account directly supports reuse of the former St. Casimir church, and the current diocesan address supports the 420 McKinley site join, but the address is not back-projected to the first church without a parcel record.",
+  "gaps": "The canonical erection and merger/closure decrees; resolution of the 1985-versus-1989 conflict and the two 1989 dates; founding pastor; pre-1924 worship location; first church's exact address, dedication, and parcel; primary records for the 1936 fire/flood and 1937 rebuilding; proof of parcel continuity across rebuilding; exact 1992 rededication date; cemetery relationships; sacramental-record custody beyond the successor-directory instruction; and current structural/interior assessment remain unresolved."
+}

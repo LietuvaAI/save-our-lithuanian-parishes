@@ -1,11 +1,11 @@
 {
   "generatedFrom": {
-    "registryRevision": 34,
+    "registryRevision": 37,
     "registryDate": "2026-08-11",
     "canonicalPublicationRevision": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
-    "canonicalPublicationHash": "sha256:ba6eb479c426644160bb976d2b31c5be73331f3859472d9cf788faa8f047f799",
+    "canonicalPublicationHash": "sha256:bef6ab8831eb78727fe908039da9a84b1eab9d281d761de86fd58a8f222541e6",
     "canonicalInfographicRevision": "canonical-infographic-units-2026-08-16-worship-site-addresses",
-    "canonicalInfographicHash": "sha256:77118195dea3f0aedaa006b63b6fed689c493c4fbef66311f39228df230f700d",
+    "canonicalInfographicHash": "sha256:691de2b826621cc830245b8bb885af3b1639f10c37a5a7375f16155ea5b5af2f",
     "networkChecked": "2026-08-03"
   },
   "publicUS": {
@@ -15,8 +15,8 @@
     "profilesPendingDeepCase": 44,
     "byRecordType": {
       "congregation": 6,
-      "misija": 5,
-      "parish": 144
+      "misija": 6,
+      "parish": 143
     },
     "byInstitutionClass": {
       "independent_catholic": 4,
@@ -24,8 +24,8 @@
       "non_catholic_christian": 8,
       "roman_catholic": 137
     },
-    "romanCatholicParishes": 132,
-    "romanCatholicMissions": 5,
+    "romanCatholicParishes": 131,
+    "romanCatholicMissions": 6,
     "romanCatholicInstitutions": 137,
     "nationalIndependentCatholicCommunities": 10,
     "nationalIndependentCatholicParishes": 9,
@@ -43,16 +43,16 @@
     }
   },
   "history": {
-    "parishes": 132,
+    "parishes": 131,
     "institutionStatus": {
       "active_parish": 6,
-      "closed": 87,
+      "closed": 86,
       "mass_continues": 5,
       "transferred": 22,
       "unresolved": 5,
       "unverified": 7
     },
-    "closed": 87,
+    "closed": 86,
     "closedWithDatedYear": 78,
     "closedSince1990": 54,
     "closedSince2020": 2,
@@ -69,8 +69,8 @@
   },
   "catholicInstitutionFlow": {
     "institutions": 137,
-    "parishes": 132,
-    "missions": 5,
+    "parishes": 131,
+    "missions": 6,
     "institutionStatus": {
       "active_parish": 8,
       "closed": 90,
@@ -83,8 +83,8 @@
     "retainingLithuanianWorship": 13
   },
   "physicalSites": {
-    "worshipSites": 131,
-    "allBuildingSiteEntities": 172
+    "worshipSites": 134,
+    "allBuildingSiteEntities": 175
   },
   "continuity": {
     "relationships": 51

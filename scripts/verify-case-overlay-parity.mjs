@@ -8,8 +8,14 @@ const read = (path) =>
   JSON.parse(readFileSync(new URL(`../data/${path}`, import.meta.url), "utf8"));
 
 const situations = read("parish-situation.json").parishes;
+const caseManifest = read("canonical-case-files-manifest.json");
 const caseDirectory = new URL("../data/case-records/", import.meta.url);
 const errors = [];
+const manifestBySourceSlug = new Map(
+  caseManifest.entries.map((entry) => [entry.source_record_slug, entry]),
+);
+let legacyOverlayLinksChecked = 0;
+let canonicalDossiersChecked = 0;
 
 const allowedFates = {
   standing: new Set([
@@ -41,17 +47,30 @@ for (const file of readdirSync(caseDirectory)) {
   if (!file.endsWith(".json")) continue;
   const record = JSON.parse(readFileSync(new URL(file, caseDirectory), "utf8"));
   const slug = record.slug ?? file.replace(/\.json$/, "");
-  const situation = situations[slug];
-  if (!situation) {
-    errors.push(`${slug}: deep case record has no classifier overlay`);
-    continue;
-  }
-
   const caseStatus = record.buildingStatus ?? "unknown";
   const allowed = allowedFates[caseStatus];
   if (!allowed) {
     errors.push(`${slug}: unknown case buildingStatus "${caseStatus}"`);
-  } else if (!allowed.has(situation.building_fate)) {
+  }
+
+  const manifestEntry = manifestBySourceSlug.get(slug);
+  if (!manifestEntry) {
+    errors.push(`${slug}: case record is absent from the Brain manifest`);
+    continue;
+  }
+  if (manifestEntry.publication_state === "canonical_packet_already_projected") {
+    canonicalDossiersChecked++;
+    continue;
+  }
+
+  legacyOverlayLinksChecked++;
+  const situation = situations[slug];
+  if (!situation) {
+    errors.push(`${slug}: legacy case record has no classifier overlay`);
+    continue;
+  }
+
+  if (allowed && !allowed.has(situation.building_fate)) {
     errors.push(
       `${slug}: case buildingStatus "${caseStatus}" conflicts with overlay building_fate "${situation.building_fate}"`,
     );
@@ -109,4 +128,8 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log("OK: Brain-owned case evidence and legacy display-overlay links are coherent.");
+console.log(
+  `OK: ${caseManifest.counts.case_files} Brain-owned dossiers are manifested; ` +
+    `${legacyOverlayLinksChecked} legacy display-overlay links are coherent and ` +
+    `${canonicalDossiersChecked} canonically projected dossiers remain evidence-only for status.`,
+);

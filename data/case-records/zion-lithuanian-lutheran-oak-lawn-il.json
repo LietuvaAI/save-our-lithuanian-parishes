@@ -1,0 +1,124 @@
+{
+  "slug": "zion-lithuanian-lutheran-oak-lawn-il",
+  "culturenetEntityId": "cn:institution:zion-lithuanian-lutheran-oak-lawn-il",
+  "asOf": "2026-08-17",
+  "formationLabel": "Organized 4 December 1910 · LCMS Lithuanian Lutheran congregation · relocated from Chicago to 9000 S. Menard Ave. in 1974 · active",
+  "institutionClass": "non_catholic_christian",
+  "institutionStatus": "active",
+  "buildingStatus": "standing",
+  "currentUse": "Active Lutheran Church—Missouri Synod congregation at 9000 South Menard Avenue, Oak Lawn, Illinois. The official LCMS Northern Illinois District directory lists Zion, Pastor Valdas Aušra, and the Menard address; the congregation's current website identifies Zion Evangelical Lutheran Church as established in 1910.",
+  "summary": "Zion is the continuing Lithuanian-founded Lutheran congregation organized in Chicago on December 4, 1910 and now worshiping in Oak Lawn. Its 2016 constitution preserves the original Lithuanian Evangelical Lutheran legal name, Illinois corporation number, and LCMS affiliation. Historical sources document a first wooden church at 35th and Emerald, with a 1910-versus-1915 acquisition/construction chronology that must remain explicit; a larger church acquired in 1922 at 22nd and Bell; and relocation to 9000 South Menard Avenue. A web-hosted transcription of Zion's 90th-anniversary program reports the last Chicago service on March 24, 1974 and renovation/dedication activity in 1975; because the mirror is not a verified Oak Lawn Public Library item page, its provenance is stated conservatively. The Oak Lawn institution and building are active and standing, but the exact street numbers, title chains, and later fates of both Chicago sites remain unresolved. Concordia Historical Institute catalogs two reels of Zion Chicago congregational records; no dedicated cemetery has been verified.",
+  "institutionLifecycle": {
+    "formation": "The congregation's constitution says it was founded on 4 December 1910 and preserves the original Lithuanian Evangelical Lutheran name. A 1961 anniversary account prints December 1, a minor date conflict retained in the record.",
+    "jurisdiction": "Lutheran Church—Missouri Synod, Northern Illinois District. Lutheran identity is continuous even though the congregation now uses the shorter Zion Evangelical Lutheran Church name.",
+    "relocation": "The last service at the Chicago church was 24 March 1974, followed by entry into the purchased Oak Lawn property. Renovation/dedication milestones continued in 1975; this was a relocation of the same institution, not a merger or new parish.",
+    "terminalStatus": "active",
+    "currentVerification": "The official LCMS Northern Illinois District directory and current congregation website identify Zion at 9000 S. Menard Avenue."
+  },
+  "worshipSites": [
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:zion-35th-emerald-chicago-il",
+      "name": "First Zion Lithuanian Lutheran church",
+      "address": "35th Street and Emerald Avenue, Chicago, IL; exact street number unresolved",
+      "usePeriod": "site/building chronology reported from 1910 or 1915 until the 1922 move",
+      "buildingCondition": "unknown",
+      "currentUse": "No parcel, demolition, or present-use record has been verified.",
+      "evidence": [
+        {"url": "https://flps.newberry.org/?group=lithuanian&page=126", "locator": "Newberry Library Foreign Language Press Survey, 1937 interview: organization 1910 and church at 35th and Emerald"},
+        {"url": "https://www.spauda.org/naujienos/archive/1961/1961-02-08-NAUJIENOS.pdf#page=2", "locator": "Naujienos, 1961-02-08, PDF/printed p. 2, visually verified anniversary history: plot purchased and wooden church erected in 1915 at 35th and Emerald"}
+      ]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:zion-22nd-bell-chicago-il",
+      "name": "Zion Lithuanian Lutheran Church",
+      "address": "22nd Street and Bell Avenue, Chicago, IL; exact street number unresolved",
+      "usePeriod": "acquired 1922; last service 24 March 1974",
+      "buildingCondition": "unknown",
+      "currentUse": "The congregation left in 1974; no parcel-complete disposition or current structural/interior condition has been verified.",
+      "evidence": [
+        {"url": "https://old.lituanus.org/1995_2/95_2_01.htm", "locator": "Lituanus 41:2 (1995): larger building acquired in 1922 and Oak Lawn move"},
+        {"url": "https://doczz.net/doc/5980020/90th-anniversary---oak-lawn-public-library", "locator": "Doczz.net hosted transcription/mirror of Zion's 90th-anniversary program, pp. 21–22 in the transcribed document: last Chicago service 1974-03-24 and move to the purchased Menard property; direct library custody/item page not verified"}
+      ]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:zion-9000-menard-oak-lawn-il",
+      "name": "Zion Evangelical Lutheran Church",
+      "address": "9000 S. Menard Ave., Oak Lawn, IL 60453",
+      "usePeriod": "1974–present; renovation and dedication milestones in 1975",
+      "buildingCondition": "standing",
+      "currentUse": "Active LCMS congregation and worship site.",
+      "evidence": [
+        {"url": "https://www.nidlcms.org/churches/", "locator": "Official LCMS Northern Illinois District church directory, accessed 2026-08-17: Zion, Oak Lawn, 9000 S. Menard Ave., Pastor Valdas Aušra"},
+        {"url": "https://zionlutheran1910.org/", "locator": "Current congregation website, accessed 2026-08-17: Zion Evangelical Lutheran Church, established 1910"}
+      ]
+    }
+  ],
+  "relationships": [
+    {"type": "institution-used-site", "source": "cn:institution:zion-lithuanian-lutheran-oak-lawn-il", "target": "cn:building_site:zion-35th-emerald-chicago-il", "date": "1910/1915–1922", "status": "conflict_preserved", "note": "Sources disagree on whether 1910 denotes acquisition/use or whether the wooden church dates to 1915."},
+    {"type": "institution-used-site", "source": "cn:institution:zion-lithuanian-lutheran-oak-lawn-il", "target": "cn:building_site:zion-22nd-bell-chicago-il", "date": "1922–1974", "status": "accepted", "note": "Second Chicago church; exact street number and later fate unresolved."},
+    {"type": "institution-used-site", "source": "cn:institution:zion-lithuanian-lutheran-oak-lawn-il", "target": "cn:building_site:zion-9000-menard-oak-lawn-il", "date": "1974–present", "status": "accepted", "note": "Current Oak Lawn church."},
+    {"type": "institution-relocated-to-site", "source": "cn:institution:zion-lithuanian-lutheran-oak-lawn-il", "target": "cn:building_site:zion-9000-menard-oak-lawn-il", "date": "1974", "status": "accepted", "note": "The institution moved to the new site; separate institution-used-site edges retain the old and new worship-site history. The 1975 sources describe ensuing renovation/dedication, not a different founding."},
+    {"type": "records-custody", "source": "cn:institution:zion-lithuanian-lutheran-oak-lawn-il", "target": "cn:archive:concordia-historical-institute", "date": "catalog current", "status": "accepted", "note": "Concordia Historical Institute catalogs two microfilm reels of Zion Lutheran Church, Chicago records; completeness is not asserted."}
+  ],
+  "historicalNarrative": [
+    {
+      "text": "Zion is a Lithuanian Evangelical Lutheran congregation, not Chicago's Lithuanian Evangelical Reformed church or the later Tėviškės parish. Its 2016 constitution says the congregation was founded on December 4, 1910 and preserves its original name, Zion Lithuanian Evangelical Lutheran Church of the Unaltered Augsburg Confession, together with Illinois corporation file number 67321596. The constitution and current district directory place Zion within the Lutheran Church—Missouri Synod.",
+      "sources": [
+        {"url": "https://nidlcms.org/wp-content/uploads/2017/03/Zion-Oak-Lawn-Constitution-2017-06.pdf", "locator": "Zion constitution adopted 2016, PDF pp. 2–3: 1910 founding, original name, corporation file number, and LCMS membership"},
+        {"url": "https://www.nidlcms.org/churches/", "locator": "LCMS Northern Illinois District directory, accessed 2026-08-17: current Zion Oak Lawn listing"}
+      ]
+    },
+    {
+      "text": "The first-site chronology at 35th Street and Emerald Avenue contains a real source tension. A 1937 Foreign Language Press Survey interview says the congregation organized in 1910 and acquired a church at that intersection. A visually reviewed 1961 fiftieth-anniversary history instead says a lot was purchased and a wooden church erected in 1915. Lituanus likewise dates dedication of the small wooden church to November 1915. The dossier therefore separates the 1910 institution from the 1915 building milestone and does not invent a street number.",
+      "sources": [
+        {"url": "https://flps.newberry.org/?group=lithuanian&page=126", "locator": "Newberry Library Foreign Language Press Survey, 1937 interview: 1910 organization and 35th/Emerald church reading"},
+        {"url": "https://www.spauda.org/naujienos/archive/1961/1961-02-08-NAUJIENOS.pdf#page=2", "locator": "Naujienos, 1961-02-08, PDF/printed p. 2, visually verified: 1915 lot purchase and wooden church"},
+        {"url": "https://old.lituanus.org/1995_2/95_2_01.htm", "locator": "Lituanus 41:2 (1995): small wooden church dedicated in November 1915"}
+      ]
+    },
+    {
+      "text": "Zion's first pastor was Jonas J. D. Razokas, whose service began in the early 1910s and continued to 1921. In 1922 the congregation acquired a larger church at 22nd Street and Bell Avenue. The anniversary account says it paid more than $13,000 for a brick church formerly used by Swedish Methodists. These sources establish the second Chicago site and institutional continuity, but they do not provide a verified street number, deed, parcel, or the later building disposition.",
+      "sources": [
+        {"url": "https://www.spauda.org/naujienos/archive/1961/1961-02-08-NAUJIENOS.pdf#page=2", "locator": "Naujienos, 1961-02-08, PDF/printed p. 2, visually verified: pastoral chronology and 1922 brick-church purchase"},
+        {"url": "https://old.lituanus.org/1995_2/95_2_01.htm", "locator": "Lituanus 41:2 (1995): Razokas service and 1922 larger building"}
+      ]
+    },
+    {
+      "text": "The congregation's postwar life included Rev. Jonas Pauperas's long ministry and sponsorship of hundreds of Lithuanian displaced persons. As members moved from Chicago, Zion purchased the church property at 9000 South Menard Avenue in Oak Lawn. A web-hosted transcription of Zion's 90th-anniversary program records the last service at the old Chicago church on March 24, 1974 and entry into the Oak Lawn building; renovations and dedication milestones extended into 1975. Because the direct library item page has not been verified, the transcription is used as a qualified program mirror rather than attributed as direct library custody. Thus 1974 and 1975 describe sequential relocation phases, not competing institutional endings.",
+      "sources": [
+        {"url": "https://old.lituanus.org/1995_2/95_2_01.htm", "locator": "Lituanus 41:2 (1995): Pauperas ministry, refugee sponsorship, and Oak Lawn move"},
+        {"url": "https://doczz.net/doc/5980020/90th-anniversary---oak-lawn-public-library", "locator": "Doczz.net hosted transcription/mirror of Zion's 90th-anniversary program, pp. 21–22 in the transcribed document: 1974-03-24 last Chicago service, Menard purchase, and 1975 renovations/dedications; direct library item page not verified"}
+      ]
+    },
+    {
+      "text": "Zion remains an active LCMS congregation at 9000 South Menard Avenue. The official Northern Illinois District directory lists the church, address, and Pastor Valdas Aušra, while the current congregation website retains the 1910 establishment identity. Concordia Historical Institute catalogs two microfilm reels of Zion Lutheran Church, Chicago records, providing typed archival custody without implying that every sacramental, corporate, or property record is present. No dedicated Zion cemetery has been verified, and the two former Chicago buildings' present conditions remain unknown.",
+      "sources": [
+        {"url": "https://www.nidlcms.org/churches/", "locator": "Official LCMS Northern Illinois District directory, accessed 2026-08-17: Zion at 9000 S. Menard and current pastor"},
+        {"url": "https://zionlutheran1910.org/", "locator": "Current Zion website, accessed 2026-08-17: active congregation identity and 1910 establishment"},
+        {"url": "https://concordiahistoricalinstitute.libraryhost.com/repositories/2/resources/1253", "locator": "Concordia Historical Institute catalog: Zion Lutheran Church (Chicago, Illinois) records, two microfilm reels"}
+      ]
+    }
+  ],
+  "developments": [
+    {"date": "1910-12-04", "headline": "Zion organized as a Lithuanian Lutheran congregation", "detail": "The official constitution preserves the original name and LCMS identity.", "sources": [{"title": "Constitution and Bylaws", "publisher": "Zion Evangelical Lutheran Church", "date": "2016", "page": "PDF pp. 2–3", "url": "https://nidlcms.org/wp-content/uploads/2017/03/Zion-Oak-Lawn-Constitution-2017-06.pdf"}]},
+    {"date": "1922", "headline": "Congregation acquires a larger Chicago church", "detail": "The site is documented at 22nd and Bell; exact street number remains unresolved.", "sources": [{"title": "Ziono lietuvių evangelikų liuteronų parapija", "publisher": "Naujienos", "date": "1961-02-08", "page": "PDF/printed p. 2", "url": "https://www.spauda.org/naujienos/archive/1961/1961-02-08-NAUJIENOS.pdf#page=2"}]},
+    {"date": "1974-03-24", "headline": "Last Chicago service precedes Oak Lawn relocation", "detail": "A hosted program transcription reports that the same congregation moved to 9000 South Menard; 1975 marks renovation and dedication phases. Direct library custody was not verified.", "sources": [{"title": "90th Anniversary program — hosted transcription/mirror", "publisher": "Doczz.net", "date": "program dated 2000; mirror accessed 2026-08-17", "page": "transcribed document pp. 21–22", "url": "https://doczz.net/doc/5980020/90th-anniversary---oak-lawn-public-library"}]},
+    {"date": "2026-08-17", "headline": "Zion confirmed active in Oak Lawn", "detail": "The official LCMS district directory lists the current church and pastor.", "sources": [{"title": "Churches directory", "publisher": "LCMS Northern Illinois District", "date": "accessed 2026-08-17", "url": "https://www.nidlcms.org/churches/"}]}
+  ],
+  "sources": [
+    {"title": "Constitution and Bylaws", "publisher": "Zion Evangelical Lutheran Church", "date": "2016", "page": "PDF pp. 2–3", "url": "https://nidlcms.org/wp-content/uploads/2017/03/Zion-Oak-Lawn-Constitution-2017-06.pdf"},
+    {"title": "Churches directory", "publisher": "LCMS Northern Illinois District", "date": "accessed 2026-08-17", "url": "https://www.nidlcms.org/churches/"},
+    {"title": "Zion Evangelical Lutheran Church", "publisher": "Zion Evangelical Lutheran Church", "date": "accessed 2026-08-17", "url": "https://zionlutheran1910.org/"},
+    {"title": "Foreign Language Press Survey interview", "publisher": "Newberry Library", "date": "1937", "url": "https://flps.newberry.org/?group=lithuanian&page=126"},
+    {"title": "Ziono lietuvių evangelikų liuteronų parapija", "publisher": "Naujienos", "date": "1961-02-08", "page": "PDF/printed p. 2", "url": "https://www.spauda.org/naujienos/archive/1961/1961-02-08-NAUJIENOS.pdf#page=2"},
+    {"title": "Lithuanian Lutheranism in the United States", "publisher": "Lituanus", "date": "1995", "url": "https://old.lituanus.org/1995_2/95_2_01.htm"},
+    {"title": "90th Anniversary program — hosted transcription/mirror", "publisher": "Doczz.net", "date": "program dated 2000; mirror accessed 2026-08-17", "page": "transcribed document pp. 21–22; direct library item page not verified", "url": "https://doczz.net/doc/5980020/90th-anniversary---oak-lawn-public-library"},
+    {"title": "Zion Lutheran Church (Chicago, Illinois) records", "publisher": "Concordia Historical Institute", "date": "catalog accessed 2026-08-17", "url": "https://concordiahistoricalinstitute.libraryhost.com/repositories/2/resources/1253"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The official constitution gives 4 December 1910; the 1961 anniversary article prints December 1. The 35th-and-Emerald site is described as acquired in 1910 by a 1937 interview but as a 1915 lot purchase/wooden church by the 1961 anniversary and Lituanus. The Oak Lawn move began after the last Chicago service in March 1974, while renovations and dedications continued in 1975; those years describe stages rather than different congregations.",
+  "gaps": "Exact street numbers and title chains for both Chicago sites, the full 35th/Emerald chronology, disposition and present physical/interior condition of both former churches, complete corporate amendments, comprehensive records inventory, and any dedicated cemetery remain unverified."
+}

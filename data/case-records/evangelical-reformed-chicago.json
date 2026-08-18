@@ -1,0 +1,100 @@
+{
+  "slug": "evangelical-reformed-chicago",
+  "culturenetEntityId": "cn:institution:lithuanian-evangelical-reformed-chicago-il",
+  "asOf": "2026-08-17",
+  "formationLabel": "Organizing phase documented in 1949 · worship and first American exile synod at Salem in 1950 · own church at 1942 N. Spaulding by 1955 · historical end unresolved",
+  "institutionClass": "non_catholic_christian",
+  "institutionStatus": "historical_end_unresolved",
+  "buildingStatus": "unknown",
+  "currentUse": "No current worship schedule, successor congregation, records custodian, or verified present use of the historic 1942 North Spaulding Avenue church has been established. A current nonprofit directory associates a Lithuanian Evangelical Reformed Church corporation with 5230 South Artesian Avenue, but that mailing/profile address is not proof of a worship site, congregational activity, or the condition of the Spaulding building.",
+  "summary": "Chicago's Lithuanian Evangelical Reformed Church was a specifically Reformed diaspora congregation, not interchangeable with the city's Lithuanian Lutheran parishes or a generic Protestant society. Its source record preserves a 1949 organizing and church-admission reading alongside a 1951 formation baseline, which may reflect different organizational milestones. Rev. Stasys Neimanas became the first Chicago pastor in 1950; Rev. Povilas Dilys joined in 1951. Visually verified church-periodical pages document worship and the June 1950 exile synod at Salem Evangelical and Reformed Church, 6824 South Emerald Avenue, and identify a congregation-owned church at 1942 North Spaulding Avenue by the 1955 synod. The later institutional end, record custody, cemetery relationship, the full property history of Spaulding, and its current building condition remain unresolved. A current nonprofit profile is retained only as a corporate-directory lead, not evidence of active worship.",
+  "institutionLifecycle": {
+    "formation": "A church history describes organizing in 1949 and admission into the North Illinois Synod of the Evangelical and Reformed Church; the inherited canon also preserves a 1951 formation reading. Without founding minutes or a corporate file, the dates remain separate milestones rather than one forced founding date.",
+    "jurisdiction": "Lithuanian Evangelical Reformed. Early American relationship with the North Illinois Synod of the Evangelical and Reformed Church is source-reported; the congregation also functioned within the Lithuanian Evangelical Reformed Church in Exile. No Lutheran classification is inferred.",
+    "lastVerifiedActivity": "The reviewed source package documents the Chicago church and synodical life through the later twentieth century, but no exact final local service or dissolution date was verified.",
+    "terminalStatus": "historical_end_unresolved",
+    "currentVerification": "A current nonprofit directory profile is not treated as an active-congregation listing. No current official worship schedule for this exact Chicago Reformed institution was found."
+  },
+  "worshipSites": [
+    {
+      "siteType": "host_church",
+      "culturenetEntityId": "cn:building_site:salem-evangelical-reformed-6824-emerald-chicago-il",
+      "name": "Salem Evangelical and Reformed Church",
+      "address": "6824 S. Emerald Ave., Chicago, IL",
+      "usePeriod": "Lithuanian Reformed worship and exile synod documented in 1950",
+      "buildingCondition": "unknown",
+      "currentUse": "The source proves hosted Lithuanian worship and synod use in 1950, not Lithuanian ownership. Present condition and use were not verified.",
+      "evidence": [{"url": "https://www.spauda.org/musu_sparnai/archive/1975/1975-nr39-MUSU-SPARNAI.pdf#page=45", "locator": "Mūsų Sparnai 39 (1975), PDF p. 45 / printed p. 43, visually verified photo caption: Salem church, 6824 S. Emerald Ave., 1950-06-24"}]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:lithuanian-reformed-1942-spaulding-chicago-il",
+      "name": "Lithuanian Evangelical Reformed Church",
+      "address": "1942 N. Spaulding Ave., Chicago, IL",
+      "usePeriod": "documented as the church's own building in 1955; later terminal date unresolved",
+      "buildingCondition": "unknown",
+      "currentUse": "No current use, parcel chain, exterior condition, or structural/interior assessment has been verified.",
+      "evidence": [
+        {"url": "https://www.spauda.org/musu_sparnai/archive/1955/1955-nr08-09-MUSU-SPARNAI.pdf#page=70", "locator": "Mūsų Sparnai 8–9 (1955), PDF p. 70 / printed p. 68, visually verified: 1955 synod first held in the church's own building at 1942 N. Spaulding"},
+        {"url": "https://www.spauda.org/musu_sparnai/archive/1955/1955-nr08-09-MUSU-SPARNAI.pdf#page=83", "locator": "Mūsų Sparnai 8–9 (1955), PDF p. 83 / printed p. 81, visually verified U.S. State Department letter addressed to church president at 1942 N. Spaulding"}
+      ]
+    }
+  ],
+  "relationships": [
+    {"type": "institution-used-host-site", "source": "cn:institution:lithuanian-evangelical-reformed-chicago-il", "target": "cn:building_site:salem-evangelical-reformed-6824-emerald-chicago-il", "date": "1950", "status": "accepted", "note": "Hosted worship and synod use; no Lithuanian ownership asserted."},
+    {"type": "institution-used-site", "source": "cn:institution:lithuanian-evangelical-reformed-chicago-il", "target": "cn:building_site:lithuanian-reformed-1942-spaulding-chicago-il", "date": "by 1955–end unresolved", "status": "accepted", "note": "Periodical explicitly calls it the church's own building in 1955."}
+  ],
+  "historicalNarrative": [
+    {
+      "text": "This dossier concerns Chicago's Lithuanian Evangelical Reformed congregation. Reformed identity is protected: the institution is not Zion or Tėviškės Lutheran parish, not a Roman Catholic national parish, and not every Lithuanian Protestant organization in Chicago. The church developed within the Lithuanian Evangelical Reformed exile community and had an early relationship with the American Evangelical and Reformed Church.",
+      "sources": [
+        {"url": "https://www.spauda.org/musu_sparnai/archive/1975/1975-nr39-MUSU-SPARNAI.pdf#page=44", "locator": "Mūsų Sparnai 39 (1975), PDF p. 44 / printed p. 42, visually verified: Chicago Reformed pastoral and American-host context"},
+        {"url": "https://www.spauda.org/musu_sparnai/archive/1955/1955-nr08-09-MUSU-SPARNAI.pdf#page=70", "locator": "Mūsų Sparnai 8–9 (1955), PDF p. 70 / printed p. 68, visually verified: Lithuanian Evangelical Reformed synod and church"}
+      ]
+    },
+    {
+      "text": "The formation record carries an unresolved chronology. A contemporary retrospective describes an organizing group in 1949 and reception into the North Illinois Synod of the Evangelical and Reformed Church, while the canonical source packet preserves a 1951 formation reading and a membership count variant. Those may mark an initial group, ecclesiastical reception, and later stable parish organization. No founding minutes or American denominational reception instrument was found to decide which event should be called the single founding date.",
+      "sources": [
+        {"url": "https://www.spauda.org/musu_sparnai/archive/1953/1953-nr04-MUSU-SPARNAI.pdf#page=49", "locator": "Mūsų Sparnai 4 (1953), PDF p. 49 / printed p. 47, visually verified, 'Fragments of Lithuanian Ev. Reformed Church in U.S.A.': early-1949 organizing, May 5 North Illinois Synod reception, Salem worship, and 155 members"},
+        {"url": "https://www.spauda.org/musu_sparnai/archive/1975/1975-nr39-MUSU-SPARNAI.pdf#page=44", "locator": "Mūsų Sparnai 39 (1975), PDF p. 44 / printed p. 42: Neimanas's 1950 arrival as first Chicago Reformed pastor and Dilys's 1951 arrival"}
+      ]
+    },
+    {
+      "text": "Rev. Stasys Neimanas arrived from Germany in February 1950 and accepted service as the first pastor of the Chicago Reformed parish; Rev. Povilas Dilys arrived in 1951 and became the second minister. The congregation initially used American churches. The reviewed history records services at Salem Evangelical and Reformed Church and the first American exile synod there on June 24–25, 1950. A visually verified caption fixes the host site at 6824 South Emerald Avenue. Hosted use is not evidence that the Lithuanian congregation owned Salem.",
+      "sources": [
+        {"url": "https://www.spauda.org/musu_sparnai/archive/1975/1975-nr39-MUSU-SPARNAI.pdf#page=44", "locator": "Mūsų Sparnai 39 (1975), PDF p. 44 / printed p. 42, visually verified: pastors, Salem worship, June 1950 synod"},
+        {"url": "https://www.spauda.org/musu_sparnai/archive/1975/1975-nr39-MUSU-SPARNAI.pdf#page=45", "locator": "Mūsų Sparnai 39 (1975), PDF p. 45 / printed p. 43, visually verified: 6824 S. Emerald address"}
+      ]
+    },
+    {
+      "text": "By 1955 the congregation had a church at 1942 North Spaulding Avenue. The 1955 synod report explicitly says the meeting was held for the first time in its own church and names that address. A visually verified U.S. State Department letter in the same issue addresses church president Petras Šernas there, independently confirming the institutional address. These pages establish ownership/use in 1955 but not the acquisition date, deeded owner, construction history, or later disposition.",
+      "sources": [
+        {"url": "https://www.spauda.org/musu_sparnai/archive/1955/1955-nr08-09-MUSU-SPARNAI.pdf#page=70", "locator": "Mūsų Sparnai 8–9 (1955), PDF p. 70 / printed p. 68, visually verified: own church at 1942 N. Spaulding"},
+        {"url": "https://www.spauda.org/musu_sparnai/archive/1955/1955-nr08-09-MUSU-SPARNAI.pdf#page=83", "locator": "Mūsų Sparnai 8–9 (1955), PDF p. 83 / printed p. 81, visually verified: State Department letter to church president at the address"}
+      ]
+    },
+    {
+      "text": "The church and its periodical network continued beyond the founding decade, but the reviewed sources do not establish an exact final Chicago service, dissolution, merger, or record transfer. A current nonprofit profile associates a corporation of the same name with 5230 South Artesian Avenue. Because that directory does not publish a worship schedule, denominational roster, or property evidence, it is retained only as a corporate lead. The current state of the historic Spaulding church, any successor, archives, and cemetery remain unresolved.",
+      "sources": [
+        {"url": "https://www.charitynavigator.org/ein/510245445", "locator": "Charity Navigator nonprofit profile, accessed 2026-08-17: Lithuanian Evangelical Reformed Church Inc. mailing/profile address; not worship or property proof"},
+        {"url": "https://www.spauda.org/musu_sparnai/archive/1975/1975-nr39-MUSU-SPARNAI.pdf#page=44", "locator": "Mūsų Sparnai 39 (1975), PDF p. 44 / printed p. 42, visually verified institutional retrospective; no terminal decree"}
+      ]
+    }
+  ],
+  "developments": [
+    {"date": "1949–1951", "headline": "Formation readings remain distinct", "detail": "Organizing, American church reception, and stable parish development are not flattened into one date.", "sources": [{"title": "Mūsų Sparnai no. 4", "publisher": "Lithuanian Evangelical Reformed Church in Exile", "date": "1953", "page": "PDF p. 49 / printed p. 47", "url": "https://www.spauda.org/musu_sparnai/archive/1953/1953-nr04-MUSU-SPARNAI.pdf#page=49"}]},
+    {"date": "1950-06-24", "headline": "Synod meets at Salem host church", "detail": "The exact host address is 6824 South Emerald Avenue.", "sources": [{"title": "Mūsų Sparnai no. 39", "publisher": "Lithuanian Evangelical Reformed Church in Exile", "date": "1975", "page": "PDF p. 45 / printed p. 43", "url": "https://www.spauda.org/musu_sparnai/archive/1975/1975-nr39-MUSU-SPARNAI.pdf#page=45"}]},
+    {"date": "1955", "headline": "Synod meets in the church's own Spaulding building", "detail": "Two visually verified pages establish the 1942 North Spaulding institutional address.", "sources": [{"title": "Mūsų Sparnai nos. 8–9", "publisher": "Lithuanian Evangelical Reformed Church in Exile", "date": "1955", "page": "PDF p. 70 / printed p. 68", "url": "https://www.spauda.org/musu_sparnai/archive/1955/1955-nr08-09-MUSU-SPARNAI.pdf#page=70"}]}
+  ],
+  "sources": [
+    {"title": "Mūsų Sparnai no. 4", "publisher": "Lithuanian Evangelical Reformed Church in Exile", "date": "1953", "page": "PDF p. 49 / printed p. 47", "url": "https://www.spauda.org/musu_sparnai/archive/1953/1953-nr04-MUSU-SPARNAI.pdf#page=49"},
+    {"title": "Mūsų Sparnai nos. 8–9 — synod report", "publisher": "Lithuanian Evangelical Reformed Church in Exile", "date": "1955", "page": "PDF p. 70 / printed p. 68", "url": "https://www.spauda.org/musu_sparnai/archive/1955/1955-nr08-09-MUSU-SPARNAI.pdf#page=70"},
+    {"title": "Mūsų Sparnai nos. 8–9 — State Department letter", "publisher": "Lithuanian Evangelical Reformed Church in Exile", "date": "1955", "page": "PDF p. 83 / printed p. 81", "url": "https://www.spauda.org/musu_sparnai/archive/1955/1955-nr08-09-MUSU-SPARNAI.pdf#page=83"},
+    {"title": "Mūsų Sparnai no. 39 — history", "publisher": "Lithuanian Evangelical Reformed Church in Exile", "date": "1975", "page": "PDF p. 44 / printed p. 42", "url": "https://www.spauda.org/musu_sparnai/archive/1975/1975-nr39-MUSU-SPARNAI.pdf#page=44"},
+    {"title": "Mūsų Sparnai no. 39 — Salem caption", "publisher": "Lithuanian Evangelical Reformed Church in Exile", "date": "1975", "page": "PDF p. 45 / printed p. 43", "url": "https://www.spauda.org/musu_sparnai/archive/1975/1975-nr39-MUSU-SPARNAI.pdf#page=45"},
+    {"title": "Lithuanian Evangelical Reformed Church Inc.", "publisher": "Charity Navigator", "date": "accessed 2026-08-17", "url": "https://www.charitynavigator.org/ein/510245445"}
+  ],
+  "confidence": "probable",
+  "conflictsWithArchiveRecord": "The formation evidence preserves 1949 and 1951 readings and variant membership counts; they may reflect different organizational milestones and are not normalized without minutes or corporate records. A current nonprofit profile does not establish current congregational worship or survival at the historic site.",
+  "gaps": "Founding minutes, exact membership count at each milestone, American denominational reception instrument, incorporation and amendments, complete clergy and worship chronology, Salem use before/after June 1950, Spaulding deed and acquisition/disposition, final service, dissolution or merger, successor, records custody, cemetery, and current physical/interior condition of the historic church remain unresolved."
+}

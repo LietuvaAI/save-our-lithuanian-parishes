@@ -1,0 +1,305 @@
+{
+  "slug": "st-john-the-baptist-baltimore-md",
+  "culturenetEntityId": "cn:institution:st-john-the-baptist-baltimore-md",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian Roman Catholic parish established in 1888 · acquired Lloyd Street Synagogue in 1889 · moved to 308 North Paca Street by 1905 · Lithuanian community and sacramental registers transferred to St. Alphonsus in 1917",
+  "institutionClass": "roman_catholic",
+  "institutionalForm": "parish",
+  "institutionStatus": "closed",
+  "buildingStatus": "unknown",
+  "currentUse": "The Lithuanian St. John the Baptist parish ended as a distinct institution in 1917 when its community and sacramental registers transferred to the separate St. Alphonsus institution. Its first established church site, the Lloyd Street Synagogue at 11 Lloyd Street, survived and was restored as part of the Jewish Museum of Maryland; this is building history, not parish survival. The present condition and later disposition of St. John's terminal church at 308 North Paca Street remain unresolved.",
+  "summary": "Lithuanian St. John the Baptist was a Roman Catholic national parish in Baltimore from 1888 to 1917. The congregation acquired the Lloyd Street Synagogue at 11 Lloyd Street in February 1889 and worshipped there until selling it in 1905 after building a new church at Saratoga and Paca Streets, officially listed as 308 North Paca Street. In 1917 the Lithuanian community and sacramental registers transferred to the distinct St. Alphonsus institution, whose historic church the community acquired and whose name it adopted. St. John must not be conflated with the Italian parish that used the Paca Street name and site from 1917 to 1989 or with St. Alphonsus itself. The Lloyd Street building survives in museum use, while the terminal Paca Street building outcome remains unresolved.",
+  "institutionLifecycle": {
+    "formation": "The Archdiocese of Baltimore national-parish list dates the Lithuanian parish to 1888. The congregation purchased the Lloyd Street Synagogue on February 20, 1889, so any 1888 worship site before that acquisition remains unresolved.",
+    "institutionalForm": "Lithuanian Roman Catholic national parish in Baltimore, distinct from the later Italian St. John the Baptist and from St. Alphonsus.",
+    "jurisdiction": "Roman Catholic Archdiocese of Baltimore.",
+    "terminalStatus": "The Lithuanian St. John institution ended in 1917 when its community and sacramental registers transferred to St. Alphonsus. The available sources do not supply the canonical decree or describe the act as a merger.",
+    "currentVerification": "Maryland State Archives catalogs Lithuanian St. John sacramental records carried in the St. Alphonsus series. Baltimore Heritage documents the Lithuanian community's 1917 acquisition of St. Alphonsus. The Lloyd Street site survives as a museum property; the Paca Street site's present condition is unresolved."
+  },
+  "worshipSites": [
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:lloyd-street-synagogue-baltimore-md",
+      "name": "Lloyd Street Synagogue used by St. John the Baptist",
+      "address": "11 Lloyd Street, Baltimore, MD",
+      "usePeriod": "purchased 1889-02-20; sold in 1905",
+      "buildingCondition": "standing",
+      "currentUse": "The 2010 archaeological report identifies the standing, restored Lloyd Street Synagogue as part of the Jewish Museum of Maryland. This later museum use is unrelated to the survival of St. John as a Catholic institution.",
+      "evidence": [
+        {
+          "url": "https://jewishmuseummd.org/wp-content/uploads/2020/09/LLS_2008_final_copy_printer.pdf#page=65",
+          "locator": "PDF p. 65 / printed p. 57, sale to the Lithuanian St. John congregation on February 20, 1889"
+        },
+        {
+          "url": "https://jewishmuseummd.org/wp-content/uploads/2020/09/LLS_2008_final_copy_printer.pdf#page=66",
+          "locator": "PDF p. 66 / printed p. 58, St. John move to west Baltimore and 1905 sale of the Lloyd Street building"
+        },
+        {
+          "url": "https://jewishmuseummd.org/wp-content/uploads/2020/09/LLS_2008_final_copy_printer.pdf#page=3",
+          "locator": "PDF p. 3, abstract; 11 Lloyd Street and Jewish Museum restoration and stabilization context"
+        }
+      ]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-john-paca-baltimore-md",
+      "name": "St. John the Baptist Church at Saratoga and Paca Streets",
+      "address": "308 North Paca Street, Baltimore, MD 21201; described as the corner of Saratoga and Paca Streets",
+      "usePeriod": "new church planned in 1902 and occupied by 1905; Lithuanian institution ended in 1917",
+      "buildingCondition": "unknown",
+      "currentUse": "The available sources do not establish the terminal Paca Street church's present physical condition or use. Later Italian St. John and St. Jude Shrine history at the same listed site is not Lithuanian institutional continuity.",
+      "evidence": [
+        {
+          "url": "https://jewishmuseummd.org/wp-content/uploads/2020/09/LLS_2008_final_copy_printer.pdf#page=66",
+          "locator": "PDF p. 66 / printed p. 58, 1902 decision to leave Old Town, new church at Saratoga and Paca, and 1905 sale of Lloyd Street"
+        },
+        {
+          "url": "https://stmarys.edu/wp-content/uploads/2015/01/natl_parishes.pdf#page=3",
+          "locator": "PDF pp. 3-4, 308 N. Paca St.; Lithuanian parish 1888-1917 and later Italian use distinguished"
+        }
+      ]
+    },
+    {
+      "siteType": "successor_church",
+      "culturenetEntityId": "cn:building_site:st-alphonsus-saratoga-baltimore-md",
+      "name": "St. Alphonsus Church",
+      "address": "114 West Saratoga Street, Baltimore, MD 21201",
+      "usePeriod": "Lithuanian community continued there from 1917 under the distinct St. Alphonsus institution",
+      "buildingCondition": "standing",
+      "currentUse": "Baltimore Heritage documented the historic church standing in 2012. This is the successor community's site and not a third St. John building phase.",
+      "evidence": [
+        {
+          "url": "https://explore.baltimoreheritage.org/items/show/165",
+          "locator": "Saint Alphonsus Church, lines 5-24 and 64-72; 1917 Lithuanian acquisition, address, and 2012 exterior documentation"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-john-the-baptist-baltimore-md",
+      "target": "cn:building_site:lloyd-street-synagogue-baltimore-md",
+      "date": "1889-02-20-1905",
+      "status": "accepted",
+      "note": "St. John purchased the former synagogue in 1889 and sold it in 1905 after moving west."
+    },
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-john-the-baptist-baltimore-md",
+      "target": "cn:building_site:st-john-paca-baltimore-md",
+      "date": "by 1905-1917",
+      "status": "accepted",
+      "note": "The Lithuanian parish occupied its new Paca Street church until the 1917 transfer; later Italian use belongs to a distinct institution."
+    },
+    {
+      "type": "congregation/canonical-life-continued-in",
+      "source": "cn:institution:st-john-the-baptist-baltimore-md",
+      "target": "cn:institution:st-alphonsus-baltimore-md",
+      "date": "1917",
+      "status": "accepted",
+      "note": "The national-parish list says the Lithuanian community and sacramental registers transferred to St. Alphonsus; Baltimore Heritage says the Lithuanian parish acquired that historic church and adopted its name. This is continuity between distinct institutions, not identity."
+    },
+    {
+      "type": "records-custody",
+      "source": "cn:institution:st-john-the-baptist-baltimore-md",
+      "target": "cn:institution:st-alphonsus-baltimore-md",
+      "date": "transferred in 1917; archival catalog current as of 2026-08-17",
+      "status": "accepted",
+      "note": "Official and state archival sources place Lithuanian St. John sacramental registers in the St. Alphonsus record series."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "The Lithuanian St. John the Baptist parish was established in 1888 within the Archdiocese of Baltimore. The archdiocesan national-parish list gives 1888-1917 as the Lithuanian institutional span. Its broader St. John heading extends to 1989 only because an Italian parish used the name and Paca Street site after 1917; that later institution is not part of the Lithuanian parish's life.",
+      "sources": [
+        {
+          "url": "https://stmarys.edu/wp-content/uploads/2015/01/natl_parishes.pdf#page=3",
+          "locator": "PDF pp. 3-4, St. John the Baptist footnote and Lithuanian section; Lithuanian 1888-1917 and Italian 1917-1989 periods"
+        }
+      ]
+    },
+    {
+      "text": "On February 20, 1889 Baltimore Hebrew Congregation sold the Lloyd Street Synagogue to the Lithuanian congregation of St. John the Baptist for $12,000. The surviving building stands at 11 Lloyd Street. Because the parish dates to 1888 but the documented purchase occurred in 1889, the location of any worship during the earliest interval remains unresolved.",
+      "sources": [
+        {
+          "url": "https://jewishmuseummd.org/wp-content/uploads/2020/09/LLS_2008_final_copy_printer.pdf#page=65",
+          "locator": "PDF p. 65 / printed p. 57, February 20, 1889 sale to the Lithuanian St. John congregation"
+        },
+        {
+          "url": "https://jewishmuseummd.org/wp-content/uploads/2020/09/LLS_2008_final_copy_printer.pdf#page=3",
+          "locator": "PDF p. 3, abstract; Lloyd Street Synagogue site at 11 Lloyd Street"
+        }
+      ]
+    },
+    {
+      "text": "St. John adapted the former synagogue for Catholic worship. The archaeological history notes an 1895 archdiocesan report that the parish improved the church basement, while also acknowledging that the congregation's own records were not located for that study. These alterations belong to the Lloyd Street building phase and do not establish a new institution.",
+      "sources": [
+        {
+          "url": "https://jewishmuseummd.org/wp-content/uploads/2020/09/LLS_2008_final_copy_printer.pdf#page=65",
+          "locator": "PDF p. 65 / printed p. 57, St. John building use and 1895 basement improvement"
+        }
+      ]
+    },
+    {
+      "text": "In 1902 the congregation decided to leave Old Town and move west. A new church was built at Saratoga and Paca Streets, listed by the archdiocesan national-parish document as 308 North Paca Street. St. John sold the Lloyd Street building in 1905 to Shomrei Mishmeres Hakodesh, establishing a clear relocation from one worship site to another without an institutional break.",
+      "sources": [
+        {
+          "url": "https://jewishmuseummd.org/wp-content/uploads/2020/09/LLS_2008_final_copy_printer.pdf#page=66",
+          "locator": "PDF p. 66 / printed p. 58, decision to move, new Saratoga-and-Paca church, and 1905 sale"
+        },
+        {
+          "url": "https://stmarys.edu/wp-content/uploads/2015/01/natl_parishes.pdf#page=3",
+          "locator": "PDF pp. 3-4, St. John address at 308 N. Paca St."
+        }
+      ]
+    },
+    {
+      "text": "The Lithuanian St. John institution ended in 1917 through a transfer of community and records rather than through identity with the later Italian St. John. The national-parish list states that the Lithuanian community and sacramental registers transferred to St. Alphonsus. Baltimore Heritage adds that the Lithuanian parish acquired the historic St. Alphonsus church and took its name. St. Alphonsus is therefore a distinct continuation institution, not an alias of St. John.",
+      "sources": [
+        {
+          "url": "https://stmarys.edu/wp-content/uploads/2015/01/natl_parishes.pdf#page=3",
+          "locator": "PDF pp. 3-4, 1917 transfer of Lithuanian community and sacramental registers to St. Alphonsus"
+        },
+        {
+          "url": "https://explore.baltimoreheritage.org/items/show/165",
+          "locator": "Saint Alphonsus Church, lines 5-12; 1917 Lithuanian acquisition and adoption of the historic name"
+        }
+      ]
+    },
+    {
+      "text": "Maryland State Archives catalogs baptism, marriage, confirmation, communion, interment, and miscellaneous Lithuanian records from St. John within the St. Alphonsus series. The catalog preserves the record-transfer lineage but does not convert the two institutions into one identity. It also leaves the exact 1917 canonical instrument and the later fate of the Paca Street church unresolved.",
+      "sources": [
+        {
+          "url": "https://speccol.msa.maryland.gov/pages/speccol/microfilm.aspx?speccol=2530",
+          "locator": "MSA SC 2530, SCM 1596-1599, lines 48-64; Lithuanian records from St. John the Baptist in the St. Alphonsus series"
+        }
+      ]
+    },
+    {
+      "text": "The two St. John worship buildings have different afterlives. Lloyd Street returned to Jewish congregational use in 1905 and was later restored as a museum property; the archaeological report describes it as one of the country's earliest surviving synagogue buildings. No comparably direct evidence establishes the present condition or use of the terminal church at 308 North Paca Street, so the route-level building status remains unknown.",
+      "sources": [
+        {
+          "url": "https://jewishmuseummd.org/wp-content/uploads/2020/09/LLS_2008_final_copy_printer.pdf#page=66",
+          "locator": "PDF p. 66 / printed p. 58, 1905 sale and later Jewish use"
+        },
+        {
+          "url": "https://jewishmuseummd.org/wp-content/uploads/2020/09/LLS_2008_final_copy_printer.pdf#page=67",
+          "locator": "PDF p. 67 / printed p. 59, restoration, museum stewardship, and standing historic-synagogue status"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1888-1889",
+      "headline": "Lithuanian parish forms and acquires Lloyd Street Synagogue",
+      "detail": "The parish dates to 1888; the documented Lloyd Street purchase occurred February 20, 1889.",
+      "sources": [
+        {
+          "title": "National Parishes in the Archdiocese of Baltimore",
+          "publisher": "Archdiocese of Baltimore resource hosted by St. Mary's Seminary & University",
+          "date": "2015",
+          "page": "PDF pp. 3-4",
+          "url": "https://stmarys.edu/wp-content/uploads/2015/01/natl_parishes.pdf#page=3"
+        },
+        {
+          "title": "Report of the 2008 and 2009 Phase II Archaeological Testing and Monitoring of the Cultural Resources Associated with the Lloyd Street Synagogue",
+          "publisher": "Baltimore Center for Urban Archaeology for the Jewish Museum of Maryland",
+          "date": "2010-02-22",
+          "page": "PDF p. 65 / printed p. 57",
+          "url": "https://jewishmuseummd.org/wp-content/uploads/2020/09/LLS_2008_final_copy_printer.pdf#page=65"
+        }
+      ]
+    },
+    {
+      "date": "1902-1905",
+      "headline": "Parish relocates from Lloyd Street to Paca Street",
+      "detail": "The congregation decided to move in 1902, built at Saratoga and Paca, and sold Lloyd Street in 1905.",
+      "sources": [
+        {
+          "title": "Report of the 2008 and 2009 Phase II Archaeological Testing and Monitoring of the Cultural Resources Associated with the Lloyd Street Synagogue",
+          "publisher": "Baltimore Center for Urban Archaeology for the Jewish Museum of Maryland",
+          "date": "2010-02-22",
+          "page": "PDF p. 66 / printed p. 58",
+          "url": "https://jewishmuseummd.org/wp-content/uploads/2020/09/LLS_2008_final_copy_printer.pdf#page=66"
+        }
+      ]
+    },
+    {
+      "date": "1917",
+      "headline": "Community and records transfer to St. Alphonsus",
+      "detail": "The Lithuanian St. John institution ends; community and canonical life continue in the distinct St. Alphonsus institution.",
+      "sources": [
+        {
+          "title": "National Parishes in the Archdiocese of Baltimore",
+          "publisher": "Archdiocese of Baltimore resource hosted by St. Mary's Seminary & University",
+          "date": "2015",
+          "page": "PDF pp. 3-4",
+          "url": "https://stmarys.edu/wp-content/uploads/2015/01/natl_parishes.pdf#page=3"
+        },
+        {
+          "title": "Saint Alphonsus Church",
+          "publisher": "Explore Baltimore Heritage",
+          "date": "2012-10-09; updated 2026-04-17",
+          "page": "lines 5-12 and 64-72",
+          "url": "https://explore.baltimoreheritage.org/items/show/165"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "National Parishes in the Archdiocese of Baltimore",
+      "publisher": "Archdiocese of Baltimore resource hosted by St. Mary's Seminary & University",
+      "date": "2015",
+      "page": "PDF pp. 3-4",
+      "url": "https://stmarys.edu/wp-content/uploads/2015/01/natl_parishes.pdf#page=3"
+    },
+    {
+      "title": "Report of the 2008 and 2009 Phase II Archaeological Testing and Monitoring of the Cultural Resources Associated with the Lloyd Street Synagogue",
+      "publisher": "Baltimore Center for Urban Archaeology for the Jewish Museum of Maryland",
+      "date": "2010-02-22",
+      "page": "PDF pp. 3 and 65-67 / printed pp. 57-59",
+      "url": "https://jewishmuseummd.org/wp-content/uploads/2020/09/LLS_2008_final_copy_printer.pdf#page=65"
+    },
+    {
+      "title": "Report of the 2008 and 2009 Phase II Archaeological Testing and Monitoring of the Cultural Resources Associated with the Lloyd Street Synagogue",
+      "publisher": "Baltimore Center for Urban Archaeology for the Jewish Museum of Maryland",
+      "date": "2010-02-22",
+      "page": "PDF p. 3, abstract and 11 Lloyd Street site",
+      "url": "https://jewishmuseummd.org/wp-content/uploads/2020/09/LLS_2008_final_copy_printer.pdf#page=3"
+    },
+    {
+      "title": "Report of the 2008 and 2009 Phase II Archaeological Testing and Monitoring of the Cultural Resources Associated with the Lloyd Street Synagogue",
+      "publisher": "Baltimore Center for Urban Archaeology for the Jewish Museum of Maryland",
+      "date": "2010-02-22",
+      "page": "PDF p. 66 / printed p. 58",
+      "url": "https://jewishmuseummd.org/wp-content/uploads/2020/09/LLS_2008_final_copy_printer.pdf#page=66"
+    },
+    {
+      "title": "Report of the 2008 and 2009 Phase II Archaeological Testing and Monitoring of the Cultural Resources Associated with the Lloyd Street Synagogue",
+      "publisher": "Baltimore Center for Urban Archaeology for the Jewish Museum of Maryland",
+      "date": "2010-02-22",
+      "page": "PDF p. 67 / printed p. 59",
+      "url": "https://jewishmuseummd.org/wp-content/uploads/2020/09/LLS_2008_final_copy_printer.pdf#page=67"
+    },
+    {
+      "title": "Maryland State Archives Special Collections MSA SC 2530",
+      "publisher": "Maryland State Archives",
+      "date": "catalog accessed 2026-08-17",
+      "page": "SCM 1596-1599, lines 48-64",
+      "url": "https://speccol.msa.maryland.gov/pages/speccol/microfilm.aspx?speccol=2530"
+    },
+    {
+      "title": "Saint Alphonsus Church",
+      "publisher": "Explore Baltimore Heritage",
+      "date": "2012-10-09; updated 2026-04-17",
+      "page": "lines 5-24 and 64-72",
+      "url": "https://explore.baltimoreheritage.org/items/show/165"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The broad 1888-1989 St. John heading combines two distinct ethnic institutions at the Paca Street site. The Lithuanian parish ran from 1888 to 1917; an Italian parish followed from 1917 to 1989 and was renamed St. Jude Shrine. The 1888 parish date precedes the documented February 1889 Lloyd Street purchase, leaving the earliest worship location unresolved. St. Alphonsus is a distinct continuation institution, not a St. John alias.",
+  "gaps": "The 1888 erection decree and earliest worship site, exact opening or dedication date of the Paca Street church, 1917 canonical transfer instrument, precise legal mechanism ending St. John, complete clergy history, cemetery, later ownership and present physical condition of 308 North Paca Street, and any records not represented in the St. Alphonsus archival series remain unresolved."
+}

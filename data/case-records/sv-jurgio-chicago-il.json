@@ -3,6 +3,81 @@
   "asOf": "2026-07-16",
   "buildingStatus": "demolished",
   "currentUse": "Church site (NW corner of W 33rd St & S Lituanica Ave, address cited as 3230 S Lituanica) redeveloped: the Lithuanian-language Draugas heritage guide says the lot now holds new housing, while the older English True Lithuania page describes an empty lot. The surviving 1908 parish school building operates as the Philip Armour public school, still bearing a \"MOKYKLA ŠV. JURGIO K.\" plaque; it has no remaining Lithuanian connection.",
+  "historicalNarrative": [
+    {
+      "text": "St. George was organized in 1892 in Bridgeport, making it Chicago's earliest Lithuanian Roman Catholic parish and one of the foundational Lithuanian institutions of the Midwest. The community first worshipped in a wooden church while immigrants built societies, schools, and neighborhood businesses around the parish. Its identity belongs to the Bridgeport Lithuanian settlement, not to similarly named St. George parishes in Boston, Norwood, Rochester, or Shenandoah.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/chicago-illinois-45/",
+          "locator": "Chicago heritage survey: 1892 parish, first church, and Bridgeport context"
+        },
+        {
+          "url": "https://vilnews.com/2012-05-13618",
+          "locator": "Chicago Lithuanian history: St. George as the city's first Lithuanian parish"
+        }
+      ]
+    },
+    {
+      "text": "The parish replaced its early church with a large Gothic Revival building at the northwest corner of 33rd Street and what was then Auburn Avenue. Sources disagree on whether the brick church should be dated to 1896–1897 or 1902; the present record retains 1892 for the parish and treats the later dates as stages in the permanent building's construction or dedication. A three-story parish school followed in 1908 and became a major center of Lithuanian education.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/chicago-illinois-45/",
+          "locator": "Heritage survey: church chronology, 1908 school, and site"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/St._George%27s_Catholic_Church_(Chicago)",
+          "locator": "Secondary building chronology retained as a conflicting date reading"
+        },
+        {
+          "url": "https://www.draugas.org/lietuvisko-kulturinio-paveldo-gidas/",
+          "locator": "Lithuanian cultural heritage guide: church and school history"
+        }
+      ]
+    },
+    {
+      "text": "St. George stood at the center of Lithuanian public life in Bridgeport. In 1934 Auburn Avenue was renamed Lituanica Avenue to honor Steponas Darius and Stasys Girėnas and their transatlantic flight; heritage accounts connect the aviators with the parish before their 1933 departure. The renamed street became one of the neighborhood's most durable public Lithuanian markers even as families later moved away.",
+      "sources": [
+        {
+          "url": "https://www.draugas.org/lietuvisko-kulturinio-paveldo-gidas/",
+          "locator": "Draugas Lithuanian heritage guide: Lituanica Avenue, aviators, and parish context"
+        },
+        {
+          "url": "https://global.truelithuania.com/chicago-illinois-45/",
+          "locator": "Chicago field history: Lituanica Avenue and the Bridgeport Lithuanian district"
+        }
+      ]
+    },
+    {
+      "text": "The archdiocese closed St. George and demolished the church in 1990. Before demolition, artworks and furnishings were distributed to other parishes, including a community in newly independent Lithuania. No complete sale or demolition file has yet been assembled, and older sources disagree about the exact construction chronology, but the 1990 institutional and building end is consistently reported in the reviewed histories.",
+      "sources": [
+        {
+          "url": "https://www.draugas.org/lietuvisko-kulturinio-paveldo-gidas/",
+          "locator": "Heritage guide: 1990 demolition and distribution of church art"
+        },
+        {
+          "url": "https://global.truelithuania.com/chicago-illinois-45/",
+          "locator": "Heritage survey: 1990 closure and demolition"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/St._George%27s_Catholic_Church_(Chicago)",
+          "locator": "Secondary corroboration of 1990 closure"
+        }
+      ]
+    },
+    {
+      "text": "The church itself is gone, but the parish complex did not disappear completely. The 1908 school survives as the Philip Armour public school and still bears the stone inscription “MOKYKLA ŠV. JURGIO K.” The church parcel was later redeveloped according to the newer Lithuanian heritage guide, although an older survey described it as vacant; parcel-level research is still needed to date that change and identify the present development.",
+      "sources": [
+        {
+          "url": "https://www.draugas.org/lietuvisko-kulturinio-paveldo-gidas/",
+          "locator": "Current heritage guide: new housing on the church site and surviving school inscription"
+        },
+        {
+          "url": "https://global.truelithuania.com/chicago-illinois-45/",
+          "locator": "Earlier field survey: surviving school and then-vacant church parcel"
+        }
+      ]
+    }
+  ],
   "summary": "St. George (Šv. Jurgio), the oldest Lithuanian parish in Chicago and the Midwest, no longer exists physically: the 1902 Gothic Revival church at 33rd Street and Lituanica Avenue in Bridgeport was closed and demolished in 1990 by decision of the archdiocese. Before demolition the parish's works of art and furnishings were donated to other parishes, including to newly independent Lithuania — a symbolic repatriation noted in heritage guides. The heritage-guide record of the site diverges slightly: the English True Lithuania page describes an empty lot where the church stood, while the newer Lithuanian Draugas cultural-heritage guide says the site was replaced with new housing. The three-story parish school (1908), once called the best Lithuanian school in America by a 1916 almanac, still stands and is used as the Philip Armour school. The neighborhood's remaining Lithuanian trace is Lituanica Avenue, renamed from Auburn Avenue on 1 January 1934 in honor of pilots Darius and Girenas, who departed from St. George church for their 1933 transatlantic flight. No published sale price or buyer for the property, no preservation campaign, and no recent commemorative activity specific to this parish were found; Preservation Chicago's 2021 survey of endangered Catholic churches (roughly 110 closed and 57 demolished citywide since 1980) does not mention this long-gone church.",
   "developments": [
     {

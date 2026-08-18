@@ -4,6 +4,32 @@
   "buildingStatus": "demolished",
   "currentUse": "Unknown — the church at 3803 Fir Street was demolished decades ago and no source found documents the parcel's current use.",
   "summary": "St. Francis (Šv. Pranciškaus) Lithuanian church in East Chicago, Indiana — erected 1913 — no longer exists; the Global True Lithuania heritage survey records the East Chicago Lithuanian church as demolished, and a reader correction on that page by researcher Joseph Gustaitis places it at 3803 Fir Street, closed in 1987 and demolished two years later (1989). The parish does not appear in GCatholic's current listing of Diocese of Gary churches in East Chicago, confirming there is no successor parish under the name today. No source was found documenting what occupies the former church parcel now, any sale of the property, or its buyer or price. The one surviving physical trace of the community that sources confirm is a street in East Chicago still named after the Lituanica, the Darius and Girėnas transatlantic airplane. No recent press, diocesan announcements, preservation efforts, or reunion activity concerning this parish were found.",
+  "historicalNarrative": [
+    {
+      "text": "St. Francis was the Lithuanian Roman Catholic parish in East Chicago, Indiana, distinct from same-name institutions elsewhere in the Diocese of Gary. The Lithuanian heritage survey says the community erected its church in 1913. It gives 3903 Main Street in the article text, while a published correction by researcher Joseph Gustaitis identifies 3803 Fir Street. With no primary parish directory or deed yet located, the Fir Street correction is retained as the stronger detailed reading but the address conflict remains explicit.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/indiana-746/", "locator": "Indiana heritage survey, East Chicago Lithuanian church paragraph and Joseph Gustaitis correction comment giving the St. Francis name, 1913 erection, and conflicting addresses"}
+      ]
+    },
+    {
+      "text": "The same correction reports that St. Francis closed in 1987 and that its church was demolished two years later, in 1989. This separates the institution's reported terminal year from the building's destruction year and explains why an inherited single 1989 date is insufficient. No diocesan decree, final-Mass notice, demolition permit, or property disposition has been located, so both dates remain attributed rather than instrument-proven.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/indiana-746/", "locator": "Indiana heritage survey, Joseph Gustaitis correction comment reporting 1987 closure and demolition two years later"}
+      ]
+    },
+    {
+      "text": "Current Diocese of Gary church listings compiled by GCatholic include several East Chicago parishes but no active St. Francis institution. Directory absence alone cannot prove a historical closure, but it is consistent with the independently reported 1987 end and confirms that no current parish under this exact name appears in the directory. No successor or records custodian can be assigned from that absence.",
+      "sources": [
+        {"url": "https://gcatholic.org/churches/local/gary0", "locator": "Churches in the Diocese of Gary directory, East Chicago entries showing current listed parishes and no St. Francis entry"}
+      ]
+    },
+    {
+      "text": "No accepted source identifies the present use of the former church parcel, and the demolished building has no documented surviving fabric. The heritage survey instead points to Lituanica-named street geography as a surviving reminder of East Chicago's Lithuanian community. That civic place-name is community heritage, not a surviving worship site or continuation of St. Francis Parish.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/indiana-746/", "locator": "Indiana heritage survey, East Chicago section describing the demolished church and surviving Lituanica-named street"}
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "1989",

@@ -1,0 +1,244 @@
+{
+  "slug": "st-francis-youngstown-oh",
+  "culturenetEntityId": "cn:institution:st-francis-youngstown-oh",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian Roman Catholic parish with diocesan record series beginning in 1917 · closed, with 1978 and 1979 terminal readings",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "closed",
+  "buildingStatus": "unknown",
+  "currentUse": "The former St. Francis church site is identified at 917 Shehy Street, while a 1922 notice places the parish rectory at 923 Shehy Street. Canaan Missionary Baptist Church was documented worshiping at 917 Shehy in 2002, and later field reporting describes continued non-Catholic Sunday use. Those sources prove post-Catholic religious reuse but not the building's current 2026 structural or interior condition. St. Francis records are held by the Diocese of Youngstown Archives.",
+  "summary": "St. Francis was Youngstown's Lithuanian Roman Catholic parish. A current diocesan-linked sacramental-records directory lists it as closed with a 1917-1978 record span, while an attributed field history gives 1979 as the closure year; without a decree or final-Mass source, that conflict remains open. The parish church stood at 917 Shehy Street and the rectory was documented at 923 Shehy Street in 1922. The former church later served Canaan Missionary Baptist Church, but its present structural condition and use remain unresolved.",
+  "institutionLifecycle": {
+    "formation": "The Diocese of Youngstown-linked records directory gives St. Francis a 1917-1978 span, and Wolkovich's Volume 3 history identifies it as Youngstown's Lithuanian national parish. Because the directory presents those figures alongside closed-parish record information, 1917 is accepted as the beginning of the documented parish record series but not automatically as the canonical erection date.",
+    "institutionalForm": "Lithuanian Roman Catholic national parish; initially within the Diocese of Cleveland and, after 1943, within the Diocese of Youngstown.",
+    "jurisdiction": "Roman Catholic Diocese of Cleveland during the early parish period; Diocese of Youngstown after that diocese's 1943 erection.",
+    "terminalStatus": "Closed. The current diocesan-linked directory displays 1917-1978 and calls the parish closed, while Global True Lithuania gives a 1979 closure year. The effective canonical date, mechanism, and final Mass remain unresolved.",
+    "currentVerification": "The Diocese of Youngstown's parishes page directs researchers to the closed-parish records directory, which places St. Francis records at the Diocesan Archives. Post-closure reporting documents Baptist use at 917 Shehy Street in 2002; current 2026 use and physical condition are unresolved."
+  },
+  "worshipSites": [
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-francis-shehy-youngstown-oh",
+      "name": "St. Francis Lithuanian Roman Catholic Church",
+      "address": "917 Shehy Street, Youngstown, OH; historical church address supported by later-use reporting",
+      "usePeriod": "opening date unresolved; Catholic parish use ended in 1978 or 1979",
+      "buildingCondition": "standing and in non-Catholic worship use as documented in 2002; current condition unresolved",
+      "currentUse": "Canaan Missionary Baptist Church was documented at 917 Shehy Street in 2002. Later field reporting describes non-Catholic Sunday use, but no dated current source establishes 2026 use, structural condition, or interior condition.",
+      "evidence": [
+        {
+          "url": "https://vindyarchives.com/news/2002/oct/05/methodist-open-house/",
+          "locator": "October 5, 2002, 'Pastoral anniversary' notice, Canaan Missionary Baptist Church at 917 Shehy Street"
+        },
+        {
+          "url": "https://global.truelithuania.com/youngstown-ohio-3892/",
+          "locator": "St. Francis section, attributed former-church location and later non-Catholic use"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-francis-youngstown-oh",
+      "target": "cn:building_site:st-francis-shehy-youngstown-oh",
+      "date": "opening date unresolved-1978/1979",
+      "status": "accepted",
+      "note": "The parish church is associated with 917 Shehy Street; the distinct 923 Shehy address belongs to the rectory in a 1922 notice."
+    },
+    {
+      "type": "records-custody",
+      "source": "cn:institution:st-francis-youngstown-oh",
+      "target": "Diocese of Youngstown Archives",
+      "date": "current directory as of 2026-08-17",
+      "status": "accepted",
+      "note": "The diocesan-linked directory places closed St. Francis records at the Diocese of Youngstown Archives; it does not identify a merger or canonical successor."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "St. Francis was Youngstown's Lithuanian Roman Catholic national parish, distinct from every same-named St. Francis institution in the region. The current directory linked from the Diocese of Youngstown parishes page lists St. Francis of Assisi in Youngstown as closed and displays a 1917-1978 span. Because the page functions as a sacramental-records directory, 1917 is treated as the beginning of the documented record series rather than an unqualified canonical erection date.",
+      "sources": [
+        {
+          "url": "https://doy.org/parishes/",
+          "locator": "Finding Sacramental Records section linking the former-parish directory"
+        },
+        {
+          "url": "https://catechistcafe.weebly.com/sacramental-records.html",
+          "locator": "Youngstown section, St. Francis of Assisi (1917-1978) closed"
+        },
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed pp. 42-43"
+        }
+      ]
+    },
+    {
+      "text": "The early parish belonged to the Diocese of Cleveland; Youngstown did not become a separate diocese until 1943. Wolkovich's Volume 3 history identifies Father Feliksas Alinskas as the first pastor named in the available St. Francis account. The available sources do not establish the exact organizing sequence, canonical erection instrument, or opening date of the church.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed pp. 42-43"
+        },
+        {
+          "url": "https://doy.org/parishes/",
+          "locator": "Diocese history statement: established May 15 and canonically erected July 22, 1943"
+        }
+      ]
+    },
+    {
+      "text": "A 1922 Garsas notice directed a Lithuanian Catholic Alliance meeting to the Lithuanian parish rectory at 923 Shehy Street. That contemporary item proves the parish was operating and had a rectory there in May 1922. It does not make 923 Shehy the church address; later reporting places the church at the nearby 917 Shehy Street.",
+      "sources": [
+        {
+          "url": "https://www.spauda2.org/garsas/archive/1922/1922-05-11-GARSAS.pdf#page=5",
+          "locator": "PDF p. 5 / printed p. 5, Youngstown 63rd lodge meeting at the Lithuanian parish rectory, 923 Shehy"
+        },
+        {
+          "url": "https://vindyarchives.com/news/2002/oct/05/methodist-open-house/",
+          "locator": "October 5, 2002, Canaan Missionary Baptist Church at 917 Shehy Street"
+        }
+      ]
+    },
+    {
+      "text": "The terminal year is not fully resolved. The diocesan-linked records directory states 'Saint Francis of Assisi (1917-1978) is closed,' while Global True Lithuania gives 1979 as the parish's closure year. The former is the stronger current institutional directory reading, but it does not explain whether 1978 is the end of the record series, canonical suppression, or final worship. The 1979 account remains preserved rather than silently discarded.",
+      "sources": [
+        {
+          "url": "https://catechistcafe.weebly.com/sacramental-records.html",
+          "locator": "Youngstown closed-parish list, St. Francis of Assisi"
+        },
+        {
+          "url": "https://global.truelithuania.com/youngstown-ohio-3892/",
+          "locator": "St. Francis section, attributed 1979 closure reading"
+        }
+      ]
+    },
+    {
+      "text": "Parish closure did not immediately end religious use of the church building. A 2002 Vindicator notice identifies Canaan Missionary Baptist Church at 917 Shehy Street and announces a pastoral-anniversary service there. Global True Lithuania also reports later non-Catholic Sunday use. These sources support post-Catholic reuse, but without a current dated property or congregation source the building's 2026 use, exterior condition, and interior condition remain unknown. The Diocese of Youngstown Archives holds the closed parish's records.",
+      "sources": [
+        {
+          "url": "https://vindyarchives.com/news/2002/oct/05/methodist-open-house/",
+          "locator": "October 5, 2002, pastoral-anniversary notice"
+        },
+        {
+          "url": "https://global.truelithuania.com/youngstown-ohio-3892/",
+          "locator": "St. Francis section, attributed later building use"
+        },
+        {
+          "url": "https://catechistcafe.weebly.com/sacramental-records.html",
+          "locator": "Youngstown section, Archives Office custody"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1917",
+      "headline": "St. Francis record series begins",
+      "detail": "The current diocesan-linked directory begins the closed parish's displayed record span in 1917; the exact canonical formation milestone within that year remains unresolved.",
+      "sources": [
+        {
+          "title": "Sacramental Records",
+          "publisher": "Catechist Cafe, linked by the Catholic Diocese of Youngstown",
+          "date": "accessed 2026-08-17",
+          "page": "Youngstown section, St. Francis of Assisi",
+          "url": "https://catechistcafe.weebly.com/sacramental-records.html"
+        }
+      ]
+    },
+    {
+      "date": "1922-05-11",
+      "headline": "Parish rectory documented at 923 Shehy",
+      "detail": "A contemporary notice directed a Lithuanian Catholic Alliance lodge meeting to the Lithuanian parish rectory at 923 Shehy Street.",
+      "sources": [
+        {
+          "title": "Garsas issue, May 11, 1922",
+          "publisher": "Susivienijimas Lietuviu Rymo Kataliku Amerikoje",
+          "date": "1922-05-11",
+          "page": "PDF p. 5 / printed p. 5",
+          "url": "https://www.spauda2.org/garsas/archive/1922/1922-05-11-GARSAS.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "date": "1978/1979",
+      "headline": "Parish closes with conflicting terminal-year readings",
+      "detail": "The diocesan-linked directory displays 1978, while field history gives 1979; no decree or final-Mass evidence has been located to resolve the event date.",
+      "sources": [
+        {
+          "title": "Sacramental Records",
+          "publisher": "Catechist Cafe, linked by the Catholic Diocese of Youngstown",
+          "date": "accessed 2026-08-17",
+          "page": "Youngstown section, St. Francis of Assisi",
+          "url": "https://catechistcafe.weebly.com/sacramental-records.html"
+        },
+        {
+          "title": "Lithuanian heritage sites in Youngstown, Ohio",
+          "publisher": "Global True Lithuania",
+          "date": "accessed 2026-08-17",
+          "page": "St. Francis section",
+          "url": "https://global.truelithuania.com/youngstown-ohio-3892/"
+        }
+      ]
+    },
+    {
+      "date": "2002-10-05",
+      "headline": "Former church address remains in Baptist use",
+      "detail": "The Vindicator documented Canaan Missionary Baptist Church conducting worship-related activity at 917 Shehy Street.",
+      "sources": [
+        {
+          "title": "Pastoral anniversary",
+          "publisher": "The Vindicator",
+          "date": "2002-10-05",
+          "page": "Pastoral anniversary notice",
+          "url": "https://vindyarchives.com/news/2002/oct/05/methodist-open-house/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Parishes",
+      "publisher": "Catholic Diocese of Youngstown",
+      "date": "accessed 2026-08-17",
+      "page": "Finding Sacramental Records section and diocesan-history statement",
+      "url": "https://doy.org/parishes/"
+    },
+    {
+      "title": "Sacramental Records",
+      "publisher": "Catechist Cafe, linked by the Catholic Diocese of Youngstown",
+      "date": "accessed 2026-08-17",
+      "page": "Youngstown section, St. Francis of Assisi",
+      "url": "https://catechistcafe.weebly.com/sacramental-records.html"
+    },
+    {
+      "title": "Lithuanian Religious Life in America, Vol. 3",
+      "publisher": "Norwood Press",
+      "date": "1998",
+      "page": "printed pp. 42-43",
+      "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+    },
+    {
+      "title": "Garsas issue, May 11, 1922",
+      "publisher": "Susivienijimas Lietuviu Rymo Kataliku Amerikoje",
+      "date": "1922-05-11",
+      "page": "PDF p. 5 / printed p. 5",
+      "url": "https://www.spauda2.org/garsas/archive/1922/1922-05-11-GARSAS.pdf#page=5"
+    },
+    {
+      "title": "Pastoral anniversary",
+      "publisher": "The Vindicator",
+      "date": "2002-10-05",
+      "page": "Pastoral anniversary notice",
+      "url": "https://vindyarchives.com/news/2002/oct/05/methodist-open-house/"
+    },
+    {
+      "title": "Lithuanian heritage sites in Youngstown, Ohio",
+      "publisher": "Global True Lithuania",
+      "date": "accessed 2026-08-17",
+      "page": "St. Francis section",
+      "url": "https://global.truelithuania.com/youngstown-ohio-3892/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The current diocesan-linked directory presents St. Francis as closed with a 1917-1978 span, while Global True Lithuania gives 1979 as the closure year. The directory does not define whether its dates are canonical lifecycle dates or sacramental-record limits, so 1917 and 1978 are not silently promoted to exact erection and suppression events. The 917 Shehy church and 923 Shehy rectory are separate site claims.",
+  "gaps": "The organizing society and canonical erection instrument; the exact church construction, dedication, and street-number history; any earlier host worship site; the closure decree, effective date, and final Mass; whether 1978 or 1979 represents parish end; current 2026 ownership, worship use, exterior and interior condition; complete archives coverage; any successor relationship; and any cemetery remain unresolved."
+}

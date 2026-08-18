@@ -1,0 +1,78 @@
+{
+  "slug": "st-bartholomew-waukegan-il",
+  "culturenetEntityId": "cn:institution:st-bartholomew-waukegan-il",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian St. Bartholomew society active by 1894 · parish decree 24 August 1896 · parish ended 31 December 1991 in consolidation with St. Joseph · combined parish ended 4 April 1996",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "merged",
+  "buildingStatus": "standing",
+  "currentUse": "The St. Bartholomew parish institution ended on December 31, 1991. The Archdiocesan newspaper documented the former St. Bartholomew Church standing in late 2021 and used by Most Blessed Trinity Parish as a food pantry housing food and household supplies. The church campus is identified at Ninth Street and Lincoln Avenue; a secondary Lithuanian directory gives 730 Lincoln Avenue, but the exact street-number/parcel join remains qualified. Current structural and interior condition beyond the documented charitable reuse is not assessed.",
+  "summary": "St. Bartholomew was Waukegan's Lithuanian Roman Catholic parish. Wolkovich distinguishes an 1894 Lithuanian society milestone from the Archdiocesan parish decree of August 24, 1896. Early Lithuanian and Polish Catholics initially shared worship; the Lithuanian parish later built its own church and school campus near Ninth Street and Lincoln Avenue. A 1933 fire destroyed the church, and a replacement was dedicated in 1938. The Archdiocese's closed-parish holdings list gives St. Bartholomew an exact end date of December 31, 1991 and the combined Ss. Joseph and Bartholomew Parish an end date of April 4, 1996. Archdiocesan obituary evidence describes the parishes as consolidated, supporting a typed successor relationship while preserving the missing merger decree. The former church survives in charitable reuse as Most Blessed Trinity's food pantry; the school at 914 Eighth Street is a separate building and is not used as the church address.",
+  "institutionLifecycle": {
+    "formation": "A St. Bartholomew Lithuanian society existed by 1894; the Archdiocese decreed the parish on 24 August 1896. These are distinct organizing and canonical-erection milestones.",
+    "jurisdiction": "Roman Catholic Archdiocese of Chicago; Lithuanian ethnic parish, initially sharing worship with Polish Catholics.",
+    "terminalStatus": "St. Bartholomew Parish ended 31 December 1991. Evidence supports consolidation into Ss. Joseph and Bartholomew Parish, which ended 4 April 1996; the exact merger decree was not located.",
+    "currentVerification": "The Archdiocesan 2024 holdings list supplies both end dates; Chicago Catholic documents the former church's 2021 charitable reuse."
+  },
+  "worshipSites": [
+    {
+      "siteType": "shared_church",
+      "name": "Early shared Polish-Lithuanian Catholic church",
+      "address": "Waukegan, IL; exact address unresolved",
+      "usePeriod": "from parish formation in 1896; Polish separation reported by 1903",
+      "buildingCondition": "unknown",
+      "currentUse": "No exact building identity or disposition established.",
+      "evidence": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, Lithuanian Religious Life in America, vol. 3, pp. 118–120: early shared Polish-Lithuanian worship and parish development"}]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-bartholomew-lincoln-waukegan-il",
+      "name": "St. Bartholomew Church campus",
+      "address": "Ninth Street and Lincoln Avenue, Waukegan, IL; secondary directory gives 730 Lincoln Ave.; exact parcel join qualified",
+      "usePeriod": "wooden church by 1908; destroyed by fire August 1933; replacement dedicated 11 September 1938; parish use ended 1991",
+      "buildingCondition": "standing replacement church",
+      "currentUse": "Former church used by Most Blessed Trinity Parish as a food pantry as documented in December 2021/January 2022.",
+      "evidence": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, pp. 118–120: wooden church, 1933 fire, and 1938 replacement"}, {"url": "https://www.chicagocatholic.com/chicagoland/-/article/2022/01/05/waukegan-food-pantry-makes-christmas-feasts-possible", "locator": "Chicago Catholic, 2022-01-05: former St. Bartholomew Church houses Most Blessed Trinity food pantry"}, {"url": "https://www.litua.com/lt/apylinkes/IL", "locator": "Secondary Lithuanian directory: St. Bartholomew Church at 730 Lincoln Ave.; used only as a qualified street-number lead"}]
+    },
+    {
+      "siteType": "school_building",
+      "name": "St. Bartholomew School",
+      "address": "914 Eighth St., Waukegan, IL",
+      "usePeriod": "school building opened 1912; school closed 30 June 1984",
+      "buildingCondition": "not adjudicated for the church dossier",
+      "currentUse": "Separate school building; not the church address.",
+      "evidence": [{"url": "https://archives.archchicago.org/documents/1004501/1006364/Closed%2BParishes%2BSchools%2BOrphanages.pdf/d9b1926c-00a9-4dcb-b6fb-736b7ea2e319#page=4", "locator": "Archdiocese holdings list, PDF p. 4 / printed p. 4: St. Bartholomew School, Waukegan, end date 6/30/1984"}]
+    }
+  ],
+  "relationships": [
+    {"type": "institution-used-site", "source": "cn:institution:st-bartholomew-waukegan-il", "target": "cn:building_site:st-bartholomew-lincoln-waukegan-il", "date": "by 1908–1991", "status": "accepted", "note": "Includes the 1938 replacement after the 1933 fire; exact street number remains qualified."},
+    {"type": "building-replaced-by", "source": "St. Bartholomew wooden church", "target": "1938 St. Bartholomew Church", "date": "1933–1938", "status": "accepted", "note": "The fire and replacement are building events within the continuing parish."},
+    {"type": "institution-consolidated-into-institution", "source": "cn:institution:st-bartholomew-waukegan-il", "target": "cn:institution:ss-joseph-bartholomew-waukegan-il", "date": "1991-12-31", "status": "probable", "note": "Exact Archdiocesan end dates plus Archdiocesan obituary language support consolidation; the merger decree was not located."},
+    {"type": "building-repurposed", "source": "cn:building_site:st-bartholomew-lincoln-waukegan-il", "target": "Most Blessed Trinity Parish food pantry", "date": "documented 2021-12 / 2022-01", "status": "accepted", "note": "Charitable/community reuse of the former church; not institutional survival of St. Bartholomew."}
+  ],
+  "historicalNarrative": [
+    {"text": "St. Bartholomew was the Lithuanian Roman Catholic parish in Waukegan, not another same-name parish. Wolkovich distinguishes the Lithuanian society formed in 1894 from the Archdiocesan decree erecting the parish on August 24, 1896. Those dates are complementary: 1894 marks community organization, while 1896 marks canonical parish formation. The dossier does not collapse them into a single uncertain founding year.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, Lithuanian Religious Life in America, vol. 3, pp. 118–120: 1894 society and 1896-08-24 decree"}]},
+    {"text": "The earliest parish phase involved Lithuanian and Polish Catholics sharing worship. Wolkovich reports that the Polish group later separated as the Lithuanian community grew. The exact address of that first shared church has not been verified, so it remains a separate unresolved site rather than being joined by name or city to the later St. Bartholomew campus.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, pp. 118–120: shared early worship and later Polish separation"}]},
+    {"text": "The Lithuanian parish developed a church-and-school campus near Ninth Street and Lincoln Avenue. Wolkovich records a wooden church in 1908 and a brick schoolhouse in 1912. Fire destroyed the church in August 1933; the replacement was dedicated on September 11, 1938. These dates belong to successive buildings within the same parish. The school address, 914 Eighth Street, is separately documented and is not treated as the church's street address.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, pp. 118–120: 1908 church, 1912 school, 1933 fire, 1938 dedication"}, {"url": "https://archives.archchicago.org/documents/1004501/1006364/Closed%2BParishes%2BSchools%2BOrphanages.pdf/d9b1926c-00a9-4dcb-b6fb-736b7ea2e319#page=4", "locator": "Archdiocese holdings list, PDF p. 4 / printed p. 4: separate St. Bartholomew School record"}]},
+    {"text": "The parish's end is now fixed by official Archdiocesan evidence. The 2024 closed-parish holdings list gives St. Bartholomew Parish an end date of December 31, 1991 and separately gives Ss. Joseph and Bartholomew Parish an end date of April 4, 1996. A Chicago Catholic obituary says a pastoral associate served St. Joseph and St. Bartholomew and that her ministry expanded as the parishes consolidated. Together these sources support consolidation into the combined parish, but the missing decree keeps the precise juridic mechanism labeled probable. The inherited 2008 date is not used as St. Bartholomew's end.", "sources": [{"url": "https://archives.archchicago.org/documents/1004501/1006364/Closed%2BParishes%2BSchools%2BOrphanages.pdf/d9b1926c-00a9-4dcb-b6fb-736b7ea2e319#page=11", "locator": "Archdiocese holdings list, PDF p. 11 / printed p. 12: Ss. Joseph & Bartholomew end 4/4/1996"}, {"url": "https://archives.archchicago.org/documents/1004501/1006364/Closed%2BParishes%2BSchools%2BOrphanages.pdf/d9b1926c-00a9-4dcb-b6fb-736b7ea2e319#page=12", "locator": "Archdiocese holdings list, PDF p. 12 / printed p. 13: St. Bartholomew end 12/31/1991"}, {"url": "https://www.chicagocatholic.com/en/obituaries?delta=100&start=10", "locator": "Chicago Catholic obituary for Sr. Loretta Tiernan: St. Joseph and St. Bartholomew ministry grew as parishes consolidated"}]},
+    {"text": "The former church building survived the parish. Chicago Catholic documented Most Blessed Trinity Parish operating its food pantry from the former St. Bartholomew Church in December 2021, with food and household supplies stored inside. This is direct evidence of standing charitable reuse, separate from St. Bartholomew's 1991 institutional end and the combined parish's 1996 end. The Catholic article does not provide a street number or structural survey, so 730 Lincoln remains a qualified secondary address and current building condition beyond documented reuse is not overstated.", "sources": [{"url": "https://www.chicagocatholic.com/chicagoland/-/article/2022/01/05/waukegan-food-pantry-makes-christmas-feasts-possible", "locator": "Chicago Catholic, 2022-01-05, reporting December 2021 distribution: former St. Bartholomew Church used as food pantry"}, {"url": "https://www.litua.com/lt/apylinkes/IL", "locator": "Secondary Lithuanian directory: 730 Lincoln Ave. address lead"}]}
+  ],
+  "developments": [
+    {"date": "1894–1896", "headline": "Society organization followed by canonical parish decree", "detail": "The two dates represent distinct formation milestones.", "sources": [{"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "pp. 118–120", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"}]},
+    {"date": "1933–1938", "headline": "Fire destroys church and replacement is dedicated", "detail": "Building replacement did not end the parish.", "sources": [{"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "pp. 118–120", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"}]},
+    {"date": "1991-12-31", "headline": "St. Bartholomew Parish ends", "detail": "The combined Ss. Joseph and Bartholomew Parish later ended on 4 April 1996.", "sources": [{"title": "Holdings of Closed Parish Records", "publisher": "Archdiocese of Chicago Archives", "date": "2024-08", "page": "PDF pp. 11–12 / printed pp. 12–13", "url": "https://archives.archchicago.org/documents/1004501/1006364/Closed%2BParishes%2BSchools%2BOrphanages.pdf/d9b1926c-00a9-4dcb-b6fb-736b7ea2e319"}]},
+    {"date": "2021-12", "headline": "Former church documented in charitable reuse", "detail": "Most Blessed Trinity operated its food pantry from the former church.", "sources": [{"title": "Waukegan food pantry makes Christmas feasts possible", "publisher": "Chicago Catholic", "date": "2022-01-05", "url": "https://www.chicagocatholic.com/chicagoland/-/article/2022/01/05/waukegan-food-pantry-makes-christmas-feasts-possible"}]}
+  ],
+  "sources": [
+    {"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "pp. 118–120", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"},
+    {"title": "Holdings of Closed School Records — St. Bartholomew School", "publisher": "Archdiocese of Chicago Archives", "date": "2024-08", "page": "PDF p. 4 / printed p. 4", "url": "https://archives.archchicago.org/documents/1004501/1006364/Closed%2BParishes%2BSchools%2BOrphanages.pdf/d9b1926c-00a9-4dcb-b6fb-736b7ea2e319#page=4"},
+    {"title": "Holdings of Closed Parish Records — Ss. Joseph and Bartholomew", "publisher": "Archdiocese of Chicago Archives", "date": "2024-08", "page": "PDF p. 11 / printed p. 12", "url": "https://archives.archchicago.org/documents/1004501/1006364/Closed%2BParishes%2BSchools%2BOrphanages.pdf/d9b1926c-00a9-4dcb-b6fb-736b7ea2e319#page=11"},
+    {"title": "Holdings of Closed Parish Records — St. Bartholomew", "publisher": "Archdiocese of Chicago Archives", "date": "2024-08", "page": "PDF p. 12 / printed p. 13", "url": "https://archives.archchicago.org/documents/1004501/1006364/Closed%2BParishes%2BSchools%2BOrphanages.pdf/d9b1926c-00a9-4dcb-b6fb-736b7ea2e319#page=12"},
+    {"title": "Sr. Loretta Tiernan obituary", "publisher": "Chicago Catholic", "date": "accessed 2026-08-17", "url": "https://www.chicagocatholic.com/en/obituaries?delta=100&start=10"},
+    {"title": "Waukegan food pantry makes Christmas feasts possible", "publisher": "Chicago Catholic", "date": "2022-01-05", "url": "https://www.chicagocatholic.com/chicagoland/-/article/2022/01/05/waukegan-food-pantry-makes-christmas-feasts-possible"},
+    {"title": "Illinois Lithuanian parish directory", "publisher": "Litua.com", "date": "accessed 2026-08-17", "url": "https://www.litua.com/lt/apylinkes/IL"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The 1894 society and 1896 decree are distinct, not competing founding dates. The inherited 2008 terminal reading is contradicted by the official 12/31/1991 parish end. The 1991 relationship is a consolidation into Ss. Joseph and Bartholomew, not merely a yoking, but the exact decree remains missing. The former church's survival and charitable reuse do not extend St. Bartholomew's institutional life.",
+  "gaps": "The 1896 decree text, exact first shared church identity/address, exact church street number and parcel at Ninth/Lincoln, 1991 merger decree, canonical relationship of the 1996 combined parish to later Waukegan consolidations, final Mass dates, complete sacramental-record custody, deed/ownership chain, current structural/interior assessment, and any dedicated cemetery remain unverified."
+}

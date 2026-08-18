@@ -1,0 +1,253 @@
+{
+  "slug": "st-casimir-westfield-ma",
+  "culturenetEntityId": "cn:institution:st-casimir-westfield-ma",
+  "asOf": "2026-08-17",
+  "formationLabel": "Lithuanian Roman Catholic parish established in 1915 · Parkside church cornerstone laid 1917 and church completed 1918 · merged into distinct successor June 8, 2003",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "merged",
+  "buildingStatus": "standing",
+  "currentUse": "St. Casimir Parish ended as a separate institution when it merged with St. Peter on June 8, 2003 to form the distinct St. Peter and St. Casimir Parish. The successor retained the former St. Peter church on State Street, not the former St. Casimir church at 38 Parkside Avenue. Municipal records place the Parkside property under Westfield Public Schools control before transfer to the city in 2025, and a 2025 city sale notice scheduled on-site meetings there. These records support a standing former church/property under municipal disposition, not continued Catholic worship or current Lithuanian ministry.",
+  "summary": "St. Casimir was Westfield's Lithuanian Roman Catholic parish, established in 1915. Its church at 38 Parkside Avenue reached the cornerstone stage in 1917 and was completed in 1918. On June 8, 2003, St. Casimir and the distinct Slovak St. Peter Parish merged into a new successor, St. Peter and St. Casimir Parish. The successor retained St. Peter's State Street church, while Lithuanian objects from St. Casimir were preserved in the successor's worship space. The former Parkside property later passed through municipal-school control and was offered for sale by the city in 2025; it was not the successor's active church.",
+  "institutionLifecycle": {
+    "formation": "A local centennial history dates St. Casimir Parish's establishment to 1915 and the church cornerstone to 1917. The diocesan outlet identifies the Lithuanian predecessor and dates construction of the Parkside church to 1918.",
+    "institutionalForm": "Lithuanian Roman Catholic parish until its 2003 merger into a distinct territorial successor.",
+    "jurisdiction": "Diocese of Springfield in Massachusetts.",
+    "terminalStatus": "Merged June 8, 2003 with the distinct St. Peter Parish to form St. Peter and St. Casimir Parish. This was institutional succession, not mere building closure.",
+    "currentVerification": "The Diocese of Springfield currently lists St. Peter and St. Casimir Parish at 32 State Street with scheduled Masses. Current successor life does not mean the historical St. Casimir parish remained juridically unchanged."
+  },
+  "worshipSites": [
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-casimir-parkside-westfield-ma",
+      "name": "St. Casimir Church",
+      "address": "38 Parkside Avenue, Westfield, MA",
+      "usePeriod": "church completed in 1918; parish worship ended June 8, 2003",
+      "buildingCondition": "standing",
+      "currentUse": "No longer a Catholic worship site. Municipal records show that care, custody, management, and control passed from Westfield Public Schools to the City of Westfield in 2025. A city sale notice scheduled on-site meetings at 38 Parkside Avenue; exact post-sale ownership and interior condition remain unresolved.",
+      "evidence": [
+        {
+          "url": "https://iobserve.org/2017/09/11/st-peter-and-st-casimir-celebrate-centennials-of-founding-parishes/",
+          "locator": "lines 45–50"
+        },
+        {
+          "url": "https://www.cityofwestfield.org/AgendaCenter/ViewFile/Agenda/_07072025-8076#page=2",
+          "locator": "PDF p. 2, agenda item 11"
+        },
+        {
+          "url": "https://www.cityofwestfield.org/bids.aspx?bidID=412",
+          "locator": "bid description and on-site meeting notice"
+        }
+      ]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-peter-state-street-westfield-ma",
+      "name": "St. Peter and St. Casimir Parish church",
+      "address": "Historic church address 24 State Street; current diocesan listing 32 State Street, Westfield, MA 01085",
+      "usePeriod": "retained for the successor from June 2003; active as of 2026-08-17",
+      "buildingCondition": "standing",
+      "currentUse": "Active Roman Catholic worship site of the distinct successor parish. The 24/32 State Street difference appears to distinguish the historic church address from the current diocesan parish listing; the precise parcel/address convention remains unresolved.",
+      "evidence": [
+        {
+          "url": "https://iobserve.org/2017/09/11/st-peter-and-st-casimir-celebrate-centennials-of-founding-parishes/",
+          "locator": "lines 45–50"
+        },
+        {
+          "url": "https://www.diospringfield.org/parishfinder",
+          "locator": "Westfield parish listing and Mass schedule"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-casimir-westfield-ma",
+      "target": "cn:building_site:st-casimir-parkside-westfield-ma",
+      "date": "1918–2003-06-08",
+      "status": "accepted",
+      "note": "The Lithuanian parish used the Parkside church until the 2003 merger."
+    },
+    {
+      "type": "institution-merged-into-institution",
+      "source": "cn:institution:st-casimir-westfield-ma",
+      "target": "cn:institution:st-peter-and-st-casimir-westfield-ma",
+      "date": "2003-06-08",
+      "status": "accepted",
+      "note": "St. Casimir and the distinct St. Peter Parish formed a new successor parish; this is lineage, not identity."
+    },
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:st-peter-and-st-casimir-westfield-ma",
+      "target": "cn:building_site:st-peter-state-street-westfield-ma",
+      "date": "from 2003-06-08",
+      "status": "accepted",
+      "note": "The successor retained the former St. Peter church and remains active there."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "Westfield's Lithuanian Catholics organized St. Casimir Parish as an institution distinct from the city's Slovak St. Peter Parish. A local centennial account dates St. Casimir's establishment to 1915. The two ethnic parishes shared Catholic jurisdiction but retained separate institutional and building histories until 2003.",
+      "sources": [
+        {
+          "url": "https://thewestfieldnews.com/church-celebration-marks-centennial/",
+          "locator": "paragraphs 59–69"
+        },
+        {
+          "url": "https://iobserve.org/2017/09/11/st-peter-and-st-casimir-celebrate-centennials-of-founding-parishes/",
+          "locator": "lines 45–50"
+        }
+      ]
+    },
+    {
+      "text": "The local account places the St. Casimir cornerstone in 1917, while the diocesan outlet says the Lithuanian church at 38 Parkside Avenue was constructed in 1918. These are successive building milestones rather than competing parish-foundation dates. The Parkside church remained St. Casimir's worship site until the 2003 merger.",
+      "sources": [
+        {
+          "url": "https://thewestfieldnews.com/church-celebration-marks-centennial/",
+          "locator": "paragraphs 59–69"
+        },
+        {
+          "url": "https://iobserve.org/2017/09/11/st-peter-and-st-casimir-celebrate-centennials-of-founding-parishes/",
+          "locator": "lines 45–50"
+        }
+      ]
+    },
+    {
+      "text": "On June 8, 2003, St. Casimir closed its own doors and merged with St. Peter to form the distinct St. Peter and St. Casimir Parish. The successor retained St. Peter's State Street church rather than the Parkside building. Lithuanian religious objects were carried into the successor's worship setting, preserving material continuity without erasing the institutional merger.",
+      "sources": [
+        {
+          "url": "https://thewestfieldnews.com/church-celebration-marks-centennial/",
+          "locator": "paragraphs 59–74"
+        },
+        {
+          "url": "https://iobserve.org/2017/09/11/st-peter-and-st-casimir-celebrate-centennials-of-founding-parishes/",
+          "locator": "lines 45–53"
+        }
+      ]
+    },
+    {
+      "text": "The former St. Casimir property followed a separate post-parish course. A 2025 City Council agenda describes the former church at 38 Parkside Avenue and an adjacent Casimir Street lot as moving from Westfield Public Schools' care, custody, management, and control to the city. A later city sale notice used the name Parkside Academy and scheduled on-site meetings at 38 Parkside Avenue, supporting a standing-building reading while leaving its interior condition and post-sale disposition unresolved.",
+      "sources": [
+        {
+          "url": "https://www.cityofwestfield.org/AgendaCenter/ViewFile/Agenda/_07072025-8076#page=2",
+          "locator": "PDF p. 2, agenda item 11"
+        },
+        {
+          "url": "https://www.cityofwestfield.org/bids.aspx?bidID=412",
+          "locator": "bid description and on-site meeting notice"
+        }
+      ]
+    },
+    {
+      "text": "The Diocese of Springfield currently lists St. Peter and St. Casimir Parish with regular Masses at 32 State Street. The 2017 diocesan history names 24 State Street as the retained former St. Peter church. Current successor life is therefore established, while the address-number difference and the former Parkside property's later ownership remain separate unresolved property questions.",
+      "sources": [
+        {
+          "url": "https://iobserve.org/2017/09/11/st-peter-and-st-casimir-celebrate-centennials-of-founding-parishes/",
+          "locator": "lines 45–50"
+        },
+        {
+          "url": "https://www.diospringfield.org/parishfinder",
+          "locator": "Westfield parish listing and Mass schedule"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1915–1918",
+      "headline": "Parish and Parkside church established",
+      "detail": "St. Casimir Parish was established in 1915, its cornerstone was laid in 1917, and the Parkside church was completed in 1918.",
+      "sources": [
+        {
+          "title": "Church celebration marks centennial",
+          "publisher": "The Westfield News",
+          "date": "2017-08-23",
+          "page": "paragraphs 59–69",
+          "url": "https://thewestfieldnews.com/church-celebration-marks-centennial/"
+        },
+        {
+          "title": "St. Peter and St. Casimir Parish celebrates centennials of founding parishes",
+          "publisher": "iObserve, Catholic Communications Corporation / Diocese of Springfield",
+          "date": "2017-09-11",
+          "page": "lines 45–50",
+          "url": "https://iobserve.org/2017/09/11/st-peter-and-st-casimir-celebrate-centennials-of-founding-parishes/"
+        }
+      ]
+    },
+    {
+      "date": "2003-06-08",
+      "headline": "Distinct successor parish formed",
+      "detail": "St. Casimir and St. Peter merged into St. Peter and St. Casimir Parish, which retained the State Street church.",
+      "sources": [
+        {
+          "title": "Church celebration marks centennial",
+          "publisher": "The Westfield News",
+          "date": "2017-08-23",
+          "page": "paragraphs 66–74",
+          "url": "https://thewestfieldnews.com/church-celebration-marks-centennial/"
+        }
+      ]
+    },
+    {
+      "date": "2025",
+      "headline": "Former Parkside property enters municipal sale process",
+      "detail": "Municipal records transferred control from Westfield Public Schools to the city and documented an on-site sale process at 38 Parkside Avenue.",
+      "sources": [
+        {
+          "title": "Westfield City Council Agenda",
+          "publisher": "City of Westfield, Massachusetts",
+          "date": "2025-07-07",
+          "page": "PDF p. 2, agenda item 11",
+          "url": "https://www.cityofwestfield.org/AgendaCenter/ViewFile/Agenda/_07072025-8076#page=2"
+        },
+        {
+          "title": "Sale of Parkside Academy, Bid #26-002",
+          "publisher": "City of Westfield, Massachusetts",
+          "date": "2025-08-27",
+          "page": "bid description and on-site meeting notice",
+          "url": "https://www.cityofwestfield.org/bids.aspx?bidID=412"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Church celebration marks centennial",
+      "publisher": "The Westfield News",
+      "date": "2017-08-23",
+      "page": "paragraphs 59–74",
+      "url": "https://thewestfieldnews.com/church-celebration-marks-centennial/"
+    },
+    {
+      "title": "St. Peter and St. Casimir Parish celebrates centennials of founding parishes",
+      "publisher": "iObserve, Catholic Communications Corporation / Diocese of Springfield",
+      "date": "2017-09-11",
+      "page": "lines 45–53",
+      "url": "https://iobserve.org/2017/09/11/st-peter-and-st-casimir-celebrate-centennials-of-founding-parishes/"
+    },
+    {
+      "title": "Westfield City Council Agenda",
+      "publisher": "City of Westfield, Massachusetts",
+      "date": "2025-07-07",
+      "page": "PDF p. 2, agenda item 11",
+      "url": "https://www.cityofwestfield.org/AgendaCenter/ViewFile/Agenda/_07072025-8076#page=2"
+    },
+    {
+      "title": "Sale of Parkside Academy, Bid #26-002",
+      "publisher": "City of Westfield, Massachusetts",
+      "date": "2025-08-27",
+      "page": "bid description and on-site meeting notice",
+      "url": "https://www.cityofwestfield.org/bids.aspx?bidID=412"
+    },
+    {
+      "title": "Parish Finder — St. Peter and St. Casimir Parish",
+      "publisher": "Diocese of Springfield in Massachusetts",
+      "date": "accessed 2026-08-17",
+      "page": "Westfield parish listing and Mass schedule",
+      "url": "https://www.diospringfield.org/parishfinder"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The 1915 establishment, 1917 cornerstone, and 1918 construction readings refer to different institutional and building milestones. St. Casimir's 2003 end was a merger into a distinct successor, not continued identity under a combined name. The retained successor site is the former St. Peter church; 24 State Street appears in the diocesan history, while the current diocesan directory lists 32 State Street.",
+  "gaps": "The exact canonical erection and merger instruments; any worship location before the Parkside church; the precise 24/32 State Street address convention; sacramental-record custody; cemetery relationships; the terms and result of the 2025 Parkside sale process; current ownership; and the former church's interior condition remain unresolved. Current successor evidence does not establish present Lithuanian-language worship."
+}

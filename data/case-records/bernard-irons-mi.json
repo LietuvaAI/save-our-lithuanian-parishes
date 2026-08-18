@@ -1,0 +1,191 @@
+{
+  "slug": "bernard-irons-mi",
+  "culturenetEntityId": "cn:institution:bernard-irons-mi",
+  "asOf": "2026-08-17",
+  "formationLabel": "Roman Catholic mission established 1920 · separate parish with resident pastor established 1948 · active",
+  "institutionClass": "roman_catholic",
+  "institutionStatus": "active",
+  "buildingStatus": "standing",
+  "currentUse": "St. Bernard remains an active Roman Catholic parish at 5734 10-1/2 Mile Road, with regular Sunday and Friday Masses. It is administratively clustered with Saint Ann-Saint Ignatius and St. John Cantius. Current Lithuanian-language worship is not established.",
+  "summary": "St. Bernard in Irons began as a Roman Catholic mission in 1920 and received its first resident pastor in 1948. Historical descriptions identify strong Lithuanian and Bohemian participation, including Lithuanian-rooted pastors, but characterize the institution as mixed or English-speaking rather than a canonical Lithuanian national parish. The parish remains active at 5734 10-1/2 Mile Road. Its present administrative cluster does not represent a merger, and no current Lithuanian-language ministry is documented.",
+  "institutionLifecycle": {
+    "formation": "Mission status began in 1920; St. Bernard became a separately staffed parish with its first resident pastor in 1948.",
+    "institutionalForm": "Roman Catholic mission from 1920 to 1948, then an ordinary diocesan parish. Lithuanian and Bohemian community participation is documented, but national-parish status is not.",
+    "jurisdiction": "Roman Catholic Diocese of Grand Rapids.",
+    "terminalStatus": "Active parish; no closure, suppression, or merger is established.",
+    "currentVerification": "The Diocese of Grand Rapids lists St. Bernard as an active parish with current Masses at 5734 10-1/2 Mile Road. Its clustering with neighboring parishes is administrative and is not treated as institutional succession."
+  },
+  "worshipSites": [
+    {
+      "siteType": "host_church",
+      "name": "St. Bernard mission worship site",
+      "address": "Irons, Michigan; exact mission-era address unresolved",
+      "usePeriod": "1920-1948",
+      "buildingCondition": "unknown",
+      "currentUse": "The mission is documented, but its exact building identity, address, and relationship to the present church have not been established.",
+      "evidence": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed p. 83, mission status 1920-1948"
+        }
+      ]
+    },
+    {
+      "siteType": "church",
+      "culturenetEntityId": "cn:building_site:st-bernard-irons-mi",
+      "name": "St. Bernard Church",
+      "address": "5734 10-1/2 Mile Road, Irons, MI 49644",
+      "usePeriod": "parish phase from 1948 or later; exact opening date unresolved-current",
+      "buildingCondition": "standing",
+      "currentUse": "Active Roman Catholic church with current Mass, confession, and adoration schedules.",
+      "evidence": [
+        {
+          "url": "https://grdiocese.org/parishes-location/saint-bernard-parish-irons/",
+          "locator": "Location and Information, Worship Site, Mass, Confession, and Adoration sections"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "institution-used-site",
+      "source": "cn:institution:bernard-irons-mi",
+      "target": "cn:building_site:st-bernard-irons-mi",
+      "date": "opening date unresolved-current",
+      "status": "accepted",
+      "note": "St. Bernard currently worships at 5734 10-1/2 Mile Road; the building's construction and dedication dates remain unresolved."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "St. Bernard began in 1920 as a Roman Catholic mission in the rural Irons area. The exact mission host, address, and pastoral dependency have not been established, so the mission phase is not assigned to the present church building.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed p. 83"
+        }
+      ]
+    },
+    {
+      "text": "The community received its first resident pastor in 1948, marking the transition from mission care to a separately staffed parish. The Diocese of Grand Rapids likewise gives 1948 as St. Bernard's establishment date, while the earlier 1920 date belongs to the mission phase rather than a competing parish founding.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed p. 83, first resident pastor"
+        },
+        {
+          "url": "https://grdiocese.org/parishes-location/saint-bernard-parish-irons/",
+          "locator": "Location and Information section, Established: 1948"
+        }
+      ]
+    },
+    {
+      "text": "St. Bernard's ethnic descriptions changed over time. A 1928 diocesan report called it English-speaking; a 1970 response identified Lithuanian and Bohemian composition; a later description called it mixed and originally Lithuanian. A parish leaflet attributed about three quarters of the early congregation to Lithuanian families. These descriptions support Lithuanian community history without establishing a canonical national parish.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed p. 83, changing ethnic descriptions"
+        }
+      ]
+    },
+    {
+      "text": "Several resident pastors identified in the historical account had Lithuanian roots, among them Benjamin Marčiulionis, Albert and Ernest Bernott, and Walter Jude. Their service helps explain the parish's Lithuanian pastoral association, but shared ethnicity or clergy does not turn St. Bernard into another nearby institution or prove ethnic-parish jurisdiction.",
+      "sources": [
+        {
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073",
+          "locator": "Wolkovich, Lithuanian Religious Life in America, Vol. 3, printed p. 83, resident pastors"
+        },
+        {
+          "url": "https://global.truelithuania.com/custer-ludington-michigan-3901/",
+          "locator": "New Lithuania section, attributed account of Lithuanian priests and Masses in Irons and Custer without ethnic-parish formation"
+        }
+      ]
+    },
+    {
+      "text": "St. Bernard remains an active parish at 5734 10-1/2 Mile Road. The Diocese of Grand Rapids publishes current Sunday and Friday Masses there and lists the parish in a cluster with Saint Ann-Saint Ignatius and St. John Cantius. That cluster is shared administration, not a merger or successor relationship, and the current page does not identify Lithuanian-language worship.",
+      "sources": [
+        {
+          "url": "https://grdiocese.org/parishes-location/saint-bernard-parish-irons/",
+          "locator": "Location and Information, Worship Site, and Mass sections"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1920",
+      "headline": "St. Bernard mission begins",
+      "detail": "Roman Catholic mission service began in Irons; the exact host site remains unresolved.",
+      "sources": [
+        {
+          "title": "Lithuanian Religious Life in America, Vol. 3",
+          "publisher": "Norwood Press",
+          "date": "1998",
+          "page": "printed p. 83",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+        }
+      ]
+    },
+    {
+      "date": "1948",
+      "headline": "Resident parish phase begins",
+      "detail": "St. Bernard received its first resident pastor and is listed by the diocese as established in 1948.",
+      "sources": [
+        {
+          "title": "Lithuanian Religious Life in America, Vol. 3",
+          "publisher": "Norwood Press",
+          "date": "1998",
+          "page": "printed p. 83",
+          "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+        },
+        {
+          "title": "Saint Bernard Parish, Irons",
+          "publisher": "Diocese of Grand Rapids",
+          "date": "current page accessed 2026-08-17",
+          "page": "Location and Information section",
+          "url": "https://grdiocese.org/parishes-location/saint-bernard-parish-irons/"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "headline": "Active parish and worship site verified",
+      "detail": "The diocese lists regular Masses at the standing St. Bernard Church, 5734 10-1/2 Mile Road.",
+      "sources": [
+        {
+          "title": "Saint Bernard Parish, Irons",
+          "publisher": "Diocese of Grand Rapids",
+          "date": "current page accessed 2026-08-17",
+          "page": "Worship Site and Mass sections",
+          "url": "https://grdiocese.org/parishes-location/saint-bernard-parish-irons/"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lithuanian Religious Life in America, Vol. 3",
+      "publisher": "Norwood Press",
+      "date": "1998",
+      "page": "printed p. 83",
+      "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+    },
+    {
+      "title": "Saint Bernard Parish, Irons",
+      "publisher": "Diocese of Grand Rapids",
+      "date": "current page accessed 2026-08-17",
+      "page": "Location and Information, Worship Site, and schedules",
+      "url": "https://grdiocese.org/parishes-location/saint-bernard-parish-irons/"
+    },
+    {
+      "title": "Lithuanian heritage in Custer and Ludington, Michigan",
+      "publisher": "Global True Lithuania",
+      "date": "accessed 2026-08-17",
+      "page": "New Lithuania section",
+      "url": "https://global.truelithuania.com/custer-ludington-michigan-3901/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The 1920 date belongs to St. Bernard's mission phase; 1948 marks the resident parish phase. Historical descriptions alternately call the congregation English-speaking, Lithuanian and Bohemian, mixed, or originally Lithuanian. Those variations describe membership and pastoral culture rather than competing institutions or canonical national-parish status.",
+  "gaps": "The mission's exact host, address, and dependency; the current church's construction and dedication dates and relationship to the mission site; canonical formation instruments; complete sacramental-record custody; any cemetery; and evidence for current Lithuanian-language ministry remain unresolved."
+}

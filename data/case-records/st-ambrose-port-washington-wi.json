@@ -1,0 +1,62 @@
+{
+  "slug": "st-ambrose-port-washington-wi",
+  "culturenetEntityId": "cn:institution:st-ambrose-port-washington-wi",
+  "asOf": "2026-08-17",
+  "formationLabel": "St. Lawrence Society formed in 1902 · Lithuanian mission met in rented halls by about 1907 · St. Ambrose chapel cornerstone blessed July 11, 1909 · final Mass Christmas 1964 · property liquidation voted in 1965",
+  "institutionClass": "roman_catholic",
+  "institutionalForm": "mission",
+  "institutionStatus": "closed",
+  "buildingStatus": "demolished",
+  "currentUse": "The St. Ambrose mission chapel was demolished after the mission's final Mass at Christmas 1964 and the remaining members' 1965 vote to liquidate the property. A near-period source summarized by Wolkovich says a small apartment complex replaced the chapel within months. The exact former address, parcel, present apartment identity, and current use as of 2026 remain unresolved.",
+  "summary": "St. Ambrose was a Lithuanian Roman Catholic mission at Port Washington, not an independently proven parish. A St. Lawrence Society formed in 1902, the community met in rented halls by about 1907, and the St. Ambrose chapel cornerstone was blessed July 11, 1909. The mission was pastorally dependent on Immaculate Conception in Sheboygan; by 1921 the Sheboygan pastor offered Mass twice monthly. The final Mass occurred at Christmas 1964. In 1965 the twelve remaining members voted to liquidate the property, after which the chapel was demolished and replaced by a small apartment complex. The dossier preserves 1964 as the last-worship date and 1965 as the liquidation/building-disposition phase, rather than forcing one closure year. No later parish erection, successor, records custodian, cemetery, or exact street address has been verified.",
+  "institutionLifecycle": {
+    "formation": "St. Lawrence Society formed in 1902; Lithuanian Catholics met in rented halls by about 1907; the St. Ambrose chapel cornerstone was blessed July 11, 1909.",
+    "institutionalForm": "Roman Catholic mission dependent on the Lithuanian parish at Sheboygan. No canonical parish erection was found.",
+    "jurisdiction": "Archdiocese of Milwaukee, served through Immaculate Conception Parish in Sheboygan.",
+    "terminalStatus": "Final Mass at Christmas 1964; twelve remaining members voted to liquidate the property in 1965. Exact canonical suppression date and instrument unresolved.",
+    "currentVerification": "The Archdiocese closed/merged list does not identify St. Ambrose, so it supplies neither a successor nor records custodian for this mission."
+  },
+  "worshipSites": [
+    {
+      "siteType": "rented_halls",
+      "name": "Port Washington rented meeting halls",
+      "address": "Port Washington, WI; exact hall locations unresolved",
+      "usePeriod": "about 1907 until the mission chapel opened",
+      "buildingCondition": "unknown",
+      "currentUse": "Unknown; the halls are not treated as St. Ambrose property.",
+      "evidence": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 38 / printed p. 30; mission met in rented halls around 1907"}]
+    },
+    {
+      "siteType": "mission_chapel",
+      "culturenetEntityId": "cn:building_site:st-ambrose-chapel-port-washington-wi",
+      "name": "St. Ambrose mission chapel",
+      "address": "Port Washington, WI; exact street address and parcel unresolved",
+      "usePeriod": "cornerstone blessed July 11, 1909; final Mass Christmas 1964",
+      "buildingCondition": "demolished in 1965 after property liquidation",
+      "currentUse": "A small apartment complex replaced the chapel within months; present parcel identity and use unverified.",
+      "evidence": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF pp. 38–39 / printed pp. 30–31; cornerstone, final Mass, liquidation, demolition, and apartment replacement"}]
+    }
+  ],
+  "relationships": [
+    {"type": "institution-used-site", "source": "cn:institution:st-ambrose-port-washington-wi", "target": "cn:building_site:st-ambrose-chapel-port-washington-wi", "date": "1909–1964", "status": "accepted", "note": "Final worship and property liquidation are separate terminal milestones."},
+    {"type": "building-replaced-by", "source": "cn:building_site:st-ambrose-chapel-port-washington-wi", "target": "cn:building_site:st-ambrose-apartment-replacement-port-washington-wi", "date": "1965", "status": "probable", "note": "Wolkovich cites a 1966 Port Pilot account that a small apartment complex replaced the demolished chapel within months; exact parcel join remains unresolved."}
+  ],
+  "historicalNarrative": [
+    {"text": "St. Ambrose began as a mission community rather than a proven parish. Lithuanian workers in Port Washington formed the St. Lawrence Society in 1902 and, within several years, met in rented halls. This organizational stage is separate from the chapel and from any canonical parish erection; no source reviewed for this dossier shows that the Archdiocese later elevated the mission to parish status.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 38 / printed p. 30; society, immigrant community, and rented halls"}]},
+    {"text": "The cornerstone for the 100-seat St. Ambrose chapel was blessed July 11, 1909. Wolkovich describes about thirty Lithuanian families and fifty single adults supporting the mission. By 1921 the pastor of Immaculate Conception in Sheboygan offered Mass at St. Ambrose twice each month, documenting a mission-of relationship without merging the two institutional identities.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 38 / printed p. 30; chapel, membership, and twice-monthly service from Sheboygan"}]},
+    {"text": "The Sheboygan parish history elsewhere in Wolkovich also counted roughly fifty St. Ambrose mission families in 1916. This reinforces the dependent pastoral structure while showing a functioning local community with its own chapel. The dossier does not convert this size or longevity into evidence of an independent juridic parish.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 36 / printed p. 28; St. Ambrose described as the Port Washington Lithuanian mission with about fifty families"}]},
+    {"text": "St. Ambrose's terminal sequence spans two calendar years. Wolkovich, citing the Catholic Herald Citizen and Port Pilot, says the final Mass took place at Christmas 1964. By 1965 only twelve members remained and voted to liquidate the property. The case therefore records 1964 as the end of documented worship and 1965 as the institutional/property disposition phase, leaving the canonical suppression date unresolved.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 39 / printed p. 31; final Mass, surviving members, and liquidation vote"}]},
+    {"text": "The chapel was demolished and a small apartment complex replaced it within months, according to the near-period account summarized by Wolkovich. That evidence establishes demolition and historical replacement, not the exact parcel address or the apartments' current identity in 2026. The Archdiocese's current closed/merged-parish page does not list St. Ambrose, so no successor, sacramental-record custodian, cemetery, or canonical instrument is inferred from omission.", "sources": [{"url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073", "locator": "Wolkovich, vol. 3, PDF p. 39 / printed p. 31; demolished chapel replaced by apartments"}, {"url": "https://www.archmil.org/closed-and-merged-parishes", "locator": "Official closed/merged-parish page checked for current custody/successor evidence; St. Ambrose not listed"}]}
+  ],
+  "developments": [
+    {"date": "1902–1909", "headline": "Society, mission, and chapel milestones", "detail": "The evidence supports a mission and chapel, not an independently erected parish.", "sources": [{"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "PDF p. 38 / printed p. 30", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"}]},
+    {"date": "1964–1965", "headline": "Final Mass, liquidation, and demolition", "detail": "Christmas 1964 worship ended before the 1965 property vote and building replacement.", "sources": [{"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "PDF p. 39 / printed p. 31", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"}]}
+  ],
+  "sources": [
+    {"title": "Lithuanian Religious Life in America, Volume 3", "publisher": "William Wolkovich-Valkavičius", "date": "1998", "page": "PDF pp. 36, 38–39 / printed pp. 28, 30–31", "url": "https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"},
+    {"title": "Closed and Merged Parishes", "publisher": "Archdiocese of Milwaukee", "date": "accessed 2026-08-17", "url": "https://www.archmil.org/closed-and-merged-parishes"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The canonical record type `misija` is retained. Christmas 1964 is the last-Mass date; 1965 is the remaining members' liquidation vote and building-disposition period. These dates should not be flattened into a single unqualified closure year, and no later parish status is inferred.",
+  "gaps": "Canonical mission establishment and suppression instruments, any later parish erection, exact addresses for rented halls and chapel, deed and parcel history, exact demolition date, present apartment identity and use, sacramental-record custody, successor, and cemetery remain unresolved."
+}

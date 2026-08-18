@@ -10,7 +10,7 @@
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
-    "publication_projection_hash": "sha256:ba6eb479c426644160bb976d2b31c5be73331f3859472d9cf788faa8f047f799",
+    "publication_projection_hash": "sha256:bef6ab8831eb78727fe908039da9a84b1eab9d281d761de86fd58a8f222541e6",
     "publication_projection_revision": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
     "repository": "LietuvaAI/culturenet-brain"
   },
@@ -1681,6 +1681,57 @@
       "address": {
         "alternate_displays": [],
         "assertion_ids": [
+          "assert:final-sites-16:middleport-chapel:site"
+        ],
+        "authority": "conflict_preserved_assertion",
+        "display": "Middleport, Pennsylvania; exact street address and parcel unresolved",
+        "source_artifact_ids": [
+          "src:final-sites-16:middleport-chapel:case"
+        ],
+        "state": "reported_unresolved"
+      },
+      "condition_relationships": [],
+      "counted_in_public_institution_total": false,
+      "culturenet_entity_id": "cn:building_site:immaculate-heart-of-mary-middleport-pa",
+      "demolished_year": null,
+      "first_documented_year": 1948,
+      "institution_use_periods": [
+        {
+          "date": {
+            "certainty": "1948 mission/church date established; closure date unresolved",
+            "end": null,
+            "label": "The dependent Middleport mission used the Immaculate Heart of Mary chapel",
+            "start": "1948"
+          },
+          "institution_entity_id": "cn:institution:lithuanian-church-middleport-pa",
+          "institution_profile": "/parishes/lithuanian-church-middleport-pa",
+          "relationship_id": "rel:final-sites-16:middleport-chapel:used-site",
+          "relationship_type": "institution-used-site"
+        }
+      ],
+      "lifecycle_text": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:final-sites-16:middleport-chapel:site"
+        ],
+        "start": "1948"
+      },
+      "milestones": [],
+      "name": "Immaculate Heart of Mary mission chapel, Middleport",
+      "public_profile_link_status": "direct_institution_use",
+      "related_public_institution_ids": [
+        "cn:institution:lithuanian-church-middleport-pa"
+      ],
+      "related_public_profiles": [
+        "/parishes/lithuanian-church-middleport-pa"
+      ],
+      "site_class": "worship_site",
+      "slug": "immaculate-heart-of-mary-middleport-pa"
+    },
+    {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
           "assert:illinois-1:collinsville-building"
         ],
         "authority": "accepted_assertion",
@@ -1929,6 +1980,57 @@
       "address": {
         "alternate_displays": [],
         "assertion_ids": [
+          "assert:final-sites-16:baltimore-lloyd:site"
+        ],
+        "authority": "accepted_assertion",
+        "display": "11 Lloyd Street, Baltimore, MD",
+        "source_artifact_ids": [
+          "src:final-sites-16:baltimore-lloyd:case"
+        ],
+        "state": "established"
+      },
+      "condition_relationships": [],
+      "counted_in_public_institution_total": false,
+      "culturenet_entity_id": "cn:building_site:lloyd-street-synagogue-baltimore-md",
+      "demolished_year": null,
+      "first_documented_year": 1889,
+      "institution_use_periods": [
+        {
+          "date": {
+            "certainty": "exact purchase date and sale year established",
+            "end": "1905",
+            "label": "Saint John used the Lloyd Street building from its 1889 purchase until its 1905 sale",
+            "start": "1889-02-20"
+          },
+          "institution_entity_id": "cn:institution:st-john-the-baptist-baltimore-md",
+          "institution_profile": "/parishes/st-john-the-baptist-baltimore-md",
+          "relationship_id": "rel:final-sites-16:baltimore-lloyd:used-site",
+          "relationship_type": "institution-used-site"
+        }
+      ],
+      "lifecycle_text": {
+        "end": "1905",
+        "source_assertion_ids": [
+          "assert:final-sites-16:baltimore-lloyd:site"
+        ],
+        "start": "1889-02-20"
+      },
+      "milestones": [],
+      "name": "Lloyd Street Synagogue used by Saint John the Baptist",
+      "public_profile_link_status": "direct_institution_use",
+      "related_public_institution_ids": [
+        "cn:institution:st-john-the-baptist-baltimore-md"
+      ],
+      "related_public_profiles": [
+        "/parishes/st-john-the-baptist-baltimore-md"
+      ],
+      "site_class": "worship_site",
+      "slug": "lloyd-street-synagogue-baltimore-md"
+    },
+    {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
           "assert:living-1:nativity-uses-washtenaw-site"
         ],
         "authority": "accepted_assertion",
@@ -2161,11 +2263,11 @@
     {
       "address": {
         "alternate_displays": [
-          "2337 W. 23rd Place"
+          "2327 W. 23rd Place"
         ],
         "assertion_ids": [],
         "authority": "canonical_entity_alias",
-        "display": "2327 W. 23rd Place",
+        "display": "2337 W. 23rd Place",
         "source_artifact_ids": [],
         "state": "recorded"
       },
@@ -7930,6 +8032,57 @@
       "address": {
         "alternate_displays": [],
         "assertion_ids": [
+          "assert:final-sites-16:baltimore-paca:site"
+        ],
+        "authority": "accepted_assertion",
+        "display": "308 North Paca Street, Baltimore, MD 21201; corner of Saratoga and Paca Streets",
+        "source_artifact_ids": [
+          "src:final-sites-16:baltimore-lloyd:case"
+        ],
+        "state": "established"
+      },
+      "condition_relationships": [],
+      "counted_in_public_institution_total": false,
+      "culturenet_entity_id": "cn:building_site:st-john-paca-baltimore-md",
+      "demolished_year": null,
+      "first_documented_year": 1905,
+      "institution_use_periods": [
+        {
+          "date": {
+            "certainty": "new church planned in 1902 and occupied by 1905; exact opening date unresolved",
+            "end": "1917",
+            "label": "Saint John used the Paca Street church until the 1917 community transfer",
+            "start": "by 1905"
+          },
+          "institution_entity_id": "cn:institution:st-john-the-baptist-baltimore-md",
+          "institution_profile": "/parishes/st-john-the-baptist-baltimore-md",
+          "relationship_id": "rel:final-sites-16:baltimore-paca:used-site",
+          "relationship_type": "institution-used-site"
+        }
+      ],
+      "lifecycle_text": {
+        "end": "1917",
+        "source_assertion_ids": [
+          "assert:final-sites-16:baltimore-paca:site"
+        ],
+        "start": "by 1905"
+      },
+      "milestones": [],
+      "name": "Saint John the Baptist church at Saratoga and Paca Streets",
+      "public_profile_link_status": "direct_institution_use",
+      "related_public_institution_ids": [
+        "cn:institution:st-john-the-baptist-baltimore-md"
+      ],
+      "related_public_profiles": [
+        "/parishes/st-john-the-baptist-baltimore-md"
+      ],
+      "site_class": "worship_site",
+      "slug": "st-john-paca-baltimore-md"
+    },
+    {
+      "address": {
+        "alternate_displays": [],
+        "assertion_ids": [
           "assert:nec-4:coaldale-sites"
         ],
         "authority": "conflict_preserved_assertion",
@@ -9998,7 +10151,7 @@
       "building-standing"
     ]
   },
-  "content_hash": "sha256:77118195dea3f0aedaa006b63b6fed689c493c4fbef66311f39228df230f700d",
+  "content_hash": "sha256:691de2b826621cc830245b8bb885af3b1639f10c37a5a7375f16155ea5b5af2f",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -12561,27 +12714,27 @@
     }
   ],
   "counts": {
-    "building_site_entities": 172,
+    "building_site_entities": 175,
     "canadian_comparator_parishes": 3,
-    "closed_roman_catholic_parishes": 87,
+    "closed_roman_catholic_parishes": 86,
     "closed_roman_catholic_parishes_since_1990": 54,
     "closed_roman_catholic_parishes_since_2020": 2,
     "closed_roman_catholic_parishes_with_dated_year": 78,
     "coal_region_parish_institutions": 15,
     "institution_continuity_edges": 51,
     "physical_worship_site_address_states": {
-      "established": 25,
+      "established": 27,
       "not_established": 25,
       "recorded": 63,
-      "reported_unresolved": 18
+      "reported_unresolved": 19
     },
-    "physical_worship_sites": 131,
-    "physical_worship_sites_with_address_display": 106,
+    "physical_worship_sites": 134,
+    "physical_worship_sites_with_address_display": 109,
     "public_us_institutions": 155,
     "records_custody_edges": 7,
-    "roman_catholic_parish_institutions": 132,
+    "roman_catholic_parish_institutions": 131,
     "roman_catholic_parishes_with_closure_year": 91,
-    "roman_catholic_parishes_with_founding_year": 119,
+    "roman_catholic_parishes_with_founding_year": 118,
     "site_r10_founding_fallbacks": 0,
     "unresolved_founding_years": 18
   },
@@ -16933,15 +17086,19 @@
       "legacy_building_fate": "unknown",
       "name": "Lietuvių bažnyčia (unnamed)",
       "public_profile": "/parishes/lithuanian-church-middleport-pa",
-      "record_type": "parish",
+      "record_type": "misija",
       "registry_slug": "lithuanian-church-middleport-pa",
-      "relationship_ids": [],
+      "relationship_ids": [
+        "rel:final-sites-16:middleport-chapel:used-site"
+      ],
       "state": "PA",
       "status_authority": "brain_canonical_assertion",
       "status_group": "closed",
       "status_observed_at": null,
       "status_source_authority": "site_r10_baseline",
-      "terminal_worship_site_ids": []
+      "terminal_worship_site_ids": [
+        "cn:building_site:immaculate-heart-of-mary-middleport-pa"
+      ]
     },
     {
       "building_fate": null,
@@ -20149,13 +20306,18 @@
       "public_profile": "/parishes/st-john-the-baptist-baltimore-md",
       "record_type": "parish",
       "registry_slug": "st-john-the-baptist-baltimore-md",
-      "relationship_ids": [],
+      "relationship_ids": [
+        "rel:final-sites-16:baltimore-lloyd:used-site",
+        "rel:final-sites-16:baltimore-paca:used-site"
+      ],
       "state": "MD",
       "status_authority": "brain_canonical_assertion",
       "status_group": "closed",
       "status_observed_at": null,
       "status_source_authority": "site_r10_baseline",
-      "terminal_worship_site_ids": []
+      "terminal_worship_site_ids": [
+        "cn:building_site:st-john-paca-baltimore-md"
+      ]
     },
     {
       "building_fate": null,
@@ -21471,13 +21633,13 @@
     },
     {
       "id": "roman_catholic_parish_history",
-      "population": 132,
+      "population": 131,
       "unit": "distinct U.S. Roman Catholic parish institution"
     },
     {
       "counted_in_public_institution_total": false,
       "id": "physical_worship_site_history",
-      "population": 131,
+      "population": 134,
       "unit": "accepted physical church, chapel, shrine, or worship site"
     },
     {

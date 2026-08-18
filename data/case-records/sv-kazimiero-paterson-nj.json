@@ -4,6 +4,65 @@
   "buildingStatus": "converted",
   "currentUse": "Active Protestant house of worship — Grace Gospel Church, a non-denominational congregation founded in Paterson in 1982, holds Sunday school (9am), Sunday worship (10am), and weekday prayer/Bible study at the former St. Casimir property on Montgomery Street.",
   "summary": "The 1962 St. Casimir church building at 147 Montgomery Street, Paterson, still stands and is in active use by Grace Gospel Church, a non-denominational Protestant congregation founded locally in 1982, whose Facebook page identifies its location as 147 Montgomery Street and whose live website (which lists 139 Montgomery Street, an adjacent address consistent with the former parish complex) publishes a current weekly worship schedule. The Global True Lithuania heritage survey confirms the parish closed in 2014 and was sold to non-denominational Christians. Lithuania's State Cultural Heritage Commission (VKPK) documents the site on its heritage map of Lithuanian churches abroad, noting the 1912 wooden church no longer survives, that the 1962 building (S.A. Seiler firm, with input from Lithuanian architects) carried its Lithuanian character chiefly in a traditional Lithuanian cross, and that the building \"no longer belongs to the Lithuanian community.\" Stale Catholic directory listings (GCatholic, Discover Mass) still show St. Casimir at the address, but no active Catholic parish operates there. No sale price, deed record, or press coverage of the 2014 closing could be located online, and no evidence of reunions or organized preservation efforts was found beyond the VKPK heritage documentation.",
+  "historicalNarrative": [
+    {
+      "text": "St. Casimir's was the Lithuanian Roman Catholic parish in Paterson, distinct from other St. Casimir institutions in New Jersey and neighboring states. Sources place Lithuanian settlement in Paterson in the 1890s, parish organization around 1911–1912, and a modest wooden church in 1912; the precise canonical erection date remains uncertain.",
+      "sources": [
+        {
+          "url": "https://vkpk.lt/u-zemelapis/sv-kazimiero-baznycia-patersone/",
+          "locator": "Šv. Kazimiero bažnyčia Patersone entry, historical chronology"
+        },
+        {
+          "url": "https://gcatholic.org/churches/usa-03/19002",
+          "locator": "Church of St. Casimir entry, historical date field"
+        }
+      ]
+    },
+    {
+      "text": "The 1912 wooden church did not survive. A replacement church opened in 1962 at 147 Montgomery Street; Lithuania's heritage commission attributes the building to the S. A. Seiler firm, notes Lithuanian architectural input, and identifies a traditional Lithuanian cross as its principal ethnic design marker.",
+      "sources": [
+        {
+          "url": "https://vkpk.lt/u-zemelapis/sv-kazimiero-baznycia-patersone/",
+          "locator": "Šv. Kazimiero bažnyčia Patersone entry, 1912 and 1962 building passages"
+        }
+      ]
+    },
+    {
+      "text": "The parish closed in 2014 and the property passed to non-denominational Christian use. This institutional end is separate from the building's survival: the Lithuanian Catholic parish ceased, while the 1962 structure continued as a place of worship under a different congregation.",
+      "sources": [
+        {
+          "url": "https://global.truelithuania.com/new-jersey-613/",
+          "locator": "New Jersey section, Paterson St. Casimir entry"
+        }
+      ]
+    },
+    {
+      "text": "Grace Gospel Church identifies itself as a Paterson congregation founded in 1982 and publishes a current schedule of Sunday worship and weekday prayer and Bible study. Its website uses 139 Montgomery Street while its social page uses 147 Montgomery Street, so the exact division between the former church and adjacent parish-complex addresses remains unresolved even though the congregation's association with the property is clear.",
+      "sources": [
+        {
+          "url": "https://gracegospelchurch.org/",
+          "locator": "Home page, church history, address, and weekly service schedule"
+        },
+        {
+          "url": "https://www.facebook.com/241557646039227",
+          "locator": "Grace Gospel Church profile, 147 Montgomery Street address"
+        }
+      ]
+    },
+    {
+      "text": "Current Catholic-directory pages that still label St. Casimir at the Paterson address are not treated as proof that the Lithuanian parish survives. The standing building is in Protestant use, while the sale date, deed terms, interior condition, and survival of Lithuanian fittings after the transfer have not been established.",
+      "sources": [
+        {
+          "url": "https://discovermass.com/church/st-casimir-paterson-nj/",
+          "locator": "St. Casimir directory page, Paterson address listing"
+        },
+        {
+          "url": "https://vkpk.lt/u-zemelapis/sv-kazimiero-baznycia-patersone/",
+          "locator": "Šv. Kazimiero bažnyčia Patersone entry, present ownership statement"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2014",

@@ -1,0 +1,52 @@
+{
+  "slug": "st-isidore-braddock-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "converted",
+  "currentUse": "St. Isidore ended as a distinct Lithuanian Roman Catholic parish in the January 19, 1985 merger that created Good Shepherd Parish. Good Shepherd later entered the distinct Saint Joseph the Worker Parish in 2020. The Diocese says the former Talbot Street church was sold after the 1985 merger and became First Church of God in Christ; field documentation places that non-Catholic use at Talbot Avenue and Seventh Street. The converted label describes the former building's documented post-Catholic religious use, not the present institutional status of St. Isidore. A current official worship schedule for the former building was not located.",
+  "summary": "St. Isidore was Braddock's Lithuanian Roman Catholic parish, founded in 1916 after Braddock Lithuanians had depended on the Homestead Lithuanian parish. Its church stood on Talbot Street near Seventh Street. Sources conflict about the structure's origin: the diocesan account describes a church built for St. Isidore in 1916, while field documentation identifies a 1901 cornerstone and reports that the congregation acquired an existing church. St. Isidore merged into Good Shepherd Parish on January 19, 1985; Good Shepherd merged into Saint Joseph the Worker Parish in 2020. The old St. Isidore building was sold for non-Catholic church use. The exact deed address and the discrepancy between the 1901 and 1916 building accounts remain open.",
+  "historicalNarrative": [
+    {
+      "text": "A manually reviewed Draugas report of November 30, 1910 says Braddock Lithuanians belonged to the Homestead parish and were under its pastor. That is evidence of an origin dependency, not evidence that St. Isidore already existed. The Diocese dates the distinct St. Isidore Lithuanian Parish to 1916. The sequence therefore distinguishes pre-parish ministry from the later canonical institution.",
+      "sources": [
+        {"url": "https://www.spauda.org/draugas/archive/1910/1910-11-30-DRAUGAS.pdf", "locator": "Draugas, 1910-11-30, p. 5, Braddock report stating local Lithuanians belonged to the Homestead parish"},
+        {"url": "https://diopitt.org/saint-isidore-braddock", "locator": "Diocesan parish history, lines 1052-1054 in the canonical deep-case-backfill-14 capture: Lithuanian parish founded in 1916"}
+      ]
+    },
+    {
+      "text": "The known church stood on Talbot Street near Seventh Street. The Diocese's history says a church was built for the parish in 1916. Field documentation instead reports that St. Isidore acquired a church from another congregation and records a 1901 date on its cornerstone. Both claims describe the physical structure and cannot yet be reconciled; 1916 is secure as the parish formation year but is not treated as an uncontested construction date. A secondary directory reports 700 Talbot Avenue for First Church of God in Christ, but an authoritative deed or parcel record tying that number to St. Isidore has not been located.",
+      "sources": [
+        {"url": "https://diopitt.org/saint-isidore-braddock", "locator": "Diocesan parish history, canonical capture lines 1052-1054: Talbot Street church and 1916 building account"},
+        {"url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/", "locator": "Pittsburgh-area field survey, Braddock section: acquired structure, 1901 cornerstone, Talbot and Seventh location, and later church use"}
+      ]
+    },
+    {
+      "text": "St. Isidore joined Braddock's other Catholic parishes on January 19, 1985 to form the distinct Good Shepherd Parish. The merger ended St. Isidore's institutional life. The Diocese reports that the St. Isidore building was sold and later used by First Church of God in Christ. This directly supports post-Catholic conversion of the structure, while leaving its current 2026 congregation, occupancy, and physical condition to be verified separately.",
+      "sources": [
+        {"url": "https://diopitt.org/saint-isidore-braddock", "locator": "Diocesan parish history: 1985-01-19 merger, sale, and later First Church of God in Christ use"},
+        {"url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/", "locator": "Field survey: former St. Isidore building documented in non-Catholic church use"}
+      ]
+    },
+    {
+      "text": "Good Shepherd joined six other parishes on July 1, 2020 to form Saint Joseph the Worker Parish. The current diocesan directory lists Saint Joseph the Worker Church at 2001 Ardmore Boulevard in Forest Hills as the parish's current Mass site. That successor chain is institutional and territorial; it does not mean worship continues in the former St. Isidore building.",
+      "sources": [
+        {"url": "https://www.diopitt.org/saint-joseph-the-worker-forest-hills", "locator": "Diocesan predecessor history: formation of Saint Joseph the Worker from Good Shepherd and six other parishes on 2020-07-01"},
+        {"url": "https://diopitt.org/saint-joseph-the-worker-parish", "locator": "Current diocesan parish directory, accessed 2026-08-17: Saint Joseph the Worker Church, 2001 Ardmore Boulevard, Forest Hills"}
+      ]
+    }
+  ],
+  "developments": [
+    {"date": "1916", "headline": "St. Isidore Lithuanian Parish is founded", "detail": "The distinct Braddock parish followed earlier dependence on the Homestead Lithuanian parish.", "sources": [{"title": "Saint Isidore, Braddock", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/saint-isidore-braddock"}]},
+    {"date": "1985-01-19", "headline": "St. Isidore enters Good Shepherd Parish", "detail": "The Lithuanian parish ended; its Talbot Street church was sold for later non-Catholic religious use.", "sources": [{"title": "Saint Isidore, Braddock", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/saint-isidore-braddock"}]},
+    {"date": "2020-07-01", "headline": "Good Shepherd enters Saint Joseph the Worker Parish", "detail": "The current successor parish worships at a different church in Forest Hills.", "sources": [{"title": "Saint Joseph the Worker, Forest Hills", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://www.diopitt.org/saint-joseph-the-worker-forest-hills"}]}
+  ],
+  "sources": [
+    {"title": "Braddock Lithuanian report", "publisher": "Draugas", "date": "1910-11-30", "page": "p. 5", "url": "https://www.spauda.org/draugas/archive/1910/1910-11-30-DRAUGAS.pdf"},
+    {"title": "Saint Isidore, Braddock", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/saint-isidore-braddock"},
+    {"title": "Pittsburgh Lithuanian heritage field survey", "publisher": "True Lithuania", "date": "accessed 2026-08-17", "url": "https://global.truelithuania.com/pittsburgh-pennsylvania-1133/"},
+    {"title": "Saint Joseph the Worker predecessor history", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://www.diopitt.org/saint-joseph-the-worker-forest-hills"},
+    {"title": "Saint Joseph the Worker Parish", "publisher": "Diocese of Pittsburgh", "date": "accessed 2026-08-17", "url": "https://diopitt.org/saint-joseph-the-worker-parish"}
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "The parish's 1916 formation is supported, but the building chronology is disputed. The diocesan account says the church was built in 1916; field documentation reports acquisition from another congregation and a 1901 cornerstone. A 1914 location-tagged Braddock mention predates St. Isidore and is not used as parish evidence. Good Shepherd and Saint Joseph the Worker are distinct successor institutions, not alternate names for St. Isidore.",
+  "gaps": "The canonical erection decree, exact opening and dedication dates, identity of the prior building owner, resolution of the 1901/1916 physical-origin conflict, authoritative street number and deed chain for the Talbot Street site, sale date and buyer, current owner and congregation, 2026 structural condition, cemetery relationships, and sacramental-record custody remain unresolved."
+}

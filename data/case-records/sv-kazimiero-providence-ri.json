@@ -4,6 +4,60 @@
   "buildingStatus": "standing",
   "currentUse": "Seventh-day Adventist church — Getsemani SDA Church, a Spanish-language congregation at 348 Smith St, owned by the Northeastern Conference of Seventh-day Adventists",
   "summary": "The former Šv. Kazimiero (St. Casimir) Lithuanian church at 348-350 Smith Street in Providence's Smith Hill neighborhood is still standing and remains in religious use. The Diocese of Providence announced the parish's permanent closure on June 7, 2017, effective July 1, 2017, citing an estimated $90,000 roof repair beyond the parish's means and collapsed sacramental life (no baptisms, first communions, or confirmations 2014-2016; the final Mass on March 19, 2017 drew 12 people); sacramental records went to St. Patrick Parish in Providence. Providence tax rolls show the church parcel (348 Smith St, plat 67 lot 67) owned by the Roman Catholic Bishop of Providence on the 2017 roll and by \"The North Eastern Conference [of Seventh-]Day Adventist Church\" (headquartered in Jamaica, NY) on the 2018 roll, placing the transfer around late 2017. The building today houses Getsemani SDA Church, a Spanish-language Seventh-day Adventist congregation (pastor listed as Tulio Terrero), and the parcel remains church-classed on the city's 2025 tax roll with a total assessment of $985,200. The adjacent 350 Smith St parcel, church-classed on the 2016 roll, appears on the 2017 and later rolls as a privately owned single-family home. The Global True Lithuania heritage site reports the Lithuanian memorial next to the church, topped with a traditional Lithuanian sun-cross, still stands. No preservation campaign, reunion, or recent press coverage of the former parish was found.",
+  "historicalNarrative": [
+    {
+      "text": "St. Casimir served Providence's Lithuanian Roman Catholic community from 1919. Closure coverage identifies the parish's later church at Smith Street as its home from 1935, distinguishing the institution's founding from the construction and occupation of that building. The evidence does not establish an earlier worship-site address or the original canonical erection document.",
+      "sources": [
+        {
+          "url": "https://turnto10.com/news/local/st-casimir-parish-in-providence-to-close-permanently",
+          "locator": "Closure report: Lithuanian parish since 1919 and Smith Street church since 1935"
+        },
+        {
+          "url": "https://global.truelithuania.com/rhode-island-998/",
+          "locator": "Providence St. Casimir section and Lithuanian site history"
+        }
+      ]
+    },
+    {
+      "text": "The Diocese of Providence announced permanent closure on June 7, 2017, effective July 1. Contemporary reporting described serious building repairs and diminished sacramental activity, named March 19 as the final Mass, and directed sacramental records to St. Patrick Parish. Records custody does not by itself make St. Patrick identical with St. Casimir, and the exact canonical wording of the closure instrument has not been located.",
+      "sources": [
+        {
+          "url": "https://turnto10.com/news/local/st-casimir-parish-in-providence-to-close-permanently",
+          "locator": "2017 closure announcement, final Mass, repair estimate, and records transfer"
+        }
+      ]
+    },
+    {
+      "text": "Providence tax rolls separate the parish's end from the church property's later life. The 348 Smith Street church parcel was associated with the Roman Catholic bishop in the 2017 roll and with the Northeastern Conference of Seventh-day Adventists in the 2018 roll, bracketing the transfer to about late 2017. The available rolls establish ownership association and property class, but do not provide the deed date or sale price.",
+      "sources": [
+        {
+          "url": "https://data.providenceri.gov/d/ku9m-5rhr",
+          "locator": "2017 tax-roll entries for 348, 348R, and 350 Smith Street"
+        },
+        {
+          "url": "https://data.providenceri.gov/d/yghh-hsch",
+          "locator": "2018 tax-roll entries showing Northeastern Conference ownership at 348 Smith Street"
+        }
+      ]
+    },
+    {
+      "text": "The former St. Casimir building remains a religious site under a different institution. The Adventist directory lists Getsemani SDA Church at 348 Smith Street, and Providence's 2025 roll continues to class the property as a church. Field documentation also reports a Lithuanian memorial with a sun-cross beside the building; its current condition and the fate of the former church's interior Lithuanian objects remain unresolved.",
+      "sources": [
+        {
+          "url": "https://eadventist.net/search?org=AN4FAW",
+          "locator": "Getsemani SDA Church directory entry at 348 Smith Street"
+        },
+        {
+          "url": "https://data.providenceri.gov/d/6ub4-iebe",
+          "locator": "2025 property-tax roll for the church parcel"
+        },
+        {
+          "url": "https://global.truelithuania.com/rhode-island-998/",
+          "locator": "Field account of the surviving Lithuanian memorial and later church use"
+        }
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "2017-06-07",

@@ -4,6 +4,41 @@
   "buildingStatus": "converted",
   "currentUse": "Parish complex repurposed: the address 8801 S Saginaw Ave is today Casa Esperanza, a transitional housing shelter for homeless women and children run since 1994 by the Society of Helpers; per the Global True Lithuania heritage survey, the small church building itself was absorbed into the McKinley public school complex (originally built in 1953 as the parish school), which that survey describes as itself now closed. The former priest's house reportedly still stands adjacent.",
   "summary": "St. Joseph's (Šv. Juozapo) Lithuanian parish in South Chicago left a modest physical footprint that survives in altered form. The Global True Lithuania heritage survey describes the small single-floored church at 8801 S Saginaw as closed (it says in 1986) and absorbed into the McKinley public school complex — a school originally built in 1953 as the parish school — which the survey states is itself now closed; it also notes the former priest's house still stands next door, once home to pastor Antanas Petraitis, who kept what was described as Illinois's second-largest telescope and a small animal sanctuary there. The parish address today is occupied by Casa Esperanza, a transitional housing program for homeless women and children founded in 1994 by the Society of Helpers, a Roman Catholic congregation of women religious, in direct response to poverty, homelessness, and domestic violence in South Chicago. Genealogical infrastructure survives: the parish's baptism, marriage, and death registers from 1900-1925 are digitized and freely viewable on FamilySearch.org, per the Lithuanian Catholic Ancestor Search guide, which records the parish as established in 1900 by Lithuanian immigrants with Rev. Michael Peza as first pastor, a rectory built around 1906 at 8801 S Saginaw, the church proper at 8812 S Marquette Ave, and a new church built in 1949. No recent press, diocesan announcements, preservation campaigns, or reunion activity for this parish was found.",
+  "historicalNarrative": [
+    {
+      "text": "St. Joseph was a Lithuanian Roman Catholic parish in the South Chicago community area, distinct from other Chicago and regional institutions with the same saint's name. The parish register guide says Lithuanian immigrants established it in 1900 with Rev. Michael Peza as the first pastor. It also identifies Rev. Anthony Petraitis as pastor from 1905 to 1931 and documents sacramental registers beginning in the parish's founding period.",
+      "sources": [
+        {"url": "https://www.lithuaniancatholicancestorsearch.com/st.-joseph--lith--parish.html", "locator": "St. Joseph (Lith.) parish guide, Parish History and Registers Online (1900–1925) sections"}
+      ]
+    },
+    {
+      "text": "The accepted address evidence separates the parish's church and rectory rather than treating 8801 South Saginaw Avenue as a single all-purpose site. The register guide places the church at 8812 South Marquette Avenue, records a rectory built about 1906 at 8801 South Saginaw, and says a new church was built in 1949. A heritage survey instead associates the small church with 8801 South Saginaw. That unresolved address conflict prevents a precise building-to-parcel join.",
+      "sources": [
+        {"url": "https://www.lithuaniancatholicancestorsearch.com/st.-joseph--lith--parish.html", "locator": "Parish guide, Church Location, rectory, and 1949 new-church notes"},
+        {"url": "https://global.truelithuania.com/chicago-illinois-45/", "locator": "Chicago heritage survey, South Chicago St. Joseph section, church and former priest-house description"}
+      ]
+    },
+    {
+      "text": "The heritage survey reports that the parish school was built in 1953 and later became the McKinley public school complex. It dates the church's closure to 1986 and says the small church structure was absorbed into that complex, which it also describes as closed. An inherited 1987 closure reading has not been resolved by an accessible diocesan instrument, so the exact institutional end date and the present physical condition of the church component remain uncertain.",
+      "sources": [
+        {"url": "https://global.truelithuania.com/chicago-illinois-45/", "locator": "Chicago heritage survey, South Chicago St. Joseph section, 1953 parish-school, reported 1986 closure, and McKinley reuse statements"}
+      ]
+    },
+    {
+      "text": "The address 8801 South Saginaw now supports Casa Esperanza, a transitional housing program for women and children established by the Society of Helpers. The Society says the program has operated since 1994, and Casa Esperanza's own contact page confirms the address. Neither organization identifies which former parish structure it occupies. The current ministry is therefore evidence of address-level charitable use, not proof that the former church building itself became the shelter or that St. Joseph continued institutionally.",
+      "sources": [
+        {"url": "https://helpers.org/sponsored-ministries/", "locator": "Society of Helpers Sponsored Ministries page, Casa Esperanza entry and since-1994 statement"},
+        {"url": "https://casaesperanzachicago.org/", "locator": "Casa Esperanza home page, program identity and Society of Helpers origin"},
+        {"url": "https://casaesperanzachicago.org/contact/", "locator": "Casa Esperanza Contact page, 8801 S. Saginaw Avenue address"}
+      ]
+    },
+    {
+      "text": "Although the parish no longer operates, its sacramental evidence survives separately from the buildings. The parish guide reports that baptism, marriage, and death registers for 1900–1925 are digitized and freely viewable through FamilySearch. That online access documents an archival afterlife but does not identify complete post-1925 record custody or a canonical successor parish.",
+      "sources": [
+        {"url": "https://www.lithuaniancatholicancestorsearch.com/st.-joseph--lith--parish.html", "locator": "Registers Online (1900–1925) section listing digitized baptism, marriage, and death registers"}
+      ]
+    }
+  ],
   "developments": [
     {
       "date": "1986",

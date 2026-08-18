@@ -1,0 +1,145 @@
+{
+  "slug": "st-casimir-wilkes-barre-pa",
+  "asOf": "2026-08-17",
+  "buildingStatus": "unknown",
+  "currentUse": "This legacy public route does not represent a second St. Casimir parish. It points to the Lyndwood, Hanover Township church used from 1957 to 2010 by the St. Casimir parish founded in Plymouth in 1889. That church closed on August 29, 2010, when St. Casimir joined St. Aloysius to form St. Robert Bellarmine Parish. The current successor worships at St. Aloysius Church, 143 West Division Street, Wilkes-Barre. The Lyndwood building's precise address, ownership, condition, and use after closure remain unresolved.",
+  "summary": "The St. Casimir Wilkes-Barre/Lyndwood profile is a duplicate legacy route for St. Casimir Lithuanian Parish of Plymouth, not a distinct Roman Catholic institution. The Plymouth parish was formed in 1889, lost its first church to fire in 1901, lost its second to mine subsidence and demolition in 1955, and relocated to a third church in Lyndwood, Hanover Township, blessed March 10, 1957. The Diocese closed that Lyndwood church on August 29, 2010. St. Casimir then joined St. Aloysius to form St. Robert Bellarmine Parish, which remains active at the St. Aloysius site. The route's inherited 1957 founded year is actually the opening of a replacement worship site within the older parish and must not create another institution count.",
+  "historicalNarrative": [
+    {
+      "text": "The identity starts in Plymouth in 1889. After a permanent separation from a mixed Polish-Lithuanian parish on October 24, Lithuanian Catholics formed St. Casimir and held their first native-language service on October 27. The church later called St. Casimir of Lyndwood belongs to that lineage. No reviewed primary or official source establishes a separately erected St. Casimir parish in Wilkes-Barre or Hanover Township in 1957.",
+      "sources": [
+        {
+          "url": "https://www.spauda2.org/garsas/archive/1989/1989-nr09-GARSAS.pdf",
+          "locator": "Garsas, November 1989, p. 7, centennial history of the Plymouth St. Casimir parish"
+        },
+        {
+          "url": "http://www.lithuanian.net/memory/casimir/casimir.htm",
+          "locator": "St. Casimir Parish at Plymouth and Father Burba: 1889 formation and first church"
+        }
+      ]
+    },
+    {
+      "text": "St. Casimir's first wooden church was blessed in 1891 and destroyed by fire in 1901. Its second church was completed in 1902, damaged by mine subsidence in November 1954, declared unsafe, and demolished in 1955. The parish then relocated to a third church in Lyndwood, Hanover Township, blessed March 10, 1957. That is an institution-relocated-to-site relationship with no new parish count.",
+      "sources": [
+        {
+          "url": "https://www.spauda2.org/garsas/archive/1989/1989-nr09-GARSAS.pdf",
+          "locator": "Garsas, November 1989, p. 7, successive church sites and Lyndwood relocation"
+        }
+      ]
+    },
+    {
+      "text": "The diocesan register names the terminal site as St. Casimir (Lithuanian), Lyndwood, Wilkes-Barre and gives August 29, 2010 as its closure date. The identical site label, terminal date, and St. Robert Bellarmine successor already attached to the Plymouth parish are affirmative evidence of one lineage, while the inherited route's 1957 date is the Lyndwood church blessing. Shared saint naming alone would not establish this conclusion; the site chronology and official successor record do.",
+      "sources": [
+        {
+          "url": "https://www.dioceseofscranton.org/wp-content/uploads/2024/11/Consolidated-Parishes-updated-11-19-24.pdf",
+          "locator": "PDF p. 11, Wilkes-Barre row: St. Casimir (Lithuanian), Lyndwood, closed 2010-08-29; St. Robert Bellarmine successor"
+        },
+        {
+          "url": "https://www.spauda2.org/garsas/archive/1989/1989-nr09-GARSAS.pdf",
+          "locator": "Garsas, November 1989, p. 7, third church in Lyndwood blessed 1957-03-10"
+        }
+      ]
+    },
+    {
+      "text": "The Diocese's current history says St. Aloysius Church and St. Casimir joined in 2010 to form St. Robert Bellarmine, serving south Wilkes-Barre and Hanover Township. Its directory lists the successor as active at 143 West Division Street. Current worship therefore continues through a distinct successor and different host church. The former Lyndwood building's post-closure life has not been verified and is kept separate from institutional continuity.",
+      "sources": [
+        {
+          "url": "https://www.dioceseofscranton.org/saint-aloysius-church-in-wilkes-barre-to-celebrate-125th-anniversary/",
+          "locator": "History of Saint Aloysius Church: St. Aloysius and St. Casimir formed St. Robert Bellarmine in 2010"
+        },
+        {
+          "url": "https://www.dioceseofscranton.org/find-a-parish/saint-robert-bellarmine-parish-wilkes-barre/",
+          "locator": "Current diocesan directory: St. Robert Bellarmine founded 2010 and worshipping at St. Aloysius Church; accessed 2026-08-17"
+        }
+      ]
+    }
+  ],
+  "developments": [
+    {
+      "date": "1957-03-10",
+      "headline": "Plymouth St. Casimir relocates to Lyndwood",
+      "detail": "The parish's third church was blessed in Lyndwood; this was a site relocation, not a new parish foundation.",
+      "sources": [
+        {
+          "title": "St. Casimir's Church celebrates 100th anniversary",
+          "publisher": "Garsas",
+          "date": "November 1989",
+          "page": "p. 7",
+          "url": "https://www.spauda2.org/garsas/archive/1989/1989-nr09-GARSAS.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2010-08-29",
+      "headline": "Lyndwood worship site closes",
+      "detail": "The Diocese records closure of St. Casimir (Lithuanian), Lyndwood, and names St. Robert Bellarmine as successor.",
+      "sources": [
+        {
+          "title": "Consolidated Parishes",
+          "publisher": "Diocese of Scranton",
+          "date": "updated 2024-11-19",
+          "page": "PDF p. 11",
+          "url": "https://www.dioceseofscranton.org/wp-content/uploads/2024/11/Consolidated-Parishes-updated-11-19-24.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-17 adjudication",
+      "headline": "Legacy Lyndwood route resolved as duplicate",
+      "detail": "The 1957 date, identical terminal site, identical closure date, and identical successor establish that this route duplicates the Plymouth parish's third-site phase.",
+      "sources": [
+        {
+          "title": "St. Casimir's Church celebrates 100th anniversary",
+          "publisher": "Garsas",
+          "date": "November 1989",
+          "page": "p. 7",
+          "url": "https://www.spauda2.org/garsas/archive/1989/1989-nr09-GARSAS.pdf"
+        },
+        {
+          "title": "Consolidated Parishes",
+          "publisher": "Diocese of Scranton",
+          "date": "updated 2024-11-19",
+          "page": "PDF p. 11",
+          "url": "https://www.dioceseofscranton.org/wp-content/uploads/2024/11/Consolidated-Parishes-updated-11-19-24.pdf"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "St. Casimir's Church celebrates 100th anniversary",
+      "publisher": "Garsas",
+      "date": "November 1989",
+      "page": "p. 7",
+      "url": "https://www.spauda2.org/garsas/archive/1989/1989-nr09-GARSAS.pdf"
+    },
+    {
+      "title": "St. Casimir Parish at Plymouth and Father Burba",
+      "publisher": "Lithuanian Global Resources",
+      "date": "accessed 2026-08-17",
+      "url": "http://www.lithuanian.net/memory/casimir/casimir.htm"
+    },
+    {
+      "title": "Consolidated Parishes",
+      "publisher": "Diocese of Scranton",
+      "date": "updated 2024-11-19",
+      "page": "PDF p. 11",
+      "url": "https://www.dioceseofscranton.org/wp-content/uploads/2024/11/Consolidated-Parishes-updated-11-19-24.pdf"
+    },
+    {
+      "title": "Saint Aloysius Church in Wilkes-Barre to celebrate 125th anniversary",
+      "publisher": "Diocese of Scranton",
+      "date": "2024",
+      "url": "https://www.dioceseofscranton.org/saint-aloysius-church-in-wilkes-barre-to-celebrate-125th-anniversary/"
+    },
+    {
+      "title": "Saint Robert Bellarmine Parish",
+      "publisher": "Diocese of Scranton",
+      "date": "accessed 2026-08-17",
+      "url": "https://www.dioceseofscranton.org/find-a-parish/saint-robert-bellarmine-parish-wilkes-barre/"
+    }
+  ],
+  "confidence": "verified",
+  "conflictsWithArchiveRecord": "MAJOR IDENTITY CORRECTION: the route is not a distinct St. Casimir institution founded in 1957. The 1957 value is the blessing of the third church used by St. Casimir Parish of Plymouth, formed in 1889. The Lyndwood label, August 29, 2010 closure date, and St. Robert Bellarmine successor all match that older parish's documented lineage. Raw Draugas hits assigned to this route before 1957 are shared-name false positives and cannot support a separate identity. Publication canon should preserve the route only as an alias or redirect to st-casimir-plymouth-pa and remove one duplicate historical-institution count.",
+  "gaps": "The exact Lyndwood street address and deed, closure or relegation decree, sacramental-record custody, post-2010 title transfer, current building condition and use, and the publication-layer redirect or route-retirement action remain unresolved."
+}

@@ -1,0 +1,80 @@
+{
+  "slug": "cong-lithuanian-evangelical-parish",
+  "culturenetEntityId": "cn:institution:lithuanian-evangelical-lutheran-los-angeles-ca",
+  "asOf": "2026-08-17",
+  "formationLabel": "Community organization attested in 1952 · parish formation reported in 1955 · occasional visiting ministry after Rev. Martynas Preikšaitis's death · historical end unresolved",
+  "institutionClass": "non_catholic_christian",
+  "institutionStatus": "historical_end_unresolved",
+  "buildingStatus": "unknown",
+  "currentUse": "No current congregation, worship schedule, successor, records custodian, cemetery, or surviving Los Angeles worship site has been verified for this exact Lithuanian Evangelical Lutheran institution. Its historical worship address and any building ownership remain unresolved; no Roman Catholic or same-city Lithuanian institution is treated as identical.",
+  "summary": "The Los Angeles Lithuanian Evangelical Lutheran Parish was a postwar diaspora Lutheran congregation led for many years by Rev. Martynas Preikšaitis. Sources distinguish a 1952 community-organizing milestone from a 1955 parish-formation reading. A visually verified 1965 report marked Preikšaitis's ten years as pastor, and a 1979 Lutheran periodical still placed him in Los Angeles ministry. By August 1988 a Lutheran activity survey reported that he had served until his death and that the parish then lacked a resident pastor, receiving only occasional Lithuanian services from visiting clergy. A 1995 survey named only Zion, Tėviškės, and Toronto as regularly active North American Lithuanian Lutheran congregations, but neither that omission nor the 1988 pastoral vacancy proves a legal closure. The institution's exact end, worship sites, property history, record custody, and cemetery remain unresolved.",
+  "institutionLifecycle": {
+    "formation": "The Los Angeles Lithuanian Community history gives 1952, while Michelsonas reports a Lithuanian Evangelical Parish formed in 1955. The evidence supports distinct community-leadership and organized-parish milestones but does not supply minutes or an incorporation instrument that resolves the dates.",
+    "jurisdiction": "Lithuanian Evangelical Lutheran diaspora congregation. No source reviewed establishes a formal LCMS, ELCA, or other American synod affiliation, and Lutheran identity is not generalized to Protestant or Reformed identity.",
+    "lastVerifiedActivity": "Europos Lietuvis, 24 August 1988, printed/PDF p. 3, reports occasional Lithuanian services after Preikšaitis's death.",
+    "terminalStatus": "historical_end_unresolved",
+    "currentVerification": "No official current listing for this exact Los Angeles congregation was found. Lituanus's 1995 survey omits it from the three regularly active North American Lithuanian Lutheran congregations, which is evidence of non-regular activity rather than a closure instrument."
+  },
+  "worshipSites": [],
+  "relationships": [
+    {
+      "type": "pastoral-service",
+      "source": "cn:person:martynas-preiksaitis",
+      "target": "cn:institution:lithuanian-evangelical-lutheran-los-angeles-ca",
+      "date": "approximately 1955–before 1988",
+      "status": "accepted",
+      "note": "A 1965 anniversary report marks ten years of pastoral service; the 1988 survey says Preikšaitis served until his death. The exact death and service-end date was not established."
+    }
+  ],
+  "historicalNarrative": [
+    {
+      "text": "This case is the Lithuanian Evangelical Lutheran congregation organized among the postwar Lithuanian community in Los Angeles. It is not St. Casimir Roman Catholic parish, another Los Angeles ethnic church, or a generic Protestant association. Michelsonas identifies the institution specifically as the Lithuanian Evangelical Parish and names Rev. Martynas Preikšaitis as pastor, while the later Lutheran survey places it within the Lithuanian Evangelical Lutheran diaspora network.",
+      "sources": [
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje", "locator": "Stasys Michelsonas, Lietuvių išeivija Amerikoje, p. 327: Los Angeles Lithuanian Evangelical Parish, officers, and pastor"},
+        {"url": "https://www.spauda2.org/britanijos_europos_lietuvis/archive/1988/1988-08-24-EUROPOS-LIETUVIS.pdf#page=3", "locator": "Europos Lietuvis, 1988-08-24, PDF/printed p. 3, visually verified, 'Lietuvių Evangelikų Liuteronų veikla'"}
+      ]
+    },
+    {
+      "text": "The formation chronology has two sourced readings. The Los Angeles Lithuanian Community's history says the Lutheran congregation was founded in 1952. Michelsonas gives 1955 and identifies Dr. Petras Pamataitis as chair, Preikšaitis as pastor, and Algirdas Glazė as youth leader. Because the reviewed sources do not reproduce founding minutes, an incorporation filing, or an explanatory anniversary history, the dossier treats 1952 as a community-organizing milestone and 1955 as a reported parish-formation milestone rather than silently selecting one date.",
+      "sources": [
+        {"url": "https://lalithuanians.org/apie-mus/", "locator": "Los Angeles Lithuanian Community, 'Apie mus,' accessed 2026-08-17: Lutheran congregation founded in 1952"},
+        {"url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje", "locator": "Michelsonas, p. 327: parish formed in 1955; Pamataitis, Preikšaitis, and Glazė roles"}
+      ]
+    },
+    {
+      "text": "A visually reviewed Los Angeles column in Naujienos documents institutional continuity in 1965. It reports a parish program honoring Rev. Martynas Preikšaitis for ten years of service and describes him as pastor of the Lithuanian Lutheran parish. The item supports an approximately 1955 pastoral beginning and an active parish in October 1965, but it gives no worship-site address and does not identify a building owner or American synod.",
+      "sources": [
+        {"url": "https://www.spauda.org/naujienos/archive/1965/1965-10-07-NAUJIENOS.pdf#page=3", "locator": "Naujienos, 1965-10-07, PDF/printed p. 3, visually verified Los Angeles column: Preikšaitis honored for ten years as parish pastor"}
+      ]
+    },
+    {
+      "text": "Preikšaitis remained an important Lutheran minister in Los Angeles into the later twentieth century. The 1979 Mūsų Sparnai directory of Lithuanian Evangelical Lutheran work still places him there. The 1988 Europos Lietuvis survey says that he served the Los Angeles parish until his death; afterward the congregation had no resident pastor and visiting Lithuanian ministers came only occasionally. That report establishes reduced hosted ministry, not an institutional dissolution date.",
+      "sources": [
+        {"url": "https://www.spauda.org/musu_sparnai/archive/1979/1979-nr47-MUSU-SPARNAI.pdf#page=19", "locator": "Mūsų Sparnai, 1979, no. 47, PDF p. 19 / printed p. 17, visually verified: Martynas Preikšaitis still working in Los Angeles"},
+        {"url": "https://www.spauda2.org/britanijos_europos_lietuvis/archive/1988/1988-08-24-EUROPOS-LIETUVIS.pdf#page=3", "locator": "Europos Lietuvis, 1988-08-24, PDF/printed p. 3, visually verified: no resident pastor and occasional visiting Lithuanian services after Preikšaitis's death"}
+      ]
+    },
+    {
+      "text": "A 1995 Lituanus survey states that Zion, Tėviškės, and Toronto were then the only regularly active North American Lithuanian Lutheran congregations. This is consistent with the Los Angeles parish's reduced 1988 ministry, but directory omission and lack of regular services are not closure decrees. No exact worship address, deed, host-church identity, final service, corporate dissolution, successor, records-custody notice, cemetery relationship, or current building condition has been located, so both the terminal institution status and building outcome remain unresolved.",
+      "sources": [
+        {"url": "https://old.lituanus.org/1995_2/95_2_01.htm", "locator": "Lituanus 41:2 (1995), 'Lithuanian Lutheranism in the United States': postwar Los Angeles congregation and three regularly active North American congregations"}
+      ]
+    }
+  ],
+  "developments": [
+    {"date": "1952–1955", "headline": "Formation milestones diverge", "detail": "Sources separately report 1952 community organization and 1955 parish formation.", "sources": [{"title": "Los Angeles Lithuanian Community history", "publisher": "Los Angeles Lithuanian Community", "date": "accessed 2026-08-17", "url": "https://lalithuanians.org/apie-mus/"}, {"title": "Lietuvių išeivija Amerikoje", "publisher": "Stasys Michelsonas", "date": "1961", "page": "p. 327", "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"}]},
+    {"date": "1965-10-07", "headline": "Preikšaitis honored for ten years of pastoral service", "detail": "The visually verified report documents an active Lutheran parish but no site address.", "sources": [{"title": "Los Angeles column", "publisher": "Naujienos", "date": "1965-10-07", "page": "PDF/printed p. 3", "url": "https://www.spauda.org/naujienos/archive/1965/1965-10-07-NAUJIENOS.pdf#page=3"}]},
+    {"date": "1988-08-24", "headline": "Parish lacks a resident pastor", "detail": "Visiting clergy supplied only occasional Lithuanian services after Preikšaitis's death.", "sources": [{"title": "Lietuvių Evangelikų Liuteronų veikla", "publisher": "Europos Lietuvis", "date": "1988-08-24", "page": "PDF/printed p. 3", "url": "https://www.spauda2.org/britanijos_europos_lietuvis/archive/1988/1988-08-24-EUROPOS-LIETUVIS.pdf#page=3"}]}
+  ],
+  "sources": [
+    {"title": "Lietuvių išeivija Amerikoje", "publisher": "Stasys Michelsonas", "date": "1961", "page": "p. 327", "url": "https://archyvas.ziburioltmokykla.org/item/20260225_lietuviu_iseivija_amerikoje"},
+    {"title": "Apie mus", "publisher": "Los Angeles Lithuanian Community", "date": "accessed 2026-08-17", "url": "https://lalithuanians.org/apie-mus/"},
+    {"title": "Los Angeles column", "publisher": "Naujienos", "date": "1965-10-07", "page": "PDF/printed p. 3", "url": "https://www.spauda.org/naujienos/archive/1965/1965-10-07-NAUJIENOS.pdf#page=3"},
+    {"title": "Mūsų Sparnai no. 47", "publisher": "Lithuanian Evangelical Reformed Church in Exile", "date": "1979", "page": "PDF p. 19 / printed p. 17", "url": "https://www.spauda.org/musu_sparnai/archive/1979/1979-nr47-MUSU-SPARNAI.pdf#page=19"},
+    {"title": "Lietuvių Evangelikų Liuteronų veikla", "publisher": "Europos Lietuvis", "date": "1988-08-24", "page": "PDF/printed p. 3", "url": "https://www.spauda2.org/britanijos_europos_lietuvis/archive/1988/1988-08-24-EUROPOS-LIETUVIS.pdf#page=3"},
+    {"title": "Lithuanian Lutheranism in the United States", "publisher": "Lituanus", "date": "1995", "url": "https://old.lituanus.org/1995_2/95_2_01.htm"}
+  ],
+  "confidence": "probable",
+  "conflictsWithArchiveRecord": "Formation is not a single settled date: the Los Angeles Lithuanian Community reports 1952, while Michelsonas reports 1955. The evidence supports different organizational milestones but does not resolve them. Lack of a resident pastor after Preikšaitis's death and omission from the 1995 regularly active list must not be converted into a closure year.",
+  "gaps": "Founding minutes, incorporation record, exact denominational/synod affiliation, complete clergy chronology, Preikšaitis death/service-end date, every worship site and exact address, ownership or host arrangement, final service, dissolution, merger or successor, records custody, cemetery relationship, and all building outcomes remain unverified."
+}
