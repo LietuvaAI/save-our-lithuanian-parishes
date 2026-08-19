@@ -22,6 +22,7 @@ type ArchiveFeatureProps = {
   imageAlt: string;
   imageCredit: string;
   imageFit?: "cover" | "contain";
+  eager?: boolean;
   eyebrow: string;
   title: string;
   href: string;
@@ -33,6 +34,7 @@ function ArchiveFeature({
   imageAlt,
   imageCredit,
   imageFit = "cover",
+  eager = false,
   eyebrow,
   title,
   href,
@@ -51,6 +53,7 @@ function ArchiveFeature({
             src={image}
             alt={imageAlt}
             fill
+            loading={eager ? "eager" : "lazy"}
             sizes="(min-width: 768px) 352px, 100vw"
             className={imageFit === "contain" ? "object-contain" : "object-cover"}
           />
@@ -114,6 +117,7 @@ export default function AboutTheDataPage() {
             image="/images/sources/ziburio-archive.png"
             imageAlt="Žiburio Archive — Lithuanian Diaspora Materials"
             imageCredit="Visual supplied by the Žiburio Archive."
+            eager
             eyebrow="Books, periodicals, and documents"
             title="Žiburio Archive"
             href="https://archyvas.ziburioltmokykla.org/"
