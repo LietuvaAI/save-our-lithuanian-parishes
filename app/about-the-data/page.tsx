@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import AboutNav from "@/components/AboutNav";
 import siteFigures from "@/data/site-figures.json";
 import { currentPastoralNetwork } from "@/lib/infographic-projection";
@@ -12,184 +14,287 @@ const CURRENT_WORSHIP_PLACES =
 export const metadata: Metadata = {
   title: "About the Data",
   description:
-    "How parish evidence moves from the Draugas archive and current official sources through adjudication into the unified registry.",
+    "How historical and current evidence is checked, organized, and published in the Lithuanian parish record.",
 };
+
+type ArchiveFeatureProps = {
+  image: string;
+  imageAlt: string;
+  imageCredit: string;
+  imageFit?: "cover" | "contain";
+  eager?: boolean;
+  eyebrow: string;
+  title: string;
+  href: string;
+  children: ReactNode;
+};
+
+function ArchiveFeature({
+  image,
+  imageAlt,
+  imageCredit,
+  imageFit = "cover",
+  eager = false,
+  eyebrow,
+  title,
+  href,
+  children,
+}: ArchiveFeatureProps) {
+  return (
+    <article className="overflow-hidden border border-rule bg-white">
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block border-b border-rule bg-[#f5f2eb]"
+      >
+        <div className="relative h-40 sm:h-48">
+          <Image
+            src={image}
+            alt={imageAlt}
+            fill
+            loading={eager ? "eager" : "lazy"}
+            sizes="(min-width: 768px) 352px, 100vw"
+            className={imageFit === "contain" ? "object-contain" : "object-cover"}
+          />
+        </div>
+        <span className="block border-t border-rule px-3 py-2 text-small-copy text-muted">
+          {imageCredit}
+        </span>
+      </a>
+      <div className="p-5">
+        <p className="text-small-copy font-medium uppercase tracking-widest text-muted">
+          {eyebrow}
+        </p>
+        <h3 className="mt-1 font-serif text-subsection-title font-semibold">
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-rule underline-offset-4 hover:decoration-foreground"
+          >
+            {title} ↗
+          </a>
+        </h3>
+        <div className="mt-3 space-y-3 text-body-copy leading-relaxed text-muted">
+          {children}
+        </div>
+      </div>
+    </article>
+  );
+}
 
 export default function AboutTheDataPage() {
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12">
+    <article className="mx-auto max-w-4xl px-4 py-12">
       <p className="text-small-copy uppercase tracking-widest text-muted">About</p>
       <h1 className="mt-1 font-serif text-page-title font-semibold leading-tight">
         About the Data
       </h1>
-      <p className="mt-4 text-subsection-title text-muted leading-relaxed">
-        The archive reconstructs each parish&rsquo;s history. Current and
-        official sources establish what exists now. The two records are
-        compared claim by claim before a finding enters the registry that
-        powers this site.
+      <p className="mt-4 max-w-3xl text-subsection-title leading-relaxed text-muted">
+        Every profile begins with historical evidence and ends with a check of
+        the parish, community, or church as it exists today. Sources are kept
+        visible so readers can distinguish a published history, a newspaper
+        report, an official church record, and a present-day observation.
       </p>
 
       <AboutNav current="data" />
 
       <section className="mt-10">
         <h2 className="font-serif text-section-title font-semibold">
-          1. The source archive — <em>Draugas</em>, 1909–present
+          Where the record begins
         </h2>
-        <p className="mt-2 leading-relaxed">
-          <em>Draugas</em> is the project&rsquo;s main historical source. Every
-          issue from January 2008 through May 2026 —{" "}
-          <strong>2,768 issues</strong> — was read straight through. The
-          1909–2007 run was systematically mined for parish names, milestones,
-          disputes, closures, and community response. Together, the two passes
-          cover the full digital archive.
+        <p className="mt-3 max-w-3xl leading-relaxed">
+          Three public digital collections make a large part of this work
+          possible. They remain independent projects: Save Our Lithuanian
+          Parishes does not own or republish their collections. We use their
+          public materials as evidence and link readers back to the original
+          archive.
         </p>
-        <p className="mt-2 leading-relaxed">
-          This sweep locates the evidence. It is not, by itself, a completed
-          history of every parish.
-        </p>
+
+        <div className="mt-6 grid gap-5 md:grid-cols-2">
+          <ArchiveFeature
+            image="/images/sources/ziburio-archive.png"
+            imageAlt="Žiburio Archive — Lithuanian Diaspora Materials"
+            imageCredit="Visual supplied by the Žiburio Archive."
+            eager
+            eyebrow="Books, periodicals, and documents"
+            title="Žiburio Archive"
+            href="https://archyvas.ziburioltmokykla.org/"
+          >
+            <p>
+              The Žiburio Archive is a public digital repository created within
+              Žiburio Lituanistinė Mokykla in Detroit, with students serving as
+              archivists and contributors. Its growing collection preserves
+              Lithuanian diaspora books, periodicals, and documents from the
+              nineteenth and twentieth centuries.
+            </p>
+            <p>
+              It gives this project direct access to many parish histories and
+              documentary volumes—not only two books. Parish profiles link to
+              the relevant archive item whenever a public record is available.
+            </p>
+          </ArchiveFeature>
+
+          <ArchiveFeature
+            image="/images/sources/draugas-archive.jpg"
+            imageAlt="Draugas newspaper and Kultūra supplement mastheads"
+            imageCredit="Draugas and Kultūra mastheads from draugas.org."
+            imageFit="contain"
+            eyebrow="Lithuanian-American newspaper"
+            title="Draugas digital archive"
+            href="https://www.draugas.org/archyvas-pdf/"
+          >
+            <p>
+              <em>Draugas</em> has reported on Lithuanian parishes since 1909.
+              The 2008–May 2026 run—2,768 issues—was read issue by issue. The
+              earlier digital run was searched systematically for parish names,
+              dates, disputes, jubilees, closures, and community response.
+            </p>
+            <p>
+              Search results are only leads. A newspaper item appears as a
+              finished public source only after the parish identity, headline,
+              date, page, and link have been reviewed. Verified issue and page
+              links appear on the relevant parish profile. This review is
+              continuing.
+            </p>
+          </ArchiveFeature>
+
+          <ArchiveFeature
+            image="/images/sources/spauda-org.jpg"
+            imageAlt="Historic Lithuanian diaspora newspaper mastheads from Spauda.org"
+            imageCredit="Diaspora newspaper banner from Spauda.org."
+            imageFit="contain"
+            eyebrow="Digitized diaspora press"
+            title="Spauda.org"
+            href="https://www.spauda.org/"
+          >
+            <p>
+              Spauda.org is a public digitization project for Lithuanian-language
+              newspapers published in the diaspora. It is directed by Dr. Jonas
+              Daugirdas under the auspices of the Lithuanian Research and Studies
+              Center; Kristina Lapienytė is project coordinator and Dr. Indre
+              Antanaitis-Jacobs is Director of Archives.
+            </p>
+            <p>
+              We search this collection for corroborating parish evidence and
+              link directly to public issues when a reference has been reviewed.
+              The newspapers and scans remain the work and property of their
+              publishers, libraries, and the Spauda.org project.
+            </p>
+          </ArchiveFeature>
+
+          <article className="border border-rule bg-[#faf7f0] p-5">
+            <p className="text-small-copy font-medium uppercase tracking-widest text-muted">
+              Current and official evidence
+            </p>
+            <h3 className="mt-1 font-serif text-subsection-title font-semibold">
+              Parish, diocesan, civil, and public records
+            </h3>
+            <div className="mt-3 space-y-3 text-body-copy leading-relaxed text-muted">
+              <p>
+                Official parish and diocesan pages, bulletins, decrees, Mass
+                schedules, property records, preservation records, public
+                filings, local reporting, and field observations establish what
+                happened after the historical sources end and what exists now.
+              </p>
+              <p>
+                Each profile names and links the particular source used. A
+                directory can establish that a community is listed; a decree is
+                required to establish a formal canonical act; a photograph can
+                establish a visible building condition on the date it was taken.
+              </p>
+            </div>
+          </article>
+        </div>
       </section>
 
-      <section className="mt-10">
+      <section className="mt-12">
         <h2 className="font-serif text-section-title font-semibold">
-          2. Evidence and adjudication
+          How evidence becomes a parish profile
         </h2>
-        <p className="mt-2 leading-relaxed">
-          Parish records are established through the synthesis of archival,
-          institutional, legal, and contemporary evidence. Claims are evaluated
-          for identity, chronology, continuity, governance, and present status.
-          The registry preserves the distinction between established findings
-          and secondary, provisional, conflicting, or unresolved readings.
-        </p>
-        <p className="mt-2 leading-relaxed">
-          The published census currently contains{" "}
-          <strong>{siteFigures.publicUS.records} distinct U.S. institutions</strong>.
-          Of these, {siteFigures.publicUS.independentlySupported} have a
-          completed two-pass case file or support from multiple source
-          families; the remaining {siteFigures.publicUS.singleSourceAttested}
-          {" "}are explicitly marked for corroboration.
-        </p>
+        <ol className="mt-5 grid gap-px border border-rule bg-rule sm:grid-cols-2">
+          {[
+            [
+              "1",
+              "Identify the institution",
+              "Names are matched with city, jurisdiction, dates, addresses, clergy, and community context so two parishes with the same saint’s name are not confused.",
+            ],
+            [
+              "2",
+              "Build the chronology",
+              "Founding, building, merger, closure, relocation, and present-day claims are separated and tied to the sources that support them.",
+            ],
+            [
+              "3",
+              "Resolve or show disagreements",
+              "Conflicting dates and interpretations are compared. When the evidence does not settle a question, the uncertainty remains visible instead of being converted into a fact.",
+            ],
+            [
+              "4",
+              "Publish and keep checking",
+              "The profile, map, and aggregate views are generated from the same reviewed record. Source dates and unresolved questions are monitored, and new evidence is reviewed before publication.",
+            ],
+          ].map(([number, title, copy]) => (
+            <li key={number} className="bg-background p-5">
+              <p className="font-mono text-small-copy text-muted">{number}</p>
+              <h3 className="mt-1 font-serif text-subsection-title font-semibold">
+                {title}
+              </h3>
+              <p className="mt-2 text-body-copy leading-relaxed text-muted">{copy}</p>
+            </li>
+          ))}
+        </ol>
       </section>
 
-      <section className="mt-10">
+      <section className="mt-12">
         <h2 className="font-serif text-section-title font-semibold">
-          3. The books — published parish histories
+          One record, several different populations
         </h2>
-        <p className="mt-2 leading-relaxed">
-          Two published histories anchor the record from opposite vantage
-          points. William Wolkovich-Valkavičius&rsquo;s three-volume{" "}
-          <em>Lithuanian Religious Life in America</em> (1991–1998) is the
-          Catholic-institutional compendium; its Volume 3 (the Midwest and
-          beyond) has been extracted page by page. Stasys Michelsonas&rsquo;s{" "}
-          <em>Lietuvių Išeivija Amerikoje</em> (Keleivis, 1961) is the
-          secular counterpoint — the longtime editor of a freethinker
-          newspaper documenting the same communities, including the
-          &ldquo;church fights&rdquo; over property from the 1880s onward;
-          its extraction is complete and joined into the registry. Where a
-          Catholic historian and a
-          socialist editor agree on a fact, that agreement is the strongest
-          corroboration this record can offer. Where they diverge, we keep
-          both readings.
+        <p className="mt-3 max-w-3xl leading-relaxed">
+          Institutions, historical Roman Catholic parishes, physical worship
+          sites, and current places of Lithuanian worship answer different
+          questions. They are not added together or substituted for one another.
         </p>
-        <p className="mt-2 leading-relaxed">
-          Both books remain in copyright. We never republish their text:
-          only structured, page-cited facts enter the dataset, with
-          quotations held under 25 words. To read the books themselves, seek
-          them through a library catalog — they are worth finding.
-        </p>
-      </section>
-
-      <section className="mt-10">
-        <h2 className="font-serif text-section-title font-semibold">
-          4. Continuing updates
-        </h2>
-        <p className="mt-2 leading-relaxed">
-          Parish life keeps changing, so current claims carry a source date and
-          are checked again when new evidence appears. Community reports
-          arriving through{" "}
-          <Link href="/report" className="underline hover:text-accent">
-            the report page
-          </Link>{" "}
-          are reviewed before publication and remain labeled
-          community-reported until independently verified. Failed claims are
-          recorded and excluded rather than quietly absorbed into the record.
-        </p>
-      </section>
-
-      <section className="mt-10">
-        <h2 className="font-serif text-section-title font-semibold">
-          5. The published registry
-        </h2>
-        <p className="mt-2 leading-relaxed">
-          A single registry governs the map, aggregate figures, and parish
-          profiles. It distinguishes documented institutions from provisional
-          leads and contextual references, which remain in the research record
-          without entering public institutional totals.
-        </p>
-        <p className="mt-2 leading-relaxed">
-          Each published record carries its evidentiary status and source
-          ledger. Site figures are derived from the registry and validated
-          against it before publication.
-        </p>
-        <div className="mt-4 overflow-x-auto border-y border-rule">
-          <table className="w-full min-w-[34rem] text-left text-body-copy">
+        <div className="mt-5 overflow-x-auto border-y border-rule">
+          <table className="w-full min-w-[36rem] text-left text-body-copy">
             <thead className="text-small-copy uppercase text-muted">
               <tr>
-                <th className="py-2 pr-4 font-medium">Public surface</th>
-                <th className="py-2 font-medium">Population counted</th>
+                <th className="py-2 pr-4 font-medium">Public view</th>
+                <th className="py-2 font-medium">What it counts</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-rule">
               <tr>
-                <th className="py-3 pr-4 font-semibold">Profile directory</th>
+                <th className="py-3 pr-4 font-semibold">All Profiles</th>
                 <td className="py-3">
-                  {siteFigures.publicUS.records} public U.S. institutions: {" "}
-                  {siteFigures.publicUS.romanCatholicParishes} Roman Catholic
-                  parishes, {siteFigures.publicUS.romanCatholicMissions} Roman
-                  Catholic missions, {" "}
-                  {siteFigures.publicUS.nationalIndependentCatholicCommunities}{" "}
-                  National or independent Catholic communities, and {" "}
-                  {siteFigures.publicUS.protestantCommunities} Protestant
-                  communities.
+                  {siteFigures.publicUS.records} published U.S. institutions
+                  across Catholic, National or independent Catholic, and
+                  Protestant traditions.
                 </td>
               </tr>
               <tr>
                 <th className="py-3 pr-4 font-semibold">The History</th>
                 <td className="py-3">
-                  {siteFigures.history.parishes} U.S. Roman Catholic parishes;
-                  missions and other traditions are outside this historical
-                  comparison.
+                  {siteFigures.history.parishes} Roman Catholic parish
+                  institutions. Missions and other traditions remain outside
+                  this historical comparison.
                 </td>
               </tr>
               <tr>
-                <th className="py-3 pr-4 font-semibold">
-                  Buildings mode in Parish &amp; Mission Status
-                </th>
+                <th className="py-3 pr-4 font-semibold">Church buildings</th>
                 <td className="py-3">
                   {siteFigures.physicalSites.worshipSites} documented physical
-                  worship sites. Buildings are never added to the public
-                  institution count.
+                  worship sites. One institution may have used more than one
+                  church over time.
                 </td>
               </tr>
               <tr>
-                <th className="py-3 pr-4 font-semibold">
-                  How Parish Histories Connect
-                </th>
+                <th className="py-3 pr-4 font-semibold">The Living Network</th>
                 <td className="py-3">
-                  {siteFigures.continuity.relationships} typed relationships,
-                  separated into institutional changes, community or worship
-                  destinations, identity history, and future plans. Records
-                  custody is tracked independently.
-                </td>
-              </tr>
-              <tr>
-                <th className="py-3 pr-4 font-semibold">
-                  Catholic Life Today
-                </th>
-                <td className="py-3">
-                  {CURRENT_WORSHIP_PLACES} places with
-                  current Lithuanian Catholic worship, from {" "}
-                  {Number(currentPastoralNetwork.directory.counts.listed)}{" "}
-                  official network listings.
+                  {CURRENT_WORSHIP_PLACES} current places of regular Lithuanian
+                  Catholic worship: active parishes, active missions, and
+                  Lithuanian Masses hosted by other parishes.
                 </td>
               </tr>
             </tbody>
@@ -197,104 +302,53 @@ export default function AboutTheDataPage() {
         </div>
       </section>
 
-      <section className="mt-10">
+      <section className="mt-12">
         <h2 className="font-serif text-section-title font-semibold">
-          Canonical release
+          Corrections and continuing updates
         </h2>
-        <p className="mt-2 leading-relaxed">
-          The current site was generated from CultureNet Brain publication
-          release <code>{siteFigures.generatedFrom.canonicalPublicationRevision}</code>
-          {" "}and infographic release{" "}
-          <code>{siteFigures.generatedFrom.canonicalInfographicRevision}</code>.
-          Their content hashes are checked during every build, so a copied or
-          independently edited site snapshot cannot silently replace them.
+        <p className="mt-3 leading-relaxed">
+          Parish life and building ownership continue to change. The research
+          system records when current sources were checked, flags conflicts and
+          older observations for review, and tests the figures against the
+          underlying parish records before the site is published. Those tools
+          help manage the work; people still review the evidence and decide what
+          the public record can responsibly say.
         </p>
-      </section>
-
-      <section className="mt-10">
-        <h2 className="font-serif text-section-title font-semibold">
-          6. The reversal database
-        </h2>
-        <p className="mt-2 leading-relaxed">
-          The{" "}
-          <Link href="/reversals" className="underline hover:text-accent">
-            database of reversed closures
+        <p className="mt-3 leading-relaxed">
+          Community reports, photographs, documents, and corrections submitted
+          through the{" "}
+          <Link href="/report" className="underline underline-offset-4">
+            report page
           </Link>{" "}
-          was researched from contemporary sources, then challenged by
-          independent adversarial review — dozens of verification votes, none
-          of which produced a refutation. Cases whose verification panel has
-          not finished are labeled <em>case filed — verification pending</em>{" "}
-          on the page itself, and two candidate cases that turned out{" "}
-          <em>not</em> to be reversals are listed publicly. Keeping our
-          misses visible is part of the method.
+          are reviewed before publication. When a claim cannot be confirmed, it
+          stays unresolved; when a published claim is shown to be wrong, it is
+          corrected rather than silently preserved.
         </p>
       </section>
 
-      <section className="mt-10">
-        <h2 className="font-serif text-section-title font-semibold">
-          7. The geographic data — basemap, boundaries, coordinates
+      <section className="mt-12 border-t border-rule pt-5">
+        <h2 className="font-serif text-subsection-title font-semibold">
+          Looking for the full bibliography?
         </h2>
-        <p className="mt-2 leading-relaxed">
-          The maps are built entirely from openly licensed geography. The
-          basemap — state and county outlines — is US Census TIGER geometry
-          (public domain, via the us-atlas distribution). The{" "}
+        <p className="mt-2 text-body-copy leading-relaxed text-muted">
+          The named archives, published histories, official directories,
+          discovery resources, geography, and image sources are listed on{" "}
           <Link
-            href="/history/loss-by-diocese"
-            className="underline hover:text-accent"
+            href="/about/sources-and-archives"
+            className="font-medium text-foreground underline underline-offset-4"
           >
-            diocese boundaries
-          </Link>{" "}
-          are those same public-domain counties merged diocese by diocese
-          using a county-to-diocese crosswalk released into the public domain
-          by its author (the <em>us_diocese_mapper</em> project); US Catholic
-          dioceses are defined as unions of counties, so diocese lines follow
-          county lines, and the few counties split between two dioceses
-          follow the crosswalk&rsquo;s primary assignment. Parish coordinates
-          come from exact building locations where the field survey recorded
-          them, and otherwise from geocoding city locations
-          (&copy;&nbsp;OpenStreetMap contributors, via Nominatim) with a
-          gazetteer check so a parish never lands in the wrong county. A
-          record without usable coordinates is skipped and counted — never
-          placed by guess.
-        </p>
-      </section>
-
-      <section className="mt-10">
-        <h2 className="font-serif text-section-title font-semibold">
-          8. Corrections
-        </h2>
-        <p className="mt-2 leading-relaxed">
-          The dataset is open —{" "}
-          <a
-            href="https://github.com/LietuvaAI/save-our-lithuanian-parishes"
-            className="underline hover:text-accent"
-          >
-            check our numbers
-          </a>{" "}
-          — and the record is corrected in public: when a claim fails
-          verification, it is removed or relabeled, not quietly rewritten.
-          If you know one of these parishes and see an error,{" "}
-          <Link href="/report" className="underline hover:text-accent">
-            tell us
+            Sources &amp; Archives
           </Link>
-          . A record that cannot be challenged cannot be trusted.
+          . Copyright practice and reuse terms are on the{" "}
+          <Link
+            href="/legal"
+            className="font-medium text-foreground underline underline-offset-4"
+          >
+            Legal, attribution &amp; data use
+          </Link>{" "}
+          page.
         </p>
       </section>
-
-      <p className="mt-10 border-t border-rule pt-4 text-body-copy text-muted">
-        The complete evidence ecosystem and the role of each source:{" "}
-        <Link
-          href="/about/sources-and-archives"
-          className="underline hover:text-foreground"
-        >
-          Sources &amp; Archives
-        </Link>
-        . Formal copyright practice and how to reuse our data:{" "}
-        <Link href="/legal" className="underline hover:text-foreground">
-          Legal, attribution &amp; data use
-        </Link>
-        .
-      </p>
     </article>
   );
 }
