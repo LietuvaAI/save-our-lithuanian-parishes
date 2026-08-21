@@ -607,9 +607,9 @@ if (!/romanCatholicInstitutionHistory/.test(institutionFlowPage)) {
 if (/physicalWorshipSiteHistory/.test(institutionFlowPage)) {
   errors.push("institution-outcome view reads raw physical-site relationships");
 }
-if (!/physicalSiteOutcomeProjection/.test(institutionFlowPage)) {
+if (/physicalSiteOutcomeProjection/.test(institutionFlowPage)) {
   errors.push(
-    "institution-outcome view does not consume the canonical building-view adapter",
+    "institution-outcome route reads the physical-site projection",
   );
 }
 if (
@@ -618,12 +618,14 @@ if (
 ) {
   errors.push("institution-outcome view does not expose both approved modes");
 }
+if (/PhysicalSiteFlow/.test(institutionFlowPage)) {
+  errors.push("institution-outcome route renders the physical-site flow");
+}
 if (
-  !/PhysicalSiteFlow/.test(institutionFlowPage) ||
-  !/FIRST DOCUMENTED/.test(physicalSiteFlow) ||
-  !/CONDITION TODAY/.test(physicalSiteFlow)
+  !/href="\/where-every-parish-ended-up"/.test(outcomeModeExplorer) ||
+  !/href="\/church-buildings-through-time"/.test(outcomeModeExplorer)
 ) {
-  errors.push("Buildings mode does not render the canonical physical-site flow");
+  errors.push("outcome navigation does not expose both canonical routes");
 }
 
 const homepage = readFileSync(
@@ -700,13 +702,19 @@ const physicalSiteAdapter = readFileSync(
   new URL("../lib/physical-site-outcome-projection.ts", import.meta.url),
   "utf8",
 );
-if (
-  !/permanentRedirect/.test(physicalSitePage) ||
-  !/where-every-parish-ended-up\?view=buildings/.test(physicalSitePage)
-) {
+if (/permanentRedirect/.test(physicalSitePage)) {
   errors.push(
-    "retired standalone building route does not redirect to Outcomes Buildings mode",
+    "physical-site history route still redirects instead of rendering its population",
   );
+}
+if (
+  !/physicalSiteOutcomeProjection/.test(physicalSitePage) ||
+  !/PhysicalSiteFlow/.test(physicalSitePage) ||
+  !/mode="buildings"/.test(physicalSitePage) ||
+  !/FIRST DOCUMENTED/.test(physicalSiteFlow) ||
+  !/CONDITION TODAY/.test(physicalSiteFlow)
+) {
+  errors.push("physical-site route does not render the canonical building flow");
 }
 if (!/physicalWorshipSiteHistory/.test(physicalSiteAdapter)) {
   errors.push("building-view adapter does not use the canonical worship-site population");
@@ -737,9 +745,10 @@ for (const [label, source] of [
   ["homepage", homepage],
   ["All Profiles", allProfilesPage],
   ["About the Data", aboutDataPage],
+  ["outcome switcher", outcomeModeExplorer],
 ]) {
-  if (/church-buildings-through-time/.test(source)) {
-    errors.push(`${label} still links to the retired standalone building route`);
+  if (/where-every-parish-ended-up\?view=buildings/.test(source)) {
+    errors.push(`${label} still aliases building history through the institution route`);
   }
 }
 

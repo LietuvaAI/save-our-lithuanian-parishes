@@ -68,7 +68,7 @@ export default function ParishProfilesPage() {
         This directory lists institutions: parishes, missions, and
         congregations. Physical churches are counted separately in the {" "}
         <Link
-          href="/where-every-parish-ended-up?view=buildings"
+          href="/church-buildings-through-time"
           className="font-medium text-foreground underline underline-offset-4 hover:text-accent"
         >
           building view
