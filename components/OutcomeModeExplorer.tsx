@@ -150,6 +150,26 @@ export default function OutcomeModeExplorer({
         </div>
       </div>
 
+      <p className="mt-2 max-w-[90ch] text-support-copy leading-relaxed text-muted">
+        {institutions ? (
+          <>
+            <strong className="font-semibold text-foreground">
+              Institution view:
+            </strong>{" "}
+            each parish or mission is counted once. For a closed institution,
+            the final branch describes only the last church it used.
+          </>
+        ) : (
+          <>
+            <strong className="font-semibold text-foreground">
+              Buildings view:
+            </strong>{" "}
+            each physical worship site is counted separately, including earlier
+            churches and replacement buildings used by the same institution.
+          </>
+        )}
+      </p>
+
       <section className="mt-3">
         <div hidden={!institutions}>{institutionView}</div>
         <div hidden={institutions}>{buildingView}</div>

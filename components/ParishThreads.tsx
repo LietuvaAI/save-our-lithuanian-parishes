@@ -82,19 +82,19 @@ export interface AdditionalHostedCommunity {
 }
 
 const FATE_LABEL: Record<FateKey, string> = {
-  demolished: "Demolished",
-  repurposed: "Repurposed",
-  listed_for_sale: "Listed for sale",
-  standing: "Closed parish — church standing",
-  unrecorded: "Terminal church outcome not yet established",
+  demolished: "Last-used church demolished",
+  repurposed: "Last-used church repurposed",
+  listed_for_sale: "Last-used church listed for sale",
+  standing: "Last-used church still standing",
+  unrecorded: "Last-used church condition not established",
 };
 
 const FATE_SUB: Record<FateKey, string> = {
-  demolished: "their last church was demolished",
-  repurposed: "no longer a Lithuanian place of worship",
-  listed_for_sale: "on the market",
-  standing: "the institution ended; its church did not",
-  unrecorded: "a research gap, not an outcome",
+  demolished: "closed institution; its final church is gone",
+  repurposed: "closed institution; its final church has another use",
+  listed_for_sale: "closed institution; its final church is on the market",
+  standing: "closed institution; its final church survives",
+  unrecorded: "closed institution; final-site condition unknown",
 };
 
 // Long drawer explanations. Each says what the category counts and, just as
@@ -887,7 +887,7 @@ export default function ParishThreads({
               <h3 className="font-serif text-subsection-title font-semibold">
                 {openLabel}
                 <span className="ml-2 font-sans text-body-copy font-normal text-muted">
-                  {openMembers.length} of {model.total}
+                  {openMembers.length} of {model.total} institutions
                 </span>
               </h3>
               <button
