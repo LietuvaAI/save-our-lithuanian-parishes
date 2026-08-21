@@ -1,6 +1,42 @@
 {
   "_comment": "Parish photo provenance registry. Every entry MUST carry rights (permission_granted | public_domain | open_license | own_work | pending_permission) and a rightsNote tracing the holder and evidence. Only cleared rights render (lib/photos.ts); pending entries are the paper trail of what returns when permission lands. Guard: scripts/verify-photo-rights.mjs.",
   "parishes": {
+    "sv-onos-luzerne-pa-line-drawing": {
+      "src": "/images/parishes/luzerne-st-ann-line-drawing.png",
+      "alt": "Line drawing of St. Ann Lithuanian church on Bennett Street in Luzerne, Pennsylvania.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by the church exterior published by Holy Family Parish.",
+      "license": "Save Our Lithuanian Parishes original illustration",
+      "rights": "own_work",
+      "rightsNote": "Created 2026-08-21 from the public-facing exterior architecture published on Holy Family Parish's St. Ann history page. The original illustration records the Bennett Street church's brick nave, tower, louvered crown, arched windows, entrances, and attached rear volume without redistributing the source photograph.",
+      "evidenceUrl": "https://www.holyfamilyluzerne.org/St--Ann-Parish"
+    },
+    "sv-marijos-apreiskimo-kingston-pa-line-drawing": {
+      "src": "/images/parishes/kingston-st-mary-annunciation-line-drawing.png",
+      "alt": "Line drawing of the demolished St. Mary Annunciation Lithuanian church in Kingston, Pennsylvania.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by the pre-demolition exterior documented by Global True Lithuania.",
+      "license": "Save Our Lithuanian Parishes original illustration",
+      "rights": "own_work",
+      "rightsNote": "Created 2026-08-21 from the public-facing pre-demolition exterior architecture documented by Global True Lithuania. The original illustration records the Kingston church's asymmetrical twin towers, spires, Gothic openings, nave, front gable, entries, and stone base without redistributing the source image.",
+      "evidenceUrl": "https://global.truelithuania.com/northern-coal-region-scranton-1614/"
+    },
+    "sv-kazimiero-new-haven-ct-line-drawing": {
+      "src": "/images/parishes/new-haven-st-casimir-line-drawing.png",
+      "alt": "Line drawing of the former St. Casimir Lithuanian church on Greene Street in New Haven, Connecticut.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by the converted church exterior documented by Global True Lithuania.",
+      "license": "Save Our Lithuanian Parishes original illustration",
+      "rights": "own_work",
+      "rightsNote": "Created 2026-08-21 from the public-facing exterior architecture documented by Global True Lithuania after the church's conversion to apartments. The original illustration records the Greene Street building's gable, tracery window, square tower, chimney-cross element, buttresses, pointed windows, and documented residential additions without redistributing the source photograph.",
+      "evidenceUrl": "https://global.truelithuania.com/connecticut-789/"
+    },
+    "nekaltojo-prasidejimo-ausros-vartu-archbald-pa-line-drawing": {
+      "src": "/images/parishes/eynon-our-lady-of-vilna-line-drawing.png",
+      "alt": "Line drawing of the demolished Our Lady of Vilna Lithuanian church in Eynon, Pennsylvania.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by the pre-demolition exterior documented by Global True Lithuania.",
+      "license": "Save Our Lithuanian Parishes original illustration",
+      "rights": "own_work",
+      "rightsNote": "Created 2026-08-21 from the public-facing pre-demolition exterior architecture documented by Global True Lithuania. The original illustration records the Eynon church's stone lower walls, stucco upper facade, square tower, pyramidal roof, pointed openings, oculus, nave, entry, and roof vent without redistributing the source photograph.",
+      "evidenceUrl": "https://global.truelithuania.com/northern-coal-region-scranton-1614/"
+    },
     "sv-petro-cambridge-ma-line-drawing": {
       "src": "/images/parishes/cambridge-immaculate-conception-line-drawing.png",
       "alt": "Line drawing of the former Immaculate Conception Lithuanian church in Cambridge, Massachusetts.",
