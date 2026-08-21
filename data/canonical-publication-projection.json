@@ -3413,24 +3413,26 @@
     {
       "adjudication": {
         "conflict_preserved": true,
-        "state": "conflict_preserved"
+        "state": "accepted"
       },
-      "assertion_type": "current_status",
+      "assertion_type": "lifecycle",
       "confidence": "high",
-      "effective_from": "2020-07-01",
+      "effective_from": "2008-07",
       "id": "assert:coal-1:minersville-building-closure",
       "object": {
         "building_closure": "2020-07-01",
         "current_building_disposition": "unresolved",
-        "juridic_parish_end": "unresolved",
-        "prior_use": "annual Saint Francis Mass and funerals"
+        "first_successor": "Saint Matthew the Evangelist Parish",
+        "juridic_parish_end": "2008-07",
+        "later_successor": "Holy Family Parish of Minersville",
+        "prior_post_suppression_use": "annual Saint Francis Mass and funerals"
       },
-      "observed_at": "2026-07-31",
-      "predicate": "church_building_closed_with_2020_merger_but_juridic_parish_end_is_unresolved",
-      "source_artifact_id": "src:coal-1:minersville-merger:2020",
-      "source_locator": "Merger effective date and underutilized Saint Francis church closure",
+      "observed_at": "2026-08-20",
+      "predicate": "parish_suppressed_into_saint_matthew_in_2008_while_former_church_remained_in_limited_use_until_2020",
+      "source_artifact_id": "src:coal-1:minersville-history:2026-08-17",
+      "source_locator": "Official successor history and diocesan directory merger sequence; 2020 diocesan notice for the separate building closure",
       "subject": {
-        "canonical_entity_id": "cn:building_site:st-francis-minersville-pa"
+        "canonical_entity_id": "cn:institution:st-francis-minersville-pa"
       }
     },
     {
@@ -5044,7 +5046,7 @@
             "future_plan": null,
             "observed_at": "2026-07-16",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "ann-luzerne-pa",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-onos-luzerne-pa",
             "source_urls": [
@@ -5079,7 +5081,7 @@
             "future_plan": null,
             "observed_at": "2026-07-16",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "anthony-omaha-ne",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-antano-omaha-ne",
             "source_urls": [
@@ -5112,7 +5114,7 @@
             "future_plan": null,
             "observed_at": "2026-07-16",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "casimir-paterson-nj",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-kazimiero-paterson-nj",
             "source_urls": [
@@ -5140,7 +5142,7 @@
             "future_plan": null,
             "observed_at": "2026-07-16",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "gateofdawn-worcester-ma",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#ausros-vartu-worcester-ma",
             "source_urls": [
@@ -5171,7 +5173,7 @@
             "future_plan": null,
             "observed_at": "2026-07-16",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "george-bridgeport-ct",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-jurgio-bridgeport-ct",
             "source_urls": [
@@ -5208,7 +5210,7 @@
             "future_plan": null,
             "observed_at": "2026-07-16",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "george-niagara-falls-ny",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-jurgio-niagara-falls-ny",
             "source_urls": [
@@ -5238,7 +5240,7 @@
             "future_plan": null,
             "observed_at": "2026-07-16",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "holy-trinity-newark-nj",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#lietuviu-baznycia-unnamed-newark-nj",
             "source_urls": [
@@ -5266,7 +5268,7 @@
             "future_plan": null,
             "observed_at": "2026-08-03",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "ignatius-luther-mi",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#ignatius-luther-mi",
             "source_urls": [
@@ -5291,7 +5293,7 @@
             "future_plan": null,
             "observed_at": "2026-07-16",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "immaculate-east-st-louis-il",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#nekaltojo-prasidejimo-east-st-louis-il",
             "source_urls": [
@@ -5318,7 +5320,7 @@
             "future_plan": null,
             "observed_at": "2026-07-16",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "joseph-scranton-pa",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-juozapo-scranton-pa",
             "source_urls": [
@@ -5345,7 +5347,7 @@
             "future_plan": null,
             "observed_at": "2026-08-03",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "mary-custer-mi",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#mary-custer-mi",
             "source_urls": [
@@ -5372,7 +5374,7 @@
             "future_plan": null,
             "observed_at": "2026-07-16",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "mary-frackville-pa",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-m-marijos-apsireiskimo-frackville-pa",
             "source_urls": [
@@ -5404,7 +5406,7 @@
             "future_plan": null,
             "observed_at": "2026-07-16",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "michael-bayonne-nj",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-mykolo-bayonne-nj",
             "source_urls": [
@@ -5438,7 +5440,7 @@
             "future_plan": null,
             "observed_at": "2026-07-16",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "michael-scranton-pa",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-mykolo-scranton-pa",
             "source_urls": [
@@ -5466,7 +5468,7 @@
             "future_plan": null,
             "observed_at": "2026-07-16",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "parish-kearny-nj",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#lietuviu-baznycia-kearny-kearny-nj",
             "source_urls": [
@@ -5504,7 +5506,7 @@
             "future_plan": "Merger into the Basilica of Saint Adalbert upon the current pastor's retirement; not yet effective.",
             "observed_at": "2026-07-16",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "paul-grand-rapids-mi",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-petro-ir-povilo-grand-rapids-mi",
             "source_urls": [
@@ -5533,7 +5535,7 @@
             "future_plan": null,
             "observed_at": "2026-08-03",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "ss-peter-and-paul-rockford-il",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#ss-peter-and-paul-rockford-il",
             "source_urls": [
@@ -5556,7 +5558,7 @@
             "future_plan": null,
             "observed_at": "2026-08-03",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "ss-peter-and-paul-tamaqua-pa",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#ss-peter-and-paul-tamaqua-pa",
             "source_urls": [
@@ -5581,7 +5583,7 @@
             "future_plan": null,
             "observed_at": "2026-07-26",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "st-alphonsus-baltimore-md",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#unnamed-lithuanian-parish-baltimore-md",
             "source_urls": [
@@ -5608,7 +5610,7 @@
             "future_plan": null,
             "observed_at": "2026-08-03",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "st-francis-athol-ma",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#st-francis-athol-ma",
             "source_urls": [
@@ -5631,7 +5633,7 @@
             "future_plan": null,
             "observed_at": "2026-08-03",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "site_r10_baseline",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "st-peter-kenosha-wi",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#st-peter-kenosha-wi",
             "source_urls": [
@@ -5660,7 +5662,7 @@
             "future_plan": null,
             "observed_at": "2026-07-09",
             "previous_status_group": "transferred",
-            "previous_status_source_authority": "brain_current_status_adjudication",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
             "registry_slug": "transfiguration-maspeth-ny",
             "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#kristaus-atsimainymo-maspeth-ny",
             "source_urls": [
@@ -5674,14 +5676,143 @@
             ],
             "status_basis": "The historical Lithuanian institution ended in a merger or canonical reorganization; a successor continues without current Lithuanian ministry.",
             "status_group": "transferred"
+          },
+          {
+            "canonical_evidence_assertion_ids": [
+              "assert:current-1:dayton-active-2026",
+              "assert:current-1:dayton-cincinnati-jurisdiction",
+              "assert:current-1:dayton-founded-and-dedicated",
+              "assert:current-1:dayton-lithuanian-readings-2021"
+            ],
+            "continuation_mode": "same_institution_without_current_verified_lithuanian_ministry",
+            "continuity_relationship_ids": [
+              "rel:current-1:dayton-st-gabriel-family"
+            ],
+            "destination_name": "Holy Cross Church in the Saint Gabriel the Archangel Family of Parishes",
+            "display_summary": "Holy Cross remains an active Catholic parish with a Sunday Mass in the Saint Gabriel Family. Lithuanian readings were documented in 2021, but current Lithuanian worship is not established and Holy Cross is outside the accepted current Lithuanian pastoral network.",
+            "effective_date": "2022-07-01 family grouping; current Lithuanian ministry not established in 2026",
+            "entity_id": "cn:institution:holy-cross-dayton-oh",
+            "future_plan": null,
+            "observed_at": "2026-07-16",
+            "previous_status_group": "transferred",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
+            "registry_slug": "holycross-dayton-oh",
+            "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-kryziaus-dayton-oh",
+            "source_urls": [
+              "https://www.sgfp.org/",
+              "https://www.sgfp.org/holy-cross",
+              "https://www.sgfp.org/mass-schedule",
+              "https://catholicaoc.org/beacons-of-light/parish-families/northeast-deanery-family-10-updated",
+              "https://www.thecatholictelegraph.com/did-you-know-holy-cross-dayton/77781",
+              "https://en.wikipedia.org/wiki/Holy_Cross_Lithuanian_Roman_Catholic_Church",
+              "https://global.truelithuania.com/dayton-ohio-3879/",
+              "https://sielovada.org/siaures-amerika/"
+            ],
+            "status_basis": "The same Catholic parish remains open, but current Lithuanian liturgy or organized Lithuanian pastoral ministry is not established.",
+            "status_group": "transferred"
+          },
+          {
+            "canonical_evidence_assertion_ids": [
+              "assert:ne-3:elizabeth-current",
+              "assert:ne-3:elizabeth-lifecycle"
+            ],
+            "continuation_mode": "merged_successor",
+            "continuity_relationship_ids": [
+              "rel:ne-3:elizabeth-merged"
+            ],
+            "destination_name": "Saint Adalbert and Saints Peter and Paul Parish, Elizabeth",
+            "display_summary": "The independent Lithuanian parish ended in the July 1, 2009 merger that formed Saint Adalbert and Saints Peter and Paul Parish. Its Ripley Place church remains in Catholic worship use under that successor.",
+            "effective_date": "2009-07-01",
+            "entity_id": "cn:institution:ss-peter-paul-elizabeth-nj",
+            "future_plan": null,
+            "observed_at": "2026-07-09",
+            "previous_status_group": "transferred",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
+            "registry_slug": "paul-elizabeth-nj",
+            "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-petro-ir-povilo-elizabeth-nj",
+            "source_urls": [
+              "https://rcan.org/wp-content/uploads/2025/10/St.-Adalbert-and-Sts.-Peter-and-Paul-Elizabeth.pdf",
+              "https://rcan.org/we-are-his-witnesses/",
+              "https://rcan.org/planning-area-k-eastern-union/",
+              "https://global.truelithuania.com/tag/new-jersey-st-paul-and-st-peter-lithuanian-church/",
+              "https://catholicmasstime.org/church/saints-peter-and-paul-lithuanian/13357/",
+              "https://discovermass.com/church/saints-peter-and-paul-lithuanian-elizabeth-nj/"
+            ],
+            "status_basis": "The historical Lithuanian institution ended in a merger or canonical reorganization; a successor continues without current Lithuanian ministry.",
+            "status_group": "transferred"
+          },
+          {
+            "canonical_evidence_assertion_ids": [
+              "assert:coal-1:minersville-building-closure",
+              "assert:coal-1:minersville-foundation",
+              "assert:coal-1:minersville-vatican-caveat"
+            ],
+            "continuation_mode": "merged_successor_chain",
+            "continuity_relationship_ids": [
+              "rel:coal-1:minersville-merged-st-matthew"
+            ],
+            "destination_name": "Holy Family Parish of Minersville",
+            "display_summary": "Saint Francis was suppressed into Saint Matthew the Evangelist in July 2008. Saint Matthew later entered Holy Family Parish in 2020; limited worship in the former Saint Francis church until 2020 was building use by the successor, not continued life of the independent parish.",
+            "effective_date": "2008-07; successor chain continued 2020-07-01",
+            "entity_id": "cn:institution:st-francis-minersville-pa",
+            "future_plan": null,
+            "observed_at": "2026-08-20",
+            "previous_status_group": "transferred",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
+            "registry_slug": "st-francis-minersville-pa",
+            "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#st-francis-minersville-pa",
+            "source_urls": [
+              "https://www.allentowndiocese.org/sites/default/files/2025-11/2025-2026%20Directory_0.pdf",
+              "https://www.ad-today.com/holy-family-parish-of-minersville/two-minersville-parishes-to-merge"
+            ],
+            "status_basis": "The historical Lithuanian institution ended in a merger; later canonical reorganization carried its succession into the named current parish.",
+            "status_group": "transferred"
+          },
+          {
+            "canonical_evidence_assertion_ids": [
+              "assert:hartford:holy-trinity-capitol-church-dedicated-1927",
+              "assert:hartford:holy-trinity-established-1903",
+              "assert:hartford:holy-trinity-mission-current-2026",
+              "assert:hartford:holy-trinity-mission-of-cathedral-2025",
+              "assert:hartford:holy-trinity-regular-mass-ended-2026",
+              "assert:hartford:holy-trinity-site-schedule-stale"
+            ],
+            "continuation_mode": "parish_continues_as_cathedral_mission_without_regular_mass",
+            "continuity_relationship_ids": [
+              "rel:hartford:archdiocese-governs-holy-trinity"
+            ],
+            "destination_name": "Holy Trinity Mission, administered from the Cathedral of Saint Joseph",
+            "display_summary": "Holy Trinity remains officially open as a Lithuanian mission administered from the Cathedral parish. Regular Mass ended after May 30, 2026, while funerals and baptisms continue; the community's preservation campaign and the building's longer-term future remain open questions.",
+            "effective_date": "mission form documented by 2025-02-09; regular Mass ended after 2026-05-30",
+            "entity_id": "cn:institution:holy-trinity-hartford-ct",
+            "future_plan": null,
+            "observed_at": "2026-07-16",
+            "previous_status_group": "transferred",
+            "previous_status_source_authority": "canonical_continuation_status_adjudication",
+            "registry_slug": "trinity-hartford-ct",
+            "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#svc-trejybes-hartford-ct",
+            "source_urls": [
+              "https://www.wtnh.com/news/connecticut/hartford/hartford-parishioners-met-with-notice-of-partial-closure-for-holy-trinity-catholic-church/",
+              "https://www.nbcconnecticut.com/news/local/priest-wont-face-charges-larceny-hartford-church/3625558/",
+              "https://www.wfsb.com/2025/02/19/popular-ct-priest-under-investigation-allegedly-stealing-money-parish/",
+              "https://container.parishesonline.com/bulletins/03/0549/20250209B.pdf",
+              "https://en.wikipedia.org/wiki/Holy_Trinity_Roman_Catholic_Church_(Hartford,_Connecticut)",
+              "https://www.wfsb.com/2025/08/14/case-closed-hartford-police-end-investigation-into-priest-accused-stealing-money/",
+              "https://lietuvai.lt/wiki/Hartford_Holy_Trinity_Church",
+              "https://lietuvai.lt/wiki/Holy_Trinity_Church_Hartford",
+              "https://archdioceseofhartford.org/wp-content/uploads/2026/03/2026.LOC_.GUIDE-JAN-ETHNIC.pdf",
+              "https://archdioceseofhartford.org/clergy-staff-directory/"
+            ],
+            "status_basis": "The historical Lithuanian institution remains officially open in mission form under another parish, but regular Mass no longer continues.",
+            "status_group": "transferred"
           }
         ],
         "unit": "transferred Roman Catholic institution"
       },
-      "observed_at": "2026-08-03",
+      "observed_at": "2026-08-20",
       "predicate": "canonical_transferred_institution_status_adjudication",
       "source_artifact_id": "src:continuation-status-20:reviewed-case-audit:2026-08-03",
-      "source_locator": "Complete 22-row present-status and continuation adjudication",
+      "source_locator": "Complete 26-row present-status and continuation adjudication",
       "subject": {
         "canonical_entity_id": "cn:organization:culturenet-parish-continuation-status-authority"
       }
@@ -8248,9 +8379,9 @@
           },
           {
             "closed": {
-              "authority": "site_r10_baseline",
-              "display": "1987",
-              "year": 1987
+              "authority": "reviewed_case_snapshot",
+              "display": "early 1990s; exact date unresolved",
+              "year": null
             },
             "diocese": "Peoria",
             "entity_id": "cn:institution:st-anne-spring-valley-il",
@@ -8260,9 +8391,9 @@
               "year": 1895
             },
             "registry_slug": "ann-spring-valley-il",
-            "status_group": "unresolved",
-            "status_observed_at": "2026-07-16",
-            "status_source_authority": "site_r10_baseline"
+            "status_group": "closed",
+            "status_observed_at": "2026-08-20",
+            "status_source_authority": "canonical_status_adjudication"
           },
           {
             "closed": {
@@ -9178,8 +9309,8 @@
               "year": 1914
             },
             "registry_slug": "holycross-dayton-oh",
-            "status_group": "unresolved",
-            "status_observed_at": "2026-08-03",
+            "status_group": "transferred",
+            "status_observed_at": "2026-08-20",
             "status_source_authority": "canonical_status_adjudication"
           },
           {
@@ -9736,9 +9867,9 @@
               "year": 1895
             },
             "registry_slug": "paul-elizabeth-nj",
-            "status_group": "unresolved",
-            "status_observed_at": "2026-07-09",
-            "status_source_authority": "site_r10_baseline"
+            "status_group": "transferred",
+            "status_observed_at": "2026-08-20",
+            "status_source_authority": "canonical_status_adjudication"
           },
           {
             "closed": {
@@ -10426,9 +10557,9 @@
           },
           {
             "closed": {
-              "authority": "unresolved",
-              "display": null,
-              "year": null
+              "authority": "canonical_graph",
+              "display": "2008-07",
+              "year": 2008
             },
             "diocese": "Allentown",
             "entity_id": "cn:institution:st-francis-minersville-pa",
@@ -10438,9 +10569,9 @@
               "year": 1895
             },
             "registry_slug": "st-francis-minersville-pa",
-            "status_group": "unresolved",
-            "status_observed_at": null,
-            "status_source_authority": "site_r10_baseline"
+            "status_group": "transferred",
+            "status_observed_at": "2026-08-20",
+            "status_source_authority": "canonical_status_adjudication"
           },
           {
             "closed": {
@@ -10870,9 +11001,9 @@
               "year": 1903
             },
             "registry_slug": "trinity-hartford-ct",
-            "status_group": "unresolved",
-            "status_observed_at": "2026-08-02",
-            "status_source_authority": "brain_current_status_adjudication"
+            "status_group": "transferred",
+            "status_observed_at": "2026-08-20",
+            "status_source_authority": "canonical_status_adjudication"
           },
           {
             "closed": {
@@ -21513,6 +21644,23 @@
     },
     {
       "aliases": [],
+      "canonical_name": "Holy Family Parish of Minersville",
+      "entity_type": "institution",
+      "formation_basis": "merged_successor_context",
+      "id": "cn:institution:holy-family-minersville-pa",
+      "institution_subtype": "parish",
+      "lifecycle": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:coal-1:minersville-building-closure"
+        ],
+        "start": "2020-07-01"
+      },
+      "lifecycle_status": "active",
+      "slug": "holy-family-minersville-pa"
+    },
+    {
+      "aliases": [],
       "canonical_name": "Holy Family Parish, Oglesby",
       "entity_type": "institution",
       "formation_basis": "successor_context",
@@ -23260,14 +23408,14 @@
       "id": "cn:institution:st-francis-minersville-pa",
       "institution_subtype": "parish",
       "lifecycle": {
-        "end": null,
+        "end": "2008-07",
         "source_assertion_ids": [
           "assert:coal-1:minersville-foundation",
           "assert:coal-1:minersville-building-closure"
         ],
         "start": "1895 attributed secondary; documented by 1909"
       },
-      "lifecycle_status": "juridic_end_unresolved",
+      "lifecycle_status": "merged",
       "slug": "st-francis-minersville-pa"
     },
     {
@@ -24076,6 +24224,23 @@
     },
     {
       "aliases": [],
+      "canonical_name": "Saint Matthew the Evangelist Parish, Minersville",
+      "entity_type": "institution",
+      "formation_basis": "merged_successor_context",
+      "id": "cn:institution:st-matthew-evangelist-minersville-pa",
+      "institution_subtype": "parish",
+      "lifecycle": {
+        "end": "2020-07-01",
+        "source_assertion_ids": [
+          "assert:coal-1:minersville-building-closure"
+        ],
+        "start": "2008-07"
+      },
+      "lifecycle_status": "merged",
+      "slug": "st-matthew-evangelist-minersville-pa"
+    },
+    {
+      "aliases": [],
       "canonical_name": "St. Maximilian Kolbe Parish, Homestead",
       "entity_type": "institution",
       "evidence_depth": "official and corroborated historical sources",
@@ -24664,7 +24829,7 @@
       "slug": "robert-damyanovich"
     }
   ],
-  "content_hash": "sha256:bef6ab8831eb78727fe908039da9a84b1eab9d281d761de86fd58a8f222541e6",
+  "content_hash": "sha256:a64a9343bc343eed8ff3539469c161d8455e4ff54a34194f7a79331ff78c3035",
   "counts": {
     "by_institution_class": {
       "independent_catholic": 4,
@@ -25635,8 +25800,38 @@
       "assertion_temporal_context": [
         {
           "assertion_id": "assert:coal-1:minersville-building-closure",
-          "effective_from": "2020-07-01",
-          "observed_at": "2026-07-31"
+          "effective_from": "2008-07",
+          "observed_at": "2026-08-20"
+        }
+      ],
+      "canonical_entity_id": "cn:institution:holy-family-minersville-pa",
+      "decision": "publish_linked_context_only",
+      "display_name": "Holy Family Parish of Minersville",
+      "entity_type": "institution",
+      "evidence_assertion_ids": [
+        "assert:coal-1:minersville-building-closure"
+      ],
+      "id": "proj:coal-1:minersville-holy-family",
+      "lifecycle": {
+        "end": null,
+        "source_assertion_ids": [
+          "assert:coal-1:minersville-building-closure"
+        ],
+        "start": "2020-07-01"
+      },
+      "reason": "Holy Family is the current successor context, not another Lithuanian census institution.",
+      "slug": "holy-family-minersville-pa",
+      "source_artifact_ids": [
+        "src:coal-1:minersville-history:2026-08-17"
+      ]
+    },
+    {
+      "aliases": [],
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:coal-1:minersville-building-closure",
+          "effective_from": "2008-07",
+          "observed_at": "2026-08-20"
         }
       ],
       "canonical_entity_id": "cn:building_site:st-francis-minersville-pa",
@@ -25665,7 +25860,37 @@
       "slug": "st-francis-minersville-pa",
       "source_artifact_ids": [
         "src:coal-1:elip-adjudications:2026-07-27",
-        "src:coal-1:minersville-merger:2020"
+        "src:coal-1:minersville-history:2026-08-17"
+      ]
+    },
+    {
+      "aliases": [],
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:coal-1:minersville-building-closure",
+          "effective_from": "2008-07",
+          "observed_at": "2026-08-20"
+        }
+      ],
+      "canonical_entity_id": "cn:institution:st-matthew-evangelist-minersville-pa",
+      "decision": "publish_linked_context_only",
+      "display_name": "Saint Matthew the Evangelist Parish, Minersville",
+      "entity_type": "institution",
+      "evidence_assertion_ids": [
+        "assert:coal-1:minersville-building-closure"
+      ],
+      "id": "proj:coal-1:minersville-st-matthew",
+      "lifecycle": {
+        "end": "2020-07-01",
+        "source_assertion_ids": [
+          "assert:coal-1:minersville-building-closure"
+        ],
+        "start": "2008-07"
+      },
+      "reason": "Saint Matthew was the first canonical successor and later entered Holy Family Parish in 2020.",
+      "slug": "st-matthew-evangelist-minersville-pa",
+      "source_artifact_ids": [
+        "src:coal-1:minersville-history:2026-08-17"
       ]
     },
     {
@@ -35490,7 +35715,7 @@
       "aliases": [
         "Šv. Pranciškaus"
       ],
-      "canonical_detail_status": "juridic_end_unresolved",
+      "canonical_detail_status": "merged",
       "canonical_name": "Saint Francis of Assisi Lithuanian Roman Catholic Parish, Minersville",
       "canonical_slug": "st-francis-minersville-pa",
       "city": "Minersville",
@@ -35511,7 +35736,7 @@
       "registry_slug": "st-francis-minersville-pa",
       "source_artifact_ids": [
         "src:coal-1:elip-adjudications:2026-07-27",
-        "src:coal-1:minersville-merger:2020",
+        "src:coal-1:minersville-history:2026-08-17",
         "src:coal-1:minersville-mine:2026-07-16"
       ],
       "state": "PA"
@@ -37736,20 +37961,76 @@
       }
     },
     {
-      "adjudication_state": "conflict_preserved",
+      "adjudication_state": "accepted",
       "assertion_temporal_context": [
         {
           "assertion_id": "assert:coal-1:minersville-building-closure",
-          "effective_from": "2020-07-01",
-          "observed_at": "2026-07-31"
+          "effective_from": "2008-07",
+          "observed_at": "2026-08-20"
         }
       ],
-      "confidence": "medium",
+      "confidence": "high",
+      "counting_effect": "active_transfers_to_successor",
+      "date": {
+        "certainty": "official successor history and diocesan directory; exact day unresolved",
+        "end": null,
+        "label": "Saint Francis was suppressed into Saint Matthew the Evangelist",
+        "start": "2008-07"
+      },
+      "evidence_assertion_ids": [
+        "assert:coal-1:minersville-building-closure"
+      ],
+      "id": "rel:coal-1:minersville-merged-st-matthew",
+      "identity_effect": "distinct_institutions_lineage",
+      "projection_group": "institution_lineage",
+      "publication_state": "publishable",
+      "relationship_type": "institution-merged-into-institution",
+      "source": {
+        "display_name": "Saint Francis of Assisi Lithuanian Roman Catholic Parish, Minersville",
+        "entity_id": "cn:institution:st-francis-minersville-pa",
+        "entity_type": "institution",
+        "lifecycle": {
+          "end": "2008-07",
+          "source_assertion_ids": [
+            "assert:coal-1:minersville-foundation",
+            "assert:coal-1:minersville-building-closure"
+          ],
+          "start": "1895 attributed secondary; documented by 1909"
+        },
+        "slug": "st-francis-minersville-pa"
+      },
+      "source_artifact_ids": [
+        "src:coal-1:minersville-history:2026-08-17"
+      ],
+      "target": {
+        "display_name": "Saint Matthew the Evangelist Parish, Minersville",
+        "entity_id": "cn:institution:st-matthew-evangelist-minersville-pa",
+        "entity_type": "institution",
+        "lifecycle": {
+          "end": "2020-07-01",
+          "source_assertion_ids": [
+            "assert:coal-1:minersville-building-closure"
+          ],
+          "start": "2008-07"
+        },
+        "slug": "st-matthew-evangelist-minersville-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:coal-1:minersville-building-closure",
+          "effective_from": "2008-07",
+          "observed_at": "2026-08-20"
+        }
+      ],
+      "confidence": "high",
       "counting_effect": "site_count_only",
       "date": {
-        "certainty": "building closure is known; juridic institution end is not",
-        "end": "juridic end unresolved",
-        "label": "Saint Francis institution used the Minersville church",
+        "certainty": "parish end established to month; exact day unresolved",
+        "end": "2008-07",
+        "label": "Saint Francis institution used the Minersville church until suppression",
         "start": "1909-11-25"
       },
       "evidence_assertion_ids": [
@@ -37766,7 +38047,7 @@
         "entity_id": "cn:institution:st-francis-minersville-pa",
         "entity_type": "institution",
         "lifecycle": {
-          "end": null,
+          "end": "2008-07",
           "source_assertion_ids": [
             "assert:coal-1:minersville-foundation",
             "assert:coal-1:minersville-building-closure"
@@ -37777,7 +38058,7 @@
       },
       "source_artifact_ids": [
         "src:coal-1:elip-adjudications:2026-07-27",
-        "src:coal-1:minersville-merger:2020"
+        "src:coal-1:minersville-history:2026-08-17"
       ],
       "target": {
         "display_name": "Saint Francis of Assisi church building, Minersville",
@@ -38144,6 +38425,117 @@
           "start": "2026-07-01"
         },
         "slug": "communion-of-saints-pittston-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:coal-1:minersville-building-closure",
+          "effective_from": "2008-07",
+          "observed_at": "2026-08-20"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "active_transfers_to_successor",
+      "date": {
+        "certainty": "official diocesan notice",
+        "end": null,
+        "label": "Saint Matthew and Saint Michael formed Holy Family Parish",
+        "start": "2020-07-01"
+      },
+      "evidence_assertion_ids": [
+        "assert:coal-1:minersville-building-closure"
+      ],
+      "id": "rel:coal-1:st-matthew-merged-holy-family",
+      "identity_effect": "distinct_institutions_lineage",
+      "projection_group": "institution_lineage",
+      "publication_state": "publishable",
+      "relationship_type": "institution-merged-into-institution",
+      "source": {
+        "display_name": "Saint Matthew the Evangelist Parish, Minersville",
+        "entity_id": "cn:institution:st-matthew-evangelist-minersville-pa",
+        "entity_type": "institution",
+        "lifecycle": {
+          "end": "2020-07-01",
+          "source_assertion_ids": [
+            "assert:coal-1:minersville-building-closure"
+          ],
+          "start": "2008-07"
+        },
+        "slug": "st-matthew-evangelist-minersville-pa"
+      },
+      "source_artifact_ids": [
+        "src:coal-1:minersville-history:2026-08-17"
+      ],
+      "target": {
+        "display_name": "Holy Family Parish of Minersville",
+        "entity_id": "cn:institution:holy-family-minersville-pa",
+        "entity_type": "institution",
+        "lifecycle": {
+          "end": null,
+          "source_assertion_ids": [
+            "assert:coal-1:minersville-building-closure"
+          ],
+          "start": "2020-07-01"
+        },
+        "slug": "holy-family-minersville-pa"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:coal-1:minersville-building-closure",
+          "effective_from": "2008-07",
+          "observed_at": "2026-08-20"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "site_count_only",
+      "date": {
+        "certainty": "official diocesan notice",
+        "end": "2020-07-01",
+        "label": "The successor retained the former Saint Francis church for annual Mass and funerals",
+        "start": "2008-07"
+      },
+      "evidence_assertion_ids": [
+        "assert:coal-1:minersville-building-closure"
+      ],
+      "id": "rel:coal-1:st-matthew-used-st-francis-site",
+      "identity_effect": "site_context_only",
+      "projection_group": "institution_site",
+      "publication_state": "publishable",
+      "relationship_type": "institution-used-site",
+      "source": {
+        "display_name": "Saint Matthew the Evangelist Parish, Minersville",
+        "entity_id": "cn:institution:st-matthew-evangelist-minersville-pa",
+        "entity_type": "institution",
+        "lifecycle": {
+          "end": "2020-07-01",
+          "source_assertion_ids": [
+            "assert:coal-1:minersville-building-closure"
+          ],
+          "start": "2008-07"
+        },
+        "slug": "st-matthew-evangelist-minersville-pa"
+      },
+      "source_artifact_ids": [
+        "src:coal-1:minersville-history:2026-08-17"
+      ],
+      "target": {
+        "display_name": "Saint Francis of Assisi church building, Minersville",
+        "entity_id": "cn:building_site:st-francis-minersville-pa",
+        "entity_type": "building_site",
+        "lifecycle": {
+          "end": "closed to worship 2020-07-01",
+          "source_assertion_ids": [
+            "assert:coal-1:minersville-foundation",
+            "assert:coal-1:minersville-building-closure"
+          ],
+          "start": "1909-11-25"
+        },
+        "slug": "st-francis-minersville-pa"
       }
     },
     {
@@ -58112,20 +58504,20 @@
       "title": "Holy Trinity Wilkes-Barre current-condition case file"
     },
     {
-      "artifact_type": "official_diocesan_notice",
-      "id": "src:coal-1:minersville-merger:2020",
+      "artifact_type": "official_successor_history",
+      "id": "src:coal-1:minersville-history:2026-08-17",
       "locator": {
-        "exact_label": "Two Minersville Parishes to Merge",
-        "page": "AD Today article",
-        "section": "effective 2020-07-01 merger and Saint Francis building closure"
+        "exact_label": "History of the Latin Rite Churches of Minersville",
+        "page": "Holy Family Parish history",
+        "section": "July 2008 Saint Francis consolidation into Saint Matthew the Evangelist"
       },
       "rights": {
         "access": "public web",
-        "public_url": "https://www.ad-today.com/holy-family-parish-of-minersville/two-minersville-parishes-to-merge",
+        "public_url": "http://minersvillecatholic.com/history-of-the-latin-rite-churches-of-minersville",
         "quote_policy": "cite and summarize",
-        "status": "official_diocesan_news"
+        "status": "official_successor_parish_history"
       },
-      "title": "Two Minersville parishes to merge"
+      "title": "History of the Latin Rite Churches of Minersville"
     },
     {
       "artifact_type": "targeted_archive_mine",
@@ -58803,7 +59195,7 @@
       "artifact_type": "canonical_projection_migration",
       "id": "src:continuation-status-20:reviewed-case-audit:2026-08-03",
       "locator": {
-        "exact_label": "22 transferred Roman Catholic institution rows",
+        "exact_label": "26 transferred Roman Catholic institution rows",
         "page": "parish-situation.json and linked current case records",
         "section": "current use, Lithuanian identity, situation, and sources"
       },

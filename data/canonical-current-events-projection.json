@@ -5,7 +5,7 @@
     "repository": "LietuvaAI/culturenet-brain",
     "source_path": "docs/research/parish-canon/current-events/source.json",
     "publication_projection_revision": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
-    "infographic_projection_revision": "canonical-infographic-units-2026-08-16-worship-site-addresses"
+    "infographic_projection_revision": "canonical-infographic-units-2026-08-20-institution-status-reconciliation"
   },
   "scope": "parish-watch-current-events",
   "snapshot": "2026-08-14",
@@ -1317,5 +1317,5 @@
       "canonicalEntityId": "cn:institution:blessed-jurgis-matulaitis-mission-lemont-il"
     }
   ],
-  "content_hash": "sha256:f084ad2ca4cd2ea9cc2492e9fc9ed8e6d1b16925cd434dfe704e7b96f6053e60"
+  "content_hash": "sha256:db44d6cb08464ab3371d842c4c42967f53d1f4ba5004bf298229a72617460a9f"
 }
