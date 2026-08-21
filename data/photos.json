@@ -1,6 +1,168 @@
 {
   "_comment": "Parish photo provenance registry. Every entry MUST carry rights (permission_granted | public_domain | open_license | own_work | pending_permission) and a rightsNote tracing the holder and evidence. Only cleared rights render (lib/photos.ts); pending entries are the paper trail of what returns when permission lands. Guard: scripts/verify-photo-rights.mjs.",
   "parishes": {
+    "sv-onos-luzerne-pa-line-drawing": {
+      "src": "/images/parishes/luzerne-st-ann-line-drawing.png",
+      "alt": "Line drawing of St. Ann Lithuanian church on Bennett Street in Luzerne, Pennsylvania.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by the church exterior published by Holy Family Parish.",
+      "license": "Save Our Lithuanian Parishes original illustration",
+      "rights": "own_work",
+      "rightsNote": "Created 2026-08-21 from the public-facing exterior architecture published on Holy Family Parish's St. Ann history page. The original illustration records the Bennett Street church's brick nave, tower, louvered crown, arched windows, entrances, and attached rear volume without redistributing the source photograph.",
+      "evidenceUrl": "https://www.holyfamilyluzerne.org/St--Ann-Parish"
+    },
+    "sv-marijos-apreiskimo-kingston-pa-line-drawing": {
+      "src": "/images/parishes/kingston-st-mary-annunciation-line-drawing.png",
+      "alt": "Line drawing of the demolished St. Mary Annunciation Lithuanian church in Kingston, Pennsylvania.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by the pre-demolition exterior documented by Global True Lithuania.",
+      "license": "Save Our Lithuanian Parishes original illustration",
+      "rights": "own_work",
+      "rightsNote": "Created 2026-08-21 from the public-facing pre-demolition exterior architecture documented by Global True Lithuania. The original illustration records the Kingston church's asymmetrical twin towers, spires, Gothic openings, nave, front gable, entries, and stone base without redistributing the source image.",
+      "evidenceUrl": "https://global.truelithuania.com/northern-coal-region-scranton-1614/"
+    },
+    "sv-kazimiero-new-haven-ct-line-drawing": {
+      "src": "/images/parishes/new-haven-st-casimir-line-drawing.png",
+      "alt": "Line drawing of the former St. Casimir Lithuanian church on Greene Street in New Haven, Connecticut.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by the converted church exterior documented by Global True Lithuania.",
+      "license": "Save Our Lithuanian Parishes original illustration",
+      "rights": "own_work",
+      "rightsNote": "Created 2026-08-21 from the public-facing exterior architecture documented by Global True Lithuania after the church's conversion to apartments. The original illustration records the Greene Street building's gable, tracery window, square tower, chimney-cross element, buttresses, pointed windows, and documented residential additions without redistributing the source photograph.",
+      "evidenceUrl": "https://global.truelithuania.com/connecticut-789/"
+    },
+    "nekaltojo-prasidejimo-ausros-vartu-archbald-pa-line-drawing": {
+      "src": "/images/parishes/eynon-our-lady-of-vilna-line-drawing.png",
+      "alt": "Line drawing of the demolished Our Lady of Vilna Lithuanian church in Eynon, Pennsylvania.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by the pre-demolition exterior documented by Global True Lithuania.",
+      "license": "Save Our Lithuanian Parishes original illustration",
+      "rights": "own_work",
+      "rightsNote": "Created 2026-08-21 from the public-facing pre-demolition exterior architecture documented by Global True Lithuania. The original illustration records the Eynon church's stone lower walls, stucco upper facade, square tower, pyramidal roof, pointed openings, oculus, nave, entry, and roof vent without redistributing the source photograph.",
+      "evidenceUrl": "https://global.truelithuania.com/northern-coal-region-scranton-1614/"
+    },
+    "sv-petro-cambridge-ma-line-drawing": {
+      "src": "/images/parishes/cambridge-immaculate-conception-line-drawing.png",
+      "alt": "Line drawing of the former Immaculate Conception Lithuanian church in Cambridge, Massachusetts.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by the exterior documented by Global True Lithuania.",
+      "license": "Save Our Lithuanian Parishes original illustration",
+      "rights": "own_work",
+      "rightsNote": "Created 2026-08-21 from the public-facing exterior architecture documented by Global True Lithuania. The original illustration records the Windsor Street church's square tower, arched entrance, nave proportions, and window rhythm without redistributing the source photograph.",
+      "evidenceUrl": "https://global.truelithuania.com/boston-massachusetts-308/"
+    },
+    "sv-jurgio-norwood-ma-line-drawing": {
+      "src": "/images/parishes/norwood-st-george-line-drawing.png",
+      "alt": "Line drawing of the former St. George Lithuanian church in Norwood, Massachusetts.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by the exterior documented by Global True Lithuania.",
+      "license": "Save Our Lithuanian Parishes original illustration",
+      "rights": "own_work",
+      "rightsNote": "Created 2026-08-21 from the public-facing exterior architecture documented by Global True Lithuania. The original illustration records the St. James Avenue church's long stucco form, roof cupola, exterior stairs, windows, and side entrance without redistributing the source photograph.",
+      "evidenceUrl": "https://global.truelithuania.com/boston-massachusetts-308/"
+    },
+    "lietuviu-baznycia-unnamed-haverhill-ma-line-drawing": {
+      "src": "/images/parishes/haverhill-st-george-line-drawing.png",
+      "alt": "Line drawing of the former St. George Lithuanian church in Haverhill, Massachusetts, before demolition.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by the pre-demolition exterior documented by Global True Lithuania.",
+      "license": "Save Our Lithuanian Parishes original illustration",
+      "rights": "own_work",
+      "rightsNote": "Created 2026-08-21 from the public-facing pre-demolition exterior architecture documented by Global True Lithuania. The original illustration records the Washington Street church's square tower, gables, pointed windows, side bays, and entrance without redistributing the source photograph.",
+      "evidenceUrl": "https://global.truelithuania.com/lawrence-and-lowell-massachusetts-1682/"
+    },
+    "sv-kazimiero-brockton-ma-line-drawing": {
+      "src": "/images/parishes/brockton-st-casimir-line-drawing.png",
+      "alt": "Line drawing of the former St. Casimir Lithuanian church in Brockton, Massachusetts.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by the exterior documented by Global True Lithuania.",
+      "license": "Save Our Lithuanian Parishes original illustration",
+      "rights": "own_work",
+      "rightsNote": "Created 2026-08-21 from the public-facing exterior architecture documented by Global True Lithuania. The original illustration records the Ames Street church's brick nave, corner tower, belfry and spire, arched windows, entrance, and attached wing without redistributing the source photograph.",
+      "evidenceUrl": "https://global.truelithuania.com/brockton-massachusetts-312/"
+    },
+    "sv-kazimiero-nashua-nh-line-drawing": {
+      "src": "/images/parishes/nashua-st-casimir-line-drawing.png",
+      "alt": "Line drawing of the former St. Casimir Lithuanian church in Nashua, New Hampshire.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by the exterior documented by Global True Lithuania.",
+      "license": "Save Our Lithuanian Parishes original illustration",
+      "rights": "own_work",
+      "rightsNote": "Created 2026-08-21 from the public-facing exterior architecture documented by Global True Lithuania. The original illustration records the Temple Street church's long nave, square tower, narrow spire, oculus, pointed windows, and stair-turret form without redistributing the source photograph.",
+      "evidenceUrl": "https://global.truelithuania.com/new-hampshire-1083/"
+    },
+    "sv-kazimiero-sioux-city-ia-line-drawing": {
+      "src": "/images/parishes/sioux-city-st-casimir-line-drawing.png",
+      "alt": "Line drawing of the demolished St. Casimir Lithuanian church in Sioux City, Iowa.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, adapted from Jerry picker's public-domain historical photograph.",
+      "license": "Public-domain source; Save Our Lithuanian Parishes original illustration",
+      "rights": "public_domain",
+      "rightsNote": "Created 2026-08-21 from the public-domain historical exterior photograph of St. Casimir Lithuanian church in Sioux City. The illustration preserves the small church's central tower, polygonal belfry cap, front windows, stairs, entry, and nave.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St_Casimir_(3).jpg"
+    },
+    "sv-kazimiero-paterson-nj-line-drawing": {
+      "src": "/images/parishes/paterson-st-casimir-line-drawing.png",
+      "alt": "Line drawing of the former St. Casimir Lithuanian church at 147 Montgomery Street in Paterson, New Jersey.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by the current exterior published by Grace Gospel Church.",
+      "license": "Save Our Lithuanian Parishes original illustration",
+      "rights": "own_work",
+      "rightsNote": "Created 2026-08-21 from the public-facing exterior architecture published by the building's current congregation, Grace Gospel Church. The original illustration records the former St. Casimir church's peaked roof, patterned-glass facade, recessed entrance, brick massing, and offset bell tower without redistributing the source photograph.",
+      "evidenceUrl": "https://gracegospelchurch.org/"
+    },
+    "sv-kazimiero-amsterdam-ny-line-drawing": {
+      "src": "/images/parishes/amsterdam-st-casimir-line-drawing.png",
+      "alt": "Line drawing of the former St. Casimir Lithuanian church in Amsterdam, New York.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, adapted from Beyond My Ken's Wikimedia Commons photograph.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Created 2026-08-20 from the CC BY-SA 4.0 exterior photograph of the former St. Casimir church at 262 Main Street. The adaptation preserves the surviving Lithuanian facade, statue niche, and central tower.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Former_St._Casimir_Church,_Amsterdam.jpg"
+    },
+    "sv-kazimiero-gary-in-line-drawing": {
+      "src": "/images/parishes/gary-st-casimir-line-drawing.png",
+      "alt": "Line drawing of the historical St. Casimir Lithuanian church building in Gary, Indiana.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, adapted from Lotzman Katzman's Wikimedia Commons photograph.",
+      "license": "CC BY-SA 3.0",
+      "rights": "open_license",
+      "rightsNote": "Created 2026-08-20 from the CC BY-SA 3.0 exterior photograph identified and geocoded as the historical St. Casimir Lithuanian church in Gary.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St._Casimiri%27s_Lithuanian_Church_(historical)_Gary,_Indiana_-_panoramio.jpg"
+    },
+    "sv-kazimiero-philadelphia-pa-line-drawing": {
+      "src": "/images/parishes/philadelphia-st-casimir-line-drawing.png",
+      "alt": "Line drawing of St. Casimir Lithuanian church on Wharton Street in Philadelphia.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, adapted from Nick-philly's Wikimedia Commons photograph.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Created 2026-08-20 from the CC BY-SA 4.0 exterior photograph of St. Casimir Lithuanian Catholic Church at 324 Wharton Street.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St_Casimir%27s_Lithuanian_Catholic_Church_-_324_Wharton_St,_Philadelphia,_PA_19147.jpg"
+    },
+    "sv-kazimiero-pittston-pa-line-drawing": {
+      "src": "/images/parishes/pittston-st-casimir-line-drawing.png",
+      "alt": "Line drawing of the 1909 St. Casimir Lithuanian church in Pittston, Pennsylvania.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, adapted from Doug Kerr's Wikimedia Commons photograph.",
+      "license": "CC BY-SA 2.0",
+      "rights": "open_license",
+      "rightsNote": "Created 2026-08-20 from the CC BY-SA 2.0 exterior photograph of the 1909 Church Street building, taken after the parish's 2008 closure.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St._Casimir_Church_(Pittston,_Pennsylvania)_(01).jpg"
+    },
+    "sv-pranciskaus-lawrence-ma-line-drawing": {
+      "src": "/images/parishes/lawrence-st-francis-line-drawing.png",
+      "alt": "Line drawing of St. Francis Lithuanian church in Lawrence, Massachusetts.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by the 1958 Boston Public Library photograph in Digital Commonwealth.",
+      "license": "Save Our Lithuanian Parishes original illustration",
+      "rights": "own_work",
+      "rightsNote": "Created 2026-08-20 from a Digital Commonwealth source marked no known copyright restrictions. Because the historical photograph partly obscures the church, the drawing is limited to its documented tower, nave, roofline, windows, and masonry form.",
+      "evidenceUrl": "https://www.digitalcommonwealth.org/search/commonwealth:gq67rf33j"
+    },
+    "ausros-vartu-worcester-ma-line-drawing": {
+      "src": "/images/parishes/worcester-our-lady-of-vilna-line-drawing.png",
+      "alt": "Line drawing of Our Lady of Vilna church in Worcester, Massachusetts.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, adapted from Farragutful's Wikimedia Commons photograph.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Created 2026-08-20 from the CC BY-SA 4.0 exterior photograph of Our Lady of Vilna Church on Sterling Street.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Vilna_-_Worcester_01.jpg"
+    },
+    "dievo-apvaizdos-scranton-pa-line-drawing": {
+      "src": "/images/parishes/scranton-divine-providence-line-drawing.png",
+      "alt": "Line drawing of Divine Providence Lithuanian National Catholic church in Scranton, Pennsylvania.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, adapted from Renata3's Wikimedia Commons photograph.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Created 2026-08-20 from the CC BY-SA 4.0 front exterior photograph of Providence of God Lithuanian National Catholic Church, corroborated by the companion parish-sign photographs.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Lithuania_National_Catholic_Church,_Scranton,_PA_-_front_20200621.jpg"
+    },
     "svc-mergeles-marijos-gimimo-chicago-il": {
       "src": "/images/parishes/chicago-nativity-bvm.jpg",
       "alt": "Exterior of Nativity of the Blessed Virgin Mary Lithuanian church in Chicago.",

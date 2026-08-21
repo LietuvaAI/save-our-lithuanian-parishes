@@ -23662,7 +23662,7 @@
     }
   ],
   "registryRevision": {
-    "version": 37,
+    "version": 39,
     "date": "2026-08-11",
     "changelog": [
       "Folded Batch 1 closure-year, year-variance, Worcester, Waterbury, Baltimore, Kearny, Cambridge, Chicago Heights, Westville, and Freeland adjudications into the living registry.",
@@ -23723,15 +23723,17 @@
       "Registry Revision 34: synchronized the Brain-owned public-display authority to canonical-public-census-2026-08-11-wider-catholic-life-geocodes; public identity and membership are unchanged.",
       "Registry Revision 35: synchronized the Brain-owned public-display authority to canonical-public-census-2026-08-11-wider-catholic-life-geocodes; public identity and membership are unchanged.",
       "Registry Revision 36: aligned Middleport's public-display record type with the canonical mission adjudication; public identity and membership are unchanged.",
-      "Registry Revision 37: synchronized the embedded parish and mission type subtotals after the Middleport correction; the 155-institution public census is unchanged."
+      "Registry Revision 37: synchronized the embedded parish and mission type subtotals after the Middleport correction; the 155-institution public census is unchanged.",
+      "Registry Revision 38: synchronized the Brain-owned public-display authority to canonical-public-census-2026-08-11-wider-catholic-life-geocodes; public identity and membership are unchanged.",
+      "Registry Revision 39: synchronized the Brain-owned public-display authority to canonical-public-census-2026-08-11-wider-catholic-life-geocodes; public identity and membership are unchanged."
     ],
-    "contentHash": "0b18e0f455124304648f7e81fc695084dcc47bb90062f83a03f896f0428f70d0"
+    "contentHash": "e644690f7f228353e8e077ee53cea05d2d151e48d6f4dbb71ad3ac937ad15578"
   },
   "publicationAuthority": {
     "repository": "LietuvaAI/culturenet-brain",
     "path": "docs/research/parish-canon/publication-projection.json",
     "revisionId": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
-    "contentHash": "sha256:bef6ab8831eb78727fe908039da9a84b1eab9d281d761de86fd58a8f222541e6",
+    "contentHash": "sha256:a64a9343bc343eed8ff3539469c161d8455e4ff54a34194f7a79331ff78c3035",
     "publicUSInstitutions": 155,
     "synchronized": "2026-08-11"
   }

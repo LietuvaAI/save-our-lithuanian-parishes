@@ -10,7 +10,7 @@
   "authority": {
     "compatibility_baseline": "save-our-lithuanian-parishes-registry-revision-10",
     "compatibility_baseline_commit": "59749cf2ca488bb14074e32ad7116da3fc4350d5",
-    "publication_projection_hash": "sha256:bef6ab8831eb78727fe908039da9a84b1eab9d281d761de86fd58a8f222541e6",
+    "publication_projection_hash": "sha256:a64a9343bc343eed8ff3539469c161d8455e4ff54a34194f7a79331ff78c3035",
     "publication_projection_revision": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
     "repository": "LietuvaAI/culturenet-brain"
   },
@@ -664,11 +664,11 @@
     {
       "address": {
         "alternate_displays": [
-          "329 Greene Street"
+          "339 Greene Street"
         ],
         "assertion_ids": [],
         "authority": "canonical_entity_alias",
-        "display": "339 Greene Street",
+        "display": "329 Greene Street",
         "source_artifact_ids": [],
         "state": "recorded"
       },
@@ -2263,11 +2263,11 @@
     {
       "address": {
         "alternate_displays": [
-          "2327 W. 23rd Place"
+          "2337 W. 23rd Place"
         ],
         "assertion_ids": [],
         "authority": "canonical_entity_alias",
-        "display": "2337 W. 23rd Place",
+        "display": "2327 W. 23rd Place",
         "source_artifact_ids": [],
         "state": "recorded"
       },
@@ -6354,14 +6354,26 @@
       "institution_use_periods": [
         {
           "date": {
-            "certainty": "building closure is known; juridic institution end is not",
-            "end": "juridic end unresolved",
-            "label": "Saint Francis institution used the Minersville church",
+            "certainty": "parish end established to month; exact day unresolved",
+            "end": "2008-07",
+            "label": "Saint Francis institution used the Minersville church until suppression",
             "start": "1909-11-25"
           },
           "institution_entity_id": "cn:institution:st-francis-minersville-pa",
           "institution_profile": "/parishes/st-francis-minersville-pa",
           "relationship_id": "rel:coal-1:minersville-used-site",
+          "relationship_type": "institution-used-site"
+        },
+        {
+          "date": {
+            "certainty": "official diocesan notice",
+            "end": "2020-07-01",
+            "label": "The successor retained the former Saint Francis church for annual Mass and funerals",
+            "start": "2008-07"
+          },
+          "institution_entity_id": "cn:institution:st-matthew-evangelist-minersville-pa",
+          "institution_profile": null,
+          "relationship_id": "rel:coal-1:st-matthew-used-st-francis-site",
           "relationship_type": "institution-used-site"
         }
       ],
@@ -10151,7 +10163,7 @@
       "building-standing"
     ]
   },
-  "content_hash": "sha256:691de2b826621cc830245b8bb885af3b1639f10c37a5a7375f16155ea5b5af2f",
+  "content_hash": "sha256:ad9c4888a7a781038c653ae2fda29b4c584101d1987462706dc6e86f293db671",
   "continuity_edges": [
     {
       "adjudication_state": "conflict_preserved",
@@ -10450,6 +10462,69 @@
         "entity_id": "cn:institution:our-lady-of-hope-wilkes-barre-pa",
         "entity_type": "institution",
         "slug": "our-lady-of-hope-wilkes-barre-pa"
+      },
+      "taxonomy": {
+        "certainty": "established",
+        "dimension": "institutional_transition",
+        "form": "merger_or_consolidation_as_reported",
+        "public_label": "Institutional merger or consolidation",
+        "temporal_state": "completed"
+      }
+    },
+    {
+      "adjudication_state": "accepted",
+      "assertion_temporal_context": [
+        {
+          "assertion_id": "assert:coal-1:minersville-building-closure",
+          "effective_from": "2008-07",
+          "observed_at": "2026-08-20"
+        }
+      ],
+      "confidence": "high",
+      "counting_effect": "active_transfers_to_successor",
+      "date": {
+        "certainty": "official successor history and diocesan directory; exact day unresolved",
+        "end": null,
+        "label": "Saint Francis was suppressed into Saint Matthew the Evangelist",
+        "start": "2008-07"
+      },
+      "evidence_assertion_ids": [
+        "assert:coal-1:minersville-building-closure"
+      ],
+      "id": "rel:coal-1:minersville-merged-st-matthew",
+      "identity_effect": "distinct_institutions_lineage",
+      "projection_group": "institution_lineage",
+      "publication_state": "publishable",
+      "relationship_type": "institution-merged-into-institution",
+      "source": {
+        "display_name": "Saint Francis of Assisi Lithuanian Roman Catholic Parish, Minersville",
+        "entity_id": "cn:institution:st-francis-minersville-pa",
+        "entity_type": "institution",
+        "lifecycle": {
+          "end": "2008-07",
+          "source_assertion_ids": [
+            "assert:coal-1:minersville-foundation",
+            "assert:coal-1:minersville-building-closure"
+          ],
+          "start": "1895 attributed secondary; documented by 1909"
+        },
+        "slug": "st-francis-minersville-pa"
+      },
+      "source_artifact_ids": [
+        "src:coal-1:minersville-history:2026-08-17"
+      ],
+      "target": {
+        "display_name": "Saint Matthew the Evangelist Parish, Minersville",
+        "entity_id": "cn:institution:st-matthew-evangelist-minersville-pa",
+        "entity_type": "institution",
+        "lifecycle": {
+          "end": "2020-07-01",
+          "source_assertion_ids": [
+            "assert:coal-1:minersville-building-closure"
+          ],
+          "start": "2008-07"
+        },
+        "slug": "st-matthew-evangelist-minersville-pa"
       },
       "taxonomy": {
         "certainty": "established",
@@ -12716,12 +12791,12 @@
   "counts": {
     "building_site_entities": 175,
     "canadian_comparator_parishes": 3,
-    "closed_roman_catholic_parishes": 86,
+    "closed_roman_catholic_parishes": 87,
     "closed_roman_catholic_parishes_since_1990": 54,
     "closed_roman_catholic_parishes_since_2020": 2,
     "closed_roman_catholic_parishes_with_dated_year": 78,
     "coal_region_parish_institutions": 15,
-    "institution_continuity_edges": 51,
+    "institution_continuity_edges": 52,
     "physical_worship_site_address_states": {
       "established": 27,
       "not_established": 25,
@@ -13439,7 +13514,7 @@
     "source_assertion_id": "assert:pastoral-18:membership",
     "unit": "current Lithuanian Catholic parish, mission, or hosted pastoral community"
   },
-  "generated": "2026-08-16",
+  "generated": "2026-08-20",
   "institution_history": [
     {
       "building_fate": null,
@@ -13785,9 +13860,9 @@
       "city": "Spring Valley",
       "closed": {
         "authority": "brain_canonical_assertion",
-        "display": "1987",
-        "source_authority": "site_r10_baseline",
-        "year": 1987
+        "display": "early 1990s; exact date unresolved",
+        "source_authority": "reviewed_case_snapshot",
+        "year": null
       },
       "culturenet_entity_id": "cn:institution:st-anne-spring-valley-il",
       "diocese": "Peoria",
@@ -13816,9 +13891,9 @@
       ],
       "state": "IL",
       "status_authority": "brain_canonical_assertion",
-      "status_group": "unresolved",
-      "status_observed_at": "2026-07-16",
-      "status_source_authority": "site_r10_baseline",
+      "status_group": "closed",
+      "status_observed_at": "2026-08-20",
+      "status_source_authority": "canonical_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:st-anne-fourth-street-spring-valley-il"
       ]
@@ -16377,6 +16452,36 @@
         "source_authority": "unresolved",
         "year": null
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:current-1:dayton-active-2026",
+          "assert:current-1:dayton-cincinnati-jurisdiction",
+          "assert:current-1:dayton-founded-and-dedicated",
+          "assert:current-1:dayton-lithuanian-readings-2021"
+        ],
+        "continuation_mode": "same_institution_without_current_verified_lithuanian_ministry",
+        "continuity_relationship_ids": [
+          "rel:current-1:dayton-st-gabriel-family"
+        ],
+        "destination_name": "Holy Cross Church in the Saint Gabriel the Archangel Family of Parishes",
+        "display_summary": "Holy Cross remains an active Catholic parish with a Sunday Mass in the Saint Gabriel Family. Lithuanian readings were documented in 2021, but current Lithuanian worship is not established and Holy Cross is outside the accepted current Lithuanian pastoral network.",
+        "effective_date": "2022-07-01 family grouping; current Lithuanian ministry not established in 2026",
+        "future_plan": null,
+        "observed_at": "2026-07-16",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-kryziaus-dayton-oh",
+        "source_urls": [
+          "https://www.sgfp.org/",
+          "https://www.sgfp.org/holy-cross",
+          "https://www.sgfp.org/mass-schedule",
+          "https://catholicaoc.org/beacons-of-light/parish-families/northeast-deanery-family-10-updated",
+          "https://www.thecatholictelegraph.com/did-you-know-holy-cross-dayton/77781",
+          "https://en.wikipedia.org/wiki/Holy_Cross_Lithuanian_Roman_Catholic_Church",
+          "https://global.truelithuania.com/dayton-ohio-3879/",
+          "https://sielovada.org/siaures-amerika/"
+        ],
+        "status_basis": "The same Catholic parish remains open, but current Lithuanian liturgy or organized Lithuanian pastoral ministry is not established."
+      },
       "culturenet_entity_id": "cn:institution:holy-cross-dayton-oh",
       "diocese": "Cleveland",
       "founded": {
@@ -16405,9 +16510,9 @@
       ],
       "state": "OH",
       "status_authority": "brain_canonical_assertion",
-      "status_group": "unresolved",
-      "status_observed_at": "2026-08-03",
-      "status_source_authority": "canonical_status_adjudication",
+      "status_group": "transferred",
+      "status_observed_at": "2026-07-16",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:holy-cross-leo-street-dayton-oh"
       ]
@@ -18019,6 +18124,32 @@
         "source_authority": "canonical_graph",
         "year": 2009
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:ne-3:elizabeth-current",
+          "assert:ne-3:elizabeth-lifecycle"
+        ],
+        "continuation_mode": "merged_successor",
+        "continuity_relationship_ids": [
+          "rel:ne-3:elizabeth-merged"
+        ],
+        "destination_name": "Saint Adalbert and Saints Peter and Paul Parish, Elizabeth",
+        "display_summary": "The independent Lithuanian parish ended in the July 1, 2009 merger that formed Saint Adalbert and Saints Peter and Paul Parish. Its Ripley Place church remains in Catholic worship use under that successor.",
+        "effective_date": "2009-07-01",
+        "future_plan": null,
+        "observed_at": "2026-07-09",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#sv-petro-ir-povilo-elizabeth-nj",
+        "source_urls": [
+          "https://rcan.org/wp-content/uploads/2025/10/St.-Adalbert-and-Sts.-Peter-and-Paul-Elizabeth.pdf",
+          "https://rcan.org/we-are-his-witnesses/",
+          "https://rcan.org/planning-area-k-eastern-union/",
+          "https://global.truelithuania.com/tag/new-jersey-st-paul-and-st-peter-lithuanian-church/",
+          "https://catholicmasstime.org/church/saints-peter-and-paul-lithuanian/13357/",
+          "https://discovermass.com/church/saints-peter-and-paul-lithuanian-elizabeth-nj/"
+        ],
+        "status_basis": "The historical Lithuanian institution ended in a merger or canonical reorganization; a successor continues without current Lithuanian ministry."
+      },
       "culturenet_entity_id": "cn:institution:ss-peter-paul-elizabeth-nj",
       "diocese": "Newark",
       "founded": {
@@ -18046,9 +18177,9 @@
       ],
       "state": "NJ",
       "status_authority": "brain_canonical_assertion",
-      "status_group": "unresolved",
+      "status_group": "transferred",
       "status_observed_at": "2026-07-09",
-      "status_source_authority": "site_r10_baseline",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:ss-peter-paul-ripley-place-elizabeth-nj"
       ]
@@ -19877,9 +20008,32 @@
       "city": "Minersville",
       "closed": {
         "authority": "brain_canonical_assertion",
-        "display": null,
-        "source_authority": "unresolved",
-        "year": null
+        "display": "2008-07",
+        "source_authority": "canonical_graph",
+        "year": 2008
+      },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:coal-1:minersville-building-closure",
+          "assert:coal-1:minersville-foundation",
+          "assert:coal-1:minersville-vatican-caveat"
+        ],
+        "continuation_mode": "merged_successor_chain",
+        "continuity_relationship_ids": [
+          "rel:coal-1:minersville-merged-st-matthew"
+        ],
+        "destination_name": "Holy Family Parish of Minersville",
+        "display_summary": "Saint Francis was suppressed into Saint Matthew the Evangelist in July 2008. Saint Matthew later entered Holy Family Parish in 2020; limited worship in the former Saint Francis church until 2020 was building use by the successor, not continued life of the independent parish.",
+        "effective_date": "2008-07; successor chain continued 2020-07-01",
+        "future_plan": null,
+        "observed_at": "2026-08-20",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#st-francis-minersville-pa",
+        "source_urls": [
+          "https://www.allentowndiocese.org/sites/default/files/2025-11/2025-2026%20Directory_0.pdf",
+          "https://www.ad-today.com/holy-family-parish-of-minersville/two-minersville-parishes-to-merge"
+        ],
+        "status_basis": "The historical Lithuanian institution ended in a merger; later canonical reorganization carried its succession into the named current parish."
       },
       "culturenet_entity_id": "cn:institution:st-francis-minersville-pa",
       "diocese": "Allentown",
@@ -19904,13 +20058,14 @@
       "record_type": "parish",
       "registry_slug": "st-francis-minersville-pa",
       "relationship_ids": [
+        "rel:coal-1:minersville-merged-st-matthew",
         "rel:coal-1:minersville-used-site"
       ],
       "state": "PA",
       "status_authority": "brain_canonical_assertion",
-      "status_group": "unresolved",
-      "status_observed_at": null,
-      "status_source_authority": "site_r10_baseline",
+      "status_group": "transferred",
+      "status_observed_at": "2026-08-20",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:st-francis-minersville-pa"
       ]
@@ -21001,6 +21156,40 @@
         "source_authority": "unresolved",
         "year": null
       },
+      "continuation_summary": {
+        "canonical_evidence_assertion_ids": [
+          "assert:hartford:holy-trinity-capitol-church-dedicated-1927",
+          "assert:hartford:holy-trinity-established-1903",
+          "assert:hartford:holy-trinity-mission-current-2026",
+          "assert:hartford:holy-trinity-mission-of-cathedral-2025",
+          "assert:hartford:holy-trinity-regular-mass-ended-2026",
+          "assert:hartford:holy-trinity-site-schedule-stale"
+        ],
+        "continuation_mode": "parish_continues_as_cathedral_mission_without_regular_mass",
+        "continuity_relationship_ids": [
+          "rel:hartford:archdiocese-governs-holy-trinity"
+        ],
+        "destination_name": "Holy Trinity Mission, administered from the Cathedral of Saint Joseph",
+        "display_summary": "Holy Trinity remains officially open as a Lithuanian mission administered from the Cathedral parish. Regular Mass ended after May 30, 2026, while funerals and baptisms continue; the community's preservation campaign and the building's longer-term future remain open questions.",
+        "effective_date": "mission form documented by 2025-02-09; regular Mass ended after 2026-05-30",
+        "future_plan": null,
+        "observed_at": "2026-07-16",
+        "source_assertion_id": "assert:continuation-status-20:transferred-institution-adjudication",
+        "source_record": "repo://culturenet-brain/docs/research/parish-canon/migration-inputs/site-r10/data/parish-situation.json#svc-trejybes-hartford-ct",
+        "source_urls": [
+          "https://www.wtnh.com/news/connecticut/hartford/hartford-parishioners-met-with-notice-of-partial-closure-for-holy-trinity-catholic-church/",
+          "https://www.nbcconnecticut.com/news/local/priest-wont-face-charges-larceny-hartford-church/3625558/",
+          "https://www.wfsb.com/2025/02/19/popular-ct-priest-under-investigation-allegedly-stealing-money-parish/",
+          "https://container.parishesonline.com/bulletins/03/0549/20250209B.pdf",
+          "https://en.wikipedia.org/wiki/Holy_Trinity_Roman_Catholic_Church_(Hartford,_Connecticut)",
+          "https://www.wfsb.com/2025/08/14/case-closed-hartford-police-end-investigation-into-priest-accused-stealing-money/",
+          "https://lietuvai.lt/wiki/Hartford_Holy_Trinity_Church",
+          "https://lietuvai.lt/wiki/Holy_Trinity_Church_Hartford",
+          "https://archdioceseofhartford.org/wp-content/uploads/2026/03/2026.LOC_.GUIDE-JAN-ETHNIC.pdf",
+          "https://archdioceseofhartford.org/clergy-staff-directory/"
+        ],
+        "status_basis": "The historical Lithuanian institution remains officially open in mission form under another parish, but regular Mass no longer continues."
+      },
       "culturenet_entity_id": "cn:institution:holy-trinity-hartford-ct",
       "diocese": "Hartford",
       "founded": {
@@ -21029,9 +21218,9 @@
       ],
       "state": "CT",
       "status_authority": "brain_canonical_assertion",
-      "status_group": "unresolved",
-      "status_observed_at": "2026-08-02",
-      "status_source_authority": "brain_current_status_adjudication",
+      "status_group": "transferred",
+      "status_observed_at": "2026-07-16",
+      "status_source_authority": "canonical_continuation_status_adjudication",
       "terminal_worship_site_ids": [
         "cn:building_site:holy-trinity-hartford-capitol-avenue-church"
       ]
@@ -21623,7 +21812,7 @@
       "unit": "distinct U.S. Roman Catholic parish institution"
     }
   },
-  "revision_id": "canonical-infographic-units-2026-08-16-worship-site-addresses",
+  "revision_id": "canonical-infographic-units-2026-08-20-institution-status-reconciliation",
   "schema": "culturenet-parish-infographic-projection.v1",
   "unit_contracts": [
     {
@@ -21665,7 +21854,7 @@
     {
       "counted_in_public_institution_total": false,
       "id": "institution_continuity",
-      "population": 51,
+      "population": 52,
       "unit": "typed institutional, community, site, identity, or future-plan relationship"
     },
     {

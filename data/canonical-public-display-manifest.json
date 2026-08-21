@@ -2,13 +2,13 @@
   "schema": "culturenet-parish-public-display-manifest.v1",
   "authority": "LietuvaAI/culturenet-brain",
   "publication_projection_revision": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
-  "infographic_projection_revision": "canonical-infographic-units-2026-08-16-worship-site-addresses",
+  "infographic_projection_revision": "canonical-infographic-units-2026-08-20-institution-status-reconciliation",
   "current_events_revision": "parish-current-events-2026-08-14",
   "files": [
     {
       "path": "docs/research/parish-canon/public-display/registry-unified.json",
       "site_path": "data/registry-unified.json",
-      "sha256": "9acff01b3cdab9ee388eb7ab90a42339eba0386d94d72e929bbc8e6b71292a81"
+      "sha256": "21118c49a49aaaabec53fc87ddb39933499ea6a02417a1c28b0b8b9ea653856c"
     },
     {
       "path": "docs/research/parish-canon/public-display/parish-situation.json",
@@ -23,7 +23,7 @@
     {
       "path": "docs/research/parish-canon/public-display/photos.json",
       "site_path": "data/photos.json",
-      "sha256": "f3cdeb44605a1bcca19c6f11616536bf98b6208d9ac0a004b2c0a790d8f36863"
+      "sha256": "e98d06077ce242e70dd9a16d48eb0e99d7d997638f2f953945d8f154e1263e12"
     },
     {
       "path": "docs/research/draugas/parishes.csv",
