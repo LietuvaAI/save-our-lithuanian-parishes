@@ -1,11 +1,11 @@
 {
   "generatedFrom": {
-    "registryRevision": 37,
+    "registryRevision": 39,
     "registryDate": "2026-08-11",
     "canonicalPublicationRevision": "canonical-public-census-2026-08-11-wider-catholic-life-geocodes",
-    "canonicalPublicationHash": "sha256:bef6ab8831eb78727fe908039da9a84b1eab9d281d761de86fd58a8f222541e6",
-    "canonicalInfographicRevision": "canonical-infographic-units-2026-08-16-worship-site-addresses",
-    "canonicalInfographicHash": "sha256:691de2b826621cc830245b8bb885af3b1639f10c37a5a7375f16155ea5b5af2f",
+    "canonicalPublicationHash": "sha256:a64a9343bc343eed8ff3539469c161d8455e4ff54a34194f7a79331ff78c3035",
+    "canonicalInfographicRevision": "canonical-infographic-units-2026-08-20-institution-status-reconciliation",
+    "canonicalInfographicHash": "sha256:ad9c4888a7a781038c653ae2fda29b4c584101d1987462706dc6e86f293db671",
     "networkChecked": "2026-08-03"
   },
   "publicUS": {
@@ -35,10 +35,9 @@
     "protestantCongregations": 5,
     "institutionStatus": {
       "active_parish": 10,
-      "closed": 98,
+      "closed": 99,
       "mass_continues": 5,
-      "transferred": 24,
-      "unresolved": 5,
+      "transferred": 28,
       "unverified": 13
     }
   },
@@ -46,13 +45,12 @@
     "parishes": 131,
     "institutionStatus": {
       "active_parish": 6,
-      "closed": 86,
+      "closed": 87,
       "mass_continues": 5,
-      "transferred": 22,
-      "unresolved": 5,
+      "transferred": 26,
       "unverified": 7
     },
-    "closed": 86,
+    "closed": 87,
     "closedWithDatedYear": 78,
     "closedSince1990": 54,
     "closedSince2020": 2,
@@ -73,13 +71,12 @@
     "missions": 6,
     "institutionStatus": {
       "active_parish": 8,
-      "closed": 90,
+      "closed": 91,
       "mass_continues": 5,
-      "transferred": 22,
-      "unresolved": 5,
+      "transferred": 26,
       "unverified": 7
     },
-    "closed": 90,
+    "closed": 91,
     "retainingLithuanianWorship": 13
   },
   "physicalSites": {
@@ -87,7 +84,7 @@
     "allBuildingSiteEntities": 175
   },
   "continuity": {
-    "relationships": 51
+    "relationships": 52
   },
   "comparators": {
     "canadianParishes": 3

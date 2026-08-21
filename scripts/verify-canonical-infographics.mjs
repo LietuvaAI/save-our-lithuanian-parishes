@@ -477,9 +477,9 @@ const campaignAdjudications = [
   ],
   [
     "/parishes/svc-trejybes-hartford-ct",
-    "unresolved",
+    "transferred",
     null,
-    "brain_current_status_adjudication",
+    "canonical_continuation_status_adjudication",
   ],
   [
     "/parishes/sv-juozapo-waterbury-ct",

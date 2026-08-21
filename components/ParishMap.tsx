@@ -380,6 +380,10 @@ const mapStatusCounts = {
   closed: POINTS.filter((point) => point.group === "closed").length,
   unverified: POINTS.filter((point) => point.group === "unverified").length,
 };
+const publishedUnresolvedCount =
+  "unresolved" in siteFigures.publicUS.institutionStatus
+    ? siteFigures.publicUS.institutionStatus.unresolved
+    : 0;
 
 if (
   POINTS.length !== siteFigures.publicUS.records ||
@@ -392,8 +396,7 @@ if (
     siteFigures.publicUS.institutionStatus.active_parish ||
   mapStatusCounts.mass_continues !==
     siteFigures.publicUS.institutionStatus.mass_continues ||
-  mapStatusCounts.unresolved !==
-    siteFigures.publicUS.institutionStatus.unresolved ||
+  mapStatusCounts.unresolved !== publishedUnresolvedCount ||
   mapStatusCounts.transferred !==
     siteFigures.publicUS.institutionStatus.transferred ||
   mapStatusCounts.closed !== siteFigures.publicUS.institutionStatus.closed ||
@@ -1210,63 +1213,65 @@ export default function ParishMap() {
                   fill: string;
                   count: number;
                 }[]
-              ).map(({ key, mode: itemMode, label, description, fill, count }) => {
-                const expanded = expandedKey === key;
-                const active =
-                  selectedStatuses.size === 1 &&
-                  selectedStatuses.has(itemMode);
-                const detailId = `map-key-detail-${key}`;
-                return (
-                  <div
-                    key={key}
-                    className={`relative min-w-0 rounded-md text-ui-label ${
-                      expanded ? "col-span-2" : ""
-                    }`}
-                  >
-                    <div className="relative">
-                      <button
-                        type="button"
-                        aria-pressed={active}
-                        onClick={() => selectStatus(itemMode)}
-                        className={`flex min-h-8 w-full min-w-0 items-center gap-2 rounded-md border py-1.5 pl-2 pr-7 text-left leading-tight transition-colors ${
-                          active
-                            ? "border-foreground bg-band text-foreground"
-                            : "border-rule text-foreground hover:border-foreground"
-                        }`}
-                      >
-                        <span
-                          className="h-2.5 w-2.5 shrink-0 rounded-full"
-                          style={{
-                            background: fill,
-                            opacity: key === "unverified" ? 0.55 : 1,
-                          }}
-                          aria-hidden
-                        />
-                        <span className="min-w-0 flex-1 font-medium">
-                          {label} · {count}
-                        </span>
-                      </button>
-                      <button
-                        type="button"
-                        className="absolute right-1 top-1/2 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded text-body-copy leading-none text-muted hover:bg-background hover:text-foreground"
-                        aria-expanded={expanded}
-                        aria-controls={detailId}
-                        aria-label={`${expanded ? "Hide" : "Explain"} ${label}`}
-                        title={`${expanded ? "Hide" : "Explain"} ${label}`}
-                        onClick={() => setExpandedKey(expanded ? null : key)}
-                      >
-                        <span aria-hidden>{expanded ? "−" : "+"}</span>
-                      </button>
-                    </div>
+              )
+                .filter(({ count }) => count > 0)
+                .map(({ key, mode: itemMode, label, description, fill, count }) => {
+                  const expanded = expandedKey === key;
+                  const active =
+                    selectedStatuses.size === 1 &&
+                    selectedStatuses.has(itemMode);
+                  const detailId = `map-key-detail-${key}`;
+                  return (
                     <div
-                      id={detailId}
-                      className={`${expanded ? "block" : "hidden"} mt-1.5 rounded-md bg-band px-2.5 py-2 leading-relaxed text-muted`}
+                      key={key}
+                      className={`relative min-w-0 rounded-md text-ui-label ${
+                        expanded ? "col-span-2" : ""
+                      }`}
                     >
-                      {description}
+                      <div className="relative">
+                        <button
+                          type="button"
+                          aria-pressed={active}
+                          onClick={() => selectStatus(itemMode)}
+                          className={`flex min-h-8 w-full min-w-0 items-center gap-2 rounded-md border py-1.5 pl-2 pr-7 text-left leading-tight transition-colors ${
+                            active
+                              ? "border-foreground bg-band text-foreground"
+                              : "border-rule text-foreground hover:border-foreground"
+                          }`}
+                        >
+                          <span
+                            className="h-2.5 w-2.5 shrink-0 rounded-full"
+                            style={{
+                              background: fill,
+                              opacity: key === "unverified" ? 0.55 : 1,
+                            }}
+                            aria-hidden
+                          />
+                          <span className="min-w-0 flex-1 font-medium">
+                            {label} · {count}
+                          </span>
+                        </button>
+                        <button
+                          type="button"
+                          className="absolute right-1 top-1/2 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded text-body-copy leading-none text-muted hover:bg-background hover:text-foreground"
+                          aria-expanded={expanded}
+                          aria-controls={detailId}
+                          aria-label={`${expanded ? "Hide" : "Explain"} ${label}`}
+                          title={`${expanded ? "Hide" : "Explain"} ${label}`}
+                          onClick={() => setExpandedKey(expanded ? null : key)}
+                        >
+                          <span aria-hidden>{expanded ? "−" : "+"}</span>
+                        </button>
+                      </div>
+                      <div
+                        id={detailId}
+                        className={`${expanded ? "block" : "hidden"} mt-1.5 rounded-md bg-band px-2.5 py-2 leading-relaxed text-muted`}
+                      >
+                        {description}
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
               </div>
             </div>
 
