@@ -28,6 +28,7 @@
     "verify:dispatch-mirror:live": "node scripts/verify-dispatch-mirror.mjs --live",
     "test:vercel-ignore": "node scripts/test-vercel-ignore-build.mjs",
     "audit:case-site-lineage": "node scripts/audit-case-file-site-lineage.mjs",
+    "audit:line-drawings": "node scripts/audit-line-drawing-coverage.mjs --summary",
     "prebuild": "npm run data",
     "build": "next build",
     "start": "next start",

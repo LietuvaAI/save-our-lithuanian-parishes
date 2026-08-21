@@ -1,6 +1,69 @@
 {
   "_comment": "Parish photo provenance registry. Every entry MUST carry rights (permission_granted | public_domain | open_license | own_work | pending_permission) and a rightsNote tracing the holder and evidence. Only cleared rights render (lib/photos.ts); pending entries are the paper trail of what returns when permission lands. Guard: scripts/verify-photo-rights.mjs.",
   "parishes": {
+    "sv-kazimiero-amsterdam-ny-line-drawing": {
+      "src": "/images/parishes/amsterdam-st-casimir-line-drawing.png",
+      "alt": "Line drawing of the former St. Casimir Lithuanian church in Amsterdam, New York.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, adapted from Beyond My Ken's Wikimedia Commons photograph.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Created 2026-08-20 from the CC BY-SA 4.0 exterior photograph of the former St. Casimir church at 262 Main Street. The adaptation preserves the surviving Lithuanian facade, statue niche, and central tower.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Former_St._Casimir_Church,_Amsterdam.jpg"
+    },
+    "sv-kazimiero-gary-in-line-drawing": {
+      "src": "/images/parishes/gary-st-casimir-line-drawing.png",
+      "alt": "Line drawing of the historical St. Casimir Lithuanian church building in Gary, Indiana.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, adapted from Lotzman Katzman's Wikimedia Commons photograph.",
+      "license": "CC BY-SA 3.0",
+      "rights": "open_license",
+      "rightsNote": "Created 2026-08-20 from the CC BY-SA 3.0 exterior photograph identified and geocoded as the historical St. Casimir Lithuanian church in Gary.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St._Casimiri%27s_Lithuanian_Church_(historical)_Gary,_Indiana_-_panoramio.jpg"
+    },
+    "sv-kazimiero-philadelphia-pa-line-drawing": {
+      "src": "/images/parishes/philadelphia-st-casimir-line-drawing.png",
+      "alt": "Line drawing of St. Casimir Lithuanian church on Wharton Street in Philadelphia.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, adapted from Nick-philly's Wikimedia Commons photograph.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Created 2026-08-20 from the CC BY-SA 4.0 exterior photograph of St. Casimir Lithuanian Catholic Church at 324 Wharton Street.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St_Casimir%27s_Lithuanian_Catholic_Church_-_324_Wharton_St,_Philadelphia,_PA_19147.jpg"
+    },
+    "sv-kazimiero-pittston-pa-line-drawing": {
+      "src": "/images/parishes/pittston-st-casimir-line-drawing.png",
+      "alt": "Line drawing of the 1909 St. Casimir Lithuanian church in Pittston, Pennsylvania.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, adapted from Doug Kerr's Wikimedia Commons photograph.",
+      "license": "CC BY-SA 2.0",
+      "rights": "open_license",
+      "rightsNote": "Created 2026-08-20 from the CC BY-SA 2.0 exterior photograph of the 1909 Church Street building, taken after the parish's 2008 closure.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:St._Casimir_Church_(Pittston,_Pennsylvania)_(01).jpg"
+    },
+    "sv-pranciskaus-lawrence-ma-line-drawing": {
+      "src": "/images/parishes/lawrence-st-francis-line-drawing.png",
+      "alt": "Line drawing of St. Francis Lithuanian church in Lawrence, Massachusetts.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, informed by the 1958 Boston Public Library photograph in Digital Commonwealth.",
+      "license": "Save Our Lithuanian Parishes original illustration",
+      "rights": "own_work",
+      "rightsNote": "Created 2026-08-20 from a Digital Commonwealth source marked no known copyright restrictions. Because the historical photograph partly obscures the church, the drawing is limited to its documented tower, nave, roofline, windows, and masonry form.",
+      "evidenceUrl": "https://www.digitalcommonwealth.org/search/commonwealth:gq67rf33j"
+    },
+    "ausros-vartu-worcester-ma-line-drawing": {
+      "src": "/images/parishes/worcester-our-lady-of-vilna-line-drawing.png",
+      "alt": "Line drawing of Our Lady of Vilna church in Worcester, Massachusetts.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, adapted from Farragutful's Wikimedia Commons photograph.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Created 2026-08-20 from the CC BY-SA 4.0 exterior photograph of Our Lady of Vilna Church on Sterling Street.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Vilna_-_Worcester_01.jpg"
+    },
+    "dievo-apvaizdos-scranton-pa-line-drawing": {
+      "src": "/images/parishes/scranton-divine-providence-line-drawing.png",
+      "alt": "Line drawing of Divine Providence Lithuanian National Catholic church in Scranton, Pennsylvania.",
+      "attribution": "AI-assisted architectural line drawing by Save Our Lithuanian Parishes, adapted from Renata3's Wikimedia Commons photograph.",
+      "license": "CC BY-SA 4.0",
+      "rights": "open_license",
+      "rightsNote": "Created 2026-08-20 from the CC BY-SA 4.0 front exterior photograph of Providence of God Lithuanian National Catholic Church, corroborated by the companion parish-sign photographs.",
+      "evidenceUrl": "https://commons.wikimedia.org/wiki/File:Lithuania_National_Catholic_Church,_Scranton,_PA_-_front_20200621.jpg"
+    },
     "svc-mergeles-marijos-gimimo-chicago-il": {
       "src": "/images/parishes/chicago-nativity-bvm.jpg",
       "alt": "Exterior of Nativity of the Blessed Virgin Mary Lithuanian church in Chicago.",
