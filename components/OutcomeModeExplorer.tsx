@@ -88,12 +88,12 @@ export default function OutcomeModeExplorer({
         {institutions ? (
           <p className="mt-1 max-w-[90ch] text-body-copy leading-relaxed">
             Every line is one institution&mdash;one parish or mission, counted
-            once&mdash;running from the decade it began to where it stands
-            today. This view follows {parishCount} U.S. Roman Catholic parishes
-            and {missionCount} missions. Closed institutions fan out by the
-            known condition of the church they last used, but institution and
-            building outcomes remain separate facts; earlier churches and
-            multiple sites are counted in Buildings mode. Other traditions,
+            once&mdash;running from the decade it began to its institutional
+            outcome today. This view follows {parishCount} U.S. Roman Catholic
+            parishes and {missionCount} missions. Closed is one institutional
+            outcome; optional filters inside its list describe the known
+            condition of each institution&apos;s last-used church. Earlier churches
+            and multiple sites are counted in Buildings mode. Other traditions,
             research-only records, and Canadian comparators are outside this
             population; all {publicInstitutionCount} published U.S. profiles
             are in the {" "}
@@ -156,8 +156,9 @@ export default function OutcomeModeExplorer({
             <strong className="font-semibold text-foreground">
               Institution view:
             </strong>{" "}
-            each parish or mission is counted once. For a closed institution,
-            the final branch describes only the last church it used.
+            each parish or mission is counted once. Closed remains one outcome;
+            the condition of its last-used church is available as a secondary
+            filter inside the Closed list.
           </>
         ) : (
           <>

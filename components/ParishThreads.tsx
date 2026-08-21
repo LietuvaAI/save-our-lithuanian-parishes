@@ -2,14 +2,17 @@
 
 // ============================================================================
 // ParishThreads — every Lithuanian Roman Catholic institution as its own line,
-// from the decade it began to where it stands today. Closed institutions gather
-// and then fan out by what became of the church they last used.
+// from the decade it began to its institutional outcome today. Closed remains
+// one institutional outcome; the fate of the last-used church is available as
+// a secondary filter inside the Closed drawer.
 //
 // Two rules govern this component:
 //
 //   1. It is an INSTITUTION view. An institution and its church building are
-//      separate units with separate populations. Building condition belongs to
-//      Buildings mode on /where-every-parish-ended-up and is never counted here.
+//      separate units with separate populations. The principal flow never
+//      turns building condition into an institutional outcome. Closed-institution
+//      cards may be filtered by their terminal-site condition without counting
+//      those sites as another population.
 //   2. Every label, count and explanation comes from the canonical projection.
 //      The component holds no parish list, description map, or per-parish
 //      exception.
@@ -89,14 +92,6 @@ const FATE_LABEL: Record<FateKey, string> = {
   unrecorded: "Last-used church condition not established",
 };
 
-const FATE_SUB: Record<FateKey, string> = {
-  demolished: "closed institution; its final church is gone",
-  repurposed: "closed institution; its final church has another use",
-  listed_for_sale: "closed institution; its final church is on the market",
-  standing: "closed institution; its final church survives",
-  unrecorded: "closed institution; final-site condition unknown",
-};
-
 // Long drawer explanations. Each says what the category counts and, just as
 // importantly, what it does not claim.
 const FATE_NOTE: Partial<Record<FateKey, string>> = {
@@ -104,6 +99,8 @@ const FATE_NOTE: Partial<Record<FateKey, string>> = {
     "These historical Roman Catholic institutions are closed, and their final documented worship sites were later demolished. This view counts parishes and missions, not every building they used: each institution appears once, according to the condition of its terminal worship site. Earlier churches belonging to the same parish are recorded separately among the church buildings. Parish closure and building demolition are also separate events and may have happened in different years.",
   repurposed:
     "These closed Roman Catholic institutions have terminal worship sites that survive in another use. Repurposed may mean worship by another Christian community, conversion into housing, or use as a cultural or community facility. This view counts each historical institution once and assigns a building outcome only when its terminal worship site — or all of its terminal sites — resolves canonically to the same condition. It therefore does not include every repurposed building associated with the Lithuanian parish story.",
+  listed_for_sale:
+    "These closed Roman Catholic institutions have a last-used church that is publicly listed for sale or redevelopment. A listing records a current building condition, not another institutional outcome and not a completed sale.",
   standing:
     "The historical Lithuanian parish has ended, but its terminal church building remains standing. This category covers only closed parish institutions; standing churches belonging to active, hosted-Mass, or transferred communities appear in their respective parish-status groups.",
   unrecorded:
@@ -113,6 +110,8 @@ const FATE_NOTE: Partial<Record<FateKey, string>> = {
 const GROUP_NOTE: Partial<Record<EndStateGroup, string>> = {
   transferred:
     "The historical Lithuanian parish no longer operates as a current Lithuanian pastoral institution, but something connected to it continues: the same parish may serve a different community, a successor parish may remain active, or the former church may serve another religious community. This presentation group does not mean that every institution merged, and it is not the same as the physical-building category Repurposed. Each card identifies the documented form of continuity.",
+  closed:
+    "These parish and mission institutions are closed. Their institutional outcome is Closed regardless of what later happened to a church building. Use the filters below to examine the documented condition of each institution's last-used church; earlier and replacement buildings remain in Buildings mode.",
 };
 
 const CONTINUATION_MODE_LABEL: Record<string, string> = {
@@ -137,7 +136,7 @@ const GROUP_SUBLABEL: Record<EndStateGroup, string> = {
   mass_continues: "inside a parish no longer Lithuanian-led",
   transferred: "no longer a Lithuanian pastoral institution",
   unresolved: "contested or canonically undecided",
-  closed: "institution closed; the church follows →",
+  closed: "the parish or mission institution ended",
   unverified: "present status still being researched",
 };
 
@@ -148,14 +147,6 @@ const FLOW_GROUP_LABEL: Record<EndStateGroup, string> = {
 
 const institutionType = (recordType: ThreadParish["recordType"]) =>
   recordType === "misija" ? "Mission" : "Parish";
-
-const FATE_OPACITY: Record<FateKey, number> = {
-  demolished: 0.95,
-  repurposed: 0.7,
-  listed_for_sale: 0.68,
-  standing: 0.68,
-  unrecorded: 0.22,
-};
 
 // Geometry — a compact field with room for labels at both edges.
 // Leave enough viewBox width for the longest canonical outcome label at the
@@ -169,7 +160,6 @@ const X_END = 622;
 const NODE_W = 12;
 const GAP_DEC = 9;
 const GAP_MID = 26;
-const GAP_FATE = 13;
 // A decade label is one line; a terminal label is a title plus a sub-line.
 const DEC_LABEL_GAP = 16;
 const TERM_LABEL_GAP = 32;
@@ -221,6 +211,7 @@ export default function ParishThreads({
   const [hot, setHot] = useState<string | null>(null); // slug | band key
   const [open, setOpen] = useState<string | null>(null); // band key
   const [query, setQuery] = useState("");
+  const [closedFilter, setClosedFilter] = useState<FateKey | "all">("all");
 
   const model = useMemo(() => {
     const groupIdx = (p: ThreadParish) =>
@@ -306,38 +297,20 @@ export default function ParishThreads({
       my += GAP_MID;
     }
 
-    // ── Terminal column: living groups pass through; closed splits ──
+    // ── Terminal column: one institutional outcome per group ──
     const fatesPresent = FATE_ORDER.filter((k) =>
       parishes.some((p) => p.fateKey === k),
     );
-    const termKeys: string[] = [];
-    for (const g of groups) {
-      if (g === "closed")
-        for (const k of fatesPresent) termKeys.push(`fate:${k}`);
-      else termKeys.push(`g:${g}`);
-    }
+    const termKeys = groups.map((g) => `g:${g}`);
     const termMembers = new Map<string, ThreadParish[]>();
-    for (const key of termKeys) termMembers.set(key, []);
-    for (const p of parishes) {
-      const g = toGroup(p.endState);
-      const key = g === "closed" ? `fate:${p.fateKey}` : `g:${g}`;
-      termMembers.get(key)?.push(p);
+    for (const g of groups) {
+      // Preserve the mid-column order so each institutional outcome runs
+      // cleanly to its terminal node. Building-condition filtering happens in
+      // the drawer and must not reorder or split the visual outcome.
+      termMembers.set(`g:${g}`, [...byGroup.get(g)!]);
     }
-    for (const key of termKeys)
-      termMembers
-        .get(key)!
-        .sort(
-          (a, b) => decadeIdx(a) - decadeIdx(b) || a.name.localeCompare(b.name),
-        );
 
-    const gapFor = (i: number) => {
-      const a = termKeys[i];
-      const b = termKeys[i + 1];
-      if (!b) return 0;
-      return a.startsWith("fate:") && b.startsWith("fate:")
-        ? GAP_FATE
-        : GAP_MID;
-    };
+    const gapFor = (i: number) => (termKeys[i + 1] ? GAP_MID : 0);
     let gapsTotal = 0;
     for (let i = 0; i < termKeys.length - 1; i++) gapsTotal += gapFor(i);
     const termU = (midSpanH - gapsTotal) / Math.max(total, 1);
@@ -390,7 +363,10 @@ export default function ParishThreads({
         groups.map((g) => [g, byGroup.get(g)!.length]),
       ) as Record<EndStateGroup, number>,
       fateCounts: Object.fromEntries(
-        fatesPresent.map((k) => [k, termMembers.get(`fate:${k}`)!.length]),
+        fatesPresent.map((k) => [
+          k,
+          byGroup.get("closed")!.filter((p) => p.fateKey === k).length,
+        ]),
       ) as Record<FateKey, number>,
     };
   }, [parishes]);
@@ -411,7 +387,7 @@ export default function ParishThreads({
 
   const bandKeyOf = (p: ThreadParish) => {
     const g = toGroup(p.endState);
-    return g === "closed" ? `fate:${p.fateKey}` : `g:${g}`;
+    return `g:${g}`;
   };
 
   const isThreadActive = (p: ThreadParish) => {
@@ -419,13 +395,10 @@ export default function ParishThreads({
     const activeKey = hot;
     if (!activeKey) return true;
     if (
-      activeKey.startsWith("g:") ||
-      activeKey.startsWith("fate:") ||
-      activeKey.startsWith("dec:")
+      activeKey.startsWith("g:") || activeKey.startsWith("dec:")
     ) {
       if (activeKey.startsWith("dec:"))
         return decadeOf(p.anchorYear) === activeKey.slice(4);
-      if (activeKey === "g:closed") return toGroup(p.endState) === "closed";
       return (
         bandKeyOf(p) === activeKey || `g:${toGroup(p.endState)}` === activeKey
       );
@@ -532,29 +505,26 @@ export default function ParishThreads({
     if (nearest?.href) router.push(nearest.href);
   };
 
-  const openFate: FateKey | null = open?.startsWith("fate:")
-    ? (open.slice(5) as FateKey)
-    : null;
   const openGroup: EndStateGroup | null = open?.startsWith("g:")
     ? (open.slice(2) as EndStateGroup)
     : null;
-  const openLabel = openFate
-    ? FATE_LABEL[openFate]
-    : open?.startsWith("dec:")
+  const openLabel = open?.startsWith("dec:")
       ? open.slice(4) === "Undated"
         ? "No established beginning"
         : `Began in the ${open.slice(4)}`
       : openGroup
         ? FLOW_GROUP_LABEL[openGroup]
         : null;
-  const openNote = openFate
-    ? FATE_NOTE[openFate]
-    : openGroup
+  const openNote = openGroup
       ? (GROUP_NOTE[openGroup] ?? null)
       : open?.startsWith("dec:") && open.slice(4) === "Undated"
         ? "No founding year is established for these records; none is inferred."
         : null;
-  const openMembers = open ? (model.bandMembers.get(open) ?? []) : [];
+  const openBaseMembers = open ? (model.bandMembers.get(open) ?? []) : [];
+  const openMembers =
+    open === "g:closed" && closedFilter !== "all"
+      ? openBaseMembers.filter((member) => member.fateKey === closedFilter)
+      : openBaseMembers;
 
   // A leader from the band's true centre to its displaced label.
   const leaderPath = (bandCy: number, labelCy: number) => {
@@ -612,9 +582,7 @@ export default function ParishThreads({
               {hovered.anchorLabel}{" "}
               {hovered.anchorDisplay ?? "not yet established"} ·{" "}
               {institutionType(hovered.recordType)} ·{" "}
-              {toGroup(hovered.endState) === "closed" && hovered.fateKey
-                ? `closed; ${FATE_LABEL[hovered.fateKey].toLowerCase()}`
-                : FLOW_GROUP_LABEL[toGroup(hovered.endState)]}
+              {FLOW_GROUP_LABEL[toGroup(hovered.endState)]}
               {" · click to open profile"}
             </span>
           </span>
@@ -633,7 +601,7 @@ export default function ParishThreads({
             className="block h-auto w-full max-w-none"
             style={{ minWidth: 740 }}
             role="img"
-            aria-label={`Each of the ${model.total} documented Roman Catholic Lithuanian parishes and missions as one line, from the decade it began to where it stands today; the closed fan out by what became of the church they last used.`}
+            aria-label={`Each of the ${model.total} documented Roman Catholic Lithuanian parishes and missions as one line, from the decade it began to its institutional outcome today.`}
           >
             {/* One heading at each edge. A second "end state" heading over the
                 Closed bracket read as the same question asked twice. */}
@@ -662,7 +630,7 @@ export default function ParishThreads({
               fill="var(--muted)"
               className="font-sans text-small-copy"
             >
-              closed parishes fan out by what became of the church
+              one institutional outcome per parish or mission
             </text>
 
             {/* Decade bands + decluttered labels */}
@@ -819,11 +787,7 @@ export default function ParishThreads({
             {/* Terminal nodes + decluttered labels with leaders */}
             {model.termKeys.map((key, i) => {
               const t = model.term.get(key)!;
-              const isFate = key.startsWith("fate:");
-              const fate = isFate ? (key.slice(5) as FateKey) : null;
-              const g = isFate
-                ? ("closed" as EndStateGroup)
-                : (key.slice(2) as EndStateGroup);
+              const g = key.slice(2) as EndStateGroup;
               const n = model.bandMembers.get(key)!.length;
               const bandCy = (t.y0 + t.y1) / 2;
               const cy = model.termLabelY[i];
@@ -838,7 +802,7 @@ export default function ParishThreads({
                     width={NODE_W}
                     height={Math.max(t.y1 - t.y0, 7)}
                     fill={END_STATE_COLOR[g]}
-                    opacity={fate ? FATE_OPACITY[fate] : 0.95}
+                    opacity={0.95}
                     rx={2}
                     className="cursor-pointer"
                     onMouseEnter={() => setHot(key)}
@@ -847,7 +811,7 @@ export default function ParishThreads({
                       setOpen((o) => (o === key ? null : key));
                     }}
                   >
-                    <title>{`${isFate ? FATE_LABEL[fate!] : FLOW_GROUP_LABEL[g]}: ${n} — click to list`}</title>
+                    <title>{`${FLOW_GROUP_LABEL[g]}: ${n} — click to list`}</title>
                   </rect>
                   <path
                     d={leaderPath(bandCy, cy)}
@@ -859,11 +823,11 @@ export default function ParishThreads({
                   <text
                     x={X_END + NODE_W + 10}
                     y={cy - 7}
-                    fontWeight={fate === "demolished" ? 700 : 600}
+                    fontWeight={600}
                     fill="var(--foreground)"
                     className="font-sans text-body-copy"
                   >
-                    {isFate ? FATE_LABEL[fate!] : FLOW_GROUP_LABEL[g]}
+                    {FLOW_GROUP_LABEL[g]}
                     <tspan fontWeight={400} fill="var(--muted)">{` · ${n}`}</tspan>
                     <tspan
                       x={X_END + NODE_W + 10}
@@ -872,7 +836,7 @@ export default function ParishThreads({
                       fill="var(--muted)"
                       className="text-small-copy"
                     >
-                      {isFate ? FATE_SUB[fate!] : GROUP_SUBLABEL[g]}
+                      {GROUP_SUBLABEL[g]}
                     </tspan>
                   </text>
                 </g>
@@ -887,7 +851,7 @@ export default function ParishThreads({
               <h3 className="font-serif text-subsection-title font-semibold">
                 {openLabel}
                 <span className="ml-2 font-sans text-body-copy font-normal text-muted">
-                  {openMembers.length} of {model.total} institutions
+                  {openBaseMembers.length} of {model.total} institutions
                 </span>
               </h3>
               <button
@@ -902,6 +866,53 @@ export default function ParishThreads({
               <p className="mt-2 max-w-4xl text-body-copy leading-relaxed text-muted">
                 {openNote}
               </p>
+            ) : null}
+            {open === "g:closed" ? (
+              <div className="mt-3 border-y border-rule py-3">
+                <p className="text-small-copy font-semibold uppercase tracking-[0.12em] text-muted">
+                  Filter by the last-used church
+                </p>
+                <div
+                  className="mt-2 flex flex-wrap gap-2"
+                  role="group"
+                  aria-label="Filter closed institutions by the condition of their last-used church"
+                >
+                  <button
+                    type="button"
+                    onClick={() => setClosedFilter("all")}
+                    aria-pressed={closedFilter === "all"}
+                    className={`rounded-full border px-3 py-1.5 text-support-copy font-semibold ${
+                      closedFilter === "all"
+                        ? "border-foreground bg-foreground text-background"
+                        : "border-rule bg-background text-foreground hover:border-foreground"
+                    }`}
+                  >
+                    All closed · {openBaseMembers.length}
+                  </button>
+                  {FATE_ORDER.filter(
+                    (fate) => (model.fateCounts[fate] ?? 0) > 0,
+                  ).map((fate) => (
+                    <button
+                      key={fate}
+                      type="button"
+                      onClick={() => setClosedFilter(fate)}
+                      aria-pressed={closedFilter === fate}
+                      className={`rounded-full border px-3 py-1.5 text-support-copy font-semibold ${
+                        closedFilter === fate
+                          ? "border-foreground bg-foreground text-background"
+                          : "border-rule bg-background text-foreground hover:border-foreground"
+                      }`}
+                    >
+                      {FATE_LABEL[fate]} · {model.fateCounts[fate]}
+                    </button>
+                  ))}
+                </div>
+                {closedFilter !== "all" ? (
+                  <p className="mt-2 max-w-4xl text-support-copy leading-relaxed text-muted">
+                    {FATE_NOTE[closedFilter]}
+                  </p>
+                ) : null}
+              </div>
             ) : null}
             <ul className="mt-3 grid gap-x-6 gap-y-3 text-body-copy sm:grid-cols-2 lg:grid-cols-3">
               {openMembers.map((m) => (
@@ -927,6 +938,11 @@ export default function ParishThreads({
                     {m.anchorDisplay ?? "year not yet established"}
                     {m.endedDisplay ? ` · ended ${m.endedDisplay}` : ""}
                   </span>
+                  {open === "g:closed" && m.fateKey ? (
+                    <span className="mt-1 block text-support-copy font-semibold text-foreground">
+                      {FATE_LABEL[m.fateKey]}
+                    </span>
+                  ) : null}
                   {m.continuation ? (
                     <span className="mt-1 block text-support-copy leading-relaxed text-muted">
                       <strong className="font-semibold text-foreground">
