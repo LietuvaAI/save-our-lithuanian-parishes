@@ -24,6 +24,14 @@ const STATE_LABEL: Record<PhysicalSiteState, string> = {
   not_established: "Present condition not established",
 };
 
+const STATE_FLOW_LABEL: Record<PhysicalSiteState, string> = {
+  standing: "Church sites standing",
+  repurposed: "Church sites repurposed",
+  demolished: "Church sites demolished",
+  listed_for_sale: "Church sites listed for sale or redevelopment",
+  not_established: "Church-site condition not established",
+};
+
 const STATE_SUBLABEL: Record<PhysicalSiteState, string> = {
   standing: "the building still stands",
   repurposed: "in another use",
@@ -279,7 +287,7 @@ export default function PhysicalSiteFlow({
   const openDecade = open?.startsWith("decade:") ? open.slice(7) : null;
   const openMembers = open ? model.bandMembers.get(open) ?? [] : [];
   const openLabel = openState
-    ? STATE_LABEL[openState]
+    ? STATE_FLOW_LABEL[openState]
     : openDecade === "Undated"
       ? "First documented year not established"
       : openDecade
@@ -504,7 +512,7 @@ export default function PhysicalSiteFlow({
                   className="cursor-pointer"
                   role="button"
                   tabIndex={0}
-                  aria-label={`List ${band.count} ${band.count === 1 ? "site" : "sites"}: ${STATE_LABEL[state]}`}
+                  aria-label={`List ${band.count} ${band.count === 1 ? "site" : "sites"}: ${STATE_FLOW_LABEL[state]}`}
                   onMouseEnter={() => setHot(key)}
                   onMouseLeave={() => setHot(null)}
                   onClick={() => setOpen((value) => (value === key ? null : key))}
@@ -515,7 +523,7 @@ export default function PhysicalSiteFlow({
                     }
                   }}
                 >
-                  <title>{`${STATE_LABEL[state]}: ${band.count} ${band.count === 1 ? "site" : "sites"} — click to list`}</title>
+                  <title>{`${STATE_FLOW_LABEL[state]}: ${band.count} ${band.count === 1 ? "site" : "sites"} — click to list`}</title>
                 </rect>
                 <text
                   x={X_STATE + STATE_WIDTH + 10}
@@ -526,7 +534,7 @@ export default function PhysicalSiteFlow({
                   className="cursor-pointer font-sans text-body-copy"
                   onClick={() => setOpen((value) => (value === key ? null : key))}
                 >
-                  {STATE_LABEL[state]}
+                  {STATE_FLOW_LABEL[state]}
                   <tspan fontWeight={400} fill="var(--muted)">
                     {` · ${band.count}`}
                   </tspan>
@@ -551,7 +559,7 @@ export default function PhysicalSiteFlow({
           <div className="flex items-start justify-between gap-4">
             <div>
               <h3 className="font-serif text-subsection-title font-semibold">
-                {openLabel} · {openMembers.length} of {model.total}
+                {openLabel} · {openMembers.length} of {model.total} sites
               </h3>
               {openNote ? (
                 <p className="mt-1 max-w-3xl text-body-copy leading-relaxed text-muted">

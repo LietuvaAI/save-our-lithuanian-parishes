@@ -1,60 +1,34 @@
-"use client";
-
-import { useState, type ReactNode } from "react";
 import Link from "next/link";
+import type { ReactNode } from "react";
 
-type Mode = "institutions" | "buildings";
-
-export default function OutcomeModeExplorer({
-  institutionCount,
-  parishCount,
-  missionCount,
-  closedCount,
-  currentWorshipPlaces,
-  publicInstitutionCount,
-  physicalSiteCount,
-  demolishedSiteCount,
-  repurposedSiteCount,
-  standingSiteCount,
-  listedSiteCount,
-  unestablishedSiteCount,
-  initialMode,
-  institutionView,
-  buildingView,
-}: {
+type CommonProps = {
   institutionCount: number;
+  physicalSiteCount: number;
+  view: ReactNode;
+};
+
+type InstitutionProps = CommonProps & {
+  mode: "institutions";
   parishCount: number;
   missionCount: number;
   closedCount: number;
   currentWorshipPlaces: number;
   publicInstitutionCount: number;
-  physicalSiteCount: number;
+};
+
+type BuildingProps = CommonProps & {
+  mode: "buildings";
   demolishedSiteCount: number;
   repurposedSiteCount: number;
   standingSiteCount: number;
   listedSiteCount: number;
   unestablishedSiteCount: number;
-  initialMode: Mode;
-  institutionView: ReactNode;
-  buildingView: ReactNode;
-}) {
-  const [mode, setMode] = useState<Mode>(initialMode);
-  const institutions = mode === "institutions";
+};
 
-  const selectMode = (nextMode: Mode) => {
-    setMode(nextMode);
-    const url = new URL(window.location.href);
-    if (nextMode === "buildings") {
-      url.searchParams.set("view", "buildings");
-    } else {
-      url.searchParams.delete("view");
-    }
-    window.history.replaceState(
-      window.history.state,
-      "",
-      `${url.pathname}${url.search}${url.hash}`,
-    );
-  };
+export default function OutcomeModeExplorer(
+  props: InstitutionProps | BuildingProps,
+) {
+  const institutions = props.mode === "institutions";
 
   return (
     <>
@@ -64,20 +38,20 @@ export default function OutcomeModeExplorer({
 
       {institutions ? (
         <p className="mt-2 max-w-[90ch] text-lead-copy">
-          Of <strong>{institutionCount}</strong> Lithuanian Roman Catholic
-          parishes and missions, <strong>{closedCount}</strong> have closed;
-          Lithuanian worship continues at <strong>{currentWorshipPlaces}</strong>.
+          Of <strong>{props.institutionCount}</strong> Lithuanian Roman Catholic
+          parishes and missions, <strong>{props.closedCount}</strong> have
+          closed; Lithuanian worship continues at{" "}
+          <strong>{props.currentWorshipPlaces}</strong>.
         </p>
       ) : (
         <p className="mt-2 max-w-[90ch] text-lead-copy">
-          The record identifies <strong>{physicalSiteCount}</strong> physical
-          worship sites: <strong>{standingSiteCount}</strong> standing, {" "}
-          <strong>{demolishedSiteCount}</strong> demolished, {" "}
-          <strong>{repurposedSiteCount}</strong> repurposed, {" "}
-          <strong>{listedSiteCount}</strong> listed for sale or redevelopment,
-          and {" "}
-          <strong>{unestablishedSiteCount}</strong> whose present condition is
-          not yet established.
+          The record identifies <strong>{props.physicalSiteCount}</strong>{" "}
+          physical worship sites: <strong>{props.standingSiteCount}</strong>{" "}
+          standing, <strong>{props.demolishedSiteCount}</strong> demolished,{" "}
+          <strong>{props.repurposedSiteCount}</strong> repurposed,{" "}
+          <strong>{props.listedSiteCount}</strong> listed for sale or
+          redevelopment, and <strong>{props.unestablishedSiteCount}</strong>{" "}
+          whose present condition is not yet established.
         </p>
       )}
 
@@ -88,15 +62,21 @@ export default function OutcomeModeExplorer({
         {institutions ? (
           <p className="mt-1 max-w-[90ch] text-body-copy leading-relaxed">
             Every line is one institution&mdash;one parish or mission, counted
-            once&mdash;running from the decade it began to where it stands
-            today. This view follows {parishCount} U.S. Roman Catholic parishes
-            and {missionCount} missions. Closed institutions fan out by the
-            known condition of the church they last used, but institution and
-            building outcomes remain separate facts; earlier churches and
-            multiple sites are counted in Buildings mode. Other traditions,
-            research-only records, and Canadian comparators are outside this
-            population; all {publicInstitutionCount} published U.S. profiles
-            are in the {" "}
+            once&mdash;running from the decade it began to its institutional
+            outcome today. This view follows {props.parishCount} U.S. Roman
+            Catholic parishes and {props.missionCount} missions. Closed is one
+            institutional outcome; optional filters inside its list describe
+            the known condition of each institution&apos;s last-used church.
+            Earlier churches and multiple sites are counted in the separate{" "}
+            <Link
+              href="/church-buildings-through-time"
+              className="underline hover:text-accent"
+            >
+              church-building history
+            </Link>
+            . Other traditions, research-only records, and Canadian comparators
+            are outside this population; all {props.publicInstitutionCount}{" "}
+            published U.S. profiles are in the{" "}
             <Link href="/parishes" className="underline hover:text-accent">
               full directory
             </Link>
@@ -108,8 +88,8 @@ export default function OutcomeModeExplorer({
             mission may have used several buildings, and one building may have
             served more than one congregation. Building conditions come only
             from documented site evidence; &ldquo;not yet established&rdquo; is
-            a research gap, not an outcome. Switch to Parishes &amp; missions
-            to follow each institution once.
+            a research gap, not an outcome. Open the separate Parishes &amp;
+            missions view to follow each institution once.
           </p>
         )}
       </section>
@@ -118,42 +98,57 @@ export default function OutcomeModeExplorer({
         <h2 className="font-serif text-section-title font-semibold">
           {institutions ? "Institution by institution" : "Building by building"}
         </h2>
-        <div
+        <nav
           className="inline-flex overflow-hidden rounded-md border border-rule bg-background p-0.5 text-support-copy font-semibold"
-          role="group"
           aria-label="Choose a Parish & Mission Status view"
         >
-          <button
-            type="button"
-            onClick={() => selectMode("institutions")}
-            aria-pressed={institutions}
+          <Link
+            href="/where-every-parish-ended-up"
+            aria-current={institutions ? "page" : undefined}
             className={`rounded px-3 py-1.5 transition-colors ${
               institutions
                 ? "bg-foreground text-background"
                 : "text-muted hover:bg-band hover:text-foreground"
             }`}
           >
-            Parishes &amp; missions · {institutionCount}
-          </button>
-          <button
-            type="button"
-            onClick={() => selectMode("buildings")}
-            aria-pressed={!institutions}
+            Parishes &amp; missions · {props.institutionCount}
+          </Link>
+          <Link
+            href="/church-buildings-through-time"
+            aria-current={!institutions ? "page" : undefined}
             className={`rounded px-3 py-1.5 transition-colors ${
               institutions
                 ? "text-muted hover:bg-band hover:text-foreground"
                 : "bg-foreground text-background"
             }`}
           >
-            Church buildings · {physicalSiteCount}
-          </button>
-        </div>
+            Church buildings · {props.physicalSiteCount}
+          </Link>
+        </nav>
       </div>
 
-      <section className="mt-3">
-        <div hidden={!institutions}>{institutionView}</div>
-        <div hidden={institutions}>{buildingView}</div>
-      </section>
+      <p className="mt-2 max-w-[90ch] text-support-copy leading-relaxed text-muted">
+        {institutions ? (
+          <>
+            <strong className="font-semibold text-foreground">
+              Institution view:
+            </strong>{" "}
+            each parish or mission is counted once. Closed remains one outcome;
+            the condition of its last-used church is available as a secondary
+            filter inside the Closed list.
+          </>
+        ) : (
+          <>
+            <strong className="font-semibold text-foreground">
+              Buildings view:
+            </strong>{" "}
+            each physical worship site is counted separately, including earlier
+            churches and replacement buildings used by the same institution.
+          </>
+        )}
+      </p>
+
+      <section className="mt-3">{props.view}</section>
     </>
   );
 }

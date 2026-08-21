@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import OutcomeModeExplorer from "@/components/OutcomeModeExplorer";
-import PhysicalSiteFlow from "@/components/PhysicalSiteFlow";
 import ParishThreads, {
   type FateKey,
   type ThreadParish,
@@ -15,7 +14,6 @@ import {
   romanCatholicParishHistory,
 } from "@/lib/infographic-projection";
 import { toGroup } from "@/lib/end-state";
-import { physicalSiteOutcomeProjection } from "@/lib/physical-site-outcome-projection";
 
 export const metadata: Metadata = {
   title: "The State of Lithuanian Catholic Parishes in America",
@@ -74,13 +72,7 @@ function buildThreads(): ThreadParish[] {
   }));
 }
 
-export default async function ParishOutcomeFlowPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ view?: string | string[] }>;
-}) {
-  const requestedView = (await searchParams).view;
-  const initialMode = requestedView === "buildings" ? "buildings" : "institutions";
+export default function ParishOutcomeFlowPage() {
   const threads = buildThreads();
   const closed = threads.filter(
     (institution) => toGroup(institution.endState) === "closed",
@@ -100,30 +92,15 @@ export default async function ParishOutcomeFlowPage({
   return (
     <article className="mx-auto max-w-6xl px-4 py-5 sm:py-6">
       <OutcomeModeExplorer
+        mode="institutions"
         institutionCount={threads.length}
         parishCount={romanCatholicParishHistory.length}
         missionCount={romanCatholicMissionHistory.length}
         closedCount={closed.length}
         currentWorshipPlaces={currentWorshipPlaces}
         publicInstitutionCount={infographicCounts.public_us_institutions}
-        physicalSiteCount={physicalSiteOutcomeProjection.sites.length}
-        demolishedSiteCount={
-          physicalSiteOutcomeProjection.stateCounts.demolished ?? 0
-        }
-        repurposedSiteCount={
-          physicalSiteOutcomeProjection.stateCounts.repurposed ?? 0
-        }
-        standingSiteCount={
-          physicalSiteOutcomeProjection.stateCounts.standing ?? 0
-        }
-        listedSiteCount={
-          physicalSiteOutcomeProjection.stateCounts.listed_for_sale ?? 0
-        }
-        unestablishedSiteCount={
-          physicalSiteOutcomeProjection.stateCounts.not_established ?? 0
-        }
-        initialMode={initialMode}
-        institutionView={
+        physicalSiteCount={infographicCounts.physical_worship_sites}
+        view={
           <ParishThreads
             parishes={threads}
             additionalHostedCommunities={additionalCurrentHostedCommunities.map(
@@ -138,15 +115,20 @@ export default async function ParishOutcomeFlowPage({
             )}
           />
         }
-        buildingView={
-          <PhysicalSiteFlow sites={physicalSiteOutcomeProjection.sites} />
-        }
       />
 
       <p className="mt-8 border-t border-rule pt-4 text-small-copy leading-relaxed text-muted">
-        Institution lines begin at the institution&rsquo;s own founding year;
-        building rows begin with the first documented use of the physical site.
-        Open a line or row for the related profile and its evidence. See{" "}
+        Institution lines begin at the parish or mission&rsquo;s own founding
+        year. Open a line for the related profile and its evidence. Physical
+        worship sites, including earlier and replacement churches, remain in
+        the separate{" "}
+        <Link
+          href="/church-buildings-through-time"
+          className="underline hover:text-foreground"
+        >
+          church-building history
+        </Link>
+        . See{" "}
         <Link
           href="/about-the-data"
           className="underline hover:text-foreground"
