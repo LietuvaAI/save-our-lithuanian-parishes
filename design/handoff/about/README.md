@@ -5,6 +5,11 @@ Built against main; canonical figures read from `data/canonical-infographic-proj
 `data/photos.json`, `data/alerts.json`, `line-drawings.json`, and the live
 `/church-buildings-through-time` page.
 
+Canonical review amendment (2026-08-22): the rulings in §§3, 7, 8, and 9 below supersede
+stale figures and asset-gap notes in the original prototype. The supplied copy remains the
+editorial source, but canonical counts, institution classes, status language, and building
+dates must use these amended rulings rather than reproducing a contradicted number verbatim.
+
 ---
 
 ## 1. Scope
@@ -39,17 +44,18 @@ Roman numerals were removed — do not reintroduce them.
 
 ## 3. Copy — "Why this project exists"
 
-Owner-supplied, **verbatim, em-dashes and curly apostrophes as written**. Do not reword,
-re-order, or re-punctuate. Paragraph order:
+Owner-supplied, **verbatim except for the canonical corrections stated below**, with em-dashes
+and curly apostrophes otherwise preserved as written. Do not re-order or otherwise reword the
+copy. Paragraph order:
 
-1. "Across more than a century… documents **132 Roman Catholic parishes and five missions** in the United States." → link the count to `/parishes`
+1. "Across more than a century… documents **131 Roman Catholic parishes and six missions** in the United States." → link the count to `/parishes`. This is the current 137-institution Roman Catholic census; do not restore the superseded 132 + 5 split.
 2. "The first great wave of Lithuanian immigrants arrived during the late nineteenth and early twentieth centuries…"
 3. "After the Second World War, Lithuanians displaced by war and Soviet occupation…" → link "Southfield, Michigan" to `/parishes/dievo-apvaizdos-southfield-mi`
 4. "The two waves arrived under different circumstances…"
 5. "The Lithuanian idea of *malda ir tauta*—prayer and nation—expresses this understanding…" → set inside the dark panel
 6. "No parish stood alone…"
 7. "Most of that structure is now gone." → display line, must not wrap
-8. "Of the 137 parishes and missions documented here, only eight remain active…" → link "eight remain active as Lithuanian parishes" to `/lithuanian-catholic-life-today`, "ninety formal closures" to `/where-every-parish-ended-up`
+8. Replace the superseded "only eight remain active as Lithuanian parishes" / "ninety formal closures" wording with: **"Of the 137 Roman Catholic institutions documented here, six parishes and two missions remain active Lithuanian institutions. Lithuanian worship also continues in six hosted communities, for fourteen regular worship places in all. Ninety-one of the 137 historical institutions are classified as closed."** → link the living-network sentence to `/lithuanian-catholic-life-today` and the closed-institution sentence to `/where-every-parish-ended-up`. Do not call all 91 "formal closures" unless a separate canonical assertion supports that narrower claim.
 9. "Many of these parishes did not disappear because their communities abandoned them…" → link "organized committees, raised money for repairs, petitioned bishops, appealed through canon law, sought Vatican review, held vigils, and went to court" to `/history`; "closed the parishes anyway" to `/where-every-parish-ended-up`
 10. "A Lithuanian national parish was not the same as an ordinary neighborhood parish…"
 11. "Yet dioceses and archdioceses often evaluated these parishes as local congregations…"
@@ -111,35 +117,47 @@ site of each institution."* See §8.
 | Image | Source | Rights | Action |
 |---|---|---|---|
 | 10 hero line drawings | `public/images/parishes/*-line-drawing.png` | `open_license` in `data/photos.json` | ready |
-| Southfield line drawing | `southfield-divine-providence-current-line-drawing.png` | **no `photos.json` entry** (inventory only) | needs a rights entry before it renders |
-| Jonynas stained-glass window, Divine Providence | owner-supplied photo, V. Jurgutienė | owner-supplied | add to `photos.json` with the photographer credit; cropped copy in the design project |
-| Our Lady of Vilnius demolition, 2015 | owner-supplied | owner-supplied | needs a rights entry |
-| Holy Trinity Newark demolition | owner-supplied, credited "Old Newark" | unclear | confirm credit + rights |
-| Prayer book *Maldų Knyga su Kalendoriumi* | Žiburio Archive item `20260314_1773506785799` | Public domain (per archive) | currently hot-linked to supabase; take a local copy |
-| Sigita Jurgutis at the light box | `archyvas.ziburioltmokykla.org/images/IMG_7452.jpeg` | archive's own image | take a local copy; caption "Sigita Jurgutis, student archivist" |
+| Southfield line drawing | `southfield-divine-providence-current-line-drawing.png` | `permission_granted` in `data/photos.json` | ready; the earlier missing-entry note is resolved |
+| Jonynas stained-glass window, Divine Providence | supplied by the project owner; photo credited to V. Jurgutienė | **rights pending** unless the photographer is the project owner or has granted reuse | add only after written permission or own-work confirmation; retain the photographer credit |
+| Our Lady of Vilnius demolition, 2015 | supplied by the project owner; photographer/source not yet named | **rights pending** | hold until the creator/source and reuse permission are documented |
+| Holy Trinity Newark demolition | supplied by the project owner; credited only as "Old Newark" | **rights and date pending** | hold until the source, reuse permission, and caption chronology are established |
+| Prayer book *Maldų Knyga su Kalendoriumi* | Žiburio Archive item `20260314_1773506785799` | archive reports public domain; local asset not included in the handoff ZIP | verify the item-level rights statement, then store a governed local copy rather than hot-linking |
+| Sigita Jurgutis at the light box | `archyvas.ziburioltmokykla.org/images/IMG_7452.jpeg` | archive-hosted image; local asset not included in the handoff ZIP | hold until reuse permission and the appropriate subject/photographer credit are documented; then store a governed local copy |
 | St. George demolition frames | `pbase.com/dbperez/demolition` | **"Do not copy or reproduce without written permission"** | linked only, never embedded, until written permission exists |
 
-All captions must keep "no image exists" and "image held, rights pending" as distinct states.
+The handoff ZIP contains three binary image assets: the Jonynas window, the Manhattan
+demolition interior, and the Newark demolition photograph. It does not contain the prayer-book
+cover or the Sigita Jurgutis photograph. All captions and asset records must keep "no image
+exists" and "image held, rights pending" as distinct states.
 
-## 8. Returned to research — do not resolve in design code
+## 8. Canonical rulings and remaining rights holds
 
-1. **Demolition count stated three ways.** Owner copy says "At least sixteen of their final
-   church sites have been demolished"; the owner asked for "25 churches"; the live buildings
-   page reports **26** demolished of 134 sites. The prototype prints the owner's paragraph
-   verbatim and labels the flow as a different measure. Canon should rule on which number the
-   page publishes and whether the two measures need separate wording.
-2. **Fourteen vs eight.** "Eight remain active as Lithuanian parishes" (owner copy) sits
-   alongside the existing site line "the fourteen places that still keep regular Lithuanian
-   worship". Likely two different measures; needs one adjudicated statement.
-3. **Newark Holy Trinity demolition year.** Canon: `demolished_year: 1981` for "Former Holy
-   Trinity church, Newark"; parish `closed: 2002`; the only other Newark Holy Trinity building
-   is recorded standing. The owner believes the photograph shows a demolition around 2020 but
-   asked to keep 1981 for now. Either the 1981 entry or the photo's identification is wrong.
-4. **St. George demolition date.** The pbase gallery frames are dated 21 Jan 2010 (upload
-   date per the owner); canon has Shenandoah St. George demolished 2009. The gallery does not
-   name a city, so it may be a different St. George.
-5. **Four line drawings still missing** from `photos.json` / `/images/parishes/` (carried
-   over from the homepage handoff): Rochester, Washington, New Philadelphia, Scranton.
+1. **Sixteen and 26 are both correct, but they count different units.** Publish both only with
+   explicit unit labels: **"Among the 91 closed institutions, the last-used church is documented
+   as demolished in 16 cases."** Separately: **"Across all 134 documented physical worship
+   sites—including earlier and replacement churches—26 are documented as demolished."** The
+   first is an institution-level terminal-site measure; the second is a physical-site census.
+   Never present 16 as the total number of demolished church buildings.
+2. **Eight and fourteen are both correct, but they describe different populations.** Eight is
+   the active Lithuanian-led institutional group: six parishes and two missions. Fourteen is the
+   living pastoral network: those eight institutions plus six hosted-Mass communities. Use the
+   adjudicated paragraph in §3 and preserve Washington Epiphany as a network-only hosted-Mass
+   community rather than forcing it into the 137 historical-institution census.
+3. **Newark Holy Trinity requires two-building language.** A 1981 fire damaged the original
+   church; repairs were not permitted, worship moved to the basement of the parish's 1963 hall,
+   and the original church was later demolished. The exact demolition year remains unresolved.
+   The Lithuanian institution ended through a selected 2002 merger into Holy Trinity–Epiphany;
+   the 1963 terminal worship site still stands. Do not caption the supplied photograph
+   "demolished in 1981," do not describe 1981 as the parish's closure, and do not treat the
+   earlier demolished church as the institution's standing terminal site. Image credit and
+   reuse rights remain held.
+4. **The Pbase St. George gallery is Shenandoah, but its upload date is not a demolition date.**
+   The gallery itself identifies St. George in Shenandoah, Pennsylvania. Canon continues to use
+   2009 for the demolition unless stronger evidence changes it. Link the gallery as supporting
+   documentation only; never embed its frames without written permission from the photographer.
+5. **The four line-drawing gap is resolved.** Governed entries and image files now exist for
+   Rochester, Washington Epiphany, New Philadelphia Holy Cross, and Scranton Holy Rosary. Do
+   not regenerate or re-import them from this handoff.
 
 ## 9. Canonical facts rendered
 
@@ -147,10 +165,17 @@ All captions must keep "no image exists" and "image held, rights pending" as dis
   (`cn:institution:st-george-shenandoah-pa`, `rel:lineage-1:shenandoah-building-demolished-2009`).
 - Our Lady of Vilnius, Manhattan: worship access ended **26 February 2007**, church demolished
   **April 2015** (`rel:successor-2:manhattan-demolished`).
-- Holy Trinity, Newark: church demolished **1981**, parish closed **2002**.
+- Holy Trinity, Newark: original church damaged by fire in **1981** and demolished afterward,
+  exact demolition year unresolved; Lithuanian institution merged in **2002**; the successor's
+  1963 parish-hall worship site stands.
 - Divine Providence, Southfield: **under threat** — Planning Area 8 of the Archdiocese of
   Detroit 2025–2027 restructuring, no final decisions announced
   (`data/alerts.json` → `divine-providence-2026-07`, level red).
+
+Current count contract for this handoff: **155** published U.S. institutions of all classes;
+**137** Roman Catholic institutions (**131 parishes + 6 missions**); **91** of those 137
+classified as closed; and **134** physical worship sites. The page must derive these figures
+from the canonical projection and must not hard-code them as an independent snapshot.
 
 Losses and threat notes render in `#7d1f1f`; secondary and absent-state text in `#78716c`;
 `#b3aca2` is not used for text anywhere.
