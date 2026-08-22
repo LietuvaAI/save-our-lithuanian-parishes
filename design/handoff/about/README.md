@@ -61,15 +61,17 @@ Three sub-headings are **design apparatus, not owner copy**: "The network", "The
 
 ## 4. Copy — "For the Record"
 
-Owner-supplied, verbatim, five paragraphs:
+Owner-supplied, verbatim, four paragraphs:
 
 1. "Save Our Lithuanian Parishes seeks to reconstruct the history of the Lithuanian Catholic diaspora and its continuing relationship with Lithuania… but the parish is the point of entry, not the final subject." → "parish by parish" → `/parishes`
 2. "The Lithuanian diaspora was never a self-contained American world…"
 3. "The project seeks to make those relationships visible. It will identify the priests who served each parish…"
-4. "The dismantling of the parish network is part of this history, but it is not the whole of it…" → "closures" → `/where-every-parish-ended-up`; "the communities that continue today" → `/lithuanian-catholic-life-today`
-5. "This is not simply a list of churches or a record of institutional decline…"
+4. "The dismantling of the parish network is part of this history, but it is not the whole of it. The project is an effort to understand how a diaspora created a Lithuanian religious and communal world in the United States, how that world remained connected to Lithuania, and what those connections made possible across generations."
 
-(An earlier sixth paragraph about periodisation — "It will also study how these connections changed over time…" — was cut by the owner. Do not restore it.)
+Two earlier paragraphs were cut by the owner and must not be restored: the periodisation
+paragraph ("It will also study how these connections changed over time…") and the separate
+closing paragraph beginning "This is not simply a list of churches…", whose second half was
+folded into paragraph 4 above.
 
 ## 5. Copy — "How the research is done"
 
