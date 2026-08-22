@@ -329,13 +329,15 @@ for (const required of [
 for (const [source, required] of [
   [loader, "referenceClass: record.public_display_class"],
   [loader, "badgeLabel: record.badge_label ?? undefined"],
+  [loader, "supplementalReason: record.supplemental_reason ?? undefined"],
   [loader, "identityKey(record.canonicalEntityId, record.publicProfile)"],
   [ledger, 'referenceClass === "supplemental_reference"'],
   [ledger, "{source.badgeLabel}"],
+  [ledger, "source.supplementalReason"],
 ]) {
   if (!source.includes(required)) errors.push(`display contract is missing ${required}`);
 }
-for (const forbidden of ["reviewed_topic_targets", "supplemental_reason"]) {
+for (const forbidden of ["reviewed_topic_targets"]) {
   if (loader.includes(forbidden)) {
     errors.push(`consumer must not infer public class from ${forbidden}`);
   }

@@ -365,6 +365,7 @@ for (const [source, token, label] of [
   [loader, "titleFocusRecordId(record)", "stable ID normalization"],
   [loader, "referenceClass: record.public_display_class", "Brain display class"],
   [loader, "badgeLabel: record.badge_label ?? undefined", "Brain badge label"],
+  [loader, "supplementalReason: record.supplemental_reason ?? undefined", "Brain supplemental reason"],
   [loader, "identityKey(record.canonicalEntityId, record.publicProfile)", "strict join"],
   [loader, "contexts: []", "claim-free source rows"],
   [profile, "draugasNewspaperProfileSources", "profile-only source join"],
@@ -372,6 +373,7 @@ for (const [source, token, label] of [
   [ledger, 'label: "Newspapers and periodicals"', "newspaper source group"],
   [ledger, 'referenceClass === "supplemental_reference"', "core-before-supplemental sort"],
   [ledger, "{source.badgeLabel}", "Supplemental badge rendering"],
+  [ledger, "source.supplementalReason", "Supplemental reason rendering"],
   [ledger, "!isDraugasProfileSource(source)", "Draugas excerpt suppression"],
   [profileSources, 'isDraugas ? "newspaper" : options.group', "Draugas newspaper grouping"],
   [packageJson, "verify-draugas-title-focus-tranche5.mjs", "data verification chain"],
@@ -379,7 +381,7 @@ for (const [source, token, label] of [
   if (!source.includes(token)) errors.push(`${label} is missing ${token}`);
 }
 
-for (const forbidden of ["reviewed_topic_targets", "supplemental_reason"]) {
+for (const forbidden of ["reviewed_topic_targets"]) {
   if (loader.includes(forbidden)) {
     errors.push(`consumer must not infer public display from ${forbidden}`);
   }

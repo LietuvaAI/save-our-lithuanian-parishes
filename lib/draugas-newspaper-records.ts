@@ -5,6 +5,7 @@ import titleFocusTranche2Data from "@/data/canonical-draugas-parish-centered-tit
 import titleFocusTranche3Data from "@/data/canonical-draugas-parish-centered-title-focus-tranche3.json";
 import titleFocusTranche4Data from "@/data/canonical-draugas-parish-centered-title-focus-tranche4.json";
 import titleFocusTranche5Data from "@/data/canonical-draugas-parish-centered-title-focus-tranche5.json";
+import pageRecoveryProjection72Data from "@/data/canonical-draugas-page-recovery-projection72.json";
 import { publicInstitutions } from "@/lib/publication-projection";
 import {
   finalizeProfileSources,
@@ -80,6 +81,7 @@ type TitleFocusRecord = {
   citation_label: string;
   public_display_class: "core_parish_reference" | "supplemental_reference";
   badge_label: "Supplemental" | null;
+  supplemental_reason?: string | null;
   rights: DraugasNewspaperRights;
   provenance_hashes: Record<string, string>;
   historical_claim_adjudication_state: "not_adjudicated";
@@ -180,6 +182,50 @@ type TitleFocusHeldProjection = {
   content_hash_sha256: string;
 };
 
+type PageRecoveryProjection72 = {
+  schema_version: "culturenet-draugas-page-recovery-public-record-set-72-v1";
+  record_set_id: string;
+  projection_state: "held_draft_brain_reviewed_public_metadata_checkpoint";
+  source_main_commit: string;
+  reviewed_at: string;
+  controls: {
+    held_draft_brain_pr: true;
+    reviewed_public_metadata_allowed: true;
+    solp_profile_display_allowed_after_projection_merge_and_consumer_review: true;
+    public_release_performed: false;
+    solp_mutation_performed: false;
+    site_deploy_performed: false;
+    historical_claim_admission_allowed: false;
+    canonical_evidence: false;
+    canonical_write_allowed: false;
+    assertion_write_allowed: false;
+    relationship_write_allowed: false;
+    sacred_core_write_allowed: false;
+    ocr_or_model_extraction_allowed: false;
+    source_text_or_excerpt_capture_allowed: false;
+  };
+  record_counts: {
+    total: 72;
+    core: 62;
+    supplemental: 10;
+    title_states: {
+      exact_printed_headline: 60;
+      reviewed_section_heading: 10;
+      untitled_item: 2;
+    };
+  };
+  records: Array<
+    TitleFocusRecord & {
+      schema_version: "culturenet-draugas-page-recovery-public-record-v1";
+      source_record_id: string;
+      source_publication: "Draugas";
+      supplemental_reason: string | null;
+      historical_claim_adjudication_state: "not_adjudicated";
+    }
+  >;
+  content_hash_sha256: string;
+};
+
 type GovernedDraugasRecord = {
   sourceRecordId: string;
   candidatePageId?: string;
@@ -191,8 +237,10 @@ type GovernedDraugasRecord = {
   displayTitle: string;
   citationLabel: string;
   rights: DraugasNewspaperRights;
+  titleState?: TitleFocusRecord["title_state"];
   referenceClass?: "core_parish_reference" | "supplemental_reference";
   badgeLabel?: string;
+  supplementalReason?: string;
 };
 
 const projection = projectionData as DraugasNewspaperProjection;
@@ -202,6 +250,8 @@ const titleFocusTranche2 = titleFocusTranche2Data as TitleFocusTranche2Projectio
 const titleFocusTranche3 = titleFocusTranche3Data as TitleFocusTranche3Projection;
 const titleFocusTranche4 = titleFocusTranche4Data as TitleFocusTranche4Projection;
 const titleFocusTranche5 = titleFocusTranche5Data as TitleFocusTranche5Projection;
+const pageRecoveryProjection72 =
+  pageRecoveryProjection72Data as PageRecoveryProjection72;
 const EXPECTED_CONTENT_HASH =
   "143118db45388cb94c1421623e0139428751b6606626d5b51d5ea7b4a3b4e742";
 const EXPECTED_TITLE_FOCUS_HASH =
@@ -232,6 +282,8 @@ const EXPECTED_TITLE_FOCUS_TRANCHE5_PACKET_HASH =
   "115175a886f228b5b652830ec25d3a0d92ed3c5dd5f041315e845f5954a5d2bd";
 const EXPECTED_TITLE_FOCUS_TRANCHE5_OVERLAY_HASH =
   "65eced30eed413fb1306c27ae5b128a6c52a8012ea24f00040bd41493778552a";
+const EXPECTED_PAGE_RECOVERY_72_HASH =
+  "6494d98ca4352dc521afa3ec6e06ddb116357f160a171eb9c335334584df1a69";
 const EXPECTED_CONTROLS: DraugasNewspaperProjection["controls"] = {
   publication_allowed: true,
   solp_consumer_projection: true,
@@ -594,6 +646,55 @@ if (
   throw new Error("Held Draugas title-focus candidates entered the public record set.");
 }
 
+const pageRecovery72CoreCount = pageRecoveryProjection72.records.filter(
+  (record) => record.public_display_class === "core_parish_reference",
+).length;
+const pageRecovery72SupplementalCount = pageRecoveryProjection72.records.filter(
+  (record) => record.public_display_class === "supplemental_reference",
+).length;
+const pageRecovery72TitleStates = pageRecoveryProjection72.records.reduce(
+  (counts, record) => {
+    counts[record.title_state] += 1;
+    return counts;
+  },
+  {
+    exact_printed_headline: 0,
+    reviewed_section_heading: 0,
+    untitled_item: 0,
+  },
+);
+if (
+  pageRecoveryProjection72.schema_version !==
+    "culturenet-draugas-page-recovery-public-record-set-72-v1" ||
+  pageRecoveryProjection72.projection_state !==
+    "held_draft_brain_reviewed_public_metadata_checkpoint" ||
+  pageRecoveryProjection72.content_hash_sha256 !== EXPECTED_PAGE_RECOVERY_72_HASH ||
+  pageRecoveryProjection72.records.length !== 72 ||
+  pageRecoveryProjection72.record_counts.total !== 72 ||
+  pageRecoveryProjection72.record_counts.core !== 62 ||
+  pageRecoveryProjection72.record_counts.supplemental !== 10 ||
+  pageRecovery72CoreCount !== 62 ||
+  pageRecovery72SupplementalCount !== 10 ||
+  JSON.stringify(pageRecovery72TitleStates) !==
+    JSON.stringify(pageRecoveryProjection72.record_counts.title_states) ||
+  pageRecoveryProjection72.controls.reviewed_public_metadata_allowed !== true ||
+  pageRecoveryProjection72.controls
+    .solp_profile_display_allowed_after_projection_merge_and_consumer_review !== true ||
+  pageRecoveryProjection72.controls.public_release_performed !== false ||
+  pageRecoveryProjection72.controls.historical_claim_admission_allowed !== false ||
+  pageRecoveryProjection72.controls.canonical_evidence !== false ||
+  pageRecoveryProjection72.controls.canonical_write_allowed !== false ||
+  pageRecoveryProjection72.controls.assertion_write_allowed !== false ||
+  pageRecoveryProjection72.controls.relationship_write_allowed !== false ||
+  pageRecoveryProjection72.controls.sacred_core_write_allowed !== false ||
+  pageRecoveryProjection72.controls.ocr_or_model_extraction_allowed !== false ||
+  pageRecoveryProjection72.controls.source_text_or_excerpt_capture_allowed !== false
+) {
+  throw new Error(
+    "Draugas page-recovery records are not the pinned 72-row reviewed metadata projection.",
+  );
+}
+
 const publicationByEntity = new Map(
   publicInstitutions.map((institution) => [
     institution.culturenet_entity_id,
@@ -640,6 +741,7 @@ const governedRecords: GovernedDraugasRecord[] = [
     rights: record.rights,
     referenceClass: record.public_display_class,
     badgeLabel: record.badge_label ?? undefined,
+    supplementalReason: record.supplemental_reason ?? undefined,
   })),
   ...titleFocusTranche2.records.map((record) => ({
     sourceRecordId: titleFocusRecordId(record),
@@ -654,6 +756,7 @@ const governedRecords: GovernedDraugasRecord[] = [
     rights: record.rights,
     referenceClass: record.public_display_class,
     badgeLabel: record.badge_label ?? undefined,
+    supplementalReason: record.supplemental_reason ?? undefined,
   })),
   ...titleFocusTranche3.records.map((record) => ({
     sourceRecordId: titleFocusRecordId(record),
@@ -668,6 +771,7 @@ const governedRecords: GovernedDraugasRecord[] = [
     rights: record.rights,
     referenceClass: record.public_display_class,
     badgeLabel: record.badge_label ?? undefined,
+    supplementalReason: record.supplemental_reason ?? undefined,
   })),
   ...titleFocusTranche4.records.map((record) => ({
     sourceRecordId: titleFocusRecordId(record),
@@ -682,6 +786,7 @@ const governedRecords: GovernedDraugasRecord[] = [
     rights: record.rights,
     referenceClass: record.public_display_class,
     badgeLabel: record.badge_label ?? undefined,
+    supplementalReason: record.supplemental_reason ?? undefined,
   })),
   ...titleFocusTranche5.records.map((record) => ({
     sourceRecordId: titleFocusRecordId(record),
@@ -696,12 +801,29 @@ const governedRecords: GovernedDraugasRecord[] = [
     rights: record.rights,
     referenceClass: record.public_display_class,
     badgeLabel: record.badge_label ?? undefined,
+    supplementalReason: record.supplemental_reason ?? undefined,
+  })),
+  ...pageRecoveryProjection72.records.map((record) => ({
+    sourceRecordId: record.source_record_id,
+    candidatePageId: record.candidate_page_id,
+    canonicalEntityId: record.canonical_entity_id,
+    publicProfile: record.public_profile,
+    issueDate: record.issue_date,
+    pdfPage: record.pdf_page,
+    pageUrl: record.page_url,
+    displayTitle: record.display_title,
+    citationLabel: record.citation_label,
+    rights: record.rights,
+    titleState: record.title_state,
+    referenceClass: record.public_display_class,
+    badgeLabel: record.badge_label ?? undefined,
+    supplementalReason: record.supplemental_reason ?? undefined,
   })),
 ];
 
-if (governedRecords.length !== 99) {
+if (governedRecords.length !== 171) {
   throw new Error(
-    `Expected 99 governed Draugas newspaper records; got ${governedRecords.length}.`,
+    `Expected 171 governed Draugas newspaper records; got ${governedRecords.length}.`,
   );
 }
 
@@ -729,8 +851,9 @@ for (const record of governedRecords) {
     !record.displayTitle.trim() ||
     !record.citationLabel.trim() ||
     (record.referenceClass === "supplemental_reference" &&
-      record.badgeLabel !== "Supplemental") ||
-    (record.referenceClass === "core_parish_reference" && record.badgeLabel)
+      (record.badgeLabel !== "Supplemental" || !record.supplementalReason)) ||
+    (record.referenceClass === "core_parish_reference" &&
+      (record.badgeLabel || record.supplementalReason))
   ) {
     throw new Error(`${record.sourceRecordId}: public newspaper metadata is invalid.`);
   }
@@ -762,6 +885,8 @@ export function draugasNewspaperProfileSources(
       reviewedPublicReference: true,
       referenceClass: record.referenceClass,
       badgeLabel: record.badgeLabel,
+      supplementalReason: record.supplementalReason,
+      sourceTitleState: record.titleState,
     })),
   );
 }

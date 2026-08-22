@@ -35,5 +35,6 @@ export function isPublicProfileSourceEligible(
   source: PublicSourceEligibilityInput,
 ) {
   if (source.reviewedPublicReference) return true;
+  if (isDraugasProfileSource(source) && !source.url) return false;
   return !isGenericDraugasIssueTitle(source);
 }

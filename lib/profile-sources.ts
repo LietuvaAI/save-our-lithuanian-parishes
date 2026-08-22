@@ -25,6 +25,11 @@ export type ProfileSource = {
   reviewedPublicReference?: boolean;
   referenceClass?: "core_parish_reference" | "supplemental_reference";
   badgeLabel?: string;
+  supplementalReason?: string;
+  sourceTitleState?:
+    | "exact_printed_headline"
+    | "reviewed_section_heading"
+    | "untitled_item";
 };
 
 export type RegistryProfileSource = {
@@ -513,6 +518,12 @@ export function finalizeProfileSources(
       }
       if (!existing.badgeLabel && source.badgeLabel) {
         existing.badgeLabel = source.badgeLabel;
+      }
+      if (!existing.supplementalReason && source.supplementalReason) {
+        existing.supplementalReason = source.supplementalReason;
+      }
+      if (!existing.sourceTitleState && source.sourceTitleState) {
+        existing.sourceTitleState = source.sourceTitleState;
       }
       continue;
     }
