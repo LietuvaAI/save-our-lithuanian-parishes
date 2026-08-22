@@ -1,6 +1,35 @@
 {
   "_comment": "Parish photo provenance registry. Every entry MUST carry rights (permission_granted | public_domain | open_license | own_work | pending_permission) and a rightsNote tracing the holder and evidence. Only cleared rights render (lib/photos.ts); pending entries are the paper trail of what returns when permission lands. Guard: scripts/verify-photo-rights.mjs.",
   "parishes": {
+    "about-jonynas-stained-glass-divine-providence": {
+      "src": "/images/about/jonynas-stained-glass-divine-providence.jpg",
+      "alt": "Vytautas K. Jonynas stained-glass window at Divine Providence Lithuanian Parish, with St. Casimir, figures of Lithuanian history, and the Vytis.",
+      "attribution": "Photo by Vilija Jurgutienė",
+      "license": "Permission granted for Save Our Lithuanian Parishes",
+      "rights": "permission_granted",
+      "rightsNote": "Photographed and supplied by Vilija Jurgutienė, who approved publication on the About page on 2026-08-22.",
+      "evidenceUrl": "/images/about/jonynas-stained-glass-divine-providence.jpg"
+    },
+    "about-our-lady-of-vilnius-demolition-2015": {
+      "src": "/images/about/our-lady-of-vilnius-demolition-2015.jpg",
+      "alt": "Interior of Our Lady of Vilnius church in Manhattan during demolition in 2015.",
+      "attribution": "„Draugo“ archyvo nuotrauka",
+      "license": "Permission granted for Save Our Lithuanian Parishes",
+      "rights": "permission_granted",
+      "rightsNote": "Published with Vilija Jurgutienė's Draugas article “Kam priklauso parapijos?” and approved by the project owner for this About-page use on 2026-08-22.",
+      "archiveUrl": "https://www.draugas.org/kam-priklauso-parapijos/",
+      "evidenceUrl": "https://www.draugas.org/wp-content/uploads/2026/06/002.jpg"
+    },
+    "about-sigita-jurgutis-student-archivist": {
+      "src": "/images/about/sigita-jurgutis-student-archivist.jpg",
+      "alt": "Sigita Jurgutis working with archival material at a light box.",
+      "attribution": "Photo courtesy of the Žiburio Archive",
+      "license": "Permission granted for Save Our Lithuanian Parishes",
+      "rights": "permission_granted",
+      "rightsNote": "Project-owner photograph already published by the Žiburio Archive and approved for this About-page use on 2026-08-22.",
+      "archiveUrl": "https://archyvas.ziburioltmokykla.org/internship",
+      "evidenceUrl": "https://archyvas.ziburioltmokykla.org/images/IMG_7452.jpeg"
+    },
     "sv-onos-luzerne-pa-line-drawing": {
       "src": "/images/parishes/luzerne-st-ann-line-drawing.png",
       "alt": "Line drawing of St. Ann Lithuanian church on Bennett Street in Luzerne, Pennsylvania.",
