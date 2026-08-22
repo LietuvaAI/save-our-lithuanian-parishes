@@ -119,17 +119,19 @@ site of each institution."* See §8.
 | 10 hero line drawings | `public/images/parishes/*-line-drawing.png` | `open_license` in `data/photos.json` | ready |
 | Southfield line drawing | `southfield-divine-providence-current-line-drawing.png` | `permission_granted` in `data/photos.json` | ready; the earlier missing-entry note is resolved |
 | Jonynas stained-glass window, Divine Providence | supplied by the project owner; photo credited to V. Jurgutienė | **rights pending** unless the photographer is the project owner or has granted reuse | add only after written permission or own-work confirmation; retain the photographer credit |
-| Our Lady of Vilnius demolition, 2015 | supplied by the project owner; photographer/source not yet named | **rights pending** | hold until the creator/source and reuse permission are documented |
+| Our Lady of Vilnius demolition, 2015 | *Draugas* archive photograph published with Vilija Jurgutienė's article "Kam priklauso parapijos?"; source image `https://www.draugas.org/wp-content/uploads/2026/06/002.jpg` | `permission_granted` by the project owner for this use | ready after a governed local copy and `photos.json` entry are added; credit exactly **"„Draugo“ archyvo nuotrauka"** and link the article `https://www.draugas.org/kam-priklauso-parapijos/` |
 | Holy Trinity Newark demolition | supplied by the project owner; credited only as "Old Newark" | **excluded** | do not use on the About page; its date, source, and reuse rights are unresolved |
 | Prayer book *Maldų Knyga su Kalendoriumi* | Žiburio Archive item `20260314_1773506785799` | archive reports public domain; local asset not included in the handoff ZIP | verify the item-level rights statement, then store a governed local copy rather than hot-linking |
-| Sigita Jurgutis at the light box | `archyvas.ziburioltmokykla.org/images/IMG_7452.jpeg` | archive-hosted image; local asset not included in the handoff ZIP | hold until reuse permission and the appropriate subject/photographer credit are documented; then store a governed local copy |
+| Sigita Jurgutis at the light box | project-owner photograph published by the Žiburio archive; `archyvas.ziburioltmokykla.org/images/IMG_7452.jpeg` and `/internship` | `permission_granted` by the project owner | ready after a governed local copy and `photos.json` entry are added; caption **"Sigita Jurgutis, student archivist"** and link `https://archyvas.ziburioltmokykla.org/internship` |
 | St. George demolition frames | `pbase.com/dbperez/demolition` | **"Do not copy or reproduce without written permission"** | linked only, never embedded, until written permission exists |
 
 The handoff ZIP contains three binary image assets: the Jonynas window, the Manhattan
 demolition interior, and the Newark demolition photograph. The Newark photograph is excluded
 from this page and must not be copied into production assets. The ZIP does not contain the
-prayer-book cover or the Sigita Jurgutis photograph. All captions and asset records must keep
-"no image exists", "excluded", and "image held, rights pending" as distinct states.
+prayer-book cover or the Sigita Jurgutis photograph; the latter must be downloaded from the
+owner-approved Žiburio archive source into a governed local asset. All captions and asset
+records must keep "no image exists", "excluded", and "image held, rights pending" as distinct
+states.
 
 ## 8. Canonical rulings and remaining rights holds
 
