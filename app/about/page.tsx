@@ -200,23 +200,250 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-12">
-        <h2 className="font-serif text-section-title font-semibold">
-          In the tradition of the book carriers
+        <p className="text-small-copy uppercase tracking-widest text-muted">
+          A connected record
+        </p>
+        <h2 className="mt-1 font-serif text-section-title font-semibold">
+          A digital <em>tinklas</em> for Lithuanian parish history
         </h2>
         <div className="mt-3 space-y-4 leading-relaxed">
           <p>
-            When the Lithuanian press was banned under the Tsars, Bishop
-            Motiejus Valančius organized the <em>knygnešiai</em>, the book
-            carriers who moved the printed word hand to hand across the border.
-            Lithuanian identity survived because ordinary people built an
-            information network when the institutions around them would not.
+            This project stands on work already done by historians,
+            archivists, librarians, field researchers, journalists, clergy,
+            and community volunteers. Heritage maps have located and
+            photographed Lithuanian places. Books have assembled parish
+            histories. Libraries and digital archives have preserved the
+            newspapers, documents, and images on which new research depends.
+            Each has made a lasting part of the record easier to find.
           </p>
           <p>
-            This project works in that tradition: keeping memory in circulation,
-            making knowledge public, and carrying the experience of one
-            community to the next.
+            Save Our Lithuanian Parishes does not replace those resources. It
+            connects them. The registry brings each institution&rsquo;s
+            identity, history, present condition, and supporting evidence into
+            one public path. A reader can move from the national record to a
+            parish profile and then to the exact book page, newspaper page,
+            decree, official notice, or public record behind a statement.
+          </p>
+          <p>
+            In that sense, SOLP is a digital <em>tinklas</em>&mdash;a network
+            that helps archives, scholarship, institutions, and communities
+            work together. The idea has deep roots. Bishop Motiejus Valančius
+            built a broad network of parish schools and, during the Lithuanian
+            press ban, organized the printing of Lithuanian texts in Prussia
+            and their secret transport across the border. The circumstances
+            today are different, but the connective principle remains: shared
+            knowledge becomes more useful when people can find it, trace it,
+            and carry it from one community to another.
+          </p>
+          <p>
+            To our knowledge, no earlier public resource has joined a
+            comprehensive record of Lithuanian parishes and missions in the
+            United States with full institutional histories, present-day
+            conditions, and direct paths into the supporting sources. The
+            project&rsquo;s contribution is that connection: existing
+            scholarship and archives remain visible, credited, and easier to
+            use together.
           </p>
         </div>
+
+        <h3 className="mt-8 font-serif text-subsection-title font-semibold">
+          Work this record builds on
+        </h3>
+        <ul className="mt-3 divide-y divide-rule border-y border-rule text-body-copy leading-relaxed">
+          <li className="py-4">
+            <a
+              href="https://map.truelithuania.com/en/explanations-of-the-map2/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium underline underline-offset-4"
+            >
+              <em>Tikslas &ndash; Amerika / Destination Lithuanian America</em>
+            </a>{" "}
+            is the interactive, bilingual map created by the Global True
+            Lithuania team led by Augustinas Žemaitis. Field expeditions,
+            photographs, interviews, and local collaboration document hundreds
+            of Lithuanian heritage sites in the United States and Canada. Its
+            unit is the heritage place; SOLP&rsquo;s unit is the institution
+            and its evidence record. See also the project&rsquo;s{" "}
+            <a
+              href="https://map.truelithuania.com/en/authors-of-the-map-2023/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4"
+            >
+              authors and acknowledgements
+            </a>
+            ,{" "}
+            <a
+              href="https://global.truelithuania.com/maps-of-lithuanian-heritage-abroad/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4"
+            >
+              Global True Lithuania&rsquo;s map guide
+            </a>
+            , and the{" "}
+            <a
+              href="https://en.wikipedia.org/wiki/Destination_Lithuanian_America"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4"
+            >
+              project history on Wikipedia
+            </a>
+            .
+          </li>
+          <li className="py-4">
+            William Wolkovich-Valkavičius, <em>Lithuanian Religious Life in
+            America: A Compendium of 150 Roman Catholic Parishes and
+            Institutions</em>, 3 vols. (Norwood, Mass.: Lithuanian Religious
+            Life in America, 1991, 1996, 1998), remains the foundational print
+            survey: Volume 1 covers the Eastern United States, Volume 2
+            Pennsylvania, and Volume 3 the Midwest and beyond. Read the{" "}
+            <a
+              href="https://bpl.bibliocommons.com/v2/record/S75C524973"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4"
+            >
+              Boston Public Library catalog record
+            </a>{" "}
+            or the{" "}
+            <a
+              href="https://archyvas.ziburioltmokykla.org/item/20260722_1784749031073"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4"
+            >
+              Žiburio Archive record for Volume 3
+            </a>
+            .
+          </li>
+          <li className="py-4">
+            The{" "}
+            <a
+              href="https://lithuanianresearch.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium underline underline-offset-4"
+            >
+              Lithuanian Research Center
+            </a>{" "}
+            preserves extensive Lithuanian archival, library, museum, and
+            periodical collections outside Lithuania. Its{" "}
+            <a
+              href="https://lithuanianresearch.org/periodicals/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4"
+            >
+              periodicals collection
+            </a>{" "}
+            supports the separate{" "}
+            <a
+              href="https://www.spauda.org/apie-projekta-about-this-project/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4"
+            >
+              Spauda.org digitization project
+            </a>
+            , directed by Dr. Jonas Daugirdas under the Center&rsquo;s
+            auspices, with Kristina Lapienytė as project coordinator and Dr.
+            Indre Antanaitis-Jacobs as Director of Archives.
+          </li>
+          <li className="py-4">
+            The{" "}
+            <a
+              href="https://www.epaveldas.lt/about"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium underline underline-offset-4"
+            >
+              ePaveldas digital cultural heritage portal
+            </a>{" "}
+            brings together digitized books, diaspora periodicals, maps,
+            church registers, and other cultural objects contributed by
+            Lithuanian libraries, museums, and archives. The{" "}
+            <a
+              href="https://lkbkronika.lt/index.php/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4"
+            >
+              Chronicle of the Catholic Church in Lithuania digital archive
+            </a>{" "}
+            preserves and presents the underground publication&rsquo;s record
+            of religious life and repression under Soviet rule.
+          </li>
+          <li className="py-4">
+            Earlier reference works remain useful points of orientation. The{" "}
+            <a
+              href="https://www.newadvent.org/cathen/16054a.htm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium underline underline-offset-4"
+            >
+              1913 <em>Catholic Encyclopedia</em> article &ldquo;Lithuanians in
+              the United States&rdquo;
+            </a>{" "}
+            offers a contemporary institutional overview, while collaborative
+            references such as{" "}
+            <a
+              href="https://en.wikipedia.org/wiki/Category:Lithuanian-American_history"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4"
+            >
+              Wikipedia&rsquo;s Lithuanian-American history pages
+            </a>{" "}
+            make individual people, places, and subjects discoverable. They are
+            starting points rather than substitutes for the cited source path
+            attached to each SOLP profile.
+          </li>
+          <li className="py-4">
+            The student-built{" "}
+            <a
+              href="https://archyvas.ziburioltmokykla.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium underline underline-offset-4"
+            >
+              Žiburio Archive
+            </a>{" "}
+            makes Lithuanian diaspora books and documents publicly accessible
+            and supplies the archival foundation for much of SOLP&rsquo;s
+            page-cited parish research. Its young archivists are not merely
+            preserving a collection; they are helping the record remain usable
+            by the next generation.
+          </li>
+          <li className="py-4">
+            The Valančius comparison is grounded in the{" "}
+            <a
+              href="https://www.vle.lt/straipsnis/motiejus-valancius/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium underline underline-offset-4"
+            >
+              Visuotinė lietuvių enciklopedija biography of Motiejus Valančius
+            </a>
+            , which documents his parish-school network and his organization of
+            Lithuanian printing in Prussia and secret cross-border
+            distribution during the press ban.
+          </li>
+        </ul>
+        <p className="mt-4 text-small-copy leading-relaxed text-muted">
+          These links identify the projects and works discussed here. The
+          source list for a specific historical statement remains attached to
+          the relevant parish profile; a fuller bibliography appears in{" "}
+          <Link
+            href="/about/sources-and-archives"
+            className="font-medium text-foreground underline underline-offset-4"
+          >
+            Sources &amp; Archives
+          </Link>
+          .
+        </p>
       </section>
 
       <section className="mt-12">
