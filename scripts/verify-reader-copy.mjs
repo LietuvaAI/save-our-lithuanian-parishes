@@ -11,6 +11,7 @@ const files = [
   "app/history/loss-by-diocese/page.tsx",
   "app/pennsylvania-coal-region/page.tsx",
   "app/by-diocese/page.tsx",
+  "app/report/page.tsx",
   "app/start-here/page.tsx",
   "app/what-canon-law-says/page.tsx",
   "app/protestant/page.tsx",
@@ -158,6 +159,32 @@ for (const institutionClass of [
       `components/AllProfilesDirectory.tsx: missing public tradition section ${institutionClass}`,
     );
   }
+}
+
+const reportPage = readFileSync(
+  new URL("../app/report/page.tsx", import.meta.url),
+  "utf8",
+);
+if (reportPage.toLowerCase().includes("submission form is coming soon")) {
+  errors.push("app/report/page.tsx: public intake still claims a form is coming soon");
+}
+if (!reportPage.includes("mailto:info@saveourlithuanianparishes.org")) {
+  errors.push("app/report/page.tsx: public intake has no working contact action");
+}
+
+const nationalCatholicPage = readFileSync(
+  new URL("../app/national-catholic/page.tsx", import.meta.url),
+  "utf8",
+);
+if (
+  !nationalCatholicPage.includes(
+    "const profileHref =\n                canonicalProfileHrefForRegistrySlug(parish.slug);",
+  ) ||
+  !nationalCatholicPage.includes("{profileHref ? (")
+) {
+  errors.push(
+    "app/national-catholic/page.tsx: research-only supporting records must not receive guessed profile links",
+  );
 }
 
 if (errors.length) {
