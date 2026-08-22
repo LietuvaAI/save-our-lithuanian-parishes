@@ -115,6 +115,22 @@
   --text-directory-footnote--line-height: 1.5;
   --text-network-stat: 46px;
   --text-network-stat--line-height: 1;
+
+  /* About-page long-form ramp from the 2026-08-22 approved reference. */
+  --text-about-body: 19px;
+  --text-about-body--line-height: 1.62;
+  --text-about-hero: clamp(38px, 6vw, 72px);
+  --text-about-hero--line-height: 0.98;
+  --text-about-lede: clamp(19px, 2vw, 24px);
+  --text-about-lede--line-height: 1.42;
+  --text-about-section: clamp(30px, 3.6vw, 44px);
+  --text-about-section--line-height: 1.08;
+  --text-about-subheading: clamp(26px, 3vw, 36px);
+  --text-about-subheading--line-height: 1.15;
+  --text-about-feature: clamp(24px, 3vw, 36px);
+  --text-about-feature--line-height: 1.32;
+  --text-about-display: clamp(17px, 4.5vw, 52px);
+  --text-about-display--line-height: 1;
 }
 
 @media (prefers-color-scheme: dark) {
