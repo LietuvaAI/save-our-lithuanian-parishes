@@ -120,15 +120,16 @@ site of each institution."* See §8.
 | Southfield line drawing | `southfield-divine-providence-current-line-drawing.png` | `permission_granted` in `data/photos.json` | ready; the earlier missing-entry note is resolved |
 | Jonynas stained-glass window, Divine Providence | supplied by the project owner; photo credited to V. Jurgutienė | **rights pending** unless the photographer is the project owner or has granted reuse | add only after written permission or own-work confirmation; retain the photographer credit |
 | Our Lady of Vilnius demolition, 2015 | supplied by the project owner; photographer/source not yet named | **rights pending** | hold until the creator/source and reuse permission are documented |
-| Holy Trinity Newark demolition | supplied by the project owner; credited only as "Old Newark" | **rights and date pending** | hold until the source, reuse permission, and caption chronology are established |
+| Holy Trinity Newark demolition | supplied by the project owner; credited only as "Old Newark" | **excluded** | do not use on the About page; its date, source, and reuse rights are unresolved |
 | Prayer book *Maldų Knyga su Kalendoriumi* | Žiburio Archive item `20260314_1773506785799` | archive reports public domain; local asset not included in the handoff ZIP | verify the item-level rights statement, then store a governed local copy rather than hot-linking |
 | Sigita Jurgutis at the light box | `archyvas.ziburioltmokykla.org/images/IMG_7452.jpeg` | archive-hosted image; local asset not included in the handoff ZIP | hold until reuse permission and the appropriate subject/photographer credit are documented; then store a governed local copy |
 | St. George demolition frames | `pbase.com/dbperez/demolition` | **"Do not copy or reproduce without written permission"** | linked only, never embedded, until written permission exists |
 
 The handoff ZIP contains three binary image assets: the Jonynas window, the Manhattan
-demolition interior, and the Newark demolition photograph. It does not contain the prayer-book
-cover or the Sigita Jurgutis photograph. All captions and asset records must keep "no image
-exists" and "image held, rights pending" as distinct states.
+demolition interior, and the Newark demolition photograph. The Newark photograph is excluded
+from this page and must not be copied into production assets. The ZIP does not contain the
+prayer-book cover or the Sigita Jurgutis photograph. All captions and asset records must keep
+"no image exists", "excluded", and "image held, rights pending" as distinct states.
 
 ## 8. Canonical rulings and remaining rights holds
 
@@ -149,8 +150,8 @@ exists" and "image held, rights pending" as distinct states.
    The Lithuanian institution ended through a selected 2002 merger into Holy Trinity–Epiphany;
    the 1963 terminal worship site still stands. Do not caption the supplied photograph
    "demolished in 1981," do not describe 1981 as the parish's closure, and do not treat the
-   earlier demolished church as the institution's standing terminal site. Image credit and
-   reuse rights remain held.
+   earlier demolished church as the institution's standing terminal site. Do not use the
+   supplied Newark demolition photograph on this page.
 4. **The Pbase St. George gallery is Shenandoah, but its upload date is not a demolition date.**
    The gallery itself identifies St. George in Shenandoah, Pennsylvania. Canon continues to use
    2009 for the demolition unless stronger evidence changes it. Link the gallery as supporting
