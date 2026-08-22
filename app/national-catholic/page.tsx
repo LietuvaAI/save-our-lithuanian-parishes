@@ -323,6 +323,8 @@ export default function NationalCatholicPage() {
           </p>
           <div className="mt-4 divide-y divide-rule border-y border-rule">
             {SUPPORTING_ENTRIES.map((parish) => {
+              const profileHref =
+                canonicalProfileHrefForRegistrySlug(parish.slug);
               const evidenceKind =
                 parish.record_type === "congregation"
                   ? "historical congregation"
@@ -331,15 +333,18 @@ export default function NationalCatholicPage() {
                     : "historical phase";
               return (
                 <article key={parish.slug} className="py-4">
-                  <Link
-                    href={
-                      canonicalProfileHrefForRegistrySlug(parish.slug) ??
-                      `/parishes/${parish.slug}`
-                    }
-                    className="font-serif text-card-title font-semibold hover:underline"
-                  >
-                    {parish.names.lt || parish.names.en || parish.slug}
-                  </Link>
+                  {profileHref ? (
+                    <Link
+                      href={profileHref}
+                      className="font-serif text-card-title font-semibold hover:underline"
+                    >
+                      {parish.names.lt || parish.names.en || parish.slug}
+                    </Link>
+                  ) : (
+                    <h3 className="font-serif text-card-title font-semibold">
+                      {parish.names.lt || parish.names.en || parish.slug}
+                    </h3>
+                  )}
                   <p className="mt-1 text-body-copy text-muted">
                     {parish.city}, {parish.state} · {evidenceKind}, not counted
                     as a durable parish
