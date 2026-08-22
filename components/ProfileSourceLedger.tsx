@@ -114,6 +114,18 @@ function sourceCitations(source: ProfileSource) {
   );
 }
 
+function supplementalReasonLabel(reason: string) {
+  return reason.replaceAll("_", " ");
+}
+
+function sourceTitleStateLabel(
+  state: NonNullable<ProfileSource["sourceTitleState"]>,
+) {
+  if (state === "reviewed_section_heading") return "Reviewed section heading";
+  if (state === "untitled_item") return "Untitled item";
+  return null;
+}
+
 export function ProfileSourceLedger({
   sources,
 }: {
@@ -258,6 +270,22 @@ export function ProfileSourceLedger({
                               {citation}
                             </p>
                           ))}
+
+                          {source.supplementalReason && (
+                            <p className="mt-1 text-small-copy leading-relaxed text-muted">
+                              <span className="font-medium text-foreground">
+                                Supplemental reason:
+                              </span>{" "}
+                              {supplementalReasonLabel(source.supplementalReason)}
+                            </p>
+                          )}
+
+                          {source.sourceTitleState &&
+                            sourceTitleStateLabel(source.sourceTitleState) && (
+                              <p className="mt-1 text-small-copy leading-relaxed text-muted">
+                                {sourceTitleStateLabel(source.sourceTitleState)}
+                              </p>
+                            )}
 
                           {source.contexts.length > 0 && (
                             <p className="mt-2 text-small-copy leading-relaxed text-muted">
